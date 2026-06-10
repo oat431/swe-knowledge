@@ -4,3 +4,5 @@
 - [[Programming Note Content]]
 - [[Quick Note Content]]
 - [[Software Engineering Note Content]]
+- [[Project Checklist Overview]]
+- [[README]]
