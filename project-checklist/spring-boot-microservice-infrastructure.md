@@ -2,7 +2,7 @@
 
 > How Service Discovery, Load Balancing, and Open Authentication wire together in a Spring Boot 4.x homelab.
 > Boot 4.0+ (Spring Framework 7, Spring Cloud 2025.x, Security 7).
-> Last updated: 2026-06-11
+> Last updated: 2026-06-12
 
 ---
 
@@ -10,8 +10,8 @@
 
 ```
                           ┌──────────────────────┐
-                          │      Traefik          │  ← Edge LB, TLS, Let's Encrypt
-                          │   (Load Balancing)     │
+                          │   nginx / Traefik     │  ← Edge LB, TLS, domain routing
+                          │   (Load Balancing)     │     Pick one — both work.
                           └──────┬───────────────┘
                                  │
                     ┌────────────┴────────────┐
@@ -159,6 +159,32 @@ volumes:
 
 ---
 
+### nginx on Host (Alternative)
+
+If nginx already runs on your host (serving `panomete.com` etc.), you don't need a Traefik container at all:
+
+```yaml
+# docker-compose.yml — NO edge LB container needed
+# nginx on the host handles TLS + routing
+
+services:
+  gateway:
+    ports:
+      - "127.0.0.1:8080:8080"    # Only localhost — nginx proxies here
+
+  keycloak:
+    ports:
+      - "127.0.0.1:8443:8443"    # Only localhost — nginx proxies here
+
+  # No traefik service. No Docker socket mount.
+  # nginx config handles: api.panomete.com → 127.0.0.1:8080
+  #                        auth.panomete.com → 127.0.0.1:8443
+```
+
+See [Spring Boot Load Balancing](./spring-boot-loadbalance.md) for the full nginx config file.
+
+---
+
 ## Startup Sequence
 
 | Order | Component | Depends On | Healthy When |
@@ -168,7 +194,7 @@ volumes:
 | 3 | Keycloak | PostgreSQL | Admin console reachable |
 | 4 | Services (A, B, C) | Eureka | Registered in Eureka, `/actuator/health` OK |
 | 5 | API Gateway | Eureka | Routes resolving, `/actuator/health` OK |
-| 6 | Traefik | nothing | Port 80/443 listening |
+| 6 | Edge LB (nginx/Traefik) | nothing | Port 80/443 listening |
 
 ---
 
@@ -177,8 +203,9 @@ volumes:
 - [ ] **Eureka + LoadBalancer** — Gateway uses `lb://service-name`. Services use `@LoadBalanced WebClient`. Both resolve via Eureka lookup.
 - [ ] **Gateway + Keycloak** — Gateway is both OAuth2 Client (login redirect) and Resource Server (JWT validation). Both roles in one application.
 - [ ] **Services + Keycloak** — Each service validates JWT independently via JWKS key cache. No call to Keycloak per request.
-- [ ] **Traefik + Gateway** — Traefik routes all API traffic to Gateway only. Gateway routes to services via Eureka discovery.
-- [ ] **Traefik + Keycloak** — Keycloak gets its own Traefik route on `auth.panomete.com`. Users and services both reach it.
+- [ ] **Edge LB + Gateway** — Edge LB (nginx/Traefik) routes all API traffic to Gateway only. Gateway routes to services via Eureka discovery.
+- [ ] **Edge LB + Keycloak** — Keycloak gets its own subdomain route (`auth.panomete.com`). Users and services both reach it through the edge LB.
+- [ ] **nginx on host** — If nginx runs on the host (not Docker), it reaches Gateway at `127.0.0.1:8080` (Gateway's published port). Gateway reaches nginx at the host IP.
 
 ---
 
@@ -200,7 +227,7 @@ KC_SERVICE_B_SECRET=service-b-client-secret
 | Concern | Checklist | What's Covered |
 |---------|-----------|---------------|
 | **Service Discovery** | [Spring Boot Eureka](./spring-boot-eureka.md) | Eureka server + client setup, Docker config, `@LoadBalanced WebClient`, debugging, 9 gotchas |
-| **Load Balancing** | [Spring Boot Load Balancing](./spring-boot-loadbalance.md) | Traefik edge (TLS, Let's Encrypt, Docker auto-discovery) + SC LoadBalancer internal, middleware, headers, 8 gotchas |
+| **Load Balancing** | [Spring Boot Load Balancing](./spring-boot-loadbalance.md) | nginx or Traefik edge (TLS, domain routing, security headers) + SC LoadBalancer internal, gotchas for both |
 | **Open Authentication** | [Spring Boot OAuth](./spring-boot-oauth.md) | Keycloak server, realm/client config, Gateway as OAuth2 Client + Resource Server, downstream Resource Servers, client credentials, role mapping, 15+ gotchas |
 
 For concepts, patterns, and build vs adopt decisions (framework-agnostic), read the [Microservice Infrastructure](./microservice-infrastructure.md) concept checklist first.

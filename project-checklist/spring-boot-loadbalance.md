@@ -1,31 +1,56 @@
 # Spring Boot Load Balancing Checklist
 
-> Edge Load Balancing with Traefik v3 + Internal Load Balancing with Spring Cloud LoadBalancer for Spring Boot 4.x microservices.
+> Edge Load Balancing with nginx or Traefik v3 + Internal Load Balancing with Spring Cloud LoadBalancer for Spring Boot 4.x microservices.
 > Covers Boot 4.0+ (Spring Framework 7, Spring Cloud 2025.x). Docker-focused for self-hosted homelabs.
+> Choose your edge LB — both are production-grade. nginx is simpler if you already run it; Traefik adds Docker auto-discovery.
 > Read the concept-level [Microservice Infrastructure Checklist](./microservice-infrastructure.md) (Part 2) first for algorithms and patterns.
-> Last updated: 2026-06-11
+> Last updated: 2026-06-12
 
 ---
 
 ## Two Layers, Two Jobs
 
 ```
-Internet ──→ Traefik ──→ Gateway ──→ Service A
-               │                        │
-               │  Edge LB               │  Internal LB
-               │  (external→internal)   │  (service→service)
-               │                        │
-               TLS termination          Eureka-powered
-               Let's Encrypt            @LoadBalanced WebClient
-               Docker auto-discovery    lb:// URIs
+Internet ──→ nginx/Traefik ──→ Gateway ──→ Service A
+               │                         │
+               │  Edge LB                │  Internal LB
+               │  (external→internal)    │  (service→service)
+               │                         │
+               TLS termination           Eureka-powered
+               HTTP→HTTPS redirect       @LoadBalanced WebClient
+               Security headers          lb:// URIs
+               Rate limiting
 ```
 
-- **Traefik:** The front door. Everything from the outside world hits Traefik first. TLS, domain routing, security headers.
-- **Spring Cloud LoadBalancer:** Internal traffic. When the Gateway (or any service) calls another service, LoadBalancer picks the healthiest instance.
+- **nginx / Traefik:** The front door. Everything from the outside world hits the edge LB first. TLS, domain routing, security headers. Pick one — both do the job well.
+- **Spring Cloud LoadBalancer:** Internal traffic. When the Gateway (or any service) calls another service, LoadBalancer picks the healthiest instance. Client-side = zero extra hops.
 
 ---
 
-## Part 1: Traefik — Edge Load Balancer
+## Part 1: Choose Your Edge Load Balancer
+
+> You need ONE edge load balancer. Not both. nginx if you already run it and want zero new services. Traefik if you want Docker auto-discovery and built-in Let's Encrypt.
+
+| Factor | nginx | Traefik |
+|--------|-------|---------|
+| **Best if** | Already running nginx, want simplicity | Container-native, want auto-discovery |
+| **Config style** | Static config files (`.conf`) | Static file + Docker labels |
+| **Docker awareness** | Manual `proxy_pass` to containers | Auto-discovers via Docker socket |
+| **Let's Encrypt** | Manual certbot or separate setup | Built-in, auto-renew |
+| **Learning curve** | Widest-known syntax on the web | YAML-based, smaller community |
+| **Operational overhead** | Same (one binary, one config) | Same |
+
+### Option A: Traefik
+
+> Best for: starting fresh, container-native setups, auto-TLS without certbot. Every section below has an nginx equivalent.
+
+### Option B: nginx
+
+> Best for: you already run nginx, want zero new services, prefer the most battle-tested web server on earth.
+
+---
+
+## Part 1-A: Traefik — Edge Load Balancer
 
 ### 1.1 Why Traefik?
 
@@ -189,6 +214,182 @@ entryPoints:
 
 ---
 
+## Part 1-B: nginx — Edge Load Balancer
+
+> If you already have nginx running on your host (serving `panomete.com`, proxying other services), you don't need Traefik. nginx is a full reverse proxy and handles everything the edge layer needs.
+
+### Why nginx for the Edge?
+
+- **Already running** — You have it. Zero new services, zero new config syntax to learn.
+- **Battle-tested** — Powers ~30% of the internet. Every edge case is documented.
+- **Simple config** — `server` blocks, `proxy_pass`, `add_header`. No Docker socket access needed.
+- **Same capabilities as Traefik** — TLS termination, rate limiting, security headers, load balancing across Gateway instances.
+
+### nginx Config for Microservices
+
+```nginx
+# /etc/nginx/sites-available/microservices.conf
+# (symlink to /etc/nginx/sites-enabled/ on Debian/Ubuntu)
+
+# ═══ Upstream: Gateway instances (load balance if scaled) ═══
+upstream gateway {
+    server 127.0.0.1:8080;       # Gateway container
+    # Add more when scaling:
+    # server 127.0.0.1:8081;
+    # server 127.0.0.1:8082;
+
+    # Optional: least_conn, ip_hash, or weighted
+    # least_conn;
+}
+
+upstream keycloak {
+    server 127.0.0.1:8443;       # Keycloak container
+}
+
+# ═══ API Gateway ═══
+server {
+    listen 443 ssl http2;
+    server_name api.panomete.com;
+
+    # TLS
+    ssl_certificate     /etc/nginx/certs/api.panomete.com/fullchain.pem;
+    ssl_certificate_key /etc/nginx/certs/api.panomete.com/privkey.pem;
+    ssl_protocols       TLSv1.2 TLSv1.3;
+    ssl_ciphers         HIGH:!aNULL:!MD5;
+
+    # Security headers
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+
+    # Rate limiting (10 req/s burst 20 per IP)
+    limit_req_zone $binary_remote_addr zone=api_limit:10m rate=10r/s;
+    limit_req zone=api_limit burst=20 nodelay;
+
+    # Proxy to Gateway
+    location / {
+        proxy_pass http://gateway;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";       # WebSocket support
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # Timeouts
+        proxy_connect_timeout 5s;
+        proxy_read_timeout 30s;
+        proxy_send_timeout 30s;
+
+        # Buffering
+        proxy_buffering on;
+        proxy_buffer_size 4k;
+        proxy_buffers 8 16k;
+    }
+}
+
+# ═══ Keycloak ═══
+server {
+    listen 443 ssl http2;
+    server_name auth.panomete.com;
+
+    ssl_certificate     /etc/nginx/certs/auth.panomete.com/fullchain.pem;
+    ssl_certificate_key /etc/nginx/certs/auth.panomete.com/privkey.pem;
+    ssl_protocols       TLSv1.2 TLSv1.3;
+    ssl_ciphers         HIGH:!aNULL:!MD5;
+
+    # Stricter rate limit on login endpoints
+    limit_req_zone $binary_remote_addr zone=auth_limit:10m rate=5r/m;
+    limit_req zone=auth_limit burst=10 nodelay;
+
+    # IP-restrict admin paths
+    location /admin {
+        allow 192.168.1.0/24;        # Your home/office network
+        allow 10.0.0.0/8;             # Internal Docker network
+        deny all;
+
+        proxy_pass http://keycloak;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location / {
+        proxy_pass http://keycloak;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        proxy_connect_timeout 5s;
+        proxy_read_timeout 30s;
+        proxy_send_timeout 30s;
+
+        # Disable buffering for server-sent events (Keycloak uses them)
+        proxy_buffering off;
+    }
+}
+
+# ═══ HTTP → HTTPS redirect ═══
+server {
+    listen 80;
+    server_name api.panomete.com auth.panomete.com;
+    return 301 https://$host$request_uri;
+}
+```
+
+- [ ] **`upstream` block** — Defines the Gateway instances. nginx load balances across them (default: round-robin). Add more `server` lines when you scale Gateway.
+- [ ] **TLS certs** — Use certbot for Let's Encrypt: `certbot --nginx -d api.panomete.com -d auth.panomete.com`. Auto-renewal via systemd timer.
+- [ ] **`X-Forwarded-*` headers** — Critical. Gateway and Keycloak need these to reconstruct the original request URL. Without them, redirect URIs break.
+- [ ] **`proxy_buffering off` for Keycloak** — Keycloak uses server-sent events for admin console real-time updates. Buffering breaks SSE.
+- [ ] **IP-restrict `/admin`** — Keycloak admin console should not be public. `allow` your network, `deny all` for everything else.
+- [ ] **Separate `server` blocks per subdomain** — Cleaner than `if ($host = ...)` logic. One block per domain, clear routing rules.
+
+### nginx + Certbot (Let's Encrypt)
+
+- [ ] **Install certbot** — `apt install certbot python3-certbot-nginx` (Ubuntu/Debian).
+- [ ] **Get certificates** — `certbot --nginx -d api.panomete.com -d auth.panomete.com`
+- [ ] **Auto-renewal** — certbot installs a systemd timer automatically. Verify: `systemctl status certbot.timer`
+- [ ] **Test renewal** — `certbot renew --dry-run`
+
+### nginx Reload (Zero-Downtime)
+
+```bash
+# Test config syntax
+nginx -t
+
+# Apply without dropping connections
+nginx -s reload
+```
+
+- [ ] **Always test before reload** — `nginx -t` catches syntax errors. A bad config + `nginx -s reload` = nginx refuses the new config but keeps running with the old one. Safe.
+
+### nginx Docker Compose (If Not on Host)
+
+If nginx isn't installed on the host, run it as a container:
+
+```yaml
+nginx:
+  image: nginx:1.27
+  container_name: nginx
+  restart: unless-stopped
+  ports:
+    - "80:80"
+    - "443:443"
+  volumes:
+    - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    - ./nginx/sites:/etc/nginx/sites-enabled:ro
+    - ./nginx/certs:/etc/nginx/certs:ro
+  networks:
+    - microservices-net
+```
+
+---
+
 ## Part 2: Spring Cloud LoadBalancer — Internal Load Balancing
 
 ### 2.1 Why Not Just Use Traefik for Everything?
@@ -311,10 +512,10 @@ WebClient.builder()
 
 ## 3. No Direct Service Exposure
 
-- [ ] **Traefik is the ONLY container with host port mapping** (80/443). Nothing else maps to host ports.
-- [ ] **Services on internal Docker network only** — No `ports:` block in their Docker Compose definition.
-- [ ] **Gateway is the only entry point for APIs** — Traefik → Gateway → Services. Not Traefik → Service A, Traefik → Service B.
-- [ ] **Keycloak gets its own Traefik route** — Users need to reach Keycloak's login page. Gateway redirects to `https://auth.panomete.com/realms/homelab/protocol/openid-connect/auth`.
+- [ ] **Edge LB is the ONLY entry point** — Whether nginx on the host or Traefik container, port 80/443 goes to the edge LB. Nothing else maps to host ports.
+- [ ] **Services on internal Docker network only** — No `ports:` block in Docker Compose for services. Gateway, Eureka, business services all internal-only.
+- [ ] **Gateway is the only entry point for APIs** — Edge LB → Gateway → Services. Not edge LB → Service A, edge LB → Service B.
+- [ ] **Keycloak gets its own subdomain route** — Users need to reach Keycloak's login page at `auth.panomete.com`. Gateway redirects there for login.
 
 ---
 
@@ -338,6 +539,13 @@ WebClient.builder()
 - ❌ **Wrong Docker network** — `network: microservices-net` in provider config must match the actual network services use.
 - ❌ **Dashboard on public port without auth** — Anyone can see your infrastructure and routes. Use separate management port + IP restriction.
 
+### nginx
+- ❌ **Not testing config before reload** — `nginx -s reload` with bad syntax = nginx keeps running with old config but doesn't apply changes. Always `nginx -t` first.
+- ❌ **Missing `X-Forwarded-*` headers** — Without `proxy_set_header X-Forwarded-Proto $scheme`, Keycloak thinks it's on HTTP and generates wrong redirect URIs. Login breaks.
+- ❌ **`proxy_buffering on` for Keycloak** — Keycloak admin console uses server-sent events. Buffering breaks the real-time updates. Set `proxy_buffering off`.
+- ❌ **Forgetting `ssl_certificate_key`** — nginx refuses to start if `ssl_certificate` is set but no `ssl_certificate_key`. Certbot handles this automatically, but manual certs need both.
+- ❌ **Gateway `upstream` with Docker container name** — If nginx runs on the host (not in Docker), it can't resolve Docker container names. Use `127.0.0.1` with the container's published port, or run nginx inside Docker on the same network.
+
 ### Spring Cloud LoadBalancer
 - ❌ **`lb://` without `spring-cloud-starter-loadbalancer`** — `UnknownHostException` at runtime. The starter is not auto-included.
 - ❌ **`@LoadBalanced` on RestTemplate** — RestTemplate is in maintenance mode. Use WebClient.
@@ -348,19 +556,27 @@ WebClient.builder()
 
 ## Quick Sanity Check
 
-- [ ] Traefik is the ONLY container with public port mapping (80/443)
-- [ ] `exposedByDefault: false` in Traefik config
+### Edge LB (nginx or Traefik — pick one)
+- [ ] Edge LB is the ONLY entry point with port 80/443
 - [ ] All services on internal Docker network only (no host port mapping)
-- [ ] Let's Encrypt certs persisted via volume mount
+- [ ] TLS terminated at edge with valid certificates (auto-renew verified)
 - [ ] HTTP→HTTPS redirect active
-- [ ] Security headers middleware applied and tested
-- [ ] Traefik dashboard secured (IP restricted or behind auth)
+- [ ] Security headers present on all responses (HSTS, XSS, frame options)
+- [ ] X-Forwarded-* headers passed to Gateway and Keycloak
+- [ ] Keycloak admin paths IP-restricted
+- [ ] Edge LB config tested before applying (`nginx -t` or Traefik dry-run)
+- [ ] If Traefik: `exposedByDefault: false`
+- [ ] If Traefik: dashboard secured (IP-restricted or behind auth)
+- [ ] If nginx: `proxy_buffering off` for Keycloak endpoints
+- [ ] If nginx: `limit_req_zone` on auth endpoints (prevent brute force)
+
+### Internal Load Balancing
 - [ ] Gateway routes use `lb://` URIs
 - [ ] `spring-cloud-starter-loadbalancer` on Gateway and inter-service callers
 - [ ] `@LoadBalanced` WebClient configured (not RestTemplate)
 - [ ] Response timeouts aligned: client > gateway > upstream
 - [ ] Connection pooling enabled on Gateway HTTP client
-- [ ] No direct Traefik → service routing (all through Gateway)
+- [ ] No direct edge LB → service routing (all through Gateway)
 
 ---
 
