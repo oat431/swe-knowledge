@@ -1,14 +1,17 @@
 home lab application
 
-| Focus on   | Code name         | Animal   | Language | Auth | Status | Deploy | Domain |
-| ---------- | ----------------- | -------- | -------- | ---- | ------ | ------ | ------ |
-| Blog       | cute gufo         | Owl      | Italy    | 🎭   | ❌      | ❌      | blog   |
-| Ledger     | [[Big Schwein]]   | Pig      | Germany  | 🎯   | ✅      | 🛠️    | ledger |
-| Short link | [[Fluffy Mouton]] | Sheep    | France   | 🎯   | 🛠️    | ❌      | short  |
-| To do list | tiny mchwa        | Ant      | Swahili  | 🎯   | ❌      | ❌      | todo   |
-| Cook book  | shy ardilla       | Squirrel | Spanish  | 🎭   | ❌      | ❌      | cookdb |
-| Oauth      | Flowero guardian  | Self     | English  | 🌏   | ❌      | ❌      | oauth  |
-| Tarot      | white Jelen       | Deer     | Czech    | 🎯   | ❌      | ❌      | tarot  |
+| Focus on          | Code name         | Animal   | Language | Auth | Status | Deploy | Domain    |
+| ----------------- | ----------------- | -------- | -------- | ---- | ------ | ------ | --------- |
+| Blog              | cute gufo         | Owl      | Italy    | 🎭   | ❌      | ❌      | blog      |
+| Ledger            | [[Big Schwein]]   | Pig      | Germany  | 🎯   | ✅      | 🛠️    | ledger    |
+| Short link        | [[Fluffy Mouton]] | Sheep    | France   | 🎯   | 🛠️    | ❌      | short     |
+| To do list        | tiny mchwa        | Ant      | Swahili  | 🎯   | ❌      | ❌      | todo      |
+| Cook book         | shy ardilla       | Squirrel | Spanish  | 🎭   | ❌      | ❌      | cookdb    |
+| Tarot             | white Jelen       | Deer     | Czech    | 🎯   | ❌      | ❌      | tarot     |
+| Oauth             | Flowero guardian  | Self     | English  | 🌏   | ❌      | ❌      | oauth     |
+| Service Discovery | Flowero Discover  | Self     | English  | -    | ❌      | ❌      | discovery |
+| Load Balancer     | Flowero Loader    | Self     | English  | -    | ❌      | ❌      | loader    |
+|                   |                   |          |          |      |        |        |           |
 Development Status (Status Column)
 ❌ = not start / not deploy
 ✅ = completed / deployed
