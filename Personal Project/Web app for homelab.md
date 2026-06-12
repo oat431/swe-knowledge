@@ -11,7 +11,7 @@ home lab application
 | Oauth             | Flowero guardian  | Self     | English  | 🌏   | ❌      | ❌      | oauth     |
 | Service Discovery | Flowero Discover  | Self     | English  | -    | ❌      | ❌      | discovery |
 | Load Balancer     | Flowero Loader    | Self     | English  | -    | ❌      | ❌      | loader    |
-|                   |                   |          |          |      |        |        |           |
+| API gateway       | Flowero Gate      | Self     | English  | -    | ❌      | ❌      | gateway   |
 Development Status (Status Column)
 ❌ = not start / not deploy
 ✅ = completed / deployed
