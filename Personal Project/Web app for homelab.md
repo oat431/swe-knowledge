@@ -8,10 +8,10 @@ home lab application
 | To do list        | tiny mchwa        | Ant      | Swahili  | 🌏       | ❌      | ❌      | todo      |
 | Cook book         | shy ardilla       | Squirrel | Spanish  | 🌏       | ❌      | ❌      | cookdb    |
 | Tarot             | white Jelen       | Deer     | Czech    | 🌏       | ❌      | ❌      | tarot     |
-| Oauth             | Flowero guardian  | Self     | English  | keycloak | ✅      | ✅      | auth      |
+| Oauth             | [[Flowero Guard]]  | Self     | English  | keycloak | ✅      | ✅      | auth      |
 | Service Discovery | Flowero Discover  | Self     | English  | -        | ❌      | ❌      | discovery |
 | Load Balancer     | Flowero Loader    | Self     | English  | -        | ❌      | ❌      | loader    |
-| API gateway       | Flowero Gate      | Self     | English  | -        | ✅      | ✅      | gateway   |
+| API gateway       | [[Flowero Gate]]   | Self     | English  | -        | ✅      | ✅      | gateway   |
 Development Status (Status Column)
 ❌ = not start / not deploy
 ✅ = completed / deployed
