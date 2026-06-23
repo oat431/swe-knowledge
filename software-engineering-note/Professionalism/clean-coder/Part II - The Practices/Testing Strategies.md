@@ -96,4 +96,4 @@ QA's two roles on the team:
 - [[Test Driven Development]]
 - [[Acceptance Testing]]
 - [[Coding Discipline]]
-- [[Continuous Integration]]
+- [[Tooling]]

@@ -125,4 +125,4 @@ Programming is an act of **supreme arrogance** — you create order from chaos, 
 - [[Saying Yes]]
 - [[Coding Discipline]]
 - [[Test Driven Development]]
-- [[Pair Programming]]
+- [[Collaboration]]

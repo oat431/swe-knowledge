@@ -199,4 +199,4 @@ Uncle Bob illustrates "detail" with the `\r` vs `\n` story:
 - [[Test Driven Development]]
 - [[Testing Strategies]]
 - [[Professionalism]]
-- [[Commitment & SAYING NO]]
+- [[Saying No]]
