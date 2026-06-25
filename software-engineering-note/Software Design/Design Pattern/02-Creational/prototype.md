@@ -36,44 +36,41 @@ Mitotic cell division: after division, two identical cells are formed. The origi
 
 ### Basic Implementation
 
-```
-┌─────────────────────┐
-│   «interface»       │
-│     Prototype       │
-├─────────────────────┤
-│ + clone(): Prototype│
-└──────────┬──────────┘
-           │ implements
-    ┌──────┴──────┐
-    │             │
-┌───┴─────────┐ ┌─┴───────────┐
-│  Concrete   │ │  Concrete    │
-│ Prototype A │ │ Prototype B  │
-├─────────────┤ ├──────────────┤
-│ + clone()   │ │ + clone()    │
-└─────────────┘ └──────────────┘
+
+```mermaid
+classDiagram
+    class Prototype {
+        <<interface>>
+        +clone() Prototype
+    }
+    class ConcretePrototype1 {
+        -field1
+        +clone() ConcretePrototype1
+    }
+    class ConcretePrototype2 {
+        -field2
+        +clone() ConcretePrototype2
+    }
+    class Client {
+        +operation()
+    }
+    class PrototypeRegistry {
+        +addItem(key, prototype)
+        +getByKey(key) Prototype
+    }
+    Prototype <|.. ConcretePrototype1
+    Prototype <|.. ConcretePrototype2
+    Client --> Prototype : uses
+    PrototypeRegistry --> Prototype : stores
 ```
 
-1. **Prototype interface** — Declares the cloning method (usually a single `clone`).
+1. **Prototype** — interface that declares the `clone()` method.
 2. **Concrete Prototype** — Implements the cloning method. Copies the original object's data to the clone. May also handle edge cases: cloning linked objects, untangling recursive dependencies, etc.
 3. **Client** — Produces a copy of any object that follows the prototype interface.
 
 ### Prototype Registry
 
-```
-┌──────────────────────┐
-│   PrototypeRegistry  │
-├──────────────────────┤
-│ - items: Map         │
-├──────────────────────┤
-│ + addItem(key, p)    │
-│ + getByKey(key):     │
-│   Prototype          │
-│ + getByCriteria(c)   │
-└──────────────────────┘
-```
-
-The registry stores a catalog of frequently-used prototypes. The simplest form is a `name → prototype` hash map. More robust versions support search criteria beyond a simple name.
+The registry stores a catalog of frequently-used prototypes.
 
 ## Pseudocode
 

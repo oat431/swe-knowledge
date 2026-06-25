@@ -58,41 +58,34 @@ Both `Truck` and `Ship` implement `Transport` (with a `deliver()` method). The c
 
 ## Structure
 
-```
-┌──────────────────────┐
-│      Product         │  ← Interface common to all objects the Creator can produce
-│  (interface)         │
-├──────────────────────┤
-│ + operation()        │
-└──────────────────────┘
-         △
-         │ implements
-    ┌────┴────┐
-    │         │
-┌───┴───┐ ┌───┴───┐
-│Conc.  │ │Conc.  │      ← Concrete Products: different implementations of the interface
-│Prod. A│ │Prod. B│
-└───────┘ └───────┘
-    ▲         ▲
-    │ creates │
-    │         │
-┌───┴─────────┴───┐
-│    Creator      │      ← Declares abstract factory method returning Product
-│ (abstract)      │        Contains core business logic that *uses* products
-├─────────────────┤
-│ + factoryMethod()│──→ Product
-│ + someOperation()│      ← Calls factoryMethod(), then uses the product
-└─────────────────┘
-         △
-         │ extends
-    ┌────┴────┐
-    │         │
-┌───┴────┐ ┌──┴────┐
-│Conc.   │ │Conc.  │      ← Concrete Creators: override factoryMethod() to return
-│CreatorA│ │Creat.B│        a specific Concrete Product
-├────────┤ ├───────┤
-│+fact..()│ │+fact..()│
-└────────┘ └───────┘
+```mermaid
+classDiagram
+    class Product {
+        <<interface>>
+        +operation()
+    }
+    class ConcreteProductA {
+        +operation()
+    }
+    class ConcreteProductB {
+        +operation()
+    }
+    class Creator {
+        <<abstract>>
+        +factoryMethod() Product
+        +someOperation()
+    }
+    class ConcreteCreatorA {
+        +factoryMethod() Product
+    }
+    class ConcreteCreatorB {
+        +factoryMethod() Product
+    }
+    Product <|.. ConcreteProductA
+    Product <|.. ConcreteProductB
+    Creator <|-- ConcreteCreatorA
+    Creator <|-- ConcreteCreatorB
+    Creator ..> Product : creates
 ```
 
 1. **Product** — Interface common to all objects the creator and its subclasses can produce.

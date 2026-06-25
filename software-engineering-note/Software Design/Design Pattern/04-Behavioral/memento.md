@@ -26,21 +26,6 @@ The pattern stores the copy of the object's state in a special object called a *
 
 The objects that store mementos are called **caretakers**. Since the caretaker works with the memento only through the limited interface, it cannot tamper with the state stored inside. At the same time, the originator has full access to all fields inside the memento, allowing it to restore its previous state at will.
 
-```
- ┌──────────────┐                                  ┌──────────────┐
- │  Originator  │  creates / restores from          │   Memento    │
- │  (Editor)    │ ◄────────────────────────────────► │  (Snapshot)  │
- │              │        full access                 │              │
- └──────┬───────┘                                   └──────┬───────┘
-        │                                                  │
-        │ stores/saves                                     │ limited interface
-        │                                                  │ (metadata only)
-        ▼                                                  ▼
- ┌──────────────┐                                  
- │  Caretaker   │  ───────── can't tamper ─────────►
- │  (History)   │  
- └──────────────┘
-```
 
 In the text editor example: a separate `History` class acts as the caretaker. A stack of mementos grows each time the editor is about to execute an operation. When the user triggers undo, the history grabs the most recent memento from the stack and passes it back to the editor. Since the editor has full access, it changes its own state using the values from the memento.
 
@@ -54,35 +39,6 @@ The classic implementation (C++, C#, Java — languages with nested class suppor
 2. **Memento** — A value object (snapshot of the originator's state). Immutable — data is passed once via the constructor. Nested inside the originator class, giving the originator full access to private fields while the caretaker sees almost nothing.
 3. **Caretaker** — Knows *when* and *why* to capture the originator's state and when to restore it. Keeps a stack (or other structure) of mementos. Fetches the topmost memento and passes it to the originator's restoration method on undo.
 
-```
- ┌────────────────────────────┐
- │        Originator          │
- ├────────────────────────────┤
- │ - state                    │
- │ + createMemento(): Memento │
- │ + restore(m: Memento)      │
- │                            │
- │  ┌──────────────────────┐  │
- │  │   Memento (nested)   │  │
- │  ├──────────────────────┤  │
- │  │ - state              │  │
- │  │ - creationDate       │  │
- │  │ + getState()         │  │  ◄── private — only Originator sees this
- │  │ + getName()          │  │
- │  │ + getDate()          │  │  ◄── public — Caretaker sees only metadata
- │  └──────────────────────┘  │
- └────────────┬───────────────┘
-              │
-              │ stores
-              ▼
- ┌────────────────────────────┐
- │        Caretaker           │
- ├────────────────────────────┤
- │ - mementos: stack          │
- │ + backup()                 │
- │ + undo()                   │
- └────────────────────────────┘
-```
 
 ### 2. Implementation Based on an Intermediate Interface
 

@@ -41,6 +41,41 @@ Cease all direct communication between components. Instead, components collabora
 
 **Key property:** From a component's perspective, the system is a black box. The sender doesn't know who will handle its request; the receiver doesn't know who sent it.
 
+```mermaid
+classDiagram
+    class Mediator {
+        <<interface>>
+        +notify(sender, event)
+    }
+    class ConcreteMediator {
+        -componentA
+        -componentB
+        -componentC
+        +notify(sender, event)
+    }
+    class BaseComponent {
+        -mediator: Mediator
+        +BaseComponent(Mediator)
+    }
+    class ComponentA {
+        +doA()
+    }
+    class ComponentB {
+        +doB()
+    }
+    class ComponentC {
+        +doC()
+    }
+    Mediator <|.. ConcreteMediator
+    BaseComponent --> Mediator
+    BaseComponent <|-- ComponentA
+    BaseComponent <|-- ComponentB
+    BaseComponent <|-- ComponentC
+    ConcreteMediator --> ComponentA
+    ConcreteMediator --> ComponentB
+    ConcreteMediator --> ComponentC
+```
+
 ---
 
 ## Pseudocode

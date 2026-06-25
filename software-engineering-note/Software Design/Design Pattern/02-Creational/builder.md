@@ -40,6 +40,39 @@ Key ideas:
 | **Director** | Defines the order in which to call construction steps. Reusable across configurations. |
 | **Client** | Creates a concrete builder, passes it to the director, triggers construction, and fetches the product from the builder. |
 
+```mermaid
+classDiagram
+    class Builder {
+        <<interface>>
+        +reset()
+        +buildStepA()
+        +buildStepB()
+        +getResult() Product
+    }
+    class ConcreteBuilder1 {
+        +reset()
+        +buildStepA()
+        +buildStepB()
+        +getResult() Product1
+    }
+    class ConcreteBuilder2 {
+        +reset()
+        +buildStepA()
+        +buildStepB()
+        +getResult() Product2
+    }
+    class Director {
+        +construct()
+    }
+    class Product1
+    class Product2
+    Builder <|.. ConcreteBuilder1
+    Builder <|.. ConcreteBuilder2
+    Director --> Builder : uses
+    ConcreteBuilder1 ..> Product1 : creates
+    ConcreteBuilder2 ..> Product2 : creates
+```
+
 ---
 
 ## Pseudocode (from source)

@@ -20,12 +20,6 @@ This approach implodes under three problems:
 
 The Command pattern suggests that **GUI objects should not send requests directly to business-logic objects**. Instead, extract every detail of a request — the receiver object, the method name, and the arguments — into a **stand-alone command object** with a single execution method.
 
-```
- ┌──────────┐     execute()     ┌──────────────┐     action()     ┌──────────┐
- │  Sender  │ ────────────────> │   Command    │ ──────────────> │ Receiver │
- │ (Button) │                   │  (CopyCmd)   │                 │ (Editor) │
- └──────────┘                   └──────────────┘                 └──────────┘
-```
 
 From the GUI's perspective, a button stores a reference to some command and calls `command.execute()` on click. It does not know — and does not need to know — which business-logic object handles the request or how. Every GUI element tied to the same operation (toolbar button, menu item, shortcut) simply holds a reference to the **same** command object. No code duplication.
 
@@ -39,44 +33,35 @@ The paper order *is* a command — a stand-alone object carrying all the informa
 
 ## Structure
 
-```
-┌──────────┐                    ┌───────────────────────┐
-│  Client  │                    │   «interface»         │
-│          │──────────────────> │      Command          │
-└──────────┘  creates &         ├───────────────────────┤
-  configures  commands           │ + execute()           │
-                                 └───────────┬───────────┘
-                                             │ implements
-                                ┌────────────┴────────────┐
-                                │                         │
-                       ┌────────┴─────────┐    ┌─────────┴─────────┐
-                       │ ConcreteCommandA │    │ ConcreteCommandB  │
-                       ├──────────────────┤    ├───────────────────┤
-                       │ - receiver       │    │ - receiver        │
-                       │ - params         │    │ - params          │
-                       │ + execute()      │    │ + execute()       │
-                       └────────┬─────────┘    └─────────┬─────────┘
-                                │ calls                  │ calls
-                                ▼                        ▼
-                       ┌────────────────────────────────────┐
-                       │             Receiver               │
-                       │                                    │
-                       │ + action1()                        │
-                       │ + action2()                        │
-                       └────────────────────────────────────┘
-                                       ▲
-                                       │ delegates to
-                              ┌────────┴────────┐
-                              │     Sender      │
-                              │  (Invoker)      │
-                              ├─────────────────┤
-                              │ - command       │
-                              │ + setCommand()  │
-                              │ + executeCmd()  │
-                              └─────────────────┘
-```
 
 1. **Sender (Invoker)** — Holds a reference to a command. Triggers `command.execute()` instead of calling the receiver directly. Does *not* create commands; receives them from the client.
+
+```mermaid
+classDiagram
+    class Command {
+        <<interface>>
+        +execute()
+    }
+    class ConcreteCommand {
+        -receiver: Receiver
+        -params
+        +execute()
+    }
+    class Receiver {
+        +action()
+    }
+    class Invoker {
+        -command: Command
+        +setCommand(Command)
+        +executeCommand()
+    }
+    class Client
+    Command <|.. ConcreteCommand
+    ConcreteCommand --> Receiver : calls
+    Invoker --> Command
+    Client --> ConcreteCommand : creates
+    Client --> Receiver
+```
 2. **Command interface** — Declares a single execution method (usually `execute()` with no parameters).
 3. **Concrete Commands** — Implement specific requests. Each stores the receiver reference and any parameters needed (set via constructor). Delegates the actual work to the receiver.
 4. **Receiver** — Contains the actual business logic. Almost any object can act as a receiver.

@@ -27,16 +27,15 @@ If client code has access to the Singleton class, it can call the static method 
 
 ## Structure
 
-```
-┌─────────────────────────────┐
-│         Singleton           │
-├─────────────────────────────┤
-│ - static instance: Singleton│
-│ - private Singleton()       │
-│ + static getInstance():     │
-│   Singleton                 │
-│ + businessLogic()           │
-└─────────────────────────────┘
+
+```mermaid
+classDiagram
+    class Singleton {
+        -static instance: Singleton
+        -Singleton()
+        +static getInstance() Singleton
+        +businessLogic()
+    }
 ```
 
 - The `Singleton` class declares the **static method `getInstance`** that returns the same instance of its own class.

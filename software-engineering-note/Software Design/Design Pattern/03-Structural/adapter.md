@@ -42,14 +42,6 @@ The wrapped object never knows the adapter exists. Adapters can convert data for
 
 ### Object Adapter (Composition)
 
-```
-┌──────────┐         ┌─────────────────┐         ┌─────────────┐
-│  Client  │ ──uses──▶│ Client Interface │◀──implements──│   Adapter   │
-└──────────┘         └─────────────────┘              │             │
-                                                      │  - service  │───wraps───▶┌───────────┐
-                                                      └─────────────┘            │  Service  │
-                                                                                  └───────────┘
-```
 
 | Role | Responsibility |
 |------|---------------|
@@ -63,6 +55,25 @@ The client never couples to the concrete adapter — you can introduce new adapt
 ### Class Adapter (Inheritance)
 
 Uses **multiple inheritance**: the adapter inherits from both the client interface and the service class. Adaptation happens inside overridden methods. Only possible in languages that support multiple inheritance (e.g., C++). No wrapping needed — the adapter _is_ both.
+
+```mermaid
+classDiagram
+    class Client
+    class ClientInterface {
+        <<interface>>
+        +method(data)
+    }
+    class Adapter {
+        -service: Service
+        +method(data)
+    }
+    class Service {
+        +serviceMethod(specialData)
+    }
+    Client --> ClientInterface : uses
+    ClientInterface <|.. Adapter : implements
+    Adapter --> Service : wraps
+```
 
 ---
 

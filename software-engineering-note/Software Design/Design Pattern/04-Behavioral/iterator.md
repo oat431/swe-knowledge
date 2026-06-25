@@ -40,6 +40,35 @@ All iterators implement a **common interface**, typically providing one primary 
 
 5. **Client** — Works with collections and iterators exclusively through their interfaces. Typically obtains iterators from the collection rather than creating them directly.
 
+```mermaid
+classDiagram
+    class Iterator {
+        <<interface>>
+        +getNext()
+        +hasMore() bool
+    }
+    class ConcreteIterator {
+        -collection: ConcreteCollection
+        -currentPosition
+        +getNext()
+        +hasMore() bool
+    }
+    class IterableCollection {
+        <<interface>>
+        +createIterator() Iterator
+    }
+    class ConcreteCollection {
+        +createIterator() Iterator
+    }
+    class Client
+    Iterator <|.. ConcreteIterator
+    IterableCollection <|.. ConcreteCollection
+    ConcreteCollection ..> ConcreteIterator : creates
+    ConcreteIterator --> ConcreteCollection : iterates over
+    Client --> Iterator
+    Client --> IterableCollection
+```
+
 ---
 
 ## Pseudocode

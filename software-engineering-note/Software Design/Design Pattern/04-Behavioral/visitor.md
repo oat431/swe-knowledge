@@ -70,6 +70,42 @@ Yes, the element classes *are* modified — but the change is **trivial and one-
 | **Concrete Element** | Implements `accept()` by calling `visitor.visitXxx(this)`. **Every subclass must override `accept()`**, even if the base class already implements it, to ensure the correct visitor method is dispatched. |
 | **Client** | Holds a collection of elements (often a Composite tree). Iterates over elements and calls `element.accept(visitor)` without knowing the concrete element classes. |
 
+```mermaid
+classDiagram
+    class Visitor {
+        <<interface>>
+        +visitDot(Dot)
+        +visitCircle(Circle)
+        +visitRectangle(Rectangle)
+    }
+    class ConcreteVisitor {
+        +visitDot(Dot)
+        +visitCircle(Circle)
+        +visitRectangle(Rectangle)
+    }
+    class Element {
+        <<interface>>
+        +accept(Visitor)
+    }
+    class Dot {
+        +accept(Visitor)
+    }
+    class Circle {
+        +accept(Visitor)
+    }
+    class Rectangle {
+        +accept(Visitor)
+    }
+    class Client
+    Visitor <|.. ConcreteVisitor
+    Element <|.. Dot
+    Element <|.. Circle
+    Element <|.. Rectangle
+    Element --> Visitor : accept()
+    Client --> Element
+    Client --> ConcreteVisitor
+```
+
 ---
 
 ## Pseudocode

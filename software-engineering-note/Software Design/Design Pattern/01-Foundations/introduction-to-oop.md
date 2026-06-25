@@ -85,6 +85,25 @@ class Dog is
 
 Hierarchies can extend multiple levels: `Organism → Animal → Cat`. A subclass inherits everything from every ancestor in the chain. Subclasses can **override** methods — either replacing or extending the parent's behavior.
 
+```mermaid
+classDiagram
+    class Animal {
+        +String name
+        +int age
+        +breathe()
+        +sleep()
+        +makeSound()*
+    }
+    class Cat {
+        +makeSound()
+    }
+    class Dog {
+        +makeSound()
+    }
+    Animal <|-- Cat : extends
+    Animal <|-- Dog : extends
+```
+
 ---
 
 ## Pillars of OOP
@@ -310,6 +329,45 @@ class Cat extends Animal is
 | **Composition** | Yes | Yes | Yes | No | Filled ◆→ |
 | **Implementation** | Yes | No | No | Yes | Dashed ▷ |
 | **Inheritance** | Yes | No | No | No | Solid ▷ |
+
+```mermaid
+classDiagram
+    direction LR
+    
+    class Professor {
+        +teach(Course)
+    }
+    class Course
+    class Student
+    class Department {
+        +List~Professor~ professors
+    }
+    class University {
+        +List~Department~ departments
+    }
+    class FlyingTransport {
+        <<interface>>
+        +fly(origin, dest, passengers)
+    }
+    class Airplane {
+        +fly(origin, dest, passengers)
+    }
+    class Animal {
+        +breathe()
+    }
+    class Cat {
+        +meow()
+    }
+    
+    Professor ..> Course : Dependency
+    Professor --> Student : Association
+    Department o-- Professor : Aggregation
+    University *-- Department : Composition
+    Airplane ..|> FlyingTransport : Implementation
+    Animal <|-- Cat : Inheritance
+```
+
+> The six relationship types on a unified model. Dependency (dashed arrow), Association (solid arrow), Aggregation (empty diamond), Composition (filled diamond), Implementation (dashed hollow triangle), Inheritance (solid hollow triangle).
 
 ---
 

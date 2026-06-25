@@ -36,22 +36,25 @@ The proxy *disguises itself* as the service. Neither the client nor the real ser
 | **Proxy** | Holds a reference to the service. Performs pre/post processing (lazy init, access control, logging, caching), then delegates to the service. Often manages the full lifecycle of the service object. |
 | **Client** | Works with both services and proxies through the interface. Never knows (or cares) which one it holds. |
 
-```
-┌──────────┐     ┌──────────────────┐
-│  Client  │────▸│ «interface»      │
-└──────────┘     │ ServiceInterface │
-                 ├──────────────────┤
-                 │ + operation()    │
-                 └────────┬─────────┘
-                          │
-          ┌───────────────┼───────────────┐
-          │               │               │
-     ┌────┴─────┐   ┌─────┴──────┐
-     │  Service │   │   Proxy    │
-     ├──────────┤   ├────────────┤
-     │+operation│   │- service   │
-     └──────────┘   │+ operation │
-                    └────────────┘
+
+```mermaid
+classDiagram
+    class ServiceInterface {
+        <<interface>>
+        +operation()
+    }
+    class Service {
+        +operation()
+    }
+    class Proxy {
+        -service: Service
+        +operation()
+    }
+    class Client
+    ServiceInterface <|.. Service
+    ServiceInterface <|.. Proxy
+    Proxy --> Service : delegates to
+    Client --> ServiceInterface
 ```
 
 ## Pseudocode ✅ (from source)

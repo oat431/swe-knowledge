@@ -36,6 +36,26 @@ Introduce a **facade class** — a single entry point that provides a simplified
 | **Subsystem classes** | Dozens of complex objects that work together. Unaware of the facade's existence; communicate with each other directly. |
 | **Client** | Uses the facade instead of calling subsystem objects directly. |
 
+```mermaid
+classDiagram
+    class Facade {
+        +operation()
+    }
+    class AdditionalFacade {
+        +anotherOperation()
+    }
+    class SubsystemClass1
+    class SubsystemClass2
+    class SubsystemClass3
+    class Client
+    Client --> Facade
+    Facade --> SubsystemClass1
+    Facade --> SubsystemClass2
+    Facade --> SubsystemClass3
+    Client --> AdditionalFacade
+    AdditionalFacade --> SubsystemClass2
+```
+
 ## Pseudocode
 
 ✅ **From source** — video conversion framework example:

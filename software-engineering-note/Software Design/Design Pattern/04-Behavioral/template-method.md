@@ -31,6 +31,28 @@ In the data mining app: create a base class for all three parsing algorithms. Th
 1. **Abstract Class** — Declares the template method (which calls steps in a specific order) and the step methods. Steps are either `abstract` or have a default implementation.
 2. **Concrete Classes** — Implement all abstract steps. May override optional steps. Must **not** override the template method.
 
+```mermaid
+classDiagram
+    class AbstractClass {
+        +templateMethod()
+        +step1()
+        +step2()*
+        +step3()*
+        +step4()
+    }
+    class ConcreteClassA {
+        +step2()
+        +step3()
+    }
+    class ConcreteClassB {
+        +step2()
+        +step3()
+        +step4()
+    }
+    AbstractClass <|-- ConcreteClassA
+    AbstractClass <|-- ConcreteClassB
+```
+
 ## Pseudocode
 
 > *From the source (pp. 389–391): Game AI example — Orcs and Monsters.*

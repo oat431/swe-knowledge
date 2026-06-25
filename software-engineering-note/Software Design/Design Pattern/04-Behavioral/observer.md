@@ -48,20 +48,6 @@ A **newspaper or magazine subscription.** You don't check the store for each new
 
 ## Structure
 
-```
-┌─────────────────────┐         ┌──────────────────────────────┐
-│     Publisher       │         │  «interface» Subscriber       │
-├─────────────────────┤         ├──────────────────────────────┤
-│ - subscribers: List │────────>│ + update(context)             │
-├─────────────────────┤         └──────────────────────────────┘
-│ + subscribe(s)      │                        △
-│ + unsubscribe(s)    │                        │
-│ + notify(data)      │         ┌──────────────────────────────┐
-└─────────────────────┘         │  ConcreteSubscriberA/B       │
-                                ├──────────────────────────────┤
-                                │ + update(context)             │
-                                └──────────────────────────────┘
-```
 
 1. **Publisher** — Issues events of interest. Contains subscription infrastructure (`subscribe`/`unsubscribe`/`notify`). When an event occurs, iterates over subscribers and calls `update()` on each.
 
@@ -72,6 +58,32 @@ A **newspaper or magazine subscription.** You don't check the store for each new
 4. **Client** — Creates publisher and subscriber objects separately, then registers subscribers with publishers.
 
 5. **Context data** — Publishers often pass themselves (`this`) or event-specific data as arguments to `update()`, letting subscribers fetch what they need.
+
+```mermaid
+classDiagram
+    class Publisher {
+        -subscribers: List~Subscriber~
+        +subscribe(Subscriber)
+        +unsubscribe(Subscriber)
+        +notify(data)
+    }
+    class Subscriber {
+        <<interface>>
+        +update(context)
+    }
+    class ConcreteSubscriberA {
+        +update(context)
+    }
+    class ConcreteSubscriberB {
+        +update(context)
+    }
+    class Client
+    Publisher --> Subscriber : notifies
+    Subscriber <|.. ConcreteSubscriberA
+    Subscriber <|.. ConcreteSubscriberB
+    Client --> Publisher
+    Client --> ConcreteSubscriberA
+```
 
 ---
 

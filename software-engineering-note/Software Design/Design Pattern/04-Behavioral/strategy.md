@@ -45,25 +45,34 @@ The context becomes **independent of concrete strategies**. Add a new algorithm?
 
 ## Structure
 
-```
-┌─────────────────────┐         ┌───────────────────────────┐
-│      Context        │────────▶│    Strategy (interface)    │
-│─────────────────────│         │───────────────────────────│
-│ - strategy: Strategy│         │ + execute(data)           │
-│ + setStrategy(s)    │         └───────────────────────────┘
-│ + doSomething()     │                       △
-└─────────────────────┘                       │
-        │                          ┌──────────┼──────────┐
-        │                          │                     │
-        │ delegates to    ┌────────┴────────┐  ┌────────┴────────┐
-        │                 │ ConcreteStrategy│  │ ConcreteStrategy│
-        │                 │       A         │  │       B         │
-        │                 │─────────────────│  │─────────────────│
-        │                 │ + execute(data) │  │ + execute(data) │
-        │                 └─────────────────┘  └─────────────────┘
-        │
-        └── strategies are independent of each other; only the client
-            knows the differences and selects the right one
+```mermaid
+2. **Strategy interface** — Declares a method (or methods) common to all algorithm variants. The context uses this method to trigger the algorithm.
+3. **Concrete Strategies** — Each implements a distinct variant of the algorithm. They share the same interface, making them interchangeable.
+4. **Client** — Creates a specific strategy object and passes it to the context. Must be aware of the differences between strategies to select the right one.
+
+```mermaid
+classDiagram
+    class Context {
+        -strategy: Strategy
+        +setStrategy(Strategy)
+        +doSomething()
+    }
+    class Strategy {
+        <<interface>>
+        +execute(data)
+    }
+    class ConcreteStrategyA {
+        +execute(data)
+    }
+    class ConcreteStrategyB {
+        +execute(data)
+    }
+    class Client
+    Context --> Strategy : delegates to
+    Strategy <|.. ConcreteStrategyA
+    Strategy <|.. ConcreteStrategyB
+    Client --> ConcreteStrategyA : creates
+    Client --> Context : configures
 ```
 
 1. **Context** — Maintains a reference to a concrete strategy. Communicates with it *only* via the strategy interface. Exposes a setter to replace the strategy at runtime.
@@ -72,8 +81,6 @@ The context becomes **independent of concrete strategies**. Add a new algorithm?
 4. **Client** — Creates a specific strategy object and passes it to the context. Must be aware of the differences between strategies to select the right one.
 
 ## Pseudocode
-
-*Arithmetic calculator: the context delegates operations (add, subtract, multiply) to interchangeable strategy objects.*
 
 ```java
 // The strategy interface declares operations common to all

@@ -51,33 +51,40 @@ All state classes follow the **same interface**, so the context works with them 
 
 ## Structure
 
-```
-┌─────────────────────┐         ┌───────────────────┐
-│      Context        │────────▶│   State (interface)│
-│─────────────────────│         │───────────────────│
-│ - state: State      │         │ + doThis()        │
-│ + doThis()          │         │ + doThat()        │
-│ + changeState(s)    │         └───────────────────┘
-└─────────────────────┘                   △
-        │                                 │
-        │ delegates to           ┌────────┼────────┐
-        │                        │                 │
-        │                ┌───────┴──────┐  ┌───────┴──────┐
-        │                │ ConcreteState│  │ ConcreteState│
-        │                │      A       │  │      B       │
-        │                │──────────────│  │──────────────│
-        │                │ + doThis()   │  │ + doThis()   │
-        │                │ + doThat()   │  │ + doThat()   │
-        │                └──────────────┘  └──────────────┘
-        │                        │                 │
-        └────────────────────────┴─────────────────┘
-              states may hold backreference to context
-```
-
 1. **Context** — Stores a reference to a concrete state object; delegates all state-specific work to it via the state interface. Exposes a setter (`changeState`) for switching states.
 2. **State interface** — Declares state-specific methods that must make sense for *all* concrete states (no dead methods).
 3. **Concrete States** — Implement state-specific behavior. May hold a **backreference** to the context to fetch data and initiate transitions. Intermediate abstract classes can encapsulate shared behavior.
 4. Both context and concrete states can **set the next state** and trigger the transition by replacing the state object linked to the context.
+
+```mermaid
+classDiagram
+    class Context {
+        -state: State
+        +doThis()
+        +doThat()
+        +changeState(State)
+    }
+    class State {
+        <<interface>>
+        +doThis()
+        +doThat()
+    }
+    class ConcreteStateA {
+        -context: Context
+        +doThis()
+        +doThat()
+    }
+    class ConcreteStateB {
+        -context: Context
+        +doThis()
+        +doThat()
+    }
+    Context --> State
+    State <|.. ConcreteStateA
+    State <|.. ConcreteStateB
+    ConcreteStateA --> Context : backreference
+    ConcreteStateB --> Context : backreference
+```
 
 ## Pseudocode
 

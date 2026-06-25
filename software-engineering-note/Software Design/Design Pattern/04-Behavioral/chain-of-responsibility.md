@@ -41,28 +41,6 @@ All handler classes implement the **same interface**. This lets you compose chai
 
 ## Structure
 
-```
-┌─────────────────────┐
-│      Handler        │  ◄── interface
-├─────────────────────┤
-│ + setNext(h)        │
-│ + handle(request)   │
-└──────────┬──────────┘
-           │ implements
-    ┌──────┴──────────────────────────┐
-    │                                 │
-    ▼                                 ▼
-┌──────────────┐              ┌───────────────────┐
-│ BaseHandler  │ (optional)   │ ConcreteHandlerA  │
-├──────────────┤              ├───────────────────┤
-│ - next        │◄────────────│ + handle(request) │
-│ + handle()   │              └───────────────────┘
-└──────────────┘              ┌───────────────────┐
-                              │ ConcreteHandlerB  │
-                              ├───────────────────┤
-                              │ + handle(request) │
-                              └───────────────────┘
-```
 
 | Role | Responsibility |
 |---|---|
@@ -70,6 +48,32 @@ All handler classes implement the **same interface**. This lets you compose chai
 | **Base Handler** (optional) | Boilerplate: stores a reference to the next handler. Default behavior is forwarding to the next handler if it exists. |
 | **Concrete Handlers** | Contain the actual processing logic. Each decides (a) whether to process the request and (b) whether to pass it along. Self-contained and immutable — all data via constructor. |
 | **Client** | Composes the chain (once or dynamically) and sends requests to any handler in it — not necessarily the first. |
+
+```mermaid
+classDiagram
+    class Handler {
+        <<interface>>
+        +setNext(Handler)
+        +handle(request)
+    }
+    class BaseHandler {
+        -next: Handler
+        +setNext(Handler)
+        +handle(request)
+    }
+    class ConcreteHandlerA {
+        +handle(request)
+    }
+    class ConcreteHandlerB {
+        +handle(request)
+    }
+    class Client
+    Handler <|.. BaseHandler
+    BaseHandler <|-- ConcreteHandlerA
+    BaseHandler <|-- ConcreteHandlerB
+    BaseHandler --> Handler : next
+    Client --> Handler
+```
 
 ---
 

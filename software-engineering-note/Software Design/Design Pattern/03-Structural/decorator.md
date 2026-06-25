@@ -36,33 +36,34 @@ Wearing clothes. When cold, you put on a sweater. Still cold? Add a jacket. Rain
 
 ## Structure
 
-```
-┌──────────────────────┐
-│     «interface»      │
-│     Component        │
-├──────────────────────┤
-│ + execute()          │
-└──────────┬───────────┘
-           │ implements
-   ┌───────┴────────┐
-   │                │
-┌──┴─────────────┐ ┌┴──────────────────────┐
-│ Concrete       │ │ BaseDecorator          │
-│ Component      │ ├───────────────────────┤
-├───────────────┤ │ - wrappee: Component   │
-│ + execute()   │ ├───────────────────────┤
-└───────────────┘ │ + BaseDecorator(c)     │
-                  │ + execute()            │
-                  └───────────┬────────────┘
-                              │ extends
-                   ┌──────────┴──────────┐
-                   │                     │
-          ┌────────┴────────┐  ┌─────────┴────────┐
-          │ ConcreteDeco A  │  │ ConcreteDeco B   │
-          ├─────────────────┤  ├──────────────────┤
-          │ - addedState     │  │ + execute()      │
-          │ + execute()      │  │ + addedBehavior()│
-          └─────────────────┘  └──────────────────┘
+
+```mermaid
+classDiagram
+    class Component {
+        <<interface>>
+        +execute()
+    }
+    class ConcreteComponent {
+        +execute()
+    }
+    class BaseDecorator {
+        -wrappee: Component
+        +BaseDecorator(Component)
+        +execute()
+    }
+    class ConcreteDecoratorA {
+        -addedState
+        +execute()
+    }
+    class ConcreteDecoratorB {
+        +execute()
+        +addedBehavior()
+    }
+    Component <|.. ConcreteComponent
+    Component <|.. BaseDecorator
+    BaseDecorator <|-- ConcreteDecoratorA
+    BaseDecorator <|-- ConcreteDecoratorB
+    BaseDecorator o-- Component : wrappee
 ```
 
 1. **Component** — declares the common interface for both wrappers and wrapped objects.

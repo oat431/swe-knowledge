@@ -40,6 +40,40 @@ The pattern turns one monolithic class hierarchy into several **related, composa
 | **Refined Abstractions** | Variants of control logic. Like their parent, they work with any implementation through the general interface. |
 | **Client** | Works with the abstraction. Links the abstraction to a concrete implementation (typically via the abstraction's constructor), then forgets about the implementation details. |
 
+```mermaid
+classDiagram
+    class Client
+    class Abstraction {
+        -implementation: Implementation
+        +feature1()
+        +feature2()
+    }
+    class RefinedAbstraction {
+        +featureN()
+    }
+    class Implementation {
+        <<interface>>
+        +method1()
+        +method2()
+        +method3()
+    }
+    class ConcreteImplementationA {
+        +method1()
+        +method2()
+        +method3()
+    }
+    class ConcreteImplementationB {
+        +method1()
+        +method2()
+        +method3()
+    }
+    Client --> Abstraction
+    Abstraction <|-- RefinedAbstraction
+    Abstraction --> Implementation : delegates to
+    Implementation <|.. ConcreteImplementationA
+    Implementation <|.. ConcreteImplementationB
+```
+
 ---
 
 ## Pseudocode (from source)

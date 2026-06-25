@@ -33,6 +33,28 @@ Result: where you once needed thousands of heavy particle objects, you now need 
 - **Flyweight Factory** — manages a pool/cache of flyweights. Returns existing flyweight matching the requested intrinsic state or creates a new one.
 - **Client** — calculates/stores extrinsic state and uses the factory to obtain flyweights. From the client's view, a flyweight is a template object configured at runtime via method parameters.
 
+```mermaid
+classDiagram
+    class Flyweight {
+        -intrinsicState
+        +operation(extrinsicState)
+    }
+    class FlyweightFactory {
+        -flyweights: Map
+        +getFlyweight(key) Flyweight
+    }
+    class Context {
+        -extrinsicState
+        -flyweight: Flyweight
+        +operation()
+    }
+    class Client
+    FlyweightFactory --> Flyweight : creates/caches
+    Context o-- Flyweight
+    Client --> FlyweightFactory
+    Client --> Context
+```
+
 ## Pseudocode
 
 This example renders millions of trees on a forest canvas. Without Flyweight, each `Tree` duplicates texture and color data. With Flyweight, the repeating data lives in shared `TreeType` objects.

@@ -38,30 +38,29 @@ Military hierarchies: an army consists of divisions, divisions consist of brigad
 
 ## Structure
 
-```
-┌─────────────────────┐
-│      Component      │  ◄── interface
-├─────────────────────┤
-│ + operation()       │
-│ + add(c)     (opt.) │
-│ + remove(c)  (opt.) │
-│ + getChild(i)(opt.) │
-└──────────┬──────────┘
-           │
-    ┌──────┴──────┐
-    │             │
-┌───▼───┐     ┌───▼───────────┐
-│  Leaf │     │   Composite   │
-├───────┤     ├───────────────┤
-│+op()  │     │ children: []  │
-└───────┘     ├───────────────┤
-              │ + operation() │
-              │ + add(c)      │
-              │ + remove(c)   │
-              │ + getChild(i) │
-              └───────────────┘
-                     │
-              children: Component[]
+
+```mermaid
+classDiagram
+    class Component {
+        <<interface>>
+        +operation()
+        +add(Component)
+        +remove(Component)
+        +getChild(int) Component
+    }
+    class Leaf {
+        +operation()
+    }
+    class Composite {
+        -children: List~Component~
+        +operation()
+        +add(Component)
+        +remove(Component)
+        +getChild(int) Component
+    }
+    Component <|.. Leaf
+    Component <|.. Composite
+    Composite o-- Component : children
 ```
 
 1. **Component** — Interface declaring operations common to both simple and complex elements of the tree. May optionally declare child-management methods (`add`, `remove`, `getChild`).
