@@ -11,7 +11,7 @@ Quick-reference index for programming topics. Where deep content exists in [[sof
 | **API Design** | [[API Overview]] — REST, GraphQL, gRPC, WebSocket, WebHook + Security + Operations | [[API Overview]] — 11 files across 4 categories |
 | **Microservices** | [[Microservice Overview]] — 19 files: Decomposition, Integration, Database, Resilience, Observability, Cross-Cutting, Deployment | [[Microservice Overview]] — 19 files across 7 categories |
 | **Algorithms & Data Structures** | [[Math For SE Note Overview]] (Graphs, Trees, Counting) | [[Algorithm And Datastructure]] — outline |
-| **Testing & QA** | [[Clean Code Overview]] (Unit Testing, TDD) / [[Clean Coder Overview]] (Testing Strategies) | [[QA note]] — outline |
+| **Testing & QA** | [[QA Overview]] — Fundamentals, Test Types, Automation, CI/CD, Production Testing | [[QA Overview]] — 13 files across 4 categories |
 | **Cybersecurity** | — | [[Cybersecurity]] — unique, not covered elsewhere |
 
 ---
