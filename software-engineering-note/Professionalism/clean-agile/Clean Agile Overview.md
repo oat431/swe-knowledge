@@ -17,6 +17,7 @@ A return to the core of Agile — not the bloated, consultant-driven frameworks,
 | 4 | Team Practices | Metaphor, sustainable pace, collective ownership, CI, standups |
 | 5 | Technical Practices | TDD, refactoring, simple design, pair programming |
 | 6 | Becoming Agile | Values, transformation, coaching, scaling, craftsmanship |
+| 7 | Conclusion + Afterword | The basics, a developer's reflection |
 
 ---
 
@@ -56,6 +57,11 @@ A return to the core of Agile — not the bloated, consultant-driven frameworks,
 > [[06 Values & Transformation]] — Courage, Communication, Feedback, Simplicity; faking it
 > [[06 Coaching & Scaling]] — Coach vs Scrum Master, SAFe/LeSS, Agile in the large
 > [[06 Craftsmanship]] — Software Craftsmanship Manifesto, ideology vs methodology, identity
+
+### 07 Conclusion
+
+> [[07 Conclusion]] — The basics are old, tried, and true. Everything else is fluff.
+> [[07 Afterword]] — Eric Crichlow's reflection: Agile as religion, the gap between ideal and reality
 
 ---
 
