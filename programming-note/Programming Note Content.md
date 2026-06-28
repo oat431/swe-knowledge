@@ -13,6 +13,7 @@ Quick-reference index for programming topics. Where deep content exists in [[sof
 | **Algorithms & Data Structures** | [[Algorithm Overview]] — Arrays, Trees, Graphs, Sorting, DP, Patterns (14 files) | [[Algorithm Overview]] — 14 files across 3 categories |
 | **Testing & QA** | [[QA Overview]] — Fundamentals, Test Types, Automation, CI/CD, Production Testing | [[QA Overview]] — 13 files across 4 categories |
 | **Cybersecurity** | [[Cybersecurity Overview]] — Crypto, OWASP, Secure Coding, TLS, Containers, Incident Response (13 files) | [[Cybersecurity Overview]] — 13 files across 4 categories |
+| **Database** | [[Database Overview]] — SQL, Normalization, Indexing, Transactions, NoSQL, Migration, Scaling (11 files) | [[Database Overview]] — 11 files across 3 categories |
 
 ---
 
