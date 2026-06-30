@@ -55,7 +55,7 @@ Bring this log to your next check-in with Coach.
 
 | Day | Sleep (hrs) | Body Weight (kg) | Protein hit? | Notes |
 | --- | ----------- | ---------------- | ------------ | ----- |
-| Mon | 8           | 122.7            | 100g         |       |
+| Mon | 8           | 122.3            | 100g         |       |
 | Tue | 6           | 122.3            | 130g         |       |
 | Wed |             |                  |              |       |
 | Thu |             |                  |              |       |
