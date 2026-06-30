@@ -35,6 +35,18 @@
 - [ ] Error boundaries for every major section (one component crash ≠ white page)
 - [ ] Empty states designed (not just "no results" — guide the user)
 - [ ] Form state: submit, loading, success, error — all four states handled
+- [ ] Form validation: Zod schema + server-side re-validation (client UX, server security)
+
+---
+
+## Routing
+
+- [ ] File-based or programmatic routing — consistent pattern across app
+- [ ] Lazy-loaded routes — code split per page (automatic in Next.js, SvelteKit, Nuxt)
+- [ ] Navigation guards — auth check before entering protected routes
+- [ ] Dynamic routes with typed params — `/user/:id` → `params.id`
+- [ ] 404 page custom — not framework default
+- [ ] `robots.txt` and `sitemap` if SEO matters
 
 ---
 

@@ -1,6 +1,6 @@
 # Microservice Launch Checklist
 
-> Tick every box before a multi-service system hits production. Assumes you've already done the [[Backend Launch]] checklist for each individual service.
+> Tick every box before a multi-service system hits production. Assumes you've already done the [[API Launch]] checklist for each individual service.
 
 ---
 

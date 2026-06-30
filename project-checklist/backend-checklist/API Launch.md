@@ -1,6 +1,6 @@
-# Backend Launch Checklist
+# API Launch Checklist
 
-> Tick every box before a backend service hits production. Framework-agnostic. Deep knowledge: follow the `→` links.
+> Tick every box before an API service hits production. Framework-agnostic. Deep knowledge: follow the `→` links.
 
 ---
 

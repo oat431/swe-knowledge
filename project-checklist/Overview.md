@@ -10,7 +10,7 @@
 
 | Checklist | For | Lines |
 |-----------|-----|:-----:|
-| [[Backend Launch]] | Any backend service before production | ~45 items |
+| [[API Launch]] | Any backend service before production | ~45 items |
 | [[Microservice Launch]] | Multi-service systems before production | ~35 items |
 | [[Frontend Launch]] | Any frontend app before production | ~35 items |
 
@@ -22,7 +22,7 @@ The original checklists in `../` are your **reference manuals** — keep them fo
 
 | Original (Reference) | Improved (Checklist) |
 |---------------------|---------------------|
-| `spring-boot-api.md` (263 lines) | [[Backend Launch]] (~45 lines) |
+| `spring-boot-api.md` (263 lines) | [[API Launch]] (~45 lines) |
 | `microservice-infrastructure.md` (292 lines) | [[Microservice Launch]] (~35 lines) |
 | `react-js.md` (134 lines) | [[Frontend Launch]] (~35 lines) |
 
