@@ -31,44 +31,44 @@ Session length: see table above (45-60 min per lifting session, ~40 min Wed)
 
 ### Mon — Upper (Push/Pull Focus)
 
-| Exercise             | Sets × Reps | Notes                                                                |
-| -------------------- | ----------- | -------------------------------------------------------------------- |
-| Dumbbell Bench Press | 3×8         | Start 8-10 kg per hand. Flat bench. Bar path: lower chest to lockout |
-| Chest-Supported Row  | 3×10        | Machine or DB row on incline bench. Squeeze shoulder blades          |
-| Seated Dumbbell OHP  | 3×8         | 5-6 kg per hand. Elbows slightly forward, don't flare                |
-| Face Pulls           | 3×12        | Cable with rope. Pull to forehead, external rotation at end          |
-| Tricep Pushdown      | 2×12        | Optional. Cable with straight bar or rope                            |
+| Exercise             | Sets × Reps | Rest    | Notes                                                                |
+| -------------------- | ----------- | ------- | -------------------------------------------------------------------- |
+| Dumbbell Bench Press | 3×8         | 2 min   | Start 8-10 kg per hand. Flat bench. Bar path: lower chest to lockout |
+| Chest-Supported Row  | 3×10        | 90 sec  | Machine or DB row on incline bench. Squeeze shoulder blades          |
+| Seated Dumbbell OHP  | 3×8         | 90 sec  | 5-6 kg per hand. Elbows slightly forward, don't flare                |
+| Face Pulls           | 3×12        | 60 sec  | Cable with rope. Pull to forehead, external rotation at end          |
+| Tricep Pushdown      | 2×12        | 60 sec  | Optional. Cable with straight bar or rope                            |
 
 ### Tue — Lower (Squat Focus)
 
-| Exercise       | Sets × Reps | Notes                                                                      |
-| -------------- | ----------- | -------------------------------------------------------------------------- |
-| Goblet Squat   | 3×8         | One dumbbell held at chest. 10-12 kg. Heels down, depth as mobility allows |
-| Leg Press      | 3×10        | Machine. Feet shoulder-width. Don't lock knees at top                      |
-| Lying Leg Curl | 3×12        | Hamstrings. 2 sec negative, explosive positive                             |
-| Calf Raises    | 3×15        | Bodyweight or Smith machine. Full stretch at bottom                        |
-| Plank          | 2×30 sec    | Hips level. Breathe normally                                               |
+| Exercise       | Sets × Reps | Rest   | Notes                                                                      |
+| -------------- | ----------- | ------ | -------------------------------------------------------------------------- |
+| Goblet Squat   | 3×8         | 2 min  | One dumbbell held at chest. 10-12 kg. Heels down, depth as mobility allows |
+| Leg Press      | 3×10        | 90 sec | Machine. Feet shoulder-width. Don't lock knees at top                      |
+| Lying Leg Curl | 3×12        | 60 sec | Hamstrings. 2 sec negative, explosive positive                             |
+| Calf Raises    | 3×15        | 60 sec | Bodyweight or Smith machine. Full stretch at bottom                        |
+| Plank          | 2×30 sec    | 30 sec | Hips level. Breathe normally                                               |
 
 ### Wed — Run/Walk + Light Accessories
 
-| Exercise | Sets × Reps | Notes |
-|----------|-------------|-------|
-| Run/Walk Intervals | Per schedule below | Treadmill or outdoor |
-| Dumbbell Curls | 2×10 | Light. 5-6 kg. No swinging |
-| Dumbbell Lateral Raises | 2×12 | 3-4 kg. Lead with elbows, don't shrug |
-| Dead Bugs | 2×10/side | Slow. Opposite arm/leg, lower back pressed to floor |
+| Exercise                  | Sets × Reps       | Rest   | Notes                                                     |
+|---------------------------|-------------------|--------|-----------------------------------------------------------|
+| Run/Walk Intervals        | Per schedule below| —      | Treadmill or outdoor                                      |
+| Dumbbell Curls            | 2×10              | 60 sec | Light. 5-6 kg. No swinging                                |
+| Dumbbell Lateral Raises   | 2×12              | 60 sec | 3-4 kg. Lead with elbows, don't shrug                     |
+| Dead Bugs                 | 2×10/side         | 30 sec | Slow. Opposite arm/leg, lower back pressed to floor       |
 
 > Wed is **not** a heavy day. If you're too sore from Mon-Tue, just do the run/walk and skip accessories. Recovery > volume.
 
 ### Sat — Full Body (Deadlift Focus)
 
-| Exercise | Sets × Reps | Notes |
-|----------|-------------|-------|
-| Romanian Deadlift (RDL) | 3×8 | Dumbbells or empty bar. Push hips back, soft knees, flat back |
-| Lat Pulldown | 3×10 | Wide grip. Drive elbows down, don't pull with biceps |
-| Incline Dumbbell Press | 3×8 | 30° incline. 6-8 kg per hand. Lower to upper chest |
-| Bulgarian Split Squat | 3×8/leg | Bodyweight first week. Back foot on bench, front knee tracks over toe |
-| Seated Cable Row | 3×10 | Close grip. Squeeze 1 sec at chest |
+| Exercise                    | Sets × Reps | Rest   | Notes                                                                      |
+|-----------------------------|-------------|--------|----------------------------------------------------------------------------|
+| Romanian Deadlift (RDL)     | 3×8         | 2 min  | Dumbbells or empty bar. Push hips back, soft knees, flat back              |
+| Lat Pulldown                | 3×10        | 90 sec | Wide grip. Drive elbows down, don't pull with biceps                       |
+| Incline Dumbbell Press      | 3×8         | 90 sec | 30° incline. 6-8 kg per hand. Lower to upper chest                         |
+| Bulgarian Split Squat       | 3×8/leg     | 90 sec | Bodyweight first week. Back foot on bench, front knee tracks over toe      |
+| Seated Cable Row            | 3×10        | 60 sec | Close grip. Squeeze 1 sec at chest                                         |
 
 ---
 
