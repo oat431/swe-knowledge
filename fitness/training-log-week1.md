@@ -58,7 +58,7 @@ Bring this log to your next check-in with Coach.
 | Mon | 8           | 122.3            | 100g         |                       |
 | Tue | 6           | 122.3            | 130g         |                       |
 | Wed | 10          | 123.3            | 160g         | why do i gain weight? |
-| Thu |             |                  |              |                       |
+| Thu | 6           | 123.0            | 140          |                       |
 | Fri |             |                  |              |                       |
 | Sat |             |                  |              |                       |
 | Sun |             |                  |              |                       |
