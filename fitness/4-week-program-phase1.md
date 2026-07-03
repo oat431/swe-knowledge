@@ -31,13 +31,13 @@ Session length: see table above (45-60 min per lifting session, ~40 min Wed)
 
 ### Mon — Upper (Push/Pull Focus)
 
-| Exercise             | Sets × Reps | Rest    | Notes                                                                |
-| -------------------- | ----------- | ------- | -------------------------------------------------------------------- |
-| Dumbbell Bench Press | 3×8         | 2 min   | Start 8-10 kg per hand. Flat bench. Bar path: lower chest to lockout |
-| Chest-Supported Row  | 3×10        | 90 sec  | Machine or DB row on incline bench. Squeeze shoulder blades          |
-| Seated Dumbbell OHP  | 3×8         | 90 sec  | 5-6 kg per hand. Elbows slightly forward, don't flare                |
-| Face Pulls           | 3×12        | 60 sec  | Cable with rope. Pull to forehead, external rotation at end          |
-| Tricep Pushdown      | 2×12        | 60 sec  | Optional. Cable with straight bar or rope                            |
+| Exercise             | Sets × Reps | Rest   | Notes                                                                |
+| -------------------- | ----------- | ------ | -------------------------------------------------------------------- |
+| Dumbbell Bench Press | 3×8         | 2 min  | Start 8-10 kg per hand. Flat bench. Bar path: lower chest to lockout |
+| Chest-Supported Row  | 3×10        | 90 sec | Machine or DB row on incline bench. Squeeze shoulder blades          |
+| Seated Dumbbell OHP  | 3×8         | 90 sec | 5-6 kg per hand. Elbows slightly forward, don't flare                |
+| Face Pulls           | 3×12        | 60 sec | Cable with rope. Pull to forehead, external rotation at end          |
+| Tricep Pushdown      | 2×12        | 60 sec | Optional. Cable with straight bar or rope                            |
 
 ### Tue — Lower (Squat Focus)
 
@@ -62,13 +62,13 @@ Session length: see table above (45-60 min per lifting session, ~40 min Wed)
 
 ### Sat — Full Body (Deadlift Focus)
 
-| Exercise                    | Sets × Reps | Rest   | Notes                                                                      |
-|-----------------------------|-------------|--------|----------------------------------------------------------------------------|
-| Romanian Deadlift (RDL)     | 3×8         | 2 min  | Dumbbells or empty bar. Push hips back, soft knees, flat back              |
-| Lat Pulldown                | 3×10        | 90 sec | Wide grip. Drive elbows down, don't pull with biceps                       |
-| Incline Dumbbell Press      | 3×8         | 90 sec | 30° incline. 6-8 kg per hand. Lower to upper chest                         |
-| Bulgarian Split Squat       | 3×8/leg     | 90 sec | Bodyweight first week. Back foot on bench, front knee tracks over toe      |
-| Seated Cable Row            | 3×10        | 60 sec | Close grip. Squeeze 1 sec at chest                                         |
+| Exercise                | Sets × Reps | Rest   | Notes                                                                 |
+| ----------------------- | ----------- | ------ | --------------------------------------------------------------------- |
+| Romanian Deadlift (RDL) | 3×8         | 2 min  | Dumbbells or empty bar. Push hips back, soft knees, flat back         |
+| Lat Pulldown            | 3×10        | 90 sec | Wide grip. Drive elbows down, don't pull with biceps                  |
+| Incline Dumbbell Press  | 3×8         | 90 sec | 30° incline. 6-8 kg per hand. Lower to upper chest                    |
+| Bulgarian Split Squat   | 3×8/leg     | 90 sec | Bodyweight first week. Back foot on bench, front knee tracks over toe |
+| Seated Cable Row        | 3×10        | 60 sec | Close grip. Squeeze 1 sec at chest                                    |
 
 ---
 
