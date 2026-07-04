@@ -41,13 +41,13 @@ Bring this log to your next check-in with Coach.
 | Dead Bugs               | —           | 2×10/side          |                   |
 
 ### Sat — Full Body
-| Exercise | Weight (kg) | Sets × Reps | Notes |
-|----------|-------------|-------------|-------|
-| Romanian Deadlift (RDL) | | 3×8 | |
-| Lat Pulldown | | 3×10 | |
-| Incline Dumbbell Press | | 3×8 | |
-| Bulgarian Split Squat | | 3×8/leg | |
-| Seated Cable Row | | 3×10 | |
+| Exercise                | Weight (kg) | Sets × Reps | Notes |
+| ----------------------- | ----------- | ----------- | ----- |
+| Romanian Deadlift (RDL) | 20          | 3×8         |       |
+| Lat Pulldown            | 16          | 3×10        |       |
+| Incline Dumbbell Press  | 10          | 3×8         |       |
+| Bulgarian Split Squat   | 10          | 3×8/leg     |       |
+| Seated Cable Row        | 16          | 3×10        |       |
 
 ---
 
@@ -60,7 +60,7 @@ Bring this log to your next check-in with Coach.
 | Wed | 10          | 123.3            | 160g         | why do i gain weight? |
 | Thu | 6           | 123.0            | 140          |                       |
 | Fri | 6           | 122.8            | 140          |                       |
-| Sat |             |                  |              |                       |
+| Sat | 6           | 122.5            | 160          |                       |
 | Sun |             |                  |              |                       |
 
 ---
