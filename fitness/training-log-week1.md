@@ -15,39 +15,39 @@ Bring this log to your next check-in with Coach.
 ## Week 1
 
 ### Mon — Upper
-| Exercise             | Weight (kg) | Sets × Reps | Notes |
-| -------------------- | ----------- | ----------- | ----- |
-| Dumbbell Bench Press | 10          | 3×8         |       |
-| Chest-Supported Row  | 10          | 3×10        |       |
-| Seated Dumbbell OHP  | 10          | 3×8         |       |
-| Face Pulls           | 12          | 3×12        |       |
-| Tricep Pushdown      | 16          | 2×12        |       |
+| Exercise             | Weight (kg) | Sets × Reps | Notes       |
+| -------------------- | ----------- | ----------- | ----------- |
+| Dumbbell Bench Press | 10, 12, 12  | 3×8         | Comfortable |
+| Chest-Supported Row  | 10, 12, 12  | 3×10        | Comfortable |
+| Seated Dumbbell OHP  | 10, 12, 12  | 3×8         | Comfortable |
+| Face Pulls           | 12, 12, 12  | 3×12        | Comfortable |
+| Tricep Pushdown      | 16, 16      | 2×12        | Comfortable |
 
 ### Tue — Lower
-| Exercise       | Weight (kg) | Sets × Reps | Notes |
-| -------------- | ----------- | ----------- | ----- |
-| Goblet Squat   | 10          | 3×8         |       |
-| Leg Press      | 30          | 3×10        |       |
-| Lying Leg Curl | 16          | 3×12        |       |
-| Calf Raises    | 15          | 3×15        |       |
-| Plank          | —           | 2×30 sec    |       |
+| Exercise       | Weight (kg) | Sets × Reps | Notes          |
+| -------------- | ----------- | ----------- | -------------- |
+| Goblet Squat   | 10,15,15    | 3×8         | Easy           |
+| Leg Press      | 30,30,30    | 3×10        | Leg kinda hurt |
+| Lying Leg Curl | 16,16,16    | 3×12        | Medium         |
+| Calf Raises    | 15,15,15    | 3×15        | Medium         |
+| Plank          | —           | 2×30 sec    | Easy           |
 
 ### Wed — Run/Walk + Accessories
-| Exercise                | Weight (kg) | Sets × Reps / Time | Notes             |
-| ----------------------- | ----------- | ------------------ | ----------------- |
-| Run/Walk Intervals      | —           | 45 min             | Protocol used: __ |
-| Dumbbell Curls          | 15          | 2×10               |                   |
-| Dumbbell Lateral Raises | 15          | 2×12               |                   |
-| Dead Bugs               | —           | 2×10/side          |                   |
+| Exercise                | Weight (kg) | Sets × Reps / Time | Notes                           |
+| ----------------------- | ----------- | ------------------ | ------------------------------- |
+| Run/Walk Intervals      | —           | 45 min             | Protocol used: treadmill 4 to 6 |
+| Dumbbell Curls          | 15          | 2×10               | easy                            |
+| Dumbbell Lateral Raises | 15          | 2×12               | easy                            |
+| Dead Bugs               | —           | 2×10/side          | easy                            |
 
 ### Sat — Full Body
-| Exercise                | Weight (kg) | Sets × Reps | Notes |
-| ----------------------- | ----------- | ----------- | ----- |
-| Romanian Deadlift (RDL) | 20          | 3×8         |       |
-| Lat Pulldown            | 16          | 3×10        |       |
-| Incline Dumbbell Press  | 10          | 3×8         |       |
-| Bulgarian Split Squat   | 10          | 3×8/leg     |       |
-| Seated Cable Row        | 16          | 3×10        |       |
+| Exercise                | Weight (kg) | Sets × Reps | Notes  |
+| ----------------------- | ----------- | ----------- | ------ |
+| Romanian Deadlift (RDL) | 20          | 3×8         | Medium |
+| Lat Pulldown            | 16          | 3×10        | Easy   |
+| Incline Dumbbell Press  | 10          | 3×8         | Easy   |
+| Bulgarian Split Squat   | 10          | 3×8/leg     | Hard   |
+| Seated Cable Row        | 16          | 3×10        | Medium |
 
 ---
 
@@ -61,7 +61,7 @@ Bring this log to your next check-in with Coach.
 | Thu | 6           | 123.0            | 140          |                       |
 | Fri | 6           | 122.8            | 140          |                       |
 | Sat | 6           | 122.5            | 160          |                       |
-| Sun |             |                  |              |                       |
+| Sun | 8           | 122.3            | 140          |                       |
 
 ---
 
