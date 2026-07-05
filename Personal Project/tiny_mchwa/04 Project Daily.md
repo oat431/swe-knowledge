@@ -38,9 +38,9 @@ date: 2026-07-04
 ### PRs & Issues
 
 **API PRs:**
-- #1 feat: mvp polish (validation, CORS, lint, Air) — open
-- #6 feat: tasks CRUD + computed status — open
-- #7 feat: add tests + refactor services to interfaces — open
+- #1 feat: mvp polish (validation, CORS, lint, Air) — merged
+- #6 feat: tasks CRUD + computed status — merged
+- #7 feat: add tests + refactor services to interfaces — merged
 
 **API Issues:**
 - #2 production readiness (migrations, Dockerfile, health check) — pending
@@ -62,7 +62,6 @@ date: 2026-07-04
 - Auth: hardcoded UUID for MVP (Keycloak later)
 
 ### Next steps
-- Merge API PRs (#1, #6, #7)
 - API: production readiness (#2), then auth (#5)
 - Web: tests (#1), accessibility (#4)
 - Frontend: axios migration when Keycloak lands
