@@ -128,4 +128,44 @@ Same exercises. **Add 2.5 kg to every compound lift each session** if you comple
 
 ---
 
+## Week 1 Review (2026-06-29 → 07-05)
+
+| Metric | Result | Verdict |
+|--------|--------|---------|
+| Weight | 122.3 → 122.3 kg | Flat. Deficit not working — tracking issue |
+| Protein avg | 139g (target 160g) | Below target on 5/7 days |
+| Sleep avg | 7.1h (4 days at 6h) | Borderline — protect sleep |
+
+### Week 1 Performance → Week 2 Targets
+
+| Exercise | W1 Weight | W1 Feel | W2 Target | Note |
+|----------|-----------|---------|-----------|------|
+| DB Bench Press | 12 kg | Comfortable | **14 kg** | Increase |
+| Chest-Supported Row | 12 kg | Comfortable | **14 kg** | Increase |
+| Seated DB OHP | 12 kg | Comfortable | **14 kg** | Increase |
+| Face Pulls | 12 kg | Comfortable | **14 kg** | Increase |
+| Tricep Pushdown | 16 kg | Comfortable | **18 kg** | Increase |
+| Goblet Squat | 15 kg | Easy | **17.5 kg** | Increase |
+| Leg Press | 30 kg | Muscle burn ⚠️ | **35 kg** | Confirmed: muscle, not joint. Increase |
+| Lying Leg Curl | 16 kg | Medium | **18 kg** | Increase |
+| Calf Raises | 15 kg | Medium | **17.5 kg** | Increase |
+| RDL | 20 kg | Medium | **22 kg** | Increase |
+| Lat Pulldown | 16 kg | Easy | **18 kg** | Increase |
+| Incline DB Press | 10 kg | Easy | **12 kg** | Increase |
+| Bulgarian Split Squat | 10 kg | Hard | **Stay 10 kg** | Hard = right intensity |
+| Seated Cable Row | 16 kg | Medium | **18 kg** | Increase |
+
+### ⚠️ Flags from Week 1
+
+1. **Leg press pain** — muscle burn, increase to 35 kg
+2. **Wednesday run: 45 min instead of 24 min** — stick to 28 min.
+3. **Lateral raises at 15 kg** — too heavy, likely swinging. Drop to **5-6 kg**, strict form, lead with elbows.
+4. **Ramping weights within sessions** (10→12→12) — for Week 2, do 1-2 warm-up sets then all 3 working sets at the same weight.
+
+### Week 2 Nutrition Adjustments
+- Track calories for at least 3 days this week — or cut rice portions by ¼ cup per meal and drop one snack
+- Meal prep Sunday: 5 chicken breasts + 10 boiled eggs → hit 160g protein daily
+
+---
+
 *Next review: Week 4. Bring your log. — Coach*
