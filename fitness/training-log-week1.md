@@ -68,13 +68,13 @@ Bring this log to your next check-in with Coach.
 ## Week 2
 
 ### Mon — Upper
-| Exercise | Weight (kg) | Sets × Reps | Notes |
-|----------|-------------|-------------|-------|
-| Dumbbell Bench Press | | 3×8 | |
-| Chest-Supported Row | | 3×10 | |
-| Seated Dumbbell OHP | | 3×8 | |
-| Face Pulls | | 3×12 | |
-| Tricep Pushdown | | 2×12 | |
+| Exercise             | Weight (kg) | Sets × Reps | Notes  |
+| -------------------- | ----------- | ----------- | ------ |
+| Dumbbell Bench Press | 15,20,20    | 3×8         | Medium |
+| Chest-Supported Row  | 15,15,15    | 3×10        | Medium |
+| Seated Dumbbell OHP  | 15,15,10    | 3×8         | Hard   |
+| Face Pulls           | 12,12,12    | 3×12        | Hard   |
+| Tricep Pushdown      | 12,12       | 2×12        | Hard   |
 
 ### Tue — Lower
 | Exercise | Weight (kg) | Sets × Reps | Notes |
@@ -101,6 +101,19 @@ Bring this log to your next check-in with Coach.
 | Incline Dumbbell Press | | 3×8 | |
 | Bulgarian Split Squat | | 3×8/leg | |
 | Seated Cable Row | | 3×10 | |
+
+---
+## Week 2 Daily Check-In
+
+| Day | Sleep (hrs) | Body Weight (kg) | Protein hit? | Notes |
+| --- | ----------- | ---------------- | ------------ | ----- |
+| Mon | 7           | 122.3            | 160g         |       |
+| Tue |             |                  |              |       |
+| Wed |             |                  |              |       |
+| Thu |             |                  |              |       |
+| Fri |             |                  |              |       |
+| Sat |             |                  |              |       |
+| Sun |             |                  |              |       |
 
 ---
 
