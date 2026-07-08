@@ -12,7 +12,7 @@ This is a life long learning of my software engineering career about Software De
 - [[Clean Architecture Overview]]
 - [[Clean Code Overview]]
 - [[Code Smells Catalog]]
-- design pattern
+- [[Design Pattern Overview]]
 - [[Human Computer Interaction Overview]]
 
 so I decide to note everything as I can in this repository
