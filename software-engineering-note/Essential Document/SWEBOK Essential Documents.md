@@ -10,8 +10,6 @@ tags: [overview, software-engineering, sdlc, swebok, essential-documents]
 >
 > ⚠️ **This is a document-only extract.** For the full body of knowledge, see:
 > `F:\projects\orlita_md\software-engineering-note\Body of Knowledge\SWEBOK\`
->
-> 📄 **Original file:** [[../Software Engineering Note Content|Software Engineering Note Content.md]]
 
 **Priority Legend:**
 
