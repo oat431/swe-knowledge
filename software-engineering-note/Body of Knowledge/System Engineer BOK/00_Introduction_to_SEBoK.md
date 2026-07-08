@@ -30,12 +30,12 @@ The SEBoK is **global in applicability**, authored and reviewed by experts from 
 The SEBoK:
 
 - Provides a **guide to the body of SE knowledge** with references to detailed sources; it is not a self-contained knowledge resource.
-- Focuses on **engineered systems** (ES) contexts — socio-technical systems with a recognized SE life cycle — while treating social and natural systems as relevant environmental considerations (see [[02_Foundations_of_Systems_Engineering]]).
-- Describes generic **SE life cycle and process knowledge** (see [[03_Systems_Engineering_and_Management]]).
-- Recognizes that SE principles can be applied differently to different types of **products, services, enterprises, and systems of systems (SoS)** (see [[04_Applications_of_Systems_Engineering]]).
-- Provides resources for **organization support** of SE activities (see [[05_Enabling_Systems_Engineering]]).
-- Explores the **interaction between SE and other disciplines**, highlighting what systems engineers need to know about these disciplines (see [[06_Related_Disciplines]]).
-- Is **domain-independent**, with implementation examples to provide domain-specific context (see [[07_Implementation_Examples]]).
+- Focuses on **engineered systems** (ES) contexts — socio-technical systems with a recognized SE life cycle — while treating social and natural systems as relevant environmental considerations (see [[01_Systems_Engineering_Fundamentals]]).
+- Describes generic **SE life cycle and process knowledge** (see [[05_Life_Cycles_and_Processes]]).
+- Recognizes that SE principles can be applied differently to different types of **products, services, enterprises, and systems of systems (SoS)** (see [[10_Product_and_Service_Systems_Engineering]]).
+- Provides resources for **organization support** of SE activities (see [[14_Enabling_Businesses_and_Enterprises]]).
+- Explores the **interaction between SE and other disciplines**, highlighting what systems engineers need to know about these disciplines (see [[16_SE_and_Project_Management]]).
+- Is **domain-independent**, with implementation examples to provide domain-specific context (see [[20_Implementation_Examples]]).
 
 Studies of system cost, schedule, and safety failures have shown that most failures come not from domain disciplines, but from **lack of adequate Systems Engineering** (NDIA 2003, 2006, 2016; GAO 2016; Leveson 2012). The SEBoK exists to strengthen mutual understanding across the many disciplines involved in developing and operating systems.
 
@@ -48,13 +48,13 @@ The SEBoK is organized into **eight parts**:
 | Part | Title | Description |
 |------|-------|-------------|
 | **Part 1** | [[00_Introduction_to_SEBoK]] | Explains the scope, context, and structure of the SEBoK and of systems engineering itself. Includes user guidance and use cases. |
-| **Part 2** | [[02_Foundations_of_Systems_Engineering]] | Provides the conceptual foundations of SE: definitions and basic concepts of systems; principles, concepts, methods, and models from systems science; systems thinking; and systems modelling. |
-| **Part 3** | [[03_Systems_Engineering_and_Management]] | Describes generic knowledge on the practice of SE and related management activities: life cycle models, technical activities (requirements, architecture, test and evaluation), and management activities (planning, measurement, risk). |
-| **Part 4** | [[04_Applications_of_Systems_Engineering]] | Describes how to apply SE principles to different types of system context: products, services, enterprises, and systems of systems (SoS). |
-| **Part 5** | [[05_Enabling_Systems_Engineering]] | Approaches to organization that enable successful performance of SE activities at the enterprise, team, and individual levels — from value proposition and governance to competency, personal development, and ethics. |
-| **Part 6** | [[06_Related_Disciplines]] | Describes the relationships between SE and other disciplines: software engineering, project management, industrial engineering, procurement/acquisition, and specialty engineering (the "–ilities"). |
-| **Part 7** | [[07_Implementation_Examples]] | Real-world case studies and vignettes demonstrating implementations of SE knowledge in domains such as aerospace, medicine, and software. |
-| **Part 8** | [[08_Emerging_Knowledge]] | Cutting-edge and emerging ideas not yet covered in other parts; as these areas mature, they migrate into Parts 2–7. |
+| **Part 2** | [[01_Systems_Engineering_Fundamentals]] | Provides the conceptual foundations of SE: definitions and basic concepts of systems; principles, concepts, methods, and models from systems science; systems thinking; and systems modelling. |
+| **Part 3** | [[05_Life_Cycles_and_Processes]] | Describes generic knowledge on the practice of SE and related management activities: life cycle models, technical activities (requirements, architecture, test and evaluation), and management activities (planning, measurement, risk). |
+| **Part 4** | [[10_Product_and_Service_Systems_Engineering]] | Describes how to apply SE principles to different types of system context: products, services, enterprises, and systems of systems (SoS). |
+| **Part 5** | [[14_Enabling_Businesses_and_Enterprises]] | Approaches to organization that enable successful performance of SE activities at the enterprise, team, and individual levels — from value proposition and governance to competency, personal development, and ethics. |
+| **Part 6** | [[16_SE_and_Project_Management]] | Describes the relationships between SE and other disciplines: software engineering, project management, industrial engineering, procurement/acquisition, and specialty engineering (the "–ilities"). |
+| **Part 7** | [[20_Implementation_Examples]] | Real-world case studies and vignettes demonstrating implementations of SE knowledge in domains such as aerospace, medicine, and software. |
+| **Part 8** | [[21_Emerging_Knowledge]] | Cutting-edge and emerging ideas not yet covered in other parts; as these areas mature, they migrate into Parts 2–7. |
 
 The SEBoK also contains a **Glossary of Terms**, a list of **Primary References**, and quicklinks for navigation including a table of contents and list of acronyms.
 
@@ -131,12 +131,12 @@ Challenges have evolved from organizing ancient cities, through the Industrial R
 SE is holistic and stakeholder value-oriented, in contrast to component-oriented, performance-oriented engineering disciplines.
 
 **Engineering disciplines intertwined with SE:**
-- **Software Engineering (SwE)**: Most system functionality is now implemented in software. Neither SwE nor SE is a subset of the other (see [[06_Related_Disciplines]]).
+- **Software Engineering (SwE)**: Most system functionality is now implemented in software. Neither SwE nor SE is a subset of the other (see [[16_SE_and_Project_Management]]).
 - **Human Factors Engineering**: From micro-ergonomics to macro-ergonomics; human-systems integration is critical.
 - **Industrial Engineering**: Overlaps significantly with SE in the industrial domain but also includes manufacturing outside SE.
 
 **Non-engineering disciplines:**
-- **Technical Management (TM)**: A specialization of project management; SE and PM have significant common content but neither is a subset of the other (see [[06_Related_Disciplines]]).
+- **Technical Management (TM)**: A specialization of project management; SE and PM have significant common content but neither is a subset of the other (see [[16_SE_and_Project_Management]]).
 - **Procurement and Acquisition**: Practitioners draw upon SE to determine scope and requirements, prepare RFPs, design source selection processes, and monitor progress.
 
 Most good systems engineers are **"T-shaped" people** — having both a working knowledge of wider-system considerations and deep expertise in a relevant domain.
@@ -237,10 +237,10 @@ The SEBoK complements the general management guidance available in sources such 
 
 ## Related Chapters
 
-- [[02_Foundations_of_Systems_Engineering]] — Definitions, systems science, systems thinking, and modelling foundations
-- [[03_Systems_Engineering_and_Management]] — Life cycle models, technical processes, and SE management
-- [[04_Applications_of_Systems_Engineering]] — Product, service, enterprise, and SoS contexts
-- [[05_Enabling_Systems_Engineering]] — Individuals, teams, and organizations enabling SE
-- [[06_Related_Disciplines]] — SE and software engineering, project management, specialty engineering
-- [[07_Implementation_Examples]] — Case studies and vignettes from real projects
-- [[08_Emerging_Knowledge]] — Cutting-edge and evolving SE topics
+- [[01_Systems_Engineering_Fundamentals]] — Definitions, systems science, systems thinking, and modelling foundations
+- [[05_Life_Cycles_and_Processes]] — Life cycle models, technical processes, and SE management
+- [[10_Product_and_Service_Systems_Engineering]] — Product, service, enterprise, and SoS contexts
+- [[14_Enabling_Businesses_and_Enterprises]] — Individuals, teams, and organizations enabling SE
+- [[16_SE_and_Project_Management]] — SE and software engineering, project management, specialty engineering
+- [[20_Implementation_Examples]] — Case studies and vignettes from real projects
+- [[21_Emerging_Knowledge]] — Cutting-edge and evolving SE topics

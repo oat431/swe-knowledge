@@ -316,6 +316,6 @@ Patterns are expressions of observable regularities found in systems from differ
 ## Related Chapters
 
 - [[02_Nature_of_Systems]] — The diversity of natural, engineered, and socio-technical systems
-- [[04_Representing_Systems_with_Models]] — Abstraction and modeling in understanding and designing systems
-- [[05_Systems_Approach_Applied]] — Structured methods for applying systems concepts to engineering practice
-- [[01_Systems_Fundamentals]] — Essential definitions, concepts, and heuristics
+- [[04_Systems_Models_and_Approach]] — Abstraction and modeling in understanding and designing systems
+- [[04_Systems_Models_and_Approach]] — Structured methods for applying systems concepts to engineering practice
+- [[01_Systems_Engineering_Fundamentals]] — Essential definitions, concepts, and heuristics

@@ -349,11 +349,11 @@ Tailoring adapts ISO/IEC/IEEE 15288 processes to the specific project environmen
 
 ## Related Chapters
 
-- [[01_Introduction_to_Systems_Engineering]]: Foundational SE principles and the systems approach
-- [[02_Systems_Thinking]]: The intellectual foundation — concurrency, iteration, recursion in problem-solving
-- [[03_System_Definition]]: Concept definition and requirements definition processes
-- [[04_System_Realization]]: Implementation, integration, verification, and validation processes
+- [[00_Introduction_to_SEBoK]]: Foundational SE principles and the systems approach
+- [[03_Systems_Science_and_Thinking]]: The intellectual foundation — concurrency, iteration, recursion in problem-solving
+- [[07_System_Definition_and_Architecture]]: Concept definition and requirements definition processes
+- [[08_System_Realization_and_Maintenance]]: Implementation, integration, verification, and validation processes
 - [[06_Technical_Management_Processes]]: Project planning, assessment, control, risk, and decision management
-- [[07_System_Deployment_and_Use]]: Deployment, operation, maintenance, and disposal processes
-- [[08_Product_and_Service_Life_Management]]: Life cycle sustainment and service management
-- [[09_Enabling_Systems_Engineering]]: Enterprise and organizational enablers that support life cycle execution
+- [[08_System_Realization_and_Maintenance]]: Deployment, operation, maintenance, and disposal processes
+- [[08_System_Realization_and_Maintenance]]: Life cycle sustainment and service management
+- [[14_Enabling_Businesses_and_Enterprises]]: Enterprise and organizational enablers that support life cycle execution

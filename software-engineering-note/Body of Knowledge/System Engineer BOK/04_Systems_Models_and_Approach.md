@@ -317,9 +317,9 @@ Six questions cycle around the value cycle:
 
 ## Related Chapters
 
-- [[SEBoK Overview]]: Structure and scope of the SEBoK
-- [[03_Systems_Fundamentals]]: Systems thinking, systems science, and the nature of systems that underpin both modeling and the systems approach
-- [[05_Systems_Engineering_and_Management]]: Part 3 of the SEBoK — how the systems approach activities map to formal SE technical and management processes
+- [[SEBoK v2 - Overview]]: Structure and scope of the SEBoK
+- [[01_Systems_Engineering_Fundamentals]]: Systems thinking, systems science, and the nature of systems that underpin both modeling and the systems approach
+- [[05_Life_Cycles_and_Processes]]: Part 3 of the SEBoK — how the systems approach activities map to formal SE technical and management processes
 - [[SWEBOK v4 - Overview]]: Software Engineering Body of Knowledge; related modeling and engineering process concepts
 
 ---

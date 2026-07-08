@@ -284,12 +284,12 @@ Three domains:
 ## Related Chapters
 
 - [[02_Nature_of_Systems]] — Product, Service, Enterprise, and SoS contexts
-- [[05_Representing_Systems_with_Models]] — architecture frameworks, modeling techniques
-- [[06_Systems_Approach_Applied]] — structured methods for SE practice
-- [[07_Life_Cycle_Processes]] — generic SE life cycle models
-- [[08_Systems_Engineering_Management]] — planning, risk, configuration, quality management
-- [[09_Organizational_Strategy]] — SE in enterprise context
+- [[04_Systems_Models_and_Approach]] — architecture frameworks, modeling techniques
+- [[04_Systems_Models_and_Approach]] — structured methods for SE practice
+- [[05_Life_Cycles_and_Processes]] — generic SE life cycle models
+- [[06_Technical_Management_Processes]] — planning, risk, configuration, quality management
+- [[14_Enabling_Businesses_and_Enterprises]] — SE in enterprise context
 - [[11_Enterprise_Systems_Engineering]] — ESE as a related application context
 - [[12_Systems_of_Systems]] — SoS as a related application context
-- [[SEBoK_Part_3]] — Life Cycle Processes
-- [[SEBoK_Part_4]] — Full SEBoK Part 4: Applications of Systems Engineering
+- [[05_Life_Cycles_and_Processes]] — Life Cycle Processes
+- [[10_Product_and_Service_Systems_Engineering]] — Full SEBoK Part 4: Applications of Systems Engineering

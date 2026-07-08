@@ -478,8 +478,8 @@ The CID Measurement Framework details common information needs and measures effe
 
 - [[00_Introduction_to_SEBoK]] — Overview and structure of the SEBoK
 - [[02_Nature_of_Systems]] — Foundational systems concepts
-- [[03_Systems_Engineering_and_Management]] — SE life cycle and process knowledge
-- [[04_Applications_of_Systems_Engineering]] — Domain-specific SE applications
-- [[05_Enabling_Systems_Engineering]] — Organizational support for SE
-- [[06_Related_Disciplines]] — SE interaction with other disciplines (Project Management, Software Engineering, Quality Attributes, etc.)
-- [[07_Implementation_Examples]] — Case studies and vignettes
+- [[05_Life_Cycles_and_Processes]] — SE life cycle and process knowledge
+- [[10_Product_and_Service_Systems_Engineering]] — Domain-specific SE applications
+- [[14_Enabling_Businesses_and_Enterprises]] — Organizational support for SE
+- [[16_SE_and_Project_Management]] — SE interaction with other disciplines (Project Management, Software Engineering, Quality Attributes, etc.)
+- [[20_Implementation_Examples]] — Case studies and vignettes

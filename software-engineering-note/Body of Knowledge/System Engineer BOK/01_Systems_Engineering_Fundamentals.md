@@ -335,9 +335,9 @@ Value without qualities is abstract — a claim without demonstration. Qualities
 
 ## Related Chapters
 
-- [[02_Systems_Science|Systems Science]] — theoretical advances and enduring insights
-- [[03_Systems_Thinking|Systems Thinking]] — perspectives, principles, and heuristics for framing complex problems
-- [[04_Representing_Systems_with_Models|Representing Systems with Models]] — abstraction and modeling in system design
-- [[05_Systems_Approach_Applied|Systems Approach Applied to Engineered Systems]] — structured methods for engineering practice
-- [[06_Engineered_System_Context|Engineered System Context]] — SoI boundaries, enabling systems, and operational environments
-- [[07_Life_Cycle_Models|Life Cycle Models]] — stages and processes across the SE life cycle
+- [[03_Systems_Science_and_Thinking|Systems Science]] — theoretical advances and enduring insights
+- [[03_Systems_Science_and_Thinking|Systems Thinking]] — perspectives, principles, and heuristics for framing complex problems
+- [[04_Systems_Models_and_Approach|Representing Systems with Models]] — abstraction and modeling in system design
+- [[04_Systems_Models_and_Approach|Systems Approach Applied to Engineered Systems]] — structured methods for engineering practice
+- [[02_Nature_of_Systems|Engineered System Context]] — SoI boundaries, enabling systems, and operational environments
+- [[05_Life_Cycles_and_Processes|Life Cycle Models]] — stages and processes across the SE life cycle

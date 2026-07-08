@@ -317,13 +317,13 @@ ITIL (Information Technology Infrastructure Library) best practices for operatio
 
 ## Related Chapters
 
-- [[01_Systems_Fundamentals]] — definitions, concepts, principles, and heuristics
+- [[01_Systems_Engineering_Fundamentals]] — definitions, concepts, principles, and heuristics
 - [[02_Nature_of_Systems]] — engineered, natural, and social systems; FFF triad
-- [[03_Systems_Science]] — complexity, emergence, and systems theory
-- [[04_Systems_Thinking]] — perspectives, principles, and patterns
-- [[06_Systems_Approach_Applied]] — structured methods for SE practice
-- [[10_Product_Systems_Engineering]] — PSE context in SEBoK Part 4
-- [[12_Service_Systems_Engineering]] — service systems as related enterprise components
-- [[13_Systems_of_Systems]] — SoS engineering and its relationship to enterprises
-- [[SEBoK_Part_3]] — Life Cycle Processes (ISO/IEC/IEEE 15288)
-- [[SEBoK_Part_5]] — Enabling SE (organizational strategy, individuals, businesses)
+- [[03_Systems_Science_and_Thinking]] — complexity, emergence, and systems theory
+- [[03_Systems_Science_and_Thinking]] — perspectives, principles, and patterns
+- [[04_Systems_Models_and_Approach]] — structured methods for SE practice
+- [[10_Product_and_Service_Systems_Engineering]] — PSE context in SEBoK Part 4
+- [[10_Product_and_Service_Systems_Engineering]] — service systems as related enterprise components
+- [[12_Systems_of_Systems]] — SoS engineering and its relationship to enterprises
+- [[05_Life_Cycles_and_Processes]] — Life Cycle Processes (ISO/IEC/IEEE 15288)
+- [[14_Enabling_Businesses_and_Enterprises]] — Enabling SE (organizational strategy, individuals, businesses)

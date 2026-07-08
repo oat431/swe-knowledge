@@ -196,10 +196,10 @@ In SE practice, phases provide structure for progression; cycles enable iteratio
 ---
 
 ## Related Chapters
-- [[01_Systems_Fundamentals]] — definitions, concepts, principles, and heuristics
-- [[03_Systems_Science]] — theoretical advances and enduring insights
-- [[04_Systems_Thinking]] — perspectives, principles, and patterns
-- [[05_Representing_Systems_with_Models]] — abstraction and modeling
-- [[06_Systems_Approach_Applied]] — structured methods for SE practice
-- [[SEBoK_Part_3]] — Life Cycle Processes
-- [[SEBoK_Part_4]] — Applications of Systems Engineering
+- [[01_Systems_Engineering_Fundamentals]] — definitions, concepts, principles, and heuristics
+- [[03_Systems_Science_and_Thinking]] — theoretical advances and enduring insights
+- [[03_Systems_Science_and_Thinking]] — perspectives, principles, and patterns
+- [[04_Systems_Models_and_Approach]] — abstraction and modeling
+- [[04_Systems_Models_and_Approach]] — structured methods for SE practice
+- [[05_Life_Cycles_and_Processes]] — Life Cycle Processes
+- [[10_Product_and_Service_Systems_Engineering]] — Applications of Systems Engineering

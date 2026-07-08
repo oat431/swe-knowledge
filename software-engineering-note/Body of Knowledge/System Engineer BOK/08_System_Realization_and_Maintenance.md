@@ -380,10 +380,10 @@ Commercial-off-the-shelf components provide advantages (technological advancemen
 ---
 
 ## Related Chapters
-- [[01_Systems_Fundamentals]] — definitions, concepts, principles, and heuristics
+- [[01_Systems_Engineering_Fundamentals]] — definitions, concepts, principles, and heuristics
 - [[02_Nature_of_Systems]] — foundational perspectives across natural, social, and engineered systems
-- [[05_Representing_Systems_with_Models]] — abstraction and modeling
-- [[06_Systems_Approach_Applied]] — structured methods for SE practice
-- [[07_Systems_Engineering_Life_Cycle_Models]] — life cycle models and process relationships
-- [[09_Systems_Engineering_Management]] — SEM planning, assessment, decision management, risk, CM, and quality
-- [[SEBoK_Part_4]] — Applications of Systems Engineering
+- [[04_Systems_Models_and_Approach]] — abstraction and modeling
+- [[04_Systems_Models_and_Approach]] — structured methods for SE practice
+- [[05_Life_Cycles_and_Processes]] — life cycle models and process relationships
+- [[06_Technical_Management_Processes]] — SEM planning, assessment, decision management, risk, CM, and quality
+- [[10_Product_and_Service_Systems_Engineering]] — Applications of Systems Engineering
