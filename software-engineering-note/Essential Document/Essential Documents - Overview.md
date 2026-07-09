@@ -1,15 +1,15 @@
 ---
-tags: [overview, essential-documents, software-engineering, project-management, systems-engineering, business-analysis]
+tags: [overview, essential-documents, software-engineering, project-management, systems-engineering, business-analysis, cyber-security, data-management]
 ---
 
 # Essential Documents — Overview
 
-> **Purpose:** A practical, phase-organized checklist of documents you need to produce across four disciplines — Business Analysis, Software Engineering, Project Management, and Systems Engineering.
+> **Purpose:** A practical, phase-organized checklist of documents you need to produce across six disciplines — Business Analysis, Software Engineering, Project Management, Systems Engineering, Cyber Security, and Data Management.
 > Each checklist is extracted from its respective Body of Knowledge and links back to the full reference for deeper study.
 
 ## What Is This?
 
-This folder contains **document-only extracts** from four major Bodies of Knowledge:
+This folder contains **document-only extracts** from six major Bodies of Knowledge:
 
 | Discipline | Source | File | Focus |
 |---|---|---|---|
@@ -17,57 +17,27 @@ This folder contains **document-only extracts** from four major Bodies of Knowle
 | 💻 **Software Engineering** | SWEBOK v4 (IEEE) | [[SWEBOK Essential Documents]] | SDLC phases: Requirements → Architecture → Design → Construction → Testing → DevOps → Maintenance |
 | 📋 **Project Management** | PMBOK® Guide v8 (PMI) | [[PMBOK Essential Documents]] | Five Focus Areas: Initiating → Planning → Executing → M&C → Closing |
 | ⚙️ **Systems Engineering** | SEBoK v2 (BKCASE) | [[SEBOK Essential Documents]] | SE Life Cycle: Concept → Architecture → Realization → Operations → Maintenance |
+| 🔒 **Cyber Security** | CyBOK v1.1 (NCSC) | [[CyBOK Essential Documents]] | Security domains: Governance → Threat Intel → SecOps → AppSec → Infrastructure → Advanced |
+| 🗄️ **Data Management** | DMBoK v2 (DAMA) | [[DMBOK Essential Documents]] | Data domains: Governance → Architecture → Modeling → Storage → Integration → Quality |
 
-> 📊 **BABOK was added to fill the gap between business strategy and technical execution.** It covers what happens *before* development starts — understanding the business need, defining the future state, and specifying what value the solution must deliver.
+> 🔒🗄️ **CyBOK and DMBOK fill the cross-cutting concerns** that SWEBOK touches on but doesn't fully cover. CyBOK provides the full security program documentation (from risk governance to incident response), while DMBOK covers the complete data management lifecycle (from governance to quality).
 
 Each checklist follows the same format:
 - 🔴🟡🟢 **Priority legend** — Must Have / Nice to Have / Optional
-- **Phase-organized tables** with document name, description, priority, and ISO/IEEE reference
-- **Key Standards Referenced** table at the bottom
+- **Section-organized tables** with document name, description, priority, and ISO/IEEE reference
+- **Owner blockquote** under each section header indicating primary responsibility
 - ⚠️ **Link-back banner** pointing to the full Body of Knowledge
-
-## Why This Folder Exists
-
-The full BOK vaults are deep — 200-370 KB each with principles, processes, tools, techniques, case studies, and theory. When you're working on a project and need a quick answer to *"what documents should I be producing right now?"*, this folder gives you the checklist without the theory.
-
-These are designed for:
-- **Project kickoff** — What do I need to produce in the first week?
-- **Phase planning** — What documents does this phase require?
-- **Audit prep** — Are we meeting standards for documentation?
-- **Team onboarding** — Here's what we produce and why
 
 ## Quick Comparison
 
-| Stage      | BABOK (Business)                                                                             | SWEBOK (Software)                                    | PMBOK (Project)                                               | SEBOK (Systems)                                              |
-| ---------- | -------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------ |
-| **Start**  | Current State, Business Requirements, Business Objectives, Future State, Change Strategy     | BRD, SRS, User Stories, Acceptance Criteria          | Business Case, Project Charter, Stakeholder Register          | Mission Analysis, ConOps, Stakeholder Needs, SyRS            |
-| **Design** | Requirements (specified), Requirements Architecture, Design Options, Solution Recommendation | SAD, ADR, Architecture Views, API Specs, HLD/LLD     | Project Mgmt Plan, WBS, Schedule, Budget, Risk Register       | Functional/Logical/Physical Architecture, ICD, Trade Studies |
-| **Build**  | Requirements (verified/validated/approved)                                                   | Source Code, Unit Tests, Build Scripts, Code Reviews | Team Assignments, Issue Log, Change Requests, Lessons Learned | Implementation Plan, Integration Plan, Verification Plan     |
-| **Test**   | Solution Performance Measures, Performance Analysis                                          | Test Plan, Test Cases, Defect Reports, UAT Sign-off  | Work Performance Reports, Variance Analysis, EVM              | Verification Reports, Validation Reports, Audit Reports      |
-| **Ship**   | Solution/Enterprise Limitations, Recommended Actions                                         | Deployment Plan, CI/CD, SLA, Runbook, Release Notes  | Final Report, Project Closure, Verified Deliverables          | Transition Plan, Operations Manual, Maintenance Plan         |
-| **Cross**  | BA Approach, Governance, Stakeholder Engagement, Info Mgmt                                   | QMS, SQAP, Threat Model, SCMP, Baseline Records      | Change Mgmt Plan, Config Mgmt Plan, Procurement Docs          | SEMP, Safety Case, Security Plan, Standards Matrix           |
-
-## How BABOK Connects to SWEBOK
-
-```
-BABOK (Business Analysis)     ──feeds──→     SWEBOK (Software Engineering)
-─────────────────────────                    ────────────────────────────
-Strategy Analysis                             Requirements
-  → Current State, Business Req,               → SRS, BRD, User Stories
-    Future State, Change Strategy
-
-Requirements Analysis & Design                Architecture + Design
-  → Specified Requirements,                    → SAD, HLD, LLD, API Specs
-    Requirements Architecture
-
-Requirements Life Cycle Mgmt                  Construction + Testing
-  → Traced, Maintained,                        → Source Code, Test Cases
-    Prioritized, Approved
-
-Solution Evaluation                           Operations + Maintenance
-  → Performance Measures,                      → Deployment Plan, SLA,
-    Limitations, Actions                         Incident Mgmt, MR/PR
-```
+| Stage | BABOK (Business) | SWEBOK (Software) | PMBOK (Project) | SEBOK (Systems) | CyBOK (Security) | DMBOK (Data) |
+|---|---|---|---|---|---|---|
+| **Start** | Current State, Business Req, Objectives, Future State, Change Strategy | BRD, SRS, User Stories, Acceptance Criteria | Business Case, Project Charter, Stakeholder Register | Mission Analysis, ConOps, Stakeholder Needs, SyRS | Risk Assessment, Security Policy, ISMS, Threat Model | DG Charter, Data Strategy, Enterprise Data Model, Business Glossary |
+| **Design** | Requirements Architecture, Design Options, Solution Recommendation | SAD, ADR, Architecture Views, API Specs, HLD/LLD | PM Plan, WBS, Schedule, Budget, Risk Register | Functional/Logical/Physical Architecture, ICD, Trade Studies | Secure Design Review, Secure Coding Guidelines, Access Control Policy, Network Security Architecture | CDM, LDM, PDM, Dimensional Model, Data Dictionary, Integration Architecture |
+| **Build** | Requirements (verified/validated/approved) | Source Code, Unit Tests, Build Scripts, Code Reviews | Team Assignments, Issue Log, Change Requests, Lessons Learned | Implementation Plan, Integration Plan, Verification Plan | SAST/SCA Reports, DevSecOps Pipeline, SIEM Rules, IDPS Signatures | ETL/ELT Specs, Golden Record Rules, DQ Rules, Metadata Repository |
+| **Test** | Solution Performance Measures, Performance Analysis | Test Plan, Test Cases, Defect Reports, UAT Sign-off | Work Performance Reports, Variance Analysis, EVM | Verification Reports, Validation Reports, Audit Reports | DAST Report, Penetration Test, Adversary Emulation, Vulnerability Assessment | Data Profiling Report, DQ Scorecard, Data Cleansing Spec |
+| **Ship** | Solution/Enterprise Limitations, Recommended Actions | Deployment Plan, CI/CD, SLA, Runbook, Release Notes | Final Report, Project Closure, Verified Deliverables | Transition Plan, Operations Manual, Maintenance Plan | Incident Response Plan, SOC Runbook, BCP, SOAR Playbooks | Backup/Recovery Plan, Capacity Plan, Data Breach Response Plan |
+| **Cross** | BA Approach, Governance, Stakeholder Engagement, Info Mgmt | QMS, SQAP, SCMP, Baseline Records, Threat Model | Change Mgmt Plan, Config Mgmt Plan, Procurement Docs | SEMP, Safety Case, Security Plan, Standards Matrix | Compliance Register, Security Metrics, CTI Reports, Forensic Reports | DG Scorecard, Data Lineage, Data Retention Policy, DQ Issue Log |
 
 ## Which Checklist Do I Need?
 
@@ -75,7 +45,9 @@ Solution Evaluation                           Operations + Maintenance
 - **Building software?** → Start with [[SWEBOK Essential Documents]]
 - **Managing a project?** → Start with [[PMBOK Essential Documents]]
 - **Engineering a system (hardware + software + people)?** → Start with [[SEBOK Essential Documents]]
-- **All four?** → They're designed to be complementary. A software project typically needs BABOK + SWEBOK + PMBOK. A large system integration needs all four.
+- **Securing an organization or system?** → Start with [[CyBOK Essential Documents]]
+- **Managing data as an asset?** → Start with [[DMBOK Essential Documents]]
+- **All six?** → Each addresses a different dimension. A comprehensive software project typically needs BABOK + SWEBOK + PMBOK. Add CyBOK for security programs and DMBOK for data-intensive systems.
 
 ## Related Vaults
 
@@ -85,3 +57,5 @@ For the full body of knowledge behind these checklists:
 - [[SWEBOK v4 - Overview]] — Software Engineering Body of Knowledge (IEEE, 2024)
 - [[PMBOK v8 - Overview]] — Project Management Body of Knowledge (PMI, 2025)
 - [[SEBoK v2 - Overview]] — Systems Engineering Body of Knowledge (BKCASE, 2025)
+- [[CyBOK v1 - Overview]] — Cyber Security Body of Knowledge (NCSC, 2021)
+- [[DMBoK v2 - Overview]] — Data Management Body of Knowledge (DAMA, 2017)
