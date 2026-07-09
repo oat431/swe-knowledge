@@ -1,12 +1,12 @@
 ---
-tags: [overview, body-of-knowledge, software-engineering, project-management, systems-engineering]
+tags: [overview, body-of-knowledge, software-engineering, project-management, systems-engineering, business-analysis, cyber-security]
 ---
 
 # Body of Knowledge — Overview
 
-> **Purpose:** A curated collection of four major Bodies of Knowledge covering the full spectrum of modern engineering and business disciplines — Software Engineering, Project Management, Systems Engineering, and Business Analysis. Each BOK is a comprehensive, chapter-organized vault with deep cross-linking via [[wikilinks]].
+> **Purpose:** A curated collection of five major Bodies of Knowledge covering the full spectrum of modern engineering, business, and security disciplines — Software Engineering, Project Management, Systems Engineering, Business Analysis, and Cyber Security. Each BOK is a comprehensive, chapter-organized vault with deep cross-linking via [[wikilinks]].
 
-## The Four Bodies of Knowledge
+## The Five Bodies of Knowledge
 
 | BOK | Source | Edition | Files | Size | Focus |
 |---|---|---|---|---|---|
@@ -14,6 +14,7 @@ tags: [overview, body-of-knowledge, software-engineering, project-management, sy
 | 📋 **PMBOK** | Project Management Institute | v8 (2025) | 19 | ~274 KB | Project Management — 7 Performance Domains |
 | ⚙️ **SEBoK** | BKCASE | v2 (2025) | 23 | ~366 KB | Systems Engineering — 8 Parts, 30+ Knowledge Areas |
 | 📊 **BABOK** | International Institute of Business Analysis | v3 (2015) | 11 | ~257 KB | Business Analysis — 6 Knowledge Areas |
+| 🔒 **CyBOK** | NCSC (UK Government) | v1.1 (2021) | 22 | ~350 KB | Cyber Security — 21 Knowledge Areas |
 
 ## SWEBOK v4 — Software Engineering
 
@@ -70,10 +71,30 @@ The **Systems Engineering Body of Knowledge** is the definitive reference for th
 
 The **Business Analysis Body of Knowledge** is the IIBA global standard defining the BA profession. 6 Knowledge Areas with 30 tasks, 50 techniques, and 5 perspectives. **Vault:** `BABOK\\` — 11 files
 
+## CyBOK v1.1 — Cyber Security
+
+[[CyBOK/CyBOK v1 - Overview|→ Full Overview]]
+
+The **Cyber Security Body of Knowledge** is the NCSC reference mapping the foundations of cyber security. 21 Knowledge Areas:
+
+| Category | Knowledge Areas |
+|---|---|
+| 🔐 **Governance & Risk** | Risk Management & Governance, Law & Regulation, Privacy |
+| 👤 **Human & Adversarial** | Human Factors, Adversarial Behaviours, Malware & Attack Technologies |
+| 🛡️ **Defensive** | Security Operations & Incident Management, Forensics |
+| ⚙️ **Systems Security** | Software Security, OS & Virtualisation, Distributed Systems, Hardware, CPS, Physical Layer |
+| 🔑 **Security Engineering** | AAA, Applied Cryptography, Formal Methods, Secure Software Lifecycle, Web & Mobile, Network Security |
+
+**Vault:** `CyBOK\\` — 22 files
+
 ## How These BOKs Relate
 
 ```mermaid
 flowchart TD
+    subgraph CyBOK_GRP["🔒 CyBOK — Cyber Security"]
+        CYBER["Secure every layer:\nrisk • governance • operations\ncrypto • network • software • hardware"]
+    end
+
     subgraph BABOK_GRP["📊 BABOK — Business Analysis"]
         BA["Define the business need\nand recommend solutions"]
     end
@@ -91,14 +112,18 @@ flowchart TD
     BA -.->|"informs needs & value"| SE
     BA -.->|"defines requirements"| SW
     BA -.->|"feeds business case"| PM
+    CYBER -.->|"secures"| SE
+    CYBER -.->|"secures"| SW
+    CYBER -.->|"secures"| PM
 ```
 
 - **PMBOK** tells you *how to manage the work*
 - **SWEBOK** tells you *how to build the software*
 - **SEBoK** tells you *how to engineer the whole system*
 - **BABOK** tells you *how to define the business need and solution*
+- **CyBOK** tells you *how to secure it all*
 
-They're complementary — a large initiative typically draws from all four.
+They're complementary — a large initiative typically draws from all five.
 
 ## Reading Paths
 
@@ -107,6 +132,7 @@ They're complementary — a large initiative typically draws from all four.
 - **Project manager:** PMBOK → SEBoK (SE & PM) → SWEBOK (understanding the work being managed)
 - **Systems engineer:** SEBoK → SWEBOK (SE & SWE) → PMBOK (SE & PM)
 - **Business analyst:** BABOK → SWEBOK (understanding the solution) → PMBOK (project context)
+- **Security engineer:** CyBOK → SWEBOK (software security) → SEBoK (system-level security)
 - **Quick document checklist:** [[../Essential Document/Essential Documents - Overview|Essential Documents →]]
 
 ## Related
