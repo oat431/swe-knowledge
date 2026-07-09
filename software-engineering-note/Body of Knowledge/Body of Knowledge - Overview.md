@@ -4,15 +4,16 @@ tags: [overview, body-of-knowledge, software-engineering, project-management, sy
 
 # Body of Knowledge — Overview
 
-> **Purpose:** A curated collection of three major Bodies of Knowledge covering the full spectrum of modern engineering disciplines — Software Engineering, Project Management, and Systems Engineering. Each BOK is a comprehensive, chapter-organized vault with deep cross-linking via [[wikilinks]].
+> **Purpose:** A curated collection of four major Bodies of Knowledge covering the full spectrum of modern engineering and business disciplines — Software Engineering, Project Management, Systems Engineering, and Business Analysis. Each BOK is a comprehensive, chapter-organized vault with deep cross-linking via [[wikilinks]].
 
-## The Three Bodies of Knowledge
+## The Four Bodies of Knowledge
 
 | BOK | Source | Edition | Files | Size | Focus |
 |---|---|---|---|---|---|
 | 💻 **SWEBOK** | IEEE Computer Society | v4 (2024) | 20 | ~200 KB | Software Engineering — 18 Knowledge Areas |
 | 📋 **PMBOK** | Project Management Institute | v8 (2025) | 19 | ~274 KB | Project Management — 7 Performance Domains |
 | ⚙️ **SEBoK** | BKCASE | v2 (2025) | 23 | ~366 KB | Systems Engineering — 8 Parts, 30+ Knowledge Areas |
+| 📊 **BABOK** | International Institute of Business Analysis | v3 (2015) | 11 | ~257 KB | Business Analysis — 6 Knowledge Areas |
 
 ## SWEBOK v4 — Software Engineering
 
@@ -61,35 +62,43 @@ The **Systems Engineering Body of Knowledge** is the definitive reference for th
 | **Part 7** | Implementation Examples (Case Studies) |
 | **Part 8** | Emerging Knowledge (AI, Digital Engineering, MBSE, SE Transformation) |
 
-**Vault:** `System Engineer BOK\` — 23 files | **Essential Docs:** [[../Essential Document/SEBOK Essential Documents|Document checklist]]
+**Vault:** `System Engineer BOK\\` — 23 files | **Essential Docs:** [[../Essential Document/SEBOK Essential Documents|Document checklist]]
+
+## BABOK® Guide v3 — Business Analysis
+
+[[BABOK/BABOK v3 - Overview|→ Full Overview]]
+
+The **Business Analysis Body of Knowledge** is the IIBA global standard defining the BA profession. 6 Knowledge Areas with 30 tasks, 50 techniques, and 5 perspectives. **Vault:** `BABOK\\` — 11 files
 
 ## How These BOKs Relate
 
-```
-┌──────────────────────────────────────────────────┐
-│              SYSTEMS ENGINEERING                  │
-│  (SEBoK — the big picture: hardware + software    │
-│   + people + processes as an integrated system)   │
-│  ┌──────────────────────────────────────────────┐ │
-│  │         SOFTWARE ENGINEERING                  │ │
-│  │  (SWEBOK — building the software within       │ │
-│  │   the system: requirements → architecture     │ │
-│  │   → design → code → test → deploy → maintain) │ │
-│  │  ┌──────────────────────────────────────────┐ │ │
-│  │  │        PROJECT MANAGEMENT                │ │ │
-│  │  │  (PMBOK — managing the work: initiating   │ │ │
-│  │  │   → planning → executing → monitoring     │ │ │
-│  │  │   → closing, across all disciplines)      │ │ │
-│  │  └──────────────────────────────────────────┘ │ │
-│  └──────────────────────────────────────────────┘ │
-└──────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    subgraph BABOK_GRP["📊 BABOK — Business Analysis"]
+        BA["Define the business need\nand recommend solutions"]
+    end
+
+    subgraph SEBoK_GRP["⚙️ SEBoK — Systems Engineering"]
+        SE["Engineer the whole system:\nhardware + software + people + processes"]
+        subgraph SWEBOK_GRP["💻 SWEBOK — Software Engineering"]
+            SW["Build the software:\nrequirements → architecture → design\n→ code → test → deploy → maintain"]
+            subgraph PMBOK_GRP["📋 PMBOK — Project Management"]
+                PM["Manage the work:\ninitiating → planning → executing\n→ monitoring → closing"]
+            end
+        end
+    end
+
+    BA -.->|"informs needs & value"| SE
+    BA -.->|"defines requirements"| SW
+    BA -.->|"feeds business case"| PM
 ```
 
 - **PMBOK** tells you *how to manage the work*
 - **SWEBOK** tells you *how to build the software*
 - **SEBoK** tells you *how to engineer the whole system*
+- **BABOK** tells you *how to define the business need and solution*
 
-They're complementary — a large software project typically draws from all three.
+They're complementary — a large initiative typically draws from all four.
 
 ## Reading Paths
 
@@ -97,6 +106,7 @@ They're complementary — a large software project typically draws from all thre
 - **Senior engineer / tech lead:** SWEBOK (architecture, quality, security) → SEBoK (foundations, systems thinking)
 - **Project manager:** PMBOK → SEBoK (SE & PM) → SWEBOK (understanding the work being managed)
 - **Systems engineer:** SEBoK → SWEBOK (SE & SWE) → PMBOK (SE & PM)
+- **Business analyst:** BABOK → SWEBOK (understanding the solution) → PMBOK (project context)
 - **Quick document checklist:** [[../Essential Document/Essential Documents - Overview|Essential Documents →]]
 
 ## Related
