@@ -14,7 +14,8 @@ tags: [overview, body-of-knowledge, software-engineering, project-management, sy
 | 📋 **PMBOK** | Project Management Institute | v8 (2025) | 19 | ~274 KB | Project Management — 7 Performance Domains |
 | ⚙️ **SEBoK** | BKCASE | v2 (2025) | 23 | ~366 KB | Systems Engineering — 8 Parts, 30+ Knowledge Areas |
 | 📊 **BABOK** | International Institute of Business Analysis | v3 (2015) | 11 | ~257 KB | Business Analysis — 6 Knowledge Areas |
-| 🔒 **CyBOK** | NCSC (UK Government) | v1.1 (2021) | 22 | ~350 KB | Cyber Security — 21 Knowledge Areas |
+| 🔒 **CyBOK** | NCSC (UK Government) | v1.1 (2021) | 22 | ~262 KB | Cyber Security — 21 Knowledge Areas |
+| 🗄️ **DMBOK** | DAMA International | v2 (2017) | 13 | ~200 KB | Data Management — 11 Knowledge Areas |
 
 ## SWEBOK v4 — Software Engineering
 
@@ -95,6 +96,10 @@ flowchart TD
         CYBER["Secure every layer:\nrisk • governance • operations\ncrypto • network • software • hardware"]
     end
 
+    subgraph DMBOK_GRP["🗄️ DMBOK — Data Management"]
+        DATA["Manage data across all layers:\ngovernance • architecture • modeling\nintegration • quality • warehousing"]
+    end
+
     subgraph BABOK_GRP["📊 BABOK — Business Analysis"]
         BA["Define the business need\nand recommend solutions"]
     end
@@ -115,6 +120,9 @@ flowchart TD
     CYBER -.->|"secures"| SE
     CYBER -.->|"secures"| SW
     CYBER -.->|"secures"| PM
+    DATA -.->|"governs data for"| SE
+    DATA -.->|"models data for"| SW
+    DATA -.->|"architects data for"| PM
 ```
 
 - **PMBOK** tells you *how to manage the work*
@@ -122,8 +130,9 @@ flowchart TD
 - **SEBoK** tells you *how to engineer the whole system*
 - **BABOK** tells you *how to define the business need and solution*
 - **CyBOK** tells you *how to secure it all*
+- **DMBOK** tells you *how to manage the data*
 
-They're complementary — a large initiative typically draws from all five.
+They're complementary — a large initiative typically draws from all six.
 
 ## Reading Paths
 
@@ -133,6 +142,7 @@ They're complementary — a large initiative typically draws from all five.
 - **Systems engineer:** SEBoK → SWEBOK (SE & SWE) → PMBOK (SE & PM)
 - **Business analyst:** BABOK → SWEBOK (understanding the solution) → PMBOK (project context)
 - **Security engineer:** CyBOK → SWEBOK (software security) → SEBoK (system-level security)
+- **Data engineer:** DMBOK → SWEBOK (data modeling) → SEBoK (system data architecture)
 - **Quick document checklist:** [[../Essential Document/Essential Documents - Overview|Essential Documents →]]
 
 ## Related
