@@ -50,6 +50,7 @@ Use this profile when your project meets **any** of the following criteria:
 > - [[SEBOK v2]] — Systems Engineering Body of Knowledge (INCOSE)
 > - [[DMBOK 2]] — Data Management Body of Knowledge
 > - [[CyBOK 1.1]] — Cyber Security Body of Knowledge
+> - [[UX UI Essential Documents]] — UX/UI Design Documents
 >
 > Plus applicable regulatory standards: DO-178C, IEC 62304, ISO 26262, EN 50128, IEC 61508, IEEE 730, IEEE 828, IEEE 1012, IEEE 1044, ISO/IEC/IEEE 12207, ISO/IEC/IEEE 15288, ISO/IEC/IEEE 29119, ISO/IEC/IEEE 29148, ISO/IEC/IEEE 42010.
 
@@ -184,6 +185,35 @@ Use this profile when your project meets **any** of the following criteria:
 | State Diagrams | Behavioral models showing state transitions and triggering events | 🟡 | SWEBOK |
 | Deployment Diagrams | Physical deployment of artifacts on infrastructure nodes | 🟡 | SWEBOK |
 | Design Rationale | Justification for design choices including trade-offs and constraints considered | 🟡 | SWEBOK |
+
+---
+
+## 6b. UX/UI Design
+
+> **Owner:** UX Researcher / UI Designer
+
+| Document | Description | Priority | ISO/IEEE Reference |
+|---|---|---|---|
+| User Personas | Fictional characters representing user segments with goals, behaviors, frustrations | 🔴 | ISO 9241-210 |
+| User Interview Script | Structured questions for user interviews | 🔴 | ISO 9241-210 |
+| Journey Map | Visual timeline of user experience with pain points and opportunities | 🔴 | ISO 9241-210 |
+| Information Architecture (IA) | Content structure, hierarchy, navigation model | 🔴 | ISO 9241-110 |
+| Sitemap | Visual map of all pages/sections | 🔴 | — |
+| User Flows | Step-by-step paths users take to complete tasks | 🔴 | ISO 9241-210 |
+| Wireframes (Low-fi) | Basic page layouts showing structure and content placement | 🔴 | — |
+| Wireframes (Mid-fi) | More detailed wireframes with real content | 🔴 | — |
+| Interactive Prototype | Clickable wireframes for user testing | 🔴 | ISO 9241-210 |
+| UI Mockups | High-fidelity screen designs with final visual design | 🔴 | — |
+| Component Library | Reusable UI components with specifications | 🔴 | — |
+| Design System | Complete system: tokens, components, patterns, guidelines | 🔴 | — |
+| Responsive Specifications | Desktop, tablet, mobile layouts | 🔴 | ISO 9241-112 |
+| State Variations | Hover, active, disabled, error, loading states | 🔴 | — |
+| Accessibility Audit | WCAG compliance check | 🔴 | ISO/IEC 40500 (WCAG 2.0) |
+| Usability Test Plan | Tasks, participants, metrics, schedule | 🔴 | ISO 9241-11 |
+| Usability Test Report | Findings, severity ratings, recommendations | 🔴 | ISO 9241-11 |
+| Design Specifications | Measurements, colors, typography for developers | 🔴 | — |
+| Interaction Specifications | Animations, transitions, micro-interactions | 🟡 | — |
+| Design Tokens | CSS variables for colors, spacing, typography | 🟡 | — |
 
 ---
 
@@ -466,6 +496,20 @@ Use this profile when your project meets **any** of the following criteria:
 |                                  | Data Dictionary                               | ☐   |
 |                                  | Design Review Records                         | ☐   |
 |                                  | Class Diagrams                                | ☐   |
+| **6b. UX/UI Design**             | User Personas                                 | ☐   |
+|                                  | Journey Map                                   | ☐   |
+|                                  | Information Architecture (IA)                 | ☐   |
+|                                  | Wireframes (Low-fi)                           | ☐   |
+|                                  | Wireframes (Mid-fi)                           | ☐   |
+|                                  | Interactive Prototype                         | ☐   |
+|                                  | UI Mockups                                    | ☐   |
+|                                  | Component Library                             | ☐   |
+|                                  | Design System                                 | ☐   |
+|                                  | Responsive Specifications                     | ☐   |
+|                                  | Accessibility Audit                           | ☐   |
+|                                  | Usability Test Plan                           | ☐   |
+|                                  | Usability Test Report                         | ☐   |
+|                                  | Design Specifications                         | ☐   |
 | **7. Construction**              | Source Code                                   | ☐   |
 |                                  | README / Developer Guide                      | ☐   |
 |                                  | Unit Test Code                                | ☐   |

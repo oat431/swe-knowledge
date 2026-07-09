@@ -38,6 +38,7 @@ tags:
 > - [[CyBOK — Cyber Security Body of Knowledge]]
 > - [[DMBOK — Data Management Body of Knowledge]]
 > - [[SEBOK — Systems Engineering Body of Knowledge]]
+> - [[UX UI Essential Documents]]
 
 ---
 
@@ -123,6 +124,27 @@ tags:
 | Data Dictionary | Canonical definitions of data elements and types | 🟡 | SWEBOK / DMBOK |
 | Design Review Records | Peer review outcomes, findings, resolutions | 🔴 | SWEBOK |
 | Deployment Diagrams | Runtime node topology, artifact placement | 🟡 | SWEBOK |
+
+---
+
+## 4b. UX/UI Design
+
+> **Owner:** UX Researcher / UI Designer
+
+| Document | Description | Priority | Source |
+|---|---|---|---|
+| User Personas | Fictional characters representing user segments with goals, behaviors | 🔴 | UX/UI |
+| Journey Map | Visual timeline of user experience with pain points and opportunities | 🔴 | UX/UI |
+| Information Architecture (IA) | Content structure, hierarchy, navigation model | 🔴 | UX/UI |
+| Wireframes (Low-fi) | Basic page layouts showing structure and content placement | 🔴 | UX/UI |
+| Wireframes (Mid-fi) | More detailed wireframes with real content | 🟡 | UX/UI |
+| Interactive Prototype | Clickable wireframes for user testing | 🔴 | UX/UI |
+| UI Mockups | High-fidelity screen designs with final visual design | 🔴 | UX/UI |
+| Component Library | Reusable UI components with specifications | 🟡 | UX/UI |
+| Design System | Complete system: tokens, components, patterns, guidelines | 🟡 | UX/UI |
+| Usability Test Plan | Tasks, participants, metrics, schedule | 🟡 | UX/UI |
+| Usability Test Report | Findings, severity ratings, recommendations | 🟡 | UX/UI |
+| Accessibility Audit | WCAG compliance check | 🔴 | UX/UI |
 
 ---
 
@@ -322,7 +344,13 @@ tags:
 | | API Specification (OpenAPI) | ☐ |
 | | ERD | ☐ |
 | | Database Schema (DDL) | ☐ |
-| | Design Review Records | ☐ |
+| **Architecture & Design** | Design Review Records | ☐ |
+| **UX/UI Design** | User Personas | ☐ |
+| | Journey Map | ☐ |
+| | Wireframes (Low-fi) | ☐ |
+| | Interactive Prototype | ☐ |
+| | UI Mockups | ☐ |
+| | Accessibility Audit | ☐ |
 | **Construction** | Source Code | ☐ |
 | | README / Developer Guide | ☐ |
 | | Unit Test Code | ☐ |

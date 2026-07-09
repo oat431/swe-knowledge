@@ -4,7 +4,7 @@ tags: [overview, essential-documents, software-engineering, project-management, 
 
 # Essential Documents — Overview
 
-> **Purpose:** A practical, phase-organized checklist of documents you need to produce across six disciplines — Business Analysis, Software Engineering, Project Management, Systems Engineering, Cyber Security, and Data Management.
+> **Purpose:** A practical, phase-organized checklist of documents you need to produce across seven disciplines — Business Analysis, Software Engineering, Project Management, Systems Engineering, Cyber Security, Data Management, and UX/UI Design.
 > Each checklist is extracted from its respective Body of Knowledge and links back to the full reference for deeper study.
 
 ## What Is This?
@@ -19,6 +19,7 @@ This folder contains **document-only extracts** from six major Bodies of Knowled
 | ⚙️ **Systems Engineering** | SEBoK v2 (BKCASE) | [[SEBOK Essential Documents]] | SE Life Cycle: Concept → Architecture → Realization → Operations → Maintenance |
 | 🔒 **Cyber Security** | CyBOK v1.1 (NCSC) | [[CyBOK Essential Documents]] | Security domains: Governance → Threat Intel → SecOps → AppSec → Infrastructure → Advanced |
 | 🗄️ **Data Management** | DMBoK v2 (DAMA) | [[DMBOK Essential Documents]] | Data domains: Governance → Architecture → Modeling → Storage → Integration → Quality |
+| 🎨 **UX/UI Design** | HCI / Industry Standards | [[UX UI Essential Documents]] | Design phases: Research → UX Design → UI Design → Testing → Handoff |
 
 > 🔒🗄️ **CyBOK and DMBOK fill the cross-cutting concerns** that SWEBOK touches on but doesn't fully cover. CyBOK provides the full security program documentation (from risk governance to incident response), while DMBOK covers the complete data management lifecycle (from governance to quality).
 
@@ -48,6 +49,7 @@ Each checklist follows the same format:
 - **Securing an organization or system?** → Start with [[CyBOK Essential Documents]]
 - **Managing data as an asset?** → Start with [[DMBOK Essential Documents]]
 - **Choosing a development methodology?** → See [[../Software Methodology/Software Methodology - Overview|Software Methodology Overview]]
+- **Designing user interfaces?** → See [[../Software Design/Human Computer Interaction/Human Computer Interaction Overview|Human Computer Interaction]]
 - **All six?** → Each addresses a different dimension. A comprehensive software project typically needs BABOK + SWEBOK + PMBOK. Add CyBOK for security programs and DMBOK for data-intensive systems.
 
 ## Project-Type Profiles

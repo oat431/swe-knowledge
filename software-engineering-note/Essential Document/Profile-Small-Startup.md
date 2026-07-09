@@ -34,6 +34,7 @@ tags:
 > - [[SEBOK Essential Documents]]
 > - [[CyBOK Essential Documents]]
 > - [[DMBOK Essential Documents]]
+> - [[UX UI Essential Documents]]
 
 ## Priority Legend
 
@@ -68,6 +69,16 @@ tags:
 | Database Schema                       | DDL scripts defining tables, indexes, and constraints        | 🔴       | SWEBOK             |
 | ERD (Entity-Relationship Diagram)     | Visual model of data entities and their relationships        | 🟡       | SWEBOK / DMBOK     |
 | SAD (Software Architecture Document)  | Lightweight diagram of components, layers, and data flow     | 🟡       | SWEBOK             |
+
+## 2b. UX/UI Design
+
+> **Owner:** Designer / Developer
+
+| Document | Description | Priority | Source |
+|---|---|---|---|
+| Wireframes (Low-fi) | Quick sketches showing page structure and content placement | 🔴 | UX/UI |
+| Interactive Prototype | Clickable wireframes for stakeholder feedback | 🟡 | UX/UI |
+| Style Guide (basic) | Colors, fonts, spacing — even if it's just a Figma file | 🟡 | UX/UI |
 
 ## 3. Construction
 
@@ -143,6 +154,7 @@ Print this table and check off each 🔴 item as you produce it.
 | Architecture & Design        | ADR (Architecture Decision Records)  | ☐  |
 | Architecture & Design        | API Specification                    | ☐  |
 | Architecture & Design        | Database Schema                      | ☐  |
+| UX/UI Design                 | Wireframes (Low-fi)                  | ☐  |
 | Construction                 | Source Code                          | ☐  |
 | Construction                 | README / Developer Guide             | ☐  |
 | Construction                 | Unit Test Code                       | ☐  |
