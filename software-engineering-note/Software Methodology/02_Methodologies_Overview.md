@@ -146,3 +146,4 @@ Big-bang methodology changes fail. Evolutionary change works:
 - [[00_Agile_Methodology]] — Deep dive on Agile, Scrum, XP, TDD
 - [[01_Lean_Methodology]] — Lean principles and practices
 - [[03_Kanban_and_Flow]] — Kanban as a Lean implementation
+- [[04_Waterfall_and_V-Model]] — Traditional sequential methodologies

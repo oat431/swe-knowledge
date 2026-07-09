@@ -409,170 +409,170 @@ Use this profile when your project meets **any** of the following criteria:
 > [!tip]
 > Print this checklist. Check off each 🔴 document as it's produced. This is your certification readiness tracker.
 
-| Phase | Document | ✓ |
-|-------|----------|---|
-| **1. Business Analysis** | Business Case | ☐ |
-| | Business Requirements | ☐ |
-| | Business Objectives | ☐ |
-| | Current State Description | ☐ |
-| | Future State Description | ☐ |
-| | Change Strategy | ☐ |
-| | Solution Scope | ☐ |
-| | Gap Analysis | ☐ |
-| | Potential Value | ☐ |
-| | Risk Analysis Results | ☐ |
-| **2. Concept & Mission** | Mission Analysis Report | ☐ |
-| | Stakeholder Needs Document | ☐ |
-| | Concept of Operations (ConOps) | ☐ |
-| | System Requirements Specification (SyRS) | ☐ |
-| | Stakeholder Register | ☐ |
-| **3. Requirements** | SRS (Software Requirements Specification) | ☐ |
-| | Nonfunctional Requirements Catalog | ☐ |
-| | Requirements Traceability Matrix | ☐ |
-| | Requirements Change Log | ☐ |
-| | Requirements Architecture | ☐ |
-| | Stakeholder Analysis | ☐ |
-| | Acceptance Criteria | ☐ |
-| **4. Project Management** | Project Charter | ☐ |
-| | Project Management Plan | ☐ |
-| | WBS + WBS Dictionary | ☐ |
-| | Schedule Baseline | ☐ |
-| | Cost Baseline | ☐ |
-| | Risk Management Plan | ☐ |
-| | Risk Register | ☐ |
-| | Change Management Plan | ☐ |
-| | Configuration Management Plan | ☐ |
-| | Stakeholder Engagement Plan | ☐ |
-| | Communications Management Plan | ☐ |
-| | Quality Management Plan | ☐ |
-| | Procurement Management Plan + SOW + Contracts | ☐ |
-| | RACI Matrix | ☐ |
-| | Lessons Learned Register | ☐ |
-| **5. Systems Architecture** | Functional Architecture | ☐ |
-| | Logical Architecture | ☐ |
-| | Physical Architecture | ☐ |
-| | System Architecture Description | ☐ |
-| | Interface Control Document (ICD) | ☐ |
-| | Trade Study Reports | ☐ |
-| | SAD (Software Architecture Document) | ☐ |
-| | ADR (Architecture Decision Records) | ☐ |
-| | Architecture Views (4+1) | ☐ |
-| | ASR Catalog | ☐ |
-| **6. Software Design** | HLD (High-Level Design) | ☐ |
-| | LLD (Low-Level Design) | ☐ |
-| | API Specification | ☐ |
-| | ERD | ☐ |
-| | Database Schema (DDL) | ☐ |
-| | Data Dictionary | ☐ |
-| | Design Review Records | ☐ |
-| | Class Diagrams | ☐ |
-| **7. Construction** | Source Code | ☐ |
-| | README / Developer Guide | ☐ |
-| | Unit Test Code | ☐ |
-| | Integration Test Code | ☐ |
-| | Build Scripts | ☐ |
-| | Dependency Manifest | ☐ |
-| | SBOM | ☐ |
-| | API Documentation | ☐ |
-| | Coding Standards / Style Guide | ☐ |
-| | Code Review Records | ☐ |
-| | Commit Messages / Changelog | ☐ |
-| | Static Analysis Reports | ☐ |
-| **8. Testing & Verification** | Test Plan | ☐ |
-| | Test Strategy | ☐ |
-| | Test Cases | ☐ |
-| | Test Suite | ☐ |
-| | Test Data | ☐ |
-| | Test Scripts (automated) | ☐ |
-| | Defect Report | ☐ |
-| | Regression Test Suite | ☐ |
-| | Traceability Matrix (Req ↔ Tests) | ☐ |
-| | Test Report | ☐ |
-| | Test Completion Report | ☐ |
-| | UAT Sign-off | ☐ |
-| | Coverage Report | ☐ |
-| | Performance Test Report | ☐ |
-| | Security Test Report | ☐ |
-| | Verification Plan | ☐ |
-| | Verification Reports | ☐ |
-| | Validation Plan | ☐ |
-| | Validation Reports | ☐ |
-| **9. Security** | ISMS Documentation | ☐ |
-| | Security Policy | ☐ |
-| | Risk Assessment Report | ☐ |
-| | Risk Treatment Plan | ☐ |
-| | Threat Model | ☐ |
-| | Security Requirements Specification | ☐ |
-| | Secure Design Review Report | ☐ |
-| | Secure Coding Guidelines | ☐ |
-| | SAST Report | ☐ |
-| | SCA Report | ☐ |
-| | DAST Report | ☐ |
-| | Penetration Test Report | ☐ |
-| | SSDLC Process Documentation | ☐ |
-| | Access Control Policy | ☐ |
-| | Authentication Standard | ☐ |
-| | Incident Response Plan | ☐ |
-| | Business Continuity Plan (BCP) | ☐ |
-| | Vulnerability Management Report | ☐ |
-| | Compliance Assessment Report | ☐ |
-| | Network Security Architecture | ☐ |
-| | DevSecOps Pipeline Configuration | ☐ |
-| | Security Metrics Dashboard | ☐ |
-| **10. Data Management** | Data Governance Charter | ☐ |
-| | Enterprise Data Model (EDM) | ☐ |
-| | Data Architecture Blueprint | ☐ |
-| | Data Flow Diagram | ☐ |
-| | Data Lineage Documentation | ☐ |
-| | Conceptual Data Model (CDM) | ☐ |
-| | Logical Data Model (LDM) | ☐ |
-| | Physical Data Model (PDM) | ☐ |
-| | Data Dictionary | ☐ |
-| | Data Classification Schema | ☐ |
-| | Data Encryption Standards | ☐ |
-| | Data Quality Rules + Scorecard | ☐ |
-| | Backup & Recovery Plan | ☐ |
-| | Data Retention & Archival Policy | ☐ |
-| | Data Breach Response Plan | ☐ |
-| | Privacy Impact Assessment | ☐ |
-| **11. Deployment & Operations** | CI/CD Pipeline Configuration | ☐ |
-| | Deployment Plan | ☐ |
-| | Rollback Plan | ☐ |
-| | SLA | ☐ |
-| | Operations Manual / Runbook | ☐ |
-| | Release Notes | ☐ |
-| | Incident Management Process | ☐ |
-| | Disaster Recovery Plan | ☐ |
-| **12. Maintenance & Support** | Maintenance Plan | ☐ |
-| | Impact Analysis Report | ☐ |
-| | MR/PR (Modification Request) | ☐ |
-| | Maintenance Log / Change History | ☐ |
-| **13. Quality Assurance** | SQAP | ☐ |
-| | V&V Plan | ☐ |
-| | Review Records | ☐ |
-| | Defect Log / Metrics | ☐ |
-| | QMS Documentation | ☐ |
-| **14. Configuration Management** | SCMP | ☐ |
-| | Baseline Records | ☐ |
-| | Change Request (CR/SCR) | ☐ |
-| | FCA Report | ☐ |
-| | PCA Report | ☐ |
-| | Version Description Document | ☐ |
-| **15. Systems Engineering** | SEMP | ☐ |
-| | Implementation Plan | ☐ |
-| | Integration Plan + Reports | ☐ |
-| | Transition Plan | ☐ |
-| | Technical Review Records (SRR, PDR, CDR, TRR) | ☐ |
-| | Technical Performance Measures (TPMs) | ☐ |
-| | System Safety Plan / Safety Case | ☐ |
-| | Hazard Analysis (PHA, SHA, SSHA) | ☐ |
-| | Standards Compliance Matrix | ☐ |
-| | Configuration Baselines | ☐ |
-| | System Disposal / Retirement Plan | ☐ |
-| **16. Domain-Specific** | Software Development Plan | ☐ |
-| | Software Assurance Plan | ☐ |
-| | Medical Device File | ☐ |
-| | Security Accreditation Package | ☐ |
+| Phase                            | Document                                      | ✓   |
+| -------------------------------- | --------------------------------------------- | --- |
+| **1. Business Analysis**         | Business Case                                 | ☐   |
+|                                  | Business Requirements                         | ☐   |
+|                                  | Business Objectives                           | ☐   |
+|                                  | Current State Description                     | ☐   |
+|                                  | Future State Description                      | ☐   |
+|                                  | Change Strategy                               | ☐   |
+|                                  | Solution Scope                                | ☐   |
+|                                  | Gap Analysis                                  | ☐   |
+|                                  | Potential Value                               | ☐   |
+|                                  | Risk Analysis Results                         | ☐   |
+| **2. Concept & Mission**         | Mission Analysis Report                       | ☐   |
+|                                  | Stakeholder Needs Document                    | ☐   |
+|                                  | Concept of Operations (ConOps)                | ☐   |
+|                                  | System Requirements Specification (SyRS)      | ☐   |
+|                                  | Stakeholder Register                          | ☐   |
+| **3. Requirements**              | SRS (Software Requirements Specification)     | ☐   |
+|                                  | Nonfunctional Requirements Catalog            | ☐   |
+|                                  | Requirements Traceability Matrix              | ☐   |
+|                                  | Requirements Change Log                       | ☐   |
+|                                  | Requirements Architecture                     | ☐   |
+|                                  | Stakeholder Analysis                          | ☐   |
+|                                  | Acceptance Criteria                           | ☐   |
+| **4. Project Management**        | Project Charter                               | ☐   |
+|                                  | Project Management Plan                       | ☐   |
+|                                  | WBS + WBS Dictionary                          | ☐   |
+|                                  | Schedule Baseline                             | ☐   |
+|                                  | Cost Baseline                                 | ☐   |
+|                                  | Risk Management Plan                          | ☐   |
+|                                  | Risk Register                                 | ☐   |
+|                                  | Change Management Plan                        | ☐   |
+|                                  | Configuration Management Plan                 | ☐   |
+|                                  | Stakeholder Engagement Plan                   | ☐   |
+|                                  | Communications Management Plan                | ☐   |
+|                                  | Quality Management Plan                       | ☐   |
+|                                  | Procurement Management Plan + SOW + Contracts | ☐   |
+|                                  | RACI Matrix                                   | ☐   |
+|                                  | Lessons Learned Register                      | ☐   |
+| **5. Systems Architecture**      | Functional Architecture                       | ☐   |
+|                                  | Logical Architecture                          | ☐   |
+|                                  | Physical Architecture                         | ☐   |
+|                                  | System Architecture Description               | ☐   |
+|                                  | Interface Control Document (ICD)              | ☐   |
+|                                  | Trade Study Reports                           | ☐   |
+|                                  | SAD (Software Architecture Document)          | ☐   |
+|                                  | ADR (Architecture Decision Records)           | ☐   |
+|                                  | Architecture Views (4+1)                      | ☐   |
+|                                  | ASR Catalog                                   | ☐   |
+| **6. Software Design**           | HLD (High-Level Design)                       | ☐   |
+|                                  | LLD (Low-Level Design)                        | ☐   |
+|                                  | API Specification                             | ☐   |
+|                                  | ERD                                           | ☐   |
+|                                  | Database Schema (DDL)                         | ☐   |
+|                                  | Data Dictionary                               | ☐   |
+|                                  | Design Review Records                         | ☐   |
+|                                  | Class Diagrams                                | ☐   |
+| **7. Construction**              | Source Code                                   | ☐   |
+|                                  | README / Developer Guide                      | ☐   |
+|                                  | Unit Test Code                                | ☐   |
+|                                  | Integration Test Code                         | ☐   |
+|                                  | Build Scripts                                 | ☐   |
+|                                  | Dependency Manifest                           | ☐   |
+|                                  | SBOM                                          | ☐   |
+|                                  | API Documentation                             | ☐   |
+|                                  | Coding Standards / Style Guide                | ☐   |
+|                                  | Code Review Records                           | ☐   |
+|                                  | Commit Messages / Changelog                   | ☐   |
+|                                  | Static Analysis Reports                       | ☐   |
+| **8. Testing & Verification**    | Test Plan                                     | ☐   |
+|                                  | Test Strategy                                 | ☐   |
+|                                  | Test Cases                                    | ☐   |
+|                                  | Test Suite                                    | ☐   |
+|                                  | Test Data                                     | ☐   |
+|                                  | Test Scripts (automated)                      | ☐   |
+|                                  | Defect Report                                 | ☐   |
+|                                  | Regression Test Suite                         | ☐   |
+|                                  | Traceability Matrix (Req ↔ Tests)             | ☐   |
+|                                  | Test Report                                   | ☐   |
+|                                  | Test Completion Report                        | ☐   |
+|                                  | UAT Sign-off                                  | ☐   |
+|                                  | Coverage Report                               | ☐   |
+|                                  | Performance Test Report                       | ☐   |
+|                                  | Security Test Report                          | ☐   |
+|                                  | Verification Plan                             | ☐   |
+|                                  | Verification Reports                          | ☐   |
+|                                  | Validation Plan                               | ☐   |
+|                                  | Validation Reports                            | ☐   |
+| **9. Security**                  | ISMS Documentation                            | ☐   |
+|                                  | Security Policy                               | ☐   |
+|                                  | Risk Assessment Report                        | ☐   |
+|                                  | Risk Treatment Plan                           | ☐   |
+|                                  | Threat Model                                  | ☐   |
+|                                  | Security Requirements Specification           | ☐   |
+|                                  | Secure Design Review Report                   | ☐   |
+|                                  | Secure Coding Guidelines                      | ☐   |
+|                                  | SAST Report                                   | ☐   |
+|                                  | SCA Report                                    | ☐   |
+|                                  | DAST Report                                   | ☐   |
+|                                  | Penetration Test Report                       | ☐   |
+|                                  | SSDLC Process Documentation                   | ☐   |
+|                                  | Access Control Policy                         | ☐   |
+|                                  | Authentication Standard                       | ☐   |
+|                                  | Incident Response Plan                        | ☐   |
+|                                  | Business Continuity Plan (BCP)                | ☐   |
+|                                  | Vulnerability Management Report               | ☐   |
+|                                  | Compliance Assessment Report                  | ☐   |
+|                                  | Network Security Architecture                 | ☐   |
+|                                  | DevSecOps Pipeline Configuration              | ☐   |
+|                                  | Security Metrics Dashboard                    | ☐   |
+| **10. Data Management**          | Data Governance Charter                       | ☐   |
+|                                  | Enterprise Data Model (EDM)                   | ☐   |
+|                                  | Data Architecture Blueprint                   | ☐   |
+|                                  | Data Flow Diagram                             | ☐   |
+|                                  | Data Lineage Documentation                    | ☐   |
+|                                  | Conceptual Data Model (CDM)                   | ☐   |
+|                                  | Logical Data Model (LDM)                      | ☐   |
+|                                  | Physical Data Model (PDM)                     | ☐   |
+|                                  | Data Dictionary                               | ☐   |
+|                                  | Data Classification Schema                    | ☐   |
+|                                  | Data Encryption Standards                     | ☐   |
+|                                  | Data Quality Rules + Scorecard                | ☐   |
+|                                  | Backup & Recovery Plan                        | ☐   |
+|                                  | Data Retention & Archival Policy              | ☐   |
+|                                  | Data Breach Response Plan                     | ☐   |
+|                                  | Privacy Impact Assessment                     | ☐   |
+| **11. Deployment & Operations**  | CI/CD Pipeline Configuration                  | ☐   |
+|                                  | Deployment Plan                               | ☐   |
+|                                  | Rollback Plan                                 | ☐   |
+|                                  | SLA                                           | ☐   |
+|                                  | Operations Manual / Runbook                   | ☐   |
+|                                  | Release Notes                                 | ☐   |
+|                                  | Incident Management Process                   | ☐   |
+|                                  | Disaster Recovery Plan                        | ☐   |
+| **12. Maintenance & Support**    | Maintenance Plan                              | ☐   |
+|                                  | Impact Analysis Report                        | ☐   |
+|                                  | MR/PR (Modification Request)                  | ☐   |
+|                                  | Maintenance Log / Change History              | ☐   |
+| **13. Quality Assurance**        | SQAP                                          | ☐   |
+|                                  | V&V Plan                                      | ☐   |
+|                                  | Review Records                                | ☐   |
+|                                  | Defect Log / Metrics                          | ☐   |
+|                                  | QMS Documentation                             | ☐   |
+| **14. Configuration Management** | SCMP                                          | ☐   |
+|                                  | Baseline Records                              | ☐   |
+|                                  | Change Request (CR/SCR)                       | ☐   |
+|                                  | FCA Report                                    | ☐   |
+|                                  | PCA Report                                    | ☐   |
+|                                  | Version Description Document                  | ☐   |
+| **15. Systems Engineering**      | SEMP                                          | ☐   |
+|                                  | Implementation Plan                           | ☐   |
+|                                  | Integration Plan + Reports                    | ☐   |
+|                                  | Transition Plan                               | ☐   |
+|                                  | Technical Review Records (SRR, PDR, CDR, TRR) | ☐   |
+|                                  | Technical Performance Measures (TPMs)         | ☐   |
+|                                  | System Safety Plan / Safety Case              | ☐   |
+|                                  | Hazard Analysis (PHA, SHA, SSHA)              | ☐   |
+|                                  | Standards Compliance Matrix                   | ☐   |
+|                                  | Configuration Baselines                       | ☐   |
+|                                  | System Disposal / Retirement Plan             | ☐   |
+| **16. Domain-Specific**          | Software Development Plan                     | ☐   |
+|                                  | Software Assurance Plan                       | ☐   |
+|                                  | Medical Device File                           | ☐   |
+|                                  | Security Accreditation Package                | ☐   |
 
 ---
 

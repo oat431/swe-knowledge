@@ -23,6 +23,7 @@ tags: [overview, software-methodology, agile, lean, waterfall, kanban]
 | [[01_Lean_Methodology]] | Seven Lean principles, waste elimination, Kaizen |
 | [[02_Methodologies_Overview]] | Comparison matrix, decision guide, anti-patterns |
 | [[03_Kanban_and_Flow]] | Kanban practices, WIP limits, Little's Law, CFD |
+| [[04_Waterfall_and_V-Model]] | Sequential development, verification levels, regulated industries |
 
 ## How These Methodologies Relate
 
