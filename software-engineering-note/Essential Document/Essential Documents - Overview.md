@@ -1,5 +1,5 @@
 ---
-tags: [overview, essential-documents, software-engineering, project-management, systems-engineering, business-analysis, cyber-security, data-management]
+tags: [overview, essential-documents, software-engineering, project-management, systems-engineering, business-analysis, cyber-security, data-management, profile]
 ---
 
 # Essential Documents — Overview
@@ -48,6 +48,21 @@ Each checklist follows the same format:
 - **Securing an organization or system?** → Start with [[CyBOK Essential Documents]]
 - **Managing data as an asset?** → Start with [[DMBOK Essential Documents]]
 - **All six?** → Each addresses a different dimension. A comprehensive software project typically needs BABOK + SWEBOK + PMBOK. Add CyBOK for security programs and DMBOK for data-intensive systems.
+
+## Project-Type Profiles
+
+Not sure how much documentation your project actually needs? These profiles pre-select and prioritize documents from all six BOKs based on project size and complexity:
+
+| Profile | Team | Timeline | Methodology | Documents | Focus |
+|---|---|---|---|---|---|
+| 🚀 [[Profile-Small-Startup]] | 1–5 devs | Weeks–months | Agile / Lean | ~30 | Ship fast — just enough docs to not get burned |
+| 🏢 [[Profile-Medium-Enterprise]] | 10–50 | 6–18 months | Hybrid | ~110 | Governance + delivery balance |
+| 🏗️ [[Profile-Large-Safety-Critical]] | 50+ | 18+ months | V-Model / Waterfall | ~150+ | Full formal — if it's not documented, it didn't happen |
+
+Each profile includes:
+- Phase-by-phase document tables with priority ratings adjusted for that project size
+- A **Quick-Start Checklist** at the end (🔴 Must Have items only — printable)
+- Links back to all six BOK essential documents for deeper reference
 
 ## Related Vaults
 
