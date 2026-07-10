@@ -39,6 +39,10 @@ This section covers the eight core topics every programmer should master.
 
 > [[12 Regex Cheatsheet]] — Syntax reference, character classes, quantifiers, groups, common patterns, Java/TypeScript usage.
 
+> [[13 CI CD Pipelines]] — CI vs CD vs CD, GitHub Actions, GitLab CI, Jenkins, pipeline patterns, environment promotion, secrets management.
+
+> [[14 Docker & Containerization]] — VM vs Container, Dockerfile best practices, multi-stage builds, Compose, networking, volumes, security.
+
 ---
 
 ## When to Review This
