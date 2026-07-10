@@ -86,12 +86,12 @@ Bring this log to your next check-in with Coach.
 | Plank          | —           | 2×30 sec    | Medium |
 
 ### Wed — Run/Walk + Accessories
-| Exercise | Weight (kg) | Sets × Reps / Time | Notes |
-|----------|-------------|---------------------|-------|
-| Run/Walk Intervals | — | min | Protocol used: __ |
-| Dumbbell Curls | | 2×10 | |
-| Dumbbell Lateral Raises | | 2×12 | |
-| Dead Bugs | — | 2×10/side | |
+| Exercise                | Weight (kg) | Sets × Reps / Time | Notes             |
+| ----------------------- | ----------- | ------------------ | ----------------- |
+| Run/Walk Intervals      | —           | 30 min             | Protocol used: __ |
+| Dumbbell Curls          | 10          | 2×10               |                   |
+| Dumbbell Lateral Raises | 10          | 2×12               |                   |
+| Dead Bugs               | —           | 2×10/side          |                   |
 
 ### Sat — Full Body
 | Exercise | Weight (kg) | Sets × Reps | Notes |
@@ -107,11 +107,11 @@ Bring this log to your next check-in with Coach.
 
 | Day | Sleep (hrs) | Body Weight (kg) | Protein hit? | Notes |
 | --- | ----------- | ---------------- | ------------ | ----- |
-| Mon | 7           | 122.3            | 160g         |       |
-| Tue | 6           | 122.3            | 165g         |       |
+| Mon | 7           | 122.3            | 160          |       |
+| Tue | 6           | 122.3            | 165          |       |
 | Wed | 8           | 123.4            | 165          |       |
-| Thu |             |                  |              |       |
-| Fri |             |                  |              |       |
+| Thu | 6           | 122.0            | 165          |       |
+| Fri | 6           | 121.8            | 160          |       |
 | Sat |             |                  |              |       |
 | Sun |             |                  |              |       |
 
