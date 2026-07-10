@@ -183,7 +183,7 @@ Style:
 - Rules organized under ### headings with bold names
 - Before/after code examples using ``` blocks with ❌ // Bad and ✅ // Good labels
 - Summary checklist with checkboxes at the bottom
-- ## Related section with [[wikilinks]] to related topics in the vault
+- ## Related section with  to related topics in the vault
 - Professional, direct tone. No fluff. Actionable.
 
 Topics covered in this chapter: [list key sections from TOC]
@@ -202,7 +202,7 @@ Style:
 - Then walk through: rough draft → how it got messy → step-by-step refactoring phases
 - Each refactoring phase gets a ### heading, shows code before/after, ends with a **Heuristic:** takeaway
 - ## Summary section with key heuristics bullet list
-- ## Related section with [[wikilinks]]
+- ## Related section with 
 - Preserve the narrative — this is a story of successive refinement, not a rulebook
 ```
 
@@ -217,9 +217,9 @@ Style:
 - Start with: > *Source: Book Title by Author, Chapter X (pp. Y–Z)*
 - Categorize all items under ## category headings
 - Each item: #### **Code** — **Name** followed by explanation paragraph
-- Include cross-references to related vault files with [[wikilinks]]
+- Include cross-references to related vault files with 
 - End with a ## Quick-Reference table (code | name | one-word fix)
-- ## See Also section with [[wikilinks]] to all related vault topics
+- ## See Also section with  to all related vault topics
 - No ❌/✅ code examples needed — this is a reference, not a tutorial
 ```
 
@@ -239,8 +239,8 @@ After all sub-agents finish, run the consistency gate to catch format drift.
 **Checklist:**
 - [ ] **Normalize source headers** — all must be `> *Source: Book Title by Author, Chapter X (pp. Y–Z)*`
 - [ ] **Add missing page ranges** — use the Phase 3b mapping
-- [ ] **Verify every file has a `## Related` section** with at least 2 `[[wikilinks]]`
-- [ ] **Broken link scan** — extract all `[[wikilinks]]` and cross-reference against actual `.md` filenames
+- [ ] **Verify every file has a `## Related` section** with at least 2 ``
+- [ ] **Broken link scan** — extract all `` and cross-reference against actual `.md` filenames
 - [ ] **Fix formatting only** — don't change content, just normalize inconsistencies
 
 Use `search_files` with regex `\[\[(.*?)\]\]` across all `.md` files and cross-check against the directory listing from `mcp_filesystem_directory_tree`. Fix broken links with `mcp_filesystem_edit_file`.
@@ -253,7 +253,7 @@ This costs ~2K tokens and saves 10+ minutes of manual cleanup.
 
 1. **Write `Overview.md`** — a master index file with:
    - Book metadata (title, author, ISBN)
-   - Chapter map table with `[[wikilinks]]` to every topic
+   - Chapter map table with `` to every topic
    - "How to Use This Vault" guide (3–5 use cases)
    - Core philosophy summary
 
@@ -313,8 +313,8 @@ goodCodeHere();
 
 ## Related
 
-- [[Related Topic One]]
-- [[Related Topic Two]]
+- **Related Topic One**
+- **Related Topic Two**
 ```
 
 ### Case Study Chapter (Template B)
@@ -357,7 +357,7 @@ Code before/after. **Heuristic:** one-line takeaway.
 
 ## Related
 
-- [[Related Topic]]
+- **Related Topic**
 ```
 
 ### Catalog Chapter (Template C)
@@ -386,8 +386,8 @@ Explanation paragraph. See [[Naming Conventions]].
 
 ## See Also
 
-- [[Topic One]]
-- [[Topic Two]]
+- **Topic One**
+- **Topic Two**
 ```
 
 ---

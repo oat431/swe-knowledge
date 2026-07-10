@@ -78,7 +78,7 @@ Every BA task can be described in terms of these six concepts — they form the 
 Each Knowledge Area file follows a consistent structure:
 1. **Purpose** — What the KA covers and why it matters
 2. **Tasks** — Each task described with: purpose, inputs, elements, guidelines/tools, techniques, stakeholders, outputs
-3. **Related Chapters** — [[wikilinks]] connecting across the BABOK
+3. **Related Chapters** —  connecting across the BABOK
 
 Start with [[00_Introduction_to_BABOK]] for the BACCM and foundational concepts. Then follow the KAs in order (01–06) for a complete walkthrough of the BA discipline.
 
@@ -92,7 +92,7 @@ Start with [[00_Introduction_to_BABOK]] for the BACCM and foundational concepts.
 
 ## Related
 
-- [[../Body of Knowledge - Overview|Body of Knowledge — Overview]] — All four BOKs
-- [[../PMBOK/PMBOK v8 - Overview|PMBOK v8]] — Project Management
-- [[../SWEBOK/SWEBOK v4 - Overview|SWEBOK v4]] — Software Engineering
-- [[../System Engineer BOK/SEBoK v2 - Overview|SEBoK v2]] — Systems Engineering
+- [[Body of Knowledge - Overview|Body of Knowledge — Overview]] — All four BOKs
+- [[PMBOK v8 - Overview|PMBOK v8]] — Project Management
+- [[SWEBOK v4 - Overview|SWEBOK v4]] — Software Engineering
+- [[SEBoK v2 - Overview|SEBoK v2]] — Systems Engineering

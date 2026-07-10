@@ -13,9 +13,9 @@ The Stakeholders performance domain addresses the activities and functions assoc
 Effective stakeholder management rests on several foundational concepts:
 
 - **Stakeholder identification.** Continuously identifying all parties with a stake in the project&mdash;sponsors, customers, end users, team members, suppliers, regulators, and the broader community. Identification is not a one-time activity; it recurs as the project environment evolves and new stakeholders emerge.
-- **Stakeholder analysis and mapping.** Analyzing each stakeholder&rsquo;s interests, involvement, interdependencies, influence, and potential impact. Tools such as the [[stakeholder engagement assessment matrix]] and stakeholder mapping/representation techniques (e.g., power/interest grids, salience models) help prioritize engagement efforts.
+- **Stakeholder analysis and mapping.** Analyzing each stakeholder&rsquo;s interests, involvement, interdependencies, influence, and potential impact. Tools such as the **stakeholder engagement assessment matrix** and stakeholder mapping/representation techniques (e.g., power/interest grids, salience models) help prioritize engagement efforts.
 - **Engagement planning.** Developing actionable strategies to interact effectively with stakeholders based on their needs, expectations, and influence. Engagement levels range from *unaware* to *leading*, and the plan defines how to move stakeholders to desired engagement states.
-- **Communications management.** Planning, executing, and monitoring communications tailored to stakeholder information needs. Communication planning overlaps with stakeholder identification and prioritization, ensuring consistency between the [[communications management plan]] and the [[stakeholder engagement plan]].
+- **Communications management.** Planning, executing, and monitoring communications tailored to stakeholder information needs. Communication planning overlaps with stakeholder identification and prioritization, ensuring consistency between the **communications management plan** and the **stakeholder engagement plan**.
 - **Stakeholder influence.** Stakeholders shape project requirements, define acceptance criteria, participate in planning, and influence risk. Proactive engagement can reduce uncertainty, while neglected stakeholders can increase it.
 - **Continuous monitoring.** Stakeholder relationships are dynamic; regular assessment of engagement effectiveness and communication flows allows timely adjustments to strategies and plans.
 
@@ -36,9 +36,9 @@ The process of identifying project stakeholders regularly and analyzing and docu
 
 - **Key benefit:** Enables the project team to identify the appropriate focus for engagement of each stakeholder or group.
 - **Frequency:** Periodically throughout the project as needed.
-- **Key inputs:** [[Project charter]], [[business case]], [[benefits management plan]], [[communications management plan]], [[stakeholder engagement plan]], change log, issue log, requirements documentation, agreements, [[enterprise environmental factors]] (EEFs), [[organizational process assets]] (OPAs).
+- **Key inputs:** **Project charter**, **business case**, **benefits management plan**, **communications management plan**, **stakeholder engagement plan**, change log, issue log, requirements documentation, agreements, **enterprise environmental factors** (EEFs), **organizational process assets** (OPAs).
 - **Key tools &amp; techniques:** Expert judgment; data gathering (questionnaires, surveys, brainstorming); data analysis (stakeholder analysis, document analysis); data representation (stakeholder mapping/representation); meetings.
-- **Key outputs:** [[Stakeholder register]], change requests, project management plan updates (requirements management, communications management, risk management, stakeholder engagement plans), project document updates (assumption log, issue log, risk register).
+- **Key outputs:** **Stakeholder register**, change requests, project management plan updates (requirements management, communications management, risk management, stakeholder engagement plans), project document updates (assumption log, issue log, risk register).
 
 Continuous stakeholder identification can function as a risk management strategy as the project environment evolves.
 
@@ -48,9 +48,9 @@ The process of developing strategies to engage identified project stakeholders b
 
 - **Key benefit:** Provides an actionable plan to interact effectively with stakeholders.
 - **Frequency:** Periodically throughout the project as needed.
-- **Key inputs:** [[Project charter]]; project management plan (resource management, communications management, risk management plans); project documents (assumption log, change log, issue log, project schedule, risk register, stakeholder register); agreements; EEFs; OPAs.
-- **Key tools &amp; techniques:** Expert judgment; data gathering (benchmarking); data analysis (assumption and constraint analysis, root cause analysis); decision-making (prioritization/ranking); data representation (mind mapping, [[stakeholder engagement assessment matrix]]); meetings.
-- **Key outputs:** Project management plan updates ([[stakeholder engagement plan]]).
+- **Key inputs:** **Project charter**; project management plan (resource management, communications management, risk management plans); project documents (assumption log, change log, issue log, project schedule, risk register, stakeholder register); agreements; EEFs; OPAs.
+- **Key tools &amp; techniques:** Expert judgment; data gathering (benchmarking); data analysis (assumption and constraint analysis, root cause analysis); decision-making (prioritization/ranking); data representation (mind mapping, **stakeholder engagement assessment matrix**); meetings.
+- **Key outputs:** Project management plan updates (**stakeholder engagement plan**).
 
 ### 3. Plan Communications Management
 
@@ -58,9 +58,9 @@ The process of planning how to communicate with identified stakeholders, both in
 
 - **Key benefit:** Establishes the communication processes and plans for the project.
 - **Communication categories:** Internal vs. external, sensitive vs. public, general vs. detailed.
-- **Key inputs:** [[Project charter]]; project management plan (resource management, stakeholder engagement plans); project documents (requirements documentation, stakeholder register); EEFs; OPAs.
+- **Key inputs:** **Project charter**; project management plan (resource management, stakeholder engagement plans); project documents (requirements documentation, stakeholder register); EEFs; OPAs.
 - **Key tools &amp; techniques:** Expert judgment; communication requirements analysis; communication technology; communication models; communication methods; interpersonal and team skills (communication styles assessment, political awareness, cultural awareness); data representation (stakeholder engagement assessment matrix); meetings.
-- **Key outputs:** Project management plan updates ([[communications management plan]], stakeholder engagement plan), project document updates (project schedule, stakeholder register).
+- **Key outputs:** Project management plan updates (**communications management plan**, stakeholder engagement plan), project document updates (project schedule, stakeholder register).
 
 ### 4. Manage Stakeholder Engagement
 
@@ -98,7 +98,7 @@ The process of monitoring project stakeholder relationships and tailoring strate
 
 The process of ensuring the information needs of the project and its stakeholders are met.
 
-- **Key benefit:** Optimal information flow as defined in the [[communications management plan]] and [[stakeholder engagement plan]].
+- **Key benefit:** Optimal information flow as defined in the **communications management plan** and **stakeholder engagement plan**.
 - **Frequency:** Throughout the project.
 - **Key inputs:** Project management plan (resource management, communications management, stakeholder engagement plans); project documents (issue log, lessons learned register, project communications); work performance data; EEFs; OPAs.
 - **Key tools &amp; techniques:** Expert judgment; PMIS; data representation (stakeholder engagement assessment matrix); interpersonal and team skills (observation/conversation); meetings.
@@ -109,9 +109,9 @@ The process of ensuring the information needs of the project and its stakeholder
 Because each project is unique, activities and processes in the Stakeholders performance domain should be tailored. Key considerations include:
 
 - **Organizational culture.** Flat organizations tend to rely on open communications and informal channels, whereas hierarchical organizations use more formal approaches. The entire communication and stakeholder engagement strategy should reflect organizational culture.
-- **Product / development approach.** Products using interactive, incremental, or exploratory approaches (e.g., agile) typically bring specific frameworks for stakeholder interactions. Common [[agile ceremonies]]&mdash;product reviews, planning sessions, retrospectives&mdash;serve to update and engage stakeholders continuously.
+- **Product / development approach.** Products using interactive, incremental, or exploratory approaches (e.g., agile) typically bring specific frameworks for stakeholder interactions. Common **agile ceremonies**&mdash;product reviews, planning sessions, retrospectives&mdash;serve to update and engage stakeholders continuously.
 - **Large language models (LLMs) and artificial intelligence (AI).** AI use should be assessed through a deliberate decision-making process to determine when it can assist with communication artifacts (for sponsors, stakeholders, team, and vendors). Proactive security and ethics measures should be considered, including engaging cybersecurity teams to evaluate the risk of incorporating AI.
-- **Project complexity.** Complex projects with numerous stakeholders may require a more sophisticated [[communications management plan]] compared to smaller projects with fewer communication channels.
+- **Project complexity.** Complex projects with numerous stakeholders may require a more sophisticated **communications management plan** compared to smaller projects with fewer communication channels.
 - **Global and multicultural contexts.** Projects spanning multiple cultures and languages may need multilingual updates, virtual forums, and culturally adapted communication methods to ensure inclusive engagement.
 - **Stakeholder preferences.** Communication methods should vary based on stakeholder needs&mdash;email for formal updates, instant messaging for quick questions, feedback loops, and face-to-face meetings&mdash;with adjustments to the level of detail based on each stakeholder&rsquo;s role.
 
@@ -123,7 +123,7 @@ Because each project is unique, activities and processes in the Stakeholders per
 
 ## Interactions With Other Domains
 
-Stakeholders permeate all aspects of projects. They define and prioritize requirements and scope, participate in and shape [[Project Planning]], and determine acceptance and quality criteria for deliverables and outcomes. Much of the project work revolves around engaging and communicating with stakeholders.
+Stakeholders permeate all aspects of projects. They define and prioritize requirements and scope, participate in and shape **Project Planning**, and determine acceptance and quality criteria for deliverables and outcomes. Much of the project work revolves around engaging and communicating with stakeholders.
 
 Key interactions include:
 
@@ -141,11 +141,11 @@ Activities in the Stakeholders performance domain are considered successful only
 
 | Outcome | Check |
 |---|---|
-| Stakeholder engagement is maintained | Collect feedback through interviews or surveys; perform periodic alignment regarding project objectives; check indicators such as [[Net Promoter Score]] (NPS&reg;). |
-| Risk responses are identified and successfully implemented | Review the project&rsquo;s [[issue log]], [[risk register]], and [[Stakeholder register]] for assessment. |
+| Stakeholder engagement is maintained | Collect feedback through interviews or surveys; perform periodic alignment regarding project objectives; check indicators such as **Net Promoter Score** (NPS&reg;). |
+| Risk responses are identified and successfully implemented | Review the project&rsquo;s **issue log**, **risk register**, and **Stakeholder register** for assessment. |
 | Stakeholder agreement with project objectives is achieved | Review the number of change requests to requirements and collect feedback on increments. |
-| Communications management is performed | Review the [[communications management plan]] periodically and tailor it appropriately based on stakeholder needs. |
-| Project plans are integrated with suppliers&rsquo; perspectives and work outputs | Align the [[project management plan]] with the vendor&rsquo;s way of working. |
+| Communications management is performed | Review the **communications management plan** periodically and tailor it appropriately based on stakeholder needs. |
+| Project plans are integrated with suppliers&rsquo; perspectives and work outputs | Align the **project management plan** with the vendor&rsquo;s way of working. |
 
 ## Related Chapters
 

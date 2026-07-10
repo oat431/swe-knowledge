@@ -48,7 +48,7 @@ UI is the visual layer — what users see and touch. These notes cover the psych
 | # | Topic | File |
 |---|-------|------|
 | 32 | UI Design Process | [[32 UI Design Process]] — Mockups, design systems, visual design, accessibility |
-| 34 | Essential Documents | [[../Essential Document/UX UI Essential Documents|UX UI Essential Documents]] — UI deliverables checklist |
+| 34 | Essential Documents | [[UX UI Essential Documents|UX UI Essential Documents]] — UI deliverables checklist |
 
 ---
 

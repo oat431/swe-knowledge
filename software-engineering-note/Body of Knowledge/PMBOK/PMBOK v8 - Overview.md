@@ -78,14 +78,14 @@ Each topic file is a self-contained reference following a consistent structure:
 4. **Tailoring Considerations** — How to adapt the domain to different project contexts
 5. **Interactions With Other Domains** — Cross-domain dependencies and touchpoints
 6. **Check Results** — Outcome verification criteria
-7. **Related Chapters** — [[wikilinks]] to connected topics
+7. **Related Chapters** —  to connected topics
 
-Start with [[00_Introduction]] for the foundational vocabulary and framework. The [[wikilinks]] at the bottom of every chapter pull you naturally into related areas.
+Start with [[00_Introduction]] for the foundational vocabulary and framework. The  at the bottom of every chapter pull you naturally into related areas.
 
 ## Reading Paths
 
 - **New project manager:** [[00_Introduction|Introduction]] → [[01_Value_Delivery_System|Value Delivery]] → [[02_Project_Management_Principles|Principles]] → [[03_Project_Life_Cycles|Life Cycles]] → [[11_Tailoring|Tailoring]]
-- **PMP/CAPM exam prep:** [[00_Introduction|Introduction]] → All seven Performance Domains (04–10) → [[12_Inputs_and_Outputs|I/O Catalog]] → [[13_Tools_and_Techniques|Tools]]
+- **PMP/CAPM exam prep:** [[00_Introduction|Introduction]] → All seven Performance Domains (04–10) → **O Catalog** → [[13_Tools_and_Techniques|Tools]]
 - **Experienced PM refreshing:** [[02_Project_Management_Principles|Principles]] → [[04_Governance_Performance_Domain|Governance]] → [[11_Tailoring|Tailoring]] → [[Appendix_A2_AI_in_Projects|AI in Projects]]
 - **PMO leader:** [[Appendix_A1_PMO|PMO]] → [[04_Governance_Performance_Domain|Governance]] → [[11_Tailoring|Tailoring]] → [[07_Finance_Performance_Domain|Finance]]
 - **Agile practitioner:** [[03_Project_Life_Cycles|Life Cycles]] → [[11_Tailoring|Tailoring]] → Performance Domains (04–10, noting adaptive tailoring in each)

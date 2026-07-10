@@ -305,7 +305,7 @@ Per SWEBOK v4, the six generic life cycle stages are:
 
 ## Related
 
-- [[../Software Engineering Note Content|Software Engineering Note Content]] — Original file
+- [[Software Engineering Note Content|Software Engineering Note Content]] — Original file
 - [[PMBOK Essential Documents]] — Project management documents by phase
 - [[SEBOK Essential Documents]] — Systems engineering documents by phase
 - [[SWEBOK v4 - Overview]] — Full SWEBOK knowledge base

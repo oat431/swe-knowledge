@@ -157,7 +157,7 @@ Small, focused interactions that provide feedback:
 
 ## Related
 
-- [[00_User_Research_Methods]] — Research that informs UX design decisions
-- [[02_UI_Design]] — Visual design applied to wireframes
-- [[03_Usability_Testing_and_AB_Testing]] — Testing prototypes with users
-- [[04_UX_UI_Essential_Documents]] — UX deliverables checklist
+- [[30 User Research Methods]] — Research that informs UX design decisions
+- [[32 UI Design Process]] — Visual design applied to wireframes
+- [[33 Usability Testing and AB Testing]] — Testing prototypes with users
+- [[UX UI Essential Documents]] — UX deliverables checklist

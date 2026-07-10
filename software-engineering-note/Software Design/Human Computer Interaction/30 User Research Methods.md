@@ -150,6 +150,6 @@ User research is the foundation of good design. It answers: **Who are our users?
 
 ## Related
 
-- [[01_UX_Design]] — Using research to inform wireframes and prototypes
-- [[03_Usability_Testing_and_AB_Testing]] — Validating designs with users
-- [[04_UX_UI_Essential_Documents]] — Research deliverables checklist
+- [[31 UX Design Process]] — Using research to inform wireframes and prototypes
+- [[33 Usability Testing and AB Testing]] — Validating designs with users
+- [[UX UI Essential Documents]] — Research deliverables checklist

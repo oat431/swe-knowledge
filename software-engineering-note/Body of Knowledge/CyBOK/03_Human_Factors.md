@@ -17,15 +17,15 @@ status: "reference"
 
 ## 4.1 Introduction
 
-The importance of human factors in cyber security has been recognised since the earliest days of the field. Nearly 100 years before [[Saltzer & Schroeder]]'s design principles, [[Auguste Kerckhoffs]] formulated six principles for operating a secure communication system, three of which focused on human factors: *"it must be easy to use and must neither require stress of mind nor the knowledge of a long series of rules."*
+The importance of human factors in cyber security has been recognised since the earliest days of the field. Nearly 100 years before **Saltzer & Schroeder**'s design principles, **Auguste Kerckhoffs** formulated six principles for operating a secure communication system, three of which focused on human factors: *"it must be easy to use and must neither require stress of mind nor the knowledge of a long series of rules."*
 
-Both foundational texts recognised that **security measures cannot be effective if humans are neither willing nor able to use them**. A compelling example is email encryption: tools have existed for over 20 years, yet today less than 0.1% of emails are end-to-end encrypted. This outcome was predictable since Whitten & Tygar (1999) demonstrated that even well-motivated and trained people could not use email encryption correctly [[Whitten & Tygar, 1999]].
+Both foundational texts recognised that **security measures cannot be effective if humans are neither willing nor able to use them**. A compelling example is email encryption: tools have existed for over 20 years, yet today less than 0.1% of emails are end-to-end encrypted. This outcome was predictable since Whitten & Tygar (1999) demonstrated that even well-motivated and trained people could not use email encryption correctly **Whitten & Tygar, 1999**.
 
 ### The "Weakest Link" Fallacy
 
 Over the past 20 years, research has shown that security failures are not primarily the fault of users — despite the common refrain that humans are the "weakest link." The core problem is that **security measures treat humans as components** whose behaviour can be specified through policies and controlled through mechanisms and sanctions. This ignores the fundamental requirement that security must be usable and acceptable to be effective.
 
-Adams & Sasse demonstrated that password policies agreed upon by security experts did not work in practice and were routinely bypassed by employees [[Adams & Sasse]]. Naiakshina et al. showed that not only end-users struggle — developers also need explicit prompting to include security, and even then often implement outdated and faulty mechanisms [[Naiakshina et al.]].
+Adams & Sasse demonstrated that password policies agreed upon by security experts did not work in practice and were routinely bypassed by employees **Adams & Sasse**. Naiakshina et al. showed that not only end-users struggle — developers also need explicit prompting to include security, and even then often implement outdated and faulty mechanisms **Naiakshina et al.**.
 
 ### Scope of This Knowledge Area
 
@@ -42,7 +42,7 @@ The chapter is organised from the inside out: starting with the individual and i
 
 When users do not behave as specified by security policies, the traditional response is to blame the user. But research shows non-compliance (better termed **"rule-bending"**) is caused by people facing a stark choice between security and productivity — and most choose productivity because that is what the organisation also prioritises.
 
-The typical response — security awareness and education ("fitting the human to the task") — is limited. [[Human Factors]] research established decades ago that **"fitting the task to the human" is more efficient**. As the UK's [[NCSC]] states:
+The typical response — security awareness and education ("fitting the human to the task") — is limited. **Human Factors** research established decades ago that **"fitting the task to the human" is more efficient**. As the UK's **NCSC** states:
 
 > *"The way to make security that works is to make security that works for people."*
 
@@ -80,7 +80,7 @@ Making security tasks usable means establishing a fit with four key elements:
 - **Short Term Memory (STM):** Used for one-time passwords and codes. Works for most people for strings of up to 6 characters. Longer codes overload the STM loop, increasing entry time and error rates.
 - **Long Term Memory (LTM):** Divided into **Semantic Memory** (general knowledge) and **Episodic Memory** (personal history). Items in episodic memory are retained better because they are connected to images and emotions.
 
-**LTM and Passwords:** The interference effect makes managing multiple credentials nearly impossible — old passwords compete with current ones during recall. Most people struggle with more than 2–3 passwords or PINs. The [[NCSC Password Guidance]] recommends: switching to [[2FA]] solutions, using [[password managers]], and not expiring strong passwords regularly.
+**LTM and Passwords:** The interference effect makes managing multiple credentials nearly impossible — old passwords compete with current ones during recall. Most people struggle with more than 2–3 passwords or PINs. The **NCSC Password Guidance** recommends: switching to **2FA** solutions, using **password managers**, and not expiring strong passwords regularly.
 
 **Biases in Credential Selection:**
 1. Passwords tend toward the familiar — memorable names, dates
@@ -91,11 +91,11 @@ Making security tasks usable means establishing a fit with four key elements:
 6. Cultural preference for left-to-right ordering
 7. Android swipe patterns: users pick from a very limited set of shapes
 
-These biases reduce diversity and increase guessability. [[Password strength meters]] have shown limited accuracy improvement over 5 years [[Golla & Dürmuth]].
+These biases reduce diversity and increase guessability. **Password strength meters** have shown limited accuracy improvement over 5 years **Golla & Dürmuth**.
 
 **Specific User Groups:** Children, older citizens, people with motor skill limitations, colour blindness (~8% of males), autism, epilepsy — all need consideration in security mechanism selection and configuration.
 
-**CAPTCHAs:** While some work addresses sensory impairments, CAPTCHAs add effort for legitimate users and contribute to **security fatigue** [[CAPTCHA]].
+**CAPTCHAs:** While some work addresses sensory impairments, CAPTCHAs add effort for legitimate users and contribute to **security fatigue** **CAPTCHA**.
 
 ---
 
@@ -109,7 +109,7 @@ Human behaviour is fundamentally **goal-driven**. People perform tasks to achiev
 Security is often experienced as an unwelcome interruption. Most workarounds (writing passwords down, sharing them, keeping local document copies, mouse-jiggling software to prevent screen locks) happen because people try to **protect business productivity**.
 
 **Design Principles for Security Tasks:**
-- Automate security where possible (e.g., [[implicit authentication]])
+- Automate security where possible (e.g., **implicit authentication**)
 - Minimise workload and disruption when explicit human action is necessary
 - Trigger security mechanisms only when necessary
 - Design systems that are **secure by default**
@@ -122,7 +122,7 @@ Security is often experienced as an unwelcome interruption. Most workarounds (wr
 3. Are there resource constraints (mental, physical, or external)?
 4. What is the impact of failing to complete the security task?
 
-**Compliance Budget:** People have a built-in awareness of how much time they spend on non-productive tasks. As enabling tasks accumulate throughout the day, the likelihood of bypass increases. [[Furnell & Thompson]] coined the term **security fatigue**. Other enabling tasks (safety, sustainability, diversity training, regulatory compliance) compound this into **Compliance Fatigue** [[Beautement et al.]].
+**Compliance Budget:** People have a built-in awareness of how much time they spend on non-productive tasks. As enabling tasks accumulate throughout the day, the likelihood of bypass increases. **Furnell & Thompson** coined the term **security fatigue**. Other enabling tasks (safety, sustainability, diversity training, regulatory compliance) compound this into **Compliance Fatigue** **Beautement et al.**.
 
 **Recommendation:** Have honest discussions with line managers about the time budget for enabling activities, calculate security task workload, and identify which security behaviours really matter for the key risks.
 
@@ -130,7 +130,7 @@ Security is often experienced as an unwelcome interruption. Most workarounds (wr
 
 #### 4.2.1.3 Interaction Context
 
-**Contextual Inquiry** — the core premise: *"Go to the user, watch them do the activities you care about, and talk with them about what they're doing right then."* [[Contextual Inquiry]]
+**Contextual Inquiry** — the core premise: *"Go to the user, watch them do the activities you care about, and talk with them about what they're doing right then."* **Contextual Inquiry**
 
 **Physical Context Factors:**
 | Factor | Impact |
@@ -142,7 +142,7 @@ Security is often experienced as an unwelcome interruption. Most workarounds (wr
 
 **Social Context:** Values (shared beliefs) and norms (rules and expectations about behaviour) strongly influence behaviour. If security behaviour conflicts with day-to-day behavioural norms — e.g., "be friendly to customers at all times" vs. "treat every customer enquiry as a potential information extraction attempt" — compliance problems follow.
 
-Communicating **distrust** to employees encourages bad behaviour rather than preventing it. Users also get knowledge and support from their wider social networks [[social learning]].
+Communicating **distrust** to employees encourages bad behaviour rather than preventing it. Users also get knowledge and support from their wider social networks **social learning**.
 
 ---
 
@@ -150,15 +150,15 @@ Communicating **distrust** to employees encourages bad behaviour rather than pre
 
 - Entering long, complex passwords on mobile soft keyboards is far slower and more error-prone than on regular keyboards
 - Without collusion, user populations converge on a small number of passwords easiest to enter with minimal toggles — making guessing easier for attackers
-- [[2FA]] solutions are not universally usable by default — many find tokens "too fiddly"
-- Multiple implementations of 2FA and Chip & PIN create task variations that catch users out, leading to [[human error]]
+- **2FA** solutions are not universally usable by default — many find tokens "too fiddly"
+- Multiple implementations of 2FA and Chip & PIN create task variations that catch users out, leading to **human error**
 - With increasing device diversity (smart watches, home devices, implicit interactions), the ergonomics of security interactions are ever more important
 
 ---
 
 ## 4.3 Human Error
 
-> Over 30 years of research by [[James Reason]] established that virtually all mistakes people make are predictable.
+> Over 30 years of research by **James Reason** established that virtually all mistakes people make are predictable.
 
 ### Reason's Swiss Cheese Model
 
@@ -191,7 +191,7 @@ Even in conscious mode, people try to be efficient — they choose behaviours th
 
 > *"Never issue a security policy that can't be followed."* — General MacArthur principle applied to security
 
-When employees encounter impossible security policies, it undermines the credibility of all policies. [[Kirlappos et al.]] identified **shadow security**: employees do not show blatant disregard for security, but rather try to manage risk in the best way they know — their "amateur" security solutions may not be fully effective, but since they are workable, asking "how could we make that secure?" is a good starting point for finding effective solutions.
+When employees encounter impossible security policies, it undermines the credibility of all policies. **Kirlappos et al.** identified **shadow security**: employees do not show blatant disregard for security, but rather try to manage risk in the best way they know — their "amateur" security solutions may not be fully effective, but since they are workable, asking "how could we make that secure?" is a good starting point for finding effective solutions.
 
 ---
 
@@ -211,19 +211,19 @@ Security hygiene must come **first**. If people are told risk is serious and the
 
 ### The Behaviour Change Model (RISCS)
 
-The [[RISCS White Paper]] presents a model requiring **seven steps** for security behavioural change — awareness, education, and training are only the first three. Further organisational investment in strategy, time, planning, and resources is required.
+The **RISCS White Paper** presents a model requiring **seven steps** for security behavioural change — awareness, education, and training are only the first three. Further organisational investment in strategy, time, planning, and resources is required.
 
 ---
 
 ### 4.4.1 New Approaches to Support Awareness and Behaviour Change
 
-**Anti-Phishing Simulations** are the most widely used approach today. They can decrease click rates in the short term by creating a "teachable moment." However, the [[Fogg Behaviour Model]] is clear: trigger moments only lead to behaviour change if the person has sufficient **motivation** and **ability**.
+**Anti-Phishing Simulations** are the most widely used approach today. They can decrease click rates in the short term by creating a "teachable moment." However, the **Fogg Behaviour Model** is clear: trigger moments only lead to behaviour change if the person has sufficient **motivation** and **ability**.
 
 **Human factors concerns with anti-phishing simulations:**
 1. Employees may perceive being "attacked by their own organisation," reducing trust
 2. They may become overly reluctant to click links, ignoring genuine important emails
 
-The use of [[DMARC]] can reduce the number of suspicious emails, enabling training to focus on social engineering and manipulation techniques.
+The use of **DMARC** can reduce the number of suspicious emails, enabling training to focus on social engineering and manipulation techniques.
 
 **Security Games:**
 - **Capture The Flag (CTF)** — trains defenders by showing how vulnerabilities can be exploited
@@ -238,7 +238,7 @@ Games offer social learning experiences if played in groups, but one-off exercis
 
 Much knowledge in long-term memory is organised as **mental models** — mental analogues of devices. They range from **structural models** (like blueprints, held by experts) to **task-action models** (enabling non-experts to operate devices competently).
 
-Wash argues that inadequate mental models make users vulnerable: *"These users believe that their current behaviour doesn't really make them vulnerable, so they don't need to go to any extra effort."* [[Wash]]
+Wash argues that inadequate mental models make users vulnerable: *"These users believe that their current behaviour doesn't really make them vulnerable, so they don't need to go to any extra effort."* **Wash**
 
 Example mental model categories that may help communicate complex security issues:
 - Physical security models
@@ -255,11 +255,11 @@ Understanding users' mental models provides insights into how they perceive secu
 
 The traditional approach to selling security relies on **FUD** (Fear, Uncertainty, and Doubt):
 
-> *"FUD provides a steady stream of factoids... the effect of which is to persuade us that things are bad and constantly getting worse."* — [[Florencio et al.]]
+> *"FUD provides a steady stream of factoids... the effect of which is to persuade us that things are bad and constantly getting worse."* — **Florencio et al.**
 
 The problem: when FUD-driven investment proves ineffective, decision-makers become skeptical, leading to a spiral of fear and grudging investment.
 
-**Positive security** offers more than "freedom from" negative consequences — it enables "freedom to" engage in valued activities and cherished experiences [[Roe]]. A positive conception:
+**Positive security** offers more than "freedom from" negative consequences — it enables "freedom to" engage in valued activities and cherished experiences **Roe**. A positive conception:
 - Opens ideas for new policy options and interventions
 - Encourages individuals and groups to become more involved in security decision-making and delivery
 - Requires stopping the practice of demonising people as "The Weakest Link"
@@ -272,23 +272,23 @@ The problem: when FUD-driven investment proves ineffective, decision-makers beco
 
 A clear theme from the past decade of research: **the importance of engaging employees in finding ways of making security work for them**.
 
-[[Lizzie Coles-Kemp]] and colleagues developed an approach using **projective techniques** (drawings, collages) to build representations of daily activity and ground security discussions in these. Case studies show this helps identify root causes of insecure behaviour — often badly designed security or more fundamental organisational failings [[Coles-Kemp]].
+**Lizzie Coles-Kemp** and colleagues developed an approach using **projective techniques** (drawings, collages) to build representations of daily activity and ground security discussions in these. Case studies show this helps identify root causes of insecure behaviour — often badly designed security or more fundamental organisational failings **Coles-Kemp**.
 
-**Creative Security Engagements** ([[Dunphy et al.]]) encourage participants to reflect on:
+**Creative Security Engagements** (**Dunphy et al.**) encourage participants to reflect on:
 - Their environment
 - The emotions they feel
 - The constraints and pressures they experience
 - The actions and tasks they perform when generating and sharing information
 
-The EU [[Trespass Project]] used **Lego for physical modelling** of information security threats — bridging the gap between security practitioners' typical diagrams (flowcharts, UML) and the everyday practices of consumers. Heath, Hall & Coles-Kemp reported a successful case study modelling security for a home banking application, identifying areas where human intervention was needed.
+The EU **Trespass Project** used **Lego for physical modelling** of information security threats — bridging the gap between security practitioners' typical diagrams (flowcharts, UML) and the everyday practices of consumers. Heath, Hall & Coles-Kemp reported a successful case study modelling security for a home banking application, identifying areas where human intervention was needed.
 
-**Productive Security** [[Productive Security]] represents a growing trend: moving away from finding traits conducive to desired behaviour, and instead **changing the design of security to align with user and organisational tasks** — reducing workload and increasing productivity, with a more positive perception of security as a valuable side-effect.
+**Productive Security** **Productive Security** represents a growing trend: moving away from finding traits conducive to desired behaviour, and instead **changing the design of security to align with user and organisational tasks** — reducing workload and increasing productivity, with a more positive perception of security as a valuable side-effect.
 
 ---
 
 ### 4.6.2 Software Developers and Usable Security
 
-[[Zurko & Simon]] pointed out that unusable security affects not only general employees but also those with significant technical skills — developers and system administrators. They face increasing workloads and complexity, and make mistakes because the libraries and APIs they draw on are not usable. Errors by technical users generally have **more significant impact** (e.g., Heartbleed).
+**Zurko & Simon** pointed out that unusable security affects not only general employees but also those with significant technical skills — developers and system administrators. They face increasing workloads and complexity, and make mistakes because the libraries and APIs they draw on are not usable. Errors by technical users generally have **more significant impact** (e.g., Heartbleed).
 
 **Developers and Password Security:**
 - Naiakshina et al. conducted randomised control trials with CS students and freelance developers
@@ -301,7 +301,7 @@ The EU [[Trespass Project]] used **Lego for physical modelling** of information 
 - Of 96 developers contacted, only 13 were interviewed because their companies refused permission
 
 **StackOverflow and Security:**
-- [[Acar et al.]] studied the impact of online social networks on code security
+- **Acar et al.** studied the impact of online social networks on code security
 - 2/3 of developers using StackOverflow or textbooks produced functionally correct solutions within allocated time, vs. 40% using official documentation
 - In terms of security, results were reversed: official documentation users produced the most secure code, StackOverflow users the least
 - Traditional response ("forbid StackOverflow") ignores the productivity cost — developers use forums for mutual support and community of practice
@@ -324,11 +324,11 @@ The EU [[Trespass Project]] used **Lego for physical modelling** of information 
 
 ## Related Knowledge Areas
 
-- [[Risk Management & Governance]] (Chapter 2) — security culture, risk perception, responsibility
-- [[Privacy & Online Rights]] (Chapter 5) — usable privacy controls
-- [[Adversarial Behaviours]] (Chapter 7) — social engineering, attack models
-- [[Authentication, Authorisation & Accountability]] (Chapter 14) — authentication usability
-- [[Secure Software Lifecycle]] (Chapter 15) — developer security training
+- **Risk Management & Governance** (Chapter 2) — security culture, risk perception, responsibility
+- **Privacy & Online Rights** (Chapter 5) — usable privacy controls
+- **Adversarial Behaviours** (Chapter 7) — social engineering, attack models
+- **Authentication, Authorisation & Accountability** (Chapter 14) — authentication usability
+- **Secure Software Lifecycle** (Chapter 15) — developer security training
 
 ---
 

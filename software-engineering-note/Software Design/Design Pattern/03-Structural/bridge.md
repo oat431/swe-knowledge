@@ -215,4 +215,4 @@ remote = new AdvancedRemoteControl(radio)
 
 ## Related
 
-[[Adapter]], [[Strategy]], [[abstract-factory]], [[Builder]], [[State]], [[Decorator]], [[solid-principles]]
+[[Adapter]], [[Strategy]], [[abstract-factory]], [[Builder]], [[State]], [[Decorator]], **solid-principles**

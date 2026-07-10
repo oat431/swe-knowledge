@@ -17,7 +17,7 @@ created: 2026-07-09
 1. **Database support** — Activities related to the data lifecycle: initial implementation, obtaining, backing up, and purging data, plus ensuring database performance through monitoring and tuning.
 2. **Database technology support** — Defining technical requirements, technical architecture, installing and administering technology, and resolving technology-related issues.
 
-[[Database Administrators]] (DBAs) play key roles in both aspects. The DBA role is the most established and widely adopted data professional role.
+**Database Administrators** (DBAs) play key roles in both aspects. The DBA role is the most established and widely adopted data professional role.
 
 ### Goals
 
@@ -474,11 +474,11 @@ DBAs support audits and validation by:
 
 ## Related DMBOK Chapters
 
-- [[01_Introduction]] — Data lifecycle and core concepts
-- [[02_Data_Governance]] — Governance and stewardship
-- [[03_Data_Architecture]] — Enterprise architecture and data design
-- [[05_Data_Modeling_and_Design]] — Logical and physical data modeling
-- [[06_Data_Security]] — Access controls, encryption, and auditing
-- [[08_Data_Integration_and_Interoperability]] — ETL and data movement
-- [[09_Reference_and_Master_Data]] — Master data lifecycle management
-- [[10_Data_Warehousing_and_BI]] — OLAP, cubes, and analytics
+- [[00_Introduction_to_CyBOK]] — Data lifecycle and core concepts
+- [[01_Data_Governance]] — Governance and stewardship
+- [[02_Data_Architecture]] — Enterprise architecture and data design
+- [[03_Data_Modeling_and_Design]] — Logical and physical data modeling
+- [[05_Data_Security]] — Access controls, encryption, and auditing
+- [[06_Data_Integration_and_Interoperability]] — ETL and data movement
+- [[08_Reference_and_Master_Data]] — Master data lifecycle management
+- [[09_Data_Warehousing_and_BI]] — OLAP, cubes, and analytics

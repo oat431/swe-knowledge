@@ -164,4 +164,4 @@ Do **not** reach for Flyweight preemptively—it trades simplicity for memory. A
 - [[Command]]
 - [[State]]
 - [[Strategy]]
-- [[solid-principles]]
+- **solid-principles**

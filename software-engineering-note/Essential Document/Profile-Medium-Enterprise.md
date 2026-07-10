@@ -32,12 +32,12 @@ tags:
 
 > This profile draws its recommended documents from six bodies of knowledge:
 >
-> - [[BABOK — Business Analysis Body of Knowledge]]
-> - [[PMBOK — Project Management Body of Knowledge]]
-> - [[SWEBOK — Software Engineering Body of Knowledge]]
-> - [[CyBOK — Cyber Security Body of Knowledge]]
-> - [[DMBOK — Data Management Body of Knowledge]]
-> - [[SEBOK — Systems Engineering Body of Knowledge]]
+> - [[BABOK v3 - Overview]]
+> - [[PMBOK v8 - Overview]]
+> - [[SWEBOK v4 - Overview]]
+> - [[CyBOK v1 - Overview]]
+> - [[DMBoK v2 - Overview]]
+> - [[SEBoK v2 - Overview]]
 > - [[UX UI Essential Documents]]
 
 ---

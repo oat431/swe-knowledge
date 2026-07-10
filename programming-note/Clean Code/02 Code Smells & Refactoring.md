@@ -16,11 +16,11 @@ Code smells are surface-level indicators that something deeper is wrong with you
 
 | # | Smell | Symptom | Fix |
 |---|-------|---------|-----|
-| 1 | **Long Method** | Functions > 30 lines, hard to name | [[#Extract Method\|Extract Method]] |
+| 1 | **Long Method** | Functions > 30 lines, hard to name | **Extract Method** |
 | 2 | **Large Class** | God classes with 10+ fields, many responsibilities | Extract Class, SRP |
 | 3 | **Long Parameter List** | 4+ parameters in a method | Introduce Parameter Object |
 | 4 | **Duplicated Code** | Same logic in 2+ places | Extract shared function/class |
-| 5 | **Feature Envy** | Method uses another class's data more than its own | [[#Move Method\|Move Method]] |
+| 5 | **Feature Envy** | Method uses another class's data more than its own | **Move Method** |
 | 6 | **Data Clumps** | Same groups of variables passed together everywhere | Extract to object |
 | 7 | **Shotgun Surgery** | One change requires edits in many classes | Move Method / Inline Class |
 | 8 | **Divergent Change** | One class modified for many different reasons | Extract Class |

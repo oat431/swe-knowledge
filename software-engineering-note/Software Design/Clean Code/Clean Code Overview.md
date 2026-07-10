@@ -78,7 +78,7 @@ The book has three parts:
 2. **Want to learn refactoring?** Jump straight to the three case studies (14–16) — watch bad code become clean step by step
 3. **Code review checklist?** Open [[Code Smells Catalog]] — 66 things to scan for
 4. **Preparing a talk/course?** Each file is self-contained with code examples, checklists, and cross-links
-5. **Open Obsidian graph view** to see how all concepts interconnect through `[[wikilinks]]`
+5. **Open Obsidian graph view** to see how all concepts interconnect through ``
 
 ---
 

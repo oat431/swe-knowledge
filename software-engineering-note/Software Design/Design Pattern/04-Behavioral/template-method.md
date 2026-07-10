@@ -197,4 +197,4 @@ class MonstersAI extends GameAI {
 - [[factory-method]]
 - [[Bridge]]
 - [[Command]]
-- [[solid-principles]]
+- **solid-principles**

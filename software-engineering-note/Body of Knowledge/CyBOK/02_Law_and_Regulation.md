@@ -260,8 +260,8 @@ Within the EU (Rome II Regulation), applicable law is generally the law of the p
 
 ## Related Chapters
 
-- [[01_Introduction]] — CyBOK scope, structure, and knowledge area relationships
-- [[03_Human_Organisational_and_Regulatory_Aspects]] — Human factors, usable security, organisational governance
-- [[04_Risk_Management_and_Governance]] — Risk assessment, governance frameworks, security management
-- [[05_Software_Security]] — Secure development lifecycle, software vulnerabilities
-- [[06_Infrastructure_Security]] — Network security, cryptographic controls, system hardening
+- [[00_Introduction_to_CyBOK]] — CyBOK scope, structure, and knowledge area relationships
+- [[02_Law_and_Regulation]] — Human factors, usable security, organisational governance
+- [[01_Risk_Management_and_Governance]] — Risk assessment, governance frameworks, security management
+- [[09_Software_Security]] — Secure development lifecycle, software vulnerabilities
+- [[10_Operating_Systems_and_Virtualisation]] — Network security, cryptographic controls, system hardening

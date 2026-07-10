@@ -306,10 +306,10 @@ The Data Model Scorecard® (Hoberman, 2015) provides 11 quality metrics across 1
 - [[05_Data_Security|Data Security]] — Security constraints on data models and databases.
 - [[06_Data_Integration_and_Interoperability|Data Integration & Interoperability]] — Source-to-target mappings, ETL/ELT, data lineage.
 - [[07_Document_and_Content_Management|Document & Content Management]] — Unstructured and semi-structured data modeling.
-- [[08_Data_Warehousing_and_BI|Data Warehousing & BI]] — Dimensional modeling, star schemas, OLAP.
-- [[09_Metadata_Management|Metadata Management]] — Metadata repositories, data dictionaries, model definitions.
-- [[10_Data_Quality|Data Quality]] — Data profiling, quality validation against models.
-- [[11_Reference_and_Master_Data|Reference & Master Data]] — Reference data tables, master data entities.
+- **Data Warehousing & BI** — Dimensional modeling, star schemas, OLAP.
+- **Metadata Management** — Metadata repositories, data dictionaries, model definitions.
+- **Data Quality** — Data profiling, quality validation against models.
+- **Reference & Master Data** — Reference data tables, master data entities.
 
 ---
 

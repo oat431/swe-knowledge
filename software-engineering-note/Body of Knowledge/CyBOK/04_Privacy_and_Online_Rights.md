@@ -12,7 +12,7 @@ date: 2021-07
 
 The pervasiveness of data collection, processing, and dissemination raises severe privacy concerns regarding individual and societal harms. Information leaks may cause physical or psychological damage to individuals — e.g., when published information can be used by thieves to infer when users are not home, by enemies to find weak points to launch attacks, or by advertising companies to build profiles and influence users. On a large scale, the use of this information can influence society as a whole, causing irreversible harm to democracy.
 
-Privacy cannot simply be tackled as a [[confidentiality]] issue. Beyond keeping information private, it is important to ensure that systems support **freedom of speech** and individuals' **autonomy of decision** and **self-determination**.
+Privacy cannot simply be tackled as a **confidentiality** issue. Beyond keeping information private, it is important to ensure that systems support **freedom of speech** and individuals' **autonomy of decision** and **self-determination**.
 
 The goal of this Knowledge Area is to introduce system designers to the concepts and technologies used to engineer systems that inherently protect users' privacy — enabling designers to identify privacy problems, describe them from a technical perspective, and select adequate technologies to eliminate or mitigate these problems.
 
@@ -25,15 +25,15 @@ Key socio-legal definitions of privacy include:
 - **The right to informational self-determination** (German Constitutional Court)
 - **The freedom from unreasonable constraints on the construction of one's own identity** (Agre)
 
-The [[European Data Protection Legislation]] (GDPR) provides one of the best examples of legal frameworks supporting privacy, covered in the [[Law & Regulation]] Knowledge Area (Chapter 3).
+The **European Data Protection Legislation** (GDPR) provides one of the best examples of legal frameworks supporting privacy, covered in the **Law & Regulation** Knowledge Area (Chapter 3).
 
 ### Engineering Privacy
 
-This Knowledge Area conceptualises privacy similarly to how [[security engineering]] conceptualises security problems. Privacy concerns and solutions are defined by:
+This Knowledge Area conceptualises privacy similarly to how **security engineering** conceptualises security problems. Privacy concerns and solutions are defined by:
 
 1. **Adversarial model** — e.g., untrusted third-party services, untrusted service providers, other users
 2. **Nature of information to protect** — e.g., content of communications, service usage patterns, existence of users/actions
-3. **Nature of protection mechanism** — e.g., access control settings, [[Encryption]]
+3. **Nature of protection mechanism** — e.g., access control settings, **Encryption**
 
 ### Structure
 
@@ -51,7 +51,7 @@ These paradigms are complemented by examples of how privacy technologies support
 
 ## 5.1 Privacy as Confidentiality
 
-A technical re-interpretation of the "right to be let alone": the objective is to enable the use of services while **minimising the amount of exposed information** — both data exchanged explicitly and information made implicitly available in [[Metadata]].
+A technical re-interpretation of the "right to be let alone": the objective is to enable the use of services while **minimising the amount of exposed information** — both data exchanged explicitly and information made implicitly available in **Metadata**.
 
 ### 5.1.1 Data Confidentiality
 
@@ -63,15 +63,15 @@ Two approaches to minimise exposed information:
 
 ##### Protecting Data in Transit
 
-**End-to-End Encryption (E2EE)** ensures Confidentiality between communication endpoints. No third party — from routers to application servers — can access the communication. E2EE typically also provides [[Integrity]] and [[Authentication]].
+**End-to-End Encryption (E2EE)** ensures Confidentiality between communication endpoints. No third party — from routers to application servers — can access the communication. E2EE typically also provides **Integrity** and [[Authentication]].
 
 - Devices at the endpoints hold the encryption keys
-- Usually symmetric encryption keys, agreed via key transport or [[Diffie-Hellman]] exchange
-- [[Digital Signatures]] and [[Message Authentication Codes]] provide Integrity and authentication
+- Usually symmetric encryption keys, agreed via key transport or **Diffie-Hellman** exchange
+- **Digital Signatures** and **Message Authentication Codes** provide Integrity and authentication
 
 Canonical examples:
-- **[[TLS]]** — widely used in client-server scenarios
-- **[[PGP]]** — common encryption mechanism for email
+- ****TLS**** — widely used in client-server scenarios
+- ****PGP**** — common encryption mechanism for email
 
 **Off-the-Record Messaging (OTR):**
 - Considers adversary that can eventually compromise devices to obtain long-term keys
@@ -91,28 +91,28 @@ Two scenarios:
 
 **1. Outsourcing** — sender's data processed by untrusted recipient (e.g., cloud services):
 
-- **[[Private Information Retrieval]] (PIR)**: query a database without revealing which record is accessed (e.g., privacy-preserving social network directories)
-- **[[Oblivious Transfer]]**: transfer an item without revealing which item (e.g., privacy-preserving shopping)
-- **[[Homomorphic Encryption]]**: perform any operation on encrypted data — high computation cost; partially/somewhat homomorphic variants offer better trade-offs
+- ****Private Information Retrieval** (PIR)**: query a database without revealing which record is accessed (e.g., privacy-preserving social network directories)
+- ****Oblivious Transfer****: transfer an item without revealing which item (e.g., privacy-preserving shopping)
+- ****Homomorphic Encryption****: perform any operation on encrypted data — high computation cost; partially/somewhat homomorphic variants offer better trade-offs
 - **Secure hardware** combined with cryptographic primitives can improve performance, but at the expense of trusting hardware manufacturers
 - **Tailored database solutions** (order-preserving encryption, deterministic encryption) provide performance but may significantly impact privacy — only recommended for compliance in trusted environments
 
 **2. Collaborative Computation** — entities collaborate to perform computation without trusting each other:
 
-- **[[MultiParty Computation]] (MPC)**: comparing databases, computing statistics across datasets
-- **[[Private Set Intersection]] (PSI)**: find similarities between two databases (contacts, malicious activities, genetic information) without revealing anything except the intersection (or its cardinality)
+- ****MultiParty Computation** (MPC)**: comparing databases, computing statistics across datasets
+- ****Private Set Intersection** (PSI)**: find similarities between two databases (contacts, malicious activities, genetic information) without revealing anything except the intersection (or its cardinality)
 
 ##### Verification in the Encrypted Domain
 
 **Zero-Knowledge Proofs** enable proving inputs comply with formats/constraints without revealing the inputs:
 
 1. **Private computation-input verification** — prove input adequacy (billing, messaging, private intersection)
-2. **Private authentication** — **[[Anonymous Credentials]]** (Attribute-Based Credentials/ABCs):
+2. **Private authentication** — ****Anonymous Credentials**** (Attribute-Based Credentials/ABCs):
    - Prove possession of attributes without revealing identity or attribute values
    - Unlinkable between contexts (credentials look different every time shown)
    - Challenges: Anonymity enables misbehaviour → extensions for limiting use, blacklisting, or revoking credentials
    - Implementations: Idemix, U-Prove (various licenses, different functionality subsets)
-3. **Private payments** — [[Blind Signatures]] for e-coins; **Zerocash** (blockchain-based) uses [[ZK-SNARKs]] for efficient zero-knowledge proofs
+3. **Private payments** — **Blind Signatures** for e-coins; **Zerocash** (blockchain-based) uses **ZK-SNARKs** for efficient zero-knowledge proofs
 
 #### 5.1.1.2 Obfuscation-Based Inference Control
 
@@ -152,7 +152,7 @@ Key considerations:
 - Provides **worst-case guarantee** — noise tailored to the most informative data point
 - Extensions exist for metrics beyond Hamming distance
 
-Used by: US Census Bureau, collaborative learning ([[Machine Learning]]), location-based services.
+Used by: US Census Bureau, collaborative learning (**Machine Learning**), location-based services.
 
 ### 5.1.2 Metadata Confidentiality
 
@@ -178,7 +178,7 @@ Network-layer information (IP addresses, amount/timing of data, connection durat
 - **Onion encryption**: packet encrypted with exit key, then middle key, then entry key; each node "peels" a layer
 - Low-latency (no delays) — suitable for web browsing but traffic patterns are preserved
 - Vulnerable to adversary observing both ends of communication (entry and exit nodes)
-- Key difference from [[VPN]]: in Tor, no single relay learns sender-receiver link (decentralized trust); VPN provider is a single point of failure
+- Key difference from **VPN**: in Tor, no single relay learns sender-receiver link (decentralized trust); VPN provider is a single point of failure
 
 ##### Mix Networks
 
@@ -223,7 +223,7 @@ Broader notion of privacy: from concealment to the **ability to control what hap
 
 ### 5.2.1 Support for Privacy Settings Configuration
 
-Privacy settings controls are often **barely usable** by individuals, causing misconfiguration and unintended data disclosure (see also [[Human Factors]] Knowledge Area, Chapter 4).
+Privacy settings controls are often **barely usable** by individuals, causing misconfiguration and unintended data disclosure (see also **Human Factors** Knowledge Area, Chapter 4).
 
 Approaches to simplify configuration:
 - **Expert-defined policies** — difficult to generalise from targeted groups to general population; may over-restrict sharing
@@ -235,7 +235,7 @@ Approaches to simplify configuration:
 
 Automating communication of user preferences:
 
-- **[[P3P]] (Platform for Privacy Preferences Project)** — W3C standard allowing websites to encode privacy policies in machine-readable format. Browsers can compare site policy with user's preferences (APPEL). However, P3P has **no enforcement mechanism**.
+- ****P3P** (Platform for Privacy Preferences Project)** — W3C standard allowing websites to encode privacy policies in machine-readable format. Browsers can compare site policy with user's preferences (APPEL). However, P3P has **no enforcement mechanism**.
 - **Purpose-based access control** and **sticky policies** — specify allowed uses of collected information and verify compliance with cryptographic mechanisms
 
 ### 5.2.3 Support for Privacy Policy Interpretability
@@ -244,7 +244,7 @@ Privacy policies are often long, verbose, and contain legal terminology.
 
 Two approaches:
 1. **Expert-driven** — trusted experts label, analyse, and provide reasons for existing policies
-2. **Automated** — [[Polisis]], a machine-learning-based framework enabling users to ask questions about natural language privacy policies, offering visual representations of data types collected, purposes, and sharing practices
+2. **Automated** — **Polisis**, a machine-learning-based framework enabling users to ask questions about natural language privacy policies, offering visual representations of data types collected, purposes, and sharing practices
 
 ---
 
@@ -364,7 +364,7 @@ For systems that cannot avoid collecting user data, use control (Section 5.2) an
 A systematic evaluation involves:
 1. **Model the privacy-preserving mechanism** as a probabilistic transformation
 2. **Establish the threat model** — what adversary sees and prior knowledge
-3. **Compute what adversary can learn** — probability distribution analysis or inference techniques (e.g., [[Machine Learning]])
+3. **Compute what adversary can learn** — probability distribution analysis or inference techniques (e.g., **Machine Learning**)
 4. **Apply privacy metrics** to capture the adversary's inference capability
 
 > [!important] Cryptographic vs. Obfuscation-Based
@@ -392,19 +392,19 @@ Preserving privacy and online rights is essential to support **democratic societ
 | Section | Topic | Key References |
 |---------|-------|----------------|
 | 5.1 | Privacy as Confidentiality | — |
-| 5.1.1 | Data Confidentiality | [[Encryption]], [[Homomorphic Encryption]], [[MultiParty Computation]], [[Private Set Intersection]], [[Zero-Knowledge Proofs]] |
-| 5.1.2 | Metadata Confidentiality | [[Tor]], [[Mix Networks]], [[Device Fingerprinting]], [[Location Privacy]] |
-| 5.2 | Privacy as Control | [[P3P]], [[Polisis]], [[Sticky Policies]] |
-| 5.3 | Privacy as Transparency | [[Privacy Nudges]], [[Distributed Ledgers]], [[Secure Logging]] |
-| 5.4 | Privacy Technologies and Democratic Values | [[eVoting]], [[Censorship Resistance]], [[Freenet]], [[Tangler]] |
-| 5.5 | Privacy Engineering | [[Privacy by Design]], [[Threat Modelling]], [[Privacy Metrics]] |
+| 5.1.1 | Data Confidentiality | **Encryption**, **Homomorphic Encryption**, **MultiParty Computation**, **Private Set Intersection**, **Zero-Knowledge Proofs** |
+| 5.1.2 | Metadata Confidentiality | **Tor**, **Mix Networks**, **Device Fingerprinting**, **Location Privacy** |
+| 5.2 | Privacy as Control | **P3P**, **Polisis**, **Sticky Policies** |
+| 5.3 | Privacy as Transparency | **Privacy Nudges**, **Distributed Ledgers**, **Secure Logging** |
+| 5.4 | Privacy Technologies and Democratic Values | **eVoting**, **Censorship Resistance**, **Freenet**, **Tangler** |
+| 5.5 | Privacy Engineering | **Privacy by Design**, **Threat Modelling**, **Privacy Metrics** |
 
 ## See Also
 
-- [[Law & Regulation]] (CyBOK Chapter 3) — European Data Protection Legislation, GDPR
-- [[Human Factors]] (CyBOK Chapter 4) — usability impact on security and privacy
-- [[Applied Cryptography]] (CyBOK Chapter 10) — cryptographic primitives underlying privacy technologies
-- [[Adversarial Behaviours]] (CyBOK Chapter 7) — adversarial exploitation of privacy systems
-- [[Risk Management & Governance]] (CyBOK Chapter 2) — organisational risk and privacy governance
-- [[Data Protection]] — GDPR, data subject rights, lawful bases for processing
-- [[Online Rights]] — freedom of speech, digital rights, censorship resistance
+- **Law & Regulation** (CyBOK Chapter 3) — European Data Protection Legislation, GDPR
+- **Human Factors** (CyBOK Chapter 4) — usability impact on security and privacy
+- **Applied Cryptography** (CyBOK Chapter 10) — cryptographic primitives underlying privacy technologies
+- **Adversarial Behaviours** (CyBOK Chapter 7) — adversarial exploitation of privacy systems
+- **Risk Management & Governance** (CyBOK Chapter 2) — organisational risk and privacy governance
+- **Data Protection** — GDPR, data subject rights, lawful bases for processing
+- **Online Rights** — freedom of speech, digital rights, censorship resistance

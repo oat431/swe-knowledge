@@ -92,7 +92,7 @@ Tailoring is not a one-time exercise. During progressive elaboration, review poi
 
 ## Tailoring the Performance Domains
 
-The work associated with each of the eight [[04_Governance_Performance_Domain|project performance domains]] can also be tailored based on project uniqueness. The [[04_Governance_Performance_Domain#Principles|principles of project management]] guide practitioner behavior as they tailor each domain — including **Stakeholders**, **Team**, **Development Approach and Life Cycle**, **Planning**, **Project Work**, **Delivery**, **Measurement**, and **Uncertainty** — to the project context and environment.
+The work associated with each of the eight [[04_Governance_Performance_Domain|project performance domains]] can also be tailored based on project uniqueness. The **principles of project management** guide practitioner behavior as they tailor each domain — including **Stakeholders**, **Team**, **Development Approach and Life Cycle**, **Planning**, **Project Work**, **Delivery**, **Measurement**, and **Uncertainty** — to the project context and environment.
 
 ## Diagnostics
 

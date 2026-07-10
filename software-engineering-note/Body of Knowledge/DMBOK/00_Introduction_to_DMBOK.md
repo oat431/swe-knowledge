@@ -38,9 +38,9 @@ Within an organization, data management goals include:
 
 ### Data
 
-Data represents facts about the world. In the context of information technology, data is information stored in digital form — though data management principles also apply to data on paper and in databases. Data is both an interpretation of the objects it represents and an object that must itself be interpreted. Context — provided by [[Metadata]] — is required for data to be meaningful.
+Data represents facts about the world. In the context of information technology, data is information stored in digital form — though data management principles also apply to data on paper and in databases. Data is both an interpretation of the objects it represents and an object that must itself be interpreted. Context — provided by **Metadata** — is required for data to be meaningful.
 
-Organizations often have multiple ways of representing the same concept, which is why [[Data Architecture]], [[Data Modeling and Design]], [[Data Governance]], and [[Data Quality]] management are needed.
+Organizations often have multiple ways of representing the same concept, which is why **Data Architecture**, **Data Modeling and Design**, **Data Governance**, and **Data Quality** management are needed.
 
 ### Data and Information
 
@@ -67,19 +67,19 @@ Data differs from other assets in important ways: it is not consumed when used, 
 Calling data an asset implies it has value. Organizations should develop consistent ways to quantify that value, and measure both the costs of low quality data and the benefits of high quality data.
 
 ### 3. Managing data means managing the quality of data
-Ensuring data is fit for purpose is a primary goal of data management. Organizations must understand stakeholders' quality requirements and measure data against them. See [[Data Quality]].
+Ensuring data is fit for purpose is a primary goal of data management. Organizations must understand stakeholders' quality requirements and measure data against them. See **Data Quality**.
 
 ### 4. It takes Metadata to manage data
-The data used to manage and understand data is called [[Metadata]]. Because data cannot be held or touched, understanding what it is and how to use it requires definitions and knowledge in the form of Metadata.
+The data used to manage and understand data is called **Metadata**. Because data cannot be held or touched, understanding what it is and how to use it requires definitions and knowledge in the form of Metadata.
 
 ### 5. It takes planning to manage data
-Data is created in many places and moved between places for use. Coordinating work and keeping end results aligned requires planning from an architectural and process perspective. See [[Data Architecture]].
+Data is created in many places and moved between places for use. Coordinating work and keeping end results aligned requires planning from an architectural and process perspective. See **Data Architecture**.
 
 ### 6. Data management is cross-functional; it requires a range of skills and expertise
 A single team cannot manage all of an organization's data. Data management requires both technical and non-technical skills and the ability to collaborate across domains.
 
 ### 7. Data management requires an enterprise perspective
-Data management has local applications but must be applied across the enterprise to be as effective as possible. This is why data management and [[Data Governance]] are intertwined.
+Data management has local applications but must be applied across the enterprise to be as effective as possible. This is why data management and **Data Governance** are intertwined.
 
 ### 8. Data management must account for a range of perspectives
 Data is fluid. Data management must constantly evolve to keep up with the ways data is created, used, and the data consumers who use it.
@@ -91,16 +91,16 @@ Data has a lifecycle — from creation/obtainment through storage, maintenance, 
 - **Use & Enhance**: Warehousing, business intelligence, analytics, data science
 
 ### 10. Different types of data have different lifecycle characteristics
-Different types of data — transactional, [[Reference and Master Data|reference data]], [[Reference and Master Data|master data]], [[Metadata]] — have different management requirements. Data management practices must be flexible enough to accommodate these differences.
+Different types of data — transactional, **reference data**, **master data**, **Metadata** — have different management requirements. Data management practices must be flexible enough to accommodate these differences.
 
 ### 11. Managing data includes managing the risks associated with data
-Data represents risk as well as value. Data can be lost, stolen, or misused. Organizations must consider the ethical implications of data use and manage data-related risks throughout the lifecycle. See [[Data Security]] and [[Data Handling Ethics]].
+Data represents risk as well as value. Data can be lost, stolen, or misused. Organizations must consider the ethical implications of data use and manage data-related risks throughout the lifecycle. See **Data Security** and **Data Handling Ethics**.
 
 ### 12. Data management requirements must drive Information Technology decisions
 Data and data management are deeply intertwined with IT, but managing technology is not the same as managing data. Technology should serve — not drive — an organization's strategic data needs.
 
 ### 13. Effective data management requires leadership commitment
-Data management involves complex processes requiring coordination, collaboration, and commitment. This requires not only management skills but also the vision and purpose that come from committed leadership — often embodied in the role of [[Data Governance|Chief Data Officer]].
+Data management involves complex processes requiring coordination, collaboration, and commitment. This requires not only management skills but also the vision and purpose that come from committed leadership — often embodied in the role of **Chief Data Officer**.
 
 ## Data Management Challenges
 
@@ -148,7 +148,7 @@ Key deliverables:
 The DAMA-DMBOK Framework provides a comprehensive view of data management through three primary visuals:
 
 ### The DAMA Wheel
-The [[Data Governance]] Knowledge Area sits at the center of data management activities, providing consistency and balance between all other functions. Surrounding it are ten additional Knowledge Areas, all necessary parts of a mature data management function.
+The **Data Governance** Knowledge Area sits at the center of data management activities, providing consistency and balance between all other functions. Surrounding it are ten additional Knowledge Areas, all necessary parts of a mature data management function.
 
 ### The Environmental Factors Hexagon
 Shows the relationship between **people**, **process**, and **technology**, with goals and principles at the center providing guidance for how people should execute activities and effectively use tools.
@@ -160,66 +160,66 @@ Each Knowledge Area is described using a SIPOC-style diagram (Suppliers, Inputs,
 
 The DMBOK is structured around eleven interconnected Knowledge Areas. Each is covered in its own chapter (Chapters 3–13):
 
-### 1. [[Data Governance]] (Chapter 3)
+### 1. **Data Governance** (Chapter 3)
 Provides direction and oversight for data management by establishing a system of decision rights over data that accounts for the needs of the enterprise. Sits at the center of the DAMA Wheel.
 
-### 2. [[Data Architecture]] (Chapter 4)
+### 2. **Data Architecture** (Chapter 4)
 Defines the blueprint for managing data assets by aligning with organizational strategy to establish strategic data requirements and designs to meet these requirements.
 
-### 3. [[Data Modeling and Design]] (Chapter 5)
+### 3. **Data Modeling and Design** (Chapter 5)
 The process of discovering, analyzing, representing, and communicating data requirements in a precise form called the data model.
 
-### 4. [[Data Storage and Operations]] (Chapter 6)
+### 4. **Data Storage and Operations** (Chapter 6)
 Includes the design, implementation, and support of stored data to maximize its value. Operations provide support throughout the data lifecycle from planning to disposal.
 
-### 5. [[Data Security]] (Chapter 7)
+### 5. **Data Security** (Chapter 7)
 Ensures that data privacy and confidentiality are maintained, that data is not breached, and that data is accessed appropriately.
 
-### 6. [[Data Integration and Interoperability]] (Chapter 8)
+### 6. **Data Integration and Interoperability** (Chapter 8)
 Includes processes related to the movement and consolidation of data within and between data stores, applications, and organizations.
 
-### 7. [[Document and Content Management]] (Chapter 9)
+### 7. **Document and Content Management** (Chapter 9)
 Includes planning, implementation, and control activities used to manage the lifecycle of data and information found in a range of unstructured media, especially documents needed to support legal and regulatory compliance requirements.
 
-### 8. [[Reference and Master Data]] (Chapter 10)
+### 8. **Reference and Master Data** (Chapter 10)
 Includes ongoing reconciliation and maintenance of core critical shared data to enable consistent use across systems of the most accurate, timely, and relevant version of truth about essential business entities.
 
-### 9. [[Data Warehousing and Business Intelligence]] (Chapter 11)
+### 9. **Data Warehousing and Business Intelligence** (Chapter 11)
 Includes the planning, implementation, and control processes to manage decision support data and to enable knowledge workers to get value from data via analysis and reporting.
 
-### 10. [[Metadata]] (Chapter 12)
+### 10. **Metadata** (Chapter 12)
 Includes planning, implementation, and control activities to enable access to high quality, integrated Metadata — including definitions, models, data flows, and other information critical to understanding data and the systems through which it is created, maintained, and accessed.
 
-### 11. [[Data Quality]] (Chapter 13)
+### 11. **Data Quality** (Chapter 13)
 Includes the planning and implementation of quality management techniques to measure, assess, and improve the fitness of data for use within an organization.
 
 ## Supporting Chapters
 
 Beyond the eleven Knowledge Areas, the DMBOK also covers:
 
-- **[[Data Handling Ethics]]** (Chapter 2) — The central role that data ethics plays in making informed, socially responsible decisions about data and its uses.
-- **[[Big Data and Data Science]]** (Chapter 14) — Technologies and business processes emerging as our ability to collect and analyze large, diverse data sets increases.
-- **[[Data Management Maturity Assessment]]** (Chapter 15) — Approaches to evaluating and improving an organization's data management capabilities.
-- **[[Data Management Organization and Role Expectations]]** (Chapter 16) — Best practices for organizing data management teams and enabling successful practices.
-- **[[Data Management and Organizational Change Management]]** (Chapter 17) — How to plan for and successfully move through cultural changes necessary to embed effective data management practices.
+- ****Data Handling Ethics**** (Chapter 2) — The central role that data ethics plays in making informed, socially responsible decisions about data and its uses.
+- ****Big Data and Data Science**** (Chapter 14) — Technologies and business processes emerging as our ability to collect and analyze large, diverse data sets increases.
+- ****Data Management Maturity Assessment**** (Chapter 15) — Approaches to evaluating and improving an organization's data management capabilities.
+- ****Data Management Organization and Role Expectations**** (Chapter 16) — Best practices for organizing data management teams and enabling successful practices.
+- ****Data Management and Organizational Change Management**** (Chapter 17) — How to plan for and successfully move through cultural changes necessary to embed effective data management practices.
 
 ## DMBOK Evolution: Alternative Frameworks
 
 ### The DMBOK Pyramid (Aiken)
 Describes how organizations evolve through four phases toward mature data management:
-1. **Phase 1**: Purchase applications with database capabilities (starting point for [[Data Modeling and Design|modeling]], [[Data Storage and Operations|storage]], [[Data Security]])
-2. **Phase 2**: Address data quality challenges; build reliable [[Metadata]] and consistent [[Data Architecture]]
-3. **Phase 3**: Implement [[Data Governance]] as structural support; execute strategic initiatives ([[Document and Content Management|content management]], [[Reference and Master Data|master data]], [[Data Warehousing and Business Intelligence|warehousing/BI]])
+1. **Phase 1**: Purchase applications with database capabilities (starting point for **modeling**, **storage**, **Data Security**)
+2. **Phase 2**: Address data quality challenges; build reliable **Metadata** and consistent **Data Architecture**
+3. **Phase 3**: Implement **Data Governance** as structural support; execute strategic initiatives (**content management**, **master data**, **BI**)
 4. **Phase 4**: Leverage well-managed data for advanced analytics
 
 ### Functional Area Dependencies (Geuens)
-Recognizes that [[Data Warehousing and Business Intelligence|Business Intelligence and Analytics]] depend on all other functions, which in turn rest on a foundation of [[Data Governance]] (including [[Metadata]], [[Data Security]], [[Data Architecture]], and [[Reference and Master Data|Reference Data]]).
+Recognizes that **Business Intelligence and Analytics** depend on all other functions, which in turn rest on a foundation of **Data Governance** (including **Metadata**, **Data Security**, **Data Architecture**, and **Reference Data**).
 
 ### DAMA Data Management Function Framework
 Organizes data management into three layers:
-- **Oversight**: [[Data Governance]] — strategy, principles, policy, stewardship, culture change
+- **Oversight**: **Data Governance** — strategy, principles, policy, stewardship, culture change
 - **Lifecycle Management**: Plan & Design → Enable & Maintain → Use & Enhance
-- **Foundational Activities**: Data Risk Management ([[Data Security|Security]], Privacy, Compliance), [[Metadata]] Management, [[Data Quality]] Management
+- **Foundational Activities**: Data Risk Management (**Security**, Privacy, Compliance), **Metadata** Management, **Data Quality** Management
 
 ## DAMA and the DMBOK
 

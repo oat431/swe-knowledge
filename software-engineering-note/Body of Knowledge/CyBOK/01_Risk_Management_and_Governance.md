@@ -256,7 +256,7 @@ Information sharing about breaches is still nascent — organisations often pref
 
 ## Related Chapters
 
-- [[03_Law_and_Regulation]] — Legal context for risk management; NIS Directive; regulatory compliance obligations.
-- [[04_Human_Factors]] — Human factors in security; why people fail to follow security behaviour; usability of security tools.
-- [[08_Security_Operations_and_Incident_Management]] — Detailed incident management processes; forensics; security operations.
-- [[21_Cyber_Physical_Systems_Security]] — OT/ICS security; safety-critical systems; vulnerability management in CPS environments.
+- [[02_Law_and_Regulation]] — Legal context for risk management; NIS Directive; regulatory compliance obligations.
+- [[03_Human_Factors]] — Human factors in security; why people fail to follow security behaviour; usability of security tools.
+- [[07_Security_Operations_and_Incident_Management]] — Detailed incident management processes; forensics; security operations.
+- [[19_Cyber_Physical_Systems_Security]] — OT/ICS security; safety-critical systems; vulnerability management in CPS environments.

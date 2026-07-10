@@ -13,7 +13,7 @@ updated: 2026-07-09
 
 ## Overview
 
-Document and Content Management encompasses the processes, techniques, and technologies for controlling and organizing documents, records, and unstructured content throughout their lifecycle. It includes [[DMBOK/10_Reference_and_Master_Data|controlled vocabularies]], taxonomies, ontologies, search capabilities, enterprise content management (ECM) systems, and records management — all governed by [[DMBOK/02_Data_Governance|information governance]] frameworks.
+Document and Content Management encompasses the processes, techniques, and technologies for controlling and organizing documents, records, and unstructured content throughout their lifecycle. It includes [[08_Reference_and_Master_Data|controlled vocabularies]], taxonomies, ontologies, search capabilities, enterprise content management (ECM) systems, and records management — all governed by [[01_Data_Governance|information governance]] frameworks.
 
 ---
 
@@ -38,7 +38,7 @@ Per ANSI/NISO Z39.19-2005, a **term** is "one or more words designating a concep
 
 - Defining and classifying terms initially
 - Maintaining terms as they propagate across systems
-- Governance processes for term changes, usually arbitrated by [[DMBOK/03_Data_Stewardship|Data Stewards]]
+- Governance processes for term changes, usually arbitrated by [[01_Data_Governance|Data Stewards]]
 
 **Term relationships** (three types per Z39.19):
 
@@ -223,7 +223,7 @@ An estimated **80%** of all stored data exists outside relational databases. Thi
 - Reports, graphics, digital images, microfiche
 - Video and audio recordings
 
-**Fundamental data management principles apply equally:** storage, integrity, security, content quality, access, and effective use. Unstructured data requires [[DMBOK/02_Data_Governance|governance]], [[DMBOK/04_Data_Architecture|architecture]], [[DMBOK/06_Data_Security|security]], [[DMBOK/11_Metadata_Management|Metadata]], and [[DMBOK/12_Data_Quality|data quality]].
+**Fundamental data management principles apply equally:** storage, integrity, security, content quality, access, and effective use. Unstructured data requires [[01_Data_Governance|governance]], **architecture**, [[05_Data_Security|security]], [[10_Metadata_Management|Metadata]], and [[11_Data_Quality|data quality]].
 
 ---
 
@@ -285,7 +285,7 @@ BYOD (bring-your-own-device), BYOA (bring-your-own-apps), and WYOD (wear-your-ow
 
 ##### Handling Sensitive Data
 
-Organizations must identify and protect sensitive data per legal requirements. [[DMBOK/06_Data_Security|Data Security]] and/or [[DMBOK/02_Data_Governance|Data Governance]] establish confidentiality schemes. Content producers must apply these classifications and mark documents accordingly.
+Organizations must identify and protect sensitive data per legal requirements. [[05_Data_Security|Data Security]] and/or [[01_Data_Governance|Data Governance]] establish confidentiality schemes. Content producers must apply these classifications and mark documents accordingly.
 
 ##### Responding to Litigation
 
@@ -629,7 +629,7 @@ Unstructured data grows much faster than structured data. Challenges:
 
 ### 6.3 Govern for Quality Content
 
-Requires effective partnership between [[DMBOK/03_Data_Stewardship|data stewards]], data management professionals, and records managers. Business data stewards help define web portals, enterprise taxonomies, search engine indexes, and content management issues.
+Requires effective partnership between [[01_Data_Governance|data stewards]], data management professionals, and records managers. Business data stewards help define web portals, enterprise taxonomies, search engine indexes, and content management issues.
 
 **Understanding quality content context:**
 
@@ -713,9 +713,9 @@ The **EDRM Metrics Model** uses elements of Volume, Time, and Cost, surrounded b
 
 ## See Also
 
-- [[DMBOK/02_Data_Governance]] — Information governance frameworks and policies
-- [[DMBOK/06_Data_Security]] — Sensitive data protection, confidentiality classifications
-- [[DMBOK/10_Reference_and_Master_Data]] — Controlled vocabularies, taxonomies, reference data
-- [[DMBOK/11_Metadata_Management]] — Metadata for structured and unstructured content
-- [[DMBOK/12_Data_Quality]] — Quality dimensions for content and records
-- [[DMBOK/05_Data_Storage_and_Operations]] — Backup, recovery, business continuity
+- [[01_Data_Governance]] — Information governance frameworks and policies
+- [[05_Data_Security]] — Sensitive data protection, confidentiality classifications
+- [[08_Reference_and_Master_Data]] — Controlled vocabularies, taxonomies, reference data
+- [[10_Metadata_Management]] — Metadata for structured and unstructured content
+- [[11_Data_Quality]] — Quality dimensions for content and records
+- [[04_Data_Storage_and_Operations]] — Backup, recovery, business continuity

@@ -23,7 +23,7 @@ How to design software that humans can actually use. HCI sits at the intersectio
 | **UX Laws** | [[10 Aesthetic Usability Effect]] | 15 psychology-backed laws that govern user behavior |
 | **UX Principles** | [[25 User-Centered Design]] | High-level design philosophy: user-centered design, accessibility, consistency |
 | **UX/UI Process** | [[30 User Research Methods]] | Research, wireframes, prototypes, testing, A/B testing — the practical workflow |
-| **Essential Documents** | [[../Essential Document/UX UI Essential Documents|UX UI Essential Documents]] | Deliverables checklist by phase |
+| **Essential Documents** | [[UX UI Essential Documents|UX UI Essential Documents]] | Deliverables checklist by phase |
 
 ---
 

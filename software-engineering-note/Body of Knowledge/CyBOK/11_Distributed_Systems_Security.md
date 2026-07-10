@@ -30,7 +30,7 @@ Distributed systems can be broadly classified into **two categories** based on t
 
 Systems without a centralised coordination service. Decentralised un-timed control is a prominent characteristic.
 
-**Examples:** [[Kademlia]], Napster, [[Gnutella]], distributed file/music sharing systems, wireless sensor networks, online gaming systems.
+**Examples:** **Kademlia**, Napster, **Gnutella**, distributed file/music sharing systems, wireless sensor networks, online gaming systems.
 
 #### 2. Coordinated Clustering Across Distributed Resources and Services
 
@@ -38,7 +38,7 @@ This broad class sub-divides into:
 - **(a) Coordination of resources** — e.g., virtual machine orchestration, elastic scaling
 - **(b) Coordination of services** — e.g., transactional databases, ledgers
 
-**Examples:** [[Client-Server]] models, n-Tier Multi-tenancy models, elastic on-demand geo-dispersed aggregation of resources (Clouds — public, private, hybrid, multi-Cloud), Big Data services, High Performance Computing, transactional services such as [[Databases]], [[Ledgers]], Storage Systems, Key Value Stores ([[KVS]]). The [[Google File System]], [[Amazon Web Services]], [[Azure]], and [[Apache Cassandra]] are examples.
+**Examples:** **Client-Server** models, n-Tier Multi-tenancy models, elastic on-demand geo-dispersed aggregation of resources (Clouds — public, private, hybrid, multi-Cloud), Big Data services, High Performance Computing, transactional services such as **Databases**, **Ledgers**, Storage Systems, Key Value Stores (**KVS**). The **Google File System**, **Amazon Web Services**, **Azure**, and **Apache Cassandra** are examples.
 
 Both sub-classes are typically coordinated via communication exchanges and coordination services with the intended outcome of providing a "virtually centralised system" where properties such as **causality**, **ordering of tasks**, **replication handling**, and **consistency** are ensured.
 
@@ -47,10 +47,10 @@ Both sub-classes are typically coordinated via communication exchanges and coord
 #### Layered Architecture
 
 A distributed system architecture is often an aggregation of multiple layers:
-- **Lowest level:** Resources within a device (memory, computation, storage, communication) accessed through [[Operating System]] primitives
+- **Lowest level:** Resources within a device (memory, computation, storage, communication) accessed through **Operating System** primitives
 - **Distributed services:** Naming, time synchronisation, distributed file systems assembled through interaction of different components
 - **Higher layers:** Build upon lower layers to provide additional functionalities and applications
-- **Middleware:** Supports communication styles such as [[Message Passing]], [[Remote Procedure Calls]] (RPCs), distributed object platforms, [[Publish-Subscribe]] architectures, enterprise service bus
+- **Middleware:** Supports communication styles such as **Message Passing**, **Remote Procedure Calls** (RPCs), distributed object platforms, **Publish-Subscribe** architectures, enterprise service bus
 
 ### 12.1.2 Classes of Vulnerabilities & Threats
 
@@ -68,13 +68,13 @@ The attack surface relates to compromises of:
 Determines the authorised participation of a resource, user, or service within a distributed system.
 
 **Threats include:**
-- Masquerading or [[Spoofing]] of identity to gain access rights
-- [[Denial of Service]] (DoS) attacks that detrimentally limit access, leading to inaccessibility and unavailability of distributed resources/services
+- Masquerading or **Spoofing** of identity to gain access rights
+- **Denial of Service** (DoS) attacks that detrimentally limit access, leading to inaccessibility and unavailability of distributed resources/services
 - Identity tampering — since authorisation may be specified in terms of user/resource identity (login names, passwords)
 
 > Resource distribution often entails more points for access control and more information transported to support access control, thus **increasing the attack surface**.
 
-See also: [[Authentication, Authorisation & Accountability]] (CyBOK Ch14)
+See also: **Authentication, Authorisation & Accountability** (CyBOK Ch14)
 
 #### 12.1.2.2 Data Transportation
 
@@ -85,7 +85,7 @@ Network-level threats spanning routing, message passing, publish-subscribe modal
 - **Active attacks:** Data modification
 - **Man-in-the-Middle (MITM):** Attacker inserts between victim's browser and web server, establishes two separate connections, actively records all messages and selectively modifies data
 
-See also: [[Network Security]] (CyBOK Ch19)
+See also: **Network Security** (CyBOK Ch19)
 
 #### 12.1.2.3 Resource Management and Coordination Services
 
@@ -94,24 +94,24 @@ Threats to the middleware protocols that provide coordination of resources, incl
 - Replication management
 - View changes
 - Time/event ordering
-- [[Linearisability]]
-- [[Consensus]]
+- **Linearisability**
+- **Consensus**
 - Transactional commit
 
 #### 12.1.2.4 Data Security
 
-The classical [[CIA Triad]] (Confidentiality, Integrity, Availability) applies to each element of the data chain:
-- **Confidentiality:** Information leakage threats such as [[Side-Channel Attacks]] or [[Covert Channel Attacks]]
+The classical **CIA Triad** (Confidentiality, Integrity, Availability) applies to each element of the data chain:
+- **Confidentiality:** Information leakage threats such as **Side-Channel Attacks** or **Covert Channel Attacks**
 - **Availability:** Any delay or denial of data access
 - **Integrity:** Compromise of data correctness, violation of data consistency (strong, weak, relaxed, eventual consistency)
 
-See also: [[Malware & Attack Technologies]] (CyBOK Ch6)
+See also: **Malware & Attack Technologies** (CyBOK Ch6)
 
 ---
 
 ## 12.2 Decentralised P2P Models
 
-Peer-to-Peer ([[P2P]]) systems constitute the decentralised variant of distributed systems. Their popularity is driven by:
+Peer-to-Peer (**P2P**) systems constitute the decentralised variant of distributed systems. Their popularity is driven by:
 - **Scalability** — no changes to protocol design needed with increasing numbers of peers
 - **Decentralised coordination** — inherent resilience against individual peer failures
 - **Low cost** — peer population itself represents the service provisioning infrastructure
@@ -124,16 +124,16 @@ Peer-to-Peer ([[P2P]]) systems constitute the decentralised variant of distribut
 4. **Usage of peer resources at the network's edge** — imposing low infrastructure costs
 5. **Address variance** — of resource provisioning among peers
 
-Applications include: file sharing (eMule, KaZaA), social networks, multimedia content distribution, online games, internet telephony, instant messaging, [[Internet of Things]] (IoT), car-to-car communication, [[SCADA]] systems, wide area monitoring systems, and [[Distributed Ledgers]].
+Applications include: file sharing (eMule, KaZaA), social networks, multimedia content distribution, online games, internet telephony, instant messaging, **Internet of Things** (IoT), car-to-car communication, **SCADA** systems, wide area monitoring systems, and **Distributed Ledgers**.
 
 ### P2P Protocol Categories
 
 | Category | Topology | Primary Use | Examples |
 |----------|----------|-------------|----------|
-| **Unstructured** | Tree or mesh-like sub-graphs | Data dissemination | [[Freenet]], [[Gnutella]] |
-| **Structured** | Ring structures with shortcuts (small-world) | Data discovery | [[Chord]], [[Pastry]], [[Tapestry]], [[Kademlia]], [[CAN]] |
-| **Hybrid** | Integration of unstructured + structured | Data discovery + dissemination | [[Napster]], [[BitTorrent]] |
-| **Hierarchical** | Layered (front-end/back-end peers) | Improved lookup performance | eDonkey, [[KaZaA]] (SuperP2P) |
+| **Unstructured** | Tree or mesh-like sub-graphs | Data dissemination | **Freenet**, **Gnutella** |
+| **Structured** | Ring structures with shortcuts (small-world) | Data discovery | **Chord**, **Pastry**, **Tapestry**, **Kademlia**, **CAN** |
+| **Hybrid** | Integration of unstructured + structured | Data discovery + dissemination | **Napster**, **BitTorrent** |
+| **Hierarchical** | Layered (front-end/back-end peers) | Improved lookup performance | eDonkey, **KaZaA** (SuperP2P) |
 
 Basic P2P operations rely on three elements: **(a) identification/naming** of peer nodes, **(b) routing schemas** across peers, and **(c) discovery** of peers.
 
@@ -147,7 +147,7 @@ Basic P2P operations rely on three elements: **(a) identification/naming** of pe
 
 ### 12.2.2 Structured P2P Protocols
 
-- Pointers to resources stored in a **Distributed Hash Table** ([[DHT]])
+- Pointers to resources stored in a **Distributed Hash Table** (**DHT**)
 - Address space is typically an integer scale `[0, ..., 2^w − 1]` with `w` being 128 or 160
 - A **distance function** `d(a,b)` enables distance computations between any two identifiers
 - Data discovery: compute key of resource identifier → request key and data from responsible peer
@@ -156,7 +156,7 @@ Basic P2P operations rely on three elements: **(a) identification/naming** of pe
 
 ### 12.2.3 Hybrid P2P Protocols
 
-Integrate elements from unstructured and structured schemas. Example: [[BitTorrent]] extended with structured P2P features to provide fully decentralised data discovery (abandoning "tracker servers").
+Integrate elements from unstructured and structured schemas. Example: **BitTorrent** extended with structured P2P features to provide fully decentralised data discovery (abandoning "tracker servers").
 
 ### 12.2.4 Hierarchical P2P Protocols
 
@@ -189,7 +189,7 @@ Manifest as resource exhaustion by limiting access to a node or communication ro
 
 #### Sybil Attacks
 
-A single adversary creates and controls multiple fake identities ([[Sybil nodes]]) to:
+A single adversary creates and controls multiple fake identities (**Sybil nodes**) to:
 - Outvote honest nodes in consensus mechanisms
 - Disrupt routing by providing incorrect routing information
 - Eclipse attacks: isolate honest nodes from the rest of the network
@@ -221,7 +221,7 @@ Peers consume services without contributing resources — while not a direct sec
 
 ### 12.4.1 Consensus in Distributed Systems
 
-[[Consensus]] is a fundamental problem in distributed systems where a set of processes must agree on a single value despite failures. Key properties:
+**Consensus** is a fundamental problem in distributed systems where a set of processes must agree on a single value despite failures. Key properties:
 
 - **Termination:** Every correct process eventually decides some value
 - **Agreement:** All correct processes decide the same value
@@ -229,7 +229,7 @@ Peers consume services without contributing resources — while not a direct sec
 
 #### The FLP Impossibility
 
-The [[FLP Impossibility]] result (Fischer, Lynch, Paterson, 1985) proves that in an asynchronous system, consensus is impossible with even a single crash failure. This drives practical systems to use:
+The **FLP Impossibility** result (Fischer, Lynch, Paterson, 1985) proves that in an asynchronous system, consensus is impossible with even a single crash failure. This drives practical systems to use:
 - **Randomisation** (probabilistic consensus)
 - **Partial synchrony** assumptions
 - **Failure detectors**
@@ -238,11 +238,11 @@ The [[FLP Impossibility]] result (Fischer, Lynch, Paterson, 1985) proves that in
 
 | Protocol | Type | Use Case |
 |----------|------|----------|
-| **[[Paxos]]** | Crash-fault tolerant | Distributed databases, coordination services |
-| **[[Raft]]** | Crash-fault tolerant | Easier-to-understand alternative to Paxos |
-| **[[PBFT]]** (Practical Byzantine Fault Tolerance) | Byzantine-fault tolerant | Permissioned blockchains |
-| **[[PoW]]** (Proof of Work) | Byzantine-fault tolerant (probabilistic) | [[Bitcoin]], permissionless blockchains |
-| **[[PoS]]** (Proof of Stake) | Byzantine-fault tolerant (probabilistic) | [[Ethereum]] 2.0, modern blockchains |
+| ****Paxos**** | Crash-fault tolerant | Distributed databases, coordination services |
+| ****Raft**** | Crash-fault tolerant | Easier-to-understand alternative to Paxos |
+| ****PBFT**** (Practical Byzantine Fault Tolerance) | Byzantine-fault tolerant | Permissioned blockchains |
+| ****PoW**** (Proof of Work) | Byzantine-fault tolerant (probabilistic) | **Bitcoin**, permissionless blockchains |
+| ****PoS**** (Proof of Stake) | Byzantine-fault tolerant (probabilistic) | **Ethereum** 2.0, modern blockchains |
 
 #### Security Threats to Consensus
 
@@ -254,7 +254,7 @@ The [[FLP Impossibility]] result (Fischer, Lynch, Paterson, 1985) proves that in
 
 ### 12.4.2 Blockchain Security
 
-[[Blockchain]] is a distributed ledger technology that combines:
+**Blockchain** is a distributed ledger technology that combines:
 - **Cryptographic hash chains** for tamper-evidence
 - **Consensus mechanisms** for agreement
 - **Peer-to-peer networking** for decentralisation
@@ -278,9 +278,9 @@ The [[FLP Impossibility]] result (Fischer, Lynch, Paterson, 1985) proves that in
    - Cost scales with network size
 
 2. **Smart Contract Vulnerabilities**
-   - [[Reentrancy attacks]] (e.g., the DAO hack)
+   - **Reentrancy attacks** (e.g., the DAO hack)
    - Integer overflow/underflow
-   - [[Front-running]] — miners/validators reorder transactions for profit
+   - **Front-running** — miners/validators reorder transactions for profit
    - Access control flaws
    - Oracle manipulation
 
@@ -296,13 +296,13 @@ The [[FLP Impossibility]] result (Fischer, Lynch, Paterson, 1985) proves that in
    - **DNS attacks:** Redirecting nodes to malicious peers
 
 5. **Privacy Concerns**
-   - Transaction graph analysis / [[deanonymisation]]
+   - Transaction graph analysis / **deanonymisation**
    - Address reuse and clustering
-   - [[MEV]] (Miner/Maximal Extractable Value) exploitation
+   - **MEV** (Miner/Maximal Extractable Value) exploitation
 
 ### 12.4.3 Coordination Services Security
 
-Coordination services like [[Apache ZooKeeper]], [[etcd]], and [[Consul]] provide:
+Coordination services like **Apache ZooKeeper**, **etcd**, and **Consul** provide:
 - Distributed locking
 - Leader election
 - Configuration management
@@ -312,7 +312,7 @@ Coordination services like [[Apache ZooKeeper]], [[etcd]], and [[Consul]] provid
 - Authentication and authorisation for all client connections
 - Encryption of data in transit (TLS)
 - Access Control Lists (ACLs) for znodes/keys
-- Protection against [[Split-Brain]] scenarios
+- Protection against **Split-Brain** scenarios
 - Audit logging of all coordination operations
 
 ---
@@ -347,10 +347,10 @@ Coordination services like [[Apache ZooKeeper]], [[etcd]], and [[Consul]] provid
 
 ### 12.5.2 Distributed Access Control
 
-- **Capability-based security:** Tokens that prove authorisation (see also [[Operating Systems & Virtualisation]] Ch11)
-- **[[OAuth 2.0]] / [[OpenID Connect]]:** Delegated authorisation for distributed services
-- **[[SAML]]:** Federated identity for cross-organisational distributed systems
-- **[[RBAC]] / [[ABAC]]:** Role-based and attribute-based access control in distributed contexts
+- **Capability-based security:** Tokens that prove authorisation (see also **Operating Systems & Virtualisation** Ch11)
+- ****OAuth 2.0** / **OpenID Connect**:** Delegated authorisation for distributed services
+- ****SAML**:** Federated identity for cross-organisational distributed systems
+- ****RBAC** / **ABAC**:** Role-based and attribute-based access control in distributed contexts
 
 ### 12.5.3 Secure Replication and Consistency
 
@@ -382,13 +382,13 @@ Coordination services like [[Apache ZooKeeper]], [[etcd]], and [[Consul]] provid
 
 ## Cross-References
 
-- [[Authentication, Authorisation & Accountability]] (CyBOK Ch14) — Authentication and authorisation in distributed systems
-- [[Network Security]] (CyBOK Ch19) — Network-level threats and protections
-- [[Operating Systems & Virtualisation]] (CyBOK Ch11) — Resource access and isolation primitives
-- [[Malware & Attack Technologies]] (CyBOK Ch6) — Malicious applications, code, and viruses
-- [[Hardware Security]] (CyBOK Ch20) — TPM, secure elements, hardware root of trust
-- [[Cyber-Physical Systems Security]] (CyBOK Ch21) — IoT and embedded systems security
-- [[Software Security]] (CyBOK Ch15) — Secure coding, memory safety
+- **Authentication, Authorisation & Accountability** (CyBOK Ch14) — Authentication and authorisation in distributed systems
+- **Network Security** (CyBOK Ch19) — Network-level threats and protections
+- **Operating Systems & Virtualisation** (CyBOK Ch11) — Resource access and isolation primitives
+- **Malware & Attack Technologies** (CyBOK Ch6) — Malicious applications, code, and viruses
+- **Hardware Security** (CyBOK Ch20) — TPM, secure elements, hardware root of trust
+- **Cyber-Physical Systems Security** (CyBOK Ch21) — IoT and embedded systems security
+- **Software Security** (CyBOK Ch15) — Secure coding, memory safety
 
 ---
 

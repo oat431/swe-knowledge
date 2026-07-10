@@ -32,4 +32,4 @@ Plus [[00_Introduction_to_DMBOK]] for the data management overview.
 
 ## Related
 
-- [[../Body of Knowledge - Overview|Body of Knowledge — Overview]] — All six BOKs
+- [[Body of Knowledge - Overview|Body of Knowledge — Overview]] — All six BOKs

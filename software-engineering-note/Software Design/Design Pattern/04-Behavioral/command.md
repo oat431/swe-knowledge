@@ -283,4 +283,4 @@ Instead of storing state snapshots, each command can define an inverse operation
 - [[Iterator]]
 - [[Mediator]]
 - [[Visitor]]
-- [[solid-principles]]
+- **solid-principles**

@@ -404,5 +404,5 @@ classDiagram
 
 - [[how-to-read-this-book]]
 - [[introduction-to-design-patterns]]
-- [[design-principles]]
-- [[solid-principles]]
+- **design-principles**
+- **solid-principles**

@@ -12,25 +12,25 @@ The Scope Performance Domain encompasses the processes necessary to define, deve
 
 ### Product Scope vs. Project Scope
 
-- **[[Product Scope]]** — A description of the features, functions, and characteristics of the product, service, or result the project is intended to deliver. It defines what the end result should look like and what it should do. The focus is on the deliverables themselves, including quality and performance specifications.
-- **[[Project Scope]]** — Encompasses the work performed to deliver a product, service, or result with the specified features and functions. It ensures that the expected value is achieved. The delivery of scope should generate expected value that is worth the time and resources invested and ideally maximized.
+- ****Product Scope**** — A description of the features, functions, and characteristics of the product, service, or result the project is intended to deliver. It defines what the end result should look like and what it should do. The focus is on the deliverables themselves, including quality and performance specifications.
+- ****Project Scope**** — Encompasses the work performed to deliver a product, service, or result with the specified features and functions. It ensures that the expected value is achieved. The delivery of scope should generate expected value that is worth the time and resources invested and ideally maximized.
 
 ### Scope Decomposition
 
-- **[[Work Breakdown Structure]] (WBS)** — In predictive or hybrid approaches, a hierarchical decomposition of the total scope of work into smaller, manageable work packages that can be easily assigned, tracked, and measured. The WBS, together with the project scope statement and the WBS dictionary, constitutes the **[[scope baseline]]**.
-- **[[WBS Dictionary]]** — Provides additional details about each WBS component: scope descriptions, milestones, responsible parties, resource needs, and acceptance criteria. Used in projects with complex or interdependent deliverables.
-- **[[Value Breakdown Structure]] (VBS)** — A hierarchical structure that connects project scope and its intended value to the product scope. Each deliverable is assigned a value-based number (e.g., dollars of revenue, lives saved) or percentage of expected total value, enabling prioritization and estimation of drag cost for critical path items.
-- **[[Product Backlog]]** — In adaptive environments, a dynamic, prioritized list of work items and features. Decomposed into epics, features, and user stories. Provides a framework for managing scope by focusing on value-driven outcomes and continuous prioritization.
+- ****Work Breakdown Structure** (WBS)** — In predictive or hybrid approaches, a hierarchical decomposition of the total scope of work into smaller, manageable work packages that can be easily assigned, tracked, and measured. The WBS, together with the project scope statement and the WBS dictionary, constitutes the ****scope baseline****.
+- ****WBS Dictionary**** — Provides additional details about each WBS component: scope descriptions, milestones, responsible parties, resource needs, and acceptance criteria. Used in projects with complex or interdependent deliverables.
+- ****Value Breakdown Structure** (VBS)** — A hierarchical structure that connects project scope and its intended value to the product scope. Each deliverable is assigned a value-based number (e.g., dollars of revenue, lives saved) or percentage of expected total value, enabling prioritization and estimation of drag cost for critical path items.
+- ****Product Backlog**** — In adaptive environments, a dynamic, prioritized list of work items and features. Decomposed into epics, features, and user stories. Provides a framework for managing scope by focusing on value-driven outcomes and continuous prioritization.
 
 ### Requirements Management
 
-- **[[Requirement]]** — A condition or capability necessary in a product, service, or result to satisfy a business need.
-- **[[Definition of Done]] (DoD)** — A checklist of criteria required for a deliverable to be considered ready for customer use. In adaptive approaches, it is a shared understanding of what must be met before a user story, feature, or increment is considered complete.
-- **[[Quality as a Feature]]** — Quality is an integral attribute of scope, encompassing both functional and nonfunctional requirements. Scope includes target thresholds for attributes such as sturdiness, longevity, and maintainability.
+- ****Requirement**** — A condition or capability necessary in a product, service, or result to satisfy a business need.
+- ****Definition of Done** (DoD)** — A checklist of criteria required for a deliverable to be considered ready for customer use. In adaptive approaches, it is a shared understanding of what must be met before a user story, feature, or increment is considered complete.
+- ****Quality as a Feature**** — Quality is an integral attribute of scope, encompassing both functional and nonfunctional requirements. Scope includes target thresholds for attributes such as sturdiness, longevity, and maintainability.
 
 ### Scope Baseline
 
-In predictive environments, the scope baseline is the approved version of formal scope documents — the project scope statement, WBS, and WBS dictionary — changeable only through formal change control procedures. It forms part of the **[[performance measurement baseline]]** (PMB) alongside the schedule baseline and cost baseline. In adaptive approaches, the baseline is defined at the start of each iteration and aligned with prioritized requirements, with the product owner dynamically approving changes without formal change control.
+In predictive environments, the scope baseline is the approved version of formal scope documents — the project scope statement, WBS, and WBS dictionary — changeable only through formal change control procedures. It forms part of the ****performance measurement baseline**** (PMB) alongside the schedule baseline and cost baseline. In adaptive approaches, the baseline is defined at the start of each iteration and aligned with prioritized requirements, with the product owner dynamically approving changes without formal change control.
 
 ## Processes
 

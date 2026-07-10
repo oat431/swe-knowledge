@@ -10,7 +10,7 @@ created: 2026-07-09
 
 The concept of the Data Warehouse emerged in the 1980s as technology enabled organizations to integrate data from a range of sources into a common data model. Integrated data promised to provide insight into operational processes and open up new possibilities for leveraging data to make decisions and create organizational value. Data warehouses were also seen as a means to reduce the proliferation of decision support systems (DSS), most of which drew on the same core enterprise data. The concept of an enterprise warehouse promised a way to reduce data redundancy, improve the consistency of information, and enable an enterprise to use its data to make better decisions.
 
-Data warehouses began to be built in earnest in the 1990s. Since then — especially with the co-evolution of [[business-intelligence|Business Intelligence]] as a primary driver of business decision-making — data warehouses have become mainstream. Most enterprises have data warehouses and warehousing is the recognized core of enterprise [[data-management|data management]]. Even though well established, the data warehouse continues to evolve. As new forms of data are created with increasing velocity, new concepts such as [[data-lake|data lakes]] are emerging that will influence the future of the data warehouse.
+Data warehouses began to be built in earnest in the 1990s. Since then — especially with the co-evolution of **Business Intelligence** as a primary driver of business decision-making — data warehouses have become mainstream. Most enterprises have data warehouses and warehousing is the recognized core of enterprise **data management**. Even though well established, the data warehouse continues to evolve. As new forms of data are created with increasing velocity, new concepts such as **data lakes** are emerging that will influence the future of the data warehouse.
 
 > **Definition:** Planning, implementation, and control processes to provide decision support data and support knowledge workers engaged in reporting, query, and analysis.
 
@@ -22,9 +22,9 @@ Data warehouses began to be built in earnest in the 1990s. Since then — especi
 
 ## 2. Business Drivers
 
-The primary driver for data warehousing is to support operational functions, compliance requirements, and [[business-intelligence|Business Intelligence]] (BI) activities — though not all BI activities depend on warehouse data. Increasingly organizations are being asked to provide data as evidence that they have complied with regulatory requirements. Because they contain historical data, warehouses are often the means to respond to such requests.
+The primary driver for data warehousing is to support operational functions, compliance requirements, and **Business Intelligence** (BI) activities — though not all BI activities depend on warehouse data. Increasingly organizations are being asked to provide data as evidence that they have complied with regulatory requirements. Because they contain historical data, warehouses are often the means to respond to such requests.
 
-Nevertheless, BI support continues to be the primary reason for a warehouse. BI promises insight about the organization, its customers, and its products. An organization that acts on knowledge gained from BI can improve operational efficiency and competitive advantage. As more data has become available at a greater velocity, BI has evolved from retrospective assessment to [[predictive-analytics|predictive analytics]].
+Nevertheless, BI support continues to be the primary reason for a warehouse. BI promises insight about the organization, its customers, and its products. An organization that acts on knowledge gained from BI can improve operational efficiency and competitive advantage. As more data has become available at a greater velocity, BI has evolved from retrospective assessment to **predictive analytics**.
 
 ## 3. Goals and Principles
 
@@ -43,7 +43,7 @@ Organizations implement data warehouses in order to:
 | **Summarize last, not first** | Build on atomic data; aggregate and summarize to meet requirements and ensure performance, not to replace detail |
 | **Promote transparency and self-service** | The more context (metadata) provided, the better data consumers can get value out of the data |
 | **Build metadata with the warehouse** | Critical to DW success is the ability to explain the data — capture metadata as part of development and manage it in ongoing operations |
-| **Collaborate** | Collaborate with other data initiatives, especially [[data-governance|Data Governance]], [[data-quality|Data Quality]], and [[metadata-management|Metadata]] |
+| **Collaborate** | Collaborate with other data initiatives, especially **Data Governance**, **Data Quality**, and **Metadata** |
 | **One size does not fit all** | Use the right tools and products for each group of data consumers |
 
 ---
@@ -66,13 +66,13 @@ A **Data Warehouse** is a combination of two primary components:
 
 To support historical, analytical, and BI requirements, a data warehouse may also include **dependent data marts** — subset copies of data from the warehouse. In its broadest context, a data warehouse includes any data stores or extracts used to support the delivery of data for BI purposes.
 
-An **Enterprise Data Warehouse (EDW)** is a centralized data warehouse designed to service the BI needs of the entire organization. An EDW adheres to an [[enterprise-data-model|enterprise data model]] to ensure consistency of decision support activities across the enterprise.
+An **Enterprise Data Warehouse (EDW)** is a centralized data warehouse designed to service the BI needs of the entire organization. An EDW adheres to an **enterprise data model** to ensure consistency of decision support activities across the enterprise.
 
 ### 4.3 Data Warehousing
 
-**Data Warehousing** describes the operational extract, cleansing, transformation, control, and load processes that maintain the data in a data warehouse. The data warehousing process focuses on enabling an integrated and historical business context on operational data by enforcing business rules and maintaining appropriate business data relationships. Data warehousing also includes processes that interact with [[metadata-management|metadata repositories]].
+**Data Warehousing** describes the operational extract, cleansing, transformation, control, and load processes that maintain the data in a data warehouse. The data warehousing process focuses on enabling an integrated and historical business context on operational data by enforcing business rules and maintaining appropriate business data relationships. Data warehousing also includes processes that interact with **metadata repositories**.
 
-Traditionally, data warehousing focuses on **structured data** — elements in defined fields, whether in files or tables, as documented in [[data-modeling|data models]]. With recent advances, the BI and DW space now embraces **semi-structured** and **unstructured data**.
+Traditionally, data warehousing focuses on **structured data** — elements in defined fields, whether in files or tables, as documented in **data models**. With recent advances, the BI and DW space now embraces **semi-structured** and **unstructured data**.
 
 ### 4.4 Approaches to Data Warehousing
 
@@ -169,11 +169,11 @@ Include operational systems and external data brought into the DW/BI environment
 - CRM, Accounting, HR applications
 - Industry-specific operational systems
 - Vendor and external data sources
-- [[data-as-a-service|DaaS]], web content, Big Data computation results
+- **DaaS**, web content, Big Data computation results
 
 #### 4.7.2 Data Integration
 
-Covers [[etl|Extract, Transform, and Load (ETL)]], data virtualization, and other techniques for getting data into a common form and location. In a SOA environment, the data services layer is part of this component. See [[data-integration|Data Integration and Interoperability]].
+Covers **Extract, Transform, and Load (ETL)**, data virtualization, and other techniques for getting data into a common form and location. In a SOA environment, the data services layer is part of this component. See **Data Integration and Interoperability**.
 
 #### 4.7.3 Data Storage Areas
 
@@ -210,7 +210,7 @@ Data Warehouses are often loaded daily via a nightly batch window. Different CDC
 | **Message Delta** | Source changes published as near-real-time messages | Extreme | Slow | Slow | No | Yes |
 | **Full Load** | No change indicator; tables extracted in full and compared | Simple | Slow | Nominal | Yes | Yes |
 
-See [[data-integration#change-data-capture|CDC Techniques]] for more details.
+See **CDC Techniques** for more details.
 
 #### 4.8.3 Near-Real-Time and Real-Time
 
@@ -224,7 +224,7 @@ With **Operational BI** pushing for lower latency, new architectural approaches 
 | **Messaging** | Bus accumulation | Small data packets published to a bus as they occur; target systems subscribe and incrementally process |
 | **Streaming** | Target accumulation | Target system collects data in buffer/queue as received; processes in order |
 
-See [[data-integration#real-time-integration|Real-Time Integration]].
+See **Real-Time Integration**.
 
 ---
 
@@ -295,7 +295,7 @@ Key challenges:
 - **Optimistic:** Create dimension entries to accommodate fact data; must account for update/expiry
 - **Pessimistic:** Recycle area for fact data that cannot be associated with corresponding dimension keys; requires notification and alerting
 
-**Data transformation:** Implements business rules within a technical system. Essential to [[data-integration|data integration]]. Requires direct involvement from Data Stewards and SMEs. Rules should be documented for governance.
+**Data transformation:** Implements business rules within a technical system. Essential to **data integration**. Requires direct involvement from Data Stewards and SMEs. Rules should be documented for governance.
 
 ### 5.4 Populate the Data Warehouse
 
@@ -391,17 +391,17 @@ Data Warehousing and BI intersects with all other DMBOK knowledge areas:
 
 | Knowledge Area | Relationship |
 |---|---|
-| [[data-governance|Data Governance]] | Governs DW/BI priorities, standards, and data ownership |
-| [[data-architecture|Data Architecture]] | Defines the overall DW/BI technical and data architecture |
-| [[data-modeling|Data Modeling & Design]] | Provides dimensional models, star schemas, and enterprise data models for DW |
-| [[data-storage|Data Storage & Operations]] | Manages the physical storage, backup, and operations of DW environments |
-| [[data-security|Data Security]] | Controls access to sensitive data within BI reports and DW tables |
-| [[data-integration|Data Integration & Interoperability]] | Provides ETL/ELT processes that populate the warehouse |
-| [[document-management|Document & Content Management]] | Manages unstructured data that may complement DW structured data |
-| [[reference-and-master-data|Reference & Master Data]] | Supplies conformed dimensions and master data to the DW |
-| [[metadata-management|Metadata Management]] | Tracks lineage, definitions, and business context of DW data |
-| [[data-quality|Data Quality]] | Ensures data meets quality thresholds before and after loading into DW |
-| [[big-data|Big Data & Data Science]] | Complements traditional DW with predictive analytics, data lakes, and ELT processing |
+| **Data Governance** | Governs DW/BI priorities, standards, and data ownership |
+| **Data Architecture** | Defines the overall DW/BI technical and data architecture |
+| **Data Modeling & Design** | Provides dimensional models, star schemas, and enterprise data models for DW |
+| **Data Storage & Operations** | Manages the physical storage, backup, and operations of DW environments |
+| **Data Security** | Controls access to sensitive data within BI reports and DW tables |
+| **Data Integration & Interoperability** | Provides ETL/ELT processes that populate the warehouse |
+| **Document & Content Management** | Manages unstructured data that may complement DW structured data |
+| **Reference & Master Data** | Supplies conformed dimensions and master data to the DW |
+| **Metadata Management** | Tracks lineage, definitions, and business context of DW data |
+| **Data Quality** | Ensures data meets quality thresholds before and after loading into DW |
+| **Big Data & Data Science** | Complements traditional DW with predictive analytics, data lakes, and ELT processing |
 
 ---
 
@@ -418,9 +418,9 @@ The biggest difference between DW/BI and Big Data processing:
 | **Data Types** | Primarily structured | Structured, semi-structured, unstructured |
 | **Analysis Focus** | Descriptive (hindsight), some predictive | Predictive, prescriptive (foresight) |
 
-This difference has significant implications for how data is managed. The risk with Big Data is that much knowledge about data can be lost if ingestion and use processes are executed in an ad hoc way — hence the critical need for [[metadata-management|metadata management]].
+This difference has significant implications for how data is managed. The risk with Big Data is that much knowledge about data can be lost if ingestion and use processes are executed in an ad hoc way — hence the critical need for **metadata management**.
 
-See [[big-data|Big Data and Data Science]] for more on Data Lakes, Services-Based Architecture, and Machine Learning.
+See **Big Data and Data Science** for more on Data Lakes, Services-Based Architecture, and Machine Learning.
 
 ---
 

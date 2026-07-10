@@ -46,11 +46,11 @@ flowchart LR
 
 | Your Situation | Start Here |
 |---|---|
-| New to Agile, team of 5–9 | [[00_Agile_Methodology\|Scrum]] |
-| Operations/support/maintenance | [[03_Kanban_and_Flow\|Kanban]] |
-| Want highest code quality | [[00_Agile_Methodology\|XP + TDD]] |
+| New to Agile, team of 5–9 | [[00_Agile_Methodology|Scrum]] |
+| Operations/support/maintenance | [[03_Kanban_and_Flow|Kanban]] |
+| Want highest code quality | [[00_Agile_Methodology|XP + TDD]] |
 | Safety-critical, regulated | V-Model (see [[02_Methodologies_Overview]]) |
-| Transitioning from Waterfall | [[03_Kanban_and_Flow\|Kanban]] → [[00_Agile_Methodology\|Scrum]] |
+| Transitioning from Waterfall | [[03_Kanban_and_Flow|Kanban]] → [[00_Agile_Methodology|Scrum]] |
 | Large enterprise, multiple teams | SAFe (see [[02_Methodologies_Overview]]) |
 
 ## Source
@@ -62,7 +62,7 @@ flowchart LR
 
 ## Related
 
-- [[../Essential Document/Essential Documents - Overview|Essential Documents]] — Document checklists for all six BOKs
-- [[../Body of Knowledge/Body of Knowledge - Overview|Body of Knowledge]] — Full BOK vaults (SWEBOK, PMBOK, SEBOK, BABOK, CyBOK, DMBOK)
-- [[../Essential Document/SWEBOK Essential Documents|SWEBOK Essential Documents]] — Software engineering documents by phase
-- [[../Essential Document/PMBOK Essential Documents|PMBOK Essential Documents]] — Project management documents by phase
+- [[Essential Documents - Overview|Essential Documents]] — Document checklists for all six BOKs
+- [[Body of Knowledge - Overview|Body of Knowledge]] — Full BOK vaults (SWEBOK, PMBOK, SEBOK, BABOK, CyBOK, DMBOK)
+- [[SWEBOK Essential Documents|SWEBOK Essential Documents]] — Software engineering documents by phase
+- [[PMBOK Essential Documents|PMBOK Essential Documents]] — Project management documents by phase

@@ -162,7 +162,7 @@ The SEBoK is intended for a wide variety of users. Six key **personas** represen
 For undergraduate students and those new to SE:
 
 1. **Learn the basic terms**: system, engineered system, systems engineering, systems engineer.
-2. **Get an overview**: read [[#Systems Engineering Overview]], [[#Economic Value of Systems Engineering]], [[#Systems Engineering and Other Disciplines]], and [[#Systems Engineering: Historic and Future Challenges]].
+2. **Get an overview**: read **#Systems Engineering Overview**, **#Economic Value of Systems Engineering**, **#Systems Engineering and Other Disciplines**, and **#Systems Engineering: Historic and Future Challenges**.
 3. **Learn about systems**: Part 2 — What is a System?, Systems Science, Systems Thinking, Representing Systems with Models.
 4. **Learn the systems approach**: the eight articles in Systems Approach Applied to Engineered Systems.
 5. **Explore SE methods**: Part 3 — Life Cycle Models through Systems Engineering Standards.

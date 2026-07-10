@@ -25,5 +25,5 @@ This chapter serves as a navigation guide for the book. It establishes two readi
 
 - [[introduction-to-oop]]
 - [[introduction-to-design-patterns]]
-- [[design-principles]]
-- [[solid-principles]]
+- **design-principles**
+- **solid-principles**

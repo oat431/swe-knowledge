@@ -62,16 +62,16 @@ Each Knowledge Area file follows a consistent structure:
 
 1. **Purpose** — What this KA covers and why it matters
 2. **Core Content** — The essential concepts, principles, processes, and methods
-3. **Related Chapters** — [[wikilinks]] connecting to other SEBoK topics
+3. **Related Chapters** —  connecting to other SEBoK topics
 
-Start with [[00_Introduction_to_SEBoK]] for the big picture and audience guidance. Then explore by need — the [[wikilinks]] at the bottom of every file pull you naturally into related areas.
+Start with [[00_Introduction_to_SEBoK]] for the big picture and audience guidance. Then explore by need — the  at the bottom of every file pull you naturally into related areas.
 
 ## Reading Paths
 
 - **New to Systems Engineering:** [[00_Introduction_to_SEBoK|Introduction]] → [[01_Systems_Engineering_Fundamentals|Fundamentals]] → [[02_Nature_of_Systems|Nature of Systems]] → [[03_Systems_Science_and_Thinking|Systems Thinking]] → [[04_Systems_Models_and_Approach|Models & Approach]]
 - **Practicing SE:** [[05_Life_Cycles_and_Processes|Life Cycles]] → [[06_Technical_Management_Processes|Technical Management]] → [[07_System_Definition_and_Architecture|Architecture]] → [[08_System_Realization_and_Maintenance|Realization]]
 - **SE Leader/Manager:** [[14_Enabling_Businesses_and_Enterprises|Enabling Business]] → [[15_Enabling_Teams_and_Individuals|Enabling Teams]] → [[16_SE_and_Project_Management|SE & PM]] → [[09_Systems_Engineering_Standards|Standards]]
-- **Domain specialist:** [[10_Product_and_Service_Systems_Engineering|Product/Service SE]] → [[11_Enterprise_Systems_Engineering|Enterprise SE]] → [[12_Systems_of_Systems|SoS]] → [[13_Healthcare_Systems_Engineering|Healthcare]]
+- **Domain specialist:** **Service SE** → [[11_Enterprise_Systems_Engineering|Enterprise SE]] → [[12_Systems_of_Systems|SoS]] → [[13_Healthcare_Systems_Engineering|Healthcare]]
 - **Cross-discipline:** [[17_SE_and_Software_Engineering|SE & SWE]] → [[18_SE_and_Quality_Attributes|Quality]] → [[19_SE_and_Engineering_Disciplines|Engineering Disciplines]]
 
 ## Core Philosophy

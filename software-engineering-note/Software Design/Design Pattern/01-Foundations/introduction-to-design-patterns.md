@@ -92,8 +92,8 @@ Patterns differ by complexity, level of detail, and scale of applicability:
 ## Related
 
 - [[introduction-to-oop]]
-- [[design-principles]]
-- [[solid-principles]]
+- **design-principles**
+- **solid-principles**
 - [[factory-method]]
 - [[abstract-factory]]
 - [[Builder]]

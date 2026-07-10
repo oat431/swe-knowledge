@@ -345,7 +345,7 @@ The direction of the original dependency has been **inverted**: low-level classe
 
 ## Related
 
-- [[design-principles]]
+- **design-principles**
 - [[features-of-good-design]]
 - [[introduction-to-oop]]
 - [[Strategy]]

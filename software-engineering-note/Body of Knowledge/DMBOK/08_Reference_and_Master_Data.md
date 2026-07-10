@@ -44,10 +44,10 @@ Drivers for managing Reference Data are similar: consistent Reference Data reduc
 **Guiding principles:**
 - **Shared Data:** Reference and Master Data must be shareable across the organization.
 - **Ownership:** They belong to the organization — not to a particular application or department. Require high-level stewardship.
-- **Quality:** Require ongoing [[Data Quality]] monitoring and governance.
-- **Stewardship:** [[Data Stewards|Business Data Stewards]] are accountable for controlling and ensuring quality.
+- **Quality:** Require ongoing **Data Quality** monitoring and governance.
+- **Stewardship:** **Business Data Stewards** are accountable for controlling and ensuring quality.
 - **Controlled Change:** Changes to values should follow a defined, approved process. Identifier merges/splits must be reversible.
-- **Authority:** Values should be replicated only from the [[System of Record]].
+- **Authority:** Values should be replicated only from the **System of Record**.
 
 ---
 
@@ -79,7 +79,7 @@ Reference Data is any data used to characterize or classify other data, or to re
 Common storage techniques:
 - Code tables in relational databases (linked via foreign keys)
 - Reference Data Management systems (maintain entities, allowed/deprecated values, term mapping rules)
-- Object-attribute specific [[Metadata]] (permissible values for API/UI access)
+- Object-attribute specific **Metadata** (permissible values for API/UI access)
 
 #### 2.2.1 Reference Data Structure
 
@@ -87,9 +87,9 @@ Common storage techniques:
 
 **Cross-Reference Lists:** Translate between different code sets representing the same concept at different granularities or with different values. Example: USPS State Codes ↔ FIPS State Codes ↔ ISO State Codes. Multi-language lists are a special case.
 
-**Taxonomies:** Capture information at different levels of specificity in hierarchies. Enable content classification and multi-faceted navigation for [[Business Intelligence]]. Examples: UNSPSC (product classification), NAICS (industry classification). Stored with recursive parent-child relationships.
+**Taxonomies:** Capture information at different levels of specificity in hierarchies. Enable content classification and multi-faceted navigation for **Business Intelligence**. Examples: UNSPSC (product classification), NAICS (industry classification). Stored with recursive parent-child relationships.
 
-**Ontologies:** Used to manage website content and characterize data beyond organizational boundaries. Similar management requirements to Reference Data. Primary use case: content management (see [[Document and Content Management|Chapter 9]]).
+**Ontologies:** Used to manage website content and characterize data beyond organizational boundaries. Similar management requirements to Reference Data. Primary use case: content management (see **Chapter 9**).
 
 #### 2.2.2 Types of Reference Data
 
@@ -273,7 +273,7 @@ Data about individuals, organizations, and their roles in business relationships
 | Healthcare | Patients, providers |
 | Education | Students, faculty |
 
-[[CRM|Customer Relationship Management]] systems manage customer Master Data. The goal: complete and accurate information about each customer, with robust rules for identifying duplicates, resolving conflicts, and reconciling differences.
+**Customer Relationship Management** systems manage customer Master Data. The goal: complete and accurate information about each customer, with robust rules for identifying duplicates, resolving conflicts, and reconciling differences.
 
 **Unique challenges of Party Master Data:**
 - Complexity of roles and relationships
@@ -285,7 +285,7 @@ Data about individuals, organizations, and their roles in business relationships
 
 ##### Financial Master Data
 
-Data about business units, cost centers, profit centers, general ledger accounts, budgets, projections, and projects. [[ERP]] systems typically serve as the central hub (chart of accounts). Financial MDM solutions can simulate how structural changes affect the bottom line — modeling versions of financial structures to understand potential impacts before disseminating changes.
+Data about business units, cost centers, profit centers, general ledger accounts, budgets, projections, and projects. **ERP** systems typically serve as the central hub (chart of accounts). Financial MDM solutions can simulate how structural changes affect the bottom line — modeling versions of financial structures to understand potential impacts before disseminating changes.
 
 ##### Legal Master Data
 
@@ -344,7 +344,7 @@ Drivers include improved customer service, operational efficiency, and risk redu
 
 #### 3.1.2 Evaluate and Assess Data Sources
 
-Understand structure, content, and collection processes. Assess completeness and quality. Semantic issues will arise — [[Data Stewards]] must collaborate on reconciliation of attribute naming and enterprise-level definitions. Never assume data is high quality. Disparity between sources is the biggest challenge.
+Understand structure, content, and collection processes. Assess completeness and quality. Semantic issues will arise — **Data Stewards** must collaborate on reconciliation of attribute naming and enterprise-level definitions. Never assume data is high quality. Disparity between sources is the biggest challenge.
 
 For client/customer/vendor entities, standardized data can be purchased from vendors (Reference Directories).
 
@@ -409,9 +409,9 @@ Packaged solutions for product, account, and party domains, as well as packaged 
 
 ## 5. Implementation Guidelines
 
-MDM and RDM are forms of [[Data Integration and Interoperability|data integration]]. Implementation principles for data integration apply. Solutions require specialized knowledge and should be implemented incrementally through a roadmap prioritized by business needs.
+MDM and RDM are forms of **data integration**. Implementation principles for data integration apply. Solutions require specialized knowledge and should be implemented incrementally through a roadmap prioritized by business needs.
 
-> ⚠️ **MDM programs will fail without proper governance.** (See [[Data Management Maturity|Chapter 15]].)
+> ⚠️ **MDM programs will fail without proper governance.** (See **Chapter 15**.)
 
 ### 5.1 Adhere to Master Data Architecture
 
@@ -442,7 +442,7 @@ Reference Data is a shared resource — it cannot be changed arbitrarily. Key to
 
 ### 5.4 Data Sharing Agreements
 
-Require collaboration between multiple parties. Agreements must stipulate what data can be shared and under what conditions. [[SLA|SLAs]] and metrics should measure availability and quality of shared data. Standard communications approach keeps all affected parties informed.
+Require collaboration between multiple parties. Agreements must stipulate what data can be shared and under what conditions. **SLAs** and metrics should measure availability and quality of shared data. Standard communications approach keeps all affected parties informed.
 
 ---
 
@@ -502,11 +502,11 @@ Governance also brings compliance and legal stakeholders together with informati
 
 ## Related DMBOK Chapters
 
-- [[Data Governance|Chapter 2: Data Governance]] — stewardship and accountability
-- [[Data Architecture|Chapter 3: Data Architecture]] — architectural approaches
-- [[Data Modeling and Design|Chapter 4: Data Modeling and Design]] — canonical/logical models
-- [[Data Integration and Interoperability|Chapter 7: Data Integration and Interoperability]] — integration principles
-- [[Document and Content Management|Chapter 8: Document and Content Management]] — ontologies and taxonomies
-- [[Data Warehousing and Business Intelligence|Chapter 10: Data Warehousing and BI]] — data sharing hubs as systems of reference
-- [[Metadata Management|Chapter 11: Metadata Management]] — Reference Data metadata
-- [[Data Quality|Chapter 12: Data Quality]] — quality monitoring and metrics
+- **Chapter 2: Data Governance** — stewardship and accountability
+- **Chapter 3: Data Architecture** — architectural approaches
+- **Chapter 4: Data Modeling and Design** — canonical/logical models
+- **Chapter 7: Data Integration and Interoperability** — integration principles
+- **Chapter 8: Document and Content Management** — ontologies and taxonomies
+- **Chapter 10: Data Warehousing and BI** — data sharing hubs as systems of reference
+- **Chapter 11: Metadata Management** — Reference Data metadata
+- **Chapter 12: Data Quality** — quality monitoring and metrics

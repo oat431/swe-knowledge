@@ -9,11 +9,11 @@ created: 2026-07-09
 
 ## Overview
 
-**Data Governance (DG)** is the exercise of authority and control — planning, monitoring, and enforcement — over the management of data assets. It guides all other [[DMBOK/00_Overview|data management functions]] to ensure data is managed properly, according to policies and best practices.
+**Data Governance (DG)** is the exercise of authority and control — planning, monitoring, and enforcement — over the management of data assets. It guides all other [[00_Introduction_to_DMBOK|data management functions]] to ensure data is managed properly, according to policies and best practices.
 
 > *"The purpose of Data Governance is to ensure that data is managed properly, according to policies and best practices."* — DMBoK v2
 
-While [[DMBOK/00_Overview|data management]] overall drives toward getting value from data, DG focuses on *how decisions are made* about data and *how people and processes are expected to behave* in relation to data.
+While [[00_Introduction_to_DMBOK|data management]] overall drives toward getting value from data, DG focuses on *how decisions are made* about data and *how people and processes are expected to behave* in relation to data.
 
 ---
 
@@ -29,13 +29,13 @@ While [[DMBOK/00_Overview|data management]] overall drives toward getting value 
 
 ### Reducing Risk
 - **General risk management** — oversight of risks data poses to finances or reputation (including legal/regulatory)
-- **[[DMBOK/06_Data_Security|Data security]]** — protection of data assets through controls for availability, usability, integrity, consistency, auditability
+- **[[05_Data_Security|Data security]]** — protection of data assets through controls for availability, usability, integrity, consistency, auditability
 - **Privacy** — control of private/confidential/PII through policy and compliance monitoring
 
 ### Improving Processes
 - **Regulatory compliance** — efficient, consistent response to regulatory requirements
-- **[[DMBOK/12_Data_Quality|Data quality improvement]]** — making data more reliable to improve business performance
-- **[[DMBOK/11_Metadata_Management|Metadata Management]]** — establishing a business glossary; managing the full range of metadata
+- **[[11_Data_Quality|Data quality improvement]]** — making data more reliable to improve business performance
+- **[[10_Metadata_Management|Metadata Management]]** — establishing a business glossary; managing the full range of metadata
 - **SDLC efficiency** — addressing data management issues across the development lifecycle, including data-specific technical debt
 - **Vendor management** — control of contracts dealing with data (cloud storage, data purchase, data as a product, outsourcing)
 
@@ -225,7 +225,7 @@ Drafted by data management professionals or business policy staff under DG auspi
 DGC defines business cases, oversees project status on data management improvements. Coordinates with PMO and large enterprise-wide programs (ERP, CRM, MDM). Every project with a significant data component should capture data management requirements early in the SDLC.
 
 ### 9. Engage Change Management
-[[DMBOK/17_Change_Management|Organizational Change Management (OCM)]] is critical for behavioral changes required to sustain DG. The DG change management team is responsible for:
+**Organizational Change Management (OCM)** is critical for behavioral changes required to sustain DG. The DG change management team is responsible for:
 - Planning (stakeholder analysis, sponsorship, communications)
 - Training (DG program training plans)
 - Influencing systems development (adding DG steps to SDLC)
@@ -351,7 +351,7 @@ Data Governance has a particular oversight requirement to review plans and decis
 - Set standards and policies for data handling practices
 - Ensure fair handling of employees, protection from reporting possible breaches, and non-interference in personal lives
 
-See [[DMBOK/00_Overview|Data Handling Ethics]] for ethical principles including Respect for Persons, Beneficence, and Justice.
+See [[00_Introduction_to_DMBOK|Data Handling Ethics]] for ethical principles including Respect for Persons, Beneficence, and Justice.
 
 ---
 

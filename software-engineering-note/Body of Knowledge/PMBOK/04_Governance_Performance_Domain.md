@@ -20,10 +20,10 @@ The Governance performance domain provides the **framework, functions, and proce
 
 The fundamental objective of any project is to create positive value that justifies the investment. Governance provides oversight and corrections to steer the project toward its broader goals. The relationship between governance and the five Project Management Focus Areas is:
 
-- **Initiating.** A clearly articulated business case enables stakeholder alignment on priorities and constraints; implemented via the [[#2.1.6.1 Initiate Project or Phase]] process.
-- **Planning.** Every part of project planning should be performed with the project's target goals in mind; illustrated in the [[#2.1.6.2 Integrate and Align Project Plans]] process.
-- **Executing.** Shared understanding of broader goals informs technical decisions and motivates team members; seen in [[#2.1.6.4 Manage Project Execution]] and [[#2.1.6.6 Manage Project Knowledge]].
-- **Monitoring and Controlling.** The [[#2.1.6.7 Monitor and Control Project Performance]] process governs effective changes toward value creation as projects encounter change.
+- **Initiating.** A clearly articulated business case enables stakeholder alignment on priorities and constraints; implemented via the **#2.1.6.1 Initiate Project or Phase** process.
+- **Planning.** Every part of project planning should be performed with the project's target goals in mind; illustrated in the **#2.1.6.2 Integrate and Align Project Plans** process.
+- **Executing.** Shared understanding of broader goals informs technical decisions and motivates team members; seen in **#2.1.6.4 Manage Project Execution** and **#2.1.6.6 Manage Project Knowledge**.
+- **Monitoring and Controlling.** The **#2.1.6.7 Monitor and Control Project Performance** process governs effective changes toward value creation as projects encounter change.
 - **Closing.** Projects may achieve their desired impact, or experience early/late closure. In all cases, the overarching value proposition should be the primary factor in project decisions.
 
 Common governance scenarios include: project initiation, project replanning, project expansion/contraction, early termination for positive cause (value achieved), and early termination for negative cause (value no longer achievable). Related management disciplines include change management, benefits realization, value management, and revenue management.

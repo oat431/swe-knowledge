@@ -27,9 +27,9 @@ The SOIM domain implements the MAPE-K loop through three nested partial loops:
 
 | Loop | Component | Era | Function |
 |------|-----------|------|----------|
-| **Inner** | [[IDS]] / [[IDPS]] | Earliest | Monitoring & detection at sensor level |
-| **Middle** | [[SIEM]] platforms | Extended | Alert correlation, response planning, SOC integration |
-| **Outer** | [[SOAR]] platforms | Recent | Advanced analytics, automated response, CTI integration |
+| **Inner** | **IDS** / **IDPS** | Earliest | Monitoring & detection at sensor level |
+| **Middle** | **SIEM** platforms | Extended | Alert correlation, response planning, SOC integration |
+| **Outer** | **SOAR** platforms | Recent | Advanced analytics, automated response, CTI integration |
 
 ```mermaid
 flowchart LR
@@ -53,8 +53,8 @@ flowchart LR
 - **Events** are produced and consumed in real-time; **knowledge** is more stable over time.
 - **Monitor** → covered by IDSes (various data sources, §8.2).
 - **Analyze** → covered by IDSes (detection algorithms, §8.3).
-- **Plan** → realm of [[SIEM]] platforms (alert management, correlation).
-- **Execute** → historically manual, now increasingly automated via [[SOAR]].
+- **Plan** → realm of **SIEM** platforms (alert management, correlation).
+- **Execute** → historically manual, now increasingly automated via **SOAR**.
 - **IDS** → **IDPS** (Intrusion Detection and Prevention Systems) — modern sensors block in addition to detecting.
 
 ### 8.1.2 Architectural Principles
@@ -100,8 +100,8 @@ A typical SOIM deployment in an ICT infrastructure:
   3. **Reporting** → crucial for managed services; analyse SOC/SIEM functioning for improvement.
 
 **External intelligence inputs:**
-- **[[CTI]] (Cyber Threat Intelligence)** — commercial feeds, OSINT; fuzzy/reliability varies.
-- **[[ISAC]] / [[CERT]]** — trusted sectoral information sharing, often regulatory-governed.
+- ****CTI** (Cyber Threat Intelligence)** — commercial feeds, OSINT; fuzzy/reliability varies.
+- ****ISAC** / **CERT**** — trusted sectoral information sharing, often regulatory-governed.
 
 ---
 
@@ -163,7 +163,7 @@ The **de-facto standard** for intrusion detection data. Uses **libpcap** library
 | **Timestamps** | Not in packet headers; added by capture software relying on external clock. |
 | **MAC layer** | Requires specific config and network segment knowledge; needed for ARP poisoning detection. |
 | **Application layer** | TCP dynamics, application logic understanding needed; hard to acquire/reproduce. |
-| **Encryption (TLS)** | Widespread TLS makes payload analysis impossible. Solution: **HSM (Hardware Security Module)** — terminates TLS before the application server, enabling clear-text analysis by network IDPS and [[WAF]]. |
+| **Encryption (TLS)** | Widespread TLS makes payload analysis impossible. Solution: **HSM (Hardware Security Module)** — terminates TLS before the application server, enabling clear-text analysis by network IDPS and **WAF**. |
 
 **IoT/Industrial protocol considerations:**
 - **LoRa** — low bandwidth, limited packets/day; needs communication context for useful detection.
@@ -191,16 +191,16 @@ The **de-facto standard** for intrusion detection data. Uses **libpcap** library
 
 #### 8.2.3.1 Naming (DNS)
 
-[[DNS]] is one of the most crucial Internet services. Major security concerns:
+**DNS** is one of the most crucial Internet services. Major security concerns:
 
-- **Lack of authentication** → domain theft via fake DNS responses. Mitigation: [[DNSSEC]] provides authenticated responses.
+- **Lack of authentication** → domain theft via fake DNS responses. Mitigation: **DNSSEC** provides authenticated responses.
 - **DDoS amplification** → attacker spoofs victim's IP in DNS requests; DNS server sends unsolicited traffic to victim. DNSSEC unlikely to help.
 - **Botnet C&C detection** → DNS is attractive for C&C because firewalls almost always allow it. Defenders use **DNS domain blacklists**, though effectiveness is hard to evaluate.
 - **NTP** also a frequent DDoS amplification vector.
 
 #### 8.2.3.2 Routing (BGP)
 
-[[BGP]] incidents — mostly human error rather than malicious hijacks. Malicious BGP hijacks exist but the effort/reward ratio currently discourages widespread attacks.
+**BGP** incidents — mostly human error rather than malicious hijacks. Malicious BGP hijacks exist but the effort/reward ratio currently discourages widespread attacks.
 
 ---
 
@@ -233,10 +233,10 @@ Rich document formats (PDF, Flash, Office suites, HTML email) are **attack vecto
 
 **Modern endpoint protection:**
 - Kernel logs now focus on internal OS operations, close to hardware.
-- Commercial "endpoint protection" (antivirus/[[EDR]]) uses dedicated interceptors for specific activity.
+- Commercial "endpoint protection" (antivirus/**EDR**) uses dedicated interceptors for specific activity.
 - Solves the granularity problem: captures only relevant activity rather than everything.
 - Malware detection engines and endpoint protection tools are considered **sensors** in the SOIM context.
-- Related KA: [[Malware & Attack Technologies]] (CyBOK Ch6).
+- Related KA: **Malware & Attack Technologies** (CyBOK Ch6).
 
 ---
 
@@ -270,7 +270,7 @@ Many data sources (applications, networking equipment, OS) feed through syslog i
 - Alert generation, false positives/negatives
 - Real-time constraints and sensor-level analysis
 
-> See also: [[Intrusion Detection]], [[Anomaly Detection]]
+> See also: **Intrusion Detection**, **Anomaly Detection**
 
 ---
 
@@ -278,8 +278,8 @@ Many data sources (applications, networking equipment, OS) feed through syslog i
 
 *[This section covers SIEM platforms, alert correlation, and Security Operations Centers:]*
 
-- **[[SIEM]] (Security Information and Event Management)** — consolidates alerts from multiple sensors, provides correlation, prioritisation, and decision support.
-- **[[SOC]] (Security Operations Center)** — combines SIEM technology with human analyst teams for 24/7 monitoring.
+- ****SIEM** (Security Information and Event Management)** — consolidates alerts from multiple sensors, provides correlation, prioritisation, and decision support.
+- ****SOC** (Security Operations Center)** — combines SIEM technology with human analyst teams for 24/7 monitoring.
 - Alert triage workflows: ignore, automated response, escalate to Tier 2/3 analysts.
 - Second-generation SIEM platforms handle increasing data volumes and diverse formats.
 
@@ -289,10 +289,10 @@ Many data sources (applications, networking equipment, OS) feed through syslog i
 
 *[This section covers the execution/response phase:]*
 
-- **[[SOAR]] (Security Orchestration, Automation and Response)** — extends SIEM with automated response capabilities.
+- ****SOAR** (Security Orchestration, Automation and Response)** — extends SIEM with automated response capabilities.
 - Security orchestration → coordinating multiple security tools.
 - Automation → playbooks and runbooks for incident response.
-- Response actions: blocking IPs, quarantining hosts, triggering [[IR]] (Incident Response) processes.
+- Response actions: blocking IPs, quarantining hosts, triggering **IR** (Incident Response) processes.
 - Less mature than Monitor/Analyze phases; partial automation is the current state.
 
 ---
@@ -302,10 +302,10 @@ Many data sources (applications, networking equipment, OS) feed through syslog i
 *[This section covers the knowledge foundation:]*
 
 - **Configuration knowledge** — system/network topology, asset inventories.
-- **Detection signatures** — rules, patterns, IoCs ([[Indicators of Compromise]]).
-- **[[CTI]] (Cyber Threat Intelligence)** — external threat feeds, TTPs (Tactics, Techniques, Procedures), threat actor profiles.
-- **Vulnerability databases** ([[CVE]], [[NVD]]).
-- **[[MITRE ATT&CK]]** framework integration.
+- **Detection signatures** — rules, patterns, IoCs (**Indicators of Compromise**).
+- ****CTI** (Cyber Threat Intelligence)** — external threat feeds, TTPs (Tactics, Techniques, Procedures), threat actor profiles.
+- **Vulnerability databases** (**CVE**, **NVD**).
+- ****MITRE ATT&CK**** framework integration.
 
 ---
 
@@ -335,11 +335,11 @@ Many data sources (applications, networking equipment, OS) feed through syslog i
 
 ## Related Knowledge Areas
 
-- [[Risk Management & Governance]] (CyBOK Ch2) — risk context for SOIM decisions
-- [[Malware & Attack Technologies]] (CyBOK Ch6) — malware detection as sensor input
-- [[Adversarial Behaviours]] (CyBOK Ch7) — understanding attacker motivations and TTPs
-- [[Forensics]] (CyBOK Ch9) — post-incident investigation complements real-time SOIM
-- [[Network Security]] (CyBOK Ch18) — network-level protections feed into monitoring
+- **Risk Management & Governance** (CyBOK Ch2) — risk context for SOIM decisions
+- **Malware & Attack Technologies** (CyBOK Ch6) — malware detection as sensor input
+- **Adversarial Behaviours** (CyBOK Ch7) — understanding attacker motivations and TTPs
+- **Forensics** (CyBOK Ch9) — post-incident investigation complements real-time SOIM
+- **Network Security** (CyBOK Ch18) — network-level protections feed into monitoring
 
 ---
 

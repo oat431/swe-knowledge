@@ -211,4 +211,4 @@ class ApplicationConfigurator is
 - [[Prototype]]
 - [[Singleton]]
 - [[Bridge]]
-- [[solid-principles]]
+- **solid-principles**

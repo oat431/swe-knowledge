@@ -4,7 +4,7 @@ tags: [overview, body-of-knowledge, software-engineering, project-management, sy
 
 # Body of Knowledge — Overview
 
-> **Purpose:** A curated collection of five major Bodies of Knowledge covering the full spectrum of modern engineering, business, and security disciplines — Software Engineering, Project Management, Systems Engineering, Business Analysis, and Cyber Security. Each BOK is a comprehensive, chapter-organized vault with deep cross-linking via [[wikilinks]].
+> **Purpose:** A curated collection of five major Bodies of Knowledge covering the full spectrum of modern engineering, business, and security disciplines — Software Engineering, Project Management, Systems Engineering, Business Analysis, and Cyber Security. Each BOK is a comprehensive, chapter-organized vault with deep cross-linking via .
 
 ## The Five Bodies of Knowledge
 
@@ -31,7 +31,7 @@ The **Software Engineering Body of Knowledge** defines the generally accepted kn
 | 👤 **Professional Practice** | Professional Practice, Economics |
 | 🧮 **Foundations** | Computing, Mathematical, Engineering |
 
-**Vault:** `SWEBOK\` — 20 files | **Essential Docs:** [[../Essential Document/SWEBOK Essential Documents|Document checklist]]
+**Vault:** `SWEBOK\` — 20 files | **Essential Docs:** [[SWEBOK Essential Documents|Document checklist]]
 
 ## PMBOK® Guide v8 — Project Management
 
@@ -45,7 +45,7 @@ The **Project Management Body of Knowledge** is the ANSI-accredited global stand
 | **The Guide** | 7 Performance Domains (Governance, Scope, Schedule, Finance, Stakeholders, Resources, Risk), Tailoring, I/O Catalog, Tools Catalog |
 | **Appendices** | PMO, AI in Projects, Procurement, Evolution of PMBOK |
 
-**Vault:** `PMBOK\` — 19 files | **Essential Docs:** [[../Essential Document/PMBOK Essential Documents|Document checklist]]
+**Vault:** `PMBOK\` — 19 files | **Essential Docs:** [[PMBOK Essential Documents|Document checklist]]
 
 ## SEBoK v2 — Systems Engineering
 
@@ -64,17 +64,17 @@ The **Systems Engineering Body of Knowledge** is the definitive reference for th
 | **Part 7** | Implementation Examples (Case Studies) |
 | **Part 8** | Emerging Knowledge (AI, Digital Engineering, MBSE, SE Transformation) |
 
-**Vault:** `System Engineer BOK\\` — 23 files | **Essential Docs:** [[../Essential Document/SEBOK Essential Documents|Document checklist]]
+**Vault:** `System Engineer BOK\\` — 23 files | **Essential Docs:** [[SEBOK Essential Documents|Document checklist]]
 
 ## BABOK® Guide v3 — Business Analysis
 
-[[BABOK/BABOK v3 - Overview|→ Full Overview]]
+[[BABOK v3 - Overview|→ Full Overview]]
 
 The **Business Analysis Body of Knowledge** is the IIBA global standard defining the BA profession. 6 Knowledge Areas with 30 tasks, 50 techniques, and 5 perspectives. **Vault:** `BABOK\\` — 11 files
 
 ## CyBOK v1.1 — Cyber Security
 
-[[CyBOK/CyBOK v1 - Overview|→ Full Overview]]
+[[CyBOK v1 - Overview|→ Full Overview]]
 
 The **Cyber Security Body of Knowledge** is the NCSC reference mapping the foundations of cyber security. 21 Knowledge Areas:
 
@@ -143,8 +143,8 @@ They're complementary — a large initiative typically draws from all six.
 - **Business analyst:** BABOK → SWEBOK (understanding the solution) → PMBOK (project context)
 - **Security engineer:** CyBOK → SWEBOK (software security) → SEBoK (system-level security)
 - **Data engineer:** DMBOK → SWEBOK (data modeling) → SEBoK (system data architecture)
-- **Quick document checklist:** [[../Essential Document/Essential Documents - Overview|Essential Documents →]]
+- **Quick document checklist:** [[Essential Documents - Overview|Essential Documents →]]
 
 ## Related
 
-- [[../Essential Document/Essential Documents - Overview|Essential Documents]] — Document-only checklists extracted from these BOKs
+- [[Essential Documents - Overview|Essential Documents]] — Document-only checklists extracted from these BOKs

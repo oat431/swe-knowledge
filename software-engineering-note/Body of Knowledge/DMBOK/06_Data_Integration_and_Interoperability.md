@@ -37,7 +37,7 @@ Central to all areas in DII is the basic process of **Extract, Transform, and Lo
 
 #### ELT (Extract, Load, Transform)
 
-If the target system has more transformation capability than the source or intermediary, the order may be switched to **ELT**. This allows transformations to occur after loading to the target system. Common in Big Data environments where ELT loads the data lake. (See [[Data Warehousing and Business Intelligence]].)
+If the target system has more transformation capability than the source or intermediary, the order may be switched to **ELT**. This allows transformations to occur after loading to the target system. Common in Big Data environments where ELT loads the data lake. (See **Data Warehousing and Business Intelligence**.)
 
 #### Mapping
 
@@ -78,13 +78,13 @@ To provide better response time for globally distributed users, some application
 - Works best when source and target data sets are exact copies
 - Risks arise when data may be changed at multiple copy sites simultaneously
 
-See [[Data Storage and Operations]].
+See **Data Storage and Operations**.
 
 ### 1.4 Archiving
 
 Data used infrequently may be moved to an alternate data structure or storage solution that is less costly. ETL functions transport and possibly transform archive data. Monitor archive technology to ensure data remains accessible when technology changes.
 
-See [[Document and Content Management]].
+See **Document and Content Management**.
 
 ### 1.5 Enterprise Message Format / Canonical Model
 
@@ -94,7 +94,7 @@ A **canonical data model** is a common model used by an organization or data exc
 - Each system needs to transform only to and from the central canonical model
 - Greatly reduces complexity in environments with 100+ application systems
 
-See [[Data Modeling and Design]].
+See **Data Modeling and Design**.
 
 ### 1.6 Interaction Models
 
@@ -153,7 +153,7 @@ Tracks and analyzes streams of information about events, combining data from mul
 #### Data Federation and Virtualization
 **Data Federation** provides access to a combination of individual data stores, regardless of structure. **Data Virtualization** enables distributed databases and multiple heterogeneous data stores to be accessed and viewed as a single database.
 
-See [[Data Storage and Operations]].
+See **Data Storage and Operations**.
 
 #### Data-as-a-Service (DaaS)
 Data licensed from a vendor and provided on demand, rather than stored/maintained in the licensing organization's data center. Also used internally to provide enterprise data or data services via a catalog of services, service levels, and pricing.
@@ -193,7 +193,7 @@ Profile data to understand content and structure before integration design. Basi
 - Internal patterns and relationships (related fields, cardinality rules)
 - Relationships to other data sets
 
-See [[Metadata Management]].
+See **Metadata Management**.
 
 #### 2.1.5 Collect Business Rules
 Business rules are statements that define or constrain business processing. Categories:
@@ -217,7 +217,7 @@ Specify solutions at both enterprise and individual solution levels. A solution 
 #### 2.2.2 Model Data Hubs, Interfaces, Messages, and Data Services
 Model both persistent structures (MDM hubs, data warehouses/marts, ODS) and transient structures (interfaces, message layouts, canonical models).
 
-See [[Data Modeling and Design]].
+See **Data Modeling and Design**.
 
 #### 2.2.3 Map Data Sources to Targets
 Specify rules for transforming data from source to target. For each attribute mapped:
@@ -242,7 +242,7 @@ Develop services to access, transform, and deliver data using tools or vendor su
 #### 2.3.3 Develop Data Migration Approach
 Move data when applications are implemented, retired, or merged. Migration projects are frequently under-estimated. Profiling core operational data often reveals data that was migrated from previous generations and doesn't meet current standards.
 
-See [[Data Storage and Operations]].
+See **Data Storage and Operations**.
 
 #### 2.3.4 Develop a Publication Approach
 Systems that create/maintain critical data should push new/changed data to other systems (especially data hubs and ESBs) either at the time of change or on a periodic schedule. Define common message definitions (canonical model) and let consumers subscribe.
@@ -259,7 +259,7 @@ Document data structures of all systems involved (source, target, staging) inclu
 - Transformation rules between persistent data stores
 - SOA registry with controlled access to the catalog of available services
 
-See [[Metadata Management]].
+See **Metadata Management**.
 
 ### 2.4 Implement and Monitor
 Activate developed and tested data services. Establish parameters for potential processing problems with automated and human monitoring. Data interaction capabilities must meet the service level of the most demanding target application or data consumer.
@@ -348,16 +348,16 @@ Prior to developing interfaces, develop a **data sharing agreement** or **memora
 ## 7. Dependencies on Other Knowledge Areas
 
 DII depends on:
-- **[[Data Governance]]** — Governing transformation rules and message structures
-- **[[Data Architecture]]** — Designing solutions
-- **[[Data Security]]** — Ensuring solutions protect data security (persistent, virtual, or in motion)
-- **[[Metadata Management]]** — Tracking technical inventory, business meaning, transformation rules, operational history, and lineage
-- **[[Data Storage and Operations]]** — Managing physical instantiation of solutions
-- **[[Data Modeling and Design]]** — Designing data structures (persistent, virtual, and message structures)
+- ****Data Governance**** — Governing transformation rules and message structures
+- ****Data Architecture**** — Designing solutions
+- ****Data Security**** — Ensuring solutions protect data security (persistent, virtual, or in motion)
+- ****Metadata Management**** — Tracking technical inventory, business meaning, transformation rules, operational history, and lineage
+- ****Data Storage and Operations**** — Managing physical instantiation of solutions
+- ****Data Modeling and Design**** — Designing data structures (persistent, virtual, and message structures)
 
 DII is critical to:
-- **[[Data Warehousing and Business Intelligence]]** — Transforming and integrating data from source systems to consolidated hubs
-- **[[Reference and Master Data]]** — Integrating data from sources to hubs and from hubs to target systems
+- ****Data Warehousing and Business Intelligence**** — Transforming and integrating data from source systems to consolidated hubs
+- ****Reference and Master Data**** — Integrating data from sources to hubs and from hubs to target systems
 - **Big Data Management** — Integrating structured, unstructured, audio, video, and streaming data for mining and predictive models
 
 ---

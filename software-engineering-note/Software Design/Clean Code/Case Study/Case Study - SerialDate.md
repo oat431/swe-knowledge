@@ -33,7 +33,7 @@ The refactoring of SerialDate is a textbook demonstration of the Boy Scout Rule 
 
 - **185 executable statements** in SerialDate.
 - Original tests cover only **91 statements (~50%)**—the coverage map looks "like a patchwork quilt."
-- Several dead functions have zero coverage (e.g., `MonthCodeToQuarter` is never called—[[Code Smells Catalog#Dead Code]]).
+- Several dead functions have zero coverage (e.g., `MonthCodeToQuarter` is never called—**Code Smells Catalog#Dead Code**).
 
 **Key Insight:** *You cannot refactor what you cannot test.* The first step isn't cleaning code—it's writing tests that exercise the code.
 
@@ -116,7 +116,7 @@ public static String weekInMonthToString(int week) {
 }
 ```
 
-*Lesson:* Returning error strings is a silent failure mode. Callers can ignore strings; they cannot ignore exceptions. Fail loudly, fail early. See [[Clean Code Principles#Fail Fast]].
+*Lesson:* Returning error strings is a silent failure mode. Callers can ignore strings; they cannot ignore exceptions. Fail loudly, fail early. See **Clean Code Principles#Fail Fast**.
 
 ---
 
@@ -138,13 +138,13 @@ public abstract class DayDate implements Comparable, Serializable { ... }
 
 The word "serial" is a clue about *how* dates are stored, not *what* the class represents. DayDate says "I represent a day on the calendar"—nothing more, nothing less.
 
-**Principle:** [[Naming Conventions#Abstraction Level]] — Class names should reveal the abstraction, not the implementation.
+**Principle:** **Naming Conventions#Abstraction Level** — Class names should reveal the abstraction, not the implementation.
 
 ---
 
 ### 3.2 Replace Constant Inheritance with Enums
 
-**The Problem:** `MonthConstants` (Listing B-3) is a class full of `public static final int` constants. `SerialDate` *inherits* from it—an old Java trick to avoid typing `MonthConstants.January`. This is the **Constant Interface Antipattern** applied to inheritance. It violates [[Class Design & SOLID#Interface Segregation Principle]] by forcing every subclass to "be" a bag of month constants.
+**The Problem:** `MonthConstants` (Listing B-3) is a class full of `public static final int` constants. `SerialDate` *inherits* from it—an old Java trick to avoid typing `MonthConstants.January`. This is the **Constant Interface Antipattern** applied to inheritance. It violates **Class Design & SOLID#Interface Segregation Principle** by forcing every subclass to "be" a bag of month constants.
 
 ```java
 // Before — inheriting from a bag of constants
@@ -199,7 +199,7 @@ public int quarter() {
 }
 ```
 
-*Lesson:* Replace primitive obsession with types. When a function takes `int month`, it really wants a `Month`. Let the type system do the validation for you. See [[Code Smells Catalog#Primitive Obsession]].
+*Lesson:* Replace primitive obsession with types. When a function takes `int month`, it really wants a `Month`. Let the type system do the validation for you. See **Code Smells Catalog#Primitive Obsession**.
 
 ### 3.3 Same Pattern: Day Enum, WeekInMonth Enum, DateInterval Enum
 
@@ -230,11 +230,11 @@ public enum Day {
 
 **WeekdayRange enum** replaces `LAST, NEXT, NEAREST` integer flags.
 
-**Why enums matter for refactoring:** The names are now changeable with IDE rename refactoring. You can't accidentally pass `-1` where a month is expected. The compiler will not let you. [[Class Design & SOLID#Make Invalid States Unrepresentable]].
+**Why enums matter for refactoring:** The names are now changeable with IDE rename refactoring. You can't accidentally pass `-1` where a month is expected. The compiler will not let you. **Class Design & SOLID#Make Invalid States Unrepresentable**.
 
 ### 3.4 Eliminate Inheritance Knowledge: The DayDateFactory
 
-**The Problem:** `DayDate` (the abstract base class) contains constants like `MINIMUM_YEAR_SUPPORTED` and `MAXIMUM_YEAR_SUPPORTED` that are implementation-specific. Even worse, the code in `RelativeDayOfWeekRule` needs these values—but an abstract class shouldn't expose implementation details. This is a [[Code Smells Catalog#Inappropriate Intimacy]] between base and derived classes.
+**The Problem:** `DayDate` (the abstract base class) contains constants like `MINIMUM_YEAR_SUPPORTED` and `MAXIMUM_YEAR_SUPPORTED` that are implementation-specific. Even worse, the code in `RelativeDayOfWeekRule` needs these values—but an abstract class shouldn't expose implementation details. This is a **Code Smells Catalog#Inappropriate Intimacy** between base and derived classes.
 
 **The Pattern:** Abstract Factory + Singleton + Static Delegation
 
@@ -288,7 +288,7 @@ public class SpreadsheetDateFactory extends DayDateFactory {
 }
 ```
 
-**Also note the naming improvement:** `createInstance()` becomes `makeDate()`. "Make" is a common factory prefix that signals object creation. See [[Naming Conventions#Method Names]].
+**Also note the naming improvement:** `createInstance()` becomes `makeDate()`. "Make" is a common factory prefix that signals object creation. See **Naming Conventions#Method Names**.
 
 ### 3.5 Move Methods to Where They Belong
 
@@ -329,7 +329,7 @@ public enum Month {
 }
 ```
 
-*Lesson:* [[Code Smells Catalog#Feature Envy]] — when a method uses more data from another class than its own, move it. Flag arguments are also a smell; prefer separate methods with clear names.
+*Lesson:* **Code Smells Catalog#Feature Envy** — when a method uses more data from another class than its own, move it. Flag arguments are also a smell; prefer separate methods with clear names.
 
 ### 3.6 Push Down Implementation Details; Pull Up Generic Behavior
 
@@ -371,7 +371,7 @@ protected Day getDayOfWeekForOrdinalZero() {
 }
 ```
 
-*Lesson:* If a method has a *logical* dependency on the implementation, make it a *physical* dependency too. Extract the implementation-specific part into an abstract method. See [[Class Design & SOLID#Template Method Pattern]].
+*Lesson:* If a method has a *logical* dependency on the implementation, make it a *physical* dependency too. Extract the implementation-specific part into an abstract method. See **Class Design & SOLID#Template Method Pattern**.
 
 ### 3.7 Static → Instance Methods: The Mutability Contract
 
@@ -423,7 +423,7 @@ public DayDate plusMonths(int months) {
 
 **Explaining Temporary Variables** are a refactoring technique: give intermediate results names that explain *why* they exist, not just *what* they hold. `thisMonthAsOrdinal` tells you "we're flattening the month into a linear scale." The name is the documentation.
 
-See [[Function Design#Explaining Variables]].
+See **Function Design#Explaining Variables**.
 
 ### 3.8 Simplify Algorithms: Day-of-Week Methods
 
@@ -458,7 +458,7 @@ public DayDate getNearestDayOfWeek(Day targetDay) {
 }
 ```
 
-*Lesson:* Algorithm clarity matters more than cleverness. The three methods now share a consistent pattern (compute offset, adjust, return `plusDays`). Consistency reduces cognitive load. [[Clean Code Principles#Consistency]].
+*Lesson:* Algorithm clarity matters more than cleverness. The three methods now share a consistent pattern (compute offset, adjust, return `plusDays`). Consistency reduces cognitive load. **Clean Code Principles#Consistency**.
 
 ### 3.9 Replacing Switch Statements with Polymorphism
 
@@ -509,7 +509,7 @@ public boolean isInRange(DayDate d1, DayDate d2, DateInterval interval) {
 }
 ```
 
-*Lesson:* Every switch on a type code is a missed opportunity for polymorphism. Replace with polymorphic dispatch when the branches represent distinct behaviors of distinct types. [[Code Smells Catalog#Switch Statements]].
+*Lesson:* Every switch on a type code is a missed opportunity for polymorphism. Replace with polymorphic dispatch when the branches represent distinct behaviors of distinct types. **Code Smells Catalog#Switch Statements**.
 
 ### 3.10 Remove Dead Code, Redundant Comments, and Clutter
 
@@ -517,7 +517,7 @@ Throughout the refactoring, Uncle Bob deletes:
 
 | Deletion | Reason |
 |----------|--------|
-| Change history comments (lines 1–60) | Source control tracks this now — [[Code Smells Catalog#Obsolete Comment]] |
+| Change history comments (lines 1–60) | Source control tracks this now — **Code Smells Catalog#Obsolete Comment** |
 | Javadoc on `stringToWeekdayCode` | Became wrong after switching to enum; signature says enough |
 | `final` keywords on locals and params | Adds clutter, no real safety benefit when you have unit tests |
 | `AGGREGATE_DAYS_TO_END_OF_MONTH` table | Never used anywhere in JCommon |
@@ -541,7 +541,7 @@ Uncle Bob performed an elegant chain of refactorings:
 
 > *"Fool me once, shame on you. Fool me twice, shame on me!"*
 
-*Lesson:* Before investing in refactoring a method, check if anything actually calls it. Dead code isn't worth polishing—it's worth deleting. [[Code Smells Catalog#Dead Code]].
+*Lesson:* Before investing in refactoring a method, check if anything actually calls it. Dead code isn't worth polishing—it's worth deleting. **Code Smells Catalog#Dead Code**.
 
 ---
 

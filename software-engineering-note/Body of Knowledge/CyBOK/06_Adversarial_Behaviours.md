@@ -39,57 +39,57 @@ Adversaries are characterised based on their **motivation** (financial, politica
 
 Cyber-enabled crimes targeting individuals — harassment and violence amplified by the Internet.
 
-- **[[Cyberbullying]]**: Sending/posting harmful material or social aggression using digital technologies. Key differences from physical bullying:
+- ****Cyberbullying****: Sending/posting harmful material or social aggression using digital technologies. Key differences from physical bullying:
   - Non-stop exposure (anytime, anywhere)
   - **Online anonymity** creates a **disinhibition effect** — negative people become meaner
   - **Ephemeral content** (Snapchat, 4chan) reduces perceived consequences
 
-- **[[Doxing]]**: Publicly releasing a victim's private information online. Often part of larger harassment campaigns — releasing home addresses, workplace info. Used by polarised communities (e.g., 4chan's /pol/) for coordinated hate attacks ("raids"). Also employed by hacktivist groups like Anonymous.
+- ****Doxing****: Publicly releasing a victim's private information online. Often part of larger harassment campaigns — releasing home addresses, workplace info. Used by polarised communities (e.g., 4chan's /pol/) for coordinated hate attacks ("raids"). Also employed by hacktivist groups like Anonymous.
 
-- **[[Cyberstalking]]**: Using electronic means to stalk another person. Two types:
+- ****Cyberstalking****: Using electronic means to stalk another person. Two types:
   - Using online information to stalk in real life
   - Pure online stalking (passive monitoring or interactive harassment)
 
-- **[[Sextortion]]**: Luring victims to perform sexual acts on camera, recording them, then demanding payment not to release footage.
+- ****Sextortion****: Luring victims to perform sexual acts on camera, recording them, then demanding payment not to release footage.
 
-- **[[Child Predation]]**: Grooming victims online through chats, social networks, or gaming platforms. Offenders use deceptive tactics (pretending to be young people) or distribute child abuse material via peer-to-peer networks and anonymising technologies (Tor).
+- ****Child Predation****: Grooming victims online through chats, social networks, or gaming platforms. Offenders use deceptive tactics (pretending to be young people) or distribute child abuse material via peer-to-peer networks and anonymising technologies (Tor).
 
 ### 7.1.3 Cyber-Enabled Organised Criminals
 
 Career criminals operating through small organisations or structured criminal groups.
 
-- **[[Advance Fee Fraud]]** (419 scams): Victim promised a reward but must first pay a small fee. Archetypal examples:
+- ****Advance Fee Fraud**** (419 scams): Victim promised a reward but must first pay a small fee. Archetypal examples:
   - **Nigerian prince scams** — large money transfer requiring "legal fees"
   - **Consumer fraud** on classifieds sites (Craigslist) — desirable items at suspiciously low prices
   - **Romance fraud** — criminals pose as attractive individuals on dating sites, build emotional relationships over months, then request money. Victims can lose £50–£240,000; psychological damage often exceeds financial loss.
 
   Key element: building an **enticing narrative**. Fraudsters target specific demographics and impersonate personas (e.g., military members stationed abroad). Herley argues absurd narratives are intentional — filtering for the most gullible victims.
 
-- **[[Online Drug Dealing]]**: Cryptocurrencies + anonymising technologies (Tor) have enabled online drug marketplaces. Despite frequent takedowns, the business thrives. The "last mile" delivery model has changed, but major producers remain unchanged.
+- ****Online Drug Dealing****: Cryptocurrencies + anonymising technologies (Tor) have enabled online drug marketplaces. Despite frequent takedowns, the business thrives. The "last mile" delivery model has changed, but major producers remain unchanged.
 
 ### 7.1.4 Cyber-Dependent Organised Criminals
 
 Complex technical infrastructures (e.g., botnets) required. This complexity has prompted **compartmentalisation** in the criminal ecosystem — each actor specialises in one part of the operation.
 
-- **[[Email Spam]]**: Unsolicited bulk email. Evolved from small operations (1990s) selling goods to today's massive botnet-powered campaigns. Modern spam operations are supported by thriving ecosystems:
+- ****Email Spam****: Unsolicited bulk email. Evolved from small operations (1990s) selling goods to today's massive botnet-powered campaigns. Modern spam operations are supported by thriving ecosystems:
   - Renting botnets from infection specialists
   - Purchasing email address lists
   - Joining affiliate programmes (handling advertising, shipments, payments)
 
   Arms race: anti-spam techniques block most malicious emails. Criminals send tens of billions to stay profitable. Study of Storm botnet: 469M emails → 0.01% reached targets → 0.005% clicked links → only 28 purchases. Yet affiliate programmes made up to $85M over three years — key is **returning customers**.
 
-- **[[Phishing]]**: Emails pretending to be from genuine services, luring victims to fake login pages. Enabled by:
+- ****Phishing****: Emails pretending to be from genuine services, luring victims to fake login pages. Enabled by:
   - **Phishing kits** — software producing realistic-looking pages for popular services
   - **Compromised servers** for hosting (cheaper than purchasing servers)
   - Stolen credentials sold on black markets or exploited directly
 
-- **[[Financial Malware]]**: Stealing financial credentials via malware (Zeus, Torpig). Torpig used **botnet-as-a-service** — specialised criminals hosted infrastructure, others ran infection campaigns. Stolen credentials sold on underground forums; prices vary by record type (dumpz vs. fullz for credit cards).
+- ****Financial Malware****: Stealing financial credentials via malware (Zeus, Torpig). Torpig used **botnet-as-a-service** — specialised criminals hosted infrastructure, others ran infection campaigns. Stolen credentials sold on underground forums; prices vary by record type (dumpz vs. fullz for credit cards).
 
-- **[[Click Fraud]]**: Fraudulent clicks on web advertisements using botnets. ZeroAccess botnet caused ~$100,000/day in advertising losses.
+- ****Click Fraud****: Fraudulent clicks on web advertisements using botnets. ZeroAccess botnet caused ~$100,000/day in advertising losses.
 
-- **[[Cryptocurrency Mining Malware|Unauthorised Cryptocurrency Mining]]**: Using infected computers (or website visitors via cryptojacking scripts) to mine cryptocurrency. Monero mining operations could make up to $18M over two years.
+- ****Unauthorised Cryptocurrency Mining****: Using infected computers (or website visitors via cryptojacking scripts) to mine cryptocurrency. Monero mining operations could make up to $18M over two years.
 
-- **[[Ransomware]]**: Encrypts victim's files and demands ransom (typically cryptocurrency) for decryption. The "gold standard" for cybercriminals — solves monetisation problems:
+- ****Ransomware****: Encrypts victim's files and demands ransom (typically cryptocurrency) for decryption. The "gold standard" for cybercriminals — solves monetisation problems:
   - No need to convince victims to purchase goods (spam)
   - No need for victims to fall for fraud (phishing)
   - Victims are highly incentivised to pay
@@ -97,7 +97,7 @@ Complex technical infrastructures (e.g., botnets) required. This complexity has 
 
   Less sophisticated variants use password-protected bootloaders (easier to mitigate).
 
-- **[[Denial of Service|DDoS for Hire]]**: Leveraging botnet bandwidth or amplification attacks. "Stress tester" services advertised to hide illicit nature; used to knock competitors or gaming opponents offline.
+- ****DDoS for Hire****: Leveraging botnet bandwidth or amplification attacks. "Stress tester" services advertised to hide illicit nature; used to knock competitors or gaming opponents offline.
 
 ### 7.1.5 Hacktivists
 
@@ -105,9 +105,9 @@ Computer crime motivated by **political goals**. Debate exists whether these act
 
 - **Denial of Service**: Evolved from 1990s "netstrikes." Anonymous popularised using LOIC (Low Orbit Ion Cannon) — volunteers install the program to join collective DDoS attacks.
 
-- **[[Data Leaks]]**: Releasing stolen documents — WikiLeaks, Anonymous exposing KKK member identities.
+- ****Data Leaks****: Releasing stolen documents — WikiLeaks, Anonymous exposing KKK member identities.
 
-- **[[Web Defacement]]**: Exploiting vulnerabilities to replace website homepages with politically-charged content. Also used by early-career criminals to "prove their worth."
+- ****Web Defacement****: Exploiting vulnerabilities to replace website homepages with politically-charged content. Also used by early-career criminals to "prove their worth."
 
 ### 7.1.6 State Actors
 
@@ -117,11 +117,11 @@ Nation-state attacks differ from commodity cybercrime in two ways:
 
 Three categories:
 
-- **[[Sabotage]]**: Disrupting critical infrastructure electronically. Even air-gapped networks can be attacked. Stuxnet (2010) sabotaged Iranian nuclear centrifuges — textbook example of state-sponsored attack sophistication. Also caused by insider threats (Maroochy Water Services).
+- ****Sabotage****: Disrupting critical infrastructure electronically. Even air-gapped networks can be attacked. Stuxnet (2010) sabotaged Iranian nuclear centrifuges — textbook example of state-sponsored attack sophistication. Also caused by insider threats (Maroochy Water Services).
 
-- **[[Cyber Espionage|Espionage]]**: Spear-phishing targeting activists and companies, infecting sensitive systems. Security industry terms these long-standing sophisticated attacks **[[Advanced Persistent Threats]] (APTs)**.
+- ****Espionage****: Spear-phishing targeting activists and companies, infecting sensitive systems. Security industry terms these long-standing sophisticated attacks ****Advanced Persistent Threats** (APTs)**.
 
-- **[[Disinformation]]**: State-sponsored troll accounts polarising online discussion on social media. Evidence on backend operations (human vs. bot control) remains incomplete.
+- ****Disinformation****: State-sponsored troll accounts polarising online discussion on social media. Evidence on backend operations (human vs. bot control) remains incomplete.
 
 ---
 
@@ -147,15 +147,15 @@ Methods to deliver malware to victim computers:
 
 - **Malicious Attachments**: Oldest method — disguising malware as useful email attachments. Requires **social engineering** to convince users to click.
 
-- **[[Blackhat SEO|Blackhat Search Engine Optimisation]]**: Pushing malicious websites high in search rankings, especially around popular events. Achieved by compromising vulnerable websites and adding invisible links.
+- ****Blackhat Search Engine Optimisation****: Pushing malicious websites high in search rankings, especially around popular events. Achieved by compromising vulnerable websites and adding invisible links.
 
-- **[[Drive-by Download]] Attacks**: Automated exploitation — victim visits a malicious page containing JavaScript that exploits browser/plugin vulnerabilities, then downloads malware without user interaction. Often hosted on compromised legitimate websites or via **malvertising** (malicious advertisements).
+- ****Drive-by Download** Attacks**: Automated exploitation — victim visits a malicious page containing JavaScript that exploits browser/plugin vulnerabilities, then downloads malware without user interaction. Often hosted on compromised legitimate websites or via **malvertising** (malicious advertisements).
 
 - **Compromising Internet-Connected Devices**: Scanning for vulnerable IoT devices to build large botnets (e.g., Mirai botnet).
 
 ### 7.2.3 Infrastructure
 
-- **[[Bulletproof Hosting]] Providers**: ISPs known for not complying with takedown requests — located in countries with lax legislation or operators bribing local law enforcement. Charge premium prices. Not invincible — can be disconnected by peer ISPs.
+- ****Bulletproof Hosting** Providers**: ISPs known for not complying with takedown requests — located in countries with lax legislation or operators bribing local law enforcement. Charge premium prices. Not invincible — can be disconnected by peer ISPs.
 
 - **Command and Control (C&C) Infrastructure**:
   - Originally single servers (single point of failure, easy blacklisting)
@@ -166,21 +166,21 @@ Methods to deliver malware to victim computers:
 
 ### 7.2.4 Specialised Services
 
-- **[[Exploit Kits]]**: Web applications collecting large numbers of exploits, sold on the black market. Fingerprint victim's system, deliver appropriate exploit, instruct download of customer's malware. Solves the problem of exploit obsolescence (vendors patch vulnerabilities).
+- ****Exploit Kits****: Web applications collecting large numbers of exploits, sold on the black market. Fingerprint victim's system, deliver appropriate exploit, instruct download of customer's malware. Solves the problem of exploit obsolescence (vendors patch vulnerabilities).
 
-- **[[Pay-Per-Install]] (PPI) Services**: Specialist operators maintain stable botnets; other criminals pay to have their malware installed. Offer geographic granularity (bots in developed countries cost more). Provide resilience — if one malware is taken down, updated version can be installed on same machines. Symbiosis common (Pushdo/Cutwail, Mebroot/Torpig).
+- ****Pay-Per-Install** (PPI) Services**: Specialist operators maintain stable botnets; other criminals pay to have their malware installed. Offer geographic granularity (bots in developed countries cost more). Provide resilience — if one malware is taken down, updated version can be installed on same machines. Symbiosis common (Pushdo/Cutwail, Mebroot/Torpig).
 
 ### 7.2.5 Human Services
 
 Non-technical yet essential elements:
 
-- **[[CAPTCHA]] Solving Services**: Crowdsourced workers solve CAPTCHAs for automated account creation. Similar services for phone verification codes.
+- ****CAPTCHA** Solving Services**: Crowdsourced workers solve CAPTCHAs for automated account creation. Similar services for phone verification codes.
 
 - **Fake Accounts**: Sold on black markets; prices vary by platform. "Reputation boosting" services build contact networks (fake likes, coerced follows).
 
 - **Content Generation**: Workers recruited on underground forums to create spam emails, fake websites, social media content.
 
-- **[[Money Mules]]**: People recruited for money laundering — receive traceable payments, transfer via untraceable means (Western Union), keep percentage. **Reshipping mules** receive goods purchased with stolen credit cards and forward them abroad.
+- ****Money Mules****: People recruited for money laundering — receive traceable payments, transfer via untraceable means (Western Union), keep percentage. **Reshipping mules** receive goods purchased with stolen credit cards and forward them abroad.
 
 ### 7.2.6 Payment Methods
 
@@ -190,7 +190,7 @@ Non-technical yet essential elements:
 
 - **Western Union / MoneyGram / Pre-paid Vouchers**: More anonymous, less regulated.
 
-- **[[Cryptocurrencies]]**: Safest for criminals currently. Used for ransomware, drug markets. Still traceable — conversion to real money removes anonymity. Exchanges vulnerable to breaches and "exit scams."
+- ****Cryptocurrencies****: Safest for criminals currently. Used for ransomware, drug markets. Still traceable — conversion to real money removes anonymity. Exchanges vulnerable to breaches and "exit scams."
 
 ---
 
@@ -210,7 +210,7 @@ Once created, analysts annotate with feasibility, likelihood, or cost estimates,
 
 ### 7.3.2 Kill Chains
 
-Military concept adapted by Hutchins et al. as the **[[Cyber Kill Chain]]** — seven phases of a malicious operation against computer systems:
+Military concept adapted by Hutchins et al. as the ****Cyber Kill Chain**** — seven phases of a malicious operation against computer systems:
 
 | Phase | Description |
 |-------|-------------|
@@ -230,16 +230,16 @@ Gu et al.'s botnet infection model (five phases) became obsolete as botmasters c
 
 Applying established criminology theories to cybercrime. Challenge: the concept of "place" is less defined online.
 
-- **[[Routine Activity Theory]]**: Crime occurs when three elements converge: **motivated offender + suitable target + absence of capable guardian**. Example: botnet activity peaks during daytime when victims are online.
+- ****Routine Activity Theory****: Crime occurs when three elements converge: **motivated offender + suitable target + absence of capable guardian**. Example: botnet activity peaks during daytime when victims are online.
 
-- **[[Rational Choice Theory]]**: Offenders make rational choices. Useful for understanding how criminals react to mitigations and displacement effects.
+- ****Rational Choice Theory****: Offenders make rational choices. Useful for understanding how criminals react to mitigations and displacement effects.
 
-- **[[Pattern Theory of Crime]]**: Identifies crime-related places:
+- ****Pattern Theory of Crime****: Identifies crime-related places:
   - **Crime attractors** — appealing targets (corporations with sensitive data)
   - **Crime generators** — poorly configured easy-to-compromise systems
   - **Crime enablers** — services with poor hygiene
 
-- **[[Situational Crime Prevention]]**: Reducing crime by reducing opportunities. Five mitigation categories:
+- ****Situational Crime Prevention****: Reducing crime by reducing opportunities. Five mitigation categories:
   1. **Increase effort** — firewalls, automated updates
   2. **Increase risk** — reducing payment anonymity
   3. **Reduce rewards** — blocking suspicious payments
@@ -250,7 +250,7 @@ Applying established criminology theories to cybercrime. Challenge: the concept 
   - **Adaptation**: criminals actively circumvent mitigations (arms race) → effective mitigations are those criminals cannot easily react to or where adaptation has financial cost
   - **Displacement**: criminals move operations elsewhere → a mitigation that merely displaces without reducing effectiveness is not worth pursuing
 
-- **[[Crime Scripting]]**: Extrapolating the sequence of steps an adversary performs to commit an offence. Related to kill chains but developed independently in criminology.
+- ****Crime Scripting****: Extrapolating the sequence of steps an adversary performs to commit an offence. Related to kill chains but developed independently in criminology.
 
 ### 7.3.4 Modelling the Underground Economy as a Flow of Capital
 

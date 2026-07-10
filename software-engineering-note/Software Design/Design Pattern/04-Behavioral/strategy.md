@@ -209,4 +209,4 @@ class ExampleApplication is
 - [[Command]] — Both parameterize objects with actions. Command wraps operations for deferred execution and history; Strategy swaps algorithmic behavior at runtime.
 - [[template-method]] — Inheritance-based alternative: Template Method defines a skeleton at class level (static); Strategy uses composition at object level (runtime-swappable).
 - [[Decorator]] — Strategy changes the "guts" (core behavior); Decorator changes the "skin" (adds wrapping layers without altering the core interface).
-- [[solid-principles]] — Strategy directly embodies the Open/Closed Principle: new algorithms are added by creating classes, not by modifying the context.
+- **solid-principles** — Strategy directly embodies the Open/Closed Principle: new algorithms are added by creating classes, not by modifying the context.

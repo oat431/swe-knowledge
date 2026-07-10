@@ -243,4 +243,4 @@ class Application {
 - [[Prototype]]
 - [[Singleton]]
 - [[template-method]]
-- [[solid-principles]]
+- **solid-principles**

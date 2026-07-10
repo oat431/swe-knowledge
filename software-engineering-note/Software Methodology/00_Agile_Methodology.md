@@ -121,6 +121,6 @@ The fix: return to the basics. Agile without technical discipline is just chaos 
 
 ## Related
 
-- [[00_Lean_Methodology]] — Lean principles that underpin Agile
+- **00_Lean_Methodology** — Lean principles that underpin Agile
 - [[02_Methodologies_Overview]] — Comparison across all methodologies
 - [[03_Kanban_and_Flow]] — Kanban as an alternative/complement to Scrum

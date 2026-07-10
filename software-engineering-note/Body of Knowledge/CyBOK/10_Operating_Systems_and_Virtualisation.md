@@ -37,18 +37,18 @@ Attackers aim to violate the **CIA triad** at the OS/hypervisor level:
 | **Malicious Extensions** | Malicious driver/kernel module loaded as a Trojan into monolithic OS |
 | **Bootkits** | Compromise boot process (MBR, UEFI) to gain control before OS runs |
 | **Memory Errors (software)** | Spatial/temporal bugs → control-flow hijack or information leaks |
-| **Memory Corruption (hardware)** | [[Rowhammer]]: repeated DRAM row access flips neighbouring bits |
+| **Memory Corruption (hardware)** | **Rowhammer**: repeated DRAM row access flips neighbouring bits |
 | **Uninitialised Data Leakage** | OS returns uninitialised memory containing sensitive data to userspace |
 | **Concurrency Bugs / Double Fetch** | TOCTOU-like race where OS reads a userspace value twice, attacker changes it between reads |
 | **Side Channels (hardware)** | Cache, TLB timing; attackers detect victim's resource usage patterns |
-| **Side Channels (speculative)** | [[Spectre]]/[[Meltdown]]-class: speculative execution leaves micro-architectural traces (Foreshadow, RIDL) |
+| **Side Channels (speculative)** | **Spectre**/**Meltdown**-class: speculative execution leaves micro-architectural traces (Foreshadow, RIDL) |
 | **Side Channels (software)** | Memory deduplication, page caches — attacker measures write latency to infer shared content |
 | **Resource Depletion (DoS)** | Hogging CPU, memory, buses to starve other processes |
 | **Deadlocks/Hangs (DoS)** | Inducing deadlock states |
 
 ### Attack Surface
 
-The **attack surface** [[attack-surface]] is a useful metric — all points an attacker can reach. Includes:
+The **attack surface** **attack-surface** is a useful metric — all points an attacker can reach. Includes:
 - System calls + arguments + implementation code (local)
 - Network stack + device drivers (remote)
 - DMA-accessible memory (malicious peripherals)
@@ -57,7 +57,7 @@ A smaller attack surface = fewer opportunities. Formal verification can reduce v
 
 ### Extended Threat Model
 
-In cloud contexts, the attacker model extends to **malicious OS or hypervisor**. Defences aim to protect sensitive applications via hardware-protected **Trusted Execution Environments (TEEs)** / [[enclaves]].
+In cloud contexts, the attacker model extends to **malicious OS or hypervisor**. Defences aim to protect sensitive applications via hardware-protected **Trusted Execution Environments (TEEs)** / **enclaves**.
 
 ---
 
@@ -79,7 +79,7 @@ The OS provides **isolation** of security domains and **mediation** of all opera
 
 #### Monolithic OS Concerns
 - Device drivers and kernel modules (~third-party, buggy) run in the single kernel security domain
-- Some OS functionality now runs in userspace: [[FUSE]] (Filesystem in Userspace), UMDF (User Mode Driver Framework)
+- Some OS functionality now runs in userspace: **FUSE** (Filesystem in Userspace), UMDF (User Mode Driver Framework)
 - Modern trend: bypass kernel for high-speed networking
 
 #### Microkernel Multi-Server
@@ -102,8 +102,8 @@ The famous "flame war" about monolithic vs microkernel design. Tanenbaum (MINIX)
 | Approach | Description | Security |
 |---|---|---|
 | **Hypervisor + Full VMs** | Each VM has own OS; hypervisor provides illusion of dedicated hardware | Strong isolation; each OS needs separate maintenance |
-| **OS-Level Virtualisation (Containers)** | Multiple environments share one kernel ([[Docker]], FreeBSD Jails, `chroot`) | Lightweight; shared kernel = larger attack surface than VMs; enables microservices |
-| **Integrated** | [[QubesOS]]: each user process in its own VM | Extreme isolation |
+| **OS-Level Virtualisation (Containers)** | Multiple environments share one kernel (**Docker**, FreeBSD Jails, `chroot`) | Lightweight; shared kernel = larger attack surface than VMs; enables microservices |
+| **Integrated** | **QubesOS**: each user process in its own VM | Extreme isolation |
 
 **Containers vs VMs**: VMs partition resources more strictly (only hypervisor shared). Containers share the kernel — but their lightweight nature enables microservices with well-defined interfaces, reducing overall attack surface. Trade-off is active debate.
 
@@ -140,14 +140,14 @@ Additional principles: **Minimise the TCB** (Trusted Computing Base), **Principl
 
 ### Security Models
 
-#### Bell-LaPadula (Confidentiality) [[Bell-LaPadula]]
+#### Bell-LaPadula (Confidentiality) **Bell-LaPadula**
 - **"Read down, write up"**
 - Multi-Level Security for classified data (unclassified < secret < top secret)
 - Subjects at level *L* can read ≤ *L*, write ≥ *L*
 - Declassification only by trusted subjects
 - Mandatory Access Control (MAC)
 
-#### Biba (Integrity) [[Biba-model]]
+#### Biba (Integrity) **Biba-model**
 - **"Read up, write down"** — exact opposite of Bell-LaPadula
 - Prevents low-integrity subjects from corrupting high-integrity data
 
@@ -165,12 +165,12 @@ DAC and MAC can be combined: users have freedom within MAC policy constraints.
 
 ## 11.4 Primitives for Isolation and Mediation
 
-### Historical Foundation: Multics (1960s) [[Multics]]
+### Historical Foundation: Multics (1960s) **Multics**
 - First OS designed from the ground up for security
 - Introduced: protection rings, virtual memory, segment-based protection, hierarchical FS with DAC + MAC
 - MAC directly implemented Bell-LaPadula
 - Became too complex → Ken Thompson & Dennis Ritchie created **UNIX** ("Unics" as a pun on Multics)
-- TCSEC (Orange Book) [[TCSEC]] was strongly based on Multics
+- TCSEC (Orange Book) **TCSEC** was strongly based on Multics
 
 ### Core Primitives
 
@@ -183,18 +183,18 @@ DAC and MAC can be combined: users have freedom within MAC policy constraints.
 - Traditionally: username + password
 - Modern: multi-factor (something you know + own + are)
 - OS maintains: user ID, group membership, process ownership, binary ownership
-- **Credentials stored securely** — hardware-backed: [[TPM]] for disk encryption keys, separate VM for credential store
+- **Credentials stored securely** — hardware-backed: **TPM** for disk encryption keys, separate VM for credential store
 
-### 11.4.2 Access Control Lists (ACLs) [[access-control-list]]
+### 11.4.2 Access Control Lists (ACLs) **access-control-list**
 - Concept introduced in Multics filesystem (Daley & Neumann)
 - Table mapping users × objects → access rights
 - **UNIX implementation**: owner + group + other, with r/w/x bits
 - Modern Linux/Windows: extended ACLs (multiple users/groups)
 - **Reference monitors**: Linux pluggable framework; vet every security-sensitive operation
-- **[[SELinux]]** (Security-Enhanced Linux): MAC via contexts — (username, role, domain); supports RBAC; derived from FLASK architecture; can enforce Bell-LaPadula, Biba, or custom policies
+- ****SELinux**** (Security-Enhanced Linux): MAC via contexts — (username, role, domain); supports RBAC; derived from FLASK architecture; can enforce Bell-LaPadula, Biba, or custom policies
 - **Distributed Information Flow Control**: research OS like Asbestos, HiStar, Flume — any process can create security labels and classify/declassify data
 
-### 11.4.3 Capabilities [[capability-based-security]]
+### 11.4.3 Capabilities **capability-based-security**
 - Alternative to ACLs: "token, ticket, or key that gives the possessor permission to access an entity" (Henry Levy, 1966 — Dennis & Van Horn)
 - Possession of capability = proof of access rights
 - **Principle of Intentional Use** (Neumann): avoid confused deputy problem — a security domain unintentionally exercising a privilege on behalf of another
@@ -247,11 +247,11 @@ mindmap
 
 ## See Also
 
-- [[CyBOK-Cryptography]] — Ch10, Cryptographic primitives underpinning OS security
-- [[CyBOK-Software-Security]] — Ch? Memory errors, exploitation techniques
-- [[CyBOK-Authentication-Authorisation-Accountability]] — Ch14, Detailed auth coverage
-- [[TCSEC-Orange-Book]] — Trusted Computer System Evaluation Criteria
-- [[SELinux]] — Security-Enhanced Linux
-- [[QubesOS]] — Security-oriented OS using VM isolation
-- [[Spectre-Meltdown]] — Speculative execution attacks
-- [[Rowhammer]] — DRAM disturbance attack
+- **CyBOK-Cryptography** — Ch10, Cryptographic primitives underpinning OS security
+- **CyBOK-Software-Security** — Ch? Memory errors, exploitation techniques
+- **CyBOK-Authentication-Authorisation-Accountability** — Ch14, Detailed auth coverage
+- **TCSEC-Orange-Book** — Trusted Computer System Evaluation Criteria
+- **SELinux** — Security-Enhanced Linux
+- **QubesOS** — Security-oriented OS using VM isolation
+- **Spectre-Meltdown** — Speculative execution attacks
+- **Rowhammer** — DRAM disturbance attack

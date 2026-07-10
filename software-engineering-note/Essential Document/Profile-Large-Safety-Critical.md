@@ -44,12 +44,12 @@ Use this profile when your project meets **any** of the following criteria:
 
 > This profile draws from six Bodies of Knowledge:
 >
-> - [[BABOK v3]] — Business Analysis Body of Knowledge
-> - [[PMBOK 7]] — Project Management Body of Knowledge
-> - [[SWEBOK v4]] — Software Engineering Body of Knowledge
-> - [[SEBOK v2]] — Systems Engineering Body of Knowledge (INCOSE)
-> - [[DMBOK 2]] — Data Management Body of Knowledge
-> - [[CyBOK 1.1]] — Cyber Security Body of Knowledge
+> - [[BABOK v3 - Overview]] — Business Analysis Body of Knowledge
+> - [[PMBOK v8 - Overview]] — Project Management Body of Knowledge
+> - [[SWEBOK v4 - Overview]] — Software Engineering Body of Knowledge
+> - [[SEBoK v2 - Overview]] — Systems Engineering Body of Knowledge (INCOSE)
+> - [[DMBoK v2 - Overview]] — Data Management Body of Knowledge
+> - [[CyBOK v1 - Overview]] — Cyber Security Body of Knowledge
 > - [[UX UI Essential Documents]] — UX/UI Design Documents
 >
 > Plus applicable regulatory standards: DO-178C, IEC 62304, ISO 26262, EN 50128, IEC 61508, IEEE 730, IEEE 828, IEEE 1012, IEEE 1044, ISO/IEC/IEEE 12207, ISO/IEC/IEEE 15288, ISO/IEC/IEEE 29119, ISO/IEC/IEEE 29148, ISO/IEC/IEEE 42010.

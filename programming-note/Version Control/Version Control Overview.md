@@ -27,10 +27,10 @@ Version control tracks every change to your codebase, enabling safe collaboratio
 | Situation | Tool / Approach | Notes |
 |-----------|-----------------|-------|
 | Any code project | Git | Industry standard, use it by default |
-| Large binary files (assets, models) | [[03 Git Advanced#Submodules vs Monorepo\|Git LFS]] | Don't store binaries directly in Git |
-| Monorepo with many teams | Trunk-Based + feature flags | See [[02 Git Workflows#Trunk-Based Development]] |
-| Release-heavy product (libraries, SDKs) | GitFlow | See [[02 Git Workflows#GitFlow]] |
-| Small team, continuous deployment | GitHub Flow | See [[02 Git Workflows#GitHub Flow]] |
+| Large binary files (assets, models) | **Git LFS** | Don't store binaries directly in Git |
+| Monorepo with many teams | Trunk-Based + feature flags | See **02 Git Workflows#Trunk-Based Development** |
+| Release-heavy product (libraries, SDKs) | GitFlow | See **02 Git Workflows#GitFlow** |
+| Small team, continuous deployment | GitHub Flow | See **02 Git Workflows#GitHub Flow** |
 | Solo hobby project | Git + GitHub/GitLab | Still use version control — always |
 
 ---
@@ -51,7 +51,7 @@ Version control tracks every change to your codebase, enabling safe collaboratio
 ✅ **Good:** Initialize Git on day one, even for personal scripts.
 
 ❌ **Bad:** Committing directly to `main` with vague messages like `update`.
-✅ **Good:** Use feature branches and descriptive commits ([Conventional Commits](https://www.conventionalcommits.org/)). See [[02 Git Workflows#Commit Message Conventions]].
+✅ **Good:** Use feature branches and descriptive commits ([Conventional Commits](https://www.conventionalcommits.org/)). See **02 Git Workflows#Commit Message Conventions**.
 
 ---
 

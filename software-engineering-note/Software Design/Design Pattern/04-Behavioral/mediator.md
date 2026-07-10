@@ -214,4 +214,4 @@ Use Mediator when:
 - [[Observer]]
 - [[Command]]
 - [[chain-of-responsibility]]
-- [[solid-principles]]
+- **solid-principles**

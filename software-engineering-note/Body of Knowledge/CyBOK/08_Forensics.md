@@ -17,7 +17,7 @@ date: 2021-07
 
 The importance of digital evidence has grown in lockstep with the fast societal adoption of information technology, which has resulted in the continuous accumulation of data at an exponential rate. Simultaneously, there has been rapid growth in network connectivity and the complexity of IT systems, leading to more complex behaviour that may need investigation.
 
-This Knowledge Area provides a technical overview of digital forensic techniques and capabilities, and puts them into a broader perspective with regard to other related areas in the cybersecurity domain. Discussion on legal aspects is limited to general principles and best practices, as specifics vary across jurisdictions. The [[Law & Regulation]] Knowledge Area (Chapter 3) discusses specific concerns related to jurisdiction and the legal process to obtain, process, and present digital evidence.
+This Knowledge Area provides a technical overview of digital forensic techniques and capabilities, and puts them into a broader perspective with regard to other related areas in the cybersecurity domain. Discussion on legal aspects is limited to general principles and best practices, as specifics vary across jurisdictions. The **Law & Regulation** Knowledge Area (Chapter 3) discusses specific concerns related to jurisdiction and the legal process to obtain, process, and present digital evidence.
 
 ---
 
@@ -442,9 +442,9 @@ Some of the most important emerging questions in digital forensics:
 
 ## See Also
 
-- [[SOIM|Security Operations & Incident Management]] (Chapter 8) — complementary operational perspective
-- [[Law & Regulation]] (Chapter 3) — legal processes for digital evidence
-- [[Malware & Attack Technologies]] (Chapter 6) — malware detection and analysis
-- [[Network Security]] — network-based evidence collection and analysis
-- [[Software Security]] (Chapter 10) — relates to application-level forensic analysis
-- [[Hardware Security]] — physical acquisition and hardware-level forensics
+- **Security Operations & Incident Management** (Chapter 8) — complementary operational perspective
+- **Law & Regulation** (Chapter 3) — legal processes for digital evidence
+- **Malware & Attack Technologies** (Chapter 6) — malware detection and analysis
+- **Network Security** — network-based evidence collection and analysis
+- **Software Security** (Chapter 10) — relates to application-level forensic analysis
+- **Hardware Security** — physical acquisition and hardware-level forensics

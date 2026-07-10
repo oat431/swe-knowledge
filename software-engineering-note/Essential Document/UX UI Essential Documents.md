@@ -4,7 +4,7 @@ tags: [essential-documents, ux, ui, design, deliverables, ux-ui-design]
 
 # UX/UI — Essential Documents by Phase
 
-> **Source:** [[00_User_Research_Methods|HCI / UX/UI Design — Industry Standards]]
+> **Source:** **UI Design — Industry Standards**
 > Organized by design phases: Research → UX Design → UI Design → Testing → Handoff
 >
 > ⚠️ **This is a document-only extract.** For the full design process, see:
@@ -115,7 +115,7 @@ tags: [essential-documents, ux, ui, design, deliverables, ux-ui-design]
 
 ## Related
 
-- [[00_User_Research_Methods]] — Research methods
-- [[01_UX_Design]] — UX design methods
-- [[02_UI_Design]] — UI design methods
-- [[03_Usability_Testing_and_AB_Testing]] — Testing methods
+- [[30 User Research Methods]] — Research methods
+- [[31 UX Design Process]] — UX design methods
+- [[32 UI Design Process]] — UI design methods
+- [[33 Usability Testing and AB Testing]] — Testing methods

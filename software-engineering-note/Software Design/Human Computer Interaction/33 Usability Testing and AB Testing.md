@@ -188,7 +188,7 @@ Test → Analyze → Hypothesize → Design → Implement → Test
 
 ## Related
 
-- [[00_User_Research_Methods]] — Research methods that complement testing
-- [[01_UX_Design]] — Testing wireframes and prototypes
-- [[02_UI_Design]] — Testing visual designs
-- [[04_UX_UI_Essential_Documents]] — Testing deliverables checklist
+- [[30 User Research Methods]] — Research methods that complement testing
+- [[31 UX Design Process]] — Testing wireframes and prototypes
+- [[32 UI Design Process]] — Testing visual designs
+- [[UX UI Essential Documents]] — Testing deliverables checklist

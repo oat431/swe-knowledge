@@ -48,8 +48,8 @@ Each checklist follows the same format:
 - **Engineering a system (hardware + software + people)?** → Start with [[SEBOK Essential Documents]]
 - **Securing an organization or system?** → Start with [[CyBOK Essential Documents]]
 - **Managing data as an asset?** → Start with [[DMBOK Essential Documents]]
-- **Choosing a development methodology?** → See [[../Software Methodology/Software Methodology - Overview|Software Methodology Overview]]
-- **Designing user interfaces?** → See [[../Software Design/Human Computer Interaction/Human Computer Interaction Overview|Human Computer Interaction]]
+- **Choosing a development methodology?** → See [[Software Methodology - Overview|Software Methodology Overview]]
+- **Designing user interfaces?** → See [[Human Computer Interaction Overview|Human Computer Interaction]]
 - **All six?** → Each addresses a different dimension. A comprehensive software project typically needs BABOK + SWEBOK + PMBOK. Add CyBOK for security programs and DMBOK for data-intensive systems.
 
 ## Project-Type Profiles

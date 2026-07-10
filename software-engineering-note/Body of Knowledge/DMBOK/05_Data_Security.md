@@ -42,7 +42,7 @@ Risk reduction and business growth are the primary drivers of data security acti
 
 #### 1.1.1 Risk Reduction
 
-As data regulations increase, so do compliance requirements. Security organizations manage IT compliance, policies, practices, [[data-classification|data classifications]], and access authorization rules. The overall process includes:
+As data regulations increase, so do compliance requirements. Security organizations manage IT compliance, policies, practices, **data classifications**, and access authorization rules. The overall process includes:
 
 1. **Identify and classify sensitive data assets** — personal, medical, financial, and more.
 2. **Locate sensitive data throughout the enterprise** — a significant amount of sensitive data in a single location poses high risk.
@@ -57,17 +57,17 @@ Trusted e-commerce drives profit and growth. Robust information security enables
 
 #### 1.1.3 Security as an Asset
 
-Security-related [[metadata]] becomes a strategic asset. When sensitive data is correctly identified, organizations build trust with customers and partners. Standard security metadata can optimize data protection and guide business usage, lowering costs and reducing risks.
+Security-related **metadata** becomes a strategic asset. When sensitive data is correctly identified, organizations build trust with customers and partners. Standard security metadata can optimize data protection and guide business usage, lowering costs and reducing risks.
 
 ### 1.2 Goals and Principles
 
 **Guiding Principles:**
 
-- **Collaboration:** Data Security is a collaborative effort involving IT security administrators, [[data-stewardship|data stewards]], internal/external audit teams, and the legal department.
+- **Collaboration:** Data Security is a collaborative effort involving IT security administrators, **data stewards**, internal/external audit teams, and the legal department.
 - **Enterprise approach:** Standards and policies must be applied consistently across the entire organization.
 - **Proactive management:** Success depends on being proactive, engaging all stakeholders, managing change, and overcoming organizational bottlenecks.
 - **Clear accountability:** Roles and responsibilities must be clearly defined, including the 'chain of custody' for data.
-- **Metadata-driven:** Security classification for data elements is an essential part of [[data-definition|data definitions]].
+- **Metadata-driven:** Security classification for data elements is an essential part of **data definitions**.
 - **Reduce risk by reducing exposure:** Minimize sensitive/confidential data proliferation, especially to non-production environments.
 
 ---
@@ -108,7 +108,7 @@ Depending on enterprise size, the Information Security function may be a dedicat
 
 ### 2.5 Data Integrity
 
-In security, **data integrity** is the state of being whole — protected from improper alteration, deletion, or addition. For example, [[Sarbanes-Oxley|SOX]] regulations focus on protecting financial information integrity by defining rules for how financial information can be created and edited.
+In security, **data integrity** is the state of being whole — protected from improper alteration, deletion, or addition. For example, **SOX** regulations focus on protecting financial information integrity by defining rules for how financial information can be created and edited.
 
 ### 2.6 Encryption
 
@@ -206,7 +206,7 @@ Two concepts drive security restrictions:
 ### 3.1 Identify Data Security Requirements
 
 #### 3.1.1 Business Requirements
-Analyze business rules and processes to identify security touch points. Data-to-process and data-to-role relationship matrices ([[CRUD]]) map needs and guide definition of role groups, parameters, and permissions.
+Analyze business rules and processes to identify security touch points. Data-to-process and data-to-role relationship matrices (**CRUD**) map needs and guide definition of role groups, parameters, and permissions.
 
 #### 3.1.2 Regulatory Requirements
 Create a central inventory of all relevant data regulations and affected data subject areas. Key regulations include:
@@ -231,7 +231,7 @@ Policies describe behaviors in the best interests of the organization. They must
 Each organization should create or adopt a classification scheme meeting business requirements. Any classification should be clear and easy to apply.
 
 #### 3.3.2 Define Data Regulatory Categories
-Group similar regulations into categories/families. Most data regulations seek to do the same thing. The results should be a formally approved set of security classifications and regulatory categories, captured as [[metadata]] in a central repository.
+Group similar regulations into categories/families. Most data regulations seek to do the same thing. The results should be a formally approved set of security classifications and regulatory categories, captured as **metadata** in a central repository.
 
 #### 3.3.3 Define Security Roles
 Role-based access control is preferred for larger organizations. Two approaches:
@@ -287,7 +287,7 @@ Create data-to-process and data-to-role relationship (CRUD — Create, Read, Upd
 Install security patches as quickly as possible on all machines. A malicious hacker only needs root access to one machine to attack the network.
 
 ### 5.3 Data Security Attributes in Metadata
-A [[metadata]] repository is essential for integrity and consistent use of the [[enterprise-data-model]]. Security and regulatory classifications should be documented in the Metadata repository and tagged to the data. These classifications inform development teams about risks related to sensitive data.
+A **metadata** repository is essential for integrity and consistent use of the **enterprise data model**. Security and regulatory classifications should be documented in the Metadata repository and tagged to the data. These classifications inform development teams about risks related to sensitive data.
 
 ### 5.4 Metrics
 
@@ -328,7 +328,7 @@ Every project involving data must address system and data security. Identify det
 Reduce the amount of data needing decryption by encrypting search criteria using the same method used for the data, seeking matches on encrypted values, then decrypting only the result set.
 
 ### 5.7 Document Sanitization
-The process of cleaning [[metadata]] (e.g., tracked change history, comments) from documents before sharing. Mitigates risk of sharing confidential information embedded in documents, especially important for contracts and negotiations.
+The process of cleaning **metadata** (e.g., tracked change history, comments) from documents before sharing. Mitigates risk of sharing confidential information embedded in documents, especially important for contracts and negotiations.
 
 ---
 
@@ -347,7 +347,7 @@ Organizations can increase compliance through:
 Organizations must develop policies enabling goals while protecting sensitive information. Data Stewards are responsible for data categorization; Information Security teams assist with compliance enforcement. Well-planned security measures should make secure access *easier* for stakeholders, not harder.
 
 ### 6.3 Visibility into User Data Entitlement
-Each user data entitlement must be reviewed during system implementation to determine if it contains regulated information. Classification of regulatory sensitivity should be a standard part of the [[data-definition|data definition]] process.
+Each user data entitlement must be reviewed during system implementation to determine if it contains regulated information. Classification of regulatory sensitivity should be a standard part of the **data definition** process.
 
 ### 6.4 Data Security in an Outsourced World
 
@@ -365,11 +365,11 @@ Outsourcing increases the number of people sharing accountability across organiz
 - Constant communication
 - Awareness of legal differences across jurisdictions
 
-**Key tools:** [[CRUD]] matrices mapping data responsibilities across business processes, applications, roles, and organizations. **RACI matrices** (Responsible, Accountable, Consulted, Informed) clarify roles and responsibilities, including data security obligations.
+**Key tools:** **CRUD** matrices mapping data responsibilities across business processes, applications, roles, and organizations. **RACI matrices** (Responsible, Accountable, Consulted, Informed) clarify roles and responsibilities, including data security obligations.
 
 ### 6.5 Data Security in Cloud Environments
 
-Cloud computing extends data boundaries beyond the organization. Data security policies must account for data distribution across different service models ([[SaaS]], [[PaaS]], [[IaaS]], [[DaaS]]).
+Cloud computing extends data boundaries beyond the organization. Data security policies must account for data distribution across different service models (**SaaS**, **PaaS**, **IaaS**, **DaaS**).
 
 **Key considerations:**
 - Shared responsibility: defining chain of custody, ownership, and custodianship rights
@@ -382,7 +382,7 @@ Cloud computing extends data boundaries beyond the organization. Data security p
 ## 7. Data Security Governance
 
 ### 7.1 Data Security and Enterprise Architecture
-[[Enterprise Architecture]] defines information assets, their interrelationships, and business rules. **Data Security Architecture** describes how security is implemented to satisfy business rules and external regulations. Architecture influences:
+**Enterprise Architecture** defines information assets, their interrelationships, and business rules. **Data Security Architecture** describes how security is implemented to satisfy business rules and external regulations. Architecture influences:
 
 - Tools used to manage data security
 - Data encryption standards and mechanisms
@@ -417,13 +417,13 @@ Security architecture is particularly important for integration between internal
 
 ## See Also
 
-- [[DMBOK/04_Data_Modeling_and_Design|Data Modeling and Design]]
-- [[DMBOK/03_Data_Architecture|Data Architecture]]
-- [[DMBOK/02_Data_Governance|Data Governance]]
-- [[DMBOK/06_Data_Storage_and_Operations|Data Storage and Operations]]
-- [[DMBOK/08_Data_Integration_and_Interoperability|Data Integration and Interoperability]]
-- [[DMBOK/11_Metadata_Management|Metadata Management]]
-- [[data-classification]]
-- [[privacy]]
-- [[regulatory-compliance]]
-- [[risk-management]]
+- [[03_Data_Modeling_and_Design|Data Modeling and Design]]
+- [[02_Data_Architecture|Data Architecture]]
+- [[01_Data_Governance|Data Governance]]
+- [[04_Data_Storage_and_Operations|Data Storage and Operations]]
+- [[06_Data_Integration_and_Interoperability|Data Integration and Interoperability]]
+- [[10_Metadata_Management|Metadata Management]]
+- **data classification**
+- **privacy**
+- **regulatory compliance**
+- **risk management**

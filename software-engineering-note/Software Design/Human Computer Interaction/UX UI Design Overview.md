@@ -38,11 +38,11 @@ flowchart LR
 
 | File | Focus |
 |---|---|
-| [[00_User_Research_Methods]] | Interviews, surveys, personas, journey maps, contextual inquiry |
-| [[01_UX_Design]] | Information architecture, wireframes, prototypes, user flows |
-| [[02_UI_Design]] | Visual design, mockups, design systems, component libraries |
-| [[03_Usability_Testing_and_AB_Testing]] | Usability tests, A/B testing, analytics, iteration |
-| [[04_UX_UI_Essential_Documents]] | Document checklist by phase (similar to BOK essential docs) |
+| [[30 User Research Methods]] | Interviews, surveys, personas, journey maps, contextual inquiry |
+| [[31 UX Design Process]] | Information architecture, wireframes, prototypes, user flows |
+| [[32 UI Design Process]] | Visual design, mockups, design systems, component libraries |
+| [[33 Usability Testing and AB Testing]] | Usability tests, A/B testing, analytics, iteration |
+| [[UX UI Essential Documents]] | Document checklist by phase (similar to BOK essential docs) |
 
 ## How UX/UI Relates to Other Disciplines
 
@@ -58,10 +58,10 @@ flowchart LR
 
 | Your Situation | Start Here |
 |---|---|
-| New project, need to understand users | [[00_User_Research_Methods\|User Research]] |
-| Have requirements, need to design the interface | [[01_UX_Design\|UX Design]] |
-| Have wireframes, need visual polish | [[02_UI_Design\|UI Design]] |
-| Have a design, need to validate it | [[03_Usability_Testing_and_AB_Testing\|Testing]] |
+| New project, need to understand users | **User Research** |
+| Have requirements, need to design the interface | **UX Design** |
+| Have wireframes, need visual polish | **UI Design** |
+| Have a design, need to validate it | **Testing** |
 | Need a complete design process | Start with Research → UX → UI → Test |
 
 ## UX vs UI — What's the Difference?
@@ -79,6 +79,6 @@ flowchart LR
 
 ## Related
 
-- [[../Software Methodology/Software Methodology - Overview|Software Methodology]] — Agile/Lean processes that include design
-- [[../Essential Document/Essential Documents - Overview|Essential Documents]] — Document checklists for all disciplines
-- [[../Body of Knowledge/Body of Knowledge - Overview|Body of Knowledge]] — Full BOK vaults
+- [[Software Methodology - Overview|Software Methodology]] — Agile/Lean processes that include design
+- [[Essential Documents - Overview|Essential Documents]] — Document checklists for all disciplines
+- [[Body of Knowledge - Overview|Body of Knowledge]] — Full BOK vaults

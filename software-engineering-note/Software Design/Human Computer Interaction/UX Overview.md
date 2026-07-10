@@ -61,7 +61,7 @@ UX is the layer beneath the visuals — how users feel, behave, and decide. Thes
 | 30 | User Research | [[30 User Research Methods]] — Interviews, surveys, personas, journey maps |
 | 31 | UX Design Process | [[31 UX Design Process]] — Wireframes, prototypes, information architecture |
 | 33 | Usability Testing | [[33 Usability Testing and AB Testing]] — Usability tests, A/B testing, analytics |
-| 34 | Essential Documents | [[../Essential Document/UX UI Essential Documents|UX UI Essential Documents]] — Deliverables checklist by phase |
+| 34 | Essential Documents | [[UX UI Essential Documents|UX UI Essential Documents]] — Deliverables checklist by phase |
 
 ---
 

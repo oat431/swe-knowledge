@@ -12,13 +12,13 @@ date: 2021-07
 
 The **Software Security Knowledge Area** provides a structured overview of known categories of software implementation vulnerabilities, and of techniques that can be used to **prevent** or **detect** such vulnerabilities, or to **mitigate** their exploitation. It covers secure coding practices, vulnerability taxonomies, static analysis, dynamic analysis, and runtime mitigations.
 
-> **Scope distinction:** This KA focuses on *implementation vulnerabilities* and their countermeasures. Broader process-level concerns are covered in the [[Secure Software Lifecycle]] (Ch17). Platform-specific issues are covered in [[Web & Mobile Security]] (Ch16).
+> **Scope distinction:** This KA focuses on *implementation vulnerabilities* and their countermeasures. Broader process-level concerns are covered in the **Secure Software Lifecycle** (Ch17). Platform-specific issues are covered in **Web & Mobile Security** (Ch16).
 
 ---
 
 ## 1. Categories of Vulnerabilities
 
-Implementation vulnerabilities (security bugs) are often caused by insecure programming practices and can be understood as **violations of a partial specification** of a software sub-component. The [[CVE]] (Common Vulnerabilities and Exposures) lists close to 100,000 such vulnerabilities. The [[CWE]] (Common Weakness Enumeration) provides a community-developed classification.
+Implementation vulnerabilities (security bugs) are often caused by insecure programming practices and can be understood as **violations of a partial specification** of a software sub-component. The **CVE** (Common Vulnerabilities and Exposures) lists close to 100,000 such vulnerabilities. The **CWE** (Common Weakness Enumeration) provides a community-developed classification.
 
 ### 1.1 Memory Management Vulnerabilities
 
@@ -26,28 +26,28 @@ Occur primarily in **memory-unsafe languages** (C, C++), where the language spec
 
 | Type | Description | Example |
 |------|-------------|---------|
-| **Spatial** | Indexing out-of-bounds into a valid memory range | [[Buffer Overflow]] — accessing array beyond its bounds |
-| **Temporal** | Accessing memory that was deallocated | [[Use-After-Free]] / dereferencing a dangling pointer |
+| **Spatial** | Indexing out-of-bounds into a valid memory range | **Buffer Overflow** — accessing array beyond its bounds |
+| **Temporal** | Accessing memory that was deallocated | **Use-After-Free** / dereferencing a dangling pointer |
 
 **Attack techniques exploiting memory vulnerabilities:**
 - **Code corruption attack** — modify compiled program code to attacker-specified code
 - **Control-flow hijack** — modify a code pointer (return address, function pointer) to execute attacker code:
   - *Direct code injection* — inject and execute attacker-provided code
-  - *Code-reuse attack* — reuse existing code (e.g., [[Return-to-Libc]], [[Return-Oriented Programming (ROP)]])
+  - *Code-reuse attack* — reuse existing code (e.g., **Return-to-Libc**, **Return-Oriented Programming (ROP)**)
 - **Data-only attack** — modify data variables to escalate privileges
-- **Information leak** — read memory to exfiltrate secrets or runtime metadata (e.g., addresses for bypassing [[ASLR]])
+- **Information leak** — read memory to exfiltrate secrets or runtime metadata (e.g., addresses for bypassing **ASLR**)
 
 ### 1.2 Structured Output Generation Vulnerabilities
 
 When programs construct structured output (SQL, HTML, shell commands) via **string manipulation** with user-supplied input, the intended structure is left implicit, enabling injection.
 
-Also known as **[[Injection Vulnerabilities]]**:
+Also known as ****Injection Vulnerabilities****:
 
 | Vulnerability | Structured Output | Context |
 |--------------|-------------------|---------|
-| **[[SQL Injection]]** | SQL code | Server-side web apps interacting with databases |
-| **[[Command Injection]]** | Shell commands | OS command execution |
-| **[[Cross-Site Scripting (XSS)]]** | JavaScript/HTML | Client-side browser execution |
+| ****SQL Injection**** | SQL code | Server-side web apps interacting with databases |
+| ****Command Injection**** | Shell commands | OS command execution |
+| ****Cross-Site Scripting (XSS)**** | JavaScript/HTML | Client-side browser execution |
 | XPath injection, HTML injection, CSS injection, PostScript injection | Various | Various contexts |
 
 **Key challenges:**
@@ -58,7 +58,7 @@ Also known as **[[Injection Vulnerabilities]]**:
 
 Occur when a program shares resources with concurrent actors and the program's assumptions about the environment are violated. This introduces **non-determinism** — behaviour depends on timing/interleaving.
 
-- **[[TOCTOU]] (Time-of-Check, Time-of-Use)** — the attacker invalidates a condition between when it is checked and when it is used
+- ****TOCTOU** (Time-of-Check, Time-of-Use)** — the attacker invalidates a condition between when it is checked and when it is used
 - Common in: filesystem access by privileged programs, multi-threaded web servers, session state in web applications
 
 ### 1.4 API Vulnerabilities
@@ -67,7 +67,7 @@ Violations of **API contracts** — using an API incorrectly can put the system 
 
 - Particularly dangerous with **security-sensitive APIs**: cryptographic libraries, access control mechanisms
 - Empirical evidence shows developers frequently misuse cryptographic APIs, introducing vulnerabilities
-- **Secure implementation** of crypto APIs is covered in [[Applied Cryptography]] (Ch10)
+- **Secure implementation** of crypto APIs is covered in **Applied Cryptography** (Ch10)
 
 ### 1.5 Side-Channel Vulnerabilities
 
@@ -75,14 +75,14 @@ A **side-channel** is an information channel that communicates about program exe
 
 - **Software-based side-channels** — observable from software running on the same hardware (e.g., cache timing)
 - Most commonly a **confidentiality threat** (leaking information), but can also be an integrity threat (**fault injection**)
-- Example: [[Rowhammer]] — crafted memory access patterns flip bits in DRAM
+- Example: **Rowhammer** — crafted memory access patterns flip bits in DRAM
 - Closely related: **covert channels** — attacker controls both the leaking program and the observing program
 
 ### 1.6 Discussion
 
 - **Information flow security**: Some security objectives cannot be expressed as properties of single executions. e.g., requiring that confidential inputs never influence public outputs across *any* pair of executions.
 - **Side-channel uniqueness**: Side-channel vulnerabilities are not violations of source-code-level specifications — they use effects the source code abstracts from.
-- **Vulnerabilities as faults**: Implementation vulnerabilities can be understood through the lens of [[Dependable Computing]] fault taxonomies.
+- **Vulnerabilities as faults**: Implementation vulnerabilities can be understood through the lens of **Dependable Computing** fault taxonomies.
 
 ---
 
@@ -107,13 +107,13 @@ A language is **memory-safe** if its definition implies no untrapped memory mana
 #### Structured Output Generation
 
 - **Regular expression types** — XML documents as first-class values with typed structure guarantees
-- **[[LINQ]]** (Language Integrated Query) — query expressions as language syntax rather than string concatenation
+- ****LINQ**** (Language Integrated Query) — query expressions as language syntax rather than string concatenation
 
 #### Race Conditions
 
 - **Ownership types** prevent data races: while multiple aliases can exist, only one *owns* the resource
 - **Rust's ownership regime**: (1) aliases only if they go out of scope before owner, (2) aliases read-only, (3) owner writes only when no aliases exist
-- Research languages extend this to support [[Information Flow Security]]
+- Research languages extend this to support **Information Flow Security**
 
 ### 2.2 API Design
 
@@ -122,7 +122,7 @@ APIs should be designed to **avoid untrapped execution errors** — make it hard
 | Approach | Examples |
 |----------|----------|
 | Safer memory APIs for C/C++ | Fat pointers, smart pointers, garbage collection libraries |
-| Safer structured output APIs | [[Prepared Statements]], ORM frameworks, LINQ libraries |
+| Safer structured output APIs | **Prepared Statements**, ORM frameworks, LINQ libraries |
 | Safer cryptography APIs | Simplification, secure defaults, better documentation, auxiliary task support |
 | **Design by contract** | Explicit pre-conditions/post-conditions, defensive programming |
 | **Object-capability systems** | Language + API supporting least privilege — each code part only has needed privileges |
@@ -169,7 +169,7 @@ Detects violations of rules that formalise secure programming heuristics.
 
 - Builds a semantic model: abstract syntax tree, data flow, control flow
 - Flags simple syntactic violations (e.g., "don't use this dangerous function")
-- **[[Taint Analysis]]** (Flow Analysis): tracks whether untrusted **sources** influence values at risky **sinks**
+- ****Taint Analysis**** (Flow Analysis): tracks whether untrusted **sources** influence values at risky **sinks**
   - Can also detect confidential data flowing to public outputs
   - **Sanitisation**: tainted values processed by validator functions have taint removed
   - Challenge: manual configuration of sources, sinks, and sanitisers
@@ -180,7 +180,7 @@ Aims to be sound for well-defined vulnerability categories (defined as specifica
 
 | Technique | Description |
 |-----------|-------------|
-| **Program Verification** | Uses program logics (e.g., [[Separation Logic]]) with programmer-provided invariants, pre/post-conditions. Typically interactive, not automatic. |
+| **Program Verification** | Uses program logics (e.g., **Separation Logic**) with programmer-provided invariants, pre/post-conditions. Typically interactive, not automatic. |
 | **Abstract Interpretation** | Maps concrete values to finite abstract domains; automatic for imperative programs without dynamic allocation/recursion. |
 | **Model Checking** | Exhaustive state exploration; limited by state explosion. **Bounded model checking** limits loop iterations — unsound but finds many vulnerabilities. |
 
@@ -199,12 +199,12 @@ Executes the program and monitors for vulnerability indicators. Two aspects: **h
 
 #### 3.2.2 Generating Relevant Executions — Fuzzing
 
-**[[Fuzz Testing]]** generates inputs to discover new vulnerabilities:
+****Fuzz Testing**** generates inputs to discover new vulnerabilities:
 
 | Type | Approach |
 |------|----------|
 | **Black-box fuzzing** | Depends only on I/O behaviour: random, model-based (grammar-driven), or mutation-based |
-| **White-box fuzzing** | Analyses internal program structure. Key technique: **[[Dynamic Symbolic Execution]]** — builds path conditions (logical constraints) and solves for inputs that drive new execution paths |
+| **White-box fuzzing** | Analyses internal program structure. Key technique: ****Dynamic Symbolic Execution**** — builds path conditions (logical constraints) and solves for inputs that drive new execution paths |
 
 ---
 
@@ -218,9 +218,9 @@ Detect attacks by monitoring execution for property violations:
 
 | Technique | What It Detects |
 |-----------|----------------|
-| **[[Stack Canaries]]** | Corruption of activation records; detects return address modification |
+| ****Stack Canaries**** | Corruption of activation records; detects return address modification |
 | **NX (No-eXecute) / DEP** | Direct code injection — prevents execution from data memory |
-| **[[Control-Flow Integrity (CFI)]]** | Code-reuse attacks — monitors whether runtime control flow complies with expected CFG |
+| ****Control-Flow Integrity (CFI)**** | Code-reuse attacks — monitors whether runtime control flow complies with expected CFG |
 
 On detection, the typical response is **program termination** (protects against further damage but impacts availability).
 
@@ -228,7 +228,7 @@ On detection, the typical response is **program termination** (protects against 
 
 Exploitation often relies on implementation details (memory layout, database specifics). **Diversifying** these details raises the bar:
 
-- **[[ASLR]] (Address Space Layout Randomization)** — randomises code, stack, and heap layout
+- ****ASLR** (Address Space Layout Randomization)** — randomises code, stack, and heap layout
   - Coarse-grained: random base addresses for segments
   - Fine-grained: random addresses for individual functions, stack frames, or heap objects
 - Compilation-time / installation-time diversification
@@ -238,14 +238,14 @@ Exploitation often relies on implementation details (memory layout, database spe
 
 Constrain what exploited software can do:
 
-- **[[Sandboxing]]** — execute software in a controlled environment with resource access policies (VM, OS process, jails, Java sandbox)
+- ****Sandboxing**** — execute software in a controlled environment with resource access policies (VM, OS process, jails, Java sandbox)
 - **Compartimentalisation** — divide software into compartments, each with bounded privileges (e.g., browser rendering engine denied filesystem access)
 - **Object-capability systems** — each application-level object is its own protection domain (finest granularity)
 - For side-channels: **isolation** on separate cores or hardware
 
 ### 4.4 Software Integrity Checking
 
-Under the umbrella of **[[Trusted Computing]]**: measure system state and enforce access only from trusted states.
+Under the umbrella of ****Trusted Computing****: measure system state and enforce access only from trusted states.
 
 - **Trusted Boot** — accumulates measurements for each executed program; modifications (e.g., from attacks) produce different measurements
 - Secret keys accessible only from a state with a specified measurement
@@ -270,4 +270,4 @@ Under the umbrella of **[[Trusted Computing]]**: measure system state and enforc
 - **24 Deadly Sins of Software Security** (Howard, LeBlanc & Viega) — updated catalogue of vulnerabilities
 - **The Art of Software Security Assessment** (Dowd, McDonald & Schuh) — detailed vulnerability class descriptions
 - **Surreptitious Software** (Collberg & Nagra) — obfuscation, watermarking, tamperproofing
-- **[[OWASP]] Resources** — practice-oriented guides, tools, and awareness instruments for application security
+- ****OWASP** Resources** — practice-oriented guides, tools, and awareness instruments for application security

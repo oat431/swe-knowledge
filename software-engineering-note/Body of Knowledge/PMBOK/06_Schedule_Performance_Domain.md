@@ -13,7 +13,7 @@ The **Schedule Performance Domain** provides a plan that represents *how and whe
 ### Project Schedule
 An output of a schedule model that presents **linked activities** with planned dates, durations, milestones, and resources. Includes:
 - Start and finish dates
-- **Duration** — total number of work periods (hours, days, weeks) required to complete an activity or [[WBS]] component
+- **Duration** — total number of work periods (hours, days, weeks) required to complete an activity or **WBS** component
 - **Milestones** — significant points or events in the project
 - Resources (see also [[09_Resources_Performance_Domain]])
 
@@ -82,7 +82,7 @@ Determine the number of work periods needed to complete each activity with estim
 *Estimation techniques include:*
 - Expert judgment, Delphi technique
 - Analogous estimating, parametric estimating
-- Program Evaluation and Review Technique ([[PERT]])
+- Program Evaluation and Review Technique (**PERT**)
 - Bottom-up estimating
 - Planning poker, story points, T-shirt sizing (adaptive/agile)
 
@@ -126,7 +126,7 @@ Techniques used during the *Adjust* step — and during monitoring & controlling
 | **Key Outputs** | Work performance information, schedule forecasts, change requests, plan/document updates |
 
 #### Predictive Approach (Monitoring & Controlling)
-- Changes to the schedule baseline require formal **integrated change control** (via [[Assess and Implement Changes]])
+- Changes to the schedule baseline require formal **integrated change control** (via **Assess and Implement Changes**)
 - Determine status of the project schedule
 - Influence factors creating schedule changes
 - Reconsider necessary schedule reserves
@@ -207,7 +207,7 @@ The triple constraint relationship — Scope, Schedule, and Finance — means an
 - [[04_Governance_Performance_Domain]] — Change control for schedule baseline
 - [[08_Stakeholders_Performance_Domain]] — Stakeholder involvement in schedule development
 - [[10_Risk_Performance_Domain]] — Schedule reserves, buffers, and risk-driven schedule impacts
-- [[PERT]] — Program Evaluation and Review Technique for probabilistic duration estimating
-- [[Critical Path Method]] — CPM for determining minimum project duration and float
-- [[Critical Chain Method]] — Buffer-based scheduling accounting for resource constraints
-- [[WBS]] — Work Breakdown Structure decomposition
+- **PERT** — Program Evaluation and Review Technique for probabilistic duration estimating
+- **Critical Path Method** — CPM for determining minimum project duration and float
+- **Critical Chain Method** — Buffer-based scheduling accounting for resource constraints
+- **WBS** — Work Breakdown Structure decomposition

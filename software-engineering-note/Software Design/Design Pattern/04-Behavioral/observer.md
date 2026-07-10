@@ -251,4 +251,4 @@ The subscription list is dynamic. Subscribers join and leave at runtime as neede
 
 ## Related
 
-[[Mediator]] | [[chain-of-responsibility]] | [[Command]] | [[State]] | [[Strategy]] | [[solid-principles]]
+[[Mediator]] | [[chain-of-responsibility]] | [[Command]] | [[State]] | [[Strategy]] | **solid-principles**

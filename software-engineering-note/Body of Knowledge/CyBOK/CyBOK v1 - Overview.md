@@ -46,9 +46,9 @@ Plus [[00_Introduction_to_CyBOK]] for the cyber security definition and how to d
 Each Knowledge Area follows a consistent SWEBOK-style reference format:
 1. **Purpose** — What the KA covers and why it matters
 2. **Core Content** — Key concepts, models, techniques, and principles
-3. **Related Chapters** — [[wikilinks]] connecting across CyBOK
+3. **Related Chapters** —  connecting across CyBOK
 
-Start with [[00_Introduction_to_CyBOK]] for the big picture. Then explore by need — the [[wikilinks]] pull you naturally into related areas.
+Start with [[00_Introduction_to_CyBOK]] for the big picture. Then explore by need — the  pull you naturally into related areas.
 
 ## Reading Paths
 
@@ -56,10 +56,10 @@ Start with [[00_Introduction_to_CyBOK]] for the big picture. Then explore by nee
 - **Security engineer:** [[09_Software_Security|Software Security]] → [[14_Secure_Software_Lifecycle|SSDLC]] → [[17_Network_Security|Network]] → [[10_Operating_Systems_and_Virtualisation|OS]]
 - **Security architect:** [[13_Authentication_Authorisation_Accountability|AAA]] → [[16_Applied_Cryptography|Crypto]] → [[11_Distributed_Systems_Security|Distributed Systems]] → [[18_Hardware_Security|Hardware]]
 - **Offensive/defensive:** [[05_Malware_and_Attack_Technologies|Malware]] → [[06_Adversarial_Behaviours|Adversarial]] → [[15_Web_and_Mobile_Security|Web & Mobile]]
-- **Emerging/advanced:** [[19_Cyber_Physical_Systems_Security|CPS/IoT]] → [[12_Formal_Methods_for_Security|Formal Methods]] → [[20_Physical_Layer_and_Telecommunications_Security|Physical Layer]]
+- **Emerging/advanced:** **IoT** → [[12_Formal_Methods_for_Security|Formal Methods]] → [[20_Physical_Layer_and_Telecommunications_Security|Physical Layer]]
 
 ## Related
 
-- [[../Body of Knowledge - Overview|Body of Knowledge — Overview]] — All five BOKs
-- [[../SWEBOK/SWEBOK v4 - Overview|SWEBOK v4]] — Software Engineering
-- [[../SEBoK/SEBoK v2 - Overview|SEBoK v2]] — Systems Engineering
+- [[Body of Knowledge - Overview|Body of Knowledge — Overview]] — All five BOKs
+- [[SWEBOK v4 - Overview|SWEBOK v4]] — Software Engineering
+- [[SEBoK v2 - Overview|SEBoK v2]] — Systems Engineering

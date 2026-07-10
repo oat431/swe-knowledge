@@ -25,8 +25,8 @@ created: 2026-07-09
 
 Data cannot be managed without Metadata. In addition, Metadata itself must be managed. Reliable, well-managed Metadata helps:
 
-- **Increase confidence in data** by providing context and enabling the measurement of [[Data Quality]]
-- **Increase the value of strategic information** (e.g., [[Reference and Master Data|Master Data]]) by enabling multiple uses
+- **Increase confidence in data** by providing context and enabling the measurement of **Data Quality**
+- **Increase the value of strategic information** (e.g., **Master Data**) by enabling multiple uses
 - **Improve operational efficiency** by identifying redundant data and processes
 - **Prevent the use of out-of-date or incorrect data**
 - **Reduce data-oriented research time**
@@ -38,7 +38,7 @@ Data cannot be managed without Metadata. In addition, Metadata itself must be ma
 
 Metadata assists in representing information consistently, streamlining workflow capabilities, and protecting sensitive information, particularly when regulatory compliance is required.
 
-Organizations get more value out of their data assets if their data is of high quality. Quality data depends on [[Data Governance|governance]]. Because it explains the data and processes that enable organizations to function, Metadata is critical to data governance. If Metadata is a guide to the data in an organization, then it must be well managed.
+Organizations get more value out of their data assets if their data is of high quality. Quality data depends on **governance**. Because it explains the data and processes that enable organizations to function, Metadata is critical to data governance. If Metadata is a guide to the data in an organization, then it must be well managed.
 
 **Poorly managed Metadata leads to:**
 - Redundant data and data management processes
@@ -49,7 +49,7 @@ Organizations get more value out of their data assets if their data is of high q
 
 **Well-executed Metadata management** enables a consistent understanding of data resources and more efficient cross-organizational development.
 
-> As technology has evolved, the speed at which data is generated has also increased. Technical Metadata has become integral to the way in which data is moved and integrated. ISO's Metadata Registry Standard, [[#ISO/IEC 11179 Metadata Registry Standard|ISO/IEC 11179]], is intended to enable Metadata-driven exchange of data in a heterogeneous environment, based on exact definitions of data. To be data-driven, an organization must be Metadata-driven.
+> As technology has evolved, the speed at which data is generated has also increased. Technical Metadata has become integral to the way in which data is moved and integrated. ISO's Metadata Registry Standard, **IEC 11179**, is intended to enable Metadata-driven exchange of data in a heterogeneous environment, based on exact definitions of data. To be data-driven, an organization must be Metadata-driven.
 
 ---
 
@@ -105,7 +105,7 @@ Examples of Business Metadata include:
 - Data models
 - Data quality rules and measurement results
 - Schedules by which data is updated
-- Data provenance and [[#Data Lineage and Impact Analysis|data lineage]]
+- Data provenance and **data lineage**
 - Data standards
 - Designations of the system of record for data elements
 - Valid value constraints
@@ -174,7 +174,7 @@ Metadata is as essential to the management of unstructured data as it is to the 
 - **Record keeping Metadata** — retention policies
 - **Preservation Metadata** — storage, archival condition, rules for conservation
 
-New practices are emerging around managing unstructured data in data lakes. Organizations wanting to take advantage of data lakes, using Big Data platforms such as Hadoop, are finding that they must catalog ingested data in order to enable later access. Most put in place processes to collect Metadata as part of data ingestion. A minimum set of Metadata attributes needs to be collected about each object ingested in the data lake (e.g., name, format, source, version, date received, etc.). This produces a catalog of data lake contents. (See [[Document and Content Management]].)
+New practices are emerging around managing unstructured data in data lakes. Organizations wanting to take advantage of data lakes, using Big Data platforms such as Hadoop, are finding that they must catalog ingested data in order to enable later access. Most put in place processes to collect Metadata as part of data ingestion. A minimum set of Metadata attributes needs to be collected about each object ingested in the data lake (e.g., name, format, source, version, date received, etc.). This produces a catalog of data lake contents. (See **Document and Content Management**.)
 
 ### Sources of Metadata
 
@@ -182,7 +182,7 @@ Metadata can be collected from many different sources. If Metadata from applicat
 
 The majority of operational Metadata is generated as data is processed. The key to using this Metadata is to collect it in a usable form and to ensure that those responsible for interpreting it have the tools they need to do so. A large portion of technical Metadata can be harvested from database objects.
 
-**It is better to be intentional about developing definitions than to simply accept existing ones.** Development of definitions takes time and the right skill set (e.g., writing and facilitation skills). This is why the development of business Metadata requires stewardship. (See [[Data Governance]].)
+**It is better to be intentional about developing definitions than to simply accept existing ones.** Development of definitions takes time and the right skill set (e.g., writing and facilitation skills). This is why the development of business Metadata requires stewardship. (See **Data Governance**.)
 
 Creating Metadata for its own sake rarely works well. Metadata should be created as the product of a well-defined process, using tools that will support its overall quality.
 
@@ -325,7 +325,7 @@ A Metadata Management system must be capable of extracting Metadata from many so
 
 A managed Metadata environment should isolate the end user from the various and disparate Metadata sources. The architecture should provide a single access point for the Metadata repository. The access point must supply all related Metadata resources transparently to the user. Users should be able to access Metadata without being aware of the differing environments of the data sources.
 
-Three technical architectural approaches to building a common Metadata repository mimic the approaches to designing data warehouses: **centralized**, **distributed**, and **hybrid** (see [[#Types of Metadata Architecture]]). These approaches all take into account implementation of the repository, and how the update mechanisms operate.
+Three technical architectural approaches to building a common Metadata repository mimic the approaches to designing data warehouses: **centralized**, **distributed**, and **hybrid** (see **#Types of Metadata Architecture**). These approaches all take into account implementation of the repository, and how the update mechanisms operate.
 
 #### Create MetaModel
 
@@ -382,7 +382,7 @@ Implement control activities to manage the Metadata environment. Control of repo
 
 ### 4. Create and Maintain Metadata
 
-Metadata is created through a range of processes and stored in many places within an organization. To be of high quality, Metadata should be managed as a product. Good Metadata is not created by accident — it requires planning. (See [[Data Quality]].)
+Metadata is created through a range of processes and stored in many places within an organization. To be of high quality, Metadata should be managed as a product. Good Metadata is not created by accident — it requires planning. (See **Data Quality**.)
 
 Several general principles of Metadata management describe the means to manage Metadata for quality:
 
@@ -419,7 +419,7 @@ Metadata is delivered to data consumers and to applications or tools that requir
 
 - Metadata intranet websites for browse, search, query, reporting, and analysis
 - Reports, glossaries and other documents
-- Data warehouses, data marts, and [[Data Warehousing and Business Intelligence|BI tools]]
+- Data warehouses, data marts, and **BI tools**
 - Modeling and software development tools
 - Messaging and transactions
 - Web services and Application Programming Interfaces (APIs)
@@ -483,7 +483,7 @@ Documented lineage helps both business and technical people use data. Without it
 
 Many data management professionals are familiar and comfortable with structured data stores, where every item can be clearly identified and tagged. Nowadays, much data comes in less structured formats. Successful data management in a data lake depends on managing Metadata.
 
-Metadata tags should be applied to data upon ingestion. Metadata then can be used to identify data content available for access in the data lake. Many ingestion engines profile data as it is ingested. Data profiling can identify data domains, relationships, and data quality issues. It can also enable tagging. On ingestion, Metadata tags can be added to identify sensitive or private data (like Personally Identifiable Information – PII). Data scientists may add confidence, textual identifiers, and codes representing behavior clusters. (See [[Big Data and Data Science]].)
+Metadata tags should be applied to data upon ingestion. Metadata then can be used to identify data content available for access in the data lake. Many ingestion engines profile data as it is ingested. Data profiling can identify data domains, relationships, and data quality issues. It can also enable tagging. On ingestion, Metadata tags can be added to identify sensitive or private data (like Personally Identifiable Information – PII). Data scientists may add confidence, textual identifiers, and codes representing behavior clusters. (See **Big Data and Data Science**.)
 
 ---
 
@@ -525,7 +525,7 @@ Organizations should determine their specific requirements for the management of
 
 ### Process Controls
 
-The [[Data Governance]] team should be responsible for defining the standards and managing status changes for Metadata — often with workflow or collaboration software — and may be responsible for promotional activities and training development or actual training across the organization.
+The **Data Governance** team should be responsible for defining the standards and managing status changes for Metadata — often with workflow or collaboration software — and may be responsible for promotional activities and training development or actual training across the organization.
 
 More mature Metadata governance will require business terms and definitions to progress through varying status changes or governance gates; for example, from a **candidate term**, to **approved**, to **published**, and to a final point in the lifecycle of **replaced or retired**. The governance team may also manage business term associations such as related terms, as well as the categorization of and grouping of the terms.
 
@@ -545,7 +545,7 @@ A master catalog of Metadata will include the sources and targets currently in s
 - Tools, architectures, and people involved
 - Sensitive information and removal or masking strategy for the source
 
-In documents and content management, data maps show similar information. Visualizations of the overall Metadata integration systems landscape are also maintained as part of Metadata documentation. (See [[Document and Content Management]].)
+In documents and content management, data maps show similar information. Visualizations of the overall Metadata integration systems landscape are also maintained as part of Metadata documentation. (See **Document and Content Management**.)
 
 ### Metadata Standards and Guidelines
 
@@ -571,7 +571,7 @@ Suggested metrics on Metadata environments include:
 | Metric | Description |
 |--------|-------------|
 | **Metadata repository completeness** | Compare ideal coverage of the enterprise Metadata (all artifacts and all instances within scope) to actual coverage. Reference the strategy for scope definitions |
-| **Metadata Management Maturity** | Metrics developed to judge the Metadata maturity of the enterprise, based on the Capability Maturity Model (CMM-DMM) approach to maturity assessment. (See [[Data Management Maturity Assessment]]) |
+| **Metadata Management Maturity** | Metrics developed to judge the Metadata maturity of the enterprise, based on the Capability Maturity Model (CMM-DMM) approach to maturity assessment. (See **Data Management Maturity Assessment**) |
 | **Steward representation** | Organizational commitment to Metadata as assessed by the appointment of stewards, coverage across the enterprise for stewardship, and documentation of the roles in job descriptions |
 | **Metadata usage** | User uptake on the Metadata repository usage can be measured by repository login counts. Reference to Metadata by users in business practice is a more difficult measure to track — anecdotal measures on qualitative surveys may be required |
 | **Business Glossary activity** | Usage, update, resolution of definitions, coverage |

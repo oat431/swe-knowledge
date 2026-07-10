@@ -146,4 +146,4 @@ Key thread-safety detail: **double-checked locking.** After acquiring the thread
 
 ## Related
 
-[[factory-method]], [[abstract-factory]], [[Builder]], [[Prototype]], [[Facade]], [[solid-principles]]
+[[factory-method]], [[abstract-factory]], [[Builder]], [[Prototype]], [[Facade]], **solid-principles**

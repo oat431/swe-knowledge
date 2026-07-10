@@ -18,8 +18,8 @@ Project management is more than a collection of performance domains, processes, 
 
 Emphasizes **systems thinking** and appropriate levels of planning to ensure target quality thresholds are embedded within every phase. Integrates:
 
-- [[#Adopt a Holistic View]]
-- [[#Embed Quality Into Processes and Deliverables]]
+- **#Adopt a Holistic View**
+- **#Embed Quality Into Processes and Deliverables**
 
 Enables project managers to anticipate challenges, address them promptly, and align processes with evolving project and stakeholder needs.
 
@@ -27,8 +27,8 @@ Enables project managers to anticipate challenges, address them promptly, and al
 
 Focuses on the **accountability of leaders** and the development of a **high-performance team culture**. Integrates:
 
-- [[#Be an Accountable Leader]]
-- [[#Build an Empowered Culture]]
+- **#Be an Accountable Leader**
+- **#Build an Empowered Culture**
 
 Supports the development of strong, self-reliant teams that drive project success through shared ownership and commitment.
 
@@ -36,8 +36,8 @@ Supports the development of strong, self-reliant teams that drive project succes
 
 Emphasizes delivering **maximum value** by seamlessly integrating **sustainability** throughout the project life cycle. Integrates:
 
-- [[#Focus on Value]]
-- [[#Integrate Sustainability Within All Project Areas]]
+- **#Focus on Value**
+- **#Integrate Sustainability Within All Project Areas**
 
 Promotes a balance between achieving measurable success and advancing broader sustainability goals — the triple bottom line of **people, profit, and planet**.
 

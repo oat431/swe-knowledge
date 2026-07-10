@@ -152,7 +152,7 @@ A collection of reusable components, guided by clear standards, that can be asse
 
 ## Related
 
-- [[00_User_Research_Methods]] — Research that informs visual design decisions
-- [[01_UX_Design]] — Wireframes and prototypes that UI builds upon
-- [[03_Usability_Testing_and_AB_Testing]] — Testing visual designs with users
-- [[04_UX_UI_Essential_Documents]] — UI deliverables checklist
+- [[30 User Research Methods]] — Research that informs visual design decisions
+- [[31 UX Design Process]] — Wireframes and prototypes that UI builds upon
+- [[33 Usability Testing and AB Testing]] — Testing visual designs with users
+- [[UX UI Essential Documents]] — UI deliverables checklist

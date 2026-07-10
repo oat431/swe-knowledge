@@ -62,7 +62,7 @@ Since V3 (2014), the SWEBOK has been comprehensively updated:
 
 ## How to Use This Vault
 
-Each Knowledge Area is a self-contained chapter, but they are deeply interconnected through [[wikilinks]]. All chapters follow a consistent structure:
+Each Knowledge Area is a self-contained chapter, but they are deeply interconnected through . All chapters follow a consistent structure:
 
 1. **Purpose** — What the KA covers and why it matters
 2. **Knowledge Areas** — The hierarchical topic breakdown
@@ -70,7 +70,7 @@ Each Knowledge Area is a self-contained chapter, but they are deeply interconnec
 4. **Tools & Techniques** — What practitioners use
 5. **Related SWEBOK Chapters** — Wikilinks to connected KAs
 
-Start with [[00_Introduction]] for definitions, scope, and how the Guide is structured. Then explore by need — the [[wikilinks]] at the bottom of every chapter will pull you naturally into related areas. The vault is designed for both linear study and targeted reference.
+Start with [[00_Introduction]] for definitions, scope, and how the Guide is structured. Then explore by need — the  at the bottom of every chapter will pull you naturally into related areas. The vault is designed for both linear study and targeted reference.
 
 ## Reading Paths
 

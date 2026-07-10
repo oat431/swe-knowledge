@@ -86,5 +86,5 @@ Three forces drive change in every software project:
 ## Related
 
 - [[introduction-to-oop]]
-- [[design-principles]]
-- [[solid-principles]]
+- **design-principles**
+- **solid-principles**

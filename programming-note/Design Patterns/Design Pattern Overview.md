@@ -17,9 +17,9 @@ The original 23 patterns from *Design Patterns: Elements of Reusable Object-Orie
 
 | Category | Purpose | Covers |
 |----------|---------|--------|
-| **Creational** | How objects are created | [[01 Creational Patterns\|Factory, Builder, Singleton, Prototype, Abstract Factory]] |
-| **Structural** | How classes/objects are composed | [[02 Structural Patterns\|Adapter, Decorator, Facade, Proxy, Composite, Bridge]] |
-| **Behavioral** | How objects communicate | [[03 Behavioral Patterns\|Strategy, Observer, Command, State, Template Method, Iterator, Chain of Responsibility]] |
+| **Creational** | How objects are created | [[01 Creational Patterns|Factory, Builder, Singleton, Prototype, Abstract Factory]] |
+| **Structural** | How classes/objects are composed | [[02 Structural Patterns|Adapter, Decorator, Facade, Proxy, Composite, Bridge]] |
+| **Behavioral** | How objects communicate | [[03 Behavioral Patterns|Strategy, Observer, Command, State, Template Method, Iterator, Chain of Responsibility]] |
 
 ---
 
@@ -70,10 +70,10 @@ For book-level depth on each pattern, see the **Design Pattern** section in `sof
 
 | Pattern | Book Summary |
 |---------|-------------|
-| Singleton, Factory Method, Abstract Factory, Builder, Prototype | [[02-Creational/]] — each pattern with intent, structure, Java examples |
-| Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy | [[03-Structural/]] — each pattern with UML, real-world usage |
-| Chain of Responsibility, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor | [[04-Behavioral/]] — each pattern with participants, collaboration diagrams |
-| Design Principles & SOLID | [[design-principles]], [[solid-principles]] |
+| Singleton, Factory Method, Abstract Factory, Builder, Prototype |  — each pattern with intent, structure, Java examples |
+| Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy |  — each pattern with UML, real-world usage |
+| Chain of Responsibility, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor |  — each pattern with participants, collaboration diagrams |
+| Design Principles & SOLID | **design-principles**, **solid-principles** |
 
 > The notes here are **quick references** — pattern-per-use-case with short examples. The book summaries are **deep dives** with UML, trade-offs, and implementation details.
 

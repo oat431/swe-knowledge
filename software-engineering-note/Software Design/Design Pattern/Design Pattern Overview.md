@@ -11,7 +11,7 @@ tags:
 
 > *Source: Dive Into Design Patterns by Alexander Shvets, Refactoring.Guru (2022), 411 pages*
 
-A complete Obsidian knowledge base for the 22 Gang of Four design patterns, plus foundational OOP, design principles, and SOLID. Each chapter summarized into a standalone `.md` note with intent, problem/solution, pseudocode examples, pros/cons, and cross-referenced [[wikilinks]].
+A complete Obsidian knowledge base for the 22 Gang of Four design patterns, plus foundational OOP, design principles, and SOLID. Each chapter summarized into a standalone `.md` note with intent, problem/solution, pseudocode examples, pros/cons, and cross-referenced .
 
 ---
 
@@ -68,8 +68,8 @@ Design Pattern/
 | 2 | [[introduction-to-oop]] | pp. 7–25 | Classes, objects, 4 pillars, 6 object relationships |
 | 3 | [[introduction-to-design-patterns]] | pp. 26–31 | Pattern anatomy, classification, GoF history |
 | 4 | [[features-of-good-design]] | pp. 32–36 | Code reuse, extensibility, the three drivers of change |
-| 5 | [[design-principles]] | pp. 37–50 | Encapsulate What Varies, Program to Interface, Favor Composition |
-| 6 | [[solid-principles]] | pp. 51–70 | SRP, OCP, LSP, ISP, DIP |
+| 5 | **design-principles** | pp. 37–50 | Encapsulate What Varies, Program to Interface, Favor Composition |
+| 6 | **solid-principles** | pp. 51–70 | SRP, OCP, LSP, ISP, DIP |
 
 ### Creational Patterns — Object Creation
 
@@ -120,7 +120,7 @@ Design Pattern/
 
 1. **First-time reader** → Start with `01-Foundations/` in order (how-to-read → OOP → patterns intro → design principles → SOLID).
 2. **Pattern lookup** → Jump directly to the pattern in `02-Creational/`, `03-Structural/`, or `04-Behavioral/`. Each file is self-contained.
-3. **Cross-reference** → Every pattern file has a `## Related` section with `[[wikilinks]]` to connected patterns and principles.
+3. **Cross-reference** → Every pattern file has a `## Related` section with `` to connected patterns and principles.
 4. **Quick review** → Each file has a `## Summary Checklist` — run through the checkboxes.
 5. **Graph view** → Open Obsidian's Graph View on this folder to see the web of pattern relationships.
 
@@ -133,4 +133,4 @@ Design Pattern/
 - **6** foundation chapters
 - **1** conclusion
 - **~50–100K words** total
-- Full `[[wikilink]]` cross-referencing between all patterns and principles
+- Full `` cross-referencing between all patterns and principles

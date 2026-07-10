@@ -166,7 +166,7 @@ Facilitated group sessions focused on achieving a specific objective: requiremen
 
 ## Techniques to Task Mapping
 
-Refer to [[../BABOK/Techniques_to_Task_Mapping|Chapter 11]] for the complete cross-reference mapping each technique to the BABOK tasks where it applies.
+Refer to **Chapter 11** for the complete cross-reference mapping each technique to the BABOK tasks where it applies.
 
 ## Related Chapters
 

@@ -10,7 +10,7 @@ tags:
 > *"Clean code is not written by following a set of rules. Professionalism and craftsmanship come from values that drive disciplines."*
 > — Robert C. Martin, *Clean Code*, Chapter 17 (pp. 285–314)
 
-A quick-reference catalog of all 66 heuristics and code smells from the capstone chapter. Each entry includes the reference code, a one-line summary, and the key insight. For deeper treatment of topics covered in earlier chapters, follow the [[#See Also|wikilinks]].
+A quick-reference catalog of all 66 heuristics and code smells from the capstone chapter. Each entry includes the reference code, a one-line summary, and the key insight. For deeper treatment of topics covered in earlier chapters, follow the **wikilinks**.
 
 ---
 
@@ -52,13 +52,13 @@ All unit tests should run with a single command (or one IDE button click). If ru
 *See also: [[Function Design]]*
 
 #### **F1** — **Too Many Arguments**
-Zero arguments is ideal; one is good; two is acceptable; three is questionable. More than three should be avoided with prejudice. Related: [[Function Design#Function Arguments]].
+Zero arguments is ideal; one is good; two is acceptable; three is questionable. More than three should be avoided with prejudice. Related: **Function Design#Function Arguments**.
 
 #### **F2** — **Output Arguments**
-Readers expect arguments to be inputs, not outputs. If your function must change state, change the state of the object it's called on—don't mutate a parameter. Related: [[Function Design#Output Arguments]].
+Readers expect arguments to be inputs, not outputs. If your function must change state, change the state of the object it's called on—don't mutate a parameter. Related: **Function Design#Output Arguments**.
 
 #### **F3** — **Flag Arguments**
-A boolean argument loudly declares the function does *more than one thing*. Split into separate functions: `straightPay()` and `overTimePay()` instead of `calculateWeeklyPay(false)`. Related: [[Function Design#Flag Arguments]].
+A boolean argument loudly declares the function does *more than one thing*. Split into separate functions: `straightPay()` and `overTimePay()` instead of `calculateWeeklyPay(false)`. Related: **Function Design#Flag Arguments**.
 
 #### **F4** — **Dead Function**
 Methods never called should be discarded. Fear of deletion is irrational—your source control system remembers them.
@@ -153,7 +153,7 @@ overTimePay();
 Run-on expressions, Hungarian notation, magic numbers—all hide what the code is trying to do. Code should be expressive. Take the time to make intent visible.
 
 #### **G17** — **Misplaced Responsibility**
-Place code where readers naturally expect to find it. `PI` belongs with trig functions. `OVERTIME_RATE` belongs in `HourlyPayCalculator`. Use function names as guides: `getTotalHours` implies summation, `saveTimeCard` does not. Related: [[Clean Code Principles#The Principle of Least Surprise]].
+Place code where readers naturally expect to find it. `PI` belongs with trig functions. `OVERTIME_RATE` belongs in `HourlyPayCalculator`. Use function names as guides: `getTotalHours` implies summation, `saveTimeCard` does not. Related: **Clean Code Principles#The Principle of Least Surprise**.
 
 #### **G18** — **Inappropriate Static**
 Prefer non-static methods to static methods. If there's *any* chance you'll want polymorphic behavior, don't make it static. `Math.max(a, b)` is fine as static; `calculatePay(employee, rate)` probably isn't—you might want `OvertimeHourlyPayCalculator` later. See also: [[Objects vs Data Structures]].
@@ -205,13 +205,13 @@ Ambiguity and imprecision are either laziness or disagreement. Eliminate both.
 Naming conventions are good; structural enforcement is better. Switch/case with nicely named enums is inferior to base classes with abstract methods—the compiler forces implementation of all abstract methods, but nobody forces consistent switch/case.
 
 #### **G28** — **Encapsulate Conditionals**
-Extract boolean logic into intention-revealing functions. `if (shouldBeDeleted(timer))` beats `if (timer.hasExpired() && !timer.isRecurrent())`. See also: [[Function Design#Do One Thing]].
+Extract boolean logic into intention-revealing functions. `if (shouldBeDeleted(timer))` beats `if (timer.hasExpired() && !timer.isRecurrent())`. See also: **Function Design#Do One Thing**.
 
 #### **G29** — **Avoid Negative Conditionals**
 Negatives are cognitively harder than positives. Prefer `if (buffer.shouldCompact())` over `if (!buffer.shouldNotCompact())`.
 
 #### **G30** — **Functions Should Do One Thing**
-Functions that loop, check conditions, *and* perform actions are doing multiple things. Extract until each function does exactly one thing. See also: [[Function Design#Do One Thing]].
+Functions that loop, check conditions, *and* perform actions are doing multiple things. Extract until each function does exactly one thing. See also: **Function Design#Do One Thing**.
 
 ```java
 // Before: pay() loops, checks, AND pays
@@ -257,7 +257,7 @@ Every structural decision should have a reason *communicated by the structure it
 Boundary conditions (`+1`, `-1`, `< length`) are hard to track. Give them names and keep them in one place. `int nextLevel = level + 1` is clearer than repeating `level + 1` throughout. Don't let swarms of ±1 scatter across the code.
 
 #### **G34** — **Functions Should Descend Only One Level of Abstraction**
-The hardest heuristic to follow well. All statements in a function should be at *one* level below the function's name. Mixing high-level concepts ("construct an HR tag") with low-level details (`html.append(" size=\"")`) is the norm, but it shouldn't be. See also: [[Function Design#One Level of Abstraction per Function]].
+The hardest heuristic to follow well. All statements in a function should be at *one* level below the function's name. Mixing high-level concepts ("construct an HR tag") with low-level details (`html.append(" size=\"")`) is the norm, but it shouldn't be. See also: **Function Design#One Level of Abstraction per Function**.
 
 #### **G35** — **Keep Configurable Data at High Levels**
 Default values and configuration constants should live at high levels of abstraction—exposed as arguments to low-level functions, not buried inside them. If a default port is 80, declare it in `Arguments`, not in a low-level `if (port == 0)` check.

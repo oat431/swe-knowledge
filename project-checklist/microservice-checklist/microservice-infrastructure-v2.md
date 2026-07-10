@@ -56,7 +56,7 @@
 - [ ] TLS 1.2 minimum, prefer 1.3 everywhere → [[03 Load Balancing & Proxies]]
 - [ ] Certificates auto-renewed — no manual rotation, expiry alerts
 - [ ] Gateway admin API on separate port, NOT internet-facing → [[api-gateway-v2]]
-- [ ] Auth server database backed up regularly — it IS your user store → [[03 Backup & Recovery]]
+- [ ] Auth server database backed up regularly — it IS your user store → **03 Backup & Recovery**
 
 ---
 

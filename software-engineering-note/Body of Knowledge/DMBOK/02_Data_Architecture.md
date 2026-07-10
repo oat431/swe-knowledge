@@ -8,7 +8,7 @@ created: 2026-07-09
 
 ## 1. Introduction
 
-Data Architecture is fundamental to effective [[data-management|data management]]. Architects seek to design in a way that brings value to the organization through an optimal technical footprint, operational and project efficiencies, and the increased ability of the organization to use its data. Achieving this requires good design, planning, and the ability to ensure that designs and plans are executed effectively.
+Data Architecture is fundamental to effective **data management**. Architects seek to design in a way that brings value to the organization through an optimal technical footprint, operational and project efficiencies, and the increased ability of the organization to use its data. Achieving this requires good design, planning, and the ability to ensure that designs and plans are executed effectively.
 
 Data Architects define and maintain specifications that:
 
@@ -17,7 +17,7 @@ Data Architects define and maintain specifications that:
 - Align Data Architecture with enterprise strategy and business architecture
 - Express strategic data requirements
 - Outline high-level integrated designs to meet these requirements
-- Integrate with the overall [[enterprise-architecture|enterprise architecture]] roadmap
+- Integrate with the overall **enterprise architecture** roadmap
 
 An overall Data Architecture practice includes:
 
@@ -134,7 +134,7 @@ The Subject Area discriminator (the principles forming the Subject Area structur
 
 #### 2.3.2 Data Flow Design
 
-Data flows are a type of [[data-lineage|data lineage]] documentation depicting how data moves through business processes and systems. End-to-end data flows illustrate where data originated, where it is stored and used, and how it is transformed as it moves inside and between diverse processes and systems.
+Data flows are a type of **data lineage** documentation depicting how data moves through business processes and systems. End-to-end data flows illustrate where data originated, where it is stored and used, and how it is transformed as it moves inside and between diverse processes and systems.
 
 **Data flows map and document relationships between data and:**
 
@@ -227,7 +227,7 @@ Enterprise Data Architecture specifications from subject area to detailed levels
 
 ### 4.1 Data Modeling Tools
 
-Data modeling tools and model repositories are necessary for managing the enterprise data model at all levels. Most include lineage and relation tracking functions, enabling architects to manage linkages between models created for different purposes and at different levels of abstraction. (See [[data-modeling|Data Modeling and Design]])
+Data modeling tools and model repositories are necessary for managing the enterprise data model at all levels. Most include lineage and relation tracking functions, enabling architects to manage linkages between models created for different purposes and at different levels of abstraction. (See **Data Modeling and Design**)
 
 ### 4.2 Asset Management Software
 
@@ -309,7 +309,7 @@ The speed of adopting architectural practices depends on cultural adaptability. 
 - Organizational recognition of data as a business asset, not just an IT concern
 - Ability to let go of local perspective and adopt an enterprise perspective on data
 - Ability to integrate architectural deliverables into project methodology
-- Level of acceptance of formal [[data-governance|data governance]]
+- Level of acceptance of formal **data governance**
 - Ability to look holistically at the enterprise, rather than being focused solely on project delivery and IT solutioning
 
 ---
@@ -339,14 +339,14 @@ Performance metrics reflect architectural goals: architectural compliance, imple
 
 ## 8. Key Relationships to Other DMBOK Knowledge Areas
 
-- **[[data-modeling|Data Modeling and Design]] (Chapter 5):** Data models at all levels are developed using data modeling techniques. The EDM is built from conceptual, logical, and physical models.
-- **[[data-governance|Data Governance]] (Chapter 3):** Data Architecture and Data Governance must be well aligned. Data architects act as business liaisons for governance activities.
-- **[[data-storage-and-operations|Data Storage & Operations]] (Chapter 6):** Data flow design defines requirements for storage and processing across databases and platforms.
-- **[[data-integration-and-interoperability|Data Integration & Interoperability]] (Chapter 8):** Data Architecture guides integration by defining standard terms, designs, and data flow specifications.
-- **[[metadata-management|Metadata Management]] (Chapter 12):** Asset management software collects valuable Metadata about systems and data, helpful for data flows and current state research.
-- **[[master-and-reference-data|Master & Reference Data]] (Chapter 10):** Implementation typically starts with Master Data areas; the roadmap prioritizes master data capabilities with the least dependencies.
-- **[[data-warehousing-and-bi|Data Warehousing & Business Intelligence]] (Chapter 11):** Data lineage from data flows supports warehousing and analytics.
-- **[[data-quality|Data Quality]] (Chapter 13):** Architecture quality improvements are accomplished incrementally; business operation quality metrics track improved accuracy.
+- ****Data Modeling and Design** (Chapter 5):** Data models at all levels are developed using data modeling techniques. The EDM is built from conceptual, logical, and physical models.
+- ****Data Governance** (Chapter 3):** Data Architecture and Data Governance must be well aligned. Data architects act as business liaisons for governance activities.
+- ****Data Storage & Operations** (Chapter 6):** Data flow design defines requirements for storage and processing across databases and platforms.
+- ****Data Integration & Interoperability** (Chapter 8):** Data Architecture guides integration by defining standard terms, designs, and data flow specifications.
+- ****Metadata Management** (Chapter 12):** Asset management software collects valuable Metadata about systems and data, helpful for data flows and current state research.
+- ****Master & Reference Data** (Chapter 10):** Implementation typically starts with Master Data areas; the roadmap prioritizes master data capabilities with the least dependencies.
+- ****Data Warehousing & Business Intelligence** (Chapter 11):** Data lineage from data flows supports warehousing and analytics.
+- ****Data Quality** (Chapter 13):** Architecture quality improvements are accomplished incrementally; business operation quality metrics track improved accuracy.
 
 ---
 

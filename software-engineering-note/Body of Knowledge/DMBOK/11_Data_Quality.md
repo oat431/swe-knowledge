@@ -52,7 +52,7 @@ Data Quality programs should be guided by these principles:
 | **Objective measurement and transparency** | Measure quality objectively and consistently; share methodology and results with stakeholders. |
 | **Embedded in business processes** | Business process owners are responsible for the quality of data produced through their processes. |
 | **Systematically enforced** | System owners must systematically enforce data quality requirements. |
-| **Connected to service levels** | Incorporate data quality reporting and issues management into [[Service Level Agreements]]. |
+| **Connected to service levels** | Incorporate data quality reporting and issues management into **Service Level Agreements**. |
 
 ---
 
@@ -86,7 +86,7 @@ A **Data Quality dimension** is a measurable feature or characteristic of data. 
 - **Redman (1996, 2001)**: Dimensions rooted in data structure — organized around *Data Model* (content, level of detail, composition, consistency, reaction to change), *Data Values* (accuracy, completeness, currency, consistency), and *Representation* (appropriateness, interpretability, portability, format precision).
 - **English (1999, 2009)**: Divided into *Inherent* characteristics (definitional conformance, completeness of values, validity, accuracy to surrogate source, accuracy to reality, precision, non-duplication, equivalence, concurrency) and *Pragmatic* characteristics (accessibility, timeliness, contextual clarity, usability, derivation integrity, fact completeness).
 
-> See [[Metadata Management]] for the critical relationship between metadata and data quality — metadata defines what data represents and is the primary means of clarifying quality expectations.
+> See **Metadata Management** for the critical relationship between metadata and data quality — metadata defines what data represents and is the primary means of clarifying quality expectations.
 
 ---
 
@@ -171,7 +171,7 @@ Business rules describe how data should exist to be useful and usable. They are 
 - Coding inaccuracies and gaps in data mapping
 - Data model inaccuracies (field lengths, improper key assignments)
 - Temporal data mismatches across systems
-- Weak [[Master Data Management]]
+- Weak **Master Data Management**
 - Data duplication (single source with multiple local instances; multiple sources for single instance)
 
 ### 5. Issues Caused by Fixing Issues
@@ -201,7 +201,7 @@ Business rules describe how data should exist to be useful and usable. They are 
 - **Inter-table analysis**: Explores overlapping value sets; identifies foreign key relationships
 - **Drill-down capability**: Most tools allow drilling into analyzed data for further investigation
 
-> **Profiling is only the first step.** It identifies potential problems. Solving problems requires other forms of analysis: business process analysis, [[Data Lineage]] analysis, and deeper data analysis to isolate root causes.
+> **Profiling is only the first step.** It identifies potential problems. Solving problems requires other forms of analysis: business process analysis, **Data Lineage** analysis, and deeper data analysis to isolate root causes.
 
 ---
 
@@ -305,7 +305,7 @@ Reports should focus on: data quality scorecards, quality trends over time, SLA 
 - Train data producers on downstream impact
 - Define and enforce rules via a **data firewall** that inspects quality before data is used
 - Demand high quality data from external suppliers (examine their processes, structures, provenance)
-- Implement [[Data Governance]] and Stewardship
+- Implement **Data Governance** and Stewardship
 - Institute formal change control
 
 ### Corrective Actions
@@ -356,7 +356,7 @@ Improving data quality requires a **mindset change** — every person who touche
 
 ## Data Quality and Data Governance
 
-A Data Quality program is more effective when part of a [[Data Governance]] program. The Governance Organization accelerates DQ work by:
+A Data Quality program is more effective when part of a **Data Governance** program. The Governance Organization accelerates DQ work by:
 - Setting priorities
 - Identifying and coordinating stakeholders
 - Developing and maintaining standards
@@ -412,11 +412,11 @@ Each policy should include: purpose, scope and applicability, definitions of ter
 
 ## Related DMBOK Knowledge Areas
 
-- [[Data Governance]] — provides the guidance and business context for DQ activities
-- [[Metadata Management]] — defines what data represents; primary means of clarifying quality expectations
-- [[Data Architecture]] — architectural decisions impact data quality throughout the lifecycle
-- [[Data Modeling and Design]] — data model accuracy directly affects quality
-- [[Data Integration and Interoperability]] — ETL and integration processes impact quality
-- [[Master Data Management]] — MDM requires ongoing DQ monitoring and provides reference sources
-- [[Data Warehousing and Business Intelligence]] — DQ is essential for reliable analytics
-- [[Data Storage and Operations]] — database operations enforce quality constraints
+- **Data Governance** — provides the guidance and business context for DQ activities
+- **Metadata Management** — defines what data represents; primary means of clarifying quality expectations
+- **Data Architecture** — architectural decisions impact data quality throughout the lifecycle
+- **Data Modeling and Design** — data model accuracy directly affects quality
+- **Data Integration and Interoperability** — ETL and integration processes impact quality
+- **Master Data Management** — MDM requires ongoing DQ monitoring and provides reference sources
+- **Data Warehousing and Business Intelligence** — DQ is essential for reliable analytics
+- **Data Storage and Operations** — database operations enforce quality constraints

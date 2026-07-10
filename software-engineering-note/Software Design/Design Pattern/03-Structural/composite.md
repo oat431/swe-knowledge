@@ -230,4 +230,4 @@ class ImageEditor is
 ---
 
 ## Related
-[[Decorator]] | [[Iterator]] | [[Visitor]] | [[chain-of-responsibility]] | [[Builder]] | [[Flyweight]] | [[Prototype]] | [[solid-principles]]
+[[Decorator]] | [[Iterator]] | [[Visitor]] | [[chain-of-responsibility]] | [[Builder]] | [[Flyweight]] | [[Prototype]] | **solid-principles**
