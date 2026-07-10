@@ -108,6 +108,214 @@ REST is the dominant API architecture on the web. When done right, it's simple, 
 
 ---
 
+## Error Response Format
+
+Status codes tell the client *what* went wrong. A consistent error body tells them *why* and *how to fix it*.
+
+### Standard Error Structure
+
+```json
+{
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "Request validation failed",
+    "status": 422,
+    "timestamp": "2026-07-11T10:30:00Z",
+    "path": "/api/orders",
+    "details": [
+      {
+        "field": "quantity",
+        "message": "Must be greater than 0",
+        "rejectedValue": -1
+      },
+      {
+        "field": "productId",
+        "message": "Product not found",
+        "rejectedValue": "nonexistent-id"
+      }
+    ],
+    "traceId": "abc-123-def"
+  }
+}
+```
+
+### What Every Error Response Needs
+
+| Field | Why |
+|-------|-----|
+| `code` | Machine-readable error type — client can switch on it |
+| `message` | Human-readable explanation |
+| `status` | HTTP status code (redundant but convenient for logging) |
+| `timestamp` | When it happened — critical for debugging logs |
+| `path` | Which endpoint failed |
+| `details` | Field-level validation errors (400/422 only) |
+| `traceId` | Correlation ID for distributed tracing |
+
+### ❌ vs ✅
+
+```json
+// ❌ Useless error
+{ "error": "Something went wrong" }
+
+// ❌ Leaks internals
+{ "error": "SQLException: duplicate key value violates unique constraint \"orders_pkey\"" }
+
+// ✅ Safe, actionable
+{
+  "error": {
+    "code": "DUPLICATE_ORDER",
+    "message": "An order with this reference already exists",
+    "status": 409
+  }
+}
+```
+
+### Spring Boot Implementation
+
+```java
+@RestControllerAdvice
+public class GlobalExceptionHandler {
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<ErrorResponse> handleValidation(MethodArgumentNotValidException ex) {
+        List<ErrorDetail> details = ex.getBindingResult().getFieldErrors().stream()
+            .map(fe -> new ErrorDetail(fe.getField(), fe.getDefaultMessage(), fe.getRejectedValue()))
+            .toList();
+
+        ErrorResponse error = ErrorResponse.builder()
+            .code("VALIDATION_ERROR")
+            .message("Request validation failed")
+            .status(422)
+            .details(details)
+            .timestamp(Instant.now())
+            .build();
+
+        return ResponseEntity.status(422).body(error);
+    }
+
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handleNotFound(ResourceNotFoundException ex) {
+        ErrorResponse error = ErrorResponse.builder()
+            .code("NOT_FOUND")
+            .message(ex.getMessage())
+            .status(404)
+            .timestamp(Instant.now())
+            .build();
+
+        return ResponseEntity.status(404).body(error);
+    }
+}
+```
+
+---
+
+## CORS (Cross-Origin Resource Sharing)
+
+CORS is the browser's security mechanism that blocks requests from `http://localhost:3000` to `http://localhost:8080` unless the server explicitly allows it. Every frontend-backend setup hits this.
+
+### How It Works
+
+```
+Browser (http://localhost:3000)
+  → GET http://localhost:8080/api/orders
+  → Browser checks: is localhost:3000 allowed to call localhost:8080?
+  → Server responds with: Access-Control-Allow-Origin: http://localhost:3000
+  → If missing or wrong → request BLOCKED by browser
+```
+
+### Simple vs Preflight Requests
+
+| Type | When | Method |
+|------|------|--------|
+| **Simple** | GET/POST/HEAD with standard headers | Sent directly |
+| **Preflight** | PUT, DELETE, custom headers, JSON content-type | Browser sends `OPTIONS` first, then the real request |
+
+### Spring Boot Configuration
+
+```java
+// ✅ Global CORS config
+@Configuration
+public class CorsConfig implements WebMvcConfigurer {
+
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/api/**")
+            .allowedOrigins("http://localhost:3000", "https://app.example.com")
+            .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE")
+            .allowedHeaders("Authorization", "Content-Type")
+            .exposedHeaders("X-RateLimit-Remaining", "X-Request-Id")
+            .allowCredentials(true)
+            .maxAge(3600);  // Cache preflight for 1 hour
+    }
+}
+```
+
+```java
+// ❌ NEVER do this in production
+.addAllowedOrigin("*")  // allows any website to call your API
+```
+
+### Common CORS Pitfalls
+
+| Problem | Cause | Fix |
+|---------|-------|-----|
+| `*` with credentials | Browsers block `Access-Control-Allow-Origin: *` when `withCredentials: true` | List specific origins |
+| Missing headers on error responses | CORS headers not set on 4xx/5xx responses | Add CORS filter before auth filter |
+| Proxy not forwarding headers | Nginx/reverse proxy strips CORS headers | Configure proxy to pass `Origin` header through |
+
+---
+
+## Idempotency Keys
+
+Network failures cause retries. If `POST /orders` is retried, you get duplicate orders. Idempotency keys solve this.
+
+### How It Works
+
+```
+Client generates UUID: idempotency-key: abc-123
+  → POST /orders (idempotency-key: abc-123, body: {...})
+  → Server creates order, stores key → order-789
+  → Network timeout, client retries
+  → POST /orders (idempotency-key: abc-123, body: {...})
+  → Server sees key already exists → returns order-789 (no duplicate!)
+```
+
+### Implementation
+
+```java
+@PostMapping("/orders")
+public ResponseEntity<Order> createOrder(
+        @RequestBody CreateOrderRequest request,
+        @RequestHeader("Idempotency-Key") String idempotencyKey) {
+
+    // Check if we've seen this key before
+    Optional<Order> existing = idempotencyStore.find(idempotencyKey);
+    if (existing.isPresent()) {
+        return ResponseEntity.ok(existing.get());  // Return same result
+    }
+
+    // Create the order
+    Order order = orderService.create(request);
+
+    // Store the key → result mapping (expire after 24h)
+    idempotencyStore.save(idempotencyKey, order, Duration.ofHours(24));
+
+    return ResponseEntity.status(201).body(order);
+}
+```
+
+| Aspect | Details |
+|--------|--------|
+| **Key format** | UUID v4 (client-generated) |
+| **Header name** | `Idempotency-Key` (Stripe's convention, widely adopted) |
+| **Storage** | Redis, database, or in-memory cache |
+| **TTL** | 24–48 hours (matches max retry window) |
+| **Scope** | Per-user, per-endpoint |
+
+> **When to use:** Any state-changing endpoint where duplicates are harmful — payments, orders, transfers. Not needed for GET (already idempotent) or truly idempotent PUT/DELETE.
+
+---
+
 ## HATEOAS (Hypermedia as the Engine of Application State)
 
 The API response includes links to related actions. The client navigates the API by following links — no hardcoded URLs.
@@ -132,3 +340,5 @@ The API response includes links to related actions. The client navigates the API
 
 - Fielding, Roy. *Architectural Styles*, 2000.
 - Microsoft REST API Guidelines — https://github.com/microsoft/api-guidelines
+- RFC 7231 — HTTP/1.1 Semantics and Content
+- Stripe API — https://stripe.com/docs/api (gold standard for error responses and idempotency)
