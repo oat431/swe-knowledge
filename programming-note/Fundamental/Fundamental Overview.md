@@ -31,6 +31,8 @@ This section covers the eight core topics every programmer should master.
 
 > [[08 Memory Management]] — Stack vs heap, garbage collection, manual memory management, memory leaks, and immutability.
 
+> [[09 Functional Programming]] — Pure functions, immutability, higher-order functions, map/filter/reduce, closures, and FP vs OOP.
+
 ---
 
 ## When to Review This
@@ -45,6 +47,7 @@ This section covers the eight core topics every programmer should master.
 | Writing a library or public API | [[05 Functions & Methods]], [[06 Object-Oriented Programming]], [[07 Error Handling]] |
 | Code review — spotting common mistakes | [[03 Operators & Expressions]], [[04 Control Flow]], [[07 Error Handling]] |
 | Mentoring a junior developer | Start with whichever topic they struggle with; these notes are self-contained |
+| Working with streams, lambdas, async pipelines | [[09 Functional Programming]], [[05 Functions & Methods]] |
 
 ---
 

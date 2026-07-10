@@ -22,7 +22,7 @@ Quick-reference index for programming topics. Where deep content exists in [[Sof
 | **Database** | [[Database Overview]] — SQL, Normalization, Indexing, Transactions, NoSQL, Migration, Scaling (10 files) | [[Database Overview]] — 10 files across 3 categories |
 | **Computer Networks** | [[Computer Networks Overview]] — OSI, TCP/IP, DNS, HTTP, TCP/UDP, Security, Load Balancing, Tools (10 files) | [[Computer Networks Overview]] — 10 files across 3 categories |
 | **Operating Systems** | [[Operating Systems Overview]] — Processes, Threads, CPU Scheduling, Memory, File Systems, IPC, Deadlocks, Linux Tools (10 files) | [[Operating Systems Overview]] — 10 files across 3 categories |
-| **Fundamentals** | [[Fundamental Overview]] — Core Concepts, Variables & Types, Operators, Control Flow, Functions, OOP, Error Handling, Memory Management (9 files) | [[Fundamental Overview]] — 9 files across 8 topics |
+| **Fundamentals** | [[Fundamental Overview]] — Core Concepts, Variables & Types, Operators, Control Flow, Functions, OOP, Error Handling, Memory Management, Functional Programming (10 files) | [[Fundamental Overview]] — 10 files across 9 topics |
 
 ---
 
