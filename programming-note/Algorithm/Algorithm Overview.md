@@ -24,6 +24,7 @@ Data structures organize data. Algorithms process it. Together they're the found
 > [[01 Heaps & Priority Queues]] — Min/max heap, heapify, heap sort, applications
 > [[01 Hash Tables]] — Hash functions, collision resolution, load factor, real-world usage
 > [[01 Graphs]] — Representations, BFS, DFS, shortest path, topological sort
+> [[01 Deque]] — Double-ended queue, monotonic deque, sliding window max/min
 
 ### 02 Algorithms
 
@@ -33,6 +34,8 @@ Data structures organize data. Algorithms process it. Together they're the found
 > [[02 Divide & Conquer]] — Merge sort, quick sort, binary search, master theorem
 > [[02 Greedy Algorithms]] — Activity selection, Huffman, Dijkstra, fractional knapsack
 > [[02 Dynamic Programming]] — Memoization vs tabulation, LCS, knapsack, coin change
+> [[02 String Algorithms]] — Naive matching, KMP, Rabin-Karp, string hashing
+> [[02 Math Algorithms]] — GCD/LCM, Sieve of Eratosthenes, modular exponentiation, combinatorics under mod
 
 ### 03 Problem Solving
 
@@ -46,7 +49,7 @@ Data structures organize data. Algorithms process it. Together they're the found
 | Priority | Topics |
 |:--------:|--------|
 | 🔴 **Must Know** | Arrays, Hash Tables, Trees/BSTs, Sorting, Binary Search, BFS/DFS, DP basics, Big-O |
-| 🟡 **High Value** | Linked Lists, Stacks/Queues, Heaps, Graphs, Greedy, Recursion |
+| 🟡 **High Value** | Linked Lists, Stacks/Queues, Heaps, Graphs, Greedy, Recursion, String Algorithms |
 | 🟢 **Differentiator** | Tries, Union-Find, Topological Sort, Segment Trees |
 
 ---
