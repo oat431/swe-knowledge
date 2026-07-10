@@ -17,24 +17,28 @@ TCP is the reliable workhorse. UDP is the fast-and-loose alternative. Every back
 
 ### The 3-Way Handshake
 
-```
-Client                            Server
-  │  SYN, seq=x ─────────────────▶  │  "Can we talk?"
-  │  ◀────────── SYN-ACK, seq=y     │  "Yes, I acknowledge."
-  │            ack=x+1              │
-  │  ACK, seq=x+1, ack=y+1 ──────▶  │  "Great, let's go."
-  │  ◀══════ Data Transfer ══════▶  │
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant S as Server
+    C->>S: SYN, seq=x "Can we talk?"
+    S-->>C: SYN-ACK, seq=y, ack=x+1 "Yes, I acknowledge."
+    C->>S: ACK, seq=x+1, ack=y+1 "Great, let's go."
+    Note over C,S: Data Transfer
 ```
 
 ### The 4-Way Teardown
 
-```
-Client                            Server
-  │  FIN ─────────────────────────▶  │  "I'm done sending."
-  │  ◀─────────────────────── ACK   │
-  │  ◀─────────────────────── FIN   │  "I'm done too."
-  │  ACK ─────────────────────────▶  │
-  │  (TIME_WAIT — 2MSL)              │  Connection closed.
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant S as Server
+    C->>S: FIN "I'm done sending."
+    S-->>C: ACK
+    S-->>C: FIN "I'm done too."
+    C->>S: ACK
+    Note right of C: TIME_WAIT (2MSL)
+    Note over C,S: Connection closed
 ```
 
 ---

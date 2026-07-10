@@ -235,4 +235,12 @@ function createUser({ name, email, age, address }: CreateUserRequest): User;
 
 ---
 
+## Book Deep Dive
+
+For full chapter-level coverage:
+- [[Naming Conventions]] — comprehensive naming rules with examples
+- [[Function Design]] — function length, arguments, side effects
+
+---
+
 **Sources:** Robert C. Martin, *Clean Code*, Ch. 2-3 (2008); Steve McConnell, *Code Complete*, Ch. 7-9 (2004)

@@ -26,10 +26,23 @@ How you deploy matters as much as what you deploy. The wrong strategy means down
 
 Replace old instances one at a time. Default in Kubernetes.
 
-```
-Old: [P1] [P2] [P3]
-        ↓    ↓    ↓
-New: [P1] [P2] [P3]  ← one at a time
+```mermaid
+graph LR
+    subgraph Step 1
+        O1[Old P1] -->|replace| N1[New P1]
+        O2[Old P2]
+        O3[Old P3]
+    end
+    subgraph Step 2
+        N1b[New P1]
+        O2b[Old P2] -->|replace| N2[New P2]
+        O3b[Old P3]
+    end
+    subgraph Step 3
+        N1c[New P1]
+        N2c[New P2]
+        O3c[Old P3] -->|replace| N3[New P3]
+    end
 ```
 
 | ✅ | ❌ |
@@ -80,15 +93,21 @@ graph LR
 
 Route a small % of traffic to the new version. Ramp up gradually.
 
-```
-v1.0: ████████████████████ 90%
-v2.0: ████                 10%   ← monitor for errors
-         ↓
-v1.0: ████████████          50%
-v2.0: ████████████          50%
-         ↓
-v1.0:                        0%
-v2.0: ████████████████████ 100%
+```mermaid
+graph TD
+    subgraph "Phase 1: 10% canary"
+        LB1[Load Balancer] -->|90%| V1A[v1.0]
+        LB1 -->|10%| V2A[v2.0 ← monitor for errors]
+    end
+    subgraph "Phase 2: 50/50"
+        LB2[Load Balancer] -->|50%| V1B[v1.0]
+        LB2 -->|50%| V2B[v2.0]
+    end
+    subgraph "Phase 3: Full rollout"
+        LB3[Load Balancer] -->|100%| V2C[v2.0]
+    end
+    V2A --> V1B
+    V2B --> LB3
 ```
 
 | Tool | How |

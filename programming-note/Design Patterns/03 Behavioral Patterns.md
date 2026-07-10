@@ -395,6 +395,19 @@ Behavioral problem?
 
 ---
 
+## Book Deep Dive
+
+For full implementations with UML diagrams, participants, and trade-offs:
+- [[strategy]]
+- [[observer]]
+- [[command]]
+- [[state]]
+- [[template-method]]
+- [[iterator]]
+- [[chain-of-responsibility]]
+
+---
+
 ## Sources
 
 - Gamma et al. — *Design Patterns* (1994), Chapters 5, 9-10

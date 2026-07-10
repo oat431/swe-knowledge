@@ -52,6 +52,34 @@ Clean code is code that's easy to read, easy to change, and doesn't surprise the
 
 ---
 
+## Deep Dives in software-engineering-note
+
+For book-level depth, see the **Clean Code** section in `software-engineering-note/Software Design/Clean Code/`:
+
+| Topic | Book Summary |
+|-------|-------------|
+| Naming rules & conventions | [[Naming Conventions]] — full chapter with examples |
+| Function design | [[Function Design]] — one thing, small, arguments, side effects |
+| Code smells | [[Code Smells Catalog]] — comprehensive smell list with refactoring moves |
+| Comments | [[Comment Patterns]] — when to comment, when not to |
+| Error handling | [[Error Handling]] — exceptions, null handling, boundaries |
+| SOLID & class design | [[Class Design & SOLID]] — SRP, OCP, LSP, ISP, DIP with examples |
+| Unit testing | [[Unit Testing]] — TDD, test design, assertions |
+| Formatting & style | [[Formatting Style]] — vertical formatting, indentation, team rules |
+
+Also see **Clean Architecture** (`software-engineering-note/Software Design/Clean Architecture/`) for:
+- Architecture layers and boundaries
+- SOLID at the architectural level
+- Programming paradigms (OOP vs FP)
+
+And **Clean Craftsmanship** (`software-engineering-note/Professionalism/clean-craftsmanship/`) for:
+- TDD, refactoring, simple design
+- Pair programming, acceptance tests
+
+> The notes here are **practical checklists** for daily coding. The book summaries are **chapter-level deep dives** with full examples, trade-offs, and Uncle Bob's reasoning.
+
+---
+
 ## Quick Checklist
 
 Before merging any PR, ask yourself:

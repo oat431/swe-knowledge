@@ -58,10 +58,14 @@ Testing happens every sprint. QA is embedded in the team, not a separate phase.
 
 Move testing earlier in the lifecycle. The earlier you find a bug, the cheaper it is to fix.
 
-```
-Traditional:  Code → Code → Code → [TEST] → Bug! (expensive)
-Shift-Left:   [TEST] → Code → [TEST] → Code → [TEST] → Done
-              ↑ review        ↑ unit test      ↑ integration
+```mermaid
+graph LR
+    subgraph "Traditional"
+        TC1[Code] --> TC2[Code] --> TC3[Code] --> TC4[Test] --> TC5[Bug! expensive]
+    end
+    subgraph "Shift-Left"
+        SL1[Test<br/>review] --> SL2[Code] --> SL3[Test<br/>unit test] --> SL4[Code] --> SL5[Test<br/>integration] --> SL6[Done]
+    end
 ```
 
 | Shift-Left Activity | When |

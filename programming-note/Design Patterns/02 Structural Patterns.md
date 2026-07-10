@@ -282,6 +282,18 @@ Structural problem?
 
 ---
 
+## Book Deep Dive
+
+For full implementations with UML diagrams, participants, and trade-offs:
+- [[adapter]]
+- [[decorator]]
+- [[facade]]
+- [[proxy]]
+- [[composite]]
+- [[bridge]]
+
+---
+
 ## Sources
 
 - Gamma et al. — *Design Patterns* (1994), Chapters 4, 6-8

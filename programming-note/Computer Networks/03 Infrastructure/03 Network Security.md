@@ -13,16 +13,12 @@ Security at the network layer: protecting data in transit, blocking attackers, a
 
 ## The Defense Stack
 
-```
-DDoS Protection (Cloudflare, AWS Shield)
-        ↓
-Firewall (Security Groups, iptables)
-        ↓
-WAF (Web Application Firewall)
-        ↓
-TLS Termination (Reverse Proxy)
-        ↓
-Application (Spring Boot)
+```mermaid
+graph TD
+    D["<b>DDoS Protection</b><br>Cloudflare, AWS Shield"] --> F["<b>Firewall</b><br>Security Groups, iptables"]
+    F --> W["<b>WAF</b><br>Web Application Firewall"]
+    W --> T["<b>TLS Termination</b><br>Reverse Proxy"]
+    T --> A["<b>Application</b><br>Spring Boot"]
 ```
 
 ---

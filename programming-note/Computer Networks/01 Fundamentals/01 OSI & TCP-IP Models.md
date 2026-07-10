@@ -39,12 +39,12 @@ The OSI model is a reference. The TCP/IP model is reality. Both describe how dat
 
 ## Encapsulation — How Data Flows
 
-```
-Application:  [ HTTP Request ]                  "GET /api/users HTTP/1.1"
-Transport:    [ TCP Header | HTTP Request ]      + source/dest port, seq number
-Network:      [ IP Header | TCP | HTTP ]         + source/dest IP
-Data Link:    [ Ethernet Frame | IP | TCP | HTTP ] + source/dest MAC
-Physical:     [ 101011100010... ]                Bits on the wire
+```mermaid
+graph TD
+    A["<b>Application</b><br><i>HTTP Request</i><br>GET /api/users HTTP/1.1"] -->|"+ TCP Header"| T["<b>Transport</b><br><i>TCP Segment</i><br>+ source/dest port, seq number"]
+    T -->|"+ IP Header"| N["<b>Network</b><br><i>IP Packet</i><br>+ source/dest IP"]
+    N -->|"+ Ethernet Frame"| D["<b>Data Link</b><br><i>Ethernet Frame</i><br>+ source/dest MAC"]
+    D -->|"Bits on wire"| P["<b>Physical</b><br>101011100010..."]
 ```
 
 > **Encapsulation:** Each layer wraps the data from the layer above in its own header. At the destination, each layer strips its header and passes the remainder up.
@@ -53,16 +53,24 @@ Physical:     [ 101011100010... ]                Bits on the wire
 
 ## TCP/IP Model — What Actually Runs the Internet
 
-```
-┌──────────────────────┐    ┌──────────────┐
-│ Application          │ ←→ │ OSI 5-7      │  HTTP, DNS, SMTP, SSH
-├──────────────────────┤    ├──────────────┤
-│ Transport            │ ←→ │ OSI 4        │  TCP, UDP
-├──────────────────────┤    ├──────────────┤
-│ Internet             │ ←→ │ OSI 3        │  IP, ICMP
-├──────────────────────┤    ├──────────────┤
-│ Network Access       │ ←→ │ OSI 1-2      │  Ethernet, Wi-Fi
-└──────────────────────┘    └──────────────┘
+```mermaid
+graph LR
+    subgraph "TCP/IP Model"
+        A["<b>Application</b><br>HTTP, DNS, SMTP, SSH"]
+        T["<b>Transport</b><br>TCP, UDP"]
+        I["<b>Internet</b><br>IP, ICMP"]
+        N["<b>Network Access</b><br>Ethernet, Wi-Fi"]
+    end
+    subgraph "OSI Model"
+        OA["OSI 5-7"]
+        OT["OSI 4"]
+        OI["OSI 3"]
+        ON["OSI 1-2"]
+    end
+    A --- OA
+    T --- OT
+    I --- OI
+    N --- ON
 ```
 
 ---

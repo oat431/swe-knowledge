@@ -20,10 +20,12 @@ Distributing traffic across multiple servers. Reverse proxies sit in front. Load
 | **Examples** | NGINX, Apache, Traefik | NGINX, HAProxy, AWS ALB |
 | **Often combined** | ✅ Most load balancers ARE reverse proxies | |
 
-```
-Internet → Load Balancer → App Server 1
-                         → App Server 2
-                         → App Server 3
+```mermaid
+graph LR
+    I["Internet"] --> LB["Load Balancer"]
+    LB --> A1["App Server 1"]
+    LB --> A2["App Server 2"]
+    LB --> A3["App Server 3"]
 ```
 
 ---
@@ -119,9 +121,10 @@ management:
 
 > Cache static (and dynamic) content at edge locations close to users.
 
-```
-User in Bangkok → CDN Edge (Bangkok) → Origin Server (US East)
-                 └─── 20ms ───┘        └──── 200ms ─────┘
+```mermaid
+graph LR
+    U["User in Bangkok"] -->|"20ms"| E["CDN Edge<br>Bangkok"]
+    E -->|"200ms"| O["Origin Server<br>US East"]
 ```
 
 | CDN | Best For |

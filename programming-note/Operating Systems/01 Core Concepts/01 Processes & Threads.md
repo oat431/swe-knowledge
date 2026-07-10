@@ -38,10 +38,16 @@ A process is a running program. A thread is a unit of execution within a process
 
 ## Process Lifecycle
 
-```
-Created → Ready → Running → Terminated
-              ↑        ↓
-              └── Waiting (I/O, sleep, wait for event)
+```mermaid
+stateDiagram-v2
+    [*] --> Created
+    Created --> Ready
+    Ready --> Running
+    Running --> Ready : Preempted / Time slice expired
+    Running --> Waiting : I/O, sleep, wait for event
+    Waiting --> Ready : I/O complete / Event received
+    Running --> Terminated
+    Terminated --> [*]
 ```
 
 | State | Meaning |

@@ -64,6 +64,21 @@ Solid understanding of OOP fundamentals is essential. See [[06 Object-Oriented P
 
 ---
 
+## Deep Dives in software-engineering-note
+
+For book-level depth on each pattern, see the **Design Pattern** section in `software-engineering-note/Software Design/Design Pattern/`:
+
+| Pattern | Book Summary |
+|---------|-------------|
+| Singleton, Factory Method, Abstract Factory, Builder, Prototype | [[02-Creational/]] — each pattern with intent, structure, Java examples |
+| Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy | [[03-Structural/]] — each pattern with UML, real-world usage |
+| Chain of Responsibility, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor | [[04-Behavioral/]] — each pattern with participants, collaboration diagrams |
+| Design Principles & SOLID | [[design-principles]], [[solid-principles]] |
+
+> The notes here are **quick references** — pattern-per-use-case with short examples. The book summaries are **deep dives** with UML, trade-offs, and implementation details.
+
+---
+
 ## Sources
 
 - Gamma, Helm, Johnson, Vlissides — *Design Patterns* (1994)

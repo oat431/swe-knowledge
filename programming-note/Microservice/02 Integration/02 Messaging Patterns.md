@@ -56,10 +56,10 @@ def handle(event):
 
 Messages that can't be processed after N retries go to a DLQ for human inspection.
 
-```
-Normal Queue → [retry x3] → Dead Letter Queue
-                                   ↓
-                            Human inspects, fixes, replays or discards
+```mermaid
+graph LR
+    Q[Normal Queue] -->|retry x3| DLQ[Dead Letter Queue]
+    DLQ --> H[Human inspects,<br/>fixes, replays<br/>or discards]
 ```
 
 ---

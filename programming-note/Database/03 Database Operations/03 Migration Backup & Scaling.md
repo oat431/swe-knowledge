@@ -106,14 +106,13 @@ pg_basebackup -D /backup/mydb -Ft -z -P
 
 > Primary handles writes. Replicas handle reads.
 
-```
-         ┌──────────┐
-  Writes │ Primary  │
-  ──────▶│          │──────▶ Replication ──▶ ┌──────────┐
-         └──────────┘                        │ Replica 1│ ← Reads
-                                             ├──────────┤
-                                             │ Replica 2│ ← Reads
-                                             └──────────┘
+```mermaid
+graph LR
+    W[Writes] --> P[Primary]
+    P -->|Replication| R1[Replica 1]
+    P -->|Replication| R2[Replica 2]
+    R1 -.->|Reads| C1[Clients]
+    R2 -.->|Reads| C1
 ```
 
 ```yaml
@@ -130,11 +129,13 @@ spring:
 
 > Split data across multiple independent databases by a shard key.
 
-```
-user_id % 4 == 0 → Shard 0
-user_id % 4 == 1 → Shard 1
-user_id % 4 == 2 → Shard 2
-user_id % 4 == 3 → Shard 3
+```mermaid
+graph TD
+    A[Application] --> H{Hash Router<br/>user_id % 4}
+    H -->|0| S0[Shard 0]
+    H -->|1| S1[Shard 1]
+    H -->|2| S2[Shard 2]
+    H -->|3| S3[Shard 3]
 ```
 
 | ✅ Pros | ❌ Cons |

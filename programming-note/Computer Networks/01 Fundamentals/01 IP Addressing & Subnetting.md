@@ -76,16 +76,13 @@ Binary: 11000000.10101000.00000001.01100100
 
 > Private IPs can't route on the public internet. NAT translates private ↔ public.
 
-```
-┌──────────┐    Private: 192.168.1.100:45678
-│  Laptop  │────┐
-└──────────┘    │    ┌──────────┐    Public: 203.0.113.5:12345
-                ├───▶│  Router  │────────────────────────▶ Internet
-┌──────────┐    │    └──────────┘
-│  Phone   │────┘    Translation table:
-└──────────┘         192.168.1.100:45678 ↔ 203.0.113.5:12345
-Private: 192.168.1.101:45679
-                      192.168.1.101:45679 ↔ 203.0.113.5:12346
+```mermaid
+graph LR
+    L["Laptop<br>192.168.1.100:45678"] --> R["Router<br>NAT Translation"]
+    P["Phone<br>192.168.1.101:45679"] --> R
+    R -->|"203.0.113.5:12345"| I["Internet"]
+    R -->|"203.0.113.5:12346"| I
+    style R fill:#f9f,stroke:#333,stroke-width:2px
 ```
 
 ---

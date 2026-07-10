@@ -86,27 +86,15 @@ What do you return when retries are exhausted and the circuit is open?
 
 ## The Full Resilience Stack
 
-```
-Incoming Request
-    │
-    ▼
-  Timeout (2s — don't hang)
-    │
-    ▼
-  Bulkhead (max 10 concurrent — don't exhaust threads)
-    │
-    ▼
-  Circuit Breaker (is the service healthy?)
-    │
-    ├── CLOSED → call service
-    │       │
-    │       ▼
-    │     Retry (max 3, exponential backoff)
-    │       │
-    │       ├── Success → return
-    │       └── Failure → Fallback
-    │
-    └── OPEN → Fallback immediately
+```mermaid
+graph TD
+    A[Incoming Request] --> B[Timeout<br/>2s — don't hang]
+    B --> C[Bulkhead<br/>max 10 concurrent]
+    C --> D{Circuit Breaker<br/>is the service healthy?}
+    D -->|CLOSED| E[Retry<br/>max 3, exponential backoff]
+    E -->|Success| F[Return Response]
+    E -->|Failure| G[Fallback]
+    D -->|OPEN| G
 ```
 
 ---

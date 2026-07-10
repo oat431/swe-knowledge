@@ -220,6 +220,17 @@ Need to create objects?
 
 ---
 
+## Book Deep Dive
+
+For full implementations with UML diagrams, participants, and trade-offs:
+- [[abstract-factory]]
+- [[builder]]
+- [[factory-method]]
+- [[singleton]]
+- [[prototype]]
+
+---
+
 ## Sources
 
 - Gamma et al. — *Design Patterns* (1994), Chapters 3-7

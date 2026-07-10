@@ -15,20 +15,27 @@ Each microservice owns its data. No other service touches it directly — only t
 
 > **Each service has its own database. No service accesses another service's database directly.**
 
-```
-❌ Shared Database:
-  Order Service ──┐
-                  ├── Shared DB (orders, customers, products)
-  Customer Svc ───┤
-  Product Svc  ───┘
-  → Tight coupling. Schema change in orders breaks customer service.
+### ❌ Shared Database
 
-✅ Database per Service:
-  Order Service ─── Order DB
-  Customer Svc ─── Customer DB
-  Product Svc  ─── Product DB
-  → Loose coupling. Each service evolves independently.
+```mermaid
+graph TD
+    O[Order Service] --> DB[Shared DB<br/>orders, customers, products]
+    C[Customer Service] --> DB
+    P[Product Service] --> DB
 ```
+
+> Tight coupling. Schema change in orders breaks customer service.
+
+### ✅ Database per Service
+
+```mermaid
+graph TD
+    O[Order Service] --> ODB[Order DB]
+    C[Customer Service] --> CDB[Customer DB]
+    P[Product Service] --> PDB[Product DB]
+```
+
+> Loose coupling. Each service evolves independently.
 
 ---
 

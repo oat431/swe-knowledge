@@ -196,4 +196,12 @@ For larger-scale structural changes, see [[01 Decomposition Patterns]] — break
 
 ---
 
+## Book Deep Dive
+
+For the full code smells catalog with detailed examples and refactoring moves:
+- [[Code Smells Catalog]] — comprehensive smell list
+- [[Emergent Design]] — when design emerges from refactoring
+
+---
+
 **Sources:** Martin Fowler, *Refactoring* (2018); Robert C. Martin, *Clean Code*, Ch. 3, 17 (2008); refactoring.com/catalog

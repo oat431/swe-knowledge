@@ -253,4 +253,11 @@ Key rules:
 
 ---
 
+## Book Deep Dive
+
+For full chapter-level coverage:
+- [[Comment Patterns]] — when to comment, comment types, anti-patterns
+
+---
+
 **Sources:** Robert C. Martin, *Clean Code*, Ch. 4 (2008); Divio documentation system; Google developer documentation style guide

@@ -71,14 +71,16 @@ Content-Length: 89
 
 ### TLS 1.3 Handshake
 
-```
-Client                          Server
-  │  ClientHello ────────────────▶  │  (supported ciphers, key share)
-  │  ◀─────────────── ServerHello  │  (chosen cipher, certificate, key share)
-  │  (verify certificate)           │
-  │  Finished ───────────────────▶  │  (encrypted!)
-  │  ◀────────────────── Finished  │
-  │  ◀══════ Encrypted Data ═════▶ │
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant S as Server
+    C->>S: ClientHello (supported ciphers, key share)
+    S-->>C: ServerHello (chosen cipher, certificate, key share)
+    Note over C: Verify certificate
+    C->>S: Finished (encrypted!)
+    S-->>C: Finished
+    Note over C,S: Encrypted Data
 ```
 
 > TLS 1.3: 1 round trip (1-RTT). TLS 1.2: 2 round trips (2-RTT). **~100ms saved on every new connection.**
