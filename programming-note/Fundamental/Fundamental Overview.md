@@ -33,6 +33,12 @@ This section covers the eight core topics every programmer should master.
 
 > [[09 Functional Programming]] — Pure functions, immutability, higher-order functions, map/filter/reduce, closures, and FP vs OOP.
 
+> [[10 Data Formats & Serialization]] — JSON, XML, Protocol Buffers, Avro, Java Serializable, when to use which format.
+
+> [[11 Logging & Structured Logging]] — Log levels, structured JSON logging, correlation IDs, MDC, SLF4J/Logback.
+
+> [[12 Regex Cheatsheet]] — Syntax reference, character classes, quantifiers, groups, common patterns, Java/TypeScript usage.
+
 ---
 
 ## When to Review This
