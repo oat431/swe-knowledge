@@ -18,13 +18,13 @@ A **proposition** is a declarative statement that is either **true (T)** or **fa
 
 **Examples:**
 
-| Statement | Truth Value |
-| ----------- | ------------ |
-| "The sky is blue." | T (on a clear day) |
-| "$2 + 2 = 4$" | T |
-| "$2 + 2 = 5$" | F |
-| "What time is it?" | Not a proposition (question) |
-| "$x + 1 = 2$" | Not a proposition (depends on $x$) |
+| Statement          | Truth Value                        |
+| ------------------ | ---------------------------------- |
+| "The sky is blue." | T (on a clear day)                 |
+| "$2 + 2 = 4$"      | T                                  |
+| "$2 + 2 = 5$"      | F                                  |
+| "What time is it?" | Not a proposition (question)       |
+| "$x + 1 = 2$"      | Not a proposition (depends on $x$) |
 
 ### Logical Operators (Connectives)
 
