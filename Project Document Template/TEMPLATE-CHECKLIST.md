@@ -164,23 +164,23 @@ created: 2026-07-11
 
 | # | Document | Priority | Source | Status |
 |---|----------|----------|--------|--------|
-| 91 | Final Report | 🔴 | PMBOK | ☐ |
-| 92 | Project Closure Document | 🔴 | PMBOK, SWEBOK | ☐ |
-| 93 | Verified Deliverables | 🔴 | PMBOK | ☐ |
+| 91 | Final Report | 🔴 | PMBOK | ✅ |
+| 92 | Project Closure Document | 🔴 | PMBOK, SWEBOK | ✅ |
+| 93 | Verified Deliverables | 🔴 | PMBOK | ✅ |
 
 ---
 
 ## 8. Procurement & Contracts
 > **Owner:** PM / Procurement | **Sources:** PMBOK
-| 91 | Final Report | 🔴 | PMBOK | ✅ |
-| 92 | Project Closure Document | 🔴 | PMBOK, SWEBOK | ✅ |
-| 93 | Verified Deliverables | 🔴 | PMBOK | ✅ |
-| 94 | Procurement Management Plan | 🔴 | PMBOK | ✅ |
-| 95 | Procurement Statement of Work (SOW) | 🔴 | PMBOK | ✅ |
-| 96 | Sourcing Strategy Plan | 🔴 | PMBOK | ✅ |
-| 97 | Bid Documents (RFI/RFP/RFQ) | 🔴 | PMBOK | ✅ |
-| 98 | Source Selection Criteria | 🔴 | PMBOK | ✅ |
-| 99 | Contract / Agreement | 🔴 | PMBOK | ✅ |
+
+| #   | Document                            | Priority | Source | Status |
+| --- | ----------------------------------- | -------- | ------ | ------ |
+| 94  | Procurement Management Plan         | 🔴       | PMBOK  | ✅      |
+| 95  | Procurement Statement of Work (SOW) | 🔴       | PMBOK  | ✅      |
+| 96  | Sourcing Strategy Plan              | 🔴       | PMBOK  | ✅      |
+| 97  | Bid Documents (RFI/RFP/RFQ)         | 🔴       | PMBOK  | ✅      |
+| 98  | Source Selection Criteria           | 🔴       | PMBOK  | ✅      |
+| 99  | Contract / Agreement                | 🔴       | PMBOK  | ✅      |
 
 ---
 
