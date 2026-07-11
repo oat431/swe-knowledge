@@ -79,25 +79,25 @@ created: 2026-07-11
 
 | # | Document | Priority | Source | Status |
 |---|----------|----------|--------|--------|
-| 30 | SRS (Software Requirements Specification) | 🔴 | SWEBOK | ☐ |
-| 31 | BRD (Business Requirements Document) | 🔴 | SWEBOK | ☐ |
-| 32 | Nonfunctional Requirements Catalog | 🔴 | SWEBOK | ☐ |
-| 33 | Requirements Traceability Matrix (RTM) | 🔴 | SWEBOK, SEBOK | ☐ |
-| 34 | Requirements Change Log | 🔴 | SWEBOK | ☐ |
-| 35 | Requirements Architecture | 🔴 | BABOK | ☐ |
-| 36 | Stakeholder Analysis | 🔴 | SWEBOK | ☐ |
-| 37 | Acceptance Criteria (ATDD/BDD) | 🔴 | SWEBOK | ☐ |
-| 38 | User Stories | 🟡 | SWEBOK | ☐ |
-| 39 | Use Case Specifications | 🟡 | SWEBOK | ☐ |
-| 40 | Requirements (Verified) | 🔴 | BABOK | ☐ |
-| 41 | Requirements (Validated) | 🔴 | BABOK | ☐ |
-| 42 | Requirements Change Assessment | 🔴 | BABOK | ☐ |
-| 43 | Project Scope Statement | 🔴 | PMBOK | ☐ |
-| 44 | Assumption Log | 🟡 | PMBOK | ☐ |
-| 45 | Activity Diagrams (Requirements) | 🟡 | SWEBOK | ☐ |
-| 46 | Decision Tables / Decision Trees | 🟡 | SWEBOK | ☐ |
-| 47 | Functional Size Measurement (FSM) | 🟡 | SWEBOK | ☐ |
-| 48 | Prototypes (Low/High Fidelity) | 🟡 | SWEBOK | ☐ |
+| 30 | SRS (Software Requirements Specification) | 🔴 | SWEBOK | ✅ |
+| 31 | BRD (Business Requirements Document) | 🔴 | SWEBOK | ✅ |
+| 32 | Nonfunctional Requirements Catalog | 🔴 | SWEBOK | ✅ |
+| 33 | Requirements Traceability Matrix (RTM) | 🔴 | SWEBOK, SEBOK | ✅ |
+| 34 | Requirements Change Log | 🔴 | SWEBOK | ✅ |
+| 35 | Requirements Architecture | 🔴 | BABOK | ✅ |
+| 36 | Stakeholder Analysis | 🔴 | SWEBOK | ✅ |
+| 37 | Acceptance Criteria (ATDD/BDD) | 🔴 | SWEBOK | ✅ |
+| 38 | User Stories | 🟡 | SWEBOK | ✅ |
+| 39 | Use Case Specifications | 🟡 | SWEBOK | ✅ |
+| 40 | Requirements (Verified) | 🔴 | BABOK | ✅ |
+| 41 | Requirements (Validated) | 🔴 | BABOK | ✅ |
+| 42 | Requirements Change Assessment | 🔴 | BABOK | ✅ |
+| 43 | Project Scope Statement | 🔴 | PMBOK | ✅ |
+| 44 | Assumption Log | 🟡 | PMBOK | ✅ |
+| 45 | Activity Diagrams (Requirements) | 🟡 | SWEBOK | ✅ |
+| 46 | Decision Tables / Decision Trees | 🟡 | SWEBOK | ✅ |
+| 47 | Functional Size Measurement (FSM) | 🟡 | SWEBOK | ✅ |
+| 48 | Prototypes (Low/High Fidelity) | 🟡 | SWEBOK | ✅ |
 
 ---
 
