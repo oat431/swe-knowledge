@@ -106,36 +106,36 @@ created: 2026-07-11
 
 | # | Document | Priority | Source | Status |
 |---|----------|----------|--------|--------|
-| 49 | Project Charter | 🔴 | PMBOK | ☐ |
-| 50 | Project Management Plan | 🔴 | PMBOK | ☐ |
-| 51 | Scope Management Plan | 🔴 | PMBOK | ☐ |
-| 52 | WBS + WBS Dictionary | 🔴 | PMBOK | ☐ |
-| 53 | Schedule Management Plan | 🔴 | PMBOK | ☐ |
-| 54 | Activity List | 🔴 | PMBOK | ☐ |
-| 55 | Milestone List | 🔴 | PMBOK | ☐ |
-| 56 | Project Schedule | 🔴 | PMBOK | ☐ |
-| 57 | Schedule Baseline | 🔴 | PMBOK | ☐ |
-| 58 | Schedule Network Diagram | 🟡 | PMBOK | ☐ |
-| 59 | Financial Management Plan | 🔴 | PMBOK | ☐ |
-| 60 | Cost Estimates | 🔴 | PMBOK | ☐ |
-| 61 | Cost Baseline | 🔴 | PMBOK | ☐ |
-| 62 | Project Funding Requirements | 🔴 | PMBOK | ☐ |
-| 63 | Basis of Estimates | 🟡 | PMBOK | ☐ |
-| 64 | Resource Management Plan | 🔴 | PMBOK | ☐ |
-| 65 | Resource Requirements | 🔴 | PMBOK | ☐ |
-| 66 | Resource Breakdown Structure (RBS) | 🟡 | PMBOK | ☐ |
-| 67 | Team Charter | 🟡 | PMBOK | ☐ |
-| 68 | Skill Matrix | 🟡 | PMBOK | ☐ |
-| 69 | Risk Management Plan | 🔴 | PMBOK, SEBOK | ☐ |
-| 70 | Risk Register | 🔴 | PMBOK, SEBOK | ☐ |
-| 71 | Risk Report | 🟡 | PMBOK | ☐ |
-| 72 | Stakeholder Engagement Plan | 🔴 | PMBOK | ☐ |
-| 73 | Communications Management Plan | 🔴 | PMBOK | ☐ |
-| 74 | Stakeholder Engagement Assessment Matrix | 🟡 | PMBOK | ☐ |
-| 75 | Quality Management Plan | 🔴 | PMBOK, SEBOK | ☐ |
-| 76 | Quality Metrics | 🔴 | PMBOK | ☐ |
-
----
+| 49 | Project Charter | 🔴 | PMBOK | ✅ |
+| 50 | Project Management Plan | 🔴 | PMBOK | ✅ |
+| 51 | Scope Management Plan | 🔴 | PMBOK | ✅ |
+| 52 | WBS + WBS Dictionary | 🔴 | PMBOK | ✅ |
+| 53 | Schedule Management Plan | 🔴 | PMBOK | ✅ |
+| 54 | Activity List | 🔴 | PMBOK | ✅ |
+| 55 | Milestone List | 🔴 | PMBOK | ✅ |
+| 56 | Project Schedule | 🔴 | PMBOK | ✅ |
+| 57 | Schedule Baseline | 🔴 | PMBOK | ✅ |
+| 58 | Schedule Network Diagram | 🟡 | PMBOK | ✅ |
+| 59 | Financial Management Plan | 🔴 | PMBOK | ✅ |
+| 60 | Cost Estimates | 🔴 | PMBOK | ✅ |
+| 61 | Cost Baseline | 🔴 | PMBOK | ✅ |
+| 62 | Project Funding Requirements | 🔴 | PMBOK | ✅ |
+| 63 | Basis of Estimates | 🟡 | PMBOK | ✅ |
+| 63 | Resource Management Plan | 🔴 | PMBOK | ✅ |
+| 64 | Resource Requirements | 🔴 | PMBOK | ✅ |
+| 65 | Resource Breakdown Structure (RBS) | 🟡 | PMBOK | ✅ |
+| 66 | Team Charter | 🟡 | PMBOK | ✅ |
+| 67 | Skill Matrix | 🟡 | PMBOK | ✅ |
+| 68 | Risk Management Plan | 🔴 | PMBOK, SEBOK | ✅ |
+| 69 | Risk Register | 🔴 | PMBOK, SEBOK | ✅ |
+| 71 | Risk Report | 🟡 | PMBOK | ✅ |
+| 70 | Stakeholder Engagement Plan | 🔴 | PMBOK | ✅ |
+| 71 | Communications Management Plan | 🔴 | PMBOK | ✅ |
+| 72 | Stakeholder Engagement Assessment Matrix | 🟡 | PMBOK | ✅ |
+| 73 | Quality Management Plan | 🔴 | PMBOK | ✅ |
+| 74 | Quality Metrics | 🔴 | PMBOK | ✅ |
+| 75 | Basis of Estimates | 🟡 | PMBOK | ✅ |
+| 76 | RACI Matrix | 🔴 | PMBOK | ✅ |
 
 ## 6. Project Management — Executing & M&C
 > **Owner:** PM | **Sources:** PMBOK
