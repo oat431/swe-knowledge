@@ -189,26 +189,26 @@ created: 2026-07-11
 
 | # | Document | Priority | Source | Status |
 |---|----------|----------|--------|--------|
-| 100 | Functional Architecture | 🔴 | SEBOK | ☐ |
-| 101 | Logical Architecture | 🔴 | SEBOK | ☐ |
-| 102 | Physical Architecture | 🔴 | SEBOK | ☐ |
-| 103 | System Architecture Description | 🔴 | SEBOK | ☐ |
-| 104 | Interface Control Document (ICD) | 🔴 | SEBOK | ☐ |
-| 105 | Trade Study Reports | 🔴 | SEBOK | ☐ |
-| 106 | SAD (Software Architecture Document) | 🔴 | SWEBOK | ☐ |
-| 107 | ADR (Architecture Decision Records) | 🔴 | SWEBOK, SEBOK | ☐ |
-| 108 | Architecture Views (4+1) | 🔴 | SWEBOK | ☐ |
-| 109 | ASR Catalog | 🔴 | SWEBOK | ☐ |
-| 110 | Architecture Evaluation Report (ATAM) | 🟡 | SWEBOK | ☐ |
-| 111 | Architecture Metrics Report | 🟡 | SWEBOK | ☐ |
-| 112 | Architecture Patterns & Styles Catalog | 🟡 | SWEBOK | ☐ |
-| 113 | Component-and-Connector (C&C) Views | 🟡 | SWEBOK | ☐ |
-| 114 | Module Views | 🟡 | SWEBOK | ☐ |
-| 115 | QAW Report (Quality Attribute Workshop) | 🟢 | SWEBOK | ☐ |
-| 116 | Reference Architecture | 🟢 | SWEBOK | ☐ |
-| 117 | MBSE Models (SysML) | 🟡 | SEBOK | ☐ |
-| 118 | System Bill of Materials | 🟡 | SEBOK | ☐ |
-| 119 | Digital Twin Specification | 🟢 | SEBOK | ☐ |
+| 100 | Functional Architecture | 🔴 | SEBOK | ✅ |
+| 101 | Logical Architecture | 🔴 | SEBOK | ✅ |
+| 102 | Physical Architecture | 🔴 | SEBOK | ✅ |
+| 103 | System Architecture Description | 🔴 | SEBOK | ✅ |
+| 104 | Interface Control Document (ICD) | 🔴 | SEBOK | ✅ |
+| 105 | Trade Study Reports | 🔴 | SEBOK | ✅ |
+| 106 | SAD (Software Architecture Document) | 🔴 | SWEBOK | ✅ |
+| 107 | ADR (Architecture Decision Records) | 🔴 | SWEBOK, SEBOK | ✅ |
+| 108 | Architecture Views (4+1) | 🔴 | SWEBOK | ✅ |
+| 109 | ASR Catalog | 🔴 | SWEBOK | ✅ |
+| 110 | Architecture Evaluation Report (ATAM) | 🟡 | SWEBOK | ✅ |
+| 111 | Architecture Metrics Report | 🟡 | SWEBOK | ✅ |
+| 112 | Architecture Patterns & Styles Catalog | 🟡 | SWEBOK | ✅ |
+| 113 | Component-and-Connector (C&C) Views | 🟡 | SWEBOK | ✅ |
+| 114 | Module Views | 🟡 | SWEBOK | ✅ |
+| 115 | QAW Report (Quality Attribute Workshop) | 🟢 | SWEBOK | ✅ |
+| 116 | Reference Architecture | 🟢 | SWEBOK | ✅ |
+| 117 | MBSE Models (SysML) | 🟡 | SEBOK | ✅ |
+| 118 | System Bill of Materials | 🟡 | SEBOK | ✅ |
+| 119 | Digital Twin Specification | 🟢 | SEBOK | ✅ |
 
 ---
 
