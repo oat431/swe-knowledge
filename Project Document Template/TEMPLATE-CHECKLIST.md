@@ -155,7 +155,7 @@ created: 2026-07-11
 | 88 | Schedule Forecasts | 🔴 | PMBOK | ✅ |
 | 89 | Earned Value Analysis | 🟡 | PMBOK | ✅ |
 | 90 | Variance Analysis Reports | 🟡 | PMBOK | ✅ |
-| 90 | Gantt Chart / Schedule | 🟡 | SWEBOK | ☐ |
+| 90 | Gantt Chart / Schedule | 🟡 | SWEBOK | ✅ |
 
 ---
 
