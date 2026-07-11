@@ -224,7 +224,7 @@ Link to detailed docs or auto-generated API docs.
 How to set up dev environment, run tests, submit PRs.
 
 ## License
-
+```
 MIT / Apache 2.0 / Proprietary
 ```
 
