@@ -217,24 +217,24 @@ created: 2026-07-11
 
 | # | Document | Priority | Source | Status |
 |---|----------|----------|--------|--------|
-| 120 | HLD (High-Level Design) | 🔴 | SWEBOK | ☐ |
-| 121 | LLD (Low-Level Design) | 🔴 | SWEBOK | ☐ |
-| 122 | API Specification (OpenAPI/Swagger) | 🔴 | SWEBOK | ☐ |
-| 123 | ERD (Entity-Relationship Diagram) | 🔴 | SWEBOK, DMBOK | ☐ |
-| 124 | Database Schema (DDL) | 🔴 | SWEBOK | ☐ |
-| 125 | Data Dictionary | 🔴 | SWEBOK, DMBOK | ☐ |
-| 126 | Design Review Records | 🔴 | SWEBOK | ☐ |
-| 127 | Class Diagrams | 🔴 | SWEBOK | ☐ |
-| 128 | Sequence Diagrams | 🟡 | SWEBOK | ☐ |
-| 129 | State Diagrams | 🟡 | SWEBOK | ☐ |
-| 130 | Deployment Diagrams | 🟡 | SWEBOK | ☐ |
-| 131 | Design Rationale | 🟡 | SWEBOK | ☐ |
-| 132 | Activity Diagrams (Design) | 🟡 | SWEBOK | ☐ |
-| 133 | Component Diagrams | 🟡 | SWEBOK | ☐ |
-| 134 | CRC Cards | 🟢 | SWEBOK | ☐ |
-| 135 | Communication Diagrams | 🟢 | SWEBOK | ☐ |
-| 136 | Design Pattern Catalog | 🟢 | SWEBOK | ☐ |
-| 137 | Pseudocode / PDL | 🟢 | SWEBOK | ☐ |
+| 120 | HLD (High-Level Design) | 🔴 | SWEBOK | ✅ |
+| 121 | LLD (Low-Level Design) | 🔴 | SWEBOK | ✅ |
+| 122 | API Specification | 🔴 | SWEBOK | ✅ |
+| 123 | ERD | 🔴 | SWEBOK, DMBOK | ✅ |
+| 124 | Database Schema (DDL) | 🔴 | SWEBOK | ✅ |
+| 125 | Data Dictionary | 🔴 | SWEBOK, DMBOK | ✅ |
+| 126 | Design Review Records | 🔴 | SWEBOK | ✅ |
+| 127 | Class Diagrams | 🔴 | SWEBOK | ✅ |
+| 128 | Sequence Diagrams | 🟡 | SWEBOK | ✅ |
+| 129 | State Diagrams | 🟡 | SWEBOK | ✅ |
+| 130 | Deployment Diagrams | 🟡 | SWEBOK | ✅ |
+| 131 | Design Rationale | 🟡 | SWEBOK | ✅ |
+| 132 | Activity Diagrams (Design) | 🟡 | SWEBOK | ✅ |
+| 133 | Component Diagrams | 🟡 | SWEBOK | ✅ |
+| 134 | CRC Cards | 🟡 | SWEBOK | ✅ |
+| 135 | Communication Diagrams | 🟡 | SWEBOK | ✅ |
+| 136 | Design Pattern Catalog | 🟡 | SWEBOK | ✅ |
+| 137 | Pseudocode / PDL | 🟡 | SWEBOK | ✅ |
 
 ---
 
