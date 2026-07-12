@@ -113,7 +113,7 @@ Bring this log to your next check-in with Coach.
 | Thu | 6           | 122.0            | 165          |       |
 | Fri | 6           | 121.8            | 160          |       |
 | Sat | 7           | 121.8            | 160          |       |
-| Sun |             |                  |              |       |
+| Sun | 8           | 121.8            | 160          |       |
 
 ---
 
