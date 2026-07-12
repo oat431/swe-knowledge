@@ -140,12 +140,12 @@ flowchart LR
 
 | Document | Relationship |
 |----------|-------------|
-| [[Business Objectives]] | Top of traceability chain |
-| [[Business Requirements]] | Business requirements in the chain |
-| [[SRS]] | Software requirements in the chain |
-| [[System Requirements Specification (SyRS)]] | System requirements in the chain |
-| [[Test Plan]] | Test cases in the chain |
-| [[Requirements Change Log]] | Changes tracked against traceability |
+| [[Business-Objectives]] | Top of traceability chain |
+| [[Business-Requirements]] | Business requirements in the chain |
+| [[Software-Requirements-Specification]] | Software requirements in the chain |
+| [[System-Requirements-Specification]] | System requirements in the chain |
+| [[Usability-Test-Plan]] | Test cases in the chain |
+| [[Requirements-Change-Log]] | Changes tracked against traceability |
 
 ---
 

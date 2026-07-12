@@ -121,10 +121,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Stakeholder Register]] | Stakeholder details |
-| [[Stakeholder Engagement Approach]] | Detailed engagement strategy |
-| [[Communications Management Plan]] | Communication procedures |
-| [[Change Strategy]] | Change management alignment |
+| [[Stakeholder-Register]] | Stakeholder details |
+| [[Stakeholder-Engagement-Approach]] | Detailed engagement strategy |
+| [[Communications-Management-Plan]] | Communication procedures |
+| [[Change-Strategy]] | Change management alignment |
 
 ---
 

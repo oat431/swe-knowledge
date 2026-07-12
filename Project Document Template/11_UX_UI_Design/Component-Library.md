@@ -213,9 +213,9 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[Design System]] | System this library is part of |
-| [[Style Guide]] | Visual standards |
-| [[UI Mockups]] | Mockups using these components |
+| [[Design-System]] | System this library is part of |
+| [[Style-Guide]] | Visual standards |
+| [[UI-Mockups]] | Mockups using these components |
 
 ---
 

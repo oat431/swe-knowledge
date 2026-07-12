@@ -297,10 +297,10 @@ type RequestType = 'STANDARD' | 'VIP' | 'CORPORATE';
 
 | Document | Relationship |
 |----------|-------------|
-| [[High-Level Design (HLD)]] | Module overview this LLD details |
-| [[API Specification]] | API contracts |
-| [[Database Schema (DDL)]] | Database definitions |
-| [[Class Diagrams]] | UML class diagrams |
+| [[High-Level-Design]] | Module overview this LLD details |
+| [[API-Specification]] | API contracts |
+| [[Database-Schema-DDL]] | Database definitions |
+| [[Class-Diagrams]] | UML class diagrams |
 
 ---
 

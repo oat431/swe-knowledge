@@ -108,10 +108,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Stakeholder Register]] | Stakeholder details |
-| [[Stakeholder Engagement Plan]] | Engagement strategies |
-| [[Stakeholder Engagement Approach]] | Detailed engagement approach |
-| [[Change Strategy]] | Change management alignment |
+| [[Stakeholder-Register]] | Stakeholder details |
+| [[Stakeholder-Engagement-Plan]] | Engagement strategies |
+| [[Stakeholder-Engagement-Approach]] | Detailed engagement approach |
+| [[Change-Strategy]] | Change management alignment |
 
 ---
 

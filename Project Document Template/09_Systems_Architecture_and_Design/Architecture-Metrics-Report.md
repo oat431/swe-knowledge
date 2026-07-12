@@ -133,9 +133,9 @@ flowchart LR
 
 | Document | Relationship |
 |----------|-------------|
-| [[Software Architecture Document]] | Architecture being measured |
-| [[Quality Metrics]] | Project-level quality metrics |
-| [[Static Analysis Reports]] | Tool-generated code analysis |
+| [[Software-Architecture-Document]] | Architecture being measured |
+| [[Quality-Metrics]] | Project-level quality metrics |
+| [[Architecture-Metrics-Report]] | Tool-generated code analysis |
 
 ---
 

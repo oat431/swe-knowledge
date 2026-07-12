@@ -180,9 +180,9 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[Style Guide]] | Visual standards |
-| [[Component Library]] | Component specifications |
-| [[UI Mockups]] | Mockups using the system |
+| [[Style-Guide]] | Visual standards |
+| [[Component-Library]] | Component specifications |
+| [[UI-Mockups]] | Mockups using the system |
 
 ---
 

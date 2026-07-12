@@ -102,9 +102,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[ADR (Architecture Decision Records)]] | Formal ADRs for major decisions |
-| [[Trade Study Reports]] | Detailed analysis behind decisions |
-| [[Software Architecture Document]] | Architecture driven by rationale |
+| [[Architecture-Decision-Records]] | Formal ADRs for major decisions |
+| [[Trade-Study-Reports]] | Detailed analysis behind decisions |
+| [[Software-Architecture-Document]] | Architecture driven by rationale |
 
 ---
 

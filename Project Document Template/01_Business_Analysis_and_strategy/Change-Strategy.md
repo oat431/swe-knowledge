@@ -487,14 +487,14 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[Business Case]] | This strategy delivers the benefits in the Business Case |
-| [[Business Objectives]] | Strategy is designed to achieve these objectives |
-| [[Current State Description]] | The starting point this strategy transforms from |
-| [[Future State Description]] | The destination this strategy delivers |
-| [[Gap Analysis]] | Gaps drive the strategy priorities |
-| [[Solution Scope]] | Defines what is included in this change |
-| [[Risk Analysis Results]] | Risks inform strategy selection |
-| [[Stakeholder Register]] | Stakeholders drive change management approach |
+| [[Business-Case]] | This strategy delivers the benefits in the Business Case |
+| [[Business-Objectives]] | Strategy is designed to achieve these objectives |
+| [[Current-State-Description]] | The starting point this strategy transforms from |
+| [[Future-State-Description]] | The destination this strategy delivers |
+| [[Gap-Analysis]] | Gaps drive the strategy priorities |
+| [[Solution-Scope]] | Defines what is included in this change |
+| [[Risk-Analysis-Results]] | Risks inform strategy selection |
+| [[Stakeholder-Register]] | Stakeholders drive change management approach |
 
 ---
 

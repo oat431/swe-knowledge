@@ -163,10 +163,10 @@ gantt
 
 | Document | Relationship |
 |----------|-------------|
-| [[Stakeholder Engagement Plan]] | Stakeholder engagement strategies |
-| [[Project Management Plan]] | Parent plan |
-| [[Risk Report]] | Risk communication |
-| [[Governance Approach]] | Escalation framework |
+| [[Stakeholder-Engagement-Plan]] | Stakeholder engagement strategies |
+| [[Project-Management-Plan]] | Parent plan |
+| [[Risk-Report]] | Risk communication |
+| [[Governance-Approach]] | Escalation framework |
 
 ---
 

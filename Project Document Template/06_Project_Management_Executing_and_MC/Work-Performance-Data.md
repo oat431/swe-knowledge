@@ -151,12 +151,12 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Project Schedule]] | Schedule baseline |
-| [[Cost Baseline]] | Cost baseline |
-| [[Risk Register]] | Risk data |
-| [[Issue Log]] | Issue data |
-| [[Quality Metrics]] | Quality data |
-| [[Change Log]] | Change data |
+| [[Project-Schedule]] | Schedule baseline |
+| [[Cost-Baseline]] | Cost baseline |
+| [[Risk-Register]] | Risk data |
+| [[Issue-Log]] | Issue data |
+| [[Quality-Metrics]] | Quality data |
+| [[Change-Log]] | Change data |
 
 ---
 

@@ -129,10 +129,10 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[Risk Register]] | Risks that may become issues |
-| [[Change Log]] | Issues that require scope changes |
-| [[Lessons Learned Register]] | Resolved issues feed lessons learned |
-| [[Risk Report]] | Issue status in risk reporting |
+| [[Risk-Register]] | Risks that may become issues |
+| [[Change-Log]] | Issues that require scope changes |
+| [[Lessons-Learned-Register]] | Resolved issues feed lessons learned |
+| [[Risk-Report]] | Issue status in risk reporting |
 
 ---
 

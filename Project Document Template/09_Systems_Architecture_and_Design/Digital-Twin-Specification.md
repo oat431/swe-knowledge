@@ -97,9 +97,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Physical Architecture]] | Physical components (if any) |
-| [[Monitoring Dashboard]] | Monitoring specification |
-| [[Operational KPIs Report]] | Operational metrics |
+| [[Physical-Architecture]] | Physical components (if any) |
+| [[Analytics-Dashboard-Spec]] | Monitoring specification |
+| [[Quality-Metrics]] | Operational metrics |
 
 ---
 

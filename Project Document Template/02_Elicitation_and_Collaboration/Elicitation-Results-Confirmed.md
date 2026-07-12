@@ -31,7 +31,7 @@ standard_ref:
 |-------|-------|
 | Document Owner | [Name / Role] |
 | Business Analyst | [Name / Role] |
-| Source Document | [[Elicitation Results (Unconfirmed)]] |
+| Source Document | [[Elicitation-Results-Unconfirmed]] |
 
 ### Revision History
 
@@ -69,7 +69,7 @@ standard_ref:
 
 | Field | Detail |
 |-------|--------|
-| Source Document | [[Elicitation Results (Unconfirmed)]] — ACT-XX |
+| Source Document | [[Elicitation-Results-Unconfirmed]] — ACT-XX |
 | Original Activity Date | [YYYY-MM-DD] |
 | Confirmation Date(s) | [YYYY-MM-DD] |
 | Confirmation Method | [Workshop walkthrough + individual review] |
@@ -273,12 +273,12 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[Elicitation Activity Plan]] | Plan that scheduled the source activity |
-| [[Elicitation Results (Unconfirmed)]] | Raw outputs that were confirmed here |
-| [[Business Requirements]] | Requirements derived from these confirmed results |
-| [[Requirements Traceability Matrix]] | Full traceability from objectives to tests |
-| [[Current State Description]] | Current state data confirmed here |
-| [[Gap Analysis]] | Pain points inform gap identification |
+| [[Elicitation-Activity-Plan]] | Plan that scheduled the source activity |
+| [[Elicitation-Results-Unconfirmed]] | Raw outputs that were confirmed here |
+| [[Business-Requirements]] | Requirements derived from these confirmed results |
+| [[Requirements-Traceability-Matrix]] | Full traceability from objectives to tests |
+| [[Current-State-Description]] | Current state data confirmed here |
+| [[Gap-Analysis]] | Pain points inform gap identification |
 
 ---
 

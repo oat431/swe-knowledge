@@ -155,10 +155,10 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[Resource Management Plan]] | How resources are managed |
-| [[Resource Requirements]] | Detailed resource needs per WBS |
-| [[WBS]] | Work packages requiring resources |
-| [[Cost Estimates]] | Costs per resource |
+| [[Resource-Management-Plan]] | How resources are managed |
+| [[Resource-Requirements]] | Detailed resource needs per WBS |
+| [[WBS-WBS-Dictionary]] | Work packages requiring resources |
+| [[Cost-Estimates]] | Costs per resource |
 
 ---
 

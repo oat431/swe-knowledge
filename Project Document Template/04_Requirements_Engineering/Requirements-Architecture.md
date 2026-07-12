@@ -178,11 +178,11 @@ flowchart LR
 
 | Document | Relationship |
 |----------|-------------|
-| [[SRS]] | Requirements organized by this architecture |
-| [[Business Requirements]] | Business requirements in the hierarchy |
-| [[Requirements Traceability Matrix]] | Traceability follows this structure |
-| [[Architecture Decision Records]] | ADRs capture structural decisions |
-| [[Release Notes]] | Releases align with phase grouping |
+| [[Software-Requirements-Specification]] | Requirements organized by this architecture |
+| [[Business-Requirements]] | Business requirements in the hierarchy |
+| [[Requirements-Traceability-Matrix]] | Traceability follows this structure |
+| [[Architecture-Decision-Records]] | ADRs capture structural decisions |
+| [[Requirements-Architecture]] | Releases align with phase grouping |
 
 ---
 

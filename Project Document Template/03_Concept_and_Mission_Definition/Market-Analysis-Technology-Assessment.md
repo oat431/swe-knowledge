@@ -274,11 +274,11 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[Design Options]] | Detailed design options analysis |
-| [[Solution Recommendation]] | Formal recommendation based on this assessment |
-| [[Feasibility Study]] | Technical feasibility supports this analysis |
-| [[Business Case]] | Economic analysis feeds business case |
-| [[Architecture Decision Records]] | ADRs capture technology decisions |
+| [[Design-Options]] | Detailed design options analysis |
+| [[Solution-Recommendation]] | Formal recommendation based on this assessment |
+| [[Feasibility-Study]] | Technical feasibility supports this analysis |
+| [[Business-Case]] | Economic analysis feeds business case |
+| [[Architecture-Decision-Records]] | ADRs capture technology decisions |
 
 ---
 

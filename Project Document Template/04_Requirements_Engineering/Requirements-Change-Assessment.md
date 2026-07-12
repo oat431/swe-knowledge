@@ -76,13 +76,13 @@ standard_ref:
 
 | Artifact | Impact | Action Required |
 |----------|--------|----------------|
-| [[SRS]] | [Section X.X modified] | [Update requirement] |
-| [[Requirements Traceability Matrix]] | [New links added] | [Update RTM] |
-| [[Acceptance Criteria]] | [New ACs for modified requirement] | [Write new ACs] |
-| [[User Stories]] | [Story split or modified] | [Update story] |
-| [[HLD]] | [Component X affected] | [Update design] |
-| [[Test Cases]] | [TC-XX modified, new TC created] | [Update/create tests] |
-| [[Test Plan]] | [Test scope expanded] | [Update test plan] |
+| [[Software-Requirements-Specification]] | [Section X.X modified] | [Update requirement] |
+| [[Requirements-Traceability-Matrix]] | [New links added] | [Update RTM] |
+| [[Acceptance-Criteria]] | [New ACs for modified requirement] | [Write new ACs] |
+| [[User-Stories]] | [Story split or modified] | [Update story] |
+| [[High-Level-Design]] | [Component X affected] | [Update design] |
+| [[Acceptance-Criteria]] | [TC-XX modified, new TC created] | [Update/create tests] |
+| [[Usability-Test-Plan]] | [Test scope expanded] | [Update test plan] |
 
 #### Recommendation
 
@@ -140,11 +140,11 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Requirements Change Log]] | Change log tracks all changes |
-| [[SRS]] | Requirements being assessed |
-| [[Requirements Traceability Matrix]] | Impact on traceability |
-| [[Governance Approach]] | Change authority definitions |
-| [[Configuration Management Plan]] | Version control for requirements |
+| [[Requirements-Change-Log]] | Change log tracks all changes |
+| [[Software-Requirements-Specification]] | Requirements being assessed |
+| [[Requirements-Traceability-Matrix]] | Impact on traceability |
+| [[Governance-Approach]] | Change authority definitions |
+| [[Change-Requests]] | Version control for requirements |
 
 ---
 

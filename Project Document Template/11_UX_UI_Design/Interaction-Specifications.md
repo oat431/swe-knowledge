@@ -108,9 +108,9 @@ Then: Scale bounce (1.0 → 1.1 → 1.0, 200ms)
 
 | Document | Relationship |
 |----------|-------------|
-| [[Design Specifications]] | Technical specs |
-| [[Component Library]] | Component interactions |
-| [[State Variations]] | State changes |
+| [[Design-Specifications]] | Technical specs |
+| [[Component-Library]] | Component interactions |
+| [[State-Variations]] | State changes |
 
 ---
 

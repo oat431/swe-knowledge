@@ -133,11 +133,11 @@ gantt
 
 | Document | Relationship |
 |----------|-------------|
-| [[Procurement Management Plan]] | Overall procurement strategy |
-| [[Source Selection Criteria]] | Detailed evaluation criteria |
-| [[Bid Documents]] | RFP/RFQ documents |
-| [[Design Options]] | Make/buy analysis |
-| [[Market Analysis / Technology Assessment]] | Market research supporting sourcing |
+| [[Procurement-Management-Plan]] | Overall procurement strategy |
+| [[Source-Selection-Criteria]] | Detailed evaluation criteria |
+| [[Bid-Documents]] | RFP/RFQ documents |
+| [[Design-Options]] | Make/buy analysis |
+| [[Market-Analysis-Technology-Assessment]] | Market research supporting sourcing |
 
 ---
 

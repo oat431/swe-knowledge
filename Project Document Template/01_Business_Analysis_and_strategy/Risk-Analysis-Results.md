@@ -320,14 +320,14 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Business Case]] | Risks inform the Business Case risk section |
-| [[Change Strategy]] | Risk responses shape the implementation approach |
-| [[Solution Scope]] | Scope decisions mitigate some risks |
-| [[Gap Analysis]] | Unresolved gaps become risks |
-| [[Risk Management Plan]] | Detailed risk management process and governance |
-| [[Risk Register]] | Operational risk tracking (living document) |
+| [[Business-Case]] | Risks inform the Business Case risk section |
+| [[Change-Strategy]] | Risk responses shape the implementation approach |
+| [[Solution-Scope]] | Scope decisions mitigate some risks |
+| [[Gap-Analysis]] | Unresolved gaps become risks |
+| [[Risk-Management-Plan]] | Detailed risk management process and governance |
+| [[Risk-Register]] | Operational risk tracking (living document) |
 
 ---
 
 > **Template Standard:** Based on BABOK v3 (Strategy Analysis), PMBOK v8 (Risk Management), ISO 31000
-> **Usage:** This is a point-in-time analysis. The [[Risk Register]] is the living document for ongoing risk management. Update this analysis at major milestones or when the risk landscape changes significantly.
+> **Usage:** This is a point-in-time analysis. The [[Risk-Register]] is the living document for ongoing risk management. Update this analysis at major milestones or when the risk landscape changes significantly.

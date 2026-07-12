@@ -133,9 +133,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Style Guide]] | Visual standards |
-| [[Component Library]] | Reusable components |
-| [[Design System]] | Complete design system |
+| [[Style-Guide]] | Visual standards |
+| [[Component-Library]] | Reusable components |
+| [[Design-System]] | Complete design system |
 
 ---
 

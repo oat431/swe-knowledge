@@ -182,9 +182,9 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[User Interview Script]] | Interview methodology |
-| [[User Personas]] | Personas from research |
-| [[Journey Map]] | Journey from research |
+| [[User-Interview-Script]] | Interview methodology |
+| [[User-Personas]] | Personas from research |
+| [[Journey-Map]] | Journey from research |
 
 ---
 

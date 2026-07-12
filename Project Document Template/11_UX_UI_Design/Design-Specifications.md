@@ -31,7 +31,7 @@ standard_ref:
 |---------|------|-----|
 | [Figma Project] | [Figma] | [https://figma.com/file/xxx] |
 | [Inspect Mode] | [Figma] | [Enable in Figma for exact specs] |
-| [Design Tokens] | [JSON/CSS] | [See [[Design Tokens]]] |
+| [Design Tokens] | [JSON/CSS] | [See [[Design-Tokens]]] |
 | [Storybook] | [Storybook] | [Link] |
 
 ## 3. Spacing Specifications
@@ -109,9 +109,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Style Guide]] | Visual standards |
-| [[Design Tokens]] | Token values |
-| [[Component Library]] | Component specs |
+| [[Style-Guide]] | Visual standards |
+| [[Design-Tokens]] | Token values |
+| [[Component-Library]] | Component specs |
 
 ---
 

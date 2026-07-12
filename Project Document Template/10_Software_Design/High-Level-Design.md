@@ -224,10 +224,10 @@ flowchart TB
 
 | Document | Relationship |
 |----------|-------------|
-| [[Software Architecture Document]] | Architecture driving this design |
-| [[LLD (Low-Level Design)]] | Detailed design from this HLD |
-| [[Interface Control Document (ICD)]] | Interface specifications |
-| [[API Specification]] | API contracts |
+| [[Software-Architecture-Document]] | Architecture driving this design |
+| [[Low-Level-Design]] | Detailed design from this HLD |
+| [[Interface-Control-Document]] | Interface specifications |
+| [[API-Specification]] | API contracts |
 
 ---
 

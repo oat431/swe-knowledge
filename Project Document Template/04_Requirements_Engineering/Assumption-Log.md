@@ -90,10 +90,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Risk Analysis Results]] | Invalidated assumptions become risks |
-| [[Project Scope Statement]] | Assumptions underlying scope |
-| [[Business Case]] | Assumptions underlying the business case |
-| [[Change Log]] | Assumption changes may trigger scope changes |
+| [[Risk-Analysis-Results]] | Invalidated assumptions become risks |
+| [[Project-Scope-Statement]] | Assumptions underlying scope |
+| [[Business-Case]] | Assumptions underlying the business case |
+| [[Change-Log]] | Assumption changes may trigger scope changes |
 
 ---
 

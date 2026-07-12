@@ -146,10 +146,10 @@ gantt
 
 | Document | Relationship |
 |----------|-------------|
-| [[Project Schedule]] | Detailed schedule with milestones |
-| [[Activity List]] | Activities between milestones |
-| [[Project Management Plan]] | Phase gates defined |
-| [[Project Charter]] | High-level milestones |
+| [[Project-Schedule]] | Detailed schedule with milestones |
+| [[Activity-List]] | Activities between milestones |
+| [[Project-Management-Plan]] | Phase gates defined |
+| [[Project-Charter]] | High-level milestones |
 
 ---
 

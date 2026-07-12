@@ -148,10 +148,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Project Management Plan]] | Parent plan |
-| [[Resource Management Plan]] | Resource assignments |
-| [[Team Charter]] | Team working agreements |
-| [[Governance Approach]] | Decision authority |
+| [[Project-Management-Plan]] | Parent plan |
+| [[Resource-Management-Plan]] | Resource assignments |
+| [[Team-Charter]] | Team working agreements |
+| [[Governance-Approach]] | Decision authority |
 
 ---
 

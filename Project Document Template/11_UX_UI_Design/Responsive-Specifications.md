@@ -124,9 +124,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Style Guide]] | Visual standards |
-| [[UI Mockups]] | Mockups at each breakpoint |
-| [[Component Library]] | Component responsive behavior |
+| [[Style-Guide]] | Visual standards |
+| [[UI-Mockups]] | Mockups at each breakpoint |
+| [[Component-Library]] | Component responsive behavior |
 
 ---
 

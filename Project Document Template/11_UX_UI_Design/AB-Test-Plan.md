@@ -108,9 +108,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Analytics Dashboard Spec]] | Metrics tracking |
-| [[Usability Test Report]] | Qualitative complement |
-| [[Survey Questionnaire]] | User feedback |
+| [[Analytics-Dashboard-Spec]] | Metrics tracking |
+| [[Usability-Test-Report]] | Qualitative complement |
+| [[Survey-Questionnaire]] | User feedback |
 
 ---
 

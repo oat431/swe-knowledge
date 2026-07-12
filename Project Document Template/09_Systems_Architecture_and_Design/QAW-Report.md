@@ -112,10 +112,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[ASR Catalog]] | ASRs derived from QAW scenarios |
-| [[Architecture Evaluation Report (ATAM)]] | ATAM uses QAW scenarios |
-| [[Nonfunctional Requirements Catalog]] | NFRs formalized from scenarios |
-| [[ADR (Architecture Decision Records)]] | Decisions driven by scenarios |
+| [[ASR-Catalog]] | ASRs derived from QAW scenarios |
+| [[Architecture-Evaluation-Report]] | ATAM uses QAW scenarios |
+| [[Nonfunctional-Requirements-Catalog]] | NFRs formalized from scenarios |
+| [[Architecture-Decision-Records]] | Decisions driven by scenarios |
 
 ---
 

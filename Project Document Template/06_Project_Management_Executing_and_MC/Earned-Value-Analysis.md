@@ -148,12 +148,12 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Cost Baseline]] | BAC and PV baseline |
-| [[Cost Forecasts]] | EAC and ETC detail |
-| [[Schedule Forecasts]] | SPI-based schedule forecasts |
-| [[Work Performance Data]] | Raw EV, AC data |
-| [[Work Performance Information]] | EVM analysis interpretation |
-| [[Variance Analysis Reports]] | Detailed variance analysis |
+| [[Cost-Baseline]] | BAC and PV baseline |
+| [[Cost-Forecasts]] | EAC and ETC detail |
+| [[Schedule-Forecasts]] | SPI-based schedule forecasts |
+| [[Work-Performance-Data]] | Raw EV, AC data |
+| [[Work-Performance-Information]] | EVM analysis interpretation |
+| [[Variance-Analysis-Reports]] | Detailed variance analysis |
 
 ---
 

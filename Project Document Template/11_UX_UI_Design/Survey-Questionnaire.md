@@ -95,8 +95,8 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[User Research Report]] | Research using survey data |
-| [[Usability Test Report]] | Qualitative complement to survey |
+| [[User-Research-Report]] | Research using survey data |
+| [[Usability-Test-Report]] | Qualitative complement to survey |
 
 ---
 

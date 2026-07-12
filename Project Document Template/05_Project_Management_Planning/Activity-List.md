@@ -163,10 +163,10 @@ flowchart LR
 
 | Document | Relationship |
 |----------|-------------|
-| [[WBS]] | Work packages decomposed into activities |
-| [[Milestone List]] | Key milestones from activities |
-| [[Project Schedule]] | Activities with dates |
-| [[Schedule Management Plan]] | How activities are managed |
+| [[WBS-WBS-Dictionary]] | Work packages decomposed into activities |
+| [[Milestone-List]] | Key milestones from activities |
+| [[Project-Schedule]] | Activities with dates |
+| [[Schedule-Management-Plan]] | How activities are managed |
 
 ---
 

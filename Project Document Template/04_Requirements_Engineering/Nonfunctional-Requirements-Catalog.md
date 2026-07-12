@@ -256,11 +256,11 @@ mindmap
 
 | Document | Relationship |
 |----------|-------------|
-| [[SRS]] | NFRs are part of the SRS |
-| [[System Requirements Specification (SyRS)]] | System-level NFRs |
-| [[Business Requirements]] | Business NFRs elaborated here |
-| [[Architecture Decision Records]] | ADRs capture NFR-driven decisions |
-| [[Test Plan]] | NFRs drive performance, security, usability testing |
+| [[Software-Requirements-Specification]] | NFRs are part of the SRS |
+| [[System-Requirements-Specification]] | System-level NFRs |
+| [[Business-Requirements]] | Business NFRs elaborated here |
+| [[Architecture-Decision-Records]] | ADRs capture NFR-driven decisions |
+| [[Usability-Test-Plan]] | NFRs drive performance, security, usability testing |
 
 ---
 

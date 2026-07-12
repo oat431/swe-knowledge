@@ -210,10 +210,10 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[SRS]] | Requirements modeled here |
-| [[Use Case Specifications]] | Use case flows visualized here |
-| [[User Stories]] | Story flows visualized here |
-| [[Process Modeling]] | Design-level process models |
+| [[Software-Requirements-Specification]] | Requirements modeled here |
+| [[Use-Case-Specifications]] | Use case flows visualized here |
+| [[User-Stories]] | Story flows visualized here |
+| [[Activity-Diagrams]] | Design-level process models |
 
 ---
 

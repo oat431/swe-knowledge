@@ -147,9 +147,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Design System]] | System this guide is part of |
-| [[Component Library]] | Components using these styles |
-| [[UI Mockups]] | Mockups following this guide |
+| [[Design-System]] | System this guide is part of |
+| [[Component-Library]] | Components using these styles |
+| [[UI-Mockups]] | Mockups following this guide |
 
 ---
 

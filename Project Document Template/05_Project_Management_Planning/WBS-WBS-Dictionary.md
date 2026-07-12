@@ -197,11 +197,11 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[Project Scope Statement]] | Scope being decomposed |
-| [[Scope Management Plan]] | How WBS is managed |
-| [[Project Schedule]] | Timeline for WBS elements |
-| [[Activity List]] | Activities within work packages |
-| [[Resource Management Plan]] | Resources per work package |
+| [[Project-Scope-Statement]] | Scope being decomposed |
+| [[Scope-Management-Plan]] | How WBS is managed |
+| [[Project-Schedule]] | Timeline for WBS elements |
+| [[Activity-List]] | Activities within work packages |
+| [[Resource-Management-Plan]] | Resources per work package |
 
 ---
 

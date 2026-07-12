@@ -146,9 +146,9 @@ pie title Risk Distribution by Level
 
 | Document | Relationship |
 |----------|-------------|
-| [[Risk Register]] | Detailed risk tracking |
-| [[Risk Management Plan]] | How risks are managed |
-| [[Risk Analysis Results]] | Initial risk analysis |
+| [[Risk-Register]] | Detailed risk tracking |
+| [[Risk-Management-Plan]] | How risks are managed |
+| [[Risk-Analysis-Results]] | Initial risk analysis |
 
 ---
 

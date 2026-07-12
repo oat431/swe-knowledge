@@ -177,9 +177,9 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[Information Architecture (IA)]] | Pages these flows traverse |
-| [[Wireframes (Low-fi)]] | Screen layouts for each step |
-| [[Journey Map]] | Emotional journey behind the flow |
+| [[Information-Architecture]] | Pages these flows traverse |
+| [[Wireframes-Low-fi]] | Screen layouts for each step |
+| [[Journey-Map]] | Emotional journey behind the flow |
 
 ---
 

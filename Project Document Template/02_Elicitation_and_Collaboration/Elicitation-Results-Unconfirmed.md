@@ -21,7 +21,7 @@ standard_ref:
 > **Version:** [X.Y] | **Status:** [Draft — Pending Confirmation]
 > **Last Updated:** [YYYY-MM-DD]
 >
-> ⚠️ **Note:** These are raw outputs from elicitation activities. They have NOT been confirmed with stakeholders and should not be used as approved requirements. See [[Elicitation Results (Confirmed)]] for validated outputs.
+> ⚠️ **Note:** These are raw outputs from elicitation activities. They have NOT been confirmed with stakeholders and should not be used as approved requirements. See [[Elicitation-Results-Confirmed]] for validated outputs.
 
 ---
 
@@ -255,11 +255,11 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[Elicitation Activity Plan]] | Plan that scheduled this activity |
-| [[Elicitation Results (Confirmed)]] | Validated version of these results |
-| [[Business Requirements]] | Requirements derived from confirmed results |
-| [[Current State Description]] | Current state observations feed this document |
-| [[Gap Analysis]] | Pain points inform gap identification |
+| [[Elicitation-Activity-Plan]] | Plan that scheduled this activity |
+| [[Elicitation-Results-Confirmed]] | Validated version of these results |
+| [[Business-Requirements]] | Requirements derived from confirmed results |
+| [[Current-State-Description]] | Current state observations feed this document |
+| [[Gap-Analysis]] | Pain points inform gap identification |
 
 ---
 

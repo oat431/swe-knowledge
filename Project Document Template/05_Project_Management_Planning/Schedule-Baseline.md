@@ -93,7 +93,7 @@ standard_ref:
 | v1.0 | [YYYY-MM-DD] | [Initial baseline] | [Sponsor] |
 | | | | |
 
-> **Note:** Baseline changes require formal change control approval per [[Change Management Plan]].
+> **Note:** Baseline changes require formal change control approval per [[Change-Strategy]].
 
 ---
 
@@ -101,10 +101,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Project Schedule]] | Source of baseline dates |
-| [[Schedule Management Plan]] | How baseline is managed |
-| [[Milestone List]] | Milestone definitions |
-| [[Change Log]] | Baseline changes tracked |
+| [[Project-Schedule]] | Source of baseline dates |
+| [[Schedule-Management-Plan]] | How baseline is managed |
+| [[Milestone-List]] | Milestone definitions |
+| [[Change-Log]] | Baseline changes tracked |
 
 ---
 

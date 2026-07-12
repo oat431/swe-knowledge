@@ -220,12 +220,12 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Cost Estimates]] | Cost figures supported by this basis |
-| [[Cost Baseline]] | Approved costs with this basis |
-| [[Project Schedule]] | Duration figures supported by this basis |
-| [[Functional Size Measurement]] | Size measurement feeding estimates |
-| [[Risk Register]] | Risks driving contingency estimates |
-| [[Resource Requirements]] | Resource assumptions underlying estimates |
+| [[Cost-Estimates]] | Cost figures supported by this basis |
+| [[Cost-Baseline]] | Approved costs with this basis |
+| [[Project-Schedule]] | Duration figures supported by this basis |
+| [[Functional-Size-Measurement]] | Size measurement feeding estimates |
+| [[Risk-Register]] | Risks driving contingency estimates |
+| [[Resource-Requirements]] | Resource assumptions underlying estimates |
 
 ---
 

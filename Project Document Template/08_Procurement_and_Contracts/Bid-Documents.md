@@ -194,10 +194,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Sourcing Strategy Plan]] | Sourcing decisions driving bids |
-| [[Source Selection Criteria]] | Evaluation criteria |
-| [[Procurement Statement of Work (SOW)]] | SOW for selected vendor |
-| [[Contract / Agreement]] | Final contract |
+| [[Sourcing-Strategy-Plan]] | Sourcing decisions driving bids |
+| [[Source-Selection-Criteria]] | Evaluation criteria |
+| [[Procurement-Statement-of-Work]] | SOW for selected vendor |
+| [[Contract-Agreement]] | Final contract |
 
 ---
 

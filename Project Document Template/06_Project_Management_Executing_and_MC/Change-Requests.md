@@ -162,11 +162,11 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Change Log]] | Comprehensive list of all changes |
-| [[Requirements Change Log]] | Requirements-specific changes |
-| [[Requirements Change Assessment]] | Impact analysis template |
-| [[Governance Approach]] | Change authority definitions |
-| [[Configuration Management Plan]] | Version control for changes |
+| [[Change-Log]] | Comprehensive list of all changes |
+| [[Requirements-Change-Log]] | Requirements-specific changes |
+| [[Requirements-Change-Assessment]] | Impact analysis template |
+| [[Governance-Approach]] | Change authority definitions |
+| [[Change-Requests]] | Version control for changes |
 
 ---
 

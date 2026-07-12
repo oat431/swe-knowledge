@@ -183,11 +183,11 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Risk Register]] | Detailed risk tracking |
-| [[Risk Report]] | Risk status reporting |
-| [[Risk Analysis Results]] | Initial risk analysis |
-| [[Assumption Log]] | Invalidated assumptions become risks |
-| [[Project Management Plan]] | Parent plan |
+| [[Risk-Register]] | Detailed risk tracking |
+| [[Risk-Report]] | Risk status reporting |
+| [[Risk-Analysis-Results]] | Initial risk analysis |
+| [[Assumption-Log]] | Invalidated assumptions become risks |
+| [[Project-Management-Plan]] | Parent plan |
 
 ---
 

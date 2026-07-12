@@ -182,10 +182,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Project Closure Document]] | Formal closure and handover |
-| [[Lessons Learned Register]] | Lessons captured |
-| [[Benefits Management Plan]] | Benefits to be realized |
-| [[Business Case]] | Original justification |
+| [[Project-Closure-Document]] | Formal closure and handover |
+| [[Lessons-Learned-Register]] | Lessons captured |
+| [[Benefits-Management-Plan]] | Benefits to be realized |
+| [[Business-Case]] | Original justification |
 
 ---
 

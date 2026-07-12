@@ -148,11 +148,11 @@ flowchart LR
 
 | Document | Relationship |
 |----------|-------------|
-| [[Project Schedule]] | Baseline schedule |
-| [[Schedule Baseline]] | Approved baseline dates |
-| [[Work Performance Data]] | Actual progress data |
-| [[Work Performance Information]] | Schedule analysis |
-| [[Earned Value Analysis]] | SPI calculations |
+| [[Project-Schedule]] | Baseline schedule |
+| [[Schedule-Baseline]] | Approved baseline dates |
+| [[Work-Performance-Data]] | Actual progress data |
+| [[Work-Performance-Information]] | Schedule analysis |
+| [[Earned-Value-Analysis]] | SPI calculations |
 
 ---
 

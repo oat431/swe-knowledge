@@ -127,9 +127,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Analytics Dashboard]] | Implementation |
-| [[Operational KPIs Report]] | KPI definitions |
-| [[A/B Test Plan]] | Testing metrics |
+| [[Analytics-Dashboard-Spec]] | Implementation |
+| [[Quality-Metrics]] | KPI definitions |
+| [[AB-Test-Plan]] | Testing metrics |
 
 ---
 

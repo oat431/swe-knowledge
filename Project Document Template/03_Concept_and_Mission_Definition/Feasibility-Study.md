@@ -252,11 +252,11 @@ The project is feasible across all dimensions. Key risks (data migration, user a
 
 | Document | Relationship |
 |----------|-------------|
-| [[Business Case]] | Economic feasibility supports the business case |
-| [[Mission Analysis Report]] | Mission need justifies the feasibility study |
-| [[Risk Analysis Results]] | Feasibility risks feed into risk analysis |
-| [[Market Analysis / Technology Assessment]] | Technology options assessed here |
-| [[Change Strategy]] | Operational feasibility informs change approach |
+| [[Business-Case]] | Economic feasibility supports the business case |
+| [[Mission-Analysis-Report]] | Mission need justifies the feasibility study |
+| [[Risk-Analysis-Results]] | Feasibility risks feed into risk analysis |
+| [[Market-Analysis-Technology-Assessment]] | Technology options assessed here |
+| [[Change-Strategy]] | Operational feasibility informs change approach |
 
 ---
 

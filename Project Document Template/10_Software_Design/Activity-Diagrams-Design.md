@@ -193,9 +193,9 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[Sequence Diagrams]] | Interactions within activities |
-| [[State Diagrams]] | State changes triggered by activities |
-| [[LLD (Low-Level Design)]] | Implementation of workflows |
+| [[Sequence-Diagrams]] | Interactions within activities |
+| [[State-Diagrams]] | State changes triggered by activities |
+| [[Low-Level-Design]] | Implementation of workflows |
 
 ---
 

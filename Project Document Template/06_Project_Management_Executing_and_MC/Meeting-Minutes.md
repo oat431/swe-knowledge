@@ -158,10 +158,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Change Log]] | Decisions that led to changes |
-| [[Issue Log]] | Issues raised in meetings |
-| [[Risk Register]] | Risks identified in meetings |
-| [[Communications Management Plan]] | Meeting cadence and format |
+| [[Change-Log]] | Decisions that led to changes |
+| [[Issue-Log]] | Issues raised in meetings |
+| [[Risk-Register]] | Risks identified in meetings |
+| [[Communications-Management-Plan]] | Meeting cadence and format |
 
 ---
 

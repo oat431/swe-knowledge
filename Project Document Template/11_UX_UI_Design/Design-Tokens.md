@@ -191,9 +191,9 @@ flowchart LR
 
 | Document | Relationship |
 |----------|-------------|
-| [[Style Guide]] | Visual standards these tokens implement |
-| [[Design System]] | System these tokens are part of |
-| [[Design Specifications]] | Specs using these tokens |
+| [[Style-Guide]] | Visual standards these tokens implement |
+| [[Design-System]] | System these tokens are part of |
+| [[Design-Specifications]] | Specs using these tokens |
 
 ---
 

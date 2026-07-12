@@ -125,10 +125,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Bid Documents]] | RFP/RFQ that vendors respond to |
-| [[Sourcing Strategy Plan]] | Sourcing decisions |
-| [[Procurement Statement of Work (SOW)]] | SOW for selected vendor |
-| [[Contract / Agreement]] | Final contract |
+| [[Bid-Documents]] | RFP/RFQ that vendors respond to |
+| [[Sourcing-Strategy-Plan]] | Sourcing decisions |
+| [[Procurement-Statement-of-Work]] | SOW for selected vendor |
+| [[Contract-Agreement]] | Final contract |
 
 ---
 

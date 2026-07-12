@@ -376,11 +376,11 @@ mindmap
 
 | Document | Relationship |
 |----------|-------------|
-| [[Business Analysis Approach]] | BA approach being assessed |
-| [[Governance Approach]] | Governance framework being followed |
-| [[Requirements Traceability Matrix]] | Source of traceability metrics |
-| [[Stakeholder Engagement Approach]] | Source of satisfaction data |
-| [[Lessons Learned Register]] | Detailed lessons captured during project |
+| [[Business-Analysis-Approach]] | BA approach being assessed |
+| [[Governance-Approach]] | Governance framework being followed |
+| [[Requirements-Traceability-Matrix]] | Source of traceability metrics |
+| [[Stakeholder-Engagement-Approach]] | Source of satisfaction data |
+| [[Lessons-Learned-Register]] | Detailed lessons captured during project |
 
 ---
 

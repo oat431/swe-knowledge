@@ -100,8 +100,8 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[User Research Report]] | User needs informing analysis |
-| [[Design System]] | Design standards |
+| [[User-Research-Report]] | User needs informing analysis |
+| [[Design-System]] | Design standards |
 
 ---
 

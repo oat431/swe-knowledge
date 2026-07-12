@@ -86,11 +86,11 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Risk Management Plan]] | How risks are managed |
-| [[Risk Report]] | Risk status reporting |
-| [[Risk Analysis Results]] | Initial risk analysis |
-| [[Assumption Log]] | Invalidated assumptions → risks |
-| [[Change Log]] | Scope changes may create risks |
+| [[Risk-Management-Plan]] | How risks are managed |
+| [[Risk-Report]] | Risk status reporting |
+| [[Risk-Analysis-Results]] | Initial risk analysis |
+| [[Assumption-Log]] | Invalidated assumptions → risks |
+| [[Change-Log]] | Scope changes may create risks |
 
 ---
 

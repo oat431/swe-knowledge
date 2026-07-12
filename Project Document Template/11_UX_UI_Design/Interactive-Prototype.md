@@ -93,9 +93,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Wireframes (Mid-fi)]] | Wireframes the prototype implements |
-| [[UI Mockups]] | Visual design in prototype |
-| [[Usability Test Plan]] | Testing the prototype |
+| [[Wireframes-Mid-fi]] | Wireframes the prototype implements |
+| [[UI-Mockups]] | Visual design in prototype |
+| [[Usability-Test-Plan]] | Testing the prototype |
 
 ---
 

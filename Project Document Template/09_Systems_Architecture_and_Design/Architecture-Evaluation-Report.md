@@ -162,10 +162,10 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[Software Architecture Document]] | Architecture being evaluated |
-| [[ASR Catalog]] | Quality attribute scenarios |
-| [[Architecture Decision Records]] | Decisions analyzed here |
-| [[Nonfunctional Requirements Catalog]] | NFRs driving quality attributes |
+| [[Software-Architecture-Document]] | Architecture being evaluated |
+| [[ASR-Catalog]] | Quality attribute scenarios |
+| [[Architecture-Decision-Records]] | Decisions analyzed here |
+| [[Nonfunctional-Requirements-Catalog]] | NFRs driving quality attributes |
 
 ---
 

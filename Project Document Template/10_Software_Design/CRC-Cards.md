@@ -229,9 +229,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Class Diagrams]] | Formal UML version of CRC |
-| [[LLD (Low-Level Design)]] | Implementation details |
-| [[Design Pattern Catalog]] | Patterns applied |
+| [[Class-Diagrams]] | Formal UML version of CRC |
+| [[Low-Level-Design]] | Implementation details |
+| [[Design-Pattern-Catalog]] | Patterns applied |
 
 ---
 

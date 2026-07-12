@@ -135,10 +135,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[SRS]] | Requirements being verified |
-| [[Requirements (Validated)]] | Validation confirms stakeholder agreement |
-| [[Requirements Traceability Matrix]] | Traceability verified here |
-| [[Acceptance Criteria]] | Testability verified here |
+| [[Software-Requirements-Specification]] | Requirements being verified |
+| [[Requirements-Validated]] | Validation confirms stakeholder agreement |
+| [[Requirements-Traceability-Matrix]] | Traceability verified here |
+| [[Acceptance-Criteria]] | Testability verified here |
 
 ---
 

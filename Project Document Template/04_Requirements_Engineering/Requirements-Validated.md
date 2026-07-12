@@ -126,10 +126,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[SRS]] | Requirements being validated |
-| [[Requirements (Verified)]] | Verification of form — companion to this validation |
-| [[Stakeholder Needs Document]] | Needs confirmed here |
-| [[Requirements Traceability Matrix]] | Traceability confirms needs coverage |
+| [[Software-Requirements-Specification]] | Requirements being validated |
+| [[Requirements-Verified]] | Verification of form — companion to this validation |
+| [[Stakeholder-Needs-Document]] | Needs confirmed here |
+| [[Requirements-Traceability-Matrix]] | Traceability confirms needs coverage |
 
 ---
 

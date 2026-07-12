@@ -184,7 +184,7 @@ Proposed
 |------|-------------|
 | [One decision per ADR] | [Each ADR covers exactly one decision] |
 | [Immutable once accepted] | [Don't edit — create a new ADR to supersede] |
-| [Link to trade studies] | [Reference [[Trade Study Reports]] for detailed analysis] |
+| [Link to trade studies] | [Reference [[Trade-Study-Reports]] for detailed analysis] |
 | [Store in version control] | [ADRs live in the repo alongside code] |
 | [Review in architecture reviews] | [Present ADRs at design reviews] |
 
@@ -194,10 +194,10 @@ Proposed
 
 | Document | Relationship |
 |----------|-------------|
-| [[Trade Study Reports]] | Detailed analysis behind decisions |
-| [[Software Architecture Document]] | Architecture that ADRs define |
-| [[System Architecture Description]] | System-level architecture |
-| [[Design Rationale]] | Broader design justification |
+| [[Trade-Study-Reports]] | Detailed analysis behind decisions |
+| [[Software-Architecture-Document]] | Architecture that ADRs define |
+| [[System-Architecture-Description]] | System-level architecture |
+| [[Design-Rationale]] | Broader design justification |
 
 ---
 

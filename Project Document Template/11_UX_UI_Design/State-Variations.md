@@ -127,9 +127,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[UI Mockups]] | Visual designs for each state |
-| [[Component Library]] | Component state specifications |
-| [[Accessibility Audit]] | Accessible state requirements |
+| [[UI-Mockups]] | Visual designs for each state |
+| [[Component-Library]] | Component state specifications |
+| [[Accessibility-Audit]] | Accessible state requirements |
 
 ---
 

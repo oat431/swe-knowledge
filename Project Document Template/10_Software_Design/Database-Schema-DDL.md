@@ -271,9 +271,9 @@ CREATE TRIGGER trg_requests_audit
 
 | Document | Relationship |
 |----------|-------------|
-| [[ERD (Entity-Relationship Diagram)]] | Logical model this schema implements |
-| [[Data Dictionary]] | Data element definitions |
-| [[LLD (Low-Level Design)]] | Design using this schema |
+| [[ERD]] | Logical model this schema implements |
+| [[Data-Dictionary]] | Data element definitions |
+| [[Low-Level-Design]] | Design using this schema |
 
 ---
 

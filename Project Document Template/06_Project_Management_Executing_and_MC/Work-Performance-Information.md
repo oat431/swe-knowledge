@@ -25,7 +25,7 @@ standard_ref:
 
 ## 1. Purpose
 
-> This document analyzes raw work performance data to identify trends, patterns, and insights. While [[Work Performance Data]] captures *what happened*, this document answers *what it means*.
+> This document analyzes raw work performance data to identify trends, patterns, and insights. While [[Work-Performance-Data]] captures *what happened*, this document answers *what it means*.
 
 ## 2. Performance Analysis
 
@@ -144,11 +144,11 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Work Performance Data]] | Raw data analyzed here |
-| [[Work Performance Reports]] | Reports produced from this analysis |
-| [[Cost Forecasts]] | Cost forecast detail |
-| [[Schedule Forecasts]] | Schedule forecast detail |
-| [[Earned Value Analysis]] | EVM analysis detail |
+| [[Work-Performance-Data]] | Raw data analyzed here |
+| [[Work-Performance-Reports]] | Reports produced from this analysis |
+| [[Cost-Forecasts]] | Cost forecast detail |
+| [[Schedule-Forecasts]] | Schedule forecast detail |
+| [[Earned-Value-Analysis]] | EVM analysis detail |
 
 ---
 

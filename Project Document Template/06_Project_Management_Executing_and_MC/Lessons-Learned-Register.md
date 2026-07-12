@@ -116,11 +116,11 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Sprint Retrospective]] | Sprint-level lessons |
-| [[Risk Register]] | Lessons inform risk identification |
-| [[Change Log]] | Lessons from changes |
-| [[Issue Log]] | Lessons from issues |
-| [[Project Closure Report]] | Final lessons compilation |
+| [[Lessons-Learned-Register]] | Sprint-level lessons |
+| [[Risk-Register]] | Lessons inform risk identification |
+| [[Change-Log]] | Lessons from changes |
+| [[Issue-Log]] | Lessons from issues |
+| [[Project-Closure-Document]] | Final lessons compilation |
 
 ---
 

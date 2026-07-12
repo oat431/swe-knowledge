@@ -88,9 +88,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Software Architecture Document]] | Architecture using these patterns |
-| [[ADR (Architecture Decision Records)]] | Decisions to use specific patterns |
-| [[Design Pattern Catalog]] | GoF patterns at code level |
+| [[Software-Architecture-Document]] | Architecture using these patterns |
+| [[Architecture-Decision-Records]] | Decisions to use specific patterns |
+| [[Design-Pattern-Catalog]] | GoF patterns at code level |
 
 ---
 

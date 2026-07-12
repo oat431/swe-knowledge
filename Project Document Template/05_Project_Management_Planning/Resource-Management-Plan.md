@@ -193,11 +193,11 @@ gantt
 
 | Document | Relationship |
 |----------|-------------|
-| [[Resource Requirements]] | Detailed resource needs |
-| [[Resource Breakdown Structure]] | Resource hierarchy |
-| [[Team Charter]] | Team working agreements |
-| [[Skill Matrix]] | Skills assessment |
-| [[Project Management Plan]] | Parent plan |
+| [[Resource-Requirements]] | Detailed resource needs |
+| [[Resource-Breakdown-Structure]] | Resource hierarchy |
+| [[Team-Charter]] | Team working agreements |
+| [[Skill-Matrix]] | Skills assessment |
+| [[Project-Management-Plan]] | Parent plan |
 
 ---
 

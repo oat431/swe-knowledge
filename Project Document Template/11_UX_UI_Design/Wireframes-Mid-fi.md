@@ -19,7 +19,7 @@ standard_ref:
 > **Version:** [X.Y] | **Status:** [Draft | Under Review | Approved]
 > **Last Updated:** [YYYY-MM-DD]
 >
-> ⚠️ **Note:** Mid-fi wireframes add more detail than low-fi — realistic content, actual spacing, interaction patterns. For final visual design, see [[UI Mockups]] in Figma.
+> ⚠️ **Note:** Mid-fi wireframes add more detail than low-fi — realistic content, actual spacing, interaction patterns. For final visual design, see [[UI-Mockups]] in Figma.
 
 ## 1. Purpose
 
@@ -144,9 +144,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Wireframes (Low-fi)]] | Low-fi version |
-| [[UI Mockups]] | Visual design (Figma) |
-| [[Component Library]] | Components used |
+| [[Wireframes-Low-fi]] | Low-fi version |
+| [[UI-Mockups]] | Visual design (Figma) |
+| [[Component-Library]] | Components used |
 
 ---
 

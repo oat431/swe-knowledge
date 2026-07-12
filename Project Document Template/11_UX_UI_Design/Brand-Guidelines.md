@@ -99,9 +99,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Style Guide]] | Detailed visual standards |
-| [[Design System]] | System implementing brand |
-| [[Asset Export Package]] | Logo and brand assets |
+| [[Style-Guide]] | Detailed visual standards |
+| [[Design-System]] | System implementing brand |
+| [[Asset-Export-Package]] | Logo and brand assets |
 
 ---
 

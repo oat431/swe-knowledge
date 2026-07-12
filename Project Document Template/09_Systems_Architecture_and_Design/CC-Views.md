@@ -149,10 +149,10 @@ flowchart LR
 
 | Document | Relationship |
 |----------|-------------|
-| [[Logical Architecture]] | Logical components |
-| [[Physical Architecture]] | Deployment of C&C |
-| [[Interface Control Document (ICD)]] | Connector specifications |
-| [[Architecture Views (4+1)]] | Process view |
+| [[Logical-Architecture]] | Logical components |
+| [[Physical-Architecture]] | Deployment of C&C |
+| [[Interface-Control-Document]] | Connector specifications |
+| [[Architecture-Views-4-1]] | Process view |
 
 ---
 

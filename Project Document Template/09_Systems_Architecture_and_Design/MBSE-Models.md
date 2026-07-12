@@ -194,10 +194,10 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[System Architecture Description]] | Architecture modeled here |
-| [[SRS]] | Requirements modeled here |
-| [[Functional Architecture]] | Functions modeled here |
-| [[Architecture Views (4+1)]] | Views using MBSE models |
+| [[System-Architecture-Description]] | Architecture modeled here |
+| [[Software-Requirements-Specification]] | Requirements modeled here |
+| [[Functional-Architecture]] | Functions modeled here |
+| [[Architecture-Views-4-1]] | Views using MBSE models |
 
 ---
 

@@ -19,7 +19,7 @@ standard_ref:
 > **Version:** [X.Y] | **Status:** [Draft | Under Review | Approved]
 > **Last Updated:** [YYYY-MM-DD]
 >
-> ⚠️ **Note:** Low-fi wireframes are *structural blueprints* — they show layout and hierarchy without visual design. For pixel-perfect mockups, see [[UI Mockups]] in Figma.
+> ⚠️ **Note:** Low-fi wireframes are *structural blueprints* — they show layout and hierarchy without visual design. For pixel-perfect mockups, see [[UI-Mockups]] in Figma.
 
 ## 1. Purpose
 
@@ -211,9 +211,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Wireframes (Mid-fi)]] | Higher fidelity version |
-| [[UI Mockups]] | Visual design (Figma) |
-| [[User Flows]] | Flows these wireframes support |
+| [[Wireframes-Mid-fi]] | Higher fidelity version |
+| [[UI-Mockups]] | Visual design (Figma) |
+| [[User-Flows]] | Flows these wireframes support |
 
 ---
 

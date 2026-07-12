@@ -305,14 +305,14 @@ quadrantChart
 
 | Document | Relationship |
 |----------|-------------|
-| [[Solution Recommendation]] | This document feeds the formal recommendation |
-| [[Business Requirements]] | Requirements drive the evaluation criteria |
-| [[Business Case]] | Cost and benefit data for each option |
-| [[Risk Analysis Results]] | Risk assessment for each option |
-| [[Trade Study Reports]] | SE-level detailed trade studies |
-| [[Architecture Decision Records]] | ADRs capture the rationale for chosen option |
+| [[Solution-Recommendation]] | This document feeds the formal recommendation |
+| [[Business-Requirements]] | Requirements drive the evaluation criteria |
+| [[Business-Case]] | Cost and benefit data for each option |
+| [[Risk-Analysis-Results]] | Risk assessment for each option |
+| [[Trade-Study-Reports]] | SE-level detailed trade studies |
+| [[Architecture-Decision-Records]] | ADRs capture the rationale for chosen option |
 
 ---
 
 > **Template Standard:** Based on BABOK v3 (Requirements Analysis & Design Definition), PMBOK v8 (Scope Management)
-> **Usage:** This document presents *options*, not a decision. The [[Solution Recommendation]] captures the formal decision. Always evaluate at least 3 options (including do-nothing) to demonstrate due diligence.
+> **Usage:** This document presents *options*, not a decision. The [[Solution-Recommendation]] captures the formal decision. Always evaluate at least 3 options (including do-nothing) to demonstrate due diligence.

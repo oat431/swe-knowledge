@@ -107,9 +107,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Usability Test Plan]] | Test plan that generated this report |
-| [[Interactive Prototype]] | Prototype tested |
-| [[User Personas]] | Participants matched personas |
+| [[Usability-Test-Plan]] | Test plan that generated this report |
+| [[Interactive-Prototype]] | Prototype tested |
+| [[User-Personas]] | Participants matched personas |
 
 ---
 

@@ -158,10 +158,10 @@ flowchart LR
 
 | Document | Relationship |
 |----------|-------------|
-| [[Class Diagrams]] | Internal structure of components |
-| [[Interface Control Document (ICD)]] | Interface specifications |
-| [[Deployment Diagrams]] | Physical deployment of components |
-| [[Architecture Views (4+1)]] | Development view |
+| [[Class-Diagrams]] | Internal structure of components |
+| [[Interface-Control-Document]] | Interface specifications |
+| [[Deployment-Diagrams]] | Physical deployment of components |
+| [[Architecture-Views-4-1]] | Development view |
 
 ---
 

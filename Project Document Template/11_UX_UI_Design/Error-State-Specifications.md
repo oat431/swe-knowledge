@@ -127,9 +127,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[State Variations]] | Error states as part of overall states |
-| [[Component Library]] | Error component specs |
-| [[Accessibility Audit]] | Accessible error requirements |
+| [[State-Variations]] | Error states as part of overall states |
+| [[Component-Library]] | Error component specs |
+| [[Accessibility-Audit]] | Accessible error requirements |
 
 ---
 

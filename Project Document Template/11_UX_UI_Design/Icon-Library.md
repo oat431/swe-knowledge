@@ -99,9 +99,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Component Library]] | Components using icons |
-| [[Style Guide]] | Icon color guidelines |
-| [[Asset Export Package]] | Icon export specs |
+| [[Component-Library]] | Components using icons |
+| [[Style-Guide]] | Icon color guidelines |
+| [[Asset-Export-Package]] | Icon export specs |
 
 ---
 

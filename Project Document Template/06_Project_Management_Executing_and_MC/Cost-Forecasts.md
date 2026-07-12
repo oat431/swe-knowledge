@@ -141,11 +141,11 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Cost Baseline]] | Baseline being forecasted against |
-| [[Work Performance Data]] | Actual cost data |
-| [[Work Performance Information]] | Cost analysis |
-| [[Financial Management Plan]] | How costs are managed |
-| [[Earned Value Analysis]] | EVM calculations |
+| [[Cost-Baseline]] | Baseline being forecasted against |
+| [[Work-Performance-Data]] | Actual cost data |
+| [[Work-Performance-Information]] | Cost analysis |
+| [[Financial-Management-Plan]] | How costs are managed |
+| [[Earned-Value-Analysis]] | EVM calculations |
 
 ---
 

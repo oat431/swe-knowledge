@@ -73,7 +73,7 @@ standard_ref:
 | Field | Detail |
 |-------|--------|
 | Decision Required | [Approve / Reject / Defer the recommended solution] |
-| Options Evaluated | [X] — see [[Design Options]] |
+| Options Evaluated | [X] — see [[Design-Options]] |
 | Recommended Option | [Option Name] |
 | Investment Required | $[Total] |
 | Expected ROI | [X%] |
@@ -379,14 +379,14 @@ gantt
 
 | Document | Relationship |
 |----------|-------------|
-| [[Design Options]] | Options evaluated — this document captures the decision |
-| [[Business Case]] | Recommendation delivers the benefits in the Business Case |
-| [[Business Objectives]] | Solution is designed to achieve these objectives |
-| [[Risk Analysis Results]] | Risks summarized from detailed risk analysis |
-| [[Change Strategy]] | Implementation approach from Change Strategy |
-| [[Architecture Decision Records]] | ADRs capture detailed technical rationale |
+| [[Design-Options]] | Options evaluated — this document captures the decision |
+| [[Business-Case]] | Recommendation delivers the benefits in the Business Case |
+| [[Business-Objectives]] | Solution is designed to achieve these objectives |
+| [[Risk-Analysis-Results]] | Risks summarized from detailed risk analysis |
+| [[Change-Strategy]] | Implementation approach from Change Strategy |
+| [[Architecture-Decision-Records]] | ADRs capture detailed technical rationale |
 
 ---
 
 > **Template Standard:** Based on BABOK v3 (Requirements Analysis & Design Definition), PMBOK v8 (Integration Management)
-> **Usage:** This is the *decision document* — it captures what was recommended, why, and the formal approval. Keep it concise; the supporting detail lives in [[Design Options]], [[Business Case]], and [[Risk Analysis Results]].
+> **Usage:** This is the *decision document* — it captures what was recommended, why, and the formal approval. Keep it concise; the supporting detail lives in [[Design-Options]], [[Business-Case]], and [[Risk-Analysis-Results]].

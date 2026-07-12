@@ -125,9 +125,9 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[Information Architecture (IA)]] | IA structure this sitemap visualizes |
-| [[User Flows]] | Flows through these pages |
-| [[Wireframes (Low-fi)]] | Page layouts |
+| [[Information-Architecture]] | IA structure this sitemap visualizes |
+| [[User-Flows]] | Flows through these pages |
+| [[Wireframes-Low-fi]] | Page layouts |
 
 ---
 

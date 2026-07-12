@@ -184,13 +184,13 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Business Case]] | Justification for these requirements |
-| [[Business Objectives]] | Detailed objective definitions |
-| [[SRS]] | Software requirements elaborated from BRD |
-| [[Nonfunctional Requirements Catalog]] | Detailed NFR specifications |
-| [[Requirements Traceability Matrix]] | Full traceability |
+| [[Business-Case]] | Justification for these requirements |
+| [[Business-Objectives]] | Detailed objective definitions |
+| [[Software-Requirements-Specification]] | Software requirements elaborated from BRD |
+| [[Nonfunctional-Requirements-Catalog]] | Detailed NFR specifications |
+| [[Requirements-Traceability-Matrix]] | Full traceability |
 
 ---
 
 > **Template Standard:** Based on SWEBOK v4, BABOK v3
-> **Usage:** The BRD captures *business-level* requirements in business language. It is the bridge between the [[Business Case]] (why) and the [[SRS]] (how). Technical details belong in the SRS.
+> **Usage:** The BRD captures *business-level* requirements in business language. It is the bridge between the [[Business-Case]] (why) and the [[Software-Requirements-Specification]] (how). Technical details belong in the SRS.

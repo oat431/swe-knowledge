@@ -258,9 +258,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[User Research Report]] | Research data behind personas |
-| [[Journey Map]] | Persona journeys |
-| [[User Flows]] | Persona task flows |
+| [[User-Research-Report]] | Research data behind personas |
+| [[Journey-Map]] | Persona journeys |
+| [[User-Flows]] | Persona task flows |
 
 ---
 

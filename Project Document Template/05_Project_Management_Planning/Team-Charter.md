@@ -135,9 +135,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Resource Management Plan]] | Resource management context |
-| [[Governance Approach]] | Decision-making framework |
-| [[Communications Management Plan]] | Communication procedures |
+| [[Resource-Management-Plan]] | Resource management context |
+| [[Governance-Approach]] | Decision-making framework |
+| [[Communications-Management-Plan]] | Communication procedures |
 
 ---
 

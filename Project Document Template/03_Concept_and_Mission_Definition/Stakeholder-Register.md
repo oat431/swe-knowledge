@@ -223,11 +223,11 @@ quadrantChart
 
 | Document | Relationship |
 |----------|-------------|
-| [[Stakeholder Engagement Approach]] | Detailed engagement strategy |
-| [[Stakeholder Needs Document]] | Needs captured per stakeholder |
-| [[Communications Management Plan]] | Communication procedures |
-| [[Change Strategy]] | Change management for resistant stakeholders |
-| [[Governance Approach]] | Decision authority per stakeholder |
+| [[Stakeholder-Engagement-Approach]] | Detailed engagement strategy |
+| [[Stakeholder-Needs-Document]] | Needs captured per stakeholder |
+| [[Communications-Management-Plan]] | Communication procedures |
+| [[Change-Strategy]] | Change management for resistant stakeholders |
+| [[Governance-Approach]] | Decision authority per stakeholder |
 
 ---
 

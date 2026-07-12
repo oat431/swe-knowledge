@@ -174,10 +174,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[SRS]] | Requirements being sized |
-| [[User Stories]] | Stories being estimated |
-| [[Project Scope Statement]] | Scope being measured |
-| [[WBS]] | Work breakdown uses these estimates |
+| [[Software-Requirements-Specification]] | Requirements being sized |
+| [[User-Stories]] | Stories being estimated |
+| [[Project-Scope-Statement]] | Scope being measured |
+| [[WBS-WBS-Dictionary]] | Work breakdown uses these estimates |
 
 ---
 

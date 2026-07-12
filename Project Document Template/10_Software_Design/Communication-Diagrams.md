@@ -133,9 +133,9 @@ flowchart LR
 
 | Document | Relationship |
 |----------|-------------|
-| [[Sequence Diagrams]] | Time-ordered version of same interactions |
-| [[Class Diagrams]] | Object structure |
-| [[Interface Control Document (ICD)]] | Interface specifications |
+| [[Sequence-Diagrams]] | Time-ordered version of same interactions |
+| [[Class-Diagrams]] | Object structure |
+| [[Interface-Control-Document]] | Interface specifications |
 
 ---
 

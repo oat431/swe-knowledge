@@ -169,10 +169,10 @@ flowchart LR
 
 | Document | Relationship |
 |----------|-------------|
-| [[Functional Architecture]] | Functions allocated to logical components |
-| [[Physical Architecture]] | Physical deployment of logical components |
-| [[Interface Control Document (ICD)]] | Detailed interface specifications |
-| [[SAD (Software Architecture Document)]] | Software-level architecture |
+| [[Functional-Architecture]] | Functions allocated to logical components |
+| [[Physical-Architecture]] | Physical deployment of logical components |
+| [[Interface-Control-Document]] | Detailed interface specifications |
+| [[Software-Architecture-Document]] | Software-level architecture |
 
 ---
 

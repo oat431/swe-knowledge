@@ -267,9 +267,9 @@ classDiagram
 
 | Document | Relationship |
 |----------|-------------|
-| [[LLD (Low-Level Design)]] | Design details |
-| [[Sequence Diagrams]] | Behavioral interactions |
-| [[ERD (Entity-Relationship Diagram)]] | Data model |
+| [[Low-Level-Design]] | Design details |
+| [[Sequence-Diagrams]] | Behavioral interactions |
+| [[ERD]] | Data model |
 
 ---
 

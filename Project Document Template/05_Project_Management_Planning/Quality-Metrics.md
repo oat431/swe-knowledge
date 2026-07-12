@@ -176,10 +176,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Quality Management Plan]] | How quality is managed |
-| [[Nonfunctional Requirements Catalog]] | Quality attribute requirements |
-| [[Test Plan]] | Testing strategy |
-| [[Defect Report]] | Detailed defect tracking |
+| [[Quality-Management-Plan]] | How quality is managed |
+| [[Nonfunctional-Requirements-Catalog]] | Quality attribute requirements |
+| [[Usability-Test-Plan]] | Testing strategy |
+| [[Quality-Metrics]] | Detailed defect tracking |
 
 ---
 

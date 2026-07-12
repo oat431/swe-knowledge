@@ -43,7 +43,7 @@ standard_ref:
 
 > Shows the system's functional structure — components and their interactions.
 
-See: [[Logical Architecture]]
+See: [[Logical-Architecture]]
 
 ### 3.2 Process View (How)
 
@@ -90,7 +90,7 @@ sequenceDiagram
 
 > Shows how software maps to hardware — deployment, infrastructure.
 
-See: [[Physical Architecture]]
+See: [[Physical-Architecture]]
 
 ### 3.5 Scenarios View (Use Cases)
 
@@ -140,11 +140,11 @@ See: [[Physical Architecture]]
 
 | Document | Relationship |
 |----------|-------------|
-| [[Functional Architecture]] | Functions described here |
-| [[Logical Architecture]] | Logical components |
-| [[Physical Architecture]] | Physical deployment |
-| [[Architecture Views (4+1)]] | Detailed views |
-| [[ADR (Architecture Decision Records)]] | Decision rationale |
+| [[Functional-Architecture]] | Functions described here |
+| [[Logical-Architecture]] | Logical components |
+| [[Physical-Architecture]] | Physical deployment |
+| [[Architecture-Views-4-1]] | Detailed views |
+| [[Architecture-Decision-Records]] | Decision rationale |
 
 ---
 

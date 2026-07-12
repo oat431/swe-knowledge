@@ -32,10 +32,10 @@ standard_ref:
 
 | View | Stakeholder | Concern | Diagram |
 |------|-----------|---------|---------|
-| **Logical** | End Users, Developers | Functionality, structure | [[Logical Architecture]] |
+| **Logical** | End Users, Developers | Functionality, structure | [[Logical-Architecture]] |
 | **Process** | System Integrators | Concurrency, performance | Sequence diagrams |
 | **Development** | Developers, Managers | Organization, reuse | Module diagrams |
-| **Physical** | System Engineers | Deployment, infrastructure | [[Physical Architecture]] |
+| **Physical** | System Engineers | Deployment, infrastructure | [[Physical-Architecture]] |
 | **Scenarios (+1)** | All | Validation, use cases | Use case diagrams |
 
 ## 3. Logical View
@@ -74,7 +74,7 @@ flowchart TB
     style Data fill:#9C27B0,color:#fff
 ```
 
-> **Detail:** See [[Logical Architecture]]
+> **Detail:** See [[Logical-Architecture]]
 
 ## 4. Process View
 
@@ -163,7 +163,7 @@ flowchart TD
 > **Stakeholder:** System Engineers
 > **Concern:** How is the system deployed?
 
-> **Detail:** See [[Physical Architecture]]
+> **Detail:** See [[Physical-Architecture]]
 
 ```mermaid
 flowchart TB
@@ -221,10 +221,10 @@ flowchart TB
 
 | Document | Relationship |
 |----------|-------------|
-| [[Logical Architecture]] | Logical view detail |
-| [[Physical Architecture]] | Physical view detail |
-| [[Software Architecture Document]] | Comprehensive architecture |
-| [[System Architecture Description]] | System-level architecture |
+| [[Logical-Architecture]] | Logical view detail |
+| [[Physical-Architecture]] | Physical view detail |
+| [[Software-Architecture-Document]] | Comprehensive architecture |
+| [[System-Architecture-Description]] | System-level architecture |
 
 ---
 

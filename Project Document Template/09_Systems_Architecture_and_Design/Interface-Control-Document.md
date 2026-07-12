@@ -133,10 +133,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Logical Architecture]] | Components connected by these interfaces |
-| [[Physical Architecture]] | Network paths for interfaces |
-| [[API Specification]] | Detailed API contracts |
-| [[Integration Plan + Reports]] | Integration testing |
+| [[Logical-Architecture]] | Components connected by these interfaces |
+| [[Physical-Architecture]] | Network paths for interfaces |
+| [[API-Specification]] | Detailed API contracts |
+| [[Interface-Control-Document]] | Integration testing |
 
 ---
 

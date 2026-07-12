@@ -436,13 +436,13 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[Business Analysis Approach]] | BA methodology this governance supports |
-| [[Stakeholder Engagement Approach]] | Stakeholder management within governance |
-| [[Information Management Approach]] | How governance artifacts are stored |
-| [[Change Management Plan]] | Detailed change control procedures |
-| [[Communications Management Plan]] | Reporting and communication details |
-| [[Risk Management Plan]] | Risk governance and escalation |
-| [[Project Charter]] | Governance authority source |
+| [[Business-Analysis-Approach]] | BA methodology this governance supports |
+| [[Stakeholder-Engagement-Approach]] | Stakeholder management within governance |
+| [[Information-Management-Approach]] | How governance artifacts are stored |
+| [[Change-Strategy]] | Detailed change control procedures |
+| [[Communications-Management-Plan]] | Reporting and communication details |
+| [[Risk-Management-Plan]] | Risk governance and escalation |
+| [[Project-Charter]] | Governance authority source |
 
 ---
 

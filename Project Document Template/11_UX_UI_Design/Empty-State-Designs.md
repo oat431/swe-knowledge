@@ -151,9 +151,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[State Variations]] | Empty states as part of overall states |
-| [[Asset Export Package]] | Illustration exports |
-| [[Style Guide]] | Visual standards |
+| [[State-Variations]] | Empty states as part of overall states |
+| [[Asset-Export-Package]] | Illustration exports |
+| [[Style-Guide]] | Visual standards |
 
 ---
 

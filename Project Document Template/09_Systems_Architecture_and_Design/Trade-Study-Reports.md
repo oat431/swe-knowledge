@@ -153,9 +153,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[ADR (Architecture Decision Records)]] | Formal decisions from trade studies |
-| [[Design Options]] | Higher-level design alternatives |
-| [[Solution Recommendation]] | Overall solution recommendation |
+| [[Architecture-Decision-Records]] | Formal decisions from trade studies |
+| [[Design-Options]] | Higher-level design alternatives |
+| [[Solution-Recommendation]] | Overall solution recommendation |
 
 ---
 

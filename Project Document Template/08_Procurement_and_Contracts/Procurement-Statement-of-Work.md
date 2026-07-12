@@ -141,10 +141,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Procurement Management Plan]] | Overall procurement strategy |
-| [[Contract / Agreement]] | Signed contract based on this SOW |
-| [[Source Selection Criteria]] | Vendor evaluation |
-| [[Change Requests]] | Changes to this SOW |
+| [[Procurement-Management-Plan]] | Overall procurement strategy |
+| [[Contract-Agreement]] | Signed contract based on this SOW |
+| [[Source-Selection-Criteria]] | Vendor evaluation |
+| [[Change-Requests]] | Changes to this SOW |
 
 ---
 

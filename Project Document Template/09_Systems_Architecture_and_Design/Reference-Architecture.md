@@ -168,9 +168,9 @@ flowchart TB
 
 | Document | Relationship |
 |----------|-------------|
-| [[Software Architecture Document]] | Project-specific architecture |
-| [[Architecture Patterns & Styles Catalog]] | Patterns from reference architecture |
-| [[Technology Assessment]] | Technology evaluation |
+| [[Software-Architecture-Document]] | Project-specific architecture |
+| [[Architecture-Patterns-Catalog]] | Patterns from reference architecture |
+| [[Market-Analysis-Technology-Assessment]] | Technology evaluation |
 
 ---
 

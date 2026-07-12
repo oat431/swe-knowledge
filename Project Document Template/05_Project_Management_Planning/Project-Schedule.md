@@ -210,11 +210,11 @@ gantt
 
 | Document | Relationship |
 |----------|-------------|
-| [[Schedule Management Plan]] | How schedule is managed |
-| [[Schedule Baseline]] | Approved version of this schedule |
-| [[Activity List]] | Activities being scheduled |
-| [[Milestone List]] | Key milestones |
-| [[WBS]] | Work packages being scheduled |
+| [[Schedule-Management-Plan]] | How schedule is managed |
+| [[Schedule-Baseline]] | Approved version of this schedule |
+| [[Activity-List]] | Activities being scheduled |
+| [[Milestone-List]] | Key milestones |
+| [[WBS-WBS-Dictionary]] | Work packages being scheduled |
 
 ---
 

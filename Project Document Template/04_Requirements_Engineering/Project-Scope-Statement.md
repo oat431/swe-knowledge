@@ -167,11 +167,11 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Business Case]] | Justification for this scope |
-| [[Solution Scope]] | Detailed solution boundaries |
-| [[WBS]] | Work breakdown decomposes this scope |
-| [[Requirements Traceability Matrix]] | Requirements within this scope |
-| [[Change Log]] | Changes to this baseline |
+| [[Business-Case]] | Justification for this scope |
+| [[Solution-Scope]] | Detailed solution boundaries |
+| [[WBS-WBS-Dictionary]] | Work breakdown decomposes this scope |
+| [[Requirements-Traceability-Matrix]] | Requirements within this scope |
+| [[Change-Log]] | Changes to this baseline |
 
 ---
 

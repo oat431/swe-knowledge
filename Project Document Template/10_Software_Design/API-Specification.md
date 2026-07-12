@@ -353,9 +353,9 @@ X-RateLimit-Reset: 1640000000
 
 | Document | Relationship |
 |----------|-------------|
-| [[LLD (Low-Level Design)]] | Implementation details |
-| [[Interface Control Document (ICD)]] | System-level interfaces |
-| [[API Documentation]] | Auto-generated API docs |
+| [[Low-Level-Design]] | Implementation details |
+| [[Interface-Control-Document]] | System-level interfaces |
+| [[API-Specification]] | Auto-generated API docs |
 
 ---
 

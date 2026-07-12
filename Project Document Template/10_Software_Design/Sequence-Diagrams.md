@@ -256,10 +256,10 @@ sequenceDiagram
 
 | Document | Relationship |
 |----------|-------------|
-| [[Class Diagrams]] | Static structure |
-| [[State Diagrams]] | State transitions |
-| [[LLD (Low-Level Design)]] | Implementation details |
-| [[API Specification]] | API contracts |
+| [[Class-Diagrams]] | Static structure |
+| [[State-Diagrams]] | State transitions |
+| [[Low-Level-Design]] | Implementation details |
+| [[API-Specification]] | API contracts |
 
 ---
 

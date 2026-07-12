@@ -195,7 +195,7 @@ standard_ref:
 
 | # | Attachment | Description |
 |---|-----------|-------------|
-| A | [Statement of Work (SOW)] | [[Procurement Statement of Work]] |
+| A | [Statement of Work (SOW)] | [[Procurement-Statement-of-Work]] |
 | B | [Pricing Schedule] | [Detailed pricing breakdown] |
 | C | [Service Level Agreement] | [SLA terms and metrics] |
 | D | [Change Order Template] | [Standard change order form] |
@@ -217,10 +217,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Procurement Statement of Work (SOW)]] | Technical scope attached as Exhibit A |
-| [[Source Selection Criteria]] | Evaluation that led to selection |
-| [[Sourcing Strategy Plan]] | Sourcing decisions |
-| [[Procurement Management Plan]] | Overall procurement strategy |
+| [[Procurement-Statement-of-Work]] | Technical scope attached as Exhibit A |
+| [[Source-Selection-Criteria]] | Evaluation that led to selection |
+| [[Sourcing-Strategy-Plan]] | Sourcing decisions |
+| [[Procurement-Management-Plan]] | Overall procurement strategy |
 
 ---
 

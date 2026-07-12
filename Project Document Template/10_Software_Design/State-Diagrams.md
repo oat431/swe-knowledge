@@ -179,9 +179,9 @@ stateDiagram-v2
 
 | Document | Relationship |
 |----------|-------------|
-| [[Sequence Diagrams]] | Interactions between entities |
-| [[Class Diagrams]] | Entity structure |
-| [[LLD (Low-Level Design)]] | Implementation of state logic |
+| [[Sequence-Diagrams]] | Interactions between entities |
+| [[Class-Diagrams]] | Entity structure |
+| [[Low-Level-Design]] | Implementation of state logic |
 
 ---
 

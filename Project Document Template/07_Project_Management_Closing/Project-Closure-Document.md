@@ -167,11 +167,11 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Final Report]] | Performance summary |
-| [[Lessons Learned Register]] | Lessons captured |
-| [[Verified Deliverables]] | Deliverable verification |
-| [[Benefits Management Plan]] | Post-project benefits tracking |
-| [[Operations Manual / Runbook]] | Handover documentation |
+| [[Final-Report]] | Performance summary |
+| [[Lessons-Learned-Register]] | Lessons captured |
+| [[Verified-Deliverables]] | Deliverable verification |
+| [[Benefits-Management-Plan]] | Post-project benefits tracking |
+| [[Project-Closure-Document]] | Handover documentation |
 
 ---
 

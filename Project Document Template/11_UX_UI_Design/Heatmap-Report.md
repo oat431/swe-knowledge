@@ -99,9 +99,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Analytics Dashboard Spec]] | Metrics tracking |
-| [[Usability Test Report]] | Qualitative complement |
-| [[User Flows]] | Flows being analyzed |
+| [[Analytics-Dashboard-Spec]] | Metrics tracking |
+| [[Usability-Test-Report]] | Qualitative complement |
+| [[User-Flows]] | Flows being analyzed |
 
 ---
 

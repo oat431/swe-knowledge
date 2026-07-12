@@ -403,13 +403,13 @@ flowchart LR
 
 | Document | Relationship |
 |----------|-------------|
-| [[Business Case]] | Potential value justifies the investment in the Business Case |
-| [[Business Objectives]] | Value measures objective achievement |
-| [[Business Requirements]] | Requirements deliver the value described here |
-| [[Current State Description]] | Current costs and performance establish the baseline |
-| [[Future State Description]] | Future state delivers the value described here |
-| [[Change Strategy]] | Strategy realization plan aligns with value timeline |
-| [[Benefits Management Plan]] | Detailed benefits tracking and ownership |
+| [[Business-Case]] | Potential value justifies the investment in the Business Case |
+| [[Business-Objectives]] | Value measures objective achievement |
+| [[Business-Requirements]] | Requirements deliver the value described here |
+| [[Current-State-Description]] | Current costs and performance establish the baseline |
+| [[Future-State-Description]] | Future state delivers the value described here |
+| [[Change-Strategy]] | Strategy realization plan aligns with value timeline |
+| [[Benefits-Management-Plan]] | Detailed benefits tracking and ownership |
 
 ---
 

@@ -303,12 +303,12 @@ mmdc -i schedule.mmd -o schedule.svg
 
 | Document | Relationship |
 |----------|-------------|
-| [[Project Schedule]] | Detailed schedule with dates |
-| [[Schedule Baseline]] | Approved baseline dates |
-| [[Activity List]] | Activities being visualized |
-| [[Milestone List]] | Milestones being visualized |
-| [[Resource Management Plan]] | Resource allocation visualized |
-| [[Schedule Management Plan]] | How schedule is managed |
+| [[Project-Schedule]] | Detailed schedule with dates |
+| [[Schedule-Baseline]] | Approved baseline dates |
+| [[Activity-List]] | Activities being visualized |
+| [[Milestone-List]] | Milestones being visualized |
+| [[Resource-Management-Plan]] | Resource allocation visualized |
+| [[Schedule-Management-Plan]] | How schedule is managed |
 
 ---
 

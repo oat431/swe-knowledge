@@ -326,11 +326,11 @@ flowchart LR
 
 | Document | Relationship |
 |----------|-------------|
-| [[SRS]] | Use cases elaborate SRS functional requirements |
-| [[User Stories]] | Agile format for same requirements |
-| [[Acceptance Criteria]] | ACs derived from use case flows |
-| [[Sequence Diagrams]] | Design-level interaction details |
-| [[Requirements Traceability Matrix]] | Use cases traced in RTM |
+| [[Software-Requirements-Specification]] | Use cases elaborate SRS functional requirements |
+| [[User-Stories]] | Agile format for same requirements |
+| [[Acceptance-Criteria]] | ACs derived from use case flows |
+| [[Sequence-Diagrams]] | Design-level interaction details |
+| [[Requirements-Traceability-Matrix]] | Use cases traced in RTM |
 
 ---
 

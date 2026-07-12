@@ -147,10 +147,10 @@ services/
 
 | Document | Relationship |
 |----------|-------------|
-| [[Logical Architecture]] | Logical components mapped to modules |
-| [[Architecture Patterns & Styles Catalog]] | Patterns applied |
-| [[Architecture Metrics Report]] | Module-level metrics |
-| [[Software Architecture Document]] | Architecture context |
+| [[Logical-Architecture]] | Logical components mapped to modules |
+| [[Architecture-Patterns-Catalog]] | Patterns applied |
+| [[Architecture-Metrics-Report]] | Module-level metrics |
+| [[Software-Architecture-Document]] | Architecture context |
 
 ---
 

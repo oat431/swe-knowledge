@@ -166,11 +166,11 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Financial Management Plan]] | How costs are managed |
-| [[Cost Baseline]] | Approved version of these estimates |
-| [[Project Funding Requirements]] | Funding schedule |
-| [[Basis of Estimates]] | Detailed estimation rationale |
-| [[Risk Analysis Results]] | Risks driving contingency |
+| [[Financial-Management-Plan]] | How costs are managed |
+| [[Cost-Baseline]] | Approved version of these estimates |
+| [[Project-Funding-Requirements]] | Funding schedule |
+| [[Basis-of-Estimates]] | Detailed estimation rationale |
+| [[Risk-Analysis-Results]] | Risks driving contingency |
 
 ---
 

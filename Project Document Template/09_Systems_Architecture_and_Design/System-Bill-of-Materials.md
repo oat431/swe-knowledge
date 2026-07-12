@@ -136,10 +136,10 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[Physical Architecture]] | Infrastructure components |
-| [[Software Architecture Document]] | Software components |
-| [[Procurement Management Plan]] | Component procurement |
-| [[Dependency Manifest]] | Runtime dependencies |
+| [[Physical-Architecture]] | Infrastructure components |
+| [[Software-Architecture-Document]] | Software components |
+| [[Procurement-Management-Plan]] | Component procurement |
+| [[System-Bill-of-Materials]] | Runtime dependencies |
 
 ---
 

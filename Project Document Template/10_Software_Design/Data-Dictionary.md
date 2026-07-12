@@ -133,9 +133,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[ERD (Entity-Relationship Diagram)]] | Logical data model |
-| [[Database Schema (DDL)]] | Physical schema |
-| [[Data Classification Schema]] | Classification levels |
+| [[ERD]] | Logical data model |
+| [[Database-Schema-DDL]] | Physical schema |
+| [[Data-Dictionary]] | Classification levels |
 
 ---
 

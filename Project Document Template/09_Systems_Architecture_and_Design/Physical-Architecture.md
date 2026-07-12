@@ -161,10 +161,10 @@ flowchart TB
 
 | Document | Relationship |
 |----------|-------------|
-| [[Logical Architecture]] | Logical components deployed here |
-| [[System Architecture Description]] | Comprehensive architecture |
-| [[Interface Control Document (ICD)]] | Interface specifications |
-| [[Infrastructure-as-Code]] | IaC definitions |
+| [[Logical-Architecture]] | Logical components deployed here |
+| [[System-Architecture-Description]] | Comprehensive architecture |
+| [[Interface-Control-Document]] | Interface specifications |
+| [[Deployment-Diagrams]] | IaC definitions |
 
 ---
 

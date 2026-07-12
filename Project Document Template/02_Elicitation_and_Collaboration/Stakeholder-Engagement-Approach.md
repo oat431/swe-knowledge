@@ -331,12 +331,12 @@ gantt
 
 | Document | Relationship |
 |----------|-------------|
-| [[Elicitation Activity Plan]] | Engagement approach drives elicitation scheduling |
-| [[Business Analysis Approach]] | Overall BA methodology including stakeholder management |
-| [[Governance Approach]] | Governance defines decision-making stakeholders |
-| [[Change Strategy]] | Change management aligns with engagement strategy |
-| [[Communications Management Plan]] | Detailed communication procedures |
-| [[Stakeholder Register]] | Detailed stakeholder information |
+| [[Elicitation-Activity-Plan]] | Engagement approach drives elicitation scheduling |
+| [[Business-Analysis-Approach]] | Overall BA methodology including stakeholder management |
+| [[Governance-Approach]] | Governance defines decision-making stakeholders |
+| [[Change-Strategy]] | Change management aligns with engagement strategy |
+| [[Communications-Management-Plan]] | Detailed communication procedures |
+| [[Stakeholder-Register]] | Detailed stakeholder information |
 
 ---
 

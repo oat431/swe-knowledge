@@ -116,10 +116,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Cost Estimates]] | Source of baseline figures |
-| [[Financial Management Plan]] | How baseline is managed |
-| [[Project Funding Requirements]] | Funding aligned to baseline |
-| [[Schedule Baseline]] | Time-phased alignment |
+| [[Cost-Estimates]] | Source of baseline figures |
+| [[Financial-Management-Plan]] | How baseline is managed |
+| [[Project-Funding-Requirements]] | Funding aligned to baseline |
+| [[Schedule-Baseline]] | Time-phased alignment |
 
 ---
 

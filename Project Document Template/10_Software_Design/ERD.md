@@ -211,11 +211,11 @@ erDiagram
 
 | Document | Relationship |
 |----------|-------------|
-| [[Database Schema (DDL)]] | Physical schema from this ERD |
-| [[Data Dictionary]] | Detailed data element definitions |
-| [[LLD (Low-Level Design)]] | Design using this data model |
+| [[Database-Schema-DDL]] | Physical schema from this ERD |
+| [[Data-Dictionary]] | Detailed data element definitions |
+| [[Low-Level-Design]] | Design using this data model |
 
 ---
 
 > **Template Standard:** Based on SWEBOK v4, DMBOK v2
-> **Usage:** The ERD is the *logical* data model. It shows entities, attributes, and relationships. The [[Database Schema (DDL)]] is the *physical* implementation.
+> **Usage:** The ERD is the *logical* data model. It shows entities, attributes, and relationships. The [[Database-Schema-DDL]] is the *physical* implementation.

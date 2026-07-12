@@ -174,9 +174,9 @@ quadrantChart
 
 | Document | Relationship |
 |----------|-------------|
-| [[User Personas]] | Personas whose journeys are mapped |
-| [[User Flows]] | Detailed task flows |
-| [[User Research Report]] | Research informing the journey |
+| [[User-Personas]] | Personas whose journeys are mapped |
+| [[User-Flows]] | Detailed task flows |
+| [[User-Research-Report]] | Research informing the journey |
 
 ---
 

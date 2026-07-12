@@ -72,7 +72,7 @@ standard_ref:
 | High Gaps | [X] — should resolve for full benefit |
 | Medium Gaps | [X] — resolve if resources permit |
 | Low Gaps | [X] — defer to future phase |
-| Source Documents | [[Current State Description]], [[Future State Description]] |
+| Source Documents | [[Current-State-Description]], [[Future-State-Description]] |
 
 ---
 
@@ -80,7 +80,7 @@ standard_ref:
 
 ### 2.1 Approach
 
-> Gaps were identified by comparing the current state (as documented in [[Current State Description]]) against the future state (as documented in [[Future State Description]]) across six dimensions.
+> Gaps were identified by comparing the current state (as documented in [[Current-State-Description]]) against the future state (as documented in [[Future-State-Description]]) across six dimensions.
 
 ### 2.2 Analysis Dimensions
 
@@ -329,15 +329,15 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[Current State Description]] | Source of "current state" data |
-| [[Future State Description]] | Source of "future state" data |
-| [[Business Requirements]] | Requirements address identified gaps |
-| [[Solution Scope]] | Scope defines which gaps will be resolved |
-| [[Change Strategy]] | Strategy defines how gaps will be closed |
-| [[Business Objectives]] | Gaps map to objectives being achieved |
-| [[Risk Analysis Results]] | Unresolved gaps become risks |
+| [[Current-State-Description]] | Source of "current state" data |
+| [[Future-State-Description]] | Source of "future state" data |
+| [[Business-Requirements]] | Requirements address identified gaps |
+| [[Solution-Scope]] | Scope defines which gaps will be resolved |
+| [[Change-Strategy]] | Strategy defines how gaps will be closed |
+| [[Business-Objectives]] | Gaps map to objectives being achieved |
+| [[Risk-Analysis-Results]] | Unresolved gaps become risks |
 
 ---
 
 > **Template Standard:** Based on BABOK v3 (Strategy Analysis), PMBOK v8 (Scope Baseline), ISO/IEC/IEEE 15288
-> **Usage:** This document bridges [[Current State Description]] and [[Future State Description]]. Every gap should trace to a business requirement and a deliverable. If a gap has no owner or resolution, it's a risk.
+> **Usage:** This document bridges [[Current-State-Description]] and [[Future-State-Description]]. Every gap should trace to a business requirement and a deliverable. If a gap has no owner or resolution, it's a risk.

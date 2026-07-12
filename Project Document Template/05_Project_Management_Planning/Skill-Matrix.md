@@ -110,9 +110,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Resource Management Plan]] | Resource management context |
-| [[Resource Requirements]] | Required skills per activity |
-| [[Training Plan]] | Training delivery details |
+| [[Resource-Management-Plan]] | Resource management context |
+| [[Resource-Requirements]] | Required skills per activity |
+| [[Skill-Matrix]] | Training delivery details |
 
 ---
 

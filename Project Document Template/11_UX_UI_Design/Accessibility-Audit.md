@@ -119,9 +119,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Style Guide]] | Color contrast requirements |
-| [[Component Library]] | Accessible component specs |
-| [[Usability Test Plan]] | Accessibility testing plan |
+| [[Style-Guide]] | Color contrast requirements |
+| [[Component-Library]] | Accessible component specs |
+| [[Usability-Test-Plan]] | Accessibility testing plan |
 
 ---
 

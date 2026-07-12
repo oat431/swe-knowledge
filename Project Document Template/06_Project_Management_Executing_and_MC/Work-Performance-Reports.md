@@ -211,11 +211,11 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Work Performance Data]] | Raw data source |
-| [[Work Performance Information]] | Analysis source |
-| [[Communications Management Plan]] | Report distribution |
-| [[Risk Report]] | Risk-specific reporting |
-| [[Quality Metrics]] | Quality data source |
+| [[Work-Performance-Data]] | Raw data source |
+| [[Work-Performance-Information]] | Analysis source |
+| [[Communications-Management-Plan]] | Report distribution |
+| [[Risk-Report]] | Risk-specific reporting |
+| [[Quality-Metrics]] | Quality data source |
 
 ---
 

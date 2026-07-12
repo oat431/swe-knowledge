@@ -36,7 +36,7 @@ standard_ref:
 
 ## 1. Purpose
 
-> This log tracks all changes to baselined requirements. Every change must be logged, analyzed, and approved/rejected through the change control process defined in [[Governance Approach]].
+> This log tracks all changes to baselined requirements. Every change must be logged, analyzed, and approved/rejected through the change control process defined in [[Governance-Approach]].
 
 ## 2. Change Control Process
 
@@ -121,11 +121,11 @@ flowchart LR
 
 | Document | Relationship |
 |----------|-------------|
-| [[SRS]] | Requirements being changed |
-| [[Requirements Traceability Matrix]] | Traceability updated per change |
-| [[Governance Approach]] | Change control authority and process |
-| [[Change Strategy]] | Overall change management approach |
-| [[Configuration Management Plan]] | Version control for requirements |
+| [[Software-Requirements-Specification]] | Requirements being changed |
+| [[Requirements-Traceability-Matrix]] | Traceability updated per change |
+| [[Governance-Approach]] | Change control authority and process |
+| [[Change-Strategy]] | Overall change management approach |
+| [[Change-Requests]] | Version control for requirements |
 
 ---
 

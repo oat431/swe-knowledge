@@ -107,11 +107,11 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Change Requests]] | Formal CR process |
-| [[Requirements Change Log]] | Requirements-specific changes |
-| [[Requirements Change Assessment]] | Impact analysis per change |
-| [[Schedule Baseline]] | Baseline being tracked |
-| [[Cost Baseline]] | Baseline being tracked |
+| [[Change-Requests]] | Formal CR process |
+| [[Requirements-Change-Log]] | Requirements-specific changes |
+| [[Requirements-Change-Assessment]] | Impact analysis per change |
+| [[Schedule-Baseline]] | Baseline being tracked |
+| [[Cost-Baseline]] | Baseline being tracked |
 
 ---
 

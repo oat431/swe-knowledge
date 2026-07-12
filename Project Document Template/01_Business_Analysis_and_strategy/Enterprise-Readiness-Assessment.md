@@ -436,12 +436,12 @@ gantt
 
 | Document | Relationship |
 |----------|-------------|
-| [[Change Strategy]] | Readiness assessment validates change strategy effectiveness |
-| [[Business Analysis Approach]] | BA approach includes readiness activities |
-| [[Governance Approach]] | Governance structure is a readiness factor |
-| [[Risk Analysis Results]] | Readiness gaps become risks |
-| [[Training Plan]] | Training completion is a readiness metric |
-| [[Go-Live Checklist]] | Operational readiness for go-live |
+| [[Change-Strategy]] | Readiness assessment validates change strategy effectiveness |
+| [[Business-Analysis-Approach]] | BA approach includes readiness activities |
+| [[Governance-Approach]] | Governance structure is a readiness factor |
+| [[Risk-Analysis-Results]] | Readiness gaps become risks |
+| [[Skill-Matrix]] | Training completion is a readiness metric |
+| [[Enterprise-Readiness-Assessment]] | Operational readiness for go-live |
 
 ---
 

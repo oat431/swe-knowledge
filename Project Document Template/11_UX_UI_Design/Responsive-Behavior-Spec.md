@@ -87,9 +87,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Responsive Specifications]] | Breakpoint overview |
-| [[Component Library]] | Component responsive behavior |
-| [[UI Mockups]] | Mockups at each breakpoint |
+| [[Responsive-Specifications]] | Breakpoint overview |
+| [[Component-Library]] | Component responsive behavior |
+| [[UI-Mockups]] | Mockups at each breakpoint |
 
 ---
 

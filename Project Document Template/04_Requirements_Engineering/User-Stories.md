@@ -272,11 +272,11 @@ Then [outcome]
 
 | Document | Relationship |
 |----------|-------------|
-| [[SRS]] | User stories elaborate SRS requirements |
-| [[Acceptance Criteria]] | ACs defined per user story |
-| [[Requirements Traceability Matrix]] | Stories traced to objectives |
-| [[Requirements Architecture]] | Stories organized by epic |
-| [[Product Backlog]] | Stories managed in backlog |
+| [[Software-Requirements-Specification]] | User stories elaborate SRS requirements |
+| [[Acceptance-Criteria]] | ACs defined per user story |
+| [[Requirements-Traceability-Matrix]] | Stories traced to objectives |
+| [[Requirements-Architecture]] | Stories organized by epic |
+| [[User-Stories]] | Stories managed in backlog |
 
 ---
 

@@ -111,9 +111,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Information Architecture (IA)]] | Content structure |
-| [[Style Guide]] | Content standards |
-| [[Brand Guidelines]] | Voice and tone |
+| [[Information-Architecture]] | Content structure |
+| [[Style-Guide]] | Content standards |
+| [[Brand-Guidelines]] | Voice and tone |
 
 ---
 

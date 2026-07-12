@@ -140,10 +140,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Cost Baseline]] | Approved budget this funding supports |
-| [[Financial Management Plan]] | How funding is managed |
-| [[Cost Estimates]] | Basis for funding amounts |
-| [[Project Charter]] | Budget authorization |
+| [[Cost-Baseline]] | Approved budget this funding supports |
+| [[Financial-Management-Plan]] | How funding is managed |
+| [[Cost-Estimates]] | Basis for funding amounts |
+| [[Project-Charter]] | Budget authorization |
 
 ---
 

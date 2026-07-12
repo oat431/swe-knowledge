@@ -170,11 +170,11 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Cost Estimates]] | Detailed cost estimates |
-| [[Cost Baseline]] | Approved budget baseline |
-| [[Project Funding Requirements]] | Funding schedule |
-| [[Project Management Plan]] | Parent plan |
-| [[Procurement Management Plan]] | Vendor cost management |
+| [[Cost-Estimates]] | Detailed cost estimates |
+| [[Cost-Baseline]] | Approved budget baseline |
+| [[Project-Funding-Requirements]] | Funding schedule |
+| [[Project-Management-Plan]] | Parent plan |
+| [[Procurement-Management-Plan]] | Vendor cost management |
 
 ---
 

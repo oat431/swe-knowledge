@@ -296,9 +296,9 @@ TYPE SlidingWindow:
 
 | Document | Relationship |
 |----------|-------------|
-| [[LLD (Low-Level Design)]] | Design context |
-| [[Class Diagrams]] | Class structure |
-| [[Activity Diagrams (Design)]] | Visual workflow of algorithms |
+| [[Low-Level-Design]] | Design context |
+| [[Class-Diagrams]] | Class structure |
+| [[Activity-Diagrams-Design]] | Visual workflow of algorithms |
 
 ---
 

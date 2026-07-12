@@ -359,16 +359,16 @@ flowchart LR
 
 | Document | Relationship |
 |----------|-------------|
-| [[Business Case]] | Objectives justify the investment in the Business Case |
-| [[Business Requirements]] | Business requirements support objective achievement |
-| [[Current State Description]] | Baseline measurements come from current state analysis |
-| [[Future State Description]] | Targets defined in future state vision |
-| [[Gap Analysis]] | Gaps identified between baseline and target |
-| [[Benefits Management Plan]] | Detailed benefits realization planning |
-| [[Stakeholder Register]] | Objective owners and stakeholders |
-| [[KPI Dashboard]] | Operational tracking of objective metrics |
+| [[Business-Case]] | Objectives justify the investment in the Business Case |
+| [[Business-Requirements]] | Business requirements support objective achievement |
+| [[Current-State-Description]] | Baseline measurements come from current state analysis |
+| [[Future-State-Description]] | Targets defined in future state vision |
+| [[Gap-Analysis]] | Gaps identified between baseline and target |
+| [[Benefits-Management-Plan]] | Detailed benefits realization planning |
+| [[Stakeholder-Register]] | Objective owners and stakeholders |
+| [[Quality-Metrics]] | Operational tracking of objective metrics |
 
 ---
 
 > **Template Standard:** Based on BABOK v3 (Strategy Analysis), PMBOK v8 (Initiating), ISO/IEC/IEEE 29148
-> **Usage:** This document focuses on *what* the business wants to achieve. For *how* to achieve it, see [[Business Requirements]] and [[Change Strategy]].
+> **Usage:** This document focuses on *what* the business wants to achieve. For *how* to achieve it, see [[Business-Requirements]] and [[Change-Strategy]].

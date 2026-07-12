@@ -354,15 +354,15 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[Business Case]] | Scope delivers the benefits in the Business Case |
-| [[Business Objectives]] | Scope items trace to business objectives |
-| [[Business Requirements]] | Requirements must fit within this scope |
-| [[Current State Description]] | Defines what exists today |
-| [[Future State Description]] | Defines what the solution will become |
-| [[Change Strategy]] | Strategy delivers this scope in phases |
-| [[Gap Analysis]] | Gaps inform scope priorities |
-| [[WBS]] | Work Breakdown Structure decomposes this scope |
-| [[Requirements Traceability Matrix]] | Requirements traced within scope boundaries |
+| [[Business-Case]] | Scope delivers the benefits in the Business Case |
+| [[Business-Objectives]] | Scope items trace to business objectives |
+| [[Business-Requirements]] | Requirements must fit within this scope |
+| [[Current-State-Description]] | Defines what exists today |
+| [[Future-State-Description]] | Defines what the solution will become |
+| [[Change-Strategy]] | Strategy delivers this scope in phases |
+| [[Gap-Analysis]] | Gaps inform scope priorities |
+| [[WBS-WBS-Dictionary]] | Work Breakdown Structure decomposes this scope |
+| [[Requirements-Traceability-Matrix]] | Requirements traced within scope boundaries |
 
 ---
 

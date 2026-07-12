@@ -163,11 +163,11 @@ Then [expected outcome / result]
 
 | Document | Relationship |
 |----------|-------------|
-| [[SRS]] | Requirements these criteria verify |
-| [[User Stories]] | ACs in Given/When/Then format for user stories |
-| [[Requirements Traceability Matrix]] | ACs linked in traceability |
-| [[Test Cases]] | ACs elaborated into test cases |
-| [[UAT Sign-off]] | ACs used for UAT acceptance |
+| [[Software-Requirements-Specification]] | Requirements these criteria verify |
+| [[User-Stories]] | ACs in Given/When/Then format for user stories |
+| [[Requirements-Traceability-Matrix]] | ACs linked in traceability |
+| [[Acceptance-Criteria]] | ACs elaborated into test cases |
+| [[Acceptance-Criteria]] | ACs used for UAT acceptance |
 
 ---
 

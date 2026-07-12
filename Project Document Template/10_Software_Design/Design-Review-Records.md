@@ -125,10 +125,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[High-Level Design (HLD)]] | HLD being reviewed |
-| [[Low-Level Design (LLD)]] | LLD being reviewed |
-| [[Software Architecture Document]] | Architecture being reviewed |
-| [[Requirements (Verified)]] | Requirements verified through design |
+| [[High-Level-Design]] | HLD being reviewed |
+| [[Low-Level-Design]] | LLD being reviewed |
+| [[Software-Architecture-Document]] | Architecture being reviewed |
+| [[Requirements-Verified]] | Requirements verified through design |
 
 ---
 

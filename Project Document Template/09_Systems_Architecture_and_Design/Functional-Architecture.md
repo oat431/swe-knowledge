@@ -154,10 +154,10 @@ flowchart LR
 
 | Document | Relationship |
 |----------|-------------|
-| [[Logical Architecture]] | Logical structure derived from functions |
-| [[Physical Architecture]] | Physical allocation of functions |
-| [[SRS]] | Requirements driving functions |
-| [[System Requirements Specification (SyRS)]] | System-level requirements |
+| [[Logical-Architecture]] | Logical structure derived from functions |
+| [[Physical-Architecture]] | Physical allocation of functions |
+| [[Software-Requirements-Specification]] | Requirements driving functions |
+| [[System-Requirements-Specification]] | System-level requirements |
 
 ---
 

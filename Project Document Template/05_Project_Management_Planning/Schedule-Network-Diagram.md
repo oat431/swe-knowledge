@@ -147,10 +147,10 @@ flowchart LR
 
 | Document | Relationship |
 |----------|-------------|
-| [[Project Schedule]] | Schedule with dates |
-| [[Activity List]] | Activities in this network |
-| [[Schedule Baseline]] | Approved baseline dates |
-| [[Schedule Management Plan]] | How schedule is managed |
+| [[Project-Schedule]] | Schedule with dates |
+| [[Activity-List]] | Activities in this network |
+| [[Schedule-Baseline]] | Approved baseline dates |
+| [[Schedule-Management-Plan]] | How schedule is managed |
 
 ---
 

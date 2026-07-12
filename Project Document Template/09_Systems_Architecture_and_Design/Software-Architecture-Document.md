@@ -55,10 +55,10 @@ standard_ref:
 
 | Document | Version |
 |---------|---------|
-| [[System Architecture Description]] | v1.0 |
-| [[Logical Architecture]] | v1.0 |
-| [[Physical Architecture]] | v1.0 |
-| [[SRS]] | v1.0 |
+| [[System-Architecture-Description]] | v1.0 |
+| [[Logical-Architecture]] | v1.0 |
+| [[Physical-Architecture]] | v1.0 |
+| [[Software-Requirements-Specification]] | v1.0 |
 
 ---
 
@@ -282,11 +282,11 @@ erDiagram
 
 | Document | Relationship |
 |----------|-------------|
-| [[System Architecture Description]] | System-level architecture |
-| [[Logical Architecture]] | Logical components |
-| [[Physical Architecture]] | Physical deployment |
-| [[ADR (Architecture Decision Records)]] | Decision rationale |
-| [[Interface Control Document (ICD)]] | Interface specifications |
+| [[System-Architecture-Description]] | System-level architecture |
+| [[Logical-Architecture]] | Logical components |
+| [[Physical-Architecture]] | Physical deployment |
+| [[Architecture-Decision-Records]] | Decision rationale |
+| [[Interface-Control-Document]] | Interface specifications |
 
 ---
 

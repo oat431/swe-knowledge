@@ -456,12 +456,12 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[Stakeholder Engagement Approach]] | Detailed stakeholder management strategy |
-| [[Information Management Approach]] | How BA artifacts are stored and managed |
-| [[Governance Approach]] | Decision-making and approval authority |
-| [[Requirements Traceability Matrix]] | Living traceability document |
-| [[Business Requirements]] | Primary BA deliverable |
-| [[SRS]] | Detailed software requirements |
+| [[Stakeholder-Engagement-Approach]] | Detailed stakeholder management strategy |
+| [[Information-Management-Approach]] | How BA artifacts are stored and managed |
+| [[Governance-Approach]] | Decision-making and approval authority |
+| [[Requirements-Traceability-Matrix]] | Living traceability document |
+| [[Business-Requirements]] | Primary BA deliverable |
+| [[Software-Requirements-Specification]] | Detailed software requirements |
 
 ---
 

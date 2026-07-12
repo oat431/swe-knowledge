@@ -138,9 +138,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[User Research Report]] | Findings from interviews |
-| [[User Personas]] | Personas informed by interviews |
-| [[Journey Map]] | Journey informed by interviews |
+| [[User-Research-Report]] | Findings from interviews |
+| [[User-Personas]] | Personas informed by interviews |
+| [[Journey-Map]] | Journey informed by interviews |
 
 ---
 

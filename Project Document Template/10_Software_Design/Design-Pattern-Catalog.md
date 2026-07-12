@@ -209,9 +209,9 @@ classDiagram
 
 | Document | Relationship |
 |----------|-------------|
-| [[Class Diagrams]] | Structure showing pattern application |
-| [[Architecture Patterns & Styles Catalog]] | Architectural patterns |
-| [[Design Rationale]] | Why these patterns were chosen |
+| [[Class-Diagrams]] | Structure showing pattern application |
+| [[Architecture-Patterns-Catalog]] | Architectural patterns |
+| [[Design-Rationale]] | Why these patterns were chosen |
 
 ---
 

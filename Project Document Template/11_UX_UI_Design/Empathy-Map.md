@@ -134,9 +134,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[User Personas]] | Personas mapped here |
-| [[Journey Map]] | Emotional journey |
-| [[User Research Report]] | Research data |
+| [[User-Personas]] | Personas mapped here |
+| [[Journey-Map]] | Emotional journey |
+| [[User-Research-Report]] | Research data |
 
 ---
 

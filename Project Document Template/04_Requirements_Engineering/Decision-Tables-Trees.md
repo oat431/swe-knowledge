@@ -188,10 +188,10 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[SRS]] | Requirements these rules implement |
-| [[Business Rules]] | Business rules visualized here |
-| [[Requirements (Verified)]] | Rule completeness verified here |
-| [[Acceptance Criteria]] | Rules tested via ACs |
+| [[Software-Requirements-Specification]] | Requirements these rules implement |
+| [[Business-Requirements]] | Business rules visualized here |
+| [[Requirements-Verified]] | Rule completeness verified here |
+| [[Acceptance-Criteria]] | Rules tested via ACs |
 
 ---
 

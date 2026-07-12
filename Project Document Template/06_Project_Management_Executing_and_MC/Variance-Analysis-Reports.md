@@ -177,12 +177,12 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Work Performance Data]] | Raw variance data |
-| [[Work Performance Information]] | Variance analysis interpretation |
-| [[Earned Value Analysis]] | EVM-based variance |
-| [[Cost Forecasts]] | Cost variance forecasting |
-| [[Schedule Forecasts]] | Schedule variance forecasting |
-| [[Change Log]] | Scope variance tracking |
+| [[Work-Performance-Data]] | Raw variance data |
+| [[Work-Performance-Information]] | Variance analysis interpretation |
+| [[Earned-Value-Analysis]] | EVM-based variance |
+| [[Cost-Forecasts]] | Cost variance forecasting |
+| [[Schedule-Forecasts]] | Schedule variance forecasting |
+| [[Change-Log]] | Scope variance tracking |
 
 ---
 

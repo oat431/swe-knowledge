@@ -176,10 +176,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Business Case]] | Justification for this charter |
-| [[Project Management Plan]] | Detailed plan derived from this charter |
-| [[Stakeholder Register]] | Detailed stakeholder information |
-| [[Risk Analysis Results]] | Detailed risk assessment |
+| [[Business-Case]] | Justification for this charter |
+| [[Project-Management-Plan]] | Detailed plan derived from this charter |
+| [[Stakeholder-Register]] | Detailed stakeholder information |
+| [[Risk-Analysis-Results]] | Detailed risk assessment |
 
 ---
 

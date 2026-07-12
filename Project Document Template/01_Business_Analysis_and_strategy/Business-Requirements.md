@@ -343,16 +343,16 @@ OBJ-02              BR-02, BR-04            SN-03
 
 | Document | Relationship |
 |----------|-------------|
-| [[Business Case]] | Business Case justifies the investment; this document defines the needs |
-| [[Business Objectives]] | Objectives are refined here with measurable targets |
-| [[Current State Description]] | Feeds into the current state analysis |
-| [[Future State Description]] | Derived from these requirements |
-| [[Gap Analysis]] | Identifies gaps between current and future state |
-| [[SRS]] | Business requirements are elaborated into software requirements |
-| [[Stakeholder Register]] | Stakeholders identified here feed into engagement planning |
-| [[Acceptance Criteria]] | Detailed acceptance criteria derived from Section 10 |
+| [[Business-Case]] | Business Case justifies the investment; this document defines the needs |
+| [[Business-Objectives]] | Objectives are refined here with measurable targets |
+| [[Current-State-Description]] | Feeds into the current state analysis |
+| [[Future-State-Description]] | Derived from these requirements |
+| [[Gap-Analysis]] | Identifies gaps between current and future state |
+| [[Software-Requirements-Specification]] | Business requirements are elaborated into software requirements |
+| [[Stakeholder-Register]] | Stakeholders identified here feed into engagement planning |
+| [[Acceptance-Criteria]] | Detailed acceptance criteria derived from Section 10 |
 
 ---
 
 > **Template Standard:** Based on BABOK v3 (Strategy Analysis, Requirements Analysis & Design Definition), PMBOK v8 (Requirements Documentation), and ISO/IEC/IEEE 29148
-> **Usage:** This document captures *business-level* requirements. Technical/software requirements belong in the [[SRS]] (Software Requirements Specification).
+> **Usage:** This document captures *business-level* requirements. Technical/software requirements belong in the [[Software-Requirements-Specification]] (Software Requirements Specification).

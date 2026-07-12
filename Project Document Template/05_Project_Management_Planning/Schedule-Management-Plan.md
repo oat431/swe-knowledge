@@ -173,13 +173,13 @@ gantt
 
 | Document | Relationship |
 |----------|-------------|
-| [[WBS]] | Work packages being scheduled |
-| [[Activity List]] | Activities within work packages |
-| [[Milestone List]] | Key milestones |
-| [[Project Schedule]] | Detailed schedule |
-| [[Project Management Plan]] | Parent plan |
+| [[WBS-WBS-Dictionary]] | Work packages being scheduled |
+| [[Activity-List]] | Activities within work packages |
+| [[Milestone-List]] | Key milestones |
+| [[Project-Schedule]] | Detailed schedule |
+| [[Project-Management-Plan]] | Parent plan |
 
 ---
 
 > **Template Standard:** Based on PMBOK v8, ISO 21502
-> **Usage:** This plan defines *how* the schedule is managed, not the schedule itself. The detailed schedule is in [[Project Schedule]] and tracked in Jira.
+> **Usage:** This plan defines *how* the schedule is managed, not the schedule itself. The detailed schedule is in [[Project-Schedule]] and tracked in Jira.

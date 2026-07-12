@@ -200,8 +200,8 @@ Dashboard
 | Document | Relationship |
 |----------|-------------|
 | [[Sitemap]] | Visual IA map |
-| [[User Flows]] | Task flows through IA |
-| [[Wireframes (Low-fi)]] | Layout of IA |
+| [[User-Flows]] | Task flows through IA |
+| [[Wireframes-Low-fi]] | Layout of IA |
 
 ---
 

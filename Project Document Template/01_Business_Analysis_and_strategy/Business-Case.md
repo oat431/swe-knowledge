@@ -556,14 +556,14 @@ Vision / Mission
 
 | Document | Relationship |
 |----------|-------------|
-| [[Project Charter]] | Derived from this Business Case |
-| [[Stakeholder Register]] | Identified during Business Case development |
-| [[Risk Register]] | Risks from Section 8 feed into project risk management |
-| [[Benefits Management Plan]] | Detailed version of Section 10 |
-| [[Current State Description]] | Expanded version of Section 4 |
-| [[Future State Description]] | Expanded version of Section 6 |
-| [[Change Strategy]] | Implementation approach from Section 9 |
-| [[Gap Analysis]] | Derived from Sections 4 and 6 |
+| [[Project-Charter]] | Derived from this Business Case |
+| [[Stakeholder-Register]] | Identified during Business Case development |
+| [[Risk-Register]] | Risks from Section 8 feed into project risk management |
+| [[Benefits-Management-Plan]] | Detailed version of Section 10 |
+| [[Current-State-Description]] | Expanded version of Section 4 |
+| [[Future-State-Description]] | Expanded version of Section 6 |
+| [[Change-Strategy]] | Implementation approach from Section 9 |
+| [[Gap-Analysis]] | Derived from Sections 4 and 6 |
 
 ---
 

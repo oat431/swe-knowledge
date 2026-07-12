@@ -68,17 +68,17 @@ standard_ref:
 
 | # | Subsidiary Plan | Document | Status |
 |---|----------------|---------|--------|
-| 1 | Scope Management Plan | [[Scope Management Plan]] | Draft |
-| 2 | Schedule Management Plan | [[Schedule Management Plan]] | Draft |
-| 3 | Financial Management Plan | [[Financial Management Plan]] | Draft |
-| 4 | Resource Management Plan | [[Resource Management Plan]] | Draft |
-| 5 | Risk Management Plan | [[Risk Management Plan]] | Draft |
-| 6 | Quality Management Plan | [[Quality Management Plan]] | Draft |
-| 7 | Communications Management Plan | [[Communications Management Plan]] | Draft |
-| 8 | Stakeholder Engagement Plan | [[Stakeholder Engagement Plan]] | Draft |
-| 9 | Change Management Plan | [[Change Management Plan]] | Draft |
-| 10 | Configuration Management Plan | [[Configuration Management Plan]] | Draft |
-| 11 | Procurement Management Plan | [[Procurement Management Plan]] | Draft |
+| 1 | Scope Management Plan | [[Scope-Management-Plan]] | Draft |
+| 2 | Schedule Management Plan | [[Schedule-Management-Plan]] | Draft |
+| 3 | Financial Management Plan | [[Financial-Management-Plan]] | Draft |
+| 4 | Resource Management Plan | [[Resource-Management-Plan]] | Draft |
+| 5 | Risk Management Plan | [[Risk-Management-Plan]] | Draft |
+| 6 | Quality Management Plan | [[Quality-Management-Plan]] | Draft |
+| 7 | Communications Management Plan | [[Communications-Management-Plan]] | Draft |
+| 8 | Stakeholder Engagement Plan | [[Stakeholder-Engagement-Plan]] | Draft |
+| 9 | Change Management Plan | [[Change-Strategy]] | Draft |
+| 10 | Configuration Management Plan | [[Change-Requests]] | Draft |
+| 11 | Procurement Management Plan | [[Procurement-Management-Plan]] | Draft |
 
 ## 3. Project Lifecycle
 
@@ -209,11 +209,11 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[Project Charter]] | Authorization source |
-| [[WBS]] | Scope decomposition |
-| [[Project Schedule]] | Timeline detail |
-| [[Risk Register]] | Risk management detail |
-| [[Change Log]] | Change control tracking |
+| [[Project-Charter]] | Authorization source |
+| [[WBS-WBS-Dictionary]] | Scope decomposition |
+| [[Project-Schedule]] | Timeline detail |
+| [[Risk-Register]] | Risk management detail |
+| [[Change-Log]] | Change control tracking |
 
 ---
 

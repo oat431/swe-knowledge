@@ -100,9 +100,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Style Guide]] | Visual standards |
-| [[Component Library]] | Components using assets |
-| [[Design Specifications]] | Export specs |
+| [[Style-Guide]] | Visual standards |
+| [[Component-Library]] | Components using assets |
+| [[Design-Specifications]] | Export specs |
 
 ---
 

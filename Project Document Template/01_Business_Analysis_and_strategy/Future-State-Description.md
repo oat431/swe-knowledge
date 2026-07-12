@@ -482,15 +482,15 @@ flowchart TB
 
 | Document | Relationship |
 |----------|-------------|
-| [[Business Case]] | Future state benefits justify the investment |
-| [[Business Objectives]] | Objectives define what the future state achieves |
-| [[Business Requirements]] | Requirements define what the future state must deliver |
-| [[Current State Description]] | The baseline this future state improves upon |
-| [[Gap Analysis]] | Gaps between current and future drive the change strategy |
-| [[Change Strategy]] | How to get from current to future state |
-| [[Solution Scope]] | What is included in the transformation |
+| [[Business-Case]] | Future state benefits justify the investment |
+| [[Business-Objectives]] | Objectives define what the future state achieves |
+| [[Business-Requirements]] | Requirements define what the future state must deliver |
+| [[Current-State-Description]] | The baseline this future state improves upon |
+| [[Gap-Analysis]] | Gaps between current and future drive the change strategy |
+| [[Change-Strategy]] | How to get from current to future state |
+| [[Solution-Scope]] | What is included in the transformation |
 
 ---
 
 > **Template Standard:** Based on BABOK v3 (Strategy Analysis), ISO/IEC/IEEE 12207
-> **Usage:** Document *what* the future looks like, not *how* to get there. The "how" belongs in [[Change Strategy]]. Avoid vendor-specific language — focus on capabilities and outcomes.
+> **Usage:** Document *what* the future looks like, not *how* to get there. The "how" belongs in [[Change-Strategy]]. Avoid vendor-specific language — focus on capabilities and outcomes.

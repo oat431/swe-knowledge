@@ -106,11 +106,11 @@ flowchart LR
 
 | Document | Relationship |
 |----------|-------------|
-| [[Project Closure Document]] | Formal closure |
-| [[Quality Management Plan]] | Quality standards applied |
-| [[Acceptance Criteria]] | Criteria used for verification |
-| [[Test Report]] | Test evidence |
-| [[UAT Sign-off]] | User acceptance evidence |
+| [[Project-Closure-Document]] | Formal closure |
+| [[Quality-Management-Plan]] | Quality standards applied |
+| [[Acceptance-Criteria]] | Criteria used for verification |
+| [[Usability-Test-Report]] | Test evidence |
+| [[Acceptance-Criteria]] | User acceptance evidence |
 
 ---
 

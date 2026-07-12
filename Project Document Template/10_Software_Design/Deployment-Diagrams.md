@@ -184,10 +184,10 @@ flowchart TB
 
 | Document | Relationship |
 |----------|-------------|
-| [[Physical Architecture]] | Architecture this deployment implements |
-| [[Infrastructure-as-Code]] | IaC definitions |
-| [[Deployment Plan]] | Deployment procedures |
-| [[Container Configurations]] | Docker/K8s configs |
+| [[Physical-Architecture]] | Architecture this deployment implements |
+| [[Deployment-Diagrams]] | IaC definitions |
+| [[Deployment-Diagrams]] | Deployment procedures |
+| [[Deployment-Diagrams]] | Docker/K8s configs |
 
 ---
 

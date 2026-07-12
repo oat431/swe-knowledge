@@ -106,11 +106,11 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[SRS]] | All requirements including ASRs |
-| [[Software Architecture Document]] | Architecture driven by ASRs |
-| [[Architecture Decision Records]] | Decisions driven by ASRs |
-| [[Trade Study Reports]] | Analysis of ASR-driven alternatives |
-| [[Nonfunctional Requirements Catalog]] | NFRs that become ASRs |
+| [[Software-Requirements-Specification]] | All requirements including ASRs |
+| [[Software-Architecture-Document]] | Architecture driven by ASRs |
+| [[Architecture-Decision-Records]] | Decisions driven by ASRs |
+| [[Trade-Study-Reports]] | Analysis of ASR-driven alternatives |
+| [[Nonfunctional-Requirements-Catalog]] | NFRs that become ASRs |
 
 ---
 

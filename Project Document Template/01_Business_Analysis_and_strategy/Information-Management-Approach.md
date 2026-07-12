@@ -376,11 +376,11 @@ flowchart LR
 
 | Document | Relationship |
 |----------|-------------|
-| [[Governance Approach]] | Governance defines authority; this defines how information is managed |
-| [[Business Analysis Approach]] | BA methodology references this for artifact storage |
-| [[Configuration Management Plan]] | CM handles version control at project level |
-| [[Communications Management Plan]] | Communication channels and cadence |
-| [[Data Retention Policy]] | Organizational retention requirements |
+| [[Governance-Approach]] | Governance defines authority; this defines how information is managed |
+| [[Business-Analysis-Approach]] | BA methodology references this for artifact storage |
+| [[Change-Requests]] | CM handles version control at project level |
+| [[Communications-Management-Plan]] | Communication channels and cadence |
+| [[Information-Management-Approach]] | Organizational retention requirements |
 
 ---
 

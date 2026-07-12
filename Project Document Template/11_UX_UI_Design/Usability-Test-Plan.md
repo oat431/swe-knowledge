@@ -187,9 +187,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Interactive Prototype]] | Prototype being tested |
-| [[User Personas]] | Participants matching personas |
-| [[Accessibility Audit]] | Accessibility testing complement |
+| [[Interactive-Prototype]] | Prototype being tested |
+| [[User-Personas]] | Participants matching personas |
+| [[Accessibility-Audit]] | Accessibility testing complement |
 
 ---
 

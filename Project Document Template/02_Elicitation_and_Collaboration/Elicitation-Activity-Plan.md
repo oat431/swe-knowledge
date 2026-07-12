@@ -276,11 +276,11 @@ gantt
 
 | Document | Relationship |
 |----------|-------------|
-| [[Elicitation Results (Unconfirmed)]] | Raw outputs from these activities |
-| [[Elicitation Results (Confirmed)]] | Validated outputs after stakeholder confirmation |
-| [[Business Analysis Approach]] | Overall BA methodology this plan follows |
-| [[Stakeholder Engagement Approach]] | Stakeholder management strategy |
-| [[Business Requirements]] | Requirements derived from elicitation results |
+| [[Elicitation-Results-Unconfirmed]] | Raw outputs from these activities |
+| [[Elicitation-Results-Confirmed]] | Validated outputs after stakeholder confirmation |
+| [[Business-Analysis-Approach]] | Overall BA methodology this plan follows |
+| [[Stakeholder-Engagement-Approach]] | Stakeholder management strategy |
+| [[Business-Requirements]] | Requirements derived from elicitation results |
 
 ---
 

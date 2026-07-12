@@ -111,10 +111,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Resource Management Plan]] | Resource management strategy |
-| [[Resource Requirements]] | Resource needs per WBS |
-| [[RACI Matrix]] | Responsibility assignments |
-| [[Team Charter]] | Team working agreements |
+| [[Resource-Management-Plan]] | Resource management strategy |
+| [[Resource-Requirements]] | Resource needs per WBS |
+| [[RACI-Matrix]] | Responsibility assignments |
+| [[Team-Charter]] | Team working agreements |
 
 ---
 

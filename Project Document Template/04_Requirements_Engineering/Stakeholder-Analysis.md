@@ -153,11 +153,11 @@ quadrantChart
 
 | Document | Relationship |
 |----------|-------------|
-| [[Stakeholder Register]] | Detailed stakeholder information |
-| [[Stakeholder Engagement Approach]] | Engagement strategy based on this analysis |
-| [[Business Requirements]] | Requirements influenced by stakeholders |
-| [[Requirements Architecture]] | Requirements viewpoints based on stakeholders |
-| [[Governance Approach]] | Decision authority per stakeholder |
+| [[Stakeholder-Register]] | Detailed stakeholder information |
+| [[Stakeholder-Engagement-Approach]] | Engagement strategy based on this analysis |
+| [[Business-Requirements]] | Requirements influenced by stakeholders |
+| [[Requirements-Architecture]] | Requirements viewpoints based on stakeholders |
+| [[Governance-Approach]] | Decision authority per stakeholder |
 
 ---
 

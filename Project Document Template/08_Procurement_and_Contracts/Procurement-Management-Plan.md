@@ -125,11 +125,11 @@ flowchart TD
 
 | Document | Relationship |
 |----------|-------------|
-| [[Procurement Statement of Work (SOW)]] | Detailed SOW per vendor |
-| [[Sourcing Strategy Plan]] | Make/buy decisions |
-| [[Bid Documents]] | RFP/RFQ documents |
-| [[Source Selection Criteria]] | Vendor evaluation criteria |
-| [[Contract / Agreement]] | Signed contracts |
+| [[Procurement-Statement-of-Work]] | Detailed SOW per vendor |
+| [[Sourcing-Strategy-Plan]] | Make/buy decisions |
+| [[Bid-Documents]] | RFP/RFQ documents |
+| [[Source-Selection-Criteria]] | Vendor evaluation criteria |
+| [[Contract-Agreement]] | Signed contracts |
 
 ---
 

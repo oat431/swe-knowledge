@@ -59,9 +59,9 @@ standard_ref:
 
 | Component | Document | Version |
 |-----------|---------|---------|
-| [Project Scope Statement] | [[Project Scope Statement]] | v1.0 |
-| [WBS] | [[WBS + WBS Dictionary]] | v1.0 |
-| [WBS Dictionary] | [[WBS + WBS Dictionary]] | v1.0 |
+| [Project Scope Statement] | [[Project-Scope-Statement]] | v1.0 |
+| [WBS] | [[WBS-WBS-Dictionary]] | v1.0 |
+| [WBS Dictionary] | [[WBS-WBS-Dictionary]] | v1.0 |
 
 ## 3. Scope Validation
 
@@ -145,13 +145,13 @@ flowchart LR
 
 | Document | Relationship |
 |----------|-------------|
-| [[Project Scope Statement]] | Scope definition |
-| [[WBS + WBS Dictionary]] | Scope decomposition |
-| [[Requirements Change Log]] | Change tracking |
-| [[Change Management Plan]] | Change control procedures |
-| [[Project Management Plan]] | Parent plan |
+| [[Project-Scope-Statement]] | Scope definition |
+| [[WBS-WBS-Dictionary]] | Scope decomposition |
+| [[Requirements-Change-Log]] | Change tracking |
+| [[Change-Strategy]] | Change control procedures |
+| [[Project-Management-Plan]] | Parent plan |
 
 ---
 
 > **Template Standard:** Based on PMBOK v8, ISO 21502
-> **Usage:** This plan defines *how* scope is managed, not *what* the scope is. The scope itself is in [[Project Scope Statement]] and [[WBS]].
+> **Usage:** This plan defines *how* scope is managed, not *what* the scope is. The scope itself is in [[Project-Scope-Statement]] and [[WBS-WBS-Dictionary]].

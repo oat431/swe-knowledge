@@ -374,12 +374,12 @@ gantt
 
 | Document | Relationship |
 |----------|-------------|
-| [[Business Case]] | Benefits justify the investment in the Business Case |
-| [[Potential Value]] | Detailed value analysis that feeds this plan |
-| [[Business Objectives]] | Objectives define what benefits must achieve |
-| [[Change Strategy]] | Strategy defines how benefits will be delivered |
-| [[Solution Evaluation]] | Ongoing evaluation of solution performance |
-| [[Business Performance Assessment]] | Post-implementation performance review |
+| [[Business-Case]] | Benefits justify the investment in the Business Case |
+| [[Potential-Value]] | Detailed value analysis that feeds this plan |
+| [[Business-Objectives]] | Objectives define what benefits must achieve |
+| [[Change-Strategy]] | Strategy defines how benefits will be delivered |
+| [[Benefits-Management-Plan]] | Ongoing evaluation of solution performance |
+| [[BA-Performance-Assessment]] | Post-implementation performance review |
 
 ---
 

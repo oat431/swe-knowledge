@@ -478,7 +478,7 @@ flowchart LR
 
 ### Recommendation
 
-> These findings justify the initiative described in the [[Business Case]] and drive the requirements in [[Business Requirements]].
+> These findings justify the initiative described in the [[Business-Case]] and drive the requirements in [[Business-Requirements]].
 
 ---
 
@@ -486,13 +486,13 @@ flowchart LR
 
 | Document | Relationship |
 |----------|-------------|
-| [[Business Case]] | Current state problems justify the investment |
-| [[Business Requirements]] | Requirements address identified pain points |
-| [[Future State Description]] | Future state resolves current state issues |
-| [[Gap Analysis]] | Gaps are derived from current → future comparison |
-| [[Risk Analysis Results]] | Current state risks feed into risk assessment |
+| [[Business-Case]] | Current state problems justify the investment |
+| [[Business-Requirements]] | Requirements address identified pain points |
+| [[Future-State-Description]] | Future state resolves current state issues |
+| [[Gap-Analysis]] | Gaps are derived from current → future comparison |
+| [[Risk-Analysis-Results]] | Current state risks feed into risk assessment |
 
 ---
 
 > **Template Standard:** Based on BABOK v3 (Strategy Analysis), ISO/IEC/IEEE 12207
-> **Usage:** Document what exists today — resist the urge to propose solutions. Solutions belong in [[Future State Description]] and [[Change Strategy]].
+> **Usage:** Document what exists today — resist the urge to propose solutions. Solutions belong in [[Future-State-Description]] and [[Change-Strategy]].

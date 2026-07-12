@@ -130,10 +130,10 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Resource Management Plan]] | How resources are managed |
-| [[Resource Breakdown Structure]] | Resource hierarchy |
-| [[WBS]] | Work packages requiring resources |
-| [[Activity List]] | Activities requiring resources |
+| [[Resource-Management-Plan]] | How resources are managed |
+| [[Resource-Breakdown-Structure]] | Resource hierarchy |
+| [[WBS-WBS-Dictionary]] | Work packages requiring resources |
+| [[Activity-List]] | Activities requiring resources |
 
 ---
 

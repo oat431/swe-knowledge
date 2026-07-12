@@ -165,11 +165,11 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[SRS]] | Requirements these prototypes visualize |
-| [[User Stories]] | Stories validated via prototypes |
-| [[Acceptance Criteria]] | ACs tested via interactive prototypes |
-| [[Design System]] | Component library used in high-fi prototypes |
-| [[Usability Test Report]] | Formal usability test results |
+| [[Software-Requirements-Specification]] | Requirements these prototypes visualize |
+| [[User-Stories]] | Stories validated via prototypes |
+| [[Acceptance-Criteria]] | ACs tested via interactive prototypes |
+| [[Design-System]] | Component library used in high-fi prototypes |
+| [[Usability-Test-Report]] | Formal usability test results |
 
 ---
 
