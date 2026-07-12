@@ -286,17 +286,17 @@ created: 2026-07-11
 
 | # | Document | Priority | Source | Status |
 |---|----------|----------|--------|--------|
-| 173 | README / Developer Guide | 🔴 | SWEBOK | ☐ |
-| 174 | Coding Standards / Style Guide | 🔴 | SWEBOK | ☐ |
-| 175 | API Documentation | 🔴 | SWEBOK | ☐ |
-| 176 | Dependency Manifest | 🔴 | SWEBOK | ☐ |
-| 177 | SBOM (Software Bill of Materials) | 🔴 | SWEBOK | ☐ |
-| 178 | Code Review Records | 🔴 | SWEBOK | ☐ |
-| 179 | Commit Messages / Changelog | 🔴 | SWEBOK | ☐ |
-| 180 | Static Analysis Reports | 🔴 | SWEBOK | ☐ |
-| 181 | Build Scripts | 🔴 | SWEBOK | ☐ |
-| 182 | Mock/Stub/Driver Specifications | 🟡 | SWEBOK | ☐ |
-| 183 | TDD Test Cases | 🟡 | SWEBOK | ☐ |
+| 173 | README / Developer Guide | 🔴 | SWEBOK | ✅ |
+| 174 | Coding Standards / Style Guide | 🔴 | SWEBOK | ✅ |
+| 175 | API Documentation | 🔴 | SWEBOK | ✅ |
+| 176 | Dependency Manifest | 🔴 | SWEBOK | ✅ |
+| 177 | SBOM (Software Bill of Materials) | 🔴 | SWEBOK | ✅ |
+| 178 | Code Review Records | 🔴 | SWEBOK | ✅ |
+| 179 | Commit Messages / Changelog | 🔴 | SWEBOK | ✅ |
+| 180 | Static Analysis Reports | 🔴 | SWEBOK | ✅ |
+| 181 | Build Scripts | 🔴 | SWEBOK | ✅ |
+| 182 | Mock/Stub/Driver Specifications | 🟡 | SWEBOK | ✅ |
+| 183 | TDD Test Cases | 🟡 | SWEBOK | ✅ |
 
 ---
 
