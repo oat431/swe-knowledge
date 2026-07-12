@@ -498,8 +498,8 @@ created: 2026-07-11
 | 326 | FCA Report (Functional Configuration Audit) | 🔴 | SWEBOK, SEBOK | ✅ |
 | 327 | PCA Report (Physical Configuration Audit) | 🔴 | SWEBOK, SEBOK | ✅ |
 | 328 | Version Description Document | 🔴 | SWEBOK | ✅ |
-| 329 | Configuration Status Accounting Reports | 🟡 | SWEBOK, SEBOK | ☐ |
-| 330 | Deviation / Waiver Records | 🟡 | SWEBOK | ☐ |
+| 329 | Configuration Status Accounting Reports | 🟡 | SWEBOK, SEBOK | ✅ |
+| 330 | Deviation / Waiver Records | 🟡 | SWEBOK | ✅ |
 
 ---
 
