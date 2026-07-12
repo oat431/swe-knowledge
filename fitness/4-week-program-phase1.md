@@ -168,4 +168,45 @@ Same exercises. **Add 2.5 kg to every compound lift each session** if you comple
 
 ---
 
+## Week 2 Review (2026-07-06 → 07-12)
+
+| Metric | Result | Verdict |
+|--------|--------|---------|
+| Weight | 122.3 → 121.8 kg | -0.5 kg. Trend finally downward ✅ |
+| Protein avg | 162g (target 160g) | 7/7 days — massive improvement ✅ |
+| Sleep avg | 6.9h (3 days at 6h) | Unchanged. Still protect this |
+
+### Week 2 Performance → Week 3 Targets
+
+| Exercise | W2 Weight | W2 Feel | W3 Target | Note |
+|----------|-----------|---------|-----------|------|
+| DB Bench Press | 20 kg | Medium | **22 kg** | Increase, all 3 sets at 22 |
+| Chest-Supported Row | 15 kg | Medium | **17 kg** | Increase |
+| Seated DB OHP | 20→15→10 | Collapsed ⚠️ | **12 kg** | ⬇ Rebuild form. Rep failure last week |
+| Face Pulls | 15 kg | Hard | **Stay 15 kg** | Right intensity |
+| Tricep Pushdown | 15 kg | Hard | **Stay 15 kg** | Right intensity |
+| Goblet Squat | 20 kg (last set) | Medium | **20 kg** | All 3 sets at 20, no ramp |
+| Leg Press | 35 kg | Medium | **40 kg** | Increase |
+| Lying Leg Curl | 20 kg (last set) | Medium | **20 kg** | All 3 sets at 20, no ramp |
+| Calf Raises | 25 kg (last set) | Medium | **25 kg** | All 3 sets at 25, no ramp |
+| RDL | 35 kg | Medium | **35 kg** | All 3 sets at 35 |
+| Lat Pulldown | 25 kg | Medium | **27.5 kg** | Increase |
+| Incline DB Press | 20 kg | Medium | **22 kg** | Increase |
+| Bulgarian Split Squat | 10 kg | Medium (was Hard) | **12 kg** | Progress — intensity improved |
+| Seated Cable Row | 25 kg | Medium | **27.5 kg** | Increase |
+
+### ⚠️ Flags from Week 2
+
+1. **Seated DB OHP collapsed 20→15→10** — 20 kg is way too heavy. Drop to 12 kg, rebuild form, all 3 sets at 12.
+2. **Unscheduled barbell bench (40 kg + 50 kg single)** — did this on top of DB bench on Monday. This fried your shoulders/triceps and contributed to the OHP collapse. No extra work outside the program.
+3. **Still ramping within sessions** — warm up, then all 3 working sets at the same weight. Stop pyramids.
+4. **Lateral raises still at 10 kg** — I said 6 kg with strict 2-sec negatives. Do it. They should burn hard by rep 10.
+5. **Run: 30 min instead of 25** — Week 3 protocol: 3 min jog / 2 min walk × 5 = 25 min. Exactly.
+
+### Nutrition Status
+- Protein locked in at 160g+ daily ✅
+- Weight dropping at -0.25 kg/week — on the slow side but moving. Keep 2,400 kcal. If Week 3 trend stays slow, cut to 2,200.
+
+---
+
 *Next review: Week 4. Bring your log. — Coach*
