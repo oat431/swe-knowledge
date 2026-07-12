@@ -433,20 +433,20 @@ created: 2026-07-11
 
 | # | Document | Priority | Source | Status |
 |---|----------|----------|--------|--------|
-| 288 | CI/CD Pipeline Configuration | 🔴 | SWEBOK | ☐ |
-| 289 | Deployment Plan | 🔴 | SWEBOK | ☐ |
-| 290 | Rollback Plan | 🔴 | SWEBOK | ☐ |
-| 291 | SLA (Service-Level Agreement) | 🔴 | SWEBOK, SEBOK | ☐ |
-| 292 | Operations Manual / Runbook | 🔴 | SWEBOK, SEBOK | ☐ |
-| 293 | Release Notes | 🔴 | SWEBOK | ☐ |
-| 294 | Incident Management Process | 🔴 | SWEBOK | ☐ |
-| 295 | Disaster Recovery Plan | 🔴 | SWEBOK | ☐ |
-| 296 | Capacity Plan (Infrastructure) | 🟡 | SWEBOK | ☐ |
-| 297 | Container Configurations | 🟡 | SWEBOK | ☐ |
-| 298 | Infrastructure-as-Code | 🟡 | SWEBOK | ☐ |
-| 299 | SLO/SLI Definitions | 🟡 | SWEBOK | ☐ |
-| 300 | Operational KPIs Report | 🟡 | SWEBOK | ☐ |
-| 301 | Monitoring Dashboard Spec | 🟡 | SWEBOK | ☐ |
+| 288 | CI/CD Pipeline Configuration | 🔴 | SWEBOK | ✅ |
+| 289 | Deployment Plan | 🔴 | SWEBOK | ✅ |
+| 290 | Rollback Plan | 🔴 | SWEBOK | ✅ |
+| 291 | SLA (Service-Level Agreement) | 🔴 | SWEBOK, SEBOK | ✅ |
+| 292 | Operations Manual / Runbook | 🔴 | SWEBOK, SEBOK | ✅ |
+| 293 | Release Notes | 🔴 | SWEBOK | ✅ |
+| 294 | Incident Management Process | 🔴 | SWEBOK | ✅ |
+| 295 | Disaster Recovery Plan | 🔴 | SWEBOK | ✅ |
+| 296 | Capacity Plan (Infrastructure) | 🟡 | SWEBOK | ✅ |
+| 297 | Container Configurations | 🟡 | SWEBOK | ✅ |
+| 298 | Infrastructure-as-Code | 🟡 | SWEBOK | ✅ |
+| 299 | SLO/SLI Definitions | 🟡 | SWEBOK | ✅ |
+| 300 | Operational KPIs Report | 🟡 | SWEBOK | ✅ |
+| 301 | Monitoring Dashboard Spec | 🟡 | SWEBOK | ✅ |
 
 ---
 
