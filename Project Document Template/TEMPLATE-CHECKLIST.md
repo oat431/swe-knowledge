@@ -472,17 +472,17 @@ created: 2026-07-11
 
 | # | Document | Priority | Source | Status |
 |---|----------|----------|--------|--------|
-| 311 | SQAP (Software Quality Assurance Plan) | 🔴 | SWEBOK | ☐ |
-| 312 | V&V Plan | 🔴 | SWEBOK | ☐ |
-| 313 | Review Records | 🔴 | SWEBOK | ☐ |
-| 314 | Defect Log / Metrics | 🔴 | SWEBOK | ☐ |
-| 315 | QMS Documentation | 🔴 | SWEBOK | ☐ |
-| 316 | Audit Reports | 🟡 | SWEBOK | ☐ |
-| 317 | Quality Metrics Dashboard | 🟡 | SWEBOK | ☐ |
-| 318 | RCA Reports | 🟡 | SWEBOK | ☐ |
-| 319 | FMEA / FTA Reports | 🟡 | SWEBOK, SEBOK | ☐ |
-| 320 | Integrity Level Assignments | 🟢 | SWEBOK | ☐ |
-| 321 | Process Assessment Report (CMMI/SPICE) | 🟢 | SWEBOK | ☐ |
+| 311 | SQAP (Software Quality Assurance Plan) | 🔴 | SWEBOK | ✅ |
+| 312 | V&V Plan | 🔴 | SWEBOK | ✅ |
+| 313 | Review Records | 🔴 | SWEBOK | ✅ |
+| 314 | Defect Log / Metrics | 🔴 | SWEBOK | ✅ |
+| 315 | QMS Documentation | 🔴 | SWEBOK | ✅ |
+| 316 | Audit Reports | 🟡 | SWEBOK | ✅ |
+| 317 | Quality Metrics Dashboard | 🟡 | SWEBOK | ✅ |
+| 318 | RCA Reports | 🟡 | SWEBOK | ✅ |
+| 319 | FMEA / FTA Reports | 🟡 | SWEBOK, SEBOK | ✅ |
+| 320 | Integrity Level Assignments | 🟢 | SWEBOK | ✅ |
+| 321 | Process Assessment Report (CMMI/SPICE) | 🟢 | SWEBOK | ✅ |
 
 ---
 
