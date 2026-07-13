@@ -332,32 +332,32 @@ created: 2026-07-11
 
 | # | Document | Priority | Source | Status |
 |---|----------|----------|--------|--------|
-| 203 | ISMS Documentation | 🔴 | CyBOK | ☐ |
-| 204 | Security Policy | 🔴 | CyBOK | ☐ |
-| 205 | Risk Assessment Report (Security) | 🔴 | CyBOK | ☐ |
-| 206 | Risk Treatment Plan | 🔴 | CyBOK | ☐ |
-| 207 | Threat Model | 🔴 | CyBOK, SWEBOK | ☐ |
-| 208 | Security Requirements Specification | 🔴 | CyBOK, SWEBOK | ☐ |
-| 209 | Secure Design Review Report | 🔴 | CyBOK | ☐ |
-| 210 | Secure Coding Guidelines | 🔴 | CyBOK, SWEBOK | ☐ |
-| 211 | SAST Report | 🔴 | CyBOK, SWEBOK | ☐ |
-| 212 | SCA Report | 🔴 | CyBOK | ☐ |
-| 213 | DAST Report | 🟡 | CyBOK, SWEBOK | ☐ |
-| 214 | Penetration Test Report | 🟡 | CyBOK, SWEBOK | ☐ |
-| 215 | SSDLC Process Documentation | 🔴 | CyBOK | ☐ |
-| 216 | Access Control Policy | 🔴 | CyBOK | ☐ |
-| 217 | Authentication Standard | 🔴 | CyBOK | ☐ |
-| 218 | Incident Response Plan | 🔴 | CyBOK | ☐ |
-| 219 | Business Continuity Plan (BCP) | 🔴 | CyBOK | ☐ |
-| 220 | Vulnerability Management Report | 🟡 | CyBOK, SWEBOK | ☐ |
-| 221 | Compliance Assessment Report | 🔴 | CyBOK | ☐ |
-| 222 | Network Security Architecture | 🔴 | CyBOK | ☐ |
-| 223 | DevSecOps Pipeline Configuration | 🟡 | CyBOK, SWEBOK | ☐ |
-| 224 | Security Metrics Dashboard | 🔴 | CyBOK | ☐ |
-| 225 | Digital Forensics Report | 🟡 | CyBOK | ☐ |
-| 226 | Adversary Emulation Plan | 🟡 | CyBOK | ☐ |
-| 227 | Abuse / Misuse Cases | 🟡 | SWEBOK | ☐ |
-| 228 | Security Architecture | 🔴 | SWEBOK | ☐ |
+| 203 | ISMS Documentation | 🔴 | CyBOK | ✅ |
+| 204 | Security Policy | 🔴 | CyBOK | ✅ |
+| 205 | Risk Assessment Report (Security) | 🔴 | CyBOK | ✅ |
+| 206 | Risk Treatment Plan | 🔴 | CyBOK | ✅ |
+| 207 | Threat Model | 🔴 | CyBOK, SWEBOK | ✅ |
+| 208 | Security Requirements Specification | 🔴 | CyBOK, SWEBOK | ✅ |
+| 209 | Secure Design Review Report | 🔴 | CyBOK | ✅ |
+| 210 | Secure Coding Guidelines | 🔴 | CyBOK, SWEBOK | ✅ |
+| 211 | SAST Report | 🔴 | CyBOK, SWEBOK | ✅ |
+| 212 | SCA Report | 🔴 | CyBOK | ✅ |
+| 213 | DAST Report | 🟡 | CyBOK, SWEBOK | ✅ |
+| 214 | Penetration Test Report | 🟡 | CyBOK, SWEBOK | ✅ |
+| 215 | SSDLC Process Documentation | 🔴 | CyBOK | ✅ |
+| 216 | Access Control Policy | 🔴 | CyBOK | ✅ |
+| 217 | Authentication Standard | 🔴 | CyBOK | ✅ |
+| 218 | Incident Response Plan | 🔴 | CyBOK | ✅ |
+| 219 | Business Continuity Plan (BCP) | 🔴 | CyBOK | ✅ |
+| 220 | Vulnerability Management Report | 🟡 | CyBOK, SWEBOK | ✅ |
+| 221 | Compliance Assessment Report | 🔴 | CyBOK | ✅ |
+| 222 | Network Security Architecture | 🔴 | CyBOK | ✅ |
+| 223 | DevSecOps Pipeline Configuration | 🟡 | CyBOK, SWEBOK | ✅ |
+| 224 | Security Metrics Dashboard | 🔴 | CyBOK | ✅ |
+| 225 | Digital Forensics Report | 🟡 | CyBOK | ✅ |
+| 226 | Adversary Emulation Plan | 🟡 | CyBOK | ✅ |
+| 227 | Abuse / Misuse Cases | 🟡 | SWEBOK | ✅ |
+| 228 | Security Architecture | 🔴 | SWEBOK | ✅ |
 
 ---
 
