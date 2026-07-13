@@ -366,65 +366,65 @@ created: 2026-07-11
 
 | # | Document | Priority | Source | Status |
 |---|----------|----------|--------|--------|
-| 229 | Data Governance Charter | 🔴 | DMBOK | ☐ |
-| 230 | Data Governance Strategy | 🔴 | DMBOK | ☐ |
-| 231 | Data Governance Operating Framework | 🔴 | DMBOK | ☐ |
-| 232 | Data Policy | 🔴 | DMBOK | ☐ |
-| 233 | Data Standards | 🔴 | DMBOK | ☐ |
-| 234 | Business Glossary | 🔴 | DMBOK | ☐ |
-| 235 | Data Stewardship Assignment | 🔴 | DMBOK | ☐ |
-| 236 | Regulatory Compliance Register | 🔴 | DMBOK | ☐ |
-| 237 | Enterprise Data Model (EDM) | 🔴 | DMBOK | ☐ |
-| 238 | Data Architecture Blueprint | 🔴 | DMBOK | ☐ |
-| 239 | Data Flow Diagram | 🔴 | DMBOK | ☐ |
-| 240 | Data Lineage Documentation | 🔴 | DMBOK | ☐ |
-| 241 | Conceptual Data Model (CDM) | 🔴 | DMBOK | ☐ |
-| 242 | Logical Data Model (LDM) | 🔴 | DMBOK | ☐ |
-| 243 | Physical Data Model (PDM) | 🔴 | DMBOK | ☐ |
-| 244 | Dimensional Model (Star/Snowflake) | 🔴 | DMBOK | ☐ |
-| 245 | Data Modeling Standards | 🔴 | DMBOK | ☐ |
-| 246 | Data Model Review Records | 🔴 | DMBOK | ☐ |
-| 247 | Database Operational Runbook | 🔴 | DMBOK | ☐ |
-| 248 | Backup & Recovery Plan | 🔴 | DMBOK | ☐ |
-| 249 | Capacity Plan (Data) | 🔴 | DMBOK | ☐ |
-| 250 | High Availability / DR Configuration | 🔴 | DMBOK | ☐ |
-| 251 | Data Retention & Archival Policy | 🔴 | DMBOK | ☐ |
-| 252 | Data Classification Schema | 🔴 | DMBOK | ☐ |
-| 253 | Data Access Control Policy | 🔴 | DMBOK | ☐ |
-| 254 | Data Encryption Standards | 🔴 | DMBOK | ☐ |
-| 255 | Data Masking / Anonymization Rules | 🔴 | DMBOK | ☐ |
-| 256 | Privacy Impact Assessment | 🔴 | DMBOK | ☐ |
-| 257 | Data Breach Response Plan | 🔴 | DMBOK | ☐ |
-| 258 | Data Security Audit Report | 🔴 | DMBOK | ☐ |
-| 259 | Data Integration Architecture | 🔴 | DMBOK | ☐ |
-| 260 | ETL/ELT Specification | 🔴 | DMBOK | ☐ |
-| 261 | Data Interface Agreement (DIA) | 🔴 | DMBOK | ☐ |
-| 262 | API Data Contract | 🔴 | DMBOK | ☐ |
-| 263 | Data Replication & Synchronization Spec | 🔴 | DMBOK | ☐ |
-| 264 | Data Quality Strategy | 🔴 | DMBOK | ☐ |
-| 265 | Data Profiling Report | 🔴 | DMBOK | ☐ |
-| 266 | Data Quality Rules | 🔴 | DMBOK | ☐ |
-| 267 | Data Quality Scorecard | 🔴 | DMBOK | ☐ |
-| 268 | Data Cleansing Specification | 🔴 | DMBOK | ☐ |
-| 269 | Data Quality Issue Log | 🔴 | DMBOK | ☐ |
-| 270 | ECM Strategy | 🔴 | DMBOK | ☐ |
-| 271 | Records Retention Schedule | 🔴 | DMBOK | ☐ |
-| 272 | Content Classification & Taxonomy | 🔴 | DMBOK | ☐ |
-| 273 | MDM Strategy | 🔴 | DMBOK | ☐ |
-| 274 | Reference Data Catalog | 🔴 | DMBOK | ☐ |
-| 275 | Golden Record Definition | 🔴 | DMBOK | ☐ |
-| 276 | Data Warehouse Architecture | 🔴 | DMBOK | ☐ |
-| 277 | BI Semantic Layer Definition | 🔴 | DMBOK | ☐ |
-| 278 | Report & Dashboard Catalog | 🔴 | DMBOK | ☐ |
-| 279 | Metadata Repository | 🟡 | DMBOK | ☐ |
-| 280 | Data Catalog | 🔴 | DMBOK | ☐ |
-| 281 | Metadata Standards | 🔴 | DMBOK | ☐ |
-| 282 | Data Management Maturity Assessment | 🟡 | DMBOK | ☐ |
-| 283 | Data Asset Valuation Report | 🟡 | DMBOK | ☐ |
-| 284 | Data Technology Roadmap | 🟡 | DMBOK | ☐ |
-| 285 | Data Model Scorecard | 🟡 | DMBOK | ☐ |
-| 286 | Data Virtualization Specification | 🟡 | DMBOK | ☐ |
-| 287 | Analytics Governance Policy | 🟡 | DMBOK | ☐ |
+| 229 | Data Governance Charter | 🔴 | DMBOK | ✅ |
+| 230 | Data Governance Strategy | 🔴 | DMBOK | ✅ |
+| 231 | Data Governance Operating Framework | 🔴 | DMBOK | ✅ |
+| 232 | Data Policy | 🔴 | DMBOK | ✅ |
+| 233 | Data Standards | 🔴 | DMBOK | ✅ |
+| 234 | Business Glossary | 🔴 | DMBOK | ✅ |
+| 235 | Data Stewardship Assignment | 🔴 | DMBOK | ✅ |
+| 236 | Regulatory Compliance Register | 🔴 | DMBOK | ✅ |
+| 237 | Enterprise Data Model (EDM) | 🔴 | DMBOK | ✅ |
+| 238 | Data Architecture Blueprint | 🔴 | DMBOK | ✅ |
+| 239 | Data Flow Diagram | 🔴 | DMBOK | ✅ |
+| 240 | Data Lineage Documentation | 🔴 | DMBOK | ✅ |
+| 241 | Conceptual Data Model (CDM) | 🔴 | DMBOK | ✅ |
+| 242 | Logical Data Model (LDM) | 🔴 | DMBOK | ✅ |
+| 243 | Physical Data Model (PDM) | 🔴 | DMBOK | ✅ |
+| 244 | Dimensional Model (Star/Snowflake) | 🔴 | DMBOK | ✅ |
+| 245 | Data Modeling Standards | 🔴 | DMBOK | ✅ |
+| 246 | Data Model Review Records | 🔴 | DMBOK | ✅ |
+| 247 | Database Operational Runbook | 🔴 | DMBOK | ✅ |
+| 248 | Backup & Recovery Plan | 🔴 | DMBOK | ✅ |
+| 249 | Capacity Plan (Data) | 🔴 | DMBOK | ✅ |
+| 250 | High Availability / DR Configuration | 🔴 | DMBOK | ✅ |
+| 251 | Data Retention & Archival Policy | 🔴 | DMBOK | ✅ |
+| 252 | Data Classification Schema | 🔴 | DMBOK | ✅ |
+| 253 | Data Access Control Policy | 🔴 | DMBOK | ✅ |
+| 254 | Data Encryption Standards | 🔴 | DMBOK | ✅ |
+| 255 | Data Masking / Anonymization Rules | 🔴 | DMBOK | ✅ |
+| 256 | Privacy Impact Assessment | 🔴 | DMBOK | ✅ |
+| 257 | Data Breach Response Plan | 🔴 | DMBOK | ✅ |
+| 258 | Data Security Audit Report | 🔴 | DMBOK | ✅ |
+| 259 | Data Integration Architecture | 🔴 | DMBOK | ✅ |
+| 260 | ETL/ELT Specification | 🔴 | DMBOK | ✅ |
+| 261 | Data Interface Agreement (DIA) | 🔴 | DMBOK | ✅ |
+| 262 | API Data Contract | 🔴 | DMBOK | ✅ |
+| 263 | Data Replication & Synchronization Spec | 🔴 | DMBOK | ✅ |
+| 264 | Data Quality Strategy | 🔴 | DMBOK | ✅ |
+| 265 | Data Profiling Report | 🔴 | DMBOK | ✅ |
+| 266 | Data Quality Rules | 🔴 | DMBOK | ✅ |
+| 267 | Data Quality Scorecard | 🔴 | DMBOK | ✅ |
+| 268 | Data Cleansing Specification | 🔴 | DMBOK | ✅ |
+| 269 | Data Quality Issue Log | 🔴 | DMBOK | ✅ |
+| 270 | ECM Strategy | 🔴 | DMBOK | ✅ |
+| 271 | Records Retention Schedule | 🔴 | DMBOK | ✅ |
+| 272 | Content Classification & Taxonomy | 🔴 | DMBOK | ✅ |
+| 273 | MDM Strategy | 🔴 | DMBOK | ✅ |
+| 274 | Reference Data Catalog | 🔴 | DMBOK | ✅ |
+| 275 | Golden Record Definition | 🔴 | DMBOK | ✅ |
+| 276 | Data Warehouse Architecture | 🔴 | DMBOK | ✅ |
+| 277 | BI Semantic Layer Definition | 🔴 | DMBOK | ✅ |
+| 278 | Report & Dashboard Catalog | 🔴 | DMBOK | ✅ |
+| 279 | Metadata Repository | 🟡 | DMBOK | ✅ |
+| 280 | Data Catalog | 🔴 | DMBOK | ✅ |
+| 281 | Metadata Standards | 🔴 | DMBOK | ✅ |
+| 282 | Data Management Maturity Assessment | 🟡 | DMBOK | ✅ |
+| 283 | Data Asset Valuation Report | 🟡 | DMBOK | ✅ |
+| 284 | Data Technology Roadmap | 🟡 | DMBOK | ✅ |
+| 285 | Data Model Scorecard | 🟡 | DMBOK | ✅ |
+| 286 | Data Virtualization Specification | 🟡 | DMBOK | ✅ |
+| 287 | Analytics Governance Policy | 🟡 | DMBOK | ✅ |
 
 ---
 
