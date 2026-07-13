@@ -120,13 +120,13 @@ Bring this log to your next check-in with Coach.
 ## Week 3
 
 ### Mon — Upper
-| Exercise | Weight (kg) | Sets × Reps | Notes |
-|----------|-------------|-------------|-------|
-| Dumbbell Bench Press | | 3×8 | |
-| Chest-Supported Row | | 3×10 | |
-| Seated Dumbbell OHP | | 3×8 | |
-| Face Pulls | | 3×12 | |
-| Tricep Pushdown | | 2×12 | |
+| Exercise             | Weight (kg) | Sets × Reps | Notes  |
+| -------------------- | ----------- | ----------- | ------ |
+| Dumbbell Bench Press | 15,20,20,25 | 3×8         | Medium |
+| Chest-Supported Row  | 20,20,25    | 3×10        | Medium |
+| Seated Dumbbell OHP  | 20,20,20    | 3×8         | Medium |
+| Face Pulls           | 15,15,15    | 3×12        | Medium |
+| Tricep Pushdown      | 15,15       | 2×12        | Medium |
 
 ### Tue — Lower
 | Exercise | Weight (kg) | Sets × Reps | Notes |
@@ -155,7 +155,19 @@ Bring this log to your next check-in with Coach.
 | Seated Cable Row | | 3×10 | |
 
 ---
+## Week 3 Daily Check-In
 
+| Day | Sleep (hrs) | Body Weight (kg) | Protein hit? | Notes |
+| --- | ----------- | ---------------- | ------------ | ----- |
+| Mon | 6           | 122.5            | 160          |       |
+| Tue |             |                  |              |       |
+| Wed |             |                  |              |       |
+| Thu |             |                  |              |       |
+| Fri |             |                  |              |       |
+| Sat |             |                  |              |       |
+| Sun |             |                  |              |       |
+
+---
 ## Week 4
 
 ### Mon — Upper
