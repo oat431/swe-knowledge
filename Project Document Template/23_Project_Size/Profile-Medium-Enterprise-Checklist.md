@@ -224,16 +224,16 @@ tags: [profile, medium-enterprise, checklist, essential-documents]
 
 | Document | Priority | Template | Status |
 |----------|---------|---------|--------|
-| Threat Model | 🔴 | — | ☐ |
-| Secure Coding Guidelines | 🔴 | — | ☐ |
-| SAST Report | 🔴 | — | ☐ |
-| Security Requirements Specification | 🔴 | — | ☐ |
-| Access Control Policy | 🔴 | — | ☐ |
-| Authentication Standard | 🔴 | — | ☐ |
-| Incident Response Plan | 🔴 | — | ☐ |
-| Vulnerability Management Report | 🟡 | — | ☐ |
-| DAST Report | 🟡 | — | ☐ |
-| Penetration Test Report | 🟡 | — | ☐ |
+| [[Threat-Model]] | 🔴 | [14_Security] | ☐ |
+| [[Secure-Coding-Guidelines]] | 🔴 | [14_Security] | ☐ |
+| [[SAST-Report]] | 🔴 | [14_Security] | ☐ |
+| [[Security-Requirements-Specification]] | 🔴 | [14_Security] | ☐ |
+| [[Access-Control-Policy]] | 🔴 | [14_Security] | ☐ |
+| [[Authentication-Standard]] | 🔴 | [14_Security] | ☐ |
+| [[Incident-Response-Plan]] | 🔴 | [14_Security] | ☐ |
+| [[Vulnerability-Management-Report]] | 🟡 | [14_Security] | ☐ |
+| [[DAST-Report]] | 🟡 | [14_Security] | ☐ |
+| [[Penetration-Test-Report]] | 🟡 | [14_Security] | ☐ |
 
 ---
 
