@@ -406,6 +406,25 @@ tags:
 
 ---
 
+## Positions & Roles
+
+| Role | Responsibilities | Documents Owned |
+|---|---|---|
+| **Project Manager** | Schedule, budget, risks, stakeholder coordination | Project Charter, PM Plan, WBS, Risk Register, Communications Plan, Change Mgmt Plan |
+| **Business Analyst** | Requirements elicitation, analysis, stakeholder engagement | BRD, Current/Future State, Change Strategy, Solution Scope, Stakeholder Analysis |
+| **Product Owner** | Backlog ownership, priorities, acceptance | User Stories, Acceptance Criteria, Requirements Prioritization |
+| **Software Architect / Tech Lead** | Architecture, design decisions, technical leadership | SAD, ADR, Architecture Views, HLD, LLD, Design Reviews |
+| **Frontend Developer** | UI implementation, client-side logic | Source Code, Unit Tests, Component Docs |
+| **Backend Developer** | API, services, database, business logic | Source Code, API Spec, DB Schema, Unit Tests, Integration Tests |
+| **DevOps / SRE** | CI/CD, deployment, monitoring, incident response | CI/CD Pipeline, Deployment Plan, Rollback Plan, SLA, Runbook, IaC |
+| **QA Lead / Test Engineer** | Test strategy, test automation, defect management | Test Plan, Test Cases, Test Scripts, Defect Reports, Traceability Matrix, UAT Sign-off |
+| **Security Engineer** | Threat modeling, security testing, secure coding | Threat Model, Security Req Spec, SAST/DAST Reports, Pen Test, Access Control Policy |
+| **Data Architect / DBA** | Data modeling, schema design, data quality | CDM, LDM, PDM, Data Dictionary, Data Quality Rules, Backup & Recovery |
+| **UX Designer** | Wireframes, prototypes, usability testing | Wireframes, Prototype, Usability Test Reports |
+| **Configuration Manager** | Baselines, change control, version management | SCMP, Baseline Records, Change Requests, VDD |
+
+---
+
 ## Related
 
 - [[BABOK Essential Documents]] — Business Analysis Body of Knowledge

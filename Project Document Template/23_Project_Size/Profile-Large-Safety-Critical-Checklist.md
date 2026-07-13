@@ -242,16 +242,16 @@ tags: [profile, large-safety-critical, checklist, essential-documents]
 
 > **Owner:** DevOps
 
-| Document | Priority | Template | Status |
-|----------|---------|---------|--------|
-| [[CI-CD-Pipeline-Configuration]] | 🔴 | [16_Deployment_and_Operations] | ☐ |
-| [[Deployment-Plan]] | 🔴 | [16_Deployment_and_Operations] | ☐ |
-| [[Rollback-Plan]] | 🔴 | [16_Deployment_and_Operations] | ☐ |
-| [[SLA]] | 🔴 | [16_Deployment_and_Operations] | ☐ |
-| [[Operations-Manual-Runbook]] | 🔴 | [16_Deployment_and_Operations] | ☐ |
-| [[Release-Notes]] | 🔴 | [16_Deployment_and_Operations] | ☐ |
-| [[Incident-Management-Process]] | 🔴 | [16_Deployment_and_Operations] | ☐ |
-| [[Disaster-Recovery-Plan]] | 🔴 | [16_Deployment_and_Operations] | ☐ |
+| Document                         | Priority | Template                       | Status |
+| -------------------------------- | -------- | ------------------------------ | ------ |
+| [[CI-CD-Pipeline-Configuration]] | 🔴       | [16_Deployment_and_Operations] | ☐      |
+| [[Deployment-Plan]]              | 🔴       | [16_Deployment_and_Operations] | ☐      |
+| [[Rollback-Plan]]                | 🔴       | [16_Deployment_and_Operations] | ☐      |
+| [[SLA]]                          | 🔴       | [16_Deployment_and_Operations] | ☐      |
+| [[Operations-Manual-Runbook]]    | 🔴       | [16_Deployment_and_Operations] | ☐      |
+| [[Release-Notes]]                | 🔴       | [16_Deployment_and_Operations] | ☐      |
+| [[Incident-Management-Process]]  | 🔴       | [16_Deployment_and_Operations] | ☐      |
+| [[Disaster-Recovery-Plan]]       | 🔴       | [16_Deployment_and_Operations] | ☐      |
 
 ---
 

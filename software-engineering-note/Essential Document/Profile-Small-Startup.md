@@ -172,6 +172,20 @@ Print this table and check off each 🔴 item as you produce it.
 
 ---
 
+## Positions & Roles
+
+> In a small team, people wear multiple hats. One person may fill several roles.
+
+| Role | Responsibilities | Documents Owned |
+|---|---|---|
+| **Product Owner / Founder** | Vision, priorities, stakeholder communication | Business Objectives, User Stories, Acceptance Criteria, Product Backlog |
+| **Full-Stack Developer** | Code, tests, architecture, reviews | Source Code, Unit Tests, ADR, API Spec, DB Schema, Code Reviews |
+| **DevOps Engineer** | CI/CD, deployment, infra, monitoring | CI/CD Pipeline, Deployment Plan, Release Notes, Build Scripts |
+| **QA Engineer** | Test plan, test cases, defect tracking | Test Plan, Test Cases, Defect Report, Regression Suite |
+| **UI/UX Designer** | Wireframes, prototypes, user flow | Wireframes, Interactive Prototype, Style Guide |
+
+---
+
 ## Related
 
 ### BOK Essential Documents

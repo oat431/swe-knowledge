@@ -620,6 +620,36 @@ Use this profile when your project meets **any** of the following criteria:
 
 ---
 
+## Positions & Roles
+
+> Large safety-critical projects require dedicated roles with clear accountability. Separation of duties is often mandated by regulation.
+
+| Role | Responsibilities | Documents Owned |
+|---|---|---|
+| **Program Manager** | Cross-project coordination, portfolio alignment, executive reporting | Program Charter, Portfolio Reports, Lessons Learned |
+| **Project Manager** | Schedule, budget, risks, procurement, stakeholder management | Project Charter, PM Plan, WBS, Risk Register, Cost Baseline, Procurement Docs |
+| **Business Analyst** | Strategy analysis, requirements lifecycle, solution evaluation | BRD, Business Objectives, Current/Future State, Change Strategy, RTM |
+| **Systems Engineer** | System-level architecture, requirements, integration, V&V | ConOps, SyRS, System Architecture, ICD, Trade Studies, Integration Plan |
+| **Systems Architect** | Functional/logical/physical architecture, MBSE | Functional/Logical/Physical Architecture, Architecture Description, MBSE Models |
+| **Software Architect** | Software architecture, design patterns, ADR | SAD, ADR, Architecture Views, ASR Catalog, Architecture Evaluation Report |
+| **Tech Lead** | Design decisions, code quality, technical mentorship | HLD, LLD, Design Reviews, Design Rationale, Code Review Records |
+| **Frontend Developer** | UI implementation, client-side logic, accessibility | Source Code, Unit Tests, Component Docs |
+| **Backend Developer** | Services, APIs, database, business logic | Source Code, API Spec, DB Schema, Unit Tests, Integration Tests |
+| **Embedded / Systems Developer** | Firmware, real-time systems, hardware interfaces | Source Code, Unit Tests, HW/SW Interface Docs |
+| **QA Lead / V&V Engineer** | Verification & validation strategy, formal test oversight | V&V Plan, Verification Reports, Validation Reports, Test Completion Report |
+| **Test Engineer** | Test design, execution, automation, defect management | Test Plan, Test Cases, Test Scripts, Defect Reports, Coverage Reports |
+| **Security Engineer / CISO** | ISMS, security architecture, incident response, compliance | ISMS, Security Policy, Threat Model, SAST/DAST/SCA, Pen Test, Incident Response Plan |
+| **Safety Engineer** | Safety case, hazard analysis, risk assessment | Safety Case, Hazard Analysis (PHA/SHA/SSHA), FMEA/FTA, Safety Requirements |
+| **Data Architect / Data Steward** | Data governance, modeling, lineage, quality | Data Governance Charter, EDM, CDM/LDM/PDM, Data Lineage, Data Quality Scorecard |
+| **DBA** | Database operations, backup, performance, HA | DDL, Runbook, Backup & Recovery Plan, Capacity Plan, HA/DR Config |
+| **DevOps / SRE** | CI/CD, deployment, operations, monitoring | CI/CD Pipeline, Deployment Plan, Rollback Plan, SLA, Runbook, IaC |
+| **Configuration Manager** | Baselines, change control, FCA/PCA, version management | SCMP, Baseline Records, Change Requests, FCA/PCA Reports, VDD |
+| **Compliance Officer** | Regulatory compliance, audits, certification evidence | Compliance Assessment, Standards Compliance Matrix, Audit Reports |
+| **UX Designer** | Wireframes, prototypes, usability, human factors | Wireframes, Prototype, Usability Test Reports, Accessibility Audit |
+| **Technical Writer** | Documentation, release notes, user manuals | Release Notes, Operations Manual, Developer Guide, As-Built Docs |
+
+---
+
 ## Related
 
 - [[BABOK Essential Documents]] — Business Analysis Body of Knowledge
