@@ -9,6 +9,8 @@ tags:
 
 A practical guide for teaching English to functioning adults who rarely speak English. Numbered in teaching order — start at 01 and work forward.
 
+Sections 01-08 build grammar foundation. Sections 09-14 prepare for TOEFL/IELTS. Section 15 prepares for TOEIC.
+
 ---
 
 ## 01 Foundation
@@ -64,6 +66,51 @@ A practical guide for teaching English to functioning adults who rarely speak En
 
 ---
 
+## 09 Vocabulary Building
+
+- [[28 Academic Word List]] — 570 word families that appear in academic texts — the foundation of test vocabulary
+- [[29 Word Families]] — One root, many forms — suffixes and prefixes for noun/verb/adj/adv switching
+- [[30 Collocations]] — Words that naturally go together — "make a decision" not "do a decision"
+- [[31 Register & Formality]] — Informal vs academic English — "kids" → "children," "a lot of" → "numerous"
+
+## 10 Reading Skills
+
+- [[32 Skimming & Scanning]] — Speed reading techniques — get the gist in 2 minutes, find facts in seconds
+- [[33 Inference & Implied Meaning]] — Reading between the lines — what the passage implies, not just says
+- [[34 Reading Question Strategies]] — Every question type has a specific strategy — True/False/Not Given, matching, completion
+
+## 11 Listening Skills
+
+- [[35 Note-Taking for Listening]] — Cornell system adapted for tests — abbreviations, keywords, what to write
+- [[36 Signposting & Discourse Markers]] — "However," "For example," "In conclusion" — your early warning system
+- [[37 Accent Recognition]] — British, American, Australian — how they differ and how to train your ear
+
+## 12 Speaking Skills
+
+- [[38 Response Organization]] — IELTS Parts 1-3, TOEFL Tasks 1-4 — templates and timing for each
+- [[39 Fluency & Self-Correction]] — Smart fillers, connected speech, the 3-second rule for corrections
+
+## 13 Academic Writing
+
+- [[40 Essay Structure]] — Introduction, body paragraphs (PEEL), conclusion — the 4-paragraph essay formula
+- [[41 IELTS Task 1 - Describing Data]] — Graphs, charts, tables, maps — language for trends and comparisons
+- [[42 TOEFL Integrated Writing]] — Reading + lecture summary — note-taking grid and response template
+- [[43 Coherence & Cohesion]] — Logical flow and smooth connections — 25% of your IELTS writing score
+
+## 14 Exam Strategies
+
+- [[44 Time Management]] — How to allocate time per section — the 2-minute rule, when to guess
+- [[45 Scoring Criteria]] — How IELTS and TOEFL actually score you — band descriptors, section weights, score comparison
+
+## 15 TOEIC
+
+- [[46 Business Vocabulary]] — Workplace English: meetings, emails, finance, HR, travel — the vocabulary TOEIC actually tests
+- [[47 TOEIC Listening Question Types]] — Parts 1-4: photographs, question-response, conversations, short talks — strategies for each
+- [[48 TOEIC Reading Strategies]] — Parts 5-7: incomplete sentences, text completion, reading comprehension — speed techniques
+- [[49 TOEIC Scoring & Strategy]] — Score levels, company requirements, study plans by target score, IELTS/TOEFL/TOEIC comparison
+
+---
+
 ## Teaching Routes
 
 | Student Profile | Path |
@@ -72,6 +119,9 @@ A practical guide for teaching English to functioning adults who rarely speak En
 | **Can read/write but won't speak** | Skip to 05–07 (tenses), then 12–14 (verbs), then 26 (pronunciation) |
 | **Speaks but with Thai interference** | 25 → 27 → 02 → 20 (articles + prepositions = top error sources) |
 | **Wants to write better** | 08–11 (sentence building) → 19–24 (connecting + style) |
+| **Preparing for IELTS** | 01–08 (grammar) → 09 (vocabulary) → 10–13 (skills) → 14 (exam strategies) |
+| **Preparing for TOEFL** | 01–08 (grammar) → 09 (vocabulary) → 10–13 (skills) → 14 (exam strategies) |
+| **Preparing for TOEIC** | 01–08 (grammar) → 46 (business vocab) → 47–48 (test strategies) → 49 (scoring & study plan) |
 | **Quick reference** | Each file is self-contained with examples, tests, and ⚠️ Thai traps |
 
 ---
@@ -80,3 +130,9 @@ A practical guide for teaching English to functioning adults who rarely speak En
 
 - Murphy, Raymond. *English Grammar in Use*, 5th ed., Cambridge University Press, 2019.
 - Swan, Michael. *Practical English Usage*, 4th ed., Oxford University Press, 2016.
+- Coxhead, Averil. "A New Academic Word List." *TESOL Quarterly*, vol. 34, no. 2, 2000.
+- Cullen, Pauline, et al. *The Official Cambridge Guide to IELTS*, Cambridge University Press, 2014.
+- Sharpe, Pamela. *How to Prepare for the TOEFL Test*, 14th ed., Barron's, 2020.
+- Bailey, Stephen. *Academic Writing: A Handbook for International Students*, 5th ed., Routledge, 2018.
+- Lin, Lougheed. *Barron's TOEIC*, 7th ed., Barron's, 2019.
+- ETS. *TOEIC Examinee Handbook*, ets.org/toeic, 2024.
