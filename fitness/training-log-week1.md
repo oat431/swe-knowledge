@@ -129,13 +129,13 @@ Bring this log to your next check-in with Coach.
 | Tricep Pushdown      | 15,15       | 2×12        | Medium |
 
 ### Tue — Lower
-| Exercise | Weight (kg) | Sets × Reps | Notes |
-|----------|-------------|-------------|-------|
-| Goblet Squat | | 3×8 | |
-| Leg Press | | 3×10 | |
-| Lying Leg Curl | | 3×12 | |
-| Calf Raises | | 3×15 | |
-| Plank | — | 2×30 sec | |
+| Exercise       | Weight (kg)    | Sets × Reps | Notes  |
+| -------------- | -------------- | ----------- | ------ |
+| Goblet Squat   | 30,35,40,45,50 | 3×8         | Medium |
+| Leg Press      | 30,50,60,70,80 | 3×10        | Medium |
+| Lying Leg Curl | 20,20,20       | 3×12        | Medium |
+| Calf Raises    | 30,30,35       | 3×15        | Medium |
+| Plank          | —              | 2×30 sec    | Medium |
 
 ### Wed — Run/Walk + Accessories
 | Exercise | Weight (kg) | Sets × Reps / Time | Notes |
@@ -160,7 +160,7 @@ Bring this log to your next check-in with Coach.
 | Day | Sleep (hrs) | Body Weight (kg) | Protein hit? | Notes |
 | --- | ----------- | ---------------- | ------------ | ----- |
 | Mon | 6           | 122.5            | 160          |       |
-| Tue |             |                  |              |       |
+| Tue | 6           |                  |              |       |
 | Wed |             |                  |              |       |
 | Thu |             |                  |              |       |
 | Fri |             |                  |              |       |

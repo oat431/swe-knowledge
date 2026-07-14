@@ -62,13 +62,13 @@ tags:
 
 > **Owner:** Tech Lead
 
-| Document                              | Description                                                  | Priority | Source BOK         |
-|---------------------------------------|--------------------------------------------------------------|----------|--------------------|
-| ADR (Architecture Decision Records)   | Lightweight records of key technical decisions and trade-offs| 🔴       | SWEBOK             |
-| API Specification                     | OpenAPI / Swagger contract for service interfaces            | 🔴       | SWEBOK             |
-| Database Schema                       | DDL scripts defining tables, indexes, and constraints        | 🔴       | SWEBOK             |
-| ERD (Entity-Relationship Diagram)     | Visual model of data entities and their relationships        | 🟡       | SWEBOK / DMBOK     |
-| SAD (Software Architecture Document)  | Lightweight diagram of components, layers, and data flow     | 🟡       | SWEBOK             |
+| Document                             | Description                                                   | Priority | Source BOK     |
+| ------------------------------------ | ------------------------------------------------------------- | -------- | -------------- |
+| ADR (Architecture Decision Records)  | Lightweight records of key technical decisions and trade-offs | 🔴       | SWEBOK         |
+| API Specification                    | OpenAPI / Swagger contract for service interfaces             | 🔴       | SWEBOK         |
+| Database Schema                      | DDL scripts defining tables, indexes, and constraints         | 🔴       | SWEBOK         |
+| ERD (Entity-Relationship Diagram)    | Visual model of data entities and their relationships         | 🟡       | SWEBOK / DMBOK |
+| SAD (Software Architecture Document) | Lightweight diagram of components, layers, and data flow      | 🟡       | SWEBOK         |
 
 ## 2b. UX/UI Design
 
