@@ -133,3 +133,69 @@ int[] dijkstra(Map<Integer, List<Edge>> graph, int start, int n) {
 
 - CLRS — Chapters 22–25
 - LeetCode — Graph problem sets
+
+
+---
+
+## Hands-On Exercises
+
+### Exercise 1: BFS — Shortest Path in Unweighted Graph
+Implement BFS to find the shortest distance from a source node to all other nodes in an unweighted graph.
+
+```java
+int[] bfsShortestPath(Map<Integer, List<Integer>> graph, int start, int n) {
+    int[] dist = new int[n];
+    Arrays.fill(dist, -1);  // -1 = unreachable
+    Deque<Integer> queue = new ArrayDeque<>();
+    // TODO: BFS from start, track distance at each level
+}
+```
+
+---
+
+### Exercise 2: DFS — Number of Islands
+Given a 2D grid of `'1'`s (land) and `'0'`s (water), count the number of islands. An island is formed by connecting adjacent lands horizontally or vertically.
+
+```java
+int numIslands(char[][] grid) {
+    int count = 0;
+    // TODO: For each unvisited '1', increment count and DFS to mark all connected '1's
+}
+```
+
+**Hint:** Mark visited cells by setting them to `'0'` (or use a `visited` boolean grid).
+
+---
+
+### Exercise 3: Topological Sort — Course Schedule
+Given `numCourses` and prerequisites `[a, b]` meaning "to take `a`, you must first take `b`", determine if you can finish all courses (detect cycle in directed graph).
+
+```java
+boolean canFinish(int numCourses, int[][] prerequisites) {
+    // TODO: Build adjacency list, then either:
+    //   - DFS with 3 colors (white/gray/black) for cycle detection
+    //   - BFS (Kahn's algorithm) — count processed nodes
+}
+```
+
+---
+
+## Assignments
+
+| # | Problem | Difficulty | Key Technique |
+|---|---------|:----------:|---------------|
+| 1 | [Flood Fill](https://leetcode.com/problems/flood-fill/) (LC 733) | 🟢 Easy | DFS/BFS on Grid |
+| 2 | [Island Perimeter](https://leetcode.com/problems/island-perimeter/) (LC 463) | 🟢 Easy | Grid Traversal |
+| 3 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) (LC 200) | 🟡 Medium | DFS/BFS Connected Components |
+| 4 | [Clone Graph](https://leetcode.com/problems/clone-graph/) (LC 133) | 🟡 Medium | BFS/DFS + HashMap |
+| 5 | [Course Schedule](https://leetcode.com/problems/course-schedule/) (LC 207) | 🟡 Medium | Topological Sort / Cycle Detection |
+| 6 | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) (LC 210) | 🟡 Medium | Topological Sort (Kahn's) |
+| 7 | [Word Ladder](https://leetcode.com/problems/word-ladder/) (LC 127) | 🔴 Hard | BFS on Implicit Graph |
+| 8 | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) (LC 743) | 🟡 Medium | Dijkstra's |
+
+### Assignment Guidelines
+- **Start** with 1–2 (Easy) — grid-based DFS/BFS.
+- **Then** 3–6 (Medium) — graph traversal, cycle detection, topological sort.
+- **Problem 7** (Word Ladder) is a classic BFS interview problem. Treat each word as a node.
+- **Problem 8** (Network Delay Time) is a direct application of Dijkstra's from this note.
+- **Target time:** 10 min per Easy, 25 min per Medium, 35 min per Hard.

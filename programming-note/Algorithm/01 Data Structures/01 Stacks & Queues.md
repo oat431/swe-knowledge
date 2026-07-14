@@ -125,3 +125,80 @@ deque.removeLast();  // [0, 1]
 
 - CLRS — Chapter 10.1
 - LeetCode — Stack / Queue problem sets
+
+
+---
+
+## Hands-On Exercises
+
+### Exercise 1: Stack — Valid Parentheses
+Use a stack to check if parentheses are balanced. Handle `()`, `{}`, `[]`.
+
+```java
+boolean isValid(String s) {
+    Deque<Character> stack = new ArrayDeque<>();
+    for (char c : s.toCharArray()) {
+        // TODO: Push opening brackets
+        // On closing bracket, check if top matches
+    }
+    return stack.isEmpty();
+}
+```
+
+---
+
+### Exercise 2: Monotonic Stack — Next Greater Element
+Implement the `nextGreater` method from the note. Test with `[4,5,2,25]` → expect `[5,25,25,-1]`.
+
+```java
+int[] nextGreater(int[] nums) {
+    int[] result = new int[nums.length];
+    Deque<Integer> stack = new ArrayDeque<>();
+    // TODO: Traverse right to left
+    // Pop elements ≤ current, peek for next greater
+}
+```
+
+---
+
+### Exercise 3: Queue — Implement a Queue Using Stacks
+Implement a FIFO queue using only two stacks. `push`, `pop`, `peek`, `empty`.
+
+```java
+class MyQueue {
+    Deque<Integer> inStack = new ArrayDeque<>();
+    Deque<Integer> outStack = new ArrayDeque<>();
+
+    void push(int x) {
+        // TODO: Always push to inStack
+    }
+
+    int pop() {
+        // TODO: If outStack empty, pour all from inStack
+        // Then pop from outStack
+    }
+}
+```
+
+**Hint:** This is the "two-stack queue" pattern. Amortized O(1) per operation.
+
+---
+
+## Assignments
+
+| # | Problem | Difficulty | Key Technique |
+|---|---------|:----------:|---------------|
+| 1 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) (LC 20) | 🟢 Easy | Stack Matching |
+| 2 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) (LC 232) | 🟢 Easy | Two Stacks |
+| 3 | [Min Stack](https://leetcode.com/problems/min-stack/) (LC 155) | 🟡 Medium | Auxiliary Stack |
+| 4 | [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) (LC 150) | 🟡 Medium | Stack Evaluation |
+| 5 | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) (LC 739) | 🟡 Medium | Monotonic Stack |
+| 6 | [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/) (LC 503) | 🟡 Medium | Monotonic Stack (Circular) |
+| 7 | [Decode String](https://leetcode.com/problems/decode-string/) (LC 394) | 🟡 Medium | Stack (Nested) |
+| 8 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) (LC 84) | 🔴 Hard | Monotonic Stack |
+
+### Assignment Guidelines
+- **Start** with 1–2 (Easy) — basic stack/queue operations.
+- **Then** 3–7 (Medium) — monotonic stack is the key pattern here.
+- **Problem 8** (Hard) is a classic monotonic stack problem. Think about finding the next smaller element on both sides.
+- **Target time:** 10 min per Easy, 20 min per Medium, 35 min per Hard.

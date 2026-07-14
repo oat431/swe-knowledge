@@ -146,3 +146,76 @@ void heapSort(int[] arr) {
 
 - CLRS — Chapter 6
 - LeetCode — Heap / Priority Queue problem sets
+
+
+---
+
+## Hands-On Exercises
+
+### Exercise 1: Min-Heap Basics — Kth Smallest Element
+Given an unsorted array, find the kth smallest element using a max-heap of size k.
+
+```java
+int kthSmallest(int[] nums, int k) {
+    // TODO: Use a max-heap (reverseOrder)
+    // Add elements, if size > k, poll (remove largest)
+    // The root of the max-heap is the kth smallest
+}
+```
+
+**Hint:** Why max-heap and not min-heap? Because we want to keep the k smallest elements, and the largest of those k is at the top.
+
+---
+
+### Exercise 2: Top K Elements — Implement from Note
+Implement the `topK` method from the note. Test with `nums = [3,1,5,12,2,11]`, `k = 3` → expect `[5,11,12]` (order may vary).
+
+```java
+int[] topK(int[] nums, int k) {
+    PriorityQueue<Integer> heap = new PriorityQueue<>(); // min-heap
+    // TODO: For each element, add to heap
+    // If heap size > k, remove the smallest (poll)
+    // Remaining k elements are the k largest
+}
+```
+
+---
+
+### Exercise 3: Custom Heap — Build a Max-Heap from Scratch
+Implement `insert` and `poll` for a max-heap (modify the MinHeap from the note).
+
+```java
+class MaxHeap {
+    private List<Integer> heap = new ArrayList<>();
+
+    void insert(int val) {
+        // TODO: Add to end, bubble UP — swap with parent if val > parent
+    }
+
+    int poll() {
+        // TODO: Save root, move last to root, bubble DOWN
+        // Swap with larger child
+    }
+}
+```
+
+---
+
+## Assignments
+
+| # | Problem | Difficulty | Key Technique |
+|---|---------|:----------:|---------------|
+| 1 | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) (LC 703) | 🟢 Easy | Min-Heap of size K |
+| 2 | [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/) (LC 1046) | 🟢 Easy | Max-Heap |
+| 3 | [Kth Largest Element in Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) (LC 215) | 🟡 Medium | Min-Heap / Quickselect |
+| 4 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) (LC 347) | 🟡 Medium | HashMap + Heap |
+| 5 | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/) (LC 973) | 🟡 Medium | Max-Heap of size K |
+| 6 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) (LC 295) | 🔴 Hard | Two Heaps |
+| 7 | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) (LC 23) | 🔴 Hard | Min-Heap of list heads |
+| 8 | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) (LC 621) | 🟡 Medium | Max-Heap + Cooldown |
+
+### Assignment Guidelines
+- **Start** with 1–2 (Easy) — basic heap operations.
+- **Then** 3–5 (Medium) — the "Top K" pattern.
+- **Problems 6–7** (Hard) are classic heap interview questions. Study the two-heap median pattern carefully.
+- **Target time:** 10 min per Easy, 25 min per Medium, 35 min per Hard.

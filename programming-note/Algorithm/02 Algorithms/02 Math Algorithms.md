@@ -290,3 +290,65 @@ class Combinatorics {
 - CLRS — Chapter 31 (Number-Theoretic Algorithms)
 - Competitive Programming 3 — Steven Halim, Chapters 5-7
 - GeeksforGeeks — Modular Arithmetic
+
+
+---
+
+## Hands-On Exercises
+
+### Exercise 1: GCD/LCM — Implement Both
+Implement `gcd` (Euclidean) and `lcm` from the note. Test with `gcd(48, 18)` → expect `6`, `lcm(4, 6)` → expect `12`.
+
+```java
+long gcd(long a, long b) { /* TODO: while loop with modulo */ }
+long lcm(long a, long b) { /* TODO: a / gcd(a,b) * b */ }
+```
+
+---
+
+### Exercise 2: Sieve of Eratosthenes — Find Primes ≤ 100
+Implement the sieve from the note. Find all primes ≤ 100. Expected: `[2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97]` (25 primes).
+
+```java
+List<Integer> getPrimes(int n) {
+    // TODO: Create boolean array, mark non-primes
+    // Optimization: skip even numbers, start marking from i*i
+}
+```
+
+---
+
+### Exercise 3: Fast Modular Exponentiation
+Implement `modPow` from the note. Test with `3^13 % 7` → expect `3`.
+
+```java
+long modPow(long base, long exp, long mod) {
+    long result = 1;
+    base %= mod;
+    // TODO: While exp > 0, check LSB, square base, shift exp
+}
+```
+
+**Trace through the walkthrough table in the note to verify your implementation.**
+
+---
+
+## Assignments
+
+| # | Problem | Difficulty | Key Technique |
+|---|---------|:----------:|---------------|
+| 1 | [Count Primes](https://leetcode.com/problems/count-primes/) (LC 204) | 🟡 Medium | Sieve of Eratosthenes |
+| 2 | [Pow(x, n)](https://leetcode.com/problems/powx-n/) (LC 50) | 🟡 Medium | Fast Exponentiation |
+| 3 | [The kth Factor of n](https://leetcode.com/problems/the-kth-factor-of-n/) (LC 1492) | 🟡 Medium | Divisors |
+| 4 | [Ugly Number](https://leetcode.com/problems/ugly-number/) (LC 263) | 🟢 Easy | GCD / Prime Factors |
+| 5 | [Greatest Common Divisor of Strings](https://leetcode.com/problems/greatest-common-divisor-of-strings/) (LC 1071) | 🟢 Easy | GCD on Strings |
+| 6 | [Super Pow](https://leetcode.com/problems/super-pow/) (LC 372) | 🟡 Medium | Modular Exponentiation |
+| 7 | [Count Numbers with Unique Digits](https://leetcode.com/problems/count-numbers-with-unique-digits/) (LC 357) | 🟡 Medium | Combinatorics |
+| 8 | [Nth Magical Number](https://leetcode.com/problems/nth-magical-number/) (LC 878) | 🔴 Hard | LCM + Binary Search |
+
+### Assignment Guidelines
+- **Start** with 4–5 (Easy) — basic GCD/number properties.
+- **Then** 1–3, 6–7 (Medium) — sieve, fast pow, combinatorics.
+- **Problem 8** (Hard) combines LCM with binary search.
+- **Key insight:** Modular arithmetic is essential for competitive programming and cryptography.
+- **Target time:** 10 min per Easy, 20 min per Medium, 35 min per Hard.

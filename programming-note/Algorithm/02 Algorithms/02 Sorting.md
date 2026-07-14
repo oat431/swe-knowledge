@@ -139,3 +139,68 @@ Unstable:[(B,1), (C,2), (A,2)]   ← A and C swapped
 
 - CLRS — Chapters 6–8
 - Sedgewick — Chapter 2 (Sorting)
+
+
+---
+
+## Hands-On Exercises
+
+### Exercise 1: Quick Sort — Implement Partition
+Implement the `partition` method from the note. Test with `[3,6,8,10,1,2,1]`, pivot = last element.
+
+```java
+int partition(int[] arr, int low, int high) {
+    int pivot = arr[high];
+    int i = low - 1;
+    // TODO: Move all elements ≤ pivot to the left
+    // Return final pivot position
+}
+```
+
+---
+
+### Exercise 2: Merge Sort — Implement Merge
+Implement the `merge` method from the note. Given two sorted halves of an array, merge them in-place.
+
+```java
+void merge(int[] arr, int left, int mid, int right) {
+    int[] temp = new int[right - left + 1];
+    // TODO: Two-pointer merge from both halves into temp
+    // Copy temp back to arr
+}
+```
+
+---
+
+### Exercise 3: Counting Sort — Implement from Note
+Implement counting sort for an array of non-negative integers.
+
+```java
+void countingSort(int[] arr) {
+    // TODO: 1. Find max
+    // 2. Count frequencies
+    // 3. Compute prefix sums (cumulative count)
+    // 4. Build output array (traverse backwards for stability)
+}
+```
+
+---
+
+## Assignments
+
+| # | Problem | Difficulty | Key Technique |
+|---|---------|:----------:|---------------|
+| 1 | [Sort an Array](https://leetcode.com/problems/sort-an-array/) (LC 912) | 🟡 Medium | Merge / Quick Sort |
+| 2 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) (LC 88) | 🟢 Easy | Merge (Two Pointers) |
+| 3 | [Sort Colors](https://leetcode.com/problems/sort-colors/) (LC 75) | 🟡 Medium | Dutch National Flag |
+| 4 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) (LC 56) | 🟡 Medium | Sort + Merge |
+| 5 | [Kth Largest Element](https://leetcode.com/problems/kth-largest-element-in-an-array/) (LC 215) | 🟡 Medium | Quickselect |
+| 6 | [Wiggle Sort II](https://leetcode.com/problems/wiggle-sort-ii/) (LC 324) | 🟡 Medium | Sort + Interleave |
+| 7 | [Maximum Gap](https://leetcode.com/problems/maximum-gap/) (LC 164) | 🔴 Hard | Radix Sort / Bucket |
+| 8 | [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) (LC 315) | 🔴 Hard | Merge Sort + Count |
+
+### Assignment Guidelines
+- **Start** with problem 2 (Easy) — merging sorted arrays.
+- **Then** 1, 3–6 (Medium) — sorting applications and quickselect.
+- **Problems 7–8** (Hard) require advanced sorting techniques.
+- **Target time:** 10 min per Easy, 20 min per Medium, 35 min per Hard.

@@ -184,3 +184,69 @@ int[] maxSlidingWindow(int[] nums, int k) {
 - CLRS — Chapter 10.1
 - Oracle Java Docs — `Deque` interface
 - LeetCode 239 — Sliding Window Maximum
+
+
+---
+
+## Hands-On Exercises
+
+### Exercise 1: Deque as Stack — Valid Parentheses
+Use an `ArrayDeque` as a stack to check if a string of parentheses `()[]{}` is valid.
+
+```java
+boolean isValid(String s) {
+    Deque<Character> stack = new ArrayDeque<>();
+    for (char c : s.toCharArray()) {
+        // TODO: Push opening brackets, pop and match closing brackets
+    }
+    // TODO: Return true if stack is empty
+}
+```
+
+**Hint:** Use a map from closing → opening bracket for matching.
+
+---
+
+### Exercise 2: Monotonic Deque — Sliding Window Maximum
+Implement the sliding window maximum from the note. Test with `nums = [1,3,-1,-3,5,3,6,7]`, `k = 3` → expect `[3,3,5,5,6,7]`.
+
+```java
+int[] maxSlidingWindow(int[] nums, int k) {
+    // TODO: Follow the monotonic deque algorithm from the note
+    // 1. Remove out-of-window indices from front
+    // 2. Remove smaller elements from back
+    // 3. Add current index
+    // 4. Record max when window is full
+}
+```
+
+---
+
+### Exercise 3: Deque as Queue — BFS Level Order
+Use an `ArrayDeque` as a queue to perform level-order traversal on a binary tree. Return a list of lists (one per level).
+
+```java
+List<List<Integer>> levelOrder(TreeNode root) {
+    Deque<TreeNode> queue = new ArrayDeque<>();
+    // TODO: BFS using queue, track level boundaries
+}
+```
+
+---
+
+## Assignments
+
+| # | Problem | Difficulty | Key Technique |
+|---|---------|:----------:|---------------|
+| 1 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) (LC 20) | 🟢 Easy | Stack (Deque) |
+| 2 | [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) (LC 225) | 🟢 Easy | Deque as Stack |
+| 3 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) (LC 239) | 🔴 Hard | Monotonic Deque |
+| 4 | [Design Circular Deque](https://leetcode.com/problems/design-circular-deque/) (LC 641) | 🟡 Medium | Deque Implementation |
+| 5 | [Longest Subarray With Absolute Diff ≤ Limit](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) (LC 1438) | 🟡 Medium | Monotonic Deque |
+| 6 | [Max Value of Equation](https://leetcode.com/problems/max-value-of-equation/) (LC 1499) | 🔴 Hard | Monotonic Deque |
+
+### Assignment Guidelines
+- **Start** with problems 1–2 (Easy) to solidify deque-as-stack/queue usage.
+- **Then** tackle problem 3 (Sliding Window Maximum) — it's the core monotonic deque pattern from this note.
+- **Problems 4–6** build on the monotonic deque with variations.
+- **Target time:** 15 min per Easy, 30 min per Medium/Hard.

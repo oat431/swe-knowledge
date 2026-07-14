@@ -122,3 +122,84 @@ boolean hasCycle(ListNode head) {
 
 - CLRS — Chapters 10.1–10.2
 - LeetCode — Array / Linked List problem sets
+
+
+---
+
+## Hands-On Exercises
+
+### Exercise 1: Two Pointers — Remove Duplicates
+Given a **sorted** array, remove duplicates in-place and return the new length. Use the two-pointer technique.
+
+```java
+int removeDuplicates(int[] nums) {
+    // TODO: Use two pointers (slow, fast)
+    // slow = position to write next unique element
+    // fast = scanning pointer
+    // Return the new length
+}
+```
+
+**Hint:** `slow` starts at 1, `fast` starts at 1. When `nums[fast] != nums[fast - 1]`, write to `nums[slow]`.
+
+---
+
+### Exercise 2: Sliding Window — Max Sum Subarray of Size K
+Given an array of integers and a number `k`, find the maximum sum of a subarray of size `k`.
+
+```java
+int maxSumSubarray(int[] arr, int k) {
+    // TODO: Compute sum of first k elements
+    // Slide the window: add new element, remove old element
+    // Track the maximum sum
+}
+```
+
+**Hint:** `windowSum += arr[i] - arr[i - k]` at each slide step.
+
+---
+
+### Exercise 3: Linked List — Reverse a Linked List
+Implement the iterative reverse algorithm shown in the note. Test with: `1 → 2 → 3 → 4 → 5` → expect `5 → 4 → 3 → 2 → 1`.
+
+```java
+ListNode reverse(ListNode head) {
+    // TODO: Use prev, curr, next pointers
+    // Follow the 4-step pattern from the note
+}
+```
+
+---
+
+### Exercise 4: Fast & Slow Pointers — Find Middle of Linked List
+Given the head of a singly linked list, return the middle node. If two middle nodes, return the second.
+
+```java
+ListNode middleNode(ListNode head) {
+    // TODO: slow moves 1 step, fast moves 2 steps
+    // When fast reaches end, slow is at middle
+}
+```
+
+---
+
+## Assignments
+
+| # | Problem | Difficulty | Key Technique |
+|---|---------|:----------:|---------------|
+| 1 | [Two Sum](https://leetcode.com/problems/two-sum/) (LC 1) | 🟢 Easy | Array + HashMap |
+| 2 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) (LC 26) | 🟢 Easy | Two Pointers |
+| 3 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) (LC 283) | 🟢 Easy | Two Pointers |
+| 4 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) (LC 21) | 🟢 Easy | Linked List Merge |
+| 5 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) (LC 141) | 🟢 Easy | Fast & Slow Pointers |
+| 6 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) (LC 206) | 🟢 Easy | Linked List |
+| 7 | [3Sum](https://leetcode.com/problems/3sum/) (LC 15) | 🟡 Medium | Two Pointers + Sort |
+| 8 | [Remove Nth Node From End](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) (LC 19) | 🟡 Medium | Two Pointers |
+| 9 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) (LC 11) | 🟡 Medium | Two Pointers |
+| 10 | [Longest Substring Without Repeating](https://leetcode.com/problems/longest-substring-without-repeating-characters/) (LC 3) | 🟡 Medium | Sliding Window |
+
+### Assignment Guidelines
+- **Start** with problems 1–6 (Easy). These directly apply the patterns from this note.
+- **Then** attempt 7–10 (Medium). These combine multiple patterns.
+- **Target time:** 15 min per Easy, 25 min per Medium.
+- **If stuck > 15 min:** Re-read the note section, try a simpler version of the problem, then retry.

@@ -133,3 +133,74 @@ void insert(TrieNode root, String word) {
 
 - CLRS — Chapters 12, 13
 - Sedgewick — Chapter 3 (Trees)
+
+
+---
+
+## Hands-On Exercises
+
+### Exercise 1: Tree Traversal — Inorder, Preorder, Postorder
+Implement all three recursive traversals for the tree in the note:
+```
+        1
+       / \
+      2   3
+     / \
+    4   5
+```
+
+```java
+void inorder(TreeNode root)   { /* TODO */ }  // [4,2,5,1,3]
+void preorder(TreeNode root)  { /* TODO */ }  // [1,2,4,5,3]
+void postorder(TreeNode root) { /* TODO */ }  // [4,5,2,3,1]
+```
+
+---
+
+### Exercise 2: BST Search — Validate BST
+Implement the search algorithm from the note, then write a function to check if a binary tree is a valid BST.
+
+```java
+boolean isValidBST(TreeNode root) {
+    // TODO: Use inorder traversal — values must be strictly increasing
+    // Or use min/max bounds recursively
+}
+```
+
+**Hint:** In a valid BST, inorder traversal produces a sorted sequence.
+
+---
+
+### Exercise 3: Trie — Implement Insert and Search
+Implement the Trie `insert` and `search` methods from the note.
+
+```java
+class Trie {
+    TrieNode root = new TrieNode();
+
+    void insert(String word) { /* TODO */ }
+    boolean search(String word) { /* TODO */ }  // Exact match
+    boolean startsWith(String prefix) { /* TODO */ }  // Prefix exists?
+}
+```
+
+---
+
+## Assignments
+
+| # | Problem | Difficulty | Key Technique |
+|---|---------|:----------:|---------------|
+| 1 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) (LC 226) | 🟢 Easy | Recursion |
+| 2 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) (LC 104) | 🟢 Easy | DFS |
+| 3 | [Same Tree](https://leetcode.com/problems/same-tree/) (LC 100) | 🟢 Easy | Recursion |
+| 4 | [Validate BST](https://leetcode.com/problems/validate-binary-search-tree/) (LC 98) | 🟡 Medium | Inorder / Bounds |
+| 5 | [Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) (LC 102) | 🟡 Medium | BFS (Queue) |
+| 6 | [Lowest Common Ancestor of BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) (LC 235) | 🟡 Medium | BST Property |
+| 7 | [Lowest Common Ancestor of Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) (LC 236) | 🟡 Medium | Recursion |
+| 8 | [Implement Trie](https://leetcode.com/problems/implement-trie-prefix-tree/) (LC 208) | 🟡 Medium | Trie |
+
+### Assignment Guidelines
+- **Start** with 1–3 (Easy) — basic tree recursion.
+- **Then** 4–8 (Medium) — BST properties, BFS, LCA, Trie.
+- **Problem 4** (Validate BST) is a very common interview trap. Don't just check `left < node < right` locally — check with bounds.
+- **Target time:** 10 min per Easy, 20 min per Medium.

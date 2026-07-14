@@ -176,3 +176,108 @@ Efficient string search. Autocomplete, spell checker.
 
 - LeetCode Explore cards — Patterns
 - Grokking the Coding Interview — https://www.educative.io/courses/grokking-the-coding-interview
+
+
+---
+
+## Hands-On Exercises
+
+### Exercise 1: Two Pointers — Container With Most Water
+Given `n` non-negative integers representing heights, find two lines that together with the x-axis form a container that holds the most water.
+
+```java
+int maxArea(int[] height) {
+    int left = 0, right = height.length - 1;
+    int maxArea = 0;
+    // TODO: Move the shorter pointer inward, update maxArea
+}
+```
+
+**Hint:** Area = `min(height[left], height[right]) * (right - left)`.
+
+---
+
+### Exercise 2: Sliding Window — Longest Substring Without Repeating Characters
+Given a string, find the length of the longest substring without repeating characters.
+
+```java
+int lengthOfLongestSubstring(String s) {
+    // TODO: Use a HashSet or HashMap to track characters in window
+    // Expand right, shrink left when duplicate found
+}
+```
+
+---
+
+### Exercise 3: Merge Intervals — Implement from Note
+Implement the `merge` method from the note. Test with `[[1,3],[2,6],[8,10],[15,18]]` → expect `[[1,6],[8,10],[15,18]]`.
+
+```java
+int[][] merge(int[][] intervals) {
+    // TODO: Sort by start, then merge overlapping
+}
+```
+
+---
+
+### Exercise 4: Prefix Sum — Subarray Sum Equals K
+Given an array of integers and an integer `k`, find the total number of continuous subarrays whose sum equals `k`.
+
+```java
+int subarraySum(int[] nums, int k) {
+    Map<Integer, Integer> prefixCount = new HashMap<>();
+    prefixCount.put(0, 1);  // Empty prefix
+    // TODO: Build prefix sum, check if (prefixSum - k) exists in map
+}
+```
+
+**Hint:** This combines prefix sum with the HashMap pattern.
+
+---
+
+### Exercise 5: Big-O Estimation — Practice
+For each code snippet, determine the Big-O complexity:
+
+```java
+// Snippet A
+for (int i = 0; i < n; i++)
+    for (int j = i; j < n; j++)
+        arr[j]++;                    // Answer: ?
+
+// Snippet B
+int i = 1;
+while (i < n) i *= 2;               // Answer: ?
+
+// Snippet C
+for (int i = 0; i < n; i++)
+    for (int j = 0; j < n; j++)
+        for (int k = 0; k < n; k++)  // Answer: ?
+            arr[k]++;
+```
+
+Write your answers as comments, then verify with the quick estimation table in the note.
+
+---
+
+## Assignments
+
+| # | Problem | Difficulty | Key Technique |
+|---|---------|:----------:|---------------|
+| 1 | [Two Sum](https://leetcode.com/problems/two-sum/) (LC 1) | 🟢 Easy | HashMap |
+| 2 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) (LC 53) | 🟡 Medium | Kadane's / DP |
+| 3 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) (LC 56) | 🟡 Medium | Sort + Merge |
+| 4 | [Longest Substring Without Repeating](https://leetcode.com/problems/longest-substring-without-repeating-characters/) (LC 3) | 🟡 Medium | Sliding Window |
+| 5 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) (LC 11) | 🟡 Medium | Two Pointers |
+| 6 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) (LC 560) | 🟡 Medium | Prefix Sum + HashMap |
+| 7 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) (LC 200) | 🟡 Medium | BFS/DFS |
+| 8 | [Course Schedule](https://leetcode.com/problems/course-schedule/) (LC 207) | 🟡 Medium | Topological Sort |
+| 9 | [LRU Cache](https://leetcode.com/problems/lru-cache/) (LC 146) | 🟡 Medium | HashMap + DLL |
+| 10 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) (LC 4) | 🔴 Hard | Binary Search |
+
+### Assignment Guidelines
+- **These problems cover all 10 patterns** from this note. Each problem maps to a specific pattern.
+- **Start** with 1 (Easy).
+- **Then** 2–9 (Medium) — try to identify which pattern each problem uses before solving.
+- **Problem 10** (Hard) — the ultimate binary search challenge.
+- **After completing all:** Review which patterns you found easiest/hardest. Focus more practice on weak patterns.
+- **Target time:** 10 min per Easy, 20 min per Medium, 40 min for Hard.

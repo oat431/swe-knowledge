@@ -138,3 +138,67 @@ int searchRotated(int[] nums, int target) {
 
 - CLRS — Chapter 2, 12
 - LeetCode — Binary Search problem sets
+
+
+---
+
+## Hands-On Exercises
+
+### Exercise 1: Binary Search — Standard Implementation
+Implement binary search from the note. Test with `arr = [1,3,5,7,9,11]`, `target = 7` → expect `3`.
+
+```java
+int binarySearch(int[] arr, int target) {
+    int left = 0, right = arr.length - 1;
+    // TODO: while left <= right, compute mid, compare, narrow range
+}
+```
+
+---
+
+### Exercise 2: Lower Bound — First Position ≥ Target
+Implement `lowerBound` from the note. Test with `arr = [1,3,3,5,7]`, `target = 3` → expect `1` (first index where `arr[i] >= 3`).
+
+```java
+int lowerBound(int[] arr, int target) {
+    int left = 0, right = arr.length;
+    // TODO: Find first index where arr[i] >= target
+}
+```
+
+---
+
+### Exercise 3: Binary Search on Answer — Koko Eating Bananas
+Koko has `h` hours to eat `n` piles of bananas. She eats at speed `k` bananas/hour (one pile per hour, finishes pile moves to next). Find the minimum `k` such that she finishes all piles in `h` hours.
+
+```java
+int minEatingSpeed(int[] piles, int h) {
+    int left = 1, right = Arrays.stream(piles).max().orElse(0);
+    // TODO: Binary search on k
+    // For each k, compute total hours = sum of ceil(pile / k)
+    // If total <= h, try smaller k; else try larger k
+}
+```
+
+**Hint:** This is "binary search on answer" — the condition is monotonic: if speed `k` works, then `k+1` also works.
+
+---
+
+## Assignments
+
+| # | Problem | Difficulty | Key Technique |
+|---|---------|:----------:|---------------|
+| 1 | [Binary Search](https://leetcode.com/problems/binary-search/) (LC 704) | 🟢 Easy | Standard Binary Search |
+| 2 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) (LC 35) | 🟢 Easy | Lower Bound |
+| 3 | [First Bad Version](https://leetcode.com/problems/first-bad-version/) (LC 278) | 🟢 Easy | Lower Bound |
+| 4 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) (LC 33) | 🟡 Medium | Modified Binary Search |
+| 5 | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) (LC 153) | 🟡 Medium | Binary Search |
+| 6 | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) (LC 875) | 🟡 Medium | Binary Search on Answer |
+| 7 | [Find Peak Element](https://leetcode.com/problems/find-peak-element/) (LC 162) | 🟡 Medium | Binary Search |
+| 8 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) (LC 74) | 🟡 Medium | Binary Search |
+
+### Assignment Guidelines
+- **Start** with 1–3 (Easy) — standard binary search and lower bound.
+- **Then** 4–8 (Medium) — modified binary search and "binary search on answer" pattern.
+- **Problem 6** (Koko) is the key "binary search on answer" pattern from this note.
+- **Target time:** 10 min per Easy, 20 min per Medium.

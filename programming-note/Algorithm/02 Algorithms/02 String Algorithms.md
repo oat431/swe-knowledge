@@ -268,3 +268,73 @@ Rolling hash (as in Rabin-Karp) generalizes to:
 - CLRS — Chapter 32 (String Matching)
 - Sedgewick — Algorithms, Chapter 5.3
 - Knuth, Morris, Pratt. "Fast Pattern Matching in Strings," 1977.
+
+
+---
+
+## Hands-On Exercises
+
+### Exercise 1: KMP — Build the LPS Array
+Implement `buildLPS` from the note. Test with pattern `"AABAAAC"` → expect `[0,1,0,1,2,2,0]`.
+
+```java
+int[] buildLPS(String pattern) {
+    int m = pattern.length();
+    int[] lps = new int[m];
+    // TODO: Follow the algorithm from the note
+    // len = 0, i = 1
+    // Match → len++, lps[i] = len, i++
+    // Mismatch → len > 0 ? len = lps[len-1] : lps[i] = 0, i++
+}
+```
+
+---
+
+### Exercise 2: Rabin-Karp — Implement Rolling Hash
+Implement the rolling hash computation. Given a text `"ABCDEFG"` and pattern `"CDE"`, find the match.
+
+```java
+List<Integer> rabinKarpSearch(String text, String pattern) {
+    // TODO: Follow the implementation from the note
+    // Compute initial hash for pattern and first window
+    // Slide: remove left char, add right char — O(1) per slide
+    // On hash match: verify character by character
+}
+```
+
+---
+
+### Exercise 3: Anagram Detection — Two Methods
+Implement both methods from the note and compare their performance.
+
+```java
+// Method 1: Frequency count — O(n)
+boolean isAnagramFreq(String s, String t) { /* TODO */ }
+
+// Method 2: Sorting — O(n log n)
+boolean isAnagramSort(String s, String t) { /* TODO */ }
+```
+
+**Question:** When would you prefer Method 2 over Method 1? (Think about unicode, large character sets.)
+
+---
+
+## Assignments
+
+| # | Problem | Difficulty | Key Technique |
+|---|---------|:----------:|---------------|
+| 1 | [Find the Index of First Occurrence](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) (LC 28) | 🟢 Easy | String Matching |
+| 2 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) (LC 242) | 🟢 Easy | Frequency Count |
+| 3 | [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/) (LC 459) | 🟢 Easy | KMP / Pattern |
+| 4 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) (LC 5) | 🟡 Medium | Expand Around Center / DP |
+| 5 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) (LC 49) | 🟡 Medium | Hash + Anagram Key |
+| 6 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) (LC 76) | 🔴 Hard | Sliding Window + HashMap |
+| 7 | [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) (LC 214) | 🔴 Hard | KMP LPS |
+| 8 | [Implement strStr()](https://leetcode.com/problems/implement-strstr/) (LC 28) | 🟢 Easy | KMP (apply LPS) |
+
+### Assignment Guidelines
+- **Start** with 1–3 (Easy) — basic string matching and anagram patterns.
+- **Then** 4–5 (Medium) — palindrome and anagram grouping.
+- **Problems 6–7** (Hard) require KMP or advanced sliding window.
+- **Key insight:** KMP's LPS array is the same concept used in many string problems.
+- **Target time:** 10 min per Easy, 25 min per Medium, 35 min per Hard.

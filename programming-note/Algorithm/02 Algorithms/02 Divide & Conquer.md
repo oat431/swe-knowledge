@@ -98,3 +98,69 @@ For recurrences of the form: $T(n) = a \cdot T(n/b) + f(n)$
 
 - CLRS — Chapter 4
 - LeetCode — Divide & Conquer problem sets
+
+
+---
+
+## Hands-On Exercises
+
+### Exercise 1: Merge Sort — Full Implementation
+Implement the complete merge sort from the note. Sort `[38,27,43,3,9,82,10]`.
+
+```java
+void mergeSort(int[] arr, int left, int right) {
+    // TODO: Base case (left >= right)
+    // Divide: compute mid
+    // Conquer: recursively sort left and right halves
+    // Combine: merge the two sorted halves
+}
+```
+
+---
+
+### Exercise 2: Maximum Subarray (Kadane's / D&C)
+Given an integer array, find the contiguous subarray with the largest sum. Solve it two ways:
+
+```java
+// Way 1: Kadane's algorithm — O(n) (greedy/DP approach)
+int maxSubArray(int[] nums) { /* TODO */ }
+
+// Way 2: Divide & Conquer — O(n log n)
+int maxSubArrayDC(int[] nums, int left, int right) {
+    // TODO: Divide at mid
+    // Max is either: (a) entirely in left half, (b) entirely in right half,
+    //                (c) crossing the mid point
+}
+```
+
+**Hint:** For D&C version, the cross-mid case is: max left suffix + max right prefix.
+
+---
+
+### Exercise 3: Master Theorem — Identify Complexity
+For each recurrence, identify which Master Theorem case applies and state the result:
+
+1. `T(n) = 2T(n/2) + O(n)` → Answer: ?
+2. `T(n) = T(n/2) + O(1)` → Answer: ?
+3. `T(n) = 4T(n/2) + O(n²)` → Answer: ?
+
+Check your answers against the table in the note.
+
+---
+
+## Assignments
+
+| # | Problem | Difficulty | Key Technique |
+|---|---------|:----------:|---------------|
+| 1 | [Sort an Array](https://leetcode.com/problems/sort-an-array/) (LC 912) | 🟡 Medium | Merge Sort |
+| 2 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) (LC 53) | 🟡 Medium | D&C / Kadane's |
+| 3 | [Majority Element](https://leetcode.com/problems/majority-element/) (LC 169) | 🟢 Easy | D&C / Boyer-Moore |
+| 4 | [Kth Largest Element](https://leetcode.com/problems/kth-largest-element-in-an-array/) (LC 215) | 🟡 Medium | Quickselect (D&C) |
+| 5 | [Different Ways to Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/) (LC 241) | 🟡 Medium | D&C Recursion |
+| 6 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) (LC 4) | 🔴 Hard | Binary Search D&C |
+
+### Assignment Guidelines
+- **Start** with 1–3 — merge sort and D&C fundamentals.
+- **Then** 4–5 — D&C applications.
+- **Problem 6** (Median of Two Sorted Arrays) is one of the hardest classic interview problems. It requires binary search on partitioning.
+- **Target time:** 15 min per Easy/Medium, 40 min for Hard.

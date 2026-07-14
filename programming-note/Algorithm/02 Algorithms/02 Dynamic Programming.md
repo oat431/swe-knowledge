@@ -144,3 +144,69 @@ int coinChange(int[] coins, int amount) {
 - CLRS — Chapter 15
 - LeetCode — Dynamic Programming problem sets
 - Bellman, Richard. *Dynamic Programming*, 1957.
+
+
+---
+
+## Hands-On Exercises
+
+### Exercise 1: Fibonacci — Both Approaches
+Implement both top-down (memoization) and bottom-up (tabulation) from the note. Compare them.
+
+```java
+// Top-Down
+long fibTD(int n, Map<Integer, Long> memo) { /* TODO */ }
+
+// Bottom-Up
+long fibBU(int n) { /* TODO: dp array, fill from 0 to n */ }
+
+// Space-Optimized Bottom-Up (only 2 variables)
+long fibOptimized(int n) { /* TODO */ }
+```
+
+---
+
+### Exercise 2: Coin Change — Implement from Note
+Implement the `coinChange` method from the note. Test with `coins = [1,5,10,25]`, `amount = 30` → expect `2` (25 + 5).
+
+```java
+int coinChange(int[] coins, int amount) {
+    int[] dp = new int[amount + 1];
+    // TODO: Fill dp[0] = 0, dp[i] = min(dp[i], 1 + dp[i - coin]) for each coin
+}
+```
+
+---
+
+### Exercise 3: Climbing Stairs — Classic DP Intro
+You can climb 1 or 2 steps at a time. How many distinct ways to reach step `n`? This is Fibonacci in disguise.
+
+```java
+int climbStairs(int n) {
+    // TODO: dp[i] = dp[i-1] + dp[i-2]
+    // Base: dp[1] = 1, dp[2] = 2
+}
+```
+
+---
+
+## Assignments
+
+| # | Problem | Difficulty | Key Technique |
+|---|---------|:----------:|---------------|
+| 1 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) (LC 70) | 🟢 Easy | 1D DP (Fibonacci) |
+| 2 | [House Robber](https://leetcode.com/problems/house-robber/) (LC 198) | 🟡 Medium | 1D DP |
+| 3 | [Coin Change](https://leetcode.com/problems/coin-change/) (LC 322) | 🟡 Medium | 1D DP (Unbounded Knapsack) |
+| 4 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) (LC 300) | 🟡 Medium | 1D DP / Binary Search |
+| 5 | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) (LC 1143) | 🟡 Medium | 2D DP |
+| 6 | [0/1 Knapsack](https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/) (GFG) | 🟡 Medium | 2D DP |
+| 7 | [Edit Distance](https://leetcode.com/problems/edit-distance/) (LC 72) | 🟡 Medium | 2D DP |
+| 8 | [Word Break](https://leetcode.com/problems/word-break/) (LC 139) | 🟡 Medium | 1D DP + HashSet |
+| 9 | [Unique Paths](https://leetcode.com/problems/unique-paths/) (LC 62) | 🟡 Medium | 2D DP |
+
+### Assignment Guidelines
+- **Start** with 1 (Easy) — recognize the Fibonacci pattern.
+- **Then** 2–4 (Medium, 1D DP) — single-sequence DP.
+- **Then** 5–9 (Medium, 2D DP) — two-sequence or grid DP.
+- **Key insight:** If you see "minimum/maximum/number of ways/longest" + overlapping subproblems → it's DP.
+- **Target time:** 10 min per Easy, 25 min per Medium.
