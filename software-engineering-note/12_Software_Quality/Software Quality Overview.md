@@ -73,13 +73,13 @@ Quality is an economic concern as well as a technical one. Defects found late co
 
 ## Recommended Books (Priority Order)
 
-| # | Book | Author(s) | Pages | Priority |
-|---|------|-----------|:-----:|:--------:|
-| 1 | *Software Quality Engineering: A Practitioner's Approach* (2018) | Jeff Tian | 560 | 🔴 Essential |
-| 2 | *Practical Guide to Software Quality Management, 3rd Ed.* (2003) | John Horch | 288 | 🔴 Essential |
-| 3 | *Software Quality Assurance: From Theory to Implementation* (2004) | Daniel Galin | 608 | 🟡 Recommended |
-| 4 | *How Google Tests Software* (2012) | Whittaker, Arbon & Carollo | 304 | 🟡 Recommended |
-| 5 | *The Economics of Software Quality* (2011) | Capers Jones et al. | 558 | 🟢 Supplementary |
+| #   | Book                                                               | Author(s)                  | Pages |     Priority     |
+| --- | ------------------------------------------------------------------ | -------------------------- | :---: | :--------------: |
+| 1   | *Software Quality Engineering: A Practitioner's Approach* (2018)   | Jeff Tian                  |  560  |   🔴 Essential   |
+| 2   | *Practical Guide to Software Quality Management, 3rd Ed.* (2003)   | John Horch                 |  288  |   🔴 Essential   |
+| 3   | *Software Quality Assurance: From Theory to Implementation* (2004) | Daniel Galin               |  608  |  🟡 Recommended  |
+| 4   | *How Google Tests Software* (2012)                                 | Whittaker, Arbon & Carollo |  304  |  🟡 Recommended  |
+| 5   | *The Economics of Software Quality* (2011)                         | Capers Jones et al.        |  558  | 🟢 Supplementary |
 
 ## Relationship to Other KAs
 

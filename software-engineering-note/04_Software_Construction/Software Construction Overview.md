@@ -81,12 +81,12 @@ SWEBOK v4's construction chapter reflects modern realities: AI-assisted coding (
 
 ## Recommended Books (Priority Order)
 
-| # | Book | Author(s) | Pages | Priority |
-|---|------|-----------|:-----:|:--------:|
-| 1 | *Code Complete: A Practical Handbook of Software Construction, 2nd Ed.* (2004) | Steve McConnell | 960 | 🔴 Essential |
-| 2 | *The Pragmatic Programmer, 20th Anniversary Ed.* (2019) | David Thomas & Andrew Hunt | 352 | 🟡 Recommended |
-| 3 | *Clean Code* (2009) | Robert C. Martin | 464 | 🟡 Recommended |
-| 4 | *Modern Software Engineering* (2022) | David Farley | 256 | 🟢 Supplementary |
+| #   | Book                                                                           | Author(s)                  | Pages |     Priority     |
+| --- | ------------------------------------------------------------------------------ | -------------------------- | :---: | :--------------: |
+| 1   | *Code Complete: A Practical Handbook of Software Construction, 2nd Ed.* (2004) | Steve McConnell            |  960  |   🔴 Essential   |
+| 2   | *The Pragmatic Programmer, 20th Anniversary Ed.* (2019)                        | David Thomas & Andrew Hunt |  352  |  🟡 Recommended  |
+| 3   | *Clean Code* (2009)                                                            | Robert C. Martin           |  464  |  🟡 Recommended  |
+| 4   | *Modern Software Engineering* (2022)                                           | David Farley               |  256  | 🟢 Supplementary |
 
 ## Relationship to Other KAs
 

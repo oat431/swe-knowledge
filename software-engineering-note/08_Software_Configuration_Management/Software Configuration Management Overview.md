@@ -82,12 +82,12 @@ The core of SCM is deceptively simple — identify what you have, control how it
 
 ## Recommended Books (Priority Order)
 
-| # | Book | Author(s) | Pages | Priority |
-|---|------|-----------|:-----:|:--------:|
-| 1 | *Continuous Delivery* (2010) | Jez Humble & David Farley | 512 | 🔴 Essential |
-| 2 | *Software Configuration Management Patterns* (2003) | Steve Berczuk & Brad Appleton | 256 | 🔴 Essential |
-| 3 | *Version Control with Git, 3rd Ed.* (2022) | Jon Loeliger & Matthew McCullough | 544 | 🟡 Recommended |
-| 4 | *Agile Configuration Management* (2015) | Matthew Parkinson | 180 | 🟢 Supplementary |
+| #   | Book                                                | Author(s)                         | Pages |     Priority     |
+| --- | --------------------------------------------------- | --------------------------------- | :---: | :--------------: |
+| 1   | *Continuous Delivery* (2010)                        | Jez Humble & David Farley         |  512  |   🔴 Essential   |
+| 2   | *Software Configuration Management Patterns* (2003) | Steve Berczuk & Brad Appleton     |  256  |   🔴 Essential   |
+| 3   | *Version Control with Git, 3rd Ed.* (2022)          | Jon Loeliger & Matthew McCullough |  544  |  🟡 Recommended  |
+| 4   | *Agile Configuration Management* (2015)             | Matthew Parkinson                 |  180  | 🟢 Supplementary |
 
 ## Relationship to Other KAs
 

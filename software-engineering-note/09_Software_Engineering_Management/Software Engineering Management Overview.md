@@ -76,13 +76,13 @@ SWEBOK v4's management chapter covers the full spectrum: from project-level plan
 
 ## Recommended Books (Priority Order)
 
-| # | Book | Author(s) | Pages | Priority |
-|---|------|-----------|:-----:|:--------:|
-| 1 | *Managing the Software Engineering Process* (1997) | Watts Humphrey | 320 | 🔴 Essential |
-| 2 | *Software Engineering Project Management, 3rd Ed.* (2009) | Richard Thayer | 592 | 🔴 Essential |
-| 3 | *Peopleware, 3rd Ed.* (2013) | Tom DeMarco & Timothy Lister | 272 | 🟡 Recommended |
-| 4 | *Rapid Development* (1996) | Steve McConnell | 680 | 🟡 Recommended |
-| 5 | *The Mythical Man-Month, Anniversary Ed.* (1995) | Fred Brooks | 336 | 🟢 Supplementary |
+| #   | Book                                                      | Author(s)                    | Pages |     Priority     |
+| --- | --------------------------------------------------------- | ---------------------------- | :---: | :--------------: |
+| 1   | *Managing the Software Engineering Process* (1997)        | Watts Humphrey               |  320  |   🔴 Essential   |
+| 2   | *Software Engineering Project Management, 3rd Ed.* (2009) | Richard Thayer               |  592  |   🔴 Essential   |
+| 3   | *Peopleware, 3rd Ed.* (2013)                              | Tom DeMarco & Timothy Lister |  272  |  🟡 Recommended  |
+| 4   | *Rapid Development* (1996)                                | Steve McConnell              |  680  |  🟡 Recommended  |
+| 5   | *The Mythical Man-Month, Anniversary Ed.* (1995)          | Fred Brooks                  |  336  | 🟢 Supplementary |
 
 ## Relationship to Other KAs
 

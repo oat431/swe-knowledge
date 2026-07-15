@@ -75,12 +75,12 @@ Methods range from heuristic (experience-based, informal guidelines) to formal (
 
 ## Recommended Books (Priority Order)
 
-| # | Book | Author(s) | Pages | Priority |
-|---|------|-----------|:-----:|:--------:|
-| 1 | *Software Engineering: A Practitioner's Approach, 9th Ed.* (2019) | Roger Pressman & Bruce Maxim | 880 | 🔴 Essential |
-| 2 | *Software Modeling and Design* (2011) | Hassan Gomaa | 576 | 🔴 Essential |
-| 3 | *Domain-Driven Design* (2003) | Eric Evans | 560 | 🟡 Recommended |
-| 4 | *Formal Methods: Practice and Experience* (2009) | Jim Woodcock et al. | 350 | 🟢 Supplementary |
+| #   | Book                                                              | Author(s)                    | Pages |     Priority     |
+| --- | ----------------------------------------------------------------- | ---------------------------- | :---: | :--------------: |
+| 1   | *Software Engineering: A Practitioner's Approach, 9th Ed.* (2019) | Roger Pressman & Bruce Maxim |  880  |   🔴 Essential   |
+| 2   | *Software Modeling and Design* (2011)                             | Hassan Gomaa                 |  576  |   🔴 Essential   |
+| 3   | *Domain-Driven Design* (2003)                                     | Eric Evans                   |  560  |  🟡 Recommended  |
+| 4   | *Formal Methods: Practice and Experience* (2009)                  | Jim Woodcock et al.          |  350  | 🟢 Supplementary |
 
 ## Relationship to Other KAs
 

@@ -83,14 +83,14 @@ The vault's notes currently cover the life cycle models portion well — Agile (
 
 ## Recommended Books (Priority Order)
 
-| # | Book | Author(s) | Pages | Priority |
-|---|------|-----------|:-----:|:--------:|
-| 1 | Clean Agile: Back to Basics (2019) | Robert C. Martin | 240 | 🔴 Core |
-| 2 | Lean Software Development (2003) | Mary & Tom Poppendieck | 233 | 🔴 Core |
-| 3 | Kanban (2010) | David J. Anderson | 278 | 🔴 Core |
-| 4 | CMMI, 3rd Ed. (2020) | Chrissis, Konrad & Shrum | 688 | 🟡 Supplementary |
-| 5 | Accelerate (2018) | Forsgren, Humble & Gene Kim | 288 | 🟡 Supplementary |
-| 6 | The Rational Unified Process, 3rd Ed. (2003) | Philippe Kruchten | 352 | 🟢 Deep Dive |
+| #   | Book                                         | Author(s)                   | Pages |     Priority     |
+| --- | -------------------------------------------- | --------------------------- | :---: | :--------------: |
+| 1   | Clean Agile: Back to Basics (2019)           | Robert C. Martin            |  240  |     🔴 Core      |
+| 2   | Lean Software Development (2003)             | Mary & Tom Poppendieck      |  233  |     🔴 Core      |
+| 3   | Kanban (2010)                                | David J. Anderson           |  278  |     🔴 Core      |
+| 4   | CMMI, 3rd Ed. (2020)                         | Chrissis, Konrad & Shrum    |  688  | 🟡 Supplementary |
+| 5   | Accelerate (2018)                            | Forsgren, Humble & Gene Kim |  288  | 🟡 Supplementary |
+| 6   | The Rational Unified Process, 3rd Ed. (2003) | Philippe Kruchten           |  352  |   🟢 Deep Dive   |
 
 ---
 

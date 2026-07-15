@@ -89,12 +89,12 @@ Engineering Foundations covers the engineering thinking and methods that disting
 
 ## Recommended Books (Priority Order)
 
-| # | Book | Author(s) | Pages | Priority |
-|---|------|-----------|:-----:|:--------:|
-| 1 | Engineering Fundamentals: An Introduction to Engineering, 6th Ed. (2021) | Saeed Moaveni | 576 | 🔴 Core |
-| 2 | Software Engineering: Theory and Practice, 4th Ed. (2010) | Shari Pfleeger & Joanne Atlee | 560 | 🔴 Core |
-| 3 | The Engineering Design of Systems: Models and Methods, 3rd Ed. (2016) | Dennis Buede & William Miller | 560 | 🟡 Supplementary |
-| 4 | An Introduction to Statistical Methods and Data Analysis, 7th Ed. (2018) | Ott & Longnecker | 1248 | 🟢 Deep Dive |
+| #   | Book                                                                     | Author(s)                     | Pages |     Priority     |
+| --- | ------------------------------------------------------------------------ | ----------------------------- | :---: | :--------------: |
+| 1   | Engineering Fundamentals: An Introduction to Engineering, 6th Ed. (2021) | Saeed Moaveni                 |  576  |     🔴 Core      |
+| 2   | Software Engineering: Theory and Practice, 4th Ed. (2010)                | Shari Pfleeger & Joanne Atlee |  560  |     🔴 Core      |
+| 3   | The Engineering Design of Systems: Models and Methods, 3rd Ed. (2016)    | Dennis Buede & William Miller |  560  | 🟡 Supplementary |
+| 4   | An Introduction to Statistical Methods and Data Analysis, 7th Ed. (2018) | Ott & Longnecker              | 1248  |   🟢 Deep Dive   |
 
 ---
 

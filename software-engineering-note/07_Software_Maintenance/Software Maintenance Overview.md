@@ -66,13 +66,13 @@ The central challenge of maintenance is managing complexity and change in system
 
 ## Recommended Books (Priority Order)
 
-| # | Book | Author(s) | Pages | Priority |
-|---|------|-----------|:-----:|:--------:|
-| 1 | *Software Maintenance: Concepts and Practice, 2nd Ed.* (2001) | Penny Grubb & Armstrong Takang | 352 | 🔴 Essential |
-| 2 | *Working Effectively with Legacy Code* (2004) | Michael Feathers | 464 | 🔴 Essential |
-| 3 | *Refactoring: Improving the Design of Existing Code, 2nd Ed.* (2018) | Martin Fowler | 448 | 🟡 Recommended |
-| 4 | *Your Code as a Crime Scene* (2013) | Adam Tornhill | 218 | 🟡 Recommended |
-| 5 | *Object-Oriented Reengineering Patterns* (2002) | Serge Demeyer et al. | 280 | 🟢 Supplementary |
+| #   | Book                                                                 | Author(s)                      | Pages |     Priority     |
+| --- | -------------------------------------------------------------------- | ------------------------------ | :---: | :--------------: |
+| 1   | *Software Maintenance: Concepts and Practice, 2nd Ed.* (2001)        | Penny Grubb & Armstrong Takang |  352  |   🔴 Essential   |
+| 2   | *Working Effectively with Legacy Code* (2004)                        | Michael Feathers               |  464  |   🔴 Essential   |
+| 3   | *Refactoring: Improving the Design of Existing Code, 2nd Ed.* (2018) | Martin Fowler                  |  448  |  🟡 Recommended  |
+| 4   | *Your Code as a Crime Scene* (2013)                                  | Adam Tornhill                  |  218  |  🟡 Recommended  |
+| 5   | *Object-Oriented Reengineering Patterns* (2002)                      | Serge Demeyer et al.           |  280  | 🟢 Supplementary |
 
 ## Relationship to Other KAs
 

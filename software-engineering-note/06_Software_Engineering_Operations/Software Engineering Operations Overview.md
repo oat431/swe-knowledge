@@ -81,13 +81,13 @@ Modern operations is heavily automated: Infrastructure as Code (IaC), continuous
 
 ## Recommended Books (Priority Order)
 
-| # | Book | Author(s) | Pages | Priority |
-|---|------|-----------|:-----:|:--------:|
-| 1 | *The DevOps Handbook, 2nd Ed.* (2021) | Gene Kim et al. | 480 | 🔴 Essential |
-| 2 | *Site Reliability Engineering* (2016) | Beyer, Jones, Petoff & Murphy | 558 | 🔴 Essential |
-| 3 | *Accelerate* (2018) | Forsgren, Humble & Gene Kim | 288 | 🟡 Recommended |
-| 4 | *Infrastructure as Code, 2nd Ed.* (2020) | Kief Morris | 400 | 🟡 Recommended |
-| 5 | *Seeking SRE* (2018) | David Blank-Edelman (ed.) | 584 | 🟢 Supplementary |
+| #   | Book                                     | Author(s)                     | Pages |     Priority     |
+| --- | ---------------------------------------- | ----------------------------- | :---: | :--------------: |
+| 1   | *The DevOps Handbook, 2nd Ed.* (2021)    | Gene Kim et al.               |  480  |   🔴 Essential   |
+| 2   | *Site Reliability Engineering* (2016)    | Beyer, Jones, Petoff & Murphy |  558  |   🔴 Essential   |
+| 3   | *Accelerate* (2018)                      | Forsgren, Humble & Gene Kim   |  288  |  🟡 Recommended  |
+| 4   | *Infrastructure as Code, 2nd Ed.* (2020) | Kief Morris                   |  400  |  🟡 Recommended  |
+| 5   | *Seeking SRE* (2018)                     | David Blank-Edelman (ed.)     |  584  | 🟢 Supplementary |
 
 ## Relationship to Other KAs
 

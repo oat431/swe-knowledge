@@ -60,13 +60,13 @@ SWEBOK v4 treats requirements as a continuous activity spanning the full lifecyc
 
 ## Recommended Books (Priority Order)
 
-| # | Book | Author(s) | Pages | Priority |
-|---|------|-----------|:-----:|:--------:|
-| 1 | *Software Requirements, 3rd Ed.* (2013) | Karl Wiegers & Joy Beatty | 672 | 🔴 Essential |
-| 2 | *Mastering the Requirements Process, 4th Ed.* (2024) | Suzanne & James Robertson | 576 | 🔴 Essential |
-| 3 | *Requirements Engineering Fundamentals* (2009) | Klaus Pohl & Chris Rupp | 248 | 🟡 Recommended |
-| 4 | *User Stories Applied* (2004) | Mike Cohn | 304 | 🟡 Recommended |
-| 5 | *Writing Effective Use Cases* (2001) | Alistair Cockburn | 256 | 🟢 Supplementary |
+| #   | Book                                                 | Author(s)                 | Pages |     Priority     |
+| --- | ---------------------------------------------------- | ------------------------- | :---: | :--------------: |
+| 1   | *Software Requirements, 3rd Ed.* (2013)              | Karl Wiegers & Joy Beatty |  672  |   🔴 Essential   |
+| 2   | *Mastering the Requirements Process, 4th Ed.* (2024) | Suzanne & James Robertson |  576  |   🔴 Essential   |
+| 3   | *Requirements Engineering Fundamentals* (2009)       | Klaus Pohl & Chris Rupp   |  248  |  🟡 Recommended  |
+| 4   | *User Stories Applied* (2004)                        | Mike Cohn                 |  304  |  🟡 Recommended  |
+| 5   | *Writing Effective Use Cases* (2001)                 | Alistair Cockburn         |  256  | 🟢 Supplementary |
 
 ## Relationship to Other KAs
 

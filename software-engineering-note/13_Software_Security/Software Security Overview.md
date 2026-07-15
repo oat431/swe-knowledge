@@ -79,13 +79,13 @@ Modern security engineering takes a "shift left" approach: integrating security 
 
 ## Recommended Books (Priority Order)
 
-| # | Book | Author(s) | Pages | Priority |
-|---|------|-----------|:-----:|:--------:|
-| 1 | *Security Engineering, 3rd Ed.* (2020) | Ross Anderson | 1200 | 🔴 Essential |
-| 2 | *The Web Application Hacker's Handbook, 2nd Ed.* (2011) | Stuttard & Pinto | 912 | 🔴 Essential |
-| 3 | *Threat Modeling: Designing for Security* (2014) | Adam Shostack | 624 | 🟡 Recommended |
-| 4 | *Secure Coding in C and C++, 2nd Ed.* (2013) | Robert Seacord | 432 | 🟡 Recommended |
-| 5 | *The Tangled Web* (2011) | Michał Zalewski | 320 | 🟢 Supplementary |
+| #   | Book                                                    | Author(s)        | Pages |     Priority     |
+| --- | ------------------------------------------------------- | ---------------- | :---: | :--------------: |
+| 1   | *Security Engineering, 3rd Ed.* (2020)                  | Ross Anderson    | 1200  |   🔴 Essential   |
+| 2   | *The Web Application Hacker's Handbook, 2nd Ed.* (2011) | Stuttard & Pinto |  912  |   🔴 Essential   |
+| 3   | *Threat Modeling: Designing for Security* (2014)        | Adam Shostack    |  624  |  🟡 Recommended  |
+| 4   | *Secure Coding in C and C++, 2nd Ed.* (2013)            | Robert Seacord   |  432  |  🟡 Recommended  |
+| 5   | *The Tangled Web* (2011)                                | Michał Zalewski  |  320  | 🟢 Supplementary |
 
 ## Relationship to Other KAs
 

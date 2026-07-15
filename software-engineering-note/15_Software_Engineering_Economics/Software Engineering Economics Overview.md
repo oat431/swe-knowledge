@@ -74,12 +74,12 @@ SWEBOK v4's economics chapter bridges engineering and business. Engineers who un
 
 ## Recommended Books (Priority Order)
 
-| # | Book | Author(s) | Pages | Priority |
-|---|------|-----------|:-----:|:--------:|
-| 1 | *Software Estimation: Demystifying the Black Art* (2006) | Steve McConnell | 368 | 🔴 Essential |
-| 2 | *Software Engineering Economics* (1981) | Barry Boehm | 767 | 🔴 Essential |
-| 3 | *The Economics of Software Quality* (2011) | Capers Jones et al. | 558 | 🟡 Recommended |
-| 4 | *Balancing Agility and Discipline* (2004) | Barry Boehm & Richard Turner | 304 | 🟢 Supplementary |
+| #   | Book                                                     | Author(s)                    | Pages |     Priority     |
+| --- | -------------------------------------------------------- | ---------------------------- | :---: | :--------------: |
+| 1   | *Software Estimation: Demystifying the Black Art* (2006) | Steve McConnell              |  368  |   🔴 Essential   |
+| 2   | *Software Engineering Economics* (1981)                  | Barry Boehm                  |  767  |   🔴 Essential   |
+| 3   | *The Economics of Software Quality* (2011)               | Capers Jones et al.          |  558  |  🟡 Recommended  |
+| 4   | *Balancing Agility and Discipline* (2004)                | Barry Boehm & Richard Turner |  304  | 🟢 Supplementary |
 
 ## Relationship to Other KAs
 

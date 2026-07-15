@@ -70,12 +70,12 @@ SWEBOK v4 elevates Software Architecture to a full Knowledge Area (new in this e
 
 ## Recommended Books (Priority Order)
 
-| # | Book | Author(s) | Pages | Priority |
-|---|------|-----------|:-----:|:--------:|
-| 1 | *Software Architecture in Practice, 4th Ed.* (2021) | Len Bass, Paul Clements & Rick Kazman | 464 | 🔴 Essential |
-| 2 | *Documenting Software Architectures: Views and Beyond, 2nd Ed.* (2011) | Clements et al. | 576 | 🔴 Essential |
-| 3 | *Designing Data-Intensive Applications* (2017) | Martin Kleppmann | 616 | 🟡 Recommended |
-| 4 | *Patterns of Enterprise Application Architecture* (2002) | Martin Fowler | 560 | 🟡 Recommended |
+| #   | Book                                                                   | Author(s)                             | Pages |    Priority    |
+| --- | ---------------------------------------------------------------------- | ------------------------------------- | :---: | :------------: |
+| 1   | *Software Architecture in Practice, 4th Ed.* (2021)                    | Len Bass, Paul Clements & Rick Kazman |  464  |  🔴 Essential  |
+| 2   | *Documenting Software Architectures: Views and Beyond, 2nd Ed.* (2011) | Clements et al.                       |  576  |  🔴 Essential  |
+| 3   | *Designing Data-Intensive Applications* (2017)                         | Martin Kleppmann                      |  616  | 🟡 Recommended |
+| 4   | *Patterns of Enterprise Application Architecture* (2002)               | Martin Fowler                         |  560  | 🟡 Recommended |
 
 ## Relationship to Other KAs
 

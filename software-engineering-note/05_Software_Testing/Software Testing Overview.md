@@ -71,13 +71,13 @@ SWEBOK v4 expands the testing chapter to address modern challenges: testing AI/M
 
 ## Recommended Books (Priority Order)
 
-| # | Book | Author(s) | Pages | Priority |
-|---|------|-----------|:-----:|:--------:|
-| 1 | *Software Testing: A Craftsman's Approach, 4th Ed.* (2014) | Paul Jorgensen | 508 | 🔴 Essential |
-| 2 | *Lessons Learned in Software Testing* (2001) | Kaner, Bach & Pettichord | 320 | 🔴 Essential |
-| 3 | *How Google Tests Software* (2012) | Whittaker, Arbon & Carollo | 304 | 🟡 Recommended |
-| 4 | *Explore It!* (2013) | Elisabeth Hendrickson | 186 | 🟡 Recommended |
-| 5 | *The Art of Software Testing, 3rd Ed.* (2011) | Glenford Myers et al. | 256 | 🟢 Supplementary |
+| #   | Book                                                       | Author(s)                  | Pages |     Priority     |
+| --- | ---------------------------------------------------------- | -------------------------- | :---: | :--------------: |
+| 1   | *Software Testing: A Craftsman's Approach, 4th Ed.* (2014) | Paul Jorgensen             |  508  |   🔴 Essential   |
+| 2   | *Lessons Learned in Software Testing* (2001)               | Kaner, Bach & Pettichord   |  320  |   🔴 Essential   |
+| 3   | *How Google Tests Software* (2012)                         | Whittaker, Arbon & Carollo |  304  |  🟡 Recommended  |
+| 4   | *Explore It!* (2013)                                       | Elisabeth Hendrickson      |  186  |  🟡 Recommended  |
+| 5   | *The Art of Software Testing, 3rd Ed.* (2011)              | Glenford Myers et al.      |  256  | 🟢 Supplementary |
 
 ## Relationship to Other KAs
 
