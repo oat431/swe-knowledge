@@ -31,7 +31,7 @@ The third book in Uncle Bob's "Clean" trilogy. *Clean Code* covered the craft. *
 ### Part I: The Disciplines
 
 > [[01 Craftsmanship]] — Extreme Programming, the Circle of Life, the discipline of craft
-> [[02 Test-Driven Development]] — The Three Laws, the Fourth Law, Stack/Prime Factors/Bowling Game
+> [[software-engineering-note/14_Software_Engineering_Professional_Practice/clean-craftsmanship/01 The Disciplines/02 Test-Driven Development]] — The Three Laws, the Fourth Law, Stack/Prime Factors/Bowling Game
 > [[03 Advanced TDD]] — Sort, BDD, Test Doubles (Dummy/Stub/Spy/Mock/Fake), London vs Chicago
 > [[04 Test Design]] — Testing databases & GUIs, Fragile Test Problem, Transformation Priority Premise
 > [[05 Refactoring]] — Basic toolkit, Rubik's Cube, the disciplines, refactor mercilessly

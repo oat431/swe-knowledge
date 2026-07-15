@@ -26,7 +26,7 @@ Testing is not "finding bugs." It's assessing product quality through investigat
 
 > [[02 Functional Testing]] — Unit, integration, system, acceptance, smoke, regression
 > [[02 Non-Functional Testing]] — Performance, security, usability, accessibility, compatibility
-> [[02 Test-Driven Development]] — TDD red-green-refactor, BDD, ATDD, test pyramid
+> [[programming-note/QA/02 Testing Types/02 Test-Driven Development]] — TDD red-green-refactor, BDD, ATDD, test pyramid
 
 ### 03 Test Automation
 
