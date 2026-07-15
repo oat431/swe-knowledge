@@ -124,7 +124,7 @@ The Scope performance domain is successful when the following outcomes are met:
 
 ## Related Chapters
 
-- [[00_Introduction|PMBOK Introduction]]
+- [[Body of Knowledge/PMBOK/00_Introduction|PMBOK Introduction]]
 - [[01_Value_Delivery_System|Value Delivery System]]
 - [[02_Project_Management_Principles|Project Management Principles]]
 - [[08_Stakeholders_Performance_Domain|Stakeholder Performance Domain]]

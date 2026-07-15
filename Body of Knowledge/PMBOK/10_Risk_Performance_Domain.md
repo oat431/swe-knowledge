@@ -135,7 +135,7 @@ Activities in the Risk Performance Domain are successful when:
 
 ## Related Chapters
 
-- [[00_Introduction|Introduction and Guiding Principles]]
+- [[Body of Knowledge/PMBOK/00_Introduction|Introduction and Guiding Principles]]
 - [[08_Stakeholders_Performance_Domain|Stakeholder Performance Domain]]
 - [[05_Scope_Performance_Domain|Scope Performance Domain]]
 - [[06_Schedule_Performance_Domain|Schedule Performance Domain]]
