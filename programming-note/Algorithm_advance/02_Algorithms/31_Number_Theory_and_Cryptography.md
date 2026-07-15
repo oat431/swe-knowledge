@@ -341,3 +341,123 @@ Where $\beta$ is the bit length of the largest input integer.
 - [[Algorithm Overview]] — Math algorithms (GCD, primes, modular exponentiation)
 - [[02 Math Algorithms]] — Basic number theory covered in v1
 - [[06_Geometry_NP_and_Approximation]] — Computational complexity of number-theoretic problems
+
+
+---
+
+## Hands-On Exercises
+
+### Exercise 1: Extended Euclidean Algorithm
+Implement `EXTENDED-EUCLID(a, b)` from the note. Trace it for:
+- `EXTENDED-EUCLID(99, 78)` → expect `(3, -11, 14)` so `99·(-11) + 78·14 = 3`
+- `EXTENDED-EUCLID(35, 15)` → expect `(5, ?)` — find x, y such that `35x + 15y = 5`
+
+```java
+long[] extendedGcd(long a, long b) {
+    if (b == 0) return new long[]{a, 1, 0};
+    long[] prev = extendedGcd(b, a % b);
+    long d = prev[0], x = prev[2], y = prev[1] - (a / b) * prev[2];
+    return new long[]{d, x, y};
+}
+```
+
+**Verify:** `d = gcd(a, b)` and `a*x + b*y = d` for both examples.
+
+---
+
+### Exercise 2: Modular Inverse
+Using `EXTENDED-EUCLID`, compute:
+1. `17⁻¹ mod 43` — find x such that `17x ≡ 1 (mod 43)`
+2. `3⁻¹ mod 11` — find x such that `3x ≡ 1 (mod 11)`
+3. Verify: `17 · (17⁻¹ mod 43) mod 43 = 1`
+
+```java
+long modInverse(long a, long m) {
+    long[] result = extendedGcd(a, m);
+    if (result[0] != 1) throw new ArithmeticException("No inverse");
+    return ((result[1] % m) + m) % m;
+}
+```
+
+---
+
+### Exercise 3: RSA Encrypt/Decrypt (Small Example)
+Given `p = 5, q = 11`:
+1. Compute `n = pq` and `φ(n) = (p-1)(q-1)`.
+2. Choose `e` such that `gcd(e, φ(n)) = 1`. (Try `e = 3`.)
+3. Compute `d = e⁻¹ mod φ(n)`.
+4. Encrypt message `M = 9`: compute `C = Mᵉ mod n`.
+5. Decrypt: compute `M = Cᵈ mod n`. Verify you get 9 back.
+
+```java
+// Step by step:
+long p = 5, q = 11;
+long n = p * q;        // ?
+long phi = (p-1)*(q-1); // ?
+long e = 3;             // verify gcd(3, phi) = 1
+long d = modInverse(e, phi); // ?
+long M = 9;
+long C = modPow(M, e, n);    // encrypted
+long decrypted = modPow(C, d, n); // should be 9
+```
+
+---
+
+### Exercise 4: Miller-Rabin Primality Test
+Implement one round of the Miller-Rabin test for `n = 561` (a Carmichael number — composite but passes Fermat's test).
+
+1. Write `n - 1 = 2^t · u` where `u` is odd. For 561: `560 = 2^4 · 35`.
+2. Choose witness `a = 2`.
+3. Compute `a^u mod n`, `a^{2u} mod n`, ..., `a^{2^t · u} mod n`.
+4. Check: does the sequence end in 1? Is there a nontrivial square root of 1?
+
+```java
+boolean millerRabin(long n, long a) {
+    // Write n-1 = 2^t * u
+    long u = n - 1;
+    int t = 0;
+    while (u % 2 == 0) { u /= 2; t++; }
+    // Compute a^u, a^{2u}, ..., a^{2^t * u} mod n
+    // Check conditions
+}
+```
+
+**Test:** `millerRabin(561, 2)` should return `false` (561 is composite).
+
+---
+
+### Exercise 5: Chinese Remainder Theorem
+Solve the system:
+```
+x ≡ 2 (mod 3)
+x ≡ 3 (mod 5)
+x ≡ 2 (mod 7)
+```
+
+1. Verify the moduli are pairwise coprime.
+2. Compute `n = 3 · 5 · 7 = 105`.
+3. For each equation, compute `mᵢ = n/nᵢ` and `cᵢ = mᵢ · (mᵢ⁻¹ mod nᵢ)`.
+4. Reconstruct: `x = (a₁c₁ + a₂c₂ + a₃c₃) mod n`.
+5. Verify your answer satisfies all three equations.
+
+---
+
+## Assignments
+
+| # | Problem | Difficulty | Key Technique |
+|---|---------|:----------:|---------------|
+| 1 | [Count Primes](https://leetcode.com/problems/count-primes/) (LC 204) | 🟡 Medium | Sieve of Eratosthenes |
+| 2 | [Pow(x, n)](https://leetcode.com/problems/powx-n/) (LC 50) | 🟡 Medium | Modular exponentiation |
+| 3 | [Ugly Number III](https://leetcode.com/problems/ugly-number-iii/) (LC 1201) | 🟡 Medium | GCD/LCM + Inclusion-Exclusion |
+| 4 | [The kth Factor of n](https://leetcode.com/problems/the-kth-factor-of-n/) (LC 1492) | 🟡 Medium | Divisibility |
+| 5 | [Water and Jug Problem](https://leetcode.com/problems/water-and-jug-problem/) (LC 365) | 🟡 Medium | Bézout's identity (GCD) |
+| 6 | **Implement RSA (full key gen + encrypt/decrypt)** | 🔴 Code | RSA pipeline |
+| 7 | **Implement Miller-Rabin Test** | 🔴 Code | Primality testing |
+| 8 | **Prove: if p is prime, a^{p-1} ≡ 1 (mod p)** | 🔴 Theory | Fermat's Little Theorem |
+
+### Assignment Guidelines
+- **Start** with 1–5 (LeetCode) — these apply GCD, modular arithmetic, and number theory concepts.
+- **Problem 5** (Water and Jug) is a beautiful application of Bézout's identity: you can measure `z` liters iff `z` is a multiple of `gcd(x, y)`.
+- **Problems 6–7** are coding projects — implement the full RSA pipeline and Miller-Rabin test.
+- **Problem 8** is a proof exercise — use Lagrange's theorem on the group `Z*_p`.
+- **Target time:** 15 min per Medium, 45 min for RSA/Miller-Rabin projects.

@@ -442,3 +442,124 @@ LP (continuous) ──→ ILP (integer)
 - [[Algorithm Overview]] — Algorithm design paradigms
 - [[06_Geometry_NP_and_Approximation]] — LP relaxation for approximation algorithms
 - [[02 Greedy Algorithms]] — Greedy approach relates to LP duality
+
+
+---
+
+## Hands-On Exercises
+
+### Exercise 1: Convert to Standard Form
+Convert the following LP to standard form (maximize, ≤ constraints, non-negative variables):
+
+```
+minimize  2x₁ + 3x₂
+subject to
+  x₁ + x₂ ≥ 5
+  x₁ - x₂ = 3
+  x₁ ≥ 0, x₂ unrestricted
+```
+
+**Steps:**
+1. Negate objective to convert min → max.
+2. Replace unrestricted `x₂ = x₂' - x₂''` where `x₂', x₂'' ≥ 0`.
+3. Convert ≥ constraint to ≤ by multiplying by -1.
+4. Split equality into two inequalities.
+
+Write the final standard form explicitly.
+
+---
+
+### Exercise 2: Convert to Slack Form
+Convert the standard form LP from the note's example:
+
+```
+maximize  2x₁ - x₂ + x₃
+subject to
+  x₁ + x₂ + x₃ ≤ 7
+  x₁ - x₂ + x₃ ≤ 7
+  -x₁ + 2x₂ - 2x₃ ≤ 4
+  x₁, x₂, x₃ ≥ 0
+```
+
+1. Introduce slack variables x₄, x₅, x₆.
+2. Write out the slack form (objective + constraints).
+3. Identify B (basic variables) and N (nonbasic variables).
+4. Compute the initial basic solution.
+
+---
+
+### Exercise 3: Trace Simplex Iterations
+For the LP:
+```
+maximize  3x₁ + x₂ + 2x₃
+subject to
+  x₁ + x₂ + 3x₃ ≤ 30
+  2x₁ + 2x₂ + 5x₃ ≤ 24
+  4x₁ + x₂ + 2x₃ ≤ 36
+  x₁, x₂, x₃ ≥ 0
+```
+
+Trace the first pivot:
+1. Convert to slack form. Identify B, N, b, c, ν.
+2. **Entering variable:** Which nonbasic variable has `c_e > 0`? (Choose any.)
+3. **Leaving variable:** Apply the minimum ratio test — compute `Δᵢ = bᵢ / aᵢₑ` for each basic variable where `aᵢₑ > 0`.
+4. Perform the pivot. Write the new slack form.
+5. What is the new basic solution and objective value?
+
+---
+
+### Exercise 4: Construct the Dual
+For each primal LP, write the dual:
+
+**Primal A:**
+```
+maximize  5x₁ + 3x₂
+subject to
+  x₁ + x₂ ≤ 4
+  2x₁ + x₂ ≤ 6
+  x₁, x₂ ≥ 0
+```
+
+**Primal B:**
+```
+minimize  4y₁ + 6y₂
+subject to
+  y₁ + 2y₂ ≥ 5
+  y₁ + y₂ ≥ 3
+  y₁, y₂ ≥ 0
+```
+
+For each: write the dual, then verify **weak duality** — plug in any feasible primal solution and any feasible dual solution, and confirm primal objective ≤ dual objective.
+
+---
+
+### Exercise 5: Model a Real Problem as LP
+A bakery makes cakes and cookies. Each cake requires 2 hours of baking and 1 hour of decoration, earning $15 profit. Each cookie batch requires 1 hour of baking and 1 hour of decoration, earning $8 profit. The bakery has 8 hours of baking time and 6 hours of decoration time available per day.
+
+1. Define variables.
+2. Write the objective function.
+3. Write the constraints.
+4. Convert to standard form.
+5. **Bonus:** Solve graphically (plot the feasible region) or via Simplex.
+
+---
+
+## Assignments
+
+| # | Problem | Type | Key Technique |
+|---|---------|------|---------------|
+| 1 | **Convert LP to Standard/Slack Form** (3 problems) | 🟡 Theory | Form conversion |
+| 2 | **Trace Simplex on a 3-variable LP** | 🟡 Theory | Pivot operations |
+| 3 | **Construct and Verify Duals** (3 problems) | 🟡 Theory | Duality |
+| 4 | **Model Diet Problem as LP** | 🟡 Theory | LP modeling |
+| 5 | **Model Network Flow as LP** | 🟡 Theory | LP modeling |
+| 6 | **Prove Complementary Slackness** | 🔴 Theory | Duality theory |
+| 7 | [Optimize Maximum Profit](https://leetcode.com/problems/maximum-profit-in-job-scheduling/) (LC 1235) | 🔴 Hard | DP (LP-adjacent) |
+| 8 | **Implement Simplex in Java** | 🔴 Code | Full Simplex algorithm |
+
+### Assignment Guidelines
+- **Problems 1–3** are core — standard form, slack form, Simplex, duality.
+- **Problems 4–5** develop LP modeling skills — the most valuable practical skill.
+- **Problem 6** (Complementary Slackness) is a theoretical deep-dive.
+- **Problem 8** (Implement Simplex) is a substantial project — handle pivot, minimum ratio test, and initialization.
+- **Target time:** 20 min per Theory, 60 min for Simplex implementation.

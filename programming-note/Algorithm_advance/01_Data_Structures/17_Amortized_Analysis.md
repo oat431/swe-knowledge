@@ -214,3 +214,92 @@ All three methods yield the **same amortized bounds** when applied to the same p
 - [[01 Heaps & Priority Queues]] — binary counter bit-flipping analysis
 - [[02_Advanced_Data_Structures]] — Fibonacci heaps (advanced amortized application)
 - [[02_Advanced_Data_Structures]] — Disjoint sets (union-by-rank / path compression)
+
+
+---
+
+## Hands-On Exercises
+
+### Exercise 1: Aggregate Analysis — Stack with MULTIPOP
+Consider a sequence of 10 operations on an initially empty stack: `PUSH, PUSH, PUSH, MULTIPOP(5), PUSH, PUSH, MULTIPOP(3), PUSH, MULTIPOP(10), PUSH`.
+
+1. Count the **total number of actual pops** across all operations.
+2. Count the **total number of pushes**.
+3. Verify that total pops ≤ total pushes (the key invariant from the note).
+4. What is the amortized cost per operation using aggregate analysis?
+
+```java
+// Trace through each operation. Record stack size, pops, and pushes.
+// Operation      | Actual Pops | Actual Pushes | Stack Size After
+// PUSH           |             |               |
+// PUSH           |             |               |
+// ... (fill in all 10)
+```
+
+---
+
+### Exercise 2: Accounting Method — Binary Counter
+A 4-bit counter starts at `0000`. Run 16 increments (`0000` → `1111`).
+
+1. For each increment, count the number of bit flips (actual cost).
+2. Assign amortized cost = 2 per increment (as in the note).
+3. Track the **running credit** (cumulative overpayment). Verify credit never goes negative.
+4. What is the total actual cost? Total amortized cost? Verify `∑ ĉᵢ ≥ ∑ cᵢ`.
+
+```java
+// Fill in a table:
+// Counter | Binary | Bit Flips | Amortized Cost | Credit Change | Total Credit
+// 0       | 0000   |     —     |       —        |       —       |     0
+// 1       | 0001   |     ?     |       2        |       ?       |     ?
+// ... (fill all 16)
+```
+
+---
+
+### Exercise 3: Potential Method — Dynamic Table INSERT
+A dynamic table starts with capacity 1. We insert 8 elements, doubling capacity each time it's full.
+
+Potential function: `Φ(T) = 2·num − size`
+
+1. Compute `Φ` before and after each of the 8 inserts.
+2. For each insert, compute actual cost `cᵢ` (1 for normal, `m+1` for expansion).
+3. Compute amortized cost: `ĉᵢ = cᵢ + Φ(Dᵢ) − Φ(Dᵢ₋₁)`.
+4. Verify that every insert has amortized cost = 3 (the result from the note).
+
+```java
+// Table:
+// Insert # | num (before→after) | size (before→after) | Φ(before) | Φ(after) | cᵢ | ĉᵢ
+// 1        | 0 → 1              | 1 → 1              |    ?      |    ?     |  ? |  ?
+// 2        | 1 → 2              | 1 → 2 (expand!)    |    ?      |    ?     |  ? |  ?
+// ... (fill all 8)
+```
+
+---
+
+### Exercise 4: Compare All Three Methods
+For the MULTIPOP stack example (PUSH=1 credit, POP/MULTIPOP=0 amortized):
+
+1. **Aggregate:** State the amortized cost per operation.
+2. **Accounting:** State the credit on each stack element and verify invariant.
+3. **Potential:** Let `Φ = |stack|`. Compute `ĉ` for PUSH, POP, MULTIPOP(S, k).
+
+Confirm all three methods give the same O(1) amortized bound.
+
+---
+
+## Assignments
+
+| # | Problem | Type | Key Technique |
+|---|---------|------|---------------|
+| 1 | **Implement a Dynamic Array (ArrayList)** | 🟡 Code | Potential method analysis |
+| 2 | **Analyze Incrementing a Binary Counter** | 🟡 Theory | Aggregate analysis |
+| 3 | **Accounting Method for Multi-Stack** | 🟡 Theory | Accounting method |
+| 4 | **Potential Function for Splay Trees** | 🔴 Theory | Potential method (advanced) |
+| 5 | **Amortized Analysis of Union-Find** | 🟡 Theory | Accounting / Ackermann |
+| 6 | [Implement Dynamic Array](https://leetcode.com/problems/design-an-ordered-stream/) (LC 1656) | 🟢 Code | Dynamic table |
+
+### Assignment Guidelines
+- **Problems 1–3** are core exercises — they directly apply the three methods from this note.
+- **Problem 4** (Splay Trees) is a classic but challenging potential method application. Don't attempt until comfortable with the stack and counter examples.
+- **Problem 5** connects to [[02_Advanced_Data_Structures]] — the `O(m·α(n))` bound uses accounting-style arguments.
+- **Target time:** 20 min per Theory problem, 30 min for code.
