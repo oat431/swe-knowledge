@@ -209,8 +209,8 @@ All three methods yield the **same amortized bounds** when applied to the same p
 
 ## See Also
 
-- [[02_Stacks_and_Queues]] — underlying data structures for amortized examples
-- [[03_Hash_Tables]] — dynamic tables as hash table backing
-- [[04_Binary_Heaps]] — binary counter bit-flipping analysis
-- [[05_Fibonacci_Heaps]] — advanced application of amortized analysis (potential method)
-- [[06_Disjoint_Sets]] — union-by-rank / path compression amortized bounds
+- [[01 Stacks & Queues]] — underlying data structures for amortized examples
+- [[01 Hash Tables]] — dynamic tables as hash table backing
+- [[01 Heaps & Priority Queues]] — binary counter bit-flipping analysis
+- [[02_Advanced_Data_Structures]] — Fibonacci heaps (advanced amortized application)
+- [[02_Advanced_Data_Structures]] — Disjoint sets (union-by-rank / path compression)

@@ -521,5 +521,5 @@ This is a **FPTAS** (fully polynomial-time approximation scheme): polynomial in 
 ## See Also
 
 - [[01_Amortized_Analysis]] — amortized analysis used in convex hull correctness proof
-- [[04_Binary_Heaps]] — heap-based sorting for convex hull vertex ordering
-- [[05_Fibonacci_Heaps]] — Prim's algorithm for MST in TSP approximation
+- [[01 Heaps & Priority Queues]] — heap-based sorting for convex hull vertex ordering
+- [[03_Advanced_Graph_Algorithms]] — Prim's algorithm for MST in TSP approximation

@@ -2,14 +2,14 @@
 tags: [algorithms, advanced, clrs, programming, overview]
 ---
 
-# Algorithm v2 — Advanced Topics (CLRS)
+# Algorithm Advance — Advanced Topics (CLRS)
 
 > **Source:** *Introduction to Algorithms* (CLRS) by Cormen, Leiserson, Rivest, Stein — 4th Edition
 > Advanced topics that complement the practical Algorithm v1 notes.
 
 ## What Is This?
 
-This vault extends [[Algorithm Overview|Algorithm v1]] with **advanced algorithm topics** from CLRS that the v1 notes don't cover. Where v1 focuses on practical implementations and interview patterns, v2 covers the theory, proofs, and advanced structures that deepen understanding.
+This vault extends [[Algorithm Overview|Algorithm v1]] with **advanced algorithm topics** from CLRS that the v1 notes don't cover. Where v1 focuses on practical implementations and interview patterns, Algorithm Advance covers the theory, proofs, and advanced structures that deepen understanding.
 
 ## Files
 
@@ -32,7 +32,7 @@ flowchart TD
         PS["Problem Solving: patterns, strategies"]
     end
 
-    subgraph v2["Algorithm v2 (Advanced / CLRS)"]
+    subgraph v2["Algorithm Advance (CLRS)"]
         AM["Amortized Analysis"]
         ADS["Advanced DS: B-trees, Fibonacci heaps, vEB, disjoint sets"]
         AGA["Advanced Graphs: MST, shortest paths, max flow"]

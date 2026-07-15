@@ -63,5 +63,5 @@ Data structures organize data. Algorithms process it. Together they're the found
 
 For deeper coverage of advanced algorithms (amortized analysis, B-trees, Fibonacci heaps, MST, max flow, NP-completeness, number theory, linear programming):
 
-→ [[Algorithm v2 - Overview]] — CLRS advanced topics that complement these practical notes
+→ [[Algorithm Advance - Overview]] — CLRS advanced topics that complement these practical notes
 - GeeksforGeeks — https://www.geeksforgeeks.org/
