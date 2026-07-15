@@ -20,12 +20,12 @@ A single developer who ignores quality drags the whole team down. The team must 
 
 ### Team Characteristics
 
-| Pragmatic Team | Dysfunctional Team |
-|---------------|------------------|
-| "We test everything." | "QA will find the bugs." |
-| "Let me help you with that." | "Not my code, not my problem." |
+| Pragmatic Team                          | Dysfunctional Team             |
+| --------------------------------------- | ------------------------------ |
+| "We test everything."                   | "QA will find the bugs."       |
+| "Let me help you with that."            | "Not my code, not my problem." |
 | "Our velocity shows we need to adjust." | "We just need to work harder." |
-| No broken windows tolerated | Broken windows everywhere |
+| No broken windows tolerated             | Broken windows everywhere      |
 
 ---
 

@@ -23,9 +23,9 @@ Quick-reference index for programming topics. Where deep content exists in [[Sof
 | **Computer Networks** | [[Computer Networks Overview]] — OSI, TCP/IP, DNS, HTTP, TCP/UDP, Security, Load Balancing, Tools (10 files) | [[Computer Networks Overview]] — 10 files across 3 categories |
 | **Operating Systems** | [[Operating Systems Overview]] — Processes, Threads, CPU Scheduling, Memory, File Systems, IPC, Deadlocks, Linux Tools (10 files) | [[Operating Systems Overview]] — 10 files across 3 categories |
 | **Fundamentals** | [[Fundamental Overview]] — Core Concepts, Variables & Types, Operators, Control Flow, Functions, OOP, Error Handling, Memory Management, Functional Programming, Data Formats, Logging, Regex, CI/CD, Docker (15 files) | [[Fundamental Overview]] — 15 files across 14 topics |
-| **Design Patterns** | [[Design Pattern Overview]] — Creational (Factory, Builder, Singleton), Structural (Adapter, Decorator, Facade), Behavioral (Strategy, Observer, State) (4 files) | [[Design Pattern Overview]] — 4 files across 3 categories |
+| **Design Patterns** | [[programming-note/Design Patterns/Design Pattern Overview]] — Creational (Factory, Builder, Singleton), Structural (Adapter, Decorator, Facade), Behavioral (Strategy, Observer, State) (4 files) | [[programming-note/Design Patterns/Design Pattern Overview]] — 4 files across 3 categories |
 | **Version Control** | [[Version Control Overview]] — Git Fundamentals, Workflows (GitFlow, GitHub Flow, Trunk-Based), Advanced (rebase, bisect, hooks) (4 files) | [[Version Control Overview]] — 4 files across 3 categories |
-| **Clean Code** | [[Clean Code Overview]] — Naming & Functions, Code Smells & Refactoring, Comments & Documentation (4 files) | [[Clean Code Overview]] — 4 files across 3 categories |
+| **Clean Code** | [[programming-note/Clean Code/Clean Code Overview]] — Naming & Functions, Code Smells & Refactoring, Comments & Documentation (4 files) | [[programming-note/Clean Code/Clean Code Overview]] — 4 files across 3 categories |
 
 ---
 
