@@ -165,7 +165,7 @@
 - [ ] **REST for external + simple internal** — JSON over HTTP. Universal. Every language supports it. Use for CRUD, simple queries between services.
 - [ ] **gRPC for internal high-performance** — Protobuf serialization (10x smaller than JSON), HTTP/2 multiplexing, bidirectional streaming. Use for service-to-service where latency matters. Not for browser clients (without grpc-web).
 - [ ] **Timeout on every outbound call** — Connection timeout + read timeout. Shorter than caller's own timeout. No call waits forever.
-- [ ] **Circuit breaker on every outbound call** — Stop calling failing downstream after N failures. Fail fast. Return fallback. See [API Checklist — Circuit Breaker](../api-checklist/api.md).
+- [ ] **Circuit breaker on every outbound call** — Stop calling failing downstream after N failures. Fail fast. Return fallback. See [API Checklist — Circuit Breaker](api.md).
 - [ ] **Retry only idempotent operations** — GET, PUT, DELETE: safe to retry. POST: only with idempotency key. Exponential backoff + jitter. Max 3 retries.
 - [ ] **Bulkhead isolation** — Separate thread pools / connection pools per downstream. One slow service doesn't exhaust resources for all others.
 
@@ -237,7 +237,7 @@
 
 ## 11. Resilience Patterns
 
-- [ ] **Circuit breaker per downstream** — Different thresholds per dependency. Payment gateway: strict (fail fast on 30% errors). Email service: loose (tolerate 80% errors). See [API Checklist — Circuit Breaker](../api-checklist/api.md).
+- [ ] **Circuit breaker per downstream** — Different thresholds per dependency. Payment gateway: strict (fail fast on 30% errors). Email service: loose (tolerate 80% errors). See [API Checklist — Circuit Breaker](api.md).
 - [ ] **Timeout at every boundary** — HTTP client, DB query, message consumer, external API. No call waits forever. Shorter than caller's own timeout.
 - [ ] **Retry with backoff + jitter** — Exponential backoff prevents thundering herd. Jitter prevents synchronized retries. Only for transient failures. Max 3 attempts.
 - [ ] **Bulkhead** — Separate thread pools / connection pools per downstream. One slow dependency doesn't exhaust resources for all outbound calls.
@@ -322,9 +322,9 @@
 
 ## Related Checklists
 
-- [API Checklist](../api-checklist/api.md) — General API design, resilience patterns, testing
+- [API Checklist](api.md) — General API design, resilience patterns, testing
 - [Spring Boot API Gateway](spring-boot-api-gateway.md) — Spring Cloud Gateway implementation
 - [Spring Boot Eureka](spring-boot-eureka.md) — Service discovery with Eureka
 - [Spring Boot Load Balancing](spring-boot-loadbalance.md) — Client-side LB with Spring Cloud
 - [Spring Boot OAuth](spring-boot-oauth.md) — OAuth2 resource server + authorization server
-- [Batch Checklist](../batch-checklist/batch.md) — Batch processing patterns
+- [Batch Checklist](batch.md) — Batch processing patterns

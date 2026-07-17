@@ -63,7 +63,7 @@ Two approaches to minimise exposed information:
 
 ##### Protecting Data in Transit
 
-**End-to-End Encryption (E2EE)** ensures Confidentiality between communication endpoints. No third party — from routers to application servers — can access the communication. E2EE typically also provides **Integrity** and [[Authentication]].
+**End-to-End Encryption (E2EE)** ensures Confidentiality between communication endpoints. No third party — from routers to application servers — can access the communication. E2EE typically also provides **Integrity** and [[authentication]].
 
 - Devices at the endpoints hold the encryption keys
 - Usually symmetric encryption keys, agreed via key transport or **Diffie-Hellman** exchange
