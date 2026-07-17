@@ -1,7 +1,9 @@
-# Oralita Obsidian Git Backup
+# Oralita Software Engineering Knowledge
 
-it my second brain and I leave it as public
+This is my Software Engineering knowledge obsidian vault backup
 
-I am sharing this Note between my laptop and my tablet
+it a life long learning for me to relearn software engineering in A.I. Era
 
-nice to mee ya 🖖
+it based on SWEBOK v4
+
+that all
