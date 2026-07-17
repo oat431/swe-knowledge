@@ -112,6 +112,7 @@ Field (+, × both have inverses)
 ### Functional Programming Connection
 
 Haskell typeclasses mirror algebraic structures:
+
 | Haskell Typeclass | Algebraic Structure |
 |-------------------|-------------------|
 | `Semigroup` | Semigroup (`<>` operator) |

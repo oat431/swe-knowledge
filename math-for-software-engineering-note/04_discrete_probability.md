@@ -41,6 +41,7 @@ A **random variable** $X$ assigns a numeric value to each outcome in $S$.
 For discrete $X$, the probability distribution $p(x) = P(X = x)$ lists the probability of each value.
 
 **Example — fair die roll:**
+
 | $x$ | 1 | 2 | 3 | 4 | 5 | 6 |
 |-----|---|---|---|---|---|---|
 | $p(x)$ | $\frac{1}{6}$ | $\frac{1}{6}$ | $\frac{1}{6}$ | $\frac{1}{6}$ | $\frac{1}{6}$ | $\frac{1}{6}$ |

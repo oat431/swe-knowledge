@@ -85,22 +85,23 @@ Together, these topics equip a software engineer to read and write formal specif
 
 ## My Notes
 
-- [[Basic Logic]] — Propositional and predicate logic, truth tables, inference
-- [[Proof Techniques]] — Direct, contradiction, induction, contrapositive
-- [[Set, Relations, Functions]] — Set operations, relations, functions, cardinality
-- [[Graphs and Trees]] — Graph types, representations, trees, traversals
-- [[Finite State Machines]] — DFA, NFA, regular expressions, state diagrams
-- [[Grammars]] — Chomsky hierarchy, production rules, formal languages
-- [[Number Theory]] — Divisibility, modular arithmetic, primes, GCD
-- [[Basics of Counting]] — Sum/product rule, permutations, combinations, recursion
-- [[Discrete Probability]] — Sample space, random variables, mean/variance
-- [[Numerical Precision, Accuracy, and Errors]] — Floating-point, error types
-- [[Algebraic Structures]] — Groups, rings, fields, monoids
-- [[Calculus]] — Limits, differentiation, integration, vector calculus
+- [[00_basic_logic]] — Propositional and predicate logic, truth tables, inference
+- [[01_proof_techniques]] — Direct, contradiction, induction, contrapositive
+- [[02_sets_relations_functions]] — Set operations, relations, functions, cardinality
+- [[03_basics_of_counting]] — Sum/product rule, permutations, combinations, recursion
+- [[04_discrete_probability]] — Sample space, random variables, mean/variance
+- [[05_graphs_and_trees]] — Graph types, representations, trees, traversals
+- [[06_finite_state_machines]] — DFA, NFA, regular expressions, state diagrams
+- [[07_grammars]] — Chomsky hierarchy, production rules, formal languages
+- [[08_number_theory]] — Divisibility, modular arithmetic, primes, GCD
+- [[09_algebraic_structures]] — Groups, rings, fields, monoids
+- [[10_calculus]] — Limits, differentiation, integration, vector calculus
+- [[11_numerical_precision]] — Floating-point, error types, rounding
+- [[12_new_advancements]] — Computational neuroscience, genomics & bioinformatics
 
 ## What's Missing
 
-- New Advancements (computational neuroscience, genomics — SWEBOK ch17 section 13)
+> ✅ All SWEBOK Chapter 17 knowledge areas are now covered.
 
 ## Relationship to Other Foundations
 
