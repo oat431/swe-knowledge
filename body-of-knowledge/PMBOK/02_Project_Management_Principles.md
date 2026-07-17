@@ -308,7 +308,7 @@ Remote and virtual teams face heightened challenges due to varying work styles, 
 
 ## Related Chapters
 
-- [[Body of Knowledge/PMBOK/00_Introduction|PMBOK Introduction]] — Section 1: Introduction and Section 2: A System for Value Delivery
+- [[body-of-knowledge/PMBOK/00_Introduction|PMBOK Introduction]] — Section 1: Introduction and Section 2: A System for Value Delivery
 - [[03_Project_Life_Cycles|PMBOK Project Life Cycles]] — Section 4: Project life cycles, phases, development approaches, delivery cadence, and focus areas
 - [[04_Governance_Performance_Domain|Governance Performance Domain]]
 - [[05_Scope_Performance_Domain|Scope Performance Domain]]
@@ -317,4 +317,4 @@ Remote and virtual teams face heightened challenges due to varying work styles, 
 - [[08_Stakeholders_Performance_Domain|Stakeholders Performance Domain]]
 - [[09_Resources_Performance_Domain|Resources Performance Domain]]
 - [[10_Risk_Performance_Domain|Risk Performance Domain]]
-- [[Body of Knowledge/PMBOK/00_Introduction|PMBOK Guide — Eighth Edition]] — Full reference
+- [[body-of-knowledge/PMBOK/00_Introduction|PMBOK Guide — Eighth Edition]] — Full reference

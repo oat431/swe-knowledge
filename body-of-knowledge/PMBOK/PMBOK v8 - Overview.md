@@ -34,7 +34,7 @@ Since the Seventh Edition (2021), the Eighth Edition presents four categories of
 
 | Chapter | Topic | Description |
 |---------|-------|-------------|
-| [[Body of Knowledge/PMBOK/00_Introduction]] | Introduction | Purpose, key terms (project, value, temporary, unique context), foundational elements, portfolio/program/project/operations relationships |
+| [[body-of-knowledge/PMBOK/00_Introduction]] | Introduction | Purpose, key terms (project, value, temporary, unique context), foundational elements, portfolio/program/project/operations relationships |
 | [[01_Value_Delivery_System]] | A System for Value Delivery | Creating value, project environment (EEFs, OPAs), product management considerations, seven project functions, five project management roles |
 | [[02_Project_Management_Principles]] | Project Management Principles | Six principles: Holistic View, Focus on Value, Embed Quality, Accountable Leadership, Sustainability, Empowered Culture — with impact analyses and principle-in-action examples |
 | [[03_Project_Life_Cycles]] | Project Life Cycles | Project phases, predictive/adaptive/hybrid development approaches, approach selection factors, delivery cadence, five Focus Areas with interaction diagrams |
@@ -80,12 +80,12 @@ Each topic file is a self-contained reference following a consistent structure:
 6. **Check Results** — Outcome verification criteria
 7. **Related Chapters** —  to connected topics
 
-Start with [[Body of Knowledge/PMBOK/00_Introduction]] for the foundational vocabulary and framework. The  at the bottom of every chapter pull you naturally into related areas.
+Start with [[body-of-knowledge/PMBOK/00_Introduction]] for the foundational vocabulary and framework. The  at the bottom of every chapter pull you naturally into related areas.
 
 ## Reading Paths
 
-- **New project manager:** [[Body of Knowledge/PMBOK/00_Introduction|Introduction]] → [[01_Value_Delivery_System|Value Delivery]] → [[02_Project_Management_Principles|Principles]] → [[03_Project_Life_Cycles|Life Cycles]] → [[11_Tailoring|Tailoring]]
-- **PMP/CAPM exam prep:** [[Body of Knowledge/PMBOK/00_Introduction|Introduction]] → All seven Performance Domains (04–10) → **O Catalog** → [[13_Tools_and_Techniques|Tools]]
+- **New project manager:** [[body-of-knowledge/PMBOK/00_Introduction|Introduction]] → [[01_Value_Delivery_System|Value Delivery]] → [[02_Project_Management_Principles|Principles]] → [[03_Project_Life_Cycles|Life Cycles]] → [[11_Tailoring|Tailoring]]
+- **PMP/CAPM exam prep:** [[body-of-knowledge/PMBOK/00_Introduction|Introduction]] → All seven Performance Domains (04–10) → **O Catalog** → [[13_Tools_and_Techniques|Tools]]
 - **Experienced PM refreshing:** [[02_Project_Management_Principles|Principles]] → [[04_Governance_Performance_Domain|Governance]] → [[11_Tailoring|Tailoring]] → [[Appendix_A2_AI_in_Projects|AI in Projects]]
 - **PMO leader:** [[Appendix_A1_PMO|PMO]] → [[04_Governance_Performance_Domain|Governance]] → [[11_Tailoring|Tailoring]] → [[07_Finance_Performance_Domain|Finance]]
 - **Agile practitioner:** [[03_Project_Life_Cycles|Life Cycles]] → [[11_Tailoring|Tailoring]] → Performance Domains (04–10, noting adaptive tailoring in each)

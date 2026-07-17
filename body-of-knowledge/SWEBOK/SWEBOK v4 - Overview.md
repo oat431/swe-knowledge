@@ -70,12 +70,12 @@ Each Knowledge Area is a self-contained chapter, but they are deeply interconnec
 4. **Tools & Techniques** — What practitioners use
 5. **Related SWEBOK Chapters** — Wikilinks to connected KAs
 
-Start with [[Body of Knowledge/SWEBOK/00_Introduction]] for definitions, scope, and how the Guide is structured. Then explore by need — the  at the bottom of every chapter will pull you naturally into related areas. The vault is designed for both linear study and targeted reference.
+Start with [[body-of-knowledge/SWEBOK/00_Introduction]] for definitions, scope, and how the Guide is structured. Then explore by need — the  at the bottom of every chapter will pull you naturally into related areas. The vault is designed for both linear study and targeted reference.
 
 ## Reading Paths
 
 - **New engineer:** [[01_Software_Requirements|Requirements]] → [[03_Software_Design|Design]] → [[04_Software_Construction|Construction]] → [[05_Software_Testing|Testing]] → [[14_Software_Engineering_Professional_Practice|Professional Practice]]
 - **Senior / tech lead:** [[02_Software_Architecture|Architecture]] → [[12_Software_Quality|Quality]] → [[13_Software_Security|Security]] → [[06_Software_Engineering_Operations|Operations]] → [[15_Software_Engineering_Economics|Economics]]
 - **Engineering manager:** [[09_Software_Engineering_Management|Engineering Management]] → [[10_Software_Engineering_Process|Process]] → [[15_Software_Engineering_Economics|Economics]] → [[14_Software_Engineering_Professional_Practice|Professional Practice]]
-- **Full-stack refresher:** [[Body of Knowledge/SWEBOK/00_Introduction|Introduction]] → All 18 chapters in order (01 through 18)
-- **Academic / certification prep:** [[Body of Knowledge/SWEBOK/00_Introduction|Introduction]] → [[16_Computing_Foundations|Computing]] → [[17_Mathematical_Foundations|Math]] → [[18_Engineering_Foundations|Engineering]] → then the 15 software engineering KAs
+- **Full-stack refresher:** [[body-of-knowledge/SWEBOK/00_Introduction|Introduction]] → All 18 chapters in order (01 through 18)
+- **Academic / certification prep:** [[body-of-knowledge/SWEBOK/00_Introduction|Introduction]] → [[16_Computing_Foundations|Computing]] → [[17_Mathematical_Foundations|Math]] → [[18_Engineering_Foundations|Engineering]] → then the 15 software engineering KAs

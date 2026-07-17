@@ -116,6 +116,6 @@ Tailoring adapts the approach, governance, and processes to fit the project's en
 ## Related Chapters
 
 - [[04_Governance_Performance_Domain]]: The eight performance domains that tailoring adapts to project context
-- [[Body of Knowledge/PMBOK/00_Introduction]]: The Standard for Project Management and guiding principles
+- [[body-of-knowledge/PMBOK/00_Introduction]]: The Standard for Project Management and guiding principles
 - [[13_Tools_and_Techniques]]: Models, methods, and artifacts available for tailored application
 - [[04_Governance_Performance_Domain]]: Governance structures that constrain and guide tailoring decisions
