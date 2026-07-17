@@ -10,93 +10,60 @@ tags:
 
 # Software Construction — Overview
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 04 — Software Construction
-> **Purpose:** Translate design into working code through disciplined coding practices, verification, and iterative refinement.
+> **Source:** SWEBOK v4 Chapter 04
+> **Purpose:** Create working software through detailed design, coding, verification, unit testing, integration testing, and debugging.
 
 ## What Is This?
 
-Software construction is the detailed creation of working software through coding, debugging, testing, and integration. It is the most labor-intensive activity in the software lifecycle — developers spend the majority of their time writing, reading, and modifying code. Construction sits at the center of the process: it consumes design artifacts, produces the system that is tested and deployed, and generates the codebase that must be maintained for years.
+Software construction is the hands-on activity of creating and maintaining software through coding, debugging, testing, and integration. It is the most labor-intensive activity in the software lifecycle and sits at the center of the process: consuming design artifacts, producing the system that is tested and deployed, and generating the codebase that must be maintained for years. The quality of construction practices directly determines a system's reliability, readability, and maintainability.
 
-The quality of construction practices directly determines a system's reliability, readability, and maintainability. Poor construction leads to defect-ridden software that is expensive to test and dangerous to modify. Well-constructed software, by contrast, can be understood by new team members, extended with confidence, and refactored safely.
+SWEBOK v4 identifies five core principles guiding construction: minimizing complexity (humans have limited working memory — write simple, readable code), anticipating change (build extensible software), constructing for verification (write code so faults are discoverable), reusing assets (systematic reuse requires a well-defined process), and applying standards. The chapter also reflects modern realities: AI-assisted coding via LLMs, test-driven development as mainstream practice, dependency supply chain management, and continuous integration.
 
-SWEBOK v4's construction chapter reflects modern realities: AI-assisted coding (copilots, code generation), test-driven development as a mainstream practice, and the increasing importance of construction verification through automated tools. The fundamentals remain timeless — clear naming, small functions, consistent style — but the tools and context continue to evolve.
+Construction spans a spectrum of languages (configuration languages → scripting → DSLs → general-purpose) and integration approaches (phased "big bang" → incremental → continuous). It encompasses coding practices, construction-level design, API design, error handling, concurrency, platform standards, performance tuning, and the entire feedback loop from developer commit to production canary release.
 
-## The 7 Topic Areas
+## Knowledge Areas
 
-### 1. [[Construction Planning]]
-- Choosing construction languages, frameworks, and libraries
-- Construction prerequisites: understanding design, requirements, and project standards
-- Build vs. buy decisions at the component level
-- Construction sequencing and incremental development strategies
-- Developer environment setup: IDEs, local builds, containerized dev environments
-- **Book:** *Code Complete, 2nd Ed.* — Steve McConnell
+### Software Construction Fundamentals
+- Five core principles: minimizing complexity, anticipating change, constructing for verification, reusing assets, applying standards
+- Construction operates at the intersection of design and testing — consuming design outputs and producing testable artifacts
+- Standards include both external (IEEE, ISO, language standards) and internal (coding conventions, exception policies, platform interfaces)
 
-### 2. [[Coding Practices]]
-- Naming conventions, formatting, and commenting standards
-- Defensive programming: assertions, error handling, input validation
-- Code organization: modules, classes, packages, files
-- Pair programming, mob programming, and code reviews
-- Coding standards and style guides (Google, Airbnb, language-specific)
-- **Book:** *Clean Code* — Robert C. Martin
+### Managing Construction
+- How construction fits life cycle models: waterfall, staged-delivery, evolutionary prototyping, Agile, DevOps/continuous delivery
+- Construction planning and measurement: code developed/modified/reused, complexity, fault rates, effort, scheduling
+- Dependency management as supply chain: package managers, license compliance, vulnerability monitoring
 
-### 3. [[Construction Verification]]
-- Unit testing during construction (not just after)
-- Static analysis tools: linters, type checkers, security scanners
-- Code reviews as a verification technique
-- Pre-commit hooks, CI pipelines, and quality gates
-- Measuring code quality: cyclomatic complexity, code coverage, technical debt metrics
-- **Book:** *The Pragmatic Programmer, 20th Anniversary Ed.* — Thomas & Hunt
+### Practical Considerations
+- Construction languages span a spectrum: configuration → scripting → DSLs → general-purpose (linguistic, formal, visual notations)
+- Coding practices: naming, layout, error handling, security (buffer overflows, input validation), resource discipline, documentation
+- Integration approaches: phased (big bang), incremental (one piece at a time), continuous (CI with automated pipelines)
 
-### 4. [[Debugging]]
-- Systematic debugging: reproduce, isolate, diagnose, fix, verify
-- Debugging tools: breakpoints, profilers, memory analyzers, distributed tracing
-- Common defect categories: off-by-one, race conditions, resource leaks, null references
-- Root cause analysis vs. symptom treatment
-- Rubber duck debugging and cognitive strategies
-- **Book:** *Code Complete, 2nd Ed.* — Steve McConnell
+### Construction Technologies
+- API design: easy to learn, hard to misuse, backward-compatible; API-first with OpenAPI contracts
+- Object-oriented runtime: polymorphism, reflection, generics/templates
+- Assertions, design-by-contract, defensive programming, error/exception handling, fault tolerance
+- Test-first programming (TDD): write tests before code, Red-Green-Refactor cycle
+- Concurrency primitives, middleware, distributed/cloud construction, performance tuning
 
-### 5. [[Code Reuse]]
-- Reuse strategies: libraries, frameworks, components, services
-- API design for internal and external reuse
-- The reuse paradox: adapting general solutions to specific contexts
-- Open-source reuse: licensing, security, supply chain risks
-- Internal component catalogs and package registries
-- **Book:** *Modern Software Engineering* — David Farley
+### Software Construction Tools
+- IDEs with AI-assisted programming (LLM integration for code generation/completion)
+- Cloud-based development environments and low-code/zero-code platforms
+- Unit testing frameworks, profiling tools, program slicing, static analysis tools
 
-### 6. [[Construction with AI Assistance]]
-- AI coding assistants: GitHub Copilot, Claude, Cursor, etc.
-- Prompt engineering for code generation
-- Validating AI-generated code: review, test, and verify
-- AI for code review, refactoring suggestions, and documentation
-- Limitations: hallucination, context window, security implications
-- **Book:** *Modern Software Engineering* — David Farley
+## My Notes
 
-### 7. [[Test-Driven Development (TDD)]]
-- The Red-Green-Refactor cycle
-- TDD as a design technique, not just a testing technique
-- Benefits: emergent design, regression safety, living documentation
-- TDD in practice: when to use it, when to adapt, common pitfalls
-- Relationship to [[05_Software_Testing/Software Testing Overview|Software Testing]] and [[03_Software_Design/Software Design Overview|Software Design]]
-- **Book:** *The Pragmatic Programmer, 20th Anniversary Ed.* — Thomas & Hunt
+- [[API/|API]]
 
-## Recommended Books (Priority Order)
+## What's Missing
 
-| #   | Book                                                                           | Author(s)                  | Pages |     Priority     |
-| --- | ------------------------------------------------------------------------------ | -------------------------- | :---: | :--------------: |
-| 1   | *Code Complete: A Practical Handbook of Software Construction, 2nd Ed.* (2004) | Steve McConnell            |  960  |   🔴 Essential   |
-| 2   | *The Pragmatic Programmer, 20th Anniversary Ed.* (2019)                        | David Thomas & Andrew Hunt |  352  |  🟡 Recommended  |
-| 3   | *Clean Code* (2009)                                                            | Robert C. Martin           |  464  |  🟡 Recommended  |
-| 4   | *Modern Software Engineering* (2022)                                           | David Farley               |  256  | 🟢 Supplementary |
+- Construction Fundamentals (minimize complexity, anticipate change, construct for verification, reuse, standards)
+- Managing Construction (lifecycle models, planning, dependency/supply chain management)
+- Practical Considerations (coding practices, integration approaches, cross-platform)
+- Construction Technologies (TDD, design-by-contract, concurrency primitives, middleware)
+- Construction Tools (IDEs, AI-assisted programming, low-code)
 
 ## Relationship to Other KAs
 
-- **[[Software Design Overview|Software Design]]** — Construction implements design. Detailed design and construction are closely linked — many developers blur the boundary between designing and coding. Clean Code notes are also found in `programming-note/Clean Code/` and `03_Software_Design/Clean Code/`.
-- **[[Software Testing Overview|Software Testing]]** — Construction verification (unit tests, TDD) overlaps heavily with testing. Developers are the first testers.
-- **[[Software Engineering Operations Overview|Software Engineering Operations]]** — Build systems, CI/CD pipelines, and deployment scripts are construction artifacts that bridge to operations.
-- **[[Software Configuration Management Overview|Software Configuration Management]]** — Version control, branching strategies, and build reproducibility are construction concerns managed through SCM.
-- **[[Software Quality Overview|Software Quality]]** — Code quality metrics, coding standards, and review practices are quality assurance activities embedded in construction.
-
-## Related
-- [[SWEBOK v4 - Overview]]
-- [[03_Software_Design/Software Design Overview|Software Design Overview]]
-- [[05_Software_Testing/Software Testing Overview|Software Testing Overview]]
+- **[[Software Design Note Overview|Software Design]]** — Construction implements design; much detailed design happens during construction
+- **[[Software Testing Overview|Software Testing]]** — Construction testing (unit + integration) feeds broader testing; TDD bridges both KAs
+- **[[Software Engineering Operations Overview|Software Engineering Operations]]** — Build systems, CI/CD pipelines, and deployment scripts bridge construction to operations

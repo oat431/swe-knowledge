@@ -10,95 +10,72 @@ tags:
 
 # Software Configuration Management — Overview
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 08 — Software Configuration Management
-> **Purpose:** Identify, control, audit, and report on all artifacts of a software system throughout its lifecycle.
+> **Source:** SWEBOK v4 Chapter 08
+> **Purpose:** Identify, control, audit, and track the evolution of software artifacts throughout the entire lifecycle, ensuring integrity and traceability.
 
 ## What Is This?
 
-Software Configuration Management (SCM) is the discipline of managing change to software artifacts — source code, documentation, test scripts, build configurations, infrastructure definitions, and anything else that constitutes the system. Without SCM, teams cannot answer basic questions: What version is running in production? What changed since the last release? Who approved this change? Can we reproduce the build from three months ago?
+Software Configuration Management (SCM) is the discipline of managing change to software artifacts — source code, documentation, test scripts, build configurations, infrastructure definitions, and anything else that constitutes the system. Without SCM, teams cannot answer basic questions: What version is running in production? What changed since the last release? Who approved this change? Can we reproduce last month's build?
 
-SCM provides the infrastructure of trust that enables all other engineering activities. Development needs version control to work in parallel. Testing needs reproducible builds and known baselines. Operations needs traceable releases and rollback capability. Management needs status accounting to track project state. Quality assurance needs configuration audits to verify that what was built matches what was specified.
+SCM provides the backbone for collaborative development and quality assurance. Development needs version control to work in parallel. Testing needs reproducible builds and known baselines. Operations needs traceable releases and rollback capability. Quality assurance needs configuration audits to verify that what was built matches what was specified. The discipline covers version control, baseline establishment, formal change control, status accounting, auditing, and release management.
 
-The core of SCM is deceptively simple — identify what you have, control how it changes, record the state of everything, and verify completeness. In practice, these activities become complex at scale: thousands of configuration items across multiple branches, environments, and release cycles. Modern tools (Git, CI/CD platforms, artifact registries) automate much of the mechanics, but the principles of SCM remain essential engineering knowledge.
+The core principles are deceptively simple — identify what you have, control how it changes, record the state of everything, and verify completeness. In practice, these activities become complex at scale: thousands of configuration items across multiple branches, environments, and release cycles. Modern tools (Git, CI/CD platforms, artifact registries) automate much of the mechanics, but the engineering principles remain essential knowledge.
 
-## The 7 Topic Areas
+## Knowledge Areas
 
-### 1. [[Identification]]
-- Configuration items (CIs): source files, documents, test data, build scripts, infrastructure definitions
-- Naming conventions and identification schemes
-- Configuration item attributes: version, owner, status, relationships
-- Decomposition: system → subsystem → component → file
-- Bill of materials: what goes into each release
-- **Book:** *Software Configuration Management Patterns* — Berczuk & Appleton
+### Management of the SCM Process
+- Planning, organizing, and monitoring SCM activities including tool selection and vendor/subcontractor control
+- The SCM Plan (SCMP) as a living document covering organization, responsibilities, schedules, and resources
+- Interface control and constraints from the organizational and project context
 
-### 2. [[Change Control]]
-- Change request process: submit, evaluate, approve/reject, implement, verify
-- Change Control Board (CCB): roles, authority, decision criteria
-- Change impact analysis (links to [[07_Software_Maintenance/Software Maintenance Overview|Maintenance]])
-- Emergency change procedures and expedited review
-- Access control: who can change what, code review requirements
-- **Book:** *Continuous Delivery* — Jez Humble & David Farley
+### Software Configuration Identification
+- Determining which artifacts are Configuration Items (CIs) with unique identifiers and attributes
+- Establishing baselines — formally approved, fixed versions that can only change through formal change control
+- Tracking CI relationships: dependencies, derivation, succession, and variants
 
-### 3. [[Status Accounting]]
-- Recording and reporting the status of configuration items
-- Change logs, history, and audit trails
-- Metrics: change volume, change frequency, lead time for changes
-- Dashboards and reporting for stakeholders
-- Traceability: linking changes to requirements, defects, and releases
-- **Book:** *Software Configuration Management Patterns* — Berczuk & Appleton
+### Software Configuration Change Control
+- Formal processes for requesting, evaluating, approving, and implementing changes via Change Requests (CRs)
+- Configuration Control Board (CCB) as the authority body for evaluating and deciding on changes
+- Handling deviations (pre-approved departures) and waivers (post-discovery nonconformance acceptance)
 
-### 4. [[Configuration Audits]]
-- **Functional Configuration Audit (FCA):** Verify that the software meets its functional requirements
-- **Physical Configuration Audit (PCA):** Verify that the as-built artifacts match the as-documented configuration
-- Baseline audits: confirming completeness and consistency before release
-- Audit findings and corrective actions
-- Relationship to quality assurance and formal reviews
-- **Book:** *Continuous Delivery* — Jez Humble & David Farley
+### Software Configuration Status Accounting
+- Recording and reporting CI status, baselines, and relationships throughout the lifecycle
+- Providing change traffic metrics, implementation status, and evidence for governance/compliance
+- Supporting audits and process measurement through verifiable status records
 
-### 5. [[Version Control]]
-- Branching strategies: trunk-based development, GitFlow, GitHub Flow, release branches
-- Merge vs. rebase, conflict resolution, cherry-picking
-- Distributed vs. centralized version control systems
-- Monorepo vs. multi-repo strategies
-- Git internals: commits, trees, blobs, refs
-- Version control for non-code artifacts: docs, data, ML models
-- **Book:** *Version Control with Git, 3rd Ed.* — Loeliger & McCullough
+### Software Configuration Auditing
+- Functional Configuration Audit (FCA): verifying software is consistent with its governing specifications
+- Physical Configuration Audit (PCA): verifying documentation is consistent with the as-built product
+- In-process audits conducted throughout development, not just at release milestones
 
-### 6. [[Baselines]]
-- Definition: a baseline is a formally reviewed and agreed-upon configuration that can only be changed through formal change control
-- Baseline types: functional, allocated, developmental, product
-- Baselining at milestones: requirements baseline, design baseline, code baseline
-- Baseline management in agile contexts: continuous baselining
-- Rollback and baseline restoration
-- **Book:** *Agile Configuration Management* — Matthew Parkinson
+### Software Release Management and Delivery
+- Building correct versions, packaging artifacts, and producing version description documents (VDD)
+- CI/CD pipelines for automated build-test-deploy triggered by commits
+- Software Bill of Materials (SBOM) for security, compliance, and vulnerability tracking
 
-### 7. [[Release Management]]
-- Release planning: scope, schedule, go/no-go criteria
-- Release packaging: versioning schemes (semver), release notes, artifacts
-- Deployment strategies: blue-green, canary, rolling, feature flags
-- Release governance: approval workflows, compliance checks
-- Release retrospectives and continuous improvement
-- **Book:** *Continuous Delivery* — Jez Humble & David Farley
+### Software Configuration Management Tools
+- Version control systems (Git, SVN) supporting branching, merging, and parallel/distributed development
+- Build automation tools, change control/issue tracking tools, and integrated CM workbenches
+- Configuration Management Databases (CMDBs) for persistent storage of configuration data and relationships
 
-## Recommended Books (Priority Order)
+## My Notes
 
-| #   | Book                                                | Author(s)                         | Pages |     Priority     |
-| --- | --------------------------------------------------- | --------------------------------- | :---: | :--------------: |
-| 1   | *Continuous Delivery* (2010)                        | Jez Humble & David Farley         |  512  |   🔴 Essential   |
-| 2   | *Software Configuration Management Patterns* (2003) | Steve Berczuk & Brad Appleton     |  256  |   🔴 Essential   |
-| 3   | *Version Control with Git, 3rd Ed.* (2022)          | Jon Loeliger & Matthew McCullough |  544  |  🟡 Recommended  |
-| 4   | *Agile Configuration Management* (2015)             | Matthew Parkinson                 |  180  | 🟢 Supplementary |
+- [[Version Control/]]
+
+## What's Missing
+
+- SCM Process Management (SCM Plan, organization, monitoring)
+- Configuration Identification (CIs, baselines, CI relationships)
+- Change Control (Change Requests, CCB, deviations/waivers)
+- Status Accounting (recording/reporting CI status)
+- Configuration Auditing (FCA, PCA)
+- Release Management & Delivery (SBOM, VDD, packaging)
 
 ## Relationship to Other KAs
 
-- **[[Software Construction Overview|Software Construction]]** — Version control is a daily tool for developers. Build reproducibility and code reviews are construction activities that depend on SCM.
-- **[[Software Testing Overview|Software Testing]]** — Test environments, test data, and test scripts are configuration items. Baselines provide the stable reference point for testing.
-- **[[Software Engineering Operations Overview|Software Engineering Operations]]** — CI/CD pipelines, infrastructure as code, and release management are SCM activities at the operational level.
-- **[[Software Maintenance Overview|Software Maintenance]]** — Change control and impact analysis are essential for safe maintenance. Every maintenance change goes through the SCM process.
-- **[[Software Quality Overview|Software Quality]]** — Configuration audits (FCA/PCA) are quality assurance activities. Status accounting provides data for quality metrics.
+- **[[Software Construction Overview|Software Construction]]** — Version control and build automation are tightly integrated with daily coding workflows and code reviews.
+- **[[Software Testing Overview|Software Testing]]** — Test environments, test data, and test scripts are configuration items. Baselines provide stable reference points for testing.
+- **[[Software Engineering Operations Overview|Software Engineering Operations]]** — CI/CD pipelines, infrastructure as code, and release management are SCM at the operational level.
+- **[[Software Maintenance Overview|Software Maintenance]]** — Change control and impact analysis are essential for safe maintenance. Every maintenance change goes through SCM.
+- **[[Software Quality Overview|Software Quality]]** — Configuration audits (FCA/PCA) are quality assurance activities. SQA depends on SCM for controlled baselines.
 - **[[Software Engineering Management Overview|Software Engineering Management]]** — SCM provides visibility into project status through change metrics and release tracking.
-
-## Related
-- [[SWEBOK v4 - Overview]]
-- [[06_Software_Engineering_Operations/Software Engineering Operations Overview|Operations Overview]]
-- [[07_Software_Maintenance/Software Maintenance Overview|Maintenance Overview]]

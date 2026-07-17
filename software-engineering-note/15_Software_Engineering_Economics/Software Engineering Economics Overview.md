@@ -10,87 +10,76 @@ tags:
 
 # Software Engineering Economics — Overview
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 15 — Software Engineering Economics
-> **Purpose:** Apply economic reasoning to software engineering decisions — from project investment to build-vs-buy to lifecycle cost management.
+> **Source:** SWEBOK v4 Chapter 15
+> **Purpose:** Apply engineering economics to software — the science of choosing how to invest limited resources for maximum value.
 
 ## What Is This?
 
-Software Engineering Economics applies economic principles and financial analysis to the decisions that software engineers, managers, and organizations face every day. Should we build this feature or buy it? Is it worth investing in refactoring now or accepting higher maintenance costs later? How much should we spend on testing? When does it make sense to rewrite a legacy system? These are fundamentally economic questions that require quantitative analysis, not just intuition.
+Software Engineering Economics is fundamentally the science of choice, not the science of money. It asks: "Would this investment produce a higher return elsewhere?" Every technical decision — build vs. buy, scope inclusion, architecture selection, refactoring vs. living with technical debt — has economic implications. Engineers who understand economics make better trade-off decisions and communicate business impact to stakeholders effectively.
 
-Software is peculiar from an economic standpoint: its development costs are front-loaded (high initial investment), while its marginal cost of reproduction approaches zero. This creates unique dynamics — network effects, lock-in, platform economics — that traditional manufacturing economics don't capture. Software also has high switching costs, long lifetimes, and compounding technical debt, making lifecycle cost analysis essential.
+The discipline covers ROI analysis, estimation techniques, decision-making processes (for-profit, nonprofit, and present-economy contexts), lifecycle costing, and the alignment of technical decisions with business goals. A key insight: the Total Cost of Ownership (TCO) extends far beyond development — the operate-maintain-retire phases consume more resources than initial development. Rework is the single largest resource consumer in most organizations; reducing it via proactive quality actions is the most effective productivity improvement.
 
-SWEBOK v4's economics chapter bridges engineering and business. Engineers who understand economics make better trade-off decisions: they can quantify the value of quality investments, estimate project costs with appropriate uncertainty ranges, and communicate business impact to stakeholders. Managers who understand engineering economics avoid the false economy of cutting testing budgets, skipping documentation, or accumulating unmanaged technical debt.
+Software has unique economic properties: front-loaded development costs with near-zero marginal reproduction cost, high switching costs, network effects, and compounding technical debt. Value-based software engineering is non-negotiable for long-term sustainability — neutral or negative value is not sustainable. All estimates carry inherent uncertainty; they need only be good enough to lead to the right decision.
 
-## The 6 Topic Areas
+## Knowledge Areas
 
-### 1. [[Engineering Economics Basics]]
-- Time value of money: present value, future value, discount rates
-- Cash flow analysis: investment costs, operating costs, revenue streams
-- Financial statements basics: income statement, balance sheet, cash flow statement
-- Depreciation and amortization of software assets
-- Inflation, opportunity cost, and sunk cost in software decisions
-- **Book:** *Software Engineering Economics* — Barry Boehm
+### Software Engineering Economics Fundamentals
+- Cash flow streams, time-value of money, and equivalence for comparing proposals
+- Bases for comparison: present worth, future worth, annual equivalent, IRR, discounted payback
+- Business models, intangible assets, and the "do-nothing" alternative
 
-### 2. [[ROI and Cost-Benefit Analysis]]
-- Return on Investment (ROI): net benefits / investment cost
-- Cost-Benefit Analysis (CBA): identifying, quantifying, and comparing all costs and benefits
-- Intangible benefits: developer productivity, customer satisfaction, risk reduction
-- Break-even analysis: when does the investment pay for itself?
-- Sensitivity analysis: how do results change with different assumptions?
-- **Book:** *Software Estimation: Demystifying the Black Art* — Steve McConnell
+### The Engineering Decision-Making Process
+- Seven-step iterative process: understand problem → identify solutions → define criteria → evaluate → select → monitor → close loop
+- Sensitivity analysis, decision trees, Monte Carlo analysis for decisions under risk
+- Laplace, Maximin, Maximax, Hurwicz, Minimax Regret for decisions under uncertainty
 
-### 3. [[Estimation Techniques]]
-- Algorithmic models: COCOMO II, Function Point Analysis, Use Case Points
-- Expert-based: Wideband Delphi, planning poker, three-point estimation
-- Analogy-based: comparing to similar past projects
-- Parametric estimation: regression models calibrated to organizational data
-- Estimation accuracy: the cone of uncertainty, ranges vs. point estimates
-- **Book:** *Software Engineering Economics* — Barry Boehm
+### For-Profit Decision-Making
+- MARR (Minimum Acceptable Rate of Return) as opportunity-cost threshold
+- Economic life, replacement/retirement decisions, sunk cost, salvage value
+- Inflation, depreciation, and income tax considerations
 
-### 4. [[For-Profit and Nonprofit Decision Making]]
-- Revenue models: licensing, SaaS subscriptions, freemium, advertising, support contracts
-- Nonprofit and government contexts: benefit-cost ratio, social return on investment
-- Make vs. buy vs. open-source decisions
-- Vendor selection and contract evaluation
-- Strategic alignment: does this investment support organizational goals?
-- **Book:** *Balancing Agility and Discipline* — Boehm & Turner
+### Nonprofit Decision-Making
+- Benefit-cost analysis: reject proposals with ratio below 1.0
+- Cost-effectiveness: fixed-cost (maximize benefit within budget) and fixed-effectiveness (minimize cost for fixed goal)
 
-### 5. [[Total Cost of Ownership]]
-- TCO components: acquisition, deployment, operation, maintenance, retirement
-- Hidden costs: training, productivity loss during transition, integration, customization
-- Software lifecycle cost models: development typically 20-30%, maintenance 60-80%
-- Technical debt as deferred cost: interest payments in the form of slower development
-- Cloud economics: CapEx vs. OpEx, reserved vs. on-demand, cost optimization
-- **Book:** *The Economics of Software Quality* — Capers Jones et al.
+### Present Economy Decision-Making
+- Break-even analysis: finding where cost functions of alternatives are equal
+- Optimization analysis: finding minimum total cost (e.g., space-time trade-offs)
 
-### 6. [[Build vs. Buy]]
-- Decision framework: strategic importance, available alternatives, total cost comparison
-- Build advantages: customization, control, competitive differentiation
-- Buy advantages: faster time to market, lower initial cost, vendor support
-- Open-source as a third option: licensing costs, support models, contribution requirements
-- Risk analysis: vendor lock-in, dependency risk, obsolescence
-- Contract economics: fixed price vs. time-and-materials vs. outcome-based
-- **Book:** *Software Estimation: Demystifying the Black Art* — Steve McConnell
+### Multiple-Attribute Decision-Making
+- Compensatory techniques: nondimensional scaling, additive weighting, AHP, ATAM, Gilb's Impact Estimation
+- Non-compensatory techniques: dominance, satisficing, lexicography — no trade-offs allowed
 
-## Recommended Books (Priority Order)
+### Estimation
+- Five techniques in order of increasing accuracy: expert judgment, analogy, decomposition, parametric/statistical, multiple estimates
+- Wide Band Delphi, Planning Poker for structured expert judgment
+- Close the loop: compare estimates to actuals to improve future accuracy
 
-| #   | Book                                                     | Author(s)                    | Pages |     Priority     |
-| --- | -------------------------------------------------------- | ---------------------------- | :---: | :--------------: |
-| 1   | *Software Estimation: Demystifying the Black Art* (2006) | Steve McConnell              |  368  |   🔴 Essential   |
-| 2   | *Software Engineering Economics* (1981)                  | Barry Boehm                  |  767  |   🔴 Essential   |
-| 3   | *The Economics of Software Quality* (2011)               | Capers Jones et al.          |  558  |  🟡 Recommended  |
-| 4   | *Balancing Agility and Discipline* (2004)                | Barry Boehm & Richard Turner |  304  | 🟢 Supplementary |
+### Practical Considerations
+- Business case development, multi-currency analysis, systems thinking
+- SIPAC method for identifying and characterizing intangible assets
+- TCO: acquire, activate, and keep running — hidden costs dominate
+
+## My Notes
+
+*(No additional notes yet — only this overview)*
+
+## What's Missing
+
+- Economics Fundamentals (cash flow, time-value of money, business models)
+- Engineering Decision-Making (7-step process, decision trees, sensitivity analysis)
+- For-Profit Decision-Making (MARR, replacement decisions, depreciation)
+- Nonprofit Decision-Making (benefit-cost analysis, cost-effectiveness)
+- Present Economy (break-even, optimization)
+- Multiple-Attribute Decision-Making (AHP, ATAM, compensatory/non-compensatory)
+- Estimation (Delphi, Planning Poker, parametric models, COCOMO)
+- Practical Considerations (business cases, TCO)
 
 ## Relationship to Other KAs
 
-- **[[Software Engineering Management Overview|Software Engineering Management]]** — Estimation, budgeting, and resource allocation are management activities that require economic analysis. Project decisions have financial consequences.
-- **[[Software Quality Overview|Software Quality]]** — Quality economics (cost of quality, defect cost models) quantify the financial impact of quality investments. Prevention vs. appraisal vs. failure cost trade-offs.
-- **[[Software Maintenance Overview|Software Maintenance]]** — Maintenance is the largest lifecycle cost. Build-vs-replace decisions, technical debt management, and legacy system migration all require economic analysis.
-- **[[Software Requirements Overview|Software Requirements]]** — Requirements scope drives cost. Prioritization techniques (cost-value analysis, ROI ranking) help decide what to build first.
-- **[[Software Architecture Overview|Software Architecture]]** — Architecture decisions have long-term economic consequences. Choosing the wrong architecture pattern can multiply costs for years.
-- **[[Software Security Overview|Software Security]]** — Security investment decisions require risk-based economic analysis: probability × impact vs. cost of controls.
-
-## Related
-- [[SWEBOK v4 - Overview]]
-- [[09_Software_Engineering_Management/Software Engineering Management Overview|SE Management Overview]]
-- [[07_Software_Maintenance/Software Maintenance Overview|Maintenance Overview]]
+- **[[Software Engineering Management Overview|Software Engineering Management]]** — Estimation, budgeting, and resource allocation are management activities requiring economic analysis.
+- **[[Software Quality Overview|Software Quality]]** — Quality economics quantify the financial impact of quality investments; rework is the largest cost driver.
+- **[[Software Maintenance Overview|Software Maintenance]]** — Maintenance is the largest lifecycle cost; build-vs-replace and technical debt decisions require economic analysis.
+- **[[Software Requirements Overview|Software Requirements]]** — Requirements scope drives cost; prioritization techniques are economic decisions.
+- **[[Software Architecture Overview|Software Architecture]]** — ATAM for architecture tradeoff analysis; wrong architecture multiplies costs for years.
+- **[[Professionalism of Software Engineering Overview|Professional Practice]]** — Code of Ethics §3.09 on estimation obligations; economic impact of professional decisions.

@@ -10,87 +10,55 @@ tags:
 
 # Software Quality — Overview
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 12 — Software Quality
+> **Source:** SWEBOK v4 Chapter 12
 > **Purpose:** Ensure that software systems meet their quality requirements through assurance processes, verification, validation, and defect management.
 
 ## What Is This?
 
-Software Quality is the degree to which a software system satisfies its specified requirements and meets the needs and expectations of its stakeholders. Quality is not a single attribute but a multidimensional concept: a system can be functionally correct but unreliable, or reliable but unusable, or usable but insecure. SWEBOK v4 organizes quality around established frameworks (ISO 25010, McCall's quality model) that decompose quality into measurable characteristics like reliability, performance, maintainability, security, and usability.
+Software Quality is the degree to which a software product meets established requirements that accurately represent stakeholder needs, wants, and expectations. It encompasses both product quality (the attributes of the delivered software) and process quality (the adequacy of the engineering processes that produce it). Quality is not a single dimension — a system can be functionally correct but unreliable, or reliable but unmaintainable.
 
-Quality assurance (QA) is the set of activities that ensure the engineering processes are adequate to produce quality software. QA is process-focused — it asks "are we building the system right?" Verification and validation (V&V) are product-focused: verification asks "does the product meet its specifications?" and validation asks "does the product meet the user's actual needs?" These distinctions matter because they imply different activities, different responsible parties, and different points in the lifecycle where they are most effective.
+The discipline operates through the error → defect → failure chain: a human error injects a defect into a work product; when executed, that defect produces an externally visible failure. Understanding this chain drives quality engineering — preventing errors, detecting defects early, and containing failures. The cost of quality includes conformance costs (prevention + appraisal) and nonconformance costs (internal + external failure). Fixing defects earlier in the lifecycle is exponentially cheaper.
 
-Quality is an economic concern as well as a technical one. Defects found late cost exponentially more to fix than those found early. The cost of quality includes prevention costs (training, process improvement), appraisal costs (reviews, testing), and failure costs (rework, warranty claims, reputation damage). Investing in quality is not overhead — it is risk management with measurable returns.
+Quality management requires organizational commitment: a Quality Management System (QMS) with defined policies, processes, measurement, and feedback loops. For safety-critical systems, integrity levels demand increasingly rigorous assurance activities, potentially including independent V&V. Agile and DevOps practices contribute through quick feedback loops, CI/CD automation, and continuous review — but the fundamentals remain: verification asks "are we building it right?" and validation asks "are we building the right thing?"
 
-## The 6 Topic Areas
+## Knowledge Areas
 
-### 1. [[Quality Fundamentals]]
-- Quality models: ISO 25010 (product quality, quality in use), McCall's model, Boehm's model
-- Quality characteristics: functionality, reliability, usability, efficiency, maintainability, portability, security
-- Quality attributes vs. functional requirements
-- Quality culture: embedding quality into engineering practices, not bolting it on
-- Standards: ISO 9001, ISO/IEC 25010, CMMI
-- **Book:** *Software Quality Engineering: A Practitioner's Approach* — Jeff Tian
+### Software Quality Fundamentals
+- Foundational definitions, culture, and ethics supporting quality
+- Economics of quality: cost of conformance vs. nonconformance (CoSQ)
+- Standards (ISO 25010, ISO 9001, CMMI), certifications, and integrity levels for safety-critical systems
 
-### 2. [[Software Quality Assurance (SQA)]]
-- SQA planning: defining quality objectives, standards, and processes
-- Reviews and inspections: peer reviews, walkthroughs, formal inspections (Fagan)
-- Process audits and compliance checking
-- SQA in agile: built-in quality, definition of done, sprint reviews
-- SQA tools and automation: static analysis, linting, continuous quality gates
-- **Book:** *Practical Guide to Software Quality Management, 3rd Ed.* — John Horch
+### Software Quality Management Process
+- Quality Management System (QMS): planning, evaluation through measurement, continual improvement
+- Process improvement models: PDCA, Six Sigma, Lean, Kaizen, QFD
+- Corrective/preventive actions, defect characterization, and root cause analysis
 
-### 3. [[Verification and Validation]]
-- **Verification:** Are we building the product right? Reviews, static analysis, testing against specifications
-- **Validation:** Are we building the right product? User acceptance testing, prototyping, operational testing
-- The V-model: linking requirements → design → code → test levels
-- Independent V&V (IV&V): third-party verification for high-assurance systems
-- V&V techniques: inspection, demonstration, test, analysis, formal verification
-- **Book:** *Software Quality Assurance: From Theory to Implementation* — Daniel Galin
+### Software Quality Assurance Process
+- SQA Plan (SQAP): defining activities, standards, measures, and reporting structures
+- Process assurance (auditing adherence) and product assurance (verifying work products)
+- V&V activities: static analysis, dynamic testing, formal methods, and technical reviews/audits
 
-### 4. [[Defect Management]]
-- Defect lifecycle: discovery → logging → triage → assignment → fix → verification → closure
-- Defect classification: severity (critical/major/minor), priority, type (logic, interface, data, performance)
-- Root cause analysis: 5 Whys, fishbone diagrams, fault tree analysis
-- Defect prevention: code reviews, static analysis, pair programming, checklists
-- Defect metrics: density, detection rate, removal efficiency, escaped defects
-- **Book:** *How Google Tests Software* — Whittaker, Arbon & Carollo
+### Software Quality Tools
+- Static analysis tools, code review tools, defect tracking systems
+- CI/CD pipelines, automated testing frameworks, measurement visualization
+- Safety analysis techniques: FMEA, Fault Tree Analysis, assurance cases
 
-### 5. [[Dependability]]
-- Dependability attributes: availability, reliability, safety, security, maintainability, resilience
-- Failure modes: crash, omission, timing, value, Byzantine
-- Fault tolerance: redundancy, diversity, error detection and recovery
-- Reliability engineering: MTBF, MTTF, MTTR, availability calculations
-- Safety-critical systems: standards (DO-178C, IEC 61508, ISO 26262)
-- **Book:** *Software Quality Engineering: A Practitioner's Approach* — Jeff Tian
+## My Notes
 
-### 6. [[Quality Economics]]
-- Cost of Quality (CoQ): prevention, appraisal, internal failure, external failure costs
-- Defect cost amplification: 10× rule (each phase multiplies fix cost by ~10)
-- ROI of quality investments: testing tools, training, process improvement
-- Technical debt as deferred quality cost
-- Quality cost models: Jones's quality productivity model
-- **Book:** *The Economics of Software Quality* — Capers Jones et al.
+*(No additional notes yet — only this overview)*
 
-## Recommended Books (Priority Order)
+## What's Missing
 
-| #   | Book                                                               | Author(s)                  | Pages |     Priority     |
-| --- | ------------------------------------------------------------------ | -------------------------- | :---: | :--------------: |
-| 1   | *Software Quality Engineering: A Practitioner's Approach* (2018)   | Jeff Tian                  |  560  |   🔴 Essential   |
-| 2   | *Practical Guide to Software Quality Management, 3rd Ed.* (2003)   | John Horch                 |  288  |   🔴 Essential   |
-| 3   | *Software Quality Assurance: From Theory to Implementation* (2004) | Daniel Galin               |  608  |  🟡 Recommended  |
-| 4   | *How Google Tests Software* (2012)                                 | Whittaker, Arbon & Carollo |  304  |  🟡 Recommended  |
-| 5   | *The Economics of Software Quality* (2011)                         | Capers Jones et al.        |  558  | 🟢 Supplementary |
+- Quality Fundamentals (ISO 25010, Cost of Quality, integrity levels)
+- Quality Management Process (QMS, PDCA, Six Sigma, root cause analysis)
+- Quality Assurance Process (SQAP, V&V, static analysis, reviews, inspections)
+- Quality Tools
 
 ## Relationship to Other KAs
 
-- **[[Software Testing Overview|Software Testing]]** — Testing is the primary V&V activity. Test coverage, defect metrics, and test effectiveness are quality measures. Related QA notes exist in `programming-note/QA/`.
-- **[[Software Requirements Overview|Software Requirements]]** — Non-functional requirements are quality attributes. Requirements validation ensures we are building the right product.
-- **[[Software Security Overview|Software Security]]** — Security is a quality attribute. Security testing and secure coding are quality activities.
-- **[[Software Construction Overview|Software Construction]]** — Code quality (complexity, readability, standards compliance) is a construction quality concern. Clean Code practices directly serve quality.
-- **[[Software Maintenance Overview|Software Maintenance]]** — Technical debt degrades quality. Maintainability is a quality characteristic. Defect tracking links quality to maintenance.
-- **[[Software Engineering Economics Overview|Software Engineering Economics]]** — Quality economics, cost of quality, and defect cost models connect quality to financial decisions.
-
-## Related
-- [[SWEBOK v4 - Overview]]
-- [[05_Software_Testing/Software Testing Overview|Software Testing Overview]]
-- [[13_Software_Security/Software Security Overview|Software Security Overview]]
+- **[[Software Testing Overview|Software Testing]]** — Testing is the primary dynamic V&V activity; test coverage and defect metrics are quality measures.
+- **[[Software Requirements Overview|Software Requirements]]** — Non-functional requirements are quality attributes; requirements validation ensures we build the right product.
+- **[[Software Security Overview|Software Security]]** — Security is a quality attribute; security testing and secure coding are quality activities.
+- **[[Software Construction Overview|Software Construction]]** — Code quality (complexity, readability, standards compliance) is a construction concern.
+- **[[Software Maintenance Overview|Software Maintenance]]** — Technical debt degrades quality; maintainability is a quality characteristic.
+- **[[Software Engineering Economics Overview|Software Engineering Economics]]** — Cost of quality models quantify the financial impact of quality investments.
