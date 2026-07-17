@@ -47,7 +47,7 @@ standard_ref:
 | **Priority** | [🔴 Critical / 🟡 High / 🟢 Medium] |
 | **Type** | [Functional / Integration / E2E] |
 | **Automated** | [Yes / No] |
-| **Requirement** | [[FR-001](../04_Requirements_Engineering/Software-Requirements-Specification.md)] |
+| **Requirement** | [[FR-001](Software-Requirements-Specification.md)] |
 
 ### Preconditions
 
