@@ -1,292 +1,330 @@
 # Microservice Infrastructure Checklist
 
-> Service Discovery, Load Balancing, and Open Authentication — the three pillars that turn a collection of services into a system.
-> Framework-agnostic. For Spring Boot implementation, see [Spring Boot Microservice Infrastructure](spring-boot-microservice-infrastructure.md).
-> Last updated: 2026-06-11
+> Practical, no-fluff checklist for production microservice infrastructure.
+> Service discovery, load balancing, service mesh, API gateway, authentication, observability, and deployment.
+> Framework-agnostic. Last updated: 2026-07-17
 
 ---
 
-## Why These Three?
+## 1. Service Boundaries & Design
 
-You have services. They work in isolation. But in production:
+- [ ] **Domain-Driven Design** — Each service owns a bounded context. One business capability per service. If a service can't handle a request end-to-end without synchronous calls to another service, the boundary is wrong.
+- [ ] **Database per service** — No shared databases. Each service owns its data store. Schema changes in Service A never break Service B. Cross-service data: events, API calls, or CQRS — not direct DB access.
+- [ ] **Loose coupling, high cohesion** — Changing one service doesn't require changing others. Everything inside a service relates to the same domain. If services deploy in lockstep, you have a distributed monolith.
+- [ ] **Right-sized services** — Not nano-services (five calls to do one thing) and not mini-monoliths. A service should be ownable by one team (2-pizza rule) and deployable independently.
+- [ ] **API contracts first** — Define service interfaces (OpenAPI, protobuf, AsyncAPI) before implementation. Contracts are versioned. Breaking changes go through deprecation cycle.
+- [ ] **Async over sync where possible** — Synchronous chains (A→B→C→D) compound latency and create cascading failures. Use async messaging for non-critical paths. Keep sync chains ≤ 2 hops.
+- [ ] **Event-driven for cross-service workflows** — Service A publishes `order.created`. Service B consumes it. No direct coupling. Eventual consistency is the default model. Saga pattern for distributed transactions.
 
-- **Service A needs to call Service B** — but Service B has 3 instances on random ports. Hardcoding `http://localhost:8082` breaks the moment you scale or restart. → **Service Discovery**
-- **Traffic arrives at your domain** — which instance handles it? What if that instance is overloaded? What if it dies mid-request? → **Load Balancing**
-- **A request hits your API** — who is this? Should they see this data? Is that token real or forged? → **Open Authentication**
+## 2. Service Discovery
 
-These three aren't optional at scale. They're the difference between a demo and a system.
+- [ ] **No hardcoded service locations** — IPs change on redeploy. Ports are dynamic. A service registry is the single source of truth for "what's running and where."
+- [ ] **Registration on startup** — Every service announces itself: name, address, port, health endpoint. Automatic, not manual.
+- [ ] **Deregistration on shutdown** — Graceful shutdown removes the instance. Crash → heartbeat timeout → registry evicts (within 60-90s).
+- [ ] **Client-side vs server-side discovery** — Client-side (service queries registry, picks instance): no extra hop, common for internal traffic. Server-side (load balancer queries registry): simpler caller, one more hop, common for external. Hybrid is the standard: gateway for external, client-side for internal.
+- [ ] **Registry is HA** — Single registry = SPOF. Production: ≥ 2 nodes. Know your registry's HA model (Eureka: peer replication, Consul: Raft consensus, K8s: etcd-backed DNS).
+- [ ] **Health checking** — Active (registry pings services) or heartbeat (services report to registry). Configure interval (10-30s), timeout, and eviction threshold.
+- [ ] **Self-preservation** — When registry can't reach many services (network partition), should it evict all (risky) or preserve state (stale but safe)? Know your registry's default behavior.
+- [ ] **Logical names, not IPs** — Services call `order-service`, not `10.0.1.5:8080`. DNS or registry resolves the logical name to current instances.
+- [ ] **Registry secured** — Management endpoints behind auth. No public exposure. Read access may be open internally; write access restricted.
+
+**Technology options:**
+
+| Tool | Model | CAP | Best for |
+|------|-------|-----|----------|
+| Kubernetes DNS + Service | Server-side, built-in | CP | Already on K8s (most common 2026) |
+| HashiCorp Consul | Both | CP | Multi-platform, service mesh, KV store |
+| Netflix Eureka | Client-side | AP | Spring Boot shops, simpler setups |
+| AWS Cloud Map | Server-side, managed | Managed | AWS-only deployments |
+
+## 3. Load Balancing
+
+### Edge (External → Internal)
+
+- [ ] **Edge LB is the ONLY internet entry point** — No direct service exposure. All external traffic goes through edge LB → gateway → service.
+- [ ] **TLS termination at edge** — Auto-renewed certificates (Let's Encrypt, ACM, cert-manager). TLS 1.2 minimum, prefer 1.3. HSTS enabled.
+- [ ] **Edge LB is not a SPOF** — Multi-instance or cloud-managed (ALB, Cloud Load Balancer). Auto-scaling under load.
+- [ ] **Layer 7 at edge** — Content-based routing (path, headers, host). Auth, rate limiting, WAF rules applied here.
+- [ ] **Connection pooling** — HTTP keep-alive to backends. Reuse connections. Configured timeouts: connect < read < client.
+
+### Internal (Service → Service)
+
+- [ ] **Internal LB for service-to-service** — Client-side (Spring Cloud LoadBalancer, gRPC built-in, Envoy sidecar) or centralized (internal LB, K8s Service). Client-side eliminates an extra hop.
+- [ ] **Layer 4 is usually sufficient internally** — Route by IP:port. No need for content-based routing between internal services.
+- [ ] **Algorithm chosen with reason** — Round-robin (default, equal instances), least-connections (variable request duration), weighted (canary/mixed-size instances), latency-based (geo-distributed).
+
+### Health & Failure
+
+- [ ] **Active health checks** — LB pings `/health` every 5-30s. Failed → removed from pool automatically. No manual intervention needed.
+- [ ] **Passive health checks / outlier detection** — Observe actual request outcomes. Too many 5xx from one instance → eject even if health endpoint passes.
+- [ ] **Sticky sessions avoided** — Makes instances stateful. Breaks on scale-down/crash. Use shared state (Redis/DB) instead. Only if absolutely required (legacy WebSocket without session replication).
+- [ ] **Request retry on connection failure** — Only for idempotent methods (GET, PUT, DELETE). Never auto-retry POST without idempotency key.
+
+**Technology options:**
+
+| Tool | Strength | Best for |
+|------|----------|----------|
+| Traefik | Auto-discovery, Let's Encrypt built-in, K8s native | Container-native, auto-config |
+| NGINX / OpenResty | Battle-tested, Lua scripting, huge community | Static configs, high customization |
+| HAProxy | Maximum performance, rich ACLs | High-throughput, fine-grained routing |
+| Caddy | Simplest config, auto-HTTPS | Internal tools, simple sites |
+| Cloud ALB/NLB | Zero ops, auto-scaling | Cloud-native deployments |
+| Envoy | Programmable, xDS API, sidecar | Service mesh data plane |
+
+## 4. API Gateway
+
+- [ ] **Single entry point for external traffic** — All client requests route through the gateway. Internal services are never exposed directly.
+- [ ] **Authentication at the gateway** — Validate JWT/API key at the edge. Forward verified identity (claims, headers) to downstream. Services don't re-implement login flows.
+- [ ] **Rate limiting** — Per-client, per-endpoint. Token bucket or sliding window. Different limits for different tiers. 429 with `Retry-After` header.
+- [ ] **CORS handled at gateway** — One place for CORS config, not duplicated across services.
+- [ ] **Request routing** — Path-based (`/api/v1/users` → user-service), header-based, or host-based. Version routing (v1 → old service, v2 → new service).
+- [ ] **Protocol translation** — REST (external) → gRPC (internal) if needed. Client sees REST, services communicate efficiently.
+- [ ] **Request/response transformation** — Aggregate responses from multiple services (BFF pattern). Strip internal headers before responding to client.
+- [ ] **Circuit breaker at gateway level** — Protect downstream from overload. Return fallback/cached response when circuit is open.
+- [ ] **Observability** — Every request logged with trace ID, latency, status. Gateway metrics: request rate, error rate, latency percentiles per route.
+- [ ] **Admin API on separate port** — Not internet-facing. Management endpoints (routes, plugins, health) isolated from traffic.
+
+**Technology options:**
+
+| Tool | Type | Best for |
+|------|------|----------|
+| Kong | Plugin-based, Lua + Go | Flexible, large plugin ecosystem |
+| Spring Cloud Gateway | Java, reactive | Spring Boot microservices |
+| NGINX + OpenResty | Lua scripting | Performance-critical, custom logic |
+| Traefik | Go, auto-discovery | K8s-native, simple config |
+| AWS API Gateway | Managed | Serverless, AWS ecosystem |
+| Envoy + control plane | Programmable proxy | Service mesh ingress |
+
+## 5. Authentication & Authorization
+
+### Architecture Patterns
+
+- [ ] **Pattern choice** — (1) Gateway validates JWT, forwards claims as headers (simple, but internal traffic must be trusted). (2) Every service validates JWT independently via JWKS cache (defense in depth, recommended for production). (3) Token introspection (instant revocation, but auth server dependency per request).
+- [ ] **Recommended: every service validates** — Gateway handles login flow AND validates. Downstream services ALSO validate independently. No single point of trust.
+
+### OAuth2 / OpenID Connect
+
+- [ ] **Dedicated auth server** — Keycloak (self-hosted), Auth0/Okta (SaaS), Cognito (AWS). Never build your own OAuth2 server.
+- [ ] **Authorization Code + PKCE** — For all user-facing login flows (SPA, mobile, server-rendered). Never Implicit or Password grants.
+- [ ] **Client Credentials** — For service-to-service calls. Machine-to-machine, no user involved. Short-lived tokens.
+- [ ] **Access tokens short-lived** — ≤ 15 minutes. Signed with RS256 or ES256 (asymmetric — services validate with public key, never need the private key).
+- [ ] **Refresh tokens long-lived + rotated** — 7-30 days. Each use issues new refresh token, invalidates old. Stolen token detected on next legitimate use.
+- [ ] **JWKS endpoint** — Auth server publishes public keys at `/.well-known/jwks.json`. Services cache keys. Key rotation: new key published, old kept until existing tokens expire.
+- [ ] **Token claims include essentials** — `iss` (issuer), `sub` (subject), `aud` (audience), `exp` (expiry), `iat` (issued at), roles/permissions.
+
+### Authorization
+
+- [ ] **Authorization model** — RBAC for most apps. ABAC/ReBAC for complex. Claims-based for microservices. Each service owns authorization decisions for its resources.
+- [ ] **Enforce at service level** — Don't rely solely on gateway headers for authorization. Services validate token AND check permissions for the specific operation.
+- [ ] **Multi-tenancy** — Tenant ID in token claims. Data isolation enforced at query layer. User from Tenant A cannot access Tenant B's data. Never trust client-provided tenant ID.
+
+### Service-to-Service Auth
+
+- [ ] **mTLS or JWT for internal calls** — Services authenticate to each other. Not "trust because same network." Service mesh handles mTLS transparently. OR services use Client Credentials tokens.
+- [ ] **API keys for third-party integrations** — Hashed in DB. Prefixed for identification (`sk_live_...`). Scoped, revocable, rotatable.
+- [ ] **No auth bypass paths** — Every endpoint (except health checks) requires authentication. If a service is accidentally exposed, auth still protects it.
+
+**Technology options:**
+
+| Tool | Type | Best for |
+|------|------|----------|
+| Keycloak | Self-hosted, open-source | Full control, any scale, customizable |
+| Auth0 / Okta | SaaS | No ops overhead, enterprise SSO |
+| AWS Cognito | Cloud-managed | AWS ecosystem, simple cases |
+| ORY Hydra + Kratos | Self-hosted, headless | Flexible, OAuth2-focused |
+
+## 6. Service Mesh (When You Need It)
+
+> **When to adopt:** ≥ 10 services, polyglot stack, zero-trust requirement, need traffic splitting, or mTLS without code changes.
+> **When to skip:** < 10 services, single language, team can manage cross-cutting concerns in code, operational overhead not justified.
+
+- [ ] **What it provides** — mTLS (encryption + identity between services), traffic management (retries, timeouts, circuit breakers), observability (metrics, traces without code), and traffic splitting (canary, A/B) — all without application code changes.
+- [ ] **Sidecar proxy model** — Each pod gets an Envoy sidecar. All traffic flows through the proxy. Application is unaware of mesh. Language-agnostic.
+- [ ] **mTLS everywhere** — All service-to-service traffic encrypted and authenticated. Zero-trust by default. No plaintext internal traffic.
+- [ ] **Traffic policies** — Retry budgets, timeouts, circuit breakers configured in mesh policy (not application code). Per-route, per-service tuning.
+- [ ] **Traffic splitting** — Canary releases (5% → 25% → 100%), A/B testing, header-based routing to specific versions. Mesh handles this at the infrastructure layer.
+- [ ] **Observability built-in** — Request metrics (rate, error, latency), distributed traces, and access logs generated by sidecars. No instrumentation code needed for golden signals.
+- [ ] **Authorization policies** — Define which services can talk to which. `allow order-service → payment-service`. Deny by default. Least privilege at the network layer.
+- [ ] **Resource overhead** — Each sidecar consumes CPU + memory. Budget for it. Typically 50-100MB RAM, 0.1 CPU per sidecar. At 100 services = significant. Measure before production.
+- [ ] **Operational complexity** — Mesh control plane is another critical component to maintain, upgrade, and debug. Team must understand mesh networking (not just application networking).
+
+**Technology options:**
+
+| Tool | Model | Best for |
+|------|-------|----------|
+| Istio | Sidecar (Envoy), feature-rich | Large orgs, advanced traffic management |
+| Linkerd | Sidecar (Rust proxy), lightweight | Simplicity, lower resource overhead |
+| Consul Connect | Sidecar (Envoy), multi-platform | HashiCorp ecosystem, hybrid cloud |
+| Cilium | eBPF-based (sidecarless) | Performance-critical, kernel-level |
+
+
+## 7. Inter-Service Communication
+
+### Synchronous (Request/Reply)
+
+- [ ] **REST for external + simple internal** — JSON over HTTP. Universal. Every language supports it. Use for CRUD, simple queries between services.
+- [ ] **gRPC for internal high-performance** — Protobuf serialization (10x smaller than JSON), HTTP/2 multiplexing, bidirectional streaming. Use for service-to-service where latency matters. Not for browser clients (without grpc-web).
+- [ ] **Timeout on every outbound call** — Connection timeout + read timeout. Shorter than caller's own timeout. No call waits forever.
+- [ ] **Circuit breaker on every outbound call** — Stop calling failing downstream after N failures. Fail fast. Return fallback. See [API Checklist — Circuit Breaker](../api-checklist/api.md).
+- [ ] **Retry only idempotent operations** — GET, PUT, DELETE: safe to retry. POST: only with idempotency key. Exponential backoff + jitter. Max 3 retries.
+- [ ] **Bulkhead isolation** — Separate thread pools / connection pools per downstream. One slow service doesn't exhaust resources for all others.
+
+### Asynchronous (Event-Driven)
+
+- [ ] **Message broker** — Kafka (event streaming, replay, ordering), RabbitMQ (routing flexibility, mature), NATS (lightweight, cloud-native), SQS/SNS (managed, zero ops).
+- [ ] **Event schema versioning** — Avro + Schema Registry, Protobuf, or JSON Schema. Forward and backward compatible. Don't break consumers when producers evolve.
+- [ ] **Idempotent consumers** — Messages delivered at-least-once. Consumer handles duplicates gracefully. Dedup by message ID or idempotency key.
+- [ ] **Ordering where needed** — Kafka: per-partition ordering (route by aggregate ID). RabbitMQ: per-queue with single consumer. If order doesn't matter: parallelize freely.
+- [ ] **Dead letter queue** — Failed messages → DLQ after max retries. Inspect, fix, replay. Alert on DLQ growth. Never silently drop messages.
+- [ ] **Saga pattern for distributed transactions** — Choreography (each service reacts to events) or orchestration (central coordinator). Compensating actions for rollback.
+- [ ] **Outbox pattern** — Publish events reliably: write event to outbox table in same DB transaction as business data. Background process publishes to broker. No dual-write problem.
+
+## 8. Observability
+
+### The Three Pillars
+
+- [ ] **Structured logging** — JSON format. Every log line: timestamp, level, service, trace_id, span_id, message. Centralized aggregation (Loki, ELK, CloudWatch Logs). Queryable by trace ID across all services.
+- [ ] **Distributed tracing** — OpenTelemetry (the standard). Propagate `traceparent` header (W3C) across all service boundaries. Every service contributes spans. Backend: Jaeger, Tempo, Datadog, or Honeycomb. One request → one trace → see the entire path.
+- [ ] **Metrics** — RED (Rate, Errors, Duration) for every service. USE (Utilization, Saturation, Errors) for infrastructure resources. Prometheus + Grafana or Datadog. Separate business metrics namespace from infra metrics.
+
+### Implementation
+
+- [ ] **OpenTelemetry everywhere** — Auto-instrumentation for HTTP, gRPC, DB, message broker. Manual spans for business logic. OTLP exporter to collector. One standard for all languages.
+- [ ] **Health checks** — `/health` (liveness: is the process alive?) and `/ready` (readiness: can it serve? DB connected? Dependencies reachable?). K8s uses both. Gateway uses readiness.
+- [ ] **SLOs defined and measured** — "99.9% of requests < 200ms" or "error rate < 0.1%." Track error budget. Alert when burning budget too fast. More actionable than "alert on 5xx spike."
+- [ ] **Dashboards as code** — Grafana JSON provisioned from git. Not hand-tweaked in production. Dashboard changes go through PR review.
+- [ ] **Alerting on symptoms, not causes** — Alert: "users experiencing errors" (symptom). Not: "CPU at 80%" (cause that may not affect users). Error budget burn rate > threshold → page. Circuit breaker open → page. DLQ growing → warn.
+- [ ] **Correlation across services** — Trace ID in every log, metric label, and error report. Click from alert → dashboard → traces → logs. No manual correlation.
+- [ ] **Infrastructure-level dashboard** — Per-service: health status, circuit breaker state, error rate, latency p50/p95/p99. Cross-service: dependency map, traffic flow, failure propagation.
+
+## 9. Security (Infrastructure-Level)
+
+- [ ] **Zero trust** — No service trusts another just because they share a network. Every request authenticated and authorized regardless of origin. Network is not a security boundary.
+- [ ] **mTLS for service-to-service** — All internal traffic encrypted and mutually authenticated. Service mesh handles this transparently. Or manual cert management (harder, not recommended without mesh).
+- [ ] **Network policies** — K8s NetworkPolicies define which services can talk to which. Default deny, explicit allow. Least privilege at the network layer.
+- [ ] **Secrets management** — HashiCorp Vault, AWS Secrets Manager, K8s External Secrets Operator. Secrets injected at runtime, not baked into images or committed to git. Auto-rotation.
+- [ ] **TLS everywhere** — Edge to internal: TLS 1.2+ minimum, TLS 1.3 preferred. Internal: mTLS via mesh or manual. No plaintext HTTP in production (even internally).
+- [ ] **Certificate auto-renewal** — cert-manager (K8s), Let's Encrypt, ACM. No manual certificate rotation. Expiry alerts as backup.
+- [ ] **Container security** — Non-root containers. Read-only filesystem where possible. No privileged pods. Vulnerability scanning in CI (Trivy, Snyk). Minimal base images (distroless, alpine, scratch).
+- [ ] **Supply chain security** — Image signing (cosign, Notary). Admission controller rejects unsigned images. SBOM generation. Dependency scanning.
+- [ ] **Gateway admin isolated** — Admin API on separate port/network. Not internet-facing. Credentials rotated. Access logged.
+
+## 10. Deployment & Orchestration
+
+### Containerization
+
+- [ ] **One container per service** — Multi-stage builds. Minimal final image. Non-root user. Health check instruction or K8s probe.
+- [ ] **Image registry** — Private registry (ECR, GCR, Harbor). Images tagged with git SHA, not `:latest`. Immutable tags in production.
+- [ ] **Resource requests & limits** — Every pod has CPU/memory requests (scheduling) and limits (OOM protection). Tune based on actual usage, not guesses.
+
+### Kubernetes (or equivalent orchestrator)
+
+- [ ] **Namespace per environment or team** — Isolate dev/staging/prod. Or isolate by team/domain. RBAC per namespace.
+- [ ] **Horizontal Pod Autoscaler** — Scale on CPU, memory, or custom metrics (queue depth, request rate). Min/max replicas defined.
+- [ ] **Pod Disruption Budget** — `minAvailable` or `maxUnavailable`. Prevents draining all pods during node maintenance.
+- [ ] **Rolling deployment** — Zero-downtime by default. `maxSurge: 1`, `maxUnavailable: 0`. Health check must pass before old pod is killed.
+- [ ] **Canary / Blue-Green** — Shift traffic gradually (5% → 25% → 100%). Auto-rollback on error rate spike. Mesh or Argo Rollouts handles traffic splitting.
+- [ ] **Startup order handled gracefully** — Services retry connecting to dependencies on startup. No fragile "start A before B" sequencing. Circuit breakers handle temporary unavailability.
+
+### CI/CD
+
+- [ ] **Independent pipelines per service** — Service A deploys without Service B. Shared library changes trigger affected services only.
+- [ ] **Pipeline stages** — Lint → test → build → push image → deploy staging → integration test → deploy production. Fail fast at each stage.
+- [ ] **GitOps** — Desired state in git. PR merge triggers deployment. ArgoCD or Flux reconciles. No manual `kubectl` in production.
+- [ ] **Feature flags** — Deploy code dark. Enable gradually. Kill broken features without redeploy. LaunchDarkly, Unleash, or DB-backed flags.
+- [ ] **Contract tests in CI** — Consumer-driven contracts (Pact). Catches breaking API changes before deploy. Producer verifies consumer expectations.
+- [ ] **Build once, deploy many** — Same image promoted through environments. Config differs via env vars, not rebuilds.
+
+## 11. Resilience Patterns
+
+- [ ] **Circuit breaker per downstream** — Different thresholds per dependency. Payment gateway: strict (fail fast on 30% errors). Email service: loose (tolerate 80% errors). See [API Checklist — Circuit Breaker](../api-checklist/api.md).
+- [ ] **Timeout at every boundary** — HTTP client, DB query, message consumer, external API. No call waits forever. Shorter than caller's own timeout.
+- [ ] **Retry with backoff + jitter** — Exponential backoff prevents thundering herd. Jitter prevents synchronized retries. Only for transient failures. Max 3 attempts.
+- [ ] **Bulkhead** — Separate thread pools / connection pools per downstream. One slow dependency doesn't exhaust resources for all outbound calls.
+- [ ] **Rate limiting** — At gateway (per-client) and between services (per-caller). Protect downstream from burst. Graceful degradation over hard failure.
+- [ ] **Graceful degradation** — If non-critical dependency fails: return partial data, cached stale data, or degraded response. Not 500 for the whole request.
+- [ ] **Idempotency** — Every write operation should be safe to retry. Idempotency keys for mutations. Upserts in data stores. Dedup in consumers.
+- [ ] **Chaos engineering** — Kill a random pod. Does the system recover? Circuit breakers open? Retries work? DLQ catches failed messages? Start small, expand gradually.
+
+## 12. Data Management
+
+- [ ] **Database per service (enforced)** — No shared tables, no shared schemas. If two services need the same data: one owns it, the other gets a copy via events or API.
+- [ ] **Event sourcing (where appropriate)** — Store events, not state. Rebuild state from events. Audit trail for free. Not needed everywhere — use for domains where history matters (finance, orders).
+- [ ] **CQRS (where appropriate)** — Separate write model (command to owning service) from read model (aggregated view for queries spanning services). Eventual consistency between write and read sides.
+- [ ] **Data consistency strategy** — Eventual consistency is the default. Strong consistency only within a single service's database. Cross-service: saga for transactions, events for synchronization.
+- [ ] **Schema evolution** — Database migrations backward-compatible. Add columns before code reads them. Remove columns after code stops writing. API schema evolution: additive changes only, deprecation for removal.
+- [ ] **Multi-tenancy** — Tenant isolation at data layer. Separate schemas, row-level security, or separate databases per tenant. Query layer always filters by tenant. Never leak data across tenants.
 
 ---
 
-## Part 1: Service Discovery
+## Quick Sanity Check Before Launch
 
-> The problem: services need to find each other without hardcoded addresses.
+### Service Discovery
+- [ ] All services find each other without hardcoded URLs
+- [ ] New instances register on startup, deregister on shutdown
+- [ ] Dead instances evicted within 90s
+- [ ] Registry is HA (≥ 2 nodes)
 
-### 1.1 The Core Problem
-
-- [ ] **You cannot hardcode service locations** — IPs change on redeploy. Ports are dynamic. Instances come and go. A service registry is the single source of truth for "what's running and where."
-- [ ] **Registration** — Every service announces itself on startup: "I'm user-service, I'm at 10.0.1.5:8080, I'm healthy."
-- [ ] **Deregistration** — Every service says goodbye on shutdown. If it crashes, the registry detects it via heartbeat timeout.
-- [ ] **Discovery** — Services query the registry: "Give me all healthy instances of order-service." The list is always current.
-
-### 1.2 Client-Side vs Server-Side Discovery
-
-- [ ] **Client-side discovery** — The calling service queries the registry directly, picks an instance, and calls it. The caller owns the load-balancing decision.
-  - **Pros:** No extra network hop. No load balancer SPOF (single point of failure). Simpler infrastructure.
-  - **Cons:** Every service needs discovery client logic. Load balancing code duplicated across services. Tight coupling to the registry technology.
-  - **Tools:** Netflix Eureka, Consul (with client library), Kubernetes DNS + client-side LB.
-- [ ] **Server-side discovery** — The caller sends the request to a load balancer, which queries the registry and forwards the request. The caller doesn't know about the registry at all.
-  - **Pros:** Caller is simpler (just send to a known LB). Centralized load balancing logic. Registry technology hidden from services.
-  - **Cons:** Extra network hop (caller → LB → service). The load balancer becomes a critical component (needs HA). More infrastructure to manage.
-  - **Tools:** AWS ALB, Traefik, NGINX Plus, Envoy + xDS control plane.
-- [ ] **Hybrid** — Gateway for external traffic (server-side), client-side LB for internal service-to-service. This is the most common pattern and what most Spring Cloud setups use.
-
-### 1.3 Key Decisions for Service Discovery
-
-- [ ] **Self-hosted or cloud-managed?** — Cloud: AWS Cloud Map, GCP Service Directory. Self-hosted: Eureka, Consul, Zookeeper, Etcd. Self-hosted gives you control and zero per-request cost. Cloud-managed is less ops.
-- [ ] **AP or CP?** — In distributed systems, you choose between Availability and Consistency during a network partition (CAP theorem).
-  - **AP (Eureka):** Always available, might return stale data briefly. Better for runtime service lookup — slightly stale is better than no response.
-  - **CP (Consul, Zookeeper, Etcd):** Strong consistency, might be unavailable during leader election. Better for configuration and locks than runtime routing.
-- [ ] **Registry replication** — Single registry = SPOF. Production: at least 2-3 registry nodes. Eureka uses peer-to-peer replication. Consul uses Raft consensus. Know your registry's HA model.
-- [ ] **Health checking** — Who checks health? The registry pinging services (server-side health check), or services reporting their own health (client-side heartbeat)? Heartbeats are lighter on the registry but slower to detect failures. Active health checks are faster to detect but add load.
-- [ ] **Self-preservation** — When the registry can't reach many services, should it evict them (and potentially take down everything) or preserve the registry state (and risk routing to dead instances)? Eureka defaults to self-preservation mode. Know what your registry does under network partition.
-
-### 1.4 Service Discovery Checklist
-
-- [ ] Registry is highly available (at least 2 nodes for production)
-- [ ] Services register on startup, deregister on graceful shutdown
-- [ ] Heartbeat or health check interval configured (30s typical)
-- [ ] Dead instances evicted within acceptable window (60-90s typical)
-- [ ] Services use logical names, not IPs, when calling each other
-- [ ] Registry dashboard or API accessible for debugging
-- [ ] Registry data is ephemeral — services re-register on restart
-- [ ] No business data stored in the registry (it's not a database)
-- [ ] Registry secured (at minimum, basic auth on management endpoints)
-
----
-
-## Part 2: Load Balancing
-
-> The problem: distributing traffic across multiple service instances so no single instance gets overwhelmed.
-
-### 2.1 Two Layers of Load Balancing
-
-- [ ] **Layer 1: Edge (External → Internal)** — Traffic from the internet hits your edge load balancer first. It terminates TLS, applies WAF rules, and routes to your gateway. This is your front door.
-  - **Tools:** Traefik, NGINX, HAProxy, Caddy, cloud LBs (ALB/NLB, Cloud Load Balancing).
-- [ ] **Layer 2: Internal (Service → Service)** — When Service A calls Service B, which of B's 3 instances gets the request? Internal load balancing distributes inter-service traffic.
-  - **Tools:** Client-side libraries (Spring Cloud LoadBalancer, gRPC client LB), sidecar proxies (Envoy, Linkerd), or centralized internal LBs.
-
-### 2.2 Load Balancing Algorithms
-
-- [ ] **Round-robin** — Each instance gets requests in turn. Simple, fair, no coordination needed. Default for most setups. Best when all instances are equal.
-- [ ] **Least connections** — Send to the instance with fewest active connections. Better when some requests take longer than others (prevents slow-instance pile-up).
-- [ ] **Weighted** — Assign different weights to instances. Use when instances have different sizes (4 vCPU vs 2 vCPU) or during canary deployments.
-- [ ] **Consistent hashing** — Same client always goes to the same instance. Needed for sticky sessions. Avoid if possible — it makes instances stateful.
-- [ ] **Latency-based** — Route to the fastest-responding instance. Useful for geo-distributed deployments or when instances have varying performance.
-- [ ] **Adaptive** — Algorithm adjusts based on real-time metrics (error rate, latency). Complex but powerful for heterogeneous environments.
-
-### 2.3 Health Checks & Failure Detection
-
-- [ ] **Active health checks** — The load balancer periodically pings each instance's health endpoint (`GET /health`). Interval: 5-30s. Timeout: shorter than interval. Failed checks → mark unhealthy, stop routing.
-- [ ] **Passive health checks** — The load balancer observes actual request outcomes. Too many 5xx responses → mark unhealthy. No extra traffic generated but slower to detect.
-- [ ] **Outlier detection** — Not just "is it up?" but "is it behaving?" If one instance has 10x the latency of its peers, eject it even if it's technically "healthy."
-- [ ] **Circuit breaking** — After N consecutive failures, stop sending requests to that instance entirely (open circuit). After a cooldown, send one probe request (half-open). If it succeeds, resume (closed). Prevents cascading failures.
-
-### 2.4 Key Decisions for Load Balancing
-
-- [ ] **Layer 7 (application) or Layer 4 (transport)?** — L7: route by URL path, headers, cookies. Can do auth, rate limiting, transformation. More CPU. L4: route by IP:port only. Faster, simpler, but can't do content-based routing. Edge LB: L7. Internal: L4 is often enough.
-- [ ] **Centralized LB or client-side LB?** — Centralized: one load balancer handling all traffic. Simpler to configure, but adds a hop and is a potential bottleneck. Client-side: each service balances its own outgoing requests. More efficient for internal traffic but couples services to the LB library.
-- [ ] **TLS termination location** — Terminate at edge LB (simplest, services get plain HTTP). Or pass-through to gateway (end-to-end encryption, but more CPU on each hop). Edge termination is standard; internal traffic over HTTP is acceptable on a trusted network.
-- [ ] **Sticky sessions: yes or no?** — Sticky sessions make instances stateful — they break when instances die. Prefer stateless services with shared state in Redis/DB. Only use sticky sessions for legacy protocols (WebSocket without session replication) or specific caching strategies.
-
-### 2.5 Load Balancing Checklist
-
-- [ ] Edge LB is the ONLY entry point from the internet (no direct service exposure)
-- [ ] TLS terminated at edge with valid certificates (auto-renewed)
-- [ ] Health checks active on all upstream instances
+### Load Balancing & Gateway
+- [ ] Edge LB is the only internet entry point
+- [ ] TLS terminated at edge with auto-renewed certs
 - [ ] Unhealthy instances removed from pool automatically
-- [ ] Request retry on connection failure (only for idempotent methods)
-- [ ] Connection pooling enabled (HTTP keep-alive to backends)
-- [ ] Timeouts configured: connect < read < client timeout
-- [ ] Load balancing algorithm chosen with documented reasoning
-- [ ] Sticky sessions avoided unless specifically justified
-- [ ] Edge LB itself is not a SPOF (at least 2 instances, or cloud-managed HA)
+- [ ] Gateway validates auth on every request
+- [ ] Rate limiting active per client
+
+### Authentication
+- [ ] Every request has verified identity before reaching business logic
+- [ ] Tokens short-lived (≤ 15 min) with refresh token rotation
+- [ ] Services validate JWT independently (not just trusting gateway headers)
+- [ ] Service-to-service calls authenticated (mTLS or Client Credentials)
+
+### Observability
+- [ ] Trace ID propagated across all service boundaries
+- [ ] Structured JSON logs shipped to centralized system
+- [ ] RED metrics per service, dashboards, and alerts configured
+- [ ] SLOs defined and error budget tracked
+
+### Security
+- [ ] Zero trust: no service trusts another by network position
+- [ ] mTLS or encrypted internal traffic
+- [ ] Network policies enforce least-privilege communication
+- [ ] Secrets from vault/secrets manager, never in code or git
+- [ ] All certificates auto-renewed
+
+### Deployment
+- [ ] Services deploy independently (no lockstep)
+- [ ] Rolling/canary deploys with auto-rollback
+- [ ] GitOps: desired state in git, reconciled automatically
+- [ ] Feature flags for gradual rollout
+
+### Resilience
+- [ ] Circuit breaker on every outbound call
+- [ ] Timeout on every outbound call
+- [ ] Graceful degradation when non-critical dependency fails
+- [ ] Chaos tested: kill a pod, system recovers
 
 ---
 
-## Part 3: Open Authentication (OAuth2 / OpenID Connect)
+## Build vs Adopt
 
-> The problem: verifying who is making a request, without every service managing its own user database.
-
-### 3.1 The Core Concepts
-
-- [ ] **Authentication (AuthN)** — Who are you? Proving identity: password, JWT, API key, SSO. "This is Panomete."
-- [ ] **Authorization (AuthZ)** — What can you do? Permissions, roles, scopes. "Panomete can read users but not delete them."
-- [ ] **OAuth2** — A delegation protocol. Allows a client to act on behalf of a user, or on its own behalf, with limited scope. OAuth2 is NOT an authentication protocol (that's OpenID Connect).
-- [ ] **OpenID Connect (OIDC)** — A thin identity layer on top of OAuth2. Adds an `id_token` (JWT with user info). When people say "OAuth2 login," they usually mean OIDC.
-- [ ] **JWT (JSON Web Token)** — A signed (or encrypted) token carrying claims: who issued it, who it's for, when it expires, what permissions it carries. Self-contained — the resource server validates it without calling the auth server.
-
-### 3.2 OAuth2 Grant Types — Which One When
-
-- [ ] **Authorization Code + PKCE** — User logs in via browser. Most secure for user-facing apps (SPA, mobile, server-rendered). The auth code is exchanged for tokens server-side. PKCE (Proof Key for Code Exchange) prevents authorization code interception. **This is what your Gateway uses when users log in.**
-- [ ] **Client Credentials** — Service authenticates as itself (no user involved). Machine-to-machine communication. Service A gets a token, calls Service B. **This is what your services use to call each other.**
-- [ ] **Refresh Token** — Long-lived token used to get new access tokens without re-login. Access tokens are short-lived (5-15 min), refresh tokens are long-lived (days/weeks). Refresh token rotation adds security (each refresh invalidates the old refresh token).
-- [ ] **Device Code** — For input-constrained devices (TVs, IoT, CLI tools). User visits a URL on another device and enters a code.
-- [ ] **Implicit (deprecated)** — Do not use. Tokens returned directly in the redirect URL (exposed to browser history, referrer headers). Use Authorization Code + PKCE instead.
-- [ ] **Password (deprecated)** — Do not use. Client collects username/password directly. Defeats the purpose of OAuth2 (user shouldn't give credentials to the client).
-
-### 3.3 Architecture Patterns for Auth
-
-- [ ] **Pattern 1: Gateway does everything** — Gateway validates JWT, extracts claims, forwards as headers (`X-User-Id`, `X-User-Roles`). Downstream services trust the headers. No auth logic in services.
-  - **Pros:** Services are simpler. Auth in one place. Easy to change auth strategy.
-  - **Cons:** If a service is exposed directly (bypassing gateway), it has no auth. Headers can be spoofed if internal network isn't trusted.
-- [ ] **Pattern 2: Every service validates JWT** — Gateway handles login flow, but each downstream service also validates the JWT independently (via JWKS key caching). No trust required between services.
-  - **Pros:** Defense in depth. Services are secure even if gateway is bypassed. No header spoofing risk.
-  - **Cons:** More configuration per service. Slightly more CPU (token validation is cheap after key is cached). Recommended for production.
-- [ ] **Pattern 3: Token introspection** — Instead of JWT validation, services call the auth server's introspection endpoint for every request. The auth server confirms the token is still valid.
-  - **Pros:** Can revoke tokens instantly (just mark them invalid at the auth server). No key management on services.
-  - **Cons:** Network call to auth server on every request. Auth server becomes a hard dependency for every request. Latency. Use only when immediate token revocation is critical.
-
-### 3.4 Token Management
-
-- [ ] **Access token lifespan** — 5-15 minutes. Short enough that a stolen token can't be used for long. Long enough that refresh traffic doesn't overwhelm the auth server.
-- [ ] **Refresh token lifespan** — Days to weeks. With rotation: each use issues a new refresh token and invalidates the old one. If a stolen refresh token is used, the legitimate user's next refresh will fail → detect the theft.
-- [ ] **Token storage on client** — SPA: access token in memory (not localStorage — XSS can read it), refresh token in httpOnly secure cookie. Mobile: secure device storage (Keychain/Keystore). Server-rendered: session cookie.
-- [ ] **Token revocation** — Can you revoke a token before it expires? JWT validation is stateless — the token is valid until it expires unless you check a revocation list. For immediate revocation, use token introspection or maintain a short-lived revocation list in Redis.
-- [ ] **JWKS endpoint** — The auth server exposes its public keys at `/.well-known/openid-configuration/jwks`. Resource servers fetch and cache these keys. Key rotation: the auth server publishes a new key, old one is kept until all tokens signed with it expire. Smooth, no downtime.
-
-### 3.5 Key Decisions for Open Authentication
-
-- [ ] **Build vs Adopt** — Never build your own OAuth2/OIDC server. The specification is complex, the security edge cases are subtle, and getting it wrong means you ship a vulnerability. Use a battle-tested auth server: Keycloak (self-hosted, open-source), Auth0/Okta (SaaS), or cloud-specific (AWS Cognito, Azure AD B2C).
-- [ ] **Stateless (JWT) vs Stateful (opaque tokens)** — JWT: services validate locally, no auth server call per request. But can't revoke instantly. Opaque tokens: must call introspection endpoint, but can revoke instantly. For most microservices, JWT + short lifespan is the right tradeoff.
-- [ ] **One auth server for all services?** — Yes. One identity provider. One set of users. One login experience. Services differentiate by roles, scopes, and permissions — not by having different user databases.
-- [ ] **Social login?** — Google, GitHub, Apple login via your auth server (Keycloak supports identity brokering). Don't implement social login directly in every service.
-- [ ] **Multi-tenancy?** — If you serve multiple organizations, each gets an isolated realm/tenant in the auth server. Users from Tenant A cannot see Tenant B's data. Enforce at the auth and application layers.
-
-### 3.6 Open Authentication Checklist
-
-- [ ] Auth server is a dedicated service, not embedded in an application
-- [ ] Authorization Code + PKCE for all user-facing login flows
-- [ ] Client Credentials for all service-to-service calls
-- [ ] Access tokens: short-lived (≤15 min), signed (RS256 or ES256)
-- [ ] Refresh tokens: long-lived, rotated on each use
-- [ ] JWKS endpoint available, keys cached by resource servers
-- [ ] All tokens include: `iss` (issuer), `sub` (subject), `aud` (audience), `exp` (expiry), `iat` (issued at)
-- [ ] Resource servers validate: signature, issuer, audience, expiry
-- [ ] Roles/permissions encoded in JWT claims, not in a separate service call
-- [ ] Auth server database is backed up regularly (it IS your user store)
-- [ ] Auth server itself is behind TLS, with proper hostname configured
-- [ ] Login events logged for audit trail (who logged in, when, from where)
-- [ ] Rate limiting on login endpoints (prevent credential stuffing)
-- [ ] No secrets in client-side code (client secrets live on the server)
-
----
-
-## Part 4: How They Work Together
-
-### 4.1 The Flow
-
-```
-1. DNS resolves api.example.com → Edge LB (Traefik/NGINX/cloud LB)
-2. Edge LB terminates TLS, forwards to API Gateway
-3. Gateway checks: is this request authenticated?
-   - NO → redirect to Auth Server login (OAuth2 Authorization Code flow)
-   - YES → validate JWT, extract user claims
-4. Gateway asks Service Discovery: "where is user-service?"
-   → Returns [10.0.1.5:8080, 10.0.1.6:8080, 10.0.1.7:8080] (healthy)
-5. Gateway picks an instance (Load Balancing), forwards request + user context headers
-6. Service validates JWT independently (JWKS cache), processes request
-7. Response flows back: Service → Gateway → Edge LB → Client
-```
-
-- [ ] **Gateway is the integration point** — It uses Service Discovery to find backends, Load Balancing to pick healthy instances, and Auth to validate every request. The Gateway is where these three pillars converge.
-- [ ] **No pillar is optional** — Without Service Discovery, you're hardcoding URLs. Without Load Balancing, one instance gets all traffic. Without Auth, anyone can call anything. Together they form the minimum viable production infrastructure.
-
-### 4.2 Concerns NOT Covered Here
-
-These are adjacent but separate concerns (covered in other checklists):
-
-- **API Gateway** — Routing, rate limiting, transformation, CORS, versioning → [API Gateway Checklist](api-gateway.md)
-- **Observability** — Logging, metrics, distributed tracing → [Monitoring](../6-maintenance/MONITORING.md)
-- **Service Mesh** — mTLS, traffic splitting, advanced routing → (future checklist)
-- **Message Queues** — Async communication, event-driven architecture → covered in [API Checklist](api.md) (Section: Message Queues)
-
----
-
-## Part 5: Build vs Adopt Decision Matrix
-
-| Concern | Build it yourself? | Why / Why Not |
-|---------|-------------------|---------------|
-| **Service Registry** | ❌ Don't build | Writing a distributed registry with heartbeats, eventual consistency, and split-brain handling is months of work. Use Eureka, Consul, or Kubernetes DNS. |
-| **Client-side LB library** | ❌ Don't build | Framework provides it (Spring Cloud LoadBalancer, gRPC built-in). Writing connection pooling + retry + health checking yourself is reinventing the wheel. |
-| **Edge Load Balancer** | ❌ Don't build | NGINX, Traefik, HAProxy, Caddy are battle-tested by billions of requests. Even the simplest self-built reverse proxy will have subtle bugs under load. |
-| **OAuth2/OIDC Server** | ❌ NEVER build | OAuth2/OIDC is a security protocol with subtle edge cases: PKCE, token rotation, refresh token replay detection, JWT key rotation, consent screens. One mistake = vulnerability. Use Keycloak, Auth0, Okta, Cognito. |
-| **JWT validation in services** | ✅ Use framework | Spring Security, Passport.js, middleware libraries. The validation logic is simple (check signature + claims), but use a well-maintained library — JWT parsing has footguns (alg=none attacks, timing attacks). |
-| **Custom auth proxy** | ⚠️ Maybe | If you need a thin layer between your gateway and auth server (e.g., OAuth2 Proxy for legacy apps), tools exist (oauth2-proxy, Pomerium). Only build if nothing fits. |
-
----
-
-## Technology Comparison
-
-### Service Discovery
-
-| Tool | Type | CAP | Operational Complexity | Best For |
-|------|------|-----|------------------------|----------|
-| **Netflix Eureka** | Client-side, AP | AP | Low — one Spring Boot app | Spring Boot shops, homelabs, simple setups |
-| **HashiCorp Consul** | Both, CP | CP | Medium — agent on every host | Multi-platform, needs service mesh + KV store |
-| **Kubernetes DNS + Service** | Server-side, built-in | CP | None (comes with K8s) | Already on Kubernetes |
-| **etcd / Zookeeper** | Client-side, CP | CP | High — raw consensus primitive | Custom orchestration systems, not general-purpose SD |
-| **AWS Cloud Map** | Server-side, managed | N/A | None (AWS managed) | AWS-only deployments |
-
-### Edge Load Balancing
-
-| Tool | Strength | Weakness | Best For |
-|------|----------|----------|----------|
-| **Traefik** | Auto-discovery (Docker, K8s), Let's Encrypt built-in, middleware chain | Smaller community than NGINX, less L4 features | Container-native environments |
-| **NGINX / OpenResty** | Battle-tested, huge community, Lua scripting | Manual config reload, less auto-discovery | Static configs, advanced Lua scripting |
-| **HAProxy** | Maximum L4/L7 performance, rich ACLs | Complex config syntax, steeper learning curve | High-throughput, custom routing rules |
-| **Caddy** | Simplest config, auto-HTTPS, modern defaults | Smaller ecosystem, less enterprise adoption | Simple sites, internal tools |
-| **Cloud ALB/NLB** | Zero ops, auto-scaling, integrated with cloud ecosystem | Cost at scale, limited customization, vendor lock-in | Cloud-native deployments |
-
-### Authentication / OIDC
-
-| Tool | Type | Cost | Best For |
-|------|------|------|----------|
-| **Keycloak** | Self-hosted, open-source | Free (your infrastructure) | Homelabs, self-hosted production, any scale |
-| **Auth0 / Okta** | SaaS | Per-MAU pricing | Businesses that don't want to manage auth infra |
-| **AWS Cognito** | Cloud-managed | Per-MAU (cheap at small scale) | AWS-only, simple use cases |
-| **Azure AD B2C** | Cloud-managed | Per-MAU | Microsoft ecosystem, enterprise SSO |
-| **ORY Hydra + Kratos** | Self-hosted, open-source | Free | Complex auth flows, OAuth2 purists |
-| **Roll your own** | Self-built | Developer time + security risk | Never. Just don't. |
-
----
-
-## Quick Sanity Check
-
-### Service Discovery
-- [ ] Can all services find each other without hardcoded URLs?
-- [ ] Do new instances register automatically on startup?
-- [ ] Are dead instances removed from the registry within 90s?
-- [ ] Is the registry itself highly available?
-
-### Load Balancing
-- [ ] Is the edge LB the only thing exposed to the internet?
-- [ ] Are unhealthy instances automatically removed from rotation?
-- [ ] Is TLS terminated at the edge with auto-renewed certificates?
-- [ ] Are timeouts configured at every layer?
-
-### Open Authentication
-- [ ] Does every request have a verified identity before reaching business logic?
-- [ ] Are tokens short-lived with refresh token rotation?
-- [ ] Are credentials and secrets stored outside source code?
-- [ ] Is the auth server backed up regularly?
+| Concern | Build? | Use instead |
+|---------|--------|-------------|
+| Service registry | ❌ Never | K8s DNS, Consul, Eureka |
+| Edge load balancer | ❌ Never | Traefik, NGINX, HAProxy, Cloud LB |
+| API Gateway | ❌ Never | Kong, Traefik, Spring Cloud Gateway, Cloud API GW |
+| OAuth2/OIDC server | ❌ NEVER | Keycloak, Auth0, Okta, Cognito |
+| Service mesh | ❌ Don't | Istio, Linkerd, Consul Connect, Cilium |
+| JWT validation | ✅ Use library | Framework libraries (jose, jsonwebtoken, Spring Security) |
+| Circuit breaker | ✅ Use library | Resilience4j, opossum, gobreaker |
+| Observability pipeline | ❌ Don't | OpenTelemetry + Prometheus + Grafana / Datadog |
 
 ---
 
 ## Related Checklists
 
-- [Spring Boot Microservice Infrastructure](spring-boot-microservice-infrastructure.md) — Concrete implementation with Eureka, Traefik, Keycloak
-- [API Gateway Checklist](api-gateway.md) — Gateway-specific concerns (routing, rate limiting, CORS)
-- [Spring Boot API Gateway Checklist](spring-boot-api-gateway.md) — Spring Cloud Gateway implementation
-- [Spring Boot API Checklist](spring-boot-api.md) — Downstream service implementation
-- [API Checklist](api.md) — General API design patterns and security
+- [API Checklist](../api-checklist/api.md) — General API design, resilience patterns, testing
+- [Spring Boot API Gateway](spring-boot-api-gateway.md) — Spring Cloud Gateway implementation
+- [Spring Boot Eureka](spring-boot-eureka.md) — Service discovery with Eureka
+- [Spring Boot Load Balancing](spring-boot-loadbalance.md) — Client-side LB with Spring Cloud
+- [Spring Boot OAuth](spring-boot-oauth.md) — OAuth2 resource server + authorization server
+- [Batch Checklist](../batch-checklist/batch.md) — Batch processing patterns
