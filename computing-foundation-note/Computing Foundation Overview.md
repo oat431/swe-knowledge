@@ -70,6 +70,7 @@ Understanding these foundations gives software engineers the vocabulary and ment
 
 - [[Computer Oraganization/Computer Organization Overview|Computer Organization]] — Abstractions, ISA, arithmetic, processor design, memory hierarchy, I/O, parallel computing
 - [[Programming Language Theory/Programming Language Theory Overview|Programming Language Theory]] — Expressions, binding, data types, syntax, type systems, operational semantics
+- [[Artificial_Intelligence/AI Overview|Artificial Intelligence]] — Search, logic, uncertainty, ML, reinforcement learning, NLP, vision, ethics
 - [[Algorithm Overview|Algorithm]] — Data structures, sorting, searching, DP, greedy, divide & conquer
 - [[Algorithm Advance - Overview|Algorithm (Advanced)]] — B-Trees, Fibonacci heaps, shortest paths, MST, max flow, NP-completeness
 - [[Fundamental Overview|Programming Fundamentals]] — Core concepts, variables, control flow, functions, OOP, FP, error handling
@@ -82,7 +83,7 @@ Understanding these foundations gives software engineers the vocabulary and ment
 
 ## What's Missing
 
-- AI and Machine Learning (supervised/unsupervised/RL, neural networks, NLP, ML integration in SE)
+All major SWEBOK Computing Foundations topics are now covered.
 
 ## Relationship to Other Foundations
 
