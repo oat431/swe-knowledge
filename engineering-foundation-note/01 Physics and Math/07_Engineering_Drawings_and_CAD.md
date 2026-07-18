@@ -222,5 +222,5 @@ Engineering symbols are a **language** — they convey information quickly, effe
 ## Related
 
 - [[Engineering Foundation Overview]]
-- [[08_Engineering_Materials]] — Material properties that drawings specify
-- [[09_Math_Stats_and_Economics]] — Mathematical tools for engineering analysis
+- [[01 Physics and Math/08_Engineering_Materials|08_Engineering_Materials]] — Material properties that drawings specify
+- [[01 Physics and Math/09_Math_Stats_and_Economics|09_Math_Stats_and_Economics]] — Mathematical tools for engineering analysis

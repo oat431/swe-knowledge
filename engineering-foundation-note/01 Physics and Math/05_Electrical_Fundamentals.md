@@ -154,5 +154,5 @@ Typical residential systems include:
 ## Related
 
 - [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[06_Energy_and_Power]] — Electrical energy and power
-- [[01_Dimensions_and_Measurement]] — Fundamental dimensions (current)
+- [[01 Physics and Math/06_Energy_and_Power|06_Energy_and_Power]] — Electrical energy and power
+- [[01 Physics and Math/01_Dimensions_and_Measurement|01_Dimensions_and_Measurement]] — Fundamental dimensions (current)

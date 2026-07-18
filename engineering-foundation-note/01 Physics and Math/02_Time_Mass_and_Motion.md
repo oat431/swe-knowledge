@@ -347,6 +347,6 @@ Mass-dependent; detailed treatment in the Energy & Power chapter.
 
 ## See Also
 
-- [[01_Dimensions_and_Measurement]] — Fundamental dimensions, unit systems
-- [[03_Force_and_Mechanics]] — Force, weight, Newton's laws, work, pressure
-- [[06_Energy_and_Power]] — Kinetic energy, work-energy theorem
+- [[01 Physics and Math/01_Dimensions_and_Measurement|01_Dimensions_and_Measurement]] — Fundamental dimensions, unit systems
+- [[01 Physics and Math/03_Force_and_Mechanics|03_Force_and_Mechanics]] — Force, weight, Newton's laws, work, pressure
+- [[01 Physics and Math/06_Energy_and_Power|06_Energy_and_Power]] — Kinetic energy, work-energy theorem

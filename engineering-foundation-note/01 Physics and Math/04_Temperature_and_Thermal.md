@@ -366,6 +366,6 @@ The rate at which the human body generates heat. Important in HVAC design for si
 ## Related
 
 - [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[06_Energy_and_Power]] — Energy and thermodynamics
-- [[08_Engineering_Materials]] — Thermal properties of materials
-- [[01_Dimensions_and_Measurement]] — Fundamental dimensions
+- [[01 Physics and Math/06_Energy_and_Power|06_Energy_and_Power]] — Energy and thermodynamics
+- [[01 Physics and Math/08_Engineering_Materials|08_Engineering_Materials]] — Thermal properties of materials
+- [[01 Physics and Math/01_Dimensions_and_Measurement|01_Dimensions_and_Measurement]] — Fundamental dimensions

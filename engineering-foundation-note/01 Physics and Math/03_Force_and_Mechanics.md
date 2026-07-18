@@ -361,7 +361,7 @@ Describes how a fluid's volume changes under applied pressure — relevant for h
 ## Related
 
 - [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[01_Dimensions_and_Measurement]] — Fundamental dimensions and units
-- [[02_Time_Mass_and_Motion]] — Mass, momentum, and motion
-- [[06_Energy_and_Power]] — Work, energy, and power relationships
-- [[08_Engineering_Materials]] — Material properties and selection
+- [[01 Physics and Math/01_Dimensions_and_Measurement|01_Dimensions_and_Measurement]] — Fundamental dimensions and units
+- [[01 Physics and Math/02_Time_Mass_and_Motion|02_Time_Mass_and_Motion]] — Mass, momentum, and motion
+- [[01 Physics and Math/06_Energy_and_Power|06_Energy_and_Power]] — Work, energy, and power relationships
+- [[01 Physics and Math/08_Engineering_Materials|08_Engineering_Materials]] — Material properties and selection

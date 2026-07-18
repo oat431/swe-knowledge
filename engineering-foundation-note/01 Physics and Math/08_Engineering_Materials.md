@@ -222,6 +222,6 @@ Matter exists in four states: **solid**, **liquid**, **gas**, and **plasma**. Ph
 ## Related
 
 - [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[03_Force_and_Mechanics]] — Mechanical properties and stress
-- [[04_Temperature_and_Thermal]] — Thermal properties
-- [[07_Engineering_Drawings_and_CAD]] — Engineering drawings and specifications
+- [[01 Physics and Math/03_Force_and_Mechanics|03_Force_and_Mechanics]] — Mechanical properties and stress
+- [[01 Physics and Math/04_Temperature_and_Thermal|04_Temperature_and_Thermal]] — Thermal properties
+- [[01 Physics and Math/07_Engineering_Drawings_and_CAD|07_Engineering_Drawings_and_CAD]] — Engineering drawings and specifications

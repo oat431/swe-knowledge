@@ -373,6 +373,6 @@ When the frequency of uniform series differs from the compounding frequency, cal
 ## Related
 
 - [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[01_Dimensions_and_Measurement]] — Units and dimensional analysis
-- [[03_Force_and_Mechanics]] — Applied mechanics calculations
-- [[06_Energy_and_Power]] — Energy calculations
+- [[01 Physics and Math/01_Dimensions_and_Measurement|01_Dimensions_and_Measurement]] — Units and dimensional analysis
+- [[01 Physics and Math/03_Force_and_Mechanics|03_Force_and_Mechanics]] — Applied mechanics calculations
+- [[01 Physics and Math/06_Energy_and_Power|06_Energy_and_Power]] — Energy calculations

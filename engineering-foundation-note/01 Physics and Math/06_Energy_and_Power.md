@@ -251,7 +251,7 @@ $$COP = \frac{EER}{3.412}$$
 ## Related
 
 - [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[03_Force_and_Mechanics]] — Work and force relationships
-- [[04_Temperature_and_Thermal]] — Thermal energy and heat transfer
-- [[05_Electrical_Fundamentals]] — Electrical energy
-- [[01_Dimensions_and_Measurement]] — Fundamental dimensions
+- [[01 Physics and Math/03_Force_and_Mechanics|03_Force_and_Mechanics]] — Work and force relationships
+- [[01 Physics and Math/04_Temperature_and_Thermal|04_Temperature_and_Thermal]] — Thermal energy and heat transfer
+- [[01 Physics and Math/05_Electrical_Fundamentals|05_Electrical_Fundamentals]] — Electrical energy
+- [[01 Physics and Math/01_Dimensions_and_Measurement|01_Dimensions_and_Measurement]] — Fundamental dimensions

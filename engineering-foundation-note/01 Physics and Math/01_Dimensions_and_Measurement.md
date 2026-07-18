@@ -271,6 +271,6 @@ Manufacturers use **nominal sizes** (round numbers) for easy reference, but **ac
 ## Related
 
 - [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[02_Time_Mass_and_Motion]] — Next: time, mass, and motion fundamentals
-- [[03_Force_and_Mechanics]] — Force, stress, and mechanical properties
-- [[09_Math_Stats_and_Economics]] — Mathematical tools for engineering calculations
+- [[01 Physics and Math/02_Time_Mass_and_Motion|02_Time_Mass_and_Motion]] — Next: time, mass, and motion fundamentals
+- [[01 Physics and Math/03_Force_and_Mechanics|03_Force_and_Mechanics]] — Force, stress, and mechanical properties
+- [[01 Physics and Math/09_Math_Stats_and_Economics|09_Math_Stats_and_Economics]] — Mathematical tools for engineering calculations
