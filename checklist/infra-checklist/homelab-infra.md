@@ -172,3 +172,96 @@
 | **Borgmatic** | Borg wrapper with YAML config, scheduled backups |
 | **Duplicati** | Web UI, encryption, cloud targets, beginner-friendly |
 | **rclone** | Sync to any cloud provider (B2, S3, GDrive, OneDrive) |
+
+---
+
+## Target Architecture Plan
+
+> Planned architecture after infrastructure rebuild — no public IP, Cloudflare Tunnel for web, Tailscale for management.
+> ⚠️ Service names are anonymized — replace with actual project names in your private vault.
+> Last updated: 2026-07-19
+
+```mermaid
+flowchart TB
+    subgraph Internet["☁️ Internet (No Public IP)"]
+        CF["Cloudflare Tunnel\nHTTP/HTTPS only"]
+        TS["Tailscale\nMesh VPN"]
+    end
+
+    subgraph Server["🖥️ Ubuntu 24.04 LTS — panomete\ni7-7700HQ · 36GB RAM · NVMe"]
+        direction TB
+
+        subgraph Edge["Edge Layer"]
+            Nginx["Nginx\nReverse Proxy"]
+            UFW["UFW\nDefault Deny"]
+        end
+
+        subgraph Infra["Infrastructure Services"]
+            Keycloak["Keycloak\nOAuth / Identity"]
+            Gate["API Gateway"]
+            Discover["Service Discovery"]
+            Loader["Load Balancer"]
+            Portainer["Portainer\nDocker Mgmt"]
+            UptimeKuma["Uptime Kuma\nMonitoring"]
+            Beszel["Beszel\nMetrics"]
+        end
+
+        subgraph Apps["Application Services"]
+            Blog["Service A"]
+            Ledger["Service B"]
+            ShortLink["Service C"]
+            Todo["Service D"]
+            CookBook["Service E"]
+            Tarot["Service F"]
+        end
+
+        subgraph Data["Data Layer"]
+            PG[("PostgreSQL")]
+            Mongo[("MongoDB")]
+            Redis[("Redis")]
+            MinIO[("MinIO\nObject Storage")]
+        end
+
+        subgraph Backup["Backup Layer"]
+            Cron["Cron / Scripts"]
+            Rclone["rclone"]
+        end
+    end
+
+    subgraph Offsite["☁️ Offsite Backup"]
+        B2["Backblaze B2\n$0.005/GB/mo"]
+    end
+
+    CF --> Nginx
+    TS --> UFW
+    UFW --> Nginx
+    UFW --> Portainer
+    UFW --> UptimeKuma
+
+    Nginx --> Keycloak
+    Nginx --> Gate
+    Nginx --> Blog
+    Nginx --> Ledger
+    Nginx --> ShortLink
+    Nginx --> Todo
+    Nginx --> CookBook
+    Nginx --> Tarot
+
+    Gate --> Discover
+    Gate --> Loader
+    Loader --> Apps
+
+    Keycloak --> PG
+    Blog --> PG
+    Ledger --> PG
+    ShortLink --> Redis
+    Todo --> Mongo
+    CookBook --> PG
+    Tarot --> PG
+    Apps --> MinIO
+
+    Cron --> PG
+    Cron --> Mongo
+    Cron --> Rclone
+    Rclone --> B2
+```
