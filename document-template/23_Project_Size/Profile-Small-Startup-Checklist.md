@@ -38,6 +38,7 @@ tags: [profile, small-startup, checklist, essential-documents]
 | [[Business-Objectives]] | 🔴 | [01_Business_Analysis_and_strategy] | ☐ |
 | [[User-Stories]] | 🔴 | [04_Requirements_Engineering] | ☐ |
 | [[Acceptance-Criteria]] | 🔴 | [04_Requirements_Engineering] | ☐ |
+| [[Definition-of-Done]] | 🔴 | [04_Requirements_Engineering] | ☐ |
 | [[Stakeholder-Analysis]] | 🟡 | [04_Requirements_Engineering] | ☐ |
 
 ---
@@ -49,6 +50,7 @@ tags: [profile, small-startup, checklist, essential-documents]
 | Document | Priority | Template | Status |
 |----------|---------|---------|--------|
 | [[Architecture-Decision-Records]] | 🔴 | [09_Systems_Architecture_and_Design] | ☐ |
+| [[Architecture-Overview]] | 🔴 | [10_Software_Design] | ☐ |
 | [[API-Specification]] | 🔴 | [10_Software_Design] | ☐ |
 | [[Database-Schema-DDL]] | 🔴 | [10_Software_Design] | ☐ |
 | [[ERD]] | 🟡 | [10_Software_Design] | ☐ |
@@ -136,15 +138,15 @@ tags: [profile, small-startup, checklist, essential-documents]
 
 | Category | 🔴 Must Have | 🟡 Nice to Have | 🟢 Optional | Total |
 |---------|-------------|----------------|------------|-------|
-| Discovery & Requirements | 3 | 1 | 0 | 4 |
-| Architecture & Design | 2 | 3 | 0 | 5 |
+| Discovery & Requirements | 4 | 1 | 0 | 5 |
+| Architecture & Design | 3 | 3 | 0 | 6 |
 | UX/UI Design | 1 | 2 | 0 | 3 |
 | Construction | 4 | 2 | 0 | 6 |
 | Testing | 3 | 2 | 0 | 5 |
 | Deployment & Operations | 3 | 1 | 0 | 4 |
 | Security | 1 | 1 | 0 | 2 |
 | Project Management | 0 | 2 | 0 | 2 |
-| **Total** | **17** | **14** | **0** | **31** |
+| **Total** | **19** | **14** | **0** | **33** |
 
 ---
 
@@ -155,21 +157,23 @@ tags: [profile, small-startup, checklist, essential-documents]
 | 1 | [[Business-Objectives]] | ☐ |
 | 2 | [[User-Stories]] | ☐ |
 | 3 | [[Acceptance-Criteria]] | ☐ |
-| 4 | [[Architecture-Decision-Records]] | ☐ |
-| 5 | [[API-Specification]] | ☐ |
-| 6 | [[Database-Schema-DDL]] | ☐ |
-| 7 | [[Wireframes-Low-fi]] | ☐ |
-| 8 | [[README-Developer-Guide]] | ☐ |
-| 9 | [[Build-Scripts]] | ☐ |
-| 10 | [[Dependency-Manifest]] | ☐ |
-| 11 | [[Commit-Messages-Changelog]] | ☐ |
-| 12 | [[Test-Plan]] | ☐ |
-| 13 | [[Test-Cases]] | ☐ |
-| 14 | [[Defect-Report]] | ☐ |
-| 15 | [[CI-CD-Pipeline-Configuration]] | ☐ |
-| 16 | [[Deployment-Plan]] | ☐ |
-| 17 | [[Release-Notes]] | ☐ |
-| 18 | [[Security-Test-Report]] | ☐ |
+| 4 | [[Definition-of-Done]] | ☐ |
+| 5 | [[Architecture-Decision-Records]] | ☐ |
+| 6 | [[Architecture-Overview]] | ☐ |
+| 7 | [[API-Specification]] | ☐ |
+| 8 | [[Database-Schema-DDL]] | ☐ |
+| 9 | [[Wireframes-Low-fi]] | ☐ |
+| 10 | [[README-Developer-Guide]] | ☐ |
+| 11 | [[Build-Scripts]] | ☐ |
+| 12 | [[Dependency-Manifest]] | ☐ |
+| 13 | [[Commit-Messages-Changelog]] | ☐ |
+| 14 | [[Test-Plan]] | ☐ |
+| 15 | [[Test-Cases]] | ☐ |
+| 16 | [[Defect-Report]] | ☐ |
+| 17 | [[CI-CD-Pipeline-Configuration]] | ☐ |
+| 18 | [[Deployment-Plan]] | ☐ |
+| 19 | [[Release-Notes]] | ☐ |
+| 20 | [[Security-Test-Report]] | ☐ |
 
 ---
 
