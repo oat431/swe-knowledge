@@ -40,21 +40,24 @@ Understanding these foundations gives software engineers the vocabulary and ment
 - Paradigms: imperative, OOP, functional, declarative
 - Type systems (static/dynamic), memory management
 - Language translation: compilers, interpreters, linking
+- **Compiler Design:** Full compilation pipeline, lexing, parsing, semantic analysis, SSA, optimization, code generation, JIT
 
 ### Operating Systems
 - Process/thread management, CPU scheduling, IPC
 - Memory management (virtual memory, paging, segmentation)
 - File systems, device management, network management
+- **Distributed Systems:** CAP theorem, consensus (Paxos/Raft), consistent hashing, CRDTs, fault tolerance patterns, MapReduce
 
 ### Database Management
 - Relational, NoSQL (key-value, document, columnar, graph)
 - ACID vs BASE, normalization, schema design
 - Transactions, concurrency control, query processing
+- **Data Warehousing & Mining:** OLAP vs OLTP, star/snowflake schemas, ETL/ELT pipelines, data mining (association, clustering, classification)
 
 ### Computer Networks
 - OSI and TCP/IP models, protocols (HTTP, TCP, UDP, DNS)
 - Network security, load balancing, proxies
-- Distributed systems communication
+- **Wireless & Mobile:** WiFi 802.11, Bluetooth, cellular 1G-5G, FDMA/TDMA/CDMA/OFDMA, Mobile IP, WPA3 security
 
 ### Human Factors and HCI
 - Usability, accessibility, cognitive load
@@ -64,10 +67,11 @@ Understanding these foundations gives software engineers the vocabulary and ment
 ### AI and Machine Learning
 - Supervised, unsupervised, reinforcement learning
 - Neural networks, NLP, computer vision
-- AI/ML integration in software systems
+- **AI ↔ SE Intersection:** AI for SE (defect prediction, test generation, code review), SE for AI (ML pipelines, MLOps, model monitoring, responsible AI)
 
 ## My Notes
 
+### Core Topics
 - [[Computer Oraganization/Computer Organization Overview|Computer Organization]] — Abstractions, ISA, arithmetic, processor design, memory hierarchy, I/O, parallel computing
 - [[Programming Language Theory/Programming Language Theory Overview|Programming Language Theory]] — Expressions, binding, data types, syntax, type systems, operational semantics
 - [[Artificial_Intelligence/AI Overview|Artificial Intelligence]] — Search, logic, uncertainty, ML, reinforcement learning, NLP, vision, ethics
@@ -81,9 +85,29 @@ Understanding these foundations gives software engineers the vocabulary and ment
 - [[Clean Code Overview|Clean Code (Simplified)]] — Naming, functions, code smells, refactoring
 - [[HCI Overview|HCI (Simplified)]] — Usability principles, cognitive load, accessibility basics
 
-## What's Missing
+### Gap-Filling Topics (Added 2026-07-21)
+- [[Programming Language Theory/08_Compiler_Design|Compiler Design]] — Compilation pipeline, lexing, parsing, semantic analysis, SSA, optimization, code generation, JIT
+- [[Operating Systems/04 Distributed Systems/04_Distributed_Systems|Distributed Systems]] — CAP theorem, Paxos/Raft, consistent hashing, CRDTs, fault tolerance, MapReduce
+- [[Computer Networks/02 Protocols/02_Wireless_and_Mobile|Wireless & Mobile Networks]] — WiFi, Bluetooth, cellular 1G-5G, FDMA/TDMA/CDMA/OFDMA, Mobile IP, WPA3
+- [[Database/04 Data Warehousing/04_Data_Warehousing_and_Mining|Data Warehousing & Mining]] — OLAP vs OLTP, star/snowflake schemas, ETL/ELT, data mining techniques
+- [[Artificial_Intelligence/09_AI_SE_Intersection|AI ↔ SE Intersection]] — AI for SE (defect prediction, test generation), SE for AI (ML pipelines, MLOps, responsible AI)
 
-All major SWEBOK Computing Foundations topics are now covered.
+## Coverage Status
+
+> **100% SWEBOK v4 Chapter 16 Coverage Achieved**
+
+| Area | Status | Notes |
+|------|--------|-------|
+| Computer Architecture & Organization | ✅ Complete | 7 files + overview |
+| Data Structures & Algorithms | ✅ Complete | 25+ files (basic + advanced) |
+| Programming Fundamentals & Languages | ✅ Complete | 12 Fundamental + 8 PLT files |
+| Operating Systems | ✅ Complete | 9 files + Distributed Systems |
+| Database Management | ✅ Complete | 8 files + Data Warehousing |
+| Computer Networks | ✅ Complete | 8 files + Wireless/Mobile |
+| Human Factors & HCI | ✅ Complete | 11 files (HCI, Clean Code, Design Patterns) |
+| AI & Machine Learning | ✅ Complete | 9 files + AI-SE Intersection |
+
+**Total:** 118 files covering all 9 SWEBOK Computing Foundations knowledge areas.
 
 ## Relationship to Other Foundations
 
