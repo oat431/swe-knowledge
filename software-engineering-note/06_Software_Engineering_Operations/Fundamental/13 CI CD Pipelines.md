@@ -30,11 +30,17 @@ Continuous Deploy:   Code → Build → Test → Deploy to Staging → Deploy to
 
 ## Pipeline Stages
 
+
+```mermaid
+flowchart LR
+    BUILD["Build"] --> TEST["Test"] --> SCAN["Security Scan"] --> DEPLOY["Deploy"]
+    
+    style BUILD fill:#dae8fc
+    style TEST fill:#d5e8d4
+    style SCAN fill:#fff2cc
+    style DEPLOY fill:#e1d5e7
 ```
-┌───────┐   ┌──────┐   ┌──────────────┐   ┌────────┐
-│ Build │ → │ Test │ → │ Security Scan│ → │ Deploy │
-└───────┘   └──────┘   └──────────────┘   └────────┘
-```
+
 
 | Stage | Purpose | Tools |
 |---|---|---|

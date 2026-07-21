@@ -55,15 +55,16 @@ The chapter distinguishes between **release** (making features available to cust
 
 ## My Notes
 
+### The DevOps Handbook (Kim, Humble, Debois, Willis)
+- [[01_The_Three_Ways]] — Flow, Feedback, Continual Learning, Lean origins, DevOps history
+- [[02_Where_to_Start]] — Value streams, Conway's Law, org design, adoption patterns
+- [[03_Accelerating_Flow]] — Deployment pipeline, CI, CD, automated testing, low-risk releases
+- [[04_Amplifying_Feedback]] — Telemetry, monitoring, A/B testing, Dev/Ops collaboration
+- [[05_Continual_Learning]] — Blameless postmortems, just culture, org learning, resilience
+- [[06_DevSecOps_and_Compliance]] — Security integration, compliance as code, change management
+
+### Practice
 - [[Fundamental/|Fundamental]]
-
-## What's Missing
-
-- Operations Planning (SLAs, capacity management, disaster recovery, backup)
-- Operations Delivery (release strategies, canary, feature toggles, rollback, change management)
-- Operations Control (incident management, continuous monitoring, service reporting)
-- Practical Considerations (IaC, Platform-as-Code, platform engineering, risk management)
-- Operations Tools (monitoring/telemetry frameworks, orchestrators beyond Docker)
 
 ## Relationship to Other KAs
 
