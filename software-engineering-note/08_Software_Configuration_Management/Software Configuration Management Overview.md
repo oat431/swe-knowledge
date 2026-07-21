@@ -60,16 +60,15 @@ The core principles are deceptively simple — identify what you have, control h
 
 ## My Notes
 
+### SCM Patterns (Berczuk & Appleton)
+- [[01_SCM_Fundamentals]] — Key concepts, workspace, architecture, SCM in agile, pattern overview
+- [[02_Codeline_and_Branching]] — Mainline, Active Development Line, Private Workspace, Repository
+- [[03_Workspace_and_Build]] — Private System Build, Integration Build, Third Party Codeline
+- [[04_Commit_and_Testing]] — Task Level Commit, Codeline Policy, Smoke/Unit/Regression Tests
+- [[05_Release_and_Version_Management]] — Release Line, Release-Prep, Task Branch, Private Versions
+
+### Version Control Practice
 - [[Version Control/]]
-
-## What's Missing
-
-- SCM Process Management (SCM Plan, organization, monitoring)
-- Configuration Identification (CIs, baselines, CI relationships)
-- Change Control (Change Requests, CCB, deviations/waivers)
-- Status Accounting (recording/reporting CI status)
-- Configuration Auditing (FCA, PCA)
-- Release Management & Delivery (SBOM, VDD, packaging)
 
 ## Relationship to Other KAs
 
