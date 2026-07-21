@@ -70,19 +70,13 @@ Methods range from heuristic (experience-based, structured analysis, object-orie
 
 ## My Notes
 
-*(No additional notes yet)*
-
-## What's Missing
-
-- Modeling Principles
-- Properties & Expression of Models
-- Structural Modeling (UML class/component/deployment)
-- Behavioral Modeling (state machines, sequence, activity)
-- Analysis of Models (validation, consistency, completeness)
-- Heuristic Methods (OOA&D, MDD, Aspect-Oriented)
-- Formal Methods (model checking, theorem proving, Alloy, Z)
-- Prototyping Methods
-- Agile Methods (as modeling topic)
+### Software Modeling and Design (Gomaa)
+- [[01_Modeling_Fundamentals]] — COMET method, UML overview, life cycles, architecture concepts
+- [[02_Use_Case_and_Static_Modeling]] — Use cases, static models, object/class structuring
+- [[03_Dynamic_Interaction_Modeling]] — Interaction diagrams, finite state machines, state-dependent modeling
+- [[04_Architectural_Design]] — Architecture patterns, subsystem design, OO architecture
+- [[05_Distributed_and_Component]] — Client/server, SOA, component-based architectures
+- [[06_Real_Time_and_Product_Lines]] — Real-time systems, product lines, quality attributes
 
 ## Relationship to Other KAs
 
