@@ -59,15 +59,18 @@ The chapter covers test levels (unit → integration → system → acceptance),
 
 ## My Notes
 
+### Testing: A Craftsman's Approach (Jorgensen)
+- [[01_Testing_Fundamentals]] — Definitions, test cases, discrete math, graph theory for testers
+- [[02_Boundary_and_Equivalence]] — Boundary value analysis, equivalence class testing
+- [[03_Decision_Table_and_Path]] — Decision tables, path testing, DD-paths, coverage metrics
+- [[04_Data_Flow_and_Retrospective]] — Define/use testing, slice-based testing, spec vs code pendulum
+- [[05_Integration_and_System]] — Integration strategies, system testing, use cases, risk-based testing
+- [[06_Model_Based_and_Lifecycle]] — Model-based testing, life cycle-based testing
+- [[07_OO_and_Complexity]] — OO testing, cyclomatic complexity, Halstead metrics
+- [[08_Emerging_Topics]] — Feature-based, TDD, all pairs, mutation testing, reviews
+
+### QA Practice
 - [[QA/|QA]]
-
-## What's Missing
-
-- Test Levels (unit/integration/system/acceptance as explicit SWEBOK topic)
-- Test Techniques (equivalence partitioning, BVA, decision tables, MC/DC, mutation testing)
-- Test Measures (coverage metrics, fault density, reliability growth models)
-- Test Process (organizational/management/dynamic layers)
-- Testing Emerging Technologies (AI/ML testing, metamorphic testing)
 
 ## Relationship to Other KAs
 
