@@ -62,18 +62,15 @@ Software has unique economic properties: front-loaded development costs with nea
 
 ## My Notes
 
-*(No additional notes yet — only this overview)*
+### SWEBOK Economics Foundations
+- [[01_Economics_Fundamentals]] — Cash flow, time-value of money, NPV, IRR, business models
+- [[02_Decision_Making]] — 7-step process, decision trees, Monte Carlo, uncertainty methods
+- [[03_Cost_Analysis_and_Tradeoffs]] — MARR, benefit-cost, break-even, TCO, AHP, ATAM
 
-## What's Missing
-
-- Economics Fundamentals (cash flow, time-value of money, business models)
-- Engineering Decision-Making (7-step process, decision trees, sensitivity analysis)
-- For-Profit Decision-Making (MARR, replacement decisions, depreciation)
-- Nonprofit Decision-Making (benefit-cost analysis, cost-effectiveness)
-- Present Economy (break-even, optimization)
-- Multiple-Attribute Decision-Making (AHP, ATAM, compensatory/non-compensatory)
-- Estimation (Delphi, Planning Poker, parametric models, COCOMO)
-- Practical Considerations (business cases, TCO)
+### Software Estimation (McConnell)
+- [[04_Estimation_Concepts]] — Estimates vs. targets, Cone of Uncertainty, error sources
+- [[05_Estimation_Techniques]] — Count/compute/judge, decomposition, analogy, proxy-based, Delphi
+- [[06_Estimation_Challenges]] — Size/effort/schedule/cost estimation, presentation, sanity checks
 
 ## Relationship to Other KAs
 
