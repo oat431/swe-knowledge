@@ -71,12 +71,12 @@ The central challenge is managing complexity and change in systems where limited
 
 ## SWEBOK v4 Coverage Map
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 07 | **Last analyzed:** 2026-07-21 | **Coverage:** ~75% (updated)
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 07 | **Last analyzed:** 2026-07-21 | **Coverage:** ~88% (updated)
 
 | # | SWEBOK Topic | Status | Vault File(s) | Notes |
 |---|---|---|---|---|
 | 1 | Maintenance Fundamentals | ✅ | `07_Maintenance_Fundamentals.md` (17 KB) | Lehman's Laws (all 8), 6 maintenance categories, cost drivers |
-| 2 | Key Issues | ⚠️ | `01`, `04`, `05` | Limited understanding, impact analysis, regression testing covered; staffing, outsourcing, tech debt measurement missing |
+| 2 | Key Issues | ✅ | `01`, `04`, `05`, `10_Staffing_and_Organizational_Models.md` (30 KB) | Org models, outsourcing, career paths, MTTR, burnout |
 | 3 | Maintenance Processes | ✅ | `08_Maintenance_Processes_and_Staffing.md` (22 KB) | ISO 14764, MR/PR lifecycle, help-desk T1-T4, SLA/SLO, outsourcing |
 | 4 | Maintenance Techniques | ✅ | `01`-`06` (all Feathers notes) | Program comprehension, refactoring, dependency breaking (24 techniques) |
 | 5 | Maintenance Tools | ✅ | `09_Maintenance_Tools_and_Techniques.md` (28 KB) | Reverse engineering, visualization, tech debt metrics, program slicing, maturity models |

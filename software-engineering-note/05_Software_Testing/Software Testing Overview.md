@@ -83,15 +83,15 @@ The chapter covers test levels (unit → integration → system → acceptance),
 
 ## SWEBOK v4 Coverage Map
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 05 | **Last analyzed:** 2026-07-21 | **Coverage:** ~80% (updated)
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 05 | **Last analyzed:** 2026-07-21 | **Coverage:** ~90% (updated)
 
 | # | SWEBOK Topic | Status | Vault File(s) | Notes |
 |---|---|---|---|---|
 | 1 | Testing Fundamentals | ✅ | `01_Testing_Fundamentals.md` (20 KB) | SUT, faults vs failures, oracle problem |
 | 2 | Test Levels | ✅ | `05_Integration_and_System.md` (21 KB) | Integration strategies, system testing, risk-based |
 | 3 | Test Techniques | ✅ | `02`, `03`, `04`, `07`, `08` | Boundary, equivalence, decision tables, path, data flow, OO, mutation |
-| 4 | Test-Related Measures | ⚠️ | Scattered across 7 files | Coverage metrics mentioned but no consolidated treatment |
-| 5 | Test Process | ⚠️ | `06` | SWEBOK's 3-layer process model not deeply covered |
+| 4 | Test-Related Measures | ✅ | Scattered + `12_Test_Process_and_Measures.md` (31 KB) | Reliability growth, defect density, MC/DC, mutation score |
+| 5 | Test Process | ✅ | `06`, `12` | 3-layer model (org/management/dynamic), exit criteria, defect lifecycle |
 | 6 | Testing in Dev Processes | ✅ | `06`, `08`, `10_Domain_Specific_Testing.md` (30 KB) | 10 domains: automotive, IoT, healthcare, mobile, avionics, finance, gaming, embedded, cloud, blockchain |
 | 7 | Emerging Technologies | ✅ | `08`, `11_AI_ML_Testing_and_Emerging.md` (34 KB) | AI/ML testing, data quality, model validation, adversarial testing, chaos engineering |
 | 8 | Testing Tools | ✅ | `09_Testing_Tools_and_Standards.md` (35 KB) | 15+ tool categories, ISO 29119, TMMi, CMMI, ODC |

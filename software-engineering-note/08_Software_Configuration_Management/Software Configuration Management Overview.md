@@ -83,11 +83,11 @@ The core principles are deceptively simple — identify what you have, control h
 
 ## SWEBOK v4 Coverage Map
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 08 | **Last analyzed:** 2026-07-21 | **Coverage:** ~80% (updated)
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 08 | **Last analyzed:** 2026-07-21 | **Coverage:** ~92% (updated)
 
 | # | SWEBOK Topic | Status | Vault File(s) | Notes |
 |---|---|---|---|---|
-| 1 | Management of SCM Process | ⚠️ | `01_SCM_Fundamentals` | Covers SCM role, tool selection; no SCMP, vendor control |
+| 1 | Management of SCM Process | ✅ | `01`, `11_Vendor_and_Interface_Control.md` (32 KB) | Vendor SCM, ICD, distributed teams, microservices SCM |
 | 2 | Software Configuration Identification | ✅ | `01`, `02_Codeline_and_Branching` | CIs, codelines, versions, labels, branches well covered |
 | 3 | Software Configuration Change Control | ✅ | `02`, `04`, `09_Change_Control_and_Compliance.md` (26 KB) | CCB, CR lifecycle, SBOM, VDD, CMDB, cryptographic hashing |
 | 4 | Software Configuration Status Accounting | ✅ | `07_SCSA_and_Status_Accounting.md` (14 KB) | CI status, change traffic metrics, governance/compliance evidence |

@@ -91,13 +91,13 @@ Methods range from heuristic (experience-based, structured analysis, object-orie
 
 ## SWEBOK v4 Coverage Map
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 11 | **Last analyzed:** 2026-07-21 | **Coverage:** ~80% (updated)
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 11 | **Last analyzed:** 2026-07-21 | **Coverage:** ~92% (updated)
 
 | # | SWEBOK Topic | Status | Vault File(s) | Notes |
 |---|---|---|---|---|
 | 1 | Modeling Principles | ✅ | `01_Modeling_Fundamentals.md` (30 KB) | Three principles, abstraction, submodels via COMET |
-| 2 | Properties/Expression of Models | ⚠️ | Overview | Completeness/consistency/correctness mentioned; no deep dive |
-| 3 | Syntax/Semantics/Pragmatics | ⚠️ | Overview | BNF/metamodels not deeply treated |
+| 2 | Properties/Expression of Models | ✅ | `10_Syntax_Semantics_and_Model_Analysis.md` (37 KB) | Metamodels, OCL, model quality, analysis, management |
+| 3 | Syntax/Semantics/Pragmatics | ✅ | `10` | BNF/EBNF, MOF/Ecore, M0-M3, operational/denotational semantics |
 | 4 | Preconditions/Postconditions/Invariants | ✅ | `09_Design_Contract_and_Modeling.md` (21 KB) | DbC, Hoare triples, LSP, Eiffel/JML, metamodels, MDA |
 | 5 | Structural Modeling | ✅ | `01`, `02`, `04` | UML class/component/deployment diagrams well covered |
 | 6 | Behavioral Modeling | ✅ | `03_Dynamic_Interaction_Modeling.md` | State machines, interaction diagrams |

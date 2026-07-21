@@ -78,14 +78,14 @@ Construction spans a spectrum of languages (configuration languages → scriptin
 
 ## SWEBOK v4 Coverage Map
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 04 | **Last analyzed:** 2026-07-21 | **Coverage:** ~80% (updated)
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 04 | **Last analyzed:** 2026-07-21 | **Coverage:** ~92% (updated)
 
 | # | SWEBOK Topic | Status | Vault File(s) | Notes |
 |---|---|---|---|---|
 | 1 | Construction Fundamentals | ✅ | `01_Construction_Foundations.md` (16 KB) | Metaphors, prerequisites, key decisions |
 | 2 | Managing Construction | ⚠️ | `09_System_Considerations.md` (20 KB) | Lifecycle, managing covered; dependency management only brief |
 | 3 | Practical Considerations | ✅ | `02`-`06`, `10` | Coding practices extensively covered (Code Complete) |
-| 4 | Construction Technologies | ⚠️ | `02`, `API/` subfolder | API design via subfolder; missing executable models, middleware |
+| 4 | Construction Technologies | ✅ | `02`, `API/`, `14_Middleware_and_Integration.md` (24 KB), `15_Heterogeneous_and_Embedded.md` (28 KB) | Middleware, ESB, embedded, IoT, FPGA, safety-critical |
 | 5 | Software Construction Tools | ✅ | `09`, `12_AI_Assisted_Programming.md` (27 KB), `13_Modern_Construction_Technologies.md` (35 KB) | AI/LLM coding, cloud IDEs, low-code, dependency mgmt |
 
 ### Gaps to Fill
