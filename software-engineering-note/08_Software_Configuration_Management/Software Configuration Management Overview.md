@@ -78,3 +78,32 @@ The core principles are deceptively simple — identify what you have, control h
 - **[[Software Maintenance Overview|Software Maintenance]]** — Change control and impact analysis are essential for safe maintenance. Every maintenance change goes through SCM.
 - **[[Software Quality Overview|Software Quality]]** — Configuration audits (FCA/PCA) are quality assurance activities. SQA depends on SCM for controlled baselines.
 - **[[Software Engineering Management Overview|Software Engineering Management]]** — SCM provides visibility into project status through change metrics and release tracking.
+
+---
+
+## SWEBOK v4 Coverage Map
+
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 08 | **Last analyzed:** 2026-07-21 | **Coverage:** ~55%
+
+| # | SWEBOK Topic | Status | Vault File(s) | Notes |
+|---|---|---|---|---|
+| 1 | Management of SCM Process | ⚠️ | `01_SCM_Fundamentals` | Covers SCM role, tool selection; no SCMP, vendor control |
+| 2 | Software Configuration Identification | ✅ | `01`, `02_Codeline_and_Branching` | CIs, codelines, versions, labels, branches well covered |
+| 3 | Software Configuration Change Control | ⚠️ | `02`, `04_Commit_and_Testing` | Codeline policy covers some; no CCB, no formal CR workflows |
+| 4 | Software Configuration Status Accounting | ❌ | — | No coverage of SCSA, change traffic metrics |
+| 5 | Software Configuration Auditing | ❌ | — | No coverage of FCA, PCA, or in-process audits |
+| 6 | Release Management & Delivery | ✅ | `05_Release_and_Version_Management` | Release Lines, Release-Prep, Task Branch, Daily Build |
+| 7 | SCM Tools | ✅ | `Version Control/01-03` | Git extensively covered; CMDB, SBOM tools missing |
+
+### Gaps to Fill
+
+| Priority | Gap | SWEBOK Topic | What's Missing |
+|----------|-----|-------------|----------------|
+| 🔴 High | SCSA | Status Accounting | Recording/reporting CI status, baselines, change traffic metrics |
+| 🔴 High | FCA/PCA Audits | Configuration Auditing | Functional and Physical Configuration Audits |
+| 🟡 Medium | CCB/CR Workflows | Change Control | Configuration Control Board, formal change request lifecycle |
+| 🟡 Medium | SBOM | Release Management | Software Bill of Materials for security/compliance |
+| 🟡 Medium | CMDB | SCM Tools | Configuration Management Database concepts |
+| 🟢 Low | Deviations vs Waivers | Change Control | Pre-approved departures vs post-discovery nonconformance acceptance |
+| 🟢 Low | SCMP | Management of SCM | SCM Plan structure, content, lifecycle |
+| 🟢 Low | VDD | Release Management | Version Description Document structure and purpose |

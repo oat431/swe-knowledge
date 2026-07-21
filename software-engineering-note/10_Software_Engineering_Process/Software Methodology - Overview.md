@@ -75,3 +75,41 @@ A key insight is that no ideal process exists universally — processes must be 
 - **[[Software Configuration Management Overview|Software Configuration Management]]** — SCM is a foundational supporting process within every life cycle model.
 - **[[Software Engineering Operations Overview|Software Engineering Operations]]** — DevOps is both a process model and an operational practice bridging development and operations.
 - **[[Software Engineering Professional Practice Overview|Software Engineering Professional Practice]]** — Professional discipline is expressed through process adherence.
+
+---
+
+## SWEBOK v4 Coverage Map
+
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 10 | **Last analyzed:** 2026-07-21 | **Coverage:** ~30%
+
+| # | SWEBOK Topic | Status | Vault File(s) | Notes |
+|---|---|---|---|---|
+| 1 | Process Fundamentals | ❌ | — | No process definition, no four process categories |
+| 2 | Life Cycle Categories & Terminology | ❌ | — | Four process categories not covered |
+| 3 | Rationale for Life Cycles | ❌ | — | Not covered |
+| 4 | Process Models vs Life Cycle Models | ❌ | — | Distinction not covered |
+| 5 | Development Life Cycle Paradigms | ✅ | `00_Agile`, `01_Lean`, `02`, `04` | Predictive, iterative, incremental, evolutionary covered |
+| 6 | Specific Life Cycle Models | ⚠️ | `00`, `04`, `01` | Waterfall ✅, V-Model ✅, Agile ✅; Spiral ❌, RUP ❌ |
+| 7 | Management of Life Cycle Processes | ❌ | — | Six generic stages and three management levels not covered |
+| 8 | SE Process Management | ❌ | — | Three-level process management not covered |
+| 9 | Life Cycle Adaptation | ⚠️ | `02` | Methodology selection touched; no formal tailoring |
+| 10 | Process Infrastructure & Tools | ❌ | — | No BPMN, IDEF0, Petri nets, UML activity diagrams |
+| 11 | Process Monitoring | ❌ | — | Not covered |
+| 12 | Process Assessment & Improvement | ❌ | `01` (Kaizen mentioned) | No PDCA, CMMI, SPICE, formal assessment frameworks |
+
+### Gaps to Fill
+
+| Priority | Gap | SWEBOK Topic | What's Missing |
+|----------|-----|-------------|----------------|
+| 🔴 High | Process Fundamentals | Process Fundamentals | Process definition, components, project context |
+| 🔴 High | Four Process Categories | Life Cycle Categories | Technical, technical management, org project-enabling, agreement |
+| 🔴 High | PDCA | Process Assessment | Shewhart-Deming cycle for continuous improvement |
+| 🔴 High | CMMI | Process Assessment | Maturity levels, process areas, appraisal methods |
+| 🔴 High | SPICE / ISO 33000 | Process Assessment | Process assessment standard |
+| 🟡 Medium | Spiral Model | Specific Models | Boehm's risk-driven evolutionary model |
+| 🟡 Medium | RUP/UP/OpenUP | Specific Models | Iterative, architecture-centric, use-case driven |
+| 🟡 Medium | Six Generic Life Cycle Stages | Management of Processes | Concept → Development → Production → Utilization → Support → Retirement |
+| 🟡 Medium | Process Definition Notations | Process Infrastructure | BPMN, IDEF0, Petri nets, UML activity diagrams |
+| 🟢 Low | Process Models vs SLCM Distinction | Process Models | Standard guide vs project-specific activity sequence |
+| 🟢 Low | Rapid Prototyping | Specific Models | Quick prototype to validate requirements |
+| 🟢 Low | Agile Retrospectives (as assessment) | Process Assessment | Connecting retrospectives to formal process assessment |

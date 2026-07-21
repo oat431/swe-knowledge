@@ -61,3 +61,41 @@ The economic impact of software is immense: success or failure affects employmen
 - **[[Software Engineering Economics Overview|Software Engineering Economics]]** — Ethical resource allocation, trade-off analysis, and cost-benefit evaluation.
 - **[[Software Engineering Management Overview|Software Engineering Management]]** — People management requires understanding group dynamics and psychology.
 - **[[Software Security Overview|Software Security]]** — Security is an ethical obligation to users.
+
+---
+
+## SWEBOK v4 Coverage Map
+
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 14 | **Last analyzed:** 2026-07-21 | **Coverage:** ~80%
+
+| # | SWEBOK Topic | Status | Vault File(s) | Notes |
+|---|---|---|---|---|
+| 1 | Code of Ethics | ✅ | `01_Professionalism_Ethics_and_Legal.md` (9 KB) | ACM/IEEE 8 principles, 3 case studies (VW, Therac, 737 MAX) |
+| 2 | Accreditation/Certification/Licensing | ✅ | `01` | Washington Accord, CSDP/CISSP/ISTQB/PMP, PE license |
+| 3 | Professional Societies | ⚠️ | `01` | Mentioned (ACM, IEEE, IFIP) but not deeply |
+| 4 | SE Standards | ⚠️ | `01` | Referenced but not enumerated |
+| 5 | Economic Impact of Software | ⚠️ | Overview | Mentioned in overview; not a dedicated section |
+| 6 | Employment Contracts | ⚠️ | `01` | NDAs/IP mentioned but lightly |
+| 7 | Legal Issues | ✅ | `01` (lines 79+) | IP, patents, copyrights, trade secrets, GDPR/CCPA |
+| 8 | Documentation | ✅ | `03_Communication_Skills.md` | Document types thoroughly covered |
+| 9 | Trade-off Analysis | ⚠️ | Overview | Cross-covered by Ch.15 Economics |
+| 10 | Team Dynamics | ✅ | `02_Group_Dynamics_and_Psychology.md` (8 KB) | Tuckman, cohesion, psychological safety |
+| 11 | Individual Cognition | ✅ | `02` | Miller's Law, cognitive biases, metacognition |
+| 12 | Problem Complexity | ✅ | `02` | Decomposition, pair programming, heuristics |
+| 13 | Stakeholder Interaction | ✅ | `02` | Covered in team dynamics context |
+| 14 | Uncertainty & Ambiguity | ✅ | `02` | Problem-solving under uncertainty |
+| 15 | Equity/Diversity/Inclusivity | ⚠️ | `02` | DEI mentioned but lightly |
+| 16 | Reading/Understanding | ✅ | `03_Communication_Skills.md` (9 KB) | Skimming, 3-pass paper method, code reading |
+| 17 | Writing | ✅ | `03` | Writing process, document types, principles |
+| 18 | Team/Group Communication | ✅ | `03` | Quadratic growth, co-location |
+| 19 | Presentation Skills | ✅ | `03` | Covered |
+
+### Gaps to Fill
+
+| Priority | Gap | SWEBOK Topic | What's Missing |
+|----------|-----|-------------|----------------|
+| 🟡 Medium | Professional Societies | Professionalism | ACM, IEEE CS, IFIP roles: BoK, standards, conferences, disciplinary actions |
+| 🟡 Medium | Employment Contracts | Professionalism | Contract structures: IP ownership, work location, liability, compensation |
+| 🟡 Medium | Economic Impact of Software | Professionalism | Effects on employment, public safety, social order |
+| 🟢 Low | Equity/Diversity/Inclusivity | Group Dynamics | Multicultural teams, gender bias, fair evaluation |
+| 🟢 Low | Trade-off Analysis | Professionalism | Ethical trade-off analysis (cross-covered by Ch.15) |

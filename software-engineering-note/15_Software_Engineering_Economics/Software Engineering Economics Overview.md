@@ -80,3 +80,31 @@ Software has unique economic properties: front-loaded development costs with nea
 - **[[Software Requirements Overview|Software Requirements]]** — Requirements scope drives cost; prioritization techniques are economic decisions.
 - **[[Software Architecture Overview|Software Architecture]]** — ATAM for architecture tradeoff analysis; wrong architecture multiplies costs for years.
 - **[[Professionalism of Software Engineering Overview|Professional Practice]]** — Code of Ethics §3.09 on estimation obligations; economic impact of professional decisions.
+
+---
+
+## SWEBOK v4 Coverage Map
+
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 15 | **Last analyzed:** 2026-07-21 | **Coverage:** ~75%
+
+| # | SWEBOK Topic | Status | Vault File(s) | Notes |
+|---|---|---|---|---|
+| 1 | Economics Fundamentals | ✅ | `01_Economics_Fundamentals.md` (7 KB) | Cash flow, time-value, PW/FW/annuity, IRR, business models |
+| 2 | Decision-Making Process | ✅ | `02_Decision_Making.md` (8 KB) | 7-step process, certainty/risk/uncertainty, decision trees |
+| 3 | For-Profit Decision-Making | ✅ | `03_Cost_Analysis_and_Tradeoffs.md` (9 KB) | MARR, economic life, replacement, depreciation |
+| 4 | Nonprofit Decision-Making | ✅ | `03` | Benefit-cost ratio, cost-effectiveness |
+| 5 | Present Economy | ✅ | `03` | Break-even analysis covered |
+| 6 | Multiple-Attribute Decision-Making | ✅ | `03` | AHP, ATAM, additive weighting |
+| 7 | Intangible Assets / SIPAC | ❌ | — | SIPAC method and 11 Generic Intangible Assets not covered |
+| 8 | Estimation | ✅ | `04` (19 KB), `05` (26 KB), `06` (25 KB) | Excellent depth via McConnell |
+| 9 | Practical Considerations | ⚠️ | Overview | Business case mentioned; multi-currency, systems thinking only in overview |
+| 10 | Related Concepts | ⚠️ | `01`, Overview | TCO mentioned; accounting/finance not deeply covered |
+
+### Gaps to Fill
+
+| Priority | Gap | SWEBOK Topic | What's Missing |
+|----------|-----|-------------|----------------|
+| 🔴 High | SIPAC / Intangible Assets | Intangible Assets | 7-step method, 11 Generic Intangible Assets taxonomy, asset states |
+| 🟡 Medium | Multi-Currency & Systems Thinking | Practical Considerations | Cross-border exchange rate analysis, holistic client ecosystems |
+| 🟡 Medium | Accounting/Finance Fundamentals | Related Concepts | Accounting, costing, finance, controlling, project/program/portfolio |
+| 🟢 Low | Inflation & Income Tax | For-Profit | Advanced considerations in for-profit decision-making |

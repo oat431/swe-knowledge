@@ -60,3 +60,24 @@ Quality management requires organizational commitment: a Quality Management Syst
 - **[[Software Construction Overview|Software Construction]]** — Code quality (complexity, readability, standards compliance) is a construction concern.
 - **[[Software Maintenance Overview|Software Maintenance]]** — Technical debt degrades quality; maintainability is a quality characteristic.
 - **[[Software Engineering Economics Overview|Software Engineering Economics]]** — Cost of quality models quantify the financial impact of quality investments.
+
+---
+
+## SWEBOK v4 Coverage Map
+
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 12 | **Last analyzed:** 2026-07-21 | **Coverage:** ~75%
+
+| # | SWEBOK Topic | Status | Vault File(s) | Notes |
+|---|---|---|---|---|
+| 1 | Quality Fundamentals | ✅ | `01_Quality_Fundamentals.md` (27 KB) | Error/defect/failure chain, McCall factors, ISO 9126 |
+| 2 | Quality Management Process | ✅ | `02_Pre_Project_and_Planning.md`, `03` | QMS, planning, CAPA, continual improvement |
+| 3 | SQA Process | ✅ | `02`, `03` | SQAP, process/product assurance, V&V activities |
+| 4 | Quality Tools | ⚠️ | `04`, `05` | Standards (ISO 9000, CMMI, IEEE) well covered; tools lightly |
+
+### Gaps to Fill
+
+| Priority | Gap | SWEBOK Topic | What's Missing |
+|----------|-----|-------------|----------------|
+| 🟡 Medium | Dependability / Safety-Critical Systems | Quality Fundamentals | FMEA, FTA, assurance cases, integrity-level-driven SQA |
+| 🟡 Medium | V&V Techniques Depth | SQA Process | Static analysis, dynamic testing, formal methods as V&V (cross-covered by Ch.05) |
+| 🟢 Low | Agile/DevOps Quality Contributions | Quality Fundamentals | Pair programming, CI/CD, colocation as quality contributors |

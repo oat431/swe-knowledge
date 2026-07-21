@@ -75,3 +75,28 @@ Organizational governance matters too. The SSE-CMM measures process capability, 
 - **[[Software Testing Overview|Software Testing]]** — Security testing (SAST, DAST, penetration testing, fuzzing) is a specialized testing discipline.
 - **[[Software Engineering Operations Overview|Software Engineering Operations]]** — DevSecOps integrates security into operational pipelines; runtime security monitoring is an operations concern.
 - **[[Software Construction Overview|Software Construction]]** — Secure coding practices (input validation, memory safety, error handling) are construction activities.
+
+---
+
+## SWEBOK v4 Coverage Map
+
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 13 *(NEW in v4)* | **Last analyzed:** 2026-07-21 | **Coverage:** ~60%
+
+| # | SWEBOK Topic | Status | Vault File(s) | Notes |
+|---|---|---|---|---|
+| 1 | Security Fundamentals | ✅ | `01_Security_Fundamentals.md` (18 KB) | CIA triad, policy/mechanism/assurance framework |
+| 2 | Security Management & Organization | ⚠️ | Overview only | SSE-CMM, ISO 27001 ISMS mentioned; no dedicated note |
+| 3 | Security Engineering & Processes | ✅ | `05_Secure_Development_and_Assurance.md` (21 KB) | Secure SDLC, DevSecOps, Common Criteria |
+| 4 | Security Engineering for Systems | ✅ | `02`, `03` | Crypto, TLS, ACLs, distributed systems — excellent depth |
+| 5 | Software Security Tools | ⚠️ | Overview + `04` | Source/binary analyzers, fuzzing mentioned but not deep |
+| 6 | Domain-Specific Security | ❌ | — | Cloud, IoT, ML security not covered |
+
+### Gaps to Fill
+
+| Priority | Gap | SWEBOK Topic | What's Missing |
+|----------|-----|-------------|----------------|
+| 🔴 High | Domain-Specific Security | Domain-Specific | Container/cloud security, IoT security, ML security (poisoning, evasion) |
+| 🔴 High | Vulnerability Management | Security Engineering | CVE, CWE, CAPEC, CVSS taxonomies and scoring |
+| 🟡 Medium | Security Management | Management & Org | SSE-CMM, ISO 27001 ISMS organizational governance |
+| 🟡 Medium | CERT Secure Coding Practices | Security Engineering | CERT Top 10: input validation, least privilege, defense in depth |
+| 🟢 Low | Security Testing Techniques | Tools | SAST, DAST, fuzzing, web app scanners (cross-covered by Ch.05) |

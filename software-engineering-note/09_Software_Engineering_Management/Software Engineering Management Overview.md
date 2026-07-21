@@ -75,3 +75,39 @@ SWEBOK v4 organizes management by activities (what happens) rather than phases (
 - **[[Software Configuration Management Overview|Software Configuration Management]]** — Change control, status accounting, and auditing provide management visibility during enactment and closure.
 - **[[Software Maintenance Overview|Software Maintenance]]** — Maintenance planning, technical debt prioritization, and legacy system decisions are management concerns.
 - **[[Software Engineering Models and Methods Overview|Software Engineering Models and Methods]]** — Methods and modeling approaches are selected during process planning.
+
+---
+
+## SWEBOK v4 Coverage Map
+
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 09 | **Last analyzed:** 2026-07-21 | **Coverage:** ~20%
+
+| # | SWEBOK Topic | Status | Vault File(s) | Notes |
+|---|---|---|---|---|
+| 1 | Initiation and Scope Definition | ❌ | — | No coverage of project initiation, scope definition, feasibility |
+| 2 | Software Project Planning | ❌ | Overview only | Overview references SDLC, WBS, estimation but no dedicated files |
+| 3 | Software Project Enactment | ❌ | Overview only | Overview references Dev/Sec/Ops but no dedicated files |
+| 4 | Review and Evaluation | ⚠️ | `04_Growing_Productive_Teams`, `05` | Team performance touched; no earned value, no stakeholder assessment |
+| 5 | Closure | ❌ | `05` (organizational learning only) | No project closure processes, archiving, formal retrospectives |
+| 6 | Software Engineering Measurement | ❌ | Overview only | Overview references ISO 15939, GQM, RACI but no dedicated files |
+| 7 | Management Tools | ❌ | — | No coverage of project planning tools, risk registers, Gantt charts |
+
+### Gaps to Fill
+
+| Priority | Gap | SWEBOK Topic | What's Missing |
+|----------|-----|-------------|----------------|
+| 🔴 Critical | Project Initiation & Scope | Initiation & Scope | Project need, scope, feasibility analysis, context diagrams |
+| 🔴 Critical | Estimation Techniques | Project Planning | COCOMO, function points, story points, parametric models |
+| 🔴 Critical | WBS | Project Planning | Work Breakdown Structure creation, decomposition strategies |
+| 🔴 Critical | Formal Risk Management | Project Planning | Risk registers, risk assessment, mitigation planning, Monte Carlo |
+| 🔴 Critical | ISO/IEC/IEEE 15939 | Measurement | Measurement process: commit → plan → perform → evaluate |
+| 🔴 Critical | GQM | Measurement | Goal-Question-Metric framework, goal setting, metric selection |
+| 🔴 Critical | RACI | Measurement | Responsible, Accountable, Consulted, Informed governance |
+| 🟡 High | Earned Value / Variance Analysis | Enactment | Comparing actual vs planned outcomes |
+| 🟡 High | Software Acquisition Management | Enactment | COTS, custom-contracted, open source, SaaS management |
+| 🟡 High | Monitoring, Controlling & Reporting | Enactment | Ongoing project progress tracking |
+| 🟡 High | Project Closure | Closure | Completion criteria, archiving, retrospectives, lessons learned |
+| 🟡 Medium | Resource Allocation | Project Planning | Allocating resources across project activities |
+| 🟡 Medium | Quality Planning | Project Planning | Managing quality as part of project planning |
+
+> **Note:** The vault's Peopleware content (human factors, team dynamics, culture) is valuable supplementary material but does not address SWEBOK's formal PM structure. This chapter has the largest gap of all 15 KAs.

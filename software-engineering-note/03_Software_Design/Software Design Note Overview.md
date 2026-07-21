@@ -74,3 +74,29 @@ The chapter covers foundational principles (abstraction, separation of concerns,
 - **[[Software Construction Overview|Software Construction]]** — Design produces the specifications that construction implements
 - **[[Software Testing Overview|Software Testing]]** — Testing validates design; design provides the foundation for test strategy
 - **[[Software Engineering Operations Overview|Software Engineering Operations]]** — Deployment architecture is shaped by operational needs
+
+---
+
+## SWEBOK v4 Coverage Map
+
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 03 | **Last analyzed:** 2026-07-21 | **Coverage:** ~55%
+
+| # | SWEBOK Topic | Status | Vault File(s) | Notes |
+|---|---|---|---|---|
+| 1 | Design Fundamentals | ⚠️ | `01_Design_Fundamentals_and_Principles.md` (6 KB) | Covers abstraction, SOLID, coupling/cohesion but critically thin |
+| 2 | Design Processes | ⚠️ | `02_Design_Processes.md` (4.6 KB) | High-level vs detailed design mentioned but very thin |
+| 3 | Design Qualities | ⚠️ | `03_Design_Qualities.md` (5.5 KB) | 8 quality topics present but brief |
+| 4 | Recording Software Designs | ⚠️ | `04` + `Design Pattern/` subfolder | MBD, UML, patterns via subfolder; DSLs and design rationale thin |
+| 5 | Design Strategies and Methods | ✅ | `05_Design_Strategies_and_Methods.md` (5.8 KB) | OOD, DDD, event-driven, component-based, AOD all present |
+| 6 | Design Quality Analysis | ⚠️ | `06_Design_Quality_Analysis.md` (6 KB) | Reviews, metrics, static analysis mentioned but thin |
+
+### Gaps to Fill
+
+| Priority | Gap | SWEBOK Topic | What's Missing |
+|----------|-----|-------------|----------------|
+| 🔴 High | DEPTH across all 6 main files | All | Files are 4-6 KB each (10x smaller than other KAs); needs 3-5x expansion |
+| 🟡 Medium | Design Rationale | Recording Designs | ADRs, why-decisions, alternatives, trade-offs, rejected options |
+| 🟡 Medium | Model-Based Design (MBD) | Recording Designs | Evolution from document-based to model-based artifacts |
+| 🟡 Medium | DSLs | Recording Designs | Domain-Specific Language design and application |
+| 🟡 Medium | Variability & Feature Models | Design Qualities | Product line variability, feature modeling |
+| 🟢 Low | Aspect-Oriented Design (AOD) | Design Strategies | Crosscutting concerns implementation via aspects |

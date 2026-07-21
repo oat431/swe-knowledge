@@ -73,3 +73,28 @@ Construction spans a spectrum of languages (configuration languages → scriptin
 - **[[Software Design Note Overview|Software Design]]** — Construction implements design; much detailed design happens during construction
 - **[[Software Testing Overview|Software Testing]]** — Construction testing (unit + integration) feeds broader testing; TDD bridges both KAs
 - **[[Software Engineering Operations Overview|Software Engineering Operations]]** — Build systems, CI/CD pipelines, and deployment scripts bridge construction to operations
+
+---
+
+## SWEBOK v4 Coverage Map
+
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 04 | **Last analyzed:** 2026-07-21 | **Coverage:** ~65%
+
+| # | SWEBOK Topic | Status | Vault File(s) | Notes |
+|---|---|---|---|---|
+| 1 | Construction Fundamentals | ✅ | `01_Construction_Foundations.md` (16 KB) | Metaphors, prerequisites, key decisions |
+| 2 | Managing Construction | ⚠️ | `09_System_Considerations.md` (20 KB) | Lifecycle, managing covered; dependency management only brief |
+| 3 | Practical Considerations | ✅ | `02`-`06`, `10` | Coding practices extensively covered (Code Complete) |
+| 4 | Construction Technologies | ⚠️ | `02`, `API/` subfolder | API design via subfolder; missing executable models, middleware |
+| 5 | Software Construction Tools | ⚠️ | `09` | Code Complete Ch30 covers tools but predates cloud IDEs, LLMs |
+
+### Gaps to Fill
+
+| Priority | Gap | SWEBOK Topic | What's Missing |
+|----------|-----|-------------|----------------|
+| 🟡 Medium | AI-Assisted Programming (LLMs) | Construction Tools | Copilot-style tools, prompt-driven development |
+| 🟡 Medium | Cloud-Based IDEs & Low-Code | Construction Technologies | Cloud dev environments; model-driven + visual programming |
+| 🟡 Medium | Dependency Management / Supply Chain | Managing Construction | Package managers, SBOMs, license compliance, vulnerability monitoring |
+| 🟡 Medium | Executable Models (MDA, PIM/PSM) | Construction Technologies | Model-Driven Architecture, xUML |
+| 🟢 Low | Middleware / ESB | Construction Technologies | Enterprise Service Bus, service-oriented communication |
+| 🟢 Low | CI as Construction Practice | Managing Construction | CI as a construction concern (vs. operations) |

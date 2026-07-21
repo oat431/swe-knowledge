@@ -86,3 +86,33 @@ Methods range from heuristic (experience-based, structured analysis, object-orie
 - **[[Software Quality Overview|Software Quality]]** — Formal methods enable verification. Model checking and inspections are forms of quality assurance.
 - **[[Software Construction Overview|Software Construction]]** — Model-driven development generates code from models. Domain models become the vocabulary of the codebase.
 - **[[Software Engineering Process Overview|Software Engineering Process]]** — Process models and agile process models define how methods are applied in practice.
+
+---
+
+## SWEBOK v4 Coverage Map
+
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 11 | **Last analyzed:** 2026-07-21 | **Coverage:** ~55%
+
+| # | SWEBOK Topic | Status | Vault File(s) | Notes |
+|---|---|---|---|---|
+| 1 | Modeling Principles | ✅ | `01_Modeling_Fundamentals.md` (30 KB) | Three principles, abstraction, submodels via COMET |
+| 2 | Properties/Expression of Models | ⚠️ | Overview | Completeness/consistency/correctness mentioned; no deep dive |
+| 3 | Syntax/Semantics/Pragmatics | ⚠️ | Overview | BNF/metamodels not deeply treated |
+| 4 | Preconditions/Postconditions/Invariants | ❌ | — | Hoare-style reasoning not covered |
+| 5 | Structural Modeling | ✅ | `01`, `02`, `04` | UML class/component/deployment diagrams well covered |
+| 6 | Behavioral Modeling | ✅ | `03_Dynamic_Interaction_Modeling.md` | State machines, interaction diagrams |
+| 7 | Analysis of Models | ⚠️ | `01` | Covered tangentially; no dedicated traceability analysis |
+| 8 | Heuristic Methods | ✅ | `01`-`06` (COMET-based) | OO design heavily covered; UP/RUP/AOP/MDD only in overview |
+| 9 | Formal Methods | ❌ | — | Only a paragraph in overview; no Alloy, model checking, refinement |
+| 10 | Prototyping Methods | ❌ | — | No dedicated file on throwaway/evolutionary prototyping |
+| 11 | Agile Methods | ⚠️ | Overview only | Scrum/XP/FDD/Lean listed but shallow; real depth in Ch.10 |
+
+### Gaps to Fill
+
+| Priority | Gap | SWEBOK Topic | What's Missing |
+|----------|-----|-------------|----------------|
+| 🔴 High | Formal Methods | Formal Methods | Specification languages, model checking, theorem proving, Alloy |
+| 🟡 Medium | Prototyping Methods | Prototyping | Throwaway/evolutionary prototyping, executable specifications |
+| 🟡 Medium | Preconditions/Postconditions/Invariants | Properties | Design-by-contract reasoning, Hoare logic |
+| 🟢 Low | Syntax/Semantics/Pragmatics | Properties | BNF, metamodels, pragmatics treatment |
+| 🟢 Low | Agile Methods depth | Agile Methods | Cross-covered by Ch.10; low priority here |

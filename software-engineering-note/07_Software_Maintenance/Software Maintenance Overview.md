@@ -66,3 +66,31 @@ The central challenge is managing complexity and change in systems where limited
 - **[[Software Quality Overview|Software Quality]]** — Maintainability is a quality characteristic; technical debt is a quality problem measured through sub-characteristics.
 - **[[Software Engineering Economics Overview|Software Engineering Economics]]** — Maintenance cost dominates lifecycle economics. Build-vs-replace decisions require economic analysis.
 - **[[Software Engineering Management Overview|Software Engineering Management]]** — Maintenance planning, cost estimation, staffing, and organizational design are management concerns.
+
+---
+
+## SWEBOK v4 Coverage Map
+
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 07 | **Last analyzed:** 2026-07-21 | **Coverage:** ~40%
+
+| # | SWEBOK Topic | Status | Vault File(s) | Notes |
+|---|---|---|---|---|
+| 1 | Maintenance Fundamentals | ⚠️ | Overview, `01_Changing_Software` | Feathers covers change types but not SWEBOK's 6 categories or Lehman's Laws |
+| 2 | Key Issues | ⚠️ | `01`, `04`, `05` | Limited understanding, impact analysis, regression testing covered; staffing, outsourcing, tech debt measurement missing |
+| 3 | Maintenance Processes | ❌ | Overview only | ISO/IEC/IEEE 14764, four-level planning, MR/PR workflows not covered |
+| 4 | Maintenance Techniques | ✅ | `01`-`06` (all Feathers notes) | Program comprehension, refactoring, dependency breaking (24 techniques) |
+| 5 | Maintenance Tools | ❌ | `06` mentions some tools | Static/dynamic analyzers, program slicers, reverse engineering tools missing |
+
+### Gaps to Fill
+
+| Priority | Gap | SWEBOK Topic | What's Missing |
+|----------|-----|-------------|----------------|
+| 🔴 High | Lehman's Laws of Software Evolution | Fundamentals | 8 empirical laws describing software behavior over time |
+| 🔴 High | ISO/IEC/IEEE 14764 Processes | Maintenance Processes | Prepare, perform, logistics support, manage results; MR/PR workflows |
+| 🟡 Medium | Six Standardized Maintenance Categories | Fundamentals | Corrective, preventive, adaptive, additive, perfective, emergency |
+| 🟡 Medium | Staffing & Organizational Decisions | Key Issues | Single team vs separate maintenance team; knowledge retention trade-offs |
+| 🟡 Medium | Outsourcing/Offshoring | Key Issues | Single-source vs multi-sourcing; SLA/SLI/SLO contracts |
+| 🟡 Medium | Technical Debt Measurement | Key Issues | Size, complexity, code smells, architectural violations metrics |
+| 🟡 Medium | Reverse Engineering | Techniques | Design recovery, re-documentation |
+| 🟢 Low | Software Visualization | Techniques | Dependency analysis, evolution history, runtime behavior visualization |
+| 🟢 Low | Maintenance Tools Ecosystem | Tools | Static/dynamic analyzers, program slicers, cross-referencers, maturity models |

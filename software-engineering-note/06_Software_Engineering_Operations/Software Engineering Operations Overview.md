@@ -72,3 +72,29 @@ The chapter distinguishes between **release** (making features available to cust
 - **[[Software Testing Overview|Software Testing]]** — Continuous testing in pipelines, canary deployments, and production monitoring blur testing/operations boundary
 - **[[Software Design Note Overview|Software Design]]** — Deployment architecture (containers, microservices) is shaped by operational needs
 - **[[Software Requirements Overview|Software Requirements]]** — Requirements drive SLAs, capacity planning, and operational constraints
+
+---
+
+## SWEBOK v4 Coverage Map
+
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 06 *(NEW in v4)* | **Last analyzed:** 2026-07-21 | **Coverage:** ~65%
+
+| # | SWEBOK Topic | Status | Vault File(s) | Notes |
+|---|---|---|---|---|
+| 1 | Fundamentals | ✅ | `01_The_Three_Ways`, `Fundamental/13 CI CD Pipelines` | DevOps, Three Ways, operations engineer role, CI/CD |
+| 2 | Operations Planning | ⚠️ | Overview, `01` | SLAs and capacity mentioned; DR/backup, supplier mgmt not deep |
+| 3 | Operations Delivery | ✅ | `03_Accelerating_Flow`, `06_DevSecOps`, `Fundamental/13` | Deployment strategies, CI/CD, change management well covered |
+| 4 | Operations Control | ⚠️ | `04_Amplifying_Feedback`, `05_Continual_Learning` | Telemetry/incident mgmt covered; service desks, KPIs missing |
+| 5 | Practical Considerations | ⚠️ | `06`, `Fundamental/13` | Automation and risk touched; ISO 29110 missing |
+| 6 | Operations Tools | ✅ | `Fundamental/13`, `Fundamental/14 Docker` | Containers, CI/CD toolchains, monitoring well covered |
+
+### Gaps to Fill
+
+| Priority | Gap | SWEBOK Topic | What's Missing |
+|----------|-----|-------------|----------------|
+| 🟡 Medium | Capacity Management | Operations Planning | Sizing models, workload estimation, capacity plan structure |
+| 🟡 Medium | Backup / DR / Failover | Operations Planning | DR strategies, backup types, failover patterns, recovery rehearsal |
+| 🟡 Medium | Service Reporting & KPIs | Operations Control | Service reporting frameworks, KPI selection, stakeholder dashboards |
+| 🟡 Medium | Service Desks | Operations Control | Service desk operations, support tiers, escalation procedures |
+| 🟢 Low | Problem Management | Operations Control | Distinct from incident management — root cause of recurring issues |
+| 🟢 Low | ISO/IEC 29110 | Practical Considerations | Lifecycle profiles for Very Small Entities (≤25 people) |

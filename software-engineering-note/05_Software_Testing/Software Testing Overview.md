@@ -78,3 +78,32 @@ The chapter covers test levels (unit → integration → system → acceptance),
 - **[[Software Construction Overview|Software Construction]]** — Unit testing and TDD are construction practices; developers are the first testers
 - **[[Software Design Note Overview|Software Design]]** — Design for testability; interface specifications feed integration testing
 - **[[Software Engineering Operations Overview|Software Engineering Operations]]** — Continuous testing in CI/CD pipelines and production monitoring blur the boundary between testing and operations
+
+---
+
+## SWEBOK v4 Coverage Map
+
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 05 | **Last analyzed:** 2026-07-21 | **Coverage:** ~60%
+
+| # | SWEBOK Topic | Status | Vault File(s) | Notes |
+|---|---|---|---|---|
+| 1 | Testing Fundamentals | ✅ | `01_Testing_Fundamentals.md` (20 KB) | SUT, faults vs failures, oracle problem |
+| 2 | Test Levels | ✅ | `05_Integration_and_System.md` (21 KB) | Integration strategies, system testing, risk-based |
+| 3 | Test Techniques | ✅ | `02`, `03`, `04`, `07`, `08` | Boundary, equivalence, decision tables, path, data flow, OO, mutation |
+| 4 | Test-Related Measures | ⚠️ | Scattered across 7 files | Coverage metrics mentioned but no consolidated treatment |
+| 5 | Test Process | ⚠️ | `06` | SWEBOK's 3-layer process model not deeply covered |
+| 6 | Testing in Dev Processes | ⚠️ | `06`, `08` | TDD, lifecycle covered; domain-specific testing missing |
+| 7 | Emerging Technologies | ⚠️ | `08_Emerging_Topics.md` (19 KB) | Exploratory, TDD, mutation covered; AI/ML testing thin |
+| 8 | Testing Tools | ❌ | Overview only | No dedicated file; SWEBOK catalogs 15+ tool categories |
+
+### Gaps to Fill
+
+| Priority | Gap | SWEBOK Topic | What's Missing |
+|----------|-----|-------------|----------------|
+| 🔴 High | Testing Tools (catalog) | Testing Tools | 15+ tool categories: harnesses, generators, coverage analyzers, etc. |
+| 🟡 Medium | Test Process (3-layer model) | Test Process | Org → Management → Dynamic levels; test planning, monitoring, control |
+| 🟡 Medium | Test-Related Measures (consolidated) | Test-Related Measures | Reliability growth models, fault density, mutation score |
+| 🟡 Medium | AI/ML/DL System Testing | Emerging Technologies | Data quality, model validation, metamorphic relations, bias testing |
+| 🟡 Medium | Domain-Specific Testing | Testing in Dev Processes | Automotive, IoT, healthcare, mobile, avionics, finance, embedded |
+| 🟢 Low | Blockchain & Cloud Testing | Emerging Technologies | Testing blockchain apps and cloud deployments |
+| 🟢 Low | Testing Standards | Testing Tools | ISO 29119, IEEE 1012, TMMi, CMMI testing maturity |
