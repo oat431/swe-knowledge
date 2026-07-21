@@ -50,15 +50,13 @@ The central challenge is managing complexity and change in systems where limited
 
 ## My Notes
 
-*(No additional notes yet)*
-
-## What's Missing
-
-- Maintenance Fundamentals (Lehman's Laws of Evolution, 6 maintenance categories)
-- Key Issues (impact analysis, technical debt economics, maintainability, staffing)
-- Maintenance Processes (ISO/IEC/IEEE 14764, program understanding, transition)
-- Maintenance Techniques (reengineering, refactoring, reverse engineering, visualization)
-- Maintenance Tools
+### Working Effectively with Legacy Code (Feathers)
+- [[01_Changing_Software]] — Legacy code defined, Legacy Code Change Algorithm, test coverings
+- [[02_Sensing_and_Seams]] — Fakes/mocks, seam model (link/preprocessing/object), tools
+- [[03_Adding_Features]] — Sprout Method/Class, Wrap Method/Class, TDD with legacy code
+- [[04_Getting_Tests_in_Place]] — Test harness, characterization tests, irritating parameters, dependencies
+- [[05_Large_Scale_Changes]] — Extract Class, monster methods, overwhelmed teams, hyperaware editing
+- [[06_Dependency_Breaking_Catalog]] — 25+ techniques: Extract Interface, Subclass & Override, Adapt Parameter, etc.
 
 ## Relationship to Other KAs
 
