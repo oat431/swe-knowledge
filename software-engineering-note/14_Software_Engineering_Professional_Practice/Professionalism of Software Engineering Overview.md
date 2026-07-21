@@ -42,16 +42,16 @@ The economic impact of software is immense: success or failure affects employmen
 
 ## My Notes
 
+### SWEBOK Professional Practice Foundations
+- [[01_Professionalism_Ethics_and_Legal]] — ACM/IEEE Code of Ethics, accreditation, certification, licensing, legal/IP
+- [[02_Group_Dynamics_and_Psychology]] — Cognitive biases, team stages (Tuckman), psychological safety, DEI
+- [[03_Communication_Skills]] — Technical reading, writing, presentation, document types, ADRs
+
+### Books
 - [[clean-coder/]]
 - [[clean-craftsmanship/]]
 - [[clean-agile/]]
 - [[the-pragmatic-programmer/]]
-
-## What's Missing
-
-- Professionalism (accreditation, certification, licensing, Codes of Ethics, legal/IP)
-- Group Dynamics & Psychology (team cohesion, cognitive load, DEI)
-- Communication Skills (technical reading, writing, presentation)
 
 ## Relationship to Other KAs
 
