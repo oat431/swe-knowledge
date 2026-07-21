@@ -60,16 +60,12 @@ SWEBOK v4 organizes management by activities (what happens) rather than phases (
 
 ## My Notes
 
-*(No additional notes yet)*
-
-## What's Missing
-
-- Initiation & Scope Definition
-- Project Planning (estimation, WBS, risk management)
-- Project Enactment (execution, measurement)
-- Review & Evaluation (earned value, variance analysis)
-- Closure (retrospectives, lessons learned)
-- Engineering Measurement (ISO 15939, GQM)
+### Peopleware (DeMarco & Lister)
+- [[01_Managing_the_Human_Resource]] — Projects fail on people, Spanish vs. English theory, quality, Parkinson's Law
+- [[02_The_Office_Environment]] — Furniture police, flow time, E-Factor, workspace design, Coding War Games
+- [[03_The_Right_People]] — Hornblower factor, leadership, hiring, turnover, human capital
+- [[04_Growing_Productive_Teams]] — Jelled teams, Black Team, teamicide, competition, chemistry
+- [[05_Fertile_Soil_and_Fun]] — Self-healing systems, risk, meetings, email, change, organizational learning, fun
 
 ## Relationship to Other KAs
 
