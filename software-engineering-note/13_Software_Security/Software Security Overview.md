@@ -57,14 +57,15 @@ Organizational governance matters too. The SSE-CMM measures process capability, 
 
 ## My Notes
 
+### Security Engineering (Anderson)
+- [[01_Security_Fundamentals]] — Security framework, opponent types, psychology/usability, security economics
+- [[02_Protocols_and_Cryptography]] — Authentication protocols, symmetric/asymmetric crypto, TLS 1.3
+- [[03_Access_Control_and_Architecture]] — ACLs/capabilities, OS security, MLS, distributed systems, inference
+- [[04_Network_Attack_and_Defence]] — Network attacks, DDoS, DNS, firewalls, IDS, malware, botnets
+- [[05_Secure_Development_and_Assurance]] — Secure SDLC, threat modeling, assurance, Common Criteria
+
+### Applied Security
 - [[Cybersecurity/]]
-
-## What's Missing
-
-- Security Management & Organization (SSE-CMM, ISO 27001, Agile security)
-- Software Security Engineering & Processes (Secure SDLC, DevSecOps, Common Criteria)
-- Security Tools (source code analyzers, binary analysis, fuzzing tools)
-- Domain-Specific Security (container security, IoT, ML security)
 
 ## Relationship to Other KAs
 
