@@ -77,15 +77,15 @@ The chapter distinguishes between **release** (making features available to cust
 
 ## SWEBOK v4 Coverage Map
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 06 *(NEW in v4)* | **Last analyzed:** 2026-07-21 | **Coverage:** ~65%
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 06 *(NEW in v4)* | **Last analyzed:** 2026-07-21 | **Coverage:** ~85% (updated)
 
 | # | SWEBOK Topic | Status | Vault File(s) | Notes |
 |---|---|---|---|---|
 | 1 | Fundamentals | ✅ | `01_The_Three_Ways`, `Fundamental/13 CI CD Pipelines` | DevOps, Three Ways, operations engineer role, CI/CD |
-| 2 | Operations Planning | ⚠️ | Overview, `01` | SLAs and capacity mentioned; DR/backup, supplier mgmt not deep |
+| 2 | Operations Planning | ✅ | `07_Capacity_and_Disaster_Recovery.md` (22 KB) | Capacity mgmt, RPO/RTO, failover patterns, chaos engineering |
 | 3 | Operations Delivery | ✅ | `03_Accelerating_Flow`, `06_DevSecOps`, `Fundamental/13` | Deployment strategies, CI/CD, change management well covered |
-| 4 | Operations Control | ⚠️ | `04_Amplifying_Feedback`, `05_Continual_Learning` | Telemetry/incident mgmt covered; service desks, KPIs missing |
-| 5 | Practical Considerations | ⚠️ | `06`, `Fundamental/13` | Automation and risk touched; ISO 29110 missing |
+| 4 | Operations Control | ✅ | `04`, `05`, `08_Service_Operations_and_Support.md` (22 KB) | Service desks, KPIs, problem mgmt, SLA/SLO/SLI |
+| 5 | Practical Considerations | ✅ | `06`, `09_Operations_Standards_and_Practices.md` (27 KB) | ISO 29110, ITIL v4, GitOps, platform engineering |
 | 6 | Operations Tools | ✅ | `Fundamental/13`, `Fundamental/14 Docker` | Containers, CI/CD toolchains, monitoring well covered |
 
 ### Gaps to Fill

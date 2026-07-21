@@ -95,14 +95,14 @@ Architecture matters because it determines quality attributes — performance, s
 
 ## SWEBOK v4 Coverage Map
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 02 *(NEW in v4)* | **Last analyzed:** 2026-07-21 | **Coverage:** ~85%
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 02 *(NEW in v4)* | **Last analyzed:** 2026-07-21 | **Coverage:** ~92% (updated)
 
 | # | SWEBOK Topic | Status | Vault File(s) | Notes |
 |---|---|---|---|---|
 | 1 | Architecture Fundamentals | ✅ | `01_Architecture_Fundamentals.md` (28 KB) | Three senses, stakeholders, ISO 42010 |
 | 2 | Views and Viewpoints | ✅ | `07_Design_and_Documentation.md` (27 KB) | 4+1 model, views & beyond, viewtypes |
 | 3 | Patterns, Styles, Reference Architectures | ✅ | `06_Tactics_and_Patterns.md` (25 KB) | Full pattern catalog |
-| 4 | ADLs and Frameworks | ⚠️ | `01`, `07`, overview | Mentioned but no dedicated file; ArchiMate, AUTOSAR, UAF, RM-ODP |
+| 4 | ADLs and Frameworks | ✅ | `01`, `07`, `08_ADLs_and_Architecture_Frameworks.md` (23 KB) | ADLs (Acme, ArchiMate, SysML), frameworks (AUTOSAR, UAF, TOGAF, Zachman) |
 | 5 | Architecture as Significant Decisions | ⚠️ | `07`, `09` | Rationale and tech debt covered but scattered; not standalone KA |
 | 6 | Architectural Design Process | ✅ | `07`, `08` | ADD, agile architecting, iterative cycle |
 | 7 | Architecture Evaluation | ✅ | `09_Evaluation_and_Governance.md` (23 KB) | ATAM, SAAM, QAW, governance |

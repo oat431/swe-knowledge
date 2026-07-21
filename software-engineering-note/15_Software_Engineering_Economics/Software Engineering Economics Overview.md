@@ -85,7 +85,7 @@ Software has unique economic properties: front-loaded development costs with nea
 
 ## SWEBOK v4 Coverage Map
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 15 | **Last analyzed:** 2026-07-21 | **Coverage:** ~75%
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 15 | **Last analyzed:** 2026-07-21 | **Coverage:** ~85% (updated)
 
 | # | SWEBOK Topic | Status | Vault File(s) | Notes |
 |---|---|---|---|---|

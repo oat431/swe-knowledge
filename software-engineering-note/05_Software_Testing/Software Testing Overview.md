@@ -83,7 +83,7 @@ The chapter covers test levels (unit → integration → system → acceptance),
 
 ## SWEBOK v4 Coverage Map
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 05 | **Last analyzed:** 2026-07-21 | **Coverage:** ~60%
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 05 | **Last analyzed:** 2026-07-21 | **Coverage:** ~80% (updated)
 
 | # | SWEBOK Topic | Status | Vault File(s) | Notes |
 |---|---|---|---|---|
@@ -92,9 +92,9 @@ The chapter covers test levels (unit → integration → system → acceptance),
 | 3 | Test Techniques | ✅ | `02`, `03`, `04`, `07`, `08` | Boundary, equivalence, decision tables, path, data flow, OO, mutation |
 | 4 | Test-Related Measures | ⚠️ | Scattered across 7 files | Coverage metrics mentioned but no consolidated treatment |
 | 5 | Test Process | ⚠️ | `06` | SWEBOK's 3-layer process model not deeply covered |
-| 6 | Testing in Dev Processes | ⚠️ | `06`, `08` | TDD, lifecycle covered; domain-specific testing missing |
-| 7 | Emerging Technologies | ⚠️ | `08_Emerging_Topics.md` (19 KB) | Exploratory, TDD, mutation covered; AI/ML testing thin |
-| 8 | Testing Tools | ❌ | Overview only | No dedicated file; SWEBOK catalogs 15+ tool categories |
+| 6 | Testing in Dev Processes | ✅ | `06`, `08`, `10_Domain_Specific_Testing.md` (30 KB) | 10 domains: automotive, IoT, healthcare, mobile, avionics, finance, gaming, embedded, cloud, blockchain |
+| 7 | Emerging Technologies | ✅ | `08`, `11_AI_ML_Testing_and_Emerging.md` (34 KB) | AI/ML testing, data quality, model validation, adversarial testing, chaos engineering |
+| 8 | Testing Tools | ✅ | `09_Testing_Tools_and_Standards.md` (35 KB) | 15+ tool categories, ISO 29119, TMMi, CMMI, ODC |
 
 ### Gaps to Fill
 

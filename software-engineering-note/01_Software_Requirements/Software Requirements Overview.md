@@ -65,13 +65,13 @@ flowchart TD
 
 ## SWEBOK v4 Coverage Map
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 01 | **Last analyzed:** 2026-07-21 | **Coverage:** ~80%
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 01 | **Last analyzed:** 2026-07-21 | **Coverage:** ~90% (updated)
 
 | #   | SWEBOK Topic                | Status | Vault File(s)                                       | Notes                                                                                       |
 | --- | --------------------------- | ------ | --------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | 1   | Requirements Fundamentals   | ✅      | `01_Requirements_Fundamentals.md` (31 KB)           | Substantive: levels/types, cost amplification, BA role                                      |
 | 2   | Requirements Elicitation    | ✅      | `03_Requirements_Elicitation.md` (21 KB)            | Interviews, workshops, observation, questionnaires                                          |
-| 3   | Requirements Analysis       | ⚠️     | `01`, `08`                                          | SWEBOK's 5-Whys, QoS economic curve, formal analysis are SWEBOK-specific; content scattered |
+| 3 | Requirements Analysis | ✅ | `01`, `08`, `12_Formal_Requirements_Specification.md` (31 KB), `13_ATDD_BDD_and_Acceptance.md` (32 KB) | Formal spec (Z/VDM/Alloy), ATDD/BDD as specification |
 | 4   | Requirements Specification  | ✅      | `05_Documenting_Requirements.md` (45 KB)            | SRS, templates, writing excellent requirements                                              |
 | 5   | Requirements Validation     | ✅      | `08_Prioritization_Validation_and_Reuse.md` (28 KB) | Inspection, acceptance criteria                                                             |
 | 6   | Requirements Management     | ✅      | `10_Requirements_Management.md` (45 KB)             | Baseline, change control, CCB, traceability                                                 |

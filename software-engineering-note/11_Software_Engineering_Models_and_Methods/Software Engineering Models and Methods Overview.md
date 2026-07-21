@@ -91,20 +91,20 @@ Methods range from heuristic (experience-based, structured analysis, object-orie
 
 ## SWEBOK v4 Coverage Map
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 11 | **Last analyzed:** 2026-07-21 | **Coverage:** ~55%
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 11 | **Last analyzed:** 2026-07-21 | **Coverage:** ~80% (updated)
 
 | # | SWEBOK Topic | Status | Vault File(s) | Notes |
 |---|---|---|---|---|
 | 1 | Modeling Principles | ✅ | `01_Modeling_Fundamentals.md` (30 KB) | Three principles, abstraction, submodels via COMET |
 | 2 | Properties/Expression of Models | ⚠️ | Overview | Completeness/consistency/correctness mentioned; no deep dive |
 | 3 | Syntax/Semantics/Pragmatics | ⚠️ | Overview | BNF/metamodels not deeply treated |
-| 4 | Preconditions/Postconditions/Invariants | ❌ | — | Hoare-style reasoning not covered |
+| 4 | Preconditions/Postconditions/Invariants | ✅ | `09_Design_Contract_and_Modeling.md` (21 KB) | DbC, Hoare triples, LSP, Eiffel/JML, metamodels, MDA |
 | 5 | Structural Modeling | ✅ | `01`, `02`, `04` | UML class/component/deployment diagrams well covered |
 | 6 | Behavioral Modeling | ✅ | `03_Dynamic_Interaction_Modeling.md` | State machines, interaction diagrams |
 | 7 | Analysis of Models | ⚠️ | `01` | Covered tangentially; no dedicated traceability analysis |
 | 8 | Heuristic Methods | ✅ | `01`-`06` (COMET-based) | OO design heavily covered; UP/RUP/AOP/MDD only in overview |
-| 9 | Formal Methods | ❌ | — | Only a paragraph in overview; no Alloy, model checking, refinement |
-| 10 | Prototyping Methods | ❌ | — | No dedicated file on throwaway/evolutionary prototyping |
+| 9 | Formal Methods | ✅ | `07_Formal_Methods.md` (15 KB) | Z, VDM, B/Event-B, TLA+, Alloy, model checking, theorem proving |
+| 10 | Prototyping Methods | ✅ | `08_Prototyping_Methods.md` (15 KB) | Throwaway, evolutionary, incremental, horizontal/vertical, MVP |
 | 11 | Agile Methods | ⚠️ | Overview only | Scrum/XP/FDD/Lean listed but shallow; real depth in Ch.10 |
 
 ### Gaps to Fill

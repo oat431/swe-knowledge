@@ -66,7 +66,7 @@ The economic impact of software is immense: success or failure affects employmen
 
 ## SWEBOK v4 Coverage Map
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 14 | **Last analyzed:** 2026-07-21 | **Coverage:** ~80%
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 14 | **Last analyzed:** 2026-07-21 | **Coverage:** ~95% (updated)
 
 | # | SWEBOK Topic | Status | Vault File(s) | Notes |
 |---|---|---|---|---|

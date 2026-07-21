@@ -65,7 +65,7 @@ Quality management requires organizational commitment: a Quality Management Syst
 
 ## SWEBOK v4 Coverage Map
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 12 | **Last analyzed:** 2026-07-21 | **Coverage:** ~75%
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 12 | **Last analyzed:** 2026-07-21 | **Coverage:** ~90% (updated)
 
 | # | SWEBOK Topic | Status | Vault File(s) | Notes |
 |---|---|---|---|---|

@@ -80,7 +80,7 @@ SWEBOK v4 organizes management by activities (what happens) rather than phases (
 
 ## SWEBOK v4 Coverage Map
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 09 | **Last analyzed:** 2026-07-21 | **Coverage:** ~65% (updated)
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 09 | **Last analyzed:** 2026-07-21 | **Coverage:** ~75% (updated)
 
 | # | SWEBOK Topic | Status | Vault File(s) | Notes |
 |---|---|---|---|---|
@@ -89,7 +89,7 @@ SWEBOK v4 organizes management by activities (what happens) rather than phases (
 | 3 | Software Project Enactment | ✅ | `08_Risk_Management_and_Control.md` (27 KB) | Risk mgmt, EVM, acquisition, monitoring, status reporting |
 | 4 | Review and Evaluation | ⚠️ | `04_Growing_Productive_Teams`, `05` | Team performance touched; no earned value, no stakeholder assessment |
 | 5 | Closure | ✅ | `08_Risk_Management_and_Control.md` | Completion criteria, archiving, retrospectives, lessons learned |
-| 6 | Software Engineering Measurement | ❌ | Overview only | Overview references ISO 15939, GQM, RACI but no dedicated files |
+| 6 | Software Engineering Measurement | ✅ | `07_Measurement_and_Metrics.md` (16 KB) | ISO 15939, GQM, RACI, base/derived measures, agile metrics |
 | 7 | Management Tools | ⚠️ | `07_Estimation_and_Planning.md` | Estimation tools, scheduling; risk registers in `08` |
 
 ### Gaps to Fill

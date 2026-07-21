@@ -79,14 +79,14 @@ The chapter covers foundational principles (abstraction, separation of concerns,
 
 ## SWEBOK v4 Coverage Map
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 03 | **Last analyzed:** 2026-07-21 | **Coverage:** ~55%
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 03 | **Last analyzed:** 2026-07-21 | **Coverage:** ~75% (updated)
 
 | # | SWEBOK Topic | Status | Vault File(s) | Notes |
 |---|---|---|---|---|
 | 1 | Design Fundamentals | ⚠️ | `01_Design_Fundamentals_and_Principles.md` (6 KB) | Covers abstraction, SOLID, coupling/cohesion but critically thin |
 | 2 | Design Processes | ⚠️ | `02_Design_Processes.md` (4.6 KB) | High-level vs detailed design mentioned but very thin |
-| 3 | Design Qualities | ⚠️ | `03_Design_Qualities.md` (5.5 KB) | 8 quality topics present but brief |
-| 4 | Recording Software Designs | ⚠️ | `04` + `Design Pattern/` subfolder | MBD, UML, patterns via subfolder; DSLs and design rationale thin |
+| 3 | Design Qualities | ✅ | `03`, `09_Variability_and_Feature_Models.md` (31 KB) | SPL, feature modeling, variability mechanisms, binding time |
+| 4 | Recording Software Designs | ✅ | `04`, `07_Design_Rationale_and_Decisions.md` (25 KB), `08_Model_Based_Design.md` (27 KB) | ADRs, MDA, DSLs, model-based testing |
 | 5 | Design Strategies and Methods | ✅ | `05_Design_Strategies_and_Methods.md` (5.8 KB) | OOD, DDD, event-driven, component-based, AOD all present |
 | 6 | Design Quality Analysis | ⚠️ | `06_Design_Quality_Analysis.md` (6 KB) | Reviews, metrics, static analysis mentioned but thin |
 

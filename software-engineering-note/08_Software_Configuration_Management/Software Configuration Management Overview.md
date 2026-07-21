@@ -83,15 +83,15 @@ The core principles are deceptively simple — identify what you have, control h
 
 ## SWEBOK v4 Coverage Map
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 08 | **Last analyzed:** 2026-07-21 | **Coverage:** ~55%
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 08 | **Last analyzed:** 2026-07-21 | **Coverage:** ~80% (updated)
 
 | # | SWEBOK Topic | Status | Vault File(s) | Notes |
 |---|---|---|---|---|
 | 1 | Management of SCM Process | ⚠️ | `01_SCM_Fundamentals` | Covers SCM role, tool selection; no SCMP, vendor control |
 | 2 | Software Configuration Identification | ✅ | `01`, `02_Codeline_and_Branching` | CIs, codelines, versions, labels, branches well covered |
-| 3 | Software Configuration Change Control | ⚠️ | `02`, `04_Commit_and_Testing` | Codeline policy covers some; no CCB, no formal CR workflows |
-| 4 | Software Configuration Status Accounting | ❌ | — | No coverage of SCSA, change traffic metrics |
-| 5 | Software Configuration Auditing | ❌ | — | No coverage of FCA, PCA, or in-process audits |
+| 3 | Software Configuration Change Control | ✅ | `02`, `04`, `09_Change_Control_and_Compliance.md` (26 KB) | CCB, CR lifecycle, SBOM, VDD, CMDB, cryptographic hashing |
+| 4 | Software Configuration Status Accounting | ✅ | `07_SCSA_and_Status_Accounting.md` (14 KB) | CI status, change traffic metrics, governance/compliance evidence |
+| 5 | Software Configuration Auditing | ✅ | `08_Configuration_Auditing.md` (19 KB) | FCA, PCA, in-process audits, deviations/waivers, SCMP |
 | 6 | Release Management & Delivery | ✅ | `05_Release_and_Version_Management` | Release Lines, Release-Prep, Task Branch, Daily Build |
 | 7 | SCM Tools | ✅ | `Version Control/01-03` | Git extensively covered; CMDB, SBOM tools missing |
 
