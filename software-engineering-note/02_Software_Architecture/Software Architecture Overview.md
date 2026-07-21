@@ -59,6 +59,20 @@ Architecture matters because it determines quality attributes — performance, s
 
 ## My Notes
 
+### SAiP (Software Architecture in Practice)
+- [[01_Architecture_Fundamentals]] — What architecture is, structures & views, contexts & stakeholders
+- [[02_Quality_Attributes_Overview]] — QA scenarios, specifying QAs, tactics framework
+- [[03_Availability_and_Interoperability]] — Fault detection/recovery, service discovery, mediation
+- [[04_Modifiability_and_Performance]] — Coupling/cohesion, resource management, concurrency, caching
+- [[05_Security_and_Testability]] — Authenticate/authorize, confidentiality, test interfaces, observability
+- [[06_Tactics_and_Patterns]] — Full tactics catalog + architecture pattern reference
+- [[07_Design_and_Documentation]] — ASRs, Attribute-Driven Design (ADD), views & beyond
+- [[08_Architecture_in_Agile]] — Agile architecting, just-in-time design, guidelines
+- [[09_Evaluation_and_Governance]] — Reconstruction, ATAM, management, governance
+- [[10_Economics_and_Product_Lines]] — CBAM, architecture competence, software product lines
+- [[11_Cloud_and_Edge_Architecture]] — Cloud-native patterns, edge systems, Metropolis model
+
+### Microservice
 - [[Microservice/Microservice Overview|Microservice Overview]]
   - [[Microservice/01 Decomposition/|01 Decomposition]]
   - [[Microservice/02 Integration/|02 Integration]]
@@ -67,16 +81,6 @@ Architecture matters because it determines quality attributes — performance, s
   - [[Microservice/05 Observability/|05 Observability]]
   - [[Microservice/06 Infrastructure/|06 Infrastructure]]
   - [[Microservice/07 Deployment/|07 Deployment]]
-
-## What's Missing
-
-- Architecture Fundamentals (three senses, stakeholders, ASRs)
-- Architecture Views and Viewpoints (4+1, IEEE 42010)
-- Architecture Patterns & Styles (layered, client-server, MVC, pipes-and-filters, event-driven, hexagonal)
-- Architecture Description Languages (UML, ArchiMate, C4 model)
-- Architecture Decisions & Technical Debt (ADRs, rationale capture)
-- Architecture Design Process (analysis → synthesis → evaluation)
-- Architecture Evaluation (ATAM, SAAM, fitness functions)
 
 ## Relationship to Other KAs
 
