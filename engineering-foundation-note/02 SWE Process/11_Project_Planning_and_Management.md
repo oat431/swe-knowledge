@@ -17,18 +17,35 @@ Project management is one of the core practices of software engineering. It cove
 
 The Work Breakdown Structure decomposes a project into a hierarchy of **Phase → Step → Activity**:
 
-```
-PROJECT
-├── Phase 1
-│   ├── Step 1.1
-│   │   ├── Activity 1.1.1
-│   │   └── Activity 1.1.2
-│   └── Step 1.2
-│       ├── Activity 1.2.1
-│       └── Activity 1.2.2
-└── Phase 2
-    ├── Step 2.1
-    └── Step 2.2
+```mermaid
+%%{init: {'theme':'dark'}}%%
+graph TD
+    P["PROJECT"]
+    P1["Phase 1"]
+    P2["Phase 2"]
+    S11["Step 1.1"]
+    S12["Step 1.2"]
+    S21["Step 2.1"]
+    S22["Step 2.2"]
+    A111["Activity 1.1.1"]
+    A112["Activity 1.1.2"]
+    A121["Activity 1.2.1"]
+    A122["Activity 1.2.2"]
+
+    P --> P1
+    P --> P2
+    P1 --> S11
+    P1 --> S12
+    P2 --> S21
+    P2 --> S22
+    S11 --> A111
+    S11 --> A112
+    S12 --> A121
+    S12 --> A122
+
+    style P fill:#2d6a4f,stroke:#40916c,color:#fff
+    style P1 fill:#264653,stroke:#2a9d8f,color:#fff
+    style P2 fill:#264653,stroke:#2a9d8f,color:#fff
 ```
 
 - **Activity** is a measurable event with clear completion criteria

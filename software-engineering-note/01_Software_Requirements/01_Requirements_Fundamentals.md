@@ -50,34 +50,22 @@ Several definitions exist:
 
 Software requirements exist at **three levels**, plus an assortment of nonfunctional requirements:
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  BUSINESS REQUIREMENTS  (Why?)                          │
-│  Business objectives, vision & scope                    │
-│  Source: Sponsor, customer, marketing, product visionary│
-│  Stored in: Vision & Scope Document                     │
-└───────────────────────┬─────────────────────────────────┘
-                        │ aligns with
-┌───────────────────────▼─────────────────────────────────┐
-│  USER REQUIREMENTS  (What for?)                          │
-│  Goals/tasks users must accomplish; product attributes   │
-│  Source: Actual user representatives                     │
-│  Represented as: Use cases, user stories, event-response │
-│  Stored in: User Requirements Document                   │
-└───────────────────────┬─────────────────────────────────┘
-                        │ derives
-┌───────────────────────▼─────────────────────────────────┐
-│  FUNCTIONAL REQUIREMENTS  (What does it do?)             │
-│  Behaviors the system exhibits under specific conditions │
-│  Written as: "shall" statements                          │
-│  Stored in: Software Requirements Specification (SRS)    │
-└─────────────────────────────────────────────────────────┘
-        +
-┌─────────────────────────────────────────────────────────┐
-│  NONFUNCTIONAL REQUIREMENTS                              │
-│  Quality attributes, constraints, external interfaces,  │
-│  compliance/regulatory, localization                     │
-└─────────────────────────────────────────────────────────┘
+```mermaid
+%%{init: {'theme':'dark'}}%%
+flowchart TD
+    BR["Business Requirements (Why?)\nBusiness objectives, vision & scope\nSource: Sponsor, customer, marketing"]
+    UR["User Requirements (What for?)\nGoals/tasks users must accomplish\nSource: User representatives"]
+    FR["Functional Requirements (What does it do?)\nBehaviors the system exhibits\nWritten as: 'shall' statements"]
+    NFR["Nonfunctional Requirements\nQuality attributes, constraints,\nexternal interfaces, compliance"]
+
+    BR -->|"aligns with"| UR
+    UR -->|"derives"| FR
+    FR --- NFR
+
+    style BR fill:#2d6a4f,stroke:#40916c,color:#fff
+    style UR fill:#264653,stroke:#2a9d8f,color:#fff
+    style FR fill:#3a7ca5,stroke:#5aa9e6,color:#fff
+    style NFR fill:#6b5b95,stroke:#8b7bb5,color:#fff
 ```
 
 #### Types of Requirements Information (Table 1-1)
@@ -140,25 +128,30 @@ Software requirements exist at **three levels**, plus an assortment of nonfuncti
 
 The discipline of **requirements engineering** splits into two halves:
 
-```
-┌──────────────────────────────────────────────┐
-│          REQUIREMENTS ENGINEERING            │
-├──────────────────┬───────────────────────────┤
-│   DEVELOPMENT    │       MANAGEMENT          │
-│ (Part II)        │   (Part IV)               │
-├──────────────────┼───────────────────────────┤
-│ • Elicitation    │ • Define baselines        │
-│ • Analysis       │ • Change impact analysis  │
-│ • Specification  │ • Incorporate approved    │
-│ • Validation     │   changes controlled      │
-│                  │ • Keep plans current      │
-│                  │ • Negotiate new commitments│
-│                  │ • Define relationships &  │
-│                  │   dependencies            │
-│                  │ • Trace reqs → design →   │
-│                  │   code → tests            │
-│                  │ • Track status & changes  │
-└──────────────────┴───────────────────────────┘
+```mermaid
+%%{init: {'theme':'dark'}}%%
+flowchart TD
+    RE["Requirements Engineering"]
+    DEV["Development (Part II)"]
+    MGMT["Management (Part IV)"]
+
+    RE --> DEV
+    RE --> MGMT
+
+    DEV --> D1["Elicitation"]
+    DEV --> D2["Analysis"]
+    DEV --> D3["Specification"]
+    DEV --> D4["Validation"]
+
+    MGMT --> M1["Define baselines"]
+    MGMT --> M2["Change impact analysis"]
+    MGMT --> M3["Incorporate approved changes"]
+    MGMT --> M4["Trace requirements → design → code → tests"]
+    MGMT --> M5["Track status & changes"]
+
+    style RE fill:#2d6a4f,stroke:#40916c,color:#fff
+    style DEV fill:#264653,stroke:#2a9d8f,color:#fff
+    style MGMT fill:#3a7ca5,stroke:#5aa9e6,color:#fff
 ```
 
 #### Requirements Development — 4 Subdisciplines

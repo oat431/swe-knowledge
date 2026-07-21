@@ -88,12 +88,25 @@ A **field** is a ring where:
 
 ## Hierarchy Summary
 
-```
-Field (+, × both have inverses)
-  └── Ring (+, ×; + is Abelian group)
-        └── Group (associative, identity, inverse)
-              └── Monoid (group minus inverse — semigroup + identity)
-                    └── Semigroup (closure + associative)
+```mermaid
+%%{init: {'theme':'dark'}}%%
+graph TD
+    F["Field\n(+, × both have inverses)"]
+    R["Ring\n(+, ×; + is Abelian group)"]
+    G["Group\n(associative, identity, inverse)"]
+    M["Monoid\n(semigroup + identity)"]
+    S["Semigroup\n(closure + associative)"]
+
+    F --> R
+    R --> G
+    G --> M
+    M --> S
+
+    style F fill:#2d6a4f,stroke:#40916c,color:#fff
+    style R fill:#264653,stroke:#2a9d8f,color:#fff
+    style G fill:#3a7ca5,stroke:#5aa9e6,color:#fff
+    style M fill:#6b5b95,stroke:#8b7bb5,color:#fff
+    style S fill:#8b5e3c,stroke:#a87c4f,color:#fff
 ```
 
 ---

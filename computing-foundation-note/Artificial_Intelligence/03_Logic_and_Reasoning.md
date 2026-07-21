@@ -374,16 +374,28 @@ For partially observable environments:
 
 Building general-purpose ontologies that organize knowledge about the world into a hierarchy:
 
-```
-Anything
-├── Abstract Objects
-│   ├── Sets, Numbers, Representational Objects
-├── Generalized Events
-│   ├── Intervals, Places, Processes
-└── Physical Objects
-    ├── Things (solid)
-    └── Stuff (liquid, gas)
-        └── Animals → Agents → Humans
+```mermaid
+%%{init: {'theme':'dark'}}%%
+graph TD
+    A["Anything"]
+    AO["Abstract Objects"]
+    GE["Generalized Events"]
+    PO["Physical Objects"]
+
+    A --> AO
+    A --> GE
+    A --> PO
+
+    AO --> AO1["Sets, Numbers, Representational Objects"]
+    GE --> GE1["Intervals, Places, Processes"]
+    PO --> PO1["Things (solid)"]
+    PO --> PO2["Stuff (liquid, gas)"]
+    PO2 --> PO3["Animals → Agents → Humans"]
+
+    style A fill:#2d6a4f,stroke:#40916c,color:#fff
+    style AO fill:#264653,stroke:#2a9d8f,color:#fff
+    style GE fill:#3a7ca5,stroke:#5aa9e6,color:#fff
+    style PO fill:#6b5b95,stroke:#8b7bb5,color:#fff
 ```
 
 ### Categories and Objects

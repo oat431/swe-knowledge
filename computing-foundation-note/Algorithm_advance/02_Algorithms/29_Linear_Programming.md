@@ -413,13 +413,26 @@ Each commodity satisfies its own flow conservation.
 
 ### LP Relationship to Other Techniques
 
-```
-LP (continuous) ──→ ILP (integer)
-  │                │
-  ├─ Network flow    ├─ Scheduling
-  ├─ Shortest paths  ├─ Knapsack
-  ├─ Matching        ├─ Facility location
-  └─ Approximation   └─ Combinatorial optimization
+```mermaid
+%%{init: {'theme':'dark'}}%%
+graph LR
+    LP["LP (continuous)"]
+    ILP["ILP (integer)"]
+
+    LP --> ILP
+
+    LP --> LP1["Network flow"]
+    LP --> LP2["Shortest paths"]
+    LP --> LP3["Matching"]
+    LP --> LP4["Approximation"]
+
+    ILP --> ILP1["Scheduling"]
+    ILP --> ILP2["Knapsack"]
+    ILP --> ILP3["Facility location"]
+    ILP --> ILP4["Combinatorial optimization"]
+
+    style LP fill:#2d6a4f,stroke:#40916c,color:#fff
+    style ILP fill:#6b5b95,stroke:#8b7bb5,color:#fff
 ```
 
 ---
