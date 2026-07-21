@@ -45,14 +45,12 @@ Quality management requires organizational commitment: a Quality Management Syst
 
 ## My Notes
 
-*(No additional notes yet — only this overview)*
-
-## What's Missing
-
-- Quality Fundamentals (ISO 25010, Cost of Quality, integrity levels)
-- Quality Management Process (QMS, PDCA, Six Sigma, root cause analysis)
-- Quality Assurance Process (SQAP, V&V, static analysis, reviews, inspections)
-- Quality Tools
+### Software Quality Assurance (Galin)
+- [[01_Quality_Fundamentals]] — Quality challenge, errors/faults/failures, McCall/ISO 9126 quality factors
+- [[02_Pre_Project_and_Planning]] — Contract review, quality plans, integrating quality in development
+- [[03_Reviews_and_Infrastructure]] — Reviews, procedures, templates, training, CAPA, documentation control
+- [[04_Metrics_and_Quality_Costs]] — Quality metrics (process/product), function points, cost of quality
+- [[05_Standards_and_Organization]] — ISO 9000-3, CMM/CMMI, IEEE standards, SQA unit, management
 
 ## Relationship to Other KAs
 
