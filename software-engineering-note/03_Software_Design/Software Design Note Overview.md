@@ -54,19 +54,19 @@ The chapter covers foundational principles (abstraction, separation of concerns,
 
 ## My Notes
 
+### SWEBOK Design Foundations
+- [[01_Design_Fundamentals_and_Principles]] — Abstraction, coupling/cohesion, SOLID, design thinking
+- [[02_Design_Processes]] — High-level vs detailed design, iterative design, MBD
+- [[03_Design_Qualities]] — Concurrency, persistence, distribution, error handling
+- [[04_Recording_Software_Designs]] — MBD, UML, structural/behavioral descriptions, ADRs
+- [[05_Design_Strategies_and_Methods]] — OOD, DDD, event-driven, function-oriented, component-based
+- [[06_Design_Quality_Analysis]] — Reviews, inspections, metrics, static analysis
+
+### Design Practice
 - [[Clean Code/|Clean Code]]
 - [[Clean Architecture/|Clean Architecture]]
 - [[Design Pattern/|Design Pattern]]
 - [[Human Computer Interaction/|Human Computer Interaction]]
-
-## What's Missing
-
-- Software Design Fundamentals (design thinking, principles as standalone note)
-- Software Design Processes (high-level vs detailed design)
-- Software Design Qualities (concurrency, persistence, distribution, fault tolerance as design issues)
-- Recording Software Designs (MBD, structural/behavioral descriptions)
-- Design Strategies & Methods (OOD, DDD, function-oriented, component-based, event-driven)
-- Design Quality Analysis (reviews, audits, metrics)
 
 ## Relationship to Other KAs
 
