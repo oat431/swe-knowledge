@@ -80,22 +80,22 @@ A key insight is that no ideal process exists universally — processes must be 
 
 ## SWEBOK v4 Coverage Map
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 10 | **Last analyzed:** 2026-07-21 | **Coverage:** ~30%
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 10 | **Last analyzed:** 2026-07-21 | **Coverage:** ~65% (updated)
 
 | # | SWEBOK Topic | Status | Vault File(s) | Notes |
 |---|---|---|---|---|
-| 1 | Process Fundamentals | ❌ | — | No process definition, no four process categories |
-| 2 | Life Cycle Categories & Terminology | ❌ | — | Four process categories not covered |
+| 1 | Process Fundamentals | ✅ | `05_Process_Fundamentals.md` (17 KB) | Process definition, 4 ISO 12207 categories, 5 paradigms, 6 stages |
+| 2 | Life Cycle Categories & Terminology | ✅ | `05_Process_Fundamentals.md` | Technical, technical mgmt, org project-enabling, agreement |
 | 3 | Rationale for Life Cycles | ❌ | — | Not covered |
-| 4 | Process Models vs Life Cycle Models | ❌ | — | Distinction not covered |
+| 4 | Process Models vs Life Cycle Models | ✅ | `05_Process_Fundamentals.md` | Standard guide vs project-specific activity sequence |
 | 5 | Development Life Cycle Paradigms | ✅ | `00_Agile`, `01_Lean`, `02`, `04` | Predictive, iterative, incremental, evolutionary covered |
-| 6 | Specific Life Cycle Models | ⚠️ | `00`, `04`, `01` | Waterfall ✅, V-Model ✅, Agile ✅; Spiral ❌, RUP ❌ |
-| 7 | Management of Life Cycle Processes | ❌ | — | Six generic stages and three management levels not covered |
+| 6 | Specific Life Cycle Models | ✅ | `00`, `04`, `01`, `06_Spiral_and_Unified_Process.md` (20 KB) | Waterfall ✅, V-Model ✅, Agile ✅, Spiral ✅, RUP ✅, OpenUP ✅ |
+| 7 | Management of Life Cycle Processes | ✅ | `05_Process_Fundamentals.md` | Six generic stages, three management levels |
 | 8 | SE Process Management | ❌ | — | Three-level process management not covered |
 | 9 | Life Cycle Adaptation | ⚠️ | `02` | Methodology selection touched; no formal tailoring |
-| 10 | Process Infrastructure & Tools | ❌ | — | No BPMN, IDEF0, Petri nets, UML activity diagrams |
+| 10 | Process Infrastructure & Tools | ✅ | `07_Process_Assessment_and_Improvement.md` (26 KB) | BPMN, IDEF0, Petri nets, UML activity diagrams |
 | 11 | Process Monitoring | ❌ | — | Not covered |
-| 12 | Process Assessment & Improvement | ❌ | `01` (Kaizen mentioned) | No PDCA, CMMI, SPICE, formal assessment frameworks |
+| 12 | Process Assessment & Improvement | ✅ | `07_Process_Assessment_and_Improvement.md` | PDCA, CMM/CMMI, SPICE/ISO 33000, GQM, retrospectives |
 
 ### Gaps to Fill
 

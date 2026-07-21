@@ -24,15 +24,15 @@ tags:
 | 04 | Software Construction | [[04_Software_Construction/Software Construction Overview]] | ~65% | ⚠️ Partial gaps |
 | 05 | Software Testing | [[05_Software_Testing/Software Testing Overview]] | ~60% | ⚠️ Partial gaps |
 | 06 | Software Engineering Operations | [[06_Software_Engineering_Operations/Software Engineering Operations Overview]] | ~65% | ⚠️ Partial gaps |
-| 07 | Software Maintenance | [[07_Software_Maintenance/Software Maintenance Overview]] | ~40% | 🔴 Major gaps |
+| 07 | Software Maintenance | [[07_Software_Maintenance/Software Maintenance Overview]] | ~75% | ⚠️ Minor gaps |
 
 ### Management & Process
 
 | # | Knowledge Area | Overview | Coverage | Status |
 |---|---------------|----------|----------|:------:|
 | 08 | Software Configuration Management | [[08_Software_Configuration_Management/Software Configuration Management Overview]] | ~55% | ⚠️ Partial gaps |
-| 09 | Software Engineering Management | [[09_Software_Engineering_Management/Software Engineering Management Overview]] | ~20% | 🔴 Major gaps |
-| 10 | Software Engineering Process | [[10_Software_Engineering_Process/Software Methodology - Overview]] | ~30% | 🔴 Major gaps |
+| 09 | Software Engineering Management | [[09_Software_Engineering_Management/Software Engineering Management Overview]] | ~65% | ⚠️ Partial gaps |
+| 10 | Software Engineering Process | [[10_Software_Engineering_Process/Software Methodology - Overview]] | ~65% | ⚠️ Partial gaps |
 
 ### Quality & Cross-Cutting
 
@@ -70,9 +70,9 @@ quadrantChart
     quadrant-2 Well Covered
     quadrant-3 Lower Priority
     quadrant-4 Monitor
-    "09 SE Management": [0.20, 0.90]
-    "10 SE Process": [0.30, 0.85]
-    "07 Maintenance": [0.40, 0.80]
+    "09 SE Management": [0.65, 0.90]
+    "10 SE Process": [0.65, 0.85]
+    "07 Maintenance": [0.75, 0.80]
     "03 Design": [0.55, 0.75]
     "11 Models & Methods": [0.55, 0.60]
     "05 Testing": [0.60, 0.70]
@@ -91,9 +91,9 @@ quadrantChart
 
 | Priority | KA | Coverage | Key Gaps |
 |----------|----|----------|----------|
-| 🔴 1 | 09 SE Management | ~20% | Missing virtually all formal PM: initiation, estimation, WBS, risk mgmt, ISO 15939, GQM, RACI, earned value |
-| 🔴 2 | 10 SE Process | ~30% | Missing process fundamentals, CMMI/SPICE, PDCA, spiral/RUP models, process notations (BPMN, IDEF0) |
-| 🔴 3 | 07 Maintenance | ~40% | Missing ISO 14764 processes, Lehman's Laws, staffing/outsourcing, reverse engineering, maintenance tools |
+| 🟡 1 | 09 SE Management | ~65% | Partial: ISO 15939, GQM, RACI still missing |
+| 🟡 2 | 10 SE Process | ~65% | Partial: three management levels, process monitoring still missing |
+| 🟢 3 | 07 Maintenance | ~75% | Minor: staffing depth, outsourcing contracts still thin |
 | 🟡 4 | 03 Design | ~55% | Main files critically thin (4-6KB each); missing design rationale, MBD, DSLs, variability/feature models |
 | 🟡 5 | 11 Models & Methods | ~55% | Missing formal methods (Z, Alloy, model checking), prototyping methods, design-by-contract |
 | 🟡 6 | 08 SCM | ~55% | Missing SCSA, FCA/PCA audits, CCB/CR workflows, SBOM, CMDB |
@@ -107,9 +107,9 @@ quadrantChart
 | 🟢 14 | 14 Professional Practice | ~80% | Minor: professional societies depth, employment contracts, DEI depth |
 | 🟢 15 | 02 Architecture | ~85% | Minor: ADLs, architecture frameworks (AUTOSAR, UAF), decisions-as-KA |
 
-> **Overall vault coverage:** ~58% across 15 KAs
+> **Overall vault coverage:** ~65% across 15 KAs (improved from ~58%)
 > **Strongest:** Architecture (85%), Requirements & Professional Practice (80%)
-> **Weakest:** SE Management (20%), SE Process (30%), Maintenance (40%)
+> **Weakest:** Design (55%), Models & Methods (55%), SCM (55%)
 
 ---
 
