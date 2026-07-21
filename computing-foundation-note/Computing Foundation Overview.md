@@ -23,8 +23,7 @@ Understanding these foundations gives software engineers the vocabulary and ment
 ## Knowledge Areas
 
 ### Basic Concepts of a System
-- Problem-to-solution mapping, modular/cohesive/loosely-coupled subsystems
-- Functional requirements, performance, security, durability
+- [[00 Basic Concepts of a System|Basic Concepts of a System]] — Problem-to-solution mapping, modularity, cohesion, coupling, system decomposition, integration, quality attributes
 
 ### Computer Architecture and Organization
 - Von Neumann vs Harvard architecture, RISC vs CISC
@@ -78,6 +77,7 @@ Understanding these foundations gives software engineers the vocabulary and ment
 - [[Algorithm Overview|Algorithm]] — Data structures, sorting, searching, DP, greedy, divide & conquer
 - [[Algorithm Advance - Overview|Algorithm (Advanced)]] — B-Trees, Fibonacci heaps, shortest paths, MST, max flow, NP-completeness
 - [[Fundamental Overview|Programming Fundamentals]] — Core concepts, variables, control flow, functions, OOP, FP, error handling
+- [[00 Basic Concepts of a System|Basic Concepts of a System]] — Modularity, cohesion, coupling, system decomposition, integration, quality attributes
 - [[Operating Systems Overview|Operating Systems]] — Processes, memory, concurrency, file systems, IPC
 - [[Database Overview|Database]] — SQL, normalization, NoSQL, indexing, transactions, scaling
 - [[Computer Networks Overview|Computer Networks]] — OSI/TCP-IP, HTTP, DNS, TCP/UDP, load balancing, security
@@ -91,6 +91,7 @@ Understanding these foundations gives software engineers the vocabulary and ment
 - [[Computer Networks/02 Protocols/02_Wireless_and_Mobile|Wireless & Mobile Networks]] — WiFi, Bluetooth, cellular 1G-5G, FDMA/TDMA/CDMA/OFDMA, Mobile IP, WPA3
 - [[Database/04 Data Warehousing/04_Data_Warehousing_and_Mining|Data Warehousing & Mining]] — OLAP vs OLTP, star/snowflake schemas, ETL/ELT, data mining techniques
 - [[Artificial_Intelligence/09_AI_SE_Intersection|AI ↔ SE Intersection]] — AI for SE (defect prediction, test generation), SE for AI (ML pipelines, MLOps, responsible AI)
+- [[00 Basic Concepts of a System|Basic Concepts of a System]] — System definition, problem-to-solution mapping, modularity/cohesion/coupling, system lifecycle
 
 ## Coverage Status
 
@@ -106,8 +107,9 @@ Understanding these foundations gives software engineers the vocabulary and ment
 | Computer Networks | ✅ Complete | 8 files + Wireless/Mobile |
 | Human Factors & HCI | ✅ Complete | 11 files (HCI, Clean Code, Design Patterns) |
 | AI & Machine Learning | ✅ Complete | 9 files + AI-SE Intersection |
+| Basic Concepts of a System | ✅ Complete | 1 file (10_Basic_Concepts_of_a_System) |
 
-**Total:** 118 files covering all 9 SWEBOK Computing Foundations knowledge areas.
+**Total:** 119 files covering all 9 SWEBOK Computing Foundations knowledge areas.
 
 ## Relationship to Other Foundations
 
