@@ -58,6 +58,10 @@ Together they cover both the *physics* and the *process* of engineering.
 | [[02 SWE Process/23_Industry_4_and_Continuous_SE\|23_Industry_4_and_Continuous_SE]] | IoT, AI/ML, Big Data, CSE, continuous practices | Web/SWEBOK |
 | [[02 SWE Process/24_Statistical_Inference\|24_Statistical_Inference]] | Hypothesis testing, confidence intervals, correlation, regression | Web/SWEBOK |
 | [[02 SWE Process/25_Engineering_Standards_and_Process\|25_Engineering_Standards_and_Process]] | ISO/IEC/IEEE organizations, 5-step engineering framework | Web/SWEBOK |
+| [[02 SWE Process/26_The_Engineering_Process\|26_The_Engineering_Process]] | 5-step engineering process, decision matrices, iteration | SWEBOK Ch 18 |
+| [[02 SWE Process/27_Engineering_Design\|27_Engineering_Design]] | Wicked problems, design thinking, Design for X, Pareto | SWEBOK Ch 18 |
+| [[02 SWE Process/28_Abstraction_and_Encapsulation\|28_Abstraction_and_Encapsulation]] | Dijkstra, information hiding, alternate abstractions | SWEBOK Ch 18 |
+| [[02 SWE Process/29_Modeling_Simulation_and_Prototyping\|29_Modeling_Simulation_and_Prototyping]] | Iconic/analogic/symbolic models, simulation, digital twins | SWEBOK Ch 18 |
 
 ---
 
@@ -96,6 +100,10 @@ flowchart TD
         I4["Industry 4.0"]
         STATS2["Statistical Inference"]
         STAND["Engineering Standards"]
+        EPROC["Engineering Process"]
+        EDES["Engineering Design"]
+        ABS["Abstraction"]
+        SIM["Modeling & Simulation"]
     end
 
     DIM --> FORCE
@@ -121,6 +129,12 @@ flowchart TD
     MEAS --> EVAL
     EMP --> MEAS
     STAND --> PROC
+    EPROC --> DES
+    EDES --> ARCH
+    ABS --> DES
+    SIM --> TEST
+    EPROC --> EDES
+    ABS --> PROC
 ```
 
 ## Reading Paths
@@ -134,10 +148,31 @@ flowchart TD
 | **Process improvement** | [[02 SWE Process/18_Evaluation_and_Improvement]] → [[02 SWE Process/17_Delivery_and_Maintenance]] |
 | **Quality & measurement** | [[02 SWE Process/21_Measurement_Theory]] → [[02 SWE Process/20_Root_Cause_Analysis]] |
 | **Math & analysis** | [[01 Physics and Math/09_Math_Stats_and_Economics]] |
-| **SWEBOK Engineering Foundations** | [[02 SWE Process/10_SE_Fundamentals_and_Process]] through [[02 SWE Process/25_Engineering_Standards_and_Process]] |
+| **SWEBOK Engineering Foundations** | [[02 SWE Process/10_SE_Fundamentals_and_Process]] through [[02 SWE Process/29_Modeling_Simulation_and_Prototyping]] |
 
 ## Related
 
 - [[../../body-of-knowledge/SWEBOK/18_Engineering_Foundations|SWEBOK Engineering Foundations]] — The KA these notes fill
 - [[../../software-engineering-note/Software Design/Software Design - Overview|Software Design]] — Design process and patterns
 - [[../../math-for-software-engineering-note/|Math for Software Engineering]] — Mathematical foundations
+
+---
+
+## SWEBOK v4 Coverage Map
+
+> **Source:** [[../../body-of-knowledge/SWEBOK/18_Engineering_Foundations|SWEBOK v4]] Chapter 18 | **Last analyzed:** 2026-07-21 | **Coverage:** ~90%
+
+| # | SWEBOK Topic | Status | Vault File(s) | Notes |
+|---|---|---|---|---|
+| 1 | The Engineering Process | ✅ | `26_The_Engineering_Process.md` (17 KB) | 5-step process, decision matrices, iteration |
+| 2 | Engineering Design | ✅ | `27_Engineering_Design.md` (16 KB) | Wicked problems, design thinking, Design for X |
+| 3 | Abstraction and Encapsulation | ✅ | `28_Abstraction_and_Encapsulation.md` (15 KB) | Dijkstra, information hiding, alternate abstractions |
+| 4 | Empirical Methods | ✅ | `22_Empirical_Methods.md` | Designed experiments, observational, retrospective |
+| 5 | Statistical Analysis | ✅ | `24_Statistical_Inference.md` | Hypothesis testing, confidence intervals, correlation |
+| 6 | Modeling, Simulation, Prototyping | ✅ | `29_Modeling_Simulation_and_Prototyping.md` (18 KB) | Iconic/analogic/symbolic, simulation types, digital twins |
+| 7 | Measurement | ✅ | `21_Measurement_Theory.md` | Scales, GQM, operational definitions |
+| 8 | Standards | ✅ | `25_Engineering_Standards_and_Process.md` | ISO/IEC/IEEE, consensus processes |
+| 9 | Root Cause Analysis | ✅ | `20_Root_Cause_Analysis.md` | 5-whys, Ishikawa, FTA, FMEA, cause maps |
+| 10 | Industry 4.0 & CSE | ✅ | `23_Industry_4_and_Continuous_SE.md` | IoT, AI/ML, Big Data, continuous practices |
+
+> **Coverage: ~90%** — All 10 SWEBOK topics have dedicated files. Minor gaps: abstraction depth in `14_Design_Principles_and_Patterns`, simulation tool specifics.
