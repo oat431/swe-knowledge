@@ -52,15 +52,21 @@ Construction spans a spectrum of languages (configuration languages → scriptin
 
 ## My Notes
 
+### Code Complete (McConnell)
+- [[01_Construction_Foundations]] — What construction is, metaphors, prerequisites, key decisions
+- [[02_Design_in_Construction]] — Design challenges, key concepts, heuristics, practices
+- [[03_Working_Classes]] — ADTs, class interfaces, inheritance vs composition
+- [[04_High_Quality_Routines]] — Routines, defensive programming, pseudocode process
+- [[05_Variables_and_Data]] — Variable use, naming, fundamental & unusual data types
+- [[06_Control_Structures]] — Conditionals, loops, table-driven methods, control issues
+- [[07_Code_Quality_and_Testing]] — Quality landscape, collaboration, developer testing, debugging, refactoring
+- [[08_Performance_Tuning]] — Code-tuning strategies and techniques
+- [[09_System_Considerations]] — Program size, managing construction, integration, tools
+- [[10_Code_Style_and_Documentation]] — Layout, formatting, self-documenting code, comments
+- [[11_Software_Craftsmanship]] — Personal character, themes, further reading
+
+### API Design
 - [[API/|API]]
-
-## What's Missing
-
-- Construction Fundamentals (minimize complexity, anticipate change, construct for verification, reuse, standards)
-- Managing Construction (lifecycle models, planning, dependency/supply chain management)
-- Practical Considerations (coding practices, integration approaches, cross-platform)
-- Construction Technologies (TDD, design-by-contract, concurrency primitives, middleware)
-- Construction Tools (IDEs, AI-assisted programming, low-code)
 
 ## Relationship to Other KAs
 
