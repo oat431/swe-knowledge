@@ -59,13 +59,14 @@ A key insight is that no ideal process exists universally — processes must be 
 - [[02_Methodologies_Overview]]
 - [[03_Kanban_and_Flow]]
 - [[04_Waterfall_and_V-Model]]
+- [[05_Process_Fundamentals]]
+- [[06_Spiral_and_Unified_Process]]
+- [[07_Process_Assessment_and_Improvement]]
+- [[08_Process_Monitoring_and_Adaptation]]
 
 ## What's Missing
 
-- Process Fundamentals (process definition, 4 process categories)
-- Specific Life Cycle Models (Spiral, RUP/UP, rapid prototyping)
-- Process Infrastructure & Tools (BPMN, IDEF0, Petri nets)
-- Process Assessment & Improvement (PDCA, CMMI, ISO/IEC 33000/SPICE)
+- Rationale for Life Cycles (SWEBOK topic 3)
 
 ## Relationship to Other KAs
 
@@ -80,7 +81,7 @@ A key insight is that no ideal process exists universally — processes must be 
 
 ## SWEBOK v4 Coverage Map
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 10 | **Last analyzed:** 2026-07-21 | **Coverage:** ~65% (updated)
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 10 | **Last analyzed:** 2026-07-21 | **Coverage:** ~92% (updated)
 
 | # | SWEBOK Topic | Status | Vault File(s) | Notes |
 |---|---|---|---|---|
@@ -91,25 +92,14 @@ A key insight is that no ideal process exists universally — processes must be 
 | 5 | Development Life Cycle Paradigms | ✅ | `00_Agile`, `01_Lean`, `02`, `04` | Predictive, iterative, incremental, evolutionary covered |
 | 6 | Specific Life Cycle Models | ✅ | `00`, `04`, `01`, `06_Spiral_and_Unified_Process.md` (20 KB) | Waterfall ✅, V-Model ✅, Agile ✅, Spiral ✅, RUP ✅, OpenUP ✅ |
 | 7 | Management of Life Cycle Processes | ✅ | `05_Process_Fundamentals.md` | Six generic stages, three management levels |
-| 8 | SE Process Management | ❌ | — | Three-level process management not covered |
-| 9 | Life Cycle Adaptation | ⚠️ | `02` | Methodology selection touched; no formal tailoring |
+| 8 | SE Process Management | ✅ | `08_Process_Monitoring_and_Adaptation.md` (32 KB) | Three-level process management: technical, coordination, strategy |
+| 9 | Life Cycle Adaptation | ✅ | `08_Process_Monitoring_and_Adaptation.md` | Tailoring, scaling by team size, system-type adaptation |
 | 10 | Process Infrastructure & Tools | ✅ | `07_Process_Assessment_and_Improvement.md` (26 KB) | BPMN, IDEF0, Petri nets, UML activity diagrams |
-| 11 | Process Monitoring | ❌ | — | Not covered |
+| 11 | Process Monitoring | ✅ | `08_Process_Monitoring_and_Adaptation.md` | PPIs, capability determination, compliance checking, improvement triggers |
 | 12 | Process Assessment & Improvement | ✅ | `07_Process_Assessment_and_Improvement.md` | PDCA, CMM/CMMI, SPICE/ISO 33000, GQM, retrospectives |
 
 ### Gaps to Fill
 
 | Priority | Gap | SWEBOK Topic | What's Missing |
 |----------|-----|-------------|----------------|
-| 🔴 High | Process Fundamentals | Process Fundamentals | Process definition, components, project context |
-| 🔴 High | Four Process Categories | Life Cycle Categories | Technical, technical management, org project-enabling, agreement |
-| 🔴 High | PDCA | Process Assessment | Shewhart-Deming cycle for continuous improvement |
-| 🔴 High | CMMI | Process Assessment | Maturity levels, process areas, appraisal methods |
-| 🔴 High | SPICE / ISO 33000 | Process Assessment | Process assessment standard |
-| 🟡 Medium | Spiral Model | Specific Models | Boehm's risk-driven evolutionary model |
-| 🟡 Medium | RUP/UP/OpenUP | Specific Models | Iterative, architecture-centric, use-case driven |
-| 🟡 Medium | Six Generic Life Cycle Stages | Management of Processes | Concept → Development → Production → Utilization → Support → Retirement |
-| 🟡 Medium | Process Definition Notations | Process Infrastructure | BPMN, IDEF0, Petri nets, UML activity diagrams |
-| 🟢 Low | Process Models vs SLCM Distinction | Process Models | Standard guide vs project-specific activity sequence |
-| 🟢 Low | Rapid Prototyping | Specific Models | Quick prototype to validate requirements |
-| 🟢 Low | Agile Retrospectives (as assessment) | Process Assessment | Connecting retrospectives to formal process assessment |
+| 🟢 Low | Rationale for Life Cycles | Topic 3 | Why life cycles exist, historical context |

@@ -80,13 +80,13 @@ SWEBOK v4 organizes management by activities (what happens) rather than phases (
 
 ## SWEBOK v4 Coverage Map
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 09 | **Last analyzed:** 2026-07-21 | **Coverage:** ~75% (updated)
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] Chapter 09 | **Last analyzed:** 2026-07-21 | **Coverage:** ~85% (updated)
 
 | # | SWEBOK Topic | Status | Vault File(s) | Notes |
 |---|---|---|---|---|
 | 1 | Initiation and Scope Definition | ✅ | `06_Project_Initiation_and_Scope.md` (16 KB) | Charter, context diagrams, feasibility, MoSCoW, scope baseline |
 | 2 | Software Project Planning | ✅ | `07_Estimation_and_Planning.md` (21 KB) | COCOMO, FP, story points, WBS, scheduling, Cone of Uncertainty |
-| 3 | Software Project Enactment | ✅ | `08_Risk_Management_and_Control.md` (27 KB) | Risk mgmt, EVM, acquisition, monitoring, status reporting |
+| 3 | Software Project Enactment | ✅ | `08`, `09_Software_Acquisition_Management.md` (15 KB), `10_Quality_Planning_and_Process_Monitoring.md` (22 KB) | Acquisition, quality gates, SPC, process dashboards |
 | 4 | Review and Evaluation | ⚠️ | `04_Growing_Productive_Teams`, `05` | Team performance touched; no earned value, no stakeholder assessment |
 | 5 | Closure | ✅ | `08_Risk_Management_and_Control.md` | Completion criteria, archiving, retrospectives, lessons learned |
 | 6 | Software Engineering Measurement | ✅ | `07_Measurement_and_Metrics.md` (16 KB) | ISO 15939, GQM, RACI, base/derived measures, agile metrics |

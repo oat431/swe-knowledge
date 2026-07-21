@@ -31,8 +31,8 @@ tags:
 | # | Knowledge Area | Overview | Coverage | Status |
 |---|---------------|----------|----------|:------:|
 | 08 | Software Configuration Management | [[08_Software_Configuration_Management/Software Configuration Management Overview]] | ~80% | ⚠️ Minor gaps |
-| 09 | Software Engineering Management | [[09_Software_Engineering_Management/Software Engineering Management Overview]] | ~75% | ⚠️ Minor gaps |
-| 10 | Software Engineering Process | [[10_Software_Engineering_Process/Software Methodology - Overview]] | ~65% | ⚠️ Partial gaps |
+| 09 | Software Engineering Management | [[09_Software_Engineering_Management/Software Engineering Management Overview]] | ~85% | ✅ Well covered |
+| 10 | Software Engineering Process | [[10_Software_Engineering_Process/Software Methodology - Overview]] | ~92% | ✅ Well covered |
 
 ### Quality & Cross-Cutting
 
@@ -70,8 +70,8 @@ quadrantChart
     quadrant-2 Well Covered
     quadrant-3 Lower Priority
     quadrant-4 Monitor
-    "09 SE Management": [0.75, 0.90]
-    "10 SE Process": [0.65, 0.85]
+    "09 SE Management": [0.85, 0.90]
+    "10 SE Process": [0.92, 0.85]
     "07 Maintenance": [0.75, 0.80]
     "03 Design": [0.75, 0.75]
     "11 Models & Methods": [0.80, 0.60]
@@ -91,8 +91,8 @@ quadrantChart
 
 | Priority | KA | Coverage | Key Gaps |
 |----------|----|----------|----------|
-| 🟢 1 | 09 SE Management | ~75% | Minor: acquisition management, quality planning depth |
-| 🟢 2 | 10 SE Process | ~65% | Minor: process monitoring, three management levels depth |
+| ✅ 1 | 09 SE Management | ~85% | Gaps filled: acquisition, quality planning, SPC |
+| ✅ 2 | 10 SE Process | ~92% | Gaps filled: 3 management levels, process monitoring, adaptation |
 | ✅ 3 | 07 Maintenance | ~75% | Core gaps filled: Lehman's Laws, ISO 14764, tools |
 | ✅ 4 | 03 Design | ~75% | Core gaps filled: design rationale, MBD, variability |
 | ✅ 5 | 11 Models & Methods | ~80% | Core gaps filled: formal methods, prototyping, DbC |
@@ -107,9 +107,9 @@ quadrantChart
 | 🟢 14 | 14 Professional Practice | ~80% | Minor: professional societies depth, employment contracts, DEI depth |
 | 🟢 15 | 02 Architecture | ~85% | Minor: ADLs, architecture frameworks (AUTOSAR, UAF), decisions-as-KA |
 
-> **Overall vault coverage:** ~87% across 15 KAs (improved from ~58%)
-> **Strongest:** Professional Practice (95%), Architecture (92%), Requirements (90%)
-> **Weakest:** SE Management (75%), Economics (85%), Design/SCM (75/80%)
+> **Overall vault coverage:** ~89% across 15 KAs (improved from ~58%)
+> **Strongest:** Professional Practice (95%), Architecture (92%), SE Process (92%), Requirements (90%)
+> **Weakest:** Design (75%), SCM (80%), Maintenance (75%)
 
 ---
 
