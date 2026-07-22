@@ -8,9 +8,10 @@ last_updated: "[YYYY-MM-DD]"
 project_name: "[Project Name]"
 project_id: "[Project-ID]"
 classification: "Internal / Confidential"
-tags: [sqap, quality-assurance, swebok, iso-9001]
+tags: [sqap, quality-assurance, swebok, ieee-730, iso-9001]
 standard_ref:
   - SWEBOK v4 — Quality Assurance
+  - IEEE 730-2014 — Software Quality Assurance Processes
   - ISO/IEC/IEEE 90003 — Quality Assurance
   - ISO 9001 — Quality Management
 ---
@@ -42,9 +43,22 @@ standard_ref:
 
 ## 1. Purpose
 
-> Defines the quality assurance activities, standards, and responsibilities for the project.
+> Defines the quality assurance activities, standards, and responsibilities for the project, in accordance with IEEE 730-2014 process requirements.
 
-## 2. Quality Objectives
+## 2. SQA Independence
+
+> Per IEEE 730-2014, the SQA function must be organizationally independent from development to ensure objective assessment.
+
+| Independence Aspect | Implementation |
+|--------------------|---------------| 
+| **Reporting Structure** | [QA Lead reports to: Quality Director / PM, not Dev Lead] |
+| **Technical Independence** | [QA team has separate evaluation authority: QA can block release] |
+| **Budget Independence** | [QA budget is a separate line item, not controlled by Dev] |
+| **Conflict Resolution** | [If QA and Dev disagree: escalate to [CCB / Steering Committee]] |
+
+> **Critical:** SQA independence means QA can report non-compliance without fear of reprisal. If QA reports to the development manager, independence is compromised.
+
+## 3. Quality Objectives
 
 | # | Objective | Measurement | Target |
 |---|----------|-----------|--------|
@@ -54,16 +68,17 @@ standard_ref:
 | 4 | [Complete on time] | [Schedule variance] | [< 5%] |
 | 5 | [Stay within budget] | [Cost variance] | [< 10%] |
 
-## 3. Quality Standards
+## 4. Quality Standards
 
 | Standard | Applicability | Compliance |
 |---------|-------------|-----------|
 | [ISO 9001] | [Quality management system] | [Compliant] |
 | [ISO/IEC/IEEE 90003] | [Software quality assurance] | [Compliant] |
+| [IEEE 730-2014] | [SQA process requirements] | [Compliant] |
 | [WCAG 2.1 AA] | [Accessibility] | [Compliant] |
 | [OWASP Top 10] | [Security] | [Compliant] |
 
-## 4. QA Activities
+## 5. QA Activities
 
 | Activity | Phase | Frequency | Responsible | Standards |
 |---------|-------|----------|-----------|----------|
@@ -78,7 +93,7 @@ standard_ref:
 | [Performance Testing] | [Testing] | [Per release] | [QA] | [[Performance-Test-Report]] |
 | [Security Testing] | [Testing] | [Per release] | [Security] | [[Security-Test-Report]] |
 
-## 5. Quality Metrics
+## 6. Quality Metrics
 
 | Metric | Definition | Target | Collection |
 |--------|-----------|--------|-----------|
@@ -88,7 +103,7 @@ standard_ref:
 | [Code Review Coverage] | [PRs reviewed %] | [100%] | [GitHub] |
 | [Static Analysis] | [Linting errors] | [0] | [ESLint] |
 
-## 6. Non-Compliance Process
+## 7. Non-Compliance Process
 
 ```mermaid
 flowchart TD
@@ -102,7 +117,43 @@ flowchart TD
     style CLOSE fill:#4CAF50,color:#fff
 ```
 
-## 7. QA Tools
+## 8. Supplier and Vendor Quality Control
+
+> Per IEEE 730-2014, if external vendors or contractors deliver components, their work must be subject to SQA oversight.
+
+| Supplier Type | SQA Activity | Acceptance Criteria |
+|---------------|-------------|---------------------|
+| [Contractor developers] | [Code review by internal team] | [Meets [[Coding-Standards]], passes static analysis] |
+| [Third-party APIs] | [Integration testing + SLA review] | [Meets NFR performance targets, documented SLA] |
+| [Open-source dependencies] | [License check + security scan] | [No GPL violations, no known CVEs] |
+| [Outsourced testing] | [Review test results, verify coverage] | [Test plan approved, exit criteria met] |
+| [Cloud provider] | [Review SLA + compliance certifications] | [ISO 27001 certified, uptime ≥ 99.9%] |
+
+## 9. Quality Records Management
+
+> Per IEEE 730-2014, quality records must be collected, maintained, and retained as evidence of SQA activities.
+
+| Record Type | Storage | Retention | Access |
+|-------------|---------|-----------|--------|
+| [Review Records] | [Repository / Wiki] | [Project + 7 years] | [Team] |
+| [Test Results] | [CI/CD system] | [Project + 7 years] | [QA + Dev] |
+| [Defect Reports] | [Defect tracking system] | [Project + 7 years] | [QA + Dev] |
+| [Audit Reports] | [Document repository] | [Permanent] | [QA Lead + Management] |
+| [SQA Reports] | [Document repository] | [Project + 7 years] | [Management] |
+| [Non-compliance Records] | [Document repository] | [Project + 7 years] | [QA Lead + Management] |
+
+## 10. SQA Training
+
+| Training | Who | When | Duration |
+|----------|-----|------|----------|
+| [Quality process overview] | [All team members] | [Project kickoff] | [2 hours] |
+| [Coding standards] | [Developers] | [Onboarding + per update] | [4 hours] |
+| [Code review techniques] | [Reviewers] | [Before first review] | [2 hours] |
+| [Static analysis tools] | [Developers + QA] | [Before CI/CD setup] | [2 hours] |
+| [Defect reporting] | [QA + Developers] | [Onboarding] | [1 hour] |
+| [ISO 9001 / IEEE 730 awareness] | [QA Lead] | [Annual] | [4 hours] |
+
+## 11. QA Tools
 
 | Tool | Purpose | Integration |
 |------|---------|-----------|
@@ -124,5 +175,5 @@ flowchart TD
 
 ---
 
-> **Template Standard:** Based on SWEBOK v4, ISO/IEC/IEEE 90003
-> **Usage:** The SQAP is the *quality contract*. Everyone knows what quality means and how it's measured.
+> **Template Standard:** Based on SWEBOK v4, IEEE 730-2014, ISO/IEC/IEEE 90003, ISO 9001
+> **Usage:** The SQAP is the *quality contract*. Everyone knows what quality means, how it's measured, and how non-compliance is handled. SQA independence ensures objectivity: QA can block a release if quality standards are not met.

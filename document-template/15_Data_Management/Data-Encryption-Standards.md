@@ -11,7 +11,7 @@ classification: "Confidential"
 tags: [encryption, cryptography, dmbok, iso-27001]
 standard_ref:
   - DMBOK v2 — Data Security
-  - ISO/IEC 27001 — A.10 Cryptography
+  - ISO/IEC 27001:2022 — A.10 Cryptography
 ---
 
 # Data Encryption Standards
@@ -94,5 +94,5 @@ standard_ref:
 
 ---
 
-> **Template Standard:** Based on DMBOK v2, ISO/IEC 27001
+> **Template Standard:** Based on DMBOK v2, ISO/IEC 27001:2022
 > **Usage:** Encryption is *not optional* for L1/L2 data. If you can't encrypt it, you can't store it.

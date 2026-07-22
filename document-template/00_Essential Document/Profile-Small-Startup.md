@@ -141,6 +141,22 @@ tags:
 
 ---
 
+## 8. Applicable Standards (Lightweight)
+
+> For a small team, standards should be **referenced, not implemented in full**. Use these as guidance, not bureaucracy.
+
+| Standard | What It Covers | How to Use at This Size |
+|----------|---------------|------------------------|
+| OWASP Top 10 | Web security risks | [Reference during development; run SAST in CI] |
+| WCAG 2.1 AA | Accessibility | [Follow basic guidelines; run axe in CI] |
+| Conventional Commits | Commit message format | [Adopt for changelog automation] |
+| SemVer 2.0 | Version numbering | [Use for API and package versioning] |
+| ISO/IEC 27001:2022 (light) | Information security basics | [If handling user data: encryption, access control, backups] |
+
+> **Tip:** Don't implement ISO processes at this size. Focus on engineering practices (TDD, CI/CD, code review) that deliver quality naturally. Add formal standards only when compliance is required (e.g., GDPR, PCI-DSS for payments).
+
+---
+
 ## Quick-Start Checklist
 
 Print this table and check off each 🔴 item as you produce it.

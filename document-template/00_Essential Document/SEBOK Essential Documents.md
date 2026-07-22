@@ -80,8 +80,8 @@ tags: [overview, systems-engineering, sebok, essential-documents]
 | **Operations Manual / Runbook**       | Routine procedures: startup, shutdown, monitoring, emergency response          | 🔴 Must Have    | ISO/IEC/IEEE 15288 (§6.4.10)                       |
 | **Maintenance Plan**                  | Preventive, corrective, adaptive, perfective maintenance strategy and schedule | 🔴 Must Have    | ISO/IEC/IEEE 15288 (§6.4.11)                       |
 | **Logistics Plan**                    | Supply chain, spares, tools, training, facilities for system support           | 🔴 Must Have    | ISO/IEC/IEEE 15288 (§6.4.11)                       |
-| **Service Level Agreement (SLA)**     | Availability, performance, response-time commitments for operational systems   | 🔴 Must Have    | ISO/IEC/IEEE 20000-1                               |
-| **Incident / Problem Reports**        | Fault documentation, root cause analysis, corrective action                    | 🔴 Must Have    | ISO/IEC/IEEE 15288 (§6.4.11), ISO/IEC/IEEE 20000-1 |
+| **Service Level Agreement (SLA)**     | Availability, performance, response-time commitments for operational systems   | 🔴 Must Have    | ISO/IEC 20000-1                               |
+| **Incident / Problem Reports**        | Fault documentation, root cause analysis, corrective action                    | 🔴 Must Have    | ISO/IEC/IEEE 15288 (§6.4.11), ISO/IEC 20000-1 |
 | **Change Requests (CR/ECR)**          | Proposed modifications with impact analysis (technical, cost, schedule, risk)  | 🔴 Must Have    | ISO/IEC/IEEE 15288 (§6.4.11)                       |
 | **Capability Upgrade Plan**           | Modernization roadmap: technology refresh, obsolescence management             | 🟡 Nice to Have | ISO/IEC/IEEE 15288 (§6.4.11)                       |
 | **System Disposal / Retirement Plan** | Decommissioning, data archival, environmental compliance, material recovery    | 🔴 Must Have    | ISO/IEC/IEEE 15288 (§6.4.12)                       |
@@ -156,7 +156,7 @@ tags: [overview, systems-engineering, sebok, essential-documents]
 | ------------------------------------------- | ------------------------------------------------------------------------- | --------------- | --------------------------------- |
 | **System Safety Plan / Safety Case**        | Hazard identification, risk assessment, safety requirements, verification | 🔴 Must Have    | IEC 61508, ISO/IEC/IEEE 15288     |
 | **Hazard Analysis** (PHA, SHA, SSHA, O&SHA) | Systematic hazard identification at each system level                     | 🔴 Must Have    | IEC 61508, ISO 26262 (automotive) |
-| **Security Plan**                           | Threat analysis, security requirements, architecture, verification        | 🔴 Must Have    | ISO/IEC 27001                     |
+| **Security Plan**                           | Threat analysis, security requirements, architecture, verification        | 🔴 Must Have    | ISO/IEC 27001:2022                     |
 | **FMEA / FMECA**                            | Failure Mode, Effects, and Criticality Analysis                           | 🟡 Nice to Have | IEC 60812                         |
 | **Fault Tree Analysis (FTA)**               | Top-down deductive failure analysis for safety-critical systems           | 🟡 Nice to Have | IEC 61025                         |
 
@@ -176,7 +176,7 @@ tags: [overview, systems-engineering, sebok, essential-documents]
 | **Software Development Plan**      | For software-intensive systems: SW life cycle, methods, tools, standards         | 🔴 Must Have (SW)                 | ISO/IEC/IEEE 12207                      |
 | **Software Assurance Plan**        | Software safety, reliability, and verification requirements                      | 🔴 Must Have (safety-critical SW) | DO-178C (avionics), IEC 62304 (medical) |
 | **Medical Device File**            | Design history, risk management, clinical evaluation per regulatory requirements | 🔴 Must Have (medical)            | ISO 13485, IEC 62304                    |
-| **Security Accreditation Package** | Evidence for system security authorization/ATO                                   | 🔴 Must Have (gov/defense)        | ISO/IEC 27001, NIST SP 800-37           |
+| **Security Accreditation Package** | Evidence for system security authorization/ATO                                   | 🔴 Must Have (gov/defense)        | ISO/IEC 27001:2022, NIST SP 800-37           |
 
 ---
 
@@ -206,13 +206,13 @@ Per [[05_Life_Cycles_and_Processes]], the formality and timing of these document
 | ISO/IEC/IEEE 15939 | Systems and Software Engineering — Measurement Process |
 | ISO/IEC/IEEE 24748-1 | Systems and Software Engineering — Life Cycle Management |
 | ISO/IEC/IEEE 15289 | Systems and Software Engineering — Content of Life Cycle Information Items |
-| ISO/IEC/IEEE 20000-1 | Information Technology — Service Management |
+| ISO/IEC 20000-1 | Information Technology — Service Management |
 | ISO 31000 | Risk Management — Guidelines |
 | ISO 9001 | Quality Management Systems — Requirements |
 | ISO 10006 | Quality Management — Guidelines for Quality Management in Projects |
 | ISO 10007 | Quality Management — Guidelines for Configuration Management |
 | ISO 21511 | Work Breakdown Structures for Project and Programme Management |
-| ISO/IEC 27001 | Information Security, Cybersecurity and Privacy Protection |
+| ISO/IEC 27001:2022 | Information Security, Cybersecurity and Privacy Protection |
 | IEC 61508 | Functional Safety of Electrical/Electronic/Programmable Electronic Systems |
 | IEC 60812 | Failure Modes and Effects Analysis (FMEA and FMECA) |
 | IEC 61025 | Fault Tree Analysis (FTA) |

@@ -98,10 +98,40 @@ standard_ref:
 | **Description** | Detailed requirement text |
 | **Priority** | 🔴 Must Have / 🟡 Should Have / 🟢 Could Have / ⚪ Won't Have |
 | **Status** | Draft / Under Review / Approved / Baselined |
-| **Source** | Origin — stakeholder, regulation, business rule |
+| **Source** | Origin: stakeholder, regulation, business rule |
 | **Rationale** | Why this requirement exists |
-| **Acceptance Criteria** | Testable conditions for acceptance |
+| **Acceptance Criteria** | Testable conditions for acceptance (see §1.5 for format) |
 | **Traceability** | Links to business requirement, design, test case |
+
+### 1.5 Acceptance Criteria Format
+
+> Per ISO/IEC/IEEE 29148:2018, every requirement must have testable acceptance criteria. Use the **Given/When/Then** (BDD) format for functional requirements, or condition-based format for non-functional requirements.
+
+**Format for Functional Requirements (Given/When/Then):**
+
+```gherkin
+Given [precondition: the user is logged in and on the request submission page]
+When [action: the user submits a request with all required fields completed]
+Then [expected result: the system creates a unique request, assigns a reference number,
+      and displays a success confirmation]
+```
+
+**Format for Non-Functional Requirements (Condition + Measurement):**
+
+```
+When [condition: the system is under normal load (100 concurrent users)]
+Then [measurement: the page response time shall be <2 seconds at the 95th percentile]
+```
+
+**Example acceptance criteria mapped to requirements:**
+
+| Requirement | Acceptance Criteria |
+|-------------|-------------------|
+| FR-001 (Submit request) | **Given** a logged-in customer, **When** they submit a valid request, **Then** a unique reference number is generated and a confirmation email is sent |
+| FR-101 (Auto-classify) | **Given** a submitted request, **When** the processing engine evaluates it, **Then** it is classified into the correct category with ≥95% accuracy |
+| NFR-001 (Response time) | **When** 100 concurrent users are active, **Then** page response time is <2s at 95th percentile, verified by load test |
+
+> **Quality check:** Each acceptance criterion must be **testable** (can be verified by a single test case), **unambiguous** (only one interpretation), and **binary** (clearly pass or fail).
 
 ---
 
@@ -375,5 +405,5 @@ flowchart TB
 
 ---
 
-> **Template Standard:** Based on SWEBOK v4, ISO/IEC/IEEE 29148
+> **Template Standard:** Based on SWEBOK v4, ISO/IEC/IEEE 29148:2018
 > **Usage:** This is the *baseline* for software development. All design, code, and test decisions trace back to this document. Changes require formal change control via [[Requirements-Change-Log]].

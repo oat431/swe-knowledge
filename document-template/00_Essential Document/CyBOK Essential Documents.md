@@ -26,11 +26,11 @@ tags: [overview, cyber-security, cybok, essential-documents]
 | Document | Description | Priority | ISO/IEEE Reference |
 |---|---|---|---|
 | **Risk Assessment Report** | Identified threats, vulnerabilities, likelihood, impact, and risk levels per NIST SP 800-30 or ISO/IEC 27005 | 🔴 Must Have | ISO/IEC 27005, NIST SP 800-30 |
-| **Risk Register** | Living document of all identified risks with owners, mitigation strategies, and status | 🔴 Must Have | ISO 31000, ISO/IEC 27001 |
+| **Risk Register** | Living document of all identified risks with owners, mitigation strategies, and status | 🔴 Must Have | ISO 31000, ISO/IEC 27001:2022 |
 | **Risk Treatment Plan** | Decisions for each risk: accept, avoid, mitigate, share, or transfer | 🔴 Must Have | ISO/IEC 27005 |
-| **Security Policy** | Enactable rules governing security behaviour, responsibilities, and consequences | 🔴 Must Have | ISO/IEC 27001 |
-| **Information Security Management System (ISMS)** | Documented systematic approach to managing security, including scope, policy, risk assessment, controls | 🔴 Must Have | ISO/IEC 27001 |
-| **Statement of Applicability (SoA)** | List of ISO 27001 controls selected with justification for inclusions/exclusions | 🔴 Must Have | ISO/IEC 27001 |
+| **Security Policy** | Enactable rules governing security behaviour, responsibilities, and consequences | 🔴 Must Have | ISO/IEC 27001:2022 |
+| **Information Security Management System (ISMS)** | Documented systematic approach to managing security, including scope, policy, risk assessment, controls | 🔴 Must Have | ISO/IEC 27001:2022 |
+| **Statement of Applicability (SoA)** | List of ISO 27001 controls selected with justification for inclusions/exclusions | 🔴 Must Have | ISO/IEC 27001:2022 |
 | **Business Continuity Plan (BCP)** | Procedures for maintaining critical operations during and after disruptions | 🔴 Must Have | ISO 22301, ISO/IEC 27035 |
 | **Incident Response Plan** | Defined phases: prepare, detect, assess, respond, learn per ISO/IEC 27035 | 🔴 Must Have | ISO/IEC 27035 |
 | **Vulnerability Management Report** | Prioritized vulnerabilities with patching status, risk decisions, and justifications | 🔴 Must Have | ISO/IEC 27002 |
@@ -76,15 +76,15 @@ tags: [overview, cyber-security, cybok, essential-documents]
 
 | Document | Description | Priority | ISO/IEEE Reference |
 |---|---|---|---|
-| **Security Requirements Specification** | Derived from threat modeling and compliance needs | 🔴 Must Have | ISO/IEC 27001 |
+| **Security Requirements Specification** | Derived from threat modeling and compliance needs | 🔴 Must Have | ISO/IEC 27001:2022 |
 | **Abuse / Misuse Cases** | Negative scenarios: how the system could be attacked | 🟡 Nice to Have | — |
 | **Threat Model (Application)** | STRIDE, attack trees per application or feature | 🔴 Must Have | — |
 | **Secure Design Review Report** | Architecture and design evaluation for security flaws | 🔴 Must Have | ISO/IEC 27002 |
 | **Secure Coding Guidelines** | Language-specific standards: CERT, OWASP, MISRA | 🔴 Must Have | CERT, OWASP ASVS |
-| **SAST Report** (Static Analysis) | Source code vulnerability scan results | 🔴 Must Have | ISO/IEC 27001 |
+| **SAST Report** (Static Analysis) | Source code vulnerability scan results | 🔴 Must Have | ISO/IEC 27001:2022 |
 | **SCA Report** (Software Composition Analysis) | Third-party dependency vulnerability scan results | 🔴 Must Have | ISO/IEC 5230 (OpenChain) |
-| **DAST Report** (Dynamic Analysis) | Runtime penetration and fuzzing results | 🔴 Must Have | ISO/IEC 27001 |
-| **Penetration Test Report** | Controlled attack simulation findings | 🔴 Must Have | ISO/IEC 27001 |
+| **DAST Report** (Dynamic Analysis) | Runtime penetration and fuzzing results | 🔴 Must Have | ISO/IEC 27001:2022 |
+| **Penetration Test Report** | Controlled attack simulation findings | 🔴 Must Have | ISO/IEC 27001:2022 |
 | **Vulnerability Disclosure Report** | Coordinated disclosure process documentation | 🟡 Nice to Have | ISO/IEC 29147 |
 | **DevSecOps Pipeline Configuration** | Security automation in CI/CD: SAST, SCA, image scanning, policy-as-code | 🔴 Must Have | — |
 | **SSDLC Process Documentation** | Security gates and activities at each SDLC phase | 🔴 Must Have | ISO/IEC 27034 |

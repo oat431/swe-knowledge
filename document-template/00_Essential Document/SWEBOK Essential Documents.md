@@ -148,17 +148,17 @@ tags: [overview, software-engineering, sdlc, swebok, essential-documents]
 | **CI/CD Pipeline Configuration**                                         | Build, test, deploy automation (Jenkinsfile, GitHub Actions, GitLab CI) | 🔴 Must Have    | ISO/IEC/IEEE 32675 (DevOps)   |
 | **Deployment Plan**                                                      | Step-by-step release procedure, rollback strategy                       | 🔴 Must Have    | ISO/IEC/IEEE 32675 (DevOps)   |
 | **Disaster Recovery Plan**                                               | Failover, backup/restore procedures, RPO/RTO targets                    | 🔴 Must Have    | ISO/IEC 27031 (ICT Readiness) |
-| **Incident Management Process**                                          | Triage, escalation, post-mortem, RCA template                           | 🔴 Must Have    | ISO/IEC/IEEE 20000-1          |
-| **Operations Manual / Runbook**                                          | Routine procedures: startup, shutdown, backup, monitoring               | 🔴 Must Have    | ISO/IEC/IEEE 20000-1          |
+| **Incident Management Process**                                          | Triage, escalation, post-mortem, RCA template                           | 🔴 Must Have    | ISO/IEC 20000-1          |
+| **Operations Manual / Runbook**                                          | Routine procedures: startup, shutdown, backup, monitoring               | 🔴 Must Have    | ISO/IEC 20000-1          |
 | **Release Notes / Version Description Document** (VDD)                   | What's new, fixed, known issues per release                             | 🔴 Must Have    | IEEE 828 (CM Plans)           |
 | **Rollback Plan**                                                        | Reversion procedure with data migration scripts                         | 🔴 Must Have    | ISO/IEC/IEEE 32675 (DevOps)   |
-| **SLA** (Service-Level Agreement)                                        | Availability, performance, response-time commitments                    | 🔴 Must Have    | ISO/IEC/IEEE 20000-1          |
-| **Capacity Plan**                                                        | Sizing, workload estimates, scaling strategy                            | 🟡 Nice to Have | ISO/IEC/IEEE 20000-1          |
+| **SLA** (Service-Level Agreement)                                        | Availability, performance, response-time commitments                    | 🔴 Must Have    | ISO/IEC 20000-1          |
+| **Capacity Plan**                                                        | Sizing, workload estimates, scaling strategy                            | 🟡 Nice to Have | ISO/IEC 20000-1          |
 | **Container Configurations** (Dockerfile, docker-compose, K8s manifests) | Application packaging and orchestration                                 | 🟡 Nice to Have | —                             |
 | **Infrastructure-as-Code** (Terraform / Ansible / Pulumi)                | Provisioning scripts for environments                                   | 🟡 Nice to Have | —                             |
-| **Monitoring Dashboard Configuration**                                   | Telemetry, alerts, KPIs                                                 | 🟡 Nice to Have | ISO/IEC/IEEE 20000-1          |
+| **Monitoring Dashboard Configuration**                                   | Telemetry, alerts, KPIs                                                 | 🟡 Nice to Have | ISO/IEC 20000-1          |
 | **Operational KPIs Report**                                              | Deployment frequency, lead time, MTTR, change failure rate              | 🟡 Nice to Have | ISO/IEC/IEEE 32675 (DevOps)   |
-| **SLO / SLI Definitions**                                                | Service-level objectives and indicators                                 | 🟡 Nice to Have | ISO/IEC/IEEE 20000-1          |
+| **SLO / SLI Definitions**                                                | Service-level objectives and indicators                                 | 🟡 Nice to Have | ISO/IEC 20000-1          |
 
 ---
 
@@ -173,7 +173,7 @@ tags: [overview, software-engineering, sdlc, swebok, essential-documents]
 | **Maintenance Plan**                              | Strategy for corrective, adaptive, perfective, preventive, emergency maintenance | 🔴 Must Have    | ISO/IEC/IEEE 14764   |
 | **Maintenance Metrics Dashboard**                 | Effort by category, request volume, MTTR, backlog                                | 🟡 Nice to Have | ISO/IEC/IEEE 14764   |
 | **Reengineering Documentation**                   | Updated design/docs after significant restructuring                              | 🟡 Nice to Have | ISO/IEC/IEEE 14764   |
-| **SLA Compliance Report**                         | Maintenance performance against service commitments                              | 🟡 Nice to Have | ISO/IEC/IEEE 20000-1 |
+| **SLA Compliance Report**                         | Maintenance performance against service commitments                              | 🟡 Nice to Have | ISO/IEC 20000-1 |
 | **Technical Debt Register**                       | Known shortcuts, their cost, and remediation plan                                | 🟡 Nice to Have | —                    |
 | **Refactoring Log**                               | Internal restructuring changes (no behavioral change)                            | 🟢 Optional     | —                    |
 | **Reverse Engineering Artifacts**                 | Recovered specifications, design descriptions from legacy code                   | 🟢 Optional     | —                    |
@@ -234,16 +234,16 @@ tags: [overview, software-engineering, sdlc, swebok, essential-documents]
 
 | Document                                                 | Description                                                 | Priority        | ISO/IEEE Reference              |
 | -------------------------------------------------------- | ----------------------------------------------------------- | --------------- | ------------------------------- |
-| **SAST Report** (Static Application Security Testing)    | Source code vulnerability scan results                      | 🔴 Must Have    | ISO/IEC 27001                   |
+| **SAST Report** (Static Application Security Testing)    | Source code vulnerability scan results                      | 🔴 Must Have    | ISO/IEC 27001:2022                   |
 | **Secure Coding Guidelines**                             | CERT Top 10, language-specific secure coding rules          | 🔴 Must Have    | CERT Secure Coding Standards    |
-| **Security Architecture**                                | Access control, cryptography, defense-in-depth design       | 🔴 Must Have    | ISO/IEC 27001                   |
-| **Security Requirements Specification**                  | Derived from threat modeling and compliance needs           | 🔴 Must Have    | ISO/IEC 27001                   |
+| **Security Architecture**                                | Access control, cryptography, defense-in-depth design       | 🔴 Must Have    | ISO/IEC 27001:2022                   |
+| **Security Requirements Specification**                  | Derived from threat modeling and compliance needs           | 🔴 Must Have    | ISO/IEC 27001:2022                   |
 | **Threat Model**                                         | Attack surface analysis: STRIDE, attack trees, misuse cases | 🔴 Must Have    | —                               |
 | **Abuse / Misuse Cases**                                 | Negative scenarios: how the system could be attacked        | 🟡 Nice to Have | —                               |
-| **DAST Report** (Dynamic Application Security Testing)   | Runtime penetration test and fuzzing results                | 🟡 Nice to Have | ISO/IEC 27001                   |
+| **DAST Report** (Dynamic Application Security Testing)   | Runtime penetration test and fuzzing results                | 🟡 Nice to Have | ISO/IEC 27001:2022                   |
 | **DevSecOps Pipeline Configuration**                     | Security automation in CI/CD                                | 🟡 Nice to Have | —                               |
-| **ISMS Documentation** (Information Security Management) | Information security management system                      | 🟡 Nice to Have | ISO/IEC 27001                   |
-| **Penetration Test Report**                              | Controlled attack simulation findings                       | 🟡 Nice to Have | ISO/IEC 27001                   |
+| **ISMS Documentation** (Information Security Management) | Information security management system                      | 🟡 Nice to Have | ISO/IEC 27001:2022                   |
+| **Penetration Test Report**                              | Controlled attack simulation findings                       | 🟡 Nice to Have | ISO/IEC 27001:2022                   |
 | **Vulnerability Assessment**                             | CVE/CWE/CVSS-catalogued findings with severity scores       | 🟡 Nice to Have | CVSS v4.0, CVE, CWE             |
 | **Common Criteria Evaluation**                           | Security functionality and assurance evaluation             | 🟢 Optional     | ISO/IEC 15408 (Common Criteria) |
 | **Security Patterns Catalog**                            | Applied proven security solutions                           | 🟢 Optional     | —                               |
@@ -274,13 +274,13 @@ Per SWEBOK v4, the six generic life cycle stages are:
 | ISO/IEC/IEEE 29119-1/2/3/4 | Software and Systems Engineering — Software Testing |
 | ISO/IEC/IEEE 14764 | Software Engineering — Software Life Cycle Processes — Maintenance |
 | ISO/IEC/IEEE 32675 | Information Technology — DevOps |
-| ISO/IEC/IEEE 20000-1 | Information Technology — Service Management |
+| ISO/IEC 20000-1 | Information Technology — Service Management |
 | ISO/IEC 25010 | Systems and Software Engineering — SQuaRE (Quality Model) |
 | ISO/IEC 19501 | Information Technology — Unified Modeling Language (UML) |
 | ISO/IEC 20246 | Software and Systems Engineering — Work Product Reviews |
 | ISO/IEC 5230 | Information Technology — OpenChain (Open Source Compliance) |
 | ISO/IEC 33000 | Information Technology — Process Assessment (SPICE) |
-| ISO/IEC 27001 | Information Security, Cybersecurity and Privacy Protection |
+| ISO/IEC 27001:2022 | Information Security, Cybersecurity and Privacy Protection |
 | ISO/IEC 27031 | Information Technology — ICT Readiness for Business Continuity |
 | ISO/IEC 15408 | Information Technology — Common Criteria (Security Evaluation) |
 | ISO 9001 | Quality Management Systems — Requirements |

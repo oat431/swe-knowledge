@@ -11,7 +11,7 @@ classification: "Confidential"
 tags: [isms, information-security, iso-27001, cyberok]
 standard_ref:
   - CyBOK v1 — Security Governance
-  - ISO/IEC 27001 — Information Security Management
+  - ISO/IEC 27001:2022 — Information Security Management
 ---
 
 # ISMS Documentation (Information Security Management System)
@@ -112,5 +112,5 @@ flowchart TD
 
 ---
 
-> **Template Standard:** Based on CyBOK v1, ISO/IEC 27001
+> **Template Standard:** Based on CyBOK v1, ISO/IEC 27001:2022
 > **Usage:** The ISMS is the *security backbone*. It's a living system — review annually, update when threats change.

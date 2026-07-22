@@ -11,7 +11,7 @@ classification: "Confidential"
 tags: [security-policy, governance, cyberok, iso-27001]
 standard_ref:
   - CyBOK v1 — Security Governance
-  - ISO/IEC 27001 — Information Security Management
+  - ISO/IEC 27001:2022 — Information Security Management
 ---
 
 # Security Policy
@@ -119,5 +119,5 @@ standard_ref:
 
 ---
 
-> **Template Standard:** Based on CyBOK v1, ISO/IEC 27001
+> **Template Standard:** Based on CyBOK v1, ISO/IEC 27001:2022
 > **Usage:** The security policy is *mandatory* for all personnel. Acknowledge and comply. Violations have consequences.

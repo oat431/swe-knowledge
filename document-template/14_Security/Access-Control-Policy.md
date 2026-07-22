@@ -11,7 +11,7 @@ classification: "Confidential"
 tags: [access-control, rbac, least-privilege, cyberok, iso-27001]
 standard_ref:
   - CyBOK v1 — Access Control
-  - ISO/IEC 27001 — A.9 Access Control
+  - ISO/IEC 27001:2022 — A.9 Access Control
 ---
 
 # Access Control Policy
@@ -125,5 +125,5 @@ flowchart TD
 
 ---
 
-> **Template Standard:** Based on CyBOK v1, ISO/IEC 27001
+> **Template Standard:** Based on CyBOK v1, ISO/IEC 27001:2022
 > **Usage:** Access control is *enforced*, not requested. Every access is logged. Reviews catch drift. Terminations are immediate.

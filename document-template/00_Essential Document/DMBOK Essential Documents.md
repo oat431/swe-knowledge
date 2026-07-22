@@ -85,13 +85,13 @@ tags: [overview, data-management, dmbok, essential-documents]
 
 | Document | Description | Priority | ISO/IEEE Reference |
 |---|---|---|---|
-| **Data Classification Schema** | Categories: Public, Internal, Confidential, Restricted; with handling procedures per level | 🔴 Must Have | ISO/IEC 27001 |
+| **Data Classification Schema** | Categories: Public, Internal, Confidential, Restricted; with handling procedures per level | 🔴 Must Have | ISO/IEC 27001:2022 |
 | **Data Access Control Policy** | Role-based, attribute-based, or mandatory access controls; least privilege | 🔴 Must Have | ISO/IEC 29146 |
 | **Data Encryption Standards** | Encryption at rest, in transit, and in use; approved algorithms and key management | 🔴 Must Have | ISO/IEC 18033, NIST SP 800-57 |
 | **Data Masking / Anonymization Rules** | Obfuscation standards for non-production environments and analytics | 🔴 Must Have | ISO/IEC 27002 |
 | **Privacy Impact Assessment (PIA)** | Evaluation of privacy risks for systems processing personal data | 🔴 Must Have | GDPR, ISO/IEC 27701 |
 | **Data Breach Response Plan** | Notification procedures, containment, forensic investigation, regulatory reporting | 🔴 Must Have | GDPR, ISO/IEC 27035 |
-| **Data Security Audit Report** | Audit findings for data access, encryption, masking, and compliance controls | 🔴 Must Have | ISO/IEC 27001 |
+| **Data Security Audit Report** | Audit findings for data access, encryption, masking, and compliance controls | 🔴 Must Have | ISO/IEC 27001:2022 |
 
 ## 6. Data Integration & Interoperability
 

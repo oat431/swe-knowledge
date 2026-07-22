@@ -11,7 +11,7 @@ classification: "Confidential"
 tags: [security-plan, sebok, iso-27001]
 standard_ref:
   - SEBoK v2 — System Security
-  - ISO/IEC 27001 — Information Security Management
+  - ISO/IEC 27001:2022 — Information Security Management
 ---
 
 # Security Plan
@@ -30,7 +30,7 @@ standard_ref:
 
 | Aspect | Approach |
 |--------|---------|
-| [Security Framework] | [ISO/IEC 27001] |
+| [Security Framework] | [ISO/IEC 27001:2022] |
 | [Security Lifecycle] | [Secure by design, secure in operation] |
 | [Security Testing] | [SAST, SCA, DAST, Pen Test] |
 | [Security Monitoring] | [SIEM, IDS/IPS, 24/7 alerting] |
@@ -141,5 +141,5 @@ flowchart TB
 
 ---
 
-> **Template Standard:** Based on SEBoK v2, ISO/IEC 27001
+> **Template Standard:** Based on SEBoK v2, ISO/IEC 27001:2022
 > **Usage:** The security plan is the *security contract*. It defines how we protect the system. Review annually. Update after incidents.

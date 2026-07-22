@@ -303,6 +303,32 @@ tags:
 
 ---
 
+## 14. Applicable Standards (Moderate Compliance)
+
+> At medium enterprise scale, select standards based on your regulatory environment. Implement the **process** not the paperwork.
+
+| Domain | Standard | How to Apply |
+|--------|----------|-------------|
+| **Software Lifecycle** | ISO/IEC/IEEE 12207:2015 | [Map project activities to lifecycle processes; don't adopt all processes] |
+| **Requirements** | ISO/IEC/IEEE 29148:2018 | [Structure SRS per Annex C; ensure acceptance criteria per requirement] |
+| **Architecture** | ISO/IEC/IEEE 42010:2022 | [Map stakeholders→concerns→viewpoints→views in the SAD] |
+| **Testing** | ISO/IEC/IEEE 29119-3 | [Test plan includes suspension/resumption criteria, entry/exit, staffing] |
+| **Quality** | ISO 9001, IEEE 730-2014 | [SQA independence; quality records management; non-compliance process] |
+| **Configuration Mgmt** | IEEE 828-2012 | [SCMP with CCB, 5 CM processes, baselines, release management] |
+| **V&V** | IEEE 1012-2017 | [Assign integrity level; V&V by lifecycle phase; independence] |
+| **Security** | ISO/IEC 27001:2022 | [Risk assessment + risk treatment plan; Annex A controls via SoA] |
+| **Service Mgmt** | ISO/IEC 20000-1:2018 | [SLA management, incident management, change management] |
+| **Risk** | ISO 31000:2018 | [Risk identification → analysis → evaluation → treatment → monitor] |
+| **Data Quality** | ISO 8000 | [If data-intensive: data quality rules, profiling, scorecard] |
+| **Project Mgmt** | ISO 21502:2020 | [Map PM plan to process groups and knowledge areas] |
+| **NFRs** | ISO/IEC 25010 | [Structure NFR catalog by 8 quality characteristics] |
+| **Maintenance** | ISO/IEC/IEEE 14764:2006 | [Maintenance plan covering 4 maintenance types] |
+| **DR/BC** | ISO 22301:2019 | [RTO/RPO targets, DR testing, business continuity plan] |
+
+> **Tailoring note:** Per ISO/IEC/IEEE 12207 §5 (Tailoring), select and adapt the standard's processes to fit your project context. Document your tailoring decisions. Not every project needs every process.
+
+---
+
 ---
 
 ## Quick-Start Checklist

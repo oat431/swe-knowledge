@@ -34,7 +34,7 @@ standard_ref:
 | [ISO/IEC/IEEE 29148] | [Requirements Engineering] | [Required] | ✅ Compliant |
 | [ISO/IEC/IEEE 42010] | [Architecture Description] | [Required] | ✅ Compliant |
 | [ISO 9001] | [Quality Management] | [Required] | ✅ Compliant |
-| [ISO/IEC 27001] | [Information Security] | [Required] | ✅ Compliant |
+| [ISO/IEC 27001:2022] | [Information Security] | [Required] | ✅ Compliant |
 | [ISO 31000] | [Risk Management] | [Required] | ✅ Compliant |
 
 ## 3. Compliance Matrix

@@ -8,10 +8,10 @@ last_updated: "[YYYY-MM-DD]"
 project_name: "[Project Name]"
 project_id: "[Project-ID]"
 classification: "Internal / Confidential"
-tags: [process-assessment, cmmi, spice, swebok, iso-15504]
+tags: [process-assessment, cmmi, spice, swebok, iso-33000]
 standard_ref:
   - SWEBOK v4 — Quality Assurance
-  - ISO/IEC 15504 — SPICE
+  - ISO/IEC 33000 — Process Assessment (SPICE, supersedes ISO/IEC 15504)
   - CMMI — Capability Maturity Model Integration
 ---
 
@@ -98,5 +98,5 @@ standard_ref:
 
 ---
 
-> **Template Standard:** Based on SWEBOK v4, ISO/IEC 15504, CMMI
+> **Template Standard:** Based on SWEBOK v4, ISO/IEC 33000 (SPICE), CMMI
 > **Usage:** Process assessment is *not* a pass/fail exam. It identifies where you are and where to improve. Be honest — the gap is the opportunity.

@@ -12,7 +12,7 @@ classification: "Internal / Confidential"
 tags: [sad, software-architecture, swebok, iso-42010]
 standard_ref:
   - SWEBOK v4 — Architecture
-  - ISO/IEC/IEEE 42010 — Architecture Description
+  - ISO/IEC/IEEE 42010:2022 — Architecture Description
 ---
 
 # Software Architecture Document (SAD)
@@ -62,9 +62,54 @@ standard_ref:
 
 ---
 
-## 2. Architecture Overview
+## 2. Architecture Stakeholders and Concerns
 
-### 2.1 Architectural Style
+> Per ISO/IEC/IEEE 42010:2022, an architecture description must identify stakeholders, their concerns, and the viewpoints that address them. This section maps that relationship before presenting the views.
+
+### 2.1 Stakeholder Identification
+
+| Stakeholder | Role | Key Concerns |
+|-------------|------|--------------|
+| [Business Sponsor] | [Funds the project] | [ROI, time-to-market, cost] |
+| [Product Owner] | [Owns the product vision] | [Feature delivery, user satisfaction, backlog priorities] |
+| [Software Architect] | [Designs the system] | [Maintainability, scalability, design coherence] |
+| [Developer] | [Builds the system] | [Code clarity, testability, development workflow] |
+| [QA / Test Engineer] | [Verifies the system] | [Testability, observability, defect isolation] |
+| [DevOps / SRE] | [Operates the system] | [Deployability, monitoring, reliability, recovery] |
+| [Security Engineer] | [Secures the system] | [Attack surface, data protection, compliance] |
+| [End User] | [Uses the system] | [Performance, usability, availability] |
+| [Operations Staff] | [Day-to-day operations] | [Usability, workflow efficiency, error handling] |
+
+### 2.2 Viewpoint Mapping
+
+> Each viewpoint addresses specific stakeholders and their concerns. Views (concrete models) are produced per viewpoint in the sections that follow.
+
+| Viewpoint | Addresses Stakeholders | Addresses Concerns | Model Kind | Where Documented |
+|-----------|----------------------|---------------------|------------|-----------------|
+| **Context / System View** | Sponsor, PO, End User | [System scope, external dependencies, user interaction] | [Context diagram, use cases] | §3.2 High-Level Architecture |
+| **Component / Service View** | Architect, Developer | [Module decomposition, service boundaries, responsibilities] | [Component diagram, service specs] | §4 Component Design |
+| **Data View** | Architect, Developer, DBA | [Data model, storage strategy, data lifecycle] | [ERD, data flow diagram] | §5 Data Architecture |
+| **Security View** | Security Engineer, Architect | [Authentication, authorization, encryption, attack surface] | [Security model, threat model] | §6 Security Architecture |
+| **Deployment View** | DevOps, SRE, Architect | [Infrastructure, scaling, environments, failover] | [Deployment diagram, env matrix] | §7 Deployment Architecture |
+| **Quality Attributes View** | All stakeholders | [Performance, availability, scalability, maintainability] | [Quality attribute scenarios, utility tree] | §8 Quality Attributes |
+
+### 2.3 View Correspondences
+
+> Per ISO/IEC/IEEE 42010:2022, correspondences define relationships between views to ensure consistency.
+
+| From View | To View | Correspondence Rule |
+|-----------|---------|-------------------|
+| [Component View] | [Data View] | [Each service maps to its data store(s) defined in the data model] |
+| [Component View] | [Deployment View] | [Each service maps to its deployment target and scaling config] |
+| [Component View] | [Security View] | [Each external-facing component maps to its security controls] |
+| [Data View] | [Security View] | [Each data store maps to its encryption and access control policy] |
+| [Deployment View] | [Quality Attributes View] | [Each deployment config maps to the quality attribute it supports] |
+
+---
+
+## 3. Architecture Overview
+
+### 3.1 Architectural Style
 
 | Aspect | Choice | Rationale |
 |--------|-------|----------|
@@ -73,7 +118,7 @@ standard_ref:
 | [Data Management] | [Database per service] | [Service independence] |
 | [Deployment] | [Containerized, cloud-native] | [Scalability, portability] |
 
-### 2.2 High-Level Architecture
+### 3.2 High-Level Architecture
 
 ```mermaid
 flowchart TB
@@ -131,9 +176,9 @@ flowchart TB
 
 ---
 
-## 3. Component Design
+## 4. Component Design
 
-### 3.1 Request Service
+### 4.1 Request Service
 
 | Aspect | Detail |
 |--------|--------|
@@ -144,7 +189,7 @@ flowchart TB
 | [Events Produced] | [RequestCreated, RequestUpdated] |
 | [Events Consumed] | [RequestApproved, RequestRejected] |
 
-### 3.2 Processing Service
+### 4.2 Processing Service
 
 | Aspect | Detail |
 |--------|--------|
@@ -155,7 +200,7 @@ flowchart TB
 | [Events Produced] | [RequestValidated, RequestApproved, RequestRejected] |
 | [Events Consumed] | [RequestCreated] |
 
-### 3.3 Auth Service
+### 4.3 Auth Service
 
 | Aspect | Detail |
 |--------|--------|
@@ -167,9 +212,9 @@ flowchart TB
 
 ---
 
-## 4. Data Architecture
+## 5. Data Architecture
 
-### 4.1 Data Model (High-Level)
+### 5.1 Data Model (High-Level)
 
 ```mermaid
 erDiagram
@@ -209,7 +254,7 @@ erDiagram
     }
 ```
 
-### 4.2 Data Storage Strategy
+### 5.2 Data Storage Strategy
 
 | Data Type | Store | Retention | Backup |
 |-----------|-------|-----------|--------|
@@ -221,9 +266,9 @@ erDiagram
 
 ---
 
-## 5. Security Architecture
+## 6. Security Architecture
 
-### 5.1 Authentication & Authorization
+### 6.1 Authentication & Authorization
 
 | Layer | Mechanism | Implementation |
 |-------|----------|---------------|
@@ -231,7 +276,7 @@ erDiagram
 | [Internal Admins] | [OAuth2 + JWT + MFA] | [Auth Service] |
 | [Service-to-Service] | [mTLS + API Keys] | [API Gateway] |
 
-### 5.2 Security Controls
+### 6.2 Security Controls
 
 | Control | Implementation | Standard |
 |---------|---------------|---------|
@@ -244,7 +289,7 @@ erDiagram
 
 ---
 
-## 6. Deployment Architecture
+## 7. Deployment Architecture
 
 | Environment | Purpose | Infrastructure | Scaling |
 |------------|---------|---------------|---------|
@@ -254,7 +299,7 @@ erDiagram
 
 ---
 
-## 7. Quality Attributes
+## 8. Quality Attributes
 
 | Attribute | Scenario | Architecture Response | Verification |
 |-----------|---------|---------------------|-------------|
@@ -266,7 +311,7 @@ erDiagram
 
 ---
 
-## 8. Architecture Decision Summary
+## 9. Architecture Decision Summary
 
 | # | Decision | Rationale | ADR |
 |---|---------|----------|-----|
@@ -290,5 +335,5 @@ erDiagram
 
 ---
 
-> **Template Standard:** Based on SWEBOK v4, ISO/IEC/IEEE 42010
+> **Template Standard:** Based on SWEBOK v4, ISO/IEC/IEEE 42010:2022
 > **Usage:** The SAD is the *software-level* architecture document. It describes how the software is structured, how components interact, and how quality attributes are achieved. Developers use it as their primary architectural reference.

@@ -101,7 +101,9 @@ gantt
 | [QA Engineer 2] | [Name] | [Integration testing, regression] |
 | [Business Analyst] | [Name] | [UAT coordination] |
 
-## 6. Entry & Exit Criteria
+## 6. Entry, Exit & Suspension Criteria
+
+### 6.1 Entry & Exit Criteria
 
 | Phase | Entry Criteria | Exit Criteria |
 |-------|---------------|--------------|
@@ -111,7 +113,54 @@ gantt
 | [UAT] | [System tests pass] | [Stakeholder sign-off] |
 | [Regression] | [All defects fixed] | [No critical/high defects] |
 
-## 7. Defect Management
+### 6.2 Suspension Criteria
+
+> Per ISO/IEC/IEEE 29119-3, the test plan must define conditions under which testing is suspended.
+
+| Condition | Trigger | Action |
+|-----------|---------|--------|
+| [Critical defect blocks testing] | [A 🔴 Critical defect prevents further test execution] | [Suspend affected test phase immediately] |
+| [Excessive critical defects] | [> 5 Critical defects found in a single test session] | [Suspend testing, escalate to PM + Tech Lead] |
+| [Test environment unavailable] | [Environment down for > 4 hours] | [Suspend testing, notify stakeholders] |
+| [Build instability] | [Build fails to deploy or crashes on startup] | [Suspend until stable build provided] |
+| [Data corruption] | [Test data corrupted or invalid] | [Suspend until data restored] |
+
+### 6.3 Resumption Requirements
+
+> Per ISO/IEC/IEEE 29119-3, the test plan must define what must be true before testing resumes after suspension.
+
+| Suspension Cause | Resumption Requirement |
+|-----------------|----------------------|
+| [Critical defect fixed] | [Fix verified, build redeployed, affected tests re-run] |
+| [Excessive defects resolved] | [Root cause analysis completed, fixes verified by dev] |
+| [Environment restored] | [Environment health check passed, data valid] |
+| [Stable build provided] | [Smoke tests passed on new build] |
+| [Data restored] | [Data validation complete, test data refreshed] |
+
+## 7. Staffing and Training Needs
+
+> Per ISO/IEC/IEEE 29119-3, the test plan must identify required skills and training.
+
+### 7.1 Test Team Composition
+
+| Role | Count | Required Skills | Assigned |
+|------|-------|----------------|----------|
+| [QA Lead] | [1] | [Test strategy, planning, coordination, risk assessment] | [Name] |
+| [QA Engineer — Automation] | [1] | [Jest, Playwright, CI/CD integration, scripting] | [Name] |
+| [QA Engineer — Manual] | [1] | [Test case design, exploratory testing, defect reporting] | [Name] |
+| [Business Analyst (UAT)] | [1] | [Business processes, acceptance criteria, stakeholder mgmt] | [Name] |
+
+### 7.2 Training Requirements
+
+| Training | Who | When | Duration |
+|----------|-----|------|----------|
+| [Domain/Product training] | [All QA] | [Project kickoff] | [2 days] |
+| [Automation tools training] | [QA Engineers] | [Before automation starts] | [3 days] |
+| [Test management tool] | [All QA] | [Project kickoff] | [0.5 day] |
+| [Security testing basics] | [QA Engineers] | [Before security testing] | [1 day] |
+| [Accessibility testing (WCAG)] | [QA Engineers] | [Before a11y testing] | [1 day] |
+
+## 8. Defect Management
 
 | Severity | Response Time | Resolution Time | Escalation |
 |---------|-------------|----------------|-----------|
@@ -120,7 +169,7 @@ gantt
 | [Medium] | [1 day] | [3 days] | — |
 | [Low] | [3 days] | [Next sprint] | — |
 
-## 8. Risk & Mitigations
+## 9. Risk & Mitigations
 
 | Risk | Probability | Impact | Mitigation |
 |------|-----------|--------|-----------|
@@ -140,5 +189,5 @@ gantt
 
 ---
 
-> **Template Standard:** Based on SWEBOK v4, ISO/IEC/IEEE 29119
-> **Usage:** The test plan is the *contract* for testing. Everyone knows what's tested, when, and by whom.
+> **Template Standard:** Based on SWEBOK v4, ISO/IEC/IEEE 29119-3 (Annex: Test Plan content)
+> **Usage:** The test plan is the *contract* for testing. Everyone knows what's tested, when, and by whom. Suspension and resumption criteria protect the team from wasting effort on broken builds.

@@ -52,7 +52,7 @@ Use this profile when your project meets **any** of the following criteria:
 > - [[CyBOK v1 - Overview]] — Cyber Security Body of Knowledge
 > - [[UX UI Essential Documents]] — UX/UI Design Documents
 >
-> Plus applicable regulatory standards: DO-178C, IEC 62304, ISO 26262, EN 50128, IEC 61508, IEEE 730, IEEE 828, IEEE 1012, IEEE 1044, ISO/IEC/IEEE 12207, ISO/IEC/IEEE 15288, ISO/IEC/IEEE 29119, ISO/IEC/IEEE 29148, ISO/IEC/IEEE 42010.
+> Plus applicable regulatory standards: DO-178C, IEC 62304, ISO 26262, EN 50128, IEC 61508, IEEE 730-2014, IEEE 828-2012, IEEE 1012-2017, IEEE 1044, ISO/IEC/IEEE 12207:2015, ISO/IEC/IEEE 15288:2023, ISO/IEC/IEEE 29119, ISO/IEC/IEEE 29148:2018, ISO/IEC/IEEE 42010:2022, ISO/IEC 27001:2022, ISO 9001, ISO 31000:2018, ISO 22301:2019.
 
 ---
 
@@ -274,7 +274,7 @@ Use this profile when your project meets **any** of the following criteria:
 
 | Document | Description | Priority | ISO/IEEE Reference |
 |----------|-------------|----------|--------------------|
-| ISMS Documentation | Information Security Management System framework and policies | 🔴 | CyBOK (ISO/IEC 27001) |
+| ISMS Documentation | Information Security Management System framework and policies | 🔴 | CyBOK (ISO/IEC 27001:2022) |
 | Security Policy | Organizational security directives, responsibilities, and enforcement | 🔴 | CyBOK |
 | Risk Assessment Report | Systematic identification and evaluation of security risks | 🔴 | CyBOK (ISO/IEC 27005) |
 | Risk Treatment Plan | Selected controls and implementation plan for identified security risks | 🔴 | CyBOK |
@@ -316,7 +316,7 @@ Use this profile when your project meets **any** of the following criteria:
 | Logical Data Model (LDM) | Normalized data structures with entities, attributes, and relationships | 🔴 | DMBOK |
 | Physical Data Model (PDM) | Technology-specific data model with storage, indexing, and partitioning | 🔴 | DMBOK |
 | Data Dictionary | Standardized definitions of all data elements, formats, and business rules | 🔴 | DMBOK (ISO/IEC 11179) |
-| Data Classification Schema | Classification levels (public, internal, confidential, restricted) with handling rules | 🔴 | DMBOK (ISO/IEC 27001) |
+| Data Classification Schema | Classification levels (public, internal, confidential, restricted) with handling rules | 🔴 | DMBOK (ISO/IEC 27001:2022) |
 | Data Encryption Standards | Encryption algorithms, key management, and data-at-rest/in-transit policies | 🔴 | DMBOK |
 | Data Quality Rules + Scorecard | Defined quality dimensions, measurement rules, and quality metrics | 🔴 | DMBOK (ISO 8000) |
 | Backup & Recovery Plan | Backup frequency, retention, recovery procedures, and RTO/RPO targets | 🔴 | DMBOK |
@@ -434,7 +434,49 @@ Use this profile when your project meets **any** of the following criteria:
 
 ---
 
-## Quick-Start Checklist
+## 16b. Safety Integrity Level Mapping
+
+> For safety-critical systems, the integrity level (SIL/DAL/ASIL) determines the rigor of V&V, documentation, and process compliance required. Map your system's components to the appropriate level.
+
+| Integrity Level | DO-178C (Avionics) | IEC 61508 (Industrial) | ISO 26262 (Automotive) | IEC 62304 (Medical) | Documentation Rigor |
+|----------------|-------------------|----------------------|----------------------|--------------------|--------------------|
+| **Highest** | DAL A | SIL 4 | ASIL D | Class C | [Full formal: MC/DC coverage, independent V&V, formal methods] |
+| **High** | DAL B | SIL 3 | ASIL C | Class C | [High rigor: branch coverage, independent reviews, traceability] |
+| **Medium** | DAL C | SIL 2 | ASIL B | Class B | [Moderate: statement coverage, peer reviews, basic traceability] |
+| **Low** | DAL D | SIL 1 | ASIL A | Class A | [Basic: standard practices, no special V&V requirements] |
+
+> **IEEE 1012 alignment:** The integrity level also determines V&V tasks per IEEE 1012-2017. Level 1 (Catastrophic) requires full independent V&V across all lifecycle phases. See [[VandV-Plan]] §2 for the project integrity level assignment.
+
+---
+
+## 16c. Standards Compliance Matrix
+
+> At this scale, formal compliance is expected. Map every applicable standard to your project's evidence. This matrix is your certification readiness tracker.
+
+| Standard | Title | Applicability | Evidence Location | Status |
+|----------|-------|---------------|-------------------|--------|
+| ISO/IEC/IEEE 12207:2015 | Software Life Cycle Processes | [All SW projects] | [Project Management Plan, SDLC documentation] | [ ] |
+| ISO/IEC/IEEE 15288:2023 | System Life Cycle Processes | [All system projects] | [SEMP, System Architecture Description] | [ ] |
+| ISO/IEC/IEEE 29148:2018 | Requirements Engineering | [All projects] | [SRS, RTM, Requirements Change Log] | [ ] |
+| ISO/IEC/IEEE 42010:2022 | Architecture Description | [All projects] | [SAD, Architecture Views, Stakeholder Mapping] | [ ] |
+| ISO/IEC/IEEE 29119 | Software Testing | [All projects] | [Test Plan, Test Cases, Test Reports] | [ ] |
+| IEEE 828-2012 | Configuration Management | [All projects] | [SCMP, CCB records, Baseline Records, FCA/PCA] | [ ] |
+| IEEE 730-2014 | Software Quality Assurance | [All projects] | [SQAP, Review Records, Audit Reports] | [ ] |
+| IEEE 1012-2017 | V&V | [All projects, critical for safety] | [V&V Plan, V&V Reports, Integrity Level Assignment] | [ ] |
+| IEEE 1044 | Software Anomaly Classification | [All projects] | [Defect Reports, Defect Metrics] | [ ] |
+| ISO/IEC 27001:2022 | Information Security (ISMS) | [If processing sensitive data] | [ISMS Documentation, Risk Assessment, SoA] | [ ] |
+| ISO 9001 | Quality Management Systems | [If certified organization] | [QMS Documentation, Audit Reports] | [ ] |
+| ISO 31000:2018 | Risk Management | [All projects] | [Risk Management Plan, Risk Register] | [ ] |
+| ISO 22301:2019 | Business Continuity | [If mission-critical] | [BCP, DR Plan, DR Test Reports] | [ ] |
+| DO-178C | Airborne Software | [Aerospace only] | [PSAC, CI verification, structural coverage] | [ ] |
+| IEC 62304 | Medical Device Software | [Medical only] | [Software Development Plan, Risk Management File] | [ ] |
+| ISO 26262 | Automotive Functional Safety | [Automotive only] | [Safety Case, ASIL assessment, FMEA] | [ ] |
+| IEC 61508 | Functional Safety (E/E/PE) | [Industrial only] | [Safety Case, SIL assessment, FMEA/FTA] | [ ] |
+| EN 50128 | Railway Software | [Railway only] | [Safety Case, SIL assessment] | [ ] |
+
+> **Tailoring:** Per ISO/IEC/IEEE 12207 §5 and ISO/IEC/IEEE 15288, document which standard processes you have tailored (adapted or excluded) and the justification. The [[Standards-Compliance-Matrix]] template provides a detailed version of this matrix.
+
+---
 
 > [!tip]
 > Print this checklist. Check off each 🔴 document as it's produced. This is your certification readiness tracker.

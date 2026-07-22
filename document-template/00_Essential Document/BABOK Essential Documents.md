@@ -89,9 +89,9 @@ tags: [overview, business-analysis, babok, essential-documents]
 | --------------------------------- | -------------------------------------------------------------------------------------------------- | ------------ | ---------------------- |
 | **Solution Performance Measures** | Quantitative and qualitative KPIs providing information on how well the solution is performing     | 🔴 Must Have | ISO/IEC 25010 (SQuaRE) |
 | **Solution Performance Analysis** | Analysis of measurements with recommendations to solve performance gaps                            | 🔴 Must Have | ISO/IEC 25010 (SQuaRE) |
-| **Solution Limitation**           | Description of current solution-internal limitations: constraints, defects, component dependencies | 🔴 Must Have | ISO/IEC/IEEE 20000-1   |
-| **Enterprise Limitation**         | Description of current solution-external limitations: culture, operations, stakeholder factors     | 🔴 Must Have | ISO/IEC/IEEE 20000-1   |
-| **Recommended Actions**           | What should be done to improve solution value: organizational change, retirement, enhancement      | 🔴 Must Have | ISO/IEC/IEEE 20000-1   |
+| **Solution Limitation**           | Description of current solution-internal limitations: constraints, defects, component dependencies | 🔴 Must Have | ISO/IEC 20000-1   |
+| **Enterprise Limitation**         | Description of current solution-external limitations: culture, operations, stakeholder factors     | 🔴 Must Have | ISO/IEC 20000-1   |
+| **Recommended Actions**           | What should be done to improve solution value: organizational change, retirement, enhancement      | 🔴 Must Have | ISO/IEC 20000-1   |
 
 ---
 
