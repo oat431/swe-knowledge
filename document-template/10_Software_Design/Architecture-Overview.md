@@ -1,4 +1,20 @@
-
+---
+document_type: High-Level Design (HLD)
+version: "1.0"
+status: Draft
+author: "[Author Name]"
+created: "[YYYY-MM-DD]"
+last_updated: "[YYYY-MM-DD]"
+project_name: "[Project Name]"
+project_id: "[Project-ID]"
+architect: "[Solution Architect]"
+tech_lead: "[Technical Lead Name]"
+classification: "Internal / Confidential"
+tags: [hld, high-level-design, software-design, swebok]
+standard_ref:
+  - SWEBOK v4 — Design
+  - ISO/IEC/IEEE 42010 — Architecture Description
+---
 
 # High-Level Design (HLD)
 

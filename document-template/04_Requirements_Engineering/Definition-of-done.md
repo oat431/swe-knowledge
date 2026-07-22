@@ -1,3 +1,21 @@
+---
+document_type: Definition of Done (DoD)
+version: "1.0"
+status: Draft
+author: "[Author Name]"
+created: "[YYYY-MM-DD]"
+last_updated: "[YYYY-MM-DD]"
+project_name: "[Project Name]"
+project_id: "[Project-ID]"
+po_owner: "[Product Owner]"
+scrum_master: "[Scrum Master]"
+classification: "Internal / Confidential"
+tags: [dod, definition-of-done, quality-gate, scrum, agile, swebok]
+standard_ref:
+  - SWEBOK v4 — Quality Assurance
+  - Scrum Guide (Schwaber & Sutherland, 2020)
+  - Agile Practice Guide (PMI, 2017)
+---
 
 # Definition of Done (DoD)
 
