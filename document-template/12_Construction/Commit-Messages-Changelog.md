@@ -1,6 +1,6 @@
 ---
 document_type: Commit Messages / Changelog
-version: "1.0"
+version: "2.0"
 status: Active
 author: "[Technical Lead]"
 created: "[YYYY-MM-DD]"
@@ -24,7 +24,7 @@ standard_ref:
 
 ## 1. Purpose
 
-> Standardized commit messages and auto-generated changelogs — keeping a clean, readable project history.
+> Standardized commit messages and auto-generated changelogs. Good commit messages are **documentation** — "fix bug" is useless. "fix(auth): resolve token refresh race condition when user has multiple sessions" is useful.
 
 ## 2. Commit Message Format
 
@@ -33,7 +33,7 @@ Based on [Conventional Commits](https://www.conventionalcommits.org/):
 ```
 <type>(<scope>): <description>
 
-[optional body]
+[optional body — explains WHY, not WHAT]
 
 [optional footer(s)]
 ```
@@ -42,85 +42,119 @@ Based on [Conventional Commits](https://www.conventionalcommits.org/):
 
 | Type | Description | Example |
 |------|-----------|---------|
-| [feat] | [New feature] | [feat(request): add document upload] |
-| [fix] | [Bug fix] | [fix(auth): resolve token refresh issue] |
-| [docs] | [Documentation] | [docs(api): update endpoint descriptions] |
-| [style] | [Formatting, no code change] | [style: fix indentation] |
-| [refactor] | [Code restructuring] | [refactor(service): extract validation logic] |
-| [test] | [Add/update tests] | [test(request): add unit tests for approval] |
-| [chore] | [Build, tooling] | [chore(deps): update dependencies] |
-| [perf] | [Performance improvement] | [perf(db): add index for queries] |
-| [ci] | [CI/CD changes] | [ci: add deployment pipeline] |
-| [build] | [Build system changes] | [build: configure webpack] |
-
-### Scopes
-
-| Scope | Description |
-|-------|-----------|
-| [request] | [Request service] |
-| [auth] | [Auth service] |
-| [processing] | [Processing service] |
-| [notification] | [Notification service] |
-| [api] | [API layer] |
-| [db] | [Database] |
-| [infra] | [Infrastructure] |
+| `feat` | New feature | `feat(discover): add self-preservation config` |
+| `fix` | Bug fix | `fix(gate): resolve NPE on missing JWT claims` |
+| `docs` | Documentation only | `docs(readme): add Docker setup instructions` |
+| `style` | Formatting, whitespace (no logic change) | `style: fix indentation in build.gradle` |
+| `refactor` | Code restructuring (no feature/fix) | `refactor(guard): extract realm config to JSON` |
+| `test` | Add or update tests | `test(discover): add standalone mode verification` |
+| `chore` | Build, tooling, deps | `chore(deps): bump Spring Boot to 4.1.0` |
+| `perf` | Performance improvement | `perf(gate): cache JWKS with 5min TTL` |
+| `ci` | CI/CD changes | `ci: add Gradle build to GitHub Actions` |
+| `build` | Build system or external deps | `build: configure Checkstyle plugin` |
+| `revert` | Revert a previous commit | `revert: feat(discover): add clustering support` |
 
 ### Breaking Changes
 
+Append `!` after type/scope, or add `BREAKING CHANGE:` footer:
+
 ```
-feat(api)!: change request response format
+feat(api)!: change registration response format
 
-BREAKING CHANGE: Request response now includes nested customer object
-```
-
-## 3. Changelog Generation
-
-```bash
-# Generate changelog from commits
-npm run changelog
-
-# Generate changelog for specific version
-npm run changelog -- --tag v1.0.0
+BREAKING CHANGE: Registration endpoint now returns JSON by default.
+Clients must set Accept: application/xml for legacy XML format.
 ```
 
-## 4. Changelog Format
+## 3. Scopes — For Multi-Service Platforms
+
+Define scopes per service or cross-cutting concern. For a microservice platform:
+
+| Scope | Applies To | Example |
+|-------|-----------|---------|
+| `[service-name]` | Individual microservice | `feat(discover): configure standalone mode` |
+| `docker` | Container config | `chore(docker): add healthcheck to compose` |
+| `nginx` | Reverse proxy config | `feat(nginx): route new subdomain` |
+| `deps` | Cross-cutting dependencies | `chore(deps): update Spring Cloud BOM` |
+| `docs` | Cross-cutting documentation | `docs: update platform README` |
+| `ci` | CI/CD pipelines | `ci: add multi-stack build matrix` |
+| `infra` | Infrastructure (DB, cache, network) | `feat(infra): add MongoDB 8 container` |
+
+## 4. Commit Guidelines
+
+| Rule | Rationale |
+|------|----------|
+| Use imperative mood | "add" not "added" — matches `git merge` default |
+| First line ≤ 72 characters | Readable in `git log --oneline` |
+| Body explains WHY, not WHAT | Code shows *what* changed; commit explains *why* |
+| Reference issues/tickets | `Closes #123` or `Refs PAN-42` |
+| One logical change per commit | Atomic commits → easy to revert, bisect |
+| No WIP commits on main | Squash before merge |
+
+## 5. Changelog Generation
+
+### Tooling by Stack
+
+| Stack | Tool | Command |
+|-------|------|---------|
+| Any (git-based) | [git-cliff](https://git-cliff.org/) | `git cliff -o CHANGELOG.md` |
+| Node.js | [standard-version](https://github.com/conventional-changelog/standard-version) | `npx standard-version` |
+| Node.js | [commitlint](https://commitlint.js.org/) | `npx commitlint --from HEAD~1` |
+| Java/Gradle | [semantic-release](https://semantic-release.gitbook.io/) | CI-based, auto on merge |
+| Go | [svu](https://github.com/caarlos0/svu) | `svu next` |
+
+## 6. Changelog Format
 
 ```markdown
 # Changelog
 
-## [1.2.0] - 2026-07-15
+## [0.1.0] - 2026-07-23
 
 ### Features
-- **request:** add document upload functionality
-- **auth:** implement MFA support
-- **processing:** add auto-approval engine
+- **service:** description of feature ([#1](link))
+- **service:** another feature
 
 ### Bug Fixes
-- **auth:** resolve token refresh issue
-- **request:** fix status update race condition
+- **service:** description of fix
 
-### Performance
-- **db:** add index for request queries
+### Documentation
+- **service:** description of doc change
 
-## [1.1.0] - 2026-07-01
+### Chores
+- **deps:** description of dependency update
 
-### Features
-- **api:** add pagination support
-- **notification:** implement push notifications
+## [0.0.1] - 2026-07-22
 
-### Bug Fixes
-- **request:** fix validation error messages
+### Chores
+- initial project skeleton
 ```
 
-## 5. Commit Guidelines
+## 7. Real-World Commit Examples
 
-| Rule | Rationale |
-|------|----------|
-| [Use imperative mood] | ["add" not "added" — matches git default] |
-| [First line < 72 chars] | [Readable in git log] |
-| [Body explains why, not what] | [Code shows what; commit explains why] |
-| [Reference issues] | [Closes #123] |
-| [One logical change per commit] | [Atomic commits, easy revert] |
+Good commits from a real Eureka Server project:
+
+```bash
+# Feature with scope
+git commit -m "feat(discover): configure standalone mode with self-preservation
+
+Standalone mode prevents Eureka from self-registering or
+fetching its own registry. Self-preservation keeps the registry
+intact during transient network hiccups in the homelab environment.
+
+- register-with-eureka: false
+- fetch-registry: false
+- enable-self-preservation: true
+- renewal-percent-threshold: 0.85
+- eviction-interval-timer-in-ms: 5000"
+
+# Test commit
+git commit -m "test(discover): verify no self-registration in standalone mode"
+
+# Documentation
+git commit -m "docs(discover): rewrite README with architecture and setup guide"
+
+# Docker
+git commit -m "feat(docker): add multi-stage Dockerfile with ZGC flags"
+```
 
 ---
 
@@ -128,11 +162,11 @@ npm run changelog -- --tag v1.0.0
 
 | Document | Relationship |
 |----------|-------------|
-| [[Coding-Standards]] | Code standards |
+| [[Coding-Standards]] | Code standards these commits follow |
 | [[README-Developer-Guide]] | Contribution guide |
-| [[Build-Scripts]] | Build process |
+| [[Build-Scripts]] | Build process triggered by commits |
 
 ---
 
-> **Template Standard:** Based on SWEBOK v4, Conventional Commits
-> **Usage:** Good commit messages are *documentation*. "Fix bug" is useless. "fix(auth): resolve token refresh race condition when user has multiple sessions" is useful.
+> **Template Standard:** Based on SWEBOK v4, Conventional Commits v1.0
+> **Usage:** Every commit tells a story. "fix bug" is a wasted commit. Define scopes for your project's services and cross-cutting concerns. Generate changelogs automatically — never write them by hand. The body explains WHY — code shows what changed.
