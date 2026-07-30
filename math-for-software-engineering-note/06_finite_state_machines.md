@@ -74,7 +74,49 @@ Simple, but already demonstrates: finite states, deterministic transitions, cycl
 
 ---
 
-## Why FSMs Matter in SE
+## FSM Design and Application Flow
+
+```mermaid
+flowchart TD
+    START["You need to model\nsequential behavior"] --> Q1["Finite number of states?"]
+    Q1 -->|No| TM["Not an FSM\nNeed a Turing Machine\nor infinite-state model"]
+    Q1 -->|Yes| Q2["Output depends on input only?"]
+
+    Q2 -->|Yes - output = f&#40;input&#41;| MEALY["Mealy Machine\nOutput on transitions\nReacts faster to input"]
+    Q2 -->|No - output = f&#40;state&#41;| MOORE["Moore Machine\nOutput on states\nCleaner state separation"]
+
+    MEALY --> DESIGN["Design Steps:\n1 Define states\n2 Define alphabet\n3 Define transitions\n4 Mark start and accept states"]
+    MOORE --> DESIGN
+
+    DESIGN --> Q3["Deterministic or\nnondeterministic?"]
+    Q3 -->|DFA| IMPL["Implement as\nswitch/case or\nenum + transition table"]
+    Q3 -->|NFA| CONVERT["Convert to DFA\nvia subset construction\nthen implement"]
+
+    IMPL -.->|Examples| EX1["Lexer tokenizer\nProtocol state machine\nUI workflow engine"]
+    CONVERT -.->|Examples| EX2["Regex engine\nPattern matching\nInput validation"]
+
+    style START fill:#2d6a4f,stroke:#40916c,color:#fff
+    style MEALY fill:#1a5276,stroke:#2e86c1,color:#fff
+    style MOORE fill:#5c3d2e,stroke:#a67c52,color:#fff
+    style DESIGN fill:#333,stroke:#666,color:#fff
+    style IMPL fill:#6b3a6b,stroke:#9b6b9b,color:#fff
+    style CONVERT fill:#6b3a6b,stroke:#9b6b9b,color:#fff
+```
+
+### Moore vs Mealy Comparison
+
+| Property | Moore Machine | Mealy Machine |
+|----------|--------------|---------------|
+| Output depends on | Current state only | Current state + current input |
+| Output location | On states (nodes) | On transitions (edges) |
+| Reaction speed | Slower (output after state change) | Faster (output on input) |
+| State count | Often more states needed | Often fewer states needed |
+| Design clarity | Easier to reason about | More compact but harder to debug |
+| Example | Vending machine (state = "has coin") | Elevator (output depends on button + floor) |
+
+---
+
+## Why This Matters in SE
 
 | Application | How FSMs Are Used |
 |------------|-------------------|

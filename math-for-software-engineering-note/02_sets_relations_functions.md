@@ -106,6 +106,43 @@ On a graph, a curve represents a function iff any vertical line intersects it at
 
 ---
 
+## Function Types Decision Flow
+
+```mermaid
+flowchart TD
+    START["Function f: A → B"] --> Q1["Every element in A\nhas exactly one image?"]
+    Q1 -->|Yes| FUNC["Valid Function ✓"]
+    Q1 -->|No| NOT["Not a function\n&#40;multi-valued or undefined&#41;"]
+
+    FUNC --> Q2["Every b in B is hit\nby some a in A?"]
+    Q2 -->|Yes| SURJ["Surjective &#40;onto&#41;\nRange = Codomain"]
+    Q2 -->|No| NOTSURJ["Not surjective\nSome b in B is never reached"]
+
+    FUNC --> Q3["No two elements in A\nmap to the same b?"]
+    Q3 -->|Yes| INJ["Injective &#40;one-to-one&#41;\nDistinct inputs → distinct outputs"]
+    Q3 -->|No| NOTINJ["Not injective\nCollision: f&#40;a1&#41; = f&#40;a2&#41;"]
+
+    INJ --> Q4["Also surjective?"]
+    Q4 -->|Yes| BIJ["Bijective\nHas an inverse function"]
+    Q4 -->|No| JUSTINJ["Injective only"]
+
+    SURJ --> Q5["Also injective?"]
+    Q5 -->|Yes| BIJ
+    Q5 -->|No| JUSTSURJ["Surjective only"]
+
+    BIJ -.->|Examples| EX1["Hash with no collisions\nPerfect matching\nArray index bijection"]
+    INJ -.->|Examples| EX2["Unique ID assignment\nPrimary key mapping"]
+    SURJ -.->|Examples| EX3["Load balancer covers\nall backend servers"]
+
+    style START fill:#2d6a4f,stroke:#40916c,color:#fff
+    style FUNC fill:#333,stroke:#666,color:#fff
+    style SURJ fill:#1a5276,stroke:#2e86c1,color:#fff
+    style INJ fill:#5c3d2e,stroke:#a67c52,color:#fff
+    style BIJ fill:#6b3a6b,stroke:#9b6b9b,color:#fff
+```
+
+---
+
 ## Why This Matters in SE
 
 | Concept | SE Application |

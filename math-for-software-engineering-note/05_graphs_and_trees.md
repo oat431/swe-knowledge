@@ -103,6 +103,49 @@ A **spanning tree** of a graph $G$ is a subgraph that includes all vertices of $
 
 ---
 
+## Graph Algorithm Selection Flow
+
+```mermaid
+flowchart TD
+    START["What graph problem\nare you solving?"] --> Q1["Finding shortest path?"]
+    Q1 -->|Yes| Q2["Edge weights?"]
+    Q1 -->|No| Q3["Need full traversal?"]
+    Q1 -->|No - connectivity| Q4["All-pairs or single-source?"]
+
+    Q2 -->|"Unweighted or all = 1"| BFS["BFS\nO&#40;V + E&#41;\nQueue-based, level by level"]
+    Q2 -->|"Non-negative weights"| DIJ["Dijkstra\nO&#40;&#40;V+E&#41; log V&#41;\nPriority queue, greedy"]
+    Q2 -->|"Negative weights"| BF["Bellman-Ford\nO&#40;VE&#41;\nDetects negative cycles"]
+
+    Q3 -->|Yes| Q5["Layer by layer\nor depth first?"]
+    Q3 -->|No - structure| TREE["Tree algorithms\nDFS for properties\nBFS for level-order"]
+
+    Q5 -->|"Explore broadly\nFind shortest in unweighted"| BFS
+    Q5 -->|"Explore deeply\nBacktracking, maze solving"| DFS["DFS\nO&#40;V + E&#41;\nStack or recursion"]
+
+    Q4 -->|Single source| DIJ
+    Q4 -->|All pairs| FW["Floyd-Warshall\nO&#40;V^3&#41;\nDynamic programming"]
+
+    style START fill:#2d6a4f,stroke:#40916c,color:#fff
+    style BFS fill:#1a5276,stroke:#2e86c1,color:#fff
+    style DFS fill:#1a5276,stroke:#2e86c1,color:#fff
+    style DIJ fill:#5c3d2e,stroke:#a67c52,color:#fff
+    style BF fill:#5c3d2e,stroke:#a67c52,color:#fff
+    style FW fill:#6b3a6b,stroke:#9b6b9b,color:#fff
+    style TREE fill:#333,stroke:#666,color:#fff
+```
+
+### Graph Traversal Comparison
+
+| Property | BFS | DFS |
+|----------|-----|-----|
+| Data structure | Queue (FIFO) | Stack (LIFO) or recursion |
+| Space complexity | $O(w)$ where $w$ = max width | $O(d)$ where $d$ = max depth |
+| Finds shortest path? | Yes (unweighted) | No |
+| Memory efficient? | Worse for wide graphs | Worse for deep graphs |
+| Use cases | Social networks, web crawling, level-order traversal | Topological sort, cycle detection, maze solving |
+
+---
+
 ## Why This Matters in SE
 
 | Concept | SE Application |

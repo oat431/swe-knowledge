@@ -113,7 +113,39 @@ Functions that "transcend" algebra — cannot be expressed as finite polynomials
 
 ---
 
-## Why Calculus Matters in SE
+## Calculus in Software Engineering — Decision Map
+
+```mermaid
+flowchart TD
+    START["SE Problem involving\ncontinuous change"] --> Q1["Rate of change?"]
+    Q1 -->|Yes| DERIV["Derivatives\nf'&#40;x&#41; = instantaneous rate"]
+    Q1 -->|No| Q2["Accumulated total?"]
+
+    Q2 -->|Yes| INTEG["Integrals\nAccumulate over an interval"]
+    Q2 -->|No| Q3["Optimizing something?"]
+
+    Q3 -->|Yes| OPT["Find critical points:\nf'&#40;x&#41; = 0\nThen check f''&#40;x&#41;"]
+    Q3 -->|No| Q4["Modeling growth or decay?"]
+
+    Q4 -->|Yes| DIFFEQ["Differential equations\nModel how quantities change"]
+    Q4 -->|No| APPROX["Taylor series\nApproximate complex functions"]
+
+    DERIV -.->|SE Applications| D_APP["Gradient descent in ML\nPerformance profiling\nSensitivity analysis"]
+    INTEG -.->|SE Applications| I_APP["Area under latency curve\nExpected value computation\nSignal processing"]
+    OPT -.->|SE Applications| O_APP["Hyperparameter tuning\nCost minimization\nResource allocation"]
+    DIFFEQ -.->|SE Applications| DE_APP["Population models\nQueueing theory\nPhysics simulation"]
+
+    style START fill:#2d6a4f,stroke:#40916c,color:#fff
+    style DERIV fill:#1a5276,stroke:#2e86c1,color:#fff
+    style INTEG fill:#5c3d2e,stroke:#a67c52,color:#fff
+    style OPT fill:#6b3a6b,stroke:#9b6b9b,color:#fff
+    style DIFFEQ fill:#5c2e2e,stroke:#a65252,color:#fff
+    style APPROX fill:#333,stroke:#666,color:#fff
+```
+
+---
+
+## Why This Matters in SE
 
 | Concept | SE Application |
 |---------|---------------|

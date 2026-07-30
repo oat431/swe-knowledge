@@ -96,6 +96,64 @@ To prove "there exists an $x$ such that $P(x)$" ($\exists x \; P(x)$), you only 
 
 ---
 
+## 5. Structural Induction on Data Structures
+
+**Structural induction** proves properties about recursively defined structures (trees, lists, expressions) — the induction step follows the structure's recursive definition rather than a numeric variable.
+
+**Structure:**
+1. **Base case:** Prove the property holds for the simplest structure (empty tree, empty list)
+2. **Inductive step:** Assume the property holds for all sub-structures, then prove it holds for the combined structure
+
+### Example: Prove that a binary tree with $n$ internal nodes has exactly $n + 1$ leaf nodes
+
+> **Base case:** A tree with 0 internal nodes has exactly 1 leaf node (the root itself). ✓
+>
+> **Inductive step:** Assume any binary tree with $k < n$ internal nodes has $k + 1$ leaves.
+> A tree with $n$ internal nodes has a root with two subtrees of $a$ and $b$ internal nodes where $a + b = n - 1$.
+> By the induction hypothesis:
+> - Left subtree has $a + 1$ leaves
+> - Right subtree has $b + 1$ leaves
+>
+> Total leaves = $(a + 1) + (b + 1) = a + b + 2 = (n - 1) + 2 = n + 1$ ✓
+
+### In Code: Structural Induction Mirrors Recursive Algorithms
+
+```python
+def count_leaves(tree):
+    """Structural induction in action — base case + recursive case."""
+    if tree is None or tree.is_leaf():  # Base case
+        return 1
+    # Inductive step: combine results from sub-structures
+    return count_leaves(tree.left) + count_leaves(tree.right)
+```
+
+Every recursive function you write has an implicit structural induction proof for its correctness. The base case handles the trivial input; the recursive case reduces to smaller sub-problems that the induction hypothesis covers.
+
+### Proof Technique Selection for Code
+
+```mermaid
+flowchart TD
+    START["What are you trying to prove?"] --> Q1["About a data structure?\ntree, list, expression"]
+    Q1 -->|Yes| STRUCT["Structural Induction\nFollow the recursive definition"]
+    Q1 -->|No| Q2["About an integer n?\nsum, sequence, property"]
+    Q2 -->|Yes| INDUC["Mathematical Induction\nBase case + n to n+1"]
+    Q2 -->|No| Q3["About algorithm behavior?\nprecondition → postcondition"]
+    Q3 -->|Yes| DIRECT["Direct Proof\nAssume precondition, derive postcondition"]
+    Q3 -->|No| CONTRA["Contradiction\nAssume false, derive impossibility"]
+
+    STRUCT -.->|Examples| EX1["Tree has n+1 leaves\nBST invariant holds\nList length after append"]
+    INDUC -.->|Examples| EX2["Sum formula\nLoop invariant\nRecursive termination"]
+    DIRECT -.->|Examples| EX3["Sort is correct\nHash collision bound\nGreedy choice property"]
+
+    style START fill:#2d6a4f,stroke:#40916c,color:#fff
+    style STRUCT fill:#1a5276,stroke:#2e86c1,color:#fff
+    style INDUC fill:#5c3d2e,stroke:#a67c52,color:#fff
+    style DIRECT fill:#6b3a6b,stroke:#9b6b9b,color:#fff
+    style CONTRA fill:#5c2e2e,stroke:#a65252,color:#fff
+```
+
+---
+
 ## Why Proofs Matter in Software Engineering
 
 | Proof Technique | SE Application |

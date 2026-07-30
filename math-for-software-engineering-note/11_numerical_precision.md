@@ -98,6 +98,74 @@ The number of meaningful digits in a value. Rules:
 
 ---
 
+## 7. Iterative Numerical Methods
+
+### Newton's Method (Root Finding)
+
+Find where $f(x) = 0$ by iteratively improving a guess:
+
+$$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$
+
+**Example:** Find $\sqrt{2}$ by solving $f(x) = x^2 - 2 = 0$.
+
+- $f'(x) = 2x$, so $x_{n+1} = x_n - \frac{x_n^2 - 2}{2x_n} = \frac{x_n}{2} + \frac{1}{x_n}$
+
+Starting with $x_0 = 1$:
+
+| Iteration | $x_n$ | $x_n^2$ | Error |
+|-----------|--------|---------|-------|
+| 0 | 1.0 | 1.0 | 0.414 |
+| 1 | 1.5 | 2.25 | 0.086 |
+| 2 | 1.4167 | 2.0069 | 0.0025 |
+| 3 | 1.4142 | 2.0000 | 0.0000 |
+
+Converges to $\sqrt{2} \approx 1.4142$ in 3 iterations — **quadratic convergence** (doubles of correct digits per step).
+
+### Bisection Method (Guaranteed Convergence)
+
+If $f(a)$ and $f(b)$ have opposite signs, there's a root in $[a, b]$. Repeatedly halve the interval:
+
+```python
+def bisection(f, a, b, tol=1e-10):
+    """Find root of f in [a, b] using bisection."""
+    while (b - a) / 2 > tol:
+        mid = (a + b) / 2
+        if f(mid) == 0:
+            return mid
+        elif f(a) * f(mid) < 0:
+            b = mid
+        else:
+            a = mid
+    return (a + b) / 2
+
+# Example: find sqrt(2)
+import math
+root = bisection(lambda x: x**2 - 2, 0, 2)
+print(f"sqrt(2) ≈ {root}")  # 1.41421356237...
+```
+
+Bisection is slower (linear convergence) but **guaranteed** to converge if $f$ is continuous and signs differ at endpoints.
+
+### Convergence Comparison
+
+```mermaid
+flowchart LR
+    NEWTON["Newton's Method\nx_n+1 = x_n - f&#40;x_n&#41;/f'&#40;x_n&#41;"] --> FAST["Quadratic convergence\nDoubles correct digits per step"]
+    NEWTON --> RISK["Risk: diverges if\nguess is poor or f'&#40;x&#41; = 0"]
+
+    BISECT["Bisection Method\nHalve interval each step"] --> SAFE["Guaranteed convergence\nif f is continuous"]
+    BISECT --> SLOW["Linear convergence\nOne bit per step"]
+
+    style NEWTON fill:#2d6a4f,stroke:#40916c,color:#fff
+    style BISECT fill:#1a5276,stroke:#2e86c1,color:#fff
+    style FAST fill:#333,stroke:#40916c,color:#fff
+    style RISK fill:#5c2e2e,stroke:#a65252,color:#fff
+    style SAFE fill:#333,stroke:#2e86c1,color:#fff
+    style SLOW fill:#333,stroke:#a67c52,color:#fff
+```
+
+---
+
 ## Why This Matters in SE
 
 | Concept | SE Application |

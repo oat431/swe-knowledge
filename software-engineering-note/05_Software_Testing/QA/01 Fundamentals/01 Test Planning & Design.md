@@ -15,14 +15,14 @@ Testing without a plan is just hoping. Good test design answers: what to test, h
 
 A test plan answers:
 
-| Question | Deliverable |
-|----------|------------|
-| **What** are we testing? | Scope, features in/out |
-| **How** will we test? | Approaches: manual, automated, exploratory |
-| **Who** will test? | Team, roles |
-| **When** will we test? | Schedule, milestones |
-| **What** environment? | Hardware, software, test data |
-| **What** are the risks? | Risk-based prioritization |
+| Question                 | Deliverable                                |
+| ------------------------ | ------------------------------------------ |
+| **What** are we testing? | Scope, features in/out                     |
+| **How** will we test?    | Approaches: manual, automated, exploratory |
+| **Who** will test?       | Team, roles                                |
+| **When** will we test?   | Schedule, milestones                       |
+| **What** environment?    | Hardware, software, test data              |
+| **What** are the risks?  | Risk-based prioritization                  |
 
 ---
 

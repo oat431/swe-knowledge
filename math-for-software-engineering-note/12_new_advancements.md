@@ -112,6 +112,73 @@ This is why bioinformatics is fundamentally a **software engineering challenge**
 
 ---
 
+## How Math Foundations Connect to New Advancements
+
+```mermaid
+flowchart TD
+    subgraph CORE["Core Math Foundations"]
+        LOGIC["00 Basic Logic"]
+        SETS["02 Sets and Relations"]
+        COUNT["03 Counting"]
+        PROB["04 Probability"]
+        GRAPH["05 Graphs and Trees"]
+        FSM["06 Finite State Machines"]
+        GRAM["07 Grammars"]
+        NUM["08 Number Theory"]
+        CALC["10 Calculus"]
+    end
+
+    subgraph NEURO["Computational Neuroscience"]
+        NN["Neural Networks\nLinear algebra + calculus"]
+        CODE["Neural Coding\nProbability + info theory"]
+        BIO["Biophysics\nDifferential equations"]
+    end
+
+    subgraph GENO["Genomics and Bioinformatics"]
+        ALIGN["Sequence Alignment\nDynamic programming"]
+        ASSEM["Genome Assembly\nGraph theory + Eulerian paths"]
+        VAR["Variant Calling\nBayesian statistics"]
+        PHYLO["Phylogenetics\nTrees and distance metrics"]
+    end
+
+    PROB --> NN
+    PROB --> CODE
+    CALC --> NN
+    CALC --> BIO
+    GRAPH --> ASSEM
+    GRAPH --> PHYLO
+    SETS --> VAR
+    COUNT --> ALIGN
+    FSM --> ASSEM
+    LOGIC --> NN
+
+    style CORE fill:#1a1a2e,stroke:#4a90e2,color:#fff
+    style NEURO fill:#2d4a2d,stroke:#40916c,color:#fff
+    style GENO fill:#4a2d4a,stroke:#9b6b9b,color:#fff
+    style LOGIC fill:#333,stroke:#666,color:#fff
+    style SETS fill:#333,stroke:#666,color:#fff
+    style COUNT fill:#333,stroke:#666,color:#fff
+    style PROB fill:#333,stroke:#666,color:#fff
+    style GRAPH fill:#333,stroke:#666,color:#fff
+    style FSM fill:#333,stroke:#666,color:#fff
+    style GRAM fill:#333,stroke:#666,color:#fff
+    style NUM fill:#333,stroke:#666,color:#fff
+    style CALC fill:#333,stroke:#666,color:#fff
+    style NN fill:#333,stroke:#40916c,color:#fff
+    style CODE fill:#333,stroke:#40916c,color:#fff
+    style BIO fill:#333,stroke:#40916c,color:#fff
+    style ALIGN fill:#333,stroke:#9b6b9b,color:#fff
+    style ASSEM fill:#333,stroke:#9b6b9b,color:#fff
+    style VAR fill:#333,stroke:#9b6b9b,color:#fff
+    style PHYLO fill:#333,stroke:#9b6b9b,color:#fff
+```
+
+### Key Insight
+
+Both computational neuroscience and genomics are **software engineering challenges** at their core — the math provides the models, but building correct, efficient, scalable implementations is pure SE. The math foundations you learn in notes 00–11 are not abstract theory — they are the language in which these domains express their problems and solutions.
+
+---
+
 ## Sources
 
 - SWEBOK v4, Chapter 17, Section 13 — New Advancements

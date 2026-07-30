@@ -86,6 +86,76 @@ $$\frac{4}{\binom{52}{5}} = \frac{4}{2,598,960} \approx 0.000154\%$$
 
 ---
 
+## 5. Conditional Probability
+
+The probability of event $A$ **given** that event $B$ has already occurred:
+
+$$P(A \mid B) = \frac{P(A \cap B)}{P(B)}, \quad P(B) > 0$$
+
+**Example:** A server receives 1000 requests. 200 are from mobile users, of which 50 fail. What's the probability a request fails given it's from mobile?
+
+$$P(\text{fail} \mid \text{mobile}) = \frac{P(\text{fail} \cap \text{mobile})}{P(\text{mobile})} = \frac{50/1000}{200/1000} = \frac{50}{200} = 0.25$$
+
+### Independence
+
+Events $A$ and $B$ are **independent** if:
+$$P(A \cap B) = P(A) \cdot P(B) \quad \iff \quad P(A \mid B) = P(A)$$
+
+Knowing $B$ happened tells you nothing about $A$. Most real-world events are NOT independent — that's why conditional probability matters.
+
+---
+
+## 6. Bayes' Theorem
+
+The most important formula in applied probability. It lets you **update beliefs** based on evidence:
+
+$$P(A \mid B) = \frac{P(B \mid A) \cdot P(A)}{P(B)}$$
+
+| Term | Name | Meaning |
+|------|------|---------|
+| $P(A \mid B)$ | Posterior | Probability of $A$ after seeing evidence $B$ |
+| $P(B \mid A)$ | Likelihood | Probability of seeing $B$ if $A$ is true |
+| $P(A)$ | Prior | Initial belief about $A$ before evidence |
+| $P(B)$ | Evidence | Overall probability of observing $B$ |
+
+### Worked Example: Spam Filter
+
+A spam filter detects emails. Known facts:
+- $P(\text{spam}) = 0.30$ (30% of all emails are spam)
+- $P(\text{"FREE"} \mid \text{spam}) = 0.80$ (80% of spam contains "FREE")
+- $P(\text{"FREE"} \mid \text{not spam}) = 0.05$ (5% of legitimate emails contain "FREE")
+
+**Question:** An email contains "FREE". What's the probability it's spam?
+
+First, compute the total evidence:
+$$P(\text{"FREE"}) = P(\text{"FREE"} \mid \text{spam})P(\text{spam}) + P(\text{"FREE"} \mid \text{not spam})P(\text{not spam})$$
+$$= 0.80 \times 0.30 + 0.05 \times 0.70 = 0.24 + 0.035 = 0.275$$
+
+Then apply Bayes':
+$$P(\text{spam} \mid \text{"FREE"}) = \frac{0.80 \times 0.30}{0.275} = \frac{0.24}{0.275} \approx 0.873$$
+
+**Result:** 87.3% chance it's spam. This is the core of Naive Bayes classifiers used in real spam filters.
+
+### Bayes' Theorem Decision Flow
+
+```mermaid
+flowchart TD
+    START["You observe evidence B"] --> Q1["Do you know P&#40;B&#124;A&#41; directly?"]
+    Q1 -->|Yes| APPLY["Apply Bayes':\nP&#40;A&#124;B&#41; = P&#40;B&#124;A&#41; P&#40;A&#41; / P&#40;B&#41;"]
+    Q1 -->|No| Q2["Can you decompose P&#40;B&#41;?"]
+    Q2 -->|Yes| TOTAL["Use Law of Total Probability:\nP&#40;B&#41; = sum P&#40;B&#124;A_i&#41; P&#40;A_i&#41;"]
+    Q2 -->|No| MEASURE["Measure P&#40;B&#41; from data"]
+    TOTAL --> APPLY
+    MEASURE --> APPLY
+    APPLY --> INTERPRET["Interpret posterior:\nHow likely is A given B?"]
+
+    style START fill:#2d6a4f,stroke:#40916c,color:#fff
+    style APPLY fill:#1a5276,stroke:#2e86c1,color:#fff
+    style INTERPRET fill:#5c3d2e,stroke:#a67c52,color:#fff
+```
+
+---
+
 ## Why Probability Matters in SE
 
 | Concept | SE Application |
@@ -94,9 +164,11 @@ $$\frac{4}{\binom{52}{5}} = \frac{4}{2,598,960} \approx 0.000154\%$$
 | Expected value | Average-case algorithm analysis, A/B test metrics |
 | Variance / Std Dev | Service reliability (SLOs), performance consistency |
 | Bayes' theorem | Spam filters, recommendation systems, diagnostic tools |
+| Conditional probability | Risk assessment, A/B test significance, causal inference |
 | Randomized algorithms | QuickSort pivot selection, hash functions, Monte Carlo methods |
 | Probability in testing | Statistical testing, fuzzing coverage probabilities, reliability modeling |
 | Discrete probability | Load balancing (consistent hashing), Bloom filters (false positive rate) |
+| Naive Bayes classifiers | Text classification, sentiment analysis, email filtering |
 
 ---
 

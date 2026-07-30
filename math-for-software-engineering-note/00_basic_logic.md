@@ -176,6 +176,52 @@ Order matters with mixed quantifiers:
 
 ---
 
+## Karnaugh Map — Simplifying Boolean Expressions
+
+A **Karnaugh map (K-map)** is a visual tool for simplifying Boolean expressions — it finds minimal sum-of-products forms without algebraic manipulation.
+
+**Example:** Simplify $F(A, B, C) = \bar{A}\bar{B}C + \bar{A}B\bar{C} + \bar{A}BC + A\bar{B}C + AB\bar{C} + ABC$
+
+| | $\bar{B}\bar{C}$ | $\bar{B}C$ | $BC$ | $B\bar{C}$ |
+|---|---|---|---|---|
+| **$\bar{A}$** | 0 | 1 | 1 | 1 |
+| **$A$** | 0 | 1 | 1 | 1 |
+
+Group adjacent 1s in powers of 2:
+- **Group 1** (4 cells): columns $\bar{B}C, BC, B\bar{C}$ × both rows → simplifies to $C + B$
+- **Group 2** (4 cells): all of row $A$ except $\bar{B}\bar{C}$ → covered by Group 1
+
+**Result:** $F = B + C$ (down from 6 minterms to 2 literals)
+
+**In code:** K-maps are used in digital logic design, FPGA programming, and compiler optimization for Boolean simplification:
+```python
+# Before simplification — 6 conditions
+if (not A and not B and C) or (not A and B and not C) or ...
+
+# After K-map — 2 conditions
+if B or C:
+    ...
+```
+
+### Logic Simplification Decision Flow
+
+```mermaid
+flowchart TD
+    START["Complex Boolean Expression"] --> Q1["How many variables?"]
+    Q1 -->|"2-4 vars"| KMAP["Use Karnaugh Map\nVisual grouping of minterms"]
+    Q1 -->|"5+ vars"| QM["Quine-McCluskey\nAlgorithmic minimization"]
+    KMAP --> GROUP["Group adjacent 1s\nin powers of 2"]
+    GROUP --> MINIMAL["Minimal sum-of-products\nFewest literals"]
+    QM --> MINIMAL
+    MINIMAL --> CODE["Translate to code:\nfewer conditions = faster execution"]
+
+    style START fill:#2d6a4f,stroke:#40916c,color:#fff
+    style KMAP fill:#1a5276,stroke:#2e86c1,color:#fff
+    style CODE fill:#5c3d2e,stroke:#a67c52,color:#fff
+```
+
+---
+
 ## Why Logic Matters in SE
 
 | Concept | SE Application |

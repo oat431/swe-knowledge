@@ -97,6 +97,89 @@ Backus-Naur Form is how CFGs are written in practice:
 
 This is the grammar for arithmetic expressions — it captures operator precedence (multiplication binds tighter than addition) through the structure.
 
+### Worked Parse Tree: Parsing `3 + 4 * 2`
+
+Given the CFG above, the string `3 + 4 * 2` parses as follows. Notice how the tree structure encodes precedence: `*` binds tighter because it's deeper in the tree.
+
+```mermaid
+flowchart TD
+    EXPR1["&lt;expression&gt;"] --> TERM1["&lt;term&gt;"]
+    EXPR1 --> PLUS["+"]
+    EXPR1 --> EXPR2["&lt;expression&gt;"]
+
+    TERM1 --> FACTOR1["&lt;factor&gt;"]
+    FACTOR1 --> N1["3"]
+
+    EXPR2 --> TERM2["&lt;term&gt;"]
+    TERM2 --> TERM3["&lt;term&gt;"]
+    TERM2 --> STAR["*"]
+    TERM2 --> FACTOR2["&lt;factor&gt;"]
+
+    TERM3 --> FACTOR3["&lt;factor&gt;"]
+    FACTOR3 --> N2["4"]
+
+    FACTOR2 --> N3["2"]
+
+    style EXPR1 fill:#1a5276,stroke:#2e86c1,color:#fff
+    style EXPR2 fill:#1a5276,stroke:#2e86c1,color:#fff
+    style TERM1 fill:#2d6a4f,stroke:#40916c,color:#fff
+    style TERM2 fill:#2d6a4f,stroke:#40916c,color:#fff
+    style TERM3 fill:#2d6a4f,stroke:#40916c,color:#fff
+    style FACTOR1 fill:#5c3d2e,stroke:#a67c52,color:#fff
+    style FACTOR2 fill:#5c3d2e,stroke:#a67c52,color:#fff
+    style FACTOR3 fill:#5c3d2e,stroke:#a67c52,color:#fff
+    style N1 fill:#333,stroke:#666,color:#fff
+    style N2 fill:#333,stroke:#666,color:#fff
+    style N3 fill:#333,stroke:#666,color:#fff
+    style PLUS fill:#333,stroke:#666,color:#fff
+    style STAR fill:#333,stroke:#666,color:#fff
+```
+
+**Reading the tree:**
+- `3` is parsed as `<factor>` → `<term>` → `<expression>`
+- `4 * 2` is parsed as `<term>` → `<expression>` (the `*` is at the term level)
+- The `+` is at the expression level, so addition has **lower** precedence than multiplication
+
+This is exactly how ANTLR, YACC, and other parser generators produce ASTs from BNF grammars.
+
+### Ambiguous Grammars — A Practical Problem
+
+A grammar is **ambiguous** if a string has more than one valid parse tree. The classic example is the `dangling else`:
+
+```bnf
+<stmt> ::= "if" <cond> "then" <stmt>
+         | "if" <cond> "then" <stmt> "else" <stmt>
+```
+
+For `if C1 then if C2 then S1 else S2`, the `else` could attach to either `if`. Languages resolve this differently:
+- C/Java/Python: `else` binds to the **nearest** `if`
+- Haskell: uses layout (indentation) to disambiguate
+
+Parser generators handle ambiguity through precedence declarations or grammar rewriting.
+
+### The Chomsky Hierarchy Decision Flow
+
+```mermaid
+flowchart TD
+    START["What language feature\ndo you need to describe?"] --> Q1["Need nesting or recursion?\ne.g. balanced parentheses"]
+    Q1 -->|No| REGEX["Type 3: Regular\nUse regex or FSM"]
+    Q1 -->|Yes| Q2["Context-dependent rules?\ne.g. variable must be declared"]
+    Q2 -->|No| CFG["Type 2: Context-Free\nUse CFG and parser generator"]
+    Q2 -->|Yes| Q3["Arbitrary computation?"]
+    Q3 -->|No| CSG["Type 1: Context-Sensitive\nLBA recognition"]
+    Q3 -->|Yes| UNR["Type 0: Unrestricted\nTuring Machine"]
+
+    REGEX -.->|Examples| RE_EX["Lexer tokens\nemail validation\nURL patterns"]
+    CFG -.->|Examples| CFG_EX["Programming language syntax\nJSON, XML parsers\nSQL grammar"]
+    CSG -.->|Examples| CSG_EX["Type checking\nsemantic analysis\nnatural language"]
+
+    style START fill:#2d6a4f,stroke:#40916c,color:#fff
+    style REGEX fill:#1a5276,stroke:#2e86c1,color:#fff
+    style CFG fill:#5c3d2e,stroke:#a67c52,color:#fff
+    style CSG fill:#6b3a6b,stroke:#9b6b9b,color:#fff
+    style UNR fill:#8b0000,stroke:#c44,color:#fff
+```
+
 ---
 
 ## Why Grammars Matter in SE

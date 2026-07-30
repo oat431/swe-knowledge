@@ -103,6 +103,50 @@ A **recurrence relation** defines a sequence in terms of previous terms.
 
 ---
 
+## 7. The Master Theorem — Solving Recurrences
+
+The **Master Theorem** provides a closed-form solution to recurrences of the form:
+
+$$T(n) = aT\left(\frac{n}{b}\right) + f(n)$$
+
+where $a \geq 1$, $b > 1$, and $f(n)$ is the cost of dividing/combining.
+
+Compare $f(n)$ with $n^{\log_b a}$:
+
+| Case | Condition | Solution |
+|------|-----------|----------|
+| 1 | $f(n) = O(n^{\log_b a - \epsilon})$ for some $\epsilon > 0$ | $T(n) = \Theta(n^{\log_b a})$ |
+| 2 | $f(n) = \Theta(n^{\log_b a})$ | $T(n) = \Theta(n^{\log_b a} \log n)$ |
+| 3 | $f(n) = \Omega(n^{\log_b a + \epsilon})$ for some $\epsilon > 0$ | $T(n) = \Theta(f(n))$ |
+
+### Worked Examples
+
+| Algorithm | Recurrence | $a$ | $b$ | $n^{\log_b a}$ | $f(n)$ | Case | Complexity |
+|-----------|-----------|-----|-----|-----------------|---------|------|------------|
+| **Binary search** | $T(n) = T(n/2) + O(1)$ | 1 | 2 | $n^0 = 1$ | $O(1)$ | Case 2 | $O(\log n)$ |
+| **Merge sort** | $T(n) = 2T(n/2) + O(n)$ | 2 | 2 | $n^1 = n$ | $O(n)$ | Case 2 | $O(n \log n)$ |
+| **Strassen** | $T(n) = 7T(n/2) + O(n^2)$ | 7 | 2 | $n^{\log_2 7} \approx n^{2.81}$ | $O(n^2)$ | Case 1 | $O(n^{2.81})$ |
+| **Fibonacci** (naive) | $T(n) = T(n-1) + T(n-2) + O(1)$ | — | — | — | — | Not applicable | $O(2^n)$ |
+
+⚠️ **The Master Theorem does NOT apply** when $a$ is not constant, when the subproblem sizes are unequal, or when the recurrence doesn't fit the form $aT(n/b) + f(n)$.
+
+### Master Theorem Decision Flow
+
+```mermaid
+flowchart TD
+    START["Recurrence: T&#40;n&#41; = aT&#40;n/b&#41; + f&#40;n&#41;"] --> COMP["Compare f&#40;n&#41; with n^&#40;log_b a&#41;"]
+    COMP -->|f&#40;n&#41; smaller| C1["Case 1\nT&#40;n&#41; = Theta&#40;n^log_b a&#41;\nRecursive work dominates"]
+    COMP -->|Same growth| C2["Case 2\nT&#40;n&#41; = Theta&#40;n^log_b a log n&#41;\nBalanced work"]
+    COMP -->|f&#40;n&#41; larger| C3["Case 3\nT&#40;n&#41; = Theta&#40;f&#40;n&#41;&#41;\nDivide/combine dominates"]
+
+    style START fill:#2d6a4f,stroke:#40916c,color:#fff
+    style C1 fill:#1a5276,stroke:#2e86c1,color:#fff
+    style C2 fill:#5c3d2e,stroke:#a67c52,color:#fff
+    style C3 fill:#6b3a6b,stroke:#9b6b9b,color:#fff
+```
+
+---
+
 ## Why Counting Matters in SE
 
 | Concept | SE Application |
