@@ -4,11 +4,11 @@ note_type: career-path-overview
 career_family: delivery-leadership
 level: manager
 entry_from:
-  - "[[02_Senior_Software_Engineer]]"
-  - "[[12_Technical_Program_Manager]]"
+  - "[[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]"
+  - "[[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]"
 next_paths:
-  - "[[11_Engineering_Manager]]"
-  - "[[14_Product_Manager]]"
+  - "[[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]"
+  - "[[career-path/14_Product_Manager/00_overview|Product Manager]]"
 source_frameworks:
   - "[[PMBOK v8 - Overview]]"
   - "[[SEBoK v2 - Overview]]"
@@ -44,12 +44,12 @@ A software engineering background is valuable because it helps the manager under
 | Capability | Project or program behavior | Existing vault anchor |
 |---|---|---|
 | Initiation | Clarifies objectives, value, authority, and success conditions | [[body-of-knowledge/PMBOK/00_Introduction]] |
-| Scope and planning | Defines work, sequencing, resources, and baselines | [[PMBOK/05_Scope_Performance_Domain]] |
-| Schedule and cost | Builds forecasts and communicates variance honestly | [[PMBOK/06_Schedule_Performance_Domain]] |
-| Risk and issues | Manages uncertainty, escalation, response, and contingency | [[PMBOK/10_Risk_Performance_Domain]] |
-| Stakeholders | Plans engagement, communication, and decision participation | [[PMBOK/08_Stakeholders_Performance_Domain]] |
-| Governance | Creates decision rights, controls, and accountability | [[PMBOK/04_Governance_Performance_Domain]] |
-| Benefits | Connects deliverables to outcomes and organizational value | [[PMBOK/01_Value_Delivery_System]] |
+| Scope and planning | Defines work, sequencing, resources, and baselines | [[body-of-knowledge/PMBOK/05_Scope_Performance_Domain]] |
+| Schedule and cost | Builds forecasts and communicates variance honestly | [[body-of-knowledge/PMBOK/06_Schedule_Performance_Domain]] |
+| Risk and issues | Manages uncertainty, escalation, response, and contingency | [[body-of-knowledge/PMBOK/10_Risk_Performance_Domain]] |
+| Stakeholders | Plans engagement, communication, and decision participation | [[body-of-knowledge/PMBOK/08_Stakeholders_Performance_Domain]] |
+| Governance | Creates decision rights, controls, and accountability | [[body-of-knowledge/PMBOK/04_Governance_Performance_Domain]] |
+| Benefits | Connects deliverables to outcomes and organizational value | [[body-of-knowledge/PMBOK/01_Value_Delivery_System]] |
 | Technical context | Understands enough engineering to challenge assumptions and support decisions | [[SWEBOK v4 - Overview]] |
 
 ## Project Manager versus Program Manager
@@ -95,22 +95,22 @@ flowchart LR
 
 ## Nearby Paths
 
-- [[12_Technical_Program_Manager|Technical Program Manager]]: more technical and cross-team integration focus
-- [[11_Engineering_Manager|Engineering Manager]]: people and team conditions
-- [[14_Product_Manager|Product Manager]]: product value and customer direction
-- [[02_Senior_Software_Engineer|Senior Software Engineer]]: technical foundation
+- [[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]: more technical and cross-team integration focus
+- [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]: people and team conditions
+- [[career-path/14_Product_Manager/00_overview|Product Manager]]: product value and customer direction
+- [[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]: technical foundation
 
 ## Suggested Future Note Route
 
 1. [[PMBOK v8 - Overview]]
-2. [[PMBOK/01_Value_Delivery_System]]
-3. [[PMBOK/04_Governance_Performance_Domain]]
-4. [[PMBOK/05_Scope_Performance_Domain]]
-5. [[PMBOK/06_Schedule_Performance_Domain]]
-6. [[PMBOK/07_Finance_Performance_Domain]]
-7. [[PMBOK/08_Stakeholders_Performance_Domain]]
-8. [[PMBOK/10_Risk_Performance_Domain]]
-9. [[PMBOK/Appendix_A1_PMO]]
+2. [[body-of-knowledge/PMBOK/01_Value_Delivery_System]]
+3. [[body-of-knowledge/PMBOK/04_Governance_Performance_Domain]]
+4. [[body-of-knowledge/PMBOK/05_Scope_Performance_Domain]]
+5. [[body-of-knowledge/PMBOK/06_Schedule_Performance_Domain]]
+6. [[body-of-knowledge/PMBOK/07_Finance_Performance_Domain]]
+7. [[body-of-knowledge/PMBOK/08_Stakeholders_Performance_Domain]]
+8. [[body-of-knowledge/PMBOK/10_Risk_Performance_Domain]]
+9. [[body-of-knowledge/PMBOK/Appendix_A1_PMO]]
 
 ## Sources
 
@@ -122,6 +122,6 @@ flowchart LR
 ## Related
 
 - [[00_Career_Path_Overview]]
-- [[02_Senior_Software_Engineer]]
-- [[12_Technical_Program_Manager]]
-- [[14_Product_Manager]]
+- [[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]
+- [[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]
+- [[career-path/14_Product_Manager/00_overview|Product Manager]]

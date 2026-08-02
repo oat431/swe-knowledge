@@ -4,11 +4,11 @@ note_type: career-path-overview
 career_family: product-and-business
 level: manager
 entry_from:
-  - "[[02_Senior_Software_Engineer]]"
-  - "[[12_Technical_Program_Manager]]"
+  - "[[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]"
+  - "[[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]"
 next_paths:
-  - "[[13_Project_and_Program_Manager]]"
-  - "[[15_Solutions_and_Enterprise_Architect]]"
+  - "[[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]]"
+  - "[[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions and Enterprise Architect]]"
 source_frameworks:
   - "[[BABOK v3 - Overview]]"
   - "[[PMBOK v8 - Overview]]"
@@ -43,12 +43,12 @@ A software engineering background can be a strong advantage because it helps the
 
 | Capability | Product Manager behavior | Existing vault anchor |
 |---|---|---|
-| Problem discovery | Investigates needs, behaviors, constraints, and opportunities | [[BABOK/02_Elicitation_and_Collaboration]] |
-| Strategy | Defines direction, target outcomes, and product choices | [[BABOK/04_Strategy_Analysis]] |
-| Prioritization | Compares opportunities using value, cost, risk, and evidence | [[BABOK/05_Requirements_Analysis_and_Design]] |
-| Roadmapping | Communicates direction without turning uncertainty into false precision | [[PMBOK/03_Project_Life_Cycles]] |
-| Product analytics | Defines measures and experiments for learning and outcomes | [[DMBOK/09_Data_Warehousing_and_BI]] |
-| Requirements | Expresses problems, outcomes, and acceptance conditions clearly | [[01_Software_Requirements/Software Requirements Overview]] |
+| Problem discovery | Investigates needs, behaviors, constraints, and opportunities | [[body-of-knowledge/BABOK/02_Elicitation_and_Collaboration]] |
+| Strategy | Defines direction, target outcomes, and product choices | [[body-of-knowledge/BABOK/04_Strategy_Analysis]] |
+| Prioritization | Compares opportunities using value, cost, risk, and evidence | [[body-of-knowledge/BABOK/05_Requirements_Analysis_and_Design]] |
+| Roadmapping | Communicates direction without turning uncertainty into false precision | [[body-of-knowledge/PMBOK/03_Project_Life_Cycles]] |
+| Product analytics | Defines measures and experiments for learning and outcomes | [[body-of-knowledge/DMBOK/09_Data_Warehousing_and_BI]] |
+| Requirements | Expresses problems, outcomes, and acceptance conditions clearly | [[software-engineering-note/01_Software_Requirements/Software Requirements Overview]] |
 | Technical partnership | Understands feasibility and trade-offs while respecting engineering expertise | [[SWEBOK v4 - Overview]] |
 
 ## Product Management and Project Management
@@ -93,22 +93,22 @@ flowchart LR
 
 ## Nearby Paths
 
-- [[13_Project_and_Program_Manager|Project or Program Manager]]: coordinates delivery
-- [[12_Technical_Program_Manager|Technical Program Manager]]: coordinates technical initiatives across teams
-- [[06_Software_Architect|Software Architect]]: leads system structure and technical trade-offs
-- [[15_Solutions_and_Enterprise_Architect|Solutions or Enterprise Architect]]: connects technology to customer or enterprise context
-- [[02_Senior_Software_Engineer|Senior Software Engineer]]: technical foundation
+- [[career-path/13_Project_and_Program_Manager/00_overview|Project or Program Manager]]: coordinates delivery
+- [[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]: coordinates technical initiatives across teams
+- [[career-path/06_Software_Architect/00_overview|Software Architect]]: leads system structure and technical trade-offs
+- [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions or Enterprise Architect]]: connects technology to customer or enterprise context
+- [[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]: technical foundation
 
 ## Suggested Future Note Route
 
 1. [[BABOK v3 - Overview]]
-2. [[BABOK/02_Elicitation_and_Collaboration]]
-3. [[BABOK/04_Strategy_Analysis]]
-4. [[BABOK/05_Requirements_Analysis_and_Design]]
-5. [[BABOK/06_Solution_Evaluation]]
-6. [[DMBOK/09_Data_Warehousing_and_BI]]
-7. [[PMBOK/01_Value_Delivery_System]]
-8. [[01_Software_Requirements/Software Requirements Overview]]
+2. [[body-of-knowledge/BABOK/02_Elicitation_and_Collaboration]]
+3. [[body-of-knowledge/BABOK/04_Strategy_Analysis]]
+4. [[body-of-knowledge/BABOK/05_Requirements_Analysis_and_Design]]
+5. [[body-of-knowledge/BABOK/06_Solution_Evaluation]]
+6. [[body-of-knowledge/DMBOK/09_Data_Warehousing_and_BI]]
+7. [[body-of-knowledge/PMBOK/01_Value_Delivery_System]]
+8. [[software-engineering-note/01_Software_Requirements/Software Requirements Overview]]
 
 ## Sources
 
@@ -120,6 +120,6 @@ flowchart LR
 ## Related
 
 - [[00_Career_Path_Overview]]
-- [[02_Senior_Software_Engineer]]
-- [[12_Technical_Program_Manager]]
-- [[13_Project_and_Program_Manager]]
+- [[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]
+- [[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]
+- [[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]]

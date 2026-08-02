@@ -4,9 +4,9 @@ note_type: career-path-overview
 career_family: independent-and-entrepreneurial
 level: advanced
 entry_from:
-  - "[[02_Senior_Software_Engineer]]"
-  - "[[03_Staff_Engineer]]"
-  - "[[14_Product_Manager]]"
+  - "[[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]"
+  - "[[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]"
+  - "[[career-path/14_Product_Manager/00_overview|Product Manager]]"
 source_frameworks:
   - "[[BABOK v3 - Overview]]"
   - "[[PMBOK v8 - Overview]]"
@@ -42,12 +42,12 @@ This path is not simply freedom from employment. It combines engineering with bu
 
 | Capability | Independent behavior | Existing vault anchor |
 |---|---|---|
-| Problem discovery | Finds a real customer need rather than starting with technology | [[BABOK/04_Strategy_Analysis]] |
-| Product and service design | Defines an offer, scope, value proposition, and delivery model | [[14_Product_Manager]] |
-| Business case | Evaluates cost, revenue, risk, and opportunity | [[15_Software_Engineering_Economics/Software Engineering Economics Overview]] |
+| Problem discovery | Finds a real customer need rather than starting with technology | [[body-of-knowledge/BABOK/04_Strategy_Analysis]] |
+| Product and service design | Defines an offer, scope, value proposition, and delivery model | [[career-path/14_Product_Manager/00_overview|Product Manager]] |
+| Business case | Evaluates cost, revenue, risk, and opportunity | [[software-engineering-note/15_Software_Engineering_Economics/Software Engineering Economics Overview]] |
 | Delivery | Plans and executes work with explicit commitments | [[PMBOK v8 - Overview]] |
-| Architecture | Builds a system appropriate for current and future constraints | [[02_Software_Architecture/Software Architecture Overview]] |
-| Sales and communication | Explains value and builds trusted relationships | [[14_Software_Engineering_Professional_Practice/03_Communication_Skills]] |
+| Architecture | Builds a system appropriate for current and future constraints | [[software-engineering-note/02_Software_Architecture/Software Architecture Overview]] |
+| Sales and communication | Explains value and builds trusted relationships | [[software-engineering-note/14_Software_Engineering_Professional_Practice/03_Communication_Skills]] |
 | Governance and risk | Handles contracts, security, privacy, and continuity responsibly | [[CyBOK v1 - Overview]] |
 
 ## Typical Progression
@@ -83,22 +83,22 @@ flowchart LR
 
 ## Nearby Paths
 
-- [[14_Product_Manager|Product Manager]]: product value and customer direction
-- [[13_Project_and_Program_Manager|Project or Program Manager]]: structured delivery management
-- [[15_Solutions_and_Enterprise_Architect|Solutions or Enterprise Architect]]: customer solution design
-- [[03_Staff_Engineer|Staff Engineer]]: advanced technical influence
+- [[career-path/14_Product_Manager/00_overview|Product Manager]]: product value and customer direction
+- [[career-path/13_Project_and_Program_Manager/00_overview|Project or Program Manager]]: structured delivery management
+- [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions or Enterprise Architect]]: customer solution design
+- [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]: advanced technical influence
 
 ## Suggested Future Note Route
 
 1. [[BABOK v3 - Overview]]
-2. [[BABOK/04_Strategy_Analysis]]
-3. [[BABOK/06_Solution_Evaluation]]
+2. [[body-of-knowledge/BABOK/04_Strategy_Analysis]]
+3. [[body-of-knowledge/BABOK/06_Solution_Evaluation]]
 4. [[PMBOK v8 - Overview]]
-5. [[PMBOK/07_Finance_Performance_Domain]]
-6. [[PMBOK/08_Stakeholders_Performance_Domain]]
-7. [[15_Software_Engineering_Economics/Software Engineering Economics Overview]]
+5. [[body-of-knowledge/PMBOK/07_Finance_Performance_Domain]]
+6. [[body-of-knowledge/PMBOK/08_Stakeholders_Performance_Domain]]
+7. [[software-engineering-note/15_Software_Engineering_Economics/Software Engineering Economics Overview]]
 8. [[CyBOK v1 - Overview]]
-9. [[02_Software_Architecture/Software Architecture Overview]]
+9. [[software-engineering-note/02_Software_Architecture/Software Architecture Overview]]
 
 ## Sources
 
@@ -110,6 +110,6 @@ flowchart LR
 ## Related
 
 - [[00_Career_Path_Overview]]
-- [[02_Senior_Software_Engineer]]
-- [[14_Product_Manager]]
-- [[15_Solutions_and_Enterprise_Architect]]
+- [[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]
+- [[career-path/14_Product_Manager/00_overview|Product Manager]]
+- [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions and Enterprise Architect]]

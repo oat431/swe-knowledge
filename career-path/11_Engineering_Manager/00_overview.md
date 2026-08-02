@@ -4,11 +4,11 @@ note_type: career-path-overview
 career_family: people-leadership
 level: manager
 entry_from:
-  - "[[02_Senior_Software_Engineer]]"
-  - "[[05_Tech_Lead]]"
+  - "[[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]"
+  - "[[career-path/05_Tech_Lead/00_overview|Tech Lead]]"
 next_paths:
-  - "[[04_Principal_and_Distinguished_Engineer]]"
-  - "[[12_Technical_Program_Manager]]"
+  - "[[career-path/04_Principal_and_Distinguished_Engineer/00_overview|Principal and Distinguished Engineer]]"
+  - "[[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]"
 source_frameworks:
   - "[[SWEBOK v4 - Overview]]"
   - "[[PMBOK v8 - Overview]]"
@@ -44,13 +44,13 @@ The role is not simply a senior engineer with more meetings. Its center of gravi
 
 | Capability | Manager behavior | Existing vault anchor |
 |---|---|---|
-| People development | Coaches, gives feedback, supports growth, and manages performance fairly | [[14_Software_Engineering_Professional_Practice/02_Group_Dynamics_and_Psychology]] |
-| Team formation | Builds trust, clarity, psychological safety, and effective collaboration | [[09_Software_Engineering_Management/04_Growing_Productive_Teams]] |
-| Hiring and staffing | Builds capability through hiring, onboarding, and workforce planning | [[09_Software_Engineering_Management/03_The_Right_People]] |
+| People development | Coaches, gives feedback, supports growth, and manages performance fairly | [[software-engineering-note/14_Software_Engineering_Professional_Practice/02_Group_Dynamics_and_Psychology]] |
+| Team formation | Builds trust, clarity, psychological safety, and effective collaboration | [[software-engineering-note/09_Software_Engineering_Management/04_Growing_Productive_Teams]] |
+| Hiring and staffing | Builds capability through hiring, onboarding, and workforce planning | [[software-engineering-note/09_Software_Engineering_Management/03_The_Right_People]] |
 | Delivery leadership | Creates clarity around scope, priority, risk, and progress | [[PMBOK v8 - Overview]] |
 | Technical context | Participates meaningfully in technical decisions without becoming the sole decision maker | [[SWEBOK v4 - Overview]] |
 | Organizational alignment | Connects team work to strategy, value, and change | [[SEBoK v2 - Overview]] |
-| Communication | Cascades context and represents the team accurately | [[14_Software_Engineering_Professional_Practice/03_Communication_Skills]] |
+| Communication | Cascades context and represents the team accurately | [[software-engineering-note/14_Software_Engineering_Professional_Practice/03_Communication_Skills]] |
 
 ## Typical Progression
 
@@ -84,20 +84,20 @@ flowchart LR
 
 ## Nearby Paths
 
-- [[05_Tech_Lead|Tech Lead]]: technical system ownership
-- [[02_Senior_Software_Engineer|Senior Software Engineer]]: individual-contributor foundation
-- [[03_Staff_Engineer|Staff Engineer]]: cross-team technical influence
-- [[12_Technical_Program_Manager|Technical Program Manager]]: cross-team initiative delivery
-- [[13_Project_and_Program_Manager|Project or Program Manager]]: formal project and program management
+- [[career-path/05_Tech_Lead/00_overview|Tech Lead]]: technical system ownership
+- [[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]: individual-contributor foundation
+- [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]: cross-team technical influence
+- [[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]: cross-team initiative delivery
+- [[career-path/13_Project_and_Program_Manager/00_overview|Project or Program Manager]]: formal project and program management
 
 ## Suggested Future Note Route
 
-1. [[09_Software_Engineering_Management/Software Engineering Management Overview]]
-2. [[09_Software_Engineering_Management/01_Managing_the_Human_Resource]]
-3. [[09_Software_Engineering_Management/03_The_Right_People]]
-4. [[09_Software_Engineering_Management/04_Growing_Productive_Teams]]
-5. [[14_Software_Engineering_Professional_Practice/02_Group_Dynamics_and_Psychology]]
-6. [[14_Software_Engineering_Professional_Practice/03_Communication_Skills]]
+1. [[software-engineering-note/09_Software_Engineering_Management/Software Engineering Management Overview]]
+2. [[software-engineering-note/09_Software_Engineering_Management/01_Managing_the_Human_Resource]]
+3. [[software-engineering-note/09_Software_Engineering_Management/03_The_Right_People]]
+4. [[software-engineering-note/09_Software_Engineering_Management/04_Growing_Productive_Teams]]
+5. [[software-engineering-note/14_Software_Engineering_Professional_Practice/02_Group_Dynamics_and_Psychology]]
+6. [[software-engineering-note/14_Software_Engineering_Professional_Practice/03_Communication_Skills]]
 7. [[PMBOK v8 - Overview]]
 8. [[SEBoK v2 - Overview]]
 
@@ -112,6 +112,6 @@ flowchart LR
 ## Related
 
 - [[00_Career_Path_Overview]]
-- [[02_Senior_Software_Engineer]]
-- [[05_Tech_Lead]]
-- [[12_Technical_Program_Manager]]
+- [[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]
+- [[career-path/05_Tech_Lead/00_overview|Tech Lead]]
+- [[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]

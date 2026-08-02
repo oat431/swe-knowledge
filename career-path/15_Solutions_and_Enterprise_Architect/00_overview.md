@@ -4,12 +4,12 @@ note_type: career-path-overview
 career_family: enterprise-and-customer-facing
 level: senior-to-enterprise
 entry_from:
-  - "[[06_Software_Architect]]"
-  - "[[03_Staff_Engineer]]"
-  - "[[14_Product_Manager]]"
+  - "[[career-path/06_Software_Architect/00_overview|Software Architect]]"
+  - "[[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]"
+  - "[[career-path/14_Product_Manager/00_overview|Product Manager]]"
 next_paths:
-  - "[[04_Principal_and_Distinguished_Engineer]]"
-  - "[[11_Engineering_Manager]]"
+  - "[[career-path/04_Principal_and_Distinguished_Engineer/00_overview|Principal and Distinguished Engineer]]"
+  - "[[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]"
 source_frameworks:
   - "[[SEBoK v2 - Overview]]"
   - "[[DMBOK v2 - Overview]]"
@@ -45,13 +45,13 @@ Titles and boundaries vary. The common feature is that the architect must operat
 
 | Capability | Architect behavior | Existing vault anchor |
 |---|---|---|
-| Business analysis | Understands needs, capabilities, and desired change | [[BABOK/04_Strategy_Analysis]] |
-| Solution architecture | Translates needs into a feasible system and delivery approach | [[System Engineer BOK/07_System_Definition_and_Architecture]] |
-| Enterprise architecture | Connects business, information, applications, and technology | [[System Engineer BOK/11_Enterprise_Systems_Engineering]] |
+| Business analysis | Understands needs, capabilities, and desired change | [[body-of-knowledge/BABOK/04_Strategy_Analysis]] |
+| Solution architecture | Translates needs into a feasible system and delivery approach | [[body-of-knowledge/System Engineer BOK/07_System_Definition_and_Architecture]] |
+| Enterprise architecture | Connects business, information, applications, and technology | [[body-of-knowledge/System Engineer BOK/11_Enterprise_Systems_Engineering]] |
 | Data architecture | Aligns data ownership, flow, governance, and value | [[DMBoK v2 - Overview]] |
 | Security and risk | Integrates security, privacy, resilience, and compliance | [[CyBOK v1 - Overview]] |
 | Roadmaps | Defines transition steps, dependencies, and investment choices | [[PMBOK v8 - Overview]] |
-| Communication | Presents architecture in stakeholder-relevant views | [[02_Software_Architecture/07_Design_and_Documentation]] |
+| Communication | Presents architecture in stakeholder-relevant views | [[software-engineering-note/02_Software_Architecture/07_Design_and_Documentation]] |
 
 ## Solutions Architect versus Enterprise Architect
 
@@ -95,22 +95,22 @@ flowchart LR
 
 ## Nearby Paths
 
-- [[06_Software_Architect|Software Architect]]: software system structure
-- [[03_Staff_Engineer|Staff Engineer]]: cross-team technical influence
-- [[04_Principal_and_Distinguished_Engineer|Principal or Distinguished Engineer]]: organization-wide technical direction
-- [[14_Product_Manager|Product Manager]]: product outcomes and customer value
-- [[13_Project_and_Program_Manager|Project or Program Manager]]: coordinated change delivery
+- [[career-path/06_Software_Architect/00_overview|Software Architect]]: software system structure
+- [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]: cross-team technical influence
+- [[career-path/04_Principal_and_Distinguished_Engineer/00_overview|Principal or Distinguished Engineer]]: organization-wide technical direction
+- [[career-path/14_Product_Manager/00_overview|Product Manager]]: product outcomes and customer value
+- [[career-path/13_Project_and_Program_Manager/00_overview|Project or Program Manager]]: coordinated change delivery
 
 ## Suggested Future Note Route
 
 1. [[SEBoK v2 - Overview]]
-2. [[System Engineer BOK/07_System_Definition_and_Architecture]]
-3. [[System Engineer BOK/11_Enterprise_Systems_Engineering]]
-4. [[BABOK/04_Strategy_Analysis]]
-5. [[BABOK/05_Requirements_Analysis_and_Design]]
-6. [[DMBOK/02_Data_Architecture]]
+2. [[body-of-knowledge/System Engineer BOK/07_System_Definition_and_Architecture]]
+3. [[body-of-knowledge/System Engineer BOK/11_Enterprise_Systems_Engineering]]
+4. [[body-of-knowledge/BABOK/04_Strategy_Analysis]]
+5. [[body-of-knowledge/BABOK/05_Requirements_Analysis_and_Design]]
+6. [[body-of-knowledge/DMBOK/02_Data_Architecture]]
 7. [[CyBOK v1 - Overview]]
-8. [[02_Software_Architecture/08_ADLs_and_Architecture_Frameworks]]
+8. [[software-engineering-note/02_Software_Architecture/08_ADLs_and_Architecture_Frameworks]]
 
 ## Sources
 
@@ -122,6 +122,6 @@ flowchart LR
 ## Related
 
 - [[00_Career_Path_Overview]]
-- [[06_Software_Architect]]
-- [[03_Staff_Engineer]]
-- [[14_Product_Manager]]
+- [[career-path/06_Software_Architect/00_overview|Software Architect]]
+- [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]
+- [[career-path/14_Product_Manager/00_overview|Product Manager]]

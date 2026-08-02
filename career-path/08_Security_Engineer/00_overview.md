@@ -4,11 +4,11 @@ note_type: career-path-overview
 career_family: specialist-engineering
 level: senior-specialist
 entry_from:
-  - "[[02_Senior_Software_Engineer]]"
+  - "[[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]"
 next_paths:
-  - "[[03_Staff_Engineer]]"
-  - "[[06_Software_Architect]]"
-  - "[[11_Engineering_Manager]]"
+  - "[[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]"
+  - "[[career-path/06_Software_Architect/00_overview|Software Architect]]"
+  - "[[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]"
 source_frameworks:
   - "[[CyBOK v1 - Overview]]"
   - "[[SWEBOK v4 - Overview]]"
@@ -43,13 +43,13 @@ The strongest security engineers enable delivery. They translate threats and pol
 
 | Capability | Specialist behavior | Existing vault anchor |
 |---|---|---|
-| Threat and risk analysis | Models threats and prioritizes treatment | [[13_Software_Security/06_Domain_Specific_Security]] |
-| Secure architecture | Embeds security principles before implementation | [[02_Software_Architecture/05_Security_and_Testability]] |
-| Secure development | Integrates secure coding and dependency controls | [[13_Software_Security/05_Secure_Development_and_Assurance]] |
-| Security verification | Uses SAST, DAST, fuzzing, review, and testing appropriately | [[13_Software_Security/07_Vulnerability_Management]] |
-| Identity and access | Designs authentication, authorization, and accountability | [[13_Software_Security/03_Access_Control_and_Architecture]] |
+| Threat and risk analysis | Models threats and prioritizes treatment | [[software-engineering-note/13_Software_Security/06_Domain_Specific_Security]] |
+| Secure architecture | Embeds security principles before implementation | [[software-engineering-note/02_Software_Architecture/05_Security_and_Testability]] |
+| Secure development | Integrates secure coding and dependency controls | [[software-engineering-note/13_Software_Security/05_Secure_Development_and_Assurance]] |
+| Security verification | Uses SAST, DAST, fuzzing, review, and testing appropriately | [[software-engineering-note/13_Software_Security/07_Vulnerability_Management]] |
+| Identity and access | Designs authentication, authorization, and accountability | [[software-engineering-note/13_Software_Security/03_Access_Control_and_Architecture]] |
 | Operations | Supports monitoring, incident response, and recovery | [[CyBOK v1 - Overview]] |
-| Governance | Connects controls to policy, regulation, and risk appetite | [[13_Software_Security/08_Security_Management_and_Governance]] |
+| Governance | Connects controls to policy, regulation, and risk appetite | [[software-engineering-note/13_Software_Security/08_Security_Management_and_Governance]] |
 
 ## Typical Progression
 
@@ -83,20 +83,20 @@ flowchart LR
 
 ## Nearby Paths
 
-- [[06_Software_Architect|Software Architect]]: architecture with security as one of several quality concerns
-- [[07_SRE_and_Platform_Engineer|SRE and Platform Engineer]]: reliability and operational systems
-- [[03_Staff_Engineer|Staff Engineer]]: broad technical influence
-- [[15_Solutions_and_Enterprise_Architect|Solutions or Enterprise Architect]]: security across customer and enterprise contexts
+- [[career-path/06_Software_Architect/00_overview|Software Architect]]: architecture with security as one of several quality concerns
+- [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]]: reliability and operational systems
+- [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]: broad technical influence
+- [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions or Enterprise Architect]]: security across customer and enterprise contexts
 
 ## Suggested Future Note Route
 
 1. [[CyBOK v1 - Overview]]
-2. [[13_Software_Security/Software Security Overview]]
-3. [[13_Software_Security/05_Secure_Development_and_Assurance]]
-4. [[13_Software_Security/06_Domain_Specific_Security]]
-5. [[13_Software_Security/07_Vulnerability_Management]]
-6. [[02_Software_Architecture/05_Security_and_Testability]]
-7. [[02_Software_Architecture/09_Evaluation_and_Governance]]
+2. [[software-engineering-note/13_Software_Security/Software Security Overview]]
+3. [[software-engineering-note/13_Software_Security/05_Secure_Development_and_Assurance]]
+4. [[software-engineering-note/13_Software_Security/06_Domain_Specific_Security]]
+5. [[software-engineering-note/13_Software_Security/07_Vulnerability_Management]]
+6. [[software-engineering-note/02_Software_Architecture/05_Security_and_Testability]]
+7. [[software-engineering-note/02_Software_Architecture/09_Evaluation_and_Governance]]
 
 ## Sources
 
@@ -107,6 +107,6 @@ flowchart LR
 ## Related
 
 - [[00_Career_Path_Overview]]
-- [[06_Software_Architect]]
-- [[07_SRE_and_Platform_Engineer]]
-- [[09_Data_and_ML_Engineer]]
+- [[career-path/06_Software_Architect/00_overview|Software Architect]]
+- [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]]
+- [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]]

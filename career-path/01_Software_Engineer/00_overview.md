@@ -4,15 +4,15 @@ note_type: career-path-overview
 career_family: starting-role
 level: foundation
 next_paths:
-  - "[[02_Senior_Software_Engineer]]"
-  - "[[07_SRE_and_Platform_Engineer]]"
-  - "[[08_Security_Engineer]]"
-  - "[[09_Data_and_ML_Engineer]]"
-  - "[[10_Quality_and_Test_Engineering]]"
-  - "[[11_Engineering_Manager]]"
-  - "[[12_Technical_Program_Manager]]"
-  - "[[13_Project_and_Program_Manager]]"
-  - "[[14_Product_Manager]]"
+  - "[[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]"
+  - "[[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]]"
+  - "[[career-path/08_Security_Engineer/00_overview|Security Engineer]]"
+  - "[[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]]"
+  - "[[career-path/10_Quality_and_Test_Engineering/00_overview|Quality and Test Engineering]]"
+  - "[[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]"
+  - "[[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]"
+  - "[[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]]"
+  - "[[career-path/14_Product_Manager/00_overview|Product Manager]]"
 source_frameworks:
   - "[[SWEBOK v4 - Overview]]"
   - "[[Computing Foundation Overview]]"
@@ -84,15 +84,15 @@ flowchart LR
 
 ## Possible Next Paths
 
-- [[02_Senior_Software_Engineer|Senior Software Engineer]]: broader ownership and independent judgment
-- [[07_SRE_and_Platform_Engineer|SRE and Platform Engineer]]: reliability and delivery systems
-- [[08_Security_Engineer|Security Engineer]]: security risk and secure development
-- [[09_Data_and_ML_Engineer|Data and ML Engineer]]: data-intensive or intelligent systems
-- [[10_Quality_and_Test_Engineering|Quality and Test Engineering]]: quality strategy and verification
-- [[11_Engineering_Manager|Engineering Manager]]: people, delivery, and team health
-- [[12_Technical_Program_Manager|Technical Program Manager]]: cross-team technical coordination
-- [[13_Project_and_Program_Manager|Project or Program Manager]]: formal delivery management
-- [[14_Product_Manager|Product Manager]]: product outcomes and customer value
+- [[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]: broader ownership and independent judgment
+- [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]]: reliability and delivery systems
+- [[career-path/08_Security_Engineer/00_overview|Security Engineer]]: security risk and secure development
+- [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]]: data-intensive or intelligent systems
+- [[career-path/10_Quality_and_Test_Engineering/00_overview|Quality and Test Engineering]]: quality strategy and verification
+- [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]: people, delivery, and team health
+- [[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]: cross-team technical coordination
+- [[career-path/13_Project_and_Program_Manager/00_overview|Project or Program Manager]]: formal delivery management
+- [[career-path/14_Product_Manager/00_overview|Product Manager]]: product outcomes and customer value
 
 ## Suggested Future Note Route
 
@@ -113,4 +113,4 @@ flowchart LR
 ## Related
 
 - [[00_Career_Path_Overview]]
-- [[02_Senior_Software_Engineer]]
+[[career-path/01_Software_Engineer/00_overview|Software Engineer]]

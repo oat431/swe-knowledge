@@ -4,11 +4,11 @@ note_type: career-path-overview
 career_family: specialist-engineering
 level: senior-specialist
 entry_from:
-  - "[[02_Senior_Software_Engineer]]"
+  - "[[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]"
 next_paths:
-  - "[[03_Staff_Engineer]]"
-  - "[[06_Software_Architect]]"
-  - "[[11_Engineering_Manager]]"
+  - "[[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]"
+  - "[[career-path/06_Software_Architect/00_overview|Software Architect]]"
+  - "[[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]"
 source_frameworks:
   - "[[SWEBOK v4 - Overview]]"
   - "[[CyBOK v1 - Overview]]"
@@ -45,9 +45,9 @@ The role is not only infrastructure administration. It treats operations as an e
 |---|---|---|
 | Service objectives | Defines SLIs, SLOs, and error-budget policies | [[software-engineering-note/02_Software_Architecture/Microservice/05 Observability/054 SLOs & Error Budgets]] |
 | Observability | Uses logs, metrics, traces, and events to understand systems | [[software-engineering-note/02_Software_Architecture/Microservice/05 Observability/051 Logging & Monitoring]] |
-| Incident response | Coordinates response and turns incidents into learning | [[06_Software_Engineering_Operations/08_Service_Operations_and_Support]] |
-| Delivery automation | Builds safe CI/CD, progressive delivery, and rollback | [[06_Software_Engineering_Operations/Software Engineering Operations Overview]] |
-| Capacity and resilience | Plans for load, failure, recovery, and growth | [[06_Software_Engineering_Operations/07_Capacity_and_Disaster_Recovery]] |
+| Incident response | Coordinates response and turns incidents into learning | [[software-engineering-note/06_Software_Engineering_Operations/08_Service_Operations_and_Support]] |
+| Delivery automation | Builds safe CI/CD, progressive delivery, and rollback | [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]] |
+| Capacity and resilience | Plans for load, failure, recovery, and growth | [[software-engineering-note/06_Software_Engineering_Operations/07_Capacity_and_Disaster_Recovery]] |
 | Developer platform | Provides reusable paths that balance standardization and autonomy | [[software-engineering-note/02_Software_Architecture/Microservice/07 Deployment/074 GitOps & CI-CD Pipelines]] |
 
 ## Typical Progression
@@ -82,18 +82,18 @@ flowchart LR
 
 ## Nearby Paths
 
-- [[06_Software_Architect|Software Architect]]: broader system structure and trade-offs
-- [[08_Security_Engineer|Security Engineer]]: security risk and controls
-- [[03_Staff_Engineer|Staff Engineer]]: cross-team technical influence
-- [[11_Engineering_Manager|Engineering Manager]]: people and delivery leadership
+- [[career-path/06_Software_Architect/00_overview|Software Architect]]: broader system structure and trade-offs
+- [[career-path/08_Security_Engineer/00_overview|Security Engineer]]: security risk and controls
+- [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]: cross-team technical influence
+- [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]: people and delivery leadership
 
 ## Suggested Future Note Route
 
-1. [[06_Software_Engineering_Operations/Software Engineering Operations Overview]]
-2. [[02_Software_Architecture/Microservice/Microservice Overview]]
-3. [[06_Software_Engineering_Operations/07_Capacity_and_Disaster_Recovery]]
-4. [[06_Software_Engineering_Operations/08_Service_Operations_and_Support]]
-5. [[13_Software_Security/Software Security Overview]]
+1. [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]]
+2. [[software-engineering-note/02_Software_Architecture/Microservice/Microservice Overview]]
+3. [[software-engineering-note/06_Software_Engineering_Operations/07_Capacity_and_Disaster_Recovery]]
+4. [[software-engineering-note/06_Software_Engineering_Operations/08_Service_Operations_and_Support]]
+5. [[software-engineering-note/13_Software_Security/Software Security Overview]]
 6. [[CyBOK v1 - Overview]]
 
 ## Sources
@@ -105,6 +105,6 @@ flowchart LR
 ## Related
 
 - [[00_Career_Path_Overview]]
-- [[02_Senior_Software_Engineer]]
-- [[06_Software_Architect]]
-- [[08_Security_Engineer]]
+- [[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]
+- [[career-path/06_Software_Architect/00_overview|Software Architect]]
+- [[career-path/08_Security_Engineer/00_overview|Security Engineer]]

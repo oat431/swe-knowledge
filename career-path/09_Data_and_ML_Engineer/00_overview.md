@@ -4,11 +4,11 @@ note_type: career-path-overview
 career_family: specialist-engineering
 level: senior-specialist
 entry_from:
-  - "[[02_Senior_Software_Engineer]]"
+  - "[[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]"
 next_paths:
-  - "[[03_Staff_Engineer]]"
-  - "[[06_Software_Architect]]"
-  - "[[11_Engineering_Manager]]"
+  - "[[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]"
+  - "[[career-path/06_Software_Architect/00_overview|Software Architect]]"
+  - "[[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]"
 source_frameworks:
   - "[[DMBoK v2 - Overview]]"
   - "[[SWEBOK v4 - Overview]]"
@@ -48,8 +48,8 @@ These are related but distinct specializations. A data engineer usually emphasiz
 | Data integration | Builds reliable ETL, ELT, streaming, and interface contracts | [[06_Data_Integration_and_Interoperability]] |
 | Data quality | Defines quality dimensions, rules, profiling, and monitoring | [[11_Data_Quality]] |
 | Data security | Protects sensitive data and supports privacy obligations | [[05_Data_Security]] |
-| ML lifecycle | Handles training, evaluation, serving, monitoring, and retraining | [[Artificial_Intelligence/AI Overview]] |
-| Production engineering | Operates distributed systems and automation safely | [[06_Software_Engineering_Operations/Software Engineering Operations Overview]] |
+| ML lifecycle | Handles training, evaluation, serving, monitoring, and retraining | [[computing-foundation-note/Artificial_Intelligence/AI Overview]] |
+| Production engineering | Operates distributed systems and automation safely | [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]] |
 
 ## Typical Progression
 
@@ -82,11 +82,11 @@ flowchart LR
 
 ## Nearby Paths
 
-- [[06_Software_Architect|Software Architect]]: broader system structure
-- [[07_SRE_and_Platform_Engineer|SRE and Platform Engineer]]: platform reliability and operations
-- [[08_Security_Engineer|Security Engineer]]: data and model protection
-- [[03_Staff_Engineer|Staff Engineer]]: cross-team technical influence
-- [[14_Product_Manager|Product Manager]]: data-informed product decisions
+- [[career-path/06_Software_Architect/00_overview|Software Architect]]: broader system structure
+- [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]]: platform reliability and operations
+- [[career-path/08_Security_Engineer/00_overview|Security Engineer]]: data and model protection
+- [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]: cross-team technical influence
+- [[career-path/14_Product_Manager/00_overview|Product Manager]]: data-informed product decisions
 
 ## Suggested Future Note Route
 
@@ -97,8 +97,8 @@ flowchart LR
 5. [[10_Metadata_Management]]
 6. [[11_Data_Quality]]
 7. [[05_Data_Security]]
-8. [[Artificial_Intelligence/AI Overview]]
-9. [[Artificial_Intelligence/09_AI_SE_Intersection]]
+8. [[computing-foundation-note/Artificial_Intelligence/AI Overview]]
+9. [[computing-foundation-note/Artificial_Intelligence/09_AI_SE_Intersection]]
 
 ## Sources
 
@@ -109,6 +109,6 @@ flowchart LR
 ## Related
 
 - [[00_Career_Path_Overview]]
-- [[02_Senior_Software_Engineer]]
-- [[07_SRE_and_Platform_Engineer]]
-- [[08_Security_Engineer]]
+- [[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]
+- [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]]
+- [[career-path/08_Security_Engineer/00_overview|Security Engineer]]

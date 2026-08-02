@@ -4,12 +4,12 @@ note_type: career-path-overview
 career_family: delivery-leadership
 level: senior
 entry_from:
-  - "[[02_Senior_Software_Engineer]]"
-  - "[[05_Tech_Lead]]"
+  - "[[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]"
+  - "[[career-path/05_Tech_Lead/00_overview|Tech Lead]]"
 next_paths:
-  - "[[13_Project_and_Program_Manager]]"
-  - "[[11_Engineering_Manager]]"
-  - "[[03_Staff_Engineer]]"
+  - "[[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]]"
+  - "[[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]"
+  - "[[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]"
 source_frameworks:
   - "[[PMBOK v8 - Overview]]"
   - "[[SWEBOK v4 - Overview]]"
@@ -47,10 +47,10 @@ The TPM is not simply a project administrator. The role creates clarity across b
 |---|---|---|
 | Program structure | Defines outcomes, workstreams, milestones, and governance | [[PMBOK v8 - Overview]] |
 | Technical integration | Understands system boundaries, interfaces, and integration sequence | [[SEBoK v2 - Overview]] |
-| Dependency management | Tracks and resolves dependencies across teams and suppliers | [[09_Software_Engineering_Management/08_Risk_Management_and_Control]] |
+| Dependency management | Tracks and resolves dependencies across teams and suppliers | [[software-engineering-note/09_Software_Engineering_Management/08_Risk_Management_and_Control]] |
 | Risk and issue management | Escalates important uncertainty and coordinates mitigation | [[PMBOK v8 - Overview]] |
 | Stakeholder alignment | Creates shared context among technical and business groups | [[BABOK v3 - Overview]] |
-| Decision facilitation | Helps the right people make timely, documented decisions | [[03_Software_Design/07_Design_Rationale_and_Decisions]] |
+| Decision facilitation | Helps the right people make timely, documented decisions | [[software-engineering-note/03_Software_Design/07_Design_Rationale_and_Decisions]] |
 | Benefits and outcomes | Keeps delivery connected to value, not only activity completion | [[PMBOK v8 - Overview]] |
 
 ## Typical Progression
@@ -85,22 +85,22 @@ flowchart LR
 
 ## Nearby Paths
 
-- [[13_Project_and_Program_Manager|Project or Program Manager]]: formal delivery management
-- [[05_Tech_Lead|Tech Lead]]: direct technical coordination within a team or system
-- [[11_Engineering_Manager|Engineering Manager]]: people and team leadership
-- [[03_Staff_Engineer|Staff Engineer]]: cross-team technical influence
-- [[14_Product_Manager|Product Manager]]: product outcomes and customer value
+- [[career-path/13_Project_and_Program_Manager/00_overview|Project or Program Manager]]: formal delivery management
+- [[career-path/05_Tech_Lead/00_overview|Tech Lead]]: direct technical coordination within a team or system
+- [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]: people and team leadership
+- [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]: cross-team technical influence
+- [[career-path/14_Product_Manager/00_overview|Product Manager]]: product outcomes and customer value
 
 ## Suggested Future Note Route
 
 1. [[PMBOK v8 - Overview]]
-2. [[PMBOK/04_Governance_Performance_Domain]]
-3. [[PMBOK/08_Stakeholders_Performance_Domain]]
-4. [[PMBOK/10_Risk_Performance_Domain]]
+2. [[body-of-knowledge/PMBOK/04_Governance_Performance_Domain]]
+3. [[body-of-knowledge/PMBOK/08_Stakeholders_Performance_Domain]]
+4. [[body-of-knowledge/PMBOK/10_Risk_Performance_Domain]]
 5. [[SEBoK v2 - Overview]]
-6. [[System Engineer BOK/06_Technical_Management_Processes]]
-7. [[09_Software_Engineering_Management/07_Estimation_and_Planning]]
-8. [[09_Software_Engineering_Management/08_Risk_Management_and_Control]]
+6. [[body-of-knowledge/System Engineer BOK/06_Technical_Management_Processes]]
+7. [[software-engineering-note/09_Software_Engineering_Management/07_Estimation_and_Planning]]
+8. [[software-engineering-note/09_Software_Engineering_Management/08_Risk_Management_and_Control]]
 
 ## Sources
 
@@ -112,6 +112,6 @@ flowchart LR
 ## Related
 
 - [[00_Career_Path_Overview]]
-- [[02_Senior_Software_Engineer]]
-- [[11_Engineering_Manager]]
-- [[13_Project_and_Program_Manager]]
+- [[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]
+- [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]
+- [[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]]

@@ -4,7 +4,7 @@ note_type: career-path-overview
 career_family: technical-individual-contributor
 level: principal-and-distinguished
 entry_from:
-  - "[[03_Staff_Engineer]]"
+  - "[[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]"
 source_frameworks:
   - "[[SWEBOK v4 - Overview]]"
   - "[[SEBoK v2 - Overview]]"
@@ -39,10 +39,10 @@ The distinction between principal and distinguished varies widely. In general, p
 
 | Capability | Expected scope | Existing vault anchor |
 |---|---|---|
-| Technology strategy | Connects architecture and investment to business direction | [[15_Software_Engineering_Economics/Software Engineering Economics Overview]] |
+| Technology strategy | Connects architecture and investment to business direction | [[software-engineering-note/15_Software_Engineering_Economics/Software Engineering Economics Overview]] |
 | Enterprise systems thinking | Understands organization, ecosystem, and system-of-systems effects | [[body-of-knowledge/System Engineer BOK/11_Enterprise_Systems_Engineering]] |
-| Decision governance | Establishes decision principles without unnecessary bureaucracy | [[02_Software_Architecture/09_Evaluation_and_Governance]] |
-| Organizational influence | Shapes decisions across executive, technical, and product groups | [[14_Software_Engineering_Professional_Practice/03_Communication_Skills]] |
+| Decision governance | Establishes decision principles without unnecessary bureaucracy | [[software-engineering-note/02_Software_Architecture/09_Evaluation_and_Governance]] |
+| Organizational influence | Shapes decisions across executive, technical, and product groups | [[software-engineering-note/14_Software_Engineering_Professional_Practice/03_Communication_Skills]] |
 | Future readiness | Uses prototypes, research, and technology roadmaps to reduce uncertainty | [[body-of-knowledge/System Engineer BOK/21_Emerging_Knowledge]] |
 | Technical culture | Develops other technical leaders and improves engineering norms | [[body-of-knowledge/System Engineer BOK/15_Enabling_Teams_and_Individuals]] |
 
@@ -75,10 +75,10 @@ flowchart LR
 
 ## Nearby Paths
 
-- [[03_Staff_Engineer|Staff Engineer]]: the usual preceding individual-contributor scope
-- [[06_Software_Architect|Software Architect]]: architecture-centered scope
-- [[11_Engineering_Manager|Engineering Manager]]: people and organizational management
-- [[15_Solutions_and_Enterprise_Architect|Solutions or Enterprise Architect]]: enterprise and customer-facing architecture
+- [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]: the usual preceding individual-contributor scope
+- [[career-path/06_Software_Architect/00_overview|Software Architect]]: architecture-centered scope
+- [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]: people and organizational management
+- [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions or Enterprise Architect]]: enterprise and customer-facing architecture
 
 ## Suggested Future Note Route
 
@@ -86,9 +86,9 @@ flowchart LR
 2. [[body-of-knowledge/System Engineer BOK/11_Enterprise_Systems_Engineering]]
 3. [[body-of-knowledge/System Engineer BOK/12_Systems_of_Systems]]
 4. [[body-of-knowledge/System Engineer BOK/21_Emerging_Knowledge]]
-5. [[15_Software_Engineering_Economics/Software Engineering Economics Overview]]
-6. [[02_Software_Architecture/Software Architecture Overview]]
-7. [[14_Software_Engineering_Professional_Practice/Professionalism of Software Engineering Overview]]
+5. [[software-engineering-note/15_Software_Engineering_Economics/Software Engineering Economics Overview]]
+6. [[software-engineering-note/02_Software_Architecture/Software Architecture Overview]]
+7. [[software-engineering-note/14_Software_Engineering_Professional_Practice/Professionalism of Software Engineering Overview]]
 
 ## Sources
 
@@ -99,5 +99,5 @@ flowchart LR
 ## Related
 
 - [[00_Career_Path_Overview]]
-- [[03_Staff_Engineer]]
-- [[06_Software_Architect]]
+- [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]
+- [[career-path/06_Software_Architect/00_overview|Software Architect]]

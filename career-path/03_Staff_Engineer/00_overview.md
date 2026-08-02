@@ -4,11 +4,11 @@ note_type: career-path-overview
 career_family: technical-individual-contributor
 level: staff
 entry_from:
-  - "[[02_Senior_Software_Engineer]]"
+  - "[[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]"
 next_paths:
-  - "[[04_Principal_and_Distinguished_Engineer]]"
-  - "[[06_Software_Architect]]"
-  - "[[11_Engineering_Manager]]"
+  - "[[career-path/04_Principal_and_Distinguished_Engineer/00_overview|Principal and Distinguished Engineer]]"
+  - "[[career-path/06_Software_Architect/00_overview|Software Architect]]"
+  - "[[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]"
 source_frameworks:
   - "[[SWEBOK v4 - Overview]]"
   - "[[SEBoK v2 - Overview]]"
@@ -42,12 +42,12 @@ Staff engineers often work through proposals, architecture reviews, technical st
 
 | Capability | Staff-level behavior | Existing vault anchor |
 |---|---|---|
-| Cross-team architecture | Aligns multiple systems and teams around durable boundaries | [[02_Software_Architecture/Software Architecture Overview]] |
-| Technical strategy | Connects technical investment to organizational priorities | [[15_Software_Engineering_Economics/Software Engineering Economics Overview]] |
-| Influence | Creates alignment without relying on reporting authority | [[14_Software_Engineering_Professional_Practice/03_Communication_Skills]] |
+| Cross-team architecture | Aligns multiple systems and teams around durable boundaries | [[software-engineering-note/02_Software_Architecture/Software Architecture Overview]] |
+| Technical strategy | Connects technical investment to organizational priorities | [[software-engineering-note/15_Software_Engineering_Economics/Software Engineering Economics Overview]] |
+| Influence | Creates alignment without relying on reporting authority | [[software-engineering-note/14_Software_Engineering_Professional_Practice/03_Communication_Skills]] |
 | Systems thinking | Understands interactions, emergence, and second-order effects | [[SEBoK v2 - Overview]] |
-| Organizational learning | Makes good practices reusable across teams | [[10_Software_Engineering_Process/07_Process_Assessment_and_Improvement]] |
-| Technical risk | Manages architecture, security, reliability, and dependency risk | [[13_Software_Security/Software Security Overview]] |
+| Organizational learning | Makes good practices reusable across teams | [[software-engineering-note/10_Software_Engineering_Process/07_Process_Assessment_and_Improvement]] |
+| Technical risk | Manages architecture, security, reliability, and dependency risk | [[software-engineering-note/13_Software_Security/Software Security Overview]] |
 
 ## Typical Progression
 
@@ -79,21 +79,21 @@ flowchart LR
 
 ## Nearby Paths
 
-- [[04_Principal_and_Distinguished_Engineer|Principal or Distinguished Engineer]]: organization-wide technical direction
-- [[05_Tech_Lead|Tech Lead]]: team or system-level technical coordination
-- [[06_Software_Architect|Software Architect]]: architecture-focused role that may operate at team, product, or enterprise scope
-- [[11_Engineering_Manager|Engineering Manager]]: people and organizational leadership
-- [[15_Solutions_and_Enterprise_Architect|Solutions or Enterprise Architect]]: technology alignment across customer or enterprise boundaries
+- [[career-path/04_Principal_and_Distinguished_Engineer/00_overview|Principal or Distinguished Engineer]]: organization-wide technical direction
+- [[career-path/05_Tech_Lead/00_overview|Tech Lead]]: team or system-level technical coordination
+- [[career-path/06_Software_Architect/00_overview|Software Architect]]: architecture-focused role that may operate at team, product, or enterprise scope
+- [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]: people and organizational leadership
+- [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions or Enterprise Architect]]: technology alignment across customer or enterprise boundaries
 
 ## Suggested Future Note Route
 
-1. [[02_Software_Architecture/09_Evaluation_and_Governance]]
-2. [[03_Software_Design/07_Design_Rationale_and_Decisions]]
-3. [[15_Software_Engineering_Economics/Software Engineering Economics Overview]]
+1. [[software-engineering-note/02_Software_Architecture/09_Evaluation_and_Governance]]
+2. [[software-engineering-note/03_Software_Design/07_Design_Rationale_and_Decisions]]
+3. [[software-engineering-note/15_Software_Engineering_Economics/Software Engineering Economics Overview]]
 4. [[SEBoK v2 - Overview]]
 5. [[body-of-knowledge/System Engineer BOK/11_Enterprise_Systems_Engineering]]
-6. [[14_Software_Engineering_Professional_Practice/03_Communication_Skills]]
-7. [[09_Software_Engineering_Management/08_Risk_Management_and_Control]]
+6. [[software-engineering-note/14_Software_Engineering_Professional_Practice/03_Communication_Skills]]
+7. [[software-engineering-note/09_Software_Engineering_Management/08_Risk_Management_and_Control]]
 
 ## Sources
 
@@ -105,5 +105,5 @@ flowchart LR
 ## Related
 
 - [[00_Career_Path_Overview]]
-- [[02_Senior_Software_Engineer]]
-- [[04_Principal_and_Distinguished_Engineer]]
+- [[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]
+- [[career-path/04_Principal_and_Distinguished_Engineer/00_overview|Principal and Distinguished Engineer]]
