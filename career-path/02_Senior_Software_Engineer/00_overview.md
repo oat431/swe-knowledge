@@ -53,6 +53,7 @@ Senior does not mean knowing every technology. It means being able to make sound
 | Requirements and problem framing | Clarifies the underlying problem and acceptance conditions      | [[02_Problem_Framing_and_Requirements/00_overview]]                                                  |
 | Influence and communication      | Leads through explanation, facilitation, and trust              | [[06_Communication_and_Influence/00_overview]]                                                                               |
 | Mentoring and team leadership    | Raises the capability of the team without creating dependency   | [[07_Mentoring_and_Team_Leadership/00_overview]]                                                                             |
+| Engineering economics            | Makes technical decisions with economic awareness               | [[08_Engineering_Economics_and_Trade_Offs/00_overview]]                                                                      |
 
 ## Typical Progression
 
