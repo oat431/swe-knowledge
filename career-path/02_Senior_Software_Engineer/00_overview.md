@@ -49,9 +49,8 @@ Senior does not mean knowing every technology. It means being able to make sound
 | Technical ownership              | Owns a system area from requirements through operation          | [[01_Technical_Ownership/00_overview]]                                                                                       |
 | Architecture judgment            | Compares options and records trade-offs                         | [[03_Architecture_and_Design_Judgment/00_overview]]                                                                          |
 | Delivery                         | Forecasts work, manages dependencies, and communicates changes  | [[04_Delivery_and_Execution/00_overview]]                                                                                    |
-| Quality                          | Defines quality risks and chooses proportionate controls        | [[software-engineering-note/12_Software_Quality/Software Quality Overview]]                                                  |
-| Reliability                      | Uses monitoring, incidents, and feedback to improve the service | [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]]                    |
-| Requirements and problem framing | Clarifies the underlying problem and acceptance conditions      | [[02_Problem_Framing_and_Requirements/00_overview]]                                                                          |
+| Quality, reliability, security    | Builds for correctness, dependability, and protection           | [[05_Quality_Reliability_Security/00_overview]]                                                      |
+| Requirements and problem framing | Clarifies the underlying problem and acceptance conditions      | [[02_Problem_Framing_and_Requirements/00_overview]]                                                  |
 | Influence                        | Leads through explanation, facilitation, and trust              | [[software-engineering-note/14_Software_Engineering_Professional_Practice/Professionalism of Software Engineering Overview]] |
 | Mentoring                        | Raises the capability of the team without creating dependency   | [[software-engineering-note/14_Software_Engineering_Professional_Practice/02_Group_Dynamics_and_Psychology]]                 |
 
