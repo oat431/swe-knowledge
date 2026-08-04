@@ -121,6 +121,7 @@ Team members independently estimate, then discuss and converge.
 Use relative sizing (XS, S, M, L, XL) instead of absolute time.
 
 **Mapping example:**
+
 | Size | Effort range | Typical duration |
 |------|-------------|------------------|
 | XS | 1-2 points | Less than 1 day |
