@@ -53,15 +53,15 @@ flowchart TD
 
 ## Core Topics in This Capability Area
 
-| Topic | What you will learn | Key question answered |
-|---|---|---|
-| [[01_Architecture_Decision_Making]] | Structured process for making decisions | How do I choose between options when there is no clear winner? |
-| [[02_Quality_Attribute_Tradeoffs]] | Evaluating performance, scalability, security, maintainability | What am I giving up when I choose this approach? |
-| [[03_Architecture_Evaluation]] | ATAM and other evaluation methods | How do I know if this architecture will work? |
-| [[04_Architecture_Decision_Records]] | ADR templates and best practices | How do I document decisions so future teams understand them? |
-| [[05_Design_Patterns_Judgment]] | When to apply patterns and when to avoid them | Is this pattern solving my problem or creating complexity? |
-| [[06_Architecture_Governance]] | Lightweight governance for agile teams | How do I ensure the team follows the architecture without bureaucracy? |
-| [[07_Architecture_Communication]] | Explaining decisions to technical and non-technical stakeholders | How do I get buy-in for my architecture decisions? |
+| Topic                                | What you will learn                                              | Key question answered                                                  |
+| ------------------------------------ | ---------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [[01_Architecture_Decision_Making]]  | Structured process for making decisions                          | How do I choose between options when there is no clear winner?         |
+| [[02_Quality_Attribute_Tradeoffs]]   | Evaluating performance, scalability, security, maintainability   | What am I giving up when I choose this approach?                       |
+| [[03_Architecture_Evaluation]]       | ATAM and other evaluation methods                                | How do I know if this architecture will work?                          |
+| [[04_Architecture_Decision_Records]] | ADR templates and best practices                                 | How do I document decisions so future teams understand them?           |
+| [[05_Design_Patterns_Judgment]]      | When to apply patterns and when to avoid them                    | Is this pattern solving my problem or creating complexity?             |
+| [[06_Architecture_Governance]]       | Lightweight governance for agile teams                           | How do I ensure the team follows the architecture without bureaucracy? |
+| [[07_Architecture_Communication]]    | Explaining decisions to technical and non-technical stakeholders | How do I get buy-in for my architecture decisions?                     |
 
 ## Concept Map
 
