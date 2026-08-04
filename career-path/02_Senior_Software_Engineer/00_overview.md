@@ -51,8 +51,8 @@ Senior does not mean knowing every technology. It means being able to make sound
 | Delivery                         | Forecasts work, manages dependencies, and communicates changes  | [[04_Delivery_and_Execution/00_overview]]                                                                                    |
 | Quality, reliability, security    | Builds for correctness, dependability, and protection           | [[05_Quality_Reliability_Security/00_overview]]                                                      |
 | Requirements and problem framing | Clarifies the underlying problem and acceptance conditions      | [[02_Problem_Framing_and_Requirements/00_overview]]                                                  |
-| Influence                        | Leads through explanation, facilitation, and trust              | [[software-engineering-note/14_Software_Engineering_Professional_Practice/Professionalism of Software Engineering Overview]] |
-| Mentoring                        | Raises the capability of the team without creating dependency   | [[software-engineering-note/14_Software_Engineering_Professional_Practice/02_Group_Dynamics_and_Psychology]]                 |
+| Influence and communication      | Leads through explanation, facilitation, and trust              | [[06_Communication_and_Influence/00_overview]]                                                                               |
+| Mentoring and team leadership    | Raises the capability of the team without creating dependency   | [[07_Mentoring_and_Team_Leadership/00_overview]]                                                                             |
 
 ## Typical Progression
 
