@@ -46,7 +46,7 @@ Senior does not mean knowing every technology. It means being able to make sound
 
 | Capability | Senior-level behavior | Existing vault anchor |
 |---|---|---|
-| Technical ownership | Owns a system area from requirements through operation | [[software-engineering-note/07_Software_Maintenance/Software Maintenance Overview]] |
+| Technical ownership | Owns a system area from requirements through operation | [[01_Technical_Ownership/00_overview|Technical Ownership]] |
 | Architecture judgment | Compares options and records trade-offs | [[software-engineering-note/02_Software_Architecture/09_Evaluation_and_Governance]] |
 | Delivery | Forecasts work, manages dependencies, and communicates changes | [[software-engineering-note/09_Software_Engineering_Management/Software Engineering Management Overview]] |
 | Quality | Defines quality risks and chooses proportionate controls | [[software-engineering-note/12_Software_Quality/Software Quality Overview]] |
