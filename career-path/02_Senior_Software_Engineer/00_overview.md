@@ -44,7 +44,7 @@ Senior does not mean knowing every technology. It means being able to make sound
 
 ## Capability Areas
 
-| Capability                       | Senior-level behavior                                           | Existing vault anchor                                                                                                        |
+|| Capability                       | Senior-level behavior                                           | Existing vault anchor                                                                                                        |
 | -------------------------------- | --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | Technical ownership              | Owns a system area from requirements through operation          | [[01_Technical_Ownership/00_overview]]                                                                                       |
 | Architecture judgment            | Compares options and records trade-offs                         | [[03_Architecture_and_Design_Judgment/00_overview]]                                                                          |
@@ -54,6 +54,7 @@ Senior does not mean knowing every technology. It means being able to make sound
 | Influence and communication      | Leads through explanation, facilitation, and trust              | [[06_Communication_and_Influence/00_overview]]                                                                               |
 | Mentoring and team leadership    | Raises the capability of the team without creating dependency   | [[07_Mentoring_and_Team_Leadership/00_overview]]                                                                             |
 | Engineering economics            | Makes technical decisions with economic awareness               | [[08_Engineering_Economics_and_Trade_Offs/00_overview]]                                                                      |
+| Promotion evidence               | Documents impact and demonstrates sustained senior-level work   | [[09_Promotion_Evidence_and_Capstone/00_overview]]                                                                           |
 
 ## Typical Progression
 

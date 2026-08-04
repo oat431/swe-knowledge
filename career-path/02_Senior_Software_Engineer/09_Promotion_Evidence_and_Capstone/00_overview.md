@@ -40,7 +40,7 @@ This is the capstone capability area that ties together all eight previous areas
 - **Senior Engineer**: Owns and delivers complex projects within a team
 - **Staff Engineer**: Drives technical strategy across teams, influences architecture decisions, multiplies others' effectiveness, and shapes engineering culture
 
-The jump from Senior to Staff is not just doing more of the same—it's a qualitative shift in scope, influence, and organizational impact.
+The jump from Senior to Staff is not just doing more of the same:it's a qualitative shift in scope, influence, and organizational impact.
 
 ## The Eight Capability Areas
 
@@ -214,9 +214,9 @@ Your capstone project should demonstrate:
 
 ## Summary
 
-This capstone capability area is about making your impact visible and compelling. It's not enough to do great work—you need to document it, quantify it, and present it in a way that demonstrates you're operating at the next level. Whether you're preparing for a Staff promotion or building a portfolio for future opportunities, these skills ensure your contributions are recognized and rewarded.
+This capstone capability area is about making your impact visible and compelling. It's not enough to do great work:you need to document it, quantify it, and present it in a way that demonstrates you're operating at the next level. Whether you're preparing for a Staff promotion or building a portfolio for future opportunities, these skills ensure your contributions are recognized and rewarded.
 
-Remember: **Promotion is not about tenure or effort—it's about demonstrating sustained impact at the next level across multiple dimensions.**
+Remember: **Promotion is not about tenure or effort:it's about demonstrating sustained impact at the next level across multiple dimensions.**
 
 ---
 

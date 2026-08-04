@@ -297,7 +297,7 @@ cross-service debugging difficult.
 - Now mentoring a new junior engineer
 
 **Feedback from Jordan**:
-"Your mentorship was transformative. You didn't just tell me what to do—you
+"Your mentorship was transformative. You didn't just tell me what to do:you
 helped me understand why. The system design sessions especially helped me think
 about problems differently. I'm now using the same approach with my own mentee."
 ```
