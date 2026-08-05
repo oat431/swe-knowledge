@@ -1,6 +1,7 @@
 # Angular Launch Checklist
 
 > Tick every box before an Angular app hits production. Framework companion to [[Frontend Launch]]. Angular is opinionated — lean into it.
+> Last updated: 2026-08-05
 
 ---
 
@@ -139,6 +140,26 @@
 - [ ] **`@ngx-translate` or Angular i18n** — i18n built-in since Angular 9. `ng extract-i18n`. Or `@ngx-translate/core` for runtime switching.
 - [ ] **Environment configs** — `fileReplacements` in `angular.json`. `environment.ts` → `environment.prod.ts` at build time.
 
+## AI/LLM Integration
+
+- [ ] **HTTP streaming** — `HttpClient` with `responseType: 'text'` + `reportProgress` or fetch-based `ReadableStream` parsing for SSE. Or `@microsoft/fetch-event-source` for robust event-stream handling.
+- [ ] **Never expose provider keys** — Everything in Angular ships to the browser. LLM calls go through your backend (or Angular SSR server routes). Keys stay server-side.
+- [ ] **Signal-based AI state** — Chat messages as `signal<Message[]>()`, `computed()` for derived UI state, `httpResource()` (experimental) for AI endpoint calls. `effect()` for side effects like scroll-to-bottom.
+- [ ] **Streaming UX** — Append tokens to the last message signal as they arrive. Typing indicator, stop button (`AbortController` / unsubscribe), regenerate + edit affordances.
+- [ ] **Markdown rendering** — `ngx-markdown` with sanitization enabled, or `marked` + DOMPurify. Never `bypassSecurityTrustHtml` on model output.
+- [ ] **Non-chat AI calls** — RxJS `switchMap` for debounced AI calls, or TanStack Query Angular with `injectQuery`. Cache identical prompts.
+- [ ] **Graceful degradation** — Error state with retry, cached fallback, "AI can be wrong" disclaimers where user-facing. Rate-limit UX on 429.
+
+## Data Privacy & Compliance (Frontend-Specific)
+
+- [ ] **Error monitoring scrubbing** — Sentry `beforeSend` strips PII (emails, tokens, form values) from error payloads.
+- [ ] **Cookie consent** — GDPR/CCPA banner before analytics fire. Load analytics only after opt-in (or cookieless: Plausible, Umami).
+- [ ] **PII minimization** — Don't store user data in localStorage/IndexedDB unnecessarily. Mask sensitive data in UI previews.
+- [ ] **Third-party script inventory** — Audit `index.html` script tags and lazy-loaded embeds: what loads, what it collects, where it's sent (EU/US).
+- [ ] **Data retention UI** — "Delete my data" / "Export my data" flows calling backend erasure/export endpoints via `HttpClient`.
+- [ ] **Privacy policy & terms** — Up-to-date, linked in footer. Cover collection, retention, rights (access/erasure/portability).
+- [ ] **Do Not Track / GPC** — Respect `navigator.doNotTrack` and Global Privacy Control where feasible.
+
 ---
 
 ## Quick Sanity Check
@@ -153,6 +174,72 @@
 - [ ] Service worker registered (if PWA)
 - [ ] CSP tested in production mode (templates + styles pass without violations)
 - [ ] `track` on every `@for` loop
+
+
+---
+
+## Project Tier Scoping Matrix
+
+> **How to use this table:** Pick your tier first, then focus only on the sections marked ✅ (required) or 🟡 (recommended). Skip ❌ sections entirely — they'd be over-engineering for your context.
+>
+> **Legend:** ✅ Required · 🟡 Recommended / partial · ❌ Skip
+
+### Tier Descriptions
+
+| # | Tier | Description | Typical Team | Users | Lifespan |
+|---|---|---|---|---|---|
+| 1 | 🧪 **POC / Spike** | Validate an idea. Throwaway code. `console.log` is fine. | 1 dev | Internal only | Days–weeks |
+| 2 | 🔧 **Prototype / MVP** | Waiting for integration or user validation. Might become real. | 1–2 devs | Beta testers | Weeks–months |
+| 3 | 🏠 **Internal Tool** | Real users (employees), real traffic. No external exposure or paying customers. | 1–3 devs | Employees | Ongoing |
+| 4 | 🟢 **Small Production** | Single app, few pages, low traffic. Real users, maybe early revenue. | 1–2 devs | < 1K users | Ongoing |
+| 5 | 🔵 **Medium Production** | Multiple apps or higher traffic. Real revenue or user base that matters. | 2–5 devs | 1K–100K users | Ongoing |
+| 6 | 🟣 **Production Grade** | Full rigor — high-stakes SaaS, enterprise product, or large user base. | 5+ devs | 100K+ users | Long-term |
+| 7 | 🔴 **Mission-Critical / Regulated** | Healthcare (HIPAA), finance (PCI-DSS), safety systems. Failure = severe harm. Adds formal verification, regulatory audit. | 10+ devs | Varies | Decades |
+
+### Which Tier Am I?
+
+```mermaid
+flowchart TD
+    A[Is this throwaway / exploratory?] -->|Yes| T1[🧪 Tier 1 or 2<br/>POC / Prototype]
+    A -->|No| B[Are the users internal<br/>employees?]
+    B -->|Yes| T3[🏠 Tier 3<br/>Internal Tool]
+    B -->|No| C[Do paying users or real<br/>revenue depend on it?]
+    C -->|No| T4[🟢 Tier 4<br/>Small Production]
+    C -->|Yes| D[Multiple apps or<br/>1K+ users?]
+    D -->|No| T4
+    D -->|Yes| E[Enterprise / high-stakes<br/>/ regulated industry?]
+    E -->|No| T5[🔵 Tier 5<br/>Medium Production]
+    E -->|Yes| F[Failure could cause<br/>severe harm?]
+    F -->|No| T6[🟣 Tier 6<br/>Production Grade]
+    F -->|Yes| T7[🔴 Tier 7<br/>Mission-Critical]
+    
+    style T1 fill:#e1f5ff
+    style T3 fill:#fff4e1
+    style T4 fill:#e8f5e9
+    style T5 fill:#e3f2fd
+    style T6 fill:#f3e5f5
+    style T7 fill:#ffebee
+```
+
+### Checklist Applicability by Tier
+
+| # | Section | 🧪 POC | 🔧 Prototype | 🏠 Internal | 🟢 Small Prod | 🔵 Medium Prod | 🟣 Production Grade | 🔴 Mission-Critical |
+|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 1 | Project Setup | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 2 | Signals (Angular 17+) | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 3 | State Management | 🟡 | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 4 | Components | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 5 | Dependency Injection | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 6 | Routing | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 7 | Forms | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + audit trail |
+| 8 | HTTP & API | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 9 | Styling | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + design system |
+| 10 | Testing | ❌ maybe smoke | 🟡 unit | ✅ + component | ✅ + E2E | ✅ + visual reg | ✅ + a11y in CI | ✅ + formal verification |
+| 11 | Security (Frontend) | 🟡 no secrets | 🟡 essentials | ✅ | ✅ + CSP | ✅ + pentest | ✅ + hardened | ✅ + formal audit |
+| 12 | Performance | ❌ | 🟡 basic CWV | ✅ | ✅ + budgets | ✅ + profiling | ✅ + SLO | ✅ + capacity |
+| 13 | Build & Deploy | ❌ | 🟡 basic build | ✅ + CI | ✅ + previews | ✅ + canary + flags | ✅ + full pipeline | ✅ + signed artifacts |
+| 14 | AI/LLM Integration | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
+| 15 | Data Privacy & Compliance | ❌ | ❌ | 🟡 minimal | ✅ consent + PII | ✅ + DPA | ✅ full compliance | ✅ + regulatory framework |
 
 ---
 

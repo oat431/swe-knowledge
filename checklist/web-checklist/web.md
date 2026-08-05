@@ -2,7 +2,7 @@
 
 > Framework-agnostic checklist for production web applications.
 > React, Vue, Svelte, Angular, or vanilla — the principles are the same. The tools change.
-> Last updated: 2026-06-11
+> Last updated: 2026-08-05
 
 ---
 
@@ -149,6 +149,32 @@
 - [ ] **Network resilience** — `navigator.onLine` for awareness. Retry with exponential backoff for transient failures. Queue mutations while offline, replay when online (if PWA).
 - [ ] **No uncached API calls on every render** — Stale cache serves instantly, background refetch updates. Better to show slightly stale data fast than a spinner.
 
+## 16. AI/LLM Integration
+
+- [ ] **AI SDK choice** — Vercel AI SDK (React/Vue/Svelte, streaming-first, provider-agnostic), LangChain.js (agents/chains), or raw fetch to backend proxy. Don't call LLM providers directly from the browser.
+- [ ] **Never expose provider keys** — No `OPENAI_API_KEY` in client env vars (`VITE_*`, `NEXT_PUBLIC_*`). All LLM calls go through your backend, which holds keys and enforces auth + rate limits.
+- [ ] **Streaming UX** — Render tokens as they arrive (SSE or WebSocket). Typing indicator, partial markdown rendering, code blocks with syntax highlighting. Abort button for generation (`AbortController`).
+- [ ] **Markdown/code rendering** — `react-markdown` + `rehype-highlight` (React), `marked` (vanilla), or framework equivalent. Sanitize LLM output before rendering (DOMPurify) — never trust model output as HTML.
+- [ ] **Chat UI patterns** — Message list with virtualized history, scroll-to-bottom on new token, persisted conversation state (localStorage/DB), regenerate + edit-message affordances.
+- [ ] **Prompt & context management** — System prompt + user context composed server-side. Never ship system prompts with secrets in client bundles. Trim context window client-side before sending.
+- [ ] **Loading & error states** — Generation state (idle → streaming → done), error state with retry, graceful fallback when AI is unavailable (degraded mode, cached responses).
+- [ ] **Cost & usage awareness** — Show token/usage feedback where relevant. Cache identical prompts (response dedup). Debounce expensive AI calls.
+- [ ] **RAG in the UI** — Source citations displayed with answers, document upload flows, similarity search results. Highlight retrieved passages.
+- [ ] **Guardrails UI** — Content filters, toxicity warnings, "AI can be wrong" disclaimers where output is user-facing.
+
+## 17. Data Privacy & Compliance (Frontend-Specific)
+
+- [ ] **Cookie consent** — GDPR/CCPA-compliant banner before any non-essential cookies fire. Consent management platform (Osano, Cookiebot) or lightweight custom with localStorage record + opt-out link.
+- [ ] **Analytics consent** — Load analytics/tracking only after consent (or use cookieless privacy-first analytics: Plausible, Umami, GoatCounter). Respect the consent choice across sessions.
+- [ ] **PII minimization** — Don't collect what you don't need. Mask/truncate sensitive data in form previews. Avoid storing PII in localStorage/IndexedDB unnecessarily.
+- [ ] **Error monitoring scrubbing** — Sentry/Datadog RUM `beforeSend` scrubs PII (emails, tokens, credit cards) from error payloads. Never send raw form values to error trackers.
+- [ ] **Third-party script inventory** — Every tag manager/embed/analytics script leaks user data. Maintain an inventory: what loads, what it collects, where it's sent (EU/US). Remove dead ones.
+- [ ] **Do Not Track / GPC** — Respect `navigator.doNotTrack` and Global Privacy Control where feasible.
+- [ ] **Privacy policy & terms** — Up-to-date pages linked in footer. Cover: what's collected, why, retention, rights (access/erasure/portability), contact.
+- [ ] **Data retention UI** — User-facing "delete my data" and "export my data" flows that call the backend's erasure/export endpoints.
+- [ ] **Consent-aware features** — Personalization, marketing cookies, third-party embeds activate only after explicit opt-in.
+- [ ] **Child privacy (COPPA)** — If the app targets minors: age gate, restricted data collection, no advertising.
+
 ---
 
 ## Quick Sanity Check Before Launch
@@ -211,3 +237,70 @@
 - **Monitoring:** Sentry, Datadog RUM, OpenTelemetry (trace propagation)
 - **Feature flags:** LaunchDarkly, Vercel Flags, Unleash
 - **Analytics:** Plausible (privacy-first), PostHog (product analytics), or whatever the team uses
+
+---
+
+## Project Tier Scoping Matrix
+
+> **How to use this table:** Pick your tier first, then focus only on the sections marked ✅ (required) or 🟡 (recommended). Skip ❌ sections entirely — they'd be over-engineering for your context.
+>
+> **Legend:** ✅ Required · 🟡 Recommended / partial · ❌ Skip
+
+### Tier Descriptions
+
+| # | Tier | Description | Typical Team | Users | Lifespan |
+|---|---|---|---|---|---|
+| 1 | 🧪 **POC / Spike** | Validate an idea. Throwaway code. `console.log` is fine. | 1 dev | Internal only | Days–weeks |
+| 2 | 🔧 **Prototype / MVP** | Waiting for integration or user validation. Might become real. | 1–2 devs | Beta testers | Weeks–months |
+| 3 | 🏠 **Internal Tool** | Real users (employees), real traffic. No external exposure or paying customers. | 1–3 devs | Employees | Ongoing |
+| 4 | 🟢 **Small Production** | Single app, few pages, low traffic. Real users, maybe early revenue. | 1–2 devs | < 1K users | Ongoing |
+| 5 | 🔵 **Medium Production** | Multiple apps or higher traffic. Real revenue or user base that matters. | 2–5 devs | 1K–100K users | Ongoing |
+| 6 | 🟣 **Production Grade** | Full rigor — high-stakes SaaS, enterprise product, or large user base. | 5+ devs | 100K+ users | Long-term |
+| 7 | 🔴 **Mission-Critical / Regulated** | Healthcare (HIPAA), finance (PCI-DSS), safety systems. Failure = severe harm. Adds formal verification, regulatory audit. | 10+ devs | Varies | Decades |
+
+### Which Tier Am I?
+
+```mermaid
+flowchart TD
+    A[Is this throwaway / exploratory?] -->|Yes| T1[🧪 Tier 1 or 2<br/>POC / Prototype]
+    A -->|No| B[Are the users internal<br/>employees?]
+    B -->|Yes| T3[🏠 Tier 3<br/>Internal Tool]
+    B -->|No| C[Do paying users or real<br/>revenue depend on it?]
+    C -->|No| T4[🟢 Tier 4<br/>Small Production]
+    C -->|Yes| D[Multiple apps or<br/>1K+ users?]
+    D -->|No| T4
+    D -->|Yes| E[Enterprise / high-stakes<br/>/ regulated industry?]
+    E -->|No| T5[🔵 Tier 5<br/>Medium Production]
+    E -->|Yes| F[Failure could cause<br/>severe harm?]
+    F -->|No| T6[🟣 Tier 6<br/>Production Grade]
+    F -->|Yes| T7[🔴 Tier 7<br/>Mission-Critical]
+    
+    style T1 fill:#e1f5ff
+    style T3 fill:#fff4e1
+    style T4 fill:#e8f5e9
+    style T5 fill:#e3f2fd
+    style T6 fill:#f3e5f5
+    style T7 fill:#ffebee
+```
+
+### Checklist Applicability by Tier
+
+| # | Section | 🧪 POC | 🔧 Prototype | 🏠 Internal | 🟢 Small Prod | 🔵 Medium Prod | 🟣 Production Grade | 🔴 Mission-Critical |
+|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 1 | Framework & Project Setup | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 2 | Rendering Strategy | 🟡 static only | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 3 | Data Fetching & Server State | 🟡 fetch basics | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 4 | Client State Management | 🟡 | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 5 | Performance | ❌ | 🟡 basic CWV | ✅ | ✅ + budgets | ✅ + profiling | ✅ + SLO | ✅ + capacity |
+| 6 | Styling & Design | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + design system |
+| 7 | Forms | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + audit trail |
+| 8 | Routing & Navigation | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 9 | Testing | ❌ maybe smoke | 🟡 unit | ✅ + component | ✅ + E2E | ✅ + visual reg | ✅ + a11y in CI | ✅ + formal verification |
+| 10 | Accessibility | ❌ | 🟡 basics | ✅ | ✅ WCAG AA | ✅ + audits | ✅ + WCAG AA certified | ✅ + legal/regulatory |
+| 11 | Security (Frontend) | 🟡 no secrets | 🟡 essentials | ✅ | ✅ + CSP | ✅ + pentest | ✅ + hardened | ✅ + formal audit |
+| 12 | Build & Deploy | ❌ | 🟡 basic build | ✅ + CI | ✅ + previews | ✅ + canary + flags | ✅ + full pipeline | ✅ + signed artifacts |
+| 13 | Error Handling & Observability | ❌ | 🟡 error boundary | ✅ + Sentry | ✅ + RUM | ✅ + dashboards | ✅ + SLO/alerting | ✅ + full stack |
+| 14 | Internationalization | ❌ | 🟡 externalize strings | 🟡 if multi-lang | 🟡 if multi-lang | ✅ if multi-lang | ✅ | ✅ |
+| 15 | Offline & Resilience | ❌ | ❌ | 🟡 if needed | 🟡 graceful degrade | ✅ if PWA | ✅ | ✅ |
+| 16 | AI/LLM Integration | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
+| 17 | Data Privacy & Compliance | ❌ | ❌ | 🟡 minimal | ✅ consent + PII | ✅ + DPA | ✅ full compliance | ✅ + regulatory framework |
