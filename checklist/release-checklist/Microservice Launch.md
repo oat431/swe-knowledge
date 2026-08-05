@@ -92,4 +92,4 @@
 ## Sources
 
 - Distilled from: [[Microservice Overview]], [[Cybersecurity Overview]], [[API Overview]].
-- Original deep reference: `../microservice-infrastructure.md`
+- Original deep reference: `../microservice-checklist/microservice-infrastructure.md`

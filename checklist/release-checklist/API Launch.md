@@ -88,4 +88,4 @@
 ## Sources
 
 - These items distilled from your vaults: API, Database, Cybersecurity, Microservices, QA, Computer Networks, Operating Systems.
-- Original deep-reference checklists: `../spring-boot-api.md`, `../api.md`
+- Original deep reference: `../api-checklist/spring-boot-api.md`, `../api-checklist/api.md`
