@@ -11,16 +11,20 @@
 ## 1. Threat Modeling & Security Requirements
 
 - [ ] **Threat model done before build** — STRIDE (Spoofing, Tampering, Repudiation, Information disclosure, DoS, Elevation of privilege) walked through the architecture. Not a document that exists — a session that happened.
+- [ ] **Abuse/misuse cases defined** — For every user story, ask "how could an attacker abuse this?" Abuse cases alongside use cases as acceptance criteria. Not optional for auth, payments, or data-handling features.
 - [ ] **Trust boundaries identified** — Where does data cross trust zones (internet → edge → service → DB → third party)? Each boundary gets explicit controls.
 - [ ] **Attack surface minimized** — No unnecessary endpoints, ports, admin panels, debug routes, or exposed tooling. Every public route is deliberate.
 - [ ] **Security requirements in stories** — Auth, validation, rate limiting, audit are acceptance criteria, not afterthoughts.
 - [ ] **Security review for consequential changes** — Architecture, auth, data-handling changes get a design review before implementation.
+- [ ] **Security champions assigned** — At least one developer per team with extra security training, first point of contact for security questions, reviews security aspects of changes. Security expertise multiplied, not bottlenecked.
 
 ## 2. Authentication & Authorization
 
 - [ ] **AuthN: verify identity** — Passwords hashed (bcrypt/argon2, cost ≥ 12) → [[01 Cryptography Basics]]. No MD5/SHA1, no plaintext, ever.
 - [ ] **MFA for privileged access** — Admin/ops accounts require a second factor. Service accounts use short-lived credentials (OIDC/Workload Identity over static keys).
 - [ ] **Session/JWT policy** — Access tokens short-lived (≤ 15 min), signed RS256/ES256, issuer/audience validated. Refresh tokens rotated on use, stored HttpOnly+Secure.
+- [ ] **Session fixation prevention** — Session ID regenerated after successful authentication. Never accept session IDs from URLs or untrusted sources.
+- [ ] **Cryptographic API usage correct** — Use CSPRNG (not Math.random/time-based), AES-GCM/ChaCha20-Poly1305 (not ECB/CBC without authentication), unique nonces per encryption, no custom crypto. Cryptographic libraries are easy to misuse — follow library guidance exactly.
 - [ ] **AuthZ: check everywhere** — Authorization on every endpoint/service, not just the gateway. Role or claim-based policies; deny by default.
 - [ ] **Password reset & account recovery** — Time-limited tokens, no account enumeration in responses ("user not found" vs "wrong password" — same message).
 - [ ] **Rate limiting on auth endpoints** — Login, register, password reset, token refresh: per-IP + per-account limits. Lockout/backoff for repeated failures.
@@ -35,6 +39,9 @@
 - [ ] **File uploads** — Extension + MIME allowlist, content sniffing off, size limits, scan for malware, store outside web root, serve with `Content-Disposition`.
 - [ ] **Deserialization safety** — No unsafe deserialization of untrusted data (pickle, Java serialization, `yaml.load`). Use safe formats (JSON) with schema validation.
 - [ ] **Mass assignment / over-posting** — DTOs/schemas define exactly which fields are accepted. No `req.body` → entity blind mapping.
+- [ ] **CSRF protection on state-changing operations** — CSRF tokens (synchronizer or double-submit cookie) on every POST/PUT/DELETE/ PATCH. Anti-CSRF headers validated server-side. SameSite cookie attribute set (Strict or Lax).
+- [ ] **Race conditions / TOCTOU mitigated** — Time-of-Check-Time-of-Use vulnerabilities identified and addressed: balance checks, coupon redemption, inventory decrements, permission checks followed by action. Use transactions, optimistic locking, or idempotency keys.
+- [ ] **Error handling — no information leakage** — Generic error messages in production (no stack traces, no SQL errors, no internal paths). Detailed errors logged server-side, generic responses to client. Debug/verbose modes disabled.
 
 ## 4. Secrets Management
 
@@ -53,6 +60,8 @@
 - [ ] **Dependencies pinned** — Lockfiles committed, base images pinned by digest. No floating `latest`.
 - [ ] **Deprecated/abandoned deps tracked** — A library with no maintainer and known CVEs is a liability. Schedule replacements.
 - [ ] **Registry trust** — Only approved registries (GHCR/ECR/Artifactory). No random packages from unvetted sources. If private registry: scan on push.
+- [ ] **IaC security scanning** — Terraform/CloudFormation/Kubernetes manifests scanned (Checkov, tfsec, KICS). Misconfigurations (public buckets, permissive IAM, privileged containers) caught before deploy.
+- [ ] **Vulnerability remediation SLAs** — Time-bound fix targets: Critical ≤ 7 days, High ≤ 30 days, Medium ≤ 90 days, Low by backlog priority. SLAs documented, tracked, and reported. Exceptions require risk acceptance sign-off.
 
 ## 6. TLS & Transport Security
 
@@ -97,6 +106,8 @@
 - [ ] **Incident response plan** — Roles (commander, comms, tech lead), severity levels, escalation paths, contact list. Written down, not in someone's head.
 - [ ] **IR practiced** — Tabletop exercise or game day at least yearly. "Break" a scenario (leaked key, breach alert, ransomware) and walk the response.
 - [ ] **Blameless postmortem for security incidents** — RCA with corrective actions, tracked to completion → pattern in [[Release]] §10.
+- [ ] **Security metrics tracked** — MTTD (mean time to detect), MTTR (mean time to remediate), vulnerability age distribution, patch cadence, open criticals. Metrics inform decisions, not punish teams.
+- [ ] **Alert fatigue managed** — False-positive rate measured and reduced. Alerts tuned quarterly. High-noise alerts suppressed or improved, not ignored.
 
 ## 11. Compliance & Regulatory
 
@@ -115,6 +126,8 @@
 - [ ] **Data leakage controls** — RAG/context assembled with least privilege: only the data the user is authorized to see enters the context window. Tenant isolation preserved.
 - [ ] **Abuse/abuse monitoring** — Rate limits on AI endpoints (token cost = DoS surface), content policy violations logged, jailbreak attempts flagged.
 - [ ] **Vendor assessment** — LLM provider: data retention policy, where data is processed, training opt-out. Signed DPA if regulated.
+- [ ] **Hallucination mitigation** — Model outputs verified against authoritative sources when used for decisions, code generation, or user-facing content. Never trust unverified model output for security-critical paths.
+- [ ] **Training data poisoning awareness** — If fine-tuning models, validate training data sources. Poisoned data = poisoned model behavior.
 
 ---
 
@@ -122,14 +135,20 @@
 
 - [ ] Threat model reviewed for the shipped architecture
 - [ ] All endpoints authN + authZ (401/403 verified in CI)
+- [ ] Session fixation prevented (ID regenerated post-auth)
 - [ ] No secrets in code, config, logs, or client bundles (scanner-verified)
 - [ ] SAST + SCA green, criticals fixed or waived with ticket
+- [ ] IaC manifests scanned (no public buckets, permissive IAM, privileged containers)
 - [ ] TLS 1.2+/1.3, HSTS set, certificates auto-renewing
 - [ ] Security headers + CSP enforced (not report-only) in production
 - [ ] SQLi/XSS/SSRF/command injection patterns absent (reviewed + scanned)
+- [ ] CSRF protection on all state-changing operations
+- [ ] Race conditions/TOCTOU mitigated for critical flows (payments, inventory, permissions)
+- [ ] Error handling generic in production (no stack traces, no internal paths)
 - [ ] Encryption at rest and in transit verified
 - [ ] Security events logged centrally, retention policy set
 - [ ] Incident response plan exists with named roles
+- [ ] Vulnerability remediation SLAs documented and tracked
 - [ ] Applicable compliance requirements mapped to controls
 
 ---
@@ -181,18 +200,18 @@ flowchart TD
 
 | # | Section | 🧪 POC | 🔧 Prototype | 🏠 Internal | 🟢 Small Prod | 🔵 Medium Prod | 🟣 Production Grade | 🔴 Mission-Critical |
 |---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 1 | Threat Modeling | ❌ | 🟡 light review | ✅ | ✅ | ✅ | ✅ | ✅ + formal |
-| 2 | AuthN & AuthZ | ❌ | 🟡 basic JWT | ✅ | ✅ | ✅ + MFA | ✅ + MFA + audit | ✅ + regulatory |
-| 3 | Input Validation | 🟡 basics | ✅ | ✅ | ✅ | ✅ | ✅ + fuzzing | ✅ + formal |
+| 1 | Threat Modeling & Requirements | ❌ | 🟡 light review | ✅ | ✅ + abuse cases | ✅ + champions | ✅ + formal review | ✅ + regulatory |
+| 2 | AuthN & AuthZ | ❌ | 🟡 basic JWT | ✅ | ✅ + session fix | ✅ + MFA + crypto | ✅ + MFA + audit | ✅ + regulatory |
+| 3 | Input Validation | 🟡 basics | ✅ | ✅ + CSRF | ✅ + TOCTOU | ✅ + race cond | ✅ + fuzzing | ✅ + formal |
 | 4 | Secrets Management | 🟡 .env only | ✅ .env + scan | ✅ + vault | ✅ | ✅ + rotation | ✅ + KMS hierarchy | ✅ + HSM |
-| 5 | Supply Chain | ❌ | 🟡 lockfile + audit | ✅ + SCA | ✅ + SBOM | ✅ + signed | ✅ + provenance | ✅ + attestation |
+| 5 | Supply Chain | ❌ | 🟡 lockfile + audit | ✅ + SCA | ✅ + SBOM | ✅ + signed + IaC | ✅ + provenance + SLA | ✅ + attestation |
 | 6 | TLS & Transport | 🟡 HTTPS only | ✅ | ✅ | ✅ | ✅ + mTLS if mesh | ✅ + cipher audit | ✅ + regulatory |
 | 7 | Headers & Hardening | ❌ | 🟡 basics | ✅ | ✅ + CSP | ✅ + runtime scan | ✅ + hardened images | ✅ + compliance |
 | 8 | Data Protection | ❌ | 🟡 at-rest basics | ✅ | ✅ + PII mask | ✅ + key mgmt | ✅ + KMS hierarchy | ✅ + regulatory |
 | 9 | Security Testing | ❌ | 🟡 SAST in CI | ✅ + SAST | ✅ + DAST | ✅ + pen-test | ✅ + scheduled pen-test | ✅ + formal audit |
-| 10 | Monitoring & IR | ❌ | ❌ | 🟡 basic alerts | ✅ + central logs | ✅ + anomaly detection | ✅ + IR plan + drills | ✅ + full IR + regulatory |
+| 10 | Monitoring & IR | ❌ | ❌ | 🟡 basic alerts | ✅ + central logs | ✅ + metrics + anomaly | ✅ + IR plan + drills | ✅ + full IR + regulatory |
 | 11 | Compliance | ❌ | ❌ | 🟡 if regulated | 🟡 if regulated | ✅ + access reviews | ✅ + audit evidence | ✅ + full framework |
-| 12 | AI/LLM Security | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ + guardrails | ✅ + vendor DPA | ✅ + audit trail |
+| 12 | AI/LLM Security | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ + guardrails + halluc | ✅ + vendor DPA | ✅ + audit trail |
 
 ---
 
