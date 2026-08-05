@@ -1,7 +1,7 @@
 # Fiber v3 API Checklist
 
-> Go + Fiber v3 specific companion to [[API Launch]]. Tick the general checklist first, then this one for Fiber-specific concerns.
-> Fiber v3 requires Go 1.22+. Last updated: 2026-06-30
+> Go + Fiber v3 specific companion to [[api]]. Tick the general checklist first, then this one for Fiber-specific concerns.
+> Fiber v3 requires Go 1.22+. Last updated: 2026-08-05
 
 ---
 
@@ -174,6 +174,53 @@ RequestID → Logger → Recover → Helmet → CORS → Compress → RateLimite
 
 ---
 
+## AI/LLM Integration (if applicable)
+
+> **When you need it:**
+> 🤖 **Any Fiber service calling an LLM** (OpenAI, Anthropic, Ollama, local models) — ✅ mandatory.
+> 🧱 **Pure CRUD with no AI features** — ❌ skip this section.
+
+- [ ] **OpenAI Go client** — `github.com/sashabaranov/go-openai`. Streaming via `client.CreateChatCompletionStream(ctx, req)`. Close stream in `defer`. Use `c.UserContext()` for timeout propagation.
+- [ ] **Ollama Go client** — `github.com/ollama/ollama/api`. Local model inference. `client.Generate(ctx, req)` with context from `c.UserContext()`. Health check the Ollama sidecar at startup.
+- [ ] **Streaming responses via Fiber SSE** — Use `c.Set("Content-Type", "text/event-stream")` + `c.Context().SetBodyStreamWriter(fasthttp.StreamWriter)` to stream LLM tokens to the client. Cancel upstream on client disconnect.
+- [ ] **Prompt injection prevention** — Never concatenate user input into system prompts. Use templated prompts with delimiter boundaries. Treat all LLM output as untrusted — never pass it to `os/exec`, `database/sql` without parameterization, or `reflect`.
+- [ ] **Output validation** — Validate LLM JSON output against a Go struct with `json.Unmarshal`. Use `openai.ChatCompletionRequest{ResponseFormat: JSON}` for structured output. Reject responses that don't parse.
+- [ ] **Token cost controls** — Track `usage.PromptTokens` + `usage.CompletionTokens` per request. Per-user budgets via Redis counter with TTL. Alert on anomalous spend via slog structured fields: `slog.Int("tokens_in", usage.PromptTokens)`.
+- [ ] **Model fallback** — Circuit breaker (`sony/gobreaker`) around LLM calls. Fallback to cheaper model or cached response on failure. Return 503 with retry-after, not 500.
+- [ ] **Context cancellation** — Always pass `c.UserContext()` to LLM client calls. Fiber's context cancels when the client disconnects — prevents burning tokens for dead connections.
+- [ ] **Hallucination guardrails** — RAG: ground responses in retrieved documents. Log retrieval context + generated output for debugging. "I don't know" is valid — engineer prompts to prefer refusal over fabrication.
+
+---
+
+## Data Privacy & Compliance
+
+> **When you need it:**
+> 🌍 **Any Fiber service handling user data** — ✅ mandatory if you have users in EU (GDPR), California (CCPA), Brazil (LGPD).
+> 🏥 **Healthcare/financial data** — ✅ mandatory (HIPAA, PCI-DSS).
+> 🔧 **Internal-only tools with no user PII** — 🟡 review, likely lighter.
+
+- [ ] **PII masking in slog** — Custom `slog.Handler` that redacts sensitive fields before they reach the JSON output:
+```go
+func redactPII(next slog.Handler) slog.Handler {
+    return &piihandler{next: next, sensitive: map[string]bool{
+        "email": true, "phone": true, "ip": true, "ssn": true,
+    }}
+}
+```
+Apply at startup: `slog.SetDefault(slog.New(redactPII(slog.NewJSONHandler(os.Stdout, nil))))`.
+
+- [ ] **Request-scoped PII logger** — Middleware strips PII from request bodies before logging: `c.Locals("safeBody", sanitizedBody)`. Logger middleware reads from Locals, never from raw `c.Body()`.
+- [ ] **Right to erasure** — `sqlx` cascade delete across all tables holding user data. Verify deletion with `SELECT count(*) FROM users WHERE id = $1` post-delete. Include caches (Redis `DEL`), search indexes, and third-party processor notifications.
+- [ ] **Right to access (data export)** — Export all user data via repository queries aggregated into a `map[string]interface{}`. Serialize to JSON/CSV. Include data from all services, not just the primary DB.
+- [ ] **Consent management** — Track consent in a dedicated table: `user_id`, `purpose`, `granted_at`, `revoked_at`. Middleware checks consent before processing sensitive data. Granular, not all-or-nothing.
+- [ ] **Data retention enforcement** — Cron job (`robfig/cron`) purges records past retention window. `DELETE FROM audit_log WHERE created_at < NOW() - INTERVAL '7 years'`. Log purge counts. Don't keep data "just in case."
+- [ ] **Audit trail** — Immutable append-only table: `who`, `what`, `when`, `resource_id`, `ip`. Never update or delete audit rows. Retained longer than operational data. Required for compliance audits.
+- [ ] **Encryption at rest** — Database-level encryption (PostgreSQL TDE, or provider-managed). Field-level encryption for SSN/health data using `golang.org/x/crypto/nacl/secretbox`. Key from Vault/secrets manager, never in config.
+- [ ] **Data minimization in DTOs** — Response structs only include fields the client needs. Never return full DB rows. Use separate `UserPublic` and `UserInternal` structs.
+- [ ] **Data processing agreements** — Every third-party (Redis Cloud, SendGrid, S3) that touches user data has a signed DPA. Review when adding new dependencies to `go.mod`.
+
+---
+
 ## Quick Sanity Check
 
 - [ ] `fiber.Config.Immutable: true` — config frozen after start
@@ -192,5 +239,71 @@ RequestID → Logger → Recover → Helmet → CORS → Compress → RateLimite
 ## Sources
 
 - Fiber v3 docs — https://docs.gofiber.io/
-- `[[API Launch]]` — general API checklist (tick first)
+- `[[api]]` — general API checklist (tick first)
 - `[[03 Authentication]]`, `[[03 API Security]]` — auth patterns
+
+---
+
+## Project Tier Scoping Matrix
+
+> **How to use this table:** Pick your tier first, then focus only on the sections marked ✅ (required) or 🟡 (recommended). Skip ❌ sections entirely — they'd be over-engineering for your context.
+>
+> **Legend:** ✅ Required · 🟡 Recommended / partial · ❌ Skip
+
+### Tier Descriptions
+
+| # | Tier | Description | Typical Team | Users | Lifespan |
+|---|---|---|---|---|---|
+| 1 | 🧪 **POC / Spike** | Validate an idea. Throwaway code. `fmt.Println` is fine. | 1 dev | Internal only | Days–weeks |
+| 2 | 🔧 **Prototype / MVP** | Waiting for integration or user validation. Might become real. | 1–2 devs | Beta testers | Weeks–months |
+| 3 | 🏠 **Internal Tool** | Real users (employees), real traffic. No external exposure or paying customers. | 1–3 devs | Employees | Ongoing |
+| 4 | 🟢 **Small Production** | Single service, few endpoints, low traffic. Real users, maybe early revenue. | 1–2 devs | < 1K users | Ongoing |
+| 5 | 🔵 **Medium Production** | Multiple services or higher traffic. Real revenue or user base that matters. | 2–5 devs | 1K–100K users | Ongoing |
+| 6 | 🟣 **Production Grade** | Full rigor — high-stakes SaaS, enterprise product, or large user base. | 5+ devs | 100K+ users | Long-term |
+| 7 | 🔴 **Mission-Critical / Regulated** | Healthcare (HIPAA), finance (PCI-DSS), safety systems. Failure = severe harm. | 10+ devs | Varies | Decades |
+
+### Which Tier Am I?
+
+```mermaid
+flowchart TD
+    A[Is this throwaway / exploratory?] -->|Yes| T1[🧪 Tier 1 or 2<br/>POC / Prototype]
+    A -->|No| B[Are the users internal<br/>employees?]
+    B -->|Yes| T3[🏠 Tier 3<br/>Internal Tool]
+    B -->|No| C[Do paying users or real<br/>revenue depend on it?]
+    C -->|No| T4[🟢 Tier 4<br/>Small Production]
+    C -->|Yes| D[Multiple services or<br/>1K+ users?]
+    D -->|No| T4
+    D -->|Yes| E[Enterprise / high-stakes<br/>/ regulated industry?]
+    E -->|No| T5[🔵 Tier 5<br/>Medium Production]
+    E -->|Yes| F[Failure could cause<br/>severe harm?]
+    F -->|No| T6[🟣 Tier 6<br/>Production Grade]
+    F -->|Yes| T7[🔴 Tier 7<br/>Mission-Critical]
+    
+    style T1 fill:#e1f5ff
+    style T3 fill:#fff4e1
+    style T4 fill:#e8f5e9
+    style T5 fill:#e3f2fd
+    style T6 fill:#f3e5f5
+    style T7 fill:#ffebee
+```
+
+### Checklist Applicability by Tier
+
+| # | Section | 🧪 POC | 🔧 Prototype | 🏠 Internal | 🟢 Small Prod | 🔵 Medium Prod | 🟣 Production Grade | 🔴 Mission-Critical |
+|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 1 | Project Setup | 🟡 `go run` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 2 | App Structure | ❌ | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 3 | Fiber App Setup | 🟡 defaults | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ + hardened |
+| 4 | Middleware Chain | ❌ | 🟡 CORS+Recover | ✅ | ✅ | ✅ | ✅ | ✅ + WAF |
+| 5 | Routing | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 6 | Request / Response | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 7 | Authentication | ❌ | 🟡 basic JWT | ✅ | ✅ | ✅ | ✅ | ✅ + mTLS |
+| 8 | Config & Secrets | 🟡 env vars | ✅ | ✅ | ✅ | ✅ | ✅ + Vault | ✅ + Vault + rotation |
+| 9 | Database (SQL) | 🟡 SQLite OK | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ + encryption |
+| 10 | Logging | ❌ `fmt.Println` | 🟡 slog basic | ✅ slog JSON | ✅ + tracing | ✅ + dashboards | ✅ + SLO | ✅ + full stack |
+| 11 | Testing | ❌ | 🟡 unit | ✅ + httptest | ✅ + integration | ✅ + contract | ✅ + chaos | ✅ + formal |
+| 12 | Observability | ❌ | ❌ | 🟡 metrics | ✅ + OTel | ✅ + dashboards | ✅ + SLO/alerting | ✅ + full stack |
+| 13 | OpenAPI / Swagger | ❌ | 🟡 if external | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 14 | Build & Deploy | ❌ | 🟡 basic Docker | ✅ multi-stage | ✅ + CI | ✅ + canary | ✅ + GitOps | ✅ + signed artifacts |
+| 15 | AI/LLM Integration | 🟡 if AI is POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
+| 16 | Data Privacy | ❌ | ❌ | 🟡 PII masking | ✅ erasure + retention | ✅ + consent + DPA | ✅ full compliance | ✅ + regulatory framework |

@@ -1,7 +1,7 @@
 # Backend Project Checklist
 
 > Practical, no-fluff checklist for production backend services.
-> Last updated: 2026-06-11
+> Last updated: 2026-08-05
 
 ---
 
@@ -31,7 +31,7 @@
 ## 4. API Design
 
 - [ ] **REST or gRPC or GraphQL** — REST for most things. gRPC for internal service-to-service. GraphQL only if the client genuinely needs flexible queries.
-- [ ] **gRPC specifics (if using)** — Protobuf linting in CI (`buf lint`). Backward-compatible changes only (no field renumbering, no removing reserved fields). `buf breaking` check in CI. Use `grpc-gateway` or `connect` for REST-to-gRPC translation if needed.
+- [ ] **gRPC specifics (if using)** — Protobuf linting in CI (`buf lint`). Backward-compatible changes only (no field renumbering, no removing reserved fields). `buf breaking` check in CI. Prefer **Connect Protocol** (`connectrpc`) over `grpc-gateway` — Connect works with any HTTP client, supports streaming, and needs no codegen for browser clients. Falls back to standard gRPC when needed.
 - [ ] **Consistent error format** — `{ "error": { "code": "VALIDATION_ERROR", "message": "...", "details": [...] } }`. RFC 7807 (Problem Details) or JSON API style.
 - [ ] **HTTP status codes used correctly** — 200/201/204 for success. 400 validation, 401 unauth'd, 403 forbidden, 404 not-found, 409 conflict, 422 unprocessable, 429 rate-limit, 500 internal (and never leak stack traces). 202 Accepted for async/long-running operations with a status endpoint.
 - [ ] **API versioning strategy** — URL prefix (`/v1/`), header, or content negotiation. Decide before v1 ships.
@@ -40,6 +40,8 @@
 - [ ] **Long-running operations** — Return `202 Accepted` with a status endpoint (`/operations/{id}`). Client polls or receives webhook on completion. Not holding HTTP connections open for minutes.
 - [ ] **Request validation** — Validate at the boundary. Reject invalid input before it touches domain logic. Use schema validation (Zod, Pydantic, `go-playground/validator`).
 - [ ] **OpenAPI/Swagger spec** — Generated from code, not hand-written. `swaggo` (Go), `@nestjs/swagger`, FastAPI auto-docs, `utoipa` (Rust).
+- [ ] **API deprecation strategy** — `Deprecation` + `Sunset` response headers (RFC 8594). Minimum support window documented (e.g., 6 months after deprecation notice). Consumer notification via changelog, email, or dashboard. Version sunset date communicated early. Never remove an endpoint without a deprecation period.
+- [ ] **WebSocket / SSE / real-time (if applicable)** — Auth on connection (not per-message). Heartbeat/ping-pong every 30s to detect dead connections. Backpressure: server-side buffer limit, drop or slow-produce on overflow. Reconnection strategy with exponential backoff on client. Connection lifecycle logged (connect/disconnect/reason). Rate limit message rate per connection. For SSE: `Last-Event-ID` for resumable streams. For WebSocket: subprotocol negotiation, close codes used correctly.
 
 ## 5. Database
 
@@ -76,6 +78,8 @@
 - [ ] **CSRF protection** — If using cookie-based auth. SameSite=Lax minimum, SameSite=Strict better. CSRF token for mutation endpoints. SPA with token in Authorization header is CSRF-immune.
 - [ ] **Open redirect prevention** — Never redirect to user-provided URLs without validation. Whitelist allowed redirect destinations. Or use relative redirects only.
 - [ ] **Rate limiting by endpoint sensitivity** — Login: 5/min. Password reset: 3/min. Email verification send: 2/min. GraphQL queries: depth + complexity limits to prevent abusive queries.
+- [ ] **Supply chain security** — Generate SBOM (CycloneDX or SPDX) on every build. Sign build artifacts with Sigstore/cosign. Pin dependencies to exact versions, not ranges. Verify lockfile integrity in CI (`npm ci --prefer-offline`, `go mod verify`). Consider SLSA Level 2+ for services handling sensitive data. Block builds on known-vulnerable transitive dependencies, not just direct ones.
+- [ ] **Workload identity & service-to-service auth** — Internal services authenticate to each other, not just to the gateway. mTLS between services, or workload identity framework (SPIFFE/SPIRE, Kubernetes ServiceAccount tokens). Zero Trust: no implicit trust based on network location. Short-lived credentials, rotated automatically.
 
 ## 8. Logging & Observability
 
@@ -86,6 +90,7 @@
 - [ ] **SLO/SLI** — Define: 99.9% availability, p95 latency < target. Measure. Track error budget. Alert when burning budget too fast. This is more actionable than "alert on 5xx spike."
 - [ ] **Health checks** — `/health` (liveness — is the process alive?), `/ready` (readiness — can it serve traffic? DB connected? Redis reachable?). Kubernetes uses both.
 - [ ] **Alerting** — Error rate spike burning budget, latency p95 > SLO threshold, DB connection pool exhaustion, circuit breaker open, dead letter queue growing, disk approaching capacity. Alert on symptoms (user-visible), not causes (CPU high).
+- [ ] **Cost observability** — Tag cloud resources by service/tenant/environment. Track cost per endpoint (LLM calls, compute, storage I/O). Alert on cost anomalies (runaway retry loop burning API credits). Budget dashboards per team/service. LLM token spend per tenant if using AI — cap or tier accordingly.
 
 ## 9. Error Handling
 
@@ -123,6 +128,7 @@
 - [ ] **Ordering guarantees** — Kafka: per-partition ordering. RabbitMQ: per-queue with single consumer. If order matters, route related events to the same partition/queue (by aggregate ID).
 - [ ] **Dead letter queue** — Failed messages → DLQ after max retries. Inspect, fix, replay. Alert on DLQ growth. Never silently drop messages.
 - [ ] **Schema evolution** — Avro + Schema Registry, Protobuf, or JSON Schema. Forward and backward compatibility. Don't break consumers when producers evolve.
+- [ ] **Outbox pattern** — Never publish to a broker and commit to DB in two separate steps (one will fail, data diverges). Write the event to an `outbox` table in the same DB transaction as the business write. A separate relay process publishes from outbox to broker. Guarantees exactly-once publishing from a transactional context. Libraries: Debezium (CDC), or a simple polling relay for smaller scale.
 - [ ] **Observability** — Trace context in message headers. Correlate producer trace with consumer trace. Metrics: publish rate, consume rate, lag, retry count, DLQ size.
 
 ## 12. File Storage (if applicable)
@@ -142,6 +148,7 @@
 - [ ] **Property-based testing** — Test invariants, not examples. "For any valid input, the output passes validation." `quicktest` (Go), `fast-check` (JS), `hypothesis` (Python). Finds edge cases you didn't think of.
 - [ ] **Test data factories** — Don't hard-code test data in every test. Factory functions/object mothers generate valid entities with sensible defaults. Override only what the test cares about.
 - [ ] **Load tests** — k6 or locust. Target realistic traffic patterns. Run against staging with production-like data volume. Don't just test the happy path at 1x traffic.
+- [ ] **Mutation testing** — Your tests pass — but do they actually catch bugs? Mutation testing injects small faults (killed mutants) and measures how many your tests detect. Target ≥80% mutation score on business logic. Tools: `mutate` (Go), `stryker` (JS/TS), `mutmut` (Python), `PIT` (Java). Run in CI on changed files only — full suite is too slow for every PR.
 - [ ] **Chaos engineering** — Kill a random pod. Does the system recover? Circuit breakers open? Retries work? DLQ catches failed messages? Start small. Don't chaos test in production without experience.
 
 ## 14. Performance
@@ -149,7 +156,7 @@
 - [ ] **Caching strategy** — Redis/Memcached. Cache-aside (app manages) or read-through. Invalidation is the hard part. Cache stampede protection (lock on miss or probabilistic early recompute). Separate cache per data type, don't share TTLs blindly.
 - [ ] **Database query optimization** — Use `EXPLAIN ANALYZE`. Covering indexes. Avoid `SELECT *`. Batch inserts/updates. `INSERT ... ON CONFLICT` for upserts. Materialized views for expensive aggregations.
 - [ ] **Connection pooling (DB, Redis, external)** — All outbound connections should pool. Max idle, max open, max lifetime (shorter than server-side timeout), connection timeout.
-- [ ] **Async processing** — Anything that can be deferred: email, notifications, report generation, image processing. See Section 10 (Message Queues). Return 202 Accepted immediately, process in background.
+- [ ] **Async processing** — Anything that can be deferred: email, notifications, report generation, image processing. See Section 11 (Message Queues). Return 202 Accepted immediately, process in background.
 - [ ] **Pagination and limits** — Every list endpoint has a default and max limit. No `SELECT * FROM huge_table` without pagination. Keyset pagination over offset for large/real-time datasets.
 - [ ] **Graceful shutdown** — SIGTERM → stop accepting requests → drain in-flight (with timeout) → close DB pools → close message queue connections → exit. K8s `terminationGracePeriodSeconds` (default 30s) should exceed your drain timeout.
 - [ ] **Startup warmup** — Preload caches, establish connection pools, validate config BEFORE reporting healthy. `ReadinessProbe` with `initialDelaySeconds` to allow warmup. Don't route traffic to a half-ready instance.
@@ -173,13 +180,51 @@
 
 ## 17. Production Readiness
 
-- [ ] **Graceful shutdown & startup** — See Section 13 (Performance). Health checks report ready only after warmup. Graceful shutdown drains in-flight requests.
+- [ ] **Graceful shutdown & startup** — See Section 14 (Performance). Health checks report ready only after warmup. Graceful shutdown drains in-flight requests.
 - [ ] **Configuration management** — 12-factor app. Env vars for config. Feature flags (LaunchDarkly, Unleash, or simple DB table) for toggles. Kill broken features without redeploy.
+- [ ] **Feature flag hygiene** — Every flag has an owner, expiry date, and cleanup ticket. Flags accumulate as tech debt — audit quarterly. Separate short-lived release toggles (remove after rollout) from long-lived kill switches. Dead flags in code are dead code. Flag evaluation should be fast (no network call on every request — cache or local eval).
 - [ ] **Rate limiting & throttling** — API-level and user-level. Token bucket or sliding window. See Section 7 (Security) for endpoint-specific limits.
 - [ ] **Idempotency** — Payment/order/any financial endpoint: idempotency key to prevent double-charge. Server stores key + result (with TTL). Client retries safely with same key. Stripe's `Idempotency-Key` header is the gold standard.
 - [ ] **Webhook delivery (if applicable)** — Retry with backoff (4, 16, 64, 256 seconds). Signature verification (HMAC) so receivers can trust payload. Delivery logs visible to API consumer. Manual retry from dashboard.
 - [ ] **Data backup & recovery** — Automated backups. Tested restore procedure. RPO (Recovery Point Objective) and RTO (Recovery Time Objective) defined and measured. Restore tested at least once per quarter.
 - [ ] **Disaster recovery plan** — Documented. Tested at least once. How long to recover? What's the sequence? Who does what? Contact list with phone numbers. DR test results documented.
+
+---
+
+## 18. AI/LLM Integration (if applicable)
+
+> **When you need it:**
+> 🤖 **Any service calling an LLM** (OpenAI, Anthropic, local models, RAG pipelines) — ✅ mandatory. LLMs are untrusted downstream systems with non-deterministic output, token costs, and prompt injection attack surface.
+> 🧱 **Pure CRUD with no AI features** — ❌ skip this section.
+
+- [ ] **Prompt injection prevention** — Never concatenate user input directly into system prompts. Use structured prompt templates with clear delimiter boundaries. Treat LLM output as untrusted — never `eval()`, never pass it to a shell, never use it as SQL without parameterization. If the LLM calls tools (function calling): validate every argument server-side before execution.
+- [ ] **Output validation & sanitization** — LLM output is non-deterministic. Validate against a schema (JSON mode, structured output, or post-parse validation). Sanitize before rendering in UI (XSS). Reject hallucinated references (e.g., citations that don't exist in your source data).
+- [ ] **Token cost controls** — Set per-request and per-user token budgets. Track input + output tokens per call. Alert on anomalous spend (runaway retry, prompt injection inflating context). Tier limits by user plan. Cap context window usage — don't send 128k tokens when 4k suffices.
+- [ ] **Model fallback & degradation** — Primary model down or rate-limited? Fallback to a cheaper/smaller model, not a 500. Cache frequent identical queries (semantic cache for near-matches). Circuit breaker around LLM calls (they're external services — see §10). Graceful degradation: return "AI unavailable, showing cached/static result" instead of failing the whole request.
+- [ ] **Streaming response patterns** — SSE or WebSocket for streaming LLM output. Backpressure: if client disconnects mid-stream, cancel the LLM call (don't keep burning tokens for nobody). Timeout on first token (detect stalled generation). Partial response handling: what happens if the stream cuts at 40%?
+- [ ] **Hallucination guardrails** — RAG: ground responses in retrieved documents. Cite sources with verifiable references. Confidence scoring where applicable. "I don't know" is a valid output — engineer prompts to prefer refusal over fabrication. Log retrieval context alongside generated output for debugging.
+- [ ] **Content safety & moderation** — Input filtering (reject harmful/abusive prompts before they reach the model). Output filtering (PII redaction, toxicity screening). Use provider guardrails (OpenAI moderation API, Anthropic usage policies) plus your own domain-specific rules. Log flagged content for review.
+- [ ] **LLM-specific observability** — Log: model, prompt template version, token counts (in/out), latency, cost per call. Trace the full chain: user input → retrieval → prompt assembly → model call → output validation → response. A/B test prompt versions. Monitor quality metrics (user satisfaction, refusal rate, correction rate) alongside infra metrics.
+- [ ] **Data sent to external models** — Know what PII/sensitive data leaves your infrastructure. Strip or anonymize PII before sending to third-party LLMs. Contractual data processing agreements in place. Consider self-hosted models for sensitive workloads. Log what was sent (for audit), but redact in log storage if sensitive.
+
+## 19. Data Privacy & Compliance
+
+> **When you need it:**
+> 🌍 **Any service handling user data** — ✅ mandatory if you have users in EU (GDPR), California (CCPA/CPRA), Brazil (LGPD), or similar jurisdictions.
+> 🏥 **Healthcare/financial data** — ✅ mandatory (HIPAA, PCI-DSS add stricter requirements on top).
+> 🔧 **Internal-only tools with no user PII** — 🟡 review, likely lighter requirements.
+
+- [ ] **PII inventory & data mapping** — Know exactly what PII you collect, where it's stored, who can access it, and why. Document data flows (ingress → processing → storage → egress). Required for GDPR Article 30 (Records of Processing Activities).
+- [ ] **PII masking in logs** — Never log email, phone, IP (full), names, addresses, or tokens in plain text. Structured loggers with PII field redaction (`zap` field filters, custom middleware). Audit log configurations quarterly — a new `log.Info(user)` can leak PII silently.
+- [ ] **Right to erasure (deletion)** — GDPR Article 17, CCPA. Implement hard delete pipeline: cascade across all services/tables/backups-within-retention. Soft delete alone does NOT satisfy erasure. Verify deletion across DB, caches, search indexes, analytics, logs (within retention window), and third-party processors.
+- [ ] **Right to access (data export)** — GDPR Article 15, CCPA. Export all user data in machine-readable format (JSON/CSV) within 30 days. Automated pipeline preferred — manual extraction is error-prone and slow. Include data from all services (not just the primary DB).
+- [ ] **Consent management** — Track what the user consented to (marketing, analytics, third-party sharing). Granular consent (not all-or-nothing). Withdrawal mechanism as easy as granting consent. Consent audit trail: who, what, when, how. Cookie consent separate from data processing consent.
+- [ ] **Data retention policies** — Define retention periods per data type (legal minimums, business needs). Automated purge after retention expires. Don't keep data "just in case." Document retention schedule. Backups: define when aged backups are exempt vs. when they must be purged.
+- [ ] **Audit trail for sensitive operations** — Who accessed whose data, when, and why. Immutable audit log (append-only, tamper-evident). Separate from application logs. Retained longer than operational logs. Required for compliance audits and breach investigation.
+- [ ] **Data processing agreements (DPAs)** — Every third-party service that touches user data has a signed DPA. Includes sub-processors list. Review when adding new vendors. Cloud providers (AWS, GCP, Azure) have standard DPAs — read them, don't just accept.
+- [ ] **Breach notification procedure** — GDPR: 72 hours to notify supervisory authority. Documented incident response plan specific to data breaches. Know what triggers notification (what constitutes a "breach"). Contact list: legal, DPO, authority, affected users. Test the procedure annually.
+- [ ] **Encryption at rest & in transit** — TLS 1.2+ for all data in transit (already in §7). Encryption at rest for PII-containing databases (AES-256, or provider-managed encryption). Key management: separate from data, rotated, access-controlled. Consider field-level encryption for highly sensitive fields (SSN, health data).
+- [ ] **Data minimization** — Collect only what you need. Don't store "just in case." Anonymize or pseudonymize where possible. Review data collection points quarterly — are you still using that field? If not, stop collecting it.
 
 ---
 
@@ -198,3 +243,77 @@
 - [ ] Graceful shutdown tested (kill -TERM, observe zero errors during rollout)
 - [ ] Circuit breaker opens within expected threshold when downstream is killed
 - [ ] Idempotency keys prevent duplicate mutations (test: send same request twice)
+- [ ] SBOM generated and attached to build artifact (CycloneDX or SPDX)
+- [ ] No PII in logs — verified by searching log output for test user data
+- [ ] LLM inputs sanitized and outputs validated against schema (if AI features exist)
+- [ ] Right-to-erasure pipeline tested — delete a user, verify across all stores
+- [ ] Data retention policy enforced — old records actually get purged
+
+---
+
+## Project Tier Scoping Matrix
+
+> **How to use this table:** Pick your tier first, then focus only on the sections marked ✅ (required) or 🟡 (recommended). Skip ❌ sections entirely — they'd be over-engineering for your context.
+>
+> **Legend:** ✅ Required · 🟡 Recommended / partial · ❌ Skip
+
+### Tier Descriptions
+
+| # | Tier | Description | Typical Team | Users | Lifespan |
+|---|---|---|---|---|---|
+| 1 | 🧪 **POC / Spike** | Validate an idea. Throwaway code. `print()` is fine. | 1 dev | Internal only | Days–weeks |
+| 2 | 🔧 **Prototype / MVP** | Waiting for integration or user validation. Might become real. | 1–2 devs | Beta testers | Weeks–months |
+| 3 | 🏠 **Internal Tool** | Real users (employees), real traffic. No external exposure or paying customers. | 1–3 devs | Employees | Ongoing |
+| 4 | 🟢 **Small Production** | Single service, few endpoints, low traffic. Real users, maybe early revenue. | 1–2 devs | < 1K users | Ongoing |
+| 5 | 🔵 **Medium Production** | Multiple services or higher traffic. Real revenue or user base that matters. | 2–5 devs | 1K–100K users | Ongoing |
+| 6 | 🟣 **Production Grade** | Full rigor — high-stakes SaaS, enterprise product, or large user base. | 5+ devs | 100K+ users | Long-term |
+| 7 | 🔴 **Mission-Critical / Regulated** | Healthcare (HIPAA), finance (PCI-DSS), safety systems. Failure = severe harm. Adds formal verification, regulatory audit. | 10+ devs | Varies | Decades |
+
+### Which Tier Am I?
+
+```mermaid
+flowchart TD
+    A[Is this throwaway / exploratory?] -->|Yes| T1[🧪 Tier 1 or 2<br/>POC / Prototype]
+    A -->|No| B[Are the users internal<br/>employees?]
+    B -->|Yes| T3[🏠 Tier 3<br/>Internal Tool]
+    B -->|No| C[Do paying users or real<br/>revenue depend on it?]
+    C -->|No| T4[🟢 Tier 4<br/>Small Production]
+    C -->|Yes| D[Multiple services or<br/>1K+ users?]
+    D -->|No| T4
+    D -->|Yes| E[Enterprise / high-stakes<br/>/ regulated industry?]
+    E -->|No| T5[🔵 Tier 5<br/>Medium Production]
+    E -->|Yes| F[Failure could cause<br/>severe harm?]
+    F -->|No| T6[🟣 Tier 6<br/>Production Grade]
+    F -->|Yes| T7[🔴 Tier 7<br/>Mission-Critical]
+    
+    style T1 fill:#e1f5ff
+    style T3 fill:#fff4e1
+    style T4 fill:#e8f5e9
+    style T5 fill:#e3f2fd
+    style T6 fill:#f3e5f5
+    style T7 fill:#ffebee
+```
+
+### Checklist Applicability by Tier
+
+| # | Section | 🧪 POC | 🔧 Prototype | 🏠 Internal | 🟢 Small Prod | 🔵 Medium Prod | 🟣 Production Grade | 🔴 Mission-Critical |
+|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 1 | Language & Runtime | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 2 | Project Structure | ❌ | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 3 | Containerization | ❌ | 🟡 | 🟡 | ✅ | ✅ | ✅ | ✅ |
+| 4 | API Design | 🟡 basic REST | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 5 | Database | 🟡 SQLite OK | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 6 | Auth & Authorization | ❌ | 🟡 basic JWT | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 7 | Security | ❌ | 🟡 essentials | ✅ | ✅ | ✅ | ✅ | ✅ + formal audit |
+| 8 | Logging & Observability | ❌ `print` fine | 🟡 structured | ✅ | ✅ + tracing | ✅ + dashboards | ✅ + SLO/alerting | ✅ + full stack |
+| 9 | Error Handling | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 10 | Circuit Breaker | ❌ | ❌ | 🟡 if ext APIs | 🟡 if ext APIs | ✅ | ✅ | ✅ |
+| 11 | Message Queues | ❌ | ❌ | 🟡 if async | 🟡 if async | ✅ | ✅ | ✅ + audit |
+| 12 | File Storage | ❌ | 🟡 | 🟡 if needed | ✅ if used | ✅ | ✅ | ✅ + encryption |
+| 13 | Testing | ❌ maybe smoke | 🟡 unit + int | ✅ | ✅ + load | ✅ + contract + mutation | ✅ + chaos | ✅ + formal verification |
+| 14 | Performance | ❌ | ❌ | 🟡 cache + shutdown | ✅ | ✅ | ✅ | ✅ + capacity planning |
+| 15 | CI/CD | ❌ | 🟡 basic pipeline | ✅ + deploy | ✅ + canary | ✅ + GitOps | ✅ + full pipeline | ✅ + signed artifacts |
+| 16 | Documentation | 🟡 README | 🟡 | ✅ + API docs | ✅ + ADR + runbook | ✅ full set | ✅ full set | ✅ + compliance docs |
+| 17 | Production Readiness | ❌ | ❌ | 🟡 health + backup | ✅ + idempotency | ✅ + DR | ✅ + full | ✅ + regulatory cert |
+| 18 | AI/LLM Integration | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
+| 19 | Data Privacy | ❌ | ❌ | 🟡 PII masking | ✅ erasure + retention | ✅ + consent + DPA | ✅ full compliance | ✅ + regulatory framework |

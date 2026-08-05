@@ -2,7 +2,7 @@
 
 > Spring Boot 4.x-specific companion to the general [Backend Checklist](api.md).
 > Covers Boot 4.0+ (Spring Framework 7, Java 21+, modular starters, Security 7, Jackson 3).
-> Last updated: 2026-06-11
+> Last updated: 2026-08-05
 
 ---
 
@@ -236,6 +236,47 @@ void shouldOpenCircuitOnRepeatedFailure() {
 
 ---
 
+## AI/LLM Integration (if applicable)
+
+> **When you need it:**
+> 🤖 **Any Spring Boot service calling an LLM** (OpenAI, Anthropic, local models, RAG pipelines) — ✅ mandatory. LLMs are untrusted downstream systems with non-deterministic output, token costs, and prompt injection attack surface.
+> 🧱 **Pure CRUD with no AI features** — ❌ skip this section.
+
+- [ ] **Spring AI (first-party)** — `spring-ai-spring-boot-starter`. Unified API across OpenAI, Anthropic, Azure OpenAI, Ollama, and local models. `ChatClient` bean auto-configured from `spring.ai.openai.api-key` (or `spring.ai.ollama.base-url`). Preferred over rolling your own `RestClient` wiring for LLM calls.
+- [ ] **LangChain4j (alternative)** — `langchain4j-spring-boot-starter` if you need richer abstractions (chains, agents, memory, tool calling). Mature ecosystem, more features than Spring AI, but heavier dependency. Use when Spring AI's `ChatClient` isn't expressive enough.
+- [ ] **`@HttpExchange` for custom LLM wrappers** — When Spring AI doesn't cover a provider (custom endpoint, self-hosted model with non-standard API), declare a declarative client: `@HttpExchange("/v1/chat/completions")` interface. Auto-implemented by Boot 4. Wrap in a dedicated `LlmClient` service — don't scatter calls across handlers.
+- [ ] **Structured output parsing** — Spring AI's `BeanOutputConverter<T>` maps LLM JSON output to typed Java records/classes. Validation via Bean Validation annotations on the output DTO. Reject malformed output — don't silently default. Same `@Valid` pattern as controller inputs.
+- [ ] **Prompt injection prevention** — Use Spring AI's `PromptTemplate` with named placeholders (`{user_input}`) — never `String.format()` or string concatenation with user input into system prompts. Treat LLM output as untrusted — never pass it to `Runtime.exec()`, never interpolate into JPQL/SQL (always parameterize via `@Query` or `JdbcTemplate`).
+- [ ] **Token cost controls** — Spring AI's `ChatResponse.getMetadata().getUsage()` returns prompt + completion tokens. Track per-request and per-user in a dedicated `TokenUsageService` (Micrometer counter: `llm.tokens.used{model,user_tier}`). Alert on anomalous spend (runaway retry, injection inflating context). Cap context window — don't send 128k tokens when 4k suffices. Tier limits by user plan.
+- [ ] **Streaming responses** — Spring AI's `ChatClient.stream()` returns `Flux<ChatResponse>`. Forward via Spring WebFlux `SseEmitter` or `text/event-stream` `ResponseEntity`. Backpressure: if client disconnects, cancel the upstream Flux (Reactor handles this natively). Timeout on first token (`Flux.timeout`) to detect stalled generation.
+- [ ] **Model fallback & degradation** — Primary model rate-limited or down? Circuit breaker (`@CircuitBreaker` from Resilience4j — see §7) around LLM calls. Fallback method returns cached/stale result or routes to a cheaper/smaller model. Cache frequent identical queries (Spring `@Cacheable` on a semantic hash of the prompt). Return "AI unavailable" with degraded/static result instead of failing the whole request.
+- [ ] **Hallucination guardrails (RAG)** — Spring AI's `DocumentRetriever` + `VectorStore` (PgVector, Redis, Chroma, etc.). Ground responses in retrieved documents. Cite sources with verifiable references (document ID + chunk offset in the response metadata). Log retrieval context alongside generated output at DEBUG level. "I don't know" is a valid output — engineer prompts to prefer refusal over fabrication.
+- [ ] **Content safety & moderation** — Input filtering before the model sees it (Spring AI's `ChatClient.advisors()` with a custom `CallAroundAdvisor` for pre-flight checks). Output filtering: PII redaction via regex or a dedicated advisor before returning to user. Use provider guardrails (OpenAI moderation endpoint) plus your own domain rules. Log flagged content at WARN for review.
+- [ ] **LLM-specific observability** — Spring AI auto-instruments calls via Micrometer when `spring.ai.chat.client.observation.enabled=true` (default in Boot 4). Metrics: `spring.ai.chat.client` timer with `model`, `operation` tags. Add custom tags via `ObservationConvention`. Trace the full chain: user input → retrieval → prompt assembly → model call → output validation → response. A/B test prompt versions via a feature flag (`@ConditionalOnProperty`).
+- [ ] **Data sent to external models** — Know what PII leaves your infrastructure. Strip or anonymize before sending (custom advisor or service-layer redaction). For sensitive workloads, use self-hosted models (Ollama) behind the same `ChatClient` interface — swap provider via profile, no code change. Log what was sent (audit trail) but redact in log storage.
+
+## Data Privacy & Compliance
+
+> **When you need it:**
+> 🌍 **Any Spring Boot service handling user data** — ✅ mandatory if you have users in EU (GDPR), California (CCPA/CPRA), Brazil (LGPD), or similar jurisdictions.
+> 🏥 **Healthcare/financial data** — ✅ mandatory (HIPAA, PCI-DSS add stricter requirements on top).
+> 🔧 **Internal-only tools with no user PII** — 🟡 review, likely lighter requirements.
+
+- [ ] **PII masking in Logback logs** — Never log email, phone, full IP, names, addresses, or tokens in plain text. Use Logback's `MaskingPatternLayout` (from `logstash-logback-encoder` or `logback-mask`) to redact PII patterns in log output. For structured fields, use a custom `Converter` that hashes or masks known PII MDC keys. Audit `logback-spring.xml` quarterly — a new `log.info("user={}", user)` can leak PII silently.
+- [ ] **Jackson `@JsonIgnore` / custom serializer for DTOs** — `@JsonIgnore` on password hash fields. `@JsonSerialize(using = PiiMaskingSerializer.class)` for response DTOs that include PII in admin contexts. Defense in depth — even if a controller accidentally serializes the full entity, PII is masked.
+- [ ] **Spring Security audit events** — `@EnableJpaAuditing` + `AuditorAware<UUID>` bean to capture `created_by` / `last_modified_by` on entities. For sensitive operations (admin actions, PII access), log to a dedicated `audit_log` table via a `@TransactionalEventListener` on domain events. Immutable (no UPDATE/DELETE granted to app user). Retained longer than operational logs.
+- [ ] **Right to erasure (hard delete)** — GDPR Article 17, CCPA. Implement a `UserDataErasureService` with `@Transactional` that cascades across all repositories, caches (`@CacheEvict` on all user-keyed caches), search indexes (Elasticsearch `DELETE /users/{id}`), and object storage (S3 delete). Soft delete (`deleted_at`) alone does NOT satisfy erasure. Verify deletion across all stores. Notify third-party processors via API.
+- [ ] **Right to access (data export)** — GDPR Article 15, CCPA. `UserDataExportService` aggregates from all repositories into a `UserDataExport` DTO. Return machine-readable JSON/CSV. Automated pipeline preferred — manual `pg_dump` extraction is error-prone and slow. Include data from all services (not just the primary DB). `@Async` with `CompletableFuture<ExportResult>` for large exports — return 202 Accepted with a download URL.
+- [ ] **Consent tracking** — `Consent` entity: `user_id`, `purpose` enum (MARKETING, ANALYTICS, THIRD_PARTY_SHARING), `granted`, `granted_at`, `revoked_at`. Repository with `findByUserIdAndPurpose`. Granular, not all-or-nothing. Withdrawal as easy as granting. Audit trail via `@CreatedDate` / `@LastModifiedDate` on the entity. Cookie consent separate from data processing consent.
+- [ ] **Data retention policies** — Retention periods per data type in `application.yml` (`app.retention.user-data-months`, `app.retention.audit-log-months`). `@Scheduled(cron = "0 0 2 * * ?")` nightly purge job: `@Modifying @Query("DELETE FROM User u WHERE u.deletedAt < :cutoff")`. Don't keep data "just in case." Document retention schedule. Backups: define when aged backups are exempt vs. when they must be purged.
+- [ ] **Immutable audit log** — Separate `audit_log` table (append-only, no UPDATE/DELETE granted to app user). Log: `actor_id`, `action`, `target_user_id`, `timestamp`, `ip_hash`, `justification`. Retained longer than operational logs (7 years for financial, 2 years minimum). Required for compliance audits and breach investigation. Use `@EntityListeners(AuditingEntityListener.class)` with a custom `AuditorAware` that captures the actor.
+- [ ] **Data processing agreements (DPAs)** — Every third-party service that touches user data (SendGrid, Stripe, AWS, LLM providers) has a signed DPA. Review sub-processors list. Document in a `docs/dpa-registry.md` or similar — not just in legal's inbox. Spring's `@ConfigurationProperties(prefix = "app.vendors")` can hold the vendor list for runtime reference.
+- [ ] **Breach notification procedure** — GDPR: 72 hours to notify supervisory authority. Documented incident response plan. Runbook: detect → contain → assess scope → notify DPO → notify authority → notify affected users. Test annually. Contact list in the runbook, not in someone's head. Spring Security's `ApplicationEventPublisher` can fire a `DataBreachEvent` that triggers the notification workflow.
+- [ ] **Encryption at rest & in transit** — TLS 1.3 for all data in transit (Spring Boot's embedded Tomcat with `server.ssl.*` or reverse proxy). Encryption at rest for PII-containing databases (provider-managed or AES-256 with key in Vault). Field-level encryption for highly sensitive fields (SSN, health data) — use a JPA `@Converter` that encrypts/decrypts transparently on persist/load (`AttributeConverter<String, String>` with `@Converter(autoApply = true)`).
+- [ ] **Data minimization** — Collect only what you need. Review data collection points quarterly — if a DTO field isn't used, delete it from the DTO and the migration. Anonymize or pseudonymize where possible (hash user IDs in analytics tables).
+
+---
+
 ## Quick Sanity Check Before Launch
 
 - [ ] `spring.jpa.open-in-view: false` in production config
@@ -261,3 +302,69 @@ void shouldOpenCircuitOnRepeatedFailure() {
 - [ ] Fallback methods return sane degraded responses, never null
 - [ ] Circuit breaker + retry ordering correct (retry inside breaker)
 - [ ] Circuit breaker tested (downstream killed → circuit opens → fallback returns → recovery)
+
+---
+
+## Project Tier Scoping Matrix
+
+> **How to use this table:** Pick your tier first, then focus only on the sections marked ✅ (required) or 🟡 (recommended). Skip ❌ sections entirely — they'd be over-engineering for your context. This matrix adapts the general [API checklist](api.md) tiers to Spring Boot 4.x specifics.
+>
+> **Legend:** ✅ Required · 🟡 Recommended / partial · ❌ Skip
+
+### Tier Descriptions
+
+| # | Tier | Description | Typical Team | Users | Lifespan |
+|---|---|---|---|---|---|
+| 1 | 🧪 **POC / Spike** | Validate an idea. Throwaway code. `System.out.println()` is fine. | 1 dev | Internal only | Days–weeks |
+| 2 | 🔧 **Prototype / MVP** | Waiting for integration or user validation. Might become real. | 1–2 devs | Beta testers | Weeks–months |
+| 3 | 🏠 **Internal Tool** | Real users (employees), real traffic. No external exposure or paying customers. | 1–3 devs | Employees | Ongoing |
+| 4 | 🟢 **Small Production** | Single Spring Boot service, few endpoints, low traffic. Real users, maybe early revenue. | 1–2 devs | < 1K users | Ongoing |
+| 5 | 🔵 **Medium Production** | Multiple services or higher traffic. Real revenue or user base that matters. | 2–5 devs | 1K–100K users | Ongoing |
+| 6 | 🟣 **Production Grade** | Full rigor — high-stakes SaaS, enterprise product, or large user base. | 5+ devs | 100K+ users | Long-term |
+| 7 | 🔴 **Mission-Critical / Regulated** | Healthcare (HIPAA), finance (PCI-DSS), safety systems. Failure = severe harm. | 10+ devs | Varies | Decades |
+
+### Which Tier Am I?
+
+```mermaid
+flowchart TD
+    A[Is this throwaway / exploratory?] -->|Yes| T1[🧪 Tier 1 or 2<br/>POC / Prototype]
+    A -->|No| B[Are the users internal<br/>employees?]
+    B -->|Yes| T3[🏠 Tier 3<br/>Internal Tool]
+    B -->|No| C[Do paying users or real<br/>revenue depend on it?]
+    C -->|No| T4[🟢 Tier 4<br/>Small Production]
+    C -->|Yes| D[Multiple services or<br/>1K+ users?]
+    D -->|No| T4
+    D -->|Yes| E[Enterprise / high-stakes<br/>/ regulated industry?]
+    E -->|No| T5[🔵 Tier 5<br/>Medium Production]
+    E -->|Yes| F[Failure could cause<br/>severe harm?]
+    F -->|No| T6[🟣 Tier 6<br/>Production Grade]
+    F -->|Yes| T7[🔴 Tier 7<br/>Mission-Critical]
+    
+    style T1 fill:#e1f5ff
+    style T3 fill:#fff4e1
+    style T4 fill:#e8f5e9
+    style T5 fill:#e3f2fd
+    style T6 fill:#f3e5f5
+    style T7 fill:#ffebee
+```
+
+### Spring Boot Checklist Applicability by Tier
+
+| # | Section | 🧪 POC | 🔧 Prototype | 🏠 Internal | 🟢 Small Prod | 🔵 Medium Prod | 🟣 Production Grade | 🔴 Mission-Critical |
+|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 1 | Version & Bootstrapping | 🟡 basic Boot | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + SBOM |
+| 2 | Project Structure | ❌ | 🟡 package-by-layer OK | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 3 | REST API (Spring Web MVC) | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + formal |
+| 4 | Validation | ❌ | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 5 | Spring Data JPA | 🟡 H2 OK | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ + audit |
+| 6 | Spring Security 7 | ❌ | 🟡 basic JWT | ✅ | ✅ | ✅ | ✅ | ✅ + rotation |
+| 7 | Circuit Breaker & Resilience | ❌ | ❌ | 🟡 if ext APIs | 🟡 if ext APIs | ✅ | ✅ | ✅ + chaos |
+| 8 | Caching | ❌ | ❌ | 🟡 if needed | ✅ if used | ✅ | ✅ | ✅ + invalidation |
+| 9 | Async Processing | ❌ | ❌ | 🟡 if needed | ✅ if used | ✅ | ✅ | ✅ + DLQ |
+| 10 | Observability | ❌ | 🟡 actuator | ✅ + metrics | ✅ + tracing | ✅ + dashboards | ✅ + SLO | ✅ + full stack |
+| 11 | Testing | ❌ maybe smoke | 🟡 unit + slice | ✅ | ✅ + Testcontainers | ✅ + contract | ✅ + chaos | ✅ + formal |
+| 12 | Database Performance | ❌ | ❌ | 🟡 pool tuning | ✅ + N+1 | ✅ + batch | ✅ + read replicas | ✅ + capacity |
+| 13 | Containerization | ❌ | 🟡 basic Docker | ✅ + Buildpacks | ✅ + multi-stage | ✅ + K8s | ✅ + canary | ✅ + signed |
+| 14 | Config & Secrets | 🟡 application.yml | ✅ + profiles | ✅ + vault | ✅ + vault | ✅ + vault | ✅ + vault | ✅ + vault + rotation |
+| 15 | AI/LLM Integration | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
+| 16 | Data Privacy & Compliance | ❌ | ❌ | 🟡 PII masking | ✅ erasure + retention | ✅ + consent + DPA | ✅ full compliance | ✅ + regulatory framework |

@@ -1,6 +1,7 @@
 # Rust + Axum API Checklist
 
-> Rust + Axum companion to [[API Launch]]. Tick the general checklist first. Axum is built on tokio + tower + hyper — the standard Rust async stack.
+> Rust + Axum companion to [[api]]. Tick the general checklist first. Axum is built on tokio + tower + hyper — the standard Rust async stack.
+> Last updated: 2026-08-05
 
 ---
 
@@ -181,6 +182,46 @@ src/
 
 ---
 
+## AI/LLM Integration (if applicable)
+
+> **When you need it:**
+> 🤖 **Any Rust service calling an LLM** (OpenAI, Anthropic, local models via Ollama, RAG pipelines) — ✅ mandatory. LLMs are untrusted downstream systems with non-deterministic output, token costs, and prompt injection attack surface.
+> 🧱 **Pure CRUD with no AI features** — ❌ skip this section.
+
+- [ ] **HTTP client for LLM APIs** — `reqwest` with `json` and `rustls-tls` features. Async, connection pooling, timeout support. Wrap calls in a dedicated `LlmClient` struct — don't scatter `reqwest::post` across handlers.
+- [ ] **Ollama integration (local models)** — `ollama-rs` crate for local/self-hosted models. Same client pattern as external APIs. Useful for sensitive workloads where data cannot leave infrastructure.
+- [ ] **Structured output parsing** — LLM returns JSON → parse into typed Rust structs with `serde_json::from_str::<T>()`. Validate with the same `validator` crate used for API inputs. Reject malformed output, don't silently default.
+- [ ] **Prompt injection prevention** — Never `format!()` user input directly into system prompts. Use a template struct with explicit field separation. Treat LLM output as untrusted — never pass it to `std::process::Command`, never interpolate into SQL (always parameterize via `sqlx`).
+- [ ] **Token cost controls** — Track `prompt_tokens` + `completion_tokens` from API response metadata. Per-request and per-user budgets via middleware or service-layer check. Alert on anomalous spend (runaway retry, injection inflating context). Cap context window — don't send 128k tokens when 4k suffices.
+- [ ] **Streaming responses** — `reqwest` streaming with `bytes_stream()`. Forward via Axum `Sse` (Server-Sent Events) or WebSocket. Backpressure: if client disconnects, cancel the upstream `reqwest` future (tokio `select!` with a cancellation token). Timeout on first token to detect stalled generation.
+- [ ] **Model fallback & degradation** — Primary model rate-limited or down? Circuit breaker (see `tower_governor` or custom) around LLM calls. Fallback to cheaper/smaller model, not a 500. Cache frequent identical queries (semantic hash or exact match in Redis). Return "AI unavailable" with degraded/static result instead of failing the whole request.
+- [ ] **Hallucination guardrails (RAG)** — Ground responses in retrieved documents. Cite sources with verifiable references (document ID + chunk offset). Log retrieval context alongside generated output in a separate tracing field for debugging. "I don't know" is a valid output — engineer prompts to prefer refusal over fabrication.
+- [ ] **Content safety & moderation** — Input filtering before the model sees it (regex + domain blocklist). Output filtering: PII redaction via regex or a dedicated crate before returning to user. Use provider guardrails (OpenAI moderation endpoint) plus your own domain rules.
+- [ ] **LLM-specific observability** — `tracing::info!` with structured fields: `model`, `prompt_template_version`, `tokens_in`, `tokens_out`, `latency_ms`, `cost_usd`. Never log the full prompt/response in production — hash or truncate. A/B test prompt versions via a feature flag.
+- [ ] **Data sent to external models** — Know what PII leaves your infrastructure. Strip or anonymize before sending. For sensitive workloads, use self-hosted models (Ollama) behind the same `LlmClient` interface. Log what was sent (audit trail) but redact in log storage.
+
+## Data Privacy & Compliance
+
+> **When you need it:**
+> 🌍 **Any Rust service handling user data** — ✅ mandatory if you have users in EU (GDPR), California (CCPA/CPRA), Brazil (LGPD), or similar jurisdictions.
+> 🏥 **Healthcare/financial data** — ✅ mandatory (HIPAA, PCI-DSS add stricter requirements on top).
+> 🔧 **Internal-only tools with no user PII** — 🟡 review, likely lighter requirements.
+
+- [ ] **PII masking in `tracing` logs** — Never log email, phone, full IP, names, addresses, or tokens in plain text. Use `#[instrument(skip(email, phone, ip))]` to exclude sensitive fields from spans. For fields that must be logged, hash them: `tracing::info!(user_email_hash = %sha256(email), "login")`. Audit `tracing` spans quarterly — a new `info!(user = ?user)` can leak PII silently.
+- [ ] **Custom `tracing` layer for PII redaction** — Implement `tracing_subscriber::Layer` that intercepts events and redacts known PII field names before they reach the formatter. Centralized, not scattered across `skip` attributes. Pair with a `SENSITIVE_FIELDS` constant set.
+- [ ] **`serde` skip/serialize_with for DTOs** — `#[serde(skip_serializing)]` on password hash fields. `#[serde(serialize_with = "redact_email")]` for response DTOs that include PII in admin contexts. Defense in depth — even if a handler accidentally serializes the full struct, PII is masked.
+- [ ] **Right to erasure (hard delete)** — GDPR Article 17, CCPA. Implement a `delete_user_cascade` service method that touches every table, cache entry, search index, and object storage path. Soft delete (`deleted_at`) alone does NOT satisfy erasure. Verify deletion across: PostgreSQL, Redis, S3/MinIO, Elasticsearch, analytics (within retention window), and third-party processors (notify via API).
+- [ ] **Right to access (data export)** — GDPR Article 15, CCPA. `export_user_data(user_id) -> UserDataExport` service method that aggregates from all repositories. Return machine-readable JSON/CSV. Automated pipeline preferred — manual `psql` extraction is error-prone and slow. Include data from all services (not just the primary DB).
+- [ ] **Consent tracking** — `consent` table: `user_id`, `purpose` (marketing, analytics, third_party_sharing), `granted: bool`, `granted_at`, `revoked_at`. Granular, not all-or-nothing. Withdrawal as easy as granting. Audit trail: who, what, when, how. Cookie consent separate from data processing consent.
+- [ ] **Data retention policies** — Retention periods per data type in config (`app.retention.user_data_months`, `app.retention.audit_log_months`). Background tokio task (`tokio::spawn` + `tokio::time::interval`) runs nightly purge: `DELETE FROM users WHERE deleted_at < NOW() - interval 'X months'`. Don't keep data "just in case." Document retention schedule.
+- [ ] **Immutable audit log** — Separate `audit_log` table (append-only, no UPDATE/DELETE granted to app user). Log: `actor_id`, `action`, `target_user_id`, `timestamp`, `ip_hash`, `justification`. Retained longer than operational logs (7 years for financial, 2 years minimum). Required for compliance audits and breach investigation.
+- [ ] **Data processing agreements (DPAs)** — Every third-party service that touches user data (SendGrid, Stripe, AWS, LLM providers) has a signed DPA. Review sub-processors list. Document in a `docs/dpa-registry.md` or similar — not just in legal's inbox.
+- [ ] **Breach notification procedure** — GDPR: 72 hours to notify supervisory authority. Documented incident response plan. Runbook: detect → contain → assess scope → notify DPO → notify authority → notify affected users. Test annually. Contact list in the runbook, not in someone's head.
+- [ ] **Encryption at rest & in transit** — TLS 1.3 for all data in transit (handled by reverse proxy or `rustls`). Encryption at rest for PII-containing databases (provider-managed or AES-256 with key in Vault). Field-level encryption for highly sensitive fields (SSN, health data) — wrap in a `EncryptedField<T>` newtype with `serde` serialize/deserialize that encrypts/decrypts transparently.
+- [ ] **Data minimization** — Collect only what you need. Review data collection points quarterly — if a struct field isn't used, delete it from the DTO and the migration. Anonymize or pseudonymize where possible (hash user IDs in analytics tables).
+
+---
+
 ## Quick Sanity Check
 
 - [ ] `cargo clippy -- -D warnings` passes — no warnings in CI
@@ -199,5 +240,71 @@ src/
 ## Sources
 
 - Axum docs — https://docs.rs/axum/latest/axum/
-- `[[API Launch]]` — general API checklist (tick first)
+- `[[api]]` — general API checklist (tick first)
 - `[[03 Authentication]]`, `[[03 API Security]]` — auth patterns
+
+---
+
+## Project Tier Scoping Matrix
+
+> **How to use this table:** Pick your tier first, then focus only on the sections marked ✅ (required) or 🟡 (recommended). Skip ❌ sections entirely — they'd be over-engineering for your context. This matrix adapts the general [API checklist](api.md) tiers to Rust + Axum specifics.
+>
+> **Legend:** ✅ Required · 🟡 Recommended / partial · ❌ Skip
+
+### Tier Descriptions
+
+| # | Tier | Description | Typical Team | Users | Lifespan |
+|---|---|---|---|---|---|
+| 1 | 🧪 **POC / Spike** | Validate an idea. Throwaway code. `println!()` is fine. | 1 dev | Internal only | Days–weeks |
+| 2 | 🔧 **Prototype / MVP** | Waiting for integration or user validation. Might become real. | 1–2 devs | Beta testers | Weeks–months |
+| 3 | 🏠 **Internal Tool** | Real users (employees), real traffic. No external exposure or paying customers. | 1–3 devs | Employees | Ongoing |
+| 4 | 🟢 **Small Production** | Single Axum service, few endpoints, low traffic. Real users, maybe early revenue. | 1–2 devs | < 1K users | Ongoing |
+| 5 | 🔵 **Medium Production** | Multiple services or higher traffic. Real revenue or user base that matters. | 2–5 devs | 1K–100K users | Ongoing |
+| 6 | 🟣 **Production Grade** | Full rigor — high-stakes SaaS, enterprise product, or large user base. | 5+ devs | 100K+ users | Long-term |
+| 7 | 🔴 **Mission-Critical / Regulated** | Healthcare (HIPAA), finance (PCI-DSS), safety systems. Failure = severe harm. | 10+ devs | Varies | Decades |
+
+### Which Tier Am I?
+
+```mermaid
+flowchart TD
+    A[Is this throwaway / exploratory?] -->|Yes| T1[🧪 Tier 1 or 2<br/>POC / Prototype]
+    A -->|No| B[Are the users internal<br/>employees?]
+    B -->|Yes| T3[🏠 Tier 3<br/>Internal Tool]
+    B -->|No| C[Do paying users or real<br/>revenue depend on it?]
+    C -->|No| T4[🟢 Tier 4<br/>Small Production]
+    C -->|Yes| D[Multiple services or<br/>1K+ users?]
+    D -->|No| T4
+    D -->|Yes| E[Enterprise / high-stakes<br/>/ regulated industry?]
+    E -->|No| T5[🔵 Tier 5<br/>Medium Production]
+    E -->|Yes| F[Failure could cause<br/>severe harm?]
+    F -->|No| T6[🟣 Tier 6<br/>Production Grade]
+    F -->|Yes| T7[🔴 Tier 7<br/>Mission-Critical]
+    
+    style T1 fill:#e1f5ff
+    style T3 fill:#fff4e1
+    style T4 fill:#e8f5e9
+    style T5 fill:#e3f2fd
+    style T6 fill:#f3e5f5
+    style T7 fill:#ffebee
+```
+
+### Rust + Axum Checklist Applicability by Tier
+
+| # | Section | 🧪 POC | 🔧 Prototype | 🏠 Internal | 🟢 Small Prod | 🔵 Medium Prod | 🟣 Production Grade | 🔴 Mission-Critical |
+|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 1 | Project Setup | 🟡 minimal deps | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + audit |
+| 2 | Project Structure | ❌ | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 3 | Axum App Setup | 🟡 basic router | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + shutdown |
+| 4 | Extractors | 🟡 Json + Path | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 5 | Responses | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 6 | Error Handling | ❌ | 🟡 AppError | ✅ | ✅ | ✅ | ✅ | ✅ + formal |
+| 7 | Validation | ❌ | 🟡 validator | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 8 | Database (sqlx) | 🟡 SQLite OK | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ + audit |
+| 9 | Authentication (JWT) | ❌ | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ + rotation |
+| 10 | Middleware (tower-http) | ❌ | 🟡 CORS + trace | ✅ | ✅ | ✅ | ✅ | ✅ + WAF |
+| 11 | Logging (tracing) | ❌ `println!` | 🟡 structured | ✅ | ✅ + JSON | ✅ + OTel | ✅ + SLO | ✅ + full stack |
+| 12 | Testing | ❌ maybe smoke | 🟡 unit + handler | ✅ | ✅ + integration | ✅ + load | ✅ + chaos | ✅ + formal |
+| 13 | Observability | ❌ | ❌ | 🟡 health | ✅ + metrics | ✅ + tracing | ✅ + dashboards | ✅ + full |
+| 14 | Build & Deploy | ❌ | 🟡 debug build | ✅ + release | ✅ + Docker | ✅ + CI/CD | ✅ + canary | ✅ + signed |
+| 15 | AI/LLM Integration | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
+| 16 | Data Privacy & Compliance | ❌ | ❌ | 🟡 PII masking | ✅ erasure + retention | ✅ + consent + DPA | ✅ full compliance | ✅ + regulatory framework |
