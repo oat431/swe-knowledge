@@ -1,7 +1,16 @@
+---
+title: API Gateway Checklist
+checklist_type: microservice-domain
+version: 2.0
+status: active
+scope: north-south API gateway
+last_updated: 2026-08-06
+---
+
 # API Gateway Checklist
 
 > The gateway is the front door to your system. Get it right, and everything behind it can be simpler.
-> Last updated: 2026-06-11
+
 
 ---
 
@@ -15,8 +24,8 @@
 
 - [ ] **Evaluate against your stack** — Spring Cloud Gateway if you're in the Spring ecosystem. Kong if you want plugin marketplace + Lua extensibility. Traefik if you want auto-discovery + containers. Envoy if you need maximum performance + xDS control plane. NGINX if you want battle-tested simplicity. KrakenD if you want stateless + high performance.
 - [ ] **Deployment model** — Sidecar proxy per service, standalone gateway cluster, or both? Sidecar = more operational overhead but better isolation. Centralized = simpler ops but single point of failure.
-- [ ] **Configuration model** — Static config (YAML/JSON), dynamic config (API/admin endpoint), or GitOps (declarative in repo)? Dynamic is essential for zero-downtime route changes. GitOps gives audit trail.
-- [ ] **High availability** — At least 2 instances behind a load balancer. Stateless (or shared state via Redis) so any instance can handle any request. If the gateway has state (rate limit counters), it must survive instance failure.
+- [ ] **Configuration model** — Select static, dynamic, or GitOps configuration according to the platform's reload, audit, access-control, and recovery requirements. Zero-downtime reload must be tested; dynamic administration is not automatically safer.
+- [ ] **Availability design** — Select multiple instances, managed HA, or an explicitly accepted single-instance risk according to the gateway SLO and failure domains. Keep instances stateless or place required shared state in an appropriate shared store.
 
 ## 3. Routing & Service Discovery
 
@@ -29,13 +38,14 @@
 
 ## 4. Authentication & Authorization
 
-- [ ] **Auth at the edge** — Validate JWT tokens, API keys, or OAuth2 tokens at the gateway. Downstream services receive verified claims (`X-User-Id`, `X-User-Roles`), not raw tokens.
+- [ ] **Auth at the edge** — Validate JWT, API key, or OAuth2 credentials for early rejection and coarse route policy. Edge validation is not the sole trust boundary; resource services remain responsible for their own authorization.
 - [ ] **JWT validation** — Verify signature, issuer, audience, and expiry. Fetch JWKS from the auth server (with caching). Reject expired/invalid tokens with 401.
-- [ ] **Token passthrough decision** — Strip the `Authorization` header before forwarding, or pass it through? Strip for security (downstream can't leak tokens). Pass through if downstream needs to introspect for fine-grained auth.
+- [ ] **Identity-header trust** — Strip or overwrite incoming identity headers (`X-User-Id`, `X-User-Roles`, and similar). Services never trust caller-supplied identity headers. If the gateway derives identity context, the internal channel and integrity protection are documented.
+- [ ] **Token passthrough decision** — If services validate tokens independently, pass the bearer token or use a documented service-identity mechanism. If the header is stripped, use a verifiable internal propagation mechanism; unsigned headers are not an authentication substitute.
 - [ ] **API key management** — Hashed in DB (like passwords). Identifiable prefix (`gw_`). Scoped to specific services/endpoints. Rotatable and revocable from admin API.
 - [ ] **mTLS for service-to-service** — If internal services call each other through the gateway, use mTLS. Client certificates identify the calling service.
 - [ ] **OAuth2/OpenID Connect** — If user-facing: authorization code flow with PKCE. Token refresh handled at gateway. Session management at gateway, not in each service.
-- [ ] **Role-based access at route level** — `roles: ["admin"]` on admin routes. `roles: ["user"]` on user routes. Reject at gateway, not in 15 different services.
+- [ ] **Coarse route authorization** — The gateway may enforce broad route policies such as `roles: ["admin"]`, but each service owns object-level, function-level, tenant, and business authorization for its resources.
 
 ## 5. Rate Limiting & Throttling
 
@@ -56,7 +66,8 @@
 
 ## 7. Request/Response Transformation
 
-- [ ] **Header manipulation** — Add `X-Request-Id` (trace ID), `X-Forwarded-For`, `X-Real-IP`, `X-Forwarded-Proto`. Strip internal headers (`X-Internal-*`) before forwarding to clients.
+- [ ] **Header manipulation** — Add or propagate `traceparent` and an operational request ID where needed; manage `X-Forwarded-For`, `X-Real-IP`, and `X-Forwarded-Proto` only at trusted proxy boundaries. Strip internal headers before forwarding to clients.
+- [ ] **Forwarded-header trust** — Strip or overwrite client-supplied forwarding and identity headers at the trusted edge. Only configured proxies may assert client IP, scheme, or identity context.
 - [ ] **Request body validation** — Basic schema validation at the edge: required fields, content-type, max body size. Reject garbage before it hits your services. But don't duplicate full business validation.
 - [ ] **Response transformation** — Strip internal headers. Add `X-Response-Time`. Standardize error response format regardless of which service errored.
 - [ ] **Request/response logging** — Log at gateway level: method, path, status, latency, client IP, user ID. Services can log less.
@@ -114,7 +125,7 @@
 - [ ] **Request size limits** — Max body size (e.g., 10MB default, higher for specific upload endpoints). Prevents memory exhaustion.
 - [ ] **IP allowlisting/blocking** — Admin endpoints: internal IPs only. Known malicious IPs: blocked at gateway. Geo-blocking if your service is regional.
 - [ ] **DDoS protection** — Rate limiting is your first line. WAF rules for common attack patterns (SQLi, XSS). CDN layer (Cloudflare, AWS CloudFront) for volumetric attacks.
-- [ ] **Input sanitization** — Basic SQLi/XSS pattern rejection at gateway. Defense in depth — services also sanitize. But catching garbage at the door saves service resources.
+- [ ] **Input controls at the edge** — Enforce request size, content type, protocol, and schema-boundary checks where practical. WAF rules may provide defense in depth, but services remain responsible for authoritative validation, output encoding, and injection prevention.
 - [ ] **Admin API security** — Gateway's own management API: separate port (not internet-facing), mTLS, strong auth. Never expose gateway admin on the public internet.
 
 ## 15. Configuration & GitOps
@@ -132,14 +143,14 @@
 - [ ] **Rate limit tests** — Burst N requests → N succeed, N+1 gets 429. Wait for window reset → succeeds again. Headers present on all responses.
 - [ ] **Circuit breaker tests** — Upstream fails N times → circuit opens → requests fail fast (not timeout waiting). Upstream recovers → circuit half-opens → probe succeeds → circuit closes.
 - [ ] **Integration tests** — Gateway + real upstreams (testcontainers or docker-compose). End-to-end request flow: client → gateway → service → DB → response.
-- [ ] **Load tests** — k6 or locust. Realistic traffic patterns through gateway. Measure gateway overhead: request through gateway vs direct to service. Should be minimal (<5ms p95).
+- [ ] **Load tests** — k6 or locust. Use realistic traffic through the gateway and compare gateway overhead with the service's documented latency budget; do not use an arbitrary universal threshold.
 
 ## 17. Deployment & Operations
 
 - [ ] **Stateless gateway instances** — Shared state (rate limits, sessions) in Redis. Any instance can die without losing data. Horizontal scaling is just adding instances.
-- [ ] **Graceful shutdown** — SIGTERM → stop accepting new connections → drain existing connections (up to timeout) → close → exit. Kubernetes `terminationGracePeriodSeconds` aligned with drain timeout.
-- [ ] **Resource limits** — CPU and memory limits in K8s. Gateway is CPU-bound (TLS, routing, transformation), not memory-heavy. Start with 1 CPU, 512Mi, adjust from metrics.
-- [ ] **Anti-affinity rules** — Spread gateway pods across nodes. If a node dies, you lose only one instance.
+- [ ] **Graceful shutdown** — SIGTERM (or platform equivalent) → stop accepting new connections → drain existing connections up to a documented deadline → close → exit. The platform termination window is aligned with the drain timeout.
+- [ ] **Resource controls** — CPU, memory, file-descriptor, connection, and request limits are configured using the selected platform's mechanism and tuned from measured saturation data.
+- [ ] **Failure-domain placement** — Where the platform supports it, gateway instances are spread across independent failure domains. A single-node deployment records the availability trade-off.
 - [ ] **Backup & restore** — Gateway config backed up in git (GitOps). Redis data (rate limits, sessions): acceptable to lose on restart or persist + backup for strict SLAs.
 - [ ] **Disaster recovery** — Gateway config deploys from git to any environment. Spin up new gateway cluster in minutes, not hours.
 
@@ -147,10 +158,22 @@
 
 - [ ] **Golden signals dashboard** — Latency, traffic, errors, saturation. Per route, per upstream service. Grafana dashboard as code.
 - [ ] **Alerts** — 5xx rate > 1%, p95 latency > threshold, upstream health checks failing, circuit breaker open, rate limit hits spike, TLS cert expiring < 7 days, gateway instance count < minimum.
-- [ ] **SLO/SLI** — Define: 99.9% availability, p95 latency < 100ms at gateway, < 0.1% error rate. Measure. Alert when burning error budget too fast.
+- [ ] **SLO/SLI** — Define gateway availability, latency, correctness, and saturation SLIs with service-specific targets, measurement windows, exclusions, and burn-rate alerts. Record the error-budget policy instead of assuming universal numeric targets.
 - [ ] **Capacity planning** — Track requests/sec per gateway instance. Know your ceiling. Auto-scale before you hit it.
 
 ---
+
+## Decision, Evidence & Exceptions
+
+- Selected gateway technology:
+- Deployment/configuration model:
+- Trust boundary and identity propagation design:
+- HA/failure-domain decision:
+- Rate-limit and timeout policy:
+- SLO/SLI reference:
+- Evidence links (tests, dashboards, config review, deployment):
+- N/A items and reason:
+- Exceptions, approver, and review/expiry date:
 
 ## Quick Sanity Check Before Going Live
 

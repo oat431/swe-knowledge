@@ -1,3 +1,12 @@
+---
+title: Load Balancing Checklist
+checklist_type: microservice-domain
+version: 2.0
+status: active
+scope: edge and internal traffic distribution
+last_updated: 2026-08-06
+---
+
 # Load Balancing Checklist
 
 > Tick every box before your load balancer hits production. Traffic must be distributed, not dumped on one instance. Deep reference: [[microservice-infrastructure]] Part 2.
@@ -6,7 +15,7 @@
 
 ## Architecture Decision
 
-- [ ] **L4 vs L7 chosen** — document reasoning → [[03 Load Balancing & Proxies]]
+- [ ] **L4 vs L7 chosen** — document reasoning; do not assume edge is always L7 or internal traffic is always L4 → [[03 Load Balancing & Proxies]]
 - [ ] L4 (transport): route by IP + port. Faster, simpler. Internal service-to-service
 - [ ] L7 (application): route by URL, headers, cookies. Can do auth, rate limit, transform. Edge/external
 - [ ] Edge: L7. Internal: L4 is often enough
@@ -26,21 +35,21 @@
 
 ## Health Checks
 
-- [ ] **Active health checks configured** → [[05 Health Checks]]
+- [ ] **Active health checks configured** → [[053 Health Checks]]
 - [ ] Interval: 5-30s. Shorter = faster detection, more load
 - [ ] Timeout: shorter than interval. Failed checks → mark unhealthy
 - [ ] Healthy threshold: N consecutive successes before re-admitting (prevents flapping)
 - [ ] Unhealthy threshold: N consecutive failures before evicting
-- [ ] Health endpoint on every service returns real status (not just 200 always) → [[05 Health Checks]]
+- [ ] **Health endpoint on every service returns meaningful status (not just 200 always) → [[053 Health Checks]]
 - [ ] Passive checks: observe actual response codes. 5xx spike → mark unhealthy
 
 ---
 
 ## Failure Detection & Recovery
 
-- [ ] **Outlier detection** — not just "is it up?" but "is it behaving?" → [[microservice-infrastructure]]
+- [ ] **Outlier detection** — separate behavioral ejection from basic health readiness; define comparison window and false-positive protection → [[microservice-infrastructure]]
 - [ ] If one instance has 10x latency of peers → eject it even if technically "healthy"
-- [ ] Circuit breaking: N failures → stop routing to instance entirely → [[04 Circuit Breaker]]
+- [ ] Circuit breaking policy is explicit and distinct from health checks/outlier ejection; stop routing or fail fast only when the selected mechanism requires it → [[041 Circuit Breaker]]
 - [ ] Half-open state: send probe request after cooldown → succeed → resume routing
 - [ ] Unhealthy instances removed from pool automatically
 - [ ] Recovered instances re-added automatically
@@ -49,11 +58,11 @@
 
 ## Timeouts
 
-- [ ] **Connect timeout** — how long to wait for TCP handshake. 3s typical → [[04 Retry & Timeout]]
-- [ ] **Read timeout** — how long to wait for response after connected. 30s typical
+- [ ] **Connect timeout** — how long to wait for TCP handshake; select from the service deadline budget → [[042 Retry & Timeout]]
+- [ ] **Read/total timeout** — how long to wait after connecting; select from the service deadline budget rather than a universal 30s default
 - [ ] **Idle timeout** — close idle connections. Free up resources
-- [ ] Client timeout > LB timeout — otherwise client retries while LB is still waiting
-- [ ] Timeouts tuned per upstream: auth service 200ms, report service 30s
+- [ ] **Deadline hierarchy** — client deadline > LB total deadline > service deadline > dependency deadline; connection-pool wait, retries, and queue time are included
+- [ ] Timeouts tuned per upstream and recorded with the SLO/deadline rationale
 
 ---
 
@@ -64,7 +73,7 @@
 - [ ] Minimum TLS 1.2, prefer 1.3
 - [ ] HSTS header set at LB
 - [ ] Certificates NOT self-signed in production
-- [ ] Internal traffic: HTTP (trusted network) or mTLS (zero-trust)
+- [ ] Internal traffic protection selected — encrypted transport by default; any plaintext trusted-network exception has documented isolation, threat model, and approval
 
 ---
 
@@ -82,14 +91,14 @@
 - [ ] **Connection pooling to upstreams** — HTTP keep-alive → [[03 Load Balancing & Proxies]]
 - [ ] Pool size tuned: max idle connections, max connections per host
 - [ ] Don't open new connection per request
-- [ ] Request retry on connection failure — but only for idempotent methods (GET/PUT/DELETE)
+- [ ] **Request retry on connection failure** — only when the operation and failure window are safe to retry; HTTP idempotency is not a substitute for application-level idempotency keys
 
 ---
 
 ## Deployment
 
 - [ ] **Edge LB is NOT a single point of failure** → [[microservice-infrastructure]]
-- [ ] ≥2 instances behind floating IP or DNS failover, or cloud-managed HA
+- [ ] HA/failure-domain design selected — multiple instances, floating IP/DNS failover, managed HA, or an explicitly accepted single-instance risk
 - [ ] Graceful draining: stop accepting new connections → drain existing → shutdown
 - [ ] Zero-downtime config reload — no dropped connections
 - [ ] Config in git — routes, upstreams, health check rules versioned
@@ -107,25 +116,36 @@
 
 ## Testing
 
-- [ ] Round-robin distributes evenly — send 100 requests, each instance gets ~25 (4 instances)
+- [ ] Distribution behavior tested using realistic concurrency, connection reuse, request duration, and the selected algorithm; define an acceptable tolerance
 - [ ] Unhealthy instance removed — traffic stops within configured threshold
 - [ ] Recovered instance re-added — traffic resumes after healthy threshold
 - [ ] Kill one LB instance — secondary takes over without dropped requests
 - [ ] Graceful draining — active connections complete before shutdown
-- [ ] Load test: throughput through LB vs direct to service. Overhead < 5ms p95
+- [ ] Load test: throughput through LB vs direct to service; overhead is within the documented latency budget
 
 ---
 
+## Decision, Evidence & Exceptions
+
+- Selected L4/L7 topology and algorithm:
+- Health/outlier/circuit-breaker model:
+- Timeout and deadline hierarchy:
+- TLS and internal-traffic policy:
+- HA/failure-domain decision:
+- Evidence links (failover, draining, health, load, certificate tests):
+- N/A items and reason:
+- Exceptions, approver, and review/expiry date:
+
 ## Quick Sanity Check
 
-- [ ] Edge LB is the ONLY thing exposed to the internet
+- [ ] For internet-facing systems, edge LB is the only public entry point
 - [ ] TLS terminated with valid, auto-renewed certificates
-- [ ] Health checks removing unhealthy instances reliably
+- [ ] Health readiness removes unhealthy instances reliably; behavioral ejection and circuit breaking are tested separately
 - [ ] Algorithm documented and tested
 - [ ] Sticky sessions avoided or justified
 - [ ] LB itself is HA (≥2 instances or cloud-managed)
 - [ ] Connection pooling to upstreams enabled
-- [ ] Timeouts configured at every layer (connect < read < client)
+- [ ] Timeouts and deadlines are configured at every layer with a documented hierarchy and retry budget
 - [ ] Zero-downtime deploys tested
 
 ---
