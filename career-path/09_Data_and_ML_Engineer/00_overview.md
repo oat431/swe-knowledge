@@ -41,15 +41,17 @@ These are related but distinct specializations. A data engineer usually emphasiz
 
 ## Capability Areas
 
-| Capability | Specialist behavior | Existing vault anchor |
+| Capability | Focus | Files |
 |---|---|---|
-| Data architecture | Designs data storage, movement, ownership, and lifecycle | [[02_Data_Architecture]] |
-| Data modeling | Chooses models appropriate for operational and analytical use | [[03_Data_Modeling_and_Design]] |
-| Data integration | Builds reliable ETL, ELT, streaming, and interface contracts | [[06_Data_Integration_and_Interoperability]] |
-| Data quality | Defines quality dimensions, rules, profiling, and monitoring | [[11_Data_Quality]] |
-| Data security | Protects sensitive data and supports privacy obligations | [[05_Data_Security]] |
-| ML lifecycle | Handles training, evaluation, serving, monitoring, and retraining | [[computing-foundation-note/Artificial_Intelligence/AI Overview]] |
-| Production engineering | Operates distributed systems and automation safely | [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]] |
+| [[01_Data_Architecture/00_overview\|Data Architecture]] | Storage strategy, platform patterns, lifecycle, catalog, ownership | 1 overview + 6 topics |
+| [[02_Data_Modeling_and_Design/00_overview\|Data Modeling and Design]] | Conceptual/logical models, physical design, schema evolution, contracts | 1 overview + 6 topics |
+| [[03_Data_Integration_and_Interoperability/00_overview\|Data Integration and Interoperability]] | Batch ETL, streaming, CDC, API contracts, orchestration, lineage | 1 overview + 6 topics |
+| [[04_Data_Quality/00_overview\|Data Quality]] | Dimensions, profiling, validation rules, observability, scorecards | 1 overview + 6 topics |
+| [[05_Data_Security_and_Privacy/00_overview\|Data Security and Privacy]] | Classification, encryption, access control, privacy, audit, sharing | 1 overview + 6 topics |
+| [[06_ML_Lifecycle_and_MLOps/00_overview\|ML Lifecycle and MLOps]] | Experiment tracking, features, training, serving, monitoring, governance | 1 overview + 6 topics |
+| [[07_Production_Engineering/00_overview\|Production Engineering]] | Distributed systems, scaling, reliability, cost, CI/CD, operations | 1 overview + 6 topics |
+
+**Total:** 7 capability areas × 7 files = 49 topic files + 1 path overview = 50 files
 
 ## Typical Progression
 
