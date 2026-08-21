@@ -40,14 +40,15 @@ Staff engineers often work through proposals, architecture reviews, technical st
 
 ## Capability Areas
 
-| Capability | Staff-level behavior | Existing vault anchor |
+| Capability | Staff-level behavior | Detailed notes |
 |---|---|---|
-| Cross-team architecture | Aligns multiple systems and teams around durable boundaries | [[software-engineering-note/02_Software_Architecture/Software Architecture Overview]] |
-| Technical strategy | Connects technical investment to organizational priorities | [[software-engineering-note/15_Software_Engineering_Economics/Software Engineering Economics Overview]] |
-| Influence | Creates alignment without relying on reporting authority | [[software-engineering-note/14_Software_Engineering_Professional_Practice/03_Communication_Skills]] |
-| Systems thinking | Understands interactions, emergence, and second-order effects | [[SEBoK v2 - Overview]] |
-| Organizational learning | Makes good practices reusable across teams | [[software-engineering-note/10_Software_Engineering_Process/07_Process_Assessment_and_Improvement]] |
-| Technical risk | Manages architecture, security, reliability, and dependency risk | [[software-engineering-note/13_Software_Security/Software Security Overview]] |
+| The Staff role and scope | Chooses an archetype, negotiates a written mandate, and operates through influence | [[01_The_Staff_Role_and_Scope/00_overview]] |
+| Cross-team technical leadership | Aligns multiple teams around coherent technical direction | [[02_Cross_Team_Technical_Leadership/00_overview]] |
+| Technical strategy | Connects technical investment to organizational priorities | [[03_Technical_Strategy/00_overview]] |
+| Influence | Creates alignment among people with different incentives | [[04_Influence_and_Alignment/00_overview]] |
+| Systems thinking | Understands interactions, emergence, and second-order effects | [[05_Systems_Thinking_and_Organizational_Design/00_overview]] |
+| Organizational learning | Makes good practices reusable across teams | [[07_Organizational_Learning_and_Mentoring/00_overview]] |
+| Technical risk | Manages architecture, security, reliability, and dependency risk at portfolio scale | [[06_Technical_Risk_and_Judgment/00_overview]] |
 
 ## Typical Progression
 
