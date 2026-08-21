@@ -40,14 +40,15 @@ A useful distinction is: the Tech Lead is primarily accountable for the **system
 
 ## Capability Areas
 
-| Capability | Tech Lead behavior | Existing vault anchor |
+| Capability | Tech Lead behavior | Detailed notes |
 |---|---|---|
-| System ownership | Understands the system and its production responsibilities | [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]] |
-| Technical direction | Guides architecture, patterns, and technical standards | [[software-engineering-note/02_Software_Architecture/Software Architecture Overview]] |
-| Coordination | Moderates discussions and keeps technical work aligned | [[software-engineering-note/09_Software_Engineering_Management/Software Engineering Management Overview]] |
-| Mentoring | Improves engineering judgment through feedback and explanation | [[software-engineering-note/14_Software_Engineering_Professional_Practice/02_Group_Dynamics_and_Psychology]] |
-| Process improvement | Adjusts team practices to fit maturity and risk | [[software-engineering-note/10_Software_Engineering_Process/07_Process_Assessment_and_Improvement]] |
-| Incident leadership | Helps the team learn from failures and reduce recurrence | [[software-engineering-note/06_Software_Engineering_Operations/08_Service_Operations_and_Support]] |
+| The Tech Lead role and operating model | Defines the mandate, partners with the EM, and balances leading with building | [[01_The_Tech_Lead_Role_and_Operating_Model/00_overview]] |
+| System ownership and production responsibility | Guards the health, debt, dependencies, and support model of the team's system | [[02_System_Ownership_and_Production_Responsibility/00_overview]] |
+| Technical direction and architecture | Sets vision, standards, and a decision process that keeps the system coherent | [[03_Technical_Direction_and_Architecture/00_overview]] |
+| Team delivery and execution leadership | Keeps work planned honestly, unblocked fast, coordinated, and landed safely | [[04_Team_Delivery_and_Execution_Leadership/00_overview]] |
+| Team development and mentoring leadership | Grows the team's capability through work allocation, structures, and delegation | [[05_Team_Development_and_Mentoring_Leadership/00_overview]] |
+| Process and quality stewardship | Owns how the team works; tunes process and quality weight to context | [[06_Process_and_Quality_Stewardship/00_overview]] |
+| Incident leadership and production excellence | Leads the response, learns blamelessly, and builds preventive practices | [[07_Incident_Leadership_and_Production_Excellence/00_overview]] |
 
 ## Typical Progression
 
