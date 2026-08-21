@@ -42,15 +42,15 @@ The role is not simply a senior engineer with more meetings. Its center of gravi
 
 ## Capability Areas
 
-| Capability | Manager behavior | Existing vault anchor |
+| Capability | Manager behavior | Detailed notes |
 |---|---|---|
-| People development | Coaches, gives feedback, supports growth, and manages performance fairly | [[software-engineering-note/14_Software_Engineering_Professional_Practice/02_Group_Dynamics_and_Psychology]] |
-| Team formation | Builds trust, clarity, psychological safety, and effective collaboration | [[software-engineering-note/09_Software_Engineering_Management/04_Growing_Productive_Teams]] |
-| Hiring and staffing | Builds capability through hiring, onboarding, and workforce planning | [[software-engineering-note/09_Software_Engineering_Management/03_The_Right_People]] |
-| Delivery leadership | Creates clarity around scope, priority, risk, and progress | [[PMBOK v8 - Overview]] |
-| Technical context | Participates meaningfully in technical decisions without becoming the sole decision maker | [[SWEBOK v4 - Overview]] |
-| Organizational alignment | Connects team work to strategy, value, and change | [[SEBoK v2 - Overview]] |
-| Communication | Cascades context and represents the team accurately | [[software-engineering-note/14_Software_Engineering_Professional_Practice/03_Communication_Skills]] |
+| People development | Coaches, gives feedback, supports growth, and manages performance fairly | [[01_People_Development/00_overview]] |
+| Team formation and health | Builds trust, clarity, psychological safety, and effective collaboration | [[02_Team_Formation_and_Health/00_overview]] |
+| Hiring and staffing | Builds capability through hiring, onboarding, and workforce planning | [[03_Hiring_and_Staffing/00_overview]] |
+| Delivery leadership | Creates clarity around scope, priority, risk, and progress | [[04_Delivery_Leadership_for_Managers/00_overview]] |
+| Technical context | Participates meaningfully in technical decisions without becoming the sole decision maker | [[06_Technical_Context_for_Managers/00_overview]] |
+| Organizational awareness | Connects team work to strategy, value, and change | [[05_Organizational_Awareness_and_Influence/00_overview]] |
+| Communication | Cascades context and represents the team accurately | [[07_Manager_Communication/00_overview]] |
 
 ## Typical Progression
 
