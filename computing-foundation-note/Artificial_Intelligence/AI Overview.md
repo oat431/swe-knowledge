@@ -22,6 +22,11 @@ This vault covers **artificial intelligence** — the theory and practice of bui
 | [[06_Reinforcement_Learning]] | Passive/active RL, Q-learning, temporal differences, policy search | Ch 21 |
 | [[07_NLP_and_Perception]] | Language models, text classification, NLP, computer vision, robotics | Ch 22–25 |
 | [[08_AI_Ethics_and_Future]] | Philosophy of AI, ethics, risks, present and future | Ch 26–27 |
+| [[09_AI_SE_Intersection]] | AI for SE + SE for AI, MLOps, responsible AI | SWEBOK-aligned |
+| [[10_LLM_Production_Patterns]] | RAG, agents, function-calling, context injection | Interview prep |
+| [[11_Prompt_Engineering_and_Security]] | Prompt engineering, injection defense, OWASP LLM Top 10 | Interview prep |
+| [[12_AI_ROI_and_Roadmap]] | Business value translation, AI roadmap frameworks | Interview prep |
+| [[13_LLM_Evaluation_and_Guardrails]] | Offline/online eval, guardrails, production monitoring | Interview prep |
 
 ## How These Topics Relate
 
@@ -48,9 +53,13 @@ flowchart TD
 | **NLP** | [[07_NLP_and_Perception]] |
 | **AI in SE** | [[05_Machine_Learning]] → [[08_AI_Ethics_and_Future]] |
 | **Probabilistic reasoning** | [[04_Uncertainty_and_Decisions]] |
+| **LLM Engineering** | [[10_LLM_Production_Patterns]] → [[11_Prompt_Engineering_and_Security]] → [[13_LLM_Evaluation_and_Guardrails]] |
+| **AI Strategy** | [[12_AI_ROI_and_Roadmap]] |
+| **MLOps** | [[09_AI_SE_Intersection]] |
 
 ## Related
 
 - [[Computing Foundation Overview]] — All computing foundation topics
 - [[Programming Language Theory/Programming Language Theory Overview|Programming Language Theory]] — Type systems and formal semantics
 - [[Algorithm/Algorithm Overview|Algorithms]] — Algorithmic foundations
+- [[Database/Database Overview|Database]] — [[02 Vector Databases]] for vector search

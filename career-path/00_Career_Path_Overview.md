@@ -50,23 +50,23 @@ The next level is not simply better coding. It is broader ownership, stronger ju
 
 ## Career Families
 
-| Family | Path | Main question | Overview |
-|---|---|---|---|
-| Technical individual contributor | Senior Software Engineer | Can I own a meaningful area and deliver it reliably? | [[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]] |
-| Technical individual contributor | Staff Engineer | Can I improve technical outcomes across multiple teams? | [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]] |
-| Technical individual contributor | Principal or Distinguished Engineer | Can I shape technical direction at organizational scale? | [[career-path/04_Principal_and_Distinguished_Engineer/00_overview|Principal and Distinguished Engineer]] |
-| Technical leadership | Tech Lead | Can I guide a team toward a coherent technical result? | [[career-path/05_Tech_Lead/00_overview|Tech Lead]] |
-| Technical leadership | Software Architect | Can I shape system structure and explain its trade-offs? | [[career-path/06_Software_Architect/00_overview|Software Architect]] |
-| Specialist engineering | SRE and Platform Engineer | Can I make software delivery and operation reliable at scale? | [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]] |
-| Specialist engineering | Security Engineer | Can I reduce security risk across the software lifecycle? | [[career-path/08_Security_Engineer/00_overview|Security Engineer]] |
-| Specialist engineering | Data and ML Engineer | Can I build reliable data and machine-learning capabilities? | [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]] |
-| Specialist engineering | Quality and Test Engineer | Can I improve confidence in software behavior and quality? | [[career-path/10_Quality_and_Test_Engineering/00_overview|Quality and Test Engineering]] |
-| People leadership | Engineering Manager | Can I create the conditions for a team to deliver and grow? | [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]] |
-| Delivery leadership | Technical Program Manager | Can I coordinate complex technical initiatives across teams? | [[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]] |
-| Delivery leadership | Project or Program Manager | Can I manage coordinated work toward agreed outcomes? | [[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]] |
-| Product and business | Product Manager | Can I discover valuable problems and guide product outcomes? | [[career-path/14_Product_Manager/00_overview|Product Manager]] |
-| Enterprise and customer-facing | Solutions or Enterprise Architect | Can I connect technology decisions to business and enterprise change? | [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions and Enterprise Architect]] |
-| Communication and ecosystem | Developer Advocate or Technical Consultant | Can I help users, customers, and communities succeed with technology? | [[career-path/16_Developer_Advocate_and_Technical_Consultant/00_overview|Developer Advocate and Technical Consultant]] |
+| Family                           | Path                                       | Main question                                                         | Overview                                                                 |                                               |
+| -------------------------------- | ------------------------------------------ | --------------------------------------------------------------------- | ------------------------------------------------------------------------ | --------------------------------------------- |
+| Technical individual contributor | Senior Software Engineer                   | Can I own a meaningful area and deliver it reliably?                  | [[career-path/02_Senior_Software_Engineer/00_overview]]                  | Senior Software Engineer]]                    |
+| Technical individual contributor | Staff Engineer                             | Can I improve technical outcomes across multiple teams?               | [[career-path/03_Staff_Engineer/00_overview]]                            | Staff Engineer]]                              |
+| Technical individual contributor | Principal or Distinguished Engineer        | Can I shape technical direction at organizational scale?              | [[career-path/04_Principal_and_Distinguished_Engineer/00_overview]]      | Principal and Distinguished Engineer]]        |
+| Technical leadership             | Tech Lead                                  | Can I guide a team toward a coherent technical result?                | [[career-path/05_Tech_Lead/00_overview]]                                 | Tech Lead]]                                   |
+| Technical leadership             | Software Architect                         | Can I shape system structure and explain its trade-offs?              | [[career-path/06_Software_Architect/00_overview                          | Software Architect]]                          |
+| Specialist engineering           | SRE and Platform Engineer                  | Can I make software delivery and operation reliable at scale?         | [[career-path/07_SRE_and_Platform_Engineer/00_overview                   | SRE and Platform Engineer]]                   |
+| Specialist engineering           | Security Engineer                          | Can I reduce security risk across the software lifecycle?             | [[career-path/08_Security_Engineer/00_overview                           | Security Engineer]]                           |
+| Specialist engineering           | Data and ML Engineer                       | Can I build reliable data and machine-learning capabilities?          | [[career-path/09_Data_and_ML_Engineer/00_overview                        | Data and ML Engineer]]                        |
+| Specialist engineering           | Quality and Test Engineer                  | Can I improve confidence in software behavior and quality?            | [[career-path/10_Quality_and_Test_Engineering/00_overview                | Quality and Test Engineering]]                |
+| People leadership                | Engineering Manager                        | Can I create the conditions for a team to deliver and grow?           | [[career-path/11_Engineering_Manager/00_overview                         | Engineering Manager]]                         |
+| Delivery leadership              | Technical Program Manager                  | Can I coordinate complex technical initiatives across teams?          | [[career-path/12_Technical_Program_Manager/00_overview                   | Technical Program Manager]]                   |
+| Delivery leadership              | Project or Program Manager                 | Can I manage coordinated work toward agreed outcomes?                 | [[career-path/13_Project_and_Program_Manager/00_overview                 | Project and Program Manager]]                 |
+| Product and business             | Product Manager                            | Can I discover valuable problems and guide product outcomes?          | [[career-path/14_Product_Manager/00_overview                             | Product Manager]]                             |
+| Enterprise and customer-facing   | Solutions or Enterprise Architect          | Can I connect technology decisions to business and enterprise change? | [[career-path/15_Solutions_and_Enterprise_Architect/00_overview          | Solutions and Enterprise Architect]]          |
+| Communication and ecosystem      | Developer Advocate or Technical Consultant | Can I help users, customers, and communities succeed with technology? | [[career-path/16_Developer_Advocate_and_Technical_Consultant/00_overview | Developer Advocate and Technical Consultant]] |
 
 ## Relationship Between the Paths
 

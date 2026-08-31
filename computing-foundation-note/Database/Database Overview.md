@@ -28,6 +28,7 @@ Databases are not just storage. They're the foundation that determines how fast,
 > [[02 Key-Value & Document]] — Redis (cache/session), MongoDB (flexible schema)
 > [[02 Columnar & Graph]] — Cassandra (wide-column), Neo4j (graph relationships)
 > [[02 Time-Series & Search]] — InfluxDB (metrics), Elasticsearch (full-text)
+> [[02 Vector Databases]] — pgvector, Pinecone, Chroma, FAISS, ANN, HNSW, IVF
 
 ### 03 Database Operations
 
@@ -44,6 +45,7 @@ Databases are not just storage. They're the foundation that determines how fast,
 | Complex queries, transactions, data integrity | PostgreSQL, MySQL (RDBMS) |
 | Flexible schema, rapid iteration, nested documents | MongoDB (Document) |
 | High-throughput caching, sessions, rate limiting | Redis (Key-Value) |
+| Semantic / similarity search, RAG retrieval | pgvector, Pinecone, Chroma (Vector) |
 | Time-series metrics, IoT data | InfluxDB, TimescaleDB |
 | Full-text search | Elasticsearch |
 | Highly connected data (social graphs, recommendations) | Neo4j (Graph) |
