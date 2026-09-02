@@ -1,6 +1,13 @@
 ---
-tags: [prompt-engineering, prompt-injection, security, llm, owasp, defense-in-depth, artificial-intelligence]
-source: "Interview preparation — ITOPPLUS knowledge gaps + OWASP LLM Top 10 2025 + web research 2026"
+tags:
+  - prompt-engineering
+  - prompt-injection
+  - security
+  - llm
+  - owasp
+  - defense-in-depth
+  - artificial-intelligence
+source: Interview preparation
 created: 2026-08-31
 ---
 
@@ -14,13 +21,13 @@ created: 2026-08-31
 
 ### Core Principles
 
-| Principle | What It Means | Example |
+| Principle | What It Means | Example                                                                                                                                        |
 |---|---|---|
 | **Be specific** | Vague prompts produce vague answers | ❌ "Be helpful" → ✅ "Answer using only the provided product catalog. If the product isn't in the catalog, say 'I don't have that information.'" |
-| **Role assignment** | Define the LLM's persona and boundaries | "You are a customer support agent for ITOPPLUS. You answer questions about digital marketing services." |
-| **Output format** | Specify exactly what you want back | "Respond in JSON with fields: answer, confidence, citations" |
-| **Few-shot examples** | Show the model what good answers look like | Include 2-3 example Q&A pairs in the system prompt |
-| **Constraints & rules** | Explicit boundaries the LLM must follow | "Rule 1: Never quote prices not in the context. Rule 2: Decline medical advice. Rule 3: Use Thai for Thai customers." |
+| **Role assignment** | Define the LLM's persona and boundaries | "You are a customer support agent for Mysterious Company. You answer questions about digital marketing services."                              |
+| **Output format** | Specify exactly what you want back | "Respond in JSON with fields: answer, confidence, citations"                                                                                   |
+| **Few-shot examples** | Show the model what good answers look like | Include 2-3 example Q&A pairs in the system prompt                                                                                             |
+| **Constraints & rules** | Explicit boundaries the LLM must follow | "Rule 1: Never quote prices not in the context. Rule 2: Decline medical advice. Rule 3: Use Thai for Thai customers."                          |
 
 ### System Prompt vs User Message
 

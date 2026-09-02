@@ -4,7 +4,7 @@ created: 2026-07-22
 reviewed_scope: "document-template/ (357 templates across 23 categories)"
 standards_checked: "29148, 42010, 12207, 15288, 29119, 828, 730, 1012, 31000, 32675, 25010, 21502, 27001, 14764, 20000-1"
 ---
-
+ 
 # ISO Standards Compliance Review: Document Template Library
 
 > **Purpose:** Audit the `document-template/` library against the ISO/IEEE/IEC standards each template claims to follow, identify gaps, and recommend fixes.

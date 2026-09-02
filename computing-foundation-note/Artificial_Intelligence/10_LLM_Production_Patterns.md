@@ -1,6 +1,13 @@
 ---
-tags: [llm, rag, agents, function-calling, production-patterns, grounding, artificial-intelligence]
-source: "Interview preparation — ITOPPLUS knowledge gaps + web research 2026"
+tags:
+  - llm
+  - rag
+  - agents
+  - function-calling
+  - production-patterns
+  - grounding
+  - artificial-intelligence
+source: Interview preparation
 created: 2026-08-31
 ---
 

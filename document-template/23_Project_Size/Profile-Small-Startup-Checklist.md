@@ -7,7 +7,7 @@ created: "[YYYY-MM-DD]"
 last_updated: "[YYYY-MM-DD]"
 tags: [profile, small-startup, checklist, essential-documents]
 ---
-
+ 
 # Project Profile — Small / Startup — Checklist
 
 > **Team:** 1–5 developers

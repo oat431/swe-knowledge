@@ -1,6 +1,13 @@
 ---
-tags: [llm-evaluation, guardrails, monitoring, offline-eval, online-eval, llm-as-judge, artificial-intelligence]
-source: "Interview preparation — ITOPPLUS knowledge gaps + web research 2026"
+tags:
+  - llm-evaluation
+  - guardrails
+  - monitoring
+  - offline-eval
+  - online-eval
+  - llm-as-judge
+  - artificial-intelligence
+source: Interview preparation
 created: 2026-08-31
 ---
 

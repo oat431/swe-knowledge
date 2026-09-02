@@ -1,6 +1,14 @@
 ---
-tags: [database, vector-database, nosql, embeddings, rag, ann, hnsw, ivf]
-source: "Interview preparation — ITOPPLUS knowledge gaps + web research 2026"
+tags:
+  - database
+  - vector-database
+  - nosql
+  - embeddings
+  - rag
+  - ann
+  - hnsw
+  - ivf
+source: Interview preparation
 created: 2026-08-31
 ---
 

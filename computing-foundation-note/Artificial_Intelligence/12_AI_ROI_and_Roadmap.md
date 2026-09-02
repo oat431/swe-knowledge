@@ -1,6 +1,12 @@
 ---
-tags: [ai-roi, ai-strategy, roadmap, business-value, ai-adoption, artificial-intelligence]
-source: "Interview preparation — ITOPPLUS knowledge gaps + McKinsey, BCG, Gartner research 2026"
+tags:
+  - ai-roi
+  - ai-strategy
+  - roadmap
+  - business-value
+  - ai-adoption
+  - artificial-intelligence
+source: Interview preparation
 created: 2026-08-31
 ---
 
@@ -120,7 +126,7 @@ Define success metrics before building:
 
 ---
 
-## Part III: Where to Apply AI at ITOPPLUS (Example Answer)
+## Part III: Where to Apply AI at [Company] (Example Answer)
 
 > Practice this answer for the interview:
 
