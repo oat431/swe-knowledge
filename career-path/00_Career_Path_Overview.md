@@ -31,7 +31,7 @@ Software engineering is a starting discipline, not a single destination. As expe
 - Leadership of people and organizations
 - Coordination of complex delivery
 - Ownership of products and customer value
-- Specialization in reliability, security, data, quality, or communication
+- Specialization in reliability, security, data, applied AI, quality, or communication
 
 Role names vary between organizations. A **Tech Lead** may be a temporary responsibility, a formal role, or part of a senior engineer's job. A **Staff Engineer** may be an individual-contributor level, while a **Software Architect** may be a role or a title. Read the outcomes and scope of each path rather than relying only on the title.
 
@@ -61,6 +61,7 @@ The next level is not simply better coding. It is broader ownership, stronger ju
 | Specialist engineering           | Security Engineer                          | Can I reduce security risk across the software lifecycle?             | [[career-path/08_Security_Engineer/00_overview                           | Security Engineer]]                           |
 | Specialist engineering           | Data and ML Engineer                       | Can I build reliable data and machine-learning capabilities?          | [[career-path/09_Data_and_ML_Engineer/00_overview                        | Data and ML Engineer]]                        |
 | Specialist engineering           | Quality and Test Engineer                  | Can I improve confidence in software behavior and quality?            | [[career-path/10_Quality_and_Test_Engineering/00_overview                | Quality and Test Engineering]]                |
+| Specialist engineering           | Applied AI Engineer                        | Can I build reliable products on top of foundation models?            | [[career-path/18_Applied_AI_Engineer/00_overview\|Applied AI Engineer]] |
 | People leadership                | Engineering Manager                        | Can I create the conditions for a team to deliver and grow?           | [[career-path/11_Engineering_Manager/00_overview                         | Engineering Manager]]                         |
 | Delivery leadership              | Technical Program Manager                  | Can I coordinate complex technical initiatives across teams?          | [[career-path/12_Technical_Program_Manager/00_overview                   | Technical Program Manager]]                   |
 | Delivery leadership              | Project or Program Manager                 | Can I manage coordinated work toward agreed outcomes?                 | [[career-path/13_Project_and_Program_Manager/00_overview                 | Project and Program Manager]]                 |
@@ -84,6 +85,7 @@ flowchart TD
     SEN --> SEC["Security Engineer"]
     SEN --> DATA["Data and ML Engineer"]
     SEN --> QUALITY["Quality and Test Engineering"]
+    SEN --> AI["Applied AI Engineer"]
 
     SEN --> EM["Engineering Manager"]
     EM --> DIRECTOR["Engineering Director and beyond"]

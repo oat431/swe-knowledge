@@ -89,6 +89,7 @@ flowchart LR
 - [[career-path/08_Security_Engineer/00_overview|Security Engineer]]: data and model protection
 - [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]: cross-team technical influence
 - [[career-path/14_Product_Manager/00_overview|Product Manager]]: data-informed product decisions
+- [[career-path/18_Applied_AI_Engineer/00_overview|Applied AI Engineer]]: application-layer intelligence built on data and ML capabilities
 
 ## Suggested Future Note Route
 
@@ -114,3 +115,4 @@ flowchart LR
 - [[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]
 - [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]]
 - [[career-path/08_Security_Engineer/00_overview|Security Engineer]]
+- [[career-path/18_Applied_AI_Engineer/00_overview|Applied AI Engineer]]
