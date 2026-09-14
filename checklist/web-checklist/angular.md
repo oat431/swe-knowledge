@@ -1,11 +1,11 @@
 # Angular Launch Checklist
 
 > Tick every box before an Angular app hits production. Framework companion to [[Frontend Launch]]. Angular is opinionated — lean into it.
-> Last updated: 2026-08-05
+> Last updated: 2026-09-14 (added Architecture & Code Organization, Real-Time & Live Data, SEO & Metadata — cascade from [[web]])
 
 ---
 
-## Project Setup
+## 1. Project Setup
 
 - [ ] **Angular CLI** — `ng new project --strict --style=scss`. `ng update @angular/cli @angular/core` for upgrades.
 - [ ] **Standalone components** — default since v17. No `NgModule` unless you're migrating legacy code or need `@NgModule` for specific module-scoped providers.
@@ -15,7 +15,21 @@
 
 ---
 
-## Signals (Angular 17+)
+## 2. Architecture & Code Organization
+
+- [ ] **Feature-based folder structure** — Organize by domain (`src/app/features/users/`, `features/orders/`) or an Nx-style workspace with libs (`libs/feature/users`, `libs/shared/ui`). Components, services, models co-located per feature. Not type-based splits at the root (`components/`, `services/`, `models/`) — type-based dies at ~20 files.
+- [ ] **Standalone components + lazy-loaded feature routes** — Each feature exposes one standalone entry component, loaded via `loadComponent` / `loadChildren`. Feature = route = bundle boundary.
+- [ ] **Dependency rule points inward** — Domain libs (models, business logic, types) never import UI libs. UI imports from domain, never the reverse (Clean Architecture).
+- [ ] **Module boundaries enforced in CI** — `eslint-plugin-boundaries`, or Nx `enforce-module-boundaries` with lib tags (`type:feature`, `scope:users`). Nothing imports upward or sideways across features except through the public export.
+- [ ] **Limited barrel files** — One `public-api.ts` per lib (Nx convention) or `index.ts` per feature boundary at most. Deep-import within a feature. Barrels everywhere drag whole libs into bundles and kill tree-shaking.
+- [ ] **Shared code promoted on third use** — Don't abstract on first or second use. Promote into a `shared/` or `feature/` lib: validated types, API client, guards, design tokens, utils — not speculative "common" components.
+- [ ] **Specs co-located** — `user-card.component.spec.ts` next to `user-card.component.ts`. The CLI scaffolds it this way by default; keep it.
+- [ ] **API types generated, not hand-written** — `openapi-typescript`, orval, or `ng-openapi-gen` from the backend's OpenAPI spec. Hand-maintained response interfaces drift.
+- [ ] **Angular 17+ control flow syntax** — `@if` / `@for` / `@switch` everywhere. No legacy `*ngIf` / `*ngFor` in new code — consistent templates, smaller generated output.
+
+---
+
+## 3. Signals (Angular 17+)
 
 - [ ] **`signal()` over `BehaviorSubject`** — reactive state within components and services. `count = signal(0)`. Read: `count()`. Set: `count.set(5)`. Update: `count.update(v => v + 1)`.
 - [ ] **`computed()`** — derived state. `doubleCount = computed(() => this.count() * 2)`. Lazy, memoized, auto-tracks deps.
@@ -27,7 +41,7 @@
 
 ---
 
-## State Management
+## 4. State Management
 
 - [ ] **Signals for local state** — component-level state: `signal()`, `computed()`. No store needed for UI state.
 - [ ] **NgRx SignalStore** — for global state. Lightweight, signal-based. `withState`, `withComputed`, `withMethods`. Replaces classic `@ngrx/store` (RxJS-based).
@@ -37,7 +51,7 @@
 
 ---
 
-## Components
+## 5. Components
 
 - [ ] **`OnPush` change detection** — default. Signals + `OnPush` = optimal rendering. `markForCheck()` only when needed.
 - [ ] **Control flow syntax** — `@if`, `@for`, `@switch` in templates. No more `*ngIf`, `*ngFor`. `@for (item of items; track item.id)` — track is mandatory in v17+.
@@ -48,7 +62,7 @@
 
 ---
 
-## Dependency Injection
+## 6. Dependency Injection
 
 - [ ] **`inject()` function** — replace constructor injection. `private userService = inject(UserService)`. Works anywhere in injection context (components, services, guards, interceptors, directives, pipes).
 - [ ] **`providedIn: 'root'`** — tree-shakable singleton services. `@Injectable({ providedIn: 'root' })`. No `providers: []` in NgModule.
@@ -57,7 +71,7 @@
 
 ---
 
-## Routing
+## 7. Routing
 
 - [ ] **Standalone routing** — `provideRouter(routes)`. `Routes = [{ path: '', component: HomeComponent }]`. Lazy: `loadComponent: () => import('./home.component').then(m => m.HomeComponent)`.
 - [ ] **Route guards as functions** — `canActivate: [() => inject(AuthService).isLoggedIn()]`. `inject()` in guards.
@@ -68,7 +82,21 @@
 
 ---
 
-## Forms
+## 8. SEO & Metadata
+
+- [ ] **SSR or SSG for public indexable pages** — Angular Universal (`ng add @angular/ssr`) with `provideServerRendering()`, or prerender (`ng build --prerender`) for static marketing/docs pages. CSR-only content is invisible to some crawlers and to social unfurlers. Verify with "View source" (not DevTools).
+- [ ] **`Meta` and `Title` services** — Inject Angular's `Title` / `Meta` in a per-route service, or drive titles from route `data` + `title` property on routes. Unique `<title>` (50–60 chars) and `<meta name="description">` (140–160) per page, generated from data — never hard-coded strings.
+- [ ] **Open Graph + Twitter cards** — `og:title`, `og:description`, `og:image` (1200×630), `twitter:card` via `Meta.addTag`. Test unfurls in Slack/Discord/X validators before launch.
+- [ ] **Structured data (JSON-LD)** — `Organization`, `Product`, `Article`, `BreadcrumbList`, `FAQPage` where applicable. Inject `<script type="application/ld+json">` via `DomSanitizer.bypassSecurityTrustScript` or `Renderer2` — never string-concatenate untrusted data into it. Validate with Google Rich Results Test.
+- [ ] **`robots.txt` + `sitemap.xml` generated at build** — Auto-generated sitemap with `lastmod`; referenced in robots.txt. An Angular build step or server route emits them — not hand-maintained.
+- [ ] **hreflang for multi-locale** — Correct language/region pairs, self-referencing entries, `x-default`. Only when i18n exists (Angular i18n builds or `@ngx-translate`).
+- [ ] **Indexability control** — `noindex` on authenticated, duplicate, parameterized, and staging pages. Staging behind auth + `X-Robots-Tag: noindex` (never rely on robots.txt alone).
+- [ ] **Search Console + Bing Webmaster** — Registered, sitemap submitted, crawl errors and 404s monitored after launch.
+- [ ] **Core Web Vitals are SEO** — LCP/INP/CLS thresholds are ranking inputs. Lighthouse SEO audit in CI; metadata lint (unique titles, canonical present) for critical routes.
+
+---
+
+## 9. Forms
 
 - [ ] **Reactive forms** — `FormGroup`, `FormControl`, `FormBuilder`. `form = this.fb.group({ email: ['', [Validators.required, Validators.email]]) }`. Type with `FormGroup<{ email: FormControl<string> }>` for strict typing.
 - [ ] **Signals with forms** — `form.valueChanges.pipe(takeUntilDestroyed())`. Or `toSignal(form.valueChanges)` for signal-based consumption.
@@ -79,7 +107,7 @@
 
 ---
 
-## HTTP & API
+## 10. HTTP & API
 
 - [ ] **`provideHttpClient(withInterceptors([authInterceptor]))`** — functional interceptors. `(req: HttpRequest<unknown>, next: HttpHandlerFn) => ...`.
 - [ ] **`httpResource()` (experimental)** — signal-based HTTP. `users = httpResource<User[]>('/api/users')`. Auto-tracks deps, refetch on signal change, loading/error states.
@@ -88,7 +116,23 @@
 
 ---
 
-## Styling
+## 11. Real-Time & Live Data
+
+- [ ] **SSE vs WebSocket** — SSE for one-way server→client streams (notifications, activity feeds, LLM tokens). WebSocket only for bidirectional (chat, collaboration, presence). Default to SSE — simpler, works over HTTP/2, auto-reconnects natively.
+- [ ] **RxJS as the backbone** — `WebSocketSubject` from `rxjs/webSocket` with reconnect config, or `EventSource` wrapped in `new Observable` / `fromEvent`. Compose live streams with `retryWhen`/`retry({ delay })`, `throttleTime`, `bufferTime` — this is Angular's home turf, use it.
+- [ ] **Events write into the server-state cache** — Real-time messages update the TanStack Query Angular cache (`queryClient.setQueryData` / `invalidateQueries`) or a signal-based store (`NgRx SignalStore`, `signal()`). Never a parallel component-local copy of live data — one source of truth.
+- [ ] **Reconnection with backoff + jitter** — Exponential backoff with jitter so a server restart doesn't cause a thundering herd. `Last-Event-ID` (SSE) or resume token (WS) so reconnects don't duplicate or drop messages.
+- [ ] **Ordering & dedup** — Sequence numbers on server events; dedupe by event ID client-side. Chatty streams: batch UI updates with `auditTime`/`bufferTime` (backpressure).
+- [ ] **Optimistic + server-authoritative** — Optimistic UI for the user's own actions, reconciled on server ack. Server wins on conflict.
+- [ ] **Auth over the channel** — Cookie-authenticated SSE/WS. Never a token in the query string (leaks into logs).
+- [ ] **Cleanup** — Unsubscribe on destroy: `takeUntilDestroyed()` (injection context) or `AsyncPipe` in templates. Close sockets on route change. No zombie connections.
+- [ ] **`AsyncPipe` or signals in templates** — Render live observables with `| async` or convert with `toSignal()`. Never manual `.subscribe()` in a component writing to a plain field without cleanup — change detection and leaks both suffer.
+- [ ] **SSR caveat** — Sockets/`EventSource` don't exist on the server. Guard subscriptions with `isPlatformBrowser` / `afterNextRender`, or open connections only client-side after hydration.
+- [ ] **Scale awareness** — WS doesn't scale on serverless hosts — use SSE, Pusher/Ably, or a dedicated WS server. Per-connection server cost; pub/sub fan-out via Valkey/Redis on the backend; polling fallback when proxies block WS.
+
+---
+
+## 12. Styling
 
 - [ ] **`styleUrl` / `styles`** — component-scoped by default (emulated shadow DOM). `ViewEncapsulation.None` only when needed.
 - [ ] **Tailwind CSS** — `@tailwindcss/postcss`. Works with Angular CLI natively. `ng add @angular-builders/custom-webpack` if needed.
@@ -98,7 +142,7 @@
 
 ---
 
-## Testing
+## 13. Testing
 
 - [ ] **Jasmine / Karma** — default. `ng test`. Or Jest via `@angular-builders/jest` (faster, parallel).
 - [ ] **Component tests** — `TestBed.configureTestingModule({ imports: [MyComponent] }).compileComponents()`. `fixture.componentInstance`, `fixture.detectChanges()`.
@@ -109,7 +153,7 @@
 
 ---
 
-## Security
+## 14. Security
 
 - [ ] **No `bypassSecurityTrustHtml`** unless absolutely forced — and only with DOMPurify first.
 - [ ] **`DomSanitizer`** — Angular sanitizes `[innerHTML]` by default. Don't bypass it.
@@ -119,7 +163,7 @@
 
 ---
 
-## Performance
+## 15. Performance
 
 - [ ] **AOT compilation** — default in production. Verify: `ng build --configuration production`.
 - [ ] **Tree-shaking** — `providedIn: 'root'` services. Standalone components. Only imported code ships.
@@ -131,7 +175,7 @@
 
 ---
 
-## Build & Deploy
+## 16. Build & Deploy
 
 - [ ] **`ng build --configuration production`** — AOT, minification, dead code elimination, service worker if configured.
 - [ ] **`@angular/pwa`** — `ng add @angular/pwa`. Service worker, manifest, offline support. `ngsw-config.json` for cache strategy.
@@ -140,7 +184,7 @@
 - [ ] **`@ngx-translate` or Angular i18n** — i18n built-in since Angular 9. `ng extract-i18n`. Or `@ngx-translate/core` for runtime switching.
 - [ ] **Environment configs** — `fileReplacements` in `angular.json`. `environment.ts` → `environment.prod.ts` at build time.
 
-## AI/LLM Integration
+## 17. AI/LLM Integration
 
 - [ ] **HTTP streaming** — `HttpClient` with `responseType: 'text'` + `reportProgress` or fetch-based `ReadableStream` parsing for SSE. Or `@microsoft/fetch-event-source` for robust event-stream handling.
 - [ ] **Never expose provider keys** — Everything in Angular ships to the browser. LLM calls go through your backend (or Angular SSR server routes). Keys stay server-side.
@@ -150,7 +194,7 @@
 - [ ] **Non-chat AI calls** — RxJS `switchMap` for debounced AI calls, or TanStack Query Angular with `injectQuery`. Cache identical prompts.
 - [ ] **Graceful degradation** — Error state with retry, cached fallback, "AI can be wrong" disclaimers where user-facing. Rate-limit UX on 429.
 
-## Data Privacy & Compliance (Frontend-Specific)
+## 18. Data Privacy & Compliance (Frontend-Specific)
 
 - [ ] **Error monitoring scrubbing** — Sentry `beforeSend` strips PII (emails, tokens, form values) from error payloads.
 - [ ] **Cookie consent** — GDPR/CCPA banner before analytics fire. Load analytics only after opt-in (or cookieless: Plausible, Umami).
@@ -226,20 +270,23 @@ flowchart TD
 | # | Section | 🧪 POC | 🔧 Prototype | 🏠 Internal | 🟢 Small Prod | 🔵 Medium Prod | 🟣 Production Grade | 🔴 Mission-Critical |
 |---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 1 | Project Setup | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 2 | Signals (Angular 17+) | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 3 | State Management | 🟡 | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 4 | Components | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 5 | Dependency Injection | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 6 | Routing | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 7 | Forms | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + audit trail |
-| 8 | HTTP & API | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 9 | Styling | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + design system |
-| 10 | Testing | ❌ maybe smoke | 🟡 unit | ✅ + component | ✅ + E2E | ✅ + visual reg | ✅ + a11y in CI | ✅ + formal verification |
-| 11 | Security (Frontend) | 🟡 no secrets | 🟡 essentials | ✅ | ✅ + CSP | ✅ + pentest | ✅ + hardened | ✅ + formal audit |
-| 12 | Performance | ❌ | 🟡 basic CWV | ✅ | ✅ + budgets | ✅ + profiling | ✅ + SLO | ✅ + capacity |
-| 13 | Build & Deploy | ❌ | 🟡 basic build | ✅ + CI | ✅ + previews | ✅ + canary + flags | ✅ + full pipeline | ✅ + signed artifacts |
-| 14 | AI/LLM Integration | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
-| 15 | Data Privacy & Compliance | ❌ | ❌ | 🟡 minimal | ✅ consent + PII | ✅ + DPA | ✅ full compliance | ✅ + regulatory framework |
+| 2 | Architecture & Code Organization | 🟡 | 🟡 | ✅ | ✅ | ✅ + boundaries | ✅ + enforced CI | ✅ + formal review |
+| 3 | Signals (Angular 17+) | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 4 | State Management | 🟡 | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 5 | Components | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 6 | Dependency Injection | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 7 | Routing | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 8 | SEO & Metadata | ❌ | 🟡 if public | 🟡 if public | ✅ if public | ✅ | ✅ + structured data | ✅ |
+| 9 | Forms | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + audit trail |
+| 10 | HTTP & API | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 11 | Real-Time & Live Data | ❌ | 🟡 if used | 🟡 if used | ✅ if used | ✅ + scale | ✅ + load testing | ✅ + HA/failover |
+| 12 | Styling | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + design system |
+| 13 | Testing | ❌ maybe smoke | 🟡 unit | ✅ + component | ✅ + E2E | ✅ + visual reg | ✅ + a11y in CI | ✅ + formal verification |
+| 14 | Security (Frontend) | 🟡 no secrets | 🟡 essentials | ✅ | ✅ + CSP | ✅ + pentest | ✅ + hardened | ✅ + formal audit |
+| 15 | Performance | ❌ | 🟡 basic CWV | ✅ | ✅ + budgets | ✅ + profiling | ✅ + SLO | ✅ + capacity |
+| 16 | Build & Deploy | ❌ | 🟡 basic build | ✅ + CI | ✅ + previews | ✅ + canary + flags | ✅ + full pipeline | ✅ + signed artifacts |
+| 17 | AI/LLM Integration | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
+| 18 | Data Privacy & Compliance | ❌ | ❌ | 🟡 minimal | ✅ consent + PII | ✅ + DPA | ✅ full compliance | ✅ + regulatory framework |
 
 ---
 

@@ -1,11 +1,11 @@
 # Vue Launch Checklist
 
 > Tick every box before a Vue 3 app hits production. For Nuxt-specific items, see the Nuxt section. Framework companion to [[Frontend Launch]].
-> Last updated: 2026-08-05
+> Last updated: 2026-09-14 (added Architecture & Code Organization, Real-Time & Live Data, SEO & Metadata — cascade from [[web]])
 
 ---
 
-## Project Setup
+## 1. Project Setup
 
 - [ ] **Vite + Vue 3.5+** — `create-vue` (official scaffold). Composition API + `<script setup>` by default.
 - [ ] **TypeScript strict** — `tsconfig.json`: `strict: true`. `vue-tsc` for type checking `.vue` files (slower but safer).
@@ -15,7 +15,21 @@
 
 ---
 
-## Composition API & Script Setup
+## 2. Architecture & Code Organization
+
+- [ ] **Feature-based folders** — Organize by domain (`src/features/users/`, `src/features/orders/`) with components, composables, api, and stores co-located per feature. Nuxt `pages/` stay thin — they compose feature components, they don't contain business logic. Type-based (`components/`, `composables/` split at root) dies at ~20 files.
+- [ ] **Module boundaries enforced in CI** — `eslint-plugin-boundaries` or `dependency-cruiser`: `shared/` → `features/` → app-shell. Nothing imports upward or sideways across features except through a feature's public export.
+- [ ] **Dependency rule points inward** — Domain logic, types, and Zod schemas don't import Vue, Nuxt, or UI details. Components and composables import from logic, never the reverse.
+- [ ] **Limited barrel files** — One `index.ts` per feature public boundary at most. Deep-import within a feature. Barrels drag whole libraries into client bundles and kill tree-shaking.
+- [ ] **Shared code promoted on third use** — Don't abstract on first or second use. `shared/` (or `packages/shared` in a monorepo) holds validated types, API client, Zod schemas, design tokens, utils — not speculative "common" components.
+- [ ] **Nuxt layers & directory boundaries** — `composables/` = logic, `components/` = UI, `server/` = API; server code never imports from the app side. Nuxt layers (`extends`) share config/components/modules across apps without copy-paste.
+- [ ] **Tests co-located** — `UserCard.test.ts` next to `UserCard.vue`. Vitest picks them up by convention.
+- [ ] **API types generated, not hand-written** — `openapi-typescript` / orval from the backend's OpenAPI spec. Hand-maintained response types drift.
+- [ ] **Nuxt auto-import caveats** — Auto-imports hide dependencies and break when code moves into shared packages or libraries. Explicit imports in `shared/` and anything extracted from the app. Auto-imports only scan certain directories (`composables/`, `utils/`, `components/`) — files nested deeper or elsewhere need manual imports.
+
+---
+
+## 3. Composition API & Script Setup
 
 - [ ] **`<script setup lang="ts">`** — default. No `setup()` function boilerplate.
 - [ ] **`ref` vs `reactive`** — `ref()` for primitives and single values. `reactive()` only for objects with known shape (rare — `ref` with object works fine).
@@ -28,7 +42,7 @@
 
 ---
 
-## State Management
+## 4. State Management
 
 - [ ] **Pinia** — official state management. `defineStore('name', () => { ... })`. Setup stores (composition-style) over options stores.
 - [ ] **TanStack Query (Vue Query)** — for all server state. `useQuery`, `useMutation`. Namespaced keys: `['users', userId]`.
@@ -38,7 +52,21 @@
 
 ---
 
-## Routing (Vue Router 4)
+## 5. Real-Time & Live Data
+
+- [ ] **SSE vs WebSocket** — SSE for one-way server→client streams (notifications, activity feeds, LLM tokens) — trivial in a Nitro server route. WebSocket (Socket.IO, Pusher, Ably) only for bidirectional (chat, collaboration, presence). Default to SSE — simpler, works over HTTP/2, auto-reconnects natively.
+- [ ] **Events write into the server-state cache** — On message: TanStack Query Vue `queryClient.setQueryData(key, merge)` or `invalidateQueries(key)` — or in Nuxt, update `useState` / call `useAsyncData`'s `refresh()`. Never a parallel `ref()` copy of live data — one source of truth.
+- [ ] **Reconnection with backoff + resume** — Exponential backoff with jitter. `Last-Event-ID` (SSE) or resume token (WS) so a reconnect doesn't duplicate or drop messages. Browser `EventSource` auto-reconnects; custom WS clients don't.
+- [ ] **Ordering & dedup** — Sequence numbers on server events, client dedupes by event ID. Chatty streams: batch/throttle reactive UI updates (backpressure).
+- [ ] **Optimistic + server-authoritative** — Optimistic UI for the user's own actions, reconciled on server ack. Server wins on conflict.
+- [ ] **Auth over the channel** — Cookie-authenticated SSE/WS. Never a token in the query string (leaks into logs).
+- [ ] **Cleanup in `onUnmounted` / `onScopeDispose`** — Close the socket, remove listeners, call `AbortController.abort()`. Composables register teardown with `onScopeDispose` so cleanup works in any effect scope, not just components. No zombie connections after route changes.
+- [ ] **SSE via Nitro server routes** — `server/api/` with h3's `createEventStream` + `defineEventHandler`. Correct `text/event-stream` headers, no proxy buffering.
+- [ ] **Scale awareness** — WS doesn't scale on serverless (Vercel/Netlify functions) — use SSE, Pusher/Ably, or a dedicated WS server. Per-connection server cost; pub/sub fan-out via Valkey/Redis; fallback to polling when proxies block WS.
+
+---
+
+## 6. Routing (Vue Router 4)
 
 - [ ] **`createRouter` with `createWebHistory`** — HTML5 history mode. No hash unless legacy support needed.
 - [ ] **Route meta** — `meta: { requiresAuth: true, title: 'Dashboard' }`. Navigation guards check `route.meta`.
@@ -49,7 +77,22 @@
 
 ---
 
-## Styling
+## 7. SEO & Metadata
+
+- [ ] **`useHead` / `useSeoMeta`** — Nuxt composables for per-page meta (SSR-safe, reactive). `@unhead/vue` for plain Vite SPAs. `<Title>`, `<Meta>`, `<Link>` components for declarative head in templates.
+- [ ] **Crawlability first** — CSR-only content is invisible to some crawlers and to social unfurlers. SSR or prerender public, indexable pages (`nitro.prerender`, `routeRules` with `swr`/`isr`). Verify with "View source" (not DevTools) that content is in the initial HTML.
+- [ ] **Metadata per route** — Unique `<title>` (50–60 chars), `<meta name="description">` (140–160), canonical URL. Generated from route/page data via `useSeoMeta`, never hard-coded strings.
+- [ ] **Open Graph + Twitter cards** — `og:title`, `og:description`, `og:image` (1200×630), `twitter:card` — `useSeoMeta` covers most of it. Test unfurls in Slack/Discord/X validators before launch.
+- [ ] **Structured data (JSON-LD)** — Inject via `useHead({ script: [{ type: 'application/ld+json', innerHTML: JSON.stringify(schema) }] }`. `Organization`, `Product`, `Article`, `BreadcrumbList`, `FAQPage` where applicable. Validate with Google Rich Results Test; only mark up content visible on the page.
+- [ ] **`robots.txt` + XML sitemap** — `@nuxtjs/sitemap` module (auto-generated with `lastmod`); sitemap referenced in robots.txt. Segmented sitemaps for large sites (> 50K URLs per file).
+- [ ] **hreflang for multi-locale** — With `@nuxtjs/i18n`: correct language/region pairs, self-referencing entries, `x-default`. Only when i18n exists.
+- [ ] **Indexability control** — `noindex` on authenticated, duplicate, parameterized, and staging pages. Staging behind auth + `X-Robots-Tag: noindex` (never rely on robots.txt alone to hide content).
+- [ ] **Search Console + Bing Webmaster** — Registered, sitemap submitted, crawl errors and 404s monitored after launch.
+- [ ] **Core Web Vitals are SEO** — LCP/INP/CLS thresholds are ranking inputs. Lighthouse SEO audit in CI; metadata lint (unique titles, canonical present) for critical routes.
+
+---
+
+## 8. Styling
 
 - [ ] **UnoCSS** or **Tailwind CSS** — UnoCSS is faster, smaller, Vue-native. Tailwind has larger ecosystem. Pick one.
 - [ ] **`<style scoped>`** — component-scoped styles. No leakage. `:deep()` for child component styling.
@@ -59,7 +102,7 @@
 
 ---
 
-## Performance
+## 9. Performance
 
 - [ ] **`<Suspense>`** — async component loading with fallback. Still experimental but stable in 3.5+.
 - [ ] **`<KeepAlive>`** — cache component instances. Preserve form state across tab switches.
@@ -71,7 +114,7 @@
 
 ---
 
-## Forms
+## 10. Forms
 
 - [ ] **vee-validate + zod** — `useForm({ validationSchema: toFormValidator(schema) })`. Field-level errors. `ErrorMessage` component or `errorMessage` from `useField`.
 - [ ] **Server-side validation too** — Zod schema on both ends if possible. Client = UX, server = security.
@@ -79,7 +122,7 @@
 
 ---
 
-## Composables (Reusable Logic)
+## 11. Composables (Reusable Logic)
 
 - [ ] **`useFetch` / `useAsyncData`** — wrapped TanStack Query or custom composable with loading/error/data states.
 - [ ] **VueUse** — `useStorage`, `useDark`, `useToggle`, `useDebounceFn`, `useThrottleFn`. Don't write your own.
@@ -87,7 +130,7 @@
 
 ---
 
-## Testing
+## 12. Testing
 
 - [ ] **Vitest** — fast, Vite-native. `@vue/test-utils` for component mounting.
 - [ ] **Component tests** — `mount(Component, { props, slots })`. `wrapper.find()`, `wrapper.emitted()`. Test behavior, not implementation.
@@ -97,7 +140,7 @@
 
 ---
 
-## Accessibility
+## 13. Accessibility
 
 - [ ] Semantic HTML — `<button>` for actions, `<nav>` for nav. Vue templates are HTML-first — use it.
 - [ ] `v-bind` for ARIA — `:aria-expanded="isOpen"`, `:aria-label="'Close ' + title"`.
@@ -107,7 +150,7 @@
 
 ---
 
-## Security
+## 14. Security
 
 - [ ] No `v-html` without sanitization — use `DOMPurify.sanitize(userContent)`.
 - [ ] No secrets in `VITE_*` env vars — these ship to the browser.
@@ -116,7 +159,7 @@
 
 ---
 
-## Nuxt 3 (SSR / Full-Stack)
+## 15. Nuxt 3 (SSR / Full-Stack)
 
 - [ ] **Nuxt modules** — `@nuxt/image`, `@nuxt/fonts`, `@nuxt/scripts`, `nuxt-security`. Don't DIY.
 - [ ] **`useFetch` / `useAsyncData`** — built-in. Auto-deduped, cached, SSR-safe. Replaces manual `fetch` + `useState`.
@@ -125,7 +168,7 @@
 - [ ] **Hybrid rendering** — `routeRules: { '/blog/**': { swr: 3600 }, '/admin/**': { ssr: false } }`. Per-route rendering strategy.
 - [ ] **`useHead` composable** — per-page meta. `<Title>`, `<Meta>`, `<Link>`, `<Script>` components for declarative head.
 
-## AI/LLM Integration
+## 16. AI/LLM Integration
 
 - [ ] **Vercel AI SDK Vue** — `@ai-sdk/vue` `useChat` composable for chat UIs. Server route (`server/api/chat.ts` in Nuxt) streams with `streamText` + `toDataStreamResponse()`.
 - [ ] **Never expose provider keys** — `VITE_*` / `NUXT_PUBLIC_*` ship to the browser. All LLM calls go through server routes or your backend. Keys live in server-only env (`NUXT_SECRET_*` / `.env` server-side).
@@ -135,7 +178,7 @@
 - [ ] **Non-chat AI calls** — TanStack Query (Vue Query) mutations with loading/error states. Cache identical prompts (response dedup). Debounce expensive AI calls.
 - [ ] **Graceful degradation** — Error state with retry, cached fallback, "AI can be wrong" disclaimers where user-facing. Rate-limit UX on 429.
 
-## Data Privacy & Compliance (Frontend-Specific)
+## 17. Data Privacy & Compliance (Frontend-Specific)
 
 - [ ] **Error monitoring scrubbing** — Sentry `beforeSend` strips PII (emails, tokens, form values) from error payloads.
 - [ ] **Cookie consent** — GDPR/CCPA banner before analytics fire. Load Plausible/Umami/PostHog only after opt-in.
@@ -209,19 +252,22 @@ flowchart TD
 | # | Section | 🧪 POC | 🔧 Prototype | 🏠 Internal | 🟢 Small Prod | 🔵 Medium Prod | 🟣 Production Grade | 🔴 Mission-Critical |
 |---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 1 | Project Setup | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 2 | Composition API & Script Setup | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 3 | State Management | 🟡 | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 4 | Routing (Vue Router 4) | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 5 | Styling | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + design system |
-| 6 | Performance | ❌ | 🟡 basic CWV | ✅ | ✅ + budgets | ✅ + profiling | ✅ + SLO | ✅ + capacity |
-| 7 | Forms | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + audit trail |
-| 8 | Composables | ❌ | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 9 | Testing | ❌ maybe smoke | 🟡 unit | ✅ + component | ✅ + E2E | ✅ + visual reg | ✅ + a11y in CI | ✅ + formal verification |
-| 10 | Accessibility | ❌ | 🟡 basics | ✅ | ✅ WCAG AA | ✅ + audits | ✅ + WCAG AA certified | ✅ + legal/regulatory |
-| 11 | Security (Frontend) | 🟡 no secrets | 🟡 essentials | ✅ | ✅ + CSP | ✅ + pentest | ✅ + hardened | ✅ + formal audit |
-| 12 | Nuxt 3 (SSR / Full-Stack) | ❌ SPA only | 🟡 | ✅ if SSR | ✅ | ✅ | ✅ | ✅ |
-| 13 | AI/LLM Integration | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
-| 14 | Data Privacy & Compliance | ❌ | ❌ | 🟡 minimal | ✅ consent + PII | ✅ + DPA | ✅ full compliance | ✅ + regulatory framework |
+| 2 | Architecture & Code Organization | 🟡 | 🟡 | ✅ | ✅ | ✅ + boundaries | ✅ + enforced CI | ✅ + formal review |
+| 3 | Composition API & Script Setup | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 4 | State Management | 🟡 | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 5 | Real-Time & Live Data | ❌ | 🟡 if used | 🟡 if used | ✅ if used | ✅ + scale | ✅ + load testing | ✅ + HA/failover |
+| 6 | Routing (Vue Router 4) | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 7 | SEO & Metadata | ❌ | 🟡 if public | 🟡 if public | ✅ if public | ✅ | ✅ + structured data | ✅ |
+| 8 | Styling | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + design system |
+| 9 | Performance | ❌ | 🟡 basic CWV | ✅ | ✅ + budgets | ✅ + profiling | ✅ + SLO | ✅ + capacity |
+| 10 | Forms | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + audit trail |
+| 11 | Composables | ❌ | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 12 | Testing | ❌ maybe smoke | 🟡 unit | ✅ + component | ✅ + E2E | ✅ + visual reg | ✅ + a11y in CI | ✅ + formal verification |
+| 13 | Accessibility | ❌ | 🟡 basics | ✅ | ✅ WCAG AA | ✅ + audits | ✅ + WCAG AA certified | ✅ + legal/regulatory |
+| 14 | Security (Frontend) | 🟡 no secrets | 🟡 essentials | ✅ | ✅ + CSP | ✅ + pentest | ✅ + hardened | ✅ + formal audit |
+| 15 | Nuxt 3 (SSR / Full-Stack) | ❌ SPA only | 🟡 | ✅ if SSR | ✅ | ✅ | ✅ | ✅ |
+| 16 | AI/LLM Integration | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
+| 17 | Data Privacy & Compliance | ❌ | ❌ | 🟡 minimal | ✅ consent + PII | ✅ + DPA | ✅ full compliance | ✅ + regulatory framework |
 
 ---
 

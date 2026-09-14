@@ -1,11 +1,11 @@
 # Svelte Launch Checklist
 
 > Tick every box before a Svelte 5 app hits production. Framework companion to [[Frontend Launch]]. Svelte 5 introduced runes — reactive state without `$:` or stores.
-> Last updated: 2026-08-05
+> Last updated: 2026-09-14 (added Architecture & Code Organization, Real-Time & Live Data, SEO & Metadata — cascade from [[web]])
 
 ---
 
-## Project Setup
+## 1. Project Setup
 
 - [ ] **SvelteKit** — `npx sv create`. SvelteKit is to Svelte what Next.js is to React. Use it for everything except embeddable widgets.
 - [ ] **TypeScript** — `lang="ts"` in `<script>` blocks. `svelte.config.js`: `vitePlugin: { inspector: true }` for devtools.
@@ -15,7 +15,21 @@
 
 ---
 
-## Runes (Svelte 5 Reactivity)
+## 2. Architecture & Code Organization
+
+- [ ] **Feature-based folders** — `src/lib/features/users/`, `src/lib/features/orders/` with components, stores, api, and Zod schemas co-located per feature. Routes in `src/routes/` stay thin — thin `+load` server functions, `+page.svelte` composes feature modules, no business logic in components.
+- [ ] **`$lib` alias discipline** — `$lib` → `src/lib`. Shared code in `$lib/shared`, features in `$lib/features`. No deep relative imports (`../../../`) crossing feature boundaries.
+- [ ] **Module boundaries enforced in CI** — `eslint-plugin-boundaries` or `dependency-cruiser`: `$lib/shared` → `$lib/features` → `src/routes`. Nothing imports upward or sideways across features except through the feature's public export.
+- [ ] **Dependency rule points inward** — Pure TS domain modules (logic, types, Zod schemas) never import Svelte or SvelteKit. Components import from logic, never the reverse.
+- [ ] **Limited barrel files** — One `index.ts` per feature public boundary at most. Deep-import within a feature. Barrels hurt tree-shaking and slow down Vite HMR.
+- [ ] **Shared code promoted on third use** — Don't abstract on first or second use. `$lib/shared` holds API client, generated types, schemas, design tokens, utils — not speculative "common" components.
+- [ ] **Tests co-located** — `user-card.test.ts` next to `UserCard.svelte`. Vitest + `@testing-library/svelte` pick them up by convention.
+- [ ] **API types generated, not hand-written** — `openapi-typescript` / orval from the backend's OpenAPI spec. SvelteKit also generates `./$types` (`PageData`, `LayoutData`) for load data — use it instead of hand-maintained response types that drift.
+
+---
+
+
+## 3. Runes (Svelte 5 Reactivity)
 
 - [ ] **`$state()`** — reactive variable. `let count = $state(0)`. Any reassignment triggers reactivity. Works in `.svelte`, `.svelte.ts`, `.svelte.js`.
 - [ ] **`$derived()`** — computed value. `let double = $derived(count * 2)`. Auto-tracks deps. Lazy — only recomputed when read.
@@ -27,7 +41,7 @@
 
 ---
 
-## State Management
+## 4. State Management
 
 - [ ] **Runes for local state** — `$state()` in components, `$state()` in `.svelte.ts` modules. No store library needed for most cases.
 - [ ] **Shared state** — export `$state` from `.svelte.ts` files. Import anywhere. Truly reactive cross-component state without stores or context APIs.
@@ -37,7 +51,7 @@
 
 ---
 
-## SvelteKit — Routing & Data Loading
+## 5. SvelteKit — Routing & Data Loading
 
 - [ ] **File-based routing** — `src/routes/` directory. `+page.svelte` for UI, `+page.ts` for data loading, `+layout.svelte` for persistent layouts.
 - [ ] **`load` functions** — `+page.ts`: `export async function load({ params, fetch, url }) { return { user: await fetchUser(params.id) } }`. Data flows to `+page.svelte` via `let { data } = $props()`.
@@ -49,7 +63,22 @@
 
 ---
 
-## Components
+## 6. Real-Time & Live Data
+
+- [ ] **SSE vs WebSocket** — SSE for one-way server→client streams (notifications, activity feeds, LLM tokens) — trivial in a SvelteKit `+server.ts` route returning a `ReadableStream`. WebSocket only for bidirectional (chat, collaboration, presence). Default to SSE — simpler, works over HTTP/2, auto-reconnects natively.
+- [ ] **Events write into the server-state cache** — On message: update the TanStack Query Svelte cache (`queryClient.setQueryData` / `invalidateQueries`) or call `invalidateAll()` so `$page.data` refreshes. Never a parallel store copy of live data — one source of truth.
+- [ ] **Runes for ephemeral socket UI state** — Svelte 5 `$state()` for connection status, unread counts, typing indicators; `$derived()` for computed views of the stream; `$effect()` for subscribe/unsubscribe side effects.
+- [ ] **Reconnection with backoff + resume** — Exponential backoff with jitter. `Last-Event-ID` (SSE) or resume token (WS) so a reconnect doesn't duplicate or drop messages. Browser `EventSource` auto-reconnects; custom WS clients don't.
+- [ ] **Ordering & dedup** — Sequence numbers on server events, client dedupes by event ID. Chatty streams: batch/throttle UI updates (backpressure).
+- [ ] **Optimistic + server-authoritative** — Optimistic UI for the user's own actions, reconciled on server ack. Server wins on conflict.
+- [ ] **Auth over the channel** — Cookie-authenticated SSE/WS; SvelteKit's `handle()` hook in `hooks.server.ts` is the natural auth point. Never a token in the query string (leaks into logs).
+- [ ] **Cleanup** — Close the socket in `onDestroy` (or the `onMount` return function), remove listeners, call `AbortController.abort()`. No zombie connections after route changes.
+- [ ] **Scale awareness** — WebSockets don't scale on serverless adapters — use SSE, Pusher/Ably, or `adapter-node` / a dedicated WS server. Pub/sub fan-out via Valkey/Redis on the backend.
+
+---
+
+
+## 7. Components
 
 - [ ] **Template syntax** — `{#if}`, `{#each items as item (item.id)}`, `{#await promise}`, `{#snippet name()}...{/snippet}`. No JSX — HTML-first.
 - [ ] **`{@render}`** — render snippets or components. `{@render children()}`. Replaces `<slot>` (Svelte 4).
@@ -60,7 +89,7 @@
 
 ---
 
-## Styling
+## 8. Styling
 
 - [ ] **Tailwind CSS** — works natively. `@tailwind base/components/utilities` in `app.css`. Or UnoCSS (lighter, tree-shakable).
 - [ ] **Component library** — Melt UI (headless, accessible primitives) + shadcn-svelte (styled). Or Skeleton UI (Tailwind-native). Don't build from scratch.
@@ -68,7 +97,7 @@
 
 ---
 
-## Forms
+## 9. Forms
 
 - [ ] **SvelteKit form actions** — no client-side form library needed for basic cases. `export const actions` + `use:enhance`.
 - [ ] **Superforms** — `sveltekit-superforms` + `zod`. `const form = await superValidate(request, zodSchema)`. Client: `const { form, enhance, errors } = superForm(data.form)`. Field-level errors built-in.
@@ -77,7 +106,7 @@
 
 ---
 
-## Performance
+## 10. Performance
 
 - [ ] **No virtual DOM** — Svelte compiles to direct DOM manipulation. This is the default. No extra configuration needed.
 - [ ] **Build-time optimization** — dead code elimination at compile time. Unused CSS purged. Reactive declarations optimized to minimal DOM updates. All automatic — no plugins required.
@@ -88,7 +117,7 @@
 
 ---
 
-## Routing
+## 11. Routing
 
 - [ ] SvelteKit file-based routing — `+page.svelte`, `+layout.svelte`. Nested layouts preserved across navigations
 - [ ] Dynamic routes — `[id]` folders. Typed params in `load` functions
@@ -98,7 +127,22 @@
 
 ---
 
-## Testing
+## 12. SEO & Metadata
+
+- [ ] **Metadata per route** — Unique `<title>` (50–60 chars) + `<meta name="description">` (140–160) on every page, generated from `load` data via `<svelte:head>`, Svelte 5 snippets-based head management, or `@unhead` — never hard-coded strings.
+- [ ] **Crawlability first** — SvelteKit SSRs by default; `export const prerender = true` for public, indexable pages. CSR-only content is invisible to some crawlers and social unfurlers — verify with "View source" (not DevTools) that content is in the initial HTML.
+- [ ] **Open Graph + Twitter cards** — `og:title`, `og:description`, `og:image` (1200×630), `twitter:card` per route. Test unfurls in Slack/Discord/X validators before launch.
+- [ ] **Structured data (JSON-LD)** — `<script type="application/ld+json">{@html JSON.stringify(schema)}</script>` in the head. `Organization`, `Product`, `Article`, `BreadcrumbList` where applicable. Validate with Google Rich Results Test.
+- [ ] **`robots.txt` + XML sitemap** — Static files, adapter-generated output (`@sveltejs/adapter-static`), or `svelte-sitemap` at build time. Sitemap with `lastmod`, referenced in robots.txt.
+- [ ] **hreflang for multi-locale** — Correct language/region pairs, self-referencing entries, `x-default` — built with `$app/paths` when i18n exists.
+- [ ] **Indexability control** — `noindex` on authenticated, duplicate, parameterized, and staging pages. Staging behind auth + `X-Robots-Tag: noindex` set in `hooks.server.ts`.
+- [ ] **Search Console + Bing Webmaster** — Registered, sitemap submitted, crawl errors and 404s monitored after launch.
+- [ ] **Core Web Vitals are SEO** — LCP/INP/CLS are ranking inputs. Svelte ships less JS than most frameworks by default — keep it that way. Lighthouse SEO audit in CI.
+
+---
+
+
+## 13. Testing
 
 - [ ] **Vitest** — fast, Vite-native, works with Svelte. `@sveltejs/vite-plugin-svelte`.
 - [ ] **`@testing-library/svelte`** — `render(Component, { props })`. `screen.getByRole()`, `screen.getByText()`. Test behavior, not structure.
@@ -107,7 +151,7 @@
 
 ---
 
-## Accessibility
+## 14. Accessibility
 
 - [ ] Semantic HTML — `{#if}`/`{#each}` encourage native HTML structures. `<button>` for actions, `<a>` for navigation.
 - [ ] Svelte accessibility warnings — compiler warns about missing `alt`, unlabeled inputs, positive tabindex, missing `lang`. Fix all warnings — they're free a11y audits.
@@ -115,7 +159,7 @@
 
 ---
 
-## Security
+## 15. Security
 
 - [ ] No `{@html}` without DOMPurify — `{@html DOMPurify.sanitize(userContent)}`.
 - [ ] No secrets in `$env/static/public` — these are inlined at build time. `$env/static/private` for server-only.
@@ -123,12 +167,12 @@
 
 ---
 
-## SvelteKit Adapters
+## 16. SvelteKit Adapters
 
 - [ ] **Adapter choice** — `adapter-auto` (detects environment). `adapter-node` (self-hosted Node). `adapter-vercel`, `adapter-cloudflare`, `adapter-netlify` (serverless edge). `adapter-static` (SPA or fully static).
 - [ ] **Edge deployment** — `adapter-cloudflare-workers` or `adapter-vercel`. SvelteKit is edge-ready. SSR at the edge with minimal cold start.
 
-## AI/LLM Integration
+## 17. AI/LLM Integration
 
 - [ ] **Vercel AI SDK Svelte** — `@ai-sdk/svelte` `useChat` for chat UIs. SvelteKit `+server.ts` route streams with `streamText` + `toDataStreamResponse()`.
 - [ ] **Never expose provider keys** — `$env/static/public` ships to the browser. LLM keys live in `$env/static/private` / `$env/dynamic/private` only, accessed in `+server.ts` or `+page.server.ts`.
@@ -138,7 +182,7 @@
 - [ ] **Non-chat AI calls** — TanStack Query Svelte `createMutation` for classify/extract/summarize. Cache identical prompts (response dedup).
 - [ ] **Graceful degradation** — Error state with retry, cached fallback, "AI can be wrong" disclaimers where user-facing. Rate-limit UX on 429.
 
-## Data Privacy & Compliance (Frontend-Specific)
+## 18. Data Privacy & Compliance (Frontend-Specific)
 
 - [ ] **Error monitoring scrubbing** — Sentry `beforeSend` strips PII (emails, tokens, form values) from error payloads.
 - [ ] **Cookie consent** — GDPR/CCPA banner before analytics fire. Load Plausible/Umami/PostHog only after opt-in.
@@ -214,20 +258,23 @@ flowchart TD
 | # | Section | 🧪 POC | 🔧 Prototype | 🏠 Internal | 🟢 Small Prod | 🔵 Medium Prod | 🟣 Production Grade | 🔴 Mission-Critical |
 |---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 1 | Project Setup | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 2 | Runes (Svelte 5 Reactivity) | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 3 | State Management | 🟡 | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 4 | SvelteKit Routing & Data Loading | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 5 | Components | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 6 | Styling | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + design system |
-| 7 | Forms | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + audit trail |
-| 8 | Performance | ❌ | 🟡 basic CWV | ✅ | ✅ + budgets | ✅ + profiling | ✅ + SLO | ✅ + capacity |
-| 9 | Routing | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 10 | Testing | ❌ maybe smoke | 🟡 unit | ✅ + component | ✅ + E2E | ✅ + visual reg | ✅ + a11y in CI | ✅ + formal verification |
-| 11 | Accessibility | ❌ | 🟡 basics | ✅ | ✅ WCAG AA | ✅ + audits | ✅ + WCAG AA certified | ✅ + legal/regulatory |
-| 12 | Security (Frontend) | 🟡 no secrets | 🟡 essentials | ✅ | ✅ + CSP | ✅ + pentest | ✅ + hardened | ✅ + formal audit |
-| 13 | SvelteKit Adapters | ❌ | 🟡 adapter-auto | ✅ + node | ✅ + platform | ✅ + edge | ✅ + multi-region | ✅ + signed artifacts |
-| 14 | AI/LLM Integration | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
-| 15 | Data Privacy & Compliance | ❌ | ❌ | 🟡 minimal | ✅ consent + PII | ✅ + DPA | ✅ full compliance | ✅ + regulatory framework |
+| 2 | Architecture & Code Organization | 🟡 | 🟡 | ✅ | ✅ | ✅ + boundaries | ✅ + enforced CI | ✅ + formal review |
+| 3 | Runes (Svelte 5 Reactivity) | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 4 | State Management | 🟡 | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 5 | SvelteKit Routing & Data Loading | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 6 | Real-Time & Live Data | ❌ | 🟡 if used | 🟡 if used | ✅ if used | ✅ + scale | ✅ + load testing | ✅ + HA/failover |
+| 7 | Components | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 8 | Styling | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + design system |
+| 9 | Forms | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + audit trail |
+| 10 | Performance | ❌ | 🟡 basic CWV | ✅ | ✅ + budgets | ✅ + profiling | ✅ + SLO | ✅ + capacity |
+| 11 | Routing | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 12 | SEO & Metadata | ❌ | 🟡 if public | 🟡 if public | ✅ if public | ✅ | ✅ + structured data | ✅ |
+| 13 | Testing | ❌ maybe smoke | 🟡 unit | ✅ + component | ✅ + E2E | ✅ + visual reg | ✅ + a11y in CI | ✅ + formal verification |
+| 14 | Accessibility | ❌ | 🟡 basics | ✅ | ✅ WCAG AA | ✅ + audits | ✅ + WCAG AA certified | ✅ + legal/regulatory |
+| 15 | Security (Frontend) | 🟡 no secrets | 🟡 essentials | ✅ | ✅ + CSP | ✅ + pentest | ✅ + hardened | ✅ + formal audit |
+| 16 | SvelteKit Adapters | ❌ | 🟡 adapter-auto | ✅ + node | ✅ + platform | ✅ + edge | ✅ + multi-region | ✅ + signed artifacts |
+| 17 | AI/LLM Integration | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
+| 18 | Data Privacy & Compliance | ❌ | ❌ | 🟡 minimal | ✅ consent + PII | ✅ + DPA | ✅ full compliance | ✅ + regulatory framework |
 
 ---
 

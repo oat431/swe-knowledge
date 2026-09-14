@@ -1,8 +1,8 @@
 # React / Next.js Frontend Checklist
 
-> Practical, no-fluff checklist for production React + Next.js apps.
+> Practical, no-fluff checklist for production React + Next.js apps. The single React checklist — deep reference AND launch gate.
 > React JS companion to the general [[web]]
-> Last updated: 2026-08-05
+> Last updated: 2026-09-14 (merged react-js-v2 launch items; added Vercel react-best-practices performance rules; added §2 Architecture & Code Organization, §5 Real-Time & Live Data — cascade from [[web]])
 
 ---
 
@@ -14,53 +14,84 @@
 - [ ] **Package manager** — pnpm recommended (strict, fast, disk-efficient). Lockfile committed.
 - [ ] **ESLint + Prettier** or **Biome** — Biome is faster, single config. Either way: pre-commit hook (lint-staged + husky/lefthook).
 
-## 2. Rendering Model (The Critical Decision)
+## 2. Architecture & Code Organization
 
-- [ ] **"use client" vs "use server"** — Components are Server Components by default. Add `"use client"` only when you need hooks, event handlers, browser APIs, or context.
-- [ ] **Server Components for data** — Fetch data in Server Components. Pass as props to Client Components. No API routes just to bridge data.
-- [ ] **Streaming with Suspense** — `loading.tsx` for route-level. `<Suspense fallback={<Skeleton />}>` for component-level. Users see content faster.
+- [ ] **Feature-based folders** — `src/features/users/`, `src/features/orders/` with components, hooks, api, schemas co-located per feature. App Router routes in `app/` stay thin — they compose feature components, they don't contain business logic.
+- [ ] **Module boundaries enforced in CI** — `eslint-plugin-boundaries` or `dependency-cruiser`: `shared/` → `features/` → `app/`. No cross-feature imports except through the feature's public export.
+- [ ] **Dependency rule points inward** — Domain logic, types, and Zod schemas don't import React, Next.js, or UI details. Components import from logic, never the reverse.
+- [ ] **Limited barrel files** — One `index.ts` per feature public boundary at most. Deep-import within a feature. Barrels drag whole libraries into client bundles and break RSC server/client splitting.
+- [ ] **Shared code promoted on third use** — `shared/` (or `packages/shared` in Turborepo monorepo) holds API client, generated types, Zod schemas, design tokens, utils — not speculative "common" components.
+- [ ] **Server/client split is an architectural boundary** — Anything importing server-only code (`server-only` package guard) never leaks into a `"use client"` tree. Keep data access in Server Components/Actions, UI in client components.
+- [ ] **Tests co-located** — `user-card.test.tsx` next to `user-card.tsx`. Vitest picks them up by convention.
+- [ ] **API types generated, not hand-written** — `openapi-typescript` / orval from the backend's OpenAPI spec (or tRPC end-to-end types). Hand-maintained response types drift.
+
+## 3. Rendering Model (The Critical Decision)
+
+- [ ] **Server Components by default** — Components are Server Components by default. Add `"use client"` only when you need hooks, event handlers, browser APIs, or context.
+- [ ] **Server Components for data** — Fetch data in Server Components. Pass as props to Client Components. No API routes just to bridge data. No `useEffect` + `fetch` for initial page data.
+- [ ] **Streaming with Suspense** — `loading.tsx` for route-level. `<Suspense fallback={<Skeleton />}>` for component-level. Users see content faster, no white screens.
 - [ ] **Server Actions** — For form mutations. `action={myServerAction}` instead of `onSubmit` + `fetch`. But know the limits: complex validation or third-party integrations → explicit API route.
-- [ ] **ISR / SSG / SSR per route** — Static for marketing pages (`export const revalidate = 3600`). Dynamic for dashboards. SSR for user-specific pages.
+- [ ] **ISR / SSG / SSR per route** — Static for marketing pages (`export const revalidate = 3600` or `generateStaticParams`) — not SSR'd every request. Dynamic for dashboards. SSR for user-specific pages.
 
-## 3. Data Fetching & Server State
+## 4. Data Fetching & Server State
 
-- [ ] **TanStack Query (React Query)** — The standard. Every async read goes through a query. Every async write goes through a mutation.
+- [ ] **TanStack Query (React Query)** — The standard. Every async read goes through a query. Every async write goes through a mutation. (SWR acceptable for simpler apps — it dedupes requests automatically.)
 - [ ] **Query key conventions** — `['users', userId, 'posts', { status: 'draft' }]`. Hierarchical, granular, cache-friendly.
-- [ ] **Stale time & gc time** — `staleTime` controls refetch. `gcTime` (formerly `cacheTime`) controls eviction. Default staleTime is 0 (too aggressive). Set aggressively for static data, conservatively for real-time.
+- [ ] **Stale time & gc time** — `staleTime` controls refetch. `gcTime` (formerly `cacheTime`) controls eviction. Default staleTime is 0 (too aggressive). Tune per query type: short for real-time, long for static.
 - [ ] **`placeholderData` & `keepPreviousData`** — Smooth pagination transitions. No layout shift between pages.
-- [ ] **Optimistic updates** — `onMutate: async (newTodo) => { await cancelQueries(); const previous = getQueryData(); setQueryData(...); return { previous }; }`. Then `onError: (err, vars, context) => setQueryData(..., context.previous)`.
+- [ ] **Optimistic updates** — `onMutate: async (newTodo) => { await cancelQueries(); const previous = getQueryData(); setQueryData(...); return { previous }; }`. Then `onError: (err, vars, context) => setQueryData(..., context.previous)`. UI responds instantly, rolls back on error.
 - [ ] **Prefetch on hover/focus** — `queryClient.prefetchQuery` in `onMouseEnter`. Data ready before user clicks.
+- [ ] **No waterfalls (CRITICAL)** — Independent operations run with `Promise.all([getUsers(), getPosts()])`, never sequential awaits. Check cheap sync conditions before awaiting remote values. Move `await` into the branch that actually uses it. Start promises early, await late in API routes.
 - [ ] **Error & loading boundaries** — `<ErrorBoundary>` for crashes. `<Suspense>` for loading. Every async operation has: loading, empty, error, and loaded state rendering.
 
-## 4. Client State Management
+## 5. Real-Time & Live Data
+
+- [ ] **SSE vs WebSocket** — SSE for one-way streams (notifications, activity feeds, LLM tokens) — trivial in a Next.js Route Handler with `ReadableStream`. WebSocket (Socket.IO, Pusher, Ably) only for bidirectional (chat, collaboration, presence).
+- [ ] **Events write into the TanStack Query cache** — On message: `queryClient.setQueryData(key, merge)` or `invalidateQueries(key)`. Never a parallel `useState` copy of live data — one source of truth.
+- [ ] **Reconnection with backoff + resume** — Exponential backoff with jitter. `Last-Event-ID` (SSE) or resume token (WS). Browser `EventSource` auto-reconnects; custom WS clients don't.
+- [ ] **Ordering & dedup** — Sequence numbers on server events, dedupe by event ID. Chatty streams: batch updates, throttle re-renders (backpressure), or flush inside `startTransition`.
+- [ ] **Optimistic + server-authoritative** — Optimistic UI for the user's own actions, reconciled on server ack. Server wins on conflict.
+- [ ] **Auth over the channel** — Cookie-authenticated SSE/WS. Never a token in the query string (leaks into logs).
+- [ ] **Cleanup in `useEffect`** — Return function closes the socket, removes listeners, calls `AbortController.abort()`. No zombie connections after route changes. Watch React 18/19 StrictMode double-mount in dev.
+- [ ] **External stores via `useSyncExternalStore`** — Subscribe custom stores/sockets correctly (tearing-safe concurrent rendering). Not `useState` + listener hacks.
+- [ ] **Scale awareness** — WS doesn't scale on serverless (Vercel) — use SSE, Pusher/Ably, or a dedicated WS server. Pub/sub fan-out via Valkey/Redis on the backend.
+
+## 6. Client State Management
 
 - [ ] **Zustand** — For cross-component shared state that isn't server data. No providers, no boilerplate, tiny.
 - [ ] **Jotai** — If you prefer atom-based reactivity over store-based. Good for derived state chains.
 - [ ] **URL as state** — Search params, filters, pagination → `useSearchParams()`, `useRouter()`. Shareable URLs, back-button works.
 - [ ] **Form state** — React Hook Form + Zod. `useForm<z.infer<typeof schema>>({ resolver: zodResolver(schema) })`. Controlled inputs, uncontrolled performance.
 - [ ] **Context** — Only for truly global concerns (auth, theme, locale). Not for frequent-update state (re-renders all consumers).
+- [ ] **No duplicated server state** — Client store never caches what TanStack Query already owns.
 - [ ] **No Redux** — Unless you have a specific, justified need for normalized entity caching with cross-cutting concerns. TanStack Query + Zustand covers 95% of cases with less code.
 
-## 5. Performance
+## 7. Performance
 
 - [ ] **React Compiler (React 19+)** — Opt-in progressively. Automatically memoizes components and hooks. Enable per-directory with eslint plugin.
-- [ ] **Bundle splitting** — Route-level is automatic in Next.js (`page.tsx` → separate chunk). Component-level: `next/dynamic(() => import('./HeavyChart'), { loading: () => <Skeleton /> })`.
+- [ ] **Bundle splitting** — Route-level is automatic in Next.js (`page.tsx` → separate chunk). Component-level: `next/dynamic(() => import('./HeavyChart'), { loading: () => <Skeleton /> })` for heavy components below the fold.
+- [ ] **Avoid barrel imports (CRITICAL)** — Import directly from the module (`import { x } from 'lib/x'`), not from index barrel files — barrels drag whole libraries into the bundle. Statically analyzable import paths only.
+- [ ] **Defer third-party scripts** — Analytics/logging load after hydration (`next/script` with `afterInteractive`/`lazyOnload`, or `defer`/`async` on raw `<script>`). Load conditional/feature modules only when the feature activates.
 - [ ] **Image optimization** — `next/image` with `sizes`, `priority` on LCP image, `placeholder="blur"` for local images. Remote images: configure `remotePatterns` in `next.config.ts`.
-- [ ] **Font optimization** — `next/font` with `subset` and `display: 'swap'`. Self-host fonts, don't fetch from Google Fonts.
-- [ ] **No waterfall data fetching** — Fetch in parallel where possible: `const [users, posts] = await Promise.all([getUsers(), getPosts()])`. Or use RSC to fetch at component level naturally.
+- [ ] **Font optimization** — `next/font` with `subset` and `display: 'swap'`. Self-host fonts, don't fetch from Google Fonts. Hoist static I/O (fonts, logos) to module level.
+- [ ] **Server-side caching** — `React.cache()` for per-request dedup of repeated fetches. LRU cache for cross-request caching of stable data. `after()` for non-blocking work (logging, analytics) that shouldn't delay the response.
+- [ ] **Minimize RSC → client serialization** — Pass only the fields the client needs, not whole ORM objects. No duplicate data across props. No module-level mutable request state in RSC/SSR (leaks across requests).
+- [ ] **Re-render hygiene** — Functional `setState` for stable callbacks; lazy `useState(() => expensive())` init; never define components inside components; derive state during render, not in effects; `startTransition` for non-urgent updates; `useDeferredValue` to keep inputs responsive; refs for transient high-frequency values; subscribe to derived booleans, not raw objects.
+- [ ] **Conditional rendering** — Ternary, not `&&`, when the left side can be `0`/`''` (React renders falsy primitives). Hoist static JSX outside components. `content-visibility: auto` for long off-screen lists.
 - [ ] **Large lists** — `@tanstack/react-virtual` for tables, feeds, any list > 50 items that's in the viewport.
-- [ ] **Debounce search inputs** — Not `onChange` → API call. `onChange` → local state → debounce 300ms → API call.
+- [ ] **Debounce search inputs** — Not `onChange` → API call. `onChange` → local state → debounce 300ms → API call. Passive listeners for scroll handlers.
+- [ ] **Hydration** — No flicker/mismatch: client-only data (locale, theme) via inline script or `suppressHydrationWarning` where the mismatch is expected and benign.
 - [ ] **Web Vitals monitoring** — `useReportWebVitals` → analytics. LCP < 2.5s, INP < 200ms, CLS < 0.1. Measure with Lighthouse CI in pipeline.
 
-## 6. Styling & Design
+## 8. Styling & Design
 
 - [ ] **Tailwind CSS** — Utility-first, tree-shakable. Pair with `clsx`/`tailwind-merge` for conditional classes.
 - [ ] **Component primitives** — shadcn/ui (copy-paste, not npm dependency), Radix UI (headless, accessible), or Ark UI. Don't build your own modal/dropdown/tooltip from scratch.
-- [ ] **Design tokens** — CSS custom properties for colors, spacing, radius. `@theme` in Tailwind v4. Dark mode via class strategy (`dark:` prefix).
+- [ ] **Design tokens** — CSS custom properties for colors, spacing, radius. `@theme` in Tailwind v4. Dark mode via class strategy (`dark:` prefix) — tested on both themes.
 - [ ] **Responsive** — Mobile-first with Tailwind breakpoints (`sm:`, `md:`, `lg:`, `xl:`). Test at actual device widths.
 - [ ] **Layout components** — `<Container>`, `<Stack>`, `<Grid>` wrappers. Consistent spacing and alignment.
 
-## 7. Forms
+## 9. Forms
 
 - [ ] **React Hook Form** — Uncontrolled by default (best performance). `register()` for simple fields, `Controller` for complex controlled components.
 - [ ] **Zod validation** — Schema on the form, not ad-hoc. `z.object({ email: z.string().email() })`. Reuse schemas with backend if shared package.
@@ -69,57 +100,70 @@
 - [ ] **`useFormStatus`** — Inside form children to get pending state without passing props down. `const { pending } = useFormStatus()`.
 - [ ] **`useActionState` (React 19)** — Replaces `useFormState`. `const [state, formAction, isPending] = useActionState(serverAction, initialState)`.
 
-## 8. Routing & Navigation
+## 10. Routing & Navigation
 
 - [ ] **Nested layouts** — `layout.tsx` preserves state across navigations. Auth layout, dashboard layout, settings layout.
 - [ ] **Parallel routes & intercepting routes** — For modals on top of existing pages (photo lightbox, quick-edit drawer). URL changes but background page persists.
 - [ ] **Loading UI per route** — `loading.tsx` near `page.tsx`. Automatic Suspense boundary.
 - [ ] **Error UI per route** — `error.tsx` near `page.tsx`. Automatic Error Boundary. `reset()` function to retry.
 - [ ] **Not found per route** — `not-found.tsx` for route-specific 404 content.
+- [ ] **Dynamic routes with typed params** — `/user/[id]` → typed `params.id`. No stringly-typed route params.
 - [ ] **Middleware** — `middleware.ts` for auth guards, redirects, locale detection. Runs on Edge runtime (limited APIs).
 
-## 9. Testing
+## 11. SEO & Metadata
+
+- [ ] **`<title>` unique and descriptive on every page** — Via Next.js Metadata API (`export const metadata` / `generateMetadata`).
+- [ ] **`<meta name="description">` on every page.**
+- [ ] **Open Graph tags** — `og:title`, `og:image`, `og:description` for social sharing.
+- [ ] **Canonical URLs** — On any page with duplicate/parameterized content.
+- [ ] **`robots.txt` and `sitemap.xml`** — Or `generateSitemaps` in Next.js.
+
+## 12. Testing
 
 - [ ] **Vitest** — Fast, Vite-native, Jest-compatible API. Unit tests for utils, hooks, state logic.
 - [ ] **React Testing Library** — Test behavior: `screen.getByRole('button', { name: /submit/i })`. Not `screen.getByTestId('submit-btn')`. Use `userEvent`, not `fireEvent`.
 - [ ] **MSW (Mock Service Worker)** — Intercept at network level. Components test against realistic API responses. Works with both REST and GraphQL.
 - [ ] **Playwright** — E2E for critical flows: login → navigate → create → edit → delete. Also for visual regression with `toHaveScreenshot()`.
 - [ ] **Accessibility tests** — `jest-axe` in unit tests. `@axe-core/playwright` in E2E. Catch violations in CI.
+- [ ] **Browser matrix** — Tested on Chrome, Firefox, Safari, and mobile Safari/Chrome on an actual device.
 
-## 10. Accessibility (a11y)
+## 13. Accessibility (a11y)
 
 - [ ] **Semantic HTML** — `<button>` for actions, `<nav>` for navigation, `<main>` for content, `<form>` for forms. Not `<div onClick>`.
 - [ ] **Heading hierarchy** — One `<h1>`, logical `<h2>` → `<h3>` nesting. Not skipping levels for visual sizing.
+- [ ] **Alt text** — All images have meaningful `alt` (decorative images: `alt=""`).
 - [ ] **Keyboard navigation** — Tab order logical, focus indicators visible (`:focus-visible` ring). Skip-to-content link at top.
 - [ ] **ARIA when needed** — `aria-label` on icon-only buttons. `aria-expanded` on toggles. `role` only when HTML semantics can't express it. No ARIA > bad ARIA.
 - [ ] **Color contrast** — WCAG AA minimum (4.5:1 normal text, 3:1 large text). Tailwind's default colors pass most. Check with devtools.
 - [ ] **Screen reader testing** — Spot-check with VoiceOver (macOS) or NVDA (Windows). Navigate by headings, links, form controls.
 
-## 11. Security (Frontend-Specific)
+## 14. Security (Frontend-Specific)
 
 - [ ] **XSS prevention** — Never `dangerouslySetInnerHTML` without DOMPurify. `{{ __html: content }}` is a gaping hole.
 - [ ] **Never `eval`, never `new Function`** in client code. CSP should block anyway.
 - [ ] **No secrets in client code** — `NEXT_PUBLIC_*` and `VITE_*` are bundled to the browser. Server-only env vars (no prefix) stay server-side.
+- [ ] **Authenticate Server Actions like API routes** — Every Server Action re-checks auth/permissions. `"use server"` functions are public endpoints, not private methods.
 - [ ] **Auth token storage** — HTTP-only cookies for auth tokens (not accessible to JS). If forced to use localStorage: accept the XSS risk and keep token lifetime short.
 - [ ] **CSP (Content Security Policy)** — Work with backend to set restrictive CSP. No `unsafe-inline`, no `unsafe-eval`. Report-only mode first.
-- [ ] **Dependency audit** — `npm audit` / `pnpm audit` in CI. Dependabot/Renovate for automated patches. Frontend has hundreds of transitive deps.
+- [ ] **Dependency audit** — `npm audit` / `pnpm audit` in CI — zero critical/high CVEs. Dependabot/Renovate for automated patches. Frontend has hundreds of transitive deps.
 
-## 12. Build & Deploy
+## 15. Build & Deploy
 
-- [ ] **Environment variables** — `NEXT_PUBLIC_*` for client-safe. Server-only vars exposed only in Server Components / Server Actions / API routes.
+- [ ] **Local production build tested** — `next build && next start` before shipping. No server/client boundary errors.
+- [ ] **Environment variables** — `NEXT_PUBLIC_*` for client-safe. Server-only vars exposed only in Server Components / Server Actions / API routes. Documented: which are required, which optional.
 - [ ] **CI/CD** — Lint → type-check → unit test → build → deploy preview (Vercel/Cloudflare) → E2E → promote to production.
 - [ ] **Preview deployments per PR/commit** — Vercel/Netlify/Cloudflare Pages. Shareable URLs for stakeholders.
 - [ ] **Static assets with content-hash** — `next build` does this automatically. Immutable cache headers for `/_next/static/*`.
-- [ ] **Bundle analysis** — `ANALYZE=true next build` or `@next/bundle-analyzer`. Catch accidentally-large deps.
+- [ ] **Bundle analysis** — `ANALYZE=true next build` or `@next/bundle-analyzer`. Catch accidentally-large deps and duplicated libraries.
 
-## 13. Error Handling & Observability
+## 16. Error Handling & Observability
 
 - [ ] **Error boundaries** — `error.tsx` per route. Also a global `<ErrorBoundary>` wrapping the app. Fallback UI, not white screen.
 - [ ] **Sentry** — Capture errors with source maps. `Sentry.init()` in `instrumentation.ts` or `sentry.client.config.ts`. Correlate with backend traces.
 - [ ] **RUM (Real User Monitoring)** — Core Web Vitals to analytics. Know what users actually experience, not just what synthetic tests show.
-- [ ] **Feature flags** — LaunchDarkly, Vercel Flags, or simple DB/edge config. Kill broken features without redeploy.
+- [ ] **Feature flags** — LaunchDarkly, Vercel Flags, or simple DB/edge config. Kill broken features without redeploy. In place before risky changes ship.
 
-## 14. AI/LLM Integration
+## 17. AI/LLM Integration
 
 - [ ] **Vercel AI SDK** — `ai` package with React support. `useChat` for chat UIs, `streamText` + `toDataStreamResponse()` for server-side streaming.
 - [ ] **RSC streaming** — AI SDK v4+ streams into React Server Components (`toUIMessageStream`). `<Suspense>` boundaries with streaming content. Don't fall back to polling.
@@ -130,11 +174,11 @@
 - [ ] **Context & prompt management** — System prompts composed server-side, never in client bundles. Trim context window client-side before sending.
 - [ ] **Graceful degradation** — Error state with retry, cached fallback responses, "AI can be wrong" disclaimers where output is user-facing. Rate-limit UX on 429.
 
-## 15. Data Privacy & Compliance (Frontend-Specific)
+## 18. Data Privacy & Compliance (Frontend-Specific)
 
 - [ ] **Error monitoring scrubbing** — Sentry `beforeSend` strips emails, tokens, and form values from error payloads. Never send raw PII to error trackers.
 - [ ] **Cookie consent** — GDPR/CCPA banner before analytics fire. Load Plausible/PostHog only after opt-in (or use cookieless analytics).
-- [ ] **PII minimization** — Don't store user data in localStorage/IndexedDB unnecessarily. Mask sensitive data in UI previews.
+- [ ] **PII minimization** — Don't store user data in localStorage/IndexedDB unnecessarily (version and minimize what you store). Mask sensitive data in UI previews.
 - [ ] **Third-party script inventory** — `next/script` audit: what loads, what it collects, where it's sent (EU/US). Remove dead scripts.
 - [ ] **Data retention UI** — "Delete my data" / "Export my data" flows calling backend erasure/export endpoints.
 - [ ] **Privacy policy & terms** — Up-to-date, linked in footer. Cover collection, retention, rights (access/erasure/portability).
@@ -153,6 +197,7 @@
 - [ ] Tested on actual mobile devices, not just Chrome DevTools responsive mode
 - [ ] 404 page exists and is helpful (not default Next.js page)
 - [ ] `robots.txt` and `sitemap.xml` exist (or `generateSitemaps` in Next.js)
+- [ ] Feature flags in place for risky changes
 
 ---
 
@@ -204,17 +249,28 @@ flowchart TD
 | # | Section | 🧪 POC | 🔧 Prototype | 🏠 Internal | 🟢 Small Prod | 🔵 Medium Prod | 🟣 Production Grade | 🔴 Mission-Critical |
 |---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 1 | Project Setup | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 2 | Rendering Model | 🟡 SPA only | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 3 | Data Fetching & Server State | 🟡 fetch basics | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 4 | Client State Management | 🟡 | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 5 | Performance | ❌ | 🟡 basic CWV | ✅ | ✅ + budgets | ✅ + profiling | ✅ + SLO | ✅ + capacity |
-| 6 | Styling & Design | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + design system |
-| 7 | Forms | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + audit trail |
-| 8 | Routing & Navigation | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 9 | Testing | ❌ maybe smoke | 🟡 unit | ✅ + component | ✅ + E2E | ✅ + visual reg | ✅ + a11y in CI | ✅ + formal verification |
-| 10 | Accessibility | ❌ | 🟡 basics | ✅ | ✅ WCAG AA | ✅ + audits | ✅ + WCAG AA certified | ✅ + legal/regulatory |
-| 11 | Security (Frontend) | 🟡 no secrets | 🟡 essentials | ✅ | ✅ + CSP | ✅ + pentest | ✅ + hardened | ✅ + formal audit |
-| 12 | Build & Deploy | ❌ | 🟡 basic build | ✅ + CI | ✅ + previews | ✅ + canary + flags | ✅ + full pipeline | ✅ + signed artifacts |
-| 13 | Error Handling & Observability | ❌ | 🟡 error boundary | ✅ + Sentry | ✅ + RUM | ✅ + dashboards | ✅ + SLO/alerting | ✅ + full stack |
-| 14 | AI/LLM Integration | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
-| 15 | Data Privacy & Compliance | ❌ | ❌ | 🟡 minimal | ✅ consent + PII | ✅ + DPA | ✅ full compliance | ✅ + regulatory framework |
+| 2 | Architecture & Code Organization | 🟡 | 🟡 | ✅ | ✅ | ✅ + boundaries | ✅ + enforced CI | ✅ + formal review |
+| 3 | Rendering Model | 🟡 SPA only | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 4 | Data Fetching & Server State | 🟡 fetch basics | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 5 | Real-Time & Live Data | ❌ | 🟡 if used | 🟡 if used | ✅ if used | ✅ + scale | ✅ + load testing | ✅ + HA/failover |
+| 6 | Client State Management | 🟡 | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 7 | Performance | ❌ | 🟡 basic CWV | ✅ | ✅ + budgets | ✅ + profiling | ✅ + SLO | ✅ + capacity |
+| 8 | Styling & Design | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + design system |
+| 9 | Forms | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + audit trail |
+| 10 | Routing & Navigation | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 11 | SEO & Metadata | ❌ | 🟡 if public | 🟡 if public | ✅ | ✅ | ✅ | ✅ |
+| 12 | Testing | ❌ maybe smoke | 🟡 unit | ✅ + component | ✅ + E2E | ✅ + visual reg | ✅ + a11y in CI | ✅ + formal verification |
+| 13 | Accessibility | ❌ | 🟡 basics | ✅ | ✅ WCAG AA | ✅ + audits | ✅ + WCAG AA certified | ✅ + legal/regulatory |
+| 14 | Security (Frontend) | 🟡 no secrets | 🟡 essentials | ✅ | ✅ + CSP | ✅ + pentest | ✅ + hardened | ✅ + formal audit |
+| 15 | Build & Deploy | ❌ | 🟡 basic build | ✅ + CI | ✅ + previews | ✅ + canary + flags | ✅ + full pipeline | ✅ + signed artifacts |
+| 16 | Error Handling & Observability | ❌ | 🟡 error boundary | ✅ + Sentry | ✅ + RUM | ✅ + dashboards | ✅ + SLO/alerting | ✅ + full stack |
+| 17 | AI/LLM Integration | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
+| 18 | Data Privacy & Compliance | ❌ | ❌ | 🟡 minimal | ✅ consent + PII | ✅ + DPA | ✅ full compliance | ✅ + regulatory framework |
+
+---
+
+## Sources
+
+- General companion: [[web]] · Launch gate: [[Frontend Launch]]
+- Merged 2026-09-14: former `react-js-v2.md` (launch checklist) folded into this file — this is now the single React checklist.
+- Performance rules informed by Vercel Engineering's `react-best-practices` (vercel-labs/agent-skills): waterfalls & bundle size = CRITICAL, server-side perf = HIGH, re-render/rendering = MEDIUM.
