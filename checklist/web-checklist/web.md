@@ -2,7 +2,7 @@
 
 > Framework-agnostic checklist for production web applications.
 > React, Vue, Svelte, Angular, or vanilla — the principles are the same. The tools change.
-> Last updated: 2026-09-14 (added §2 Architecture & Code Organization, §5 Real-Time & Live Data, §12 SEO & Metadata)
+> Last updated: 2026-09-14 (added §2 Architecture & Code Organization, §5 Real-Time & Live Data, §12 SEO & Metadata; framework family split into 2-layer library + meta-framework checklists)
 
 ---
 
@@ -234,29 +234,58 @@
 
 ## Framework Quick Reference
 
-### React
-- **Meta-frameworks:** Next.js (App Router), Remix, React Router 7 (framework mode)
+> **The checklist family is 2-layer:** each UI library has its own checklist, and where a dominant meta-framework exists, the meta-framework has a separate one. Tick the library layer first, then the meta-framework layer.
+
+```mermaid
+flowchart LR
+    W[[[web]]<br/>framework-agnostic] --> R[[[react]]] --> N[[[next]]]
+    W --> V[[[vue]]] --> NX[[[nuxt]]]
+    W --> S[[[svelte]]] --> SK[[[sveltekit]]]
+    W --> A[[[angular]]<br/>single-file — SSR built in]
+    style W fill:#e1f5ff
+    style R fill:#e8f5e9
+    style V fill:#e8f5e9
+    style S fill:#e8f5e9
+    style A fill:#e8f5e9
+    style N fill:#fff4e1
+    style NX fill:#fff4e1
+    style SK fill:#fff4e1
+```
+
+### Meta-framework: yes or no?
+
+| Use a meta-framework (Next/Nuxt/SvelteKit) when… | Bare library + Vite SPA is fine when… |
+|---|---|
+| Any public page needs SEO / social unfurls | Internal tool or app fully behind login |
+| You need server-side code (API routes, secrets, SSR) | All data comes from a separate backend API |
+| First-load performance matters (LCP on slow devices) | Simplest possible ops is the priority (static host) |
+| Content-heavy or hybrid static/dynamic site | Team already runs a Vite SPA and it works |
+
+> ⚠️ SSR is not free: per-request server compute, a running Node process (or serverless functions), and cache-invalidation complexity. Choose it deliberately (web.md §3), not by default.
+
+### React — [[react]] + [[next]]
+- **Meta-frameworks:** Next.js (App Router → [[next]]), Remix, React Router 7 (framework mode)
 - **State:** TanStack Query + Zustand
 - **Forms:** React Hook Form + Zod
 - **Styling:** Tailwind + shadcn/ui + Radix
 - **Testing:** Vitest + React Testing Library + Playwright
 
-### Vue
-- **Meta-frameworks:** Nuxt (file-based router, SSR/SSG), Vite + Vue Router (SPA)
+### Vue — [[vue]] + [[nuxt]]
+- **Meta-frameworks:** Nuxt (file-based router, SSR/SSG → [[nuxt]]), Vite + Vue Router (SPA)
 - **State:** TanStack Query (Vue adapter) + Pinia
 - **Forms:** FormKit, VeeValidate + Zod
 - **Styling:** Tailwind + Headless UI (Vue) or Radix Vue
 - **Testing:** Vitest + Vue Testing Library + Playwright
 
-### Svelte
-- **Meta-frameworks:** SvelteKit (filesystem router, SSR/SSG/SPA)
+### Svelte — [[svelte]] + [[sveltekit]]
+- **Meta-frameworks:** SvelteKit (filesystem router, SSR/SSG/SPA → [[sveltekit]])
 - **State:** TanStack Query (Svelte adapter) + Svelte stores (built-in)
 - **Forms:** Felte + Zod, Superforms (SvelteKit server actions)
 - **Styling:** Tailwind + Melt UI + shadcn-svelte
 - **Testing:** Vitest + Svelte Testing Library + Playwright
 
-### Angular
-- **Meta-frameworks:** Angular CLI, Analog (file-based, Vite-powered)
+### Angular — [[angular]] (single file, SSR built in)
+- **Meta-frameworks:** Angular CLI + `@angular/ssr` (built-in), Analog (file-based, Vite-powered)
 - **State:** TanStack Query (Angular adapter) + Signals (built-in) + NgRx (if complex)
 - **Forms:** Angular Reactive Forms + Zod
 - **Styling:** Tailwind + Angular CDK (headless primitives)

@@ -1,7 +1,7 @@
 # Angular Launch Checklist
 
 > Tick every box before an Angular app hits production. Framework companion to [[Frontend Launch]]. Angular is opinionated — lean into it.
-> Last updated: 2026-09-14 (added Architecture & Code Organization, Real-Time & Live Data, SEO & Metadata — cascade from [[web]])
+> Last updated: 2026-09-14 (added Architecture & Code Organization, Real-Time & Live Data, SEO & Metadata — cascade from [[web]]; added SSR & Hydration)
 
 ---
 
@@ -82,7 +82,23 @@
 
 ---
 
-## 8. SEO & Metadata
+## 8. SSR & Hydration
+
+- [ ] **Decide the rendering mode per route** — Angular 17+ built-in SSR via `ng add @angular/ssr`. `withServerRoutesConfig()` with `RenderMode.Server` (dynamic), `RenderMode.Prerender` (static at build), `RenderMode.Client` (SPA islands). Don't SSR admin dashboards behind login; don't CSR public marketing pages.
+- [ ] **Hydration enabled** — `withHydration()` in `provideClientHydration()`. Reuses server-rendered DOM instead of re-rendering (no flicker, faster TTI). Fix `NgHydrationSkipped` warnings — they mean DOM mismatch.
+- [ ] **Incremental/Event replay hydration** — `withIncrementalHydration()` (Angular 19+) for component-level progressive activation. Event replay so clicks during hydration aren't lost.
+- [ ] **SSR-safe code** — No direct `window`/`document`/`localStorage` access at construction/injection time. Guard with `isPlatformBrowser()` or `afterNextRender()`. DI constructors run on the server too.
+- [ ] **No module-level mutable request state** — Services are singletons per *server* process; per-request state leaks across users. Use `REQUEST`/`RESPONSE` injection tokens or request-scoped patterns.
+- [ ] **State transfer** — `TransferState`/`provideClientHydration` carries server-fetched data to the client so HTTP calls aren't repeated post-hydration. TanStack Query Angular: dehydrate on server, hydrate on client.
+- [ ] **Prerendering** — `ng build --prerender` with route discovery (sitemap-based or crawl). `--prerender-routes` file for explicit lists. Sitemap + robots.txt generated in the build (§SEO).
+- [ ] **Server host** — Express server (`server.ts`) for Node hosting, or a reverse proxy in front. Dockerize with standalone output. Homelab: `outputMode: 'server'` + container on the BE port range.
+- [ ] **Analog as meta-framework option** — Vite-powered, file-based routing, built-in SSR/API routes (h3/Nitro-like), MDX support. For greenfield apps wanting Nuxt/Next-style DX in Angular.
+- [ ] **Caching headers for SSR responses** — `Cache-Control` per route class: static prerendered = immutable/long; SSR user-specific = `no-store`. CDN in front for anonymous pages.
+- [ ] **Measure SSR cost** — TTFB budget per route (SSR adds server compute per request). Profile with `ng build --stats-json`; set an SLO before launch → [[web]] §16.
+
+---
+
+## 9. SEO & Metadata
 
 - [ ] **SSR or SSG for public indexable pages** — Angular Universal (`ng add @angular/ssr`) with `provideServerRendering()`, or prerender (`ng build --prerender`) for static marketing/docs pages. CSR-only content is invisible to some crawlers and to social unfurlers. Verify with "View source" (not DevTools).
 - [ ] **`Meta` and `Title` services** — Inject Angular's `Title` / `Meta` in a per-route service, or drive titles from route `data` + `title` property on routes. Unique `<title>` (50–60 chars) and `<meta name="description">` (140–160) per page, generated from data — never hard-coded strings.
@@ -96,7 +112,7 @@
 
 ---
 
-## 9. Forms
+## 10. Forms
 
 - [ ] **Reactive forms** — `FormGroup`, `FormControl`, `FormBuilder`. `form = this.fb.group({ email: ['', [Validators.required, Validators.email]]) }`. Type with `FormGroup<{ email: FormControl<string> }>` for strict typing.
 - [ ] **Signals with forms** — `form.valueChanges.pipe(takeUntilDestroyed())`. Or `toSignal(form.valueChanges)` for signal-based consumption.
@@ -107,7 +123,7 @@
 
 ---
 
-## 10. HTTP & API
+## 11. HTTP & API
 
 - [ ] **`provideHttpClient(withInterceptors([authInterceptor]))`** — functional interceptors. `(req: HttpRequest<unknown>, next: HttpHandlerFn) => ...`.
 - [ ] **`httpResource()` (experimental)** — signal-based HTTP. `users = httpResource<User[]>('/api/users')`. Auto-tracks deps, refetch on signal change, loading/error states.
@@ -116,7 +132,7 @@
 
 ---
 
-## 11. Real-Time & Live Data
+## 12. Real-Time & Live Data
 
 - [ ] **SSE vs WebSocket** — SSE for one-way server→client streams (notifications, activity feeds, LLM tokens). WebSocket only for bidirectional (chat, collaboration, presence). Default to SSE — simpler, works over HTTP/2, auto-reconnects natively.
 - [ ] **RxJS as the backbone** — `WebSocketSubject` from `rxjs/webSocket` with reconnect config, or `EventSource` wrapped in `new Observable` / `fromEvent`. Compose live streams with `retryWhen`/`retry({ delay })`, `throttleTime`, `bufferTime` — this is Angular's home turf, use it.
@@ -132,7 +148,7 @@
 
 ---
 
-## 12. Styling
+## 13. Styling
 
 - [ ] **`styleUrl` / `styles`** — component-scoped by default (emulated shadow DOM). `ViewEncapsulation.None` only when needed.
 - [ ] **Tailwind CSS** — `@tailwindcss/postcss`. Works with Angular CLI natively. `ng add @angular-builders/custom-webpack` if needed.
@@ -142,7 +158,7 @@
 
 ---
 
-## 13. Testing
+## 14. Testing
 
 - [ ] **Jasmine / Karma** — default. `ng test`. Or Jest via `@angular-builders/jest` (faster, parallel).
 - [ ] **Component tests** — `TestBed.configureTestingModule({ imports: [MyComponent] }).compileComponents()`. `fixture.componentInstance`, `fixture.detectChanges()`.
@@ -153,7 +169,7 @@
 
 ---
 
-## 14. Security
+## 15. Security
 
 - [ ] **No `bypassSecurityTrustHtml`** unless absolutely forced — and only with DOMPurify first.
 - [ ] **`DomSanitizer`** — Angular sanitizes `[innerHTML]` by default. Don't bypass it.
@@ -163,7 +179,7 @@
 
 ---
 
-## 15. Performance
+## 16. Performance
 
 - [ ] **AOT compilation** — default in production. Verify: `ng build --configuration production`.
 - [ ] **Tree-shaking** — `providedIn: 'root'` services. Standalone components. Only imported code ships.
@@ -175,7 +191,7 @@
 
 ---
 
-## 16. Build & Deploy
+## 17. Build & Deploy
 
 - [ ] **`ng build --configuration production`** — AOT, minification, dead code elimination, service worker if configured.
 - [ ] **`@angular/pwa`** — `ng add @angular/pwa`. Service worker, manifest, offline support. `ngsw-config.json` for cache strategy.
@@ -184,7 +200,7 @@
 - [ ] **`@ngx-translate` or Angular i18n** — i18n built-in since Angular 9. `ng extract-i18n`. Or `@ngx-translate/core` for runtime switching.
 - [ ] **Environment configs** — `fileReplacements` in `angular.json`. `environment.ts` → `environment.prod.ts` at build time.
 
-## 17. AI/LLM Integration
+## 18. AI/LLM Integration
 
 - [ ] **HTTP streaming** — `HttpClient` with `responseType: 'text'` + `reportProgress` or fetch-based `ReadableStream` parsing for SSE. Or `@microsoft/fetch-event-source` for robust event-stream handling.
 - [ ] **Never expose provider keys** — Everything in Angular ships to the browser. LLM calls go through your backend (or Angular SSR server routes). Keys stay server-side.
@@ -194,7 +210,7 @@
 - [ ] **Non-chat AI calls** — RxJS `switchMap` for debounced AI calls, or TanStack Query Angular with `injectQuery`. Cache identical prompts.
 - [ ] **Graceful degradation** — Error state with retry, cached fallback, "AI can be wrong" disclaimers where user-facing. Rate-limit UX on 429.
 
-## 18. Data Privacy & Compliance (Frontend-Specific)
+## 19. Data Privacy & Compliance (Frontend-Specific)
 
 - [ ] **Error monitoring scrubbing** — Sentry `beforeSend` strips PII (emails, tokens, form values) from error payloads.
 - [ ] **Cookie consent** — GDPR/CCPA banner before analytics fire. Load analytics only after opt-in (or cookieless: Plausible, Umami).
@@ -276,17 +292,18 @@ flowchart TD
 | 5 | Components | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 6 | Dependency Injection | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 7 | Routing | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 8 | SEO & Metadata | ❌ | 🟡 if public | 🟡 if public | ✅ if public | ✅ | ✅ + structured data | ✅ |
-| 9 | Forms | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + audit trail |
-| 10 | HTTP & API | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 11 | Real-Time & Live Data | ❌ | 🟡 if used | 🟡 if used | ✅ if used | ✅ + scale | ✅ + load testing | ✅ + HA/failover |
-| 12 | Styling | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + design system |
-| 13 | Testing | ❌ maybe smoke | 🟡 unit | ✅ + component | ✅ + E2E | ✅ + visual reg | ✅ + a11y in CI | ✅ + formal verification |
-| 14 | Security (Frontend) | 🟡 no secrets | 🟡 essentials | ✅ | ✅ + CSP | ✅ + pentest | ✅ + hardened | ✅ + formal audit |
-| 15 | Performance | ❌ | 🟡 basic CWV | ✅ | ✅ + budgets | ✅ + profiling | ✅ + SLO | ✅ + capacity |
-| 16 | Build & Deploy | ❌ | 🟡 basic build | ✅ + CI | ✅ + previews | ✅ + canary + flags | ✅ + full pipeline | ✅ + signed artifacts |
-| 17 | AI/LLM Integration | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
-| 18 | Data Privacy & Compliance | ❌ | ❌ | 🟡 minimal | ✅ consent + PII | ✅ + DPA | ✅ full compliance | ✅ + regulatory framework |
+| 8 | SSR & Hydration | ❌ | 🟡 if public | 🟡 if public | ✅ if public | ✅ + caching | ✅ + SLO | ✅ + capacity |
+| 9 | SEO & Metadata | ❌ | 🟡 if public | 🟡 if public | ✅ if public | ✅ | ✅ + structured data | ✅ |
+| 10 | Forms | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + audit trail |
+| 11 | HTTP & API | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 12 | Real-Time & Live Data | ❌ | 🟡 if used | 🟡 if used | ✅ if used | ✅ + scale | ✅ + load testing | ✅ + HA/failover |
+| 13 | Styling | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + design system |
+| 14 | Testing | ❌ maybe smoke | 🟡 unit | ✅ + component | ✅ + E2E | ✅ + visual reg | ✅ + a11y in CI | ✅ + formal verification |
+| 15 | Security (Frontend) | 🟡 no secrets | 🟡 essentials | ✅ | ✅ + CSP | ✅ + pentest | ✅ + hardened | ✅ + formal audit |
+| 16 | Performance | ❌ | 🟡 basic CWV | ✅ | ✅ + budgets | ✅ + profiling | ✅ + SLO | ✅ + capacity |
+| 17 | Build & Deploy | ❌ | 🟡 basic build | ✅ + CI | ✅ + previews | ✅ + canary + flags | ✅ + full pipeline | ✅ + signed artifacts |
+| 18 | AI/LLM Integration | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
+| 19 | Data Privacy & Compliance | ❌ | ❌ | 🟡 minimal | ✅ consent + PII | ✅ + DPA | ✅ full compliance | ✅ + regulatory framework |
 
 ---
 

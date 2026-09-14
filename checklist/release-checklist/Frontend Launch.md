@@ -107,4 +107,4 @@
 ## Sources
 
 - Distilled from: HCI vault, [[Cybersecurity Overview]], [[API Overview]].
-- Original deep reference: `../web-checklist/react-js.md`, `../web-checklist/web.md`
+- Original deep reference: `../web-checklist/react.md`, `../web-checklist/next.md`, `../web-checklist/web.md`

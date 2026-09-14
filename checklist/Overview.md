@@ -32,7 +32,7 @@ The original checklists in `../` are your **reference manuals** — keep them fo
 |---------------------|---------------------|
 | `api-checklist/api.md` (319 lines) | [[API Launch]] (~45 lines) |
 | `microservice-checklist/microservice-infrastructure.md` (292 lines) | [[Microservice Launch]] (~35 lines) |
-| `web-checklist/web.md` (306 lines) | [[Frontend Launch]] (~35 lines) |
+| `web-checklist/web.md` (~350 lines) + 2-layer family: `react.md`/`next.md`, `vue.md`/`nuxt.md`, `svelte.md`/`sveltekit.md`, `angular.md` | [[Frontend Launch]] (~35 lines) |
 | `release-checklist/release.md` (170 lines) | [[Release]] (~45 lines) |
 | `security-checklist/security.md` (210 lines) | [[Security]] (~50 lines) |
 | `database-checklist/database.md` (190 lines) | [[Database]] (~45 lines) |
