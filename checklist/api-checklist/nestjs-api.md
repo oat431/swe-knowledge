@@ -1,11 +1,11 @@
 # NestJS API Checklist
 
-> Last updated: 2026-08-05
+> Last updated: 2026-09-14 — synced with [[api]] 2026-09-14 additions: RFC 9457 error envelope, OpenAPI 3.1 + spec-quality/contract-diff CI gate, rate-limit headers, HTTP caching semantics, X-Request-ID propagation, mutation testing.
 > NestJS-specific companion to [[api]]. Tick the general checklist first. Assumes TypeScript + Express (default) or Fastify.
 
 ---
 
-## Project Setup
+## 1. Project Setup
 
 - [ ] **`@nestjs/cli`** — `nest new project --strict`. TypeScript strict mode on.
 - [ ] **`tsconfig.json`** — `strict: true`, `noUncheckedIndexedAccess`, `noUnusedLocals`, `paths` for `@/` aliases.
@@ -14,7 +14,7 @@
 
 ---
 
-## Module Structure
+## 2. Module Structure
 
 ```
 src/
@@ -34,7 +34,7 @@ src/
 
 ---
 
-## `main.ts` Bootstrapping
+## 3. `main.ts` Bootstrapping
 
 - [ ] **Global pipes** — `app.useGlobalPipes(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true, transform: true }))`
 - [ ] **Global filters** — `app.useGlobalFilters(new HttpExceptionFilter())` for consistent error shape.
@@ -46,7 +46,7 @@ src/
 
 ---
 
-## Controllers
+## 4. Controllers
 
 - [ ] **`@Controller('users')`** — route prefix on class. Method decorators: `@Get(':id')`, `@Post()`, `@Patch(':id')`, `@Delete(':id')`.
 - [ ] **DTOs with validation** — `class CreateUserDto { @IsEmail() email: string; @MinLength(8) password: string; }`
@@ -56,7 +56,7 @@ src/
 
 ---
 
-## Providers & DI
+## 5. Providers & DI
 
 - [ ] **Services are `@Injectable()`** — injected via constructor. `constructor(private userService: UserService) {}`
 - [ ] **Repository pattern** — `@Injectable()` repository class wrapping TypeORM `Repository<T>` or Prisma client. Injected into services.
@@ -65,7 +65,7 @@ src/
 
 ---
 
-## Validation & Transformation
+## 6. Validation & Transformation
 
 - [ ] **`class-validator` decorators** — `@IsString()`, `@IsInt()`, `@IsEnum()`, `@IsOptional()`, `@ValidateNested()`. On every DTO field.
 - [ ] **`class-transformer`** — `@Type(() => NestedDto)` for nested objects. `@Transform()` for custom transforms.
@@ -75,7 +75,7 @@ src/
 
 ---
 
-## Database (TypeORM / Prisma)
+## 7. Database (TypeORM / Prisma)
 
 - [ ] **TypeORM** — `@nestjs/typeorm`. `TypeOrmModule.forRootAsync()` with config. `@Entity()` classes. Repository pattern via `@InjectRepository()`.
 - [ ] **Prisma** — `PrismaService extends PrismaClient implements OnModuleInit`. `@Injectable()` singleton. No extra repository layer needed — Prisma IS the repository.
@@ -86,7 +86,7 @@ src/
 
 ---
 
-## Authentication & Authorization
+## 8. Authentication & Authorization
 
 - [ ] **`@nestjs/passport` + `@nestjs/jwt`** — `PassportModule`, `JwtModule.registerAsync()`. `JwtStrategy extends PassportStrategy(Strategy)`.
 - [ ] **`JwtAuthGuard`** — `extends AuthGuard('jwt')`. Applied globally via `APP_GUARD`.
@@ -96,16 +96,17 @@ src/
 
 ---
 
-## Error Handling
+## 9. Error Handling
 
-- [ ] **Custom exception filter** — `@Catch() implements ExceptionFilter`. Catches `HttpException` + unknown errors. Returns `{ statusCode, message, timestamp, path }`.
+- [ ] **Custom exception filter** — `@Catch() implements ExceptionFilter`. Catches `HttpException` + unknown errors. Returns one consistent error shape for every failure (see RFC 9457 item below).
+- [ ] **RFC 9457 Problem Details envelope** — Return `application/problem+json` (obsoletes RFC 7807) from the exception filter: `{ type, title, status, detail, instance }` plus stable machine-readable error codes as extension members that survive message edits. Map `HttpException` subclasses → problem fields in one place; register the filter globally (`APP_FILTER` or `useGlobalFilters`).
 - [ ] **`NotFoundException` over generic errors** — `throw new NotFoundException('User not found')`.
 - [ ] **Domain exceptions** — `throw new BadRequestException('Insufficient balance')`. NestJS maps to 400.
 - [ ] **No stack traces in production** — `exceptionFilter` checks `NODE_ENV` before including stack.
 
 ---
 
-## Configuration
+## 10. Configuration
 
 - [ ] **`@nestjs/config`** — `ConfigModule.forRoot({ isGlobal: true, validate })`. `ConfigService` injected, never `process.env` directly.
 - [ ] **Config validation** — `Joi` or `class-validator` on config object. `validate(config)` throws on missing/invalid env vars at startup. Fail fast.
@@ -114,16 +115,17 @@ src/
 
 ---
 
-## Logging
+## 11. Logging
 
 - [ ] **`Logger` from `@nestjs/common`** — `private readonly logger = new Logger(UserService.name)`. Class-scoped.
 - [ ] **Custom logger** — `NestFactory.create(AppModule, { logger: new MyLogger() })`. Pino or Winston via adapter.
 - [ ] **Request logging** — `morgan` middleware or custom interceptor. `:method :url :status :response-time ms`.
+- [ ] **`X-Request-ID` propagation** — Middleware reads `X-Request-ID` from the client (generates a UUID if absent) and returns it in every response — especially error responses — so a support ticket maps to logs in one lookup. Bind it with `nestjs-cls` (`AsyncLocalStorage`) and include it in every log line from the custom logger.
 - [ ] **No secrets in logs** — filter out `password`, `token`, `authorization` from request/response logging.
 
 ---
 
-## Testing
+## 12. Testing
 
 - [ ] **Jest** — `@nestjs/testing`. `Test.createTestingModule({ imports: [], providers: [] }).compile()`.
 - [ ] **Unit tests** — services with mocked repositories. `jest.fn()` or `jest-mock-extended`. Fast, parallel.
@@ -131,29 +133,33 @@ src/
 - [ ] **E2E tests** — full app with test DB. `beforeAll` starts app + runs migrations. `afterAll` closes.
 - [ ] **`@golevelup/ts-jest`** — `createMock<Repository<User>>()`. Cleaner than manual `jest.fn()` for complex mocks.
 - [ ] **Test DB** — Docker `postgres:16-alpine` via Testcontainers. Not SQLite (different dialect).
+- [ ] **Mutation testing** — Your tests pass — but do they actually catch bugs? `@stryker-mutator/core` injects small faults (mutants) and measures how many your tests kill. Target ≥80% mutation score on business logic (services — not DTO plumbing or config). Run in CI on changed files only — full runs are too slow for every PR.
 
 ---
 
-## Swagger / OpenAPI
+## 13. Swagger / OpenAPI
 
-- [ ] **`@nestjs/swagger`** — `SwaggerModule.createDocument(app, config)`. `SwaggerModule.setup('api/docs', app, document)`.
+- [ ] **`@nestjs/swagger`** — `SwaggerModule.createDocument(app, config)`. `SwaggerModule.setup('api/docs', app, document)`. Target OpenAPI 3.1 (JSON Schema 2020-12) — supported since `@nestjs/swagger` v11 (`DocumentBuilder.setOpenAPIVersion('3.1.0')`).
 - [ ] **`@ApiProperty()` on DTOs** — type, example, description, required/optional. This IS your API documentation.
 - [ ] **`@ApiBearerAuth()`** — marks endpoints needing JWT. Global via `addBearerAuth()` in swagger config.
 - [ ] **`@ApiTags('Users')` on controllers** — groups endpoints in Swagger UI.
+- [ ] **Spec quality + contract change detection in CI** — `@stoplight/spectral-cli` with a house ruleset lints the generated spec on every PR. Breaking-change detection gates the pipeline: `oasdiff`/`openapi-diff` fails the build when a change removes fields, changes types, or narrows responses — the REST equivalent of `buf breaking` for gRPC. Breaking changes require a new version, never a silent edit.
 
 ---
 
-## Performance
+## 14. Performance
 
 - [ ] **Compression** — `compression` middleware via `app.use(compression())`.
 - [ ] **Helmet** — `app.use(helmet())`. Security headers.
 - [ ] **Rate limiting** — `@nestjs/throttler`. `ThrottlerModule.forRoot({ ttl: 60, limit: 100 })`. `@Throttle()` or `@SkipThrottle()`.
+- [ ] **Rate-limit headers** — Return `RateLimit-Limit` / `RateLimit-Remaining` / `RateLimit-Reset` (+ `RateLimit-Policy`) so clients can self-throttle; include them on 429 responses at minimum. `@nestjs/throttler` doesn't emit them — add a small header middleware/interceptor on top and document them in the spec.
+- [ ] **HTTP caching semantics** — `Cache-Control` (with `s-maxage`, `stale-while-revalidate`) on cacheable GETs; `Vary` on content-negotiated responses. Let the CDN/HTTP cache absorb traffic before your application code runs — set headers via an interceptor or `@Header()`, not scattered `res.set()` calls.
 - [ ] **Fastify** — `NestFactory.create(AppModule, new FastifyAdapter())`. Faster than Express. `@nestjs/platform-fastify`.
 - [ ] **Clustering** — `cluster` module (Node) or PM2. Use worker threads if CPU-bound.
 
 ---
 
-## AI/LLM Integration (if applicable)
+## 15. AI/LLM Integration (if applicable)
 
 > **When you need it:**
 > 🤖 **NestJS service calling an LLM** (OpenAI, Anthropic, local models, RAG pipelines) — ✅ mandatory.
@@ -173,7 +179,7 @@ src/
 
 ---
 
-## Data Privacy & Compliance
+## 16. Data Privacy & Compliance
 
 > **When you need it:**
 > 🌍 **NestJS service handling user data** — ✅ mandatory if you have users in EU (GDPR), California (CCPA/CPRA), Brazil (LGPD).
@@ -201,7 +207,7 @@ src/
 - [ ] `@Public()` decorator works — health/login/register accessible without token
 - [ ] `enableShutdownHooks()` called — graceful DB disconnect on SIGTERM
 - [ ] `ConfigModule` validates at startup — missing `DATABASE_URL` fails fast, not at first request
-- [ ] Error filter returns consistent `{ statusCode, message, timestamp, path }`
+- [ ] Error filter returns consistent RFC 9457 `application/problem+json` envelope
 - [ ] Swagger UI at `/api/docs` (dev only or gated behind basic auth in prod)
 - [ ] Migrations committed + run automatically in CI/CD — no `synchronize: true` in prod
 - [ ] `.env` not committed, `.env.example` is
@@ -263,20 +269,20 @@ flowchart TD
 
 | # | Section | 🧪 POC | 🔧 Prototype | 🏠 Internal | 🟢 Small Prod | 🔵 Medium Prod | 🟣 Production Grade | 🔴 Mission-Critical |
 |---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 1 | Project Setup (`@nestjs/cli`, tsconfig, ESLint) | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 2 | Module Structure (feature modules, DI) | ❌ | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 3 | `main.ts` Bootstrapping (pipes, filters, CORS) | 🟡 basic | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 4 | Controllers (DTOs, guards, Swagger) | 🟡 basic REST | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 5 | Providers & DI (services, repositories) | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 6 | Validation & Transformation (class-validator) | 🟡 | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 7 | Database (TypeORM/Prisma, migrations) | 🟡 SQLite OK | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 8 | Auth & Authorization (Passport, JWT, RBAC) | ❌ | 🟡 basic JWT | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 9 | Error Handling (filters, exceptions) | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 10 | Configuration (`@nestjs/config`, validation) | ❌ | 🟡 .env only | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 11 | Logging (Logger, request logging) | ❌ `console.log` | 🟡 structured | ✅ | ✅ + tracing | ✅ + dashboards | ✅ + SLO | ✅ + full stack |
-| 12 | Testing (Jest, unit, E2E) | ❌ maybe smoke | 🟡 unit | ✅ | ✅ + E2E | ✅ + load | ✅ + chaos | ✅ + formal |
-| 13 | Swagger / OpenAPI (`@nestjs/swagger`) | ❌ | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 14 | Performance (compression, throttler, Fastify) | ❌ | ❌ | 🟡 cache | ✅ | ✅ | ✅ | ✅ + capacity |
-| 15 | AI/LLM Integration | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
+| 1 | Project Setup | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 2 | Module Structure | ❌ | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 3 | `main.ts` Bootstrapping | 🟡 basic | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 4 | Controllers | 🟡 basic REST | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 5 | Providers & DI | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 6 | Validation & Transformation | 🟡 | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 7 | Database (TypeORM / Prisma) | 🟡 SQLite OK | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 8 | Authentication & Authorization | ❌ | 🟡 basic JWT | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 9 | Error Handling | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 10 | Configuration | ❌ | 🟡 .env only | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 11 | Logging | ❌ `console.log` | 🟡 structured | ✅ | ✅ + tracing | ✅ + dashboards | ✅ + SLO | ✅ + full stack |
+| 12 | Testing | ❌ maybe smoke | 🟡 unit | ✅ | ✅ + E2E | ✅ + load | ✅ + chaos | ✅ + formal |
+| 13 | Swagger / OpenAPI | ❌ | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 14 | Performance | ❌ | ❌ | 🟡 cache | ✅ | ✅ | ✅ | ✅ + capacity |
+| 15 | AI/LLM Integration (if applicable) | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
 | 16 | Data Privacy & Compliance | ❌ | ❌ | 🟡 PII masking | ✅ erasure | ✅ + consent + DPA | ✅ full | ✅ + regulatory |
 

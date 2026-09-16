@@ -2,7 +2,7 @@
 
 > Python + FastAPI companion to the general [API checklist](api.md).
 > Covers FastAPI 0.141+, Pydantic v2, SQLAlchemy 2.0+, uv package management.
-> Last updated: 2026-08-05
+> Last updated: 2026-09-14 — synced with the general API checklist: RFC 9457 error format, OpenAPI 3.1 + spec-quality/contract CI, rate-limit headers, HTTP caching semantics, X-Request-ID propagation, mutation testing.
 
 ---
 
@@ -100,6 +100,8 @@ project/
 - [ ] **APIRouter composition** — `app.include_router(users_router, prefix="/api/v1/users", tags=["Users"])`.
 - [ ] **Tags** — group endpoints for OpenAPI docs. One tag per feature.
 - [ ] **Custom title/description** — `FastAPI(title="My API", version="1.0.0", description="...")`.
+- [ ] **OpenAPI 3.1 generated natively** — FastAPI emits an OpenAPI 3.1 spec (JSON Schema 2020-12) from your Pydantic v2 models and route signatures — no generator step, no hand-written spec file. Keep Pydantic schemas as the single source of truth and set `response_model` on every route so the spec stays honest.
+- [ ] **Spec quality + contract change detection in CI** — `spectral` with a house ruleset lints the generated `openapi.json` on every PR. Breaking-change detection gates the pipeline: `oasdiff`/`openapi-diff` fails the build when a change removes fields, changes types, or narrows responses — the REST equivalent of `buf breaking` for gRPC. Breaking changes require a new version, never a silent edit.
 
 ---
 
@@ -269,6 +271,7 @@ project/
   async def login(request: Request):
       ...
   ```
+- [ ] **Rate-limit headers** — Return `RateLimit-Limit` / `RateLimit-Remaining` / `RateLimit-Reset` (+ `RateLimit-Policy`) on responses so clients can self-throttle; include them on 429 responses at minimum. `slowapi` doesn't emit them by default — add them via a small middleware or the limiter's header hooks, and document them in the OpenAPI spec.
 - [ ] **Security headers middleware** — `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Strict-Transport-Security`.
 - [ ] **Request body size limit** — middleware to reject payloads > N MB.
 - [ ] **Middleware order** — CORS → Security Headers → Rate Limiting → Request ID → Logging.
@@ -287,6 +290,7 @@ project/
       )
   ```
 - [ ] **`HTTPException`** — for standard HTTP errors. FastAPI auto-converts to JSON.
+- [ ] **RFC 9457 problem details** — `application/problem+json` (obsoletes RFC 7807) as the standard error envelope: `type`, `title`, `status`, `detail`, `instance`. FastAPI's default `HTTPException` payload isn't RFC-shaped — customize the `http_exception_handler` and `RequestValidationError` handlers, or use a lib like `fastapi-problem-details` for the RFC envelope. Keep stable machine-readable error codes that survive message edits.
 - [ ] **Pydantic validation errors** — auto-return 422 with field-level details. Customize with `RequestValidationError` handler.
 - [ ] **Don't leak internals** — catch `Exception` as a fallback, log full error, return sanitized 500 response.
 
@@ -318,7 +322,7 @@ project/
       await db.execute(text("SELECT 1"))
       return {"status": "ready"}
   ```
-- [ ] **Correlation IDs** — middleware generates request ID, propagates to all logs and downstream calls.
+- [ ] **X-Request-ID propagation** — ASGI middleware reads `X-Request-ID` from the client (generates a UUID if absent), returns it on every response — especially error responses — so a support ticket maps to logs in one lookup. Forward it on downstream `httpx` calls and bind it into the logging context (`structlog.contextvars.bind_contextvars(request_id=...)`) so every log line carries it.
 
 ---
 
@@ -365,6 +369,7 @@ project/
   async def get_item(item_id: int):
       return await repository.get(item_id)
   ```
+- [ ] **HTTP caching semantics** — Set `Cache-Control` (with `s-maxage` for shared/CDN caches and `stale-while-revalidate` for graceful staleness) on cacheable GETs; set `Vary` on content-negotiated responses (e.g., `Vary: Accept`). Let the CDN/HTTP cache absorb traffic before your application code runs — for static-ish GETs, plain `Cache-Control` headers beat app-level `fastapi-cache2` because the response never reaches uvicorn.
 - [ ] **Cache invalidation** — explicit `cache.invalidate()` on write operations, or TTL-based expiry.
 - [ ] **Cache stampede protection** — lock-based caching to prevent thundering herd on cache miss.
 - [ ] **Multi-level caching** — in-memory (LRU) for hot data → Redis for shared cache → DB as source of truth.
@@ -448,6 +453,7 @@ project/
 - [ ] **factory_boy** — test data factories for realistic fixtures.
 - [ ] **conftest.py** — shared fixtures: test client, test DB, authenticated user.
 - [ ] **Coverage** — `pytest --cov=app --cov-report=html`. Aim for 80%+ on business logic.
+- [ ] **Mutation testing** — `uv add --dev mutmut` then `mutmut run`. Aim for ≥80% mutation score on business logic (`features/*/service.py`) — coverage shows lines executed, mutation testing shows assertions that actually assert. In CI, run mutation testing on changed files only (mutmut's diff/paths mode against the PR diff) to keep pipeline runtime sane.
 - [ ] **ruff** — linting + formatting: `ruff check .` + `ruff format .`.
 
 ---
@@ -633,13 +639,13 @@ flowchart TD
 | # | Section | 🧪 POC | 🔧 Prototype | 🏠 Internal | 🟢 Small Prod | 🔵 Medium Prod | 🟣 Production Grade | 🔴 Mission-Critical |
 |---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 1 | Project Setup | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + SBOM |
-| 2 | Project Structure | ❌ | 🟡 single file OK | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 2 | Project Structure (Feature-Based / Clean Architecture) | ❌ | 🟡 single file OK | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 3 | FastAPI App Setup | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 4 | Pydantic v2 Models | 🟡 basic types | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + strict |
+| 4 | Pydantic v2 Models (Request/Response Schemas) | 🟡 basic types | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + strict |
 | 5 | Dependency Injection | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 6 | Configuration | 🟡 .env | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + vault |
-| 7 | Database (SQLAlchemy) | 🟡 SQLite OK | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ + audit |
-| 8 | Authentication | ❌ | 🟡 basic JWT | ✅ | ✅ | ✅ | ✅ | ✅ + rotation |
+| 6 | Configuration (pydantic-settings) | 🟡 .env | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + vault |
+| 7 | Database (SQLAlchemy 2.0 + asyncpg) | 🟡 SQLite OK | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ + audit |
+| 8 | Authentication (JWT + OAuth2) | ❌ | 🟡 basic JWT | ✅ | ✅ | ✅ | ✅ | ✅ + rotation |
 | 9 | Middleware & Security | 🟡 CORS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + WAF |
 | 10 | Error Handling | ❌ | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ + formal |
 | 11 | Observability | ❌ | 🟡 structlog | ✅ + metrics | ✅ + tracing | ✅ + dashboards | ✅ + SLO | ✅ + full stack |

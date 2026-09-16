@@ -2,7 +2,7 @@
 
 > Spring Boot 4.x-specific companion to the general [Backend Checklist](api.md).
 > Covers Boot 4.0+ (Spring Framework 7, Java 21+, modular starters, Security 7, Jackson 3).
-> Last updated: 2026-08-05
+> Last updated: 2026-09-14 (RFC 9457 ProblemDetail, OpenAPI 3.1 + breaking-change CI gate, rate-limit headers, HTTP caching, request-ID propagation, transactional outbox, PIT mutation testing; AI/LLM & Data Privacy sections promoted to numbered 15/16 to match the matrix)
 
 ---
 
@@ -51,12 +51,17 @@ com.example.app/
 - [ ] **API versioning — Boot 4 built-in** — Spring Boot 4 adds first-class API versioning support. `@ApiVersion` annotation on controllers. Declare supported versions; gateway/routing picks up automatically.
 - [ ] **HTTP Service Clients — Boot 4 built-in** — `@HttpExchange` for declarative HTTP clients. Replaces manual `RestTemplate`/`WebClient` wiring. Interfaces annotated with `@HttpExchange("/api/v1/users")`. Auto-implemented at runtime.
 - [ ] **`@RestControllerAdvice` for global error handling** — Centralized `@ExceptionHandler`. Map exceptions → consistent error response. `MethodArgumentNotValidException` → 400. `AccessDeniedException` → 403. `EntityNotFoundException` → 404. Generic `Exception` → 500 (log stack trace, don't leak to client).
+- [ ] **Consistent error format — RFC 9457 ProblemDetail** — Spring's `org.springframework.http.ProblemDetail` (supported since Spring 6) renders `application/problem+json` — RFC 9457, which obsoletes RFC 7807. Return it from `@ExceptionHandler` methods in your `@RestControllerAdvice`; set `spring.mvc.problemdetails.enabled=true` so framework exceptions follow the same envelope. Give each error a stable `type` URI + `title` that survive message edits, and attach machine-readable codes via custom properties (`problem.setProperty("code", "VALIDATION_ERROR")`). Never leak stack traces into the body.
 - [ ] **`ResponseEntity` when needed, simple return when not** — `return userService.getUser(id)` is cleaner than `ResponseEntity.ok()` for happy paths. `ResponseEntity` for custom headers or non-200 status.
 - [ ] **`@Valid` / `@Validated` on controller params** — `public UserResponse createUser(@Valid @RequestBody CreateUserRequest request)`. Validation annotations on DTO fields (`@NotBlank`, `@Email`, `@Size`).
 - [ ] **Jackson 3 — package relocated** — Boot 4 prefers Jackson 3. Package moved: `com.fasterxml.jackson` → `tools.jackson`. Custom serializers/deserializers need import updates. Jackson 2 still works during transition but will be removed.
 - [ ] **`@JsonView` or dedicated DTOs** — Don't serialize entities with lazy-loaded collections (N+1 in Jackson). DTOs or `@JsonIgnoreProperties` on bidirectional relationships. `@JsonIgnore` on password fields.
 - [ ] **Pagination** — `Pageable` parameter. `Page<T>` return type. Set `spring.data.web.pageable.default-page-size` and `max-page-size` in config.
-- [ ] **OpenAPI** — `springdoc-openapi-starter-webmvc-ui` (verify Boot 4 compatibility). Annotations on controllers (`@Operation`, `@ApiResponse`). API doc at `/v3/api-docs`, Swagger UI at `/swagger-ui.html`.
+- [ ] **OpenAPI 3.1 spec** — `springdoc-openapi-starter-webmvc-ui` (springdoc v3 targets Boot 4 / Spring Framework 7 and supports OpenAPI 3.1 / JSON Schema 2020-12 — enable 3.1 output rather than hand-writing the spec). Generated from code, not hand-written. Annotations on controllers (`@Operation`, `@ApiResponse`). API doc at `/v3/api-docs`, Swagger UI at `/swagger-ui.html`.
+- [ ] **Spec quality + contract change detection in CI** — `spectral` with a house ruleset lints the generated spec on every PR. Breaking-change detection gates the pipeline: `oasdiff`/`openapi-diff` fails the build when a change removes fields, changes types, or narrows responses — the REST equivalent of `buf breaking` for gRPC. Breaking changes require a new API version (`@ApiVersion`), never a silent edit.
+
+- [ ] **Rate-limit headers** — Return `RateLimit-Limit` / `RateLimit-Remaining` / `RateLimit-Reset` (+ `RateLimit-Policy`) on responses so clients can self-throttle; include them on 429 responses at minimum. Enforce limits with Bucket4j (token bucket) or Resilience4j `RateLimiter`, and emit the headers from a `OncePerRequestFilter`/`HandlerInterceptor` or a shared `ResponseEntity` advice so every throttled endpoint behaves the same. Document them in the OpenAPI spec.
+- [ ] **HTTP caching semantics** — `Cache-Control` with `s-maxage` and `stale-while-revalidate` on cacheable GETs; `Vary` on content-negotiated responses. Use Spring's `CacheControl` builder (`ResponseEntity.ok().cacheControl(CacheControl.maxAge(Duration.ofMinutes(10)).cachePublic().staleWhileRevalidate(Duration.ofHours(1)))`) or `WebContentInterceptor` for path-based defaults across controllers. Let the CDN/HTTP cache absorb traffic before your controller code runs.
 
 ## 4. Validation
 
@@ -190,6 +195,7 @@ void shouldOpenCircuitOnRepeatedFailure() {
 - [ ] **`@EnableAsync`** — On `@Configuration` class. `TaskExecutor` bean.
 - [ ] **`@Async`** — On service methods. Return `void`, `CompletableFuture<T>`, or `ListenableFuture<T>`. `CompletableFuture` preferred — composable, cancellable.
 - [ ] **Virtual threads — auto-configured** — Boot 4 on Java 21+ auto-configures virtual threads. `spring.threads.virtual.enabled` defaults to `true`. No thread pool tuning needed. Hibernate 7.1's `ReentrantLock` switch makes virtual threads significantly faster under database load.
+- [ ] **Transactional outbox pattern** — Never publish to Kafka/RabbitMQ and commit to the DB in two separate steps (one will fail, data diverges). Write the event to an `outbox` table in the same `@Transactional` method as the business write; a separate relay publishes from the outbox to the broker — exactly-once publishing from a transactional context. Options: Debezium CDC (reads the outbox table from the WAL) or a simple `@Scheduled` polling relay for smaller scale. Spring Modulith's event publication registry (`@ApplicationModuleEvent` + `EventPublicationRegistry`) provides the same outbox guarantee in-process.
 - [ ] **Thread pool for non-virtual** — If disabling virtual threads: `ThreadPoolTaskExecutor` with `corePoolSize`, `maxPoolSize`, `queueCapacity`. Rejection policy: `CallerRunsPolicy`.
 
 ## 10. Observability (Actuator + Micrometer + OpenTelemetry)
@@ -197,8 +203,9 @@ void shouldOpenCircuitOnRepeatedFailure() {
 - [ ] **Spring Boot Actuator** — `spring-boot-starter-actuator`. Endpoints: `health`, `metrics`, `info`, `loggers`, `env` (restricted). Secure in production: `management.endpoints.web.exposure.include: health,metrics,info`. `management.endpoint.health.show-details: when-authorized`.
 - [ ] **OpenTelemetry starter (NEW in Boot 4)** — `spring-boot-starter-opentelemetry`. First-party observability starter. Replaces manual Micrometer + Prometheus + OTel wiring. Traces, metrics, logs exported to OTel collector automatically.
 - [ ] **Micrometer** — `spring-boot-starter-micrometer-metrics`. `MeterRegistry` bean. Custom metrics: `Counter`, `Timer`, `Gauge`. `@Timed` annotation on methods.
-- [ ] **Distributed tracing** — `spring-boot-starter-micrometer-tracing` + `spring-boot-starter-zipkin` or OTel. `spring.sleuth.*` is deprecated → Micrometer Tracing. Trace ID in logs: `%clr([%X{traceId:-},%X{spanId:-}])` in logback pattern.
+- [ ] **Distributed tracing** — `spring-boot-starter-micrometer-tracing` + `spring-boot-starter-zipkin` or OTel. Spring Cloud Sleuth is retired → Micrometer Tracing. Trace ID in logs: `%clr([%X{traceId:-},%X{spanId:-}])` in logback pattern.
 - [ ] **Modularized observability starters** — Boot 4 splits observability into focused modules: `spring-boot-starter-micrometer-metrics`, `-micrometer-tracing`, `-opentelemetry`, `-zipkin`. Pick what you need.
+- [ ] **X-Request-ID propagation** — Spring Cloud Sleuth is retired — do not carry it into Boot 4; use Micrometer Tracing. Read an incoming `X-Request-ID` header (generate a UUID if absent) in a `OncePerRequestFilter`/`HandlerInterceptor`, bind it to the MDC (`%X{requestId}` in the logback pattern, alongside `%X{traceId}`/`%X{spanId}`), and return it in every response — especially error responses — so a support ticket maps to logs in one lookup.
 - [ ] **Logging** — Logback (default) or Log4j2. JSON logging: `logstash-logback-encoder`. Config: `logback-spring.xml` (supports `springProfile`). Not `logback.xml` (loaded before Spring context).
 
 ## 11. Testing (Modular Test Starters)
@@ -209,6 +216,7 @@ void shouldOpenCircuitOnRepeatedFailure() {
 - [ ] **`MockMvc`** — For controller tests. `mockMvc.perform(get("/api/v1/users/{id}", 1)).andExpect(status().isOk()).andExpect(jsonPath("$.name").value("Alice"))`.
 - [ ] **`@MockBean` / `@SpyBean`** — Mock dependencies in slice tests.
 - [ ] **Security testing** — `@WithMockUser(roles = "ADMIN")`, `@WithAnonymousUser`. Requires `spring-boot-starter-security-test`. Test new CSRF defaults: without explicit `.csrf().disable()`, expect 403 on POST/PUT/DELETE.
+- [ ] **Mutation testing (PIT)** — Your tests pass — but do they actually catch bugs? PIT (`pitest-maven` / `pitest-gradle-plugin`) injects small faults (mutants) and measures how many your tests kill. Target ≥80% mutation score on business-logic packages. Run in CI on changed files only (`arcmutate` git-plugin incremental analysis or scoped module runs) — the full matrix is too slow for every PR.
 - [ ] **Test configuration** — `@TestConfiguration` inner class. `@TestPropertySource` for test-specific properties.
 
 ## 12. Database Performance (Spring + JPA Specific)
@@ -236,7 +244,7 @@ void shouldOpenCircuitOnRepeatedFailure() {
 
 ---
 
-## AI/LLM Integration (if applicable)
+## 15. AI/LLM Integration (if applicable)
 
 > **When you need it:**
 > 🤖 **Any Spring Boot service calling an LLM** (OpenAI, Anthropic, local models, RAG pipelines) — ✅ mandatory. LLMs are untrusted downstream systems with non-deterministic output, token costs, and prompt injection attack surface.
@@ -255,7 +263,7 @@ void shouldOpenCircuitOnRepeatedFailure() {
 - [ ] **LLM-specific observability** — Spring AI auto-instruments calls via Micrometer when `spring.ai.chat.client.observation.enabled=true` (default in Boot 4). Metrics: `spring.ai.chat.client` timer with `model`, `operation` tags. Add custom tags via `ObservationConvention`. Trace the full chain: user input → retrieval → prompt assembly → model call → output validation → response. A/B test prompt versions via a feature flag (`@ConditionalOnProperty`).
 - [ ] **Data sent to external models** — Know what PII leaves your infrastructure. Strip or anonymize before sending (custom advisor or service-layer redaction). For sensitive workloads, use self-hosted models (Ollama) behind the same `ChatClient` interface — swap provider via profile, no code change. Log what was sent (audit trail) but redact in log storage.
 
-## Data Privacy & Compliance
+## 16. Data Privacy & Compliance
 
 > **When you need it:**
 > 🌍 **Any Spring Boot service handling user data** — ✅ mandatory if you have users in EU (GDPR), California (CCPA/CPRA), Brazil (LGPD), or similar jurisdictions.
@@ -352,19 +360,19 @@ flowchart TD
 
 | # | Section | 🧪 POC | 🔧 Prototype | 🏠 Internal | 🟢 Small Prod | 🔵 Medium Prod | 🟣 Production Grade | 🔴 Mission-Critical |
 |---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 1 | Version & Bootstrapping | 🟡 basic Boot | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + SBOM |
-| 2 | Project Structure | ❌ | 🟡 package-by-layer OK | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 1 | Spring Boot Version & Bootstrapping | 🟡 basic Boot | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + SBOM |
+| 2 | Project Structure (Package-by-Feature, not by-Layer) | ❌ | 🟡 package-by-layer OK | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 3 | REST API (Spring Web MVC) | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + formal |
 | 4 | Validation | ❌ | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 5 | Spring Data JPA | 🟡 H2 OK | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ + audit |
+| 5 | Spring Data JPA (Hibernate 7.1) | 🟡 H2 OK | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ + audit |
 | 6 | Spring Security 7 | ❌ | 🟡 basic JWT | ✅ | ✅ | ✅ | ✅ | ✅ + rotation |
-| 7 | Circuit Breaker & Resilience | ❌ | ❌ | 🟡 if ext APIs | 🟡 if ext APIs | ✅ | ✅ | ✅ + chaos |
+| 7 | Circuit Breaker & Service Resilience | ❌ | ❌ | 🟡 if ext APIs | 🟡 if ext APIs | ✅ | ✅ | ✅ + chaos |
 | 8 | Caching | ❌ | ❌ | 🟡 if needed | ✅ if used | ✅ | ✅ | ✅ + invalidation |
-| 9 | Async Processing | ❌ | ❌ | 🟡 if needed | ✅ if used | ✅ | ✅ | ✅ + DLQ |
-| 10 | Observability | ❌ | 🟡 actuator | ✅ + metrics | ✅ + tracing | ✅ + dashboards | ✅ + SLO | ✅ + full stack |
-| 11 | Testing | ❌ maybe smoke | 🟡 unit + slice | ✅ | ✅ + Testcontainers | ✅ + contract | ✅ + chaos | ✅ + formal |
-| 12 | Database Performance | ❌ | ❌ | 🟡 pool tuning | ✅ + N+1 | ✅ + batch | ✅ + read replicas | ✅ + capacity |
-| 13 | Containerization | ❌ | 🟡 basic Docker | ✅ + Buildpacks | ✅ + multi-stage | ✅ + K8s | ✅ + canary | ✅ + signed |
+| 9 | Async Processing (Virtual Threads Ready) | ❌ | ❌ | 🟡 if needed | ✅ if used | ✅ | ✅ | ✅ + DLQ |
+| 10 | Observability (Actuator + Micrometer + OpenTelemetry) | ❌ | 🟡 actuator | ✅ + metrics | ✅ + tracing | ✅ + dashboards | ✅ + SLO | ✅ + full stack |
+| 11 | Testing (Modular Test Starters) | ❌ maybe smoke | 🟡 unit + slice | ✅ | ✅ + Testcontainers | ✅ + contract | ✅ + chaos | ✅ + formal |
+| 12 | Database Performance (Spring + JPA Specific) | ❌ | ❌ | 🟡 pool tuning | ✅ + N+1 | ✅ + batch | ✅ + read replicas | ✅ + capacity |
+| 13 | Containerization (Spring Boot 4 Specific) | ❌ | 🟡 basic Docker | ✅ + Buildpacks | ✅ + multi-stage | ✅ + K8s | ✅ + canary | ✅ + signed |
 | 14 | Config & Secrets | 🟡 application.yml | ✅ + profiles | ✅ + vault | ✅ + vault | ✅ + vault | ✅ + vault | ✅ + vault + rotation |
-| 15 | AI/LLM Integration | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
+| 15 | AI/LLM Integration (if applicable) | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
 | 16 | Data Privacy & Compliance | ❌ | ❌ | 🟡 PII masking | ✅ erasure + retention | ✅ + consent + DPA | ✅ full compliance | ✅ + regulatory framework |

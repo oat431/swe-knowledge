@@ -1,11 +1,11 @@
 # Rust + Axum API Checklist
 
 > Rust + Axum companion to [[api]]. Tick the general checklist first. Axum is built on tokio + tower + hyper — the standard Rust async stack.
-> Last updated: 2026-08-05
+> Last updated: 2026-09-14 — synced with [[api]]: RFC 9457 error format, OpenAPI 3.1 (utoipa) + spec-quality/contract-diff CI, rate-limit headers, HTTP caching semantics, X-Request-ID propagation, mutation testing.
 
 ---
 
-## Project Setup
+## 1. Project Setup
 
 - [ ] **Rust toolchain** — `rustup default stable`. `cargo new project-name`
 - [ ] **Dependencies** — `Cargo.toml`:
@@ -27,7 +27,7 @@ tracing-subscriber = { version = "0.3", features = ["json", "env-filter"] }
 
 ---
 
-## Project Structure
+## 2. Project Structure
 
 ```
 src/
@@ -60,7 +60,7 @@ src/
 
 ---
 
-## Axum App Setup
+## 3. Axum App Setup
 
 - [ ] **Tokio runtime** — `#[tokio::main]`. Multi-threaded by default. Work-stealing scheduler.
 - [ ] **Router** — `axum::Router::new().route("/api/v1/users", get(handlers::users::list))`.
@@ -71,7 +71,7 @@ src/
 
 ---
 
-## Extractors (Request Parsing)
+## 4. Extractors (Request Parsing)
 
 - [ ] **`axum::Json<T>`** — parses JSON body. `Json(payload): Json<CreateUserRequest>`. Returns 400 on parse failure.
 - [ ] **`axum::extract::Path<T>`** — `Path(id): Path<i64>`. Returns 400 on parse failure.
@@ -82,26 +82,29 @@ src/
 
 ---
 
-## Responses
+## 5. Responses
 
 - [ ] **`impl IntoResponse`** — handlers return types implementing `IntoResponse`. `Json` for JSON, `StatusCode` for empty, `Html` for templates.
 - [ ] **`(StatusCode, Json<T>)`** — explicit status + body. `(StatusCode::CREATED, Json(user))`.
 - [ ] **Error responses** — custom `AppError` enum. `impl IntoResponse for AppError`. Maps variants to status codes.
 - [ ] **Pagination wrapper** — `Json(PaginatedResponse { data, total, page, total_pages })`.
+- [ ] **OpenAPI 3.1 spec (utoipa)** — generated from code, not hand-written. `#[derive(OpenApi)]` + `utoipa-swagger-ui` mounted on a debug-only router. Target OpenAPI 3.1 (JSON Schema 2020-12) — current utoipa versions support it.
+- [ ] **Spec quality + contract change detection in CI** — `spectral` with a house ruleset lints the spec on every PR. Breaking-change detection gates the pipeline: `oasdiff`/`openapi-diff` fails the build when a change removes fields, changes types, or narrows responses — the REST equivalent of `buf breaking` for gRPC. Breaking changes require a new version, never a silent edit.
 
 ---
 
-## Error Handling
+## 6. Error Handling
 
 - [ ] **`AppError` enum** — variants: `NotFound`, `BadRequest`, `Unauthorized`, `Forbidden`, `Internal`.
 - [ ] **`impl IntoResponse for AppError`** — single place mapping errors to HTTP responses. Consistent shape: `{ "error": { "code": "NOT_FOUND", "message": "..." } }`.
+- [ ] **RFC 9457 problem details** — `application/problem+json` envelope (obsoletes RFC 7807) as the error format: `type`, `title`, `status`, `detail`, `instance` + stable machine-readable extension members that survive message edits. Serve it from the same `impl IntoResponse for AppError`, or use the `problem_details` crate — don't hand-roll a second error shape.
 - [ ] **`impl From<sqlx::Error> for AppError`** — auto-convert DB errors. `RowNotFound` → `AppError::NotFound`.
 - [ ] **`impl From<validator::ValidationErrors> for AppError`** — validation errors → 400 with field-level messages.
 - [ ] **500 catch-all** — `impl From<anyhow::Error> for AppError` for truly unexpected errors. Log the full error, return sanitized message.
 
 ---
 
-## Validation
+## 7. Validation
 
 - [ ] **`validator` crate** — `#[derive(Validate)]` on request DTOs. `#[validate(email)]`, `#[validate(length(min = 8))]`.
 - [ ] **Validate in handler** — `payload.validate().map_err(AppError::from)?`. Early return on invalid input.
@@ -109,7 +112,7 @@ src/
 
 ---
 
-## Database (sqlx)
+## 8. Database (sqlx)
 
 - [ ] **sqlx** over Diesel — sqlx is query-first (write SQL, get typed results). Diesel is ORM-first (DSL, more magic). sqlx is simpler.
 - [ ] **`sqlx::PgPool`** — connection pool created once in `main.rs`. `Arc<AppState>` holds it. `PgPool::connect(&config.database_url).await?`.
@@ -121,7 +124,7 @@ src/
 
 ---
 
-## Authentication (JWT)
+## 9. Authentication (JWT)
 
 - [ ] **jsonwebtoken crate** — `encode`, `decode`. `Header`, `Validation`. RS256 (private key on auth server, public key on resource servers).
 - [ ] **Auth middleware** — `axum::middleware::from_fn_with_state(auth::require_auth)`. Runs before handlers. Extracts JWT → validates → injects claims into request extensions.
@@ -131,7 +134,7 @@ src/
 
 ---
 
-## Middleware (tower-http)
+## 10. Middleware (tower-http)
 
 - [ ] **CORS** — `tower_http::cors::CorsLayer`. `allow_origin(config.cors_origins)`. `allow_methods`, `allow_headers`.
 - [ ] **Compression** — `tower_http::compression::CompressionLayer`. Gzip + Brotli. `compress_br()` for modern browsers.
@@ -140,20 +143,23 @@ src/
 - [ ] **Sensitive headers** — `TraceLayer` defaults to redacting `authorization` and `cookie`. Good. Keep it.
 - [ ] **Timeout** — `tower_http::timeout::TimeoutLayer::new(Duration::from_secs(30))`. Per-request timeout.
 - [ ] **Rate limiting** — `tower_governor` crate. Per-IP or per-token. Redis backend for multi-instance.
+- [ ] **Rate-limit headers** — Return `RateLimit-Limit` / `RateLimit-Remaining` / `RateLimit-Reset` (+ `RateLimit-Policy`) on responses so clients can self-throttle; include them on 429 responses at minimum. `tower` middleware reading `tower_governor` state. Document them in the spec.
+- [ ] **HTTP caching semantics** — `Cache-Control` (with `s-maxage`, `stale-while-revalidate`) on cacheable GETs via `SetResponseHeaderLayer` or a small custom `tower` layer; `Vary` on content-negotiated responses. Let the CDN/HTTP cache absorb traffic before your application code runs.
 
 ---
 
-## Logging (tracing)
+## 11. Logging (tracing)
 
 - [ ] **tracing subscriber** — `tracing_subscriber::fmt().json().with_env_filter("info").init()`. JSON in production.
 - [ ] **`tracing::instrument`** — `#[instrument(skip(pool))]` on handlers. Auto-logs function entry/exit, args, return. `skip` for sensitive params.
 - [ ] **Span context** — request ID, user ID in span. `tracing::Span::current().record("user_id", user.id)`.
+- [ ] **X-Request-ID propagation** — `tower` middleware reads `X-Request-ID` from clients (generates a UUID if absent) and returns it in every response — especially error responses — so a support ticket maps to logs in one lookup. Record it as a span attribute so every log line and OTel trace carries it.
 - [ ] **`tracing::info!` / `error!` / `warn!`** — structured fields: `info!(user_id = %id, "User created")`. No string interpolation for fields.
 - [ ] **Redact secrets** — never log tokens, passwords, API keys. Skip via `#[instrument(skip(password))]`.
 
 ---
 
-## Testing
+## 12. Testing
 
 - [ ] **Unit tests** — `#[cfg(test)] mod tests { ... }`. Inline with source. `cargo test`.
 - [ ] **Handler tests** — `axum::body::Body`, `axum::http::Request`. `router.oneshot(request).await`. No real server. Fast.
@@ -161,10 +167,11 @@ src/
 - [ ] **Test utilities** — `tests/common/mod.rs`. `async fn test_app() -> (Router, PgPool)`. Shared across integration tests.
 - [ ] **`rstest`** — `use rstest::rstest`. Fixtures, parameterized tests. Cleaner than manual `test_case` macros.
 - [ ] **`fake` crate** — `use fake::Fake`. Generate realistic test data. `let user: UserParams = fake::Faker.fake()`.
+- [ ] **Mutation testing (`cargo-mutants`)** — `cargo install cargo-mutants` then `cargo mutants`. Target ≥80% mutation score on business logic (`services/`) — a survived mutant is a missing test, not a false alarm. Full runs are slow; run changed-scope mutation testing in CI where feasible and full runs nightly or pre-release.
 
 ---
 
-## Observability
+## 13. Observability
 
 - [ ] **OpenTelemetry** — `tracing-opentelemetry` layer. Traces exported to OTel collector. W3C trace context propagation.
 - [ ] **Metrics** — `tower_http::metrics` or custom middleware. Count requests, errors, latency histograms. Prometheus endpoint on `/metrics`.
@@ -172,7 +179,7 @@ src/
 
 ---
 
-## Build & Deploy
+## 14. Build & Deploy
 
 - [ ] **Release profile** — `[profile.release] lto = true`, `codegen-units = 1`, `opt-level = 3`. Binary size vs compile time trade-off.
 - [ ] **`cargo build --release`** — single static binary. No runtime needed (unlike Go, Rust has no GC).
@@ -182,7 +189,7 @@ src/
 
 ---
 
-## AI/LLM Integration (if applicable)
+## 15. AI/LLM Integration (if applicable)
 
 > **When you need it:**
 > 🤖 **Any Rust service calling an LLM** (OpenAI, Anthropic, local models via Ollama, RAG pipelines) — ✅ mandatory. LLMs are untrusted downstream systems with non-deterministic output, token costs, and prompt injection attack surface.
@@ -200,7 +207,7 @@ src/
 - [ ] **LLM-specific observability** — `tracing::info!` with structured fields: `model`, `prompt_template_version`, `tokens_in`, `tokens_out`, `latency_ms`, `cost_usd`. Never log the full prompt/response in production — hash or truncate. A/B test prompt versions via a feature flag.
 - [ ] **Data sent to external models** — Know what PII leaves your infrastructure. Strip or anonymize before sending. For sensitive workloads, use self-hosted models (Ollama) behind the same `LlmClient` interface. Log what was sent (audit trail) but redact in log storage.
 
-## Data Privacy & Compliance
+## 16. Data Privacy & Compliance
 
 > **When you need it:**
 > 🌍 **Any Rust service handling user data** — ✅ mandatory if you have users in EU (GDPR), California (CCPA/CPRA), Brazil (LGPD), or similar jurisdictions.
@@ -295,7 +302,7 @@ flowchart TD
 | 1 | Project Setup | 🟡 minimal deps | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + audit |
 | 2 | Project Structure | ❌ | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 3 | Axum App Setup | 🟡 basic router | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + shutdown |
-| 4 | Extractors | 🟡 Json + Path | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 4 | Extractors (Request Parsing) | 🟡 Json + Path | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 5 | Responses | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 6 | Error Handling | ❌ | 🟡 AppError | ✅ | ✅ | ✅ | ✅ | ✅ + formal |
 | 7 | Validation | ❌ | 🟡 validator | ✅ | ✅ | ✅ | ✅ | ✅ |
@@ -306,5 +313,5 @@ flowchart TD
 | 12 | Testing | ❌ maybe smoke | 🟡 unit + handler | ✅ | ✅ + integration | ✅ + load | ✅ + chaos | ✅ + formal |
 | 13 | Observability | ❌ | ❌ | 🟡 health | ✅ + metrics | ✅ + tracing | ✅ + dashboards | ✅ + full |
 | 14 | Build & Deploy | ❌ | 🟡 debug build | ✅ + release | ✅ + Docker | ✅ + CI/CD | ✅ + canary | ✅ + signed |
-| 15 | AI/LLM Integration | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
+| 15 | AI/LLM Integration (if applicable) | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
 | 16 | Data Privacy & Compliance | ❌ | ❌ | 🟡 PII masking | ✅ erasure + retention | ✅ + consent + DPA | ✅ full compliance | ✅ + regulatory framework |

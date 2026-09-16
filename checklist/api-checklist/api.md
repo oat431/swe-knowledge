@@ -1,7 +1,7 @@
 # Backend Project Checklist
 
 > Practical, no-fluff checklist for production backend services.
-> Last updated: 2026-08-05
+> Last updated: 2026-09-14 (RFC 9457, OpenAPI 3.1 + breaking-change CI gate, rate-limit headers, HTTP caching, request-ID, AsyncAPI, quotas vs rate limiting)
 
 ---
 
@@ -32,14 +32,17 @@
 
 - [ ] **REST or gRPC or GraphQL** — REST for most things. gRPC for internal service-to-service. GraphQL only if the client genuinely needs flexible queries.
 - [ ] **gRPC specifics (if using)** — Protobuf linting in CI (`buf lint`). Backward-compatible changes only (no field renumbering, no removing reserved fields). `buf breaking` check in CI. Prefer **Connect Protocol** (`connectrpc`) over `grpc-gateway` — Connect works with any HTTP client, supports streaming, and needs no codegen for browser clients. Falls back to standard gRPC when needed.
-- [ ] **Consistent error format** — `{ "error": { "code": "VALIDATION_ERROR", "message": "...", "details": [...] } }`. RFC 7807 (Problem Details) or JSON API style.
+- [ ] **Consistent error format** — `{ "error": { "code": "VALIDATION_ERROR", "message": "...", "details": [...] } }`. RFC 9457 (Problem Details, `application/problem+json` — obsoletes RFC 7807) as the envelope, with stable machine-readable error codes that survive message edits.
 - [ ] **HTTP status codes used correctly** — 200/201/204 for success. 400 validation, 401 unauth'd, 403 forbidden, 404 not-found, 409 conflict, 422 unprocessable, 429 rate-limit, 500 internal (and never leak stack traces). 202 Accepted for async/long-running operations with a status endpoint.
 - [ ] **API versioning strategy** — URL prefix (`/v1/`), header, or content negotiation. Decide before v1 ships.
 - [ ] **Pagination** — Cursor-based for large/infinite lists, offset for small/skip-navigate. Standardize: `{ "data": [...], "cursor": "...", "hasMore": true }`.
 - [ ] **Conditional requests** — ETag + If-None-Match for GET (304 Not Modified saves bandwidth). If-Match for optimistic concurrency on PUT/PATCH.
+- [ ] **Rate-limit headers** — Return `RateLimit-Limit` / `RateLimit-Remaining` / `RateLimit-Reset` (+ `RateLimit-Policy`) on responses so clients can self-throttle; include them on 429 responses at minimum. Document them in the spec.
+- [ ] **HTTP caching semantics** — `Cache-Control` (with `s-maxage`, `stale-while-revalidate`) on cacheable GETs; `Vary` on content-negotiated responses. Let the CDN/HTTP cache absorb traffic before your application code runs.
 - [ ] **Long-running operations** — Return `202 Accepted` with a status endpoint (`/operations/{id}`). Client polls or receives webhook on completion. Not holding HTTP connections open for minutes.
 - [ ] **Request validation** — Validate at the boundary. Reject invalid input before it touches domain logic. Use schema validation (Zod, Pydantic, `go-playground/validator`).
-- [ ] **OpenAPI/Swagger spec** — Generated from code, not hand-written. `swaggo` (Go), `@nestjs/swagger`, FastAPI auto-docs, `utoipa` (Rust).
+- [ ] **OpenAPI 3.1 spec** — Generated from code, not hand-written. `swaggo` (Go), `@nestjs/swagger`, FastAPI auto-docs, `utoipa` (Rust). Target OpenAPI 3.1 (JSON Schema 2020-12) — current generator versions support it.
+- [ ] **Spec quality + contract change detection in CI** — `spectral` with a house ruleset lints the spec on every PR. Breaking-change detection gates the pipeline: `oasdiff`/`openapi-diff` fails the build when a change removes fields, changes types, or narrows responses — the REST equivalent of `buf breaking` for gRPC. Breaking changes require a new version, never a silent edit.
 - [ ] **API deprecation strategy** — `Deprecation` + `Sunset` response headers (RFC 8594). Minimum support window documented (e.g., 6 months after deprecation notice). Consumer notification via changelog, email, or dashboard. Version sunset date communicated early. Never remove an endpoint without a deprecation period.
 - [ ] **WebSocket / SSE / real-time (if applicable)** — Auth on connection (not per-message). Heartbeat/ping-pong every 30s to detect dead connections. Backpressure: server-side buffer limit, drop or slow-produce on overflow. Reconnection strategy with exponential backoff on client. Connection lifecycle logged (connect/disconnect/reason). Rate limit message rate per connection. For SSE: `Last-Event-ID` for resumable streams. For WebSocket: subprotocol negotiation, close codes used correctly.
 
@@ -83,7 +86,7 @@
 
 ## 8. Logging & Observability
 
-- [ ] **Structured logging** — JSON logs. `zap` (Go), `pino` (Node), `structlog` (Python). Every log line has: timestamp, level, message, trace_id, span_id, service, tenant_id (if multi-tenant).
+- [ ] **Structured logging** — JSON logs. `zap` (Go), `pino` (Node), `structlog` (Python). Every log line has: timestamp, level, message, trace_id, span_id, service, tenant_id (if multi-tenant). Propagate `X-Request-ID` from clients (generate if absent) and return it in every response — especially error responses — so a support ticket maps to logs in one lookup.
 - [ ] **Distributed tracing** — OpenTelemetry. Propagate trace context (W3C traceparent) across service boundaries. Jaeger, Tempo, or Datadog backend.
 - [ ] **Metrics** — RED metrics (Rate, Errors, Duration) for every endpoint. USE metrics (Utilization, Saturation, Errors) for resources. Prometheus + Grafana. Business metrics (signups, payments) separate namespace from infra metrics.
 - [ ] **Dashboards as code** — Grafana dashboards provisioned from JSON in git. Not hand-tweaked in production and never saved. Dashboard changes go through PR review.
@@ -127,7 +130,7 @@
 - [ ] **Idempotent consumers** — Your consumer will receive the same message at least once. Deduplicate by message ID. Idempotency key in database. Processing the same event twice must yield the same result.
 - [ ] **Ordering guarantees** — Kafka: per-partition ordering. RabbitMQ: per-queue with single consumer. If order matters, route related events to the same partition/queue (by aggregate ID).
 - [ ] **Dead letter queue** — Failed messages → DLQ after max retries. Inspect, fix, replay. Alert on DLQ growth. Never silently drop messages.
-- [ ] **Schema evolution** — Avro + Schema Registry, Protobuf, or JSON Schema. Forward and backward compatibility. Don't break consumers when producers evolve.
+- [ ] **Schema evolution** — Avro + Schema Registry, Protobuf, or JSON Schema. Forward and backward compatibility. Don't break consumers when producers evolve. Describe event/stream contracts with AsyncAPI (the OpenAPI analog for messaging) when the surface grows.
 - [ ] **Outbox pattern** — Never publish to a broker and commit to DB in two separate steps (one will fail, data diverges). Write the event to an `outbox` table in the same DB transaction as the business write. A separate relay process publishes from outbox to broker. Guarantees exactly-once publishing from a transactional context. Libraries: Debezium (CDC), or a simple polling relay for smaller scale.
 - [ ] **Observability** — Trace context in message headers. Correlate producer trace with consumer trace. Metrics: publish rate, consume rate, lag, retry count, DLQ size.
 
@@ -184,6 +187,7 @@
 - [ ] **Configuration management** — 12-factor app. Env vars for config. Feature flags (LaunchDarkly, Unleash, or simple DB table) for toggles. Kill broken features without redeploy.
 - [ ] **Feature flag hygiene** — Every flag has an owner, expiry date, and cleanup ticket. Flags accumulate as tech debt — audit quarterly. Separate short-lived release toggles (remove after rollout) from long-lived kill switches. Dead flags in code are dead code. Flag evaluation should be fast (no network call on every request — cache or local eval).
 - [ ] **Rate limiting & throttling** — API-level and user-level. Token bucket or sliding window. See Section 7 (Security) for endpoint-specific limits.
+- [ ] **Quotas & entitlements distinct from rate limiting** — Rate limiting protects the system (short-window burst control); quotas are product terms (per-plan monthly allowance, overage billing). Enforce entitlements at the service layer, expose remaining quota in the API, and keep the two mechanisms separate.
 - [ ] **Idempotency** — Payment/order/any financial endpoint: idempotency key to prevent double-charge. Server stores key + result (with TTL). Client retries safely with same key. Stripe's `Idempotency-Key` header is the gold standard.
 - [ ] **Webhook delivery (if applicable)** — Retry with backoff (4, 16, 64, 256 seconds). Signature verification (HMAC) so receivers can trust payload. Delivery logs visible to API consumer. Manual retry from dashboard.
 - [ ] **Data backup & recovery** — Automated backups. Tested restore procedure. RPO (Recovery Point Objective) and RTO (Recovery Time Objective) defined and measured. Restore tested at least once per quarter.
@@ -303,17 +307,17 @@ flowchart TD
 | 3 | Containerization | ❌ | 🟡 | 🟡 | ✅ | ✅ | ✅ | ✅ |
 | 4 | API Design | 🟡 basic REST | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 5 | Database | 🟡 SQLite OK | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 6 | Auth & Authorization | ❌ | 🟡 basic JWT | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 6 | Authentication & Authorization | ❌ | 🟡 basic JWT | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 7 | Security | ❌ | 🟡 essentials | ✅ | ✅ | ✅ | ✅ | ✅ + formal audit |
 | 8 | Logging & Observability | ❌ `print` fine | 🟡 structured | ✅ | ✅ + tracing | ✅ + dashboards | ✅ + SLO/alerting | ✅ + full stack |
 | 9 | Error Handling | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 10 | Circuit Breaker | ❌ | ❌ | 🟡 if ext APIs | 🟡 if ext APIs | ✅ | ✅ | ✅ |
-| 11 | Message Queues | ❌ | ❌ | 🟡 if async | 🟡 if async | ✅ | ✅ | ✅ + audit |
-| 12 | File Storage | ❌ | 🟡 | 🟡 if needed | ✅ if used | ✅ | ✅ | ✅ + encryption |
+| 10 | Circuit Breaker & Resilience Patterns | ❌ | ❌ | 🟡 if ext APIs | 🟡 if ext APIs | ✅ | ✅ | ✅ |
+| 11 | Message Queues & Event-Driven Architecture | ❌ | ❌ | 🟡 if async | 🟡 if async | ✅ | ✅ | ✅ + audit |
+| 12 | File Storage (if applicable) | ❌ | 🟡 | 🟡 if needed | ✅ if used | ✅ | ✅ | ✅ + encryption |
 | 13 | Testing | ❌ maybe smoke | 🟡 unit + int | ✅ | ✅ + load | ✅ + contract + mutation | ✅ + chaos | ✅ + formal verification |
 | 14 | Performance | ❌ | ❌ | 🟡 cache + shutdown | ✅ | ✅ | ✅ | ✅ + capacity planning |
 | 15 | CI/CD | ❌ | 🟡 basic pipeline | ✅ + deploy | ✅ + canary | ✅ + GitOps | ✅ + full pipeline | ✅ + signed artifacts |
 | 16 | Documentation | 🟡 README | 🟡 | ✅ + API docs | ✅ + ADR + runbook | ✅ full set | ✅ full set | ✅ + compliance docs |
 | 17 | Production Readiness | ❌ | ❌ | 🟡 health + backup | ✅ + idempotency | ✅ + DR | ✅ + full | ✅ + regulatory cert |
-| 18 | AI/LLM Integration | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
-| 19 | Data Privacy | ❌ | ❌ | 🟡 PII masking | ✅ erasure + retention | ✅ + consent + DPA | ✅ full compliance | ✅ + regulatory framework |
+| 18 | AI/LLM Integration (if applicable) | 🟡 if AI is the POC | 🟡 | 🟡 if used | ✅ if used | ✅ | ✅ + guardrails | ✅ + audit trail |
+| 19 | Data Privacy & Compliance | ❌ | ❌ | 🟡 PII masking | ✅ erasure + retention | ✅ + consent + DPA | ✅ full compliance | ✅ + regulatory framework |

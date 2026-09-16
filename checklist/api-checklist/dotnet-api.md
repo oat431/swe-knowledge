@@ -2,7 +2,7 @@
 
 > ASP.NET Core 10 (.NET 10 LTS) companion to the general [API checklist](api.md).
 > Covers Minimal APIs, Entity Framework Core 10, C# 14, and the standard production stack.
-> Last updated: 2026-08-05
+> Last updated: 2026-09-14 — RFC 9457 ProblemDetails, OpenAPI 3.1 + spec linting/breaking-change CI gate, rate-limit headers, HTTP caching semantics, X-Request-ID propagation, mutation testing (synced from parent api.md).
 
 ---
 
@@ -156,13 +156,14 @@ tests/
 - [ ] **CORS** — `builder.Services.AddCors(options => options.AddPolicy("AllowFrontend", policy => policy.WithOrigins("https://frontend.com").AllowAnyMethod().AllowAnyHeader()))`.
 - [ ] **Request logging** — Serilog middleware: `app.UseSerilogRequestLogging()`. Logs request/response with correlation IDs.
 - [ ] **Rate limiting** — `builder.Services.AddRateLimiter(options => options.AddFixedWindowLimiter("fixed", opt => { opt.PermitLimit = 100; opt.Window = TimeSpan.FromMinutes(1) }))`. Apply with `.RequireRateLimiting("fixed")`.
+- [ ] **Rate-limit headers** — Return `RateLimit-Limit` / `RateLimit-Remaining` / `RateLimit-Reset` (+ `RateLimit-Policy`) on responses so clients can self-throttle — at minimum on 429 responses. ASP.NET Core RateLimiter doesn't emit them by default; add via `OnRejected` on the limiter options or a small middleware. Document them in the spec.
 - [ ] **Custom middleware** — `IMiddleware` interface or inline: `app.Use(async (context, next) => { /* logic */ await next() })`.
 
 ---
 
 ## 11. Error Handling
 
-- [ ] **ProblemDetails** — RFC 7807 standard. `Results.Problem(detail: "User not found", statusCode: 404)`.
+- [ ] **ProblemDetails** — RFC 9457 (`application/problem+json`, obsoletes RFC 7807), built into .NET as the `ProblemDetails` type. `Results.Problem(detail: "User not found", statusCode: 404)`.
 - [ ] **Global exception handler** — Custom middleware catches unhandled exceptions, logs full error, returns sanitized response.
 - [ ] **Validation errors** — `Results.ValidationProblem(errors)` returns 400 with field-level details.
 - [ ] **Consistent error shape** — `{ "type": "...", "title": "...", "status": 404, "detail": "...", "errors": {} }`.
@@ -177,6 +178,7 @@ tests/
 - [ ] **Redis** — `builder.Services.AddStackExchangeRedisCache(options => options.Configuration = connectionString)`.
 - [ ] **HybridCache** (.NET 9) — Built-in stampede protection. `cache.GetOrCreateAsync(key, async token => await ComputeValue(), token)`.
 - [ ] **Response caching** — `[ResponseCache(Duration = 300, VaryByQueryKeys = new[] { "page" })]` or `.CacheOutput()` for Minimal APIs.
+- [ ] **HTTP caching semantics** — `Cache-Control` with `s-maxage` and `stale-while-revalidate` on cacheable GETs; `Vary` on content-negotiated responses. Use OutputCache or ResponseCaching middleware so HTTP caching absorbs traffic before your application code runs — and let the CDN in front of the API do the same.
 - [ ] **Cache invalidation** — `cache.Remove(key)` on write operations. Consider cache tags for bulk invalidation.
 
 ---
@@ -199,6 +201,7 @@ tests/
 - [ ] **Serilog** — `builder.Host.UseSerilog((context, config) => config.ReadFrom.Configuration(context.Configuration))`. JSON format in production.
 - [ ] **Structured logging** — `logger.LogInformation("User {UserId} created account", userId)`. Not string interpolation.
 - [ ] **Correlation IDs** — `SerilogTimings` or custom middleware adds request ID to all logs.
+- [ ] **X-Request-ID propagation** — Read `X-Request-ID` from the client (generate one if absent — `HttpContext.TraceIdentifier` or a small middleware), return it in every response — especially error responses — and include it in every log line, so a support ticket maps to logs in one lookup.
 - [ ] **Health checks** — `builder.Services.AddHealthChecks().AddDbContextCheck<AppDbContext>().AddRedis(redisConnectionString)`. `app.MapHealthChecks("/health")`.
 - [ ] **Metrics** — `builder.Services.AddOpenTelemetry().WithMetrics(builder => builder.AddAspNetCoreInstrumentation().AddPrometheusExporter())`.
 
@@ -229,7 +232,8 @@ tests/
 - [ ] **Query string versioning** — `?api-version=1.0`. Configure with `QueryStringApiVersionReader`.
 - [ ] **Header versioning** — `api-version: 1.0`. Configure with `HeaderApiVersionReader("api-version")`.
 - [ ] **Deprecation** — `[ApiVersion("1.0", Deprecated = true)]`. Sunset date in response headers.
-- [ ] **OpenAPI integration** — `builder.Services.AddOpenApi().AddApiVersioning()`. Separate docs per version.
+- [ ] **OpenAPI integration** — `Microsoft.AspNetCore.OpenApi` (`builder.Services.AddOpenApi()`) generates the spec natively in .NET 10, targeting OpenAPI 3.1 (JSON Schema 2020-12) out of the box. Swashbuckle or NSwag for Swagger UI/advanced codegen needs. `builder.Services.AddOpenApi().AddApiVersioning()`. Separate docs per version.
+- [ ] **Spec quality + contract change detection in CI** — `Spectral` with a house ruleset lints the generated OpenAPI spec on every PR. Breaking-change detection gates the pipeline: `oasdiff`/`openapi-diff` fails the build when a change removes fields, changes types, or narrows responses — the REST equivalent of `buf breaking` for gRPC. Breaking changes require a new version, never a silent edit.
 
 ---
 
@@ -247,6 +251,7 @@ tests/
 - [ ] **WireMock.Net** — Mock external HTTP dependencies. Record and replay interactions.
 - [ ] **FluentAssertions** — `result.Should().BeEquivalentTo(expected)`. Readable assertions.
 - [ ] **Test naming** — `MethodName_Scenario_ExpectedBehavior()`. e.g., `GetUserById_UserNotFound_Returns404()`.
+- [ ] **Mutation testing** — Your tests pass — but do they actually catch bugs? Stryker.NET injects small faults (mutants) and measures how many your tests detect. Target ≥80% mutation score on business logic. Run in CI on changed files only — full suite is too slow for every PR.
 
 ---
 
@@ -398,18 +403,18 @@ flowchart TD
 | # | Section | 🧪 POC | 🔧 Prototype | 🏠 Internal | 🟢 Small Prod | 🔵 Medium Prod | 🟣 Production Grade | 🔴 Mission-Critical |
 |---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 1 | Project Setup & Bootstrapping | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + SBOM |
-| 2 | Project Structure | ❌ | 🟡 single project OK | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 3 | Minimal APIs | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 4 | Controllers | 🟡 if needed | 🟡 if complex | ✅ if used | ✅ if used | ✅ if used | ✅ if used | ✅ if used |
+| 2 | Project Structure (Clean Architecture) | ❌ | 🟡 single project OK | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 3 | Minimal APIs (Preferred for New Projects) | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 4 | Controllers (Alternative for Complex Scenarios) | 🟡 if needed | 🟡 if complex | ✅ if used | ✅ if used | ✅ if used | ✅ if used | ✅ if used |
 | 5 | Dependency Injection | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 6 | Configuration | 🟡 appsettings.json | ✅ + user secrets | ✅ + Key Vault | ✅ + Key Vault | ✅ + Key Vault | ✅ + Key Vault | ✅ + rotation |
-| 7 | Entity Framework Core | 🟡 SQLite OK | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ + audit |
-| 8 | Validation | ❌ | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 7 | Entity Framework Core 10 | 🟡 SQLite OK | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ + audit |
+| 8 | Validation (FluentValidation) | ❌ | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 9 | Authentication & Authorization | ❌ | 🟡 basic JWT | ✅ | ✅ | ✅ | ✅ | ✅ + rotation |
 | 10 | Middleware Pipeline | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + WAF |
 | 11 | Error Handling | ❌ | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ + formal |
 | 12 | Caching | ❌ | ❌ | 🟡 if needed | ✅ if used | ✅ | ✅ | ✅ + invalidation |
-| 13 | Background Jobs | ❌ | ❌ | 🟡 if needed | ✅ if used | ✅ | ✅ | ✅ + DLQ |
+| 13 | Background Jobs (Hangfire) | ❌ | ❌ | 🟡 if needed | ✅ if used | ✅ | ✅ | ✅ + DLQ |
 | 14 | Observability | ❌ | 🟡 Serilog | ✅ + metrics | ✅ + tracing | ✅ + dashboards | ✅ + SLO | ✅ + full stack |
 | 15 | Resilience (Polly) | ❌ | ❌ | 🟡 if ext APIs | 🟡 if ext APIs | ✅ | ✅ | ✅ + chaos |
 | 16 | API Versioning | ❌ | ❌ | 🟡 if needed | ✅ | ✅ | ✅ | ✅ + formal |
