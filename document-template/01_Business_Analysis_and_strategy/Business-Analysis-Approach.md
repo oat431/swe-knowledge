@@ -345,20 +345,21 @@ flowchart LR
 gantt
     title Business Analysis Timeline
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Planning
-    BA Approach & Setup     :a1, 2026-08-01, 14d
-    Stakeholder Analysis    :a2, 2026-08-01, 7d
+    BA Approach & Setup     :a1, 2000-01-01, 14d
+    Stakeholder Analysis    :a2, 2000-01-01, 7d
     section Analysis
-    Current State Analysis  :b1, 2026-08-15, 21d
-    Future State Design     :b2, 2026-09-05, 14d
+    Current State Analysis  :b1, 2000-01-15, 21d
+    Future State Design     :b2, 2000-02-05, 14d
     Gap Analysis            :b3, after b2, 7d
     section Requirements
-    Business Requirements   :c1, 2026-09-05, 21d
+    Business Requirements   :c1, 2000-02-05, 21d
     SRS Development         :c2, after c1, 28d
     Requirements Validation :c3, after c2, 14d
     section Delivery
-    UAT Support             :d1, 2026-12-01, 21d
-    Solution Evaluation     :d2, 2027-01-01, 30d
+    UAT Support             :d1, 2000-05-02, 21d
+    Solution Evaluation     :d2, 2000-06-02, 30d
 ```
 
 ### 9.2 BA Milestones

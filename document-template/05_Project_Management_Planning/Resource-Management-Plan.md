@@ -92,25 +92,26 @@ standard_ref:
 gantt
     title Resource Allocation
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Management
-    PM (50%)                :a1, 2026-08-01, 170d
-    Change Manager (25%)    :a2, 2026-08-15, 140d
+    PM (50%)                :a1, 2000-01-01, 170d
+    Change Manager (25%)    :a2, 2000-01-15, 140d
     section Analysis
-    Business Analyst        :b1, 2026-08-01, 140d
+    Business Analyst        :b1, 2000-01-01, 140d
     section Architecture
-    Solution Architect (25%) :c1, 2026-09-01, 30d
-    Technical Lead          :c2, 2026-09-01, 150d
+    Solution Architect (25%) :c1, 2000-02-01, 30d
+    Technical Lead          :c2, 2000-02-01, 150d
     section Development
-    Senior Dev 1            :d1, 2026-10-01, 90d
-    Senior Dev 2            :d2, 2026-10-01, 90d
-    Junior Dev              :d3, 2026-10-01, 90d
-    DevOps (50%)            :d4, 2026-10-01, 120d
+    Senior Dev 1            :d1, 2000-03-02, 90d
+    Senior Dev 2            :d2, 2000-03-02, 90d
+    Junior Dev              :d3, 2000-03-02, 90d
+    DevOps (50%)            :d4, 2000-03-02, 120d
     section Quality
-    QA Lead                 :e1, 2026-11-15, 60d
-    QA Engineer             :e2, 2026-11-15, 60d
+    QA Lead                 :e1, 2000-04-16, 60d
+    QA Engineer             :e2, 2000-04-16, 60d
     section Vendor
-    Implementation Consultant :f1, 2026-10-01, 40d
-    Data Migration Specialist :f2, 2026-12-15, 15d
+    Implementation Consultant :f1, 2000-03-02, 40d
+    Data Migration Specialist :f2, 2000-05-16, 15d
 ```
 
 ### 4.2 Resource Loading

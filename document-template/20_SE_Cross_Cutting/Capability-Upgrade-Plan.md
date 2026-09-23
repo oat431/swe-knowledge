@@ -31,18 +31,19 @@ standard_ref:
 gantt
     title Capability Upgrade Roadmap
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Phase 2
-    Enhanced Reporting    :a1, 2027-04-01, 60d
-    Mobile App            :a2, 2027-04-01, 90d
+    Enhanced Reporting    :a1, 2000-01-01, 60d
+    Mobile App            :a2, 2000-01-01, 90d
     section Phase 3
-    AI/ML Features        :b1, 2027-07-01, 90d
-    Advanced Analytics    :b2, 2027-07-01, 60d
+    AI/ML Features        :b1, 2000-04-01, 90d
+    Advanced Analytics    :b2, 2000-04-01, 60d
     section Phase 4
-    Multi-tenant          :c1, 2027-10-01, 90d
-    API Marketplace       :c2, 2027-10-01, 60d
+    Multi-tenant          :c1, 2000-07-02, 90d
+    API Marketplace       :c2, 2000-07-02, 60d
     section Phase 5
-    Internationalization  :d1, 2028-01-01, 90d
-    White-label           :d2, 2028-01-01, 60d
+    Internationalization  :d1, 2000-10-02, 90d
+    White-label           :d2, 2000-10-02, 60d
 ```
 
 ## 3. Capability Enhancements

@@ -94,28 +94,48 @@ standard_ref:
 ### 2.1 Assessment Dimensions
 
 ```mermaid
-mindmap
-  root((BA Performance))
-    Process Effectiveness
-      Methodology Adherence
-      Elicitation Quality
-      Documentation Speed
-    Deliverable Quality
-      Completeness
-      Accuracy
-      Traceability
-    Stakeholder Satisfaction
-      Communication
-      Responsiveness
-      Value Delivered
-    Requirements Metrics
-      Stability
-      Coverage
-      Defect Rate
-    Team Performance
-      Collaboration
-      Knowledge Sharing
-      Skill Development
+flowchart TB
+    R(("BA Performance"))
+    n1["Process Effectiveness"]
+    R --> n1
+    n2["Methodology Adherence"]
+    n1 --> n2
+    n3["Elicitation Quality"]
+    n1 --> n3
+    n4["Documentation Speed"]
+    n1 --> n4
+    n5["Deliverable Quality"]
+    R --> n5
+    n6["Completeness"]
+    n5 --> n6
+    n7["Accuracy"]
+    n5 --> n7
+    n8["Traceability"]
+    n5 --> n8
+    n9["Stakeholder Satisfaction"]
+    R --> n9
+    n10["Communication"]
+    n9 --> n10
+    n11["Responsiveness"]
+    n9 --> n11
+    n12["Value Delivered"]
+    n9 --> n12
+    n13["Requirements Metrics"]
+    R --> n13
+    n14["Stability"]
+    n13 --> n14
+    n15["Coverage"]
+    n13 --> n15
+    n16["Defect Rate"]
+    n13 --> n16
+    n17["Team Performance"]
+    R --> n17
+    n18["Collaboration"]
+    n17 --> n18
+    n19["Knowledge Sharing"]
+    n17 --> n19
+    n20["Skill Development"]
+    n17 --> n20
 ```
 
 ### 2.2 Scoring Scale

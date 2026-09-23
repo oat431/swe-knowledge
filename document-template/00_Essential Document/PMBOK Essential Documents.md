@@ -9,7 +9,7 @@ tags: [overview, project-management, pmbok, essential-documents]
 > Plus cross-cutting documents (Governance, Procurement, Stakeholders, Communications)
 >
 > ⚠️ **This is a document-only extract.** For the full body of knowledge (principles, processes, tools, techniques), see:
-> `F:\projects\orlita_md\software-engineering-note\Body of Knowledge\PMBOK\`
+> `F:\obsidian_note\swe-knowledge\body-of-knowledge\PMBOK\`
 
 **Priority Legend:**
 

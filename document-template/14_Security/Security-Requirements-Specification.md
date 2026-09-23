@@ -97,7 +97,7 @@ standard_ref:
 
 ## 4. Compliance Mapping
 
-| Requirement | OWASP Top 10 | ISO 27001 | PCI DSS |
+| Requirement | OWASP Top 10 | ISO/IEC 27001:2022 | PCI DSS |
 |------------|-------------|----------|--------|
 | [SEC-001] | [A07] | [A.9.2] | [8.3] |
 | [SEC-020] | [A02] | [A.10.1] | [3.4] |

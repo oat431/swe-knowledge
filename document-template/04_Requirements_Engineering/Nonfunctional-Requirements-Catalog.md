@@ -81,37 +81,66 @@ standard_ref:
 ### 2.1 ISO 25010 Quality Characteristics
 
 ```mermaid
-mindmap
-  root((Software<br>Quality))
-    Performance
-      Time Behavior
-      Resource Utilization
-      Capacity
-    Reliability
-      Maturity
-      Availability
-      Fault Tolerance
-      Recoverability
-    Security
-      Confidentiality
-      Integrity
-      Non-Repudiation
-      Accountability
-      Authenticity
-    Usability
-      Learnability
-      Operability
-      User Error Protection
-      Accessibility
-    Maintainability
-      Modularity
-      Reusability
-      Analysability
-      Modifiability
-      Testability
-    Compatibility
-      Co-existence
-      Interoperability
+flowchart TB
+    R(("Software<br>Quality"))
+    n1["Performance"]
+    R --> n1
+    n2["Time Behavior"]
+    n1 --> n2
+    n3["Resource Utilization"]
+    n1 --> n3
+    n4["Capacity"]
+    n1 --> n4
+    n5["Reliability"]
+    R --> n5
+    n6["Maturity"]
+    n5 --> n6
+    n7["Availability"]
+    n5 --> n7
+    n8["Fault Tolerance"]
+    n5 --> n8
+    n9["Recoverability"]
+    n5 --> n9
+    n10["Security"]
+    R --> n10
+    n11["Confidentiality"]
+    n10 --> n11
+    n12["Integrity"]
+    n10 --> n12
+    n13["Non-Repudiation"]
+    n10 --> n13
+    n14["Accountability"]
+    n10 --> n14
+    n15["Authenticity"]
+    n10 --> n15
+    n16["Usability"]
+    R --> n16
+    n17["Learnability"]
+    n16 --> n17
+    n18["Operability"]
+    n16 --> n18
+    n19["User Error Protection"]
+    n16 --> n19
+    n20["Accessibility"]
+    n16 --> n20
+    n21["Maintainability"]
+    R --> n21
+    n22["Modularity"]
+    n21 --> n22
+    n23["Reusability"]
+    n21 --> n23
+    n24["Analysability"]
+    n21 --> n24
+    n25["Modifiability"]
+    n21 --> n25
+    n26["Testability"]
+    n21 --> n26
+    n27["Compatibility"]
+    R --> n27
+    n28["Co-existence"]
+    n27 --> n28
+    n29["Interoperability"]
+    n27 --> n29
 ```
 
 ---
@@ -168,11 +197,11 @@ mindmap
 | SEC-001 | [MFA for admin users] | Authentication | [OWASP] | 🔴 |
 | SEC-002 | [Password policy — 12+ chars, complexity] | Authentication | [NIST SP 800-63B] | 🔴 |
 | SEC-003 | [Session timeout — 30 min inactivity] | Session Mgmt | [OWASP] | 🔴 |
-| SEC-004 | [RBAC — role-based access control] | Authorization | [ISO 27001] | 🔴 |
-| SEC-005 | [Least privilege principle] | Authorization | [ISO 27001] | 🔴 |
+| SEC-004 | [RBAC — role-based access control] | Authorization | [ISO/IEC 27001:2022] | 🔴 |
+| SEC-005 | [Least privilege principle] | Authorization | [ISO/IEC 27001:2022] | 🔴 |
 | SEC-006 | [Data encryption at rest — AES-256] | Cryptography | [NIST SP 800-57] | 🔴 |
 | SEC-007 | [Data encryption in transit — TLS 1.3] | Cryptography | [NIST SP 800-52] | 🔴 |
-| SEC-008 | [Audit trail — user, action, timestamp, IP] | Audit | [ISO 27001] | 🔴 |
+| SEC-008 | [Audit trail — user, action, timestamp, IP] | Audit | [ISO/IEC 27001:2022] | 🔴 |
 | SEC-009 | [Input validation — SQL injection, XSS] | Input Validation | [OWASP Top 10] | 🔴 |
 | SEC-010 | [API rate limiting — 100 req/min/user] | API Security | [OWASP API] | 🟡 |
 | SEC-011 | [CSRF protection] | Web Security | [OWASP] | 🔴 |
@@ -233,7 +262,7 @@ mindmap
 |----|-------------|-----------|---------|----------|
 | CMP-001 | [GDPR compliance] | [GDPR] | [Privacy impact assessment, consent management] | 🔴 |
 | CMP-002 | [Data retention — 7 years] | [Industry regulation] | [Automated retention policy] | 🔴 |
-| CMP-003 | [Audit trail — all actions] | [ISO 27001] | [Immutable audit log] | 🔴 |
+| CMP-003 | [Audit trail — all actions] | [ISO/IEC 27001:2022] | [Immutable audit log] | 🔴 |
 | CMP-004 | [Data sovereignty — in-country] | [Local law] | [Hosting location proof] | 🔴 |
 | CMP-005 | [Accessibility — WCAG 2.1 AA] | [ISO/IEC 40500] | [Accessibility audit report] | 🔴 |
 | CMP-006 | [PCI-DSS — if payment processing] | [PCI-DSS] | [PCI compliance report] | 🔴 |

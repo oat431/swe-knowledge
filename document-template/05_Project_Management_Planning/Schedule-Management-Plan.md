@@ -74,8 +74,9 @@ standard_ref:
 gantt
     title Project Schedule
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Initiation
-    Project Charter        :a1, 2026-08-01, 7d
+    Project Charter        :a1, 2000-01-01, 7d
     Kickoff                :a2, after a1, 1d
     section Planning
     Requirements           :b1, after a2, 28d

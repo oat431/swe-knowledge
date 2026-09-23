@@ -76,7 +76,7 @@ flowchart TD
 
 ## 5. ISMS Documents
 
-| # | Document | ISO 27001 Clause | Status | Link |
+| # | Document | ISO/IEC 27001:2022 Clause | Status | Link |
 |---|---------|-----------------|--------|------|
 | 1 | [Security Policy] | [A.5.1] | ✅ | [[Security-Policy]] |
 | 2 | [Risk Assessment Report] | [A.8.1] | ✅ | [[Risk-Assessment-Report-Security]] |

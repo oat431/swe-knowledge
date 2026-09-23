@@ -199,16 +199,17 @@ standard_ref:
 gantt
     title Gap Resolution Timeline
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section 🔴 Critical Gaps
-    GAP-02 CRM Replacement       :a1, 2026-08-01, 90d
+    GAP-02 CRM Replacement       :a1, 2000-01-01, 90d
     GAP-04 Data Integration      :a2, after a1, 60d
     GAP-01 Automated Onboarding  :a3, after a1, 45d
-    GAP-06 Audit Trail           :a4, 2026-08-01, 30d
+    GAP-06 Audit Trail           :a4, 2000-01-01, 30d
     GAP-07 Error Rate Reduction  :a5, after a3, 30d
     GAP-03 Self-Service Portal   :a6, after a2, 60d
     section 🟡 High Gaps
     GAP-05 Real-Time Reporting   :b1, after a2, 45d
-    GAP-08 Cloud Skills          :b2, 2026-08-01, 90d
+    GAP-08 Cloud Skills          :b2, 2000-01-01, 90d
 ```
 
 ### 6.3 Gap-to-Deliverable Mapping

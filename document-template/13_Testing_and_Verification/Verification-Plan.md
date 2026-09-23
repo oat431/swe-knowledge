@@ -62,14 +62,15 @@ standard_ref:
 gantt
     title Verification Schedule
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Reviews
-    Requirements Review    :a1, 2026-08-15, 3d
-    Design Review          :a2, 2026-09-15, 3d
-    Code Reviews           :a3, 2026-10-01, 60d
+    Requirements Review    :a1, 2000-01-01, 3d
+    Design Review          :a2, 2000-02-01, 3d
+    Code Reviews           :a3, 2000-02-17, 60d
     section Testing
-    Unit Testing           :b1, 2026-10-01, 60d
-    Integration Testing    :b2, 2026-11-15, 15d
-    System Testing         :b3, 2026-12-01, 20d
+    Unit Testing           :b1, 2000-02-17, 60d
+    Integration Testing    :b2, 2000-04-02, 15d
+    System Testing         :b3, 2000-04-18, 20d
     section Reports
     Verification Report    :c1, after b3, 5d
 ```

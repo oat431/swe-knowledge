@@ -207,28 +207,29 @@ flowchart TD
 gantt
     title V&V Schedule by Lifecycle Phase
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Concept
-    Concept V&V           :a0, 2026-08-01, 2d
+    Concept V&V           :a0, 2000-01-01, 2d
     section Requirements
-    Requirements Review   :a1, 2026-08-15, 3d
+    Requirements Review   :a1, 2000-01-15, 3d
     RTM Verification      :a1b, after a1, 2d
     section Design
-    Architecture Review   :a2, 2026-09-15, 3d
+    Architecture Review   :a2, 2000-02-15, 3d
     Design Review         :a2b, after a2, 3d
-    Prototype Review      :c1, 2026-09-01, 3d
+    Prototype Review      :c1, 2000-02-01, 3d
     section Implementation
-    Code Reviews          :a3, 2026-10-01, 60d
-    Unit Testing          :b1, 2026-10-01, 60d
-    Static Analysis       :b1b, 2026-10-01, 60d
+    Code Reviews          :a3, 2000-03-02, 60d
+    Unit Testing          :b1, 2000-03-02, 60d
+    Static Analysis       :b1b, 2000-03-02, 60d
     section Test
-    Integration Testing   :b2, 2026-11-15, 15d
-    System Testing        :b3, 2026-12-01, 20d
+    Integration Testing   :b2, 2000-04-16, 15d
+    System Testing        :b3, 2000-05-02, 20d
     Regression Testing    :b3b, after b3, 5d
     section Operation
-    UAT                   :c2, 2026-12-20, 10d
-    Usability Testing     :c3, 2026-12-20, 5d
+    UAT                   :c2, 2000-05-21, 10d
+    Usability Testing     :c3, 2000-05-21, 5d
     section Install/Checkout
-    Operational Testing   :c4, 2027-01-03, 3d
+    Operational Testing   :c4, 2000-06-04, 3d
 ```
 
 ---

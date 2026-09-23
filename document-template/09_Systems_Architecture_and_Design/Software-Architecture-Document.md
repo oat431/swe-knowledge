@@ -284,7 +284,7 @@ erDiagram
 | [Encryption in Transit] | [TLS 1.3] | [NIST SP 800-52] |
 | [Input Validation] | [Schema validation, sanitization] | [OWASP] |
 | [Rate Limiting] | [100 req/min per user] | [OWASP API] |
-| [Audit Logging] | [All actions logged] | [ISO 27001] |
+| [Audit Logging] | [All actions logged] | [ISO/IEC 27001:2022] |
 | [WAF] | [OWASP Top 10 rules] | [OWASP] |
 
 ---

@@ -8,7 +8,7 @@ tags: [overview, data-management, dmbok, essential-documents]
 > Organized by data management domain: Governance → Architecture → Modeling → Storage → Integration → Quality
 >
 > ⚠️ **This is a document-only extract.** For the full body of knowledge, see:
-> `F:\projects\orlita_md\software-engineering-note\Body of Knowledge\DMBOK\`
+> `F:\obsidian_note\swe-knowledge\body-of-knowledge\DMBOK\`
 
 **Priority Legend:**
 | Icon | Level | Meaning |

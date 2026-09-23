@@ -32,7 +32,7 @@ standard_ref:
 | [GDPR] | [EU] | [EU user data] | ✅ Compliant |
 | [PDPA] | [Thailand] | [Thai user data] | ✅ Compliant |
 | [PCI DSS] | [Global] | [Payment data] | ✅ Compliant (if applicable) |
-| [ISO 27001] | [Global] | [Information security] | ✅ Compliant |
+| [ISO/IEC 27001:2022] | [Global] | [Information security] | ✅ Compliant |
 | [SOC 2] | [Global] | [Service organization] | 🔄 In Progress |
 
 ## 3. Compliance Requirements

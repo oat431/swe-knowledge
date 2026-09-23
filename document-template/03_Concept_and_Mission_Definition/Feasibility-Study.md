@@ -83,7 +83,7 @@ standard_ref:
 | [Platform availability] | [Cloud platform available and proven] | 🟢 Low | None needed |
 | [Integration capability] | [ERP has REST API — but limited documentation] | 🟡 Medium | [POC, vendor engagement] |
 | [Scalability] | [Cloud-native architecture supports auto-scaling] | 🟢 Low | None needed |
-| [Security] | [Platform meets ISO 27001, SOC 2] | 🟢 Low | None needed |
+| [Security] | [Platform meets ISO/IEC 27001:2022, SOC 2] | 🟢 Low | None needed |
 | [Team skills] | [Team experienced in cloud, needs training on new platform] | 🟡 Medium | [Training plan] |
 | [Data migration] | [Legacy data quality unknown — needs profiling] | 🟠 High | [Data profiling, cleansing plan] |
 

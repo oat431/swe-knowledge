@@ -183,10 +183,10 @@ flowchart TB
 | Req ID | Requirement | Target | Standard |
 |--------|-------------|--------|---------|
 | NFR-010 | [Authentication] | [Multi-factor authentication for admin] | [OWASP] |
-| NFR-011 | [Authorization] | [Role-based access control] | [ISO 27001] |
+| NFR-011 | [Authorization] | [Role-based access control] | [ISO/IEC 27001:2022] |
 | NFR-012 | [Data encryption at rest] | [AES-256] | [NIST SP 800-57] |
 | NFR-013 | [Data encryption in transit] | [TLS 1.3] | [NIST SP 800-52] |
-| NFR-014 | [Audit logging] | [All actions logged with user, timestamp, action] | [ISO 27001] |
+| NFR-014 | [Audit logging] | [All actions logged with user, timestamp, action] | [ISO/IEC 27001:2022] |
 | NFR-015 | [Session timeout] | [30 minutes inactivity] | [OWASP] |
 
 ### 4.4 Usability

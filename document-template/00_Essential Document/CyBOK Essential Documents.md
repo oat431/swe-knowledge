@@ -8,7 +8,7 @@ tags: [overview, cyber-security, cybok, essential-documents]
 > Organized by security domain: Governance → Offensive → Defensive → Software → Infrastructure → Advanced
 >
 > ⚠️ **This is a document-only extract.** For the full body of knowledge, see:
-> `F:\projects\orlita_md\software-engineering-note\Body of Knowledge\CyBOK\`
+> `F:\obsidian_note\swe-knowledge\body-of-knowledge\CyBOK\`
 
 **Priority Legend:**
 | Icon | Level | Meaning |
@@ -30,7 +30,7 @@ tags: [overview, cyber-security, cybok, essential-documents]
 | **Risk Treatment Plan** | Decisions for each risk: accept, avoid, mitigate, share, or transfer | 🔴 Must Have | ISO/IEC 27005 |
 | **Security Policy** | Enactable rules governing security behaviour, responsibilities, and consequences | 🔴 Must Have | ISO/IEC 27001:2022 |
 | **Information Security Management System (ISMS)** | Documented systematic approach to managing security, including scope, policy, risk assessment, controls | 🔴 Must Have | ISO/IEC 27001:2022 |
-| **Statement of Applicability (SoA)** | List of ISO 27001 controls selected with justification for inclusions/exclusions | 🔴 Must Have | ISO/IEC 27001:2022 |
+| **Statement of Applicability (SoA)** | List of ISO/IEC 27001:2022 controls selected with justification for inclusions/exclusions | 🔴 Must Have | ISO/IEC 27001:2022 |
 | **Business Continuity Plan (BCP)** | Procedures for maintaining critical operations during and after disruptions | 🔴 Must Have | ISO 22301, ISO/IEC 27035 |
 | **Incident Response Plan** | Defined phases: prepare, detect, assess, respond, learn per ISO/IEC 27035 | 🔴 Must Have | ISO/IEC 27035 |
 | **Vulnerability Management Report** | Prioritized vulnerabilities with patching status, risk decisions, and justifications | 🔴 Must Have | ISO/IEC 27002 |

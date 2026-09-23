@@ -194,8 +194,9 @@ flowchart TD
 gantt
     title Benefits Realization Timeline
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Project Delivery
-    Phase 1 - Foundation        :a1, 2026-08-01, 120d
+    Phase 1 - Foundation        :a1, 2000-01-01, 120d
     Phase 2 - Enhancement       :a2, after a1, 120d
     section Benefits Realization
     BEN-01 Labor Savings        :b1, after a1, 90d
@@ -206,9 +207,9 @@ gantt
     BEN-06 Real-Time Visibility :b6, after a1, 30d
     section Reviews
     30-Day Review               :milestone, after a1, 0d
-    90-Day Review               :milestone, 2027-01-01, 0d
-    6-Month Review              :milestone, 2027-04-01, 0d
-    12-Month Review             :milestone, 2027-08-01, 0d
+    90-Day Review               :milestone, 2000-06-02, 0d
+    6-Month Review              :milestone, 2000-08-31, 0d
+    12-Month Review             :milestone, 2000-12-31, 0d
 ```
 
 ### 5.2 Realization Milestones

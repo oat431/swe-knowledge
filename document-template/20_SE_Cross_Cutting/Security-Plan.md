@@ -127,7 +127,7 @@ flowchart TB
 | [Security architecture review] | [Per release] | [Architecture] | [Security Officer] |
 | [Penetration test] | [Annually] | [Full system] | [External vendor] |
 | [Security audit] | [Annually] | [Controls] | [Internal audit] |
-| [Compliance assessment] | [Annually] | [ISO 27001] | [Security Officer] |
+| [Compliance assessment] | [Annually] | [ISO/IEC 27001:2022] | [Security Officer] |
 
 ---
 

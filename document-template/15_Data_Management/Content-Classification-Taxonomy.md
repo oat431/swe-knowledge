@@ -28,33 +28,58 @@ standard_ref:
 ## 2. Content Taxonomy
 
 ```mermaid
-mindmap
-  root((Content<br>Taxonomy))
-    Customer
-      Contracts
-      Applications
-      Correspondence
-      ID Documents
-    Operations
-      Requests
-      Approvals
-      Reports
-      Policies
-    Financial
-      Invoices
-      Payments
-      Receipts
-      Statements
-    Technical
-      Architecture
-      Specifications
-      Runbooks
-      Logs
-    Compliance
-      Audit Reports
-      Certifications
-      Policies
-      Evidence
+flowchart TB
+    R(("Content<br>Taxonomy"))
+    n1["Customer"]
+    R --> n1
+    n2["Contracts"]
+    n1 --> n2
+    n3["Applications"]
+    n1 --> n3
+    n4["Correspondence"]
+    n1 --> n4
+    n5["ID Documents"]
+    n1 --> n5
+    n6["Operations"]
+    R --> n6
+    n7["Requests"]
+    n6 --> n7
+    n8["Approvals"]
+    n6 --> n8
+    n9["Reports"]
+    n6 --> n9
+    n10["Policies"]
+    n6 --> n10
+    n11["Financial"]
+    R --> n11
+    n12["Invoices"]
+    n11 --> n12
+    n13["Payments"]
+    n11 --> n13
+    n14["Receipts"]
+    n11 --> n14
+    n15["Statements"]
+    n11 --> n15
+    n16["Technical"]
+    R --> n16
+    n17["Architecture"]
+    n16 --> n17
+    n18["Specifications"]
+    n16 --> n18
+    n19["Runbooks"]
+    n16 --> n19
+    n20["Logs"]
+    n16 --> n20
+    n21["Compliance"]
+    R --> n21
+    n22["Audit Reports"]
+    n21 --> n22
+    n23["Certifications"]
+    n21 --> n23
+    n24["Policies"]
+    n21 --> n24
+    n25["Evidence"]
+    n21 --> n25
 ```
 
 ## 3. Content Categories

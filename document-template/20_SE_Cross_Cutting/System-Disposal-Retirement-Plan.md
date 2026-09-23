@@ -40,8 +40,9 @@ standard_ref:
 gantt
     title System Disposal Plan
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Preparation
-    Disposal Planning      :a1, 2028-01-01, 30d
+    Disposal Planning      :a1, 2000-01-01, 30d
     Stakeholder Notification :a2, after a1, 14d
     section Data
     Data Migration         :b1, after a2, 30d

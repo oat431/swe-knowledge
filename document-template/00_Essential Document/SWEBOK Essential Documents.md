@@ -9,7 +9,7 @@ tags: [overview, software-engineering, sdlc, swebok, essential-documents]
 > Plus cross-cutting documents (Management, Quality, Security, SCM)
 >
 > ⚠️ **This is a document-only extract.** For the full body of knowledge, see:
-> `F:\projects\orlita_md\software-engineering-note\Body of Knowledge\SWEBOK\`
+> `F:\obsidian_note\swe-knowledge\body-of-knowledge\SWEBOK\`
 
 **Priority Legend:**
 

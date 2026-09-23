@@ -36,7 +36,7 @@ standard_ref:
 | [NIST RMF] | [Federal systems] | [Low / Moderate / High] |
 | [FedRAMP] | [Cloud services] | [Low / Moderate / High] |
 | [DoD RMF] | [Defense systems] | [IL2-IL6] |
-| [ISO 27001] | [International] | [Certification] |
+| [ISO/IEC 27001:2022] | [International] | [Certification] |
 
 ### Project Classification
 
@@ -88,8 +88,9 @@ standard_ref:
 gantt
     title Security Accreditation Timeline
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Documentation
-    SSP Preparation      :a1, 2026-07-01, 30d
+    SSP Preparation      :a1, 2000-01-01, 30d
     SAP Preparation      :a2, after a1, 15d
     section Assessment
     Security Assessment  :b1, after a2, 30d

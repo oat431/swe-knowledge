@@ -75,7 +75,7 @@ standard_ref:
 | 2 | [Must provide data migration expertise] | Technical | 🔴 Mandatory |
 | 3 | [Must have relevant industry experience] | Experience | 🟡 Preferred |
 | 4 | [Must provide 90-day warranty] | Commercial | 🔴 Mandatory |
-| 5 | [Should have ISO 27001 certification] | Security | 🟡 Preferred |
+| 5 | [Should have ISO/IEC 27001:2022 certification] | Security | 🟡 Preferred |
 
 #### 3.5 Evaluation Criteria
 

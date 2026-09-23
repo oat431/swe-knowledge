@@ -209,18 +209,18 @@ flowchart TD
 
 ### Checklist Applicability by Tier
 
-| # | Section | 🧪 POC | 🔧 Prototype | 🏠 Internal | 🟢 Small Prod | 🔵 Medium Prod | 🟣 Production Grade | 🔴 Mission-Critical |
-|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 1 | Use-Case & Model Selection | 🟡 any model | 🟡 pinned | ✅ | ✅ + fallback | ✅ + routing | ✅ + multi-provider | ✅ + formal |
-| 2 | Prompting & Context | 🟡 inline prompts | 🟡 + versioned | ✅ + system sep | ✅ + structured out | ✅ + budgeted | ✅ + registry | ✅ + audit |
-| 3 | RAG (Query + Pipeline) | ❌ | 🟡 naive chunks | 🟡 if used | ✅ + citations + pipeline | ✅ + hybrid search + freshness SLA | ✅ + re-ranking + re-indexing plan | ✅ + permission filters + formal |
-| 4 | Agents & Tool Use | ❌ | ❌ | 🟡 if used | 🟡 bounded loops | ✅ + sandboxed tools | ✅ + HITL | ✅ + formal |
-| 5 | Evaluation | ❌ | 🟡 manual spot-check | 🟡 golden set | ✅ + evals in CI | ✅ + LLM-judge + statistical sig | ✅ + online evals + workflow | ✅ + formal V&V |
-| 6 | Guardrails & Safety | 🟡 if AI is the POC | 🟡 output validation | ✅ + injection guard | ✅ + rate limits | ✅ + PII + adversarial | ✅ + content policy + DPA | ✅ + regulatory |
-| 7 | Cost Control & Performance | ❌ | ❌ | 🟡 track spend | ✅ + per-req cost | ✅ + caching | ✅ + model routing | ✅ + capacity plan |
-| 8 | Observability (Ops + Behavioral) | ❌ | ❌ | 🟡 basic logs | ✅ + token logging | ✅ + traces + drift detection | ✅ + quality dashboard + cost alerts | ✅ + full audit trail |
-| 9 | Model Lifecycle & MLOps | ❌ | ❌ | ❌ | 🟡 registry for self-hosted | ✅ + serving infra | ✅ + canary + rollback tested | ✅ + formal |
-| 10 | Fine-Tuning & Custom Models | ❌ | ❌ | ❌ | ❌ | 🟡 if attempted | ✅ + eval vs base | ✅ + formal V&V |
+| #   | Section                          |       🧪 POC        |     🔧 Prototype     |     🏠 Internal     |        🟢 Small Prod        |          🔵 Medium Prod           |         🟣 Production Grade         |       🔴 Mission-Critical       |
+| --- | -------------------------------- | :-----------------: | :------------------: | :-----------------: | :-------------------------: | :-------------------------------: | :---------------------------------: | :-----------------------------: |
+| 1   | Use-Case & Model Selection       |    🟡 any model     |      🟡 pinned       |          ✅          |        ✅ + fallback         |            ✅ + routing            |         ✅ + multi-provider          |           ✅ + formal            |
+| 2   | Prompting & Context              |  🟡 inline prompts  |    🟡 + versioned    |   ✅ + system sep    |     ✅ + structured out      |           ✅ + budgeted            |            ✅ + registry             |            ✅ + audit            |
+| 3   | RAG (Query + Pipeline)           |          ❌          |   🟡 naive chunks    |     🟡 if used      |  ✅ + citations + pipeline   | ✅ + hybrid search + freshness SLA |  ✅ + re-ranking + re-indexing plan  | ✅ + permission filters + formal |
+| 4   | Agents & Tool Use                |          ❌          |          ❌           |     🟡 if used      |      🟡 bounded loops       |        ✅ + sandboxed tools        |              ✅ + HITL               |           ✅ + formal            |
+| 5   | Evaluation                       |          ❌          | 🟡 manual spot-check |    🟡 golden set    |       ✅ + evals in CI       |  ✅ + LLM-judge + statistical sig  |     ✅ + online evals + workflow     |         ✅ + formal V&V          |
+| 6   | Guardrails & Safety              | 🟡 if AI is the POC | 🟡 output validation | ✅ + injection guard |       ✅ + rate limits       |       ✅ + PII + adversarial       |      ✅ + content policy + DPA       |         ✅ + regulatory          |
+| 7   | Cost Control & Performance       |          ❌          |          ❌           |   🟡 track spend    |      ✅ + per-req cost       |            ✅ + caching            |          ✅ + model routing          |        ✅ + capacity plan        |
+| 8   | Observability (Ops + Behavioral) |          ❌          |          ❌           |    🟡 basic logs    |      ✅ + token logging      |   ✅ + traces + drift detection    | ✅ + quality dashboard + cost alerts |      ✅ + full audit trail       |
+| 9   | Model Lifecycle & MLOps          |          ❌          |          ❌           |          ❌          | 🟡 registry for self-hosted |         ✅ + serving infra         |    ✅ + canary + rollback tested     |           ✅ + formal            |
+| 10  | Fine-Tuning & Custom Models      |          ❌          |          ❌           |          ❌          |              ❌              |          🟡 if attempted          |          ✅ + eval vs base           |         ✅ + formal V&V          |
 
 ---
 

@@ -44,10 +44,11 @@ standard_ref:
 gantt
     title Software Development Lifecycle
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Inception
-    Requirements & Design  :a1, 2026-08-01, 60d
+    Requirements & Design  :a1, 2000-01-01, 60d
     section Construction
-    Sprint 1               :b1, 2026-10-01, 14d
+    Sprint 1               :b1, 2000-03-02, 14d
     Sprint 2               :b2, after b1, 14d
     Sprint 3               :b3, after b2, 14d
     Sprint 4               :b4, after b3, 14d

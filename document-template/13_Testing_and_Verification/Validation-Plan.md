@@ -82,8 +82,9 @@ standard_ref:
 gantt
     title Validation Schedule
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Preparation
-    UAT Environment Setup  :a1, 2026-12-15, 3d
+    UAT Environment Setup  :a1, 2000-01-01, 3d
     UAT Data Preparation   :a2, after a1, 2d
     section Execution
     UAT Execution          :b1, after a2, 10d

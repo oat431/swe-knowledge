@@ -9,7 +9,7 @@ tags: [overview, systems-engineering, sebok, essential-documents]
 > Plus technical management and cross-cutting documents
 >
 > ⚠️ **This is a document-only extract.** For the full body of knowledge (fundamentals, systems science, thinking, standards, case studies), see:
-> `F:\projects\orlita_md\software-engineering-note\Body of Knowledge\System Engineer BOK\`
+> `F:\obsidian_note\swe-knowledge\body-of-knowledge\System Engineer BOK\`
 
 **Priority Legend:**
 

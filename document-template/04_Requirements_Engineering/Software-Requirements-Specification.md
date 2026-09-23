@@ -327,10 +327,10 @@ flowchart TB
 | ID | Requirement | Standard |
 |----|-------------|---------|
 | SEC-001 | [Multi-factor authentication for admin users] | [OWASP] |
-| SEC-002 | [Role-based access control] | [ISO 27001] |
+| SEC-002 | [Role-based access control] | [ISO/IEC 27001:2022] |
 | SEC-003 | [Data encryption at rest — AES-256] | [NIST SP 800-57] |
 | SEC-004 | [Data encryption in transit — TLS 1.3] | [NIST SP 800-52] |
-| SEC-005 | [Complete audit trail — user, action, timestamp] | [ISO 27001] |
+| SEC-005 | [Complete audit trail — user, action, timestamp] | [ISO/IEC 27001:2022] |
 | SEC-006 | [Session timeout — 30 minutes inactivity] | [OWASP] |
 | SEC-007 | [Input validation — SQL injection, XSS prevention] | [OWASP Top 10] |
 | SEC-008 | [API rate limiting — 100 requests/minute per user] | [OWASP API Security] |

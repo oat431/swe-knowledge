@@ -59,8 +59,9 @@ flowchart TD
 gantt
     title Data Governance Implementation
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Foundation
-    Charter & Strategy      :a1, 2026-07-01, 30d
+    Charter & Strategy      :a1, 2000-01-01, 30d
     Policies & Standards    :a2, after a1, 30d
     section Data Quality
     Profiling & Assessment  :b1, after a2, 30d

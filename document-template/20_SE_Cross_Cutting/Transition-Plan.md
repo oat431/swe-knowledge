@@ -41,8 +41,9 @@ standard_ref:
 gantt
     title Transition Plan
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Preparation
-    Environment Setup    :a1, 2027-01-15, 3d
+    Environment Setup    :a1, 2000-01-01, 3d
     Data Migration       :a2, after a1, 5d
     section Deployment
     Staging Deploy       :b1, after a2, 2d

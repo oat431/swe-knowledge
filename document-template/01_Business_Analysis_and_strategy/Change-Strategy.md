@@ -218,8 +218,9 @@ flowchart LR
 gantt
     title Change Implementation Timeline
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Phase 1 - Foundation
-    Infrastructure Setup      :a1, 2026-08-01, 30d
+    Infrastructure Setup      :a1, 2000-01-01, 30d
     Core System Migration     :a2, after a1, 45d
     Critical Automation       :a3, after a1, 60d
     Phase 1 Gate Review       :milestone, after a3, 0d

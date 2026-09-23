@@ -101,19 +101,20 @@ standard_ref:
 gantt
     title Procurement Timeline
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section CRM Platform
-    Vendor Selection       :a1, 2026-07-01, 14d
+    Vendor Selection       :a1, 2000-01-01, 14d
     Contract Negotiation   :a2, after a1, 7d
     Contract Signed        :milestone, after a2, 0d
     section Implementation
-    RFP Preparation        :b1, 2026-07-15, 7d
+    RFP Preparation        :b1, 2000-01-15, 7d
     RFP Issued             :milestone, after b1, 0d
     Vendor Evaluation      :b2, after b1, 21d
     Selection              :milestone, after b2, 0d
     Contract Negotiation   :b3, after b2, 14d
     Contract Signed        :milestone, after b3, 0d
     section Security Testing
-    RFP Preparation        :c1, 2026-09-01, 7d
+    RFP Preparation        :c1, 2000-03-03, 7d
     Vendor Evaluation      :c2, after c1, 14d
     Contract Signed        :milestone, after c2, 0d
 ```

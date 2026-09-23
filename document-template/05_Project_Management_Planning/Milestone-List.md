@@ -82,25 +82,26 @@ standard_ref:
 gantt
     title Project Milestones
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Gates
-    MS-01 Kickoff            :milestone, 2026-08-08, 0d
-    MS-02 Requirements       :milestone, 2026-09-05, 0d
-    MS-03 Design             :milestone, 2026-09-26, 0d
+    MS-01 Kickoff            :milestone, 2000-01-01, 0d
+    MS-02 Requirements       :milestone, 2000-01-29, 0d
+    MS-03 Design             :milestone, 2000-02-19, 0d
     section Sprints
-    MS-04 Sprint 1           :milestone, 2026-10-10, 0d
-    MS-05 Sprint 2           :milestone, 2026-10-24, 0d
-    MS-06 Sprint 3           :milestone, 2026-11-07, 0d
-    MS-07 Sprint 4           :milestone, 2026-11-21, 0d
-    MS-08 Sprint 5           :milestone, 2026-12-05, 0d
+    MS-04 Sprint 1           :milestone, 2000-03-04, 0d
+    MS-05 Sprint 2           :milestone, 2000-03-18, 0d
+    MS-06 Sprint 3           :milestone, 2000-04-01, 0d
+    MS-07 Sprint 4           :milestone, 2000-04-15, 0d
+    MS-08 Sprint 5           :milestone, 2000-04-29, 0d
     section Testing
-    MS-09 System Test        :milestone, 2026-12-19, 0d
-    MS-10 UAT                :milestone, 2027-01-09, 0d
+    MS-09 System Test        :milestone, 2000-05-13, 0d
+    MS-10 UAT                :milestone, 2000-06-03, 0d
     section Deployment
-    MS-11 Go-Live            :milestone, crit, 2027-01-16, 0d
-    MS-12 Training           :milestone, 2027-01-23, 0d
-    MS-13 Hypercare End      :milestone, 2027-02-20, 0d
+    MS-11 Go-Live            :milestone, crit, 2000-06-10, 0d
+    MS-12 Training           :milestone, 2000-06-17, 0d
+    MS-13 Hypercare End      :milestone, 2000-07-15, 0d
     section Closure
-    MS-14 Closure            :milestone, 2027-02-27, 0d
+    MS-14 Closure            :milestone, 2000-07-22, 0d
 ```
 
 ## 4. Milestone Tracking

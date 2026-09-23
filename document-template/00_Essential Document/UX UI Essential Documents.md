@@ -8,7 +8,7 @@ tags: [essential-documents, ux, ui, design, deliverables, ux-ui-design]
 > Organized by design phases: Research → UX Design → UI Design → Testing → Handoff
 >
 > ⚠️ **This is a document-only extract.** For the full design process, see:
-> `F:\projects\orlita_md\software-engineering-note\Software Design\Human Computer Interaction\`
+> `F:\obsidian_note\swe-knowledge\software-engineering-note\03_Software_Design\Human Computer Interaction\`
 
 **Priority Legend:**
 

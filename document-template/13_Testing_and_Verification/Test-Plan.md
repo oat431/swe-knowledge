@@ -80,8 +80,9 @@ standard_ref:
 gantt
     title Test Schedule
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Unit Tests
-    Unit Test Execution    :a1, 2026-10-01, 30d
+    Unit Test Execution    :a1, 2000-01-01, 30d
     section Integration
     Integration Test Exec  :a2, after a1, 15d
     section System

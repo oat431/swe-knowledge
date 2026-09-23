@@ -151,8 +151,9 @@ standard_ref:
 gantt
     title Elicitation Activity Schedule
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Preparation
-    Stakeholder Briefing     :a1, 2026-08-01, 3d
+    Stakeholder Briefing     :a1, 2000-01-01, 3d
     Materials Preparation    :a2, after a1, 3d
     section Current State
     Process Observation      :b1, after a2, 5d

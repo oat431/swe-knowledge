@@ -61,16 +61,17 @@ standard_ref:
 gantt
     title Project Schedule
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     axisFormat %d %b
 
     section 1.1 Project Management
-    1.1.1 Planning                :a1, 2026-08-01, 10d
-    1.1.2 Monitoring & Control    :a2, 2026-08-11, 170d
-    1.1.3 Change Control          :a3, 2026-08-11, 170d
-    1.1.4 Risk Management         :a4, 2026-08-11, 170d
+    1.1.1 Planning                :a1, 2000-01-01, 10d
+    1.1.2 Monitoring & Control    :a2, 2000-01-11, 170d
+    1.1.3 Change Control          :a3, 2000-01-11, 170d
+    1.1.4 Risk Management         :a4, 2000-01-11, 170d
 
     section 1.2 Requirements & Design
-    1.2.1 Requirements Elicitation  :b1, 2026-08-11, 15d
+    1.2.1 Requirements Elicitation  :b1, 2000-01-11, 15d
     1.2.2 Requirements Documentation :b2, after b1, 15d
     1.2.3 Architecture Design       :b3, after b2, 10d
     1.2.4 Detailed Design           :b4, after b3, 15d

@@ -127,7 +127,7 @@ flowchart TD
 | [Third-party APIs] | [Integration testing + SLA review] | [Meets NFR performance targets, documented SLA] |
 | [Open-source dependencies] | [License check + security scan] | [No GPL violations, no known CVEs] |
 | [Outsourced testing] | [Review test results, verify coverage] | [Test plan approved, exit criteria met] |
-| [Cloud provider] | [Review SLA + compliance certifications] | [ISO 27001 certified, uptime ≥ 99.9%] |
+| [Cloud provider] | [Review SLA + compliance certifications] | [ISO/IEC 27001:2022 certified, uptime ≥ 99.9%] |
 
 ## 9. Quality Records Management
 

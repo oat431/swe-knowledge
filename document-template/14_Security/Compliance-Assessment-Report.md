@@ -29,7 +29,7 @@ standard_ref:
 
 | Framework | Applicability | Status |
 |---------|-------------|--------|
-| [ISO 27001] | [Information security management] | ✅ Compliant |
+| [ISO/IEC 27001:2022] | [Information security management] | ✅ Compliant |
 | [OWASP Top 10] | [Web application security] | ✅ Compliant |
 | [GDPR] | [Data protection (EU users)] | ✅ Compliant |
 | [PCI DSS] | [Payment card data] | ⚠️ Partial (if applicable) |
@@ -37,7 +37,7 @@ standard_ref:
 
 ## 3. Control Assessment
 
-### 3.1 ISO 27001 Controls
+### 3.1 ISO/IEC 27001:2022 Controls
 
 | Control | Description | Implemented | Evidence | Status |
 |---------|-----------|-------------|---------|--------|
@@ -91,7 +91,7 @@ standard_ref:
 
 | Framework | Controls | Compliant | Partial | Non-Compliant | Score |
 |---------|---------|----------|---------|-------------|-------|
-| [ISO 27001] | [12] | [12] | [0] | [0] | [100%] |
+| [ISO/IEC 27001:2022] | [12] | [12] | [0] | [0] | [100%] |
 | [OWASP Top 10] | [10] | [10] | [0] | [0] | [100%] |
 | [GDPR] | [7] | [7] | [0] | [0] | [100%] |
 | **Overall** | **[29]** | **[29]** | **[0]** | **[0]** | **[100%]** |

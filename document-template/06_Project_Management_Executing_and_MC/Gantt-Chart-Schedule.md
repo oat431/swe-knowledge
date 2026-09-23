@@ -34,11 +34,12 @@ standard_ref:
 gantt
     title Project Schedule — [Project Name]
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     axisFormat %d %b %Y
     tickInterval 1week
 
     section 1.0 Initiation
-    Project Charter           :a1, 2026-08-01, 3d
+    Project Charter           :a1, 2000-01-01, 3d
     Charter Approval          :a2, after a1, 2d
     Kickoff Meeting           :milestone, after a2, 0d
 
@@ -105,9 +106,10 @@ gantt
 gantt
     title Project Phases — High Level
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
 
     section Initiation
-    Charter & Kickoff         :a1, 2026-08-01, 6d
+    Charter & Kickoff         :a1, 2000-01-01, 6d
 
     section Planning
     Requirements              :b1, after a1, 30d
@@ -139,9 +141,10 @@ gantt
 gantt
     title Sprint Schedule
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
 
     section Sprint 1
-    Planning                  :a1, 2026-10-05, 1d
+    Planning                  :a1, 2000-01-01, 1d
     Development               :a2, after a1, 8d
     Review & Retro            :a3, after a2, 1d
 
@@ -172,31 +175,32 @@ gantt
 gantt
     title Resource Allocation Timeline
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
 
     section Management
-    PM (50%)                  :a1, 2026-08-01, 170d
-    Change Manager (25%)      :a2, 2026-08-15, 140d
+    PM (50%)                  :a1, 2000-01-01, 170d
+    Change Manager (25%)      :a2, 2000-01-15, 140d
 
     section Analysis
-    Business Analyst          :b1, 2026-08-01, 140d
+    Business Analyst          :b1, 2000-01-01, 140d
 
     section Architecture
-    Solution Architect (25%)  :c1, 2026-09-01, 30d
-    Technical Lead            :c2, 2026-09-01, 150d
+    Solution Architect (25%)  :c1, 2000-02-01, 30d
+    Technical Lead            :c2, 2000-02-01, 150d
 
     section Development
-    Senior Dev 1              :d1, 2026-10-01, 90d
-    Senior Dev 2              :d2, 2026-10-01, 90d
-    Junior Dev                :d3, 2026-10-01, 90d
-    DevOps (50%)              :d4, 2026-10-01, 120d
+    Senior Dev 1              :d1, 2000-03-02, 90d
+    Senior Dev 2              :d2, 2000-03-02, 90d
+    Junior Dev                :d3, 2000-03-02, 90d
+    DevOps (50%)              :d4, 2000-03-02, 120d
 
     section Quality
-    QA Lead                   :e1, 2026-11-15, 60d
-    QA Engineer               :e2, 2026-11-15, 60d
+    QA Lead                   :e1, 2000-04-16, 60d
+    QA Engineer               :e2, 2000-04-16, 60d
 
     section Vendor
-    Implementation Consultant :f1, 2026-10-01, 40d
-    Data Migration Specialist :f2, 2026-12-15, 15d
+    Implementation Consultant :f1, 2000-03-02, 40d
+    Data Migration Specialist :f2, 2000-05-16, 15d
 ```
 
 ## 6. Milestone Gantt
@@ -205,30 +209,31 @@ gantt
 gantt
     title Key Milestones
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
 
     section Gates
-    Project Kickoff           :milestone, 2026-08-08, 0d
-    Requirements Baselined    :milestone, 2026-09-05, 0d
-    Design Approved           :milestone, 2026-09-26, 0d
+    Project Kickoff           :milestone, 2000-01-01, 0d
+    Requirements Baselined    :milestone, 2000-01-29, 0d
+    Design Approved           :milestone, 2000-02-19, 0d
 
     section Sprints
-    Sprint 1 Complete         :milestone, 2026-10-17, 0d
-    Sprint 2 Complete         :milestone, 2026-10-31, 0d
-    Sprint 3 Complete         :milestone, 2026-11-14, 0d
-    Sprint 4 Complete         :milestone, 2026-11-28, 0d
-    Sprint 5 Complete         :milestone, 2026-12-12, 0d
-    Code Freeze               :milestone, 2026-12-12, 0d
+    Sprint 1 Complete         :milestone, 2000-03-11, 0d
+    Sprint 2 Complete         :milestone, 2000-03-25, 0d
+    Sprint 3 Complete         :milestone, 2000-04-08, 0d
+    Sprint 4 Complete         :milestone, 2000-04-22, 0d
+    Sprint 5 Complete         :milestone, 2000-05-06, 0d
+    Code Freeze               :milestone, 2000-05-06, 0d
 
     section Testing
-    System Testing Complete   :milestone, 2027-01-09, 0d
-    UAT Complete              :milestone, 2027-01-23, 0d
+    System Testing Complete   :milestone, 2000-06-03, 0d
+    UAT Complete              :milestone, 2000-06-17, 0d
 
     section Deployment
-    Go-Live                   :milestone, crit, 2027-01-30, 0d
-    Hypercare End             :milestone, 2027-02-27, 0d
+    Go-Live                   :milestone, crit, 2000-06-24, 0d
+    Hypercare End             :milestone, 2000-07-22, 0d
 
     section Closure
-    Project Closure           :milestone, 2027-03-06, 0d
+    Project Closure           :milestone, 2000-07-29, 0d
 ```
 
 ## 7. Critical Path Gantt
@@ -237,9 +242,10 @@ gantt
 gantt
     title Critical Path
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
 
     section Critical Path
-    Requirements Elicitation  :crit, a1, 2026-08-11, 12d
+    Requirements Elicitation  :crit, a1, 2000-01-01, 12d
     Requirements Documentation:crit, a2, after a1, 12d
     Requirements Review       :crit, a3, after a2, 3d
     Architecture Design       :crit, a4, after a3, 7d
@@ -252,7 +258,7 @@ gantt
     Go-Live                   :milestone, crit, after a10, 0d
 
     section Non-Critical (Float)
-    Stakeholder Analysis      :b1, 2026-08-11, 3d
+    Stakeholder Analysis      :b1, 2000-01-01, 3d
     Training                  :b2, after a10, 5d
     Hypercare                 :b3, after a10, 20d
     Closure                   :b4, after b3, 10d

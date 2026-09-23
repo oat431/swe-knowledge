@@ -128,7 +128,7 @@ OBJ-02              BR-02, BR-04            SN-03
 | NFR-03 | Scalability | [e.g., Support concurrent users] | [10,000] | 🟡 | OBJ-02 |
 | NFR-04 | Security | [e.g., Data encryption at rest and in transit] | [AES-256] | 🔴 | OBJ-03 |
 | NFR-05 | Usability | [e.g., Training time for new staff] | [≤ 2 hours] | 🟡 | OBJ-01 |
-| NFR-06 | Compliance | [e.g., Regulatory standard adherence] | [GDPR / ISO 27001] | 🔴 | OBJ-03 |
+| NFR-06 | Compliance | [e.g., Regulatory standard adherence] | [GDPR / ISO/IEC 27001:2022] | 🔴 | OBJ-03 |
 | NFR-07 | Accessibility | [e.g., WCAG compliance level] | [AA] | 🟡 | |
 | NFR-08 | | | | | |
 

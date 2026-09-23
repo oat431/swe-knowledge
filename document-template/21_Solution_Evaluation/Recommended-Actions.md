@@ -71,18 +71,19 @@ standard_ref:
 gantt
     title Recommendation Implementation
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Phase 2 Sprint 1
-    Input Validation         :a1, 2027-01-15, 3d
-    Mobile UX Design         :a2, 2027-01-15, 5d
+    Input Validation         :a1, 2000-01-01, 3d
+    Mobile UX Design         :a2, 2000-01-01, 5d
     section Phase 2 Sprint 2
     Mobile UX Development    :a3, after a2, 5d
-    Auto-Approve Threshold   :a4, 2027-02-01, 5d
+    Auto-Approve Threshold   :a4, 2000-01-18, 5d
     section Phase 2 Sprint 3
-    PDF Export               :a5, 2027-02-15, 5d
-    Chunked Upload           :a6, 2027-02-15, 5d
+    PDF Export               :a5, 2000-02-01, 5d
+    Chunked Upload           :a6, 2000-02-01, 5d
     section Phase 2 Sprint 4
-    Staff Training           :a7, 2027-03-01, 3d
-    Auto-Scaling             :a8, 2027-03-01, 3d
+    Staff Training           :a7, 2000-02-15, 3d
+    Auto-Scaling             :a8, 2000-02-15, 3d
 ```
 
 ## 5. Expected Outcomes

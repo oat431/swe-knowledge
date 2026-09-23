@@ -100,32 +100,56 @@ standard_ref:
 ### 2.1 Assessment Framework
 
 ```mermaid
-mindmap
-  root((Enterprise<br>Readiness))
-    Organizational
-      Leadership Support
-      Governance
-      Strategic Alignment
-    Cultural
-      Change Appetite
-      Collaboration
-      Innovation Mindset
-    Technical
-      Infrastructure
-      Systems
-      Data
-    People
-      Skills
-      Capacity
-      Awareness
-    Process
-      Current Processes
-      Documentation
-      Automation
-    Resource
-      Budget
-      Staffing
-      Time
+flowchart TB
+    R(("Enterprise<br>Readiness"))
+    n1["Organizational"]
+    R --> n1
+    n2["Leadership Support"]
+    n1 --> n2
+    n3["Governance"]
+    n1 --> n3
+    n4["Strategic Alignment"]
+    n1 --> n4
+    n5["Cultural"]
+    R --> n5
+    n6["Change Appetite"]
+    n5 --> n6
+    n7["Collaboration"]
+    n5 --> n7
+    n8["Innovation Mindset"]
+    n5 --> n8
+    n9["Technical"]
+    R --> n9
+    n10["Infrastructure"]
+    n9 --> n10
+    n11["Systems"]
+    n9 --> n11
+    n12["Data"]
+    n9 --> n12
+    n13["People"]
+    R --> n13
+    n14["Skills"]
+    n13 --> n14
+    n15["Capacity"]
+    n13 --> n15
+    n16["Awareness"]
+    n13 --> n16
+    n17["Process"]
+    R --> n17
+    n18["Current Processes"]
+    n17 --> n18
+    n19["Documentation"]
+    n17 --> n19
+    n20["Automation"]
+    n17 --> n20
+    n21["Resource"]
+    R --> n21
+    n22["Budget"]
+    n21 --> n22
+    n23["Staffing"]
+    n21 --> n23
+    n24["Time"]
+    n21 --> n24
 ```
 
 ### 2.2 Scoring Scale
@@ -375,20 +399,21 @@ radar-beta
 gantt
     title Readiness Improvement Actions
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section People
-    Communication Campaign  :a1, 2026-09-01, 30d
-    Accelerated Training    :a2, 2026-09-15, 45d
+    Communication Campaign  :a1, 2000-01-01, 30d
+    Accelerated Training    :a2, 2000-01-15, 45d
     section Cultural
-    Early Win Celebration   :b1, 2026-10-01, 7d
-    Change Champion Program :b2, 2026-09-01, 60d
+    Early Win Celebration   :b1, 2000-01-31, 7d
+    Change Champion Program :b2, 2000-01-01, 60d
     section Process
-    Exception Documentation :c1, 2026-09-01, 14d
+    Exception Documentation :c1, 2000-01-01, 14d
     Process Dry Runs        :c2, after c1, 14d
     section Technical
-    Final Integration Test  :d1, 2026-10-01, 14d
+    Final Integration Test  :d1, 2000-01-31, 14d
     Performance Validation  :d2, after d1, 7d
     section Go-Live
-    Final Readiness Check   :milestone, 2026-11-01, 0d
+    Final Readiness Check   :milestone, 2000-03-02, 0d
 ```
 
 ---

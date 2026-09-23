@@ -82,15 +82,16 @@ radar-beta
 gantt
     title Data Management Improvement Roadmap
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Phase 1 (6 months)
-    Governance Foundation    :a1, 2026-07-01, 90d
-    Quality Automation       :a2, 2026-07-01, 90d
+    Governance Foundation    :a1, 2000-01-01, 90d
+    Quality Automation       :a2, 2000-01-01, 90d
     section Phase 2 (12 months)
-    MDM Implementation       :b1, 2026-10-01, 180d
-    Metadata Management      :b2, 2026-10-01, 90d
+    MDM Implementation       :b1, 2000-04-02, 180d
+    Metadata Management      :b2, 2000-04-02, 90d
     section Phase 3 (18 months)
-    Advanced Analytics       :c1, 2027-04-01, 180d
-    Data Innovation          :c2, 2027-04-01, 180d
+    Advanced Analytics       :c1, 2000-10-01, 180d
+    Data Innovation          :c2, 2000-10-01, 180d
 ```
 
 ---

@@ -58,18 +58,19 @@ standard_ref:
 gantt
     title Data Technology Roadmap
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Phase 1 (Q1)
-    Data Catalog           :a1, 2026-07-01, 90d
-    Data Quality (GE)      :a2, 2026-07-01, 90d
+    Data Catalog           :a1, 2000-01-01, 90d
+    Data Quality (GE)      :a2, 2000-01-01, 90d
     section Phase 2 (Q2)
-    DW Upgrade             :b1, 2026-10-01, 90d
-    ETL Orchestration      :b2, 2026-10-01, 90d
+    DW Upgrade             :b1, 2000-04-02, 90d
+    ETL Orchestration      :b2, 2000-04-02, 90d
     section Phase 3 (Q3)
-    MDM Implementation     :c1, 2027-01-01, 90d
-    BI Enhancement         :c2, 2027-01-01, 90d
+    MDM Implementation     :c1, 2000-07-03, 90d
+    BI Enhancement         :c2, 2000-07-03, 90d
     section Phase 4 (Q4)
-    Advanced Analytics     :d1, 2027-04-01, 90d
-    Data Innovation        :d2, 2027-04-01, 90d
+    Advanced Analytics     :d1, 2000-10-01, 90d
+    Data Innovation        :d2, 2000-10-01, 90d
 ```
 
 ## 5. Technology Decisions

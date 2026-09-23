@@ -259,24 +259,25 @@ quadrantChart
 gantt
     title Stakeholder Engagement Calendar
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Leadership
-    Steering Committee       :crit, 2026-08-07, 1d
-    Steering Committee       :crit, 2026-09-04, 1d
-    Steering Committee       :crit, 2026-10-02, 1d
+    Steering Committee       :crit, 2000-01-01, 1d
+    Steering Committee       :crit, 2000-01-29, 1d
+    Steering Committee       :crit, 2000-02-26, 1d
     section Business
-    Requirements Workshop    :2026-08-12, 1d
-    Requirements Workshop    :2026-08-26, 1d
-    Design Review            :2026-09-09, 1d
+    Requirements Workshop    :2000-01-06, 1d
+    Requirements Workshop    :2000-01-20, 1d
+    Design Review            :2000-02-03, 1d
     section Operations
-    Process Workshop         :2026-08-14, 1d
-    Prototype Review         :2026-09-11, 1d
-    UAT Session              :2026-10-07, 3d
+    Process Workshop         :2000-01-08, 1d
+    Prototype Review         :2000-02-05, 1d
+    UAT Session              :2000-03-02, 3d
     section Technical
-    Architecture Review      :2026-08-19, 1d
-    Integration Review       :2026-09-16, 1d
+    Architecture Review      :2000-01-13, 1d
+    Integration Review       :2000-02-10, 1d
     section Communication
-    Town Hall                :2026-08-28, 1d
-    Town Hall                :2026-09-25, 1d
+    Town Hall                :2000-01-22, 1d
+    Town Hall                :2000-02-19, 1d
 ```
 
 ### 7.2 Engagement Cadence

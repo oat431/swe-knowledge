@@ -130,21 +130,22 @@ standard_ref:
 gantt
     title Communication Calendar (Monthly View)
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Daily
-    Standup                :a1, 2026-08-01, 30d
+    Standup                :a1, 2000-01-01, 30d
     section Weekly
-    Status Report          :b1, 2026-08-07, 1d
-    Status Report          :b2, 2026-08-14, 1d
-    Status Report          :b3, 2026-08-21, 1d
-    Status Report          :b4, 2026-08-28, 1d
+    Status Report          :b1, 2000-01-07, 1d
+    Status Report          :b2, 2000-01-14, 1d
+    Status Report          :b3, 2000-01-21, 1d
+    Status Report          :b4, 2000-01-28, 1d
     section Bi-weekly
-    Sprint Review          :c1, 2026-08-08, 1d
-    Sprint Review          :c2, 2026-08-22, 1d
-    Risk Review            :d1, 2026-08-11, 1d
-    Risk Review            :d2, 2026-08-25, 1d
+    Sprint Review          :c1, 2000-01-08, 1d
+    Sprint Review          :c2, 2000-01-22, 1d
+    Risk Review            :d1, 2000-01-11, 1d
+    Risk Review            :d2, 2000-01-25, 1d
     section Monthly
-    Steering Committee     :e1, 2026-08-04, 1d
-    Financial Report       :e2, 2026-08-28, 1d
+    Steering Committee     :e1, 2000-01-04, 1d
+    Financial Report       :e2, 2000-01-28, 1d
 ```
 
 ## 7. Communication Metrics

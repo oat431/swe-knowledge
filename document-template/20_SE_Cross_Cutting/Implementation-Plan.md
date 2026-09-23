@@ -40,8 +40,9 @@ standard_ref:
 gantt
     title Implementation Sequence
     dateFormat YYYY-MM-DD
+    %% Placeholder schedule: base 2000-01-01 = project start; recompute real dates when instantiating
     section Infrastructure
-    Database Setup         :a1, 2026-08-01, 5d
+    Database Setup         :a1, 2000-01-01, 5d
     CI/CD Pipeline         :a2, after a1, 5d
     section Backend
     Core Services          :b1, after a2, 14d

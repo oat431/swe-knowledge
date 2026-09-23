@@ -91,28 +91,48 @@ standard_ref:
 > Value is measured across five dimensions — not just financial return.
 
 ```mermaid
-mindmap
-  root((Total Value))
-    Financial
-      Cost Savings
-      Revenue Increase
-      Cost Avoidance
-    Operational
-      Efficiency
-      Speed
-      Quality
-    Strategic
-      Market Position
-      Innovation
-      Scalability
-    Risk Reduction
-      Compliance
-      Security
-      Business Continuity
-    Customer
-      Satisfaction
-      Retention
-      Acquisition
+flowchart TB
+    R(("Total Value"))
+    n1["Financial"]
+    R --> n1
+    n2["Cost Savings"]
+    n1 --> n2
+    n3["Revenue Increase"]
+    n1 --> n3
+    n4["Cost Avoidance"]
+    n1 --> n4
+    n5["Operational"]
+    R --> n5
+    n6["Efficiency"]
+    n5 --> n6
+    n7["Speed"]
+    n5 --> n7
+    n8["Quality"]
+    n5 --> n8
+    n9["Strategic"]
+    R --> n9
+    n10["Market Position"]
+    n9 --> n10
+    n11["Innovation"]
+    n9 --> n11
+    n12["Scalability"]
+    n9 --> n12
+    n13["Risk Reduction"]
+    R --> n13
+    n14["Compliance"]
+    n13 --> n14
+    n15["Security"]
+    n13 --> n15
+    n16["Business Continuity"]
+    n13 --> n16
+    n17["Customer"]
+    R --> n17
+    n18["Satisfaction"]
+    n17 --> n18
+    n19["Retention"]
+    n17 --> n19
+    n20["Acquisition"]
+    n17 --> n20
 ```
 
 ### 2.2 Value Measurement Approach

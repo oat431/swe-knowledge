@@ -8,7 +8,7 @@ tags: [overview, business-analysis, babok, essential-documents]
 > Organized by BA workflow: Planning → Strategy → Elicitation → Analysis & Design → Life Cycle Mgmt → Solution Evaluation
 >
 > ⚠️ **This is a document-only extract.** For the full body of knowledge, see:
-> `F:\projects\orlita_md\software-engineering-note\Body of Knowledge\BABOK\`
+> `F:\obsidian_note\swe-knowledge\body-of-knowledge\BABOK\`
 
 **Priority Legend:**
 
