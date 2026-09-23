@@ -29,52 +29,33 @@ standard_ref:
 
 | Table | Records | Columns | Nulls (%) | Duplicates (%) | Quality Score |
 |-------|---------|---------|----------|---------------|--------------|
-| [customers] | [10,000] | [7] | [2%] | [0.1%] | [99.1%] |
-| [requests] | [100,000] | [10] | [1%] | [0%] | [99.5%] |
-| [transactions] | [200,000] | [7] | [0.5%] | [0%] | [99.8%] |
-| [categories] | [15] | [4] | [0%] | [0%] | [100%] |
-| [statuses] | [6] | [3] | [0%] | [0%] | [100%] |
+| [table] | [N] | [N] | [X]% | [X]% | [X]% |
 
-## 3. Customer Profiling
+## 3. [Table] Profiling
 
 | Column | Type | Nulls | Distinct | Min | Max | Avg | Pattern |
 |--------|------|-------|---------|-----|-----|-----|---------|
-| [id] | [UUID] | [0%] | [10,000] | — | — | — | [UUID v4] |
-| [name] | [VARCHAR] | [0%] | [9,800] | [1 char] | [100 chars] | [25 chars] | [Text] |
-| [email] | [VARCHAR] | [0%] | [10,000] | [5 chars] | [50 chars] | [20 chars] | [Email] |
-| [phone] | [VARCHAR] | [2%] | [9,500] | [10 digits] | [15 digits] | [12 digits] | [E.164] |
-| [type] | [VARCHAR] | [0%] | [3] | — | — | — | [Enum] |
-| [created_at] | [TIMESTAMP] | [0%] | — | [2025-01-01] | [2026-07-12] | — | [ISO 8601] |
-| [updated_at] | [TIMESTAMP] | [0%] | — | [2025-01-01] | [2026-07-12] | — | [ISO 8601] |
+| [column] | [TYPE] | [X]% | [N] | [min] | [max] | [avg] | [Pattern] |
 
-## 4. Request Profiling
+## 4. [Table] Profiling
 
 | Column | Type | Nulls | Distinct | Min | Max | Avg | Pattern |
 |--------|------|-------|---------|-----|-----|-----|---------|
-| [id] | [UUID] | [0%] | [100,000] | — | — | — | [UUID v4] |
-| [customer_id] | [UUID] | [0%] | [10,000] | — | — | — | [FK] |
-| [category_id] | [UUID] | [0%] | [15] | — | — | — | [FK] |
-| [status_id] | [UUID] | [0%] | [6] | — | — | — | [FK] |
-| [assigned_to] | [UUID] | [1%] | [25] | — | — | — | [FK] |
-| [description] | [TEXT] | [0%] | — | [10 chars] | [5,000 chars] | [500 chars] | [Text] |
-| [amount] | [DECIMAL] | [0%] | — | [1.00] | [50,000.00] | [5,000.00] | [Numeric] |
-| [priority] | [VARCHAR] | [0%] | [4] | — | — | — | [Enum] |
-| [submitted_at] | [TIMESTAMP] | [0%] | — | [2025-01-01] | [2026-07-12] | — | [ISO 8601] |
-| [updated_at] | [TIMESTAMP] | [0%] | — | [2025-01-01] | [2026-07-12] | — | [ISO 8601] |
+| [column] | [TYPE] | [X]% | [N] | [min] | [max] | [avg] | [Pattern] |
+
+> **Repeat sections 3–4 for each profiled table.**
 
 ## 5. Data Quality Issues Found
 
 | # | Issue | Table | Column | Count | Severity | Action |
 |---|-------|-------|--------|-------|---------|--------|
-| 1 | [Null phone numbers] | [customers] | [phone] | [200] | 🟢 Low | [Accept — optional field] |
-| 2 | [Unassigned requests] | [requests] | [assigned_to] | [1,000] | 🟢 Low | [Assign on processing] |
-| 3 | [Duplicate names] | [customers] | [name] | [200] | 🟢 Low | [Different people, same name] |
+| 1 | [Issue description] | [table] | [column] | [N] | [🟢 Low / 🟡 Medium / 🔴 High] | [Action] |
 
 ## 6. Profiling Tools
 
 | Tool | Purpose | Configuration |
 |------|---------|-------------|
-| [Great Expectations] | [Automated profiling] | [expect_column_values_to_not_be_null] |
+| [Great Expectations] | [Automated profiling] | [Configuration] |
 | [pandas-profiling] | [Statistical profiling] | [Default config] |
 | [SQL queries] | [Custom profiling] | [Custom queries] |
 

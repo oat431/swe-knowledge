@@ -90,7 +90,7 @@ standard_ref:
 | Constraint | Type | Impact on Options |
 |-----------|------|------------------|
 | [e.g., Must integrate with existing ERP] | Technical | [Limits technology choices] |
-| [e.g., Budget cap $500K] | Financial | [Eliminates expensive options] |
+| [e.g., Budget cap $[X]] | Financial | [Eliminates expensive options] |
 | [e.g., Go-live by YYYY-MM-DD] | Time | [Eliminates long-lead options] |
 | [e.g., Data sovereignty requirement] | Legal | [Limits hosting options] |
 | [e.g., No new headcount] | Resource | [Favors managed/SaaS solutions] |
@@ -99,11 +99,11 @@ standard_ref:
 
 | Requirement ID | Requirement | Design Implication |
 |---------------|-------------|-------------------|
-| BR-01 | [Customer self-service] | [Web portal or mobile app needed] |
-| BR-02 | [Real-time processing] | [Event-driven or real-time architecture] |
-| NFR-01 | [99.9% availability] | [High availability, redundancy] |
-| NFR-02 | [<2s response time] | [Caching, CDN, optimized queries] |
-| NFR-03 | [GDPR compliance] | [Data residency, consent management] |
+| BR-[XX] | [Customer self-service] | [Web portal or mobile app needed] |
+| BR-[XX] | [Real-time processing] | [Event-driven or real-time architecture] |
+| NFR-[XX] | [Availability target] | [High availability, redundancy] |
+| NFR-[XX] | [Response-time target] | [Caching, CDN, optimized queries] |
+| NFR-[XX] | [GDPR compliance] | [Data residency, consent management] |
 
 ---
 
@@ -113,22 +113,22 @@ standard_ref:
 
 | ID | Option | Approach | Description |
 |----|--------|----------|-------------|
-| OPT-A | [e.g., Buy — SaaS Platform] | Buy | [Implement a commercial SaaS solution] |
-| OPT-B | [e.g., Build — Custom Development] | Build | [Develop a custom solution in-house] |
-| OPT-C | [e.g., Hybrid — SaaS + Custom] | Hybrid | [SaaS core with custom extensions] |
-| OPT-D | [e.g., Open Source + Customize] | Open Source | [Deploy open source and customize] |
+| OPT-[X] | [e.g., Buy — SaaS Platform] | Buy | [Implement a commercial SaaS solution] |
+| OPT-[X] | [e.g., Build — Custom Development] | Build | [Develop a custom solution in-house] |
+| OPT-[X] | [e.g., Hybrid — SaaS + Custom] | Hybrid | [SaaS core with custom extensions] |
+| OPT-[X] | [e.g., Open Source + Customize] | Open Source | [Deploy open source and customize] |
 
 ### 3.2 Options at a Glance
 
-| Criteria | OPT-A: SaaS | OPT-B: Custom | OPT-C: Hybrid | OPT-D: Open Source |
+| Criteria | OPT-[X]: SaaS | OPT-[X]: Custom | OPT-[X]: Hybrid | OPT-[X]: Open Source |
 |----------|------------|--------------|--------------|-------------------|
-| **Approach** | Buy | Build | Buy + Build | Open Source + Customize |
+| **Approach** | [Approach] | [Approach] | [Approach] | [Approach] |
 | **Estimated Cost** | $[X] | $[Y] | $[Z] | $[W] |
 | **Timeline** | [X months] | [Y months] | [Z months] | [W months] |
-| **Customization** | Limited | Full | Moderate | Full |
-| **Vendor Dependency** | High | None | Medium | Low |
-| **Maintenance** | Vendor-managed | Self-managed | Shared | Self-managed |
-| **Scalability** | 🟢 Vendor-managed | 🟡 Build for scale | 🟡 Partial | 🟡 Self-managed |
+| **Customization** | [Level] | [Level] | [Level] | [Level] |
+| **Vendor Dependency** | [Level] | [Level] | [Level] | [Level] |
+| **Maintenance** | [Model] | [Model] | [Model] | [Model] |
+| **Scalability** | [Rating] | [Rating] | [Rating] | [Rating] |
 
 ---
 
@@ -163,7 +163,7 @@ standard_ref:
 
 ### 5.1 Weighted Scoring Matrix
 
-| Criterion | Weight | OPT-A: SaaS | OPT-B: Custom | OPT-C: Hybrid | OPT-D: Open Source |
+| Criterion | Weight | OPT-[X]: SaaS | OPT-[X]: Custom | OPT-[X]: Hybrid | OPT-[X]: Open Source |
 |-----------|--------|------------|--------------|--------------|-------------------|
 | C1 Strategic Alignment | 20% | [Score] × 0.20 = [W] | [Score] × 0.20 = [W] | [Score] × 0.20 = [W] | [Score] × 0.20 = [W] |
 | C2 Functional Fit | 20% | [Score] × 0.20 = [W] | [Score] × 0.20 = [W] | [Score] × 0.20 = [W] | [Score] × 0.20 = [W] |
@@ -186,22 +186,22 @@ quadrantChart
     quadrant-2 Premium
     quadrant-3 Poor Value
     quadrant-4 Budget
-    OPT-A SaaS: [0.4, 0.7]
-    OPT-B Custom: [0.8, 0.95]
-    OPT-C Hybrid: [0.6, 0.85]
-    OPT-D Open Source: [0.3, 0.6]
+    OPT-[X] SaaS: [[x], [y]]
+    OPT-[X] Custom: [[x], [y]]
+    OPT-[X] Hybrid: [[x], [y]]
+    OPT-[X] Open Source: [[x], [y]]
 ```
 
 ### 5.3 Feature Coverage Matrix
 
-| Requirement | Must Have | OPT-A | OPT-B | OPT-C | OPT-D |
+| Requirement | Must Have | OPT-[X] | OPT-[X] | OPT-[X] | OPT-[X] |
 |------------|----------|-------|-------|-------|-------|
-| BR-01 Customer self-service | 🔴 | ✅ Built-in | ✅ Custom build | ✅ Custom portal | ✅ Custom build |
-| BR-02 Real-time processing | 🔴 | ✅ Built-in | ✅ Custom build | ✅ Hybrid | ⚠️ Requires config |
-| BR-03 Reporting | 🔴 | ✅ Built-in | ✅ Custom build | ✅ SaaS reporting | ⚠️ Plugin needed |
-| NFR-01 99.9% uptime | 🔴 | ✅ SLA-backed | ⚠️ Self-managed | ✅ SLA for SaaS | ⚠️ Self-managed |
-| NFR-02 <2s response | 🔴 | ✅ CDN included | ⚠️ Build required | ⚠️ Partial | ⚠️ Build required |
-| NFR-03 GDPR compliance | 🔴 | ✅ Certified | ⚠️ Build required | ✅ SaaS compliant | ⚠️ Build required |
+| BR-[XX] [Requirement description] | 🔴 | [✅/⚠️/❌] | [✅/⚠️/❌] | [✅/⚠️/❌] | [✅/⚠️/❌] |
+| BR-[XX] [Requirement description] | 🔴 | [✅/⚠️/❌] | [✅/⚠️/❌] | [✅/⚠️/❌] | [✅/⚠️/❌] |
+| BR-[XX] [Requirement description] | 🔴 | [✅/⚠️/❌] | [✅/⚠️/❌] | [✅/⚠️/❌] | [✅/⚠️/❌] |
+| NFR-[XX] [Availability target] | 🔴 | [✅/⚠️/❌] | [✅/⚠️/❌] | [✅/⚠️/❌] | [✅/⚠️/❌] |
+| NFR-[XX] [Response-time target] | 🔴 | [✅/⚠️/❌] | [✅/⚠️/❌] | [✅/⚠️/❌] | [✅/⚠️/❌] |
+| NFR-[XX] [Compliance target] | 🔴 | [✅/⚠️/❌] | [✅/⚠️/❌] | [✅/⚠️/❌] | [✅/⚠️/❌] |
 | **Coverage** | | **[X%]** | **[Y%]** | **[Z%]** | **[W%]** |
 
 > ✅ = Fully met | ⚠️ = Partially met / requires effort | ❌ = Not met
@@ -210,7 +210,7 @@ quadrantChart
 
 ## 6. Option Detail Cards
 
-### OPT-A: [Option Name — e.g., SaaS Platform]
+### OPT-[X]: [Option Name — e.g., SaaS Platform]
 
 | Aspect | Detail |
 |--------|--------|
@@ -229,7 +229,7 @@ quadrantChart
 | **Lock-In Risk** | [Level of vendor dependency] |
 | **Implementation Risk** | [Key risks and mitigations] |
 
-> **Repeat this card for each option (OPT-B, OPT-C, OPT-D)**
+> **Repeat this card for each option (OPT-[X], OPT-[X], OPT-[X])**
 
 ---
 
@@ -248,22 +248,22 @@ quadrantChart
 
 | Scenario | Impact on Ranking | Best Option |
 |----------|------------------|-------------|
-| [Budget reduced by 20%] | [Option B drops out] | [Option A or C] |
-| [Timeline compressed by 3 months] | [Option B not feasible] | [Option A] |
-| [Requirements increase 30%] | [Option A customization limits hit] | [Option B or C] |
+| [Budget reduced by [X]%] | [Option B drops out] | [Option A or C] |
+| [Timeline compressed by [N] months] | [Option B not feasible] | [Option A] |
+| [Requirements increase [X]%] | [Option A customization limits hit] | [Option B or C] |
 | [Vendor exits market] | [Option A at risk] | [Option B or D] |
 | [Team capacity doubles] | [Option B becomes more attractive] | [Option B] |
 
 ### 7.3 Risk Comparison
 
-| Risk Type | OPT-A | OPT-B | OPT-C | OPT-D |
+| Risk Type | OPT-[X] | OPT-[X] | OPT-[X] | OPT-[X] |
 |-----------|-------|-------|-------|-------|
-| Implementation Risk | 🟢 Low | 🔴 High | 🟡 Medium | 🟠 Medium-High |
-| Vendor Risk | 🔴 High | 🟢 None | 🟡 Medium | 🟢 Low |
-| Technical Risk | 🟢 Low | 🟡 Medium | 🟡 Medium | 🟠 Medium-High |
-| Cost Risk | 🟡 Medium | 🔴 High | 🟡 Medium | 🟢 Low |
-| Scalability Risk | 🟢 Low | 🟡 Medium | 🟡 Medium | 🟡 Medium |
-| **Overall Risk** | **🟡 Medium** | **🟠 Medium-High** | **🟡 Medium** | **🟠 Medium-High** |
+| Implementation Risk | [Rating] | [Rating] | [Rating] | [Rating] |
+| Vendor Risk | [Rating] | [Rating] | [Rating] | [Rating] |
+| Technical Risk | [Rating] | [Rating] | [Rating] | [Rating] |
+| Cost Risk | [Rating] | [Rating] | [Rating] | [Rating] |
+| Scalability Risk | [Rating] | [Rating] | [Rating] | [Rating] |
+| **Overall Risk** | **[Rating]** | **[Rating]** | **[Rating]** | **[Rating]** |
 
 ---
 
@@ -286,7 +286,7 @@ quadrantChart
 
 ### 8.3 Conditions for Recommendation
 
-1. [e.g., Vendor provides 99.9% SLA in contract]
+1. [e.g., Vendor provides [X]% SLA in contract]
 2. [e.g., Custom portal development budget approved]
 3. [e.g., Integration POC completed successfully]
 

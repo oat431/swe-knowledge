@@ -36,111 +36,33 @@ standard_ref:
 
 ## 3. Abuse Cases
 
-### AC-001: Unauthorized Data Access
+### AC-[XX]: [Abuse Case Title]
 
 | Field | Detail |
 |-------|--------|
-| **ID** | [AC-001] |
-| **Title** | [Access another user's data] |
-| **Actor** | [Malicious user / Compromised account] |
-| **Goal** | [View or modify data belonging to other users] |
-| **Precondition** | [User has valid account] |
-| **Attack Steps** | [1. Enumerate user IDs<br>2. Modify request ID in API call<br>3. Access unauthorized data] |
-| **Impact** | [Data breach, privacy violation] |
-| **Mitigation** | [RBAC, ownership validation on every request] |
-| **Security Req** | [SEC-011: Users shall only access own data] |
+| **ID** | [AC-XX] |
+| **Title** | [What the attacker achieves] |
+| **Actor** | [Attacker / Misuser type] |
+| **Goal** | [Attacker's goal] |
+| **Precondition** | [Condition that must hold] |
+| **Attack Steps** | [1. Step one<br>2. Step two<br>3. Step three] |
+| **Impact** | [Business/security impact] |
+| **Mitigation** | [Controls that prevent or detect] |
+| **Security Req** | [SEC-XXX: Derived security requirement] |
 
-### AC-002: Brute Force Authentication
-
-| Field | Detail |
-|-------|--------|
-| **ID** | [AC-002] |
-| **Title** | [Brute force login credentials] |
-| **Actor** | [External attacker] |
-| **Goal** | [Gain unauthorized access by guessing passwords] |
-| **Precondition** | [Login endpoint accessible] |
-| **Attack Steps** | [1. Automate login attempts<br>2. Try common passwords<br>3. Try credential stuffing] |
-| **Impact** | [Account compromise] |
-| **Mitigation** | [Rate limiting, account lockout, MFA] |
-| **Security Req** | [SEC-003: Account lockout after 5 failed attempts] |
-
-### AC-003: SQL Injection
-
-| Field | Detail |
-|-------|--------|
-| **ID** | [AC-003] |
-| **Title** | [Inject malicious SQL via input] |
-| **Actor** | [External attacker] |
-| **Goal** | [Extract or modify database data] |
-| **Precondition** | [Input field accepts user input] |
-| **Attack Steps** | [1. Identify injectable input<br>2. Craft SQL payload<br>3. Execute malicious query] |
-| **Impact** | [Data breach, data modification] |
-| **Mitigation** | [Parameterized queries, input validation, WAF] |
-| **Security Req** | [SEC-031: SQL queries shall use parameterized statements] |
-
-### AC-004: Denial of Service
-
-| Field | Detail |
-|-------|--------|
-| **ID** | [AC-004] |
-| **Title** | [Overwhelm system with requests] |
-| **Actor** | [External attacker] |
-| **Goal** | [Make system unavailable] |
-| **Precondition** | [API endpoint accessible] |
-| **Attack Steps** | [1. Identify high-resource endpoints<br>2. Send flood of requests<br>3. Exhaust server resources] |
-| **Impact** | [Service unavailability] |
-| **Mitigation** | [Rate limiting, WAF, CDN, auto-scaling] |
-| **Security Req** | [SEC-051: API shall implement rate limiting] |
-
-### AC-005: Privilege Escalation
-
-| Field | Detail |
-|-------|--------|
-| **ID** | [AC-005] |
-| **Title** | [Gain elevated privileges] |
-| **Actor** | [Malicious user] |
-| **Goal** | [Access admin functions without authorization] |
-| **Precondition** | [User has standard account] |
-| **Attack Steps** | [1. Identify admin endpoints<br>2. Manipulate role parameter<br>3. Access admin functions] |
-| **Impact** | [Full system compromise] |
-| **Mitigation** | [Server-side role validation, no client-side role claims] |
-| **Security Req** | [SEC-012: Admin functions require admin role] |
-
-### AC-006: Data Exfiltration
-
-| Field | Detail |
-|-------|--------|
-| **ID** | [AC-006] |
-| **Title** | [Bulk data export by authorized user] |
-| **Actor** | [Malicious insider / Compromised account] |
-| **Goal** | [Extract large volume of sensitive data] |
-| **Precondition** | [User has data access] |
-| **Attack Steps** | [1. Use legitimate export function<br>2. Export maximum allowed data<br>3. Repeat until dataset complete] |
-| **Impact** | [Data breach, IP theft] |
-| **Mitigation** | [Export limits, DLP monitoring, audit logging] |
-| **Security Req** | [SEC-041: All data access shall be logged] |
+> **Repeat this format for each abuse/misuse case.**
 
 ## 4. Abuse Case Summary
 
 | ID | Title | Impact | Mitigation | Status |
 |----|-------|--------|-----------|--------|
-| [AC-001] | [Unauthorized Data Access] | 🔴 Critical | [RBAC + ownership validation] | ✅ Mitigated |
-| [AC-002] | [Brute Force Auth] | 🔴 Critical | [Rate limiting + lockout + MFA] | ✅ Mitigated |
-| [AC-003] | [SQL Injection] | 🔴 Critical | [Parameterized queries + WAF] | ✅ Mitigated |
-| [AC-004] | [Denial of Service] | 🟡 Medium | [Rate limiting + CDN + WAF] | ✅ Mitigated |
-| [AC-005] | [Privilege Escalation] | 🔴 Critical | [Server-side role validation] | ✅ Mitigated |
-| [AC-006] | [Data Exfiltration] | 🟡 Medium | [Export limits + DLP + audit] | ✅ Mitigated |
+| [AC-XX] | [Title] | [🔴 Critical / 🟡 Medium / 🟢 Low] | [Mitigation] | [Status] |
 
 ## 5. Security Requirements Derived
 
 | Abuse Case | Security Requirement | Source |
 |-----------|---------------------|--------|
-| [AC-001] | [SEC-011: Users shall only access own data] | [[Security-Requirements-Specification]] |
-| [AC-002] | [SEC-003: Account lockout after 5 failed attempts] | [[Security-Requirements-Specification]] |
-| [AC-003] | [SEC-031: Parameterized queries] | [[Security-Requirements-Specification]] |
-| [AC-004] | [SEC-051: Rate limiting] | [[Security-Requirements-Specification]] |
-| [AC-005] | [SEC-012: Admin role required] | [[Security-Requirements-Specification]] |
-| [AC-006] | [SEC-041: All data access logged] | [[Security-Requirements-Specification]] |
+| [AC-XX] | [SEC-XXX: Derived requirement] | [[Security-Requirements-Specification]] |
 
 ---
 

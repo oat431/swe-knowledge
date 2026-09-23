@@ -63,52 +63,52 @@ standard_ref:
 
 | Stakeholder Group | Representative | Requirements Reviewed | Agreed | Disagreed | Status |
 |-------------------|---------------|---------------------|--------|-----------|--------|
-| [Business Owner] | [Name] | BR-01 to BR-08 | [8] | [0] | ✅ Validated |
-| [Operations Manager] | [Name] | FR-001 to FR-107 | [12] | [1] | ⚠️ Conditional |
-| [End Users] | [Name, Name] | FR-001 to FR-007 | [7] | [0] | ✅ Validated |
-| [Compliance Officer] | [Name] | SEC-001 to SEC-008, BR-07 | [9] | [0] | ✅ Validated |
-| [IT Director] | [Name] | NFR-001 to NFR-033 | [10] | [1] | ⚠️ Conditional |
-| [Sponsor] | [Name] | All | [All] | [0] | ✅ Validated |
+| [Business Owner] | [Name] | BR-[XX] to BR-[XX] | [N] | [N] | [✅ Validated / ⚠️ Conditional] |
+| [Operations Manager] | [Name] | FR-[XXX] to FR-[XXX] | [N] | [N] | [✅ Validated / ⚠️ Conditional] |
+| [End Users] | [Name, Name] | FR-[XXX] to FR-[XXX] | [N] | [N] | [✅ Validated / ⚠️ Conditional] |
+| [Compliance Officer] | [Name] | SEC-[XXX] to SEC-[XXX], BR-[XX] | [N] | [N] | [✅ Validated / ⚠️ Conditional] |
+| [IT Director] | [Name] | NFR-[XXX] to NFR-[XXX] | [N] | [N] | [✅ Validated / ⚠️ Conditional] |
+| [Sponsor] | [Name] | All | [N] | [N] | [✅ Validated / ⚠️ Conditional] |
 
 ### 3.2 Disagreements & Resolutions
 
 | # | Requirement | Stakeholder | Disagreement | Resolution | Decision |
 |---|------------|-------------|-------------|-----------|----------|
-| 1 | [FR-106] | [Ops Manager] | [Reassignment feature adds complexity] | [Simplified — manager-only reassignment] | [Approved with modification] |
-| 2 | [NFR-030] | [IT Director] | [10x scaling is over-engineering for Phase 1] | [Reduce to 5x for Phase 1, 10x for Phase 2] | [Approved with modification] |
+| 1 | [FR-XXX] | [Stakeholder] | [Disagreement description] | [Resolution] | [Approved with modification] |
+| 2 | [NFR-[XXX]] | [IT Director] | [10x scaling is over-engineering for Phase 1] | [Reduce to 5x for Phase 1, 10x for Phase 2] | [Approved with modification] |
 
 ### 3.3 Needs Coverage
 
 | Stakeholder Need | Addressed By | Validated | Gap |
 |-----------------|-------------|----------|-----|
-| SN-01 [Process within 1 hour] | FR-101, FR-102, FR-103 | ✅ | None |
-| SN-02 [Reduce data entry 80%] | FR-002, FR-101 | ✅ | None |
-| SN-03 [Online submission] | FR-001 | ✅ | None |
-| SN-04 [Real-time status] | FR-006 | ✅ | None |
-| SN-05 [Real-time dashboards] | FR-301 | ✅ | None |
-| SN-06 [Audit trail] | FR-007 | ✅ | None |
-| SN-08 [Auto-validate inputs] | FR-002, FR-003 | ✅ | None |
-| **Coverage** | | **100%** | |
+| SN-[XX] [Stakeholder need] | FR-[XXX], FR-[XXX] | [✅/❌] | [None / Gap description] |
+| SN-[XX] [Stakeholder need] | FR-[XXX], FR-[XXX] | [✅/❌] | [None / Gap description] |
+| SN-[XX] [Stakeholder need] | FR-[XXX] | [✅/❌] | [None / Gap description] |
+| SN-[XX] [Stakeholder need] | FR-[XXX] | [✅/❌] | [None / Gap description] |
+| SN-[XX] [Stakeholder need] | FR-[XXX] | [✅/❌] | [None / Gap description] |
+| SN-[XX] [Stakeholder need] | FR-[XXX] | [✅/❌] | [None / Gap description] |
+| SN-[XX] [Stakeholder need] | FR-[XXX], FR-[XXX] | [✅/❌] | [None / Gap description] |
+| **Coverage** | | **[%]** | |
 
 ## 4. Validation Walkthrough Record
 
 | Session | Date | Participants | Requirements Covered | Issues Raised | Resolution |
 |---------|------|-------------|---------------------|--------------|-----------|
-| [Session 1] | [YYYY-MM-DD] | [Business Owner, Ops Manager, BA] | BR-01 to BR-08 | [1 — BR-08 detail needed] | [Follow-up scheduled] |
-| [Session 2] | [YYYY-MM-DD] | [End Users, BA] | FR-001 to FR-007 | [0] | [All agreed] |
-| [Session 3] | [YYYY-MM-DD] | [IT Director, Tech Lead, BA] | NFR-001 to NFR-033 | [1 — NFR-030 scaling] | [Reduced scope] |
-| [Session 4] | [YYYY-MM-DD] | [Compliance Officer, BA] | SEC-001 to SEC-008 | [0] | [All agreed] |
-| [Session 5] | [YYYY-MM-DD] | [Sponsor, All] | All | [0] | [Approved] |
+| [Session N] | [YYYY-MM-DD] | [Participants] | BR-[XX] to BR-[XX] | [N — issue description] | [Resolution] |
+| [Session N] | [YYYY-MM-DD] | [Participants] | FR-[XXX] to FR-[XXX] | [N] | [Resolution] |
+| [Session N] | [YYYY-MM-DD] | [Participants] | NFR-[XXX] to NFR-[XXX] | [N — issue description] | [Resolution] |
+| [Session N] | [YYYY-MM-DD] | [Participants] | SEC-[XXX] to SEC-[XXX] | [N] | [Resolution] |
+| [Session N] | [YYYY-MM-DD] | [All] | All | [N] | [Resolution] |
 
 ## 5. Validation Statistics
 
 | Metric | Value | Target | Status |
 |--------|-------|--------|--------|
-| [Stakeholder groups validated] | [6 of 6] | [100%] | ✅ |
+| [Stakeholder groups validated] | [X of Y] | [100%] | ✅ |
 | [Requirements agreed] | [X of Y] | [≥95%] | ✅ |
 | [Requirements with modifications] | [X] | [<10%] | ✅ |
 | [Open disagreements] | [0] | [0] | ✅ |
-| [Needs coverage] | [100%] | [100%] | ✅ |
+| [Needs coverage] | [%] | [100%] | ✅ |
 
 ## 6. Validation Sign-Off
 

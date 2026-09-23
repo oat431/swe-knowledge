@@ -76,37 +76,37 @@ flowchart TD
 | Feature | Sub-Feature | Requirements | Priority |
 |---------|------------|-------------|----------|
 | **Request Management** | | | |
-| | Online Submission | FR-001, FR-002, FR-003, FR-005 | 🔴 |
-| | Status Tracking | FR-006 | 🔴 |
-| | History | FR-007 | 🔴 |
+| | Online Submission | FR-[XXX], FR-[XXX], FR-[XXX], FR-[XXX] | 🔴 |
+| | Status Tracking | FR-[XXX] | 🔴 |
+| | History | FR-[XXX] | 🔴 |
 | **Processing & Workflow** | | | |
-| | Auto-Classification | FR-101 | 🔴 |
-| | Auto-Routing | FR-102 | 🔴 |
-| | Auto-Approval | FR-103 | 🔴 |
-| | Manual Review | FR-104, FR-106 | 🔴 |
-| | Escalation | FR-107 | 🟡 |
+| | Auto-Classification | FR-[XXX] | 🔴 |
+| | Auto-Routing | FR-[XXX] | 🔴 |
+| | Auto-Approval | FR-[XXX] | 🔴 |
+| | Manual Review | FR-[XXX], FR-[XXX] | 🔴 |
+| | Escalation | FR-[XXX] | 🟡 |
 | **Notifications** | | | |
-| | Email Notifications | FR-201, FR-202 | 🔴 |
-| | SMS Notifications | FR-203 | 🟡 |
-| | Templates | FR-204, FR-205 | 🟡 |
+| | Email Notifications | FR-[XXX], FR-[XXX] | 🔴 |
+| | SMS Notifications | FR-[XXX] | 🟡 |
+| | Templates | FR-[XXX], FR-[XXX] | 🟡 |
 | **Reporting** | | | |
-| | Dashboards | FR-301, FR-305 | 🟡 |
-| | Standard Reports | FR-302 | 🟡 |
-| | Ad-hoc Reports | FR-303, FR-304 | 🟢 |
+| | Dashboards | FR-[XXX], FR-[XXX] | 🟡 |
+| | Standard Reports | FR-[XXX] | 🟡 |
+| | Ad-hoc Reports | FR-[XXX], FR-[XXX] | 🟢 |
 
 ### 3.2 Requirements Dependency Map
 
 ```mermaid
 flowchart LR
-    FR001[FR-001<br>Online Submission] --> FR002[FR-002<br>Validation]
-    FR002 --> FR101[FR-101<br>Classification]
-    FR101 --> FR102[FR-102<br>Routing]
-    FR102 --> FR103[FR-103<br>Auto-Approval]
-    FR102 --> FR104[FR-104<br>Manual Review]
-    FR001 --> FR006[FR-006<br>Status Tracking]
-    FR103 --> FR201[FR-201<br>Notification]
+    FR001["FR-[XXX]<br>Online Submission"] --> FR002["FR-[XXX]<br>Validation"]
+    FR002 --> FR101["FR-[XXX]<br>Classification"]
+    FR101 --> FR102["FR-[XXX]<br>Routing"]
+    FR102 --> FR103["FR-[XXX]<br>Auto-Approval"]
+    FR102 --> FR104["FR-[XXX]<br>Manual Review"]
+    FR001 --> FR006["FR-[XXX]<br>Status Tracking"]
+    FR103 --> FR201["FR-[XXX]<br>Notification"]
     FR104 --> FR201
-    FR006 --> FR301[FR-301<br>Dashboard]
+    FR006 --> FR301["FR-[XXX]<br>Dashboard"]
 
     style FR001 fill:#4CAF50,color:#fff
     style FR002 fill:#4CAF50,color:#fff
@@ -126,23 +126,23 @@ flowchart LR
 | Viewpoint | Stakeholder | Concerns | Requirements Focus |
 |-----------|------------|---------|-------------------|
 | **Business** | Sponsor, Business Owner | Value, ROI, compliance | BR-XX, OBJ-XX |
-| **User** | End Users, Customers | Usability, efficiency | FR-001 to FR-007, USA-XX |
-| **Operations** | Operations Staff | Processing, workflow | FR-101 to FR-107 |
+| **User** | End Users, Customers | Usability, efficiency | FR-[XXX] to FR-[XXX], USA-XX |
+| **Operations** | Operations Staff | Processing, workflow | FR-[XXX] to FR-[XXX] |
 | **Technical** | Architect, Developers | Performance, scalability, security | NFR-XX, SEC-XX, PERF-XX |
-| **Compliance** | Compliance Officer | Audit, retention, regulation | BR-07, SEC-XX, CMP-XX |
+| **Compliance** | Compliance Officer | Audit, retention, regulation | BR-[XX], SEC-XX, CMP-XX |
 
 ### 4.2 Viewpoint Mapping
 
 | Requirement | Business | User | Operations | Technical | Compliance |
 |------------|----------|------|-----------|-----------|-----------|
-| FR-001 Online Submission | ✅ | ✅ | | | |
-| FR-002 Validation | ✅ | ✅ | ✅ | | |
-| FR-101 Classification | | | ✅ | | |
-| FR-103 Auto-Approval | ✅ | | ✅ | | |
-| FR-007 Audit Trail | | | | | ✅ |
-| PERF-001 Response Time | | ✅ | | ✅ | |
-| SEC-001 MFA | | | | ✅ | ✅ |
-| CMP-001 GDPR | ✅ | | | | ✅ |
+| FR-[XXX] Online Submission | ✅ | ✅ | | | |
+| FR-[XXX] Validation | ✅ | ✅ | ✅ | | |
+| FR-[XXX] Classification | | | ✅ | | |
+| FR-[XXX] Auto-Approval | ✅ | | ✅ | | |
+| FR-[XXX] Audit Trail | | | | | ✅ |
+| PERF-[XXX] Response Time | | ✅ | | ✅ | |
+| SEC-[XXX] MFA | | | | ✅ | ✅ |
+| CMP-[XXX] GDPR | ✅ | | | | ✅ |
 
 ## 5. Requirements Grouping
 
@@ -150,27 +150,27 @@ flowchart LR
 
 | Phase | Features | Requirements | Target Date |
 |-------|---------|-------------|------------|
-| **Phase 1 — Core** | Online Submission, Validation, Workflow, Notifications | FR-001 to FR-107, FR-201 to FR-202 | [YYYY-MM-DD] |
-| **Phase 2 — Enhancement** | Dashboard, Reports, Bulk Upload | FR-301 to FR-305, FR-008 | [YYYY-MM-DD] |
-| **Phase 3 — Advanced** | SMS, Advanced Analytics | FR-203, FR-303 | [YYYY-MM-DD] |
+| **Phase 1 — Core** | Online Submission, Validation, Workflow, Notifications | FR-[XXX] to FR-[XXX], FR-[XXX] to FR-[XXX] | [YYYY-MM-DD] |
+| **Phase 2 — Enhancement** | Dashboard, Reports, Bulk Upload | FR-[XXX] to FR-[XXX], FR-[XXX] | [YYYY-MM-DD] |
+| **Phase 3 — Advanced** | SMS, Advanced Analytics | FR-[XXX], FR-[XXX] | [YYYY-MM-DD] |
 
 ### 5.2 By Component
 
 | Component | Requirements | Technology |
 |-----------|-------------|-----------|
-| [Customer Portal] | FR-001, FR-003, FR-005, FR-006 | [React, responsive] |
-| [Admin Portal] | FR-101 to FR-107, FR-301, FR-302 | [React, desktop] |
-| [API Layer] | FR-002, FR-004, FR-101, FR-102 | [REST, Node.js] |
-| [Notification Service] | FR-201 to FR-205 | [Email/SMS service] |
-| [Audit Service] | FR-007 | [Immutable log] |
+| [Customer Portal] | FR-[XXX], FR-[XXX], FR-[XXX], FR-[XXX] | [React, responsive] |
+| [Admin Portal] | FR-[XXX] to FR-[XXX], FR-[XXX], FR-[XXX] | [React, desktop] |
+| [API Layer] | FR-[XXX], FR-[XXX], FR-[XXX], FR-[XXX] | [REST, Node.js] |
+| [Notification Service] | FR-[XXX] to FR-[XXX] | [Email/SMS service] |
+| [Audit Service] | FR-[XXX] | [Immutable log] |
 
 ## 6. Requirements Constraints & Trade-offs
 
 | Constraint | Affected Requirements | Trade-off | Decision |
 |-----------|---------------------|----------|---------|
-| [Budget cap] | FR-303 (deferred) | [Advanced analytics deferred to Phase 3] | [Approved by Steering Committee] |
-| [Timeline] | FR-203 (deferred) | [SMS notifications deferred to Phase 3] | [Approved by CCB] |
-| [Performance] | PERF-001 | [CDN adds cost but meets <2s target] | [Approved — critical requirement] |
+| [Budget cap] | FR-[XXX] (deferred) | [Advanced analytics deferred to Phase 3] | [Approved by Steering Committee] |
+| [Timeline] | FR-[XXX] (deferred) | [SMS notifications deferred to Phase 3] | [Approved by CCB] |
+| [Performance] | PERF-[XXX] | [CDN adds cost but meets <2s target] | [Approved — critical requirement] |
 
 ---
 

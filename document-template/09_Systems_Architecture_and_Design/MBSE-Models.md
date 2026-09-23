@@ -57,12 +57,12 @@ flowchart TD
     SYS --> SW[Software<br>Requirements]
     SW --> TEST[Test<br>Cases]
 
-    BIZ --> BR01[BR-01: Online<br>Submission]
-    BIZ --> BR02[BR-02: Auto<br>Validation]
-    SYS --> SYRS01[SYRS-001: Request<br>Management]
-    SYS --> SYRS02[SYRS-002: Processing<br>Engine]
-    SW --> FR01[FR-001: Submit<br>Request]
-    SW --> FR02[FR-101: Auto<br>Classify]
+    BIZ --> BR01[BR-XX: Business<br>Requirement]
+    BIZ --> BR02[BR-XX: Business<br>Requirement]
+    SYS --> SYRS01[SYRS-XXX: System<br>Requirement]
+    SYS --> SYRS02[SYRS-XXX: System<br>Requirement]
+    SW --> FR01[FR-XXX: Software<br>Requirement]
+    SW --> FR02[FR-XXX: Software<br>Requirement]
 
     BR01 -.->|satisfies| SYRS01
     BR02 -.->|satisfies| SYRS02
@@ -80,113 +80,102 @@ flowchart TD
 ```mermaid
 flowchart TD
     subgraph System["System"]
-        PORTAL[Customer Portal]
-        ADMIN[Admin Portal]
-        GATEWAY[API Gateway]
-        SERVICES[Microservices]
-        DATA[Data Layer]
+        BLOCK1[Block 1]
+        BLOCK2[Block 2]
+        BLOCK3[Block 3]
+        BLOCK4[Block 4]
+        BLOCK5[Block 5]
         EXT[External Systems]
     end
 
-    subgraph Services_Detail["Microservices"]
-        REQ[Request Service]
-        PROC[Processing Service]
-        AUTH[Auth Service]
-        NOTIFY[Notification Service]
+    subgraph Services_Detail["Sub-Blocks"]
+        SUB1[Sub-block 1]
+        SUB2[Sub-block 2]
+        SUB3[Sub-block 3]
+        SUB4[Sub-block 4]
     end
 
-    SERVICES --> REQ
-    SERVICES --> PROC
-    SERVICES --> AUTH
-    SERVICES --> NOTIFY
+    BLOCK4 --> SUB1
+    BLOCK4 --> SUB2
+    BLOCK4 --> SUB3
+    BLOCK4 --> SUB4
 
     style System fill:#1a237e,color:#fff
     style Services_Detail fill:#2196F3,color:#fff
 ```
 
-## 6. Sequence Diagram: Request Processing
+## 6. Sequence Diagram: [Scenario Name]
 
 ```mermaid
 sequenceDiagram
-    actor Customer
-    participant Portal
-    participant Gateway
-    participant RequestSvc
-    participant ProcessingSvc
+    actor Actor
+    participant ComponentA
+    participant ComponentB
+    participant ComponentC
+    participant ComponentD
     participant DB
-    participant NotificationSvc
+    participant ComponentE
 
-    Customer->>Portal: Submit Request
-    Portal->>Gateway: POST /requests
-    Gateway->>Gateway: Authenticate
-    Gateway->>RequestSvc: Create Request
-    RequestSvc->>DB: Store
-    RequestSvc-->>Gateway: 201 Created
-    Gateway-->>Portal: 201 Created
-    Portal-->>Customer: Success
+    Actor->>ComponentA: [Action]
+    ComponentA->>ComponentB: [Request]
+    ComponentB->>ComponentB: [Process]
+    ComponentB->>ComponentC: [Call]
+    ComponentC->>DB: [Persist]
+    ComponentC-->>ComponentB: [Response]
+    ComponentB-->>ComponentA: [Response]
+    ComponentA-->>Actor: [Result]
 
-    RequestSvc->>ProcessingSvc: Event: RequestCreated
-    ProcessingSvc->>ProcessingSvc: Validate
-    ProcessingSvc->>ProcessingSvc: Classify & Route
-    ProcessingSvc->>DB: Update Status
-    ProcessingSvc->>NotificationSvc: Event: StatusChanged
-    NotificationSvc->>Customer: Email Notification
+    ComponentC->>ComponentD: Event: [EventName]
+    ComponentD->>ComponentD: [Process]
+    ComponentD->>ComponentD: [Process]
+    ComponentD->>DB: [Update]
+    ComponentD->>ComponentE: Event: [EventName]
+    ComponentE->>Actor: [Notification]
 ```
 
-## 7. State Machine Diagram: Request Lifecycle
+## 7. State Machine Diagram: [Entity] Lifecycle
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Draft: Customer starts
-    Draft --> Submitted: Submit
-    Submitted --> Validating: Auto-validate
-    Validating --> Valid: Pass
-    Validating --> Invalid: Fail
-    Invalid --> Draft: Return to customer
-    Valid --> Classifying: Auto-classify
-    Classifying --> Routed: Route to queue
-    Routed --> UnderReview: Staff picks up
-    UnderReview --> Approved: Approve
-    UnderReview --> Rejected: Reject
-    UnderReview --> Escalated: Escalate
-    Escalated --> Approved: Manager approves
-    Escalated --> Rejected: Manager rejects
-    Approved --> [*]
-    Rejected --> [*]
+    [*] --> State1: [Trigger]
+    State1 --> State2: [Trigger]
+    State2 --> State3: [Trigger]
+    State3 --> State4: [Guard condition met]
+    State3 --> State5: [Guard condition failed]
+    State5 --> State1: [Recovery action]
+    State4 --> State6: [Trigger]
+    State6 --> State7: [Trigger]
+    State7 --> State8: [Trigger]
+    State8 --> [*]
+    State6 --> [*]
 ```
 
-## 8. Activity Diagram: Auto-Approval Logic
+## 8. Activity Diagram: [Decision Logic Name]
 
 ```mermaid
 flowchart TD
-    START([Request Validated]) --> AMT{Amount ≤<br>Threshold?}
-    AMT -->|Yes| FIELDS{All Fields<br>Valid?}
-    AMT -->|No| VIP{VIP<br>Customer?}
-    FIELDS -->|Yes| DUP{No Duplicate?}
-    FIELDS -->|No| MANUAL[Manual Review]
-    VIP -->|Yes| VIP_AMT{Amount ≤<br>$25K?}
-    VIP -->|No| MANUAL
-    VIP_AMT -->|Yes| APPROVE[Auto-Approve]
-    VIP_AMT -->|No| MANUAL
-    DUP -->|Yes| RISK{Risk Score<br>OK?}
-    DUP -->|No| FLAG[Flag Duplicate]
-    RISK -->|Yes| APPROVE
-    RISK -->|No| MANUAL
+    START([Activity Start]) --> C1{Condition<br>1?}
+    C1 -->|Yes| C2{Condition<br>2?}
+    C1 -->|No| C3{Condition<br>3?}
+    C2 -->|Yes| C4{Condition<br>4?}
+    C2 -->|No| MANUAL[Exception Path]
+    C3 -->|Yes| C5{Condition<br>5?}
+    C3 -->|No| MANUAL
+    C5 -->|Yes| APPROVE[Success Path]
+    C5 -->|No| MANUAL
+    C4 -->|Yes| APPROVE
+    C4 -->|No| MANUAL
 
     style START fill:#4CAF50,color:#fff
     style APPROVE fill:#4CAF50,color:#fff
     style MANUAL fill:#FF9800,color:#fff
-    style FLAG fill:#f44336,color:#fff
 ```
 
 ## 9. Model Traceability
 
 | Model Element | Requirement | Design | Test |
 |--------------|-----------|--------|------|
-| [Request block] | [FR-001] | [Request Service] | [TC-001] |
-| [Processing block] | [FR-101 to FR-107] | [Processing Service] | [TC-005] |
-| [Auto-approval activity] | [FR-103] | [Rules Engine] | [TC-010] |
-| [Request state machine] | [FR-006] | [Status tracking] | [TC-009] |
+| [Model Element] | [FR-XXX] | [Design Element] | [TC-XXX] |
 
 ---
 

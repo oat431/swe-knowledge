@@ -40,15 +40,15 @@ standard_ref:
 
 | # | Table/Tree | Business Rule | Related Requirement | Status |
 |---|-----------|--------------|-------------------|--------|
-| DT-01 | [Request Classification] | [How requests are classified] | FR-101 | Draft |
-| DT-02 | [Auto-Approval Rules] | [When requests are auto-approved] | FR-103 | Draft |
-| DT-03 | [Escalation Rules] | [When and where to escalate] | FR-107 | Draft |
-| DT-04 | [Notification Rules] | [Who gets notified and when] | FR-201 to FR-205 | Draft |
-| DT-05 | [Priority Assignment] | [How request priority is determined] | FR-102 | Draft |
+| DT-[XX] | [Request Classification] | [How requests are classified] | FR-[XXX] | Draft |
+| DT-[XX] | [Auto-Approval Rules] | [When requests are auto-approved] | FR-[XXX] | Draft |
+| DT-[XX] | [Escalation Rules] | [When and where to escalate] | FR-[XXX] | Draft |
+| DT-[XX] | [Notification Rules] | [Who gets notified and when] | FR-[XXX] to FR-[XXX] | Draft |
+| DT-[XX] | [Priority Assignment] | [How request priority is determined] | FR-[XXX] | Draft |
 
 ## 3. Decision Tables
 
-### DT-01: Request Classification
+### DT-[XX]: Request Classification
 
 > **Rule:** Classify incoming requests based on type, source, and amount.
 
@@ -56,7 +56,7 @@ standard_ref:
 |--|--------|--------|--------|--------|--------|
 | **CONDITIONS** | | | | | |
 | Request Type | Standard | Standard | VIP | VIP | Corporate |
-| Amount | ≤$10K | >$10K | ≤$25K | >$25K | Any |
+| Amount | ≤$[X] | >$[X] | ≤$[X] | >$[X] | Any |
 | Submission Channel | Online | Online | Online | Online | API/Bulk |
 | **ACTIONS** | | | | | |
 | Classification | Standard | Standard-High | VIP | VIP-High | Corporate |
@@ -65,7 +65,7 @@ standard_ref:
 | Auto-Approve? | Yes | No | Yes | No | No |
 | SLA Target | 4 hours | 2 hours | 2 hours | 1 hour | 4 hours |
 
-### DT-02: Auto-Approval Rules
+### DT-[XX]: Auto-Approval Rules
 
 > **Rule:** Determine if a request can be auto-approved.
 
@@ -74,7 +74,7 @@ standard_ref:
 | **CONDITIONS** | | | | | | |
 | Amount ≤ Threshold | Yes | No | Yes | Yes | Yes | Yes |
 | VIP Customer | No | — | Yes | No | No | No |
-| VIP Amount ≤ $25K | — | — | Yes | — | — | — |
+| VIP Amount ≤ $[X] | — | — | Yes | — | — | — |
 | All Fields Valid | Yes | — | — | No | Yes | Yes |
 | No Duplicate (30d) | Yes | — | — | — | No | Yes |
 | Risk Score < Threshold | Yes | — | — | — | — | No |
@@ -83,7 +83,7 @@ standard_ref:
 | Notification | Customer | Ops Queue | Customer | Ops Queue | Ops Queue | Ops Queue |
 | SLA Clock | Starts | Starts | Starts | Paused | Paused | Starts |
 
-### DT-03: Escalation Rules
+### DT-[XX]: Escalation Rules
 
 > **Rule:** Determine when and where to escalate.
 
@@ -98,7 +98,7 @@ standard_ref:
 | Notification | Email | Email + Slack | Email + Slack + Phone | Email + Slack + Phone |
 | SLA Extension | No | No | +4 hours | Case-by-case |
 
-### DT-04: Notification Rules
+### DT-[XX]: Notification Rules
 
 > **Rule:** Who gets notified and via what channel.
 
@@ -115,7 +115,7 @@ standard_ref:
 
 ## 4. Decision Trees
 
-### DT-01-Tree: Request Classification
+### DT-[XX]-Tree: Request Classification
 
 ```mermaid
 flowchart TD
@@ -123,10 +123,10 @@ flowchart TD
     TYPE -->|Standard| AMT_S{Amount?}
     TYPE -->|VIP| AMT_V{Amount?}
     TYPE -->|Corporate| CORP[Queue C<br>High Priority]
-    AMT_S -->|≤$10K| STD[Queue A<br>Normal<br>Auto-Approve]
-    AMT_S -->|>$10K| STD_H[Queue B<br>High Priority<br>Manual Review]
-    AMT_V -->|≤$25K| VIP[Queue A<br>High Priority<br>Auto-Approve]
-    AMT_V -->|>$25K| VIP_H[Queue B<br>Critical<br>Manual Review]
+    AMT_S -->|"≤$[X]"| STD[Queue A<br>Normal<br>Auto-Approve]
+    AMT_S -->|">$[X]"| STD_H[Queue B<br>High Priority<br>Manual Review]
+    AMT_V -->|"≤$[X]"| VIP[Queue A<br>High Priority<br>Auto-Approve]
+    AMT_V -->|">$[X]"| VIP_H[Queue B<br>Critical<br>Manual Review]
 
     style START fill:#2196F3,color:#fff
     style STD fill:#4CAF50,color:#fff
@@ -136,7 +136,7 @@ flowchart TD
     style CORP fill:#9C27B0,color:#fff
 ```
 
-### DT-02-Tree: Auto-Approval Decision
+### DT-[XX]-Tree: Auto-Approval Decision
 
 ```mermaid
 flowchart TD
@@ -145,7 +145,7 @@ flowchart TD
     AMT -->|No| VIP{VIP<br>Customer?}
     FIELDS -->|Yes| DUP{No Duplicate<br>in 30 Days?}
     FIELDS -->|No| MANUAL[Manual<br>Review]
-    VIP -->|Yes| VIP_AMT{Amount ≤<br>$25K?}
+    VIP -->|Yes| VIP_AMT{"Amount ≤<br>$[X]?"}
     VIP -->|No| MANUAL
     VIP_AMT -->|Yes| APPROVE[Auto-<br>Approve]
     VIP_AMT -->|No| MANUAL
@@ -164,11 +164,11 @@ flowchart TD
 
 | Rule Category | Table | Rules Count | Complexity | Automation Level |
 |--------------|-------|------------|-----------|-----------------|
-| [Classification] | DT-01 | [5 rules] | Medium | [Fully automated] |
-| [Auto-Approval] | DT-02 | [6 rules] | High | [Fully automated] |
-| [Escalation] | DT-03 | [4 rules] | Medium | [Fully automated] |
-| [Notification] | DT-04 | [5 rules] | Low | [Fully automated] |
-| [Priority] | DT-05 | [3 rules] | Low | [Fully automated] |
+| [Classification] | DT-[XX] | [5 rules] | Medium | [Fully automated] |
+| [Auto-Approval] | DT-[XX] | [6 rules] | High | [Fully automated] |
+| [Escalation] | DT-[XX] | [4 rules] | Medium | [Fully automated] |
+| [Notification] | DT-[XX] | [5 rules] | Low | [Fully automated] |
+| [Priority] | DT-[XX] | [3 rules] | Low | [Fully automated] |
 
 ## 6. Rules Validation Checklist
 

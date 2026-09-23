@@ -44,7 +44,7 @@ companion_data: "[[Example-Contamination-Scan-2026-09-23]]"
 | RC-03 | TEMPLATE-CHECKLIST.md self-contradiction | Header "189 unique" vs summary "357" vs parsed rows "359" vs disk "363"; duplicate item #63, #71, #90; RACI Matrix at #76 AND #82 | 🔴 Open — **regenerate, don't patch** (see §3, decision D2 — now unblocked by the 7-tier vision) |
 | RC-04 | `mindmap` Mermaid (violates house convention) | 5 files: Potential-Value, NFR Catalog, Enterprise-Readiness-Assessment, BA-Performance-Assessment, Content-Classification-Taxonomy | ✅ **Fixed 2026-09-23** — converted to `flowchart TB` preserving hierarchy; verified 0 mindmaps remain |
 | RC-05 | Hardcoded 2023–2026 gantt dates instead of placeholders | 173 dates across 30 files | ✅ **Fixed 2026-09-23** — all gantt dates re-based to placeholder epoch `2000-01-01` = project start, relative offsets preserved, `%%` explanatory comment injected after `dateFormat`; verified 0 real-era dates remain in gantt blocks |
-| RC-06 | Example-content contamination (AI personas may inherit fake data as real) | Full scan: **59 HIGH / 97 MEDIUM / 207 LOW** — see [[Example-Contamination-Scan-2026-09-23]]. Worst: Requirements-Architecture (66 concrete IDs), User-Stories (inconsistent Customer Portal: epic table claims 27 stories/99 pts, only ~7 defined, story map references US-004…US-404 that don't exist) | 🔴 Open — Phase 2; D3 decided: **strip to placeholders** (no fenced examples; examples on demand from agents) |
+| RC-06 | Example-content contamination (AI personas may inherit fake data as real) | Baseline scan: 59 HIGH / 97 MEDIUM / 207 LOW — see [[Example-Contamination-Scan-2026-09-23]] | ✅ **HIGH band fixed 2026-09-24** — 49 files stripped to placeholders (re-scan: HIGH=1, documented Business-Case.md method-content exception); MEDIUM band handled in Phase 3 rebuild |
 
 ### 1.3 ED-A14 structural gaps (from 2026-08-03 audit, still unimplemented)
 
@@ -119,8 +119,9 @@ flowchart LR
 
 > Historical audit docs (`ISO Standards Compliance Review.md`, `Essential Documents Audit - 2026-08-03.md`) were deliberately excluded from all sweeps — they are evidence records and must keep their original text.
 
-### Phase 2 — Contamination clean-up (per-file, uses scan data) 🔴
-Worklist = [[Example-Contamination-Scan-2026-09-23]]: 59 HIGH files first (worst: Requirements-Architecture, User-Stories, Business-Objectives, both Traceability Matrices, SRS, SyRS), then spot-check the 97 MEDIUM. For each: apply D3 decision — fence or strip. User-Stories.md additionally needs its epic table / story map / estimation summary made internally consistent or reduced to one coherent example.
+### Phase 2 — Contamination clean-up ✅ COMPLETE (2026-09-24)
+Executed per D3 (strip to placeholders, no fenced examples) by 4 parallel subagents over the HIGH worklist from [[Example-Contamination-Scan-2026-09-23]] (plan doc itself excluded): 17 Requirements-Engineering + 11 Business-Analysis + 11 Testing/Concept/Change + 10 Architecture/PM/Data/Security files; parent fixed 2 residuals (Prototypes.md named markers, verified scan update). Fully-worked examples reduced to ONE bracketed skeleton per section; method content (weights, scales, thresholds, formulas) preserved per D3 rules.
+**Re-scan result: HIGH 59 → 1, MEDIUM 97 → 104, LOW 207 → 258.** The single remaining HIGH is Business-Case.md (score 16) — a documented policy exception: `$0` Do-Nothing semantics + scoring-matrix weights are method content, not fake data. Structural integrity verified across all 363 files: frontmatter intact, code fences balanced, 0 mindmaps. MEDIUM band re-scan deferred to the Phase 3 rebuild (files get regenerated with v2 schema anyway per D1(b)).
 
 ### Phase 3 — Row schema + tier metadata (mechanical + editorial) 🟡
 1. Define the canonical frontmatter schema (v2): add `tier`, `applicability`, `trigger`, `minimum_form`, `canonical_name`, `aliases`, `source_of_truth`.
@@ -163,3 +164,4 @@ Re-run the scripted checks: citation editions, mindmap=0, hardcoded-dates=0, fro
 |---|---|---|---|
 | 0.1 | 2026-09-23 | PO | Initial plan from reasoning-model re-audit; contamination scan of all 363 templates completed |
 | 0.2 | 2026-09-23 | PO | Founder decisions D1(b purge&rebuild)/D2(7-tier maturity model, verified against release.md)/D3(strip to placeholders)/D4(alias-first) recorded in §3.1; Phase 1 executed and machine-verified — RC-01/02/04/05 closed; Phases 2+3 merged into rebuild per D1(b) |
+| 0.3 | 2026-09-24 | PO | Phase 2 executed: 49 HIGH-contamination templates stripped to placeholders via 4 parallel subagents + parent verification; re-scan HIGH 59→1 (policy exception documented); structural integrity verified on all 363 files; RC-06 HIGH band closed |

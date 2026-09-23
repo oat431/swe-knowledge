@@ -29,21 +29,21 @@ standard_ref:
 
 | TPM | Requirement | Target | Current | Margin | Status |
 |-----|-----------|--------|---------|--------|--------|
-| [Response Time] | [NFR-001] | [< 2 seconds] | [1.2 seconds] | [+40%] | ✅ |
-| [Throughput] | [NFR-002] | [100 req/sec] | [150 req/sec] | [+50%] | ✅ |
-| [Availability] | [NFR-003] | [99.9%] | [99.95%] | [+0.05%] | ✅ |
-| [Concurrent Users] | [NFR-004] | [200] | [250] | [+25%] | ✅ |
-| [Data Volume] | [NFR-005] | [1M records] | [1.5M records] | [+50%] | ✅ |
-| [Recovery Time] | [NFR-006] | [< 1 hour] | [30 minutes] | [+50%] | ✅ |
+| [Response Time] | [NFR-XXX] | [Target value] | [Current value] | [Margin] | [✅/⚠️/❌] |
+| [Throughput] | [NFR-XXX] | [Target value] | [Current value] | [Margin] | [✅/⚠️/❌] |
+| [Availability] | [NFR-XXX] | [Target value] | [Current value] | [Margin] | [✅/⚠️/❌] |
+| [Concurrent Users] | [NFR-XXX] | [Target value] | [Current value] | [Margin] | [✅/⚠️/❌] |
+| [Data Volume] | [NFR-XXX] | [Target value] | [Current value] | [Margin] | [✅/⚠️/❌] |
+| [Recovery Time] | [NFR-XXX] | [Target value] | [Current value] | [Margin] | [✅/⚠️/❌] |
 
 ## 3. TPM Trend
 
 | Month | Response Time | Throughput | Availability | Concurrent Users |
 |-------|-------------|-----------|-------------|-----------------|
-| [Month 1] | [2.5s] | [80/sec] | [99.5%] | [100] |
-| [Month 2] | [1.8s] | [120/sec] | [99.8%] | [150] |
-| [Month 3] | [1.5s] | [140/sec] | [99.9%] | [200] |
-| [Current] | [1.2s] | [150/sec] | [99.95%] | [250] |
+| [Month 1] | [Value] | [Value] | [Value] | [Value] |
+| [Month 2] | [Value] | [Value] | [Value] | [Value] |
+| [Month 3] | [Value] | [Value] | [Value] | [Value] |
+| [Current] | [Value] | [Value] | [Value] | [Value] |
 
 ## 4. TPM Analysis
 
@@ -56,11 +56,11 @@ quadrantChart
     quadrant-2 "Maintain"
     quadrant-3 "Accept Risk"
     quadrant-4 "Celebrate"
-    Response Time: [0.8, 0.9]
-    Throughput: [0.85, 0.7]
-    Availability: [0.9, 1.0]
-    Concurrent Users: [0.75, 0.6]
-    Recovery Time: [0.85, 0.8]
+    Response Time: [[x], [y]]
+    Throughput: [[x], [y]]
+    Availability: [[x], [y]]
+    Concurrent Users: [[x], [y]]
+    Recovery Time: [[x], [y]]
 ```
 
 ## 5. Shortfall Analysis
@@ -73,10 +73,10 @@ quadrantChart
 
 | TPM | Margin | Risk if Margin Erodes | Monitoring |
 |-----|--------|---------------------|-----------|
-| [Response Time] | [+40%] | [User experience degrades] | [Real-time] |
-| [Throughput] | [+50%] | [System overload] | [Real-time] |
-| [Availability] | [+0.05%] | [SLA breach] | [Continuous] |
-| [Concurrent Users] | [+25%] | [User rejection] | [Load testing] |
+| [Response Time] | [Margin] | [User experience degrades] | [Real-time] |
+| [Throughput] | [Margin] | [System overload] | [Real-time] |
+| [Availability] | [Margin] | [SLA breach] | [Continuous] |
+| [Concurrent Users] | [Margin] | [User rejection] | [Load testing] |
 
 ---
 

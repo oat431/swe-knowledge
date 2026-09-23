@@ -106,11 +106,10 @@ standard_ref:
 
 | CR ID | Date | Title | Classification | Scope | Schedule | Cost | Decision | Authority |
 |-------|------|-------|---------------|-------|----------|------|----------|-----------|
-| CR-001 | [YYYY-MM-DD] | [Add save draft] | Minor | +1 feature | +3 days | +$2K | ✅ Approved | PM |
-| CR-002 | [YYYY-MM-DD] | [Change response time] | Minor | None | None | +$5K | ✅ Approved | PM |
-| CR-003 | [YYYY-MM-DD] | [Add ML anomaly detection] | Major | +large feature | +3 months | +$50K | ⏸️ Deferred | Steering |
-| CR-004 | [YYYY-MM-DD] | [Add bulk upload] | Moderate | +1 feature | +5 days | +$3K | ✅ Approved | CCB |
-| CR-005 | | | | | | | | |
+| CR-[XXX] | [YYYY-MM-DD] | [Change title] | [Minor/Moderate/Major] | [Scope impact] | [Schedule impact] | $[X] | [✅ Approved / ❌ Rejected / ⏸️ Deferred] | [PM/CCB/Steering] |
+| CR-[XXX] | [YYYY-MM-DD] | [Change title] | [Minor/Moderate/Major] | [Scope impact] | [Schedule impact] | $[X] | [✅ Approved / ❌ Rejected / ⏸️ Deferred] | [PM/CCB/Steering] |
+| CR-[XXX] | [YYYY-MM-DD] | [Change title] | [Minor/Moderate/Major] | [Scope impact] | [Schedule impact] | $[X] | [✅ Approved / ❌ Rejected / ⏸️ Deferred] | [PM/CCB/Steering] |
+| CR-[XXX] | | | | | | | | |
 
 ## 4. Change Impact Summary
 

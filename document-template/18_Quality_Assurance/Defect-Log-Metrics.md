@@ -29,11 +29,7 @@ standard_ref:
 
 | ID | Date | Phase | Severity | Module | Description | Status | Resolution |
 |----|------|-------|---------|--------|-----------|--------|-----------|
-| [DEF-001] | [YYYY-MM-DD] | [Testing] | 🔴 Critical | [Request] | [Upload fails on mobile] | ✅ Fixed | [File size validation] |
-| [DEF-002] | [YYYY-MM-DD] | [Testing] | 🔴 Critical | [Auth] | [Token refresh race condition] | ✅ Fixed | [Mutex lock added] |
-| [DEF-003] | [YYYY-MM-DD] | [Testing] | 🟡 High | [Reporting] | [Filter not applied] | ✅ Fixed | [Query builder fix] |
-| [DEF-004] | [YYYY-MM-DD] | [Production] | 🟢 Medium | [UI] | [Tooltip positioning] | ⬜ Open | — |
-| [DEF-005] | [YYYY-MM-DD] | [Production] | ⚪ Low | [Request] | [Date format inconsistency] | ⬜ Open | — |
+| [DEF-XXX] | [YYYY-MM-DD] | [Phase] | [🔴 Critical / 🟡 High / 🟢 Medium / ⚪ Low] | [Module Name] | [Defect title] | [Status] | [Resolution] |
 
 ## 3. Defect Metrics
 
@@ -49,11 +45,8 @@ standard_ref:
 
 | Month | Found | Fixed | Remaining | Leakage |
 |-------|-------|-------|----------|---------|
-| [Month 1] | [12] | [10] | [2] | [0%] |
-| [Month 2] | [8] | [9] | [1] | [0%] |
-| [Month 3] | [5] | [6] | [0] | [0%] |
-| [Month 4] | [6] | [5] | [1] | [16%] |
-| **Total** | **[31]** | **[30]** | **[1]** | **[3%]** |
+| [Month N] | [N] | [N] | [N] | [X]% |
+| **Total** | **[N]** | **[N]** | **[N]** | **[X]%** |
 
 ## 5. Defects by Phase Found
 
@@ -70,11 +63,8 @@ standard_ref:
 
 | Module | Defects | Density | Status |
 |--------|---------|---------|--------|
-| [Request] | [X] | [X/feature] | 🟢🟡🔴 |
-| [Processing] | [X] | [X/feature] | 🟢🟡🔴 |
-| [Auth] | [X] | [X/feature] | 🟢🟡🔴 |
-| [Notification] | [X] | [X/feature] | 🟢🟡🔴 |
-| [Reporting] | [X] | [X/feature] | 🟢🟡🔴 |
+| [Module Name] | [X] | [X/feature] | 🟢🟡🔴 |
+| [Module Name] | [X] | [X/feature] | 🟢🟡🔴 |
 
 ---
 

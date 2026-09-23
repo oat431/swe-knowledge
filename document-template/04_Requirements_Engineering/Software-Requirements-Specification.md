@@ -127,9 +127,9 @@ Then [measurement: the page response time shall be <2 seconds at the 95th percen
 
 | Requirement | Acceptance Criteria |
 |-------------|-------------------|
-| FR-001 (Submit request) | **Given** a logged-in customer, **When** they submit a valid request, **Then** a unique reference number is generated and a confirmation email is sent |
-| FR-101 (Auto-classify) | **Given** a submitted request, **When** the processing engine evaluates it, **Then** it is classified into the correct category with ≥95% accuracy |
-| NFR-001 (Response time) | **When** 100 concurrent users are active, **Then** page response time is <2s at 95th percentile, verified by load test |
+| FR-[XXX] ([Requirement title]) | **Given** [precondition], **When** [action], **Then** [expected result] |
+| FR-[XXX] ([Requirement title]) | **Given** [precondition], **When** [action], **Then** [expected result with ≥[X]% threshold] |
+| NFR-[XXX] ([Requirement title]) | **When** [condition], **Then** [measurement], verified by [test method] |
 
 > **Quality check:** Each acceptance criterion must be **testable** (can be verified by a single test case), **unambiguous** (only one interpretation), and **binary** (clearly pass or fail).
 
@@ -192,47 +192,47 @@ flowchart TB
 
 | ID | Requirement | Priority | Source | Status |
 |----|-------------|----------|--------|--------|
-| FR-001 | The system shall allow customers to submit requests via web portal | 🔴 | BR-01, SN-03 | Draft |
-| FR-002 | The system shall validate all required fields before submission | 🔴 | BR-02, SN-08 | Draft |
-| FR-003 | The system shall display real-time validation errors to the user | 🔴 | SN-08 | Draft |
-| FR-004 | The system shall generate a unique reference number for each request | 🔴 | — | Draft |
-| FR-005 | The system shall allow customers to save drafts and submit later | 🟡 | SN-03 | Draft |
-| FR-006 | The system shall allow customers to view request status in real-time | 🔴 | SN-04, BR-03 | Draft |
-| FR-007 | The system shall maintain a complete history of all request actions | 🔴 | SN-06 | Draft |
-| FR-008 | | | | |
+| FR-[XXX] | The system shall allow customers to submit requests via web portal | 🔴 | BR-[XX], SN-[XX] | Draft |
+| FR-[XXX] | The system shall validate all required fields before submission | 🔴 | BR-[XX], SN-[XX] | Draft |
+| FR-[XXX] | The system shall display real-time validation errors to the user | 🔴 | SN-[XX] | Draft |
+| FR-[XXX] | The system shall generate a unique reference number for each request | 🔴 | — | Draft |
+| FR-[XXX] | The system shall allow customers to save drafts and submit later | 🟡 | SN-[XX] | Draft |
+| FR-[XXX] | The system shall allow customers to view request status in real-time | 🔴 | SN-[XX], BR-[XX] | Draft |
+| FR-[XXX] | The system shall maintain a complete history of all request actions | 🔴 | SN-[XX] | Draft |
+| FR-[XXX] | | | | |
 
 ### 3.2 Processing & Workflow
 
 | ID | Requirement | Priority | Source | Status |
 |----|-------------|----------|--------|--------|
-| FR-101 | The system shall auto-classify requests based on defined rules | 🔴 | BR-04 | Draft |
-| FR-102 | The system shall auto-route requests to the appropriate queue | 🔴 | BR-04 | Draft |
-| FR-103 | The system shall auto-approve requests meeting all criteria | 🔴 | BR-04 | Draft |
-| FR-104 | The system shall flag requests requiring manual review | 🔴 | BR-02 | Draft |
-| FR-105 | The system shall support configurable approval workflows | 🔴 | — | Draft |
-| FR-106 | The system shall allow managers to reassign requests | 🟡 | — | Draft |
-| FR-107 | The system shall escalate requests exceeding SLA thresholds | 🟡 | — | Draft |
-| FR-108 | | | | |
+| FR-[XXX] | The system shall auto-classify requests based on defined rules | 🔴 | BR-[XX] | Draft |
+| FR-[XXX] | The system shall auto-route requests to the appropriate queue | 🔴 | BR-[XX] | Draft |
+| FR-[XXX] | The system shall auto-approve requests meeting all criteria | 🔴 | BR-[XX] | Draft |
+| FR-[XXX] | The system shall flag requests requiring manual review | 🔴 | BR-[XX] | Draft |
+| FR-[XXX] | The system shall support configurable approval workflows | 🔴 | — | Draft |
+| FR-[XXX] | The system shall allow managers to reassign requests | 🟡 | — | Draft |
+| FR-[XXX] | The system shall escalate requests exceeding SLA thresholds | 🟡 | — | Draft |
+| FR-[XXX] | | | | |
 
 ### 3.3 Notifications
 
 | ID | Requirement | Priority | Source | Status |
 |----|-------------|----------|--------|--------|
-| FR-201 | The system shall send email notification on request submission | 🔴 | SN-04 | Draft |
-| FR-202 | The system shall send email notification on status change | 🔴 | SN-04 | Draft |
-| FR-203 | The system shall send SMS notification for critical updates | 🟡 | SN-04 | Draft |
-| FR-204 | The system shall support configurable notification templates | 🟡 | — | Draft |
-| FR-205 | The system shall allow users to configure notification preferences | 🟢 | — | Draft |
+| FR-[XXX] | The system shall send email notification on request submission | 🔴 | SN-[XX] | Draft |
+| FR-[XXX] | The system shall send email notification on status change | 🔴 | SN-[XX] | Draft |
+| FR-[XXX] | The system shall send SMS notification for critical updates | 🟡 | SN-[XX] | Draft |
+| FR-[XXX] | The system shall support configurable notification templates | 🟡 | — | Draft |
+| FR-[XXX] | The system shall allow users to configure notification preferences | 🟢 | — | Draft |
 
 ### 3.4 Reporting & Analytics
 
 | ID | Requirement | Priority | Source | Status |
 |----|-------------|----------|--------|--------|
-| FR-301 | The system shall provide real-time operational dashboards | 🟡 | SN-05 | Draft |
-| FR-302 | The system shall generate standard reports (daily, weekly, monthly) | 🟡 | SN-05 | Draft |
-| FR-303 | The system shall support ad-hoc report generation | 🟢 | SN-05 | Draft |
-| FR-304 | The system shall export reports in CSV, PDF, Excel formats | 🟡 | — | Draft |
-| FR-305 | The system shall track KPIs against defined targets | 🟡 | SN-05 | Draft |
+| FR-[XXX] | The system shall provide real-time operational dashboards | 🟡 | SN-[XX] | Draft |
+| FR-[XXX] | The system shall generate standard reports (daily, weekly, monthly) | 🟡 | SN-[XX] | Draft |
+| FR-[XXX] | The system shall support ad-hoc report generation | 🟢 | SN-[XX] | Draft |
+| FR-[XXX] | The system shall export reports in CSV, PDF, Excel formats | 🟡 | — | Draft |
+| FR-[XXX] | The system shall track KPIs against defined targets | 🟡 | SN-[XX] | Draft |
 
 ---
 
@@ -242,39 +242,39 @@ flowchart TB
 
 | ID | Requirement | Target | Measurement |
 |----|-------------|--------|-------------|
-| NFR-001 | Page response time shall be <2 seconds | [<2s] | [95th percentile, normal load] |
-| NFR-002 | API response time shall be <1 second | [<1s] | [95th percentile, normal load] |
-| NFR-003 | The system shall support 100 concurrent users | [100] | [Without performance degradation] |
-| NFR-004 | The system shall process 500 requests per day | [500] | [Without queue backlog] |
-| NFR-005 | Database query response time shall be <500ms | [<500ms] | [95th percentile] |
+| NFR-[XXX] | Page response time shall be <2 seconds | [<2s] | [95th percentile, normal load] |
+| NFR-[XXX] | API response time shall be <1 second | [<1s] | [95th percentile, normal load] |
+| NFR-[XXX] | The system shall support 100 concurrent users | [100] | [Without performance degradation] |
+| NFR-[XXX] | The system shall process 500 requests per day | [500] | [Without queue backlog] |
+| NFR-[XXX] | Database query response time shall be <500ms | [<500ms] | [95th percentile] |
 
 ### 4.2 Availability & Reliability
 
 | ID | Requirement | Target | Measurement |
 |----|-------------|--------|-------------|
-| NFR-010 | System availability shall be 99.9% | [99.9%] | [Monthly uptime] |
-| NFR-011 | Recovery Time Objective (RTO) shall be 4 hours | [4 hours] | [DR test] |
-| NFR-012 | Recovery Point Objective (RPO) shall be 1 hour | [1 hour] | [DR test] |
-| NFR-013 | The system shall support zero-downtime deployments | [0 downtime] | [Deployment process] |
+| NFR-[XXX] | System availability shall be [X]% | [[X]%] | [Monthly uptime] |
+| NFR-[XXX] | Recovery Time Objective (RTO) shall be 4 hours | [4 hours] | [DR test] |
+| NFR-[XXX] | Recovery Point Objective (RPO) shall be 1 hour | [1 hour] | [DR test] |
+| NFR-[XXX] | The system shall support zero-downtime deployments | [0 downtime] | [Deployment process] |
 
 ### 4.3 Usability
 
 | ID | Requirement | Target | Measurement |
 |----|-------------|--------|-------------|
-| NFR-020 | Customer submission shall complete in <5 minutes | [<5 min] | [First-time user test] |
-| NFR-021 | Operations processing shall complete in <3 minutes | [<3 min] | [Trained user test] |
-| NFR-022 | The system shall be accessible (WCAG 2.1 AA) | [AA] | [Automated + manual audit] |
-| NFR-023 | The system shall support responsive design (desktop, tablet, mobile) | [All] | [Cross-device testing] |
-| NFR-024 | The system shall support Chrome, Firefox, Safari, Edge (latest 2 versions) | [4 browsers] | [Cross-browser testing] |
+| NFR-[XXX] | Customer submission shall complete in <5 minutes | [<5 min] | [First-time user test] |
+| NFR-[XXX] | Operations processing shall complete in <3 minutes | [<3 min] | [Trained user test] |
+| NFR-[XXX] | The system shall be accessible (WCAG 2.1 AA) | [AA] | [Automated + manual audit] |
+| NFR-[XXX] | The system shall support responsive design (desktop, tablet, mobile) | [All] | [Cross-device testing] |
+| NFR-[XXX] | The system shall support Chrome, Firefox, Safari, Edge (latest 2 versions) | [4 browsers] | [Cross-browser testing] |
 
 ### 4.4 Scalability & Maintainability
 
 | ID | Requirement | Target | Measurement |
 |----|-------------|--------|-------------|
-| NFR-030 | The system shall support horizontal scaling | [10x current] | [Load test] |
-| NFR-031 | Code complexity shall not exceed cyclomatic complexity of 10 | [<10] | [Static analysis] |
-| NFR-032 | The system shall support CI/CD deployment pipeline | [Daily deploys] | [Pipeline metrics] |
-| NFR-033 | The system shall generate structured logs for troubleshooting | [JSON format] | [Log review] |
+| NFR-[XXX] | The system shall support horizontal scaling | [10x current] | [Load test] |
+| NFR-[XXX] | Code complexity shall not exceed cyclomatic complexity of 10 | [<10] | [Static analysis] |
+| NFR-[XXX] | The system shall support CI/CD deployment pipeline | [Daily deploys] | [Pipeline metrics] |
+| NFR-[XXX] | The system shall generate structured logs for troubleshooting | [JSON format] | [Log review] |
 
 ---
 
@@ -306,10 +306,10 @@ flowchart TB
 
 | Interface | System | Protocol | Data | Direction | Frequency |
 |-----------|--------|---------|------|-----------|-----------|
-| INT-001 | [ERP] | [REST/JSON] | [Customer, transaction data] | Bidirectional | Real-time |
-| INT-002 | [Payment Gateway] | [REST/JSON] | [Payment requests] | Outbound | Per transaction |
-| INT-003 | [Email Service] | [SMTP/API] | [Notifications] | Outbound | Per event |
-| INT-004 | [SMS Service] | [REST/JSON] | [Notifications] | Outbound | Per event |
+| INT-[XXX] | [ERP] | [REST/JSON] | [Customer, transaction data] | Bidirectional | Real-time |
+| INT-[XXX] | [Payment Gateway] | [REST/JSON] | [Payment requests] | Outbound | Per transaction |
+| INT-[XXX] | [Email Service] | [SMTP/API] | [Notifications] | Outbound | Per event |
+| INT-[XXX] | [SMS Service] | [REST/JSON] | [Notifications] | Outbound | Per event |
 
 ### 6.2 User Interfaces
 
@@ -326,14 +326,14 @@ flowchart TB
 
 | ID | Requirement | Standard |
 |----|-------------|---------|
-| SEC-001 | [Multi-factor authentication for admin users] | [OWASP] |
-| SEC-002 | [Role-based access control] | [ISO/IEC 27001:2022] |
-| SEC-003 | [Data encryption at rest — AES-256] | [NIST SP 800-57] |
-| SEC-004 | [Data encryption in transit — TLS 1.3] | [NIST SP 800-52] |
-| SEC-005 | [Complete audit trail — user, action, timestamp] | [ISO/IEC 27001:2022] |
-| SEC-006 | [Session timeout — 30 minutes inactivity] | [OWASP] |
-| SEC-007 | [Input validation — SQL injection, XSS prevention] | [OWASP Top 10] |
-| SEC-008 | [API rate limiting — 100 requests/minute per user] | [OWASP API Security] |
+| SEC-[XXX] | [Multi-factor authentication for admin users] | [OWASP] |
+| SEC-[XXX] | [Role-based access control] | [ISO/IEC 27001:2022] |
+| SEC-[XXX] | [Data encryption at rest — AES-256] | [NIST SP 800-57] |
+| SEC-[XXX] | [Data encryption in transit — TLS 1.3] | [NIST SP 800-52] |
+| SEC-[XXX] | [Complete audit trail — user, action, timestamp] | [ISO/IEC 27001:2022] |
+| SEC-[XXX] | [Session timeout — 30 minutes inactivity] | [OWASP] |
+| SEC-[XXX] | [Input validation — SQL injection, XSS prevention] | [OWASP Top 10] |
+| SEC-[XXX] | [API rate limiting — 100 requests/minute per user] | [OWASP API Security] |
 
 ---
 
@@ -341,11 +341,11 @@ flowchart TB
 
 | ID | Constraint | Type | Impact |
 |----|-----------|------|--------|
-| CON-001 | [Must use existing cloud provider] | Technical | [Infrastructure platform] |
-| CON-002 | [Data must remain in-country] | Legal | [Hosting location] |
-| CON-003 | [Must integrate with existing ERP] | Technical | [API dependency] |
-| CON-004 | [Budget cap $500K] | Financial | [Scope limitation] |
-| CON-005 | [Go-live by YYYY-MM-DD] | Time | [Schedule pressure] |
+| CON-[XXX] | [Must use existing cloud provider] | Technical | [Infrastructure platform] |
+| CON-[XXX] | [Data must remain in-country] | Legal | [Hosting location] |
+| CON-[XXX] | [Must integrate with existing ERP] | Technical | [API dependency] |
+| CON-[XXX] | [Budget cap $[X]] | Financial | [Scope limitation] |
+| CON-[XXX] | [Go-live by YYYY-MM-DD] | Time | [Schedule pressure] |
 
 ---
 
@@ -353,9 +353,9 @@ flowchart TB
 
 | ID | Assumption | Impact if Invalid |
 |----|-----------|-------------------|
-| ASM-001 | [ERP API remains available and stable] | [Integration rework] |
-| ASM-002 | [Cloud provider maintains current SLA] | [Availability impact] |
-| ASM-003 | [No major regulatory changes during project] | [Scope change] |
+| ASM-[XXX] | [ERP API remains available and stable] | [Integration rework] |
+| ASM-[XXX] | [Cloud provider maintains current SLA] | [Availability impact] |
+| ASM-[XXX] | [No major regulatory changes during project] | [Scope change] |
 
 ---
 
@@ -377,17 +377,17 @@ flowchart TB
 
 | SRS Requirement | Business Requirement | System Requirement | Design Element | Test Case |
 |----------------|---------------------|-------------------|---------------|-----------|
-| FR-001 | BR-01 | SYRS-001 | HLD-001 | TC-001 |
-| FR-002 | BR-02 | SYRS-002 | HLD-002 | TC-002 |
+| FR-[XXX] | BR-[XX] | SYRS-[XXX] | HLD-[XXX] | TC-[XXX] |
+| FR-[XXX] | BR-[XX] | SYRS-[XXX] | HLD-[XXX] | TC-[XXX] |
 | ... | ... | ... | ... | ... |
 
 ### Appendix B: Decision Tables
 
 | Condition | Rule 1 | Rule 2 | Rule 3 |
 |-----------|--------|--------|--------|
-| [Amount > $10K] | Yes | No | No |
+| [Amount > $[X]] | Yes | No | No |
 | [VIP Customer] | Yes | No | No |
-| [Action] | Auto-approve (≤$25K) | Route to Ops | Route to Manager |
+| [Action] | Auto-approve (≤$[X]) | Route to Ops | Route to Manager |
 
 ---
 

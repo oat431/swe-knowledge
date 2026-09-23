@@ -92,7 +92,7 @@ quadrantChart
 | [Business Owner] | [Requirements met] | [Team productivity] | [Wrong solution built] | [Business objectives achieved] |
 | [Operations Manager] | [Team workload] | [Process disruption] | [System doesn't work, team resistance] | [Efficiency improvement] |
 | [End Users] | [Ease of use] | [Job impact] | [Harder to do job, job loss] | [Daily tasks easier] |
-| [Compliance Officer] | [Audit trail] | [Data protection] | [Compliance failure, fines] | [100% audit compliance] |
+| [Compliance Officer] | [Audit trail] | [Data protection] | [Compliance failure, fines] | [X]% audit compliance |
 | [IT Director] | [Maintainability] | [Integration] | [Technical debt, outages] | [Stable, scalable system] |
 
 ### 3.2 Stakeholder Conflicts
@@ -118,9 +118,9 @@ quadrantChart
 
 | Stakeholder | Current Readiness | Target Readiness | Gap | Action |
 |------------|------------------|-----------------|-----|--------|
-| [Operations Staff] | 🟡 50% | 🟢 90% | -40% | [Training program, champions] |
-| [Customers] | 🟢 70% | 🟢 90% | -20% | [User guide, portal walkthrough] |
-| [Management] | 🟢 80% | 🟢 95% | -15% | [Dashboard briefing] |
+| [Operations Staff] | 🟡 [X]% | 🟢 [X]% | [X]% | [Training program, champions] |
+| [Customers] | 🟢 [X]% | 🟢 [X]% | [X]% | [User guide, portal walkthrough] |
+| [Management] | 🟢 [X]% | 🟢 [X]% | [X]% | [Dashboard briefing] |
 
 ## 5. Stakeholder Engagement Priorities
 
@@ -141,10 +141,10 @@ quadrantChart
 | Stakeholder | Requirements Influenced | Weight | Priority Impact |
 |------------|------------------------|--------|----------------|
 | [Sponsor] | [All — strategic direction] | High | [Drives 🔴 priorities] |
-| [Business Owner] | [BR-01 to BR-08] | High | [Drives feature priorities] |
-| [Operations Manager] | [FR-101 to FR-107, BUR-01 to BUR-05] | High | [Drives workflow requirements] |
-| [End Users] | [FR-001 to FR-007, USA-XX] | Medium | [Drives usability requirements] |
-| [Compliance Officer] | [SEC-XX, CMP-XX, BR-07] | Medium | [Drives security/compliance] |
+| [Business Owner] | [BR-[XX] to BR-[XX]] | High | [Drives feature priorities] |
+| [Operations Manager] | [FR-[XXX] to FR-[XXX], BUR-[XX] to BUR-[XX]] | High | [Drives workflow requirements] |
+| [End Users] | [FR-[XXX] to FR-[XXX], USA-XX] | Medium | [Drives usability requirements] |
+| [Compliance Officer] | [SEC-XX, CMP-XX, BR-[XX]] | Medium | [Drives security/compliance] |
 | [IT Director] | [NFR-XX, SMA-XX] | Medium | [Drives technical requirements] |
 
 ---

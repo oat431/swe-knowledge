@@ -29,59 +29,50 @@ standard_ref:
 
 | Category | Measures | Meeting Target | Below Target | Above Target |
 |---------|---------|---------------|-------------|-------------|
-| [Financial] | [3] | [2] | [1] | [0] |
-| [Customer] | [3] | [2] | [0] | [1] |
-| [Operational] | [4] | [3] | [1] | [0] |
-| **Total** | **[10]** | **[7]** | **[2]** | **[1]** |
+| [Financial] | [N] | [N] | [N] | [N] |
+| [Customer] | [N] | [N] | [N] | [N] |
+| [Operational] | [N] | [N] | [N] | [N] |
+| **Total** | **[N]** | **[N]** | **[N]** | **[N]** |
 
 ## 3. Performance Trends
 
 | Measure | Month 1 | Month 2 | Month 3 | Month 4 | Trend |
 |---------|---------|---------|---------|---------|-------|
-| [Processing Time] | [5 days] | [3 days] | [2 days] | [1.5 days] | ↓ Improving |
-| [NPS] | [40] | [45] | [52] | [58] | ↑ Improving |
-| [Auto-Approval Rate] | [15%] | [22%] | [28%] | [32%] | ↑ Improving |
-| [Cost per Transaction] | [$18] | [$14] | [$12] | [$10] | ↓ Improving |
-| [Staff Productivity] | [12] | [15] | [18] | [20] | ↑ Improving |
+| [Measure] | [value] | [value] | [value] | [value] | [↑ Improving / ↓ Declining / → Stable] |
 
 ## 4. Gap Analysis
 
 | Measure | Target | Actual | Gap | Root Cause | Recommendation |
 |---------|--------|--------|-----|-----------|---------------|
-| [NPS] | [≥ 60] | [58] | [-2] | [Mobile UX issues] | [Mobile redesign] |
-| [Error Rate] | [< 1%] | [1.2%] | [+0.2%] | [Data quality issues] | [Input validation] |
+| [Measure] | [target] | [actual] | [gap] | [Root cause] | [Recommendation] |
 
 ## 5. Variance Analysis
 
 | Measure | Expected | Actual | Variance | Explanation |
 |---------|---------|--------|---------|-----------|
-| [Processing Time] | [< 1 day] | [1.5 days] | [+0.5 days] | [Complex cases need manual review] |
-| [Auto-Approval Rate] | [≥ 30%] | [32%] | [+2%] | [Better than expected rules] |
-| [Cost per Transaction] | [< $10] | [$10] | [0] | [On target] |
+| [Measure] | [expected] | [actual] | [variance] | [Explanation] |
 
 ## 6. Recommendations
 
 | # | Finding | Recommendation | Priority | Owner |
 |---|--------|---------------|---------|-------|
-| 1 | [NPS 2 points below target] | [Mobile UX improvements] | 🟡 | [UX Team] |
-| 2 | [Error rate above target] | [Enhanced input validation] | 🟡 | [Dev Team] |
-| 3 | [Processing time above target] | [Optimize complex case routing] | 🟢 | [BA] |
+| 1 | [Finding] | [Recommendation] | [🔴 / 🟡 / 🟢] | [Role/Team] |
 
 ## 7. Performance Scorecard
 
 ```mermaid
 flowchart LR
     subgraph Financial["Financial"]
-        F1[Cost: ✅ On Target]
-        F2[ROI: ✅ Above Target]
+        F1[Measure: Status]
+        F2[Measure: Status]
     end
     subgraph Customer["Customer"]
-        C1[NPS: 🟡 Close]
-        C2[CSAT: ✅ Above Target]
+        C1[Measure: Status]
+        C2[Measure: Status]
     end
     subgraph Operational["Operational"]
-        O1[Speed: 🟡 Close]
-        O2[Volume: ✅ Above Target]
+        O1[Measure: Status]
+        O2[Measure: Status]
     end
 
     style Financial fill:#4CAF50,color:#fff

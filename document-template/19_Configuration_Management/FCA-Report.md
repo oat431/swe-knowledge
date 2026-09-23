@@ -40,16 +40,7 @@ standard_ref:
 
 | # | Requirement | Specification | Implementation | Verified | Status |
 |---|------------|-------------|---------------|---------|--------|
-| 1 | [FR-001: Submit request] | [SRS §3.1] | [Request Service] | [TC-001] | ✅ |
-| 2 | [FR-002: Track status] | [SRS §3.2] | [Request Service] | [TC-004] | ✅ |
-| 3 | [FR-003: Upload documents] | [SRS §3.3] | [Request Service] | [TC-006] | ✅ |
-| 4 | [FR-101: Validate inputs] | [SRS §4.1] | [Processing Service] | [TC-010] | ✅ |
-| 5 | [FR-102: Classify requests] | [SRS §4.2] | [Processing Service] | [TC-013] | ✅ |
-| 6 | [FR-103: Auto-approve] | [SRS §4.3] | [Processing Service] | [TC-015] | ✅ |
-| 7 | [FR-104: Manual review] | [SRS §4.4] | [Processing Service] | [TC-020] | ✅ |
-| 8 | [FR-201: Email notifications] | [SRS §5.1] | [Notification Service] | [TC-030] | ✅ |
-| 9 | [FR-301: Dashboard] | [SRS §6.1] | [Reporting Service] | [TC-040] | ✅ |
-| 10 | [FR-302: Reports] | [SRS §6.2] | [Reporting Service] | [TC-042] | ✅ |
+| [N] | [FR-XXX: Requirement name] | [SRS §X.Y] | [Implementing component] | [TC-XXX] | [✅/❌] |
 
 ## 4. FCA Results
 

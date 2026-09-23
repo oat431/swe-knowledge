@@ -60,49 +60,49 @@ standard_ref:
 
 | Epic | User Story | Complexity | Uncertainty | Effort | Story Points |
 |------|-----------|-----------|------------|--------|-------------|
-| E-01 | US-001 Submit Request | Medium | Low | Medium | 5 |
-| E-01 | US-002 Track Status | Low | Low | Low | 3 |
-| E-01 | US-003 Upload Documents | Medium | Low | Medium | 3 |
-| E-01 | US-004 Manage Profile | Low | Low | Low | 2 |
-| E-01 | US-005 View History | Low | Low | Low | 2 |
-| E-01 | US-006 Save Draft | Medium | Low | Medium | 3 |
-| E-02 | US-101 Auto-Validate | High | Medium | High | 8 |
-| E-02 | US-102 Auto-Route | Medium | Medium | Medium | 5 |
-| E-02 | US-103 Auto-Approve | High | High | High | 8 |
-| E-02 | US-104 Manual Review | Medium | Low | Medium | 5 |
-| E-02 | US-105 Escalation | Medium | Low | Medium | 5 |
-| E-02 | US-106 Reassignment | Low | Low | Low | 2 |
-| E-03 | US-201 Email Notifications | Low | Low | Low | 3 |
-| E-03 | US-202 In-App Notifications | Low | Low | Low | 2 |
-| E-04 | US-301 Operational Dashboard | High | Medium | High | 8 |
-| E-04 | US-302 Standard Reports | Medium | Low | Medium | 5 |
-| E-04 | US-303 Ad-hoc Reports | High | Medium | High | 8 |
-| E-05 | US-401 User Management | Medium | Low | Medium | 5 |
-| E-05 | US-402 Role Management | Medium | Low | Medium | 3 |
-| **Total** | | | | | **[85]** |
+| E-[XX] | US-[XXX] Submit Request | Medium | Low | Medium | 5 |
+| E-[XX] | US-[XXX] Track Status | Low | Low | Low | 3 |
+| E-[XX] | US-[XXX] Upload Documents | Medium | Low | Medium | 3 |
+| E-[XX] | US-[XXX] Manage Profile | Low | Low | Low | 2 |
+| E-[XX] | US-[XXX] View History | Low | Low | Low | 2 |
+| E-[XX] | US-[XXX] Save Draft | Medium | Low | Medium | 3 |
+| E-[XX] | US-[XXX] Auto-Validate | High | Medium | High | 8 |
+| E-[XX] | US-[XXX] Auto-Route | Medium | Medium | Medium | 5 |
+| E-[XX] | US-[XXX] Auto-Approve | High | High | High | 8 |
+| E-[XX] | US-[XXX] Manual Review | Medium | Low | Medium | 5 |
+| E-[XX] | US-[XXX] Escalation | Medium | Low | Medium | 5 |
+| E-[XX] | US-[XXX] Reassignment | Low | Low | Low | 2 |
+| E-[XX] | US-[XXX] Email Notifications | Low | Low | Low | 3 |
+| E-[XX] | US-[XXX] In-App Notifications | Low | Low | Low | 2 |
+| E-[XX] | US-[XXX] Operational Dashboard | High | Medium | High | 8 |
+| E-[XX] | US-[XXX] Standard Reports | Medium | Low | Medium | 5 |
+| E-[XX] | US-[XXX] Ad-hoc Reports | High | Medium | High | 8 |
+| E-[XX] | US-[XXX] User Management | Medium | Low | Medium | 5 |
+| E-[XX] | US-[XXX] Role Management | Medium | Low | Medium | 3 |
+| **Total** | | | | | **[N]** |
 
 ### 3.2 Velocity-Based Estimation
 
 | Metric | Value |
 |--------|-------|
-| Total Story Points | [85] |
-| Team Velocity (per sprint) | [20 points] |
-| Sprint Duration | [2 weeks] |
-| Estimated Sprints | [85 / 20 = 4.25 → 5 sprints] |
-| Estimated Duration | [5 × 2 weeks = 10 weeks] |
-| Contingency (15%) | [+1.5 weeks] |
-| **Total Estimated Duration** | **[11.5 weeks]** |
+| Total Story Points | [N] |
+| Team Velocity (per sprint) | [N points] |
+| Sprint Duration | [N weeks] |
+| Estimated Sprints | [Total Points / Velocity = N sprints] |
+| Estimated Duration | [N sprints × N weeks = N weeks] |
+| Contingency ([X]%) | [+N weeks] |
+| **Total Estimated Duration** | **[N weeks]** |
 
 ### 3.3 Epic Breakdown
 
 | Epic | Stories | Story Points | % of Total | Sprints |
 |------|---------|-------------|-----------|---------|
-| E-01 Customer Portal | [6] | [18] | [21%] | [1.0] |
-| E-02 Request Processing | [6] | [33] | [39%] | [1.7] |
-| E-03 Notifications | [2] | [5] | [6%] | [0.3] |
-| E-04 Reporting | [3] | [21] | [25%] | [1.1] |
-| E-05 Administration | [2] | [8] | [9%] | [0.4] |
-| **Total** | **[19]** | **[85]** | **100%** | **[4.5]** |
+| E-[XX] [Epic Name] | [N] | [N] | [%] | [N] |
+| E-[XX] [Epic Name] | [N] | [N] | [%] | [N] |
+| E-[XX] [Epic Name] | [N] | [N] | [%] | [N] |
+| E-[XX] [Epic Name] | [N] | [N] | [%] | [N] |
+| E-[XX] [Epic Name] | [N] | [N] | [%] | [N] |
+| **Total** | **[N]** | **[N]** | **[%]** | **[N]** |
 
 ## 4. Functional Size — Function Points (Optional)
 
@@ -144,7 +144,7 @@ standard_ref:
 
 | Method | Size | Productivity Rate | Effort Estimate |
 |--------|------|------------------|----------------|
-| [Story Points × Velocity] | [85 SP] | [20 SP/sprint] | [5 sprints = 10 weeks] |
+| [Story Points × Velocity] | [N SP] | [N SP/sprint] | [N sprints = N weeks] |
 | [FP × Productivity] | [X FP] | [Y FP/person-month] | [Z person-months] |
 | [Industry Benchmark] | [X FP] | [Y hours/FP] | [Z hours] |
 
@@ -152,12 +152,12 @@ standard_ref:
 
 | Activity | % of Total | Effort (hours) |
 |----------|-----------|---------------|
-| Requirements | [15%] | [X] |
-| Design | [15%] | [X] |
-| Development | [40%] | [X] |
-| Testing | [20%] | [X] |
-| Management | [10%] | [X] |
-| **Total** | **100%** | **[Sum]** |
+| Requirements | [%] | [X] |
+| Design | [%] | [X] |
+| Development | [%] | [X] |
+| Testing | [%] | [X] |
+| Management | [%] | [X] |
+| **Total** | **[%]** | **[Sum]** |
 
 ## 6. Size Trends & Benchmarks
 

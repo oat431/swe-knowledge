@@ -32,90 +32,83 @@ standard_ref:
 |--------|-------|
 | [Test Period] | [YYYY-MM-DD to YYYY-MM-DD] |
 | [Build Version] | [vX.Y.Z] |
-| [Test Environment] | [Staging] |
-| [Total Test Cases] | [73] |
-| [Executed] | [73] |
-| [Passed] | [69] |
-| [Failed] | [4] |
-| [Blocked] | [0] |
-| [Skipped] | [0] |
-| **Pass Rate** | **[95%]** |
+| [Test Environment] | [Environment] |
+| [Total Test Cases] | [N] |
+| [Executed] | [N] |
+| [Passed] | [N] |
+| [Failed] | [N] |
+| [Blocked] | [N] |
+| [Skipped] | [N] |
+| **Pass Rate** | **[X]%** |
 
 ## 3. Results by Module
 
 | Module | Total | Passed | Failed | Pass Rate | Status |
 |--------|-------|--------|--------|----------|--------|
-| [Request Management] | [25] | [24] | [1] | [96%] | 🟢 |
-| [Processing] | [18] | [17] | [1] | [94%] | 🟢 |
-| [Authentication] | [12] | [12] | [0] | [100%] | 🟢 |
-| [Notifications] | [8] | [7] | [1] | [88%] | 🟡 |
-| [Reporting] | [10] | [9] | [1] | [90%] | 🟡 |
-| **Total** | **[73]** | **[69]** | **[4]** | **[95%]** | **🟢** |
+| [Module Name] | [N] | [N] | [N] | [X]% | [Status] |
+| **Total** | **[N]** | **[N]** | **[N]** | **[X]%** | **[Status]** |
 
 ## 4. Results by Type
 
 | Type | Total | Passed | Failed | Pass Rate |
 |------|-------|--------|--------|----------|
-| [Unit] | [35] | [34] | [1] | [97%] |
-| [Integration] | [20] | [19] | [1] | [95%] |
-| [System] | [13] | [12] | [1] | [92%] |
-| [E2E] | [5] | [4] | [1] | [80%] |
+| [Unit] | [N] | [N] | [N] | [X]% |
+| [Integration] | [N] | [N] | [N] | [X]% |
+| [System] | [N] | [N] | [N] | [X]% |
+| [E2E] | [N] | [N] | [N] | [X]% |
 
 ## 5. Failed Test Cases
 
 | Test Case | Module | Failure | Defect | Root Cause |
 |-----------|--------|---------|--------|-----------|
-| [TC-008] | [Request] | [Document upload timeout] | [DEF-001] | [File size validation] |
-| [TC-017] | [Processing] | [Auto-approve not triggered] | [DEF-003] | [Rule engine edge case] |
-| [TC-031] | [Notification] | [Email not sent] | [DEF-005] | [Template rendering] |
-| [TC-043] | [Reporting] | [Report filter not applied] | [DEF-003] | [Query builder] |
+| [TC-XXX] | [Module Name] | [Failure description] | [DEF-XXX] | [Root cause] |
 
 ## 6. Defect Summary
 
 | Severity | Found | Fixed | Remaining |
 |---------|-------|-------|----------|
-| 🔴 Critical | [2] | [2] | [0] |
-| 🟡 High | [1] | [0] | [1] |
-| 🟢 Medium | [1] | [0] | [1] |
-| ⚪ Low | [0] | [0] | [0] |
-| **Total** | **[4]** | **[2]** | **[2]** |
+| 🔴 Critical | [N] | [N] | [N] |
+| 🟡 High | [N] | [N] | [N] |
+| 🟢 Medium | [N] | [N] | [N] |
+| ⚪ Low | [N] | [N] | [N] |
+| **Total** | **[N]** | **[N]** | **[N]** |
 
 ## 7. Test Coverage
 
 | Metric | Value | Target | Status |
 |--------|-------|--------|--------|
-| [Requirements coverage] | [100%] | [100%] | ✅ |
-| [Code coverage] | [85%] | [≥ 80%] | ✅ |
-| [Critical path coverage] | [100%] | [100%] | ✅ |
-| [Automation rate] | [80%] | [≥ 60%] | ✅ |
+| [Requirements coverage] | [X]% | [Target] | [Status] |
+| [Code coverage] | [X]% | [Target] | [Status] |
+| [Critical path coverage] | [X]% | [Target] | [Status] |
+| [Automation rate] | [X]% | [Target] | [Status] |
 
 ## 8. Quality Assessment
 
 | Aspect | Assessment | Evidence |
 |--------|-----------|---------|
-| [Functional Quality] | 🟢 Good | [95% pass rate, all critical paths pass] |
-| [Stability] | 🟢 Good | [No flaky tests, consistent results] |
-| [Performance] | 🟢 Good | [All responses < 2s] |
-| [Security] | 🟢 Good | [No critical vulnerabilities] |
-| [Readiness] | 🟡 Conditional | [1 high defect remaining] |
+| [Functional Quality] | [Assessment] | [Evidence] |
+| [Stability] | [Assessment] | [Evidence] |
+| [Performance] | [Assessment] | [Evidence] |
+| [Security] | [Assessment] | [Evidence] |
+| [Readiness] | [Assessment] | [Evidence] |
 
 ## 9. Recommendations
 
 | # | Recommendation | Priority | Owner |
 |---|---------------|---------|-------|
-| 1 | [Fix DEF-003 (High) before release] | 🔴 | [Dev Team] |
-| 2 | [Fix DEF-005 (Medium) in next sprint] | 🟡 | [Dev Team] |
-| 3 | [Add more E2E tests for notification flow] | 🟡 | [QA Team] |
-| 4 | [Improve test data for edge cases] | 🟢 | [QA Team] |
+| 1 | [Recommendation] | [Priority] | [Owner] |
+| 2 | [Recommendation] | [Priority] | [Owner] |
+| 3 | [Recommendation] | [Priority] | [Owner] |
+| 4 | [Recommendation] | [Priority] | [Owner] |
 
 ## 10. Release Recommendation
 
 | Field | Detail |
 |-------|--------|
-| [Release Ready?] | ⚠️ Conditional |
-| [Conditions] | [Fix DEF-003 (High) before release] |
-| [Risk Level] | [Low — 1 high defect with workaround] |
-| [Sign-Off] | [Pending PM + QA Lead approval] |
+| [Release Ready?] | [Yes / No / Conditional] |
+| [Conditions] | [Conditions, e.g. fix DEF-[XXX] before release] |
+| [Risk Level] | [Risk level and rationale] |
+| [Sign-Off] | [Sign-off status] |
 
 ---
 

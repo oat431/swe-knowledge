@@ -38,39 +38,28 @@ standard_ref:
 
 | Asset | Records | Cost Value | Business Value | Risk Value | Total Value |
 |-------|---------|-----------|---------------|-----------|------------|
-| [Customer data] | [10,000] | [$50K] | [$500K/year] | [$1M (breach)] | [$1.55M] |
-| [Request data] | [100,000] | [$30K] | [$200K/year] | [$500K (breach)] | [$730K] |
-| [Transaction data] | [200,000] | [$40K] | [$300K/year] | [$1M (breach)] | [$1.34M] |
-| [Analytics data] | [—] | [$20K] | [$100K/year] | [$100K (loss)] | [$220K] |
-| **Total** | | **[$140K]** | **[$1.1M/year]** | **[$2.6M]** | **[$3.84M]** |
+| [Data Asset] | [N] | $[X] | $[X]/year | $[X] (breach) | $[X] |
+| **Total** | | **$[X]** | **$[X]/year** | **$[X]** | **$[X]** |
 
 ## 4. Value Drivers
 
 | Driver | Contribution | Evidence |
 |--------|------------|---------|
-| [Decision support] | [$500K/year] | [Faster, better decisions] |
-| [Customer insights] | [$200K/year] | [Targeted marketing] |
-| [Operational efficiency] | [$200K/year] | [Automation, reduced errors] |
-| [Compliance] | [$100K/year] | [Avoided fines] |
-| [Risk reduction] | [$100K/year] | [Fraud detection] |
+| [Value Driver] | $[X]/year | [Evidence of contribution] |
 
 ## 5. Cost of Poor Data Quality
 
 | Impact | Annual Cost | Example |
 |--------|-----------|---------|
-| [Rework] | [$50K] | [Fixing data errors] |
-| [Lost revenue] | [$100K] | [Bad decisions from bad data] |
-| [Compliance fines] | [$500K] | [GDPR violations] |
+| [Impact Area] | $[X] | [Description of impact] |
 | [Reputation damage] | [Unquantified] | [Customer trust loss] |
-| **Total** | **[$650K]** | |
+| **Total** | **$[X]** | |
 
 ## 6. ROI of Data Governance
 
 | Investment | Annual Cost | Annual Benefit | ROI |
 |-----------|-----------|---------------|-----|
-| [Data governance program] | [$200K] | [$650K (poor quality avoided) + $1.1M (value enabled)] | [775%] |
-| [Data quality improvement] | [$50K] | [$650K (poor quality avoided)] | [1200%] |
-| [Data security] | [$100K] | [$2.6M (breach avoided)] | [2500%] |
+| [Investment Area] | $[X] | $[X] ([benefit basis]) | [X]% |
 
 ---
 

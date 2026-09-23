@@ -102,11 +102,7 @@ standard_ref:
 
 | CR ID | Date | Submitter | Title | Category | Classification | Impact Summary | Decision | Authority | Date |
 |-------|------|----------|-------|----------|---------------|---------------|----------|----------|------|
-| CR-001 | [YYYY-MM-DD] | [Name] | [Add save draft feature] | Scope | Minor | [+3 days, +$2K] | ✅ Approved | PM | [Date] |
-| CR-002 | [YYYY-MM-DD] | [Name] | [Change response time target] | Quality | Minor | [+$5K (CDN)] | ✅ Approved | PM | [Date] |
-| CR-003 | [YYYY-MM-DD] | [Name] | [Add ML anomaly detection] | Scope | Major | [+3 months, +$50K] | ⏸️ Deferred | Steering | [Date] |
-| CR-004 | [YYYY-MM-DD] | [Name] | [Add bulk upload for corporate] | Scope | Moderate | [+5 days, +$3K] | ✅ Approved | CCB | [Date] |
-| CR-005 | [YYYY-MM-DD] | [Name] | [Integrate with new payment provider] | Scope | Major | [+2 weeks, +$15K] | ❌ Rejected | Steering | [Date] |
+| CR-[XXX] | [YYYY-MM-DD] | [Name] | [Change title] | [Category] | [Classification] | [+X days, +$[X]] | [✅ Approved / ❌ Rejected / ⏸️ Deferred] | [PM / CCB / Steering] | [YYYY-MM-DD] |
 
 ## 4. Change Classification
 

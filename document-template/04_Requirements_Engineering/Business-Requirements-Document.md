@@ -75,10 +75,10 @@ standard_ref:
 
 | ID | Objective | Metric | Target | Deadline | Strategic Alignment |
 |----|-----------|--------|--------|----------|-------------------|
-| OBJ-01 | [Reduce processing time] | [Days per request] | [≤1 day] | [YYYY-Qn] | [Operational Excellence] |
-| OBJ-02 | [Improve customer experience] | [NPS score] | [≥60] | [YYYY-Qn] | [Customer Centricity] |
-| OBJ-03 | [Achieve compliance] | [Audit findings] | [Zero critical] | [YYYY-Qn] | [Risk Management] |
-| OBJ-04 | [Reduce operating cost] | [Cost per transaction] | [≤$X] | [YYYY-Qn] | [Financial Efficiency] |
+| OBJ-[XX] | [Reduce processing time] | [Days per request] | [≤1 day] | [YYYY-Qn] | [Operational Excellence] |
+| OBJ-[XX] | [Improve customer experience] | [NPS score] | [≥60] | [YYYY-Qn] | [Customer Centricity] |
+| OBJ-[XX] | [Achieve compliance] | [Audit findings] | [Zero critical] | [YYYY-Qn] | [Risk Management] |
+| OBJ-[XX] | [Reduce operating cost] | [Cost per transaction] | [≤$X] | [YYYY-Qn] | [Financial Efficiency] |
 
 ---
 
@@ -88,25 +88,25 @@ standard_ref:
 
 | ID | Requirement | Description | Priority | Objective | Source |
 |----|------------|-------------|----------|-----------|--------|
-| BR-01 | [Online Submission] | [Customers shall be able to submit requests online 24/7] | 🔴 | OBJ-01, OBJ-02 | SN-03 |
-| BR-02 | [Automated Validation] | [The system shall validate inputs in real-time against business rules] | 🔴 | OBJ-01, OBJ-03 | SN-08 |
-| BR-03 | [Status Visibility] | [Customers shall see real-time status of their requests] | 🔴 | OBJ-02 | SN-04 |
-| BR-04 | [Workflow Automation] | [Requests shall be auto-routed and auto-approved where rules permit] | 🔴 | OBJ-01 | SN-01 |
-| BR-05 | [Notification] | [Stakeholders shall be notified at each status change] | 🟡 | OBJ-02 | SN-04 |
-| BR-06 | [Reporting] | [Management shall have access to real-time operational dashboards] | 🟡 | OBJ-04 | SN-05 |
-| BR-07 | [Audit Trail] | [All actions shall be logged with user, timestamp, and action details] | 🔴 | OBJ-03 | SN-06 |
-| BR-08 | [Bulk Processing] | [Corporate clients shall be able to submit bulk requests] | 🟡 | OBJ-01 | SN-10 |
+| BR-[XX] | [Online Submission] | [Customers shall be able to submit requests online 24/7] | 🔴 | OBJ-[XX], OBJ-[XX] | SN-[XX] |
+| BR-[XX] | [Automated Validation] | [The system shall validate inputs in real-time against business rules] | 🔴 | OBJ-[XX], OBJ-[XX] | SN-[XX] |
+| BR-[XX] | [Status Visibility] | [Customers shall see real-time status of their requests] | 🔴 | OBJ-[XX] | SN-[XX] |
+| BR-[XX] | [Workflow Automation] | [Requests shall be auto-routed and auto-approved where rules permit] | 🔴 | OBJ-[XX] | SN-[XX] |
+| BR-[XX] | [Notification] | [Stakeholders shall be notified at each status change] | 🟡 | OBJ-[XX] | SN-[XX] |
+| BR-[XX] | [Reporting] | [Management shall have access to real-time operational dashboards] | 🟡 | OBJ-[XX] | SN-[XX] |
+| BR-[XX] | [Audit Trail] | [All actions shall be logged with user, timestamp, and action details] | 🔴 | OBJ-[XX] | SN-[XX] |
+| BR-[XX] | [Bulk Processing] | [Corporate clients shall be able to submit bulk requests] | 🟡 | OBJ-[XX] | SN-[XX] |
 
 ### 3.2 Non-Functional Requirements
 
 | ID | Category | Requirement | Target | Objective |
 |----|----------|-------------|--------|-----------|
-| NFR-01 | Performance | [Request processing time] | [≤1 hour] | OBJ-01 |
-| NFR-02 | Performance | [System response time] | [<2 seconds] | OBJ-02 |
-| NFR-03 | Availability | [System uptime] | [99.9%] | OBJ-01, OBJ-02 |
-| NFR-04 | Security | [Data encryption] | [AES-256 at rest, TLS 1.3 in transit] | OBJ-03 |
-| NFR-05 | Usability | [Training time for new users] | [<2 hours] | OBJ-02 |
-| NFR-06 | Compliance | [Data retention] | [7 years after closure] | OBJ-03 |
+| NFR-[XX] | Performance | [Request processing time] | [≤1 hour] | OBJ-[XX] |
+| NFR-[XX] | Performance | [System response time] | [<2 seconds] | OBJ-[XX] |
+| NFR-[XX] | Availability | [System uptime] | [[X]%] | OBJ-[XX], OBJ-[XX] |
+| NFR-[XX] | Security | [Data encryption] | [AES-256 at rest, TLS 1.3 in transit] | OBJ-[XX] |
+| NFR-[XX] | Usability | [Training time for new users] | [<2 hours] | OBJ-[XX] |
+| NFR-[XX] | Compliance | [Data retention] | [7 years after closure] | OBJ-[XX] |
 
 ---
 
@@ -114,12 +114,12 @@ standard_ref:
 
 | ID | Rule | Category | Exception | Source |
 |----|------|----------|-----------|--------|
-| BUR-01 | [Incomplete requests rejected with specific field identification] | Validation | None | Ops Manager |
-| BUR-02 | [Requests >$10K require manager approval] | Workflow | VIP: auto-approve ≤$25K | Ops Manager |
-| BUR-03 | [Duplicate requests (30 days) flagged for review] | Validation | Re-submission after rejection | CS Lead |
-| BUR-04 | [FIFO processing order] | Workflow | Priority and regulatory exceptions | Ops Manager |
-| BUR-05 | [7-year data retention after closure] | Data | Legal hold overrides | Compliance |
-| BUR-06 | [All actions logged in audit trail] | Compliance | None | Compliance |
+| BUR-[XX] | [Incomplete requests rejected with specific field identification] | Validation | None | Ops Manager |
+| BUR-[XX] | [Requests >$[X] require manager approval] | Workflow | VIP: auto-approve ≤$[X] | Ops Manager |
+| BUR-[XX] | [Duplicate requests (30 days) flagged for review] | Validation | Re-submission after rejection | CS Lead |
+| BUR-[XX] | [FIFO processing order] | Workflow | Priority and regulatory exceptions | Ops Manager |
+| BUR-[XX] | [7-year data retention after closure] | Data | Legal hold overrides | Compliance |
+| BUR-[XX] | [All actions logged in audit trail] | Compliance | None | Compliance |
 
 ---
 
@@ -127,11 +127,11 @@ standard_ref:
 
 | Stakeholder | Need | Priority | Addressed By |
 |------------|------|----------|-------------|
-| [Customers] | [Online submission, status tracking] | 🔴 | BR-01, BR-03 |
-| [Operations Staff] | [Reduced manual work, auto-validation] | 🔴 | BR-02, BR-04 |
-| [Management] | [Real-time visibility, reporting] | 🟡 | BR-06 |
-| [Compliance] | [Audit trail, data retention] | 🔴 | BR-07 |
-| [IT Operations] | [Maintainable, scalable system] | 🟡 | NFR-03 |
+| [Customers] | [Online submission, status tracking] | 🔴 | BR-[XX], BR-[XX] |
+| [Operations Staff] | [Reduced manual work, auto-validation] | 🔴 | BR-[XX], BR-[XX] |
+| [Management] | [Real-time visibility, reporting] | 🟡 | BR-[XX] |
+| [Compliance] | [Audit trail, data retention] | 🔴 | BR-[XX] |
+| [IT Operations] | [Maintainable, scalable system] | 🟡 | NFR-[XX] |
 
 ---
 
@@ -165,18 +165,18 @@ standard_ref:
 
 | ID | Constraint | Impact |
 |----|-----------|--------|
-| C-01 | [Must use existing cloud provider] | [Platform limitation] |
-| C-02 | [Data sovereignty — in-country only] | [Hosting constraint] |
-| C-03 | [Budget cap $500K] | [Scope limitation] |
-| C-04 | [Go-live by YYYY-MM-DD] | [Schedule pressure] |
+| C-[XX] | [Must use existing cloud provider] | [Platform limitation] |
+| C-[XX] | [Data sovereignty — in-country only] | [Hosting constraint] |
+| C-[XX] | [Budget cap $[X]] | [Scope limitation] |
+| C-[XX] | [Go-live by YYYY-MM-DD] | [Schedule pressure] |
 
 ### 7.2 Assumptions
 
 | ID | Assumption | Impact if Invalid |
 |----|-----------|-------------------|
-| A-01 | [ERP API remains available] | [Integration rework] |
-| A-02 | [Key staff available for requirements] | [Delayed elicitation] |
-| A-03 | [No regulatory changes during project] | [Scope change] |
+| A-[XX] | [ERP API remains available] | [Integration rework] |
+| A-[XX] | [Key staff available for requirements] | [Delayed elicitation] |
+| A-[XX] | [No regulatory changes during project] | [Scope change] |
 
 ---
 

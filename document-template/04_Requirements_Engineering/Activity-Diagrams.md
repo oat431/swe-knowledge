@@ -40,15 +40,15 @@ standard_ref:
 
 | # | Diagram | Process Modeled | Related Requirements | Status |
 |---|---------|----------------|---------------------|--------|
-| AD-01 | [Request Submission Flow] | [Customer submitting a request] | FR-001, FR-002, FR-003 | Draft |
-| AD-02 | [Request Processing Flow] | [Operations processing a request] | FR-101 to FR-107 | Draft |
-| AD-03 | [Auto-Approval Flow] | [Automated approval logic] | FR-103 | Draft |
-| AD-04 | [Notification Flow] | [When and to whom notifications are sent] | FR-201 to FR-205 | Draft |
-| AD-05 | [Exception Handling Flow] | [Error and exception scenarios] | FR-002, FR-104 | Draft |
+| AD-[XX] | [Request Submission Flow] | [Customer submitting a request] | FR-[XXX], FR-[XXX], FR-[XXX] | Draft |
+| AD-[XX] | [Request Processing Flow] | [Operations processing a request] | FR-[XXX] to FR-[XXX] | Draft |
+| AD-[XX] | [Auto-Approval Flow] | [Automated approval logic] | FR-[XXX] | Draft |
+| AD-[XX] | [Notification Flow] | [When and to whom notifications are sent] | FR-[XXX] to FR-[XXX] | Draft |
+| AD-[XX] | [Exception Handling Flow] | [Error and exception scenarios] | FR-[XXX], FR-[XXX] | Draft |
 
 ## 3. Activity Diagrams
 
-### AD-01: Request Submission Flow
+### AD-[XX]: Request Submission Flow
 
 ```mermaid
 flowchart TD
@@ -82,7 +82,7 @@ flowchart TD
     style SHOW_ERR fill:#f44336,color:#fff
 ```
 
-### AD-02: Request Processing Flow
+### AD-[XX]: Request Processing Flow
 
 ```mermaid
 flowchart TD
@@ -91,7 +91,7 @@ flowchart TD
     ROUTE --> ASSIGN[Assign to<br>Available Staff]
     ASSIGN --> REVIEW[Staff Reviews<br>Request]
     REVIEW --> RULES{Business Rules<br>Check}
-    RULES -->|Pass| AMOUNT{Amount<br>> $10K?}
+    RULES -->|Pass| AMOUNT{"Amount<br>> $[X]?"}
     RULES -->|Fail| REJECT[Reject with<br>Reason]
     AMOUNT -->|No| AUTO{Auto-Approve<br>Eligible?}
     AMOUNT -->|Yes| MGR[Route to<br>Manager]
@@ -117,15 +117,15 @@ flowchart TD
     style AUTO fill:#2196F3,color:#fff
 ```
 
-### AD-03: Auto-Approval Flow
+### AD-[XX]: Auto-Approval Flow
 
 ```mermaid
 flowchart TD
-    START([Validated Request]) --> CHECK_1{Amount<br><= $10K?}
+    START([Validated Request]) --> CHECK_1{"Amount<br><= $[X]?"}
     CHECK_1 -->|No| CHECK_VIP{VIP<br>Customer?}
     CHECK_1 -->|Yes| CHECK_2{All Required<br>Fields Valid?}
     CHECK_VIP -->|No| MANUAL[Route to<br>Manual Review]
-    CHECK_VIP -->|Yes| CHECK_VIP_AMT{Amount<br><= $25K?}
+    CHECK_VIP -->|Yes| CHECK_VIP_AMT{"Amount<br><= $[X]?"}
     CHECK_VIP_AMT -->|Yes| APPROVE[Auto-Approve]
     CHECK_VIP_AMT -->|No| MANUAL
     CHECK_2 -->|No| MANUAL
@@ -146,7 +146,7 @@ flowchart TD
     style FLAG fill:#FF9800,color:#fff
 ```
 
-### AD-04: Notification Flow
+### AD-[XX]: Notification Flow
 
 ```mermaid
 flowchart TD
@@ -168,7 +168,7 @@ flowchart TD
     style END fill:#4CAF50,color:#fff
 ```
 
-### AD-05: Exception Handling Flow
+### AD-[XX]: Exception Handling Flow
 
 ```mermaid
 flowchart TD

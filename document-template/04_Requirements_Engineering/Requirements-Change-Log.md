@@ -66,11 +66,10 @@ flowchart LR
 
 | CR ID | Date | Requestor | Requirement ID | Change Description | Rationale | Classification | Impact Analysis | Decision | Decision Date | Authority |
 |-------|------|-----------|---------------|-------------------|-----------|---------------|----------------|----------|--------------|-----------|
-| CR-001 | [YYYY-MM-DD] | [Name] | [FR-005] | [Add "save draft" capability] | [User feedback — 40% abandon forms] | Moderate | [Scope: +1 feature, Schedule: +3 days, Cost: +$2K] | Approved | [YYYY-MM-DD] | CCB |
-| CR-002 | [YYYY-MM-DD] | [Name] | [NFR-001] | [Change response time from <2s to <1s] | [Competitive benchmark] | Minor | [Scope: none, Schedule: none, Cost: +$5K (CDN)] | Approved | [YYYY-MM-DD] | PM |
-| CR-003 | [YYYY-MM-DD] | [Name] | [FR-303] | [Add ML-based anomaly detection] | [Management request] | Major | [Scope: +large feature, Schedule: +3 months, Cost: +$50K] | Deferred | [YYYY-MM-DD] | Steering Committee |
-| CR-004 | [YYYY-MM-DD] | [Name] | [BR-08] | [Add bulk upload for corporate clients] | [Missed in initial elicitation] | Moderate | [Scope: +1 feature, Schedule: +5 days, Cost: +$3K] | Approved | [YYYY-MM-DD] | CCB |
-| CR-005 | | | | | | | | | | |
+| CR-[XXX] | [YYYY-MM-DD] | [Name] | [FR-XXX] | [Change description] | [Rationale] | [Minor/Moderate/Major] | [Scope: X, Schedule: X, Cost: $[X]] | [Approved/Rejected/Deferred] | [YYYY-MM-DD] | [CCB/PM/Steering Committee] |
+| CR-[XXX] | [YYYY-MM-DD] | [Name] | [NFR-XXX] | [Change description] | [Rationale] | [Minor/Moderate/Major] | [Scope: X, Schedule: X, Cost: $[X]] | [Approved/Rejected/Deferred] | [YYYY-MM-DD] | [Authority] |
+| CR-[XXX] | [YYYY-MM-DD] | [Name] | [BR-XX] | [Change description] | [Rationale] | [Minor/Moderate/Major] | [Scope: X, Schedule: X, Cost: $[X]] | [Approved/Rejected/Deferred] | [YYYY-MM-DD] | [Authority] |
+| CR-[XXX] | | | | | | | | | | |
 
 ## 4. Impact Analysis Template
 

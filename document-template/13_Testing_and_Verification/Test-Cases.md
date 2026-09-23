@@ -30,12 +30,8 @@ standard_ref:
 
 | Module | Total | Automated | Manual | Status |
 |--------|-------|----------|--------|--------|
-| [Request Management] | [25] | [20] | [5] | ✅ |
-| [Processing] | [18] | [15] | [3] | ✅ |
-| [Authentication] | [12] | [10] | [2] | ✅ |
-| [Notifications] | [8] | [6] | [2] | ✅ |
-| [Reporting] | [10] | [8] | [2] | ✅ |
-| **Total** | **[73]** | **[59]** | **[14]** | |
+| [Module Name] | [N] | [N] | [N] | [Status] |
+| **Total** | **[N]** | **[N]** | **[N]** | |
 
 ## 3. Test Case Template
 
@@ -43,98 +39,56 @@ standard_ref:
 |-------|-------|
 | **Test Case ID** | [TC-XXX] |
 | **Title** | [Descriptive title] |
-| **Module** | [Request Management] |
+| **Module** | [Module Name] |
 | **Priority** | [🔴 Critical / 🟡 High / 🟢 Medium] |
 | **Type** | [Functional / Integration / E2E] |
 | **Automated** | [Yes / No] |
-| **Requirement** | [[FR-001](Software-Requirements-Specification.md)] |
+| **Requirement** | [[FR-XXX](Software-Requirements-Specification.md)] |
 
 ### Preconditions
 
 | # | Condition |
 |---|----------|
-| 1 | [User is logged in as Customer] |
-| 2 | [At least one request exists] |
+| 1 | [Precondition] |
+| 2 | [Precondition] |
 
 ### Test Steps
 
 | Step | Action | Expected Result | Actual Result | Status |
 |------|--------|----------------|--------------|--------|
-| 1 | [Navigate to My Requests] | [Request list displayed] | | ☐ |
-| 2 | [Click on request REQ-001] | [Request detail displayed] | | ☐ |
-| 3 | [Verify status shows "Submitted"] | [Status badge shows Submitted] | | ☐ |
+| 1 | [Action] | [Expected result] | | ☐ |
+| 2 | [Action] | [Expected result] | | ☐ |
+| 3 | [Action] | [Expected result] | | ☐ |
 
 ### Post-conditions
 
 | # | Condition |
 |---|----------|
-| 1 | [No data modified] |
+| 1 | [Post-condition] |
 
-## 4. Test Cases — Request Module
+## 4. Test Cases — [Module Name]
 
-### TC-001: Submit Valid Request
-
-| Field | Value |
-|-------|-------|
-| **ID** | [TC-001] |
-| **Title** | [Submit valid standard request] |
-| **Priority** | [🔴 Critical] |
-| **Requirement** | [FR-001] |
-
-| Step | Action | Expected Result |
-|------|--------|----------------|
-| 1 | [Login as customer] | [Dashboard displayed] |
-| 2 | [Click New Request] | [Form Step 1 displayed] |
-| 3 | [Fill personal info] | [Fields populated] |
-| 4 | [Click Next] | [Form Step 2 displayed] |
-| 5 | [Select type: Standard] | [Type selected] |
-| 6 | [Enter amount: 5000] | [Amount entered] |
-| 7 | [Enter description] | [Description entered] |
-| 8 | [Click Next] | [Form Step 3 displayed] |
-| 9 | [Upload document] | [Document uploaded] |
-| 10 | [Click Next] | [Review page displayed] |
-| 11 | [Click Submit] | [Success page with reference #] |
-
-### TC-002: Submit Request with Invalid Amount
+### TC-[XXX]: [Test Case Title]
 
 | Field | Value |
 |-------|-------|
-| **ID** | [TC-002] |
-| **Title** | [Reject request with amount = 0] |
-| **Priority** | [🔴 Critical] |
-| **Requirement** | [FR-001] |
+| **ID** | [TC-XXX] |
+| **Title** | [Descriptive title] |
+| **Priority** | [🔴 Critical / 🟡 High / 🟢 Medium] |
+| **Requirement** | [FR-XXX] |
 
 | Step | Action | Expected Result |
 |------|--------|----------------|
-| 1 | [Login as customer] | [Dashboard displayed] |
-| 2 | [Navigate to request form] | [Form displayed] |
-| 3 | [Enter amount: 0] | [Amount entered] |
-| 4 | [Click Submit] | [Error: "Amount must be greater than 0"] |
-
-### TC-003: Auto-Approve Eligible Request
-
-| Field | Value |
-|-------|-------|
-| **ID** | [TC-003] |
-| **Title** | [Auto-approve standard request ≤ $10K] |
-| **Priority** | [🔴 Critical] |
-| **Requirement** | [FR-103] |
-
-| Step | Action | Expected Result |
-|------|--------|----------------|
-| 1 | [Submit standard request, amount $5000] | [Request submitted] |
-| 2 | [Wait for processing] | [Status changes to Validating] |
-| 3 | [Wait for auto-approval] | [Status changes to Approved] |
-| 4 | [Check email notification] | [Approval email received] |
+| 1 | [Action] | [Expected result] |
+| 2 | [Action] | [Expected result] |
+| 3 | [Action] | [Expected result] |
 
 ## 5. Test Execution Summary
 
 | Sprint | Executed | Passed | Failed | Blocked | Pass Rate |
 |--------|---------|--------|--------|---------|----------|
-| [Sprint 1] | [20] | [18] | [2] | [0] | [90%] |
-| [Sprint 2] | [25] | [24] | [1] | [0] | [96%] |
-| [Sprint 3] | [28] | [27] | [1] | [0] | [96%] |
-| **Total** | **[73]** | **[69]** | **[4]** | **[0]** | **[95%]** |
+| [Sprint N] | [N] | [N] | [N] | [N] | [X]% |
+| **Total** | **[N]** | **[N]** | **[N]** | **[N]** | **[X]%** |
 
 ---
 

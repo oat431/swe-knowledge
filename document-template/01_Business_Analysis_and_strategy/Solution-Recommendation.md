@@ -123,17 +123,17 @@ standard_ref:
 
 | # | Differentiator | Why This Matters |
 |---|---------------|-----------------|
-| 1 | [e.g., Lowest TCO over 5 years] | [Saves $X compared to next best option] |
-| 2 | [e.g., Fastest time to value] | [Benefits start 3 months earlier] |
-| 3 | [e.g., Best functional fit] | [Meets 95% of requirements without customization] |
+| 1 | [e.g., Lowest TCO over 5 years] | [Saves $[X] compared to next best option] |
+| 2 | [e.g., Fastest time to value] | [Benefits start [N] months earlier] |
+| 3 | [e.g., Best functional fit] | [Meets [X]% of requirements without customization] |
 | 4 | [e.g., Lowest implementation risk] | [Proven in similar organizations] |
 
 ### 3.3 Trade-Offs Accepted
 
 | Trade-Off | What We Give Up | Why Acceptable |
 |-----------|----------------|---------------|
-| [e.g., Limited customization] | [Cannot modify core workflows] | [Standard workflows meet 90% of needs; remaining 10% via configuration] |
-| [e.g., Vendor dependency] | [Switching cost is high] | [Vendor is market leader, financially stable, 5-year contract provides stability] |
+| [e.g., Limited customization] | [Cannot modify core workflows] | [Standard workflows meet [X]% of needs; remaining [X]% via configuration] |
+| [e.g., Vendor dependency] | [Switching cost is high] | [Vendor is market leader, financially stable, [N]-year contract provides stability] |
 | [e.g., Higher annual cost] | [$X more per year than open source] | [Lower TCO when including self-management costs of open source] |
 
 ---
@@ -200,11 +200,11 @@ flowchart TB
 
 | Capability | Description | Requirement Addressed |
 |-----------|-------------|---------------------|
-| [e.g., Customer Self-Service Portal] | [Web + mobile portal for account management] | BR-01 |
-| [e.g., Automated Workflow Engine] | [Rule-based process automation] | BR-02, BR-03 |
-| [e.g., Real-Time Dashboard] | [Live KPIs and analytics] | BR-04 |
-| [e.g., API Integration] | [REST APIs for system connectivity] | BR-05 |
-| [e.g., Audit Trail] | [Complete logging of all actions] | NFR-03 |
+| [e.g., Customer Self-Service Portal] | [Web + mobile portal for account management] | BR-[XX] |
+| [e.g., Automated Workflow Engine] | [Rule-based process automation] | BR-[XX], BR-[XX] |
+| [e.g., Real-Time Dashboard] | [Live KPIs and analytics] | BR-[XX] |
+| [e.g., API Integration] | [REST APIs for system connectivity] | BR-[XX] |
+| [e.g., Audit Trail] | [Complete logging of all actions] | NFR-[XX] |
 
 ### 4.3 Scope Boundaries
 
@@ -303,7 +303,7 @@ gantt
 | [Integration complexity] | Medium | High | 🟠 | [Early POC, phased integration] |
 | [Vendor delivery delays] | Medium | Medium | 🟡 | [SLA penalties, milestone payments] |
 | [Data migration quality] | Medium | High | 🟠 | [Parallel run, extensive validation] |
-| [Budget overrun] | Medium | Medium | 🟡 | [15% contingency, monthly tracking] |
+| [Budget overrun] | Medium | Medium | 🟡 | [[X]% contingency, monthly tracking] |
 
 ### Risk Heat Map
 

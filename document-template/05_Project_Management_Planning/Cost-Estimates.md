@@ -63,102 +63,67 @@ standard_ref:
 
 | Role | FTE | Loaded Rate ($/day) | Duration (days) | Total Cost |
 |------|-----|---------------------|----------------|-----------|
-| [Project Manager] | 0.5 | $[X] | [154] | $[X × 0.5 × 154] |
-| [Business Analyst] | 1.0 | $[X] | [100] | $[X × 100] |
-| [Technical Lead] | 1.0 | $[X] | [120] | $[X × 120] |
-| [Developer 1] | 1.0 | $[X] | [80] | $[X × 80] |
-| [Developer 2] | 1.0 | $[X] | [80] | $[X × 80] |
-| [Developer 3] | 1.0 | $[X] | [80] | $[X × 80] |
-| [QA Lead] | 1.0 | $[X] | [40] | $[X × 40] |
-| [QA Engineer] | 1.0 | $[X] | [40] | $[X × 40] |
-| [Solution Architect] | 0.25 | $[X] | [30] | $[X × 0.25 × 30] |
-| [Change Manager] | 0.25 | $[X] | [60] | $[X × 0.25 × 60] |
+| [Role] | [X] | $[X] | [X] | $[X] |
 | **Subtotal Personnel** | | | | **$[Sum]** |
 
 ### 3.2 External Resources
 
 | Role | Vendor | Rate | Duration | Total Cost |
 |------|--------|------|----------|-----------|
-| [Implementation Consultant] | [Vendor A] | $[X]/day | [20 days] | $[X × 20] |
-| [Data Migration Specialist] | [Vendor A] | $[X]/day | [10 days] | $[X × 10] |
-| [Security Consultant] | [Vendor B] | $[X]/day | [5 days] | $[X × 5] |
+| [Role] | [Vendor] | $[X]/day | [X days] | $[X] |
 | **Subtotal External** | | | | **$[Sum]** |
 
 ## 4. Software & Licensing Costs
 
 | Item | Vendor | Type | One-Time | Annual | Project Total |
 |------|--------|------|---------|--------|--------------|
-| [CRM Platform] | [Vendor A] | SaaS | $0 | $[X] | $[X] |
-| [Email Service] | [Vendor B] | SaaS | $0 | $[X] | $[X] |
-| [SMS Service] | [Vendor C] | SaaS | $0 | $[X] | $[X] |
-| [Monitoring Tool] | [Vendor D] | SaaS | $0 | $[X] | $[X] |
-| [CI/CD Tool] | [Vendor E] | SaaS | $0 | $[X] | $[X] |
-| [Project Management Tool] | [Vendor F] | SaaS | $0 | $[X] | $[X] |
-| **Subtotal Software** | | | **$[X]** | **$[Y]** | **$[Sum]** |
+| [Software Item] | [Vendor] | [SaaS / License] | $[X] | $[X] | $[X] |
+| **Subtotal Software** | | | **$[X]** | **$[X]** | **$[Sum]** |
 
 ## 5. Infrastructure Costs
 
 | Item | Provider | Type | One-Time | Monthly | Project Total |
 |------|---------|------|---------|---------|--------------|
-| [Cloud Compute] | [AWS/Azure] | IaaS | $0 | $[X] | $[X × months] |
-| [Database] | [AWS/Azure] | PaaS | $0 | $[X] | $[X × months] |
-| [Storage] | [AWS/Azure] | IaaS | $0 | $[X] | $[X × months] |
-| [CDN] | [AWS/Cloudflare] | SaaS | $0 | $[X] | $[X × months] |
-| [SSL Certificates] | [Provider] | Annual | $[X] | — | $[X] |
-| [Domain] | [Registrar] | Annual | $[X] | — | $[X] |
-| **Subtotal Infrastructure** | | | **$[X]** | **$[Y]** | **$[Sum]** |
+| [Infrastructure Item] | [Provider] | [IaaS / PaaS / SaaS] | $[X] | $[X] | $[X × months] |
+| **Subtotal Infrastructure** | | | **$[X]** | **$[X]** | **$[Sum]** |
 
 ## 6. Vendor Services Costs
 
 | Service | Vendor | Scope | Fixed/Time&Materials | Cost |
 |---------|--------|-------|---------------------|------|
-| [Implementation Services] | [Vendor A] | [CRM configuration, integration] | Fixed | $[X] |
-| [Data Migration] | [Vendor A] | [500K record migration] | Fixed | $[X] |
-| [Training Development] | [Vendor B] | [Training materials creation] | Fixed | $[X] |
-| [Penetration Testing] | [Vendor C] | [Security assessment] | Fixed | $[X] |
+| [Service] | [Vendor] | [Scope description] | [Fixed / T&M] | $[X] |
 | **Subtotal Vendor Services** | | | | **$[Sum]** |
 
 ## 7. Training Costs
 
 | Item | Description | Cost |
 |------|-------------|------|
-| [Training Materials] | [Development of user guides, videos] | $[X] |
-| [Training Delivery] | [Trainer time, venue] | $[X] |
-| [Sandbox Environment] | [Training instance setup] | $[X] |
+| [Training Item] | [Description] | $[X] |
 | **Subtotal Training** | | **$[Sum]** |
 
 ## 8. Contingency & Reserves
 
 | Reserve | Basis | Amount |
 |---------|-------|--------|
-| [Contingency Reserve] | [15% of subtotal — for known risks] | $[X] |
-| [Management Reserve] | [5% of total — for unknown risks] | $[X] |
+| [Contingency Reserve] | [X% of subtotal — for known risks] | $[X] |
+| [Management Reserve] | [X% of total — for unknown risks] | $[X] |
 | **Total Reserves** | | **$[Sum]** |
 
 ## 9. Cost Estimate Summary
 
 | Category | Estimate | Confidence | Range (Low-High) |
 |----------|---------|-----------|------------------|
-| [Personnel — Internal] | $[X] | ±15% | $[Low - High] |
-| [Personnel — External] | $[X] | ±20% | $[Low - High] |
-| [Software / Licensing] | $[X] | ±5% | $[Low - High] |
-| [Infrastructure] | $[X] | ±10% | $[Low - High] |
-| [Vendor Services] | $[X] | ±10% | $[Low - High] |
-| [Training] | $[X] | ±20% | $[Low - High] |
-| **Subtotal** | **$[Sum]** | **±15%** | **$[Low - High]** |
-| [Contingency (15%)] | $[X] | — | — |
-| [Management Reserve (5%)] | $[X] | — | — |
-| **Total Project Budget** | **$[Grand Total]** | **±10%** | **$[Low - High]** |
+| [Category] | $[X] | ±[X]% | $[Low - High] |
+| **Subtotal** | **$[Sum]** | **±[X]%** | **$[Low - High]** |
+| [Contingency ([X]%)] | $[X] | — | — |
+| [Management Reserve ([X]%)] | $[X] | — | — |
+| **Total Project Budget** | **$[Grand Total]** | **±[X]%** | **$[Low - High]** |
 
 ## 10. Estimate Assumptions
 
 | # | Assumption | Impact if Invalid |
 |---|-----------|-------------------|
-| 1 | [Team loaded rates include benefits and overhead] | [Personnel costs may increase] |
-| 2 | [Vendor prices valid for 90 days] | [Re-negotiation needed] |
-| 3 | [Cloud costs based on projected usage] | [Infrastructure costs may vary] |
-| 4 | [No inflation adjustment for projects <1 year] | [N/A for short projects] |
-| 5 | [Exchange rate: 1 USD = X THB] | [Currency fluctuation risk] |
+| 1 | [Assumption] | [Impact if assumption is invalid] |
 
 ---
 

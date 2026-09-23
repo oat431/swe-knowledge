@@ -60,18 +60,18 @@ standard_ref:
 
 | # | Screen/Page | Fidelity | Tool | Version | Status | Related Requirements |
 |---|------------|----------|------|---------|--------|---------------------|
-| P-01 | [Customer Portal — Home] | Low-Fi → High-Fi | [Figma] | v2.0 | ✅ Approved | FR-001 |
-| P-02 | [Request Form] | Low-Fi → High-Fi | [Figma] | v3.0 | ✅ Approved | FR-001, FR-002, FR-003 |
-| P-03 | [My Requests — List] | Low-Fi → Mid-Fi | [Figma] | v1.0 | ⚠️ In Review | FR-006 |
-| P-04 | [Request Detail — Timeline] | Low-Fi | [Figma] | v1.0 | ⬜ Draft | FR-006, FR-007 |
-| P-05 | [Admin Portal — Work Queue] | Low-Fi | [Balsamiq] | v1.0 | ⬜ Draft | FR-101, FR-102 |
-| P-06 | [Admin Portal — Request Review] | Low-Fi | [Balsamiq] | v1.0 | ⬜ Draft | FR-104, FR-106 |
-| P-07 | [Dashboard — Overview] | Low-Fi | [Balsamiq] | v1.0 | ⬜ Draft | FR-301, FR-305 |
-| P-08 | [Login / Registration] | High-Fi | [Figma] | v1.0 | ✅ Approved | SEC-001 |
+| P-[XX] | [Prototype Name — Screen] | Low-Fi → High-Fi | [Figma] | v2.0 | ✅ Approved | FR-[XXX] |
+| P-[XX] | [Request Form] | Low-Fi → High-Fi | [Figma] | v3.0 | ✅ Approved | FR-[XXX], FR-[XXX], FR-[XXX] |
+| P-[XX] | [My Requests — List] | Low-Fi → Mid-Fi | [Figma] | v1.0 | ⚠️ In Review | FR-[XXX] |
+| P-[XX] | [Request Detail — Timeline] | Low-Fi | [Figma] | v1.0 | ⬜ Draft | FR-[XXX], FR-[XXX] |
+| P-[XX] | [Admin Portal — Work Queue] | Low-Fi | [Balsamiq] | v1.0 | ⬜ Draft | FR-[XXX], FR-[XXX] |
+| P-[XX] | [Admin Portal — Request Review] | Low-Fi | [Balsamiq] | v1.0 | ⬜ Draft | FR-[XXX], FR-[XXX] |
+| P-[XX] | [Dashboard — Overview] | Low-Fi | [Balsamiq] | v1.0 | ⬜ Draft | FR-[XXX], FR-[XXX] |
+| P-[XX] | [Login / Registration] | High-Fi | [Figma] | v1.0 | ✅ Approved | SEC-[XXX] |
 
 ## 4. Prototype Specifications
 
-### 4.1 Low-Fi Wireframe: Request Form (P-02)
+### 4.1 Low-Fi Wireframe: Request Form (P-[XX])
 
 **Purpose:** Validate form layout, field order, and validation behavior with stakeholders.
 
@@ -94,7 +94,7 @@ standard_ref:
 | 2 | ["Need a progress indicator for multi-step form"] | [End User] | [Added step indicator] |
 | 3 | ["Upload should show file size limit"] | [CS Lead] | [Added "Max 10MB per file" text] |
 
-### 4.2 High-Fi Mockup: Customer Portal Home (P-01)
+### 4.2 High-Fi Mockup: [Prototype Name — Screen] (P-[XX])
 
 **Purpose:** Final visual design for development handoff.
 
@@ -123,41 +123,41 @@ standard_ref:
 
 | Prototype | Tool | Link | Version | Status |
 |-----------|------|------|---------|--------|
-| [Customer Portal Flow] | [Figma] | [URL] | v2.0 | ✅ User Tested |
+| [Flow Name] | [Figma] | [URL] | v2.0 | ✅ User Tested |
 | [Admin Portal Flow] | [Figma] | [URL] | v1.0 | ⬜ Not Started |
 
 ### 5.2 User Test Results
 
 | Test | Date | Participants | Tasks | Success Rate | Issues Found |
 |------|------|-------------|-------|-------------|-------------|
-| [Customer Portal — Submit Request] | [YYYY-MM-DD] | [5 users] | [3 tasks] | [85%] | [2 — button placement unclear] |
-| [Customer Portal — Track Status] | [YYYY-MM-DD] | [5 users] | [2 tasks] | [95%] | [0] |
-| [Admin Portal — Process Request] | [YYYY-MM-DD] | [3 staff] | [3 tasks] | [70%] | [3 — workflow confusing] |
+| [Prototype Name — Task A] | [YYYY-MM-DD] | [5 users] | [3 tasks] | [%] | [2 — button placement unclear] |
+| [Prototype Name — Task B] | [YYYY-MM-DD] | [5 users] | [2 tasks] | [%] | [0] |
+| [Admin Portal — Process Request] | [YYYY-MM-DD] | [3 staff] | [3 tasks] | [%] | [3 — workflow confusing] |
 
 ### 5.3 Usability Issues from Prototyping
 
 | Issue ID | Screen | Issue | Severity | Source | Resolution |
 |----------|--------|-------|----------|--------|-----------|
-| UI-001 | [Request Form] | [Submit button not visible without scrolling] | 🟡 Medium | [User test] | [Moved button to sticky footer] |
-| UI-002 | [Work Queue] | [Filter options unclear] | 🟡 Medium | [Staff feedback] | [Added filter labels and tooltips] |
-| UI-003 | [Request Detail] | [Timeline hard to read] | 🟢 Low | [User test] | [Redesigned with visual timeline] |
+| UI-[XXX] | [Request Form] | [Submit button not visible without scrolling] | 🟡 Medium | [User test] | [Moved button to sticky footer] |
+| UI-[XXX] | [Work Queue] | [Filter options unclear] | 🟡 Medium | [Staff feedback] | [Added filter labels and tooltips] |
+| UI-[XXX] | [Request Detail] | [Timeline hard to read] | 🟢 Low | [User test] | [Redesigned with visual timeline] |
 
 ## 6. Prototype Review Record
 
 | Review | Date | Participants | Prototype | Outcome | Sign-Off |
 |--------|------|-------------|-----------|---------|----------|
-| [Review 1 — Lo-fi] | [YYYY-MM-DD] | [BA, Ops Manager, End Users] | [P-01, P-02] | [Approved with modifications] | ✅ |
-| [Review 2 — Mid-fi] | [YYYY-MM-DD] | [BA, Designer, End Users] | [P-02, P-03] | [Approved] | ✅ |
-| [Review 3 — Hi-fi] | [YYYY-MM-DD] | [BA, Designer, Sponsor, End Users] | [P-01, P-02, P-08] | [Approved] | ✅ |
-| [Review 4 — Interactive] | [YYYY-MM-DD] | [All stakeholders] | [Customer Portal Flow] | [User testing complete] | ✅ |
+| [Review 1 — Lo-fi] | [YYYY-MM-DD] | [BA, Ops Manager, End Users] | [P-[XX], P-[XX]] | [Approved with modifications] | ✅ |
+| [Review 2 — Mid-fi] | [YYYY-MM-DD] | [BA, Designer, End Users] | [P-[XX], P-[XX]] | [Approved] | ✅ |
+| [Review 3 — Hi-fi] | [YYYY-MM-DD] | [BA, Designer, Sponsor, End Users] | [P-[XX], P-[XX], P-[XX]] | [Approved] | ✅ |
+| [Review 4 — Interactive] | [YYYY-MM-DD] | [All stakeholders] | [Flow Name] | [User testing complete] | ✅ |
 
 ## 7. Design-to-Development Handoff
 
 | Screen | Design File | Specs | Assets | Dev Notes | Status |
 |--------|------------|-------|--------|-----------|--------|
-| [P-01 Home] | [Figma link] | [Specs link] | [Assets folder] | [Responsive, lazy load] | ✅ Handed Off |
-| [P-02 Form] | [Figma link] | [Specs link] | [Assets folder] | [Multi-step, validation] | ✅ Handed Off |
-| [P-03 My Requests] | [Figma link] | [Specs link] | [Assets folder] | [Pagination, filters] | ⬜ Pending |
+| [P-[XX] Home] | [Figma link] | [Specs link] | [Assets folder] | [Responsive, lazy load] | ✅ Handed Off |
+| [P-[XX] Form] | [Figma link] | [Specs link] | [Assets folder] | [Multi-step, validation] | ✅ Handed Off |
+| [P-[XX] My Requests] | [Figma link] | [Specs link] | [Assets folder] | [Pagination, filters] | ⬜ Pending |
 
 ---
 

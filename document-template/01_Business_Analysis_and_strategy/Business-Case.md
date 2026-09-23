@@ -128,9 +128,9 @@ standard_ref:
 
 | ID | Objective | Metric | Target | Deadline | Strategic Alignment |
 |----|-----------|--------|--------|----------|-------------------|
-| OBJ-01 | [e.g., Reduce order processing time] | [Cycle time in hours] | [From X to Y] | [YYYY-Qn] | [Strategy name/ID] |
-| OBJ-02 | | | | | |
-| OBJ-03 | | | | | |
+| OBJ-[XX] | [e.g., Reduce order processing time] | [Cycle time in hours] | [From X to Y] | [YYYY-Qn] | [Strategy name/ID] |
+| OBJ-[XX] | | | | | |
+| OBJ-[XX] | | | | | |
 
 ### Strategic Alignment Map
 
@@ -139,7 +139,7 @@ standard_ref:
 ```
 Vision / Mission
     └── Strategic Goal: [Name]
-        └── Objective: [OBJ-01]
+        └── Objective: [OBJ-XX]
             └── This Business Case delivers: [Specific contribution]
 ```
 
@@ -338,10 +338,10 @@ Vision / Mission
 
 | Scenario | Change | Impact on NPV | Impact on Payback |
 |----------|--------|---------------|-------------------|
-| Benefits 20% lower | -20% benefits | $ | +X months |
-| Costs 30% higher | +30% costs | $ | +X months |
-| Delayed start (6 months) | +6 month delay | $ | +X months |
-| Discount rate +2% | Rate = X% | $ | +X months |
+| Benefits [X]% lower | -[X]% benefits | $ | +X months |
+| Costs [X]% higher | +[X]% costs | $ | +X months |
+| Delayed start ([N] months) | +[N] month delay | $ | +X months |
+| Discount rate +[X]% | Rate = X% | $ | +X months |
 
 ---
 
@@ -351,30 +351,30 @@ Vision / Mission
 
 | ID | Risk | Probability | Impact | Risk Level | Mitigation | Owner |
 |----|------|------------|--------|-----------|------------|-------|
-| BR-01 | [e.g., Organizational resistance to change] | High/Med/Low | High/Med/Low | 🔴/🟡/🟢 | [Strategy] | [Name] |
-| BR-02 | | | | | | |
-| BR-03 | | | | | | |
+| BR-[XX] | [e.g., Organizational resistance to change] | High/Med/Low | High/Med/Low | 🔴/🟡/🟢 | [Strategy] | [Name] |
+| BR-[XX] | | | | | | |
+| BR-[XX] | | | | | | |
 
 ### 8.2 Technical Risks
 
 | ID | Risk | Probability | Impact | Risk Level | Mitigation | Owner |
 |----|------|------------|--------|-----------|------------|-------|
-| TR-01 | [e.g., Integration complexity with legacy systems] | | | | | |
-| TR-02 | | | | | | |
+| TR-[XX] | [e.g., Integration complexity with legacy systems] | | | | | |
+| TR-[XX] | | | | | | |
 
 ### 8.3 Financial Risks
 
 | ID | Risk | Probability | Impact | Risk Level | Mitigation | Owner |
 |----|------|------------|--------|-----------|------------|-------|
-| FR-01 | [e.g., Cost overrun beyond contingency] | | | | | |
-| FR-02 | | | | | | |
+| FR-[XX] | [e.g., Cost overrun beyond contingency] | | | | | |
+| FR-[XX] | | | | | | |
 
 ### 8.4 Risk Heat Map
 
 | Impact \ Probability | Low | Medium | High |
 |---------------------|-----|--------|------|
-| **High** | 🟡 | 🟠 | 🔴 TR-01 |
-| **Medium** | 🟢 | 🟡 FR-01 | 🟠 BR-01 |
+| **High** | 🟡 | 🟠 | 🔴 TR-[XX] |
+| **Medium** | 🟢 | 🟡 FR-[XX] | 🟠 BR-[XX] |
 | **Low** | 🟢 | 🟢 | 🟡 |
 
 > **Legend:** 🔴 Critical — Immediate action required | 🟠 High — Mitigation plan required | 🟡 Medium — Monitor and manage | 🟢 Low — Accept and monitor
@@ -461,24 +461,24 @@ Vision / Mission
 
 | # | Assumption | Impact if Invalid | Validation Method |
 |---|-----------|-------------------|-------------------|
-| A-01 | [e.g., Budget will be approved in Q1] | Delays project start | Finance confirmation |
-| A-02 | [e.g., Key staff will be available] | Resource gap | Manager confirmation |
-| A-03 | | | |
+| A-[XX] | [e.g., Budget will be approved in Q1] | Delays project start | Finance confirmation |
+| A-[XX] | [e.g., Key staff will be available] | Resource gap | Manager confirmation |
+| A-[XX] | | | |
 
 ### 12.2 Constraints
 
 | # | Constraint | Type | Impact |
 |---|-----------|------|--------|
-| C-01 | [e.g., Must go live before regulatory deadline] | Time | Limits scope |
-| C-02 | [e.g., Must use existing infrastructure] | Technical | Limits options |
-| C-03 | [e.g., Budget cap of $X] | Financial | Limits scope/team |
+| C-[XX] | [e.g., Must go live before regulatory deadline] | Time | Limits scope |
+| C-[XX] | [e.g., Must use existing infrastructure] | Technical | Limits options |
+| C-[XX] | [e.g., Budget cap of $X] | Financial | Limits scope/team |
 
 ### 12.3 Dependencies on Other Initiatives
 
 | # | Initiative | Dependency Type | Impact |
 |---|-----------|----------------|--------|
-| D-01 | [e.g., ERP upgrade program] | Technical | Must complete before Phase 2 |
-| D-02 | | | |
+| D-[XX] | [e.g., ERP upgrade program] | Technical | Must complete before Phase 2 |
+| D-[XX] | | | |
 
 ---
 

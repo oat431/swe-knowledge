@@ -29,51 +29,47 @@ standard_ref:
 
 | Level | Method | Items | Verified | Pass Rate | Status |
 |-------|--------|-------|---------|----------|--------|
-| [Requirements] | [Review] | [53] | [53] | [100%] | ✅ |
-| [Design] | [Review] | [18] | [18] | [100%] | ✅ |
-| [Code] | [Review] | [73 PRs] | [73] | [100%] | ✅ |
-| [Unit Test] | [Execution] | [35] | [34] | [97%] | ✅ |
-| [Integration] | [Execution] | [20] | [19] | [95%] | ✅ |
-| [System] | [Execution] | [13] | [12] | [92%] | ✅ |
+| [Requirements] | [Method] | [N] | [N] | [X]% | [Status] |
+| [Design] | [Method] | [N] | [N] | [X]% | [Status] |
+| [Code] | [Method] | [N] | [N] | [X]% | [Status] |
+| [Unit Test] | [Method] | [N] | [N] | [X]% | [Status] |
+| [Integration] | [Method] | [N] | [N] | [X]% | [Status] |
+| [System] | [Method] | [N] | [N] | [X]% | [Status] |
 
 ## 3. Requirements Verification
 
 | Req ID | Requirement | Method | Result | Evidence |
 |--------|-------------|--------|--------|---------|
-| [FR-001] | [Submit request] | [System test] | ✅ Pass | [TC-001] |
-| [FR-002] | [Track status] | [System test] | ✅ Pass | [TC-004] |
-| [FR-101] | [Validate inputs] | [Unit + System] | ✅ Pass | [TC-010, TC-011] |
-| [FR-103] | [Auto-approve] | [Integration] | ✅ Pass | [TC-015] |
-| [NFR-001] | [Response < 2s] | [Performance test] | ✅ Pass | [Perf report] |
-| [NFR-002] | [99.9% availability] | [Architecture review] | ✅ Pass | [SAD review] |
+| [FR-XXX] | [Requirement description] | [Method] | [Result] | [Evidence] |
+| [NFR-XXX] | [Requirement description] | [Method] | [Result] | [Evidence] |
 
 ## 4. Design Verification
 
 | Design Element | Method | Result | Evidence |
 |---------------|--------|--------|---------|
-| [Architecture] | [ATAM evaluation] | ✅ Pass | [[Architecture-Evaluation-Report]] |
-| [Database schema] | [Design review] | ✅ Pass | [[Design-Review-Records]] |
-| [API design] | [Design review] | ✅ Pass | [[Design-Review-Records]] |
-| [Security design] | [Threat modeling] | ✅ Pass | [[Security-Test-Report]] |
+| [Architecture] | [Method] | [Result] | [Evidence] |
+| [Database schema] | [Method] | [Result] | [Evidence] |
+| [API design] | [Method] | [Result] | [Evidence] |
+| [Security design] | [Method] | [Result] | [Evidence] |
 
 ## 5. Code Verification
 
 | Metric | Target | Actual | Status |
 |--------|--------|--------|--------|
-| [Code review coverage] | [100% PRs] | [100%] | ✅ |
-| [Coding standards compliance] | [100%] | [100%] | ✅ |
-| [Static analysis — 0 errors] | [0] | [0] | ✅ |
-| [Unit test coverage] | [≥ 80%] | [83%] | ✅ |
+| [Code review coverage] | [Target] | [X]% | [Status] |
+| [Coding standards compliance] | [Target] | [X]% | [Status] |
+| [Static analysis — 0 errors] | [Target] | [N] | [Status] |
+| [Unit test coverage] | [Target] | [X]% | [Status] |
 
 ## 6. Verification Issues
 
 | # | Issue | Level | Resolution | Status |
 |---|-------|-------|-----------|--------|
-| 1 | [No issues found] | — | — | ✅ |
+| 1 | [Issue description] | [Level] | [Resolution] | [Status] |
 
 ## 7. Verification Conclusion
 
-> All verification activities have been completed successfully. The product has been built according to specifications and meets all verification criteria.
+> [Summary of verification outcome — whether the product was built according to specifications and meets all verification criteria.]
 
 ---
 

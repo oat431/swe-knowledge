@@ -138,11 +138,11 @@ standard_ref:
 
 | ID | Risk | Description | Probability | Impact | Level | Response | Owner |
 |----|------|-------------|------------|--------|-------|----------|-------|
-| BR-01 | [Scope creep] | [Uncontrolled expansion of requirements beyond agreed scope] | 4 — Likely | 4 — Major | 🟠 | Mitigate — Strict change control, MoSCoW | PM |
-| BR-02 | [Requirements ambiguity] | [Unclear or conflicting requirements leading to rework] | 3 — Possible | 3 — Moderate | 🟡 | Mitigate — Reviews, prototypes, validation | BA |
-| BR-03 | [Stakeholder disengagement] | [Key stakeholders withdraw support or become unavailable] | 2 — Unlikely | 4 — Major | 🟡 | Mitigate — Regular engagement, escalation | PM |
-| BR-04 | [Market shift] | [Business needs change due to market conditions] | 2 — Unlikely | 3 — Moderate | 🟢 | Accept — Monitor, agile response | Sponsor |
-| BR-05 | | | | | | | |
+| BR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| BR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| BR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| BR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| BR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
 
 ---
 
@@ -150,12 +150,12 @@ standard_ref:
 
 | ID | Risk | Description | Probability | Impact | Level | Response | Owner |
 |----|------|-------------|------------|--------|-------|----------|-------|
-| TR-01 | [Legacy integration failure] | [New system unable to integrate with legacy ERP] | 3 — Possible | 5 — Critical | 🔴 | Mitigate — Early POC, phased integration | Tech Lead |
-| TR-02 | [Data migration quality] | [Corrupted or incomplete data during migration] | 3 — Possible | 4 — Major | 🟠 | Mitigate — Parallel run, extensive validation | Data Architect |
-| TR-03 | [Performance below target] | [System cannot meet performance NFRs under load] | 2 — Unlikely | 4 — Major | 🟡 | Mitigate — Load testing, architecture review | Tech Lead |
-| TR-04 | [Security vulnerability] | [Undetected security flaw in new system] | 2 — Unlikely | 5 — Critical | 🟠 | Mitigate — Penetration testing, SAST/DAST | Security Lead |
-| TR-05 | [Technology obsolescence] | [Chosen technology becomes unsupported] | 1 — Rare | 3 — Moderate | 🟢 | Accept — Monitor vendor roadmap | Architect |
-| TR-06 | | | | | | | |
+| TR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| TR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| TR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| TR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| TR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| TR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
 
 ---
 
@@ -163,11 +163,11 @@ standard_ref:
 
 | ID | Risk | Description | Probability | Impact | Level | Response | Owner |
 |----|------|-------------|------------|--------|-------|----------|-------|
-| FR-01 | [Budget overrun] | [Actual costs exceed approved budget by >15%] | 3 — Possible | 4 — Major | 🟠 | Mitigate — Contingency reserve, monthly tracking | PM |
-| FR-02 | [Funding withdrawal] | [Organizational funding cut mid-project] | 2 — Unlikely | 5 — Critical | 🟠 | Transfer — Contractual protections, phased funding | Sponsor |
-| FR-03 | [Vendor cost escalation] | [Vendor increases prices during implementation] | 2 — Unlikely | 3 — Moderate | 🟡 | Transfer — Fixed-price contracts, penalty clauses | Procurement |
-| FR-04 | [Benefits not realized] | [Projected value fails to materialize] | 3 — Possible | 4 — Major | 🟠 | Mitigate — Benefits tracking, early validation | BA |
-| FR-05 | | | | | | | |
+| FR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| FR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| FR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| FR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| FR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
 
 ---
 
@@ -175,12 +175,12 @@ standard_ref:
 
 | ID | Risk | Description | Probability | Impact | Level | Response | Owner |
 |----|------|-------------|------------|--------|-------|----------|-------|
-| OR-01 | [User adoption failure] | [Staff resist new system, continue old processes] | 4 — Likely | 5 — Critical | 🔴 | Mitigate — Change mgmt, training, champions | Change Mgr |
-| OR-02 | [Key resource departure] | [Critical team member leaves during project] | 3 — Possible | 4 — Major | 🟠 | Mitigate — Knowledge transfer, documentation | PM |
-| OR-03 | [Skills gap] | [Team lacks skills for new technology] | 3 — Possible | 3 — Moderate | 🟡 | Mitigate — Training, vendor support, hiring | PM |
-| OR-04 | [Change fatigue] | [Organization exhausted from prior changes] | 3 — Possible | 3 — Moderate | 🟡 | Mitigate — Phased approach, celebrate wins | Change Mgr |
-| OR-05 | [Competing priorities] | [Key resources pulled to other initiatives] | 3 — Possible | 3 — Moderate | 🟡 | Mitigate — Resource agreements, escalation | PM |
-| OR-06 | | | | | | | |
+| OR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| OR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| OR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| OR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| OR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| OR-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
 
 ---
 
@@ -188,11 +188,11 @@ standard_ref:
 
 | ID | Risk | Description | Probability | Impact | Level | Response | Owner |
 |----|------|-------------|------------|--------|-------|----------|-------|
-| ER-01 | [Vendor delivery delays] | [Vendor fails to deliver on committed timeline] | 3 — Possible | 4 — Major | 🟠 | Mitigate — SLAs, penalty clauses, alternatives | PM |
-| ER-02 | [Regulatory change] | [New regulation requires scope change] | 2 — Unlikely | 4 — Major | 🟡 | Accept — Monitor, contingency plan | Compliance |
-| ER-03 | [Third-party service outage] | [Cloud provider or API experiences extended outage] | 2 — Unlikely | 3 — Moderate | 🟡 | Mitigate — SLA, redundancy, fallback | Tech Lead |
-| ER-04 | [Economic downturn] | [Budget cuts due to economic conditions] | 2 — Unlikely | 4 — Major | 🟡 | Accept — Phased delivery, core-first approach | Sponsor |
-| ER-05 | | | | | | | |
+| ER-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| ER-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| ER-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| ER-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
+| ER-[XX] | [Risk name] | [Risk description] | [1-5 — Rating] | [1-5 — Rating] | [🔴/🟠/🟡/🟢] | [Response — actions] | [Role] |
 
 ---
 
@@ -200,9 +200,9 @@ standard_ref:
 
 | Impact \ Probability | 1 — Rare | 2 — Unlikely | 3 — Possible | 4 — Likely | 5 — Almost Certain |
 |---------------------|----------|-------------|-------------|-----------|-------------------|
-| **5 — Critical** | 🟡 | 🟠 FR-02 | 🟠 TR-02 | 🔴 OR-01 | 🔴 |
-| **4 — Major** | 🟢 | 🟡 ER-02, ER-04 | 🟠 FR-01, FR-04, OR-02, ER-01 | 🟠 BR-01 | 🔴 |
-| **3 — Moderate** | 🟢 | 🟢 BR-04 | 🟡 BR-02, OR-03, OR-04, OR-05 | 🟡 | 🟠 |
+| **5 — Critical** | 🟡 | 🟠 FR-[XX] | 🟠 TR-[XX] | 🔴 OR-[XX] | 🔴 |
+| **4 — Major** | 🟢 | 🟡 ER-[XX], ER-[XX] | 🟠 FR-[XX], FR-[XX], OR-[XX], ER-[XX] | 🟠 BR-[XX] | 🔴 |
+| **3 — Moderate** | 🟢 | 🟢 BR-[XX] | 🟡 BR-[XX], OR-[XX], OR-[XX], OR-[XX] | 🟡 | 🟠 |
 | **2 — Minor** | 🟢 | 🟢 | 🟡 | 🟡 | 🟡 |
 | **1 — Insignificant** | 🟢 | 🟢 | 🟢 | 🟢 | 🟡 |
 
@@ -216,9 +216,9 @@ standard_ref:
 
 | Strategy | Count | Risks |
 |----------|-------|-------|
-| **Mitigate** (reduce probability or impact) | [X] | TR-01, TR-02, TR-03, TR-04, FR-01, FR-04, OR-01, OR-02, OR-03, ER-01 |
-| **Transfer** (shift to third party) | [X] | FR-02, FR-03 |
-| **Accept** (acknowledge, monitor) | [X] | BR-04, TR-05, ER-02, ER-03, ER-04 |
+| **Mitigate** (reduce probability or impact) | [X] | TR-[XX], TR-[XX], TR-[XX], TR-[XX], FR-[XX], FR-[XX], OR-[XX], OR-[XX], OR-[XX], ER-[XX] |
+| **Transfer** (shift to third party) | [X] | FR-[XX], FR-[XX] |
+| **Accept** (acknowledge, monitor) | [X] | BR-[XX], TR-[XX], ER-[XX], ER-[XX], ER-[XX] |
 | **Avoid** (eliminate the cause) | [X] | — |
 | **Escalate** (to higher authority) | [X] | — |
 
@@ -226,31 +226,18 @@ standard_ref:
 
 > **Repeat for each 🟠/🔴 risk.**
 
-#### OR-01: User Adoption Failure
+#### OR-[XX]: [Risk Name]
 
 | Field | Detail |
 |-------|--------|
-| **Risk** | Staff resist new system, continue old processes |
-| **Response Strategy** | Mitigate |
-| **Response Actions** | 1. Change management program from Day 1<br>2. Identify and train champions in each team<br>3. Involve end users in design workshops<br>4. Phased rollout with early wins<br>5. Executive sponsorship and visible support |
-| **Trigger** | [Adoption metrics below X% at any checkpoint] |
-| **Contingency** | [If adoption <50% at go-live, extend parallel run + additional training] |
+| **Risk** | [Risk description] |
+| **Response Strategy** | [Mitigate / Transfer / Accept / Avoid / Escalate] |
+| **Response Actions** | [Numbered response actions] |
+| **Trigger** | [Condition that activates the response] |
+| **Contingency** | [Fallback if trigger fires] |
 | **Cost of Response** | $[X] |
-| **Owner** | Change Manager |
-| **Due Date** | [Ongoing — from project start] |
-
-#### TR-01: Legacy Integration Failure
-
-| Field | Detail |
-|-------|--------|
-| **Risk** | New system unable to integrate with legacy ERP |
-| **Response Strategy** | Mitigate |
-| **Response Actions** | 1. Integration POC in Phase 1, Week 2<br>2. Engage ERP vendor for API support<br>3. Design fallback — batch file transfer<br>4. Allocate buffer in integration timeline |
-| **Trigger** | [POC fails to achieve data exchange] |
-| **Contingency** | [Switch to batch file integration — manual sync as last resort] |
-| **Cost of Response** | $[X] |
-| **Owner** | Technical Lead |
-| **Due Date** | [Phase 1, Week 2] |
+| **Owner** | [Role] |
+| **Due Date** | [Date / phase] |
 
 ---
 
@@ -293,26 +280,26 @@ standard_ref:
 
 | Category | 🔴 Critical | 🟠 High | 🟡 Medium | 🟢 Low | Total |
 |----------|------------|--------|----------|-------|-------|
-| Business | 0 | 1 | 2 | 1 | 4 |
-| Technical | 1 | 2 | 1 | 1 | 5 |
-| Financial | 0 | 3 | 1 | 0 | 4 |
-| Organizational | 1 | 1 | 3 | 0 | 5 |
-| External | 0 | 1 | 3 | 0 | 4 |
-| **Total** | **2** | **8** | **10** | **2** | **22** |
+| Business | [N] | [N] | [N] | [N] | [N] |
+| Technical | [N] | [N] | [N] | [N] | [N] |
+| Financial | [N] | [N] | [N] | [N] | [N] |
+| Organizational | [N] | [N] | [N] | [N] | [N] |
+| External | [N] | [N] | [N] | [N] | [N] |
+| **Total** | **[N]** | **[N]** | **[N]** | **[N]** | **[N]** |
 
 ### Key Findings
 
-1. **Organizational risk is highest** — User adoption (OR-01) is the #1 risk requiring dedicated change management
-2. **Technical risks are manageable** — Early POC and phased integration mitigate the critical integration risk
-3. **Financial risks need monitoring** — Benefits realization (FR-04) must be tracked from Phase 1
-4. **External risks are mostly acceptable** — Vendor SLAs and regulatory monitoring provide adequate coverage
+1. **[Finding theme]** — [Finding detail with risk ID references]
+2. **[Finding theme]** — [Finding detail]
+3. **[Finding theme]** — [Finding detail]
+4. **[Finding theme]** — [Finding detail]
 
 ### Risk-Based Recommendations
 
-1. **Invest in change management** — OR-01 justifies dedicated change management budget
-2. **Integration POC first** — TR-01 must be validated before committing to full integration
-3. **Contingency reserve** — 15% budget contingency recommended for FR-01
-4. **Phased approach** — Reduces exposure to multiple risks simultaneously
+1. **[Recommendation]** — [Rationale and linked risk IDs]
+2. **[Recommendation]** — [Rationale]
+3. **[Recommendation]** — [Rationale]
+4. **[Recommendation]** — [Rationale]
 
 ---
 

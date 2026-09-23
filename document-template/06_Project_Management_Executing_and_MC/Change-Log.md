@@ -31,12 +31,7 @@ standard_ref:
 
 | Change ID | Date | Category | Title | Description | Reason | Impact | Decision | Authority | Implemented |
 |-----------|------|----------|-------|-------------|--------|--------|----------|----------|------------|
-| CHG-001 | [YYYY-MM-DD] | Scope | [Added save draft feature] | [Users can save incomplete forms] | [User feedback — 40% abandon] | [+3 days, +$2K] | ✅ Approved | PM | [Date] |
-| CHG-002 | [YYYY-MM-DD] | Quality | [Changed response time target] | [From <2s to <1.5s] | [Competitive benchmark] | [+$5K CDN] | ✅ Approved | PM | [Date] |
-| CHG-003 | [YYYY-MM-DD] | Scope | [Added bulk upload] | [Corporate clients can upload CSV] | [Missed in initial elicitation] | [+5 days, +$3K] | ✅ Approved | CCB | [Date] |
-| CHG-004 | [YYYY-MM-DD] | Scope | [Deferred ML anomaly detection] | [Moved to Phase 3] | [Budget constraint] | [-$50K, -3 months Phase 1] | ✅ Approved | Steering | [Date] |
-| CHG-005 | [YYYY-MM-DD] | Schedule | [Sprint 3 extended by 3 days] | [Integration POC took longer] | [ERP API complexity] | [+3 days] | ✅ Approved | PM | [Date] |
-| CHG-006 | [YYYY-MM-DD] | Requirement | [Modified FR-005] | [Added auto-save every 5 min] | [User feedback] | [No cost/schedule impact] | ✅ Approved | PM | [Date] |
+| CHG-[XXX] | [YYYY-MM-DD] | [Category] | [Change title] | [Change description] | [Reason] | [+X days, +$[X]] | [Decision] | [PM / CCB / Steering] | [YYYY-MM-DD] |
 
 ## 3. Change Categories
 
@@ -57,49 +52,47 @@ standard_ref:
 
 | Category | Count | Total Impact |
 |----------|-------|-------------|
-| Scope | [3] | [+8 days, +$5K] |
-| Quality | [1] | [+$5K] |
-| Schedule | [1] | [+3 days] |
-| Requirement | [1] | [No impact] |
-| Design | [0] | — |
-| Resource | [0] | — |
-| Baseline | [0] | — |
-| **Total** | **[6]** | **[+11 days, +$10K]** |
+| Scope | [N] | [+X days, +$[X]] |
+| Quality | [N] | [+$[X]] |
+| Schedule | [N] | [+X days] |
+| Requirement | [N] | [Impact] |
+| Design | [N] | — |
+| Resource | [N] | — |
+| Baseline | [N] | — |
+| **Total** | **[N]** | **[+X days, +$[X]]** |
 
 ### 4.2 By Decision
 
 | Decision | Count | Percentage |
 |----------|-------|-----------|
-| ✅ Approved | [6] | [100%] |
-| ❌ Rejected | [0] | [0%] |
-| ⏸️ Deferred | [0] | [0%] |
-| ⏳ Pending | [0] | [0%] |
-| **Total** | **[6]** | **100%** |
+| ✅ Approved | [N] | [X]% |
+| ❌ Rejected | [N] | [X]% |
+| ⏸️ Deferred | [N] | [X]% |
+| ⏳ Pending | [N] | [X]% |
+| **Total** | **[N]** | **100%** |
 
 ### 4.3 Change Trend
 
 | Period | Changes Submitted | Approved | Impact |
 |--------|------------------|---------|--------|
-| [Month 1] | [2] | [2] | [+3 days, +$2K] |
-| [Month 2] | [3] | [3] | [+5 days, +$8K] |
-| [Month 3] | [1] | [1] | [+3 days] |
-| **Total** | **[6]** | **[6]** | **[+11 days, +$10K]** |
+| [Period] | [N] | [N] | [+X days, +$[X]] |
+| **Total** | **[N]** | **[N]** | **[+X days, +$[X]]** |
 
 ## 5. Impact on Baselines
 
 | Baseline | Original | Current | Change | Status |
 |----------|---------|---------|--------|--------|
-| [Scope Baseline] | [v1.0] | [v1.1] | [+1 feature, 1 deferred] | Updated |
-| [Schedule Baseline] | [YYYY-MM-DD go-live] | [YYYY-MM-DD go-live] | [+11 days] | Updated |
-| [Cost Baseline] | $[X] | $[X + $10K] | [+$10K] | Updated |
+| [Scope Baseline] | [vX.Y] | [vX.Y] | [Change summary] | [Status] |
+| [Schedule Baseline] | [YYYY-MM-DD go-live] | [YYYY-MM-DD go-live] | [+X days] | [Status] |
+| [Cost Baseline] | $[X] | $[X] | [+$[X]] | [Status] |
 
 ## 6. Lessons from Changes
 
 | # | Lesson | Impact |
 |---|--------|--------|
-| 1 | [More thorough elicitation could have caught bulk upload earlier] | [Invest more in workshops] |
-| 2 | [ERP API complexity underestimated] | [Better POC before sprint] |
-| 3 | [User feedback valuable — save draft was quick win] | [Continue user involvement] |
+| 1 | [Lesson learned] | [Impact / follow-up action] |
+| 2 | [Lesson learned] | [Impact / follow-up action] |
+| 3 | [Lesson learned] | [Impact / follow-up action] |
 
 ---
 

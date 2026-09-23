@@ -91,14 +91,14 @@ standard_ref:
 | [e.g., Regulatory deadline] | External | 🔴 Critical | [Must comply by YYYY-MM-DD] |
 | [e.g., Customer complaints] | External | 🟡 High | [Losing X% customers/year] |
 | [e.g., Operational cost] | Internal | 🟡 High | [$X/year in avoidable costs] |
-| [e.g., Competitive pressure] | External | 🟡 High | [Competitors 3x faster] |
+| [e.g., Competitive pressure] | External | 🟡 High | [Competitors [N]x faster] |
 | [e.g., Technical debt] | Internal | 🟢 Medium | [Support ending YYYY] |
 
 ### 2.2 Current → Future Summary
 
 | Dimension | Current State | Future State | Gap Severity |
 |-----------|--------------|-------------|-------------|
-| **Process** | [Manual, 15 steps, 12 days] | [Automated, 3 steps, 1 day] | 🔴 Critical |
+| **Process** | [Manual, [N] steps, [N] days] | [Automated, [N] steps, [N] days] | 🔴 Critical |
 | **Technology** | [Legacy, end-of-life] | [Modern, cloud-native] | 🔴 Critical |
 | **Data** | [Siloed, inconsistent] | [Integrated, governed] | 🟡 High |
 | **People** | [Manual skills, capacity constrained] | [Digital skills, right-sized] | 🟡 High |
@@ -108,11 +108,11 @@ standard_ref:
 
 | Gap ID | Current | Future | Gap | Severity | Approach |
 |--------|---------|--------|-----|----------|----------|
-| GAP-01 | [12-day onboarding] | [1-day onboarding] | [Process automation] | 🔴 | Automate |
-| GAP-02 | [Legacy CRM] | [Cloud CRM] | [System replacement] | 🔴 | Replace |
-| GAP-03 | [No real-time data] | [Live dashboards] | [Data platform] | 🟡 | Build |
-| GAP-04 | [Manual compliance] | [Automated audit trail] | [Logging + controls] | 🔴 | Build |
-| GAP-05 | [No self-service] | [Customer portal] | [New capability] | 🟡 | Build |
+| GAP-[XX] | [[N]-day onboarding] | [[N]-day onboarding] | [Process automation] | 🔴 | Automate |
+| GAP-[XX] | [Legacy system] | [Modern platform] | [System replacement] | 🔴 | Replace |
+| GAP-[XX] | [No real-time data] | [Live dashboards] | [Data platform] | 🟡 | Build |
+| GAP-[XX] | [Manual compliance] | [Automated audit trail] | [Logging + controls] | 🔴 | Build |
+| GAP-[XX] | [No self-service] | [Customer portal] | [New capability] | 🟡 | Build |
 
 ---
 
@@ -122,24 +122,24 @@ standard_ref:
 
 | Criteria (Weight) | Option A: Do Nothing | Option B: Phased Approach | Option C: Big Bang | Option D: Pilot → Scale |
 |-------------------|---------------------|--------------------------|-------------------|----------------------|
-| **Description** | No change | Incremental delivery in 3 phases | All-at-once replacement | Pilot with 1 unit, then scale |
+| **Description** | No change | [Incremental delivery in [N] phases] | [All-at-once replacement] | [Pilot with [N] unit, then scale] |
 | **Cost** | $0 (ongoing losses) | $[X] | $[Y] | $[Z] |
-| **Timeline** | N/A | 12 months | 8 months | 10 months |
+| **Timeline** | N/A | [X months] | [X months] | [X months] |
 | **Risk** | 🔴 Critical | 🟡 Medium | 🔴 High | 🟢 Low-Medium |
 | **Disruption** | None | Low | High | Very Low |
-| **Time to Value** | Never | Phase 1: 4 months | 8 months | Pilot: 3 months |
+| **Time to Value** | Never | Phase 1: [X] months | [X] months | Pilot: [X] months |
 | **Strategic Fit** | ❌ None | ✅ Strong | ✅ Strong | ✅ Strong |
 
 ### 3.2 Weighted Scoring
 
 | Criterion | Weight | A: Do Nothing | B: Phased | C: Big Bang | D: Pilot→Scale |
 |-----------|--------|--------------|-----------|-------------|---------------|
-| Strategic Alignment | 25% | 1 | 4 | 5 | 4 |
-| Financial Return | 25% | 1 | 4 | 3 | 4 |
-| Implementation Risk | 20% | 5 | 4 | 2 | 5 |
-| Time to Value | 15% | 1 | 4 | 3 | 5 |
-| Organizational Impact | 15% | 5 | 4 | 2 | 4 |
-| **Weighted Score** | **100%** | **2.3** | **4.0** | **3.1** | **4.4** |
+| Strategic Alignment | 25% | [Score] | [Score] | [Score] | [Score] |
+| Financial Return | 25% | [Score] | [Score] | [Score] | [Score] |
+| Implementation Risk | 20% | [Score] | [Score] | [Score] | [Score] |
+| Time to Value | 15% | [Score] | [Score] | [Score] | [Score] |
+| Organizational Impact | 15% | [Score] | [Score] | [Score] | [Score] |
+| **Weighted Score** | **100%** | **[Sum]** | **[Sum]** | **[Sum]** | **[Sum]** |
 
 ---
 
@@ -155,19 +155,19 @@ standard_ref:
 
 ```mermaid
 flowchart LR
-    subgraph Phase1["Phase 1: Foundation<br>Months 1-4"]
+    subgraph Phase1["Phase 1: Foundation<br>Months [N-M]"]
         P1A[Infrastructure Setup]
         P1B[Core System Migration]
         P1C[Process Automation - Critical]
     end
 
-    subgraph Phase2["Phase 2: Enhancement<br>Months 5-8"]
+    subgraph Phase2["Phase 2: Enhancement<br>Months [N-M]"]
         P2A[Self-Service Portal]
         P2B[Data Integration]
         P2C[Process Automation - Remaining]
     end
 
-    subgraph Phase3["Phase 3: Optimization<br>Months 9-12"]
+    subgraph Phase3["Phase 3: Optimization<br>Months [N-M]"]
         P3A[Advanced Analytics]
         P3B[AI/ML Capabilities]
         P3C[Continuous Improvement]
@@ -182,27 +182,27 @@ flowchart LR
 
 ### 4.3 Phase Detail
 
-#### Phase 1: Foundation (Months 1-4)
+#### Phase 1: Foundation (Months [N-M])
 
 | Deliverable | Description | Success Criteria | Dependencies |
 |------------|-------------|-----------------|-------------|
 | [Infrastructure] | [Cloud environment, CI/CD pipeline] | [Environment operational] | [Budget approval] |
-| [Core Migration] | [Migrate CRM to cloud platform] | [Data migrated, users trained] | [Vendor selection] |
-| [Critical Automation] | [Automate top 3 pain point processes] | [50% reduction in manual effort] | [Process mapping complete] |
+| [Core Migration] | [Migrate [system] to [target platform]] | [Data migrated, users trained] | [Vendor selection] |
+| [Critical Automation] | [Automate top [N] pain point processes] | [[X]% reduction in manual effort] | [Process mapping complete] |
 
 **Phase 1 Investment:** $[X] | **Phase 1 Benefits:** $[Y]/year
 
-#### Phase 2: Enhancement (Months 5-8)
+#### Phase 2: Enhancement (Months [N-M])
 
 | Deliverable | Description | Success Criteria | Dependencies |
 |------------|-------------|-----------------|-------------|
-| [Self-Service Portal] | [Customer-facing portal] | [30% adoption in 3 months] | [Phase 1 complete] |
+| [Self-Service Portal] | [Customer-facing portal] | [[X]% adoption in [N] months] | [Phase 1 complete] |
 | [Data Integration] | [Real-time sync across systems] | [Zero data discrepancies] | [Phase 1 complete] |
-| [Remaining Automation] | [Automate remaining processes] | [80% automation achieved] | [Phase 1 complete] |
+| [Remaining Automation] | [Automate remaining processes] | [[X]% automation achieved] | [Phase 1 complete] |
 
 **Phase 2 Investment:** $[X] | **Phase 2 Benefits:** $[Y]/year
 
-#### Phase 3: Optimization (Months 9-12)
+#### Phase 3: Optimization (Months [N-M])
 
 | Deliverable | Description | Success Criteria | Dependencies |
 |------------|-------------|-----------------|-------------|
@@ -244,10 +244,10 @@ gantt
 
 | Aspect | Strategy |
 |--------|---------|
-| **Data Migration** | [e.g., ETL-based migration with validation — parallel run for 2 weeks] |
+| **Data Migration** | [e.g., ETL-based migration with validation — parallel run for [N] weeks] |
 | **System Cutover** | [e.g., Phased by department — not big bang] |
-| **Parallel Running** | [e.g., Old + new system run simultaneously for 4 weeks] |
-| **Rollback Plan** | [e.g., Can revert to old system within 24 hours if critical issues] |
+| **Parallel Running** | [e.g., Old + new system run simultaneously for [N] weeks] |
+| **Rollback Plan** | [e.g., Can revert to old system within [N] hours if critical issues] |
 | **Go-Live Strategy** | [e.g., Soft launch with pilot group → full rollout] |
 
 ### 5.2 Data Migration Plan
@@ -258,7 +258,7 @@ gantt
 | 2. Transform | [Clean, deduplicate, reformat] | [X days] | [Data quality checks] |
 | 3. Load | [Load into target systems] | [X days] | [Referential integrity checks] |
 | 4. Validate | [Business validation of migrated data] | [X days] | [UAT by business users] |
-| 5. Cutover | [Switch to new system] | [1 day] | [Smoke tests] |
+| 5. Cutover | [Switch to new system] | [[N] days] | [Smoke tests] |
 
 ### 5.3 Cutover Plan
 
@@ -275,8 +275,8 @@ gantt
 
 | Trigger | Threshold | Action | Decision Maker |
 |---------|----------|--------|---------------|
-| [e.g., Data integrity failure] | [>0.1% records corrupted] | [Rollback to legacy] | [PM + Sponsor] |
-| [e.g., System unavailability] | [>4 hours downtime] | [Rollback to legacy] | [PM + IT Lead] |
+| [e.g., Data integrity failure] | [>[X]% records corrupted] | [Rollback to legacy] | [PM + Sponsor] |
+| [e.g., System unavailability] | [>[X] hours downtime] | [Rollback to legacy] | [PM + IT Lead] |
 | [e.g., Critical process failure] | [Core process non-functional] | [Rollback to legacy] | [PM + Sponsor] |
 
 ---
@@ -287,10 +287,10 @@ gantt
 
 | Element | Current State | Target | Gap | Strategy |
 |---------|--------------|--------|-----|----------|
-| **Awareness** | [30% aware of change] | [100%] | [-70%] | [Communication campaign] |
-| **Desire** | [20% supportive] | [80%] | [-60%] | [WIIFM messaging, champion network] |
-| **Knowledge** | [10% trained] | [90%] | [-80%] | [Training program] |
-| **Ability** | [5% capable] | [85%] | [-80%] | [Hands-on practice, coaching] |
+| **Awareness** | [[X]% aware of change] | [[X]%] | [-[X]%] | [Communication campaign] |
+| **Desire** | [[X]% supportive] | [[X]%] | [-[X]%] | [WIIFM messaging, champion network] |
+| **Knowledge** | [[X]% trained] | [[X]%] | [-[X]%] | [Training program] |
+| **Ability** | [[X]% capable] | [[X]%] | [-[X]%] | [Hands-on practice, coaching] |
 | **Reinforcement** | [None] | [Sustained] | [Full gap] | [Recognition, metrics, feedback] |
 
 ### 6.2 Stakeholder Engagement Plan
@@ -316,10 +316,10 @@ gantt
 
 | Audience | Training Type | Duration | Delivery | Timeline |
 |----------|--------------|----------|----------|----------|
-| [Operations Staff] | [System training + new processes] | [3 days] | [Classroom + sandbox] | [2 weeks before go-live] |
-| [IT Team] | [Technical training + operations] | [5 days] | [Workshop + hands-on] | [1 month before go-live] |
-| [Management] | [Dashboard + reporting] | [1 day] | [Workshop] | [1 week before go-live] |
-| [Customers] | [Self-service portal] | [30 min] | [Video + guide] | [At go-live] |
+| [Operations Staff] | [System training + new processes] | [[N] days] | [Classroom + sandbox] | [[N] weeks before go-live] |
+| [IT Team] | [Technical training + operations] | [[N] days] | [Workshop + hands-on] | [[N] months before go-live] |
+| [Management] | [Dashboard + reporting] | [[N] days] | [Workshop] | [[N] weeks before go-live] |
+| [Customers] | [Self-service portal] | [[N] min] | [Video + guide] | [At go-live] |
 
 ### 6.5 Resistance Management
 
@@ -349,22 +349,22 @@ gantt
 
 | Role | Phase 1 | Phase 2 | Phase 3 | Source |
 |------|---------|---------|---------|--------|
-| Project Manager | 1 FTE | 1 FTE | 0.5 FTE | Internal |
-| Business Analyst | 1 FTE | 1 FTE | 0.5 FTE | Internal |
-| Solution Architect | 1 FTE | 0.5 FTE | 0.25 FTE | Internal / External |
-| Developers | 3 FTE | 4 FTE | 2 FTE | Internal + Vendor |
-| QA Engineer | 1 FTE | 2 FTE | 1 FTE | Internal |
-| Change Manager | 0.5 FTE | 0.5 FTE | 0.25 FTE | Internal |
-| Training Lead | 0.25 FTE | 0.5 FTE | 0.25 FTE | Internal |
+| Project Manager | [X] FTE | [X] FTE | [X] FTE | [Source] |
+| Business Analyst | [X] FTE | [X] FTE | [X] FTE | [Source] |
+| Solution Architect | [X] FTE | [X] FTE | [X] FTE | [Source] |
+| Developers | [X] FTE | [X] FTE | [X] FTE | [Source] |
+| QA Engineer | [X] FTE | [X] FTE | [X] FTE | [Source] |
+| Change Manager | [X] FTE | [X] FTE | [X] FTE | [Source] |
+| Training Lead | [X] FTE | [X] FTE | [X] FTE | [Source] |
 
 ### 7.3 Vendor Strategy
 
 | Component | Approach | Rationale |
 |-----------|---------|-----------|
-| [e.g., CRM Platform] | [Buy — Salesforce] | [Industry-leading, faster time-to-market] |
-| [e.g., Integration Layer] | [Buy — MuleSoft] | [Pre-built connectors, reduced development] |
+| [e.g., CRM Platform] | [Buy — [Vendor/Product]] | [Industry-leading, faster time-to-market] |
+| [e.g., Integration Layer] | [Buy — [Vendor/Product]] | [Pre-built connectors, reduced development] |
 | [e.g., Self-Service Portal] | [Build — custom] | [Competitive differentiation] |
-| [e.g., Analytics] | [Buy — Tableau/PowerBI] | [Best-in-class, self-service] |
+| [e.g., Analytics] | [Buy — [Vendor/Product]] | [Best-in-class, self-service] |
 
 ---
 
@@ -374,18 +374,18 @@ gantt
 
 | ID | Risk | Probability | Impact | Level | Mitigation | Owner |
 |----|------|------------|--------|-------|-----------|-------|
-| CR-01 | [e.g., User adoption below target] | High | High | 🔴 | [Change management program, champions] | [Change Manager] |
-| CR-02 | [e.g., Data migration quality issues] | Medium | High | 🟠 | [Parallel run, extensive validation] | [Data Architect] |
-| CR-03 | [e.g., Scope creep] | High | Medium | 🟠 | [Strict change control, MoSCoW] | [PM] |
-| CR-04 | [e.g., Key resource unavailability] | Medium | Medium | 🟡 | [Cross-training, backup resources] | [PM] |
-| CR-05 | [e.g., Vendor delivery delays] | Medium | High | 🟠 | [Contractual SLAs, penalty clauses] | [PM] |
+| CR-[XX] | [e.g., User adoption below target] | High | High | 🔴 | [Change management program, champions] | [Change Manager] |
+| CR-[XX] | [e.g., Data migration quality issues] | Medium | High | 🟠 | [Parallel run, extensive validation] | [Data Architect] |
+| CR-[XX] | [e.g., Scope creep] | High | Medium | 🟠 | [Strict change control, MoSCoW] | [PM] |
+| CR-[XX] | [e.g., Key resource unavailability] | Medium | Medium | 🟡 | [Cross-training, backup resources] | [PM] |
+| CR-[XX] | [e.g., Vendor delivery delays] | Medium | High | 🟠 | [Contractual SLAs, penalty clauses] | [PM] |
 
 ### 8.2 Risk Heat Map
 
 | Impact \ Probability | Low | Medium | High |
 |---------------------|-----|--------|------|
-| **High** | 🟡 | 🟠 CR-02, CR-05 | 🔴 CR-01 |
-| **Medium** | 🟢 | 🟡 CR-04 | 🟠 CR-03 |
+| **High** | 🟡 | 🟠 CR-[XX], CR-[XX] | 🔴 CR-[XX] |
+| **Medium** | 🟢 | 🟡 CR-[XX] | 🟠 CR-[XX] |
 | **Low** | 🟢 | 🟢 | 🟡 |
 
 > **Legend:** 🔴 Critical — Immediate action required | 🟠 High — Mitigation plan required | 🟡 Medium — Monitor and manage | 🟢 Low — Accept and monitor
@@ -399,18 +399,18 @@ gantt
 ```mermaid
 flowchart LR
     subgraph Phase1["Phase 1 Benefits<br>Month 4+"]
-        B1[50% Process Automation<br>$X/year savings]
-        B2[Reduced Error Rate<br>$Y/year savings]
+        B1["[X]% [Benefit]<br>$[X]/year savings"]
+        B2["[Benefit]<br>$[X]/year savings"]
     end
 
     subgraph Phase2["Phase 2 Benefits<br>Month 8+"]
-        B3[Self-Service Adoption<br>$X/year savings]
-        B4[Real-Time Data<br>Faster decisions]
+        B3["[Benefit]<br>$[X]/year savings"]
+        B4["[Benefit]<br>[Outcome]"]
     end
 
     subgraph Phase3["Phase 3 Benefits<br>Month 12+"]
-        B5[Predictive Analytics<br>$X/year value]
-        B6[Full Optimization<br>Target KPIs achieved]
+        B5["[Benefit]<br>$[X]/year value"]
+        B6["[Benefit]<br>[Outcome]"]
     end
 
     Phase1 --> Phase2 --> Phase3
@@ -424,10 +424,10 @@ flowchart LR
 
 | Benefit | Expected Value | Measurement Method | Realization Target | Owner |
 |---------|---------------|-------------------|-------------------|-------|
-| [Process automation savings] | $[X]/year | [Hours saved × hourly rate] | [Phase 1 + 3 months] | [Ops Manager] |
-| [Error reduction savings] | $[Y]/year | [Rework cost reduction] | [Phase 1 + 1 month] | [QA Lead] |
-| [Self-service savings] | $[Z]/year | [Support call reduction] | [Phase 2 + 3 months] | [Customer Service] |
-| [Revenue from faster onboarding] | $[W]/year | [Additional customers × revenue] | [Phase 2 + 6 months] | [Sales] |
+| [Benefit description] | $[X]/year | [Hours saved × hourly rate] | [Phase [N] + [N] months] | [Ops Manager] |
+| [Benefit description] | $[Y]/year | [Rework cost reduction] | [Phase [N] + [N] months] | [QA Lead] |
+| [Benefit description] | $[Z]/year | [Support call reduction] | [Phase [N] + [N] months] | [Customer Service] |
+| [Benefit description] | $[W]/year | [Additional customers × revenue] | [Phase [N] + [N] months] | [Sales] |
 
 ### 9.3 Post-Implementation Review
 

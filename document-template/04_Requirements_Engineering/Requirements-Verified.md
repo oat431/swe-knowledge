@@ -80,13 +80,13 @@ standard_ref:
 
 | Req ID | Requirement | Atomic | Complete | Consistent | Feasible | Unambiguous | Testable | Traceable | Overall | Issues |
 |--------|-------------|--------|----------|-----------|---------|------------|---------|----------|---------|--------|
-| FR-001 | [Online submission] | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ Pass | None |
-| FR-002 | [Input validation] | ✅ | ⚠️ | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ Partial | [Missing validation rules detail] |
-| FR-003 | [Real-time errors] | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | ✅ | ⚠️ Partial | [Ambiguous "real-time"] |
-| FR-101 | [Auto-classification] | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | ⚠️ Partial | [AC missing edge cases] |
-| FR-103 | [Auto-approval] | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ Pass | None |
-| NFR-001 | [Response time <2s] | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ Pass | None |
-| SEC-001 | [MFA for admin] | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ Pass | None |
+| FR-[XXX] | [Requirement title] | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ Pass | None |
+| FR-[XXX] | [Requirement title] | ✅ | ⚠️ | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ Partial | [Issue description] |
+| FR-[XXX] | [Requirement title] | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | ✅ | ⚠️ Partial | [Issue description] |
+| FR-[XXX] | [Requirement title] | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | ⚠️ Partial | [Issue description] |
+| FR-[XXX] | [Requirement title] | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ Pass | None |
+| NFR-[XXX] | [Requirement title] | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ Pass | None |
+| SEC-[XXX] | [Requirement title] | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ Pass | None |
 
 ### 3.2 Verification Statistics
 
@@ -102,9 +102,9 @@ standard_ref:
 
 | Issue ID | Req ID | Issue | Severity | Owner | Due Date | Status |
 |----------|--------|-------|----------|-------|----------|--------|
-| VI-001 | FR-002 | [Missing validation rules detail] | 🟡 Medium | [BA] | [YYYY-MM-DD] | ☐ |
-| VI-002 | FR-003 | [Ambiguous "real-time" — define latency] | 🟡 Medium | [BA] | [YYYY-MM-DD] | ☐ |
-| VI-003 | FR-101 | [AC missing edge cases for classification] | 🟡 Medium | [QA] | [YYYY-MM-DD] | ☐ |
+| VI-[XXX] | FR-[XXX] | [Issue description] | [🔴 High / 🟡 Medium / 🟢 Low] | [Owner] | [YYYY-MM-DD] | ☐ |
+| VI-[XXX] | FR-[XXX] | [Issue description] | [🔴 High / 🟡 Medium / 🟢 Low] | [Owner] | [YYYY-MM-DD] | ☐ |
+| VI-[XXX] | NFR-[XXX] | [Issue description] | [🔴 High / 🟡 Medium / 🟢 Low] | [QA] | [YYYY-MM-DD] | ☐ |
 
 ## 4. Verification Checklist
 

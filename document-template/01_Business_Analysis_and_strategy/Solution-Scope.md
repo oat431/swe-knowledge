@@ -101,20 +101,20 @@ standard_ref:
 ```mermaid
 flowchart TB
     subgraph IN_SCOPE["✅ IN SCOPE"]
-        CRM[CRM System<br>Replace]
-        PORTAL[Customer Portal<br>New Build]
-        ONBOARD[Onboarding Process<br>Automate]
-        ORDER[Order Processing<br>Automate]
-        DATA_CUST[Customer Data<br>Migrate]
-        DATA_ORDER[Order Data<br>Migrate]
+        CRM["[System]<br>[Action]"]
+        PORTAL["[System]<br>[Action]"]
+        ONBOARD["[Process]<br>[Action]"]
+        ORDER["[Process]<br>[Action]"]
+        DATA_CUST["[Data Entity]<br>[Action]"]
+        DATA_ORDER["[Data Entity]<br>[Action]"]
     end
 
     subgraph OUT_SCOPE["❌ OUT OF SCOPE"]
-        ERP[ERP System<br>Phase 2]
-        HR[HR System<br>Unchanged]
-        FIN[Finance System<br>Unchanged]
-        DATA_HR[HR Data<br>Excluded]
-        DATA_FIN[Finance Data<br>Excluded]
+        ERP["[System]<br>[Phase]"]
+        HR["[System]<br>[Disposition]"]
+        FIN["[System]<br>[Disposition]"]
+        DATA_HR["[Data Entity]<br>[Disposition]"]
+        DATA_FIN["[Data Entity]<br>[Disposition]"]
     end
 
     PORTAL -->|Integrates| CRM
@@ -135,14 +135,14 @@ flowchart TB
 
 | ID | Scope Item | Category | Description | Priority | Phase |
 |----|-----------|----------|-------------|----------|-------|
-| S-01 | [e.g., Customer Onboarding Process] | Process | [Automate end-to-end onboarding from application to activation] | 🔴 | Phase 1 |
-| S-02 | [e.g., CRM System Replacement] | Technology | [Replace legacy CRM with cloud platform] | 🔴 | Phase 1 |
-| S-03 | [e.g., Customer Self-Service Portal] | Technology | [New web portal for customer account management] | 🔴 | Phase 2 |
-| S-04 | [e.g., Order Processing Automation] | Process | [Automate order validation, pricing, fulfillment] | 🔴 | Phase 2 |
-| S-05 | [e.g., Customer Data Migration] | Data | [Migrate 500K customer records to new platform] | 🔴 | Phase 1 |
-| S-06 | [e.g., Real-Time Dashboard] | Technology | [Management dashboard with live KPIs] | 🟡 | Phase 3 |
-| S-07 | [e.g., API Integration Layer] | Technology | [Connect CRM, ERP, portal via APIs] | 🔴 | Phase 1 |
-| S-08 | | | | | |
+| S-[XX] | [e.g., Customer Onboarding Process] | Process | [Automate end-to-end onboarding from application to activation] | 🔴 | Phase 1 |
+| S-[XX] | [e.g., CRM System Replacement] | Technology | [Replace legacy CRM with cloud platform] | 🔴 | Phase 1 |
+| S-[XX] | [e.g., Customer Self-Service Portal] | Technology | [New web portal for customer account management] | 🔴 | Phase 2 |
+| S-[XX] | [e.g., Order Processing Automation] | Process | [Automate order validation, pricing, fulfillment] | 🔴 | Phase 2 |
+| S-[XX] | [e.g., Customer Data Migration] | Data | [Migrate [N] customer records to new platform] | 🔴 | Phase 1 |
+| S-[XX] | [e.g., Real-Time Dashboard] | Technology | [Management dashboard with live KPIs] | 🟡 | Phase 3 |
+| S-[XX] | [e.g., API Integration Layer] | Technology | [Connect CRM, ERP, portal via APIs] | 🔴 | Phase 1 |
+| S-[XX] | | | | | |
 
 ### 3.2 Scope by Capability
 
@@ -164,13 +164,13 @@ flowchart TB
 
 | ID | Excluded Item | Category | Rationale | Future Phase |
 |----|--------------|----------|-----------|-------------|
-| O-01 | [e.g., ERP System Upgrade] | Technology | [Separate initiative — funded independently] | Phase 2 |
-| O-02 | [e.g., HR System Changes] | Technology | [No business case — current system adequate] | TBD |
-| O-03 | [e.g., International Expansion] | Business | [Domestic launch first — international in Phase 2] | Phase 2 |
-| O-04 | [e.g., Advanced Analytics / AI/ML] | Technology | [Foundation must be built first] | Phase 3 |
-| O-05 | [e.g., Legacy System Decommission] | Technology | [Post-migration stability period required] | Phase 2 |
-| O-06 | [e.g., Finance System Integration] | Technology | [Manual process acceptable for now] | Phase 2 |
-| O-07 | | | | |
+| O-[XX] | [e.g., ERP System Upgrade] | Technology | [Separate initiative — funded independently] | Phase 2 |
+| O-[XX] | [e.g., HR System Changes] | Technology | [No business case — current system adequate] | TBD |
+| O-[XX] | [e.g., International Expansion] | Business | [Domestic launch first — international in Phase 2] | Phase 2 |
+| O-[XX] | [e.g., Advanced Analytics / AI/ML] | Technology | [Foundation must be built first] | Phase 3 |
+| O-[XX] | [e.g., Legacy System Decommission] | Technology | [Post-migration stability period required] | Phase 2 |
+| O-[XX] | [e.g., Finance System Integration] | Technology | [Manual process acceptable for now] | Phase 2 |
+| O-[XX] | | | | |
 
 ### 4.2 Explicit Non-Goals
 
@@ -203,19 +203,19 @@ flowchart TB
 ```mermaid
 flowchart LR
     subgraph IN["✅ In Scope"]
-        APPLY[Customer<br>Application] --> VALIDATE[Auto<br>Validation]
-        VALIDATE --> APPROVE[Approval<br>Workflow]
-        APPROVE --> CREATE[Account<br>Creation]
-        CREATE --> NOTIFY[Notification<br>& Welcome]
+        APPLY["[Process<br>Step]"] --> VALIDATE["[Process<br>Step]"]
+        VALIDATE --> APPROVE["[Process<br>Step]"]
+        APPROVE --> CREATE["[Process<br>Step]"]
+        CREATE --> NOTIFY["[Process<br>Step]"]
     end
 
     subgraph BOUNDARY["⚠️ Boundary"]
-        NOTIFY --> ERP_SYNC[ERP<br>Sync]
+        NOTIFY --> ERP_SYNC["[Boundary<br>System]"]
     end
 
     subgraph OUT["❌ Out of Scope"]
-        ERP_SYNC --> BILLING[Billing<br>& Invoicing]
-        BILLING --> PAYMENT[Payment<br>Processing]
+        ERP_SYNC --> BILLING["[Out-of-Scope<br>Process]"]
+        BILLING --> PAYMENT["[Out-of-Scope<br>Process]"]
     end
 
     style IN fill:#1b5e20,color:#fff
@@ -227,9 +227,9 @@ flowchart LR
 
 | Data Entity | Scope | Action | Volume |
 |------------|-------|--------|--------|
-| [Customer Profile] | ✅ In Scope | [Migrate + manage] | [500K records] |
-| [Order History] | ✅ In Scope | [Migrate + manage] | [2M records] |
-| [Product Catalog] | ⚠️ Boundary | [Read from ERP — no changes] | [50K SKUs] |
+| [Customer Profile] | ✅ In Scope | [Migrate + manage] | [X records] |
+| [Order History] | ✅ In Scope | [Migrate + manage] | [X records] |
+| [Product Catalog] | ⚠️ Boundary | [Read from ERP — no changes] | [X SKUs] |
 | [Employee Data] | ❌ Out of Scope | [No access] | N/A |
 | [Financial Data] | ❌ Out of Scope | [No access] | N/A |
 
@@ -251,25 +251,25 @@ flowchart LR
 
 | ID | Deliverable | Type | Description | Acceptance Criteria | Phase |
 |----|------------|------|-------------|-------------------|-------|
-| D-01 | [Cloud CRM Platform] | System | [Configured, migrated, operational CRM] | [All users onboarded, data migrated] | 1 |
-| D-02 | [API Integration Layer] | System | [REST APIs connecting CRM, ERP, portal] | [All integrations tested, <2s response] | 1 |
-| D-03 | [Customer Self-Service Portal] | System | [Web portal for customer account management] | [30% adoption in 3 months] | 2 |
-| D-04 | [Automated Onboarding Process] | Process | [End-to-end automated onboarding] | [<1 day processing, <1% error rate] | 1 |
-| D-05 | [Data Migration] | Data | [Customer + order data migrated and validated] | [100% record reconciliation] | 1 |
-| D-06 | [Training Materials] | Documentation | [User guides, videos, sandbox environment] | [90% training completion] | 1 |
-| D-07 | [Operations Runbook] | Documentation | [System operations and troubleshooting guide] | [IT team sign-off] | 1 |
-| D-08 | [Real-Time Dashboard] | System | [Management KPI dashboard] | [All KPIs displaying correctly] | 3 |
-| D-09 | | | | | |
+| D-[XX] | [Cloud CRM Platform] | System | [Configured, migrated, operational CRM] | [All users onboarded, data migrated] | 1 |
+| D-[XX] | [API Integration Layer] | System | [REST APIs connecting CRM, ERP, portal] | [All integrations tested, <[X]s response] | 1 |
+| D-[XX] | [Customer Self-Service Portal] | System | [Web portal for customer account management] | [[X]% adoption in [N] months] | 2 |
+| D-[XX] | [Automated Onboarding Process] | Process | [End-to-end automated onboarding] | [<[X] day processing, <[X]% error rate] | 1 |
+| D-[XX] | [Data Migration] | Data | [Customer + order data migrated and validated] | [[X]% record reconciliation] | 1 |
+| D-[XX] | [Training Materials] | Documentation | [User guides, videos, sandbox environment] | [[X]% training completion] | 1 |
+| D-[XX] | [Operations Runbook] | Documentation | [System operations and troubleshooting guide] | [IT team sign-off] | 1 |
+| D-[XX] | [Real-Time Dashboard] | System | [Management KPI dashboard] | [All KPIs displaying correctly] | 3 |
+| D-[XX] | | | | | |
 
 ### 6.2 Deliverable Traceability
 
 | Deliverable | Business Objective | Business Requirement | Stakeholder Need |
 |------------|-------------------|---------------------|-----------------|
-| D-01 CRM | OBJ-01, OBJ-02 | BR-01, BR-02 | SN-01, SN-02 |
-| D-02 APIs | OBJ-01 | BR-02 | SN-02 |
-| D-03 Portal | OBJ-02 | BR-01 | SN-01 |
-| D-04 Onboarding | OBJ-01 | BR-01 | SN-01 |
-| D-05 Migration | OBJ-01, OBJ-02 | BR-02 | SN-02 |
+| D-[XX] CRM | OBJ-[XX], OBJ-[XX] | BR-[XX], BR-[XX] | SN-[XX], SN-[XX] |
+| D-[XX] APIs | OBJ-[XX] | BR-[XX] | SN-[XX] |
+| D-[XX] Portal | OBJ-[XX] | BR-[XX] | SN-[XX] |
+| D-[XX] Onboarding | OBJ-[XX] | BR-[XX] | SN-[XX] |
+| D-[XX] Migration | OBJ-[XX], OBJ-[XX] | BR-[XX] | SN-[XX] |
 
 ---
 
@@ -281,7 +281,7 @@ flowchart LR
 |------|----------|-----------|--------|------------|
 | [e.g., ERP upgrade] | Excluded — Phase 2 | [Separate budget, separate timeline] | [Manual sync required] | [Sponsor] |
 | [e.g., International support] | Excluded — Phase 2 | [Domestic market validation first] | [Limited to domestic customers] | [Sponsor] |
-| [e.g., Custom billing] | Excluded permanently | [COTS solution meets 90% of needs] | [10% edge cases handled manually] | [Sponsor] |
+| [e.g., Custom billing] | Excluded permanently | [COTS solution meets [X]% of needs] | [[X]% edge cases handled manually] | [Sponsor] |
 | [e.g., 24/7 support] | Excluded — Phase 1 | [Cost prohibitive, business hours sufficient] | [After-hours issues wait until morning] | [Sponsor] |
 
 ---
@@ -290,11 +290,11 @@ flowchart LR
 
 | ID | Constraint | Type | Impact on Scope | Mitigation |
 |----|-----------|------|----------------|-----------|
-| SC-01 | [e.g., Budget cap $500K] | Financial | [Limits technology choices] | [Prioritize 🔴 items, defer 🟡] |
-| SC-02 | [e.g., Go-live by YYYY-MM-DD] | Time | [Limits scope to essentials] | [Phased approach] |
-| SC-03 | [e.g., Must integrate with existing ERP] | Technical | [API dependency] | [Early integration testing] |
-| SC-04 | [e.g., No new headcount] | Resource | [Limits parallel workstreams] | [Vendor augmentation] |
-| SC-05 | [e.g., Data sovereignty — must stay in-country] | Legal | [Limits hosting options] | [Local cloud region] |
+| SC-[XX] | [e.g., Budget cap $[X]] | Financial | [Limits technology choices] | [Prioritize 🔴 items, defer 🟡] |
+| SC-[XX] | [e.g., Go-live by YYYY-MM-DD] | Time | [Limits scope to essentials] | [Phased approach] |
+| SC-[XX] | [e.g., Must integrate with existing ERP] | Technical | [API dependency] | [Early integration testing] |
+| SC-[XX] | [e.g., No new headcount] | Resource | [Limits parallel workstreams] | [Vendor augmentation] |
+| SC-[XX] | [e.g., Data sovereignty — must stay in-country] | Legal | [Limits hosting options] | [Local cloud region] |
 
 ---
 
@@ -334,7 +334,7 @@ flowchart TD
 
 | CR ID | Date | Description | Impact | Decision | Approved By |
 |-------|------|-------------|--------|----------|------------|
-| CR-001 | [YYYY-MM-DD] | [Description] | [Scope/Schedule/Cost impact] | [Approved/Rejected/Deferred] | [Name] |
+| CR-[XXX] | [YYYY-MM-DD] | [Description] | [Scope/Schedule/Cost impact] | [Approved/Rejected/Deferred] | [Name] |
 | | | | | | |
 
 ---
@@ -343,10 +343,10 @@ flowchart TD
 
 | # | Assumption | Impact if Invalid | Validation Method | Status |
 |---|-----------|-------------------|-------------------|--------|
-| A-01 | [e.g., ERP API will remain stable] | [Integration rework] | [Vendor confirmation] | ✅ |
-| A-02 | [e.g., Key staff available for UAT] | [Delayed acceptance] | [Resource plan confirmed] | ⏳ |
-| A-03 | [e.g., Data quality is sufficient for migration] | [Extended cleansing effort] | [Data profiling report] | ⏳ |
-| A-04 | [e.g., No regulatory changes during project] | [Scope change] | [Regulatory monitoring] | ⏳ |
+| A-[XX] | [e.g., ERP API will remain stable] | [Integration rework] | [Vendor confirmation] | ✅ |
+| A-[XX] | [e.g., Key staff available for UAT] | [Delayed acceptance] | [Resource plan confirmed] | ⏳ |
+| A-[XX] | [e.g., Data quality is sufficient for migration] | [Extended cleansing effort] | [Data profiling report] | ⏳ |
+| A-[XX] | [e.g., No regulatory changes during project] | [Scope change] | [Regulatory monitoring] | ⏳ |
 
 ---
 
