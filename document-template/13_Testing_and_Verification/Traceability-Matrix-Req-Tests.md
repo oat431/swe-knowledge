@@ -1,5 +1,14 @@
 ---
 document_type: Traceability Matrix (Req ↔ Tests)
+schema_version: 2
+canonical_name: Traceability Matrix Req Tests
+doc_form: light
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
+overlap_group: traceability
+source_of_truth: 04_Requirements_Engineering/Requirements-Traceability-Matrix.md
+overlap_note: Testing view (Req↔Tests) of the canonical RTM
 version: "1.0"
 status: Active
 author: "[QA Lead]"

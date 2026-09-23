@@ -1,5 +1,15 @@
 ---
 document_type: Change Log
+schema_version: 2
+canonical_name: Change Log
+doc_form: record
+applicability: evidence
+min_project_tier: 4  # Small-Prod
+tier_trigger: Produced by the activity it records
+minimum_form: Entries in the project tracker or repo
+overlap_group: change-control
+source_of_truth: 19_Configuration_Management/Change-Request.md
+overlap_note: Aggregated log view
 version: "1.0"
 status: Active
 author: "[Author Name]"

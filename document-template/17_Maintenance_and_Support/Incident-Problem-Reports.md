@@ -1,5 +1,15 @@
 ---
 document_type: Incident / Problem Reports
+schema_version: 2
+canonical_name: Incident Problem Reports
+doc_form: record
+applicability: evidence
+min_project_tier: 4  # Small-Prod
+tier_trigger: Produced by the activity it records
+minimum_form: Tracker entries with links to decisions
+overlap_group: incident
+source_of_truth: 16_Deployment_and_Operations/Incident-Management-Process.md
+overlap_note: Records produced by the process
 version: "1.0"
 status: Active
 author: "[Technical Lead]"

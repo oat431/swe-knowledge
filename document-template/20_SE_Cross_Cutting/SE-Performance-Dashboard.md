@@ -1,5 +1,12 @@
 ---
 document_type: SE Performance Dashboard
+schema_version: 2
+canonical_name: SE Performance Dashboard
+doc_form: record
+applicability: conditional
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Multi-team / systems-engineering lifecycle context
+minimum_form: Short summary doc or dashboard screenshot + decision note
 version: "1.0"
 status: Active
 author: "[Systems Engineer]"

@@ -1,5 +1,12 @@
 ---
 document_type: FMEA / FTA Reports
+schema_version: 2
+canonical_name: FMEA FTA Reports
+doc_form: record
+applicability: conditional
+min_project_tier: 7  # Mission-Critical
+tier_trigger: Systems-engineering, safety, formal-assurance, or organization-program context
+minimum_form: Tracker entries with links to decisions
 version: "1.0"
 status: Draft
 author: "[QA Lead]"

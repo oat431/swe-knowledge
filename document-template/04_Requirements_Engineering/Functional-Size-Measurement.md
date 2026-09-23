@@ -1,5 +1,12 @@
 ---
 document_type: Functional Size Measurement (FSM)
+schema_version: 2
+canonical_name: Functional Size Measurement
+doc_form: light
+applicability: technique
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Used inside parent artifacts when the modeling need arises
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Author Name]"

@@ -1,5 +1,12 @@
 ---
 document_type: SSDLC Process Documentation
+schema_version: 2
+canonical_name: SSDLC Process Documentation
+doc_form: light
+applicability: conditional
+min_project_tier: 4  # Small-Prod
+tier_trigger: Exposure, data sensitivity, supplier/distribution, or regulation triggers
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Security Engineer]"

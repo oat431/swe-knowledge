@@ -1,5 +1,11 @@
 ---
 document_type: Design Review Records
+schema_version: 2
+canonical_name: Design Review Records
+doc_form: light
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: Entries in the project tracker or repo
 version: "1.0"
 status: Active
 author: "[Author Name]"

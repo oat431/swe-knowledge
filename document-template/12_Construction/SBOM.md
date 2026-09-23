@@ -1,5 +1,12 @@
 ---
 document_type: SBOM (Software Bill of Materials)
+schema_version: 2
+canonical_name: SBOM
+doc_form: light
+applicability: conditional
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Distribution, supply-chain, contractual, or regulatory requirement
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Technical Lead]"

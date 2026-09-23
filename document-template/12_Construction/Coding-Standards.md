@@ -1,5 +1,11 @@
 ---
 document_type: Coding Standards / Style Guide
+schema_version: 2
+canonical_name: Coding Standards
+doc_form: light
+applicability: universal
+min_project_tier: 3  # Internal
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "2.0"
 status: Draft
 author: "[Technical Lead]"

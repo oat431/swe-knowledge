@@ -1,5 +1,12 @@
 ---
 document_type: Capability Upgrade Plan
+schema_version: 2
+canonical_name: Capability Upgrade Plan
+doc_form: light
+applicability: conditional
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Multi-team / systems-engineering lifecycle context
+minimum_form: One section in the project hub/management plan
 version: "1.0"
 status: Draft
 author: "[Systems Engineer]"

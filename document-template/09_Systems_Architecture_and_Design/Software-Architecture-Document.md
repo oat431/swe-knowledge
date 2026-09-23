@@ -1,5 +1,11 @@
 ---
 document_type: SAD (Software Architecture Document)
+schema_version: 2
+canonical_name: Software Architecture Document
+doc_form: light
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Author Name]"

@@ -1,5 +1,12 @@
 ---
 document_type: Data Management Maturity Assessment
+schema_version: 2
+canonical_name: Data Management Maturity Assessment
+doc_form: light
+applicability: conditional
+min_project_tier: 6  # Production-Grade
+tier_trigger: Shared/master data, analytics workload, regulated or personal data
+minimum_form: Short summary doc or dashboard screenshot + decision note
 version: "1.0"
 status: Draft
 author: "[Data Governance Officer]"

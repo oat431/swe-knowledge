@@ -1,5 +1,11 @@
 ---
 document_type: Capacity Plan (Infrastructure)
+schema_version: 2
+canonical_name: Capacity Plan
+doc_form: light
+applicability: universal
+min_project_tier: 5  # Medium-Prod
+minimum_form: One section in the project hub/management plan
 version: "1.0"
 status: Draft
 author: "[DevOps Engineer]"

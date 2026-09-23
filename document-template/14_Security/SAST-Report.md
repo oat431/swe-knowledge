@@ -1,5 +1,12 @@
 ---
 document_type: SAST Report
+schema_version: 2
+canonical_name: SAST Report
+doc_form: record
+applicability: conditional
+min_project_tier: 4  # Small-Prod
+tier_trigger: Exposure, data sensitivity, supplier/distribution, or regulation triggers
+minimum_form: Short summary doc or dashboard screenshot + decision note
 version: "1.0"
 status: Active
 author: "[Security Engineer]"

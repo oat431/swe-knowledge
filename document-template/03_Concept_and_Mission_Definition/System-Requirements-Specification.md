@@ -1,5 +1,14 @@
 ---
 document_type: System Requirements Specification (SyRS)
+schema_version: 2
+canonical_name: System Requirements Specification
+doc_form: heavy
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: Lightweight markdown doc with required fields only
+overlap_group: requirements-spec
+source_of_truth: 03_Concept_and_Mission_Definition/System-Requirements-Specification.md
+overlap_note: System-level (SyRS) — distinct scope
 version: "1.0"
 status: Draft
 author: "[Author Name]"

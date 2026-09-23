@@ -1,5 +1,12 @@
 ---
 document_type: Data Technology Roadmap
+schema_version: 2
+canonical_name: Data Technology Roadmap
+doc_form: light
+applicability: conditional
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Shared/master data, analytics workload, regulated or personal data
+minimum_form: Embedded Mermaid/sketch in the parent artifact
 version: "1.0"
 status: Draft
 author: "[Data Architect]"

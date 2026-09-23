@@ -1,5 +1,11 @@
 ---
 document_type: Mock/Stub/Driver Specifications
+schema_version: 2
+canonical_name: Mock Stub Driver Specifications
+doc_form: light
+applicability: universal
+min_project_tier: 5  # Medium-Prod
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Technical Lead]"

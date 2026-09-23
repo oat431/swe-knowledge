@@ -1,5 +1,12 @@
 ---
 document_type: Data Model Review Records
+schema_version: 2
+canonical_name: Data Model Review Records
+doc_form: light
+applicability: conditional
+min_project_tier: 4  # Small-Prod
+tier_trigger: Shared/master data, analytics workload, regulated or personal data
+minimum_form: Entries in the project tracker or repo
 version: "1.0"
 status: Active
 author: "[Data Architect]"

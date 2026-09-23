@@ -1,5 +1,12 @@
 ---
 document_type: Contract / Agreement
+schema_version: 2
+canonical_name: Contract Agreement
+doc_form: light
+applicability: conditional
+min_project_tier: 4  # Small-Prod
+tier_trigger: External supplier, COTS, SaaS, or contract work involved
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Template
 author: "[Author Name]"

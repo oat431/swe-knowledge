@@ -1,5 +1,12 @@
 ---
 document_type: Decision Tables / Decision Trees
+schema_version: 2
+canonical_name: Decision Tables Trees
+doc_form: light
+applicability: technique
+min_project_tier: 4  # Small-Prod
+tier_trigger: Used inside parent artifacts when the modeling need arises
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Author Name]"

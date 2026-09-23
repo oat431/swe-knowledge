@@ -1,5 +1,12 @@
 ---
 document_type: Maintenance Metrics Dashboard
+schema_version: 2
+canonical_name: Maintenance Metrics Dashboard
+doc_form: record
+applicability: evidence
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Produced by the activity it records
+minimum_form: Short summary doc or dashboard screenshot + decision note
 version: "1.0"
 status: Active
 author: "[Technical Lead]"

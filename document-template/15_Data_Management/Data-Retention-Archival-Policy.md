@@ -1,5 +1,12 @@
 ---
 document_type: Data Retention & Archival Policy
+schema_version: 2
+canonical_name: Data Retention Archival Policy
+doc_form: light
+applicability: conditional
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Shared/master data, analytics workload, regulated or personal data
+minimum_form: One section in the project hub/management plan
 version: "1.0"
 status: Draft
 author: "[Data Governance Officer]"

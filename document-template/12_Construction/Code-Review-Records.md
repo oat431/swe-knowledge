@@ -1,5 +1,11 @@
 ---
 document_type: Code Review Records
+schema_version: 2
+canonical_name: Code Review Records
+doc_form: light
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: Entries in the project tracker or repo
 version: "2.0"
 status: Active
 author: "[Technical Lead]"

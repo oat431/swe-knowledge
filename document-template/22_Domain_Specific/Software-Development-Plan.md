@@ -1,5 +1,12 @@
 ---
 document_type: Software Development Plan
+schema_version: 2
+canonical_name: Software Development Plan
+doc_form: light
+applicability: conditional
+min_project_tier: 7  # Mission-Critical
+tier_trigger: Regulated/domain-specific context (medical, gov/defense, safety)
+minimum_form: One section in the project hub/management plan
 version: "1.0"
 status: Draft
 author: "[Technical Lead]"

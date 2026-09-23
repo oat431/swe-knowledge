@@ -1,5 +1,12 @@
 ---
 document_type: DAST Report
+schema_version: 2
+canonical_name: DAST Report
+doc_form: record
+applicability: conditional
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Exposure, data sensitivity, supplier/distribution, or regulation triggers
+minimum_form: Short summary doc or dashboard screenshot + decision note
 version: "1.0"
 status: Active
 author: "[Security Engineer]"

@@ -1,5 +1,12 @@
 ---
 document_type: Standards Compliance Matrix
+schema_version: 2
+canonical_name: Standards Compliance Matrix
+doc_form: light
+applicability: conditional
+min_project_tier: 7  # Mission-Critical
+tier_trigger: Systems-engineering, safety, formal-assurance, or organization-program context
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Systems Engineer]"

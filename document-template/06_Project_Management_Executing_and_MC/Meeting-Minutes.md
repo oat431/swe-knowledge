@@ -1,5 +1,12 @@
 ---
 document_type: Meeting Minutes
+schema_version: 2
+canonical_name: Meeting Minutes
+doc_form: record
+applicability: evidence
+min_project_tier: 3  # Internal
+tier_trigger: Produced by the activity it records
+minimum_form: Entries in the project tracker or repo
 version: "1.0"
 status: Template
 author: "[Author Name]"

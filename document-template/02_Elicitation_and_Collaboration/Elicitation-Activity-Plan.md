@@ -1,5 +1,11 @@
 ---
 document_type: Elicitation Activity Plan
+schema_version: 2
+canonical_name: Elicitation Activity Plan
+doc_form: heavy
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: One section in the project hub/management plan
 version: "1.0"
 status: Draft
 author: "[Author Name]"

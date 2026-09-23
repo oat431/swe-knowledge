@@ -1,5 +1,12 @@
 ---
 document_type: Integration Plan + Reports
+schema_version: 2
+canonical_name: Integration Plan Reports
+doc_form: record
+applicability: conditional
+min_project_tier: 4  # Small-Prod
+tier_trigger: Multi-team / systems-engineering lifecycle context
+minimum_form: Tracker entries with links to decisions
 version: "1.0"
 status: Draft
 author: "[Integration Engineer]"

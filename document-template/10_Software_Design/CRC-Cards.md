@@ -1,5 +1,12 @@
 ---
 document_type: CRC Cards
+schema_version: 2
+canonical_name: CRC Cards
+doc_form: record
+applicability: evidence
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Produced by the activity it records
+minimum_form: Embedded Mermaid/sketch in the parent artifact
 version: "1.0"
 status: Draft
 author: "[Author Name]"

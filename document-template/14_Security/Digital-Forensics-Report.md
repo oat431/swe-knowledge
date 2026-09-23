@@ -1,5 +1,12 @@
 ---
 document_type: Digital Forensics Report
+schema_version: 2
+canonical_name: Digital Forensics Report
+doc_form: record
+applicability: conditional
+min_project_tier: 6  # Production-Grade
+tier_trigger: Systems-engineering, safety, formal-assurance, or organization-program context
+minimum_form: Short summary doc or dashboard screenshot + decision note
 version: "1.0"
 status: Draft
 author: "[Security Engineer]"

@@ -1,5 +1,11 @@
 ---
 document_type: Container Configurations
+schema_version: 2
+canonical_name: Container Configurations
+doc_form: light
+applicability: universal
+min_project_tier: 5  # Medium-Prod
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Active
 author: "[DevOps Engineer]"

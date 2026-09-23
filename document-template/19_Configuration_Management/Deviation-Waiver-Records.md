@@ -1,5 +1,12 @@
 ---
 document_type: Deviation / Waiver Records
+schema_version: 2
+canonical_name: Deviation Waiver Records
+doc_form: light
+applicability: conditional
+min_project_tier: 7  # Mission-Critical
+tier_trigger: Systems-engineering, safety, formal-assurance, or organization-program context
+minimum_form: Entries in the project tracker or repo
 version: "1.0"
 status: Active
 author: "[Configuration Manager]"

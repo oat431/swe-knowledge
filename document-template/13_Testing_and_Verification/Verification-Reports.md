@@ -1,5 +1,12 @@
 ---
 document_type: Verification Reports
+schema_version: 2
+canonical_name: Verification Reports
+doc_form: record
+applicability: evidence
+min_project_tier: 4  # Small-Prod
+tier_trigger: Produced by the activity it records
+minimum_form: Tracker entries with links to decisions
 version: "1.0"
 status: Active
 author: "[Systems Engineer]"

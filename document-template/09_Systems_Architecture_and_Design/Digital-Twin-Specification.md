@@ -1,5 +1,12 @@
 ---
 document_type: Digital Twin Specification
+schema_version: 2
+canonical_name: Digital Twin Specification
+doc_form: light
+applicability: conditional
+min_project_tier: 7  # Mission-Critical
+tier_trigger: Systems-engineering, safety, formal-assurance, or organization-program context
+minimum_form: Lightweight markdown doc with required fields only
 version: "1.0"
 status: Draft
 author: "[Author Name]"

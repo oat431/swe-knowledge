@@ -1,5 +1,12 @@
 ---
 document_type: Activity Diagrams (Design)
+schema_version: 2
+canonical_name: Activity Diagrams Design
+doc_form: light
+applicability: technique
+min_project_tier: 4  # Small-Prod
+tier_trigger: Used inside parent artifacts when the modeling need arises
+minimum_form: Embedded Mermaid/sketch in the parent artifact
 version: "1.0"
 status: Draft
 author: "[Author Name]"

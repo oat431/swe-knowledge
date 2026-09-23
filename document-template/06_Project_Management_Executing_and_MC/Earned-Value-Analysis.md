@@ -1,5 +1,11 @@
 ---
 document_type: Earned Value Analysis
+schema_version: 2
+canonical_name: Earned Value Analysis
+doc_form: light
+applicability: universal
+min_project_tier: 5  # Medium-Prod
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Active
 author: "[Author Name]"

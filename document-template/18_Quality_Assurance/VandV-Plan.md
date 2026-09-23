@@ -1,5 +1,11 @@
 ---
 document_type: V&V Plan
+schema_version: 2
+canonical_name: VandV Plan
+doc_form: light
+applicability: universal
+min_project_tier: 5  # Medium-Prod
+minimum_form: One section in the project hub/management plan
 version: "1.0"
 status: Draft
 author: "[QA Lead]"

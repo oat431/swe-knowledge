@@ -1,5 +1,12 @@
 ---
 document_type: SLA Compliance Report
+schema_version: 2
+canonical_name: SLA Compliance Report
+doc_form: record
+applicability: evidence
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Produced by the activity it records
+minimum_form: Short summary doc or dashboard screenshot + decision note
 version: "1.0"
 status: Active
 author: "[DevOps Engineer]"

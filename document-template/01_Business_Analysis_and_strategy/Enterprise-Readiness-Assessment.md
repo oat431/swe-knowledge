@@ -1,5 +1,11 @@
 ---
 document_type: Enterprise Readiness Assessment
+schema_version: 2
+canonical_name: Enterprise Readiness Assessment
+doc_form: heavy
+applicability: universal
+min_project_tier: 5  # Medium-Prod
+minimum_form: Short summary doc or dashboard screenshot + decision note
 version: "1.0"
 status: Draft
 author: "[Author Name]"

@@ -1,5 +1,11 @@
 ---
 document_type: Security Requirements Specification
+schema_version: 2
+canonical_name: Security Requirements Specification
+doc_form: light
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: Lightweight markdown doc with required fields only
 version: "1.0"
 status: Draft
 author: "[Security Engineer]"

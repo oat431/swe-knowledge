@@ -1,5 +1,11 @@
 ---
 document_type: System Bill of Materials
+schema_version: 2
+canonical_name: System Bill of Materials
+doc_form: light
+applicability: universal
+min_project_tier: 5  # Medium-Prod
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Author Name]"

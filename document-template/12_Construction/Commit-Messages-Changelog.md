@@ -1,5 +1,12 @@
 ---
 document_type: Commit Messages / Changelog
+schema_version: 2
+canonical_name: Commit Messages Changelog
+doc_form: record
+applicability: evidence
+min_project_tier: 3  # Internal
+tier_trigger: Produced by the activity it records
+minimum_form: Entries in the project tracker or repo
 version: "2.0"
 status: Active
 author: "[Technical Lead]"

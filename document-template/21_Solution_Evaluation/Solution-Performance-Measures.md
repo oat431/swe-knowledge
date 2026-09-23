@@ -1,5 +1,11 @@
 ---
 document_type: Solution Performance Measures
+schema_version: 2
+canonical_name: Solution Performance Measures
+doc_form: light
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Active
 author: "[Business Analyst]"

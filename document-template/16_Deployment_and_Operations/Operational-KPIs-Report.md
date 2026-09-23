@@ -1,5 +1,12 @@
 ---
 document_type: Operational KPIs Report
+schema_version: 2
+canonical_name: Operational KPIs Report
+doc_form: record
+applicability: evidence
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Produced by the activity it records
+minimum_form: Short summary doc or dashboard screenshot + decision note
 version: "1.0"
 status: Active
 author: "[DevOps Engineer]"

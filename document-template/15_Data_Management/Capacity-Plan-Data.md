@@ -1,5 +1,12 @@
 ---
 document_type: Capacity Plan (Data)
+schema_version: 2
+canonical_name: Capacity Plan Data
+doc_form: record
+applicability: conditional
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Shared/master data, analytics workload, regulated or personal data
+minimum_form: Tracker entries with links to decisions
 version: "1.0"
 status: Draft
 author: "[DBA]"

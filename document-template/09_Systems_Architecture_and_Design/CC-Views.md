@@ -1,5 +1,11 @@
 ---
 document_type: Component-and-Connector (C&C) Views
+schema_version: 2
+canonical_name: CC Views
+doc_form: light
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Author Name]"

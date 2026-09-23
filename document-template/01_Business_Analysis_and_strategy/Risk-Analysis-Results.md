@@ -1,5 +1,15 @@
 ---
 document_type: Risk Analysis Results
+schema_version: 2
+canonical_name: Risk Analysis Results
+doc_form: record
+applicability: evidence
+min_project_tier: 4  # Small-Prod
+tier_trigger: Produced by the activity it records
+minimum_form: Tracker entries with links to decisions
+overlap_group: risk
+source_of_truth: 05_Project_Management_Planning/Risk-Management-Plan.md
+overlap_note: BABOK analysis view
 version: "1.0"
 status: Draft
 author: "[Author Name]"

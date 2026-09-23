@@ -1,5 +1,12 @@
 ---
 document_type: System Safety Plan / Safety Case
+schema_version: 2
+canonical_name: System Safety Plan
+doc_form: light
+applicability: conditional
+min_project_tier: 7  # Mission-Critical
+tier_trigger: Systems-engineering, safety, formal-assurance, or organization-program context
+minimum_form: One section in the project hub/management plan
 version: "1.0"
 status: Draft
 author: "[Safety Engineer]"

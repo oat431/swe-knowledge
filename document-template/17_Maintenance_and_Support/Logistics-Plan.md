@@ -1,5 +1,12 @@
 ---
 document_type: Logistics Plan
+schema_version: 2
+canonical_name: Logistics Plan
+doc_form: light
+applicability: conditional
+min_project_tier: 6  # Production-Grade
+tier_trigger: Systems-engineering, safety, formal-assurance, or organization-program context
+minimum_form: One section in the project hub/management plan
 version: "1.0"
 status: Draft
 author: "[Technical Lead]"

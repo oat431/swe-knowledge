@@ -1,5 +1,12 @@
 ---
 document_type: Schedule Baseline
+schema_version: 2
+canonical_name: Schedule Baseline
+doc_form: record
+applicability: evidence
+min_project_tier: 4  # Small-Prod
+tier_trigger: Produced by the activity it records
+minimum_form: Tracker entries with links to decisions
 version: "1.0"
 status: Baselined
 author: "[Author Name]"

@@ -1,5 +1,12 @@
 ---
 document_type: Configuration Status Accounting Reports
+schema_version: 2
+canonical_name: Configuration Status Accounting Reports
+doc_form: record
+applicability: conditional
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Formal configuration management / contractual CM required
+minimum_form: Tracker entries with links to decisions
 version: "1.0"
 status: Active
 author: "[Configuration Manager]"

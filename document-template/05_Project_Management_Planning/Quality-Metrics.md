@@ -1,5 +1,12 @@
 ---
 document_type: Quality Metrics
+schema_version: 2
+canonical_name: Quality Metrics
+doc_form: record
+applicability: evidence
+min_project_tier: 4  # Small-Prod
+tier_trigger: Produced by the activity it records
+minimum_form: Short summary doc or dashboard screenshot + decision note
 version: "1.0"
 status: Draft
 author: "[Author Name]"

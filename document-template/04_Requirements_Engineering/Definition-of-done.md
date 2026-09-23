@@ -1,5 +1,11 @@
 ---
 document_type: Definition of Done (DoD)
+schema_version: 2
+canonical_name: Definition of done
+doc_form: light
+applicability: universal
+min_project_tier: 2  # Prototype
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Author Name]"

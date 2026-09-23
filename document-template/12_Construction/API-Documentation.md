@@ -1,5 +1,11 @@
 ---
 document_type: API Documentation
+schema_version: 2
+canonical_name: API Documentation
+doc_form: light
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Technical Lead]"

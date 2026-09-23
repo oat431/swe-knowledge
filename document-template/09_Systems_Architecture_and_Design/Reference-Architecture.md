@@ -1,5 +1,12 @@
 ---
 document_type: Reference Architecture
+schema_version: 2
+canonical_name: Reference Architecture
+doc_form: light
+applicability: conditional
+min_project_tier: 6  # Production-Grade
+tier_trigger: Systems-engineering, safety, formal-assurance, or organization-program context
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Author Name]"

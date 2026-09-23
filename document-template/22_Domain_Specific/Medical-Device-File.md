@@ -1,5 +1,12 @@
 ---
 document_type: Medical Device File
+schema_version: 2
+canonical_name: Medical Device File
+doc_form: light
+applicability: conditional
+min_project_tier: 7  # Mission-Critical
+tier_trigger: Regulated/domain-specific context (medical, gov/defense, safety)
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Regulatory Affairs]"

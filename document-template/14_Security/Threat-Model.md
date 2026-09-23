@@ -1,5 +1,11 @@
 ---
 document_type: Threat Model
+schema_version: 2
+canonical_name: Threat Model
+doc_form: light
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: Embedded Mermaid/sketch in the parent artifact
 version: "1.0"
 status: Draft
 author: "[Security Engineer]"

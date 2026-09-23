@@ -1,5 +1,12 @@
 ---
 document_type: Performance Test Report
+schema_version: 2
+canonical_name: Performance Test Report
+doc_form: record
+applicability: evidence
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Produced by the activity it records
+minimum_form: Short summary doc or dashboard screenshot + decision note
 version: "1.0"
 status: Draft
 author: "[QA Lead]"

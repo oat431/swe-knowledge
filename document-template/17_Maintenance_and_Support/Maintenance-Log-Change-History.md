@@ -1,5 +1,11 @@
 ---
 document_type: Maintenance Log / Change History
+schema_version: 2
+canonical_name: Maintenance Log Change History
+doc_form: light
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Active
 author: "[Technical Lead]"

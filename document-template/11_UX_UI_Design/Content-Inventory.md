@@ -1,5 +1,12 @@
 ---
 document_type: Content Inventory
+schema_version: 2
+canonical_name: Content Inventory
+doc_form: light
+applicability: conditional
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Product has a user-facing interface
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[UX Designer]"

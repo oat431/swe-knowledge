@@ -1,5 +1,12 @@
 ---
 document_type: MBSE Models (SysML)
+schema_version: 2
+canonical_name: MBSE Models
+doc_form: light
+applicability: conditional
+min_project_tier: 6  # Production-Grade
+tier_trigger: Systems-engineering, safety, formal-assurance, or organization-program context
+minimum_form: Embedded Mermaid/sketch in the parent artifact
 version: "1.0"
 status: Draft
 author: "[Author Name]"

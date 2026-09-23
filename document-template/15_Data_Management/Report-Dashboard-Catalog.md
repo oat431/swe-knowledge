@@ -1,5 +1,12 @@
 ---
 document_type: Report & Dashboard Catalog
+schema_version: 2
+canonical_name: Report Dashboard Catalog
+doc_form: record
+applicability: conditional
+min_project_tier: 4  # Small-Prod
+tier_trigger: Shared/master data, analytics workload, regulated or personal data
+minimum_form: Entries in the project tracker or repo
 version: "1.0"
 status: Active
 author: "[Data Architect]"

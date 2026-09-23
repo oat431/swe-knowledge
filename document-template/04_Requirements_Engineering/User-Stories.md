@@ -1,5 +1,11 @@
 ---
 document_type: User Stories
+schema_version: 2
+canonical_name: User Stories
+doc_form: heavy
+applicability: universal
+min_project_tier: 3  # Internal
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Author Name]"

@@ -1,5 +1,11 @@
 ---
 document_type: Skill Matrix
+schema_version: 2
+canonical_name: Skill Matrix
+doc_form: light
+applicability: universal
+min_project_tier: 5  # Medium-Prod
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Author Name]"

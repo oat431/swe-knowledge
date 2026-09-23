@@ -1,5 +1,11 @@
 ---
 document_type: Quality Management Plan
+schema_version: 2
+canonical_name: Quality Management Plan
+doc_form: light
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: One section in the project hub/management plan
 version: "1.0"
 status: Draft
 author: "[Author Name]"

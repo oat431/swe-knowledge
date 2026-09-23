@@ -1,5 +1,12 @@
 ---
 document_type: Architecture Patterns & Styles Catalog
+schema_version: 2
+canonical_name: Architecture Patterns Catalog
+doc_form: record
+applicability: evidence
+min_project_tier: 4  # Small-Prod
+tier_trigger: Produced by the activity it records
+minimum_form: Entries in the project tracker or repo
 version: "1.0"
 status: Draft
 author: "[Author Name]"

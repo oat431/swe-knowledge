@@ -46,13 +46,13 @@ companion_data: "[[Example-Contamination-Scan-2026-09-23]]"
 | RC-05 | Hardcoded 2023–2026 gantt dates instead of placeholders | 173 dates across 30 files | ✅ **Fixed 2026-09-23** — all gantt dates re-based to placeholder epoch `2000-01-01` = project start, relative offsets preserved, `%%` explanatory comment injected after `dateFormat`; verified 0 real-era dates remain in gantt blocks |
 | RC-06 | Example-content contamination (AI personas may inherit fake data as real) | Baseline scan: 59 HIGH / 97 MEDIUM / 207 LOW — see [[Example-Contamination-Scan-2026-09-23]] | ✅ **HIGH band fixed 2026-09-24** — 49 files stripped to placeholders (re-scan: HIGH=1, documented Business-Case.md method-content exception); MEDIUM band handled in Phase 3 rebuild |
 
-### 1.3 ED-A14 structural gaps (from 2026-08-03 audit, still unimplemented)
+### 1.3 ED-A14 structural gaps (from 2026-08-03 audit) — ✅ closed by Phase 3 (2026-09-24), except overlap merges deferred by D4
 
-1. No **row schema** (canonical name, aliases, purpose, owner, trigger, minimum form, formal form, source of truth).
-2. No **applicability tiers** — "Must Have" still conflates universal / conditional / profile / evidence / technique.
-3. No **tailoring metadata** — nothing tells a project (or an AI persona) *when* to use a template and what the lightest acceptable form is.
-4. No declared **heavy vs light tier** even though the split exists de-facto (74 with Document Control vs 289 without).
-5. Duplicate/overlapping identities unresolved: `Business-Requirements` (01) vs `Business-Requirements-Document` (04); `System-Requirements-Specification` (03) vs `Software-Requirements-Specification` (04); `Risk-Management-Plan` vs `Risk-Report`; `Project-Schedule` vs `Schedule-Management-Plan`; plus RTM appearing in 04 AND 13.
+1. ~~No **row schema**~~ → schema v2 in all 363 frontmatters.
+2. ~~No **applicability tiers**~~ → `applicability` + `min_project_tier` (7-tier ladder from release.md).
+3. ~~No **tailoring metadata**~~ → `tier_trigger` + `minimum_form` + [[7-Tier Applicability Matrix]] tailoring procedure.
+4. ~~No declared heavy/light tier~~ → `doc_form` (35 heavy / 236 light / 92 record; 14 technique-classified via applicability).
+5. Duplicate/overlapping identities — **aliased, not merged** (D4): `Business-Requirements` (01) vs `Business-Requirements-Document` (04); `System-Requirements-Specification` (03) vs `Software-Requirements-Specification` (04); `Risk-Management-Plan` vs `Risk-Report`; `Project-Schedule` vs `Schedule-Management-Plan`; plus RTM appearing in 04 AND 13.
 
 ---
 
@@ -123,10 +123,11 @@ flowchart LR
 Executed per D3 (strip to placeholders, no fenced examples) by 4 parallel subagents over the HIGH worklist from [[Example-Contamination-Scan-2026-09-23]] (plan doc itself excluded): 17 Requirements-Engineering + 11 Business-Analysis + 11 Testing/Concept/Change + 10 Architecture/PM/Data/Security files; parent fixed 2 residuals (Prototypes.md named markers, verified scan update). Fully-worked examples reduced to ONE bracketed skeleton per section; method content (weights, scales, thresholds, formulas) preserved per D3 rules.
 **Re-scan result: HIGH 59 → 1, MEDIUM 97 → 104, LOW 207 → 258.** The single remaining HIGH is Business-Case.md (score 16) — a documented policy exception: `$0` Do-Nothing semantics + scoring-matrix weights are method content, not fake data. Structural integrity verified across all 363 files: frontmatter intact, code fences balanced, 0 mindmaps. MEDIUM band re-scan deferred to the Phase 3 rebuild (files get regenerated with v2 schema anyway per D1(b)).
 
-### Phase 3 — Row schema + tier metadata (mechanical + editorial) 🟡
-1. Define the canonical frontmatter schema (v2): add `tier`, `applicability`, `trigger`, `minimum_form`, `canonical_name`, `aliases`, `source_of_truth`.
-2. Script the frontmatter upgrade for all 363 files (defaults from category), then editorially set `applicability`/`trigger` for the ~246 currently-red items using the 2026-08-03 audit §7 reclassification guidance.
-3. Resolve the 6 overlap pairs via D4 alias fields.
+### Phase 3 — Row schema + tier metadata ✅ COMPLETE (2026-09-24)
+1. ✅ **Schema v2 defined and applied to 363/363 templates** (strict YAML parse verified, fences balanced): `schema_version`, `canonical_name`, `doc_form` (heavy/light/record/technique), `applicability` (universal/conditional/evidence/technique), `min_project_tier` (1–7 per release.md tier ladder), `tier_trigger`, `minimum_form`, and D4 fields `overlap_group`/`source_of_truth`/`overlap_note`.
+2. ✅ Tier mapping derived from TEMPLATE-CHECKLIST priorities + category rules + 2026-08-03 audit §7 reclassifications (SLA→5 conditional, DR→4 conditional, SBOM→5 conditional, UAT sign-off conditional, ADRs/Decision-Records/Risk-Register/DoD→tier 2, Tailoring-Justification→tier 1; agile PO docs User-Stories/AC/NFR→tier 3). Distribution: 1/5/15/207/95/21/19 across tiers 1–7. Applicability: 133 universal · 161 conditional · 55 evidence · 14 technique.
+3. ✅ D4 alias-first: 23 templates mapped into 8 overlap groups (risk, traceability, change-control, schedule, requirements-spec, incident, business-requirements) with declared source-of-truth paths — no files merged or deleted.
+4. ✅ Generated `00_Essential Document/7-Tier Applicability Matrix.md` — a regenerable view over frontmatter (never hand-edit) with per-category tier tables and a project tailoring procedure.
 
 ### Phase 4 — Index regeneration (BLOCKED on D2) 🟢
 1. Founder defines the new categorization vision.
@@ -165,3 +166,4 @@ Re-run the scripted checks: citation editions, mindmap=0, hardcoded-dates=0, fro
 | 0.1 | 2026-09-23 | PO | Initial plan from reasoning-model re-audit; contamination scan of all 363 templates completed |
 | 0.2 | 2026-09-23 | PO | Founder decisions D1(b purge&rebuild)/D2(7-tier maturity model, verified against release.md)/D3(strip to placeholders)/D4(alias-first) recorded in §3.1; Phase 1 executed and machine-verified — RC-01/02/04/05 closed; Phases 2+3 merged into rebuild per D1(b) |
 | 0.3 | 2026-09-24 | PO | Phase 2 executed: 49 HIGH-contamination templates stripped to placeholders via 4 parallel subagents + parent verification; re-scan HIGH 59→1 (policy exception documented); structural integrity verified on all 363 files; RC-06 HIGH band closed |
+| 0.4 | 2026-09-24 | PO | Phase 3 executed: schema v2 (canonical_name/doc_form/applicability/min_project_tier/tier_trigger/minimum_form + D4 overlap fields) injected into all 363 templates, strict-YAML verified; 7-Tier Applicability Matrix generated in 00_Essential Document/; ED-A14 gaps 1–4 closed |

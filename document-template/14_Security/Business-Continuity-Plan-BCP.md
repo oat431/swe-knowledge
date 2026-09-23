@@ -1,5 +1,12 @@
 ---
 document_type: Business Continuity Plan (BCP)
+schema_version: 2
+canonical_name: Business Continuity Plan BCP
+doc_form: light
+applicability: conditional
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Exposure, data sensitivity, supplier/distribution, or regulation triggers
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Security Officer]"

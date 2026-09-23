@@ -1,5 +1,11 @@
 ---
 document_type: Business Objectives
+schema_version: 2
+canonical_name: Business Objectives
+doc_form: heavy
+applicability: universal
+min_project_tier: 3  # Internal
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Author Name]"

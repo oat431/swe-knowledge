@@ -1,5 +1,12 @@
 ---
 document_type: Security Accreditation Package
+schema_version: 2
+canonical_name: Security Accreditation Package
+doc_form: light
+applicability: conditional
+min_project_tier: 7  # Mission-Critical
+tier_trigger: Regulated/domain-specific context (medical, gov/defense, safety)
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Security Officer]"

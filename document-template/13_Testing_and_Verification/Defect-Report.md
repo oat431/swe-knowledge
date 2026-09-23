@@ -1,5 +1,12 @@
 ---
 document_type: Defect Report
+schema_version: 2
+canonical_name: Defect Report
+doc_form: record
+applicability: evidence
+min_project_tier: 4  # Small-Prod
+tier_trigger: Produced by the activity it records
+minimum_form: Short summary doc or dashboard screenshot + decision note
 version: "1.0"
 status: Active
 author: "[QA Lead]"

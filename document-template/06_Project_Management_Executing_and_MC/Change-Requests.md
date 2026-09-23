@@ -1,5 +1,15 @@
 ---
 document_type: Change Requests
+schema_version: 2
+canonical_name: Change Requests
+doc_form: record
+applicability: evidence
+min_project_tier: 4  # Small-Prod
+tier_trigger: Produced by the activity it records
+minimum_form: Tracker entries with links to decisions
+overlap_group: change-control
+source_of_truth: 19_Configuration_Management/Change-Request.md
+overlap_note: PM view of change control
 version: "1.0"
 status: Active
 author: "[Author Name]"

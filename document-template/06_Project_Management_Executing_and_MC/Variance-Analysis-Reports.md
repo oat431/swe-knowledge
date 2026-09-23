@@ -1,5 +1,12 @@
 ---
 document_type: Variance Analysis Reports
+schema_version: 2
+canonical_name: Variance Analysis Reports
+doc_form: record
+applicability: evidence
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Produced by the activity it records
+minimum_form: Tracker entries with links to decisions
 version: "1.0"
 status: Active
 author: "[Author Name]"

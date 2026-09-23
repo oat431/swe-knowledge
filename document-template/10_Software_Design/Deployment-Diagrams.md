@@ -1,5 +1,12 @@
 ---
 document_type: Deployment Diagrams
+schema_version: 2
+canonical_name: Deployment Diagrams
+doc_form: light
+applicability: technique
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Used inside parent artifacts when the modeling need arises
+minimum_form: Embedded Mermaid/sketch in the parent artifact
 version: "1.0"
 status: Draft
 author: "[Author Name]"

@@ -1,5 +1,12 @@
 ---
 document_type: Abuse / Misuse Cases
+schema_version: 2
+canonical_name: Abuse Misuse Cases
+doc_form: light
+applicability: conditional
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Exposure, data sensitivity, supplier/distribution, or regulation triggers
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Security Engineer]"

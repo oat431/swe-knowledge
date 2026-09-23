@@ -1,5 +1,12 @@
 ---
 document_type: Data Virtualization Specification
+schema_version: 2
+canonical_name: Data Virtualization Specification
+doc_form: light
+applicability: conditional
+min_project_tier: 6  # Production-Grade
+tier_trigger: Shared/master data, analytics workload, regulated or personal data
+minimum_form: Lightweight markdown doc with required fields only
 version: "1.0"
 status: Draft
 author: "[Data Architect]"

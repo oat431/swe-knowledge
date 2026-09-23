@@ -1,5 +1,12 @@
 ---
 document_type: User Research Report
+schema_version: 2
+canonical_name: User Research Report
+doc_form: record
+applicability: conditional
+min_project_tier: 4  # Small-Prod
+tier_trigger: Product has a user-facing interface
+minimum_form: Short summary doc or dashboard screenshot + decision note
 version: "1.0"
 status: Draft
 author: "[UX Researcher]"

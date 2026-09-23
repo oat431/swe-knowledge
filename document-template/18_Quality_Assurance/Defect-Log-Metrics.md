@@ -1,5 +1,11 @@
 ---
 document_type: Defect Log / Metrics
+schema_version: 2
+canonical_name: Defect Log Metrics
+doc_form: record
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: Short summary doc or dashboard screenshot + decision note
 version: "1.0"
 status: Active
 author: "[QA Lead]"

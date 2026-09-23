@@ -1,5 +1,12 @@
 ---
 document_type: Network Security Architecture
+schema_version: 2
+canonical_name: Network Security Architecture
+doc_form: light
+applicability: conditional
+min_project_tier: 4  # Small-Prod
+tier_trigger: Exposure, data sensitivity, supplier/distribution, or regulation triggers
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Security Engineer]"

@@ -1,5 +1,11 @@
 ---
 document_type: Implementation Plan
+schema_version: 2
+canonical_name: Implementation Plan
+doc_form: light
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: One section in the project hub/management plan
 version: "1.0"
 status: Draft
 author: "[Systems Engineer]"

@@ -1,5 +1,11 @@
 ---
 document_type: Decision Records
+schema_version: 2
+canonical_name: Decision Records
+doc_form: light
+applicability: universal
+min_project_tier: 2  # Prototype
+minimum_form: Entries in the project tracker or repo
 version: "1.0"
 status: Active
 author: "[Systems Engineer]"

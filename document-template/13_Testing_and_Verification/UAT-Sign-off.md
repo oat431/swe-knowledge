@@ -1,5 +1,12 @@
 ---
 document_type: UAT Sign-off
+schema_version: 2
+canonical_name: UAT Sign off
+doc_form: light
+applicability: conditional
+min_project_tier: 4  # Small-Prod
+tier_trigger: Separate business acceptance role exists; otherwise record acceptance decision elsewhere
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Business Analyst]"

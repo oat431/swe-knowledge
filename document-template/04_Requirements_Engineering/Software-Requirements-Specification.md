@@ -1,5 +1,14 @@
 ---
 document_type: Software Requirements Specification (SRS)
+schema_version: 2
+canonical_name: Software Requirements Specification
+doc_form: heavy
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: Lightweight markdown doc with required fields only
+overlap_group: requirements-spec
+source_of_truth: 04_Requirements_Engineering/Software-Requirements-Specification.md
+overlap_note: Software-level (SRS) — distinct scope
 version: "1.0"
 status: Draft
 author: "[Author Name]"

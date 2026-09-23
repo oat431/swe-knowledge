@@ -1,5 +1,12 @@
 ---
 document_type: Data Stewardship Assignment
+schema_version: 2
+canonical_name: Data Stewardship Assignment
+doc_form: light
+applicability: conditional
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Shared/master data, analytics workload, regulated or personal data
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Data Governance Officer]"

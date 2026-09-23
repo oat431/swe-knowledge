@@ -1,5 +1,12 @@
 ---
 document_type: SLA (Service-Level Agreement)
+schema_version: 2
+canonical_name: SLA
+doc_form: light
+applicability: conditional
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Software operated as a service with external commitments
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[DevOps Engineer]"

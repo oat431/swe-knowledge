@@ -1,5 +1,11 @@
 ---
 document_type: Resource Breakdown Structure (RBS)
+schema_version: 2
+canonical_name: Resource Breakdown Structure
+doc_form: light
+applicability: universal
+min_project_tier: 5  # Medium-Prod
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Author Name]"

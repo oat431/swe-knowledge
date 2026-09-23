@@ -1,5 +1,11 @@
 ---
 document_type: Module Views
+schema_version: 2
+canonical_name: Module Views
+doc_form: light
+applicability: universal
+min_project_tier: 5  # Medium-Prod
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Author Name]"

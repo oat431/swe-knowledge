@@ -1,5 +1,14 @@
 ---
 document_type: Change Request (CR/SCR)
+schema_version: 2
+canonical_name: Change Request
+doc_form: light
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
+overlap_group: change-control
+source_of_truth: 19_Configuration_Management/Change-Request.md
+overlap_note: Canonical change record (CM)
 version: "1.0"
 status: Active
 author: "[Configuration Manager]"

@@ -1,5 +1,12 @@
 ---
 document_type: Backup & Recovery Plan
+schema_version: 2
+canonical_name: Backup Recovery Plan
+doc_form: light
+applicability: conditional
+min_project_tier: 4  # Small-Prod
+tier_trigger: Shared/master data, analytics workload, regulated or personal data
+minimum_form: One section in the project hub/management plan
 version: "1.0"
 status: Draft
 author: "[DBA]"

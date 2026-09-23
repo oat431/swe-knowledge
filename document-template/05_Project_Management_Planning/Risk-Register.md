@@ -1,5 +1,15 @@
 ---
 document_type: Risk Register
+schema_version: 2
+canonical_name: Risk Register
+doc_form: record
+applicability: evidence
+min_project_tier: 2  # Prototype
+tier_trigger: Produced by the activity it records
+minimum_form: Entries in the project tracker or repo
+overlap_group: risk
+source_of_truth: 05_Project_Management_Planning/Risk-Management-Plan.md
+overlap_note: Record produced under the plan
 version: "1.0"
 status: Active
 author: "[Author Name]"

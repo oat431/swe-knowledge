@@ -1,5 +1,12 @@
 ---
 document_type: Lessons Learned Register
+schema_version: 2
+canonical_name: Lessons Learned Register
+doc_form: record
+applicability: evidence
+min_project_tier: 4  # Small-Prod
+tier_trigger: Produced by the activity it records
+minimum_form: Entries in the project tracker or repo
 version: "1.0"
 status: Active
 author: "[Author Name]"

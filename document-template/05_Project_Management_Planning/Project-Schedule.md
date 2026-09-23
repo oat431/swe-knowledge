@@ -1,5 +1,14 @@
 ---
 document_type: Project Schedule
+schema_version: 2
+canonical_name: Project Schedule
+doc_form: light
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
+overlap_group: schedule
+source_of_truth: 05_Project_Management_Planning/Schedule-Management-Plan.md
+overlap_note: Record under the plan
 version: "1.0"
 status: Draft
 author: "[Author Name]"

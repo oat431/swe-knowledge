@@ -1,5 +1,12 @@
 ---
 document_type: Data Security Audit Report
+schema_version: 2
+canonical_name: Data Security Audit Report
+doc_form: record
+applicability: conditional
+min_project_tier: 4  # Small-Prod
+tier_trigger: Shared/master data, analytics workload, regulated or personal data
+minimum_form: Short summary doc or dashboard screenshot + decision note
 version: "1.0"
 status: Draft
 author: "[Security Officer]"

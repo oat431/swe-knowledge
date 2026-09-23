@@ -1,5 +1,12 @@
 ---
 document_type: As-Built Documentation
+schema_version: 2
+canonical_name: As Built Documentation
+doc_form: light
+applicability: conditional
+min_project_tier: 7  # Mission-Critical
+tier_trigger: Systems-engineering, safety, formal-assurance, or organization-program context
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Systems Engineer]"

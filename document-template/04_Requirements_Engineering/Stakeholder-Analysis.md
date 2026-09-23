@@ -1,5 +1,11 @@
 ---
 document_type: Stakeholder Analysis
+schema_version: 2
+canonical_name: Stakeholder Analysis
+doc_form: heavy
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Author Name]"

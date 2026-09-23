@@ -1,5 +1,15 @@
 ---
 document_type: RCA Reports (Root Cause Analysis)
+schema_version: 2
+canonical_name: RCA Reports
+doc_form: record
+applicability: conditional
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Formal QA program or certification context
+minimum_form: Tracker entries with links to decisions
+overlap_group: incident
+source_of_truth: 16_Deployment_and_Operations/Incident-Management-Process.md
+overlap_note: Problem-management records
 version: "1.0"
 status: Active
 author: "[QA Lead]"

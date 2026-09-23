@@ -1,5 +1,14 @@
 ---
 document_type: Requirements Change Assessment
+schema_version: 2
+canonical_name: Requirements Change Assessment
+doc_form: light
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: Short summary doc or dashboard screenshot + decision note
+overlap_group: change-control
+source_of_truth: 19_Configuration_Management/Change-Request.md
+overlap_note: Impact assessment view
 version: "1.0"
 status: Draft
 author: "[Author Name]"

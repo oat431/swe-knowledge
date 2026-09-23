@@ -1,5 +1,12 @@
 ---
 document_type: Process Assessment Report (CMMI/SPICE)
+schema_version: 2
+canonical_name: Process Assessment Report
+doc_form: record
+applicability: conditional
+min_project_tier: 6  # Production-Grade
+tier_trigger: Systems-engineering, safety, formal-assurance, or organization-program context
+minimum_form: Short summary doc or dashboard screenshot + decision note
 version: "1.0"
 status: Draft
 author: "[QA Lead]"

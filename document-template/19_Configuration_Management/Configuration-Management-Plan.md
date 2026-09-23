@@ -1,5 +1,12 @@
 ---
 document_type: Configuration Management Plan
+schema_version: 2
+canonical_name: Configuration Management Plan
+doc_form: light
+applicability: conditional
+min_project_tier: 4  # Small-Prod
+tier_trigger: Formal configuration management / contractual CM required
+minimum_form: One section in the project hub/management plan
 version: "1.0"
 status: Draft
 author: "[Configuration Manager]"

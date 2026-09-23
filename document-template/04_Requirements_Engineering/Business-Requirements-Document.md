@@ -1,5 +1,14 @@
 ---
 document_type: Business Requirements Document (BRD)
+schema_version: 2
+canonical_name: Business Requirements Document
+doc_form: heavy
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
+overlap_group: business-requirements
+source_of_truth: 01_Business_Analysis_and_strategy/Business-Requirements.md
+overlap_note: Discipline view (SWEBOK) of the canonical BABOK artifact
 version: "1.0"
 status: Draft
 author: "[Author Name]"

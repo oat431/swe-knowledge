@@ -1,5 +1,12 @@
 ---
 document_type: Heatmap Report
+schema_version: 2
+canonical_name: Heatmap Report
+doc_form: record
+applicability: conditional
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Product has a user-facing interface
+minimum_form: Short summary doc or dashboard screenshot + decision note
 version: "1.0"
 status: Draft
 author: "[UX Researcher]"

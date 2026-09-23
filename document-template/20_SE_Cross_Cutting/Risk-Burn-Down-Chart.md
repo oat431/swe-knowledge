@@ -1,5 +1,12 @@
 ---
 document_type: Risk Burn-Down Chart
+schema_version: 2
+canonical_name: Risk Burn Down Chart
+doc_form: light
+applicability: conditional
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Multi-team / systems-engineering lifecycle context
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Active
 author: "[Systems Engineer]"

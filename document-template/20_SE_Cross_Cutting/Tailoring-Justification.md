@@ -1,5 +1,11 @@
 ---
 document_type: Tailoring Justification
+schema_version: 2
+canonical_name: Tailoring Justification
+doc_form: light
+applicability: universal
+min_project_tier: 1  # POC
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Systems Engineer]"

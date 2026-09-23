@@ -1,5 +1,11 @@
 ---
 document_type: Monitoring Dashboard Spec
+schema_version: 2
+canonical_name: Monitoring Dashboard Spec
+doc_form: light
+applicability: universal
+min_project_tier: 5  # Medium-Prod
+minimum_form: Lightweight markdown doc with required fields only
 version: "1.0"
 status: Draft
 author: "[DevOps Engineer]"

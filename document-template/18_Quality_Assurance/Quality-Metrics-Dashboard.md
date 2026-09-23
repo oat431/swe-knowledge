@@ -1,5 +1,12 @@
 ---
 document_type: Quality Metrics Dashboard
+schema_version: 2
+canonical_name: Quality Metrics Dashboard
+doc_form: record
+applicability: conditional
+min_project_tier: 5  # Medium-Prod
+tier_trigger: Formal QA program or certification context
+minimum_form: Short summary doc or dashboard screenshot + decision note
 version: "1.0"
 status: Active
 author: "[QA Lead]"

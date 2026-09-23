@@ -1,5 +1,12 @@
 ---
 document_type: Regulatory Compliance Register
+schema_version: 2
+canonical_name: Regulatory Compliance Register
+doc_form: record
+applicability: conditional
+min_project_tier: 4  # Small-Prod
+tier_trigger: Shared/master data, analytics workload, regulated or personal data
+minimum_form: Entries in the project tracker or repo
 version: "1.0"
 status: Draft
 author: "[Data Governance Officer]"

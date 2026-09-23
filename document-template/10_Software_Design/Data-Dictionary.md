@@ -1,5 +1,11 @@
 ---
 document_type: Data Dictionary
+schema_version: 2
+canonical_name: Data Dictionary
+doc_form: light
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[Author Name]"

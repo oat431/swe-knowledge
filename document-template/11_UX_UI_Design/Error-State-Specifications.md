@@ -1,5 +1,12 @@
 ---
 document_type: Error State Specifications
+schema_version: 2
+canonical_name: Error State Specifications
+doc_form: light
+applicability: conditional
+min_project_tier: 4  # Small-Prod
+tier_trigger: Product has a user-facing interface
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
 version: "1.0"
 status: Draft
 author: "[UX Designer]"

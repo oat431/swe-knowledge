@@ -1,5 +1,12 @@
 ---
 document_type: FCA Report (Functional Configuration Audit)
+schema_version: 2
+canonical_name: FCA Report
+doc_form: record
+applicability: conditional
+min_project_tier: 7  # Mission-Critical
+tier_trigger: Systems-engineering, safety, formal-assurance, or organization-program context
+minimum_form: Short summary doc or dashboard screenshot + decision note
 version: "1.0"
 status: Draft
 author: "[Configuration Manager]"

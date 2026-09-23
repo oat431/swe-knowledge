@@ -1,5 +1,12 @@
 ---
 document_type: Usability Test Plan
+schema_version: 2
+canonical_name: Usability Test Plan
+doc_form: light
+applicability: conditional
+min_project_tier: 4  # Small-Prod
+tier_trigger: Product has a user-facing interface
+minimum_form: One section in the project hub/management plan
 version: "1.0"
 status: Draft
 author: "[UX Researcher]"

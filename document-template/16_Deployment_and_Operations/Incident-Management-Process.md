@@ -1,5 +1,14 @@
 ---
 document_type: Incident Management Process
+schema_version: 2
+canonical_name: Incident Management Process
+doc_form: light
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: Lightweight markdown doc (frontmatter + required sections only)
+overlap_group: incident
+source_of_truth: 16_Deployment_and_Operations/Incident-Management-Process.md
+overlap_note: Canonical process
 version: "1.0"
 status: Draft
 author: "[DevOps Engineer]"

@@ -1,5 +1,14 @@
 ---
 document_type: Schedule Management Plan
+schema_version: 2
+canonical_name: Schedule Management Plan
+doc_form: light
+applicability: universal
+min_project_tier: 4  # Small-Prod
+minimum_form: One section in the project hub/management plan
+overlap_group: schedule
+source_of_truth: 05_Project_Management_Planning/Schedule-Management-Plan.md
+overlap_note: Canonical schedule method/plan
 version: "1.0"
 status: Draft
 author: "[Author Name]"
