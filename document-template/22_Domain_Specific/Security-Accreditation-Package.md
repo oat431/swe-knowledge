@@ -124,7 +124,7 @@ gantt
 
 | Document | Relationship |
 |----------|-------------|
-| [[Security-Controls]] | Security implementation |
+| [[Security-Requirements-Specification]] | Security implementation |
 | [[Security-Test-Report]] | Security testing |
 | [[Incident-Management-Process]] | Incident response |
 | [[Disaster-Recovery-Plan]] | Contingency planning |

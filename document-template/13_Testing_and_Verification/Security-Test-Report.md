@@ -124,9 +124,9 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[Security-Controls]] | Security implementation |
+| [[Security-Requirements-Specification]] | Security implementation |
 | [[Test-Report]] | Overall test results |
-| [[Vulnerability-Assessment]] | Detailed vulnerability analysis |
+| [[Vulnerability-Management-Report]] | Detailed vulnerability analysis |
 
 ---
 

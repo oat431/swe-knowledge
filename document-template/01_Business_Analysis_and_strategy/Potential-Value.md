@@ -201,10 +201,10 @@ flowchart TB
 
 | ID | Process | Current | Target | Improvement | Value |
 |----|---------|---------|--------|-------------|-------|
-| OE-[XX] | [e.g., Customer Onboarding] | [[N] days] | [[N] days] | [[X]% faster] | [X more customers/month] |
-| OE-[XX] | [e.g., Order Processing] | [[X] hours] | [[X] min] | [[X]% faster] | [X more orders/day] |
+| OE-[XX] | [e.g., Customer Onboarding] | [N days] | [N days] | [X% faster] | [X more customers/month] |
+| OE-[XX] | [e.g., Order Processing] | [X hours] | [X min] | [X% faster] | [X more orders/day] |
 | OE-[XX] | [e.g., Report Generation] | [Weekly, manual] | [Real-time, auto] | [Instant] | [X hours/week saved] |
-| OE-[XX] | [e.g., Error Resolution] | [[X]% error rate] | [<[X]%] | [[X]% reduction] | [X hours/week saved] |
+| OE-[XX] | [e.g., Error Resolution] | [X% error rate] | [<[X]%] | [X% reduction] | [X hours/week saved] |
 
 ### 4.2 Productivity Gains
 
@@ -218,9 +218,9 @@ flowchart TB
 
 | ID | Quality Metric | Current | Target | Improvement | Value |
 |----|---------------|---------|--------|-------------|-------|
-| OQ-[XX] | [e.g., Data accuracy] | [[X]%] | [[X]%] | [+[X]%] | [Fewer errors, better decisions] |
-| OQ-[XX] | [e.g., Process compliance] | [[X]%] | [[X]%] | [+[X]%] | [Audit readiness] |
-| OQ-[XX] | [e.g., First-call resolution] | [[X]%] | [[X]%] | [+[X]%] | [Customer satisfaction] |
+| OQ-[XX] | [e.g., Data accuracy] | [X%] | [X%] | [+[X]%] | [Fewer errors, better decisions] |
+| OQ-[XX] | [e.g., Process compliance] | [X%] | [X%] | [+[X]%] | [Audit readiness] |
+| OQ-[XX] | [e.g., First-call resolution] | [X%] | [X%] | [+[X]%] | [Customer satisfaction] |
 
 ---
 
@@ -281,8 +281,8 @@ flowchart TB
 
 | ID | Metric | Current | Target | Impact |
 |----|--------|---------|--------|--------|
-| CV-[XX] | [e.g., Net Promoter Score (NPS)] | [[X]] | [[X]] | [Customer loyalty] |
-| CV-[XX] | [e.g., Customer Satisfaction (CSAT)] | [[X]/5] | [[X]/5] | [Retention] |
+| CV-[XX] | [e.g., Net Promoter Score (NPS)] | [X] | [X] | [Customer loyalty] |
+| CV-[XX] | [e.g., Customer Satisfaction (CSAT)] | [X/5] | [X/5] | [Retention] |
 | CV-[XX] | [e.g., Customer Effort Score (CES)] | [High effort] | [Low effort] | [Reduced churn] |
 | CV-[XX] | [e.g., Onboarding Experience] | [Frustrating, slow] | [Fast, self-service] | [First impression] |
 

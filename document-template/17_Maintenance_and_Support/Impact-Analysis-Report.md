@@ -39,7 +39,7 @@ standard_ref:
 | Field | Detail |
 |-------|--------|
 | **Analysis ID** | [IA-XXX] |
-| **Change Request** | [[MR-XXX]] |
+| **Change Request** | MR-[XXX] |
 | **Analyst** | [Name] |
 | **Date** | [YYYY-MM-DD] |
 
@@ -101,7 +101,7 @@ standard_ref:
 
 | Document | Relationship |
 |----------|-------------|
-| [[MR-PR-Modification-Request]] | Change request being analyzed |
+| [[Modification-Request]] | Change request being analyzed |
 | [[Maintenance-Plan]] | Maintenance strategy |
 | [[Risk-Register]] | Project risks |
 

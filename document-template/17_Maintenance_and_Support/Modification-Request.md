@@ -46,7 +46,7 @@ standard_ref:
 | **Requested By** | [Name, Role] |
 | **Request Date** | [YYYY-MM-DD] |
 | **Target Release** | [vX.Y.Z] |
-| **Impact Analysis** | [[IA-XXX]] |
+| **Impact Analysis** | [[Impact-Analysis-Report|IA-[XXX]]] |
 
 ### Description
 
