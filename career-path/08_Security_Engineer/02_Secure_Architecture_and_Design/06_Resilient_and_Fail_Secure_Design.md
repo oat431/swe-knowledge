@@ -118,7 +118,7 @@ Choose a critical workflow and inject four failures in a test environment or tab
 - [[../01_Threat_Modeling_and_Risk/06_Threat_Model_Maintenance|Threat Model Maintenance]]
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]
-- [[document-template/14_Security/Security-Architecture|Security Architecture Template]]
+- [Security Architecture Template](F:\obsidian_note\document_template\14_Security/Security-Architecture.md)
 
 ## Key Takeaways
 

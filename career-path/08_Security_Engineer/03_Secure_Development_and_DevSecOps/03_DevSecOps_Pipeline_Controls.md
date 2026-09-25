@@ -9,7 +9,7 @@ prerequisite:
   - "[[01_Security_Requirements_in_Backlog|Security Requirements in Backlog]]"
 source_frameworks:
   - "[[software-engineering-note/13_Software_Security/05_Secure_Development_and_Assurance]]"
-  - "[[document-template/14_Security/DevSecOps-Pipeline-Configuration]]"
+  - "F:\obsidian_note\document_template\14_Security/DevSecOps-Pipeline-Configuration.md"
 tags:
   - career-path
   - security-engineer
@@ -28,7 +28,7 @@ A mid-level engineer often adds a scan to a build and treats the result as the c
 
 Pipeline security also has a two-sided threat model. The pipeline handles source, credentials, dependencies, artifacts, and deployment authority. A control that protects application code but allows untrusted build steps, mutable artifacts, or over-privileged runners leaves a critical attack path open.
 
-Use [[document-template/14_Security/DevSecOps-Pipeline-Configuration|DevSecOps Pipeline Configuration]] for a configuration artifact. This note focuses on choosing and operating controls proportionately.
+Use [DevSecOps Pipeline Configuration](F:\obsidian_note\document_template\14_Security/DevSecOps-Pipeline-Configuration.md) for a configuration artifact. This note focuses on choosing and operating controls proportionately.
 
 ## Core Frameworks
 
@@ -128,7 +128,7 @@ Design a pipeline for a service that handles sensitive customer data:
 ## Knowledge Connections
 
 - [[software-engineering-note/13_Software_Security/05_Secure_Development_and_Assurance|Secure Development and Assurance]]: secure lifecycle and assurance framing
-- [[document-template/14_Security/DevSecOps-Pipeline-Configuration|DevSecOps Pipeline Configuration]]: reusable pipeline documentation
+- [DevSecOps Pipeline Configuration](F:\obsidian_note\document_template\14_Security/DevSecOps-Pipeline-Configuration.md): reusable pipeline documentation
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]: DevSecOps lifecycle context
 - [[software-engineering-note/05_Software_Testing/Software Testing Overview|Software Testing Overview]]: continuous testing and evidence foundations
 - [[02_Secure_Coding_Enablement|Secure Coding Enablement]]: developer feedback that precedes pipeline gates

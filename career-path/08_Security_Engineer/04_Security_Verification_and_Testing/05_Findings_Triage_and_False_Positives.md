@@ -9,7 +9,7 @@ prerequisite:
   - "[[03_SCA_and_Container_Scanning|SCA and Container Scanning]]"
 source_frameworks:
   - "[[software-engineering-note/13_Software_Security/07_Vulnerability_Management]]"
-  - "[[document-template/14_Security/Vulnerability-Management-Report]]"
+  - "F:\obsidian_note\document_template\14_Security/Vulnerability-Management-Report.md"
 tags:
   - career-path
   - security-engineer
@@ -28,7 +28,7 @@ A mid-level practitioner may forward findings to a development team or close ite
 
 Triage is a decision discipline. Severity scores, confidence, exploitability, reachability, asset impact, exposure, and compensating controls all matter. A false positive is not simply an annoying report. It may indicate a missing framework model, a broken rule, a misunderstood architecture, or a control that the organization cannot prove. The senior response improves the signal and the underlying system.
 
-Use [[software-engineering-note/13_Software_Security/07_Vulnerability_Management|Vulnerability Management]] for lifecycle foundations and [[document-template/14_Security/Vulnerability-Management-Report|Vulnerability Management Report]] for reporting structure.
+Use [[software-engineering-note/13_Software_Security/07_Vulnerability_Management|Vulnerability Management]] for lifecycle foundations and [Vulnerability Management Report](F:\obsidian_note\document_template\14_Security/Vulnerability-Management-Report.md) for reporting structure.
 
 ## Core Frameworks
 
@@ -117,7 +117,7 @@ Take ten findings from one service across at least two scanners:
 ## Knowledge Connections
 
 - [[software-engineering-note/13_Software_Security/07_Vulnerability_Management|Vulnerability Management]]: finding lifecycle and remediation foundations
-- [[document-template/14_Security/Vulnerability-Management-Report|Vulnerability Management Report]]: reporting artifact
+- [Vulnerability Management Report](F:\obsidian_note\document_template\14_Security/Vulnerability-Management-Report.md): reporting artifact
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]: vulnerability and assurance context
 - [[career-path/10_Quality_and_Test_Engineering/00_overview|Quality and Test Engineering]]: quality metrics and continuous improvement
 - [[02_SAST_and_Taint_Analysis|SAST and Taint Analysis]]: static finding validation

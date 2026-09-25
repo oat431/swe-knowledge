@@ -117,7 +117,7 @@ Select one high-value asset from your context model and build three actor dossie
 - [[software-engineering-note/13_Software_Security/01_Security_Fundamentals|Security Fundamentals]]
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]
 - [[body-of-knowledge/CyBOK/09_Software_Security|CyBOK Software Security]]
-- [[document-template/14_Security/Threat-Model|Threat Model Template]]
+- [Threat Model Template](F:\obsidian_note\document_template\14_Security/Threat-Model.md)
 
 ## Key Takeaways
 

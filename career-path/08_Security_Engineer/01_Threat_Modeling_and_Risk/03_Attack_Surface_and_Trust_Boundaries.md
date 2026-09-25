@@ -113,7 +113,7 @@ Take one user journey and one administrative journey in a real system.
 - [[02_Secure_Architecture_and_Design/03_Zero_Trust_and_Segmentation|Zero Trust and Segmentation]]
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]
 - [[body-of-knowledge/CyBOK/09_Software_Security|CyBOK Software Security]]
-- [[document-template/14_Security/Threat-Model|Threat Model Template]]
+- [Threat Model Template](F:\obsidian_note\document_template\14_Security/Threat-Model.md)
 
 ## Key Takeaways
 

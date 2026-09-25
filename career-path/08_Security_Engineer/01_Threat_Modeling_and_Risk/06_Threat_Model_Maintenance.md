@@ -113,7 +113,7 @@ Choose a threat model that has not been updated recently and run a maintenance r
 - [[02_Secure_Architecture_and_Design/04_Secure_Architecture_Decisions|Secure Architecture Decisions]]
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]
-- [[document-template/14_Security/Threat-Model|Threat Model Template]]
+- [Threat Model Template](F:\obsidian_note\document_template\14_Security/Threat-Model.md)
 
 ## Key Takeaways
 

@@ -9,7 +9,7 @@ prerequisite:
   - "[[03_Secure_Development_and_DevSecOps/02_Secure_Coding_Enablement|Secure Coding Enablement]]"
 source_frameworks:
   - "[[body-of-knowledge/SWEBOK/13_Software_Security]]"
-  - "[[document-template/14_Security/SAST-Report]]"
+  - "F:\obsidian_note\document_template\14_Security/SAST-Report.md"
 tags:
   - career-path
   - security-engineer
@@ -28,7 +28,7 @@ A mid-level engineer may run a SAST tool, sort findings by severity, and fix the
 
 Taint analysis is especially useful for tracking untrusted data through transformations toward a sensitive operation. It is not a proof that an exploit works. A path may be infeasible, sanitized by a framework the tool does not model, protected by an authorization condition, or exploitable only under a deployment assumption. Conversely, a clean result can reflect missing models or unreachable code that the scanner never analyzed.
 
-Use [[document-template/14_Security/SAST-Report|SAST Report]] for result structure and [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]] for security testing context.
+Use [SAST Report](F:\obsidian_note\document_template\14_Security/SAST-Report.md) for result structure and [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]] for security testing context.
 
 ## Core Frameworks
 
@@ -114,7 +114,7 @@ Use a small service or intentionally flawed sample:
 
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]: static analysis and security testing foundations
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]: security lifecycle and tooling context
-- [[document-template/14_Security/SAST-Report|SAST Report]]: reporting artifact
+- [SAST Report](F:\obsidian_note\document_template\14_Security/SAST-Report.md): reporting artifact
 - [[software-engineering-note/13_Software_Security/Cybersecurity/02 Secure Development/02 Secure Coding Practices|Secure Coding Practices]]: coding patterns that shape rule models
 - [[01_Security_Test_Strategy|Security Test Strategy]]: selecting static analysis depth
 - [[03_Secure_Development_and_DevSecOps/02_Secure_Coding_Enablement|Secure Coding Enablement]]: converting findings into developer feedback

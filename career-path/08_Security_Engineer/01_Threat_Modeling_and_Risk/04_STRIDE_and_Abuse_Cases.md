@@ -117,7 +117,7 @@ Run a focused threat workshop on one feature that handles identity, sensitive da
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]
 - [[body-of-knowledge/CyBOK/09_Software_Security|CyBOK Software Security]]
-- [[document-template/14_Security/Threat-Model|Threat Model Template]]
+- [Threat Model Template](F:\obsidian_note\document_template\14_Security/Threat-Model.md)
 
 ## Key Takeaways
 

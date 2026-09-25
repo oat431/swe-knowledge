@@ -8,7 +8,7 @@ source_frameworks:
   - "[[software-engineering-note/13_Software_Security/01_Security_Fundamentals]]"
   - "[[body-of-knowledge/SWEBOK/13_Software_Security]]"
   - "[[body-of-knowledge/CyBOK/09_Software_Security]]"
-  - "[[document-template/14_Security/Security-Architecture]]"
+  - "F:\obsidian_note\document_template\14_Security/Security-Architecture.md"
 tags:
   - career-path
   - security-engineer
@@ -64,11 +64,11 @@ These notes assume the foundational concepts already exist in the vault and focu
 | Senior topic | Existing foundation notes |
 |---|---|
 | Security principles and quality attributes | [[software-engineering-note/13_Software_Security/01_Security_Fundamentals]], [[body-of-knowledge/SWEBOK/13_Software_Security]] |
-| Defense in depth | [[software-engineering-note/13_Software_Security/Software Security Overview]], [[document-template/14_Security/Security-Architecture]] |
-| Zero trust and segmentation | [[document-template/14_Security/Security-Architecture]], [[body-of-knowledge/CyBOK/09_Software_Security]] |
-| Secure architecture decisions | [[document-template/14_Security/Security-Architecture]], [[body-of-knowledge/SWEBOK/13_Software_Security]] |
+| Defense in depth | [[software-engineering-note/13_Software_Security/Software Security Overview]], F:\obsidian_note\document_template\14_Security/Security-Architecture.md |
+| Zero trust and segmentation | F:\obsidian_note\document_template\14_Security/Security-Architecture.md, [[body-of-knowledge/CyBOK/09_Software_Security]] |
+| Secure architecture decisions | F:\obsidian_note\document_template\14_Security/Security-Architecture.md, [[body-of-knowledge/SWEBOK/13_Software_Security]] |
 | Secrets and cryptographic boundaries | [[software-engineering-note/13_Software_Security/01_Security_Fundamentals]], [[body-of-knowledge/CyBOK/09_Software_Security]] |
-| Resilient and fail-secure design | [[document-template/14_Security/Security-Architecture]], [[software-engineering-note/13_Software_Security/Software Security Overview]] |
+| Resilient and fail-secure design | F:\obsidian_note\document_template\14_Security/Security-Architecture.md, [[software-engineering-note/13_Software_Security/Software Security Overview]] |
 
 ## Evidence a Senior Engineer Produces
 
@@ -96,4 +96,4 @@ These notes assume the foundational concepts already exist in the vault and focu
 - [[../00_overview|Security Engineer Overview]]
 - [[../01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]
 - [[03_Secure_Development_and_DevSecOps/00_overview|Secure Development and DevSecOps]]
-- [[document-template/14_Security/Security-Architecture|Security Architecture Template]]
+- [Security Architecture Template](F:\obsidian_note\document_template\14_Security/Security-Architecture.md)

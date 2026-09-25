@@ -10,7 +10,7 @@ prerequisite:
 source_frameworks:
   - "[[software-engineering-note/05_Software_Testing/Software Testing Overview]]"
   - "[[career-path/10_Quality_and_Test_Engineering/00_overview]]"
-  - "[[document-template/13_Testing_and_Verification/Test-Strategy]]"
+  - "F:\obsidian_note\document_template\13_Testing_and_Verification/Test-Strategy.md"
 tags:
   - career-path
   - security-engineer
@@ -28,7 +28,7 @@ A mid-level tester may select familiar tools or repeat a previous test plan. A s
 
 A strategy is not a catalog of SAST, DAST, fuzzing, and penetration testing. Each technique has a different view of the system, a different oracle, and a different blind spot. Senior judgment is visible in the trade-off: less effort on low-consequence paths, more depth where a weak assumption could cause material harm, and a monitoring condition when pre-release evidence cannot cover the risk.
 
-Use [[software-engineering-note/05_Software_Testing/Software Testing Overview|Software Testing Overview]] for testing fundamentals and [[document-template/13_Testing_and_Verification/Test-Strategy|Test Strategy]] for a reusable artifact.
+Use [[software-engineering-note/05_Software_Testing/Software Testing Overview|Software Testing Overview]] for testing fundamentals and [Test Strategy](F:\obsidian_note\document_template\13_Testing_and_Verification/Test-Strategy.md) for a reusable artifact.
 
 ## Core Frameworks
 
@@ -121,8 +121,8 @@ Select a release that changes authentication, authorization, data processing, or
 
 - [[software-engineering-note/05_Software_Testing/Software Testing Overview|Software Testing Overview]]: testing concepts, levels, techniques, and measures
 - [[career-path/10_Quality_and_Test_Engineering/00_overview|Quality and Test Engineering]]: specialist test strategy and quality practices
-- [[document-template/13_Testing_and_Verification/Test-Strategy|Test Strategy]]: strategy artifact structure
-- [[document-template/13_Testing_and_Verification/Security-Test-Report|Security Test Report]]: result artifact for the chosen strategy
+- [Test Strategy](F:\obsidian_note\document_template\13_Testing_and_Verification/Test-Strategy.md): strategy artifact structure
+- [Security Test Report](F:\obsidian_note\document_template\13_Testing_and_Verification/Security-Test-Report.md): result artifact for the chosen strategy
 - [[01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]: abuse cases and risk context
 - [[03_Secure_Development_and_DevSecOps/01_Security_Requirements_in_Backlog|Security Requirements in Backlog]]: requirements and acceptance evidence
 - [[02_SAST_and_Taint_Analysis|SAST and Taint Analysis]]: static verification depth

@@ -27,7 +27,7 @@ A mid-level engineer may add a security task when a specialist points out a miss
 
 The senior skill is not writing the longest requirement. It is choosing the right level of precision. A requirement must be specific enough to guide design and testing, but not so prescriptive that it prevents a better implementation. It must also have an owner, a priority rationale, and a verification method. This turns security from an opinion in a review into a product property with a lifecycle.
 
-Use [[document-template/14_Security/Security-Requirements-Specification|Security Requirements Specification]] for the structured document form. This note focuses on how to decide what belongs in the backlog and how to keep it connected to delivery.
+Use [Security Requirements Specification](F:\obsidian_note\document_template\14_Security/Security-Requirements-Specification.md) for the structured document form. This note focuses on how to decide what belongs in the backlog and how to keep it connected to delivery.
 
 ## Core Frameworks
 
@@ -129,7 +129,7 @@ Take one feature in your current project that changes access to data or a privil
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]: lifecycle framing for software security
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]: security requirements, risk, and assurance foundations
 - [[body-of-knowledge/CyBOK/09_Software_Security|CyBOK Software Security]]: software security knowledge framework
-- [[document-template/14_Security/Security-Requirements-Specification|Security Requirements Specification]]: reusable requirements artifact
+- [Security Requirements Specification](F:\obsidian_note\document_template\14_Security/Security-Requirements-Specification.md): reusable requirements artifact
 - [[01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]: threat context that feeds backlog decisions
 - [[03_DevSecOps_Pipeline_Controls|DevSecOps Pipeline Controls]]: automation and evidence points for the requirements
 - [[04_Security_Verification_and_Testing/01_Security_Test_Strategy|Security Test Strategy]]: selecting verification depth

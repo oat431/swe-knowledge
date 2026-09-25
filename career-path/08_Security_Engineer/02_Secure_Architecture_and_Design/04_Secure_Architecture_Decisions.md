@@ -118,7 +118,7 @@ Choose one security-relevant architecture choice, such as an identity boundary, 
 - [[../01_Threat_Modeling_and_Risk/05_Risk_Rating_and_Treatment|Risk Rating and Treatment]]
 - [[../01_Threat_Modeling_and_Risk/06_Threat_Model_Maintenance|Threat Model Maintenance]]
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]
-- [[document-template/14_Security/Security-Architecture|Security Architecture Template]]
+- [Security Architecture Template](F:\obsidian_note\document_template\14_Security/Security-Architecture.md)
 
 ## Key Takeaways
 

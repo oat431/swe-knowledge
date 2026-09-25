@@ -58,8 +58,8 @@ The senior specialist does not become a bottleneck or a final approval gate. The
 
 | # | Capability | Senior-specialist behavior | Existing vault anchor |
 |---|---|---|---|
-| 01 | [[01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]] | Frames system context, adversaries, attack paths, and treatment decisions | [[document-template/14_Security/Threat-Model]] |
-| 02 | [[02_Secure_Architecture_and_Design/00_overview|Secure Architecture and Design]] | Turns security principles into architecture decisions and resilient boundaries | [[document-template/14_Security/Security-Architecture]] |
+| 01 | [[01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]] | Frames system context, adversaries, attack paths, and treatment decisions | F:\obsidian_note\document_template\14_Security/Threat-Model.md |
+| 02 | [[02_Secure_Architecture_and_Design/00_overview|Secure Architecture and Design]] | Turns security principles into architecture decisions and resilient boundaries | F:\obsidian_note\document_template\14_Security/Security-Architecture.md |
 | 03 | [[03_Secure_Development_and_DevSecOps/00_overview|Secure Development and DevSecOps]] | Makes secure delivery the default through requirements, enablement, and automation | [[software-engineering-note/13_Software_Security/05_Secure_Development_and_Assurance]] |
 | 04 | [[04_Security_Verification_and_Testing/00_overview|Security Verification and Testing]] | Selects verification depth and interprets evidence according to risk | [[software-engineering-note/05_Software_Testing/Software Testing Overview]] |
 | 05 | [[05_Identity_Access_and_Data_Protection/00_overview|Identity, Access and Data Protection]] | Designs accountable identity, authorization, secrets, privacy, and data controls | [[software-engineering-note/13_Software_Security/03_Access_Control_and_Architecture]] |

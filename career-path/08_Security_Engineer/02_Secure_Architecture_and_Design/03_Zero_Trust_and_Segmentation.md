@@ -118,7 +118,7 @@ Choose one sensitive data store or privileged control plane.
 - [[../01_Threat_Modeling_and_Risk/05_Risk_Rating_and_Treatment|Risk Rating and Treatment]]
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]
 - [[body-of-knowledge/CyBOK/09_Software_Security|CyBOK Software Security]]
-- [[document-template/14_Security/Security-Architecture|Security Architecture Template]]
+- [Security Architecture Template](F:\obsidian_note\document_template\14_Security/Security-Architecture.md)
 
 ## Key Takeaways
 

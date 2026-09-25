@@ -9,8 +9,8 @@ prerequisite:
   - "[[01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]"
 source_frameworks:
   - "[[software-engineering-note/05_Software_Testing/Software Testing Overview]]"
-  - "[[document-template/14_Security/DAST-Report]]"
-  - "[[document-template/14_Security/Penetration-Test-Report]]"
+  - "F:\obsidian_note\document_template\14_Security/DAST-Report.md"
+  - "F:\obsidian_note\document_template\14_Security/Penetration-Test-Report.md"
 tags:
   - career-path
   - security-engineer
@@ -29,7 +29,7 @@ A mid-level practitioner may run a web scanner or schedule a penetration test be
 
 Dynamic testing exercises behavior in an environment. It can reveal authentication and authorization failures, configuration mistakes, parser behavior, error leakage, race conditions, and unexpected interactions. It can also miss unlinked endpoints, require valid workflows, overload a service, or report an issue without proving business impact. Senior engineers design authorization, scope, credentials, rate limits, stop conditions, data handling, and retest before execution.
 
-Use [[document-template/14_Security/DAST-Report|DAST Report]] and [[document-template/14_Security/Penetration-Test-Report|Penetration Test Report]] for artifact structures.
+Use [DAST Report](F:\obsidian_note\document_template\14_Security/DAST-Report.md) and [Penetration Test Report](F:\obsidian_note\document_template\14_Security/Penetration-Test-Report.md) for artifact structures.
 
 ## Core Frameworks
 
@@ -119,9 +119,9 @@ Plan a one-week campaign for a public API that manages sensitive records:
 
 - [[software-engineering-note/05_Software_Testing/Software Testing Overview|Software Testing Overview]]: testing levels, techniques, and test oracles
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]: fuzzing and penetration testing foundations
-- [[document-template/14_Security/DAST-Report|DAST Report]]: dynamic scan report artifact
-- [[document-template/14_Security/Penetration-Test-Report|Penetration Test Report]]: adversarial engagement artifact
-- [[document-template/13_Testing_and_Verification/Security-Test-Report|Security Test Report]]: consolidated security test evidence
+- [DAST Report](F:\obsidian_note\document_template\14_Security/DAST-Report.md): dynamic scan report artifact
+- [Penetration Test Report](F:\obsidian_note\document_template\14_Security/Penetration-Test-Report.md): adversarial engagement artifact
+- [Security Test Report](F:\obsidian_note\document_template\13_Testing_and_Verification/Security-Test-Report.md): consolidated security test evidence
 - [[01_Security_Test_Strategy|Security Test Strategy]]: risk-based method selection
 - [[01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]: abuse paths and attacker context
 - [[05_Findings_Triage_and_False_Positives|Findings Triage and False Positives]]: validating dynamic findings

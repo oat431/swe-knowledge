@@ -9,7 +9,7 @@ prerequisite:
   - "[[04_Dependency_and_Supply_Chain_Security|Dependency and Supply Chain Security]]"
 source_frameworks:
   - "[[software-engineering-note/13_Software_Security/Cybersecurity/03 Infrastructure Security/03 Container & Cloud Security]]"
-  - "[[document-template/14_Security/DevSecOps-Pipeline-Configuration]]"
+  - "F:\obsidian_note\document_template\14_Security/DevSecOps-Pipeline-Configuration.md"
 tags:
   - career-path
   - security-engineer
@@ -28,7 +28,7 @@ A mid-level engineer may review an infrastructure change or fix a misconfigured 
 
 Configuration as code includes infrastructure definitions, deployment manifests, container settings, identity policies, network rules, pipeline configuration, admission policies, and security tool configuration. The senior challenge is managing inheritance and change: a local override, provider default, module update, or manual emergency action can alter effective security without changing the application source.
 
-Use [[software-engineering-note/13_Software_Security/Cybersecurity/03 Infrastructure Security/03 Container & Cloud Security|Container and Cloud Security]] for domain foundations and [[document-template/14_Security/DevSecOps-Pipeline-Configuration|DevSecOps Pipeline Configuration]] for a reusable configuration document.
+Use [[software-engineering-note/13_Software_Security/Cybersecurity/03 Infrastructure Security/03 Container & Cloud Security|Container and Cloud Security]] for domain foundations and [DevSecOps Pipeline Configuration](F:\obsidian_note\document_template\14_Security/DevSecOps-Pipeline-Configuration.md) for a reusable configuration document.
 
 ## Core Frameworks
 
@@ -116,7 +116,7 @@ Choose a non-production service deployed with infrastructure or container config
 ## Knowledge Connections
 
 - [[software-engineering-note/13_Software_Security/Cybersecurity/03 Infrastructure Security/03 Container & Cloud Security|Container and Cloud Security]]: container and cloud configuration foundations
-- [[document-template/14_Security/DevSecOps-Pipeline-Configuration|DevSecOps Pipeline Configuration]]: reusable configuration artifact
+- [DevSecOps Pipeline Configuration](F:\obsidian_note\document_template\14_Security/DevSecOps-Pipeline-Configuration.md): reusable configuration artifact
 - [[software-engineering-note/13_Software_Security/03_Access_Control_and_Architecture|Access Control and Architecture]]: authorization and security boundary foundations
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]: software security lifecycle context
 - [[03_DevSecOps_Pipeline_Controls|DevSecOps Pipeline Controls]]: control contracts and pipeline enforcement

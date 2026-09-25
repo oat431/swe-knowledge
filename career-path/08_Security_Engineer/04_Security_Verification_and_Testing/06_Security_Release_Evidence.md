@@ -8,8 +8,8 @@ prerequisite:
   - "[[01_Security_Test_Strategy|Security Test Strategy]]"
   - "[[05_Findings_Triage_and_False_Positives|Findings Triage and False Positives]]"
 source_frameworks:
-  - "[[document-template/13_Testing_and_Verification/Security-Test-Report]]"
-  - "[[document-template/14_Security/Security-Requirements-Specification]]"
+  - "F:\obsidian_note\document_template\13_Testing_and_Verification/Security-Test-Report.md"
+  - "F:\obsidian_note\document_template\14_Security/Security-Requirements-Specification.md"
   - "[[software-engineering-note/05_Software_Testing/Software Testing Overview]]"
 tags:
   - career-path
@@ -29,7 +29,7 @@ A mid-level practitioner may attach scan reports to a release ticket. A senior s
 
 Release evidence is also a communication tool. Developers need actionable gaps. product owners need trade-offs. auditors need traceability. Operations needs monitoring and rollback conditions. The senior engineer preserves the technical detail while giving each decision maker a clear view of confidence and residual risk.
 
-Use [[document-template/13_Testing_and_Verification/Security-Test-Report|Security Test Report]] for the report structure and [[document-template/14_Security/Security-Requirements-Specification|Security Requirements Specification]] for the claims that evidence should support.
+Use [Security Test Report](F:\obsidian_note\document_template\13_Testing_and_Verification/Security-Test-Report.md) for the report structure and [Security Requirements Specification](F:\obsidian_note\document_template\14_Security/Security-Requirements-Specification.md) for the claims that evidence should support.
 
 ## Core Frameworks
 
@@ -137,8 +137,8 @@ Create an evidence pack for a release that changes a public API and its containe
 
 ## Knowledge Connections
 
-- [[document-template/13_Testing_and_Verification/Security-Test-Report|Security Test Report]]: consolidated security test artifact
-- [[document-template/14_Security/Security-Requirements-Specification|Security Requirements Specification]]: security claims and acceptance expectations
+- [Security Test Report](F:\obsidian_note\document_template\13_Testing_and_Verification/Security-Test-Report.md): consolidated security test artifact
+- [Security Requirements Specification](F:\obsidian_note\document_template\14_Security/Security-Requirements-Specification.md): security claims and acceptance expectations
 - [[software-engineering-note/05_Software_Testing/Software Testing Overview|Software Testing Overview]]: testing process, evidence, and limitations
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]: assurance and security testing foundations
 - [[01_Security_Test_Strategy|Security Test Strategy]]: depth, scope, and exit criteria

@@ -26,7 +26,7 @@ A mid-level security engineer may deliver training, publish a checklist, or comm
 
 Enablement is not a transfer of responsibility from developers to security. Developers still own the code and its behavior. The senior specialist owns the quality of the security interface: whether advice is discoverable, whether a safe API is easier to use, whether a rule explains how to fix the issue, and whether teams can obtain help without opening a queue for every decision.
 
-Use [[software-engineering-note/13_Software_Security/Cybersecurity/02 Secure Development/02 Secure Coding Practices|Secure Coding Practices]] and [[document-template/14_Security/Secure-Coding-Guidelines|Secure Coding Guidelines]] for foundational practices and reusable guidance. This note focuses on the operating model that makes those practices stick.
+Use [[software-engineering-note/13_Software_Security/Cybersecurity/02 Secure Development/02 Secure Coding Practices|Secure Coding Practices]] and [Secure Coding Guidelines](F:\obsidian_note\document_template\14_Security/Secure-Coding-Guidelines.md) for foundational practices and reusable guidance. This note focuses on the operating model that makes those practices stick.
 
 ## Core Frameworks
 
@@ -134,7 +134,7 @@ Choose one recurring weakness in your current codebase, such as unsafe deseriali
 
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]: software security lifecycle context
 - [[software-engineering-note/13_Software_Security/Cybersecurity/02 Secure Development/02 Secure Coding Practices|Secure Coding Practices]]: foundational coding patterns
-- [[document-template/14_Security/Secure-Coding-Guidelines|Secure Coding Guidelines]]: document structure for team guidance
+- [Secure Coding Guidelines](F:\obsidian_note\document_template\14_Security/Secure-Coding-Guidelines.md): document structure for team guidance
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]: secure construction and assurance foundations
 - [[01_Security_Requirements_in_Backlog|Security Requirements in Backlog]]: requirements that guide examples and acceptance tests
 - [[03_DevSecOps_Pipeline_Controls|DevSecOps Pipeline Controls]]: where developer feedback becomes automated control
