@@ -16,7 +16,7 @@ aliases:
 # Software Requirements Fundamentals
 
 > *"The hardest single part of building a software system is deciding precisely what to build."*
-> — Frederick Brooks, "No Silver Bullet" (1987)
+> *Frederick Brooks, "No Silver Bullet" (1987)*
 
 This note distills Chapters 1-4 of Wiegers & Beatty, covering the **essential software requirement**, the **customer perspective**, **good practices** for requirements engineering, and the **business analyst** role.
 
@@ -32,7 +32,7 @@ This note distills Chapters 1-4 of Wiegers & Beatty, covering the **essential so
 - Rework often consumes **30–50%** of total development cost (Shull et al. 2002).
 - **Cost amplification:** A requirement defect costing $1 to fix during requirements costs ~$100+ to fix in production (Boehm 1981; Grady 1999). One consulting client measured a **21× amplification** ($200 to fix via inspection vs. $4,200 to fix after user report).
 
-> **Trap** — Don't assume all project stakeholders share a common notion of what requirements are. Establish definitions up front.
+> **Trap:** Don't assume all project stakeholders share a common notion of what requirements are. Establish definitions up front.
 
 ### 1.2 Defining "Requirement"
 
@@ -42,16 +42,16 @@ Several definitions exist:
 |--------|-----------|
 | Brian Lawrence (1997) | "Anything that drives design choices." |
 | Generic | "A property that a product must have to provide value to a stakeholder." |
-| **Sommerville & Sawyer (1997)** — *preferred* | "A specification of what should be implemented. They are descriptions of how the system should behave, or of a system property or attribute. They may be a constraint on the development process of the system." |
+| **Sommerville & Sawyer (1997):** *preferred* | "A specification of what should be implemented. They are descriptions of how the system should behave, or of a system property or attribute. They may be a constraint on the development process of the system." |
 
-**Key insight:** Requirements include a **time dimension** — present tense (current system), near-term (high priority), mid-term (medium priority), or hypothetical (low priority). Even deferred or discarded items are still requirements.
+**Key insight:** Requirements include a **time dimension:** present tense (current system), near-term (high priority), mid-term (medium priority), or hypothetical (low priority). Even deferred or discarded items are still requirements.
 
 ### 1.3 Levels & Types of Requirements
 
 Software requirements exist at **three levels**, plus an assortment of nonfunctional requirements:
 
 ```mermaid
-%%{init: {'theme':'dark'}}%%
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     BR["Business Requirements (Why?)\nBusiness objectives, vision & scope\nSource: Sponsor, customer, marketing"]
     UR["User Requirements (What for?)\nGoals/tasks users must accomplish\nSource: User representatives"]
@@ -62,10 +62,10 @@ flowchart TD
     UR -->|"derives"| FR
     FR --- NFR
 
-    style BR fill:#2d6a4f,stroke:#40916c,color:#fff
-    style UR fill:#264653,stroke:#2a9d8f,color:#fff
-    style FR fill:#3a7ca5,stroke:#5aa9e6,color:#fff
-    style NFR fill:#6b5b95,stroke:#8b7bb5,color:#fff
+    style BR fill:#1FB854,stroke:#1FB854,color:#000000
+    style UR fill:#1EB88E,stroke:#1EB88E,color:#000000
+    style FR fill:#1FB8AB,stroke:#1FB8AB,color:#000000
+    style NFR fill:#00B5FF,stroke:#00B5FF,color:#000000
 ```
 
 #### Types of Requirements Information (Table 1-1)
@@ -83,11 +83,11 @@ flowchart TD
 | **System requirement** | A top-level requirement for a product containing multiple subsystems (all software, or software + hardware). |
 | **User requirement** | A goal or task that specific classes of users must be able to perform with a system, or a desired product attribute. |
 
-> **Note on "nonfunctional":** The term is imperfect (says what they are *not*), but retained for lack of a better inclusive alternative. Nonfunctional ≠ just quality attributes — it also includes constraints, external interfaces, compliance, and localization.
+> **Note on "nonfunctional":** The term is imperfect (says what they are *not*), but retained for lack of a better inclusive alternative. Nonfunctional ≠ just quality attributes; it also includes constraints, external interfaces, compliance, and localization.
 
 ### 1.4 The Three Levels Illustrated
 
-**Example — Text editor with multilanguage spell checker:**
+**Example: Text editor with multilanguage spell checker:**
 
 | Level | Example |
 |-------|---------|
@@ -104,8 +104,8 @@ flowchart TD
 
 ### 1.5 Product vs. Project Requirements
 
-- **Product requirements** — Describe properties of the software system to be built. Housed in the SRS. Should *not* include design/implementation details (except known constraints), project plans, or test plans.
-- **Project requirements** — Non-software deliverables necessary for project success:
+- **Product requirements:** Describe properties of the software system to be built. Housed in the SRS. Should *not* include design/implementation details (except known constraints), project plans, or test plans.
+- **Project requirements:** Non-software deliverables necessary for project success:
 
 **Examples of project requirements:**
 - Physical resources (workstations, testing labs, videoconferencing)
@@ -129,7 +129,7 @@ flowchart TD
 The discipline of **requirements engineering** splits into two halves:
 
 ```mermaid
-%%{init: {'theme':'dark'}}%%
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     RE["Requirements Engineering"]
     DEV["Development (Part II)"]
@@ -149,12 +149,12 @@ flowchart TD
     MGMT --> M4["Trace requirements → design → code → tests"]
     MGMT --> M5["Track status & changes"]
 
-    style RE fill:#2d6a4f,stroke:#40916c,color:#fff
-    style DEV fill:#264653,stroke:#2a9d8f,color:#fff
-    style MGMT fill:#3a7ca5,stroke:#5aa9e6,color:#fff
+    style RE fill:#1FB854,stroke:#1FB854,color:#000000
+    style DEV fill:#1EB88E,stroke:#1EB88E,color:#000000
+    style MGMT fill:#1FB8AB,stroke:#1FB8AB,color:#000000
 ```
 
-#### Requirements Development — 4 Subdisciplines
+#### Requirements Development: 4 Subdisciplines
 
 | Subdiscipline | Key Actions |
 |---------------|-------------|
@@ -166,8 +166,8 @@ flowchart TD
 > **Key principle:** Iteration is essential. Plan for multiple cycles of exploring, refining, and confirming. The goal is *not perfect requirements* but a **shared understanding good enough to proceed at an acceptable level of risk**.
 
 **Two elicitation strategies:**
-- **Usage-centric** — Emphasize understanding user goals to derive functionality (*recommended*)
-- **Product-centric** — Focus on features expected to lead to market/business success (risk: building unused features)
+- **Usage-centric:** Emphasize understanding user goals to derive functionality (*recommended*)
+- **Product-centric:** Focus on features expected to lead to market/business success (risk: building unused features)
 
 ### 1.7 Common Requirements Problems
 
@@ -213,11 +213,11 @@ Without adequate customer involvement, an **expectation gap** opens between what
 
 ### 2.2 Stakeholders, Customers, and Users
 
-- **Stakeholder** — A person, group, or organization actively involved in a project, affected by its process or outcome, or able to influence it. Internal or external.
-- **Customer** — A subset of stakeholders; an individual or organization that derives direct or indirect benefit from a product. Customers *request, pay for, select, specify, use, or receive output* from the product.
-- **User** (end user) — A subset of customers who actually use the product, either **directly** (hands-on) or **indirectly** (receive outputs without touching it).
+- **Stakeholder:** A person, group, or organization actively involved in a project, affected by its process or outcome, or able to influence it. Internal or external.
+- **Customer:** A subset of stakeholders; an individual or organization that derives direct or indirect benefit from a product. Customers *request, pay for, select, specify, use, or receive output* from the product.
+- **User** (end user): A subset of customers who actually use the product, either **directly** (hands-on) or **indirectly** (receive outputs without touching it).
 
-> **Trap** — Customers who provide business requirements sometimes purport to speak for users. They are often too far removed to provide accurate user requirements. Business requirements ← accountable sponsor; User requirements ← people who press the keys / touch the screen / receive outputs.
+> **Trap:** Customers who provide business requirements sometimes purport to speak for users. They are often too far removed to provide accurate user requirements. Business requirements ← accountable sponsor; user requirements ← people who press the keys / touch the screen / receive outputs.
 
 ### 2.3 Requirements Bill of Rights for Software Customers
 
@@ -249,21 +249,21 @@ Without adequate customer involvement, an **expectation gap** opens between what
 | 9 | Promptly communicate changes to the requirements. |
 | 10 | Respect the requirements development process. |
 
-> **Trap** — Don't assume participants instinctively know how to collaborate on requirements. Take time to discuss the working approach and write it down.
+> **Trap:** Don't assume participants instinctively know how to collaborate on requirements. Take time to discuss the working approach and write it down.
 
-### 2.5 Reaching Agreement — Sign-off & Baselines
+### 2.5 Reaching Agreement: Sign-off & Baselines
 
 **Sign-off pitfalls:**
 - Customer who views it as meaningless ritual ("I signed because otherwise they wouldn't start coding")
 - Developer who weaponizes it to freeze requirements ("You signed off, so that's what we're building")
 
-**Better approach — the requirements baseline:**
+**Better approach: the requirements baseline:**
 
 A **requirements baseline** is a reviewed and agreed-upon set of requirements serving as the basis for further development. The implicit agreement:
 
 > *"I agree that this set of requirements represents our best understanding for the next portion of this project and that the solution described will meet our needs as we understand them today. I agree to make future changes through the project's defined change process. I realize that changes might require renegotiating cost, resource, and schedule commitments."*
 
-**Agile adaptation:** No formal sign-off; agreement reached per-iteration in planning sessions. Stories for an iteration are frozen; new requests go to the backlog. The ultimate "sign-off" is acceptance of working, tested software from the iteration. Sign-off can serve as a lightweight "We are Here" ceremony — a reference point for change.
+**Agile adaptation:** No formal sign-off; agreement reached per-iteration in planning sessions. Stories for an iteration are frozen; new requests go to the backlog. The ultimate "sign-off" is acceptance of working, tested software from the iteration. Sign-off can serve as a lightweight "We are Here" ceremony, a reference point for change.
 
 ### 2.6 Decision Makers & Decision Rules
 
@@ -276,7 +276,7 @@ Identify requirements decision makers **early**. A small group representing mana
 - Delegation to an individual
 - Group decides, but one person has veto authority
 
-> No single rule works in every situation — establish guidelines before the first significant decision.
+> No single rule works in every situation; establish guidelines before the first significant decision.
 
 ---
 
@@ -302,7 +302,7 @@ Elicitation ⇄ Analysis ⇄ Specification ⇄ Validation
 
 ### 3.2 Good Practices by Category (Table 3-1)
 
-> 50+ practices grouped into 7 categories. Select, apply, and adapt thoughtfully — no practice suits every situation.
+> 50+ practices grouped into 7 categories. Select, apply, and adapt thoughtfully; no practice suits every situation.
 
 #### Elicitation
 - Define vision and scope
@@ -370,13 +370,13 @@ Elicitation ⇄ Analysis ⇄ Specification ⇄ Validation
 - Track requirements effort
 - Review past lessons learned
 
-### 3.3 Getting Started — Value vs. Difficulty (Table 3-2)
+### 3.3 Getting Started: Value vs. Difficulty (Table 3-2)
 
 | | High Value | Medium Value | Low Value |
 |---|-----------|-------------|-----------|
-| **High Ease** | Define RE process; Base plans on reqs; Identify user classes; Hold interviews; Model environment; Identify origins; Define vision & scope; Establish baselines; Change control process; Review reqs; Allocate to subsystems; Record business rules | Train BAs; Plan reqs approach; Identify user reqs; Identify decision makers; Establish versions; Change impact analysis; Select life cycle; Manage risks; Review lessons; Track effort | Distribute questionnaires |
-| **Medium Ease** | Maintain traceability matrix; Facilitated workshops; Estimate effort; Acceptance criteria; Model reqs; Analyze interfaces | Educate stakeholders; Focus groups; Prototypes; Analyze feasibility; Prioritize reqs; Use RM tool; Track status; Track issues; Identify system events | Examine problem reports |
-| **Low Ease** | | Educate developers about domain; Adopt templates; Specify nonfunctional reqs | Create data dictionary; Observe users; Test reqs; Document analysis; Reuse reqs; Uniquely label; Create glossary; Maintain change history; Simulate reqs |
+| **High Ease** | Define RE process; base plans on reqs; identify user classes; hold interviews; model environment; identify origins; define vision & scope; establish baselines; change control process; review reqs; allocate to subsystems; record business rules | Train BAs; plan reqs approach; identify user reqs; identify decision makers; establish versions; change impact analysis; select life cycle; manage risks; review lessons; track effort | Distribute questionnaires |
+| **Medium Ease** | Maintain traceability matrix; facilitated workshops; estimate effort; acceptance criteria; model reqs; analyze interfaces | Educate stakeholders; focus groups; prototypes; analyze feasibility; prioritize reqs; use RM tool; track status; track issues; identify system events | Examine problem reports |
+| **Low Ease** | | Educate developers about domain; adopt templates; specify nonfunctional reqs | Create data dictionary; observe users; test reqs; document analysis; reuse reqs; uniquely label; create glossary; maintain change history; simulate reqs |
 
 > Don't try all at once. Begin with high-impact, easy-to-implement practices. Treat the rest as items for your requirements tool kit.
 
@@ -393,7 +393,7 @@ Elicitation ⇄ Analysis ⇄ Specification ⇄ Validation
 - May be performed by dedicated specialists or by team members wearing multiple hats (PM, product manager, product owner, SME, developer, even user).
 - When someone with another role also serves as BA, they are doing **two distinct jobs** requiring different skill sets.
 
-> **Trap** — Don't assume any talented developer or knowledgeable user can automatically be an effective BA without training, resources, and coaching.
+> **Trap:** Don't assume any talented developer or knowledgeable user can automatically be an effective BA without training, resources, and coaching.
 
 **Impact of BA experience:** Experienced analysts produce specs with fewer defects (inspected 2× faster than novice work). In COCOMO II, analyst capability can reduce project effort by **one-third** compared to inexperienced analysts (Boehm et al. 2000).
 
@@ -429,7 +429,7 @@ Elicitation ⇄ Analysis ⇄ Specification ⇄ Validation
 | **Organizational** | Structure vast jumbled information into a coherent whole; set up information architecture. |
 | **Modeling** | Flowcharts, structured analysis (DFD, ERD), UML; know when to select each model and educate others. |
 | **Interpersonal** | Get people with competing interests to work together; comfortable across job functions and levels. |
-| **Creativity** | Not merely a scribe — invent potential requirements; conceive innovative capabilities; find ways to satisfy needs users didn't know they had. Avoid gold-plating. |
+| **Creativity** | Not merely a scribe: invent potential requirements; conceive innovative capabilities; find ways to satisfy needs users didn't know they had. Avoid gold-plating. |
 
 ### 4.4 Essential BA Knowledge
 
@@ -437,7 +437,7 @@ Elicitation ⇄ Analysis ⇄ Specification ⇄ Validation
 - Project management, development life cycles, risk management, quality engineering
 - Product management concepts (commercial setting)
 - Architecture and operating environment basics (for technical conversations)
-- **Business, industry, and organizational knowledge** — minimizes miscommunication; detects unstated assumptions; suggests process improvements and valuable functionality
+- **Business, industry, and organizational knowledge:** minimizes miscommunication; detects unstated assumptions; suggests process improvements and valuable functionality
 
 ### 4.5 The Making of a Business Analyst
 
@@ -450,35 +450,35 @@ Great BAs are **grown from diverse backgrounds**. All should identify their gaps
 | **Former/concurrent PM** | Strong communication, negotiation, facilitation, organizational, writing skills | Needs to learn RE practices; must shift focus from timelines/budget to understanding business needs and analysis/modeling skills |
 | **Subject matter expert (SME)** | Can judge requirement reasonableness; knows system impacts | May specify to own preferences; blinders on creativity; difficulty imagining "to-be" system. Better paired with a BA from dev team. |
 
-> **Key lesson:** The BA helps stakeholders find the **difference between what they say they want and what they really need.** A skilled BA digs below presented solutions to understand the user's true objectives — there are almost always multiple ways to solve the problem.
+> **Key lesson:** The BA helps stakeholders find the **difference between what they say they want and what they really need.** A skilled BA digs below presented solutions to understand the user's true objectives; there are almost always multiple ways to solve the problem.
 
 ---
 
 ## Key Takeaways
 
-1. **Requirements are the foundation** — 40-50% of defects originate here; fixing late costs 100×+ more.
-2. **Three levels** — Business (why) → User (what for) → Functional (what does it do), plus nonfunctional requirements.
-3. **Product ≠ Project requirements** — SRS holds product requirements; project requirements live in the PM plan.
+1. **Requirements are the foundation:** 40-50% of defects originate here; fixing late costs 100×+ more.
+2. **Three levels:** Business (why) → User (what for) → Functional (what does it do), plus nonfunctional requirements.
+3. **Product ≠ Project requirements:** SRS holds product requirements; project requirements live in the PM plan.
 4. **Requirements engineering** = Development (elicit, analyze, specify, validate) + Management (baseline, change control, trace, track).
-5. **Iterate** — Perfect requirements are impossible; aim for "good enough to proceed at acceptable risk."
-6. **Customer partnership is essential** — Frequent contact points shrink the expectation gap. Use the Bill of Rights & Responsibilities to set expectations.
-7. **Baseline, don't freeze** — Sign-off establishes a reference point, not a weapon. Changes flow through a defined process.
-8. **50+ good practices** exist across 7 categories — start with high-value, easy-to-implement ones; build a tool kit.
-9. **The BA is central** — Not just a scribe but an analyst, facilitator, leader, and creative problem-solver. Experience matters enormously.
-10. **BAs come from diverse backgrounds** — each with strengths and gaps; mentoring and training are essential.
+5. **Iterate:** Perfect requirements are impossible; aim for "good enough to proceed at acceptable risk."
+6. **Customer partnership is essential:** Frequent contact points shrink the expectation gap. Use the Bill of Rights & Responsibilities to set expectations.
+7. **Baseline, don't freeze:** Sign-off establishes a reference point, not a weapon. Changes flow through a defined process.
+8. **50+ good practices** exist across 7 categories: start with high-value, easy-to-implement ones; build a tool kit.
+9. **The BA is central:** Not just a scribe but an analyst, facilitator, leader, and creative problem-solver. Experience matters enormously.
+10. **BAs come from diverse backgrounds:** each with strengths and gaps; mentoring and training are essential.
 
 ---
 
 ## Related Notes
 
-- [[02_Business_Requirements_Vision_Scope]] — Ch 5: Establishing business requirements
-- [[03_User_Requirements_Use_Cases]] — Ch 6-8: Finding the voice of the user, elicitation, understanding user requirements
-- [[04_Documenting_Requirements_SRS]] — Ch 9-10: Business rules, documenting requirements
-- [[05_Writing_Excellent_Requirements]] — Ch 11: Quality characteristics of requirement statements
-- [[06_Requirements_Modeling]] — Ch 12-13: Analysis models, data requirements
-- [[07_Nonfunctional_Requirements]] — Ch 14: Beyond functionality — quality attributes
-- [[08_Requirements_Validation]] — Ch 15-17: Prototyping, prioritization, validation
-- [[09_Requirements_Management]] — Ch 27-29: Management practices, change control, traceability
+- [[02_Business_and_User_Requirements]] (Ch 5): Establishing business requirements
+- [[03_Requirements_Elicitation]] (Ch 6-8): Finding the voice of the user, elicitation, understanding user requirements
+- [[05_Documenting_Requirements]] (Ch 9-10): Business rules, documenting requirements
+- [[05_Documenting_Requirements]] (Ch 11): Quality characteristics of requirement statements
+- [[06_Requirements_Modeling]] (Ch 12-13): Analysis models, data requirements
+- [[07_Quality_and_Prototyping]] (Ch 14): Beyond functionality: quality attributes
+- [[08_Prioritization_Validation_and_Reuse]] (Ch 15-17): Prototyping, prioritization, validation
+- [[10_Requirements_Management]] (Ch 27-29): Management practices, change control, traceability
 
 ---
 

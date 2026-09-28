@@ -23,7 +23,7 @@ aliases:
 
 # Requirements Management
 
-> **From development to management.** Great requirements get you only partway to a solution — they also have to be well managed and effectively communicated. Requirements management maintains the integrity, accuracy, and currency of requirements agreements throughout the project lifecycle: version control, change control, status tracking, and traceability.
+> **From development to management.** Great requirements get you only partway to a solution; they also have to be well managed and effectively communicated. Requirements management maintains the integrity, accuracy, and currency of requirements agreements throughout the project lifecycle: version control, change control, status tracking, and traceability.
 
 ---
 
@@ -46,7 +46,7 @@ Requirements **development** elicits, analyzes, specifies, and validates require
 - Process descriptions should identify the team role that owns each activity, who can modify the process, how exceptions are handled, and the escalation path.
 - Document: tools/conventions for versioning, baselining, change proposal/evaluation, impact assessment, attribute definitions, status-tracking procedures, trace update responsibility, issue tracking, commitment renegotiation, and RM tool usage.
 
-> [!warning] **Trap:** If *no one* has responsibility for requirements management, don't expect it to get done. If *"everyone"* has responsibility, each person may assume someone else is covering it — so activities get overlooked.
+> [!warning] **Trap:** If *no one* has responsibility for requirements management, don't expect it to get done. If *"everyone"* has responsibility, each person may assume someone else is covering it, so activities get overlooked.
 
 ---
 
@@ -55,8 +55,8 @@ Requirements **development** elicits, analyzes, specifies, and validates require
 A **requirements baseline** is a set of requirements that stakeholders have agreed to, often defining the contents of a specific planned release or development iteration.
 
 - After review and approval, a defined subset of requirements deliverables (business requirements, user requirements, functional/nonfunctional requirements, data dictionary, analysis models) constitutes a baseline.
-- At baselining, requirements are placed under **configuration (change) management** — subsequent changes flow only through the defined change control procedure.
-- Prior to baselining, requirements are still evolving — no need to impose process overhead on those modifications.
+- At baselining, requirements are placed under **configuration (change) management:** subsequent changes flow only through the defined change control procedure.
+- Prior to baselining, requirements are still evolving: no need to impose process overhead on those modifications.
 - A baseline could be: some/all requirements in an SRS, a designated set in an RM tool, or an agreed-on set of user stories for a single agile iteration.
 
 ### 2.1 Accommodating Changes to Commitments
@@ -68,13 +68,13 @@ If scope changes, the project manager must renegotiate commitments with affected
 - Extend the delivery schedule or add iterations
 - Sacrifice quality to ship by the original date
 
-> [!important] No single approach is universally correct — projects differ in flexibility of features, staff, budget, schedule, and quality. The choice should be based on business objectives and stakeholder priorities. Accept the reality of adjusting expectations; it is better than imagining all new features will fit the original date without overruns, burnout, or quality compromises.
+> [!important] No single approach is universally correct, projects differ in flexibility of features, staff, budget, schedule, and quality. The choice should be based on business objectives and stakeholder priorities. Accept the reality of adjusting expectations; it is better than imagining all new features will fit the original date without overruns, burnout, or quality compromises.
 
 ---
 
 ## 3. Requirements Version Control
 
-Version control — uniquely identifying different versions of an item — applies at **both** levels: individual requirements and requirements sets (documents).
+Version control (uniquely identifying different versions of an item) applies at **both** levels: individual requirements and requirements sets (documents).
 
 ### 3.1 Principles
 
@@ -82,7 +82,7 @@ Version control — uniquely identifying different versions of an item — appli
 - Every version must be uniquely identified; every team member must access the current version.
 - Changes must be clearly documented and communicated to all affected parties.
 - Only designated individuals may update requirements; the version identifier changes on every update.
-- Each circulated version should include a **revision history**: changes made, date, individual, and reason.
+- Each circulated version should include a **revision history:** changes made, date, individual, and reason.
 
 ### 3.2 Mechanisms
 
@@ -95,9 +95,9 @@ Version control — uniquely identifying different versions of an item — appli
 
 > [!note] Schemes that try to differentiate document versions based on dates are prone to confusion. Use a structured version label instead.
 
-### 3.3 "It's Not a Bug; It's a Feature!"
+### 3.3 "It's Not a Bug; it's a Feature!"
 
-A contract team delivered a release and received a flood of bug reports. Investigation revealed the customer was testing against an **obsolete version of the SRS** — what testers reported as bugs truly were features. They wasted considerable time rewriting tests against the correct SRS and retesting, all because of a version control problem.
+A contract team delivered a release and received a flood of bug reports. Investigation revealed the customer was testing against an **obsolete version of the SRS:** what testers reported as bugs truly were features. They wasted considerable time rewriting tests against the correct SRS and retesting, all because of a version control problem.
 
 > *"We probably wasted four to six hours of effort that our department had to absorb and couldn't spend on actual billable hours. I think software professionals would be shocked if they multiplied out these wasted hours times their bill rate to see what the loss in revenue is."*
 
@@ -124,11 +124,11 @@ Think of each requirement as an **object** with properties that distinguish it f
 
 ### 4.2 Using Attributes Effectively
 
-- Store attribute values in a document, spreadsheet, database, or — most effectively — an RM tool.
+- Store attribute values in a document, spreadsheet, database, or (most effectively) an RM tool.
 - RM tools provide system-generated attributes, let you define custom ones (some auto-populated), and allow querying subsets (e.g., "all high-priority requirements assigned to Shari for release 2.3 with status Approved").
 - **Rationale attribute** is powerful: if a requirement exists only because a competitor's product has the same capability, or to serve a user group marketing no longer cares about, the rationale helps people decide whether to omit it.
 
-> [!warning] **Trap:** Selecting too many attributes can overwhelm a team — they won't supply all values and won't use the information effectively. **Start with 3–4 key attributes.** Add others only when you know how they will add value.
+> [!warning] **Trap:** Selecting too many attributes can overwhelm a team; they won't supply all values and won't use the information effectively. **Start with 3–4 key attributes.** Add others only when you know how they will add value.
 
 ### 4.3 Managing Release Allocation
 
@@ -136,7 +136,7 @@ Think of each requirement as an **object** with properties that distinguish it f
 - Deferring a requirement = changing its planned release (just update the release number).
 - Handle deleted/rejected requirements via a **status** attribute, not by removing them (preserves history).
 
-> [!example] One company periodically generated a report showing which of 750 requirements from 3 related specifications were assigned to each designer. One designer discovered several requirements she didn't realize were hers — saving an estimated 1–2 months of rework. The larger the project, the easier it is to experience time-wasting miscommunications.
+> [!example] One company periodically generated a report showing which of 750 requirements from 3 related specifications were assigned to each designer. One designer discovered several requirements she didn't realize were hers, saving an estimated 1–2 months of rework. The larger the project, the easier it is to experience time-wasting miscommunications.
 
 ---
 
@@ -164,7 +164,7 @@ Status tracking means comparing where you really are against the expectation of 
 
 A chart showing the **percentage of all requirements having each status value** at the end of each month illustrates how the project approaches its goal of complete verification. A body of work is done when all requirements allocated to it have status **Verified**, **Deleted**, or **Deferred**.
 
-> [!warning] **Trap — "90 percent done" syndrome:** The first half of a software project consumes the first 90% of resources, and the second half consumes the other 90%. Overoptimistic estimation and overgenerous status tracking are a reliable formula for project overruns.
+> [!warning] **Trap: "90 percent done" syndrome:** The first half of a software project consumes the first 90% of resources, and the second half consumes the other 90%. Overoptimistic estimation and overgenerous status tracking are a reliable formula for project overruns.
 
 ---
 
@@ -199,7 +199,7 @@ A **burndown chart** of remaining issues and the closure rate helps predict when
 
 ## 7. Measuring Requirements Effort
 
-Track how much effort is spent on requirements development and management to evaluate whether it was too little, about right, or too much — and adjust future planning.
+Track how much effort is spent on requirements development and management to evaluate whether it was too little, about right, or too much, and adjust future planning.
 
 ### 7.1 Requirements Development Effort
 
@@ -219,7 +219,7 @@ Track how much effort is spent on requirements development and management to eva
 - Tracking and reporting requirements status
 - Creating requirements trace information
 
-> [!important] Work effort ≠ elapsed calendar time. Tasks can be interrupted or require interactions that cause delays. Total effort (labor hours) may not change, but calendar duration increases. Consider separating BA-role time from other participants' time to plan future BA effort. Compare time invested with time spent dealing with issues that arose because these activities *weren't* done — the cost of poor quality.
+> [!important] Work effort ≠ elapsed calendar time. Tasks can be interrupted or require interactions that cause delays. Total effort (labor hours) may not change, but calendar duration increases. Consider separating BA-role time from other participants' time to plan future BA effort. Compare time invested with time spent dealing with issues that arose because these activities *weren't* done, the cost of poor quality.
 
 ---
 
@@ -244,7 +244,7 @@ The team estimates total work in **story points** (proportional to implementatio
 
 - Chart story points remaining in the backlog at the end of each iteration.
 - The total changes as work is completed, stories are re-estimated, new stories are added, or work is removed.
-- Scope remaining can *increase* in some iterations — more functionality was added than completed.
+- Scope remaining can *increase* in some iterations: more functionality was added than completed.
 - The slope reveals the projected end date (when no work remains).
 
 > [!tip] The burndown chart helps avoid the "90 percent done" syndrome by making visible the work *remaining*, not the work *completed* (which doesn't reflect inevitable scope increases).
@@ -259,7 +259,7 @@ Uncontrolled change is a common source of project chaos, schedule slips, quality
 
 ### 9.1 Why Manage Changes?
 
-Software change isn't bad — it's necessary. The world changes as development progresses: new market opportunities, regulatory changes, evolving business needs. An organization serious about managing projects must ensure:
+Software change isn't bad; it's necessary. The world changes as development progresses: new market opportunities, regulatory changes, evolving business needs. An organization serious about managing projects must ensure:
 
 - Proposed changes are thoughtfully evaluated before commitment.
 - Appropriate individuals make informed business decisions.
@@ -267,11 +267,11 @@ Software change isn't bad — it's necessary. The world changes as development p
 - Approved changes are communicated to all affected participants.
 - The project incorporates changes consistently and effectively.
 
-> [!important] Change always has a price. Revising a webpage may be quick; changing an IC design can cost tens of thousands of dollars. Even a *rejected* change request consumes time to submit, evaluate, and decide. Without change management, you won't really know what will be delivered — leading to an expectation gap.
+> [!important] Change always has a price. Revising a webpage may be quick; changing an IC design can cost tens of thousands of dollars. Even a *rejected* change request consumes time to submit, evaluate, and decide. Without change management, you won't really know what will be delivered, leading to an expectation gap.
 
 ### 9.2 Beware Subversive Changes
 
-A vendor and customer once colluded to bypass the change process — renting a hotel room and making code changes in secret. When testers found the deliverable didn't match requirements, the whole story came out. Backtracking cost considerable time and effort. The lead customer later became a BA and apologized, having finally understood how her actions undermined the team.
+A vendor and customer once colluded to bypass the change process, renting a hotel room and making code changes in secret. When testers found the deliverable didn't match requirements, the whole story came out. Backtracking cost considerable time and effort. The lead customer later became a BA and apologized, having finally understood how her actions undermined the team.
 
 ### 9.3 Managing Scope Creep
 
@@ -286,7 +286,7 @@ Requirements **growth** includes new functionality and significant modifications
 3. Engage customers in elicitation to reduce overlooked requirements.
 4. Use prototyping to share a clear understanding of needs and solutions.
 5. Use short development cycles to release incrementally and adjust frequently.
-6. **The most effective technique: the ability to say "no."** "Not now" is more palatable than a simple rejection — it holds the promise of a future release.
+6. **The most effective technique: the ability to say "no."** "Not now" is more palatable than a simple rejection; it holds the promise of a future release.
 
 > [!warning] **Trap:** Freezing requirements too soon after initial elicitation is unwise and unrealistic. Establish a baseline when requirements are well enough defined for construction to begin, then *manage changes* to minimize adverse impact.
 
@@ -318,10 +318,10 @@ A sensible change control process lets project leaders make informed business de
 
 Every process description should include:
 
-1. **Entry criteria** — conditions that must be satisfied before process execution begins.
-2. **Tasks** — the activities, the responsible role, and other participants.
-3. **Verification** — steps to confirm tasks were completed correctly.
-4. **Exit criteria** — conditions indicating successful completion.
+1. **Entry criteria:** conditions that must be satisfied before process execution begins.
+2. **Tasks:** the activities, the responsible role, and other participants.
+3. **Verification:** steps to confirm tasks were completed correctly.
+4. **Exit criteria:** conditions indicating successful completion.
 
 ### 11.2 Roles and Responsibilities (Table 28-1)
 
@@ -335,7 +335,7 @@ Every process description should include:
 | **Request Receiver** | Person who initially receives newly submitted change requests. |
 | **Verifier** | Person who determines whether the change was made correctly. |
 
-> [!note] Different individuals need not be required for each role. The same person can fill several — perhaps all — roles on a small project. What matters is that the CCB representation can speak to the needs of diverse stakeholders: *Do we need it? Can we sell it? Can we build it?*
+> [!note] Different individuals need not be required for each role. The same person can fill several (perhaps all) roles on a small project. What matters is that the CCB representation can speak to the needs of diverse stakeholders: *Do we need it? Can we sell it? Can we build it?*
 
 ### 11.3 Change Request Lifecycle (State-Transition)
 
@@ -343,10 +343,10 @@ A change request passes through a defined lifecycle of states (represented via s
 
 ### 11.4 Process Tasks
 
-1. **Evaluate change request** — assess technical feasibility, cost, alignment with business requirements and resource constraints. The CCB Chair may assign an Evaluator for impact analysis, risk/hazard analysis. Consider implications of *rejecting* the request too.
-2. **Make change decision** — the CCB decides approve/reject, assigns priority or target date, allocates to a release/iteration, or adds to the product backlog. Updates status and notifies affected team members.
-3. **Implement the change** — the Modifier updates affected work products. Use **trace information** to find all parts the change touches; revise trace information as needed.
-4. **Verify the change** — typically through peer review to ensure modified deliverables correctly address all aspects. Multiple team members may verify via testing or review. After verification, store updated work products per project conventions.
+1. **Evaluate change request:** assess technical feasibility, cost, alignment with business requirements and resource constraints. The CCB Chair may assign an Evaluator for impact analysis, risk/hazard analysis. Consider implications of *rejecting* the request too.
+2. **Make change decision:** the CCB decides approve/reject, assigns priority or target date, allocates to a release/iteration, or adds to the product backlog. Updates status and notifies affected team members.
+3. **Implement the change:** the Modifier updates affected work products. Use **trace information** to find all parts the change touches; revise trace information as needed.
+4. **Verify the change:** typically through peer review to ensure modified deliverables correctly address all aspects. Multiple team members may verify via testing or review. After verification, store updated work products per project conventions.
 
 ### 11.5 Exit Criteria
 
@@ -379,9 +379,9 @@ A change request passes through a defined lifecycle of states (represented via s
 
 ## 12. The Change Control Board (CCB)
 
-The **CCB** is the body of people — whether one individual or a diverse group — that decides which proposed changes and new requirements to accept, which to accept with revisions, and which to reject. It also decides which reported defects to correct and when.
+The **CCB** is the body of people (whether one individual or a diverse group) that decides which proposed changes and new requirements to accept, which to accept with revisions, and which to reject. It also decides which reported defects to correct and when.
 
-> [!important] Projects *always* have some de facto group that makes change decisions. Establishing a CCB formalizes this group's composition, authority, and operating procedures — it is not bureaucratic overhead, but a valuable structure to help manage even a small project.
+> [!important] Projects *always* have some de facto group that makes change decisions. Establishing a CCB formalizes this group's composition, authority, and operating procedures; it is not bureaucratic overhead, but a valuable structure to help manage even a small project.
 
 ### 12.1 CCB Composition
 
@@ -427,14 +427,14 @@ The CCB balances **anticipated benefits** (financial savings, increased revenue,
 
 Very large projects or programs may have several levels of CCBs:
 
-- **Program-level CCB** — handles issues affecting multiple projects and changes exceeding specified cost/schedule impact.
-- **Project-level CCBs** — resolve issues and changes affecting only that project.
+- **Program-level CCB:** handles issues affecting multiple projects and changes exceeding specified cost/schedule impact.
+- **Project-level CCBs:** resolve issues and changes affecting only that project.
 
 ### 12.5 Communicating Status & Renegotiating Commitments
 
 After a decision, a designated individual updates the request's status in the change database. Some tools auto-generate email to the Originator and affected parties.
 
-> [!important] Stakeholders can't stuff more and more functionality into a project with schedule, staff, budget, or quality constraints and still expect to succeed. Before accepting a significant change, **renegotiate commitments** with management and customers — ask for more time or defer lower-priority requirements. If you don't obtain adjustments, document threats to success in the project's risk list.
+> [!important] Stakeholders can't stuff more and more functionality into a project with schedule, staff, budget, or quality constraints and still expect to succeed. Before accepting a significant change, **renegotiate commitments** with management and customers; ask for more time or defer lower-priority requirements. If you don't obtain adjustments, document threats to success in the project's risk list.
 
 ---
 
@@ -453,7 +453,7 @@ Measuring change activity assesses the **stability** of requirements and reveals
 Tracks the rate at which new proposals for requirements changes arrive after a baseline was established.
 
 - **Should trend toward zero** as you approach release.
-- A sustained high frequency implies risk of failing schedule commitments and likely indicates the original requirements set was incomplete — better elicitation practices may be in order.
+- A sustained high frequency implies risk of failing schedule commitments and likely indicates the original requirements set was incomplete; better elicitation practices may be in order.
 
 ### 13.2 Change Origins Chart
 
@@ -471,9 +471,9 @@ Shows the number of change requests from different sources. Discussing this data
 
 ### 14.1 Three-Step Procedure
 
-1. **Understand possible implications** — a requirement change often produces a large ripple effect: modifications to other requirements, architectures, designs, code, and tests. Changes can conflict with other requirements or compromise quality attributes (performance, security).
-2. **Identify all affected work products** — requirements, files, models, and documents that might need modification. Requirements trace information helps greatly here.
-3. **Identify tasks and estimate effort** — identify the tasks required to implement the change and estimate the effort for each.
+1. **Understand possible implications:** a requirement change often produces a large ripple effect: modifications to other requirements, architectures, designs, code, and tests. Changes can conflict with other requirements or compromise quality attributes (performance, security).
+2. **Identify all affected work products:** requirements, files, models, and documents that might need modification. Requirements trace information helps greatly here.
+3. **Identify tasks and estimate effort:** identify the tasks required to implement the change and estimate the effort for each.
 
 ### 14.2 Detailed Steps
 
@@ -486,19 +486,19 @@ Shows the number of change requests from different sources. Discussing this data
 7. Evaluate the change's priority compared to other pending requirements.
 8. Report the impact analysis results to the CCB.
 
-> [!tip] For substantial changes, use a **small team** — not just one developer — to do the analysis and effort estimation to avoid overlooking important tasks. The procedure shouldn't take more than a couple of hours for a single change request — a small investment to ensure the project wisely invests its limited resources. Compare actual effort with estimated effort to improve future analyses.
+> [!tip] For substantial changes, use a **small team:** not just one developer (to do the analysis and effort estimation to avoid overlooking important tasks. The procedure shouldn't take more than a couple of hours for a single change request) a small investment to ensure the project wisely invests its limited resources. Compare actual effort with estimated effort to improve future analyses.
 
 ### 14.3 Money Down the Drain
 
-Two developers estimated 4 weeks for an enhancement. After 2 months, it was only half done and the customer canceled it: *"If I'd known how long this was really going to take and how much it was going to cost, I wouldn't have approved it."* In the rush to begin implementation, the developers didn't do enough impact analysis — wasting several hundred hours of work that a few hours of analysis could have avoided.
+Two developers estimated 4 weeks for an enhancement. After 2 months, it was only half done and the customer canceled it: *"If I'd known how long this was really going to take and how much it was going to cost, I wouldn't have approved it."* In the rush to begin implementation, the developers didn't do enough impact analysis, wasting several hundred hours of work that a few hours of analysis could have avoided.
 
 ---
 
 ## 15. Change Management on Agile Projects
 
-> *"Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage."* — Agile Manifesto Principle
+> *"Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage."* *(Agile Manifesto Principle)*
 
-Agile projects are structured to respond to — and even welcome — scope changes. They manage change by maintaining a **dynamic backlog** of work: user stories, defects, business process changes, training, and other activities.
+Agile projects are structured to respond to (and even welcome) scope changes. They manage change by maintaining a **dynamic backlog** of work: user stories, defects, business process changes, training, and other activities.
 
 ### 15.1 Iteration Scope Management
 
@@ -524,7 +524,7 @@ Agile projects are structured to respond to — and even welcome — scope chang
 - Short iterations and small increments allow frequent but limited-scale change control.
 - Scope changes affecting overall cost or duration must be escalated to a higher-level change authority (e.g., project sponsor).
 
-> [!important] The purpose of change control is **not** to inhibit change or stakeholder proposals. It is to provide visibility into change activity and mechanisms by which the right people can consider proposed changes and incorporate appropriate ones at the right time — maximizing business value and minimizing negative impact.
+> [!important] The purpose of change control is **not** to inhibit change or stakeholder proposals. It is to provide visibility into change activity and mechanisms by which the right people can consider proposed changes and incorporate appropriate ones at the right time, maximizing business value and minimizing negative impact.
 
 ---
 
@@ -544,9 +544,9 @@ Agile projects are structured to respond to — and even welcome — scope chang
 ### 16.2 Four Types of Trace Links (Figure 29-1)
 
 ```
-Customer Needs  ←──────→  Requirements  ←──────→  System Elements
-(business objectives,      (functional &           (design, code,
- user requirements)          nonfunctional)          tests, help files)
+Customer Needs ←──────→ Requirements ←──────→ System Elements
+(business objectives, (functional & (design, code,
+ user requirements) nonfunctional) tests, help files)
 ```
 
 | Direction | From → To | Purpose |
@@ -556,7 +556,7 @@ Customer Needs  ←──────→  Requirements  ←──────→
 | **Forward** (bottom) | Requirements → System elements | Confirm every requirement is satisfied (know which design/code/test elements address each). |
 | **Backward** (bottom) | System elements → Requirements | Know *why* each element was created (detect orphan code / gold-plating). |
 
-> [!tip] If use cases represent customer needs, the top half traces between use cases and functional requirements. Tracing tests *back* to requirements provides a mechanism for detecting unimplemented requirements — the expected functionality will be missing from the system being tested.
+> [!tip] If use cases represent customer needs, the top half traces between use cases and functional requirements. Tracing tests *back* to requirements provides a mechanism for detecting unimplemented requirements, the expected functionality will be missing from the system being tested.
 
 ---
 
@@ -567,7 +567,7 @@ Requirements tracing is an **investment** that increases chances of delivering a
 | Motivation | Description |
 |------------|-------------|
 | **Finding missing requirements** | Business requirements that don't trace to any user requirements; user requirements that don't trace to any functional requirements. |
-| **Finding unnecessary requirements** | Functional requirements that don't trace back to user or business requirements — might not be needed. |
+| **Finding unnecessary requirements** | Functional requirements that don't trace back to user or business requirements; might not be needed. |
 | **Certification & compliance** | Demonstrate all requirements were implemented for safety-critical products; show regulatory compliance (health care, financial services). |
 | **Change impact analysis** | Without trace information, you'll likely overlook a system element affected by adding, deleting, or modifying a requirement. |
 | **Maintenance** | When corporate policies or government regulations change, a table showing where each business rule was addressed makes changes easier and more reliable. |
@@ -576,7 +576,7 @@ Requirements tracing is an **investment** that increases chances of delivering a
 | **Reuse** | Identify packages of related requirements, designs, code, and tests for reuse. |
 | **Testing** | When a test fails, links between tests, requirements, and code point developers toward likely areas to examine for the defect. |
 
-> [!warning] Keeping trace information current takes discipline and time. If it becomes obsolete, you'll probably never reconstruct it — and obsolete/inaccurate trace data wastes time by sending developers down the wrong path, destroying trust. Adopt tracing for the **right reasons**, and perform a cost-benefit analysis to decide which links contribute to project success. Don't ask team members to record information unless you know how they can use it.
+> [!warning] Keeping trace information current takes discipline and time. If it becomes obsolete, you'll probably never reconstruct it, and obsolete/inaccurate trace data wastes time by sending developers down the wrong path, destroying trust. Adopt tracing for the **right reasons**, and perform a cost-benefit analysis to decide which links contribute to project success. Don't ask team members to record information unless you know how they can use it.
 
 ---
 
@@ -596,7 +596,7 @@ The most common way to represent links between requirements and other system ele
 - **Code references** can be class methods, stored procedures, source file names, or modules within a source file.
 - More detail = more work, but gives precise locations of related software elements.
 
-> [!important] **Fill in information as work gets done, not as it gets planned.** Enter `CatalogSort()` in the "Code element" column only when that code has been written. Populated cells indicate work that's been completed. Listing test cases for each requirement does *not* indicate the software passed those tests — only that tests were written to verify the requirement. Tracking testing status is a separate matter.
+> [!important] **Fill in information as work gets done, not as it gets planned.** Enter `CatalogSort()` in the "Code element" column only when that code has been written. Populated cells indicate work that's been completed. Listing test cases for each requirement does *not* indicate the software passed those tests, only that tests were written to verify the requirement. Tracking testing status is a separate matter.
 
 ### 18.2 Two-Way Traceability Matrix (Table 29-2)
 
@@ -623,7 +623,7 @@ An alternative format defines links between **pairs** of system elements (e.g., 
 
 The Table 29-1 format accommodates these by allowing several items in each table cell.
 
-> [!tip] You don't need to define and manage *all* possible trace link types. On many projects, you can gain most traceability benefits for a fraction of the potential effort — maybe you only need to trace system tests back to functional requirements or user requirements. Establishing traces is not much work if you collect information as development proceeds, but it's tedious and expensive to do on a completed system.
+> [!tip] You don't need to define and manage *all* possible trace link types. On many projects, you can gain most traceability benefits for a fraction of the potential effort, maybe you only need to trace system tests back to functional requirements or user requirements. Establishing traces is not much work if you collect information as development proceeds, but it's tedious and expensive to do on a completed system.
 
 ---
 
@@ -632,13 +632,13 @@ The Table 29-1 format accommodates these by allowing several items in each table
 > [!summary] **Requirements management is an essential activity** whether your project follows a sequential, agile, or hybrid lifecycle. It ensures the effort invested in requirements development isn't squandered and reduces the expectation gap by keeping all stakeholders informed about the current state of requirements throughout development.
 
 - **Baselining** freezes an agreed-upon set of requirements under change management; changes flow only through the defined process.
-- **Version control** applies at both individual requirement and document levels — begin as soon as you draft.
+- **Version control** applies at both individual requirement and document levels; begin as soon as you draft.
 - **Requirement attributes** provide context; start with 3–4 key attributes and add more only when value is clear.
 - **Status tracking** replaces "90% done" guessing with precise, categorical progress measurement.
-- **Change control** is a funneling/filtering mechanism — not an obstacle. The CCB makes informed business decisions balancing benefits against impact.
+- **Change control** is a funneling/filtering mechanism: not an obstacle. The CCB makes informed business decisions balancing benefits against impact.
 - **Impact analysis** is mandatory for every change: understand implications, identify affected work products, estimate effort. Skipping it turns size into a surprise.
-- **Traceability** documents the links between requirements and all downstream elements — the road map that makes impact analysis, maintenance, compliance, and reuse possible.
-- **Agile projects** manage change through a dynamic backlog, short iterations, and a product owner/customer role as change authority — but still must evaluate cost and escalate scope-affecting changes.
+- **Traceability** documents the links between requirements and all downstream elements, the road map that makes impact analysis, maintenance, compliance, and reuse possible.
+- **Agile projects** manage change through a dynamic backlog, short iterations, and a product owner/customer role as change authority, but still must evaluate cost and escalate scope-affecting changes.
 
 ---
 
@@ -657,8 +657,8 @@ The Table 29-1 format accommodates these by allowing several items in each table
 
 ## Related Notes
 
-- [[02_Business_and_User_Requirements]] — Business requirements, vision/scope, user classes
-- [[Software Requirements Overview]] — Top-level overview of the requirements domain
+- [[02_Business_and_User_Requirements]]: Business requirements, vision/scope, user classes
+- [[Software Requirements Overview]]: Top-level overview of the requirements domain
 
 ---
 

@@ -24,9 +24,9 @@ aliases:
 # ATDD, BDD, and Acceptance (SWEBOK KA 01.4-01.5)
 
 > *"The single biggest problem in communication is the illusion that it has taken place."*
-> — George Bernard Shaw
+> *George Bernard Shaw*
 
-**Behavior-Driven Development (BDD)** and **Acceptance Test-Driven Development (ATDD)** are specification paradigms that treat requirements as **executable examples**. Rather than writing requirements in prose and testing them later, BDD/ATDD define requirements as concrete, automatable scenarios — closing the gap between "what the customer said" and "what the developer built."
+**Behavior-Driven Development (BDD)** and **Acceptance Test-Driven Development (ATDD)** are specification paradigms that treat requirements as **executable examples**. Rather than writing requirements in prose and testing them later, BDD/ATDD define requirements as concrete, automatable scenarios, closing the gap between "what the customer said" and "what the developer built."
 
 ---
 
@@ -37,6 +37,7 @@ aliases:
 Traditional requirements workflows suffer from information loss at every handoff:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A["Customer<br/>Intent"] -->|"Interpretation"| B["BA's<br/>Understanding"]
     B -->|"Documentation"| C["Requirements<br/>Document"]
@@ -44,15 +45,15 @@ graph LR
     D -->|"Implementation"| E["Software"]
     E -->|"Testing"| F["Test Cases"]
     
-    style A fill:#4CAF50,stroke:#333
-    style F fill:#F44336,stroke:#333
+    style A fill:#00A96E,stroke:#000000
+    style F fill:#FF5861,stroke:#000000
 ```
 
-Each arrow is a **translation** — and each translation introduces potential misinterpretation. BDD eliminates most of these arrows by making the specification itself executable.
+Each arrow is a **translation:** and each translation introduces potential misinterpretation. BDD eliminates most of these arrows by making the specification itself executable.
 
 ### 1.2 The BDD Insight
 
-Dan North (2006) observed that developers don't write tests — they **specify behavior**. The shift:
+Dan North (2006) observed that developers don't write tests; they **specify behavior**. The shift:
 
 | Traditional Thinking | BDD Thinking |
 |---------------------|--------------|
@@ -66,6 +67,7 @@ Dan North (2006) observed that developers don't write tests — they **specify b
 **ATDD** (Acceptance Test-Driven Development) involves three roles collaborating **before** coding begins:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A["Customer / Product Owner<br/>(WHY - Business Value)"] 
     B["Developer<br/>(HOW - Implementation)"]
@@ -80,7 +82,7 @@ graph TD
     E --> G["Living Documentation"]
 ```
 
-> [!tip] The key ATDD practice is the **"Three Amigos" meeting**: customer, developer, and tester collaborate to write acceptance criteria before any code is written. This single practice catches more requirements defects than any review process.
+> [!tip] The key ATDD practice is the **"Three Amigos" meeting:** customer, developer, and tester collaborate to write acceptance criteria before any code is written. This single practice catches more requirements defects than any review process.
 
 ---
 
@@ -164,7 +166,7 @@ Scenario Outline: Transfer validation
     | Checking | 1000           | Savings | 5000           | -100   | failure | Amount must be positive |
 ```
 
-> [!tip] Scenario Outlines are the BDD equivalent of **equivalence partitioning** and **boundary value analysis** — but expressed in business language that stakeholders can read and validate.
+> [!tip] Scenario Outlines are the BDD equivalent of **equivalence partitioning** and **boundary value analysis:** but expressed in business language that stakeholders can read and validate.
 
 ---
 
@@ -206,8 +208,8 @@ Scenario Outline: Transfer validation
 
 | Anti-pattern | Why It's Bad |
 |-------------|-------------|
-| `When I click the blue button at the top right` | UI implementation detail — change the UI, break the spec |
-| `Then the database should have a record` | Technical detail — specify observable behavior instead |
+| `When I click the blue button at the top right` | UI implementation detail: change the UI, break the spec |
+| `Then the database should have a record` | Technical detail; specify observable behavior instead |
 | Multiple `When` steps | Ambiguous: which action caused the result? |
 | `Given/When/Then` in wrong order | Confuses preconditions with actions |
 | Scenarios longer than 10 steps | Hard to understand, debug, and maintain |
@@ -230,6 +232,7 @@ Scenario Outline: Transfer validation
 **Specification by Example** (SBE), formalized by Gojko Adzic (2011), is the broader practice that BDD/ATDD implement. The core cycle:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A["1. Illustrate with<br/>Concrete Examples"] --> B["2. Specify Precisely<br/>(Refine Examples)"]
     B --> C["3. Validate Frequently<br/>(Three Amigos)"]
@@ -243,6 +246,7 @@ graph TD
 **Example Mapping** (Matt Wynne, 2015) is a structured workshop technique for discovering requirements through examples:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     subgraph "Example Map"
         F["Feature Card<br/>(Yellow)"]
@@ -294,11 +298,12 @@ graph TD
 
 ### 5.1 Concept
 
-**Living documentation** is the idea that the executable specification IS the documentation — always current, always correct, because it's verified on every build. Outdated documentation is worse than no documentation; living documentation eliminates staleness.
+**Living documentation** is the idea that the executable specification IS the documentation, always current, always correct, because it's verified on every build. Outdated documentation is worse than no documentation; living documentation eliminates staleness.
 
 ### 5.2 Living Documentation Architecture
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph "Source of Truth"
         A["Feature Files<br/>(.feature)"]
@@ -349,7 +354,7 @@ Feature: Fund Transfer
   ⏳ Scenario: Transfer during maintenance window (PENDING)
 ```
 
-This report is **generated on every build** — it's the requirements document, the test report, and the progress tracker, all in one.
+This report is **generated on every build:** it's the requirements document, the test report, and the progress tracker, all in one.
 
 ---
 
@@ -358,6 +363,7 @@ This report is **generated on every build** — it's the requirements document, 
 ### 6.1 BDD in the Sprint Cycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph "Sprint Planning"
         A["User Story"] --> B["Three Amigos<br/>Session"]
@@ -445,7 +451,7 @@ Scenario: Insufficient funds
 
 | Requirement | Ambiguity Level | BDD Scenario |
 |-------------|----------------|--------------|
-| "System should be fast" | 🔴 High | N/A — need to define "fast" first |
+| "System should be fast" | 🔴 High | N/A: need to define "fast" first |
 | "Response time should be under 2 seconds" | 🟡 Medium | `Then the response should arrive within 2 seconds` |
 | "API should respond in <200ms at P95 for 100 concurrent users" | 🟢 Low | `Given 100 concurrent users When each requests /api/health Then P95 latency should be < 200ms` |
 
@@ -545,8 +551,8 @@ Feature: Login Performance
 
 | Tool | Language | Platform | Key Feature |
 |------|----------|----------|-------------|
-| **Cucumber** | Java, Ruby, JS | Cross-platform | Original BDD framework; Gherkin standard |
-| **SpecFlow** | C# | .NET | Visual Studio integration; LivingDoc |
+| **Cucumber** | Java, Ruby, JS | Cross-platform | Original BDD framework; gherkin standard |
+| **SpecFlow** | C# | .NET | Visual Studio integration; livingDoc |
 | **Behave** | Python | Cross-platform | Pythonic BDD |
 | **JBehave** | Java | JVM | Story-based (pre-Gherkin) |
 | **Gauge** | Multi | Cross-platform | Markdown specs (not Gherkin) |
@@ -635,13 +641,13 @@ public class TransferSteps {
 ### 9.4 Tags for Test Organization
 
 ```gherkin
-@smoke        # Quick sanity checks - run on every commit
-@regression   # Full suite - run nightly
-@wip          # Work in progress - exclude from CI
-@critical     # Must-pass for release
-@performance  # Non-functional scenarios
-@security     # Security-related scenarios
-@manual       # Cannot be automated (exploratory)
+@smoke # Quick sanity checks - run on every commit
+@regression # Full suite - run nightly
+@wip # Work in progress - exclude from CI
+@critical # Must-pass for release
+@performance # Non-functional scenarios
+@security # Security-related scenarios
+@manual # Cannot be automated (exploratory)
 ```
 
 ---
@@ -681,6 +687,7 @@ public class TransferSteps {
 ### 11.1 The Validation Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A["Write Scenarios<br/>(Three Amigos)"] --> B["Review with<br/>Stakeholders"]
     B --> C{"Approved?"}
@@ -708,7 +715,7 @@ graph TD
 
 ### 11.3 Executable Specifications as Requirements
 
-When BDD is practiced fully, the **feature files become the requirements specification**:
+When BDD is practiced fully, the **feature files become the requirements specification:**
 
 | Traditional Artifact | BDD Equivalent |
 |---------------------|----------------|
@@ -720,7 +727,7 @@ When BDD is practiced fully, the **feature files become the requirements specifi
 | Test plan | Scenario suite organization |
 | Test report | Living documentation report |
 
-> [!warning] **Important caveat**: BDD excels at functional, behavioral requirements. Non-functional requirements (performance, scalability, maintainability), architectural constraints, and strategic requirements still need complementary specification approaches. See [[12_Formal_Requirements_Specification|Formal Requirements Specification]] for non-functional requirements and [[06_Requirements_Modeling|Requirements Modeling]] for architectural constraints.
+> [!warning] **Important caveat:** BDD excels at functional, behavioral requirements. Non-functional requirements (performance, scalability, maintainability), architectural constraints, and strategic requirements still need complementary specification approaches. See [[12_Formal_Requirements_Specification|Formal Requirements Specification]] for non-functional requirements and [[06_Requirements_Modeling|Requirements Modeling]] for architectural constraints.
 
 ---
 
@@ -736,22 +743,22 @@ When BDD is practiced fully, the **feature files become the requirements specifi
 | [[08_Prioritization_Validation_and_Reuse|Validation]] | Scenarios provide automated validation |
 | [[09_Agile_and_Project_Types|Agile Requirements]] | BDD is the specification practice for Agile teams |
 | [[10_Requirements_Management|Management]] | Feature files under version control; tags enable traceability |
-| [[12_Formal_Requirements_Specification|Formal Specification]] | BDD is "lightweight formal" — structured but not mathematical |
+| [[12_Formal_Requirements_Specification|Formal Specification]] | BDD is "lightweight formal", structured but not mathematical |
 
 ---
 
 ## 13 | Key Takeaways
 
-1. **BDD is specification, not testing** — the primary value is shared understanding, not automation.
-2. **Three Amigos is the keystone practice** — without collaboration, BDD degrades into test scripting.
-3. **Given/When/Then is a ubiquitous language** — use it to bridge business and technical stakeholders.
-4. **Scenarios are executable requirements** — when scenarios pass, the requirement is verified.
-5. **Living documentation eliminates stale docs** — the specification is always current because it's always running.
-6. **Specification by Example prevents ambiguity** — concrete examples expose vagueness that prose hides.
-7. **BDD complements, doesn't replace** — use BDD for behavioral requirements, formal methods for critical properties, and models for architecture.
-8. **Start with Example Mapping** — 40 minutes per feature to discover requirements beats weeks of rework.
-9. **Anti-patterns are real** — UI scripting, god scenarios, and solo writing destroy BDD's value.
-10. **Feature files are living artifacts** — version them, review them, evolve them with the system.
+1. **BDD is specification, not testing:** the primary value is shared understanding, not automation.
+2. **Three Amigos is the keystone practice:** without collaboration, BDD degrades into test scripting.
+3. **Given/When/Then is a ubiquitous language:** use it to bridge business and technical stakeholders.
+4. **Scenarios are executable requirements:** when scenarios pass, the requirement is verified.
+5. **Living documentation eliminates stale docs:** the specification is always current because it's always running.
+6. **Specification by Example prevents ambiguity:** concrete examples expose vagueness that prose hides.
+7. **BDD complements, doesn't replace:** use BDD for behavioral requirements, formal methods for critical properties, and models for architecture.
+8. **Start with Example Mapping:** 40 minutes per feature to discover requirements beats weeks of rework.
+9. **Anti-patterns are real:** UI scripting, god scenarios, and solo writing destroy BDD's value.
+10. **Feature files are living artifacts:** version them, review them, evolve them with the system.
 
 ---
 

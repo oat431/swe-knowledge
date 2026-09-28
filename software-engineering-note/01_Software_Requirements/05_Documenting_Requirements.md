@@ -7,24 +7,24 @@ tags:
   - software-requirements
 ---
 
-# 05 — Documenting Requirements
+# Documenting Requirements
 
 > **Source:** Karl Wiegers, *Software Requirements* (2nd ed.), Chapters 10–11.
-> **Theme:** How to organize, label, and write the Software Requirements Specification (SRS) — and the characteristics that make requirements *excellent*, not merely present.
+> **Theme:** How to organize, label, and write the Software Requirements Specification (SRS), and the characteristics that make requirements *excellent*, not merely present.
 
 ---
 
-## Ch. 10 — Documenting the Requirements
+## Ch. 10: Documenting the Requirements
 
 ### Why Document at All?
 
-Clear communication is the **core principle** of requirements development — from people with needs, to people who design solutions, to people who build and verify them. The result of requirements work is a **documented agreement** among stakeholders.
+Clear communication is the **core principle** of requirements development, from people with needs, to people who design solutions, to people who build and verify them. The result of requirements work is a **documented agreement** among stakeholders.
 
 - The **vision and scope document** holds business requirements.
 - **Use cases / user stories** capture user requirements.
 - The **SRS** captures functional + nonfunctional requirements delivered to designers, developers, and testers.
 
-> **Trap** — Do not rely on telepathy and clairvoyance as substitutes for specification. They don't work.
+> **Trap:** Do not rely on telepathy and clairvoyance as substitutes for specification. They don't work.
 
 Even on exploratory or volatile projects where you're unsure what solution you'll end up with, the cost of recording knowledge is **small** compared to the cost of re-acquiring it later. The acts of specification and modeling force people to think through and precisely state things that verbal discussion leaves ambiguous.
 
@@ -43,9 +43,9 @@ The SRS doesn't have to be a traditional word-processing document. Documents pos
 
 ### Representation Approaches
 
-1. **Natural language** — well-structured and carefully written (most practical for most projects)
-2. **Visual models** — process flows, state diagrams, data relationships, logic flows
-3. **Formal specifications** — mathematically precise (high-risk systems like nuclear plant controls)
+1. **Natural language:** well-structured and carefully written (most practical for most projects)
+2. **Visual models:** process flows, state diagrams, data relationships, logic flows
+3. **Formal specifications:** mathematically precise (high-risk systems like nuclear plant controls)
 
 Structured natural language, augmented with tables, mock-ups, photographs, and mathematical expressions, remains the most practical approach for most software projects.
 
@@ -70,18 +70,18 @@ Also called: Business Requirements Document (BRD), functional spec, product spec
 
 **It is the basis for:** project planning, design, coding, system testing, and user documentation. It should **not** contain design, construction, testing, or project management details (other than known design/implementation constraints).
 
-> **Important** — A single requirements deliverable often cannot meet the needs of all audiences. Some need only business objectives, others the high-level picture, others the user's perspective, yet others need all details. This is why we advocate separate vision-and-scope, user requirements, and SRS deliverables.
+> **Important:** A single requirements deliverable often cannot meet the needs of all audiences. Some need only business objectives, others the high-level picture, others the user's perspective, yet others need all details. This is why we advocate separate vision-and-scope, user requirements, and SRS deliverables.
 
 **Audiences relying on the SRS:**
-- Customers, marketing, sales — what product to expect
-- Project managers — schedule, effort, resource estimates
-- Development teams — what to build
-- Testers — requirements-based tests, test plans
-- Maintenance/support staff — what each part should do
-- Documentation writers — user manuals, help screens
-- Training personnel — educational materials
-- Legal staff — regulatory compliance
-- Subcontractors — work basis (legally binding)
+- Customers, marketing, sales: what product to expect
+- Project managers: schedule, effort, resource estimates
+- Development teams: what to build
+- Testers: requirements-based tests, test plans
+- Maintenance/support staff: what each part should do
+- Documentation writers: user manuals, help screens
+- Training personnel: educational materials
+- Legal staff: regulatory compliance
+- Subcontractors: work basis (legally binding)
 
 > If a desired capability or quality doesn't appear in the requirements agreement, no one should expect it in the product.
 
@@ -89,7 +89,7 @@ Also called: Business Requirements Document (BRD), functional spec, product spec
 
 - **Most projects:** one SRS.
 - **Large systems:** system requirements spec → separate software and hardware requirements specs. Example: one project had 800 high-level system requirements divided across 20 subprojects, each with ~800–900 derived requirements.
-- **Too few (overload):** "The Spec" — one all-inclusive document for everything. Change management nightmare; wrong detail level for each audience.
+- **Too few (overload):** "The Spec": one all-inclusive document for everything. Change management nightmare; wrong detail level for each audience.
 - **Too many:** subdividing a 40–60 page SRS into 12 documents. Hard to keep synchronized.
 - **Agile extreme:** sticky notes that lost adhesion and fluttered to the ground.
 
@@ -101,7 +101,7 @@ Also called: Business Requirements Document (BRD), functional spec, product spec
 
 - Use an appropriate **template** to organize information.
 - Label sections, subsections, and individual requirements **consistently**.
-- Use visual emphasis (bold, underline, italics, color, fonts) consistently and judiciously — color may not be visible to color-blind users or in grayscale print.
+- Use visual emphasis (bold, underline, italics, color, fonts) consistently and judiciously; color may not be visible to color-blind users or in grayscale print.
 - Create a **table of contents**.
 - Number all figures and tables, with captions, and refer by number.
 - Use the word processor's **cross-reference** facility (not hard-coded page/section numbers).
@@ -112,29 +112,29 @@ Also called: Business Requirements Document (BRD), functional spec, product spec
 
 ### Labeling Requirements
 
-Every requirement needs a **unique and persistent identifier** — for change requests, modification history, cross-references, traceability matrices, and reuse. Simple numbered or bulleted lists aren't adequate.
+Every requirement needs a **unique and persistent identifier:** for change requests, modification history, cross-references, traceability matrices, and reuse. Simple numbered or bulleted lists aren't adequate.
 
-> **Trap (Number 8, with a bullet)** — One BA carried an SRS with up to **eight levels of bullet hierarchy**, using different symbols (❍, ■, ◆, q, ➭) but no meaningful labels. It's impossible to refer to or trace a bulleted item.
+> **Trap (Number 8, with a bullet):** One BA carried an SRS with up to **eight levels of bullet hierarchy**, using different symbols (❍, ■, ◆, q, ➭) but no meaningful labels. It's impossible to refer to or trace a bulleted item.
 
-#### Method 1 — Sequence Number
+#### Method 1: Sequence Number
 - e.g., `UC-9`, `FR-26`.
 - Prefix indicates type (FR = functional requirement).
 - Numbers never reused (deleted requirement's number retired).
 - **Pros:** simple; survives reordering.
 - **Cons:** no logical/hierarchical grouping; no clue about content.
 
-#### Method 2 — Hierarchical Numbering
+#### Method 2: Hierarchical Numbering
 - If functional requirements are in section 3.2, labels begin with `3.2.x.y`.
 - e.g., `3.2.4.3` is a child of `3.2.4`.
 - **Pros:** simple, compact, familiar; auto-generated by word processors.
-- **Cons:** labels grow long; no content clue; typically **not persistent** — insert/delete/move shifts all following numbers, breaking references.
+- **Cons:** labels grow long; no content clue; typically **not persistent:** insert/delete/move shifts all following numbers, breaking references.
 
-> **Trap** — A BA once said, "We don't let people insert requirements — it messes up the numbering." Don't let ineffective practices hamper sensible work.
+> **Trap:** A BA once said, "We don't let people insert requirements; it messes up the numbering." Don't let ineffective practices hamper sensible work.
 
 **Improvement:** Number major sections hierarchically, then identify individual functional requirements with a short text code + sequence number. E.g., Section 3.5 "Editor Functions" → `ED-1`, `ED-2`, etc.
 
-#### Method 3 — Hierarchical Textual Tags (Gilb 1988)
-- e.g., `Print.ConfirmCopies` — part of the print function, relates to number of copies to print.
+#### Method 3: Hierarchical Textual Tags (Gilb 1988)
+- e.g., `Print.ConfirmCopies`: part of the print function, relates to number of copies to print.
 - **Pros:** structured, meaningful, unaffected by adding/deleting/moving requirements.
 - Full unique ID = each line's label appended to parent labels above it. E.g., `Product.Cart`, `Product.Discount.Error`.
 - Parent written as a **title/heading/feature name**, not as a functional requirement; children in aggregate deliver the parent's capability.
@@ -143,9 +143,9 @@ Every requirement needs a **unique and persistent identifier** — for change re
 
 ### Dealing with Incompleteness
 
-Use **TBD (to be determined)** to flag known knowledge gaps. Plan to resolve all TBDs before implementing a set of requirements — unresolved uncertainties increase the risk of developer/tester errors and rework.
+Use **TBD (to be determined)** to flag known knowledge gaps. Plan to resolve all TBDs before implementing a set of requirements; unresolved uncertainties increase the risk of developer/tester errors and rework.
 
-> **Trap** — TBDs won't resolve themselves. Number them, record who is responsible for resolving each and by when, review status at regular checkpoints, and track them to closure.
+> **Trap:** TBDs won't resolve themselves. Number them, record who is responsible for resolving each and by when, review status at regular checkpoints, and track them to closure.
 
 If you must proceed with TBDs, either **defer** implementing unresolved requirements or **design those portions to be easily modifiable** when issues are resolved.
 
@@ -160,13 +160,13 @@ If you must proceed with TBDs, either **defer** implementing unresolved requirem
 - Makes the document larger (big specs frighten some people).
 - Delaying SRS baselining until UI design is complete slows development.
 - Visual design can drive requirements → functional gaps.
-- Once stakeholders see a UI, they won't "unsee" it — resistance to improvement.
+- Once stakeholders see a UI, they won't "unsee" it: resistance to improvement.
 
 **Balanced approach:** Include conceptual **sketches** (no matter how nicely drawn) of selected displays, without demanding implementation precisely follow them. A sketch communicates intent; a visual designer might still turn a complex dialog into a tabbed dialog for usability.
 
 > Screen layouts don't replace written user and functional requirements. Don't expect developers to deduce underlying functionality and data relationships from screenshots.
 
-If you want specific UI controls/screen layouts, include them as **design constraints** — but don't impose constraints unnecessarily, prematurely, or for the wrong reasons.
+If you want specific UI controls/screen layouts, include them as **design constraints:** but don't impose constraints unnecessarily, prematurely, or for the wrong reasons.
 
 For many-screen projects, document UI specifics in a separate **user interface specification** or via UI/prototyping tools. Use **display-action-response models** to describe screen element names, properties, and behavior.
 
@@ -174,35 +174,35 @@ For many-screen projects, document UI specifics in a separate **user interface s
 
 ## SRS Template (Figure 10-2)
 
-Every software development organization should adopt one or more **standard SRS templates**. Available templates: ISO/IEC/IEEE 2011; Robertson and Robertson 2013. Adopt a template for each major project class. Pick one section for each kind of information and use it consistently — avoid duplicating information across sections. Use cross-references and hyperlinks.
+Every software development organization should adopt one or more **standard SRS templates**. Available templates: ISO/IEC/IEEE 2011; Robertson and Robertson 2013. Adopt a template for each major project class. Pick one section for each kind of information and use it consistently; avoid duplicating information across sections. Use cross-references and hyperlinks.
 
 Use **version control** and include a **revision history** (who changed what, when, and why).
 
-> **Important** — Incorporate material **by reference** to other project documents instead of duplicating it. Hyperlinks and traceability links work; be aware hyperlinks can break if folder hierarchies change.
+> **Important:** Incorporate material **by reference** to other project documents instead of duplicating it. Hyperlinks and traceability links work; be aware hyperlinks can break if folder hierarchies change.
 
 ### 1. Introduction
 
-**1.1 Purpose** — Identify the product/application (with revision/release number). If the SRS covers only part of a system, identify that portion. Describe intended reader types (developers, PMs, marketing, users, testers, writers).
+**1.1 Purpose:** Identify the product/application (with revision/release number). If the SRS covers only part of a system, identify that portion. Describe intended reader types (developers, PMs, marketing, users, testers, writers).
 
-**1.2 Document conventions** — Standards/typographical conventions used: meaning of text styles, highlighting, notations. Specify the labeling format for requirements.
+**1.2 Document conventions:** Standards/typographical conventions used: meaning of text styles, highlighting, notations. Specify the labeling format for requirements.
 
-**1.3 Project scope** — Short description of the software and its purpose. Relate to user/corporate goals and business objectives. If a vision-and-scope document exists, refer to it rather than duplicating. For incremental releases, contain a scope statement as a subset of the long-term product vision. High-level summary of major features/significant functions.
+**1.3 Project scope:** Short description of the software and its purpose. Relate to user/corporate goals and business objectives. If a vision-and-scope document exists, refer to it rather than duplicating. For incremental releases, contain a scope statement as a subset of the long-term product vision. High-level summary of major features/significant functions.
 
-**1.4 References** — List documents/resources the SRS refers to (with hyperlinks if persistent): UI style guides, contracts, standards, system requirements specs, interface specs, related product SRS. Include title, author, version, date, source, storage location, URL.
+**1.4 References:** List documents/resources the SRS refers to (with hyperlinks if persistent): UI style guides, contracts, standards, system requirements specs, interface specs, related product SRS. Include title, author, version, date, source, storage location, URL.
 
 ### 2. Overall Description
 
 High-level overview of the product, environment, anticipated users, known constraints, assumptions, and dependencies.
 
-**2.1 Product perspective** — Context and origin: next member of a product line? next version of a mature system? replacement? entirely new? If a component of a larger system, state how it relates to the overall system and identify major interfaces. Include visual models like a **context diagram** or **ecosystem map**.
+**2.1 Product perspective:** Context and origin: next member of a product line? next version of a mature system? replacement? entirely new? If a component of a larger system, state how it relates to the overall system and identify major interfaces. Include visual models like a **context diagram** or **ecosystem map**.
 
-**2.2 User classes and characteristics** — Identify user classes and describe pertinent characteristics. Some requirements pertain only to certain user classes. Identify **favored user classes**. If a master user class catalog exists, incorporate by reference rather than duplicating.
+**2.2 User classes and characteristics:** Identify user classes and describe pertinent characteristics. Some requirements pertain only to certain user classes. Identify **favored user classes**. If a master user class catalog exists, incorporate by reference rather than duplicating.
 
-**2.3 Operating environment** — Hardware platform; OS and versions; geographical locations of users, servers, databases; hosting organizations. Other software with which the system must coexist. If extensive infrastructure work is needed, consider a separate **infrastructure requirements specification**.
+**2.3 Operating environment:** Hardware platform; OS and versions; geographical locations of users, servers, databases; hosting organizations. Other software with which the system must coexist. If extensive infrastructure work is needed, consider a separate **infrastructure requirements specification**.
 
-**2.4 Design and implementation constraints** — Factors restricting developer options and the rationale for each. Watch for requirements written as solution ideas rather than needs — those impose design constraints unnecessarily.
+**2.4 Design and implementation constraints:** Factors restricting developer options and the rationale for each. Watch for requirements written as solution ideas rather than needs; those impose design constraints unnecessarily.
 
-**2.5 Assumptions and dependencies** —
+**2.5 Assumptions and dependencies:**
 - **Assumption:** a statement believed true in the absence of proof. Problems arise if assumptions are incorrect, obsolete, unshared, or change. Include only system-functionality-related assumptions here (business assumptions go in vision-and-scope).
 - **Dependencies:** factors/components outside the project's control that the system depends on (e.g., .NET Framework 4.5+ must be installed).
 
@@ -210,27 +210,27 @@ High-level overview of the product, environment, anticipated users, known constr
 
 Functional requirements **organized by system feature** (one possible arrangement; alternatives: functional area, process flow, use case, mode of operation, user class, stimulus/response, or hierarchical combinations).
 
-**3.x System Feature X** — Name in a few words (e.g., "3.1 Spell Check"). Repeat 3.x with subsections for each feature.
+**3.x System Feature X:** Name in a few words (e.g., "3.1 Spell Check"). Repeat 3.x with subsections for each feature.
 
-**3.x.1 Description** — Short description + priority (high/medium/low). Priorities are dynamic. In an RM tool, define a requirement attribute for priority.
+**3.x.1 Description:** Short description + priority (high/medium/low). Priorities are dynamic. In an RM tool, define a requirement attribute for priority.
 
-**3.x.2 Functional requirements** — Itemize specific functional requirements associated with the feature. Describe responses to anticipated error conditions and invalid inputs/actions. Uniquely label each. In an RM tool, create multiple attributes (rationale, origin, status).
+**3.x.2 Functional requirements:** Itemize specific functional requirements associated with the feature. Describe responses to anticipated error conditions and invalid inputs/actions. Uniquely label each. In an RM tool, create multiple attributes (rationale, origin, status).
 
 ### 4. Data Requirements
 
-**4.1 Logical data model** — Visual representation of data objects/collections and relationships. Notations: entity-relationship diagrams, UML class diagrams. Business operations data model or logical representation of data the system will manipulate — **not** an implementation data model.
+**4.1 Logical data model:** Visual representation of data objects/collections and relationships. Notations: entity-relationship diagrams, UML class diagrams. Business operations data model or logical representation of data the system will manipulate, **not** an implementation data model.
 
-**4.2 Data dictionary** — Defines composition of data structures; meaning, data type, length, format, allowed values for data elements. Often better stored as a **separate artifact** (not embedded in the SRS) to increase reusability.
+**4.2 Data dictionary:** Defines composition of data structures; meaning, data type, length, format, allowed values for data elements. Often better stored as a **separate artifact** (not embedded in the SRS) to increase reusability.
 
-**4.3 Reports** — Identify and describe report characteristics. If a report must conform to a predefined layout, specify as a constraint (with example). Otherwise, focus on logical content descriptions, sort sequence, totaling levels — defer detailed layout to design.
+**4.3 Reports:** Identify and describe report characteristics. If a report must conform to a predefined layout, specify as a constraint (with example). Otherwise, focus on logical content descriptions, sort sequence, totaling levels; defer detailed layout to design.
 
-**4.4 Data acquisition, integrity, retention, and disposal** — How data is acquired/maintained (e.g., initial dump + subsequent change-only feeds). Data integrity requirements: backups, checkpointing, mirroring, accuracy verification. Retention/disposal policies: temporary data, metadata, residual data (deleted records), cached data, local copies, archives, interim backups.
+**4.4 Data acquisition, integrity, retention, and disposal:** How data is acquired/maintained (e.g., initial dump + subsequent change-only feeds). Data integrity requirements: backups, checkpointing, mirroring, accuracy verification. Retention/disposal policies: temporary data, metadata, residual data (deleted records), cached data, local copies, archives, interim backups.
 
 ### 5. External Interface Requirements
 
-> **Interface wars** — Two teams building a flagship product communicated through an API. One team periodically modified the API unilaterally; the complete system wouldn't build; diagnosis took hours. **A change in an interface demands communication with the person, group, or system on the other side of that interface.**
+> **Interface wars:** Two teams building a flagship product communicated through an API. One team periodically modified the API unilaterally; the complete system wouldn't build; diagnosis took hours. **A change in an interface demands communication with the person, group, or system on the other side of that interface.**
 
-**5.1 User interfaces** — Logical characteristics of each UI. (Specific characteristics may also appear in 6.1 Usability.) Items to address:
+**5.1 User interfaces:** Logical characteristics of each UI. (Specific characteristics may also appear in 6.1 Usability.) Items to address:
 - References to UI standards / product line style guides
 - Standards for fonts, icons, button labels, images, color schemes, tabbing sequences, controls, branding, copyright/privacy notices
 - Screen size, layout, resolution constraints
@@ -241,25 +241,25 @@ Functional requirements **organized by system feature** (one possible arrangemen
 - Layout standards for software localization
 - Accommodations for visually impaired, color blind, or other limitations
 
-**5.2 Software interfaces** — Connections between this product and other software components (name and version): applications, databases, OSes, tools, libraries, websites, integrated commercial components. State purpose, formats, contents of messages/data/control values exchanged. Specify mappings, translations, services needed/provided, inter-component communication nature. Identify exchanged/shared data. Specify nonfunctional requirements (response time service levels, frequencies, security controls).
+**5.2 Software interfaces:** Connections between this product and other software components (name and version): applications, databases, OSes, tools, libraries, websites, integrated commercial components. State purpose, formats, contents of messages/data/control values exchanged. Specify mappings, translations, services needed/provided, inter-component communication nature. Identify exchanged/shared data. Specify nonfunctional requirements (response time service levels, frequencies, security controls).
 
-**5.3 Hardware interfaces** — Characteristics of each software-hardware interface. Supported device types, data/control interactions, communication protocols. List inputs/outputs, formats, valid values/ranges, timing issues. If extensive, create a separate interface specification.
+**5.3 Hardware interfaces:** Characteristics of each software-hardware interface. Supported device types, data/control interactions, communication protocols. List inputs/outputs, formats, valid values/ranges, timing issues. If extensive, create a separate interface specification.
 
-**5.4 Communications interfaces** — Requirements for communication functions: email, web browser, network protocols, electronic forms. Message formatting, communication security/encryption, data transfer rates, handshaking, synchronization. Constraints (e.g., acceptable email attachment types).
+**5.4 Communications interfaces:** Requirements for communication functions: email, web browser, network protocols, electronic forms. Message formatting, communication security/encryption, data transfer rates, handshaking, synchronization. Constraints (e.g., acceptable email attachment types).
 
 ### 6. Quality Attributes
 
 Nonfunctional requirements other than constraints (2.4) and external interface requirements (5). Should be **specific, quantitative, and verifiable**. Indicate relative priorities (e.g., ease of use over ease of learning; security over performance). Rich notations like **Planguage** clarify needed levels better than simple descriptive statements.
 
-**6.1 Usability** — Ease of learning, ease of use, error avoidance and recovery, interaction efficiency, accessibility.
+**6.1 Usability:** Ease of learning, ease of use, error avoidance and recovery, interaction efficiency, accessibility.
 
-**6.2 Performance** — Specific performance requirements for system operations. If different features have different performance requirements, specify those goals with the corresponding functional requirements rather than collecting them here.
+**6.2 Performance:** Specific performance requirements for system operations. If different features have different performance requirements, specify those goals with the corresponding functional requirements rather than collecting them here.
 
-**6.3 Security** — Security/privacy requirements restricting access or use: physical, data, software. Often originate in business rules — refer to security/privacy policies/regulations (or to the business rules repository).
+**6.3 Security:** Security/privacy requirements restricting access or use: physical, data, software. Often originate in business rules; refer to security/privacy policies/regulations (or to the business rules repository).
 
-**6.4 Safety** — Requirements concerning possible loss, damage, or harm from product use. Safeguards/actions to take, dangerous actions to prevent. Safety certifications, policies, regulations.
+**6.4 Safety:** Requirements concerning possible loss, damage, or harm from product use. Safeguards/actions to take, dangerous actions to prevent. Safety certifications, policies, regulations.
 
-**6.x Others** — Separate section for each additional quality attribute: availability, efficiency, installability, integrity, interoperability, modifiability, portability, reliability, reusability, robustness, scalability, verifiability.
+**6.x Others:** Separate section for each additional quality attribute: availability, efficiency, installability, integrity, interoperability, modifiability, portability, reliability, reusability, robustness, scalability, verifiability.
 
 ### 7. Internationalization and Localization Requirements
 
@@ -314,7 +314,7 @@ Nonfunctional requirements can be written on cards **as constraints** (Cohn 2004
 
 ---
 
-## Ch. 11 — Writing Excellent Requirements
+## Ch. 11: Writing Excellent Requirements
 
 > **Opening vignette:** Ruth asked Gautam about the song preview feature. The user story said only: "As a Customer, I want to listen to previews of the available songs so I can decide which ones to buy." Notes added: 30-second samples, built-in MP3 player. But Ruth wanted pause/stop, samples starting mid-song for long intros, fade in/out. Gautam: "I wish you had told me all of this when we spoke earlier. You didn't give me much to go on so I just had to make my best guess."
 
@@ -322,7 +322,7 @@ The best requirements repository in the world is useless if it doesn't contain *
 
 ### Characteristics of Individual Requirement Statements
 
-In an ideal world, every individual business, user, functional, and nonfunctional requirement would exhibit these qualities. The best way to tell whether your requirements possess them is to have **several stakeholders review them** — different stakeholders spot different problems.
+In an ideal world, every individual business, user, functional, and nonfunctional requirement would exhibit these qualities. The best way to tell whether your requirements possess them is to have **several stakeholders review them:** different stakeholders spot different problems.
 
 #### Complete
 Each requirement contains all information necessary for the reader to understand it. For functional requirements, this means providing what the developer needs to implement it correctly. Use **TBD** flags or issue-tracking to highlight gaps. Resolve all TBDs before developers proceed.
@@ -341,12 +341,12 @@ Prioritize business requirements by importance to achieving desired value. Assig
 
 #### Unambiguous
 Natural language is prone to two types of ambiguity:
-1. **Self-detectable** — you can think of more than one interpretation.
-2. **Harder to catch** — different people read the same requirement and come up with different interpretations, each making sense to that reader.
+1. **Self-detectable:** you can think of more than one interpretation.
+2. **Harder to catch:** different people read the same requirement and come up with different interpretations, each making sense to that reader.
 
-**Inspections** (formal peer reviews) are the best way to spot ambiguities — they let each participant compare their understanding to someone else's. "Comprehensible" is related: readers must understand what each requirement says.
+**Inspections** (formal peer reviews) are the best way to spot ambiguities; they let each participant compare their understanding to someone else's. "Comprehensible" is related: readers must understand what each requirement says.
 
-> You'll never remove all ambiguity from requirements — that's the nature of human language. But reviews clean up a lot of the worst issues.
+> You'll never remove all ambiguity from requirements; that's the nature of human language. But reviews clean up a lot of the worst issues.
 
 #### Verifiable
 Can a tester devise tests or other verification approaches to determine whether each requirement is properly implemented? If not, deciding whether it was correctly implemented becomes a matter of opinion, not objective analysis. Requirements that are incomplete, inconsistent, infeasible, or ambiguous are also unverifiable. **Include testers in requirements peer reviews** to catch problems early.
@@ -356,7 +356,7 @@ Can a tester devise tests or other verification approaches to determine whether 
 Sets of requirements grouped into a baseline for a specific release/iteration should exhibit these characteristics, whether in an SRS, RM tool, user stories + acceptance tests, or any other form.
 
 #### Complete
-No requirement or necessary information should be absent. In practice, you'll never document every requirement — there are always assumed/implied requirements (which carry more risk than explicit ones). **Missing requirements are hard to spot because they aren't there.** Any specification containing TBDs is incomplete.
+No requirement or necessary information should be absent. In practice, you'll never document every requirement; there are always assumed/implied requirements (which carry more risk than explicit ones). **Missing requirements are hard to spot because they aren't there.** Any specification containing TBDs is incomplete.
 
 #### Consistent
 Consistent requirements don't conflict with other requirements of the same type or with higher-level business, user, or system requirements. If you don't resolve contradictions before construction, developers will have to. Recording the **originator** of each requirement lets you know who to talk to when conflicts arise. Inconsistencies are hard to spot when related information is stored in different locations.
@@ -364,12 +364,12 @@ Consistent requirements don't conflict with other requirements of the same type 
 #### Modifiable
 You can always rewrite a requirement, but maintain a **history of changes**, especially after baselining. Know connections/dependencies between requirements so you can find all that must change together. Modifiability dictates:
 - Each requirement uniquely labeled and expressed separately.
-- **Avoid redundancy** — repeating a requirement in multiple places makes reading easier but maintenance harder (all instances must be modified together).
+- **Avoid redundancy:** repeating a requirement in multiple places makes reading easier but maintenance harder (all instances must be modified together).
 - Cross-reference related items to keep them synchronized.
 - Storing individual requirements just once in an RM tool solves redundancy and facilitates reuse.
 
 #### Traceable
-A traceable requirement can be linked **backward** to its origin and **forward** to derived requirements, design elements, implementing code, and verifying tests. You don't have to define all trace links for a requirement to be traceable — it needs the *properties* that make tracing possible:
+A traceable requirement can be linked **backward** to its origin and **forward** to derived requirements, design elements, implementing code, and verifying tests. You don't have to define all trace links for a requirement to be traceable; it needs the *properties* that make tracing possible:
 - Uniquely labeled with persistent identifiers.
 - Written in a structured, fine-grained way (not long narrative paragraphs).
 - Don't combine multiple requirements into a single statement (different requirements may trace to different components).
@@ -380,7 +380,7 @@ A traceable requirement can be linked **backward** to its origin and **forward**
 
 ## Guidelines for Writing Requirements
 
-There is no formulaic way to write excellent requirements; the best teachers are **experience and feedback** from recipients. Receiving constructive feedback from colleagues with sharp eyes is a great help — this is why **peer reviews** of requirements documents are critical. Buddy up with a fellow BA and begin exchanging requirements for review.
+There is no formulaic way to write excellent requirements; the best teachers are **experience and feedback** from recipients. Receiving constructive feedback from colleagues with sharp eyes is a great help; this is why **peer reviews** of requirements documents are critical. Buddy up with a fellow BA and begin exchanging requirements for review.
 
 > Mentally translate "writing requirements" to **"representing requirements knowledge."** Alternative representation techniques can present information more effectively than straight text.
 
@@ -394,7 +394,7 @@ These outcomes matter more than purity of style or conforming dogmatically to ar
 
 Functional requirements can be written from either perspective; intermingle styles as clarity dictates. State requirements consistently: "The system shall" or "The user shall" + action verb + observable result. Specify the trigger action/condition.
 
-**EARS template (Mavin et al. 2009) — system perspective:**
+**EARS template (Mavin et al. 2009): system perspective:**
 
 ```
 [optional precondition] [optional trigger event] the system shall [expected system response].
@@ -416,7 +416,7 @@ Using the **user class name** (Chemist) rather than generic "user" reduces misin
 
 ### Writing Style
 
-Requirements writing isn't like fiction or other nonfiction. The school style (main idea → supporting facts → conclusion) doesn't work. **Put the punch line first** — the statement of need/functionality — followed by supporting details (rationale, origin, priority, attributes). This helps skimmers while still serving thorough readers.
+Requirements writing isn't like fiction or other nonfiction. The school style (main idea → supporting facts → conclusion) doesn't work. **Put the punch line first:** the statement of need/functionality, followed by supporting details (rationale, origin, priority, attributes). This helps skimmers while still serving thorough readers.
 
 Don't practice creative writing in requirements documents:
 - Don't interleave passive and active voice for "interest."
@@ -434,12 +434,12 @@ Don't practice creative writing in requirements documents:
 
 **The keyword "shall":**
 - Traditional convention to describe system capability.
-- Objectors say "that's not how people talk" — so what? "Shall" clearly indicates desired functionality.
-- Be **consistent**. Don't mix shall, must, may, might, will, would, should, could, needs to, has to — readers won't know if the differences are meaningful.
+- Objectors say "that's not how people talk": so what? "Shall" clearly indicates desired functionality.
+- Be **consistent**. Don't mix shall, must, may, might, will, would, should, could, needs to, has to, readers won't know if the differences are meaningful.
 - Avoid using different verbs to connote priority ("shall" = required, "should" = desired, "may" = optional). **Always say "shall" and explicitly assign high/medium/low priority.** Priorities change; don't tie them to phrasing.
-- Avoid "shall" for requirements and "will" for design expectations — readers may not grasp the distinction.
+- Avoid "shall" for requirements and "will" for design expectations: readers may not grasp the distinction.
 
-> **Trap** — One consultant suggested mentally replacing each "should" with "probably won't." Would the resulting requirement be acceptable? If not, replace "should" with something more precise.
+> **Trap:** One consultant suggested mentally replacing each "should" with "probably won't." Would the resulting requirement be acceptable? If not, replace "should" with something more precise.
 
 **Active voice:**
 Write in active voice to make clear what entity takes the action. Passive voice (e.g., "will be updated") denotes the recipient but not the performer.
@@ -453,9 +453,9 @@ Write in active voice to make clear what entity takes the action. Passive voice 
 **Individual requirements:**
 - Don't write long narrative paragraphs containing multiple requirements.
 - Clearly distinguish individual requirements from background/contextual information.
-- Watch for "and," "or," "additionally," "also" — they may signal combined requirements. If you'd use different tests to verify the two parts, split them.
-- **Avoid "and/or"** — it leaves interpretation up to the reader.
-- Watch for "unless," "except," "but" — they indicate multiple requirements. Failing to specify what happens when the "unless" clause is true is a common source of **missing requirements**.
+- Watch for "and," "or," "additionally," "also": they may signal combined requirements. If you'd use different tests to verify the two parts, split them.
+- **Avoid "and/or":** it leaves interpretation up to the reader.
+- Watch for "unless," "except," "but": they indicate multiple requirements. Failing to specify what happens when the "unless" clause is true is a common source of **missing requirements**.
 
 Example split:
 > If the Buyer's credit card on file is active, the system shall charge the payment to that card.
@@ -464,7 +464,7 @@ Example split:
 
 ### Level of Detail
 
-**Appropriate detail:** Decompose high-level requirements into sufficient detail to clarify and flesh out. There's no single answer to "how detailed?" — provide enough to minimize risk of misunderstanding, based on the team's knowledge and experience. If a developer can think of several possible ways to satisfy a requirement and all are acceptable, specificity is about right.
+**Appropriate detail:** Decompose high-level requirements into sufficient detail to clarify and flesh out. There's no single answer to "how detailed?"; provide enough to minimize risk of misunderstanding, based on the team's knowledge and experience. If a developer can think of several possible ways to satisfy a requirement and all are acceptable, specificity is about right.
 
 **Include more detail when:**
 - Work is for an external client
@@ -508,7 +508,7 @@ Readers' eyes glaze over at dense text or long lists of similar requirements. Co
 E.g., `Editor.DocFormat.3` → "The Text Editor shall be able to parse ASCII documents that define federal laws."
 
 - Put **N/A** in cells that don't apply (clearer than omitting and having readers wonder why).
-- Ensures **completeness** — if something is in every cell, you haven't missed any.
+- Ensures **completeness:** if something is in every cell, you haven't missed any.
 
 ### Avoiding Ambiguity
 
@@ -549,12 +549,12 @@ Requirements quality is in the eye of the **reader**, not the author. If a reade
 ## Key Takeaways
 
 - **Document requirements to communicate**, not to satisfy a process. The SRS is a shared agreement, not a pile of information.
-- **Form follows function:** document, spreadsheet, Wiki, database, RM tool — choose based on your needs, but the *information categories* stay the same.
+- **Form follows function:** document, spreadsheet, Wiki, database, RM tool; choose based on your needs, but the *information categories* stay the same.
 - **Label every requirement** with a unique, persistent identifier. Hierarchical textual tags (`Product.Cart.01`) balance meaning and stability.
 - **Resolve TBDs** before implementation; track them to closure.
-- **Write excellent requirements** by targeting the characteristics: Complete, Correct, Feasible, Necessary, Prioritized, Unambiguous, Verifiable (individuals); Complete, Consistent, Modifiable, Traceable (sets).
+- **Write excellent requirements** by targeting the characteristics: Complete, Correct, Feasible, Necessary, Prioritized, Unambiguous, Verifiable (individuals); complete, Consistent, Modifiable, Traceable (sets).
 - **Put the punch line first.** Use active voice, "shall," consistent terminology, and consistent granularity.
-- **Avoid fuzzy words** — they make requirements unverifiable.
+- **Avoid fuzzy words:** they make requirements unverifiable.
 - **Peer reviews** are the single best mechanism for catching ambiguity and incompleteness that authors cannot see in their own work.
 - **Progressive refinement** applies on every project, agile or plan-driven: detail just-in-time, baseline before implementation.
 - Even the finest requirements documentation doesn't replace ongoing **discussion** throughout the project.
@@ -578,17 +578,17 @@ Requirements quality is in the eye of the **reader**, not the author. If a reade
 ## Sources
 
 - Karl E. Wiegers & Joy Beatty. *Software Requirements* (2nd ed.), Chapters 10–11. Microsoft Press, 2013.
-- Mavin et al. (2009) — Easy Approach to Requirements Syntax (EARS).
-- Tom Gilb (1988) — hierarchical textual tagging scheme.
-- Alexander & Stevens (2002) — user-perspective requirement template.
-- ISO/IEC/IEEE 29148:2011 — systems and software engineering life cycle processes — requirements engineering.
-- Robertson & Robertson (2013) — Volere Requirements Specification Template.
+- Mavin et al. (2009): Easy Approach to Requirements Syntax (EARS).
+- Tom Gilb (1988): hierarchical textual tagging scheme.
+- Alexander & Stevens (2002): user-perspective requirement template.
+- ISO/IEC/IEEE 29148:2011 (systems and software engineering life cycle processes) requirements engineering.
+- Robertson & Robertson (2013): Volere Requirements Specification Template.
 
 
 ## Related
 
-- [[Software Requirements Overview]] — All requirements topics
-- [[04_Use_Cases_and_Business_Rules]] — Use cases feed into SRS
-- [[06_Requirements_Modeling]] — Models complement the SRS
-- [[08_Prioritization_Validation_and_Reuse]] — Validate and prioritize documented requirements
-- [[10_Requirements_Management]] — Managing the SRS baseline
+- [[Software Requirements Overview]]: All requirements topics
+- [[04_Use_Cases_and_Business_Rules]]: Use cases feed into SRS
+- [[06_Requirements_Modeling]]: Models complement the SRS
+- [[08_Prioritization_Validation_and_Reuse]]: Validate and prioritize documented requirements
+- [[10_Requirements_Management]]: Managing the SRS baseline

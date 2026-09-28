@@ -22,7 +22,7 @@ aliases:
 
 ---
 
-## Part 1 — Requirements Engineering Tools (Ch 30)
+## Part 1: Requirements Engineering Tools (Ch 30)
 
 ### 1. Why Documents Aren't Enough
 
@@ -34,7 +34,7 @@ A document-based approach to requirements management has numerous limitations:
 - Hard to define **links** between requirements and other system elements (designs, code, tests).
 - Tracking **status** of individual requirements and the overall set is cumbersome.
 - Managing **multiple release baselines** in the same document is error-prone.
-- **Reuse** means copy-paste — no single source of truth.
+- **Reuse** means copy-paste: no single source of truth.
 - **Concurrent editing** by geographically separated teams is difficult.
 - No convenient place to store **rejected** or **deleted** requirements.
 - Hard to co-locate **analysis models** with requirements.
@@ -49,7 +49,7 @@ A document-based approach to requirements management has numerous limitations:
 | **Requirements Development (RD) tools** | Help BAs elicit and document requirements more effectively | Less mature; lower overall project impact |
 | **Requirements Management (RM) tools** | Manage changes, track status, trace requirements to other deliverables | More plentiful and mature; solves a more tractable problem |
 
-> [!warning] **Trap** — Avoid the temptation to build your own requirements tools or cobble together general-purpose automation products. This initially looks easy but can quickly overwhelm a team that doesn't have the resources to build the tools it really needs.
+> [!warning] **Trap:** Avoid the temptation to build your own requirements tools or cobble together general-purpose automation products. This initially looks easy but can quickly overwhelm a team that doesn't have the resources to build the tools it really needs.
 
 ### 1.2 Total Cost of Ownership
 
@@ -71,23 +71,23 @@ RD tools help BAs work with stakeholders to elicit and document requirements mor
 
 #### 2.1 Elicitation Tools
 
-- **Note recording** during elicitation sessions — organize ideas, annotate follow-ups, action items, core terms.
-- **Mind-mapping tools** — facilitate brainstorming and organizing information.
-- **Audio pens / recording devices** — playback conversations; some tie audio to written text for targeted review.
-- **Quality check tools** — scan requirements documents for vague and ambiguous words.
-- **Text-to-diagram conversion** — auto-generate diagrams from textual requirements.
-- **Collaborative voting** — help teams prioritize requirements.
+- **Note recording** during elicitation sessions: organize ideas, annotate follow-ups, action items, core terms.
+- **Mind-mapping tools:** facilitate brainstorming and organizing information.
+- **Audio pens / recording devices:** playback conversations; some tie audio to written text for targeted review.
+- **Quality check tools:** scan requirements documents for vague and ambiguous words.
+- **Text-to-diagram conversion:** auto-generate diagrams from textual requirements.
+- **Collaborative voting:** help teams prioritize requirements.
 
 #### 2.2 Prototyping Tools
 
 Range from electronic mock-ups to full application simulations:
 
-- **Simple tools** — basic shapes for low-fidelity wireframes.
-- **Common applications** (e.g., PowerPoint) — quickly mock up screens and navigations, annotate existing screenshots.
-- **Sophisticated tools** — clickable mocked-up functionality; support version control, feedback management, requirements linking, code generation.
-- **Hand-drawn style** — some tools render mockups in a sketch style to manage customer expectations (signal "this is just a possibility").
+- **Simple tools:** basic shapes for low-fidelity wireframes.
+- **Common applications** (e.g., PowerPoint): quickly mock up screens and navigations, annotate existing screenshots.
+- **Sophisticated tools:** clickable mocked-up functionality; support version control, feedback management, requirements linking, code generation.
+- **Hand-drawn style:** some tools render mockups in a sketch style to manage customer expectations (signal "this is just a possibility").
 
-> [!warning] See cautions in Ch 15 (Risk Reduction Through Prototyping) — don't invest more effort in prototypes than is needed to achieve your goals. Make clear to customers that prototypes are *possible models*, not commitments.
+> [!warning] See cautions in Ch 15 (Risk Reduction Through Prototyping); don't invest more effort in prototypes than is needed to achieve your goals. Make clear to customers that prototypes are *possible models*, not commitments.
 
 #### 2.3 Modeling Tools
 
@@ -118,22 +118,22 @@ An RM tool stores information in a **multiuser database**, providing a robust so
 | **Track requirements status** | Database lets you count discrete requirements and track each one's status during development. |
 | **Control access** | Define access permissions for individuals/groups; share with geographically dispersed teams via web interface; permit concurrent updates. |
 | **Communicate with stakeholders** | Master repository so all stakeholders work from the same set; threaded discussions; automatic email notifications on changes. |
-| **Reuse requirements** | Store once, reference whenever necessary — avoid duplicating requirements across projects/subprojects. |
+| **Reuse requirements** | Store once, reference whenever necessary; avoid duplicating requirements across projects/subprojects. |
 | **Track issue status** | Link open issues to related requirements; track resolution history; automatic status reporting. |
-| **Generate tailored subsets** | Extract views by iteration, feature, inspection target, etc. — e.g., an SRS containing all FRs allocated to a specific release and assigned to a particular developer. |
+| **Generate tailored subsets** | Extract views by iteration, feature, inspection target, etc.: e.g., an SRS containing all FRs allocated to a specific release and assigned to a particular developer. |
 
 #### 3.2 RM Tool Capabilities (Figure 30-1)
 
-- **Requirement types** — business requirements, use cases, functional requirements, hardware requirements, constraints, etc.
-- **Information architecture** — configurable definitions of how requirement types and other objects relate to one another (customized to your practices).
-- **Hierarchical labels** — hierarchical numeric labels (e.g., `UR-42`) in addition to unique internal identifiers.
-- **Import** — from various source document formats; textual description treated as a required attribute. Can incorporate graphics, spreadsheets, and external file links.
-- **Output** — generate requirements documents in multiple formats (predefined or user-specified documents, spreadsheets, webpages). Templates control page layout, boilerplate text, attributes to extract, text styles.
-- **Offline editing** — some tools let users make changes in exported documents offline, then synchronize with the database when back online.
-- **Views and permissions** — user groups with create/read/update/delete permissions on projects, requirements, attributes, and attribute values.
-- **Tracing** — robust link definitions between object types or same-type objects; modeling capabilities link model elements to individual requirements.
-- **Agile integration** — some agile project management tools provide RM capabilities: manage/prioritize backlogs, allocate to iterations, generate test cases from requirements.
-- **Tool integration** — RM tools integrate with design modeling tools, test management tools, project tracking tools, etc. (Figure 30-2). Determine data exchange capabilities when selecting.
+- **Requirement types:** business requirements, use cases, functional requirements, hardware requirements, constraints, etc.
+- **Information architecture:** configurable definitions of how requirement types and other objects relate to one another (customized to your practices).
+- **Hierarchical labels:** hierarchical numeric labels (e.g., `UR-42`) in addition to unique internal identifiers.
+- **Import:** from various source document formats; textual description treated as a required attribute. Can incorporate graphics, spreadsheets, and external file links.
+- **Output:** generate requirements documents in multiple formats (predefined or user-specified documents, spreadsheets, webpages). Templates control page layout, boilerplate text, attributes to extract, text styles.
+- **Offline editing:** some tools let users make changes in exported documents offline, then synchronize with the database when back online.
+- **Views and permissions:** user groups with create/read/update/delete permissions on projects, requirements, attributes, and attribute values.
+- **Tracing:** robust link definitions between object types or same-type objects; modeling capabilities link model elements to individual requirements.
+- **Agile integration:** some agile project management tools provide RM capabilities: manage/prioritize backlogs, allocate to iterations, generate test cases from requirements.
+- **Tool integration:** RM tools integrate with design modeling tools, test management tools, project tracking tools, etc. (Figure 30-2). Determine data exchange capabilities when selecting.
 
 > [!tip] Think about how you'll define trace links between FRs and specific design/code elements, and how you'd verify that all tests linked back to specific FRs have been successfully executed.
 
@@ -149,26 +149,26 @@ An RM tool stores information in a **multiuser database**, providing a robust so
 4. **Score** each tool against the criteria consistently.
 5. **Calculate** total scores using criteria scores and weights.
 6. **Pilot** top-scoring tools on an actual project to see if they behave as anticipated.
-7. **Final selection** — combine scores, licensing costs, ongoing costs, vendor support, current-user input, and subjective impressions.
+7. **Final selection:** combine scores, licensing costs, ongoing costs, vendor support, current-user input, and subjective impressions.
 
 > [!tip] Two good final questions for evaluators: *"Which tool would you most want to use?"* and *"Which tool would you be most upset about being forced to use?"*
 
 #### 4.2 Setting Up the Tool and Processes
 
-- **Expect effort**: install, load requirements, define attributes and trace links, keep contents current, define access groups/privileges, adapt processes.
-- **Steep learning curve** just to set up a sophisticated tool — management must allocate resources.
-- Make an **organization-wide commitment** to actually use the product — don't let it become expensive shelfware.
+- **Expect effort:** install, load requirements, define attributes and trace links, keep contents current, define access groups/privileges, adapt processes.
+- **Steep learning curve** just to set up a sophisticated tool: management must allocate resources.
+- Make an **organization-wide commitment** to actually use the product: don't let it become expensive shelfware.
 
-> [!important] There's little point in using a requirements tool if you don't take advantage of its capabilities. One team diligently stored requirements in an RM tool but defined no attributes or trace links and provided no online stakeholder access — no real benefit. Another team stored hundreds of requirements with many trace links but only generated massive printed traceability reports that no one examined. Neither reaped the full benefits of their investment.
+> [!important] There's little point in using a requirements tool if you don't take advantage of its capabilities. One team diligently stored requirements in an RM tool but defined no attributes or trace links and provided no online stakeholder access, no real benefit. Another team stored hundreds of requirements with many trace links but only generated massive printed traceability reports that no one examined. Neither reaped the full benefits of their investment.
 
 #### 4.3 Process Adaptation Suggestions
 
 - Assign an **experienced BA** to own the tool setup and process adaptations.
-- Think carefully about **requirement types** — don't treat every SRS section as a separate type, but don't stuff everything into a single type either.
+- Think carefully about **requirement types:** don't treat every SRS section as a separate type, but don't stuff everything into a single type either.
 - Use the tool to **facilitate communication** with stakeholders in various locations; set access/change privileges to permit sufficient input without giving everyone complete freedom.
-- **Don't capture requirements directly in an RM tool during early elicitation workshops** — wait until requirements begin to stabilize.
+- **Don't capture requirements directly in an RM tool during early elicitation workshops:** wait until requirements begin to stabilize.
 - Use **RD tools during elicitation** only if you're confident they won't slow down discovery.
-- **Don't define trace links until requirements stabilize** — otherwise you'll do a lot of rework.
+- **Don't define trace links until requirements stabilize:** otherwise you'll do a lot of rework.
 - **Set a date** after which the tool's database will be regarded as the definitive repository. After that date, requirements residing only in word-processing documents won't be recognized as valid.
 
 > [!important] **Don't even pilot an RM tool** until your organization can create a reasonable SRS on paper. If your biggest problems are with eliciting and writing clear, high-quality requirements, an RM tool won't help you (although an RD tool might).
@@ -181,22 +181,22 @@ The diligence of tool users is a **critical success factor**. Dedicated, discipl
 
 - Buying a tool is easy; changing culture and processes is much harder.
 - Some stakeholders interpret database visibility as **reducing their control** over requirements.
-- Some prefer to keep requirements private until "done" — missing the opportunity for frequent peer review.
+- Some prefer to keep requirements private until "done": missing the opportunity for frequent peer review.
 - People are **resistant to change** things they're familiar with.
-- Most users are already busy — time must be allocated for the learning curve.
+- Most users are already busy: time must be allocated for the learning curve.
 
 **Suggestions:**
 
-- Identify a **tool advocate** — a local enthusiast (experienced BA) who learns the tool, mentors others, and ensures it gets employed as intended.
+- Identify a **tool advocate:** a local enthusiast (experienced BA) who learns the tool, mentors others, and ensures it gets employed as intended.
 - **Share stories** about where the lack of a tool caused negative impact; ask team members for their own examples.
-- **Train** team members — don't expect them to figure it out on their own.
-- **Don't base a project's success on a tool you're using for the first time** — begin with a pilot on a noncritical project.
+- **Train** team members: don't expect them to figure it out on their own.
+- **Don't base a project's success on a tool you're using for the first time:** begin with a pilot on a noncritical project.
 
 > [!quote] A tool cannot replace a solid requirements process or team members with suitable skills and knowledge. A fool with a tool is an amplified fool.
 
 ---
 
-## Part 2 — Improving Your Requirements Processes (Ch 31)
+## Part 2: Improving Your Requirements Processes (Ch 31)
 
 ### 5. The Case for Process Improvement
 
@@ -214,7 +214,7 @@ The diligence of tool users is a **critical success factor**. Dedicated, discipl
 
 ### 5.1 How Requirements Relate to Other Project Processes
 
-Requirements lie at the heart of every well-run software project. Changes in requirements approaches affect — and are affected by — these other processes:
+Requirements lie at the heart of every well-run software project. Changes in requirements approaches affect (and are affected by) these other processes:
 
 | Process | Relationship to Requirements |
 |---------|------------------------------|
@@ -223,7 +223,7 @@ Requirements lie at the heart of every well-run software project. Changes in req
 | **Change control** | After baselining, all changes/additions go through a defined change control process. Requirements changes modify the backlog and priorities. Tracing helps assess impact. |
 | **Acceptance and system testing** | User requirements → acceptance testing; functional requirements → system testing. Poorly specified behavior makes testers hard-pressed to verify functionality. |
 | **Construction** | Requirements are the basis for design and implementation; tie together construction work products. Design reviews ensure designs address all requirements; unit testing checks code against design and requirements; tracing identifies design/code elements derived from each requirement. |
-| **User documentation** | Requirements provide input to user documentation. Poorly written or late-breaking requirements lead to documentation problems. Technical writers and testers — at the end of the chain — are often enthusiastic supporters of improved requirements practices and earlier engagement. |
+| **User documentation** | Requirements provide input to user documentation. Poorly written or late-breaking requirements lead to documentation problems. Technical writers and testers (at the end of the chain) are often enthusiastic supporters of improved requirements practices and earlier engagement. |
 
 ### 5.2 Stakeholder Contributions
 
@@ -247,19 +247,19 @@ Engaging other stakeholders in the improvement initiative leads to **shared owne
 
 #### 6.1 Common Forms of Resistance
 
-- **"Too busy"** — people already overwhelmed don't think they have time. But if you don't invest time, there's no reason to expect the next project to go more smoothly.
-- **"Change control is a barrier"** — viewed as development throwing up obstacles. In reality, it's a *structure*, not a barrier — it permits well-informed people to make good business decisions and communicate them.
-- **"Requirements are bureaucratic time-wasters"** — developers/managers view writing/reviewing requirements as delaying "real work." Explain the high cost of continually rewriting code while the team tries to figure out what the system should do.
+- **"Too busy":** people already overwhelmed don't think they have time. But if you don't invest time, there's no reason to expect the next project to go more smoothly.
+- **"Change control is a barrier":** viewed as development throwing up obstacles. In reality, it's a *structure*, not a barrier; it permits well-informed people to make good business decisions and communicate them.
+- **"Requirements are bureaucratic time-wasters":** developers/managers view writing/reviewing requirements as delaying "real work." Explain the high cost of continually rewriting code while the team tries to figure out what the system should do.
 
 > [!important] Every process change should offer clear benefits to the project team, development organization, company, and/or customer. The question isn't just *"What's in it for me?"* but *"What's in it for us?"*
 
 #### 6.2 Management Commitment
 
-You don't need management's **permission** to work in the best way you know how — that's your job. But you **do** need management **commitment** for a project-wide or organization-wide improvement effort to be sustained and successful.
+You don't need management's **permission** to work in the best way you know how: that's your job. But you **do** need management **commitment** for a project-wide or organization-wide improvement effort to be sustained and successful.
 
 **10 signs management is truly committed to excellent requirements processes (Figure 31-3):**
 
-- Behaviors — not pronouncements — constitute evidence of commitment to quality.
+- Behaviors: not pronouncements: constitute evidence of commitment to quality.
 - Senior people who "support" improvements but revert to old processes as soon as problems arise are not committed.
 
 > [!trap] The single biggest threat to a software process improvement program is **lack of management commitment**, followed closely by **reorganizations** that shuffle the program's participants and priorities.
@@ -270,8 +270,8 @@ You don't need management's **permission** to work in the best way you know how 
 
 **Four principles (Wiegers 1996):**
 
-1. **Process improvement should be evolutionary and continuous.** Don't aim for perfection — develop a few improved templates/procedures, get started, and adjust as you gain experience. Look for the **low-hanging fruit**.
-2. **People and organizations change only when they have an incentive to do so.** The strongest incentive is **pain** — real pain experienced on previous projects (missed deadlines, overtime from misunderstood requirements, wasted test effort, high maintenance costs, unimplemented changes, lost edits, unavailable customers, unresolved issues).
+1. **Process improvement should be evolutionary and continuous.** Don't aim for perfection; develop a few improved templates/procedures, get started, and adjust as you gain experience. Look for the **low-hanging fruit**.
+2. **People and organizations change only when they have an incentive to do so.** The strongest incentive is **pain:** real pain experienced on previous projects (missed deadlines, overtime from misunderstood requirements, wasted test effort, high maintenance costs, unimplemented changes, lost edits, unavailable customers, unresolved issues).
 3. **Process changes should be goal-oriented.** Know your objectives before beginning: reduce rework? Overlook fewer requirements? Cut unneeded features sooner? A road map greatly improves chances of success.
 4. **Treat improvement activities as mini-projects.** Include resources and tasks in the project plan. Perform planning, tracking, measurement, and reporting. Write a simple action plan for each improvement area.
 
@@ -280,9 +280,9 @@ You don't need management's **permission** to work in the best way you know how 
 - **Take chewable bites.** (If you bite into too large a change, the team might choke on it.)
 - **Take a lot of satisfaction from small victories.** (You won't have many big victories.)
 - **Use gentle pressure, relentlessly applied.** (Keep the change initiative visible; continually chip away.)
-- **Focus, focus, focus.** (A busy team can work on only 1-3 initiatives at a time — but always work on at least one.)
+- **Focus, focus, focus.** (A busy team can work on only 1-3 initiatives at a time, but always work on at least one.)
 - **Look for allies.** (Cultivate, thank, and reward early adopters.)
-- **Action plans that don't turn into actions are not useful.** (It's easy to assess and plan; hard to get people to work in new ways — yet that's the only useful outcome.)
+- **Action plans that don't turn into actions are not useful.** (It's easy to assess and plan; hard to get people to work in new ways, yet that's the only useful outcome.)
 - **Everyone has to play.** (Get buy-in by involving team members through assessment and solution discovery.)
 
 ---
@@ -331,7 +331,7 @@ Identify strengths and shortcomings of current practices. The assessment:
 | Appendix A self-assessment | Low | Calibrate current practices; identify most-needed improvements |
 | Formal evaluation by outside consultants | High | List of findings (strengths + weaknesses) + recommendations |
 
-> [!tip] Focus energy on improving practice areas that cause the **most difficulties** and pose risks to **future** project success — not just areas with low self-assessment scores.
+> [!tip] Focus energy on improving practice areas that cause the **most difficulties** and pose risks to **future** project success, not just areas with low self-assessment scores.
 
 #### Step 2: Plan Improvement Actions
 
@@ -345,10 +345,10 @@ Write an action plan following the assessment. Each plan should identify:
 
 - Include no more than ~10 items per action plan.
 - Scope so the plan can be completed in **2-3 months**.
-- Assign each action item to a **specific individual** — not "the team." Teams don't do work; individuals do.
+- Assign each action item to a **specific individual:** not "the team." Teams don't do work; individuals do.
 - If you need more than ~10 items, focus the initial cycle on the most important issues and address the rest later.
 
-**Example — Requirements Management Improvements action plan:**
+**Example: Requirements Management Improvements action plan:**
 1. Draft a requirements change control process.
 2. Review and revise the change control process.
 3. Pilot the change control process with Project A.
@@ -361,7 +361,7 @@ Write an action plan following the assessment. Each plan should identify:
 
 **Pilot suggestions:**
 
-- Select pilot participants who will give the new approaches a **fair try** — allies or skeptics, but not strong opponents.
+- Select pilot participants who will give the new approaches a **fair try:** allies or skeptics, but not strong opponents.
 - **Quantify** evaluation criteria.
 - Identify stakeholders who need to be informed about the pilot and why.
 - Consider piloting portions on **different projects** to engage more people.
@@ -369,7 +369,7 @@ Write an action plan following the assessment. Each plan should identify:
 
 **Roll-out:**
 
-- Even motivated teams have limited capacity to absorb change — don't place too many new expectations on a team at once.
+- Even motivated teams have limited capacity to absorb change: don't place too many new expectations on a team at once.
 - Craft a roll-out plan defining how to distribute new methods/materials.
 - Provide sufficient **training, coaching, and assistance**.
 - Consider how management will set and communicate expectations.
@@ -378,7 +378,7 @@ Write an action plan following the assessment. Each plan should identify:
 
 Assess how smoothly pilots ran, how effective they were, and how well the rollout went.
 
-> [!important] **Accept the reality of the learning curve** — the productivity drop (the "valley of despair") as practitioners assimilate new ways of working. This short-term drop is part of the investment. People who don't understand this might abandon the effort before it begins to pay off, achieving a zero — or worse — return on investment. Educate managers and peers about the learning curve, and commit to seeing the initiative through.
+> [!important] **Accept the reality of the learning curve:** the productivity drop (the "valley of despair") as practitioners assimilate new ways of working. This short-term drop is part of the investment. People who don't understand this might abandon the effort before it begins to pay off, achieving a zero (or worse) return on investment. Educate managers and peers about the learning curve, and commit to seeing the initiative through.
 
 **Investigate if KPIs don't show progress:**
 
@@ -409,7 +409,7 @@ High-performance projects have effective processes for all requirements engineer
 | **Process description** | Documented definition of a set of activities. May include objective, key milestones, participants, communication steps, inputs/outputs, deliverables, and tailoring guidance. |
 | **Template** | Pattern used as a guide for producing a work product. Provides "slots" for capturing/organizing information. Embedded guidance text helps the author. |
 
-> [!tip] Store process assets in a **shared process assets library** for ease of access. Establish mechanisms for improving them with experience. Items should be no larger than they need to be — they need not be separate documents.
+> [!tip] Store process assets in a **shared process assets library** for ease of access. Establish mechanisms for improving them with experience. Items should be no larger than they need to be; they need not be separate documents.
 
 #### 10.2 Requirements Development Process Assets
 
@@ -455,7 +455,7 @@ A process improvement initiative should have a **goal**. Without specific goals:
 
 The answer to both must be **yes**.
 
-> [!important] You can't measure quantitative progress unless you've established a **baseline** — a reference starting point of how things are working today. Many software organizations lack a measurement culture, making baselines difficult — but it's hard to tell how close you're getting without a starting point or a yardstick.
+> [!important] You can't measure quantitative progress unless you've established a **baseline:** a reference starting point of how things are working today. Many software organizations lack a measurement culture, making baselines difficult, but it's hard to tell how close you're getting without a starting point or a yardstick.
 
 #### 11.1 Sample KPIs (Table 31-2)
 
@@ -467,7 +467,7 @@ The answer to both must be **yes**.
 | **Improve estimation accuracy for requirements development effort** | • Estimated vs. actual labor hours spent on requirements development activities per release and for the total project |
 | **Reduce unneeded features** | • Percentage of committed features removed before implementation begins<br>• Percentage of committed features removed before delivering a release/iteration |
 
-> [!note] Most measurements of software are **lagging indicators**. It takes a while for new approaches to demonstrate sustained benefits — give new ways of working a chance to take hold.
+> [!note] Most measurements of software are **lagging indicators**. It takes a while for new approaches to demonstrate sustained benefits; give new ways of working a chance to take hold.
 
 #### 11.2 Goal-Question-Metric (GQM) Approach
 
@@ -488,7 +488,7 @@ Haphazard approaches to process improvement rarely lead to sustainable success.
 **A road map:**
 
 - Sequences improvement actions to yield the **greatest and quickest benefits** with the smallest investment.
-- There is **no one-size-fits-all** road map — formulaic approaches don't replace careful thinking, good judgment, and common sense.
+- There is **no one-size-fits-all** road map: formulaic approaches don't replace careful thinking, good judgment, and common sense.
 - Desired business goals are shown on one side; major improvement activities on the other; circles indicate intermediate milestones (M1, M2, ...).
 - Implement each threaded set of improvement activities from left to right.
 - Give **ownership of each milestone** to an individual, who writes an action plan for achieving that milestone.
@@ -496,15 +496,15 @@ Haphazard approaches to process improvement rarely lead to sustainable success.
 
 ---
 
-## Part 3 — Software Requirements and Risk Management (Ch 32)
+## Part 3: Software Requirements and Risk Management (Ch 32)
 
 ### 13. Why Risk Management Matters
 
 > Software engineers and project managers are eternal optimists. We often expect our next project to run smoothly, despite the history of problems on earlier projects. The reality is that dozens of potential pitfalls can delay or derail a software project.
 
-**Risk** = a condition that could cause some loss or otherwise threaten the success of a project. The condition hasn't actually caused a problem yet — and you'd like to keep it that way.
+**Risk** = a condition that could cause some loss or otherwise threaten the success of a project. The condition hasn't actually caused a problem yet, and you'd like to keep it that way.
 
-**Issue** ≠ **Risk**: If something untoward has *already* happened, it's an **issue**, not a risk. Deal with current problems through ongoing status tracking and corrective action.
+**Issue** ≠ **Risk:** If something untoward has *already* happened, it's an **issue**, not a risk. Deal with current problems through ongoing status tracking and corrective action.
 
 **Risk management** = the process of identifying, evaluating, and controlling risks **before** they harm your project. It means dealing with a concern **before** it becomes a crisis.
 
@@ -514,12 +514,12 @@ Haphazard approaches to process improvement rarely lead to sustainable success.
 
 Projects face many kinds of risks besides those related to requirements:
 
-- **External dependencies** — subcontractors, other projects providing reusable components.
-- **Project management** — poor estimation, rejection of accurate estimates, insufficient status visibility, staff turnover.
-- **Technology** — highly complex and leading-edge development.
-- **Knowledge gaps** — insufficient experience with technologies or application domain.
-- **Method transitions** — moving to a new development method introduces a raft of new risks.
-- **Regulatory** — ever-changing government regulations.
+- **External dependencies:** subcontractors, other projects providing reusable components.
+- **Project management:** poor estimation, rejection of accurate estimates, insufficient status visibility, staff turnover.
+- **Technology:** highly complex and leading-edge development.
+- **Knowledge gaps:** insufficient experience with technologies or application domain.
+- **Method transitions:** moving to a new development method introduces a raft of new risks.
+- **Regulatory:** ever-changing government regulations.
 
 > [!tip] Scale risk management to your project's size. Small projects can get by with a simple risk list; formal risk management planning is a key element of successful large-scale projects.
 
@@ -545,7 +545,7 @@ Risk management involves **risk assessment** (identification, analysis, prioriti
 
 | Activity | Description |
 |----------|-------------|
-| **Risk avoidance** | Don't do the risky thing — avoid certain projects, rely on proven technologies, exclude difficult features. (May also mean losing opportunities.) |
+| **Risk avoidance** | Don't do the risky thing; avoid certain projects, rely on proven technologies, exclude difficult features. (May also mean losing opportunities.) |
 | **Risk management planning** | Produce a plan for each significant risk: mitigation approaches, contingency plans, owners, timelines. |
 | **Risk resolution** | Execute the plans for mitigating each risk. |
 | **Risk monitoring** | Track progress toward resolving each risk item; part of routine project status tracking. Monitor mitigation effectiveness, look for new risks, retire risks whose threat has passed, update priorities periodically. |
@@ -556,7 +556,7 @@ Risk management involves **risk assessment** (identification, analysis, prioriti
 
 ### 15. Documenting Project Risks
 
-It's not enough to simply recognize risks — you need to manage them in a way that lets you communicate risk issues and status throughout the project's duration.
+It's not enough to simply recognize risks; you need to manage them in a way that lets you communicate risk issues and status throughout the project's duration.
 
 #### 15.1 Risk Item Tracking Template (Figure 32-2)
 
@@ -587,7 +587,7 @@ State the risk condition followed by the potential adverse outcome:
 
 Consider the cost of mitigation when planning. It doesn't make sense to spend **$20,000** to control a risk with a maximum estimated impact of only **$10,000** if it materialized.
 
-For the most severe risks, devise **contingency plans** — what to do if, despite efforts, the risk does affect the project.
+For the most severe risks, devise **contingency plans:** what to do if, despite efforts, the risk does affect the project.
 
 ---
 
@@ -602,7 +602,7 @@ A **risk list is not the same as a risk management plan.**
 
 Many projects appoint a **project risk manager** to stay on top of things that could go wrong. (One company dubbed theirs "Eeyore," after the gloomy Winnie-the-Pooh character.)
 
-> [!trap] Don't assume that risks are under control just because you identified them and selected mitigation actions. **Follow through** on risk management actions. Include enough time for risk management in the project schedule — include risk mitigation activities, risk status reporting, and updating the risk list in the project's task list.
+> [!trap] Don't assume that risks are under control just because you identified them and selected mitigation actions. **Follow through** on risk management actions. Include enough time for risk management in the project schedule; include risk mitigation activities, risk status reporting, and updating the risk list in the project's task list.
 
 #### 16.1 Establishing a Monitoring Rhythm
 
@@ -610,7 +610,7 @@ Many projects appoint a **project risk manager** to stay on top of things that c
 - Track mitigation effectiveness **regularly**.
 - When a mitigation action is completed, **reevaluate** the probability and impact for that risk item.
 - Update the risk list and pending mitigation plans accordingly.
-- A risk is not necessarily under control simply because mitigation actions are completed — judge whether exposure has been reduced to an acceptable level or whether the opportunity for the risk to become a problem has passed.
+- A risk is not necessarily under control simply because mitigation actions are completed; judge whether exposure has been reduced to an acceptable level or whether the opportunity for the risk to become a problem has passed.
 
 > [!warning] **Out of control?** If the same items remain on your top-five risk list week after week, your mitigation actions aren't being implemented, aren't effective, or aren't controllable. If mitigation is effective, exposures will **decrease**, letting other risks float up to engage your attention.
 
@@ -618,7 +618,7 @@ Many projects appoint a **project risk manager** to stay on top of things that c
 
 ### 17. Requirements-Related Risks
 
-The risk factors are organized by the five requirements engineering subdisciplines. This list is a **starting point** — use it to launch an attack on your requirements risks before they attack your project.
+The risk factors are organized by the five requirements engineering subdisciplines. This list is a **starting point:** use it to launch an attack on your requirements risks before they attack your project.
 
 #### 17.1 Elicitation Risks
 
@@ -667,28 +667,28 @@ The risk factors are organized by the five requirements engineering subdisciplin
 
 ## Key Takeaways
 
-1. **Documents don't scale.** As projects grow, document-based requirements management breaks down — RM tools provide version control, attributes, tracing, status tracking, and multi-user access that documents can't.
+1. **Documents don't scale.** As projects grow, document-based requirements management breaks down; RM tools provide version control, attributes, tracing, status tracking, and multi-user access that documents can't.
 2. **Tools amplify process, they don't create it.** A fool with a tool is an amplified fool. Don't pilot an RM tool until you can write a reasonable SRS on paper.
 3. **Total cost of ownership matters.** Include license, maintenance, administration, training, and support in cost-benefit analysis.
 4. **User adoption is the critical success factor.** Identify a tool advocate, train users, share stories of pain, and begin with pilots on noncritical projects.
 5. **Process improvement is evolutionary.** Take chewable bites, look for low-hanging fruit, and treat improvement activities as mini-projects with measurable goals.
 6. **Root cause analysis before solutions.** Distinguish symptoms from causes using "why" questions and fishbone diagrams. Target the 20% of root causes that drive 80% of problems.
 7. **The learning curve is real.** Accept the "valley of despair" as part of the investment; educate managers and commit to seeing initiatives through.
-8. **Process assets make practices repeatable.** Build a shared library of checklists, templates, procedures, and examples — and improve them with experience.
-9. **Measure with KPIs and GQM.** Establish baselines, set targets, and use lagging indicators patiently — most software improvements take time to demonstrate value.
-10. **Risk management is dealing with concerns before they become crises.** Identify, analyze, prioritize, plan, resolve, and monitor — scale to project size.
+8. **Process assets make practices repeatable.** Build a shared library of checklists, templates, procedures, and examples, and improve them with experience.
+9. **Measure with KPIs and GQM.** Establish baselines, set targets, and use lagging indicators patiently; most software improvements take time to demonstrate value.
+10. **Risk management is dealing with concerns before they become crises.** Identify, analyze, prioritize, plan, resolve, and monitor; scale to project size.
 11. **Requirements risks demand early, aggressive attention.** Misunderstood requirements, inadequate user involvement, uncertain scope, and continual changes are among the most common project threats.
-12. **Follow through.** Identifying risks and selecting mitigation actions isn't enough — execute the plans, monitor effectiveness, and reevaluate exposures regularly.
+12. **Follow through.** Identifying risks and selecting mitigation actions isn't enough; execute the plans, monitor effectiveness, and reevaluate exposures regularly.
 
 ---
 
 ## Related Notes
 
-- [[02_Business_and_User_Requirements]] — Ch 5-6: Vision, scope, user classes, product champions
-- [[05_Documenting_Requirements]] — Ch 10: SRS template and structure
-- [[09_Requirements_Management_Practices]] — Ch 27: Status tracking, baselines, attributes
-- [[10_Change_and_Traceability]] — Ch 28-29: Change control, impact analysis, traceability
-- [[Software Requirements Overview]] — SWEBOK overview of the requirements knowledge area
+- [[02_Business_and_User_Requirements]] (Ch 5-6): Vision, scope, user classes, product champions
+- [[05_Documenting_Requirements]] (Ch 10): SRS template and structure
+- [[10_Requirements_Management]] (Ch 27): Status tracking, baselines, attributes
+- [[10_Requirements_Management]] (Ch 28-29): Change control, impact analysis, traceability
+- [[Software Requirements Overview]]: SWEBOK overview of the requirements knowledge area
 
 ---
 

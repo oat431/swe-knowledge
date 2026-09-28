@@ -31,8 +31,8 @@ Both shift from *product-centric* ("what should the system do?") to *usage-centr
 
 ### Where they fall short
 
-- Batch processes, data warehousing, analytics, computationally intensive systems — complexity is in computations/data, not interactions.
-- Embedded & real-time systems — better served by **event-response lists** (see Ch 12).
+- Batch processes, data warehousing, analytics, computationally intensive systems: complexity is in computations/data, not interactions.
+- Embedded & real-time systems: better served by **event-response lists** (see Ch 12).
 - Don't force every requirement into a use case. Some functionality is already known; creating a use case just to hold it adds no value.
 
 ---
@@ -41,11 +41,11 @@ Both shift from *product-centric* ("what should the system do?") to *usage-centr
 
 ### Core definitions
 
-- **Actor** — a role (not necessarily a person) that interacts with the system. Users wear "hats" labeled with actor names; the system recognizes the actor, not the person.
-  - **Primary actor** — initiates the use case and derives main value.
-  - **Secondary actor** — participates in successful execution (often another system).
-- **Use case** — a sequence of interactions between system and external actor producing value. Name = verb + object ("Request a Chemical").
-- **Scenario** — a single instance of usage. A use case is a collection of related scenarios.
+- **Actor:** a role (not necessarily a person) that interacts with the system. Users wear "hats" labeled with actor names; the system recognizes the actor, not the person.
+  - **Primary actor:** initiates the use case and derives main value.
+  - **Secondary actor:** participates in successful execution (often another system).
+- **Use case:** a sequence of interactions between system and external actor producing value. Name = verb + object ("Request a Chemical").
+- **Scenario:** a single instance of usage. A use case is a collection of related scenarios.
 
 ### Use case diagram (UML)
 
@@ -62,8 +62,8 @@ Both shift from *product-centric* ("what should the system do?") to *usage-centr
 2. Create specific scenarios per business process → generalize into use cases.
 3. From a business process description, ask "What tasks must the system perform?"
 4. Identify external events → relate to actors and use cases.
-5. **CRUD analysis** — every data entity needs Create/Read/Update/Delete use cases.
-6. Examine the context diagram — "What does each external entity want to achieve?"
+5. **CRUD analysis:** every data entity needs Create/Read/Update/Delete use cases.
+6. Examine the context diagram: "What does each external entity want to achieve?"
 
 Bottom-up (brainstorm tasks) and top-down (from business processes) approaches complement each other; comparing both reduces omissions.
 
@@ -78,7 +78,7 @@ Bottom-up (brainstorm tasks) and top-down (from business processes) approaches c
 | **Actor(s)** | Primary + secondary actors involved |
 | **Trigger** | Event that initiates execution |
 | **Preconditions** | Prerequisites the system can test before beginning (system state, not user intent) |
-| **Postconditions** | System state after successful completion — user-visible outcomes, physical results, internal state changes |
+| **Postconditions** | System state after successful completion: user-visible outcomes, physical results, internal state changes |
 | **Normal flow** | Numbered actor↔system dialog steps (the "happy path") |
 | **Alternative flows** | Other success paths; branch from normal flow at decision points; may rejoin |
 | **Exceptions** | Anticipated error conditions + handling; may recover or terminate |
@@ -100,13 +100,13 @@ Bottom-up (brainstorm tasks) and top-down (from business processes) approaches c
   - User-observable ("system displayed balance")
   - Physical ("ATM dispensed cash + printed receipt")
   - Internal ("account debited by withdrawal amount + fees")
-- Users won't volunteer internal postconditions — BA must discover these with SMEs.
+- Users won't volunteer internal postconditions: BA must discover these with SMEs.
 
 ### Normal vs. alternative vs. exception flows
 
-- **Normal flow** (a.k.a. main flow, basic flow, happy path, sunny-day scenario) — one success path through the use case.
-- **Alternative flows** (secondary scenarios) — deliver same business outcome with variations; branch from and may rejoin the normal flow.
-- **Exceptions** — conditions that can prevent success; describe anticipated errors and handling.
+- **Normal flow** (a.k.a. main flow, basic flow, happy path, sunny-day scenario); one success path through the use case.
+- **Alternative flows** (secondary scenarios): deliver same business outcome with variations; branch from and may rejoin the normal flow.
+- **Exceptions:** conditions that can prevent success; describe anticipated errors and handling.
   - If not specified during elicitation → developers guess inconsistently, or the system crashes.
   - Cross-cutting errors (network loss, DB failure, paper jam) → treat as functional requirements rather than repeating as exceptions per use case.
 - A user story may cover an entire use case, a single scenario, or one alternative flow.
@@ -114,8 +114,8 @@ Bottom-up (brainstorm tasks) and top-down (from business processes) approaches c
 
 ### Casual vs. fully dressed
 
-- **Casual** — textual narrative, perhaps just the Description section.
-- **Fully dressed** — complete template.
+- **Casual:** textual narrative, perhaps just the Description section.
+- **Fully dressed:** complete template.
 - Fully dressed is valuable when:
   - Users aren't closely engaged throughout the project.
   - High complexity / high-risk failures.
@@ -128,9 +128,9 @@ Bottom-up (brainstorm tasks) and top-down (from business processes) approaches c
 
 ## 4. Extend & Include Relationships
 
-- **Extend** — a standalone use case extends the normal flow into an alternative flow (e.g., "Search Vendor Catalogs" extends "Request a Chemical").
-- **Include** — several use cases share common steps; extract into a subordinate use case they all include (e.g., "Pay a Bill" and "Reconcile Credit Card" both `<<include>>` "Write a Check"). Analogous to calling a subroutine.
-- Don't over-debate when/how to use these — they are tools, not dogma.
+- **Extend:** a standalone use case extends the normal flow into an alternative flow (e.g., "Search Vendor Catalogs" extends "Request a Chemical").
+- **Include:** several use cases share common steps; extract into a subordinate use case they all include (e.g., "Pay a Bill" and "Reconcile Credit Card" both `<<include>>` "Write a Check"). Analogous to calling a subroutine.
+- Don't over-debate when/how to use these: they are tools, not dogma.
 
 ### Chaining use cases
 
@@ -167,20 +167,20 @@ Bottom-up (brainstorm tasks) and top-down (from business processes) approaches c
 
 - Derive FRs from use cases → review with participants.
 - Draw analysis models (e.g., state-transition diagrams spanning multiple use cases).
-- Generate conceptual tests early — independent of implementation/UI specifics.
+- Generate conceptual tests early: independent of implementation/UI specifics.
 - Compare multiple representations (FRs, tests, models, prototypes) to catch errors, gaps, and different interpretations. A single representation must simply be trusted; multiple representations enable cross-checking.
-- Allow ≥1 day between successive workshops — freshness blinds reviewers to errors.
+- Allow ≥1 day between successive workshops: freshness blinds reviewers to errors.
 
 ---
 
 ## 6. Use Case Traps to Avoid
 
-- **Too many use cases** — writing at too low a level; don't create one per scenario. Rule of thumb: more FRs than use cases, more use cases than business requirements.
-- **Highly complex use cases** — 4+ pages of dense logic. Pick one normal flow; use alternative flows for other success branches; exceptions for failures. Each alternative should be short. If a flow exceeds 10–15 steps, question whether it's really one scenario. Don't split arbitrarily just for length.
-- **Including design in use cases** — focus on *what* users accomplish, not *how* screens look. Say "System presents choices" not "System displays drop-down list."
-- **Including data definitions in use cases** — store in a project-wide data dictionary / data model, not per use case. Prevents duplication and drift.
-- **Use cases users don't understand** — write from the user's perspective, not the system's; have users review them.
-- **Over-detailing distant use cases** — don't fully specify use cases won't be implemented for months/years; they'll likely change.
+- **Too many use cases:** writing at too low a level; don't create one per scenario. Rule of thumb: more FRs than use cases, more use cases than business requirements.
+- **Highly complex use cases:** 4+ pages of dense logic. Pick one normal flow; use alternative flows for other success branches; exceptions for failures. Each alternative should be short. If a flow exceeds 10–15 steps, question whether it's really one scenario. Don't split arbitrarily just for length.
+- **Including design in use cases:** focus on *what* users accomplish, not *how* screens look. Say "System presents choices" not "System displays drop-down list."
+- **Including data definitions in use cases:** store in a project-wide data dictionary / data model, not per use case. Prevents duplication and drift.
+- **Use cases users don't understand:** write from the user's perspective, not the system's; have users review them.
+- **Over-detailing distant use cases:** don't fully specify use cases won't be implemented for months/years; they'll likely change.
 
 ---
 
@@ -226,7 +226,7 @@ The Business Rules Group (2012) defines a business rule as:
 
 > *"A statement that defines or constrains some aspect of the business. It is intended to assert business structure or to control or influence the behavior of the business."*
 
-A simple five-category taxonomy (plus an optional sixth: **terms** — defined words/phrases/abbreviations; group with facts or store in a glossary) covers most situations:
+A simple five-category taxonomy (plus an optional sixth: **terms:** defined words/phrases/abbreviations; group with facts or store in a glossary) covers most situations:
 
 ### 8.1 Facts
 
@@ -246,9 +246,9 @@ Restrict actions the system or users may perform. Signal phrases: "must," "must 
 
 Origins include:
 
-- **Organizational policies** — "Loan applicant under 18 must have a cosigner." / "Library patron: max 10 items on hold." / "Insurance correspondence: ≤4 digits of SSN."
-- **Government regulations** — "Apps must comply with accessibility regulations." / "Pilots: ≥8 continuous hours rest per 24-hour period." / "Tax returns postmarked by first business day after April 14."
-- **Industry standards** — "Mortgage applicants must satisfy FHA qualification." / "No deprecated HTML5 tags/attributes."
+- **Organizational policies:** "Loan applicant under 18 must have a cosigner." / "Library patron: max 10 items on hold." / "Insurance correspondence: ≤4 digits of SSN."
+- **Government regulations:** "Apps must comply with accessibility regulations." / "Pilots: ≥8 continuous hours rest per 24-hour period." / "Tax returns postmarked by first business day after April 14."
+- **Industry standards:** "Mortgage applicants must satisfy FHA qualification." / "No deprecated HTML5 tags/attributes."
 
 **Representation:** Many constraints deal with who-can-do-what → use a **roles and permissions matrix** (roles × functions, X marks permissions). Group roles (e.g., employees vs. non-employees) and functions (system ops, records, items).
 
@@ -268,7 +268,7 @@ Commercial examples (impulse purchase stimulation):
 
 **Complex conditions** → represent with a **decision table** (see Ch 12).
 
-> ⚠ **Caution:** Poorly thought-out rule implementations hurt customers. Example: an airline's fraud-prevention rule (different last names → in-person ticket pickup) surfaced as a scary error message instead of clear guidance — wasting the customer's and agent's time.
+> ⚠ **Caution:** Poorly thought-out rule implementations hurt customers. Example: an airline's fraud-prevention rule (different last names → in-person ticket pickup) surfaced as a scary error message instead of clear guidance, wasting the customer's and agent's time.
 
 ### 8.4 Inferences
 
@@ -286,7 +286,7 @@ Transform existing data into new data via specific formulas or algorithms. Many 
 - Total order price = `Σ(item prices) − volume discounts + state/county sales tax + shipping + optional insurance`.
 - Unit price discount: 10% for 6–10 units, 20% for 11–20 units, 30% for >20 units.
 
-**Representation:** Natural language can be wordy/confusing. Prefer symbolic form (math expression) or a **rules table**:
+**Representation:** Natural language can be wordy/confusing. Prefer symbolic form (math expression) or a **rules table:**
 
 | ID | Units purchased | % discount |
 |---|---|---|
@@ -295,13 +295,13 @@ Transform existing data into new data via specific formulas or algorithms. Many 
 | DISC-3 | 11 through 20 | 20 |
 | DISC-4 | More than 20 | 30 |
 
-> ⚠ **Boundary trap:** Avoid range overlaps like 1–5, 5–10, 10–20 — ambiguous for boundary values (5, 10). Use non-overlapping ranges (1–5, 6–10, 11–20).
+> ⚠ **Boundary trap:** Avoid range overlaps like 1–5, 5–10, 10–20, ambiguous for boundary values (5, 10). Use non-overlapping ranges (1–5, 6–10, 11–20).
 
 ---
 
 ## 9. Atomic Business Rules
 
-Composite rules combine multiple details into one statement — hard to understand, maintain, and verify for completeness.
+Composite rules combine multiple details into one statement, hard to understand, maintain, and verify for completeness.
 
 > **Librarian example:** "You can check out a DVD or Blu-ray for one week, renew up to two times for three days each, but only if no other patron has placed a hold."
 
@@ -325,35 +325,35 @@ This bundles *duration*, *renewal count*, *renewal duration*, and *hold conditio
 
 ## 10. Benefits of Usage-Centric Requirements
 
-- **Clearer user expectations** — users know what the system will let them do.
-- **Reveals ambiguity early** — walking through actor-system dialogs surfaces vagueness before construction.
-- **Prevents orphan functionality** — every feature traces to a user goal.
-- **Aids prioritization** — top-priority FRs originate in top-priority user requirements. Priority drivers:
+- **Clearer user expectations:** users know what the system will let them do.
+- **Reveals ambiguity early:** walking through actor-system dialogs surfaces vagueness before construction.
+- **Prevents orphan functionality:** every feature traces to a user goal.
+- **Aids prioritization:** top-priority FRs originate in top-priority user requirements. Priority drivers:
   - Core business process enablement.
   - High frequency of use by many users.
   - Requested by a favored user class.
   - Required for regulatory compliance.
   - Other functions depend on it.
-- **Technical benefits** — use cases reveal domain objects and responsibilities → feed OO design (class diagrams, sequence diagrams). Tracing FRs/design/code/tests back to user requirements makes future changes cascade more easily.
-- **Multiple representations = quality** — comparing use cases, FRs, tests, and models catches errors no single view reveals.
+- **Technical benefits:** use cases reveal domain objects and responsibilities → feed OO design (class diagrams, sequence diagrams). Tracing FRs/design/code/tests back to user requirements makes future changes cascade more easily.
+- **Multiple representations = quality:** comparing use cases, FRs, tests, and models catches errors no single view reveals.
 
 ---
 
 ## 11. Key Takeaways
 
 - **Use cases and user stories** both start from user goals but diverge: use cases elaborate into structured specifications + derived FRs; user stories elaborate via conversation into acceptance tests.
-- **Use case structure matters** — preconditions, postconditions, normal/alternative/exception flows, labeling conventions, and extend/include relationships provide rigor that user stories lack.
+- **Use case structure matters:** preconditions, postconditions, normal/alternative/exception flows, labeling conventions, and extend/include relationships provide rigor that user stories lack.
 - **Business rules are enterprise assets**, not software requirements. Document them centrally, trace them into requirements/code, and keep them atomic.
 - **The five-category taxonomy** (facts, constraints, action enablers, inferences, computations) helps ensure coverage and suggests how each rule type should be implemented.
-- **Atomic rules** are short, reusable, and maintainable — avoid composite "and/or" rule statements.
+- **Atomic rules** are short, reusable, and maintainable: avoid composite "and/or" rule statements.
 - **Multiple representations** (use cases + FRs + tests + models) cross-validate requirements and catch gaps invisible in any single view.
 
 ---
 
 ## Related Notes
 
-- [[Software Requirements Overview]] — KA-level context.
-- [[01_Requirements_Fundamentals]] — functional vs. nonfunctional, requirement levels (business → user → functional).
-- [[03_Elicitation_Techniques]] — interviews, workshops, prototyping, observation.
-- [[05_Documenting_Requirements]] — SRS template, natural language vs. structured specifications.
-- [[12_Analysis_Models]] — state-transition diagrams, activity diagrams, decision tables, data models referenced throughout Ch 8–9.
+- [[Software Requirements Overview]]: KA-level context.
+- [[01_Requirements_Fundamentals]]: functional vs. nonfunctional, requirement levels (business → user → functional).
+- [[03_Requirements_Elicitation]]: interviews, workshops, prototyping, observation.
+- [[05_Documenting_Requirements]]: SRS template, natural language vs. structured specifications.
+- [[06_Requirements_Modeling]]: state-transition diagrams, activity diagrams, decision tables, data models referenced throughout Ch 8–9.

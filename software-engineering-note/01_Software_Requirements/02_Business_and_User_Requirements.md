@@ -26,10 +26,10 @@ aliases:
 Business requirements = a set of information that, in aggregate, describes a need that leads to one or more projects to deliver a solution and the desired ultimate business outcomes.
 
 **Four components:**
-1. **Business opportunities** — problem being solved / market opportunity
-2. **Business objectives** — measurable targets
-3. **Success metrics** — indicators to track progress
-4. **Vision statement** — long-term purpose of the product
+1. **Business opportunities:** problem being solved / market opportunity
+2. **Business objectives:** measurable targets
+3. **Success metrics:** indicators to track progress
+4. **Vision statement:** long-term purpose of the product
 
 > [!important] Business requirements issues must be resolved *before* functional and nonfunctional requirements can be fully specified. They provide a reference for making decisions about proposed requirement changes and enhancements.
 
@@ -42,7 +42,7 @@ Business requirements = a set of information that, in aggregate, describes a nee
 - Sources: funding sponsors, corporate executives, marketing managers, product visionaries.
 - The BA ensures the right stakeholders set the business requirements and facilitates elicitation, prioritization, and conflict resolution.
 
-> [!warning] Simply merging two systems into one is **not** a reasonable business objective. Customers care about increasing revenue and decreasing costs — not about system count. Merging might be *part of the solution*, but it is rarely the true business objective.
+> [!warning] Simply merging two systems into one is **not** a reasonable business objective. Customers care about increasing revenue and decreasing costs, not about system count. Merging might be *part of the solution*, but it is rarely the true business objective.
 
 ---
 
@@ -53,7 +53,7 @@ Two core elements of the business requirements:
 | Element | Description | Temporal |
 |---------|-------------|----------|
 | **Product Vision** | Succinctly describes the ultimate product that will achieve the business objectives. Provides context for decisions throughout the product's life. Aligns all stakeholders in a common direction. | Changes **slowly** as strategic positioning/business objectives evolve. |
-| **Project Scope** | Identifies what portion of the ultimate product vision the *current* project or iteration will address. Draws the boundary between what's in and what's out. | More **dynamic** — adjusted per release within schedule/budget/resource/quality constraints. |
+| **Project Scope** | Identifies what portion of the ultimate product vision the *current* project or iteration will address. Draws the boundary between what's in and what's out. | More **dynamic:** adjusted per release within schedule/budget/resource/quality constraints. |
 
 > [!important] The **product vision** ensures we all know where we are hoping to go *eventually*. The **project scope** ensures we are all talking about the same thing for the *immediate* project or iteration.
 
@@ -67,14 +67,14 @@ Two core elements of the business requirements:
 
 Business requirements collected from multiple sources might conflict.
 
-**Example — Kiosk stakeholders:**
+**Example: Kiosk stakeholders:**
 - **Developer** wants wide product variety, low cost, rapid development.
 - **Retailer** wants customers to linger and spend more money.
 - **Customer** wants to spend *less* time purchasing, wide variety, low cost.
 
-> [!note] Some objectives align (variety), some conflict (time spent in store). The project's decision makers — *not* the software team — must resolve these conflicts before the analyst can detail requirements. Focus on delivering maximum business value to primary stakeholders.
+> [!note] Some objectives align (variety), some conflict (time spent in store). The project's decision makers (*not* the software team) must resolve these conflicts before the analyst can detail requirements. Focus on delivering maximum business value to primary stakeholders.
 
-- Uncontrolled **scope creep** — stakeholders overstuffing the new system to satisfy every interest — can topple a project under its own weight.
+- Uncontrolled **scope creep:** stakeholders overstuffing the new system to satisfy every interest; can topple a project under its own weight.
 - The BA surfaces potential conflicts, flags misaligned objectives, and facilitates resolution (a political/power struggle outside the book's scope).
 
 ---
@@ -96,15 +96,15 @@ Collects business requirements into a single deliverable that sets the stage for
 #### 1. Business Requirements
 Projects are launched in the belief that creating or changing a product will provide worthwhile benefits. Business requirements describe the primary benefits to sponsors, buyers, and users.
 
-- **1.1 Background** — Rationale and context; history leading to the decision.
-- **1.2 Business opportunity** — Problem being solved (corporate IS) or market opportunity (commercial product). Comparative evaluation of existing products. Needs of typical customers / target market. Known critical interface or quality requirements (omit design specifics).
-- **1.3 Business objectives** — Important benefits in a **quantitative and measurable** way. Platitudes and vague improvements are neither helpful nor verifiable.
-- **1.4 Success metrics** — Indicators stakeholders use to define and measure success. Measure what is **important**, not just what is easy to measure.
-- **1.5 Vision statement** — Concise summary of long-term purpose and intent. Balanced view for diverse stakeholders.
-- **1.6 Business risks** — Marketplace competition, timing, user acceptance, implementation issues, negative impacts. Estimate potential loss, likelihood, mitigation. *(Not the same as project risks.)*
-- **1.7 Business assumptions and dependencies** — Assumptions believed true without proof. Major dependencies on external factors (pending standards, regulations, deliverables from other projects, suppliers). Note impact if assumption is wrong / dependency breaks.
+- **1.1 Background:** Rationale and context; history leading to the decision.
+- **1.2 Business opportunity:** Problem being solved (corporate IS) or market opportunity (commercial product). Comparative evaluation of existing products. Needs of typical customers / target market. Known critical interface or quality requirements (omit design specifics).
+- **1.3 Business objectives:** Important benefits in a **quantitative and measurable** way. Platitudes and vague improvements are neither helpful nor verifiable.
+- **1.4 Success metrics:** Indicators stakeholders use to define and measure success. Measure what is **important**, not just what is easy to measure.
+- **1.5 Vision statement:** Concise summary of long-term purpose and intent. Balanced view for diverse stakeholders.
+- **1.6 Business risks:** Marketplace competition, timing, user acceptance, implementation issues, negative impacts. Estimate potential loss, likelihood, mitigation. *(Not the same as project risks.)*
+- **1.7 Business assumptions and dependencies:** Assumptions believed true without proof. Major dependencies on external factors (pending standards, regulations, deliverables from other projects, suppliers). Note impact if assumption is wrong / dependency breaks.
 
-##### Business Objectives — Examples (Table 5-1)
+##### Business Objectives: Examples (Table 5-1)
 
 | Financial | Nonfinancial |
 |-----------|--------------|
@@ -125,7 +125,7 @@ A hierarchy of related business **problems** (what's keeping the business from m
 - Given a problem → ask *"How will we assess whether the problem is solved?"* → identify a measurable objective.
 - Iterate until a list of **features** emerges that would help solve the problems and meet the objectives.
 
-##### Vision Statement — Keyword Template (Moore 2002)
+##### Vision Statement: Keyword Template (Moore 2002)
 
 ```
 For [target customer]
@@ -137,34 +137,34 @@ Unlike [primary competitive alternative, current system, current business proces
 Our product [statement of primary differentiation and advantages of new product]
 ```
 
-**Sample — Chemical Tracking System:**
+**Sample: Chemical Tracking System:**
 > *For* scientists *who* need to request containers of chemicals, *the* Chemical Tracking System *is* an information system *that* will provide a single point of access to the chemical stockroom and to vendors. [...] *Unlike* the current manual ordering processes, *our product* will generate all reports required to comply with federal and state government regulations.
 
 > [!tip] Have several key stakeholders write vision statements **separately**. Comparing them is a good way to spot different understandings of project objectives. It's never too late to write one.
 
 #### 2. Scope and Limitations
 
-- **2.1 Major features** — List with unique persistent labels for tracing. Consider a feature tree diagram.
-- **2.2 Scope of initial release** — Capabilities planned for release 1. Define in terms of features, user stories, use cases, use case flows, or external events. Include quality characteristics. **Avoid** bloatware and slipped schedules — focus on highest value at acceptable cost to broadest community in earliest timeframe. Don't neglect nonfunctional requirements (especially those affecting architecture).
-- **2.3 Scope of subsequent releases** — Release roadmap. Fuzzier the farther out you look. Short release cycles provide frequent opportunities for learning from customer feedback.
-- **2.4 Limitations and exclusions** — Capabilities a stakeholder might expect but that are *not* planned. List items cut from scope so the decision isn't forgotten. E.g., *"The new system will not provide mobile platform support."*
+- **2.1 Major features:** List with unique persistent labels for tracing. Consider a feature tree diagram.
+- **2.2 Scope of initial release:** Capabilities planned for release 1. Define in terms of features, user stories, use cases, use case flows, or external events. Include quality characteristics. **Avoid** bloatware and slipped schedules, focus on highest value at acceptable cost to broadest community in earliest timeframe. Don't neglect nonfunctional requirements (especially those affecting architecture).
+- **2.3 Scope of subsequent releases:** Release roadmap. Fuzzier the farther out you look. Short release cycles provide frequent opportunities for learning from customer feedback.
+- **2.4 Limitations and exclusions:** Capabilities a stakeholder might expect but that are *not* planned. List items cut from scope so the decision isn't forgotten. E.g., *"The new system will not provide mobile platform support."*
 
 #### 3. Business Context
 
-- **3.1 Stakeholder profiles** — People/groups/organizations actively involved, affected by, or able to influence the outcome. Each profile includes: major value/benefit, likely attitudes, features of interest, known constraints. Value can be: improved productivity, reduced rework, cost savings, streamlined processes, automation, new capabilities, compliance, improved usability.
-- **3.2 Project priorities** — Five dimensions: **features, quality, schedule, cost, staff**. Each is one of:
-  - **Constraint** — limiting factor within which the PM must operate
-  - **Driver** — significant success objective with limited flexibility
-  - **Degree of freedom** — factor the PM can adjust to balance against others
+- **3.1 Stakeholder profiles:** People/groups/organizations actively involved, affected by, or able to influence the outcome. Each profile includes: major value/benefit, likely attitudes, features of interest, known constraints. Value can be: improved productivity, reduced rework, cost savings, streamlined processes, automation, new capabilities, compliance, improved usability.
+- **3.2 Project priorities:** Five dimensions: **features, quality, schedule, cost, staff**. Each is one of:
+  - **Constraint:** limiting factor within which the PM must operate
+  - **Driver:** significant success objective with limited flexibility
+  - **Degree of freedom:** factor the PM can adjust to balance against others
   
   > [!important] Not all five can be constraints, and not all can be drivers. The PM needs some degrees of freedom to respond when requirements or realities change.
-- **3.3 Deployment considerations** — Access needs (time zones, locations), infrastructure changes (capacity, network, storage, data migration), training/process-modification info.
+- **3.3 Deployment considerations:** Access needs (time zones, locations), infrastructure changes (capacity, network, storage, data migration), training/process-modification info.
 
 ### 3.2 Template Tactics (Sidebar)
 
 - Populate sections **as information accumulates**; don't fill top-to-bottom.
-- Empty sections highlight **gaps** in current knowledge — trigger richer exploration.
-- **"Shrink to fit"**: start with a rich template, condense to what each situation needs.
+- Empty sections highlight **gaps** in current knowledge: trigger richer exploration.
+- **"Shrink to fit":** start with a rich template, condense to what each situation needs.
 - If a section doesn't apply, put an explicit message: *"No business risks have been identified."*
 - Consider embedding common elicitation questions as hidden text for reuse.
 - Create a small set of templates for different project types (large new dev, small websites, enhancement projects).
@@ -181,21 +181,21 @@ The purpose of these models is to foster clear, accurate communication among sta
 - System = single **circle**; external entities (terminators) = **rectangles** (user classes, organizations, other systems, hardware devices).
 - Arrows = flow of data, control, or material between terminators and the system.
 - Deliberately provides **no visibility** into the system's internal objects, processes, or data.
-- Top level of a data flow diagram (structured analysis) — but useful for *all* projects.
+- Top level of a data flow diagram (structured analysis): but useful for *all* projects.
 
 ### 4.2 Ecosystem Map (Beatty & Chen 2012)
 
 - Shows all systems related to the system of interest that interact with one another and the nature of those interactions.
-- Differs from context diagram: shows systems with a relationship — *including those without direct interfaces*.
+- Differs from context diagram: shows systems with a relationship: *including those without direct interfaces*.
 - Identify affected systems by determining which ones **consume data** from your system.
 - When your project no longer affects any additional data → you've identified the scope boundary.
 
 ### 4.3 Feature Tree (Beatty & Chen 2012)
 
 - Visual depiction of the product's features organized in logical groups, hierarchically subdivided.
-- Up to **three levels**: L1 (major features) → L2 (subfeatures) → L3 (sub-subfeatures).
-- Concise view — ideal for showing executives a quick glance at project scope.
-- **Release scoping**: select a specific set of L1/L2/L3 features to implement. Can implement a feature in its entirety or only a portion. Mark up the diagram with colors/font variations, or create a **feature roadmap table**.
+- Up to **three levels:** L1 (major features) → L2 (subfeatures) → L3 (sub-subfeatures).
+- Concise view: ideal for showing executives a quick glance at project scope.
+- **Release scoping:** select a specific set of L1/L2/L3 features to implement. Can implement a feature in its entirety or only a portion. Mark up the diagram with colors/font variations, or create a **feature roadmap table**.
 
 ### 4.4 Event List
 
@@ -211,8 +211,8 @@ The purpose of these models is to foster clear, accurate communication among sta
 
 ### 4.5 Other Techniques
 
-- **Affected business processes** — identifying processes touched by the solution helps define the scope boundary.
-- **Use case diagrams** — depict the scope boundary between use cases and actors (Ch 8).
+- **Affected business processes:** identifying processes touched by the solution helps define the scope boundary.
+- **Use case diagrams:** depict the scope boundary between use cases and actors (Ch 8).
 
 ---
 
@@ -224,9 +224,9 @@ A scope definition is a **structure, not a straitjacket**. Scope change isn't ba
 
 When someone requests a new requirement, the analyst asks: *"Is this in scope?"*
 
-1. **Clearly out of scope** — interesting, but address in a future release or another project.
-2. **Clearly within scope** — incorporate if high priority relative to committed requirements. May require deferring/canceling other planned requirements (unless extending project duration).
-3. **Out of scope, but a good idea** — broaden the scope, with corresponding changes in budget/schedule/staff. This is a **feedback loop** between user requirements and business requirements. Update the baselined vision and scope document (under change control). Keep a record of *why* requirements were rejected — they have a way of reappearing.
+1. **Clearly out of scope:** interesting, but address in a future release or another project.
+2. **Clearly within scope:** incorporate if high priority relative to committed requirements. May require deferring/canceling other planned requirements (unless extending project duration).
+3. **Out of scope, but a good idea:** broaden the scope, with corresponding changes in budget/schedule/staff. This is a **feedback loop** between user requirements and business requirements. Update the baselined vision and scope document (under change control). Keep a record of *why* requirements were rejected; they have a way of reappearing.
 
 ### 5.2 Using Business Objectives for Scoping Decisions
 
@@ -241,7 +241,7 @@ When someone requests a new requirement, the analyst asks: *"Is this in scope?"*
 - Thoughtfully included **contingency buffers** can absorb some change (Wiegers 2007).
 - Common consequence: completed activities must be **reworked**.
 - Quality often suffers if resources/time aren't increased when functionality is added.
-- Documented business requirements help justify saying *"no"* — or at least *"not yet."*
+- Documented business requirements help justify saying *"no"*: or at least *"not yet."*
 
 ### 5.4 Vision and Scope on Agile Projects
 
@@ -255,7 +255,7 @@ When someone requests a new requirement, the analyst asks: *"Is this in scope?"*
 
 ### 5.5 Using Business Objectives to Determine Completion
 
-- A BA familiar with the business objectives can help determine when desired value has been delivered — implying the work is done.
+- A BA familiar with the business objectives can help determine when desired value has been delivered, implying the work is done.
 - The project is complete when success metrics indicate a good chance of meeting the business objectives.
 - **Vague business objectives** guarantee an open-ended project with no way to know when you're done. Sponsors can't budget/schedule/plan; customers may receive an on-time, on-budget solution that doesn't provide needed value.
 
@@ -299,7 +299,7 @@ Users may differ in:
 - Native language
 - Direct vs. indirect interaction with the system
 
-> [!tip] Group users by **tasks** they perform, not by geography or company type. A banking system's logical user classes are *teller, loan officer, business banker, branch manager* — not *large bank, small bank, credit union* (those are **market segments**).
+> [!tip] Group users by **tasks** they perform, not by geography or company type. A banking system's logical user classes are *teller, loan officer, business banker, branch manager*, not *large bank, small bank, credit union* (those are **market segments**).
 
 ### 7.2 Favored, Disfavored, and Ignored User Classes
 
@@ -307,10 +307,10 @@ Users may differ in:
 |-------|-------------|-----------|
 | **Favored** | Satisfaction most closely aligned with achieving project business objectives | Preferential treatment in conflict resolution and priority decisions. Not necessarily the paying customer or most politically powerful. |
 | **Disfavored** | Groups who aren't supposed to use the product for legal, security, or safety reasons | Build features to **deliberately make it hard** for them: access security, privilege levels, antimalware, usage logging, account lockout after failed logins, CAPTCHA. |
-| **Ignored** | Will use the product, but you don't specifically build it to suit them | — |
+| **Ignored** | Will use the product, but you don't specifically build it to suit them | N/A |
 | **Equal** | All other classes | Standard treatment |
 
-> [!trap] Don't overlook **indirect user classes**. They won't use your application themselves — instead accessing its data or services through other applications or reports. Your *customer once removed* is still your customer.
+> [!trap] Don't overlook **indirect user classes**. They won't use your application themselves, instead accessing its data or services through other applications or reports. Your *customer once removed* is still your customer.
 
 ### 7.3 Non-Human User Classes
 
@@ -332,8 +332,8 @@ User classes need not be human beings. They could be **software agents** (bots):
 4. **Pare down** to ~15 or fewer distinct user classes.
 
 **Analysis models that help:**
-- **Context diagram** — external entities are candidates for user classes (Ch 5).
-- **Corporate organization chart** — look for:
+- **Context diagram:** external entities are candidates for user classes (Ch 5).
+- **Corporate organization chart:** look for:
   - Departments that *participate in* the business process
   - Departments *affected by* the business process
   - Role names where direct/indirect users might be found
@@ -342,14 +342,14 @@ User classes need not be human beings. They could be **software agents** (bots):
 
 > [!tip] Consider building a **catalog of user classes** that recur across multiple applications. Defining user classes at the enterprise level lets you reuse descriptions in future projects.
 
-### 7.5 Example — Chemical Tracking System User Classes (Table 6-1)
+### 7.5 Example: Chemical Tracking System User Classes (Table 6-1)
 
 | Name | Number | Description |
 |------|--------|-------------|
-| **Chemists** (favored) | ~1,000 across 6 buildings | Request chemicals from vendors and stockroom. Use system several times/day — mainly requesting chemicals and tracking containers in/out of lab. Search vendor catalogs for specific chemical structures. |
-| **Buyers** | 5 | Purchasing dept. Process chemical requests, place/track orders with vendors. Little chemistry knowledge — need simple query facilities. Won't use container-tracking. ~25 uses/day. |
+| **Chemists** (favored) | ~1,000 across 6 buildings | Request chemicals from vendors and stockroom. Use system several times/day: mainly requesting chemicals and tracking containers in/out of lab. Search vendor catalogs for specific chemical structures. |
+| **Buyers** | 5 | Purchasing dept. Process chemical requests, place/track orders with vendors. Little chemistry knowledge; needs simple query facilities. Won't use container-tracking. ~25 uses/day. |
 | **Chemical stockroom staff** | 6 technicians + 1 supervisor | Manage inventory of >500,000 containers. Supply from 3 stockrooms, request new chemicals, track all container movement. Only users of inventory-reporting feature. High transaction volume → features must be automated and efficient. |
-| **Health and Safety Dept staff** (favored) | 1 manager | Use system only to generate predefined quarterly reports for federal/state chemical usage and disposal regulations. Manager requests report changes as regulations change — **highest priority, time critical**. |
+| **Health and Safety Dept staff** (favored) | 1 manager | Use system only to generate predefined quarterly reports for federal/state chemical usage and disposal regulations. Manager requests report changes as regulations change, **highest priority, time critical**. |
 
 ---
 
@@ -360,7 +360,7 @@ A **persona** is a description of a hypothetical, generic person who serves as a
 **Purposes:**
 - Help bring user classes to life.
 - Understand requirements and design the user experience for specific user communities.
-- Serve as a **placeholder** when the BA doesn't have an actual user representative at hand — envision the persona performing a task to draft a requirements starting point.
+- Serve as a **placeholder** when the BA doesn't have an actual user representative at hand; envision the persona performing a task to draft a requirements starting point.
 
 **Persona details (commercial customer):**
 - Social and demographic characteristics
@@ -368,7 +368,7 @@ A **persona** is a description of a hypothetical, generic person who serves as a
 
 > [!important] Make sure personas truly are **representative** of their user class, based on market, demographic, and ethnographic research.
 
-### 8.1 Example Persona — Fred the Chemist
+### 8.1 Example Persona: Fred the Chemist
 
 > *Fred, 41, has been a chemist at Contoso Pharmaceuticals since he received his Ph.D. 14 years ago. He doesn't have much patience with computers. Fred usually works on two projects at a time in related chemical areas. His lab contains approximately 300 bottles of chemicals and gas cylinders. On an average day, he'll need four new chemicals from the stockroom. Two of these will be commercial chemicals in stock, one will need to be ordered, and one will come from the supply of proprietary Contoso chemical samples. On occasion, Fred will need a hazardous chemical that requires special training for safe handling. When he buys a chemical for the first time, Fred wants the material safety data sheet emailed to him automatically. Each year, Fred will synthesize about 20 new proprietary chemicals to go into the stockroom. Fred wants a report of his chemical usage for the previous month to be generated automatically and sent to him by email so that he can monitor his chemical exposure.*
 
@@ -376,13 +376,13 @@ A **persona** is a description of a hypothetical, generic person who serves as a
 - As the BA explores requirements, think: *"What would Fred need to do?"*
 - Working with a persona makes the requirements thought process more **tangible** than contemplating a faceless group.
 - Some teams attach a random human face of appropriate gender to make the persona seem even more real.
-- **Leffingwell (2011):** design the system to make it easy for the individual described in your persona to use the application. Focus on meeting that one (imaginary) person's needs — provided the persona accurately represents the user class, this helps satisfy the whole class.
+- **Leffingwell (2011):** design the system to make it easy for the individual described in your persona to use the application. Focus on meeting that one (imaginary) person's needs; provided the persona accurately represents the user class, this helps satisfy the whole class.
 
 ---
 
 ## 9. Connecting with User Representatives
 
-Every kind of project — corporate IS, commercial applications, embedded systems, websites, contracted software — needs suitable representatives to provide the voice of the user.
+Every kind of project (corporate IS, commercial applications, embedded systems, websites, contracted software) needs suitable representatives to provide the voice of the user.
 
 > [!important] Users should be involved **throughout the development life cycle**, not just in an isolated requirements phase at the beginning. Each user class needs someone to speak for it.
 
@@ -411,7 +411,7 @@ The most direct communication occurs when developers talk to appropriate users t
 
 - **Actual users**, not surrogates (not funding sponsors, marketing staff, user managers, or developers imagining themselves to be users).
 - Have a **clear vision** of the new system.
-- **Enthusiastic** — they see how it will benefit them and their peers.
+- **Enthusiastic:** they see how it will benefit them and their peers.
 - **Effective communicators** respected by their colleagues.
 - Thorough understanding of the application domain and operating environment.
 
@@ -420,7 +420,7 @@ The most direct communication occurs when developers talk to appropriate users t
 ### 10.2 Benefits Beyond Requirements
 
 - Champions can **speak out on the software team's behalf** with their colleagues, breaking down customer/development tension.
-- Champions can **lead adoption** of the application by the user community — a success metric managers appreciate.
+- Champions can **lead adoption** of the application by the user community, a success metric managers appreciate.
 - Offer public **reward and recognition** for their contributions.
 
 ### 10.3 Empowerment
@@ -436,7 +436,7 @@ When developing commercial software, it can be difficult to find champions from 
 **Strategies:**
 - Rely on internal SMEs or outside consultants as surrogates (watch for disconnects with real users).
 - Engage major corporate customers who might welcome participation in requirements elicitation.
-- Offer **economic incentives** — discounts on the product, payment for time spent.
+- Offer **economic incentives:** discounts on the product, payment for time spent.
 - **Hire** a suitable product champion with the right background (e.g., a company hired three store managers; a medical software company hired a doctor).
 - Send BAs **to customer sites** to work with the customers' staff.
 
@@ -459,7 +459,7 @@ One person can rarely describe the needs for all users of an application.
 **Chemical Tracking System example:**
 - 4 major user classes → 4 product champions
 - 3 BAs worked with the 4 champions (one BA handled two small classes: Buyer + Health and Safety)
-- Champions were **not full-time** — several hours per week
+- Champions were **not full-time:** several hours per week
 - One BA assembled all input into a unified SRS
 - The Chemist champion assembled a **backup team** of chemists to represent the diverse needs of ~1,000 chemists across 6 buildings
 
@@ -467,25 +467,25 @@ One person can rarely describe the needs for all users of an application.
 
 ## Key Takeaways
 
-1. **Business requirements sit at the top of the requirements chain** — they define vision and scope, and all other requirements must align with them.
+1. **Business requirements sit at the top of the requirements chain:** they define vision and scope, and all other requirements must align with them.
 2. **Business objectives must be measurable.** Platitudes are neither helpful nor verifiable. Use them to make scoping decisions and determine when the project is done.
 3. **Vision ≠ scope.** Vision is long-term and slow-changing; scope is per-project/iteration and dynamic.
-4. **The vision and scope document** is the primary deliverable for business requirements — but adapt the template to your needs ("shrink to fit").
+4. **The vision and scope document** is the primary deliverable for business requirements, but adapt the template to your needs ("shrink to fit").
 5. **Scope representation techniques** (context diagram, ecosystem map, feature tree, event list) foster clear communication. Use the ones that provide the most insight per project.
-6. **Scope change isn't inherently bad** — manage it consciously, by the right people, for the right business reasons, with accepted tradeoffs.
+6. **Scope change isn't inherently bad:** manage it consciously, by the right people, for the right business reasons, with accepted tradeoffs.
 7. **Identify user classes early** using "expand then contract." Group by tasks, not by market segment.
 8. **Favored, disfavored, and ignored** user classes drive different design decisions.
 9. **Personas** bring user classes to life and make requirements thinking more tangible.
-10. **Product champions** are the critical bridge between user classes and the BA — they must be actual users, empowered, and representative of their class.
+10. **Product champions** are the critical bridge between user classes and the BA; they must be actual users, empowered, and representative of their class.
 
 ---
 
 ## Related Notes
 
-- [[01_Software_Requirements_Fundamentals]] — Ch 1-2: Essential software requirement, customer perspective
-- [[03_Requirements_Elicitation]] — Ch 7: Elicitation techniques
-- [[04_Understanding_User_Requirements]] — Ch 8: Use cases and user stories
-- [[05_Documenting_Requirements]] — Ch 10: SRS template and structure
+- [[01_Requirements_Fundamentals]] (Ch 1-2): Essential software requirement, customer perspective
+- [[03_Requirements_Elicitation]] (Ch 7): Elicitation techniques
+- [[04_Use_Cases_and_Business_Rules]] (Ch 8): Use cases and user stories
+- [[05_Documenting_Requirements]] (Ch 10): SRS template and structure
 
 ---
 

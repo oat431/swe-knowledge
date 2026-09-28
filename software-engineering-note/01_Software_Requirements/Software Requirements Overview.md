@@ -2,13 +2,13 @@
 tags: [software-requirements, overview, requirements-engineering, swebok]
 ---
 
-# Software Requirements — Overview
+# Software Requirements: Overview
 
 > **Source:** *Software Requirements* 3rd Edition by Karl Wiegers (Microsoft Press)
 
 ## What Is This?
 
-This vault covers **software requirements engineering** — the process of eliciting, documenting, validating, and managing requirements. It fills SWEBOK's Software Requirements KA with practical, industry-tested techniques from Karl Wiegers' classic reference.
+This vault covers **software requirements engineering:** the process of eliciting, documenting, validating, and managing requirements. It fills SWEBOK's Software Requirements KA with practical, industry-tested techniques from Karl Wiegers' classic reference.
 
 ## Files
 
@@ -29,6 +29,7 @@ This vault covers **software requirements engineering** — the process of elici
 ## How These Topics Relate
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     FUND["Fundamentals"] --> BIZ["Business & User Req"]
     BIZ --> ELIC["Elicitation"]
@@ -57,9 +58,9 @@ flowchart TD
 
 ## Related
 
-- [[../02_Software_Architecture/Software Architecture Overview|Software Architecture]] — Design decisions from requirements
-- [[../05_Software_Testing/Software Testing Overview|Software Testing]] — Test cases from requirements
-- [[10_Software_Engineering_Process/Software Methodology - Overview|Software Methodology]] — Agile and process models
+- [[../02_Software_Architecture/Software Architecture Overview|Software Architecture]]: Design decisions from requirements
+- [[../05_Software_Testing/Software Testing Overview|Software Testing]]: Test cases from requirements
+- [[10_Software_Engineering_Process/Software Methodology - Overview|Software Methodology]]: Agile and process models
 
 ---
 

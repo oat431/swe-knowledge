@@ -23,7 +23,7 @@ aliases:
 
 > *"A specification is a contract between the software engineer and the customer. If the contract is ambiguous, both parties lose."*
 
-Formal specification techniques bring **mathematical precision** to requirements documents, eliminating the ambiguity that plagues natural language. This note focuses on formal methods **as applied to requirements specification** — distinct from formal methods used for design verification or implementation correctness. For formal methods in general software engineering, see [[../11_Software_Engineering_Models_and_Methods/07_Formal_Methods|Formal Methods (KA 11.9)]].
+Formal specification techniques bring **mathematical precision** to requirements documents, eliminating the ambiguity that plagues natural language. This note focuses on formal methods **as applied to requirements specification:** distinct from formal methods used for design verification or implementation correctness. For formal methods in general software engineering, see [[../11_Software_Engineering_Models_and_Methods/07_Formal_Methods|Formal Methods (KA 11.9)]].
 
 ---
 
@@ -41,7 +41,7 @@ Natural language requirements suffer from well-documented weaknesses:
 | **Vagueness** | "User-friendly interface" | No testable criterion |
 | **Volatility** | Requirements shift as stakeholders reinterpret prose | Scope creep disguised as clarification |
 
-> [!warning] Ambiguity is the #1 source of requirements defects. Studies show that 30–50% of requirements errors stem from ambiguous or incomplete specifications (Davis 1993; Hull et al. 2005).
+> [!warning] Ambiguity is the #1 source of requirements defects. Studies show that 30–50% of requirements errors stem from ambiguous or incomplete specifications (Davis 1993; hull et al. 2005).
 
 ### 1.2 Formal vs. Informal vs. Semi-Formal
 
@@ -61,8 +61,8 @@ Formal specification of requirements yields:
 - **Unambiguous communication** between stakeholders, analysts, and developers
 - **Early inconsistency detection** through type checking and theorem proving
 - **Executable models** that stakeholders can validate through simulation
-- **Traceable verification** — each requirement maps to a formal property
-- **Change impact analysis** — modifying a formal spec reveals all affected properties
+- **Traceable verification:** each requirement maps to a formal property
+- **Change impact analysis:** modifying a formal spec reveals all affected properties
 
 ---
 
@@ -70,7 +70,7 @@ Formal specification of requirements yields:
 
 ### 2.1 Overview
 
-**Z** (pronounced "zed") is a formal specification language based on **set theory** and **first-order predicate logic**, developed at Oxford University in the late 1970s. It uses **schemas** — structured boxes that describe system state and operations — to build requirements models.
+**Z** (pronounced "zed") is a formal specification language based on **set theory** and **first-order predicate logic**, developed at Oxford University in the late 1970s. It uses **schemas:** structured boxes that describe system state and operations, to build requirements models.
 
 ### 2.2 Core Concepts
 
@@ -80,36 +80,36 @@ A Z schema consists of a **signature** (declared variables and their types) and 
 
 ```
 ┌──────────────────────────────┐
-│      ATM_System               │
+│ ATM_System │
 ├──────────────────────────────┤
-│ accounts : ACCOUNT → ℕ        │
-│ dispensed : ℕ                 │
-│ cardInserted : BOOL           │
+│ accounts : ACCOUNT → ℕ │
+│ dispensed : ℕ │
+│ cardInserted : BOOL │
 ├──────────────────────────────┤
-│ ∀ a : dom accounts ·          │
-│   accounts(a) ≥ 0             │
-│ dispensed ≥ 0                 │
+│ ∀ a : dom accounts · │
+│ accounts(a) ≥ 0 │
+│ dispensed ≥ 0 │
 └──────────────────────────────┘
 ```
 
 #### State Machine View
 
-Z naturally models system state transitions, making it ideal for specifying **stateful requirements**:
+Z naturally models system state transitions, making it ideal for specifying **stateful requirements:**
 
 ```
 ┌──────────────────────────────┐
-│   Withdraw_OK                 │
+│ Withdraw_OK │
 ├──────────────────────────────┤
-│ ΔATM_System                   │
-│ amount? : ℕ                   │
-│ account? : ACCOUNT            │
+│ ΔATM_System │
+│ amount? : ℕ │
+│ account? : ACCOUNT │
 ├──────────────────────────────┤
-│ account? ∈ dom accounts       │
-│ amount? > 0                   │
-│ accounts(account?) ≥ amount?  │
-│ accounts' = accounts ⊕        │
-│   {account? ↦ accounts(account?) - amount?} │
-│ dispensed' = amount?          │
+│ account? ∈ dom accounts │
+│ amount? > 0 │
+│ accounts(account?) ≥ amount? │
+│ accounts' = accounts ⊕ │
+│ {account? ↦ accounts(account?) - amount?} │
+│ dispensed' = amount? │
 └──────────────────────────────┘
 ```
 
@@ -117,20 +117,20 @@ The **Δ** prefix indicates the schema modifies state. The **?** suffix marks in
 
 #### Operations and Preconditions
 
-Z operations have explicit preconditions. If a precondition is violated, the behavior is **undefined** — this is a deliberate design choice that forces specifiers to handle all failure modes explicitly.
+Z operations have explicit preconditions. If a precondition is violated, the behavior is **undefined:** this is a deliberate design choice that forces specifiers to handle all failure modes explicitly.
 
 ```
 ┌──────────────────────────────┐
-│   Withdraw_Fail               │
+│ Withdraw_Fail │
 ├──────────────────────────────┤
-│ ΔATM_System                   │
-│ amount? : ℕ                   │
-│ account? : ACCOUNT            │
+│ ΔATM_System │
+│ amount? : ℕ │
+│ account? : ACCOUNT │
 ├──────────────────────────────┤
-│ account? ∈ dom accounts       │
-│ accounts(account?) < amount?  │
-│ accounts' = accounts          │
-│ dispensed' = 0                │
+│ account? ∈ dom accounts │
+│ accounts(account?) < amount? │
+│ accounts' = accounts │
+│ dispensed' = 0 │
 └──────────────────────────────┘
 ```
 
@@ -155,7 +155,7 @@ Z operations have explicit preconditions. If a precondition is violated, the beh
 | ISO standard (ISO 13568:2002) | Difficult to scale to very large systems |
 | Strong academic foundation | Not executable without translation |
 
-> [!example] **Z in Practice**: The IBM CICS transaction processing system used Z specifications to verify that system upgrades preserved backward compatibility. The Z specification revealed 3 latent design inconsistencies that had survived 18 months of code review (Bowen and Hinchey 1995).
+> [!example] **Z in Practice:** The IBM CICS transaction processing system used Z specifications to verify that system upgrades preserved backward compatibility. The Z specification revealed 3 latent design inconsistencies that had survived 18 months of code review (Bowen and Hinchey 1995).
 
 ---
 
@@ -177,7 +177,7 @@ types
     inv mk_Account(o, b) == b >= 0;
 ```
 
-The **invariant** (inv) is a type-level constraint that holds at all times — every requirement must preserve it.
+The **invariant** (inv) is a type-level constraint that holds at all times; every requirement must preserve it.
 
 #### Functions and Operations
 
@@ -259,21 +259,21 @@ SDL models systems as hierarchies of:
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│ System: ATM                                          │
-│ ┌──────────────┐  ┌──────────────┐                  │
-│ │ Block:       │  │ Block:       │                  │
-│ │ CardReader   │  │ CashDispenser│                  │
-│ │ ┌──────────┐ │  │ ┌──────────┐ │                  │
-│ │ │ Process: │ │  │ │ Process: │ │                  │
-│ │ │ CardMgr  │ │  │ │ Dispenser│ │                  │
-│ │ │          │ │  │ │          │ │                  │
-│ │ │ [idle]───┤ │  │ │ [ready]──┤ │                  │
-│ │ │   │      │ │  │ │   │      │ │                  │
-│ │ │ card_in   │ │  │ │ dispense  │ │                  │
-│ │ │   ↓      │ │  │ │   ↓      │ │                  │
-│ │ │ [reading] │ │  │ │ [busy]   │ │                  │
-│ │ └──────────┘ │  │ └──────────┘ │                  │
-│ └──────────────┘  └──────────────┘                  │
+│ System: ATM │
+│ ┌──────────────┐ ┌──────────────┐ │
+│ │ Block: │ │ Block: │ │
+│ │ CardReader │ │ CashDispenser│ │
+│ │ ┌──────────┐ │ │ ┌──────────┐ │ │
+│ │ │ Process: │ │ │ │ Process: │ │ │
+│ │ │ CardMgr │ │ │ │ Dispenser│ │ │
+│ │ │ │ │ │ │ │ │ │
+│ │ │ [idle]───┤ │ │ │ [ready]──┤ │ │
+│ │ │ │ │ │ │ │ │ │ │ │
+│ │ │ card_in │ │ │ │ dispense │ │ │
+│ │ │ ↓ │ │ │ │ ↓ │ │ │
+│ │ │ [reading] │ │ │ │ [busy] │ │ │
+│ │ └──────────┘ │ │ └──────────┘ │ │
+│ └──────────────┘ └──────────────┘ │
 └─────────────────────────────────────────────────────┘
 ```
 
@@ -281,10 +281,10 @@ SDL models systems as hierarchies of:
 
 SDL is well-suited for requirements involving:
 
-- **Protocol specification**: telecommunications, network, IoT protocols
-- **Concurrent systems**: multi-agent, distributed architectures
-- **Event-driven systems**: GUIs, message brokers, reactive applications
-- **Standardization**: ITU-T and ETSI mandate SDL for protocol specification
+- **Protocol specification:** telecommunications, network, IoT protocols
+- **Concurrent systems:** multi-agent, distributed architectures
+- **Event-driven systems:** GUIs, message brokers, reactive applications
+- **Standardization:** ITU-T and ETSI mandate SDL for protocol specification
 
 | Advantage | Limitation |
 |-----------|-----------|
@@ -300,7 +300,7 @@ SDL is well-suited for requirements involving:
 
 ### 5.1 Overview
 
-**Planguage** (Plan Language) is Tom Gilb's **quantified specification language** designed specifically for requirements. Unlike mathematical formal methods, Planguage is a **structured natural language** that enforces precision through mandatory fields — making it accessible to stakeholders while still eliminating ambiguity.
+**Planguage** (Plan Language) is Tom Gilb's **quantified specification language** designed specifically for requirements. Unlike mathematical formal methods, Planguage is a **structured natural language** that enforces precision through mandatory fields, making it accessible to stakeholders while still eliminating ambiguity.
 
 ### 5.2 Core Structure
 
@@ -362,11 +362,11 @@ Status: Agreed.
 
 | Feature | Benefit |
 |---------|---------|
-| **Explicit scale** | No ambiguity about "performance" — which metric? |
+| **Explicit scale** | No ambiguity about "performance", which metric? |
 | **Must/Plan/Wish levels** | Eliminates "as fast as possible" vagueness |
-| **Meter** | Defines measurement method — testable immediately |
+| **Meter** | Defines measurement method, testable immediately |
 | **Stakeholder** | Ensures someone owns the requirement |
-| **Rationale** | Justifies the requirement — supports prioritization |
+| **Rationale** | Justifies the requirement, supports prioritization |
 | **Quantification** | Every requirement becomes testable |
 
 > [!tip] Planguage is the most **practical** formal specification technique for requirements. It requires no mathematical training, yet produces quantified, testable, stakeholder-owned requirements. Start here before moving to mathematical formalisms.
@@ -391,6 +391,7 @@ Theorem proving applies **mathematical reasoning** to verify that a requirements
 ### 6.2 Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A["Requirements<br/>Specification"] --> B["Formal Model"]
     B --> C["Property<br/>Statements"]
@@ -422,7 +423,7 @@ graph LR
 | **TLA+ / TLC** | Model checker + prover | Concurrent/distributed systems (Lamport) |
 | **Alloy Analyzer** | SAT-based model finder | Requirements modeling, counterexample generation |
 
-> [!warning] Theorem proving is **labor-intensive**. Reserve it for the most critical requirements — safety properties, security invariants, protocol correctness. For most requirements, lighter techniques (Planguage, Design by Contract) suffice.
+> [!warning] Theorem proving is **labor-intensive**. Reserve it for the most critical requirements: safety properties, security invariants, protocol correctness. For most requirements, lighter techniques (Planguage, Design by Contract) suffice.
 
 ---
 
@@ -430,11 +431,12 @@ graph LR
 
 ### 7.1 Concept
 
-Model checking **exhaustively explores all reachable states** of a finite-state model to verify that specified properties hold. Unlike theorem proving, model checking is **fully automatic** — but requires a finite (or abstractable-to-finite) state space.
+Model checking **exhaustively explores all reachable states** of a finite-state model to verify that specified properties hold. Unlike theorem proving, model checking is **fully automatic:** but requires a finite (or abstractable-to-finite) state space.
 
 ### 7.2 Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A["Requirements<br/>Specification"] --> B["Finite State Model"]
     B --> C["Properties in<br/>Temporal Logic<br/>(CTL, LTL)"]
@@ -468,7 +470,7 @@ graph TD
 
 ### 7.5 State Space Explosion
 
-The main limitation of model checking is **state space explosion**: the number of states grows exponentially with the number of variables and concurrent components. Mitigation techniques:
+The main limitation of model checking is **state space explosion:** the number of states grows exponentially with the number of variables and concurrent components. Mitigation techniques:
 
 | Technique | Description |
 |-----------|-------------|
@@ -484,7 +486,7 @@ The main limitation of model checking is **state space explosion**: the number o
 
 ### 8.1 Overview
 
-**Alloy** (MIT, Daniel Jackson) is a **lightweight formal language** and **model finder** designed for requirements modeling. It occupies a middle ground: more rigorous than UML, less costly than full theorem proving. Alloy's key innovation is **counterexample generation** — rather than proving properties, it searches for violations and presents concrete examples.
+**Alloy** (MIT, Daniel Jackson) is a **lightweight formal language** and **model finder** designed for requirements modeling. It occupies a middle ground: more rigorous than UML, less costly than full theorem proving. Alloy's key innovation is **counterexample generation:** rather than proving properties, it searches for violations and presents concrete examples.
 
 ### 8.2 Alloy's Approach to Requirements
 
@@ -523,10 +525,10 @@ check NoNegativeBalance for 5
 
 | Feature | Benefit for Requirements |
 |---------|------------------------|
-| **Model finder** | Generates concrete scenarios — stakeholders can validate them |
+| **Model finder** | Generates concrete scenarios, stakeholders can validate them |
 | **Counterexample generation** | Finds requirement inconsistencies automatically |
 | **Lightweight syntax** | Easier to learn than Z or VDM |
-| **Scope-bounded analysis** | Checks all instances up to a given size — fast, practical |
+| **Scope-bounded analysis** | Checks all instances up to a given size, fast and practical |
 | **Visualization** | Alloy Analyzer renders instances as graphs |
 | **Iterative** | Rapid exploration of requirement spaces |
 
@@ -586,7 +588,7 @@ class AccountService:
 
 ### 9.4 DbC in Requirements Documents
 
-Use contracts as **structured acceptance criteria**:
+Use contracts as **structured acceptance criteria:**
 
 ```markdown
 ## REQ-004: Fund Transfer
@@ -618,6 +620,7 @@ Use contracts as **structured acceptance criteria**:
 ### 10.1 Decision Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A["Requirements<br/>Need Formalization?"] --> B{"Domain<br/>Criticality?"}
     B -->|"Safety-critical<br/>Security-critical"| C{"Team Mathematical<br/>Maturity?"}
@@ -640,7 +643,7 @@ graph TD
 | **Tool support** | Templates | Alloy Analyzer | CZT, Z/EVES | Overture | Telelogic | TLA+ Toolbox | Language-native |
 | **Automation** | Manual | High | Medium | Medium | Medium | High | Runtime |
 | **Best for** | All requirements | Requirements exploration | State systems | Data transforms | Protocols | Distributed systems | API/interface specs |
-| **Standard** | — | — | ISO 13568 | ISO 13817 | ITU-T Z.100 | — | — |
+| **Standard** | N/A | N/A | ISO 13568 | ISO 13817 | ITU-T Z.100 | N/A | N/A |
 | **Cost** | Low | Medium | High | High | Medium | Medium | Low |
 
 ### 10.3 Recommended Adoption Strategy
@@ -659,7 +662,7 @@ graph TD
 
 | Requirements Activity | Formal Technique Support |
 |----------------------|-------------------------|
-| [[01_Requirements_Fundamentals|Requirements Fundamentals]] | Formal specs clarify what a "requirement" is — precise, testable, unambiguous |
+| [[01_Requirements_Fundamentals|Requirements Fundamentals]] | Formal specs clarify what a "requirement" is: precise, testable, unambiguous |
 | [[03_Requirements_Elicitation|Elicitation]] | Formal models surface missing requirements during construction |
 | [[06_Requirements_Modeling|Modeling]] | Z/VDM schemas complement UML models with precision |
 | [[08_Prioritization_Validation_and_Reuse|Validation]] | Theorem proving and model checking validate requirements before implementation |
@@ -670,13 +673,13 @@ graph TD
 
 ## 12 | Key Takeaways
 
-1. **Formalize selectively** — apply formal techniques to the most critical, ambiguous, or error-prone requirements, not to everything.
-2. **Start with Planguage** — the lowest barrier to entry with the highest impact on requirements quality.
-3. **Use Alloy for exploration** — model finding generates concrete counterexamples that stakeholders understand.
-4. **Reserve Z/VDM for safety-critical** — full formal specification is justified when failure costs lives or significant money.
-5. **Model checking finds bugs automatically** — TLA+ and SPIN explore all states within a bounded scope.
-6. **Design by Contract bridges requirements and code** — preconditions and postconditions are requirements that execute.
-7. **Formal specs are living documents** — they must evolve with requirements; treat them as specifications, not proofs done once.
+1. **Formalize selectively:** apply formal techniques to the most critical, ambiguous, or error-prone requirements, not to everything.
+2. **Start with Planguage:** the lowest barrier to entry with the highest impact on requirements quality.
+3. **Use Alloy for exploration:** model finding generates concrete counterexamples that stakeholders understand.
+4. **Reserve Z/VDM for safety-critical:** full formal specification is justified when failure costs lives or significant money.
+5. **Model checking finds bugs automatically:** TLA+ and SPIN explore all states within a bounded scope.
+6. **Design by Contract bridges requirements and code:** preconditions and postconditions are requirements that execute.
+7. **Formal specs are living documents:** they must evolve with requirements; treat them as specifications, not proofs done once.
 
 ---
 
