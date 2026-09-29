@@ -218,6 +218,7 @@ SWEBOK KA 9.3 addresses the management of software acquisition: the decision to 
 ### Build vs. Buy Decision Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Need Identified] --> B{Is it a core competency?}
     B -->|Yes| C{Do we have the skills?}
@@ -234,11 +235,12 @@ graph TD
     L -->|Yes| M[Acquire COTS/SaaS]
     L -->|No| E
 
-    style A fill:#2d3748,stroke:#63b3ed,color:#fff
-    style B fill:#2d3748,stroke:#fbd38d,color:#fff
-    style E fill:#276749,color:#fff
-    style M fill:#276749,color:#fff
+    style A fill:#19362D,stroke:#00B5FF,color:#CDD3D1
+    style B fill:#19362D,stroke:#FFBE00,color:#CDD3D1
+    style E fill:#00A96E,color:#000000
+    style M fill:#00A96E,color:#000000
 ```
+
 
 ### Acquisition Management Activities
 
@@ -282,8 +284,8 @@ EVM is the gold standard for integrated cost and schedule performance measuremen
 
 | Metric | Formula | Interpretation |
 |---|---|---|
-| **Cost Variance (CV)** | EV - AC | Positive = under budget; Negative = over budget |
-| **Schedule Variance (SV)** | EV - PV | Positive = ahead of schedule; Negative = behind schedule |
+| **Cost Variance (CV)** | EV - AC | Positive = under budget; negative = over budget |
+| **Schedule Variance (SV)** | EV - PV | Positive = ahead of schedule; negative = behind schedule |
 | **Cost Performance Index (CPI)** | EV / AC | > 1.0 = under budget; < 1.0 = over budget |
 | **Schedule Performance Index (SPI)** | EV / PV | > 1.0 = ahead of schedule; < 1.0 = behind schedule |
 | **Estimate at Completion (EAC)** | BAC / CPI | Projected total cost based on current performance |
@@ -422,6 +424,7 @@ SWEBOK KA 9.5 addresses the activities required to formally close a project.
 ### Closure Activities
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Project Closure Initiated] --> B[Confirm Completion Criteria Met]
     B --> C[Accept Final Deliverables]
@@ -434,9 +437,10 @@ graph TD
     I --> J[Close Contracts]
     J --> K[Project Closed]
 
-    style A fill:#2d3748,stroke:#63b3ed,color:#fff
-    style K fill:#276749,color:#fff
+    style A fill:#19362D,stroke:#00B5FF,color:#CDD3D1
+    style K fill:#00A96E,color:#000000
 ```
+
 
 ### Completion Criteria
 
@@ -529,6 +533,7 @@ Lessons Learned:
 These activities form a continuous cycle, not a linear sequence:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[Initiation] --> B[Planning]
     B --> C[Enactment]
@@ -540,13 +545,14 @@ graph LR
     D -.->|Variance detected| B
     D -.->|Risk materialized| C
 
-    style A fill:#2d3748,stroke:#63b3ed,color:#fff
-    style B fill:#2d3748,stroke:#63b3ed,color:#fff
-    style C fill:#2d3748,stroke:#63b3ed,color:#fff
-    style D fill:#2d3748,stroke:#fbd38d,color:#fff
-    style E fill:#2d3748,stroke:#63b3ed,color:#fff
-    style F fill:#2d3748,stroke:#63b3ed,color:#fff
+    style A fill:#19362D,stroke:#00B5FF,color:#CDD3D1
+    style B fill:#19362D,stroke:#00B5FF,color:#CDD3D1
+    style C fill:#19362D,stroke:#00B5FF,color:#CDD3D1
+    style D fill:#19362D,stroke:#FFBE00,color:#CDD3D1
+    style E fill:#19362D,stroke:#00B5FF,color:#CDD3D1
+    style F fill:#19362D,stroke:#00B5FF,color:#CDD3D1
 ```
+
 
 > [!note] Dev/Sec/Ops Culture
 > Modern software management increasingly integrates development, security, and operations into a single team culture focused on continuous incremental delivery. This reduces handoffs, shortens feedback loops, and makes security a shared responsibility rather than a gate.
@@ -575,7 +581,7 @@ graph LR
 
 - [[06_Project_Initiation_and_Scope]]: Scope definition and feasibility analysis
 - [[07_Estimation_and_Planning]]: Effort estimation and scheduling techniques
-- [[01_Managing_the_Human Resource]]: Human factors in project management
+- [[01_Managing_the_Human_Resource|Managing the Human Resource]]: Human factors in project management
 - [[04_Growing_Productive_Teams]]: Team dynamics relevant to risk and closure
 - [[Software Engineering Management Overview]]: Full KA 09 overview
 - [[11_Project_Planning_and_Management]]: Detailed WBS, CPM, PERT treatment

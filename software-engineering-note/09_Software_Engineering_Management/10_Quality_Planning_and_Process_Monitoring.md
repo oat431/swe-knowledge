@@ -10,13 +10,13 @@
 Quality planning and process monitoring are complementary disciplines that ensure software products meet stakeholder expectations while engineering processes remain effective and improvable. Quality planning defines what "good" looks like; process monitoring measures whether the organization is getting there.
 
 > [!info] SWEBOK Reference
-> Section 09.4 covers quality planning in the project context, while Section 09.6 addresses the holistic relationship between process monitoring and product quality. Together they form the empirical foundation for [[01_Overview|software engineering management]].
+> Section 09.4 covers quality planning in the project context, while Section 09.6 addresses the holistic relationship between process monitoring and product quality. Together they form the empirical foundation for [[Software Engineering Management Overview|software engineering management]].
 
 ---
 
 ## 2. Quality Planning in the Project Context
 
-Quality planning translates organizational quality policy into project-specific objectives, metrics, and activities. It is performed during [[03_Planning_and_Estimating|project planning]] and maintained throughout [[05_Monitoring_and_Control|monitoring and control]].
+Quality planning translates organizational quality policy into project-specific objectives, metrics, and activities. It is performed during [[07_Estimation_and_Planning|project planning]] and maintained throughout [[10_Quality_Planning_and_Process_Monitoring|monitoring and control]].
 
 ### 2.1 Quality Objectives Definition
 
@@ -36,6 +36,7 @@ Quality objectives must be specific, measurable, and aligned with stakeholder ex
 Select metrics that are actionable, traceable, and tied to quality objectives:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Quality Objectives] --> B[Select Candidate Metrics]
     B --> C{Metric is actionable?}
@@ -48,6 +49,7 @@ flowchart TD
     F --> G[Define Thresholds]
     G --> H[Assign Collection Responsibility]
 ```
+
 
 **Metric categories and examples:**
 
@@ -78,9 +80,10 @@ Quality assurance (QA) activities are scheduled across the project lifecycle:
 
 ### 2.4 Quality Control Checkpoints
 
-Quality control (QC) checkpoints are verification activities tied to [[08_Measurement_and_Evaluation|measurement and evaluation]]:
+Quality control (QC) checkpoints are verification activities tied to [[07_Measurement_and_Metrics|measurement and evaluation]]:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     A[Requirements Phase] -->|Requirements Review| B[Design Phase]
     B -->|Design Review| C[Implementation Phase]
@@ -89,14 +92,15 @@ flowchart LR
     E -->|Release Readiness Review| F[Deployment]
     F -->|Post-Release Validation| G[Operations]
     
-    style A fill:#1a1a2e,stroke:#e94560
-    style B fill:#1a1a2e,stroke:#e94560
-    style C fill:#1a1a2e,stroke:#e94560
-    style D fill:#1a1a2e,stroke:#e94560
-    style E fill:#1a1a2e,stroke:#e94560
-    style F fill:#1a1a2e,stroke:#e94560
-    style G fill:#1a1a2e,stroke:#e94560
+    style A fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style B fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style C fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style D fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style E fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style F fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style G fill:#19362D,stroke:#FF5861,color:#CDD3D1
 ```
+
 
 ---
 
@@ -142,6 +146,7 @@ Defect density varies by project type and domain criticality:
 Process performance directly influences product quality. A joint assessment examines both simultaneously:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph Process Indicators
         A[Development Velocity]
@@ -168,6 +173,7 @@ flowchart TD
     K --> A
     K --> E
 ```
+
 
 ### 4.2 Holistic Empirical Approach
 
@@ -226,7 +232,7 @@ Process capability measures how well a process performs relative to its specific
 Statistical process control (SPC) charts distinguish between common cause variation (inherent in the process) and special cause variation (assignable to specific events).
 
 ```mermaid
-%%{init: {'theme':'dark'}}%%
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 xychart-beta
     title "Sprint Velocity Control Chart"
     x-axis ["S1","S2","S3","S4","S5","S6","S7","S8","S9","S10","S11","S12"]
@@ -236,6 +242,7 @@ xychart-beta
     line [30,30,30,30,30,30,30,30,30,30,30,30]
     line [42,42,42,42,42,42,42,42,42,42,42,42]
 ```
+
 
 **Common SPC chart types for software:**
 
@@ -280,6 +287,7 @@ Process dashboards provide at-a-glance visibility into quality and process healt
 Quality gates are decision points where predefined criteria must be met before proceeding to the next phase or activity:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Phase N Work Complete] --> B{Quality Gate}
     B -->|All criteria met| C[Proceed to Phase N+1]
@@ -289,6 +297,7 @@ flowchart TD
     E -->|Not resolvable| F[Escalation / Exception Approval]
     F --> C
 ```
+
 
 ### 6.2 Entry/Exit Criteria by Phase
 
@@ -369,6 +378,7 @@ Retrospectives provide structured feedback loops for quality improvement:
 **Retrospective framework (What Went Well / What Needs Improvement / Action Items):**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     A[Gather Data] --> B[Generate Insights]
     B --> C[Decide Actions]
@@ -377,6 +387,7 @@ flowchart LR
     E --> F[Verify Effectiveness]
     F --> A
 ```
+
 
 ### 7.2 Kaizen in Project Context
 
@@ -447,6 +458,7 @@ Post-project reviews capture quality insights for organizational learning:
 ### 8.1 Quality Planning to Process Monitoring Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph Quality Planning
         A[Define Quality Objectives]
@@ -475,6 +487,7 @@ flowchart TD
     G --> I
     H --> I
     I --> J
+```
     J --> K
     K --> L
     L --> M
@@ -484,7 +497,7 @@ flowchart TD
     style E fill:#16213e,stroke:#e94560
     style J fill:#1a1a2e,stroke:#0f3460
     style M fill:#1a1a2e,stroke:#0f3460
-```
+
 
 ### 8.2 Quality-Process Relationship Summary
 
@@ -503,25 +516,25 @@ flowchart TD
 
 Quality planning and process monitoring connect across the management framework:
 
-- [[01_Overview|Overview]]: Quality and process management as part of overall SE management
-- [[03_Planning_and_Estimating|Planning and Estimating]]: Quality planning is embedded in project planning
-- [[04_Tracking_and_Adjusting|Tracking and Adjusting]]: Process metrics feed project tracking
-- [[05_Monitoring_and_Control|Monitoring and Control]]: Quality gates enforce control checkpoints
+- [[Software Engineering Management Overview|Overview]]: Quality and process management as part of overall SE management
+- [[07_Estimation_and_Planning|Planning and Estimating]]: Quality planning is embedded in project planning
+- [[08_Risk_Management_and_Control|Tracking and Adjusting]]: Process metrics feed project tracking
+- [[10_Quality_Planning_and_Process_Monitoring|Monitoring and Control]]: Quality gates enforce control checkpoints
 - [[07_Risk_Management|Risk Management]]: Quality risks require identification and mitigation
-- [[08_Measurement_and_Evaluation|Measurement and Evaluation]]: Metrics program supports quality measurement
+- [[07_Measurement_and_Metrics|Measurement and Evaluation]]: Metrics program supports quality measurement
 - [[09_Software_Acquisition_Management|Software Acquisition Management]]: Vendor quality monitoring
 
 ---
 
 ## 10. Key Takeaways
 
-1. **Quality planning is proactive**: Define objectives, metrics, and thresholds before development begins
-2. **Metrics must be actionable**: Select metrics tied to decisions, not just observation
-3. **Process monitoring reveals root causes**: Joint process/product assessment explains why quality varies
-4. **SPC distinguishes signal from noise**: Control charts prevent overreaction to common cause variation
-5. **Quality gates enforce standards**: Entry/exit criteria prevent defects from propagating between phases
-6. **Continuous improvement is systematic**: Retrospectives, Kaizen, and post-project reviews create feedback loops
-7. **Technical debt must be gated**: Unchecked debt accumulation undermines long-term quality
+1. **Quality planning is proactive:** Define objectives, metrics, and thresholds before development begins
+2. **Metrics must be actionable:** Select metrics tied to decisions, not just observation
+3. **Process monitoring reveals root causes:** Joint process/product assessment explains why quality varies
+4. **SPC distinguishes signal from noise:** Control charts prevent overreaction to common cause variation
+5. **Quality gates enforce standards:** Entry/exit criteria prevent defects from propagating between phases
+6. **Continuous improvement is systematic:** Retrospectives, Kaizen, and post-project reviews create feedback loops
+7. **Technical debt must be gated:** Unchecked debt accumulation undermines long-term quality
 
 ---
 

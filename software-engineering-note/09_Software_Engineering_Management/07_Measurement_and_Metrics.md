@@ -16,8 +16,8 @@ source: "SWEBOK v4 Ch09"
 swebok_reference: "KA 09.6"
 up: "[[09_Software_Engineering_Management]]"
 related:
-  - "[[05_Quality_Management]]"
-  - "[[06_Risk_Management]]"
+  - "[[10_Quality_Planning_and_Process_Monitoring|Quality Management]]"
+  - "[[08_Risk_Management_and_Control|Risk Management]]"
 ---
 
 # Measurement and Metrics
@@ -41,6 +41,7 @@ Software measurement provides a quantitative basis for planning, controlling, mo
 | Role | Raw data collection | Aggregated insight |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[Attribute of Entity] --> B[Measurement Method]
     B --> C[Base Measure]
@@ -50,11 +51,13 @@ graph LR
     G[Decision Criteria] --> F
 ```
 
+
 ### Measurement Information Model (ISO/IEC/IEEE 15939)
 
 The measurement information model connects real-world entities to information products:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     subgraph Real World
         A[Software Engineering Entities]
@@ -80,24 +83,27 @@ graph TD
     F --> H
 ```
 
+
 **Key concepts:**
-- **Entity**: An object to be measured (process, product, project, resource)
-- **Attribute**: A property of an entity (size, complexity, reliability)
-- **Measurement method**: The logical sequence of operations to quantify an attribute
-- **Measurement function**: An algorithm to combine base measures into derived measures
-- **Indicator**: A measure that provides insight for decision-making
+- **Entity:** An object to be measured (process, product, project, resource)
+- **Attribute:** A property of an entity (size, complexity, reliability)
+- **Measurement method:** The logical sequence of operations to quantify an attribute
+- **Measurement function:** An algorithm to combine base measures into derived measures
+- **Indicator:** A measure that provides insight for decision-making
 
 ## ISO/IEC/IEEE 15939 Measurement Process
 
 The standard defines four activities within the measurement process:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[Establish<br/>Commitment] --> B[Plan<br/>Measurement]
     B --> C[Perform<br/>Measurement]
     C --> D[Evaluate<br/>Measurement]
     D -.->|Feedback| B
 ```
+
 
 ### Activity 1: Establish and Sustain Measurement Commitment
 
@@ -144,6 +150,7 @@ The GQM framework, developed by Victor Basili, provides a systematic approach to
 ### GQM Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Goal] --> B[Questions]
     B --> C[Metrics]
@@ -153,20 +160,21 @@ graph TD
     F -.->|Validate| A
 ```
 
+
 **Three levels:**
 
-1. **Conceptual level (Goal)**: Define what to achieve
+1. **Conceptual level (Goal):** Define what to achieve
    - Object of measurement (process, product, method, tool)
    - Purpose (characterize, evaluate, predict, motivate)
    - Quality focus (cost, correctness, reliability, maintainability)
    - Viewpoint (developer, manager, customer, tester)
    - Environment (context, constraints, assumptions)
 
-2. **Operational level (Questions)**: Decompose the goal into quantifiable questions
+2. **Operational level (Questions):** Decompose the goal into quantifiable questions
    - Each question refines one aspect of the goal
    - Questions relate to the object and its attributes
 
-3. **Quantitative level (Metrics)**: Define measures to answer each question
+3. **Quantitative level (Metrics):** Define measures to answer each question
    - Base measures and derived measures
    - Data collection mechanisms
 
@@ -187,6 +195,7 @@ graph TD
 GQM+ adds organizational alignment:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     V[Business Vision/Goals] --> B[Business Goals]
     B --> M[Measurement Goals]
@@ -194,6 +203,7 @@ graph TD
     Q --> M1[Metrics]
     M1 --> D[Data]
 ```
+
 
 GQM+ ensures measurement goals trace upward to business goals, preventing metric drift.
 
@@ -290,6 +300,7 @@ The RACI (Responsible, Accountable, Consulted, Informed) model clarifies roles i
 Control charts distinguish common-cause variation from special-cause variation:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph Control Chart
         UCL[UCL - Upper Control Limit]
@@ -297,6 +308,7 @@ graph LR
         LCL[LCL - Lower Control Limit]
     end
 ```
+
 
 **Rules for detecting special-cause variation:**
 - Point beyond 3-sigma control limits
@@ -315,10 +327,10 @@ graph LR
 ### Trend Analysis
 
 Track metrics over time to identify:
-- **Improving trends**: Quality metrics improving, productivity increasing
-- **Deteriorating trends**: Increasing defect density, growing rework
-- **Stable patterns**: Metrics within control limits (process in statistical control)
-- **Anomalies**: Sudden changes requiring investigation
+- **Improving trends:** Quality metrics improving, productivity increasing
+- **Deteriorating trends:** Increasing defect density, growing rework
+- **Stable patterns:** Metrics within control limits (process in statistical control)
+- **Anomalies:** Sudden changes requiring investigation
 
 ## Measurement Program Pitfalls
 
@@ -338,6 +350,7 @@ Track metrics over time to identify:
 ### Success Factors for Measurement Programs
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Executive Sponsorship] --> F[Successful Measurement Program]
     B[Clear Goals via GQM] --> F
@@ -347,6 +360,7 @@ graph TD
     G[Iterative Refinement] --> F
     H[Integration with Processes] --> F
 ```
+
 
 ## Measurement Maturity Levels
 

@@ -45,6 +45,7 @@ The choice of SDLC model fundamentally shapes how planning is done. Different mo
 ### Model Selection Criteria
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Project Characteristics] --> B{Requirements Stability?}
     B -->|Stable| C{Team Size?}
@@ -57,10 +58,11 @@ graph TD
     I -->|Yes| J[V-Model or Waterfall]
     I -->|No| K[Flexible choice]
 
-    style A fill:#2d3748,stroke:#63b3ed,color:#fff
-    style B fill:#2d3748,stroke:#fbd38d,color:#fff
-    style D fill:#2d3748,stroke:#fbd38d,color:#fff
+    style A fill:#19362D,stroke:#00B5FF,color:#CDD3D1
+    style B fill:#19362D,stroke:#FFBE00,color:#CDD3D1
+    style D fill:#19362D,stroke:#FFBE00,color:#CDD3D1
 ```
+
 
 ---
 
@@ -98,6 +100,7 @@ Before estimating effort, the team must identify what will be produced. Delivera
 McConnell's Cone of Uncertainty illustrates how estimate accuracy improves as the project progresses:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph Accuracy Range
         direction TB
@@ -110,12 +113,13 @@ graph LR
 
     A --> B --> C --> D --> E
 
-    style A fill:#742a2a,color:#fff
-    style B fill:#9c4221,color:#fff
-    style C fill:#c05621,color:#fff
-    style D fill:#b7791f,color:#fff
-    style E fill:#276749,color:#fff
+    style A fill:#FF5861,color:#000000
+    style B fill:#FFBE00,color:#000000
+    style C fill:#1FB8AB,color:#000000
+    style D fill:#00A96E,color:#000000
+    style E fill:#00A96E,color:#000000
 ```
+
 
 > [!warning] Premature Precision
 > Requesting a precise estimate early in the project is like asking "How long will it take to drive to the city?" before knowing which city, which car, or which route. Early estimates should be expressed as ranges, not point values.
@@ -464,6 +468,7 @@ SWEBOK emphasizes that **multiple estimation methods should be used and their re
 ### Reconciliation Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Estimate with Method 1: COCOMO II] --> D[Compare Results]
     B[Estimate with Method 2: Function Points] --> D
@@ -480,11 +485,12 @@ graph TD
     K --> D
     F --> L[Express as Range: Point Estimate +/- Uncertainty]
 
-    style A fill:#2d3748,stroke:#63b3ed,color:#fff
-    style B fill:#2d3748,stroke:#63b3ed,color:#fff
-    style C fill:#2d3748,stroke:#63b3ed,color:#fff
-    style E fill:#2d3748,stroke:#fbd38d,color:#fff
+    style A fill:#19362D,stroke:#00B5FF,color:#CDD3D1
+    style B fill:#19362D,stroke:#00B5FF,color:#CDD3D1
+    style C fill:#19362D,stroke:#00B5FF,color:#CDD3D1
+    style E fill:#19362D,stroke:#FFBE00,color:#CDD3D1
 ```
+
 
 ### Estimation Method Comparison
 

@@ -10,9 +10,9 @@ source: "DeMarco & Lister, Peopleware: Productive Projects and Teams (3rd ed.), 
 created: 2026-07-21
 ---
 
-# 03 — The Right People
+# 03: The Right People
 
-Part III of *Peopleware* covers Chapters 14–20. The core argument: **managers cannot meaningfully change people** — so getting the right people in the first place, and then keeping them, is everything.
+Part III of *Peopleware* covers Chapters 14–20. The core argument: **managers cannot meaningfully change people:** so getting the right people in the first place, and then keeping them, is everything.
 
 ---
 
@@ -20,7 +20,7 @@ Part III of *Peopleware* covers Chapters 14–20. The core argument: **managers 
 
 ### Born vs. Made
 
-DeMarco & Lister borrow from C.S. Forester's Horatio Hornblower novels: the recurring theme is that **achievers are born, not made**. Hornblower's subordinates who are undependable or stupid never become dependable or smart — he simply learns to identify the few good ones quickly and depend on them.
+DeMarco & Lister borrow from C.S. Forester's Horatio Hornblower novels: the recurring theme is that **achievers are born, not made**. Hornblower's subordinates who are undependable or stupid never become dependable or smart; he simply learns to identify the few good ones quickly and depend on them.
 
 In modern egalitarian workplaces, we resist writing anyone off as intrinsically incompetent. Managers are told to *shape* raw material. The authors call this unrealistic:
 
@@ -30,15 +30,15 @@ In modern egalitarian workplaces, we resist writing anyone off as intrinsically 
 
 ### The Uniform Plastic Person
 
-Hiring mistakes overwhelmingly result from **too much attention to appearance and not enough to capabilities**. Evolution has wired us with unease toward people who differ from the norm — a bias we must consciously override.
+Hiring mistakes overwhelmingly result from **too much attention to appearance and not enough to capabilities**. Evolution has wired us with unease toward people who differ from the norm, a bias we must consciously override.
 
-More insidious is the **organizational norm**: you hire on behalf of the whole corporate ladder above you. The perceived preferences of upper managers push you toward hiring people who look, sound, and think like everybody else. The need for uniformity is a sign of management insecurity.
+More insidious is the **organizational norm:** you hire on behalf of the whole corporate ladder above you. The perceived preferences of upper managers push you toward hiring people who look, sound, and think like everybody else. The need for uniformity is a sign of management insecurity.
 
 ### Standard Dress and "Professionalism"
 
 - **Dress codes** are a symptom of late-stage organizational brain death. The most valuable people realize they aren't appreciated for their real worth and eventually leave. *"Get yourself a new job."*
 
-- **Code word "professional":** In unhealthy cultures, *unprofessional* means anything surprising or threatening to insecure managers — popcorn, long hair (on men), posters, comfortable shoes, dancing at your desk, laughing. *Professional* means unsurprising — a perfect drone. In healthier cultures, *professional* means knowledgeable and competent.
+- **Code word "professional":** In unhealthy cultures, *unprofessional* means anything surprising or threatening to insecure managers (popcorn, long hair (on men), posters, comfortable shoes, dancing at your desk, laughing. *Professional* means unsurprising) a perfect drone. In healthier cultures, *professional* means knowledgeable and competent.
 
 ### Corporate Entropy
 
@@ -52,9 +52,9 @@ Entropy = uniformity of attitude, appearance, and thought process. Elderly insti
 
 ### Leadership as Work-Extraction vs. Service
 
-Most corporate talk about leadership is about **work-extraction**: getting people to work harder, stay longer, stop goofing off. It flows down the hierarchy — leaders at the top, followers at the bottom. Trotsky observed that junior officers needed side arms to lead men into battle: that's leading from behind.
+Most corporate talk about leadership is about **work-extraction:** getting people to work harder, stay longer, stop goofing off. It flows down the hierarchy, leaders at the top, followers at the bottom. Trotsky observed that junior officers needed side arms to lead men into battle: that's leading from behind.
 
-**Real leadership** — the kind people speak of with emotion and deep respect — is most often exercised **without positional power**. It operates outside the official hierarchy as a **service**:
+**Real leadership:** the kind people speak of with emotion and deep respect; is most often exercised **without positional power**. It operates outside the official hierarchy as a **service:**
 
 1. Step up to the task
 2. Be evidently fit for the task
@@ -72,7 +72,7 @@ Innovation's talk:do ratio is even more out of whack than leadership's. Companie
 
 **Rebel leadership** is required: someone takes a key person off billable work (constructive disobedience) to pursue a nascent vision, then pushes for the organizational reshaping needed to capitalize on it. This almost always operates without official permission.
 
-The conclusion from *Death of a Salesman*: *"He don't have to [mention it] — he's gonna do it."*
+The conclusion from *Death of a Salesman*: *"He don't have to [mention it]; he's gonna do it."*
 
 ---
 
@@ -82,7 +82,7 @@ The conclusion from *Death of a Salesman*: *"He don't have to [mention it] — h
 
 ### The Portfolio
 
-The authors recount a Canadian technical college professor whose graduates brought **portfolios of work samples** to interviews: code listings, designs, data flow diagrams, data dictionaries. Recruiters from across North America converged on this obscure campus. Interviewers were always *surprised* by the portfolios — meaning they weren't requiring them. **Always ask to see samples of past work.**
+The authors recount a Canadian technical college professor whose graduates brought **portfolios of work samples** to interviews: code listings, designs, data flow diagrams, data dictionaries. Recruiters from across North America converged on this obscure campus. Interviewers were always *surprised* by the portfolios, meaning they weren't requiring them. **Always ask to see samples of past work.**
 
 ### Aptitude Tests (Erghhhh)
 
@@ -94,7 +94,7 @@ The recommended hiring practice:
 
 1. Ask candidates to prepare a **10–15 minute presentation** on some aspect of past work (their choice of topic)
 2. Assemble an audience of **future co-workers**
-3. After the candidate leaves, hold a **debriefing** — each person comments on suitability and team fit
+3. After the candidate leaves, hold a **debriefing:** each person comments on suitability and team fit
 4. Final decision rests with the hiring manager, but team feedback is invaluable
 
 **Benefits:** Tests communication skills, accelerates socialization of new hires (a successful audition is peer certification), boosts morale (failed auditions prove hiring isn't dumb luck), and the group accepts new members more smoothly because they had a voice.
@@ -107,7 +107,7 @@ The recommended hiring practice:
 
 ### Benefits of Diversity
 
-The software industry's explosive growth was enabled by tapping **educated women** — an untapped resource when male CS majors alone couldn't supply demand. Women changed team organization, interaction styles, and management approaches. **An all-male team today seems thin and less than totally energized.**
+The software industry's explosive growth was enabled by tapping **educated women:** an untapped resource when male CS majors alone couldn't supply demand. Women changed team organization, interaction styles, and management approaches. **An all-male team today seems thin and less than totally energized.**
 
 Globalization brought more nationalities and cultural patterns. Just as we relish diverse cuisines, we should relish diverse ways of working, thinking, and communicating.
 
@@ -163,7 +163,7 @@ Typical turnover: 33%–80% per year (average longevity: 15–36 months).
 | Start-up / ramp-up (new person useless at first, reaches full capacity ~5 months) | ~3 lost work-months |
 | **Total** | **4.5–5 months' employee cost (~20% of the 2-year cost of keeping that person)** |
 
-Most organizations **don't measure turnover at all** — it's like heavy smokers avoiding doctors.
+Most organizations **don't measure turnover at all:** it's like heavy smokers avoiding doctors.
 
 ### The Hidden Costs of Turnover
 
@@ -175,15 +175,15 @@ Most organizations **don't measure turnover at all** — it's like heavy smokers
 
 ### Why People Leave (Pathological Turnover >30%)
 
-1. **A just-passing-through mentality** — co-workers engender no feelings of long-term involvement
-2. **A feeling of disposability** — management treats workers as interchangeable parts
-3. **Loyalty would be ludicrous** — who could be loyal to an organization that views people as parts?
+1. **A just-passing-through mentality:** co-workers engender no feelings of long-term involvement
+2. **A feeling of disposability:** management treats workers as interchangeable parts
+3. **Loyalty would be ludicrous:** who could be loyal to an organization that views people as parts?
 
 **Turnover engenders turnover:** high turnover → no training investment → company invests nothing in individuals → individuals think nothing of moving on → new people not hired for extraordinary qualities → workers feel unappreciated → others are leaving all the time → something wrong with you if you stay.
 
 ### A Special Pathology: The Company Move
 
-The company move is the biggest ego trip for insecure managers — controlling workers' personal lives, not just work lives. The stated rationale (taxes, space costs) hides real reasons: political deals, building a new edifice, reducing the boss's commute, or naked exercise of power.
+The company move is the biggest ego trip for insecure managers, controlling workers' personal lives, not just work lives. The stated rationale (taxes, space costs) hides real reasons: political deals, building a new edifice, reducing the boss's commute, or naked exercise of power.
 
 Ray Ketchledge (who ran Bell Labs' ESS project moved from NJ to IL in 1966) called it his greatest failure: *"You can't believe what it cost us in turnover."* The initial exodus exceeded French losses in WWI trenches. A second exodus followed a year later.
 
@@ -193,14 +193,14 @@ Modern two-career families make company moves even more destructive.
 
 ### The Mentality of Permanence
 
-The best organizations share one trait: a **preoccupation with being the best**. It's a constant topic. They consciously strive to be best — a common goal providing direction, satisfaction, and strong binding effect.
+The best organizations share one trait: a **preoccupation with being the best**. It's a constant topic. They consciously strive to be best, a common goal providing direction, satisfaction, and strong binding effect.
 
 Characteristics of low-turnover companies:
 
 - **Sense of community** (e.g., community gardens at Reader's Digest and HP)
-- **Heavy investment in personal growth** (year-long training periods for new hires — the message is unmistakable: you are expected to stay)
+- **Heavy investment in personal growth** (year-long training periods for new hires, the message is unmistakable: you are expected to stay)
 - **Widespread retraining** (managers who started as secretaries, payroll clerks, mailroom; philosophy Ph.D.s becoming developers; linemen becoming systems people)
-- **Short-term is not the only thing that matters** — being best is a long-term concept
+- **Short-term is not the only thing that matters:** being best is a long-term concept
 
 Retraining is always more expensive in the short run than firing and hiring someone with the required skills. The best organizations do it anyway because it builds the mentality of permanence.
 
@@ -210,7 +210,7 @@ Retraining is always more expensive in the short run than firing and hiring some
 
 ### Expense vs. Investment
 
-An **expense** is money that gets used up (gone at end of month). An **investment** is converting one asset into another (value persists). Accounting convention treats all salaries as expense — even training that clearly creates lasting value.
+An **expense** is money that gets used up (gone at end of month). An **investment** is converting one asset into another (value persists). Accounting convention treats all salaries as expense, even training that clearly creates lasting value.
 
 ### The Real Cost of Losing a Person
 
@@ -224,7 +224,7 @@ When Louise (database expert) leaves and Ralph replaces her:
 
 ### Playing Up to Wall Street
 
-Wall Street applauds downsizing because it looks good on the books (salary savings go straight to the bottom line). Forgotten: the **investment in those people** — real dollars, now thrown away.
+Wall Street applauds downsizing because it looks good on the books (salary savings go straight to the bottom line). Forgotten: the **investment in those people:** real dollars, now thrown away.
 
 > *"Companies that downsize are frankly admitting that their upper management has blown it."*
 
@@ -236,21 +236,21 @@ Knowledge-worker companies must realize that **investment in human capital matte
 
 | Chapter | Core Insight |
 |---------|-------------|
-| 14 — Hornblower Factor | People are born, not made by managers. Hire right; fight corporate entropy and uniformity. |
-| 15 — Leadership | Real leadership is service without positional authority. Innovation requires rebel leadership. |
-| 16 — Hiring a Juggler | Always examine work samples. Use auditions, not just interviews. Aptitude tests are for self-assessment, not hiring. |
-| 17 — Playing Well with Others | Diversity enriches teams. But team jell requires stable composition — churn kills it. |
-| 18 — Childhood's End | Young workers have different attention patterns. Articulate the contract: flow requires focus. |
-| 19 — Happy to Be Here | Turnover costs ~20% of manpower (visible) + short-termism (hidden). Company moves are catastrophic. Build a mentality of permanence. |
-| 20 — Human Capital | Workers are assets, not expenses. Losing one destroys a large sunk investment. The best companies understand and preserve human capital. |
+| 14. Hornblower Factor | People are born, not made by managers. Hire right; fight corporate entropy and uniformity. |
+| 15. Leadership | Real leadership is service without positional authority. Innovation requires rebel leadership. |
+| 16, Hiring a Juggler | Always examine work samples. Use auditions, not just interviews. Aptitude tests are for self-assessment, not hiring. |
+| 17 (Playing Well with Others | Diversity enriches teams. But team jell requires stable composition) churn kills it. |
+| 18. Childhood's End | Young workers have different attention patterns. Articulate the contract: flow requires focus. |
+| 19. Happy to Be Here | Turnover costs ~20% of manpower (visible) + short-termism (hidden). Company moves are catastrophic. Build a mentality of permanence. |
+| 20. Human Capital | Workers are assets, not expenses. Losing one destroys a large sunk investment. The best companies understand and preserve human capital. |
 
 **Bottom line:** Getting the right people and keeping them is the single most important thing a software engineering manager does. Everything else depends on it.
 
 
 ## Related
 
-- [[Software Engineering Management Overview]] — All management topics
-- [[01_Managing_the_Human_Resource]] — Management theory and quality
-- [[02_The_Office_Environment]] — The workspace that supports the right people
-- [[04_Growing_Productive_Teams]] — Building teams from the right people
-- [[05_Fertile_Soil_and_Fun]] — Culture that keeps people happy
+- [[Software Engineering Management Overview]]: All management topics
+- [[01_Managing_the_Human_Resource]]: Management theory and quality
+- [[02_The_Office_Environment]]: The workspace that supports the right people
+- [[04_Growing_Productive_Teams]]: Building teams from the right people
+- [[05_Fertile_Soil_and_Fun]]: Culture that keeps people happy

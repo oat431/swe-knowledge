@@ -8,7 +8,7 @@ tags:
   - risk-management
 ---
 
-# Software Engineering Management — Overview
+# Software Engineering Management: Overview
 
 > **Source:** SWEBOK v4 Chapter 09
 > **Purpose:** Plan, measure, and control software engineering activities to deliver systems efficiently and effectively, integrating project management with measurement management.
@@ -61,20 +61,20 @@ SWEBOK v4 organizes management by activities (what happens) rather than phases (
 ## My Notes
 
 ### Peopleware (DeMarco & Lister)
-- [[01_Managing_the_Human_Resource]] — Projects fail on people, Spanish vs. English theory, quality, Parkinson's Law
-- [[02_The_Office_Environment]] — Furniture police, flow time, E-Factor, workspace design, Coding War Games
-- [[03_The_Right_People]] — Hornblower factor, leadership, hiring, turnover, human capital
-- [[04_Growing_Productive_Teams]] — Jelled teams, Black Team, teamicide, competition, chemistry
-- [[05_Fertile_Soil_and_Fun]] — Self-healing systems, risk, meetings, email, change, organizational learning, fun
+- [[01_Managing_the_Human_Resource]]: Projects fail on people, Spanish vs. English theory, quality, Parkinson's Law
+- [[02_The_Office_Environment]]: Furniture police, flow time, E-Factor, workspace design, Coding War Games
+- [[03_The_Right_People]]: Hornblower factor, leadership, hiring, turnover, human capital
+- [[04_Growing_Productive_Teams]]: Jelled teams, Black Team, teamicide, competition, chemistry
+- [[05_Fertile_Soil_and_Fun]]: Self-healing systems, risk, meetings, email, change, organizational learning, fun
 
 ## Relationship to Other KAs
 
-- **[[Software Requirements Overview|Software Requirements]]** — Requirements scope is the primary driver of planning and estimation. Scope changes are the biggest source of variance.
-- **[[Software Engineering Economics Overview|Software Engineering Economics]]** — Estimation, cost-benefit analysis, and ROI calculations are economic activities embedded in management.
-- **[[Software Quality Overview|Software Quality]]** — Quality planning, metrics, and defect management have both quality and management dimensions.
-- **[[Software Configuration Management Overview|Software Configuration Management]]** — Change control, status accounting, and auditing provide management visibility during enactment and closure.
-- **[[Software Maintenance Overview|Software Maintenance]]** — Maintenance planning, technical debt prioritization, and legacy system decisions are management concerns.
-- **[[Software Engineering Models and Methods Overview|Software Engineering Models and Methods]]** — Methods and modeling approaches are selected during process planning.
+- **[[Software Requirements Overview|Software Requirements]]:** Requirements scope is the primary driver of planning and estimation. Scope changes are the biggest source of variance.
+- **[[Software Engineering Economics Overview|Software Engineering Economics]]:** Estimation, cost-benefit analysis, and ROI calculations are economic activities embedded in management.
+- **[[Software Quality Overview|Software Quality]]:** Quality planning, metrics, and defect management have both quality and management dimensions.
+- **[[Software Configuration Management Overview|Software Configuration Management]]:** Change control, status accounting, and auditing provide management visibility during enactment and closure.
+- **[[Software Maintenance Overview|Software Maintenance]]:** Maintenance planning, technical debt prioritization, and legacy system decisions are management concerns.
+- **[[Software Engineering Models and Methods Overview|Software Engineering Models and Methods]]:** Methods and modeling approaches are selected during process planning.
 
 ---
 

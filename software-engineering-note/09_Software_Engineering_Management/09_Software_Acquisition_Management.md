@@ -7,7 +7,7 @@
 
 ## 1. Overview
 
-Software acquisition management addresses the processes for obtaining software products and services from external sources. As modern software systems increasingly rely on externally sourced components, effective acquisition management has become a critical discipline within [[01_Overview|Software Engineering Management]].
+Software acquisition management addresses the processes for obtaining software products and services from external sources. As modern software systems increasingly rely on externally sourced components, effective acquisition management has become a critical discipline within [[Software Engineering Management Overview|Software Engineering Management]].
 
 > [!info] SWEBOK Reference
 > Software acquisition management covers the full lifecycle from make/buy decisions through contract closure, encompassing vendor selection, contract management, integration, and ongoing supplier relationship management.
@@ -30,6 +30,7 @@ Organizations source software through multiple channels, each with distinct mana
 ### 2.1 Acquisition Class Selection Criteria
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Software Need Identified] --> B{Core competitive advantage?}
     B -->|Yes| C{In-house capability?}
@@ -45,13 +46,14 @@ flowchart TD
     H -->|No| F
 ```
 
+
 ---
 
 ## 3. Acquisition Lifecycle
 
 ### 3.1 Make/Buy Decision Analysis
 
-The acquisition lifecycle begins with the make/buy decision, documented in the [[03_Planning_and_Estimating|project plan]]:
+The acquisition lifecycle begins with the make/buy decision, documented in the [[07_Estimation_and_Planning|project plan]]:
 
 | Factor | Make (In-House) | Buy (Acquire) |
 |---|---|---|
@@ -68,11 +70,11 @@ The acquisition lifecycle begins with the make/buy decision, documented in the [
 
 Before issuing solicitations, conduct structured market research:
 
-- **Technology landscape scan**: Identify available solutions and vendors
-- **Request for Information (RFI)**: Solicit vendor capabilities without commitment
-- **Industry benchmarking**: Compare solutions against peers
-- **Proof of concept**: Evaluate shortlisted options with real scenarios
-- **Reference checks**: Contact existing customers of candidate vendors
+- **Technology landscape scan:** Identify available solutions and vendors
+- **Request for Information (RFI):** Solicit vendor capabilities without commitment
+- **Industry benchmarking:** Compare solutions against peers
+- **Proof of concept:** Evaluate shortlisted options with real scenarios
+- **Reference checks:** Contact existing customers of candidate vendors
 
 ### 3.3 Solicitation Documents
 
@@ -85,6 +87,7 @@ Before issuing solicitations, conduct structured market research:
 ### 3.4 Vendor Evaluation and Selection
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     A[Define Evaluation Criteria] --> B[Weight Criteria]
     B --> C[Collect Vendor Proposals]
@@ -97,6 +100,7 @@ flowchart LR
     I --> J[Contract Negotiation]
 ```
 
+
 **Evaluation criteria typically include:**
 
 - Technical fit and architecture alignment
@@ -104,7 +108,7 @@ flowchart LR
 - Vendor financial stability and market position
 - Support and maintenance offerings
 - Compliance and security posture
-- Integration complexity with existing systems (see [[06_Configuration_and_Change_Management|configuration management]])
+- Integration complexity with existing systems (see [[../08_Software_Configuration_Management/Software Configuration Management Overview|configuration management]])
 - Scalability and performance benchmarks
 
 ### 3.5 Contract Types
@@ -121,7 +125,7 @@ flowchart LR
 ### 3.6 Contract Negotiation and Closure
 
 Key negotiation areas:
-- Scope definition and change control procedures (see [[05_Monitoring_and_Control|monitoring and control]])
+- Scope definition and change control procedures (see [[10_Quality_Planning_and_Process_Monitoring|monitoring and control]])
 - Payment milestones tied to deliverables
 - Intellectual property ownership
 - Warranty and liability terms
@@ -159,6 +163,7 @@ COTS products require careful integration management:
 ### 4.3 COTS Integration Architecture
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph Acquiring Organization
         A[Business Requirements] --> B[Gap Analysis]
@@ -175,6 +180,7 @@ flowchart TD
     E --> H
     B --> G
 ```
+
 
 ---
 
@@ -199,12 +205,12 @@ Open source licenses impose obligations that organizations must understand and t
 
 ### 5.2 Open Source Management Practices
 
-- **Inventory management**: Maintain a bill of materials (SBOM) for all open source components
-- **Vulnerability tracking**: Subscribe to CVE feeds, use tools like Dependabot, Snyk
-- **Community health assessment**: Evaluate project activity, maintainer responsiveness, bus factor
-- **Contribution policies**: Define rules for contributing upstream and accepting community patches
-- **License scanning**: Automate license detection in CI/CD pipelines (related to [[08_Measurement_and_Evaluation|measurement and evaluation]])
-- **Version pinning**: Lock dependency versions to avoid supply chain attacks
+- **Inventory management:** Maintain a bill of materials (SBOM) for all open source components
+- **Vulnerability tracking:** Subscribe to CVE feeds, use tools like Dependabot, Snyk
+- **Community health assessment:** Evaluate project activity, maintainer responsiveness, bus factor
+- **Contribution policies:** Define rules for contributing upstream and accepting community patches
+- **License scanning:** Automate license detection in CI/CD pipelines (related to [[07_Measurement_and_Metrics|measurement and evaluation]])
+- **Version pinning:** Lock dependency versions to avoid supply chain attacks
 
 ---
 
@@ -223,6 +229,7 @@ Open source licenses impose obligations that organizations must understand and t
 ### 6.2 SaaS Risk Assessment
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[SaaS Evaluation] --> B[Data Portability]
     A --> C[Exit Strategy]
@@ -235,6 +242,7 @@ flowchart TD
     E --> E1[GDPR? HIPAA? SOC 2? Industry regs?]
     F --> F1[Proprietary APIs? Data formats?]
 ```
+
 
 ### 6.3 Data Portability Checklist
 
@@ -265,6 +273,7 @@ Continuous vendor monitoring ensures contractual obligations are met:
 ### 7.2 Vendor Relationship Management
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     A[Transaction Relationship] --> B[Partnership Relationship]
     B --> C[Strategic Alliance]
@@ -273,6 +282,7 @@ flowchart LR
     B -..- B1[Moderate trust, joint planning]
     C -..- C1[High trust, shared goals]
 ```
+
 
 ### 7.3 Dispute Resolution Escalation
 
@@ -286,7 +296,7 @@ Level 5: Arbitration/Litigation (Legal proceedings)
 
 ### 7.4 Contract Amendment Process
 
-Contract changes follow a controlled process aligned with [[04_Tracking_and_Adjusting|project tracking]]:
+Contract changes follow a controlled process aligned with [[08_Risk_Management_and_Control|project tracking]]:
 
 1. Change request initiated (by either party)
 2. Impact analysis (scope, cost, schedule, risk)
@@ -314,10 +324,10 @@ Contract changes follow a controlled process aligned with [[04_Tracking_and_Adju
 
 ### 8.2 Risk Response Strategies
 
-- **Avoid**: Choose build-in-house over acquisition
-- **Mitigate**: Proof of concept, phased rollout, escrow agreements
-- **Transfer**: Warranty clauses, liability caps, insurance
-- **Accept**: Documented risk acceptance by stakeholders
+- **Avoid:** Choose build-in-house over acquisition
+- **Mitigate:** Proof of concept, phased rollout, escrow agreements
+- **Transfer:** Warranty clauses, liability caps, insurance
+- **Accept:** Documented risk acceptance by stakeholders
 
 ---
 
@@ -325,24 +335,24 @@ Contract changes follow a controlled process aligned with [[04_Tracking_and_Adju
 
 Software acquisition management intersects with multiple management disciplines:
 
-- [[02_Initiation_and_Scope_Definition|Initiation and Scope Definition]]: Requirements drive make/buy decisions
-- [[03_Planning_and_Estimating|Planning and Estimating]]: Acquisition timelines affect project schedules
-- [[04_Tracking_and_Adjusting|Tracking and Adjusting]]: Vendor deliverables require monitoring
-- [[05_Monitoring_and_Control|Monitoring and Control]]: Contract compliance oversight
-- [[06_Configuration_and_Change_Management|Configuration and Change Management]]: COTS version and configuration tracking
+- [[06_Project_Initiation_and_Scope|Initiation and Scope Definition]]: Requirements drive make/buy decisions
+- [[07_Estimation_and_Planning|Planning and Estimating]]: Acquisition timelines affect project schedules
+- [[08_Risk_Management_and_Control|Tracking and Adjusting]]: Vendor deliverables require monitoring
+- [[10_Quality_Planning_and_Process_Monitoring|Monitoring and Control]]: Contract compliance oversight
+- [[../08_Software_Configuration_Management/Software Configuration Management Overview|Configuration and Change Management]]: COTS version and configuration tracking
 - [[07_Risk_Management|Risk Management]]: Acquisition-specific risk identification and response
-- [[08_Measurement_and_Evaluation|Measurement and Evaluation]]: Vendor performance metrics
+- [[07_Measurement_and_Metrics|Measurement and Evaluation]]: Vendor performance metrics
 
 ---
 
 ## 10. Key Takeaways
 
-1. **Match acquisition class to need**: COTS, custom, open source, SaaS, and hybrid each serve different contexts
-2. **Structure the lifecycle**: RFI/RFP/RFQ, evaluation criteria, contract types, and negotiation are sequential and interdependent
-3. **Manage COTS carefully**: Favor configuration over customization; plan for upgrade compatibility
-4. **Open source has obligations**: License compliance, SBOM tracking, and vulnerability monitoring are mandatory
-5. **SaaS requires exit planning**: Data portability and vendor lock-in are strategic concerns
-6. **Vendor management is ongoing**: Performance monitoring, relationship building, and dispute resolution continue throughout the contract
+1. **Match acquisition class to need:** COTS, custom, open source, SaaS, and hybrid each serve different contexts
+2. **Structure the lifecycle:** RFI/RFP/RFQ, evaluation criteria, contract types, and negotiation are sequential and interdependent
+3. **Manage COTS carefully:** Favor configuration over customization; plan for upgrade compatibility
+4. **Open source has obligations:** License compliance, SBOM tracking, and vulnerability monitoring are mandatory
+5. **SaaS requires exit planning:** Data portability and vendor lock-in are strategic concerns
+6. **Vendor management is ongoing:** Performance monitoring, relationship building, and dispute resolution continue throughout the contract
 
 ---
 

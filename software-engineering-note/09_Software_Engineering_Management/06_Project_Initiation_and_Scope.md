@@ -20,7 +20,7 @@ created: 2026-07-21
 
 ## 1. Project Need Identification
 
-Every software project begins with the recognition of a **need**: a business problem, an opportunity, or a gap that existing systems cannot address. The initiation phase establishes whether the need is real, whether it warrants a new project, and what the boundaries of the solution should be.
+Every software project begins with the recognition of a **need:** a business problem, an opportunity, or a gap that existing systems cannot address. The initiation phase establishes whether the need is real, whether it warrants a new project, and what the boundaries of the solution should be.
 
 ### Sources of Project Need
 
@@ -72,6 +72,7 @@ Project Charter:
 A **context diagram** (also called a system context diagram) is a high-level visualization that shows the system boundary and the external entities that interact with it. It is the simplest form of a data flow diagram and is invaluable for scope definition.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph External
         A[Customer] -->|Order| S[System]
@@ -84,12 +85,13 @@ graph LR
     S -->|Charge| C
     S -->|Ship Request| D
 
-    style S fill:#2d3748,stroke:#63b3ed,color:#fff
-    style A fill:#1a202c,stroke:#fc8181,color:#fff
-    style B fill:#1a202c,stroke:#fc8181,color:#fff
-    style C fill:#1a202c,stroke:#fc8181,color:#fff
-    style D fill:#1a202c,stroke:#fc8181,color:#fff
+    style S fill:#19362D,stroke:#00B5FF,color:#CDD3D1
+    style A fill:#110D0D,stroke:#FF5861,color:#CDD3D1
+    style B fill:#110D0D,stroke:#FF5861,color:#CDD3D1
+    style C fill:#110D0D,stroke:#FF5861,color:#CDD3D1
+    style D fill:#110D0D,stroke:#FF5861,color:#CDD3D1
 ```
+
 
 **Context diagram benefits:**
 - Defines system boundaries unambiguously
@@ -184,6 +186,7 @@ Requirements determination is the process of discovering, eliciting, and documen
 **Sources of requirements:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     R[Requirements Sources] --> S[Stakeholders]
     R --> D[Domain Knowledge]
@@ -207,6 +210,7 @@ graph TD
 
     style R fill:#2d3748,stroke:#63b3ed,color:#fff
 ```
+
 
 ### Requirements Negotiation
 
@@ -287,6 +291,7 @@ Changes to scope are inevitable. The change control process ensures they are man
 ### Change Control Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Change Request Submitted] --> B[Log Request in Change Register]
     B --> C[Impact Analysis]
@@ -299,9 +304,10 @@ graph TD
     F --> I
     G --> I
 
-    style A fill:#2d3748,stroke:#63b3ed,color:#fff
-    style D fill:#2d3748,stroke:#fbd38d,color:#fff
+    style A fill:#19362D,stroke:#00B5FF,color:#CDD3D1
+    style D fill:#19362D,stroke:#FFBE00,color:#CDD3D1
 ```
+
 
 ### Scope Creep vs. Gold Plating
 
