@@ -15,7 +15,7 @@ last_updated: 2026-08-06
 
 ## Architecture Decision
 
-- [ ] **L4 vs L7 chosen** — document reasoning; do not assume edge is always L7 or internal traffic is always L4 → [[03 Load Balancing & Proxies]]
+- [ ] **L4 vs L7 chosen:** document reasoning; do not assume edge is always L7 or internal traffic is always L4 → [[03 Load Balancing & Proxies]]
 - [ ] L4 (transport): route by IP + port. Faster, simpler. Internal service-to-service
 - [ ] L7 (application): route by URL, headers, cookies. Can do auth, rate limit, transform. Edge/external
 - [ ] Edge: L7. Internal: L4 is often enough
@@ -47,7 +47,7 @@ last_updated: 2026-08-06
 
 ## Failure Detection & Recovery
 
-- [ ] **Outlier detection** — separate behavioral ejection from basic health readiness; define comparison window and false-positive protection → [[microservice-infrastructure]]
+- [ ] **Outlier detection:** separate behavioral ejection from basic health readiness; define comparison window and false-positive protection → [[microservice-infrastructure]]
 - [ ] If one instance has 10x latency of peers → eject it even if technically "healthy"
 - [ ] Circuit breaking policy is explicit and distinct from health checks/outlier ejection; stop routing or fail fast only when the selected mechanism requires it → [[041 Circuit Breaker]]
 - [ ] Half-open state: send probe request after cooldown → succeed → resume routing
@@ -58,10 +58,10 @@ last_updated: 2026-08-06
 
 ## Timeouts
 
-- [ ] **Connect timeout** — how long to wait for TCP handshake; select from the service deadline budget → [[042 Retry & Timeout]]
-- [ ] **Read/total timeout** — how long to wait after connecting; select from the service deadline budget rather than a universal 30s default
-- [ ] **Idle timeout** — close idle connections. Free up resources
-- [ ] **Deadline hierarchy** — client deadline > LB total deadline > service deadline > dependency deadline; connection-pool wait, retries, and queue time are included
+- [ ] **Connect timeout:** how long to wait for TCP handshake; select from the service deadline budget → [[042 Retry & Timeout]]
+- [ ] **Read/total timeout:** how long to wait after connecting; select from the service deadline budget rather than a universal 30s default
+- [ ] **Idle timeout:** close idle connections. Free up resources
+- [ ] **Deadline hierarchy:** client deadline > LB total deadline > service deadline > dependency deadline; connection-pool wait, retries, and queue time are included
 - [ ] Timeouts tuned per upstream and recorded with the SLO/deadline rationale
 
 ---
@@ -73,7 +73,7 @@ last_updated: 2026-08-06
 - [ ] Minimum TLS 1.2, prefer 1.3
 - [ ] HSTS header set at LB
 - [ ] Certificates NOT self-signed in production
-- [ ] Internal traffic protection selected — encrypted transport by default; any plaintext trusted-network exception has documented isolation, threat model, and approval
+- [ ] Internal traffic protection selected: encrypted transport by default; any plaintext trusted-network exception has documented isolation, threat model, and approval
 
 ---
 
@@ -81,27 +81,27 @@ last_updated: 2026-08-06
 
 - [ ] **Sticky sessions avoided unless specifically justified** → [[microservice-infrastructure]]
 - [ ] If unavoidable: cookie-based (L7) or IP hash (L4). Document why
-- [ ] Sticky sessions make instances stateful — plan for instance death
+- [ ] Sticky sessions make instances stateful: plan for instance death
 - [ ] Session replication (Redis) over sticky sessions when possible
 
 ---
 
 ## Connection Management
 
-- [ ] **Connection pooling to upstreams** — HTTP keep-alive → [[03 Load Balancing & Proxies]]
+- [ ] **Connection pooling to upstreams:** HTTP keep-alive → [[03 Load Balancing & Proxies]]
 - [ ] Pool size tuned: max idle connections, max connections per host
 - [ ] Don't open new connection per request
-- [ ] **Request retry on connection failure** — only when the operation and failure window are safe to retry; HTTP idempotency is not a substitute for application-level idempotency keys
+- [ ] **Request retry on connection failure:** only when the operation and failure window are safe to retry; HTTP idempotency is not a substitute for application-level idempotency keys
 
 ---
 
 ## Deployment
 
 - [ ] **Edge LB is NOT a single point of failure** → [[microservice-infrastructure]]
-- [ ] HA/failure-domain design selected — multiple instances, floating IP/DNS failover, managed HA, or an explicitly accepted single-instance risk
+- [ ] HA/failure-domain design selected: multiple instances, floating IP/DNS failover, managed HA, or an explicitly accepted single-instance risk
 - [ ] Graceful draining: stop accepting new connections → drain existing → shutdown
-- [ ] Zero-downtime config reload — no dropped connections
-- [ ] Config in git — routes, upstreams, health check rules versioned
+- [ ] Zero-downtime config reload: no dropped connections
+- [ ] Config in git: routes, upstreams, health check rules versioned
 
 ---
 
@@ -117,10 +117,10 @@ last_updated: 2026-08-06
 ## Testing
 
 - [ ] Distribution behavior tested using realistic concurrency, connection reuse, request duration, and the selected algorithm; define an acceptable tolerance
-- [ ] Unhealthy instance removed — traffic stops within configured threshold
-- [ ] Recovered instance re-added — traffic resumes after healthy threshold
-- [ ] Kill one LB instance — secondary takes over without dropped requests
-- [ ] Graceful draining — active connections complete before shutdown
+- [ ] Unhealthy instance removed: traffic stops within configured threshold
+- [ ] Recovered instance re-added: traffic resumes after healthy threshold
+- [ ] Kill one LB instance: secondary takes over without dropped requests
+- [ ] Graceful draining: active connections complete before shutdown
 - [ ] Load test: throughput through LB vs direct to service; overhead is within the documented latency budget
 
 ---
@@ -152,6 +152,6 @@ last_updated: 2026-08-06
 
 ## Sources
 
-- [[03 Load Balancing & Proxies]] — L4 vs L7, algorithms, NGINX/HAProxy config
-- [[microservice-infrastructure]] — full infrastructure reference (Part 2)
-- [[Microservice Launch]] — system-wide launch checklist
+- [[03 Load Balancing & Proxies]]: L4 vs L7, algorithms, NGINX/HAProxy config
+- [[microservice-infrastructure]]: full infrastructure reference (Part 2)
+- [[Microservice Launch]]: system-wide launch checklist

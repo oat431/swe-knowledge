@@ -7,7 +7,7 @@ tags:
   - software-engineering
 ---
 
-# SWEBOK v4 — Book Checklist
+# SWEBOK v4: Book Checklist
 
 > **Purpose:** Books to fill gaps in the vault's Software Engineering knowledge base.
 > **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] (IEEE Computer Society, 2024)
@@ -17,15 +17,15 @@ tags:
 
 | Icon | Level | Meaning |
 |------|-------|---------|
-| 🔴 | **Core** | Essential — read this one first for the topic |
+| 🔴 | **Core** | Essential ;  read this one first for the topic |
 | 🟡 | **Supplementary** | Adds depth and breadth after the core book |
-| 🟢 | **Deep Dive** | Specialized / reference — pick up as needed |
+| 🟢 | **Deep Dive** | Specialized / reference ;  pick up as needed |
 
 ---
 
-## ❌ Missing — No Learning Notes
+## ❌ Missing: No Learning Notes
 
-### 01 — Software Requirements
+### 01: Software Requirements
 
 > Suggested vault folder: `programming-note/Requirements Engineering/`
 
@@ -39,7 +39,7 @@ tags:
 
 ---
 
-### 07 — Software Maintenance
+### 07: Software Maintenance
 
 > Suggested vault folder: `programming-note/Software Maintenance/`
 
@@ -53,7 +53,7 @@ tags:
 
 ---
 
-### 09 — Software Engineering Management
+### 09: Software Engineering Management
 
 > Suggested vault folder: `software-engineering-note/SE Management/`
 
@@ -67,7 +67,7 @@ tags:
 
 ---
 
-### 11 — Software Engineering Models & Methods
+### 11: Software Engineering Models & Methods
 
 > Suggested vault folder: `software-engineering-note/SE Models and Methods/`
 
@@ -80,7 +80,7 @@ tags:
 
 ---
 
-### 15 — Software Engineering Economics
+### 15: Software Engineering Economics
 
 > Suggested vault folder: `software-engineering-note/SE Economics/`
 
@@ -93,7 +93,7 @@ tags:
 
 ---
 
-### 18 — Engineering Foundations
+### 18: Engineering Foundations
 
 > Suggested vault folder: `software-engineering-note/Engineering Foundations/`
 
@@ -106,9 +106,9 @@ tags:
 
 ---
 
-## ⚠️ Partially Covered — Need Depth
+## ⚠️ Partially Covered: Need Depth
 
-### 02 — Software Architecture
+### 02: Software Architecture
 
 > Suggested vault folder: `software-engineering-note/Software Architecture/`
 
@@ -121,7 +121,7 @@ tags:
 
 ---
 
-### 04 — Software Construction
+### 04: Software Construction
 
 > Already covered by `software-engineering-note/Software Design/` + `programming-note/Clean Code/`
 
@@ -134,7 +134,7 @@ tags:
 
 ---
 
-### 06 — Software Engineering Operations
+### 06: Software Engineering Operations
 
 > Suggested vault folder: `programming-note/DevOps/` (expand existing)
 
@@ -148,7 +148,7 @@ tags:
 
 ---
 
-### 08 — Software Configuration Management
+### 08: Software Configuration Management
 
 > Suggested vault folder: `programming-note/SCM/` (expand beyond Version Control)
 
@@ -161,7 +161,7 @@ tags:
 
 ---
 
-### 10 — Software Engineering Process
+### 10: Software Engineering Process
 
 > Suggested vault folder: `software-engineering-note/SE Process/`
 
@@ -174,7 +174,7 @@ tags:
 
 ---
 
-### 12 — Software Quality
+### 12: Software Quality
 
 > Suggested vault folder: `programming-note/Software Quality/` (expand beyond QA testing)
 
@@ -196,27 +196,27 @@ tags:
 | ⚠️ Partial (6 KAs) | 24 | 2 |
 | **Total** | **47** | **2** |
 
-### Top 15 — Start Here
+### Top 15: Start Here
 
-If starting from scratch, grab these **one per gap**:
+If starting from scratch, grab these **one per gap:**
 
 | # | KA | Book | Pages | Priority |
 |---|-----|------|:-----:|:--------:|
-| 1 | 01 Requirements | Software Requirements — Wiegers & Beatty | 672 | 🔴 |
-| 2 | 07 Maintenance | Working Effectively with Legacy Code — Feathers | 464 | 🔴 |
-| 3 | 06 Operations | The DevOps Handbook — Kim et al. | 480 | 🔴 |
-| 4 | 09 SE Management | Peopleware — DeMarco & Lister | 272 | 🔴 |
-| 5 | 02 Architecture | Software Architecture in Practice — Bass et al. | 464 | 🔴 |
-| 6 | 04 Construction | Code Complete — McConnell | 960 | 🔴 |
-| 7 | 12 Quality | Software Quality Engineering — Tian | 560 | 🔴 |
-| 8 | 15 Economics | Software Estimation — McConnell | 368 | 🟡 |
-| 9 | 11 Models & Methods | Software Engineering: A Practitioner's Approach — Pressman | 880 | 🟡 |
-| 10 | 10 Process | CMMI 3rd Ed. — Chrissis et al. | 688 | 🟡 |
-| 11 | 08 Config Mgmt | Continuous Delivery — Humble & Farley | 512 | 🟡 |
-| 12 | 18 Eng Foundations | Software Engineering: Theory and Practice — Pfleeger | 560 | 🟡 |
-| 13 | 08 Config Mgmt | SCM Patterns — Berczuk & Appleton | 256 | 🟢 |
-| 14 | 11 Models & Methods | Domain-Driven Design — Evans | 560 | 🟢 |
-| 15 | 06 Operations | Site Reliability Engineering — Google | 558 | 🟢 |
+| 1 | 01 Requirements | Software Requirements ;  Wiegers & Beatty | 672 | 🔴 |
+| 2 | 07 Maintenance | Working Effectively with Legacy Code ;  Feathers | 464 | 🔴 |
+| 3 | 06 Operations | The DevOps Handbook ;  Kim et al. | 480 | 🔴 |
+| 4 | 09 SE Management | Peopleware ;  DeMarco & Lister | 272 | 🔴 |
+| 5 | 02 Architecture | Software Architecture in Practice ;  Bass et al. | 464 | 🔴 |
+| 6 | 04 Construction | Code Complete ;  McConnell | 960 | 🔴 |
+| 7 | 12 Quality | Software Quality Engineering ;  Tian | 560 | 🔴 |
+| 8 | 15 Economics | Software Estimation ;  McConnell | 368 | 🟡 |
+| 9 | 11 Models & Methods | Software Engineering: A Practitioner's Approach ;  Pressman | 880 | 🟡 |
+| 10 | 10 Process | CMMI 3rd Ed. ;  Chrissis et al. | 688 | 🟡 |
+| 11 | 08 Config Mgmt | Continuous Delivery ;  Humble & Farley | 512 | 🟡 |
+| 12 | 18 Eng Foundations | Software Engineering: Theory and Practice ;  Pfleeger | 560 | 🟡 |
+| 13 | 08 Config Mgmt | SCM Patterns ;  Berczuk & Appleton | 256 | 🟢 |
+| 14 | 11 Models & Methods | Domain-Driven Design ;  Evans | 560 | 🟢 |
+| 15 | 06 Operations | Site Reliability Engineering ;  Google | 558 | 🟢 |
 
 ---
 

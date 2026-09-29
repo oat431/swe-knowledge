@@ -10,18 +10,18 @@
 
 Before running any performance test:
 
-- [ ] **Baseline established** — Single-user test passes, response times < 100ms for health endpoints
-- [ ] **Environment isolated** — Test environment matches production (CPU, memory, DB, network)
-- [ ] **Data prepared** — Test data volume matches expected production load (10K+ users, 100K+ records)
-- [ ] **Thresholds defined** — p95 latency, error rate, throughput targets documented
-- [ ] **Monitoring active** — Application metrics (CPU, memory, DB connections) being collected
-- [ ] **Rollback plan** — Database cleanup script ready, can restore to pre-test state
+- [ ] **Baseline established:** Single-user test passes, response times < 100ms for health endpoints
+- [ ] **Environment isolated:** Test environment matches production (CPU, memory, DB, network)
+- [ ] **Data prepared:** Test data volume matches expected production load (10K+ users, 100K+ records)
+- [ ] **Thresholds defined:** p95 latency, error rate, throughput targets documented
+- [ ] **Monitoring active:** Application metrics (CPU, memory, DB connections) being collected
+- [ ] **Rollback plan:** Database cleanup script ready, can restore to pre-test state
 
 ---
 
 ## 1. Setup & Installation
 
-- [ ] **Install k6** — Choose your platform:
+- [ ] **Install k6:** Choose your platform:
   ```bash
   # macOS (Homebrew)
   brew install k6
@@ -41,7 +41,7 @@ Before running any performance test:
   docker run --rm -i grafana/k6 run - <script.js
   ```
 
-- [ ] **Verify installation**:
+- [ ] **Verify installation:**
   ```bash
   k6 version
   # Expected: k6 v0.50.0 (or newer)
@@ -55,7 +55,7 @@ Before running any performance test:
   xk6 build --with github.com/grafana/xk6-dashboard
   ```
 
-- [ ] **Project structure**:
+- [ ] **Project structure:**
   ```
   performance-tests/
   ├── scripts/
@@ -82,7 +82,7 @@ Before running any performance test:
 
 k6 scripts have four lifecycle functions. Understanding the execution model is critical.
 
-- [ ] **Script anatomy** — Complete template:
+- [ ] **Script anatomy:** Complete template:
   ```javascript
   import http from 'k6/http';
   import { check, sleep } from 'k6';
@@ -149,7 +149,7 @@ k6 scripts have four lifecycle functions. Understanding the execution model is c
   }
   ```
 
-- [ ] **Init context rules** — What you CAN do:
+- [ ] **Init context rules:** What you CAN do:
   - Import modules (`import http from 'k6/http'`)
   - Load files from disk (`open('./data/users.csv')`)
   - Define custom metrics
@@ -160,7 +160,7 @@ k6 scripts have four lifecycle functions. Understanding the execution model is c
   - Access VU-specific data
   - Use `console.log` (use it in default() instead)
 
-- [ ] **Data passing between lifecycle functions**:
+- [ ] **Data passing between lifecycle functions:**
   ```javascript
   export function setup() {
     return {
@@ -186,7 +186,7 @@ k6 scripts have four lifecycle functions. Understanding the execution model is c
 
 Scenarios define how VUs (virtual users) are scheduled over time. Choose based on your test goal.
 
-- [ ] **Stages (simple ramp-up/down)** — Gradual load increase:
+- [ ] **Stages (simple ramp-up/down):** Gradual load increase:
   ```javascript
   export const options = {
     stages: [
@@ -199,7 +199,7 @@ Scenarios define how VUs (virtual users) are scheduled over time. Choose based o
   };
   ```
 
-- [ ] **Ramping VUs** — Precise control over VU count:
+- [ ] **Ramping VUs:** Precise control over VU count:
   ```javascript
   export const options = {
     scenarios: {
@@ -217,7 +217,7 @@ Scenarios define how VUs (virtual users) are scheduled over time. Choose based o
   };
   ```
 
-- [ ] **Constant arrival rate** — Fixed requests per second (RPS):
+- [ ] **Constant arrival rate:** Fixed requests per second (RPS):
   ```javascript
   export const options = {
     scenarios: {
@@ -232,9 +232,9 @@ Scenarios define how VUs (virtual users) are scheduled over time. Choose based o
     },
   };
   ```
-  **Use when**: You want to simulate a fixed request rate regardless of response time. k6 will spawn more VUs if responses are slow.
+  **Use when:** You want to simulate a fixed request rate regardless of response time. k6 will spawn more VUs if responses are slow.
 
-- [ ] **Ramping arrival rate** — Gradually increase RPS:
+- [ ] **Ramping arrival rate:** Gradually increase RPS:
   ```javascript
   export const options = {
     scenarios: {
@@ -256,7 +256,7 @@ Scenarios define how VUs (virtual users) are scheduled over time. Choose based o
   };
   ```
 
-- [ ] **Per-VU iterations** — Each VU runs a fixed number of iterations:
+- [ ] **Per-VU iterations:** Each VU runs a fixed number of iterations:
   ```javascript
   export const options = {
     scenarios: {
@@ -270,7 +270,7 @@ Scenarios define how VUs (virtual users) are scheduled over time. Choose based o
   };
   ```
 
-- [ ] **Constant VUs** — Fixed number of VUs for entire duration:
+- [ ] **Constant VUs:** Fixed number of VUs for entire duration:
   ```javascript
   export const options = {
     scenarios: {
@@ -283,7 +283,7 @@ Scenarios define how VUs (virtual users) are scheduled over time. Choose based o
   };
   ```
 
-- [ ] **Shared iterations** — VUs share a pool of iterations:
+- [ ] **Shared iterations:** VUs share a pool of iterations:
   ```javascript
   export const options = {
     scenarios: {
@@ -297,7 +297,7 @@ Scenarios define how VUs (virtual users) are scheduled over time. Choose based o
   };
   ```
 
-- [ ] **Multiple scenarios in one script** — Test different endpoints simultaneously:
+- [ ] **Multiple scenarios in one script:** Test different endpoints simultaneously:
   ```javascript
   export const options = {
     scenarios: {
@@ -341,7 +341,7 @@ Scenarios define how VUs (virtual users) are scheduled over time. Choose based o
 
 Thresholds are pass/fail criteria. If any threshold fails, k6 exits with non-zero status (useful for CI).
 
-- [ ] **Standard thresholds** — Common SLOs:
+- [ ] **Standard thresholds:** Common SLOs:
   ```javascript
   export const options = {
     thresholds: {
@@ -353,7 +353,7 @@ Thresholds are pass/fail criteria. If any threshold fails, k6 exits with non-zer
   };
   ```
 
-- [ ] **Threshold operators**:
+- [ ] **Threshold operators:**
   ```javascript
   thresholds: {
     http_req_duration: [
@@ -368,7 +368,7 @@ Thresholds are pass/fail criteria. If any threshold fails, k6 exits with non-zer
   }
   ```
 
-- [ ] **Threshold for specific requests** — Tag-based filtering:
+- [ ] **Threshold for specific requests:** Tag-based filtering:
   ```javascript
   export const options = {
     thresholds: {
@@ -389,7 +389,7 @@ Thresholds are pass/fail criteria. If any threshold fails, k6 exits with non-zer
   }
   ```
 
-- [ ] **Custom metric thresholds**:
+- [ ] **Custom metric thresholds:**
   ```javascript
   import { Trend, Rate } from 'k6/metrics';
   
@@ -412,7 +412,7 @@ Thresholds are pass/fail criteria. If any threshold fails, k6 exits with non-zer
   }
   ```
 
-- [ ] **Abort on threshold failure** — Stop test immediately:
+- [ ] **Abort on threshold failure:** Stop test immediately:
   ```javascript
   export const options = {
     thresholds: {
@@ -431,7 +431,7 @@ Thresholds are pass/fail criteria. If any threshold fails, k6 exits with non-zer
 
 k6 provides four metric types for tracking custom performance data.
 
-- [ ] **Trend** — Tracks min, max, avg, percentiles (like `http_req_duration`):
+- [ ] **Trend:** Tracks min, max, avg, percentiles (like `http_req_duration`):
   ```javascript
   import { Trend } from 'k6/metrics';
   
@@ -449,7 +449,7 @@ k6 provides four metric types for tracking custom performance data.
   }
   ```
 
-- [ ] **Counter** — Cumulative sum (total requests, errors, bytes):
+- [ ] **Counter:** Cumulative sum (total requests, errors, bytes):
   ```javascript
   import { Counter } from 'k6/metrics';
   
@@ -468,7 +468,7 @@ k6 provides four metric types for tracking custom performance data.
   }
   ```
 
-- [ ] **Gauge** — Current value, tracks min/max (active connections, queue size):
+- [ ] **Gauge:** Current value, tracks min/max (active connections, queue size):
   ```javascript
   import { Gauge } from 'k6/metrics';
   
@@ -482,7 +482,7 @@ k6 provides four metric types for tracking custom performance data.
   }
   ```
 
-- [ ] **Rate** — Percentage of non-zero values (error rate, success rate):
+- [ ] **Rate:** Percentage of non-zero values (error rate, success rate):
   ```javascript
   import { Rate } from 'k6/metrics';
   
@@ -505,7 +505,7 @@ k6 provides four metric types for tracking custom performance data.
   }
   ```
 
-- [ ] **Combining metrics** — Full example:
+- [ ] **Combining metrics:** Full example:
   ```javascript
   import { Trend, Counter, Gauge, Rate } from 'k6/metrics';
   
@@ -542,7 +542,7 @@ k6 provides four metric types for tracking custom performance data.
 
 Avoid testing with the same data every iteration. Use parameterization to simulate realistic traffic.
 
-- [ ] **SharedArray** — Memory-efficient data sharing across VUs:
+- [ ] **SharedArray:** Memory-efficient data sharing across VUs:
   ```javascript
   import { SharedArray } from 'k6/data';
   
@@ -565,7 +565,7 @@ Avoid testing with the same data every iteration. Use parameterization to simula
   }
   ```
 
-- [ ] **CSV parsing** — Load structured data:
+- [ ] **CSV parsing:** Load structured data:
   ```javascript
   import { SharedArray } from 'k6/data';
   import papaparse from 'https://jslib.k6.io/papaparse/5.1.1/index.js';
@@ -587,7 +587,7 @@ Avoid testing with the same data every iteration. Use parameterization to simula
   }
   ```
 
-- [ ] **JSON data files**:
+- [ ] **JSON data files:**
   ```javascript
   import { SharedArray } from 'k6/data';
   
@@ -609,7 +609,7 @@ Avoid testing with the same data every iteration. Use parameterization to simula
   }
   ```
 
-- [ ] **Random data generation** — Faker-style:
+- [ ] **Random data generation:** Faker-style:
   ```javascript
   import { Faker } from 'https://cdn.jsdelivr.net/npm/@faker-js/faker@8.4.0/+esm';
   
@@ -632,7 +632,7 @@ Avoid testing with the same data every iteration. Use parameterization to simula
   }
   ```
 
-- [ ] **Environment-based data** — Different data per environment:
+- [ ] **Environment-based data:** Different data per environment:
   ```javascript
   const ENV = __ENV.ENVIRONMENT || 'staging';
   
@@ -659,7 +659,7 @@ Avoid testing with the same data every iteration. Use parameterization to simula
 
 Extract dynamic values (tokens, IDs, CSRF) from responses and use in subsequent requests.
 
-- [ ] **Extract JSON values**:
+- [ ] **Extract JSON values:**
   ```javascript
   export default function() {
     // Login and extract token
@@ -682,7 +682,7 @@ Extract dynamic values (tokens, IDs, CSRF) from responses and use in subsequent 
   }
   ```
 
-- [ ] **Extract from HTML (CSRF tokens, etc.)**:
+- [ ] **Extract from HTML (CSRF tokens, etc.):**
   ```javascript
   import { parseHTML } from 'k6/html';
   
@@ -701,7 +701,7 @@ Extract dynamic values (tokens, IDs, CSRF) from responses and use in subsequent 
   }
   ```
 
-- [ ] **Extract array elements**:
+- [ ] **Extract array elements:**
   ```javascript
   export default function() {
     // Get list of products
@@ -716,7 +716,7 @@ Extract dynamic values (tokens, IDs, CSRF) from responses and use in subsequent 
   }
   ```
 
-- [ ] **Chained requests** — Multi-step workflow:
+- [ ] **Chained requests:** Multi-step workflow:
   ```javascript
   export default function() {
     // Step 1: Create order
@@ -750,7 +750,7 @@ Extract dynamic values (tokens, IDs, CSRF) from responses and use in subsequent 
 
 Real users don't hammer the server. Add delays to simulate realistic behavior.
 
-- [ ] **Fixed sleep** — Constant delay:
+- [ ] **Fixed sleep:** Constant delay:
   ```javascript
   import { sleep } from 'k6';
   
@@ -760,7 +760,7 @@ Real users don't hammer the server. Add delays to simulate realistic behavior.
   }
   ```
 
-- [ ] **Random sleep** — Variable delay (more realistic):
+- [ ] **Random sleep:** Variable delay (more realistic):
   ```javascript
   import { sleep } from 'k6';
   import { randomIntBetween } from 'https://jslib.k6.io/k6-utils/1.4.0/index.js';
@@ -774,7 +774,7 @@ Real users don't hammer the server. Add delays to simulate realistic behavior.
   }
   ```
 
-- [ ] **Pacing** — Control iteration rate:
+- [ ] **Pacing:** Control iteration rate:
   ```javascript
   import { pace } from 'https://jslib.k6.io/k6-utils/1.4.0/index.js';
   
@@ -791,7 +791,7 @@ Real users don't hammer the server. Add delays to simulate realistic behavior.
   }
   ```
 
-- [ ] **User journey pacing** — Different delays per action:
+- [ ] **User journey pacing:** Different delays per action:
   ```javascript
   export default function() {
     // Browse products (quick)
@@ -812,7 +812,7 @@ Real users don't hammer the server. Add delays to simulate realistic behavior.
   }
   ```
 
-- [ ] **No sleep (stress testing)** — Maximum load:
+- [ ] **No sleep (stress testing):** Maximum load:
   ```javascript
   // For stress/breakpoint tests, omit sleep to find limits
   export default function() {
@@ -827,16 +827,16 @@ Real users don't hammer the server. Add delays to simulate realistic behavior.
 
 Different test types answer different questions. Use the right one for your goal.
 
-- [ ] **Smoke test** — Quick validation (30s-1m):
+- [ ] **Smoke test:** Quick validation (30s-1m):
   ```javascript
   export const options = {
     vus: 1,
     duration: '30s',
   };
   ```
-  **Goal**: Verify script works, no syntax errors, endpoints respond.
+  **Goal:** Verify script works, no syntax errors, endpoints respond.
 
-- [ ] **Load test** — Simulate expected production load (10-30m):
+- [ ] **Load test:** Simulate expected production load (10-30m):
   ```javascript
   export const options = {
     stages: [
@@ -850,9 +850,9 @@ Different test types answer different questions. Use the right one for your goal
     },
   };
   ```
-  **Goal**: Validate system handles expected load within SLOs.
+  **Goal:** Validate system handles expected load within SLOs.
 
-- [ ] **Stress test** — Find breaking point (30m-1h):
+- [ ] **Stress test:** Find breaking point (30m-1h):
   ```javascript
   export const options = {
     stages: [
@@ -864,9 +864,9 @@ Different test types answer different questions. Use the right one for your goal
     ],
   };
   ```
-  **Goal**: Identify maximum capacity, observe failure modes.
+  **Goal:** Identify maximum capacity, observe failure modes.
 
-- [ ] **Soak test** — Long duration (4h-24h):
+- [ ] **Soak test:** Long duration (4h-24h):
   ```javascript
   export const options = {
     stages: [
@@ -876,9 +876,9 @@ Different test types answer different questions. Use the right one for your goal
     ],
   };
   ```
-  **Goal**: Detect memory leaks, connection pool exhaustion, resource degradation.
+  **Goal:** Detect memory leaks, connection pool exhaustion, resource degradation.
 
-- [ ] **Spike test** — Sudden load surge (5-10m):
+- [ ] **Spike test:** Sudden load surge (5-10m):
   ```javascript
   export const options = {
     stages: [
@@ -890,9 +890,9 @@ Different test types answer different questions. Use the right one for your goal
     ],
   };
   ```
-  **Goal**: Test auto-scaling, circuit breakers, graceful degradation.
+  **Goal:** Test auto-scaling, circuit breakers, graceful degradation.
 
-- [ ] **Breakpoint test** — Push until failure:
+- [ ] **Breakpoint test:** Push until failure:
   ```javascript
   export const options = {
     scenarios: {
@@ -913,7 +913,7 @@ Different test types answer different questions. Use the right one for your goal
     },
   };
   ```
-  **Goal**: Find exact breaking point (max RPS before degradation).
+  **Goal:** Find exact breaking point (max RPS before degradation).
 
 ---
 
@@ -921,7 +921,7 @@ Different test types answer different questions. Use the right one for your goal
 
 Scale beyond a single machine for large-scale tests.
 
-- [ ] **k6 Cloud** — Managed distributed testing:
+- [ ] **k6 Cloud:** Managed distributed testing:
   ```bash
   # Install k6 cloud CLI
   k6 cloud script.js
@@ -930,9 +930,9 @@ Scale beyond a single machine for large-scale tests.
   export K6_CLOUD_TOKEN=your_token_here
   k6 cloud --project-id 12345 script.js
   ```
-  **Features**: Multi-region load generation, real-time dashboards, historical trends.
+  **Features:** Multi-region load generation, real-time dashboards, historical trends.
 
-- [ ] **k6 Operator (Kubernetes)** — Run distributed tests on K8s:
+- [ ] **k6 Operator (Kubernetes):** Run distributed tests on K8s:
   ```yaml
   # test-job.yaml
   apiVersion: k6.io/v1alpha1
@@ -965,12 +965,12 @@ Scale beyond a single machine for large-scale tests.
   kubectl logs -l k6-test=load-test -f
   ```
 
-- [ ] **ConfigMap for test script**:
+- [ ] **ConfigMap for test script:**
   ```bash
   kubectl create configmap k6-test-script --from-file=load-test.js
   ```
 
-- [ ] **Multi-region testing** — Deploy pods in different regions:
+- [ ] **Multi-region testing:** Deploy pods in different regions:
   ```yaml
   spec:
     parallelism: 20
@@ -980,7 +980,7 @@ Scale beyond a single machine for large-scale tests.
   ```
   Run multiple TestRun resources in different regions for global load.
 
-- [ ] **Collecting results** — Aggregate from all pods:
+- [ ] **Collecting results:** Aggregate from all pods:
   ```yaml
   spec:
     arguments: "--out csv=/tmp/results.csv"
@@ -1000,7 +1000,7 @@ Scale beyond a single machine for large-scale tests.
 
 Fail builds when performance regresses.
 
-- [ ] **GitHub Actions** — Basic workflow:
+- [ ] **GitHub Actions:** Basic workflow:
   ```yaml
   name: Performance Tests
   
@@ -1037,13 +1037,13 @@ Fail builds when performance regresses.
             path: results.json
   ```
 
-- [ ] **Fail on threshold** — k6 exits with non-zero status when thresholds fail:
+- [ ] **Fail on threshold:** k6 exits with non-zero status when thresholds fail:
   ```bash
   # k6 automatically returns exit code 99 if thresholds fail
   k6 run script.js || exit 1
   ```
 
-- [ ] **JSON output for analysis**:
+- [ ] **JSON output for analysis:**
   ```yaml
   - name: Run k6
     run: k6 run --out json=results.json scripts/load.js
@@ -1054,7 +1054,7 @@ Fail builds when performance regresses.
       jq -r '.metrics.http_req_duration.values["p(95)"]' results.json
   ```
 
-- [ ] **Conditional thresholds** — Different thresholds per branch:
+- [ ] **Conditional thresholds:** Different thresholds per branch:
   ```javascript
   const isMain = __ENV.GITHUB_REF === 'refs/heads/main';
   
@@ -1066,7 +1066,7 @@ Fail builds when performance regresses.
   };
   ```
 
-- [ ] **GitLab CI**:
+- [ ] **GitLab CI:**
   ```yaml
   performance_test:
     image: grafana/k6:latest
@@ -1078,7 +1078,7 @@ Fail builds when performance regresses.
       when: always
   ```
 
-- [ ] **Jenkins Pipeline**:
+- [ ] **Jenkins Pipeline:**
   ```groovy
   pipeline {
     agent any
@@ -1103,12 +1103,12 @@ Fail builds when performance regresses.
 
 Export results for analysis and dashboards.
 
-- [ ] **HTML report** — Built-in summary:
+- [ ] **HTML report:** Built-in summary:
   ```bash
   k6 run --out html=report.html scripts/load.js
   ```
 
-- [ ] **JSON output** — For custom analysis:
+- [ ] **JSON output:** For custom analysis:
   ```bash
   k6 run --out json=results.json scripts/load.js
   
@@ -1116,7 +1116,7 @@ Export results for analysis and dashboards.
   jq 'select(.type=="Point") | select(.metric=="http_req_duration") | .data.value' results.json
   ```
 
-- [ ] **Prometheus remote write** — Real-time metrics to Prometheus:
+- [ ] **Prometheus remote write:** Real-time metrics to Prometheus:
   ```bash
   # Build k6 with Prometheus extension
   xk6 build --with github.com/grafana/xk6-output-prometheus-remote
@@ -1127,17 +1127,17 @@ Export results for analysis and dashboards.
   ./k6 run scripts/load.js
   ```
 
-- [ ] **InfluxDB** — Time-series storage:
+- [ ] **InfluxDB:** Time-series storage:
   ```bash
   k6 run --out influxdb=http://localhost:8086/k6 scripts/load.js
   ```
 
-- [ ] **Grafana dashboards** — Pre-built dashboard:
+- [ ] **Grafana dashboards:** Pre-built dashboard:
   1. Import dashboard ID `2587` from Grafana.com
   2. Connect to InfluxDB/Prometheus data source
   3. Real-time visualization of all k6 metrics
 
-- [ ] **Custom summary** — Control console output:
+- [ ] **Custom summary:** Control console output:
   ```javascript
   export function handleSummary(data) {
     return {
@@ -1151,7 +1151,7 @@ Export results for analysis and dashboards.
   import { htmlSummary } from 'https://jslib.k6.io/k6-summary/0.0.2/index.js';
   ```
 
-- [ ] **Slack notifications** — Alert on threshold failures:
+- [ ] **Slack notifications:** Alert on threshold failures:
   ```javascript
   import http from 'k6/http';
   
@@ -1178,7 +1178,7 @@ Export results for analysis and dashboards.
 
 Real-world patterns for Spring Boot APIs and Go services.
 
-- [ ] **Authentication flow** — Login once, reuse token:
+- [ ] **Authentication flow:** Login once, reuse token:
   ```javascript
   import { SharedArray } from 'k6/data';
   
@@ -1206,7 +1206,7 @@ Real-world patterns for Spring Boot APIs and Go services.
   }
   ```
 
-- [ ] **Database connection pool testing** — Monitor active connections:
+- [ ] **Database connection pool testing:** Monitor active connections:
   ```javascript
   import { Gauge } from 'k6/metrics';
   
@@ -1226,7 +1226,7 @@ Real-world patterns for Spring Boot APIs and Go services.
   }
   ```
 
-- [ ] **Circuit breaker testing** — Verify resilience patterns:
+- [ ] **Circuit breaker testing:** Verify resilience patterns:
   ```javascript
   import { Rate } from 'k6/metrics';
   
@@ -1249,7 +1249,7 @@ Real-world patterns for Spring Boot APIs and Go services.
   }
   ```
 
-- [ ] **Cache effectiveness** — Measure cache hit rate:
+- [ ] **Cache effectiveness:** Measure cache hit rate:
   ```javascript
   import { Rate } from 'k6/metrics';
   
@@ -1269,7 +1269,7 @@ Real-world patterns for Spring Boot APIs and Go services.
   }
   ```
 
-- [ ] **Pagination load** — Test list endpoints with large datasets:
+- [ ] **Pagination load:** Test list endpoints with large datasets:
   ```javascript
   export default function() {
     const page = Math.floor(Math.random() * 100) + 1;  // Random page 1-100
@@ -1290,41 +1290,42 @@ Real-world patterns for Spring Boot APIs and Go services.
 
 Avoid these mistakes that invalidate test results.
 
-- [ ] **Testing against shared environments** — Other users/teams affect results. Use isolated test environment.
+- [ ] **Testing against shared environments:** Other users/teams affect results. Use isolated test environment.
 
-- [ ] **Insufficient test data** — Testing with 10 users when production has 100K. Prepare realistic data volume.
+- [ ] **Insufficient test data:** Testing with 10 users when production has 100K. Prepare realistic data volume.
 
-- [ ] **Ignoring think time** — VUs hammer server without delays. Add realistic sleep() between requests.
+- [ ] **Ignoring think time:** VUs hammer server without delays. Add realistic sleep() between requests.
 
-- [ ] **Single endpoint testing** — Only testing `/api/health`. Test realistic user journeys with multiple endpoints.
+- [ ] **Single endpoint testing:** Only testing `/api/health`. Test realistic user journeys with multiple endpoints.
 
-- [ ] **No baseline** — Running tests without knowing current performance. Establish baseline before optimization.
+- [ ] **No baseline:** Running tests without knowing current performance. Establish baseline before optimization.
 
-- [ ] **Ignoring resource metrics** — Only looking at response time. Monitor CPU, memory, DB connections, network I/O.
+- [ ] **Ignoring resource metrics:** Only looking at response time. Monitor CPU, memory, DB connections, network I/O.
 
-- [ ] **Testing from wrong location** — Load generator far from server. Use same region/VPC as production.
+- [ ] **Testing from wrong location:** Load generator far from server. Use same region/VPC as production.
 
-- [ ] **Not warming up** — First requests are slow (JIT, connection pools, caches). Use setup() or warm-up stage.
+- [ ] **Not warming up:** First requests are slow (JIT, connection pools, caches). Use setup() or warm-up stage.
 
-- [ ] **Hardcoded data** — All VUs use same user/product. Use SharedArray with varied data.
+- [ ] **Hardcoded data:** All VUs use same user/product. Use SharedArray with varied data.
 
-- [ ] **Ignoring error responses** — Not checking if requests succeeded. Always use check() to validate responses.
+- [ ] **Ignoring error responses:** Not checking if requests succeeded. Always use check() to validate responses.
 
-- [ ] **Too short duration** — 30s test doesn't reveal memory leaks. Use 10m+ for load tests, 4h+ for soak tests.
+- [ ] **Too short duration:** 30s test doesn't reveal memory leaks. Use 10m+ for load tests, 4h+ for soak tests.
 
-- [ ] **Not cleaning up** — Test data accumulates, affects future tests. Use teardown() or cleanup scripts.
+- [ ] **Not cleaning up:** Test data accumulates, affects future tests. Use teardown() or cleanup scripts.
 
-- [ ] **Ignoring network limits** — Load generator saturates its own network/CPU. Monitor load generator resources.
+- [ ] **Ignoring network limits:** Load generator saturates its own network/CPU. Monitor load generator resources.
 
-- [ ] **No version control** — Scripts not in git. Track scripts, data, thresholds in version control.
+- [ ] **No version control:** Scripts not in git. Track scripts, data, thresholds in version control.
 
-- [ ] **One-off testing** — Only running tests manually. Integrate into CI/CD pipeline.
+- [ ] **One-off testing:** Only running tests manually. Integrate into CI/CD pipeline.
 
 ---
 
 ## Tier Matrix
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Performance Testing] --> B{Test Type?}
     
@@ -1362,6 +1363,7 @@ flowchart TD
     VERIFY --> G
 ```
 
+
 | Tier | Test Type | Duration | VUs | Goal | When to Use |
 |------|-----------|----------|-----|------|-------------|
 | **T1** | Smoke | 30s | 1 | Validate script | Before every test run |
@@ -1375,7 +1377,7 @@ flowchart TD
 
 ## Quick Start Examples
 
-- [ ] **Minimal smoke test**:
+- [ ] **Minimal smoke test:**
   ```javascript
   import http from 'k6/http';
   import { check } from 'k6';
@@ -1391,7 +1393,7 @@ flowchart TD
   }
   ```
 
-- [ ] **Basic load test**:
+- [ ] **Basic load test:**
   ```javascript
   import http from 'k6/http';
   import { check, sleep } from 'k6';
@@ -1415,7 +1417,7 @@ flowchart TD
   }
   ```
 
-- [ ] **Run commands**:
+- [ ] **Run commands:**
   ```bash
   # Smoke test
   k6 run scripts/smoke.js
@@ -1440,38 +1442,38 @@ flowchart TD
 
 ## Resources
 
-- **Official docs**: https://k6.io/docs/
-- **Examples**: https://github.com/grafana/k6/tree/master/examples
-- **Grafana dashboards**: https://grafana.com/grafana/dashboards/2587
-- **k6 extensions**: https://grafana.com/docs/k6/latest/extensions/
-- **Community**: https://community.grafana.com/c/k6/
+- **Official docs:** https://k6.io/docs/
+- **Examples:** https://github.com/grafana/k6/tree/master/examples
+- **Grafana dashboards:** https://grafana.com/grafana/dashboards/2587
+- **k6 extensions:** https://grafana.com/docs/k6/latest/extensions/
+- **Community:** https://community.grafana.com/c/k6/
 
 ---
 
 ## Checklist Summary
 
-**Before test**:
+**Before test:**
 - [ ] Environment isolated and matches production
 - [ ] Test data prepared (realistic volume)
 - [ ] Baseline performance documented
 - [ ] Monitoring active (app + infrastructure)
 - [ ] Cleanup script ready
 
-**During test**:
+**During test:**
 - [ ] Smoke test passes first
 - [ ] Thresholds defined and meaningful
 - [ ] Think time included (except stress tests)
 - [ ] Response validation with check()
 - [ ] Resource metrics monitored
 
-**After test**:
+**After test:**
 - [ ] Results analyzed (percentiles, not just averages)
 - [ ] Thresholds reviewed (adjust if needed)
 - [ ] Reports archived for trending
 - [ ] Issues documented and tracked
 - [ ] Test data cleaned up
 
-**Continuous improvement**:
+**Continuous improvement:**
 - [ ] Tests in version control
 - [ ] Integrated into CI/CD
 - [ ] Run regularly (weekly/monthly)

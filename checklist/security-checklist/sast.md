@@ -9,10 +9,10 @@
 
 ## 1. What & Why
 
-- [ ] **Core concept** — SAST reads your source code and matches it against security rules. It doesn't run the code — so it's fast, runs on every commit, and catches issues before the app is deployed. Trade-off: it can't see runtime behavior, so it may flag code that's actually safe in context (false positives).
-- [ ] **What SAST is good at** — Injection sinks (SQLi, command injection, path traversal), crypto misuse (weak algorithms, hardcoded keys), dangerous APIs (`eval`, `pickle.load`, `Runtime.exec`), hardcoded secrets, outdated dependencies (overlaps with SCA).
-- [ ] **What SAST is NOT good at** — Business logic flaws, authZ logic (IDOR), race conditions, runtime configuration issues, anything that requires understanding the running system. These need DAST, pentest, or code review.
-- [ ] **SAST vs SCA vs DAST** — SAST reads code (static). SCA checks dependency versions against CVE databases (static, library-level). DAST attacks a running app (dynamic). All three are needed; they don't replace each other.
+- [ ] **Core concept** (SAST reads your source code and matches it against security rules. It doesn't run the code) so it's fast, runs on every commit, and catches issues before the app is deployed. Trade-off: it can't see runtime behavior, so it may flag code that's actually safe in context (false positives).
+- [ ] **What SAST is good at:** Injection sinks (SQLi, command injection, path traversal), crypto misuse (weak algorithms, hardcoded keys), dangerous APIs (`eval`, `pickle.load`, `Runtime.exec`), hardcoded secrets, outdated dependencies (overlaps with SCA).
+- [ ] **What SAST is NOT good at:** Business logic flaws, authZ logic (IDOR), race conditions, runtime configuration issues, anything that requires understanding the running system. These need DAST, pentest, or code review.
+- [ ] **SAST vs SCA vs DAST:** SAST reads code (static). SCA checks dependency versions against CVE databases (static, library-level). DAST attacks a running app (dynamic). All three are needed; they don't replace each other.
 
 ---
 
@@ -29,9 +29,9 @@
 | .NET | **Security Code Scan** | .NET-native |
 | Enterprise / multi-lang | **SonarQube / Snyk Code / Checkmarx** | Commercial, dashboarded, compliance reporting |
 
-- [ ] **Tool matches the stack** — Don't force bandit on a Go project. Pick the native tool first, Semgrep/CodeQL as a cross-cutting layer.
-- [ ] **Free tier meets needs** — Semgrep CE and CodeQL are free and strong. Don't pay for commercial SAST until you've exhausted the free options.
-- [ ] **Community rules exist for your framework** — Check Semgrep Registry / CodeQL query packs for your framework (Spring, Django, Express, Fiber, etc.).
+- [ ] **Tool matches the stack:** Don't force bandit on a Go project. Pick the native tool first, Semgrep/CodeQL as a cross-cutting layer.
+- [ ] **Free tier meets needs:** Semgrep CE and CodeQL are free and strong. Don't pay for commercial SAST until you've exhausted the free options.
+- [ ] **Community rules exist for your framework:** Check Semgrep Registry / CodeQL query packs for your framework (Spring, Django, Express, Fiber, etc.).
 
 ---
 
@@ -39,18 +39,18 @@
 
 ### Install & Scan
 
-- [ ] **Install** —
+- [ ] **Install:**
   ```bash
   pip install semgrep
   # or
   brew install semgrep
   ```
-- [ ] **First scan** —
+- [ ] **First scan:**
   ```bash
   # Scan with default rules (auto-rules)
   semgrep scan --config auto
   ```
-- [ ] **Specific rulesets** —
+- [ ] **Specific rulesets:**
   ```bash
   semgrep scan --config p/javascript      # JS security
   semgrep scan --config p/python          # Python security
@@ -58,11 +58,11 @@
   semgrep scan --config p/owasp-top-ten   # OWASP Top 10
   semgrep scan --config p/secrets         # Hardcoded secrets
   ```
-- [ ] **Custom rules file** — `.semgrep.yml` in repo root for project-specific rules (see §8).
+- [ ] **Custom rules file:** `.semgrep.yml` in repo root for project-specific rules (see §8).
 
 ### CI Integration (GitHub Actions)
 
-- [ ] **Semgrep CI workflow** —
+- [ ] **Semgrep CI workflow:**
   ```yaml
   # .github/workflows/semgrep.yml
   name: Semgrep
@@ -83,13 +83,13 @@
           env:
             SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
   ```
-- [ ] **SARIF uploaded to GitHub code scanning** — Findings appear inline in PRs. Only *new* findings (vs baseline) are highlighted.
+- [ ] **SARIF uploaded to GitHub code scanning:** Findings appear inline in PRs. Only *new* findings (vs baseline) are highlighted.
 
 ### Suppressing False Positives
 
-- [ ] **Suppress with justification** — `// nosemgrep` inline comment with a reason and ticket reference:
+- [ ] **Suppress with justification:** `// nosemgrep` inline comment with a reason and ticket reference:
   ```javascript
-  // nosemgrep: js.crypto.ssl-insecure-version — ticket SEC-42, dev-only fallback
+  // nosemgrep: js.crypto.ssl-insecure-version - ticket SEC-42, dev-only fallback
   const conn = tls.connect({ secureProtocol: 'SSLv23_method' });
   ```
 
@@ -97,7 +97,7 @@
 
 ## 4. CodeQL Setup
 
-- [ ] **Add CodeQL workflow** —
+- [ ] **Add CodeQL workflow:**
   ```yaml
   # .github/workflows/codeql.yml
   name: "CodeQL"
@@ -116,15 +116,15 @@
             languages: javascript-typescript, python
         - uses: github/codeql-action/analyze@v3
   ```
-- [ ] **Query packs selected** — `security-extended` for broader coverage beyond the default `security` pack. Tune per project.
+- [ ] **Query packs selected:** `security-extended` for broader coverage beyond the default `security` pack. Tune per project.
 
 ---
 
 ## 5. Python: bandit
 
-- [ ] **Install** — `pip install bandit`
-- [ ] **Scan** — `bandit -r src/ -f json -o bandit-report.json`
-- [ ] **Config** — `.bandit` or `pyproject.toml`:
+- [ ] **Install:** `pip install bandit`
+- [ ] **Scan:** `bandit -r src/ -f json -o bandit-report.json`
+- [ ] **Config:** `.bandit` or `pyproject.toml`:
   ```toml
   [tool.bandit]
   targets = ["src"]
@@ -135,9 +135,9 @@
 
 ## 6. Go: gosec
 
-- [ ] **Install** — `go install github.com/securego/gosec/v2/cmd/gosec@latest`
-- [ ] **Scan** — `gosec ./...`
-- [ ] **Config** — `.gosec` or environment variables for rule exclusions.
+- [ ] **Install:** `go install github.com/securego/gosec/v2/cmd/gosec@latest`
+- [ ] **Scan:** `gosec ./...`
+- [ ] **Config:** `.gosec` or environment variables for rule exclusions.
 
 ---
 
@@ -145,18 +145,18 @@
 
 > A scanner out-of-the-box will flag dozens to hundreds of findings. Without triage, teams lose trust and disable the scanner. Triage is where SAST delivers value.
 
-- [ ] **First pass: bulk-close false positives** — Many findings are rule-specific false positives. Walk them once, suppress with `nosemgrep`/`#nosec` + a reason.
-- [ ] **Fix High/Critical immediately** — SQLi, command injection, hardcoded secrets, crypto misuse. Don't queue them.
-- [ ] **Set quality gates** — Block the PR on **new High/Critical** findings only. Don't block on pre-existing baseline — that erodes trust.
-- [ ] **Set a baseline** — First full scan uploaded to GitHub code scanning. Future PRs are compared against this; only *new* findings block the PR.
-- [ ] **Fix or suppress — never ignore** — Every finding is either (a) fixed, (b) suppressed with a reason and ticket, or (c) accepted as risk with an owner. Findings that sit in "ignored" accumulate as silent debt.
-- [ ] **Tune quarterly** — Review suppressed findings: are they still false positives? Are new rules catching what manual review used to? Re-tune as the codebase and rules evolve.
+- [ ] **First pass: bulk-close false positives:** Many findings are rule-specific false positives. Walk them once, suppress with `nosemgrep`/`#nosec` + a reason.
+- [ ] **Fix High/Critical immediately:** SQLi, command injection, hardcoded secrets, crypto misuse. Don't queue them.
+- [ ] **Set quality gates** (Block the PR on **new High/Critical** findings only. Don't block on pre-existing baseline) that erodes trust.
+- [ ] **Set a baseline:** First full scan uploaded to GitHub code scanning. Future PRs are compared against this; only *new* findings block the PR.
+- [ ] **Fix or suppress (never ignore**) Every finding is either (a) fixed, (b) suppressed with a reason and ticket, or (c) accepted as risk with an owner. Findings that sit in "ignored" accumulate as silent debt.
+- [ ] **Tune quarterly:** Review suppressed findings: are they still false positives? Are new rules catching what manual review used to? Re-tune as the codebase and rules evolve.
 
 ---
 
 ## 8. Custom Rules (When Stock Rules Don't Catch Your Bugs)
 
-- [ ] **Write a Semgrep custom rule for your dangerous pattern** —
+- [ ] **Write a Semgrep custom rule for your dangerous pattern:**
   ```yaml
   # semgrep-rules/custom-no-eval.yaml
   rules:
@@ -165,22 +165,22 @@
         - pattern: eval(...)
         - pattern-not: eval("safe_expression")
       message: >-
-        Do not use eval() with user input — command injection risk.
+        Do not use eval() with user input - command injection risk.
       languages: [javascript, typescript]
       severity: ERROR
   ```
-- [ ] **Pattern after a real incident** — If your team keeps making the same mistake (e.g., string-built SQL, missing authZ on admin endpoints), write a Semgrep rule that catches it in PRs before it merges.
+- [ ] **Pattern after a real incident:** If your team keeps making the same mistake (e.g., string-built SQL, missing authZ on admin endpoints), write a Semgrep rule that catches it in PRs before it merges.
 
 ---
 
 ## 9. Anti-Patterns to Avoid
 
-- [ ] **SAST as a one-time activity** — A scan done once during onboarding and never re-run. SAST runs on *every PR*, not on a schedule.
-- [ ] **No triage** — Scanner flags 200 findings; team sees noise; team disables scanner. SAST without triage is worse than no SAST (it erodes trust).
-- [ ] **No baseline** — Every scan flags the same pre-existing issues. The team can't see new findings through the noise. Baseline isolates *new* risk.
-- [ ] **Blocking on all findings** — Low-severity findings block the pipeline; developers work around by suppressing everything. Block only on new High/Critical.
-- [ ] **No custom rules** — The scanner catches generic issues but misses your team's recurring mistakes. Custom rules encode your coding standard.
-- [ ] **Trusting SAST as "the security tool"** — SAST catches code patterns, not business logic. A 100% clean SAST report does not mean secure code. Pair with DAST and code review.
+- [ ] **SAST as a one-time activity:** A scan done once during onboarding and never re-run. SAST runs on *every PR*, not on a schedule.
+- [ ] **No triage:** Scanner flags 200 findings; team sees noise; team disables scanner. SAST without triage is worse than no SAST (it erodes trust).
+- [ ] **No baseline:** Every scan flags the same pre-existing issues. The team can't see new findings through the noise. Baseline isolates *new* risk.
+- [ ] **Blocking on all findings:** Low-severity findings block the pipeline; developers work around by suppressing everything. Block only on new High/Critical.
+- [ ] **No custom rules:** The scanner catches generic issues but misses your team's recurring mistakes. Custom rules encode your coding standard.
+- [ ] **Trusting SAST as "the security tool":** SAST catches code patterns, not business logic. A 100% clean SAST report does not mean secure code. Pair with DAST and code review.
 
 ---
 

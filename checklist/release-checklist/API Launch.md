@@ -10,7 +10,7 @@
 - [ ] Authorization checked on every endpoint (not just at the gateway) → [[03 Authorization & Rate Limiting]]
 - [ ] Passwords hashed (bcrypt/argon2, cost ≥ 12) → [[01 Cryptography Basics]]
 - [ ] TLS enabled, HTTP redirected to HTTPS, HSTS header set → [[03 Network & TLS]]
-- [ ] Secrets in Vault/K8s Secrets/env vars — never in source code → [[02 Secrets Management]]
+- [ ] Secrets in Vault/K8s Secrets/env vars: never in source code → [[02 Secrets Management]]
 - [ ] CORS restricted to known origins (not `*`) → [[03 API Security]]
 - [ ] Rate limiting on login and public endpoints → [[03 Authorization & Rate Limiting]]
 - [ ] JWT: short expiry (≤15 min), RS256/ES256, refresh token rotation → [[03 Authentication]]
@@ -35,7 +35,7 @@
 ## Database
 
 - [ ] Migrations version-controlled (Flyway/Liquibase), not `ddl-auto: update` → [[03 Migration Backup & Scaling]]
-- [ ] `open-in-view: false` (Spring/JPA) — fetch data in service layer
+- [ ] `open-in-view: false` (Spring/JPA): fetch data in service layer
 - [ ] N+1 queries hunted down (`JOIN FETCH`, `@EntityGraph`) → [[01 Indexing & Performance]]
 - [ ] Connection pool sized correctly (not default unlimited) → [[03 Migration Backup & Scaling]]
 - [ ] Transactions: `@Transactional` on service methods that touch multiple repositories → [[01 Transactions & Locking]]
@@ -46,19 +46,19 @@
 
 ## Resilience
 
-- [ ] Circuit breaker on every external HTTP call (other services, third-party APIs) → [[04 Circuit Breaker]]
-- [ ] Timeouts on all external calls (connect + read) → [[04 Retry & Timeout]]
-- [ ] Retry with backoff for transient failures → [[04 Retry & Timeout]]
-- [ ] Graceful degradation: fallback responses, not crashes → [[04 Bulkhead Pattern]]
-- [ ] Graceful shutdown configured (drain in-flight requests) → [[07 Containers & Orchestration]]
+- [ ] Circuit breaker on every external HTTP call (other services, third-party APIs) → [[../../software-engineering-note/02_Software_Architecture/Microservice/04 Resilience/041 Circuit Breaker|Circuit Breaker]]
+- [ ] Timeouts on all external calls (connect + read) → [[../../software-engineering-note/02_Software_Architecture/Microservice/04 Resilience/042 Retry & Timeout|Retry & Timeout]]
+- [ ] Retry with backoff for transient failures → [[../../software-engineering-note/02_Software_Architecture/Microservice/04 Resilience/042 Retry & Timeout|Retry & Timeout]]
+- [ ] Graceful degradation: fallback responses, not crashes → [[../../software-engineering-note/02_Software_Architecture/Microservice/04 Resilience/043 Bulkhead Pattern|Bulkhead Pattern]]
+- [ ] Graceful shutdown configured (drain in-flight requests) → [[../../software-engineering-note/02_Software_Architecture/Microservice/07 Deployment/071 Containers & Orchestration|Containers & Orchestration]]
 
 ---
 
 ## Observability
 
-- [ ] Health check endpoint (`/health`) with DB/disk/memory checks → [[05 Health Checks]]
-- [ ] Structured logging (JSON in production) → [[05 Logging & Monitoring]]
-- [ ] Distributed tracing (trace ID propagated across service calls) → [[05 Distributed Tracing]]
+- [ ] Health check endpoint (`/health`) with DB/disk/memory checks → [[../../software-engineering-note/02_Software_Architecture/Microservice/05 Observability/053 Health Checks|Health Checks]]
+- [ ] Structured logging (JSON in production) → [[../../software-engineering-note/02_Software_Architecture/Microservice/05 Observability/051 Logging & Monitoring|Logging & Monitoring]]
+- [ ] Distributed tracing (trace ID propagated across service calls) → [[../../software-engineering-note/02_Software_Architecture/Microservice/05 Observability/052 Distributed Tracing|Distributed Tracing]]
 - [ ] Key metrics exported: request rate, error rate, latency, DB pool → [[04 API Monitoring]]
 - [ ] Alerts configured for: 5xx spike, high latency, circuit open, DB down
 - [ ] Logs never contain secrets, passwords, tokens, PII → [[02 Secure Coding Practices]]
@@ -81,7 +81,7 @@
 - [ ] CI pipeline runs tests, lint, and security scan on every commit → [[03 CI-CD & Headless Testing]]
 - [ ] Database migrations run automatically in CI/CD pipeline
 - [ ] Rollback plan exists and has been practiced
-- [ ] Feature flags for risky changes (not long-lived branches) → [[06 Configuration Management]]
+- [ ] Feature flags for risky changes (not long-lived branches) → [[../../software-engineering-note/02_Software_Architecture/Microservice/06 Infrastructure/063 Configuration Management|Configuration Management]]
 
 ---
 

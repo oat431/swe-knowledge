@@ -8,8 +8,8 @@
 
 ## 1. Project Setup
 
-- [ ] **Rust toolchain** — `rustup default stable`. `cargo new job-name`. Edition 2024.
-- [ ] **Dependencies** — `Cargo.toml`:
+- [ ] **Rust toolchain:** `rustup default stable`. `cargo new job-name`. Edition 2024.
+- [ ] **Dependencies:** `Cargo.toml`:
 
 ```toml
 [dependencies]
@@ -31,9 +31,9 @@ tokio-test = "0.4"
 testcontainers = "0.23"
 ```
 
-- [ ] **Clippy strict** — `cargo clippy -- -D warnings -W clippy::pedantic`. CI gate. No dead code, no unused imports, no implicit conversions.
-- [ ] **`rustfmt`** — `rustfmt.toml`. Consistent style. `edition = "2024"`.
-- [ ] **Binary per job** — `[[bin]]` sections in `Cargo.toml` or separate crates in workspace. Each job compiles to its own binary.
+- [ ] **Clippy strict:** `cargo clippy -- -D warnings -W clippy::pedantic`. CI gate. No dead code, no unused imports, no implicit conversions.
+- [ ] **`rustfmt`:** `rustfmt.toml`. Consistent style. `edition = "2024"`.
+- [ ] **Binary per job:** `[[bin]]` sections in `Cargo.toml` or separate crates in workspace. Each job compiles to its own binary.
 
 ```toml
 [[bin]]
@@ -45,7 +45,7 @@ name = "report-gen"
 path = "src/bin/report_gen.rs"
 ```
 
-- [ ] **Workspace for multi-job projects** — Shared library crate (`batch-core`) + binary crates per job. Compile once, share types and utilities.
+- [ ] **Workspace for multi-job projects:** Shared library crate (`batch-core`) + binary crates per job. Compile once, share types and utilities.
 
 ```
 batch-jobs/
@@ -74,15 +74,15 @@ src/
 └── models.rs           ← Domain types, input/output DTOs
 ```
 
-- [ ] **`main.rs` is thin** — Load config → connect DB → setup tracing → run job → exit with code.
-- [ ] **Traits for abstraction** — `Reader`, `Processor`, `Writer` traits. Implementations are swappable (test doubles, different sources).
-- [ ] **No `unwrap()` in production code** — `?` propagation everywhere. `unwrap()` only in tests or truly impossible cases (with comment explaining why).
+- [ ] **`main.rs` is thin:** Load config → connect DB → setup tracing → run job → exit with code.
+- [ ] **Traits for abstraction:** `Reader`, `Processor`, `Writer` traits. Implementations are swappable (test doubles, different sources).
+- [ ] **No `unwrap()` in production code:** `?` propagation everywhere. `unwrap()` only in tests or truly impossible cases (with comment explaining why).
 
 ---
 
 ## 3. Core Traits & Patterns
 
-- [ ] **Reader/Processor/Writer traits** — The chunk-oriented pattern, Rust-style with associated types.
+- [ ] **Reader/Processor/Writer traits:** The chunk-oriented pattern, Rust-style with associated types.
 
 ```rust
 use async_trait::async_trait;
@@ -120,7 +120,7 @@ pub trait ItemWriter {
 }
 ```
 
-- [ ] **Chunk orchestrator** — Generic over Reader/Processor/Writer. Handles the loop, checkpointing, error tracking.
+- [ ] **Chunk orchestrator:** Generic over Reader/Processor/Writer. Handles the loop, checkpointing, error tracking.
 
 ```rust
 pub struct ChunkOrchestrator<R, P, W> {
@@ -185,7 +185,7 @@ where
 }
 ```
 
-- [ ] **`BatchConfig` struct** — Loaded from environment. All tuning parameters externalized.
+- [ ] **`BatchConfig` struct:** Loaded from environment. All tuning parameters externalized.
 
 ```rust
 #[derive(Debug, Clone, serde::Deserialize)]
@@ -205,7 +205,7 @@ pub struct BatchConfig {
 
 ## 4. Configuration & Startup
 
-- [ ] **Config from environment** — `config` crate or `envy`. Struct with defaults. Fail fast on missing required values.
+- [ ] **Config from environment:** `config` crate or `envy`. Struct with defaults. Fail fast on missing required values.
 
 ```rust
 impl BatchConfig {
@@ -224,7 +224,7 @@ impl BatchConfig {
 }
 ```
 
-- [ ] **CLI flags with `clap`** — For manual runs: `--date 2026-07-17 --dry-run --from-cursor 5000`.
+- [ ] **CLI flags with `clap`:** For manual runs: `--date 2026-07-17 --dry-run --from-cursor 5000`.
 
 ```rust
 #[derive(clap::Parser)]
@@ -237,7 +237,7 @@ struct Args {
     #[arg(long)]
     from_cursor: Option<i64>,
 
-    /// Dry run — process but don't write
+    /// Dry run - process but don't write
     #[arg(long)]
     dry_run: bool,
 
@@ -247,7 +247,7 @@ struct Args {
 }
 ```
 
-- [ ] **Tracing setup** — JSON in production, pretty in dev. Filter by `RUST_LOG` env.
+- [ ] **Tracing setup:** JSON in production, pretty in dev. Filter by `RUST_LOG` env.
 
 ```rust
 fn init_tracing() {
@@ -263,7 +263,7 @@ fn init_tracing() {
 }
 ```
 
-- [ ] **Graceful shutdown** — `tokio_util::sync::CancellationToken` or `tokio::signal`. Propagate cancellation to chunk loop.
+- [ ] **Graceful shutdown:** `tokio_util::sync::CancellationToken` or `tokio::signal`. Propagate cancellation to chunk loop.
 
 ```rust
 #[tokio::main]
@@ -305,13 +305,13 @@ async fn main() -> Result<()> {
 }
 ```
 
-- [ ] **Exit codes** — `0` success, `1` failure, `2` timeout. Scheduler/K8s uses exit code for alerting and retry decisions.
+- [ ] **Exit codes:** `0` success, `1` failure, `2` timeout. Scheduler/K8s uses exit code for alerting and retry decisions.
 
 ---
 
 ## 5. Data Reading
 
-- [ ] **sqlx cursor-based pagination** — Keyset pagination. Low memory. Compile-time checked SQL.
+- [ ] **sqlx cursor-based pagination:** Keyset pagination. Low memory. Compile-time checked SQL.
 
 ```rust
 pub struct OrderReader {
@@ -345,7 +345,7 @@ impl ItemReader for OrderReader {
 }
 ```
 
-- [ ] **File reading with `tokio::io`** — Async line-by-line. Or sync with `std::io::BufReader` in `spawn_blocking` (often simpler for batch).
+- [ ] **File reading with `tokio::io`:** Async line-by-line. Or sync with `std::io::BufReader` in `spawn_blocking` (often simpler for batch).
 
 ```rust
 use tokio::io::{AsyncBufReadExt, BufReader};
@@ -372,7 +372,7 @@ pub async fn read_csv_chunks(path: &Path, chunk_size: usize) -> Result<Vec<Vec<R
 }
 ```
 
-- [ ] **`Stream` trait for async iteration** — `futures::Stream` + `StreamExt` for composable async pipelines. `sqlx` returns streams natively.
+- [ ] **`Stream` trait for async iteration:** `futures::Stream` + `StreamExt` for composable async pipelines. `sqlx` returns streams natively.
 
 ```rust
 use futures::StreamExt;
@@ -382,17 +382,17 @@ let mut stream = sqlx::query_as!(Order, "SELECT * FROM orders WHERE status = 'pe
 
 while let Some(order) = stream.next().await {
     let order = order?;
-    // process one at a time — lowest memory, but sequential
+    // process one at a time - lowest memory, but sequential
 }
 ```
 
-- [ ] **API client with retry** — `reqwest` + manual retry loop or `reqwest-middleware` + `reqwest-retry`.
+- [ ] **API client with retry:** `reqwest` + manual retry loop or `reqwest-middleware` + `reqwest-retry`.
 
 ---
 
 ## 6. Data Processing
 
-- [ ] **Pure functions** — Processor is a plain `fn` or method with no side effects. `&self` for config access only. Easy to test.
+- [ ] **Pure functions:** Processor is a plain `fn` or method with no side effects. `&self` for config access only. Easy to test.
 
 ```rust
 pub struct OrderProcessor {
@@ -425,7 +425,7 @@ impl ItemProcessor for OrderProcessor {
 }
 ```
 
-- [ ] **Type system as validation** — Use newtypes: `struct OrderId(i64)`, `struct AmountCents(i64)`. Invalid states become unrepresentable. Compile-time safety over runtime checks.
+- [ ] **Type system as validation:** Use newtypes: `struct OrderId(i64)`, `struct AmountCents(i64)`. Invalid states become unrepresentable. Compile-time safety over runtime checks.
 
 ```rust
 #[derive(Debug, Clone, Copy)]
@@ -441,14 +441,14 @@ impl PositiveAmount {
 }
 ```
 
-- [ ] **`Result<Option<T>>` convention** — `Ok(Some(output))` = success, `Ok(None)` = filtered/skip, `Err(e)` = error (skip or abort based on policy). Clear three-state return.
-- [ ] **No `clone()` without reason** — Rust's ownership prevents accidental copies. Pass by reference where possible. `Clone` only when data must live in multiple places.
+- [ ] **`Result<Option<T>>` convention:** `Ok(Some(output))` = success, `Ok(None)` = filtered/skip, `Err(e)` = error (skip or abort based on policy). Clear three-state return.
+- [ ] **No `clone()` without reason:** Rust's ownership prevents accidental copies. Pass by reference where possible. `Clone` only when data must live in multiple places.
 
 ---
 
 ## 7. Data Writing
 
-- [ ] **Bulk insert with sqlx** — Multi-row INSERT or PostgreSQL COPY. Not row-by-row.
+- [ ] **Bulk insert with sqlx:** Multi-row INSERT or PostgreSQL COPY. Not row-by-row.
 
 ```rust
 pub struct OrderWriter {
@@ -488,10 +488,10 @@ impl ItemWriter for OrderWriter {
 }
 ```
 
-- [ ] **Transaction per chunk** — `pool.begin()` → write → `tx.commit()`. Chunk failure → automatic rollback on `tx` drop. Rust's RAII guarantees cleanup.
-- [ ] **COPY protocol for massive inserts** — `sqlx` doesn't support COPY natively. Use `tokio-postgres` directly for COPY, or staging table + `INSERT INTO ... SELECT`.
-- [ ] **Upsert for idempotency** — `ON CONFLICT DO UPDATE`. Re-run safe. The writer's single most important property.
-- [ ] **Dry-run writer** — Implement `ItemWriter` with no-op. Log what would be written. Same interface, zero mutations.
+- [ ] **Transaction per chunk:** `pool.begin()` → write → `tx.commit()`. Chunk failure → automatic rollback on `tx` drop. Rust's RAII guarantees cleanup.
+- [ ] **COPY protocol for massive inserts:** `sqlx` doesn't support COPY natively. Use `tokio-postgres` directly for COPY, or staging table + `INSERT INTO ... SELECT`.
+- [ ] **Upsert for idempotency:** `ON CONFLICT DO UPDATE`. Re-run safe. The writer's single most important property.
+- [ ] **Dry-run writer:** Implement `ItemWriter` with no-op. Log what would be written. Same interface, zero mutations.
 
 ```rust
 pub struct DryRunWriter;
@@ -512,7 +512,7 @@ impl ItemWriter for DryRunWriter {
 
 ## 8. Concurrency & Parallelism
 
-- [ ] **Tokio tasks for parallel chunks** — Spawn tasks per partition. Bounded concurrency with `tokio::sync::Semaphore`.
+- [ ] **Tokio tasks for parallel chunks:** Spawn tasks per partition. Bounded concurrency with `tokio::sync::Semaphore`.
 
 ```rust
 use tokio::sync::Semaphore;
@@ -549,7 +549,7 @@ pub async fn process_parallel(
 }
 ```
 
-- [ ] **`futures::stream::buffered`** — Process a stream with bounded concurrency. Elegant for async pipelines.
+- [ ] **`futures::stream::buffered`:** Process a stream with bounded concurrency. Elegant for async pipelines.
 
 ```rust
 use futures::{stream, StreamExt};
@@ -561,7 +561,7 @@ let results: Vec<Result<OrderOutput>> = stream::iter(items)
     .await;
 ```
 
-- [ ] **Rayon for CPU-bound processing** — If transform is compute-heavy (parsing, encryption, hashing): `rayon::par_iter()`. Parallel iterator on thread pool. Don't mix with tokio — use `spawn_blocking`.
+- [ ] **Rayon for CPU-bound processing** (If transform is compute-heavy (parsing, encryption, hashing): `rayon::par_iter()`. Parallel iterator on thread pool. Don't mix with tokio) use `spawn_blocking`.
 
 ```rust
 use rayon::prelude::*;
@@ -573,7 +573,7 @@ let outputs: Vec<OrderOutput> = tokio::task::spawn_blocking(move || {
 }).await?;
 ```
 
-- [ ] **Channel-based pipeline** — `tokio::sync::mpsc` for producer-consumer. Bounded channel = backpressure. Reader → channel → workers → channel → writer.
+- [ ] **Channel-based pipeline:** `tokio::sync::mpsc` for producer-consumer. Bounded channel = backpressure. Reader → channel → workers → channel → writer.
 
 ```rust
 let (tx, mut rx) = tokio::sync::mpsc::channel::<OrderInput>(1000);
@@ -596,14 +596,14 @@ let worker_handle = tokio::spawn(async move {
 });
 ```
 
-- [ ] **No `Mutex` in async hot path** — `tokio::sync::Mutex` is fine for infrequent access. For high-throughput: use channels or partition data so no sharing is needed. Rust's type system prevents data races at compile time — but deadlocks are still possible.
-- [ ] **`Send + Sync` bounds** — Tokio requires futures to be `Send`. Most types are automatically. If not: restructure to avoid holding non-Send types across `.await` points.
+- [ ] **No `Mutex` in async hot path** (`tokio::sync::Mutex` is fine for infrequent access. For high-throughput: use channels or partition data so no sharing is needed. Rust's type system prevents data races at compile time) but deadlocks are still possible.
+- [ ] **`Send + Sync` bounds:** Tokio requires futures to be `Send`. Most types are automatically. If not: restructure to avoid holding non-Send types across `.await` points.
 
 ---
 
 ## 9. Error Handling
 
-- [ ] **`thiserror` for domain errors** — Typed error variants. Pattern matching in callers.
+- [ ] **`thiserror` for domain errors:** Typed error variants. Pattern matching in callers.
 
 ```rust
 #[derive(Debug, thiserror::Error)]
@@ -634,9 +634,9 @@ impl BatchError {
 }
 ```
 
-- [ ] **`anyhow` for propagation in `main`** — Use `anyhow::Result` in binary crate (`main.rs`). Use typed errors (`thiserror`) in library code. Don't mix — library exposes typed errors, binary converts to `anyhow`.
-- [ ] **`?` operator everywhere** — Never `unwrap()` in production paths. `?` propagates cleanly. Add context with `.context("reading orders")?` (from `anyhow`).
-- [ ] **Retry with backoff** — `tokio-retry` or manual loop. Only for `is_retryable()` errors.
+- [ ] **`anyhow` for propagation in `main`** (Use `anyhow::Result` in binary crate (`main.rs`). Use typed errors (`thiserror`) in library code. Don't mix) library exposes typed errors, binary converts to `anyhow`.
+- [ ] **`?` operator everywhere:** Never `unwrap()` in production paths. `?` propagates cleanly. Add context with `.context("reading orders")?` (from `anyhow`).
+- [ ] **Retry with backoff:** `tokio-retry` or manual loop. Only for `is_retryable()` errors.
 
 ```rust
 use tokio_retry::strategy::{ExponentialBackoff, jitter};
@@ -652,13 +652,13 @@ let result = Retry::spawn(strategy, || async {
 }).await?;
 ```
 
-- [ ] **Panic = bug, not error handling** — Rust panics are for programmer errors, not runtime errors. `panic!` / `unwrap()` in batch code = crash. Use `Result` for all fallible operations. Set `panic = "abort"` in release profile for clean exits.
+- [ ] **Panic = bug, not error handling:** Rust panics are for programmer errors, not runtime errors. `panic!` / `unwrap()` in batch code = crash. Use `Result` for all fallible operations. Set `panic = "abort"` in release profile for clean exits.
 
 ---
 
 ## 10. Checkpoint & Resumability
 
-- [ ] **Checkpoint store** — Database table. Save after each chunk commit.
+- [ ] **Checkpoint store:** Database table. Save after each chunk commit.
 
 ```rust
 pub struct CheckpointStore {
@@ -700,14 +700,14 @@ impl CheckpointStore {
 }
 ```
 
-- [ ] **Atomic checkpoint + write** — If writer and checkpoint share the same database: save checkpoint in the same transaction as the write. Zero gap between "data committed" and "progress recorded."
-- [ ] **Generic cursor type** — Cursor can be `i64` (ID), `String` (composite key), `DateTime` (timestamp). Trait bound: `ToString + FromStr + Send + Clone`.
+- [ ] **Atomic checkpoint + write:** If writer and checkpoint share the same database: save checkpoint in the same transaction as the write. Zero gap between "data committed" and "progress recorded."
+- [ ] **Generic cursor type:** Cursor can be `i64` (ID), `String` (composite key), `DateTime` (timestamp). Trait bound: `ToString + FromStr + Send + Clone`.
 
 ---
 
 ## 11. Observability
 
-- [ ] **`tracing` spans per chunk** — Structured, zero-cost when disabled. Correlate all logs from one job run.
+- [ ] **`tracing` spans per chunk:** Structured, zero-cost when disabled. Correlate all logs from one job run.
 
 ```rust
 use tracing::{info, info_span, Instrument};
@@ -732,7 +732,7 @@ async fn process_chunk(chunk_num: usize, items: Vec<OrderInput>) -> Result<Batch
 }
 ```
 
-- [ ] **Prometheus metrics** — `prometheus` crate. Push to Pushgateway before exit (short-lived process). Or expose `/metrics` endpoint if long-running worker.
+- [ ] **Prometheus metrics:** `prometheus` crate. Push to Pushgateway before exit (short-lived process). Or expose `/metrics` endpoint if long-running worker.
 
 ```rust
 use prometheus::{IntCounter, IntCounterVec, Histogram, register_int_counter_vec, register_histogram};
@@ -749,8 +749,8 @@ lazy_static::lazy_static! {
 }
 ```
 
-- [ ] **OpenTelemetry** — `opentelemetry` + `tracing-opentelemetry`. Export traces to Jaeger/Tempo. Spans propagate to downstream HTTP calls via `reqwest-tracing`.
-- [ ] **Job summary on exit** — Final structured log with all stats. Machine-parseable for alerting.
+- [ ] **OpenTelemetry:** `opentelemetry` + `tracing-opentelemetry`. Export traces to Jaeger/Tempo. Spans propagate to downstream HTTP calls via `reqwest-tracing`.
+- [ ] **Job summary on exit:** Final structured log with all stats. Machine-parseable for alerting.
 
 ```rust
 info!(
@@ -764,13 +764,13 @@ info!(
 );
 ```
 
-- [ ] **Memory tracking** — Rust gives you control but doesn't track for you. Use `jemalloc` + `jemalloc-ctl` for allocation stats. Or `procfs` crate to read `/proc/self/status` RSS.
+- [ ] **Memory tracking:** Rust gives you control but doesn't track for you. Use `jemalloc` + `jemalloc-ctl` for allocation stats. Or `procfs` crate to read `/proc/self/status` RSS.
 
 ---
 
 ## 12. Testing
 
-- [ ] **Unit tests for processor** — Pure functions. No async. Fast. In-module `#[cfg(test)]`.
+- [ ] **Unit tests for processor:** Pure functions. No async. Fast. In-module `#[cfg(test)]`.
 
 ```rust
 #[cfg(test)]
@@ -803,7 +803,7 @@ mod tests {
 }
 ```
 
-- [ ] **Integration tests with testcontainers** — Real PostgreSQL. Run full job. Verify output.
+- [ ] **Integration tests with testcontainers:** Real PostgreSQL. Run full job. Verify output.
 
 ```rust
 #[tokio::test]
@@ -824,17 +824,17 @@ async fn test_full_job_run() {
 }
 ```
 
-- [ ] **Idempotency test** — Run twice, verify no duplicates.
-- [ ] **Crash recovery test** — Cancel token after N chunks → restart → verify resume.
-- [ ] **`cargo test -- --nocapture`** — See tracing output in tests for debugging.
-- [ ] **Miri for unsafe code** — If using `unsafe` anywhere (unlikely for batch): `cargo +nightly miri test`. Detects undefined behavior.
+- [ ] **Idempotency test:** Run twice, verify no duplicates.
+- [ ] **Crash recovery test:** Cancel token after N chunks → restart → verify resume.
+- [ ] **`cargo test -- --nocapture`:** See tracing output in tests for debugging.
+- [ ] **Miri for unsafe code:** If using `unsafe` anywhere (unlikely for batch): `cargo +nightly miri test`. Detects undefined behavior.
 
 
 ---
 
 ## 13. Deployment & Operations
 
-- [ ] **Minimal container** — Static binary. No runtime dependencies. `FROM scratch` or `distroless`.
+- [ ] **Minimal container:** Static binary. No runtime dependencies. `FROM scratch` or `distroless`.
 
 ```dockerfile
 FROM rust:1.80-alpine AS build
@@ -850,7 +850,7 @@ COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 ENTRYPOINT ["/app"]
 ```
 
-- [ ] **Binary size** — Release builds: `strip = true`, `lto = true`, `opt-level = "z"` (or `"s"`). Typical batch binary: 5–20MB. Tiny containers = fast deploys.
+- [ ] **Binary size:** Release builds: `strip = true`, `lto = true`, `opt-level = "z"` (or `"s"`). Typical batch binary: 5–20MB. Tiny containers = fast deploys.
 
 ```toml
 [profile.release]
@@ -861,39 +861,39 @@ panic = "abort"     # smaller binary, no unwinding
 codegen-units = 1   # better optimization, slower compile
 ```
 
-- [ ] **K8s CronJob** — Same pattern as Go. Static binary starts fast (no JVM warmup, no interpreter). Cold start: milliseconds.
-- [ ] **Resource limits** — Rust batch jobs are memory-efficient. 32–128MB typical unless holding large buffers. Set conservative limits. Rust won't OOM silently — the allocator panics.
-- [ ] **Cross-compilation** — Build on CI (x86_64-unknown-linux-musl) for Alpine/scratch containers. `cross` tool simplifies cross-compilation for ARM (Graviton).
-- [ ] **Runbook** — Same as other stacks: trigger, check status, reset checkpoint, replay, kill stuck, backfill.
+- [ ] **K8s CronJob:** Same pattern as Go. Static binary starts fast (no JVM warmup, no interpreter). Cold start: milliseconds.
+- [ ] **Resource limits** (Rust batch jobs are memory-efficient. 32–128MB typical unless holding large buffers. Set conservative limits. Rust won't OOM silently) the allocator panics.
+- [ ] **Cross-compilation:** Build on CI (x86_64-unknown-linux-musl) for Alpine/scratch containers. `cross` tool simplifies cross-compilation for ARM (Graviton).
+- [ ] **Runbook:** Same as other stacks: trigger, check status, reset checkpoint, replay, kill stuck, backfill.
 
 ---
 
 ## 14. Rust-Specific Advantages for Batch
 
-- [ ] **No GC pauses** — Predictable latency per chunk. No "stop the world" spikes. Critical for SLO-bound batch jobs.
-- [ ] **Zero-cost abstractions** — Iterators, trait dispatch, generics compile to the same code as hand-written loops. Abstraction doesn't cost performance.
-- [ ] **Fearless concurrency** — Compiler prevents data races. `Send`/`Sync` traits enforced at compile time. No "works in dev, races in prod" surprises.
-- [ ] **Memory safety without GC** — No null pointer crashes, no use-after-free, no buffer overflows. Batch jobs processing untrusted data (files, external APIs) are inherently safer.
-- [ ] **Small binaries, fast startup** — 5–20MB binary. Starts in milliseconds. Perfect for K8s CronJobs where startup time matters (many short jobs per day).
-- [ ] **Excellent for CPU-bound transforms** — If your batch job does heavy parsing, encryption, compression, or computation: Rust is 10–50x faster than Python/Node, 2–5x faster than Go/Java for CPU-bound work.
+- [ ] **No GC pauses:** Predictable latency per chunk. No "stop the world" spikes. Critical for SLO-bound batch jobs.
+- [ ] **Zero-cost abstractions:** Iterators, trait dispatch, generics compile to the same code as hand-written loops. Abstraction doesn't cost performance.
+- [ ] **Fearless concurrency:** Compiler prevents data races. `Send`/`Sync` traits enforced at compile time. No "works in dev, races in prod" surprises.
+- [ ] **Memory safety without GC:** No null pointer crashes, no use-after-free, no buffer overflows. Batch jobs processing untrusted data (files, external APIs) are inherently safer.
+- [ ] **Small binaries, fast startup:** 5–20MB binary. Starts in milliseconds. Perfect for K8s CronJobs where startup time matters (many short jobs per day).
+- [ ] **Excellent for CPU-bound transforms:** If your batch job does heavy parsing, encryption, compression, or computation: Rust is 10–50x faster than Python/Node, 2–5x faster than Go/Java for CPU-bound work.
 
 ---
 
 ## Quick Sanity Check Before Launch
 
-- [ ] Job is idempotent — upserts in writer, tested by running twice
-- [ ] Resumable — cancel token mid-run, restart, verify cursor-based resume
-- [ ] No `unwrap()` in production paths — `?` propagation, no panics on bad data
-- [ ] `cargo clippy -- -D warnings` passes — no dead code, no implicit conversions
-- [ ] Memory bounded — tested with production-scale data, no unbounded `Vec` growth
-- [ ] Connection pool sized — `max_connections` ≈ concurrency
-- [ ] Graceful shutdown — SIGTERM → current chunk finishes → checkpoint saved → exit 0
-- [ ] Error threshold works — skip limit triggers abort, not infinite skip
-- [ ] Metrics pushed before exit — Pushgateway or OTLP export for short-lived binary
-- [ ] Exit code correct — 0 success, 1 failure, 2 timeout
-- [ ] `cargo test` all green — unit + integration (with `--features integration` flag)
-- [ ] Release build tested — `cargo build --release` (optimizations can surface different behavior)
-- [ ] Static binary in scratch container — no runtime deps, minimal attack surface
+- [ ] Job is idempotent: upserts in writer, tested by running twice
+- [ ] Resumable: cancel token mid-run, restart, verify cursor-based resume
+- [ ] No `unwrap()` in production paths: `?` propagation, no panics on bad data
+- [ ] `cargo clippy -- -D warnings` passes: no dead code, no implicit conversions
+- [ ] Memory bounded: tested with production-scale data, no unbounded `Vec` growth
+- [ ] Connection pool sized: `max_connections` ≈ concurrency
+- [ ] Graceful shutdown: SIGTERM → current chunk finishes → checkpoint saved → exit 0
+- [ ] Error threshold works: skip limit triggers abort, not infinite skip
+- [ ] Metrics pushed before exit: Pushgateway or OTLP export for short-lived binary
+- [ ] Exit code correct: 0 success, 1 failure, 2 timeout
+- [ ] `cargo test` all green: unit + integration (with `--features integration` flag)
+- [ ] Release build tested: `cargo build --release` (optimizations can surface different behavior)
+- [ ] Static binary in scratch container: no runtime deps, minimal attack surface
 
 ---
 
@@ -924,4 +924,4 @@ codegen-units = 1   # better optimization, slower compile
 | **Time** | `chrono` | DateTime, timezone-aware |
 | **UUID** | `uuid` | v4 random, v7 time-ordered |
 | **Testing** | `testcontainers` | Real DB in tests |
-| **Orchestration** | Temporal (via gRPC) | No native Rust SDK yet — use Go/TS SDK or gRPC |
+| **Orchestration** | Temporal (via gRPC) | No native Rust SDK yet ;  use Go/TS SDK or gRPC |

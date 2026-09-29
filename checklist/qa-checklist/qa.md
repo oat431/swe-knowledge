@@ -1,7 +1,7 @@
 # QA / Testing Checklist
 
-> The **quality strategy** checklist — what "tested" means across the whole system.
-> Horizontal: applies to APIs, web, mobile, batch, infra — the pyramid is the same, the tools change.
+> The **quality strategy** checklist; what "tested" means across the whole system.
+> Horizontal: applies to APIs, web, mobile, batch, infra, the pyramid is the same, the tools change.
 > Complements [[Release]] (test gates in CI), [[Security]] (SAST/DAST §9), and every domain checklist's testing section.
 > Deep references: SWEBOK Testing chapter ([[SWEBOK v4 - Book Checklist]]), your QA vault.
 > Last updated: 2026-08-06
@@ -10,83 +10,83 @@
 
 ## 1. Test Strategy & Shift-Left
 
-- [ ] **Test pyramid understood and applied** — Many unit tests (fast, isolated) → fewer integration tests (real components) → minimal E2E (critical flows only). Inverted pyramid = slow, flaky, expensive.
-- [ ] **Strategy documented** — What's tested at each level, what's automated, what's manual, and *why*. One paragraph per level, not a novel.
-- [ ] **Risk-based prioritization** — Test effort allocated by business impact, likelihood, change risk, and user harm — not uniformly. Can articulate what you chose *not* to test and the risk that carries.
-- [ ] **Test oracle defined** — Every meaningful test has an expectation source (acceptance criteria, spec, contract, NFR). If there's no oracle, there's no pass/fail judgment — raise the requirements gap before testing.
-- [ ] **Shift-left reviews** — Requirements, acceptance criteria, designs, and API contracts reviewed for testability *before* code exists. QA joins the conversation early, not as a late-stage gate.
-- [ ] **Acceptance criteria are testable** — Every user story has concrete, verifiable acceptance conditions. Ambiguous criteria = requirements gap, not a QA problem to solve silently.
-- [ ] **Business logic ≥ 80% unit coverage** — The domain rules, validators, calculations. Not UI glue, not framework wiring.
-- [ ] **Coverage is a floor, not a goal** — 80% on business logic, but the *right* 80%. Untested critical path beats tested trivial path. Mutation testing (see §8) tells you if coverage is meaningful.
-- [ ] **Tests are fast** — Unit suite < 2 min, integration < 10 min. Slow suites get skipped → skipped tests are untested code.
+- [ ] **Test pyramid understood and applied:** Many unit tests (fast, isolated) → fewer integration tests (real components) → minimal E2E (critical flows only). Inverted pyramid = slow, flaky, expensive.
+- [ ] **Strategy documented:** What's tested at each level, what's automated, what's manual, and *why*. One paragraph per level, not a novel.
+- [ ] **Risk-based prioritization** (Test effort allocated by business impact, likelihood, change risk, and user harm) not uniformly. Can articulate what you chose *not* to test and the risk that carries.
+- [ ] **Test oracle defined** (Every meaningful test has an expectation source (acceptance criteria, spec, contract, NFR). If there's no oracle, there's no pass/fail judgment) raise the requirements gap before testing.
+- [ ] **Shift-left reviews:** Requirements, acceptance criteria, designs, and API contracts reviewed for testability *before* code exists. QA joins the conversation early, not as a late-stage gate.
+- [ ] **Acceptance criteria are testable:** Every user story has concrete, verifiable acceptance conditions. Ambiguous criteria = requirements gap, not a QA problem to solve silently.
+- [ ] **Business logic ≥ 80% unit coverage:** The domain rules, validators, calculations. Not UI glue, not framework wiring.
+- [ ] **Coverage is a floor, not a goal:** 80% on business logic, but the *right* 80%. Untested critical path beats tested trivial path. Mutation testing (see §8) tells you if coverage is meaningful.
+- [ ] **Tests are fast:** Unit suite < 2 min, integration < 10 min. Slow suites get skipped → skipped tests are untested code.
 
 ## 2. Unit Testing
 
-- [ ] **Framework chosen per stack** — xUnit/Jest/Vitest/pytest/JUnit/Go test — whatever the ecosystem standard is (see framework checklists). Consistency over novelty.
-- [ ] **Test naming convention** — `Method_Scenario_Expected` or `Given_When_Then` — picked once, used everywhere.
-- [ ] **AAA structure** — Arrange, Act, Assert. Every test readable in 10 seconds.
-- [ ] **One behavior per test** — Multiple asserts on the same behavior OK; multiple behaviors in one test = debugging hell.
-- [ ] **No test interdependence** — No shared mutable state, no order dependence, no "runs only after test X". `--random-order` in CI proves it.
-- [ ] **Mocks used sparingly** — Mock the *boundary* (DB, HTTP, clock), not the internals. Over-mocking = testing the mock, not the code.
-- [ ] **Systematic test design** — Equivalence partitioning for input domains, boundary value analysis for ranges (min, min+1, nominal, max-1, max), decision tables for business rules, state transitions for workflows. Random testing misses what systematic techniques catch.
-- [ ] **Edge cases covered** — Empty input, null, boundary values, overflow, timezone changes, unicode. Happy path only = 20% of the work.
+- [ ] **Framework chosen per stack** (xUnit/Jest/Vitest/pytest/JUnit/Go test) whatever the ecosystem standard is (see framework checklists). Consistency over novelty.
+- [ ] **Test naming convention** (`Method_Scenario_Expected` or `Given_When_Then`) picked once, used everywhere.
+- [ ] **AAA structure:** Arrange, Act, Assert. Every test readable in 10 seconds.
+- [ ] **One behavior per test:** Multiple asserts on the same behavior OK; multiple behaviors in one test = debugging hell.
+- [ ] **No test interdependence:** No shared mutable state, no order dependence, no "runs only after test X". `--random-order` in CI proves it.
+- [ ] **Mocks used sparingly:** Mock the *boundary* (DB, HTTP, clock), not the internals. Over-mocking = testing the mock, not the code.
+- [ ] **Systematic test design:** Equivalence partitioning for input domains, boundary value analysis for ranges (min, min+1, nominal, max-1, max), decision tables for business rules, state transitions for workflows. Random testing misses what systematic techniques catch.
+- [ ] **Edge cases covered:** Empty input, null, boundary values, overflow, timezone changes, unicode. Happy path only = 20% of the work.
 
 ## 3. Integration Testing
 
-- [ ] **Real dependencies, not doubles** — Testcontainers (Postgres/MySQL/Redis), real message brokers, real filesystems. In-memory substitutes (H2, fake Redis) lie → see [[Database]] checklists.
-- [ ] **Database tests** — Migrations applied fresh, seed data controlled, transactions rolled back between tests (Respawn/`TRUNCATE`).
-- [ ] **API contract tests** — Request/response against the OpenAPI spec: happy path + key error cases. Contract drift caught in CI, not by angry consumers → [[API Launch]].
-- [ ] **Auth tested** — 401 unauthenticated, 403 unauthorized, token expiry, role boundaries. The most-tested security path should be automated.
-- [ ] **Persistence round-trips** — Write → read → update → delete for every entity. ORM mapping errors live here.
+- [ ] **Real dependencies, not doubles:** Testcontainers (Postgres/MySQL/Redis), real message brokers, real filesystems. In-memory substitutes (H2, fake Redis) lie → see [[Database]] checklists.
+- [ ] **Database tests:** Migrations applied fresh, seed data controlled, transactions rolled back between tests (Respawn/`TRUNCATE`).
+- [ ] **API contract tests:** Request/response against the OpenAPI spec: happy path + key error cases. Contract drift caught in CI, not by angry consumers → [[API Launch]].
+- [ ] **Auth tested:** 401 unauthenticated, 403 unauthorized, token expiry, role boundaries. The most-tested security path should be automated.
+- [ ] **Persistence round-trips:** Write → read → update → delete for every entity. ORM mapping errors live here.
 
 ## 4. E2E Testing
 
-- [ ] **Critical user journeys only** — Login → navigate → create → edit → delete (per domain: order flow, signup flow, batch run flow). 10 solid journeys beat 100 brittle ones.
-- [ ] **Playwright/Cypress standard** — Multi-browser (Chromium + Firefox + WebKit), parallel, screenshots on failure, video for flake forensics.
-- [ ] **E2E in CI, not just locally** — Against a real deployed environment (preview/staging), not against mocks. That's the whole point.
-- [ ] **Visual regression** — `toHaveScreenshot()` on key pages. Catch layout drift that functional tests miss.
-- [ ] **Flake management** — Retry policy explicit (max retries documented, not hidden). Flaky tests quarantined with an owner and a fix deadline (tracked by age, not ignored). A flaky suite erodes trust in everything — treat flakiness as a defect, not noise.
-- [ ] **Regression suite maintained** — Every bug fix gets a regression test before closing. Obsolete tests removed quarterly. The suite grows from real defects, not speculation.
+- [ ] **Critical user journeys only:** Login → navigate → create → edit → delete (per domain: order flow, signup flow, batch run flow). 10 solid journeys beat 100 brittle ones.
+- [ ] **Playwright/Cypress standard:** Multi-browser (Chromium + Firefox + WebKit), parallel, screenshots on failure, video for flake forensics.
+- [ ] **E2E in CI, not just locally:** Against a real deployed environment (preview/staging), not against mocks. That's the whole point.
+- [ ] **Visual regression:** `toHaveScreenshot()` on key pages. Catch layout drift that functional tests miss.
+- [ ] **Flake management** (Retry policy explicit (max retries documented, not hidden). Flaky tests quarantined with an owner and a fix deadline (tracked by age, not ignored). A flaky suite erodes trust in everything) treat flakiness as a defect, not noise.
+- [ ] **Regression suite maintained:** Every bug fix gets a regression test before closing. Obsolete tests removed quarterly. The suite grows from real defects, not speculation.
 
 ## 5. Test Data Management
 
-- [ ] **Factories over fixtures** — factory_boy / Factory Bot / builders generate realistic data programmatically. Frozen JSON fixtures rot.
-- [ ] **Test data isolated** — Each test gets its own data (unique emails, timestamps). No shared DB rows across tests.
-- [ ] **Seed strategy for environments** — Staging has representative data (volume + variety), not production copies (PII!). Synthetic data generators for realistic shapes.
-- [ ] **No production data in tests** — GDPR/regulatory violation + flaky tests. Anonymized subsets only, and only where truly needed.
-- [ ] **Environment parity** — Test environments match production in configuration, infrastructure shape, and data volume. Tests that pass in a toy environment but fail in production are worse than no tests.
+- [ ] **Factories over fixtures:** factory_boy / Factory Bot / builders generate realistic data programmatically. Frozen JSON fixtures rot.
+- [ ] **Test data isolated:** Each test gets its own data (unique emails, timestamps). No shared DB rows across tests.
+- [ ] **Seed strategy for environments:** Staging has representative data (volume + variety), not production copies (PII!). Synthetic data generators for realistic shapes.
+- [ ] **No production data in tests:** GDPR/regulatory violation + flaky tests. Anonymized subsets only, and only where truly needed.
+- [ ] **Environment parity:** Test environments match production in configuration, infrastructure shape, and data volume. Tests that pass in a toy environment but fail in production are worse than no tests.
 
 ## 6. CI Integration (Test Gates)
 
-- [ ] **Tests run on every PR** — Unit + integration in CI, E2E on preview deploys. Merging with red tests = broken pipeline culture → [[Release]] §2.
-- [ ] **Pipeline stages ordered** — Lint → type-check → unit (fast feedback) → integration → build → deploy preview → E2E → promote. Fail fast at the cheapest stage.
-- [ ] **Coverage reported per PR** — Diff coverage (new lines) more useful than absolute. Block on *decreasing* coverage, not on a magic number.
-- [ ] **Test artifacts collected** — JUnit XML, coverage HTML, Playwright reports uploaded to CI. Failure analysis without artifacts = guesswork.
-- [ ] **Parallelization** — Test sharding across CI runners. 40-minute suites die; 5-minute suites run on every commit.
+- [ ] **Tests run on every PR:** Unit + integration in CI, E2E on preview deploys. Merging with red tests = broken pipeline culture → [[Release]] §2.
+- [ ] **Pipeline stages ordered:** Lint → type-check → unit (fast feedback) → integration → build → deploy preview → E2E → promote. Fail fast at the cheapest stage.
+- [ ] **Coverage reported per PR:** Diff coverage (new lines) more useful than absolute. Block on *decreasing* coverage, not on a magic number.
+- [ ] **Test artifacts collected:** JUnit XML, coverage HTML, Playwright reports uploaded to CI. Failure analysis without artifacts = guesswork.
+- [ ] **Parallelization:** Test sharding across CI runners. 40-minute suites die; 5-minute suites run on every commit.
 
 ## 7. Exploratory Testing
 
-- [ ] **Charter-based sessions** — Exploratory testing done with charters (mission + focus + risk + timebox), not "clicking around". Sessions are timeboxed (60–90 min) with documented findings.
-- [ ] **Complements scripted tests** — Scripted tests verify known behavior; exploratory finds what scripted tests miss. Both are needed — neither replaces the other.
-- [ ] **Targeted at risk** — Exploratory sessions focused on new/changed areas, poorly understood features, and areas with incomplete requirements.
-- [ ] **Findings recorded** — Defects, questions, and observations from exploratory sessions logged (not just verbal). Feeds into regression suite for future automation.
+- [ ] **Charter-based sessions:** Exploratory testing done with charters (mission + focus + risk + timebox), not "clicking around". Sessions are timeboxed (60–90 min) with documented findings.
+- [ ] **Complements scripted tests** (Scripted tests verify known behavior; exploratory finds what scripted tests miss. Both are needed) neither replaces the other.
+- [ ] **Targeted at risk:** Exploratory sessions focused on new/changed areas, poorly understood features, and areas with incomplete requirements.
+- [ ] **Findings recorded:** Defects, questions, and observations from exploratory sessions logged (not just verbal). Feeds into regression suite for future automation.
 
 ## 8. Advanced Techniques (Medium+ Tiers)
 
-- [ ] **Mutation testing** — Stryker (JS/TS/Java/C#) or mutmut (Python): mutate code, tests should fail. Kills "green but meaningless" coverage. Run on core business logic in CI or nightly.
-- [ ] **Property-based testing** — Hypothesis (Python), fast-check (JS), QuickTheories (Java): random inputs, invariants verified. Amazing for parsers, validators, serialization.
-- [ ] **Contract testing (consumer-driven)** — Pact for service-to-service contracts. Consumer expectations verified against provider before deploy. Microservice must-have → [[Microservice Launch]].
-- [ ] **Load/performance tests** — k6, Gatling, Locust: peak-traffic scenarios with SLOs asserted (p95 < X, error rate < Y). Not "how fast can it go" — "does it hold under expected load" → [[Database]] §4.
-- [ ] **Reliability & resilience tests** — Failover, recovery, and graceful degradation verified: kill a dependency, fail a replica, throttle network, simulate partition. Chaos engineering (game days) for production-grade systems → [[Release]] §8 rollback practice overlaps.
-- [ ] **Accessibility tests automated** — axe-core in unit + E2E. A11y regressions blocked in CI → [[Frontend Launch]].
+- [ ] **Mutation testing:** Stryker (JS/TS/Java/C#) or mutmut (Python): mutate code, tests should fail. Kills "green but meaningless" coverage. Run on core business logic in CI or nightly.
+- [ ] **Property-based testing:** Hypothesis (Python), fast-check (JS), QuickTheories (Java): random inputs, invariants verified. Amazing for parsers, validators, serialization.
+- [ ] **Contract testing (consumer-driven):** Pact for service-to-service contracts. Consumer expectations verified against provider before deploy. Microservice must-have → [[Microservice Launch]].
+- [ ] **Load/performance tests** (k6, Gatling, Locust: peak-traffic scenarios with SLOs asserted (p95 < X, error rate < Y). Not "how fast can it go") "does it hold under expected load" → [[Database]] §4.
+- [ ] **Reliability & resilience tests:** Failover, recovery, and graceful degradation verified: kill a dependency, fail a replica, throttle network, simulate partition. Chaos engineering (game days) for production-grade systems → [[Release]] §8 rollback practice overlaps.
+- [ ] **Accessibility tests automated:** axe-core in unit + E2E. A11y regressions blocked in CI → [[Frontend Launch]].
 
 ## 9. Quality Metrics & Reporting
 
-- [ ] **Metrics that matter** — Pass rate, flake rate, coverage trend, defect escape rate (bugs found in prod / total bugs), MTTR for failing builds.
-- [ ] **DORA-informed** — Change failure rate and deployment frequency trended. High CFR = testing strategy problem, not a people problem → [[Release]] §10.
-- [ ] **Defect triage** — Bugs triaged against acceptance criteria before fixing ("is this actually a defect, or a spec gap?"). QA findings verified against the criteria, not just forwarded.
-- [ ] **Root-cause analysis** — Escaped defects and recurring failures get RCA. Fix the *system* (process, tooling, review gaps), not just the symptom. Feed findings back into test design and prevention.
-- [ ] **Metrics serve decisions, not punishment** — Balanced measures to improve the system; never use defect counts, coverage, or velocity to rank individuals. Goodhart's Law: once a metric becomes a target, it stops being a good measure.
+- [ ] **Metrics that matter:** Pass rate, flake rate, coverage trend, defect escape rate (bugs found in prod / total bugs), MTTR for failing builds.
+- [ ] **DORA-informed:** Change failure rate and deployment frequency trended. High CFR = testing strategy problem, not a people problem → [[Release]] §10.
+- [ ] **Defect triage:** Bugs triaged against acceptance criteria before fixing ("is this actually a defect, or a spec gap?"). QA findings verified against the criteria, not just forwarded.
+- [ ] **Root-cause analysis:** Escaped defects and recurring failures get RCA. Fix the *system* (process, tooling, review gaps), not just the symptom. Feed findings back into test design and prevention.
+- [ ] **Metrics serve decisions, not punishment:** Balanced measures to improve the system; never use defect counts, coverage, or velocity to rank individuals. Goodhart's Law: once a metric becomes a target, it stops being a good measure.
 
 ---
 
@@ -96,7 +96,7 @@
 - [ ] Integration tests against real dependencies (Testcontainers), not in-memory fakes
 - [ ] E2E journeys green against staging/preview in CI
 - [ ] Auth paths (401/403/expiry) automated
-- [ ] No flaky tests — flake rate tracked, owners assigned, trending down
+- [ ] No flaky tests: flake rate tracked, owners assigned, trending down
 - [ ] Coverage reported per PR, diff coverage not decreasing
 - [ ] Acceptance criteria verified against oracle for all critical paths
 - [ ] Exploratory session done on new/changed areas (charter-based, findings logged)
@@ -108,7 +108,7 @@
 
 ## Project Tier Scoping Matrix
 
-> **How to use this table:** Pick your tier first, then focus only on the sections marked ✅ (required) or 🟡 (recommended). Skip ❌ sections entirely — they'd be over-engineering for your context.
+> **How to use this table:** Pick your tier first, then focus only on the sections marked ✅ (required) or 🟡 (recommended). Skip ❌ sections entirely; they'd be over-engineering for your context.
 >
 > **Legend:** ✅ Required · 🟡 Recommended / partial · ❌ Skip
 
@@ -121,12 +121,13 @@
 | 3 | 🏠 **Internal Tool** | Real users (employees), real traffic. No external exposure or paying customers. | 1–3 devs | Employees | Ongoing |
 | 4 | 🟢 **Small Production** | Single service/app, low traffic. Real users, maybe early revenue. | 1–2 devs | < 1K users | Ongoing |
 | 5 | 🔵 **Medium Production** | Multiple services or higher traffic. Real revenue or user base that matters. | 2–5 devs | 1K–100K users | Ongoing |
-| 6 | 🟣 **Production Grade** | Full rigor — high-stakes SaaS, enterprise product, or large user base. | 5+ devs | 100K+ users | Long-term |
+| 6 | 🟣 **Production Grade** | Full rigor ;  high-stakes SaaS, enterprise product, or large user base. | 5+ devs | 100K+ users | Long-term |
 | 7 | 🔴 **Mission-Critical / Regulated** | Healthcare (HIPAA), finance (PCI-DSS), safety systems. Failure = severe harm. | 10+ devs | Varies | Decades |
 
 ### Which Tier Am I?
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Is this throwaway / exploratory?] -->|Yes| T1[🧪 Tier 1 or 2<br/>POC / Prototype]
     A -->|No| B[Are the users internal<br/>employees?]
@@ -141,13 +142,14 @@ flowchart TD
     F -->|No| T6[🟣 Tier 6<br/>Production Grade]
     F -->|Yes| T7[🔴 Tier 7<br/>Mission-Critical]
     
-    style T1 fill:#e1f5ff
-    style T3 fill:#fff4e1
-    style T4 fill:#e8f5e9
-    style T5 fill:#e3f2fd
-    style T6 fill:#f3e5f5
-    style T7 fill:#ffebee
+    style T1 fill:#00B5FF,color:#000000
+    style T3 fill:#FFBE00,color:#000000
+    style T4 fill:#1FB854,color:#000000
+    style T5 fill:#00B5FF,color:#000000
+    style T6 fill:#1FB8AB,color:#000000
+    style T7 fill:#FF5861,color:#000000
 ```
+
 
 ### Checklist Applicability by Tier
 
@@ -169,4 +171,4 @@ flowchart TD
 
 - Complements [[Release]] (CI test gates), [[Security]] (SAST/DAST), [[Database]] (integration test real engines).
 - Domain testing sections: [[API Launch]], [[Frontend Launch]], [[Microservice Launch]].
-- SWEBOK v4 Testing chapter — [[SWEBOK v4 - Book Checklist]].
+- SWEBOK v4 Testing chapter: [[SWEBOK v4 - Book Checklist]].

@@ -2,24 +2,24 @@
 
 > ASP.NET Core 10 (.NET 10 LTS) companion to the general [API checklist](api.md).
 > Covers Minimal APIs, Entity Framework Core 10, C# 14, and the standard production stack.
-> Last updated: 2026-09-14 — RFC 9457 ProblemDetails, OpenAPI 3.1 + spec linting/breaking-change CI gate, rate-limit headers, HTTP caching semantics, X-Request-ID propagation, mutation testing (synced from parent api.md).
+> Last updated: 2026-09-14; RFC 9457 ProblemDetails, OpenAPI 3.1 + spec linting/breaking-change CI gate, rate-limit headers, HTTP caching semantics, X-Request-ID propagation, mutation testing (synced from parent api.md).
 
 ---
 
 ## 1. Project Setup & Bootstrapping
 
-- [ ] **.NET SDK** — `dotnet --version` should be 10.x (LTS). Use `global.json` to pin SDK version across team.
-- [ ] **Create project** — `dotnet new webapi -n MyApi` (Minimal APIs template) or `dotnet new webapi -controllers` for controller-based.
-- [ ] **Solution structure** — Multi-project solution with `dotnet new sln`. Separate API, Application, Domain, Infrastructure projects (Clean Architecture).
-- [ ] **NuGet packages** — Install core dependencies:
+- [ ] **.NET SDK:** `dotnet --version` should be 10.x (LTS). Use `global.json` to pin SDK version across team.
+- [ ] **Create project:** `dotnet new webapi -n MyApi` (Minimal APIs template) or `dotnet new webapi -controllers` for controller-based.
+- [ ] **Solution structure:** Multi-project solution with `dotnet new sln`. Separate API, Application, Domain, Infrastructure projects (Clean Architecture).
+- [ ] **NuGet packages:** Install core dependencies:
   ```bash
   dotnet add package Microsoft.EntityFrameworkCore
   dotnet add package FluentValidation.DependencyInjectionExtensions
   dotnet add package Serilog.AspNetCore
   dotnet add package OpenTelemetry.Extensions.Hosting
   ```
-- [ ] **`Program.cs`** — Minimal hosting model. `WebApplication.CreateBuilder(args)` → configure services → `app.Run()`.
-- [ ] **Environment configuration** — `appsettings.json`, `appsettings.Development.json`, `appsettings.Production.json`. Secrets via user secrets (dev) or Azure Key Vault (prod).
+- [ ] **`Program.cs`:** Minimal hosting model. `WebApplication.CreateBuilder(args)` → configure services → `app.Run()`.
+- [ ] **Environment configuration:** `appsettings.json`, `appsettings.Development.json`, `appsettings.Production.json`. Secrets via user secrets (dev) or Azure Key Vault (prod).
 
 ---
 
@@ -56,70 +56,70 @@ tests/
 └── Infrastructure.IntegrationTests/
 ```
 
-- [ ] **Separation of concerns** — Domain has no dependencies. Application depends on Domain. Infrastructure depends on Application. WebApi depends on all.
-- [ ] **Feature folders** — Group commands, queries, validators by feature (Users, Orders), not by layer.
-- [ ] **MediatR registration** — `builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CreateUserCommand).Assembly))`.
+- [ ] **Separation of concerns:** Domain has no dependencies. Application depends on Domain. Infrastructure depends on Application. WebApi depends on all.
+- [ ] **Feature folders:** Group commands, queries, validators by feature (Users, Orders), not by layer.
+- [ ] **MediatR registration:** `builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CreateUserCommand).Assembly))`.
 
 ---
 
 ## 3. Minimal APIs (Preferred for New Projects)
 
-- [ ] **Endpoint registration** — `app.MapGet("/api/v1/users/{id}", async (int id, IUserService service) => await service.GetById(id))`.
-- [ ] **Group endpoints** — `var userGroup = app.MapGroup("/api/v1/users").WithTags("Users")`.
-- [ ] **Request binding** — `[FromBody]`, `[FromQuery]`, `[FromRoute]` attributes. Minimal APIs auto-bind simple types.
-- [ ] **Response types** — `Results.Ok()`, `Results.Created()`, `Results.NotFound()`, `Results.ValidationProblem()`. Use `TypedResults` for compile-time safety.
-- [ ] **OpenAPI metadata** — `.WithName("GetUserById")`, `.WithSummary("Retrieves a user")`, `.Produces<UserResponse>(200)`.
-- [ ] **Authorization** — `.RequireAuthorization("Admin")` or `.RequireAuthorization(policy => policy.RequireRole("Admin"))`.
-- [ ] **Validation** — `.AddValidation()` (built-in, .NET 9+) or manual validation in handler.
+- [ ] **Endpoint registration:** `app.MapGet("/api/v1/users/{id}", async (int id, IUserService service) => await service.GetById(id))`.
+- [ ] **Group endpoints:** `var userGroup = app.MapGroup("/api/v1/users").WithTags("Users")`.
+- [ ] **Request binding:** `[FromBody]`, `[FromQuery]`, `[FromRoute]` attributes. Minimal APIs auto-bind simple types.
+- [ ] **Response types:** `Results.Ok()`, `Results.Created()`, `Results.NotFound()`, `Results.ValidationProblem()`. Use `TypedResults` for compile-time safety.
+- [ ] **OpenAPI metadata:** `.WithName("GetUserById")`, `.WithSummary("Retrieves a user")`, `.Produces<UserResponse>(200)`.
+- [ ] **Authorization:** `.RequireAuthorization("Admin")` or `.RequireAuthorization(policy => policy.RequireRole("Admin"))`.
+- [ ] **Validation:** `.AddValidation()` (built-in, .NET 9+) or manual validation in handler.
 
 ---
 
 ## 4. Controllers (Alternative for Complex Scenarios)
 
-- [ ] **`[ApiController]` attribute** — Enables automatic model validation, problem details for 400 errors.
-- [ ] **Attribute routing** — `[Route("api/v1/[controller]")]`. Avoid conventional routing for APIs.
-- [ ] **Action results** — `ActionResult<T>` for flexible return types. `Ok()`, `Created()`, `NotFound()`, `Problem()`.
-- [ ] **Filters** — `[ServiceFilter(typeof(LoggingFilter))]` for cross-cutting concerns. Prefer middleware for global concerns.
-- [ ] **Model binding** — `[FromBody]`, `[FromQuery]`, `[FromRoute]`, `[FromHeader]`. Custom `IModelBinder` for complex types.
+- [ ] **`[ApiController]` attribute:** Enables automatic model validation, problem details for 400 errors.
+- [ ] **Attribute routing:** `[Route("api/v1/[controller]")]`. Avoid conventional routing for APIs.
+- [ ] **Action results:** `ActionResult<T>` for flexible return types. `Ok()`, `Created()`, `NotFound()`, `Problem()`.
+- [ ] **Filters:** `[ServiceFilter(typeof(LoggingFilter))]` for cross-cutting concerns. Prefer middleware for global concerns.
+- [ ] **Model binding:** `[FromBody]`, `[FromQuery]`, `[FromRoute]`, `[FromHeader]`. Custom `IModelBinder` for complex types.
 
 ---
 
 ## 5. Dependency Injection
 
-- [ ] **Service lifetimes** — `AddTransient<T>()` (per request), `AddScoped<T>()` (per HTTP request), `AddSingleton<T>()` (app lifetime).
-- [ ] **Interface-based** — Register interfaces: `builder.Services.AddScoped<IUserService, UserService>()`.
-- [ ] **Avoid service locator** — Inject dependencies via constructor, not `IServiceProvider.GetService()`.
-- [ ] **Keyed services** (.NET 8+) — `AddKeyedScoped<ICache, RedisCache>("redis")`. Inject with `[FromKeyedServices("redis")]`.
-- [ ] **Scrutor for decorators** — `services.Decorate<IUserService, CachingUserServiceDecorator>()` for cross-cutting concerns.
+- [ ] **Service lifetimes:** `AddTransient<T>()` (per request), `AddScoped<T>()` (per HTTP request), `AddSingleton<T>()` (app lifetime).
+- [ ] **Interface-based:** Register interfaces: `builder.Services.AddScoped<IUserService, UserService>()`.
+- [ ] **Avoid service locator:** Inject dependencies via constructor, not `IServiceProvider.GetService()`.
+- [ ] **Keyed services** (.NET 8+): `AddKeyedScoped<ICache, RedisCache>("redis")`. Inject with `[FromKeyedServices("redis")]`.
+- [ ] **Scrutor for decorators:** `services.Decorate<IUserService, CachingUserServiceDecorator>()` for cross-cutting concerns.
 
 ---
 
 ## 6. Configuration
 
-- [ ] **appsettings.json** — Default config. Environment-specific overrides: `appsettings.Development.json`, `appsettings.Production.json`.
-- [ ] **User secrets** — `dotnet user-secrets init` → `dotnet user-secrets set "ConnectionStrings:Default" "..."`. Dev only, never committed.
-- [ ] **Azure Key Vault** — `builder.Configuration.AddAzureKeyVault(new Uri("https://myvault.vault.azure.net/"), new DefaultAzureCredential())`.
-- [ ] **Strongly-typed config** — `builder.Services.Configure<ApiSettings>(builder.Configuration.GetSection("ApiSettings"))`. Inject `IOptions<ApiSettings>`.
-- [ ] **Validation** — `builder.Services.AddOptions<ApiSettings>().Bind(config).ValidateDataAnnotations().ValidateOnStart()`.
+- [ ] **appsettings.json:** Default config. Environment-specific overrides: `appsettings.Development.json`, `appsettings.Production.json`.
+- [ ] **User secrets:** `dotnet user-secrets init` → `dotnet user-secrets set "ConnectionStrings:Default" "..."`. Dev only, never committed.
+- [ ] **Azure Key Vault:** `builder.Configuration.AddAzureKeyVault(new Uri("https://myvault.vault.azure.net/"), new DefaultAzureCredential())`.
+- [ ] **Strongly-typed config:** `builder.Services.Configure<ApiSettings>(builder.Configuration.GetSection("ApiSettings"))`. Inject `IOptions<ApiSettings>`.
+- [ ] **Validation:** `builder.Services.AddOptions<ApiSettings>().Bind(config).ValidateDataAnnotations().ValidateOnStart()`.
 
 ---
 
 ## 7. Entity Framework Core 10
 
-- [ ] **DbContext registration** — `builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString))`.
-- [ ] **Migrations** — `dotnet ef migrations add InitialCreate` → `dotnet ef database update`. Committed to source control.
-- [ ] **Entity configuration** — `IEntityTypeConfiguration<T>` in separate files. Fluent API over data annotations for complex mappings.
-- [ ] **N+1 prevention** — Use `.Include()` for eager loading, `.AsSplitQuery()` for multiple includes. Monitor with `EnableSensitiveDataLogging()` in dev.
-- [ ] **Transactions** — `await using var transaction = await context.Database.BeginTransactionAsync()`. Auto-rollback on exception.
-- [ ] **Soft deletes** — Global query filters: `modelBuilder.Entity<User>().HasQueryFilter(u => !u.IsDeleted)`.
-- [ ] **Performance** — Use `.AsNoTracking()` for read-only queries. Compiled queries for hot paths.
+- [ ] **DbContext registration:** `builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString))`.
+- [ ] **Migrations:** `dotnet ef migrations add InitialCreate` → `dotnet ef database update`. Committed to source control.
+- [ ] **Entity configuration:** `IEntityTypeConfiguration<T>` in separate files. Fluent API over data annotations for complex mappings.
+- [ ] **N+1 prevention:** Use `.Include()` for eager loading, `.AsSplitQuery()` for multiple includes. Monitor with `EnableSensitiveDataLogging()` in dev.
+- [ ] **Transactions:** `await using var transaction = await context.Database.BeginTransactionAsync()`. Auto-rollback on exception.
+- [ ] **Soft deletes:** Global query filters: `modelBuilder.Entity<User>().HasQueryFilter(u => !u.IsDeleted)`.
+- [ ] **Performance:** Use `.AsNoTracking()` for read-only queries. Compiled queries for hot paths.
 
 ---
 
 ## 8. Validation (FluentValidation)
 
-- [ ] **Install package** — `dotnet add package FluentValidation.DependencyInjectionExtensions`.
-- [ ] **Validator classes** — Separate from DTOs:
+- [ ] **Install package:** `dotnet add package FluentValidation.DependencyInjectionExtensions`.
+- [ ] **Validator classes:** Separate from DTOs:
   ```csharp
   public class CreateUserValidator : AbstractValidator<CreateUserCommand>
   {
@@ -130,134 +130,134 @@ tests/
       }
   }
   ```
-- [ ] **Auto-registration** — `builder.Services.AddValidatorsFromAssembly(typeof(CreateUserValidator).Assembly)`.
-- [ ] **Minimal APIs integration** — `.AddValidation()` (built-in, .NET 9+) or manual: `var result = validator.Validate(command); if (!result.IsValid) return Results.ValidationProblem(result.ToDictionary())`.
-- [ ] **Controllers integration** — `[ApiController]` auto-validates. Customize with `ApiBehaviorOptions`.
-- [ ] **Async validation** — `await validator.ValidateAsync(command)` for DB-dependent rules (e.g., email uniqueness).
+- [ ] **Auto-registration:** `builder.Services.AddValidatorsFromAssembly(typeof(CreateUserValidator).Assembly)`.
+- [ ] **Minimal APIs integration:** `.AddValidation()` (built-in, .NET 9+) or manual: `var result = validator.Validate(command); if (!result.IsValid) return Results.ValidationProblem(result.ToDictionary())`.
+- [ ] **Controllers integration:** `[ApiController]` auto-validates. Customize with `ApiBehaviorOptions`.
+- [ ] **Async validation:** `await validator.ValidateAsync(command)` for DB-dependent rules (e.g., email uniqueness).
 
 ---
 
 ## 9. Authentication & Authorization
 
-- [ ] **JWT Bearer** — `builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options => { options.TokenValidationParameters = ... })`.
-- [ ] **Token validation** — `ValidateIssuer`, `ValidateAudience`, `ValidateLifetime`, `IssuerSigningKey`. Use RS256 (asymmetric) for production.
-- [ ] **Authorization policies** — `builder.Services.AddAuthorization(options => options.AddPolicy("Admin", policy => policy.RequireRole("Admin")))`.
-- [ ] **Claims-based auth** — `policy.RequireClaim("department", "engineering")`.
-- [ ] **Resource-based auth** — `IAuthorizationService.AuthorizeAsync(user, resource, policy)` for per-resource checks.
-- [ ] **Duende IdentityServer** — For full OAuth2/OIDC server. Commercial license for production.
-- [ ] **Azure AD / Entra ID** — `Microsoft.Identity.Web` package. `AddMicrosoftIdentityWebApp()` for user auth, `AddMicrosoftIdentityWebApi()` for API protection.
+- [ ] **JWT Bearer:** `builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options => { options.TokenValidationParameters = ... })`.
+- [ ] **Token validation:** `ValidateIssuer`, `ValidateAudience`, `ValidateLifetime`, `IssuerSigningKey`. Use RS256 (asymmetric) for production.
+- [ ] **Authorization policies:** `builder.Services.AddAuthorization(options => options.AddPolicy("Admin", policy => policy.RequireRole("Admin")))`.
+- [ ] **Claims-based auth:** `policy.RequireClaim("department", "engineering")`.
+- [ ] **Resource-based auth:** `IAuthorizationService.AuthorizeAsync(user, resource, policy)` for per-resource checks.
+- [ ] **Duende IdentityServer:** For full OAuth2/OIDC server. Commercial license for production.
+- [ ] **Azure AD / Entra ID:** `Microsoft.Identity.Web` package. `AddMicrosoftIdentityWebApp()` for user auth, `AddMicrosoftIdentityWebApi()` for API protection.
 
 ---
 
 ## 10. Middleware Pipeline
 
-- [ ] **Order matters** — Exception handling → HSTS → HTTPS redirection → Routing → CORS → Authentication → Authorization → Endpoints.
-- [ ] **Exception handling** — `app.UseExceptionHandler("/error")` or custom middleware. Return consistent error format.
-- [ ] **CORS** — `builder.Services.AddCors(options => options.AddPolicy("AllowFrontend", policy => policy.WithOrigins("https://frontend.com").AllowAnyMethod().AllowAnyHeader()))`.
-- [ ] **Request logging** — Serilog middleware: `app.UseSerilogRequestLogging()`. Logs request/response with correlation IDs.
-- [ ] **Rate limiting** — `builder.Services.AddRateLimiter(options => options.AddFixedWindowLimiter("fixed", opt => { opt.PermitLimit = 100; opt.Window = TimeSpan.FromMinutes(1) }))`. Apply with `.RequireRateLimiting("fixed")`.
-- [ ] **Rate-limit headers** — Return `RateLimit-Limit` / `RateLimit-Remaining` / `RateLimit-Reset` (+ `RateLimit-Policy`) on responses so clients can self-throttle — at minimum on 429 responses. ASP.NET Core RateLimiter doesn't emit them by default; add via `OnRejected` on the limiter options or a small middleware. Document them in the spec.
-- [ ] **Custom middleware** — `IMiddleware` interface or inline: `app.Use(async (context, next) => { /* logic */ await next() })`.
+- [ ] **Order matters:** Exception handling → HSTS → HTTPS redirection → Routing → CORS → Authentication → Authorization → Endpoints.
+- [ ] **Exception handling:** `app.UseExceptionHandler("/error")` or custom middleware. Return consistent error format.
+- [ ] **CORS:** `builder.Services.AddCors(options => options.AddPolicy("AllowFrontend", policy => policy.WithOrigins("https://frontend.com").AllowAnyMethod().AllowAnyHeader()))`.
+- [ ] **Request logging:** Serilog middleware: `app.UseSerilogRequestLogging()`. Logs request/response with correlation IDs.
+- [ ] **Rate limiting:** `builder.Services.AddRateLimiter(options => options.AddFixedWindowLimiter("fixed", opt => { opt.PermitLimit = 100; opt.Window = TimeSpan.FromMinutes(1) }))`. Apply with `.RequireRateLimiting("fixed")`.
+- [ ] **Rate-limit headers** (Return `RateLimit-Limit` / `RateLimit-Remaining` / `RateLimit-Reset` (+ `RateLimit-Policy`) on responses so clients can self-throttle) at minimum on 429 responses. ASP.NET Core RateLimiter doesn't emit them by default; add via `OnRejected` on the limiter options or a small middleware. Document them in the spec.
+- [ ] **Custom middleware:** `IMiddleware` interface or inline: `app.Use(async (context, next) => { /* logic */ await next() })`.
 
 ---
 
 ## 11. Error Handling
 
-- [ ] **ProblemDetails** — RFC 9457 (`application/problem+json`, obsoletes RFC 7807), built into .NET as the `ProblemDetails` type. `Results.Problem(detail: "User not found", statusCode: 404)`.
-- [ ] **Global exception handler** — Custom middleware catches unhandled exceptions, logs full error, returns sanitized response.
-- [ ] **Validation errors** — `Results.ValidationProblem(errors)` returns 400 with field-level details.
-- [ ] **Consistent error shape** — `{ "type": "...", "title": "...", "status": 404, "detail": "...", "errors": {} }`.
-- [ ] **Don't leak internals** — Never expose stack traces or internal error messages in production. Log them server-side.
+- [ ] **ProblemDetails:** RFC 9457 (`application/problem+json`, obsoletes RFC 7807), built into .NET as the `ProblemDetails` type. `Results.Problem(detail: "User not found", statusCode: 404)`.
+- [ ] **Global exception handler:** Custom middleware catches unhandled exceptions, logs full error, returns sanitized response.
+- [ ] **Validation errors:** `Results.ValidationProblem(errors)` returns 400 with field-level details.
+- [ ] **Consistent error shape:** `{ "type": "...", "title": "...", "status": 404, "detail": "...", "errors": {} }`.
+- [ ] **Don't leak internals:** Never expose stack traces or internal error messages in production. Log them server-side.
 
 ---
 
 ## 12. Caching
 
-- [ ] **IMemoryCache** — Single-instance deployments. `cache.GetOrCreate(key, entry => { entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5); return ComputeExpensiveValue() })`.
-- [ ] **IDistributedCache** — Multi-instance deployments. `SetAsync(key, bytes, options)` with `DistributedCacheEntryOptions`.
-- [ ] **Redis** — `builder.Services.AddStackExchangeRedisCache(options => options.Configuration = connectionString)`.
-- [ ] **HybridCache** (.NET 9) — Built-in stampede protection. `cache.GetOrCreateAsync(key, async token => await ComputeValue(), token)`.
-- [ ] **Response caching** — `[ResponseCache(Duration = 300, VaryByQueryKeys = new[] { "page" })]` or `.CacheOutput()` for Minimal APIs.
-- [ ] **HTTP caching semantics** — `Cache-Control` with `s-maxage` and `stale-while-revalidate` on cacheable GETs; `Vary` on content-negotiated responses. Use OutputCache or ResponseCaching middleware so HTTP caching absorbs traffic before your application code runs — and let the CDN in front of the API do the same.
-- [ ] **Cache invalidation** — `cache.Remove(key)` on write operations. Consider cache tags for bulk invalidation.
+- [ ] **IMemoryCache:** Single-instance deployments. `cache.GetOrCreate(key, entry => { entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5); return ComputeExpensiveValue() })`.
+- [ ] **IDistributedCache:** Multi-instance deployments. `SetAsync(key, bytes, options)` with `DistributedCacheEntryOptions`.
+- [ ] **Redis:** `builder.Services.AddStackExchangeRedisCache(options => options.Configuration = connectionString)`.
+- [ ] **HybridCache** (.NET 9): Built-in stampede protection. `cache.GetOrCreateAsync(key, async token => await ComputeValue(), token)`.
+- [ ] **Response caching:** `[ResponseCache(Duration = 300, VaryByQueryKeys = new[] { "page" })]` or `.CacheOutput()` for Minimal APIs.
+- [ ] **HTTP caching semantics** (`Cache-Control` with `s-maxage` and `stale-while-revalidate` on cacheable GETs; `Vary` on content-negotiated responses. Use OutputCache or ResponseCaching middleware so HTTP caching absorbs traffic before your application code runs) and let the CDN in front of the API do the same.
+- [ ] **Cache invalidation:** `cache.Remove(key)` on write operations. Consider cache tags for bulk invalidation.
 
 ---
 
 ## 13. Background Jobs (Hangfire)
 
-- [ ] **Install Hangfire** — `dotnet add package Hangfire.AspNetCore` + storage package (SQL Server, PostgreSQL, Redis).
-- [ ] **Configuration** — `builder.Services.AddHangfire(config => config.UseSqlServerStorage(connectionString))`. `app.UseHangfireDashboard("/hangfire")`.
-- [ ] **Fire-and-forget** — `BackgroundJob.Enqueue<IPaymentService>(service => service.ProcessPayment(orderId))`.
-- [ ] **Delayed jobs** — `BackgroundJob.Schedule<INotificationService>(service => service.SendReminder(userId), TimeSpan.FromDays(1))`.
-- [ ] **Recurring jobs** — `RecurringJob.AddOrUpdate<ICleanupService>("cleanup", service => service.CleanupOldRecords(), Cron.Daily)`.
-- [ ] **Continuations** — `BackgroundJob.ContinueJobWith<INotificationService>(jobId, service => service.NotifyCompletion(userId))`.
-- [ ] **Retry policies** — `[AutomaticRetry(Attempts = 3, DelaysInSeconds = new[] { 10, 60, 300 })]` on job methods.
+- [ ] **Install Hangfire:** `dotnet add package Hangfire.AspNetCore` + storage package (SQL Server, PostgreSQL, Redis).
+- [ ] **Configuration:** `builder.Services.AddHangfire(config => config.UseSqlServerStorage(connectionString))`. `app.UseHangfireDashboard("/hangfire")`.
+- [ ] **Fire-and-forget:** `BackgroundJob.Enqueue<IPaymentService>(service => service.ProcessPayment(orderId))`.
+- [ ] **Delayed jobs:** `BackgroundJob.Schedule<INotificationService>(service => service.SendReminder(userId), TimeSpan.FromDays(1))`.
+- [ ] **Recurring jobs:** `RecurringJob.AddOrUpdate<ICleanupService>("cleanup", service => service.CleanupOldRecords(), Cron.Daily)`.
+- [ ] **Continuations:** `BackgroundJob.ContinueJobWith<INotificationService>(jobId, service => service.NotifyCompletion(userId))`.
+- [ ] **Retry policies:** `[AutomaticRetry(Attempts = 3, DelaysInSeconds = new[] { 10, 60, 300 })]` on job methods.
 
 ---
 
 ## 14. Observability
 
-- [ ] **OpenTelemetry** — `builder.Services.AddOpenTelemetry().WithTracing(builder => builder.AddAspNetCoreInstrumentation().AddHttpClientInstrumentation().AddEntityFrameworkCoreInstrumentation().AddOtlpExporter())`.
-- [ ] **Serilog** — `builder.Host.UseSerilog((context, config) => config.ReadFrom.Configuration(context.Configuration))`. JSON format in production.
-- [ ] **Structured logging** — `logger.LogInformation("User {UserId} created account", userId)`. Not string interpolation.
-- [ ] **Correlation IDs** — `SerilogTimings` or custom middleware adds request ID to all logs.
-- [ ] **X-Request-ID propagation** — Read `X-Request-ID` from the client (generate one if absent — `HttpContext.TraceIdentifier` or a small middleware), return it in every response — especially error responses — and include it in every log line, so a support ticket maps to logs in one lookup.
-- [ ] **Health checks** — `builder.Services.AddHealthChecks().AddDbContextCheck<AppDbContext>().AddRedis(redisConnectionString)`. `app.MapHealthChecks("/health")`.
-- [ ] **Metrics** — `builder.Services.AddOpenTelemetry().WithMetrics(builder => builder.AddAspNetCoreInstrumentation().AddPrometheusExporter())`.
+- [ ] **OpenTelemetry:** `builder.Services.AddOpenTelemetry().WithTracing(builder => builder.AddAspNetCoreInstrumentation().AddHttpClientInstrumentation().AddEntityFrameworkCoreInstrumentation().AddOtlpExporter())`.
+- [ ] **Serilog:** `builder.Host.UseSerilog((context, config) => config.ReadFrom.Configuration(context.Configuration))`. JSON format in production.
+- [ ] **Structured logging:** `logger.LogInformation("User {UserId} created account", userId)`. Not string interpolation.
+- [ ] **Correlation IDs:** `SerilogTimings` or custom middleware adds request ID to all logs.
+- [ ] **X-Request-ID propagation**; read `X-Request-ID` from the client (generate one if absent; `HttpContext.TraceIdentifier` or a small middleware), return it in every response (especially error responses) and include it in every log line, so a support ticket maps to logs in one lookup.
+- [ ] **Health checks:** `builder.Services.AddHealthChecks().AddDbContextCheck<AppDbContext>().AddRedis(redisConnectionString)`. `app.MapHealthChecks("/health")`.
+- [ ] **Metrics:** `builder.Services.AddOpenTelemetry().WithMetrics(builder => builder.AddAspNetCoreInstrumentation().AddPrometheusExporter())`.
 
 ---
 
 ## 15. Resilience (Polly)
 
-- [ ] **Install Polly** — `dotnet add package Microsoft.Extensions.Http.Polly`.
-- [ ] **Circuit breaker** — Prevent cascading failures:
+- [ ] **Install Polly:** `dotnet add package Microsoft.Extensions.Http.Polly`.
+- [ ] **Circuit breaker:** Prevent cascading failures:
   ```csharp
   services.AddHttpClient<PaymentClient>()
       .AddPolicyHandler(Policy.Handle<HttpRequestException>()
           .CircuitBreakerAsync(5, TimeSpan.FromSeconds(30)));
   ```
-- [ ] **Retry with backoff** — `Policy.Handle<HttpRequestException>().WaitAndRetryAsync(3, attempt => TimeSpan.FromSeconds(Math.Pow(2, attempt)))`.
-- [ ] **Timeout** — `Policy.TimeoutAsync<HttpResponseMessage>(TimeSpan.FromSeconds(30))`.
-- [ ] **Fallback** — `Policy.Handle<HttpRequestException>().FallbackAsync(defaultResponse)`.
-- [ ] **Policy wrapping** — `Policy.WrapAsync(retryPolicy, circuitBreakerPolicy, timeoutPolicy)`. Retry inside circuit breaker.
-- [ ] **HttpClientFactory** — Always use `IHttpClientFactory` or typed clients. Prevents socket exhaustion.
+- [ ] **Retry with backoff:** `Policy.Handle<HttpRequestException>().WaitAndRetryAsync(3, attempt => TimeSpan.FromSeconds(Math.Pow(2, attempt)))`.
+- [ ] **Timeout:** `Policy.TimeoutAsync<HttpResponseMessage>(TimeSpan.FromSeconds(30))`.
+- [ ] **Fallback:** `Policy.Handle<HttpRequestException>().FallbackAsync(defaultResponse)`.
+- [ ] **Policy wrapping:** `Policy.WrapAsync(retryPolicy, circuitBreakerPolicy, timeoutPolicy)`. Retry inside circuit breaker.
+- [ ] **HttpClientFactory:** Always use `IHttpClientFactory` or typed clients. Prevents socket exhaustion.
 
 ---
 
 ## 16. API Versioning
 
-- [ ] **Install Asp.Versioning** — `dotnet add package Asp.Versioning.Http`.
-- [ ] **Configuration** — `builder.Services.AddApiVersioning(options => { options.DefaultApiVersion = new ApiVersion(1, 0); options.AssumeDefaultVersionWhenUnspecified = true; options.ReportApiVersions = true })`.
-- [ ] **URL segment versioning** — `[ApiVersion("1.0")]` on endpoints. Route: `/api/v{version:apiVersion}/users`.
-- [ ] **Query string versioning** — `?api-version=1.0`. Configure with `QueryStringApiVersionReader`.
-- [ ] **Header versioning** — `api-version: 1.0`. Configure with `HeaderApiVersionReader("api-version")`.
-- [ ] **Deprecation** — `[ApiVersion("1.0", Deprecated = true)]`. Sunset date in response headers.
-- [ ] **OpenAPI integration** — `Microsoft.AspNetCore.OpenApi` (`builder.Services.AddOpenApi()`) generates the spec natively in .NET 10, targeting OpenAPI 3.1 (JSON Schema 2020-12) out of the box. Swashbuckle or NSwag for Swagger UI/advanced codegen needs. `builder.Services.AddOpenApi().AddApiVersioning()`. Separate docs per version.
-- [ ] **Spec quality + contract change detection in CI** — `Spectral` with a house ruleset lints the generated OpenAPI spec on every PR. Breaking-change detection gates the pipeline: `oasdiff`/`openapi-diff` fails the build when a change removes fields, changes types, or narrows responses — the REST equivalent of `buf breaking` for gRPC. Breaking changes require a new version, never a silent edit.
+- [ ] **Install Asp.Versioning:** `dotnet add package Asp.Versioning.Http`.
+- [ ] **Configuration:** `builder.Services.AddApiVersioning(options => { options.DefaultApiVersion = new ApiVersion(1, 0); options.AssumeDefaultVersionWhenUnspecified = true; options.ReportApiVersions = true })`.
+- [ ] **URL segment versioning:** `[ApiVersion("1.0")]` on endpoints. Route: `/api/v{version:apiVersion}/users`.
+- [ ] **Query string versioning:** `?api-version=1.0`. Configure with `QueryStringApiVersionReader`.
+- [ ] **Header versioning:** `api-version: 1.0`. Configure with `HeaderApiVersionReader("api-version")`.
+- [ ] **Deprecation:** `[ApiVersion("1.0", Deprecated = true)]`. Sunset date in response headers.
+- [ ] **OpenAPI integration:** `Microsoft.AspNetCore.OpenApi` (`builder.Services.AddOpenApi()`) generates the spec natively in .NET 10, targeting OpenAPI 3.1 (JSON Schema 2020-12) out of the box. Swashbuckle or NSwag for Swagger UI/advanced codegen needs. `builder.Services.AddOpenApi().AddApiVersioning()`. Separate docs per version.
+- [ ] **Spec quality + contract change detection in CI** (`Spectral` with a house ruleset lints the generated OpenAPI spec on every PR. Breaking-change detection gates the pipeline: `oasdiff`/`openapi-diff` fails the build when a change removes fields, changes types, or narrows responses) the REST equivalent of `buf breaking` for gRPC. Breaking changes require a new version, never a silent edit.
 
 ---
 
 ## 17. Testing
 
-- [ ] **xUnit** — `dotnet add package xunit` + `xunit.runner.visualstudio`. `[Fact]` for single tests, `[Theory]` + `[InlineData]` for parameterized.
-- [ ] **Unit tests** — Test business logic in isolation. Mock dependencies with Moq or NSubstitute.
-- [ ] **Integration tests** — `WebApplicationFactory<Program>` for in-memory testing. Override services with test doubles.
-- [ ] **Testcontainers** — Real PostgreSQL/SQL Server/Redis in integration tests:
+- [ ] **xUnit:** `dotnet add package xunit` + `xunit.runner.visualstudio`. `[Fact]` for single tests, `[Theory]` + `[InlineData]` for parameterized.
+- [ ] **Unit tests:** Test business logic in isolation. Mock dependencies with Moq or NSubstitute.
+- [ ] **Integration tests:** `WebApplicationFactory<Program>` for in-memory testing. Override services with test doubles.
+- [ ] **Testcontainers:** Real PostgreSQL/SQL Server/Redis in integration tests:
   ```csharp
   var container = new PostgreSqlBuilder().Build();
   await container.StartAsync();
   var connectionString = container.GetConnectionString();
   ```
-- [ ] **WireMock.Net** — Mock external HTTP dependencies. Record and replay interactions.
-- [ ] **FluentAssertions** — `result.Should().BeEquivalentTo(expected)`. Readable assertions.
-- [ ] **Test naming** — `MethodName_Scenario_ExpectedBehavior()`. e.g., `GetUserById_UserNotFound_Returns404()`.
-- [ ] **Mutation testing** — Your tests pass — but do they actually catch bugs? Stryker.NET injects small faults (mutants) and measures how many your tests detect. Target ≥80% mutation score on business logic. Run in CI on changed files only — full suite is too slow for every PR.
+- [ ] **WireMock.Net:** Mock external HTTP dependencies. Record and replay interactions.
+- [ ] **FluentAssertions:** `result.Should().BeEquivalentTo(expected)`. Readable assertions.
+- [ ] **Test naming:** `MethodName_Scenario_ExpectedBehavior()`. e.g., `GetUserById_UserNotFound_Returns404()`.
+- [ ] **Mutation testing**; your tests pass, but do they actually catch bugs? Stryker.NET injects small faults (mutants) and measures how many your tests detect. Target ≥80% mutation score on business logic. Run in CI on changed files only; full suite is too slow for every PR.
 
 ---
 
 ## 18. Containerization
 
-- [ ] **Dockerfile** — Multi-stage build:
+- [ ] **Dockerfile:** Multi-stage build:
   ```dockerfile
   FROM mcr.microsoft.com/dotnet/sdk:10.0-alpine AS build
   WORKDIR /src
@@ -269,95 +269,95 @@ tests/
   COPY --from=build /app .
   ENTRYPOINT ["dotnet", "MyApi.dll"]
   ```
-- [ ] **Alpine images** — ~50MB runtime, minimal attack surface. Use `alpine` tags.
-- [ ] **Native AOT** — `<PublishAot>true</PublishAot>` in `.csproj`. Sub-second startup, dramatically smaller memory. Use `runtime-deps` base image.
-- [ ] **Health checks** — `HEALTHCHECK CMD curl -f http://localhost:8080/health || exit 1` in Dockerfile.
-- [ ] **Non-root user** — `USER app` (built-in `app` user in .NET 8+ images).
-- [ ] **Environment variables** — `ASPNETCORE_ENVIRONMENT`, `ASPNETCORE_URLS=http://+:8080`.
+- [ ] **Alpine images:** ~50MB runtime, minimal attack surface. Use `alpine` tags.
+- [ ] **Native AOT:** `<PublishAot>true</PublishAot>` in `.csproj`. Sub-second startup, dramatically smaller memory. Use `runtime-deps` base image.
+- [ ] **Health checks:** `HEALTHCHECK CMD curl -f http://localhost:8080/health || exit 1` in Dockerfile.
+- [ ] **Non-root user:** `USER app` (built-in `app` user in .NET 8+ images).
+- [ ] **Environment variables:** `ASPNETCORE_ENVIRONMENT`, `ASPNETCORE_URLS=http://+:8080`.
 
 ---
 
 ## 19. AI/LLM Integration
 
-- [ ] **OpenAI client** — `dotnet add package OpenAI` (official SDK). Or `Betalgo.OpenAI` for community wrapper with more features.
-- [ ] **Azure OpenAI** — `Azure.AI.OpenAI` package. Managed service, enterprise-grade, data residency.
-- [ ] **Ollama** — `OllamaSharp` package for local LLM inference. No API keys needed.
-- [ ] **LangChain.NET** — For complex chains, agents, RAG pipelines.
-- [ ] **Semantic Kernel** — Microsoft's AI orchestration framework. Plugins, planners, memory.
-- [ ] **Streaming responses** — Minimal APIs: `app.MapGet("/chat", async (HttpContext context) => { context.Response.ContentType = "text/event-stream"; await foreach (var chunk in client.StreamChatAsync(prompt)) await context.Response.WriteAsync($"data: {chunk}\n\n") })`.
-- [ ] **Token budget tracking** — Log input/output tokens per request. Alert on budget exceedance.
-- [ ] **Rate limiting** — Apply stricter rate limits to LLM endpoints (costly per call).
-- [ ] **Timeout handling** — LLM calls can take 30s+. Configure `HttpClient.Timeout` and Polly timeout policies accordingly.
-- [ ] **Circuit breaker** — Protect against LLM provider outages. Fallback to cached responses or degraded mode.
+- [ ] **OpenAI client:** `dotnet add package OpenAI` (official SDK). Or `Betalgo.OpenAI` for community wrapper with more features.
+- [ ] **Azure OpenAI:** `Azure.AI.OpenAI` package. Managed service, enterprise-grade, data residency.
+- [ ] **Ollama:** `OllamaSharp` package for local LLM inference. No API keys needed.
+- [ ] **LangChain.NET:** For complex chains, agents, RAG pipelines.
+- [ ] **Semantic Kernel:** Microsoft's AI orchestration framework. Plugins, planners, memory.
+- [ ] **Streaming responses:** Minimal APIs: `app.MapGet("/chat", async (HttpContext context) => { context.Response.ContentType = "text/event-stream"; await foreach (var chunk in client.StreamChatAsync(prompt)) await context.Response.WriteAsync($"data: {chunk}\n\n") })`.
+- [ ] **Token budget tracking:** Log input/output tokens per request. Alert on budget exceedance.
+- [ ] **Rate limiting:** Apply stricter rate limits to LLM endpoints (costly per call).
+- [ ] **Timeout handling:** LLM calls can take 30s+. Configure `HttpClient.Timeout` and Polly timeout policies accordingly.
+- [ ] **Circuit breaker:** Protect against LLM provider outages. Fallback to cached responses or degraded mode.
 
 ---
 
 ## 20. Data Privacy & Compliance
 
-- [ ] **PII masking in logs** — Custom Serilog enricher or destructuring policy:
+- [ ] **PII masking in logs:** Custom Serilog enricher or destructuring policy:
   ```csharp
   Log.Logger = new LoggerConfiguration()
       .Destructure.ByTransforming<User>(u => new { u.Id, Email = "***" })
       .CreateLogger();
   ```
-- [ ] **Data retention** — Hangfire recurring job deletes old records. `RecurringJob.AddOrUpdate<ICleanupService>("gdpr-cleanup", service => service.DeleteExpiredData(), Cron.Daily)`.
-- [ ] **Right to erasure** — Endpoint to delete all user data. Cascade deletes in EF Core: `modelBuilder.Entity<User>().HasMany(u => u.Orders).WithOne().OnDelete(DeleteBehavior.Cascade)`.
-- [ ] **Data export** — Endpoint to export all user data as JSON/CSV. `IUserService.ExportUserData(userId)`.
-- [ ] **Consent management** — Track consent timestamps. Conditional processing based on consent status.
-- [ ] **Field-level encryption** — EF Core value converters:
+- [ ] **Data retention:** Hangfire recurring job deletes old records. `RecurringJob.AddOrUpdate<ICleanupService>("gdpr-cleanup", service => service.DeleteExpiredData(), Cron.Daily)`.
+- [ ] **Right to erasure:** Endpoint to delete all user data. Cascade deletes in EF Core: `modelBuilder.Entity<User>().HasMany(u => u.Orders).WithOne().OnDelete(DeleteBehavior.Cascade)`.
+- [ ] **Data export:** Endpoint to export all user data as JSON/CSV. `IUserService.ExportUserData(userId)`.
+- [ ] **Consent management:** Track consent timestamps. Conditional processing based on consent status.
+- [ ] **Field-level encryption:** EF Core value converters:
   ```csharp
   modelBuilder.Entity<User>().Property(u => u.SSN)
       .HasConversion(v => Encrypt(v), v => Decrypt(v));
   ```
-- [ ] **Audit logging** — EF Core interceptors or `SaveChangesAsync` override to log all data access.
-- [ ] **DPA compliance** — Data Processing Agreements with third-party services (payment, email, analytics).
-- [ ] **Anonymization** — Replace PII with pseudonyms for analytics. Separate PII table with encryption.
+- [ ] **Audit logging:** EF Core interceptors or `SaveChangesAsync` override to log all data access.
+- [ ] **DPA compliance:** Data Processing Agreements with third-party services (payment, email, analytics).
+- [ ] **Anonymization:** Replace PII with pseudonyms for analytics. Separate PII table with encryption.
 
 ---
 
 ## 21. Performance & Optimization
 
-- [ ] **Async all the way** — `async`/`await` throughout. Never `.Result` or `.Wait()` (deadlock risk).
-- [ ] **Connection pooling** — EF Core and HttpClient both use connection pooling by default. Tune pool sizes.
-- [ ] **Response compression** — `builder.Services.AddResponseCompression(options => options.EnableForHttps = true)`. `app.UseResponseCompression()`.
-- [ ] **Output caching** (.NET 7+) — `builder.Services.AddOutputCache()`. `.CacheOutput()` on endpoints. Configurable expiration and tags.
-- [ ] **Frozen collections** (.NET 8+) — `FrozenDictionary`/`FrozenSet` for lookup-heavy hot paths.
-- [ ] **Span** — Use `ReadOnlySpan<char>` for string parsing. Avoid allocations.
-- [ ] **Native AOT** — `<PublishAot>true</PublishAot>` for serverless/containers. Sub-second startup, ~50MB memory.
+- [ ] **Async all the way:** `async`/`await` throughout. Never `.Result` or `.Wait()` (deadlock risk).
+- [ ] **Connection pooling:** EF Core and HttpClient both use connection pooling by default. Tune pool sizes.
+- [ ] **Response compression:** `builder.Services.AddResponseCompression(options => options.EnableForHttps = true)`. `app.UseResponseCompression()`.
+- [ ] **Output caching** (.NET 7+): `builder.Services.AddOutputCache()`. `.CacheOutput()` on endpoints. Configurable expiration and tags.
+- [ ] **Frozen collections** (.NET 8+): `FrozenDictionary`/`FrozenSet` for lookup-heavy hot paths.
+- [ ] **Span:** Use `ReadOnlySpan<char>` for string parsing. Avoid allocations.
+- [ ] **Native AOT:** `<PublishAot>true</PublishAot>` for serverless/containers. Sub-second startup, ~50MB memory.
 
 ---
 
 ## 22. gRPC & Real-time
 
-- [ ] **gRPC server** — `dotnet add package Grpc.AspNetCore`. Define `.proto` files, generate C# with `Grpc.Tools`.
-- [ ] **gRPC client** — `dotnet add package Grpc.Net.Client`. `GrpcChannel.ForAddress("https://api.example.com")`.
-- [ ] **SignalR** — Real-time WebSockets. `builder.Services.AddSignalR()`. `app.MapHub<ChatHub>("/chat")`.
-- [ ] **SignalR scaling** — Redis backplane: `builder.Services.AddSignalR().AddStackExchangeRedis(redisConnectionString)`.
-- [ ] **MessagePack protocol** — Binary protocol for SignalR (smaller than JSON). `AddMessagePackProtocol()`.
+- [ ] **gRPC server:** `dotnet add package Grpc.AspNetCore`. Define `.proto` files, generate C# with `Grpc.Tools`.
+- [ ] **gRPC client:** `dotnet add package Grpc.Net.Client`. `GrpcChannel.ForAddress("https://api.example.com")`.
+- [ ] **SignalR:** Real-time WebSockets. `builder.Services.AddSignalR()`. `app.MapHub<ChatHub>("/chat")`.
+- [ ] **SignalR scaling:** Redis backplane: `builder.Services.AddSignalR().AddStackExchangeRedis(redisConnectionString)`.
+- [ ] **MessagePack protocol:** Binary protocol for SignalR (smaller than JSON). `AddMessagePackProtocol()`.
 
 ---
 
 ## Quick Sanity Check
 
-- [ ] `dotnet build` passes — no warnings (treat warnings as errors: `<TreatWarningsAsErrors>true</TreatWarningsAsErrors>`)
-- [ ] `dotnet test` passes — all unit and integration tests green
-- [ ] Minimal APIs or controllers registered — endpoints accessible
-- [ ] EF Core migrations applied — `dotnet ef database update` succeeds
+- [ ] `dotnet build` passes: no warnings (treat warnings as errors: `<TreatWarningsAsErrors>true</TreatWarningsAsErrors>`)
+- [ ] `dotnet test` passes: all unit and integration tests green
+- [ ] Minimal APIs or controllers registered: endpoints accessible
+- [ ] EF Core migrations applied: `dotnet ef database update` succeeds
 - [ ] FluentValidation validators registered and working
-- [ ] JWT authentication configured — 401 for missing/invalid tokens
-- [ ] CORS configured — specific origins, not `*`
-- [ ] Serilog logging — JSON format in production, structured fields
-- [ ] Health checks exposed — `/health` returns 200
+- [ ] JWT authentication configured: 401 for missing/invalid tokens
+- [ ] CORS configured: specific origins, not `*`
+- [ ] Serilog logging: JSON format in production, structured fields
+- [ ] Health checks exposed: `/health` returns 200
 - [ ] Rate limiting applied to sensitive endpoints
-- [ ] Exception handling middleware — consistent error format
-- [ ] Docker image builds and runs — `docker build` + `docker run` succeeds
-- [ ] Environment variables override config — `ASPNETCORE_ENVIRONMENT=Production`
+- [ ] Exception handling middleware: consistent error format
+- [ ] Docker image builds and runs: `docker build` + `docker run` succeeds
+- [ ] Environment variables override config: `ASPNETCORE_ENVIRONMENT=Production`
 
 ---
 
 ## Project Tier Scoping Matrix
 
-> **How to use this table:** Pick your tier first, then focus only on the sections marked ✅ (required) or 🟡 (recommended). Skip ❌ sections entirely — they'd be over-engineering for your context. This matrix adapts the general [API checklist](api.md) tiers to ASP.NET Core specifics.
+> **How to use this table:** Pick your tier first, then focus only on the sections marked ✅ (required) or 🟡 (recommended). Skip ❌ sections entirely; they'd be over-engineering for your context. This matrix adapts the general [API checklist](api.md) tiers to ASP.NET Core specifics.
 >
 > **Legend:** ✅ Required · 🟡 Recommended / partial · ❌ Skip
 
@@ -370,12 +370,13 @@ tests/
 | 3 | 🏠 **Internal Tool** | Real users (employees), real traffic. No external exposure or paying customers. | 1–3 devs | Employees | Ongoing |
 | 4 | 🟢 **Small Production** | Single .NET service, few endpoints, low traffic. Real users, maybe early revenue. | 1–2 devs | < 1K users | Ongoing |
 | 5 | 🔵 **Medium Production** | Multiple services or higher traffic. Real revenue or user base that matters. | 2–5 devs | 1K–100K users | Ongoing |
-| 6 | 🟣 **Production Grade** | Full rigor — high-stakes SaaS, enterprise product, or large user base. | 5+ devs | 100K+ users | Long-term |
+| 6 | 🟣 **Production Grade** | Full rigor ;  high-stakes SaaS, enterprise product, or large user base. | 5+ devs | 100K+ users | Long-term |
 | 7 | 🔴 **Mission-Critical / Regulated** | Healthcare (HIPAA), finance (PCI-DSS), safety systems. Failure = severe harm. | 10+ devs | Varies | Decades |
 
 ### Which Tier Am I?
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Is this throwaway / exploratory?] -->|Yes| T1[🧪 Tier 1 or 2<br/>POC / Prototype]
     A -->|No| B[Are the users internal<br/>employees?]
@@ -390,13 +391,14 @@ flowchart TD
     F -->|No| T6[🟣 Tier 6<br/>Production Grade]
     F -->|Yes| T7[🔴 Tier 7<br/>Mission-Critical]
     
-    style T1 fill:#e1f5ff
-    style T3 fill:#fff4e1
-    style T4 fill:#e8f5e9
-    style T5 fill:#e3f2fd
-    style T6 fill:#f3e5f5
-    style T7 fill:#ffebee
+    style T1 fill:#00B5FF,color:#000000
+    style T3 fill:#FFBE00,color:#000000
+    style T4 fill:#1FB854,color:#000000
+    style T5 fill:#00B5FF,color:#000000
+    style T6 fill:#1FB8AB,color:#000000
+    style T7 fill:#FF5861,color:#000000
 ```
+
 
 ### ASP.NET Core Checklist Applicability by Tier
 
@@ -429,9 +431,9 @@ flowchart TD
 
 ## Sources
 
-- ASP.NET Core docs — https://learn.microsoft.com/en-us/aspnet/core/
-- Entity Framework Core — https://learn.microsoft.com/en-us/ef/core/
-- FluentValidation — https://docs.fluentvalidation.net/
-- Polly — https://www.pollydocs.org/
-- Hangfire — https://docs.hangfire.io/
-- `[[api]]` — general API checklist (tick first)
+- ASP.NET Core docs: https://learn.microsoft.com/en-us/aspnet/core/
+- Entity Framework Core: https://learn.microsoft.com/en-us/ef/core/
+- FluentValidation: https://docs.fluentvalidation.net/
+- Polly: https://www.pollydocs.org/
+- Hangfire: https://docs.hangfire.io/
+- `[[api]]`: general API checklist (tick first)

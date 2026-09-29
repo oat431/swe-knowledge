@@ -1,4 +1,4 @@
-# Improved Checklists — Overview
+# Improved Checklists: Overview
 
 > These are the checklists you actually tick off before shipping. No tutorials. No version-specific trivia. No code examples. Just the items that matter.
 >
@@ -15,7 +15,7 @@
 | [[Database]] | The data layer: modeling, migrations, backup, performance | ~45 items |
 | [[PostgreSQL]] | PostgreSQL 18: vacuum, PITR, pooling, replication | ~40 items |
 | [[MongoDB]] | MongoDB 8: document modeling, replica sets, sharding | ~35 items |
-| [[Valkey]] | Valkey/Redis 9: caching patterns, eviction, HA | ~30 items |
+| [[database-checklist/valkey-redis|Valkey]] | Valkey/Redis 9: caching patterns, eviction, HA | ~30 items |
 | [[QA]] | The quality strategy: test pyramid → mutation → metrics | ~40 items |
 | [[AI]] | AI/LLM apps: model selection, RAG, agents, evals, guardrails | ~45 items |
 | [[API Launch]] | Any backend service before production | ~45 items |
@@ -26,7 +26,7 @@
 
 ## Where the Originals Live
 
-The original checklists in `../` are your **reference manuals** — keep them for deep dives, framework-specific config, and migration guides. These improved versions are what you actually tick.
+The original checklists in `../` are your **reference manuals**; keep them for deep dives, framework-specific config, and migration guides. These improved versions are what you actually tick.
 
 | Original (Reference) | Improved (Checklist) |
 |---------------------|---------------------|
@@ -38,7 +38,7 @@ The original checklists in `../` are your **reference manuals** — keep them fo
 | `database-checklist/database.md` (190 lines) | [[Database]] (~45 lines) |
 | `database-checklist/postgresql.md` (190 lines) | [[PostgreSQL]] (~40 lines) |
 | `database-checklist/mongodb.md` (180 lines) | [[MongoDB]] (~35 lines) |
-| `database-checklist/valkey-redis.md` (165 lines) | [[Valkey]] (~30 lines) |
+| `database-checklist/valkey-redis.md` (165 lines) | [[database-checklist/valkey-redis|Valkey]] (~30 lines) |
 | `qa-checklist/qa.md` (175 lines) | [[QA]] (~40 lines) |
 | `ai-checklist/ai.md` (215 lines) | [[AI]] (~45 lines) |
 

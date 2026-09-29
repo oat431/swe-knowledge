@@ -8,10 +8,10 @@
 
 ## 1. Project Setup & Mode Selection
 
-- [ ] **Standalone application (one-shot jobs)** — No HTTP server. Runs job, exits. Perfect for K8s CronJob.
+- [ ] **Standalone application (one-shot jobs):** No HTTP server. Runs job, exits. Perfect for K8s CronJob.
 
 ```typescript
-// main.ts — standalone batch
+// main.ts - standalone batch
 async function bootstrap() {
   const app = await NestFactory.createApplicationContext(AppModule, {
     logger: ['error', 'warn', 'log'],
@@ -31,11 +31,11 @@ async function bootstrap() {
 bootstrap();
 ```
 
-- [ ] **Long-running worker (queue consumer)** — HTTP server + BullMQ workers. Runs indefinitely, processes jobs from queue. Health endpoint for K8s liveness.
-- [ ] **Hybrid (API + scheduled jobs)** — Same app serves API and runs scheduled tasks. Simple but couples concerns. Fine for small apps. Split when scaling independently.
-- [ ] **TypeScript strict** — `strict: true`, `noUncheckedIndexedAccess`. Batch code handles `undefined`/`null` constantly — strict catches misses.
-- [ ] **SWC builder** — `@swc/core` in `nest-cli.json`. Faster builds. Batch dev cycle: change → build → test against real data.
-- [ ] **Separate `main.ts` per mode** — `main.api.ts`, `main.batch.ts`, `main.worker.ts`. Same modules, different entry points. Build target per Dockerfile.
+- [ ] **Long-running worker (queue consumer):** HTTP server + BullMQ workers. Runs indefinitely, processes jobs from queue. Health endpoint for K8s liveness.
+- [ ] **Hybrid (API + scheduled jobs):** Same app serves API and runs scheduled tasks. Simple but couples concerns. Fine for small apps. Split when scaling independently.
+- [ ] **TypeScript strict** (`strict: true`, `noUncheckedIndexedAccess`. Batch code handles `undefined`/`null` constantly) strict catches misses.
+- [ ] **SWC builder:** `@swc/core` in `nest-cli.json`. Faster builds. Batch dev cycle: change → build → test against real data.
+- [ ] **Separate `main.ts` per mode:** `main.api.ts`, `main.batch.ts`, `main.worker.ts`. Same modules, different entry points. Build target per Dockerfile.
 
 ---
 
@@ -65,15 +65,15 @@ src/
 └── main.ts
 ```
 
-- [ ] **Feature modules per job** — Each job is a NestJS module. Independent, testable, deployable alone if needed.
-- [ ] **Shared batch primitives** — Generic `ChunkProcessor`, `CheckpointService`, interfaces. Don't re-implement pagination loop in every job.
-- [ ] **DI for everything** — Reader, Processor, Writer are `@Injectable()`. Swap implementations in tests. Mock external dependencies.
+- [ ] **Feature modules per job:** Each job is a NestJS module. Independent, testable, deployable alone if needed.
+- [ ] **Shared batch primitives:** Generic `ChunkProcessor`, `CheckpointService`, interfaces. Don't re-implement pagination loop in every job.
+- [ ] **DI for everything:** Reader, Processor, Writer are `@Injectable()`. Swap implementations in tests. Mock external dependencies.
 
 ---
 
 ## 3. Batch Primitives (Build Once, Reuse)
 
-- [ ] **Reader/Processor/Writer interfaces** — Spring Batch-inspired but TypeScript-idiomatic.
+- [ ] **Reader/Processor/Writer interfaces:** Spring Batch-inspired but TypeScript-idiomatic.
 
 ```typescript
 // batch.interfaces.ts
@@ -98,7 +98,7 @@ export interface BatchJobConfig {
 }
 ```
 
-- [ ] **Generic chunk processor** — Reusable orchestration loop. Reads chunks, processes items, writes results, tracks progress.
+- [ ] **Generic chunk processor:** Reusable orchestration loop. Reads chunks, processes items, writes results, tracks progress.
 
 ```typescript
 @Injectable()
@@ -147,7 +147,7 @@ export class ChunkOrchestrator {
 }
 ```
 
-- [ ] **Checkpoint service** — Persist cursor to database. Load on restart.
+- [ ] **Checkpoint service:** Persist cursor to database. Load on restart.
 
 ```typescript
 @Injectable()
@@ -173,7 +173,7 @@ export class CheckpointService {
 
 ## 4. Scheduling (@nestjs/schedule)
 
-- [ ] **`@nestjs/schedule`** — `ScheduleModule.forRoot()` in `AppModule`. Cron, interval, and timeout decorators.
+- [ ] **`@nestjs/schedule`:** `ScheduleModule.forRoot()` in `AppModule`. Cron, interval, and timeout decorators.
 
 ```typescript
 @Injectable()
@@ -196,8 +196,8 @@ export class OrderSyncScheduler {
 }
 ```
 
-- [ ] **Timezone-aware** — `timeZone: 'Asia/Bangkok'` in `@Cron()`. Don't assume UTC. DST-safe.
-- [ ] **No overlapping** — Use lock: simple `boolean` flag, Redis lock (`@nestjs/cache-manager`), or `ShedLock`-style DB lock.
+- [ ] **Timezone-aware:** `timeZone: 'Asia/Bangkok'` in `@Cron()`. Don't assume UTC. DST-safe.
+- [ ] **No overlapping:** Use lock: simple `boolean` flag, Redis lock (`@nestjs/cache-manager`), or `ShedLock`-style DB lock.
 
 ```typescript
 @Injectable()
@@ -220,14 +220,14 @@ export class OrderSyncScheduler {
 }
 ```
 
-- [ ] **Dynamic cron** — `SchedulerRegistry` to add/remove jobs at runtime. Useful for tenant-specific schedules or feature flags.
-- [ ] **Timeout for scheduled jobs** — Wrap with `AbortController` or `Promise.race` with timeout. Don't let a stuck job block the next schedule.
+- [ ] **Dynamic cron:** `SchedulerRegistry` to add/remove jobs at runtime. Useful for tenant-specific schedules or feature flags.
+- [ ] **Timeout for scheduled jobs:** Wrap with `AbortController` or `Promise.race` with timeout. Don't let a stuck job block the next schedule.
 
 ---
 
 ## 5. Queue-Based Processing (BullMQ)
 
-- [ ] **`@nestjs/bullmq`** — Redis-backed job queue. Retries, priority, concurrency, rate limiting, scheduling, dashboard.
+- [ ] **`@nestjs/bullmq`:** Redis-backed job queue. Retries, priority, concurrency, rate limiting, scheduling, dashboard.
 
 ```typescript
 // app.module.ts
@@ -240,7 +240,7 @@ export class OrderSyncScheduler {
 export class AppModule {}
 ```
 
-- [ ] **Producer — enqueue jobs** — From API endpoint, scheduler, or another job.
+- [ ] **Producer (enqueue jobs**) From API endpoint, scheduler, or another job.
 
 ```typescript
 @Injectable()
@@ -265,7 +265,7 @@ export class OrderProducer {
 }
 ```
 
-- [ ] **Consumer — process jobs** — `@Processor()` decorator. Handles one job at a time (configurable concurrency).
+- [ ] **Consumer (process jobs**) `@Processor()` decorator. Handles one job at a time (configurable concurrency).
 
 ```typescript
 @Processor('order-processing')
@@ -289,25 +289,25 @@ export class OrderConsumer extends WorkerHost {
   onFailed(job: Job, error: Error) {
     this.logger.error(`Job ${job.id} failed after ${job.attemptsMade} attempts`, error.stack);
     if (job.attemptsMade >= job.opts.attempts) {
-      // Final failure — alert
+      // Final failure - alert
       this.alertService.notify(`Order processing failed: ${job.data.orderId}`);
     }
   }
 }
 ```
 
-- [ ] **Concurrency control** — `@Processor('queue', { concurrency: 5 })`. Limits parallel processing per worker instance. Size to DB pool / downstream capacity.
-- [ ] **Rate limiting** — BullMQ built-in: `limiter: { max: 100, duration: 60000 }` (100 jobs per minute). For external API rate limits.
-- [ ] **Job priority** — `priority: 1` (highest) to `priority: N`. Critical jobs processed first.
-- [ ] **Retry strategy** — `attempts: 3`, `backoff: { type: 'exponential', delay: 5000 }`. Transient failures auto-retry. Permanent failures → `failed` event.
-- [ ] **Dead letter** — After max attempts, job moves to `failed` state. Query failed jobs via BullMQ API. Replay with `queue.retryJobs()`.
-- [ ] **Bull Board dashboard** — `@bull-board/nestjs`. Visual queue monitoring: active, waiting, completed, failed, delayed. Mount at `/admin/queues`.
+- [ ] **Concurrency control:** `@Processor('queue', { concurrency: 5 })`. Limits parallel processing per worker instance. Size to DB pool / downstream capacity.
+- [ ] **Rate limiting:** BullMQ built-in: `limiter: { max: 100, duration: 60000 }` (100 jobs per minute). For external API rate limits.
+- [ ] **Job priority:** `priority: 1` (highest) to `priority: N`. Critical jobs processed first.
+- [ ] **Retry strategy:** `attempts: 3`, `backoff: { type: 'exponential', delay: 5000 }`. Transient failures auto-retry. Permanent failures → `failed` event.
+- [ ] **Dead letter:** After max attempts, job moves to `failed` state. Query failed jobs via BullMQ API. Replay with `queue.retryJobs()`.
+- [ ] **Bull Board dashboard:** `@bull-board/nestjs`. Visual queue monitoring: active, waiting, completed, failed, delayed. Mount at `/admin/queues`.
 
 ---
 
 ## 6. Data Reading Patterns
 
-- [ ] **Database cursor (TypeORM)** — Keyset pagination. Returns chunk + next cursor.
+- [ ] **Database cursor (TypeORM):** Keyset pagination. Returns chunk + next cursor.
 
 ```typescript
 @Injectable()
@@ -332,7 +332,7 @@ export class OrderReader implements ItemReader<OrderEntity> {
 }
 ```
 
-- [ ] **Database cursor (Prisma)** — Built-in cursor pagination.
+- [ ] **Database cursor (Prisma):** Built-in cursor pagination.
 
 ```typescript
 @Injectable()
@@ -351,7 +351,7 @@ export class OrderReader implements ItemReader<Order> {
 }
 ```
 
-- [ ] **File reading (streaming)** — `readline` or `csv-parse` with stream API. Don't load entire file into memory.
+- [ ] **File reading (streaming):** `readline` or `csv-parse` with stream API. Don't load entire file into memory.
 
 ```typescript
 import { createReadStream } from 'fs';
@@ -370,15 +370,15 @@ export class CsvReader {
 }
 ```
 
-- [ ] **API pagination** — Fetch page by page with cursor/offset. Respect `Retry-After` headers. Use `axios` or `got` with retry interceptor.
-- [ ] **AsyncGenerator for streaming** — `async function*` yields items one at a time. Memory-efficient for large datasets. Compose with `for await...of`.
+- [ ] **API pagination:** Fetch page by page with cursor/offset. Respect `Retry-After` headers. Use `axios` or `got` with retry interceptor.
+- [ ] **AsyncGenerator for streaming:** `async function*` yields items one at a time. Memory-efficient for large datasets. Compose with `for await...of`.
 
 
 ---
 
 ## 7. Data Writing Patterns
 
-- [ ] **Bulk insert (TypeORM)** — `repo.save(items)` does individual INSERTs. Use `repo.insert(items)` or query builder for true bulk.
+- [ ] **Bulk insert (TypeORM):** `repo.save(items)` does individual INSERTs. Use `repo.insert(items)` or query builder for true bulk.
 
 ```typescript
 @Injectable()
@@ -397,7 +397,7 @@ export class OrderWriter implements ItemWriter<ProcessedOrder> {
 }
 ```
 
-- [ ] **Bulk insert (Prisma)** — `prisma.order.createMany({ data: items, skipDuplicates: true })`. Or `$transaction` for upserts.
+- [ ] **Bulk insert (Prisma):** `prisma.order.createMany({ data: items, skipDuplicates: true })`. Or `$transaction` for upserts.
 
 ```typescript
 @Injectable()
@@ -418,15 +418,15 @@ export class OrderWriter implements ItemWriter<ProcessedOrder> {
 }
 ```
 
-- [ ] **Transaction per chunk** — Wrap writer in transaction. Chunk fails → rollback one chunk, not entire job. TypeORM: `dataSource.transaction()`. Prisma: `prisma.$transaction()`.
-- [ ] **File writer** — `createWriteStream` + CSV/JSON stringifier. Flush per chunk. Close on completion.
-- [ ] **Composite writer** — Write to multiple targets: DB + audit log, primary + replica, DB + event bus. All in same transaction where possible.
+- [ ] **Transaction per chunk:** Wrap writer in transaction. Chunk fails → rollback one chunk, not entire job. TypeORM: `dataSource.transaction()`. Prisma: `prisma.$transaction()`.
+- [ ] **File writer:** `createWriteStream` + CSV/JSON stringifier. Flush per chunk. Close on completion.
+- [ ] **Composite writer:** Write to multiple targets: DB + audit log, primary + replica, DB + event bus. All in same transaction where possible.
 
 ---
 
 ## 8. Error Handling & Resilience
 
-- [ ] **Skip tracker** — Count errors per type. Exceed threshold → abort. Report skipped items at end.
+- [ ] **Skip tracker:** Count errors per type. Exceed threshold → abort. Report skipped items at end.
 
 ```typescript
 @Injectable()
@@ -459,7 +459,7 @@ export class SkipTracker {
 }
 ```
 
-- [ ] **Retry with backoff** — For transient errors in readers/writers. Use `p-retry` or hand-rolled.
+- [ ] **Retry with backoff:** For transient errors in readers/writers. Use `p-retry` or hand-rolled.
 
 ```typescript
 import pRetry from 'p-retry';
@@ -474,7 +474,7 @@ async function withRetry<T>(fn: () => Promise<T>, attempts = 3): Promise<T> {
 }
 ```
 
-- [ ] **Error classification** — Custom exception hierarchy. `TransientError` (retry), `ValidationError` (skip), `CriticalError` (abort).
+- [ ] **Error classification:** Custom exception hierarchy. `TransientError` (retry), `ValidationError` (skip), `CriticalError` (abort).
 
 ```typescript
 export class TransientError extends Error { readonly retryable = true; }
@@ -482,7 +482,7 @@ export class ValidationError extends Error { readonly retryable = false; }
 export class CriticalError extends Error { readonly retryable = false; readonly abort = true; }
 ```
 
-- [ ] **Dead letter table** — Persist failed items for inspection and replay.
+- [ ] **Dead letter table:** Persist failed items for inspection and replay.
 
 ```typescript
 @Entity('batch_dead_letters')
@@ -498,7 +498,7 @@ export class DeadLetterEntity {
 }
 ```
 
-- [ ] **Graceful shutdown** — `app.enableShutdownHooks()`. `OnModuleDestroy` → finish current chunk → save checkpoint → close connections.
+- [ ] **Graceful shutdown:** `app.enableShutdownHooks()`. `OnModuleDestroy` → finish current chunk → save checkpoint → close connections.
 
 ```typescript
 @Injectable()
@@ -524,7 +524,7 @@ export class OrderSyncJob implements OnModuleDestroy {
 
 ## 9. Observability
 
-- [ ] **Logger per job** — `new Logger(OrderSyncJob.name)`. Structured context: job name, execution ID, chunk number.
+- [ ] **Logger per job:** `new Logger(OrderSyncJob.name)`. Structured context: job name, execution ID, chunk number.
 
 ```typescript
 @Injectable()
@@ -547,8 +547,8 @@ export class OrderSyncJob {
 }
 ```
 
-- [ ] **Pino for structured JSON** — `nestjs-pino`. JSON logs in production. Pretty in dev. Automatic request context.
-- [ ] **Metrics** — `@willsoto/nestjs-prometheus` or custom. Counters: items processed, errors, skips. Histogram: chunk duration. Gauge: active jobs.
+- [ ] **Pino for structured JSON:** `nestjs-pino`. JSON logs in production. Pretty in dev. Automatic request context.
+- [ ] **Metrics:** `@willsoto/nestjs-prometheus` or custom. Counters: items processed, errors, skips. Histogram: chunk duration. Gauge: active jobs.
 
 ```typescript
 @Injectable()
@@ -572,15 +572,15 @@ export class BatchMetrics {
 }
 ```
 
-- [ ] **Health endpoint for workers** — Long-running worker needs `/health`. Report unhealthy if: queue connection lost, last heartbeat stale, memory pressure.
-- [ ] **BullMQ events** — Listen to `completed`, `failed`, `stalled` events. Push to metrics. Alert on `stalled` (worker died mid-job).
-- [ ] **Job summary logging** — On completion: total read, written, skipped, errored, duration. Parseable for alerting rules.
+- [ ] **Health endpoint for workers:** Long-running worker needs `/health`. Report unhealthy if: queue connection lost, last heartbeat stale, memory pressure.
+- [ ] **BullMQ events:** Listen to `completed`, `failed`, `stalled` events. Push to metrics. Alert on `stalled` (worker died mid-job).
+- [ ] **Job summary logging:** On completion: total read, written, skipped, errored, duration. Parseable for alerting rules.
 
 ---
 
 ## 10. Testing
 
-- [ ] **Unit tests for processors** — Pure transform logic. Mock nothing. Fast.
+- [ ] **Unit tests for processors:** Pure transform logic. Mock nothing. Fast.
 
 ```typescript
 describe('OrderProcessor', () => {
@@ -608,7 +608,7 @@ describe('OrderProcessor', () => {
 });
 ```
 
-- [ ] **Integration tests** — Full job with real DB (Testcontainers). Seed data → run → verify output.
+- [ ] **Integration tests:** Full job with real DB (Testcontainers). Seed data → run → verify output.
 
 ```typescript
 describe('OrderSyncJob (integration)', () => {
@@ -634,22 +634,22 @@ describe('OrderSyncJob (integration)', () => {
 
   it('should be idempotent on re-run', async () => {
     await job.run(); // first
-    await job.run(); // second — upserts, no duplicates
+    await job.run(); // second - upserts, no duplicates
     const count = await repo.count();
     expect(count).toBe(100); // not 200
   });
 });
 ```
 
-- [ ] **BullMQ job tests** — Use `@nestjs/bullmq` testing utilities. Enqueue → process → verify side effects.
-- [ ] **Checkpoint/resume test** — Run job → abort after N chunks → re-run → verify resumes correctly.
-- [ ] **Skip threshold test** — Feed job with data exceeding skip limit → verify job aborts with correct error.
+- [ ] **BullMQ job tests:** Use `@nestjs/bullmq` testing utilities. Enqueue → process → verify side effects.
+- [ ] **Checkpoint/resume test:** Run job → abort after N chunks → re-run → verify resumes correctly.
+- [ ] **Skip threshold test:** Feed job with data exceeding skip limit → verify job aborts with correct error.
 
 ---
 
 ## 11. Configuration
 
-- [ ] **`@nestjs/config` with validation** — Type-safe batch config. Fail fast on invalid values.
+- [ ] **`@nestjs/config` with validation:** Type-safe batch config. Fail fast on invalid values.
 
 ```typescript
 // batch.config.ts
@@ -692,15 +692,15 @@ export default registerAs('batch', () => {
 });
 ```
 
-- [ ] **Config per job** — Different jobs may need different chunk sizes, timeouts, skip limits. Override defaults per job.
-- [ ] **Runtime tuning without redeploy** — Env vars for chunk size, concurrency, skip limit. K8s ConfigMap or feature flag service.
-- [ ] **Dry-run mode** — `DRY_RUN=true` → processor runs, writer is no-op. Validate pipeline without mutations.
+- [ ] **Config per job:** Different jobs may need different chunk sizes, timeouts, skip limits. Override defaults per job.
+- [ ] **Runtime tuning without redeploy:** Env vars for chunk size, concurrency, skip limit. K8s ConfigMap or feature flag service.
+- [ ] **Dry-run mode:** `DRY_RUN=true` → processor runs, writer is no-op. Validate pipeline without mutations.
 
 ---
 
 ## 12. Deployment
 
-- [ ] **Dockerfile per entry point** — Same image, different CMD. Or separate images if resource profiles differ.
+- [ ] **Dockerfile per entry point:** Same image, different CMD. Or separate images if resource profiles differ.
 
 ```dockerfile
 FROM node:20-alpine AS build
@@ -720,30 +720,30 @@ COPY --from=build /app/package.json ./
 CMD ["node", "dist/main.batch.js"]
 ```
 
-- [ ] **K8s CronJob for scheduled** — Standalone mode. Run → exit. Same pattern as Go/Spring.
-- [ ] **K8s Deployment for workers** — Long-running BullMQ consumer. Horizontal Pod Autoscaler based on queue depth.
-- [ ] **Resource limits** — Node batch jobs: 256MB–1GB typical. Set `--max-old-space-size` matching container limit. Streaming keeps memory bounded.
-- [ ] **Graceful shutdown** — `enableShutdownHooks()` + `terminationGracePeriodSeconds`. Finish current chunk before exit.
-- [ ] **Separate from API** — Batch workers don't share pods with API. Different scaling, different resource profiles, different failure blast radius.
-- [ ] **Bull Board in production** — Protected behind auth. Monitor queue health, retry failed jobs, drain queues during incidents.
+- [ ] **K8s CronJob for scheduled:** Standalone mode. Run → exit. Same pattern as Go/Spring.
+- [ ] **K8s Deployment for workers:** Long-running BullMQ consumer. Horizontal Pod Autoscaler based on queue depth.
+- [ ] **Resource limits:** Node batch jobs: 256MB–1GB typical. Set `--max-old-space-size` matching container limit. Streaming keeps memory bounded.
+- [ ] **Graceful shutdown:** `enableShutdownHooks()` + `terminationGracePeriodSeconds`. Finish current chunk before exit.
+- [ ] **Separate from API:** Batch workers don't share pods with API. Different scaling, different resource profiles, different failure blast radius.
+- [ ] **Bull Board in production:** Protected behind auth. Monitor queue health, retry failed jobs, drain queues during incidents.
 
 ---
 
 ## Quick Sanity Check Before Launch
 
-- [ ] Job is idempotent — re-run produces same result (upserts, skipDuplicates)
-- [ ] Checkpoint works — kill mid-run, restart, verify resume from last chunk
-- [ ] Skip limit tested — bad records skipped, threshold triggers abort
-- [ ] BullMQ retry configured — transient failures auto-retry with backoff
-- [ ] No overlapping runs — lock prevents concurrent execution of same job
-- [ ] Memory bounded — streaming/pagination, not loading entire dataset
-- [ ] Graceful shutdown — SIGTERM → finish chunk → save progress → exit
-- [ ] Dead letter captures failures — inspectable, replayable from DB/Bull Board
-- [ ] Structured logs — JSON, filterable by job name + execution ID
-- [ ] Metrics exposed — items processed, chunk duration, error count
-- [ ] Exit code correct (standalone) — 0 success, 1 failure, scheduler detects
-- [ ] Health endpoint (worker) — reports unhealthy if queue disconnected or stalled
-- [ ] Config validated at startup — missing env var → fail fast, not runtime surprise
+- [ ] Job is idempotent: re-run produces same result (upserts, skipDuplicates)
+- [ ] Checkpoint works: kill mid-run, restart, verify resume from last chunk
+- [ ] Skip limit tested: bad records skipped, threshold triggers abort
+- [ ] BullMQ retry configured: transient failures auto-retry with backoff
+- [ ] No overlapping runs: lock prevents concurrent execution of same job
+- [ ] Memory bounded: streaming/pagination, not loading entire dataset
+- [ ] Graceful shutdown: SIGTERM → finish chunk → save progress → exit
+- [ ] Dead letter captures failures: inspectable, replayable from DB/Bull Board
+- [ ] Structured logs: JSON, filterable by job name + execution ID
+- [ ] Metrics exposed: items processed, chunk duration, error count
+- [ ] Exit code correct (standalone): 0 success, 1 failure, scheduler detects
+- [ ] Health endpoint (worker): reports unhealthy if queue disconnected or stalled
+- [ ] Config validated at startup: missing env var → fail fast, not runtime surprise
 
 ---
 

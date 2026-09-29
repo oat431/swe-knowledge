@@ -1,214 +1,214 @@
 # Web Frontend Checklist
 
 > Framework-agnostic checklist for production web applications.
-> React, Vue, Svelte, Angular, or vanilla — the principles are the same. The tools change.
+> React, Vue, Svelte, Angular, or vanilla, the principles are the same. The tools change.
 > Last updated: 2026-09-14 (added §2 Architecture & Code Organization, §5 Real-Time & Live Data, §12 SEO & Metadata; framework family split into 2-layer library + meta-framework checklists)
 
 ---
 
 ## 1. Framework & Project Setup
 
-- [ ] **Pick what the team knows** — React (biggest ecosystem, most hires), Vue (gentle learning curve, great docs), Svelte (least boilerplate, compiles away), Angular (batteries included, enterprise), or Solid/Qwik (cutting edge). Not what's trending on Twitter.
-- [ ] **Rendering strategy first** — SPA (internal dashboards, no SEO). SSR (content sites, e-commerce). SSG (blogs, docs, marketing). Hybrid (most real apps — static shell + dynamic islands). This decision shapes everything else.
-- [ ] **TypeScript strict mode** — `"strict": true`, plus `noUncheckedIndexedAccess`, `noUnusedLocals`, `noUnusedParameters`. Regardless of framework.
-- [ ] **Package manager** — pnpm (strict, fast, disk-efficient) or npm. Lockfile committed. No `yarn` unless migrating legacy.
-- [ ] **Linting & formatting** — Biome (fastest, single tool) or ESLint + Prettier. Pre-commit hook (lint-staged + husky/lefthook). CI blocks on lint failures.
-- [ ] **Monorepo if multi-app** — pnpm workspaces + Turborepo/Nx. Shared types, validators, config between frontends. Not needed for single-app projects.
+- [ ] **Pick what the team knows:** React (biggest ecosystem, most hires), Vue (gentle learning curve, great docs), Svelte (least boilerplate, compiles away), Angular (batteries included, enterprise), or Solid/Qwik (cutting edge). Not what's trending on Twitter.
+- [ ] **Rendering strategy first** (SPA (internal dashboards, no SEO). SSR (content sites, e-commerce). SSG (blogs, docs, marketing). Hybrid (most real apps) static shell + dynamic islands). This decision shapes everything else.
+- [ ] **TypeScript strict mode:** `"strict": true`, plus `noUncheckedIndexedAccess`, `noUnusedLocals`, `noUnusedParameters`. Regardless of framework.
+- [ ] **Package manager:** pnpm (strict, fast, disk-efficient) or npm. Lockfile committed. No `yarn` unless migrating legacy.
+- [ ] **Linting & formatting:** Biome (fastest, single tool) or ESLint + Prettier. Pre-commit hook (lint-staged + husky/lefthook). CI blocks on lint failures.
+- [ ] **Monorepo if multi-app:** pnpm workspaces + Turborepo/Nx. Shared types, validators, config between frontends. Not needed for single-app projects.
 
 ## 2. Architecture & Code Organization
 
-- [ ] **Feature-based folders** — Organize by domain (`features/users/`, `features/orders/`) with components, hooks, api, styles co-located per feature. Not type-based (`components/`, `hooks/`, `api/` split at root) — type-based dies at ~20 files.
-- [ ] **Module boundaries enforced in CI** — `eslint-plugin-boundaries` or `dependency-cruiser`: shared → features → app-shell. Nothing imports upward or sideways across features except through a public export.
-- [ ] **Dependency rule points inward** — Business/domain logic and types don't import framework or UI details. UI imports from logic, never the reverse (Clean Architecture).
-- [ ] **Limited barrel files** — One per feature public boundary (`features/users/index.ts`) at most. Deep-import within a feature. Barrels everywhere drag whole libraries into bundles and kill tree-shaking.
-- [ ] **Shared code promoted on third use** — Don't abstract on first or second use. `shared/` (or `packages/shared` in monorepo) holds validated types, API client, Zod schemas, design tokens, utils — not speculative "common" components.
-- [ ] **Tests & stories co-located** — `user-card.test.tsx` next to `user-card.tsx`. Storybook stories only for shared/design-system components.
-- [ ] **Monorepo boundaries** — Each app owns its routes/features. Shared package owns contracts (types, validators), not UI features. `tsconfig` project references or Turborepo task graph.
-- [ ] **Types live in one place** — API response types generated from the backend contract (OpenAPI), not hand-maintained duplicates that drift.
+- [ ] **Feature-based folders** (Organize by domain (`features/users/`, `features/orders/`) with components, hooks, api, styles co-located per feature. Not type-based (`components/`, `hooks/`, `api/` split at root)) type-based dies at ~20 files.
+- [ ] **Module boundaries enforced in CI:** `eslint-plugin-boundaries` or `dependency-cruiser`: shared → features → app-shell. Nothing imports upward or sideways across features except through a public export.
+- [ ] **Dependency rule points inward:** Business/domain logic and types don't import framework or UI details. UI imports from logic, never the reverse (Clean Architecture).
+- [ ] **Limited barrel files:** One per feature public boundary (`features/users/index.ts`) at most. Deep-import within a feature. Barrels everywhere drag whole libraries into bundles and kill tree-shaking.
+- [ ] **Shared code promoted on third use** (Don't abstract on first or second use. `shared/` (or `packages/shared` in monorepo) holds validated types, API client, Zod schemas, design tokens, utils) not speculative "common" components.
+- [ ] **Tests & stories co-located:** `user-card.test.tsx` next to `user-card.tsx`. Storybook stories only for shared/design-system components.
+- [ ] **Monorepo boundaries:** Each app owns its routes/features. Shared package owns contracts (types, validators), not UI features. `tsconfig` project references or Turborepo task graph.
+- [ ] **Types live in one place:** API response types generated from the backend contract (OpenAPI), not hand-maintained duplicates that drift.
 
 ## 3. Rendering Strategy (The Critical Decision)
 
-- [ ] **SPA (Single Page Application)** — CSR-only. Best for: internal dashboards, admin panels, apps behind login. No SEO needed. Fast after initial load. Example: Vite + any framework.
-- [ ] **SSR (Server-Side Rendering)** — Server renders HTML per request. Best for: user-specific content, frequently-changing data, SEO-critical pages. Higher server cost per request.
-- [ ] **SSG (Static Site Generation)** — Pre-render at build time. Best for: blogs, docs, marketing pages, changelogs. Fastest to serve (just HTML), but rebuild on content change.
-- [ ] **ISR (Incremental Static Regeneration)** — Static with cache-based revalidation. Best hybrid: static speed, near-dynamic freshness. Revalidate every N seconds or on-demand.
-- [ ] **Islands Architecture** — Static shell with dynamic interactive islands. Astro, Fresh (Deno), or framework-level partial hydration. Minimal JS shipped to browser.
-- [ ] **Streaming** — Send HTML as it's ready, don't wait for everything. Users see content faster. Suspend/await boundaries at component level. All major meta-frameworks support this now.
-- [ ] **Don't over-complicate it** — SPA for internal tools. SSG for blogs. SSR for e-commerce. You don't need every strategy in one app.
+- [ ] **SPA (Single Page Application):** CSR-only. Best for: internal dashboards, admin panels, apps behind login. No SEO needed. Fast after initial load. Example: Vite + any framework.
+- [ ] **SSR (Server-Side Rendering):** Server renders HTML per request. Best for: user-specific content, frequently-changing data, SEO-critical pages. Higher server cost per request.
+- [ ] **SSG (Static Site Generation):** Pre-render at build time. Best for: blogs, docs, marketing pages, changelogs. Fastest to serve (just HTML), but rebuild on content change.
+- [ ] **ISR (Incremental Static Regeneration):** Static with cache-based revalidation. Best hybrid: static speed, near-dynamic freshness. Revalidate every N seconds or on-demand.
+- [ ] **Islands Architecture:** Static shell with dynamic interactive islands. Astro, Fresh (Deno), or framework-level partial hydration. Minimal JS shipped to browser.
+- [ ] **Streaming:** Send HTML as it's ready, don't wait for everything. Users see content faster. Suspend/await boundaries at component level. All major meta-frameworks support this now.
+- [ ] **Don't over-complicate it:** SPA for internal tools. SSG for blogs. SSR for e-commerce. You don't need every strategy in one app.
 
 ## 4. Data Fetching & Server State
 
-- [ ] **Server state library** — Every async read through a query, every async write through a mutation. This pattern is universal: TanStack Query (React/Vue/Svelte/Solid), RTK Query, Apollo Client (GraphQL), or SWR.
-- [ ] **Query key conventions** — Hierarchical, granular, cache-friendly. `['users', userId, 'posts', { status: 'draft' }]`. Invalidating `['users']` clears all user queries.
-- [ ] **Stale time & cache eviction** — `staleTime` controls refetch triggers. Cache eviction time controls memory. Default staleTime is usually 0 (too aggressive for semi-static data). Tune per query.
-- [ ] **Smooth pagination** — Keep previous page visible while loading next. `placeholderData` / `keepPreviousData` pattern. No layout shift between pages.
-- [ ] **Optimistic updates** — Update UI immediately, rollback on error. `onMutate` → snapshot previous → set optimistic → `onError` → restore snapshot. Feels instant.
-- [ ] **Prefetching** — Prefetch on hover, on focus, on intent. Data ready before the user clicks.
-- [ ] **Every async view has 4 states** — Loading (skeleton/spinner), Empty ("No items yet"), Error (with retry), Loaded (the actual content). Never just 2 out of 4.
+- [ ] **Server state library:** Every async read through a query, every async write through a mutation. This pattern is universal: TanStack Query (React/Vue/Svelte/Solid), RTK Query, Apollo Client (GraphQL), or SWR.
+- [ ] **Query key conventions:** Hierarchical, granular, cache-friendly. `['users', userId, 'posts', { status: 'draft' }]`. Invalidating `['users']` clears all user queries.
+- [ ] **Stale time & cache eviction:** `staleTime` controls refetch triggers. Cache eviction time controls memory. Default staleTime is usually 0 (too aggressive for semi-static data). Tune per query.
+- [ ] **Smooth pagination:** Keep previous page visible while loading next. `placeholderData` / `keepPreviousData` pattern. No layout shift between pages.
+- [ ] **Optimistic updates:** Update UI immediately, rollback on error. `onMutate` → snapshot previous → set optimistic → `onError` → restore snapshot. Feels instant.
+- [ ] **Prefetching:** Prefetch on hover, on focus, on intent. Data ready before the user clicks.
+- [ ] **Every async view has 4 states:** Loading (skeleton/spinner), Empty ("No items yet"), Error (with retry), Loaded (the actual content). Never just 2 out of 4.
 
 ## 5. Real-Time & Live Data
 
-- [ ] **SSE vs WebSocket** — SSE for one-way server→client streams (notifications, activity feeds, LLM tokens). WebSocket for bidirectional (chat, collaboration, presence). Default to SSE — simpler, works over HTTP/2, auto-reconnects natively.
-- [ ] **Reconnection with backoff + resume** — Exponential backoff with jitter. `Last-Event-ID` (SSE) or resume token (WS) so a reconnect doesn't duplicate or drop messages.
-- [ ] **Heartbeat** — Ping/keepalive to detect half-open connections. Don't rely on TCP alone.
-- [ ] **Messages update the server-state cache** — Real-time events write into the query cache (`setQueryData` / invalidate), not into a parallel copy of the data. One source of truth.
-- [ ] **Ordering & dedup** — Sequence numbers on server events. Client dedupes by event ID. Chatty streams: batch/throttle UI updates (backpressure).
-- [ ] **Optimistic + server-authoritative** — Optimistic UI for user's own actions, reconciled on server ack. Server wins on conflict.
-- [ ] **Auth over the channel** — Authenticate the connection (cookie or per-connection token), never a token in the query string (leaks into logs).
-- [ ] **Cleanup** — Close connections on unmount/route change, remove listeners, abort in-flight requests (`AbortController`). No zombie sockets.
-- [ ] **Scale awareness** — Per-connection server cost, sticky sessions or pub/sub fan-out (Valkey/Redis), fallback to polling when WS is blocked by proxies.
+- [ ] **SSE vs WebSocket** (SSE for one-way server→client streams (notifications, activity feeds, LLM tokens). WebSocket for bidirectional (chat, collaboration, presence). Default to SSE) simpler, works over HTTP/2, auto-reconnects natively.
+- [ ] **Reconnection with backoff + resume:** Exponential backoff with jitter. `Last-Event-ID` (SSE) or resume token (WS) so a reconnect doesn't duplicate or drop messages.
+- [ ] **Heartbeat:** Ping/keepalive to detect half-open connections. Don't rely on TCP alone.
+- [ ] **Messages update the server-state cache:** Real-time events write into the query cache (`setQueryData` / invalidate), not into a parallel copy of the data. One source of truth.
+- [ ] **Ordering & dedup:** Sequence numbers on server events. Client dedupes by event ID. Chatty streams: batch/throttle UI updates (backpressure).
+- [ ] **Optimistic + server-authoritative:** Optimistic UI for user's own actions, reconciled on server ack. Server wins on conflict.
+- [ ] **Auth over the channel:** Authenticate the connection (cookie or per-connection token), never a token in the query string (leaks into logs).
+- [ ] **Cleanup:** Close connections on unmount/route change, remove listeners, abort in-flight requests (`AbortController`). No zombie sockets.
+- [ ] **Scale awareness:** Per-connection server cost, sticky sessions or pub/sub fan-out (Valkey/Redis), fallback to polling when WS is blocked by proxies.
 
 ## 6. Client State Management
 
-- [ ] **Server state ≠ client state** — Server cache (TanStack Query) for data from the API. Client state for ephemeral UI: open modals, active tab, form drafts, theme. Don't put API data in client stores.
-- [ ] **Client state library** — Lightweight, no boilerplate. Zustand (React), Pinia (Vue), Svelte stores (built-in), signals (Solid/Preact/Qwik), or Jotai for atomic reactivity.
-- [ ] **URL as state** — Search params, filters, pagination, selected item → in the URL. Shareable, bookmarkable, back-button friendly. `useSearchParams()`, `useRouter()`, or framework equivalent.
-- [ ] **Form state** — Separate from app state. Form library handles values, validation, submission, dirty/pristine, errors. Don't wire forms to global stores.
-- [ ] **Context/injection only for truly global concerns** — Auth, theme, locale, feature flags. Not for frequently-changing state (re-renders all consumers).
-- [ ] **No heavy state management unless justified** — Redux, NgRx, Vuex (deprecated) are overkill for most apps. Server cache + lightweight client state covers 95% of cases with less code.
+- [ ] **Server state ≠ client state:** Server cache (TanStack Query) for data from the API. Client state for ephemeral UI: open modals, active tab, form drafts, theme. Don't put API data in client stores.
+- [ ] **Client state library:** Lightweight, no boilerplate. Zustand (React), Pinia (Vue), Svelte stores (built-in), signals (Solid/Preact/Qwik), or Jotai for atomic reactivity.
+- [ ] **URL as state:** Search params, filters, pagination, selected item → in the URL. Shareable, bookmarkable, back-button friendly. `useSearchParams()`, `useRouter()`, or framework equivalent.
+- [ ] **Form state:** Separate from app state. Form library handles values, validation, submission, dirty/pristine, errors. Don't wire forms to global stores.
+- [ ] **Context/injection only for truly global concerns:** Auth, theme, locale, feature flags. Not for frequently-changing state (re-renders all consumers).
+- [ ] **No heavy state management unless justified:** Redux, NgRx, Vuex (deprecated) are overkill for most apps. Server cache + lightweight client state covers 95% of cases with less code.
 
 ## 7. Performance
 
-- [ ] **Core Web Vitals** — LCP < 2.5s (loading), INP < 200ms (interactivity), CLS < 0.1 (visual stability). These are Google ranking factors as well as UX. Measure with Lighthouse CI in pipeline.
-- [ ] **Code splitting** — Route-level (every router does this). Component-level for heavy widgets (charts, editors, media players): dynamic import with loading fallback. Don't ship 500KB of chart library on the homepage.
-- [ ] **Image optimization** — Responsive sizes, modern formats (WebP/AVIF), lazy loading (`loading="lazy"`), LCP image eager with `fetchpriority="high"`. Use framework image component or `<picture>` with multiple sources.
-- [ ] **Font optimization** — Self-host fonts (not Google Fonts CDN). `font-display: swap` (or `optional`). Subset to needed characters. WOFF2 format. Preload critical fonts.
-- [ ] **No waterfall data fetching** — Fetch in parallel: `Promise.all([getUsers(), getPosts()])`. Or co-locate data fetching with the component that needs it.
-- [ ] **Large lists → virtualize** — Don't render 10,000 DOM nodes. `@tanstack/virtual`, `vue-virtual-scroller`, or framework equivalent. Only render what's in/near the viewport.
-- [ ] **Debounce user input** — Search inputs, filter changes, resize handlers. Not `onInput` → API call. `onInput` → local state → debounce 300ms → API call.
-- [ ] **Bundle analysis** — Know what's in your bundle. Catch accidentally-imported heavy deps. `vite-bundle-visualizer`, `webpack-bundle-analyzer`, or framework plugin.
-- [ ] **Tree shaking** — ES modules, side-effect-free packages, granular imports (`import { debounce } from 'lodash-es'`, not `import _ from 'lodash'`).
-- [ ] **CDN for static assets** — Serve JS, CSS, images, fonts from CDN. Immutable cache headers for content-hashed files. Different origin (or subdomain) to skip cookie headers.
+- [ ] **Core Web Vitals:** LCP < 2.5s (loading), INP < 200ms (interactivity), CLS < 0.1 (visual stability). These are Google ranking factors as well as UX. Measure with Lighthouse CI in pipeline.
+- [ ] **Code splitting:** Route-level (every router does this). Component-level for heavy widgets (charts, editors, media players): dynamic import with loading fallback. Don't ship 500KB of chart library on the homepage.
+- [ ] **Image optimization:** Responsive sizes, modern formats (WebP/AVIF), lazy loading (`loading="lazy"`), LCP image eager with `fetchpriority="high"`. Use framework image component or `<picture>` with multiple sources.
+- [ ] **Font optimization:** Self-host fonts (not Google Fonts CDN). `font-display: swap` (or `optional`). Subset to needed characters. WOFF2 format. Preload critical fonts.
+- [ ] **No waterfall data fetching:** Fetch in parallel: `Promise.all([getUsers(), getPosts()])`. Or co-locate data fetching with the component that needs it.
+- [ ] **Large lists → virtualize:** Don't render 10,000 DOM nodes. `@tanstack/virtual`, `vue-virtual-scroller`, or framework equivalent. Only render what's in/near the viewport.
+- [ ] **Debounce user input:** Search inputs, filter changes, resize handlers. Not `onInput` → API call. `onInput` → local state → debounce 300ms → API call.
+- [ ] **Bundle analysis:** Know what's in your bundle. Catch accidentally-imported heavy deps. `vite-bundle-visualizer`, `webpack-bundle-analyzer`, or framework plugin.
+- [ ] **Tree shaking:** ES modules, side-effect-free packages, granular imports (`import { debounce } from 'lodash-es'`, not `import _ from 'lodash'`).
+- [ ] **CDN for static assets:** Serve JS, CSS, images, fonts from CDN. Immutable cache headers for content-hashed files. Different origin (or subdomain) to skip cookie headers.
 
 ## 8. Styling & Design
 
-- [ ] **Utility-first CSS** — Tailwind CSS (framework-agnostic), UnoCSS (faster, flexible), or vanilla CSS with utility classes. Consistent spacing, typography, colors, without naming 500 classes.
-- [ ] **Component primitives** — Don't build your own modal, dropdown, tooltip, or combobox. Use headless, accessible components: Radix (React), Headless UI (React/Vue), Melt UI (Svelte), Floating UI for positioning. Copy-paste styled versions (shadcn/ui pattern) over npm dependency.
-- [ ] **Design tokens** — CSS custom properties for colors, spacing, radius, shadows, typography. Single source of truth. Dark mode via `prefers-color-scheme` or class toggle.
-- [ ] **Responsive design** — Mobile-first breakpoints. Test at actual device widths (375px, 414px, 768px, 1024px, 1440px). `min-width` media queries, not `max-width`.
-- [ ] **Layout primitives** — `<Container>`, `<Stack>`, `<Grid>`, `<Flex>` wrapper components. Consistent max-widths, gutters, alignment. Not ad-hoc margins on every element.
-- [ ] **Animation with intent** — `prefers-reduced-motion` respected. Hardware-accelerated properties only (`transform`, `opacity`). Not `height`/`width` transitions (layout thrashing).
+- [ ] **Utility-first CSS:** Tailwind CSS (framework-agnostic), UnoCSS (faster, flexible), or vanilla CSS with utility classes. Consistent spacing, typography, colors, without naming 500 classes.
+- [ ] **Component primitives:** Don't build your own modal, dropdown, tooltip, or combobox. Use headless, accessible components: Radix (React), Headless UI (React/Vue), Melt UI (Svelte), Floating UI for positioning. Copy-paste styled versions (shadcn/ui pattern) over npm dependency.
+- [ ] **Design tokens:** CSS custom properties for colors, spacing, radius, shadows, typography. Single source of truth. Dark mode via `prefers-color-scheme` or class toggle.
+- [ ] **Responsive design:** Mobile-first breakpoints. Test at actual device widths (375px, 414px, 768px, 1024px, 1440px). `min-width` media queries, not `max-width`.
+- [ ] **Layout primitives:** `<Container>`, `<Stack>`, `<Grid>`, `<Flex>` wrapper components. Consistent max-widths, gutters, alignment. Not ad-hoc margins on every element.
+- [ ] **Animation with intent:** `prefers-reduced-motion` respected. Hardware-accelerated properties only (`transform`, `opacity`). Not `height`/`width` transitions (layout thrashing).
 
 ## 9. Forms
 
-- [ ] **Form library** — Every framework has one: React Hook Form (React), FormKit/VeeValidate (Vue), Felte (Svelte), Angular Reactive Forms. Uncontrolled/lightweight by default for performance.
-- [ ] **Schema validation** — Zod, Valibot, Yup, Joi. Define the schema once, derive TypeScript type from it. Reuse schemas with backend if shared package.
-- [ ] **Server-side validation too** — Client validation is UX, server validation is security. Always validate on the server regardless of client validation.
-- [ ] **Form states** — Idle (ready to fill), submitting (disable button + spinner), success (redirect or confirmation), error (inline field errors + form-level message). Every state is rendered.
-- [ ] **Accessible forms** — Labels associated with inputs (`<label for="...">`). Error messages linked via `aria-describedby`. Required fields marked. Submit with Enter key.
-- [ ] **File uploads** — Preview before upload, progress indicator, drag-and-drop, size/type validation client-side. Chunked upload for large files.
+- [ ] **Form library:** Every framework has one: React Hook Form (React), FormKit/VeeValidate (Vue), Felte (Svelte), Angular Reactive Forms. Uncontrolled/lightweight by default for performance.
+- [ ] **Schema validation:** Zod, Valibot, Yup, Joi. Define the schema once, derive TypeScript type from it. Reuse schemas with backend if shared package.
+- [ ] **Server-side validation too:** Client validation is UX, server validation is security. Always validate on the server regardless of client validation.
+- [ ] **Form states:** Idle (ready to fill), submitting (disable button + spinner), success (redirect or confirmation), error (inline field errors + form-level message). Every state is rendered.
+- [ ] **Accessible forms:** Labels associated with inputs (`<label for="...">`). Error messages linked via `aria-describedby`. Required fields marked. Submit with Enter key.
+- [ ] **File uploads:** Preview before upload, progress indicator, drag-and-drop, size/type validation client-side. Chunked upload for large files.
 
 ## 10. Routing & Navigation
 
-- [ ] **Router choice** — File-system router (Next.js App Router, Nuxt, SvelteKit, Analog) or programmatic router (React Router, Vue Router). File-system is simpler for most apps.
-- [ ] **Nested layouts** — Persistent layout across child route navigations. Sidebar stays mounted while content changes. Avoid full-page remounts.
-- [ ] **Route-level loading states** — Automatic loading UI per route while data fetches. Not a blank page.
-- [ ] **Route-level error handling** — Error boundary per route. Fallback UI with retry button. Not white screen or full-page crash.
-- [ ] **Route guards** — Auth gates, role checks, redirects — enforced at the router level, not in every component. One place to check.
-- [ ] **Scroll restoration** — Back/forward navigation restores scroll position. Anchor links work. Framework router should handle this.
-- [ ] **404 & error pages** — Helpful, not default framework page. Links to homepage, search, or sitemap. Different 404 for different sections.
-- [ ] **SEO metadata per route** — `<title>`, `<meta name="description">`, Open Graph, canonical URL. Generated from data, not hard-coded. Full detail in §12.
+- [ ] **Router choice:** File-system router (Next.js App Router, Nuxt, SvelteKit, Analog) or programmatic router (React Router, Vue Router). File-system is simpler for most apps.
+- [ ] **Nested layouts:** Persistent layout across child route navigations. Sidebar stays mounted while content changes. Avoid full-page remounts.
+- [ ] **Route-level loading states:** Automatic loading UI per route while data fetches. Not a blank page.
+- [ ] **Route-level error handling:** Error boundary per route. Fallback UI with retry button. Not white screen or full-page crash.
+- [ ] **Route guards** (Auth gates, role checks, redirects) enforced at the router level, not in every component. One place to check.
+- [ ] **Scroll restoration:** Back/forward navigation restores scroll position. Anchor links work. Framework router should handle this.
+- [ ] **404 & error pages:** Helpful, not default framework page. Links to homepage, search, or sitemap. Different 404 for different sections.
+- [ ] **SEO metadata per route:** `<title>`, `<meta name="description">`, Open Graph, canonical URL. Generated from data, not hard-coded. Full detail in §12.
 
 ## 11. Testing
 
-- [ ] **Unit tests** — Vitest (fast, Vite-native, Jest-compatible) or framework-native runner. For utils, hooks/composables, pure functions, state logic.
-- [ ] **Component tests** — Testing Library (framework-specific adapters available for all major frameworks). Test behavior, not implementation: `screen.getByRole('button', { name: /submit/i })`, not `screen.getByTestId('submit-btn')`. Use `userEvent`, not `fireEvent`.
-- [ ] **API mocking** — MSW (Mock Service Worker) — framework and protocol agnostic. Intercept at network level, components test against realistic responses. Works with REST, GraphQL, any protocol.
-- [ ] **E2E tests** — Playwright (multi-browser, modern, fast) or Cypress. Critical user flows: login → navigate → create → edit → delete. Visual regression with `toHaveScreenshot()`.
-- [ ] **Accessibility tests** — `axe-core` (framework-agnostic) in unit tests and E2E. Catch violations in CI. Block merges on critical a11y regressions.
-- [ ] **Test what matters** — Happy path, error states, empty states, loading states, auth guard redirects. Not 100% coverage of trivial getters.
+- [ ] **Unit tests:** Vitest (fast, Vite-native, Jest-compatible) or framework-native runner. For utils, hooks/composables, pure functions, state logic.
+- [ ] **Component tests:** Testing Library (framework-specific adapters available for all major frameworks). Test behavior, not implementation: `screen.getByRole('button', { name: /submit/i })`, not `screen.getByTestId('submit-btn')`. Use `userEvent`, not `fireEvent`.
+- [ ] **API mocking** (MSW (Mock Service Worker)) framework and protocol agnostic. Intercept at network level, components test against realistic responses. Works with REST, GraphQL, any protocol.
+- [ ] **E2E tests:** Playwright (multi-browser, modern, fast) or Cypress. Critical user flows: login → navigate → create → edit → delete. Visual regression with `toHaveScreenshot()`.
+- [ ] **Accessibility tests:** `axe-core` (framework-agnostic) in unit tests and E2E. Catch violations in CI. Block merges on critical a11y regressions.
+- [ ] **Test what matters:** Happy path, error states, empty states, loading states, auth guard redirects. Not 100% coverage of trivial getters.
 
 ## 12. SEO & Metadata
 
-- [ ] **Crawlability first** — CSR-only content is invisible to some crawlers and to social unfurlers. SSR/SSG/prerender any public, indexable page. Verify with "View source" (not DevTools) that content is in the initial HTML.
-- [ ] **Metadata per route** — Unique `<title>` (50–60 chars), `<meta name="description">` (140–160), canonical URL. Generated from data (`generateMetadata`, `useHead`, `$page.data`), never hard-coded strings.
-- [ ] **Open Graph + Twitter cards** — `og:title`, `og:description`, `og:image` (1200×630), `twitter:card`. Test unfurls in Slack/Discord/X validators before launch.
-- [ ] **Structured data (JSON-LD)** — `Organization`, `Product`, `Article`, `BreadcrumbList`, `FAQPage` where applicable. Validate with Google Rich Results Test. Only mark up content visible on the page.
-- [ ] **`robots.txt` + XML sitemap** — Auto-generated sitemap with `lastmod`; sitemap referenced in robots.txt. Segmented sitemaps for large sites (> 50K URLs per file).
-- [ ] **hreflang for multi-locale** — Correct language/region pairs, self-referencing entries, `x-default`. Only when i18n exists (§17).
-- [ ] **Indexability control** — `noindex` on authenticated, duplicate, parameterized, and staging pages. Staging behind auth + `X-Robots-Tag: noindex` (never rely on robots.txt alone to hide content).
-- [ ] **Search Console + Bing Webmaster** — Registered, sitemap submitted, crawl errors and 404s monitored after launch.
-- [ ] **Core Web Vitals are SEO** — §7 thresholds (LCP/INP/CLS) are ranking inputs. Lighthouse SEO audit in CI; metadata lint (unique titles, canonical present) for critical routes.
+- [ ] **Crawlability first:** CSR-only content is invisible to some crawlers and to social unfurlers. SSR/SSG/prerender any public, indexable page. Verify with "View source" (not DevTools) that content is in the initial HTML.
+- [ ] **Metadata per route:** Unique `<title>` (50–60 chars), `<meta name="description">` (140–160), canonical URL. Generated from data (`generateMetadata`, `useHead`, `$page.data`), never hard-coded strings.
+- [ ] **Open Graph + Twitter cards:** `og:title`, `og:description`, `og:image` (1200×630), `twitter:card`. Test unfurls in Slack/Discord/X validators before launch.
+- [ ] **Structured data (JSON-LD):** `Organization`, `Product`, `Article`, `BreadcrumbList`, `FAQPage` where applicable. Validate with Google Rich Results Test. Only mark up content visible on the page.
+- [ ] **`robots.txt` + XML sitemap:** Auto-generated sitemap with `lastmod`; sitemap referenced in robots.txt. Segmented sitemaps for large sites (> 50K URLs per file).
+- [ ] **hreflang for multi-locale:** Correct language/region pairs, self-referencing entries, `x-default`. Only when i18n exists (§17).
+- [ ] **Indexability control:** `noindex` on authenticated, duplicate, parameterized, and staging pages. Staging behind auth + `X-Robots-Tag: noindex` (never rely on robots.txt alone to hide content).
+- [ ] **Search Console + Bing Webmaster:** Registered, sitemap submitted, crawl errors and 404s monitored after launch.
+- [ ] **Core Web Vitals are SEO:** §7 thresholds (LCP/INP/CLS) are ranking inputs. Lighthouse SEO audit in CI; metadata lint (unique titles, canonical present) for critical routes.
 
 ## 13. Accessibility (a11y)
 
-- [ ] **Semantic HTML** — `<button>` for actions, `<a>` for navigation, `<nav>` for navigation regions, `<main>` for primary content, `<form>` for forms, `<table>` for tabular data. Not `<div>` with click handlers.
-- [ ] **Heading hierarchy** — One `<h1>` per page, logical `<h2>` → `<h3>` → `<h4>` nesting. Not skipping levels to match visual size.
-- [ ] **Keyboard navigation** — All interactive elements reachable and operable via keyboard. Logical tab order. Visible focus indicators (`:focus-visible` ring). Skip-to-content link as first tab stop.
-- [ ] **ARIA — last resort** — `aria-label` on icon-only buttons. `aria-expanded` on toggles. `aria-describedby` on error messages. `role` only when HTML semantics can't express it. No ARIA is better than wrong ARIA.
-- [ ] **Color contrast** — WCAG AA minimum: 4.5:1 for normal text, 3:1 for large text (≥18px or ≥14px bold). Don't rely on color alone to convey information (add icons, text).
-- [ ] **Screen reader testing** — Spot-check with VoiceOver (macOS), NVDA (Windows), or Android TalkBack. Navigate by headings, landmarks, links. Fill a form. Complete a flow.
-- [ ] **Motion safety** — Respect `prefers-reduced-motion`. No auto-playing video with audio. Pause/stop controls for animations. No flashing content (< 3 flashes/second — epilepsy risk).
+- [ ] **Semantic HTML:** `<button>` for actions, `<a>` for navigation, `<nav>` for navigation regions, `<main>` for primary content, `<form>` for forms, `<table>` for tabular data. Not `<div>` with click handlers.
+- [ ] **Heading hierarchy:** One `<h1>` per page, logical `<h2>` → `<h3>` → `<h4>` nesting. Not skipping levels to match visual size.
+- [ ] **Keyboard navigation:** All interactive elements reachable and operable via keyboard. Logical tab order. Visible focus indicators (`:focus-visible` ring). Skip-to-content link as first tab stop.
+- [ ] **ARIA (last resort**) `aria-label` on icon-only buttons. `aria-expanded` on toggles. `aria-describedby` on error messages. `role` only when HTML semantics can't express it. No ARIA is better than wrong ARIA.
+- [ ] **Color contrast:** WCAG AA minimum: 4.5:1 for normal text, 3:1 for large text (≥18px or ≥14px bold). Don't rely on color alone to convey information (add icons, text).
+- [ ] **Screen reader testing:** Spot-check with VoiceOver (macOS), NVDA (Windows), or Android TalkBack. Navigate by headings, landmarks, links. Fill a form. Complete a flow.
+- [ ] **Motion safety** (Respect `prefers-reduced-motion`. No auto-playing video with audio. Pause/stop controls for animations. No flashing content (< 3 flashes/second) epilepsy risk).
 
 ## 14. Security (Frontend-Specific)
 
-- [ ] **XSS prevention** — Never inject unsanitized HTML. If you must render HTML (user-generated content), sanitize with DOMPurify. Template engines auto-escape by default — don't disable it.
-- [ ] **Never `eval`, never `new Function`** — In client code. CSP should block these anyway.
-- [ ] **No secrets in client code** — Every env var with a public prefix (`NEXT_PUBLIC_*`, `VITE_*`, `PUBLIC_*`) is bundled to the browser. Private env vars stay server-side. No API keys, no tokens, no secrets in the bundle.
-- [ ] **Auth token storage** — HTTP-only, Secure, SameSite cookies (inaccessible to JS, no XSS risk). If forced to use localStorage or sessionStorage: accept the XSS risk and keep token lifetime short.
-- [ ] **CSP (Content Security Policy)** — Work with backend/devops to set restrictive CSP. No `unsafe-inline`, no `unsafe-eval`. Start in `Content-Security-Policy-Report-Only` mode to gather violations first.
-- [ ] **CORS** — Configured on the backend, but frontend needs to understand it. Credentialed requests (`withCredentials: true`) need explicit CORS allowlist. No `Access-Control-Allow-Origin: *` with credentials.
-- [ ] **Dependency audit** — `npm audit` / `pnpm audit` in CI. Dependabot or Renovate for automated security patches. Frontend has hundreds of transitive dependencies — most CVEs aren't exploitable in browser context, but patch them anyway.
-- [ ] **Subresource Integrity (SRI)** — For CDN-loaded third-party scripts. Hash mismatch → browser rejects. Don't blindly trust third-party CDNs.
-- [ ] **CSRF protection** — If using cookie-based auth: SameSite=Lax minimum, CSRF token for mutation endpoints. SPA with token in header (`Authorization: Bearer *** is CSRF-immune since browser doesn't auto-attach it.
+- [ ] **XSS prevention** (Never inject unsanitized HTML. If you must render HTML (user-generated content), sanitize with DOMPurify. Template engines auto-escape by default) don't disable it.
+- [ ] **Never `eval`, never `new Function`:** In client code. CSP should block these anyway.
+- [ ] **No secrets in client code:** Every env var with a public prefix (`NEXT_PUBLIC_*`, `VITE_*`, `PUBLIC_*`) is bundled to the browser. Private env vars stay server-side. No API keys, no tokens, no secrets in the bundle.
+- [ ] **Auth token storage:** HTTP-only, Secure, SameSite cookies (inaccessible to JS, no XSS risk). If forced to use localStorage or sessionStorage: accept the XSS risk and keep token lifetime short.
+- [ ] **CSP (Content Security Policy):** Work with backend/devops to set restrictive CSP. No `unsafe-inline`, no `unsafe-eval`. Start in `Content-Security-Policy-Report-Only` mode to gather violations first.
+- [ ] **CORS:** Configured on the backend, but frontend needs to understand it. Credentialed requests (`withCredentials: true`) need explicit CORS allowlist. No `Access-Control-Allow-Origin: *` with credentials.
+- [ ] **Dependency audit** (`npm audit` / `pnpm audit` in CI. Dependabot or Renovate for automated security patches. Frontend has hundreds of transitive dependencies) most CVEs aren't exploitable in browser context, but patch them anyway.
+- [ ] **Subresource Integrity (SRI):** For CDN-loaded third-party scripts. Hash mismatch → browser rejects. Don't blindly trust third-party CDNs.
+- [ ] **CSRF protection:** If using cookie-based auth: SameSite=Lax minimum, CSRF token for mutation endpoints. SPA with token in header (`Authorization: Bearer *** is CSRF-immune since browser doesn't auto-attach it.
 
 ## 15. Build & Deploy
 
-- [ ] **Environment variables** — Client-safe vars: explicitly prefixed, bundled at build time. Server-only vars: no prefix, only accessible in server-side code. No mixing.
-- [ ] **CI/CD pipeline** — Lint → type-check → unit test → build → deploy preview → E2E → promote to production. Every PR gets a preview URL.
-- [ ] **Preview deployments** — Every PR/commit gets a unique URL (Vercel, Netlify, Cloudflare Pages, or custom). Shareable with stakeholders. Environment matches production as closely as possible.
-- [ ] **Static assets with content-hash** — Build tool does this automatically (Vite, webpack, Rollup). Immutable cache headers (`Cache-Control: public, max-age=31536000, immutable`). Fingerprinted filenames make cache invalidation free.
-- [ ] **Bundle analysis in CI** — Block on bundle size regressions. Set budgets (total JS < 200KB gzipped initial, total CSS < 50KB). Catch the moment-moment someone adds moment.
-- [ ] **Feature flags** — LaunchDarkly, Vercel Flags, Unleash, or simple config. Deploy code dark, enable in production. Kill broken features without redeploy. Not the same as environment variables (flags are runtime, env vars are build-time).
-- [ ] **Blue-green or canary deploys** — Zero-downtime. Shift traffic gradually to new version. Health check new instances before routing to them. Static sites: atomic deploys (CDN swap).
+- [ ] **Environment variables:** Client-safe vars: explicitly prefixed, bundled at build time. Server-only vars: no prefix, only accessible in server-side code. No mixing.
+- [ ] **CI/CD pipeline:** Lint → type-check → unit test → build → deploy preview → E2E → promote to production. Every PR gets a preview URL.
+- [ ] **Preview deployments:** Every PR/commit gets a unique URL (Vercel, Netlify, Cloudflare Pages, or custom). Shareable with stakeholders. Environment matches production as closely as possible.
+- [ ] **Static assets with content-hash:** Build tool does this automatically (Vite, webpack, Rollup). Immutable cache headers (`Cache-Control: public, max-age=31536000, immutable`). Fingerprinted filenames make cache invalidation free.
+- [ ] **Bundle analysis in CI:** Block on bundle size regressions. Set budgets (total JS < 200KB gzipped initial, total CSS < 50KB). Catch the moment-moment someone adds moment.
+- [ ] **Feature flags:** LaunchDarkly, Vercel Flags, Unleash, or simple config. Deploy code dark, enable in production. Kill broken features without redeploy. Not the same as environment variables (flags are runtime, env vars are build-time).
+- [ ] **Blue-green or canary deploys:** Zero-downtime. Shift traffic gradually to new version. Health check new instances before routing to them. Static sites: atomic deploys (CDN swap).
 
 ## 16. Error Handling & Observability
 
-- [ ] **Global error boundary** — Catch unhandled errors, render fallback UI. Not a white screen. Include retry/reset. Log to monitoring service.
-- [ ] **Error monitoring** — Sentry, Datadog RUM, or similar. Source maps uploaded (not public). Errors grouped by source map. Correlate frontend errors with backend traces via trace ID.
-- [ ] **RUM (Real User Monitoring)** — Core Web Vitals from real users, not just synthetic Lighthouse. LCP, INP, CLS segmented by device, country, page. Know what users actually experience.
-- [ ] **Structured logging** — On the server side (SSR/SSG). Client-side: meaningful error context in Sentry (user ID, route, browser, actions leading up).
-- [ ] **Graceful degradation** — If JavaScript fails: is the page still usable? If API fails: cached data, stale-while-revalidate, or clear error message. Nothing is less professional than a stuck spinner.
+- [ ] **Global error boundary:** Catch unhandled errors, render fallback UI. Not a white screen. Include retry/reset. Log to monitoring service.
+- [ ] **Error monitoring:** Sentry, Datadog RUM, or similar. Source maps uploaded (not public). Errors grouped by source map. Correlate frontend errors with backend traces via trace ID.
+- [ ] **RUM (Real User Monitoring):** Core Web Vitals from real users, not just synthetic Lighthouse. LCP, INP, CLS segmented by device, country, page. Know what users actually experience.
+- [ ] **Structured logging:** On the server side (SSR/SSG). Client-side: meaningful error context in Sentry (user ID, route, browser, actions leading up).
+- [ ] **Graceful degradation:** If JavaScript fails: is the page still usable? If API fails: cached data, stale-while-revalidate, or clear error message. Nothing is less professional than a stuck spinner.
 
 ## 17. Internationalization (i18n)
 
-- [ ] **Decide early** — Adding i18n to an existing app is painful. If you might need it, at least externalize all user-facing strings from day one.
-- [ ] **Library choice** — `i18next` (framework-agnostic, most popular), framework-specific wrapper, or built-in (`next-intl`, `vue-i18n`, `svelte-i18n`). ICU message format for complex pluralization/interpolation.
-- [ ] **RTL support** — Logical CSS properties (`margin-inline-start`, not `margin-left`). Direction-aware utilities. Test with Arabic/Hebrew.
-- [ ] **Locale detection** — `Accept-Language` header (server), `navigator.language` (client), URL segment (`/en/`, `/th/`), or user preference. URL segment is best for SEO and sharing.
-- [ ] **Translation management** — Translation keys in code, translations in JSON/YAML. CI validates all keys exist in all locales. Consider a TMS (Lokalise, Phrase, Crowdin) for non-dev translators.
+- [ ] **Decide early:** Adding i18n to an existing app is painful. If you might need it, at least externalize all user-facing strings from day one.
+- [ ] **Library choice:** `i18next` (framework-agnostic, most popular), framework-specific wrapper, or built-in (`next-intl`, `vue-i18n`, `svelte-i18n`). ICU message format for complex pluralization/interpolation.
+- [ ] **RTL support:** Logical CSS properties (`margin-inline-start`, not `margin-left`). Direction-aware utilities. Test with Arabic/Hebrew.
+- [ ] **Locale detection:** `Accept-Language` header (server), `navigator.language` (client), URL segment (`/en/`, `/th/`), or user preference. URL segment is best for SEO and sharing.
+- [ ] **Translation management:** Translation keys in code, translations in JSON/YAML. CI validates all keys exist in all locales. Consider a TMS (Lokalise, Phrase, Crowdin) for non-dev translators.
 
 ## 18. Offline & Resilience
 
-- [ ] **Offline strategy** — PWA service worker (if needed). At minimum: no broken UI when API is down. Cached shell, error messages, retry buttons.
-- [ ] **Network resilience** — `navigator.onLine` for awareness. Retry with exponential backoff for transient failures. Queue mutations while offline, replay when online (if PWA).
-- [ ] **No uncached API calls on every render** — Stale cache serves instantly, background refetch updates. Better to show slightly stale data fast than a spinner.
+- [ ] **Offline strategy:** PWA service worker (if needed). At minimum: no broken UI when API is down. Cached shell, error messages, retry buttons.
+- [ ] **Network resilience:** `navigator.onLine` for awareness. Retry with exponential backoff for transient failures. Queue mutations while offline, replay when online (if PWA).
+- [ ] **No uncached API calls on every render:** Stale cache serves instantly, background refetch updates. Better to show slightly stale data fast than a spinner.
 
 ## 19. AI/LLM Integration
 
-- [ ] **AI SDK choice** — Vercel AI SDK (React/Vue/Svelte, streaming-first, provider-agnostic), LangChain.js (agents/chains), or raw fetch to backend proxy. Don't call LLM providers directly from the browser.
-- [ ] **Never expose provider keys** — No `OPENAI_API_KEY` in client env vars (`VITE_*`, `NEXT_PUBLIC_*`). All LLM calls go through your backend, which holds keys and enforces auth + rate limits.
-- [ ] **Streaming UX** — Render tokens as they arrive (SSE or WebSocket). Typing indicator, partial markdown rendering, code blocks with syntax highlighting. Abort button for generation (`AbortController`).
-- [ ] **Markdown/code rendering** — `react-markdown` + `rehype-highlight` (React), `marked` (vanilla), or framework equivalent. Sanitize LLM output before rendering (DOMPurify) — never trust model output as HTML.
-- [ ] **Chat UI patterns** — Message list with virtualized history, scroll-to-bottom on new token, persisted conversation state (localStorage/DB), regenerate + edit-message affordances.
-- [ ] **Prompt & context management** — System prompt + user context composed server-side. Never ship system prompts with secrets in client bundles. Trim context window client-side before sending.
-- [ ] **Loading & error states** — Generation state (idle → streaming → done), error state with retry, graceful fallback when AI is unavailable (degraded mode, cached responses).
-- [ ] **Cost & usage awareness** — Show token/usage feedback where relevant. Cache identical prompts (response dedup). Debounce expensive AI calls.
-- [ ] **RAG in the UI** — Source citations displayed with answers, document upload flows, similarity search results. Highlight retrieved passages.
-- [ ] **Guardrails UI** — Content filters, toxicity warnings, "AI can be wrong" disclaimers where output is user-facing.
+- [ ] **AI SDK choice:** Vercel AI SDK (React/Vue/Svelte, streaming-first, provider-agnostic), LangChain.js (agents/chains), or raw fetch to backend proxy. Don't call LLM providers directly from the browser.
+- [ ] **Never expose provider keys:** No `OPENAI_API_KEY` in client env vars (`VITE_*`, `NEXT_PUBLIC_*`). All LLM calls go through your backend, which holds keys and enforces auth + rate limits.
+- [ ] **Streaming UX:** Render tokens as they arrive (SSE or WebSocket). Typing indicator, partial markdown rendering, code blocks with syntax highlighting. Abort button for generation (`AbortController`).
+- [ ] **Markdown/code rendering** (`react-markdown` + `rehype-highlight` (React), `marked` (vanilla), or framework equivalent. Sanitize LLM output before rendering (DOMPurify)) never trust model output as HTML.
+- [ ] **Chat UI patterns:** Message list with virtualized history, scroll-to-bottom on new token, persisted conversation state (localStorage/DB), regenerate + edit-message affordances.
+- [ ] **Prompt & context management:** System prompt + user context composed server-side. Never ship system prompts with secrets in client bundles. Trim context window client-side before sending.
+- [ ] **Loading & error states:** Generation state (idle → streaming → done), error state with retry, graceful fallback when AI is unavailable (degraded mode, cached responses).
+- [ ] **Cost & usage awareness:** Show token/usage feedback where relevant. Cache identical prompts (response dedup). Debounce expensive AI calls.
+- [ ] **RAG in the UI:** Source citations displayed with answers, document upload flows, similarity search results. Highlight retrieved passages.
+- [ ] **Guardrails UI:** Content filters, toxicity warnings, "AI can be wrong" disclaimers where output is user-facing.
 
 ## 20. Data Privacy & Compliance (Frontend-Specific)
 
-- [ ] **Cookie consent** — GDPR/CCPA-compliant banner before any non-essential cookies fire. Consent management platform (Osano, Cookiebot) or lightweight custom with localStorage record + opt-out link.
-- [ ] **Analytics consent** — Load analytics/tracking only after consent (or use cookieless privacy-first analytics: Plausible, Umami, GoatCounter). Respect the consent choice across sessions.
-- [ ] **PII minimization** — Don't collect what you don't need. Mask/truncate sensitive data in form previews. Avoid storing PII in localStorage/IndexedDB unnecessarily.
-- [ ] **Error monitoring scrubbing** — Sentry/Datadog RUM `beforeSend` scrubs PII (emails, tokens, credit cards) from error payloads. Never send raw form values to error trackers.
-- [ ] **Third-party script inventory** — Every tag manager/embed/analytics script leaks user data. Maintain an inventory: what loads, what it collects, where it's sent (EU/US). Remove dead ones.
-- [ ] **Do Not Track / GPC** — Respect `navigator.doNotTrack` and Global Privacy Control where feasible.
-- [ ] **Privacy policy & terms** — Up-to-date pages linked in footer. Cover: what's collected, why, retention, rights (access/erasure/portability), contact.
-- [ ] **Data retention UI** — User-facing "delete my data" and "export my data" flows that call the backend's erasure/export endpoints.
-- [ ] **Consent-aware features** — Personalization, marketing cookies, third-party embeds activate only after explicit opt-in.
-- [ ] **Child privacy (COPPA)** — If the app targets minors: age gate, restricted data collection, no advertising.
+- [ ] **Cookie consent:** GDPR/CCPA-compliant banner before any non-essential cookies fire. Consent management platform (Osano, Cookiebot) or lightweight custom with localStorage record + opt-out link.
+- [ ] **Analytics consent:** Load analytics/tracking only after consent (or use cookieless privacy-first analytics: Plausible, Umami, GoatCounter). Respect the consent choice across sessions.
+- [ ] **PII minimization:** Don't collect what you don't need. Mask/truncate sensitive data in form previews. Avoid storing PII in localStorage/IndexedDB unnecessarily.
+- [ ] **Error monitoring scrubbing:** Sentry/Datadog RUM `beforeSend` scrubs PII (emails, tokens, credit cards) from error payloads. Never send raw form values to error trackers.
+- [ ] **Third-party script inventory:** Every tag manager/embed/analytics script leaks user data. Maintain an inventory: what loads, what it collects, where it's sent (EU/US). Remove dead ones.
+- [ ] **Do Not Track / GPC:** Respect `navigator.doNotTrack` and Global Privacy Control where feasible.
+- [ ] **Privacy policy & terms:** Up-to-date pages linked in footer. Cover: what's collected, why, retention, rights (access/erasure/portability), contact.
+- [ ] **Data retention UI:** User-facing "delete my data" and "export my data" flows that call the backend's erasure/export endpoints.
+- [ ] **Consent-aware features:** Personalization, marketing cookies, third-party embeds activate only after explicit opt-in.
+- [ ] **Child privacy (COPPA):** If the app targets minors: age gate, restricted data collection, no advertising.
 
 ---
 
@@ -219,7 +219,7 @@
 - [ ] No console errors in production build
 - [ ] Lighthouse score ≥ 90 on mobile (Performance, Accessibility, Best Practices, SEO)
 - [ ] All forms submit with Enter key
-- [ ] Back button works correctly — no redirect loops, no stuck pages
+- [ ] Back button works correctly: no redirect loops, no stuck pages
 - [ ] Tested on actual mobile devices, not just Chrome DevTools responsive mode
 - [ ] 404 page exists, is helpful, and has navigation options
 - [ ] `robots.txt` and `sitemap.xml` exist and are correct
@@ -237,20 +237,22 @@
 > **The checklist family is 2-layer:** each UI library has its own checklist, and where a dominant meta-framework exists, the meta-framework has a separate one. Tick the library layer first, then the meta-framework layer.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
-    W[[[web]]<br/>framework-agnostic] --> R[[[react]]] --> N[[[next]]]
-    W --> V[[[vue]]] --> NX[[[nuxt]]]
-    W --> S[[[svelte]]] --> SK[[[sveltekit]]]
-    W --> A[[[angular]]<br/>single-file — SSR built in]
-    style W fill:#e1f5ff
-    style R fill:#e8f5e9
-    style V fill:#e8f5e9
-    style S fill:#e8f5e9
-    style A fill:#e8f5e9
-    style N fill:#fff4e1
-    style NX fill:#fff4e1
-    style SK fill:#fff4e1
+    W[["web<br/>framework-agnostic"]] --> R[["react"]] --> N[["next"]]
+    W --> V[["vue"]] --> NX[["nuxt"]]
+    W --> S[["svelte"]] --> SK[["sveltekit"]]
+    W --> A[["angular<br/>single-file - SSR built in"]]
+    style W fill:#00B5FF,color:#000000
+    style R fill:#1FB854,color:#000000
+    style V fill:#1FB854,color:#000000
+    style S fill:#1FB854,color:#000000
+    style A fill:#1FB854,color:#000000
+    style N fill:#FFBE00,color:#000000
+    style NX fill:#FFBE00,color:#000000
+    style SK fill:#FFBE00,color:#000000
 ```
+
 
 ### Meta-framework: yes or no?
 
@@ -263,28 +265,28 @@ flowchart LR
 
 > ⚠️ SSR is not free: per-request server compute, a running Node process (or serverless functions), and cache-invalidation complexity. Choose it deliberately (web.md §3), not by default.
 
-### React — [[react]] + [[next]]
+### React: [[react]] + [[next]]
 - **Meta-frameworks:** Next.js (App Router → [[next]]), Remix, React Router 7 (framework mode)
 - **State:** TanStack Query + Zustand
 - **Forms:** React Hook Form + Zod
 - **Styling:** Tailwind + shadcn/ui + Radix
 - **Testing:** Vitest + React Testing Library + Playwright
 
-### Vue — [[vue]] + [[nuxt]]
+### Vue: [[vue]] + [[nuxt]]
 - **Meta-frameworks:** Nuxt (file-based router, SSR/SSG → [[nuxt]]), Vite + Vue Router (SPA)
 - **State:** TanStack Query (Vue adapter) + Pinia
 - **Forms:** FormKit, VeeValidate + Zod
 - **Styling:** Tailwind + Headless UI (Vue) or Radix Vue
 - **Testing:** Vitest + Vue Testing Library + Playwright
 
-### Svelte — [[svelte]] + [[sveltekit]]
+### Svelte: [[svelte]] + [[sveltekit]]
 - **Meta-frameworks:** SvelteKit (filesystem router, SSR/SSG/SPA → [[sveltekit]])
 - **State:** TanStack Query (Svelte adapter) + Svelte stores (built-in)
 - **Forms:** Felte + Zod, Superforms (SvelteKit server actions)
 - **Styling:** Tailwind + Melt UI + shadcn-svelte
 - **Testing:** Vitest + Svelte Testing Library + Playwright
 
-### Angular — [[angular]] (single file, SSR built in)
+### Angular: [[angular]] (single file, SSR built in)
 - **Meta-frameworks:** Angular CLI + `@angular/ssr` (built-in), Analog (file-based, Vite-powered)
 - **State:** TanStack Query (Angular adapter) + Signals (built-in) + NgRx (if complex)
 - **Forms:** Angular Reactive Forms + Zod
@@ -293,7 +295,7 @@ flowchart LR
 
 ### Solid / Qwik / Astro
 - **Solid:** TanStack Query (Solid adapter) + signals (built-in). Vite-based.
-- **Qwik:** Resumability — no hydration. Built-in routing, state, forms. Unique model.
+- **Qwik:** Resumability: no hydration. Built-in routing, state, forms. Unique model.
 - **Astro:** Islands architecture. Bring your own framework for interactive islands (React, Vue, Svelte, Solid). Best for content-heavy sites.
 
 ### Universal Tools (any framework)
@@ -307,7 +309,7 @@ flowchart LR
 
 ## Project Tier Scoping Matrix
 
-> **How to use this table:** Pick your tier first, then focus only on the sections marked ✅ (required) or 🟡 (recommended). Skip ❌ sections entirely — they'd be over-engineering for your context.
+> **How to use this table:** Pick your tier first, then focus only on the sections marked ✅ (required) or 🟡 (recommended). Skip ❌ sections entirely; they'd be over-engineering for your context.
 >
 > **Legend:** ✅ Required · 🟡 Recommended / partial · ❌ Skip
 
@@ -320,12 +322,13 @@ flowchart LR
 | 3 | 🏠 **Internal Tool** | Real users (employees), real traffic. No external exposure or paying customers. | 1–3 devs | Employees | Ongoing |
 | 4 | 🟢 **Small Production** | Single app, few pages, low traffic. Real users, maybe early revenue. | 1–2 devs | < 1K users | Ongoing |
 | 5 | 🔵 **Medium Production** | Multiple apps or higher traffic. Real revenue or user base that matters. | 2–5 devs | 1K–100K users | Ongoing |
-| 6 | 🟣 **Production Grade** | Full rigor — high-stakes SaaS, enterprise product, or large user base. | 5+ devs | 100K+ users | Long-term |
+| 6 | 🟣 **Production Grade** | Full rigor ;  high-stakes SaaS, enterprise product, or large user base. | 5+ devs | 100K+ users | Long-term |
 | 7 | 🔴 **Mission-Critical / Regulated** | Healthcare (HIPAA), finance (PCI-DSS), safety systems. Failure = severe harm. Adds formal verification, regulatory audit. | 10+ devs | Varies | Decades |
 
 ### Which Tier Am I?
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Is this throwaway / exploratory?] -->|Yes| T1[🧪 Tier 1 or 2<br/>POC / Prototype]
     A -->|No| B[Are the users internal<br/>employees?]
@@ -340,13 +343,14 @@ flowchart TD
     F -->|No| T6[🟣 Tier 6<br/>Production Grade]
     F -->|Yes| T7[🔴 Tier 7<br/>Mission-Critical]
     
-    style T1 fill:#e1f5ff
-    style T3 fill:#fff4e1
-    style T4 fill:#e8f5e9
-    style T5 fill:#e3f2fd
-    style T6 fill:#f3e5f5
-    style T7 fill:#ffebee
+    style T1 fill:#00B5FF,color:#000000
+    style T3 fill:#FFBE00,color:#000000
+    style T4 fill:#1FB854,color:#000000
+    style T5 fill:#00B5FF,color:#000000
+    style T6 fill:#1FB8AB,color:#000000
+    style T7 fill:#FF5861,color:#000000
 ```
+
 
 ### Checklist Applicability by Tier
 

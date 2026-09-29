@@ -15,30 +15,30 @@ last_updated: 2026-08-06
 
 ## The Three Pillars
 
-- [ ] **Logs** — what happened. Structured, searchable, centralized
-- [ ] **Metrics** — how much, how fast. Aggregated, dashboarded, alerted
-- [ ] **Traces** — where and how long. End-to-end request journey across services
-- [ ] All three pillars connected — trace ID in logs, metrics tagged with service name
+- [ ] **Logs:** what happened. Structured, searchable, centralized
+- [ ] **Metrics:** how much, how fast. Aggregated, dashboarded, alerted
+- [ ] **Traces:** where and how long. End-to-end request journey across services
+- [ ] All three pillars connected: trace ID in logs, metrics tagged with service name
 
 ---
 
 ## Logging
 
-- [ ] **Structured logging — JSON in production** → [[051 Logging & Monitoring]]
+- [ ] **Structured logging: JSON in production** → [[051 Logging & Monitoring]]
 - [ ] Every request- or message-scoped log includes timestamp (ISO 8601, UTC), level, service, correlation context when available, message, and sanitized context. Startup and background work use an operation/execution ID where a trace does not exist.
 - [ ] Log levels: DEBUG (dev), INFO (prod default), WARN, ERROR
-- [ ] No secrets in logs — filter/redact: password, token, authorization header, credit card
+- [ ] No secrets in logs: filter/redact: password, token, authorization header, credit card
 - [ ] Centralized: Loki, ELK, Datadog, Splunk. Centralized logs are the normal operational path; break-glass host access is restricted, audited, and documented.
 - [ ] Retention: how long? Compliance requirements? Storage cost vs debugging value
 
 ---
 
-## Metrics — The Golden Signals
+## Metrics: The Golden Signals
 
-- [ ] **Rate** — requests/sec per service, per endpoint → [[04 API Monitoring]]
-- [ ] **Errors** — 5xx rate per service, per endpoint. 4xx rate monitored separately (client vs server)
-- [ ] **Duration** — p50, p95, p99 latency per endpoint
-- [ ] **Saturation** — thread pool, connection pool, queue depth, CPU, memory
+- [ ] **Rate:** requests/sec per service, per endpoint → [[04 API Monitoring]]
+- [ ] **Errors:** 5xx rate per service, per endpoint. 4xx rate monitored separately (client vs server)
+- [ ] **Duration:** p50, p95, p99 latency per endpoint
+- [ ] **Saturation:** thread pool, connection pool, queue depth, CPU, memory
 - [ ] Metrics exported to Prometheus/Datadog/CloudWatch
 - [ ] Custom business metrics: orders created/min, payment success rate, signup conversion
 
@@ -58,10 +58,10 @@ last_updated: 2026-08-06
 
 ## Dashboards
 
-- [ ] **Service dashboard** — per service: RED metrics, health, circuit state, thread pool → [[051 Logging & Monitoring]]
-- [ ] Infrastructure dashboard — CPU, memory, disk, network per instance
-- [ ] Business dashboard — orders/day, revenue, active users. Not just tech metrics
-- [ ] Dashboards as code (Grafana JSON, Terraform) — versioned, reproducible
+- [ ] **Service dashboard:** per service: RED metrics, health, circuit state, thread pool → [[051 Logging & Monitoring]]
+- [ ] Infrastructure dashboard: CPU, memory, disk, network per instance
+- [ ] Business dashboard: orders/day, revenue, active users. Not just tech metrics
+- [ ] Dashboards as code (Grafana JSON, Terraform): versioned, reproducible
 - [ ] Dashboard organized by audience: dev (per-service detail), ops (infra overview), business (KPIs)
 
 ---
@@ -73,40 +73,40 @@ last_updated: 2026-08-06
 - [ ] Critical: service down, 5xx spike, circuit open, DB unreachable, TLS expiring
 - [ ] Warning: p95 latency rising, disk > 80%, connection pool near max, retry rate increasing
 - [ ] Alert fatigue prevention: debounce (must persist for N minutes), group related alerts
-- [ ] On-call rotation defined — who gets paged at 3am?
-- [ ] Runbooks for every alert — "if this fires, do these steps"
+- [ ] On-call rotation defined: who gets paged at 3am?
+- [ ] Runbooks for every alert: "if this fires, do these steps"
 
 ---
 
 ## Health Checks
 
 - [ ] **Every service has a platform-appropriate health contract** → [[053 Health Checks]]
-- [ ] Liveness: "am I alive and making progress?" — lightweight; dependency failure does not automatically create restart storms
-- [ ] Readiness: "am I ready to serve traffic?" — may include required DB, broker, or cache checks and controls traffic eligibility
-- [ ] Startup: "am I initialized?" — protects slow-starting services where the platform supports it
-- [ ] Health endpoint secured — not publicly accessible. Internal network or basic auth
-- [ ] Detailed health: `show-details: when-authorized` — not exposed to everyone
+- [ ] Liveness: "am I alive and making progress?": lightweight; dependency failure does not automatically create restart storms
+- [ ] Readiness: "am I ready to serve traffic?": may include required DB, broker, or cache checks and controls traffic eligibility
+- [ ] Startup: "am I initialized?": protects slow-starting services where the platform supports it
+- [ ] Health endpoint secured: not publicly accessible. Internal network or basic auth
+- [ ] Detailed health: `show-details: when-authorized`: not exposed to everyone
 
 ---
 
 ## Error Tracking
 
-- [ ] **Exceptions captured with context** — stack trace + request data (sanitized) → [[04 API Monitoring]]
+- [ ] **Exceptions captured with context:** stack trace + request data (sanitized) → [[04 API Monitoring]]
 - [ ] Sentry, Datadog Error Tracking, or equivalent
-- [ ] Errors grouped by fingerprint — same bug, different users = one issue
-- [ ] Errors correlated with traces — click from error to the trace that produced it
-- [ ] Source maps for frontend — minified stack traces resolved to original code
+- [ ] Errors grouped by fingerprint: same bug, different users = one issue
+- [ ] Errors correlated with traces: click from error to the trace that produced it
+- [ ] Source maps for frontend: minified stack traces resolved to original code
 
 ---
 
 ## SLI / SLO / SLA
 
-- [ ] **SLI defined** (Service Level Indicator) — what you measure, including inclusion/exclusion rules → [[04 API Monitoring]]
+- [ ] **SLI defined** (Service Level Indicator): what you measure, including inclusion/exclusion rules → [[04 API Monitoring]]
 - [ ] Availability: `successful_requests / total_requests`
 - [ ] Latency: `p95_latency < 200ms`
 - [ ] Error rate: `5xx_responses / total_responses < 0.1%`
-- [ ] **SLO defined** (Service Level Objective) — service-specific target, window, user-impact model, and ownership; do not assume universal availability or latency numbers
-- [ ] **Error budget** — how much downtime is acceptable before action: 0.1% = 43 min/month
+- [ ] **SLO defined** (Service Level Objective): service-specific target, window, user-impact model, and ownership; do not assume universal availability or latency numbers
+- [ ] **Error budget:** how much downtime is acceptable before action: 0.1% = 43 min/month
 - [ ] Burn-rate alert windows and page/ticket thresholds are defined from the service error budget
 
 ---
@@ -157,12 +157,12 @@ last_updated: 2026-08-06
 
 ## Sources
 
-- [[051 Logging & Monitoring]] — structured logging and metrics
-- [[052 Distributed Tracing]] — trace propagation and visualization
-- [[053 Health Checks]] — liveness, readiness, startup probes
-- [[04 API Monitoring]] — SLI/SLO/SLA, alerting
-- [[Microservice Launch]] — system-wide launch checklist
-- W3C Trace Context — https://www.w3.org/TR/trace-context/
-- OpenTelemetry context propagation — https://opentelemetry.io/docs/concepts/context-propagation/
-- Prometheus instrumentation and cardinality guidance — https://prometheus.io/docs/practices/instrumentation/
-- Kubernetes probe semantics — https://kubernetes.io/docs/concepts/workloads/pods/probes/
+- [[051 Logging & Monitoring]]: structured logging and metrics
+- [[052 Distributed Tracing]]: trace propagation and visualization
+- [[053 Health Checks]]: liveness, readiness, startup probes
+- [[04 API Monitoring]]: SLI/SLO/SLA, alerting
+- [[Microservice Launch]]: system-wide launch checklist
+- W3C Trace Context: https://www.w3.org/TR/trace-context/
+- OpenTelemetry context propagation: https://opentelemetry.io/docs/concepts/context-propagation/
+- Prometheus instrumentation and cardinality guidance: https://prometheus.io/docs/practices/instrumentation/
+- Kubernetes probe semantics: https://kubernetes.io/docs/concepts/workloads/pods/probes/

@@ -2,16 +2,16 @@
 
 > Python + FastAPI companion to the general [API checklist](api.md).
 > Covers FastAPI 0.141+, Pydantic v2, SQLAlchemy 2.0+, uv package management.
-> Last updated: 2026-09-14 — synced with the general API checklist: RFC 9457 error format, OpenAPI 3.1 + spec-quality/contract CI, rate-limit headers, HTTP caching semantics, X-Request-ID propagation, mutation testing.
+> Last updated: 2026-09-14; synced with the general API checklist: RFC 9457 error format, OpenAPI 3.1 + spec-quality/contract CI, rate-limit headers, HTTP caching semantics, X-Request-ID propagation, mutation testing.
 
 ---
 
 ## 1. Project Setup
 
-- [ ] **Python version** — 3.10+ required, 3.12+ recommended. Pin in `.python-version` or `pyproject.toml`.
-- [ ] **uv package manager** — `uv init myproject` to create project. 10-100x faster than pip, replaces pip + pip-tools + virtualenv.
-- [ ] **Install FastAPI** — `uv add "fastapi[standard]"` (includes uvicorn, pydantic, and extras).
-- [ ] **Core dependencies**:
+- [ ] **Python version:** 3.10+ required, 3.12+ recommended. Pin in `.python-version` or `pyproject.toml`.
+- [ ] **uv package manager:** `uv init myproject` to create project. 10-100x faster than pip, replaces pip + pip-tools + virtualenv.
+- [ ] **Install FastAPI:** `uv add "fastapi[standard]"` (includes uvicorn, pydantic, and extras).
+- [ ] **Core dependencies:**
   ```bash
   uv add "fastapi[standard]"          # Framework + uvicorn
   uv add sqlalchemy[asyncio]          # ORM with async support
@@ -22,7 +22,7 @@
   uv add "passlib[bcrypt]"            # Password hashing
   uv add httpx                        # Async HTTP client (testing + external calls)
   ```
-- [ ] **Dev dependencies**:
+- [ ] **Dev dependencies:**
   ```bash
   uv add --dev pytest pytest-asyncio pytest-cov
   uv add --dev ruff                   # Linting + formatting (replaces flake8+isort+black)
@@ -30,8 +30,8 @@
   uv add --dev factory-boy            # Test data factories
   uv add --dev testcontainers         # Docker-based integration tests
   ```
-- [ ] **`pyproject.toml`** — single source of truth for project config, dependencies, tool settings.
-- [ ] **`.env` file** — environment variables. Add to `.gitignore`. Loaded via pydantic-settings.
+- [ ] **`pyproject.toml`:** single source of truth for project config, dependencies, tool settings.
+- [ ] **`.env` file:** environment variables. Add to `.gitignore`. Loaded via pydantic-settings.
 
 ---
 
@@ -61,6 +61,7 @@ project/
 │   │   │   ├── repository.py    # data access layer
 │   │   │   └── dependencies.py
 │   │   └── items/
+```
 │   │       └── ...              # same pattern
 │   └── shared/                  # cross-cutting utilities
 ├── migrations/                  # Alembic migrations
@@ -76,15 +77,15 @@ project/
 └── Dockerfile
 ```
 
-- [ ] **Clean Architecture layers** — Router (interface) → Service (use cases) → Repository (data access) → Models (persistence).
-- [ ] **Feature modules** — each feature is self-contained: router, schemas, service, repository, dependencies.
-- [ ] **`main.py` is thin** — creates app, registers middleware, includes routers, handles lifespan. ~50 lines.
+- [ ] **Clean Architecture layers:** Router (interface) → Service (use cases) → Repository (data access) → Models (persistence).
+- [ ] **Feature modules:** each feature is self-contained: router, schemas, service, repository, dependencies.
+- [ ] **`main.py` is thin:** creates app, registers middleware, includes routers, handles lifespan. ~50 lines.
 
 ---
 
 ## 3. FastAPI App Setup
 
-- [ ] **App factory pattern** — `def create_app() -> FastAPI` for testability and configuration flexibility.
+- [ ] **App factory pattern:** `def create_app() -> FastAPI` for testability and configuration flexibility.
 - [ ] **Lifespan context manager** (replaces deprecated `@app.on_event`):
   ```python
   from contextlib import asynccontextmanager
@@ -97,18 +98,19 @@ project/
   
   app = FastAPI(lifespan=lifespan)
   ```
-- [ ] **APIRouter composition** — `app.include_router(users_router, prefix="/api/v1/users", tags=["Users"])`.
-- [ ] **Tags** — group endpoints for OpenAPI docs. One tag per feature.
-- [ ] **Custom title/description** — `FastAPI(title="My API", version="1.0.0", description="...")`.
-- [ ] **OpenAPI 3.1 generated natively** — FastAPI emits an OpenAPI 3.1 spec (JSON Schema 2020-12) from your Pydantic v2 models and route signatures — no generator step, no hand-written spec file. Keep Pydantic schemas as the single source of truth and set `response_model` on every route so the spec stays honest.
-- [ ] **Spec quality + contract change detection in CI** — `spectral` with a house ruleset lints the generated `openapi.json` on every PR. Breaking-change detection gates the pipeline: `oasdiff`/`openapi-diff` fails the build when a change removes fields, changes types, or narrows responses — the REST equivalent of `buf breaking` for gRPC. Breaking changes require a new version, never a silent edit.
+- [ ] **APIRouter composition:** `app.include_router(users_router, prefix="/api/v1/users", tags=["Users"])`.
+```
+- [ ] **Tags:** group endpoints for OpenAPI docs. One tag per feature.
+- [ ] **Custom title/description:** `FastAPI(title="My API", version="1.0.0", description="...")`.
+- [ ] **OpenAPI 3.1 generated natively** (FastAPI emits an OpenAPI 3.1 spec (JSON Schema 2020-12) from your Pydantic v2 models and route signatures) no generator step, no hand-written spec file. Keep Pydantic schemas as the single source of truth and set `response_model` on every route so the spec stays honest.
+- [ ] **Spec quality + contract change detection in CI** (`spectral` with a house ruleset lints the generated `openapi.json` on every PR. Breaking-change detection gates the pipeline: `oasdiff`/`openapi-diff` fails the build when a change removes fields, changes types, or narrows responses) the REST equivalent of `buf breaking` for gRPC. Breaking changes require a new version, never a silent edit.
 
 ---
 
 ## 4. Pydantic v2 Models (Request/Response Schemas)
 
-- [ ] **Pydantic v2 syntax** — `model_config = ConfigDict(...)` replaces `class Config`. `model_validate()` replaces `parse_obj()`. `model_dump()` replaces `dict()`.
-- [ ] **`Annotated` types with `Field()`**:
+- [ ] **Pydantic v2 syntax:** `model_config = ConfigDict(...)` replaces `class Config`. `model_validate()` replaces `parse_obj()`. `model_dump()` replaces `dict()`.
+- [ ] **`Annotated` types with `Field()`:**
   ```python
   from typing import Annotated
   from pydantic import BaseModel, Field, EmailStr
@@ -119,8 +121,9 @@ project/
       email: EmailStr
       age: Annotated[int, Field(ge=0, le=150)]
   ```
-- [ ] **Separate schemas** — `UserCreate` (input), `UserUpdate` (input), `UserResponse` (output), `UserSummary` (list output). Never expose DB models directly.
-- [ ] **`field_validator`** — custom validation logic:
+- [ ] **Separate schemas:** `UserCreate` (input), `UserUpdate` (input), `UserResponse` (output), `UserSummary` (list output). Never expose DB models directly.
+```
+- [ ] **`field_validator`:** custom validation logic:
   ```python
   @field_validator("name")
   @classmethod
@@ -129,15 +132,16 @@ project/
           raise ValueError("Reserved name")
       return v
   ```
-- [ ] **`model_validator`** — cross-field validation (e.g., password confirmation).
-- [ ] **`@computed_field`** — read-only derived properties in response models.
-- [ ] **Strict mode** — `ConfigDict(strict=True)` disables coercion for security-sensitive fields.
+- [ ] **`model_validator`:** cross-field validation (e.g., password confirmation).
+```
+- [ ] **`@computed_field`:** read-only derived properties in response models.
+- [ ] **Strict mode:** `ConfigDict(strict=True)` disables coercion for security-sensitive fields.
 
 ---
 
 ## 5. Dependency Injection
 
-- [ ] **`Depends()` for injectable dependencies** — composable, async-aware, testable:
+- [ ] **`Depends()` for injectable dependencies:** composable, async-aware, testable:
   ```python
   async def get_db() -> AsyncGenerator[AsyncSession, None]:
       async with async_session_factory() as session:
@@ -147,8 +151,9 @@ project/
   async def get_user(id: int, db: AsyncSession = Depends(get_db)):
       return await db.get(User, id)
   ```
-- [ ] **Yield dependencies** — for resource lifecycle (DB sessions, file handles) with automatic cleanup.
-- [ ] **`Annotated` shorthand** — avoid repeating `Depends()`:
+- [ ] **Yield dependencies:** for resource lifecycle (DB sessions, file handles) with automatic cleanup.
+```
+- [ ] **`Annotated` shorthand:** avoid repeating `Depends()`:
   ```python
   DB = Annotated[AsyncSession, Depends(get_db)]
   CurrentUser = Annotated[User, Depends(get_current_user)]
@@ -157,18 +162,20 @@ project/
   async def get_user(id: int, db: DB, user: CurrentUser):
       ...
   ```
-- [ ] **Nested dependencies** — FastAPI auto-resolves the full dependency graph.
-- [ ] **`dependency_overrides`** — swap dependencies in tests:
+- [ ] **Nested dependencies:** FastAPI auto-resolves the full dependency graph.
+```
+- [ ] **`dependency_overrides`:** swap dependencies in tests:
   ```python
   app.dependency_overrides[get_db] = get_test_db
   ```
-- [ ] **Class-based dependencies** — callable classes with `__call__` for stateful deps.
+- [ ] **Class-based dependencies:** callable classes with `__call__` for stateful deps.
+```
 
 ---
 
 ## 6. Configuration (pydantic-settings)
 
-- [ ] **`BaseSettings`** — type-safe config with auto-loading from environment:
+- [ ] **`BaseSettings`:** type-safe config with auto-loading from environment:
   ```python
   from pydantic_settings import BaseSettings, SettingsConfigDict
   
@@ -187,17 +194,18 @@ project/
   
   settings = Settings()
   ```
-- [ ] **Priority order** — Constructor args > Environment variables > `.env` file > Default values.
-- [ ] **Inject as dependency** — `def get_settings() -> Settings: return settings` then `Depends(get_settings)`.
-- [ ] **Never commit secrets** — `.env` in `.gitignore`. Use vault/KMS in production.
+- [ ] **Priority order:** Constructor args > Environment variables > `.env` file > Default values.
+```
+- [ ] **Inject as dependency:** `def get_settings() -> Settings: return settings` then `Depends(get_settings)`.
+- [ ] **Never commit secrets:** `.env` in `.gitignore`. Use vault/KMS in production.
 
 ---
 
 ## 7. Database (SQLAlchemy 2.0 + asyncpg)
 
-- [ ] **Async engine** — `create_async_engine(settings.database_url, echo=settings.debug)`.
-- [ ] **Async session factory** — `async_sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)`.
-- [ ] **SQLAlchemy 2.0 declarative models** — `Mapped[]` type annotations:
+- [ ] **Async engine:** `create_async_engine(settings.database_url, echo=settings.debug)`.
+- [ ] **Async session factory:** `async_sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)`.
+- [ ] **SQLAlchemy 2.0 declarative models:** `Mapped[]` type annotations:
   ```python
   class User(Base):
       __tablename__ = "users"
@@ -206,18 +214,20 @@ project/
       name: Mapped[str] = mapped_column(String(100))
       created_at: Mapped[datetime] = mapped_column(server_default=func.now())
   ```
-- [ ] **Alembic migrations** — `alembic init migrations` → `alembic revision --autogenerate -m "initial"` → `alembic upgrade head`.
-- [ ] **Run migrations on startup** — in lifespan: `async with engine.begin() as conn: await conn.run_sync(Base.metadata.create_all)` (dev only). Use Alembic in production.
-- [ ] **SQLModel alternative** — unifies Pydantic + SQLAlchemy in one class. Good for simpler CRUD APIs where schemas closely mirror models.
-- [ ] **N+1 prevention** — `selectinload()` or `joinedload()` for eager loading. Monitor with `echo=True` in dev.
-- [ ] **Soft deletes** — filter `is_deleted=False` in repository queries or use a mixin.
+- [ ] **Alembic migrations:** `alembic init migrations` → `alembic revision --autogenerate -m "initial"` → `alembic upgrade head`.
+```
+- [ ] **Run migrations on startup:** in lifespan: `async with engine.begin() as conn: await conn.run_sync(Base.metadata.create_all)` (dev only). Use Alembic in production.
+```
+- [ ] **SQLModel alternative:** unifies Pydantic + SQLAlchemy in one class. Good for simpler CRUD APIs where schemas closely mirror models.
+- [ ] **N+1 prevention:** `selectinload()` or `joinedload()` for eager loading. Monitor with `echo=True` in dev.
+- [ ] **Soft deletes:** filter `is_deleted=False` in repository queries or use a mixin.
 
 ---
 
 ## 8. Authentication (JWT + OAuth2)
 
-- [ ] **OAuth2PasswordBearer** — `oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")`.
-- [ ] **JWT creation** — python-jose with RS256 (asymmetric) for production, HS256 for development:
+- [ ] **OAuth2PasswordBearer:** `oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")`.
+- [ ] **JWT creation:** python-jose with RS256 (asymmetric) for production, HS256 for development:
   ```python
   from jose import jwt
   
@@ -226,7 +236,7 @@ project/
       to_encode["exp"] = datetime.utcnow() + expires_delta
       return jwt.encode(to_encode, SECRET_KEY, algorithm="RS256")
   ```
-- [ ] **Token validation dependency**:
+- [ ] **Token validation dependency:**
   ```python
   async def get_current_user(
       token: str = Depends(oauth2_scheme),
@@ -239,16 +249,18 @@ project/
       except JWTError:
           raise HTTPException(status_code=401)
   ```
-- [ ] **Password hashing** — passlib with bcrypt: `pwd_context.hash(password)` / `pwd_context.verify(password, hashed)`.
-- [ ] **Role-based access** — `Depends(require_role("admin"))` as a dependency factory.
-- [ ] **fastapi-users** — complete user management system (registration, auth, password reset, OAuth) if you don't want to build from scratch.
-- [ ] **Refresh tokens** — short-lived access tokens (15-30 min), long-lived refresh tokens (7-30 days). Rotate on refresh.
+- [ ] **Password hashing:** passlib with bcrypt: `pwd_context.hash(password)` / `pwd_context.verify(password, hashed)`.
+```
+- [ ] **Role-based access:** `Depends(require_role("admin"))` as a dependency factory.
+```
+- [ ] **fastapi-users:** complete user management system (registration, auth, password reset, OAuth) if you don't want to build from scratch.
+- [ ] **Refresh tokens:** short-lived access tokens (15-30 min), long-lived refresh tokens (7-30 days). Rotate on refresh.
 
 ---
 
 ## 9. Middleware & Security
 
-- [ ] **CORS** — built-in `CORSMiddleware`. Specific origins, never `"*"` with credentials:
+- [ ] **CORS:** built-in `CORSMiddleware`. Specific origins, never `"*"` with credentials:
   ```python
   app.add_middleware(
       CORSMiddleware,
@@ -258,7 +270,7 @@ project/
       allow_headers=["*"],
   )
   ```
-- [ ] **Rate limiting** — `slowapi` for per-endpoint or per-IP rate limits:
+- [ ] **Rate limiting:** `slowapi` for per-endpoint or per-IP rate limits:
   ```python
   from slowapi import Limiter
   from slowapi.util import get_remote_address
@@ -271,16 +283,20 @@ project/
   async def login(request: Request):
       ...
   ```
-- [ ] **Rate-limit headers** — Return `RateLimit-Limit` / `RateLimit-Remaining` / `RateLimit-Reset` (+ `RateLimit-Policy`) on responses so clients can self-throttle; include them on 429 responses at minimum. `slowapi` doesn't emit them by default — add them via a small middleware or the limiter's header hooks, and document them in the OpenAPI spec.
-- [ ] **Security headers middleware** — `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Strict-Transport-Security`.
-- [ ] **Request body size limit** — middleware to reject payloads > N MB.
-- [ ] **Middleware order** — CORS → Security Headers → Rate Limiting → Request ID → Logging.
+- [ ] **Rate-limit headers** (Return `RateLimit-Limit` / `RateLimit-Remaining` / `RateLimit-Reset` (+ `RateLimit-Policy`) on responses so clients can self-throttle; include them on 429 responses at minimum. `slowapi` doesn't emit them by default) add them via a small middleware or the limiter's header hooks, and document them in the OpenAPI spec.
+```
+- [ ] **Security headers middleware:** `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Strict-Transport-Security`.
+```
+- [ ] **Request body size limit:** middleware to reject payloads > N MB.
+```
+- [ ] **Middleware order:** CORS → Security Headers → Rate Limiting → Request ID → Logging.
+```
 
 ---
 
 ## 10. Error Handling
 
-- [ ] **Custom exception handler** — consistent error format:
+- [ ] **Custom exception handler:** consistent error format:
   ```python
   @app.exception_handler(AppException)
   async def app_exception_handler(request, exc: AppException):
@@ -289,29 +305,32 @@ project/
           content={"error": {"code": exc.code, "message": exc.message}},
       )
   ```
-- [ ] **`HTTPException`** — for standard HTTP errors. FastAPI auto-converts to JSON.
-- [ ] **RFC 9457 problem details** — `application/problem+json` (obsoletes RFC 7807) as the standard error envelope: `type`, `title`, `status`, `detail`, `instance`. FastAPI's default `HTTPException` payload isn't RFC-shaped — customize the `http_exception_handler` and `RequestValidationError` handlers, or use a lib like `fastapi-problem-details` for the RFC envelope. Keep stable machine-readable error codes that survive message edits.
-- [ ] **Pydantic validation errors** — auto-return 422 with field-level details. Customize with `RequestValidationError` handler.
-- [ ] **Don't leak internals** — catch `Exception` as a fallback, log full error, return sanitized 500 response.
+- [ ] **`HTTPException`:** for standard HTTP errors. FastAPI auto-converts to JSON.
+```
+- [ ] **RFC 9457 problem details** (`application/problem+json` (obsoletes RFC 7807) as the standard error envelope: `type`, `title`, `status`, `detail`, `instance`. FastAPI's default `HTTPException` payload isn't RFC-shaped) customize the `http_exception_handler` and `RequestValidationError` handlers, or use a lib like `fastapi-problem-details` for the RFC envelope. Keep stable machine-readable error codes that survive message edits.
+```
+- [ ] **Pydantic validation errors:** auto-return 422 with field-level details. Customize with `RequestValidationError` handler.
+- [ ] **Don't leak internals:** catch `Exception` as a fallback, log full error, return sanitized 500 response.
 
 ---
 
 ## 11. Observability
 
-- [ ] **structlog** — structured JSON logging:
+- [ ] **structlog:** structured JSON logging:
   ```python
   import structlog
   
   logger = structlog.get_logger()
   logger.info("user_created", user_id=123, email="user@example.com")
   ```
-- [ ] **OpenTelemetry** — `opentelemetry-instrumentation-fastapi` for distributed tracing. Export to Jaeger/Zipkin/OTLP.
-- [ ] **Prometheus metrics** — `prometheus-fastapi-instrumentator`:
+- [ ] **OpenTelemetry:** `opentelemetry-instrumentation-fastapi` for distributed tracing. Export to Jaeger/Zipkin/OTLP.
+```
+- [ ] **Prometheus metrics:** `prometheus-fastapi-instrumentator`:
   ```python
   from prometheus_fastapi_instrumentator import Instrumentator
   Instrumentator().instrument(app).expose(app, endpoint="/metrics")
   ```
-- [ ] **Health checks** — `/health` (liveness) and `/ready` (readiness):
+- [ ] **Health checks:** `/health` (liveness) and `/ready` (readiness):
   ```python
   @app.get("/health")
   async def health():
@@ -322,13 +341,14 @@ project/
       await db.execute(text("SELECT 1"))
       return {"status": "ready"}
   ```
-- [ ] **X-Request-ID propagation** — ASGI middleware reads `X-Request-ID` from the client (generates a UUID if absent), returns it on every response — especially error responses — so a support ticket maps to logs in one lookup. Forward it on downstream `httpx` calls and bind it into the logging context (`structlog.contextvars.bind_contextvars(request_id=...)`) so every log line carries it.
+- [ ] **X-Request-ID propagation**; ASGI middleware reads `X-Request-ID` from the client (generates a UUID if absent), returns it on every response (especially error responses) so a support ticket maps to logs in one lookup. Forward it on downstream `httpx` calls and bind it into the logging context (`structlog.contextvars.bind_contextvars(request_id=...)`) so every log line carries it.
+```
 
 ---
 
 ## 12. Resilience
 
-- [ ] **tenacity for retries** — exponential backoff with jitter:
+- [ ] **tenacity for retries:** exponential backoff with jitter:
   ```python
   from tenacity import retry, stop_after_attempt, wait_exponential
   
@@ -339,7 +359,7 @@ project/
           response.raise_for_status()
           return response.json()
   ```
-- [ ] **circuitbreaker** — prevent cascading failures:
+- [ ] **circuitbreaker:** prevent cascading failures:
   ```python
   from circuitbreaker import circuit
   
@@ -347,14 +367,16 @@ project/
   async def call_payment_service():
       ...
   ```
-- [ ] **Timeouts everywhere** — `httpx.AsyncClient(timeout=30.0)` for all external calls. Never infinite timeouts.
-- [ ] **Bulkhead isolation** — separate connection pools per downstream service.
+- [ ] **Timeouts everywhere:** `httpx.AsyncClient(timeout=30.0)` for all external calls. Never infinite timeouts.
+```
+- [ ] **Bulkhead isolation:** separate connection pools per downstream service.
+```
 
 ---
 
 ## 13. Caching
 
-- [ ] **fastapi-cache2** — decorator-based caching with Redis backend:
+- [ ] **fastapi-cache2:** decorator-based caching with Redis backend:
   ```python
   from fastapi_cache import FastAPICache
   from fastapi_cache.backends.redis import RedisBackend
@@ -369,16 +391,20 @@ project/
   async def get_item(item_id: int):
       return await repository.get(item_id)
   ```
-- [ ] **HTTP caching semantics** — Set `Cache-Control` (with `s-maxage` for shared/CDN caches and `stale-while-revalidate` for graceful staleness) on cacheable GETs; set `Vary` on content-negotiated responses (e.g., `Vary: Accept`). Let the CDN/HTTP cache absorb traffic before your application code runs — for static-ish GETs, plain `Cache-Control` headers beat app-level `fastapi-cache2` because the response never reaches uvicorn.
-- [ ] **Cache invalidation** — explicit `cache.invalidate()` on write operations, or TTL-based expiry.
-- [ ] **Cache stampede protection** — lock-based caching to prevent thundering herd on cache miss.
-- [ ] **Multi-level caching** — in-memory (LRU) for hot data → Redis for shared cache → DB as source of truth.
+- [ ] **HTTP caching semantics** (Set `Cache-Control` (with `s-maxage` for shared/CDN caches and `stale-while-revalidate` for graceful staleness) on cacheable GETs; set `Vary` on content-negotiated responses (e.g., `Vary: Accept`). Let the CDN/HTTP cache absorb traffic before your application code runs) for static-ish GETs, plain `Cache-Control` headers beat app-level `fastapi-cache2` because the response never reaches uvicorn.
+```
+- [ ] **Cache invalidation:** explicit `cache.invalidate()` on write operations, or TTL-based expiry.
+```
+- [ ] **Cache stampede protection:** lock-based caching to prevent thundering herd on cache miss.
+```
+- [ ] **Multi-level caching:** in-memory (LRU) for hot data → Redis for shared cache → DB as source of truth.
+```
 
 ---
 
 ## 14. Background Tasks
 
-- [ ] **FastAPI BackgroundTasks** — simple fire-and-forget:
+- [ ] **FastAPI BackgroundTasks:** simple fire-and-forget:
   ```python
   from fastapi import BackgroundTasks
   
@@ -388,7 +414,7 @@ project/
       bg.add_task(send_welcome_email, db_user.email)
       return db_user
   ```
-- [ ] **ARQ** — async-first job queue with Redis. Better than BackgroundTasks for reliability:
+- [ ] **ARQ:** async-first job queue with Redis. Better than BackgroundTasks for reliability:
   ```python
   from arq import create_pool
   from arq.connections import RedisSettings
@@ -403,31 +429,37 @@ project/
   # Enqueue:
   await redis.enqueue_job('send_email', user.id, "Welcome!")
   ```
-- [ ] **Celery** — for complex workflows, multiple brokers (Redis, RabbitMQ), beat scheduling.
-- [ ] **Dramatiq** — modern alternative to Celery with better error handling.
-- [ ] **Idempotent tasks** — safe to retry. Use unique task IDs and check completion before processing.
-- [ ] **Dead letter queues** — failed tasks go to DLQ for manual inspection.
+- [ ] **Celery:** for complex workflows, multiple brokers (Redis, RabbitMQ), beat scheduling.
+```
+- [ ] **Dramatiq:** modern alternative to Celery with better error handling.
+```
+- [ ] **Idempotent tasks:** safe to retry. Use unique task IDs and check completion before processing.
+```
+- [ ] **Dead letter queues:** failed tasks go to DLQ for manual inspection.
+```
 
 ---
 
 ## 15. API Versioning
 
-- [ ] **URL path versioning** (recommended) — separate routers per version:
+- [ ] **URL path versioning** (recommended): separate routers per version:
   ```python
   v1_router = APIRouter(prefix="/api/v1")
   v2_router = APIRouter(prefix="/api/v2")
   app.include_router(v1_router)
   app.include_router(v2_router)
   ```
-- [ ] **Header versioning** — `version: str = Header(default="v1")` then route internally.
-- [ ] **Deprecation** — add `Sunset` header on deprecated endpoints. Document migration path.
-- [ ] **Backward compatibility** — maintain within major versions. Breaking changes = new version.
+- [ ] **Header versioning:** `version: str = Header(default="v1")` then route internally.
+```
+- [ ] **Deprecation:** add `Sunset` header on deprecated endpoints. Document migration path.
+```
+- [ ] **Backward compatibility:** maintain within major versions. Breaking changes = new version.
 
 ---
 
 ## 16. Testing
 
-- [ ] **pytest + pytest-asyncio** — async test support:
+- [ ] **pytest + pytest-asyncio:** async test support:
   ```python
   @pytest.mark.asyncio
   async def test_create_user():
@@ -435,13 +467,14 @@ project/
           response = await client.post("/api/v1/users", json={"name": "test"})
           assert response.status_code == 201
   ```
-- [ ] **httpx AsyncClient** — test async endpoints without starting a server.
-- [ ] **Dependency overrides** — swap DB, auth, external services in tests:
+- [ ] **httpx AsyncClient:** test async endpoints without starting a server.
+```
+- [ ] **Dependency overrides:** swap DB, auth, external services in tests:
   ```python
   app.dependency_overrides[get_db] = get_test_db
   app.dependency_overrides[get_current_user] = get_test_user
   ```
-- [ ] **Testcontainers** — real PostgreSQL/Redis in integration tests:
+- [ ] **Testcontainers:** real PostgreSQL/Redis in integration tests:
   ```python
   from testcontainers.postgres import PostgresContainer
   
@@ -450,17 +483,20 @@ project/
       with PostgresContainer("postgres:16") as pg:
           yield pg.get_connection_url()
   ```
-- [ ] **factory_boy** — test data factories for realistic fixtures.
-- [ ] **conftest.py** — shared fixtures: test client, test DB, authenticated user.
-- [ ] **Coverage** — `pytest --cov=app --cov-report=html`. Aim for 80%+ on business logic.
-- [ ] **Mutation testing** — `uv add --dev mutmut` then `mutmut run`. Aim for ≥80% mutation score on business logic (`features/*/service.py`) — coverage shows lines executed, mutation testing shows assertions that actually assert. In CI, run mutation testing on changed files only (mutmut's diff/paths mode against the PR diff) to keep pipeline runtime sane.
-- [ ] **ruff** — linting + formatting: `ruff check .` + `ruff format .`.
+- [ ] **factory_boy:** test data factories for realistic fixtures.
+```
+- [ ] **conftest.py:** shared fixtures: test client, test DB, authenticated user.
+```
+- [ ] **Coverage:** `pytest --cov=app --cov-report=html`. Aim for 80%+ on business logic.
+```
+- [ ] **Mutation testing** (`uv add --dev mutmut` then `mutmut run`. Aim for ≥80% mutation score on business logic (`features/*/service.py`)) coverage shows lines executed, mutation testing shows assertions that actually assert. In CI, run mutation testing on changed files only (mutmut's diff/paths mode against the PR diff) to keep pipeline runtime sane.
+- [ ] **ruff:** linting + formatting: `ruff check .` + `ruff format .`.
 
 ---
 
 ## 17. Containerization
 
-- [ ] **Dockerfile** — multi-stage build with uv:
+- [ ] **Dockerfile:** multi-stage build with uv:
   ```dockerfile
   FROM python:3.12-slim AS builder
   COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
@@ -475,23 +511,26 @@ project/
   ENV PATH="/app/.venv/bin:$PATH"
   CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
   ```
-- [ ] **ASGI server** — uvicorn (standard) or granian (faster, Rust-based):
+- [ ] **ASGI server:** uvicorn (standard) or granian (faster, Rust-based):
   ```bash
   uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 4
   ```
-- [ ] **Workers** — `--workers 4` for multi-process (CPU-bound). Or Gunicorn + uvicorn workers for production:
+- [ ] **Workers:** `--workers 4` for multi-process (CPU-bound). Or Gunicorn + uvicorn workers for production:
   ```bash
   gunicorn app.main:app -w 4 -k uvicorn.workers.UvicornWorker
   ```
-- [ ] **Health check in Dockerfile** — `HEALTHCHECK CMD curl -f http://localhost:8000/health || exit 1`.
-- [ ] **Non-root user** — `USER nobody` in production images.
-- [ ] **`.dockerignore`** — exclude `.venv/`, `__pycache__/`, `.git/`, `tests/`, `.env`.
+- [ ] **Health check in Dockerfile:** `HEALTHCHECK CMD curl -f http://localhost:8000/health || exit 1`.
+```
+- [ ] **Non-root user:** `USER nobody` in production images.
+```
+- [ ] **`.dockerignore`:** exclude `.venv/`, `__pycache__/`, `.git/`, `tests/`, `.env`.
+```
 
 ---
 
 ## 18. AI/LLM Integration
 
-- [ ] **OpenAI Python SDK** — `uv add openai`. Official client with streaming support:
+- [ ] **OpenAI Python SDK:** `uv add openai`. Official client with streaming support:
   ```python
   from openai import AsyncOpenAI
   
@@ -505,7 +544,7 @@ project/
       )
       return {"response": response.choices[0].message.content}
   ```
-- [ ] **Streaming responses** — Server-Sent Events for real-time LLM output:
+- [ ] **Streaming responses:** Server-Sent Events for real-time LLM output:
   ```python
   from fastapi.responses import StreamingResponse
   
@@ -520,19 +559,24 @@ project/
                   yield f"data: {chunk.choices[0].delta.content}\n\n"
       return StreamingResponse(generate(), media_type="text/event-stream")
   ```
-- [ ] **LangChain** — for complex chains, agents, RAG pipelines: `uv add langchain langchain-openai`.
-- [ ] **LlamaIndex** — for document indexing and retrieval-augmented generation.
-- [ ] **Vector databases** — `chromadb`, `qdrant-client`, `pgvector` (SQLAlchemy extension) for embedding storage.
-- [ ] **Ollama** — `uv add ollama` for local LLM inference. No API keys needed.
-- [ ] **Token budget tracking** — log input/output tokens per request. Alert on budget exceedance.
-- [ ] **Timeout handling** — LLM calls can take 30s+. Configure httpx timeout and tenacity retry.
-- [ ] **Circuit breaker** — protect against LLM provider outages. Fallback to cached responses.
+- [ ] **LangChain:** for complex chains, agents, RAG pipelines: `uv add langchain langchain-openai`.
+```
+- [ ] **LlamaIndex:** for document indexing and retrieval-augmented generation.
+```
+- [ ] **Vector databases:** `chromadb`, `qdrant-client`, `pgvector` (SQLAlchemy extension) for embedding storage.
+```
+- [ ] **Ollama:** `uv add ollama` for local LLM inference. No API keys needed.
+```
+- [ ] **Token budget tracking:** log input/output tokens per request. Alert on budget exceedance.
+```
+- [ ] **Timeout handling:** LLM calls can take 30s+. Configure httpx timeout and tenacity retry.
+- [ ] **Circuit breaker:** protect against LLM provider outages. Fallback to cached responses.
 
 ---
 
 ## 19. Data Privacy & Compliance
 
-- [ ] **PII masking in logs** — structlog processor to redact sensitive fields:
+- [ ] **PII masking in logs:** structlog processor to redact sensitive fields:
   ```python
   def redact_pii(logger, method_name, event_dict):
       for key in ["email", "phone", "ssn"]:
@@ -542,11 +586,15 @@ project/
   
   structlog.configure(processors=[redact_pii, ...])
   ```
-- [ ] **Data retention** — scheduled background task (ARQ/Celery) to delete expired records.
-- [ ] **Right to erasure** — endpoint to delete all user data. Cascade deletes in SQLAlchemy relationships.
-- [ ] **Data export** — endpoint to export all user data as JSON/CSV.
-- [ ] **Consent management** — track consent timestamps. Conditional processing based on consent status.
-- [ ] **Field-level encryption** — SQLAlchemy `TypeDecorator` for encrypted columns:
+- [ ] **Data retention:** scheduled background task (ARQ/Celery) to delete expired records.
+```
+- [ ] **Right to erasure:** endpoint to delete all user data. Cascade deletes in SQLAlchemy relationships.
+```
+- [ ] **Data export:** endpoint to export all user data as JSON/CSV.
+```
+- [ ] **Consent management:** track consent timestamps. Conditional processing based on consent status.
+```
+- [ ] **Field-level encryption:** SQLAlchemy `TypeDecorator` for encrypted columns:
   ```python
   class EncryptedString(TypeDecorator):
       impl = String
@@ -555,45 +603,47 @@ project/
       def process_result_value(self, value, dialect):
           return decrypt(value)
   ```
-- [ ] **Audit logging** — SQLAlchemy event listeners to log all data access.
-- [ ] **Anonymization** — `faker` library for generating pseudonyms. Separate PII table with encryption.
+- [ ] **Audit logging:** SQLAlchemy event listeners to log all data access.
+```
+- [ ] **Anonymization:** `faker` library for generating pseudonyms. Separate PII table with encryption.
+```
 
 ---
 
 ## 20. Performance & Optimization
 
-- [ ] **Async all the way** — `async def` endpoints, `await` on all I/O. Never block the event loop.
-- [ ] **`asyncpg` over `psycopg2`** — async PostgreSQL driver. 3-5x faster than sync alternatives.
-- [ ] **Connection pooling** — SQLAlchemy pool settings: `pool_size=20`, `max_overflow=10`, `pool_timeout=30`.
-- [ ] **Response compression** — `GZipMiddleware` for large JSON responses.
-- [ ] **`orjson`** — faster JSON serialization: `pip install orjson` + custom response class.
-- [ ] **Profiling** — `py-spy` or `cProfile` for identifying bottlenecks.
-- [ ] **Caching hot paths** — cache expensive queries and computations.
+- [ ] **Async all the way:** `async def` endpoints, `await` on all I/O. Never block the event loop.
+- [ ] **`asyncpg` over `psycopg2`:** async PostgreSQL driver. 3-5x faster than sync alternatives.
+- [ ] **Connection pooling:** SQLAlchemy pool settings: `pool_size=20`, `max_overflow=10`, `pool_timeout=30`.
+- [ ] **Response compression:** `GZipMiddleware` for large JSON responses.
+- [ ] **`orjson`:** faster JSON serialization: `pip install orjson` + custom response class.
+- [ ] **Profiling:** `py-spy` or `cProfile` for identifying bottlenecks.
+- [ ] **Caching hot paths:** cache expensive queries and computations.
 
 ---
 
 ## Quick Sanity Check
 
-- [ ] `ruff check .` passes — no linting errors
-- [ ] `ruff format --check .` passes — consistent formatting
-- [ ] `mypy app/` passes — type safety verified
-- [ ] `pytest` passes — all tests green
-- [ ] `uvicorn app.main:app` starts — server runs without errors
-- [ ] `/docs` renders — OpenAPI docs auto-generated
-- [ ] `/health` returns 200 — liveness check works
-- [ ] Pydantic models validate input — invalid data returns 422
-- [ ] JWT auth works — 401 for missing token, 403 for wrong role
-- [ ] Database migrations applied — `alembic upgrade head` succeeds
-- [ ] `.env` loaded — settings accessible via pydantic-settings
-- [ ] Structured logging — JSON format in production
-- [ ] Docker image builds — `docker build` + `docker run` succeeds
-- [ ] Rate limiting active — login endpoint limited to 5/min
+- [ ] `ruff check .` passes: no linting errors
+- [ ] `ruff format --check .` passes: consistent formatting
+- [ ] `mypy app/` passes: type safety verified
+- [ ] `pytest` passes: all tests green
+- [ ] `uvicorn app.main:app` starts: server runs without errors
+- [ ] `/docs` renders: OpenAPI docs auto-generated
+- [ ] `/health` returns 200: liveness check works
+- [ ] Pydantic models validate input: invalid data returns 422
+- [ ] JWT auth works: 401 for missing token, 403 for wrong role
+- [ ] Database migrations applied: `alembic upgrade head` succeeds
+- [ ] `.env` loaded: settings accessible via pydantic-settings
+- [ ] Structured logging: JSON format in production
+- [ ] Docker image builds: `docker build` + `docker run` succeeds
+- [ ] Rate limiting active: login endpoint limited to 5/min
 
 ---
 
 ## Project Tier Scoping Matrix
 
-> **How to use this table:** Pick your tier first, then focus only on the sections marked ✅ (required) or 🟡 (recommended). Skip ❌ sections entirely — they'd be over-engineering for your context. This matrix adapts the general [API checklist](api.md) tiers to FastAPI specifics.
+> **How to use this table:** Pick your tier first, then focus only on the sections marked ✅ (required) or 🟡 (recommended). Skip ❌ sections entirely; they'd be over-engineering for your context. This matrix adapts the general [API checklist](api.md) tiers to FastAPI specifics.
 >
 > **Legend:** ✅ Required · 🟡 Recommended / partial · ❌ Skip
 
@@ -606,12 +656,13 @@ project/
 | 3 | 🏠 **Internal Tool** | Real users (employees), real traffic. No external exposure or paying customers. | 1–3 devs | Employees | Ongoing |
 | 4 | 🟢 **Small Production** | Single FastAPI service, few endpoints, low traffic. Real users, maybe early revenue. | 1–2 devs | < 1K users | Ongoing |
 | 5 | 🔵 **Medium Production** | Multiple services or higher traffic. Real revenue or user base that matters. | 2–5 devs | 1K–100K users | Ongoing |
-| 6 | 🟣 **Production Grade** | Full rigor — high-stakes SaaS, enterprise product, or large user base. | 5+ devs | 100K+ users | Long-term |
+| 6 | 🟣 **Production Grade** | Full rigor ;  high-stakes SaaS, enterprise product, or large user base. | 5+ devs | 100K+ users | Long-term |
 | 7 | 🔴 **Mission-Critical / Regulated** | Healthcare (HIPAA), finance (PCI-DSS), safety systems. Failure = severe harm. | 10+ devs | Varies | Decades |
 
 ### Which Tier Am I?
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Is this throwaway / exploratory?] -->|Yes| T1[🧪 Tier 1 or 2<br/>POC / Prototype]
     A -->|No| B[Are the users internal<br/>employees?]
@@ -626,13 +677,14 @@ flowchart TD
     F -->|No| T6[🟣 Tier 6<br/>Production Grade]
     F -->|Yes| T7[🔴 Tier 7<br/>Mission-Critical]
     
-    style T1 fill:#e1f5ff
-    style T3 fill:#fff4e1
-    style T4 fill:#e8f5e9
-    style T5 fill:#e3f2fd
-    style T6 fill:#f3e5f5
-    style T7 fill:#ffebee
+    style T1 fill:#00B5FF,color:#000000
+    style T3 fill:#FFBE00,color:#000000
+    style T4 fill:#1FB854,color:#000000
+    style T5 fill:#00B5FF,color:#000000
+    style T6 fill:#1FB8AB,color:#000000
+    style T7 fill:#FF5861,color:#000000
 ```
+
 
 ### FastAPI Checklist Applicability by Tier
 
@@ -663,7 +715,7 @@ flowchart TD
 
 ## Sources
 
-- FastAPI docs — https://fastapi.tiangolo.com/
-- Pydantic v2 docs — https://docs.pydantic.dev/latest/
-- SQLAlchemy 2.0 — https://docs.sqlalchemy.org/en/20/
-- `[[api]]` — general API checklist (tick first)
+- FastAPI docs: https://fastapi.tiangolo.com/
+- Pydantic v2 docs: https://docs.pydantic.dev/latest/
+- SQLAlchemy 2.0: https://docs.sqlalchemy.org/en/20/
+- `[[api]]`: general API checklist (tick first)

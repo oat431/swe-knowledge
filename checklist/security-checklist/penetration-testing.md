@@ -9,10 +9,10 @@
 
 ## 1. What & Why
 
-- [ ] **Core concept** — A pentest is a time-boxed simulation of a real attack. A human tester (internal or external) attempts to exploit vulnerabilities to gain unauthorized access, escalate privileges, or exfiltrate data — all within an agreed scope and rules of engagement.
-- [ ] **What pentest is good at** — Chaining multiple vulnerabilities into a working exploit path, business logic abuse (negative quantities, race conditions in payments), bypassing WAF/auth controls, social engineering (phishing pretexts), internal network pivoting.
-- [ ] **What pentest is NOT** — A replacement for SAST/DAST/SCA (automated scanners are cheaper and more frequent). A compliance checkbox alone (the report should drive remediation, not sit on a shelf). A one-time activity (threats evolve; pentests are periodic).
-- [ ] **Pentest vs DAST vs SAST** — SAST reads code (patterns). DAST scans the running app (known signatures). Pentest chains findings and exploits business logic that no scanner can see.
+- [ ] **Core concept** (A pentest is a time-boxed simulation of a real attack. A human tester (internal or external) attempts to exploit vulnerabilities to gain unauthorized access, escalate privileges, or exfiltrate data) all within an agreed scope and rules of engagement.
+- [ ] **What pentest is good at:** Chaining multiple vulnerabilities into a working exploit path, business logic abuse (negative quantities, race conditions in payments), bypassing WAF/auth controls, social engineering (phishing pretexts), internal network pivoting.
+- [ ] **What pentest is NOT:** A replacement for SAST/DAST/SCA (automated scanners are cheaper and more frequent). A compliance checkbox alone (the report should drive remediation, not sit on a shelf). A one-time activity (threats evolve; pentests are periodic).
+- [ ] **Pentest vs DAST vs SAST:** SAST reads code (patterns). DAST scans the running app (known signatures). Pentest chains findings and exploits business logic that no scanner can see.
 
 ---
 
@@ -20,8 +20,8 @@
 
 > Scoping determines cost, timeline, and value. A poorly scoped pentest wastes budget and finds nothing actionable.
 
-- [ ] **Scope explicitly defined** — What's in scope (the checkout flow, the API, the admin panel) and what's out of scope (third-party SaaS, production databases, employee personal devices). Written down, agreed by both sides.
-- [ ] **Test type chosen** —
+- [ ] **Scope explicitly defined:** What's in scope (the checkout flow, the API, the admin panel) and what's out of scope (third-party SaaS, production databases, employee personal devices). Written down, agreed by both sides.
+- [ ] **Test type chosen:**
 
   | Type | What's Tested | Attacker Position |
   |---|---|---|
@@ -31,9 +31,9 @@
 
   Grey box is the sweet spot for most apps: enough context to go deep, realistic enough to matter.
 
-- [ ] **Environment specified** — Staging/UAT environment preferred. If production is in scope, rules of engagement specify what can/can't be done (no DoS, no data modification, no social engineering of real customers).
-- [ ] **Rules of engagement documented** — Time window, permitted techniques, excluded techniques, emergency contacts, data handling rules (what the tester does with found data).
-- [ ] **Success criteria defined** — What does a "good" pentest look like? Not "zero findings" (that's a bad test). A good test finds realistic exploit paths and rates them by business risk.
+- [ ] **Environment specified:** Staging/UAT environment preferred. If production is in scope, rules of engagement specify what can/can't be done (no DoS, no data modification, no social engineering of real customers).
+- [ ] **Rules of engagement documented:** Time window, permitted techniques, excluded techniques, emergency contacts, data handling rules (what the tester does with found data).
+- [ ] **Success criteria defined:** What does a "good" pentest look like? Not "zero findings" (that's a bad test). A good test finds realistic exploit paths and rates them by business risk.
 
 ---
 
@@ -49,7 +49,7 @@
 | **Social engineering** | Phishing, vishing, physical entry | Annually for security awareness |
 | **Red team** | Full-spectrum, goal-based (steal X, compromise Y) | Production-grade, mission-critical systems |
 
-- [ ] **Type matches the risk** — A web app needs a web pentest. An API-first product needs an API pentest. A regulated system needs a red team exercise. Don't run a network pentest when your risk is in the API.
+- [ ] **Type matches the risk:** A web app needs a web pentest. An API-first product needs an API pentest. A regulated system needs a red team exercise. Don't run a network pentest when your risk is in the API.
 
 ---
 
@@ -62,19 +62,19 @@
 | **Bug bounty** | Continuous, crowd-sourced, pay-for-results | Noise (low-quality reports), needs triage capacity, no guaranteed coverage |
 | **CrowdStrike/F-Secure/etc.** | Structured, automated pentest platforms | May lack depth of a human-driven test |
 
-- [ ] **External for launch / annual** — An unbiased external tester is the gold standard. Required for compliance (SOC 2, PCI-DSS).
-- [ ] **Internal for iterative checks** — Between external pentests, the internal team runs targeted checks on new features.
-- [ ] **Bug bounty as a complement** — Continuous coverage between formal pentests. HackerOne, Bugcrowd, or a private program. Requires triage SLA.
+- [ ] **External for launch / annual:** An unbiased external tester is the gold standard. Required for compliance (SOC 2, PCI-DSS).
+- [ ] **Internal for iterative checks:** Between external pentests, the internal team runs targeted checks on new features.
+- [ ] **Bug bounty as a complement:** Continuous coverage between formal pentests. HackerOne, Bugcrowd, or a private program. Requires triage SLA.
 
 ---
 
 ## 5. Preparing for the Pentest
 
-- [ ] **Threat model shared with tester** — The tester gets the architecture diagram, data flow, and known concerns. This isn't "cheating" — it focuses the tester on real risk areas instead of discovering the architecture from scratch.
-- [ ] **Test accounts provisioned** — Dedicated test accounts with representative permissions. Not real user accounts, not admin accounts (unless testing admin surface).
-- [ ] **Monitoring/alerting informed** — The SOC/blue team knows the pentest is happening. Pentest traffic shouldn't trigger incident response (or if it does, that's a finding about detection gaps).
-- [ ] **Backups verified** — If production is in scope, backups are verified restorable before the test begins. The tester won't destroy data — but accidents happen.
-- [ ] **Point of contact assigned** — A technical contact who can answer questions during the engagement. Silence from the client side wastes billable hours.
+- [ ] **Threat model shared with tester** (The tester gets the architecture diagram, data flow, and known concerns. This isn't "cheating") it focuses the tester on real risk areas instead of discovering the architecture from scratch.
+- [ ] **Test accounts provisioned:** Dedicated test accounts with representative permissions. Not real user accounts, not admin accounts (unless testing admin surface).
+- [ ] **Monitoring/alerting informed:** The SOC/blue team knows the pentest is happening. Pentest traffic shouldn't trigger incident response (or if it does, that's a finding about detection gaps).
+- [ ] **Backups verified** (If production is in scope, backups are verified restorable before the test begins. The tester won't destroy data) but accidents happen.
+- [ ] **Point of contact assigned:** A technical contact who can answer questions during the engagement. Silence from the client side wastes billable hours.
 
 ---
 
@@ -82,40 +82,40 @@
 
 > A good pentest report is actionable. It tells you what's wrong, how bad it is, and how to fix it. A bad report is a list of theoretical risks with no exploit proof.
 
-- [ ] **Executive summary** — Non-technical summary of overall security posture and top risks. For leadership.
-- [ ] **Vulnerability details** — For each finding:
+- [ ] **Executive summary:** Non-technical summary of overall security posture and top risks. For leadership.
+- [ ] **Vulnerability details:** For each finding:
   - Title, severity (CVSS or Critical/High/Medium/Low)
   - Description (what's wrong)
   - Affected component (URL, endpoint, parameter)
-  - **Proof of concept** (step-by-step reproduction — the report is worthless without this)
+  - **Proof of concept** (step-by-step reproduction: the report is worthless without this)
   - Impact (what an attacker could do)
   - **Remediation recommendation** (specific fix, not "be more secure")
   - References (OWASP, CWE, CVE)
-- [ ] **Exploit chains documented** — When the tester chained multiple findings (e.g., IDOR → token leak → admin takeover), the chain is documented, not just individual findings.
-- [ ] **Positive findings noted** — What the tester *couldn't* break. Validates existing controls.
-- [ ] **Report format** — PDF + machine-readable (SARIF or JSON) for importing into vulnerability management.
+- [ ] **Exploit chains documented:** When the tester chained multiple findings (e.g., IDOR → token leak → admin takeover), the chain is documented, not just individual findings.
+- [ ] **Positive findings noted:** What the tester *couldn't* break. Validates existing controls.
+- [ ] **Report format:** PDF + machine-readable (SARIF or JSON) for importing into vulnerability management.
 
 ---
 
 ## 7. Remediation & Follow-Up
 
-- [ ] **Triage within 48 hours** — Each finding classified: confirmed, false positive, or needs investigation. Severity re-assessed in your context (a Critical in the report may be Medium for you if the endpoint is internal-only).
-- [ ] **Fix per remediation SLA** — Critical ≤ 7 days, High ≤ 30 days (see [[security]] §5). Pentest findings follow the same SLA as scanner findings.
-- [ ] **Retest before closing** — The original tester or internal team verifies the fix. A fix without verification is a hope.
-- [ ] **Findings entered into vuln management** — Not just in the PDF report. Entered into the tracker (DefectDojo, GitHub Security Advisories, Jira) with owner, severity, due date.
-- [ ] **Lessons fed back to design** — Recurring finding categories (missing authZ, IDOR) feed into security requirements and SAST custom rules. Fix the system, not just the symptom.
+- [ ] **Triage within 48 hours:** Each finding classified: confirmed, false positive, or needs investigation. Severity re-assessed in your context (a Critical in the report may be Medium for you if the endpoint is internal-only).
+- [ ] **Fix per remediation SLA:** Critical ≤ 7 days, High ≤ 30 days (see [[security]] §5). Pentest findings follow the same SLA as scanner findings.
+- [ ] **Retest before closing:** The original tester or internal team verifies the fix. A fix without verification is a hope.
+- [ ] **Findings entered into vuln management:** Not just in the PDF report. Entered into the tracker (DefectDojo, GitHub Security Advisories, Jira) with owner, severity, due date.
+- [ ] **Lessons fed back to design:** Recurring finding categories (missing authZ, IDOR) feed into security requirements and SAST custom rules. Fix the system, not just the symptom.
 
 ---
 
 ## 8. Anti-Patterns to Avoid
 
-- [ ] **Pentest as a compliance checkbox** — The report is filed, findings are ignored, nothing changes. The pentest served compliance, not security. Next year's pentest finds the same things.
-- [ ] **Black box when you could be grey/white box** — The tester spends 3 of 5 days discovering the architecture. Share context. Focus billable time on finding exploits, not drawing diagrams.
-- [ ] **No rules of engagement** — The tester takes down the production database. Nobody knows if it's the pentest or a real attack. The SOC triggers incident response. Chaos.
-- [ ] **Scope too broad** — "Test everything" means nothing gets depth. Focus on the highest-risk flows: auth, payments, data access, admin.
-- [ ] **No remediation tracking** — The report has 30 findings. Three get fixed. Nobody tracks the other 27. They accumulate as silent debt.
-- [ ] **Trusting the report blindly** — The tester rated it Critical, but it's on an internal-only endpoint behind VPN. Re-assess severity in your context. Don't over- or under-react.
-- [ ] **One pentest, never again** — Code changes weekly. A pentest from 2 years ago says nothing about today's attack surface. Pentests are periodic.
+- [ ] **Pentest as a compliance checkbox:** The report is filed, findings are ignored, nothing changes. The pentest served compliance, not security. Next year's pentest finds the same things.
+- [ ] **Black box when you could be grey/white box:** The tester spends 3 of 5 days discovering the architecture. Share context. Focus billable time on finding exploits, not drawing diagrams.
+- [ ] **No rules of engagement:** The tester takes down the production database. Nobody knows if it's the pentest or a real attack. The SOC triggers incident response. Chaos.
+- [ ] **Scope too broad:** "Test everything" means nothing gets depth. Focus on the highest-risk flows: auth, payments, data access, admin.
+- [ ] **No remediation tracking:** The report has 30 findings. Three get fixed. Nobody tracks the other 27. They accumulate as silent debt.
+- [ ] **Trusting the report blindly:** The tester rated it Critical, but it's on an internal-only endpoint behind VPN. Re-assess severity in your context. Don't over- or under-react.
+- [ ] **One pentest, never again:** Code changes weekly. A pentest from 2 years ago says nothing about today's attack surface. Pentests are periodic.
 
 ---
 

@@ -1,27 +1,27 @@
 # Mutation Testing Checklist
 
 > **Mutation testing** validates test *quality* by injecting artificial bugs (mutants) into production code and checking whether your test suite detects them. A mutant that *survives* (tests still pass) reveals a gap; a mutant that is *killed* (tests fail) confirms the test catches that class of defect.
-> Complements [[qa]] §4 Quality Metrics, [[pytest]] (Python), and [[junit]] (Java). For projects of all languages — JavaScript/TypeScript, Java, C#/.NET, and Python.
+> Complements [[qa]] §4 Quality Metrics, [[pytest]] (Python), and [[junit]] (Java). For projects of all languages; JavaScript/TypeScript, Java, C#/.NET, and Python.
 > Last updated: 2026-08-07
 
 ---
 
 ## 1. What & Why
 
-- [ ] **Core concept** — A mutation testing tool creates many small variants (mutants) of your source code — each with a single artificial bug. Your test suite is run against every mutant. If at least one test fails, the mutant is **killed**. If all tests still pass, the mutant **survived**, meaning your tests have a blind spot for that kind of defect.
-- [ ] **Why coverage alone isn't enough** — Code coverage tells you which lines were *executed*, not which bugs would be *detected*. A test that calls a function but never asserts on the return value achieves 100 % coverage while detecting zero bugs. Mutation testing exposes this gap directly.
+- [ ] **Core concept** (A mutation testing tool creates many small variants (mutants) of your source code) each with a single artificial bug. Your test suite is run against every mutant. If at least one test fails, the mutant is **killed**. If all tests still pass, the mutant **survived**, meaning your tests have a blind spot for that kind of defect.
+- [ ] **Why coverage alone isn't enough:** Code coverage tells you which lines were *executed*, not which bugs would be *detected*. A test that calls a function but never asserts on the return value achieves 100 % coverage while detecting zero bugs. Mutation testing exposes this gap directly.
   ```python
   # 100% line coverage, but mutation score = 0%
   def is_adult(age: int) -> bool:
       return age >= 18
 
   def test_is_adult():
-      is_adult(25)  # Called but no assertion — mutant `return age < 18` survives
+      is_adult(25)  # Called but no assertion - mutant `return age < 18` survives
   ```
-- [ ] **Mutation score metric** — `Mutation Score = Killed / (Killed + Survived) × 100`. This is the single number that measures how effectively your tests detect bugs. Higher is better; 80 %+ is considered strong for production code.
-- [ ] **Relationship to branch/condition coverage** — Branch coverage ensures both sides of every `if` are executed. Mutation testing goes further: it verifies that each side produces a *detectably different* outcome. A suite can have 100 % branch coverage but a low mutation score if assertions are weak.
-- [ ] **What mutation testing is NOT** — It is not a replacement for coverage, integration tests, or code review. It is a *complement* that measures test effectiveness. It also does not find bugs in production code — it finds weaknesses in the test suite.
-- [ ] **Cost model** — Each mutant requires a full test-suite run. A 5,000-line module with 300 mutants and a 10-second test suite means ~50 minutes of wall time (before parallelization). Understanding this cost upfront is essential for planning.
+- [ ] **Mutation score metric:** `Mutation Score = Killed / (Killed + Survived) × 100`. This is the single number that measures how effectively your tests detect bugs. Higher is better; 80 %+ is considered strong for production code.
+- [ ] **Relationship to branch/condition coverage:** Branch coverage ensures both sides of every `if` are executed. Mutation testing goes further: it verifies that each side produces a *detectably different* outcome. A suite can have 100 % branch coverage but a low mutation score if assertions are weak.
+- [ ] **What mutation testing is NOT** (It is not a replacement for coverage, integration tests, or code review. It is a *complement* that measures test effectiveness. It also does not find bugs in production code) it finds weaknesses in the test suite.
+- [ ] **Cost model:** Each mutant requires a full test-suite run. A 5,000-line module with 300 mutants and a 10-second test suite means ~50 minutes of wall time (before parallelization). Understanding this cost upfront is essential for planning.
 
 ---
 
@@ -29,13 +29,13 @@
 
 ### Stryker Mutator (JavaScript / TypeScript)
 
-- [ ] **Install** — Stryker is the de-facto standard for JS/TS projects:
+- [ ] **Install:** Stryker is the de-facto standard for JS/TS projects:
   ```bash
   npm install --save-dev @stryker-mutator/core @stryker-mutator/jest-runner
   # Or for Vitest:
   npm install --save-dev @stryker-mutator/core @stryker-mutator/vitest-runner
   ```
-- [ ] **Initialize config** — `npx stryker init` walks through an interactive setup:
+- [ ] **Initialize config:** `npx stryker init` walks through an interactive setup:
   ```bash
   npx stryker init
   # Creates stryker.conf.json (or stryker.conf.mjs)
@@ -58,11 +58,11 @@
     "reporters": ["html", "clear-text", "json"]
   }
   ```
-- [ ] **Run** — `npx stryker run`. Produces HTML report in `reports/mutation/html/index.html`.
+- [ ] **Run:** `npx stryker run`. Produces HTML report in `reports/mutation/html/index.html`.
 
 ### Stryker Mutator (Java)
 
-- [ ] **Install** — Stryker also supports Java via a separate package:
+- [ ] **Install:** Stryker also supports Java via a separate package:
   ```bash
   # Gradle
   plugins {
@@ -80,11 +80,11 @@
 
 ### Stryker Mutator (C# / .NET)
 
-- [ ] **Install** — `dotnet-stryker` is a global .NET tool:
+- [ ] **Install:** `dotnet-stryker` is a global .NET tool:
   ```bash
   dotnet tool install -g dotnet-stryker
   ```
-- [ ] **Example `stryker-config.json`**:
+- [ ] **Example `stryker-config.json`:**
   ```json
   {
     "stryker-config": {
@@ -103,11 +103,11 @@
     }
   }
   ```
-- [ ] **Run** — `dotnet stryker`. Output in `StrykerOutput/`.
+- [ ] **Run:** `dotnet stryker`. Output in `StrykerOutput/`.
 
-### PIT (Java — Pitest)
+### PIT (Java: Pitest)
 
-- [ ] **Maven plugin** — the standard for Java projects using JUnit 5:
+- [ ] **Maven plugin:** the standard for Java projects using JUnit 5:
   ```xml
   <!-- pom.xml -->
   <plugin>
@@ -143,7 +143,7 @@
     </configuration>
   </plugin>
   ```
-- [ ] **Gradle plugin** — for Gradle-based projects:
+- [ ] **Gradle plugin:** for Gradle-based projects:
   ```groovy
   // build.gradle
   plugins {
@@ -160,11 +160,11 @@
       timestampedReports = false
   }
   ```
-- [ ] **Run** — `./mvnw org.pitest:pitest-maven:mutationCoverage` or `./gradlew pitest`. Reports in `target/pit-reports/` or `build/reports/pitest/`.
+- [ ] **Run:** `./mvnw org.pitest:pitest-maven:mutationCoverage` or `./gradlew pitest`. Reports in `target/pit-reports/` or `build/reports/pitest/`.
 
 ### mutmut (Python)
 
-- [ ] **Install and configure**:
+- [ ] **Install and configure:**
   ```bash
   pip install mutmut
   ```
@@ -176,7 +176,7 @@
   runner = "python -m pytest -x --timeout=30"
   also_copy = ["conftest.py", "tests/"]
   ```
-- [ ] **Run**:
+- [ ] **Run:**
   ```bash
   mutmut run              # Run all mutations
   mutmut results          # Show survived/killed summary
@@ -186,7 +186,7 @@
 
 ### cosmic-ray (Python alternative)
 
-- [ ] **Install** — more features than mutmut, slower but more flexible:
+- [ ] **Install:** more features than mutmut, slower but more flexible:
   ```bash
   pip install cosmic-ray
   cosmic-ray init my-session src/ -- tests/
@@ -194,7 +194,7 @@
   cosmic-ray cr-report my-session
   cosmic-ray cr-html my-session --output report.html
   ```
-- [ ] **When to choose cosmic-ray over mutmut** — when you need distributed execution, custom operators, or detailed per-operator reporting. mutmut is simpler and faster for most projects.
+- [ ] **When to choose cosmic-ray over mutmut:** when you need distributed execution, custom operators, or detailed per-operator reporting. mutmut is simpler and faster for most projects.
 
 ---
 
@@ -204,7 +204,7 @@
 
 ### Conditional Boundary
 
-- [ ] **What it does** — shifts comparison boundaries by one:
+- [ ] **What it does:** shifts comparison boundaries by one:
   ```java
   // Original
   if (age > 18) { return "adult"; }
@@ -221,11 +221,11 @@
   if score >= 90:
       return "A"
   ```
-- [ ] **Test to kill it** — add a test at the exact boundary value (`age = 18`, `score = 90`).
+- [ ] **Test to kill it:** add a test at the exact boundary value (`age = 18`, `score = 90`).
 
 ### Conditionals Negation
 
-- [ ] **What it does** — flips comparison operators:
+- [ ] **What it does:** flips comparison operators:
   ```java
   // Original
   if (balance > 0) { allowWithdrawal(); }
@@ -242,11 +242,11 @@
   if not user.is_active:
       send_notification(user)
   ```
-- [ ] **Test to kill it** — test with values on both sides of the condition (`balance = 0` and `balance = 100`).
+- [ ] **Test to kill it:** test with values on both sides of the condition (`balance = 0` and `balance = 100`).
 
 ### Arithmetic Operator Replacement
 
-- [ ] **What it does** — swaps arithmetic operators:
+- [ ] **What it does:** swaps arithmetic operators:
   ```java
   // Original
   int total = price * quantity;
@@ -261,11 +261,11 @@
   # Mutant
   discount = original_price + rate
   ```
-- [ ] **Test to kill it** — assert exact numeric results with known inputs (`price=10, quantity=3 → total=30`).
+- [ ] **Test to kill it:** assert exact numeric results with known inputs (`price=10, quantity=3 → total=30`).
 
 ### Return Value Mutations
 
-- [ ] **What it does** — changes boolean/numeric/string return values:
+- [ ] **What it does:** changes boolean/numeric/string return values:
   ```java
   // Original
   public boolean isValid() { return true; }
@@ -282,11 +282,11 @@
   def calculate_tax(amount):
       return amount * 0.0
   ```
-- [ ] **Test to kill it** — assert on the exact return value, not just "not None" or "truthy".
+- [ ] **Test to kill it:** assert on the exact return value, not just "not None" or "truthy".
 
 ### Boundary / Increment Mutations
 
-- [ ] **What it does** — swaps `++` for `--` and vice versa:
+- [ ] **What it does:** swaps `++` for `--` and vice versa:
   ```java
   // Original
   for (int i = 0; i < items.size(); i++) { process(items.get(i)); }
@@ -294,11 +294,11 @@
   // Mutant
   for (int i = 0; i < items.size(); i--) { process(items.get(i)); }
   ```
-- [ ] **Test to kill it** — the mutant usually causes a timeout (infinite loop), so timeout detection kills it. But for non-loop increments, assert on loop count or iteration-dependent state.
+- [ ] **Test to kill it:** the mutant usually causes a timeout (infinite loop), so timeout detection kills it. But for non-loop increments, assert on loop count or iteration-dependent state.
 
 ### Void Method Call Removal
 
-- [ ] **What it does** — removes calls to void methods entirely:
+- [ ] **What it does:** removes calls to void methods entirely:
   ```java
   // Original
   public void processOrder(Order order) {
@@ -313,11 +313,11 @@
       sendConfirmation(order);
   }
   ```
-- [ ] **Test to kill it** — verify side effects: assert that `validate` was called, the DB row exists, or the email was sent.
+- [ ] **Test to kill it:** verify side effects: assert that `validate` was called, the DB row exists, or the email was sent.
 
 ### String Literal Mutations
 
-- [ ] **What it does** — changes string values or empties them:
+- [ ] **What it does:** changes string values or empties them:
   ```typescript
   // Original
   const greeting = `Hello, ${name}!`;
@@ -333,11 +333,11 @@
   # Mutant
   error_message = ""
   ```
-- [ ] **Test to kill it** — assert on exact string content or key substrings.
+- [ ] **Test to kill it:** assert on exact string content or key substrings.
 
 ### Exception Mutations
 
-- [ ] **What it does** — removes throws or changes exception types:
+- [ ] **What it does:** removes throws or changes exception types:
   ```java
   // Original
   if (amount < 0) { throw new IllegalArgumentException("Negative amount"); }
@@ -354,13 +354,13 @@
   if not email:
       pass  # Exception removed
   ```
-- [ ] **Test to kill it** — use `pytest.raises` / `assertThrows` to verify the exception is raised with the correct type and message.
+- [ ] **Test to kill it:** use `pytest.raises` / `assertThrows` to verify the exception is raised with the correct type and message.
 
 ---
 
 ## 4. Configuration Essentials
 
-- [ ] **Mutator selection** — start with the default set, add `STRONGER` (PIT) or extra mutators as the suite matures:
+- [ ] **Mutator selection:** start with the default set, add `STRONGER` (PIT) or extra mutators as the suite matures:
   ```xml
   <!-- PIT: progressive mutator sets -->
   <mutators>
@@ -369,7 +369,7 @@
     <!-- <mutator>ALL</mutator> -->       <!-- Phase 3: maximum rigor -->
   </mutators>
   ```
-- [ ] **Threshold setting formula** — base threshold on current score, then ratchet up:
+- [ ] **Threshold setting formula:** base threshold on current score, then ratchet up:
   ```
   Initial threshold  = current_mutation_score - 5   (buffer for flaky mutants)
   Target threshold   = min(current + 10, tier_target)
@@ -380,7 +380,7 @@
   - Set goal to reach 75 within 2 sprints
   - Set `break` threshold at 55 to prevent backsliding
 
-- [ ] **Concurrency tuning** — use all available cores but leave headroom for the OS:
+- [ ] **Concurrency tuning:** use all available cores but leave headroom for the OS:
   ```json
   // Stryker
   "concurrency": 6   // On an 8-core machine: cores - 2
@@ -394,7 +394,7 @@
   mutmut run & mutmut run --use-coverage & wait
   ```
 
-- [ ] **Timeout calibration** — set to 2–3× the slowest test in your suite to catch infinite loops without wasting time:
+- [ ] **Timeout calibration:** set to 2–3× the slowest test in your suite to catch infinite loops without wasting time:
   ```json
   // Stryker: base timeout = test suite time × factor + per-test overhead
   "timeoutMS": 10000,
@@ -406,7 +406,7 @@
   <timeoutFactor>1.25</timeoutFactor>
   ```
 
-- [ ] **Exclude patterns** — skip generated code, migrations, configs, and test files:
+- [ ] **Exclude patterns:** skip generated code, migrations, configs, and test files:
   ```json
   // Stryker
   "mutate": [
@@ -431,7 +431,7 @@
   </excludedMethods>
   ```
 
-- [ ] **Custom mutators** — extend when default mutators miss domain-specific bug classes:
+- [ ] **Custom mutators:** extend when default mutators miss domain-specific bug classes:
   ```python
   # mutmut: custom mutator via plugin
   # In conftest.py or a separate module registered in setup.cfg
@@ -446,19 +446,19 @@
 
 ## 5. Mutation Score Targets by Tier
 
-- [ ] **Set tier-appropriate targets** — higher criticality demands higher mutation scores:
-- [ ] **Incremental improvement** — don't jump from 0 % to 80 % in one sprint. Improve 5–10 % per iteration.
-- [ ] **Document rationale** — the team should understand *why* a target was chosen, not just enforce it.
+- [ ] **Set tier-appropriate targets:** higher criticality demands higher mutation scores:
+- [ ] **Incremental improvement:** don't jump from 0 % to 80 % in one sprint. Improve 5–10 % per iteration.
+- [ ] **Document rationale:** the team should understand *why* a target was chosen, not just enforce it.
 
 | Tier | Target Score | Rationale |
 |---|---|---|
 | 🧪 POC / Spike | ❌ Skip entirely | Code is throwaway; mutation testing ROI is negative |
-| 🔧 Prototype / MVP | 🟡 40 % | Basic sanity — ensure core happy-path bugs are caught |
+| 🔧 Prototype / MVP | 🟡 40 % | Basic sanity ;  ensure core happy-path bugs are caught |
 | 🏠 Internal Tool | ✅ 60 % | Reasonable quality for employee-facing tools |
-| 🟢 Small Production | ✅ 70 % | Production-ready — paying users or real traffic |
-| 🔵 Medium Production | ✅ 80 % | High confidence — multiple services or 1K+ users |
-| 🟣 Production Grade | ✅ 85 % | Enterprise quality — high-stakes SaaS or large user base |
-| 🔴 Mission-Critical | ✅ 90 %+ | Maximum safety — healthcare, finance, safety systems |
+| 🟢 Small Production | ✅ 70 % | Production-ready ;  paying users or real traffic |
+| 🔵 Medium Production | ✅ 80 % | High confidence ;  multiple services or 1K+ users |
+| 🟣 Production Grade | ✅ 85 % | Enterprise quality ;  high-stakes SaaS or large user base |
+| 🔴 Mission-Critical | ✅ 90 %+ | Maximum safety ;  healthcare, finance, safety systems |
 
 ---
 
@@ -523,7 +523,7 @@
 
 ### PR Incremental Mode
 
-- [ ] **Only mutate changed files** — fast enough for PR feedback:
+- [ ] **Only mutate changed files:** fast enough for PR feedback:
   ```yaml
   # .github/workflows/mutation-testing-pr.yml
   name: Mutation Testing (PR)
@@ -577,7 +577,7 @@
 
 ### Dashboard & Reporting
 
-- [ ] **Stryker Dashboard** — free hosted dashboard for trend tracking:
+- [ ] **Stryker Dashboard:** free hosted dashboard for trend tracking:
   ```json
   // stryker.conf.json
   {
@@ -589,7 +589,7 @@
     "reporters": ["html", "dashboard", "json"]
   }
   ```
-- [ ] **PIT + SonarQube** — integrate with SonarQube for unified quality view:
+- [ ] **PIT + SonarQube:** integrate with SonarQube for unified quality view:
   ```xml
   <!-- PIT outputs XML that SonarQube can ingest -->
   <outputFormats>
@@ -601,21 +601,21 @@
   sonar.mutation.reportPath=target/pit-reports/mutations.xml
   sonar.mutation.threshold=80
   ```
-- [ ] **Notification strategy** — notify on threshold breach, not every run. Use Slack/Teams webhooks or GitHub Issues. Avoid alert fatigue.
+- [ ] **Notification strategy:** notify on threshold breach, not every run. Use Slack/Teams webhooks or GitHub Issues. Avoid alert fatigue.
 
 ---
 
 ## 7. Incremental Mutation Testing
 
-- [ ] **Why incremental** — full runs take 30–120 minutes. Incremental runs on PR diffs take 2–10 minutes, enabling per-PR feedback.
+- [ ] **Why incremental:** full runs take 30–120 minutes. Incremental runs on PR diffs take 2–10 minutes, enabling per-PR feedback.
 
 ### Stryker Diff Mode
 
-- [ ] **`--since` flag** — only mutate files changed since a given branch/commit:
+- [ ] **`--since` flag:** only mutate files changed since a given branch/commit:
   ```bash
   npx stryker run --since main
   ```
-- [ ] **Config-level `since`** — persistent diff configuration:
+- [ ] **Config-level `since`:** persistent diff configuration:
   ```json
   {
     "since": {
@@ -629,7 +629,7 @@
     }
   }
   ```
-- [ ] **Diff + baseline** — combine diff mode with a baseline report to skip mutants that were already survived in the baseline (known survivors):
+- [ ] **Diff + baseline:** combine diff mode with a baseline report to skip mutants that were already survived in the baseline (known survivors):
   ```json
   {
     "baseline": {
@@ -641,14 +641,14 @@
 
 ### PIT History File
 
-- [ ] **History input/output** — PIT caches results between runs:
+- [ ] **History input/output:** PIT caches results between runs:
   ```xml
   <configuration>
     <historyInputFile>pit-history.bin</historyInputFile>
     <historyOutputFile>pit-history.bin</historyOutputFile>
   </configuration>
   ```
-- [ ] **CI caching** — store history file as a CI artifact:
+- [ ] **CI caching:** store history file as a CI artifact:
   ```yaml
   - name: Download PIT history
     uses: actions/cache@v4
@@ -669,7 +669,7 @@
 
 ### mutmut Manual Diff Approach
 
-- [ ] **mutmut + coverage filtering** — mutmut doesn't have built-in diff mode; use coverage analysis to scope:
+- [ ] **mutmut + coverage filtering:** mutmut doesn't have built-in diff mode; use coverage analysis to scope:
   ```bash
   # 1. Get list of changed files
   CHANGED=$(git diff --name-only origin/main -- 'src/*.py')
@@ -685,7 +685,7 @@
 
 ### CI Caching Strategies
 
-- [ ] **Cache mutant results** — store baseline results to skip already-killed mutants:
+- [ ] **Cache mutant results:** store baseline results to skip already-killed mutants:
   ```yaml
   - name: Cache mutation results
     uses: actions/cache@v4
@@ -694,13 +694,13 @@
       key: mutmut-${{ hashFiles('src/**') }}
       restore-keys: mutmut-
   ```
-- [ ] **Artifact-based baseline** — upload full-run results as artifacts, download in PR runs for comparison.
+- [ ] **Artifact-based baseline:** upload full-run results as artifacts, download in PR runs for comparison.
 
 ---
 
 ## 8. Cost Optimization
 
-- [ ] **Coverage analysis first** — mutation testing on uncovered code is pure waste. Run coverage first; only mutate code with ≥70 % coverage:
+- [ ] **Coverage analysis first:** mutation testing on uncovered code is pure waste. Run coverage first; only mutate code with ≥70 % coverage:
   ```bash
   # Run coverage first
   pytest --cov=src --cov-report=term-missing --cov-fail-under=70
@@ -708,7 +708,7 @@
   # Then mutation test only the covered modules
   mutmut run --paths-to-mutate src/core/ src/services/
   ```
-- [ ] **Parallelization strategies** — the single biggest time-saver:
+- [ ] **Parallelization strategies:** the single biggest time-saver:
   ```
   Formula: wall_time = (num_mutants × test_suite_time) / concurrency
   
@@ -718,14 +718,14 @@
   // Stryker: set concurrency to cores - 2 (leave room for OS + test runner overhead)
   "concurrency": 6
   ```
-- [ ] **Timeout tuning** — kill infinite-loop mutants fast. Set `timeoutMS` to 2–3× your p99 test time:
+- [ ] **Timeout tuning:** kill infinite-loop mutants fast. Set `timeoutMS` to 2–3× your p99 test time:
   ```json
   // If your slowest test takes 3 seconds:
   "timeoutMS": 8000,
   "timeoutFactor": 1.5
   ```
-- [ ] **Diff-based scope** — only mutate what changed (see §7). Reduces mutant count from hundreds to single-digits per PR.
-- [ ] **Selective mutators** — disable expensive or low-value mutators:
+- [ ] **Diff-based scope:** only mutate what changed (see §7). Reduces mutant count from hundreds to single-digits per PR.
+- [ ] **Selective mutators:** disable expensive or low-value mutators:
   ```json
   // Stryker: disable string mutators if they produce too many equivalents
   "excludedMutations": [
@@ -733,7 +733,7 @@
     "BlockStatement"
   ]
   ```
-- [ ] **File exclusions** — skip generated code, boilerplate, configs:
+- [ ] **File exclusions:** skip generated code, boilerplate, configs:
   ```json
   "mutate": [
     "src/**/*.ts",
@@ -743,7 +743,7 @@
     "!src/index.ts"
   ]
   ```
-- [ ] **Baseline comparison** — don't re-run mutants that are known survivors from the last full run. Use Stryker's baseline or PIT's history file.
+- [ ] **Baseline comparison:** don't re-run mutants that are known survivors from the last full run. Use Stryker's baseline or PIT's history file.
 
 ---
 
@@ -751,13 +751,13 @@
 
 ### Killed Mutants
 
-- [ ] **What it means** — your test suite detected the artificial bug. This is the desired outcome.
-- [ ] **No action needed** — but verify it's not a false kill (test failing for unrelated reasons like a timeout).
+- [ ] **What it means:** your test suite detected the artificial bug. This is the desired outcome.
+- [ ] **No action needed:** but verify it's not a false kill (test failing for unrelated reasons like a timeout).
 
 ### Survived Mutants
 
-- [ ] **What it means** — tests passed despite the code being changed. This is a **real gap** in your test suite.
-- [ ] **Example analysis**:
+- [ ] **What it means:** tests passed despite the code being changed. This is a **real gap** in your test suite.
+- [ ] **Example analysis:**
   ```python
   # Original code
   def calculate_discount(price, is_vip):
@@ -780,20 +780,20 @@
 
 ### Equivalent Mutants
 
-- [ ] **What they are** — mutants that produce identical behavior to the original. They can never be killed and inflate the denominator unfairly.
-- [ ] **How to detect** — look for mutants where the mutated code is logically identical:
+- [ ] **What they are:** mutants that produce identical behavior to the original. They can never be killed and inflate the denominator unfairly.
+- [ ] **How to detect:** look for mutants where the mutated code is logically identical:
   ```java
   // Original
   if (list.isEmpty()) { return Collections.emptyList(); }
 
   // Mutant: isEmpty() → !isEmpty()
-  // This is NOT equivalent — different behavior
+  // This is NOT equivalent - different behavior
 
   // But:
   int x = a + 0;  // Mutant: a + 1 → different → NOT equivalent
   int y = a * 1;  // Mutant: a * 2 → different → NOT equivalent
   ```
-- [ ] **How to document** — add comments or annotations to mark known equivalents:
+- [ ] **How to document:** add comments or annotations to mark known equivalents:
   ```java
   // MUTANT-EQUIVALENT: Changing && to || here has no effect because
   // the second condition is always true when the first is true.
@@ -802,12 +802,12 @@
   }
   ```
   ```python
-  # @mutmut: equivalent — swapping return values here has no effect
+  # @mutmut: equivalent - swapping return values here has no effect
   # because the caller only checks truthiness, and both are truthy.
   def get_default_config():
       return {"debug": False}
   ```
-- [ ] **Stryker ignore annotations**:
+- [ ] **Stryker ignore annotations:**
   ```typescript
   // Stryker disable next-line
   const defaultValue = process.env.PORT ?? "3000";
@@ -820,19 +820,19 @@
 
 ### Timeout Mutants
 
-- [ ] **What it means** — the mutant caused the test suite to hang (usually an infinite loop or extreme slowdown).
-- [ ] **Is it killed?** — Most tools count timeouts as killed, since the mutant's effect is detectable.
-- [ ] **Action** — if timeouts are frequent, your timeout is too generous. Tighten it.
+- [ ] **What it means:** the mutant caused the test suite to hang (usually an infinite loop or extreme slowdown).
+- [ ] **Is it killed?:** Most tools count timeouts as killed, since the mutant's effect is detectable.
+- [ ] **Action:** if timeouts are frequent, your timeout is too generous. Tighten it.
 
 ### No-Coverage Mutants
 
-- [ ] **What it means** — the mutant is in code that no test executes. The mutation is irrelevant because the code is never reached.
-- [ ] **Action** — either write tests for that code (increasing coverage) or exclude it from mutation testing.
+- [ ] **What it means:** the mutant is in code that no test executes. The mutation is irrelevant because the code is never reached.
+- [ ] **Action:** either write tests for that code (increasing coverage) or exclude it from mutation testing.
 
 ### Reading Reports
 
-- [ ] **HTML report** — interactive, shows each mutant with source location, status, and the exact change. Open `reports/mutation/html/index.html` (Stryker) or `target/pit-reports/index.html` (PIT).
-- [ ] **JSON report** — machine-readable for dashboards and custom tooling:
+- [ ] **HTML report:** interactive, shows each mutant with source location, status, and the exact change. Open `reports/mutation/html/index.html` (Stryker) or `target/pit-reports/index.html` (PIT).
+- [ ] **JSON report:** machine-readable for dashboards and custom tooling:
   ```json
   {
     "mutationScore": 78.5,
@@ -858,18 +858,18 @@
 
 ### Triage Priorities
 
-- [ ] **Fix in this order** — highest ROI first:
-  1. **No-coverage mutants** — fastest fix: write a basic test for uncovered code
-  2. **Survived conditional boundary mutants** — add boundary test cases
-  3. **Survived arithmetic mutants** — add exact-value assertions
-  4. **Survived return value mutants** — assert on return values, not just "not None"
-  5. **Survived negation mutants** — add tests for both branches of conditions
-  6. **Survived void-method mutants** — verify side effects
-  7. **Equivalent mutants** — document and exclude (don't waste time "killing" them)
+- [ ] **Fix in this order:** highest ROI first:
+  1. **No-coverage mutants:** fastest fix: write a basic test for uncovered code
+  2. **Survived conditional boundary mutants:** add boundary test cases
+  3. **Survived arithmetic mutants:** add exact-value assertions
+  4. **Survived return value mutants:** assert on return values, not just "not None"
+  5. **Survived negation mutants:** add tests for both branches of conditions
+  6. **Survived void-method mutants:** verify side effects
+  7. **Equivalent mutants:** document and exclude (don't waste time "killing" them)
 
 ### Specific Test Patterns
 
-- [ ] **Killing boundary mutants** — test at exact boundary values:
+- [ ] **Killing boundary mutants:** test at exact boundary values:
   ```python
   # Mutant: age >= 18 → age > 18
   def test_adult_at_boundary():
@@ -885,7 +885,7 @@
       assert is_adult(age) == expected
   ```
 
-- [ ] **Killing arithmetic mutants** — use exact-value assertions with known inputs:
+- [ ] **Killing arithmetic mutants:** use exact-value assertions with known inputs:
   ```python
   # Mutant: price * quantity → price + quantity
   def test_total_price_exact():
@@ -898,7 +898,7 @@
       assert calculate_tax(100) == 20.0    # 100 * 0.2 = 20, not 80
   ```
 
-- [ ] **Killing return value mutants** — always assert exact return values:
+- [ ] **Killing return value mutants:** always assert exact return values:
   ```java
   // Mutant: return true → return false
   @Test
@@ -912,7 +912,7 @@
   }
   ```
 
-- [ ] **Killing negation mutants** — test both sides of every condition:
+- [ ] **Killing negation mutants:** test both sides of every condition:
   ```python
   # Mutant: if is_active → if not is_active
   def test_active_user_gets_notification():
@@ -924,7 +924,7 @@
       assert should_notify(user) is False
   ```
 
-- [ ] **Killing exception mutants** — verify exception type AND message:
+- [ ] **Killing exception mutants:** verify exception type AND message:
   ```python
   # Mutant: raise ValueError → (removed)
   def test_negative_amount_raises():
@@ -938,8 +938,8 @@
 
 ### Handling Equivalent Mutants
 
-- [ ] **Identify** — a mutant is equivalent if the mutated code produces identical output for all possible inputs.
-- [ ] **Refactor to eliminate** — sometimes the code structure itself creates equivalents:
+- [ ] **Identify:** a mutant is equivalent if the mutated code produces identical output for all possible inputs.
+- [ ] **Refactor to eliminate:** sometimes the code structure itself creates equivalents:
   ```java
   // BEFORE: equivalent mutant likely
   int result = (x > 0) ? x : 0;
@@ -949,7 +949,7 @@
   int result = Math.max(x, 0);
   // No equivalent mutant possible here
   ```
-- [ ] **Document** — when refactoring isn't feasible, add inline documentation:
+- [ ] **Document:** when refactoring isn't feasible, add inline documentation:
   ```python
   # EQUIVALENT: Swapping `>` to `>=` here has no effect because
   # len(items) is always > 0 at this point (guaranteed by caller).
@@ -963,7 +963,7 @@
 
 ### Combining with Property-Based Testing
 
-- [ ] **Hypothesis (Python)** — property-based tests generate random inputs that kill many mutants at once:
+- [ ] **Hypothesis (Python):** property-based tests generate random inputs that kill many mutants at once:
   ```python
   from hypothesis import given, strategies as st
 
@@ -983,7 +983,7 @@
       assert isinstance(result, bool)
   ```
 
-- [ ] **jqwik (Java)** — property-based testing for JVM:
+- [ ] **jqwik (Java):** property-based testing for JVM:
   ```java
   @Property
   void discount_is_never_negative(@ForAll @DoubleRange(min = 0, max = 10000) double price) {
@@ -1000,7 +1000,7 @@
 
 ### Mutation Testing for Test Code
 
-- [ ] **Meta-mutation** — mutate your test code to find redundant assertions, unnecessary tests, or dead test logic:
+- [ ] **Meta-mutation:** mutate your test code to find redundant assertions, unnecessary tests, or dead test logic:
   ```python
   # If this mutant survives, the assertion is redundant:
   # Mutant: assert x > 0 → assert x >= 0
@@ -1009,19 +1009,19 @@
       assert result > 0  # If mutant `>= 0` survives, test is weak
       assert result != 0  # This kills the mutant for result=0
   ```
-- [ ] **When to use** — for critical test suites where false confidence is dangerous (e.g., security-critical assertions).
+- [ ] **When to use:** for critical test suites where false confidence is dangerous (e.g., security-critical assertions).
 
 ### Mutation Score as Documentation
 
-- [ ] **Living specification** — a high mutation score documents that the test suite actually enforces the specification. Include mutation score badges in README:
+- [ ] **Living specification:** a high mutation score documents that the test suite actually enforces the specification. Include mutation score badges in README:
   ```markdown
   ![Mutation Score](https://badge.stryker-mutator.io/github.com/owner/repo/main)
   ```
-- [ ] **Code review signal** — PRs that decrease mutation score should be flagged just like PRs that decrease coverage.
+- [ ] **Code review signal:** PRs that decrease mutation score should be flagged just like PRs that decrease coverage.
 
 ### Baseline Tracking Over Time
 
-- [ ] **Trend tracking** — plot mutation score over time in your CI dashboard. It should trend upward:
+- [ ] **Trend tracking:** plot mutation score over time in your CI dashboard. It should trend upward:
   ```yaml
   # Custom dashboard step: append score to a CSV artifact
   - name: Track mutation score trend
@@ -1035,32 +1035,32 @@
       name: mutation-trend
       path: mutation-trend.csv
   ```
-- [ ] **Regression detection** — if mutation score drops by >2 % between runs, alert the team.
+- [ ] **Regression detection:** if mutation score drops by >2 % between runs, alert the team.
 
 ---
 
 ## 12. Common Pitfalls
 
-- [ ] **Running mutation testing before coverage is adequate** — if coverage < 70 %, most mutants will be "no coverage." Fix coverage first; mutation testing on uncovered code is pure waste.
-- [ ] **Treating mutation score like coverage** — 100 % mutation score is almost never achievable (equivalent mutants, defensive code). Set realistic tier-based targets.
-- [ ] **Ignoring equivalent mutants** — they inflate the denominator and demoralize the team. Identify, document, and exclude them from the score calculation.
-- [ ] **Running full suite on every PR** — mutation testing is 10–100× slower than unit tests. Use incremental/diff mode for PRs, full runs nightly.
-- [ ] **Not tuning timeouts** — default timeouts are too generous. A mutant that causes a 30-second timeout when tests normally run in 3 seconds wastes CI minutes. Calibrate to 2–3× p99 test time.
-- [ ] **Mutating generated/boilerplate code** — generated code, type definitions, and configs produce many equivalent mutants and waste time. Exclude them.
-- [ ] **Using only default mutators** — default mutators miss domain-specific bugs. Add custom mutators for your error-prone patterns (e.g., date arithmetic, currency rounding).
-- [ ] **Not parallelizing** — running mutation tests serially on an 8-core machine wastes 87.5 % of available compute. Always set concurrency to cores - 2.
-- [ ] **Asserting too loosely** — `assert result is not None` or `assertTrue(result > 0)` won't kill arithmetic or return-value mutants. Assert exact values.
-- [ ] **Skipping remediation** — running mutation testing without acting on survivors is theater. Every survived mutant should be triaged: fix, document as equivalent, or accept the risk.
-- [ ] **Mutating test files** — mutating test code by accident inflates mutant count and produces confusing results. Always exclude test directories from mutation scope.
-- [ ] **Not caching between runs** — re-killing the same mutants every run wastes time. Use PIT history, Stryker baseline, or CI caching.
-- [ ] **Alert fatigue** — notifying on every run, not just threshold breaches. Configure notifications for failures only.
-- [ ] **Not updating thresholds** — leaving the threshold at the initial value while the score improves. Ratchet thresholds up as the suite matures.
+- [ ] **Running mutation testing before coverage is adequate:** if coverage < 70 %, most mutants will be "no coverage." Fix coverage first; mutation testing on uncovered code is pure waste.
+- [ ] **Treating mutation score like coverage:** 100 % mutation score is almost never achievable (equivalent mutants, defensive code). Set realistic tier-based targets.
+- [ ] **Ignoring equivalent mutants:** they inflate the denominator and demoralize the team. Identify, document, and exclude them from the score calculation.
+- [ ] **Running full suite on every PR:** mutation testing is 10–100× slower than unit tests. Use incremental/diff mode for PRs, full runs nightly.
+- [ ] **Not tuning timeouts:** default timeouts are too generous. A mutant that causes a 30-second timeout when tests normally run in 3 seconds wastes CI minutes. Calibrate to 2–3× p99 test time.
+- [ ] **Mutating generated/boilerplate code:** generated code, type definitions, and configs produce many equivalent mutants and waste time. Exclude them.
+- [ ] **Using only default mutators:** default mutators miss domain-specific bugs. Add custom mutators for your error-prone patterns (e.g., date arithmetic, currency rounding).
+- [ ] **Not parallelizing:** running mutation tests serially on an 8-core machine wastes 87.5 % of available compute. Always set concurrency to cores - 2.
+- [ ] **Asserting too loosely:** `assert result is not None` or `assertTrue(result > 0)` won't kill arithmetic or return-value mutants. Assert exact values.
+- [ ] **Skipping remediation:** running mutation testing without acting on survivors is theater. Every survived mutant should be triaged: fix, document as equivalent, or accept the risk.
+- [ ] **Mutating test files:** mutating test code by accident inflates mutant count and produces confusing results. Always exclude test directories from mutation scope.
+- [ ] **Not caching between runs:** re-killing the same mutants every run wastes time. Use PIT history, Stryker baseline, or CI caching.
+- [ ] **Alert fatigue:** notifying on every run, not just threshold breaches. Configure notifications for failures only.
+- [ ] **Not updating thresholds:** leaving the threshold at the initial value while the score improves. Ratchet thresholds up as the suite matures.
 
 ---
 
 ## 13. Quick Sanity Check Before Running
 
-- [ ] All unit tests pass (`pytest` / `mvn test` / `npm test` — zero failures)
+- [ ] All unit tests pass (`pytest` / `mvn test` / `npm test`; zero failures)
 - [ ] Code coverage ≥ 70 % on target modules (mutation testing on uncovered code is wasteful)
 - [ ] Mutation testing tool installed and version-pinned in dev dependencies
 - [ ] Config file present and committed (`stryker.conf.json`, `pom.xml` plugin block, `pyproject.toml`)
@@ -1073,20 +1073,21 @@
 - [ ] CI pipeline configured (nightly full run, PR incremental run)
 - [ ] Report output directory accessible and uploaded as CI artifact
 - [ ] Team briefed on how to interpret results (killed vs survived vs equivalent)
-- [ ] Baseline established — current mutation score recorded as starting point
-- [ ] Remediation plan in place — survivors will be triaged within one sprint
+- [ ] Baseline established: current mutation score recorded as starting point
+- [ ] Remediation plan in place: survivors will be triaged within one sprint
 
 ---
 
 ## 14. Project Tier Scoping Matrix
 
-> **How to use this table:** Pick your tier first, then focus only on the sections marked ✅ (required) or 🟡 (recommended). Skip ❌ sections entirely — they'd be over-engineering for your context.
+> **How to use this table:** Pick your tier first, then focus only on the sections marked ✅ (required) or 🟡 (recommended). Skip ❌ sections entirely; they'd be over-engineering for your context.
 >
 > **Legend:** ✅ Required · 🟡 Recommended / partial · ❌ Skip
 
 ### Which Tier Am I?
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Is this throwaway / exploratory?] -->|Yes| T1[🧪 Tier 1 or 2<br/>POC / Prototype]
     A -->|No| B[Are the users internal<br/>employees only?]
@@ -1101,13 +1102,14 @@ flowchart TD
     F -->|No| T6[🟣 Tier 6<br/>Production Grade]
     F -->|Yes| T7[🔴 Tier 7<br/>Mission-Critical]
 
-    style T1 fill:#e1f5ff
-    style T3 fill:#fff4e1
-    style T4 fill:#e8f5e9
-    style T5 fill:#e3f2fd
-    style T6 fill:#f3e5f5
-    style T7 fill:#ffebee
+    style T1 fill:#00B5FF,color:#000000
+    style T3 fill:#FFBE00,color:#000000
+    style T4 fill:#1FB854,color:#000000
+    style T5 fill:#00B5FF,color:#000000
+    style T6 fill:#1FB8AB,color:#000000
+    style T7 fill:#FF5861,color:#000000
 ```
+
 
 ### Mutation Testing Checklist Applicability by Tier
 
@@ -1131,16 +1133,16 @@ flowchart TD
 
 ## 15. Sources
 
-- [[qa]] — general QA checklist, §4 Quality Metrics (test effectiveness)
-- [[pytest]] — Python testing with pytest (companion for mutmut workflows)
-- [[junit]] — Java testing with JUnit 5 (companion for PIT workflows)
-- PIT (Pitest) documentation — https://pitest.org/
-- PIT quick start — https://pitest.org/quickstart/
-- Stryker Mutator (JS/TS) — https://stryker-mutator.io/docs/stryker-js/introduction/
-- Stryker Mutator (C#/.NET) — https://stryker-mutator.io/docs/stryker-net/introduction/
-- Stryker Dashboard — https://dashboard.stryker-mutator.io/
-- mutmut — https://github.com/boxed/mutmut
-- cosmic-ray — https://cosmic-ray.readthedocs.io/
-- Mutation Testing (Wikipedia) — https://en.wikipedia.org/wiki/Mutation_testing
-- "Mutation Testing: History, Recent Advances and Open Problems" (Jia & Harman, 2011) — https://ieeexplore.ieee.org/document/5979226
-- Equivalent Mutant Detection Survey — https://www.sciencedirect.com/science/article/pii/S0950584920301633
+- [[qa]]: general QA checklist, §4 Quality Metrics (test effectiveness)
+- [[pytest]]: Python testing with pytest (companion for mutmut workflows)
+- [[junit]]: Java testing with JUnit 5 (companion for PIT workflows)
+- PIT (Pitest) documentation: https://pitest.org/
+- PIT quick start: https://pitest.org/quickstart/
+- Stryker Mutator (JS/TS): https://stryker-mutator.io/docs/stryker-js/introduction/
+- Stryker Mutator (C#/.NET): https://stryker-mutator.io/docs/stryker-net/introduction/
+- Stryker Dashboard: https://dashboard.stryker-mutator.io/
+- mutmut: https://github.com/boxed/mutmut
+- cosmic-ray: https://cosmic-ray.readthedocs.io/
+- Mutation Testing (Wikipedia): https://en.wikipedia.org/wiki/Mutation_testing
+- "Mutation Testing: History, Recent Advances and Open Problems" (Jia & Harman, 2011), https://ieeexplore.ieee.org/document/5979226
+- Equivalent Mutant Detection Survey: https://www.sciencedirect.com/science/article/pii/S0950584920301633

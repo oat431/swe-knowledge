@@ -1,4 +1,4 @@
-# Spring Boot OAuth — Open Authentication Checklist
+# Spring Boot OAuth: Open Authentication Checklist
 
 > OAuth2 / OpenID Connect with Keycloak + Spring Security for Spring Boot 4.x microservices.
 > Covers Boot 4.0+ (Spring Framework 7, Security 7, modular OAuth2 starters). Docker-focused for self-hosted homelabs.
@@ -35,7 +35,7 @@ Browser ──→ Traefik ──→ Spring Cloud Gateway ──→ Service A (Re
 
 ## Part 1: Keycloak Server Setup
 
-### 1.1 Docker — Production Mode
+### 1.1 Docker: Production Mode
 
 > Keycloak's `start-dev` command uses H2 in-memory database. Restart = everything gone. Never in production.
 
@@ -61,10 +61,10 @@ keycloak:
       condition: service_healthy
 ```
 
-- [ ] **`KC_HOSTNAME`** — Must match the public domain users access Keycloak at. This is what Keycloak puts in redirect URIs, issuer claims, and OIDC discovery endpoints.
-- [ ] **`KC_PROXY_HEADERS: xforwarded`** — Behind Traefik (or any reverse proxy), Keycloak sees internal IPs. This tells Keycloak to trust `X-Forwarded-*` headers for constructing correct redirect URIs. Without it: login redirects to `http://172.18.0.5:8080/...` instead of `https://auth.panomete.com/...`.
-- [ ] **Dedicated PostgreSQL database** — Create a `keycloak` database on your existing Postgres container. Keycloak manages its own schema.
-- [ ] **Production checklist**:
+- [ ] **`KC_HOSTNAME`:** Must match the public domain users access Keycloak at. This is what Keycloak puts in redirect URIs, issuer claims, and OIDC discovery endpoints.
+- [ ] **`KC_PROXY_HEADERS: xforwarded`:** Behind Traefik (or any reverse proxy), Keycloak sees internal IPs. This tells Keycloak to trust `X-Forwarded-*` headers for constructing correct redirect URIs. Without it: login redirects to `http://172.18.0.5:8080/...` instead of `https://auth.panomete.com/...`.
+- [ ] **Dedicated PostgreSQL database:** Create a `keycloak` database on your existing Postgres container. Keycloak manages its own schema.
+- [ ] **Production checklist:**
   - Admin password in env var or Docker secret (NEVER in `docker-compose.yml`)
   - Database backups: Keycloak DB IS your user store. Back it up.
   - Export realms periodically: `docker exec keycloak kc.sh export --realm homelab --file /tmp/realm.json`
@@ -86,7 +86,7 @@ keycloak:
     - "traefik.http.routers.keycloak-admin.middlewares=admin-ipwhitelist"
 ```
 
-- [ ] **Restrict `/admin`** — The Keycloak admin console should not be publicly accessible. IP whitelist it to your home/office network, or add basic auth middleware.
+- [ ] **Restrict `/admin`:** The Keycloak admin console should not be publicly accessible. IP whitelist it to your home/office network, or add basic auth middleware.
 
 ---
 
@@ -94,15 +94,15 @@ keycloak:
 
 ### 2.1 Realm Setup
 
-- [ ] **Create a realm** — e.g., `homelab`. One realm for all internal services. The realm is the security boundary: users in realm A cannot access clients in realm B.
-- [ ] **Realm settings → Tokens**:
+- [ ] **Create a realm:** e.g., `homelab`. One realm for all internal services. The realm is the security boundary: users in realm A cannot access clients in realm B.
+- [ ] **Realm settings → Tokens:**
   - **Access Token Lifespan:** 5–15 minutes. Short = more secure (stolen token expires quickly), more refresh traffic. 15 is a good default.
   - **Refresh Token Lifespan:** 30 days. With rotation enabled, each use invalidates the old token.
   - **SSO Session Idle/Max:** Sensible for your use case.
 
 ### 2.2 Client Configuration
 
-- [ ] **Create clients for each service role**:
+- [ ] **Create clients for each service role:**
 
 | Client ID | Type | Access Type | Purpose |
 |-----------|------|-------------|---------|
@@ -111,37 +111,37 @@ keycloak:
 | `service-b` | OpenID Connect | confidential | Service-to-service auth |
 | `frontend-app` | OpenID Connect | public | SPA/Next.js (auth code + PKCE, no client secret) |
 
-- [ ] **Gateway client (`api-gateway`) settings**:
+- [ ] **Gateway client (`api-gateway`) settings:**
   - **Client authentication:** Client ID and Secret (confidential)
   - **Valid redirect URIs:** `https://api.panomete.com/login/oauth2/code/*`
   - **Valid post logout redirect URIs:** `https://api.panomete.com/`
   - **Web origins:** `https://api.panomete.com`
 
-- [ ] **Service client (`service-a`) settings**:
+- [ ] **Service client (`service-a`) settings:**
   - **Client authentication:** Client ID and Secret
   - **Service accounts roles:** Enabled (required for client credentials grant)
   - **Redirect URIs:** Not needed (services don't handle browser redirects)
 
 - [ ] **Frontend client settings** (if you have an SPA):
-  - **Access type:** public (no client secret — it would be exposed in browser)
+  - **Access type:** public (no client secret: it would be exposed in browser)
   - **Valid redirect URIs:** `https://app.panomete.com/callback`
   - **Proof Key for Code Exchange (PKCE):** Required
 
 ### 2.3 Roles & Authorization
 
-- [ ] **Define realm roles** — `ROLE_USER`, `ROLE_ADMIN`, etc. These appear in the JWT's `realm_access.roles` claim.
-- [ ] **Assign roles to users** — Through the Keycloak admin UI. Roles propagate to Spring Security authorities via the converter (see Part 4).
-- [ ] **Groups (optional)** — If you have many users, assign roles to groups, then add users to groups. Easier to manage at scale.
+- [ ] **Define realm roles:** `ROLE_USER`, `ROLE_ADMIN`, etc. These appear in the JWT's `realm_access.roles` claim.
+- [ ] **Assign roles to users:** Through the Keycloak admin UI. Roles propagate to Spring Security authorities via the converter (see Part 4).
+- [ ] **Groups (optional):** If you have many users, assign roles to groups, then add users to groups. Easier to manage at scale.
 
 ### 2.4 Client Secrets
 
-- [ ] **Get the client secret** — Keycloak admin → Clients → `api-gateway` → Credentials tab → Client Secret.
-- [ ] **Store in environment variable** — `KEYCLOAK_GATEWAY_SECRET=abc123...`. Reference as `${KEYCLOAK_GATEWAY_SECRET}` in `application.yml`. Never commit.
-- [ ] **Rotate secrets** — Keycloak supports regenerating secrets. Schedule rotation (quarterly is reasonable). Document the procedure in your runbook.
+- [ ] **Get the client secret:** Keycloak admin → Clients → `api-gateway` → Credentials tab → Client Secret.
+- [ ] **Store in environment variable:** `KEYCLOAK_GATEWAY_SECRET=abc123...`. Reference as `${KEYCLOAK_GATEWAY_SECRET}` in `application.yml`. Never commit.
+- [ ] **Rotate secrets:** Keycloak supports regenerating secrets. Schedule rotation (quarterly is reasonable). Document the procedure in your runbook.
 
 ---
 
-## Part 3: Spring Cloud Gateway — OAuth2 Client + Resource Server
+## Part 3: Spring Cloud Gateway: OAuth2 Client + Resource Server
 
 ### 3.1 Dependencies
 
@@ -183,10 +183,10 @@ spring:
           issuer-uri: https://auth.panomete.com/realms/homelab
 ```
 
-- [ ] **`issuer-uri`** — Spring Security fetches `/.well-known/openid-configuration` from this URL to discover JWKS, token, and authorization endpoints. Must match `KC_HOSTNAME` + realm path.
-- [ ] **`redirect-uri`** — The path Keycloak redirects back to after login. Spring handles the OAuth2 callback at `/login/oauth2/code/{registrationId}` automatically.
+- [ ] **`issuer-uri`:** Spring Security fetches `/.well-known/openid-configuration` from this URL to discover JWKS, token, and authorization endpoints. Must match `KC_HOSTNAME` + realm path.
+- [ ] **`redirect-uri`:** The path Keycloak redirects back to after login. Spring handles the OAuth2 callback at `/login/oauth2/code/{registrationId}` automatically.
 
-### 3.3 Security Filter Chain (Boot 4 / Security 7 — Reactive)
+### 3.3 Security Filter Chain (Boot 4 / Security 7: Reactive)
 
 ```java
 @Configuration
@@ -223,12 +223,12 @@ public class GatewaySecurityConfig {
 }
 ```
 
-- [ ] **Dual role** — Gateway is both OAuth2 Client (redirects users to login) AND Resource Server (validates JWT on API requests). Both configured in the same filter chain.
-- [ ] **`authorizeHttpRequests` (NOT `authorizeRequests`)** — Security 7 removed the old method. Only the lambda DSL works: `.authorizeHttpRequests(auth -> auth.pathMatchers(...))`.
+- [ ] **Dual role:** Gateway is both OAuth2 Client (redirects users to login) AND Resource Server (validates JWT on API requests). Both configured in the same filter chain.
+- [ ] **`authorizeHttpRequests` (NOT `authorizeRequests`):** Security 7 removed the old method. Only the lambda DSL works: `.authorizeHttpRequests(auth -> auth.pathMatchers(...))`.
 
 ### 3.4 JWT Claim Propagation
 
-- [ ] **Add a GlobalFilter** — After validating the JWT, extract claims and forward them as headers to downstream services:
+- [ ] **Add a GlobalFilter:** After validating the JWT, extract claims and forward them as headers to downstream services:
 
 ```java
 @Component
@@ -287,12 +287,12 @@ public class JwtClaimHeaderFilter implements GlobalFilter {
 }
 ```
 
-- [ ] **Always strip `Authorization`** — Raw JWT tokens must not leak to downstream services. If a service is compromised, the attacker gets access tokens for all users whose requests passed through.
-- [ ] **Header naming** — `X-User-Id`, `X-User-Name`, `X-User-Roles` are conventions. Be consistent across all services.
+- [ ] **Always strip `Authorization`:** Raw JWT tokens must not leak to downstream services. If a service is compromised, the attacker gets access tokens for all users whose requests passed through.
+- [ ] **Header naming:** `X-User-Id`, `X-User-Name`, `X-User-Roles` are conventions. Be consistent across all services.
 
 ---
 
-## Part 4: Downstream Services — Resource Servers
+## Part 4: Downstream Services: Resource Servers
 
 ### 4.1 Dependencies
 
@@ -318,9 +318,9 @@ spring:
           issuer-uri: https://auth.panomete.com/realms/homelab
 ```
 
-- [ ] **How it works** — Spring fetches the JWKS endpoint (`/.well-known/openid-configuration/jwks`), gets Keycloak's public key, caches it, and validates every JWT signature locally. No network call per request. Key rotation is automatic — when Keycloak publishes a new key, Spring fetches it on the next cache miss.
+- [ ] **How it works** (Spring fetches the JWKS endpoint (`/.well-known/openid-configuration/jwks`), gets Keycloak's public key, caches it, and validates every JWT signature locally. No network call per request. Key rotation is automatic) when Keycloak publishes a new key, Spring fetches it on the next cache miss.
 
-### 4.3 Security Filter Chain (Boot 4 / Security 7 — Servlet)
+### 4.3 Security Filter Chain (Boot 4 / Security 7: Servlet)
 
 ```java
 @Configuration
@@ -354,7 +354,7 @@ public class ResourceServerConfig {
 
 ### 4.4 Role Mapping
 
-- [ ] **Custom JwtAuthenticationConverter** — Map Keycloak realm roles to Spring Security authorities:
+- [ ] **Custom JwtAuthenticationConverter:** Map Keycloak realm roles to Spring Security authorities:
 
 ```java
 @Bean
@@ -372,7 +372,7 @@ public JwtAuthenticationConverter jwtAuthenticationConverter() {
 }
 ```
 
-- [ ] **Verify in JWT** — Decode a Keycloak-issued JWT at jwt.io. You should see:
+- [ ] **Verify in JWT:** Decode a Keycloak-issued JWT at jwt.io. You should see:
 
 ```json
 {
@@ -384,15 +384,15 @@ public JwtAuthenticationConverter jwtAuthenticationConverter() {
 
 ### 4.5 Trust Headers or Validate JWT?
 
-- [ ] **Option A: Trust Gateway headers** — Service trusts `X-User-Id`, `X-User-Roles` from Gateway. Simpler, but if the service is accidentally exposed directly (bypassing Gateway), it has zero auth. Acceptable only if you're CERTAIN the service can't be reached externally.
-- [ ] **Option B: Validate JWT independently (recommended)** — Service validates the JWT using the JWKS key cache. Defense-in-depth. If Gateway is compromised or bypassed, the service still requires a valid JWT. The performance cost is negligible after key caching.
-- [ ] **Option C: Both** — Validate JWT for security, but also read `X-User-*` headers for convenience (avoid parsing the JWT in every controller method). This is the pragmatic approach.
+- [ ] **Option A: Trust Gateway headers:** Service trusts `X-User-Id`, `X-User-Roles` from Gateway. Simpler, but if the service is accidentally exposed directly (bypassing Gateway), it has zero auth. Acceptable only if you're CERTAIN the service can't be reached externally.
+- [ ] **Option B: Validate JWT independently (recommended):** Service validates the JWT using the JWKS key cache. Defense-in-depth. If Gateway is compromised or bypassed, the service still requires a valid JWT. The performance cost is negligible after key caching.
+- [ ] **Option C: Both:** Validate JWT for security, but also read `X-User-*` headers for convenience (avoid parsing the JWT in every controller method). This is the pragmatic approach.
 
 ---
 
 ## Part 5: Service-to-Service Authentication (Client Credentials)
 
-> When Service A calls Service B programmatically — not on behalf of a user, but as itself.
+> When Service A calls Service B programmatically, not on behalf of a user, but as itself.
 
 ### 5.1 Service A (Caller) Configuration
 
@@ -412,7 +412,7 @@ spring:
             token-uri: https://auth.panomete.com/realms/homelab/protocol/openid-connect/token
 ```
 
-- [ ] **No user involved** — The `sub` claim will be the service's client ID, not a user ID. Service B knows it's Service A calling, not a user.
+- [ ] **No user involved:** The `sub` claim will be the service's client ID, not a user ID. Service B knows it's Service A calling, not a user.
 
 ### 5.2 WebClient with Automatic Token Management
 
@@ -438,47 +438,47 @@ public class ServiceToServiceConfig {
 }
 ```
 
-- [ ] **Zero manual token handling** — The filter automatically acquires a token before the first request, caches it, and refreshes it before expiry. Your code just calls the WebClient.
+- [ ] **Zero manual token handling:** The filter automatically acquires a token before the first request, caches it, and refreshes it before expiry. Your code just calls the WebClient.
 
-### 5.3 Service B (Receiver) — Same as User Auth
+### 5.3 Service B (Receiver): Same as User Auth
 
-- [ ] **No changes needed** — Service B validates the JWT the same way as user JWTs. Same resource server config, same filter chain. The only difference is the `sub` claim (service client ID vs user ID).
+- [ ] **No changes needed:** Service B validates the JWT the same way as user JWTs. Same resource server config, same filter chain. The only difference is the `sub` claim (service client ID vs user ID).
 
 ---
 
 ## 6. Keycloak Gotchas
 
-- ❌ **`start-dev` in production** — Dev mode = H2 in-memory database. Container restart = all users, realms, clients gone. Use `start`.
-- ❌ **Without `KC_PROXY_HEADERS: xforwarded`** — Behind Traefik, Keycloak sees `172.18.0.x` instead of `auth.panomete.com`. Redirect URIs are wrong. Login redirects break.
-- ❌ **Access token lifespan too long** — 30+ minute tokens can't be revoked without introspection. 5–15 minutes with refresh rotation is standard.
-- ❌ **Leaking `Authorization` header to downstream** — Gateway must strip it. A compromised downstream service could harvest valid tokens.
-- ❌ **CSRF blocking API calls (Security 7)** — Security 7 enables CSRF for ALL endpoints. Stateless JWT APIs get 403 until `.csrf().disable()`.
-- ❌ **`authorizeRequests()` (Security 7)** — Removed. Only `.authorizeHttpRequests(auth -> ...)` lambda DSL works.
-- ❌ **Wrong `issuer-uri`** — Must match exactly what's in the JWT's `iss` claim (`https://auth.panomete.com/realms/homelab`). Missing trailing slash or wrong realm name = 401 on every request.
-- ❌ **No client secret rotation** — Secrets should rotate. If a secret leaks, rotating it revokes the old one. Keycloak supports this natively.
-- ❌ **Keycloak DB not backed up** — That PostgreSQL database IS your user store. No backup = lost all users on DB failure.
-- ❌ **Admin console publicly accessible** — IP-restrict `/admin` paths or put basic auth in front.
+- ❌ **`start-dev` in production:** Dev mode = H2 in-memory database. Container restart = all users, realms, clients gone. Use `start`.
+- ❌ **Without `KC_PROXY_HEADERS: xforwarded`:** Behind Traefik, Keycloak sees `172.18.0.x` instead of `auth.panomete.com`. Redirect URIs are wrong. Login redirects break.
+- ❌ **Access token lifespan too long:** 30+ minute tokens can't be revoked without introspection. 5–15 minutes with refresh rotation is standard.
+- ❌ **Leaking `Authorization` header to downstream:** Gateway must strip it. A compromised downstream service could harvest valid tokens.
+- ❌ **CSRF blocking API calls (Security 7):** Security 7 enables CSRF for ALL endpoints. Stateless JWT APIs get 403 until `.csrf().disable()`.
+- ❌ **`authorizeRequests()` (Security 7):** Removed. Only `.authorizeHttpRequests(auth -> ...)` lambda DSL works.
+- ❌ **Wrong `issuer-uri`:** Must match exactly what's in the JWT's `iss` claim (`https://auth.panomete.com/realms/homelab`). Missing trailing slash or wrong realm name = 401 on every request.
+- ❌ **No client secret rotation:** Secrets should rotate. If a secret leaks, rotating it revokes the old one. Keycloak supports this natively.
+- ❌ **Keycloak DB not backed up:** That PostgreSQL database IS your user store. No backup = lost all users on DB failure.
+- ❌ **Admin console publicly accessible:** IP-restrict `/admin` paths or put basic auth in front.
 
 ### Spring Security Gotchas
 
-- ❌ **Mixing reactive and servlet** — Gateway is WebFlux (reactive). Services are Web MVC (servlet). Filter chains are different types (`SecurityWebFilterChain` vs `SecurityFilterChain`). Don't mix them.
-- ❌ **`@EnableWebSecurity` adding duplicate filters** — Spring Boot auto-configures security. Adding `@EnableWebSecurity` manually can cause double filter registration. It's optional in Boot 4.
-- ❌ **`principal.getName()` returns UUID** — Keycloak's default `sub` claim is a UUID. If you want username, configure `user-name-attribute: preferred_username` in the Gateway provider config.
-- ❌ **JWT not including roles** — By default Keycloak doesn't include realm roles in the JWT. Add a "realm roles" mapper in the client's Client Scopes → Dedicated scopes.
-- ❌ **`hasRole()` vs `hasAuthority()`** — `hasRole("ADMIN")` checks for `ROLE_ADMIN` authority. `hasAuthority("SCOPE_ROLE_ADMIN")` checks for scope prefix. Know which one your converter produces.
+- ❌ **Mixing reactive and servlet:** Gateway is WebFlux (reactive). Services are Web MVC (servlet). Filter chains are different types (`SecurityWebFilterChain` vs `SecurityFilterChain`). Don't mix them.
+- ❌ **`@EnableWebSecurity` adding duplicate filters:** Spring Boot auto-configures security. Adding `@EnableWebSecurity` manually can cause double filter registration. It's optional in Boot 4.
+- ❌ **`principal.getName()` returns UUID:** Keycloak's default `sub` claim is a UUID. If you want username, configure `user-name-attribute: preferred_username` in the Gateway provider config.
+- ❌ **JWT not including roles:** By default Keycloak doesn't include realm roles in the JWT. Add a "realm roles" mapper in the client's Client Scopes → Dedicated scopes.
+- ❌ **`hasRole()` vs `hasAuthority()`:** `hasRole("ADMIN")` checks for `ROLE_ADMIN` authority. `hasAuthority("SCOPE_ROLE_ADMIN")` checks for scope prefix. Know which one your converter produces.
 
 ---
 
 ## 7. Testing Auth
 
-- [ ] **Unauthenticated → redirect** — `curl -v https://api.panomete.com/api/v1/users` → 302 to `https://auth.panomete.com/realms/homelab/protocol/openid-connect/auth`
-- [ ] **Valid JWT → 200** — Get a token (via login flow or client credentials), `curl -H "Authorization: Bearer <token>" https://api.panomete.com/api/v1/users` → 200
-- [ ] **Expired JWT → 401** — Wait for access token to expire (or use a short-lived test client). Same request → 401 with `WWW-Authenticate: Bearer` header.
-- [ ] **Invalid signature → 401** — Tamper with the JWT payload. Request → 401.
-- [ ] **Wrong audience → 401** — JWT with `aud: "other-client"` → 401 if audience validation is enabled.
-- [ ] **Wrong role → 403** — User with `ROLE_USER` hits `/api/v1/admin/**` → 403 Forbidden.
-- [ ] **Downstream service directly** — Hit Service A directly (bypassing Gateway) with valid JWT → 200 (if validating JWT). Without JWT → 401.
-- [ ] **Service-to-service** — Service A calls Service B with client credentials token → 200. Service B's `sub` claim = `service-a`.
+- [ ] **Unauthenticated → redirect:** `curl -v https://api.panomete.com/api/v1/users` → 302 to `https://auth.panomete.com/realms/homelab/protocol/openid-connect/auth`
+- [ ] **Valid JWT → 200:** Get a token (via login flow or client credentials), `curl -H "Authorization: Bearer <token>" https://api.panomete.com/api/v1/users` → 200
+- [ ] **Expired JWT → 401:** Wait for access token to expire (or use a short-lived test client). Same request → 401 with `WWW-Authenticate: Bearer` header.
+- [ ] **Invalid signature → 401:** Tamper with the JWT payload. Request → 401.
+- [ ] **Wrong audience → 401:** JWT with `aud: "other-client"` → 401 if audience validation is enabled.
+- [ ] **Wrong role → 403:** User with `ROLE_USER` hits `/api/v1/admin/**` → 403 Forbidden.
+- [ ] **Downstream service directly:** Hit Service A directly (bypassing Gateway) with valid JWT → 200 (if validating JWT). Without JWT → 401.
+- [ ] **Service-to-service:** Service A calls Service B with client credentials token → 200. Service B's `sub` claim = `service-a`.
 
 ---
 
@@ -501,14 +501,14 @@ public class ServiceToServiceConfig {
 - [ ] Keycloak database backed up regularly
 - [ ] Access tokens: 5–15 minute lifespan
 - [ ] Refresh token rotation enabled
-- [ ] No `authorizeRequests()` — Security 7 uses lambda DSL only
+- [ ] No `authorizeRequests()`: Security 7 uses lambda DSL only
 
 ---
 
 ## Related Checklists
 
-- [Microservice Infrastructure](microservice-infrastructure.md) — Concepts: OAuth2 vs OIDC, grant types, architecture patterns
-- [Spring Boot Microservice Infrastructure](spring-boot-microservice-infrastructure.md) — Integration overview: architecture diagram, full Docker Compose, startup sequence
-- [Spring Boot Eureka](spring-boot-eureka.md) — Service Discovery
-- [Spring Boot Load Balancing](spring-boot-loadbalance.md) — Traefik + SC LoadBalancer
-- [Spring Boot API Gateway](spring-boot-api-gateway.md) — Gateway routes, filters, rate limiting
+- [Microservice Infrastructure](microservice-infrastructure.md): Concepts: OAuth2 vs OIDC, grant types, architecture patterns
+- [Spring Boot Microservice Infrastructure](spring-boot-microservice-infrastructure.md): Integration overview: architecture diagram, full Docker Compose, startup sequence
+- [Spring Boot Eureka](spring-boot-eureka.md): Service Discovery
+- [Spring Boot Load Balancing](spring-boot-loadbalance.md): Traefik + SC LoadBalancer
+- [Spring Boot API Gateway](spring-boot-api-gateway.md): Gateway routes, filters, rate limiting

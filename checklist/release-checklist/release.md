@@ -1,90 +1,90 @@
 # Release / Deployment Checklist
 
-> The **process** of shipping a change safely — versioning → build → stage → rollout → verify → rollback.
+> The **process** of shipping a change safely, versioning → build → stage → rollout → verify → rollback.
 > Domain-specific readiness gates: [[API Launch]] (backend), [[Frontend Launch]] (web), [[Microservice Launch]] (multi-service).
-> Framework-agnostic. Works for API services, web apps, batch jobs, mobile backends — anything deployable.
+> Framework-agnostic. Works for API services, web apps, batch jobs, mobile backends, anything deployable.
 > Last updated: 2026-08-05
 
 ---
 
 ## 1. Versioning & Artifacts
 
-- [ ] **Semantic versioning** — `MAJOR.MINOR.PATCH`. Breaking change → MAJOR bump. New feature (backward-compatible) → MINOR. Bug fix → PATCH. Pre-release suffix for staged rollout: `1.4.0-rc.1`.
-- [ ] **Changelog updated** — Keep a Changelog format (Added / Changed / Deprecated / Removed / Fixed / Security). Each release entry links to PRs/issues.
-- [ ] **Git tag** — Tag the release commit: `git tag v1.4.0 && git push --tags`. Annotated tags with release notes.
-- [ ] **SBOM generated** — Software Bill of Materials for the artifact (syft, trivy, or CI plugin). List all dependencies + versions. Required for supply-chain compliance.
-- [ ] **Artifact signed** — Sign containers (cosign), binaries, or npm packages. Verify signatures in the deployment step. Prevents tampered artifacts.
-- [ ] **Artifact registry** — Push to registry (GHCR, Docker Hub, ECR, npm) with immutable tags (`v1.4.0`, not just `latest`). `latest` is a convenience pointer, never a deployment target.
+- [ ] **Semantic versioning:** `MAJOR.MINOR.PATCH`. Breaking change → MAJOR bump. New feature (backward-compatible) → MINOR. Bug fix → PATCH. Pre-release suffix for staged rollout: `1.4.0-rc.1`.
+- [ ] **Changelog updated:** Keep a Changelog format (Added / Changed / Deprecated / Removed / Fixed / Security). Each release entry links to PRs/issues.
+- [ ] **Git tag:** Tag the release commit: `git tag v1.4.0 && git push --tags`. Annotated tags with release notes.
+- [ ] **SBOM generated:** Software Bill of Materials for the artifact (syft, trivy, or CI plugin). List all dependencies + versions. Required for supply-chain compliance.
+- [ ] **Artifact signed:** Sign containers (cosign), binaries, or npm packages. Verify signatures in the deployment step. Prevents tampered artifacts.
+- [ ] **Artifact registry:** Push to registry (GHCR, Docker Hub, ECR, npm) with immutable tags (`v1.4.0`, not just `latest`). `latest` is a convenience pointer, never a deployment target.
 
 ## 2. Build & CI
 
-- [ ] **Reproducible build** — Lockfile committed (package-lock, uv.lock, go.sum, Cargo.lock). Pinned base images (digest, not tag). Same commit → same artifact.
-- [ ] **CI pipeline green** — Lint → type-check → unit tests → integration tests → security scan (SAST/SCA) → build. Every commit on the release branch.
-- [ ] **Tests run against the artifact** — Not just the source tree. Build first, test the built artifact, deploy that same artifact. No "works locally" surprises.
-- [ ] **Security scans clean** — SAST (code), SCA (deps, e.g. Dependabot/Trivy), secret scan (gitleaks/trufflehog) all pass. Criticals and high CVEs resolved or explicitly waived with a ticket. Full security domain → [[Security]].
-- [ ] **CI is the only path to production** — No manual builds, no `docker build` on a laptop then push. The pipeline owns artifact creation.
+- [ ] **Reproducible build:** Lockfile committed (package-lock, uv.lock, go.sum, Cargo.lock). Pinned base images (digest, not tag). Same commit → same artifact.
+- [ ] **CI pipeline green:** Lint → type-check → unit tests → integration tests → security scan (SAST/SCA) → build. Every commit on the release branch.
+- [ ] **Tests run against the artifact:** Not just the source tree. Build first, test the built artifact, deploy that same artifact. No "works locally" surprises.
+- [ ] **Security scans clean:** SAST (code), SCA (deps, e.g. Dependabot/Trivy), secret scan (gitleaks/trufflehog) all pass. Criticals and high CVEs resolved or explicitly waived with a ticket. Full security domain → [[Security]].
+- [ ] **CI is the only path to production:** No manual builds, no `docker build` on a laptop then push. The pipeline owns artifact creation.
 
 ## 3. Environment Promotion
 
-- [ ] **Environment chain defined** — dev → staging → production (add pre-prod if regulated). Each environment mirrors production config as closely as possible.
-- [ ] **Config per environment** — 12-factor: config in env vars / secret store per environment. No hardcoded environment-specific values in code.
-- [ ] **Secrets per environment** — Staging secrets ≠ production secrets. Vault/K8s Secrets/KMS. Never reuse prod credentials in lower environments.
-- [ ] **Staging deployed first** — Every release passes staging before production. Staging has real-ish data and traffic patterns (or at least smoke-tested).
-- [ ] **Environment parity check** — Same versions of dependencies, same OS/runtime, same feature flags. "Works on staging" should mean "works in prod."
+- [ ] **Environment chain defined:** dev → staging → production (add pre-prod if regulated). Each environment mirrors production config as closely as possible.
+- [ ] **Config per environment:** 12-factor: config in env vars / secret store per environment. No hardcoded environment-specific values in code.
+- [ ] **Secrets per environment:** Staging secrets ≠ production secrets. Vault/K8s Secrets/KMS. Never reuse prod credentials in lower environments.
+- [ ] **Staging deployed first:** Every release passes staging before production. Staging has real-ish data and traffic patterns (or at least smoke-tested).
+- [ ] **Environment parity check:** Same versions of dependencies, same OS/runtime, same feature flags. "Works on staging" should mean "works in prod."
 
 ## 4. Database Migrations
 
-- [ ] **Backup before migrate** — Production DB backed up (and restore *tested*) before any migration runs. Point-in-time recovery available.
-- [ ] **Migrations versioned & ordered** — Alembic / Flyway / Liquibase / Prisma migrations in version control. Applied in order, never edited after release.
-- [ ] **Expand-contract pattern** — For breaking schema changes: Phase 1 add new column/table (old code still works) → deploy → Phase 2 backfill → Phase 3 switch code → Phase 4 drop old column. Never one-shot destructive migration.
-- [ ] **Migration run strategy** — Run migrations *before* app rollout (separate step), or app-upgrade-on-startup with locking. Never both app instances and migration racing.
-- [ ] **Downgrade path** — Every migration has a documented rollback (down migration) or a known restore-from-backup procedure. Test it in staging.
+- [ ] **Backup before migrate:** Production DB backed up (and restore *tested*) before any migration runs. Point-in-time recovery available.
+- [ ] **Migrations versioned & ordered:** Alembic / Flyway / Liquibase / Prisma migrations in version control. Applied in order, never edited after release.
+- [ ] **Expand-contract pattern:** For breaking schema changes: Phase 1 add new column/table (old code still works) → deploy → Phase 2 backfill → Phase 3 switch code → Phase 4 drop old column. Never one-shot destructive migration.
+- [ ] **Migration run strategy:** Run migrations *before* app rollout (separate step), or app-upgrade-on-startup with locking. Never both app instances and migration racing.
+- [ ] **Downgrade path:** Every migration has a documented rollback (down migration) or a known restore-from-backup procedure. Test it in staging.
 
 ## 5. Rollout Strategy
 
-- [ ] **Rollout strategy chosen** — Match the risk: feature flags (dark deploy) → canary (5-10% traffic) → blue-green (full swap with instant revert) → progressive delivery (10/25/50/100%). Don't just `kubectl rollout restart` and hope.
-- [ ] **Feature flags for risky changes** — Deploy code dark, enable in production without redeploy. Kill switch for broken features. Not the same as env vars (flags are runtime, env vars are build-time).
-- [ ] **Canary criteria defined** — Error rate, latency, SLO budget, business metric (conversion). Promotion to 100% only when canary metrics are healthy.
-- [ ] **Zero-downtime** — Rolling/blue-green/canary, not stop-then-start. Health checks gate new instances before traffic is routed to them.
-- [ ] **Traffic shifting** — Edge LB / service mesh / deployment controller handles gradual traffic. Sticky sessions avoided or justified.
+- [ ] **Rollout strategy chosen:** Match the risk: feature flags (dark deploy) → canary (5-10% traffic) → blue-green (full swap with instant revert) → progressive delivery (10/25/50/100%). Don't just `kubectl rollout restart` and hope.
+- [ ] **Feature flags for risky changes:** Deploy code dark, enable in production without redeploy. Kill switch for broken features. Not the same as env vars (flags are runtime, env vars are build-time).
+- [ ] **Canary criteria defined:** Error rate, latency, SLO budget, business metric (conversion). Promotion to 100% only when canary metrics are healthy.
+- [ ] **Zero-downtime:** Rolling/blue-green/canary, not stop-then-start. Health checks gate new instances before traffic is routed to them.
+- [ ] **Traffic shifting:** Edge LB / service mesh / deployment controller handles gradual traffic. Sticky sessions avoided or justified.
 
 ## 6. Pre-Deploy Gates
 
-- [ ] **Relevant Launch checklist ticked** — [[API Launch]] for backend changes, [[Frontend Launch]] for web changes, [[Microservice Launch]] for system-wide changes. Unticked box = not ready to release.
-- [ ] **Readiness probes** — Liveness + readiness endpoints healthy in staging. DB, cache, external dependencies reachable.
-- [ ] **Runbook available** — Deployment steps, verification steps, and rollback steps documented and current. On-call has access.
-- [ ] **Release owner named** — One person accountable for the release: monitors rollout, makes the call to continue/rollback/abort.
-- [ ] **Maintenance window considered** — High-traffic times avoided unless zero-downtime is proven. Regulated systems may require scheduled windows + approval.
+- [ ] **Relevant Launch checklist ticked:** [[API Launch]] for backend changes, [[Frontend Launch]] for web changes, [[Microservice Launch]] for system-wide changes. Unticked box = not ready to release.
+- [ ] **Readiness probes:** Liveness + readiness endpoints healthy in staging. DB, cache, external dependencies reachable.
+- [ ] **Runbook available:** Deployment steps, verification steps, and rollback steps documented and current. On-call has access.
+- [ ] **Release owner named:** One person accountable for the release: monitors rollout, makes the call to continue/rollback/abort.
+- [ ] **Maintenance window considered:** High-traffic times avoided unless zero-downtime is proven. Regulated systems may require scheduled windows + approval.
 
 ## 7. Post-Deploy Verification
 
-- [ ] **Smoke tests in production** — Critical path exercised against the deployed artifact: login, health, top flows. Automated (Playwright, curl assertions) where possible.
-- [ ] **Metrics watched** — Error rate, latency (p95/p99), request rate, resource usage compared against pre-deploy baseline. Spike = investigate, don't assume.
-- [ ] **Logs scanned** — New error patterns, stack traces, or unexpected warnings from the new version.
-- [ ] **SLOs respected** — Error budget not exhausted during rollout. If deployment violates SLO → rollback.
-- [ ] **Alerting configured** — Relevant alerts armed *before* deploy (5xx spike, high latency, circuit open, DB down), not after something breaks.
+- [ ] **Smoke tests in production:** Critical path exercised against the deployed artifact: login, health, top flows. Automated (Playwright, curl assertions) where possible.
+- [ ] **Metrics watched:** Error rate, latency (p95/p99), request rate, resource usage compared against pre-deploy baseline. Spike = investigate, don't assume.
+- [ ] **Logs scanned:** New error patterns, stack traces, or unexpected warnings from the new version.
+- [ ] **SLOs respected:** Error budget not exhausted during rollout. If deployment violates SLO → rollback.
+- [ ] **Alerting configured:** Relevant alerts armed *before* deploy (5xx spike, high latency, circuit open, DB down), not after something breaks.
 
 ## 8. Rollback
 
-- [ ] **Rollback plan exists and is *practiced*** — The team has done it at least once (game day or staging drill). First rollback under real pressure is a failure of preparation.
-- [ ] **Rollback triggers defined** — Concrete numbers: error rate > X%, latency p95 > Y ms for Z minutes, SLO burn. Not "if it feels broken."
-- [ ] **Rollback mechanism** — Revert artifact (previous immutable tag), not `git revert`. Blue-green: swap back. Canary: drop to 0%. Feature flag: disable.
-- [ ] **Data rollback considered** — If migration already ran: down-migration, restore-from-backup, or forward-fix. Know which one applies to *this* release before you start.
-- [ ] **Rollback is fast** — Target: < 15 minutes to full revert. If it takes hours, the process needs work.
+- [ ] **Rollback plan exists and is *practiced*:** The team has done it at least once (game day or staging drill). First rollback under real pressure is a failure of preparation.
+- [ ] **Rollback triggers defined:** Concrete numbers: error rate > X%, latency p95 > Y ms for Z minutes, SLO burn. Not "if it feels broken."
+- [ ] **Rollback mechanism:** Revert artifact (previous immutable tag), not `git revert`. Blue-green: swap back. Canary: drop to 0%. Feature flag: disable.
+- [ ] **Data rollback considered:** If migration already ran: down-migration, restore-from-backup, or forward-fix. Know which one applies to *this* release before you start.
+- [ ] **Rollback is fast:** Target: < 15 minutes to full revert. If it takes hours, the process needs work.
 
 ## 9. Communication & Notifications
 
-- [ ] **Release notes written** — User-facing summary of what changed, what's fixed, known issues. Not the raw changelog.
-- [ ] **Stakeholders notified** — Support team, on-call, product owner informed *before* and *after* release. "We shipped X; watch for Y."
-- [ ] **On-call notified** — The person answering the page knows a release just happened and what changed. Context for triage.
-- [ ] **Downtime communicated** — If any downtime is expected: announced in advance (status page, email, in-app notice). No silent outages.
+- [ ] **Release notes written:** User-facing summary of what changed, what's fixed, known issues. Not the raw changelog.
+- [ ] **Stakeholders notified:** Support team, on-call, product owner informed *before* and *after* release. "We shipped X; watch for Y."
+- [ ] **On-call notified:** The person answering the page knows a release just happened and what changed. Context for triage.
+- [ ] **Downtime communicated:** If any downtime is expected: announced in advance (status page, email, in-app notice). No silent outages.
 
 ## 10. Post-Release Review
 
-- [ ] **Incident? Postmortem within 5 days** — Blameless RCA: timeline, root cause, corrective actions with owners and due dates. Track actions to completion.
-- [ ] **Release metrics recorded** — Deployment time, rollback rate, change failure rate, MTTR. These are DORA metrics — trend them over time.
-- [ ] **Checklist feedback loop** — Anything that went wrong that a checklist item would have caught? Add it to the relevant checklist. Checklists evolve with experience.
-- [ ] **Artifacts retained** — Release artifacts, SBOMs, and logs retained per retention policy (regulatory minimum if applicable).
+- [ ] **Incident? Postmortem within 5 days:** Blameless RCA: timeline, root cause, corrective actions with owners and due dates. Track actions to completion.
+- [ ] **Release metrics recorded** (Deployment time, rollback rate, change failure rate, MTTR. These are DORA metrics) trend them over time.
+- [ ] **Checklist feedback loop:** Anything that went wrong that a checklist item would have caught? Add it to the relevant checklist. Checklists evolve with experience.
+- [ ] **Artifacts retained:** Release artifacts, SBOMs, and logs retained per retention policy (regulatory minimum if applicable).
 
 ---
 
@@ -105,7 +105,7 @@
 
 ## Project Tier Scoping Matrix
 
-> **How to use this table:** Pick your tier first, then focus only on the sections marked ✅ (required) or 🟡 (recommended). Skip ❌ sections entirely — they'd be over-engineering for your context.
+> **How to use this table:** Pick your tier first, then focus only on the sections marked ✅ (required) or 🟡 (recommended). Skip ❌ sections entirely; they'd be over-engineering for your context.
 >
 > **Legend:** ✅ Required · 🟡 Recommended / partial · ❌ Skip
 
@@ -118,12 +118,13 @@
 | 3 | 🏠 **Internal Tool** | Real users (employees), real traffic. No external exposure or paying customers. | 1–3 devs | Employees | Ongoing |
 | 4 | 🟢 **Small Production** | Single service/app, low traffic. Real users, maybe early revenue. | 1–2 devs | < 1K users | Ongoing |
 | 5 | 🔵 **Medium Production** | Multiple services or higher traffic. Real revenue or user base that matters. | 2–5 devs | 1K–100K users | Ongoing |
-| 6 | 🟣 **Production Grade** | Full rigor — high-stakes SaaS, enterprise product, or large user base. | 5+ devs | 100K+ users | Long-term |
+| 6 | 🟣 **Production Grade** | Full rigor ;  high-stakes SaaS, enterprise product, or large user base. | 5+ devs | 100K+ users | Long-term |
 | 7 | 🔴 **Mission-Critical / Regulated** | Healthcare (HIPAA), finance (PCI-DSS), safety systems. Failure = severe harm. Adds formal verification, regulatory audit. | 10+ devs | Varies | Decades |
 
 ### Which Tier Am I?
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Is this throwaway / exploratory?] -->|Yes| T1[🧪 Tier 1 or 2<br/>POC / Prototype]
     A -->|No| B[Are the users internal<br/>employees?]
@@ -138,13 +139,14 @@ flowchart TD
     F -->|No| T6[🟣 Tier 6<br/>Production Grade]
     F -->|Yes| T7[🔴 Tier 7<br/>Mission-Critical]
     
-    style T1 fill:#e1f5ff
-    style T3 fill:#fff4e1
-    style T4 fill:#e8f5e9
-    style T5 fill:#e3f2fd
-    style T6 fill:#f3e5f5
-    style T7 fill:#ffebee
+    style T1 fill:#00B5FF,color:#000000
+    style T3 fill:#FFBE00,color:#000000
+    style T4 fill:#1FB854,color:#000000
+    style T5 fill:#00B5FF,color:#000000
+    style T6 fill:#1FB8AB,color:#000000
+    style T7 fill:#FF5861,color:#000000
 ```
+
 
 ### Checklist Applicability by Tier
 
@@ -165,6 +167,6 @@ flowchart TD
 
 ## Sources
 
-- Complements [[API Launch]], [[Frontend Launch]], [[Microservice Launch]] — those are the *readiness* gates, this is the *process*.
-- [[Security]] — the *product safety* checklist (this file only gates pipeline security).
+- Complements [[API Launch]], [[Frontend Launch]], [[Microservice Launch]]: those are the *readiness* gates, this is the *process*.
+- [[Security]]: the *product safety* checklist (this file only gates pipeline security).
 - DORA metrics: deployment frequency, lead time, change failure rate, MTTR.
