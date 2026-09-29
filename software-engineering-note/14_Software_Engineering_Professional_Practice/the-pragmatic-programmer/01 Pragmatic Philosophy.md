@@ -8,7 +8,7 @@ tags:
 
 # 01 A Pragmatic Philosophy (Tips 1–10)
 
-The foundation. Before tools, before techniques — the mindset of a Pragmatic Programmer.
+The foundation. Before tools, before techniques, the mindset of a Pragmatic Programmer.
 
 ---
 
@@ -16,7 +16,7 @@ The foundation. Before tools, before techniques — the mindset of a Pragmatic P
 
 > Why spend your life developing software unless you care about doing it well?
 
-You're not just churning out code. You're practicing a craft. Craftsmen care about the quality of their work — not because someone's watching, but because it matters to them.
+You're not just churning out code. You're practicing a craft. Craftsmen care about the quality of their work, not because someone's watching, but because it matters to them.
 
 ---
 
@@ -28,11 +28,11 @@ Don't just follow the pattern because "that's how we've always done it." Questio
 
 ---
 
-## Tip 3: The Cat Ate My Source Code — Take Responsibility
+## Tip 3: The Cat Ate My Source Code: Take Responsibility
 
 > Provide options, don't make lame excuses.
 
-When things go wrong, be honest. Instead of "It's not my fault — the library was broken," say "The library failed. Here are three things we can do: fix the library, find an alternative, or rewrite that component. Which do you prefer?"
+When things go wrong, be honest. Instead of "It's not my fault, the library was broken," say "The library failed. Here are three things we can do: fix the library, find an alternative, or rewrite that component. Which do you prefer?"
 
 | Lame Excuse | Professional Response |
 |------------|---------------------|
@@ -48,11 +48,11 @@ When things go wrong, be honest. Instead of "It's not my fault — the library w
 
 > Don't leave "broken windows" (bad designs, wrong decisions, poor code) unrepaired. Fix each one as soon as it's discovered.
 
-One broken window, left unrepaired, signals that nobody cares — and leads to more broken windows. A clean, well-maintained system signals that quality matters — and people treat it accordingly.
+One broken window, left unrepaired, signals that nobody cares (and leads to more broken windows. A clean, well-maintained system signals that quality matters) and people treat it accordingly.
 
 ---
 
-## Tip 5: Stone Soup and Boiled Frogs — Be a Catalyst for Change
+## Tip 5: Stone Soup and Boiled Frogs: Be a Catalyst for Change
 
 ### Stone Soup
 

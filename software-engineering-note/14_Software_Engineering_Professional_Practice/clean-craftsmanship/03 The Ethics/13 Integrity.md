@@ -9,7 +9,7 @@ tags:
 
 # 13 Integrity
 
-Integrity is doing the right thing when no one is watching. For a programmer, it means maintaining quality, consistency, and discipline — even when cutting corners would be easier.
+Integrity is doing the right thing when no one is watching. For a programmer, it means maintaining quality, consistency, and discipline, even when cutting corners would be easier.
 
 ---
 
@@ -17,7 +17,7 @@ Integrity is doing the right thing when no one is watching. For a programmer, it
 
 > Work in small, verifiable steps. Never let a day pass without proving your code works.
 
-The history of source code control tells the story: from tapes to SCCS to Subversion to Git. Each step made it easier to work in small cycles. Git's cheap branching enabled `test && commit || revert` — the ultimate small cycle.
+The history of source code control tells the story: from tapes to SCCS to Subversion to Git. Each step made it easier to work in small cycles. Git's cheap branching enabled `test && commit || revert`, the ultimate small cycle.
 
 ---
 
@@ -25,7 +25,7 @@ The history of source code control tells the story: from tapes to SCCS to Subver
 
 | Cycle Length | What It Enables |
 |-------------|----------------|
-| Minutes | Continuous Build — tests run on every commit |
+| Minutes | Continuous Build ;  tests run on every commit |
 | Hours | Feature branches merged to mainline |
 | Days | Sprints, iterations |
 | Never | Branches that live for weeks = merge hell |
@@ -54,7 +54,7 @@ Once discipline slips and the build stays broken, it never gets fixed. Broken bu
 |------|--------------|
 | **Test Coverage** | More tests. Better tests. Mutation testing to verify test quality. |
 | **Cleaning** | Refactor continuously. Boy Scout Rule. Leave code better than you found it. |
-| **Creations** | Write new code that sets a higher standard. Don't match the mess — raise the bar. |
+| **Creations** | Write new code that sets a higher standard. Don't match the mess ;  raise the bar. |
 
 ---
 
@@ -62,7 +62,7 @@ Once discipline slips and the build stays broken, it never gets fixed. Broken bu
 
 > The meaning of names, functions, and modules should be stable. A function called `calculateTotal` should calculate a total. Not also send an email. Not also update a database.
 
-Semantic stability is about being honest in your code. A function does what its name says — nothing more, nothing less.
+Semantic stability is about being honest in your code. A function does what its name says, nothing more, nothing less.
 
 ---
 

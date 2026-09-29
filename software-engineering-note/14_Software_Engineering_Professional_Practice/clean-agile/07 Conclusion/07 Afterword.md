@@ -9,7 +9,7 @@ tags:
 
 # 07 Afterword (by Eric Crichlow)
 
-Eric Crichlow, a mobile developer, reflects on 11 years of Agile experience — from skepticism to appreciation. His voice represents the working developer: not a consultant, not a founder, just someone trying to write good code.
+Eric Crichlow, a mobile developer, reflects on 11 years of Agile experience, from skepticism to appreciation. His voice represents the working developer: not a consultant, not a founder, just someone trying to write good code.
 
 ---
 
@@ -33,9 +33,9 @@ Before Agile: verbally given features, a deadline, and turned loose. Freedom to 
 |---------|---------------|
 | **The founders were humanized** | Not ultra-elite architects handing down canon. Experienced developers tired of failure-prone environments who wanted to make their jobs less stressful. |
 | **Management uses metrics developers don't see** | In some orgs, developers have no idea the velocity and burn-down discussions even happen. |
-| **The gap between ideal and reality** | The Bill of Rights is an ideal — but most developers are grunts, cogs in software factories, with little leverage. |
+| **The gap between ideal and reality** | The Bill of Rights is an ideal ;  but most developers are grunts, cogs in software factories, with little leverage. |
 
-> Had the Snowbird meeting taken place 15 years later, it could have been developers I've personally worked with — and myself — who convened that meeting.
+> Had the Snowbird meeting taken place 15 years later, it could have been developers I've personally worked with (and myself) who convened that meeting.
 
 ---
 
@@ -55,7 +55,7 @@ Then:
 
 1. Skim the book again with this broader perspective
 2. Encourage another developer to read it
-3. **Give it to someone who isn't a developer** — someone on the business side. They've never given much thought to the Bill of Rights.
+3. **Give it to someone who isn't a developer:** someone on the business side. They've never given much thought to the Bill of Rights.
 
 > Your life stands to be much more pleasant if you get them to understand that these rights are just as integral to Agile as the metrics they pull out of it.
 
@@ -63,7 +63,7 @@ Then:
 
 ## The Next Wave
 
-> I fully expect the next sea change in methodology to emerge from a digital gathering of young up-and-comers. Social media communities are connecting developers beyond CS degrees and 9-to-5 jobs. They're learning, teaching, inspiring — and the Next Big Thing will come from them.
+> I fully expect the next sea change in methodology to emerge from a digital gathering of young up-and-comers. Social media communities are connecting developers beyond CS degrees and 9-to-5 jobs. They're learning, teaching, inspiring, and the Next Big Thing will come from them.
 
 ---
 

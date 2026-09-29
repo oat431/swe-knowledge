@@ -9,7 +9,7 @@ tags:
 
 # 03 User Stories & INVEST
 
-User stories are not detailed feature specs. They are **reminders** of features — placeholders for conversations between business and development.
+User stories are not detailed feature specs. They are **reminders** of features, placeholders for conversations between business and development.
 
 ---
 
@@ -35,7 +35,7 @@ Despite modern tools, physical index cards have value:
 
 ---
 
-## INVEST — Six Qualities of Good Stories
+## INVEST: Six Qualities of Good Stories
 
 | Letter | Quality | What It Means |
 |:------:|---------|--------------|
@@ -71,7 +71,7 @@ Write story (Iteration Zero) → Estimate (IPM) → Prioritize (Four-Quadrant)
 |-------|----------|
 | **Trivial (0 points)** | Staple cards together. Multiple zeros add up. |
 | **Too big (∞)** | Split into smaller stories that still comply with INVEST. |
-| **Unclear (?)** | Create a **spike** — a meta-story that does research. Original story depends on spike. |
+| **Unclear (?)** | Create a **spike** ;  a meta-story that does research. Original story depends on spike. |
 
 ---
 

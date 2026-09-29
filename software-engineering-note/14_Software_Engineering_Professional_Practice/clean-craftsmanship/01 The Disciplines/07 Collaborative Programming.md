@@ -9,7 +9,7 @@ tags:
 
 # 07 Collaborative Programming
 
-Programming is not a solo activity. Collaboration — through pairing, mobbing, and code review — distributes knowledge, reduces errors, and strengthens the team.
+Programming is not a solo activity. Collaboration (through pairing, mobbing, and code review) distributes knowledge, reduces errors, and strengthens the team.
 
 ---
 
@@ -55,7 +55,7 @@ The whole team on one problem. One driver, everyone else navigates. Extreme coll
 
 Every line of code written in a pair or mob is reviewed as it's written. No separate review process needed. No pull requests sitting for days. No context-switching to review someone else's code.
 
-> The most effective code review is the one that happens at the keyboard — not in a pull request 3 days later.
+> The most effective code review is the one that happens at the keyboard, not in a pull request 3 days later.
 
 ---
 

@@ -44,7 +44,7 @@ Story points are **relative, not absolute.** They do not map to units of time.
 
 1. Pick a **Golden Story** of average size. Assign, say, 3 points.
 2. Compare every other story against the Golden Story.
-3. Different developers would take different amounts of time — but thanks to the **Law of Large Numbers**, those differences even out over many sprints.
+3. Different developers would take different amounts of time: but thanks to the **Law of Large Numbers**, those differences even out over many sprints.
 
 ### Iteration Planning Meeting (IPM)
 
@@ -53,7 +53,7 @@ Story points are **relative, not absolute.** They do not map to units of time.
 - **Programmers estimate velocity** (how many points they think they can complete)
 - **Stakeholders choose stories** to fit within that velocity
 
-> ⚠️ Velocity estimate is **not a commitment.** It's a rough guess — way too high for the first iteration. That's expected.
+> ⚠️ Velocity estimate is **not a commitment.** It's a rough guess, way too high for the first iteration. That's expected.
 
 ---
 
@@ -90,9 +90,9 @@ Fibonacci cards: 1, 2, 3, 5, 8, ∞ (too big), ? (unclear), 0 (trivial).
 
 | Card | Meaning |
 |:----:|---------|
-| 0 | Trivial — staple multiple 0s together |
-| ∞ | Too big — split into smaller INVEST-compliant stories |
-| ? | Unclear — create a **spike** (thin slice through system) for research |
+| 0 | Trivial ;  staple multiple 0s together |
+| ∞ | Too big ;  split into smaller INVEST-compliant stories |
+| ? | Unclear ;  create a **spike** (thin slice through system) for research |
 
 ---
 
@@ -108,7 +108,7 @@ Fibonacci cards: 1, 2, 3, 5, 8, ∞ (too big), ? (unclear), 0 (trivial).
 
 ### Release Often
 
-The goal is **Continuous Delivery** — release to production after every change. Modern tools (Git, CI) make this possible. Old organizations must change culturally to overcome inertia.
+The goal is **Continuous Delivery**; release to production after every change. Modern tools (Git, CI) make this possible. Old organizations must change culturally to overcome inertia.
 
 ---
 

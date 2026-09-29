@@ -8,7 +8,7 @@ tags:
 
 # 03 The Basic Tools (Tips 20–29)
 
-A craftsman masters their tools. These are the Pragmatic Programmer's essential toolkit — not IDEs, not frameworks, but the fundamentals.
+A craftsman masters their tools. These are the Pragmatic Programmer's essential toolkit, not IDEs, not frameworks, but the fundamentals.
 
 ---
 
@@ -23,7 +23,7 @@ A craftsman masters their tools. These are the Pragmatic Programmer's essential 
 | Searchable with grep | Requires custom tools |
 | Any editor works | Vendor-locked |
 
-Store documentation, configuration, build scripts, and design notes in plain text. Markdown, YAML, TOML, JSON, XML — all plain text.
+Store documentation, configuration, build scripts, and design notes in plain text. Markdown, YAML, TOML, JSON, XML, all plain text.
 
 ---
 
@@ -49,7 +49,7 @@ grep -r "FIXME" src/ | wc -l
 
 > Pick one editor. Master it. Use it for everything.
 
-Your editor is your primary interface to code. Knowing it cold — every shortcut, every extension, every configuration — pays compound interest. Whether it's VS Code, Vim, Emacs, or IntelliJ: **pick one and go deep.**
+Your editor is your primary interface to code. Knowing it cold (every shortcut, every extension, every configuration) pays compound interest. Whether it's VS Code, Vim, Emacs, or IntelliJ: **pick one and go deep.**
 
 ---
 
@@ -80,11 +80,11 @@ Version control gives you:
 
 ### The "select" Isn't Broken Rule
 
-> When you're absolutely certain the bug is in the OS, the compiler, or the library — it's probably in your code. Check your assumptions before blaming the tools.
+> When you're absolutely certain the bug is in the OS, the compiler, or the library; it's probably in your code. Check your assumptions before blaming the tools.
 
 ---
 
-## Tip 26: Don't Assume It — Prove It
+## Tip 26: Don't Assume It: Prove It
 
 > When debugging, don't just "think" you know what's happening. Prove it with data.
 
@@ -96,7 +96,7 @@ Version control gives you:
 
 ## Tip 27: Learn a Text Manipulation Language
 
-> awk, sed, Perl, Python, Ruby — pick one. Master text manipulation.
+> awk, sed, Perl, Python, Ruby; pick one. Master text manipulation.
 
 The ability to slice, dice, transform, and generate text is the programmer's superpower. A 10-line Python script can do what would take hours manually.
 
@@ -112,7 +112,7 @@ The ability to slice, dice, transform, and generate text is the programmer's sup
 | Example: scaffolding tools | Example: ORM entity generation from DB schema |
 | Output checked into version control | Output is build artifact |
 
-When you find yourself writing the same boilerplate for the 10th time — generate it.
+When you find yourself writing the same boilerplate for the 10th time; generate it.
 
 ---
 

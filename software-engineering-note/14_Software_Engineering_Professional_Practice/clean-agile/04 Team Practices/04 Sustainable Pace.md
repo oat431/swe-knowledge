@@ -9,7 +9,7 @@ tags:
 
 # 04 Sustainable Pace
 
-A software project is a **marathon**, not a sprint (despite Scrum's terminology). Working long hours isn't dedication — it's a consequence of bad planning.
+A software project is a **marathon**, not a sprint (despite Scrum's terminology). Working long hours isn't dedication; it's a consequence of bad planning.
 
 ---
 
@@ -19,13 +19,13 @@ A software project is a **marathon**, not a sprint (despite Scrum's terminology)
 |------------|------------|
 | "I'm valuable and needed" | Burnout with long-term damage to programmer and employer |
 | "We saved the project with overtime" | The project was badly planned from the start |
-| "Working late shows dedication" | It shows manipulation — developers coerced into unrealistic deadlines |
+| "Working late shows dedication" | It shows manipulation ;  developers coerced into unrealistic deadlines |
 
 ### Why Late-Night Work is Dangerous
 
 > Judgment is impeded when working late at night after a full day. Grave mistakes and bad decisions are made at that point.
 
-The code written at 2am is the code you'll be debugging at 10am — if you even remember writing it.
+The code written at 2am is the code you'll be debugging at 10am, if you even remember writing it.
 
 ---
 

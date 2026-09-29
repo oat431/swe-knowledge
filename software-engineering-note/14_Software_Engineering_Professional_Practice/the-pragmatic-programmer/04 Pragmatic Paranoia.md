@@ -8,7 +8,7 @@ tags:
 
 # 04 Pragmatic Paranoia (Tips 30–35)
 
-You can't write perfect software. Acknowledge that — and write code that survives when things go wrong.
+You can't write perfect software. Acknowledge that, and write code that survives when things go wrong.
 
 ---
 
@@ -49,7 +49,7 @@ public void withdraw(BigDecimal amount) {
 
 ---
 
-## Tip 32: Dead Programs Tell No Lies — Crash Early
+## Tip 32: Dead Programs Tell No Lies: Crash Early
 
 > A dead program is better than a crippled one.
 
@@ -70,13 +70,13 @@ if (account == null) {
 
 ---
 
-## Tip 33: Assertive Programming — If It Can't Happen, Use Assertions
+## Tip 33: Assertive Programming: If It Can't Happen, Use Assertions
 
 > Assertions prove that "impossible" things stay impossible.
 
 Assertions are different from error handling:
-- **Errors**: expected problems (network down, invalid input) — handle with exceptions
-- **Assertions**: things that should NEVER happen — crash if they do
+- **Errors:** expected problems (network down, invalid input): handle with exceptions
+- **Assertions:** things that should NEVER happen: crash if they do
 
 ```java
 // Assertion: this should NEVER happen
@@ -112,11 +112,11 @@ if (database.contains(key)) {
 }
 ```
 
-Exceptions should be reserved for truly unexpected situations — not for "file not found" when the file is user-specified and might legitimately not exist.
+Exceptions should be reserved for truly unexpected situations, not for "file not found" when the file is user-specified and might legitimately not exist.
 
 ---
 
-## Tip 35: How to Balance Resources — Finish What You Start
+## Tip 35: How to Balance Resources: Finish What You Start
 
 > The function that allocates a resource is responsible for deallocating it.
 

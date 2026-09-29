@@ -9,7 +9,7 @@ tags:
 
 # 01 History & The Agile Manifesto
 
-Agile wasn't invented in 2001. It was a reaction to Waterfall's failures — and a return to how software was built before "Scientific Management" took over.
+Agile wasn't invented in 2001. It was a reaction to Waterfall's failures, and a return to how software was built before "Scientific Management" took over.
 
 ---
 
@@ -23,7 +23,7 @@ Waterfall dominated from the 1970s for nearly 30 years. Three equal phases: anal
 | Design | Sketch solution, refine plan | No tangible output. "Done when time's up." |
 | Implementation | Build working software | **Schedule slips only detected here.** Too late. |
 
-The result: Death Marches. Overtime. "Solutions" that involved doing *more* analysis and design next time — Runaway Process Inflation.
+The result: Death Marches. Overtime. "Solutions" that involved doing *more* analysis and design next time; runaway Process Inflation.
 
 > Ironically, Winston Royce's 1970 paper proposed Waterfall as a straw man to be proven *unsuitable*. The industry adopted it anyway.
 
@@ -31,18 +31,18 @@ The result: Death Marches. Overtime. "Solutions" that involved doing *more* anal
 
 ## Pre-Agile Roots
 
-Before Waterfall, programmers worked with small, intermediate goals and measured progress — the essence of Agile. Scientific Management (Taylorism) with its top-down planning conflicted with this.
+Before Waterfall, programmers worked with small, intermediate goals and measured progress, the essence of Agile. Scientific Management (Taylorism) with its top-down planning conflicted with this.
 
 In the mid-1990s, challengers emerged:
-- Grady Booch — Object-Oriented Design
+- Grady Booch: Object-Oriented Design
 - Design Patterns movement
 - Scrum paper (Schwaber, Sutherland)
-- Kent Beck — Extreme Programming (XP), TDD
-- Martin Fowler — Refactoring
+- Kent Beck: Extreme Programming (XP), TDD
+- Martin Fowler: Refactoring
 
 ---
 
-## Snowbird, 2001 — The Manifesto
+## Snowbird, 2001: The Manifesto
 
 17 proponents met in Utah. Two days. Broad consensus:
 
@@ -69,5 +69,5 @@ Agile is not a process. It's not Scrum. It's not SAFe. It's a set of **values, r
 
 ## Sources
 
-- Agile Manifesto — https://agilemanifesto.org/
+- Agile Manifesto: https://agilemanifesto.org/
 - Martin, Robert C. *Clean Agile*, Chapter 1.

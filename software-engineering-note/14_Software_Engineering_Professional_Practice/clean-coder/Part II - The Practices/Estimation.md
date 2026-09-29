@@ -14,7 +14,7 @@ tags:
 
 ## Core Principle
 
-> **An estimate is not a number — it is a probability distribution. Professionals draw a clear, non-negotiable line between estimates (guesses, no promise implied) and commitments (hard promises you must keep at any cost). The root of all estimation dysfunction is that business treats estimates as commitments while developers treat them as guesses.**
+> **An estimate is not a number; it is a probability distribution. Professionals draw a clear, non-negotiable line between estimates (guesses, no promise implied) and commitments (hard promises you must keep at any cost). The root of all estimation dysfunction is that business treats estimates as commitments while developers treat them as guesses.**
 
 ---
 
@@ -22,26 +22,26 @@ tags:
 
 ### 1. Never Confuse an Estimate with a Commitment
 
-A **commitment** is something you *must* achieve. If you commit to a date, you honor it — 12-hour days, weekends, skipped vacations if necessary. Professionals do not make commitments unless they *know* they can achieve them. Missing a commitment is an act of dishonesty only slightly less onerous than an overt lie.
+A **commitment** is something you *must* achieve. If you commit to a date, you honor it; 12-hour days, weekends, skipped vacations if necessary. Professionals do not make commitments unless they *know* they can achieve them. Missing a commitment is an act of dishonesty only slightly less onerous than an overt lie.
 
 An **estimate** is a guess. No promise is made. Missing an estimate is not dishonorable. The reason we estimate is because we don't know how long something will take.
 
-**The critical distinction:** When Peter says "three days," Mike hears a single number. But in Peter's mind, three is merely the *most likely* outcome. There is a whole probability distribution around it — four days, five days, possibly ten or eleven if everything goes wrong.
+**The critical distinction:** When Peter says "three days," Mike hears a single number. But in Peter's mind, three is merely the *most likely* outcome. There is a whole probability distribution around it; four days, five days, possibly ten or eleven if everything goes wrong.
 
 ### 2. Communicate the Full Distribution, Not a Single Number
 
-Giving a single number like "three days" hides the uncertainty. The professional's job is to surface the probability distribution so managers can make informed plans. Ask: "How likely is that estimate?" Then quantify it — 50%? 60%? What's the 95% confidence range?
+Giving a single number like "three days" hides the uncertainty. The professional's job is to surface the probability distribution so managers can make informed plans. Ask: "How likely is that estimate?" Then quantify it; 50%? 60%? What's the 95% confidence range?
 
-### 3. Reject Implied Commitments — Especially "Try"
+### 3. Reject Implied Commitments: Especially "Try"
 
-When a manager says, "Can you *try* to make it no more than six days?", the word "try" is a loaded trap. Agreeing to "try" is agreeing to *succeed* — it implies overtime, weekends, and skipped vacations. If you don't do those things, you can be accused of "not trying hard enough." Professionals draw a sharp line: they do not accept implied commitments and do not use "try" as a substitute for certainty.
+When a manager says, "Can you *try* to make it no more than six days?", the word "try" is a loaded trap. Agreeing to "try" is agreeing to *succeed*; it implies overtime, weekends, and skipped vacations. If you don't do those things, you can be accused of "not trying hard enough." Professionals draw a sharp line: they do not accept implied commitments and do not use "try" as a substitute for certainty.
 
 ### 4. Use Trivariate Estimates for Every Task
 
 Never estimate with one number. Always provide three:
 
 - **O (Optimistic):** Wildly optimistic. Everything goes perfectly. Should have <1% chance of occurrence.
-- **N (Nominal):** The most likely duration — the highest bar on the probability chart.
+- **N (Nominal):** The most likely duration: the highest bar on the probability chart.
 - **P (Pessimistic):** Wildly pessimistic. Excludes only hurricanes, nuclear war, and stray black holes. Should have <1% chance of success.
 
 ### 5. Model Uncertainty with the PERT Formulas
@@ -51,7 +51,7 @@ Given O, N, and P, compute:
 - **Expected duration (μ):** μ = (O + 4N + P) / 6
 - **Standard deviation (σ):** σ = (P − O) / 6
 
-μ is the expected completion time. σ measures uncertainty — a large σ means high variability. Together they tell the manager what range to plan for (μ ± 1σ is likely; μ ± 2σ is plausible).
+μ is the expected completion time. σ measures uncertainty, a large σ means high variability. Together they tell the manager what range to plan for (μ ± 1σ is likely; μ ± 2σ is plausible).
 
 ### 6. Combine Sequence Estimates Properly
 
@@ -60,7 +60,7 @@ For a sequence of tasks, sums don't work the naive way:
 - **μ_sequence = Σ μ_task** (simple sum of expected durations)
 - **σ_sequence = √(Σ σ_task²)** (square root of the sum of squares)
 
-Uncertainty compounds. Nominal estimates might add up to 10 days, but the PERT calculation can push the expected duration to 14 days with a 1σ range of 11–17 and a 2σ range of 8–20. This is realistic — projects routinely take 3–5× longer than optimistic guesses.
+Uncertainty compounds. Nominal estimates might add up to 10 days, but the PERT calculation can push the expected duration to 14 days with a 1σ range of 11–17 and a 2σ range of 8–20. This is realistic, projects routinely take 3–5× longer than optimistic guesses.
 
 ### 7. Estimate Collaboratively, Never Alone
 
@@ -68,7 +68,7 @@ The most important estimation resource is the people around you. They see things
 
 ### 8. Break Large Tasks into Smaller Ones (Law of Large Numbers)
 
-If you break a large task into many smaller tasks and estimate each independently, the sum of the small estimates will be more accurate than a single estimate of the large task. Errors in small tasks tend to integrate out (cancel each other). Caveat: errors skew toward underestimation, so cancellation is imperfect — but breaking tasks down still forces deeper understanding and uncovers hidden surprises.
+If you break a large task into many smaller tasks and estimate each independently, the sum of the small estimates will be more accurate than a single estimate of the large task. Errors in small tasks tend to integrate out (cancel each other). Caveat: errors skew toward underestimation, so cancellation is imperfect, but breaking tasks down still forces deeper understanding and uncovers hidden surprises.
 
 ---
 
@@ -91,16 +91,16 @@ If you break a large task into many smaller tasks and estimate each independentl
 ## Summary Checklist
 
 - [ ] Always distinguish between an estimate (guess, no promise) and a commitment (hard promise you must keep)
-- [ ] Never give a single-number estimate — communicate the probability distribution
+- [ ] Never give a single-number estimate: communicate the probability distribution
 - [ ] Refuse to make commitments when you aren't certain you can achieve them
-- [ ] Never agree to "try" — it creates an implied commitment and sets you up for failure
+- [ ] Never agree to "try": it creates an implied commitment and sets you up for failure
 - [ ] Use trivariate estimation: provide Optimistic (O), Nominal (N), and Pessimistic (P) for every task
 - [ ] Calculate expected duration: μ = (O + 4N + P) / 6
 - [ ] Calculate uncertainty: σ = (P − O) / 6
 - [ ] For sequential tasks, sum the μs and take √(Σ σ²) for combined uncertainty
-- [ ] Estimate collaboratively — never estimate alone; use Wideband Delphi, Planning Poker, or Flying Fingers
+- [ ] Estimate collaboratively: never estimate alone; use Wideband Delphi, Planning Poker, or Flying Fingers
 - [ ] Reveal estimates simultaneously to prevent anchoring bias
-- [ ] Break large tasks into small ones — the Law of Large Numbers improves accuracy
+- [ ] Break large tasks into small ones: the Law of Large Numbers improves accuracy
 - [ ] Present managers with ranges (μ ± σ), not single numbers
 
 ---

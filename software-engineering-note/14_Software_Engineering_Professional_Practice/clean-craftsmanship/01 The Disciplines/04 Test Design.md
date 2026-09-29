@@ -9,7 +9,7 @@ tags:
 
 # 04 Test Design
 
-How to test the hard stuff: databases, GUIs, and fragile tests. Plus the Transformation Priority Premise — a way to make TDD's small steps systematic.
+How to test the hard stuff: databases, GUIs, and fragile tests. Plus the Transformation Priority Premise, a way to make TDD's small steps systematic.
 
 ---
 
@@ -41,17 +41,17 @@ GUIs are the hardest thing to test. They're visual, event-driven, and framework-
 | **Humble Object** | Extract all logic from the GUI into a plain object. Test that object. The GUI becomes so humble it barely needs testing. |
 | **Presenters** | The View sends events to the Presenter. The Presenter updates the ViewModel. Test the Presenter. |
 | **Self-Shunt** | The test itself implements the View interface. Captures what the Presenter sends. |
-| **Test-Specific Subclass** | Subclass the GUI component to override painting methods — test the logic, not the pixels. |
+| **Test-Specific Subclass** | Subclass the GUI component to override painting methods ;  test the logic, not the pixels. |
 
 ---
 
 ## The Fragile Test Problem
 
-> A fragile test breaks when you refactor — even though the behavior hasn't changed.
+> A fragile test breaks when you refactor, even though the behavior hasn't changed.
 
 ### The Cause: One-to-One Correspondence
 
-When every class has exactly one test class, every method has exactly one test — tests become mirrors of structure, not behavior. Refactor the structure → tests break.
+When every class has exactly one test class, every method has exactly one test, tests become mirrors of structure, not behavior. Refactor the structure → tests break.
 
 ### The Fix: Break the Correspondence
 
@@ -86,7 +86,7 @@ When doing TDD, transformations have a priority order. Prefer simpler transforma
 
 ### Fibonacci Example
 
-Generate Fibonacci numbers following transformation priority. Start with `fib(0) → 0`, `fib(1) → 1`. Apply transformations in order. The algorithm emerges naturally from the tests — no flash of insight required.
+Generate Fibonacci numbers following transformation priority. Start with `fib(0) → 0`, `fib(1) → 1`. Apply transformations in order. The algorithm emerges naturally from the tests; no flash of insight required.
 
 ---
 

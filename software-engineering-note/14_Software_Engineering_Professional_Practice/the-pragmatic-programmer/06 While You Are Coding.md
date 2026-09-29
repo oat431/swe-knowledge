@@ -8,7 +8,7 @@ tags:
 
 # 06 While You Are Coding (Tips 44–49)
 
-The act of typing — done right or wrong. This chapter covers what to think about while your fingers are on the keyboard.
+The act of typing, done right or wrong. This chapter covers what to think about while your fingers are on the keyboard.
 
 ---
 
@@ -16,7 +16,7 @@ The act of typing — done right or wrong. This chapter covers what to think abo
 
 > Rely only on reliable things. Beware of accidental success.
 
-Programming by coincidence: you write code that seems to work, but you don't know WHY. You tested it once and it passed. You copy-pasted from Stack Overflow without understanding. You changed a variable and the bug disappeared — but you don't know which change fixed it.
+Programming by coincidence: you write code that seems to work, but you don't know WHY. You tested it once and it passed. You copy-pasted from Stack Overflow without understanding. You changed a variable and the bug disappeared, but you don't know which change fixed it.
 
 | Coincidental | Deliberate |
 |-------------|-----------|
@@ -28,7 +28,7 @@ Programming by coincidence: you write code that seems to work, but you don't kno
 - **Always know what your code is doing.** If you don't, stop and learn.
 - **Plan before you code.** Not waterfall-level. Just think.
 - **Test your assumptions.** "I think sorting happens here." Prove it.
-- **Document your reasoning.** Not for others — for your future self.
+- **Document your reasoning.** Not for others: for your future self.
 
 ---
 
@@ -57,17 +57,17 @@ Programming by coincidence: you write code that seems to work, but you don't kno
 
 ---
 
-## Tip 46: Refactoring — Early and Often
+## Tip 46: Refactoring: Early and Often
 
 > Refactoring is not a phase. It's a continuous activity.
 
-Like weeding a garden: you don't schedule "weeding week." You pull weeds every time you see them. Code works the same way — fix small problems before they grow.
+Like weeding a garden: you don't schedule "weeding week." You pull weeds every time you see them. Code works the same way; fix small problems before they grow.
 
 ### When to Refactor
-- **Duplication** — you're about to copy-paste
-- **Non-orthogonal design** — you notice coupling that shouldn't exist
-- **Outdated knowledge** — requirements changed, code didn't
-- **Performance** — after profiling, not before
+- **Duplication:** you're about to copy-paste
+- **Non-orthogonal design:** you notice coupling that shouldn't exist
+- **Outdated knowledge:** requirements changed, code didn't
+- **Performance:** after profiling, not before
 
 ### The Safety Net
 Refactoring without tests is not refactoring. It's hacking. Tests give you the confidence to improve code fearlessly.
@@ -88,7 +88,7 @@ Refactoring without tests is not refactoring. It's hacking. Tests give you the c
 
 ### The Test Harness
 
-Build a test harness — a framework that lets you exercise your code automatically. Unit tests, integration tests, end-to-end tests. The harness should run with a single command. It should complete in minutes. It should give you a clear pass/fail.
+Build a test harness, a framework that lets you exercise your code automatically. Unit tests, integration tests, end-to-end tests. The harness should run with a single command. It should complete in minutes. It should give you a clear pass/fail.
 
 ---
 
@@ -96,7 +96,7 @@ Build a test harness — a framework that lets you exercise your code automatica
 
 > Generated code is still YOUR code. You're responsible for it.
 
-IDE wizards, code generators, AI assistants — they produce code. If you don't understand what that code does, don't use it. When it breaks (and it will break), YOU need to fix it.
+IDE wizards, code generators, AI assistants; they produce code. If you don't understand what that code does, don't use it. When it breaks (and it will break), YOU need to fix it.
 
 | Using Wizards Well | Using Wizards Badly |
 |-------------------|-------------------|

@@ -8,11 +8,11 @@ tags:
 
 # 02 A Pragmatic Approach (Tips 11–19)
 
-How to design systems that don't break when you look at them wrong. DRY, orthogonality, reversibility — the principles that make code maintainable.
+How to design systems that don't break when you look at them wrong. DRY, orthogonality, reversibility, the principles that make code maintainable.
 
 ---
 
-## Tip 11: DRY — Don't Repeat Yourself
+## Tip 11: DRY: Don't Repeat Yourself
 
 > Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.
 
@@ -33,7 +33,7 @@ DRY is not just about code duplication. It's about **knowledge duplication.**
 
 > Two components are orthogonal if a change in one doesn't affect the other.
 
-Orthogonal systems are easier to develop, test, and maintain. Like the X and Y axes — move along X, Y stays the same.
+Orthogonal systems are easier to develop, test, and maintain. Like the X and Y axes; move along X, Y stays the same.
 
 | Non-Orthogonal | Orthogonal |
 |---------------|-----------|
@@ -49,7 +49,7 @@ Orthogonal systems are easier to develop, test, and maintain. Like the X and Y a
 
 ---
 
-## Tip 14: Reversibility — There Are No Final Decisions
+## Tip 14: Reversibility: There Are No Final Decisions
 
 > Always leave yourself an escape hatch.
 
@@ -115,7 +115,7 @@ if customer.active? && customer.has_minimum_balance?(100)
 1. Understand what's being asked
 2. Build a model of the system
 3. Break the model into components
-4. Give each component a value — as a **range** (best/worst case)
+4. Give each component a value: as a **range** (best/worst case)
 5. Calculate the delivery range
 
 ### What to Say
@@ -124,7 +124,7 @@ if customer.active? && customer.has_minimum_balance?(100)
 |----------|-----|
 | "It'll take 2 weeks." | "Based on what I know, between 10 and 20 days." |
 | "I'll be done by Friday." | "I'll know more by Thursday. I'll update you then." |
-| "Easy — a few days." | "Let me spend a day investigating and get back to you." |
+| "Easy ;  a few days." | "Let me spend a day investigating and get back to you." |
 
 ---
 

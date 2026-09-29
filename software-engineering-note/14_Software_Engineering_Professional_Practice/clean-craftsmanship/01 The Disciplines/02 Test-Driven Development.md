@@ -9,15 +9,15 @@ tags:
 
 # 02 Test-Driven Development
 
-TDD is the foundational discipline. Without it, the rest crumbles. This chapter covers the basics — what every craftsman must know cold.
+TDD is the foundational discipline. Without it, the rest crumbles. This chapter covers the basics; what every craftsman must know cold.
 
 ---
 
-## Software — The Core Insight
+## Software: The Core Insight
 
 > Software is a compound word. "Soft" means easy to change. "Ware" means product. Software is a product that is easy to change.
 
-The whole point of software is that it can be changed. If it can't be changed easily, it's not software — it's just hardware in disguise.
+The whole point of software is that it can be changed. If it can't be changed easily, it's not software; it's just hardware in disguise.
 
 ---
 
@@ -39,7 +39,7 @@ This prevents the temptation to "just add this one more feature real quick" whil
 
 ---
 
-## The Basics — Step by Step
+## The Basics: Step by Step
 
 ```
 1. Write a test. Watch it fail.          ← RED
@@ -56,11 +56,11 @@ The cycle time should be **seconds to minutes.** If you're spending more than a 
 
 ### Stack
 
-Implement a stack with TDD. Start with: empty stack, push, pop, LIFO behavior. Each test drives exactly one behavior. By the end, you have a working, tested stack — and every line of code was demanded by a test.
+Implement a stack with TDD. Start with: empty stack, push, pop, LIFO behavior. Each test drives exactly one behavior. By the end, you have a working, tested stack, and every line of code was demanded by a test.
 
 ### Prime Factors
 
-Generate prime factors of a number. Start simple: `primeFactors(1) → []`. Add test cases one at a time. The algorithm emerges from the tests. You don't design it up front — it crystallizes as the tests accumulate.
+Generate prime factors of a number. Start simple: `primeFactors(1) → []`. Add test cases one at a time. The algorithm emerges from the tests. You don't design it up front; it crystallizes as the tests accumulate.
 
 ### The Bowling Game
 
@@ -73,9 +73,9 @@ The famous kata. Score a bowling game from rolls. Start with a gutter game (all 
 > TDD is not about testing. It's about design. The tests force you to think about how the code will be used before you write it. They force you to decouple. They force you to keep things simple.
 
 Code written with TDD is naturally:
-- **Testable** — because it was written to be tested
-- **Decoupled** — because tight coupling makes testing hard
-- **Minimal** — because you only write what the tests demand
+- **Testable:** because it was written to be tested
+- **Decoupled:** because tight coupling makes testing hard
+- **Minimal:** because you only write what the tests demand
 
 ---
 

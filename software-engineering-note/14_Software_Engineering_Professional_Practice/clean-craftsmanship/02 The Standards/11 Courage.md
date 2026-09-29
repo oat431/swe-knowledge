@@ -44,7 +44,7 @@ The standards of productivity and quality require courage. It takes guts to say 
 | Lie | Truth |
 |-----|-------|
 | "I'll make up the time later." | You won't. Velocity data proves this. |
-| "It's almost done — just a few more days." | "Almost done" is 90% done with 90% remaining. |
+| "It's almost done ;  just a few more days." | "Almost done" is 90% done with 90% remaining. |
 | "If I work weekends, I can hit the date." | You'll burn out, the code will be worse, and you'll still miss the date. |
 
 ---
@@ -53,7 +53,7 @@ The standards of productivity and quality require courage. It takes guts to say 
 
 > Saying no is not insubordination. It's the professional's primary obligation.
 
-When you say yes to an impossible deadline, you're not being a team player. You're lying. The truth will come out — but only after weeks of overtime, broken promises, and damaged trust.
+When you say yes to an impossible deadline, you're not being a team player. You're lying. The truth will come out, but only after weeks of overtime, broken promises, and damaged trust.
 
 **Say no early.** It's uncomfortable for 5 minutes. Saying yes and failing is painful for months.
 

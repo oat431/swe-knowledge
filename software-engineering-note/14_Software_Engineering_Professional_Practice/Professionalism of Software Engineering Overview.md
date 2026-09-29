@@ -7,30 +7,30 @@ tags:
   - software-engineering
 ---
 
-# Software Engineering Professional Practice — Overview
+# Software Engineering Professional Practice: Overview
 
 > **Source:** SWEBOK v4 Chapter 14
 > **Purpose:** Cover the knowledge, skills, and attitudes software engineers must possess to practice in a professional, responsible, and ethical manner.
 
 ## What Is This?
 
-Software Engineering Professional Practice addresses what makes a software engineer a *professional* — not just a technically competent coder. It covers the ethical obligations, interpersonal dynamics, communication requirements, and psychological awareness that separate engineering from hacking. Every decision a software engineer makes has consequences for users, employers, society, and the profession itself.
+Software Engineering Professional Practice addresses what makes a software engineer a *professional*, not just a technically competent coder. It covers the ethical obligations, interpersonal dynamics, communication requirements, and psychological awareness that separate engineering from hacking. Every decision a software engineer makes has consequences for users, employers, society, and the profession itself.
 
-This KA asks: *Should we build this?* and *How do we work together effectively?* — questions that technical skills alone cannot answer. It encompasses professionalism (ethics, standards, accreditation, legal obligations), group dynamics (teamwork, cognition, stakeholder interaction), and communication skills (reading, writing, presenting). These are not optional soft skills — they are foundational competencies required for competent and accountable practice.
+This KA asks: *Should we build this?* and *How do we work together effectively?* (questions that technical skills alone cannot answer. It encompasses professionalism (ethics, standards, accreditation, legal obligations), group dynamics (teamwork, cognition, stakeholder interaction), and communication skills (reading, writing, presenting). These are not optional soft skills) they are foundational competencies required for competent and accountable practice.
 
-The economic impact of software is immense: success or failure affects employment, organizational profits, public safety, and even life and property. Professional engineers must navigate confidentiality agreements, intellectual property law, data privacy regulations (GDPR, CCPA), and professional liability — all while maintaining ethical standards defined by bodies like ACM, IEEE, and IFIP.
+The economic impact of software is immense: success or failure affects employment, organizational profits, public safety, and even life and property. Professional engineers must navigate confidentiality agreements, intellectual property law, data privacy regulations (GDPR, CCPA), and professional liability; all while maintaining ethical standards defined by bodies like ACM, IEEE, and IFIP.
 
 ## Knowledge Areas
 
 ### Professionalism
 - Accreditation (validates programs), certification (confirms individual competence), licensing (governmental authorization to practice)
-- Codes of Ethics: ACM, IEEE, IFIP — defining values of public welfare, honesty, competence, accountability
+- Codes of Ethics: ACM, IEEE, IFIP: defining values of public welfare, honesty, competence, accountability
 - Legal issues: IP (patents, copyrights, trade secrets), professional liability/negligence, data privacy, cybercrime
 - Documentation obligations, trade-off analysis, employment contracts, and economic impact of software
 
 ### Group Dynamics and Psychology
 - Team cohesion: intellectual honesty, shared responsibility, constructive peer review, clear communication
-- Individual cognition: problem-solving affected by assumptions, fear, culture, information overload — mitigated by decomposition and humility
+- Individual cognition: problem-solving affected by assumptions, fear, culture, information overload, mitigated by decomposition and humility
 - Stakeholder engagement throughout the lifecycle; managing uncertainty as project risk
 - Equity, diversity, and inclusivity in multicultural/distributed teams
 
@@ -43,9 +43,9 @@ The economic impact of software is immense: success or failure affects employmen
 ## My Notes
 
 ### SWEBOK Professional Practice Foundations
-- [[01_Professionalism_Ethics_and_Legal]] — ACM/IEEE Code of Ethics, accreditation, certification, licensing, legal/IP
-- [[02_Group_Dynamics_and_Psychology]] — Cognitive biases, team stages (Tuckman), psychological safety, DEI
-- [[03_Communication_Skills]] — Technical reading, writing, presentation, document types, ADRs
+- [[01_Professionalism_Ethics_and_Legal]]: ACM/IEEE Code of Ethics, accreditation, certification, licensing, legal/IP
+- [[02_Group_Dynamics_and_Psychology]]: Cognitive biases, team stages (Tuckman), psychological safety, DEI
+- [[03_Communication_Skills]]: Technical reading, writing, presentation, document types, ADRs
 
 ### Books
 - [[clean-coder/]]
@@ -55,12 +55,12 @@ The economic impact of software is immense: success or failure affects employmen
 
 ## Relationship to Other KAs
 
-- **[[Software Construction Overview|Software Construction]]** — Professional practice guides *how* you build (TDD, code review, pair programming).
-- **[[Software Engineering Process Overview|Software Engineering Process]]** — Process and methodology are the team's shared professional discipline.
-- **[[Software Quality Overview|Software Quality]]** — Quality is a professional obligation, not just a technical goal.
-- **[[Software Engineering Economics Overview|Software Engineering Economics]]** — Ethical resource allocation, trade-off analysis, and cost-benefit evaluation.
-- **[[Software Engineering Management Overview|Software Engineering Management]]** — People management requires understanding group dynamics and psychology.
-- **[[Software Security Overview|Software Security]]** — Security is an ethical obligation to users.
+- **[[Software Construction Overview|Software Construction]]:** Professional practice guides *how* you build (TDD, code review, pair programming).
+- **[[../10_Software_Engineering_Process/Software Methodology - Overview|Software Engineering Process]]**; process and methodology are the team's shared professional discipline.
+- **[[Software Quality Overview|Software Quality]]:** Quality is a professional obligation, not just a technical goal.
+- **[[Software Engineering Economics Overview|Software Engineering Economics]]:** Ethical resource allocation, trade-off analysis, and cost-benefit evaluation.
+- **[[Software Engineering Management Overview|Software Engineering Management]]:** People management requires understanding group dynamics and psychology.
+- **[[Software Security Overview|Software Security]]:** Security is an ethical obligation to users.
 
 ---
 

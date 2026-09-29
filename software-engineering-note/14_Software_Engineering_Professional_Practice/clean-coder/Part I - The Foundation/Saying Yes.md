@@ -14,7 +14,7 @@ tags:
 
 ## Core Principle
 
-> **Professionals use the language of commitment — "I will . . . by . . ." — so there is no doubt about what they've promised. They say yes only when they mean it, and they refuse to sacrifice their professional disciplines to make a commitment possible.**
+> **Professionals use the language of commitment ("I will . . . by . . .") so there is no doubt about what they've promised. They say yes only when they mean it, and they refuse to sacrifice their professional disciplines to make a commitment possible.**
 
 ---
 
@@ -24,7 +24,7 @@ The chapter opens with a contribution from Roy Osherove. Commitment has three pa
 
 ### Recognizing Weasel Words (Non-Commitment)
 
-These words and phrases signal that the speaker is **not taking personal responsibility** — they behave as victims of circumstance rather than people in control:
+These words and phrases signal that the speaker is **not taking personal responsibility**; they behave as victims of circumstance rather than people in control:
 
 | Weasel Word / Phrase | Example | Why It Fails |
 |---|---|---|
@@ -41,11 +41,11 @@ Real commitment has a specific linguistic shape:
 
 Every element matters:
 
-- **"I"** — you, personally. Not "we," not "the team," not "someone."
-- **"will"** — a definitive statement, not a possibility or hope.
-- **"by"** — a concrete end time. The deadline makes the result binary: you either delivered or you didn't.
+- **"I":** you, personally. Not "we," not "the team," not "someone."
+- **"will":** a definitive statement, not a possibility or hope.
+- **"by":** a concrete end time. The deadline makes the result binary: you either delivered or you didn't.
 
-This formula puts you in front of at least one other person, stating a fact about an action **you** will take with a clear deadline. There is no way out — the result is binary, and you will be held accountable.
+This formula puts you in front of at least one other person, stating a fact about an action **you** will take with a clear deadline. There is no way out, the result is binary, and you will be held accountable.
 
 ---
 
@@ -63,7 +63,7 @@ When the end goal depends on someone else, do not commit to the integrated outco
 If you don't know whether something can be done, commit to **finding out**. Discovery itself is an action you can own.
 
 **Wrong:** "I'll fix all 25 bugs before the release."
-**Right:** "I'll go through all 25 bugs, attempt to reproduce each one, and sit down with QA for a repro on any I can't reproduce — all by end of week."
+**Right:** "I'll go through all 25 bugs, attempt to reproduce each one, and sit down with QA for a repro on any I can't reproduce; all by end of week."
 
 ### 3. Raise Red Flags Immediately
 
@@ -77,7 +77,7 @@ When a manager asks a yes/no question about a deadline, avoid fuzzy language lik
 
 ### 5. Never Trade Professional Standards for a Commitment
 
-When pressured to hit an impossible deadline, the professional does **not** drop testing, refactoring, or the full regression suite. Years of experience prove that breaking disciplines only slows you down. The professional has a prior, higher commitment to code quality — all other commitments are subordinate to it.
+When pressured to hit an impossible deadline, the professional does **not** drop testing, refactoring, or the full regression suite. Years of experience prove that breaking disciplines only slows you down. The professional has a prior, higher commitment to code quality; all other commitments are subordinate to it.
 
 ### 6. Negotiate Realistic Overtime With Clear Boundaries
 
@@ -87,7 +87,7 @@ If overtime is genuinely the only path to a critical commitment, negotiate it ho
 - Specify the exact overtime and the recovery time afterward
 - Make the trade explicit: "I'll deliver Monday morning, but then I'm gone until Wednesday"
 
-Professionals know their limits. They understand how much overtime they can sustain and what the cost will be — to quality, to health, and to the team.
+Professionals know their limits. They understand how much overtime they can sustain and what the cost will be, to quality, to health, and to the team.
 
 ---
 
@@ -105,11 +105,11 @@ Professionals know their limits. They understand how much overtime they can sust
 
 ## Summary Checklist
 
-- [ ] Eliminate weasel words — need, should, hope, wish, let's — from your vocabulary when discussing commitments
+- [ ] Eliminate weasel words (need, should, hope, wish, let's) from your vocabulary when discussing commitments
 - [ ] Phrase every commitment as "I will ... by ..." with a specific person, action, and deadline
 - [ ] Only commit to outcomes you fully control; commit to concrete actions when dependencies exist
 - [ ] When uncertain whether something is possible, commit to investigation and discovery instead
-- [ ] Alert stakeholders immediately — not later — the moment you realize a commitment is at risk
+- [ ] Alert stakeholders immediately (not later) the moment you realize a commitment is at risk
 - [ ] Answer binary deadline questions with binary answers; replace "probably" with a worst-case date
 - [ ] Never sacrifice testing, refactoring, or clean code to meet a commitment
 - [ ] If overtime is unavoidable, negotiate it explicitly with clear recovery-time boundaries
@@ -118,8 +118,8 @@ Professionals know their limits. They understand how much overtime they can sust
 
 ## Related
 
-- [[Saying No]] — The complement: having the courage to say no when something cannot be done
-- [[Professionalism]] — The foundation: professionals speak truth to power
-- [[Estimation]] — Providing honest estimates that commitments can be based on
-- [[Coding Discipline]] — The professional standards you must never drop under pressure
-- [[Pressure]] — Recognizing and resisting the pressures that lead to bad commitments
+- [[Saying No]]: The complement: having the courage to say no when something cannot be done
+- [[Professionalism]]: The foundation: professionals speak truth to power
+- [[Estimation]]: Providing honest estimates that commitments can be based on
+- [[Coding Discipline]]: The professional standards you must never drop under pressure
+- [[Pressure]]: Recognizing and resisting the pressures that lead to bad commitments

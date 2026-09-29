@@ -9,7 +9,7 @@ tags:
   - contracts
   - data-privacy
   - export-controls
-source: "SWEBOK v4 Chapter 14.1 — Professional Practice, Employment Contracts and Legal Issues"
+source: "SWEBOK v4 Chapter 14.1: Professional Practice, Employment Contracts and Legal Issues"
 created: 2026-07-21
 ---
 
@@ -246,7 +246,7 @@ The CFAA (18 U.S.C. 1030) is the primary US federal computer crime statute:
 
 | Case | Issue | Outcome |
 |---|---|---|
-| **United States v. Swartz (2011)** | Downloading academic papers from JSTOR | Prosecution under CFAA; Swartz died by suicide; case contributed to reform debate |
+| **United States v. Swartz (2011)** | Downloading academic papers from JSTOR | Prosecution under CFAA; swartz died by suicide; case contributed to reform debate |
 | **Van Buren v. United States (2021)** | Police officer misusing law enforcement database | Supreme Court narrowed "exceeds authorized access" to mean accessing areas one has no right to access, not misusing access one has |
 | **LinkedIn v. hiQ (2022)** | Web scraping public LinkedIn profiles | Scraping publicly available data is not "unauthorized access" |
 
@@ -320,8 +320,8 @@ GDPR is the world's most comprehensive data privacy regulation:
 |---|---|---|
 | **LGPD (Brazil)** | Brazil | Similar to GDPR; 10 legal bases for processing; national authority (ANPD) |
 | **PIPL (China)** | China | Consent-based; data localization requirements; extraterritorial application |
-| **POPIA (South Africa)** | South Africa | 8 processing conditions; Information Regulator oversight |
-| **PDPA (Singapore)** | Singapore | Consent and notification obligations; Do Not Call registry |
+| **POPIA (South Africa)** | South Africa | 8 processing conditions; information Regulator oversight |
+| **PDPA (Singapore)** | Singapore | Consent and notification obligations; do Not Call registry |
 | **APPI (Japan)** | Japan | Adequacy decision with EU; consent for sensitive data |
 | **PIPA (South Korea)** | South Korea | Strict consent requirements; data breach notification |
 
@@ -384,6 +384,7 @@ GDPR is the world's most comprehensive data privacy regulation:
 ## 7. Legal Framework Summary
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph Employment["Employment Law"]
         NDA["NDAs"]
@@ -421,6 +422,7 @@ flowchart TD
     EAR -->|"classifies"| ITAR
     ITAR -->|"subset of"| WASS
 ```
+
 
 ---
 

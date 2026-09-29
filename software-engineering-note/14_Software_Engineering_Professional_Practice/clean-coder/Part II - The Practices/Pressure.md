@@ -14,7 +14,7 @@ tags:
 
 ## Core Principle
 
-> **The professional developer is calm and decisive under pressure. As the pressure grows, they adhere to their training and disciplines — knowing that these are the surest path to meeting the deadlines and commitments pressing down on them.**
+> **The professional developer is calm and decisive under pressure. As the pressure grows, they adhere to their training and disciplines, knowing that these are the surest path to meeting the deadlines and commitments pressing down on them.**
 
 ---
 
@@ -24,7 +24,7 @@ Imagine you're on the operating table. How do you want the surgeon to behave? Ca
 
 The professional behaves like the surgeon, not like the typical developer. In a crisis, what you truly believe is revealed by what you actually do.
 
-**Martin's turning point (Clear Communications, 1988):** After years of 80-hour weeks, 3,000-line C functions at 2 am, throwing pens, shouting, and firing people — his wife forced him to look in the mirror. He walked in the rain, started laughing at his own folly, and everything changed. He stopped the crazy hours. He determined to enjoy his career by *doing it well,* not by *doing it stupidly.*
+**Martin's turning point (Clear Communications, 1988):** After years of 80-hour weeks, 3,000-line C functions at 2 am, throwing pens, shouting, and firing people; his wife forced him to look in the mirror. He walked in the rain, started laughing at his own folly, and everything changed. He stopped the crazy hours. He determined to enjoy his career by *doing it well,* not by *doing it stupidly.*
 
 ---
 
@@ -41,7 +41,7 @@ When the business makes promises to customers without consulting you:
 - You are **NOT honor bound to accept** the commitments
 - If no way can be found, the people who made the promises must accept the responsibility
 
-This is hard when your paycheck depends on it — but if you've behaved professionally, you can at least hold your head high while hunting for a new job.
+This is hard when your paycheck depends on it, but if you've behaved professionally, you can at least hold your head high while hunting for a new job.
 
 ### 2. Stay Clean
 
@@ -49,7 +49,7 @@ The way to go fast and keep deadlines at bay is to stay clean. Professionals do 
 
 > **"Quick and dirty" is an oxymoron. Dirty always means slow.**
 
-Avoid pressure by keeping systems, code, and design as clean as possible. This doesn't mean endless polishing — it means refusing to tolerate messes, knowing that messes slow you down, cause missed dates, and break commitments.
+Avoid pressure by keeping systems, code, and design as clean as possible. This doesn't mean endless polishing; it means refusing to tolerate messes, knowing that messes slow you down, cause missed dates, and break commitments.
 
 ---
 
@@ -63,7 +63,7 @@ Manage your stress. Sleepless nights, fretting, and rushing won't help. **Rushin
 
 ### 2. Communicate
 
-Let your team and superiors know you are in trouble. Tell them your best plans for getting out. Ask for input and guidance. **Avoid surprises.** Nothing makes people more angry and less rational than surprises — they multiply pressure by ten.
+Let your team and superiors know you are in trouble. Tell them your best plans for getting out. Ask for input and guidance. **Avoid surprises.** Nothing makes people more angry and less rational than surprises; they multiply pressure by ten.
 
 ### 3. Trust Your Disciplines (Crisis Discipline)
 
@@ -73,7 +73,7 @@ Your disciplines exist to guide you through high-pressure times. A crisis reveal
 - If you keep code clean normally but make messes in a crisis, you don't really believe messes slow you down.
 - If you pair in a crisis but not normally, you believe pairing is more efficient.
 
-**Choose disciplines you can follow in a crisis — then follow them all the time.** Don't change your behavior when the crunch comes. If your disciplines are the best way to work, they should be followed even in the depths of a crisis.
+**Choose disciplines you can follow in a crisis; then follow them all the time.** Don't change your behavior when the crunch comes. If your disciplines are the best way to work, they should be followed even in the depths of a crisis.
 
 Under pressure, become *more* deliberate: write more tests, refactor more aggressively, keep functions even smaller. The only way through the pressure cooker is to rely on what you already know works.
 
@@ -92,26 +92,26 @@ By the same token, when you see someone else under pressure, offer to pair with 
 
 ## Summary Checklist
 
-- [ ] Avoid pressure by managing commitments — never accept unrealistic deadlines
+- [ ] Avoid pressure by managing commitments: never accept unrealistic deadlines
 - [ ] When the business makes promises without you, help find a way, but don't accept the commitment as yours
 - [ ] Quantify and communicate risk so the business can manage it, rather than absorbing it silently
-- [ ] Stay clean — "quick and dirty" is a lie; messes always slow you down
+- [ ] Stay clean: "quick and dirty" is a lie; messes always slow you down
 - [ ] Choose disciplines you can follow in a crisis, then follow them *all the time*, not just when it's easy
-- [ ] Don't change your behavior under pressure — a crisis reveals what you truly believe
+- [ ] Don't change your behavior under pressure: a crisis reveals what you truly believe
 - [ ] When pressure hits: don't panic, don't rush, slow down and think
-- [ ] Communicate early and clearly — avoid surprises at all costs
+- [ ] Communicate early and clearly: avoid surprises at all costs
 - [ ] Under pressure, double down on your disciplines (more tests, more refactoring, smaller functions)
-- [ ] Pair program when under pressure — and offer to pair when you see others struggling
+- [ ] Pair program when under pressure: and offer to pair when you see others struggling
 - [ ] Be the calm, disciplined surgeon, not the shouting, pen-throwing developer
 
 ---
 
 ## Related
 
-- [[Saying No]] — Refusing impossible deadlines and guarding professional standards
-- [[Saying Yes]] — The complement: committing properly when you *can* deliver
-- [[Time Management]] — Avoiding the time-wasting traps that create artificial pressure
-- [[Estimation]] — Producing honest estimates that prevent pressure from forming
-- [[Coding Discipline]] — The TDD, refactoring, and clean-code practices you must never drop
-- [[Collaboration]] — Pairing and team support as pressure-release valves
-- [[Professionalism]] — The foundation: professionals stay calm and follow their disciplines
+- [[Saying No]]: Refusing impossible deadlines and guarding professional standards
+- [[Saying Yes]]: The complement: committing properly when you *can* deliver
+- [[Time Management]]: Avoiding the time-wasting traps that create artificial pressure
+- [[Estimation]]: Producing honest estimates that prevent pressure from forming
+- [[Coding Discipline]]: The TDD, refactoring, and clean-code practices you must never drop
+- [[Collaboration]]: Pairing and team support as pressure-release valves
+- [[Professionalism]]: The foundation: professionals stay calm and follow their disciplines

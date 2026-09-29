@@ -9,7 +9,7 @@ tags:
 
 # 02 The Bill of Rights
 
-Agile is supposed to heal the divide between business and development. Both sides have complementary **rights** — not just responsibilities.
+Agile is supposed to heal the divide between business and development. Both sides have complementary **rights**, not just responsibilities.
 
 ---
 

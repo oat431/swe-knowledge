@@ -9,7 +9,7 @@ tags:
 
 # 05 Pair Programming
 
-Two programmers, one screen. One types (driver), one thinks (navigator). Pairing is optional, intermittent, and the team's decision — not the manager's.
+Two programmers, one screen. One types (driver), one thinks (navigator). Pairing is optional, intermittent, and the team's decision, not the manager's.
 
 ---
 
@@ -54,7 +54,7 @@ One programmer writes a test. The other makes it pass. Roles switch frequently. 
 
 ## Pairing for Review, Not Just Writing
 
-Pairing is useful for reviewing existing code — not just writing new code. Walk through the codebase together. Share understanding.
+Pairing is useful for reviewing existing code, not just writing new code. Walk through the codebase together. Share understanding.
 
 ---
 
@@ -68,13 +68,13 @@ Pairing is useful for reviewing existing code — not just writing new code. Wal
 
 > Don't ask for permission to pair. This is the programmer's domain. The programmer is the expert.
 
-Managers generally like seeing collaboration and knowledge sharing. They won't complain about pairing — but they also shouldn't mandate it.
+Managers generally like seeing collaboration and knowledge sharing. They won't complain about pairing, but they also shouldn't mandate it.
 
 ---
 
 ## The Bottom Line
 
-Without the technical practices — TDD, refactoring, simple design, pairing — Agile becomes a mess-making machine. You'll build a big mess in a hurry.
+Without the technical practices (TDD, refactoring, simple design, pairing) Agile becomes a mess-making machine. You'll build a big mess in a hurry.
 
 ---
 

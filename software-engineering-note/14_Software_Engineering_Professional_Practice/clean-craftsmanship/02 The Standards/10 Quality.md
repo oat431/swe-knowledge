@@ -25,7 +25,7 @@ Every change should leave the codebase slightly better than you found it. The Bo
 
 > Developers should not fear their own code.
 
-Fear of the codebase is the #1 indicator of quality problems. When developers are afraid to change code — afraid they'll break something, afraid they don't understand it — quality is already dead.
+Fear of the codebase is the #1 indicator of quality problems. When developers are afraid to change code (afraid they'll break something, afraid they don't understand it) quality is already dead.
 
 TDD gives you the courage to change code. A comprehensive test suite means you can refactor fearlessly. Without it, you're navigating a minefield blindfolded.
 
@@ -54,7 +54,7 @@ In dysfunctional organizations, QA is the last line of defense. Developers throw
 
 ### QA Will Find Nothing
 
-The goal is zero bugs found by QA. Not because QA isn't testing — but because development prevented the bugs from existing in the first place. QA's role shifts from bug-finding to specification-writing and exploratory testing.
+The goal is zero bugs found by QA. Not because QA isn't testing, but because development prevented the bugs from existing in the first place. QA's role shifts from bug-finding to specification-writing and exploratory testing.
 
 ---
 

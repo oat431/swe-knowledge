@@ -6,13 +6,13 @@ tags:
   - presentation
   - reading
   - software-engineering
-source: "SWEBOK v4 Chapter 14 — Professional Practice, Communication Skills"
+source: "SWEBOK v4 Chapter 14: Professional Practice, Communication Skills"
 created: 2026-07-21
 ---
 
 # Communication Skills for Software Engineers
 
-> Code is not the only artifact software engineers produce. Requirements documents, design specifications, test plans, user manuals, project proposals, technical reports, conference presentations, and team communications are all professional deliverables — and all require disciplined communication skills.
+> Code is not the only artifact software engineers produce. Requirements documents, design specifications, test plans, user manuals, project proposals, technical reports, conference presentations, and team communications are all professional deliverables, and all require disciplined communication skills.
 
 ## 1. Technical Reading
 
@@ -32,10 +32,10 @@ Software engineers read continuously: code reviews, API documentation, research 
 ### Reading Code as a Communication Skill
 
 Code reading is a distinct literacy skill:
-- **Trace execution mentally** before running — predict state changes
-- **Identify patterns** — recognize idioms and anti-patterns in unfamiliar codebases
-- **Read tests first** — they document expected behavior more reliably than comments
-- **Annotate** — mark up printed code or use IDE bookmarks for navigation
+- **Trace execution mentally** before running: predict state changes
+- **Identify patterns:** recognize idioms and anti-patterns in unfamiliar codebases
+- **Read tests first:** they document expected behavior more reliably than comments
+- **Annotate:** mark up printed code or use IDE bookmarks for navigation
 
 ### Reading Research Papers (Three-Pass Method)
 
@@ -51,12 +51,12 @@ Code reading is a distinct literacy skill:
 
 Effective technical writing follows a structured process:
 
-1. **Define audience and purpose** — Who will read this? What decision should they make?
-2. **Outline** — Structure before prose; ensures logical flow
-3. **Draft** — Write quickly without editing (separate creation from criticism)
-4. **Revise** — Restructure for clarity; cut unnecessary content
-5. **Edit** — Fix grammar, spelling, style
-6. **Review** — Have someone else read it (fresh eyes catch gaps)
+1. **Define audience and purpose:** Who will read this? What decision should they make?
+2. **Outline:** Structure before prose; ensures logical flow
+3. **Draft:** Write quickly without editing (separate creation from criticism)
+4. **Revise:** Restructure for clarity; cut unnecessary content
+5. **Edit:** Fix grammar, spelling, style
+6. **Review:** Have someone else read it (fresh eyes catch gaps)
 
 ### Types of Technical Documents
 
@@ -101,7 +101,7 @@ Effective technical writing follows a structured process:
 | Medium | Best For | Pitfalls |
 |---|---|---|
 | **Email** | Quick updates, decisions, meeting follow-ups | Long threads lose context; use for broadcast not discussion |
-| **Chat (Slack/Teams)** | Real-time coordination | Ephemeral — important decisions must be captured elsewhere |
+| **Chat (Slack/Teams)** | Real-time coordination | Ephemeral ;  important decisions must be captured elsewhere |
 | **Wiki/Confluence** | Living documentation | Gets stale without ownership and review cycles |
 | **ADR (Architecture Decision Record)** | Recording architectural decisions | Must include context and consequences, not just choice |
 | **RFC (Request for Comments)** | Proposing significant changes | Must have clear decision deadline and designated decider |
@@ -141,9 +141,9 @@ Effective technical writing follows a structured process:
 
 > [!tip] **The Q&A Rule:** Repeat the question before answering. Ensures everyone heard it, gives you time to think, and confirms you understood correctly.
 
-- Don't bluff — "I don't know, but I'll find out and follow up" is professional
-- Park off-topic questions — "That's a good question about X, let's discuss after the presentation"
-- Pause before answering — silence signals confidence, not uncertainty
+- Don't bluff: "I don't know, but I'll find out and follow up" is professional
+- Park off-topic questions: "That's a good question about X, let's discuss after the presentation"
+- Pause before answering: silence signals confidence, not uncertainty
 
 ## 4. Team Communication
 
@@ -160,24 +160,24 @@ Effective technical writing follows a structured process:
 ### Managing Communication Overhead
 
 With n team members, communication paths = n(n-1)/2. Mitigations:
-- **Information radiators** (dashboards, kanban boards, CI status) — pull, not push
-- **Written over verbal** for decisions — async, searchable, referenceable
-- **Designated communication channels** — not everything goes to everyone
-- **Documentation as code** — living alongside the codebase, reviewed in PRs
+- **Information radiators** (dashboards, kanban boards, CI status): pull, not push
+- **Written over verbal** for decisions: async, searchable, referenceable
+- **Designated communication channels:** not everything goes to everyone
+- **Documentation as code:** living alongside the codebase, reviewed in PRs
 
 ## Key Takeaways
 
-1. **Technical writing is a deliverable, not an afterthought** — your documents are as important as your code
-2. **Write for your audience** — what decision should they make after reading?
-3. **Presentations convince; documents record** — use the right medium for the right purpose
-4. **Code reading is a distinct and learnable skill** — tests are the best documentation
-5. **Written over verbal** for decisions — creates institutional memory and enables async collaboration
-6. **Never read your slides** — if they can read them, you're redundant
+1. **Technical writing is a deliverable, not an afterthought:** your documents are as important as your code
+2. **Write for your audience:** what decision should they make after reading?
+3. **Presentations convince; documents record:** use the right medium for the right purpose
+4. **Code reading is a distinct and learnable skill:** tests are the best documentation
+5. **Written over verbal** for decisions: creates institutional memory and enables async collaboration
+6. **Never read your slides:** if they can read them, you're redundant
 
 ## Related
 
-- [[Professionalism of Software Engineering Overview]] — All professional practice topics
-- [[01_Professionalism_Ethics_and_Legal]] — Professional ethics and legal obligations
-- [[02_Group_Dynamics_and_Psychology]] — Team psychology and dynamics
-- [[clean-coder/clean-coder Overview]] — Clean Coder: practical communication discipline
-- [[Software Design Overview]] — Design documents and ADRs
+- [[Professionalism of Software Engineering Overview]]: All professional practice topics
+- [[01_Professionalism_Ethics_and_Legal]]: Professional ethics and legal obligations
+- [[02_Group_Dynamics_and_Psychology]]: Team psychology and dynamics
+- [[clean-coder/Clean Coder Overview]]: Clean Coder: practical communication discipline
+- [[../03_Software_Design/Software Design Note Overview|Software Design Overview]]: Design documents and ADRs

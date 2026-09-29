@@ -7,7 +7,7 @@ tags:
 - software-engineering
 ---
 
-# The Pragmatic Programmer — Overview
+# The Pragmatic Programmer: Overview
 
 > *Source: The Pragmatic Programmer: From Journeyman to Master by Andrew Hunt & David Thomas (1999, Addison-Wesley)*
 
@@ -23,13 +23,13 @@ Not a methodology. Not a framework. A collection of 50 practical tips that separ
 | 2 | Think! About Your Work | Turn off autopilot |
 | 3 | Provide Options, Don't Make Lame Excuses | Take responsibility |
 | 4 | Don't Live with Broken Windows | Fix bad design NOW |
-| 5 | Be a Catalyst for Change | Stone Soup — start small |
+| 5 | Be a Catalyst for Change | Stone Soup ;  start small |
 | 6 | Remember the Big Picture | Don't be a boiled frog |
 | 7 | Make Quality a Requirements Issue | Good-enough software |
 | 8 | Invest Regularly in Your Knowledge Portfolio | Learning = compound interest |
 | 9 | Critically Analyze What You Read and Hear | Don't be a parrot |
 | 10 | It's Both What You Say and the Way You Say It | Communication matters |
-| 11 | DRY — Don't Repeat Yourself | Single source of truth |
+| 11 | DRY ;  Don't Repeat Yourself | Single source of truth |
 | 12 | Make It Easy to Reuse | Orthogonality = independent components |
 | 13 | Eliminate Effects Between Unrelated Things | Decoupling |
 | 14 | There Are No Final Decisions | Reversibility |
@@ -45,7 +45,7 @@ Not a methodology. Not a framework. A collection of 50 practical tips that separ
 | 24 | Fix the Problem, Not the Blame | Debugging mindset |
 | 25 | Don't Panic When Debugging | Systematic thinking |
 | 26 | "select" Isn't Broken | It's probably your code |
-| 27 | Don't Assume It — Prove It | Assumptions kill |
+| 27 | Don't Assume It ;  Prove It | Assumptions kill |
 | 28 | Learn a Text Manipulation Language | awk, sed, Perl, Python |
 | 29 | Write Code That Writes Code | Generators for repetitive work |
 | 30 | You Can't Write Perfect Software | Defensive programming |
@@ -55,7 +55,7 @@ Not a methodology. Not a framework. A collection of 50 practical tips that separ
 | 34 | Use Exceptions for Exceptional Problems | Not control flow |
 | 35 | Finish What You Start | Release resources you acquire |
 | 36 | Minimize Coupling Between Modules | Law of Demeter |
-| 37 | Configure, Don't Integrate | Metaprogramming — metadata over code |
+| 37 | Configure, Don't Integrate | Metaprogramming ;  metadata over code |
 | 38 | Put Abstractions in Code, Details in Metadata | Declarative over imperative |
 | 39 | Analyze Workflow to Improve Concurrency | Temporal coupling |
 | 40 | Design Using Services | Independent, concurrent services |
@@ -89,7 +89,7 @@ Not a methodology. Not a framework. A collection of 50 practical tips that separ
 
 ## Core Philosophy
 
-> A Pragmatic Programmer takes responsibility for everything they do. They're an early adopter, fast adapter, inquisitive, critical thinker, realistic, and a jack-of-all-trades. They care about their craft — not because someone's watching, but because they're a professional.
+> A Pragmatic Programmer takes responsibility for everything they do. They're an early adopter, fast adapter, inquisitive, critical thinker, realistic, and a jack-of-all-trades. They care about their craft, not because someone's watching, but because they're a professional.
 
 ---
 

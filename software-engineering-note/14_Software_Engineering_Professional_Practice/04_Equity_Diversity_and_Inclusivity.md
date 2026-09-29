@@ -9,7 +9,7 @@ tags:
   - diversity
   - inclusivity
   - accessibility
-source: "SWEBOK v4 Chapter 14.2 — Professional Practice, Equity, Diversity, and Inclusivity"
+source: "SWEBOK v4 Chapter 14.2: Professional Practice, Equity, Diversity, and Inclusivity"
 created: 2026-07-21
 ---
 
@@ -59,6 +59,7 @@ The gender gap in software engineering remains significant despite decades of aw
 Diversity dimensions do not exist in isolation. A Black woman in software engineering faces compounding barriers that are not captured by gender or race statistics alone. **Intersectionality** (a term coined by Kimberle Crenshaw, 1989) recognizes that overlapping identities create unique experiences of discrimination.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     subgraph Identity["Intersecting Identity Axes"]
         G["Gender"] 
@@ -83,6 +84,7 @@ graph TD
     B1 --> B4
     B2 --> B4
 ```
+
 
 ---
 
@@ -184,6 +186,7 @@ Unconscious (implicit) bias refers to automatic mental shortcuts that affect dec
 Software engineering is increasingly global. EDI must account for cultural differences:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph Challenges["Challenges of Global Teams"]
         T1["Time zone<br>differences"]
@@ -205,6 +208,7 @@ flowchart TD
     H1 --> S4
     P1 --> S5
 ```
+
 
 **Hofstede's Cultural Dimensions** (relevant to software teams):
 
@@ -301,7 +305,7 @@ Software systems can perpetuate and amplify existing societal biases:
 | **Amazon hiring tool (2018)** | Penalized resumes containing "women's" (e.g., "women's chess club") | Systematically disadvantaged female applicants |
 | **COMPAS recidivism** | Higher false positive rates for Black defendants | More Black defendants incorrectly flagged as high-risk |
 | **Google Photos (2015)** | Labeled Black people as "gorillas" | Dehumanizing misclassification |
-| **Healthcare algorithms (2019)** | Used healthcare spending as proxy for need; Black patients spend less due to systemic barriers | Under-referred Black patients for care management |
+| **Healthcare algorithms (2019)** | Used healthcare spending as proxy for need; black patients spend less due to systemic barriers | Under-referred Black patients for care management |
 | **Facial recognition** | Error rates 10-100x higher for dark-skinned women vs light-skinned men | False arrests, surveillance disparities |
 
 ### 5.2 Fairness in AI/ML

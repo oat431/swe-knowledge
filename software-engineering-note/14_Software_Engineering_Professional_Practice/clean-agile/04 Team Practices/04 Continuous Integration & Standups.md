@@ -9,7 +9,7 @@ tags:
 
 # 04 Continuous Integration & Standups
 
-CI keeps the team in sync. Standups keep the team aligned. Both are about feedback — fast, frequent, honest.
+CI keeps the team in sync. Standups keep the team aligned. Both are about feedback; fast, frequent, honest.
 
 ---
 
@@ -22,7 +22,7 @@ CI keeps the team in sync. Standups keep the team aligned. Both are about feedba
 | Era | Practice |
 |-----|----------|
 | Early XP | Check in and merge with mainline every couple of hours |
-| Modern | Continuous Build runs all tests automatically as code is checked in — cycle shortened to minutes |
+| Modern | Continuous Build runs all tests automatically as code is checked in ;  cycle shortened to minutes |
 
 ### Feature Toggles
 
@@ -71,7 +71,7 @@ A fable about commitment vs involvement:
 | **Pig** | Life (to provide ham) | Developer | Full |
 | **Chicken** | Eggs (small sacrifice) | Manager, stakeholder | Limited |
 
-> Those who are merely *involved* (chickens) should not have the same weight in decisions as those who are *committed* (pigs). In standups, chickens should listen — not direct.
+> Those who are merely *involved* (chickens) should not have the same weight in decisions as those who are *committed* (pigs). In standups, chickens should listen, not direct.
 
 ---
 

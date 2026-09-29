@@ -16,12 +16,12 @@ tags:
 
 > **QA Should Find Nothing**
 
-The development team's goal must be that QA finds nothing wrong with the software. Every time QA discovers a defect, the development team should react in horror — investigate how it happened and take steps to prevent it in the future. QA is not an adversary; they are part of the team, working alongside development to ensure quality.
+The development team's goal must be that QA finds nothing wrong with the software. Every time QA discovers a defect, the development team should react in horror; investigate how it happened and take steps to prevent it in the future. QA is not an adversary; they are part of the team, working alongside development to ensure quality.
 
 QA's two roles on the team:
 
-1. **QA as Specifiers** — Work with business to create automated acceptance tests that become the true specification and requirements document. Business writes the happy-path tests; QA writes corner, boundary, and unhappy-path tests.
-2. **QA as Characterizers** — Use exploratory testing to characterize the true behavior of the running system and report that behavior back to development and business. They identify what the system actually does, not interpret what it should do.
+1. **QA as Specifiers:** Work with business to create automated acceptance tests that become the true specification and requirements document. Business writes the happy-path tests; QA writes corner, boundary, and unhappy-path tests.
+2. **QA as Characterizers:** Use exploratory testing to characterize the true behavior of the running system and report that behavior back to development and business. They identify what the system actually does, not interpret what it should do.
 
 ---
 
@@ -29,16 +29,16 @@ QA's two roles on the team:
 
 ```
            ┌──────────┐
-           │ Manual/  │  5%   — Exploratory, human-driven
+           │ Manual/  │  5%   - Exploratory, human-driven
            │Exploratory│
           ┌┴──────────┴┐
-          │  System    │ 10%   — GUI, full integrated system
+          │  System    │ 10%   - GUI, full integrated system
          ┌┴────────────┴┐
-         │  Integration │ 20%   — API, component choreography
+         │  Integration │ 20%   - API, component choreography
         ┌┴──────────────┴┐
-        │   Component    │ 50%   — API, acceptance tests
+        │   Component    │ 50%   - API, acceptance tests
        ┌┴────────────────┴┐
-       │    Unit Tests    │ 100%  — xUnit, TDD
+       │    Unit Tests    │ 100%  - xUnit, TDD
        └──────────────────┘
 ```
 
@@ -47,7 +47,7 @@ QA's two roles on the team:
 - Written **by programmers, for programmers**, in the system's programming language.
 - Written **before** production code via Test Driven Development (TDD).
 - Execute as part of Continuous Integration to uphold programmer intent.
-- Coverage should be in the 90s — true coverage with meaningful assertions, not tests that execute code without asserting behavior.
+- Coverage should be in the 90s: true coverage with meaningful assertions, not tests that execute code without asserting behavior.
 - Specify the system at the lowest level.
 
 ### Component Tests (~50% coverage)
@@ -61,15 +61,15 @@ QA's two roles on the team:
 ### Integration Tests (~20% coverage)
 
 - Only meaningful for larger systems with many components.
-- Assemble groups of components and test **how well they communicate with each other** — choreography tests, not business-rule tests.
+- Assemble groups of components and test **how well they communicate with each other**; choreography tests, not business-rule tests.
 - Plumbing tests that ensure components are properly connected and can clearly communicate.
 - Written by **system architects or lead designers** to verify architectural soundness.
 - May include performance and throughput tests at this level.
-- Typically **not** executed as part of the CI suite (longer runtimes); run periodically — nightly, weekly, etc.
+- Typically **not** executed as part of the CI suite (longer runtimes); run periodically; nightly, weekly, etc.
 
 ### System Tests (~10% coverage)
 
-- Automated tests executed against the **entire integrated system** — the ultimate integration tests.
+- Automated tests executed against the **entire integrated system:** the ultimate integration tests.
 - Do not test business rules directly; test that the system is wired together correctly and its parts interoperate according to plan.
 - Include throughput and performance tests.
 - Written by **system architects and technical leads**, in the same language/environment as integration tests for the UI.
@@ -78,10 +78,10 @@ QA's two roles on the team:
 
 ### Manual/Exploratory Tests (~5% coverage)
 
-- Humans put hands on keyboards and eyes on screens — **not automated, not scripted**.
+- Humans put hands on keyboards and eyes on screens: **not automated, not scripted**.
 - Intent: explore the system for unexpected behaviors while confirming expected ones.
 - Requires human brains with human creativity; a written test plan defeats the purpose.
-- Some teams use dedicated specialists; others declare "bug hunting" days where everyone — managers, secretaries, programmers, testers, tech writers — tries to break the system.
+- Some teams use dedicated specialists; others declare "bug hunting" days where everyone (managers, secretaries, programmers, testers, tech writers) tries to break the system.
 - Goal is **not coverage** of every business rule, but creatively finding as many peculiarities as possible and ensuring the system behaves well under human operation.
 
 ---

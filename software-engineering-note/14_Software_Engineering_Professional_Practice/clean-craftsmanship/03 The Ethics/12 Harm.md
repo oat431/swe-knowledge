@@ -7,7 +7,7 @@ tags:
 - uncle-bob
 ---
 
-# 12 Harm — The Programmer's Oath
+# 12 Harm: The Programmer's Oath
 
 Ethics isn't optional. Programmers hold power over systems that affect lives, money, and safety. With that power comes a solemn obligation: **First, do no harm.**
 
@@ -25,7 +25,7 @@ This sounds obvious. It's not. Every time you ship a bug, you harm someone. Ever
 
 Software runs the world. Banking, healthcare, transportation, communication, defense. Bugs kill people. They crash planes, misdiagnose patients, lose life savings.
 
-> Ask yourself: "Could this code harm someone?" If the answer is yes — or even maybe — you have a moral obligation to get it right.
+> Ask yourself: "Could this code harm someone?" If the answer is yes (or even maybe) you have a moral obligation to get it right.
 
 ---
 
@@ -33,7 +33,7 @@ Software runs the world. Banking, healthcare, transportation, communication, def
 
 > The software must work. Not "mostly work." Not "work on my machine." WORK.
 
-Every defect is harm. Every bug that reaches production is a failure of professionalism. The goal is zero defects — and while you may never reach it, you must never stop striving.
+Every defect is harm. Every bug that reaches production is a failure of professionalism. The goal is zero defects, and while you may never reach it, you must never stop striving.
 
 ---
 
@@ -41,7 +41,7 @@ Every defect is harm. Every bug that reaches production is a failure of professi
 
 > Messy code harms the next developer. And the next. And the one after that.
 
-Structural harm is invisible to users — but it compounds. Every messy module makes the next change harder. Every shortcut makes the next developer's job more painful. The Boy Scout Rule isn't optional. It's an ethical obligation.
+Structural harm is invisible to users, but it compounds. Every messy module makes the next change harder. Every shortcut makes the next developer's job more painful. The Boy Scout Rule isn't optional. It's an ethical obligation.
 
 ### Soft
 

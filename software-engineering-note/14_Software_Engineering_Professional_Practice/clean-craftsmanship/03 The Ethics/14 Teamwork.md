@@ -57,7 +57,7 @@ Co-location improves communication and serendipity. But remote work is reality f
 
 ### The Lesson
 
-> When you lie about estimates, you destroy trust. When you stand firm on honest estimates, you build trust — even if the news isn't what they want to hear.
+> When you lie about estimates, you destroy trust. When you stand firm on honest estimates, you build trust, even if the news isn't what they want to hear.
 
 ---
 

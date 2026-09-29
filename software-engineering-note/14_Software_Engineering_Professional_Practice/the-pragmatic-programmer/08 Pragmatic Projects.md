@@ -12,11 +12,11 @@ Projects, not programs. Teams, not individuals. How Pragmatic Programmers work t
 
 ---
 
-## Tip 54: Pragmatic Teams — No Broken Windows
+## Tip 54: Pragmatic Teams: No Broken Windows
 
 > The team as a whole must not tolerate broken windows.
 
-A single developer who ignores quality drags the whole team down. The team must enforce quality collectively. Code reviews, shared standards, collective ownership — these are team responsibilities, not individual options.
+A single developer who ignores quality drags the whole team down. The team must enforce quality collectively. Code reviews, shared standards, collective ownership; these are team responsibilities, not individual options.
 
 ### Team Characteristics
 
@@ -76,24 +76,24 @@ A single developer who ignores quality drags the whole team down. The team must 
 - Tests should be **run automatically** on every build
 - A failing test is a **stop-the-line** event
 - Test **coverage matters**, but test **quality matters more**
-- Every bug gets **two tests**: one that catches it, one that proves the fix
+- Every bug gets **two tests:** one that catches it, one that proves the fix
 
 ---
 
 ## Tip 57: It's All Writing
 
-> Documentation is part of the product. Code comments, READMEs, API docs, design documents — they're all writing. Write well.
+> Documentation is part of the product. Code comments, READMEs, API docs, design documents; they're all writing. Write well.
 
 | Good Documentation | Bad Documentation |
 |-------------------|-----------------|
 | Explains WHY, not WHAT | Restates the code, but in English |
 | Lives close to the code it documents | Lives in a separate system that nobody reads |
-| Updated when code changes | "TODO: update docs" — from 2019 |
+| Updated when code changes | "TODO: update docs" ;  from 2019 |
 | Consistent style, proofread | Typos, mixed tenses, "TODO" sections |
 
 ---
 
-## Tip 58: Great Expectations — Manage User Expectations
+## Tip 58: Great Expectations: Manage User Expectations
 
 > The success of a project is measured by how well it meets expectations. Manage expectations actively.
 
@@ -101,7 +101,7 @@ Users don't judge software against perfection. They judge it against what they w
 
 ---
 
-## Tip 59: Pride and Prejudice — Sign Your Work
+## Tip 59: Pride and Prejudice: Sign Your Work
 
 > Craftsmen of old signed their work. You should too.
 
@@ -109,9 +109,9 @@ Signing your work means taking ownership. When your name is on it, you have skin
 
 ### How to Sign
 
-- **Code reviews** — your name is on the review
-- **Commit messages** — be clear, descriptive, and accountable
-- **Module ownership** — "I built this. I maintain it. I'm proud of it."
+- **Code reviews:** your name is on the review
+- **Commit messages:** be clear, descriptive, and accountable
+- **Module ownership:** "I built this. I maintain it. I'm proud of it."
 
 > But: anonymity can also be protection. On team projects, the code is owned collectively. Don't let signing become finger-pointing. The team succeeds or fails together.
 

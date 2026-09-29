@@ -9,17 +9,17 @@ tags:
 
 # 03 Advanced TDD
 
-Beyond the basics — what happens when TDD gets hard. Sorting algorithms, test doubles, and the London vs Chicago debate.
+Beyond the basics; what happens when TDD gets hard. Sorting algorithms, test doubles, and the London vs Chicago debate.
 
 ---
 
-## Sort 1 & Sort 2 — When TDD Gets Stuck
+## Sort 1 & Sort 2: When TDD Gets Stuck
 
-Uncle Bob walks through implementing a sorting algorithm with TDD. At some point, you get **stuck** — the next test requires an algorithm shift too large for a single red-green-refactor cycle.
+Uncle Bob walks through implementing a sorting algorithm with TDD. At some point, you get **stuck**, the next test requires an algorithm shift too large for a single red-green-refactor cycle.
 
 ### The Solution: Comment Out the Failing Test
 
-When you encounter a step too big, **comment out** the failing test, refactor the code to prepare for it, then uncomment and proceed. This is not cheating — it's acknowledging that some transformations are bigger than one cycle.
+When you encounter a step too big, **comment out** the failing test, refactor the code to prepare for it, then uncomment and proceed. This is not cheating; it's acknowledging that some transformations are bigger than one cycle.
 
 ---
 
@@ -28,14 +28,14 @@ When you encounter a step too big, **comment out** the failing test, refactor th
 Every test follows this pattern:
 
 ```java
-// Arrange — set up the test data and state
+// Arrange - set up the test data and state
 Stack stack = new Stack();
 stack.push(42);
 
-// Act — do the thing being tested
+// Act - do the thing being tested
 int result = stack.pop();
 
-// Assert — verify the outcome
+// Assert - verify the outcome
 assertEquals(42, result);
 ```
 
@@ -63,7 +63,7 @@ Complex behavior (like a turnstile or vending machine) can be modeled as a state
 
 ---
 
-## Test Doubles — The Full Taxonomy
+## Test Doubles: The Full Taxonomy
 
 | Type | Purpose | Example |
 |------|---------|---------|
@@ -93,13 +93,13 @@ Complex behavior (like a turnstile or vending machine) can be modeled as a state
 
 ### The Synthesis
 
-Uncle Bob leans Chicago (classic). The goal is to test **behavior** — not implementation details. Tests that break when you refactor are worse than no tests. But there's a place for mocks: external systems, slow dependencies, non-deterministic behavior.
+Uncle Bob leans Chicago (classic). The goal is to test **behavior**, not implementation details. Tests that break when you refactor are worse than no tests. But there's a place for mocks: external systems, slow dependencies, non-deterministic behavior.
 
 ---
 
 ## Architecture Implications
 
-> TDD influences architecture. Systems designed with TDD in mind tend toward plugin architectures — where high-level policy depends on abstractions, and low-level details implement those abstractions. The tests are the first consumers of your code. If the tests are hard to write, the design is wrong.
+> TDD influences architecture. Systems designed with TDD in mind tend toward plugin architectures, where high-level policy depends on abstractions, and low-level details implement those abstractions. The tests are the first consumers of your code. If the tests are hard to write, the design is wrong.
 
 ---
 

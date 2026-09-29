@@ -34,7 +34,7 @@ These four techniques handle 90% of refactoring. Master them before reaching for
 
 ---
 
-## Rubik's Cube — The Analogy
+## Rubik's Cube: The Analogy
 
 Solving a Rubik's Cube is done in layers. You solve one layer at a time, and as you solve later layers, earlier layers get temporarily disrupted but end up solved. Refactoring works the same way: small steps, temporary disorder, final order.
 
@@ -51,7 +51,7 @@ Solving a Rubik's Cube is done in layers. You solve one layer at a time, and as 
 | **Break Deep One-to-One Correspondences** | Tests should test behavior, not structure. Refactoring shouldn't break tests. |
 | **Refactor Continuously** | Not scheduled. Not "when there's time." Every hour, every day. |
 | **Refactor Mercilessly** | If you see something to improve, improve it NOW. Don't add it to the backlog. |
-| **Keep the Tests Passing** | Never break the tests during refactoring. If a test breaks, you changed behavior — undo and try differently. |
+| **Keep the Tests Passing** | Never break the tests during refactoring. If a test breaks, you changed behavior ;  undo and try differently. |
 | **Leave Yourself an Out** | Commit before refactoring. If it goes wrong, revert and try again. |
 
 ---
@@ -65,7 +65,7 @@ Solving a Rubik's Cube is done in layers. You solve one layer at a time, and as 
 | Always deployable | Nothing works until "done" |
 | Safe | Risky |
 
-> Big redesigns usually fail. Refactor continuously instead. The system improves incrementally — and never stops working.
+> Big redesigns usually fail. Refactor continuously instead. The system improves incrementally, and never stops working.
 
 ---
 

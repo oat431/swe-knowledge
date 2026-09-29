@@ -9,7 +9,7 @@ tags:
 
 # 08 Acceptance Tests
 
-Acceptance tests are the business's definition of "done." They are specification, documentation, and regression safety net — all in one.
+Acceptance tests are the business's definition of "done." They are specification, documentation, and regression safety net, all in one.
 
 ---
 
@@ -17,7 +17,7 @@ Acceptance tests are the business's definition of "done." They are specification
 
 > A story is not complete until its acceptance tests pass. Period.
 
-Acceptance tests are written BEFORE or DURING development — never after. They are the executable specification of what the system should do.
+Acceptance tests are written BEFORE or DURING development, never after. They are the executable specification of what the system should do.
 
 ---
 
@@ -29,13 +29,13 @@ Acceptance tests are written BEFORE or DURING development — never after. They 
 | **QA** | Extends with unhappy paths. "What if the credit card is declined? What if inventory is zero?" |
 | **Developers** | Automate the tests and make them pass. |
 
-> QA is not the bottleneck at the end of the iteration. They're deeply involved from the beginning — writing specifications, not finding bugs.
+> QA is not the bottleneck at the end of the iteration. They're deeply involved from the beginning, writing specifications, not finding bugs.
 
 ---
 
 ## The Continuous Build
 
-Acceptance tests must run in the **continuous build** — automatically, on every commit. If they don't, they'll be skipped. If they're skipped, they don't define "done."
+Acceptance tests must run in the **continuous build**, automatically, on every commit. If they don't, they'll be skipped. If they're skipped, they don't define "done."
 
 ### Requirements for Continuous Acceptance Testing
 
@@ -48,7 +48,7 @@ Acceptance tests must run in the **continuous build** — automatically, on ever
 
 ---
 
-## BDD — Behavior-Driven Development
+## BDD: Behavior-Driven Development
 
 Acceptance tests are written in Given/When/Then format:
 

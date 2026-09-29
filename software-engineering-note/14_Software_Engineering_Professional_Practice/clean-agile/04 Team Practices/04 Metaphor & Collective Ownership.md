@@ -13,7 +13,7 @@ Team Practices are about the relationships of team members to one another and to
 
 ---
 
-## Metaphor — Ubiquitous Language
+## Metaphor: Ubiquitous Language
 
 Effective communication requires a **common vocabulary** of terms and concepts.
 
@@ -24,7 +24,7 @@ Effective communication requires a **common vocabulary** of terms and concepts.
 
 ### Ubiquitous Language (Eric Evans, DDD)
 
-> A model of the problem domain, described by a commonly accepted vocabulary — used by programmers, QA, managers, customers, users, **everyone** involved with the project.
+> A model of the problem domain, described by a commonly accepted vocabulary, used by programmers, QA, managers, customers, users, **everyone** involved with the project.
 
 When the business says "order fulfillment" and the code says `OrderFulfillmentService`, they're speaking the same language. That's Ubiquitous Language.
 
@@ -37,13 +37,13 @@ When the business says "order fulfillment" and the code says `OrderFulfillmentSe
 | With Collective Ownership | Without |
 |--------------------------|---------|
 | Knowledge distributed across team | Knowledge concentrated in individuals |
-| Anyone can work on anything | "That's Bob's code — don't touch it" |
+| Anyone can work on anything | "That's Bob's code ;  don't touch it" |
 | Team makes better decisions together | Miscommunication, finger-pointing |
 | Code is shared and reused | Same solution written multiple times |
 
 ### Specialization vs Generalization
 
-Specialization is allowed and becomes necessary as the system grows. But the ability to work **outside** one's specialty must be maintained. Generalization only comes from seeing the big picture — which requires reading and understanding code across the system.
+Specialization is allowed and becomes necessary as the system grows. But the ability to work **outside** one's specialty must be maintained. Generalization only comes from seeing the big picture, which requires reading and understanding code across the system.
 
 ---
 

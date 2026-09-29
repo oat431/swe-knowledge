@@ -15,7 +15,7 @@ Refactoring improves structure without changing behavior. Simple Design writes o
 
 ## Refactoring
 
-> The practice of improving the structure of the code without changing its behavior — defined by passing tests.
+> The practice of improving the structure of the code without changing its behavior; defined by passing tests.
 
 ### Red / Green / Refactor
 
@@ -38,20 +38,20 @@ Refactoring improves structure without changing behavior. Simple Design writes o
 
 ### Continuous, Not Scheduled
 
-Refactoring is ongoing — not something put on a schedule once the mess becomes unbearable. With continuous refactoring, no big mess is ever made.
+Refactoring is ongoing, not something put on a schedule once the mess becomes unbearable. With continuous refactoring, no big mess is ever made.
 
 Even large-scale refactorings stretching over long periods should follow the continuous approach: all tests passing throughout the entire process.
 
 ---
 
-## Simple Design — Kent Beck's Four Rules
+## Simple Design: Kent Beck's Four Rules
 
 > Write only the code required, with structure as simple, small, and expressive as possible.
 
 | Rule | What It Means |
 |------|--------------|
 | **1. Pass all the tests** | Code must work as intended. |
-| **2. Reveal the intent** | Code must be expressive — easy to read, self-descriptive. Small units, clean names. |
+| **2. Reveal the intent** | Code must be expressive ;  easy to read, self-descriptive. Small units, clean names. |
 | **3. Remove duplication** | Don't say the same thing more than once. Extract functions. For deeper duplication: Strategy, Decorator patterns. |
 | **4. Decrease elements** | Remove superfluous classes, functions, variables. If it's not needed, delete it. |
 
@@ -59,7 +59,7 @@ Even large-scale refactorings stretching over long periods should follow the con
 
 ## Design Weight
 
-Complex design puts the programmer under high **cognitive load** — the Design Weight. High Design Weight = more effort to understand and manipulate.
+Complex design puts the programmer under high **cognitive load**, the Design Weight. High Design Weight = more effort to understand and manipulate.
 
 A trade-off exists:
 
@@ -69,7 +69,7 @@ Complex requirements + Simple design = May not handle complexity well
 Complex requirements + Elaborate design = Higher cognitive load, but handles complexity
 ```
 
-> Find the balance. Design Weight should match requirement complexity — no more, no less.
+> Find the balance. Design Weight should match requirement complexity; no more, no less.
 
 ---
 

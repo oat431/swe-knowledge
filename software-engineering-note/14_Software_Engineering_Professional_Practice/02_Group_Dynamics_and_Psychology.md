@@ -6,7 +6,7 @@ tags:
   - teams
   - cognitive-science
   - software-engineering
-source: "SWEBOK v4 Chapter 14 — Professional Practice, Group Dynamics and Psychology"
+source: "SWEBOK v4 Chapter 14: Professional Practice, Group Dynamics and Psychology"
 created: 2026-07-21
 ---
 
@@ -21,7 +21,7 @@ created: 2026-07-21
 Miller's Law (1956): The average person can hold **7 ± 2 chunks** in working memory. Software engineering routinely overloads this limit:
 - A developer tracing an unfamiliar function holds its state, call chain, and data flow in working memory
 - Decomposition into small functions, clear naming, and minimal side effects directly reduce cognitive load
-- The **Principle of Proximity**: keep related code physically close to minimize scanning and recall
+- The **Principle of Proximity:** keep related code physically close to minimize scanning and recall
 
 ### Cognitive Biases Affecting Software Work
 
@@ -29,16 +29,16 @@ Miller's Law (1956): The average person can hold **7 ± 2 chunks** in working me
 |---|---|---|
 | **Confirmation Bias** | Seeking evidence that confirms our beliefs | Testing only the happy path; ignoring edge cases that contradict our mental model |
 | **Anchoring Bias** | Over-relying on first piece of information | Initial estimate sticks even when new data suggests otherwise |
-| **Optimism Bias** | Overestimating positive outcomes | "It's just a small change" — underestimating integration and testing time |
+| **Optimism Bias** | Overestimating positive outcomes | "It's just a small change" ;  underestimating integration and testing time |
 | **Dunning-Kruger Effect** | Low-competence individuals overestimate ability | Junior devs taking on architectural decisions without understanding consequences |
 | **Sunk Cost Fallacy** | Continuing investment because of past cost | Refusing to rewrite terrible code because "we already spent so much time on it" |
 | **Fundamental Attribution Error** | Attributing others' failures to character, ours to circumstances | "They wrote bad code" vs. "I was under time pressure" |
 
 ### Problem-Solving Under Uncertainty
 
-- **Decomposition:** Break complex problems into manageable sub-problems — reduces cognitive load and enables parallel work
+- **Decomposition:** Break complex problems into manageable sub-problems: reduces cognitive load and enables parallel work
 - **Heuristics:** Mental shortcuts that work most of the time but can fail catastrophically (e.g., "never seen a bug here before" → skip testing)
-- **Metacognition:** Awareness of one's own thought processes — the ability to recognize "I'm stuck" or "I'm making assumptions" and step back
+- **Metacognition:** Awareness of one's own thought processes: the ability to recognize "I'm stuck" or "I'm making assumptions" and step back
 
 ### Psychological Safety
 
@@ -51,19 +51,21 @@ Amy Edmondson defines psychological safety as: *"A shared belief that the team i
 | Dissenting opinions welcomed | Silence treated as agreement |
 | Postmortems focus on systems, not people | Postmortems assign blame |
 
-> [!important] Google's Project Aristotle found that **psychological safety was the #1 predictor of team performance** — more important than individual talent, team composition, or co-location.
+> [!important] Google's Project Aristotle found that **psychological safety was the #1 predictor of team performance**; more important than individual talent, team composition, or co-location.
 
 ## 2. Team Dynamics
 
 ### Tuckman's Stages of Group Development
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     FORMING["Forming<br/>Polite, uncertain"] --> STORMING["Storming<br/>Conflict, pushback"]
     STORMING --> NORMING["Norming<br/>Cohesion, shared norms"]
     NORMING --> PERFORMING["Performing<br/>High productivity"]
     PERFORMING --> ADJOURNING["Adjourning<br/>Disbanding"]
 ```
+
 
 | Stage | Characteristics | Leadership Role |
 |---|---|---|
@@ -75,9 +77,9 @@ flowchart LR
 
 ### Cohesion and Conflict
 
-**Healthy conflict** (task conflict): Disagreement about *what* to build or *how* to build it — leads to better decisions when managed well.
+**Healthy conflict** (task conflict): Disagreement about *what* to build or *how* to build it, leads to better decisions when managed well.
 
-**Unhealthy conflict** (relationship conflict): Personal friction, ego, status battles — destroys trust and productivity.
+**Unhealthy conflict** (relationship conflict): Personal friction, ego, status battles, destroys trust and productivity.
 
 > **Rule of thumb:** Task conflict improves outcomes when psychological safety is high. Relationship conflict always damages outcomes.
 
@@ -92,12 +94,12 @@ In software engineering, social loafing manifests as:
 
 ### Brooks's Law Revisited
 
-> *"Adding manpower to a late software project makes it later."* — Fred Brooks, The Mythical Man-Month
+> *"Adding manpower to a late software project makes it later."* *(Fred Brooks, The Mythical Man-Month)*
 
 Reasons:
-- **Ramp-up cost**: new members need time to become productive
-- **Communication overhead**: n people → n(n-1)/2 communication paths
-- **Task partitioning**: not all tasks can be cleanly divided
+- **Ramp-up cost:** new members need time to become productive
+- **Communication overhead:** n people → n(n-1)/2 communication paths
+- **Task partitioning:** not all tasks can be cleanly divided
 
 | Team Size | Communication Paths |
 |---|---|
@@ -134,25 +136,25 @@ Reasons:
 
 ### Practical Mitigation Strategies
 
-1. **Structured interviews** with consistent rubrics — reduces affinity bias
-2. **Blind code reviews** where possible — evaluate work, not author identity
-3. **Rotation of roles** (scrum master, on-call, presenter) — breaks in-group patterns
-4. **Mentorship programs** — structured support for underrepresented groups
+1. **Structured interviews** with consistent rubrics: reduces affinity bias
+2. **Blind code reviews** where possible: evaluate work, not author identity
+3. **Rotation of roles** (scrum master, on-call, presenter): breaks in-group patterns
+4. **Mentorship programs:** structured support for underrepresented groups
 5. **Inclusive language** in documentation, code comments, and communication
 
 ## Key Takeaways
 
-1. **Working memory is limited** — design code, tools, and processes that reduce cognitive load
+1. **Working memory is limited:** design code, tools, and processes that reduce cognitive load
 2. **Psychological safety predicts team performance** more accurately than individual skill
-3. **Teams go through predictable stages** (forming → storming → norming → performing) — conflict is normal in stage 2
+3. **Teams go through predictable stages** (forming → storming → norming → performing); conflict is normal in stage 2
 4. **Task conflict improves outcomes when trust is high; relationship conflict always damages**
-5. **Communication overhead grows quadratically with team size** — favor small, autonomous teams
-6. **Cognitive diversity produces better software** — but only when psychological safety allows it to surface
+5. **Communication overhead grows quadratically with team size:** favor small, autonomous teams
+6. **Cognitive diversity produces better software:** but only when psychological safety allows it to surface
 
 ## Related
 
-- [[Professionalism of Software Engineering Overview]] — All professional practice topics
-- [[01_Professionalism_Ethics_and_Legal]] — Ethics and professional codes
-- [[03_Communication_Skills]] — Technical communication and presentation
-- [[clean-agile/Clean Agile Overview]] — Agile team practices
-- [[Software Engineering Management Overview]] — People and team management
+- [[Professionalism of Software Engineering Overview]]: All professional practice topics
+- [[01_Professionalism_Ethics_and_Legal]]: Ethics and professional codes
+- [[03_Communication_Skills]]: Technical communication and presentation
+- [[clean-agile/Clean Agile Overview]]: Agile team practices
+- [[Software Engineering Management Overview]]: People and team management

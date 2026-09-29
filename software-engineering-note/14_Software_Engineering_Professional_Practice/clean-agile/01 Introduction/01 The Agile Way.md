@@ -47,7 +47,7 @@ Every project is constrained by four forces. You can pick three:
 
 ### Iteration Zero
 
-Used to write initial stories, estimate them, set up dev environment, draft tentative design, rough plan. Not a full phase — just enough to start.
+Used to write initial stories, estimate them, set up dev environment, draft tentative design, rough plan. Not a full phase, just enough to start.
 
 ---
 
@@ -60,19 +60,19 @@ Used to write initial stories, estimate them, set up dev environment, draft tent
 
 > Velocity is a **measurement, not an objective.** Don't put pressure on what you measure. That creates story point inflation.
 
-After a few iterations, you have a realistic average velocity and can calculate the real release date. This might be disappointing — but it's **honest.** Hope is replaced by data.
+After a few iterations, you have a realistic average velocity and can calculate the real release date. This might be disappointing, but it's **honest.** Hope is replaced by data.
 
 ---
 
 ## The First Iteration is Not a Failure
 
-After Iteration 1, fewer stories are done than estimated. This is **not failure** — it's the first real measurement. Use it to adjust the plan. Like today's weather predicting tomorrow's, the first half of an iteration predicts its second half.
+After Iteration 1, fewer stories are done than estimated. This is **not failure**; it's the first real measurement. Use it to adjust the plan. Like today's weather predicting tomorrow's, the first half of an iteration predicts its second half.
 
 ---
 
 ## Scope Adjustment
 
-At the start of every sprint, implement only what stakeholders really need. "Nice to have" features waste precious time. When the Iron Cross tightens, scope is what you cut — not quality, not people, not the deadline.
+At the start of every sprint, implement only what stakeholders really need. "Nice to have" features waste precious time. When the Iron Cross tightens, scope is what you cut, not quality, not people, not the deadline.
 
 ---
 

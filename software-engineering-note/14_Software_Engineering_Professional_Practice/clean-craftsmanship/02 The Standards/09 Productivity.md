@@ -39,7 +39,7 @@ If your software is hard to change, it's not soft. It's hard-ware. And you've fa
 
 > At the end of every iteration, the system must be technically deployable.
 
-Not "could be deployed with a week of preparation." Not "the code is done but QA hasn't tested it." **Deployable.** Code clean. Tests passing. Acceptance tests green. Deploying is a business decision — not a technical one.
+Not "could be deployed with a week of preparation." Not "the code is done but QA hasn't tested it." **Deployable.** Code clean. Tests passing. Acceptance tests green. Deploying is a business decision, not a technical one.
 
 ---
 
@@ -51,7 +51,7 @@ Not "could be deployed with a week of preparation." Not "the code is done but QA
 |----------|--------------|
 | Velocity declining sprint after sprint | Code rot. Fear of refactoring. |
 | "We need a refactoring sprint" | You weren't refactoring continuously. Now you're paying the debt. |
-| "The old system is too messy — let's rewrite" | The rewrite will fail. The old system's mess is your only spec. |
+| "The old system is too messy ;  let's rewrite" | The rewrite will fail. The old system's mess is your only spec. |
 
 The only way to maintain stable productivity is continuous refactoring, continuous testing, and continuous attention to code quality.
 

@@ -10,7 +10,7 @@ tags:
   - ifip
   - bcs
   - professional-societies
-source: "SWEBOK v4 Chapter 14.1 — Professional Practice, Professional Societies"
+source: "SWEBOK v4 Chapter 14.1: Professional Practice, Professional Societies"
 created: 2026-07-21
 ---
 
@@ -110,6 +110,7 @@ The **ACM Code of Ethics and Professional Conduct** (adopted 1992, revised 2018)
 **Disciplinary Process:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Complaint Filed] --> B[Committee on Professional Ethics<br>reviews complaint]
     B --> C{Is complaint<br>within scope?}
@@ -124,6 +125,7 @@ flowchart TD
     J -- Yes --> L[Sanctions imposed]
     L --> M[Options: censure,<br>suspension, expulsion,<br>revocation of awards]
 ```
+
 
 **Sanctions available:** censure (public reprimand), suspension (temporary loss of membership rights), expulsion (permanent removal), revocation of awards and honors. The process is designed to be fair to the accused while holding members accountable.
 
@@ -284,7 +286,7 @@ The **IFIP IP3** program promotes global ICT professionalism through:
 | **Founded** | 1957, Royal Charter 1984 |
 | **Membership** | ~60,000 members |
 | **Scope** | United Kingdom (but international membership) |
-| **Unique feature** | **Chartered IT Professional (CITP)** status; Royal Charter gives it legal standing |
+| **Unique feature** | **Chartered IT Professional (CITP)** status; royal Charter gives it legal standing |
 | **Code of Conduct** | 4 pillars: public interest, professional competence, duty to profession, duty to relevant authority |
 | **Accreditation** | Accredits UK university computing programs |
 
@@ -316,6 +318,7 @@ BCS holds a **Royal Charter**, which gives it quasi-legal authority in the UK. A
 ### 5.4 Comparison of Major Societies
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph Global
         IFIP["IFIP<br>60 member countries<br>International umbrella"]
@@ -339,6 +342,7 @@ graph LR
     IFIP --> IPSJ
     ACM ---|"co-sponsor<br>ICSE, conferences"| IEEE_CS
 ```
+
 
 ---
 
@@ -376,6 +380,7 @@ Societies produce or influence key standards:
 Conferences serve multiple professional functions:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     subgraph Research["Research Dissemination"]
         P["Peer-reviewed<br>papers"]
@@ -398,6 +403,7 @@ flowchart LR
     C --> M
     M --> J
 ```
+
 
 ### 6.4 Training and Continuing Education
 
@@ -458,6 +464,7 @@ Participating in standards development (IEEE, ISO/IEC JTC 1/SC 7) is one of the 
 ### 7.4 Paths to Involvement
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     START["New Professional"] --> A1["Join ACM or IEEE-CS<br>(student rate available)"]
     A1 --> A2["Attend local chapter<br>meetings"]
@@ -474,6 +481,7 @@ flowchart TD
     F1 --> F2["Chapter chair<br>or co-chair"]
     F2 --> E
 ```
+
 
 ---
 

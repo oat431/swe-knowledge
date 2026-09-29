@@ -14,7 +14,7 @@ The work that happens before a single line of code is written. Requirements, puz
 
 ## Tip 49: The Requirements Pit
 
-> Don't gather requirements — dig for them.
+> Don't gather requirements; dig for them.
 
 Requirements don't lie on the surface. They're buried under assumptions, politics, and wishful thinking. The Pragmatic Programmer's job is to DIG.
 
@@ -23,8 +23,8 @@ Requirements don't lie on the surface. They're buried under assumptions, politic
 | Pitfall | Reality |
 |---------|---------|
 | "The customer told us what they want." | The customer described a symptom, not a solution. |
-| "The spec is 200 pages — we're done." | Big specs are often wrong specs. Nobody reads 200 pages. |
-| "It's in the document — that means it's a requirement." | A requirement is something you NEED. Document filler is not a requirement. |
+| "The spec is 200 pages ;  we're done." | Big specs are often wrong specs. Nobody reads 200 pages. |
+| "It's in the document ;  that means it's a requirement." | A requirement is something you NEED. Document filler is not a requirement. |
 
 ### How to Dig
 
@@ -39,7 +39,7 @@ Requirements don't lie on the surface. They're buried under assumptions, politic
 
 ---
 
-## Tip 50: Solving Impossible Puzzles — Don't Think Outside the Box — Find the Box
+## Tip 50: Solving Impossible Puzzles (Don't Think Outside the Box) Find the Box
 
 > When you encounter an impossible problem, you're probably imposing constraints that don't exist.
 
@@ -48,7 +48,7 @@ Requirements don't lie on the surface. They're buried under assumptions, politic
 1. Enumerate all the constraints you believe exist
 2. For each constraint, ask: "Is this really a constraint? Who says?"
 3. Find the constraints that are self-imposed. Eliminate them.
-4. The remaining real constraints bound the real problem — which is now solvable.
+4. The remaining real constraints bound the real problem: which is now solvable.
 
 ### Example
 
@@ -58,7 +58,7 @@ Requirements don't lie on the surface. They're buried under assumptions, politic
 - Option: Queue and process asynchronously
 - Option: Batch transactions
 
-The constraint wasn't real — it was a design assumption masquerading as a limitation.
+The constraint wasn't real; it was a design assumption masquerading as a limitation.
 
 ---
 
@@ -85,13 +85,13 @@ Specifications are attempts to freeze requirements at a point in time. Requireme
 
 ---
 
-## Tip 53: Circles and Arrows — Formal Methods
+## Tip 53: Circles and Arrows: Formal Methods
 
 > Formal methods have their place. But be careful: diagrams can give a false sense of precision.
 
-UML, flowcharts, state diagrams — they're tools for communication, not substitutes for thinking. A beautiful diagram of a bad design is still a bad design. Use them to clarify your thinking, not to impress stakeholders.
+UML, flowcharts, state diagrams; they're tools for communication, not substitutes for thinking. A beautiful diagram of a bad design is still a bad design. Use them to clarify your thinking, not to impress stakeholders.
 
-> The value is in the process of drawing — making your ideas explicit — not in the artifact itself.
+> The value is in the process of drawing (making your ideas explicit) not in the artifact itself.
 
 ---
 

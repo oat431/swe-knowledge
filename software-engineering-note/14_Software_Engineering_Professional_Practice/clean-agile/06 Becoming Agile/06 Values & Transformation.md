@@ -9,7 +9,7 @@ tags:
 
 # 06 Agile Values & Transformation
 
-Becoming Agile looks easy — just a couple of disciplines and practices. Yet many organizations fail. The reason: they have misconceptions about what "becoming Agile" actually means.
+Becoming Agile looks easy, just a couple of disciplines and practices. Yet many organizations fail. The reason: they have misconceptions about what "becoming Agile" actually means.
 
 ---
 
@@ -32,15 +32,15 @@ Becoming Agile looks easy — just a couple of disciplines and practices. Yet ma
 
 ---
 
-## Transformation — Values Clash
+## Transformation: Values Clash
 
-> The values of large organizations — safety, consistency, command-and-control, plan execution — are diametrically opposed to Agile values. A transition to Agile is a transition in **values.**
+> The values of large organizations (safety, consistency, command-and-control, plan execution) are diametrically opposed to Agile values. A transition to Agile is a transition in **values.**
 
 ### Who Opposes (and Why)
 
 | Role | Why They Resist |
 |------|----------------|
-| **Middle management** | Trained to avoid risks and direct communication. They ARE a layer of indirection — exactly what Agile eliminates. |
+| **Middle management** | Trained to avoid risks and direct communication. They ARE a layer of indirection ;  exactly what Agile eliminates. |
 | **Tech leads, architects, PMs** | See their roles diminished. Actually, their skills are especially needed in Agile teams. |
 
 ### Who Supports
@@ -51,7 +51,7 @@ Becoming Agile looks easy — just a couple of disciplines and practices. Yet ma
 
 ---
 
-## "Faking It" — Internal Transformation
+## "Faking It": Internal Transformation
 
 A development team can internally transition to Agile while still conforming to the process imposed by middle management:
 
@@ -60,11 +60,11 @@ A development team can internally transition to Agile while still conforming to 
 | "Write analysis and design documents" | Create them during first couple of sprints as a **by-product** of code already written |
 | "Follow the process" | Follow it outwardly. Practice Agile inwardly. |
 
-> This can be considered dishonest — but nobody will complain if it yields good results. The team acts for the greater good of the company, not just to comply.
+> This can be considered dishonest, but nobody will complain if it yields good results. The team acts for the greater good of the company, not just to comply.
 
 ### The Individual Path
 
-If only a few individuals on a team adopt Agile values, they tend to leave the team or organization — seeking opportunities better aligned with their new mindset.
+If only a few individuals on a team adopt Agile values, they tend to leave the team or organization, seeking opportunities better aligned with their new mindset.
 
 ### The Organizational Path
 
@@ -74,7 +74,7 @@ Large organizations don't adopt Agile wholesale. They create **new, smaller orga
 
 ## Start with the Inner Ring
 
-> Adopt the Circle of Life — especially the technical practices in the innermost circle. Without those, the code will degrade, and the Agile practices in the two outer rings will make a mess of everything very quickly.
+> Adopt the Circle of Life, especially the technical practices in the innermost circle. Without those, the code will degrade, and the Agile practices in the two outer rings will make a mess of everything very quickly.
 
 ---
 

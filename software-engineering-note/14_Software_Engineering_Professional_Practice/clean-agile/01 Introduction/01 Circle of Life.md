@@ -9,7 +9,7 @@ tags:
 
 # 01 Circle of Life
 
-From Kent Beck's *Extreme Programming Explained* — the Circle of Life organizes XP practices into three concentric rings. Practices in the inner rings depend on those in the outer rings. Start from the outside and work inward.
+From Kent Beck's *Extreme Programming Explained*, the Circle of Life organizes XP practices into three concentric rings. Practices in the inner rings depend on those in the outer rings. Start from the outside and work inward.
 
 ---
 
@@ -28,7 +28,7 @@ From Kent Beck's *Extreme Programming Explained* — the Circle of Life organize
         └──────────────────────────┘
 ```
 
-### Outer Ring — Business-Facing (like Scrum)
+### Outer Ring: Business-Facing (like Scrum)
 
 | Practice | What It Is |
 |----------|-----------|
@@ -37,7 +37,7 @@ From Kent Beck's *Extreme Programming Explained* — the Circle of Life organize
 | **Acceptance Tests** | Unambiguous completion criteria ("Definition of Done") |
 | **Whole Team** | Programmers, testers, management working together |
 
-### Middle Ring — Team-Facing
+### Middle Ring: Team-Facing
 
 | Practice | What It Is |
 |----------|-----------|
@@ -46,7 +46,7 @@ From Kent Beck's *Extreme Programming Explained* — the Circle of Life organize
 | **Continuous Integration** | Frequent merging, fast feedback |
 | **Metaphor** | Common vocabulary and language |
 
-### Inner Ring — Technical
+### Inner Ring: Technical
 
 | Practice | What It Is |
 |----------|-----------|
@@ -72,7 +72,7 @@ From Kent Beck's *Extreme Programming Explained* — the Circle of Life organize
 
 > Without the technical practices (inner ring), the code degrades. Then the Agile practices in the outer rings will make a mess of everything **very quickly.**
 
-The inner ring is what keeps Agile from becoming an efficient mess-making machine. Ignore TDD, refactoring, simple design, and pairing — and Agile becomes Waterfall with shorter deadlines.
+The inner ring is what keeps Agile from becoming an efficient mess-making machine. Ignore TDD, refactoring, simple design, and pairing, and Agile becomes Waterfall with shorter deadlines.
 
 ---
 

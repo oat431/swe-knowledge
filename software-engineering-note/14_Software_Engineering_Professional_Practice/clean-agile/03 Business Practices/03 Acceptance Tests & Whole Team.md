@@ -13,7 +13,7 @@ Acceptance tests turn vague requirements into unambiguous completion criteria. W
 
 ---
 
-## Acceptance Tests — The Definition of Done
+## Acceptance Tests: The Definition of Done
 
 > A story is not specified until its acceptance tests are written. A story is not completed until its acceptance tests pass.
 
@@ -51,8 +51,8 @@ And the cart is emptied
 
 | Who | What They Define |
 |-----|-----------------|
-| **Business** | Happy path — shows the system produces intended value |
-| **QA** | Unhappy paths — corner cases, ways users might break the system |
+| **Business** | Happy path ;  shows the system produces intended value |
+| **QA** | Unhappy paths ;  corner cases, ways users might break the system |
 
 ---
 
