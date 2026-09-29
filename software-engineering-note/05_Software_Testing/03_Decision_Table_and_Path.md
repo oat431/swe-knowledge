@@ -19,7 +19,7 @@ tags:
 
 ## Overview
 
-Chapters 7 and 8 represent the two major schools of test case design: **specification-based** (decision tables — the most rigorous functional method) and **code-based** (path testing — the most analytically precise structural method). Together they form a complete framework: decision tables handle complex input-domain logic, while path testing ensures adequate code-level coverage.
+Chapters 7 and 8 represent the two major schools of test case design: **specification-based** (decision tables: the most rigorous functional method) and **code-based** (path testing, the most analytically precise structural method). Together they form a complete framework: decision tables handle complex input-domain logic, while path testing ensures adequate code-level coverage.
 
 ---
 
@@ -31,13 +31,13 @@ A decision table has four quadrants divided by bold horizontal and vertical line
 
 | | **Stub** (what) | **Entry** (values) |
 |---|---|---|
-| **Condition** (above) | Condition Stub — lists all conditions | Condition Entries — T/F/— values |
-| **Action** (below) | Action Stub — lists all actions | Action Entries — X marks selected actions |
+| **Condition** (above) | Condition Stub: lists all conditions | Condition Entries: T/F/— values |
+| **Action** (below) | Action Stub (lists all actions | Action Entries) X marks selected actions |
 
-- A **rule** is one column in the entry portion — it specifies which actions fire for a given set of condition values.
-- Binary conditions (T/F, Yes/No, 0/1) produce a **Limited Entry Decision Table (LEDT)** — essentially a truth table rotated 90°.
+- A **rule** is one column in the entry portion: it specifies which actions fire for a given set of condition values.
+- Binary conditions (T/F, Yes/No, 0/1) produce a **Limited Entry Decision Table (LEDT):** essentially a truth table rotated 90°.
 - Multi-valued conditions produce an **Extended Entry Decision Table (EEDT)**.
-- Decision tables are **declarative** — no condition order is implied, and actions don't occur in any prescribed sequence.
+- Decision tables are **declarative:** no condition order is implied, and actions don't occur in any prescribed sequence.
 
 ### 7.2 Decision Table Techniques
 
@@ -49,19 +49,19 @@ For an LEDT with *n* conditions, there must be 2ⁿ independent rules. Don't car
 
 #### Don't Care Entries and the "Impossible" Action
 
-- **Don't care ("—"):** Condition is irrelevant to the rule. Can also mean "must be false" in mutually exclusive condition sets (some use "F!" notation).
-- **Impossible action:** Marks rules that are logically contradictory. Example: in the triangle problem, if `a = b` and `b = c` are both true, then `a = c` *must* be true by transitivity — rules where `a = b` and `b = c` are true but `a = c` is false are impossible.
+- **Don't care (": "):** Condition is irrelevant to the rule. Can also mean "must be false" in mutually exclusive condition sets (some use "F!" notation).
+- **Impossible action:** Marks rules that are logically contradictory. Example: in the triangle problem, if `a = b` and `b = c` are both true, then `a = c` *must* be true by transitivity, rules where `a = b` and `b = c` are true but `a = c` is false are impossible.
 
 #### Redundancy and Inconsistency
 
-- **Redundant:** Two rules have identical condition entries and identical action entries — harmless.
-- **Inconsistent:** Two rules have identical condition entries but *different* action entries — makes the table **nondeterministic**.
+- **Redundant:** Two rules have identical condition entries and identical action entries, harmless.
+- **Inconsistent:** Two rules have identical condition entries but *different* action entries, makes the table **nondeterministic**.
 
 #### Mutually Exclusive Conditions
 
 When conditions refer to equivalence classes (e.g., month ∈ M1, month ∈ M2, month ∈ M3), at most one can be true. The naive rule-count algorithm overcounts; you must expand rules and eliminate duplicates. The missing rule is always **all conditions false**.
 
-### 7.3 Triangle Problem — Decision Table
+### 7.3 Triangle Problem: Decision Table
 
 Using conditions `a < b + c`, `b < a + c`, `c < a + b`, `a = b`, `a = c`, `b = c`:
 
@@ -71,20 +71,20 @@ Using conditions `a < b + c`, `b < a + c`, `c < a + b`, `a = b`, `a = c`, `b = c
 | DT2 | 1 | 4 | 2 | Not a triangle |
 | DT3 | 1 | 2 | 4 | Not a triangle |
 | DT4 | 5 | 5 | 5 | Equilateral |
-| DT5–DT6 | — | — | — | Impossible |
+| DT5–DT6 | N/A | N/A | N/A | Impossible |
 | DT7 | 2 | 2 | 3 | Isosceles |
-| DT8 | — | — | — | Impossible |
+| DT8 | N/A | N/A | N/A | Impossible |
 | DT9 | 2 | 3 | 2 | Isosceles |
 | DT10 | 3 | 2 | 2 | Isosceles |
 | DT11 | 3 | 4 | 5 | Scalene |
 
 **11 test cases** total: 3 impossible, 3 triangle-property failures, 1 equilateral, 1 scalene, 3 isosceles.
 
-### 7.4 NextDate Function — Three Iterations
+### 7.4 NextDate Function: Three Iterations
 
-NextDate is the canonical example of **input-domain dependencies** — indiscriminate Cartesian products of equivalence classes produce nonsensical tests (e.g., June 31). Decision tables expose these dependencies via "impossible" rules.
+NextDate is the canonical example of **input-domain dependencies:** indiscriminate Cartesian products of equivalence classes produce nonsensical tests (e.g., June 31). Decision tables expose these dependencies via "impossible" rules.
 
-#### First Try (256 rules — too many)
+#### First Try (256 rules: too many)
 
 Conditions: Month ∈ {M1(30d), M2(31d), M3(Feb)}, Day ∈ {D1(1–28), D2(29), D3(30), D4(31)}, Year ∈ {leap, non-leap}. Yields 256 rules, most impossible.
 
@@ -99,7 +99,7 @@ Refined equivalence classes:
 - **D1:** 1–27 | **D2:** 28 | **D3:** 29 | **D4:** 30 | **D5:** 31
 - **Y1:** leap year | **Y2:** common year
 
-Key insight: **rule equivalence** — when action sets are identical across rules, combine them with don't care entries. The 22 rules collapse to a practical test suite:
+Key insight: **rule equivalence:** when action sets are identical across rules, combine them with don't care entries. The 22 rules collapse to a practical test suite:
 
 | Case ID | Month | Day | Year | Expected Output |
 |---------|-------|-----|------|-----------------|
@@ -119,7 +119,7 @@ Key insight: **rule equivalence** — when action sets are identical across rule
 
 ### 7.5 Commission Problem
 
-Decision tables add little value here — the variables are truly independent, no impossible rules arise, and test cases mirror equivalence class testing. **Decision tables are most valuable when logical dependencies exist among input variables.**
+Decision tables add little value here, the variables are truly independent, no impossible rules arise, and test cases mirror equivalence class testing. **Decision tables are most valuable when logical dependencies exist among input variables.**
 
 ### 7.6 Cause-and-Effect Graphing
 
@@ -157,7 +157,7 @@ A **hardware-inherited** technique: inputs flow through AND/OR/NOT gates from le
 
 ### 8.2 DD-Paths (Decision-to-Decision Paths)
 
-Originated by E.F. Miller (1977). A DD-path is a sequence of statements that begins at a decision's "outway" and ends at the next decision's "inway" — like dominoes: no internal branches.
+Originated by E.F. Miller (1977). A DD-path is a sequence of statements that begins at a decision's "outway" and ends at the next decision's "inway", like dominoes: no internal branches.
 
 **Formal Definition (5 cases):**
 
@@ -166,7 +166,7 @@ Originated by E.F. Miller (1977). A DD-path is a sequence of statements that beg
 | Case 1 | Single node, indegree = 0 | Source node (program entry) |
 | Case 2 | Single node, outdegree = 0 | Sink node (program exit) |
 | Case 3 | Single node, indegree ≥ 2 **or** outdegree ≥ 2 | Decision nodes, merge nodes |
-| Case 4 | Single node, indegree = 1 and outdegree = 1 | "Short branch" — preserves one-fragment-per-DD-path |
+| Case 4 | Single node, indegree = 1 and outdegree = 1 | "Short branch", preserves one-fragment-per-DD-path |
 | Case 5 | Maximal chain of length ≥ 1 | Normal case: a chain where all interior nodes have indegree = outdegree = 1 |
 
 > A **chain** is a path where initial and terminal nodes are distinct and every interior node has indegree = 1 and outdegree = 1.
@@ -204,7 +204,7 @@ The **DD-path graph** is a condensation of the program graph where each DD-path 
 
 #### Coverage Lattice
 
-These metrics form a **lattice** — some are equivalent, some implied by others. The importance: fault types exist that are revealed at one level but escape detection at inferior levels.
+These metrics form a **lattice:** some are equivalent, some implied by others. The importance: fault types exist that are revealed at one level but escape detection at inferior levels.
 
 | Level | Reveals |
 |-------|---------|
@@ -219,7 +219,7 @@ These metrics form a **lattice** — some are equivalent, some implied by others
 #### Boolean Expression Terminology (per Chilenski)
 
 - **Boolean expression:** Evaluates to True/False. May be simple or compound with ∧, ∨, ⊕, ¬ operators.
-- **Condition:** An operand of a Boolean operator — the "leaf" of an expression tree.
+- **Condition:** An operand of a Boolean operator: the "leaf" of an expression tree.
 - **Coupled conditions:** Changing one also changes another. Can be *strongly coupled* (always) or *weakly coupled* (sometimes).
 - **Masking:** Holding one operand of an operator at a value that prevents the other operand from affecting the output (domination laws):
   - `X AND False = False` (masks X)
@@ -284,7 +284,7 @@ A **basis** is a set of paths that are linearly independent and "span" all possi
 
 #### The Baseline Method
 
-1. Choose a **baseline path** — typically the "normal case" with as many decision nodes as possible
+1. Choose a **baseline path:** typically the "normal case" with as many decision nodes as possible
 2. Retrace the baseline, and at each decision node (outdegree ≥ 2), **flip** to take the alternative edge
 3. For subsequent paths, keep later decisions identical to the baseline to minimize differences
 4. Continue until all decision nodes have been flipped
@@ -311,7 +311,7 @@ This yields a **feasible basis** of 4 paths (instead of 5), demonstrating that l
 
 #### Relationship to DD-Path Coverage
 
-**Basis path coverage guarantees DD-path coverage** — flipping every decision ensures every decision outcome is traversed. But the converse is not true: DD-path coverage does not guarantee basis path coverage.
+**Basis path coverage guarantees DD-path coverage:** flipping every decision ensures every decision outcome is traversed. But the converse is not true: DD-path coverage does not guarantee basis path coverage.
 
 #### Criticisms
 
@@ -328,9 +328,9 @@ McCabe's essential complexity condenses program graphs around structured program
 > Repeatedly find structured constructs (sequence, if–then, if–then–else, case, pretest loop, posttest loop), collapse each into a single node, until no more reductions are possible.
 
 - **Well-structured programs** always reduce to V(G) = 1
-- **Unstructured programs** resist reduction — they contain "elemental unstructures" where three distinct paths exist where structured constructs would only have two
+- **Unstructured programs** resist reduction: they contain "elemental unstructures" where three distinct paths exist where structured constructs would only have two
 
-**Implication for testing:** Well-structured programs are easier to test. Essential complexity measures how much unstructured "spaghetti" remains after structured condensation — a metric for both code quality and testability.
+**Implication for testing:** Well-structured programs are easier to test. Essential complexity measures how much unstructured "spaghetti" remains after structured condensation, a metric for both code quality and testability.
 
 ---
 
@@ -349,9 +349,9 @@ McCabe's essential complexity condenses program graphs around structured program
 ### Decision Points
 
 - **Decision tables** work best when *many logical dependencies* exist among inputs (NextDate, Triangle). They're unnecessary when variables are independent (Commission).
-- **DD-path coverage (C₁)** is the industry minimum for structural testing — mandated by ANSI 187B and used at IBM since the 1970s.
+- **DD-path coverage (C₁)** is the industry minimum for structural testing, mandated by ANSI 187B and used at IBM since the 1970s.
 - **MCDC** is required by DO-178B for safety-critical avionics software (Level A).
-- **Basis path testing** is most useful as a coverage goal, not as a standalone test derivation method — always pair with semantic feasibility analysis.
+- **Basis path testing** is most useful as a coverage goal, not as a standalone test derivation method, always pair with semantic feasibility analysis.
 
 ---
 
@@ -368,6 +368,6 @@ McCabe's essential complexity condenses program graphs around structured program
 
 ## Related
 
-- [[Software Testing Overview]] — All testing topics
-- [[01_Testing_Fundamentals]] — Graph theory for path testing
-- [[04_Data_Flow_and_Retrospective]] — Data flow testing
+- [[Software Testing Overview]]: All testing topics
+- [[01_Testing_Fundamentals]]: Graph theory for path testing
+- [[04_Data_Flow_and_Retrospective]]: Data flow testing

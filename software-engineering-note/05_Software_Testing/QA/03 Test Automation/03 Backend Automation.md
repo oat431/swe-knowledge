@@ -71,7 +71,7 @@ class OrderServiceTest {
 
 ---
 
-## TestContainers — Real Dependencies
+## TestContainers: Real Dependencies
 
 Spin up real PostgreSQL, Redis, Kafka in Docker for integration tests.
 
@@ -151,8 +151,8 @@ class OrderControllerTest {
 
 | Strategy | When |
 |----------|------|
-| **Factory methods** | Simple test data — `createSampleOrder()` |
-| **Builder pattern** | Complex objects — `Order.builder().withStatus(CONFIRMED).build()` |
+| **Factory methods** | Simple test data: `createSampleOrder()` |
+| **Builder pattern** | Complex objects: `Order.builder().withStatus(CONFIRMED).build()` |
 | **Object Mother** | Pre-built test fixtures for common scenarios |
 | **Faker library** | Random but realistic data (Java Faker) |
 
@@ -160,6 +160,6 @@ class OrderControllerTest {
 
 ## Sources
 
-- JUnit 5 — https://junit.org/junit5/
-- Mockito — https://site.mockito.org/
-- TestContainers — https://testcontainers.com/
+- JUnit 5: https://junit.org/junit5/
+- Mockito: https://site.mockito.org/
+- TestContainers: https://testcontainers.com/

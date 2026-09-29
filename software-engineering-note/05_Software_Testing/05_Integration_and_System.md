@@ -16,7 +16,7 @@ source: "Jorgensen Ch 13-14"
 
 ## Part I: Integration Testing (Ch 13)
 
-Integration testing is the least well-understood of the three testing levels (unit, integration, system). The classic cautionary tale: in 1999, the Mars Climate Orbiter failed because Lockheed Martin used English units (pounds) while JPL used metric (newtons) — a failure integration testing should have caught.
+Integration testing is the least well-understood of the three testing levels (unit, integration, system). The classic cautionary tale: in 1999, the Mars Climate Orbiter failed because Lockheed Martin used English units (pounds) while JPL used metric (newtons), a failure integration testing should have caught.
 
 The goal of integration testing shifts from testing *interfaces* among separately tested units to testing *interactions* ("co-functioning") among them. Interfaces are structural; interaction is behavioral.
 
@@ -32,11 +32,11 @@ The goal of integration testing shifts from testing *interfaces* among separatel
 
 ### 13.1 Decomposition-Based Integration
 
-Based on the **functional decomposition tree** derived from the final source code. All strategies assume units have been separately tested — the goal is testing interfaces among them.
+Based on the **functional decomposition tree** derived from the final source code. All strategies assume units have been separately tested, the goal is testing interfaces among them.
 
 #### Top-Down Integration
 
-Begins with the main program (root of tree). Lower-level units appear as **stubs** — throwaway code that emulates a called unit by returning hard-coded correct responses.
+Begins with the main program (root of tree). Lower-level units appear as **stubs:** throwaway code that emulates a called unit by returning hard-coded correct responses.
 
 **Process:**
 1. Develop stubs for all units called by main
@@ -46,7 +46,7 @@ Begins with the main program (root of tree). Lower-level units appear as **stubs
 
 **Drawbacks:**
 - Significant stub development effort (consider maintaining stubs under configuration management)
-- The decomposition tree creates **impossible interfaces** — main program never directly calls leaf-level units like `isLeap` or `weekDay`, so those test sessions are empty
+- The decomposition tree creates **impossible interfaces:** main program never directly calls leaf-level units like `isLeap` or `weekDay`, so those test sessions are empty
 
 #### Bottom-Up Integration
 
@@ -73,7 +73,7 @@ All units compiled and tested at once. When a failure occurs, few clues exist to
 
 | Pros | Cons |
 |---|---|
-| Intuitively clear — build with tested components | Structural basis presumes correct behavior follows from correct units + correct interfaces |
+| Intuitively clear; build with tested components | Structural basis presumes correct behavior follows from correct units + correct interfaces |
 | Failure → suspect most recently added unit | Significant stub/driver development + retesting effort |
 | Progress easily tracked against decomposition tree | Decomposition tree is artificial; serves project management more than developers |
 
@@ -90,7 +90,7 @@ Eliminates stub/driver development: use the actual code, but restrict each sessi
 | Aspect | Detail |
 |---|---|
 | **Sessions** | One per edge in the call graph |
-| **Fault isolation** | High — if a test fails, fault must be in one of the two units |
+| **Fault isolation** | High: if a test fails, the fault must be in one of the two units |
 | **Drawback** | For units in multiple pairs, a fix in one pair may break another |
 
 #### Neighborhood Integration
@@ -109,7 +109,7 @@ Neighborhoods = interior nodes + source nodes
 | **Sessions** | Usually fewer than pairwise |
 | **Stub/driver effort** | Reduced |
 | **Fault isolation** | Difficulties of "medium bang" integration |
-| **Build sequences** | Neighborhoods can define builds — merge adjacent neighborhoods for composition-based growth |
+| **Build sequences** | Neighborhoods can define builds; merge adjacent neighborhoods for composition-based growth |
 | **Retesting burden** | Nodes with high indegree/outdegree appear in many neighborhoods; changing one forces retesting of all affected neighborhoods |
 
 #### Pros and Cons
@@ -138,7 +138,7 @@ The goal: an integration testing analog of DD-paths that represents actual syste
 
 MM-paths always represent feasible execution paths crossing unit boundaries. In procedural software, they begin and end in the main program.
 
-**Message quiescence** — when a unit that sends no further messages is reached — provides natural endpoints for MM-paths.
+**Message quiescence:** when a unit that sends no further messages is reached, provides natural endpoints for MM-paths.
 
 #### MM-Path Graph
 
@@ -152,7 +152,7 @@ This directly supports composition-based integration testing.
 
 - A program path is a sequence of DD-paths
 - An MM-path is a sequence of module execution paths
-- No simple relationship exists between DD-paths and module execution paths — they may partially overlap
+- No simple relationship exists between DD-paths and module execution paths; they may partially overlap
 - The intersection of an MM-path with a unit is analogous to a *slice* with respect to the MM-path function
 
 #### Sufficiency Criterion
@@ -163,7 +163,7 @@ The set of MM-paths should **cover all source-to-sink paths** in the set of unit
 
 | Pros | Cons |
 |---|---|
-| Hybrid of functional + structural testing — all functional techniques are applicable | More effort needed to identify MM-paths |
+| Hybrid of functional + structural testing; all functional techniques are applicable | More effort needed to identify MM-paths |
 | Avoids the pitfall of purely structural testing | Offset by elimination of stub/driver development |
 | Seamless junction with system testing (threads) | |
 | Works equally well for waterfall and composition-based lifecycles | |
@@ -183,7 +183,7 @@ The set of MM-paths should **cover all source-to-sink paths** in the set of unit
 
 ## Part II: System Testing (Ch 14)
 
-System testing evaluates a product against *expectations* — behavior, not code. The craftsman views system testing in terms of **threads of system-level behavior.**
+System testing evaluates a product against *expectations*: behavior, not code. The craftsman views system testing in terms of **threads of system-level behavior.**
 
 ### 14.1 Threads and Atomic System Functions
 
@@ -197,13 +197,13 @@ Threads unify the three levels of testing:
 | Term | Definition |
 |---|---|
 | **Atomic System Function (ASF)** | An action observable at the system level in terms of port input and output events |
-| **Event quiescence** | System is (nearly) idle, waiting for a port input event — natural endpoint for ASFs |
+| **Event quiescence** | System is (nearly) idle, waiting for a port input event: natural endpoint for ASFs |
 | **ASF graph** | Directed graph where nodes = ASFs, edges = sequential flow |
 | **Source ASF** | ASF appearing as a source node in the ASF graph |
 | **Sink ASF** | ASF appearing as a sink node in the ASF graph |
 | **System thread** | Path from a source ASF to a sink ASF in the ASF graph |
 
-ASFs represent the **seam between integration and system testing** — the largest item for integration testing, the smallest for system testing.
+ASFs represent the **seam between integration and system testing:** the largest item for integration testing, the smallest for system testing.
 
 ---
 
@@ -215,11 +215,11 @@ Every system can be modeled in terms of five fundamental concepts:
 |---|---|---|
 | **Data** | Variables, structures, records, files, data stores. E/R models are most common. | Relationships (1:1, 1:N, M:N) imply thread patterns; read-only data indicates source ASFs |
 | **Actions** | Transforms, processes, activities, tasks, methods. Have inputs/outputs (data or port events). | I/O view = basis of specification-based testing; decomposition = basis of code-based testing |
-| **Devices** | Port devices — sources/destinations of system I/O. Physical-to-logical translation points. | Define input/output spaces for testing; help identify all screens/states |
+| **Devices** | Port devices, sources/destinations of system I/O. Physical-to-logical translation points. | Define input/output spaces for testing; help identify all screens/states |
 | **Events** | System-level inputs/outputs on port devices. Discrete or continuous. Can be context-sensitive. | Context-sensitive events must be tested in each context |
-| **Threads** | Sequences of actions. Least frequently used in specifications — testers must find them. | Direct source of system test cases |
+| **Threads** | Sequences of actions. Least frequently used in specifications, testers must find them. | Direct source of system test cases |
 
-The five concepts are in **many-to-many relationships** — testers must use events and threads to ensure all relationships are correct.
+The five concepts are in **many-to-many relationships:** testers must use events and threads to ensure all relationships are correct.
 
 ---
 
@@ -235,7 +235,7 @@ FSMs are the best starting point for finding system testing threads. Use a **hie
 
 **Generating test cases:** follow a path of transitions, noting port inputs and outputs along the way. For FSMs with loops, replace loops with two paths (as in program graph testing).
 
-**⚠️ Hard lesson from industry:** A 200+ state FSM generated 3000+ test cases — but one was logically impossible due to a subtle dependency between two states. FSMs require *independent* states; detecting all such dependencies is equivalent to the Halting Problem.
+**⚠️ Hard lesson from industry:** A 200+ state FSM generated 3000+ test cases, but one was logically impossible due to a subtle dependency between two states. FSMs require *independent* states; detecting all such dependencies is equivalent to the Halting Problem.
 
 #### Event-Driven Petri Nets (EDPNs)
 
@@ -250,13 +250,13 @@ EDPNs extend ordinary Petri nets with port events (triangles), data places (circ
 
 #### Converting Between Models
 
-- **Use cases → EDPN:** Partially automatable — port events and interleaved order preserved; pre/postconditions → data places. Needs well-formed use cases.
+- **Use cases → EDPN:** Partially automatable: port events and interleaved order preserved; pre/postconditions → data places. Needs well-formed use cases.
 - **FSM → EDPN:** Guaranteed (FSMs are a special case of Petri nets where every transition has one input and one output place).
 
 **Which view is best?**
 - **Use cases:** Best for customer/developer communication; limited analysis
 - **FSMs:** Common, tools available; state explosion problem
-- **EDPNs:** Preferred for system testing — compose well, rich analysis, clean intension/extension mapping
+- **EDPNs:** Preferred for system testing: compose well, rich analysis, clean intension/extension mapping
 
 ---
 
@@ -284,7 +284,7 @@ Use cases capture the *does* view (behavior), not the *is* view (structure).
 
 ### 14.5 Short vs Long Use Cases
 
-**Long use cases** = full end-to-end transactions (e.g., card entry → PIN → withdraw → close session). Problem: the SATM FSM has **1909 possible paths** — too many.
+**Long use cases** = full end-to-end transactions (e.g., card entry → PIN → withdraw → close session). Problem: the SATM FSM has **1909 possible paths:** too many.
 
 **Short use cases** = begin with a port input event, end with a port output event. Must be at Expanded Essential level (pre/postconditions known).
 
@@ -319,22 +319,22 @@ Four strategies using **incidence matrices** to determine sufficiency:
 
 Model-based metrics serve as a **cross-check** on use case–based threads (pseudostructural testing).
 
-#### Specification-Based Coverage — Port Input Events
+#### Specification-Based Coverage: Port Input Events
 
 | Metric | Description |
 |---|---|
-| **Port Input 1** | Each port input event occurs — bare minimum |
-| **Port Input 2** | Common sequences of port input events occur — most common, corresponds to "normal use" |
-| **Port Input 3** | Each port input event occurs in every "relevant" data context — addresses context-sensitive events |
-| **Port Input 4** | For a given context, all "inappropriate" input events occur — testing proscribed behavior |
-| **Port Input 5** | For a given context, all possible input events occur — exhaustive per context |
+| **Port Input 1** | Each port input event occurs: bare minimum |
+| **Port Input 2** | Common sequences of port input events occur; most common, corresponds to "normal use" |
+| **Port Input 3** | Each port input event occurs in every "relevant" data context, addresses context-sensitive events |
+| **Port Input 4** | For a given context, all "inappropriate" input events occur, testing proscribed behavior |
+| **Port Input 5** | For a given context, all possible input events occur: exhaustive per context |
 
-#### Specification-Based Coverage — Port Output Events
+#### Specification-Based Coverage: Port Output Events
 
 | Metric | Description |
 |---|---|
-| **Port Output 1** | Each port output event occurs — acceptable minimum |
-| **Port Output 2** | Each port output event occurs for each cause — good goal, hard to quantify |
+| **Port Output 1** | Each port output event occurs: acceptable minimum |
+| **Port Output 2** | Each port output event occurs for each cause: good goal, hard to quantify |
 
 #### Port-Based Coverage
 
@@ -393,7 +393,7 @@ Assign multiple weighted attributes to each use case (e.g., customer convenience
 
 ### 14.10 Nonfunctional System Testing
 
-Nonfunctional testing addresses *how well* a system performs its functional requirements — the "-abilities": reliability, maintainability, scalability, usability, compatibility.
+Nonfunctional testing addresses *how well* a system performs its functional requirements, the "-abilities": reliability, maintainability, scalability, usability, compatibility.
 
 #### Stress Testing Strategies
 
@@ -416,17 +416,17 @@ Nonfunctional testing addresses *how well* a system performs its functional requ
 
 ## Key Takeaways
 
-1. **Integration testing** should be based on the call graph, not the decomposition tree — decomposition trees create impossible interfaces. MM-paths are the gold standard but require more effort.
+1. **Integration testing** should be based on the call graph, not the decomposition tree; decomposition trees create impossible interfaces. MM-paths are the gold standard but require more effort.
 
-2. **System testing** is about threads — sequences of Atomic System Functions from source to sink. ASFs are the seam between integration and system testing.
+2. **System testing** is about threads: sequences of Atomic System Functions from source to sink. ASFs are the seam between integration and system testing.
 
-3. **Use cases** are the best communication tool, but EDPNs are the best analysis tool for system testing — they handle composition, context-sensitive events, and conflict detection.
+3. **Use cases** are the best communication tool, but EDPNs are the best analysis tool for system testing; they handle composition, context-sensitive events, and conflict detection.
 
-4. **Short use cases** (linked by pre/postconditions) dramatically compress the testing space — 1909 paths covered by just 25 short use cases.
+4. **Short use cases** (linked by pre/postconditions) dramatically compress the testing space: 1909 paths covered by just 25 short use cases.
 
 5. **Operational profiles** prioritize high-traffic threads; **risk-based testing** adds cost-of-failure weighting. Use both when test time is constrained.
 
-6. **Nonfunctional testing** requires domain-specific strategies — compression, replication, or mathematical modeling. There's no one-size-fits-all approach.
+6. **Nonfunctional testing** requires domain-specific strategies: compression, replication, or mathematical modeling. There's no one-size-fits-all approach.
 
 ---
 
@@ -439,6 +439,6 @@ Nonfunctional testing addresses *how well* a system performs its functional requ
 
 ## Related
 
-- [[Software Testing Overview]] — All testing topics
-- [[06_Model_Based_and_Lifecycle]] — Model-based testing
-- [[07_OO_and_Complexity]] — OO testing and complexity
+- [[Software Testing Overview]]: All testing topics
+- [[06_Model_Based_and_Lifecycle]]: Model-based testing
+- [[07_OO_and_Complexity]]: OO testing and complexity

@@ -9,7 +9,7 @@ source: "Jorgensen, Software Testing: A Craftsman's Approach, 4th Ed., Ch 1–4"
 created: 2026-07-21
 ---
 
-# 01 — Testing Fundamentals
+# 01: Testing Fundamentals
 
 > **Source:** Jorgensen Ch 1–4: A Perspective on Testing, Examples, Discrete Math for Testers, Graph Theory for Testers.
 > **Purpose:** Foundational definitions, mental models, mathematical tools, and graph-theoretic frameworks that underpin all testing methods in later chapters.
@@ -26,13 +26,13 @@ A causal trail runs through every bug:
 |------|------------|---------|
 | **Error** | A human mistake during development | Mistake |
 | **Fault** | The *representation* of an error in an artifact (spec, design, code) | Defect, Bug |
-| **Failure** | Incorrect behaviour when the faulty code executes | — |
-| **Incident** | The symptom that alerts a user/tester to a failure | — |
+| **Failure** | Incorrect behaviour when the faulty code executes | N/A |
+| **Incident** | The symptom that alerts a user/tester to a failure | N/A |
 
 Two critical subtypes:
 
-- **Fault of Commission** — entering something incorrect into a representation.
-- **Fault of Omission** — failing to enter correct information. *Harder to detect and resolve.*
+- **Fault of Commission:** entering something incorrect into a representation.
+- **Fault of Omission:** failing to enter correct information. *Harder to detect and resolve.*
 
 > A fault may never execute, or may lie dormant for a long time. Reviews (Ch 22) can find faults of omission before they become failures.
 
@@ -44,17 +44,17 @@ Two critical subtypes:
 
 A test case is a recognised work product. A complete test case contains:
 
-1. **Identifier** — unique test case ID
-2. **Purpose** — brief statement (e.g., business rule)
-3. **Preconditions** — state required before execution
-4. **Inputs** — actual test data
-5. **Expected Outputs** — the hard part (oracle problem)
-6. **Expected Postconditions** — state after execution
-7. **Execution History** — date, tester, version, pass/fail
+1. **Identifier:** unique test case ID
+2. **Purpose:** brief statement (e.g., business rule)
+3. **Preconditions:** state required before execution
+4. **Inputs:** actual test data
+5. **Expected Outputs:** the hard part (oracle problem)
+6. **Expected Postconditions:** state after execution
+7. **Execution History:** date, tester, version, pass/fail
 
 > **The Oracle Problem:** How do you know the expected output? In reference testing, expert users judge acceptability. Academically, we postulate an "oracle."
 
-Test cases are valuable — at least as valuable as source code. They must be **developed, reviewed, used, managed, and saved.**
+Test cases are valuable, at least as valuable as source code. They must be **developed, reviewed, used, managed, and saved.**
 
 ---
 
@@ -73,7 +73,7 @@ The most powerful mental model in the book. Three sets in the universe of progra
 - S − P = faults of omission (specified but not implemented)
 - P − S = faults of commission (implemented but not specified, e.g., Trojan horses)
 
-**Three-set view (S, P, T)** — eight regions:
+**Three-set view (S, P, T):** eight regions:
 
 | Region | In S? | In P? | In T? | Meaning |
 |--------|-------|-------|-------|---------|
@@ -130,6 +130,7 @@ The waterfall model maps development phases to testing levels
 
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     REQ["Requirements"] --> SYS["System Testing"]
     PD["Preliminary Design"] --> INT["Integration Testing"]
@@ -192,7 +193,7 @@ System-level examples (Ch 11–17): **SATM** (ATM), **Currency Converter** (GUI)
 | Symmetric Difference | A ⊕ B | {x : x ∈ A ⊕ x ∈ B} = (A ∪ B) − (A ∩ B) |
 | Cartesian Product | A × B | {⟨x, y⟩ : x ∈ A ∧ y ∈ B} |
 
-> |A × B| = |A| × |B| — Cartesian products grow multiplicatively, explaining why multi-variable testing generates many test cases.
+> |A × B| = |A| × |B|: Cartesian products grow multiplicatively, explaining why multi-variable testing generates many test cases.
 
 #### Set Relations
 
@@ -224,8 +225,8 @@ A function `f: A → B` is a subset of A × B such that each domain element maps
 
 | Type | Definition |
 |------|-----------|
-| **Onto (surjective)** | f(A) = B — every range element is "hit" |
-| **Into** | f(A) ⊂ B — some range elements are unused |
+| **Onto (surjective)** | f(A) = B: every range element is "hit" |
+| **Into** | f(A) ⊂ B; some range elements are unused |
 | **One-to-one (injective)** | aᵢ ≠ aⱼ ⇒ f(aᵢ) ≠ f(aⱼ) |
 | **Many-to-one** | distinct domain elements can map to same range element |
 
@@ -260,7 +261,7 @@ A relation R ⊆ A × B is any subset of a Cartesian product (functions are a sp
 | **Onto** | Every element of B participates |
 | **Into** | Some element of B does not participate |
 
-> "Total vs partial" = mandatory vs optional participation — the essence of exception handling.
+> "Total vs partial" = mandatory vs optional participation, the essence of exception handling.
 
 #### Properties of Relations on a Single Set (R ⊆ A × A)
 
@@ -278,7 +279,7 @@ A relation R ⊆ A × B is any subset of a Cartesian product (functions are a sp
 | **Ordering Relation** | Reflexive + Antisymmetric + Transitive | ≥, ⊆, ancestor of |
 | **Equivalence Relation** | Reflexive + Symmetric + Transitive | equality, congruence |
 
-> **Critical insight:** Every equivalence relation induces a partition (equivalence classes), and every partition induces an equivalence relation. This is the mathematical basis for **equivalence class testing**: test one element per class and assume the rest behave similarly.
+> **Critical insight:** Every equivalence relation induces a partition (equivalence classes), and every partition induces an equivalence relation. This is the mathematical basis for **equivalence class testing:** test one element per class and assume the rest behave similarly.
 
 ---
 
@@ -347,7 +348,7 @@ Graph theory is the mathematical backbone of **code-based (structural) testing**
 
 **V(G) = e − n + p**  (edges − nodes + components)
 
-> In Ch 8, V(G) is the number of **basis paths** in a program graph — the foundation of McCabe's cyclomatic complexity.
+> In Ch 8, V(G) is the number of **basis paths** in a program graph, the foundation of McCabe's cyclomatic complexity.
 
 ---
 
@@ -395,7 +396,7 @@ R(i, j) = 1 iff there exists a directed path from node i to node j.
 | **2-connected** | Directed path exists one way |
 | **3-connected** | Directed paths exist both ways (cycle) |
 
-> 3-connectedness is an equivalence relation → partition into **strong components**. Condensing strong components yields a **DAG** (directed acyclic graph) — no loops remain. This solves the "millions of paths from nested loops" problem.
+> 3-connectedness is an equivalence relation → partition into **strong components**. Condensing strong components yields a **DAG** (directed acyclic graph); no loops remain. This solves the "millions of paths from nested loops" problem.
 
 ---
 
@@ -406,7 +407,7 @@ R(i, j) = 1 iff there exists a directed path from node i to node j.
 The most common application of digraphs in testing:
 
 - **Nodes:** Program statements (or statement fragments).
-- **Edges:** Flow of control — edge from i to j iff statement j can execute immediately after i.
+- **Edges:** Flow of control: edge from i to j iff statement j can execute immediately after i.
 
 **Structured programming constructs** map cleanly to digraphs:
 - **Sequence:** linear chain of nodes
@@ -439,7 +440,7 @@ A **bipartite directed graph** with two node sets:
 - **Transitions (T):** drawn as bars/rectangles.
 - **Edges:** only between place↔transition (In ⊆ P × T, Out ⊆ T × P).
 
-**Marking:** A tuple ⟨n₁, n₂, …, nₚ⟩ — number of tokens in each place.
+**Marking:** A tuple ⟨n₁, n₂, …, nₚ⟩; number of tokens in each place.
 
 **Execution rules:**
 1. A transition is **enabled** if every input place has ≥ 1 token.
@@ -447,7 +448,7 @@ A **bipartite directed graph** with two node sets:
 
 > **Petri net conflict:** Two transitions share an input place; firing one disables the other. Models concurrency and race conditions.
 
-> **FSMs are a special case of Petri nets** — every FSM can be expressed as a Petri net.
+> **FSMs are a special case of Petri nets:** every FSM can be expressed as a Petri net.
 
 #### 4.3.4 Event-Driven Petri Nets (EDPNs)
 
@@ -458,7 +459,7 @@ Extension of Petri nets for event-driven systems:
 - **Data Places (circles):** internal state data
 - **Transitions (bars):** actions
 
-EDPNs express four of five basic system constructs: data, events, actions, threads. They model event quiescence — an important concept in object-oriented systems.
+EDPNs express four of five basic system constructs: data, events, actions, threads. They model event quiescence, an important concept in object-oriented systems.
 
 #### 4.3.5 StateCharts
 
@@ -468,13 +469,14 @@ StateCharts combine **Venn diagrams** (for hierarchical state containment) with 
 - The control notation chosen for **UML** (Unified Modeling Language).
 - Supported by CASE tools.
 
-> StateCharts use Venn-diagram containment to express **orthogonal regions** (concurrent substates) and hierarchical state nesting — capabilities that plain FSMs lack.
+> StateCharts use Venn-diagram containment to express **orthogonal regions** (concurrent substates) and hierarchical state nesting, capabilities that plain FSMs lack.
 
 ---
 
 ## 5. Summary: How Everything Connects
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph FUND["Testing Fundamentals"]
         CH1["Ch 1: Concepts<br/>Error→Fault→Fail, Test Cases<br/>Venn (S,P,T), Spec vs Code<br/>Fault Taxonomies, V-Model"]
@@ -497,7 +499,7 @@ flowchart TD
 
 ## Related
 
-- [[Software Testing Overview]] — All testing topics
-- [[02_Boundary_and_Equivalence]] — Boundary value and equivalence class techniques
-- [[03_Decision_Table_and_Path]] — Decision table and path testing
-- [[04_Data_Flow_and_Retrospective]] — Data flow and define/use testing
+- [[Software Testing Overview]]: All testing topics
+- [[02_Boundary_and_Equivalence]]: Boundary value and equivalence class techniques
+- [[03_Decision_Table_and_Path]]: Decision table and path testing
+- [[04_Data_Flow_and_Retrospective]]: Data flow and define/use testing

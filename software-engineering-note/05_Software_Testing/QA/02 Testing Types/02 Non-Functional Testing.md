@@ -7,7 +7,7 @@ tags:
 
 # 02 Non-Functional Testing
 
-Functional testing checks WHAT the system does. Non-functional testing checks HOW WELL it does it — speed, security, usability, reliability.
+Functional testing checks WHAT the system does. Non-functional testing checks HOW WELL it does it: speed, security, usability, reliability.
 
 ---
 
@@ -87,7 +87,7 @@ Functional testing checks WHAT the system does. Non-functional testing checks HO
 | **axe DevTools** | Automated WCAG violations in browser |
 | **Lighthouse** | Built into Chrome DevTools |
 | **WAVE** | Visual overlay of accessibility issues |
-| **Screen reader** (NVDA, VoiceOver) | Manual test — can a blind user navigate? |
+| **Screen reader** (NVDA, VoiceOver) | Manual test; can a blind user navigate? |
 
 > Deep dive: **[[28 Accessibility]]** in HCI vault.
 
@@ -95,6 +95,6 @@ Functional testing checks WHAT the system does. Non-functional testing checks HO
 
 ## Sources
 
-- OWASP Top 10 — https://owasp.org/www-project-top-ten/
-- WCAG 2.2 — https://www.w3.org/TR/WCAG22/
-- k6 — https://k6.io/
+- OWASP Top 10: https://owasp.org/www-project-top-ten/
+- WCAG 2.2: https://www.w3.org/TR/WCAG22/
+- k6: https://k6.io/

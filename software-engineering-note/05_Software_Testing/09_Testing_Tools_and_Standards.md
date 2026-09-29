@@ -52,11 +52,11 @@ created: 2026-07-21
 
 Testing tools and standards form the infrastructure that enables systematic, repeatable, and measurable testing processes. Without appropriate tooling, testing remains ad hoc and labor-intensive. Without standards, testing practices lack consistency and cannot be objectively evaluated across organizations.
 
-SWEBOK v4 identifies testing tools and standards as a cross-cutting concern that supports all other testing activities described in [[01_Foundations_of_Testing|Foundations of Testing]] through [[08_Test_Techniques|Test Techniques]].
+SWEBOK v4 identifies testing tools and standards as a cross-cutting concern that supports all other testing activities described in [[01_Testing_Fundamentals|Foundations of Testing]] through [[02_Boundary_and_Equivalence|Test Techniques]].
 
 **Key relationships:**
-- Tools automate techniques from [[08_Test_Techniques|Test Techniques]] (coverage, fault-based, etc.)
-- Standards provide the process framework for [[02_Testing_in_the_Software_Lifecycle|Testing in the Software Lifecycle]]
+- Tools automate techniques from [[02_Boundary_and_Equivalence|Test Techniques]] (coverage, fault-based, etc.)
+- Standards provide the process framework for [[06_Model_Based_and_Lifecycle|Testing in the Software Lifecycle]]
 - Maturity models assess organizational capability across all testing KAs
 
 ---
@@ -110,8 +110,8 @@ Test case generators automate the creation of test inputs based on specification
 | **Mutation-based** | Seeded faults for test assessment | PIT (Java), mutmut (Python) |
 
 **Key concepts:**
-- **Combinatorial explosion**: With N parameters each having V values, exhaustive testing requires V^N tests. Pairwise testing reduces this to O(V^2) while covering all two-way interactions.
-- **Test suite minimization**: Removing redundant tests that do not improve fault detection capability.
+- **Combinatorial explosion:** With N parameters each having V values, exhaustive testing requires V^N tests. Pairwise testing reduces this to O(V^2) while covering all two-way interactions.
+- **Test suite minimization:** Removing redundant tests that do not improve fault detection capability.
 
 ### 2.3 Capture/Replay Tools
 
@@ -127,10 +127,10 @@ Capture/replay tools record user interactions with a GUI and replay them for reg
 | Ranorex | Commercial | Desktop, web, mobile |
 
 **Challenges with capture/replay:**
-- **Brittle selectors**: UI changes break recorded scripts
-- **Maintenance overhead**: Scripts must be updated with each UI change
-- **Dynamic content**: AJAX, SPAs complicate synchronization
-- **Best practice**: Use Page Object Model (POM) to abstract UI details
+- **Brittle selectors:** UI changes break recorded scripts
+- **Maintenance overhead:** Scripts must be updated with each UI change
+- **Dynamic content:** AJAX, SPAs complicate synchronization
+- **Best practice:** Use Page Object Model (POM) to abstract UI details
 
 ### 2.4 Test Oracles
 
@@ -149,7 +149,7 @@ A **test oracle** determines whether a test has passed or failed. The "oracle pr
 
 ### 2.5 Coverage Analyzers
 
-Coverage analyzers measure which parts of the code (or specification) have been exercised by tests. See [[07_Structural_Testing_Techniques|Structural Testing Techniques]] for coverage criteria details.
+Coverage analyzers measure which parts of the code (or specification) have been exercised by tests. See [[03_Decision_Table_and_Path|Structural Testing Techniques]] for coverage criteria details.
 
 | Tool | Language | Coverage Types |
 |------|----------|----------------|
@@ -206,6 +206,7 @@ Regression testing tools manage and optimize test suite execution after code cha
 **Regression testing optimization strategies:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Code Change Detected] --> B{Change Impact Analysis}
     B --> C[Test Selection: Run only affected tests]
@@ -236,6 +237,7 @@ Security testing tools identify vulnerabilities and ensure compliance with secur
 **Security testing integration:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[Developer Commit] --> B[SAST Scan]
     B --> C[SCA Check]
@@ -288,6 +290,7 @@ Performance testing tools simulate concurrent users and measure system behavior 
 **Defect lifecycle:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','clusterBkg':'#161212','clusterBorder':'#19362D','fontSize':'14px'}}}%%
 stateDiagram-v2
     [*] --> New
     New --> Assigned: Triage
@@ -384,6 +387,7 @@ Selecting testing tools requires systematic evaluation against organizational ne
 **Decision framework:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Identify Testing Needs] --> B[Survey Available Tools]
     B --> C[Create Evaluation Matrix]
@@ -408,6 +412,7 @@ Modern testing is inseparable from CI/CD. Tools must integrate into automated pi
 **Typical CI/CD testing pipeline:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[Code Commit] --> B[Pre-commit Hooks]
     B --> C[Static Analysis<br/>ESLint, SonarQube]
@@ -464,6 +469,7 @@ The **ISO/IEC/IEEE 29119** series is the definitive international standard for s
 **29119-2 Process Model:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     subgraph "Organizational Level"
         A[Test Policy] --> B[Test Strategy]
@@ -496,7 +502,7 @@ graph TD
 | Test Summary Report | Summary of testing activities and results |
 | Test Incident Report | Details of anomalies found during testing |
 
-**29119-4 Techniques (aligned with [[08_Test_Techniques|Test Techniques]]):**
+**29119-4 Techniques (aligned with [[02_Boundary_and_Equivalence|Test Techniques]]):**
 
 | Category | Techniques |
 |----------|------------|
@@ -510,8 +516,8 @@ graph TD
 **IEEE 1012** (Standard for System, Software, and Hardware Verification and Validation) defines processes for V&V throughout the lifecycle.
 
 **Key concepts:**
-- **Verification**: Are we building the product right? (conformance to specification)
-- **Validation**: Are we building the right product? (fitness for intended use)
+- **Verification:** Are we building the product right? (conformance to specification)
+- **Validation:** Are we building the right product? (fitness for intended use)
 - V&V activities mapped to each system lifecycle phase
 - Integrity levels (1-4) determine rigor of V&V activities
 
@@ -578,6 +584,7 @@ graph TD
 **Review Process:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[Planning] --> B[Initiation/Overview]
     B --> C[Preparation]
@@ -588,10 +595,10 @@ graph LR
 ```
 
 **Inspection Metrics:**
-- **Defect density**: Defects per KLOC or per page
-- **Inspection rate**: Pages or KLOC per hour
-- **Defect detection rate**: Defects found per inspection hour
-- **Rework effort**: Time to fix found defects
+- **Defect density:** Defects per KLOC or per page
+- **Inspection rate:** Pages or KLOC per hour
+- **Defect detection rate:** Defects found per inspection hour
+- **Rework effort:** Time to fix found defects
 
 ### 5.5 ISO/IEC/IEEE 32675 - DevOps Testing
 
@@ -611,6 +618,7 @@ graph LR
 **DevOps Testing Pipeline:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     subgraph "Plan"
         A[Requirements] --> B[Test Strategy]
@@ -737,6 +745,7 @@ The **Test Maturity Model integration (TMMi)** is the de facto standard for test
 **ODC Analysis Applications:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Defect Data Collection] --> B[ODC Classification]
     B --> C{Analysis Type}
@@ -766,6 +775,7 @@ graph TD
 ## 7. Relationships to Other KAs
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     T[09 Testing Tools & Standards] --> A[01 Foundations]
     T --> B[02 Testing in Lifecycle]
@@ -783,11 +793,11 @@ graph TD
 ```
 
 **Cross-references:**
-- [[01_Foundations_of_Testing|Foundations of Testing]]: Defines the concepts that tools implement
-- [[02_Testing_in_the_Software_Lifecycle|Testing in the Software Lifecycle]]: Process context for tool deployment
-- [[03_Test_Levels|Test Levels]]: Different tools for different test levels
-- [[07_Structural_Testing_Techniques|Structural Testing Techniques]]: Coverage tools implement these
-- [[08_Test_Techniques|Test Techniques]]: Tools automate these techniques
+- [[01_Testing_Fundamentals|Foundations of Testing]]: Defines the concepts that tools implement
+- [[06_Model_Based_and_Lifecycle|Testing in the Software Lifecycle]]: Process context for tool deployment
+- [[05_Integration_and_System|Test Levels]]: Different tools for different test levels
+- [[03_Decision_Table_and_Path|Structural Testing Techniques]]: Coverage tools implement these
+- [[02_Boundary_and_Equivalence|Test Techniques]]: Tools automate these techniques
 - [[10_Domain_Specific_Testing|Domain-Specific Testing]]: Specialized tools per domain
 - [[11_AI_ML_Testing_and_Emerging|AI/ML Testing and Emerging]]: New tool categories
 - [[QA/|Quality Assurance]]: Standards and maturity models support QA
@@ -813,9 +823,9 @@ The testing tool landscape continues to evolve with AI-assisted testing, low-cod
 
 ## See Also
 
-- [[01_Foundations_of_Testing|Foundations of Testing]]
-- [[02_Testing_in_the_Software_Lifecycle|Testing in the Software Lifecycle]]
-- [[08_Test_Techniques|Test Techniques]]
+- [[01_Testing_Fundamentals|Foundations of Testing]]
+- [[06_Model_Based_and_Lifecycle|Testing in the Software Lifecycle]]
+- [[02_Boundary_and_Equivalence|Test Techniques]]
 - [[10_Domain_Specific_Testing|Domain-Specific Testing]]
 - [[11_AI_ML_Testing_and_Emerging|AI/ML Testing and Emerging]]
 

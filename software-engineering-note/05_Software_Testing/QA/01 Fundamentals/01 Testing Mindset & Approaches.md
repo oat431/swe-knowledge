@@ -7,7 +7,7 @@ tags:
 
 # 01 Testing Mindset & Approaches
 
-QA is not about proving the software works. It's about finding where it doesn't — before your users do. The tester's mindset is skepticism, curiosity, and the willingness to break things.
+QA is not about proving the software works. It's about finding where it doesn't, before your users do. The tester's mindset is skepticism, curiosity, and the willingness to break things.
 
 ---
 
@@ -61,6 +61,7 @@ QA is not about proving the software works. It's about finding where it doesn't 
 ## Testing Levels (The Test Pyramid)
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     subgraph "Fewer, Slower, More Expensive"
         E2E[E2E / UI Tests]

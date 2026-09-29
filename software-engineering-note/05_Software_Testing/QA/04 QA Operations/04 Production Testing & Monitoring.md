@@ -7,7 +7,7 @@ tags:
 
 # 04 Production Testing & Monitoring
 
-Testing doesn't stop at deployment. Production is the ultimate test environment — real users, real data, real edge cases. Production testing catches what pre-production testing misses.
+Testing doesn't stop at deployment. Production is the ultimate test environment: real users, real data, real edge cases. Production testing catches what pre-production testing misses.
 
 ---
 
@@ -54,7 +54,7 @@ test('Checkout flow is healthy', async ({ page }) => {
 
 ## Real User Monitoring (RUM)
 
-Track actual user experiences — not simulated ones.
+Track actual user experiences, not simulated ones.
 
 ```javascript
 // Web Vitals + custom metrics
@@ -113,6 +113,6 @@ public class GlobalExceptionHandler {
 
 ## Sources
 
-- Sentry — https://sentry.io/
-- Checkly — https://www.checklyhq.com/
-- Web Vitals — https://web.dev/vitals/
+- Sentry: https://sentry.io/
+- Checkly: https://www.checklyhq.com/
+- Web Vitals: https://web.dev/vitals/

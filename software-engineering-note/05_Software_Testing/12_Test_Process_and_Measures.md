@@ -11,7 +11,7 @@ status: in-progress
 
 # Test Process and Measures
 
-> **SWEBOK Reference:** Knowledge Area 5 (Software Testing), Section 5.5 — Test Process and Test Measures.
+> **SWEBOK Reference:** Knowledge Area 5 (Software Testing), Section 5.5; test Process and Test Measures.
 
 Testing is not a single activity but a structured process with defined levels, roles, and measurable outcomes. This note covers the three-layer test process model and the consolidated test measures used to assess both the system under test and the testing effort itself.
 
@@ -22,6 +22,7 @@ Testing is not a single activity but a structured process with defined levels, r
 The SWEBOK test process is organized into three layers: **organizational**, **management**, and **dynamic** (technical). Each layer has distinct concerns, artifacts, and stakeholders.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     subgraph "Organizational Level"
         TP[Test Policy]
@@ -111,6 +112,7 @@ The test strategy translates the organizational policy into a project-specific a
 Test planning defines what testing will be done and how.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     REQ[Requirements] --> PLAN[Test Plan]
     RISK[Risk Assessment] --> PLAN
@@ -161,6 +163,7 @@ Test monitoring tracks progress against the plan; test control adjusts the plan 
 #### Defect Trends
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph "Defect Trend Analysis"
         direction TB
@@ -283,6 +286,7 @@ Test design translates requirements and risk information into executable test ca
 #### Defect Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','clusterBkg':'#161212','clusterBorder':'#19362D','fontSize':'14px'}}}%%
 stateDiagram-v2
     [*] --> New: Defect found
     New --> Assigned: Triaged and assigned
@@ -441,6 +445,7 @@ MTTF is applicable to non-repairable components (a component fails and is discar
 ### 6.1 Code Coverage Measures
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     COV[Code Coverage] --> STMT[Statement Coverage]
     COV --> BR[Branch Coverage]
@@ -591,6 +596,7 @@ $$\text{Bidirectional Traceability} = \text{Forward (req -> test)} + \text{Backw
 ### 8.1 Test Process Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     START[Test Process Start] --> POLICY[Define Test Policy]
     POLICY --> STRATEGY[Develop Test Strategy]
@@ -643,11 +649,11 @@ graph TD
 
 ## Related Notes
 
-- [[13_Software_Testing_Techniques]] — Black-box and white-box test techniques
-- [[14_Software_Testing_Levels]] — Unit, integration, system, acceptance testing
-- [[11_Software_Quality]] — Quality attributes and quality models
-- [[08_Software_Requirements]] — Requirements as the basis for test design
-- [[10_Software_Evolution]] — Regression testing in maintenance
+- [[02_Boundary_and_Equivalence|Testing Techniques]]: Black-box and white-box test techniques
+- [[05_Integration_and_System|Testing Levels]]: Unit, integration, system, acceptance testing
+- [[../12_Software_Quality/Software Quality Overview|Software Quality]]: Quality attributes and quality models
+- [[../01_Software_Requirements/Software Requirements Overview|Software Requirements]]: Requirements as the basis for test design
+- [[../07_Software_Maintenance/Software Maintenance Overview|Software Evolution]]: Regression testing in maintenance
 
 ---
 

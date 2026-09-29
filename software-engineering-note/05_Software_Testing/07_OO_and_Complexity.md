@@ -22,8 +22,8 @@ Two competing definitions:
 
 | Definition | Implication |
 |---|---|
-| **Method as unit** — smallest compilable/executable component | Reduces OO unit testing to traditional procedural testing; shifts burden to integration; requires mock objects |
-| **Class as unit** — work of one designer, never split across developers | Solves intraclass integration; StateChart supports test case identification; clearer integration goals |
+| **Method as unit:** smallest compilable/executable component | Reduces OO unit testing to traditional procedural testing; shifts burden to integration; requires mock objects |
+| **Class as unit:** work of one designer, never split across developers | Solves intraclass integration; stateChart supports test case identification; clearer integration goals |
 
 In practice, large industrial classes may require the method-as-unit approach. Some go further: an OO unit may be a **subset of class operations** or even a subclass containing only the attributes needed by a single method.
 
@@ -31,23 +31,23 @@ In practice, large industrial classes may require the method-as-unit approach. S
 
 #### 15.1.2 Composition and Encapsulation
 
-Composition (vs. decomposition) is the central OO design strategy — classes are composed with possibly unknown other units. This creates a need for **very strong unit testing** because:
+Composition (vs. decomposition) is the central OO design strategy, classes are composed with possibly unknown other units. This creates a need for **very strong unit testing** because:
 
 - Traditional coupling and cohesion concerns still apply
 - Even with good unit testing, the real burden is at **integration testing**
 - Good encapsulation → loosely coupled classes → better reusability and testability
 
-**Example: Windshield Wiper Controller** — Three possible designs illustrate the tension:
+**Example: Windshield Wiper Controller:** Three possible designs illustrate the tension:
 
 1. **Best:** Lever and dial always report their positions; wiper figures out what to do. Minimal coupling, maximum reusability.
-2. **Tightly coupled:** Lever is "smart" — when in INT state, it queries dial position and tells wiper what speed. Tight coupling reduces reusability.
+2. **Tightly coupled:** Lever is "smart": when in INT state, it queries dial position and tells wiper what speed. Tight coupling reduces reusability.
 3. **Polling:** Wiper polls lever/dial sensors continuously. Forces continuous activity, wasteful.
 
 > **Conclusion:** Good encapsulation results in classes that can more easily be composed (and thus reused) and tested.
 
 #### 15.1.3 Inheritance
 
-Inheritance complicates class-as-unit testing because standalone compilation is sacrificed. **Binder's solution: flattened classes** — expand the class to include all inherited attributes and operations.
+Inheritance complicates class-as-unit testing because standalone compilation is sacrificed. **Binder's solution: flattened classes:** expand the class to include all inherited attributes and operations.
 
 Problems with flattened classes:
 - Not part of the final system → residual uncertainty
@@ -57,7 +57,7 @@ Problems with flattened classes:
 
 #### 15.1.4 Polymorphism
 
-Polymorphism — the same method applies to different objects. When classes are units, polymorphism is covered by class/unit testing, but the redundancy sacrifices hoped-for OO economies.
+Polymorphism, the same method applies to different objects. When classes are units, polymorphism is covered by class/unit testing, but the redundancy sacrifices hoped-for OO economies.
 
 #### 15.1.5 Levels of OO Testing
 
@@ -82,14 +82,14 @@ The OO calendar application (NextDate) is decomposed into classes:
 
 | Class | Responsibility |
 |---|---|
-| **CalendarUnit** (abstract) | Base class — provides `setCurrentPos()` and abstract `increment()` |
-| **testIt** | Test driver — creates Date object, calls `increment()` and `printDate()` |
+| **CalendarUnit** (abstract) | Base class, provides `setCurrentPos()` and abstract `increment()` |
+| **testIt** | Test driver, creates Date object, calls `increment()` and `printDate()` |
 | **Date** | Composed of Day, Month, Year objects; orchestrates increment logic |
 | **Day** | Inherits CalendarUnit; knows its month to determine last day |
 | **Month** | Inherits CalendarUnit; array of month sizes; uses `isLeap()` from Year |
 | **Year** | Inherits CalendarUnit; leap year calculation |
 
-**Key observation:** Cyclomatic complexities of individual operations are uniformly low. `Date.increment` has the highest at only V(G) = 3. This is intentional — encapsulation keeps methods simple. With validity checking, complexities would increase.
+**Key observation:** Cyclomatic complexities of individual operations are uniformly low. `Date.increment` has the highest at only V(G) = 3. This is intentional; encapsulation keeps methods simple. With validity checking, complexities would increase.
 
 ---
 
@@ -111,14 +111,14 @@ For `Date.increment`, three equivalence classes emerge:
 | **D2** | `day is the last day of a non-December month` |
 | **D3** | `day is December 31` |
 
-**Interface complexity is high despite low cyclomatic complexity** — `Date.increment` sends messages to 5 operations across 3 classes. This shifts burden to integration testing (intraclass and interclass).
+**Interface complexity is high despite low cyclomatic complexity:** `Date.increment` sends messages to 5 operations across 3 classes. This shifts burden to integration testing (intraclass and interclass).
 
 #### 15.3.2 Classes as Units
 
 Three views of a class:
-1. **Static view** — source code; ignores inheritance (fix: flattened classes)
-2. **Compile-time view** — when inheritance actually occurs
-3. **Execution-time view** — when objects are instantiated (testing happens here)
+1. **Static view:** source code; ignores inheritance (fix: flattened classes)
+2. **Compile-time view:** when inheritance actually occurs
+3. **Execution-time view:** when objects are instantiated (testing happens here)
 
 Problems:
 - Abstract classes cannot be instantiated
@@ -144,7 +144,7 @@ Integration testing is the least understood level for both traditional and OO so
 
 #### 15.4.1 UML Support for Integration Testing
 
-**Collaboration diagrams** show message traffic among classes — analogous to a Call Graph. They support:
+**Collaboration diagrams** show message traffic among classes, analogous to a Call Graph. They support:
 
 - **Pairwise integration:** Test each class with its adjacent classes (others as stubs). High stub effort, undesirable.
 - **Neighborhood integration:** Start from the "ultracenter" of the graph and expand outward in concentric rings. Reduces stub effort at the expense of diagnostic precision.
@@ -153,9 +153,9 @@ Integration testing is the least understood level for both traditional and OO so
 
 #### 15.4.2 MM-Paths for Object-Oriented Software
 
-> **Definition:** An OO MM-Path is a sequence of method executions linked by messages — **Method/Message Path.**
+> **Definition:** An OO MM-Path is a sequence of method executions linked by messages: **Method/Message Path.**
 
-An MM-path starts with a method and ends when it reaches a method that issues no further messages — the point of **message quiescence**.
+An MM-path starts with a method and ends when it reaches a method that issues no further messages, the point of **message quiescence**.
 
 **Key properties:**
 - The MM-path graph for ooNextDate has cyclomatic complexity V(G) = 23
@@ -164,7 +164,7 @@ An MM-path starts with a method and ends when it reaches a method that issues no
 - At minimum: need a set of MM-paths that covers **every message** (edge coverage)
 - The 13 decision-table test cases from Chapter 8 constitute thorough integration test cases
 
-#### 15.4.3 Framework for OO Data Flow Testing — EMDPNs
+#### 15.4.3 Framework for OO Data Flow Testing: EMDPNs
 
 **Event-/Message-Driven Petri Nets (EMDPN)** extend EDPNs with message places:
 
@@ -227,11 +227,11 @@ Cross-reference use cases against system functions to identify coverage gaps and
 
 | EEUC | Start | End | Input $ | Select Country | Compute | Clear | Exclusive-OR |
 |------|-------|-----|---------|----------------|---------|-------|--------------|
-| 1 | × | — | — | — | — | — | — |
-| 2 | — | × | — | — | — | — | — |
-| 3 | — | — | × | × | × | — | — |
-| 5 | — | — | × | × | × | — | × |
-| 6 | — | — | × | × | — | × | × |
+| 1 | × | N/A | N/A | N/A | N/A | N/A | N/A |
+| 2 | N/A | × | N/A | N/A | N/A | N/A | N/A |
+| 3 | N/A | N/A | × | × | × | N/A | N/A |
+| 5 | N/A | N/A | × | × | × | N/A | × |
+| 6 | N/A | N/A | × | × | N/A | × | × |
 
 ---
 
@@ -259,10 +259,10 @@ Complexity is analyzed as a **static (compile-time) property**, not execution-ti
 
 For structured programs (single-entry, single-exit), the graph is not strongly connected. Two formulas:
 
-| Graph Type | Formula |
-|---|---|
-| Strongly connected (edge added from sink → source) | $V(G) = e - n + p$ |
-| Not strongly connected (structured program) | $V(G) = e - n + 2p$ |
+| Graph Type                                         | Formula             |
+| -------------------------------------------------- | ------------------- |
+| Strongly connected (edge added from sink → source) | $V(G) = e - n + p$  |
+| Not strongly connected (structured program)        | $V(G) = e - n + 2p$ |
 
 **Shortcuts:**
 
@@ -272,15 +272,15 @@ For structured programs (single-entry, single-exit), the graph is not strongly c
    $$V(G) = 1 + \sum_{i=1}^{n} reducedOut(i)$$
    where $reducedOut(n) = outDeg(n) - 1$
 
-   | Construct | Contribution to V(G) |
-   |---|---|
-   | Simple loop | 1 |
+   | Construct | Contribution to V(G) | 
+   | --- | --- |
+   | Simple loop | 1 | 
    | If-Then / If-Then-Else | 1 |
    | Case/Switch with k alternatives | $k - 1$ |
 
 #### 16.1.2 Decisional Complexity
 
-Cyclomatic complexity alone is insufficient — **compound conditions add hidden complexity**.
+Cyclomatic complexity alone is insufficient; **compound conditions add hidden complexity**.
 
 ```pascal
 // V(G) = 2 but hides complexity
@@ -289,7 +289,7 @@ If (a < b + c) AND (b < a + c) AND (c < a + b)
 
 Expanding compound conditions:
 ```pascal
-// V(G) = 4 — makes complexity explicit
+// V(G) = 4 - makes complexity explicit
 If (a < b + c)
   If (b < a + c)
     If (c < a + b)
@@ -299,7 +299,7 @@ If (a < b + c)
 
 This avoids double-counting because the compound condition already contributes 1 to cyclomatic complexity.
 
-#### 16.1.3 Computational Complexity — Halstead Metrics
+#### 16.1.3 Computational Complexity: Halstead Metrics
 
 Based on operators and operands in source code:
 
@@ -338,7 +338,7 @@ At the integration level, concern shifts from unit correctness to **interface co
 
 > **Definition:** A **call graph** is a directed graph where nodes = units (methods/procedures) and edges = messages (calls). For OO: if method A sends a message to method B → edge A→B.
 
-**Observation:** Integration-level call graphs of OO code are generally more complex than those of functionally equivalent procedural code — but unit-level method complexity is lower. This suggests a **"law of conservation of complexity"**: complexity doesn't disappear in OO, it relocates to the integration level.
+**Observation:** Integration-level call graphs of OO code are generally more complex than those of functionally equivalent procedural code, but unit-level method complexity is lower. This suggests a **"law of conservation of complexity":** complexity doesn't disappear in OO, it relocates to the integration level.
 
 #### 16.2.1 Integration-Level Cyclomatic Complexity
 
@@ -354,13 +354,13 @@ $$V(G) = e - n + p = 9 - 7 + 1 = 3$$
 
 #### 16.2.2 Message Traffic Complexity
 
-Cyclomatic complexity at the integration level is also insufficient — not all interfaces are equal. Use an **extended adjacency matrix** where entries count the number of times a method calls another (not just 0/1).
+Cyclomatic complexity at the integration level is also insufficient, not all interfaces are equal. Use an **extended adjacency matrix** where entries count the number of times a method calls another (not just 0/1).
 
 Repeated calls to the same destination add to integration testing effort.
 
 ---
 
-### 16.3 Software Complexity Example — IntegrationNextDate
+### 16.3 Software Complexity Example: IntegrationNextDate
 
 Functional decomposition of NextDate yields:
 
@@ -381,7 +381,7 @@ Integration-level: V(G(call graph)) = 3, plus message traffic increment of 1 = *
 
 ---
 
-### 16.4 Object-Oriented Complexity — CK Metrics
+### 16.4 Object-Oriented Complexity: CK Metrics
 
 The **Chidamber/Kemerer (CK) metrics** are the best-known OO-specific complexity metrics:
 
@@ -400,13 +400,13 @@ Some CK metrics can be derived from call graphs; others require unit-level cyclo
 
 ## Key Takeaways
 
-1. **OO testing is harder than traditional testing** — encapsulation, inheritance, and polymorphism each introduce unique challenges that shift testing burden to integration.
+1. **OO testing is harder than traditional testing:** encapsulation, inheritance, and polymorphism each introduce unique challenges that shift testing burden to integration.
 
-2. **MM-Paths** are the OO analog of traditional integration testing paths — sequences of method executions linked by messages. Message coverage (every edge in the message graph) is the minimum acceptable criterion.
+2. **MM-Paths** are the OO analog of traditional integration testing paths, sequences of method executions linked by messages. Message coverage (every edge in the message graph) is the minimum acceptable criterion.
 
 3. **EMDPNs** provide a formal framework for OO data flow testing, supporting both inheritance-induced and message-induced define/use paths.
 
-4. **System testing is paradigm-independent** — the same EDPN/thread-based approach works regardless of OO vs. procedural implementation. UML artifacts (use cases, EEUCs) provide the basis.
+4. **System testing is paradigm-independent:** the same EDPN/thread-based approach works regardless of OO vs. procedural implementation. UML artifacts (use cases, EEUCs) provide the basis.
 
 5. **Cyclomatic complexity V(G)** = sum of reduced outdegrees + 1. Easy to compute from source code without drawing graphs.
 
@@ -418,11 +418,11 @@ Some CK metrics can be derived from call graphs; others require unit-level cyclo
 
 9. **CK metrics** are the standard for measuring OO-specific complexity: WMC, DIT, NOC, CBO, RFC, LCOM.
 
-10. **"Law of conservation of complexity":** OO doesn't eliminate complexity — it shifts it from unit-level methods to integration-level message traffic.
+10. **"Law of conservation of complexity":** OO doesn't eliminate complexity; it shifts it from unit-level methods to integration-level message traffic.
 
 
 ## Related
 
-- [[Software Testing Overview]] — All testing topics
-- [[05_Integration_and_System]] — Integration testing
-- [[08_Emerging_Topics]] — Emerging testing approaches
+- [[Software Testing Overview]]: All testing topics
+- [[05_Integration_and_System]]: Integration testing
+- [[08_Emerging_Topics]]: Emerging testing approaches

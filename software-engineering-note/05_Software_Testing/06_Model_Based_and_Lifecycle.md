@@ -13,9 +13,9 @@ tags:
 
 ---
 
-## Part 1 — Life Cycle–Based Testing (Ch 11)
+## Part 1: Life Cycle–Based Testing (Ch 11)
 
-Different development life cycles mandate different testing approaches. We shift focus from *how* to test (unit-level techniques from earlier chapters) to *what* to test — and when.
+Different development life cycles mandate different testing approaches. We shift focus from *how* to test (unit-level techniques from earlier chapters) to *what* to test, and when.
 
 ---
 
@@ -33,6 +33,7 @@ The waterfall model (Figure 11.1) defines three canonical levels still used toda
 
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     REQ["Requirements"] --> SYS["System testing"]
     PD["Preliminary design"] --> INT["Integration testing"]
@@ -55,7 +56,7 @@ flowchart LR
 | Fits hierarchical management structures | Very long feedback cycle (customer absent) |
 | Clear exit criteria for each phase | Emphasizes analysis over synthesis |
 | Parallel unit development shortens schedule | Requires massive parallel staffing |
-| — | **"Perfect foresight" required** — faults/omissions at requirements penetrate all phases |
+| N/A | **"Perfect foresight" required:** faults/omissions at requirements penetrate all phases |
 
 The completeness problem is central: all successor life cycles *assume incompleteness* and rely on iteration to gradually arrive at completeness.
 
@@ -63,11 +64,11 @@ The completeness problem is central: all successor life cycles *assume incomplet
 
 ### 11.2 Testing in Iterative Life Cycles
 
-Common shift: from **decomposition** (waterfall) to **composition** (iterative). Analogy: negative sculpture (chipping away marble — one mistake kills the work) vs. positive sculpture (adding/removing wax — errors are fixable). The agile world is positive sculpture.
+Common shift: from **decomposition** (waterfall) to **composition** (iterative). Analogy: negative sculpture (chipping away marble (one mistake kills the work) vs. positive sculpture (adding/removing wax) errors are fixable). The agile world is positive sculpture.
 
 #### 11.2.1 Waterfall Spin-Offs
 
-Three main derivatives, all using a series of **builds/increments**:
+Three main derivatives, all using a series of **builds/increments:**
 
 | Model | Build Identification | Distinguishing Feature |
 |-------|---------------------|----------------------|
@@ -79,8 +80,8 @@ Three main derivatives, all using a series of **builds/increments**:
 
 ```
 System testing splits into:
-├── Regression testing — ensure previous build's functionality still works
-└── Progression testing — verify new functionality
+├── Regression testing - ensure previous build's functionality still works
+└── Progression testing - verify new functionality
 ```
 
 **Regression testing** is essential due to the ripple effect (~20% of changes introduce new faults). Two approaches:
@@ -88,7 +89,7 @@ System testing splits into:
 1. Repeat all previous tests (works well in automated environments)
 2. Devise a smaller, focused set
 
-**Soap Opera Tests:** Long, complex regression test cases (like TV soap operas) that can fail in many ways — if one fails, more focused testing localizes the fault.
+**Soap Opera Tests:** Long, complex regression test cases (like TV soap operas) that can fail in many ways; if one fails, more focused testing localizes the fault.
 
 **Advantages over waterfall:** Earlier synthesis → earlier customer feedback → two deficiencies of waterfall mitigated.
 
@@ -103,7 +104,7 @@ System testing splits into:
 - Requirements modeled in executable formalisms (FSMs, StateCharts, Petri nets)
 - Customer "executes" the spec to observe intended behavior
 - Best for **reactive/event-driven systems** where event ordering matters
-- Key benefit: test cases can be mechanically derived from the model — a form of **structural testing at the system level**
+- Key benefit: test cases can be mechanically derived from the model: a form of **structural testing at the system level**
 - Can be combined with any iterative model
 
 ---
@@ -123,7 +124,7 @@ A project ends when the customer has no more user stories.
 
 - User stories → Release plan → Iteration plan → Pair programming → Unit test → Acceptance test → Small release
 - **Pair programming:** continuous code walkthrough (one coder, one reviewer)
-- **No overall preliminary design** — this is inherently bottom–up
+- **No overall preliminary design:** this is inherently bottom–up
 - Testing at unit and acceptance levels
 
 #### 11.3.2 Test-Driven Development (TDD)
@@ -134,7 +135,7 @@ User story → Tasks → Write test cases FIRST → Run (fail) → Write "just e
 
 | Stage | Action |
 |-------|--------|
-| **RED** | Write test cases for non-existent code — they fail |
+| **RED** | Write test cases for non-existent code, they fail |
 | **GREEN** | Write minimum code to pass all tests |
 | **REFACTOR** | Clean up code; re-run full test suite (≈ regression) |
 
@@ -144,7 +145,7 @@ User story → Tasks → Write test cases FIRST → Run (fail) → Write "just e
 - Greatly simplified fault isolation
 
 **Problems with TDD:**
-1. Bottom–up prohibits high-level design — late user stories may break earlier design choices; refactoring must occur at *design level* too
+1. Bottom–up prohibits high-level design: late user stories may break earlier design choices; refactoring must occur at *design level* too
 2. No guarantee that TDD developers write perfect test cases
 3. Late user stories may be inconsistent with earlier ones
 4. No cross-check at the user-story level
@@ -163,8 +164,8 @@ Most widely used agile life cycle. New vocabulary for old ideas:
 | Scrum master | Team lead/supervisor |
 
 **Testing in Scrum:**
-- **Unit level** — at each day's end (daily build)
-- **Integration/system level** — at sprint end (small release = deliverable product)
+- **Unit level:** at each day's end (daily build)
+- **Integration/system level:** at sprint end (small release = deliverable product)
 - Sprint definition ≈ preliminary design (identifying sequence of sprints)
 
 ---
@@ -173,14 +174,14 @@ Most widely used agile life cycle. New vocabulary for old ideas:
 
 The Go analogy: success requires both **strategy** (overall design) and **tactics** (unit-level development). Agile flavors are strong on tactics, weak on strategy.
 
-#### 11.4.1 Agile Model–Driven Development (AMDD — Ambler)
+#### 11.4.1 Agile Model–Driven Development (AMDD: Ambler)
 
 - **Model just enough** for the current user story
 - Implement with TDD
 - Distinct design step (agnostics call this "Big Design Up Front" / BDUF)
-- Recognition that design HAS a place in agile — but no room for integration/system testing
+- Recognition that design HAS a place in agile: but no room for integration/system testing
 
-#### 11.4.2 Model–Driven Agile Development (MDAD — Jorgensen's proposal)
+#### 11.4.2 Model–Driven Agile Development (MDAD: Jorgensen's proposal)
 
 **Compromise:** TDD as the *tactic* + overall model as the *strategy*.
 
@@ -188,13 +189,13 @@ The Go analogy: success requires both **strategy** (overall design) and **tactic
 Requirements → Project modeling → Iteration modeling → TDD → Iteration integration → Final system testing
 ```
 
-All **three levels of testing** (unit, integration, system) are present — the strategy/overall model supports Model-Based Testing.
+All **three levels of testing** (unit, integration, system) are present, the strategy/overall model supports Model-Based Testing.
 
 ---
 
-## Part 2 — Model-Based Testing (Ch 12)
+## Part 2: Model-Based Testing (Ch 12)
 
-Model-Based Testing (MBT) is the meeting place of software modeling and testing. The process of creating a model yields deeper insight into the system being tested — especially with executable models (FSMs, Petri nets, StateCharts).
+Model-Based Testing (MBT) is the meeting place of software modeling and testing. The process of creating a model yields deeper insight into the system being tested, especially with executable models (FSMs, Petri nets, StateCharts).
 
 ### The MBT Process
 
@@ -218,7 +219,7 @@ Choosing an appropriate model depends on:
 2. **Nature of the system** being modeled
 3. **Analyst's ability** to use the model
 
-The challenge mirrors epistemology: languages evolve to meet expressive needs — modeling languages are no different.
+The challenge mirrors epistemology: languages evolve to meet expressive needs, modeling languages are no different.
 
 #### 12.2.1 Peterson's Lattice
 
@@ -241,7 +242,7 @@ Marked graphs  ←  Finite State Machines
 - Marked graphs are formal duals of FSMs (formalized data flow diagrams)
 - The lattice answers: "is this model powerful enough for my application?"
 
-**Golden rule:** Choose a model that is **both necessary and sufficient** — neither too weak (important behaviors untested) nor too strong (wasted modeling effort).
+**Golden rule:** Choose a model that is **both necessary and sufficient:** neither too weak (important behaviors untested) nor too strong (wasted modeling effort).
 
 #### StateCharts in Peterson's Lattice
 
@@ -251,7 +252,7 @@ StateCharts (Harel) are at least equivalent to, and probably more expressive tha
 Extended Petri nets  ←  StateCharts
 ```
 
-- StateCharts express **true concurrency** (concurrent regions) — not expressible in standard Petri nets
+- StateCharts express **true concurrency** (concurrent regions): not expressible in standard Petri nets
 - Swim Lane Petri Nets (DeVries, 2013) attempt to bridge this gap using UML swim lanes for parallel activities
 - Event-Driven Petri Nets extend this further for systems-of-systems (Chapter 17)
 
@@ -278,16 +279,16 @@ Peterson analyzed four mainline models by what behavioral issues they can repres
 | Hierarchy charts | StateCharts |
 | Class/object diagrams | Petri nets |
 
-Behavioral models have **varying degrees of expressive capability** — the technical equivalent of being able to express nuanced concepts in different languages. MBT leans heavily on behavioral models because they directly yield threads of system behavior → test cases.
+Behavioral models have **varying degrees of expressive capability:** the technical equivalent of being able to express nuanced concepts in different languages. MBT leans heavily on behavioral models because they directly yield threads of system behavior → test cases.
 
 ---
 
 ## Key Takeaways
 
 1. **Life cycle choice determines testing strategy.** Waterfall prescribes bottom–up by abstraction; agile redistributes testing into daily/sprint cycles with heavy regression.
-2. **Regression testing is the price of iteration.** Every build/increment demands verification that old functionality still works — automated testing makes this practical.
+2. **Regression testing is the price of iteration.** Every build/increment demands verification that old functionality still works; automated testing makes this practical.
 3. **TDD inverts specification and testing.** Tests become the spec; the code is written to satisfy tests. This provides excellent fault isolation but offers no cross-story consistency check.
-4. **MBT depends on model choice.** Peterson's lattice guides model selection — pick a model that is necessary and sufficient. StateCharts sit near the top of current expressive power.
+4. **MBT depends on model choice.** Peterson's lattice guides model selection; pick a model that is necessary and sufficient. StateCharts sit near the top of current expressive power.
 5. **Behavior models → test cases.** Threads of system behavior extracted from FSMs, Petri nets, or StateCharts can be mechanically transformed into system-level test cases.
 6. **MDAD bridges agile and traditional.** TDD tactics + overall model strategy retains all three test levels (unit, integration, system) while keeping the agile speed.
 
@@ -295,9 +296,9 @@ Behavioral models have **varying degrees of expressive capability** — the tech
 
 ## Related Notes
 
-- [[02 Test-Driven Development]] — TDD in detail
-- [[01 Test Planning & Design]] — Test strategy and planning
-- [[02 Functional Testing]] — Black-box techniques (equivalence classes, boundary value, decision tables)
+- [[02 Test-Driven Development]]: TDD in detail
+- [[01 Test Planning & Design]]: Test strategy and planning
+- [[02 Functional Testing]]: Black-box techniques (equivalence classes, boundary value, decision tables)
 - Chapter 13 (next): Model-based strategies for **integration testing**
 - Chapter 14: Model-based **system testing**
 - Chapter 17: Testing **systems of systems** with Swim Lane Petri Nets

@@ -7,7 +7,7 @@ tags:
 
 # 04 Test Reporting & Metrics
 
-Testing without reporting is invisible. Stakeholders don't read test code — they need high-level visibility into quality. Metrics and dashboards turn test results into actionable information.
+Testing without reporting is invisible. Stakeholders don't read test code; they need high-level visibility into quality. Metrics and dashboards turn test results into actionable information.
 
 ---
 
@@ -111,6 +111,6 @@ SonarQube Dashboard:
 
 ## Sources
 
-- JaCoCo — https://www.jacoco.org/
-- SonarQube — https://www.sonarsource.com/products/sonarqube/
-- Allure — https://docs.qameta.io/allure-report/
+- JaCoCo: https://www.jacoco.org/
+- SonarQube: https://www.sonarsource.com/products/sonarqube/
+- Allure: https://docs.qameta.io/allure-report/

@@ -52,6 +52,7 @@ AI/ML systems present fundamentally different testing challenges compared to tra
 **Testing pyramid for AI/ML:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     subgraph "ML Testing Pyramid"
         A[Data Testing<br/>Foundation] --> B[Model Testing<br/>Core]
@@ -92,6 +93,7 @@ graph TD
 ### 2.2 Testing Strategy for AI/ML
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Define Requirements] --> B[Data Testing]
     B --> C[Model Development Testing]
@@ -136,6 +138,7 @@ Data quality is the foundation of ML system reliability. "Garbage in, garbage ou
 ### 3.2 Training Data Validation
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Raw Data] --> B[Schema Validation]
     B --> C[Statistical Profiling]
@@ -240,6 +243,7 @@ PSI > 0.25: Significant change, retrain
 ### 4.4 Metric Selection Guide
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Problem Type] --> B{Classification?}
     B -->|Yes| C{Balanced classes?}
@@ -294,6 +298,7 @@ A **metamorphic relation (MR)** specifies how the output should change when the 
 ### 5.3 Metamorphic Testing Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Identify Metamorphic Relations] --> B[Create Source Test Cases]
     B --> C[Generate Follow-up Test Cases<br/>by applying transformations]
@@ -356,6 +361,7 @@ graph TD
 ### 6.3 Fairness Testing Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Define Protected Attributes] --> B[Analyze Training Data]
     B --> C[Measure Baseline Fairness]
@@ -425,6 +431,7 @@ graph TD
 ### 7.3 Adversarial Testing Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Define Threat Model] --> B[Select Attack Methods]
     B --> C[Generate Adversarial Examples]
@@ -468,6 +475,7 @@ graph TD
 ### 8.1 MLOps Testing Layers
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     subgraph "Code Testing"
         A[Unit Tests] --> B[Integration Tests]
@@ -526,6 +534,7 @@ graph TD
 **Shadow deployment architecture:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[User Request] --> B[Production Model]
     A --> C[Shadow Model]
@@ -579,6 +588,7 @@ graph LR
 ### 9.3 Explainability Testing Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Select Explanation Method] --> B[Generate Explanations]
     B --> C[Validate Explanations]
@@ -634,6 +644,7 @@ graph TD
 **Chaos Engineering Process:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Define Steady State] --> B[Hypothesize: System Handles Failure]
     B --> C[Introduce Real-World Events]
@@ -687,6 +698,7 @@ graph TD
 **Contract Testing Process:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph "Consumer Side"
         A[Consumer Test] --> B[Generate Contract]
@@ -725,6 +737,7 @@ graph LR
 **API Testing Pyramid:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Contract Tests<br/>Fast, many] --> B[Integration Tests<br/>Medium speed]
     B --> C[E2E Tests<br/>Slow, few]
@@ -748,6 +761,7 @@ graph TD
 ## 11. Relationships to Other KAs
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     E[11 AI/ML Testing & Emerging] --> A[01 Foundations]
     E --> B[02 Testing in Lifecycle]
@@ -764,11 +778,11 @@ graph TD
 ```
 
 **Cross-references:**
-- [[01_Foundations_of_Testing|Foundations of Testing]]: Core testing concepts adapted for AI/ML
-- [[02_Testing_in_the_Software_Lifecycle|Testing in the Software Lifecycle]]: MLOps lifecycle integration
-- [[03_Test_Levels|Test Levels]]: AI/ML test levels (data, model, system)
-- [[07_Structural_Testing_Techniques|Structural Testing Techniques]]: Coverage concepts for ML
-- [[08_Test_Techniques|Test Techniques]]: Metamorphic testing as a technique
+- [[01_Testing_Fundamentals|Foundations of Testing]]: Core testing concepts adapted for AI/ML
+- [[06_Model_Based_and_Lifecycle|Testing in the Software Lifecycle]]: MLOps lifecycle integration
+- [[05_Integration_and_System|Test Levels]]: AI/ML test levels (data, model, system)
+- [[03_Decision_Table_and_Path|Structural Testing Techniques]]: Coverage concepts for ML
+- [[02_Boundary_and_Equivalence|Test Techniques]]: Metamorphic testing as a technique
 - [[09_Testing_Tools_and_Standards|Testing Tools and Standards]]: ML testing tools
 - [[10_Domain_Specific_Testing|Domain-Specific Testing]]: AI in automotive, healthcare, finance
 - [[QA/|Quality Assurance]]: Quality standards for AI systems
@@ -798,8 +812,8 @@ The testing discipline continues to evolve with technology, requiring testers to
 
 ## See Also
 
-- [[01_Foundations_of_Testing|Foundations of Testing]]
-- [[08_Test_Techniques|Test Techniques]]
+- [[01_Testing_Fundamentals|Foundations of Testing]]
+- [[02_Boundary_and_Equivalence|Test Techniques]]
 - [[09_Testing_Tools_and_Standards|Testing Tools and Standards]]
 - [[10_Domain_Specific_Testing|Domain-Specific Testing]]
 

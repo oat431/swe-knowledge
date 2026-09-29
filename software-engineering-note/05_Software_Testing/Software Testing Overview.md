@@ -7,16 +7,16 @@ tags:
   - test-driven-development
 ---
 
-# Software Testing — Overview
+# Software Testing: Overview
 
 > **Source:** SWEBOK v4 Chapter 05
 > **Purpose:** Dynamically validate that a system under test provides expected behaviors on a finite set of suitably selected test cases.
 
 ## What Is This?
 
-Software testing is the process of executing a system (the SUT — system under test) to evaluate whether it satisfies specified requirements and to identify defects. It reveals the gap between what we intended to build and what we actually built. Testing is far more than running the program — it is a disciplined engineering activity requiring strategic decisions about which tests to write, how to achieve maximum coverage with minimum effort, and when to stop testing.
+Software testing is the process of executing a system (the SUT (system under test) to evaluate whether it satisfies specified requirements and to identify defects. It reveals the gap between what we intended to build and what we actually built. Testing is far more than running the program) it is a disciplined engineering activity requiring strategic decisions about which tests to write, how to achieve maximum coverage with minimum effort, and when to stop testing.
 
-SWEBOK v4 makes this the largest chapter (35 pages), reflecting testing's breadth. It distinguishes between faults (causes in the code) and failures (observed effects during execution), and establishes that exhaustive testing is impossible — even simple programs have near-infinite execution domains. The oracle problem (determining expected outcomes for comparison) remains one of testing's fundamental challenges.
+SWEBOK v4 makes this the largest chapter (35 pages), reflecting testing's breadth. It distinguishes between faults (causes in the code) and failures (observed effects during execution), and establishes that exhaustive testing is impossible, even simple programs have near-infinite execution domains. The oracle problem (determining expected outcomes for comparison) remains one of testing's fundamental challenges.
 
 The chapter covers test levels (unit → integration → system → acceptance), techniques (black-box, white-box, experience-based, mutation, usage-based), measures (coverage, fault density, reliability growth), processes (organizational → management → dynamic), and modern concerns: testing AI/ML systems, shift-left practices (TDD, ATDD, DevOps), fuzz testing for security, and metamorphic testing for non-deterministic systems.
 
@@ -60,24 +60,24 @@ The chapter covers test levels (unit → integration → system → acceptance),
 ## My Notes
 
 ### Testing: A Craftsman's Approach (Jorgensen)
-- [[01_Testing_Fundamentals]] — Definitions, test cases, discrete math, graph theory for testers
-- [[02_Boundary_and_Equivalence]] — Boundary value analysis, equivalence class testing
-- [[03_Decision_Table_and_Path]] — Decision tables, path testing, DD-paths, coverage metrics
-- [[04_Data_Flow_and_Retrospective]] — Define/use testing, slice-based testing, spec vs code pendulum
-- [[05_Integration_and_System]] — Integration strategies, system testing, use cases, risk-based testing
-- [[06_Model_Based_and_Lifecycle]] — Model-based testing, life cycle-based testing
-- [[07_OO_and_Complexity]] — OO testing, cyclomatic complexity, Halstead metrics
-- [[08_Emerging_Topics]] — Feature-based, TDD, all pairs, mutation testing, reviews
+- [[01_Testing_Fundamentals]]: Definitions, test cases, discrete math, graph theory for testers
+- [[02_Boundary_and_Equivalence]]: Boundary value analysis, equivalence class testing
+- [[03_Decision_Table_and_Path]]: Decision tables, path testing, DD-paths, coverage metrics
+- [[04_Data_Flow_and_Retrospective]]: Define/use testing, slice-based testing, spec vs code pendulum
+- [[05_Integration_and_System]]: Integration strategies, system testing, use cases, risk-based testing
+- [[06_Model_Based_and_Lifecycle]]: Model-based testing, life cycle-based testing
+- [[07_OO_and_Complexity]]: OO testing, cyclomatic complexity, Halstead metrics
+- [[08_Emerging_Topics]]: Feature-based, TDD, all pairs, mutation testing, reviews
 
 ### QA Practice
 - [[QA/|QA]]
 
 ## Relationship to Other KAs
 
-- **[[Software Requirements Overview|Software Requirements]]** — Requirements are the basis for test cases and acceptance criteria; traceability links requirements to test coverage
-- **[[Software Construction Overview|Software Construction]]** — Unit testing and TDD are construction practices; developers are the first testers
-- **[[Software Design Note Overview|Software Design]]** — Design for testability; interface specifications feed integration testing
-- **[[Software Engineering Operations Overview|Software Engineering Operations]]** — Continuous testing in CI/CD pipelines and production monitoring blur the boundary between testing and operations
+- **[[Software Requirements Overview|Software Requirements]]:** Requirements are the basis for test cases and acceptance criteria; traceability links requirements to test coverage
+- **[[Software Construction Overview|Software Construction]]:** Unit testing and TDD are construction practices; developers are the first testers
+- **[[Software Design Note Overview|Software Design]]:** Design for testability; interface specifications feed integration testing
+- **[[Software Engineering Operations Overview|Software Engineering Operations]]:** Continuous testing in CI/CD pipelines and production monitoring blur the boundary between testing and operations
 
 ---
 

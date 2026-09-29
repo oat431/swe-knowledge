@@ -14,6 +14,7 @@ TDD flips the script: write the test first, watch it fail, write the code to mak
 ## Red → Green → Refactor
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     R[🔴 RED<br/>Write a failing test] --> G[🟢 GREEN<br/>Write minimal code<br/>to make it pass]
     G --> RF[🔵 REFACTOR<br/>Clean up code<br/>while tests stay green]
@@ -45,7 +46,7 @@ graph LR
 
 // 🟢 GREEN: minimal code
 class FizzBuzz {
-    static String of(int n) { return "1"; }     // Hardcoded — just enough to pass
+    static String of(int n) { return "1"; }     // Hardcoded - just enough to pass
 }
 
 @Test void shouldReturn2For2() {

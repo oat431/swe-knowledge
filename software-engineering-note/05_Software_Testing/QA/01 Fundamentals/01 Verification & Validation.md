@@ -28,6 +28,7 @@ Verification asks: "Did we build it right?" Validation asks: "Did we build the r
 ### V-Model
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     Req[Requirements] -->|verify| AT[Acceptance Tests]
     Arch[Architecture] -->|verify| ST[System Tests]
@@ -35,7 +36,7 @@ graph TD
     Code[Code] -->|verify| UT[Unit Tests]
 ```
 
-Every development phase has a corresponding testing phase. Test planning starts when requirements are written — not when code is done.
+Every development phase has a corresponding testing phase. Test planning starts when requirements are written, not when code is done.
 
 ### Waterfall
 
@@ -59,6 +60,7 @@ Testing happens every sprint. QA is embedded in the team, not a separate phase.
 Move testing earlier in the lifecycle. The earlier you find a bug, the cheaper it is to fix.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph "Traditional"
         TC1[Code] --> TC2[Code] --> TC3[Code] --> TC4[Test] --> TC5[Bug! expensive]

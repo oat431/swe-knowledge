@@ -31,13 +31,13 @@ created: 2026-07-21
 
 ## 1. Overview
 
-Domain-specific testing addresses the unique challenges, standards, and practices that emerge when software operates in specialized contexts. While general testing principles from [[01_Foundations_of_Testing|Foundations of Testing]] apply universally, each domain introduces constraints related to:
+Domain-specific testing addresses the unique challenges, standards, and practices that emerge when software operates in specialized contexts. While general testing principles from [[01_Testing_Fundamentals|Foundations of Testing]] apply universally, each domain introduces constraints related to:
 
-- **Regulatory compliance**: Mandatory standards (ISO 26262, DO-178C, IEC 62304)
-- **Safety requirements**: Human life or physical harm implications
-- **Environmental constraints**: Hardware integration, network variability, resource limits
-- **Domain-specific failure modes**: Timing faults, protocol violations, data integrity
-- **Specialized tooling**: Hardware-in-the-loop simulators, protocol analyzers, domain-specific frameworks
+- **Regulatory compliance:** Mandatory standards (ISO 26262, DO-178C, IEC 62304)
+- **Safety requirements:** Human life or physical harm implications
+- **Environmental constraints:** Hardware integration, network variability, resource limits
+- **Domain-specific failure modes:** Timing faults, protocol violations, data integrity
+- **Specialized tooling:** Hardware-in-the-loop simulators, protocol analyzers, domain-specific frameworks
 
 **Domain impact on testing:**
 
@@ -91,6 +91,7 @@ Domain-specific testing addresses the unique challenges, standards, and practice
 ### 2.2 Safety Testing Levels
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     subgraph "Development Testing"
         A[Unit Testing] --> B[Software Integration Testing]
@@ -146,6 +147,7 @@ graph TD
 ### 3.1 IoT Architecture and Test Levels
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     subgraph "Edge Layer"
         A[Devices/Sensors] --> B[Edge Gateways]
@@ -294,6 +296,7 @@ graph TD
 ### 5.3 Mobile Testing Strategy
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Requirements] --> B[Test Planning]
     B --> C{Test Pyramid}
@@ -473,6 +476,7 @@ graph TD
 ### 9.1 Embedded System Testing Layers
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     subgraph "Hardware Layer"
         A[Processor, Memory, Peripherals]
@@ -585,6 +589,7 @@ graph TD
 ### 11.2 Smart Contract Testing
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Smart Contract Code] --> B[Static Analysis<br/>Slither, Mythril]
     A --> C[Unit Tests<br/>Hardhat, Foundry]
@@ -619,6 +624,7 @@ graph TD
 ### 12.1 Testing Rigor Comparison
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph "Low Rigor"
         A[Gaming]
@@ -673,6 +679,7 @@ Despite domain differences, several testing needs are universal:
 ## 13. Relationships to Other KAs
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     D[10 Domain-Specific Testing] --> A[01 Foundations]
     D --> B[02 Testing in Lifecycle]
@@ -685,11 +692,11 @@ graph TD
 ```
 
 **Cross-references:**
-- [[01_Foundations_of_Testing|Foundations of Testing]]: Core concepts apply to all domains
-- [[02_Testing_in_the_Software_Lifecycle|Testing in the Software Lifecycle]]: Domain standards dictate lifecycle processes
-- [[03_Test_Levels|Test Levels]]: Domain requirements determine test level emphasis
-- [[07_Structural_Testing_Techniques|Structural Testing Techniques]]: Coverage requirements vary by domain safety level
-- [[08_Test_Techniques|Test Techniques]]: Techniques adapted for domain contexts
+- [[01_Testing_Fundamentals|Foundations of Testing]]: Core concepts apply to all domains
+- [[06_Model_Based_and_Lifecycle|Testing in the Software Lifecycle]]: Domain standards dictate lifecycle processes
+- [[05_Integration_and_System|Test Levels]]: Domain requirements determine test level emphasis
+- [[03_Decision_Table_and_Path|Structural Testing Techniques]]: Coverage requirements vary by domain safety level
+- [[02_Boundary_and_Equivalence|Test Techniques]]: Techniques adapted for domain contexts
 - [[09_Testing_Tools_and_Standards|Testing Tools and Standards]]: Domain-specific tools and standards
 - [[11_AI_ML_Testing_and_Emerging|AI/ML Testing and Emerging]]: AI testing in autonomous vehicles, healthcare AI
 - [[QA/|Quality Assurance]]: Quality standards and processes
@@ -698,9 +705,9 @@ graph TD
 
 ## See Also
 
-- [[01_Foundations_of_Testing|Foundations of Testing]]
-- [[03_Test_Levels|Test Levels]]
-- [[08_Test_Techniques|Test Techniques]]
+- [[01_Testing_Fundamentals|Foundations of Testing]]
+- [[05_Integration_and_System|Test Levels]]
+- [[02_Boundary_and_Equivalence|Test Techniques]]
 - [[09_Testing_Tools_and_Standards|Testing Tools and Standards]]
 - [[11_AI_ML_Testing_and_Emerging|AI/ML Testing and Emerging]]
 
@@ -713,7 +720,7 @@ graph TD
 3. DO-178C:2011, Software Considerations in Airborne Systems and Equipment Certification
 4. IEC 62304:2006+A1:2015, Medical device software - Software life cycle processes
 5. IEC 61508:2010, Functional safety of electrical/electronic/programmable electronic safety-related systems
-6. FDA 21 CFR Part 11, Electronic Records; Electronic Signatures
+6. FDA 21 CFR Part 11, Electronic Records; electronic Signatures
 7. PCI-DSS v4.0, Payment Card Industry Data Security Standard
 8. ISO/IEC 27001:2022, Information security management systems
 9. NIST SP 800-53, Security and Privacy Controls

@@ -14,9 +14,9 @@ tags:
 > **Source:** Jorgensen, *Software Testing: A Craftsman's Approach*, Chapters 9–10
 > **Sibling notes:** [[01_Testing_Fundamentals]], [[02_Boundary_and_Equivalence]], [[03_Decision_Table_and_Path]], [[05_Integration_and_System]]
 
-## Chapter 9 — Data Flow Testing
+## Chapter 9: Data Flow Testing
 
-Data flow testing focuses on the points at which variables receive values (definitions) and the points at which those values are used. It serves as a "reality check" on path testing — while cumbersome at the unit level, it is well suited for object-oriented code. Two mainline forms exist: **define/use testing** (Rapps–Weyuker metrics) and **slice-based testing**.
+Data flow testing focuses on the points at which variables receive values (definitions) and the points at which those values are used. It serves as a "reality check" on path testing, while cumbersome at the unit level, it is well suited for object-oriented code. Two mainline forms exist: **define/use testing** (Rapps–Weyuker metrics) and **slice-based testing**.
 
 ### 9.1 Define/Use Testing
 
@@ -37,9 +37,9 @@ Given a program *P* with program graph *G(P)* and variables *V*:
 
 Static analysis can detect three classic faults without executing code:
 
-1. **Variable defined but never used** — dead definition, possible missing logic
-2. **Variable used before defined** — uninitialized value, likely bug
-3. **Variable defined twice before use** — first definition killed, possible logic error
+1. **Variable defined but never used:** dead definition, possible missing logic
+2. **Variable used before defined:** uninitialized value, likely bug
+3. **Variable defined twice before use:** first definition killed, possible logic error
 
 > These were historically detected via compiler-generated concordances (still popular with COBOL).
 
@@ -48,16 +48,16 @@ Static analysis can detect three classic faults without executing code:
 The commission program computes commission on locks, stocks, and barrels sold. Key data flow points:
 
 - **locks** variable: defined at nodes 13 (prime read) and 19 (loop re-read); used at node 14 (P-use, while-loop sentinel) and 16 (C-use, accumulation). Four du-paths:
-  - `p1 = <13, 14>` — prime → P-use
-  - `p2 = <13, 14, 15, 16>` — prime → C-use through loop body
-  - `p3 = <19, 20, 14>` — loop re-read → P-use
-  - `p4 = <19, 20, 14, 15, 16>` — loop re-read → C-use
+  - `p1 = <13, 14>`: prime → P-use
+  - `p2 = <13, 14, 15, 16>`: prime → C-use through loop body
+  - `p3 = <19, 20, 14>`: loop re-read → P-use
+  - `p4 = <19, 20, 14, 15, 16>`: loop re-read → C-use
 
-- **totalLocks**: defined at 10 (init) and 16 (accumulation); used at 16, 21, 24. Du-path `p6 = <10, …, 16, …, 21>` is not definition-clear because node 16 re-defines totalLocks inside the loop.
+- **totalLocks:** defined at 10 (init) and 16 (accumulation); used at 16, 21, 24. Du-path `p6 = <10, …, 16, …, 21>` is not definition-clear because node 16 re-defines totalLocks inside the loop.
 
-- **sales**: single defining node at 27 → all du-paths are automatically definition-clear. Multiple C-uses and P-uses branch from it.
+- **sales:** single defining node at 27 → all du-paths are automatically definition-clear. Multiple C-uses and P-uses branch from it.
 
-- **commission**: defined at six nodes (31, 32, 33, 36, 37, 39); used finally at 41. Analysis is tedious — the "built-up" intermediate definitions create many du-paths, some infeasible.
+- **commission:** defined at six nodes (31, 32, 33, 36, 37, 39); used finally at 41. Analysis is tedious, the "built-up" intermediate definitions create many du-paths, some infeasible.
 
 #### Rapps–Weyuker Data Flow Coverage Metrics
 
@@ -66,6 +66,7 @@ Hierarchy (top = strongest, bottom = weakest):
 
 All-Paths
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     ALL_DU["All-DU-Paths"] --> ALL_USES["All-Uses"]
     ALL_USES --> CU_SOME_PU["All-C-Uses / Some P-Uses"]
@@ -91,9 +92,9 @@ flowchart TD
 
 In procedural code, define/use is context-free (assumed within a unit). OO changes this:
 
-- **Aggregation**: variables span class boundaries
-- **Inheritance**: definitions and uses can be in different classes in a hierarchy
-- **Dynamic binding/polymorphism**: the actual definition/use target is resolved at runtime
+- **Aggregation:** variables span class boundaries
+- **Inheritance:** definitions and uses can be in different classes in a hierarchy
+- **Dynamic binding/polymorphism:** the actual definition/use target is resolved at runtime
 
 → Data flow testing for OO moves from **unit level** to **integration level**.
 
@@ -122,31 +123,31 @@ A **program slice** is the set of program statements that contribute to (or affe
 | Location use | L-use | Pointers, subscripts, addresses |
 | Iteration use | I-use | Internal counters, loop indices |
 
-**Definition types**: I-def (defined by input) and A-def (defined by assignment).
+**Definition types:** I-def (defined by input) and A-def (defined by assignment).
 
 #### Slice Splicing
 
 Gallagher & Lyle's concept: build a program bottom-up by coding and testing compilable slices separately, then "splicing" them together. A precursor to agile/extreme programming practices.
 
 The commission program can be split into four slices:
-1. **Slice 1**: locks loop → lockSales → sales (sentinel-controlled input)
-2. **Slice 2**: stocks accumulation → stockSales → sales
-3. **Slice 3**: barrels accumulation → barrelSales → sales
-4. **Slice 4**: commission calculation from sales value
+1. **Slice 1:** locks loop → lockSales → sales (sentinel-controlled input)
+2. **Slice 2:** stocks accumulation → stockSales → sales
+3. **Slice 3:** barrels accumulation → barrelSales → sales
+4. **Slice 4:** commission calculation from sales value
 
 → Each slice is independently compilable and testable before merging.
 
 #### Slice Lattice
 
-Slices form a partially ordered set under subset inclusion (⊆). The lattice (Figure 9.10 in Jorgensen) shows how smaller slices compose into larger ones — useful for understanding data dependencies and guiding integration test order.
+Slices form a partially ordered set under subset inclusion (⊆). The lattice (Figure 9.10 in Jorgensen) shows how smaller slices compose into larger ones, useful for understanding data dependencies and guiding integration test order.
 
 #### Style Guidelines for Slicing
 
 1. Never slice on a variable that doesn't appear in the target statement fragment
 2. Keep slices on one variable (multi-variable slices = union of single-variable slices)
-3. Slice at all A-def nodes (assignment statements) — shows all du-paths of contributing variables
+3. Slice at all A-def nodes (assignment statements): shows all du-paths of contributing variables
 4. O-use slices can be expressed as unions of A-def/I-def slices
-5. Slice at all P-use nodes — shows how predicate variables got their values (very useful for decision-heavy programs like Triangle and NextDate)
+5. Slice at all P-use nodes: shows how predicate variables got their values (very useful for decision-heavy programs like Triangle and NextDate)
 6. Consider making slices compilable: add data declarations so each slice is independently executable
 
 #### Program Slicing Tools
@@ -167,7 +168,7 @@ Manual slicing is not viable at scale. Selected tools:
 
 ---
 
-## Chapter 10 — Retrospective on Unit Testing
+## Chapter 10: Retrospective on Unit Testing
 
 ### When Should Unit Testing Stop?
 
@@ -179,11 +180,11 @@ Seven possible answers, from worst to ideal:
 | 2 | When continued testing causes no new *failures* | Supported by reliability models |
 | 3 | When continued testing reveals no new *faults* | Better; also model-supported |
 | 4 | When you cannot think of new test cases | Good *if* you've followed systematic precepts; bad if due to lack of motivation |
-| 5 | When you reach a point of diminishing returns | Strong appeal — cost/risk trade-off must be clear |
+| 5 | When you reach a point of diminishing returns | Strong appeal; cost/risk trade-off must be clear |
 | 6 | **When mandated coverage has been attained** | Pretty good answer; structural coverage as cross-check on functional testing |
 | 7 | When all faults have been removed | Cannot be guaranteed |
 
-> **The coverage answer (#6)**: using structural testing as a cross-check on functional testing yields powerful results.
+> **The coverage answer (#6):** using structural testing as a cross-check on functional testing yields powerful results.
 
 ### 10.1 The Test Method Pendulum
 
@@ -207,9 +208,9 @@ Testing methods swing between two extremes of **low semantic content**, becoming
                                               (handles complex logical combos)
 ```
 
-**Key insight from the pendulum**:
-- **Toward extremes**: test case identification gets *easier* but *less effective*; easier to automate
-- **Toward center**: higher semantic meaning → harder to automate → *more effective*
+**Key insight from the pendulum:**
+- **Toward extremes:** test case identification gets *easier* but *less effective*; easier to automate
+- **Toward center:** higher semantic meaning → harder to automate → *more effective*
 - Path-based testing obscures infeasible paths (purely topological)
 - Data flow testing detects dependencies that create infeasible paths
 - Slice-based testing gets closest to code semantics
@@ -227,7 +228,7 @@ This resolves the gaps/redundancies problem that plagues pure specification-base
 
 ### McCabe's Insight
 
-> *"These are purely criteria that measure the quality of testing, and not a procedure to identify test cases."* — McCabe, 1982
+> *"These are purely criteria that measure the quality of testing, and not a procedure to identify test cases."* *(McCabe, 1982)*
 
 Basis path testing gives a *lower boundary* on how much testing is necessary. It is a metric, not a recipe.
 
@@ -235,18 +236,18 @@ Basis path testing gives a *lower boundary* on how much testing is necessary. It
 
 ## Key Takeaways
 
-1. **Data flow testing bridges path testing and semantic understanding** — du-paths capture how data moves through a program, revealing faults that pure control-flow testing misses.
+1. **Data flow testing bridges path testing and semantic understanding:** du-paths capture how data moves through a program, revealing faults that pure control-flow testing misses.
 
 2. **The Rapps–Weyuker hierarchy** provides a systematic spectrum of coverage rigor, from All-Defs (minimal) to All-DU-Paths (comprehensive but often infeasible).
 
 3. **Define/reference anomalies** (defined-but-unused, used-before-defined, twice-defined) are classic faults detectable by static analysis.
 
-4. **Program slices** decompose a program into functionally meaningful components — powerful for comprehension, maintenance, and bottom-up testing via slice splicing.
+4. **Program slices** decompose a program into functionally meaningful components, powerful for comprehension, maintenance, and bottom-up testing via slice splicing.
 
 5. **Slices form a lattice** under subset inclusion, showing how data dependencies compose hierarchically.
 
 6. **The test method pendulum** teaches that the most effective testing combines structural and specification-based approaches, using coverage metrics as a cross-check rather than a goal.
 
-7. **When to stop**: coverage attainment (#6) is the most practical answer — structural coverage validates that functional testing has adequate breadth.
+7. **When to stop:** coverage attainment (#6) is the most practical answer; structural coverage validates that functional testing has adequate breadth.
 
-8. **Neither extreme suffices alone**: pure spec-based testing hides gaps/redundancies; pure code-based testing cannot reveal missing functionality. The craftsman uses both.
+8. **Neither extreme suffices alone:** pure spec-based testing hides gaps/redundancies; pure code-based testing cannot reveal missing functionality. The craftsman uses both.

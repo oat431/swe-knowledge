@@ -7,13 +7,14 @@ tags:
 
 # 02 Functional Testing
 
-Functional testing verifies that the software does what it's supposed to do. It tests **what** the system does — given input X, output should be Y.
+Functional testing verifies that the software does what it's supposed to do. It tests **what** the system does: given input X, output should be Y.
 
 ---
 
 ## The Test Pyramid in Practice
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     E2E[E2E Tests<br/>Real browser, real API, real DB<br/>Minutes, few tests]
     I[Integration Tests<br/>Test service + DB, service + API<br/>Seconds]
@@ -50,7 +51,7 @@ void shouldCalculateOrderTotal() {
 
 ## Integration Testing
 
-Test multiple units working together — with real dependencies.
+Test multiple units working together, with real dependencies.
 
 ```java
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
@@ -103,8 +104,8 @@ Re-run existing tests after every change to ensure nothing broke.
 | Approach | When |
 |----------|------|
 | **Full regression** | Before major release |
-| **Smoke testing** | Every build — "does the app boot and not crash?" |
-| **Sanity testing** | Quick check after a small fix — "did this specific thing get fixed?" |
+| **Smoke testing** | Every build, "does the app boot and not crash?" |
+| **Sanity testing** | Quick check after a small fix: "did this specific thing get fixed?" |
 | **Selective regression** | Test only modules that changed |
 
 ---
@@ -127,4 +128,4 @@ The final question: "Will the user accept this?"
 ## Sources
 
 - ISTQB Foundation Level Syllabus
-- TestContainers — https://testcontainers.com/
+- TestContainers: https://testcontainers.com/

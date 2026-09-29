@@ -7,7 +7,7 @@ tags:
 
 # 03 Frontend Automation
 
-Frontend tests validate what users actually see and interact with. They're slower and flakier than backend tests — use them sparingly at the E2E level, heavily at the component level.
+Frontend tests validate what users actually see and interact with. They're slower and flakier than backend tests; use them sparingly at the E2E level, heavily at the component level.
 
 ---
 
@@ -56,7 +56,7 @@ test('calls onCancel when cancel button clicked', () => {
 
 ---
 
-## E2E Testing — Playwright
+## E2E Testing: Playwright
 
 ```javascript
 // checkout.spec.js
@@ -105,15 +105,15 @@ test.describe('Checkout Flow', () => {
 
 ---
 
-## Test IDs — The `data-testid` Pattern
+## Test IDs: The `data-testid` Pattern
 
-Never use CSS classes or text content as selectors — they change.
+Never use CSS classes or text content as selectors, they change.
 
 ```jsx
-// ❌ Fragile — breaks when text changes
+// ❌ Fragile - breaks when text changes
 await page.click('text=Add to Cart');
 
-// ✅ Stable — survives redesign
+// ✅ Stable - survives redesign
 <button data-testid="add-to-cart">Add to Cart</button>
 await page.click('[data-testid="add-to-cart"]');
 ```
@@ -122,6 +122,6 @@ await page.click('[data-testid="add-to-cart"]');
 
 ## Sources
 
-- Playwright — https://playwright.dev/
-- Testing Library — https://testing-library.com/
-- Cypress — https://www.cypress.io/
+- Playwright: https://playwright.dev/
+- Testing Library: https://testing-library.com/
+- Cypress: https://www.cypress.io/

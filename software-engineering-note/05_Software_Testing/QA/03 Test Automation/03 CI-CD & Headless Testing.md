@@ -7,13 +7,14 @@ tags:
 
 # 03 CI/CD & Headless Testing
 
-Tests that only run on a developer's machine are useless. CI/CD pipelines run tests automatically on every commit — blocking broken code from reaching production.
+Tests that only run on a developer's machine are useless. CI/CD pipelines run tests automatically on every commit, blocking broken code from reaching production.
 
 ---
 
 ## CI Pipeline for Testing
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     P[Push/PR] --> B[Build]
     B --> SA[Static Analysis<br/>Lint + SAST]
@@ -76,7 +77,7 @@ jobs:
 
 ## Headless Testing
 
-Run browser tests without a visible UI — faster, CI-friendly.
+Run browser tests without a visible UI; faster, CI-friendly.
 
 ```javascript
 // Playwright config for CI
@@ -116,6 +117,6 @@ Split tests across multiple workers to cut total runtime.
 
 ## Sources
 
-- GitHub Actions — https://docs.github.com/en/actions
-- Playwright CI — https://playwright.dev/docs/ci
-- JUnit 5 Parallel Execution — https://junit.org/junit5/docs/current/user-guide/
+- GitHub Actions: https://docs.github.com/en/actions
+- Playwright CI: https://playwright.dev/docs/ci
+- JUnit 5 Parallel Execution: https://junit.org/junit5/docs/current/user-guide/

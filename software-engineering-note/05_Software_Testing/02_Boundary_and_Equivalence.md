@@ -10,7 +10,7 @@ tags:
 # 02 Boundary Value & Equivalence Class Testing
 
 > **Source:** Jorgensen, *Software Testing: A Craftsman's Approach*, 4th ed., Chapters 5–6
-> **Purpose:** Specification-based (black-box) test case design using input/output domain analysis — the two most fundamental functional testing techniques.
+> **Purpose:** Specification-based (black-box) test case design using input/output domain analysis, the two most fundamental functional testing techniques.
 
 Boundary value testing and equivalence class testing are the best-known specification-based testing techniques. Both treat the program as a function mapping its input domain to its output range, and both derive test cases from that domain knowledge without looking at the source code.
 
@@ -34,7 +34,7 @@ Robust forms add: `min−` and `max+`.
 
 | Factor | Option A | Option B |
 |--------|----------|----------|
-| **Invalid values?** | No — Normal | Yes — Robust |
+| **Invalid values?** | No (Normal | Yes) Robust |
 | **Fault assumption?** | Single fault | Multiple fault (interactions) |
 
 These produce four variants:
@@ -59,7 +59,7 @@ These produce four variants:
 
 ### 1.2 Robust Boundary Value Testing
 
-- Adds `min−` and `max+` — values just outside the valid range.
+- Adds `min−` and `max+`: values just outside the valid range.
 - Same single-fault assumption; still holds all but one at nominal.
 - **Formula:** `6n + 1` test cases.
 - **Key value:** forces attention on **exception handling**. What happens when a physical quantity exceeds its maximum?
@@ -75,7 +75,7 @@ These produce four variants:
 ### 1.4 Robust Worst-Case Boundary Value Testing
 
 - Cartesian product of the seven-value set `{min−, min, min+, nom, max−, max, max+}`.
-- **Formula:** `7ⁿ` test cases — for truly paranoid testing.
+- **Formula:** `7ⁿ` test cases: for truly paranoid testing.
 
 ### 1.5 Comparison Table
 
@@ -88,13 +88,13 @@ These produce four variants:
 
 ### 1.6 Limitations
 
-1. **Variables must be independent.** BVA falls apart when there are semantic dependencies among variables (e.g., month, day, year in NextDate — February 31 is invalid regardless of boundary position).
+1. **Variables must be independent.** BVA falls apart when there are semantic dependencies among variables (e.g., month, day, year in NextDate; february 31 is invalid regardless of boundary position).
 2. **Variables must support an ordering relation.** Works for numeric ranges, temperatures, dates. Does NOT work for car colors, football teams, PINs, or Boolean values.
 3. **Variables should refer to physical quantities.** Physical boundaries (temperature limits, load capacity) are meaningful; logical boundaries (PIN 0000 vs 9999) rarely reveal faults.
 
 ### 1.7 Special Value Testing
 
-- Uses domain knowledge, experience, and intuition — also called *ad hoc* testing.
+- Uses domain knowledge, experience, and intuition: also called *ad hoc* testing.
 - No formal guidelines; depends entirely on tester skill.
 - Often **more effective** than mechanical BVA for problems with rich domain logic (e.g., leap years, end-of-February cases in NextDate).
 - "Testimony to the craft of software testing."
@@ -136,7 +136,7 @@ Mathematically, equivalence classes form a **partition** of the input domain:
 
 - Pick **one value** from each equivalence class.
 - Number of test cases = number of classes in the partition with the **most** subsets.
-- **Single fault assumption:** failure of a test case could be due to any variable — ambiguity remains.
+- **Single fault assumption:** failure of a test case could be due to any variable; ambiguity remains.
 - Good for **regression testing** where failure probability is low.
 
 ### 2.2 Strong Normal Equivalence Class Testing
@@ -154,7 +154,7 @@ Mathematically, equivalence classes form a **partition** of the input domain:
 
 ### 2.4 Strong Robust Equivalence Class Testing
 
-- Cartesian product of **all** classes — valid and invalid.
+- Cartesian product of **all** classes: valid and invalid.
 - Most thorough, but test case count explodes.
 
 ### 2.5 Traditional Equivalence Class Testing
@@ -171,7 +171,7 @@ Rooted in the GIGO (Garbage In, Garbage Out) era when ~80% of source code was in
 
 The effectiveness of equivalence class testing hinges entirely on **how you define the classes**. This is where tester craftsmanship matters.
 
-**Triangle problem — output-based classes:**
+**Triangle problem: output-based classes:**
 
 ```
 R1 = {equilateral}    R2 = {isosceles}
@@ -180,14 +180,14 @@ R3 = {scalene}        R4 = {not a triangle}
 
 Four weak normal cases: `(5,5,5)`, `(2,2,3)`, `(3,4,5)`, `(4,1,2)`.
 
-Can also partition by **side equality**:
+Can also partition by **side equality:**
 ```
 D1 = {a = b = c}        D2 = {a = b, a ≠ c}
 D3 = {a = c, a ≠ b}     D4 = {b = c, a ≠ b}
 D5 = {all different}    D6–D8 = {triangle inequality violations}
 ```
 
-**NextDate function — refined classes:**
+**NextDate function: refined classes:**
 
 Instead of just `{valid month, invalid month}`, use:
 
@@ -197,9 +197,9 @@ Instead of just `{valid month, invalid month}`, use:
 | Day | D1 = {1–28}, D2 = {29}, D3 = {30}, D4 = {31} |
 | Year | Y1 = {2000}, Y2 = {non-century leap year}, Y3 = {common year} |
 
-This yields `3 × 4 × 3 = 36` strong normal test cases — and catches leap-year logic, end-of-February edge cases, and invalid dates (Feb 30, June 31) that mechanical BVA misses.
+This yields `3 × 4 × 3 = 36` strong normal test cases, and catches leap-year logic, end-of-February edge cases, and invalid dates (Feb 30, June 31) that mechanical BVA misses.
 
-**Commission problem — output-based classes:**
+**Commission problem: output-based classes:**
 
 ```
 S1 = {sales ≤ 1000}     → 10% commission
@@ -237,36 +237,36 @@ When equivalence classes are defined by bounded intervals, combine both techniqu
 |--------|----------------|
 | Normal BVA (13 cases) | No scalene triangle case; three identical equilateral cases |
 | Worst-Case (125 cases) | Thorough but many redundant "not a triangle" cases |
-| Weak Normal EC | 4 cases — one per output class, clean and efficient |
+| Weak Normal EC | 4 cases; one per output class, clean and efficient |
 | Weak Robust EC | Adds 6 invalid-input cases (negative, >200 per side) |
 
 ### 4.2 NextDate Function
 
 | Method | Notable Results |
 |--------|----------------|
-| Normal BVA | Tests Jan 1 in 5 different years — wasteful. Ignores February entirely. |
-| Worst-Case (125 cases) | June 31, 1912 — mechanically generated garbage |
-| Refined EC (36 cases) | February 29 across leap/common years, end-of-month transitions — much better |
+| Normal BVA | Tests Jan 1 in 5 different years; wasteful. Ignores February entirely. |
+| Worst-Case (125 cases) | June 31, 1912: mechanically generated garbage |
+| Refined EC (36 cases) | February 29 across leap/common years, end-of-month transitions: much better |
 | Random Testing | ~56% of random dates land in 31-day months (matches probability) |
 
 ### 4.3 Commission Problem
 
 | Method | Notable Results |
 |--------|----------------|
-| Input BVA | Almost all cases land in the 20% commission zone — uninteresting |
-| Output BVA (25 cases) | Exercises $1000 and $1800 thresholds — much higher yield |
-| Weak Robust EC | 8 cases — only 1 legitimate input; rest test error handling |
+| Input BVA | Almost all cases land in the 20% commission zone, uninteresting |
+| Output BVA (25 cases) | Exercises $1000 and $1800 thresholds: much higher yield |
+| Weak Robust EC | 8 cases, only 1 legitimate input; rest test error handling |
 
 ---
 
 ## 5. Guidelines
 
-1. **Start with equivalence classes** — they force you to think about what the program actually distinguishes.
-2. **Apply BVA at class boundaries** — the "edge testing" hybrid is usually best.
+1. **Start with equivalence classes:** they force you to think about what the program actually distinguishes.
+2. **Apply BVA at class boundaries:** the "edge testing" hybrid is usually best.
 3. **Prefer output-based classes** when the output space has clear partitions (commission rates, triangle types).
-4. **Use robust forms sparingly** — in strongly typed languages, invalid-value testing is often a waste. Focus on semantic invalid cases (Feb 30) rather than syntactic ones (month = −1).
-5. **Special value testing fills the gaps** — after mechanical methods, apply domain knowledge. For NextDate: test Feb 28 in leap and non-leap years, Dec 31, etc.
-6. **Watch for variable dependencies** — both BVA and EC assume independence. When variables interact (date logic, tax brackets), encode the interaction in your equivalence class definitions.
+4. **Use robust forms sparingly:** in strongly typed languages, invalid-value testing is often a waste. Focus on semantic invalid cases (Feb 30) rather than syntactic ones (month = −1).
+5. **Special value testing fills the gaps:** after mechanical methods, apply domain knowledge. For NextDate: test Feb 28 in leap and non-leap years, Dec 31, etc.
+6. **Watch for variable dependencies:** both BVA and EC assume independence. When variables interact (date logic, tax brackets), encode the interaction in your equivalence class definitions.
 
 ---
 
@@ -274,11 +274,11 @@ When equivalence classes are defined by bounded intervals, combine both techniqu
 
 - Jorgensen, Paul C. *Software Testing: A Craftsman's Approach*, 4th ed., CRC Press, 2014. Chapters 5–6.
 - Myers, Glenford J. *The Art of Software Testing*, Wiley, 1979.
-- ISTQB Foundation Level Syllabus — "edge testing" (BVA + equivalence partitioning hybrid).
+- ISTQB Foundation Level Syllabus: "edge testing" (BVA + equivalence partitioning hybrid).
 
 
 ## Related
 
-- [[Software Testing Overview]] — All testing topics
-- [[01_Testing_Fundamentals]] — Testing fundamentals and math
-- [[03_Decision_Table_and_Path]] — Decision table and path testing
+- [[Software Testing Overview]]: All testing topics
+- [[01_Testing_Fundamentals]]: Testing fundamentals and math
+- [[03_Decision_Table_and_Path]]: Decision table and path testing

@@ -49,7 +49,7 @@ Expected:
 
 ## Test Oracles
 
-How do you know if a test passed? You need an **oracle** — a mechanism to determine correctness.
+How do you know if a test passed? You need an **oracle:** a mechanism to determine correctness.
 
 | Oracle Type | Example |
 |------------|---------|
@@ -59,7 +59,7 @@ How do you know if a test passed? You need an **oracle** — a mechanism to dete
 | **Consistency** | Same input → same output |
 | **Human** | Manual verification (slow, expensive, unreliable) |
 
-> Without an oracle, you're not testing — you're just running code.
+> Without an oracle, you're not testing; you're just running code.
 
 ---
 

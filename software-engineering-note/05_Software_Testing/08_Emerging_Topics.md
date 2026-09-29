@@ -14,7 +14,7 @@ tags:
 
 ---
 
-## 18 — Exploratory Testing
+## 18: Exploratory Testing
 
 **Exploratory testing** is *simultaneous learning, test design, and test execution* (James Bach, 2003). Unlike scripted testing where all test cases are predetermined, exploratory testing uses the results of one test to design the next.
 
@@ -40,24 +40,24 @@ tags:
 
 The salesperson systematically explored a faulty commission calculation:
 
-1. **Isolate coefficients** — tested each item (locks, stocks, barrels) individually → coefficients were correct
-2. **Probe boundary** — tested near the $1000 commission threshold
-3. **Algebraic deduction** — from the failed cases, deduced the formula used `sales – $1100` instead of `sales – $1000`
+1. **Isolate coefficients:** tested each item (locks, stocks, barrels) individually → coefficients were correct
+2. **Probe boundary:** tested near the $1000 commission threshold
+3. **Algebraic deduction:** from the failed cases, deduced the formula used `sales – $1100` instead of `sales – $1000`
 
 ### Key Observations
 
 | # | Observation |
 |---|-------------|
-| 1 | Exploratory testing is **difficult in agile environments** — it presumes a completed application to explore |
-| 2 | Effectiveness is **inherently dependent on domain experience** — a CS professor can't effectively examine a history major |
+| 1 | Exploratory testing is **difficult in agile environments:** it presumes a completed application to explore |
+| 2 | Effectiveness is **inherently dependent on domain experience:** a CS professor can't effectively examine a history major |
 | 3 | Requires **highly motivated, curious, creative** testers |
-| 4 | **Defies predictive measurement** — you can't estimate how many faults remain |
+| 4 | **Defies predictive measurement:** you can't estimate how many faults remain |
 | 5 | Management boils down to: **clear charter + documented tests and results** |
-| 6 | Effectiveness is **inversely proportional to system size and complexity** — an individual tester has a comprehension threshold |
+| 6 | Effectiveness is **inversely proportional to system size and complexity:** an individual tester has a comprehension threshold |
 
 ---
 
-## 19 — Test-Driven Development (TDD)
+## 19: Test-Driven Development (TDD)
 
 > *"Test a little, code a little, refactor a little more."*
 
@@ -66,6 +66,7 @@ TDD is an agile practice where test cases are written **before** the correspondi
 ### The TDD Cycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     W[Write a failing test] --> C[Write minimal code<br/>to pass the test]
     C --> R[Refactor<br/>all tests still green]
@@ -77,7 +78,7 @@ graph LR
 | Characteristic | Description |
 |---------------|-------------|
 | **Fault isolation** | If a new test fails, the fault can only be in the **most recently added code** |
-| **Always working** | At every point, all previous tests pass — something always works |
+| **Always working** | At every point, all previous tests pass, something always works |
 | **User-story driven** | Development is guided by a sequence of user stories from the customer |
 | **Bottom-up** | Code grows incrementally from the smallest units upward |
 | **Refactoring crucial** | Without refactoring, bottom-up TDD produces inelegant code; refactoring gradually improves design |
@@ -102,17 +103,17 @@ Jorgensen compares two implementations of the `isLeap(year)` function:
 |--------|---------------------|------------------------|
 | **Approach** | Top-down model → code | Bottom-up tests → code |
 | **Cyclomatic complexity** | 4 (nested IFs) | 2 (compound condition) |
-| **Actual test cases needed** | 4 (same set) | 4 (same set — MC/DC required) |
+| **Actual test cases needed** | 4 (same set) | 4 (same set; MC/DC required) |
 | **Maintenance** | Model helps understand the "big picture" | Tests help recreate/isolate faults |
-| **Metaphor** | **Eagle** — sees the big picture | **Mouse** — sees every detail |
+| **Metaphor** | **Eagle:** sees the big picture | **Mouse:** sees every detail |
 
-> **Conclusion:** Both are logically equivalent. Nested-IF complexity in MDD is just moved to **condition complexity** in TDD — it doesn't disappear. Each approach has complementary strengths.
+> **Conclusion:** Both are logically equivalent. Nested-IF complexity in MDD is just moved to **condition complexity** in TDD; it doesn't disappear. Each approach has complementary strengths.
 
 ### Pros, Cons & Open Questions
 
 | Pros | Cons |
 |------|------|
-| Always something works — never completely broken | Impossible/cumbersome without test frameworks |
+| Always something works, never completely broken | Impossible/cumbersome without test frameworks |
 | Excellent fault isolation | Depends on tester ingenuity for good test cases |
 | Extensive framework support | Bottom-up nature provides little design opportunity |
 | Can be handed off to another pair mid-development | Unlikely to reveal "deeper" faults (data flow, thread interactions) |
@@ -121,7 +122,7 @@ Jorgensen compares two implementations of the `isLeap(year)` function:
 |---------------|---------|
 | **Scale-up to large apps** | How much can one developer keep in mind? |
 | **Complexity** | Can TDD handle reliability/safety-critical systems? |
-| **Long-term maintenance** | Are test cases sufficient documentation? (TDD advocates say yes — but time will tell) |
+| **Long-term maintenance** | Are test cases sufficient documentation? (TDD advocates say yes, but time will tell) |
 
 ### Granularity Choices
 
@@ -134,7 +135,7 @@ Larger granularity ("story-driven development") reduces refactoring frequency an
 
 ---
 
-## 20 — A Closer Look at All Pairs Testing
+## 20: A Closer Look at All Pairs Testing
 
 The **All Pairs** (pairwise) technique exercises every pair of input variable values in at least one test case. It originates from **orthogonal arrays** in statistical design of experiments.
 
@@ -148,9 +149,9 @@ This study drove enormous interest in pairwise testing, particularly in the agil
 
 | Assumption | Counter-Example | Consequence |
 |-----------|-----------------|-------------|
-| **1. Meaningful equivalence classes exist** | Triangle program — sides are physical variables; only valid/invalid boundaries apply | Can't generate triangles, only data validity checks |
-| **2. Inputs are independent** | NextDate — day/month, month/year dependencies | Generates invalid dates (Feb 31, etc.); misses 3-variable interactions (Feb 28 common year) |
-| **3. Input order is irrelevant** | Currency converter GUI — Compute button is context-sensitive | Different input orders produce different test sets; some error contexts never tested |
+| **1. Meaningful equivalence classes exist** | Triangle program, sides are physical variables; only valid/invalid boundaries apply | Can't generate triangles, only data validity checks |
+| **2. Inputs are independent** | NextDate: day/month, month/year dependencies | Generates invalid dates (Feb 31, etc.); misses 3-variable interactions (Feb 28 common year) |
+| **3. Input order is irrelevant** | Currency converter GUI: Compute button is context-sensitive | Different input orders produce different test sets; some error contexts never tested |
 | **4. Faults are due only to pairs** | NextDate Feb 28 leap year → requires day, month, *and* year | Three-variable interactions are invisible to All Pairs |
 
 ### The Input Order Problem
@@ -162,11 +163,11 @@ Simply **reordering equivalence classes** in the allpairs.exe input file produce
 | Tests 2 currency conversions | Tests 1 currency conversion |
 | Generates error messages 1, 4, 2/5 | Generates error messages 3, 4, 5 |
 
-> The algorithm packs the most pairs into **early test cases** — order of class presentation matters.
+> The algorithm packs the most pairs into **early test cases:** order of class presentation matters.
 
 ### The Fallacy of Extension
 
-The NIST study never stressed **test case compression**. It analyzed 109 real failure reports and found that only 3 failures (2%) involved more than two conditions. But the popular narrative extended this to "All Pairs compresses 10²⁰ test cases into 180" — the NIST paper's own example of a device with 20 inputs × 10 settings is **not representative** of the medical devices they studied (which had few inputs with discrete settings).
+The NIST study never stressed **test case compression**. It analyzed 109 real failure reports and found that only 3 failures (2%) involved more than two conditions. But the popular narrative extended this to "All Pairs compresses 10²⁰ test cases into 180", the NIST paper's own example of a device with 20 inputs × 10 settings is **not representative** of the medical devices they studied (which had few inputs with discrete settings).
 
 ### When Is All Pairs Appropriate?
 
@@ -188,9 +189,9 @@ If **all** are answered "yes," All Pairs risk is reduced:
 
 ---
 
-## 21 — Evaluating Test Cases
+## 21: Evaluating Test Cases
 
-> *"Quis custodiet ipsos custodes?"* — Juvenal: Who guards the guards? Who tests the test cases?
+> *"Quis custodiet ipsos custodes?"* *(Juvenal)*: Who guards the guards? Who tests the test cases?
 
 Three approaches to evaluating test case quality: **mutation testing**, **fuzzing**, and **fault insertion (fishing creel counts)**.
 
@@ -204,9 +205,9 @@ Three approaches to evaluating test case quality: **mutation testing**, **fuzzin
 |------|------------|
 | **Mutant P′** | A version of program P with one small syntactic change |
 | **Killed mutant** | At least one test case in T fails on P′ |
-| **Live mutant** | All tests pass on P′ — either P′ ≡ P (equivalent) or T is insufficient |
-| **Mutation score** | `killed / total` — higher = more confidence in test suite |
-| **Equivalent mutant** | Syntactically different but semantically identical to original — **formally undecidable** |
+| **Live mutant** | All tests pass on P′; either P′ ≡ P (equivalent) or T is insufficient |
+| **Mutation score** | `killed / total`: higher = more confidence in test suite |
+| **Equivalent mutant** | Syntactically different but semantically identical to original; **formally undecidable** |
 
 #### Common Mutation Operators
 
@@ -217,16 +218,16 @@ Three approaches to evaluating test case quality: **mutation testing**, **fuzzin
 | **Logical (L)** | `∧, ∨, ⊕, ∼, →` | `a && b` → `a \|\| b` |
 
 PIT (a free Java mutation tool) uses mutators like:
-- `CONDITIONALS_BOUNDARY_MUTATOR` — changes `<` to `<=`, etc.
-- `MATH_MUTATOR` — replaces `+` with `-`, `*` with `/`
-- `NEGATE_CONDITIONALS_MUTATOR` — negates boolean conditions
-- `RETURN_VALS_MUTATOR` — flips return values
+- `CONDITIONALS_BOUNDARY_MUTATOR`: changes `<` to `<=`, etc.
+- `MATH_MUTATOR`: replaces `+` with `-`, `*` with `/`
+- `NEGATE_CONDITIONALS_MUTATOR`: negates boolean conditions
+- `RETURN_VALS_MUTATOR`: flips return values
 
 #### PIT Results: Three Examples
 
 | Example | Mutants | Killed | Score | Note |
 |---------|---------|--------|-------|------|
-| **isLeap** | ~7 (selected) | 7 | 1.00 | All caught — test suite is adequate |
+| **isLeap** | ~7 (selected) | 7 | 1.00 | All caught; test suite is adequate |
 | **isTriangle** | 10 | 10 | 1.00 | All caught |
 | **Commission** | 21 | 19 | 0.905 | 2 condition boundary mutants **survived** → tests need improvement |
 
@@ -243,7 +244,7 @@ Fuzzing presents **random character strings** as inputs to programs. Originated 
 
 ### 21.3 Fishing Creel Counts & Fault Insertion
 
-A method borrowed from **wildlife management**:
+A method borrowed from **wildlife management:**
 
 1. Known faults are **inserted** into the code (like stocking hatchery trout with clipped fins)
 2. The existing test suite is run on the "stocked" code
@@ -256,11 +257,11 @@ A method borrowed from **wildlife management**:
 
 ---
 
-## 22 — Software Technical Reviews
+## 22: Software Technical Reviews
 
-> *"A stitch in time saves nine."* — Francis Baily, 1797
+> *"A stitch in time saves nine."*, Francis Baily, 1797
 
-Software technical reviews are a form of **static testing**: they identify faults in work products *before* execution, not failures at runtime.
+Software technical reviews are a form of **static testing:** they identify faults in work products *before* execution, not failures at runtime.
 
 ### The Economics: Why Reviews Pay Off
 
@@ -310,6 +311,7 @@ Software technical reviews are a form of **static testing**: they identify fault
 ### The Industrial-Strength Inspection Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     CP[Commitment<br/>Planning] --> RI[Reviewer<br/>Introduction]
     RI --> P[Preparation<br/>5 days, up to 8 hrs]
@@ -334,7 +336,7 @@ graph LR
 | Item | Purpose |
 |------|---------|
 | **Work product requirements** | Defines "what" the work product must satisfy |
-| **Frozen work product** | Everyone reviews the same version — no mid-review changes |
+| **Frozen work product** | Everyone reviews the same version; no mid-review changes |
 | **Standards and checklists** | What to look for; refined over time; proprietary in many orgs |
 | **Review issues spreadsheet** | Individual reviewers list issues by location, checklist item, severity |
 | **Review report forms** | Ballots with hours spent, severity summary, recommendation |
@@ -345,7 +347,7 @@ Simple 3–4 level classification:
 - **Severity 1:** Typos, formatting
 - **Severity 2:** Missing edge cases, minor logic issues
 - **Severity 3:** Missing functionality, architectural problems
-- **Severity 4 (Showstopper):** Work product not ready for review — returned to producer
+- **Severity 4 (Showstopper):** Work product not ready for review: returned to producer
 
 > Study finding: Only reviewers who spent **6–8 hours** of preparation found the really severe faults. Reviewers spending 1–2 hours only found severity-1 issues.
 
@@ -404,7 +406,7 @@ Simple 3–4 level classification:
 
 ## Related
 
-- [[Software Testing Overview]] — All testing topics
-- [[05_Integration_and_System]] — System testing context
-- [[07_OO_and_Complexity]] — Mutation and complexity
-- [[QA/QA Overview|QA Overview]] — Practical QA processes
+- [[Software Testing Overview]]: All testing topics
+- [[05_Integration_and_System]]: System testing context
+- [[07_OO_and_Complexity]]: Mutation and complexity
+- [[QA/QA Overview|QA Overview]]: Practical QA processes
