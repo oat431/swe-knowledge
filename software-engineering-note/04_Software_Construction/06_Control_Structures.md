@@ -10,20 +10,20 @@ source: "McConnell, Steve. Code Complete, 2nd Edition. Chapters 14–19."
 created: 2026-07-21
 ---
 
-# 06 — Control Structures
+# 06: Control Structures
 
 > **Source:** Steve McConnell, *Code Complete, 2nd Edition*, Chapters 14–19.  
 > **Scope:** Organizing straight-line code, if/else and case statements, loop design (while, for, foreach), unusual control structures (multiple returns, recursion, goto), table-driven methods, and general control issues (boolean expressions, blocks, deep nesting, structured programming).
 
 ---
 
-## Chapter 14 — Organizing Straight-Line Code
+## Chapter 14: Organizing Straight-Line Code
 
 Straight-line code is the simplest kind of control flow: statements and blocks placed in sequential order. Even here, organizational subtleties influence correctness, readability, and maintainability.
 
 ### 14.1 Statements That Must Be in a Specific Order
 
-When order matters — data must be read before it can be processed, results must be calculated before they are printed — the underlying concept is **dependencies**. Make those dependencies obvious.
+When order matters (data must be read before it can be processed, results must be calculated before they are printed) the underlying concept is **dependencies**. Make those dependencies obvious.
 
 **Guidelines for ordering statements with dependencies:**
 
@@ -37,17 +37,17 @@ When order matters — data must be read before it can be processed, results mus
 
 ### 14.2 Statements Whose Order Doesn't Matter
 
-When execution order is irrelevant, use **secondary criteria** guided by the **Principle of Proximity**: keep related actions together.
+When execution order is irrelevant, use **secondary criteria** guided by the **Principle of Proximity:** keep related actions together.
 
 - **Make code read from top to bottom.** Group all operations on `marketingData` together (declare → compute → print) rather than interleaving with `salesData` and `travelData`.
-- **Group related statements.** Print a listing, draw boxes around related sections — boxes should not overlap (good) or overlap (bad).
+- **Group related statements.** Print a listing, draw boxes around related sections, boxes should not overlap (good) or overlap (bad).
 - **Extract strongly related groups into their own routines.**
 
 > **Key Point:** The strongest principle for straight-line code is ordering dependencies. Make dependencies obvious through routine names, parameter lists, and comments.
 
 ---
 
-## Chapter 15 — Using Conditionals
+## Chapter 15: Using Conditionals
 
 ### 15.1 `if` Statements
 
@@ -56,7 +56,7 @@ When execution order is irrelevant, use **secondary criteria** guided by the **P
 1. **Write the nominal path first; then the unusual cases.** Don't let error handling obscure the normal flow.
 2. **Branch correctly on equality.** Think through the `=` case to avoid off-by-one errors.
 3. **Put the normal case after the `if` rather than after the `else`.** Process errors in the `else` clause so the reader finds the nominal path by reading the `if` branches.
-4. **Follow the `if` with a meaningful statement.** Never write `if (test) ; else { … }` — negate the condition instead: `if (!test) { … }`.
+4. **Follow the `if` with a meaningful statement.** Never write `if (test) ; else { … }`; negate the condition instead: `if (!test) { … }`.
 5. **Consider the `else` clause.** A classic GM study found 50–80% of `if` statements should have had an `else`. At minimum, document why the `else` is unnecessary.
 6. **Test the `else` clause for correctness.**
 7. **Check for reversal of `if` and `else` clauses.**
@@ -76,7 +76,7 @@ When execution order is irrelevant, use **secondary criteria** guided by the **P
 |---|---|
 | **Alphabetical / numerical** | Cases are equally important; improves searchability. |
 | **Normal case first** | One normal case, several exceptions. |
-| **By frequency** | Most-executed cases first — faster for humans and CPUs. |
+| **By frequency** | Most-executed cases first; faster for humans and CPUs. |
 
 #### Tips
 
@@ -90,7 +90,7 @@ When execution order is irrelevant, use **secondary criteria** guided by the **P
 
 ---
 
-## Chapter 16 — Controlling Loops
+## Chapter 16: Controlling Loops
 
 ### 16.1 Selecting the Kind of Loop
 
@@ -114,7 +114,7 @@ When execution order is irrelevant, use **secondary criteria** guided by the **P
 - **Enter from one location only** (the top).
 - **Put initialization code directly before the loop** (Principle of Proximity).
 - **Use `while (true)` for infinite loops**, not `for i = 1 to 99999`.
-- **Prefer `for` loops when they're appropriate** — they package control in one place.
+- **Prefer `for` loops when they're appropriate:** they package control in one place.
 
 #### Processing the Middle
 - **Always use `{ }` braces** even for single-statement bodies.
@@ -131,16 +131,16 @@ When execution order is irrelevant, use **secondary criteria** guided by the **P
 
 #### Exiting Loops Early (`break` / `continue`)
 - **`break`:** Use instead of boolean flags when it simplifies loop control.
-- **Be wary of many `break`s** — a proliferation suggests unclear structure.
-- **`continue`:** Good for skipping at the top of a loop (e.g., discarding records of a certain type). Avoid `continue` in the middle or end of a loop — use `if` instead.
+- **Be wary of many `break`s:** a proliferation suggests unclear structure.
+- **`continue`:** Good for skipping at the top of a loop (e.g., discarding records of a certain type). Avoid `continue` in the middle or end of a loop; use `if` instead.
 - **Use labeled `break`** (Java) for unambiguous multi-level exits.
-- **Use `break` and `continue` with caution** — they break the "black box" abstraction.
+- **Use `break` and `continue` with caution:** they break the "black box" abstraction.
 
 #### Checking Endpoints
 Mentally run the first, middle, and last cases. This discipline separates efficient programmers from those who experiment randomly with `<` vs. `<=`.
 
 #### Loop Variables
-- **Use ordinal/enumerated types** — not floating-point (26,742,897.0 + 1.0 may equal 26,742,897.0).
+- **Use ordinal/enumerated types:** not floating-point (26,742,897.0 + 1.0 may equal 26,742,897.0).
 - **Use meaningful names** in nested loops. `payCodeIdx`, `month`, `divisionIdx` > `i`, `j`, `k`.
 - **Limit scope of loop-index variables to the loop itself** (`for (int i = 0; …)`).
 
@@ -149,7 +149,7 @@ Mentally run the first, middle, and last cases. This discipline separates effici
 - Limit nesting to **three levels** (comprehension deteriorates beyond that).
 - Move long loop innards into separate routines.
 
-### 16.3 Creating Loops Easily — From the Inside Out
+### 16.3 Creating Loops Easily: From the Inside Out
 
 1. Write the body steps as comments.
 2. Convert comments to code with **concrete, literal values**.
@@ -158,18 +158,18 @@ Mentally run the first, middle, and last cases. This discipline separates effici
 5. Generalize variables that depend on the loop index.
 6. Add initializations.
 
-> **Key Point:** Loops are complicated. Keep them simple — avoid exotic loops, minimize nesting, make entries/exits clear, and keep housekeeping in one place.
+> **Key Point:** Loops are complicated. Keep them simple; avoid exotic loops, minimize nesting, make entries/exits clear, and keep housekeeping in one place.
 
 ---
 
-## Chapter 17 — Unusual Control Structures
+## Chapter 17: Unusual Control Structures
 
 ### 17.1 Multiple Returns from a Routine
 
 **Use `return` when it enhances readability.** Guard clauses (early returns for error conditions) simplify deeply nested error processing:
 
 ```vb
-' Guard clauses — nominal path is clear
+' Guard clauses - nominal path is clear
 If Not file.validName() Then Exit Sub
 If Not file.Open() Then Exit Sub
 If Not encryptionKey.valid() Then Exit Sub
@@ -185,11 +185,11 @@ Recursion solves a small part of a problem, divides the rest, and calls itself. 
 
 #### Tips for Using Recursion
 
-- **Make sure the recursion stops** — include a non-recursive path (base case).
+- **Make sure the recursion stops:** include a non-recursive path (base case).
 - **Use safety counters** to prevent infinite recursion.
 - **Limit recursion to one routine.** Cyclic recursion (A → B → C → A) is dangerous.
 - **Watch the stack.** Use heap allocation (`new`) for memory-intensive objects in recursive functions.
-- **Don't use recursion for factorials or Fibonacci numbers.** These are textbook anti-patterns — iteration is simpler, faster, and more predictable.
+- **Don't use recursion for factorials or Fibonacci numbers.** These are textbook anti-patterns; iteration is simpler, faster, and more predictable.
 
 > **Key insight:** You can do anything with stacks and iteration that you can do with recursion. Consider both before choosing.
 
@@ -232,7 +232,7 @@ Historically accepted constructs that are now considered dangerous: unrestricted
 
 ---
 
-## Chapter 18 — Table-Driven Methods
+## Chapter 18: Table-Driven Methods
 
 > A table-driven method looks up information in a table rather than using logic statements (`if`, `case`). As logic chains grow complex, tables become increasingly attractive.
 
@@ -285,7 +285,7 @@ When entries are valid for **ranges** of data rather than discrete points (e.g.,
 
 - Put the upper end of each range in a table.
 - Loop to find the first range the value falls into.
-- **Watch endpoints** — handle the topmost range correctly.
+- **Watch endpoints:** handle the topmost range correctly.
 - **Consider binary search** for large tables.
 - **Consider indexed access** if execution speed matters and space permits.
 
@@ -295,7 +295,7 @@ When entries are valid for **ranges** of data rather than discrete points (e.g.,
 
 ---
 
-## Chapter 19 — General Control Issues
+## Chapter 19: General Control Issues
 
 ### 19.1 Boolean Expressions
 
@@ -322,8 +322,8 @@ When entries are valid for **ranges** of data rather than discrete points (e.g.,
 
 #### Short-Circuit Evaluation
 - C++, Java, C# use short-circuit evaluation: `&&` and `||` stop as soon as the result is known.
-- `if ((denom != 0) && (item/denom > MIN))` — safe; division skipped if `denom == 0`.
-- Java's `&` and `|` are **non-short-circuit** logical operators — all terms evaluated.
+- `if ((denom != 0) && (item/denom > MIN))`: safe; division skipped if `denom == 0`.
+- Java's `&` and `|` are **non-short-circuit** logical operators: all terms evaluated.
 - **Prefer nested tests** over relying on evaluation order for clarity.
 
 #### Numeric Expressions in Number-Line Order
@@ -340,13 +340,13 @@ When entries are valid for **ranges** of data rather than discrete points (e.g.,
 | Pointer | Explicit | `while (ptr != NULL)` |
 
 #### Common Pitfalls
-- **C-derived languages:** Put constants on the left (`if (MIN == i)`) — compiler catches `=` vs `==` errors. (May conflict with number-line ordering; McConell prefers number-line ordering.)
+- **C-derived languages:** Put constants on the left (`if (MIN == i)`): compiler catches `=` vs `==` errors. (May conflict with number-line ordering; mcConell prefers number-line ordering.)
 - **Java:** `a.equals(b)` for logical equality, `a == b` for reference identity.
 
 ### 19.2 Compound Statements (Blocks)
 
 - **Write pairs of braces together first**, then fill in the middle.
-- **Always use braces**, even for single-statement bodies — prevents errors during maintenance.
+- **Always use braces**, even for single-statement bodies: prevents errors during maintenance.
 
 ### 19.3 Null Statements
 
@@ -365,14 +365,14 @@ In C++, `while (…) ;` is a null statement.
 | Technique | Description |
 |---|---|
 | **Retest part of the condition** | Replace nested `if`s with a flatter structure using combined conditions. |
-| **Use a `break` block** | `do { if (fail) break; … } while (FALSE);` — a single-exit block. (Uncommon; use only if team adopts it.) |
+| **Use a `break` block** | `do { if (fail) break; … } while (FALSE);`, a single-exit block. (Uncommon; use only if team adopts it.) |
 | **Convert to `if-then-else` chain** | Restructure bushy decision trees into flat chains. |
 | **Convert to `case` statement** | When ranges are clean, `Select Case` / `switch` eliminates nesting. |
 | **Factor into its own routine** | Move deeply nested loop innards or conditional branches into separate, well-named routines. |
 
 ### 19.5 Structured Programming
 
-Structured programming is the foundation of modern control flow. Its core idea: programs should be built from a small set of single-entry, single-exit control constructs — sequence, selection (`if-then-else`), and iteration (`while`, `for`). The movement, sparked by Dijkstra, Böhm, and Jacopini in the late 1960s, demonstrated that `goto` is never strictly necessary. Modern languages have fully embraced this: structured constructs are the norm, and unrestricted `goto` is the exception.
+Structured programming is the foundation of modern control flow. Its core idea: programs should be built from a small set of single-entry, single-exit control constructs: sequence, selection (`if-then-else`), and iteration (`while`, `for`). The movement, sparked by Dijkstra, Böhm, and Jacopini in the late 1960s, demonstrated that `goto` is never strictly necessary. Modern languages have fully embraced this: structured constructs are the norm, and unrestricted `goto` is the exception.
 
 ### 19.6 Control Structures and Complexity
 
@@ -383,17 +383,17 @@ The relationship between control structures and complexity is central to softwar
 - **Keep complexity low.** Routines with complexity > 10 are hard to test; > 20 are nearly untestable.
 - **Choose the simplest control structure** that solves the problem clearly. Favor `for` over `while` when iteration count is known; favor table lookup over long `if-else` chains; favor guard clauses over deep nesting.
 
-> **McConnell's Law:** The more control structures you have, the more paths through your code. The more paths, the harder it is to understand, test, and maintain. Simplicity in control flow is not a luxury — it's a necessity.
+> **McConnell's Law:** The more control structures you have, the more paths through your code. The more paths, the harder it is to understand, test, and maintain. Simplicity in control flow is not a luxury; it's a necessity.
 
 ---
 
 ## Summary: Key Principles Across All Control Structures
 
-1. **Make dependencies obvious** — through names, parameters, and structure.
-2. **Put the normal case first** — in conditionals, loops, and error handling.
-3. **Keep it simple** — short routines, shallow nesting, one purpose per loop.
-4. **Use the right tool** — `for` for counted iteration, `while` for conditional, tables for complex logic.
-5. **Treat loops as black boxes** — control outside, work inside.
-6. **Put knowledge in data, not logic** — table-driven methods trump complex conditionals.
-7. **Avoid deep nesting** — more than 3 levels impairs comprehension.
-8. **Use boolean abstractions** — well-named functions and variables make conditions self-documenting.
+1. **Make dependencies obvious:** through names, parameters, and structure.
+2. **Put the normal case first:** in conditionals, loops, and error handling.
+3. **Keep it simple:** short routines, shallow nesting, one purpose per loop.
+4. **Use the right tool:** `for` for counted iteration, `while` for conditional, tables for complex logic.
+5. **Treat loops as black boxes:** control outside, work inside.
+6. **Put knowledge in data, not logic:** table-driven methods trump complex conditionals.
+7. **Avoid deep nesting:** more than 3 levels impairs comprehension.
+8. **Use boolean abstractions:** well-named functions and variables make conditions self-documenting.

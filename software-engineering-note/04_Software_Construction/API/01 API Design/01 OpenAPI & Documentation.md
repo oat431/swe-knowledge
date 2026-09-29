@@ -7,7 +7,7 @@ tags:
 
 # 01 OpenAPI & Documentation
 
-An undocumented API is a private API — even if it's publicly accessible. OpenAPI (formerly Swagger) is the standard for describing REST APIs in a machine-readable format that generates docs, client SDKs, and tests.
+An undocumented API is a private API, even if it's publicly accessible. OpenAPI (formerly Swagger) is the standard for describing REST APIs in a machine-readable format that generates docs, client SDKs, and tests.
 
 ---
 
@@ -107,7 +107,7 @@ public class OrderController {
 ```
 
 ```yaml
-# application.yml — Swagger UI at /swagger-ui.html
+# application.yml - Swagger UI at /swagger-ui.html
 springdoc:
   api-docs:
     path: /api-docs
@@ -125,13 +125,13 @@ springdoc:
 | **Endpoints** | Methods, paths, parameters, request/response bodies |
 | **Error codes** | What each code means and what to do |
 | **Rate limits** | How many requests, what happens when exceeded |
-| **Examples** | Real request/response pairs — not just schemas |
+| **Examples** | Real request/response pairs, not just schemas |
 | **Changelog** | What changed, when, migration guide |
 
 ---
 
 ## Sources
 
-- OpenAPI Spec — https://spec.openapis.org/oas/latest.html
-- Swagger — https://swagger.io/
-- SpringDoc — https://springdoc.org/
+- OpenAPI Spec: https://spec.openapis.org/oas/latest.html
+- Swagger: https://swagger.io/
+- SpringDoc: https://springdoc.org/

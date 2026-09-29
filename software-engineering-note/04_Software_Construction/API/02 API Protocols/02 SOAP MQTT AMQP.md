@@ -7,7 +7,7 @@ tags:
 
 # 02 SOAP, MQTT & AMQP
 
-Three additional protocols from the original API note. SOAP is legacy enterprise, MQTT is IoT-focused, AMQP is a messaging wire protocol — none are first-choice for new projects but all still appear in production.
+Three additional protocols from the original API note. SOAP is legacy enterprise, MQTT is IoT-focused, AMQP is a messaging wire protocol; none are first-choice for new projects but all still appear in production.
 
 ---
 
@@ -39,13 +39,13 @@ The enterprise grandfather of API protocols. XML-only, rigid, heavily specified.
 </soap:Envelope>
 ```
 
-> **When you'll encounter it:** Integrating with older banking systems, payment gateways, or enterprise SAP/Oracle systems. Learn enough to consume SOAP APIs — don't build new ones with it.
+> **When you'll encounter it:** Integrating with older banking systems, payment gateways, or enterprise SAP/Oracle systems. Learn enough to consume SOAP APIs; don't build new ones with it.
 
 ---
 
 ## MQTT (Message Queue Telemetry Transport)
 
-Lightweight pub/sub protocol designed for IoT — low bandwidth, low power, unreliable networks.
+Lightweight pub/sub protocol designed for IoT: low bandwidth, low power, unreliable networks.
 
 | | MQTT | HTTP |
 |---|------|------|
@@ -103,6 +103,6 @@ Producer → Exchange → [binding rules] → Queue → Consumer
 
 ## Sources
 
-- SOAP 1.2 — https://www.w3.org/TR/soap12/
-- MQTT 5.0 — https://mqtt.org/
-- AMQP 1.0 — https://www.amqp.org/
+- SOAP 1.2: https://www.w3.org/TR/soap12/
+- MQTT 5.0: https://mqtt.org/
+- AMQP 1.0: https://www.amqp.org/

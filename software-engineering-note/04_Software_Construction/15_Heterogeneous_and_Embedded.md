@@ -11,7 +11,7 @@ status: in-progress
 
 # Heterogeneous and Embedded Construction
 
-> **SWEBOK Reference:** Knowledge Area 4 (Software Construction), Section 4.4 — Construction for Heterogeneous, Embedded, and Distributed Systems.
+> **SWEBOK Reference:** Knowledge Area 4 (Software Construction), Section 4.4: Construction for Heterogeneous, Embedded, and Distributed Systems.
 
 Heterogeneous and embedded software construction involves building systems where software interacts closely with specialized hardware, operates under resource constraints (memory, power, real-time deadlines), and often spans multiple computing platforms (MCUs, FPGAs, edge processors, cloud backends). This note covers the key domains, tools, and practices.
 
@@ -22,6 +22,7 @@ Heterogeneous and embedded software construction involves building systems where
 Hardware/software co-design is the simultaneous design of hardware and software components to meet system-level requirements for performance, power, cost, and flexibility.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     REQ[System Requirements] --> SPEC[Specification]
     SPEC --> PART[HW/SW Partitioning]
@@ -90,6 +91,7 @@ Co-verification validates that HW and SW work correctly together before fabricat
 ### 2.2 Real-Time Constraints
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     RT[Real-Time Systems] --> HRT[Hard Real-Time]
     RT --> SRT[Soft Real-Time]
@@ -183,6 +185,7 @@ Key concerns: interrupt latency, stack overflow detection, watchdog feeding, reg
 ### 3.1 FPGA Design Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     SPEC[Specification] --> RTL[RTL Design<br/>VHDL / Verilog / SystemVerilog]
     RTL --> SIM[Functional Simulation<br/>ModelSim / Vivado Sim]
@@ -234,6 +237,7 @@ HIL testing connects the FPGA design to a simulation environment that models the
 ### 4.1 IoT Architecture Layers
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     subgraph "Perception Layer"
         SENS[Sensors / Actuators]
@@ -310,6 +314,7 @@ graph TD
 ### 5.1 ROS/ROS2 Architecture
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     subgraph "ROS2 Architecture"
         APP[Application Nodes]
@@ -421,6 +426,7 @@ Cross-compilation builds code on a **host** machine (e.g., x86 Linux/Windows) fo
 ### 7.1 Safety Standards Overview
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     subgraph "Domain Standards"
         DO178C[DO-178C<br/>Avionics Software]
@@ -524,6 +530,7 @@ graph TD
 ### 8.1 Cloud-to-Edge-to-Device Pipeline
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     DEV[Embedded Device<br/>MCU + Sensors] -->|MQTT / CoAP| GW[Edge Gateway<br/>ARM/Linux]
     GW -->|HTTPS / gRPC| CLOUD[Cloud Platform<br/>AWS/Azure/GCP]
@@ -563,18 +570,18 @@ graph LR
 | **FPGA** | HDL design flow; HIL testing before fabrication; HLS for software engineers |
 | **IoT Protocols** | MQTT for general IoT, CoAP for constrained devices, DDS for real-time |
 | **ROS2** | DDS-based middleware, real-time capable, micro-ROS for embedded |
-| **Cross-Compilation** | Toolchain = compiler + linker + debugger + flasher; Yocto for production Linux |
+| **Cross-Compilation** | Toolchain = compiler + linker + debugger + flasher; yocto for production Linux |
 | **Safety-Critical** | MISRA C for safe subsets; static analysis mandatory; MC/DC at highest levels |
 
 ---
 
 ## Related Notes
 
-- [[14_Middleware_and_Integration]] — Middleware and integration patterns
-- [[13_Construction_Technologies_and_Tools]] — General construction tools
-- [[08_Software_Requirements]] — Requirements for embedded and safety-critical systems
-- [[09_Software_Architecture]] — Embedded and real-time architectures
-- [[11_Software_Quality]] — Safety, reliability, and quality attributes
+- [[14_Middleware_and_Integration]]: Middleware and integration patterns
+- [[13_Modern_Construction_Technologies]]: General construction tools
+- [[../01_Software_Requirements/Software Requirements Overview|Software Requirements]]: Requirements for embedded and safety-critical systems
+- [[../02_Software_Architecture/Software Architecture Overview|Software Architecture]]: Embedded and real-time architectures
+- [[../12_Software_Quality/Software Quality Overview|Software Quality]]: Safety, reliability, and quality attributes
 
 ---
 

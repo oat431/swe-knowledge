@@ -34,7 +34,7 @@ public List<Order> getMyOrders(@RequestParam String userId) { ... }
 
 ### ABAC (Attribute-Based Access Control)
 
-Decisions based on attributes — user, resource, action, context.
+Decisions based on attributes: user, resource, action, context.
 
 ```
 Allow IF:
@@ -129,6 +129,6 @@ X-RateLimit-Reset: 1716123500
 
 ## Sources
 
-- OAuth2 Scopes — https://oauth.net/2/scope/
-- Bucket4j — https://bucket4j.com/
-- Spring Security Authorization — https://docs.spring.io/spring-security/reference/servlet/authorization/
+- OAuth2 Scopes: https://oauth.net/2/scope/
+- Bucket4j: https://bucket4j.com/
+- Spring Security Authorization: https://docs.spring.io/spring-security/reference/servlet/authorization/

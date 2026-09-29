@@ -30,6 +30,7 @@ A WebHook is a user-defined HTTP callback. Instead of polling "has anything chan
 ## How WebHooks Work
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','actorBkg':'#19362D','actorBorder':'#1FB854','actorTextColor':'#CDD3D1','actorLineColor':'#1FB854','signalColor':'#CDD3D1','signalTextColor':'#CDD3D1','labelBoxBkgColor':'#161212','labelBoxBorderColor':'#1FB854','labelTextColor':'#CDD3D1','loopTextColor':'#CAC9C9','noteBkgColor':'#1EB88E','noteTextColor':'#000C07','noteBorderColor':'#1EB88E','activationBkgColor':'#1EB88E','activationBorderColor':'#1FB8AB','sequenceNumberColor':'#000000','fontSize':'14px'}}}%%
 sequenceDiagram
     participant GH as GitHub
     participant CI as CI Server
@@ -46,7 +47,7 @@ sequenceDiagram
 
 ---
 
-## Security — Verify the Sender
+## Security: Verify the Sender
 
 Anyone can POST to your webhook endpoint. You must verify it's actually from who you think.
 
@@ -80,7 +81,7 @@ public ResponseEntity<String> handleGithubWebhook(
 
 ---
 
-## Idempotency — Handle Duplicates
+## Idempotency: Handle Duplicates
 
 WebHook providers may deliver the same event multiple times. Your handler must be idempotent.
 
@@ -120,5 +121,5 @@ public ResponseEntity<String> handleStripeWebhook(
 
 ## Sources
 
-- GitHub Webhooks — https://docs.github.com/en/webhooks
-- Stripe Webhooks — https://stripe.com/docs/webhooks
+- GitHub Webhooks: https://docs.github.com/en/webhooks
+- Stripe Webhooks: https://stripe.com/docs/webhooks

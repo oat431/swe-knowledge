@@ -7,7 +7,7 @@ tags:
 
 # 02 gRPC
 
-gRPC is a high-performance RPC framework from Google. It uses Protocol Buffers for serialization and HTTP/2 for transport — making it dramatically faster and smaller than REST/JSON for service-to-service communication.
+gRPC is a high-performance RPC framework from Google. It uses Protocol Buffers for serialization and HTTP/2 for transport, making it dramatically faster and smaller than REST/JSON for service-to-service communication.
 
 ---
 
@@ -125,6 +125,6 @@ grpc:
 
 ## Sources
 
-- gRPC — https://grpc.io/
-- Protocol Buffers — https://protobuf.dev/
-- gRPC-Spring-Boot-Starter — https://github.com/yidongnan/grpc-spring-boot-starter
+- gRPC: https://grpc.io/
+- Protocol Buffers: https://protobuf.dev/
+- gRPC-Spring-Boot-Starter: https://github.com/yidongnan/grpc-spring-boot-starter

@@ -7,7 +7,7 @@ tags:
 
 # 02 GraphQL
 
-GraphQL flips REST on its head: instead of the server defining fixed endpoints, the client asks for exactly the data it needs — no over-fetching, no under-fetching, one request.
+GraphQL flips REST on its head: instead of the server defining fixed endpoints, the client asks for exactly the data it needs: no over-fetching, no under-fetching, one request.
 
 ---
 
@@ -20,13 +20,13 @@ GraphQL flips REST on its head: instead of the server defining fixed endpoints, 
 | **Over-fetching** | Common (user endpoint returns 20 fields, you need 3) | Never |
 | **Under-fetching** | Common (need user + posts → 2 requests) | Never (nested queries in one request) |
 | **Caching** | HTTP caching built-in | Requires custom solution (Apollo, Relay) |
-| **Versioning** | URL/header versioning | No versioning — add fields, deprecate old ones |
+| **Versioning** | URL/header versioning | No versioning; add fields, deprecate old ones |
 
 ---
 
 ## Core Concepts
 
-### Query — Read Data
+### Query: Read Data
 
 ```graphql
 # Client asks for exactly what it needs
@@ -45,7 +45,7 @@ query {
 }
 ```
 
-### Mutation — Write Data
+### Mutation: Write Data
 
 ```graphql
 mutation {
@@ -60,7 +60,7 @@ mutation {
 }
 ```
 
-### Subscription — Real-Time
+### Subscription: Real-Time
 
 ```graphql
 subscription {
@@ -111,7 +111,7 @@ type Subscription {
 
 ---
 
-## The N+1 Problem — And DataLoader
+## The N+1 Problem: And DataLoader
 
 ```graphql
 # Query returns 10 posts. Each post needs its author.
@@ -121,7 +121,7 @@ type Subscription {
 **DataLoader** batches and caches requests:
 
 ```java
-// DGS (Netflix GraphQL) — DataLoader example
+// DGS (Netflix GraphQL) - DataLoader example
 @DgsData(parentType = "Post", field = "author")
 public CompletableFuture<User> author(DgsDataFetchingEnvironment dfe) {
     Post post = dfe.getSource();
@@ -151,15 +151,15 @@ DataLoader collects all author IDs, makes ONE batch query, and distributes resul
 
 | Scenario | Better Alternative |
 |----------|-------------------|
-| Simple CRUD API | REST — less complexity |
-| High-performance service-to-service | gRPC — smaller payload, faster |
-| File uploads | REST — GraphQL adds no value here |
-| Public API with heavy caching needs | REST — HTTP caching is battle-tested |
+| Simple CRUD API | REST, less complexity |
+| High-performance service-to-service | gRPC: smaller payload, faster |
+| File uploads | REST: GraphQL adds no value here |
+| Public API with heavy caching needs | REST: HTTP caching is battle-tested |
 
 ---
 
 ## Sources
 
-- GraphQL Spec — https://spec.graphql.org/
-- Netflix DGS — https://netflix.github.io/dgs/
-- Apollo — https://www.apollographql.com/
+- GraphQL Spec: https://spec.graphql.org/
+- Netflix DGS: https://netflix.github.io/dgs/
+- Apollo: https://www.apollographql.com/

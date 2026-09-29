@@ -14,9 +14,9 @@ source: "McConnell, Code Complete 2nd Edition, Chapter 5"
 
 # Design in Construction
 
-> *"Design is the activity that links requirements to coding and debugging."* — Steve McConnell
+> *"Design is the activity that links requirements to coding and debugging."* *(Steve McConnell)*
 
-Design isn't just an upstream prerequisite — on small projects, much of it happens *during* construction. On larger projects, even when formal architecture exists, the programmer still designs significant portions. Recognizing design as an explicit activity maximizes its benefit regardless of project size.
+Design isn't just an upstream prerequisite, on small projects, much of it happens *during* construction. On larger projects, even when formal architecture exists, the programmer still designs significant portions. Recognizing design as an explicit activity maximizes its benefit regardless of project size.
 
 ---
 
@@ -26,23 +26,23 @@ Design is inherently difficult. Understanding *why* helps you approach it with t
 
 ### Design Is a Wicked Problem
 
-A **wicked problem** (Rittel & Webber, 1973) is one that can be clearly defined only by solving it — or by solving part of it. You essentially have to solve the problem once to define it, then solve it again to create a working solution.
+A **wicked problem** (Rittel & Webber, 1973) is one that can be clearly defined only by solving it, or by solving part of it. You essentially have to solve the problem once to define it, then solve it again to create a working solution.
 
 > **Tacoma Narrows Bridge (1940):** Engineers didn't know aerodynamics mattered until wind-induced harmonic ripples collapsed the bridge. Only by building it (solving the problem) did they discover the additional consideration needed.
 
-School assignments move you in a beeline from start to finish. Professional programming is the opposite — requirements change mid-design, again mid-coding, and again before delivery.
+School assignments move you in a beeline from start to finish. Professional programming is the opposite, requirements change mid-design, again mid-coding, and again before delivery.
 
 ### Design Is a Sloppy Process (Even If the Result Is Tidy)
 
 The finished design looks clean, but the path to it is messy:
 - You take many false steps and go down blind alleys
-- Making mistakes is *the point* of design — it's cheaper to make and correct design mistakes than code mistakes
+- Making mistakes is *the point* of design: it's cheaper to make and correct design mistakes than code mistakes
 - A good solution is often only subtly different from a poor one
 - The most common answer to "When are you done designing?" is **"When you're out of time."**
 
 ### Design Is About Tradeoffs and Priorities
 
-In the real world, a designer must weigh competing characteristics and strike a balance. Fast response vs. minimized development time — different priorities yield different designs.
+In the real world, a designer must weigh competing characteristics and strike a balance. Fast response vs. minimized development time: different priorities yield different designs.
 
 ### Design Involves Restrictions
 
@@ -70,10 +70,10 @@ Fred Brooks's "No Silver Bullets" (1987) distinguishes two classes of difficulty
 
 | Type | Definition | Status |
 |------|-----------|--------|
-| **Essential** | Properties a thing *must* have to be that thing. The inherent intricacy of the real-world problem. | Remains hard — no silver bullet |
+| **Essential** | Properties a thing *must* have to be that thing. The inherent intricacy of the real-world problem. | Remains hard; no silver bullet |
 | **Accidental** | Properties that just happen to be. Clumsy syntax, noninteractive computers, poorly integrated tools. | Largely solved over time |
 
-**The root of all essential difficulties is complexity.** Dijkstra observed that computing spans from a bit to hundreds of megabytes — a ratio of 1:10^9 (now closer to 1:10^15). No one's skull is big enough to hold a modern program.
+**The root of all essential difficulties is complexity.** Dijkstra observed that computing spans from a bit to hundreds of megabytes, a ratio of 1:10^9 (now closer to 1:10^15). No one's skull is big enough to hold a modern program.
 
 > **Software's Primary Technical Imperative: Manage complexity.**
 
@@ -101,7 +101,7 @@ Overly costly designs arise from three sources:
 | **Loose Coupling** | Hold connections among different parts to a minimum. Use abstraction, encapsulation, and information hiding. |
 | **Extensibility** | Enhance the system without violence to the underlying structure. The most likely changes cause the least trauma. |
 | **Reusability** | Design pieces so they can be reused in other systems. |
-| **High Fan-In** | Many classes use a given utility class — good use of lower-level utilities. |
+| **High Fan-In** | Many classes use a given utility class; good use of lower-level utilities. |
 | **Low-to-Medium Fan-Out** | A given class uses a low-to-medium number of other classes (< ~7). High fan-out indicates excessive complexity. |
 | **Portability** | Easy to move to another environment. |
 | **Leanness** | No extra parts. *"A book is finished not when nothing more can be added but when nothing more can be taken away"* (Voltaire). |
@@ -123,18 +123,18 @@ Level 5: Internal Routine Design   ← Pseudocode, algorithms, control flow
 ```
 
 #### Level 1: Software System
-The entire system. Don't jump straight to classes — think through higher-level combinations first.
+The entire system. Don't jump straight to classes; think through higher-level combinations first.
 
 #### Level 2: Division into Subsystems or Packages
 Identify all major subsystems (database, user interface, business rules, command interpreter, report engine, etc.) and define how each can communicate with others.
 
-**Critical rule:** Restrict intersubsystem communication. Without rules, entropy increases and every subsystem communicates with every other — defeating the purpose of partitioning.
+**Critical rule:** Restrict intersubsystem communication. Without rules, entropy increases and every subsystem communicates with every other, defeating the purpose of partitioning.
 
 | Relationship Type | Coupling Level |
 |-------------------|----------------|
-| One subsystem calls routines in another | Simplest — preferred |
+| One subsystem calls routines in another | Simplest; preferred |
 | One subsystem contains classes from another | More involved |
-| Classes in one subsystem inherit from classes in another | Most involved — use sparingly |
+| Classes in one subsystem inherit from classes in another | Most involved; use sparingly |
 
 > **A system-level diagram should be an acyclic graph.** No circular relationships.
 
@@ -145,14 +145,14 @@ Identify all classes in the system. Define each class's interface. Key distincti
 
 | Class | Object |
 |-------|--------|
-| Static — what you see in the program listing | Dynamic — specific instance at runtime |
+| Static (what you see in the program listing | Dynamic) specific instance at runtime |
 | The cookie cutter | The cookie |
 
 #### Level 4: Division into Routines
 Divide each class into routines. The class interface defines public routines; this level details private routines. Often clarifies the class interface, causing iterative changes back at Level 3.
 
 #### Level 5: Internal Routine Design
-Writing pseudocode, looking up algorithms, organizing paragraphs of code. Always done — but sometimes unconsciously and poorly rather than consciously and well.
+Writing pseudocode, looking up algorithms, organizing paragraphs of code. Always done, but sometimes unconsciously and poorly rather than consciously and well.
 
 ---
 
@@ -181,7 +181,7 @@ Iterate on both the top-level organization and the details of each class.
 | Class interface | Door level |
 | Package interface | House level |
 
-> Good programmers create abstractions at *all* levels. Without them, you're building at the "wood-fiber and varnish-molecule" level — overly complex and intellectually unmanageable.
+> Good programmers create abstractions at *all* levels. Without them, you're building at the "wood-fiber and varnish-molecule" level, overly complex and intellectually unmanageable.
 
 #### 3. Encapsulate Implementation Details
 **Abstraction** says: "You're *allowed* to look at a high level."
@@ -189,7 +189,7 @@ Iterate on both the top-level organization and the details of each class.
 
 Encapsulation manages complexity by *forbidding* you to look at the complexity. A class interface is like an iceberg: seven-eighths is underwater and invisible.
 
-#### 4. Inherit — When Inheritance Simplifies the Design
+#### 4. Inherit: When Inheritance Simplifies the Design
 Inheritance works synergistically with abstraction. Define general types, then specialize. Write general routines for general properties, specific routines for specific cases.
 
 > **Polymorphism** = the ability to call `Open()` or `Close()` without knowing until runtime what kind of object you're dealing with.
@@ -197,7 +197,7 @@ Inheritance works synergistically with abstraction. Define general types, then s
 **Caution:** Inheritance is powerful when used well and damaging when used naively.
 
 #### 5. Hide Secrets (Information Hiding)
-*David Parnas, 1972* — one of the seminal ideas in software development. Each class (or package or routine) is characterized by the **design and implementation decisions it hides** from everything else.
+*David Parnas, 1972*; one of the seminal ideas in software development. Each class (or package or routine) is characterized by the **design and implementation decisions it hides** from everything else.
 
 > Fred Brooks (1995): "Parnas was right, and I was wrong about information hiding."
 
@@ -208,7 +208,7 @@ Inheritance works synergistically with abstraction. Define general types, then s
 | Category | Examples |
 |----------|----------|
 | **Hiding complexity** | Complicated data types, file structures, boolean tests, involved algorithms |
-| **Hiding sources of change** | Areas likely to change — isolate so changes are localized |
+| **Hiding sources of change** | Areas likely to change; isolate so changes are localized |
 
 ##### Example: Unique ID Generation
 
@@ -220,10 +220,10 @@ Inheritance works synergistically with abstraction. Define general types, then s
 | `IdType id` (typedef/class) | Type change happens in one place. |
 
 ##### Barriers to Information Hiding
-- **Excessive distribution of information** — hard-coded literals, interleaved user interaction, global data accessed directly
-- **Circular dependencies** — Class A calls B, B calls A. Makes testing impossible until both are ready.
-- **Class data mistaken for global data** — Class data in small, well-designed classes avoids global-data problems
-- **Perceived performance penalties** — Premature optimization. Create a modular design first; optimize hot spots later.
+- **Excessive distribution of information:** hard-coded literals, interleaved user interaction, global data accessed directly
+- **Circular dependencies:** Class A calls B, B calls A. Makes testing impossible until both are ready.
+- **Class data mistaken for global data:** Class data in small, well-designed classes avoids global-data problems
+- **Perceived performance penalties:** Premature optimization. Create a modular design first; optimize hot spots later.
 
 ##### Proven Value
 > Large programs using information hiding were found to be easier to modify **by a factor of 4** than programs that don't (Korson & Vaishnavi, 1986).
@@ -235,7 +235,7 @@ Great designers share one attribute: the ability to **anticipate change** (Glass
 
 1. **Identify** items likely to change
 2. **Separate** volatile components into their own classes
-3. **Isolate** — design interfaces insensitive to changes. Changes stay inside the class.
+3. **Isolate:** design interfaces insensitive to changes. Changes stay inside the class.
 
 **Areas likely to change on any project:**
 
@@ -270,8 +270,8 @@ Great designers share one attribute: the ability to **anticipate change** (Glass
 |------|-------------|---------|
 | **Simple-data-parameter** | Only primitive types passed through parameter lists | ✅ Normal and acceptable |
 | **Simple-object** | Module instantiates an object | ✅ Fine |
-| **Object-parameter** | Object1 requires Object2 to pass Object3 | ⚠️ Tighter — Object2 must know about Object3 |
-| **Semantic** | One module uses semantic knowledge of another's inner workings | ❌ Most insidious — breaks in undetectable ways |
+| **Object-parameter** | Object1 requires Object2 to pass Object3 | ⚠️ Tighter: Object2 must know about Object3 |
+| **Semantic** | One module uses semantic knowledge of another's inner workings | ❌ Most insidious, breaks in undetectable ways |
 
 **Semantic coupling examples:**
 - Passing control flags that assume internal workings
@@ -280,7 +280,7 @@ Great designers share one attribute: the ability to **anticipate change** (Glass
 - Partially initializing an object because you "know" which methods will be called
 - Casting a base object to a derived type because you "know" what was really passed
 
-> Semantic coupling turns debugging into a Sisyphean task — changes in the used module break the using module in ways completely undetectable by the compiler.
+> Semantic coupling turns debugging into a Sisyphean task, changes in the used module break the using module in ways completely undetectable by the compiler.
 
 #### 8. Look for Common Design Patterns
 Patterns provide ready-made abstractions for common problems (Gamma et al., 1995).
@@ -290,7 +290,7 @@ Patterns provide ready-made abstractions for common problems (Gamma et al., 1995
 | Benefit | Description |
 |---------|-------------|
 | **Reduce complexity** | Ready-made abstractions. "Factory Method" communicates a rich set of relationships in two words. |
-| **Reduce errors** | Institutionalize details of common solutions — embody years of accumulated wisdom and corrections. |
+| **Reduce errors** | Institutionalize details of common solutions; embody years of accumulated wisdom and corrections. |
 | **Heuristic value** | Allow cycling through familiar alternatives vs. creating from whole cloth. |
 | **Streamline communication** | Move design dialog to higher level of granularity. |
 
@@ -324,11 +324,11 @@ Patterns provide ready-made abstractions for common problems (Gamma et al., 1995
 | **Aim for Strong Cohesion** | All routines in a class support a central purpose. The more focused, the easier to remember what the code does. |
 | **Build Hierarchies** | Tiered structures let you focus on only the level of detail you currently need. Aristotle used them; humans naturally organize this way. |
 | **Formalize Class Contracts** | Each interface is a contract: preconditions (what clients promise) and postconditions (what the class promises). |
-| **Assign Responsibilities** | Ask what each object should be responsible for — broader than "what should it hide?" |
+| **Assign Responsibilities** | Ask what each object should be responsible for; broader than "what should it hide?" |
 | **Design for Test** | Design to facilitate testing → more formalized interfaces, minimized dependencies. |
 | **Avoid Failure** | Study failure modes, not just successes. Many bridge collapses came from copying successes without considering failure. |
 | **Choose Binding Time Consciously** | Earlier binding = simpler; later binding = more flexible. Ask "What if I bound this earlier/later?" |
-| **Make Central Points of Control** | One Right Place for any nontrivial piece of code; One Right Place to make a likely change. |
+| **Make Central Points of Control** | One Right Place for any nontrivial piece of code; one Right Place to make a likely change. |
 | **Consider Using Brute Force** | A brute-force solution that works > an elegant solution that doesn't. |
 | **Draw a Diagram** | Pictures represent problems at higher levels of abstraction. |
 | **Keep Your Design Modular** | Each routine/class as a black box: known inputs, known outputs, unknown internals. |
@@ -340,19 +340,19 @@ Patterns provide ready-made abstractions for common problems (Gamma et al., 1995
 G. Polya's approach to mathematical problem solving (1957) applies to software design:
 
 ```
-1. UNDERSTAND THE PROBLEM — What is the unknown? What are the data?
+1. UNDERSTAND THE PROBLEM - What is the unknown? What are the data?
    What is the condition? Draw a figure. Separate the parts.
 
-2. DEVISE A PLAN — Have you seen this before? A related problem?
+2. DEVISE A PLAN - Have you seen this before? A related problem?
    Can you restate it? Solve a simpler version first.
 
-3. CARRY OUT THE PLAN — Check each step. Can you prove it's correct?
+3. CARRY OUT THE PLAN - Check each step. Can you prove it's correct?
 
-4. LOOK BACK — Can you check the result? Derive it differently?
+4. LOOK BACK - Can you check the result? Derive it differently?
    Can you use the result or method for another problem?
 ```
 
-> **Don't get stuck on a single approach.** If UML isn't working, write English. Try a brute-force solution. Walk away and come back. You don't have to solve everything at once — leaving issues unresolved until you have more information becomes natural with experience.
+> **Don't get stuck on a single approach.** If UML isn't working, write English. Try a brute-force solution. Walk away and come back. You don't have to solve everything at once, leaving issues unresolved until you have more information becomes natural with experience.
 
 ---
 
@@ -376,7 +376,7 @@ No one's skull is big enough for all the details of a complex program. Divide in
 Both have merit. The tension between them creates better designs.
 
 ### Experimental Prototyping
-When you can't decide among design alternatives, write the minimal code needed to answer the specific question. Prototyping is *design work*, not production code — you can and should throw it away once the question is answered.
+When you can't decide among design alternatives, write the minimal code needed to answer the specific question. Prototyping is *design work*, not production code; you can and should throw it away once the question is answered.
 
 ### Collaborative Design
 - **Pair design:** Two minds produce fewer blind spots than one.
@@ -385,7 +385,7 @@ When you can't decide among design alternatives, write the minimal code needed t
 
 ### How Much Design Is Enough?
 
-> *"When you're out of time"* is common — but there's a better answer.
+> *"When you're out of time"* is common, but there's a better answer.
 
 | Factor | More Design Needed | Less Design Needed |
 |--------|--------------------|--------------------|
@@ -415,7 +415,7 @@ A good rule of thumb: spend about **10-15% of total project effort on design** b
 
 ## 5.5 Comments on Popular Methodologies
 
-McConnell briefly discusses several approaches, noting that methodology debates often miss the point — **good design comes from applying heuristics effectively, not from following a methodology rigidly.**
+McConnell briefly discusses several approaches, noting that methodology debates often miss the point: **good design comes from applying heuristics effectively, not from following a methodology rigidly.**
 
 | Methodology / Approach | Essence |
 |------------------------|---------|
@@ -434,7 +434,7 @@ McConnell briefly discusses several approaches, noting that methodology debates 
 
 1. **Design is a wicked, sloppy, nondeterministic, heuristic, emergent process.** Accepting this reality is the first step to doing it well.
 
-2. **Software's Primary Technical Imperative is managing complexity.** Every design decision should be evaluated against this standard. Dijkstra's point stands: no one's skull is big enough — organize programs so you can safely focus on one part at a time.
+2. **Software's Primary Technical Imperative is managing complexity.** Every design decision should be evaluated against this standard. Dijkstra's point stands: no one's skull is big enough; organize programs so you can safely focus on one part at a time.
 
 3. **Information hiding is the most powerful design heuristic.** Proven to make programs easier to modify by a factor of 4. Ask *"What should I hide?"* at every level.
 
@@ -444,11 +444,11 @@ McConnell briefly discusses several approaches, noting that methodology debates 
 
 6. **Anticipate change.** Identify volatile areas (business rules, hardware, I/O, nonstandard features) and isolate them behind stable interfaces.
 
-7. **Loose coupling with visible connections.** Semantic coupling is the most insidious — it breaks in ways undetectable by the compiler.
+7. **Loose coupling with visible connections.** Semantic coupling is the most insidious; it breaks in ways undetectable by the compiler.
 
 8. **Use patterns, but don't force-fit.** Patterns reduce complexity, errors, and communication overhead. But forcing code to fit a pattern can increase complexity.
 
-9. **Iterate.** The second design is nearly always better than the first. Don't try to solve everything at once — leave issues unresolved until you have more information.
+9. **Iterate.** The second design is nearly always better than the first. Don't try to solve everything at once; leave issues unresolved until you have more information.
 
 10. **Capture the design.** If it's only in your head, it doesn't count. Use diagrams, documents, pattern names, and the code itself.
 
@@ -461,4 +461,4 @@ McConnell briefly discusses several approaches, noting that methodology debates 
 - High-Quality Routines (Ch 7)
 - Defensive Programming (Ch 8)
 - Refactoring (Ch 24)
-- [[../03_Software_Design/|Software Design]]
+- [[../03_Software_Design/Software Design Note Overview|Software Design]]

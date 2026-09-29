@@ -6,7 +6,7 @@ created: 2026-07-21
 
 # Working Classes
 
-> *"A key to being an effective programmer is maximizing the portion of a program that you can safely ignore while working on any one section of code. Classes are the primary tool for accomplishing that objective."* — Steve McConnell
+> *"A key to being an effective programmer is maximizing the portion of a program that you can safely ignore while working on any one section of code. Classes are the primary tool for accomplishing that objective."* *(Steve McConnell)*
 
 ---
 
@@ -14,7 +14,7 @@ created: 2026-07-21
 
 An **abstract data type** is a collection of data and operations that work on that data. The operations both describe the data to the rest of the program and allow the rest of the program to change the data.
 
-Understanding ADTs is essential to understanding OOP. Without ADT understanding, programmers create classes that are "classes" in name only — little more than convenient carrying cases for loosely related data and routines.
+Understanding ADTs is essential to understanding OOP. Without ADT understanding, programmers create classes that are "classes" in name only, little more than convenient carrying cases for loosely related data and routines.
 
 ### The Problem ADTs Solve
 
@@ -49,13 +49,13 @@ currentFont.SetBoldOn();
 
 ### Guidelines for Defining ADTs
 
-1. **Build low-level data types as ADTs** — Stacks, lists, queues can all be ADTs. But ask: *"What does this stack represent?"* If it represents employees, treat the ADT as `Employees`, not as `Stack`. **Treat yourself to the highest possible level of abstraction.**
+1. **Build low-level data types as ADTs:** Stacks, lists, queues can all be ADTs. But ask: *"What does this stack represent?"* If it represents employees, treat the ADT as `Employees`, not as `Stack`. **Treat yourself to the highest possible level of abstraction.**
 
-2. **Treat common objects as ADTs** — Files, streams, GUI windows are already ADTs provided by the OS/language. Layer your own ADTs on top.
+2. **Treat common objects as ADTs:** Files, streams, GUI windows are already ADTs provided by the OS/language. Layer your own ADTs on top.
 
-3. **Treat even simple items as ADTs** — A `Light` with only `TurnOn()` and `TurnOff()` still benefits from encapsulation, self-documentation, and change isolation.
+3. **Treat even simple items as ADTs:** A `Light` with only `TurnOn()` and `TurnOff()` still benefits from encapsulation, self-documentation, and change isolation.
 
-4. **Refer to an ADT independently of its storage medium** — Call it `rateTable.Read()` not `RateFile.Read()`. If you change storage from disk to memory, the interface remains correct.
+4. **Refer to an ADT independently of its storage medium:** Call it `rateTable.Read()` not `RateFile.Read()`. If you change storage from disk to memory, the interface remains correct.
 
 ### ADTs and Classes
 
@@ -97,43 +97,43 @@ public:
 
 ### Guidelines for Good Abstraction
 
-1. **Present a consistent level of abstraction** — Each class should implement one and only one ADT. Don't mix `Employee`-level routines with `ListContainer`-level routines. If your class inherits from `ListContainer` but is supposed to be an `EmployeeCensus`, hide the container and expose only employee-level operations.
+1. **Present a consistent level of abstraction:** Each class should implement one and only one ADT. Don't mix `Employee`-level routines with `ListContainer`-level routines. If your class inherits from `ListContainer` but is supposed to be an `EmployeeCensus`, hide the container and expose only employee-level operations.
 
-2. **Understand what abstraction the class is implementing** — If you wrap a 150-routine spreadsheet control to provide a 15-routine grid control, **expose only the 15 grid routines**, not all 150. Exposing everything defeats encapsulation.
+2. **Understand what abstraction the class is implementing:** If you wrap a 150-routine spreadsheet control to provide a 15-routine grid control, **expose only the 15 grid routines**, not all 150. Exposing everything defeats encapsulation.
 
-3. **Provide services in pairs with their opposites** — `On`/`Off`, `Add`/`Remove`, `Activate`/`Deactivate`. Don't create opposites gratuitously, but check whether one is needed.
+3. **Provide services in pairs with their opposites:** `On`/`Off`, `Add`/`Remove`, `Activate`/`Deactivate`. Don't create opposites gratuitously, but check whether one is needed.
 
-4. **Move unrelated information to another class** — If half the routines work with half the data and the other half with the other half, you have two classes in one. Split them.
+4. **Move unrelated information to another class:** If half the routines work with half the data and the other half with the other half, you have two classes in one. Split them.
 
-5. **Make interfaces programmatic rather than semantic** — Semantic dependencies ("`RoutineA` must be called before `RoutineB`") can't be enforced by the compiler. Use asserts to convert semantic requirements into programmatic ones.
+5. **Make interfaces programmatic rather than semantic:** Semantic dependencies ("`RoutineA` must be called before `RoutineB`") can't be enforced by the compiler. Use asserts to convert semantic requirements into programmatic ones.
 
-6. **Beware of interface erosion under maintenance** — Don't add `IsZipCodeValid()` or `GetQueryToCreateNewEmployee()` to an `Employee` class. They violate the abstraction.
+6. **Beware of interface erosion under maintenance:** Don't add `IsZipCodeValid()` or `GetQueryToCreateNewEmployee()` to an `Employee` class. They violate the abstraction.
 
-7. **Don't add public members inconsistent with the interface abstraction** — Each time you add a routine, ask: *"Is this consistent with the existing abstraction?"*
+7. **Don't add public members inconsistent with the interface abstraction:** Each time you add a routine, ask: *"Is this consistent with the existing abstraction?"*
 
-8. **Focus on abstraction first, cohesion second** — Abstraction at the interface level provides more design insight than cohesion analysis.
+8. **Focus on abstraction first, cohesion second:** Abstraction at the interface level provides more design insight than cohesion analysis.
 
 ### Good Encapsulation
 
 > *"Encapsulation is the enforcer that prevents you from looking at the details even if you want to."*
 
-**Abstraction** helps manage complexity by providing models. **Encapsulation** is the stronger concept — it *prevents* you from looking at implementation details. You either have both or neither; there is no middle ground.
+**Abstraction** helps manage complexity by providing models. **Encapsulation** is the stronger concept; it *prevents* you from looking at implementation details. You either have both or neither; there is no middle ground.
 
 #### Key Encapsulation Rules
 
-1. **Minimize accessibility of classes and members** — Favor the strictest level of privacy that's workable. The real question: *"What best preserves the integrity of the interface abstraction?"*
+1. **Minimize accessibility of classes and members:** Favor the strictest level of privacy that's workable. The real question: *"What best preserves the integrity of the interface abstraction?"*
 
-2. **Don't expose member data in public** — Getters/setters maintain encapsulation even when they expose individual fields:
+2. **Don't expose member data in public:** Getters/setters maintain encapsulation even when they expose individual fields:
    ```cpp
-   float GetX();     // Encapsulation preserved — implementation unknown
+   float GetX();     // Encapsulation preserved - implementation unknown
    void SetX(float x);
    ```
    vs.
    ```cpp
-   float x;          // Encapsulation broken — client monkeys directly with data
+   float x;          // Encapsulation broken - client monkeys directly with data
    ```
 
-3. **Avoid putting private implementation details into the class interface** — In C++, use the **Pointer to Implementation (pimpl)** idiom:
+3. **Avoid putting private implementation details into the class interface** : In C++, use the **Pointer to Implementation (pimpl)** idiom:
    ```cpp
    class Employee {
    private:
@@ -141,22 +141,22 @@ public:
    };
    ```
 
-4. **Don't make assumptions about the class's users** — Design to the contract, not to how you think the class will be used. Comments like *"initialize to 1.0 because DerivedClass blows up otherwise"* indicate the class knows too much about its users.
+4. **Don't make assumptions about the class's users:** Design to the contract, not to how you think the class will be used. Comments like *"initialize to 1.0 because DerivedClass blows up otherwise"* indicate the class knows too much about its users.
 
-5. **Avoid friend classes** — They violate encapsulation. Use only in disciplined patterns like State.
+5. **Avoid friend classes:** They violate encapsulation. Use only in disciplined patterns like State.
 
-6. **Don't expose a routine just because it uses only public routines** — Ask whether exposing it is consistent with the abstraction.
+6. **Don't expose a routine just because it uses only public routines:** Ask whether exposing it is consistent with the abstraction.
 
-7. **Favor read-time convenience over write-time convenience** — Code is read far more times than written. Don't add a convenient-but-inconsistent routine just because it helps one client.
+7. **Favor read-time convenience over write-time convenience:** Code is read far more times than written. Don't add a convenient-but-inconsistent routine just because it helps one client.
 
-8. **Be very wary of semantic violations of encapsulation** — Examples of semantic encapsulation breakage:
+8. **Be very wary of semantic violations of encapsulation:** Examples of semantic encapsulation breakage:
    - Skipping `InitializeOperations()` because you *know* `PerformFirstOperation()` calls it
    - Using `ClassB.MAXIMUM_ELEMENTS` instead of `ClassA.MAXIMUM_ELEMENTS` because you *know* they're equal
    - Using a reference after its creating object goes out of scope because you *know* about static storage
 
    > *"If you can't figure out how to use a class based solely on its interface documentation, the right response is NOT to look at the implementation. It's to contact the author and get the documentation fixed."*
 
-9. **Watch for coupling that's too tight** — Tight coupling follows leaky abstraction or broken encapsulation. Observe the Law of Demeter.
+9. **Watch for coupling that's too tight:** Tight coupling follows leaky abstraction or broken encapsulation. Observe the Law of Demeter.
 
 ---
 
@@ -166,13 +166,13 @@ public:
 
 > *"Containment is the workhorse technique in object-oriented programming."*
 
-- **"Has a" is implemented through containment** — An employee *has a* name, phone number, tax ID → make them member data.
-- **Private inheritance as a last resort** — Only for accessing protected members of the contained class. Creates an overly cozy relationship; usually indicates a design error.
-- **The 7±2 rule for data members** — If a class has more than about 7 data members, consider decomposition. Err toward the high end for primitives, low end for complex objects.
+- **"Has a" is implemented through containment:** An employee *has a* name, phone number, tax ID → make them member data.
+- **Private inheritance as a last resort:** Only for accessing protected members of the contained class. Creates an overly cozy relationship; usually indicates a design error.
+- **The 7±2 rule for data members:** If a class has more than about 7 data members, consider decomposition. Err toward the high end for primitives, low end for complex objects.
 
 ### Inheritance ("is a" Relationships)
 
-> *"The single most important rule in object-oriented programming with C++ is this: public inheritance means 'is a.'"* — Scott Meyers
+> *"The single most important rule in object-oriented programming with C++ is this: public inheritance means 'is a.'"* *(Scott Meyers)*
 
 Inheritance creates simpler code by centralizing common elements (interfaces, implementations, data) in a base class.
 
@@ -183,13 +183,13 @@ For each data member: visible to derived classes?
 
 #### Inheritance Rules
 
-1. **Implement "is a" through public inheritance** — If the derived class won't adhere to the base class's interface contract, use containment instead.
+1. **Implement "is a" through public inheritance:** If the derived class won't adhere to the base class's interface contract, use containment instead.
 
-2. **Design and document for inheritance — or prohibit it** — Make members `final`/non-virtual if the class isn't designed for inheritance.
+2. **Design and document for inheritance: or prohibit it:** Make members `final`/non-virtual if the class isn't designed for inheritance.
 
-3. **Adhere to the Liskov Substitution Principle (LSP)** — *"Subclasses must be usable through the base class interface without the need for the user to know the difference."* If `InterestRate()` means "interest paid to customer" in `CheckingAccount` but "interest paid by customer" in `AutoLoanAccount`, LSP is violated — don't inherit.
+3. **Adhere to the Liskov Substitution Principle (LSP):** *"Subclasses must be usable through the base class interface without the need for the user to know the difference."* If `InterestRate()` means "interest paid to customer" in `CheckingAccount` but "interest paid by customer" in `AutoLoanAccount`, LSP is violated; don't inherit.
 
-4. **Be sure to inherit only what you want to inherit** — Three flavors of inherited routines:
+4. **Be sure to inherit only what you want to inherit:** Three flavors of inherited routines:
 
 | Type | Inherits Interface? | Inherits Implementation? | Overridable? |
 |------|---------------------|-------------------------|--------------|
@@ -197,19 +197,19 @@ For each data member: visible to derived classes?
 | Overridable | Yes | Default provided | Yes |
 | Non-overridable | Yes | Default provided | No |
 
-5. **Don't "override" a non-overridable member function** — Creating a same-named function in a derived class when the base class's version is private creates confusion; it looks polymorphic but isn't.
+5. **Don't "override" a non-overridable member function:** Creating a same-named function in a derived class when the base class's version is private creates confusion; it looks polymorphic but isn't.
 
-6. **Move common interfaces/data/behavior as high as possible** — But don't break the higher object's abstraction.
+6. **Move common interfaces/data/behavior as high as possible:** But don't break the higher object's abstraction.
 
-7. **Be suspicious of single-instance classes** — May indicate confusion between objects and classes. Can the variation be represented in data instead? (Singleton is the exception.)
+7. **Be suspicious of single-instance classes:** May indicate confusion between objects and classes. Can the variation be represented in data instead? (Singleton is the exception.)
 
-8. **Be suspicious of base classes with only one derived class** — Probably "designing ahead." Make current work as simple as possible.
+8. **Be suspicious of base classes with only one derived class:** Probably "designing ahead." Make current work as simple as possible.
 
-9. **Be suspicious of routines that override and do nothing** — Indicates an error in the base class design. Fix the root cause (e.g., not all cats scratch → add a `Claws` component) rather than creating `ScratchlessCat`.
+9. **Be suspicious of routines that override and do nothing:** Indicates an error in the base class design. Fix the root cause (e.g., not all cats scratch → add a `Claws` component) rather than creating `ScratchlessCat`.
 
-10. **Avoid deep inheritance trees** — Limit to 2–3 levels in practice. Deep trees are associated with increased fault rates (Basili, Briand, and Melo 1996).
+10. **Avoid deep inheritance trees:** Limit to 2–3 levels in practice. Deep trees are associated with increased fault rates (Basili, Briand, and Melo 1996).
 
-11. **Prefer polymorphism to extensive type checking** — Repeated `switch`/`case` on type codes often signals a need for polymorphic dispatch:
+11. **Prefer polymorphism to extensive type checking:** Repeated `switch`/`case` on type codes often signals a need for polymorphic dispatch:
 
     ```cpp
     // Instead of this:

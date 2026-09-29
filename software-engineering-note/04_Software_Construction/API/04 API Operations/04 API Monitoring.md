@@ -26,7 +26,7 @@ If your API is down and you don't know before your users do, you're flying blind
 | Metric | Why It Matters |
 |--------|---------------|
 | **Requests per endpoint** | Which endpoints are hot? Where to optimize? |
-| **Status code distribution** | 2xx vs 4xx vs 5xx — are errors client or server? |
+| **Status code distribution** | 2xx vs 4xx vs 5xx; are errors client or server? |
 | **Response size** | Are payloads bloating over time? |
 | **Auth failures** | 401 spike = expired tokens or attack? |
 | **Rate limit hits** | Are users hitting limits? Raise limits or optimize? |
@@ -100,6 +100,6 @@ SLA:  If uptime < 99.9% in a month → 10% credit
 
 ## Sources
 
-- Prometheus — https://prometheus.io/
-- Micrometer — https://micrometer.io/
-- Google SRE Book — https://sre.google/books/
+- Prometheus: https://prometheus.io/
+- Micrometer: https://micrometer.io/
+- Google SRE Book: https://sre.google/books/

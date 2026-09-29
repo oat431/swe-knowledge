@@ -11,7 +11,7 @@ status: in-progress
 
 # Middleware and Integration
 
-> **SWEBOK Reference:** Knowledge Area 4 (Software Construction), Section 4.4 — Construction for Heterogeneous, Embedded, and Distributed Systems; Middleware and Integration.
+> **SWEBOK Reference:** Knowledge Area 4 (Software Construction), Section 4.4: Construction for Heterogeneous, Embedded, and Distributed Systems; middleware and Integration.
 
 Middleware is software that sits between the operating system / network layer and the application layer, providing communication, data exchange, and coordination services across heterogeneous systems. Integration is the broader discipline of connecting disparate software components, services, and systems so they function as a coherent whole.
 
@@ -20,6 +20,7 @@ Middleware is software that sits between the operating system / network layer an
 ## 1 Middleware Categories
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     MW[Middleware] --> MOM[Message-Oriented Middleware]
     MW --> RPC[Remote Procedure Call]
@@ -132,6 +133,7 @@ TPMs handle:
 These three architectural components address different integration concerns along the evolution of distributed systems.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph "Enterprise (SOA era)"
         ESB[ESB<br/>Centralized mediation]
@@ -181,6 +183,7 @@ graph LR
 ### 3.1 Core Messaging Patterns
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     subgraph "Point-to-Point"
         P1[Producer] -->|msg| Q1[Queue]
@@ -265,6 +268,7 @@ graph TD
 - Components react to events (facts about things that happened) rather than calling each other directly.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     O[Order Service] -->|OrderPlaced| EB[Event Bus]
     EB --> I[Inventory Service]
@@ -299,6 +303,7 @@ Instead of storing current state, event sourcing stores every state change as an
 CQRS separates the write model (commands) from the read model (queries).
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     UI[Client] -->|Commands| CW[Command Handler]
     CW --> WDB[(Write Model / Write DB)]
@@ -342,6 +347,7 @@ graph TD
 A service mesh provides a dedicated infrastructure layer for handling service-to-service communication. The **sidecar proxy** pattern is central: each service instance has an adjacent proxy that intercepts all network traffic.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     subgraph "Data Plane"
         SP1[Sidecar Proxy 1] --- S1[Service A]
@@ -411,6 +417,7 @@ graph TD
 ### 7.3 Backend for Frontend (BFF) Pattern
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     Mobile[Mobile App] --> MBFF[Mobile BFF]
     Web[Web App] --> WBFF[Web BFF]
@@ -454,6 +461,7 @@ Each BFF is tailored to a specific frontend's needs, reducing over-fetching and 
 A saga is a sequence of local transactions. Each step publishes an event or message that triggers the next step. If a step fails, compensating transactions undo prior steps.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','actorBkg':'#19362D','actorBorder':'#1FB854','actorTextColor':'#CDD3D1','actorLineColor':'#1FB854','signalColor':'#CDD3D1','signalTextColor':'#CDD3D1','labelBoxBkgColor':'#161212','labelBoxBorderColor':'#1FB854','labelTextColor':'#CDD3D1','loopTextColor':'#CAC9C9','noteBkgColor':'#1EB88E','noteTextColor':'#000C07','noteBorderColor':'#1EB88E','activationBkgColor':'#1EB88E','activationBorderColor':'#1FB8AB','sequenceNumberColor':'#000000','fontSize':'14px'}}}%%
 sequenceDiagram
     participant O as Order Service
     participant I as Inventory Service
@@ -488,7 +496,7 @@ sequenceDiagram
 |-------|-------------|
 | **MOM** | Choose Kafka for streaming/logs, RabbitMQ for task routing, NATS for lightweight pub/sub |
 | **RPC** | gRPC for performance and streaming; REST for simplicity and browser compatibility |
-| **ESB vs Gateway vs Mesh** | ESB for legacy mediation; Gateway for edge API management; Mesh for service-to-service in microservices |
+| **ESB vs Gateway vs Mesh** | ESB for legacy mediation; gateway for edge API management; mesh for service-to-service in microservices |
 | **Message Patterns** | At-least-once is practical; exactly-once requires idempotency throughout the stack |
 | **Event Sourcing + CQRS** | Powerful for audit and scalability but adds eventual consistency complexity |
 | **Service Mesh** | Start with Linkerd for simplicity; adopt Istio for advanced traffic management |
@@ -498,11 +506,11 @@ sequenceDiagram
 
 ## Related Notes
 
-- [[13_Construction_Technologies_and_Tools]] — Construction tools and coding practices
-- [[15_Heterogeneous_and_Embedded]] — Embedded and cross-domain construction
-- [[09_Software_Architecture]] — Architectural patterns including microservices
-- [[11_Software_Quality]] — Quality attributes: interoperability, reliability
-- [[12_Test_Process_and_Measures]] — Integration testing strategies
+- [[13_Modern_Construction_Technologies]]: Construction tools and coding practices
+- [[15_Heterogeneous_and_Embedded]]: Embedded and cross-domain construction
+- [[../02_Software_Architecture/Software Architecture Overview|Software Architecture]]: Architectural patterns including microservices
+- [[../12_Software_Quality/Software Quality Overview|Software Quality]]: Quality attributes: interoperability, reliability
+- [[12_Test_Process_and_Measures]]: Integration testing strategies
 
 ---
 

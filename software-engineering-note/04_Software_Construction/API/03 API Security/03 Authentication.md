@@ -7,7 +7,7 @@ tags:
 
 # 03 API Authentication
 
-Authentication answers: **who are you?** Every API endpoint must know — or it must explicitly be public. This file covers JWT, OAuth2, API keys, and session vs token auth.
+Authentication answers: **who are you?** Every API endpoint must know, or it must explicitly be public. This file covers JWT, OAuth2, API keys, and session vs token auth.
 
 ---
 
@@ -26,6 +26,7 @@ Authentication answers: **who are you?** Every API endpoint must know — or it 
 ## JWT (JSON Web Token)
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','actorBkg':'#19362D','actorBorder':'#1FB854','actorTextColor':'#CDD3D1','actorLineColor':'#1FB854','signalColor':'#CDD3D1','signalTextColor':'#CDD3D1','labelBoxBkgColor':'#161212','labelBoxBorderColor':'#1FB854','labelTextColor':'#CDD3D1','loopTextColor':'#CAC9C9','noteBkgColor':'#1EB88E','noteTextColor':'#000C07','noteBorderColor':'#1EB88E','activationBkgColor':'#1EB88E','activationBorderColor':'#1FB8AB','sequenceNumberColor':'#000000','fontSize':'14px'}}}%%
 sequenceDiagram
     participant C as Client
     participant A as Auth Server
@@ -62,6 +63,7 @@ Payload: {"sub": "123", "roles": ["customer"], "exp": 1716123456}
 ## OAuth2 Flow (Authorization Code + PKCE)
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','actorBkg':'#19362D','actorBorder':'#1FB854','actorTextColor':'#CDD3D1','actorLineColor':'#1FB854','signalColor':'#CDD3D1','signalTextColor':'#CDD3D1','labelBoxBkgColor':'#161212','labelBoxBorderColor':'#1FB854','labelTextColor':'#CDD3D1','loopTextColor':'#CAC9C9','noteBkgColor':'#1EB88E','noteTextColor':'#000C07','noteBorderColor':'#1EB88E','activationBkgColor':'#1EB88E','activationBorderColor':'#1FB8AB','sequenceNumberColor':'#000000','fontSize':'14px'}}}%%
 sequenceDiagram
     participant U as User
     participant C as Client App
@@ -80,7 +82,7 @@ sequenceDiagram
 
 ---
 
-## API Key — Simple but Limited
+## API Key: Simple but Limited
 
 ```bash
 curl -H "X-API-Key: sk_live_abc123" https://api.example.com/orders
@@ -88,7 +90,7 @@ curl -H "X-API-Key: sk_live_abc123" https://api.example.com/orders
 
 | ✅ | ❌ |
 |----|-----|
-| Dead simple to implement | No user identity — just "this key has access" |
+| Dead simple to implement | No user identity, just "this key has access" |
 | Great for service-to-service | If leaked, anyone can use it |
 | Rate limit per key | Can't expire or rotate easily |
 
@@ -123,6 +125,6 @@ public class SecurityConfig {
 
 ## Sources
 
-- JWT — https://jwt.io/
-- OAuth2 — https://oauth.net/2/
-- Spring Security — https://docs.spring.io/spring-security/reference/
+- JWT: https://jwt.io/
+- OAuth2: https://oauth.net/2/
+- Spring Security: https://docs.spring.io/spring-security/reference/

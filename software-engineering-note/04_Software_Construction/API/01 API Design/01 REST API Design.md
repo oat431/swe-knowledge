@@ -56,7 +56,7 @@ REST is the dominant API architecture on the web. When done right, it's simple, 
 | Code | Meaning | When |
 |:----:|---------|------|
 | **200** | OK | Successful GET, PUT, PATCH |
-| **201** | Created | Successful POST — include `Location` header |
+| **201** | Created | Successful POST; include `Location` header |
 | **204** | No Content | Successful DELETE |
 | **400** | Bad Request | Invalid input, validation error |
 | **401** | Unauthorized | Missing or invalid credentials |
@@ -143,10 +143,10 @@ Status codes tell the client *what* went wrong. A consistent error body tells th
 
 | Field | Why |
 |-------|-----|
-| `code` | Machine-readable error type — client can switch on it |
+| `code` | Machine-readable error type; client can switch on it |
 | `message` | Human-readable explanation |
 | `status` | HTTP status code (redundant but convenient for logging) |
-| `timestamp` | When it happened — critical for debugging logs |
+| `timestamp` | When it happened; critical for debugging logs |
 | `path` | Which endpoint failed |
 | `details` | Field-level validation errors (400/422 only) |
 | `traceId` | Correlation ID for distributed tracing |
@@ -312,13 +312,13 @@ public ResponseEntity<Order> createOrder(
 | **TTL** | 24–48 hours (matches max retry window) |
 | **Scope** | Per-user, per-endpoint |
 
-> **When to use:** Any state-changing endpoint where duplicates are harmful — payments, orders, transfers. Not needed for GET (already idempotent) or truly idempotent PUT/DELETE.
+> **When to use:** Any state-changing endpoint where duplicates are harmful, payments, orders, transfers. Not needed for GET (already idempotent) or truly idempotent PUT/DELETE.
 
 ---
 
 ## HATEOAS (Hypermedia as the Engine of Application State)
 
-The API response includes links to related actions. The client navigates the API by following links — no hardcoded URLs.
+The API response includes links to related actions. The client navigates the API by following links; no hardcoded URLs.
 
 ```json
 {
@@ -339,6 +339,6 @@ The API response includes links to related actions. The client navigates the API
 ## Sources
 
 - Fielding, Roy. *Architectural Styles*, 2000.
-- Microsoft REST API Guidelines — https://github.com/microsoft/api-guidelines
-- RFC 7231 — HTTP/1.1 Semantics and Content
-- Stripe API — https://stripe.com/docs/api (gold standard for error responses and idempotency)
+- Microsoft REST API Guidelines: https://github.com/microsoft/api-guidelines
+- RFC 7231: HTTP/1.1 Semantics and Content
+- Stripe API: https://stripe.com/docs/api (gold standard for error responses and idempotency)

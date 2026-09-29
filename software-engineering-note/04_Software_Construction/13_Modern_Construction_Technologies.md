@@ -6,7 +6,7 @@ created: 2026-07-21
 
 # 13. Modern Construction Technologies
 
-> **SWEBOK v4 KA 4.4–4.5**: Software Construction Activities and Technologies — covering the evolving landscape of development environments, platforms, toolchains, and construction approaches that shape modern software engineering.
+> **SWEBOK v4 KA 4.4–4.5:** Software Construction Activities and Technologies, covering the evolving landscape of development environments, platforms, toolchains, and construction approaches that shape modern software engineering.
 
 The construction phase of software engineering is no longer limited to writing code in a local IDE. Modern construction spans cloud-based development environments, containerized workflows, low-code platforms, model-driven construction, sophisticated dependency management, and middleware integration. This note covers these technologies and their implications for software construction practice.
 
@@ -19,6 +19,7 @@ The construction phase of software engineering is no longer limited to writing c
 Cloud-based IDEs (Integrated Development Environments) move the development workspace from a local machine to a remote server. Developers access a full development environment through a browser or thin client, with computation, storage, and tooling hosted in the cloud.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     subgraph Developer Machine
         A[Browser / Thin Client]
@@ -101,10 +102,10 @@ Dev Containers provide a standardized, containerized development environment spe
 ```
 
 **The Dev Container Specification** (by Microsoft) enables:
-- **Reproducible environments**: Same container on Codespaces, Gitpod, local VS Code, and CI
-- **Team consistency**: Everyone uses the same tools, versions, and configurations
-- **Onboarding acceleration**: `.devcontainer/` in the repo means instant setup
-- **CI parity**: Same containers used in development and build pipelines
+- **Reproducible environments:** Same container on Codespaces, Gitpod, local VS Code, and CI
+- **Team consistency:** Everyone uses the same tools, versions, and configurations
+- **Onboarding acceleration:** `.devcontainer/` in the repo means instant setup
+- **CI parity:** Same containers used in development and build pipelines
 
 See also: [[09_System_Considerations]] for environment and system configuration concerns.
 
@@ -123,6 +124,7 @@ See also: [[09_System_Considerations]] for environment and system configuration 
 ### 2.2 Platform Landscape
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Low-Code / No-Code Platforms] --> B[Enterprise Application Platforms]
     A --> C[Workflow Automation]
@@ -177,22 +179,22 @@ graph TD
 
 ### 2.5 Risks of Low-Code Adoption
 
-- **Vendor lock-in**: Migrating away from a low-code platform can be extremely difficult
-- **Scalability ceilings**: Performance and cost may not scale linearly
-- **Shadow IT**: Business units building without IT oversight can create security and compliance risks
-- **Technical debt**: Generated code may be hard to maintain or extend
-- **Skill ceiling**: Complex requirements quickly hit the platform's limits
-- **Integration complexity**: Connecting to legacy systems may still require custom code
+- **Vendor lock-in:** Migrating away from a low-code platform can be extremely difficult
+- **Scalability ceilings:** Performance and cost may not scale linearly
+- **Shadow IT:** Business units building without IT oversight can create security and compliance risks
+- **Technical debt:** Generated code may be hard to maintain or extend
+- **Skill ceiling:** Complex requirements quickly hit the platform's limits
+- **Integration complexity:** Connecting to legacy systems may still require custom code
 
 ### 2.6 The Professional Developer's Role
 
 Low-code does not eliminate the need for professional developers. Instead, it changes their role:
 
-- **Platform governance**: Setting standards for what can be built on low-code platforms
-- **Integration architecture**: Designing how low-code apps connect to enterprise systems
-- **Complex component development**: Building custom connectors, APIs, and components
-- **Quality assurance**: Reviewing low-code applications for security, performance, and reliability
-- **Platform selection**: Evaluating and recommending appropriate platforms for each use case
+- **Platform governance:** Setting standards for what can be built on low-code platforms
+- **Integration architecture:** Designing how low-code apps connect to enterprise systems
+- **Complex component development:** Building custom connectors, APIs, and components
+- **Quality assurance:** Reviewing low-code applications for security, performance, and reliability
+- **Platform selection:** Evaluating and recommending appropriate platforms for each use case
 
 See also: [[01_Construction_Foundations]] for the enduring principles that apply regardless of the construction tool.
 
@@ -205,6 +207,7 @@ See also: [[01_Construction_Foundations]] for the enduring principles that apply
 MDA, defined by the Object Management Group (OMG), separates the specification of system functionality from its implementation on specific platforms:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph "CIM (Computation Independent Model)"
         A[Business Requirements]
@@ -253,10 +256,10 @@ flowchart TD
 
 Executable UML (xUML) extends traditional UML with the goal of creating models that can be directly executed or compiled:
 
-- **Precise semantics**: Every model element has a well-defined execution meaning
-- **Action semantics**: Detailed behavior specified in a platform-independent action language
-- **Translation, not generation**: Models are translated (compiled) rather than generating code templates
-- **Model as source of truth**: The model IS the code, not a documentation artifact
+- **Precise semantics:** Every model element has a well-defined execution meaning
+- **Action semantics:** Detailed behavior specified in a platform-independent action language
+- **Translation, not generation:** Models are translated (compiled) rather than generating code templates
+- **Model as source of truth:** The model IS the code, not a documentation artifact
 
 **xUML advantages:**
 - Platform independence (same model compiles to multiple targets)
@@ -293,7 +296,7 @@ DSLs are a practical form of model-driven construction:
 | **OpenAPI / Swagger** | REST APIs | API specification and scaffold generation |
 | **YAML (CI/CD)** | Build pipelines | Declarative CI/CD configuration |
 
-See also: [[API/API_Design_Principles]] for API specification-driven construction.
+See also: [[API/01 API Design/01 REST API Design|API Design Principles]] for API specification-driven construction.
 
 ---
 
@@ -318,6 +321,7 @@ Modern software construction relies heavily on third-party packages managed thro
 ### 4.2 Dependency Management Best Practices
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Add Dependency] --> B{Evaluate}
     B -->|Security| C[Check CVE databases]
@@ -337,12 +341,12 @@ flowchart TD
 ```
 
 **Key practices:**
-1. **Pin versions**: Use exact versions or tight ranges in production
-2. **Commit lock files**: Always commit `package-lock.json`, `Cargo.lock`, etc.
-3. **Minimal dependencies**: Evaluate whether a dependency is worth the supply chain risk
-4. **Regular updates**: Use Renovate or Dependabot to keep dependencies current
-5. **Audit dependencies**: Run `npm audit`, `pip audit`, `cargo audit` in CI
-6. **Prefer well-maintained packages**: Check commit history, issue response time, maintainer count
+1. **Pin versions:** Use exact versions or tight ranges in production
+2. **Commit lock files:** Always commit `package-lock.json`, `Cargo.lock`, etc.
+3. **Minimal dependencies:** Evaluate whether a dependency is worth the supply chain risk
+4. **Regular updates:** Use Renovate or Dependabot to keep dependencies current
+5. **Audit dependencies:** Run `npm audit`, `pip audit`, `cargo audit` in CI
+6. **Prefer well-maintained packages:** Check commit history, issue response time, maintainer count
 
 ### 4.3 Software Bill of Materials (SBOM)
 
@@ -355,10 +359,10 @@ An SBOM is a formal, machine-readable inventory of software components and depen
 | **SWID Tags** | XML | ISO/IEC 19770-2; software identification |
 
 **SBOM use cases:**
-- **Vulnerability management**: Quickly identify affected components when a CVE is disclosed
-- **License compliance**: Audit all transitive dependency licenses
-- **Regulatory compliance**: Meet requirements (e.g., US Executive Order 14028, EU CRA)
-- **Supply chain transparency**: Understand what's in your software
+- **Vulnerability management:** Quickly identify affected components when a CVE is disclosed
+- **License compliance:** Audit all transitive dependency licenses
+- **Regulatory compliance:** Meet requirements (e.g., US Executive Order 14028, EU CRA)
+- **Supply chain transparency:** Understand what's in your software
 
 **SBOM generation tools:**
 | Tool | Ecosystem | Method |
@@ -404,10 +408,10 @@ Software supply chain attacks target the dependency ecosystem:
 | **Creative Commons** | CC-BY, CC-BY-SA, CC0 | Attribution, share-alike (not recommended for code) | Variable |
 
 **License compliance tools:**
-- **FOSSA**: Enterprise license compliance scanning
+- **FOSSA:** Enterprise license compliance scanning
 - **licensee** (GitHub): Detects licenses in repositories
 - **REUSE** (FSFE): Ensures every file has license information
-- **ScanCode Toolkit**: Comprehensive license detection
+- **ScanCode Toolkit:** Comprehensive license detection
 
 ---
 
@@ -418,6 +422,7 @@ Software supply chain attacks target the dependency ecosystem:
 Modern software construction involves connecting disparate systems through various middleware technologies:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph "Communication Patterns"
         A[Synchronous]
@@ -471,11 +476,12 @@ flowchart TD
 | **Complexity** | Heavyweight, monolithic | Lightweight, focused |
 | **Transformation** | Built-in message transformation (XSLT, mapping) | Minimal; services own their representations |
 | **Examples** | IBM Integration Bus, MuleSoft, Oracle ESB | Kong, AWS API Gateway, Envoy, Traefik, NGINX |
-| **Modern replacement** | API Gateway + Service Mesh + Event Streaming | API Gateway for north-south; Service Mesh for east-west |
+| **Modern replacement** | API Gateway + Service Mesh + Event Streaming | API Gateway for north-south; service Mesh for east-west |
 
 **Modern integration architecture:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     subgraph External
         C[Clients]
@@ -534,6 +540,7 @@ A service mesh manages service-to-service communication in microservices archite
 Hardware/software co-design involves designing hardware and software components of a system simultaneously rather than sequentially:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[System Requirements] --> B[Architecture Exploration]
     B --> C{Partition Decision}
@@ -610,6 +617,7 @@ Modern systems often combine multiple processing architectures:
 ### 7.2 Strategies for Heterogeneous Systems
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Heterogeneous System] --> B[Common Interface Standards]
     A --> C[Shared Build Infrastructure]
@@ -645,7 +653,7 @@ In heterogeneous systems, APIs become the primary construction artifact:
 | **Versioning** | Explicit API versioning strategy (URL, header, or query param) |
 | **Documentation** | Auto-generated from specification (Swagger UI, Redoc) |
 
-See also: [[API/API_Design_Principles]] for detailed API construction practices.
+See also: [[API/01 API Design/01 REST API Design|API Design Principles]] for detailed API construction practices.
 
 ### 7.4 Event-Driven Architecture
 
@@ -678,12 +686,12 @@ Event-driven architecture (EDA) is a natural fit for heterogeneous systems:
 
 ### 8.2 IaC Best Practices
 
-1. **Version control all infrastructure**: Treat infrastructure code like application code
-2. **Immutable infrastructure**: Replace rather than modify (no SSH into servers)
-3. **State management**: Secure remote state (Terraform state in S3 + DynamoDB)
-4. **Module reuse**: Create reusable modules for common patterns
-5. **Drift detection**: Regularly verify actual state matches declared state
-6. **Security scanning**: Use tools like `tfsec`, `checkov`, `kics` to scan IaC for security issues
+1. **Version control all infrastructure:** Treat infrastructure code like application code
+2. **Immutable infrastructure:** Replace rather than modify (no SSH into servers)
+3. **State management:** Secure remote state (Terraform state in S3 + DynamoDB)
+4. **Module reuse:** Create reusable modules for common patterns
+5. **Drift detection:** Regularly verify actual state matches declared state
+6. **Security scanning:** Use tools like `tfsec`, `checkov`, `kics` to scan IaC for security issues
 
 See also: [[09_System_Considerations]] for system-level construction concerns.
 
@@ -757,6 +765,7 @@ CMD ["node", "dist/main.js"]
 ### 10.2 CI/CD Pipeline as Construction Tool
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     A[Code Push] --> B[Lint & Format]
     B --> C[Unit Tests]
@@ -790,7 +799,7 @@ See also: [[07_Code_Quality_and_Testing]] for testing integration in CI/CD pipel
 | **Heterogeneous Systems** | API-first design and event-driven architecture enable multi-language, multi-platform construction |
 | **IaC & Containers** | Infrastructure as code and containerization are foundational to modern construction |
 
-> **The fundamental principle**: Modern construction technologies change HOW we build software, but the principles in [[01_Construction_Foundations|Construction Foundations]], [[02_Design_in_Construction|Design in Construction]], and [[11_Software_Craftsmanship|Software Craftsmanship]] remain the foundation. A developer who understands these principles will use any tool effectively; a developer who does not will build poorly with any tool, no matter how modern.
+> **The fundamental principle:** Modern construction technologies change HOW we build software, but the principles in [[01_Construction_Foundations|Construction Foundations]], [[02_Design_in_Construction|Design in Construction]], and [[11_Software_Craftsmanship|Software Craftsmanship]] remain the foundation. A developer who understands these principles will use any tool effectively; a developer who does not will build poorly with any tool, no matter how modern.
 
 ---
 
@@ -798,7 +807,7 @@ See also: [[07_Code_Quality_and_Testing]] for testing integration in CI/CD pipel
 
 - SWEBOK v4, Chapter 04: Software Construction
 - [[01_Construction_Foundations]] through [[11_Software_Craftsmanship]]
-- [[API/API_Design_Principles]] for API-centric construction
+- [[API/01 API Design/01 REST API Design|API Design Principles]] for API-centric construction
 - Dev Container Specification: https://containers.dev
 - OWASP Software Component Verification Standard (SCVS)
 - US Executive Order 14028: Improving the Nation's Cybersecurity (SBOM requirements)

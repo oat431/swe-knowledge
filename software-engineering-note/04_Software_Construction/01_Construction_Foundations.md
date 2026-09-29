@@ -16,7 +16,7 @@ created: 2026-07-21
 
 ---
 
-## Chapter 1 — What Is Software Construction?
+## Chapter 1: What Is Software Construction?
 
 ### Definition
 
@@ -30,7 +30,7 @@ Software construction is the **central activity** in software development. It is
 - Developer testing
 - Performance tuning
 
-Construction is **not** requirements development, software architecture (high-level design), system testing (independent QA), user-interface design, management, or corrective maintenance — though it interacts with all of them.
+Construction is **not** requirements development, software architecture (high-level design), system testing (independent QA), user-interface design, management, or corrective maintenance, though it interacts with all of them.
 
 ### Why Construction Matters
 
@@ -57,18 +57,18 @@ Construction is **not** requirements development, software architecture (high-le
 
 ---
 
-## Chapter 2 — Metaphors for Software Development
+## Chapter 2: Metaphors for Software Development
 
-Metaphors are **heuristics, not algorithms**. They don't give you the answer — they tell you *how to look* for it. Good metaphors are simple, relate well to other metaphors, and explain observed phenomena. Software development is too young to have standard metaphors, so using the right ones (and knowing their limits) shapes how effectively you think about the craft.
+Metaphors are **heuristics, not algorithms**. They don't give you the answer; they tell you *how to look* for it. Good metaphors are simple, relate well to other metaphors, and explain observed phenomena. Software development is too young to have standard metaphors, so using the right ones (and knowing their limits) shapes how effectively you think about the craft.
 
 ### Common Software Metaphors
 
 | Metaphor | Core Idea | Strengths | Weaknesses |
 |----------|-----------|-----------|------------|
-| **Writing Code (Penmanship)** | Software is like writing a letter — sit down and write start to finish | Fine for solo, small-scale projects | Implies a one-person, one-pass activity; ignores maintenance (90% of effort is post-release); dismisses planning |
-| **Farming (Growing a System)** | Design a piece, code a piece, test a piece — incremental growth | Captures incremental technique | Weak analogy; suggests you lack control over development (crop yields, weather); hard to extend productively |
+| **Writing Code (Penmanship)** | Software is like writing a letter: sit down and write start to finish | Fine for solo, small-scale projects | Implies a one-person, one-pass activity; ignores maintenance (90% of effort is post-release); dismisses planning |
+| **Farming (Growing a System)** | Design a piece, code a piece, test a piece; incremental growth | Captures incremental technique | Weak analogy; suggests you lack control over development (crop yields, weather); hard to extend productively |
 | **Oyster Farming (Accretion / Incremental Development)** | Gradually add small amounts, like an oyster forming a pearl | Directly maps to incremental/iterative delivery; doesn't overpromise | Narrower than construction metaphor; mostly about the *pace* of development |
-| **Building Construction** | Software is like building a structure — planning, preparation, and execution scale with size | **Most powerful metaphor.** Explains why small and large projects differ, why planning pays off, why buying beats building, why change costs differ | Like any metaphor, can be overextended |
+| **Building Construction** | Software is like building a structure: planning, preparation, and execution scale with size | **Most powerful metaphor.** Explains why small and large projects differ, why planning pays off, why buying beats building, why change costs differ | Like any metaphor, can be overextended |
 | **Intellectual Toolbox** | Effective developers collect techniques the way a craftsman collects tools | Keeps all methods in perspective; no single methodology fits every problem | Requires judgment to know which tool for which job |
 
 ### Building Construction → Software Parallels
@@ -84,15 +84,15 @@ Metaphors are **heuristics, not algorithms**. They don't give you the answer —
 | Buying pre-made cabinets and appliances → | **Using libraries and off-the-shelf components** |
 | Custom cabinetry for high-end homes → | **Building custom components for first-class products** |
 
-> **Key Insight:** A doghouse needs a different approach than a skyscraper. The penalty for failure scales with size — over-engineering is warranted in extremely large structures. The same is true for a 1,000-line script vs. a 1,000,000-line system.
+> **Key Insight:** A doghouse needs a different approach than a skyscraper. The penalty for failure scales with size; over-engineering is warranted in extremely large structures. The same is true for a 1,000-line script vs. a 1,000,000-line system.
 
 ### Key Point: Combining Metaphors
 
-Metaphors are not mutually exclusive. Use whatever combination stimulates your thinking. The construction metaphor and the toolbox metaphor are especially complementary — one explains *process structure*, the other explains *technique selection*.
+Metaphors are not mutually exclusive. Use whatever combination stimulates your thinking. The construction metaphor and the toolbox metaphor are especially complementary; one explains *process structure*, the other explains *technique selection*.
 
 ---
 
-## Chapter 3 — Upstream Prerequisites: Measure Twice, Cut Once
+## Chapter 3: Upstream Prerequisites: Measure Twice, Cut Once
 
 > The overarching goal of preparation is **risk reduction**. Clear out major risks as early as possible so the bulk of the project proceeds smoothly. The most common risks are **poor requirements** and **poor project planning**.
 
@@ -111,19 +111,19 @@ A clear statement of the problem **without reference to any solution**. It shoul
 |---|---|
 | "We can't keep up with orders for the Gigatron" | "We need to optimize our automated data-entry system" |
 
-> If you don't define the problem, you may waste time solving the **wrong** problem — and you also fail to solve the **right** one.
+> If you don't define the problem, you may waste time solving the **wrong** problem: and you also fail to solve the **right** one.
 
 ### 3.2 Requirements
 
 Explicit requirements ensure the **user** drives functionality, not the programmer. They minimize arguments and reduce costly downstream changes.
 
-#### Why Requirements Matter — The Cost of Defects
+#### Why Requirements Matter: The Cost of Defects
 
 | Defect Introduced In → Detected In | Architecture | Construction | System Test | Post-Release |
 |------------------------------------|:-----------:|:-----------:|:----------:|:----------:|
 | **Requirements** | 3× | 5–10× | 10× | 10–100× |
-| **Architecture** | — | 10× | 15× | 25–100× |
-| **Construction** | — | — | 10× | 10–25× |
+| **Architecture** | N/A | 10× | 15× | 25–100× |
+| **Construction** | N/A | N/A | 10× | 10–25× |
 
 > A requirements error caught post-release can cost **100×** more to fix than if caught during requirements development.
 
@@ -131,16 +131,16 @@ Explicit requirements ensure the **user** drives functionality, not the programm
 
 - Average project experiences **~25% requirements change** during development
 - Requirements changes account for **70–85%** of rework
-- Customers learn what they need *by seeing the software* — changes are inevitable
+- Customers learn what they need *by seeing the software*: changes are inevitable
 
 #### Handling Requirements Changes
 
-1. **Use the requirements checklist** — if requirements aren't good enough, stop and fix them
-2. **Make everyone know the cost** — "schedule" and "cost" are sobering words for feature-intoxicated stakeholders
-3. **Establish a change-control procedure** — review proposed changes at defined times
-4. **Use iterative/evolutionary approaches** — short cycles, fast feedback
+1. **Use the requirements checklist:** if requirements aren't good enough, stop and fix them
+2. **Make everyone know the cost:** "schedule" and "cost" are sobering words for feature-intoxicated stakeholders
+3. **Establish a change-control procedure:** review proposed changes at defined times
+4. **Use iterative/evolutionary approaches:** short cycles, fast feedback
 5. **Dump the project** if requirements are too bad or volatile
-6. **Keep your eye on the business case** — evaluate features by "incremental business value"
+6. **Keep your eye on the business case:** evaluate features by "incremental business value"
 
 #### Requirements Checklist Highlights
 
@@ -159,7 +159,7 @@ Architecture is the **frame** that holds the more detailed parts of the design. 
 | Component | What to Look For |
 |-----------|-----------------|
 | **Program Organization** | Clear overview; well-defined building blocks (classes/subsystems); communication rules between blocks |
-| **Major Classes** | 80/20 rule — specify the 20% of classes that account for 80% of behavior; rationale for chosen organization |
+| **Major Classes** | 80/20 rule; specify the 20% of classes that account for 80% of behavior; rationale for chosen organization |
 | **Data Design** | Major files and table designs with justification; which subsystem owns which data |
 | **Business Rules** | Impact of key business rules on system design |
 | **User Interface** | Modularized so UI can be swapped without affecting business logic |
@@ -174,7 +174,7 @@ Architecture is the **frame** that holds the more detailed parts of the design. 
 
 #### Architecture Quality Signals
 
-- "Hangs together" conceptually — looks natural, not forced
+- "Hangs together" conceptually: looks natural, not forced
 - Objectives are clearly stated (modifiability vs. performance vs. other goals)
 - All major decisions have **stated motivations** (no "we've always done it that way")
 - Largely machine- and language-independent
@@ -204,7 +204,7 @@ Architecture is the **frame** that holds the more detailed parts of the design. 
 
 ---
 
-## Chapter 4 — Key Construction Decisions
+## Chapter 4: Key Construction Decisions
 
 Once prerequisites are in place, the focus shifts to construction-specific choices.
 
@@ -235,7 +235,7 @@ Language choice affects **productivity and quality** in measurable ways:
 
 ### 4.2 Programming Conventions
 
-High-quality software requires **conceptual integrity** at both the architectural level and the low-level implementation level. Establish conventions **before construction begins** — they are nearly impossible to retrofit:
+High-quality software requires **conceptual integrity** at both the architectural level and the low-level implementation level. Establish conventions **before construction begins:** they are nearly impossible to retrofit:
 
 - Variable naming conventions
 - Class and routine naming conventions
@@ -256,7 +256,7 @@ High-quality software requires **conceptual integrity** at both the architectura
 | **Day-to-day** | Working around tool bugs, library defects | Steadily writing new functionality |
 | **Innovation** | Highest potential for breakthrough apps | Focus on refinement and productivity |
 
-If you're in an early-wave environment, the practices in this book help **even more** — compensate for weak tools with strong discipline.
+If you're in an early-wave environment, the practices in this book help **even more:** compensate for weak tools with strong discipline.
 
 ### 4.4 Selection of Major Construction Practices
 
@@ -273,13 +273,13 @@ No single project can use every good practice. **Consciously choose** which to e
 
 ## Key Takeaways (Chapters 1–4)
 
-1. **Construction is the central, guaranteed activity** — improving it improves any project, no matter how abbreviated.
+1. **Construction is the central, guaranteed activity:** improving it improves any project, no matter how abbreviated.
 2. **Metaphors shape how you think.** The building-construction metaphor is the most powerful, and the intellectual-toolbox metaphor keeps methods in perspective. Use metaphors as heuristics, not algorithms.
 3. **Upstream quality is cheaper.** Fixing a requirements defect post-release costs 10–100× more than fixing it during requirements. The food chain matters: bad requirements → bad architecture → bad construction.
 4. **Tailor prerequisites to your project type.** Life-critical systems demand more sequential, rigorous prerequisites; business systems benefit from iterative approaches. But iterative ≠ skipping preparation.
-5. **Establish conventions before you code.** Naming, formatting, error handling — retrofitting is nearly impossible. Avoid arbitrary variation.
+5. **Establish conventions before you code.** Naming, formatting, error handling, retrofitting is nearly impossible. Avoid arbitrary variation.
 6. **Program *into* a language, not *in* it.** The language constrains syntax, not your design thinking.
-7. **Consciously choose your practices.** Pair programming, TDD, inspections, CI — pick what fits your project, team, and technology wave. No single set is universally right.
+7. **Consciously choose your practices.** Pair programming, TDD, inspections, CI; pick what fits your project, team, and technology wave. No single set is universally right.
 
 ---
 

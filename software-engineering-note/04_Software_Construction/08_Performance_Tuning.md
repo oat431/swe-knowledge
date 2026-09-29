@@ -20,7 +20,7 @@ Performance tuning addresses two levels: **strategic** (what to tune and when) a
 
 Performance is only loosely related to code speed. Users care about **throughput**, not raw execution time. A faster algorithm wrapped in a terrible workflow is still slow for the user.
 
-> *"More computing sins are committed in the name of efficiency (without necessarily achieving it) than for any other single reason — including blind stupidity."* — W.A. Wulf
+> *"More computing sins are committed in the name of efficiency (without necessarily achieving it) than for any other single reason (including blind stupidity."*) W.A. Wulf
 
 ### The Efficiency Hierarchy (most to least impactful)
 
@@ -34,7 +34,7 @@ Performance is only loosely related to code speed. Users care about **throughput
 | **Hardware** | 2–10× | Faster CPU, more RAM, SSD instead of HDD |
 | **Code tuning** | ~2× | Hand-tweaking loops, expressions, logic |
 
-**Key insight:** Bentley (1982) argues improvements at each level can multiply — a 10× improvement across 6 levels implies a million-fold potential. Rare in practice, but the principle holds: always start at the highest level.
+**Key insight:** Bentley (1982) argues improvements at each level can multiply, a 10× improvement across 6 levels implies a million-fold potential. Rare in practice, but the principle holds: always start at the highest level.
 
 ---
 
@@ -53,14 +53,14 @@ Performance is only loosely related to code speed. Users care about **throughput
 |------|---------|
 | Fewer lines of code = faster | A 10-line unrolled loop was 60%+ faster than a 3-line `for` loop |
 | Certain operations are "probably" faster | You must measure every time. Results change with compiler, language, CPU, OS |
-| Optimize as you go | *"Premature optimization is the root of all evil"* — Knuth. Programmers are terrible at guessing bottlenecks |
-| A fast program is as important as a correct one | *"If mine doesn't have to work, I can make it run instantly"* — a correct slow program beats a fast broken one |
+| Optimize as you go | *"Premature optimization is the root of all evil"* (Knuth). Programmers are terrible at guessing bottlenecks |
+| A fast program is as important as a correct one | *"If mine doesn't have to work, I can make it run instantly"*, a correct slow program beats a fast broken one |
 
 ### When to Tune
 
 > Jackson's Rules of Optimization:
 > 1. Don't do it.
-> 2. **(For experts only)** Don't do it yet — not until you have a perfectly clear, unoptimized solution.
+> 2. **(For experts only)** Don't do it yet, not until you have a perfectly clear, unoptimized solution.
 
 1. Make the program **correct** and **modular** first
 2. When complete, measure performance
@@ -69,7 +69,7 @@ Performance is only loosely related to code speed. Users care about **throughput
 
 ### Compiler Optimizations
 
-Modern compilers can improve speed 40%+ across the board. Write clear, straightforward code — optimizers do better with simple code than with "clever" tricks. Example: straightforward code was 11% faster than tricky code after compiler optimization.
+Modern compilers can improve speed 40%+ across the board. Write clear, straightforward code, optimizers do better with simple code than with "clever" tricks. Example: straightforward code was 11% faster than tricky code after compiler optimization.
 
 ---
 
@@ -85,7 +85,7 @@ In-memory access is **~1000× faster** than disk access:
 |-----------|:---:|:---:|:---:|
 | Random access (C++) | 6.04s | ~0s | ∞ |
 | Sequential access (C++) | 3.29s | 0.021s | 150:1 |
-| Network file vs local | +10% penalty | — | — |
+| Network file vs local | +10% penalty | N/A | N/A |
 
 > Avoid I/O in speed-critical code. Cache in memory whenever possible.
 
@@ -136,7 +136,7 @@ System calls involve context switches (save user state → enter kernel → rest
 | Operation | C++ Cost | Java Cost |
 |-----------|:---:|:---:|
 | Integer assignment | 1 | 1 |
-| Routine call (no params) | 1 | — |
+| Routine call (no params) | 1 | N/A |
 | Routine call (1 param) | 1.5 | 0.5 |
 | Polymorphic routine call | 2.5 | 2 |
 | Integer division | 5 | 1.5 |
@@ -153,7 +153,7 @@ System calls involve context switches (save user state → enter kernel → rest
 
 ### Why You Must Measure
 
-> *"No programmer has ever been able to predict or analyze where performance bottlenecks are without data. No matter where you think it's going, you will be surprised."* — Joseph M. Newcomer
+> *"No programmer has ever been able to predict or analyze where performance bottlenecks are without data. No matter where you think it's going, you will be surprised."* *(Joseph M. Newcomer)*
 
 **Real example:** A programmer converted a double-nested array summation loop to pointer arithmetic, saving "10,000 multiplications." Measured result: **zero improvement.** The compiler's optimizer had already done it.
 
@@ -162,7 +162,7 @@ System calls involve context switches (save user state → enter kernel → rest
 - Use **CPU clock ticks**, not wall-clock time (avoid penalizing for other processes)
 - Factor out measurement overhead and startup costs
 - Use profiling tools or instrument your own timers
-- **Measure before and after every single tuning** — more than half of attempted tunings degrade performance
+- **Measure before and after every single tuning:** more than half of attempted tunings degrade performance
 
 ---
 
@@ -172,7 +172,7 @@ Multiple rounds of optimization compound. Example: DES encryption implementation
 
 | Optimization | Time | Improvement |
 |-------------|:----:|:---:|
-| Initial implementation | 21:40 | — |
+| Initial implementation | 21:40 | N/A |
 | Bit fields → arrays | 7:30 | 65% |
 | Unroll innermost loop | 6:00 | 20% |
 | Remove final permutation | 5:24 | 10% |
@@ -207,7 +207,7 @@ Multiple rounds of optimization compound. Example: DES encryption implementation
 
 ## 26. Code-Tuning Techniques
 
-> These are **anti-refactorings** — they degrade internal structure for performance. Use them only after measurement confirms the need. Most are not generally applicable; adapt to your situation.
+> These are **anti-refactorings:** they degrade internal structure for performance. Use them only after measurement confirms the need. Most are not generally applicable; adapt to your situation.
 
 ---
 
@@ -223,7 +223,7 @@ if (a)
     if (b) ...
 ```
 
-**Search loops:** Use `break`, `goto`, sentinel values, or restructure to `while` — stop as soon as you find the target.
+**Search loops:** Use `break`, `goto`, sentinel values, or restructure to `while`; stop as soon as you find the target.
 
 | Language | Straight | Tuned | Savings |
 |----------|:---:|:---:|:---:|
@@ -242,7 +242,7 @@ Put the most common / fastest case first. In `if-then-else` chains, the common c
 
 ### Compare Similar Logic Structures
 
-`case` vs `if-then-else` — results are completely unpredictable across languages:
+`case` vs `if-then-else`, results are completely unpredictable across languages:
 
 | Language | case | if-then-else | Winner |
 |----------|:---:|:---:|:---:|
@@ -263,7 +263,7 @@ else if ((b && !a) || (a && c && !b)) category = 2;
 else if (c && !a && !b) category = 3;
 else category = 0;
 
-// ✅ Table lookup — faster AND more maintainable
+// ✅ Table lookup - faster AND more maintainable
 static int categoryTable[2][2][2] = {
     // !b!c  !bc  b!c  bc
     {   0,    3,   2,   2 },  // !a
@@ -293,7 +293,7 @@ Don't compute until needed. Compute-on-demand with caching beats precomputing ev
 Move invariant conditionals outside the loop:
 
 ```cpp
-// ❌ Decision inside loop — checked every iteration
+// ❌ Decision inside loop - checked every iteration
 for (i = 0; i < count; i++) {
     if (sumType == SUMTYPE_NET)
         netSum += amount[i];
@@ -301,7 +301,7 @@ for (i = 0; i < count; i++) {
         grossSum += amount[i];
 }
 
-// ✅ Decision outside loop — checked once
+// ✅ Decision outside loop - checked once
 if (sumType == SUMTYPE_NET) {
     for (i = 0; i < count; i++)
         netSum += amount[i];
@@ -653,7 +653,7 @@ Compute once, use many times:
 
 ## Key Points
 
-1. **Performance ≠ code speed.** Users care about throughput, responsiveness, and correctness — not micro-optimized loops.
+1. **Performance ≠ code speed.** Users care about throughput, responsiveness, and correctness, not micro-optimized loops.
 2. **Architecture beats tuning.** Program design, algorithm selection, and data structure choice dominate code-level tuning by orders of magnitude.
 3. **Measure everything.** You cannot predict bottlenecks. Measure before and after every change. Most tunings fail.
 4. **The 80/20 rule is real.** <5% of code typically accounts for >50% of run time. Find that 5% first.

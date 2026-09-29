@@ -7,7 +7,7 @@ tags:
 
 # 02 WebSocket
 
-REST is request-response. WebSocket is a persistent, bidirectional connection. Once opened, either side can send data at any time — no polling, no repeated handshakes.
+REST is request-response. WebSocket is a persistent, bidirectional connection. Once opened, either side can send data at any time: no polling, no repeated handshakes.
 
 ---
 
@@ -102,7 +102,7 @@ client.connect({}, () => {
 
 ---
 
-## Server-Sent Events (SSE) — The Lighter Alternative
+## Server-Sent Events (SSE): The Lighter Alternative
 
 If you only need **server → client** (not bidirectional), use SSE instead:
 
@@ -114,7 +114,7 @@ If you only need **server → client** (not bidirectional), use SSE instead:
 | Binary data | ✅ | ❌ (text only) |
 
 ```javascript
-// SSE Client — one-liner
+// SSE Client - one-liner
 const source = new EventSource('/api/events');
 source.onmessage = (event) => console.log(event.data);
 ```
@@ -123,6 +123,6 @@ source.onmessage = (event) => console.log(event.data);
 
 ## Sources
 
-- WebSocket RFC 6455 — https://datatracker.ietf.org/doc/html/rfc6455
-- Spring WebSocket — https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#websocket
-- STOMP Protocol — https://stomp.github.io/
+- WebSocket RFC 6455: https://datatracker.ietf.org/doc/html/rfc6455
+- Spring WebSocket: https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#websocket
+- STOMP Protocol: https://stomp.github.io/

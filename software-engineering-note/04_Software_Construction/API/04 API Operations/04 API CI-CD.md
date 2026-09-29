@@ -29,7 +29,7 @@ APIs need testing, versioning, and deployment pipelines just like any other soft
 
 ## Contract Testing
 
-Contract testing verifies that the API provider and consumer agree on the contract — without deploying both services.
+Contract testing verifies that the API provider and consumer agree on the contract, without deploying both services.
 
 ```java
 // Provider test (Spring Cloud Contract)
@@ -87,7 +87,7 @@ Provider → "I verify I can fulfill that expectation"
 | Strategy | Pipeline Approach |
 |----------|------------------|
 | **URL versioning** (`/v1/`, `/v2/`) | Deploy v2 alongside v1. Route traffic. Deprecate v1 later. |
-| **Header versioning** | Same as URL — deploy parallel versions. |
+| **Header versioning** | Same as URL; deploy parallel versions. |
 | **No breaking changes** | GraphQL approach: add fields, deprecate old ones. No /v2/ needed. |
 
 ---
@@ -95,6 +95,7 @@ Provider → "I verify I can fulfill that expectation"
 ## CI/CD Pipeline
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     C[Commit] --> B[Build]
     B --> U[Unit Tests]
@@ -125,6 +126,6 @@ graph LR
 
 ## Sources
 
-- Spring Cloud Contract — https://spring.io/projects/spring-cloud-contract
-- Pact — https://pact.io/
-- OpenAPI Generator — https://openapi-generator.tech/
+- Spring Cloud Contract: https://spring.io/projects/spring-cloud-contract
+- Pact: https://pact.io/
+- OpenAPI Generator: https://openapi-generator.tech/

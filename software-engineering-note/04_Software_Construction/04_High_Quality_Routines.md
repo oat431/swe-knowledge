@@ -9,9 +9,9 @@ source: "McConnell, Code Complete 2nd Ed., Chapters 7-9"
 created: 2026-07-21
 ---
 
-# 04 — High-Quality Routines
+# 04: High-Quality Routines
 
-> *"Aside from the computer itself, the routine is the single greatest invention in computer science."* — Steve McConnell
+> *"Aside from the computer itself, the routine is the single greatest invention in computer science."* *(Steve McConnell)*
 
 ---
 
@@ -22,7 +22,7 @@ created: 2026-07-21
 | Reason | Description |
 |--------|-------------|
 | **Reduce complexity** | The single most important reason. Hide information so you don't need to think about it after the routine is written. |
-| **Introduce an intermediate abstraction** | Replace a block of inline code with a well-named routine — the name itself documents the intent. |
+| **Introduce an intermediate abstraction** | Replace a block of inline code with a well-named routine, the name itself documents the intent. |
 | **Avoid duplicate code** | The classic reason. Pull common code into one place for easier modification and fewer errors. |
 | **Support subclassing** | Short, well-factored routines are easier to override correctly. |
 | **Hide sequences** | Encapsulate ordering dependencies (e.g., `PopStack()` hides the read-then-decrement sequence). |
@@ -32,9 +32,9 @@ created: 2026-07-21
 | **Improve performance** | Optimize in one place; profile and replace algorithms centrally. |
 | **Isolate complexity** | Confine tricky algorithms, large data sets, or intricate protocols. |
 | **Hide implementation details** | Whether complex (database access) or mundane (number vs. string). |
-| **Limit effects of changes** | Isolate areas likely to change — hardware, I/O, business rules. |
+| **Limit effects of changes** | Isolate areas likely to change: hardware, I/O, business rules. |
 | **Hide global data** | Access global data through routines rather than directly. |
-| **Make central points of control** | One class/routine controls each task — devices, files, DB connections. |
+| **Make central points of control** | One class/routine controls each task, devices, files, DB connections. |
 | **Facilitate reusable code** | Well-factored routines are easier to reuse across programs. |
 | **Accomplish a specific refactoring** | Many refactorings produce new routines (extract method, etc.). |
 
@@ -54,7 +54,7 @@ Cohesion = how closely the operations in a routine are related. The goal: **each
 | **Temporal** | Operations combined because they all happen at the same time, e.g., `Startup()`, `Shutdown()` | ⚠️ Acceptable if it *orchestrates* other routines rather than doing the work itself |
 | **Procedural** | Operations done in a specified order for no reason other than matching input sequence | ❌ Unacceptable |
 | **Logical** | Several operations stuffed into one routine, selected by a control flag (big `if`/`case`) | ❌ Unacceptable (except for pure event-handler dispatch) |
-| **Coincidental** | No discernible relationship between operations | ❌ Worst — redesign |
+| **Coincidental** | No discernible relationship between operations | ❌ Worst; redesign |
 
 **Hard data:** 50% of highly cohesive routines were fault-free vs. only 18% of low-cohesion routines. Low-cohesion routines had **7× more errors** and were **20× more costly to fix**.
 
@@ -66,14 +66,14 @@ Cohesion = how closely the operations in a routine are related. The goal: **each
 
 **Rules for naming:**
 
-1. **Describe everything the routine does** — all outputs and side effects.
-2. **Avoid meaningless verbs** — `HandleCalculation()`, `PerformServices()`, `ProcessInput()`, `DealWithOutput()` say nothing. Use `FormatAndPrintOutput()` instead.
-3. **Don't differentiate solely by number** — `Part1`, `Part2` or `OutputUser1`, `OutputUser2` are worthless names.
-4. **Make names as long as necessary** — clarity trumps brevity. Routine names tend to be longer than variable names.
-5. **For functions:** name for the return value — `cos()`, `customerId.Next()`, `printer.IsReady()`.
-6. **For procedures:** use a strong verb + object — `PrintDocument()`, `CalcMonthlyRevenues()`, `CheckOrderInfo()`. In OOP, the object is implied: `document.Print()`, not `document.PrintDocument()`.
-7. **Use opposites precisely** — `first/last`, `open/close`, `add/remove`, `create/destroy`, `get/set`, `start/stop`, `begin/end`, `show/hide`.
-8. **Establish conventions for common operations** — pick one pattern for getting IDs and stick with it project-wide.
+1. **Describe everything the routine does:** all outputs and side effects.
+2. **Avoid meaningless verbs:** `HandleCalculation()`, `PerformServices()`, `ProcessInput()`, `DealWithOutput()` say nothing. Use `FormatAndPrintOutput()` instead.
+3. **Don't differentiate solely by number:** `Part1`, `Part2` or `OutputUser1`, `OutputUser2` are worthless names.
+4. **Make names as long as necessary:** clarity trumps brevity. Routine names tend to be longer than variable names.
+5. **For functions:** name for the return value: `cos()`, `customerId.Next()`, `printer.IsReady()`.
+6. **For procedures:** use a strong verb + object: `PrintDocument()`, `CalcMonthlyRevenues()`, `CheckOrderInfo()`. In OOP, the object is implied: `document.Print()`, not `document.PrintDocument()`.
+7. **Use opposites precisely:** `first/last`, `open/close`, `add/remove`, `create/destroy`, `get/set`, `start/stop`, `begin/end`, `show/hide`.
+8. **Establish conventions for common operations:** pick one pattern for getting IDs and stick with it project-wide.
 
 ---
 
@@ -91,7 +91,7 @@ Cohesion = how closely the operations in a routine are related. The goal: **each
 | Most error-prone: routines >500 lines | Jones 1986 |
 
 **Practical guidance:**
-- Let cohesion, nesting depth, number of variables, decision points, and comment needs dictate length — not an artificial limit.
+- Let cohesion, nesting depth, number of variables, decision points, and comment needs dictate length, not an artificial limit.
 - Routines up to **100–200 lines** are fine. Beyond 200, be careful. Beyond 500, you're in known high-error territory.
 - In OOP, many routines are very short accessors; complex algorithms can grow organically.
 
@@ -103,8 +103,8 @@ Cohesion = how closely the operations in a routine are related. The goal: **each
 
 **Guidelines:**
 
-- **Put parameters in input-modify-output order**: input-only → input-and-output → output-only.
-- **Consider `IN`/`OUT` keywords** for documentation (via macros or convention) — but prefer language-level `const` where available.
+- **Put parameters in input-modify-output order:** input-only → input-and-output → output-only.
+- **Consider `IN`/`OUT` keywords** for documentation (via macros or convention), but prefer language-level `const` where available.
 - **Similar parameters across routines → consistent order.** `strncpy(target, source, max)` and `memcpy(target, source, max)` are consistent. `fprintf(file, ...)` vs. `fputs(str, file)` are inconsistent and aggravating.
 - **Use all parameters.** Unused parameters correlate with higher error rates. Remove them unless conditional compilation requires them.
 - **Put status/error variables last.** They're incidental to the main purpose.
@@ -113,7 +113,7 @@ Cohesion = how closely the operations in a routine are related. The goal: **each
 - **Limit parameters to about 7** (Miller's Law: 7±2 chunks). Use structured data/composite types to group related parameters.
 - **Use an `i_`, `m_`, `o_` naming convention** if input/modify/output distinction matters.
 - **Pass the right abstraction:** pass specific elements if the abstraction is about three specific data items; pass the whole object if the abstraction is about the object itself. If you find yourself "setting up" before a call and "taking down" after, the interface is wrong.
-- **Use named parameters** (where the language supports it) — self-documenting and prevents mismatches.
+- **Use named parameters** (where the language supports it): self-documenting and prevents mismatches.
 - **Match actual to formal parameters.** Heed compiler warnings about type mismatches.
 
 ---
@@ -123,12 +123,12 @@ Cohesion = how closely the operations in a routine are related. The goal: **each
 - **Function** = routine that returns a value; **Procedure** = routine that does not.
 - **Use a function** when the primary purpose is to return the value indicated by its name: `sin()`, `CustomerId()`, `ScreenHeight()`.
 - **Use a procedure** when the primary purpose is an operation; return status via an explicit output parameter rather than a function return value.
-- Prefer: `outputStatus = report.FormatOutput(formattedReport)` over `if (report.FormatOutput(formattedReport) = Success)` — separates the call from the status test, reducing complexity.
+- Prefer: `outputStatus = report.FormatOutput(formattedReport)` over `if (report.FormatOutput(formattedReport) = Success)`, separates the call from the status test, reducing complexity.
 
 **Function return-value safety:**
-- Check **all possible return paths** — mentally trace every branch.
+- Check **all possible return paths:** mentally trace every branch.
 - Initialize the return value to a safe default at the top.
-- **Never return references or pointers to local data** — they become invalid when the routine exits.
+- **Never return references or pointers to local data:** they become invalid when the routine exits.
 
 ---
 
@@ -140,13 +140,13 @@ Cohesion = how closely the operations in a routine are related. The goal: **each
 - **Name macros that can be replaced by routines** using routine naming conventions, not ALL_CAPS.
 - **Avoid macros as routine substitutes.** Use `const`, `inline`, `template`, `enum`, `typedef` instead.
 
-> *"Almost every macro demonstrates a flaw in the programming language, in the program, or in the programmer."* — Bjarne Stroustrup
+> *"Almost every macro demonstrates a flaw in the programming language, in the program, or in the programmer."* *(Bjarne Stroustrup)*
 
 **Inline routines:**
-- `inline` treats code as a routine at write time but compiles it inline. Use **sparingly**:
+- `inline` treats code as a routine at write time but compiles it inline. Use **sparingly:**
   - Violates encapsulation (implementation must be in the header).
   - Increases code size.
-  - **Profile before inlining for performance** — don't guess.
+  - **Profile before inlining for performance:** don't guess.
 
 ---
 
@@ -159,9 +159,9 @@ Cohesion = how closely the operations in a routine are related. The goal: **each
 Bad input handling is no longer "garbage in, garbage out." Modern programs demand **"garbage in, nothing out"** or **"garbage in, error message out."**
 
 **Three strategies:**
-1. **Check all data from external sources** — files, users, network, other interfaces. Validate ranges, string lengths, restrictions. Watch for buffer overflows, SQL injection, HTML/XML injection, integer overflows.
-2. **Check all routine input parameters** — similar to external data checking, but from internal callers.
-3. **Decide how to handle bad inputs** — choose from the error-handling techniques below.
+1. **Check all data from external sources:** files, users, network, other interfaces. Validate ranges, string lengths, restrictions. Watch for buffer overflows, SQL injection, HTML/XML injection, integer overflows.
+2. **Check all routine input parameters:** similar to external data checking, but from internal callers.
+3. **Decide how to handle bad inputs:** choose from the error-handling techniques below.
 
 ---
 
@@ -184,8 +184,8 @@ An assertion checks a boolean condition at runtime and halts/notifies if it's fa
 - Optimized routine's results match the reference implementation
 
 **Guidelines:**
-- **Assertions = executable documentation** of assumptions — more active than comments.
-- **Never put executable code inside assertions** — it will be stripped in production: `Debug.Assert(PerformAction())` ❌
+- **Assertions = executable documentation** of assumptions: more active than comments.
+- **Never put executable code inside assertions:** it will be stripped in production: `Debug.Assert(PerformAction())` ❌
 - **Use assertions to document preconditions and postconditions** (Design by Contract).
 - **For highly robust code:** assert AND handle the error anyway. Real-world systems are too messy to rely solely on assertions (different designers, time periods, geographic regions, coding standards over 5–10 years).
 
@@ -226,22 +226,22 @@ Exceptions signal error conditions in a way that **cannot be ignored**. But used
 
 **Guidelines:**
 - **Use exceptions to notify about errors that should not be ignored.**
-- **Throw exceptions only for truly exceptional conditions** — not for expected, handleable errors.
-- **Don't pass the buck** — handle locally if possible; don't throw just to avoid dealing with it.
-- **Avoid throwing in constructors and destructors** — the rules about partial construction/cleanup are complex and error-prone.
-- **Throw exceptions at the right level of abstraction** — a `GetTaxId()` method should throw `EmployeeDataNotAvailable`, not `EOFException`. Maintain interface consistency.
-- **Include all diagnostic information** in the exception message — array bounds, illegal values, context.
-- **Avoid empty `catch` blocks** — either fix the `try` block (it shouldn't throw) or fix the `catch` block (it should handle). At minimum, log the exception.
-- **Know the exceptions your library code throws** — prototype and exercise libraries to discover hidden exceptions.
+- **Throw exceptions only for truly exceptional conditions:** not for expected, handleable errors.
+- **Don't pass the buck:** handle locally if possible; don't throw just to avoid dealing with it.
+- **Avoid throwing in constructors and destructors:** the rules about partial construction/cleanup are complex and error-prone.
+- **Throw exceptions at the right level of abstraction:** a `GetTaxId()` method should throw `EmployeeDataNotAvailable`, not `EOFException`. Maintain interface consistency.
+- **Include all diagnostic information** in the exception message: array bounds, illegal values, context.
+- **Avoid empty `catch` blocks:** either fix the `try` block (it shouldn't throw) or fix the `catch` block (it should handle). At minimum, log the exception.
+- **Know the exceptions your library code throws:** prototype and exercise libraries to discover hidden exceptions.
 - **Consider a centralized exception reporter** for consistent formatting, logging, and handling.
 - **Standardize project-wide:** what to throw, when to use try-catch locally vs. propagate, whether to use a centralized reporter, whether exceptions are allowed in constructors/destructors.
-- **Consider alternatives** — error codes, logging, shutdown. Don't use exceptions just because the language provides them.
+- **Consider alternatives:** error codes, logging, shutdown. Don't use exceptions just because the language provides them.
 
 ---
 
 ### 8.5 Barricade Your Program
 
-> *Like a ship's bulkheads or a building's firewalls — contain the damage.*
+> *Like a ship's bulkheads or a building's firewalls: contain the damage.*
 
 **Strategy:** Designate "safe" zones. Classes/routines at the boundary sanitize dirty data; internal code assumes data is clean.
 
@@ -267,7 +267,7 @@ Exceptions signal error conditions in a way that **cannot be ignored**. But used
 - **Outside barricade** → use error-handling (data is untrusted).
 - **Inside barricade** → use assertions (data is supposed to be clean; any violation is a bug).
 - **At class level:** public methods sanitize; private methods assume clean data.
-- **Convert input data to proper type at input time** — don't carry strings representing booleans or enums through the system.
+- **Convert input data to proper type at input time:** don't carry strings representing booleans or enums through the system.
 
 ---
 
@@ -277,7 +277,7 @@ Exceptions signal error conditions in a way that **cannot be ignored**. But used
 
 **Principles:**
 - The dev version can be slow and resource-hungry; the production version must be fast and lean.
-- **Introduce debugging aids early** — don't wait until you've been bitten multiple times.
+- **Introduce debugging aids early:** don't wait until you've been bitten multiple times.
 - **Offensive programming:** Make errors painful during development so they get fixed:
   - Assertions that abort (no "hit Enter to continue").
   - Fill allocated memory with junk to detect use-before-init.
@@ -286,11 +286,11 @@ Exceptions signal error conditions in a way that **cannot be ignored**. But used
   - Fill deleted objects with junk data.
   - Auto-email error logs from production.
 
-**Removing debug code — strategies:**
-1. **Version-control / build tools** (`ant`, `make`) — build dev vs. production from same source.
+**Removing debug code: strategies:**
+1. **Version-control / build tools** (`ant`, `make`): build dev vs. production from same source.
 2. **Built-in preprocessor** (`#if defined(DEBUG)`, `#define` with levels).
-3. **Write your own preprocessor** — for languages without one (e.g., Java `//#BEGIN DEBUG`).
-4. **Debugging stubs** — swap full-check routines with no-op stubs for production. Keep both versions.
+3. **Write your own preprocessor:** for languages without one (e.g., Java `//#BEGIN DEBUG`).
+4. **Debugging stubs:** swap full-check routines with no-op stubs for production. Keep both versions.
 
 ---
 
@@ -303,7 +303,7 @@ Exceptions signal error conditions in a way that **cannot be ignored**. But used
 | **Remove** code that causes hard crashes | Users need to save their work. Never lose user data for debugging. |
 | **Leave in** code for graceful crashes | Pathfinder example: debug code left in enabled remote diagnosis and fix. |
 | **Log errors** for tech support | Change assertions from abort to logging rather than removing entirely. |
-| **Keep error messages user-friendly** | "Internal error — contact support@..." not "Bad pointer, Dog Breath!" |
+| **Keep error messages user-friendly** | "Internal error; contact support@..." not "Bad pointer, Dog Breath!" |
 
 ---
 
@@ -335,8 +335,8 @@ Exceptions signal error conditions in a way that **cannot be ignored**. But used
 
 **Guidelines for effective pseudocode:**
 - Use **English-like statements** describing specific operations.
-- **Avoid target-language syntax** — design at a slightly higher level.
-- Write at the **level of intent** — describe *what* and *why*, not *how*.
+- **Avoid target-language syntax:** design at a slightly higher level.
+- Write at the **level of intent:** describe *what* and *why*, not *how*.
 - Write at a **low enough level** that generating code is nearly automatic.
 
 **Benefits:**
@@ -353,21 +353,21 @@ Exceptions signal error conditions in a way that **cannot be ignored**. But used
 **Step-by-step process:**
 
 **1. Design the routine:**
-- **Check prerequisites** — is the routine well-defined and actually needed?
-- **Define the problem** — what it hides, inputs, outputs, preconditions, postconditions.
-- **Name the routine** — if you can't create a good name, the purpose isn't clear. Back up and improve the design.
-- **Decide how to test** — plan test cases while designing (valid inputs, boundary conditions, invalid inputs).
-- **Research standard libraries** — the biggest productivity boost: reuse existing, tested code. Don't reinvent what someone wrote a PhD dissertation on.
-- **Think about error handling** — what can go wrong? Choose consciously how to handle it.
-- **Think about efficiency** — in most systems, focus on clean interface and readability first, optimize later. In performance-critical systems, design to meet resource/speed budgets. Micro-optimizations come last.
-- **Research algorithms and data types** — check algorithms books before writing from scratch.
-- **Write the pseudocode** — start with a header comment summarizing purpose. Work from general to specific.
+- **Check prerequisites:** is the routine well-defined and actually needed?
+- **Define the problem:** what it hides, inputs, outputs, preconditions, postconditions.
+- **Name the routine:** if you can't create a good name, the purpose isn't clear. Back up and improve the design.
+- **Decide how to test:** plan test cases while designing (valid inputs, boundary conditions, invalid inputs).
+- **Research standard libraries:** the biggest productivity boost: reuse existing, tested code. Don't reinvent what someone wrote a PhD dissertation on.
+- **Think about error handling:** what can go wrong? Choose consciously how to handle it.
+- **Think about efficiency:** in most systems, focus on clean interface and readability first, optimize later. In performance-critical systems, design to meet resource/speed budgets. Micro-optimizations come last.
+- **Research algorithms and data types:** check algorithms books before writing from scratch.
+- **Write the pseudocode:** start with a header comment summarizing purpose. Work from general to specific.
 
 **2. Code the routine:**
 - Write the routine declaration from the pseudocode header.
 - Fill in the code below each pseudocode comment.
 - Each comment becomes a block description; code implements that block.
-- Leave the pseudocode as comments — removing them is more work than keeping them.
+- Leave the pseudocode as comments: removing them is more work than keeping them.
 
 **3. Check the code:**
 - Mentally trace each path.
@@ -427,7 +427,7 @@ Exceptions signal error conditions in a way that **cannot be ignored**. But used
 - [ ] Does the architecture specify robustness vs. correctness preference?
 - [ ] Have barricades been created to contain error damage?
 - [ ] Have debugging aids been installed (and can be easily activated/deactivated)?
-- [ ] Is the amount of defensive code appropriate — neither too much nor too little?
+- [ ] Is the amount of defensive code appropriate: neither too much nor too little?
 - [ ] Have offensive-programming techniques been used to make errors obvious during development?
 
 **Exceptions:**
@@ -447,15 +447,15 @@ Exceptions signal error conditions in a way that **cannot be ignored**. But used
 
 ### Pseudocode Programming Process Checklist (Ch 9)
 
-- [ ] Prerequisites checked — is the routine actually needed?
-- [ ] Problem defined — hiding, inputs, outputs, preconditions, postconditions?
+- [ ] Prerequisites checked: is the routine actually needed?
+- [ ] Problem defined: hiding, inputs, outputs, preconditions, postconditions?
 - [ ] Name clear, unambiguous, accurately descriptive?
 - [ ] Test strategy planned?
 - [ ] Standard libraries researched for existing implementations?
 - [ ] Error-handling approach consciously chosen?
 - [ ] Efficiency considered at the right level (high-level design, not micro-optimizations)?
 - [ ] Algorithms researched (books, papers)?
-- [ ] Pseudocode written — English-like, at the level of intent, detailed enough to code from?
+- [ ] Pseudocode written: English-like, at the level of intent, detailed enough to code from?
 - [ ] Header comment written first, summarizing purpose?
 - [ ] Code written beneath each pseudocode comment?
 - [ ] Code mentally traced, reviewed, compiled, stepped through, unit tested?
@@ -465,15 +465,15 @@ Exceptions signal error conditions in a way that **cannot be ignored**. But used
 
 ## Key Points
 
-1. **The most important reason to create a routine is intellectual manageability** — reducing complexity. Saving space is minor; readability, reliability, and modifiability are major.
-2. **Simple operations often benefit most from being routines** — they improve readability and grow gracefully under maintenance.
-3. **Aim for functional cohesion** — one routine, one purpose, done well.
-4. **A routine's name indicates its quality** — a bad name that's accurate means a poorly designed routine; a bad name that's inaccurate means the program is lying.
+1. **The most important reason to create a routine is intellectual manageability:** reducing complexity. Saving space is minor; readability, reliability, and modifiability are major.
+2. **Simple operations often benefit most from being routines:** they improve readability and grow gracefully under maintenance.
+3. **Aim for functional cohesion:** one routine, one purpose, done well.
+4. **A routine's name indicates its quality:** a bad name that's accurate means a poorly designed routine; a bad name that's inaccurate means the program is lying.
 5. **Use functions only when returning the value is the primary purpose.**
 6. **Production code should handle errors beyond "garbage in, garbage out."**
-7. **Assertions catch errors early** — especially valuable in large systems, high-reliability systems, and fast-changing code.
-8. **Error-handling strategy is a high-level design decision** — decide once, follow consistently.
-9. **Exceptions are powerful but add complexity** — weigh against other error-processing techniques.
-10. **Production constraints don't apply to development** — use extra debugging aids during development; remove/soften for production.
-11. **Pseudocode is hard to beat for detailed design** — supports iterative refinement, ease of review, ease of change, and auto-documentation.
-12. **Catch errors at the least-value stage** — much less is invested at the pseudocode stage than after full coding, testing, and debugging.
+7. **Assertions catch errors early:** especially valuable in large systems, high-reliability systems, and fast-changing code.
+8. **Error-handling strategy is a high-level design decision:** decide once, follow consistently.
+9. **Exceptions are powerful but add complexity:** weigh against other error-processing techniques.
+10. **Production constraints don't apply to development:** use extra debugging aids during development; remove/soften for production.
+11. **Pseudocode is hard to beat for detailed design:** supports iterative refinement, ease of review, ease of change, and auto-documentation.
+12. **Catch errors at the least-value stage:** much less is invested at the pseudocode stage than after full coding, testing, and debugging.

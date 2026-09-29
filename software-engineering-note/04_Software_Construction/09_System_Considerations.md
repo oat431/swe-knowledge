@@ -10,7 +10,7 @@ A synthesis of Code Complete Chapters 27–30 covering how program size shapes c
 
 ---
 
-## Chapter 27 — How Program Size Affects Construction
+## Chapter 27: How Program Size Affects Construction
 
 ### 27.1 Communication and Size
 
@@ -103,7 +103,7 @@ Activities that grow at a **more-than-linear rate** as project size increases:
 
 ---
 
-## Chapter 28 — Managing Construction
+## Chapter 28: Managing Construction
 
 ### 28.1 Encouraging Good Coding
 
@@ -113,9 +113,9 @@ Activities that grow at a **more-than-linear rate** as project size increases:
   - Assign **two people** to every part (pair programming, buddy reviews).
   - **Review every line of code** (at least 3 people read each line).
   - Require **code sign-offs** by senior technical personnel.
-  - **Circulate good code examples** — a "best code listings" manual.
+  - **Circulate good code examples:** a "best code listings" manual.
   - Treat code listings as **public assets**, not private property.
-  - **Reward good code** — but only if you're technically qualified to judge it.
+  - **Reward good code:** but only if you're technically qualified to judge it.
 - An effective standard for a manager with a programming background: *"I must be able to read and understand any code written for the project."*
 
 ### 28.2 Configuration Management (SCM)
@@ -125,10 +125,10 @@ Configuration management = the practice of **handling changes systematically** s
 #### Requirements and Design Changes
 
 - Follow a **systematic change-control procedure**.
-- **Handle change requests in groups** — write down all ideas, prioritize as a batch.
+- **Handle change requests in groups:** write down all ideas, prioritize as a batch.
 - **Estimate the cost** of each change (including ripple effects through design → code → test → docs).
 - **High change volume is a warning sign** that requirements or architecture aren't solid.
-- Establish a **change-control board** (or equivalent) — separate wheat from chaff.
+- Establish a **change-control board** (or equivalent): separate wheat from chaff.
 - Substance matters more than form; **don't let fear of bureaucracy stop you from doing change control**.
 
 #### Software Code Changes
@@ -156,12 +156,12 @@ The average large project is **1 year late and 100% over budget**. Developer est
 
 #### Good Estimation Practice
 
-1. **Establish objectives** — what are you estimating and why?
-2. **Allow time for the estimate** — rushed estimates are inaccurate.
-3. **Spell out requirements** — you can't estimate an undefined product.
-4. **Estimate at a low level of detail** — errors on small pieces tend to cancel out (Law of Large Numbers).
+1. **Establish objectives:** what are you estimating and why?
+2. **Allow time for the estimate:** rushed estimates are inaccurate.
+3. **Spell out requirements:** you can't estimate an undefined product.
+4. **Estimate at a low level of detail:** errors on small pieces tend to cancel out (Law of Large Numbers).
 5. **Use multiple techniques** and compare results.
-6. **Reestimate periodically** — early estimates can vary by 4×; accuracy improves as the project progresses.
+6. **Reestimate periodically:** early estimates can vary by 4×; accuracy improves as the project progresses.
 
 #### Schedule Influences
 
@@ -178,18 +178,18 @@ The average large project is **1 year late and 100% over budget**. Developer est
 
 #### What to Do If You're Behind
 
-- **Don't hope you'll catch up** — delays generally increase toward the end.
+- **Don't hope you'll catch up:** delays generally increase toward the end.
 - **Brooks's Law:** Adding people to a late project makes it later (unless tasks are partitionable).
-- **Reduce scope** — prioritize "must haves" vs. "nice to haves" vs. "optionals"; drop the least important features.
+- **Reduce scope:** prioritize "must haves" vs. "nice to haves" vs. "optionals"; drop the least important features.
 
 ### 28.4 Measurement
 
-> *"For any project attribute, it's possible to measure that attribute in a way that's superior to not measuring it at all."* — Tom Gilb
+> *"For any project attribute, it's possible to measure that attribute in a way that's superior to not measuring it at all."* *(Tom Gilb)*
 
 Key reasons to measure:
 - Gives you a **handle on your development process**.
 - **Enables scientific evaluation** of methods.
-- **Motivational effect** — people focus on what's measured (choose carefully).
+- **Motivational effect:** people focus on what's measured (choose carefully).
 
 #### Useful Measurement Categories
 
@@ -244,15 +244,15 @@ Programming language, indentation style, brace placement, IDE choice, commenting
 
 ### 28.6 Managing Your Manager
 
-Tactics: Plant ideas and let manager "have the brainstorm," educate your manager continuously, focus on their interests (encapsulate your job), or — in extreme cases — refuse, or find another job. Best long-term solution: **educate your manager**.
+Tactics: Plant ideas and let manager "have the brainstorm," educate your manager continuously, focus on their interests (encapsulate your job), or (in extreme cases) refuse, or find another job. Best long-term solution: **educate your manager**.
 
 ---
 
-## Chapter 29 — Integration
+## Chapter 29: Integration
 
 ### 29.1 Importance of Integration Approach
 
-Integration = combining separate software components into a single system. Done poorly, the system can **"collapse under its own weight during construction"** — even if the finished product would have worked.
+Integration = combining separate software components into a single system. Done poorly, the system can **"collapse under its own weight during construction":** even if the finished product would have worked.
 
 **Benefits of careful integration:**
 Easier defect diagnosis, fewer defects, less scaffolding, shorter time to first working product, shorter schedules, better customer relations, improved morale, improved chance of completion, more reliable estimates, more accurate status reporting, improved code quality.
@@ -269,9 +269,9 @@ Easier defect diagnosis, fewer defects, less scaffolding, shorter time to first 
 
 #### Incremental Integration
 
-Write and test in small pieces; combine **one piece at a time**:
+Write and test in small pieces; combine **one piece at a time:**
 
-1. Develop a small, functional **skeleton** — thoroughly test and debug it.
+1. Develop a small, functional **skeleton:** thoroughly test and debug it.
 2. Design, code, test a new class.
 3. Integrate the new class with the skeleton. Test and debug the combination. Repeat.
 
@@ -283,11 +283,11 @@ Write and test in small pieces; combine **one piece at a time**:
 |----------|-------------|------|------|
 | **Top-Down** | Integrate highest-level classes first; use stubs for lower levels | Control logic tested early; partially working system visible early; can begin coding before low-level design is complete | System interfaces exercised last; needs many stubs; nearly impossible to implement purely |
 | **Bottom-Up** | Integrate lowest-level classes first; use test drivers for higher levels | System interfaces exercised early; errors easy to locate; integration can start early | High-level design problems found last; requires complete design before starting |
-| **Sandwich** | Integrate top-level business objects and bottom-level device/utility classes first; save middle-level for last | Avoids rigidity of pure top-down or bottom-up; minimizes scaffolding; realistic and practical | — |
-| **Risk-Oriented** | Integrate highest-risk (most challenging) classes first | Addresses hardest problems early; reduces project risk | — |
+| **Sandwich** | Integrate top-level business objects and bottom-level device/utility classes first; save middle-level for last | Avoids rigidity of pure top-down or bottom-up; minimizes scaffolding; realistic and practical | N/A |
+| **Risk-Oriented** | Integrate highest-risk (most challenging) classes first | Addresses hardest problems early; reduces project risk | N/A |
 | **Feature-Oriented** | Integrate one identifiable feature at a time; hang features on a skeleton | Eliminates most scaffolding beyond low-level libraries; each feature adds incremental functionality; works well with OO design | Pure feature-oriented is as hard as pure top-down or bottom-up |
-| **T-Shaped** | Build one deep vertical slice end-to-end first, then develop breadth | Verifies architectural assumptions early; flushes out major design problems quickly | — |
-| **Vertical-Slice** | Implement top-down in sections, fleshing out one area of functionality at a time | Combines benefits of top-down with practical flexibility | — |
+| **T-Shaped** | Build one deep vertical slice end-to-end first, then develop breadth | Verifies architectural assumptions early; flushes out major design problems quickly | N/A |
+| **Vertical-Slice** | Implement top-down in sections, fleshing out one area of functionality at a time | Combines benefits of top-down with practical flexibility | N/A |
 
 → **The best approach is usually a custom combination** tailored to the specific project. These are heuristics, not algorithms.
 
@@ -302,17 +302,17 @@ Every day: compile, link, and combine into an executable; run a **smoke test** (
 - Surfaces hidden work accumulation early
 
 **Critical Practices:**
-- **Build daily** — the heartbeat/sync pulse of the project.
-- **Check for broken builds** — a broken build is top priority to fix.
-- **Smoke test daily** — exercise the system end-to-end; evolve the smoke test as the system grows.
+- **Build daily:** the heartbeat/sync pulse of the project.
+- **Check for broken builds:** a broken build is top priority to fix.
+- **Smoke test daily:** exercise the system end-to-end; evolve the smoke test as the system grows.
 - **Automate** the build and smoke test.
-- **Establish a build group** — on large projects, this can be a full-time role.
-- **Add revisions only when code is in a consistent state** — but don't wait more than a couple of days.
+- **Establish a build group:** on large projects, this can be a full-time role.
+- **Add revisions only when code is in a consistent state:** but don't wait more than a couple of days.
 - **Require developers to smoke test their own code** before adding it to the build.
 - **Create a holding area** for new code.
 - **Create a penalty for breaking the build** (light-hearted: lollipops, goat horns, $5 fund).
 - **Release builds in the morning** rather than the afternoon.
-- **Build and smoke test even under pressure** — discipline is needed most when stress is highest.
+- **Build and smoke test even under pressure:** discipline is needed most when stress is highest.
 
 **Windows 2000** (50M LOC, tens of thousands of source files, 19-hour full build) used daily builds successfully. **The larger the project, the more important incremental integration becomes.**
 
@@ -322,9 +322,9 @@ Most published references use "continuous" to mean "at least daily." Literal con
 
 ---
 
-## Chapter 30 — Programming Tools
+## Chapter 30: Programming Tools
 
-> *Use of a leading-edge tool set — and familiarity with the tools used — can increase productivity by 50% or more.* (Jones 2000, Boehm et al. 2000)
+> *Use of a leading-edge tool set (and familiarity with the tools used) can increase productivity by 50% or more.* (Jones 2000, Boehm et al. 2000)
 
 **20% of the tools account for 80% of the tool usage** (Pareto principle).
 
@@ -354,7 +354,7 @@ Programmers spend up to **40% of their time editing source code**. A good IDE sh
 
 | Tool Category | Purpose |
 |---------------|---------|
-| **Multiple-file search/replace** | grep, Perl, AWK, sed — find/change strings across the codebase |
+| **Multiple-file search/replace** | grep, Perl, AWK, sed: find/change strings across the codebase |
 | **Diff tools** | Compare file versions; find what changed |
 | **Merge tools** | Handle simultaneous edits by multiple developers |
 | **Source-code beautifiers** | Standardize formatting, highlight syntax; can transform legacy code |
@@ -363,9 +363,9 @@ Programmers spend up to **40% of their time editing source code**. A good IDE sh
 | **Cross-reference tools** | List all uses of variables/routines |
 | **Class-hierarchy generators** | Analyze inheritance trees; support modularization |
 | **Picky syntax/semantics checkers** | Find subtle errors compilers miss (e.g., Lint: uninitialized variables, `=` vs. `==`) |
-| **Metrics reporters** | Complexity analysis, LOC counts, defect tracking — ~20% positive impact on maintenance |
+| **Metrics reporters** | Complexity analysis, LOC counts, defect tracking: ~20% positive impact on maintenance |
 | **Refactorers** | Automated renaming, routine extraction, parameter reordering |
-| **Restructurers** | Convert spaghetti/goto code to structured form — 25–30% impact on maintenance |
+| **Restructurers** | Convert spaghetti/goto code to structured form: 25–30% impact on maintenance |
 | **Code translators** | Convert from one language to another (hazard: bad code → bad code in new language) |
 | **Data dictionaries** | Database of all significant data/class names; prevents naming clashes |
 
@@ -375,7 +375,7 @@ Programmers spend up to **40% of their time editing source code**. A good IDE sh
 
 ### 30.4 Tool-Oriented Environments
 
-Integrated environments where tools work together seamlessly — Unix with its small-tools philosophy, or integrated CASE environments.
+Integrated environments where tools work together seamlessly: Unix with its small-tools philosophy, or integrated CASE environments.
 
 ### 30.5 Building Your Own Programming Tools
 
@@ -401,4 +401,4 @@ McConnell describes an idealized future tool suite (circa 2004) including:
 | **27: Program Size** | As projects grow, communication, error density, and non-construction activities explode nonlinearly. Use "right-weight" methodologies matched to project size. |
 | **28: Managing Construction** | Encourage good coding through review and examples, not rigid mandates. SCM, estimation, and measurement are essential scaffolding. Treat programmers as knowledge workers deserving quality environments. |
 | **29: Integration** | Incremental integration (any flavor) beats phased/"big bang" integration. Daily builds + smoke tests are the heartbeat of a healthy project. |
-| **30: Programming Tools** | Invest in tools — they can boost productivity 50%+. The 80/20 rule applies: master the 20% of tools you'll use 80% of the time. |
+| **30: Programming Tools** | Invest in tools; they can boost productivity 50%+. The 80/20 rule applies: master the 20% of tools you'll use 80% of the time. |
