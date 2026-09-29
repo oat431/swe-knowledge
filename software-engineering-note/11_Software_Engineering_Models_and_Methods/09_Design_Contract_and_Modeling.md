@@ -23,13 +23,13 @@ Design by Contract, introduced by Bertrand Meyer for the Eiffel programming lang
 
 #### Hoare Logic Foundation
 
-The contract is grounded in **Hoare triples**: `{P} S {Q}`
+The contract is grounded in **Hoare triples:** `{P} S {Q}`
 
 - **P** = precondition (predicate true before S executes)
 - **S** = program statement/block
 - **Q** = postcondition (predicate true after S terminates)
 
-**Example**: Array insertion
+**Example:** Array insertion
 
 ```
 {array.size < MAX_CAPACITY ∧ index ∈ 0..array.size}
@@ -90,7 +90,7 @@ Barbara Liskov's principle is the behavioral foundation for correct inheritance:
 | **Invariants must be preserved** | Subtype must maintain all supertype invariants |
 | **History constraint** | Subtype cannot change state in ways the supertype forbids |
 
-**Violation example**:
+**Violation example:**
 
 ```
 class Rectangle {
@@ -137,7 +137,7 @@ Square is NOT a behavioral subtype of Rectangle despite being a geometric subtyp
 | **Static verification** | Prove contracts hold for all executions via theorem proving or abstract interpretation | Covers all paths; no runtime cost | May report false positives; requires more expertise |
 | **Hybrid** | Static proof where possible, runtime check for remainder | Balanced confidence and cost | Tool complexity |
 
-**Runtime checking (Eiffel example)**:
+**Runtime checking (Eiffel example):**
 
 ```eiffel
 class STACK [G]
@@ -171,7 +171,7 @@ invariant
 end
 ```
 
-**Static verification (Dafny example)**:
+**Static verification (Dafny example):**
 
 ```dafny
 method Insert(a: array<int>, n: int, pos: int, val: int)
@@ -238,15 +238,17 @@ A **metamodel** defines the abstract syntax and well-formedness rules for a mode
 | **M0** (Instances) | The real-world system | Actual bank accounts, transactions |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     M3["M3: MOF (meta-metamodel)"] --> M2["M2: UML Metamodel"]
     M2 --> M1["M1: MySystem.uml (model)"]
     M1 --> M0["M0: Running system instances"]
 ```
 
-**Key metamodel elements**:
-- **Class**: defines a type of model element
-- **Association**: defines relationships between classes
+
+**Key metamodel elements:**
+- **Class:** defines a type of model element
+- **Association:** defines relationships between classes
 - **Constraint** (OCL): well-formedness rules beyond what the metamodel structure enforces
 
 ---
@@ -277,8 +279,8 @@ A model is **consistent** if it contains no contradictions.
 
 A model is **correct** if it accurately represents the system or requirements it claims to describe.
 
-- **Internal correctness**: the model satisfies its own constraints (well-formedness)
-- **External correctness**: the model faithfully represents the real-world system or requirements
+- **Internal correctness:** the model satisfies its own constraints (well-formedness)
+- **External correctness:** the model faithfully represents the real-world system or requirements
 
 ### 3.4 Validation vs Verification
 
@@ -296,6 +298,7 @@ A model is **correct** if it accurately represents the system or requirements it
 Traceability connects model elements to requirements, design decisions, tests, and code.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     R["Requirements"] -->|<<satisfy>>| D["Design Model"]
     D -->|<<refine>>| I["Implementation"]
@@ -303,6 +306,7 @@ graph LR
     R -->|<<verify>>| T
     I -->|<<trace>>| C["Code"]
 ```
+
 
 | Link Type | Description | Example |
 |-----------|-------------|---------|
@@ -345,6 +349,7 @@ Model-based testing generates test cases automatically from models.
 ### 5.1 Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[System Model] --> B[Test Generation Algorithm]
     B --> C[Abstract Test Cases]
@@ -354,6 +359,7 @@ graph LR
     F --> G[Verdict: Pass/Fail]
     G --> H[Coverage Report]
 ```
+
 
 ### 5.2 Models Used for Test Generation
 
@@ -409,12 +415,13 @@ Domain-Specific Modeling raises the level of abstraction beyond general-purpose 
 
 ### 6.2 DSM Components
 
-1. **Domain-specific language (DSL)**: the notation (graphical or textual)
-2. **Domain metamodel**: defines the concepts, relationships, and constraints
-3. **Code generator**: maps model elements to implementation code
-4. **Domain framework**: runtime libraries the generated code uses
+1. **Domain-specific language (DSL):** the notation (graphical or textual)
+2. **Domain metamodel:** defines the concepts, relationships, and constraints
+3. **Code generator:** maps model elements to implementation code
+4. **Domain framework:** runtime libraries the generated code uses
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Domain Expert] --> B[DSM Model using Domain Concepts]
     B --> C[Code Generator]
@@ -422,6 +429,7 @@ graph TD
     D --> E[Domain Framework/Runtime]
     E --> F[Running Application]
 ```
+
 
 ### 6.3 Textual vs Graphical DSLs
 
@@ -452,11 +460,13 @@ MDA, defined by the OMG, separates **what** a system does from **how** it is imp
 ### 7.3 MDA Transformation Chain
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     CIM["CIM\n(Business Model)"] -->|"Business-to-System\nMapping"| PIM["PIM\n(Platform-Independent)"]
     PIM -->|"QVT/Model\nTransformation"| PSM["PSM\n(Platform-Specific)"]
     PSM -->|"Code\nGeneration"| Code["Source Code"]
 ```
+
 
 ### 7.4 Transformation Languages
 
@@ -531,13 +541,13 @@ public class CustomerController {
 
 | Topic | Related Note |
 |-------|-------------|
-| Behavioral contracts in state machines | [[05_Behavioral_Modeling\|Behavioral Modeling]] |
-| Class design with invariants | [[03_Detailed_Design_and_OO_Modeling\|Detailed Design and OO Modeling]] |
-| Architectural component contracts | [[04_Architectural_Design_Modeling\|Architectural Design Modeling]] |
-| Formal verification of contracts | [[07_Formal_Methods\|Formal Methods]] |
-| Model-based testing with prototypes | [[08_Prototyping_Methods\|Prototyping Methods]] |
-| Requirements traceability | [[01_Introduction_to_Software_Modeling\|Introduction to Software Modeling]] |
-| Data modeling foundations | [[02_Structured_Analysis_Modeling\|Structured Analysis Modeling]] |
+| Behavioral contracts in state machines | [[03_Dynamic_Interaction_Modeling|Behavioral Modeling]] |
+| Class design with invariants | [[02_Use_Case_and_Static_Modeling|Detailed Design and OO Modeling]] |
+| Architectural component contracts | [[04_Architectural_Design|Architectural Design Modeling]] |
+| Formal verification of contracts | [[07_Formal_Methods|Formal Methods]] |
+| Model-based testing with prototypes | [[08_Prototyping_Methods|Prototyping Methods]] |
+| Requirements traceability | [[01_Modeling_Fundamentals|Introduction to Software Modeling]] |
+| Data modeling foundations | [[02_Use_Case_and_Static_Modeling|Structured Analysis Modeling]] |
 
 ---
 

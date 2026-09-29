@@ -8,16 +8,16 @@ tags:
   - modeling
 ---
 
-# Software Engineering Models and Methods — Overview
+# Software Engineering Models and Methods: Overview
 
 > **Source:** SWEBOK v4 Chapter 11
 > **Purpose:** Impose structure on software engineering through modeling techniques and systematic methods to make it repeatable and success-oriented.
 
 ## What Is This?
 
-Software Engineering Models and Methods provides the intellectual tools for reasoning about software systems before and during their construction. Models are abstract representations that capture structure, behavior, or properties while omitting irrelevant detail. Methods are systematic approaches to solving engineering problems — how to model a domain, how to verify a design, how to transform a specification into code.
+Software Engineering Models and Methods provides the intellectual tools for reasoning about software systems before and during their construction. Models are abstract representations that capture structure, behavior, or properties while omitting irrelevant detail. Methods are systematic approaches to solving engineering problems: how to model a domain, how to verify a design, how to transform a specification into code.
 
-Models serve multiple purposes: communication (explaining the system to stakeholders), analysis (reasoning about properties like correctness or performance), documentation (recording design decisions), and code generation (model-driven development). No single abstraction describes a complete system — models are unions of multiple submodels, each serving a specific purpose from a specific view.
+Models serve multiple purposes: communication (explaining the system to stakeholders), analysis (reasoning about properties like correctness or performance), documentation (recording design decisions), and code generation (model-driven development). No single abstraction describes a complete system, models are unions of multiple submodels, each serving a specific purpose from a specific view.
 
 Methods range from heuristic (experience-based, structured analysis, object-oriented, model-driven) to formal (mathematically rigorous specification, model checking, theorem proving) to prototyping (creating incomplete versions to explore the least understood aspects first). Most real-world engineering uses a mix: heuristic models for design, semi-formal models for communication, and formal methods for critical components where the cost of failure justifies the investment.
 
@@ -25,7 +25,7 @@ Methods range from heuristic (experience-based, structured analysis, object-orie
 
 ### Modeling Principles
 - Three guiding principles: model the essentials (abstraction), provide perspective (structural/behavioral/temporal views), enable effective communication
-- Models as aggregations of submodels — no single abstraction captures a complete system
+- Models as aggregations of submodels: no single abstraction captures a complete system
 - Entity-relation expression: all models express entities connected through relations using textual or graphical notation
 
 ### Properties and Expression of Models
@@ -36,12 +36,12 @@ Methods range from heuristic (experience-based, structured analysis, object-orie
 ### Structural Modeling
 - Models illustrating physical or logical composition: class, component, deployment, package diagrams
 - Information/data modeling and domain structure representation
-- Showing what the system is made of — its composition and decomposition
+- Showing what the system is made of: its composition and decomposition
 
 ### Behavioral Modeling
 - Models defining software functions: state machines, control-flow, data-flow representations
 - Use case, activity, state machine, sequence, communication, and timing diagrams
-- Showing what the system does — its dynamic behavior and interactions
+- Showing what the system does: its dynamic behavior and interactions
 
 ### Analysis of Models
 - Five dimensions: completeness, consistency, correctness, traceability, and interaction
@@ -51,12 +51,12 @@ Methods range from heuristic (experience-based, structured analysis, object-orie
 ### Heuristic Methods
 - Structured analysis/design, data modeling, and Object-Oriented Analysis & Design (UP/RUP)
 - Aspect-Oriented Development (separating crosscutting concerns with pointcuts/join points/advices)
-- Model-Driven Development (MDD) — models as primary artifacts generating code and documentation
+- Model-Driven Development (MDD): models as primary artifacts generating code and documentation
 
 ### Formal Methods
 - Specification languages, program refinement through transformations, and formal verification (model checking)
 - Logical inference with pre/postconditions and theorem proving (deductive verification)
-- Lightweight formal methods (e.g., Alloy) — pragmatic balance retaining precision with automatic finite-case analysis
+- Lightweight formal methods (e.g., Alloy): pragmatic balance retaining precision with automatic finite-case analysis
 
 ### Prototyping Methods
 - Addressing the least understood aspects first; throwaway vs. evolutionary prototyping
@@ -71,21 +71,21 @@ Methods range from heuristic (experience-based, structured analysis, object-orie
 ## My Notes
 
 ### Software Modeling and Design (Gomaa)
-- [[01_Modeling_Fundamentals]] — COMET method, UML overview, life cycles, architecture concepts
-- [[02_Use_Case_and_Static_Modeling]] — Use cases, static models, object/class structuring
-- [[03_Dynamic_Interaction_Modeling]] — Interaction diagrams, finite state machines, state-dependent modeling
-- [[04_Architectural_Design]] — Architecture patterns, subsystem design, OO architecture
-- [[05_Distributed_and_Component]] — Client/server, SOA, component-based architectures
-- [[06_Real_Time_and_Product_Lines]] — Real-time systems, product lines, quality attributes
+- [[01_Modeling_Fundamentals]]: COMET method, UML overview, life cycles, architecture concepts
+- [[02_Use_Case_and_Static_Modeling]]: Use cases, static models, object/class structuring
+- [[03_Dynamic_Interaction_Modeling]]: Interaction diagrams, finite state machines, state-dependent modeling
+- [[04_Architectural_Design]]: Architecture patterns, subsystem design, OO architecture
+- [[05_Distributed_and_Component]]: Client/server, SOA, component-based architectures
+- [[06_Real_Time_and_Product_Lines]]: Real-time systems, product lines, quality attributes
 
 ## Relationship to Other KAs
 
-- **[[Software Design Overview|Software Design]]** — Models are the primary medium of design. Structural and behavioral models express design decisions.
-- **[[Software Architecture Overview|Software Architecture]]** — Architecture description languages are formal architectural models. Views and viewpoints are modeling frameworks.
-- **[[Software Requirements Overview|Software Requirements]]** — Requirements models (use cases, DFDs, state machines) bridge natural language and formal specifications.
-- **[[Software Quality Overview|Software Quality]]** — Formal methods enable verification. Model checking and inspections are forms of quality assurance.
-- **[[Software Construction Overview|Software Construction]]** — Model-driven development generates code from models. Domain models become the vocabulary of the codebase.
-- **[[Software Engineering Process Overview|Software Engineering Process]]** — Process models and agile process models define how methods are applied in practice.
+- **[[../03_Software_Design/Software Design Note Overview|Software Design]]:** Models are the primary medium of design. Structural and behavioral models express design decisions.
+- **[[Software Architecture Overview|Software Architecture]]:** Architecture description languages are formal architectural models. Views and viewpoints are modeling frameworks.
+- **[[Software Requirements Overview|Software Requirements]]:** Requirements models (use cases, DFDs, state machines) bridge natural language and formal specifications.
+- **[[Software Quality Overview|Software Quality]]:** Formal methods enable verification. Model checking and inspections are forms of quality assurance.
+- **[[Software Construction Overview|Software Construction]]:** Model-driven development generates code from models. Domain models become the vocabulary of the codebase.
+- **[[../10_Software_Engineering_Process/Software Methodology - Overview|Software Engineering Process]]**; process models and agile process models define how methods are applied in practice.
 
 ---
 

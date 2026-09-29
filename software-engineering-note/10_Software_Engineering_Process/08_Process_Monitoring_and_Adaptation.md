@@ -5,7 +5,7 @@ source: "SWEBOK v4 Chapter 10"
 
 # Process Monitoring, Management Levels, and Adaptation
 
-> **Source:** *Guide to the Software Engineering Body of Knowledge (SWEBOK), Version 4 — Chapter 10: Software Engineering Process, Sections 10.7, 10.8, 10.9, 10.11*
+> **Source:** *Guide to the Software Engineering Body of Knowledge (SWEBOK), Version 4, Chapter 10: Software Engineering Process, Sections 10.7, 10.8, 10.9, 10.11*
 
 ---
 
@@ -14,6 +14,7 @@ source: "SWEBOK v4 Chapter 10"
 Software process management operates at three distinct levels, each with its own scope, concerns, and actors. Understanding these levels is essential because process failures often stem from confusion about which level owns which decisions.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "Executive/Organizational Strategy Level"
         E1[Organizational Management]
@@ -48,10 +49,11 @@ graph TB
     M1 --> T1
     M2 --> T1
     
-    style E1 fill:#f3e5f5
-    style M1 fill:#fff3e0
-    style T1 fill:#e8f5e9
+    style E1 fill:#1FB8AB,color:#000000
+    style M1 fill:#FFBE00,color:#000000
+    style T1 fill:#1FB854,color:#000000
 ```
+
 
 ### 1.1 Technical Execution Level
 
@@ -118,6 +120,7 @@ The executive/organizational strategy level provides the environment, resources,
 ### 1.4 Interactions Between Levels
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     subgraph "Strategy"
         S1[Set Standards]
@@ -146,6 +149,7 @@ flowchart LR
     C3 -->|Risk Mitigation| E1
     C2 -->|Portfolio Reports| S3
 ```
+
 
 The three levels form a hierarchy of concerns:
 
@@ -198,6 +202,7 @@ Process capability describes the range of expected results when a process is fol
 5. **Report capability** with confidence intervals and recommendations
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[Define Process] --> B[Collect Data]
     B --> C[Analyze Distribution]
@@ -205,6 +210,7 @@ graph LR
     D --> E[Report & Recommend]
     E -->|Feedback| A
 ```
+
 
 ### 2.3 Process Compliance Checking
 
@@ -250,6 +256,7 @@ A critical insight from SWEBOK is that process quality and product quality are d
 ### 3.1 Why Joint Assessment Matters
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "Process Quality"
         P1[Process Definition]
@@ -272,6 +279,7 @@ graph TB
     style P1 fill:#e1f5fe
     style Q1 fill:#e8f5e9
 ```
+
 
 **The relationship is bidirectional:**
 
@@ -296,6 +304,7 @@ The most valuable process improvements come from analyzing product defects and t
 **Defect causal analysis workflow:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Product Defect Found] --> B[Classify Defect]
     B --> C[Trace to Introducing Phase]
@@ -308,6 +317,7 @@ flowchart TD
     I -->|Defect Recurs| D
     I -->|Defect Eliminated| J[Standardize Improvement]
 ```
+
 
 **Defect-to-process mapping example:**
 
@@ -432,6 +442,7 @@ Agile does not mean "no process." It means "just enough process, just enough doc
 In Agile organizations, the team owns its process. This is a fundamental shift from traditional process improvement where an external process group (SEPG) defines and mandates processes.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "Traditional"
         T1[SEPG Defines Process] --> T2[Team Follows Process]
@@ -448,6 +459,7 @@ graph TB
     style T1 fill:#ffcdd2
     style A1 fill:#c8e6c9
 ```
+
 
 **Benefits of team-owned processes:**
 
@@ -479,6 +491,7 @@ Retrospectives are the Agile equivalent of the PDCA cycle from [[07_Process_Asse
 **Retrospective-to-improvement pipeline:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     A[Sprint Ends] --> B[Retrospective]
     B --> C[Identify Improvement]
@@ -488,6 +501,7 @@ flowchart LR
     F --> G[Execute Improvements]
     G --> A
 ```
+
 
 **Making retrospectives effective:**
 
@@ -528,6 +542,7 @@ Agile organizations face a paradox: they reject heavy process frameworks (like C
 The topics in this note connect to form a complete process management ecosystem:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "Define"
         A1[Select Process]
@@ -567,6 +582,7 @@ graph TB
     style C1 fill:#fff3e0
     style D1 fill:#f3e5f5
 ```
+
 
 ---
 

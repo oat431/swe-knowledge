@@ -8,7 +8,7 @@ source: "Gomaa, Software Modeling and Design, Chapters 6–8"
 created: 2026-07-21
 ---
 
-# 02 — Use Case and Static Modeling
+# 02: Use Case and Static Modeling
 
 > **Source:** Hassan Gomaa, *Software Modeling and Design: UML, Use Cases, Patterns, and Software Architectures*, Cambridge University Press.  
 > **Chapters covered:** Ch 6 (Use Case Modeling), Ch 7 (Static Modeling), Ch 8 (Object and Class Structuring).
@@ -17,7 +17,7 @@ created: 2026-07-21
 
 ## 1. Use Case Modeling (Chapter 6)
 
-Use case modeling describes the **functional requirements** of a system from the user's perspective. The system is treated as a **black box** — only external behaviour matters, not internal structure.
+Use case modeling describes the **functional requirements** of a system from the user's perspective. The system is treated as a **black box**, only external behaviour matters, not internal structure.
 
 ### 1.1 Requirements Modeling
 
@@ -26,7 +26,7 @@ Two phases:
 | Phase | Activity |
 |-------|----------|
 | **Requirements Analysis** | Interview users, analyse existing manual/automated systems, identify stakeholder needs. |
-| **Requirements Specification** | Produce the SRS (Software Requirements Specification) — the contract between customer and developer. |
+| **Requirements Specification** | Produce the SRS (Software Requirements Specification) ;  the contract between customer and developer. |
 
 A **functional requirement** describes what the system must do (inputs, outputs, stored data).  
 A **nonfunctional requirement** (quality attribute) addresses performance, availability, security, etc.
@@ -44,8 +44,8 @@ An **actor** is an external entity (outside the system) that interacts with the 
 | **Input/Output device actor** | Hardware device with no human involvement. | Monitoring Sensor |
 | **Timer actor** | Periodically sends timer events to initiate actions. | Report Timer |
 
-**Primary actor** — initiates the use case.  
-**Secondary actor** — participates but does not initiate; gains value from the use case.
+**Primary actor:** initiates the use case.  
+**Secondary actor:** participates but does not initiate; gains value from the use case.
 
 Actor **generalization** can model shared roles: e.g., `RemoteSensor` generalises both `MonitoringSensor` and `RemoteSystem`.
 
@@ -53,9 +53,9 @@ Actor **generalization** can model shared roles: e.g., `RemoteSensor` generalise
 
 A **use case** defines a sequence of interactions between one or more actors and the system. It always starts with input from an actor.
 
-- **Main sequence** — the most common (success) path.
-- **Alternative sequences** — branches for error cases, less frequent scenarios.
-- **Scenario** — one complete path through the use case (main or alternative).
+- **Main sequence:** the most common (success) path.
+- **Alternative sequences:** branches for error cases, less frequent scenarios.
+- **Scenario:** one complete path through the use case (main or alternative).
 
 ### 1.4 Documenting a Use Case
 
@@ -80,7 +80,7 @@ When the **same sequence of interactions** appears in several use cases, extract
 
 > **Analogy:** An inclusion use case is like a library routine; a base use case is like a program that calls it.
 
-**Guideline:** Do NOT create inclusion use cases for single functions (e.g., "Dispense Cash" alone) — that leads to functional decomposition and a fragmented model.
+**Guideline:** Do NOT create inclusion use cases for single functions (e.g., "Dispense Cash" alone); that leads to functional decomposition and a fragmented model.
 
 **Example:** `Validate PIN` is included by `Withdraw Funds`, `Query Account`, and `Transfer Funds`.
 
@@ -92,7 +92,7 @@ Used when a use case has **too many alternative/optional/exceptional paths**. Sp
 - The **extension use case** depends on the base and executes only when its condition is true.
 - **Extension points** name the exact locations in the base use case where extensions can be inserted.
 
-**Example:** `Checkout Customer` has an extension point `payment`. Three extension use cases — `Pay by Cash`, `Pay by Credit Card`, `Pay by Debit Card` — each with a mutually exclusive selection condition (`[cash payment]`, `[credit card payment]`, `[debit card payment]`).
+**Example:** `Checkout Customer` has an extension point `payment`. Three extension use cases (`Pay by Cash`, `Pay by Credit Card`, `Pay by Debit Card`) each with a mutually exclusive selection condition (`[cash payment]`, `[credit card payment]`, `[debit card payment]`).
 
 ### 1.7 Use Case Packages
 
@@ -113,19 +113,19 @@ Aggregate activity nodes can represent inclusion/extension use cases that are de
 
 ## 2. Static Modeling (Chapter 7)
 
-The **static model** captures the structural view — classes, attributes, relationships — that does not vary with time. Depicted with **UML class diagrams**.
+The **static model** captures the structural view (classes, attributes, relationships) that does not vary with time. Depicted with **UML class diagrams**.
 
 ### 2.1 Associations
 
 An **association** is a structural relationship between classes. A **link** is an instance of an association between objects.
 
-**Multiplicity** — how many instances of one class relate to one instance of another:
+**Multiplicity:** how many instances of one class relate to one instance of another:
 
 | Type | Notation | Example |
 |------|----------|---------|
-| One-to-one | `1` — `1` | Company `Is led by` CEO |
-| One-to-many | `1` — `1..*` | Bank `Administers` Account |
-| Many-to-many | `*` — `1..*` | Student `Enrolls in` Course |
+| One-to-one | `1` ;  `1` | Company `Is led by` CEO |
+| One-to-many | `1` ;  `1..*` | Bank `Administers` Account |
+| Many-to-many | `*` ;  `1..*` | Student `Enrolls in` Course |
 | Optional (zero-or-one) | `0..1` | Customer `Owns` DebitCard |
 | Optional (zero-or-many) | `0..*` | Customer `Owns` CreditCard |
 | Numerically specified | `2, 4` | Car `Is entered through` Door |
@@ -155,7 +155,7 @@ Both model "Is part of" relationships:
 
 An **"Is a"** relationship. Common attributes/operations are abstracted into a **superclass**; subclasses inherit them and add or specialise.
 
-**Discriminator** — an attribute that indicates which property is being abstracted (e.g., `accountType` discriminates `CheckingAccount` from `SavingsAccount`).
+**Discriminator:** an attribute that indicates which property is being abstracted (e.g., `accountType` discriminates `CheckingAccount` from `SavingsAccount`).
 
 **Example:** `Account` (superclass) with `accountNumber`, `balance`. Subclasses: `CheckingAccount` adds `lastDepositAmount`, `SavingsAccount` adds `cumulativeInterest`.
 
@@ -172,8 +172,8 @@ Constraints can be expressed in natural language or OCL (Object Constraint Langu
 
 The COMET approach emphasises modelling:
 
-1. **Physical classes** — tangible real-world entities (devices, users, external systems, timers). Particularly important in embedded/real-time systems.
-2. **Entity classes** — conceptual, data-intensive classes (often persistent). Prevalent in information systems.
+1. **Physical classes:** tangible real-world entities (devices, users, external systems, timers). Particularly important in embedded/real-time systems.
+2. **Entity classes:** conceptual, data-intensive classes (often persistent). Prevalent in information systems.
 
 ### 2.6 System Context Modeling
 
@@ -182,8 +182,8 @@ The COMET approach emphasises modelling:
 | **Total system** (hardware + software) | I/O devices, software, hardware | Human actors, external systems |
 | **Software system** | Software only | Hardware I/O devices, human actors, external systems |
 
-- **System context class diagram** — shows the total system as a black box with external entities.
-- **Software system context class diagram** — shows the software system with external classes (including hardware devices).
+- **System context class diagram:** shows the total system as a black box with external entities.
+- **Software system context class diagram:** shows the software system with external classes (including hardware devices).
 
 ### 2.7 Categorization of Classes (UML Stereotypes)
 
@@ -201,21 +201,21 @@ Stereotypes distinguish among kinds of classes using guillemets: `«stereotype»
 | `«external timer»` | Provides timer events to the system. |
 
 **Standard associations** on context diagrams:
-- `Inputs to` — external input device → software system
-- `Outputs to` — software system → external output device
-- `Interacts with` — external user ↔ software system
-- `Communicates with` — external system ↔ software system
-- `Signals` — external timer → software system
+- `Inputs to`: external input device → software system
+- `Outputs to`: software system → external output device
+- `Interacts with`: external user ↔ software system
+- `Communicates with`: external system ↔ software system
+- `Signals`: external timer → software system
 
 ### 2.8 Entity Classes
 
 Entity classes are **data-intensive**, often **persistent** classes. Their main purpose is to **store data** and provide access to it.
 
 - Entity class modelling is analogous to logical database schema design.
-- An entity class should have several attributes; a class with only one attribute is probably not an entity class — it should be an attribute of another class.
+- An entity class should have several attributes; a class with only one attribute is probably not an entity class; it should be an attribute of another class.
 - Operations are deferred to design (Chapter 14).
 
-**Example:** Online shopping entity model — `Customer`, `CustomerAccount`, `DeliveryOrder`, `Item`, `Catalog`, `Inventory`, `Supplier`.
+**Example:** Online shopping entity model: `Customer`, `CustomerAccount`, `DeliveryOrder`, `Item`, `Catalog`, `Inventory`, `Supplier`.
 
 ---
 
@@ -225,7 +225,7 @@ After use cases and the static model of the problem domain are defined, the next
 
 ### 3.1 Object Structuring Criteria
 
-Objects are categorised by the **role they play** in the application using stereotypes. There is no single "correct" decomposition — it depends on the problem.
+Objects are categorised by the **role they play** in the application using stereotypes. There is no single "correct" decomposition; it depends on the problem.
 
 **Four main categories:**
 
@@ -263,7 +263,7 @@ Boundary objects are the **software interface** to the external environment. Eac
 | Output object | `«output»` | Sends to external output device. |
 | I/O object | `«input/output»` | Both receives and sends. |
 
-**Example:** Banking System boundary classes — `CardReader Interface` (I/O), `CashDispenser Interface` (output), `ReceiptPrinter Interface` (output), `Customer Interaction` (user interaction), `Operator Interaction` (user interaction).
+**Example:** Banking System boundary classes: `CardReader Interface` (I/O), `CashDispenser Interface` (output), `ReceiptPrinter Interface` (output), `Customer Interaction` (user interaction), `Operator Interaction` (user interaction).
 
 ### 3.3 Entity Classes and Objects (`«entity»`)
 
@@ -277,7 +277,7 @@ Boundary objects are the **software interface** to the external environment. Eac
 
 ### 3.4 Control Classes and Objects (`«control»`)
 
-Control objects provide **overall coordination** — the "conductor of the orchestra."
+Control objects provide **overall coordination**, the "conductor of the orchestra."
 
 #### 3.4.1 Coordinator Objects (`«coordinator»`)
 - **Stateless** decision-making: action depends only on the incoming message, not on history.
@@ -344,15 +344,15 @@ Modeling           of Problem Domain       Structuring
  activity diag.)    external classes)
 ```
 
-1. **Identify actors and use cases** (Ch 6) — functional requirements.
-2. **Develop static model** (Ch 7) — entity classes, associations, system context, external classes.
-3. **Structure software objects** (Ch 8) — categorise boundary, entity, control, and application logic objects.
-4. **Dynamic interaction modeling** (Ch 9–11) — determine object interactions for each use case.
-5. **Class design** (Ch 14) — define operations for each class.
+1. **Identify actors and use cases** (Ch 6): functional requirements.
+2. **Develop static model** (Ch 7): entity classes, associations, system context, external classes.
+3. **Structure software objects** (Ch 8): categorise boundary, entity, control, and application logic objects.
+4. **Dynamic interaction modeling** (Ch 9–11): determine object interactions for each use case.
+5. **Class design** (Ch 14): define operations for each class.
 
 
 ## Related
 
-- [[Software Engineering Models and Methods Overview]] — All models and methods topics
-- [[01_Modeling_Fundamentals]] — COMET method and UML overview
-- [[03_Dynamic_Interaction_Modeling]] — Dynamic modeling and state machines
+- [[Software Engineering Models and Methods Overview]]: All models and methods topics
+- [[01_Modeling_Fundamentals]]: COMET method and UML overview
+- [[03_Dynamic_Interaction_Modeling]]: Dynamic modeling and state machines

@@ -4,11 +4,11 @@ source: Gomaa, Software Modeling and Design, Chapters 12-14
 created: 2026-07-21
 ---
 
-# 04 — Architectural Design
+# 04: Architectural Design
 
 ## Overview
 
-**Part III of Gomaa's *Software Modeling and Design* covers architectural design** — the transition from analysis (what the system does) to design (how the system is built). The software architecture describes the high-level structure of the system in terms of subsystems, their interfaces, and their interconnections, while hiding internal details of individual subsystems.
+**Part III of Gomaa's *Software Modeling and Design* covers architectural design**, the transition from analysis (what the system does) to design (how the system is built). The software architecture describes the high-level structure of the system in terms of subsystems, their interfaces, and their interconnections, while hiding internal details of individual subsystems.
 
 ---
 
@@ -22,18 +22,18 @@ A **component-based software architecture** consists of multiple components wher
 - Is self-contained and encapsulates certain information
 - Is either a composite object or a simple object
 - Provides an **interface** through which it communicates with other components
-- Is a **black box** — implementation is hidden from other components
+- Is a **black box:** implementation is hidden from other components
 - Communicates using predefined communication patterns
 
 **Sequential vs. Concurrent designs:**
-- **Sequential design**: Components are passive classes (no thread of control). Communication is call/return only.
-- **Concurrent/distributed design**: Components are active (concurrent), deployable to different nodes. Communication includes synchronous, asynchronous, brokered, and group communication.
+- **Sequential design:** Components are passive classes (no thread of control). Communication is call/return only.
+- **Concurrent/distributed design:** Components are active (concurrent), deployable to different nodes. Communication includes synchronous, asynchronous, brokered, and group communication.
 
-**Architecture Stereotypes in UML 2**: A modeling element can have two stereotypes:
+**Architecture Stereotypes in UML 2:** A modeling element can have two stereotypes:
 1. **Role stereotype** (analysis): e.g., `«entity»`, `«boundary»`, `«control»`
 2. **Architectural structuring stereotype** (design): e.g., `«subsystem»`, `«component»`, `«service»`, `«concurrent task»`
 
-These are orthogonal — independent of each other.
+These are orthogonal; independent of each other.
 
 ### 12.2 Multiple Views of a Software Architecture
 
@@ -43,12 +43,12 @@ Three key views:
 - Depicted on **class diagrams**
 - Shows subsystems as composite/aggregate classes
 - Shows static relationships and multiplicities between subsystems
-- Example: Banking System — 1 Banking Service to many ATM Clients (one-to-many association)
+- Example: Banking System: 1 Banking Service to many ATM Clients (one-to-many association)
 
 #### 12.2.2 Dynamic View (Behavioral)
 - Depicted on **communication diagrams**
 - Shows subsystems as concurrent components with message communication
-- Uses **generic** (not instance) communication diagrams — depicts all possible interactions
+- Uses **generic** (not instance) communication diagrams: depicts all possible interactions
 - Sequence numbers omitted because all scenarios are covered
 - Example: ATM Client sends `ATMTransaction` (synchronous) to Banking Service, receives `bankResponse` reply
 
@@ -70,15 +70,15 @@ Patterns categorized into two groups:
 #### 12.3.1 Layers of Abstraction Pattern
 - Also called Hierarchical Layers / Levels of Abstraction
 - Each layer uses services in the layer immediately below it
-- Enables **extension** (add upper layers) and **contraction** (remove upper layers) — Parnas (1979)
-- **Strict hierarchy**: Layer 3 invokes only layer 2. **Flexible hierarchy**: Layer 3 may directly invoke layer 1.
+- Enables **extension** (add upper layers) and **contraction** (remove upper layers), Parnas (1979)
+- **Strict hierarchy:** Layer 3 invokes only layer 2. **Flexible hierarchy:** Layer 3 may directly invoke layer 1.
 
 **TCP/IP example** (5-layer model):
-1. **Physical layer** — hardware, transmission medium
-2. **Network interface layer** — frames, transmission
-3. **Internet layer (IP)** — packet format, routing
-4. **Transport layer (TCP)** — message assembly, virtual connection, end-to-end protocol
-5. **Application layer** — FTP, email, WWW
+1. **Physical layer:** hardware, transmission medium
+2. **Network interface layer:** frames, transmission
+3. **Internet layer (IP):** packet format, routing
+4. **Transport layer (TCP):** message assembly, virtual connection, end-to-end protocol
+5. **Application layer:** FTP, email, WWW
 
 Key characteristic: Upper layers can be replaced while lower layers remain unchanged. Routers use only layers 1-3; end nodes use all 5.
 
@@ -96,7 +96,7 @@ Key characteristic: Upper layers can be replaced while lower layers remain uncha
 - Consumer suspended if no message available
 - UML notation: stick arrowhead
 - Used when sender does not need a response
-- **Bidirectional asynchronous**: Both components send async messages to each other
+- **Bidirectional asynchronous:** Both components send async messages to each other
 
 #### 12.3.4 Synchronous Message Communication with Reply Pattern
 - Also called Tightly Coupled Message Communication
@@ -112,7 +112,7 @@ Standard template (Buschmann et al. 1996):
 - **Pattern name**, **Aliases**, **Context**, **Problem**, **Summary of solution**
 - **Strengths**, **Weaknesses**, **Applicability**, **Related patterns**, **Reference**
 
-Example — **Layers of Abstraction**:
+Example, **Layers of Abstraction:**
 - Context: Software architectural design
 - Problem: Need architecture supporting extension and contraction
 - Solution: Lower layers provide services for higher layers
@@ -127,8 +127,8 @@ Example — **Layers of Abstraction**:
 - An **interface** specifies externally visible operations without revealing internal structure
 - Acts as a **contract** between provider and user of the interface
 - Class attributes are **private**; public operations constitute the interface
-- **Provided interface**: depicted as a circle (ball) — class provides the interface
-- **Required interface**: depicted as a semicircle (socket) — class uses the interface
+- **Provided interface:** depicted as a circle (ball): class provides the interface
+- **Required interface:** depicted as a semicircle (socket): class uses the interface
 - The ball-and-socket notation shows a component with a required interface connected to a component with a provided interface
 - Interface naming convention: starts with "I" (e.g., `IBasicAlarmService`)
 
@@ -136,7 +136,7 @@ Operations of `IBasicAlarmService`:
 - `alarmRequest (in request, out alarmData)`
 - `post (in alarm)`
 
-### 12.6 Designing Software Architectures — Chapter Roadmap
+### 12.6 Designing Software Architectures: Chapter Roadmap
 
 | Chapter | Architecture Type | Key Focus |
 |---------|------------------|-----------|
@@ -169,7 +169,7 @@ Core design decisions:
 2. Determine subsystems using **separation of concerns** and **subsystem structuring criteria**
 3. Determine the type of **message communication** between subsystems
 
-**Key principle**: Each subsystem performs a major function that is relatively independent of other subsystems. Once interfaces are defined, subsystem design can proceed independently.
+**Key principle:** Each subsystem performs a major function that is relatively independent of other subsystems. Once interfaces are defined, subsystem design can proceed independently.
 
 Geographical distribution often simplifies subsystem identification (e.g., clients and services in different locations).
 
@@ -200,11 +200,11 @@ Six design considerations for structuring subsystems:
 #### 13.3.2 Geographical Location
 - Objects in potentially different physical locations → different subsystems
 - In distributed environments, subsystems communicate only via messages
-- Example: Emergency Monitoring System — MonitoringSensor, RemoteSystemProxy, OperatorPresentation, AlarmService, MonitoringDataService on separate nodes
+- Example: Emergency Monitoring System: MonitoringSensor, RemoteSystemProxy, OperatorPresentation, AlarmService, MonitoringDataService on separate nodes
 
 #### 13.3.3 Clients and Services
 - Clients and services → separate subsystems (special case of geographical location)
-- Example: Many ATM Client subsystems at physical ATM locations; Bank Service at centralized data center
+- Example: Many ATM Client subsystems at physical ATM locations; bank Service at centralized data center
 
 #### 13.3.4 User Interaction
 - User interaction objects → separate subsystems
@@ -213,7 +213,7 @@ Six design considerations for structuring subsystems:
 
 #### 13.3.5 Interface to External Objects
 - An external real-world object should interface to **only one** subsystem
-- Example: ATMClient interfaces to CardReader, CashDispenser, ReceiptPrinter — each external device interfaces only to ATMClient
+- Example: ATMClient interfaces to CardReader, CashDispenser, ReceiptPrinter; each external device interfaces only to ATMClient
 
 #### 13.3.6 Scope of Control
 - A control object and all entity/I/O objects it directly controls → **same** subsystem
@@ -252,8 +252,8 @@ Six subsystem types (a subsystem can satisfy multiple criteria):
 
 #### 13.4.5 Coordinator Subsystem
 - Coordinates execution of other subsystems (control or service subsystems)
-- **Control coordination**: When multiple control subsystems need oversight → use a hierarchical coordinator (e.g., `SupervisorySystem` assigns jobs to individual `AutomatedGuidedVehicleSystem` subsystems)
-- **Service/workflow coordination**: Determines execution sequence of multiple service subsystems
+- **Control coordination:** When multiple control subsystems need oversight → use a hierarchical coordinator (e.g., `SupervisorySystem` assigns jobs to individual `AutomatedGuidedVehicleSystem` subsystems)
+- **Service/workflow coordination:** Determines execution sequence of multiple service subsystems
 - Example: `CustomerCoordinator` in online shopping coordinates Catalog Service, Customer Account Service, Credit Card Service, and Email Service
 
 #### 13.4.6 Input/Output Subsystem
@@ -264,12 +264,12 @@ Six subsystem types (a subsystem can satisfy multiple criteria):
 
 ### 13.5 Decisions About Message Communication Between Subsystems
 
-**Analysis model**: Messages depicted as simple messages (stick arrowhead) — no decision about concurrency or communication type.
+**Analysis model:** Messages depicted as simple messages (stick arrowhead); no decision about concurrency or communication type.
 
 **Design model** decisions:
-1. **Concurrency**: Are the communicating objects concurrent?
-2. **Message type**: Synchronous or asynchronous?
-3. **Precise specification**: Message name and parameters
+1. **Concurrency:** Are the communicating objects concurrent?
+2. **Message type:** Synchronous or asynchronous?
+3. **Precise specification:** Message name and parameters
 
 **Unidirectional** (producer → consumer): typically mapped to asynchronous communication
 **Bidirectional** (client ↔ service): typically mapped to synchronous communication with reply
@@ -291,11 +291,11 @@ The design decision is formalized into architectural communication patterns:
 ### 14.1 Concepts, Architectures, and Patterns
 
 **Object-oriented design** uses three fundamental concepts:
-1. **Information hiding**: Class encapsulates information (data, state machine, algorithm) hidden from rest of system
-2. **Classes**: Objects instantiated from classes, accessed through operations/methods
-3. **Inheritance**: Code sharing and adaptation via class hierarchies
+1. **Information hiding:** Class encapsulates information (data, state machine, algorithm) hidden from rest of system
+2. **Classes:** Objects instantiated from classes, accessed through operations/methods
+3. **Inheritance:** Code sharing and adaptation via class hierarchies
 
-**Interface-implementation separation**: The interface forms a contract between provider and user.
+**Interface-implementation separation:** The interface forms a contract between provider and user.
 
 This chapter focuses on **sequential object-oriented architectures** (one thread of control, Call/Return pattern only). OO concepts are extended in later chapters for distributed, component-based, concurrent, service-oriented, and product-line architectures.
 
@@ -307,15 +307,15 @@ Classes from the analysis model are categorized by stereotype and refined:
 |------------------|-------------------|-------------|
 | **Entity** (`«entity»`) | Data abstraction class | Encapsulates data structures |
 | | Wrapper class | Hides interface to existing/legacy system or database |
-| **Boundary** (`«boundary»`) | Device I/O class | Often active (concurrent) — Ch 18 |
-| | Proxy class | Often active — Ch 18 |
-| | GUI class | Passive — this chapter |
-| **Control** (`«control»`) | State-machine class | Passive — encapsulates finite state machine |
-| | Coordinator class | Active (concurrent) — Ch 18 |
-| | Timer class | Active — Ch 18 |
-| **Application Logic** | Business logic class | Encapsulates business rules — this chapter |
+| **Boundary** (`«boundary»`) | Device I/O class | Often active (concurrent) ;  Ch 18 |
+| | Proxy class | Often active ;  Ch 18 |
+| | GUI class | Passive ;  this chapter |
+| **Control** (`«control»`) | State-machine class | Passive ;  encapsulates finite state machine |
+| | Coordinator class | Active (concurrent) ;  Ch 18 |
+| | Timer class | Active ;  Ch 18 |
+| **Application Logic** | Business logic class | Encapsulates business rules ;  this chapter |
 | | Service class | Ch 16 |
-| | Algorithm class | Often active — Ch 18 |
+| | Algorithm class | Often active ;  Ch 18 |
 
 ### 14.3 Designing Class Interface and Operations
 
@@ -325,9 +325,9 @@ Classes from the analysis model are categorized by stereotype and refined:
 - Message parameters → operation parameters
 - Response messages → return parameters of the operation
 
-**From the static model**: Standard CRUD operations (create, read, update, delete) can be tailored to specific class needs.
+**From the static model:** Standard CRUD operations (create, read, update, delete) can be tailored to specific class needs.
 
-**Example — ATM Card class**:
+**Example: ATM Card class:**
 - Analysis: `CardReaderInterface` sends `CardId, StartDate, ExpirationDate` to `ATMCard`; `CustomerInteraction` sends `CardRequest`
 - Design: `write(in cardId, in startDate, in expirationDate)` and `read(out cardId, out startDate, out expirationDate)`
 - Attributes (`atmCardId`, `atmStartDate`, `atmExpirationDate`) are private
@@ -335,17 +335,17 @@ Classes from the analysis model are categorized by stereotype and refined:
 
 ### 14.4 Data Abstraction Classes
 
-Entity classes that encapsulate data are designed as **data abstraction classes**:
+Entity classes that encapsulate data are designed as **data abstraction classes:**
 - Hide internal data structure representation
 - Provide access procedures/functions whose internals are also hidden
 - Operations determined by analyzing how other objects access the data
 
-**Example — ATM Cash**:
+**Example: ATM Cash:**
 - Encapsulates: `cashAvailable`, `fives`, `tens`, `twenties`
 - Operations:
   - `addCash(in fivesAdded, in tensAdded, in twentiesAdded)`
   - `withdrawCash(in cashAmount, out fivesToDispense, out tensToDispense, out twentiesToDispense)`
-- **Invariant**: `cashAvailable = 5 × fives + 10 × tens + 20 × twenties`
+- **Invariant:** `cashAvailable = 5 × fives + 10 × tens + 20 × twenties`
 
 ### 14.5 State-Machine Classes
 
@@ -354,9 +354,9 @@ Entity classes that encapsulate data are designed as **data abstraction classes*
 - Maintains the current state
 - Provides operations to process incoming events and change state
 
-**Reusable state-machine class design**:
-- `processEvent(in event, out action)` — looks up state transition table, determines new state and actions, updates state, returns actions
-- `currentState(): State` — returns current state (optional)
+**Reusable state-machine class design:**
+- `processEvent(in event, out action)`: looks up state transition table, determines new state and actions, updates state, returns actions
+- `currentState(): State`: returns current state (optional)
 - The contents of the table are application-dependent; defined at instantiation/initialization time
 - Example: `ATMStateMachine` class encapsulates the ATM state transition table
 
@@ -367,14 +367,14 @@ GUI classes **hide the details of the user interface** from other classes:
 - Higher-level composite user interaction classes contain lower-level GUI classes
 - Designed for each individual screen/window
 
-**Example — Banking GUI classes**: `MenuWindow`, `PINWindow`, `WithdrawalWindow`, `TransferWindow`, `QueryWindow`, `PromptWindow`
+**Example, Banking GUI classes:** `MenuWindow`, `PINWindow`, `WithdrawalWindow`, `TransferWindow`, `QueryWindow`, `PromptWindow`
 
 Each GUI class has:
 - A `clear()` operation to blank the screen
 - Display operations that output prompts and accept user input (returned as output parameters)
-  - `displayMenu(out selection)` — shows menu, returns user's choice
-  - `displayWithdrawalWindow(out accountNumber, out amount)` — prompts for and returns account and amount
-  - `displayPrompt(in promptText)` — displays informational message (no user input expected)
+  - `displayMenu(out selection)`: shows menu, returns user's choice
+  - `displayWithdrawalWindow(out accountNumber, out amount)`: prompts for and returns account and amount
+  - `displayPrompt(in promptText)`: displays informational message (no user input expected)
 
 ### 14.7 Business Logic Classes
 
@@ -382,19 +382,19 @@ Each GUI class has:
 - Define decision-making, business-specific application logic
 - Access various entity objects during execution
 
-**Example — `WithdrawalTransactionManager`**:
+**Example: `WithdrawalTransactionManager`:**
 - Operations: `initialize()`, `withdraw()`, `confirm()`, `abort()`
-- `withdraw(in accountNumber, in amount, out response)` — processes withdrawal
-- `confirm(in accountNumber, amount)` — confirms successful completion
-- `abort(in accountNumber, amount)` — handles failure (e.g., cash not dispensed)
+- `withdraw(in accountNumber, in amount, out response)`: processes withdrawal
+- `confirm(in accountNumber, amount)`: confirms successful completion
+- `abort(in accountNumber, amount)`: handles failure (e.g., cash not dispensed)
 
 ### 14.8 Inheritance in Design
 
 Inheritance enables **code sharing and adaptation**. Two approaches:
-- **Top-down**: Design superclass capturing overall characteristics, specialize into variant subclasses
-- **Bottom-up**: Recognize common properties in existing classes, generalize into a superclass
+- **Top-down:** Design superclass capturing overall characteristics, specialize into variant subclasses
+- **Bottom-up:** Recognize common properties in existing classes, generalize into a superclass
 
-**Important**: Inheritance breaks encapsulation (white box reuse). Child class implementation is bound to parent class implementation → ripple-effect problems with deep hierarchies. **Limit hierarchy depth.**
+**Important:** Inheritance breaks encapsulation (white box reuse). Child class implementation is bound to parent class implementation → ripple-effect problems with deep hierarchies. **Limit hierarchy depth.**
 
 #### 14.8.2 Abstract Classes
 - Class with **no instances**
@@ -405,19 +405,19 @@ Inheritance enables **code sharing and adaptation**. Two approaches:
 - Some operations may be implemented in the abstract class (common implementation/default behavior)
 - Subclasses can **override** parent operations for special cases
 
-#### 14.8.3 Example — Account Hierarchy
+#### 14.8.3 Example: Account Hierarchy
 
-**Account (abstract superclass)**:
+**Account (abstract superclass):**
 - Attributes: `accountNumber` (Integer), `balance` (Real)
 - Operations: `open()`, `close()`, `readBalance(): Real`, `credit(amount)` {abstract}, `debit(amount)` {abstract}
 
-**CheckingAccount**:
+**CheckingAccount:**
 - Additional attribute: `lastDepositAmount`
 - Implements `credit`: add to balance, set `lastDepositAmount`
 - Implements `debit`: deduct from balance
 - Additional operation: `readLastDepositAmount(): Real`
 
-**SavingsAccount**:
+**SavingsAccount:**
 - Additional attributes: `cumulativeInterest`, `debitCount`, static `maxFreeDebits = 3`, static `bankCharge = $2.50`
 - Implements `credit`: add to balance
 - Implements `debit`: deduct from balance, increment `debitCount`, deduct `bankCharge` if `maxFreeDebits > debitCount`
@@ -437,7 +437,7 @@ A class interface specification defines:
 | **Inherited operations** (if any) | From superclass |
 | **Operations** | For each: function, preconditions, postconditions, invariants, parameters, operations used |
 
-**Example — CheckingAccount specification**:
+**Example: CheckingAccount specification:**
 - Information hidden: Checking account attributes and their current values
 - Criterion: Data abstraction class
 - Assumptions: Checking accounts do not have interest
@@ -454,20 +454,20 @@ A class interface specification defines:
 - English for sequential statements
 - Readily mappable to implementation language
 
-**Example — Account superclass pseudocode**:
+**Example: Account superclass pseudocode:**
 - `open(in accountNumber)`: create new account; assign accountNumber; set balance to zero
 - `close()`: close the account
 - `readBalance(): Real`: return value of balance
 - `credit(in amount)`: deferred to subclass
 - `debit(in amount)`: deferred to subclass
 
-**Example — CheckingAccount debit**:
+**Example: CheckingAccount debit:**
 ```
 debit(in amount):
   Deduct amount from balance
 ```
 
-**Example — SavingsAccount debit**:
+**Example: SavingsAccount debit:**
 ```
 debit(in amount):
   Deduct amount from balance
@@ -479,9 +479,9 @@ debit(in amount):
 
 **Polymorphism** ("many forms"): Different classes may have the same operation name with identical specification but different implementations. Allows objects with identical interfaces to be substituted at run-time.
 
-**Dynamic binding**: Run-time association of a request to an object and its operation (vs. compile-time binding in procedural languages). A variable may reference objects of different classes at different times.
+**Dynamic binding:** Run-time association of a request to an object and its operation (vs. compile-time binding in procedural languages). A variable may reference objects of different classes at different times.
 
-**Example**: 
+**Example:** 
 ```
 anAccount: Account  // can reference CheckingAccount or SavingsAccount
 anAccount.debit(amount)  // invokes CheckingAccount.debit or SavingsAccount.debit at run-time
@@ -490,11 +490,11 @@ anAccount.debit(amount)  // invokes CheckingAccount.debit or SavingsAccount.debi
 - `CheckingAccount.debit` simply deducts amount
 - `SavingsAccount.debit` deducts amount + applies bank charge if free debits exceeded
 
-**Substitutability**: A `CheckingAccount` or `SavingsAccount` can be assigned to an `Account` variable, but NOT vice versa (not every account is a checking account).
+**Substitutability:** A `CheckingAccount` or `SavingsAccount` can be assigned to an `Account` variable, but NOT vice versa (not every account is a checking account).
 
 ### 14.12 Implementation of Classes in Java
 
-Example — ATMCash class (excerpt):
+Example: ATMCash class (excerpt):
 ```java
 public class ATMCash {
     private int cashAvailable = 0;
@@ -530,19 +530,19 @@ public class ATMCash {
 
 1. **Software architecture** separates overall structure (subsystems + interfaces) from internal details
 2. **Three views** are essential: structural (class diagrams), dynamic (communication diagrams), deployment (deployment diagrams)
-3. **Architectural patterns** provide proven templates — Layers of Abstraction for structure, Call/Return, Async, and Sync with Reply for communication
+3. **Architectural patterns** provide proven templates: Layers of Abstraction for structure, Call/Return, Async, and Sync with Reply for communication
 4. **Subsystem structuring** follows separation of concerns: composite objects, geography, client/service, user interaction, external interfaces, scope of control
-5. **Six subsystem roles**: client, user interaction, service, control, coordinator, I/O
+5. **Six subsystem roles:** client, user interaction, service, control, coordinator, I/O
 6. **Message communication decisions** (sync vs. async) are formalized into architectural communication patterns during design
 7. **Information hiding classes** come in four types: data abstraction, state-machine, GUI, business logic
-8. **Inheritance** enables code sharing but breaks encapsulation — limit hierarchy depth
+8. **Inheritance** enables code sharing but breaks encapsulation: limit hierarchy depth
 9. **Abstract classes** define interfaces; subclasses provide implementations
 10. **Polymorphism + dynamic binding** enable run-time substitutability of objects with identical interfaces
 
 
 ## Related
 
-- [[Software Engineering Models and Methods Overview]] — All models and methods topics
-- [[01_Modeling_Fundamentals]] — Architecture concepts
-- [[05_Distributed_and_Component]] — Distributed architectures
-- [[06_Real_Time_and_Product_Lines]] — Real-time and quality attributes
+- [[Software Engineering Models and Methods Overview]]: All models and methods topics
+- [[01_Modeling_Fundamentals]]: Architecture concepts
+- [[05_Distributed_and_Component]]: Distributed architectures
+- [[06_Real_Time_and_Product_Lines]]: Real-time and quality attributes

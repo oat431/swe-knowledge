@@ -11,9 +11,9 @@ source: "SWEBOK v4 Chapter 11"
 
 Formal methods are techniques that apply **mathematical specification** and **verification** to software artifacts. Unlike informal or semi-formal notations (UML, natural language), formal methods enable:
 
-- **Unambiguous specification**: every property is precisely stated
-- **Mathematical proof**: correctness can be demonstrated, not just tested
-- **Early defect detection**: errors found at specification time, before coding
+- **Unambiguous specification:** every property is precisely stated
+- **Mathematical proof:** correctness can be demonstrated, not just tested
+- **Early defect detection:** errors found at specification time, before coding
 
 ### Spectrum of Formality
 
@@ -36,9 +36,9 @@ Formal methods are techniques that apply **mathematical specification** and **ve
 
 ### Cost-Benefit Considerations
 
-- **Cost**: steep learning curve, specialized tools, longer specification time
-- **Benefit**: dramatically reduced defect density in verified components; in safety-critical domains the cost of failure far exceeds the cost of formalization
-- **Pragmatic adoption**: start with lightweight formal methods, apply full formalism to the most critical subsystems
+- **Cost:** steep learning curve, specialized tools, longer specification time
+- **Benefit:** dramatically reduced defect density in verified components; in safety-critical domains the cost of failure far exceeds the cost of formalization
+- **Pragmatic adoption:** start with lightweight formal methods, apply full formalism to the most critical subsystems
 
 ---
 
@@ -83,14 +83,14 @@ Operation schema for deposit:
 
 ### B Method and Event-B
 
-**B Method**:
+**B Method:**
 - Developed by Jean-Raymond Abrial
 - Uses **Abstract Machine Notation (AMN)**
 - Supports full development: abstract specification → concrete implementation
 - Refinement through **gluing invariants**
 - Industrial tool: Atelier B (used in Paris Metro Line 14)
 
-**Event-B**:
+**Event-B:**
 - Successor to B, based on the **event-based** paradigm
 - Models systems as state machines with **guards** and **actions**
 - Rodin platform (open source) provides IDE and proving support
@@ -151,9 +151,9 @@ Specification S₀  →  S₁  →  S₂  →  ...  →  Implementation Sₙ
 ```
 
 At each step Sᵢ → Sᵢ₊₁:
-1. **Data refinement**: replace abstract data types with concrete ones (e.g., set → array)
-2. **Operation refinement**: replace abstract operations with concrete algorithms
-3. **Gluing invariant**: relates abstract and concrete states
+1. **Data refinement:** replace abstract data types with concrete ones (e.g., set → array)
+2. **Operation refinement:** replace abstract operations with concrete algorithms
+3. **Gluing invariant:** relates abstract and concrete states
 
 ### Refinement in B/Event-B
 
@@ -191,23 +191,23 @@ Model checking is an **automated** technique that exhaustively explores all reac
 
 ### Core Concepts
 
-- **State space**: all possible configurations of the system
-- **Temporal logic**: formal language for expressing properties over execution traces
-- **Counterexample**: when a property fails, the model checker produces a violating trace
+- **State space:** all possible configurations of the system
+- **Temporal logic:** formal language for expressing properties over execution traces
+- **Counterexample:** when a property fails, the model checker produces a violating trace
 
 ### Temporal Logics
 
-**CTL (Computation Tree Logic)**:
+**CTL (Computation Tree Logic):**
 - Path quantifiers: **A** (all paths), **E** (exists a path)
 - Temporal operators: **X** (next), **F** (eventually), **G** (globally), **U** (until)
 - Example: `AG(request → AF response)` -- "every request is eventually answered on all paths"
 
-**LTL (Linear Temporal Logic)**:
+**LTL (Linear Temporal Logic):**
 - No path quantifiers (implicitly universal over all paths)
 - Operators: **X**, **F**, **G**, **U**
 - Example: `G(request → F response)` -- same meaning as CTL example for safety properties
 
-**CTL***: superset combining CTL and LTL expressiveness
+**CTL*:** superset combining CTL and LTL expressiveness
 
 ### Model Checking Tools
 
@@ -223,16 +223,17 @@ Model checking is an **automated** technique that exhaustively explores all reac
 
 The main challenge: state space grows **exponentially** with the number of variables and components.
 
-**Mitigation techniques**:
-- **Symbolic model checking**: represent state sets as BDDs (Binary Decision Diagrams)
-- **Partial order reduction**: explore only independent interleavings
-- **Abstraction**: reduce model detail to shrink state space
-- **Bounded model checking**: check only paths up to length k (SAT-based)
-- **Compositional verification**: verify components separately, assume/guarantee reasoning
+**Mitigation techniques:**
+- **Symbolic model checking:** represent state sets as BDDs (Binary Decision Diagrams)
+- **Partial order reduction:** explore only independent interleavings
+- **Abstraction:** reduce model detail to shrink state space
+- **Bounded model checking:** check only paths up to length k (SAT-based)
+- **Compositional verification:** verify components separately, assume/guarantee reasoning
 
 ### Model Checking Workflow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[System Design] --> B[Build Formal Model]
     B --> C[Specify Properties in CTL/LTL]
@@ -245,6 +246,7 @@ graph LR
     H -->|Model Error| B
     I --> B
 ```
+
 
 ---
 
@@ -262,17 +264,17 @@ Theorem proving uses **logical deduction** to verify properties. Unlike model ch
 
 ### Major Proof Assistants
 
-**Isabelle/HOL**:
+**Isabelle/HOL:**
 - Higher-order logic, LCF-style (small trusted kernel)
 - Isar proof language for readable proofs
 - Large library (Archive of Formal Proofs)
 
-**Coq**:
+**Coq:**
 - Calculus of Inductive Constructions (dependent types)
 - Extraction to OCaml/Haskell for certified programs
 - CompCert verified C compiler
 
-**PVS (Prototype Verification System)**:
+**PVS (Prototype Verification System):**
 - Higher-order logic with dependent types
 - Powerful type system, decision procedures
 - Used by NASA for safety-critical verification
@@ -317,7 +319,7 @@ The Hoare triple `{P} S {Q}` states:
 {x > 0} y := x + 1 {y > 1}
 ```
 
-**Weakest precondition**: `wp(S, Q)` = the weakest P such that `{P}S{Q}` holds.
+**Weakest precondition:** `wp(S, Q)` = the weakest P such that `{P}S{Q}` holds.
 
 See [[09_Design_Contract_and_Modeling]] for full coverage of Design by Contract.
 
@@ -356,13 +358,14 @@ See [[09_Design_Contract_and_Modeling]] for full coverage of Design by Contract.
 
 **Abstraction** reduces a model's complexity by removing irrelevant details:
 
-- **Predicate abstraction**: replace data values with Boolean predicates
-- **Data abstraction**: replace concrete types with abstract domains
-- **Symmetry reduction**: exploit system symmetries to collapse equivalent states
+- **Predicate abstraction:** replace data values with Boolean predicates
+- **Data abstraction:** replace concrete types with abstract domains
+- **Symmetry reduction:** exploit system symmetries to collapse equivalent states
 
-**CEGAR (Counterexample-Guided Abstraction Refinement)**:
+**CEGAR (Counterexample-Guided Abstraction Refinement):**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Build Initial Abstraction] --> B[Model Check Abstract Model]
     B --> C{Spurious Counterexample?}
@@ -372,6 +375,7 @@ graph TD
     E -->|No| G[Refine Abstraction with New Predicates]
     G --> B
 ```
+
 
 This iterative loop (used in SLAM, BLAST, CPAchecker) makes model checking practical for real software.
 
@@ -383,11 +387,11 @@ Formal methods complement the modeling techniques in earlier notes:
 
 | Formal Technique | Complements |
 |-----------------|-------------|
-| Z/VDM schemas | [[02_Structured_Analysis_Modeling\|Structured Analysis]] data dictionaries |
-| Event-B events | [[05_Behavioral_Modeling\|Behavioral Modeling]] state machines |
-| Alloy models | [[04_Architectural_Design_Modeling\|Architectural Design]] component interfaces |
-| TLA+ actions | [[06_Formal_Methods_and_Verification\|Concurrency patterns]] |
-| Refinement chains | [[01_Introduction_to_Software_Modeling\|Model abstraction levels]] |
+| Z/VDM schemas | [[02_Use_Case_and_Static_Modeling|Structured Analysis]] data dictionaries |
+| Event-B events | [[03_Dynamic_Interaction_Modeling|Behavioral Modeling]] state machines |
+| Alloy models | [[04_Architectural_Design|Architectural Design]] component interfaces |
+| TLA+ actions | [[07_Formal_Methods|Concurrency patterns]] |
+| Refinement chains | [[01_Modeling_Fundamentals|Model abstraction levels]] |
 
 ---
 

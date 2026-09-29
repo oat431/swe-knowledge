@@ -7,18 +7,18 @@ tags:
   - software-engineering
 ---
 
-# Software Engineering Process — Overview
+# Software Engineering Process: Overview
 
 > **Source:** SWEBOK v4 Chapter 10
 > **Purpose:** Examine how software engineers organize and execute work through life cycle models, process categories, assessment, and continuous improvement.
 
 ## What Is This?
 
-Software Engineering Process covers how software development work is organized, managed, and improved. A process is a set of interrelated activities that transforms inputs into outputs. The choice of process affects everything — quality, predictability, team morale, and ultimately whether the software meets its purpose. This knowledge area provides the structural frameworks for organizing work and the mechanisms for measuring and improving those frameworks.
+Software Engineering Process covers how software development work is organized, managed, and improved. A process is a set of interrelated activities that transforms inputs into outputs. The choice of process affects everything: quality, predictability, team morale, and ultimately whether the software meets its purpose. This knowledge area provides the structural frameworks for organizing work and the mechanisms for measuring and improving those frameworks.
 
 SWEBOK Chapter 10 spans two major areas: life cycle models (waterfall, spiral, Agile, DevOps, etc.) and process infrastructure (how organizations assess, measure, and improve their processes through CMMI, SPICE, and PDCA). It organizes all processes into four categories: technical processes (building the product), technical management processes (planning and controlling), organizational project-enabling processes (infrastructure and resource management), and agreement processes (acquisition and supply).
 
-A key insight is that no ideal process exists universally — processes must be tailored by selecting appropriate standards, development strategies, stages, and processes for each project. The chapter also emphasizes that process and product assessment must be done jointly using a holistic, empirical approach, and that unrealistic estimations lead to failure.
+A key insight is that no ideal process exists universally, processes must be tailored by selecting appropriate standards, development strategies, stages, and processes for each project. The chapter also emphasizes that process and product assessment must be done jointly using a holistic, empirical approach, and that unrealistic estimations lead to failure.
 
 ## Knowledge Areas
 
@@ -30,7 +30,7 @@ A key insight is that no ideal process exists universally — processes must be 
 ### Development Life Cycle Paradigms
 - Predictive (requirements fixed early), iterative (scope early, time/cost adjusted), incremental (successive capability additions)
 - Evolutionary (continuous product change over lifetime) and continuous development (frequent releases via automation)
-- No single paradigm is best — selection depends on project characteristics and uncertainty levels
+- No single paradigm is best: selection depends on project characteristics and uncertainty levels
 
 ### Specific Life Cycle Models
 - Waterfall (sequential, document-driven), V-model (verification at each level), spiral (risk-driven, evolutionary)
@@ -70,12 +70,12 @@ A key insight is that no ideal process exists universally — processes must be 
 
 ## Relationship to Other KAs
 
-- **[[Software Engineering Management Overview|Software Engineering Management]]** — Management plans and controls; Process defines the work structure that management operates within.
-- **[[Software Engineering Models and Methods Overview|Software Engineering Models and Methods]]** — Methods are the tools; processes are the frameworks that organize their use.
-- **[[Software Quality Overview|Software Quality]]** — Quality processes (reviews, audits, testing) are embedded in the SE process. Process quality directly affects product quality.
-- **[[Software Configuration Management Overview|Software Configuration Management]]** — SCM is a foundational supporting process within every life cycle model.
-- **[[Software Engineering Operations Overview|Software Engineering Operations]]** — DevOps is both a process model and an operational practice bridging development and operations.
-- **[[Software Engineering Professional Practice Overview|Software Engineering Professional Practice]]** — Professional discipline is expressed through process adherence.
+- **[[Software Engineering Management Overview|Software Engineering Management]]:** Management plans and controls; process defines the work structure that management operates within.
+- **[[Software Engineering Models and Methods Overview|Software Engineering Models and Methods]]**, Methods are the tools; processes are the frameworks that organize their use.
+- **[[Software Quality Overview|Software Quality]]:** Quality processes (reviews, audits, testing) are embedded in the SE process. Process quality directly affects product quality.
+- **[[Software Configuration Management Overview|Software Configuration Management]]:** SCM is a foundational supporting process within every life cycle model.
+- **[[Software Engineering Operations Overview|Software Engineering Operations]]**, DevOps is both a process model and an operational practice bridging development and operations.
+- **[[../14_Software_Engineering_Professional_Practice/Professionalism of Software Engineering Overview|Software Engineering Professional Practice]]:** Professional discipline is expressed through process adherence.
 
 ---
 
@@ -87,7 +87,7 @@ A key insight is that no ideal process exists universally — processes must be 
 |---|---|---|---|---|
 | 1 | Process Fundamentals | ✅ | `05_Process_Fundamentals.md` (17 KB) | Process definition, 4 ISO 12207 categories, 5 paradigms, 6 stages |
 | 2 | Life Cycle Categories & Terminology | ✅ | `05_Process_Fundamentals.md` | Technical, technical mgmt, org project-enabling, agreement |
-| 3 | Rationale for Life Cycles | ❌ | — | Not covered |
+| 3 | Rationale for Life Cycles | ❌ | N/A | Not covered |
 | 4 | Process Models vs Life Cycle Models | ✅ | `05_Process_Fundamentals.md` | Standard guide vs project-specific activity sequence |
 | 5 | Development Life Cycle Paradigms | ✅ | `00_Agile`, `01_Lean`, `02`, `04` | Predictive, iterative, incremental, evolutionary covered |
 | 6 | Specific Life Cycle Models | ✅ | `00`, `04`, `01`, `06_Spiral_and_Unified_Process.md` (20 KB) | Waterfall ✅, V-Model ✅, Agile ✅, Spiral ✅, RUP ✅, OpenUP ✅ |

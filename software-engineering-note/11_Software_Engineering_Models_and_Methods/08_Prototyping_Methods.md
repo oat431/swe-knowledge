@@ -46,8 +46,8 @@ Requirements (unclear) → Throwaway Prototype → Clarified Requirements → Re
                            ↑ discarded
 ```
 
-**Advantages**: fast, cheap, low commitment
-**Risk**: stakeholders may resist discarding ("but it works!")
+**Advantages:** fast, cheap, low commitment
+**Risk:** stakeholders may resist discarding ("but it works!")
 
 #### Evolutionary Prototyping
 
@@ -59,8 +59,8 @@ Requirements (unclear) → Throwaway Prototype → Clarified Requirements → Re
 Prototype v1 → Feedback → v2 → Feedback → v3 → ... → Production System
 ```
 
-**Advantages**: continuous validation, faster time-to-working-prototype
-**Risk**: accumulated technical debt from early shortcuts; architecture may be suboptimal
+**Advantages:** continuous validation, faster time-to-working-prototype
+**Risk:** accumulated technical debt from early shortcuts; architecture may be suboptimal
 
 #### Incremental Prototyping
 
@@ -73,8 +73,8 @@ Prototype v1 → Feedback → v2 → Feedback → v3 → ... → Production Syst
     → Integrated System
 ```
 
-**Advantages**: manageable complexity, parallel development
-**Risk**: integration issues between independently developed increments
+**Advantages:** manageable complexity, parallel development
+**Risk:** integration issues between independently developed increments
 
 ### Comparison Table
 
@@ -104,7 +104,7 @@ Prototype v1 → Feedback → v2 → Feedback → v3 → ... → Production Syst
 └─────────────────────────────────────────────┘
 ```
 
-**Use when**: UI design is the primary concern; stakeholder buy-in needed on workflow
+**Use when:** UI design is the primary concern; stakeholder buy-in needed on workflow
 
 #### Vertical Prototyping
 
@@ -120,7 +120,7 @@ Prototype v1 → Feedback → v2 → Feedback → v3 → ... → Production Syst
 └─────────────────────────────────────────────┘
 ```
 
-**Use when**: technical risk is the primary concern; need to validate architecture
+**Use when:** technical risk is the primary concern; need to validate architecture
 
 ### 2.3 By Fidelity
 
@@ -184,16 +184,16 @@ Idea → MVP → Measure → Learn → Iterate
 
 ### Spike Solutions
 
-- **Technical spike**: time-boxed investigation to answer a specific technical question
-- **Functional spike**: explore how a feature would work
+- **Technical spike:** time-boxed investigation to answer a specific technical question
+- **Functional spike:** explore how a feature would work
 - Typically throwaway: the code is exploratory, not production-ready
 
 ```markdown
 ## Spike: Real-time Notification System
-**Question**: Can WebSocket handle 10K concurrent connections on our infrastructure?
-**Time-box**: 2 days
-**Approach**: Build minimal WebSocket server, load test with k6
-**Decision criteria**: <100ms p99 latency at 10K connections = feasible
+**Question:** Can WebSocket handle 10K concurrent connections on our infrastructure?
+**Time-box:** 2 days
+**Approach:** Build minimal WebSocket server, load test with k6
+**Decision criteria:** <100ms p99 latency at 10K connections = feasible
 ```
 
 ### Prototyping in Scrum
@@ -223,6 +223,7 @@ Idea → MVP → Measure → Learn → Iterate
 ### Evaluation Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[Define Evaluation Goals] --> B[Select Participants]
     B --> C[Prepare Prototype + Tasks]
@@ -234,13 +235,14 @@ graph LR
     G -->|Yes| H[Document Requirements/Design Decisions]
 ```
 
+
 ### Key Metrics
 
-- **Task completion rate**: percentage of users who complete key tasks
-- **Time on task**: efficiency of the design
-- **Error rate**: frequency of user mistakes
-- **System Usability Scale (SUS)**: standardized 10-item questionnaire (score 0-100)
-- **Net Promoter Score (NPS)**: likelihood to recommend
+- **Task completion rate:** percentage of users who complete key tasks
+- **Time on task:** efficiency of the design
+- **Error rate:** frequency of user mistakes
+- **System Usability Scale (SUS):** standardized 10-item questionnaire (score 0-100)
+- **Net Promoter Score (NPS):** likelihood to recommend
 
 ---
 
@@ -292,7 +294,7 @@ When a prototype works well enough, there is organizational pressure to ship it.
 - Missing error handling, security, performance optimization
 - Technical debt that compounds over years
 
-**Prevention**:
+**Prevention:**
 1. Use throwaway prototyping tools that **cannot** become production code
 2. Explicitly budget for "real" development after prototyping phase
 3. If evolutionary, schedule dedicated **hardening sprints**
@@ -302,6 +304,7 @@ When a prototype works well enough, there is organizational pressure to ship it.
 ## 8. Prototyping Process Model
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Identify Objectives] --> B[Choose Prototype Type]
     B --> C[Select Fidelity Level]
@@ -317,18 +320,19 @@ graph TD
     J --> L[Continue Iterative Development]
 ```
 
+
 ---
 
 ## 9. Relationship to Other Notes
 
 | Prototyping Aspect | Related Note |
 |-------------------|-------------|
-| Requirements exploration | [[01_Introduction_to_Software_Modeling\|Introduction to Software Modeling]] |
-| UI design validation | [[02_Structured_Analysis_Modeling\|Structured Analysis Modeling]] |
-| Behavioral prototyping | [[05_Behavioral_Modeling\|Behavioral Modeling]] |
-| Architecture validation | [[04_Architectural_Design_Modeling\|Architectural Design Modeling]] |
-| Executable specifications | [[07_Formal_Methods\|Formal Methods]] |
-| Contract-based prototyping | [[09_Design_Contract_and_Modeling\|Design by Contract and Modeling]] |
+| Requirements exploration | [[01_Modeling_Fundamentals|Introduction to Software Modeling]] |
+| UI design validation | [[02_Use_Case_and_Static_Modeling|Structured Analysis Modeling]] |
+| Behavioral prototyping | [[03_Dynamic_Interaction_Modeling|Behavioral Modeling]] |
+| Architecture validation | [[04_Architectural_Design|Architectural Design Modeling]] |
+| Executable specifications | [[07_Formal_Methods|Formal Methods]] |
+| Contract-based prototyping | [[09_Design_Contract_and_Modeling|Design by Contract and Modeling]] |
 
 ---
 

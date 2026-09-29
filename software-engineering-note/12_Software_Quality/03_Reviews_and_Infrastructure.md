@@ -19,7 +19,7 @@ tags:
   - SQA-infrastructure
 ---
 
-# 03 — Reviews & SQA Infrastructure
+# 03: Reviews & SQA Infrastructure
 
 > **Source:** Daniel Galin, *Software Quality Assurance: From Theory to Implementation*  
 > **Chapters:** 8 (Reviews), 14 (Procedures & Work Instructions), 15–19 (Infrastructure Components)  
@@ -39,7 +39,7 @@ Reviews are **structured examinations of work products** by people not directly 
 |---|-----------|-------------|
 | 1 | **Detect errors** | Find analysis/design errors and identify subjects needing corrections, changes, or completions |
 | 2 | **Identify new risks** | Discover risks likely to affect project completion |
-| 3 | **Locate deviations** | Find departures from templates, style procedures, and conventions — restoring uniformity improves communication and coordination |
+| 3 | **Locate deviations** | Find departures from templates, style procedures, and conventions ;  restoring uniformity improves communication and coordination |
 | 4 | **Approve the product** | Grant formal approval allowing the team to continue to the next development phase |
 
 ### Indirect Objectives
@@ -53,9 +53,9 @@ Reviews are **structured examinations of work products** by people not directly 
 
 ---
 
-## 2. Formal Design Reviews — DRs (Ch 8.2)
+## 2. Formal Design Reviews: DRs (Ch 8.2)
 
-**Formal Design Reviews** (also called "design reviews", "DRs", or "formal technical reviews — FTR") are the **only reviews with the authority to approve** a design product. Without approval, the development team cannot proceed to the next phase.
+**Formal Design Reviews** (also called "design reviews", "DRs", or "formal technical reviews (FTR)") are the **only reviews with the authority to approve** a design product. Without approval, the development team cannot proceed to the next phase.
 
 ### 2.1 Common Formal Design Reviews
 
@@ -108,15 +108,15 @@ Suitable candidates: department manager, chief software engineer, leader of anot
 **Agenda:**
 1. Short presentation of the design document
 2. Comments by review team members
-3. Verification and validation — discussing each comment to determine required actions
+3. Verification and validation: discussing each comment to determine required actions
 4. **Decision** about the design product
 
 **Three possible decisions:**
-- **Full approval** — immediate continuation to next phase (possibly with minor corrections)
-- **Partial approval** — continuation for some parts; major action items required for remaining parts
-- **Denial of approval** — repeat the DR (applied for multiple major/critical defects)
+- **Full approval:** immediate continuation to next phase (possibly with minor corrections)
+- **Partial approval:** continuation for some parts; major action items required for remaining parts
+- **Denial of approval:** repeat the DR (applied for multiple major/critical defects)
 
-> ⚠️ **Anti-pattern:** The "comprehensive presentation" — an excessively long presentation that exhausts the team and leaves no time for discussion.
+> ⚠️ **Anti-pattern:** The "comprehensive presentation", an excessively long presentation that exhausts the team and leaves no time for discussion.
 
 ### 2.5 Post-Review Activities
 
@@ -153,9 +153,9 @@ The appointed person verifies that each action item has been satisfactorily acco
 
 ---
 
-## 3. Peer Reviews — Inspections & Walkthroughs (Ch 8.3)
+## 3. Peer Reviews: Inspections & Walkthroughs (Ch 8.3)
 
-Peer reviews differ from DRs in **participants** (peers, not superiors) and **authority** (cannot approve design documents — focus on error detection and standards compliance).
+Peer reviews differ from DRs in **participants** (peers, not superiors) and **authority** (cannot approve design documents; focus on error detection and standards compliance).
 
 Despite the rise of CASE tools, empirical research consistently shows peer reviews are **highly efficient and effective**.
 
@@ -184,14 +184,14 @@ Must be:
 #### Specialized Professionals
 
 **Inspection team:**
-- **Designer** — the systems analyst responsible for the design
-- **Coder/Implementer** — detects defects leading to coding errors
-- **Tester** — identifies design errors usually found during testing
+- **Designer:** the systems analyst responsible for the design
+- **Coder/Implementer:** detects defects leading to coding errors
+- **Tester:** identifies design errors usually found during testing
 
 **Walkthrough team:**
-- **Standards enforcer** — locates deviations from standards and procedures
-- **Maintenance expert** — focuses on maintainability, flexibility, testability, and documentation completeness
-- **User representative** — examines from the user/consumer perspective
+- **Standards enforcer:** locates deviations from standards and procedures
+- **Maintenance expert:** focuses on maintainability, flexibility, testability, and documentation completeness
+- **User representative:** examines from the user/consumer perspective
 
 #### Team Assignments
 - **Presenter:** In inspections, usually NOT the author (often the coder). In walkthroughs, typically the author.
@@ -208,17 +208,17 @@ Must be:
 
 | Severity | Description |
 |----------|-------------|
-| **5 — Critical** | Prevents essential capabilities; jeopardizes safety/security |
+| **5 ;  Critical** | Prevents essential capabilities; jeopardizes safety/security |
 | **4** | Adversely affects essential capabilities; no work-around known |
 | **3** | Adversely affects essential capabilities; work-around known |
 | **2** | User/operator inconvenience; does not affect essential capabilities |
-| **1 — Minor** | Any other effect |
+| **1 ;  Minor** | Any other effect |
 
 ### 3.5 Session Documentation
 
 **Inspection** (two documents):
-1. **Inspection Session Findings Report** — immediate documentation of identified errors for correction and follow-up
-2. **Inspection Session Summary Report** — compiled after session series; summarizes findings, resources invested, quality/efficiency metrics; serves as input for CAB analysis
+1. **Inspection Session Findings Report:** immediate documentation of identified errors for correction and follow-up
+2. **Inspection Session Summary Report:** compiled after session series; summarizes findings, resources invested, quality/efficiency metrics; serves as input for CAB analysis
 
 **Walkthrough:**
 - Walkthrough Session Findings Report only
@@ -237,7 +237,7 @@ Must be:
 | Defect detection density | Average defects per page of design document |
 | Internal effectiveness | % of defects detected by peer review out of total defects detected |
 
-**Empirical findings (Litton Project — Madachy):**
+**Empirical findings (Litton Project; Madachy):**
 - Design inspections: 2.25 defects/page (requirements), 1.45 defects/page (high-level design)
 - Code inspections: 1.42 defects/KLOC
 - Internal effectiveness improved dramatically at Fujitsu (1977–1982): defects per 1000 lines of maintained code dropped from 0.19 to 0.02 as inspection share increased from 15% to 30%
@@ -265,9 +265,9 @@ Coverage of only **5–15%** of document pages can still significantly contribut
 | **Review leader** | Chief software engineer or senior staff | Trained moderator (peer) | Coordinator (peer) |
 | **Participants** | Top-level staff + customer representatives | Peers | Peers |
 | **Project leader participation** | Yes | Yes | Yes (usually as initiator) |
-| **Specialized professionals** | — | Designer, coder/implementer, tester | Standards enforcer, maintenance expert, user representative |
+| **Specialized professionals** | N/A | Designer, coder/implementer, tester | Standards enforcer, maintenance expert, user representative |
 | **Overview meeting** | No | Yes | Yes |
-| **Prep thoroughness** | Yes — thorough | Yes — thorough | Yes — brief |
+| **Prep thoroughness** | Yes ;  thorough | Yes; thorough | Yes ;  brief |
 | **Follow-up of corrections** | Yes | Yes | No |
 | **Formal training** | No | Yes | No |
 | **Use of checklists** | No (informally) | Yes | No |
@@ -314,7 +314,7 @@ They apply the organization's **accumulated know-how, experience, and expertise*
 
 ### 6.3 Procedures
 
-Procedures supply all details needed to carry out a task according to the **prescribed method**. They resolve the **Five W's**:
+Procedures supply all details needed to carry out a task according to the **prescribed method**. They resolve the **Five W's:**
 
 | Question | Issue |
 |----------|-------|
@@ -336,7 +336,7 @@ Procedures supply all details needed to carry out a task according to the **pres
 9. List of appendices
 10. Appendices
 
-> **Tip:** Use appendices for documentation forms, reporting forms, and tables/lists that change frequently — this allows updates without modifying the procedure itself.
+> **Tip:** Use appendices for documentation forms, reporting forms, and tables/lists that change frequently; this allows updates without modifying the procedure itself.
 
 ### 6.4 The SQA Procedures Manual
 
@@ -363,7 +363,7 @@ Work instructions **adapt procedures** to the requirements of a specific project
 ### 6.6 Preparation, Implementation, and Updating
 
 **Preparation:**
-- Start with the "procedure of procedures" — defines the conceptual and organizational framework
+- Start with the "procedure of procedures": defines the conceptual and organizational framework
 - Form an ad hoc committee of professionals from involved units, SQA members, and topic experts
 - Alternative: hire an external consultant (adds expertise, reduces burden; risk: reduced applicability due to organization-specific characteristics)
 
@@ -377,7 +377,7 @@ Work instructions **adapt procedures** to the requirements of a specific project
 
 ---
 
-## 7. Supporting Quality Devices — Templates & Checklists (Ch 15)
+## 7. Supporting Quality Devices: Templates & Checklists (Ch 15)
 
 > *Note: Chapter 15 is not directly present in the source file; this section is compiled from cross-references in Chapters 8–14.*
 
@@ -395,7 +395,7 @@ Checklists are the **primary quality device** supporting review completeness:
 | Context | Application |
 |---------|-------------|
 | **Design Reviews** | General DR checklist + specialized checklists for each type of design document (SRS, DDR, etc.) |
-| **Inspections** | Specialized checklists for each document type, coding language, and tool — **periodically updated** |
+| **Inspections** | Specialized checklists for each document type, coding language, and tool ;  **periodically updated** |
 | **Corrective Maintenance** | Checklists for locating causes of software failure; checklists for preparing mini-testing procedure documents |
 
 > Checklists are the hallmark distinguishing **inspections** from walkthroughs (inspections require formal checklist usage).
@@ -412,7 +412,7 @@ Templates standardize documentation structure. Common examples:
 
 ### 7.4 Defect Frequency Tables
 
-Developed from past inspection findings, these tables direct inspectors to potential **"defect concentration areas"** — sections of documents or code that historically contain the most defects.
+Developed from past inspection findings, these tables direct inspectors to potential **"defect concentration areas"**, sections of documents or code that historically contain the most defects.
 
 ---
 
@@ -425,7 +425,7 @@ Developed from past inspection findings, these tables direct inspectors to poten
 | Program | Purpose |
 |---------|---------|
 | **DR training** | Train senior professionals in technical and review process issues; create a reservoir of qualified DR team members |
-| **Inspection moderator training** | Formal training required for inspection moderators — ensures competent session leadership |
+| **Inspection moderator training** | Formal training required for inspection moderators ;  ensures competent session leadership |
 | **Inspection team training** | Train professionals in inspection process issues so they can serve as inspection leaders or team members |
 | **Maintenance team training** | Ensure continuous service delivery; prepare for peak-load periods; train replacement personnel |
 
@@ -435,7 +435,7 @@ Developed from past inspection findings, these tables direct inspectors to poten
 
 - **Corrective maintenance professionals** often work alone, under heavy time pressure, and at customer sites with limited professional support
 - Certification ensures minimum competency for independent task performance
-- Required in subcontractor contracts — records documenting professional certification must be available for contractor review
+- Required in subcontractor contracts: records documenting professional certification must be available for contractor review
 
 ### 8.3 Organizational Impact
 
@@ -445,13 +445,13 @@ Developed from past inspection findings, these tables direct inspectors to poten
 
 ---
 
-## 9. Corrective and Preventive Actions — CAPA (Ch 17)
+## 9. Corrective and Preventive Actions: CAPA (Ch 17)
 
 > *Note: Chapter 17 is not directly present in the source file; this section is compiled from cross-references in Chapters 8–14.*
 
 ### 9.1 Concept
 
-**Corrective actions** address the **root causes** of detected defects — they go beyond fixing the specific error to improving the development/maintenance processes that produced it.
+**Corrective actions** address the **root causes** of detected defects; they go beyond fixing the specific error to improving the development/maintenance processes that produced it.
 
 **Preventive actions** proactively identify potential problems before they occur, based on analysis of past defect patterns.
 
@@ -512,9 +512,9 @@ Configuration management ensures:
 ### 10.3 Broader Role
 
 Configuration management serves not only maintenance but also:
-- Development — tracking versions during iterative development
-- Subcontractor management — knowing which version each supplier is working with
-- Customer support — accurate records of each customer's installed configuration
+- Development: tracking versions during iterative development
+- Subcontractor management: knowing which version each supplier is working with
+- Customer support: accurate records of each customer's installed configuration
 
 ---
 
@@ -576,13 +576,13 @@ Galin's infrastructure components (Ch 14–19) form the **foundation** upon whic
 └─────────────────────────────────────────────────────┘
 ```
 
-These components are applied **throughout the entire software life cycle** — from development through maintenance — and their consistent application is what distinguishes a mature SQA organization from an ad hoc one.
+These components are applied **throughout the entire software life cycle** (from development through maintenance) and their consistent application is what distinguishes a mature SQA organization from an ad hoc one.
 
 ---
 
 ## Related Notes
 
-- [[01_Software_Quality_Overview|Software Quality Overview]] — SQA fundamentals and factor models
-- [[02_Pre_Project_and_Planning|Pre-Project & Planning]] — Contract reviews, development plans, quality plans
-- [[04_Standards_and_Organization|Standards & Organization]] — SQA standards (ISO 9000-3, IEEE) and organizational structures
-- [[05_Metrics_and_Costs|Metrics & Costs]] — Quality metrics and cost of software quality
+- [[Software Quality Overview|Software Quality Overview]]: SQA fundamentals and factor models
+- [[02_Pre_Project_and_Planning|Pre-Project & Planning]]: Contract reviews, development plans, quality plans
+- [[05_Standards_and_Organization|Standards & Organization]]: SQA standards (ISO 9000-3, IEEE) and organizational structures
+- [[04_Metrics_and_Quality_Costs|Metrics & Costs]]: Quality metrics and cost of software quality

@@ -16,9 +16,9 @@ source: "SWEBOK v4 Ch12"
 swebok_reference: "KA 12.1"
 up: "[[12_Software_Quality]]"
 related:
-  - "[[01_Software_Quality_Concepts]]"
-  - "[[02_Software_Quality_Process]]"
-  - "[[05_Software_Testing]]"
+  - "[[01_Quality_Fundamentals|Software Quality Concepts]]"
+  - "[[02_Pre_Project_and_Planning|Software Quality Process]]"
+  - "[[../05_Software_Testing/Software Testing Overview|Software Testing]]"
 ---
 
 # Dependability and Safety
@@ -33,6 +33,7 @@ Software dependability encompasses the ability of a system to deliver services t
 ## Dependability Attributes
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     D[Dependability] --> AV[Availability]
     D --> R[Reliability]
@@ -41,6 +42,7 @@ graph TD
     D --> SEC[Security]
     D --> T[Timeliness]
 ```
+
 
 ### Attribute Definitions
 
@@ -56,6 +58,7 @@ graph TD
 ### Interrelationships
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     R[Reliability] -->|Higher reliability| AV[Availability]
     M[Maintainability] -->|Faster repair| AV
@@ -66,6 +69,7 @@ graph LR
     R -->|Does not imply| S
 ```
 
+
 > [!warning] Safety vs Reliability
 > A system can be reliable but unsafe (consistently producing wrong but consistent outputs that cause harm). Conversely, a system can be safe but unreliable (failing frequently but always failing to a safe state). These are independent attributes.
 
@@ -74,6 +78,7 @@ graph LR
 Four complementary strategies for achieving dependability:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     D[Dependability Means] --> FP[Fault Prevention]
     D --> FT[Fault Tolerance]
@@ -84,6 +89,7 @@ graph TD
     FR -->|Reduce number/severity of faults| D
     FF -->|Estimate present/predicted faults| D
 ```
+
 
 ### Fault Prevention
 
@@ -124,6 +130,7 @@ Delivering correct service despite the presence of faults.
 **N-version programming:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     I[Input] --> V1[Version 1<br/>Team A]
     I --> V2[Version 2<br/>Team B]
@@ -133,6 +140,7 @@ graph TD
     V3 --> V
     V --> O[Output<br/>Majority Decision]
 ```
+
 
 ### Fault Removal
 
@@ -195,6 +203,7 @@ Estimating the present number, future incidence, and likely consequences of faul
 **DO-178C Process Activities:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     P[Planning] --> RH[Requirements<br/>High-Level]
     RH --> RL[Requirements<br/>Low-Level]
@@ -206,6 +215,7 @@ graph LR
     QA --> CI2[Certification<br/>Liaison]
 ```
 
+
 **Modified Condition/Decision Coverage (MC/DC):**
 
 | Coverage Criterion | Requirement | Example |
@@ -213,7 +223,7 @@ graph LR
 | Statement coverage | Every statement executed at least once | Simplest; DAL C |
 | Decision coverage | Every decision outcome (T/F) exercised | DAL B |
 | Condition coverage | Every boolean condition outcome exercised | Intermediate |
-| MC/DC | Every condition independently affects decision outcome | DAL A; Gold standard for avionics |
+| MC/DC | Every condition independently affects decision outcome | DAL A; gold standard for avionics |
 
 ### IEC 62304 (Medical Devices)
 
@@ -267,9 +277,9 @@ graph LR
 | E3 (Medium) | ASIL A | ASIL B | ASIL C |
 | E4 (High) | ASIL B | ASIL C | ASIL D |
 
-- **QM**: Quality Management (no specific safety requirements)
-- **ASIL A**: Lowest automotive safety integrity level
-- **ASIL D**: Highest automotive safety integrity level
+- **QM:** Quality Management (no specific safety requirements)
+- **ASIL A:** Lowest automotive safety integrity level
+- **ASIL D:** Highest automotive safety integrity level
 
 **ASIL Process Requirements:**
 
@@ -323,6 +333,7 @@ FMEA is a systematic, bottom-up inductive analysis technique.
 **Process:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Define System Scope] --> B[Identify Components/Functions]
     B --> C[Identify Failure Modes]
@@ -333,6 +344,7 @@ graph TD
     G --> H[Calculate RPN = S x O x D]
     H --> I[Prioritize and Mitigate]
 ```
+
 
 **FMEA Worksheet:**
 
@@ -375,6 +387,7 @@ FTA is a top-down, deductive analysis technique that traces failure events back 
 **Example Fault Tree:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     TOP[Door Lock Failure<br/>Locked out of system] --> OR1{OR}
     OR1 --> E1[Keypad Failure]
@@ -387,6 +400,7 @@ graph TD
     E4 --> B3[Grid Power Outage]
     E4 --> B4[Internal Fuse Blown]
 ```
+
 
 **FTA vs FMEA Comparison:**
 
@@ -423,6 +437,7 @@ An **assurance case** generalizes this to any critical property (security, relia
 **GSN Example:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     G1[System X is acceptably safe] --> S1[Strategy: Argue by decomposition]
     S1 --> G2[Hardware is safe]
@@ -437,6 +452,7 @@ graph TD
     G2 -.- C1[In context of: Operating environment spec]
     G3 -.- J1[Justification: DO-178C DAL A process followed]
 ```
+
 
 **Safety case standards:**
 
@@ -506,6 +522,7 @@ graph TD
 ## Dependability Engineering Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph Design Phase
         HA[Hazard Analysis] --> SR[Safety Requirements]
@@ -527,6 +544,7 @@ graph LR
         SC --> CE[Certification Evidence]
     end
 ```
+
 
 ## Practical Application: Choosing the Right Approach
 

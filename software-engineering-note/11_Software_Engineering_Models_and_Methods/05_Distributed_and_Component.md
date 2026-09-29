@@ -10,7 +10,7 @@ source: "Gomaa, Software Modeling and Design, Chapters 15–17"
 created: 2026-07-21
 ---
 
-# 05 — Distributed and Component-Based Architectures
+# 05: Distributed and Component-Based Architectures
 
 **Covers:** Gomaa Ch 15 (Client/Server), Ch 16 (Service-Oriented), Ch 17 (Component-Based)
 
@@ -35,17 +35,17 @@ Key distinction: a server may host multiple services; a large service may span m
 #### Multiple Client / Single Service (Client/Server Pattern)
 - Simplest and most common client/server architecture
 - Several clients request a service; one service fulfills client requests
-- Example: Banking System — multiple ATM Clients communicating with one Banking Service
+- Example: Banking System: multiple ATM Clients communicating with one Banking Service
 - Clients are **tightly coupled** to the service (send message, wait for response)
 
 #### Multiple Client / Multiple Service
 - A client may communicate with several services
 - Services may communicate with each other
-- Example: Banking Federation — ATM clients from multiple banks accessing multiple bank services over a WAN
+- Example: Banking Federation: ATM clients from multiple banks accessing multiple bank services over a WAN
 
 #### Multi-tier Client/Service
 - An intermediate tier acts as **both client and service**
-- Example: Three-tier Banking System — ATM Client → Banking Service → Database Service
+- Example: Three-tier Banking System: ATM Client → Banking Service → Database Service
 - Viewed as layered architecture: client is at a higher layer (depends on / uses the service)
 
 ---
@@ -88,8 +88,8 @@ Middleware sits above heterogeneous OS to provide a uniform platform for distrib
 | **Jini** | Service discovery for Java |
 
 #### RMI Architecture
-- **Client Proxy**: same interface as service object; hides communication details from client; marshals parameters into messages
-- **Service Proxy**: unmarshals messages; calls actual service method; marshals response
+- **Client Proxy:** same interface as service object; hides communication details from client; marshals parameters into messages
+- **Service Proxy:** unmarshals messages; calls actual service method; marshals response
 - Net effect: remote method invocation appears as local method invocation to both sides
 
 ---
@@ -100,9 +100,9 @@ Middleware sits above heterogeneous OS to provide a uniform platform for distrib
 - Processes client requests one at a time (completes one before starting next)
 - Designed as one concurrent object with a message queue
 - Uses **Layers of Abstraction** pattern:
-  - **Coordinator** (façade) — provides uniform client interface
-  - **Business Logic** objects — encapsulate business rules
-  - **Database Wrapper** objects — encapsulate data access
+  - **Coordinator** (façade): provides uniform client interface
+  - **Business Logic** objects: encapsulate business rules
+  - **Database Wrapper** objects: encapsulate data access
 
 #### Concurrent Service
 - Shared among several concurrent objects for higher throughput
@@ -140,9 +140,9 @@ Wrapper classes hide how data is accessed from a database. They provide an **obj
 - Notation: `TableName(primaryKey, attribute1, attribute2)`
 
 #### Foreign Keys (Associations)
-- **One-to-one / Zero-or-one**: Primary key of either table as foreign key in the other; for zero-or-one, put FK in the "optional" table to avoid nulls
-- **One-to-many**: FK is in the "many" table
-- **Many-to-many**: Mapped to an **association table** with concatenated primary key from both participating tables
+- **One-to-one / Zero-or-one:** Primary key of either table as foreign key in the other; for zero-or-one, put FK in the "optional" table to avoid nulls
+- **One-to-many:** FK is in the "many" table
+- **Many-to-many:** Mapped to an **association table** with concatenated primary key from both participating tables
 
 #### Association Classes → Association Tables
 - Association class becomes its own table
@@ -154,7 +154,7 @@ Wrapper classes hide how data is accessed from a database. They provide an **obj
 - Part classes → Each gets its own table
 - Whole's primary key becomes: the part table's primary key (one-to-one), part of concatenated key (one-to-many), or a foreign key in the part table
 
-#### Generalization/Specialization — Three Mapping Strategies
+#### Generalization/Specialization: Three Mapping Strategies
 
 | Strategy | Approach | When to Use |
 |----------|----------|-------------|
@@ -220,7 +220,7 @@ Brokers act as intermediaries between clients and services, providing **location
 
 ### 16.4 Transaction Patterns
 
-A **transaction** is a request consisting of two or more operations that perform a single logical function — must complete entirely or not at all.
+A **transaction** is a request consisting of two or more operations that perform a single logical function; must complete entirely or not at all.
 
 #### ACID Properties
 
@@ -235,24 +235,24 @@ A **transaction** is a request consisting of two or more operations that perform
 Used for atomic transactions in distributed systems.
 
 - **Commit Coordinator** orchestrates the protocol
-- **Phase 1 (Prepare)**:
+- **Phase 1 (Prepare):**
   - Coordinator sends `prepareToCommit` to each participant
   - Each participant locks the record, performs the update, sends `readyToCommit`
   - If any participant cannot perform → sends `refuseToCommit`
-- **Phase 2 (Commit/Abort)**:
+- **Phase 2 (Commit/Abort):**
   - If all ready → coordinator sends `commit`; each makes update permanent, unlocks, sends `commitCompleted`
   - If any refused → coordinator sends `abort` to all; participants roll back
 
 #### Compound Transaction Pattern
 - Breaks a large transaction into smaller **flat atomic transactions**
 - Each can be performed and rolled back independently
-- Example: Travel agent — airline, hotel, car rental as separate transactions
+- Example: Travel agent: airline, hotel, car rental as separate transactions
 
 #### Long-Living Transaction Pattern
 - Splits a long transaction (with human in the loop) into two or more separate transactions
 - Human decision-making occurs between successive transaction pairs
 - Avoids locking records for extended periods
-- Example: Airline reservation — query (display seats) → reserve (but must recheck availability)
+- Example: Airline reservation: query (display seats) → reserve (but must recheck availability)
 
 ---
 
@@ -265,7 +265,7 @@ Client and service agents negotiate cooperatively:
 | **Client Agent** | Propose a service (negotiable), Request a service (non-negotiable), Reject an offer |
 | **Service Agent** | Offer a counter-proposal, Reject client request/proposal, Accept client request/proposal |
 
-**Example workflow**: Client agent proposes trip constraints → Service agent queries airlines → Service agent offers best matches → Client agent selects/requests → Reservation confirmed or rejected → Alternative flights offered
+**Example workflow:** Client agent proposes trip constraints → Service agent queries airlines → Service agent offers best matches → Client agent selects/requests → Reservation confirmed or rejected → Alternative flights offered
 
 ---
 
@@ -276,11 +276,11 @@ Client and service agents negotiate cooperatively:
 - Operations are defined on a **provided interface** (e.g., `IInventoryService`)
 - Service has a **provided port** that supports the provided interface
 
-**Example — Inventory Service Interface (`IInventoryService`):**
+**Example: Inventory Service Interface (`IInventoryService`):**
 - `checkInventory(in itemId, in amount, out inventoryStatus)`
 - `update(in itemId, in amount)`
-- `reserveInventory(in itemId, in amount, out inventoryStatus)` — Phase 1 of 2PC
-- `commitInventory(in itemId, in amount, out inventoryStatus)` — Phase 2 of 2PC
+- `reserveInventory(in itemId, in amount, out inventoryStatus)`: Phase 1 of 2PC
+- `commitInventory(in itemId, in amount, out inventoryStatus)`: Phase 2 of 2PC
 - `abortInventory(in itemId, in amount, out inventoryStatus)`
 
 ---
@@ -292,13 +292,13 @@ Client and service agents negotiate cooperatively:
 | **Orchestration** | Centrally controlled workflow coordination logic; sequences multiple participant services |
 | **Choreography** | Distributed coordination among services; used for cross-organization collaboration |
 
-**Goal**: Keep services **stateless** for reusability. State information is stored in records (e.g., database). Sequencing logic is encapsulated in **coordinator objects**.
+**Goal:** Keep services **stateless** for reusability. State information is stored in records (e.g., database). Sequencing logic is encapsulated in **coordinator objects**.
 
 ---
 
 ### 16.8 Service Reuse
 
-- Services should have **only provided interfaces** (no required interfaces) — unless using asynchronous communication with callback
+- Services should have **only provided interfaces** (no required interfaces), unless using asynchronous communication with callback
 - This makes services **self-contained** and more reusable
 - New coordinator objects are created to control and sequence the desired workflow for each new application
 - Calling components must follow any constraints on operation invocation order
@@ -309,7 +309,7 @@ Client and service agents negotiate cooperatively:
 
 ### 17.1 Core Concepts
 
-A **distributed component** is a concurrent object with a well-defined interface — a logical unit of distribution and deployment.
+A **distributed component** is a concurrent object with a well-defined interface, a logical unit of distribution and deployment.
 
 | Concept | Description |
 |---------|-------------|
@@ -317,17 +317,17 @@ A **distributed component** is a concurrent object with a well-defined interface
 | **Composite Component** | Composed of other part components |
 | **Configurable Component** | Can be deployed to different nodes at deployment time (not design time) |
 
-**Key Goal**: Design a concurrent message-based architecture that is **highly configurable** — the same architecture can be deployed to many different distributed configurations.
+**Key Goal:** Design a concurrent message-based architecture that is **highly configurable**, the same architecture can be deployed to many different distributed configurations.
 
-**Critical Rule**: All communication between components must be restricted to **message communication** (since components may reside on separate nodes).
+**Critical Rule:** All communication between components must be restricted to **message communication** (since components may reside on separate nodes).
 
 ---
 
 ### 17.2 Design Steps
 
-1. **Design distributed software architecture** — Structure into constituent components using subsystem structuring criteria (Ch 13.8) + component structuring criteria (Section 17.5); define interfaces
-2. **Design constituent components** — Internal design of each simple component using sequential OO design methods (Ch 14)
-3. **Deploy the application** — Define instances, interconnect, map to physical nodes
+1. **Design distributed software architecture:** Structure into constituent components using subsystem structuring criteria (Ch 13.8) + component structuring criteria (Section 17.5); define interfaces
+2. **Design constituent components:** Internal design of each simple component using sequential OO design methods (Ch 14)
+3. **Deploy the application:** Define instances, interconnect, map to physical nodes
 
 ---
 
@@ -335,7 +335,7 @@ A **distributed component** is a concurrent object with a well-defined interface
 
 - A **composite subsystem** is a component; objects within must reside at the same location
 - Objects in different geographical locations are never in the same composite subsystem
-- The composite component adds no functionality — functionality comes entirely from its **part components**
+- The composite component adds no functionality: functionality comes entirely from its **part components**
 - Incoming messages are passed through to the appropriate internal component; outgoing messages are passed to the external destination
 - Usually depicted with **UML active class notation** (concurrent components)
 
@@ -348,19 +348,19 @@ A **distributed component** is a concurrent object with a well-defined interface
 - A component can provide **multiple interfaces** for different client needs
 
 #### Provided and Required Interfaces
-- **Provided Interface**: operations a component must fulfill (what others can call on it)
-- **Required Interface**: operations other components provide that this component needs
+- **Provided Interface:** operations a component must fulfill (what others can call on it)
+- **Required Interface:** operations other components provide that this component needs
 
 #### Ports
 - A component has one or more **ports** through which it interacts with others
-- **Provided Port (P*)**: supports a provided interface
-- **Required Port (R*)**: supports a required interface
-- **Complex Port**: supports both provided and required interfaces
+- **Provided Port (P*):** supports a provided interface
+- **Required Port (R*):** supports a required interface
+- **Complex Port:** supports both provided and required interfaces
 
 #### Connectors
 - Join the required port of one component to the provided port of another
-- Ports must be **compatible** — required interface operations must match the provided interface operations
-- **Delegation Connector**: connects an outer port of a composite component to an inner port of a part component (messages forwarded through)
+- Ports must be **compatible:** required interface operations must match the provided interface operations
+- **Delegation Connector:** connects an outer port of a composite component to an inner port of a part component (messages forwarded through)
 
 #### Composite Structure Diagrams
 - UML structured classes with ports, interfaces, and connectors
@@ -394,9 +394,9 @@ I/O component types: input, output, I/O (both), network interface, system interf
 - Sender (**publisher**) does not need to know individual members
 - Components can be members of multiple groups; can subscribe/unsubscribe
 - Popular on the Internet
-- Example: Operator Interaction components subscribe to alarm types; Alarm Handling Service multicasts alarm notifications to subscribers only
+- Example: Operator Interaction components subscribe to alarm types; alarm Handling Service multicasts alarm notifications to subscribers only
 
-**Variation (Single Subscriber)**: Useful for peer-to-peer — consumer subscribes to producer; reverses dependency (consumer depends on producer, not vice versa).
+**Variation (Single Subscriber):** Useful for peer-to-peer: consumer subscribes to producer; reverses dependency (consumer depends on producer, not vice versa).
 
 #### Concurrent Service with Subscription/Notification
 - News Archive Service example: multiple concurrent services (News Archive, News Update, Subscription, Notification)
@@ -408,9 +408,9 @@ I/O component types: input, output, I/O (both), network interface, system interf
 ### 17.7 Application Deployment
 
 #### Deployment Activities
-1. **Define component instances** — For each multi-instance component, define each instance, its unique name, and parameterized values (e.g., sensor names, limits, alarm names)
-2. **Interconnect component instances** — Wire instances according to the application architecture
-3. **Map instances to physical nodes** — Assignment can vary: components can run on separate nodes or co-located on the same node; depicted on a **deployment diagram**
+1. **Define component instances:** For each multi-instance component, define each instance, its unique name, and parameterized values (e.g., sensor names, limits, alarm names)
+2. **Interconnect component instances:** Wire instances according to the application architecture
+3. **Map instances to physical nodes:** Assignment can vary: components can run on separate nodes or co-located on the same node; depicted on a **deployment diagram**
 
 #### Deployment Diagram Example (Emergency Monitoring System)
 | Component Instance | Deployment Strategy | Rationale |
@@ -438,6 +438,6 @@ I/O component types: input, output, I/O (both), network interface, system interf
 
 ## Related
 
-- [[Software Engineering Models and Methods Overview]] — All models and methods topics
-- [[04_Architectural_Design]] — OO architecture design
-- [[06_Real_Time_and_Product_Lines]] — Real-time systems
+- [[Software Engineering Models and Methods Overview]]: All models and methods topics
+- [[04_Architectural_Design]]: OO architecture design
+- [[06_Real_Time_and_Product_Lines]]: Real-time systems

@@ -5,11 +5,11 @@ tags:
   - quality-planning
   - vv
   - software-quality
-source: "Galin, SQA — Chapters 5–6"
+source: "Galin, SQA, Chapters 5–6"
 created: 2026-07-21
 ---
 
-# 02 — Pre-Project and Planning: Contract Review & Development/Quality Plans
+# 02: Pre-Project and Planning: Contract Review & Development/Quality Plans
 
 ## Overview
 
@@ -20,11 +20,11 @@ Before a single line of code is written, SQA begins with preventive activities d
 | **Ch 5** | Contract Review | Validated proposal, error-free contract |
 | **Ch 6** | Development & Quality Plans | Detailed project roadmap, SQA activity schedule |
 
-The core principle: **A bad contract yields low-quality software.** SQA starts before development — at the proposal and contract stage.
+The core principle: **A bad contract yields low-quality software.** SQA starts before development, at the proposal and contract stage.
 
 ---
 
-## Chapter 5 — Contract Review
+## Chapter 5: Contract Review
 
 ### 5.1 The Problem: The CFV Case
 
@@ -56,7 +56,7 @@ A 10-month project celebrated as "on schedule" actually lost **$90,000** because
 
 ### 5.3 Contract Review Objectives
 
-#### Proposal Draft Review — 9 Objectives
+#### Proposal Draft Review: 9 Objectives
 
 | # | Objective | Key Concern |
 |---|-----------|-------------|
@@ -70,7 +70,7 @@ A 10-month project celebrated as "on schedule" actually lost **$90,000** because
 | 8 | **Partner & subcontractor participation defined** | QA issues, payment schedules, profit distribution, team cooperation |
 | 9 | **Proprietary rights defined & protected** | Reused software rights, future reuse rights, data file ownership, security |
 
-#### Contract Draft Review — 3 Objectives
+#### Contract Draft Review: 3 Objectives
 
 | # | Objective |
 |---|-----------|
@@ -97,9 +97,9 @@ A 10-month project celebrated as "on schedule" actually lost **$90,000** because
 
 #### Difficulties in Major Contract Reviews
 
-1. **Time pressure** — reviews must complete in days, not weeks
-2. **Substantial professional effort required** — deep expertise needed
-3. **Reviewers are busy** — senior staff already committed to other tasks
+1. **Time pressure:** reviews must complete in days, not weeks
+2. **Substantial professional effort required:** deep expertise needed
+3. **Reviewers are busy:** senior staff already committed to other tasks
 
 #### Recommended Avenues for Major Reviews
 
@@ -145,7 +145,7 @@ Checklists (Appendices 5A & 5B in Galin) organize review subjects by objective:
 
 ---
 
-## Chapter 6 — Development and Quality Plans
+## Chapter 6: Development and Quality Plans
 
 ### 6.1 Why New Plans Are Needed (Even After Contract Review)
 
@@ -236,14 +236,14 @@ DEVELOPMENT PLAN
 | 10 | Straining computer science capabilities | Resources/Performance |
 
 **Risk Management Actions (RMAs)** serve three purposes:
-- **Prevention** — stop the risk from materializing
-- **Early identification** — detect risk before it causes damage
-- **Resolution** — fix the risk once it appears
+- **Prevention:** stop the risk from materializing
+- **Early identification:** detect risk before it causes damage
+- **Resolution:** fix the risk once it appears
 
 RMAs are grouped into:
-- **Internal RMAs** — within the organization (training, prototyping, simulation, early scheduling, etc.)
-- **Subcontracting RMAs** — comprehensive contracts, participation in subcontractor QA, professional loans
-- **Customer RMAs** — thorough customer contracts, renegotiation of requirements/schedules
+- **Internal RMAs:** within the organization (training, prototyping, simulation, early scheduling, etc.)
+- **Subcontracting RMAs:** comprehensive contracts, participation in subcontractor QA, professional loans
+- **Customer RMAs:** thorough customer contracts, renegotiation of requirements/schedules
 
 **Risk Management Process:**
 ```
@@ -315,18 +315,18 @@ The "Super-Monster 2000" case: A computer game project skipped planning, missed 
 
 ---
 
-## Chapter 7 — Integrating Quality Activities in the Project Life Cycle
+## Chapter 7: Integrating Quality Activities in the Project Life Cycle
 
-> **Note:** The source file focuses primarily on Chapters 5–6 content. Chapter 7 topics — integrating quality activities in the project life cycle, V&V (Verification & Validation), qualification, defect removal effectiveness models — are referenced in Galin's framework but were not included in the extracted source material. Key concepts to supplement:
+> **Note:** The source file focuses primarily on Chapters 5–6 content. Chapter 7 topics (integrating quality activities in the project life cycle, V&V (Verification & Validation), qualification, defect removal effectiveness models) are referenced in Galin's framework but were not included in the extracted source material. Key concepts to supplement:
 
 ### Key Concepts from Galin Ch 7 (Framework)
 
-- **Quality activities integrated throughout the SDLC** — not bolted on at the end
+- **Quality activities integrated throughout the SDLC:** not bolted on at the end
 - **V&V (Verification & Validation):**
   - **Verification:** "Are we building the product right?" (reviews, inspections, testing)
   - **Validation:** "Are we building the right product?" (acceptance testing, user validation)
 - **Qualification:** Formal demonstration that a product meets specified requirements
-- **Defect Removal Effectiveness (DRE):** `DRE = Defects removed during phase / (Defects removed + Defects escaped)` — measures how effective each quality activity is at catching defects before they escape downstream
+- **Defect Removal Effectiveness (DRE):** `DRE = Defects removed during phase / (Defects removed + Defects escaped)`, measures how effective each quality activity is at catching defects before they escape downstream
 
 ### Quality Activities Across the Life Cycle
 
@@ -392,14 +392,14 @@ RFP / Tender
 
 ## Key Takeaways
 
-1. **SQA begins before coding** — at the contract review stage
-2. **Two reviews, different goals:** Proposal review ensures a winnable, doable bid; Contract review ensures no surprises after signing
+1. **SQA begins before coding:** at the contract review stage
+2. **Two reviews, different goals:** Proposal review ensures a winnable, doable bid; contract review ensures no surprises after signing
 3. **Plans ≠ Proposal:** Development and quality plans must be freshly prepared, more comprehensive, and updated for current realities
 4. **Risk management is systematic:** Identify → Evaluate → Plan → Implement → Monitor
-5. **Small projects still need plans** — scaled-down versions provide disproportionate benefits
-6. **Internal projects are NOT exempt** — loose relationships breed failure; formal processes protect both sides
-7. **Quality is integrated, not added** — quality activities must be planned into the schedule from day one
+5. **Small projects still need plans:** scaled-down versions provide disproportionate benefits
+6. **Internal projects are NOT exempt:** loose relationships breed failure; formal processes protect both sides
+7. **Quality is integrated, not added:** quality activities must be planned into the schedule from day one
 
 ---
 
-*Source: Galin, D. — Software Quality Assurance: From Theory to Implementation (Chapters 5–6, with Chapter 7 framework concepts)*
+*Source: Galin, D., Software Quality Assurance: From Theory to Implementation (Chapters 5–6, with Chapter 7 framework concepts)*

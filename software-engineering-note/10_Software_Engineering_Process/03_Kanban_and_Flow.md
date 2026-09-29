@@ -27,7 +27,7 @@ Kanban is a Lean-based method for managing knowledge work. Unlike Scrum's timebo
 ### 3. Manage Flow
 - Track items through the system
 - Measure lead time (request to delivery) and cycle time (start to done)
-- Optimize for smooth, predictable flow — not maximum utilization
+- Optimize for smooth, predictable flow: not maximum utilization
 - Use cumulative flow diagrams (CFD) to visualize throughput
 
 ### 4. Make Policies Explicit
@@ -37,17 +37,17 @@ Kanban is a Lean-based method for managing knowledge work. Unlike Scrum's timebo
 - Examples: "Code review required before merge", "Tests must pass before deployment"
 
 ### 5. Implement Feedback Loops
-- Daily standup (15 min) — review the board, identify blockers
-- Replenishment meeting — decide what to pull next
-- Delivery planning — coordinate releases
-- Operations review — monthly review of flow metrics
-- Risk review — assess items at risk of delay
+- Daily standup (15 min): review the board, identify blockers
+- Replenishment meeting: decide what to pull next
+- Delivery planning: coordinate releases
+- Operations review: monthly review of flow metrics
+- Risk review: assess items at risk of delay
 
 ### 6. Improve Collaboratively, Evolve Experimentally
 - Use models (Theory of Constraints, Lean Thinking) to identify improvements
 - Run small experiments to test changes
 - Measure impact; keep what works, revert what doesn't
-- No big-bang transformations — incremental, evolutionary change
+- No big-bang transformations: incremental, evolutionary change
 
 ## Little's Law
 
@@ -57,7 +57,7 @@ Kanban is a Lean-based method for managing knowledge work. Unlike Scrum's timebo
 - **λ** = Throughput (items completed per unit time)
 - **W** = Average lead time (time in system)
 
-**Implication:** To reduce lead time, reduce WIP. Adding more work items doesn't speed things up — it slows everything down.
+**Implication:** To reduce lead time, reduce WIP. Adding more work items doesn't speed things up; it slows everything down.
 
 ## Kanban vs. Scrum
 
@@ -77,20 +77,20 @@ Kanban is a Lean-based method for managing knowledge work. Unlike Scrum's timebo
 A stacked area chart showing the number of items in each state over time:
 - **Rising bands** = items entering a state faster than leaving (bottleneck forming)
 - **Flat bands** = stable flow
-- **Gap between bands** = WIP — narrower is better
+- **Gap between bands** = WIP: narrower is better
 - **Slope of Done line** = throughput
 
 ## When to Use Kanban
 
-- **Continuous delivery** — Deploy multiple times per day
-- **Operations/Support** — Unpredictable incoming work
-- **Maintenance** — Mix of bug fixes and small features
-- **Mixed work** — Combining planned and unplanned work
-- **Teams transitioning from Waterfall** — Less disruptive than switching to Scrum
-- **Mature teams** — Want flow optimization over process structure
+- **Continuous delivery:** Deploy multiple times per day
+- **Operations/Support:** Unpredictable incoming work
+- **Maintenance:** Mix of bug fixes and small features
+- **Mixed work:** Combining planned and unplanned work
+- **Teams transitioning from Waterfall:** Less disruptive than switching to Scrum
+- **Mature teams:** Want flow optimization over process structure
 
 ## Related
 
-- [[00_Agile_Methodology]] — Scrum as an alternative with timeboxed sprints
-- [[01_Lean_Methodology]] — Lean principles that underpin Kanban
-- [[02_Methodologies_Overview]] — Comparison across all methodologies
+- [[00_Agile_Methodology]]: Scrum as an alternative with timeboxed sprints
+- [[01_Lean_Methodology]]: Lean principles that underpin Kanban
+- [[02_Methodologies_Overview]]: Comparison across all methodologies

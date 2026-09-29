@@ -37,7 +37,7 @@ Comprehensive reference covering **quality management standards** (ISO 9001/9000
 
 - **IEEE** (Institute of Electrical and Electronics Engineers) Computer Society
 - **ISO** (International Organization for Standardization)
-- **DOD** (US Department of Defense) — replaced MIL-STD-498 with IEEE/EIA 12207
+- **DOD** (US Department of Defense): replaced MIL-STD-498 with IEEE/EIA 12207
 - **ANSI** (American National Standards Institute)
 - **IEC** (International Electrotechnical Commission)
 - **EIA** (Electronic Industries Association)
@@ -46,9 +46,9 @@ Comprehensive reference covering **quality management standards** (ISO 9001/9000
 
 ### 1.3 Three Ways Organizations Contribute to SQA
 
-1. **Provision of standards** — documented methodologies for professionals and managers (ISO for management standards, IEEE for professional/engineering standards)
-2. **SQA certification** — independent professional quality audits (ISO 9000 Certification Service)
-3. **Professional support / self-assessment** — tools for self-evaluation of SQA systems (CMM by SEI, ISO/IEC 15504)
+1. **Provision of standards:** documented methodologies for professionals and managers (ISO for management standards, IEEE for professional/engineering standards)
+2. **SQA certification:** independent professional quality audits (ISO 9000 Certification Service)
+3. **Professional support / self-assessment:** tools for self-evaluation of SQA systems (CMM by SEI, ISO/IEC 15504)
 
 ---
 
@@ -71,7 +71,7 @@ ISO 9000-3 adapts the general ISO 9000 quality management methodology to softwar
 | 7 | **Factual approach to decision making** | Decisions based on data and information analysis |
 | 8 | **Mutually supportive supplier relationships** | Interdependence enhances value creation |
 
-#### ISO 9000-3 Requirements (New Edition — 5 Classes)
+#### ISO 9000-3 Requirements (New Edition: 5 Classes)
 
 | Class | Key Subjects |
 |---|---|
@@ -104,7 +104,7 @@ Decision → Planning → Development → Implementation → Certification Audit
 | **1. Planning** | Internal survey of current SQA system gaps (procedures, staff knowledge, documentation, configuration management, SQA unit capabilities); construct action plan with timetable and resource estimates |
 | **2. Development of SQA System** | Quality manual & SQA procedures; staff training/certification programs; CAB committee; configuration management; documentation/quality record controls; project progress control system |
 | **3. Implementation** | Staff instruction programs; support services for SQA tools; internal quality audits to verify implementation success |
-| **4. Certification Audits** | (a) Review of quality manual and SQA procedures for completeness/accuracy; (b) Verification audits — staff knowledge, procedure implementation, documentation compliance; based on random project/team selection |
+| **4. Certification Audits** | (a) Review of quality manual and SQA procedures for completeness/accuracy; (b) Verification audits ;  staff knowledge, procedure implementation, documentation compliance; based on random project/team selection |
 | **5. Retention** | Periodic re-certification audits (1–2×/year); must demonstrate continuing development, quality/productivity improvements, procedure updates |
 
 ### 2.3 CMM and CMMI Assessment Methodology
@@ -115,7 +115,7 @@ Developed by SEI (Carnegie Mellon University), first released 1992 (feedback), p
 
 - More elaborate management methods (quantitative) → increased quality control and productivity
 - **Five-level maturity model** enables evaluation and direction for improvement
-- **Process areas are generic** — define "what" not "how" (any life cycle, methodology, tool, language, documentation standard)
+- **Process areas are generic:** define "what" not "how" (any life cycle, methodology, tool, language, documentation standard)
 
 #### CMM Five Levels and Key Process Areas (KPAs)
 
@@ -131,7 +131,7 @@ Developed by SEI (Carnegie Mellon University), first released 1992 (feedback), p
 
 Specialized CMM variants developed: SE-CMM (systems engineering), T-CMM (trusted/classified), SSE-CMM (security), P-CMM (people), SA-CMM (acquisition), IPD-CMM (integrated product development).
 
-**CMMI (Capability Maturity Model Integration)** — late 1990s — solved coordination problems of multiple CMM variants. Three integrated models:
+**CMMI (Capability Maturity Model Integration)** (late 1990s) solved coordination problems of multiple CMM variants. Three integrated models:
 - CMMI-SE/SW (systems + software)
 - CMMI-SE/SW/IPPD/SS (+ integrated product/process + supplier sourcing)
 - CMMI-SE/SW/IPPD
@@ -152,9 +152,9 @@ Specialized CMM variants developed: SE-CMM (systems engineering), T-CMM (trusted
 | Organization | Key Results |
 |---|---|
 | **Boeing Space Transportation** | Defect detection shifted from 89% late (testing) → 83% early (reviews); 31% rework decrease; ~100% pre-release defect elimination; 140% productivity increase |
-| **Tata Consultancy Services** | Rework: 12% → 4%; Schedule slippage: >3% → <2.5%; Review effectiveness: 40% → 80% |
+| **Tata Consultancy Services** | Rework: 12% → 4%; schedule slippage: >3% → <2.5%; review effectiveness: 40% → 80% |
 | **Telcordia Technologies** | 94% reduction in field fault density; 98% on-schedule major releases; Customer satisfaction: 60% → >95% |
-| **Raytheon** (via Gartner) | Original work grew from 34% (Level 1) → 76% (Level 4); Rework dropped from 41% → 7% |
+| **Raytheon** (via Gartner) | Original work grew from 34% (Level 1) → 76% (Level 4); rework dropped from 41% → 7% |
 
 #### CMM Level Transition Times (Gartner data)
 
@@ -172,7 +172,7 @@ European initiative (ESPRIT + ESI), operated by the Bootstrap Institute.
 - **31 quality attributes** grouped into 3 classes: **Process, Organization, Technology**
 - **5-grade scale** applied per attribute
 - Supports: CMM evaluation, ISO 15504 (SPICE) evaluation, ISO 9000-3 gap assessment
-- **Three-tier assessor accreditation**: Trained Assessor → Assessor → Lead Assessor
+- **Three-tier assessor accreditation:** Trained Assessor → Assessor → Lead Assessor
 - Maintains an **anonymous Bootstrap database** of assessment results for member benchmarking
 
 ### 2.5 SPICE Project and ISO/IEC 15504
@@ -190,7 +190,7 @@ Joint ISO/IEC initiative (1993) to harmonize assessment methodologies. TR versio
 
 | Level | Name | Process Attributes |
 |---|---|---|
-| **0** | Incomplete | No requirements — little or no implementation |
+| **0** | Incomplete | No requirements ;  little or no implementation |
 | **1** | Performed | Process performance (identify processes, inputs, outputs) |
 | **2** | Managed | (a) Performance management; (b) Work products management |
 | **3** | Established | (a) Process definition; (b) Process resources |
@@ -241,7 +241,7 @@ Three-phase trial (1995–2000), >200 full-scale assessments across continents a
 | **Prescriptive** | Conformance requirements | IEEE 828 (SCM Plans), 829 (Test Documentation), 1012 (V&V), 1028 (Reviews) |
 | **Guidance** | Implementation guides | IEEE 1233 (System Requirements), 12207.1 (Life Cycle Data), 12207.2 (Implementation) |
 
-### 3.2 IEEE/EIA Std 12207 — Software Life Cycle Processes
+### 3.2 IEEE/EIA Std 12207: Software Life Cycle Processes
 
 **Framework standard** covering the entire spectrum of software life cycle processes. Product of joint efforts by DOD, ANSI, IEEE, EIA, ISO, IEC.
 
@@ -262,20 +262,20 @@ Process Classes → Processes → Activities → Tasks
 #### Key Concepts
 
 **General:**
-- **Tailoring** — adapt to project size, complexity; not for COTS
-- **All participants** — acquirers, suppliers, developers, operators, maintainers
-- **"How to do" not "exactly how to do"** — flexibility for life cycle model, tools, metrics, milestones, documentation
+- **Tailoring:** adapt to project size, complexity; not for COTS
+- **All participants:** acquirers, suppliers, developers, operators, maintainers
+- **"How to do" not "exactly how to do":** flexibility for life cycle model, tools, metrics, milestones, documentation
 - **Software-system links** at each life cycle phase
-- **TQM consistency** — quality integral to every process
-- **No certification** requirement — supports worldwide acceptance
-- **Baselining** — progressively improved configuration versions
+- **TQM consistency:** quality integral to every process
+- **No certification** requirement: supports worldwide acceptance
+- **Baselining:** progressively improved configuration versions
 
 **Task-related:**
 - Responsibility assigned to specific unit/individual
 - Modular life cycle components
 - Four conformance levels: **will**, **shall**, **should**, **may**
 
-### 3.3 IEEE Std 1012 — Verification and Validation (V&V)
+### 3.3 IEEE Std 1012: Verification and Validation (V&V)
 
 Defines processes for determining whether a software product conforms to specifications (**verification**) and satisfies intended use objectives (**validation**).
 
@@ -292,13 +292,13 @@ Higher integrity → more V&V tasks required.
 
 #### Key Concepts
 
-- **Broad V&V definition** — reviews, testing, evaluation, hazard identification, risk analysis
+- **Broad V&V definition:** reviews, testing, evaluation, hazard identification, risk analysis
 - **Integrity-level-graded** V&V requirements
-- **Prescriptive** — lists tasks with methodology, inputs, outputs per activity
-- **IV&V Independence**: Managerial (separate from dev management), Technical (separate team with own tools), Financial (independent budget)
-- **V&V Metrics**: (a) Evaluation of development processes/products; (b) Quality/coverage evaluation of V&V activities
-- **Quantitative criteria**: correctness, consistency, completeness, accuracy, readability, testability
-- **Reusable software V&V** — special considerations for COTS and library software
+- **Prescriptive:** lists tasks with methodology, inputs, outputs per activity
+- **IV&V Independence:** Managerial (separate from dev management), Technical (separate team with own tools), Financial (independent budget)
+- **V&V Metrics:** (a) Evaluation of development processes/products; (b) Quality/coverage evaluation of V&V activities
+- **Quantitative criteria:** correctness, consistency, completeness, accuracy, readability, testability
+- **Reusable software V&V:** special considerations for COTS and library software
 - Compliance with IEEE/EIA 12207 and ISO/IEC 12207
 
 #### SVVP (Software V&V Plan) Outline
@@ -312,9 +312,9 @@ Higher integrity → more V&V tasks required.
 7. V&V Administrative Requirements (Anomaly Resolution, Task Iteration Policy, Deviation Policy, Control Procedures, Standards/Practices/Conventions)
 8. V&V Documentation Requirements
 
-### 3.4 IEEE Std 1028 — Software Reviews
+### 3.4 IEEE Std 1028: Software Reviews
 
-Defines **how to perform a systematic review** — a review performed by a team according to a documented procedure producing documented results.
+Defines **how to perform a systematic review**, a review performed by a team according to a documented procedure producing documented results.
 
 #### Five Types of Systematic Reviews
 
@@ -326,8 +326,8 @@ Defines **how to perform a systematic review** — a review performed by a team 
 
 #### Key Concepts
 
-- **High formality** — authorization and documentation requirements
-- **Follow-up** — mandatory for all review types; corrections must be approved
+- **High formality:** authorization and documentation requirements
+- **Follow-up:** mandatory for all review types; corrections must be approved
 - **Compliance** with IEEE 12207, ISO/IEC 9000-3, IEEE 1012
 
 #### Nine-Component Review Structure
@@ -374,19 +374,19 @@ Only **SQA unit members** and **software testing department staff** are full-tim
 
 **Three main tools:**
 
-1. **Software Quality Policy** — communicates:
+1. **Software Quality Policy:** communicates:
    - Conformity to organization's purpose/goals
    - Commitment to SQA concepts and adopted quality standards
    - Commitment to adequate resources
    - Commitment to continuous improvement
 
-2. **Executive in Charge of Software Quality** — responsibilities:
+2. **Executive in Charge of Software Quality:** responsibilities:
    - Prepare annual SQA activities program and budget
    - Prepare SQA system development plans
    - Overall control of SQA program and development project implementation
    - Present and advocate SQA issues to executive management
 
-3. **Management Reviews** — periodic meetings (1–2×/year) to assess:
+3. **Management Reviews:** periodic meetings (1–2×/year) to assess:
    - Compliance with quality policy
    - Achievement of quality objectives
    - Need for updates and improvements
@@ -453,7 +453,7 @@ Cycle    ture           dures      & Maint.
          Ops
 ```
 
-#### 6.1.1 Head of SQA Unit — Tasks
+#### 6.1.1 Head of SQA Unit: Tasks
 
 | Category | Tasks |
 |---|---|
@@ -466,7 +466,7 @@ Cycle    ture           dures      & Maint.
 
 | Sub-Unit | Key Tasks |
 |---|---|
-| **Project Life Cycle** | Control: compliance follow-up, product approval, maintenance monitoring, customer satisfaction; Participation: contract reviews, quality plans, design reviews, testing, installation |
+| **Project Life Cycle** | Control: compliance follow-up, product approval, maintenance monitoring, customer satisfaction; participation: contract reviews, quality plans, design reviews, testing, installation |
 | **Infrastructure Operations** | Publication of procedures/templates/checklists; training/instruction; trustee instruction; monitoring new procedure implementation; staff certification follow-up; CAB participation; configuration management; documentation compliance |
 | **Audits & Certification** | Internal audits (program, performance, follow-up, summary reports); subcontractor/supplier audits; coordination for external certification audits; customer audit support |
 | **Support** | Consulting on: project/quality plans, review team staffing, development methodologies/tools, risk solutions, schedule/budget remedies, SQA metrics, SQA information systems |
@@ -498,7 +498,7 @@ Staff members who **volunteer part of their time** to promoting quality, instruc
 
 ### 6.4 SQA Forums
 
-**Informal, volunteer-based** communities — not subject to standard requirements or procedures.
+**Informal, volunteer-based** communities, not subject to standard requirements or procedures.
 
 **Typical focus areas:**
 - SQA procedure improvements and implementation
@@ -511,7 +511,7 @@ Staff members who **volunteer part of their time** to promoting quality, instruc
 - Scope and operation mode defined by members
 - May be **closed** (e.g., quality line managers only) or **open** to all
 - May publish newsletters, periodic reviews, task force reports with recommendations
-- Exemplified by the **"Template Forum"** — 4 team leaders created a set of templates for 11 teams, issued ~20 templates over 3 years
+- Exemplified by the **"Template Forum":** 4 team leaders created a set of templates for 11 teams, issued ~20 templates over 3 years
 
 ---
 
@@ -556,9 +556,9 @@ Staff members who **volunteer part of their time** to promoting quality, instruc
 ## References
 
 - Galin, D. (2004). *Software Quality Assurance: From Theory to Implementation*. Pearson Education. Chapters 23–26.
-- ISO 9000-3:1997 — Guidelines for the Application of ISO 9001 to Software
-- ISO/IEC 15504 (SPICE) — Software Process Assessment
-- IEEE Std 12207 — Software Life Cycle Processes
-- IEEE Std 1012-1998 — Software Verification and Validation
-- IEEE Std 1028-1997 — Software Reviews
+- ISO 9000-3:1997: Guidelines for the Application of ISO 9001 to Software
+- ISO/IEC 15504 (SPICE): Software Process Assessment
+- IEEE Std 12207: Software Life Cycle Processes
+- IEEE Std 1012-1998: Software Verification and Validation
+- IEEE Std 1028-1997: Software Reviews
 - SEI CMMI v1.1 (2002)

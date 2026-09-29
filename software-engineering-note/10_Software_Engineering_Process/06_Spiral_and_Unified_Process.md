@@ -5,7 +5,7 @@ source: "SWEBOK v4 Chapter 10"
 
 # Spiral Model and Unified Process
 
-> **Source:** *Guide to the Software Engineering Body of Knowledge (SWEBOK), Version 4 — Chapter 10: Software Engineering Process, Section 10.6*
+> **Source:** *Guide to the Software Engineering Body of Knowledge (SWEBOK), Version 4, Chapter 10: Software Engineering Process, Section 10.6*
 
 ---
 
@@ -28,6 +28,7 @@ The **Spiral Model**, introduced by Barry Boehm in 1988, is a risk-driven proces
 ### Four Phases of Each Spiral Iteration
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "Spiral Iteration"
         P1[Phase 1: Planning] --> P2[Phase 2: Risk Analysis]
@@ -36,6 +37,7 @@ graph TB
         P4 -->|Next Iteration| P1
     end
 ```
+
 
 #### Phase 1: Planning
 
@@ -80,6 +82,7 @@ graph TB
 ### Spiral Model Diagram
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     Start([Project Start]) --> Plan1
     Plan1[Planning: Objectives] --> Risk1[Risk Analysis: Identify Risks]
@@ -103,6 +106,7 @@ graph TB
     Commit3 -->|Accept| Deploy([Deployment])
     Commit3 -->|Stop| End3([Project End])
 ```
+
 
 ### Advantages and Disadvantages
 
@@ -133,6 +137,7 @@ The **Unified Process (UP)** is an iterative, incremental, architecture-centric,
 ### Core Principles
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     UP[Unified Process] --> I[Iterative and Incremental]
     UP --> A[Architecture-Centric]
@@ -150,6 +155,7 @@ graph TB
     U --> U2[Use cases drive design]
     U --> U3[Use cases validate implementation]
 ```
+
 
 #### Iterative and Incremental Development
 
@@ -176,6 +182,7 @@ graph TB
 The Unified Process defines nine disciplines organized into core process and supporting disciplines:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "Core Process Disciplines"
         B[Business Modeling]
@@ -198,6 +205,7 @@ graph TB
     IM --> T
     T --> DP
 ```
+
 
 #### Discipline Details
 
@@ -224,16 +232,18 @@ The **Rational Unified Process (RUP)** is a specific implementation of the Unifi
 ### Four Phases
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     I[Inception] --> E[Elaboration]
     E --> C[Construction]
     C --> T[Transition]
     
-    style I fill:#e1f5fe
-    style E fill:#e8f5e9
-    style C fill:#fff3e0
-    style T fill:#f3e5f5
+    style I fill:#00B5FF,color:#000000
+    style E fill:#1FB854,color:#000000
+    style C fill:#FFBE00,color:#000000
+    style T fill:#1FB8AB,color:#000000
 ```
+
 
 #### Phase Characteristics
 
@@ -309,6 +319,7 @@ graph LR
 ### RUP Disciplines Workflow Across Phases
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "Inception"
         I_BM[Business Modeling]
@@ -339,6 +350,7 @@ graph TB
         T_ENV[Environment]
     end
 ```
+
 
 ### RUP Best Practices
 
@@ -382,6 +394,7 @@ RUP embodies six best practices:
 ### OpenUP Phases
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     I[Inception] --> E[Elaboration]
     E --> C[Construction]
@@ -392,6 +405,7 @@ graph LR
     C -.->|Milestone: Operational Capability| C_M([IOC])
     T -.->|Milestone: Product Release| T_M([PR])
 ```
+
 
 ### OpenUP vs RUP Comparison
 
@@ -417,6 +431,7 @@ graph LR
 ### Types of Prototypes
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     P[Prototyping] --> T[Throwaway Prototypes]
     P --> E[Evolutionary Prototypes]
@@ -431,6 +446,7 @@ graph TB
     I --> I1[Purpose: Build system incrementally]
     I --> I2[Each increment is production-ready]
 ```
+
 
 #### Throwaway Prototypes
 
@@ -477,6 +493,7 @@ graph TB
 ### Prototyping Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     R[Requirements] --> P[Prototype]
     P --> E[Evaluate]
@@ -486,6 +503,7 @@ graph LR
     style P fill:#e1f5fe
     style E fill:#fff3e0
 ```
+
 
 ### Prototyping Techniques
 

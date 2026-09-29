@@ -4,7 +4,7 @@ aliases: [model syntax, model semantics, model analysis, metamodeling, model qua
 tags: [software-engineering, swebok, ka11, models, syntax, semantics, analysis]
 source: SWEBOK v4 Ch11
 swebok-references: ["KA11.2", "KA11.3", "KA11.4"]
-related: "[[09_Modeling_Principles_and_Types]]", "[[11_Model-Based_Engineering]]", "[[12_Formal_Methods]]"
+related: "[[01_Modeling_Fundamentals|Modeling Principles and Types]], [[Software Engineering Models and Methods Overview|Model-Based Engineering]], [[07_Formal_Methods|Formal Methods]]"
 ---
 
 # Syntax, Semantics, and Model Analysis in Software Engineering
@@ -163,6 +163,7 @@ The OMG four-layer metamodeling architecture provides a principled framework for
 | **M0** | Instance/Runtime | Real-world instances of model elements | Actual Customer object with name="John Doe" |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     subgraph M3["M3: Meta-Metamodel"]
         M3A["MOF: Class, Property, Association, Package"]
@@ -190,11 +191,12 @@ graph TD
     M1A -->|instance of| M0A
     M1B -->|instance of| M0B
     
-    style M3 fill:#e8f5e9
-    style M2 fill:#e1f5fe
-    style M1 fill:#fff3e0
-    style M0 fill:#fce4ec
+    style M3 fill:#1FB854,color:#000000
+    style M2 fill:#00B5FF,color:#000000
+    style M1 fill:#FFBE00,color:#000000
+    style M0 fill:#FF5861,color:#000000
 ```
+
 
 **Key Relationships:**
 
@@ -445,6 +447,7 @@ Use Cases         Component Model   API Specification   Deployed System
 ### 4.2 Quality Assessment Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Model Quality Assessment] --> B[Static Analysis]
     A --> C[Dynamic Analysis]
@@ -479,6 +482,7 @@ flowchart TD
     F -->|No| H[Refinement Needed]
     H --> A
 ```
+
 
 ### 4.3 Model Metrics
 
@@ -673,6 +677,7 @@ Generated Test Cases:
 **Model Diff Algorithm:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Model A] --> C[Element Matching]
     B[Model B] --> C
@@ -696,6 +701,7 @@ flowchart TD
     L -->|No| N[Apply Changes]
     M --> N
 ```
+
 
 ### 6.3 Model Merging
 
@@ -730,6 +736,7 @@ flowchart TD
 ## 7. Integrated Model Analysis Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph Input
         M[Model] --> AS[Abstract Syntax]
@@ -770,6 +777,7 @@ flowchart TD
     style Analysis fill:#e8f5e9
     style Quality fill:#fce4ec
 ```
+
 
 ## Summary
 

@@ -2,13 +2,14 @@
 tags: [overview, methodology, agile, lean, waterfall, comparison, software-methodology]
 ---
 
-# Software Methodologies — Overview
+# Software Methodologies: Overview
 
 > *Purpose: A practical comparison of major software development methodologies to help you choose the right approach for your project.*
 
 ## The Methodology Landscape
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     TRAD["Traditional"] --> WF["Waterfall"]
     TRAD --> VM["V-Model"]
@@ -28,6 +29,7 @@ flowchart TD
     LD -->|"philosophy behind"| KAN
     LD -->|"principles underpin"| SCR
 ```
+
 
 ## Quick Decision Matrix
 
@@ -86,7 +88,7 @@ flowchart TD
 
 ### Lean Software Development
 - **Origin:** Mary & Tom Poppendieck (2003), applying TPS to software
-- **Core:** Seven principles — eliminate waste, amplify learning, decide late, deliver fast, empower team, build integrity in, optimize the whole
+- **Core:** Seven principles: eliminate waste, amplify learning, decide late, deliver fast, empower team, build integrity in, optimize the whole
 - **Strengths:** Philosophy-level guidance, reduces waste, optimizes flow
 - **Weaknesses:** Abstract, requires experience to apply
 - **Best for:** Foundational mindset for any methodology
@@ -136,14 +138,14 @@ Big-bang methodology changes fail. Evolutionary change works:
 | Anti-Pattern | What It Looks Like | Fix |
 |---|---|---|
 | **Scrum-but** | "We do Scrum, but we don't do retrospectives" | Either do retrospectives or stop calling it Scrum |
-| **Agile without engineering** | Sprints without TDD, CI, refactoring | Add technical practices — Agile without discipline is chaos |
+| **Agile without engineering** | Sprints without TDD, CI, refactoring | Add technical practices ;  Agile without discipline is chaos |
 | **Waterfall in sprints** | Long requirements phase, then "sprints" for implementation | Actually iterate; deliver working software each sprint |
-| **Cargo cult Agile** | Standups, boards, sprints — but no actual agility | Focus on outcomes (fast feedback, working software), not ceremonies |
+| **Cargo cult Agile** | Standups, boards, sprints ;  but no actual agility | Focus on outcomes (fast feedback, working software), not ceremonies |
 | **Process over people** | Following the process is more important than delivering value | Remember: individuals and interactions over processes and tools |
 
 ## Related
 
-- [[00_Agile_Methodology]] — Deep dive on Agile, Scrum, XP, TDD
-- [[01_Lean_Methodology]] — Lean principles and practices
-- [[03_Kanban_and_Flow]] — Kanban as a Lean implementation
-- [[04_Waterfall_and_V-Model]] — Traditional sequential methodologies
+- [[00_Agile_Methodology]]: Deep dive on Agile, Scrum, XP, TDD
+- [[01_Lean_Methodology]]: Lean principles and practices
+- [[03_Kanban_and_Flow]]: Kanban as a Lean implementation
+- [[04_Waterfall_and_V-Model]]: Traditional sequential methodologies

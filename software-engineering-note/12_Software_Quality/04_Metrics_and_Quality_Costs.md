@@ -10,22 +10,22 @@ source: "Galin SQA Ch 21–22"
 
 # Metrics and Quality Costs
 
-> **Source:** Galin, *Software Quality Assurance* — Chapter 21 (Software Quality Metrics) and Chapter 22 (Costs of Software Quality)
+> **Source:** Galin, *Software Quality Assurance*, Chapter 21 (Software Quality Metrics) and Chapter 22 (Costs of Software Quality)
 > **Purpose:** Quantify software quality through metrics for process and product, and evaluate the economic impact of quality (and its absence) through cost-of-quality models.
 
 ## 1. Software Quality Metrics (Ch 21)
 
-> *"You can't control what you can't measure."* — Tom DeMarco (1982)
+> *"You can't control what you can't measure."* *(Tom DeMarco, 1982)*
 
 ### 1.1 Objectives of Quality Measurement
 
 Per **Frame 21.1**, software quality metrics serve two main objectives:
 
-1. **Facilitate management control, planning, and intervention** — by measuring deviations of actual performance from planned performance in:
+1. **Facilitate management control, planning, and intervention:** by measuring deviations of actual performance from planned performance in:
    - Functional (quality) performance
    - Timetable and budget performance
 
-2. **Identify situations for process improvement** (preventive/corrective actions) — based on:
+2. **Identify situations for process improvement** (preventive/corrective actions), based on:
    - Accumulated metrics across teams and units
    - Organizational quality achievements
    - Industry benchmarks
@@ -47,11 +47,11 @@ Per **Frame 21.1**, software quality metrics serve two main objectives:
 
 A **two-level classification** system:
 
-**Level 1 — Lifecycle phase:**
-- **Process metrics** — software development
-- **Product metrics** — software maintenance (operational phase)
+**Level 1: Lifecycle phase:**
+- **Process metrics:** software development
+- **Product metrics:** software maintenance (operational phase)
 
-**Level 2 — Subject measured:**
+**Level 2: Subject measured:**
 - Quality
 - Timetable
 - Effectiveness (error removal, maintenance)
@@ -130,8 +130,8 @@ Where **NYF** = software failures detected during a year of maintenance service,
 ### 1.5 Product Metrics (Maintenance/Operational Phase)
 
 Product metrics cover two service types:
-- **Help Desk (HD)** — user support, instruction, usability issues
-- **Corrective Maintenance** — fixing software failures
+- **Help Desk (HD):** user support, instruction, usability issues
+- **Corrective Maintenance:** fixing software failures
 
 #### 1.5.1 HD Quality Metrics
 
@@ -210,7 +210,7 @@ Where NYSerH = hours in service per year, NYFH = hours with any function failed,
 1. **Define the attribute** to be measured (quality, productivity, etc.)
 2. **Define the metric** and validate against requirements (Frame 21.2)
 3. **Determine comparative target values** (indicators) based on standards, prior performance
-4. **Define application process** — reporting method, data collection method
+4. **Define application process:** reporting method, data collection method
 
 > ⚠️ **Implementation tip:** Many organizations skip stage 3 (setting target values), reflecting a lack of serious commitment to using metrics for managerial control.
 
@@ -228,12 +228,12 @@ Where NYSerH = hours in service per year, NYFH = hours with any function failed,
 | **Descriptive statistics** | Identify trends; mean, median, mode, histograms, control charts | Standard statistical packages |
 | **Analytical statistics** | Assess statistical significance of observed changes | Regression, ANOVA, t-test, χ² test |
 
-> Fundamental difference from manufacturing SPC: software development activities are **not repetitive** in the SPC sense — each project is unique.
+> Fundamental difference from manufacturing SPC: software development activities are **not repetitive** in the SPC sense; each project is unique.
 
 #### 1.6.4 Actions in Response
 
-- **Direct actions** — initiated by project/team management (reorganization, method changes, metric revision)
-- **Indirect actions** — initiated by the Corrective Action Board (CAB), based on accumulated cross-project data
+- **Direct actions:** initiated by project/team management (reorganization, method changes, metric revision)
+- **Indirect actions:** initiated by the Corrective Action Board (CAB), based on accumulated cross-project data
 
 ---
 
@@ -244,7 +244,7 @@ Where NYSerH = hours in service per year, NYFH = hours with any function failed,
 - Employee opposition to evaluation
 - Uncertainty from biased reporting
 
-**Software-specific barriers** — factors that distort metric parameters:
+**Software-specific barriers:** factors that distort metric parameters:
 
 | Parameter | Distorting Factors |
 |-----------|-------------------|
@@ -259,7 +259,7 @@ Where NYSerH = hours in service per year, NYFH = hours with any function failed,
 ### 1.8 Appendix 21A: The Function Point Method
 
 #### Purpose
-Provides **pre-project estimates** of project size in terms of development resources — something KLOC cannot do (code line count only available after programming).
+Provides **pre-project estimates** of project size in terms of development resources, something KLOC cannot do (code line count only available after programming).
 
 #### Three Stages
 
@@ -287,7 +287,7 @@ FP = CFP × (0.65 + 0.01 × RCAF)
 | Advantages | Disadvantages |
 |------------|---------------|
 | Pre-project estimates possible | Results depend on counting manual used (IFPUG 3/4, Mark II) |
-| Based on requirements, not code — language independent | Requires detailed requirements specifications |
+| Based on requirements, not code ;  language independent | Requires detailed requirements specifications |
 | Relatively high reliability | Needs experienced FP team and substantial resources |
 | | Many subjective evaluations |
 | | Best validated for data processing systems; limited in other domains |
@@ -335,7 +335,7 @@ CoSQ ───┤
 ```
 
 #### 2.2.1 Prevention Costs
-Investments in quality infrastructure and activities **not tied to a specific project**:
+Investments in quality infrastructure and activities **not tied to a specific project:**
 - Developing/updating SQA infrastructure (procedures, templates, checklists, SCM, metrics)
 - Training employees in SQA procedures
 - Employee certification
@@ -343,7 +343,7 @@ Investments in quality infrastructure and activities **not tied to a specific pr
 - Internal quality reviews, external audits, management quality reviews
 
 #### 2.2.2 Appraisal Costs
-Detection of errors in **specific projects or systems**:
+Detection of errors in **specific projects or systems:**
 - **Reviews:** Formal design reviews, peer reviews (inspections, walkthroughs), expert reviews
 - **Testing:** Unit, integration, system, acceptance tests
 - **External participants:** Quality assurance of subcontractors, COTS suppliers, customer contributions
@@ -463,7 +463,7 @@ CoSQ ───┤
 
 **Collecting managerial failure costs:**
 - Hard to assign responsibility for schedule failures (customer? development team? management?)
-- Compensation often occurs long after project completion — too late for lessons learned
+- Compensation often occurs long after project completion: too late for lessons learned
 - Three potential classifications for delay causes:
 
 | Cause of Delay | Cost Class |
@@ -488,6 +488,6 @@ CoSQ ───┤
 
 ## Related Notes
 
-- [[Software Quality Overview|Software Quality Overview]] — Overview and SWEBOK context
-- [[../11_Software_Testing/Software Testing Overview|Software Testing]] — Testing is a key appraisal cost and defect detection activity
-- [[../15_Software_Engineering_Economics/Software Engineering Economics Overview|Software Engineering Economics]] — Economic models for software cost estimation
+- [[Software Quality Overview|Software Quality Overview]]: Overview and SWEBOK context
+- [[../11_Software_Testing/Software Testing Overview|Software Testing]]: Testing is a key appraisal cost and defect detection activity
+- [[../15_Software_Engineering_Economics/Software Engineering Economics Overview|Software Engineering Economics]]: Economic models for software cost estimation

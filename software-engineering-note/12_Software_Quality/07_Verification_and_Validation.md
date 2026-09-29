@@ -10,7 +10,7 @@ tags:
   - v-and-v
   - static-analysis
   - formal-methods
-source: "SWEBOK v4 Chapter 12.3 — Software Quality, Verification and Validation"
+source: "SWEBOK v4 Chapter 12.3: Software Quality, Verification and Validation"
 created: 2026-07-21
 ---
 
@@ -53,6 +53,7 @@ Implementation                ←───────────────�
 | Implementation | Unit Testing | Verifies code against detailed design |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph Development["Development (Verification Path)"]
         R["Requirements<br>Specification"] --> S["System<br>Design"]
@@ -75,6 +76,7 @@ flowchart TD
     UT --> DONE
 ```
 
+
 ### 1.3 V&V Is Broader Than Testing
 
 Testing is the most visible V&V activity, but V&V encompasses much more:
@@ -87,6 +89,7 @@ Testing is the most visible V&V activity, but V&V encompasses much more:
 | **Process V&V** | Process audits, maturity assessments | Throughout lifecycle |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     VV["Verification &<br>Validation"] --> S["Static V&V"]
     VV --> D["Dynamic V&V"]
@@ -105,6 +108,7 @@ graph TD
     P --> P1["Process<br>Audits"]
     P --> P2["Maturity<br>Assessment"]
 ```
+
 
 ---
 
@@ -201,6 +205,7 @@ Static code analysis tools automatically analyze source code without executing i
 **Static Analysis Integration Points:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     subgraph IDE["IDE/Editor"]
         L["Linting on<br>save"]
@@ -218,6 +223,7 @@ flowchart LR
     IDE -->|"pre-commit"| CI
     CI -->|"pass/fail gate"| CD
 ```
+
 
 **Quality Gate Thresholds (Example from SonarQube):**
 
@@ -276,6 +282,7 @@ Regression testing verifies that changes have not introduced new defects:
 | **Test minimization** | Remove redundant tests | Reduces suite size; risk of removing useful tests |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     C["Code Change"] --> I["Impact<br>Analysis"]
     I --> S["Select Affected<br>Test Cases"]
@@ -287,6 +294,7 @@ flowchart LR
     D -- No --> PASS["All Clear"]
     FIX --> E
 ```
+
 
 ---
 

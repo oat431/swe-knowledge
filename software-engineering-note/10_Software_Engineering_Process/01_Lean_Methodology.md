@@ -4,7 +4,7 @@ tags: [lean, kanban, waste, continuous-improvement, methodology, software-method
 
 # Lean Methodology
 
-> *Source: Lean Software Development by Mary & Tom Poppendieck (2003); Toyota Production System concepts*
+> *Source: Lean Software Development by Mary & Tom Poppendieck (2003); toyota Production System concepts*
 
 ## Purpose
 
@@ -14,59 +14,59 @@ Lean Software Development adapts the Toyota Production System's principles to so
 
 ### 1. Eliminate Waste
 Waste in software development includes:
-- **Partially done work** — Uncommitted code, untested features, unvalidated requirements
-- **Extra features** — Gold plating, features nobody asked for
-- **Relearning** — Knowledge lost through turnover, inadequate documentation, poor handoffs
-- **Handoffs** — Context switching, waiting for approvals, queueing between teams
-- **Task switching** — Multitasking destroys productivity; prefer single-piece flow
-- **Delays** — Waiting for decisions, environments, dependencies, approvals
-- **Defects** — Bugs found late cost exponentially more to fix
+- **Partially done work:** Uncommitted code, untested features, unvalidated requirements
+- **Extra features:** Gold plating, features nobody asked for
+- **Relearning:** Knowledge lost through turnover, inadequate documentation, poor handoffs
+- **Handoffs:** Context switching, waiting for approvals, queueing between teams
+- **Task switching:** Multitasking destroys productivity; prefer single-piece flow
+- **Delays:** Waiting for decisions, environments, dependencies, approvals
+- **Defects:** Bugs found late cost exponentially more to fix
 
 ### 2. Amplify Learning
-- **Iterative development** — Build a little, learn a lot
-- **Set-based development** — Explore multiple solutions simultaneously, then converge
-- **Feedback loops** — Short iterations, demos, retrospectives, A/B testing
-- **Knowledge sharing** — Pair programming, communities of practice, documentation
+- **Iterative development:** Build a little, learn a lot
+- **Set-based development:** Explore multiple solutions simultaneously, then converge
+- **Feedback loops:** Short iterations, demos, retrospectives, A/B testing
+- **Knowledge sharing:** Pair programming, communities of practice, documentation
 
 ### 3. Decide as Late as Possible
-- **Delay irreversible decisions** — Keep options open until the last responsible moment
-- **Real options** — Treat decisions like options: they have value, expiration dates, and costs
-- **Iterative design** — Architecture emerges through refactoring, not big upfront design
-- **Just-in-time planning** — Plan in detail only for the next iteration
+- **Delay irreversible decisions:** Keep options open until the last responsible moment
+- **Real options:** Treat decisions like options: they have value, expiration dates, and costs
+- **Iterative design:** Architecture emerges through refactoring, not big upfront design
+- **Just-in-time planning:** Plan in detail only for the next iteration
 
 ### 4. Deliver as Fast as Possible
-- **Short iterations** — Deliver working software every 1–4 weeks
-- **Single-piece flow** — One item at a time, finished before starting the next
-- **Pull systems** — Start work only when there's capacity (Kanban)
-- **Limit work in progress (WIP)** — Reducing WIP increases throughput
-- **Cycle time** — Measure and minimize time from start to done
+- **Short iterations:** Deliver working software every 1–4 weeks
+- **Single-piece flow:** One item at a time, finished before starting the next
+- **Pull systems:** Start work only when there's capacity (Kanban)
+- **Limit work in progress (WIP):** Reducing WIP increases throughput
+- **Cycle time:** Measure and minimize time from start to done
 
 ### 5. Empower the Team
-- **Respect people** — Trust the team to make technical decisions
-- **Self-organization** — Teams that plan their own work outperform directed teams
-- **Motivation** — Autonomy, mastery, purpose (Daniel Pink's Drive)
-- **Leadership as service** — Remove impediments, don't micromanage
+- **Respect people:** Trust the team to make technical decisions
+- **Self-organization:** Teams that plan their own work outperform directed teams
+- **Motivation:** Autonomy, mastery, purpose (Daniel Pink's Drive)
+- **Leadership as service:** Remove impediments, don't micromanage
 
 ### 6. Build Integrity In
-- **Perceived integrity** — The system feels right to the customer (UX, consistency)
-- **Conceptual integrity** — The system has a coherent design (architecture, patterns)
-- **Code quality** — TDD, refactoring, code reviews, static analysis
-- **Continuous integration** — Integrate and test frequently to catch problems early
+- **Perceived integrity:** The system feels right to the customer (UX, consistency)
+- **Conceptual integrity:** The system has a coherent design (architecture, patterns)
+- **Code quality:** TDD, refactoring, code reviews, static analysis
+- **Continuous integration:** Integrate and test frequently to catch problems early
 
 ### 7. Optimize the Whole
-- **Systems thinking** — Optimize the whole value stream, not individual components
-- **Sub-optimization** — Optimizing one team's output can harm overall throughput
-- **Value stream mapping** — Visualize end-to-end flow to find bottlenecks
-- **Theory of Constraints** — Focus improvement on the current bottleneck
+- **Systems thinking:** Optimize the whole value stream, not individual components
+- **Sub-optimization:** Optimizing one team's output can harm overall throughput
+- **Value stream mapping:** Visualize end-to-end flow to find bottlenecks
+- **Theory of Constraints:** Focus improvement on the current bottleneck
 
 ## Lean Concepts in Practice
 
 ### Value Stream Mapping
 Visualizing the flow of work from request to delivery:
-- **Lead time** — Time from request to delivery (customer's perspective)
-- **Cycle time** — Time from start to finish (team's perspective)
-- **Wait time** — Time items spend waiting between steps
-- **Process time** — Time actually being worked on
+- **Lead time:** Time from request to delivery (customer's perspective)
+- **Cycle time:** Time from start to finish (team's perspective)
+- **Wait time:** Time items spend waiting between steps
+- **Process time:** Time actually being worked on
 
 ### The Eight Wastes (DOWNTIME)
 | Waste | Software Equivalent |
@@ -100,6 +100,6 @@ Visualizing the flow of work from request to delivery:
 
 ## Related
 
-- [[00_Agile_Methodology]] — Agile practices that build on Lean principles
-- [[03_Kanban_and_Flow]] — Kanban as a Lean implementation
-- [[02_Methodologies_Overview]] — Comparison across all methodologies
+- [[00_Agile_Methodology]]: Agile practices that build on Lean principles
+- [[03_Kanban_and_Flow]]: Kanban as a Lean implementation
+- [[02_Methodologies_Overview]]: Comparison across all methodologies

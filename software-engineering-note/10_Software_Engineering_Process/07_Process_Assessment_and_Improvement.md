@@ -5,7 +5,7 @@ source: "SWEBOK v4 Chapter 10"
 
 # Process Assessment and Improvement
 
-> **Source:** *Guide to the Software Engineering Body of Knowledge (SWEBOK), Version 4 — Chapter 10: Software Engineering Process, Section 10.12*
+> **Source:** *Guide to the Software Engineering Body of Knowledge (SWEBOK), Version 4, Chapter 10: Software Engineering Process, Section 10.12*
 
 ---
 
@@ -18,17 +18,19 @@ The **PDCA Cycle** (Plan-Do-Check-Act), also known as the Deming Cycle or Shewha
 ### Four Phases
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     P[Plan] --> D[Do]
     D --> C[Check]
     C --> A[Act]
     A -->|Next Cycle| P
     
-    style P fill:#e1f5fe
-    style D fill:#e8f5e9
-    style C fill:#fff3e0
-    style A fill:#f3e5f5
+    style P fill:#00B5FF,color:#000000
+    style D fill:#1FB854,color:#000000
+    style C fill:#FFBE00,color:#000000
+    style A fill:#1FB8AB,color:#000000
 ```
+
 
 #### Phase Details
 
@@ -42,6 +44,7 @@ graph LR
 ### PDCA in Software Process Improvement
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "Plan"
         P1[Identify process problems]
@@ -79,6 +82,7 @@ graph TB
     A3 --> P1
 ```
 
+
 ### PDCA Benefits
 
 - **Systematic:** Provides a structured approach to improvement
@@ -98,18 +102,20 @@ The **Capability Maturity Model (CMM)** was developed by the Software Engineerin
 ### Five Maturity Levels
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     L1[Level 1: Initial] --> L2[Level 2: Managed]
     L2 --> L3[Level 3: Defined]
     L3 --> L4[Level 4: Quantitatively Managed]
     L4 --> L5[Level 5: Optimizing]
     
-    style L1 fill:#ffebee
-    style L2 fill:#fff3e0
-    style L3 fill:#fff9c4
-    style L4 fill:#e8f5e9
-    style L5 fill:#e1f5fe
+    style L1 fill:#FF5861,color:#000000
+    style L2 fill:#FFBE00,color:#000000
+    style L3 fill:#FFBE00,color:#000000
+    style L4 fill:#1FB854,color:#000000
+    style L5 fill:#00B5FF,color:#000000
 ```
+
 
 #### Level Characteristics
 
@@ -177,6 +183,7 @@ The **Standard CMMI Appraisal Method for Process Improvement (SCAMPI)** is the o
 | **SCAMPI C** | Quick assessment | Lightweight, self-assessment | Improvement roadmap |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     A[SCAMPI C: Quick Assessment] -->|Identify gaps| B[SCAMPI B: Progress Assessment]
     B -->|Validate improvements| C[SCAMPI A: Benchmark Appraisal]
@@ -185,6 +192,7 @@ graph TB
     style B fill:#fff3e0
     style C fill:#e8f5e9
 ```
+
 
 ### CMMI vs CMM Comparison
 
@@ -208,6 +216,7 @@ graph TB
 ### Process Assessment Model
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "Process Capability Levels"
         L0[Level 0: Incomplete]
@@ -220,6 +229,7 @@ graph TB
     
     L0 --> L1 --> L2 --> L3 --> L4 --> L5
 ```
+
 
 ### Capability Levels
 
@@ -249,6 +259,7 @@ The standard consists of multiple parts:
 ### Process Assessment Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[Initiation] --> B[Planning]
     B --> C[Data Collection]
@@ -259,6 +270,7 @@ graph LR
     style A fill:#e1f5fe
     style F fill:#e8f5e9
 ```
+
 
 ### ISO/IEC 33000 vs CMMI Comparison
 
@@ -283,6 +295,7 @@ The **Goal-Question-Metric (GQM)** approach, developed by Victor Basili, is a sy
 ### GQM Structure
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     G[Goal] --> Q1[Question 1]
     G --> Q2[Question 2]
@@ -296,6 +309,7 @@ graph TB
     Q3 --> M6[Metric 6]
 ```
 
+
 ### GQM Levels
 
 | Level | Description | Example |
@@ -307,6 +321,7 @@ graph TB
 ### GQM Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     D[Define Goals] --> Q[Develop Questions]
     Q --> M[Specify Metrics]
@@ -318,6 +333,7 @@ graph LR
     style D fill:#e1f5fe
     style I fill:#e8f5e9
 ```
+
 
 #### Step 1: Define Goals
 
@@ -355,6 +371,7 @@ Metrics provide quantitative answers:
 - **Indicators:** Interpretations of derived measures (trends, benchmarks)
 
 **Example Metrics:**
+
 | Question | Metric | Formula |
 |----------|--------|---------|
 | What is the defect density? | Defects per KLOC | defects / (lines of code / 1000) |
@@ -374,6 +391,7 @@ Metrics provide quantitative answers:
 3. How can we improve code quality?
 
 **Metrics:**
+
 | Question | Metric | Measurement |
 |----------|--------|-------------|
 | Current quality | Code coverage | Percentage of code covered by tests |
@@ -403,15 +421,17 @@ Metrics provide quantitative answers:
 ### Retrospective Structure
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     S[Set the Stage] --> G[Gather Data]
     G --> G2[Generate Insights]
     G2 --> D[Decide What to Do]
     D --> C[Close the Retrospective]
     
-    style S fill:#e1f5fe
-    style C fill:#e8f5e9
+    style S fill:#00B5FF,color:#000000
+    style C fill:#1FB854,color:#000000
 ```
+
 
 #### Retrospective Activities
 
@@ -445,6 +465,7 @@ graph LR
 #### Sailboat Metaphor
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "Sailboat"
         W[Wind: What propels us]
@@ -457,6 +478,7 @@ graph TB
     A -.->|prevents| I
     R -.->|threatens| I
 ```
+
 
 ### Retrospective Best Practices
 
@@ -490,6 +512,7 @@ graph TB
 ### Tailoring Principles
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     SP[Standard Process] --> T[Tailoring]
     T --> CP[Customized Process]
@@ -508,6 +531,7 @@ graph TB
     F4 --> T
     F5 --> T
 ```
+
 
 ### Tailoring Guidelines
 
@@ -556,6 +580,7 @@ graph TB
 #### IDEF0 Structure
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     I[Input] -->|Function| O[Output]
     C[Control] -->|Function| O
@@ -566,6 +591,7 @@ graph LR
     style C fill:#fff3e0
     style M fill:#f3e5f5
 ```
+
 
 | Component | Description | Example |
 |-----------|-------------|---------|

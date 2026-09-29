@@ -16,19 +16,19 @@ Waterfall and V-Model are traditional, sequential software development methodolo
 Winston Royce (1970) described a sequential process, though he actually criticized the pure waterfall model in his paper. The industry adopted his diagram as the standard anyway.
 
 ### Phases
-1. **Requirements** — Gather and document all requirements upfront
-2. **Design** — Create system architecture and detailed design
-3. **Implementation** — Write the code
-4. **Testing** — Verify against requirements
-5. **Deployment** — Release to production
-6. **Maintenance** — Fix bugs and enhance
+1. **Requirements:** Gather and document all requirements upfront
+2. **Design:** Create system architecture and detailed design
+3. **Implementation:** Write the code
+4. **Testing:** Verify against requirements
+5. **Deployment:** Release to production
+6. **Maintenance:** Fix bugs and enhance
 
 ### Characteristics
-- **Sequential** — Each phase must complete before the next begins
-- **Document-heavy** — Each phase produces formal deliverables (SRS, SDD, STD)
-- **Fixed scope** — Requirements are baselined early
-- **Change control** — Changes require formal change requests
-- **Milestone-driven** — Progress measured by phase completion
+- **Sequential:** Each phase must complete before the next begins
+- **Document-heavy:** Each phase produces formal deliverables (SRS, SDD, STD)
+- **Fixed scope:** Requirements are baselined early
+- **Change control:** Changes require formal change requests
+- **Milestone-driven:** Progress measured by phase completion
 
 ### Strengths
 - Simple and easy to understand
@@ -68,11 +68,11 @@ Implementation    ↔  (Code Reviews)
 ```
 
 ### Strengths
-- **Early verification planning** — Test plans created during design
-- **Traceability** — Every requirement traced to test cases
-- **Formal documentation** — Comprehensive, auditable
-- **Quality built-in** — Verification at every level
-- **Regulatory compliance** — Meets standards like DO-178C, IEC 61508
+- **Early verification planning:** Test plans created during design
+- **Traceability:** Every requirement traced to test cases
+- **Formal documentation:** Comprehensive, auditable
+- **Quality built-in:** Verification at every level
+- **Regulatory compliance:** Meets standards like DO-178C, IEC 61508
 
 ### Weaknesses
 - Still sequential (high change cost)
@@ -155,16 +155,16 @@ Many organizations blend Waterfall/V-Model with Agile:
 
 Despite the Agile revolution, these approaches remain valid for:
 
-1. **Regulated industries** — FDA, FAA, DO-178C require formal verification
-2. **Safety-critical systems** — Medical devices, avionics, nuclear systems
-3. **Fixed-price contracts** — Government contracts with fixed scope
-4. **Simple, well-understood projects** — Small scope, clear requirements
-5. **Teams new to Agile** — Waterfall is simpler to understand initially
-6. **Hardware-software integration** — When hardware timelines are fixed
+1. **Regulated industries:** FDA, FAA, DO-178C require formal verification
+2. **Safety-critical systems:** Medical devices, avionics, nuclear systems
+3. **Fixed-price contracts:** Government contracts with fixed scope
+4. **Simple, well-understood projects:** Small scope, clear requirements
+5. **Teams new to Agile:** Waterfall is simpler to understand initially
+6. **Hardware-software integration:** When hardware timelines are fixed
 
 ## Related
 
-- [[00_Agile_Methodology]] — Agile as an alternative approach
-- [[01_Lean_Methodology]] — Lean principles that can improve any methodology
-- [[02_Methodologies_Overview]] — Comparison across all methodologies
-- [[03_Kanban_and_Flow]] — Kanban as a transition from Waterfall
+- [[00_Agile_Methodology]]: Agile as an alternative approach
+- [[01_Lean_Methodology]]: Lean principles that can improve any methodology
+- [[02_Methodologies_Overview]]: Comparison across all methodologies
+- [[03_Kanban_and_Flow]]: Kanban as a transition from Waterfall
