@@ -11,7 +11,7 @@ Most vulnerabilities come from a handful of coding mistakes. Fix these patterns 
 
 ---
 
-## 1. Input Validation — Never Trust the Client
+## 1. Input Validation: Never Trust the Client
 
 ```java
 // ❌ Trusting user input
@@ -65,7 +65,7 @@ return URLEncoder.encode(userInput, StandardCharsets.UTF_8);
 
 ---
 
-## 3. Parameterized Queries — ALWAYS
+## 3. Parameterized Queries: ALWAYS
 
 ```java
 // ❌ SQL Injection
@@ -79,7 +79,7 @@ jdbcTemplate.query(sql, name);
 @Query("SELECT u FROM User u WHERE u.name = :name")
 User findByName(@Param("name") String name);  // Auto-parameterized
 
-// ✅ Dynamic queries — use Criteria API, never string concatenation
+// ✅ Dynamic queries - use Criteria API, never string concatenation
 ```
 
 ---
@@ -97,7 +97,7 @@ public String upload(@RequestParam("file") MultipartFile file) {
     String contentType = file.getContentType();
     if (!ALLOWED_TYPES.contains(contentType)) throw new InvalidFileException();
     
-    // 3. Check magic bytes (not just extension — extension can be faked)
+    // 3. Check magic bytes (not just extension - extension can be faked)
     byte[] magicBytes = Arrays.copyOf(file.getBytes(), 4);
     if (!isAllowedMagicBytes(magicBytes)) throw new InvalidFileException();
     
@@ -113,7 +113,7 @@ public String upload(@RequestParam("file") MultipartFile file) {
 
 ---
 
-## 5. Error Handling — Don't Leak Internals
+## 5. Error Handling: Don't Leak Internals
 
 ```java
 // ❌ Leaks stack trace to client
@@ -133,7 +133,7 @@ public ResponseEntity<ErrorResponse> handle(Exception e) {
 
 ---
 
-## 6. Logging — Log Enough, But Never Secrets
+## 6. Logging: Log Enough, But Never Secrets
 
 ```java
 // ✅ Good logging

@@ -7,7 +7,7 @@ tags:
 
 # 01 Cryptography Basics
 
-Cryptography is the math that keeps secrets secret. You don't need to implement ciphers — you need to know which algorithms to use, when, and how not to misuse them.
+Cryptography is the math that keeps secrets secret. You don't need to implement ciphers; you need to know which algorithms to use, when, and how not to misuse them.
 
 ---
 
@@ -17,15 +17,15 @@ One-way function. Same input → same output. Can't reverse. Used for passwords,
 
 | Algorithm | Output | Status |
 |-----------|:------:|--------|
-| **MD5** | 128-bit | ❌ Broken — never use |
-| **SHA-1** | 160-bit | ❌ Broken — migrate away |
+| **MD5** | 128-bit | ❌ Broken ;  never use |
+| **SHA-1** | 160-bit | ❌ Broken ;  migrate away |
 | **SHA-256** | 256-bit | ✅ Safe |
 | **SHA-512** | 512-bit | ✅ Safe |
 | **bcrypt** | Variable | ✅ Password hashing (slow by design) |
 | **Argon2** | Variable | ✅ Best for passwords (2024+) |
 
 ```java
-// Password hashing — always use bcrypt/argon2, never SHA
+// Password hashing - always use bcrypt/argon2, never SHA
 String hash = BCrypt.hashpw(password, BCrypt.gensalt(12));  // 12 = cost factor
 boolean match = BCrypt.checkpw(attempt, hash);
 ```
@@ -54,7 +54,7 @@ Same key encrypts and decrypts. Fast. Used for bulk data.
 | **ChaCha20-Poly1305** | 256-bit | ✅ Alternative to AES |
 
 ```java
-// AES-GCM encryption — Java
+// AES-GCM encryption - Java
 Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
 GCMParameterSpec gcmSpec = new GCMParameterSpec(128, iv);  // 128-bit auth tag
 cipher.init(Cipher.ENCRYPT_MODE, key, gcmSpec);
@@ -74,7 +74,7 @@ Public key encrypts, private key decrypts. Slow. Used for key exchange, signatur
 
 ---
 
-## TLS — Transport Layer Security
+## TLS: Transport Layer Security
 
 Encrypts data in transit between client and server.
 
@@ -102,7 +102,7 @@ ssl_prefer_server_ciphers on;
 |---------|------|
 | **Certificate** | Binds a public key to an identity (domain, org) |
 | **CA** (Certificate Authority) | Trusted third party that signs certificates |
-| **Self-signed** | Signed by yourself — fine for internal, never for public |
+| **Self-signed** | Signed by yourself ;  fine for internal, never for public |
 | **Let's Encrypt** | Free, automated TLS certificates |
 
 ---
@@ -121,4 +121,4 @@ ssl_prefer_server_ciphers on;
 ## Sources
 
 - OWASP Cryptographic Storage Cheat Sheet
-- Java Crypto API — https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html
+- Java Crypto API: https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html

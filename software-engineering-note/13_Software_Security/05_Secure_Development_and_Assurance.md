@@ -7,13 +7,13 @@ created: 2026-07-21
 
 # Secure Development & Assurance
 
-> "My own experience is that developers with a clean, expressive set of specific security requirements can build a very tight machine. They don't have to be security gurus, but they have to understand what they're trying to build and how it should work." — RICK SMITH
+> "My own experience is that developers with a clean, expressive set of specific security requirements can build a very tight machine. They don't have to be security gurus, but they have to understand what they're trying to build and how it should work." *(RICK SMITH)*
 
-> "The fox knows many things; the hedgehog one big thing." — ARCHILOCHUS
+> "The fox knows many things; the hedgehog one big thing.", ARCHILOCHUS
 
 ## Overview
 
-Chapters 27-28 cover the systematic development of secure systems and the assurance that they will remain secure over their lifetime. Anderson argues there is **no silver bullet** — managing secure development requires *fox knowledge* (knowing many things) rather than *hedgehog knowledge* (knowing one big thing). Security and safety are **emergent properties** that must be baked in from the beginning, not retrofitted.
+Chapters 27-28 cover the systematic development of secure systems and the assurance that they will remain secure over their lifetime. Anderson argues there is **no silver bullet**, managing secure development requires *fox knowledge* (knowing many things) rather than *hedgehog knowledge* (knowing one big thing). Security and safety are **emergent properties** that must be baked in from the beginning, not retrofitted.
 
 ---
 
@@ -24,14 +24,14 @@ Chapters 27-28 cover the systematic development of secure systems and the assura
 1. **"Are we building the right system?"** (Validation)
 2. **"Are we building it right?"** (Verification)
 
-Security engineering has converged with safety engineering: both require systematic thinking about what can go wrong — by accident (safety) or by malice (security). Accidents expose systems to attacks, and attacks degrade systems so they become dangerous.
+Security engineering has converged with safety engineering: both require systematic thinking about what can go wrong, by accident (safety) or by malice (security). Accidents expose systems to attacks, and attacks degrade systems so they become dangerous.
 
 ### 27.2 Risk Management
 
 #### Risk Registers
 - Rate possible bad events on **severity (1-5)** and **probability (1-5)**, multiply for a score (1-25)
 - Write down mitigating measures; assign a senior officer as risk owner
-- **Key failure mode:** political/organizational capture — e.g., UK prioritized terrorism over pandemic preparedness despite pandemics being higher on the risk register
+- **Key failure mode:** political/organizational capture: e.g., UK prioritized terrorism over pandemic preparedness despite pandemics being higher on the risk register
 
 #### Annualized Loss Expectancy (ALE)
 - Standardized by NIST for US government procurements
@@ -60,7 +60,7 @@ Security engineering has converged with safety engineering: both require systema
 #### Hazard Analysis & Elimination
 - **Design hazards out completely** when possible (e.g., motor reversing circuit)
 - Security parallel: minimizing the **Trusted Computing Base (TCB)** is hazard elimination
-- Privacy parallel: contact tracing — central DB vs. Bluetooth contact history on device
+- Privacy parallel: contact tracing: central DB vs. Bluetooth contact history on device
 
 #### Fault Trees / Threat Trees
 - **Top-down:** Start from undesired outcome, work backwards to possible causes
@@ -76,7 +76,7 @@ Security engineering has converged with safety engineering: both require systema
 #### Threat Modeling (Microsoft approach)
 - **Meet-in-the-middle:** List both assets to protect AND assets available to attacker
 - Trace attack paths through the system from module to module
-- Categorize threats: **STRIDE** — Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, Elevation of privilege
+- Categorize threats: **STRIDE:** Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, Elevation of privilege
 - Used for architecture reviews, code review targeting, penetration test targeting
 
 #### "Programming Satan's Computer"
@@ -91,7 +91,7 @@ Security engineering has converged with safety engineering: both require systema
 - **Risk vs. Reward:** Security people often focus too much on loss reduction. If you can double turnover, shareholders prefer that even if losses triple.
 - **Fraud management:** Best results when fraud team reports to **Sales** (opportunity), not Finance (cost center)
 - **Error budgets:** Don't make systems too reliable. If local Internet is 99%, a 99.9% service is fine. Deliberate 0.1% error budget for resilience drills (Netflix "Chaos Monkey")
-- **CVE question:** "Should we aim for zero open CVEs?" — tick-box says yes, but compliance cost may be prohibitive for most firms
+- **CVE question:** "Should we aim for zero open CVEs?": tick-box says yes, but compliance cost may be prohibitive for most firms
 
 ### 27.5 Methodology
 
@@ -106,10 +106,10 @@ Requirements → Specification → Implementation & Unit Testing → Integration
 #### Iterative/Agile Development
 - **Spiral model** (Boehm): proceed through iterations, evaluate risk at each stage
 - **Agile:** "Solve your worst problem. Repeat."
-- **Regression testing** is the core technology — automated daily builds + test suites
+- **Regression testing** is the core technology: automated daily builds + test suites
 - Microsoft's key insight: abolish analyst/programmer/tester distinction → developers own their bugs
 
-#### Security Development Lifecycle (SDL — Microsoft, 2010)
+#### Security Development Lifecycle (SDL: Microsoft, 2010)
 A **waterfall process for security** with five phases:
 
 | Phase | Activities |
@@ -126,7 +126,7 @@ A **waterfall process for security** with five phases:
 - Security patches are gated: pre-release passes through extra tests/reviews
 - **Microsoft's "Patch Tuesday"** (2003): bundled monthly updates
 - Since 2015: Windows home users receive continuous updates
-- Safety-critical systems: patch cycles must re-validate the safety case — expensive (lab cars, real test cars)
+- Safety-critical systems: patch cycles must re-validate the safety case: expensive (lab cars, real test cars)
 
 #### SaaS, DevOps, and DevSecOps
 
@@ -134,7 +134,7 @@ A **waterfall process for security** with five phases:
 - Vendor manages software centrally, can migrate customers incrementally
 - **Canary deployments:** 1% traffic to new version → monitor → roll forward or roll back
 - **Staging environments:** test against snapshots of real customer data
-- Changes the economics of testing — bugs can be fixed extremely quickly
+- Changes the economics of testing: bugs can be fixed extremely quickly
 
 **DevOps → DevSecOps (two ecosystems):**
 
@@ -142,7 +142,7 @@ A **waterfall process for security** with five phases:
 |--------|----------------------|--------------|
 | Primary concern | Integrating tools, automating admin tasks | Reliability at scale |
 | Key reference | SDL extensions, compliance | SRE book, "Building Secure & Reliable Systems" |
-| Approach | "Shift left" — security into codebase, fail fast | Design for recoverability, stop humans touching production |
+| Approach | "Shift left" ;  security into codebase, fail fast | Design for recoverability, stop humans touching production |
 | Key principle | Pre-commit static analysis, automated security testing | Error budgets, compartmentalized microservices, blast-radius limiting |
 
 **Google's BeyondProd:** Crypto API (Tink) forces correct use; key management service required; code provenance, integrity verification, workload isolation.
@@ -160,21 +160,21 @@ A **waterfall process for security** with five phases:
 **Evolution:** Bugtraq (1990s) → Responsible Disclosure → Coordinated Disclosure → Bug Bounties
 
 **CVE System** (since 1999):
-- Common Vulnerabilities and Exposures — assigns numbers to reported vulnerabilities
+- Common Vulnerabilities and Exposures: assigns numbers to reported vulnerabilities
 - CVSS: numerical severity score (local access, complexity, effort, effects, exploit availability)
 - NIST National Vulnerability Database (NVD) integrates all publicly available US government resources
 
 **Zero-day:** Exploit used in the wild before vendor issues a patch. Now commands millions of dollars on vulnerability markets.
 
-**Coordinated Disclosure:** Multi-stakeholder (supply chains mean multiple vendors). Hard with platforms like Linux — thousands of products affected.
+**Coordinated Disclosure:** Multi-stakeholder (supply chains mean multiple vendors). Hard with platforms like Linux, thousands of products affected.
 
 #### Security Incident and Event Management
 
 Four components of an incident response plan:
-1. **Monitoring** — threat intelligence team, honeypots, customer bug reports, CERT engagement
-2. **Repair** — orchestrated response, identify dev teams, notify suppliers and customers
-3. **Distribution** — rapid deployment; "in an emergency, run your normal patch process as fast as possible"
-4. **Reassurance** — brief CEO immediately, have press releases ready, know key phone numbers
+1. **Monitoring:** threat intelligence team, honeypots, customer bug reports, CERT engagement
+2. **Repair:** orchestrated response, identify dev teams, notify suppliers and customers
+3. **Distribution:** rapid deployment; "in an emergency, run your normal patch process as fast as possible"
+4. **Reassurance:** brief CEO immediately, have press releases ready, know key phone numbers
 
 #### Organizational Mismanagement of Risk
 
@@ -184,22 +184,22 @@ Four components of an incident response plan:
 - **Y2K lesson:** Well-defined requirements ("keep working as before") → success
 - **Checklist culture:** Middle managers prefer box-ticking; checklists displace critical thought but don't handle uncertainty
 - **ISO 27001 irony:** Almost every firm hit by a big data breach had ISO 27001 certification
-- **CISO tenure averages ~2 years** — high stress, burnout risk
+- **CISO tenure averages ~2 years:** high stress, burnout risk
 
 ### 27.6 Managing the Team
 
 - **Chief programmer team** (Brooks/Mills): lead + toolsmith + tester + language lawyer
 - **Modern approach:** Hire only ultra-productive engineers; rotate slowly to acquire range of skills
-- **Diversity:** More diverse teams are more effective. "Real change comes when you have enough [diverse members] to change the team culture — three or more."
-- **Standard style:** Sit everyone down for an afternoon to hammer out house style — better team-building than paintballing
+- **Diversity:** More diverse teams are more effective. "Real change comes when you have enough [diverse members] to change the team culture: three or more."
+- **Standard style:** Sit everyone down for an afternoon to hammer out house style; better team-building than paintballing
 - **Bug culture:** Bugs should be declared openly, not quietly fixed (correlated bugs). Air traffic control analogy: controllers declare errors by open outcry.
-- **Security responsibility:** Both — every developer gets security "boot camp" + subject matter experts at multiple levels
+- **Security responsibility:** Both: every developer gets security "boot camp" + subject matter experts at multiple levels
 
 ---
 
 ## Part 2: Assurance and Sustainability (Ch 28)
 
-> "There are two ways of constructing a software design. One way is to make it so simple that there are obviously no deficiencies. And the other way is to make it so complicated that there are no obvious deficiencies." — TONY HOARE
+> "There are two ways of constructing a software design. One way is to make it so simple that there are obviously no deficiencies. And the other way is to make it so complicated that there are no obvious deficiencies." *(TONY HOARE)*
 
 ### 28.1 The Shift from Static to Dynamic Assurance
 
@@ -207,7 +207,7 @@ Four components of an incident response plan:
 **2020 reality:** Products are online, continuously patched, assurance is a **lifetime process**
 
 Key evolution:
-- Old: Two types — phones/laptops (patched monthly) vs. cars/medical devices (test-to-death, no patching)
+- Old: Two types: phones/laptops (patched monthly) vs. cars/medical devices (test-to-death, no patching)
 - New: Everything online → must be patched online → continuous assurance
 
 ### 28.2 Evaluation
@@ -221,7 +221,7 @@ Key evolution:
 | **FIPS 140** | 1994-present | Tamper-resistance for crypto processors | Still used (US), but gap between Level 3 and 4 |
 | **Common Criteria (CC)** | ~2000-present | Vendor-paid CLEFs, protection profiles, EAL1-7 | Captured by vendor interests |
 
-#### Common Criteria — How It Works
+#### Common Criteria: How It Works
 
 - **Target of Evaluation (TOE):** product under test
 - **Evaluation Assurance Level (EAL):** EAL1 (functional testing) to EAL7 (formally verified design)
@@ -233,7 +233,7 @@ Key evolution:
 
 | Problem | Detail |
 |---------|--------|
-| **Cost & bureaucracy** | Several million € and years to navigate — a moat defending cartels |
+| **Cost & bureaucracy** | Several million € and years to navigate ;  a moat defending cartels |
 | **Ignores usability** | Administrative security measures excluded; "user interfaces are somebody else's problem" |
 | **Protection profiles rig markets** | Sponsoring firms design PPs to favor their strengths |
 | **Assumes waterfall** | Cannot cope with normal SDL/monthly patches |
@@ -241,7 +241,7 @@ Key evolution:
 | **No liability** | "Procedures for use of evaluation results in accreditation are outside scope" |
 | **Brand not defended** | Vendors claim "CC evaluated" without actual certification |
 
-**Collaborative Protection Profiles (cPPs, 2015):** Attempt to fix by moving from EAL levels to single industry-collaborative profiles. Result: captured by vendor interests — "secure fax machines" and printers now get cPP certification.
+**Collaborative Protection Profiles (cPPs, 2015):** Attempt to fix by moving from EAL levels to single industry-collaborative profiles. Result: captured by vendor interests; "secure fax machines" and printers now get cPP certification.
 
 #### The Principle of Maximum Complacency (Lerner-Tirole model)
 
@@ -265,18 +265,18 @@ Key evolution:
 |--------|----------|
 | **ENISA (EU Cybersecurity Act 2019)** | EU-wide certification at basic/substantial/high levels |
 | **Cyber Essentials (UK)** | £300 validated self-certification for basic security |
-| **Bitsight** | Private-sector: crawls internet, rates firms by visible vulnerabilities — dominates insurance assessments |
+| **Bitsight** | Private-sector: crawls internet, rates firms by visible vulnerabilities ;  dominates insurance assessments |
 | **ETSI EN 303 645** | Draft IoT security standard: ban default passwords, require update mechanism |
 
 ### 28.3 Metrics and Dynamics of Dependability
 
 #### Reliability Growth Models
 
-- **Single bug / simple case:** Exponential growth — `p = e^(-Et)`
-- **Real large systems:** Growth follows `k/t` (not exponential) — reliability grows **linearly** with testing time
+- **Single bug / simple case:** Exponential growth: `p = e^(-Et)`
+- **Real large systems:** Growth follows `k/t` (not exponential): reliability grows **linearly** with testing time
 - **"If you want MTBF of a million hours, test for a million hours"** (safety-critical systems rule of thumb)
 - **Evolutionary link:** Software testing and biological evolution both preserve diversity while removing minimum bugs/genes consistent with selection pressure
-- **Attack vs. Defence asymmetry:** Attacker has thermodynamics on their side — a small team can find bugs that the defender's vast testing effort missed
+- **Attack vs. Defence asymmetry:** Attacker has thermodynamics on their side, a small team can find bugs that the defender's vast testing effort missed
 
 #### Hostile Review
 
@@ -292,7 +292,7 @@ Key evolution:
 #### Free and Open-Source Software (FOSS)
 
 - **Kerckhoffs' Principle (1883):** Security must depend only on the key, not on secrecy of the technique
-- **Raymond's criteria for FOSS benefit:** common engineering knowledge, failure-sensitive, needs peer review, business-critical, strong network effects — **security passes all five**
+- **Raymond's criteria for FOSS benefit:** common engineering knowledge, failure-sensitive, needs peer review, business-critical, strong network effects; **security passes all five**
 - **Standard model:** Openness helps attack and defence **equally**
 - **Empirical data:** OpenBSD security bugs significantly correlated → openness was beneficial
 
@@ -302,7 +302,7 @@ Key evolution:
 
 - Software in everything → everything connected → safety-critical devices need security patches
 - EU is the world's lead safety regulator; must now incorporate security
-- **"When hackers showed they could change the dose on an infusion pump to a fatal level, the FDA issued a safety advisory — but ignored 300+ models with only safety issues that kill thousands annually"**
+- **"When hackers showed they could change the dose on an infusion pump to a fatal level, the FDA issued a safety advisory, but ignored 300+ models with only safety issues that kill thousands annually"**
 - Public is much more sensitive to adversarial harm than accidental harm (even at far lower probability)
 
 #### Autonomous Vehicle Safety & Security
@@ -311,7 +311,7 @@ Key evolution:
 - Now adding: adversarial ML attacks, remote exploitation, supply-chain security
 - **ISO 21434** (draft): cybersecurity standard for road vehicles
 - **UNECE regulations:** New cybersecurity and software update requirements for connected vehicles
-- **Dieselgate lesson:** Vendors themselves are in the threat model — regulators can't blindly trust industry
+- **Dieselgate lesson:** Vendors themselves are in the threat model: regulators can't blindly trust industry
 
 #### Policy Recommendations
 
@@ -335,16 +335,16 @@ Key evolution:
 
 ## Key Takeaways
 
-1. **No silver bullet** — secure development requires broad knowledge across engineering, psychology, economics, and management
-2. **Security must be baked in** — it's an emergent property, not a retrofit
-3. **Risk management is political** — ALE analysis often justifies predetermined budgets; checklists displace critical thought
-4. **Waterfall for security within agile products** — Microsoft's SDL is essentially waterfall, gated within an iterative overall process
-5. **The attacker has thermodynamics on their side** — a small team can find bugs the defender's vast effort missed
-6. **Hostile review is essential** — friendly evaluations (Common Criteria, ISO 27001) are systematically broken
-7. **Assurance is now dynamic** — pre-market testing is insufficient; lifetime patching and monitoring is the new reality
-8. **Safety and security are converging** — regulators must hire security engineers; standards must mandate development lifecycles
-9. **Sustainability is the hardest problem** — devices lasting decades need security updates for decades, with profound environmental implications
-10. **Culture matters more than process** — good teams with clear requirements beat bureaucratic compliance schemes every time
+1. **No silver bullet:** secure development requires broad knowledge across engineering, psychology, economics, and management
+2. **Security must be baked in:** it's an emergent property, not a retrofit
+3. **Risk management is political:** ALE analysis often justifies predetermined budgets; checklists displace critical thought
+4. **Waterfall for security within agile products:** Microsoft's SDL is essentially waterfall, gated within an iterative overall process
+5. **The attacker has thermodynamics on their side:** a small team can find bugs the defender's vast effort missed
+6. **Hostile review is essential:** friendly evaluations (Common Criteria, ISO 27001) are systematically broken
+7. **Assurance is now dynamic:** pre-market testing is insufficient; lifetime patching and monitoring is the new reality
+8. **Safety and security are converging:** regulators must hire security engineers; standards must mandate development lifecycles
+9. **Sustainability is the hardest problem:** devices lasting decades need security updates for decades, with profound environmental implications
+10. **Culture matters more than process:** good teams with clear requirements beat bureaucratic compliance schemes every time
 
 ---
 
@@ -358,5 +358,5 @@ Key evolution:
 - Howard & LeBlanc, *Writing Secure Code* [929]
 - Raymond, *The Cathedral and the Bazaar* [1587]
 - Petroski, *To Engineer Is Human* (bridge failures and learning from collapse) [1520]
-- ISO 61508 (safety), ISO 26262 (car safety), ISO 21434 (car security — draft)
-- Anderson, Leverett, Clayton — EU report on safety/security regulation [158]
+- ISO 61508 (safety), ISO 26262 (car safety), ISO 21434 (car security: draft)
+- Anderson, Leverett, Clayton: EU report on safety/security regulation [158]

@@ -23,6 +23,7 @@ created: 2026-07-21
 SWEBOK KA 13.2 addresses the organizational structures, standards, and processes that ensure security is systematically planned, implemented, measured, and improved. Security governance bridges the gap between technical security engineering and business risk management.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "Security Governance Stack"
         BIZ[Business Strategy] --> GOV[Governance: Policies, Standards, Compliance]
@@ -32,6 +33,7 @@ graph TB
         METRICS --> GOV
     end
 ```
+
 
 ---
 
@@ -83,9 +85,9 @@ SSE-CMM organizes security engineering into process areas grouped by category:
 
 An SSE-CMM assessment evaluates:
 
-1. **Process capability** — Which capability levels has each process area achieved?
-2. **Process performance** — Are the process areas actually being performed?
-3. **Institutionalization** — Are processes embedded in the organization's way of working?
+1. **Process capability:** Which capability levels has each process area achieved?
+2. **Process performance:** Are the process areas actually being performed?
+3. **Institutionalization:** Are processes embedded in the organization's way of working?
 
 Assessment results are typically used for:
 - Internal improvement planning
@@ -101,6 +103,7 @@ Assessment results are typically used for:
 ISO 27001 defines requirements for establishing, implementing, maintaining, and continually improving an ISMS. It is the most widely adopted international standard for information security management.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "ISMS Plan-Do-Check-Act"
         P["Plan:<br/>Establish ISMS policy,<br/>objectives, processes"] --> D["Do:<br/>Implement and operate<br/>the ISMS"]
@@ -109,6 +112,7 @@ graph TB
         A --> P
     end
 ```
+
 
 ### 3.2 ISO 27001 Structure (2022 Revision)
 
@@ -137,21 +141,22 @@ The 2022 revision reorganized Annex A into 4 themes with 93 controls (down from 
 
 | Control | Description |
 |---------|-------------|
-| A.5.7 | Threat intelligence — collect and analyze threat information |
-| A.5.23 | Information security for cloud services — manage cloud-specific risks |
-| A.5.30 | ICT readiness for business continuity — ensure IT can support continuity |
-| A.7.4 | Physical security monitoring — monitor physical premises for unauthorized access |
-| A.8.9 | Configuration management — manage technology configurations securely |
-| A.8.10 | Information deletion — delete data when no longer needed |
-| A.8.11 | Data masking — mask sensitive data where appropriate |
-| A.8.12 | Data leakage prevention — detect and prevent unauthorized data exfiltration |
-| A.8.16 | Monitoring activities — monitor networks, systems, and applications |
-| A.8.23 | Web filtering — manage access to external websites |
-| A.8.28 | Secure coding — implement secure coding practices |
+| A.5.7 | Threat intelligence ;  collect and analyze threat information |
+| A.5.23 | Information security for cloud services ;  manage cloud-specific risks |
+| A.5.30 | ICT readiness for business continuity ;  ensure IT can support continuity |
+| A.7.4 | Physical security monitoring ;  monitor physical premises for unauthorized access |
+| A.8.9 | Configuration management ;  manage technology configurations securely |
+| A.8.10 | Information deletion ;  delete data when no longer needed |
+| A.8.11 | Data masking ;  mask sensitive data where appropriate |
+| A.8.12 | Data leakage prevention ;  detect and prevent unauthorized data exfiltration |
+| A.8.16 | Monitoring activities ;  monitor networks, systems, and applications |
+| A.8.23 | Web filtering ;  manage access to external websites |
+| A.8.28 | Secure coding ;  implement secure coding practices |
 
 ### 3.4 Certification Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph "ISO 27001 Certification"
         A[Gap Analysis] --> B[ISMS Implementation]
@@ -164,6 +169,7 @@ graph LR
     end
 ```
 
+
 | Phase | Description | Duration |
 |-------|-------------|----------|
 | **Gap analysis** | Compare current state to ISO 27001 requirements | 1-2 months |
@@ -174,16 +180,17 @@ graph LR
 | **Certification** | Issued if no major nonconformities found | Valid for 3 years |
 | **Surveillance audits** | Annual check that ISMS is maintained and improving | Annual |
 
+
 ### 3.5 ISO 27002 Implementation Guidance
 
 ISO/IEC 27002:2022 provides implementation guidance for the Annex A controls. For each control, it specifies:
 
-- **Control title and description** — what the control does
-- **Purpose** — why the control is needed
-- **Implementation guidance** — how to implement the control
-- **Other information** — related controls, references, considerations
+- **Control title and description:** what the control does
+- **Purpose:** why the control is needed
+- **Implementation guidance:** how to implement the control
+- **Other information:** related controls, references, considerations
 
-ISO 27002 is not certifiable itself — it is a reference document that organizations use to implement the controls required by ISO 27001.
+ISO 27002 is not certifiable itself; it is a reference document that organizations use to implement the controls required by ISO 27001.
 
 ---
 
@@ -216,11 +223,11 @@ Board / Executive Committee
 
 | Document Level | Example | Binding? |
 |----------------|---------|----------|
-| **Policy** | "All customer data must be encrypted at rest and in transit" | Yes — mandatory |
-| **Standard** | "AES-256-GCM for encryption at rest; TLS 1.3 for transit" | Yes — mandatory |
-| **Procedure** | "To encrypt a database: 1) Enable TDE, 2) Configure key rotation, 3) Verify..." | Yes — mandatory |
-| **Guideline** | "Consider using HSM-backed keys for high-sensitivity databases" | No — advisory |
-| **Baseline** | "All servers must meet CIS Level 1 benchmarks" | Yes — minimum |
+| **Policy** | "All customer data must be encrypted at rest and in transit" | Yes ;  mandatory |
+| **Standard** | "AES-256-GCM for encryption at rest; TLS 1.3 for transit" | Yes ;  mandatory |
+| **Procedure** | "To encrypt a database: 1) Enable TDE, 2) Configure key rotation, 3) Verify..." | Yes ;  mandatory |
+| **Guideline** | "Consider using HSM-backed keys for high-sensitivity databases" | No ;  advisory |
+| **Baseline** | "All servers must meet CIS Level 1 benchmarks" | Yes ;  minimum |
 
 ### 4.3 Security Committee Charter
 
@@ -275,11 +282,11 @@ A security committee typically includes:
 
 | Level | Description | Metrics Type |
 |-------|-------------|-------------|
-| **1 — Ad hoc** | No formal metrics | Anecdotal, incident-driven |
-| **2 — Reactive** | Metrics collected after incidents | Count of incidents, breach costs |
-| **3 — Proactive** | Regular metrics collection and reporting | Vulnerability counts, patch compliance, training rates |
-| **4 — Predictive** | Metrics used to predict and prevent | Trend analysis, risk scoring, threat modeling |
-| **5 — Optimizing** | Metrics drive continuous improvement | ROI of security investments, risk reduction quantified |
+| **1 ;  Ad hoc** | No formal metrics | Anecdotal, incident-driven |
+| **2 ;  Reactive** | Metrics collected after incidents | Count of incidents, breach costs |
+| **3 ;  Proactive** | Regular metrics collection and reporting | Vulnerability counts, patch compliance, training rates |
+| **4 ;  Predictive** | Metrics used to predict and prevent | Trend analysis, risk scoring, threat modeling |
+| **5 ;  Optimizing** | Metrics drive continuous improvement | ROI of security investments, risk reduction quantified |
 
 ---
 
@@ -289,19 +296,20 @@ A security committee typically includes:
 
 | Framework | Scope | Mandatory? | Certification | Focus |
 |-----------|-------|-----------|---------------|-------|
-| **ISO/IEC 27001** | Information security management | Voluntary (market-driven) | Yes — accredited body | ISMS — comprehensive security management |
+| **ISO/IEC 27001** | Information security management | Voluntary (market-driven) | Yes ;  accredited body | ISMS; comprehensive security management |
 | **SOC 2 Type II** | Service organization controls | Voluntary (customer-driven) | Attestation report | Trust service criteria (security, availability, processing integrity, confidentiality, privacy) |
-| **NIST CSF** | Cybersecurity risk management | Voluntary (federal: BOD 23-01 for agencies) | No — self-assessment | Identify, Protect, Detect, Respond, Recover |
-| **PCI DSS** | Payment card data | Mandatory for card processors | Yes — QSA assessment | Protect cardholder data |
-| **HIPAA** | Healthcare information | Mandatory for US healthcare | No — audit/enforcement | Protect health information (PHI) |
-| **GDPR** | Personal data (EU) | Mandatory for EU data processing | No — regulatory enforcement | Data protection and privacy |
-| **FedRAMP** | US federal cloud services | Mandatory for federal cloud | Yes — 3PAO assessment | Cloud security authorization |
+| **NIST CSF** | Cybersecurity risk management | Voluntary (federal: BOD 23-01 for agencies) | No ;  self-assessment | Identify, Protect, Detect, Respond, Recover |
+| **PCI DSS** | Payment card data | Mandatory for card processors | Yes ;  QSA assessment | Protect cardholder data |
+| **HIPAA** | Healthcare information | Mandatory for US healthcare | No ;  audit/enforcement | Protect health information (PHI) |
+| **GDPR** | Personal data (EU) | Mandatory for EU data processing | No ;  regulatory enforcement | Data protection and privacy |
+| **FedRAMP** | US federal cloud services | Mandatory for federal cloud | Yes ;  3PAO assessment | Cloud security authorization |
 
 ### 6.2 NIST Cybersecurity Framework (CSF) 2.0
 
 The updated NIST CSF 2.0 (released February 2024) added a sixth function:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph "NIST CSF 2.0 Functions"
         ID[Identify] --> PR[Protect]
@@ -313,14 +321,16 @@ graph LR
     end
 ```
 
-| Function | Description | Example Categories |
-|----------|-------------|-------------------|
-| **Govern (GV)** | Establish and monitor cybersecurity risk management strategy | Organizational context, risk management strategy, roles, policy |
-| **Identify (ID)** | Understand assets, risks, and the business context | Asset management, risk assessment, supply chain risk |
-| **Protect (PR)** | Implement safeguards for critical services | Identity management, data security, platform security, technology resilience |
-| **Detect (DE)** | Identify cybersecurity events in a timely manner | Continuous monitoring, adverse event analysis |
-| **Respond (RS)** | Take action regarding detected incidents | Incident management, analysis, reporting, mitigation |
-| **Recover (RC)** | Restore capabilities impaired by incidents | Incident recovery, communication |
+
+| Function          | Description                                                  | Example Categories                                                           |
+| ----------------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------- |
+| **Govern (GV)**   | Establish and monitor cybersecurity risk management strategy | Organizational context, risk management strategy, roles, policy              |
+| **Identify (ID)** | Understand assets, risks, and the business context           | Asset management, risk assessment, supply chain risk                         |
+| **Protect (PR)**  | Implement safeguards for critical services                   | Identity management, data security, platform security, technology resilience |
+| **Detect (DE)**   | Identify cybersecurity events in a timely manner             | Continuous monitoring, adverse event analysis                                |
+| **Respond (RS)**  | Take action regarding detected incidents                     | Incident management, analysis, reporting, mitigation                         |
+| **Recover (RC)**  | Restore capabilities impaired by incidents                   | Incident recovery, communication                                             |
+
 
 ### 6.3 SOC 2 Trust Service Criteria
 
@@ -347,6 +357,7 @@ SOC 2 Type II evaluates controls against five Trust Service Criteria:
 Traditional security operated as a gate at the end of development: "submit for security review." In Agile/DevOps, this creates bottlenecks that teams route around. Modern security adapts by becoming an enabler embedded in the development process.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph "Traditional: Security as Gate"
         DEV1[Develop] --> SEC1[Security Review] --> DEPLOY1[Deploy]
@@ -358,6 +369,7 @@ graph LR
         SEC3[Security Sprints] -.-> AUTO
     end
 ```
+
 
 ### 7.2 Shift-Left Security
 
@@ -388,12 +400,12 @@ Security champions are developers who receive additional security training and s
 
 Dedicated security sprints (every 3-5 sprints) focus on:
 
-1. **Technical debt remediation** — address accumulated security findings
-2. **Dependency updates** — update vulnerable libraries and frameworks
-3. **Security testing** — run comprehensive DAST scans, penetration tests
-4. **Threat model updates** — review architecture changes since last sprint
-5. **Security tooling improvement** — tune SAST rules, add new checks
-6. **Security training** — team workshops on emerging threats
+1. **Technical debt remediation:** address accumulated security findings
+2. **Dependency updates:** update vulnerable libraries and frameworks
+3. **Security testing:** run comprehensive DAST scans, penetration tests
+4. **Threat model updates:** review architecture changes since last sprint
+5. **Security tooling improvement:** tune SAST rules, add new checks
+6. **Security training:** team workshops on emerging threats
 
 ### 7.5 Security Automation in CI/CD
 
@@ -407,6 +419,7 @@ Dedicated security sprints (every 3-5 sprints) focus on:
 | **Runtime** | RASP, WAF, monitoring, anomaly detection | Datadog, Falco, Aqua |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph "CI/CD Security Pipeline"
         A[Code Commit] --> B{SAST + Secret Scan}
@@ -422,6 +435,7 @@ graph LR
         F -->|Fail| H
     end
 ```
+
 
 ---
 
@@ -451,7 +465,7 @@ Phishing simulations are the most effective security awareness tool:
 | **Training completion** | % of clickers who completed remedial training | 100% |
 
 **Simulation best practices:**
-1. Never shame or punish employees who click — use it as a learning moment
+1. Never shame or punish employees who click: use it as a learning moment
 2. Vary difficulty levels (obvious typos to highly targeted spear-phishing)
 3. Provide immediate feedback when someone clicks
 4. Track trends over time, not just individual incidents
@@ -471,13 +485,13 @@ Phishing simulations are the most effective security awareness tool:
 
 ## 9. Key Takeaways
 
-1. **SSE-CMM provides a maturity model for security engineering processes** — organizations assess their capability level across 20 process areas to identify improvement priorities.
-2. **ISO 27001:2022 is the international gold standard for ISMS certification** — the 2022 revision reorganized Annex A into 4 themes with 93 controls, adding cloud security, threat intelligence, and secure coding.
-3. **NIST CSF 2.0 added the Govern function** — emphasizing that cybersecurity risk management must be driven from the top of the organization.
-4. **Security governance requires clear roles** — the CISO owns strategy, the security committee approves policy and accepts risk, security champions embed expertise in development teams.
-5. **Shift-left security works when automated** — SAST, SCA, DAST, and policy-as-code in CI/CD pipelines catch vulnerabilities before production without slowing delivery.
-6. **Metrics drive improvement** — track vulnerability MTTR, phishing click rates, patch compliance, and training completion; use trends, not point-in-time snapshots.
-7. **Security culture is the ultimate defense** — a proactive security culture where every employee is a sensor is more valuable than any tool.
+1. **SSE-CMM provides a maturity model for security engineering processes**, organizations assess their capability level across 20 process areas to identify improvement priorities.
+2. **ISO 27001:2022 is the international gold standard for ISMS certification**, the 2022 revision reorganized Annex A into 4 themes with 93 controls, adding cloud security, threat intelligence, and secure coding.
+3. **NIST CSF 2.0 added the Govern function:** emphasizing that cybersecurity risk management must be driven from the top of the organization.
+4. **Security governance requires clear roles:** the CISO owns strategy, the security committee approves policy and accepts risk, security champions embed expertise in development teams.
+5. **Shift-left security works when automated:** SAST, SCA, DAST, and policy-as-code in CI/CD pipelines catch vulnerabilities before production without slowing delivery.
+6. **Metrics drive improvement:** track vulnerability MTTR, phishing click rates, patch compliance, and training completion; use trends, not point-in-time snapshots.
+7. **Security culture is the ultimate defense:** a proactive security culture where every employee is a sensor is more valuable than any tool.
 
 ---
 

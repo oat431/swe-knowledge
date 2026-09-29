@@ -26,7 +26,7 @@ Internet → Firewall → WAF → Load Balancer → TLS Termination → App
 
 ---
 
-## TLS 1.3 — Minimum Standard
+## TLS 1.3: Minimum Standard
 
 ```nginx
 server {
@@ -39,14 +39,14 @@ server {
     ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256;
     ssl_prefer_server_ciphers on;
     
-    # HSTS — enforce HTTPS for 1 year
+    # HSTS - enforce HTTPS for 1 year
     add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
 }
 ```
 
 ---
 
-## mTLS — Both Sides Authenticate
+## mTLS: Both Sides Authenticate
 
 Standard TLS: client verifies server. mTLS: **both** verify each other. Essential for service-to-service in zero-trust.
 
@@ -77,7 +77,7 @@ server:
 
 ---
 
-## Common Ports — Know What's Open
+## Common Ports: Know What's Open
 
 | Port | Service | Should Be Public? |
 |:----:|---------|:-----------------:|
@@ -93,7 +93,7 @@ server:
 ```bash
 # Scan your own server
 nmap -sV your-server.com
-# If ports 3306, 6379, 27017 show — CLOSE THEM NOW
+# If ports 3306, 6379, 27017 show - CLOSE THEM NOW
 ```
 
 ---
@@ -110,6 +110,6 @@ nmap -sV your-server.com
 
 ## Sources
 
-- Mozilla SSL Configuration Generator — https://ssl-config.mozilla.org/
-- Let's Encrypt — https://letsencrypt.org/
-- NIST Zero Trust Architecture — SP 800-207
+- Mozilla SSL Configuration Generator: https://ssl-config.mozilla.org/
+- Let's Encrypt: https://letsencrypt.org/
+- NIST Zero Trust Architecture: SP 800-207

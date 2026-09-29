@@ -48,7 +48,7 @@ Three levels of verification:
 
 ---
 
-## SOC 2 — The Five Trust Criteria
+## SOC 2: The Five Trust Criteria
 
 | Criteria | What It Means |
 |----------|--------------|
@@ -62,7 +62,7 @@ Three levels of verification:
 
 ---
 
-## GDPR — Quick Compliance Checklist
+## GDPR: Quick Compliance Checklist
 
 | Requirement | Implementation |
 |------------|---------------|
@@ -94,12 +94,12 @@ public void deleteAccount(Authentication auth) {
 
 ## Compliance != Security
 
-> **Compliance is a snapshot. Security is continuous.** You can be compliant and still get breached. Frameworks are the minimum — go beyond them.
+> **Compliance is a snapshot. Security is continuous.** You can be compliant and still get breached. Frameworks are the minimum; go beyond them.
 
 ---
 
 ## Sources
 
-- OWASP ASVS — https://owasp.org/www-project-application-security-verification-standard/
-- NIST CSF — https://www.nist.gov/cyberframework
-- GDPR — https://gdpr.eu/
+- OWASP ASVS: https://owasp.org/www-project-application-security-verification-standard/
+- NIST CSF: https://www.nist.gov/cyberframework
+- GDPR: https://gdpr.eu/

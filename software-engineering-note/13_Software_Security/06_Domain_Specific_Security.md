@@ -40,6 +40,7 @@ General-purpose security principles from [[01_Security_Fundamentals]] and [[02_P
 Cloud providers and customers share security duties, but the boundary shifts depending on the service model:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "IaaS"
         direction TB
@@ -57,6 +58,7 @@ graph TB
         C2[Provider: Everything else]
     end
 ```
+
 
 | Layer | IaaS | PaaS | SaaS |
 |-------|------|------|------|
@@ -146,13 +148,14 @@ Secrets (API keys, database credentials, TLS certificates, encryption keys) must
 
 | Approach | Description | Risk Level |
 |----------|-------------|------------|
-| Hardcoded in source | Credentials in config files or environment | **Critical** — leaked in version control |
-| Environment variables | Injected at runtime | **High** — visible in process listings, logs |
-| Configuration files | External config with restricted permissions | **Medium** — file permissions must be enforced |
-| Secrets management service | Vault, AWS Secrets Manager, Azure Key Vault | **Low** — centralized, audited, rotated |
-| Ephemeral credentials | Short-lived tokens from identity broker | **Minimal** — no persistent secrets to steal |
+| Hardcoded in source | Credentials in config files or environment | **Critical** ;  leaked in version control |
+| Environment variables | Injected at runtime | **High** ;  visible in process listings, logs |
+| Configuration files | External config with restricted permissions | **Medium** ;  file permissions must be enforced |
+| Secrets management service | Vault, AWS Secrets Manager, Azure Key Vault | **Low** ;  centralized, audited, rotated |
+| Ephemeral credentials | Short-lived tokens from identity broker | **Minimal** ;  no persistent secrets to steal |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'actorBkg':'#19362D','actorBorder':'#1FB854','actorTextColor':'#CDD3D1','actorLineColor':'#1FB854','signalColor':'#CDD3D1','signalTextColor':'#CDD3D1','labelBoxBkgColor':'#161212','labelBoxBorderColor':'#1FB854','labelTextColor':'#CDD3D1','loopTextColor':'#CAC9C9','noteBkgColor':'#1EB88E','noteTextColor':'#000C07','activationBkgColor':'#1EB88E','activationBorderColor':'#1FB8AB','sequenceNumberColor':'#000000','background':'#1B1717','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 sequenceDiagram
     participant App as Application
     participant Vault as Secrets Vault
@@ -164,6 +167,7 @@ sequenceDiagram
     DB-->>App: Connection established
     Note over App,DB: Credential expires after TTL<br/>App must re-request
 ```
+
 
 **HashiCorp Vault**, **AWS Secrets Manager**, **Azure Key Vault**, and **GCP Secret Manager** all provide:
 - Centralized secret storage with encryption at rest
@@ -192,7 +196,7 @@ IoT devices present a uniquely large attack surface due to scale, heterogeneity,
 
 IoT devices communicate in mesh networks, peer-to-peer, or through gateways. Securing these channels:
 
-```mermaid
+mermaid
 graph LR
     subgraph "IoT Network"
         D1[Sensor A] -->|Encrypted| GW[Gateway]
@@ -206,7 +210,7 @@ graph LR
         S3[Message Encryption]
         S4[Firmware Integrity]
     end
-```
+
 
 | Security Layer | IoT-Appropriate Technology |
 |----------------|---------------------------|
@@ -228,11 +232,11 @@ graph LR
 Firmware is the primary attack surface for embedded IoT devices:
 
 **Static analysis techniques:**
-1. **Firmware extraction** — dump flash memory via JTAG, SPI, or UART interfaces
-2. **Filesystem mounting** — extract and mount squashfs, JFFS2, or CramFS images
-3. **Binary analysis** — use Ghidra or IDA Pro to reverse-engineer firmware binaries
-4. **Credential harvesting** — search for hardcoded passwords, API keys, and certificates
-5. **Vulnerability scanning** — check for known vulnerable libraries (BusyBox, OpenSSL versions)
+1. **Firmware extraction:** dump flash memory via JTAG, SPI, or UART interfaces
+2. **Filesystem mounting:** extract and mount squashfs, JFFS2, or CramFS images
+3. **Binary analysis:** use Ghidra or IDA Pro to reverse-engineer firmware binaries
+4. **Credential harvesting:** search for hardcoded passwords, API keys, and certificates
+5. **Vulnerability scanning:** check for known vulnerable libraries (BusyBox, OpenSSL versions)
 
 **Dynamic analysis:**
 - Emulate firmware with QEMU to observe runtime behavior
@@ -246,12 +250,12 @@ Standard cryptographic algorithms may be too expensive for microcontrollers with
 
 | Algorithm | Key Size | RAM Requirement | Suitability |
 |-----------|----------|-----------------|-------------|
-| RSA-2048 | 2048-bit | ~10 KB | Poor — too memory-intensive |
-| ECDSA P-256 | 256-bit | ~2 KB | Good — widely supported |
-| Ed25519 | 256-bit | ~1.5 KB | Good — fast verification |
-| AES-128 | 128-bit | ~0.5 KB | Excellent — hardware acceleration common |
-| ChaCha20-Poly1305 | 256-bit | ~1 KB | Good — no hardware dependency |
-| Ascon | 128-bit | ~0.3 KB | Excellent — NIST lightweight crypto winner |
+| RSA-2048 | 2048-bit | ~10 KB | Poor ;  too memory-intensive |
+| ECDSA P-256 | 256-bit | ~2 KB | Good ;  widely supported |
+| Ed25519 | 256-bit | ~1.5 KB | Good ;  fast verification |
+| AES-128 | 128-bit | ~0.5 KB | Excellent ;  hardware acceleration common |
+| ChaCha20-Poly1305 | 256-bit | ~1 KB | Good ;  no hardware dependency |
+| Ascon | 128-bit | ~0.3 KB | Excellent ;  NIST lightweight crypto winner |
 
 **NIST Lightweight Cryptography (LWC) standardization** selected Ascon in 2023 as the preferred algorithm for constrained environments, offering authenticated encryption with associated data (AEAD) in minimal footprint.
 
@@ -264,6 +268,7 @@ Standard cryptographic algorithms may be too expensive for microcontrollers with
 Machine learning systems introduce a new class of security concerns beyond traditional software. The model itself, its training data, and the inference pipeline all become attack surfaces.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "Training Phase"
         TD[Training Data] -->|Poisoning| M[Model]
@@ -280,6 +285,7 @@ graph TB
         M -->|Membership Inference| A
     end
 ```
+
 
 ### 4.2 Attack Types
 
@@ -311,10 +317,10 @@ graph TB
 
 The ML supply chain introduces dependencies on:
 
-- **Pre-trained models** from Hugging Face, PyTorch Hub, or TensorFlow Hub — may contain backdoors
-- **Training datasets** (LAION, Common Crawl) — may contain poisoned, biased, or copyrighted data
-- **Libraries** (PyTorch, TensorFlow, scikit-learn) — traditional software vulnerabilities
-- **Compute infrastructure** — GPU drivers, CUDA, cloud ML platforms
+- **Pre-trained models** from Hugging Face, PyTorch Hub, or TensorFlow Hub; may contain backdoors
+- **Training datasets** (LAION, Common Crawl): may contain poisoned, biased, or copyrighted data
+- **Libraries** (PyTorch, TensorFlow, scikit-learn): traditional software vulnerabilities
+- **Compute infrastructure:** GPU drivers, CUDA, cloud ML platforms
 
 **Mitigations:** Model cards documenting provenance, dataset datasheets, SBOM for ML pipelines, and integrity verification of downloaded models.
 
@@ -357,6 +363,7 @@ Mobile apps are distributed as binaries that users can reverse-engineer:
 Certificate pinning prevents man-in-the-middle attacks by validating that the server's certificate matches an expected value:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 sequenceDiagram
     participant App as Mobile App
     participant Proxy as Attacker Proxy
@@ -372,6 +379,7 @@ sequenceDiagram
     Note over App: Pin check PASSES<br/>Certificate matches pinned value
     App->>Server: Request proceeds
 ```
+
 
 **Implementation approaches:**
 
@@ -419,12 +427,14 @@ Rate limiting protects APIs from abuse, brute force, and denial of service:
 | **Adaptive limiting** | Dynamic limits based on server load and anomaly detection | Production-grade defense |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     R[Request] --> RL{Rate Limiter}
     RL -->|Under limit| P[Process Request]
     RL -->|Over limit| D[429 Too Many Requests]
     RL -->|Over limit, retry-after| H[Retry-After Header]
 ```
+
 
 ### 6.3 API Input Validation
 
@@ -473,12 +483,12 @@ APIs must validate all inputs at the boundary:
 
 ## 8. Key Takeaways
 
-1. **Shared responsibility does not mean provider responsibility** — in cloud IaaS, customers own OS, application, and data security.
-2. **Container escape is the critical cloud-native threat** — avoid privileged mode, drop capabilities, keep runtimes patched.
-3. **IoT devices are deployed for decades with minimal update capability** — design security into the hardware root of trust and signed OTA mechanism from day one.
-4. **ML models are attack surfaces** — data poisoning, adversarial examples, and model stealing require dedicated defenses beyond traditional software security.
-5. **Mobile apps are distributed binaries** — obfuscation, certificate pinning, and runtime integrity checks are essential because attackers control the device.
-6. **API security is authorization security** — BOLA/BFLA (broken function-level authorization) are the top API vulnerabilities; validate authorization at every object access, not just endpoint access.
+1. **Shared responsibility does not mean provider responsibility:** in cloud IaaS, customers own OS, application, and data security.
+2. **Container escape is the critical cloud-native threat:** avoid privileged mode, drop capabilities, keep runtimes patched.
+3. **IoT devices are deployed for decades with minimal update capability**; design security into the hardware root of trust and signed OTA mechanism from day one.
+4. **ML models are attack surfaces:** data poisoning, adversarial examples, and model stealing require dedicated defenses beyond traditional software security.
+5. **Mobile apps are distributed binaries:** obfuscation, certificate pinning, and runtime integrity checks are essential because attackers control the device.
+6. **API security is authorization security:** BOLA/BFLA (broken function-level authorization) are the top API vulnerabilities; validate authorization at every object access, not just endpoint access.
 
 ---
 

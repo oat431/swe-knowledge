@@ -36,7 +36,7 @@ A CVE in ANY of these = your app is vulnerable.
 | **Trivy** | Container + dependency scanning. |
 
 ```yaml
-# GitHub Dependabot — auto-update vulnerable deps
+# GitHub Dependabot - auto-update vulnerable deps
 version: 2
 updates:
   - package-ecosystem: "maven"
@@ -70,7 +70,7 @@ A list of every component in your software. Becoming mandatory (US Executive Ord
 ```bash
 # Generate SBOM with CycloneDX Maven plugin
 mvn cyclonedx:makeAggregateBom
-# Output: target/bom.xml — machine-readable inventory
+# Output: target/bom.xml - machine-readable inventory
 ```
 
 ---
@@ -93,7 +93,7 @@ mvn cyclonedx:makeAggregateBom
 | **Pin versions, not ranges** | `2.4.1` not `^2.4.0` |
 | **Minimize dependencies** | If you only need 1 function, copy it (with attribution) |
 | **Regular updates** | Auto-merge patch updates. Review minor/major. |
-| **Audit periodically** | `mvn dependency:analyze` — find unused deps |
+| **Audit periodically** | `mvn dependency:analyze` ;  find unused deps |
 | **Private registry** | Proxy/cache Maven Central. Block known-bad packages. |
 
 ```xml
@@ -109,6 +109,6 @@ mvn cyclonedx:makeAggregateBom
 
 ## Sources
 
-- OWASP Dependency-Check — https://owasp.org/www-project-dependency-check/
-- Snyk — https://snyk.io/
-- CycloneDX SBOM — https://cyclonedx.org/
+- OWASP Dependency-Check: https://owasp.org/www-project-dependency-check/
+- Snyk: https://snyk.io/
+- CycloneDX SBOM: https://cyclonedx.org/

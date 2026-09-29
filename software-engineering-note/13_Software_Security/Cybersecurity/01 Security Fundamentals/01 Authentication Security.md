@@ -11,14 +11,14 @@ Authentication is the most attacked surface. Get it wrong and everything else is
 
 ---
 
-## Password Storage — NEVER Plaintext
+## Password Storage: NEVER Plaintext
 
 ```java
 // ❌ NEVER do this
-user.setPassword(password);  // Stored as-is — breach = all passwords exposed
+user.setPassword(password);  // Stored as-is - breach = all passwords exposed
 
 // ❌ Even hashing with SHA isn't enough
-String hash = DigestUtils.sha256Hex(password);  // Too fast — brute-forceable
+String hash = DigestUtils.sha256Hex(password);  // Too fast - brute-forceable
 
 // ✅ bcrypt with salt and cost factor
 String hash = BCrypt.hashpw(password, BCrypt.gensalt(12));
@@ -100,7 +100,7 @@ if (!"my-auth-server".equals(jwt.getIssuer().toString())) {
 ## Rate Limiting Login
 
 ```java
-// Prevent brute force — 5 attempts per username per 15 minutes
+// Prevent brute force - 5 attempts per username per 15 minutes
 @PostMapping("/login")
 @RateLimiter(name = "loginLimiter", fallbackMethod = "loginRateLimited")
 public Token login(@RequestBody LoginRequest request) {
@@ -130,4 +130,4 @@ public Token loginRateLimited(LoginRequest request, Exception e) {
 ## Sources
 
 - OWASP Authentication Cheat Sheet
-- JWT Best Practices — https://datatracker.ietf.org/doc/html/rfc8725
+- JWT Best Practices: https://datatracker.ietf.org/doc/html/rfc8725

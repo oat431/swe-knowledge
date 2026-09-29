@@ -67,7 +67,7 @@ spec:
         type: RuntimeDefault     # Restrict syscalls
 ```
 
-### RBAC — Least Privilege
+### RBAC: Least Privilege
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -80,7 +80,7 @@ rules:
   resources: ["configmaps", "secrets"]
   verbs: ["get", "list"]
   resourceNames: ["order-service-config", "order-db-credentials"]
-# Only what order-service NEEDS — not wildcards
+# Only what order-service NEEDS - not wildcards
 ```
 
 ---
@@ -97,7 +97,7 @@ rules:
 
 ---
 
-## IAM — The Hardest Cloud Skill
+## IAM: The Hardest Cloud Skill
 
 ```json
 // ❌ Too broad
@@ -126,6 +126,6 @@ rules:
 
 ## Sources
 
-- Docker Security — https://docs.docker.com/engine/security/
-- Kubernetes Security — https://kubernetes.io/docs/concepts/security/
-- AWS Well-Architected — Security Pillar
+- Docker Security: https://docs.docker.com/engine/security/
+- Kubernetes Security: https://kubernetes.io/docs/concepts/security/
+- AWS Well-Architected: Security Pillar

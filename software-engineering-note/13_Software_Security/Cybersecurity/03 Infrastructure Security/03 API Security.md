@@ -22,7 +22,7 @@ Client → HTTPS → WAF → API Gateway → Auth → Rate Limit → App → DB
 ## CORS (Cross-Origin Resource Sharing)
 
 ```java
-// ❌ Too permissive — allows any site to call your API
+// ❌ Too permissive - allows any site to call your API
 @CrossOrigin(origins = "*")
 
 // ✅ Restricted to your domains
@@ -45,7 +45,7 @@ spring:
 
 ---
 
-## Rate Limiting — Resilience4j + Bucket4j
+## Rate Limiting: Resilience4j + Bucket4j
 
 ```java
 // Per-IP rate limiting
@@ -82,7 +82,7 @@ public Data getData() { ... }
 | **Field suggestion** | Introspection reveals schema | Disable introspection in production |
 
 ```java
-// Netflix DGS — query complexity limits
+// Netflix DGS - query complexity limits
 @Configuration
 public class GraphQLConfig {
     @Bean
@@ -120,7 +120,7 @@ public class ApiKeyFilter extends OncePerRequestFilter {
 
 | Rule | Why |
 |------|-----|
-| **Short, random keys** | `sk_abc123...` — not sequential. Use `UUID` or `SecureRandom`. |
+| **Short, random keys** | `sk_abc123...` ;  not sequential. Use `UUID` or `SecureRandom`. |
 | **Hash before storing** | Like passwords. If DB leaks, keys are still safe. |
 | **Scoped** | Key for "read orders" can't "delete orders" |
 | **Expirable** | Auto-expire unused keys after 90 days |
@@ -142,5 +142,5 @@ public class ApiKeyFilter extends OncePerRequestFilter {
 
 ## Sources
 
-- OWASP API Security Top 10 — https://owasp.org/www-project-api-security/
-- GraphQL Security — https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html
+- OWASP API Security Top 10: https://owasp.org/www-project-api-security/
+- GraphQL Security: https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html

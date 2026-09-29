@@ -52,7 +52,7 @@ environment:
 |------|----------|
 | **HashiCorp Vault** | Enterprise. Dynamic secrets, auto-rotation, audit logging. |
 | **AWS Secrets Manager** | AWS-native. Auto-rotation for RDS. |
-| **Kubernetes Secrets** | K8s-native. Base64 (NOT encrypted at rest by default — enable!). |
+| **Kubernetes Secrets** | K8s-native. Base64 (NOT encrypted at rest by default ;  enable!). |
 | **SOPS (Mozilla)** | Encrypt secrets in git. Good for GitOps. |
 | **.env + .gitignore** | Development only. NEVER for production. |
 
@@ -71,7 +71,7 @@ VaultTemplate vault = new VaultTemplate(
 VaultResponseSupport<DbCredentials> response = vault.read(
     "database/creds/readonly", DbCredentials.class);
 DbCredentials creds = response.getData();
-// username, password — auto-generated, short-lived, auto-revoked
+// username, password - auto-generated, short-lived, auto-revoked
 ```
 
 ---
@@ -79,7 +79,7 @@ DbCredentials creds = response.getData();
 ## Kubernetes Secrets (with Encryption at Rest)
 
 ```yaml
-# Enable encryption at rest — cluster-level config
+# Enable encryption at rest - cluster-level config
 apiVersion: apiserver.config.k8s.io/v1
 kind: EncryptionConfiguration
 resources:
@@ -93,7 +93,7 @@ resources:
 ```
 
 ```yaml
-# Mount secret as file (not env var — more secure)
+# Mount secret as file (not env var - more secure)
 apiVersion: v1
 kind: Pod
 spec:
@@ -123,7 +123,7 @@ trufflehog git file://. --since-commit HEAD~100
 # 2. THEN clean git history (BFG Repo-Cleaner, git filter-branch)
 # 3. Force push
 
-# .gitignore — never committed
+# .gitignore - never committed
 .env
 *.pem
 *.key
@@ -146,6 +146,6 @@ credentials.json
 
 ## Sources
 
-- HashiCorp Vault — https://www.vaultproject.io/
-- SOPS — https://github.com/getsops/sops
+- HashiCorp Vault: https://www.vaultproject.io/
+- SOPS: https://github.com/getsops/sops
 - OWASP Secrets Management Cheat Sheet

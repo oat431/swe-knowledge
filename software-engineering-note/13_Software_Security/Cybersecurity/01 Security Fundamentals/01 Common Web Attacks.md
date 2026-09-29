@@ -5,9 +5,9 @@ tags:
 - security
 ---
 
-# 01 Common Web Attacks — OWASP Top 10
+# 01 Common Web Attacks: OWASP Top 10
 
-These are the attacks every backend developer must defend against. Each one has a specific fix. None are hard to prevent — you just need to know them.
+These are the attacks every backend developer must defend against. Each one has a specific fix. None are hard to prevent; you just need to know them.
 
 ---
 
@@ -16,13 +16,13 @@ These are the attacks every backend developer must defend against. Each one has 
 User accesses data they shouldn't.
 
 ```java
-// ❌ Broken — trusts client-provided ID
+// ❌ Broken - trusts client-provided ID
 @GetMapping("/orders/{id}")
 public Order getOrder(@PathVariable String id) {
     return orderRepo.findById(id);  // Any user can read any order!
 }
 
-// ✅ Fixed — verify ownership
+// ✅ Fixed - verify ownership
 @GetMapping("/orders/{id}")
 public Order getOrder(@PathVariable String id, Authentication auth) {
     Order order = orderRepo.findById(id);
@@ -64,10 +64,10 @@ Attacker injects malicious code through user input.
 ### SQL Injection
 
 ```java
-// ❌ String concatenation — SQLi possible
+// ❌ String concatenation - SQLi possible
 String query = "SELECT * FROM users WHERE name = '" + userName + "'";
 
-// ✅ Parameterized query — immune to SQLi
+// ✅ Parameterized query - immune to SQLi
 String query = "SELECT * FROM users WHERE name = ?";
 PreparedStatement ps = conn.prepareStatement(query);
 ps.setString(1, userName);
@@ -134,7 +134,7 @@ management:
 ## SSRF Example
 
 ```java
-// ❌ SSRF possible — user controls the URL
+// ❌ SSRF possible - user controls the URL
 String url = request.getParameter("url");
 String content = restTemplate.getForObject(url, String.class);
 // Attacker passes: http://169.254.169.254/latest/meta-data/ (AWS metadata)
@@ -149,5 +149,5 @@ if (!url.startsWith("https://api.trusted-partner.com/")) {
 
 ## Sources
 
-- OWASP Top 10 — https://owasp.org/www-project-top-ten/
-- OWASP Cheat Sheets — https://cheatsheetseries.owasp.org/
+- OWASP Top 10: https://owasp.org/www-project-top-ten/
+- OWASP Cheat Sheets: https://cheatsheetseries.owasp.org/

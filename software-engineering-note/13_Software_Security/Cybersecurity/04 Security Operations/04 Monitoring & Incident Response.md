@@ -26,7 +26,7 @@ You will be breached. The question is whether you detect it in minutes or months
 ## Log Everything (Except Secrets)
 
 ```java
-// Structured logging — JSON format
+// Structured logging - JSON format
 log.info("{}", Json.of(
     "event", "order.created",
     "userId", userId,
@@ -64,7 +64,7 @@ log.info("{}", Json.of(
 6. Lessons Learned → Post-mortem. Fix root cause.
 ```
 
-### First 15 Minutes — Playbook
+### First 15 Minutes: Playbook
 
 | Minute | Action |
 |--------|--------|
@@ -73,7 +73,7 @@ log.info("{}", Json.of(
 | 10–15 | **Communicate**. Notify security lead. Start incident log (who, what, when). |
 
 ```bash
-# Immediate containment — revoke access
+# Immediate containment - revoke access
 # 1. Rotate all secrets that may be compromised
 vault lease revoke -prefix database/creds/
 # 2. Block attacker IP
@@ -106,10 +106,10 @@ Duration: [Detection → Resolution]
 Impact: [What was affected? Data exposed? Users impacted?]
 
 Timeline:
-  - 14:32 UTC — Alert fired: 500 error spike
-  - 14:35 — Engineer on-call acknowledged
-  - 14:42 — Root cause identified: expired DB certificate
-  - 14:50 — Certificate renewed, services restored
+  - 14:32 UTC - Alert fired: 500 error spike
+  - 14:35 - Engineer on-call acknowledged
+  - 14:42 - Root cause identified: expired DB certificate
+  - 14:50 - Certificate renewed, services restored
 
 Root Cause: Expired TLS cert on RDS. No expiry monitoring.
 
@@ -123,6 +123,6 @@ Action Items:
 
 ## Sources
 
-- NIST SP 800-61 — Computer Security Incident Handling Guide
+- NIST SP 800-61: Computer Security Incident Handling Guide
 - SANS Incident Handler's Handbook
-- ELK Stack — https://www.elastic.co/
+- ELK Stack: https://www.elastic.co/
