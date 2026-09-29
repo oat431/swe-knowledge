@@ -7,13 +7,14 @@ tags:
 
 # 05 Distributed Tracing
 
-A single user request can touch the API gateway, auth service, order service, payment service, inventory service, and notification service. When something goes wrong — which service broke? Distributed tracing follows the request across every hop.
+A single user request can touch the API gateway, auth service, order service, payment service, inventory service, and notification service. When something goes wrong, which service broke? Distributed tracing follows the request across every hop.
 
 ---
 
 ## How It Works
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','actorBkg':'#19362D','actorBorder':'#1FB854','actorTextColor':'#CDD3D1','actorLineColor':'#1FB854','signalColor':'#CDD3D1','signalTextColor':'#CDD3D1','labelBoxBkgColor':'#161212','labelBoxBorderColor':'#1FB854','labelTextColor':'#CDD3D1','loopTextColor':'#CAC9C9','noteBkgColor':'#1EB88E','noteTextColor':'#000C07','noteBorderColor':'#1EB88E','activationBkgColor':'#1EB88E','activationBorderColor':'#1FB8AB','sequenceNumberColor':'#000000','fontSize':'14px'}}}%%
 sequenceDiagram
     participant C as Client
     participant G as Gateway
@@ -29,18 +30,18 @@ sequenceDiagram
     P-->>O: payment data
     O-->>G: order + payment
     G-->>C: response
-```
+
 
 | Concept | Meaning |
 |---------|---------|
 | **Trace** | The entire journey of one request across all services |
 | **Span** | One unit of work within a trace (a single service call) |
-| **traceId** | Unique ID for the whole trace — passed through HTTP headers |
-| **spanId** | Unique ID for one span — parent-child relationship forms the tree |
+| **traceId** | Unique ID for the whole trace, passed through HTTP headers |
+| **spanId** | Unique ID for one span; parent-child relationships form the tree |
 
 ---
 
-## Propagation — How traceId Travels
+## Propagation: How traceId Travels
 
 Every service must forward the trace context to downstream calls.
 
@@ -78,7 +79,7 @@ X-B3-Sampled: 1
 
 ---
 
-## Sampling — Don't Trace Everything
+## Sampling: Don't Trace Everything
 
 Tracing every request is expensive. Sample strategically:
 
@@ -114,6 +115,6 @@ public Order getOrder(@PathVariable String id) {
 
 ## Sources
 
-- OpenTelemetry — https://opentelemetry.io/
-- Jaeger — https://www.jaegertracing.io/
-- W3C Trace Context — https://www.w3.org/TR/trace-context/
+- OpenTelemetry: https://opentelemetry.io/
+- Jaeger: https://www.jaegertracing.io/
+- W3C Trace Context: https://www.w3.org/TR/trace-context/

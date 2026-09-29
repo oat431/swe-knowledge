@@ -117,5 +117,5 @@ readinessProbe:
 
 ## Sources
 
-- Spring Boot Actuator — https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html
-- Kubernetes — https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
+- Spring Boot Actuator: https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html
+- Kubernetes: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/

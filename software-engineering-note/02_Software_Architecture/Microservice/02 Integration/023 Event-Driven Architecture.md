@@ -7,7 +7,7 @@ tags:
 
 # 02 Event-Driven Architecture
 
-Synchronous REST calls create tight coupling. When Service A calls Service B, A must wait for B — and if B is down, A fails. Event-driven architecture decouples services: they communicate by publishing and subscribing to events.
+Synchronous REST calls create tight coupling. When Service A calls Service B, A must wait for B, and if B is down, A fails. Event-driven architecture decouples services: they communicate by publishing and subscribing to events.
 
 ---
 
@@ -28,12 +28,13 @@ Synchronous REST calls create tight coupling. When Service A calls Service B, A 
 ### 1. Pub/Sub (Publish-Subscribe)
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     O[Order Service] -->|OrderPlaced| EB[Event Bus]
     EB -->|subscribe| P[Payment Service]
     EB -->|subscribe| S[Shipping Service]
     EB -->|subscribe| N[Notification Service]
-```
+
 
 One event, multiple consumers. Each service reacts independently.
 

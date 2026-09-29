@@ -30,12 +30,13 @@ Hardcoded config values (URLs, passwords, feature flags) scattered across servic
 ### 1. External Config Server
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     CS[Config Server<br/>Spring Cloud Config] --> G[Git Repository]
     S1[Order Service] -->|pull config| CS
     S2[Payment Service] -->|pull config| CS
     S3[User Service] -->|pull config| CS
-```
+
 
 All config lives in Git. Services pull on startup and can refresh at runtime.
 
@@ -143,5 +144,5 @@ feature:
 
 ## Sources
 
-- Spring Cloud Config — https://spring.io/projects/spring-cloud-config
-- 12-Factor App — https://12factor.net/config
+- Spring Cloud Config: https://spring.io/projects/spring-cloud-config
+- 12-Factor App: https://12factor.net/config

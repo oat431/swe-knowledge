@@ -19,6 +19,7 @@ Load balancing distributes incoming network traffic across multiple service inst
 | **Internal / Service-to-Service** | Service A → Service B | Envoy sidecar, client-side LB (gRPC) |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     Client -->|HTTPS| EdgeLB[Edge LB / API Gateway]
     EdgeLB --> SvcA1[Service A - 1]
@@ -27,7 +28,7 @@ flowchart LR
     InternalLB --> SvcB1[Service B - 1]
     InternalLB --> SvcB2[Service B - 2]
     InternalLB --> SvcB3[Service B - 3]
-```
+
 
 ---
 
@@ -36,8 +37,8 @@ flowchart LR
 | Aspect | Layer 4 (Transport) | Layer 7 (Application) |
 |--------|---------------------|----------------------|
 | Protocol | TCP / UDP | HTTP, gRPC, WebSocket |
-| Speed | Very fast — no payload inspection | Slightly slower — parses headers/body |
-| Content awareness | None — routes by IP + port | Full — can route by path, header, cookie |
+| Speed | Very fast (no payload inspection | Slightly slower) parses headers/body |
+| Content awareness | None (routes by IP + port | Full) can route by path, header, cookie |
 | Use case | Raw throughput, database proxying | API routing, auth offload, rate-limiting |
 | TLS | Pass-through or terminate | Always terminates to inspect |
 | Example | AWS NLB, HAProxy (TCP mode) | AWS ALB, NGINX, Envoy |
@@ -70,11 +71,11 @@ flowchart LR
 
 Even if an instance passes active health checks, it may still degrade (high p99, partial failures). Outlier detection ejects instances that exceed error/latency thresholds from the pool temporarily.
 
-- **Consecutive errors** — eject after N consecutive 5xx responses
-- **Success rate** — eject if success rate drops below cluster average
-- **Latency** — eject if p99 exceeds a multiple of the median
+- **Consecutive errors:** eject after N consecutive 5xx responses
+- **Success rate:** eject if success rate drops below cluster average
+- **Latency:** eject if p99 exceeds a multiple of the median
 
-> Envoy's outlier detection is the gold standard — configure `consecutive_5xx`, `interval`, and `base_ejection_time`.
+> Envoy's outlier detection is the gold standard; configure `consecutive_5xx`, `interval`, and `base_ejection_time`.
 
 ---
 
@@ -93,13 +94,13 @@ Even if an instance passes active health checks, it may still degrade (high p99,
 
 ## Key Decisions
 
-1. **TLS termination location** — Terminate at edge LB for simplicity, or re-encrypt (mTLS) between services for zero-trust. Terminating at sidecar (Envoy) gives both security and observability.
-2. **Sticky sessions** — Avoid. They create hotspots and complicate scaling. Use external session stores (Redis) or stateless tokens (JWT) instead.
-3. **Centralized vs Client-side LB** — Centralized (dedicated proxy) is simpler to operate. Client-side (built into SDK/sidecar) reduces hops and latency. Service meshes (Istio/Linkerd) give client-side LB without app code changes.
+1. **TLS termination location:** Terminate at edge LB for simplicity, or re-encrypt (mTLS) between services for zero-trust. Terminating at sidecar (Envoy) gives both security and observability.
+2. **Sticky sessions:** Avoid. They create hotspots and complicate scaling. Use external session stores (Redis) or stateless tokens (JWT) instead.
+3. **Centralized vs Client-side LB:** Centralized (dedicated proxy) is simpler to operate. Client-side (built into SDK/sidecar) reduces hops and latency. Service meshes (Istio/Linkerd) give client-side LB without app code changes.
 
 ---
 
 ## Sources
 
 - [NGINX Load Balancing Docs](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/)
-- [Envoy Proxy — Load Balancing](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/load_balancing/load_balancing)
+- [Envoy Proxy: Load Balancing](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/load_balancing/load_balancing)

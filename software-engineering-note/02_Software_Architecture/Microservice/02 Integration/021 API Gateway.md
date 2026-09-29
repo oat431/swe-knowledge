@@ -26,6 +26,7 @@ The single entry point for all clients. Instead of every client calling every se
 ## Architecture
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[Mobile Client] --> G[API Gateway]
     B[Web Client] --> G
@@ -34,7 +35,7 @@ graph LR
     G --> S2[Order Service]
     G --> S3[Payment Service]
     G --> S4[User Service]
-```
+
 
 ---
 
@@ -44,7 +45,7 @@ graph LR
 |---------------|-------------|
 | **Routing** | Maps incoming requests to the correct backend service |
 | **Authentication** | Validates JWT/API keys before forwarding requests |
-| **Rate Limiting** | Protects backend from abuse — per user, per IP, per endpoint |
+| **Rate Limiting** | Protects backend from abuse, per user, per IP, per endpoint |
 | **Aggregation** | Calls multiple services and combines responses (e.g., order detail = order + product + user) |
 | **Protocol Translation** | REST-in, gRPC-out. Or WebSocket-in, REST-out. |
 | **Logging & Tracing** | Injects trace IDs, logs every request at the boundary |
@@ -66,14 +67,14 @@ graph LR
 
 ## BFF Pattern (Backend for Frontend)
 
-One gateway per client type — mobile gets different aggregation than web:
+One gateway per client type: mobile gets different aggregation than web:
 
 ```
 Mobile App → Mobile BFF → Services
 Web App   → Web BFF   → Services
 ```
 
-> Each BFF provides exactly what its client needs — no over-fetching, no under-fetching.
+> Each BFF provides exactly what its client needs; no over-fetching, no under-fetching.
 
 ---
 
@@ -90,4 +91,4 @@ Web App   → Web BFF   → Services
 ## Sources
 
 - Richardson, Chris. *Microservices Patterns*, Manning, 2018.
-- Spring Cloud Gateway — https://spring.io/projects/spring-cloud-gateway
+- Spring Cloud Gateway: https://spring.io/projects/spring-cloud-gateway

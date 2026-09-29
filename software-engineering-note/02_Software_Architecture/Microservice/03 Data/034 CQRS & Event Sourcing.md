@@ -16,12 +16,13 @@ CQRS separates reads from writes. Event Sourcing stores state as a sequence of e
 > **Use different models for reading and writing data.**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     C[Command] --> W[Write Model<br/>Normalized, ACID]
     W --> E[Events]
     E --> R[Read Model<br/>Denormalized, optimized]
     Q[Query] --> R
-```
+
 
 | Write Side (Commands) | Read Side (Queries) |
 |----------------------|---------------------|
@@ -63,7 +64,7 @@ Event Stream:
   Withdraw(amount=200)      → INSUFFICIENT FUNDS (event not appended)
 ```
 
-Current balance = replay all events. Never delete — only append.
+Current balance = replay all events. Never delete, only append.
 
 ---
 
@@ -80,7 +81,7 @@ Command → Write Service → Event Store (Kafka/Kinesis)
 | Benefit | How |
 |---------|-----|
 | **Full audit trail** | Every state change is an immutable event |
-| **Temporal queries** | "What was the order status on June 1st?" — replay to that point |
+| **Temporal queries** | "What was the order status on June 1st?": replay to that point |
 | **Multiple read models** | One event stream can feed a search index, a cache, and an analytics DB |
 | **Bug fixes** | Fix the handler, replay events → corrected state |
 
@@ -99,4 +100,4 @@ Command → Write Service → Event Store (Kafka/Kinesis)
 ## Sources
 
 - Evans, Eric. *Domain-Driven Design*, Addison-Wesley, 2003.
-- Young, Greg. *CQRS Documents* — https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf
+- Young, Greg. *CQRS Documents*: https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf

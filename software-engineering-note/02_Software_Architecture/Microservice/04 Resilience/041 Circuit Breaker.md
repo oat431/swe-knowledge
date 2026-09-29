@@ -7,20 +7,21 @@ tags:
 
 # 04 Circuit Breaker
 
-When a downstream service fails, retrying only makes things worse — you flood a dying service with more requests. The Circuit Breaker stops calling the failing service and fails fast, giving it time to recover.
+When a downstream service fails, retrying only makes things worse; you flood a dying service with more requests. The Circuit Breaker stops calling the failing service and fails fast, giving it time to recover.
 
 ---
 
 ## The Pattern
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','clusterBkg':'#161212','clusterBorder':'#19362D','fontSize':'14px'}}}%%
 stateDiagram-v2
     [*] --> CLOSED
     CLOSED --> OPEN : Failure threshold reached
     OPEN --> HALF_OPEN : Timeout expires
     HALF_OPEN --> CLOSED : Test request succeeds
     HALF_OPEN --> OPEN : Test request fails
-```
+
 
 | State | Behavior |
 |-------|----------|
@@ -60,7 +61,7 @@ public PaymentResponse charge(Order order) {
 }
 
 public PaymentResponse paymentFallback(Order order, Exception e) {
-    // Graceful degradation — queue for retry, show pending status
+    // Graceful degradation: queue for retry, show pending status
     return PaymentResponse.pending(order.getId());
 }
 ```
@@ -76,7 +77,7 @@ When the circuit is OPEN, what do you return?
 | **Graceful degradation** | Return partial data ("Payment pending") |
 | **Cache** | Return last known good response |
 | **Default value** | "Out of stock" when inventory service is down |
-| **Fail fast** | Return error immediately — don't keep user waiting |
+| **Fail fast** | Return error immediately; don't keep user waiting |
 
 ---
 
@@ -94,4 +95,4 @@ When the circuit is OPEN, what do you return?
 ## Sources
 
 - Nygard, Michael. *Release It!*, 2nd ed., Pragmatic Bookshelf, 2018.
-- Resilience4j — https://resilience4j.readme.io/
+- Resilience4j: https://resilience4j.readme.io/

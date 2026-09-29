@@ -7,7 +7,7 @@ tags:
 
 # 03 Eventual Consistency Patterns
 
-In microservices, strong consistency across services is impractical (no distributed ACID). Eventual consistency is the default — data across services converges to a consistent state over time. The challenge: how to build systems that work correctly while data is temporarily inconsistent.
+In microservices, strong consistency across services is impractical (no distributed ACID). Eventual consistency is the default: data across services converges to a consistent state over time. The challenge: how to build systems that work correctly while data is temporarily inconsistent.
 
 ## Strong vs Eventual Consistency
 
@@ -26,7 +26,7 @@ In microservices, strong consistency across services is impractical (no distribu
 
 ### Read-Your-Own-Writes
 
-After a write, route that user's reads to the source of truth (not a replica/cache). Other users can tolerate stale data — the writing user cannot.
+After a write, route that user's reads to the source of truth (not a replica/cache). Other users can tolerate stale data, the writing user cannot.
 
 - **Implementation:** sticky sessions to primary, read-from-primary flag with short TTL, or version tokens in the client.
 - **Example:** User updates profile → for the next 5s, their profile reads go to the write DB. Everyone else reads from the replica.
@@ -36,7 +36,7 @@ After a write, route that user's reads to the source of truth (not a replica/cac
 If event A causes event B, all observers must see A before B. Without this, you get nonsensical orderings (reply appears before the original message).
 
 - **Implementation:** Vector clocks, Lamport timestamps, or explicit causal ordering in event metadata.
-- **Example:** `order.created` must always be processed before `order.shipped` — include a causal dependency ID.
+- **Example:** `order.created` must always be processed before `order.shipped`; include a causal dependency ID.
 
 ### Monotonic Reads
 
@@ -51,7 +51,7 @@ When two services or replicas diverge, how do you reconcile?
 | Strategy | How It Works | Trade-off |
 |----------|-------------|-----------|
 | **Last Writer Wins (LWW)** | Highest timestamp wins | Simplest; silent data loss possible |
-| **Merge / CRDT** | Conflict-free replicated data types — mathematically guaranteed convergence | No data loss; limited to specific data structures (counters, sets, registers) |
+| **Merge / CRDT** | Conflict-free replicated data types: mathematically guaranteed convergence | No data loss; limited to specific data structures (counters, sets, registers) |
 | **Application-level** | Business rules decide the winner | Most flexible; most complex (e.g., highest bid wins, manual review queue) |
 
 **When in doubt:** Use LWW for low-value data, CRDTs for counters/sets, application-level for business-critical conflicts.
@@ -90,14 +90,14 @@ The frontend must handle the inconsistency window gracefully:
 
 Not everything can be eventual. Use strong consistency (DB-level locks, serializable transactions) **within the owning service** for:
 
-- **Financial transactions** — account balance must never go negative
-- **Inventory decrements** — can't sell more than you have
-- **Unique constraints** — username/email uniqueness
+- **Financial transactions:** account balance must never go negative
+- **Inventory decrements:** can't sell more than you have
+- **Unique constraints:** username/email uniqueness
 
 The key: these happen *within one service's database*, not across services. You get ACID because it's a single DB.
 
 ## Sources
 
-- Kleppmann, M. — *Designing Data-Intensive Applications* (Ch. 5, 9)
-- Vogels, W. — "Eventually Consistent" (2009)
-- Shapiro, M. et al. — "Conflict-Free Replicated Data Types" (2011)
+- Kleppmann, M., *Designing Data-Intensive Applications* (Ch. 5, 9)
+- Vogels, W., "Eventually Consistent" (2009)
+- Shapiro, M. et al., "Conflict-Free Replicated Data Types" (2011)

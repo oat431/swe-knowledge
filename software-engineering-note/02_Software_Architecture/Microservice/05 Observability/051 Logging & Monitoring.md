@@ -7,7 +7,7 @@ tags:
 
 # 05 Logging & Monitoring
 
-You can't fix what you can't see. In a monolith, you check one log file. In microservices, a single user request touches 5+ services — you need centralized logging and metrics to understand what's happening.
+You can't fix what you can't see. In a monolith, you check one log file. In microservices, a single user request touches 5+ services; you need centralized logging and metrics to understand what's happening.
 
 ---
 
@@ -49,7 +49,7 @@ Service C ─┘
 
 ---
 
-## Metrics — The Four Golden Signals
+## Metrics: The Four Golden Signals
 
 From Google's SRE book:
 
@@ -84,12 +84,12 @@ Every service gets a dashboard:
 | **Middle** | Circuit breaker state, thread pool usage |
 | **Bottom** | JVM/Go metrics: heap, GC, goroutines |
 
-> If a metric matters enough to measure, it matters enough to alert on. No dashboard-only metrics — every metric has an alert threshold.
+> If a metric matters enough to measure, it matters enough to alert on. No dashboard-only metrics: every metric has an alert threshold.
 
 ---
 
 ## Sources
 
 - Beyer, Betsy et al. *Site Reliability Engineering*, O'Reilly, 2016.
-- Prometheus — https://prometheus.io/
-- Grafana — https://grafana.com/
+- Prometheus: https://prometheus.io/
+- Grafana: https://grafana.com/

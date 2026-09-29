@@ -5,13 +5,13 @@ tags:
   - methodology
   - software-architecture
   - SAiP
-source: "Bass, Clements & Kazman — Software Architecture in Practice, Chapter 15"
+source: Bass, Clements & Kazman, *Software Architecture in Practice*, Chapter 15
 ---
 
-# 08 — Architecture in Agile Projects
+# 08: Architecture in Agile Projects
 
 > **Source:** Bass, Clements & Kazman, *Software Architecture in Practice* (SAiP), Chapter 15
-> **Purpose:** Understand how architectural practices and Agile methodologies can be blended — finding the "sweet spot" between up-front planning and iterative delivery, and equipping the architect with practical guidelines for Agile contexts.
+> **Purpose:** Understand how architectural practices and Agile methodologies can be blended, finding the "sweet spot" between up-front planning and iterative delivery, and equipping the architect with practical guidelines for Agile contexts.
 
 ---
 
@@ -19,7 +19,7 @@ source: "Bass, Clements & Kazman — Software Architecture in Practice, Chapter 
 
 ### The Garden Shed vs. the Skyscraper
 
-The chapter opens with an analogy: building a *garden shed* requires little up-front planning — a mental image, some wood, hammers, and saws. The process is agile: self-organizing, close to the customer, accommodating late-breaking feature requests. Would you build a 20-story office building this way? No — that demands BDUF (Big Design Up Front): architects, structural engineers, soil analysis, snow-load calculations.
+The chapter opens with an analogy: building a *garden shed* requires little up-front planning (a mental image, some wood, hammers, and saws. The process is agile: self-organizing, close to the customer, accommodating late-breaking feature requests. Would you build a 20-story office building this way? No) that demands BDUF (Big Design Up Front): architects, structural engineers, soil analysis, snow-load calculations.
 
 So too with software: **the amount of up-front planning and analysis should be justified by the potential risks.** Everything in architecture is about cost/benefit tradeoffs.
 
@@ -27,21 +27,21 @@ So too with software: **the amount of up-front planning and analysis should be j
 
 A tension exists between Agile's user-story-driven approach and architectural thinking:
 
-- **User stories** describe features visible to the user — demonstrating progress to the customer.
+- **User stories** describe features visible to the user: demonstrating progress to the customer.
 - This can lead to an architecture where every feature is independently designed and implemented.
 - **Cross-cutting concerns** (shared utility functions, common infrastructure) become hard to capture without coordination across feature teams.
 - In a geographically distributed, large system, feature-first delivery causes **massive coordination problems**.
-- An architecture-centric project uses **layered architecture** to solve this — features on upper layers using shared lower-layer functionality — but this requires up-front planning, design, and feature analysis.
+- An architecture-centric project uses **layered architecture** to solve this (features on upper layers using shared lower-layer functionality) but this requires up-front planning, design, and feature analysis.
 
 > Successful projects need a successful **blend** of the two approaches. This is not and never should be an either/or choice.
 
 - **Too much up-front planning** → stifles creativity, inability to adapt to changing requirements.
 - **Too much agility** → chaos.
-- **The goal:** George Fairbanks' *"just enough architecture"* — doing the right amount of architecture work, at the right time.
+- **The goal:** George Fairbanks' *"just enough architecture"*: doing the right amount of architecture work, at the right time.
 
 ### An Analytic Perspective: Boehm & Turner's COCOMO II Analysis
 
-Boehm and Turner analyzed historical data from **161 industrial projects**, examining the effects of up-front architecture and risk resolution effort (the COCOMO II scale factor called **RESL** — architecture and risk resolution).
+Boehm and Turner analyzed historical data from **161 industrial projects**, examining the effects of up-front architecture and risk resolution effort (the COCOMO II scale factor called **RESL:** architecture and risk resolution).
 
 Two activities add time to the project schedule:
 
@@ -60,14 +60,14 @@ Boehm and Turner plotted three hypothetical projects against architecture effort
 | **100 KSLOC** | ~20% | Moderate up-front investment pays off |
 | **10,000 KSLOC** | ~40% | Large, complex systems need substantial up-front architecture |
 
-> A project with a million lines of code is enormously complex — Agile principles alone cannot cope with this complexity without architecture to guide and organize the effort.
+> A project with a million lines of code is enormously complex; Agile principles alone cannot cope with this complexity without architecture to guide and organize the effort.
 
 **No single answer fits all situations.** Beyond lines of code, other determinants include:
 - Domain complexity
 - Required reliability/safety
 - Development team experience
 
-> The whole point of budgeting for architecture is to **reduce risk** — financial, political, operational, reputational, or risks involving human life.
+> The whole point of budgeting for architecture is to **reduce risk:** financial, political, operational, reputational, or risks involving human life.
 
 ---
 
@@ -86,13 +86,13 @@ The **Views and Beyond** approach to documentation (Chapter 18) aligns with Agil
 
 > **If information isn't needed, don't spend the resources to document it.**
 
-This is the same idea as **YAGNI** ("You Ain't Gonna Need It") — only implement or document something when you actually have the need. Do not spend time anticipating all possible needs.
+This is the same idea as **YAGNI** ("You Ain't Gonna Need It"), only implement or document something when you actually have the need. Do not spend time anticipating all possible needs.
 
 **Views and Beyond principles:**
 - Select a view **if and only if** it addresses substantial concerns of an important stakeholder community.
-- Documentation is **not a monolithic activity** that holds up all progress — produce views in **prioritized stages** for stakeholders who need them *now*.
+- Documentation is **not a monolithic activity** that holds up all progress: produce views in **prioritized stages** for stakeholders who need them *now*.
 - Document what you need to **teach newcomers**, what embodies **significant risks**, and what you need to **change frequently**.
-- The reader might be a **maintainer** assigned years after the original team has disbanded — this extends beyond classic Agile's minimum-documentation-for-current-team philosophy.
+- The reader might be a **maintainer** assigned years after the original team has disbanded; this extends beyond classic Agile's minimum-documentation-for-current-team philosophy.
 
 ### Architecture Evaluation in Agile
 
@@ -108,7 +108,7 @@ The **ATAM** (Architecture Tradeoff Analysis Method, Chapter 21):
 
 ---
 
-## 15.3 A Brief Example of Agile Architecting — WebArrow
+## 15.3 A Brief Example of Agile Architecting: WebArrow
 
 The **WebArrow** web-conferencing system illustrates agile architecting in practice.
 
@@ -131,7 +131,7 @@ Additionally:
 
 ### The Two-Mode Approach
 
-The WebArrow team worked in **two modes simultaneously**:
+The WebArrow team worked in **two modes simultaneously:**
 
 | Mode | Activity |
 |---|---|
@@ -153,18 +153,18 @@ The team adopted an **agile architecture discipline combined with a rigorous pro
 - How many participants could a single meeting server host?
 - What was the correct ratio between database servers and meeting servers?
 
-These questions are **difficult to answer analytically** — answers depend on third-party component behavior and performance characteristics with no standard analytic models.
+These questions are **difficult to answer analytically:** answers depend on third-party component behavior and performance characteristics with no standard analytic models.
 
-**Solution:** Build an extensive **testing infrastructure** (simulation + instrumentation) to compare performance of each modification against the base system — determining the effect of each proposed improvement *before* committing it.
+**Solution:** Build an extensive **testing infrastructure** (simulation + instrumentation) to compare performance of each modification against the base system, determining the effect of each proposed improvement *before* committing it.
 
 ### Agile Principles Alignment
 
 The WebArrow approach aligned with these Agile principles:
-1. **Principle 1** — Early and continuous delivery of working software
-2. **Principle 2** — Welcoming changing requirements
-3. **Principle 3** — Delivering working software frequently
-4. **Principle 8** — Sustainable development at a constant pace
-5. **Principle 9** — Continuous attention to technical excellence and good design
+1. **Principle 1:** Early and continuous delivery of working software
+2. **Principle 2:** Welcoming changing requirements
+3. **Principle 3:** Delivering working software frequently
+4. **Principle 8:** Sustainable development at a constant pace
+5. **Principle 9:** Continuous attention to technical excellence and good design
 
 > Making architecture processes agile does **not** require radical re-invention of either Agile practices or architecture methods. The emphasis on **experimentation** proved the key factor.
 
@@ -180,12 +180,12 @@ Barry Boehm's **Incremental Commitment Model** is a hybrid process framework bal
 2. Stakeholder **"satisficing"** (meeting acceptability thresholds) based on success-based negotiations and tradeoffs
 3. **Incremental and evolutionary growth** of system definition and stakeholder commitment
 4. **Iterative** system development and definition
-5. **Interleaved** system definition and development — allowing early fielding of core capabilities, continual adaptation, and timely growth without waiting for every requirement
-6. **Risk management** — risk-driven anchor point milestones to synchronize and stabilize concurrent activity
+5. **Interleaved** system definition and development: allowing early fielding of core capabilities, continual adaptation, and timely growth without waiting for every requirement
+6. **Risk management:** risk-driven anchor point milestones to synchronize and stabilize concurrent activity
 
 ### Grady Booch's Guidelines
 
-Booch claims that **all good software-intensive architectures are agile** — meaning:
+Booch claims that **all good software-intensive architectures are agile:** meaning:
 
 | Property | Meaning |
 |---|---|
@@ -200,17 +200,17 @@ Booch claims that **all good software-intensive architectures are agile** — me
 **Technical debt** = the software equivalent of consumer debt: "purchasing something now and hoping to pay for it later."
 
 - **Quick-and-dirty implementation** → incurs technical debt → increased future maintenance costs.
-- When technical debt becomes **unacceptably high**, projects must **pay it down** through **refactoring** — a key part of every agile architecting process.
+- When technical debt becomes **unacceptably high**, projects must **pay it down** through **refactoring:** a key part of every agile architecting process.
 
 ### Practical Advice
 
 The authors distill three tiers of guidance:
 
 **1. Large, complex systems with relatively stable, well-understood requirements:**
-> Do a **large amount** of architecture work up front. (See Figure 15.1 for sample values — ~40% of schedule for 10M SLOC.)
+> Do a **large amount** of architecture work up front. (See Figure 15.1 for sample values: ~40% of schedule for 10M SLOC.)
 
 **2. Big projects with vague or unstable requirements:**
-> Start by quickly designing a **complete candidate architecture** — even if it's just a "PowerPoint architecture" leaving out many details, even if designed in just a couple of days. This is similar to Cockburn's *"walking skeleton"* — enough architecture to demonstrate end-to-end functionality linking major system functions. Be prepared to change and elaborate as circumstances dictate, as you perform spikes and experiments, and as requirements emerge and solidify.
+> Start by quickly designing a **complete candidate architecture:** even if it's just a "PowerPoint architecture" leaving out many details, even if designed in just a couple of days. This is similar to Cockburn's *"walking skeleton"*: enough architecture to demonstrate end-to-end functionality linking major system functions. Be prepared to change and elaborate as circumstances dictate, as you perform spikes and experiments, and as requirements emerge and solidify.
 
 This early architecture helps:
 - Guide development
@@ -229,10 +229,10 @@ This early architecture helps:
 | Key Point | Detail |
 |---|---|
 | **Agile and architecture are compatible** | The underlying philosophies are not at odds and can be married to great effect |
-| **No either/or** | Successful projects need a blend — too much planning stifles; too much agility is chaos |
+| **No either/or** | Successful projects need a blend; too much planning stifles; too much agility is chaos |
 | **The sweet spot** | Boehm & Turner's data shows an optimal up-front investment that grows with project size (5% for 10 KSLOC → 40% for 10,000 KSLOC) |
-| **Documentation** | Views and Beyond aligns with YAGNI — document only what serves a real stakeholder need, in prioritized stages |
-| **Evaluation** | ATAM is inherently Agile-compatible — focuses on high-risk, high-value scenarios, not exhaustive analysis |
+| **Documentation** | Views and Beyond aligns with YAGNI; document only what serves a real stakeholder need, in prioritized stages |
+| **Evaluation** | ATAM is inherently Agile-compatible, focuses on high-risk, high-value scenarios, not exhaustive analysis |
 | **WebArrow case study** | Top-down + bottom-up modes, experimentation (spikes) as the bridge between architecture and agility |
 | **Incremental Commitment Model** | Six principles balancing stakeholder commitment with evolutionary growth |
 | **Architect's duties** | Make architecture resilient, loosely coupled, visible in code, and socialized; manage technical debt through refactoring |
@@ -244,8 +244,8 @@ This early architecture helps:
 
 | Term | Definition |
 |---|---|
-| **BDUF** | Big Design Up Front — traditional approach of exhaustive analysis and design before implementation |
-| **YAGNI** | "You Ain't Gonna Need It" — only build/document what you actually need now |
+| **BDUF** | Big Design Up Front: traditional approach of exhaustive analysis and design before implementation |
+| **YAGNI** | "You Ain't Gonna Need It", only build/document what you actually need now |
 | **RESL** | COCOMO II scale factor for architecture and risk resolution effort |
 | **Sweet Spot** | The optimal percentage of project schedule devoted to up-front architecture and risk resolution |
 | **Spike** | An Agile experiment designed to answer a specific technical or architectural question |
@@ -258,21 +258,21 @@ This early architecture helps:
 
 ## Further Reading (from SAiP Ch 15.6)
 
-- Beck 04 — *Extreme Programming Explained*
-- Schwaber 04 — *Agile Project Management with Scrum*
-- Palmer 02 — *Feature-Driven Development*
-- Cockburn 04 — *Crystal Clear*
-- Abrahamsson 10 — IEEE Software special issue on agility and architecture
-- Fairbanks 10 — *Just Enough Software Architecture*
-- Boehm & Turner 04 — *Balancing Agility and Discipline*
-- Boehm, Lane, Koolmanojwong & Turner 10 — Incremental Commitment Model
-- Boehm 91 — Seminal article on software risk management
-- Carriere, Kazman & Ozkaya 10 — Refactoring based on propagation cost of anticipated changes
-- Graham, Kazman & Walmsley 07 — WebArrow case study detail
-- Cunningham 92 — Origin of "technical debt" term
-- Brown et al. 10 — Economics-driven perspective on agility through architecture
-- Nord, Tomayko & Wojcik 04 — SEI architecture methods and Extreme Programming
-- Bachmann 11 — Lightweight ATAM for Agile projects
+- Beck 04: *Extreme Programming Explained*
+- Schwaber 04: *Agile Project Management with Scrum*
+- Palmer 02: *Feature-Driven Development*
+- Cockburn 04: *Crystal Clear*
+- Abrahamsson 10: IEEE Software special issue on agility and architecture
+- Fairbanks 10: *Just Enough Software Architecture*
+- Boehm & Turner 04: *Balancing Agility and Discipline*
+- Boehm, Lane, Koolmanojwong & Turner 10: Incremental Commitment Model
+- Boehm 91: Seminal article on software risk management
+- Carriere, Kazman & Ozkaya 10: Refactoring based on propagation cost of anticipated changes
+- Graham, Kazman & Walmsley 07: WebArrow case study detail
+- Cunningham 92: Origin of "technical debt" term
+- Brown et al. 10: Economics-driven perspective on agility through architecture
+- Nord, Tomayko & Wojcik 04: SEI architecture methods and Extreme Programming
+- Bachmann 11: Lightweight ATAM for Agile projects
 
 ---
 
@@ -288,6 +288,6 @@ This early architecture helps:
 
 ## Related
 
-- [[Software Architecture Overview]] — All architecture topics
-- [[07_Design_and_Documentation]] — Designing and documenting
-- [[09_Evaluation_and_Governance]] — Architecture evaluation
+- [[Software Architecture Overview]]: All architecture topics
+- [[07_Design_and_Documentation]]: Designing and documenting
+- [[09_Evaluation_and_Governance]]: Architecture evaluation

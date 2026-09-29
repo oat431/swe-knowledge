@@ -7,7 +7,7 @@ tags:
 
 # 07 Service Mesh
 
-A service mesh offloads networking, security, and observability from your application code to a sidecar proxy. Your service just handles business logic — the mesh handles everything else.
+A service mesh offloads networking, security, and observability from your application code to a sidecar proxy. Your service just handles business logic, the mesh handles everything else.
 
 ---
 
@@ -20,6 +20,7 @@ Without a mesh, every service implements retry, circuit breaking, TLS, metrics, 
 ## How a Mesh Works
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph "Pod A"
         SA[Service A] --- EP1[Envoy Proxy]
@@ -30,7 +31,7 @@ graph LR
     EP1 <-->|mTLS| EP2
     CP[Control Plane<br/>Istiod] -.->|configures| EP1
     CP -.->|configures| EP2
-```
+
 
 | Component | Role |
 |-----------|------|
@@ -48,7 +49,7 @@ graph LR
 | **Circuit Breaking** | Stop calling failing services |
 | **Traffic Splitting** | Canary: 90% v1, 10% v2 |
 | **Load Balancing** | Least request, round-robin, random |
-| **Observability** | Metrics, traces, access logs — automatically |
+| **Observability** | Metrics, traces, access logs, automatically |
 | **Fault Injection** | Deliberately delay/abort requests to test resilience |
 
 ---
@@ -69,7 +70,7 @@ graph LR
 
 | Scenario | Don't Use Mesh |
 |----------|:-------------:|
-| < 5 services | Overkill — the complexity isn't worth it |
+| < 5 services | Overkill, the complexity isn't worth it |
 | Monolith | No service-to-service traffic to manage |
 | Simple infrastructure | Library-based resilience (Resilience4j) is enough |
 | Team is small | Mesh adds operational complexity |
@@ -80,5 +81,5 @@ graph LR
 
 ## Sources
 
-- Istio — https://istio.io/
-- Linkerd — https://linkerd.io/
+- Istio: https://istio.io/
+- Linkerd: https://linkerd.io/

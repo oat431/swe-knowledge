@@ -27,6 +27,7 @@ How you deploy matters as much as what you deploy. The wrong strategy means down
 Replace old instances one at a time. Default in Kubernetes.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph Step 1
         O1[Old P1] -->|replace| N1[New P1]
@@ -43,12 +44,12 @@ graph LR
         N2c[New P2]
         O3c[Old P3] -->|replace| N3[New P3]
     end
-```
+
 
 | ✅ | ❌ |
 |----|-----|
-| No downtime | Both old and new run simultaneously — must be compatible |
-| Gradual rollout | Slow — takes time to replace all instances |
+| No downtime | Both old and new run simultaneously; must be compatible |
+| Gradual rollout | Slow, takes time to replace all instances |
 | Simple | Can't easily test new version in isolation |
 
 ```yaml
@@ -66,13 +67,14 @@ strategy:
 Two identical environments. Blue serves traffic. Green gets the new version. Switch all traffic at once.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     L[Load Balancer] -->|100% traffic| B[Blue<br/>v1.0]
     G[Green<br/>v2.0] 
     
     L -->|100% traffic| G
     B
-```
+
 
 | Step | Action |
 |------|--------|
@@ -94,6 +96,7 @@ graph LR
 Route a small % of traffic to the new version. Ramp up gradually.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     subgraph "Phase 1: 10% canary"
         LB1[Load Balancer] -->|90%| V1A[v1.0]
@@ -108,7 +111,7 @@ graph TD
     end
     V2A --> V1B
     V2B --> LB3
-```
+
 
 | Tool | How |
 |------|-----|
@@ -118,13 +121,13 @@ graph TD
 
 ---
 
-## Database Migrations — The Hard Part
+## Database Migrations: The Hard Part
 
 Rollback is easy for stateless services. Database migrations make it hard.
 
 | Rule | Why |
 |------|-----|
-| **Additive only** | Add columns/tables — never delete or rename during deploy |
+| **Additive only** | Add columns/tables; never delete or rename during deploy |
 | **Backward-compatible** | v1.0 must work with v2.0's schema |
 | **Separate migration step** | Run migration BEFORE deploying v2.0 |
 | **Rollback plan** | How to undo the migration if v2.0 fails? |
@@ -133,5 +136,5 @@ Rollback is easy for stateless services. Database migrations make it hard.
 
 ## Sources
 
-- Kubernetes Deployments — https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
-- Argo Rollouts — https://argoproj.github.io/argo-rollouts/
+- Kubernetes Deployments: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+- Argo Rollouts: https://argoproj.github.io/argo-rollouts/

@@ -66,7 +66,7 @@ spec:
 
 ## mTLS (Mutual TLS)
 
-Both client and server present certificates — mutual authentication at the transport layer.
+Both client and server present certificates: mutual authentication at the transport layer.
 
 ```
 ┌──────────────┐                    ┌──────────────┐
@@ -79,7 +79,7 @@ Both client and server present certificates — mutual authentication at the tra
         └────── Certs issued by shared CA ──┘
 ```
 
-- Service mesh (Istio/Linkerd) handles mTLS transparently — no app code changes
+- Service mesh (Istio/Linkerd) handles mTLS transparently: no app code changes
 - Certificates auto-rotated (short-lived, ~24h)
 - SPIFFE identity standard for workload identity
 
@@ -100,7 +100,7 @@ securityContext:
 
 **Rules:**
 - No privileged pods (`privileged: false`)
-- Read-only filesystem — write only to mounted volumes
+- Read-only filesystem: write only to mounted volumes
 - Drop all Linux capabilities, add back only what's needed
 - Use Pod Security Admission (restricted profile)
 
@@ -141,7 +141,7 @@ Pipeline: Build → Scan → Sign → Store → Verify at admission → Deploy
 
 ## Sources
 
-- [NIST SP 800-207 — Zero Trust Architecture](https://csrc.nist.gov/publications/detail/sp/800-207/final)
+- [NIST SP 800-207: Zero Trust Architecture](https://csrc.nist.gov/publications/detail/sp/800-207/final)
 - [Kubernetes Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
-- [Istio Security — mTLS](https://istio.io/latest/docs/concepts/security/)
+- [Istio Security: mTLS](https://istio.io/latest/docs/concepts/security/)
 - [Sigstore / cosign](https://docs.sigstore.dev/)

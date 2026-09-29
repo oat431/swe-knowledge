@@ -101,9 +101,9 @@ Events are **immutable facts**. You can't ask consumers to replay history.
 | Default values for new fields | Backward compatibility |
 
 **Compatibility modes (Schema Registry):**
-- `BACKWARD` — new schema can read old data
-- `FORWARD` — old schema can read new data
-- `FULL` — both directions safe
+- `BACKWARD`: new schema can read old data
+- `FORWARD`: old schema can read new data
+- `FULL`: both directions safe
 
 ---
 
@@ -115,10 +115,10 @@ Never surprise consumers. Follow the lifecycle:
 Announce → Sunset Header → Migration Period → Remove
 ```
 
-1. **Announce** — document deprecation, notify consumers
-2. **Sunset Header** — `Sunset: Sat, 01 Mar 2025 00:00:00 GMT` in responses
-3. **Migration Period** — run old + new versions in parallel, provide migration guide
-4. **Remove** — only after confirming zero traffic on old version
+1. **Announce:** document deprecation, notify consumers
+2. **Sunset Header:** `Sunset: Sat, 01 Mar 2025 00:00:00 GMT` in responses
+3. **Migration Period:** run old + new versions in parallel, provide migration guide
+4. **Remove:** only after confirming zero traffic on old version
 
 > Postel's Law: Be conservative in what you send, liberal in what you accept.
 

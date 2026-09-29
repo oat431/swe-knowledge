@@ -7,7 +7,7 @@ tags:
 
 # 06 Service Discovery
 
-In a static world, you hardcode service URLs. In microservices, instances come and go — scaling up, scaling down, crashing, restarting. Service discovery lets services find each other dynamically.
+In a static world, you hardcode service URLs. In microservices, instances come and go, scaling up, scaling down, crashing, restarting. Service discovery lets services find each other dynamically.
 
 ---
 
@@ -27,11 +27,12 @@ Without Discovery:
 ### Client-Side Discovery
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     S[Service Instance] -->|registers| R[Service Registry]
     C[Client] -->|queries| R
     C -->|calls| S
-```
+
 
 | Step | Action |
 |------|--------|
@@ -45,12 +46,13 @@ graph LR
 ### Server-Side Discovery
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     S[Service Instance] -->|registers| R[Service Registry]
     C[Client] -->|calls| LB[Load Balancer]
     LB -->|queries| R
     LB -->|routes to| S
-```
+
 
 | Step | Action |
 |------|--------|
@@ -75,7 +77,7 @@ graph LR
 
 ## Self-Registration Pattern
 
-Each service registers itself — no external agent.
+Each service registers itself; no external agent.
 
 ```java
 // Spring Boot + Eureka
@@ -115,6 +117,6 @@ The registry must know when an instance dies. Two approaches:
 
 ## Sources
 
-- Netflix Eureka — https://github.com/Netflix/eureka
-- Consul — https://www.consul.io/
-- Kubernetes Service Discovery — https://kubernetes.io/docs/concepts/services-networking/service/
+- Netflix Eureka: https://github.com/Netflix/eureka
+- Consul: https://www.consul.io/
+- Kubernetes Service Discovery: https://kubernetes.io/docs/concepts/services-networking/service/

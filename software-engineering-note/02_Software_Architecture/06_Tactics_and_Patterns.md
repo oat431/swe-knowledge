@@ -5,14 +5,14 @@ tags:
   - tactics
   - reference
   - software-architecture
-source: Bass, Clements & Kazman — Software Architecture in Practice, 3rd Edition, Chapter 13
+source: Bass, Clements & Kazman, *Software Architecture in Practice*, 3rd Edition, Chapter 13
 aliases:
   - SAiP Ch13
   - Architectural Tactics and Patterns
   - Architecture Patterns Catalog
 ---
 
-# 06 — Tactics and Patterns
+# 06: Tactics and Patterns
 
 > *"Tactics are atoms and patterns are molecules."*
 
@@ -30,7 +30,7 @@ An architectural pattern establishes a relationship among three things:
 |---------|-------------|
 | **Context** | A recurring, common situation in the world that gives rise to a problem |
 | **Problem** | The problem (generalized), its variants, complementary and opposing forces. Often includes quality attributes that must be met |
-| **Solution** | The architectural resolution — element types, connectors/interaction mechanisms, topological layout, and semantic constraints |
+| **Solution** | The architectural resolution: element types, connectors/interaction mechanisms, topological layout, and semantic constraints |
 
 The solution is determined by:
 - A set of **element types** (e.g., data repositories, processes, objects)
@@ -38,7 +38,7 @@ The solution is determined by:
 - A **topological layout** of the components
 - A set of **semantic constraints** covering topology, element behavior, and interaction mechanisms
 
-> Complex systems exhibit **multiple patterns at once**. A web-based system might use three-tier client-server, but within it also use replication, proxies, caches, firewalls, MVC, etc. — each of which may employ further patterns and tactics.
+> Complex systems exhibit **multiple patterns at once**. A web-based system might use three-tier client-server, but within it also use replication, proxies, caches, firewalls, MVC, etc.; each of which may employ further patterns and tactics.
 
 ---
 
@@ -46,9 +46,9 @@ The solution is determined by:
 
 Patterns are categorized by the **dominant type of elements** they show:
 
-- **Module patterns** — show modules
-- **Component-and-Connector (C&C) patterns** — show components and connectors at runtime
-- **Allocation patterns** — combine software elements with non-software elements
+- **Module patterns:** show modules
+- **Component-and-Connector (C&C) patterns:** show components and connectors at runtime
+- **Allocation patterns:** combine software elements with non-software elements
 
 ---
 
@@ -60,7 +60,7 @@ Patterns are categorized by the **dominant type of elements** they show:
 |--------|--------|
 | **Context** | Complex systems need to develop and evolve portions independently. Developers need clear separation of concerns |
 | **Problem** | Segment software so that modules can be developed and evolved separately with little interaction, supporting portability, modifiability, and reuse |
-| **Solution** | Divide software into **layers** — groupings of modules that offer cohesive sets of services. The allowed-to-use relation is **unidirectional** (upper layers use lower layers; never vice versa). Layers completely partition the software; each partition is exposed through a public interface |
+| **Solution** | Divide software into **layers:** groupings of modules that offer cohesive sets of services. The allowed-to-use relation is **unidirectional** (upper layers use lower layers; never vice versa). Layers completely partition the software; each partition is exposed through a public interface |
 
 **Key Constraints:**
 - Every piece of software is allocated to exactly one layer
@@ -75,7 +75,7 @@ Patterns are categorized by the **dominant type of elements** they show:
 
 ##### Finer Points of Layers (PCC sidebar)
 
-1. A stack-of-boxes diagram **must include a key** specifying whether layer bridging is allowed — otherwise the diagram is ambiguous
+1. A stack-of-boxes diagram **must include a key** specifying whether layer bridging is allowed; otherwise the diagram is ambiguous
 2. A set of boxes with arrows showing everything-is-allowed-to-use-everything is **not** a layered architecture
 3. "Sidecar" layers (common utilities beside the main stack) are valid but must have explicit usage rules
 4. Segmented layers need explicit inter-segment usage rules
@@ -93,11 +93,11 @@ Patterns are categorized by the **dominant type of elements** they show:
 | **Solution** | Insert an intermediary **broker** between clients and servers. Client queries broker → broker forwards request to server → server processes → result returns via broker |
 
 **Elements:**
-- **Client** — requester of services
-- **Server** — provider of services
-- **Broker** — intermediary that locates servers, forwards requests, returns results
-- **Client-side proxy** — manages communication (marshaling/sending/unmarshaling)
-- **Server-side proxy** — manages communication (marshaling/sending/unmarshaling)
+- **Client:** requester of services
+- **Server:** provider of services
+- **Broker:** intermediary that locates servers, forwards requests, returns results
+- **Client-side proxy:** manages communication (marshaling/sending/unmarshaling)
+- **Server-side proxy:** manages communication (marshaling/sending/unmarshaling)
 
 **Benefits:** Modifiability (use-an-intermediary tactic), availability (easy replacement of failed servers), performance (load distribution)
 
@@ -116,11 +116,11 @@ Patterns are categorized by the **dominant type of elements** they show:
 | **Solution** | Split into three component types: **Model** (application data), **View** (displays data, interacts with user), **Controller** (mediates, translates user actions, manages notifications) |
 
 **Elements:**
-- **Model** — encapsulates application state, responds to queries, exposes functionality, notifies views of changes
-- **View** — renders models, requests updates, sends user gestures to controller
-- **Controller** — defines application behavior, maps user actions to model updates, selects view for response
+- **Model:** encapsulates application state, responds to queries, exposes functionality, notifies views of changes
+- **View:** renders models, requests updates, sends user gestures to controller
+- **Controller:** defines application behavior, maps user actions to model updates, selects view for response
 
-**Relations:** Connected via **notifications** (events or callbacks) — either push or pull. Model and view/controller are loosely coupled.
+**Relations:** Connected via **notifications** (events or callbacks), either push or pull. Model and view/controller are loosely coupled.
 
 **Constraints:**
 - At least one instance each of model, view, and controller
@@ -142,8 +142,8 @@ Patterns are categorized by the **dominant type of elements** they show:
 | **Solution** | Successive transformations of data streams. Data arrives at a **filter's** input port, is transformed, and passes through a **pipe** to the next filter |
 
 **Elements:**
-- **Filter** — component that transforms data on input port(s) to data on output port(s). Can execute concurrently, can incrementally transform
-- **Pipe** — connector that conveys data between filters. Single source, single target. Preserves sequence, does not alter data. Has buffer size, protocol, transmission speed
+- **Filter:** component that transforms data on input port(s) to data on output port(s). Can execute concurrently, can incrementally transform
+- **Pipe:** connector that conveys data between filters. Single source, single target. Preserves sequence, does not alter data. Has buffer size, protocol, transmission speed
 
 **Constraints:**
 - Pipes connect filter output ports to filter input ports
@@ -171,16 +171,16 @@ Patterns are categorized by the **dominant type of elements** they show:
 | **Solution** | **Clients** initiate interactions by requesting services of **servers**. Connector: request/reply protocol. Components may act as both client and server |
 
 **Elements:**
-- **Client** — invokes services; has ports describing required services
-- **Server** — provides services; has ports describing provided services
-- **Request/reply connector** — data connector with request/reply protocol (local or remote, possibly encrypted)
+- **Client:** invokes services; has ports describing required services
+- **Server:** provides services; has ports describing provided services
+- **Request/reply connector:** data connector with request/reply protocol (local or remote, possibly encrypted)
 
 **Constraints:**
 - Clients connected to servers through request/reply connectors
 - Server components can be clients to other servers
 - May be arranged in **tiers** (logical groupings of related functionality)
 
-**Computational flow:** Asymmetric — clients initiate; servers don't know clients in advance. Usually synchronous (client blocks) but variants may be asynchronous.
+**Computational flow:** Asymmetric, clients initiate; servers don't know clients in advance. Usually synchronous (client blocks) but variants may be asynchronous.
 
 **Weaknesses:** Server can be performance bottleneck; server can be single point of failure; location decisions (client vs. server) complex and costly to change
 
@@ -194,13 +194,13 @@ Patterns are categorized by the **dominant type of elements** they show:
 |--------|--------|
 | **Context** | Distributed entities of equal importance, each providing its own resources, need to cooperate to provide a service to a distributed community |
 | **Problem** | Connect "equal" distributed entities via a common protocol so they can organize and share services with high availability and scalability |
-| **Solution** | Components directly interact as **peers**. All peers are "equal" — no peer or group is critical for system health. Any component can interact with any other. Each peer is both client and server |
+| **Solution** | Components directly interact as **peers**. All peers are "equal"; no peer or group is critical for system health. Any component can interact with any other. Each peer is both client and server |
 
 **Key Characteristics:**
 - Bidirectional interactions (two-way communication)
 - Peers discover each other on the network, then cooperate
 - Search may propagate peer-to-peer with limited hops
-- **Supernodes** — specialized peers with indexing/routing capabilities
+- **Supernodes:** specialized peers with indexing/routing capabilities
 - Peers can be added/removed with no significant impact → great scalability
 - Multiple peers have overlapping capabilities → improved availability
 - Load distributed across peers → performance advantages
@@ -220,11 +220,11 @@ Patterns are categorized by the **dominant type of elements** they show:
 | **Solution** | Collection of distributed components that provide and/or consume services. Services are largely standalone, independently deployed. Quality attributes can be specified via **Service-Level Agreements (SLAs)** |
 
 **Elements:**
-- **Service providers** — provide services through published interfaces (with SLAs)
-- **Service consumers** — invoke services directly or through intermediaries
-- **Enterprise Service Bus (ESB)** — intermediary that routes/transforms messages, converts protocols, performs security checks, manages transactions
-- **Service registry** — allows runtime service registration and discovery
-- **Orchestration server** — coordinates interactions based on business process/workflow languages
+- **Service providers:** provide services through published interfaces (with SLAs)
+- **Service consumers:** invoke services directly or through intermediaries
+- **Enterprise Service Bus (ESB):** intermediary that routes/transforms messages, converts protocols, performs security checks, manages transactions
+- **Service registry:** allows runtime service registration and discovery
+- **Orchestration server:** coordinates interactions based on business process/workflow languages
 
 **Connector Types:**
 | Connector | Description |
@@ -295,7 +295,7 @@ Patterns are categorized by the **dominant type of elements** they show:
 
 | Aspect | Detail |
 |--------|--------|
-| **Context** | Need to quickly analyze enormous volumes of data (petabyte scale) — logs, document repositories, web link pairs |
+| **Context** | Need to quickly analyze enormous volumes of data (petabyte scale), logs, document repositories, web link pairs |
 | **Problem** | Efficiently perform a distributed and parallel sort of a large data set and provide a simple means for the programmer to specify the analysis |
 | **Solution** | Three parts: (1) specialized infrastructure for allocating software to hardware nodes and sorting data, (2) programmer-coded **map** function, (3) programmer-coded **reduce** function |
 
@@ -328,7 +328,7 @@ Patterns are categorized by the **dominant type of elements** they show:
 
 | Aspect | Detail |
 |--------|--------|
-| **Context** | Distributed deployment — need to distribute infrastructure into distinct subsets for operational or business reasons |
+| **Context** | Distributed deployment: need to distribute infrastructure into distinct subsets for operational or business reasons |
 | **Problem** | Split the system into computationally independent execution structures (groups of software + hardware) connected by communications media |
 | **Solution** | Organize execution structures as logical groupings of components called **tiers**. Grouping criteria: component type, shared execution environment, same runtime purpose |
 
@@ -342,7 +342,7 @@ Patterns are categorized by the **dominant type of elements** they show:
 
 > **Tiers ≠ Layers!** Tiers apply to runtime entities; layers apply to modules (implementation units).
 
-**Other Allocation Patterns:** Tiered Distribution (Microsoft), WebSphere topologies (IBM — 11 deployment patterns), work assignment patterns (Platform, Competence Center, Open Source for distributed Agile teams)
+**Other Allocation Patterns:** Tiered Distribution (Microsoft), WebSphere topologies (IBM, 11 deployment patterns), work assignment patterns (Platform, Competence Center, Open Source for distributed Agile teams)
 
 ---
 
@@ -352,7 +352,7 @@ Patterns are categorized by the **dominant type of elements** they show:
 
 **Tactics are the building blocks** from which architectural patterns are created. Most patterns consist of several different tactics, often chosen to promote different quality attributes (e.g., a tactic that makes an availability pattern more secure).
 
-**Example — Layered Pattern as Amalgam of Tactics:**
+**Example: Layered Pattern as Amalgam of Tactics:**
 
 | Tactic | Role in Layered Pattern |
 |--------|------------------------|
@@ -362,7 +362,7 @@ Patterns are categorized by the **dominant type of elements** they show:
 | **Restrict communication paths** | Unidirectional allowed-to-use; reduces possible communication paths to (#layers − 1) |
 | **Use an intermediary** | Each layer acts as intermediary between the layer above and the layer below |
 
-Without any one of these tactics, the pattern might be ineffective — e.g., removing "restrict dependencies" destroys low coupling; removing "increase semantic coherence" destroys separation of concerns.
+Without any one of these tactics, the pattern might be ineffective: e.g., removing "restrict dependencies" destroys low coupling; removing "increase semantic coherence" destroys separation of concerns.
 
 **Table: Patterns and Their Modifiability Tactics** (from Bachmann 2007):
 
@@ -381,17 +381,17 @@ Without any one of these tactics, the pattern might be ineffective — e.g., rem
 
 A documented pattern is **underspecified** for a specific situation. To make a pattern work in a given architectural context, examine:
 
-1. **Inherent quality attribute tradeoffs** the pattern makes — compare what it promotes/diminishes with your needs
+1. **Inherent quality attribute tradeoffs** the pattern makes: compare what it promotes/diminishes with your needs
 2. **Other quality attributes** the pattern affects indirectly but that are important in your application
 
-**Example — Augmenting the Broker Pattern:**
+**Example: Augmenting the Broker Pattern:**
 
 | Weakness | Tactic to Address It |
 |----------|---------------------|
-| **Availability** — broker is single point of failure | Increase available resources (multiple brokers); maintain multiple copies (shared state); heartbeat/ping/echo (fault detection) |
-| **Performance** — indirection adds latency | Increase available resources; scheduling resources (load balancing) |
-| **Testability** — highly dynamic, asynchronous | (Not addressed by broker; requires additional testing infrastructure) |
-| **Security** — no authentication/authorization | Authentication/authorization tactics; secure communication channels |
+| **Availability:** broker is single point of failure | Increase available resources (multiple brokers); maintain multiple copies (shared state); heartbeat/ping/echo (fault detection) |
+| **Performance:** indirection adds latency | Increase available resources; scheduling resources (load balancing) |
+| **Testability:** highly dynamic, asynchronous | (Not addressed by broker; requires additional testing infrastructure) |
+| **Security:** no authentication/authorization | Authentication/authorization tactics; secure communication channels |
 
 > Each tactic brings tradeoffs: load balancing adds indirection (latency); the load balancer becomes a new single point of failure; replicated brokers increase design cost and complexity.
 
@@ -411,10 +411,10 @@ Ping/Echo → Side effect: Performance overhead
     → Apply: Scheduling Policy → Side effect: Modifiability (adding/changing policy)
       → Apply: Use an Intermediary → Side effect: Ensure all communication passes through
         → Apply: Restrict Dependencies → Side effect: Performance overhead of intermediary
-          → (Recursive — evaluate if overhead is acceptable)
+          → (Recursive; evaluate if overhead is acceptable)
 ```
 
-> Applying successive tactics is like **chess**: good players see immediate consequences; very good players look several moves ahead. Design becomes an exercise of "generate and test."
+> Applying successive tactics is like **chess:** good players see immediate consequences; very good players look several moves ahead. Design becomes an exercise of "generate and test."
 
 ---
 
@@ -437,8 +437,8 @@ Ping/Echo → Side effect: Performance overhead
 | **Allocation** | Software + Non-software | Map-Reduce, Multi-tier |
 
 **Key Takeaways:**
-- Patterns provide known solutions with documented properties — they enable reuse of architectural knowledge
-- Patterns are underspecified — augment them with tactics for specific contexts
+- Patterns provide known solutions with documented properties: they enable reuse of architectural knowledge
+- Patterns are underspecified: augment them with tactics for specific contexts
 - Every tactic has side effects; combining tactics requires navigating tradeoffs like a chess game
 - Complex systems exhibit multiple patterns simultaneously
 - Patterns can be violated in small ways when there's a good design tradeoff
@@ -454,16 +454,16 @@ Ping/Echo → Side effect: Performance overhead
 | **SLA** (Service-Level Agreement) | Contract specifying quality attributes (performance, availability, etc.) for a service |
 | **Supernode** | Specialized peer in P2P networks with indexing/routing capabilities |
 | **Orchestration server** | Coordinates service interactions based on business process/workflow definitions |
-| **Callback** | An upward call from a lower layer to a higher layer that does not depend on the answer — maintains layering discipline |
+| **Callback** | An upward call from a lower layer to a higher layer that does not depend on the answer, maintains layering discipline |
 
 ---
 
-*Source: Bass, Clements & Kazman — Software Architecture in Practice, 3rd Edition, Chapter 13: Architectural Tactics and Patterns*
+*Source: Bass, Clements & Kazman, Software Architecture in Practice, 3rd Edition, Chapter 13: Architectural Tactics and Patterns*
 
 
 ## Related
 
-- [[Software Architecture Overview]] — All architecture topics
-- [[02_Quality_Attributes_Overview]] — QA scenarios driving tactics
-- [[07_Design_and_Documentation]] — ADD method uses tactics
-- [[Microservice/Microservice Overview]] — Microservice patterns
+- [[Software Architecture Overview]]: All architecture topics
+- [[02_Quality_Attributes_Overview]]: QA scenarios driving tactics
+- [[07_Design_and_Documentation]]: ADD method uses tactics
+- [[Microservice/Microservice Overview]]: Microservice patterns

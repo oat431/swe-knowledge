@@ -10,8 +10,8 @@ tags:
 
 # Security, Testability & Usability
 
-> **Source:** Bass, Clements & Kazman — *Software Architecture in Practice* (SAiP), Chapters 9–11
-> **Purpose:** Cover the general scenarios, architectural tactics, and design checklists for security, testability, and usability — three quality attributes that are often in tension but all critical to system success.
+> **Source:** Bass, Clements & Kazman, *Software Architecture in Practice* (SAiP), Chapters 9–11
+> **Purpose:** Cover the general scenarios, architectural tactics, and design checklists for security, testability, and usability, three quality attributes that are often in tension but all critical to system success.
 
 ---
 
@@ -19,15 +19,15 @@ tags:
 
 Security is a measure of the system's ability to protect data and information from unauthorized access while still providing access to authorized persons and systems. Attacks can be characterized as threats against:
 
-- **Confidentiality** — data is protected from unauthorized access
-- **Integrity** — data is delivered as intended, without unauthorized modification or deletion
-- **Availability** — the system is accessible to those entitled to use it
+- **Confidentiality:** data is protected from unauthorized access
+- **Integrity:** data is delivered as intended, without unauthorized modification or deletion
+- **Availability:** the system is accessible to those entitled to use it
 
 ### 1.1 Security General Scenario
 
 | Portion | Possible Values |
 |---|---|
-| **Source** | Human or another system — correctly identified, incorrectly identified, or unknown. Attacker may be external or internal. |
+| **Source** | Human or another system: correctly identified, incorrectly identified, or unknown. Attacker may be external or internal. |
 | **Stimulus** | Unauthorized attempt to display data, change/delete data, access system services, change system behavior, or reduce availability. |
 | **Artifact** | System services, data within the system, a component or resource, data produced or consumed by the system. |
 | **Environment** | Online or offline; connected or disconnected from network; behind firewall or open; fully/partially/not operational. |
@@ -51,10 +51,10 @@ The tactics are organized into four categories: **Detect**, **Resist**, **React*
 
 | Tactic | Description |
 |---|---|
-| **Identify Actors** | Identify the source of any external input — user IDs, access codes, IP addresses, protocols, ports. |
+| **Identify Actors** | Identify the source of any external input: user IDs, access codes, IP addresses, protocols, ports. |
 | **Authenticate Actors** | Ensure an actor is actually who/what it purports to be. Passwords, one-time passwords, digital certificates, biometric identification. |
 | **Authorize Actors** | Ensure an authenticated actor has rights to access/modify data or services. Access control by actor, actor class, groups, roles, or individual lists. |
-| **Limit Access** | Control what/who may access which parts — process management, memory protection, blocking hosts, closing ports, rejecting protocols. Firewalls, DMZ. |
+| **Limit Access** | Control what/who may access which parts, process management, memory protection, blocking hosts, closing ports, rejecting protocols. Firewalls, DMZ. |
 | **Limit Exposure** | Reduce probability of successful attack or restrict potential damage. Conceal facts ("security by obscurity"), distribute critical resources across locations. |
 | **Encrypt Data** | Protect data from unauthorized access. Symmetric (same key) or asymmetric (public/private keys). VPN, SSL/TLS for communication links. |
 | **Separate Entities** | Physical separation (different servers/networks), virtual machines, air gaps, separating sensitive from non-sensitive data. |
@@ -70,8 +70,8 @@ The tactics are organized into four categories: **Detect**, **Resist**, **React*
 
 #### Recover from Attacks
 
-- **Restore services** — leverage availability tactics (Chapter 5); keep additional servers/connections in reserve.
-- **Maintain audit trail** — record user and system actions and their effects to trace/identify attackers, support prosecution, and improve future defenses.
+- **Restore services:** leverage availability tactics (Chapter 5); keep additional servers/connections in reserve.
+- **Maintain audit trail:** record user and system actions and their effects to trace/identify attackers, support prosecution, and improve future defenses.
 
 ### 1.3 Security Tactics Tree
 
@@ -104,15 +104,15 @@ Security Tactics
 
 ## 2. Testability (Ch 10)
 
-Testability refers to the ease with which software can be made to demonstrate its faults through (typically execution-based) testing. Industry estimates indicate that 30–50%+ of the cost of developing well-engineered systems is taken up by testing — so any architectural improvement to testability yields a large payoff.
+Testability refers to the ease with which software can be made to demonstrate its faults through (typically execution-based) testing. Industry estimates indicate that 30–50%+ of the cost of developing well-engineered systems is taken up by testing, so any architectural improvement to testability yields a large payoff.
 
-A system is testable when it is possible to **control** each component's inputs (and possibly internal state) and **observe** its outputs (and possibly internal state). This is frequently done through a **test harness** — specialized software designed to exercise the software under test.
+A system is testable when it is possible to **control** each component's inputs (and possibly internal state) and **observe** its outputs (and possibly internal state). This is frequently done through a **test harness:** specialized software designed to exercise the software under test.
 
 ### 2.1 Testability General Scenario
 
 | Portion | Possible Values |
 |---|---|
-| **Source** | Unit testers, integration testers, system testers, acceptance testers, end users — manually or using automated testing tools. |
+| **Source** | Unit testers, integration testers, system testers, acceptance testers, end users; manually or using automated testing tools. |
 | **Stimulus** | A set of tests is executed due to completion of a coding increment (class/layer/service), completed integration, full implementation, or delivery to customer. |
 | **Artifact** | A unit of code (module), a subsystem, or the whole system. |
 | **Environment** | Design time, development time, compile time, integration time, deployment time, run time. May include test harness or test environments. |
@@ -127,18 +127,18 @@ Two categories: **Control and Observe System State** and **Limit Complexity**.
 
 | Tactic | Description |
 |---|---|
-| **Specialized Interfaces** | Provide testing interfaces to control or capture variable values — set/get methods, report methods returning full object state, reset methods, verbose output/logging toggles. Keep them separate from functional interfaces so they can be removed if needed. |
+| **Specialized Interfaces** | Provide testing interfaces to control or capture variable values: set/get methods, report methods returning full object state, reset methods, verbose output/logging toggles. Keep them separate from functional interfaces so they can be removed if needed. |
 | **Record/Playback** | Capture state crossing an interface to "play the system back" and re-create faults. Refers to both capturing information and using it as input for further testing. |
 | **Localize State Storage** | Store state in a single place so the system can be started in an arbitrary state for testing. Use state machines to externalize and track/report current state. |
-| **Abstract Data Sources** | Abstract interfaces so you can substitute test data easily — e.g., point test system at other test databases or test data files without changing functional code. |
+| **Abstract Data Sources** | Abstract interfaces so you can substitute test data easily; e.g., point test system at other test databases or test data files without changing functional code. |
 | **Sandbox** | Isolate an instance from the real world to enable experimentation with no permanent consequences. Virtualize resources (clock, memory, battery, network). Stubs, mocks, and dependency injection are simple forms. |
 | **Executable Assertions** | Hand-coded assertions placed at desired locations to indicate when/where a program is in a faulty state. Pre- and post-conditions, class-level invariants. Effectively embed the test oracle in the code. |
 
 Techniques for replacing components with testable versions:
 
-- **Component replacement** — swap implementation via build scripts
-- **Preprocessor macros** — expand to state-reporting code or probe statements
-- **Aspects** — handle cross-cutting concern of state reporting (aspect-oriented programming)
+- **Component replacement:** swap implementation via build scripts
+- **Preprocessor macros:** expand to state-reporting code or probe statements
+- **Aspects:** handle cross-cutting concern of state reporting (aspect-oriented programming)
 
 #### Limit Complexity
 
@@ -169,11 +169,11 @@ Testability Tactics
 
 Usability is concerned with how easy it is for the user to accomplish a desired task and the kind of user support the system provides. It encompasses:
 
-- **Learning system features** — help features for unfamiliar users
-- **Using a system efficiently** — ability to redirect the system after issuing a command, suspend/resume tasks
-- **Minimizing the impact of errors** — cancel incorrectly issued commands
-- **Adapting the system to user needs** — auto-fill, personalization
-- **Increasing confidence and satisfaction** — feedback, progress indicators
+- **Learning system features:** help features for unfamiliar users
+- **Using a system efficiently:** ability to redirect the system after issuing a command, suspend/resume tasks
+- **Minimizing the impact of errors:** cancel incorrectly issued commands
+- **Adapting the system to user needs:** auto-fill, personalization
+- **Increasing confidence and satisfaction:** feedback, progress indicators
 
 ### 3.1 Usability General Scenario
 
@@ -197,7 +197,7 @@ Tactics are organized by who takes initiative: **user initiative**, **system ini
 | Tactic | Description |
 |---|---|
 | **Cancel** | System must have a constant listener (not blocked by the action being canceled); command must be terminated; resources freed; collaborating components informed. |
-| **Undo** | Maintain sufficient state information (snapshots/checkpoints or reversible operations) so an earlier state can be restored. Not all operations are easily reversible — some require elaborate records. |
+| **Undo** | Maintain sufficient state information (snapshots/checkpoints or reversible operations) so an earlier state can be restored. Not all operations are easily reversible; some require elaborate records. |
 | **Pause/Resume** | For long-running operations, temporarily free resources so they can be reallocated to other tasks. |
 | **Aggregate** | Allow grouping of lower-level objects so operations can be applied to the group in one action, reducing repetitive drudgery and potential for mistakes. |
 
@@ -209,7 +209,7 @@ When the system takes initiative, it relies on models of the user, the task, or 
 |---|---|
 | **Maintain Task Model** | Determine context so the system knows what the user is attempting and can provide assistance (e.g., auto-correcting lowercase letters at sentence start). |
 | **Maintain User Model** | Represent user's knowledge, behavior (expected response time), and other user/class-specific aspects. Enables pacing of interactions, controlling assistance/suggestions. Supports user interface customization. |
-| **Maintain System Model** | Explicit model of the system itself — used to determine expected behavior and give appropriate feedback (e.g., progress bar predicting time to complete current activity). |
+| **Maintain System Model** | Explicit model of the system itself; used to determine expected behavior and give appropriate feedback (e.g., progress bar predicting time to complete current activity). |
 
 ### 3.3 Usability Tactics Tree
 
@@ -234,9 +234,9 @@ Usability Tactics
 
 | Relationship | Details |
 |---|---|
-| **Security ↔ Usability** | Often in tension: security imposes procedures/processes that feel like overhead to casual users. The best approach is to make the system easy to use securely — security and usability should go hand in hand. |
+| **Security ↔ Usability** | Often in tension: security imposes procedures/processes that feel like overhead to casual users. The best approach is to make the system easy to use securely; security and usability should go hand in hand. |
 | **Testability ↔ Modifiability** | Many testability tactics (high cohesion, loose coupling, separation of concerns) are also modifiability tactics. Limiting complexity benefits both. |
-| **Usability ↔ Modifiability** | Strongly complementary: separating the UI (MVC, encapsulation) makes the system both more usable (faster prototyping/iteration) and more modifiable. However, business-rule-driven UI validation can create tension — duplicating rules on client and server helps performance but hurts modifiability. |
+| **Usability ↔ Modifiability** | Strongly complementary: separating the UI (MVC, encapsulation) makes the system both more usable (faster prototyping/iteration) and more modifiable. However, business-rule-driven UI validation can create tension, duplicating rules on client and server helps performance but hurts modifiability. |
 | **Testability ↔ Fault Tolerance** | In tension: a testable system "gives up its faults easily"; a fault-tolerant system "jealously hides its faults." Designing for both requires careful balance. |
 
 ---
@@ -277,20 +277,20 @@ Usability Tactics
 
 ## 6. Key Takeaways
 
-1. **Security is a lifecycle concern.** No tactic is foolproof — systems will be compromised. The four-part framework of detect → resist → react → recover acknowledges this reality.
+1. **Security is a lifecycle concern.** No tactic is foolproof: systems will be compromised. The four-part framework of detect → resist → react → recover acknowledges this reality.
 
-2. **Testability is about control and observation.** The architect's primary lever is making system state accessible and manipulable through specialized interfaces, sandboxing, and abstraction — while limiting structural and behavioral complexity.
+2. **Testability is about control and observation.** The architect's primary lever is making system state accessible and manipulable through specialized interfaces, sandboxing, and abstraction, while limiting structural and behavioral complexity.
 
-3. **Usability depends on initiative.** Both user-initiative tactics (cancel, undo, pause/resume, aggregate) and system-initiative tactics (task/user/system models) require architectural support — not just UI polish.
+3. **Usability depends on initiative.** Both user-initiative tactics (cancel, undo, pause/resume, aggregate) and system-initiative tactics (task/user/system models) require architectural support, not just UI polish.
 
 4. **Modifiability is the common thread.** Separating concerns (especially UI from logic), limiting dependencies, and deferring binding benefit all three quality attributes. MVC and similar patterns are cross-cutting enablers.
 
-5. **Trade-offs are real.** Security vs. usability, testability vs. fault tolerance — the architect's job is to make these trade-offs explicit and intentional through scenarios and checklists.
+5. **Trade-offs are real.** Security vs. usability, testability vs. fault tolerance, the architect's job is to make these trade-offs explicit and intentional through scenarios and checklists.
 
 
 ## Related
 
-- [[Software Architecture Overview]] — All architecture topics
-- [[02_Quality_Attributes_Overview]] — QA scenarios framework
-- [[04_Modifiability_and_Performance]] — Cross-cutting performance tradeoffs
-- [[06_Tactics_and_Patterns]] — Related architecture patterns
+- [[Software Architecture Overview]]: All architecture topics
+- [[02_Quality_Attributes_Overview]]: QA scenarios framework
+- [[04_Modifiability_and_Performance]]: Cross-cutting performance tradeoffs
+- [[06_Tactics_and_Patterns]]: Related architecture patterns

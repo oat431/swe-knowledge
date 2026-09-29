@@ -7,7 +7,7 @@ tags:
 
 # 01 Decomposition Patterns
 
-The hardest question in microservices: **where do you draw the lines?** Decompose wrong and you get a distributed monolith — all the complexity of microservices with none of the benefits.
+The hardest question in microservices: **where do you draw the lines?** Decompose wrong and you get a distributed monolith; all the complexity of microservices with none of the benefits.
 
 ---
 
@@ -27,7 +27,7 @@ Align services with **what the business does**, not how it's organized.
 
 > **Rule:** One service = one business capability. The service owns the data + logic + UI for that capability.
 
-### 2. By Subdomain (DDD — Domain-Driven Design)
+### 2. By Subdomain (DDD: Domain-Driven Design)
 
 Decompose using **bounded contexts** from DDD. Each bounded context becomes a service.
 
@@ -38,6 +38,7 @@ Decompose using **bounded contexts** from DDD. Each bounded context becomes a se
 | **Domain Event** | Message published to other services |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     subgraph "Order Context"
         A[Order Service]
@@ -51,11 +52,11 @@ graph TD
     A -->|OrderPlaced event| B
     B -->|PaymentConfirmed event| C
     C -->|Shipped event| A
-```
+
 
 ### 3. By Transaction Boundary
 
-Find where **atomic transactions end** — those are natural service boundaries. Everything inside a transaction must live in the same service. Everything across transactions can be separate services.
+Find where **atomic transactions end:** those are natural service boundaries. Everything inside a transaction must live in the same service. Everything across transactions can be separate services.
 
 > If two operations MUST succeed or fail together (ACID), they belong in the same service. If they can be eventually consistent, they can be separate.
 
@@ -75,7 +76,7 @@ Find where **atomic transactions end** — those are natural service boundaries.
 
 > **Organizations design systems that mirror their own communication structure.**
 
-If your org has 3 teams — Orders, Payments, Shipping — you'll naturally build 3 services. The architecture follows the org chart. Use this as a design tool: **structure your teams around the architecture you want.**
+If your org has 3 teams (Orders, Payments, Shipping) you'll naturally build 3 services. The architecture follows the org chart. Use this as a design tool: **structure your teams around the architecture you want.**
 
 ---
 

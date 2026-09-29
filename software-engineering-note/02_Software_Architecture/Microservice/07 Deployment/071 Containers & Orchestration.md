@@ -7,11 +7,11 @@ tags:
 
 # 07 Containers & Orchestration
 
-Containers package your service with its dependencies into a single, portable unit. Orchestrators manage containers at scale — scheduling, scaling, networking, and healing.
+Containers package your service with its dependencies into a single, portable unit. Orchestrators manage containers at scale, scheduling, scaling, networking, and healing.
 
 ---
 
-## Docker — The Container
+## Docker: The Container
 
 A container is a lightweight, isolated process with its own filesystem, network, and resource limits.
 
@@ -31,13 +31,14 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 
 ---
 
-## Kubernetes — The Orchestrator
+## Kubernetes: The Orchestrator
 
 Kubernetes schedules containers, keeps them running, and connects them.
 
 ### Core Objects
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     D[Deployment] -->|manages| RS[ReplicaSet]
     RS -->|creates| P1[Pod 1]
@@ -47,11 +48,11 @@ graph TD
     S -->|routes to| P2
     S -->|routes to| P3
     I[Ingress] -->|external traffic| S
-```
+
 
 | Object | Purpose |
 |--------|---------|
-| **Pod** | Smallest deployable unit — one or more containers sharing network/storage |
+| **Pod** | Smallest deployable unit; one or more containers sharing network/storage |
 | **Deployment** | Manages pods: desired count, rolling updates, rollbacks |
 | **Service** | Stable IP/DNS for pods (pods die, service stays) |
 | **Ingress** | External HTTP access with routing rules |
@@ -125,5 +126,5 @@ spec:
 
 ## Sources
 
-- Kubernetes — https://kubernetes.io/docs/
-- Docker — https://docs.docker.com/
+- Kubernetes: https://kubernetes.io/docs/
+- Docker: https://docs.docker.com/

@@ -20,7 +20,7 @@ SLOs replace vague reliability targets with measurable contracts. Instead of "th
 | **SLO** (Service Level Objective) | The target you aim for | 99.9% availability over 30 days |
 | **SLA** (Service Level Agreement) | The contract with consequences | Refund if SLO missed for 2+ months |
 
-> **Rule:** SLO should always be stricter than SLA. The gap is your buffer — it gives you time to react before breaching a contractual obligation.
+> **Rule:** SLO should always be stricter than SLA. The gap is your buffer; it gives you time to react before breaching a contractual obligation.
 
 ---
 
@@ -43,7 +43,7 @@ SLOs replace vague reliability targets with measurable contracts. Instead of "th
 Error Budget = 100% - SLO target
 ```
 
-Your error budget is the **allowed unreliability**. It's not a target to hit — it's a budget to spend on deployments, experiments, and inevitable failures.
+Your error budget is the **allowed unreliability**. It's not a target to hit; it's a budget to spend on deployments, experiments, and inevitable failures.
 
 | SLO Target | Error Budget | Downtime/month | Downtime/year |
 |-----------|-------------|----------------|---------------|
@@ -80,10 +80,10 @@ Your error budget is the **allowed unreliability**. It's not a target to hit —
 
 What happens when budget is exhausted:
 
-1. **Freeze feature releases** — no new deployments until budget recovers
-2. **Focus on reliability work** — all engineering effort goes to stability
-3. **Conduct postmortem** — identify what consumed the budget
-4. **Resume features** — only when budget has recovered to a safe margin (e.g., > 50%)
+1. **Freeze feature releases:** no new deployments until budget recovers
+2. **Focus on reliability work:** all engineering effort goes to stability
+3. **Conduct postmortem:** identify what consumed the budget
+4. **Resume features:** only when budget has recovered to a safe margin (e.g., > 50%)
 
 The policy must be agreed upon by engineering AND product leadership before incidents happen. It's a pre-negotiated social contract.
 
@@ -104,6 +104,6 @@ If a bad deploy causes 20 minutes of 500s → you've burned **46% of your availa
 
 ## Sources
 
-- [Google SRE Book — Service Level Objectives](https://sre.google/sre-book/service-level-objectives/)
+- [Google SRE Book: Service Level Objectives](https://sre.google/sre-book/service-level-objectives/)
 - [Datadog SLO Documentation](https://docs.datadoghq.com/service_management/service_level_objectives/)
-- Alex Hidalgo — *Implementing Service Level Objectives* (O'Reilly)
+- Alex Hidalgo: *Implementing Service Level Objectives* (O'Reilly)

@@ -7,18 +7,18 @@ tags:
   - design-patterns
 ---
 
-# Software Architecture — Overview
+# Software Architecture: Overview
 
 > **Source:** SWEBOK v4 Chapter 02 *(NEW in v4)*
-> **Purpose:** Cover the fundamental concepts, representation, process, and evaluation of software architectures — treating architecture as a distinct discipline from design.
+> **Purpose:** Cover the fundamental concepts, representation, process, and evaluation of software architectures, treating architecture as a distinct discipline from design.
 
 ## What Is This?
 
-Software Architecture addresses the fundamental properties of a system in its environment: the structures needed to reason about it, and the decisions that shape it throughout the lifecycle. It operates at a higher level of abstraction than detailed design — defining the skeleton that constrains all downstream construction. Architecture decisions are the hardest to reverse: changing a foundational structural choice late in development is orders of magnitude more expensive than changing a module's internal logic.
+Software Architecture addresses the fundamental properties of a system in its environment: the structures needed to reason about it, and the decisions that shape it throughout the lifecycle. It operates at a higher level of abstraction than detailed design, defining the skeleton that constrains all downstream construction. Architecture decisions are the hardest to reverse: changing a foundational structural choice late in development is orders of magnitude more expensive than changing a module's internal logic.
 
 SWEBOK v4 elevates Software Architecture to a full Knowledge Area (new in this edition), reflecting the discipline's maturity. Architecture exists in three senses: as a discipline (body of knowledge and practice), as a process (architecting activities), and as an outcome (architecture descriptions). The ISO/IEC/IEEE 42010 standard defines it as "the fundamental concepts or properties of a system in its environment, embodied in its elements, relationships, and design/evolution principles."
 
-Architecture matters because it determines quality attributes — performance, scalability, reliability, maintainability, security — more than any single algorithm or data structure choice. A well-chosen architecture lets a system evolve over decades; a poor one makes every change a risk. Conway's Law reminds us that organizations design systems mirroring their communication structures, so architecture both shapes and is shaped by organizational structure.
+Architecture matters because it determines quality attributes (performance, scalability, reliability, maintainability, security) more than any single algorithm or data structure choice. A well-chosen architecture lets a system evolve over decades; a poor one makes every change a risk. Conway's Law reminds us that organizations design systems mirroring their communication structures, so architecture both shapes and is shaped by organizational structure.
 
 ## Knowledge Areas
 
@@ -55,41 +55,41 @@ Architecture matters because it determines quality attributes — performance, s
 ### Architecture Evaluation
 - ATAM (Architecture Tradeoff Analysis Method): quality-attribute utility trees and scenarios
 - SAAM, QAW (Quality Attribute Workshops), SARA Report, Active Design Reviews
-- Quantitative metrics: coupling, cohesion, cyclomatic complexity; DevOps metrics (deployment frequency, lead time, MTTR)
+- Quantitative metrics: coupling, cohesion, cyclomatic complexity; devOps metrics (deployment frequency, lead time, MTTR)
 
 ## My Notes
 
 ### SAiP (Software Architecture in Practice)
-- [[01_Architecture_Fundamentals]] — What architecture is, structures & views, contexts & stakeholders
-- [[02_Quality_Attributes_Overview]] — QA scenarios, specifying QAs, tactics framework
-- [[03_Availability_and_Interoperability]] — Fault detection/recovery, service discovery, mediation
-- [[04_Modifiability_and_Performance]] — Coupling/cohesion, resource management, concurrency, caching
-- [[05_Security_and_Testability]] — Authenticate/authorize, confidentiality, test interfaces, observability
-- [[06_Tactics_and_Patterns]] — Full tactics catalog + architecture pattern reference
-- [[07_Design_and_Documentation]] — ASRs, Attribute-Driven Design (ADD), views & beyond
-- [[08_Architecture_in_Agile]] — Agile architecting, just-in-time design, guidelines
-- [[09_Evaluation_and_Governance]] — Reconstruction, ATAM, management, governance
-- [[10_Economics_and_Product_Lines]] — CBAM, architecture competence, software product lines
-- [[11_Cloud_and_Edge_Architecture]] — Cloud-native patterns, edge systems, Metropolis model
+- [[01_Architecture_Fundamentals]]: What architecture is, structures & views, contexts & stakeholders
+- [[02_Quality_Attributes_Overview]]: QA scenarios, specifying QAs, tactics framework
+- [[03_Availability_and_Interoperability]]: Fault detection/recovery, service discovery, mediation
+- [[04_Modifiability_and_Performance]]: Coupling/cohesion, resource management, concurrency, caching
+- [[05_Security_and_Testability]]: Authenticate/authorize, confidentiality, test interfaces, observability
+- [[06_Tactics_and_Patterns]]: Full tactics catalog + architecture pattern reference
+- [[07_Design_and_Documentation]]: ASRs, Attribute-Driven Design (ADD), views & beyond
+- [[08_Architecture_in_Agile]]: Agile architecting, just-in-time design, guidelines
+- [[09_Evaluation_and_Governance]]: Reconstruction, ATAM, management, governance
+- [[10_Economics_and_Product_Lines]]: CBAM, architecture competence, software product lines
+- [[11_Cloud_and_Edge_Architecture]]: Cloud-native patterns, edge systems, Metropolis model
 
 ### Microservice
 - [[Microservice/Microservice Overview|Microservice Overview]]
-  - [[Microservice/01 Decomposition/|01 Decomposition]]
-  - [[Microservice/02 Integration/|02 Integration]]
-  - [[Microservice/03 Data/|03 Data]]
-  - [[Microservice/04 Resilience/|04 Resilience]]
-  - [[Microservice/05 Observability/|05 Observability]]
-  - [[Microservice/06 Infrastructure/|06 Infrastructure]]
-  - [[Microservice/07 Deployment/|07 Deployment]]
+  - [[Microservice/01 Decomposition/011 Decomposition Patterns|01 Decomposition]]
+  - [[Microservice/02 Integration/021 API Gateway|02 Integration]]
+  - [[Microservice/03 Data/031 Database per Service|03 Data]]
+  - [[Microservice/04 Resilience/041 Circuit Breaker|04 Resilience]]
+  - [[Microservice/05 Observability/051 Logging & Monitoring|05 Observability]]
+  - [[Microservice/06 Infrastructure/061 Service Discovery|06 Infrastructure]]
+  - [[Microservice/07 Deployment/071 Containers & Orchestration|07 Deployment]]
 
 ## Relationship to Other KAs
 
-- **[[Software Requirements Overview|Software Requirements]]** — Architecture is driven by requirements; Architecturally Significant Requirements (ASRs) bridge requirements and architectural decisions.
-- **[[Software Design Overview|Software Design]]** — Architecture defines the skeleton; design fills in the muscles. Architecture operates at higher abstraction than detailed design.
-- **[[Software Construction Overview|Software Construction]]** — Architecture constrains construction: frameworks, libraries, coding standards, and build processes follow architectural decisions.
-- **[[Software Testing Overview|Software Testing]]** — Architecture influences test strategy (contract testing for microservices, integration environments). Evaluation is a form of testing.
-- **[[Software Engineering Operations Overview|Software Engineering Operations]]** — Deployment architecture (containers, orchestration, service mesh) is an architectural concern.
-- **[[Software Quality Overview|Software Quality]]** — Quality attributes ("ilities") are the primary concerns driving architecture evaluation and trade-off analysis.
+- **[[Software Requirements Overview|Software Requirements]]:** Architecture is driven by requirements; architecturally Significant Requirements (ASRs) bridge requirements and architectural decisions.
+- **[[../03_Software_Design/Software Design Note Overview|Software Design]]:** Architecture defines the skeleton; design fills in the muscles. Architecture operates at higher abstraction than detailed design.
+- **[[Software Construction Overview|Software Construction]]:** Architecture constrains construction: frameworks, libraries, coding standards, and build processes follow architectural decisions.
+- **[[Software Testing Overview|Software Testing]]:** Architecture influences test strategy (contract testing for microservices, integration environments). Evaluation is a form of testing.
+- **[[Software Engineering Operations Overview|Software Engineering Operations]]:** Deployment architecture (containers, orchestration, service mesh) is an architectural concern.
+- **[[Software Quality Overview|Software Quality]]:** Quality attributes ("ilities") are the primary concerns driving architecture evaluation and trade-off analysis.
 
 ---
 

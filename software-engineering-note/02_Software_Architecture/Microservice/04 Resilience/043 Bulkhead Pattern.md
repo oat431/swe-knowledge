@@ -46,7 +46,7 @@ Assign a dedicated thread pool per downstream service.
 
 ### 2. Semaphore Bulkhead
 
-Limit concurrent calls with a semaphore. Simpler than thread pools — no extra thread management.
+Limit concurrent calls with a semaphore. Simpler than thread pools; no extra thread management.
 
 ```java
 @Bulkhead(name = "paymentService", type = Bulkhead.Type.SEMAPHORE,
@@ -97,4 +97,4 @@ Request → Bulkhead (limits concurrency) → Circuit Breaker (stops on failure)
 ## Sources
 
 - Nygard, Michael. *Release It!*, 2nd ed., Pragmatic Bookshelf, 2018.
-- Resilience4j — https://resilience4j.readme.io/docs/bulkhead
+- Resilience4j: https://resilience4j.readme.io/docs/bulkhead

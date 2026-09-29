@@ -11,7 +11,7 @@ Not every failure is permanent. Sometimes a request fails because of a momentary
 
 ---
 
-## Timeout — Don't Wait Forever
+## Timeout: Don't Wait Forever
 
 Every remote call needs a deadline. Without one, a hung service blocks your threads forever.
 
@@ -30,11 +30,11 @@ factory.setReadTimeout(5000);      // 5 seconds
 rest.setRequestFactory(factory);
 ```
 
-> **Rule of thumb:** Set timeouts at p99 latency + some buffer. If your service responds in 200ms at p99, set 500ms. Don't set 30s "just to be safe" — that's how threads pile up.
+> **Rule of thumb:** Set timeouts at p99 latency + some buffer. If your service responds in 200ms at p99, set 500ms. Don't set 30s "just to be safe"; that's how threads pile up.
 
 ---
 
-## Retry — Try Again, But Smartly
+## Retry: Try Again, But Smartly
 
 Retry transient failures. Don't retry permanent ones.
 
@@ -71,7 +71,7 @@ resilience4j:
 
 ---
 
-## Fallback — When Everything Fails
+## Fallback: When Everything Fails
 
 What do you return when retries are exhausted and the circuit is open?
 
@@ -87,19 +87,20 @@ What do you return when retries are exhausted and the circuit is open?
 ## The Full Resilience Stack
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
-    A[Incoming Request] --> B[Timeout<br/>2s — don't hang]
+    A[Incoming Request] --> B[Timeout<br/>2s; don't hang]
     B --> C[Bulkhead<br/>max 10 concurrent]
     C --> D{Circuit Breaker<br/>is the service healthy?}
     D -->|CLOSED| E[Retry<br/>max 3, exponential backoff]
     E -->|Success| F[Return Response]
     E -->|Failure| G[Fallback]
     D -->|OPEN| G
-```
+
 
 ---
 
 ## Sources
 
 - Nygard, Michael. *Release It!*, 2nd ed., Pragmatic Bookshelf, 2018.
-- Resilience4j — https://resilience4j.readme.io/
+- Resilience4j: https://resilience4j.readme.io/

@@ -7,7 +7,7 @@ tags:
 
 # 06 Security Patterns
 
-In a monolith, security is one login check. In microservices, every service call needs authentication and authorization — but you can't make the user log in 5 times. Security patterns solve this without coupling every service to an auth system.
+In a monolith, security is one login check. In microservices, every service call needs authentication and authorization, but you can't make the user log in 5 times. Security patterns solve this without coupling every service to an auth system.
 
 ---
 
@@ -37,6 +37,7 @@ JWT Structure:
 ### JWT Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','actorBkg':'#19362D','actorBorder':'#1FB854','actorTextColor':'#CDD3D1','actorLineColor':'#1FB854','signalColor':'#CDD3D1','signalTextColor':'#CDD3D1','labelBoxBkgColor':'#161212','labelBoxBorderColor':'#1FB854','labelTextColor':'#CDD3D1','loopTextColor':'#CAC9C9','noteBkgColor':'#1EB88E','noteTextColor':'#000C07','noteBorderColor':'#1EB88E','activationBkgColor':'#1EB88E','activationBorderColor':'#1FB8AB','sequenceNumberColor':'#000000','fontSize':'14px'}}}%%
 sequenceDiagram
     participant U as User
     participant G as API Gateway
@@ -49,7 +50,7 @@ sequenceDiagram
     G->>G: Validate JWT signature
     G->>S: GET /orders + X-User-Id header
     S-->>U: Response
-```
+
 
 ---
 
@@ -106,7 +107,7 @@ The gateway is the security choke point:
 - [ ] All external traffic goes through API Gateway with TLS
 - [ ] Service-to-service uses mTLS or JWT client credentials
 - [ ] JWTs have short expiration (15 min) + refresh tokens
-- [ ] Secrets never in code — use Vault or K8s Secrets
+- [ ] Secrets never in code: use Vault or K8s Secrets
 - [ ] Rate limiting at gateway + per-service
 - [ ] Audit logs for all auth events
 
@@ -114,6 +115,6 @@ The gateway is the security choke point:
 
 ## Sources
 
-- JWT — https://jwt.io/
-- OAuth2 — https://oauth.net/2/
-- Istio Security — https://istio.io/latest/docs/concepts/security/
+- JWT: https://jwt.io/
+- OAuth2: https://oauth.net/2/
+- Istio Security: https://istio.io/latest/docs/concepts/security/

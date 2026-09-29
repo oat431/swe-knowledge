@@ -8,31 +8,31 @@ tags:
   - software-architecture
 ---
 
-# Design & Documentation — SAiP Ch 16–18
+# Design & Documentation: SAiP Ch 16–18
 
 > **Source:** Bass, Clements & Kazman, *Software Architecture in Practice* (3rd Edition), Chapters 16–18
-> **Purpose:** Cover the full pipeline of architectural design — from capturing architecturally significant requirements (ASRs) and business goals, through the Attribute-Driven Design (ADD) method, to documenting architectures using the Views and Beyond approach.
+> **Purpose:** Cover the full pipeline of architectural design, from capturing architecturally significant requirements (ASRs) and business goals, through the Attribute-Driven Design (ADD) method, to documenting architectures using the Views and Beyond approach.
 
 ---
 
 ## Chapter 16: Architecture and Requirements
 
-Architectures are driven by **Architecturally Significant Requirements (ASRs)** — requirements that have a profound impact on the architecture. An ASR must exhibit: (a) high architectural impact — including it will likely result in a different architecture; (b) high business or mission value.
+Architectures are driven by **Architecturally Significant Requirements (ASRs):** requirements that have a profound impact on the architecture. An ASR must exhibit: (a) high architectural impact, including it will likely result in a different architecture; (b) high business or mission value.
 
 ### 16.2 Gathering ASRs by Interviewing Stakeholders
 
-Architects are often called upon to help set quality attribute requirements. Stakeholders frequently have no idea what QAs they want — architects can provide feedback on what's reasonable, what's problematic, and where they can deliver better than expected.
+Architects are often called upon to help set quality attribute requirements. Stakeholders frequently have no idea what QAs they want, architects can provide feedback on what's reasonable, what's problematic, and where they can deliver better than expected.
 
 #### The Quality Attribute Workshop (QAW)
 
-A facilitated, stakeholder-focused method to generate, prioritize, and refine quality attribute scenarios before the architecture is completed. The QAW involves **8 steps**:
+A facilitated, stakeholder-focused method to generate, prioritize, and refine quality attribute scenarios before the architecture is completed. The QAW involves **8 steps:**
 
 | Step | Name | Description |
 |------|------|-------------|
 | 1 | QAW Presentation & Introductions | Facilitators describe motivation, explain steps; stakeholders introduce themselves |
 | 2 | Business/Mission Presentation | Management stakeholder presents business context, broad requirements, constraints, known QAs (~1 hour) |
 | 3 | Architectural Plan Presentation | Architect presents current architectural thinking and plans, to the extent they exist |
-| 4 | Identification of Architectural Drivers | Facilitators share distilled list of drivers; stakeholders clarify, add, delete, correct — reach consensus |
+| 4 | Identification of Architectural Drivers | Facilitators share distilled list of drivers; stakeholders clarify, add, delete, correct; reach consensus |
 | 5 | Scenario Brainstorming | Each stakeholder expresses scenarios; facilitators ensure explicit stimulus + response; at least one scenario per driver from Step 4 |
 | 6 | Scenario Consolidation | Similar scenarios are merged (with proposers' agreement) to prevent vote dilution |
 | 7 | Scenario Prioritization | Each stakeholder gets votes = 30% of total scenario count; allocate freely across scenarios |
@@ -49,9 +49,9 @@ A facilitated, stakeholder-focused method to generate, prioritize, and refine qu
 
 Business goals are the *raison d'être* for building a system. Three possible relationships between business goals and architecture:
 
-1. **Business goals → QA requirements** — every QA requirement should originate from a higher purpose describable in terms of added value
-2. **Business goals → direct architectural impact** — without precipitating a QA requirement (e.g., "database team needs work")
-3. **No influence** — some business goals (e.g., "reduce cost") may be realized through non-architectural means
+1. **Business goals → QA requirements:** every QA requirement should originate from a higher purpose describable in terms of added value
+2. **Business goals → direct architectural impact:** without precipitating a QA requirement (e.g., "database team needs work")
+3. **No influence:** some business goals (e.g., "reduce cost") may be realized through non-architectural means
 
 #### 11 Standard Business Goal Categories
 
@@ -73,13 +73,13 @@ Use these as conversation starters for elicitation:
 
 #### Business Goal Scenario (7 Parts)
 
-1. **Goal-source** — people or artifacts providing the goal
-2. **Goal-subject** — stakeholders who own the goal and wish it to be true
-3. **Goal-object** — entities to which the goal applies (individual → system → portfolio → organization → nation → society)
-4. **Environment** — context: social, legal, competitive, customer, technological
-5. **Goal** — the articulated business goal
-6. **Goal-measure** — testable measurement, usually with a time component
-7. **Pedigree and value** — confidence level, volatility, relative importance
+1. **Goal-source:** people or artifacts providing the goal
+2. **Goal-subject:** stakeholders who own the goal and wish it to be true
+3. **Goal-object:** entities to which the goal applies (individual → system → portfolio → organization → nation → society)
+4. **Environment:** context: social, legal, competitive, customer, technological
+5. **Goal:** the articulated business goal
+6. **Goal-measure:** testable measurement, usually with a time component
+7. **Pedigree and value:** confidence level, volatility, relative importance
 
 **Template sentence:** *"For the system being developed, `<goal-subject>` desires that `<goal-object>` achieve `<goal>` in the context of `<environment>` and will be satisfied if `<goal-measure>`."*
 
@@ -92,10 +92,10 @@ A 7-step workshop method (~1.5 days):
 | 1 | PALM overview presentation |
 | 2 | Business drivers presentation by project management |
 | 3 | Architecture drivers presentation by architect |
-| 4 | Business goals elicitation — using standard categories, expressed as scenarios, consolidated, prioritized |
+| 4 | Business goals elicitation, using standard categories, expressed as scenarios, consolidated, prioritized |
 | 5 | Identification of potential quality attributes from business goals |
-| 6 | Assignment of pedigree to existing QA drivers — which business goal does each ASR support? |
-| 7 | Exercise conclusion — review, next steps, feedback |
+| 6 | Assignment of pedigree to existing QA drivers, which business goal does each ASR support? |
+| 7 | Exercise conclusion; review, next steps, feedback |
 
 **Uses of PALM:**
 - Sniff out missing requirements early in the life cycle
@@ -139,7 +139,7 @@ Quality attributes refer to the system *as a whole*. To design for QA requiremen
 Types of decompositions: module decomposition, C&C pattern decomposition (e.g., MVC → model, views, controllers).
 
 #### 2. Designing to ASRs
-- **Non-ASR requirements:** Three outcomes — (a) still met, (b) met with slight adjustment, (c) cannot be met. For (c): relax the requirement, reprioritize, or report inability.
+- **Non-ASR requirements:** Three outcomes: (a) still met, (b) met with slight adjustment, (c) cannot be met. For (c): relax the requirement, reprioritize, or report inability.
 - **One at a time vs. all at once:** Novices focus on one ASR at a time; experienced architects develop intuition and employ patterns to address multiple ASRs simultaneously.
 
 #### 3. Generate and Test
@@ -159,11 +159,11 @@ Generate → Test → (fail?) → Generate (improved) → Test → ... → Done
 | When are you done? | ASRs satisfied OR design budget exhausted |
 
 **Sources of initial design hypothesis (collateral):**
-- **Existing systems** — most powerful; similar business context and requirements
-- **Frameworks** — partial design with code; constrains architectural assumptions
-- **Patterns and tactics** — cataloged solutions to common problems
-- **Domain decomposition** — actors and entities; good for modifiability but not other QAs
-- **Design checklists** — ensure completeness across QA concerns
+- **Existing systems:** most powerful; similar business context and requirements
+- **Frameworks:** partial design with code; constrains architectural assumptions
+- **Patterns and tactics:** cataloged solutions to common problems
+- **Domain decomposition:** actors and entities; good for modifiability but not other QAs
+- **Design checklists:** ensure completeness across QA concerns
 
 **Termination:** When ASRs are satisfied or budget exhausted. Options if budget runs out: proceed with best hypothesis (relax unmet ASRs), argue for more budget, or suggest project termination if all ASRs are critical and unmet.
 
@@ -174,7 +174,7 @@ ADD is an iterative method packaging the generate-and-test strategy. At each ite
 - Marshal all ASRs for that part
 - Create and test a design for that part
 
-**Output:** Sketches of architectural views — not complete in every detail, but a "workable" architecture with main design approaches selected and vetted.
+**Output:** Sketches of architectural views, not complete in every detail, but a "workable" architecture with main design approaches selected and vetted.
 
 **Inputs to ADD:**
 - ASRs (quality, functional, constraints)
@@ -186,7 +186,7 @@ ADD is an iterative method packaging the generate-and-test strategy. At each ite
 - **Green-field:** start with entire system
 - **Existing/constrained:** pick an element not yet designed
 - **Refinement strategies:**
-  - **Breadth-first:** all second-level elements designed before third-level. Preferred all else equal — apportions most work to most teams soonest.
+  - **Breadth-first:** all second-level elements designed before third-level. Preferred all else equal, apportions most work to most teams soonest.
   - **Depth-first:** one downward chain completed before beginning another. Useful when important team has closing availability window, or to prototype risky/unfamiliar technology.
   - **Mixed:** defer some concerns (e.g., medium-priority availability) to later iterations; may require backtracking.
 
@@ -195,7 +195,7 @@ ADD is an iterative method packaging the generate-and-test strategy. At each ite
 - If chosen element is not the whole system, construct a focused utility tree.
 
 #### Step 3: Generate a Design Solution
-The heart of ADD — application of generate-and-test. For each ASR, develop a solution:
+The heart of ADD: application of generate-and-test. For each ASR, develop a solution:
 - **Initial design candidate** inspired by patterns, augmented by tactics
 - **Refine** using design checklists (Ch 5–11) to instantiate the pattern
 - Patterns often address multiple ASRs simultaneously
@@ -222,27 +222,27 @@ A test step. Four possible dispositions for each requirement:
 #### Step 5: Repeat Steps 1–4 Until Done
 **Termination conditions:**
 - All requirements clearly satisfied
-- Architecture sketched to sufficient depth — trust implementation team to flesh out rest (2 levels of breadth-first may suffice)
+- Architecture sketched to sufficient depth: trust implementation team to flesh out rest (2 levels of breadth-first may suffice)
 - Contractual arrangement requires legally enforceable specification → continue until that level
 - Design budget exhausted
 
-**Release early:** Don't wait until architecture is "finished." Early broad-and-shallow views are enormously helpful — managers can budget, experts can scout commercial products, support staff can build infrastructure, and early release invites early feedback.
+**Release early:** Don't wait until architecture is "finished." Early broad-and-shallow views are enormously helpful, managers can budget, experts can scout commercial products, support staff can build infrastructure, and early release invites early feedback.
 
 ---
 
 ## Chapter 18: Documenting Software Architectures
 
-> *"If it is not written down, it does not exist." — Philippe Kruchten*
+> *"If it is not written down, it does not exist." *(Philippe Kruchten)**
 
-Creating an architecture isn't enough — it must be communicated so stakeholders can use it properly. The best architects produce good documentation because they see it as essential to producing a high-quality product predictably.
+Creating an architecture isn't enough; it must be communicated so stakeholders can use it properly. The best architects produce good documentation because they see it as essential to producing a high-quality product predictably.
 
 ### 18.1 Uses and Audiences
 
 Architecture documentation is both **prescriptive** (constraining future decisions) and **descriptive** (recounting decisions already made). Three fundamental uses:
 
-1. **Education** — introducing new team members, external analysts, customers, or a new architect
-2. **Communication among stakeholders** — especially the *future architect* (who may be the same person). Documentation serves as a repository of design decisions too numerous to reproduce from memory.
-3. **Basis for system analysis and construction** — tells implementers what to implement; provides fodder for evaluation; incorporates models for code-generation tools
+1. **Education:** introducing new team members, external analysts, customers, or a new architect
+2. **Communication among stakeholders:** especially the *future architect* (who may be the same person). Documentation serves as a repository of design decisions too numerous to reproduce from memory.
+3. **Basis for system analysis and construction:** tells implementers what to implement; provides fodder for evaluation; incorporates models for code-generation tools
 
 ### 18.2 Notations for Architecture Documentation
 
@@ -264,25 +264,25 @@ A **view** is a representation of a set of system elements and relations of a pa
 
 | Aspect | Description |
 |--------|-------------|
-| **Elements** | Modules — implementation units providing coherent responsibilities (classes, collections of classes, layers, aspects) |
+| **Elements** | Modules: implementation units providing coherent responsibilities (classes, collections of classes, layers, aspects) |
 | **Relations** | *Is part of* (part/whole), *depends on* (dependency), *is a* (generalization/specialization) |
 | **Constraints** | Topological constraints (e.g., visibility limitations between modules) |
 | **Usage** | Blueprint for code construction; change-impact analysis; planning incremental development; requirements traceability; communicating functionality; work assignments, schedules, budgets |
 
 **Module properties to document:**
-- **Name** — may reflect position in hierarchy (A.B.C)
-- **Responsibilities** — establishes identity beyond name
-- **Visibility of interfaces** — public vs. private submodule interfaces
-- **Implementation information** — mapping to source code units, test information, management information, implementation constraints, revision history
+- **Name:** may reflect position in hierarchy (A.B.C)
+- **Responsibilities:** establishes identity beyond name
+- **Visibility of interfaces:** public vs. private submodule interfaces
+- **Implementation information:** mapping to source code units, test information, management information, implementation constraints, revision history
 
-Module views are static partitions — not typically used for runtime quality analysis (performance, reliability). For those, use C&C and allocation views.
+Module views are static partitions, not typically used for runtime quality analysis (performance, reliability). For those, use C&C and allocation views.
 
 #### Component-and-Connector (C&C) Views
 
 | Aspect | Description |
 |--------|-------------|
 | **Elements** | **Components** (runtime entities: processes, objects, clients, servers, data stores) with **ports** (points of interaction) and **Connectors** (pathways of interaction: links, protocols, info flows) with **roles** (interfaces) |
-| **Relations** | **Attachments** — component ports associated with connector roles to form a graph. **Interface delegation** — ports associated with internal subarchitecture ports. |
+| **Relations** | **Attachments:** component ports associated with connector roles to form a graph. **Interface delegation:** ports associated with internal subarchitecture ports. |
 | **Constraints** | Components attach only to connectors, not directly to components; attachments only between compatible ports and roles; connectors cannot appear in isolation |
 | **Usage** | Show how the system works; guide development of runtime elements; reason about runtime QAs (performance, availability) |
 
@@ -290,9 +290,9 @@ Module views are static partitions — not typically used for runtime quality an
 - Reliability (failure likelihood), Performance (response time, bandwidth, latency), Resource requirements, Functionality, Security, Concurrency, Modifiability, Tier
 
 **Connector characteristics:**
-- Can be n-ary (not just binary) — e.g., publish-subscribe with multiple publishers/subscribers
+- Can be n-ary (not just binary): e.g., publish-subscribe with multiple publishers/subscribers
 - Complex connectors can be decomposed into sub-architectures of components and connectors
-- Connectors embody a **protocol of interaction** — conventions about order, locus of control, error handling, timeouts
+- Connectors embody a **protocol of interaction:** conventions about order, locus of control, error handling, timeouts
 
 **UML for C&C Views:**
 - UML components map well to C&C components (interfaces, properties, behavioral descriptions)
@@ -305,7 +305,7 @@ Module views are static partitions — not typically used for runtime quality an
 | Aspect | Description |
 |--------|-------------|
 | **Elements** | **Software elements** (from module or C&C views) with *required* properties; **Environmental elements** (processor, disk farm, file system, development team) with *provided* properties |
-| **Relations** | *Allocated to* — mapping from software element to environmental element |
+| **Relations** | *Allocated to*, mapping from software element to environmental element |
 | **Usage** | Reasoning about performance, availability, security, safety; distributed development and work allocation; concurrent version access; system installation |
 
 Allocation views compare required vs. provided properties to determine if the allocation will succeed. They can be **static** (fixed allocation) or **dynamic** (allocation changes based on loading conditions).
@@ -314,11 +314,11 @@ Allocation views compare required vs. provided properties to determine if the al
 
 Structural views may spread solutions for a particular QA across multiple structures. **Quality views** extract relevant pieces of structural views and package them together:
 
-- **Security view** — components with security roles, communication channels, security data repositories, threat responses
-- **Communications view** — component-to-component channels, network channels, QoS parameters, concurrency areas
-- **Exception/error-handling view** — error detection, reporting, and resolution mechanisms
-- **Reliability view** — replication, switchover, timing issues, transaction integrity
-- **Performance view** — network traffic models, maximum latencies, etc.
+- **Security view:** components with security roles, communication channels, security data repositories, threat responses
+- **Communications view:** component-to-component channels, network channels, QoS parameters, concurrency areas
+- **Exception/error-handling view:** error detection, reporting, and resolution mechanisms
+- **Reliability view:** replication, switchover, timing issues, transaction integrity
+- **Performance view:** network traffic models, maximum latencies, etc.
 
 ### 18.4 Choosing the Views
 
@@ -334,7 +334,7 @@ Structural views may spread solutions for a particular QA across multiple struct
 
 ### 18.5 Combining Views
 
-Because all views describe the same system, many have strong associations. **Combined views** contain elements and relations from two or more views — useful when coupling is tight.
+Because all views describe the same system, many have strong associations. **Combined views** contain elements and relations from two or more views, useful when coupling is tight.
 
 **Views that combine naturally:**
 - Various C&C views (different parts/refinements of runtime structure)
@@ -351,7 +351,7 @@ Because all views describe the same system, many have strong associations. **Com
 |---------|---------|
 | **1. Primary Presentation** | Graphical (usually) or textual depiction of elements and relations. Must include a **key** explaining the notation. |
 | **2. Element Catalog** | Details all elements from the primary presentation: (A) Elements and their properties, (B) Relations and their properties, (C) Element interfaces, (D) Element behavior |
-| **3. Context Diagram** | How the system/portion relates to its environment — scope of the view |
+| **3. Context Diagram** | How the system/portion relates to its environment; scope of the view |
 | **4. Variability Guide** | How to exercise variation points in the architecture |
 | **5. Rationale** | Why the design is as it is; justification of pattern choices |
 
@@ -384,44 +384,44 @@ Describe sequences of activities/interactions for specific stimuli:
 | **Activity diagrams** | Flow-chart-like; conditional branching, concurrency (fork/join), event sending/receiving |
 
 #### Comprehensive Languages
-Show *complete* behavior — all possible paths from initial to final state:
+Show *complete* behavior; all possible paths from initial to final state:
 
 | Notation | Description |
 |----------|-------------|
 | **UML state machine diagrams** | States (boxes), transitions (arrows), events, guard conditions, actions/effects; entry/exit actions |
-| **AADL** | Architecture Analysis and Design Language — runtime behavior reasoning |
-| **SDL** | Specification and Description Language — telecom systems |
+| **AADL** | Architecture Analysis and Design Language: runtime behavior reasoning |
+| **SDL** | Specification and Description Language: telecom systems |
 
 ### 18.8 Architecture Documentation and Quality Attributes
 
 Five major ways QAs show up in documentation:
 
-1. **Design approach rationale** — patterns have QA properties (client-server → scalability, layering → portability, information hiding → modifiability)
-2. **Element interface QA bounds** — service-level agreements, performance/security/reliability properties
-3. **QA "language"** — security → audit trails, firewalls; performance → buffer capacities, deadlines; availability → MTBF, failover, redundancy
-4. **Requirements mapping** — trace QA requirements to where they are satisfied in the architecture
-5. **Documentation roadmap** — tells each stakeholder where to find what they care about
+1. **Design approach rationale:** patterns have QA properties (client-server → scalability, layering → portability, information hiding → modifiability)
+2. **Element interface QA bounds:** service-level agreements, performance/security/reliability properties
+3. **QA "language":** security → audit trails, firewalls; performance → buffer capacities, deadlines; availability → MTBF, failover, redundancy
+4. **Requirements mapping:** trace QA requirements to where they are satisfied in the architecture
+5. **Documentation roadmap:** tells each stakeholder where to find what they care about
 
 ### 18.9 Documenting Architectures That Change Faster Than You Can Document Them
 
 For highly dynamic systems (runtime reconfiguration, daily redeployment):
 
-- **Document invariants** — what is true about all versions. May be more of a constraint/guideline description than a traditional architecture document.
-- **Document how the architecture is allowed to change** — captured in the **variability guide** (Section 4 of the view template).
+- **Document invariants:** what is true about all versions. May be more of a constraint/guideline description than a traditional architecture document.
+- **Document how the architecture is allowed to change:** captured in the **variability guide** (Section 4 of the view template).
 
 ### 18.10 Documenting Architecture in an Agile Development Project
 
 Key principles aligning Views and Beyond with Agile:
 
-- **"Write for the reader"** — if no audience, don't document
+- **"Write for the reader":** if no audience, don't document
 - Produce a view **only if** it addresses explicitly identified stakeholder concerns
-- Produce documentation in **prioritized stages** — satisfy stakeholders who need it now
+- Produce documentation in **prioritized stages:** satisfy stakeholders who need it now
 - **Adopt a template** to capture design decisions
-- Fill sections **when information becomes available**, in any order — only if it makes downstream work easier/cheaper
-- Don't separate "architectural design document" from "detailed design document" — produce just enough to move on to code
+- Fill sections **when information becomes available**, in any order: only if it makes downstream work easier/cheaper
+- Don't separate "architectural design document" from "detailed design document"; produce just enough to move on to code
 - Don't feel obliged to fill all sections; "N/A" is acceptable
 - Primary presentation may be a **digital photo of a whiteboard**; verbal communication of catalog, rationale, etc. is fine initially; template provides place to record later
-- Use lightweight, easily changeable formats — **wikis** are ideal
+- Use lightweight, easily changeable formats: **wikis** are ideal
 
 ---
 
@@ -429,7 +429,7 @@ Key principles aligning Views and Beyond with Agile:
 
 | Concept | Chapter | Core Idea |
 |---------|---------|-----------|
-| **ASR** | 16 | Architecturally Significant Requirement — must have high architectural impact AND high business value |
+| **ASR** | 16 | Architecturally Significant Requirement; must have high architectural impact AND high business value |
 | **QAW** | 16 | 8-step workshop to generate, prioritize, and refine QA scenarios |
 | **PALM** | 16 | 7-step method to elicit business goals and link them to ASRs |
 | **Utility Tree** | 16 | Hierarchical organization of QA requirements: Utility → QA → Refinement → Scenario (with H/M/L ratings) |
@@ -445,5 +445,5 @@ Key principles aligning Views and Beyond with Agile:
 ---
 
 ## Related Notes
-- [[Software Architecture Overview]] — SWEBOK v4 overview
+- [[Software Architecture Overview]]: SWEBOK v4 overview
 - Earlier SAiP chapters: Quality Attributes (Ch 4–11), Patterns & Tactics (Ch 13), Analysis (Ch 14)

@@ -7,7 +7,7 @@ tags:
 
 # 03 Database per Service
 
-Each microservice owns its data. No other service touches it directly — only through the service's API. This is the single most important rule in microservice data management.
+Each microservice owns its data. No other service touches it directly, only through the service's API. This is the single most important rule in microservice data management.
 
 ---
 
@@ -18,22 +18,24 @@ Each microservice owns its data. No other service touches it directly — only t
 ### ❌ Shared Database
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     O[Order Service] --> DB[Shared DB<br/>orders, customers, products]
     C[Customer Service] --> DB
     P[Product Service] --> DB
-```
+
 
 > Tight coupling. Schema change in orders breaks customer service.
 
 ### ✅ Database per Service
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     O[Order Service] --> ODB[Order DB]
     C[Customer Service] --> CDB[Customer DB]
     P[Product Service] --> PDB[Product DB]
-```
+
 
 > Loose coupling. Each service evolves independently.
 
@@ -45,7 +47,7 @@ graph TD
 |---------------|--------------------------|
 | Any service can change any table → chaos | Only the owning service touches its data |
 | Schema change = coordinate N teams | Schema change = 1 team |
-| One slow query blocks everyone | Isolation — one service can't kill another's DB |
+| One slow query blocks everyone | Isolation; one service can't kill another's DB |
 | Impossible to scale independently | Each DB scales for its own workload |
 
 ---
@@ -56,7 +58,7 @@ graph TD
 |---------|------------|
 | **Database per Service** | Each service gets its own database instance (separate PostgreSQL, MySQL, MongoDB, etc.) |
 | **Schema per Service** | Shared DB instance, but each service uses a different schema/namespace. Lighter weight, less isolation. |
-| **Table per Service** | Shared DB + schema. Each service owns specific tables. Weakest isolation — avoid. |
+| **Table per Service** | Shared DB + schema. Each service owns specific tables. Weakest isolation; avoid. |
 
 ---
 
@@ -68,7 +70,7 @@ graph TD
 | Independent schema evolution | Data consistency becomes eventual |
 | Technology diversity (Postgres for orders, MongoDB for products) | Cross-service queries require API composition |
 
-> The database-per-service rule is why distributed transactions (Saga pattern) and CQRS exist. You give up ACID for independence — and need new patterns to fill the gap.
+> The database-per-service rule is why distributed transactions (Saga pattern) and CQRS exist. You give up ACID for independence, and need new patterns to fill the gap.
 
 ---
 

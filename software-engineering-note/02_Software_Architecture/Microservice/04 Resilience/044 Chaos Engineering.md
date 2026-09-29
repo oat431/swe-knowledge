@@ -8,24 +8,24 @@ tags:
 
 # 04 Chaos Engineering
 
-Hoping your system handles failure isn't a strategy. Chaos engineering deliberately injects controlled failures to prove resilience works — before a real incident proves it doesn't.
+Hoping your system handles failure isn't a strategy. Chaos engineering deliberately injects controlled failures to prove resilience works, before a real incident proves it doesn't.
 
 ## The Scientific Method
 
-Chaos engineering follows a disciplined loop — not random destruction:
+Chaos engineering follows a disciplined loop, not random destruction:
 
-1. **Define steady state** — normal system behavior measured by SLIs (latency, error rate, throughput)
-2. **Hypothesize** — "the system tolerates X failure without breaching SLOs"
-3. **Inject failure** — introduce the fault in a controlled way
-4. **Observe** — watch dashboards, alerts, and user-facing metrics
-5. **Verify or disprove** — did steady state hold?
-6. **Fix what broke** — if the hypothesis failed, harden the system and re-run
+1. **Define steady state:** normal system behavior measured by SLIs (latency, error rate, throughput)
+2. **Hypothesize:** "the system tolerates X failure without breaching SLOs"
+3. **Inject failure:** introduce the fault in a controlled way
+4. **Observe:** watch dashboards, alerts, and user-facing metrics
+5. **Verify or disprove:** did steady state hold?
+6. **Fix what broke:** if the hypothesis failed, harden the system and re-run
 
 > If you can't measure steady state, you can't do chaos engineering. Observability comes first.
 
 ## Steady State Hypothesis
 
-Use **business metrics**, not infrastructure metrics. The user doesn't care about CPU — they care about whether their order went through.
+Use **business metrics**, not infrastructure metrics. The user doesn't care about CPU; they care about whether their order went through.
 
 | ✅ Good Steady State | ❌ Bad Steady State |
 |---|---|
@@ -71,15 +71,15 @@ Never start with "kill everything in production." Progressive widening builds co
 
 ## Game Days
 
-Scheduled chaos experiments with the **whole team watching**. Not a surprise — a practice drill.
+Scheduled chaos experiments with the **whole team watching**. Not a surprise, a practice drill.
 
 **How to run a Game Day:**
 
 1. Pick a hypothesis to test (e.g., "checkout survives payment-service failure")
-2. Brief the team — everyone knows what's happening and when
+2. Brief the team: everyone knows what's happening and when
 3. Inject the failure
 4. Practice incident response in real-time
-5. Document findings — what worked, what didn't
+5. Document findings: what worked, what didn't
 6. Create action items to fix weaknesses found
 7. Re-run after fixes to verify
 
@@ -87,11 +87,11 @@ Game Days build muscle memory. When a real incident hits at 3 AM, the response i
 
 ## Rules
 
-- **Always have a kill switch** — abort the experiment instantly if impact exceeds expectations
-- **Start in non-production** — prove the experiment is safe before touching prod
-- **Inform stakeholders** — no surprise chaos in production, ever
-- **Automate experiments in CI** — chaos as code, run on every deploy
-- **Never chaos-test without monitoring in place** — if you can't observe it, you can't learn from it
+- **Always have a kill switch:** abort the experiment instantly if impact exceeds expectations
+- **Start in non-production:** prove the experiment is safe before touching prod
+- **Inform stakeholders:** no surprise chaos in production, ever
+- **Automate experiments in CI:** chaos as code, run on every deploy
+- **Never chaos-test without monitoring in place:** if you can't observe it, you can't learn from it
 
 ## Sources
 

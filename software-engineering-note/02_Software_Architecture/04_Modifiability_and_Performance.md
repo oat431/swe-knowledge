@@ -9,8 +9,8 @@ tags:
 
 # Modifiability & Performance
 
-> **Source:** Bass, Clements & Kazman — *Software Architecture in Practice* (SAiP), Chapters 7–8
-> **Purpose:** Cover the general scenarios, tactics, and design checklists for modifiability and performance — two quality attributes that are often in tension with each other.
+> **Source:** Bass, Clements & Kazman, *Software Architecture in Practice* (SAiP), Chapters 7–8
+> **Purpose:** Cover the general scenarios, tactics, and design checklists for modifiability and performance, two quality attributes that are often in tension with each other.
 
 ## Chapter 7: Modifiability
 
@@ -33,10 +33,10 @@ Modifiability is about **change** and the **cost** (time, money, side effects) o
 
 The goal is to control the **complexity, time, and cost** of making changes. Tactics operate on four parameters:
 
-1. **Size of a module** — smaller modules cost less to change
-2. **Coupling** — lower coupling reduces propagation of changes
-3. **Cohesion** — higher cohesion means changes affect fewer responsibilities
-4. **Binding time** — deferring binding to later lifecycle phases reduces change cost
+1. **Size of a module:** smaller modules cost less to change
+2. **Coupling:** lower coupling reduces propagation of changes
+3. **Cohesion:** higher cohesion means changes affect fewer responsibilities
+4. **Binding time:** deferring binding to later lifecycle phases reduces change cost
 
 ```
 Modifiability Tactics
@@ -92,9 +92,9 @@ Modifiability Tactics
 
 #### Defer Binding
 
-Let computers handle change as much as possible — exercising built-in flexibility is cheaper than hand-coding. The later in the lifecycle we bind values, the better, *provided the mechanism that enables late binding is cost-effective*.
+Let computers handle change as much as possible, exercising built-in flexibility is cheaper than hand-coding. The later in the lifecycle we bind values, the better, *provided the mechanism that enables late binding is cost-effective*.
 
-This separates **building the mechanism** (developer) from **using the mechanism** (installer, user) — called **externalizing the change**.
+This separates **building the mechanism** (developer) from **using the mechanism** (installer, user): called **externalizing the change**.
 
 ### Design Checklist for Modifiability
 
@@ -112,9 +112,9 @@ This separates **building the mechanism** (developer) from **using the mechanism
 
 ## Chapter 8: Performance
 
-Performance is about **time** — the system's ability to meet timing requirements. When events occur (interrupts, messages, requests, clock events), the system must respond within acceptable time constraints.
+Performance is about **time:** the system's ability to meet timing requirements. When events occur (interrupts, messages, requests, clock events), the system must respond within acceptable time constraints.
 
-Performance is often linked to **scalability** — increasing capacity for work while still performing well. Technically, scalability is a special kind of modifiability (changing the system to handle more load).
+Performance is often linked to **scalability:** increasing capacity for work while still performing well. Technically, scalability is a special kind of modifiability (changing the system to handle more load).
 
 ### Performance General Scenario
 
@@ -128,7 +128,7 @@ Performance is often linked to **scalability** — increasing capacity for work 
 | **Response Measure** | Latency, deadline, throughput, jitter, miss rate |
 
 **Event arrival patterns:**
-- **Periodic:** Predictable, regular intervals (e.g., every 10 ms — real-time systems)
+- **Periodic:** Predictable, regular intervals (e.g., every 10 ms: real-time systems)
 - **Stochastic:** Probabilistic distribution
 - **Sporadic:** Neither periodic nor stochastic, but can be characterized (e.g., max 600 events/min, min 200 ms between events)
 
@@ -204,7 +204,7 @@ Performance Tactics
 
 - **Maintain multiple copies of computations.** Replicate servers (client-server pattern); use a load balancer to assign work (round-robin, least-busy). Reduces contention.
 
-- **Maintain multiple copies of data.** **Caching** — keep copies on storage with different access speeds (memory vs. disk, local vs. remote). **Data replication** — separate copies to reduce contention. Responsibility: keep copies consistent and synchronized. Can predict future requests and prefetch.
+- **Maintain multiple copies of data.** **Caching:** keep copies on storage with different access speeds (memory vs. disk, local vs. remote). **Data replication:** separate copies to reduce contention. Responsibility: keep copies consistent and synchronized. Can predict future requests and prefetch.
 
 - **Bound queue sizes.** Control maximum queued arrivals and resources used. Requires a policy for queue overflow and whether losing events is acceptable. Frequently paired with *limit event response*.
 
@@ -225,7 +225,7 @@ A scheduling policy has two parts: **priority assignment** and **dispatching**. 
 | **Dynamic: Least-slack-first** | Highest priority to job with least slack time (time remaining minus time to deadline) |
 | **Static: Cyclic executive** | Preemption points and assignment sequence determined offline; zero runtime scheduler overhead |
 
-For a single processor with preemptible processes, both **earliest-deadline-first** and **least-slack-first** are optimal — if any schedule can meet all deadlines, these strategies will.
+For a single processor with preemptible processes, both **earliest-deadline-first** and **least-slack-first** are optimal: if any schedule can meet all deadlines, these strategies will.
 
 ### Design Checklist for Performance
 

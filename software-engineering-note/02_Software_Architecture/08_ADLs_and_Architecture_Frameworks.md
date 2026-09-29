@@ -15,9 +15,9 @@ source: "SWEBOK v4 Ch02"
 swebok_reference: "KA 02.3"
 up: "[[02_Software_Architecture]]"
 related:
-  - "[[02_Architecture_Views_and_Viewpoints]]"
-  - "[[03_Architecture_Patterns]]"
-  - "[[07_Architecture_Evaluation]]"
+  - "[[07_Design_and_Documentation]]"
+  - "[[06_Tactics_and_Patterns]]"
+  - "[[09_Evaluation_and_Governance]]"
 ---
 
 # ADLs and Architecture Frameworks
@@ -154,6 +154,7 @@ System simple_client_server = {
 | Relationship to UML | Complements UML; higher abstraction level |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph ArchiMate Layers
         S[Strategy Layer]
@@ -246,6 +247,7 @@ An architecture framework defines:
 - **Standards** and guidelines for compliance
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     AF[Architecture Framework] --> V[Views & Viewpoints]
     AF --> S[Stakeholder Concerns]
@@ -256,6 +258,7 @@ graph TD
     S --> D
     M --> D
 ```
+
 
 ### ISO/IEC/IEEE 42010 (Architecture Description)
 
@@ -271,6 +274,7 @@ The international standard for architecture description defines:
 | Architecture description | A work product documenting the architecture |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     S[System] --> AD[Architecture Description]
     SH[Stakeholders] --> C[Concerns]
@@ -280,6 +284,7 @@ graph LR
     AD --> M[Models]
     M --> V
 ```
+
 
 ### AUTOSAR (AUTomotive Open System ARchitecture)
 
@@ -292,6 +297,7 @@ graph LR
 | Methodology | Top-down: SWC design -> RTE mapping -> BSW configuration |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph AUTOSAR Architecture
         APP[Application Layer<br/>Software Components - SWCs]
@@ -307,6 +313,7 @@ graph TB
     APP --> RTE --> BSW --> MCU
 ```
 
+
 | Layer | Responsibility |
 |-------|---------------|
 | Application | Vehicle functions as interconnected SWCs |
@@ -317,10 +324,10 @@ graph TB
 | Complex Drivers | Non-standard hardware integration |
 
 **Key AUTOSAR concepts:**
-- **SWC (Software Component)**: Atomic or composite application unit with defined ports
-- **Port Interface**: Contract for SWC communication (sender-receiver, client-server)
-- **VFB (Virtual Function Bus)**: Abstract communication before ECU mapping
-- **RTE**: Generated middleware implementing VFB on specific ECU
+- **SWC (Software Component):** Atomic or composite application unit with defined ports
+- **Port Interface:** Contract for SWC communication (sender-receiver, client-server)
+- **VFB (Virtual Function Bus):** Abstract communication before ECU mapping
+- **RTE:** Generated middleware implementing VFB on specific ECU
 
 ### UAF (Unified Architecture Framework)
 
@@ -358,6 +365,7 @@ graph TB
 | Artifacts | Catalogs, matrices, diagrams |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     P[Preliminary Phase] --> A[Phase A: Architecture Vision]
     A --> B[Phase B: Business Architecture]
@@ -379,6 +387,7 @@ graph TD
     REQ -.-> G
     REQ -.-> H
 ```
+
 
 | ADM Phase | Purpose | Key Outputs |
 |-----------|---------|-------------|
@@ -455,12 +464,14 @@ graph TD
 | Technology | Technology choices | Technology objects, artifacts |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     E[Enterprise<br/>Viewpoint] --> I[Information<br/>Viewpoint]
     I --> C[Computational<br/>Viewpoint]
     C --> EN[Engineering<br/>Viewpoint]
     EN --> T[Technology<br/>Viewpoint]
 ```
+
 
 ## Architecture Framework Comparison
 
@@ -505,6 +516,7 @@ graph LR
 ## Integrating ADLs and Frameworks
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     AF[Architecture Framework<br/>TOGAF / DoDAF / UAF] --> VP[Defines Viewpoints]
     VP --> V1[View 1]
@@ -519,6 +531,7 @@ graph TB
     AD --> AN[Analysis & Validation]
     AD --> COM[Communication to Stakeholders]
 ```
+
 
 **Best practice:** Select the ADL (or combination) that best serves each viewpoint within the chosen framework. A single ADL rarely covers all architectural concerns adequately.
 

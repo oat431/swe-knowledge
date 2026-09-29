@@ -27,7 +27,7 @@ Requirements come in three categories:
 Functionality has a paradoxical relationship with architecture:
 
 - **Functionality does not determine architecture.** Given a set of functions, infinitely many architectures could satisfy them. If functionality were all that mattered, a monolithic blob would suffice.
-- **We structure systems** (layers, services, modules, threads, tiers, databases) to make them understandable and to support *other* quality attributes — not just functionality.
+- **We structure systems** (layers, services, modules, threads, tiers, databases) to make them understandable and to support *other* quality attributes, not just functionality.
 - **Functionality constrains allocation.** When QAs (modifiability, performance, security) are important, architecture constrains how responsibilities are allocated to elements.
 - **"Responsibility" is a better term** than "functional requirement." Questions like "What are the timing constraints on that responsibility?" or "What modifications are anticipated for that responsibility?" are precise and actionable.
 
@@ -35,9 +35,9 @@ Functionality has a paradoxical relationship with architecture:
 
 Three problems with traditional QA discussions:
 
-1. **Untestable definitions.** "The system will be modifiable" is meaningless — every system is modifiable with respect to *some* changes and not others. QAs must be defined in context.
-2. **Overlapping concerns.** Is a denial-of-service attack an availability, performance, security, or usability problem? All four communities claim it — this doesn't help architects create solutions.
-3. **Different vocabularies.** Performance has "events," security has "attacks," availability has "failures," usability has "user input" — all may refer to the same occurrence.
+1. **Untestable definitions.** "The system will be modifiable" is meaningless; every system is modifiable with respect to *some* changes and not others. QAs must be defined in context.
+2. **Overlapping concerns.** Is a denial-of-service attack an availability, performance, security, or usability problem? All four communities claim it; this doesn't help architects create solutions.
+3. **Different vocabularies.** Performance has "events," security has "attacks," availability has "failures," usability has "user input"; all may refer to the same occurrence.
 
 **Two categories of QAs:**
 - **Runtime qualities:** Properties observable during execution (availability, performance, security, usability)
@@ -62,7 +62,7 @@ A QA requirement must be **unambiguous and testable**. SAiP uses a common **six-
 - **General scenarios:** System-independent; characterize a QA generically (e.g., a fault arrives during normal operation; system detects and recovers within X time)
 - **Concrete scenarios:** System-specific instances of general scenarios (e.g., "The heartbeat monitor detects server unresponsiveness during normal operation; the system informs the operator and continues with no downtime")
 
-This form unifies QA specification across all attributes — performance, security, availability, modifiability, usability, and testability all use the same six-part template.
+This form unifies QA specification across all attributes: performance, security, availability, modifiability, usability, and testability all use the same six-part template.
 
 ## 5. Achieving Quality Attributes through Tactics (Ch 4.5)
 
@@ -82,7 +82,7 @@ Key distinctions:
 
 **Tactics need refinement.** E.g., "schedule resources" (performance tactic) refines into shortest-job-first, round-robin, etc. "Use an intermediary" (modifiability tactic) refines into layers, brokers, proxies.
 
-## 6. Guiding Quality Design Decisions — Seven Categories (Ch 4.6)
+## 6. Guiding Quality Design Decisions: Seven Categories (Ch 4.6)
 
 Architecture can be viewed as applying a collection of design decisions across seven categories:
 
@@ -112,7 +112,7 @@ Architecture can be viewed as applying a collection of design decisions across s
 - Map data model items to data stores, modules/runtime elements to units of delivery
 
 ### 6.6 Binding Time Decisions
-Establish allowable ranges of variation — when and by whom they are bound:
+Establish allowable ranges of variation, when and by whom they are bound:
 - Build-time: parameterized makefiles (allocation of responsibilities)
 - Runtime: protocol negotiation (coordination model), peripheral plug-and-play (resource management)
 - App-store: automatic version selection per device (choice of technology)
@@ -128,7 +128,7 @@ Establish allowable ranges of variation — when and by whom they are bound:
 
 ## 7. Quality Attribute in Detail: Availability (Ch 5)
 
-Availability serves as the book's detailed walkthrough of one QA — illustrating scenarios, tactics, and design checklists.
+Availability serves as the book's detailed walkthrough of one QA, illustrating scenarios, tactics, and design checklists.
 
 ### 7.1 Definition
 
@@ -156,7 +156,7 @@ Key concepts:
 | **Stimulus** | Fault: omission, crash, incorrect timing, incorrect response |
 | **Artifact** | Processors, communication channels, persistent storage, processes |
 | **Environment** | Normal operation, startup, shutdown, repair mode, degraded operation, overloaded operation |
-| **Response** | Prevent fault → failure; Detect (log, notify); Recover (disable source, be unavailable, fix/mask, degraded mode) |
+| **Response** | Prevent fault → failure; detect (log, notify); recover (disable source, be unavailable, fix/mask, degraded mode) |
 | **Response Measure** | Availability %, time to detect/repair, time in degraded mode, proportion of faults handled |
 
 ### 7.3 Availability Tactics
@@ -219,7 +219,7 @@ Three categories:
 
 Chapter 12 surveys additional QAs beyond the detailed chapters (5–11):
 
-- **Conceptual Integrity:** Coherence of design — the architecture "hangs together" as a unified whole; consistency of design decisions across the system.
+- **Conceptual Integrity:** Coherence of design: the architecture "hangs together" as a unified whole; consistency of design decisions across the system.
 - **Buildability:** Ease with which the system can be built from its architecture; module structure supports parallel development and incremental integration.
 - **Marketability (Time to Market):** How architecture enables rapid delivery; decisions about what to build vs. buy, reuse, or defer.
 - **Interoperability:** Ability of systems to exchange data (syntactic) and interpret exchanged data (semantic). Maturity frameworks define five levels from no data sharing to full semantic interoperability.
@@ -227,15 +227,15 @@ Chapter 12 surveys additional QAs beyond the detailed chapters (5–11):
 
 ## 9. Key Takeaways
 
-1. **QA requirements use a unified six-part scenario form** (source, stimulus, environment, artifact, response, response measure) — making them testable and comparable across attributes.
+1. **QA requirements use a unified six-part scenario form** (source, stimulus, environment, artifact, response, response measure), making them testable and comparable across attributes.
 2. **Tactics are atomic design decisions** targeting single QA responses; patterns are bundles of tactics with built-in tradeoffs.
 3. **Seven categories of design decisions** (allocation of responsibilities, coordination model, data model, resource management, mapping, binding time, choice of technology) provide a systematic framework for QA-driven design.
-4. **Tradeoffs are the architect's central challenge** — QAs interact (almost everything hurts performance) and the right balance depends on business goals.
-5. **Availability exemplifies the full QA workflow**: general scenario → concrete scenario → tactics (detect, recover, prevent) → design checklist across all seven categories.
+4. **Tradeoffs are the architect's central challenge:** QAs interact (almost everything hurts performance) and the right balance depends on business goals.
+5. **Availability exemplifies the full QA workflow:** general scenario → concrete scenario → tactics (detect, recover, prevent) → design checklist across all seven categories.
 
 ## Related Notes
 
 - [[Software Architecture Overview|Software Architecture Overview]]
 - [[../01_Software_Requirements/Software Requirements Overview|Software Requirements Overview]]
-- [[../03_Software_Design/Software Design Overview|Software Design Overview]]
+- [[../03_Software_Design/Software Design Note Overview|Software Design Note Overview]]
 - [[../08_Software_Quality/Software Quality Overview|Software Quality Overview]]

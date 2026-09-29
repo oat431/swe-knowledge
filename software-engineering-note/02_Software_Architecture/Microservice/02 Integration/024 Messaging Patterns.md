@@ -7,7 +7,7 @@ tags:
 
 # 02 Messaging Patterns
 
-When services communicate asynchronously via messages, you need patterns for reliability, ordering, and correctness. Messages can be lost, duplicated, or arrive out of order — your system must handle all three.
+When services communicate asynchronously via messages, you need patterns for reliability, ordering, and correctness. Messages can be lost, duplicated, or arrive out of order; your system must handle all three.
 
 ---
 
@@ -31,7 +31,7 @@ When services communicate asynchronously via messages, you need patterns for rel
 
 ---
 
-## Idempotency — Handling Duplicates
+## Idempotency: Handling Duplicates
 
 Messages can be delivered **more than once**. Every consumer must handle duplicates safely.
 
@@ -45,7 +45,7 @@ Messages can be delivered **more than once**. Every consumer must handle duplica
 // Idempotent consumer pattern
 def handle(event):
     if db.exists(processed_events, event.id):
-        return  // Already processed — skip
+        return  // Already processed; skip
     process(event)
     db.insert(processed_events, event.id)
 ```
@@ -57,10 +57,11 @@ def handle(event):
 Messages that can't be processed after N retries go to a DLQ for human inspection.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     Q[Normal Queue] -->|retry x3| DLQ[Dead Letter Queue]
     DLQ --> H[Human inspects,<br/>fixes, replays<br/>or discards]
-```
+
 
 ---
 

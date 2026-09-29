@@ -14,10 +14,10 @@ GitOps makes Git the single source of truth for what's running in production. Co
 
 ## GitOps Principles
 
-1. **Declarative config in Git** — entire desired state (manifests, Helm values, Kustomize overlays) lives in a git repo
-2. **Automated reconciliation** — an agent continuously compares desired state (git) vs actual state (cluster) and applies diffs
-3. **Drift detection + self-healing** — someone runs `kubectl edit` manually? Agent reverts it back to what git says
-4. **Audit trail via git history** — every change is a commit with author, timestamp, and PR review. Free compliance.
+1. **Declarative config in Git:** entire desired state (manifests, Helm values, Kustomize overlays) lives in a git repo
+2. **Automated reconciliation:** an agent continuously compares desired state (git) vs actual state (cluster) and applies diffs
+3. **Drift detection + self-healing:** someone runs `kubectl edit` manually? Agent reverts it back to what git says
+4. **Audit trail via git history:** every change is a commit with author, timestamp, and PR review. Free compliance.
 
 ---
 
@@ -60,7 +60,7 @@ Agent lives *inside* the cluster, watches the git repo, and pulls changes in.
 | CNCF status | Graduated | Graduated |
 | Best for | Teams wanting visibility + UI | Lightweight, composable setups |
 
-Both are production-ready. ArgoCD wins on DX for most teams; Flux wins on minimalism.
+Both are production-ready. ArgoCD wins on DX for most teams; flux wins on minimalism.
 
 ---
 
@@ -74,8 +74,8 @@ Both are production-ready. ArgoCD wins on DX for most teams; Flux wins on minima
 
 ### Recommended Separation
 
-- **App repo** — source code + Dockerfile + unit tests
-- **Config repo** — K8s manifests, Helm charts, Kustomize overlays
+- **App repo:** source code + Dockerfile + unit tests
+- **Config repo:** K8s manifests, Helm charts, Kustomize overlays
 
 ### Flow
 
@@ -126,11 +126,11 @@ ArgoCD also supports one-click rollback from UI to any previous sync.
 
 ## Key Rules
 
-1. **Never manual `kubectl` in prod** — all changes through git. Period.
-2. **Image tags = git SHA** — never use `:latest`. You must know exactly what's running.
-3. **Config repo PRs require review** — deployment is a code change, treat it like one.
-4. **One pipeline per service** — independence is the whole point of microservices.
-5. **Secrets via sealed-secrets or external-secrets** — never plaintext in git.
+1. **Never manual `kubectl` in prod:** all changes through git. Period.
+2. **Image tags = git SHA:** never use `:latest`. You must know exactly what's running.
+3. **Config repo PRs require review:** deployment is a code change, treat it like one.
+4. **One pipeline per service:** independence is the whole point of microservices.
+5. **Secrets via sealed-secrets or external-secrets:** never plaintext in git.
 
 ---
 
@@ -138,4 +138,4 @@ ArgoCD also supports one-click rollback from UI to any previous sync.
 
 - [OpenGitOps Principles](https://opengitops.dev/)
 - [ArgoCD Documentation](https://argo-cd.readthedocs.io/)
-- CNCF Survey 2026 — GitOps Adoption Report
+- CNCF Survey 2026: GitOps Adoption Report

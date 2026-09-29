@@ -21,8 +21,8 @@ created: 2026-07-21
 
 Code templates bridge the gap between architecture and implementation. They encode architectural patterns as reusable code structures that developers fill in.
 
-- **Example**: A failover protocol template — a continuous loop that services incoming events (normal processing, state data updates, image requests, switch directives, reconstitution requests)
-- **Benefits**: Simplifies adding new applications; coders need not understand fault-tolerance mechanisms; once debugged, entire classes of errors disappear
+- **Example:** A failover protocol template: a continuous loop that services incoming events (normal processing, state data updates, image requests, switch directives, reconstitution requests)
+- **Benefits:** Simplifies adding new applications; coders need not understand fault-tolerance mechanisms; once debugged, entire classes of errors disappear
 
 ### 1.2 Keeping Code and Architecture Consistent
 
@@ -31,7 +31,7 @@ Code drifts from architecture in three common ways:
 2. Architecture abandoned when problems are encountered
 3. After fielding, changes made only to code without updating architecture
 
-**Sync strategies**:
+**Sync strategies:**
 
 | Strategy | Description |
 |----------|-------------|
@@ -39,7 +39,7 @@ Code drifts from architecture in three common ways:
 | Sync at crisis | Undesirable; update when technical quagmire demands it |
 | Sync at check-in | Automated rules vet every check-in; flag when code "breaks" architecture |
 
-**Practical advice**: Mark outdated sections as "no longer applicable" or "to be revised" rather than treating architecture as all-or-nothing.
+**Practical advice:** Mark outdated sections as "no longer applicable" or "to be revised" rather than treating architecture as all-or-nothing.
 
 ### 1.3 The Architecture–Implementation Ontology Gap
 
@@ -50,8 +50,8 @@ Code drifts from architecture in three common ways:
 | Documentation, views, modeling | Code comments, compilers, build scripts |
 | Quality attributes, business goals | Pointers, generics, operator overloading |
 
-- **UML limitations**: No built-in concept for layers; connectors are impoverished (delegation and assembly only); architectural connectors like ESBs require workarounds
-- **Frameworks and interfaces** live on the cusp of both domains — they provide hope for unification
+- **UML limitations:** No built-in concept for layers; connectors are impoverished (delegation and assembly only); architectural connectors like ESBs require workarounds
+- **Frameworks and interfaces** live on the cusp of both domains: they provide hope for unification
 
 ### 1.4 Architecture and Testing
 
@@ -83,11 +83,11 @@ Concentrate testing effort where risk is highest:
 
 #### Test Activities
 
-1. **Test planning** — Allocate resources (time, labor, technology)
-2. **Test development** — Write test procedures, choose cases, create datasets
-3. **Test execution** — Apply tests, capture errors
-4. **Test reporting and defect analysis** — Report to developers and management; adjudicate disposition of faults
-5. **Test harness creation** — Architect builds harnesses for convenient element testing
+1. **Test planning:** Allocate resources (time, labor, technology)
+2. **Test development:** Write test procedures, choose cases, create datasets
+3. **Test execution:** Apply tests, capture errors
+4. **Test reporting and defect analysis:** Report to developers and management; adjudicate disposition of faults
+5. **Test harness creation:** Architect builds harnesses for convenient element testing
 
 #### Architect's Role in Testing
 
@@ -117,14 +117,15 @@ Extract raw information from:
 - **Execution traces** (dynamic analysis)
 - **Build scripts**, configuration files, design models
 
-**Static vs. Dynamic Analysis**:
+**Static vs. Dynamic Analysis:**
+
 | Static | Dynamic |
 |--------|---------|
 | Observing system artifacts only | Observing how the system runs |
 | Lexical analyzers, parsers, AST analyzers | Profilers, code instrumentation, aspects |
 | May miss dynamically bound calls (polymorphism, function pointers, plugins) | Captures actual runtime behavior but may miss rarely executed paths |
 
-**Extraction tools**: Parsers, AST analyzers, lexical analyzers (grep, Perl), profilers, code instrumentation, aspects
+**Extraction tools:** Parsers, AST analyzers, lexical analyzers (grep, Perl), profilers, code instrumentation, aspects
 
 #### Phase 2: Database Construction
 Convert extracted information into a standardized form and populate a reconstruction database.
@@ -134,9 +135,9 @@ Combine multiple extracted views to improve accuracy:
 - Fuse static and dynamic call graphs (static misses late binding; dynamic misses rarely executed paths)
 - Create hypothesized architectural views (layers, vertical slices)
 - Expert interpretation: aggregate elements into layers, components, etc.
-- **Tools**: SonarJ, Lattix, Structure101
+- **Tools:** SonarJ, Lattix, Structure101
 
-#### Phase 4: Architecture Analysis — Finding Violations
+#### Phase 4: Architecture Analysis: Finding Violations
 Test hypotheses about the architecture. Two approaches to maintaining conformance:
 
 | Approach | Description | Limitations |
@@ -151,8 +152,8 @@ Test hypotheses about the architecture. Two approaches to maintaining conformanc
 
 1. **Have a goal** and set of objectives before starting
 2. **Obtain a coarse representation** first (identify layers as starting point)
-3. **Existing documentation may be inaccurate** — use only for high-level concepts
-4. **Tools shorten the process but cannot automate entirely** — involve people familiar with the system
+3. **Existing documentation may be inaccurate:** use only for high-level concepts
+4. **Tools shorten the process but cannot automate entirely:** involve people familiar with the system
 
 ### 2.3 Uses of Reconstruction Results
 
@@ -163,22 +164,23 @@ Test hypotheses about the architecture. Two approaches to maintaining conformanc
 
 ---
 
-## 3. Architecture Evaluation — ATAM (Ch 21)
+## 3. Architecture Evaluation: ATAM (Ch 21)
 
 > *"If a system is important enough for you to explicitly design its architecture, then that architecture should be evaluated."*
 
 ### 3.1 Evaluation Factors
 
-**Three evaluation formats**:
+**Three evaluation formats:**
+
 | Format | Description | When to Use |
 |--------|-------------|-------------|
 | **Evaluation by the designer within the design process** | Self-analysis during decision-making | Continuously, for every important decision |
 | **Peer review** | Colleagues review the architecture | At any point where a reviewable portion exists |
 | **Analysis by outsiders** | External evaluators provide objective assessment | For complete architectures; expensive but authoritative |
 
-**Contextual factors**: Available artifacts, who sees results (public/private), evaluator skills, stakeholder participation, business goal clarity
+**Contextual factors:** Available artifacts, who sees results (public/private), evaluator skills, stakeholder participation, business goal clarity
 
-### 3.2 ATAM — Architecture Tradeoff Analysis Method
+### 3.2 ATAM: Architecture Tradeoff Analysis Method
 
 #### Participants (Three Groups)
 
@@ -193,10 +195,10 @@ Test hypotheses about the architecture. Two approaches to maintaining conformanc
 1. Concise architecture presentation (1 hour)
 2. Articulated business goals
 3. **Prioritized quality attribute scenarios** (often the most valued output)
-4. **Risks and nonrisks** — architectural decisions that may (or may not) lead to undesirable consequences
-5. **Risk themes** — overarching systemic weaknesses
+4. **Risks and nonrisks:** architectural decisions that may (or may not) lead to undesirable consequences
+5. **Risk themes:** overarching systemic weaknesses
 6. Mapping of architectural decisions to quality requirements
-7. **Sensitivity points and tradeoff points** — decisions with marked effect on quality attributes
+7. **Sensitivity points and tradeoff points:** decisions with marked effect on quality attributes
 
 #### The Four Phases
 
@@ -209,7 +211,7 @@ Test hypotheses about the architecture. Two approaches to maintaining conformanc
 
 #### The Nine Steps
 
-**Phase 1 (Steps 1–6)** — with decision makers:
+**Phase 1 (Steps 1–6):** with decision makers:
 
 | Step | Activity | Key Output |
 |------|----------|------------|
@@ -220,7 +222,7 @@ Test hypotheses about the architecture. Two approaches to maintaining conformanc
 | 5 | Generate quality attribute utility tree | Prioritized, refined QA scenarios as tree leaves |
 | 6 | Analyze architectural approaches | Risks, nonrisks, sensitivity points, tradeoffs for high-priority scenarios |
 
-**Phase 2 (Steps 7–9)** — with all stakeholders:
+**Phase 2 (Steps 7–9):** with all stakeholders:
 
 | Step | Activity | Key Output |
 |------|----------|------------|
@@ -230,48 +232,48 @@ Test hypotheses about the architecture. Two approaches to maintaining conformanc
 
 #### Key Concepts
 
-- **Risk**: An architectural decision that may lead to undesirable consequences
-- **Nonrisk**: A decision deemed safe upon analysis
-- **Sensitivity point**: A decision where small changes have marked effect on a quality attribute (e.g., heartbeat frequency → fault detection time)
-- **Tradeoff point**: A decision that affects multiple quality attributes in opposing directions (e.g., higher heartbeat frequency → better availability but worse performance)
+- **Risk:** An architectural decision that may lead to undesirable consequences
+- **Nonrisk:** A decision deemed safe upon analysis
+- **Sensitivity point:** A decision where small changes have marked effect on a quality attribute (e.g., heartbeat frequency → fault detection time)
+- **Tradeoff point:** A decision that affects multiple quality attributes in opposing directions (e.g., higher heartbeat frequency → better availability but worse performance)
 
 ### 3.3 Lightweight Architecture Evaluation
 
 For smaller, less risky projects:
-- **Duration**: 4–6 hours (single afternoon)
-- **Participants**: Internal to organization; fewer people
-- **Steps**: Streamlined — some steps omitted (brainstorming, separate analysis); utility tree reused if existing
-- **Output**: No formal report; scribe captures results
-- **Tradeoff**: Less depth and objectivity, but inexpensive and low ceremony
+- **Duration:** 4–6 hours (single afternoon)
+- **Participants:** Internal to organization; fewer people
+- **Steps:** Streamlined: some steps omitted (brainstorming, separate analysis); utility tree reused if existing
+- **Output:** No formal report; scribe captures results
+- **Tradeoff:** Less depth and objectivity, but inexpensive and low ceremony
 
 ---
 
 ## 4. Management and Governance (Ch 22)
 
-> *"How does a project get to be a year behind schedule? One day at a time."* — Fred Brooks
+> *"How does a project get to be a year behind schedule? One day at a time."* *(Fred Brooks)*
 
 ### 4.1 Planning
 
-**Dual scheduling approach**:
+**Dual scheduling approach:**
 
 ```
 Top-Down Schedule  →  First-Level Decomposition  →  Bottom-Up Schedule  →  Reconciliation  →  Software Development Plan
 ```
 
-- **Top-down**: Initial estimate for management buy-in (inherently inaccurate)
-- **Bottom-up**: Emerges from architecture design; team leads provide estimates for their pieces
+- **Top-down:** Initial estimate for management buy-in (inherently inaccurate)
+- **Bottom-up:** Emerges from architecture design; team leads provide estimates for their pieces
 - **Rules of thumb** (medium ~150 KSLOC projects): ~150 components, ~4 hrs/component paper design, 8 weeks between releases, 40% design / 20% coding / 40% testing
 
-**Budgeting models**:
-- **Top-down planning**: Budget covers entire project including schedule
-- **Architecture-first**: Budget only for architecture design phase; full project budget emerges after
+**Budgeting models:**
+- **Top-down planning:** Budget covers entire project including schedule
+- **Architecture-first:** Budget only for architecture design phase; full project budget emerges after
 
 ### 4.2 Organizing
 
 #### Team Structure
 - Architecture team members become leads for implementation teams (distributed ownership)
 - Support functions (documentation, testing, QA, CM) in **matrix organization** form
-- **Typical roles**: Team leader, developer, configuration manager, system test manager, product manager
+- **Typical roles:** Team leader, developer, configuration manager, system test manager, product manager
 
 #### Project Manager vs. Software Architect
 
@@ -287,40 +289,40 @@ Top-Down Schedule  →  First-Level Decomposition  →  Bottom-Up Schedule  → 
 | **Risk** | Prioritize risks; report to management | Identify risks; adjust architecture to mitigate |
 | **Procurement** | Procure resources; introduce technology | Determine technology requirements; recommend tools |
 
-> **Core principle**: Project manager handles external/business aspects; architect handles internal/technical aspects. Both must coordinate closely.
+> **Core principle:** Project manager handles external/business aspects; architect handles internal/technical aspects. Both must coordinate closely.
 
 #### Global / Distributed Development
 
-**Drivers**: Cost arbitrage, skill set availability, local market knowledge
+**Drivers:** Cost arbitrage, skill set availability, local market knowledge
 
-**Challenge**: Module dependencies across teams require coordination:
-- **Co-located**: Informal contacts (coffee room, hallway)
-- **Distributed**: Documentation, formal meetings, electronic communication (email, wikis, blogs)
+**Challenge:** Module dependencies across teams require coordination:
+- **Co-located:** Informal contacts (coffee room, hallway)
+- **Distributed:** Documentation, formal meetings, electronic communication (email, wikis, blogs)
 
-**Architecture becomes more critical** in distributed development — it defines the interfaces and coordination points between teams.
+**Architecture becomes more critical** in distributed development; it defines the interfaces and coordination points between teams.
 
 ### 4.3 Implementing
 
 #### Tradeoffs
 
-Between **quality, schedule, functionality, and cost** — the project manager's constituency.
+Between **quality, schedule, functionality, and cost:** the project manager's constituency.
 
 - Creeping functionality: PM acts as gatekeeper; **change control board** adds bureaucracy to manage requests
-- Architect is gatekeeper for **architectural changes** — any change incurs cost in code, documentation, and conformance tools
-- **Documentation is especially important in distributed development** — substitutes for informal coordination
+- Architect is gatekeeper for **architectural changes:** any change incurs cost in code, documentation, and conformance tools
+- **Documentation is especially important in distributed development:** substitutes for informal coordination
 
 #### Incremental Development
 
 Every 6–8 weeks a new release. Each release cycles through:
-1. **Planning** — Update software development plan
-2. **Development** — Code; daily builds and automated testing
-3. **Test and repair** — Execute test plan; fix or carry forward defects
+1. **Planning:** Update software development plan
+2. **Development:** Code; daily builds and automated testing
+3. **Test and repair:** Execute test plan; fix or carry forward defects
 
 #### Tracking Progress
 
-- **Personal contact**: One-on-one meetings (doesn't scale well)
-- **Status meetings**: Teams report progress; issues assigned to individuals for resolution outside meeting
-- **Meetings should have**: Written agendas, read-ahead prework, only essential attendees
+- **Personal contact:** One-on-one meetings (doesn't scale well)
+- **Status meetings:** Teams report progress; issues assigned to individuals for resolution outside meeting
+- **Meetings should have:** Written agendas, read-ahead prework, only essential attendees
 
 #### Risk Management
 
@@ -343,13 +345,13 @@ All metrics have both a **historical basis** (for estimation) and a **project ba
 
 #### Phase Metrics and Cost to Complete
 
-- **Open issues** per phase — track and allocate resources for timely resolution
-- **Unmitigated risks** from reviews — report number of high-priority risks and mitigation status
-- **Cost to complete** — bottom-up measure from team ownership of schedule
+- **Open issues** per phase: track and allocate resources for timely resolution
+- **Unmitigated risks** from reviews: report number of high-priority risks and mitigation status
+- **Cost to complete:** bottom-up measure from team ownership of schedule
 
 ### 4.5 Governance
 
-> *"The practice and orientation by which enterprise architectures and other architectures are managed and controlled."* — The Open Group
+> *"The practice and orientation by which enterprise architectures and other architectures are managed and controlled."* *(The Open Group)*
 
 #### Governance Board Responsibilities
 
@@ -365,7 +367,7 @@ Each system in an enterprise has its own stakeholders, release cycles, and gover
 - Integration systems: 9-month release cycle (tied to commercial product)
 - Enterprise systems: 12-month release cycle (tied to fiscal year)
 
-**The governance problem**: Reconciling heterogeneous release schedules into a coherent end-to-end solution while respecting each system's existing stakeholders.
+**The governance problem:** Reconciling heterogeneous release schedules into a coherent end-to-end solution while respecting each system's existing stakeholders.
 
 #### Key Insight
 
@@ -385,7 +387,7 @@ Each system in an enterprise has its own stakeholders, release cycles, and gover
 
 ## Related
 
-- [[Software Architecture Overview]] — All architecture topics
-- [[07_Design_and_Documentation]] — Architecture design process
-- [[08_Architecture_in_Agile]] — Agile architecture
-- [[10_Economics_and_Product_Lines]] — Economic evaluation (CBAM)
+- [[Software Architecture Overview]]: All architecture topics
+- [[07_Design_and_Documentation]]: Architecture design process
+- [[08_Architecture_in_Agile]]: Agile architecture
+- [[10_Economics_and_Product_Lines]]: Economic evaluation (CBAM)

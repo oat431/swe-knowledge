@@ -32,6 +32,7 @@ You cannot make two independent writes atomic without a coordination protocol.
 Write the event to an **outbox table** in the SAME database transaction as your business data. A separate relay process reads the outbox and publishes to the broker.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','actorBkg':'#19362D','actorBorder':'#1FB854','actorTextColor':'#CDD3D1','actorLineColor':'#1FB854','signalColor':'#CDD3D1','signalTextColor':'#CDD3D1','labelBoxBkgColor':'#161212','labelBoxBorderColor':'#1FB854','labelTextColor':'#CDD3D1','loopTextColor':'#CAC9C9','noteBkgColor':'#1EB88E','noteTextColor':'#000C07','noteBorderColor':'#1EB88E','activationBkgColor':'#1EB88E','activationBorderColor':'#1FB8AB','sequenceNumberColor':'#000000','fontSize':'14px'}}}%%
 sequenceDiagram
     participant S as Service
     participant DB as Database
@@ -48,7 +49,7 @@ sequenceDiagram
     R->>B: Publish event
     B-->>R: ACK
     R->>DB: UPDATE outbox SET published_at = NOW()
-```
+
 
 Single DB transaction = atomic guarantee. The relay handles delivery separately.
 
@@ -77,10 +78,10 @@ CREATE INDEX idx_outbox_unpublished ON outbox (created_at) WHERE published_at IS
 
 ## Key Rules
 
-1. **Delete or archive published events** — don't let the outbox table grow unbounded. Purge rows where `published_at IS NOT NULL` older than X days.
-2. **Ordering by sequence** — use the `id` (auto-increment/serial) to guarantee publish order per aggregate.
-3. **Idempotent consumers still needed** — the relay delivers at-least-once. Consumers must handle duplicates (use event ID for deduplication).
-4. **At-least-once delivery** — if the relay crashes after publishing but before marking as sent, it will re-publish. This is a feature, not a bug.
+1. **Delete or archive published events:** don't let the outbox table grow unbounded. Purge rows where `published_at IS NOT NULL` older than X days.
+2. **Ordering by sequence:** use the `id` (auto-increment/serial) to guarantee publish order per aggregate.
+3. **Idempotent consumers still needed:** the relay delivers at-least-once. Consumers must handle duplicates (use event ID for deduplication).
+4. **At-least-once delivery:** if the relay crashes after publishing but before marking as sent, it will re-publish. This is a feature, not a bug.
 
 ## When to Use
 
@@ -93,6 +94,6 @@ CREATE INDEX idx_outbox_unpublished ON outbox (created_at) WHERE published_at IS
 
 ## Sources
 
-- [microservices.io — Transactional Outbox](https://microservices.io/patterns/data/transactional-outbox.html)
+- [microservices.io: Transactional Outbox](https://microservices.io/patterns/data/transactional-outbox.html)
 - [Debezium Outbox Event Router](https://debezium.io/documentation/reference/transformations/outbox-event-router.html)
-- Chris Richardson, *Microservices Patterns* (Manning, 2018) — Chapter 3
+- Chris Richardson, *Microservices Patterns* (Manning, 2018): Chapter 3
