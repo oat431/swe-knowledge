@@ -29,11 +29,11 @@ See also: [[Software Maintenance Overview]] for a high-level map of this KA.
 
 Software systems are not static artifacts. They exist within evolving ecosystems:
 
-- **Environment changes**: operating systems, libraries, hardware platforms, regulations, and business rules shift constantly.
-- **Residual defects**: no non-trivial software ships without latent faults; testing can only show the presence of bugs, never their absence.
-- **Evolving user needs**: as users become familiar with a system they discover new requirements, leading to feature requests and workflow refinements.
-- **Performance tuning**: real-world usage patterns differ from development benchmarks; production systems require optimization.
-- **Technology lifecycle**: dependencies reach end-of-life, APIs are deprecated, and security protocols are updated.
+- **Environment changes:** operating systems, libraries, hardware platforms, regulations, and business rules shift constantly.
+- **Residual defects:** no non-trivial software ships without latent faults; testing can only show the presence of bugs, never their absence.
+- **Evolving user needs:** as users become familiar with a system they discover new requirements, leading to feature requests and workflow refinements.
+- **Performance tuning:** real-world usage patterns differ from development benchmarks; production systems require optimization.
+- **Technology lifecycle:** dependencies reach end-of-life, APIs are deprecated, and security protocols are updated.
 
 ### 1.2 Maintenance Is Not "Just Bug Fixing"
 
@@ -50,6 +50,7 @@ A common misconception treats maintenance as a low-skill activity limited to pat
 ### 1.3 Relationship to Development
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     subgraph Development
         A[Requirements] --> B[Design]
@@ -65,7 +66,7 @@ flowchart LR
         I --> J[Regression Testing]
         J --> F
     end
-    style Maintenance fill:#1a1a2e,stroke:#e94560
+    style Maintenance fill:#19362D,stroke:#FF5861,color:#CDD3D1
 ```
 
 Maintenance begins the moment software is delivered. The transition is gradual: the last few defects found in early operation are typically development oversights, but most maintenance activity addresses genuine evolution needs.
@@ -92,6 +93,7 @@ Manny Lehman and colleagues formulated empirical laws describing how large E-typ
 ### 2.2 Practical Implications
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 mindmap
   root((Lehman's Laws))
     Planning
@@ -141,6 +143,7 @@ ISO/IEC/IEEE 14764 defines four primary categories; two additional categories ar
 ### 3.2 Category Relationships
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     M[Maintenance Activity] --> C[Corrective]
     M --> A[Adaptive]
@@ -165,8 +168,8 @@ graph TD
     TR --> P2[Medium Priority]
     TR --> P3[Low Priority / Backlog]
 
-    style M fill:#16213e,stroke:#0f3460
-    style E fill:#e94560,stroke:#c81d4e
+    style M fill:#1EB88E,stroke:#1FB8AB,color:#000000
+    style E fill:#FF5861,stroke:#000000,color:#000000
 ```
 
 ### 3.3 Maintenance vs. Development: Key Differences
@@ -193,6 +196,7 @@ graph TD
 Industry data consistently shows that **60-80% of total software lifecycle cost** is consumed by maintenance. Some estimates for long-lived systems (military, banking, telecommunications) place this figure above 90%.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','titleColor':'#1FB854','lineColor':'#1FB854','cScale0':'#19362D','cScale1':'#1EB88E','cScale2':'#1FB8AB','cScale3':'#00B5FF','cScale4':'#1FB854','cScale5':'#FFBE00','cScale6':'#FF5861','cScale7':'#1EB88E','fontSize':'14px'}}}%%
 pie title Software Lifecycle Cost Distribution
     "Maintenance" : 75
     "Development" : 20
@@ -241,9 +245,9 @@ This exponential cost curve is why **preventive maintenance** (refactoring, depe
 
 Common models for estimating maintenance effort:
 
-- **COCOMO II Maintenance Model**: Estimates annual change traffic based on the Annual Change Traffic (ACT) parameter, typically 5-20% of code base modified per year.
-- **Function Point Analysis**: Uses enhancement function points to estimate effort for adaptive and perfective changes.
-- **Story Point Estimation**: Agile teams estimate maintenance work alongside feature work in sprint planning.
+- **COCOMO II Maintenance Model:** Estimates annual change traffic based on the Annual Change Traffic (ACT) parameter, typically 5-20% of code base modified per year.
+- **Function Point Analysis:** Uses enhancement function points to estimate effort for adaptive and perfective changes.
+- **Story Point Estimation:** Agile teams estimate maintenance work alongside feature work in sprint planning.
 
 ```
 Maintenance Effort = f(ACT, Understanding Complexity, 
@@ -260,6 +264,7 @@ Maintenance Effort = f(ACT, Understanding Complexity,
 ### 5.1 From Delivery to End-of-Life
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','titleColor':'#1FB854','lineColor':'#1FB854','cScale0':'#19362D','cScale1':'#1EB88E','cScale2':'#1FB8AB','cScale3':'#00B5FF','cScale4':'#1FB854','cScale5':'#FFBE00','cScale6':'#FF5861','cScale7':'#1EB88E','fontSize':'14px'}}}%%
 timeline
     title Software System Lifecycle
     section Development
@@ -286,15 +291,15 @@ timeline
 
 All maintenance activities share a common feedback cycle:
 
-1. **Trigger**: Defect report, change request, environmental event, or proactive observation.
-2. **Triage**: Classify the request (corrective/adaptive/perfective/preventive/adaptive/emergency). Assign priority.
-3. **Analysis**: Understand the impact. What code is affected? What tests exist? What documentation exists?
-4. **Plan**: Design the change. Estimate effort. Schedule.
-5. **Implement**: Make the change. Write or update tests.
-6. **Validate**: Run regression tests. Verify the fix. Get review/approval.
-7. **Deploy**: Release to production.
-8. **Monitor**: Confirm the change works in production. Collect feedback.
-9. **Learn**: Update documentation, share knowledge, feed back into process improvement.
+1. **Trigger:** Defect report, change request, environmental event, or proactive observation.
+2. **Triage:** Classify the request (corrective/adaptive/perfective/preventive/adaptive/emergency). Assign priority.
+3. **Analysis:** Understand the impact. What code is affected? What tests exist? What documentation exists?
+4. **Plan:** Design the change. Estimate effort. Schedule.
+5. **Implement:** Make the change. Write or update tests.
+6. **Validate:** Run regression tests. Verify the fix. Get review/approval.
+7. **Deploy:** Release to production.
+8. **Monitor:** Confirm the change works in production. Collect feedback.
+9. **Learn:** Update documentation, share knowledge, feed back into process improvement.
 
 This cycle maps directly to the ISO/IEC/IEEE 14764 process areas described in [[08_Maintenance_Processes_and_Staffing]].
 
@@ -316,7 +321,7 @@ Modern DevOps practices have transformed maintenance:
 
 ### 6.2 SRE and Maintenance Budgets
 
-Site Reliability Engineering (SRE) formalizes maintenance budgets through **error budgets**:
+Site Reliability Engineering (SRE) formalizes maintenance budgets through **error budgets:**
 
 - Define an SLO (e.g., 99.9% availability).
 - Calculate the error budget (e.g., 0.1% = ~43 minutes/month downtime).
@@ -327,9 +332,9 @@ Site Reliability Engineering (SRE) formalizes maintenance budgets through **erro
 
 Technical debt is a useful metaphor for accumulated maintenance needs:
 
-- **Deliberate debt**: "We know this needs refactoring; we'll do it next sprint."
-- **Accidental debt**: "We didn't realize the architecture wouldn't scale."
-- **Bit rot**: "The code was fine when written, but the world moved on."
+- **Deliberate debt:** "We know this needs refactoring; we'll do it next sprint."
+- **Accidental debt:** "We didn't realize the architecture wouldn't scale."
+- **Bit rot:** "The code was fine when written, but the world moved on."
 
 Effective organizations treat their technical debt backlog as a first-class product backlog item, not as something to be addressed "when we have time."
 

@@ -4,7 +4,7 @@ aliases: [maintenance staffing, maintenance organization, maintenance outsourcin
 tags: [software-engineering, swebok, ka07, maintenance, staffing, organization]
 source: SWEBOK v4 Ch07
 swebok-references: ["KA7.2"]
-related: "[[09_Maintenance_Process_and_Activities]]", "[[08_Maintenance_Planning_and_Strategies]]", "[[11_Software_Quality_in_Maintenance]]"
+related: "[[08_Maintenance_Processes_and_Staffing|Maintenance Process and Activities]]" 
 ---
 
 # Staffing and Organizational Models for Software Maintenance
@@ -28,6 +28,7 @@ Software maintenance organizations adopt different structural approaches based o
 ### 1.2 Model Selection Decision Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Start: Maintenance Team Structure Decision] --> B{System Criticality?}
     B -->|Mission-Critical| C[Dedicated Team]
@@ -97,13 +98,13 @@ Code ownership defines who has authority and responsibility for specific code co
 
 Effective documentation for maintenance knowledge transfer includes:
 
-- **Architecture Decision Records (ADRs)**: Capture *why* design decisions were made, not just *what* was built
-- **Runbooks**: Step-by-step operational procedures for common maintenance tasks
-- **System Context Diagrams**: Show how the system fits into the broader ecosystem
-- **Data Dictionaries**: Document data models, relationships, and business rules
-- **API Contracts**: Interface specifications with examples and error handling
-- **Troubleshooting Guides**: Decision trees for diagnosing common issues
-- **Change Logs**: History of significant modifications with rationale
+- **Architecture Decision Records (ADRs):** Capture *why* design decisions were made, not just *what* was built
+- **Runbooks:** Step-by-step operational procedures for common maintenance tasks
+- **System Context Diagrams:** Show how the system fits into the broader ecosystem
+- **Data Dictionaries:** Document data models, relationships, and business rules
+- **API Contracts:** Interface specifications with examples and error handling
+- **Troubleshooting Guides:** Decision trees for diagnosing common issues
+- **Change Logs:** History of significant modifications with rationale
 
 ### 2.4 Pair Maintenance Practice
 
@@ -137,6 +138,7 @@ Effective documentation for maintenance knowledge transfer includes:
 ### 3.1 Career Progression Ladder
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Junior Maintenance Engineer] --> B[Maintenance Engineer]
     B --> C[Senior Maintenance Engineer]
@@ -156,12 +158,12 @@ graph TD
     N --> O[Director of Engineering]
     O --> P[VP of Engineering]
     
-    style A fill:#e1f5fe
-    style B fill:#e1f5fe
-    style C fill:#fff3e0
-    style D fill:#fff3e0
-    style E fill:#e8f5e9
-    style F fill:#e8f5e9
+    style A fill:#00B5FF,color:#000000
+    style B fill:#00B5FF,color:#000000
+    style C fill:#FFBE00,color:#000000
+    style D fill:#FFBE00,color:#000000
+    style E fill:#1FB854,color:#000000
+    style F fill:#1FB854,color:#000000
 ```
 
 ### 3.2 Specialization Paths
@@ -234,6 +236,7 @@ graph TD
 ### 4.4 Transition Planning
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','titleColor':'#1FB854','lineColor':'#1FB854','cScale0':'#19362D','cScale1':'#1EB88E','cScale2':'#1FB8AB','cScale3':'#00B5FF','cScale4':'#1FB854','cScale5':'#FFBE00','cScale6':'#FF5861','cScale7':'#1EB88E','fontSize':'14px'}}}%%
 gantt
     title Maintenance Outsourcing Transition Plan
     dateFormat  YYYY-MM-DD
@@ -388,6 +391,7 @@ Modern maintenance outsourcing leverages service-oriented and API-driven approac
 ### 6.4 Burnout Prevention Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Monitor Team Health] --> B{Early Warning Signs?}
     B -->|No| C[Continue Monitoring]
@@ -410,8 +414,8 @@ flowchart TD
     L --> M[Structural Changes]
     M --> C
     
-    style B fill:#fff3e0
-    style K fill:#fff3e0
+    style B fill:#FFBE00,color:#000000
+    style K fill:#FFBE00,color:#000000
 ```
 
 ## 7. Maintenance Team Sizing

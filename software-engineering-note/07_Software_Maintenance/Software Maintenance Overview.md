@@ -8,14 +8,14 @@ tags:
   - refactoring
 ---
 
-# Software Maintenance — Overview
+# Software Maintenance: Overview
 
 > **Source:** SWEBOK v4 Chapter 07
 > **Purpose:** Cost-effectively support and evolve operational software throughout its post-delivery lifecycle.
 
 ## What Is This?
 
-Software maintenance is the totality of activities required to keep software operational, relevant, and aligned with changing business needs after initial delivery. It is the most expensive phase of the software lifecycle — over 80% of total lifecycle cost is consumed by post-delivery evolution, not initial development. Despite this, maintenance receives far less attention in education and literature than development.
+Software maintenance is the totality of activities required to keep software operational, relevant, and aligned with changing business needs after initial delivery. It is the most expensive phase of the software lifecycle, over 80% of total lifecycle cost is consumed by post-delivery evolution, not initial development. Despite this, maintenance receives far less attention in education and literature than development.
 
 Maintenance is not merely "fixing bugs." It encompasses six standardized categories: corrective, preventive, adaptive, additive, perfective, and emergency. The majority of maintenance effort goes toward enhancements (adaptive and additive changes), not fault correction. Lehman's Laws of Software Evolution describe how real-world software must continually adapt or become progressively less satisfactory.
 
@@ -26,7 +26,7 @@ The central challenge is managing complexity and change in systems where limited
 ### Software Maintenance Fundamentals
 - Definitions, the nature and need for maintenance, and Lehman's eight laws of software evolution
 - Six standardized categories: corrective, preventive, adaptive, additive, perfective, and emergency maintenance
-- Maintenance as an evolutionary, continuous development activity — not a secondary concern
+- Maintenance as an evolutionary, continuous development activity: not a secondary concern
 
 ### Key Issues in Software Maintenance
 - Limited understanding of code written by others as the primary challenge consuming maintenance effort
@@ -51,21 +51,21 @@ The central challenge is managing complexity and change in systems where limited
 ## My Notes
 
 ### Working Effectively with Legacy Code (Feathers)
-- [[01_Changing_Software]] — Legacy code defined, Legacy Code Change Algorithm, test coverings
-- [[02_Sensing_and_Seams]] — Fakes/mocks, seam model (link/preprocessing/object), tools
-- [[03_Adding_Features]] — Sprout Method/Class, Wrap Method/Class, TDD with legacy code
-- [[04_Getting_Tests_in_Place]] — Test harness, characterization tests, irritating parameters, dependencies
-- [[05_Large_Scale_Changes]] — Extract Class, monster methods, overwhelmed teams, hyperaware editing
-- [[06_Dependency_Breaking_Catalog]] — 25+ techniques: Extract Interface, Subclass & Override, Adapt Parameter, etc.
+- [[01_Changing_Software]]: Legacy code defined, Legacy Code Change Algorithm, test coverings
+- [[02_Sensing_and_Seams]]: Fakes/mocks, seam model (link/preprocessing/object), tools
+- [[03_Adding_Features]]: Sprout Method/Class, Wrap Method/Class, TDD with legacy code
+- [[04_Getting_Tests_in_Place]]: Test harness, characterization tests, irritating parameters, dependencies
+- [[05_Large_Scale_Changes]]: Extract Class, monster methods, overwhelmed teams, hyperaware editing
+- [[06_Dependency_Breaking_Catalog]]: 25+ techniques: Extract Interface, Subclass & Override, Adapt Parameter, etc.
 
 ## Relationship to Other KAs
 
-- **[[Software Design Overview|Software Design]]** — Good design makes maintenance easier; poor design creates technical debt. Refactoring restores design quality.
-- **[[Software Configuration Management Overview|Software Configuration Management]]** — SCM provides the traceability and change control infrastructure essential for controlled maintenance changes.
-- **[[Software Testing Overview|Software Testing]]** — Regression testing is the safety net for maintenance. Without adequate tests, every change is a risk.
-- **[[Software Quality Overview|Software Quality]]** — Maintainability is a quality characteristic; technical debt is a quality problem measured through sub-characteristics.
-- **[[Software Engineering Economics Overview|Software Engineering Economics]]** — Maintenance cost dominates lifecycle economics. Build-vs-replace decisions require economic analysis.
-- **[[Software Engineering Management Overview|Software Engineering Management]]** — Maintenance planning, cost estimation, staffing, and organizational design are management concerns.
+- **[[../03_Software_Design/Software Design Note Overview|Software Design]]:** Good design makes maintenance easier; poor design creates technical debt. Refactoring restores design quality.
+- **[[Software Configuration Management Overview|Software Configuration Management]]:** SCM provides the traceability and change control infrastructure essential for controlled maintenance changes.
+- **[[Software Testing Overview|Software Testing]]:** Regression testing is the safety net for maintenance. Without adequate tests, every change is a risk.
+- **[[Software Quality Overview|Software Quality]]:** Maintainability is a quality characteristic; technical debt is a quality problem measured through sub-characteristics.
+- **[[Software Engineering Economics Overview|Software Engineering Economics]]:** Maintenance cost dominates lifecycle economics. Build-vs-replace decisions require economic analysis.
+- **[[Software Engineering Management Overview|Software Engineering Management]]:** Maintenance planning, cost estimation, staffing, and organizational design are management concerns.
 
 ---
 

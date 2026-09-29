@@ -9,17 +9,17 @@ source: "Feathers, Working Effectively with Legacy Code, Ch 3–5"
 created: 2026-07-21
 ---
 
-# 02 — Sensing and Seams
+# 02: Sensing and Seams
 
-> *"A seam is a place where you can alter behavior in your program without editing in that place."* — Michael Feathers
+> *"A seam is a place where you can alter behavior in your program without editing in that place."* *(Michael Feathers)*
 
 ## Overview
 
 Chapters 3–5 of *Working Effectively with Legacy Code* lay the conceptual foundation for all legacy-code work. Feathers introduces three critical ideas:
 
-1. **Sensing and Separation** — the two fundamental reasons we break dependencies.
-2. **The Seam Model** — a language-independent way to think about *where* and *how* behavior can be replaced.
-3. **Tools** — the testing harnesses and refactoring tools that make dependency-breaking safe.
+1. **Sensing and Separation:** the two fundamental reasons we break dependencies.
+2. **The Seam Model:** a language-independent way to think about *where* and *how* behavior can be replaced.
+3. **Tools:** the testing harnesses and refactoring tools that make dependency-breaking safe.
 
 ---
 
@@ -34,7 +34,7 @@ When we want to get tests around a piece of legacy code, we encounter two distin
 | **Sensing** | We can't access the values our code computes | Can't tell what `NetworkBridge` wrote to hardware |
 | **Separation** | We can't even get the code into a test harness to run | Creating a `NetworkBridge` requires real hardware present |
 
-In an ideal system, you could instantiate any class in a test harness. In reality, dependencies cascade: creating one object pulls in its dependencies, which pull in theirs — eventually half the system ends up in the harness. In languages like C++, even *link time* makes rapid turnaround nearly impossible without breaking dependencies.
+In an ideal system, you could instantiate any class in a test harness. In reality, dependencies cascade: creating one object pulls in its dependencies, which pull in theirs; eventually half the system ends up in the harness. In languages like C++, even *link time* makes rapid turnaround nearly impossible without breaking dependencies.
 
 ### The NetworkBridge Example
 
@@ -56,7 +56,7 @@ The dominant technique for *sensing*: put a fake object in place of a real colla
 
 #### The Sale / Display Example
 
-**Before:** `Sale` calls the cash-register display API directly — impossible to sense.
+**Before:** `Sale` calls the cash-register display API directly, making it impossible to sense.
 
 **After:** Extract a `Display` interface, provide a `FakeDisplay`.
 
@@ -92,7 +92,7 @@ public void testDisplayAnItem() {
 }
 ```
 
-Key insight: this test doesn't prove pixels appear on real hardware — but it *does* prove that `Sale` sends the right text to the display abstraction. That lets us **divide and conquer** — eliminate `Sale` as a suspect when display bugs arise.
+Key insight: this test doesn't prove pixels appear on real hardware, but it *does* prove that `Sale` sends the right text to the display abstraction. That lets us **divide and conquer:** eliminate `Sale` as a suspect when display bugs arise.
 
 ### The Two Sides of a Fake Object
 
@@ -100,8 +100,8 @@ Every fake has two "faces":
 
 | Face | Who sees it | Example |
 |---|---|---|
-| **Collaborator side** | The class under test | `showLine(String)` — matches the `Display` interface |
-| **Test side** | The test code | `getLastLine()` — enables sensing; not part of `Display` |
+| **Collaborator side** | The class under test | `showLine(String)`, matches the `Display` interface |
+| **Test side** | The test code | `getLastLine()`, enables sensing; not part of `Display` |
 
 The test holds the reference as `FakeDisplay` (not `Display`) so it can call the test-side methods. The class under test only sees the interface.
 
@@ -128,7 +128,7 @@ The seam model gives us a language-agnostic way to see where we can break depend
 
 ### Enabling Points
 
-Every seam has an **enabling point** — the place *outside* the seam where you decide which behavior to use.
+Every seam has an **enabling point:** the place *outside* the seam where you decide which behavior to use.
 
 | Seam type | Enabling point |
 |---|---|
@@ -136,7 +136,7 @@ Every seam has an **enabling point** — the place *outside* the seam where you 
 | Link seam | Build script, makefile, classpath setting |
 | Object seam | Constructor call site (which subclass/implementation to instantiate) |
 
-Key insight: **the enabling point is always somewhere else.** You don't edit the seam itself — you toggle behavior from outside.
+Key insight: **the enabling point is always somewhere else.** You don't edit the seam itself; you toggle behavior from outside.
 
 ### The Three Seam Types
 
@@ -144,7 +144,7 @@ Key insight: **the enabling point is always somewhere else.** You don't edit the
 
 The C preprocessor runs *before* the compiler, giving us text-replacement seams.
 
-**Example — replacing `db_update` at test time:**
+**Example: replacing `db_update` at test time:**
 
 ```c
 // localdefs.h
@@ -176,7 +176,7 @@ void account_update(int account_no, struct DHLSRecord *record, int activated) {
 **When `TESTING` is defined**, `db_update` becomes a macro that records parameters instead of hitting the database. The enabling point is the `#define TESTING` directive.
 
 **Caveats:**
-- Preprocessing decreases code clarity — you effectively maintain multiple programs in one file.
+- Preprocessing decreases code clarity: you effectively maintain multiple programs in one file.
 - `#ifdef` hell is real; use sparingly.
 - But in C/C++, preprocessing seams are sometimes the *only* practical option.
 
@@ -184,7 +184,7 @@ void account_update(int account_no, struct DHLSRecord *record, int activated) {
 
 Exploit the linker (or classpath) to substitute entire implementations.
 
-**Java — classpath seam:**
+**Java: classpath seam:**
 
 ```java
 // FitFilter.java
@@ -196,9 +196,9 @@ fixture.doTables(tables);    // ← seam
 ```
 
 - **Seam:** the `new Parse(...)` and `fixture.doTables(...)` calls.
-- **Enabling point:** the classpath — point it at test versions of `fit.Parse` and `fit.Fixture` that record calls.
+- **Enabling point:** the classpath: point it at test versions of `fit.Parse` and `fit.Fixture` that record calls.
 
-**C/C++ — static linking seam:**
+**C/C++: static linking seam:**
 
 Create a stub library that replaces the production graphics library:
 
@@ -226,11 +226,11 @@ The most useful and explicit seam type. A method call is a seam when polymorphis
 **Seam or not?**
 
 ```java
-// NOT a seam — no enabling point:
+// NOT a seam - no enabling point:
 Cell cell = new FormulaCell(this, "A1", "=A2+A3");
 cell.Recalculate();  // class fixed at creation; can't change without editing
 
-// IS a seam — enabling point is the argument list:
+// IS a seam - enabling point is the argument list:
 public Spreadsheet buildMartSheet(Cell cell) {
     cell.Recalculate();  // can pass any Cell subclass in a test
 }
@@ -239,10 +239,10 @@ public Spreadsheet buildMartSheet(Cell cell) {
 **Even static methods can become seams** if you remove `static`, make them `protected`, and override in a testing subclass:
 
 ```java
-// Before: static — not a seam
+// Before: static - not a seam
 private static void Recalculate(Cell cell) { ... }
 
-// After: protected non-static — now a seam
+// After: protected non-static - now a seam
 protected void Recalculate(Cell cell) { ... }
 
 // In test:
@@ -253,7 +253,7 @@ class TestingCustomSpreadsheet extends CustomSpreadsheet {
 }
 ```
 
-### The `CAsyncSslRec::Init` Example — All Three Seams
+### The `CAsyncSslRec::Init` Example: All Three Seams
 
 Feathers shows a single line of code and enumerates every seam available:
 
@@ -275,9 +275,9 @@ bool CAsyncSslRec::Init() {
 
 Feathers' preference hierarchy:
 
-1. **Object seams** — best choice in OO languages; explicit, easy to understand, well-supported by tools.
-2. **Link seams** — useful when dependencies are pervasive (e.g., a graphics library called everywhere).
-3. **Preprocessing seams** — last resort; powerful but obscure, hard to maintain.
+1. **Object seams:** best choice in OO languages; explicit, easy to understand, well-supported by tools.
+2. **Link seams:** useful when dependencies are pervasive (e.g., a graphics library called everywhere).
+3. **Preprocessing seams:** last resort; powerful but obscure, hard to maintain.
 
 ---
 
@@ -287,7 +287,7 @@ Feathers' preference hierarchy:
 
 Refactoring tools must **preserve behavior**. The Smalltalk Refactoring Browser set the standard: a change is only a refactoring if it does not change behavior.
 
-**Danger example** — a tool that doesn't check side effects:
+**Danger example:** a tool that doesn't check side effects:
 
 ```java
 // Before:
@@ -300,11 +300,11 @@ for (int n = 0; n < 10; n++) {
 // After "inline variable" refactoring:
 int total = 0;
 for (int n = 0; n < 10; n++) {
-    total += getValue(); // alpha now incremented 10 times — behavior changed!
+    total += getValue(); // alpha now incremented 10 times - behavior changed!
 }
 ```
 
-**Best practice:** Have tests around code before using automated refactorings. Test the tool itself — e.g., verify it catches name collisions when extracting methods.
+**Best practice:** Have tests around code before using automated refactorings. Test the tool itself, e.g., verify it catches name collisions when extracting methods.
 
 ### Unit-Testing Harnesses
 
@@ -313,7 +313,7 @@ for (int n = 0; n < 10; n++) {
 The most effective testing tools are free. xUnit (originally Smalltalk, Kent Beck) has been ported to nearly every language. Key features:
 
 - Write tests in the same language as production code.
-- Tests run in **isolation** — each test method gets its own object.
+- Tests run in **isolation:** each test method gets its own object.
 - Tests can be grouped into **suites**.
 
 **JUnit (Java):**
@@ -337,9 +337,9 @@ public class EmployeeTest extends TestCase {
 }
 ```
 
-- `setUp()` runs *before each test method* on a fresh object — **no shared mutable state.**
+- `setUp()` runs *before each test method* on a fresh object: **no shared mutable state.**
 - `tearDown()` runs after each test.
-- JUnit uses reflection to discover `test*` methods; CppUnit requires manual registration.
+- JUnit uses reflection to discover `test*` methods; cppUnit requires manual registration.
 
 **CppUnitLite (C++):**
 Uses macros instead of reflection (C++ lacks it):
@@ -370,19 +370,19 @@ The `TEST` macro creates a static subclass instance that auto-registers with the
 
 1. **Sensing = can't see outputs.** Break dependencies to observe what code computes.
 2. **Separation = can't even run it.** Break dependencies to get code into a test harness.
-3. **Fakes have two sides** — the collaborator side (interface) and the test side (sensing methods). Hold the reference as the fake type in tests.
+3. **Fakes have two sides:** the collaborator side (interface) and the test side (sensing methods). Hold the reference as the fake type in tests.
 4. **A seam is a place where behavior can change without editing that place.** Every seam has an *enabling point* elsewhere.
 5. **Three seam types, in order of preference:** object seams > link seams > preprocessing seams.
-6. **Object seams are the best in OOP** — explicit, tool-friendly, easy to reason about.
-7. **The enabling point is always outside the seam** — build config, constructor call site, `#define` directive.
-8. **Tests before automated refactoring** — tools can silently change behavior (e.g., side-effect re-execution).
-9. **xUnit is universal** — write tests in your language, run in isolation, group into suites.
-10. **Simple fakes suffice** — you rarely need a full mock object framework.
+6. **Object seams are the best in OOP:** explicit, tool-friendly, easy to reason about.
+7. **The enabling point is always outside the seam:** build config, constructor call site, `#define` directive.
+8. **Tests before automated refactoring:** tools can silently change behavior (e.g., side-effect re-execution).
+9. **xUnit is universal:** write tests in your language, run in isolation, group into suites.
+10. **Simple fakes suffice:** you rarely need a full mock object framework.
 
 ---
 
 ## See Also
 
-- [[01_Legacy_Code_Overview]] — Introduction to legacy code and the change algorithm
-- [[03_Dependency_Breaking_Techniques]] — Catalog of specific techniques from later chapters
-- [[Testing_Strategies]] — Unit testing strategies for legacy code
+- [[01_Changing_Software|Legacy Code Overview]]: Introduction to legacy code and the change algorithm
+- [[06_Dependency_Breaking_Catalog|Dependency Breaking Techniques]]: Catalog of specific techniques from later chapters
+- [[04_Getting_Tests_in_Place|Testing Strategies]]: Unit testing strategies for legacy code

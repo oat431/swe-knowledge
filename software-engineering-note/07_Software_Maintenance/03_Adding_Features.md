@@ -11,7 +11,7 @@ created: 2026-07-21
 
 # Adding Features to Legacy Code
 
-> How to safely add new functionality when you can't get existing code under test — and how to build the foundation that makes feature addition fast and safe.
+> How to safely add new functionality when you can't get existing code under test, and how to build the foundation that makes feature addition fast and safe.
 
 ---
 
@@ -21,8 +21,8 @@ created: 2026-07-21
 
 When you need to add a feature under time pressure, you face a choice:
 
-- **Hack it in** — inline changes in all the places needed, done by 5:00. But the code gets worse.
-- **Write tests first** — break dependencies, get coverage, then make the change. Costs time now, saves frustration later.
+- **Hack it in:** inline changes in all the places needed, done by 5:00. But the code gets worse.
+- **Write tests first:** break dependencies, get coverage, then make the change. Costs time now, saves frustration later.
 
 > "Code is your house, and you have to live in it."
 
@@ -30,7 +30,7 @@ Changes cluster. If you're changing code today, you'll likely touch nearby code 
 
 ### Four Techniques for Safe Feature Addition (Without Existing Tests)
 
-When you can't afford to get the existing class under test, use one of these techniques. **All produce tested new code** but don't test the existing call site — use with caution.
+When you can't afford to get the existing class under test, use one of these techniques. **All produce tested new code** but don't test the existing call site; use with caution.
 
 ---
 
@@ -41,14 +41,14 @@ When you can't afford to get the existing class under test, use one of these tec
 **Steps:**
 1. Identify where the change needs to go.
 2. Write a call to a new method (comment it out initially).
-3. Determine local variables needed — make them arguments.
+3. Determine local variables needed: make them arguments.
 4. Determine if the sprout needs to return a value.
 5. Develop the sprout method using **TDD**.
 6. Uncomment the call.
 
 **Example (Java):**
 
-Before (inline change — invasive):
+Before (inline change, invasive):
 ```java
 public void postEntries(List entries) {
     List entriesToAdd = new LinkedList();
@@ -63,7 +63,7 @@ public void postEntries(List entries) {
 }
 ```
 
-After (Sprout Method — clean separation):
+After (Sprout Method, clean separation):
 ```java
 public void postEntries(List entries) {
     List entriesToAdd = uniqueEntries(entries);  // ← sprout
@@ -87,13 +87,13 @@ List uniqueEntries(List entries) {
 }
 ```
 
-**When the class is too hard to instantiate:** Make the sprout a `public static` method. Treat statics as a staging area — later, move them to instance methods on a new class (or back to the original class once it's under test).
+**When the class is too hard to instantiate:** Make the sprout a `public static` method. Treat statics as a staging area; later, move them to instance methods on a new class (or back to the original class once it's under test).
 
 | Advantages | Disadvantages |
 |---|---|
 | Clearly separates new code from old code | Gives up on the source method/class for now |
 | Clean interface between new and old | Source method may look odd with a single sprout |
-| See all variables affected — easier to verify correctness | Doesn't make the existing code better |
+| See all variables affected; easier to verify correctness | Doesn't make the existing code better |
 
 ---
 
@@ -115,7 +115,7 @@ List uniqueEntries(List entries) {
 // Original: QuarterlyReportGenerator::generate() builds an HTML table.
 // New requirement: add a header row.
 
-// Sprout Class — developed with TDD
+// Sprout Class - developed with TDD
 class QuarterlyReportTableHeaderGenerator {
 public:
     string generate();
@@ -131,11 +131,11 @@ QuarterlyReportTableHeaderGenerator producer;
 pageText += producer.generate();
 ```
 
-**Design evolution:** A sprouted class may later fold into existing concepts (e.g., both `QuarterlyReportGenerator` and `QuarterlyReportTableHeaderGenerator` implement `HTMLGenerator`). Or it may become a new concept entirely. Don't expect perfect design on day one — sprouted classes evolve over months.
+**Design evolution:** A sprouted class may later fold into existing concepts (e.g., both `QuarterlyReportGenerator` and `QuarterlyReportTableHeaderGenerator` implement `HTMLGenerator`). Or it may become a new concept entirely. Don't expect perfect design on day one; sprouted classes evolve over months.
 
 | Advantages | Disadvantages |
 |---|---|
-| Move forward with confidence (no invasive changes) | Conceptual complexity — new classes proliferate |
+| Move forward with confidence (no invasive changes) | Conceptual complexity: new classes proliferate |
 | In C++: no need to modify existing headers | Things that belong in one class end up in sprouts |
 | New header file = less compilation load on source class | |
 
@@ -147,7 +147,7 @@ pageText += producer.generate();
 
 **Two forms:**
 
-**Form 1 — Rename and wrap (same name for callers):**
+**Form 1: Rename and wrap (same name for callers):**
 ```java
 // Original
 public void pay() {
@@ -171,7 +171,7 @@ public void pay() {               // ← new, same name
 private void logPayment() { ... }
 ```
 
-**Form 2 — New method (explicit choice for callers):**
+**Form 2: New method (explicit choice for callers):**
 ```java
 public void makeLoggedPayment() {
     logPayment();
@@ -196,7 +196,7 @@ public void makeLoggedPayment() {
 | Explicitly separates new from old functionality | Requires further extraction for clean naming |
 | Good when you can't test the calling code | |
 
-**Sprout vs. Wrap:** Use **Sprout Method** when the existing method already communicates a clear algorithm to the reader. Use **Wrap Method** when the new feature is as important as the old work — after wrapping, you often get a clean high-level algorithm:
+**Sprout vs. Wrap:** Use **Sprout Method** when the existing method already communicates a clear algorithm to the reader. Use **Wrap Method** when the new feature is as important as the old work, after wrapping, you often get a clean high-level algorithm:
 
 ```java
 public void pay() {
@@ -212,7 +212,7 @@ public void pay() {
 
 **When to use:** You need to add behavior transparently to many existing callers, OR the class is so large you refuse to make it worse by adding anything.
 
-**Decorator approach** — wrap the class, implement the same interface, delegate + add behavior:
+**Decorator approach:** wrap the class, implement the same interface, delegate + add behavior:
 
 ```java
 class LoggingEmployee extends Employee {
@@ -231,14 +231,14 @@ class LoggingEmployee extends Employee {
 }
 ```
 
-This is the **Decorator Pattern**: compose behaviors at runtime by nesting wrappers:
+This is the **Decorator Pattern:** compose behaviors at runtime by nesting wrappers:
 
 ```java
 ToolController controller = new StepNotifyingController(
     new AlarmingController(new ACMEController()), notifyees);
 ```
 
-**Non-decorator approach** — wrap only where needed:
+**Non-decorator approach:** wrap only where needed:
 
 ```java
 class LoggingPayDispatcher {
@@ -262,7 +262,7 @@ class LoggingPayDispatcher {
 4. Instantiate the wrapper where the new behavior is needed.
 
 **Two tipping points for Wrap Class:**
-1. The new behavior is completely independent — don't pollute the existing class.
+1. The new behavior is completely independent: don't pollute the existing class.
 2. The class is so large you can't stand to make it worse. Wrapping is a stake in the ground.
 
 > "If you consistently do these little improvements, your system will start to look significantly different over the course of a couple of months."
@@ -282,13 +282,13 @@ class LoggingPayDispatcher {
 
 ### Why Changes Take So Long
 
-**1. Understanding** — Legacy code requires deep context; changes are painful even after you figure out what to do. Well-maintained systems: figuring out takes time, but the change is easy.
+**1. Understanding:** Legacy code requires deep context; changes are painful even after you figure out what to do. Well-maintained systems: figuring out takes time, but the change is easy.
 
-**2. Lag Time** — The delay between making a change and getting feedback. Like driving the Mars rover with a 14-minute round-trip delay.
+**2. Lag Time:** The delay between making a change and getting feedback. Like driving the Mars rover with a 14-minute round-trip delay.
 
 > In most mainstream languages, you can always break dependencies so that you recompile and run tests in **under 10 seconds**.
 
-The human mind works differently with fast feedback — we try out approaches quickly, concentration is more intense, and mistakes are caught faster.
+The human mind works differently with fast feedback; we try out approaches quickly, concentration is more intense, and mistakes are caught faster.
 
 ### Breaking Dependencies for Fast Builds
 
@@ -359,7 +359,7 @@ DatabaseImplementation/         (concrete implementations)
 > 4. Remove duplication.
 > 5. Repeat.
 
-The key insight: TDD lets you concentrate on **one thing at a time** — writing code OR refactoring, never both. In legacy code, this means writing new code independently of old code, then refactoring to remove duplication.
+The key insight: TDD lets you concentrate on **one thing at a time:** writing code OR refactoring, never both. In legacy code, this means writing new code independently of old code, then refactoring to remove duplication.
 
 ### Programming by Difference
 
@@ -377,7 +377,7 @@ public class AnonymousMessageForwarder extends MessageForwarder {
 }
 ```
 
-**Step 2: Refactor away from inheritance** — make it a configuration option:
+**Step 2: Refactor away from inheritance:** make it a configuration option:
 
 ```java
 // Configuration-based approach
@@ -386,7 +386,7 @@ configuration.setProperty("anonymous", "true");
 MessageForwarder forwarder = new MessageForwarder(configuration);
 ```
 
-**Step 3: Extract a proper class** — evolve from `Properties` to `MailingConfiguration` to `MailingList`:
+**Step 3: Extract a proper class:** evolve from `Properties` to `MailingConfiguration` to `MailingList`:
 
 ```
 MessageForwarder → MailingList
@@ -418,7 +418,7 @@ AddressPreservingForwarder          AnonymousForwarder
   # getFromAddress(Message)           # getFromAddress(Message)
 ```
 
-When you ask "How does this class do X?", the answer is in exactly one place — either the class itself or its abstract definition.
+When you ask "How does this class do X?", the answer is in exactly one place: either the class itself or its abstract definition.
 
 ---
 
@@ -426,7 +426,7 @@ When you ask "How does this class do X?", the answer is in exactly one place —
 
 1. **Don't hack inline.** Even when time-pressed, use Sprout/Wrap techniques to keep new code tested and separated from old code.
 
-2. **Sprout Method** is the first resort — extract new behavior into a TDD-developed method. **Sprout Class** when the class can't be instantiated.
+2. **Sprout Method** is the first resort: extract new behavior into a TDD-developed method. **Sprout Class** when the class can't be instantiated.
 
 3. **Wrap Method/Class** when you need to add behavior around existing calls without modifying the old code.
 
@@ -434,14 +434,14 @@ When you ask "How does this class do X?", the answer is in exactly one place —
 
 5. **TDD in legacy code** means: get the class under test first (step 0), then write failing tests, make them pass without touching existing code, and refactor to remove duplication.
 
-6. **Programming by Difference** — subclass to add features quickly, then refactor toward configuration or extracted classes. **Don't leave the subclass in place permanently.**
+6. **Programming by Difference:** subclass to add features quickly, then refactor toward configuration or extracted classes. **Don't leave the subclass in place permanently.**
 
 7. **Watch for LSP violations** when overriding concrete methods. Prefer **normalized hierarchies** where each method has exactly one concrete implementation.
 
 
 ## Related
 
-- [[Software Maintenance Overview]] — All maintenance topics
-- [[02_Sensing_and_Seams]] — Seams and fakes
-- [[04_Getting_Tests_in_Place]] — Getting classes under test
-- [[06_Dependency_Breaking_Catalog]] — Dependency breaking techniques
+- [[Software Maintenance Overview]]: All maintenance topics
+- [[02_Sensing_and_Seams]]: Seams and fakes
+- [[04_Getting_Tests_in_Place]]: Getting classes under test
+- [[06_Dependency_Breaking_Catalog]]: Dependency breaking techniques

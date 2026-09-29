@@ -9,7 +9,7 @@ source: "Feathers, Working Effectively with Legacy Code, Ch 25"
 created: 2026-07-21
 ---
 
-# 06 — Dependency-Breaking Catalog
+# 06: Dependency-Breaking Catalog
 
 > Source: Michael Feathers, *Working Effectively with Legacy Code*, Chapter 25.  
 > These techniques are **refactorings performed without tests** to get tests in place. They preserve behavior. Once tests exist, use test-supported refactorings to clean the design.
@@ -20,10 +20,10 @@ created: 2026-07-21
 
 The catalog below contains 24 dependency-breaking techniques. Each entry includes:
 
-- **Purpose** — the dependency problem it addresses
-- **Mechanism** — how it works at a high level
-- **Steps** — the safe sequence to apply without tests
-- **Trade-offs & Pitfalls** — when to prefer it, when to avoid it
+- **Purpose:** the dependency problem it addresses
+- **Mechanism:** how it works at a high level
+- **Steps:** the safe sequence to apply without tests
+- **Trade-offs & Pitfalls:** when to prefer it, when to avoid it
 
 > **Golden Rule:** Bias toward the change you feel most confident making, not the one that gives the best structure. Better structure comes *after* tests.
 
@@ -36,7 +36,7 @@ The catalog below contains 24 dependency-breaking techniques. Each entry include
 **Mechanism:** Create a new interface that exposes only the methods the method actually needs. Wrap the original parameter in an adapter that implements the new interface.
 
 **Steps:**
-1. Create a new interface — as simple and communicative as possible.
+1. Create a new interface: as simple and communicative as possible.
 2. Create a production implementer (adapter) wrapping the original type.
 3. Create a fake implementer for testing.
 4. Write a simple test case passing the fake.
@@ -70,7 +70,7 @@ The catalog below contains 24 dependency-breaking techniques. Each entry include
 - If the method only reads data: consider a data-holding class passed as argument.
 - Worst case (uses methods on original class): combine with `Extract Interface`.
 
-**Pitfall:** Private methods become public — this is a temporary state. Refactor back after tests are in place.
+**Pitfall:** Private methods become public; this is a temporary state. Refactor back after tests are in place.
 
 ---
 
@@ -88,7 +88,7 @@ The catalog below contains 24 dependency-breaking techniques. Each entry include
 5. Build to find missing methods.
 6. Add method definitions to the test source file until the build completes.
 
-**Pitfall:** Creates duplicate definitions — maintenance burden. Confuses debuggers. Use only for initial dependency breaking, then bring the class under test and remove duplicates.
+**Pitfall:** Creates duplicate definitions: maintenance burden. Confuses debuggers. Use only for initial dependency breaking, then bring the class under test and remove duplicates.
 
 ---
 
@@ -126,11 +126,11 @@ The catalog below contains 24 dependency-breaking techniques. Each entry include
 
 **Steps:**
 1. Write a test that accesses the target method as a public static method.
-2. Extract the method body to a static method. **Preserve Signatures** — use a different name (e.g., `validate` → `validatePacket`).
+2. Extract the method body to a static method. **Preserve Signatures:** use a different name (e.g., `validate` → `validatePacket`).
 3. Compile.
 4. If errors arise from accessing instance data/methods, consider making those static too (if safe).
 
-**Insight:** The static area of a class is effectively a separate "staging area." Making a method static signals it doesn't belong to the instance — a clue for future refactoring.
+**Insight:** The static area of a class is effectively a separate "staging area." Making a method static signals it doesn't belong to the instance, a clue for future refactoring.
 
 ---
 
@@ -168,7 +168,7 @@ The catalog below contains 24 dependency-breaking techniques. Each entry include
 
 **Purpose:** Replace an object created in a constructor when the language doesn't support virtual calls in constructors (C++).
 
-**Mechanism:** Introduce a lazy getter — creates the object on first call, returns the cached instance thereafter. Override the getter in a testing subclass.
+**Mechanism:** Introduce a lazy getter, creates the object on first call, returns the cached instance thereafter. Override the getter in a testing subclass.
 
 **Steps:**
 1. Identify the object needing a getter.
@@ -191,7 +191,7 @@ The catalog below contains 24 dependency-breaking techniques. Each entry include
 1. Copy the source class declaration; rename it (e.g., `ProductionModelNode`).
 2. Turn the source class into an interface: delete non-public methods and variables.
 3. Make all remaining public methods abstract (pure virtual in C++).
-4. Remove unnecessary imports/includes — **Lean on the Compiler**.
+4. Remove unnecessary imports/includes: **Lean on the Compiler**.
 5. Make the production class implement the new interface.
 6. Compile and fix.
 7. Find all instantiations of the old class; replace with the production class.
@@ -210,12 +210,12 @@ The catalog below contains 24 dependency-breaking techniques. Each entry include
 
 **Steps:**
 1. Create a new empty interface.
-2. Make the original class implement it (safe — interface is empty).
+2. Make the original class implement it (safe: interface is empty).
 3. Change the client to use the interface type.
 4. Compile. For each error, add a method declaration to the interface and an empty implementation to the fake.
 5. Repeat until the build succeeds.
 
-**Naming:** Avoid `I`-prefix unless it's already the convention. Think of a name that communicates the role. You don't need to extract ALL public methods — only the ones the client uses.
+**Naming:** Avoid `I`-prefix unless it's already the convention. Think of a name that communicates the role. You don't need to extract ALL public methods, only the ones the client uses.
 
 **C++ Non-Virtual Trap:** If the original class has non-virtual methods and subclasses that override them, making the method virtual (to add to the interface) changes dispatch behavior. Add a new virtual method that delegates to the non-virtual one instead.
 
@@ -251,7 +251,7 @@ The catalog below contains 24 dependency-breaking techniques. Each entry include
 
 **Cleanup:** Use `setUp`/`tearDown` to reset global state between tests.
 
-**Pitfall:** Ugly — setters that change fundamental object dependencies make behavior history-dependent. This is a temporary surgical step. Move toward parameter passing over time.
+**Pitfall:** Ugly, setters that change fundamental object dependencies make behavior history-dependent. This is a temporary surgical step. Move toward parameter passing over time.
 
 ---
 
@@ -335,7 +335,7 @@ The catalog below contains 24 dependency-breaking techniques. Each entry include
 4. Copy missing references (methods/variables) to the superclass as the compiler reports them. **Preserve Signatures.**
 5. When both classes compile, create a testing subclass and add setup methods.
 
-**Design Note:** This spreads a feature across two classes — not ideal. It's a step toward delegation. Make the superclass abstract to signal it's not meant for direct instantiation.
+**Design Note:** This spreads a feature across two classes, not ideal. It's a step toward delegation. Make the superclass abstract to signal it's not meant for direct instantiation.
 
 ---
 
@@ -403,7 +403,7 @@ class TestingRegisterSale extends RegisterSale {
 
 ## 21. Subclass and Override Method
 
-**Purpose:** The core OO dependency-breaking technique — use inheritance to nullify behavior or sense values during testing.
+**Purpose:** The core OO dependency-breaking technique; use inheritance to nullify behavior or sense values during testing.
 
 **Mechanism:** Change the access modifier of the target method (private → protected). Create a testing subclass that overrides it.
 
@@ -414,7 +414,7 @@ class TestingRegisterSale extends RegisterSale {
 4. Create a testing subclass; override the methods.
 5. Verify it builds in the test harness.
 
-**"Paper View" Metaphor:** Imagine placing translucent paper over the class — each extractable snippet can be replaced by an override in the subclass.
+**"Paper View" Metaphor:** Imagine placing translucent paper over the class; each extractable snippet can be replaced by an override in the subclass.
 
 **Pitfall:** Overriding too-large methods can leave unwanted behavior intact. Aim for small, focused overrides.
 
@@ -431,7 +431,7 @@ class TestingRegisterSale extends RegisterSale {
 2. Create a method named `supersedeXxx`.
 3. In the method, destroy the previous instance and assign the new value. Verify no other references to the old object exist in the class.
 
-**Naming:** Use the word "supersede" — it's unusual and searchable, making it easy to verify it's not used in production code.
+**Naming:** Use the word "supersede"; it's unusual and searchable, making it easy to verify it's not used in production code.
 
 **Pitfall:** Setters that change fundamental dependencies make behavior history-dependent. Prefer `Parameterize Constructor` or `Extract and Override Getter` when possible.
 
@@ -503,7 +503,7 @@ class TestingRegisterSale extends RegisterSale {
 ## Key Principles
 
 1. **Safety First.** These are performed *without* tests. Preserve signatures, lean on the compiler, and make the smallest possible change.
-2. **Temporary Ugliness.** Many techniques make the design worse short-term. That's acceptable — tests enable cleaner refactoring later.
+2. **Temporary Ugliness.** Many techniques make the design worse short-term. That's acceptable, tests enable cleaner refactoring later.
 3. **Naming Matters.** Good names reinforce understanding. Poor names undermine it. Interfaces should communicate *responsibilities*, not implementation details.
 4. **The Goal is Tests.** The endpoint is always: code under test → test-supported refactoring → cleaner design.
 5. **Chapter 23 Companion.** Read *How Do I Know That I'm Not Breaking Anything?* (Ch 23) before applying these techniques.
@@ -511,7 +511,7 @@ class TestingRegisterSale extends RegisterSale {
 
 ## Related
 
-- [[Software Maintenance Overview]] — All maintenance topics
-- [[02_Sensing_and_Seams]] — Seam model foundation
-- [[04_Getting_Tests_in_Place]] — Applying techniques to get tests
-- [[05_Large_Scale_Changes]] — Large-scale refactoring patterns
+- [[Software Maintenance Overview]]: All maintenance topics
+- [[02_Sensing_and_Seams]]: Seam model foundation
+- [[04_Getting_Tests_in_Place]]: Applying techniques to get tests
+- [[05_Large_Scale_Changes]]: Large-scale refactoring patterns

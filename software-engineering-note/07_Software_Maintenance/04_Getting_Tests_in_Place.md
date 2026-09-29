@@ -1,6 +1,6 @@
 ---
 title: "Getting Tests in Place"
-source: "Feathers, Working Effectively with Legacy Code — Chapters 9–17"
+source: "Feathers, Working Effectively with Legacy Code, Chapters 9–17"
 tags:
   - legacy-code
   - test-harness
@@ -14,7 +14,7 @@ tags:
 created: 2026-07-21
 aliases:
   - Feathers Ch 9-17
-  - WELC Part II — Changing Software
+  - WELC Part II: Changing Software
 ---
 
 # Getting Tests in Place
@@ -28,19 +28,19 @@ aliases:
 
 | Chapter | Focus |
 |---------|-------|
-| 9 | Getting a class into a test harness — irritating parameters, hidden dependencies, globals, onion parameters |
-| 10 | Running a method in a test harness — hidden methods, sealed/final classes, undetectable side effects |
-| 11 | Finding *where* to test — effect sketches, forward reasoning, propagation rules |
-| 12 | Making many changes in one area — interception points, pinch points |
-| 13 | Writing characterization tests — documenting actual behavior before changing it |
-| 14 | Library dependencies — the "once" dilemma, restricted override |
-| 15 | Applications that are all API calls — Skin & Wrap, Responsibility-Based Extraction |
-| 16 | Understanding unknown code — notes, sketching, listing markup |
-| 17 | Application has no structure — referenced; covered in later chapters of WELC |
+| 9 | Getting a class into a test harness, irritating parameters, hidden dependencies, globals, onion parameters |
+| 10 | Running a method in a test harness: hidden methods, sealed/final classes, undetectable side effects |
+| 11 | Finding *where* to test: effect sketches, forward reasoning, propagation rules |
+| 12 | Making many changes in one area: interception points, pinch points |
+| 13 | Writing characterization tests, documenting actual behavior before changing it |
+| 14 | Library dependencies, the "once" dilemma, restricted override |
+| 15 | Applications that are all API calls: Skin & Wrap, Responsibility-Based Extraction |
+| 16 | Understanding unknown code, notes, sketching, listing markup |
+| 17 | Application has no structure: referenced; covered in later chapters of WELC |
 
 ---
 
-## Chapter 9 — I Can't Get This Class into a Test Harness
+## Chapter 9: I Can't Get This Class into a Test Harness
 
 This is the central hard problem. If instantiating a class in a test harness were always easy, this book would be much shorter. The four most common problems:
 
@@ -49,7 +49,7 @@ This is the central hard problem. If instantiating a class in a test harness wer
 3. The constructor has bad side effects.
 4. Significant work happens in the constructor, and we need to **sense** it.
 
-> **Heuristic:** The best way to see if you have trouble instantiating a class is to **just try it**. Write a construction test — no assertions needed; just attempt `new Foo()` and let the compiler tell you what you need.
+> **Heuristic:** The best way to see if you have trouble instantiating a class is to **just try it**. Write a construction test: no assertions needed; just attempt `new Foo()` and let the compiler tell you what you need.
 
 ---
 
@@ -57,23 +57,23 @@ This is the central hard problem. If instantiating a class in a test harness wer
 
 **Problem:** A constructor depends on an object that is expensive, slow, or unreliable to create (e.g., a network connection).
 
-**Example:** `CreditValidator(RGHConnection connection, CreditMaster master, String validatorID)`. Creating an `RGHConnection` connects to a live server — slow and unreliable in tests.
+**Example:** `CreditValidator(RGHConnection connection, CreditMaster master, String validatorID)`. Creating an `RGHConnection` connects to a live server, slow and unreliable in tests.
 
 **Solutions (in order of preference):**
 
-1. **Extract Interface (362)** — Pull an interface from the problematic dependency, create a fake implementation for tests.
+1. **Extract Interface (362):** Pull an interface from the problematic dependency, create a fake implementation for tests.
 
    ```java
    // Before: CreditValidator depends on RGHConnection (concrete, connects to server)
    // After:  CreditValidator depends on IRGHConnection (interface)
-   //         FakeConnection implements IRGHConnection — no server needed
+   //         FakeConnection implements IRGHConnection - no server needed
    ```
 
-2. **Subclass and Override Method (401)** — If the dependency isn't hard-coded in the constructor, override the problematic method in a testing subclass.
+2. **Subclass and Override Method (401):** If the dependency isn't hard-coded in the constructor, override the problematic method in a testing subclass.
 
-3. **Pass Null (111)** — If the parameter isn't actually used in the code path under test, pass `null`. The test harness catches the NPE if you're wrong.
+3. **Pass Null (111):** If the parameter isn't actually used in the code path under test, pass `null`. The test harness catches the NPE if you're wrong.
 
-   > **Warning:** Works in Java/C# but not in C/C++ (silent memory corruption). Never pass `null` in production code — consider the Null Object Pattern instead.
+   > **Warning:** Works in Java/C# but not in C/C++ (silent memory corruption). Never pass `null` in production code; consider the Null Object Pattern instead.
 
 **Design principle:** Fake/test classes don't need to follow production-code rules. Making variables `public` in test fakes is acceptable if it simplifies tests.
 
@@ -85,7 +85,7 @@ This is the central hard problem. If instantiating a class in a test harness wer
 
 **Example (C++):** `mailing_list_dispatcher` constructor does `service(new mail_service)` in its initializer list, then connects and registers with the mail system. Testing it actually sends real mail.
 
-**Primary Solution — Parameterize Constructor (379):**
+**Primary Solution: Parameterize Constructor (379):**
 
 1. Extract the body of the constructor into a new `initialize(...)` method.
 2. Add a new constructor that accepts the dependency as a parameter.
@@ -102,7 +102,7 @@ This is the central hard problem. If instantiating a class in a test harness wer
        { initialize(service); }
    ```
 
-In Java/C#, this is even cleaner — constructors can chain:
+In Java/C#, this is even cleaner, constructors can chain:
 
 ```csharp
 public MailingListDispatcher() : this(new MailService()) { }
@@ -117,7 +117,7 @@ public MailingListDispatcher(MailService service) { ... }
 
 **Problem:** A constructor creates a **large number** of objects internally or chains object creation (object creates object creates object). Parameterizing everything leads to an explosion of constructor arguments.
 
-**Primary Solution — Supersede Instance Variable (404):**
+**Primary Solution: Supersede Instance Variable (404):**
 
 Add a setter that allows swapping a dependency *after* construction. Use only in tests.
 
@@ -128,7 +128,7 @@ void supersedeCursor(FocusWidget *newCursor) {
 }
 ```
 
-**C++ caveat:** Must be careful with `delete` — understand what the destructor does. In GC languages (Java, C#), this is straightforward.
+**C++ caveat:** Must be careful with `delete`; understand what the destructor does. In GC languages (Java, C#), this is straightforward.
 
 **Prefer Extract and Override Factory Method** when possible, but it doesn't work in C++ constructors (virtual dispatch doesn't resolve to derived class in base constructors).
 
@@ -138,12 +138,12 @@ void supersedeCursor(FocusWidget *newCursor) {
 
 **Problem:** Classes depend on singletons or global variables that are hard to fake in tests.
 
-**Example:** `PermitRepository.getInstance().findAssociatedPermit(notice)` — used in 10+ classes throughout the system.
+**Example:** `PermitRepository.getInstance().findAssociatedPermit(notice)`, used in 10+ classes throughout the system.
 
-**Solution — Introduce Static Setter (372):**
+**Solution: Introduce Static Setter (372):**
 
 1. Add a `setTestingInstance(...)` static method to the singleton.
-2. Relax the singleton property — make the constructor `protected` instead of `private`.
+2. Relax the singleton property: make the constructor `protected` instead of `private`.
 3. Create a testing subclass that overrides problematic methods.
 
 ```java
@@ -163,7 +163,7 @@ public class PermitRepository {
 }
 ```
 
-**Alternative — `resetForTesting()`:** If the singleton's public methods allow full state setup, null out the static instance in `setUp()`/`tearDown()`.
+**Alternative: `resetForTesting()`:** If the singleton's public methods allow full state setup, null out the static instance in `setUp()`/`tearDown()`.
 
 **When to keep the singleton property:**
 - Modeling real-world singletons (hardware controllers, single database).
@@ -172,7 +172,7 @@ public class PermitRepository {
 
 **When to relax it:** When the singleton exists only to avoid passing a parameter around.
 
-> **Heuristic:** Global variables are usually *globally accessible* but not *globally used*. Trace how many classes actually need the global — you may find natural layering opportunities.
+> **Heuristic:** Global variables are usually *globally accessible* but not *globally used*. Trace how many classes actually need the global; you may find natural layering opportunities.
 
 ---
 
@@ -182,11 +182,11 @@ public class PermitRepository {
 
 **Solutions:**
 
-1. **Minimal includes** — Add `#include` directives one at a time; decide whether each dependency is truly needed.
-2. **Alternative definitions** — Provide stub implementations of problematic methods in the test file itself (e.g., empty `SchedulerDisplay::displayEntry`).
-3. **Separate test executable** — Build a standalone test program with its own `main` and fakes in a shared `Fakes.h`.
+1. **Minimal includes:** Add `#include` directives one at a time; decide whether each dependency is truly needed.
+2. **Alternative definitions:** Provide stub implementations of problematic methods in the test file itself (e.g., empty `SchedulerDisplay::displayEntry`).
+3. **Separate test executable:** Build a standalone test program with its own `main` and fakes in a shared `Fakes.h`.
 
-> **This is a last-resort technique** — reserved for very large classes with severe dependency problems that you plan to break up over time.
+> **This is a last-resort technique:** reserved for very large classes with severe dependency problems that you plan to break up over time.
 
 ---
 
@@ -194,7 +194,7 @@ public class PermitRepository {
 
 **Problem:** To create object A you need B, to create B you need C, to create C you need D... The constructor parameter chain is a deep onion.
 
-**Solution:** Start from the **most immediate** dependency. Use Extract Interface on it to create a fake. In Java, an interface can declare methods from a superclass — you don't need to extract interfaces for the entire hierarchy.
+**Solution:** Start from the **most immediate** dependency. Use Extract Interface on it to create a fake. In Java, an interface can declare methods from a superclass; you don't need to extract interfaces for the entire hierarchy.
 
 In C++, where there's no `interface` keyword, create an abstract class with pure virtual functions and have the concrete class delegate:
 
@@ -211,7 +211,7 @@ public:
 
 **Problem:** A parameter is hard to create (database access, side effects), but you can't use Extract Interface because the parameter type is passed or stored as its supertype, and creating interfaces for the entire hierarchy is excessive.
 
-**Solution — Subclass and Override Method (401):** Instead of extracting interfaces for the whole hierarchy, subclass the problematic class and override only the methods that cause side effects.
+**Solution: Subclass and Override Method (401):** Instead of extracting interfaces for the whole hierarchy, subclass the problematic class and override only the methods that cause side effects.
 
 ```java
 // OriginationPermit.validate() talks to a database. Override it:
@@ -224,7 +224,7 @@ This preserves the type compatibility (e.g., can be assigned to a `Permit` field
 
 ---
 
-## Chapter 10 — I Can't Run This Method in a Test Harness
+## Chapter 10: I Can't Run This Method in a Test Harness
 
 Even after instantiating a class, four problems can block method-level testing:
 
@@ -250,19 +250,19 @@ public:
 };
 ```
 
-> **Corollary:** Good design is testable. If making a method public bothers you because it could corrupt state, the class has too many responsibilities — extract the method to a new class. (See Chapter 20.)
+> **Corollary:** Good design is testable. If making a method public bothers you because it could corrupt state, the class has too many responsibilities; extract the method to a new class. (See Chapter 20.)
 
 ---
 
 ### Case of the "Helpful" Language Feature
 
-**Problem:** Library classes are `sealed` (C#) or `final` (Java) — can't subclass, can't instantiate directly. E.g., `HttpPostedFile` and `HttpFileCollection` in .NET.
+**Problem:** Library classes are `sealed` (C#) or `final` (Java); can't subclass, can't instantiate directly. E.g., `HttpPostedFile` and `HttpFileCollection` in .NET.
 
 **Solutions:**
 
-1. **Adapt Parameter (326)** — Change the method signature to accept a superclass/interface you *can* control.
+1. **Adapt Parameter (326):** Change the method signature to accept a superclass/interface you *can* control.
 
-2. **Skin and Wrap the API (205)** — Create your own interface + wrapper:
+2. **Skin and Wrap the API (205):** Create your own interface + wrapper:
 
    ```csharp
    public interface IHttpPostedFile { int ContentLength { get; } ... }
@@ -282,7 +282,7 @@ public:
 
 1. **Extract Method** repeatedly to separate business logic from GUI mechanics.
 2. Name extracted methods by *what they compute*, not *how they display*.
-3. Follow **Command/Query Separation** — methods should be commands (modify state, no return) OR queries (return value, no side effects), not both.
+3. Follow **Command/Query Separation:** methods should be commands (modify state, no return) OR queries (return value, no side effects), not both.
 4. **Subclass and Override** the GUI-specific methods in tests:
 
    ```java
@@ -295,17 +295,17 @@ public:
 
 5. After tests are in place, identify groups of methods that belong together and **extract them into new classes** (e.g., `SymbolSource`, `AccountDetailDisplay`).
 
-> **Principle:** Safety first — it's okay to extract methods with poor names or structure to get tests in place. Refine the design *after* the safety net is established.
+> **Principle:** Safety first; it's okay to extract methods with poor names or structure to get tests in place. Refine the design *after* the safety net is established.
 
 ---
 
-## Chapter 11 — I Need to Make a Change. What Methods Should I Test?
+## Chapter 11: I Need to Make a Change. What Methods Should I Test?
 
 When code is tangled, a change in one place can affect behavior elsewhere. You need to **reason about effects** to find the right test locations.
 
 ---
 
-### Reasoning About Effects — Effect Sketches
+### Reasoning About Effects: Effect Sketches
 
 An **effect sketch** is a bubble-and-arrow diagram showing:
 
@@ -337,7 +337,7 @@ declarations ──→ getDeclarationCount
 2. If it has a return value, look at its callers.
 3. If it modifies any values, trace to methods that use those values.
 4. Check superclasses and subclasses for additional clients.
-5. Look at parameters — can the method modify them or objects they return?
+5. Look at parameters: can the method modify them or objects they return?
 6. Look for global/static data modified in any identified method.
 
 ---
@@ -357,11 +357,11 @@ When writing characterization tests, invert the process: start from the **change
 
 ### Simplifying Effect Sketches
 
-When a method uses another method internally (e.g., `getInterface` calls `getDeclaration` instead of accessing the list directly), the effect sketch collapses — testing `getInterface` now also exercises `getDeclaration`. **Removing tiny duplications simplifies the effect graph and reduces the number of test endpoints needed.**
+When a method uses another method internally (e.g., `getInterface` calls `getDeclaration` instead of accessing the list directly), the effect sketch collapses, testing `getInterface` now also exercises `getDeclaration`. **Removing tiny duplications simplifies the effect graph and reduces the number of test endpoints needed.**
 
 ---
 
-## Chapter 12 — I Need to Make Many Changes in One Area
+## Chapter 12: I Need to Make Many Changes in One Area
 
 When a feature requires changing 3–4 closely related classes, breaking all their dependencies individually is expensive. Instead, test **"one level back."**
 
@@ -371,36 +371,36 @@ When a feature requires changing 3–4 closely related classes, breaking all the
 
 An **interception point** is anywhere you can detect the effects of a change. When choosing one:
 
-- **Prefer points close to the change** — fewer reasoning steps between change and detection = less uncertainty.
+- **Prefer points close to the change:** fewer reasoning steps between change and detection = less uncertainty.
 - The best interception point is a **public method on the class being changed**.
 
 ---
 
 ### Pinch Points
 
-A **pinch point** is a narrowing in an effect sketch — a place where tests against a **couple of methods** can detect changes across **many methods**.
+A **pinch point** is a narrowing in an effect sketch: a place where tests against a **couple of methods** can detect changes across **many methods**.
 
 **Properties:**
 - A pinch point is determined by your **change points** (not an intrinsic property of the design).
-- A pinch point is a **natural encapsulation boundary** — it tells you where to look when something breaks.
+- A pinch point is a **natural encapsulation boundary:** it tells you where to look when something breaks.
 - **Pinch points can guide design:** The same narrowing that makes testing easier often reveals where responsibilities should be separated.
 
 **Pinch Point Traps:**
 - Don't let pinch-point tests become bloated mini-integration tests.
 - After establishing cover at the pinch point, break down classes and write **narrower unit tests**.
-- Eventually, the pinch-point tests can be deleted — they served as scaffolding.
+- Eventually, the pinch-point tests can be deleted: they served as scaffolding.
 
 > **Metaphor:** Tests at pinch points are like walking into a forest, drawing a line, and saying "I own this area." Then you develop it, adding finer tests. The perimeter tests can eventually be removed.
 
 ---
 
-## Chapter 13 — I Need to Make a Change, but I Don't Know What Tests to Write
+## Chapter 13: I Need to Make a Change, but I Don't Know What Tests to Write
 
 ---
 
 ### Characterization Tests
 
-A **characterization test** documents the *actual* behavior of the system — not what it *should* do, but what it *does* do. The goal isn't bug finding; it's creating a safety net for future changes.
+A **characterization test** documents the *actual* behavior of the system, not what it *should* do, but what it *does* do. The goal isn't bug finding; it's creating a safety net for future changes.
 
 **Algorithm:**
 
@@ -423,18 +423,18 @@ void testGenerator() {
 assertEquals("", generator.generate());
 ```
 
-**Key insight:** These tests have no "moral authority" — they just record reality. When you later change behavior intentionally, the test fails, telling you something changed. That's exactly what you want.
+**Key insight:** These tests have no "moral authority"; they just record reality. When you later change behavior intentionally, the test fails, telling you something changed. That's exactly what you want.
 
 > **When you find bugs during characterization:** Mark the test as suspicious. Investigate whether the buggy behavior has downstream dependents before fixing it.
 
 ---
 
-### Characterizing Classes — Heuristics
+### Characterizing Classes: Heuristics
 
-1. Look for **tangled logic** — use sensing variables to verify which paths execute.
+1. Look for **tangled logic:** use sensing variables to verify which paths execute.
 2. List things that can **go wrong**; write tests that trigger them.
 3. Test **extreme input values**.
-4. Identify **invariants** — conditions that should always hold; test them.
+4. Identify **invariants:** conditions that should always hold; test them.
 5. Start with easy "sunny day" cases that show intent, then explore idiosyncrasies.
 
 **The Method Use Rule:** Before using a method in a legacy system, check if there are tests for it. If not, write them.
@@ -455,13 +455,13 @@ After characterization, focus on the **specific change** you're making:
 
 ### Heuristic for Writing Characterization Tests
 
-1. Write tests for the area you'll change — as many as needed to understand behavior.
+1. Write tests for the area you'll change: as many as needed to understand behavior.
 2. Write tests for the **specific things** you're changing.
 3. When extracting/moving functionality, verify existence and connection on a case-by-case basis. Exercise all conversions.
 
 ---
 
-## Chapter 14 — Dependencies on Libraries Are Killing Me
+## Chapter 14: Dependencies on Libraries Are Killing Me
 
 **Core problem:** Every hard-coded use of a library class is a place where you *could have had* a seam. Over-reliance on a library makes the code rigid.
 
@@ -482,12 +482,12 @@ Library classes marked `final`/`sealed` or with non-virtual methods can't be ove
 
 ---
 
-## Chapter 15 — My Application Is All API Calls
+## Chapter 15: My Application Is All API Calls
 
 Systems that are nothing but repeated API calls have two problems:
 
-1. **No visible design** — the structure is hidden behind API noise.
-2. **You don't own the API** — can't rename, restructure, or add methods for clarity.
+1. **No visible design:** the structure is hidden behind API noise.
+2. **You don't own the API:** can't rename, restructure, or add methods for clarity.
 
 **Two approaches:**
 
@@ -511,7 +511,7 @@ YourCode → IMyService (interface) → MyServiceWrapper → RealAPI
 
 ### Responsibility-Based Extraction
 
-Identify the **computational core** — what is this code really doing? Separate responsibilities:
+Identify the **computational core:** what is this code really doing? Separate responsibilities:
 
 1. Identify distinct jobs (e.g., for a mailing list server: receive mail, create forward messages, send mail, polling loop).
 2. Extract methods for each responsibility.
@@ -526,7 +526,7 @@ Identify the **computational core** — what is this code really doing? Separate
 
 ---
 
-## Chapter 16 — I Don't Understand the Code Well Enough to Change It
+## Chapter 16: I Don't Understand the Code Well Enough to Change It
 
 Understanding legacy code is often the biggest time-sink. Two low-tech but high-impact techniques:
 
@@ -534,9 +534,9 @@ Understanding legacy code is often the biggest time-sink. Two low-tech but high-
 
 ### Notes/Sketching
 
-- Draw **informal diagrams** while browsing code. They don't need UML precision — they're tools for conversation and memory.
+- Draw **informal diagrams** while browsing code. They don't need UML precision; they're tools for conversation and memory.
 - Write down important names; draw lines for relationships.
-- Sketches are **infectious** — when pairing, sketch as you explain; the other person will engage and contribute.
+- Sketches are **infectious:** when pairing, sketch as you explain; the other person will engage and contribute.
 
 ---
 
@@ -544,17 +544,17 @@ Understanding legacy code is often the biggest time-sink. Two low-tech but high-
 
 Print the code and mark it up physically:
 
-1. **Separating Responsibilities** — use colored markers to group related symbols.
-2. **Understanding Method Structure** — draw lines from block openings to closings; comment closing braces with what they terminate.
-3. Start **inside-out**: find the first `}`, mark it, then backtrack to its matching `{`.
+1. **Separating Responsibilities:** use colored markers to group related symbols.
+2. **Understanding Method Structure:** draw lines from block openings to closings; comment closing braces with what they terminate.
+3. Start **inside-out:** find the first `}`, mark it, then backtrack to its matching `{`.
 
 ---
 
-## Chapter 17 — My Application Has No Structure (Referenced)
+## Chapter 17: My Application Has No Structure (Referenced)
 
 This chapter (referenced throughout Ch 9–16 but not fully covered in this source extract) deals with applications that have no discernible architecture. Key ideas mentioned:
 
-- **Layering emerges from separating responsibilities** — when you extract classes from API-heavy code, higher/lower-level distinctions naturally appear.
+- **Layering emerges from separating responsibilities:** when you extract classes from API-heavy code, higher/lower-level distinctions naturally appear.
 - **Global variables that are "used everywhere" signal zero layering.** Narrowing the scope of globals forces architectural boundaries.
 - The same effect-analysis and responsibility-separation techniques from earlier chapters apply at the application scale.
 
@@ -585,19 +585,19 @@ This chapter (referenced throughout Ch 9–16 but not fully covered in this sour
 
 ## Core Principles
 
-1. **Safety first** — get tests in place before refactoring, even if the extracted code is ugly.
-2. **Test code has different standards** — public variables in test fakes are fine.
-3. **Encapsulation is a tool for understanding, not an end in itself** — break it when tests demand it; restore it later.
+1. **Safety first:** get tests in place before refactoring, even if the extracted code is ugly.
+2. **Test code has different standards:** public variables in test fakes are fine.
+3. **Encapsulation is a tool for understanding, not an end in itself:** break it when tests demand it; restore it later.
 4. **Good design is testable; untestable design is bad.**
 5. **Characterization tests document reality, not ideals.**
-6. **Pinch points are natural encapsulation boundaries** — they guide both testing and design.
+6. **Pinch points are natural encapsulation boundaries:** they guide both testing and design.
 7. **Every hard-coded library call is a missed seam.**
 8. **Know your language's effect firewalls** (`private`, `const`, `final`, immutability).
 
 
 ## Related
 
-- [[Software Maintenance Overview]] — All maintenance topics
-- [[02_Sensing_and_Seams]] — Seam model
-- [[03_Adding_Features]] — Safe feature additions
-- [[06_Dependency_Breaking_Catalog]] — All dependency-breaking techniques
+- [[Software Maintenance Overview]]: All maintenance topics
+- [[02_Sensing_and_Seams]]: Seam model
+- [[03_Adding_Features]]: Safe feature additions
+- [[06_Dependency_Breaking_Catalog]]: All dependency-breaking techniques

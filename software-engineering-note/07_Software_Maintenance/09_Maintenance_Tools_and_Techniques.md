@@ -37,6 +37,7 @@ Reverse engineering in software maintenance is the process of analyzing a system
 ### 1.2 Levels of Reverse Engineering
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph "Abstraction Levels"
         D[Domain Level] --> R[Requirements Level]
@@ -67,9 +68,9 @@ flowchart TD
     API --> AR
     TEST --> DR
     
-    style D fill:#e94560,stroke:#c81d4e
-    style S fill:#533483,stroke:#0f3460
-    style I fill:#0f3460,stroke:#16213e
+    style D fill:#FF5861,stroke:#000000,color:#000000
+    style S fill:#00B5FF,stroke:#1FB8AB,color:#000000
+    style I fill:#1FB8AB,stroke:#1EB88E,color:#000000
 ```
 
 ### 1.3 Reverse Engineering Techniques
@@ -89,6 +90,7 @@ flowchart TD
 Design recovery goes beyond code analysis to reconstruct higher-level abstractions:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     subgraph Inputs
         CODE[Source Code]
@@ -128,7 +130,7 @@ flowchart LR
     ABSTRACT --> BEHAVIOR
     ABSTRACT --> DATA
     
-    style Process fill:#1a1a2e,stroke:#e94560
+    style Process fill:#19362D,stroke:#FF5861,color:#CDD3D1
 ```
 
 ### 1.5 Re-documentation
@@ -153,6 +155,7 @@ Software visualization uses graphical representations to help developers underst
 ### 2.1 Types of Software Visualization
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 mindmap
   root((Software Visualization))
     Structural
@@ -202,6 +205,7 @@ Module D   |          |          |          |    -     |
 #### Dependency Graphs
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[Web Controller] --> B[Service Layer]
     A --> C[DTO Mapper]
@@ -210,9 +214,9 @@ graph LR
     D --> F[Database]
     E --> G[Payment Gateway]
     
-    style A fill:#16213e,stroke:#0f3460
-    style D fill:#533483,stroke:#0f3460
-    style E fill:#e94560,stroke:#c81d4e
+    style A fill:#1EB88E,stroke:#1FB8AB,color:#000000
+    style D fill:#00B5FF,stroke:#1FB8AB,color:#000000
+    style E fill:#FF5861,stroke:#000000,color:#000000
 ```
 
 #### Dependency Analysis Metrics
@@ -257,6 +261,7 @@ Technical debt quantifies the implied cost of future rework caused by choosing a
 ### 3.1 Categories of Technical Debt
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     TD[Technical Debt] --> CD[Code Debt]
     TD --> AD[Architecture Debt]
@@ -283,7 +288,7 @@ graph TD
     ID --> BUILD[Fragile Build]
     ID --> DEPLOY[Manual Deployment]
     
-    style TD fill:#e94560,stroke:#c81d4e
+    style TD fill:#FF5861,stroke:#000000,color:#000000
 ```
 
 ### 3.2 Measurement Dimensions
@@ -350,6 +355,7 @@ Common code smells that indicate maintenance risk:
 A typical technical debt dashboard aggregates multiple metrics:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 block-beta
     columns 4
     A["Maintainability Index\n72/100\n(Green)"] :1 
@@ -453,6 +459,7 @@ Cross-reference tools generate tables showing relationships between program elem
 Maintenance maturity models align with multiple standards:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     MM[Maintenance Maturity] --> ISO12207[ISO/IEC/IEEE 12207<br/>Software Life Cycle Processes]
     MM --> ISO14764[ISO/IEC/IEEE 14764<br/>Software Maintenance]
@@ -470,8 +477,8 @@ flowchart TD
     SRVC --> MATURITY
     GOV --> MATURITY
     
-    style MM fill:#e94560,stroke:#c81d4e
-    style MATURITY fill:#16213e,stroke:#0f3460
+    style MM fill:#FF5861,stroke:#000000,color:#000000
+    style MATURITY fill:#1EB88E,stroke:#1FB8AB,color:#000000
 ```
 
 ### 5.2 Maturity Levels
@@ -557,6 +564,7 @@ COBIT (Control Objectives for Information and Related Technologies) provides gov
 ### 6.2 Build vs. Buy Decision
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     Q1{Is it a core maintenance capability?}
     Q1 -->|Yes| Q2{Do you have the expertise to build?}
@@ -572,9 +580,9 @@ flowchart TD
     BUILD --> EVAL2[Evaluated: maintenance cost, opportunity cost]
     OPEN --> EVAL3[Evaluated: community health, license, support]
     
-    style BUY fill:#16213e,stroke:#0f3460
-    style BUILD fill:#e94560,stroke:#c81d4e
-    style OPEN fill:#533483,stroke:#0f3460
+    style BUY fill:#1EB88E,stroke:#1FB8AB,color:#000000
+    style BUILD fill:#FF5861,stroke:#000000,color:#000000
+    style OPEN fill:#00B5FF,stroke:#1FB8AB,color:#000000
 ```
 
 ---

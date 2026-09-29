@@ -25,6 +25,7 @@ The ISO/IEC/IEEE 14764 standard defines a comprehensive process for software mai
 ### 1.1 Process Overview
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph Core Process Areas
         P[Process Implementation] --> PA[Problem and Modification Analysis]
@@ -46,9 +47,9 @@ flowchart TD
         ENV[Environmental Change] --> D
     end
     
-    style P fill:#16213e,stroke:#0f3460
-    style PA fill:#1a1a2e,stroke:#e94560
-    style M fill:#0f3460,stroke:#533483
+    style P fill:#1EB88E,stroke:#1FB8AB,color:#000000
+    style PA fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style M fill:#1FB8AB,stroke:#00B5FF,color:#000000
 ```
 
 ### 1.2 Detailed Process Areas
@@ -66,6 +67,7 @@ flowchart TD
 ### 1.3 Process Flow Detail
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     U[User / Customer] -->|Reports Issue| HD[Help Desk]
     HD -->|Logs| MR[/Problem Report / Modification Request/]
@@ -80,8 +82,8 @@ flowchart LR
     RL -->|Close| CL[Close MR]
     CL -->|Feedback| U
     
-    style MR fill:#e94560,stroke:#c81d4e
-    style RA fill:#0f3460,stroke:#533483
+    style MR fill:#FF5861,stroke:#000000,color:#000000
+    style RA fill:#1FB8AB,stroke:#00B5FF,color:#000000
 ```
 
 ---
@@ -103,19 +105,20 @@ Maintenance planning operates at four levels, from strategic to tactical.
 
 A formal maintenance plan (per ISO 14764) should address:
 
-1. **Scope**: Which systems, subsystems, and interfaces are maintained.
-2. **Organization**: Team structure, roles, responsibilities, reporting lines.
-3. **Process**: Which processes from ISO 14764 are adopted and how.
-4. **Resources**: Staffing levels, tools, infrastructure, budget.
-5. **Schedule**: Release cadence, maintenance windows, blackout periods.
-6. **Metrics**: What is measured, how, and against what targets.
-7. **Quality**: Standards, reviews, testing requirements, acceptance criteria.
-8. **Risk**: Known risks and mitigation strategies.
-9. **Communication**: Stakeholder reporting, escalation procedures.
+1. **Scope:** Which systems, subsystems, and interfaces are maintained.
+2. **Organization:** Team structure, roles, responsibilities, reporting lines.
+3. **Process:** Which processes from ISO 14764 are adopted and how.
+4. **Resources:** Staffing levels, tools, infrastructure, budget.
+5. **Schedule:** Release cadence, maintenance windows, blackout periods.
+6. **Metrics:** What is measured, how, and against what targets.
+7. **Quality:** Standards, reviews, testing requirements, acceptance criteria.
+8. **Risk:** Known risks and mitigation strategies.
+9. **Communication:** Stakeholder reporting, escalation procedures.
 
 ### 2.3 Release Planning
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','titleColor':'#1FB854','lineColor':'#1FB854','cScale0':'#19362D','cScale1':'#1EB88E','cScale2':'#1FB8AB','cScale3':'#00B5FF','cScale4':'#1FB854','cScale5':'#FFBE00','cScale6':'#FF5861','cScale7':'#1EB88E','fontSize':'14px'}}}%%
 gantt
     title Maintenance Release Calendar Example
     dateFormat  YYYY-MM-DD
@@ -147,6 +150,7 @@ gantt
 ### 3.1 The MR/PR Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 stateDiagram-v2
     [*] --> Submitted : User reports issue or requests change
     Submitted --> Triage : Help desk logs and classifies
@@ -213,6 +217,7 @@ Not every reported issue should be accepted for resolution. Clear criteria preve
 ### 4.1 Help-Desk Structure
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph Tier 1 - First Line Support
         T1[Help Desk Agent]
@@ -249,10 +254,10 @@ flowchart TD
     T3 -->|Escalate| T4
     T4 -->|Vendor fix| PATCH
     
-    style T1 fill:#16213e,stroke:#0f3460
-    style T2 fill:#1a1a2e,stroke:#e94560
-    style T3 fill:#0f3460,stroke:#533483
-    style T4 fill:#533483,stroke:#e94560
+    style T1 fill:#1EB88E,stroke:#1FB8AB,color:#000000
+    style T2 fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style T3 fill:#1FB8AB,stroke:#00B5FF,color:#000000
+    style T4 fill:#00B5FF,stroke:#FF5861,color:#000000
 ```
 
 ### 4.2 Help-Desk Metrics
@@ -270,10 +275,10 @@ flowchart TD
 
 A well-maintained knowledge base is the backbone of efficient help-desk operations:
 
-- **Known error database (KEDB)**: Documented workarounds for known faults.
-- **Resolution articles**: Step-by-step guides for common issues.
-- **FAQ**: Proactive answers to frequently asked questions.
-- **Runbooks**: Automated and manual procedures for operational tasks.
+- **Known error database (KEDB):** Documented workarounds for known faults.
+- **Resolution articles:** Step-by-step guides for common issues.
+- **FAQ:** Proactive answers to frequently asked questions.
+- **Runbooks:** Automated and manual procedures for operational tasks.
 
 ---
 
@@ -290,6 +295,7 @@ A well-maintained knowledge base is the backbone of efficient help-desk operatio
 ### 5.2 SLA Components for Maintenance
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 block-beta
     columns 3
     A["Availability\n99.9% uptime"] :1 B["Response Time\nP1: 4hr\nP2: 24hr"] :1 C["Throughput\n100 MRs/month"] :1
@@ -301,9 +307,9 @@ block-beta
 Modern SRE practices use error budgets to balance reliability and velocity:
 
 - **Budget = 1 - SLO target** (e.g., 1 - 99.9% = 0.1% = ~43 min/month downtime).
-- **When budget remains**: Invest in feature velocity and perfective maintenance.
-- **When budget is exhausted**: Shift all effort to reliability and corrective maintenance.
-- **Policy**: Published and enforced by the team; prevents both over-reliability and under-reliability.
+- **When budget remains:** Invest in feature velocity and perfective maintenance.
+- **When budget is exhausted:** Shift all effort to reliability and corrective maintenance.
+- **Policy:** Published and enforced by the team; prevents both over-reliability and under-reliability.
 
 ---
 
@@ -325,9 +331,9 @@ Modern SRE practices use error budgets to balance reliability and velocity:
 
 Knowledge loss is the single greatest risk to maintenance effectiveness:
 
-- **Domain knowledge**: Understanding of business rules, regulations, and user workflows.
-- **System knowledge**: Understanding of architecture, design decisions, and code structure.
-- **Operational knowledge**: Understanding of deployment, monitoring, and incident response.
+- **Domain knowledge:** Understanding of business rules, regulations, and user workflows.
+- **System knowledge:** Understanding of architecture, design decisions, and code structure.
+- **Operational knowledge:** Understanding of deployment, monitoring, and incident response.
 
 **Mitigation strategies:**
 
@@ -344,12 +350,12 @@ Knowledge loss is the single greatest risk to maintenance effectiveness:
 
 Maintenance work is often perceived negatively. Addressing this requires:
 
-- **Title and role parity**: "Software Engineer" not "Maintenance Developer".
-- **Rotation**: Developers do both maintenance and feature work.
-- **Impact visibility**: Highlight when maintenance prevents outages or enables features.
-- **Tool investment**: Good tools make maintenance less painful.
-- **Technical growth**: Refactoring, modernization, and architecture work count as development.
-- **On-call compensation**: Fair pay for on-call and emergency response.
+- **Title and role parity:** "Software Engineer" not "Maintenance Developer".
+- **Rotation:** Developers do both maintenance and feature work.
+- **Impact visibility:** Highlight when maintenance prevents outages or enables features.
+- **Tool investment:** Good tools make maintenance less painful.
+- **Technical growth:** Refactoring, modernization, and architecture work count as development.
+- **On-call compensation:** Fair pay for on-call and emergency response.
 
 ### 6.3 Skills Required
 
@@ -371,6 +377,7 @@ Maintenance work is often perceived negatively. Addressing this requires:
 ### 7.1 Sourcing Models
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     S[Sourcing Decision] --> SS[Single Source]
     S --> MS[Multi-Source]
@@ -380,7 +387,7 @@ graph TD
     MS --> GEO[Geographic: nearshore + offshore]
     MS --> HYB[Hybrid: internal + external]
     
-    style S fill:#16213e,stroke:#0f3460
+    style S fill:#1EB88E,stroke:#1FB8AB,color:#000000
 ```
 
 | Model | Description | Best For | Risk |
@@ -415,6 +422,7 @@ graph TD
 When deciding whether to outsource maintenance, consider:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     Q1{Is the system core to competitive advantage?}
     Q1 -->|Yes| Q2{Do you have internal expertise?}
@@ -430,9 +438,9 @@ flowchart TD
     Q4 -->|Yes| FIXED[Fixed-price contract]
     Q4 -->|No| TANDM[Time and materials]
     
-    style INT fill:#16213e,stroke:#0f3460
-    style OUT fill:#e94560,stroke:#c81d4e
-    style HYBRID fill:#533483,stroke:#0f3460
+    style INT fill:#1EB88E,stroke:#1FB8AB,color:#000000
+    style OUT fill:#FF5861,stroke:#000000,color:#000000
+    style HYBRID fill:#00B5FF,stroke:#1FB8AB,color:#000000
 ```
 
 ---
