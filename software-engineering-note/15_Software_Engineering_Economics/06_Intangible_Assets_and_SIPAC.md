@@ -17,8 +17,8 @@ swebok_reference: "KA 15.7"
 up: "[[15_Software_Engineering_Economics]]"
 related:
   - "[[01_Economics_Fundamentals]]"
-  - "[[03_Decision_Making_in_SE]]"
-  - "[[05_Estimation]]"
+  - "[[02_Decision_Making]]"
+  - "[[05_Estimation_Techniques]]"
 ---
 
 # Intangible Assets and SIPAC
@@ -57,6 +57,7 @@ In modern software organizations, intangible assets (knowledge, relationships, p
 SIPAC defines 11 generic categories of intangible assets relevant to software organizations:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     IA[Intangible Assets] --> HC[Human Capital]
     IA --> IC[Intellectual Capital]
@@ -70,6 +71,7 @@ graph TD
     IA --> MC[Market Capital]
     IA --> INFO[Information Capital]
 ```
+
 
 ### Detailed Taxonomy
 
@@ -90,6 +92,7 @@ graph TD
 ### Interrelationships Between Asset Categories
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     HC[Human Capital] --> IC[Intellectual Capital]
     HC --> PC[Process Capital]
@@ -105,6 +108,7 @@ graph LR
     STC --> RNC
 ```
 
+
 ## The SIPAC Method
 
 ### Overview
@@ -112,6 +116,7 @@ graph LR
 SIPAC (Strategic Intangible Process Assets Characterization) is a 7-step method for systematically identifying, measuring, and managing intangible assets in the context of software engineering.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     S1[Step 1: Identify Business<br/>Processes and Goals] --> S2[Step 2: Identify Intangible<br/>Assets Linked to Goals]
     S2 --> S3[Step 3: Identify Software<br/>Products Supporting Assets]
@@ -122,6 +127,7 @@ graph TD
     S7 --> DEC[Make Decisions]
     DEC -.->|Feedback| S1
 ```
+
 
 ### Step 1: Identify Business Processes and Goals
 
@@ -247,6 +253,7 @@ Classify each asset into one of four states based on indicator values.
 **Asset States:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     W[Warning<br/>Asset at risk,<br/>needs immediate attention] --> R[Replaceable<br/>Asset exists but<br/>can be substituted]
     R --> E[Evolving<br/>Asset improving,<br/>under development]
@@ -256,6 +263,7 @@ graph TD
     R -.->|Neglect| W
     E -.->|Stagnation| R
 ```
+
 
 | State | Definition | Indicator Pattern | Action Required |
 |-------|-----------|-------------------|-----------------|
@@ -340,6 +348,7 @@ Connect intangible asset states to business model outcomes and decisions.
 ### Implementation Roadmap
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[Awareness<br/>Workshops] --> B[Asset<br/>Inventory]
     B --> C[Indicator<br/>Definition]
@@ -349,6 +358,7 @@ graph LR
     F --> G[Ongoing<br/>Monitoring]
     G -.->|Quarterly| E
 ```
+
 
 ### Integration with Existing Processes
 

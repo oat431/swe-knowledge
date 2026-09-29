@@ -5,11 +5,11 @@ tags:
   - decision-trees
   - monte-carlo
   - sensitivity-analysis
-source: "SWEBOK v4 Chapter 15 — Software Engineering Economics, Decision-Making Process"
+source: "SWEBOK v4 Chapter 15: Software Engineering Economics, Decision-Making Process"
 created: 2026-07-21
 ---
 
-# Decision-Making — Under Certainty, Risk, and Uncertainty
+# Decision-Making: Under Certainty, Risk, and Uncertainty
 
 > Every engineering choice is a decision. Understanding how to structure decisions and analyze alternatives under different levels of information is central to software engineering economics.
 
@@ -18,6 +18,7 @@ created: 2026-07-21
 A seven-step iterative process formalizes how engineers make decisions:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     P1["1. Understand<br/>the Problem"] --> P2["2. Identify<br/>Alternatives"]
     P2 --> P3["3. Define<br/>Criteria"]
@@ -28,14 +29,15 @@ flowchart LR
     P7 -.->|"Iterate"| P1
 ```
 
+
 | Step | Activity | Common Failure Mode |
 |---|---|---|
-| **1. Understand** | Define problem scope, context, stakeholders | Solving wrong problem — jumping to solutions too fast |
-| **2. Identify** | Generate alternatives (including do-nothing) | Premature closure — not considering enough options |
-| **3. Define Criteria** | Metrics for comparison (cost, time, quality, risk) | Unbalanced criteria — optimizing for one dimension at expense of others |
+| **1. Understand** | Define problem scope, context, stakeholders | Solving wrong problem ;  jumping to solutions too fast |
+| **2. Identify** | Generate alternatives (including do-nothing) | Premature closure ;  not considering enough options |
+| **3. Define Criteria** | Metrics for comparison (cost, time, quality, risk) | Unbalanced criteria ;  optimizing for one dimension at expense of others |
 | **4. Evaluate** | Apply analysis method appropriate to information level | Using certainty methods under uncertainty |
 | **5. Select** | Choose best alternative based on defined criteria | Groupthink, anchoring on first plausible option |
-| **6. Monitor** | Track actual outcomes vs. predicted | Decision without follow-through — never checking if it worked |
+| **6. Monitor** | Track actual outcomes vs. predicted | Decision without follow-through ;  never checking if it worked |
 | **7. Close Loop** | Compare estimates to actuals; improve future decisions | Repeating same estimation errors indefinitely |
 
 ## 2. Three Levels of Decision Information
@@ -54,7 +56,7 @@ For alternatives with probabilistic outcomes, use expected value:
 
 > **EV = Σ (Probability of outcome × Value of outcome)**
 
-**Example — Testing investment:**
+**Example, Testing investment:**
 - Spend $50K on additional testing: 95% chance of finding critical bugs (saves $200K), 5% chance of finding nothing
 - EV = (0.95 × $200K) + (0.05 × $0) − $50K = **$140K** → Invest in testing
 
@@ -103,7 +105,7 @@ Identifies which variables most affect the outcome:
 2. Plot outcome vs. input (tornado diagram)
 3. Focus attention on the most sensitive variables
 
-> [!tip] In software projects, the most sensitive variables are usually **requirements scope** and **team productivity** — these deserve the most estimation effort.
+> [!tip] In software projects, the most sensitive variables are usually **requirements scope** and **team productivity**; these deserve the most estimation effort.
 
 ## 4. Decisions Under Uncertainty
 
@@ -112,12 +114,12 @@ When probabilities are unknown, use non-probabilistic decision rules:
 | Method | Strategy | Decision Rule | Best For |
 |---|---|---|---|
 | **Laplace** | Assume all outcomes equally likely | Highest average payoff | No reason to favor any outcome |
-| **Maximin** | Pessimistic — prepare for worst | Highest minimum payoff | Safety-critical, one-shot decisions |
-| **Maximax** | Optimistic — go for best | Highest maximum payoff | Low-cost experiments |
+| **Maximin** | Pessimistic ;  prepare for worst | Highest minimum payoff | Safety-critical, one-shot decisions |
+| **Maximax** | Optimistic ;  go for best | Highest maximum payoff | Low-cost experiments |
 | **Hurwicz** | Weighted optimism/pessimism | α × best + (1−α) × worst | Explicit risk appetite |
 | **Minimax Regret** | Minimize "what could have been" | Lowest maximum regret (opportunity loss) | Stakeholder accountability |
 
-**Example — Technology choice for a new project:**
+**Example: Technology choice for a new project:**
 
 | Alternative | High Demand | Medium | Low | Maximin | Maximax | Laplace |
 |---|---|---|---|---|---|---|
@@ -142,16 +144,16 @@ When probabilities are unknown, use non-probabilistic decision rules:
 
 ## Key Takeaways
 
-1. **Match the method to the information level** — don't use certainty methods when probabilities are unknown
-2. **Decision trees clarify sequential decisions** — map the choices and chance nodes explicitly
-3. **Monte Carlo replaces point estimates with distributions** — more realistic for complex projects
-4. **Sensitivity analysis tells you what matters most** — focus estimation effort on high-sensitivity variables
-5. **Always include "do-nothing"** — it forces justification and avoids status-quo bias
-6. **Close the loop** — compare actuals to estimates to improve future decision-making
+1. **Match the method to the information level:** don't use certainty methods when probabilities are unknown
+2. **Decision trees clarify sequential decisions:** map the choices and chance nodes explicitly
+3. **Monte Carlo replaces point estimates with distributions:** more realistic for complex projects
+4. **Sensitivity analysis tells you what matters most:** focus estimation effort on high-sensitivity variables
+5. **Always include "do-nothing":** it forces justification and avoids status-quo bias
+6. **Close the loop:** compare actuals to estimates to improve future decision-making
 
 ## Related
 
-- [[Software Engineering Economics Overview]] — All economics topics
-- [[01_Economics_Fundamentals]] — Cash flow, NPV, time value of money
-- [[03_Cost_Analysis]] — Cost-benefit, break-even, TCO
-- [[04_Estimation_Concepts]] — Estimation as a decision input
+- [[Software Engineering Economics Overview]]: All economics topics
+- [[01_Economics_Fundamentals]]: Cash flow, NPV, time value of money
+- [[03_Cost_Analysis_and_Tradeoffs]]: Cost-benefit, break-even, TCO
+- [[04_Estimation_Concepts]]: Estimation as a decision input

@@ -4,7 +4,7 @@ source: "McConnell, Steve. Software Estimation: Demystifying the Black Art. Micr
 created: 2026-07-21
 ---
 
-# 06 — Estimation Challenges: Size, Effort, Schedule, Cost & Presentation
+# 06: Estimation Challenges: Size, Effort, Schedule, Cost & Presentation
 
 > Source: McConnell, *Software Estimation*, Part III "Specific Estimation Challenges" (Ch 18–21) and Part IV (Ch 22). Chapter 23 (Sanity Checks & Tips) was not present in the source extract.
 
@@ -21,7 +21,7 @@ created: 2026-07-21
 | Story Points | Iterative/Agile projects |
 | Features, Use Cases, Web Pages, GUI components, DB tables, Classes, Functions | Various proxy measures |
 
-### 1.2 Lines of Code — Pros & Cons
+### 1.2 Lines of Code: Pros & Cons
 
 **Advantages:**
 - Easily collected via tools for past projects
@@ -47,11 +47,11 @@ created: 2026-07-21
 Function points = synthetic measure calculable from requirements spec early in the project.
 
 **Five components counted:**
-1. **External Inputs** — screens, forms, dialogs, control signals (add/delete/change data)
-2. **External Outputs** — screens, reports, graphs, control signals generated
-3. **External Queries** — input/output combos; direct DB lookup with simple formatting
-4. **Internal Logical Files** — major logical groups of data controlled by the program
-5. **External Interface Files** — files controlled by other programs that this program interacts with
+1. **External Inputs:** screens, forms, dialogs, control signals (add/delete/change data)
+2. **External Outputs:** screens, reports, graphs, control signals generated
+3. **External Queries:** input/output combos; direct DB lookup with simple formatting
+4. **Internal Logical Files:** major logical groups of data controlled by the program
+5. **External Interface Files:** files controlled by other programs that this program interacts with
 
 **Unadjusted FP Count** = Σ (count × complexity multiplier) for each component:
 
@@ -65,7 +65,7 @@ Function points = synthetic measure calculable from requirements spec early in t
 
 **Influence Multiplier:** 14 factors (data communications, online entry, complexity, etc.) → multiplier 0.65–1.35.
 
-> ⚠️ Studies show **Unadjusted FP** correlates *better* with ultimate size than Adjusted FP. ISO/IEC 20926:2003 is based on Unadjusted FP. Eliminate "low/high complexity" judgments — classify all as "medium."
+> ⚠️ Studies show **Unadjusted FP** correlates *better* with ultimate size than Adjusted FP. ISO/IEC 20926:2003 is based on Unadjusted FP. Eliminate "low/high complexity" judgments; classify all as "medium."
 
 **Tip #81:** Count function points to obtain an accurate early-in-the-project size estimate.
 
@@ -89,7 +89,7 @@ Ranges typically span factor of 2–3. Use organizational historical data for na
 ```
 Indicative FP = (35 × InternalLogicalFiles) + (15 × ExternalInterfaceFiles)
 ```
-Lower accuracy but much lower effort — useful for rough early estimates. **Tip #82.**
+Lower accuracy but much lower effort; useful for rough early estimates. **Tip #82.**
 
 **GUI Elements:** Count GUI elements → map to FP equivalents → convert to LOC. Introduces multiple layers of uncertainty. **Tip #83.**
 
@@ -131,7 +131,7 @@ Lower accuracy but much lower effort — useful for rough early estimates. **Tip
 
 **Example:** 65,000–100,000 LOC, past productivity 986–1,612 LOC/staff-month → **40–101 staff months** (±1 SD, ~68% confidence).
 
-> ⚠️ The estimate includes whatever effort was in the historical data — may or may not include requirements, management, documentation.
+> ⚠️ The estimate includes whatever effort was in the historical data; may or may not include requirements, management, documentation.
 
 #### Estimation Software (Construx Estimate)
 
@@ -203,7 +203,7 @@ ScheduleInMonths = 3.0 × StaffMonths^(1/3)
 ```
 
 - Coefficient ranges 2.0–4.0 (calibrate with historical data)
-- Schedule is a **cube-root function of effort** — one of the most replicated results in software engineering (Boehm 1981)
+- Schedule is a **cube-root function of effort:** one of the most replicated results in software engineering (Boehm 1981)
 - Implication: schedule variability is much lower than scope variability
   - 4× scope variability → only 1.6× schedule variability
   - 2× scope variability → only 1.25× schedule variability
@@ -235,17 +235,17 @@ ScheduleInMonths = FunctionPoints^exponent
 | Shrink-wrap/scientific/engineering/internet | 0.37 | 0.40 | 0.43 |
 | Embedded/telecom/drivers/systems | 0.38 | 0.41 | 0.44 |
 
-Very low effort, low accuracy — useful as a quick reality check. **Tip #91.**
+Very low effort, low accuracy; useful as a quick reality check. **Tip #91.**
 
 ### 3.4 Schedule Compression & the Impossible Zone
 
 **Key findings (all researchers agree):**
 
-1. **Shortening the nominal schedule increases overall effort** — larger teams require more coordination, more communication paths, more parallel work (rework risk).
+1. **Shortening the nominal schedule increases overall effort:** larger teams require more coordination, more communication paths, more parallel work (rework risk).
 
-2. **The Impossible Zone exists** — schedule compression beyond **25%** from nominal is not possible. Not by working harder, smarter, or finding creative solutions. It simply can't be done. **Tip #93.**
+2. **The Impossible Zone exists:** schedule compression beyond **25%** from nominal is not possible. Not by working harder, smarter, or finding creative solutions. It simply can't be done. **Tip #93.**
 
-3. **Extending schedule beyond nominal usually reduces total effort** (if team size is reduced) — fewer communication problems, less overlap, more in-phase defect fixing.
+3. **Extending schedule beyond nominal usually reduces total effort** (if team size is reduced); fewer communication problems, less overlap, more in-phase defect fixing.
 
 ![Schedule Compression Effects]
 
@@ -280,7 +280,7 @@ For medium-sized business systems (~57K LOC):
 ### 3.6 Staffing Constraints
 
 - Average team size = Effort / Schedule (e.g., 80 staff months / 12 months = 6–7 people)
-- Macro formulas assume flexible team size — if fixed, schedule will vary more widely
+- Macro formulas assume flexible team size: if fixed, schedule will vary more widely
 - Detailed planning (actual availability, specific assignments) takes precedence over macro estimates
 - **Tip #96:** Use schedule estimation for plausibility; use detailed planning for the final schedule.
 
@@ -289,7 +289,7 @@ For medium-sized business systems (~57K LOC):
 Prioritize (highest to lowest weight):
 1. Estimation tool calibrated with historical data
 2. Basic Schedule Equation + Informal Comparison (with organization-specific coefficients)
-3. Jones's First-Order (generic — remove before looking for convergence)
+3. Jones's First-Order (generic: remove before looking for convergence)
 
 **Tip #97:** Remove overly generic techniques before looking for convergence.
 
@@ -407,7 +407,7 @@ Key complicating factors:
 | 64K–512K | 2–70 errors/KLOC |
 | ≥512K | 4–100 errors/KLOC |
 
-> Larger projects produce more defects per LOC — key contributor to diseconomy of scale. **Tip #100.**
+> Larger projects produce more defects per LOC; key contributor to diseconomy of scale. **Tip #100.**
 
 #### Defect Removal Rates
 
@@ -496,7 +496,7 @@ Attach specific impacts to specific risks:
 | +1 month | New tools don't work as planned |
 | +1 month | Can't reuse 80% of DB code |
 
-> **Purpose:** Communicate to nontechnical stakeholders that the project presents risks — not to deluge them with details.
+> **Purpose:** Communicate to nontechnical stakeholders that the project presents risks, not to deluge them with details.
 
 **Tip #105:** Know whether you're presenting uncertainty in an *estimate* or uncertainty affecting your ability to meet a *commitment*.
 
@@ -553,7 +553,7 @@ Key questions:
 
 ### 5.4 Ranges vs. Commitments
 
-- Wide estimation range ≠ useless — it accurately conveys that the *estimate* is uncertain
+- Wide estimation range ≠ useless: it accurately conveys that the *estimate* is uncertain
 - After uncertainty is reduced enough to support a commitment, **don't express the commitment as a range**
 - A commitment needs to be a single-point number; the estimation range illustrates how risky that commitment is
 
@@ -569,7 +569,7 @@ Key questions:
 | 81 | Size | Count function points for accurate early size estimate |
 | 82 | Size | Use Dutch Method for low-cost ballpark |
 | 83 | Size | Use GUI elements for ballpark in wide Cone |
-| 84 | Size | Size is the largest cost driver — use multiple techniques |
+| 84 | Size | Size is the largest cost driver ;  use multiple techniques |
 | 85 | Effort | Use estimation science tools for accurate effort from size |
 | 86 | Effort | Use industry-average graphs for rough early estimates |
 | 87 | Effort | Use ISBSG method; combine with others |
@@ -588,7 +588,7 @@ Key questions:
 | 100 | Planning | Estimate defect production numbers |
 | 101 | Planning | Estimate defect removal rates for QA planning |
 | 102 | Planning | Use total Risk Exposure as starting point for buffer |
-| 103 | Planning | Read the planning literature — it's bigger than estimation |
+| 103 | Planning | Read the planning literature ;  it's bigger than estimation |
 | 104 | Presentation | Document and communicate estimate assumptions |
 | 105 | Presentation | Distinguish estimate uncertainty from commitment uncertainty |
 | 106 | Presentation | Don't present remotely possible outcomes |
@@ -598,7 +598,7 @@ Key questions:
 
 ---
 
-## 7. Chapter 23 — Estimation Sanity Checks & Tips
+## 7. Chapter 23: Estimation Sanity Checks & Tips
 
 > ⚠️ Chapter 23 was not included in the source extract. Based on McConnell's framework, sanity checks typically include:
 > - Compare effort/schedule against industry averages for the project type
@@ -612,6 +612,6 @@ Key questions:
 
 ## Related Notes
 
-- [[05_Estimation_Techniques]] — McConnell Part II: fundamental estimation techniques
-- [[04_Estimation_Concepts]] — McConnell Part I: critical estimation concepts
-- [[01_Software_Engineering_Economics_Overview]] — Boehm's COCOMO and economic foundations
+- [[05_Estimation_Techniques]]: McConnell Part II: fundamental estimation techniques
+- [[04_Estimation_Concepts]]: McConnell Part I: critical estimation concepts
+- [[Software Engineering Economics Overview]]: Boehm's COCOMO and economic foundations

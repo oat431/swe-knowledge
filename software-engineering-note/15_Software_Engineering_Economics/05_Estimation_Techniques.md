@@ -5,7 +5,7 @@ source: "McConnell, Software Estimation: Demystifying the Black Art, Part II, Ch
 
 # Estimation Techniques
 
-> McConnell Part II — Fundamental Estimation Techniques (Chapters 6–17)
+> McConnell Part II: Fundamental Estimation Techniques (Chapters 6–17)
 
 ---
 
@@ -66,7 +66,7 @@ source: "McConnell, Software Estimation: Demystifying the Black Art, Part II, Ch
 
 > **Tip #33** Don't discount simple, coarse models: avg effort/defect, avg effort/Web page, avg effort/story, avg effort/use case.
 
-> **Tip #34** Avoid using expert judgment to tweak a computed estimate — it usually degrades accuracy.
+> **Tip #34** Avoid using expert judgment to tweak a computed estimate; it usually degrades accuracy.
 
 ---
 
@@ -82,10 +82,10 @@ source: "McConnell, Software Estimation: Demystifying the Black Art, Part II, Ch
 
 ### Why Historical Data Matters
 
-- **Accounts for organizational influences** — productivity is an organizational attribute that can't easily be varied project to project (Putnam's "Yesterday's Weather")
-- **Avoids subjectivity and unfounded optimism** — prevents "this time will be different" thinking
-- **Reduces estimation politics** — sidesteps debates about whether "our programmers are below average"
-- **Narrows estimate variability** — standard deviation drops from ~100% (industry) to ~25% (historical)
+- **Accounts for organizational influences:** productivity is an organizational attribute that can't easily be varied project to project (Putnam's "Yesterday's Weather")
+- **Avoids subjectivity and unfounded optimism:** prevents "this time will be different" thinking
+- **Reduces estimation politics:** sidesteps debates about whether "our programmers are below average"
+- **Narrows estimate variability:** standard deviation drops from ~100% (industry) to ~25% (historical)
 
 > **Tip #41** Use project/historical data rather than industry-average data whenever possible.
 
@@ -100,10 +100,10 @@ source: "McConnell, Software Estimation: Demystifying the Black Art, Part II, Ch
 
 ### Key Definitional Issues
 
-- **LOC**: Count all code or only released? Reused code? Blank lines/comments? Data declarations?
-- **Effort**: Standard 8-hour days or actual? Overtime? Holidays/vacation? What activities included?
-- **Calendar Time**: When does project start/end? (Fewer than 1% of projects have clearly defined start)
-- **Defects**: All change requests or only defects? Duplicate reports? Detected by developers or testers?
+- **LOC:** Count all code or only released? Reused code? Blank lines/comments? Data declarations?
+- **Effort:** Standard 8-hour days or actual? Overtime? Holidays/vacation? What activities included?
+- **Calendar Time:** When does project start/end? (Fewer than 1% of projects have clearly defined start)
+- **Defects:** All change requests or only defects? Duplicate reports? Detected by developers or testers?
 
 ### Project Data Refinement
 
@@ -117,8 +117,8 @@ Most common estimation approach (72–86% of estimates use it), but also the mos
 
 ### Who Creates Estimates
 
-- **Task-level**: People who will actually do the work create the most accurate estimates
-- **Early/Cone of Uncertainty**: Expert estimator or most experienced staff available
+- **Task-level:** People who will actually do the work create the most accurate estimates
+- **Early/Cone of Uncertainty:** Expert estimator or most experienced staff available
 
 > **Tip #43** Have the people who will do the work create the task-level estimates.
 
@@ -157,13 +157,13 @@ Expected Case = [BestCase + (3 × MostLikelyCase) + (2 × WorstCase)] / 6
 
 ### Compare Estimates to Actuals
 
-Use **Magnitude of Relative Error (MRE)**:
+Use **Magnitude of Relative Error (MRE):**
 
 ```
 MRE = |(ActualResult − EstimatedResult) / ActualResult|
 ```
 
-Set up a feedback loop — timely comparison of actual vs. estimated improves accuracy over time.
+Set up a feedback loop; timely comparison of actual vs. estimated improves accuracy over time.
 
 > **Tip #46** Compare actual performance to estimated performance to improve individual estimates over time.
 
@@ -179,7 +179,7 @@ When you decompose one large estimate into many small ones, **errors on the high
 
 > **Tip #47** Decompose large estimates into small pieces to take advantage of the Law of Large Numbers.
 
-**Minimum**: 5–10 items before you get meaningful benefit. More is better.
+**Minimum:** 5–10 items before you get meaningful benefit. More is better.
 
 ### Work Breakdown Structure (WBS)
 
@@ -209,7 +209,7 @@ Single-point estimates often represent Best Case (~25% likely). The probability 
 - 2 tasks → 6.25% (1/16)
 - 10 tasks → ~0.000095% (1 in 1,000,000)
 
-**Solution**: Use Expected Case estimates (PERT), not simple sums of Best Cases.
+**Solution:** Use Expected Case estimates (PERT), not simple sums of Best Cases.
 
 ### Computing Aggregate Best/Worst Cases
 
@@ -225,7 +225,7 @@ StandardDeviation = (SumOfWorstCases − SumOfBestCases) / 6
 3. Sum variances
 4. Take square root for aggregate standard deviation
 
-**The divisor matters**: Don't blindly divide by 6. Use a divisor based on how often your ranges capture actuals:
+**The divisor matters:** Don't blindly divide by 6. Use a divisor based on how often your ranges capture actuals:
 
 | % Outcomes in Range | Divisor |
 |---|---|
@@ -269,7 +269,7 @@ With decomposition:
 
 ### Handling Uncertainty
 
-- **Don't bias the estimate** — address uncertainty by expressing the estimate in uncertain terms
+- **Don't bias the estimate:** address uncertainty by expressing the estimate in uncertain terms
 - **Carry ranges through computations** rather than single points
 - Uncertainty in one area should NOT spread to the whole estimate (decomposition localizes it)
 
@@ -295,15 +295,15 @@ Classify features as **Very Small / Small / Medium / Large / Very Large**. Use h
 
 - Differences between adjacent categories should be ≥ 2× (some recommend 4×)
 - Needs ≥20 features for statistical validity
-- **Whole-rolled-up number has greater validity than individual estimates** — don't use for specific feature sizes
+- **Whole-rolled-up number has greater validity than individual estimates**; don't use for specific feature sizes
 
 ### Standard Components
 
 For architecturally similar systems. Compute average LOC per component type from historical data, then estimate counts.
 
-**Components**: Dynamic/static Web pages, database tables, reports, business rules, dialogs, screens, etc.
+**Components:** Dynamic/static Web pages, database tables, reports, business rules, dialogs, screens, etc.
 
-**Percentile variation**: Instead of estimating counts directly, classify each component as Very Small / Small / Average / Large / Very Large relative to past projects.
+**Percentile variation:** Instead of estimating counts directly, classify each component as Very Small / Small / Average / Large / Very Large relative to past projects.
 
 > **Tip #56** Use standard components as low-effort technique for early-stage size estimates.
 
@@ -313,12 +313,12 @@ Originally from Extreme Programming. Process:
 
 1. **Assign points** to all stories using a relative scale (Fibonacci: 1, 2, 3, 5, 8, 13 or powers of 2)
 2. **Plan an iteration** and deliver some number of points
-3. **After iteration**, compute **velocity**: story points per staff week, story points per calendar week
-4. **Project remainder**: `Total story points ÷ velocity`
+3. **After iteration**, compute **velocity:** story points per staff week, story points per calendar week
+4. **Project remainder:** `Total story points ÷ velocity`
 
 > **Tip #57** Use story points to obtain early estimates based on data from the same project.
 
-**Caution**: Numeric scales (Fibonacci, powers of 2) imply proportionate relationships. If a 13-point story isn't really 13/3× the effort of a 3-point story, numeric operations on those numbers are misleading. The categories may function more like verbal labels than true numbers.
+**Caution:** Numeric scales (Fibonacci, powers of 2) imply proportionate relationships. If a 13-point story isn't really 13/3× the effort of a 3-point story, numeric operations on those numbers are misleading. The categories may function more like verbal labels than true numbers.
 
 > **Tip #58** Ensure numeric categories in rating scales actually work like numbers, not like verbal categories.
 
@@ -340,10 +340,10 @@ Create a **Net Business Value lookup table** to sort features into cost/benefit 
 
 Three rules:
 1. Each member estimates individually, then meet to compare
-2. Discuss differences — don't just average
-3. Arrive at consensus — no voting, must obtain buy-in
+2. Discuss differences: don't just average
+3. Arrive at consensus: no voting, must obtain buy-in
 
-**Effectiveness**: Reduces average error from 55% (individual) to 30% (reviewed). 92% of group estimates more accurate than individual estimates.
+**Effectiveness:** Reduces average error from 55% (individual) to 30% (reviewed). 92% of group estimates more accurate than individual estimates.
 
 - Use 3–5 experts with **different backgrounds/roles/techniques**
 
@@ -363,7 +363,7 @@ A structured, iterative group-estimation technique developed by Barry Boehm (ext
 | 4 | Estimators submit estimates **anonymously** |
 | 5 | Coordinator summarizes estimates on iteration form |
 | 6 | Group discusses variations |
-| 7 | Anonymous vote on whether to accept average — if any "no," return to step 3 |
+| 7 | Anonymous vote on whether to accept average ;  if any "no," return to step 3 |
 | 8 | Final estimate is single-point or range (single-point = expected case) |
 
 **Key features:**
@@ -372,14 +372,14 @@ A structured, iterative group-estimation technique developed by Barry Boehm (ext
 - **Devil's advocate** assigned if agreement comes too easily
 - Can be performed in person or electronically
 
-**Effectiveness**: 
+**Effectiveness:** 
 - Reduces estimation error by ~40% compared to simple averaging
 - Improves results in ~2/3 of cases
 - For worst initial estimates, improves 8/10 cases (avg 60% error reduction)
-- **20% of groups' initial ranges don't include correct answer** — averaging can't help
+- **20% of groups' initial ranges don't include correct answer:** averaging can't help
 - **1/3 of those groups move outside their initial range to get closer to correct answer** after Wideband Delphi
 
-**When to use**: New business areas, new technologies, unfamiliar systems, projects drawing from diverse specialties. Most useful in the wide part of the Cone of Uncertainty. **Not appropriate for detailed task estimates** (too expensive in staff time).
+**When to use:** New business areas, new technologies, unfamiliar systems, projects drawing from diverse specialties. Most useful in the wide part of the Cone of Uncertainty. **Not appropriate for detailed task estimates** (too expensive in staff time).
 
 > **Tip #63** Use Wideband Delphi for early-in-the-project estimates, unfamiliar systems, and when diverse disciplines are involved.
 
@@ -405,7 +405,7 @@ Minimal: Effort (staff months), Schedule (elapsed months), Size (LOC) from 1–3
 
 > Your own historical data from 3 projects usually produces more accurate estimates than a tool's generic industry database.
 
-> **Tip #65** Don't treat estimation tool output as divine revelation — sanity-check tool outputs like any other estimate.
+> **Tip #65** Don't treat estimation tool output as divine revelation; sanity-check tool outputs like any other estimate.
 
 ### Available Tools
 
@@ -438,7 +438,7 @@ Minimal: Effort (staff months), Schedule (elapsed months), Size (LOC) from 1–3
 | #2 | Expert judgment with decomposition (outline) | 802 pages |
 | #3 | Historical data (pages per outline point) | 759 pages |
 
-Estimates #2 and #3 converged within 5% — revealing that the gut-instinct estimate was wrong by 3×. Final result: 749 pages (1% from estimate #3).
+Estimates #2 and #3 converged within 5%, revealing that the gut-instinct estimate was wrong by 3×. Final result: 749 pages (1% from estimate #3).
 
 ### Best Practice
 
@@ -456,9 +456,9 @@ Estimates #2 and #3 converged within 5% — revealing that the gut-instinct esti
 
 ### Individual Estimate Flow
 
-**Poorly estimated projects**: Ad hoc process; inputs, process, and outputs all open to debate and downward pressure.
+**Poorly estimated projects:** Ad hoc process; inputs, process, and outputs all open to debate and downward pressure.
 
-**Well-estimated projects**:
+**Well-estimated projects:**
 
 ```
 Technical scope ──┐
@@ -467,8 +467,8 @@ Constraints ──────┤──→ Standard Estimation Procedure ──�
 Historical data ──┘
 ```
 
-- Outputs are **not debated** — only inputs are adjusted and recomputed
-- The only thing that ever needs "judgment-based estimation" is **size** — effort, schedule, cost, and features are all **computed** from size
+- Outputs are **not debated:** only inputs are adjusted and recomputed
+- The only thing that ever needs "judgment-based estimation" is **size:** effort, schedule, cost, and features are all **computed** from size
 
 ```
 Size → Effort → Schedule
@@ -492,9 +492,9 @@ As the project progresses, switch from less accurate to more accurate techniques
 
 ### Estimate Refinement
 
-When you miss a milestone, the correct response is **option #3**: multiply the whole schedule by the magnitude of the slip.
+When you miss a milestone, the correct response is **option #3:** multiply the whole schedule by the magnitude of the slip.
 
-- Projects **hardly ever make up lost time** — they tend to get further behind (van Genuchten 1991)
+- Projects **hardly ever make up lost time:** they tend to get further behind (van Genuchten 1991)
 
 > **Tip #74** When reestimating after a missed deadline, base the new estimate on actual progress, not planned progress.
 
@@ -504,7 +504,7 @@ When you miss a milestone, the correct response is **option #3**: multiply the w
 
 **Right way** (ranges): 3–40 → 5–20 → 9–20 → 12–18 → 15–18 → 17 (appears to stay within expectations, ranges tighten)
 
-- **Ranges prevent anchoring** — initial single-point estimates contaminate future estimates
+- **Ranges prevent anchoring:** initial single-point estimates contaminate future estimates
 - **Communicate the reestimation plan in advance**
 
 > **Tip #76** Communicate your plan to reestimate to other project stakeholders in advance.
@@ -531,7 +531,7 @@ A **well-defined process** adopted at the organizational level that provides gui
 6. **Defines when estimates can be used** for budgets and commitments
 7. **Calls for archiving data** and reviewing procedure effectiveness
 
-> Deviations from the procedure must be justified in writing and should be rare. The procedure is under formal change control — changed between projects, never "in flight."
+> Deviations from the procedure must be justified in writing and should be rare. The procedure is under formal change control; changed between projects, never "in flight."
 
 > **Tip #77** Develop a Standardized Estimation Procedure at the organizational level; use it at the project level.
 
@@ -546,7 +546,7 @@ Typical stage-gate SDLC:
 | 2. Planning | Detailed requirements, dev plans, budget | 3 | –20%, +25% | Budget Estimate (publish high end) |
 | 3. Development | Main software development | 4 | –10%, +10% | Final Commitment Estimate |
 | 4. Testing & Validation | Final test plan, release decision | 5 | –5%, +5% | Updated as needed |
-| 5. Launch | Rollout, postmortem | — | — | — |
+| 5. Launch | Rollout, postmortem | N/A | N/A | N/A |
 
 > **Tip #78** Coordinate your Standardized Estimation Procedure with your SDLC.
 
@@ -559,15 +559,15 @@ Typical stage-gate SDLC:
 | **III. Preliminary Commitment** (After 2nd Interim Release) | Detailed task list. Individual developer estimates (Best/Worst/Expected + PERT). Compare with Phase II. | ±10% | External commitments to high end. |
 | **IV. Final Commitment** (After 3rd Interim Release) | Compare actuals to estimates: `RemainingEffort = PlannedRemaining × (ActualToDate / PlannedToDate)`. Add omitted tasks. | ±10% | External commitments to nominal. |
 | **V. Reestimate** | Any time major assumptions change (requirements, staff, schedule) | As appropriate | |
-| **VI. Project Completion** | Archive data. Review estimation accuracy. Propose procedure revisions. | — | |
+| **VI. Project Completion** | Archive data. Review estimation accuracy. Propose procedure revisions. | N/A | |
 
 ### Key Design Principles
 
-1. **Early stages**: Multiple approaches, group techniques (Wideband Delphi), wide ranges
-2. **Middle stages**: Counting/computing with historical data, narrowing ranges
-3. **Late stages**: Project-specific data, bottom-up task estimation, tightest ranges
-4. **Clear escalation**: Each stage states explicitly what the estimate can and cannot be used for
-5. **Self-improving**: Data collected at project completion feeds future estimates
+1. **Early stages:** Multiple approaches, group techniques (Wideband Delphi), wide ranges
+2. **Middle stages:** Counting/computing with historical data, narrowing ranges
+3. **Late stages:** Project-specific data, bottom-up task estimation, tightest ranges
+4. **Clear escalation:** Each stage states explicitly what the estimate can and cannot be used for
+5. **Self-improving:** Data collected at project completion feeds future estimates
 
 ---
 
