@@ -20,6 +20,7 @@ Configuration auditing verifies that the software product and its supporting doc
 | **In-Process Audit** | Are SCM processes being followed? | Process plan vs. actual practice | Continuous, at milestones |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     REQ["Requirements<br/>Specification"] --> FCA
     TEST["Test Results<br/>& Demonstrations"] --> FCA
@@ -31,8 +32,8 @@ graph LR
     PCA -->|Pass| REL["Formal<br/>Release"]
     PCA -->|Fail| REWORK2["Document or<br/>Product Rework"]
 
-    style FCA fill:#264653,stroke:#fff,color:#fff
-    style PCA fill:#2a9d8f,stroke:#fff,color:#fff
+    style FCA fill:#1EB88E,stroke:#000000,color:#000000
+    style PCA fill:#1FB8AB,stroke:#000000,color:#000000
 ```
 
 ---
@@ -68,6 +69,7 @@ FCA verifies that the software configuration item (CI) satisfies its functional 
 ### FCA Procedure
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     A["1. Plan FCA<br/>Define scope, schedule, team"] --> B["2. Gather Evidence<br/>Test reports, traceability matrix"]
     B --> C["3. Pre-Audit Review<br/>Identify gaps in evidence"]
@@ -190,6 +192,7 @@ Configuration auditing and Verification & Validation (V&V) are complementary but
 - Both depend on [[07_SCSA_and_Status_Accounting|CSA]] for current, accurate configuration data
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "V&V Activities"
         VER["Verification<br/>(Did we build it right?)"]
@@ -205,8 +208,8 @@ graph TB
     VAL -->|Acceptance evidence| FCA
     FCA -->|Confirmed requirements| PCA
 
-    style FCA fill:#264653,stroke:#fff,color:#fff
-    style PCA fill:#2a9d8f,stroke:#fff,color:#fff
+    style FCA fill:#1EB88E,stroke:#000000,color:#000000
+    style PCA fill:#1FB8AB,stroke:#000000,color:#000000
 ```
 
 ---
@@ -360,6 +363,7 @@ The Software Configuration Management Plan (SCMP) is the governing document for 
 ### SCMP Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     DRAFT["Draft<br/>SCMP"] --> REVIEW["Review<br/>by stakeholders"]
     REVIEW --> APPROVE["Approval<br/>by project authority"]
@@ -369,7 +373,7 @@ graph LR
     AUDIT --> UPDATE["Updated via<br/>formal change"]
     UPDATE --> REVIEW
 
-    style BASELINE fill:#264653,stroke:#fff,color:#fff
+    style BASELINE fill:#1EB88E,stroke:#000000,color:#000000
 ```
 
 ### SCMP and Audits
@@ -398,6 +402,7 @@ Traditional audits are heavyweight milestone events. Agile and DevOps require a 
 ### Continuous Compliance
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     COMMIT["Code<br/>Commit"] --> SCAN["Automated<br/>Scan"]
     SCAN --> GATE{Quality<br/>Gate?}
@@ -407,7 +412,7 @@ graph LR
     BUILD --> SIGN["Artifact<br/>Signing"]
     SIGN --> DEPLOY["Deploy with<br/>Manifest"]
 
-    style GATE fill:#e76f51,stroke:#fff,color:#fff
+    style GATE fill:#FFBE00,stroke:#000000,color:#000000
 ```
 
 This pipeline embodies continuous auditing: every commit triggers integrity checks, every build is reproducible, every artifact is signed, every deployment is manifest-tracked.
@@ -430,11 +435,11 @@ This pipeline embodies continuous auditing: every commit triggers integrity chec
 
 ## Related Notes
 
-- [[01_Master_Repository_Pattern]] -- Single source of truth audited for integrity
-- [[02_Mainline_Pattern]] -- Mainline baselines are audit subjects
-- [[03_Active_Development_Line]] -- Development branches audited before merge
-- [[04_Private_Version_Control]] -- Developer workspaces contribute to audit evidence
-- [[05_Task_Level_Commit]] -- Commit-level traceability supports FCA
+- [[02_Codeline_and_Branching|Master Repository Pattern]]: Single source of truth audited for integrity
+- [[02_Codeline_and_Branching|Mainline Pattern]]: Mainline baselines are audit subjects
+- [[02_Codeline_and_Branching|Active Development Line]]: Development branches audited before merge
+- [[Version Control/Version Control Overview|Private Version Control]]: Developer workspaces contribute to audit evidence
+- [[04_Commit_and_Testing|Task-Level Commit]]: Commit-level traceability supports FCA
 - [[07_SCSA_and_Status_Accounting]] -- CSA provides audit data and reports
 - [[09_Change_Control_and_Compliance]] -- CCB approves deviations and waivers
 - Version Control/ -- Tools supporting audit evidence collection

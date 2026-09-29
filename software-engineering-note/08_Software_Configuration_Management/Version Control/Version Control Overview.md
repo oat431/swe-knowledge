@@ -8,17 +8,17 @@ tags:
 
 # Version Control Overview
 
-Version control tracks every change to your codebase, enabling safe collaboration and effortless rollback. It's the foundation of modern software development — if you're not using it, start today.
+Version control tracks every change to your codebase, enabling safe collaboration and effortless rollback. It's the foundation of modern software development; if you're not using it, start today.
 
 ---
 
 ## Why Version Control Matters
 
-- **History** — every change is recorded with who, what, when, and why
-- **Collaboration** — multiple developers work on the same codebase without stepping on each other
-- **Experimentation** — try new features in branches without risking the main code
-- **Rollback** — undo mistakes by reverting to any previous state
-- **Accountability** — clear audit trail for code reviews and compliance
+- **History:** every change is recorded with who, what, when, and why
+- **Collaboration:** multiple developers work on the same codebase without stepping on each other
+- **Experimentation:** try new features in branches without risking the main code
+- **Rollback:** undo mistakes by reverting to any previous state
+- **Accountability:** clear audit trail for code reviews and compliance
 
 ---
 
@@ -31,7 +31,7 @@ Version control tracks every change to your codebase, enabling safe collaboratio
 | Monorepo with many teams | Trunk-Based + feature flags | See **02 Git Workflows#Trunk-Based Development** |
 | Release-heavy product (libraries, SDKs) | GitFlow | See **02 Git Workflows#GitFlow** |
 | Small team, continuous deployment | GitHub Flow | See **02 Git Workflows#GitHub Flow** |
-| Solo hobby project | Git + GitHub/GitLab | Still use version control — always |
+| Solo hobby project | Git + GitHub/GitLab | Still use version control, always |
 
 ---
 
@@ -47,7 +47,7 @@ Version control tracks every change to your codebase, enabling safe collaboratio
 
 ## Common Mistakes
 
-❌ **Bad:** Starting a project without `git init` — "I'll add version control later."
+❌ **Bad:** Starting a project without `git init`: "I'll add version control later."
 ✅ **Good:** Initialize Git on day one, even for personal scripts.
 
 ❌ **Bad:** Committing directly to `main` with vague messages like `update`.
@@ -76,6 +76,6 @@ git push origin main
 
 ## Sources
 
-- [Pro Git Book — Scott Chacon & Ben Straub](https://git-scm.com/book/en/v2)
+- [Pro Git Book: Scott Chacon & Ben Straub](https://git-scm.com/book/en/v2)
 - [Git Official Documentation](https://git-scm.com/doc)
 - [GitHub Guides](https://guides.github.com/)

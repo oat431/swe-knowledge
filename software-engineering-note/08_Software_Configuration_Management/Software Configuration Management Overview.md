@@ -8,18 +8,18 @@ tags:
   - change-control
 ---
 
-# Software Configuration Management — Overview
+# Software Configuration Management: Overview
 
 > **Source:** SWEBOK v4 Chapter 08
 > **Purpose:** Identify, control, audit, and track the evolution of software artifacts throughout the entire lifecycle, ensuring integrity and traceability.
 
 ## What Is This?
 
-Software Configuration Management (SCM) is the discipline of managing change to software artifacts — source code, documentation, test scripts, build configurations, infrastructure definitions, and anything else that constitutes the system. Without SCM, teams cannot answer basic questions: What version is running in production? What changed since the last release? Who approved this change? Can we reproduce last month's build?
+Software Configuration Management (SCM) is the discipline of managing change to software artifacts: source code, documentation, test scripts, build configurations, infrastructure definitions, and anything else that constitutes the system. Without SCM, teams cannot answer basic questions: What version is running in production? What changed since the last release? Who approved this change? Can we reproduce last month's build?
 
 SCM provides the backbone for collaborative development and quality assurance. Development needs version control to work in parallel. Testing needs reproducible builds and known baselines. Operations needs traceable releases and rollback capability. Quality assurance needs configuration audits to verify that what was built matches what was specified. The discipline covers version control, baseline establishment, formal change control, status accounting, auditing, and release management.
 
-The core principles are deceptively simple — identify what you have, control how it changes, record the state of everything, and verify completeness. In practice, these activities become complex at scale: thousands of configuration items across multiple branches, environments, and release cycles. Modern tools (Git, CI/CD platforms, artifact registries) automate much of the mechanics, but the engineering principles remain essential knowledge.
+The core principles are deceptively simple; identify what you have, control how it changes, record the state of everything, and verify completeness. In practice, these activities become complex at scale: thousands of configuration items across multiple branches, environments, and release cycles. Modern tools (Git, CI/CD platforms, artifact registries) automate much of the mechanics, but the engineering principles remain essential knowledge.
 
 ## Knowledge Areas
 
@@ -30,7 +30,7 @@ The core principles are deceptively simple — identify what you have, control h
 
 ### Software Configuration Identification
 - Determining which artifacts are Configuration Items (CIs) with unique identifiers and attributes
-- Establishing baselines — formally approved, fixed versions that can only change through formal change control
+- Establishing baselines: formally approved, fixed versions that can only change through formal change control
 - Tracking CI relationships: dependencies, derivation, succession, and variants
 
 ### Software Configuration Change Control
@@ -61,23 +61,23 @@ The core principles are deceptively simple — identify what you have, control h
 ## My Notes
 
 ### SCM Patterns (Berczuk & Appleton)
-- [[01_SCM_Fundamentals]] — Key concepts, workspace, architecture, SCM in agile, pattern overview
-- [[02_Codeline_and_Branching]] — Mainline, Active Development Line, Private Workspace, Repository
-- [[03_Workspace_and_Build]] — Private System Build, Integration Build, Third Party Codeline
-- [[04_Commit_and_Testing]] — Task Level Commit, Codeline Policy, Smoke/Unit/Regression Tests
-- [[05_Release_and_Version_Management]] — Release Line, Release-Prep, Task Branch, Private Versions
+- [[01_SCM_Fundamentals]]: Key concepts, workspace, architecture, SCM in agile, pattern overview
+- [[02_Codeline_and_Branching]]: Mainline, Active Development Line, Private Workspace, Repository
+- [[03_Workspace_and_Build]]: Private System Build, Integration Build, Third Party Codeline
+- [[04_Commit_and_Testing]]: Task Level Commit, Codeline Policy, Smoke/Unit/Regression Tests
+- [[05_Release_and_Version_Management]]: Release Line, Release-Prep, Task Branch, Private Versions
 
 ### Version Control Practice
 - [[Version Control/]]
 
 ## Relationship to Other KAs
 
-- **[[Software Construction Overview|Software Construction]]** — Version control and build automation are tightly integrated with daily coding workflows and code reviews.
-- **[[Software Testing Overview|Software Testing]]** — Test environments, test data, and test scripts are configuration items. Baselines provide stable reference points for testing.
-- **[[Software Engineering Operations Overview|Software Engineering Operations]]** — CI/CD pipelines, infrastructure as code, and release management are SCM at the operational level.
-- **[[Software Maintenance Overview|Software Maintenance]]** — Change control and impact analysis are essential for safe maintenance. Every maintenance change goes through SCM.
-- **[[Software Quality Overview|Software Quality]]** — Configuration audits (FCA/PCA) are quality assurance activities. SQA depends on SCM for controlled baselines.
-- **[[Software Engineering Management Overview|Software Engineering Management]]** — SCM provides visibility into project status through change metrics and release tracking.
+- **[[Software Construction Overview|Software Construction]]:** Version control and build automation are tightly integrated with daily coding workflows and code reviews.
+- **[[Software Testing Overview|Software Testing]]:** Test environments, test data, and test scripts are configuration items. Baselines provide stable reference points for testing.
+- **[[Software Engineering Operations Overview|Software Engineering Operations]]:** CI/CD pipelines, infrastructure as code, and release management are SCM at the operational level.
+- **[[Software Maintenance Overview|Software Maintenance]]:** Change control and impact analysis are essential for safe maintenance. Every maintenance change goes through SCM.
+- **[[Software Quality Overview|Software Quality]]:** Configuration audits (FCA/PCA) are quality assurance activities. SQA depends on SCM for controlled baselines.
+- **[[Software Engineering Management Overview|Software Engineering Management]]:** SCM provides visibility into project status through change metrics and release tracking.
 
 ---
 

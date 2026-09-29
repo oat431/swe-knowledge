@@ -4,7 +4,7 @@ aliases: [vendor SCM control, interface control, SCM for distributed teams, SCM 
 tags: [software-engineering, swebok, ka08, scm, vendor-control, interface-control]
 source: SWEBOK v4 Ch08
 swebok-references: ["KA8.1", "KA8.3"]
-related: "[[09_SCM_Plans_and_Procedures]]", "[[10_Configuration_Identification_and_Baselines]]", "[[12_Configuration_Status_Accounting]]"
+related: "[[03_Workspace_and_Build|SCM Plans and Procedures]]" 
 ---
 
 # Vendor and Interface Control in Software Configuration Management
@@ -43,6 +43,7 @@ When outsourcing development or maintenance, SCM requirements must be explicitly
 When multiple vendors contribute to a single system, CI coordination becomes critical:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph Vendor A
         A1[Vendor A Repository] --> A2[Vendor A CI Pipeline]
@@ -202,6 +203,7 @@ An Interface Control Document (ICD) formally defines the interface between two o
 ### 2.4 Interface Change Management
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Interface Change Request] --> B[Impact Analysis]
     B --> C{Breaking Change?}
@@ -309,6 +311,7 @@ In system-of-systems (SoS) environments, interface management becomes significan
 **Distributed CI/CD Architecture:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph Region US
         US1[US Developers] --> USC[US CI Runner]
@@ -423,6 +426,7 @@ flowchart TD
 ### 4.4 Consumer-Driven Contract Testing
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     subgraph Consumer A
         CA1[Define Contract] --> CA2[Pact Test]

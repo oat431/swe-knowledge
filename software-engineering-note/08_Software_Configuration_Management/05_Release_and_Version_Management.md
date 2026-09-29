@@ -4,7 +4,7 @@ source: "Berczuk & Appleton, Software Configuration Management Patterns (2002)"
 created: 2026-07-21
 ---
 
-# 05 — Release and Version Management
+# 05: Release and Version Management
 
 > **Source:** Steve Berczuk with Brad Appleton, *Software Configuration Management Patterns: Effective Teamwork, Practical Integration*, Addison-Wesley, 2002. Chapters 17–20.
 
@@ -12,12 +12,12 @@ created: 2026-07-21
 
 ## Overview
 
-Once a product ships, two things must happen in parallel: the released version needs bug fixes and the team needs to build the next release. Doing both on a single codeline creates tension — bug-fix changes may conflict with in-progress refactoring, and feature work destabilises what should be shippable code. The five patterns in this chapter address that tension with branching structures, stabilisation policies, and integration rhythms.
+Once a product ships, two things must happen in parallel: the released version needs bug fixes and the team needs to build the next release. Doing both on a single codeline creates tension; bug-fix changes may conflict with in-progress refactoring, and feature work destabilises what should be shippable code. The five patterns in this chapter address that tension with branching structures, stabilisation policies, and integration rhythms.
 
 | Pattern | Core Problem | Solution |
 |---|---|---|
 | **Release Line** (Ch. 17) | Maintaining shipped versions alongside active development | Branch each release off the mainline; propagate fixes both ways |
-| **Release-Prep Code Line** (Ch. 18) | Stabilising for release without freezing all work | Branch *before* release — branch instead of freeze |
+| **Release-Prep Code Line** (Ch. 18) | Stabilising for release without freezing all work | Branch *before* release; branch instead of freeze |
 | **Task Branch** (Ch. 19) | Long-lived, disruptive tasks that can't integrate incrementally | Fork a private branch; merge back as a single transaction |
 | **Named Stable Bases** (Ch. 20) | Keeping interfaces from churning unpredictably | Stabilise system interfaces no more than once a week |
 | **Daily Build and Smoke Test** (Ch. 20) | Catching integration errors before they accumulate | Build and smoke-test the whole system at least daily |
@@ -30,9 +30,9 @@ Once a product ships, two things must happen in parallel: the released version n
 
 > How do you do maintenance on released versions without interfering with current development work?
 
-After shipping, the released code may need to evolve independently of the mainline. Customers cannot always upgrade immediately — data migration, deployment complexity, or simple risk-aversion means they stay on the shipped version. Meanwhile the mainline marches toward the next major release. If all work stays on one codeline, you face two pathologies:
+After shipping, the released code may need to evolve independently of the mainline. Customers cannot always upgrade immediately: data migration, deployment complexity, or simple risk-aversion means they stay on the shipped version. Meanwhile the mainline marches toward the next major release. If all work stays on one codeline, you face two pathologies:
 
-- **Label-only shipping:** Tag the release, ship that snapshot, keep working on the same line. Bug fixes to the shipped version are impossible in isolation — every fix ships with whatever unstable work has landed since the tag.
+- **Label-only shipping:** Tag the release, ship that snapshot, keep working on the same line. Bug fixes to the shipped version are impossible in isolation; every fix ships with whatever unstable work has landed since the tag.
 - **Staircase of dependent branches:** Branch each release off the *previous* release branch (release-1.0 → release-1.1 → release-2.0). This makes it nearly impossible to determine what code is common across releases.
 
 ### Solution
@@ -52,7 +52,7 @@ Key rules:
 - At release time, branch **all** code, including third-party dependencies.
 - Bug fixes are made on the release branch, then **propagated (merged) into the mainline** regularly.
 - If a fix is also needed on an older release branch, cherry-pick or merge it there too.
-- A release branch becomes **dead-end code** when that release is no longer supported — stop merging into it.
+- A release branch becomes **dead-end code** when that release is no longer supported; stop merging into it.
 
 ### Why Not "Just One Line"?
 
@@ -73,10 +73,10 @@ These conditions rarely hold at scale. With multiple customers, staggered upgrad
 
 Before shipping, there is a burst of stabilisation work: last-minute bugs, installation tweaks, packaging details, QA sign-off. During this period you want:
 
-- **Restrictive check-in policies** — no new features, only essential fixes.
-- **No idle developers** — the rest of the team should not be blocked.
+- **Restrictive check-in policies:** no new features, only essential fixes.
+- **No idle developers:** the rest of the team should not be blocked.
 
-The traditional answer is a **code freeze**: stop all check-ins to the mainline until the release stabilises. This works if the freeze lasts hours, but real freezes often drag on for days or weeks. Developers work offline (bypassing version control), merge hell follows when the freeze lifts, and the release itself is delayed by the very process meant to protect it.
+The traditional answer is a **code freeze:** stop all check-ins to the mainline until the release stabilises. This works if the freeze lasts hours, but real freezes often drag on for days or weeks. Developers work offline (bypassing version control), merge hell follows when the freeze lifts, and the release itself is delayed by the very process meant to protect it.
 
 ### Solution
 
@@ -92,7 +92,7 @@ main ─●──●──●──●──●──●──●──●──
 
 Guidelines:
 
-- Branch as **late as possible** — the closer to "done" the code is, the less merging you will have to do between the two lines. But don't wait so long that you're already in a de facto freeze.
+- Branch as **late as possible:** the closer to "done" the code is, the less merging you will have to do between the two lines. But don't wait so long that you're already in a de facto freeze.
 - The release-prep branch becomes the **release-maintenance branch** after shipping (it *is* the Release Line from pattern 1).
 - The mainline codeline owner sets policy for how and when stabilisation fixes propagate from the release-prep branch back to mainline.
 
@@ -122,7 +122,7 @@ Some development tasks should not be integrated incrementally:
 - A new persistence mechanism being built by a small sub-team while the rest of the team fixes bugs on the current codebase.
 - A feature targeting a release *after* the imminent one, being developed in parallel with release stabilisation.
 
-Checking such work into the mainline piecemeal destabilises everyone. Working entirely outside version control — sharing patches via email or shared drives — loses traceability, recoverability, and visibility. The alternative, creating a full Release Line too early, forces heavy merge overhead for work that is not yet ready to share.
+Checking such work into the mainline piecemeal destabilises everyone. Working entirely outside version control (sharing patches via email or shared drives) loses traceability, recoverability, and visibility. The alternative, creating a full Release Line too early, forces heavy merge overhead for work that is not yet ready to share.
 
 ### Solution
 
@@ -139,7 +139,7 @@ Rules for task branches:
 - **Integrate from mainline frequently.** Pull changes from the mainline into the task branch regularly so the final merge is not a collision of weeks of divergent code.
 - **Merge back as a single transaction.** Once the task is complete, tested, and stable, merge the entire branch into the mainline at once.
 - **Short-lived by design.** A task branch that lives for months becomes a parallel universe. If the task is truly long-running, consider whether it should be a Release Line or a separate project.
-- **Lazy branching is ideal.** If your VCS supports "lazy" (copy-on-write) branching — where unchanged files are inherited from the parent — task branches are cheap to create and maintain.
+- **Lazy branching is ideal.** If your VCS supports "lazy" (copy-on-write) branching (where unchanged files are inherited from the parent) task branches are cheap to create and maintain.
 
 ### Task Branch vs. Release Line
 
@@ -148,7 +148,7 @@ Rules for task branches:
 | **Scope** | One feature / refactoring / sub-team effort | An entire shipped release |
 | **Lifetime** | Days to weeks | Months to years (as long as the release is supported) |
 | **Who works on it** | A small sub-team | Potentially the whole team (for maintenance) |
-| **Merge direction** | Back into mainline, then branch is dead | Bidirectional — fixes flow both ways |
+| **Merge direction** | Back into mainline, then branch is dead | Bidirectional, fixes flow both ways |
 | **Policy** | Relaxed; sub-team self-governs | Formal; codeline owner sets propagation rules |
 
 ### When to Use a Task Branch
@@ -169,17 +169,17 @@ Rules for task branches:
 
 ### How It Works
 
-The idea is to establish a rhythm: every week (or at a similar cadence), the team agrees on a *named stable base* — a known-good snapshot where all module interfaces are frozen. Between stable bases, individual modules can evolve internally as fast as needed, but the contracts they expose to other modules do not change. This decouples *interface volatility* from *implementation volatility*.
+The idea is to establish a rhythm: every week (or at a similar cadence), the team agrees on a *named stable base*, a known-good snapshot where all module interfaces are frozen. Between stable bases, individual modules can evolve internally as fast as needed, but the contracts they expose to other modules do not change. This decouples *interface volatility* from *implementation volatility*.
 
 In modern practice this maps to:
 
-- **API versioning** — internal and external APIs change on a declared schedule, not continuously.
-- **Release trains** — e.g., "we cut a release branch every two weeks; whatever is merged by Friday ships."
-- **Contract testing** — pact/CDCT tests that verify consumer expectations against provider interfaces at stable-base boundaries.
+- **API versioning:** internal and external APIs change on a declared schedule, not continuously.
+- **Release trains:** e.g., "we cut a release branch every two weeks; whatever is merged by Friday ships."
+- **Contract testing:** pact/CDCT tests that verify consumer expectations against provider interfaces at stable-base boundaries.
 
 ### Relationship to Other Patterns
 
-- A **Release Line** is a named stable base at the product level — the shipped interface is frozen.
+- A **Release Line** is a named stable base at the product level: the shipped interface is frozen.
 - The **Daily Build and Smoke Test** (below) validates that yesterday's changes haven't broken today's stable base.
 
 ---
@@ -199,13 +199,13 @@ Integration errors are cheap to fix when caught immediately and exponentially ex
 
 - Developers work in isolation, then face a "big bang" merge.
 - Broken builds go unnoticed for hours or days while more changes pile on top.
-- The build itself atrophies — when no one runs it regularly, it stops working.
+- The build itself atrophies: when no one runs it regularly, it stops working.
 
 ### How It Works
 
 1. **Daily build.** Every night (or on every commit to the mainline), an automated process checks out the latest code, compiles it, links it, and produces a deployable artifact.
 2. **Smoke test.** A fast, shallow test suite runs against the build to verify that the system starts, basic features work, and nothing is catastrophically broken.
-3. **Immediate feedback.** If the build or smoke test fails, the team is notified immediately. Fixing the build becomes the top priority — no new check-ins until it is green.
+3. **Immediate feedback.** If the build or smoke test fails, the team is notified immediately. Fixing the build becomes the top priority; no new check-ins until it is green.
 
 ### Modern Evolution
 
@@ -266,7 +266,7 @@ A mature SCM process weaves these five patterns into a coherent workflow:
 
 ## Key Takeaways
 
-1. **Branching is not overhead — it is risk management.** Each branch isolates a different category of change (maintenance, stabilisation, disruptive feature work) so they don't collide.
+1. **Branching is not overhead: it is risk management.** Each branch isolates a different category of change (maintenance, stabilisation, disruptive feature work) so they don't collide.
 
 2. **Branch instead of freeze.** A short-lived release-prep branch costs some merges but eliminates idle time and the chaos of post-freeze integration.
 
@@ -274,7 +274,7 @@ A mature SCM process weaves these five patterns into a coherent workflow:
 
 4. **Task branches are for isolation, not abandonment.** They must be short-lived, frequently synced with mainline, and merged back as a single tested transaction.
 
-5. **The Daily Build is non-negotiable.** Without a rhythm of integration and verification, all the branching structure in the world won't save you — you'll just have multiple broken codelines instead of one.
+5. **The Daily Build is non-negotiable.** Without a rhythm of integration and verification, all the branching structure in the world won't save you; you'll just have multiple broken codelines instead of one.
 
 6. **Interfaces stabilise on a schedule.** Named Stable Bases decouple the pace of internal change from the pace of contract change, letting teams move fast without breaking each other.
 
@@ -282,8 +282,8 @@ A mature SCM process weaves these five patterns into a coherent workflow:
 
 ## See Also
 
-- [[Software Configuration Management Overview]] — map of all SCM patterns
-- [[Version Control/03 Git Advanced]] — Git branching models (GitFlow, GitHub Flow, Trunk-Based Development) as modern implementations of these patterns
-- [[Version Control/02 Git Workflows]] — team workflows that operationalise Release Lines and Task Branches
-- *Streamed Lines* (Appleton et al., 1998) — deeper taxonomy of branching patterns
-- *Software Release Methodology* (Michael Bays, 1999) — codeline types and release engineering
+- [[Software Configuration Management Overview]]: map of all SCM patterns
+- [[Version Control/03 Git Advanced]]: Git branching models (GitFlow, GitHub Flow, Trunk-Based Development) as modern implementations of these patterns
+- [[Version Control/02 Git Workflows]]: team workflows that operationalise Release Lines and Task Branches
+- *Streamed Lines* (Appleton et al., 1998): deeper taxonomy of branching patterns
+- *Software Release Methodology* (Michael Bays, 1999): codeline types and release engineering

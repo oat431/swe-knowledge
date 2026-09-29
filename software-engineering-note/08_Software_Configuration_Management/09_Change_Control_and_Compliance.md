@@ -27,6 +27,7 @@ The CCB is the organizational body with authority to approve or reject changes t
 ### CCB Structure
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "CCB Membership"
         CHAIR["CCB Chair<br/>Final decision authority"]
@@ -46,7 +47,7 @@ graph TB
     CUST --> DECISION
     SEC --> DECISION
 
-    style CHAIR fill:#264653,stroke:#fff,color:#fff
+    style CHAIR fill:#1EB88E,stroke:#000000,color:#000000
 ```
 
 ### CCB Levels by Criticality
@@ -63,6 +64,7 @@ Not all changes require the same level of authority. Organizations typically est
 ### CCB Decision Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     SUBMIT["CR Submitted"] --> SCREEN["SCM Screens<br/>for completeness"]
     SCREEN --> INCOMPLETE{Complete?}
@@ -77,7 +79,7 @@ graph TB
     IMPLEMENT --> VERIFY["Verify<br/>implementation"]
     VERIFY --> CLOSE["Close CR"]
 
-    style CCB fill:#e76f51,stroke:#fff,color:#fff
+    style CCB fill:#FFBE00,stroke:#000000,color:#000000
 ```
 
 ### CCB Meeting Best Practices
@@ -97,6 +99,7 @@ graph TB
 Every CR follows a formal lifecycle from submission through closure. The specific states may vary by organization, but the standard flow is:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','clusterBkg':'#161212','clusterBorder':'#19362D','fontSize':'14px'}}}%%
 stateDiagram-v2
     [*] --> Submitted
     Submitted --> Screening: Auto-assigned
@@ -248,6 +251,7 @@ trivy image --format cyclonedx --output sbom.cdx.json myapp:latest
 ### SBOM Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     GEN["Generate<br/>SBOM"] --> STORE["Store with<br/>release artifacts"]
     STORE --> SCAN["Scan for<br/>vulnerabilities"]
@@ -257,7 +261,7 @@ graph LR
     RESPOND --> UPDATE["Update component<br/>& regenerate SBOM"]
     UPDATE --> STORE
 
-    style SCAN fill:#e76f51,stroke:#fff,color:#fff
+    style SCAN fill:#FFBE00,stroke:#000000,color:#000000
 ```
 
 ### SBOM in SCM Context
@@ -353,6 +357,7 @@ A CMDB is a repository of information about all significant entities in an IT en
 ### CMDB Concepts
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "CMDB Entities"
         SW["Software CI<br/>Application, library, config"]
@@ -370,17 +375,17 @@ graph TB
         DOC -->|describes| HW
     end
 
-    style SVC fill:#264653,stroke:#fff,color:#fff
+    style SVC fill:#1EB88E,stroke:#000000,color:#000000
 ```
 
 ### CMDB in Enterprise SCM
 
 For large organizations, the CMDB bridges development-time SCM and operations-time configuration management:
 
-1. **Development Phase**: SCM tools track source code, builds, and test artifacts
-2. **Release Phase**: SBOM and VDD are generated and stored in CMDB
-3. **Operations Phase**: CMDB tracks deployed instances, environments, and runtime configurations
-4. **Change Phase**: CMDB provides impact analysis for proposed changes across the full stack
+1. **Development Phase:** SCM tools track source code, builds, and test artifacts
+2. **Release Phase:** SBOM and VDD are generated and stored in CMDB
+3. **Operations Phase:** CMDB tracks deployed instances, environments, and runtime configurations
+4. **Change Phase:** CMDB provides impact analysis for proposed changes across the full stack
 
 ### CMDB Data Quality
 
@@ -478,6 +483,7 @@ steps:
 The following diagram shows how all change control components work together:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "Input"
         USER["User/Submitter"]
@@ -534,8 +540,8 @@ graph TB
     DEV --> CSA
     TEST --> CSA
 
-    style CCB fill:#e76f51,stroke:#fff,color:#fff
-    style CSA fill:#2d6a4f,stroke:#fff,color:#fff
+    style CCB fill:#FFBE00,stroke:#000000,color:#000000
+    style CSA fill:#1FB854,stroke:#000000,color:#000000
 ```
 
 ---
@@ -639,11 +645,11 @@ Next Meeting: _______________
 
 ## Related Notes
 
-- [[01_Master_Repository_Pattern]] -- Single source for change-controlled CIs
-- [[02_Mainline_Pattern]] -- Baselines managed by CCB
-- [[03_Active_Development_Line]] -- Where approved changes are implemented
-- [[04_Private_Version_Control]] -- Developer workspaces before formal control
-- [[05_Task_Level_Commit]] -- Commit-level change tracking
+- [[02_Codeline_and_Branching|Master Repository Pattern]]: Single source for change-controlled CIs
+- [[02_Codeline_and_Branching|Mainline Pattern]]: Baselines managed by CCB
+- [[02_Codeline_and_Branching|Active Development Line]]: Where approved changes are implemented
+- [[Version Control/Version Control Overview|Private Version Control]]: Developer workspaces before formal control
+- [[04_Commit_and_Testing|Task-Level Commit]]: Commit-level change tracking
 - [[07_SCSA_and_Status_Accounting]] -- Records change activity and compliance evidence
 - [[08_Configuration_Auditing]] -- FCA/PCA verify change control effectiveness
 - Version Control/ -- Tools supporting change control workflows

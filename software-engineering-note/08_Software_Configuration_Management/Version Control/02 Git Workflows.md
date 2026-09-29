@@ -108,7 +108,7 @@ git push origin feature/add-search
 
 ## Trunk-Based Development
 
-Everyone commits to `main` (the "trunk") with very short-lived branches — ideally less than a day. Incomplete features are hidden behind **feature flags**.
+Everyone commits to `main` (the "trunk") with very short-lived branches, ideally less than a day. Incomplete features are hidden behind **feature flags**.
 
 ### Key Principles
 
@@ -241,8 +241,8 @@ Closes #123
 | `release/` | Release preparation | `release/2.1.0` |
 | `chore/` | Tooling, dependencies | `chore/update-deps` |
 
-✅ **Good:** `feature/add-search-filter` — descriptive, kebab-case.
-❌ **Bad:** `my-branch`, `fix`, `temp` — meaningless names.
+✅ **Good:** `feature/add-search-filter`: descriptive, kebab-case.
+❌ **Bad:** `my-branch`, `fix`, `temp`, meaningless names.
 
 ---
 
@@ -281,8 +281,8 @@ git tag -l
 
 ## Sources
 
-- [GitFlow — Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/)
-- [GitHub Flow — GitHub](https://docs.github.com/en/get-started/using-git/github-flow)
+- [GitFlow: Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/)
+- [GitHub Flow: GitHub](https://docs.github.com/en/get-started/using-git/github-flow)
 - [Trunk-Based Development](https://trunkbaseddevelopment.com/)
 - [Conventional Commits](https://www.conventionalcommits.org/)
 - [Semantic Versioning](https://semver.org/)

@@ -73,7 +73,7 @@ git bisect bad
 # Mark a known good commit
 git bisect good v1.0.0
 
-# Git checks out a middle commit — test it, then mark:
+# Git checks out a middle commit - test it, then mark:
 git bisect good   # bug is NOT here
 git bisect bad    # bug IS here
 
@@ -92,13 +92,13 @@ git bisect start v2.0.0 v1.0.0
 git bisect run npm test
 ```
 
-This is incredibly powerful for large codebases — finding a regression in 1000+ commits takes ~10 steps.
+This is incredibly powerful for large codebases, finding a regression in 1000+ commits takes ~10 steps.
 
 ---
 
 ## Git Reflog
 
-The reflog records every move of `HEAD` — even commits that seem "lost" after a bad reset or rebase.
+The reflog records every move of `HEAD`, even commits that seem "lost" after a bad reset or rebase.
 
 ```bash
 # View the reflog
@@ -186,7 +186,7 @@ npx husky add .husky/pre-commit "npm run lint"
 npx husky add .husky/commit-msg 'npx commitlint --edit $1'
 ```
 
-❌ **Bad:** Putting hook scripts in `.git/hooks/` — they're not tracked by Git and not shared.
+❌ **Bad:** Putting hook scripts in `.git/hooks/`: they're not tracked by Git and not shared.
 ✅ **Good:** Using Husky (or similar) so hooks are in the repo and consistent across the team.
 
 ---
@@ -218,7 +218,7 @@ git submodule update --remote
 git submodule init && git submodule update
 ```
 
-⚠️ Common pitfall: Forgetting to update submodules after pulling — leads to stale dependencies.
+⚠️ Common pitfall: Forgetting to update submodules after pulling, leads to stale dependencies.
 
 ❌ **Bad:** Using submodules for tightly coupled code that changes together.
 ✅ **Good:** Using submodules for stable, independently versioned libraries.
@@ -321,8 +321,8 @@ git config --global alias.unstage "reset HEAD --"
 | `git reset` | Moves branch pointer (rewrites history) | ❌ No |
 | `git revert` | Creates new commit that undoes changes | ✅ Yes |
 
-❌ **Bad:** `git reset --hard` on a shared branch — others will have divergent history.
-✅ **Good:** `git revert` on shared branches — creates a clean undo commit everyone can pull.
+❌ **Bad:** `git reset --hard` on a shared branch, others will have divergent history.
+✅ **Good:** `git revert` on shared branches, creates a clean undo commit everyone can pull.
 
 ```bash
 # Revert a specific commit
@@ -339,8 +339,8 @@ git revert abc1234..def5678
 
 ## Sources
 
-- [Pro Git — Git Internals](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects)
-- [Pro Git — Rewriting History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
+- [Pro Git: Git Internals](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects)
+- [Pro Git: Rewriting History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
 - [Git Bisect Documentation](https://git-scm.com/docs/git-bisect)
 - [Husky Documentation](https://typicode.github.io/husky/)
 - [Git Submodules Guide](https://git-scm.com/book/en/v2/Git-Tools-Submodules)

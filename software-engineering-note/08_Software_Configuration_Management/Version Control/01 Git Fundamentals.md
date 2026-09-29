@@ -7,13 +7,13 @@ tags:
 
 # Git Fundamentals
 
-Git is a distributed version control system that tracks snapshots of your project over time. Understanding its core model — commits, branches, and the three areas — is essential before you touch any [[02 Git Workflows|workflow]] or [[03 Git Advanced|advanced technique]].
+Git is a distributed version control system that tracks snapshots of your project over time. Understanding its core model (commits, branches, and the three areas) is essential before you touch any [[02 Git Workflows|workflow]] or [[03 Git Advanced|advanced technique]].
 
 ---
 
 ## What Is a Commit?
 
-A commit is a **snapshot** of your entire project at a point in time — not a diff. Each commit points to a tree (the file structure) and has metadata: author, timestamp, message, and parent commit(s).
+A commit is a **snapshot** of your entire project at a point in time, not a diff. Each commit points to a tree (the file structure) and has metadata: author, timestamp, message, and parent commit(s).
 
 ❌ **Misconception:** "A commit stores only what changed."
 ✅ **Reality:** A commit references a full tree; Git deduplicates unchanged files via SHA-1 hashes internally.
@@ -39,7 +39,7 @@ parent commit(s)
 git status
 ```
 
-❌ **Bad:** Editing a file and immediately committing without staging — you might include unintended changes.
+❌ **Bad:** Editing a file and immediately committing without staging; you might include unintended changes.
 ✅ **Good:** Stage specific files, review the diff, then commit.
 
 ```bash
@@ -91,7 +91,7 @@ git branch -d feature/login
 
 ## Merge vs Rebase
 
-Both integrate changes from one branch into another — but they work differently.
+Both integrate changes from one branch into another, but they work differently.
 
 | Aspect | Merge | Rebase |
 |--------|-------|--------|
@@ -120,7 +120,7 @@ git rebase main
 ```
 
 ✅ **Good:** Rebase your local feature branch before merging to keep history clean.
-❌ **Bad:** Rebase a branch that others have already pulled — it rewrites commit SHAs and causes conflicts.
+❌ **Bad:** Rebase a branch that others have already pulled; it rewrites commit SHAs and causes conflicts.
 
 ### Golden Rule
 
@@ -179,7 +179,7 @@ git stash drop stash@{1}
 git stash clear
 ```
 
-❌ **Bad:** Stashing changes and forgetting about them — stashes are local and not backed up.
+❌ **Bad:** Stashing changes and forgetting about them, stashes are local and not backed up.
 ✅ **Good:** Always add a message so you remember what each stash contains.
 
 ---
@@ -203,7 +203,7 @@ __pycache__/
 |---------|---------|
 | `*.log` | All `.log` files |
 | `node_modules/` | Entire directory |
-| `!important.log` | Negate — DON'T ignore this file |
+| `!important.log` | Negate; DON'T ignore this file |
 | `build/**` | Everything inside `build/` |
 | `*.py[cod]` | `.pyc`, `.pyo`, `.pyd` |
 
@@ -273,7 +273,7 @@ git merge --abort
 
 ## Sources
 
-- [Pro Git — Git Basics](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
-- [Pro Git — Branching](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
+- [Pro Git: Git Basics](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
+- [Pro Git: Branching](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
 - [Git SCM Documentation](https://git-scm.com/doc)
 - [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials)

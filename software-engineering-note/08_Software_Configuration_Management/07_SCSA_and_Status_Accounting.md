@@ -5,7 +5,7 @@ source: "SWEBOK v4 Chapter 08"
 
 # Configuration Status Accounting (CSA)
 
-Configuration Status Accounting (CSA) is the recording and reporting of information needed to manage a configuration effectively, including a listing of all approved configuration identification and status of proposed changes to the configuration. SWEBOK v4 identifies CSA as one of the core SCM activities (KA 8.4), providing the visibility layer that makes [[01_Master_Repository_Pattern|repository]], [[02_Mainline_Pattern|mainline]], and [[03_Active_Development_Line|active development]] practices auditable.
+Configuration Status Accounting (CSA) is the recording and reporting of information needed to manage a configuration effectively, including a listing of all approved configuration identification and status of proposed changes to the configuration. SWEBOK v4 identifies CSA as one of the core SCM activities (KA 8.4), providing the visibility layer that makes [[02_Codeline_and_Branching|repository]], [[02_Codeline_and_Branching|mainline]], and [[02_Codeline_and_Branching|active development]] practices auditable.
 
 > **Key Idea:** CSA transforms raw CI data into actionable status information, enabling managers, engineers, and auditors to understand *what* was built, *when*, and *why*.
 
@@ -13,7 +13,7 @@ Configuration Status Accounting (CSA) is the recording and reporting of informat
 
 ## Purpose and Scope
 
-CSA serves as the **nervous system** of SCM. While [[04_Private_Version_Control|version control]] captures changes and [[05_Task_Level_Commit|commits]] record intent, CSA aggregates, correlates, and presents this data in forms suitable for decision-making and compliance.
+CSA serves as the **nervous system** of SCM. While [[Version Control/Version Control Overview|version control]] captures changes and [[04_Commit_and_Testing|commits]] record intent, CSA aggregates, correlates, and presents this data in forms suitable for decision-making and compliance.
 
 ### Core Objectives
 
@@ -53,6 +53,7 @@ CSA maintains a structured record of every Configuration Item (CI) across its li
 ### Relationship Tracking
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     REQ["Requirement<br/>REQ-017"] --> SDD["Design Doc<br/>SDD-003"]
     SDD --> SRC["Source Module<br/>auth_service.py"]
@@ -175,6 +176,7 @@ Modern CSA leverages dashboards to provide real-time visibility into configurati
 ### Dashboard Components
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "SCM Dashboard"
         D1["Baseline Progress<br/> ████████░░ 80%"]
@@ -232,11 +234,11 @@ Traditional CSA was designed for heavyweight, document-centric processes. Agile 
 
 In DevOps environments, CSA is embedded into the CI/CD pipeline:
 
-1. **Commit-time**: Automatic CI record updates, traceability links from commit messages to issues
-2. **Build-time**: SBOM generation, dependency tracking, build metadata capture
-3. **Test-time**: Test result aggregation, coverage reporting, quality gate evaluation
-4. **Deploy-time**: Deployment manifest recording, environment state tracking
-5. **Monitor-time**: Production configuration drift detection, runtime version verification
+1. **Commit-time:** Automatic CI record updates, traceability links from commit messages to issues
+2. **Build-time:** SBOM generation, dependency tracking, build metadata capture
+3. **Test-time:** Test result aggregation, coverage reporting, quality gate evaluation
+4. **Deploy-time:** Deployment manifest recording, environment state tracking
+5. **Monitor-time:** Production configuration drift detection, runtime version verification
 
 ### Automation Examples
 
@@ -281,6 +283,7 @@ csa_report:
 ## Relationship to Other SCM Activities
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     CI["Configuration<br/>Identification"] --> CSA["Status<br/>Accounting"]
     CC["Configuration<br/>Control"] --> CSA
@@ -288,7 +291,7 @@ graph TB
     CSA --> CI
     CSA --> CC
 
-    style CSA fill:#2d6a4f,stroke:#fff,color:#fff
+    style CSA fill:#1FB854,stroke:#000000,color:#000000
 ```
 
 - **Identification** provides the CIs and baselines that CSA tracks
@@ -313,11 +316,11 @@ graph TB
 
 ## Related Notes
 
-- [[01_Master_Repository_Pattern]] -- Single source of truth for CIs
-- [[02_Mainline_Pattern]] -- Mainline as baseline enabler
-- [[03_Active_Development_Line]] -- Development activity tracked by CSA
-- [[04_Private_Version_Control]] -- Developer-level change recording
-- [[05_Task_Level_Commit]] -- Commit-level traceability
-- [[08_Configuration_Auditing]] -- FCA/PCA consume CSA outputs
-- [[09_Change_Control_and_Compliance]] -- CCB and CR workflows generate CSA data
+- [[02_Codeline_and_Branching|Master Repository Pattern]]: Single source of truth for CIs
+- [[02_Codeline_and_Branching|Mainline Pattern]]: Mainline as baseline enabler
+- [[02_Codeline_and_Branching|Active Development Line]]: Development activity tracked by CSA
+- [[Version Control/Version Control Overview|Private Version Control]]: Developer-level change recording
+- [[04_Commit_and_Testing|Task-Level Commit]]: Commit-level traceability
+- [[08_Configuration_Auditing]]: FCA/PCA consume CSA outputs
+- [[09_Change_Control_and_Compliance]]: CCB and CR workflows generate CSA data
 - Version Control/ -- Tools and practices for CI management
