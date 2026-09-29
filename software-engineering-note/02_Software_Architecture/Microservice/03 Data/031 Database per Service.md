@@ -23,6 +23,7 @@ graph TD
     O[Order Service] --> DB[Shared DB<br/>orders, customers, products]
     C[Customer Service] --> DB
     P[Product Service] --> DB
+```
 
 
 > Tight coupling. Schema change in orders breaks customer service.
@@ -35,6 +36,7 @@ graph TD
     O[Order Service] --> ODB[Order DB]
     C[Customer Service] --> CDB[Customer DB]
     P[Product Service] --> PDB[Product DB]
+```
 
 
 > Loose coupling. Each service evolves independently.

@@ -254,7 +254,7 @@ flowchart LR
     G -->|Generates| AST
     G -->|Generates| Serializer
     G -->|Generates| Validator
-    G -->|Generates| Editor Support
+    G -->|Generates| EDITOR["Editor Support"]
     G -->|Generates| Formatter
     AST -->|Traversed by| CodeGenerator
     CodeGenerator -->|Produces| SourceCode

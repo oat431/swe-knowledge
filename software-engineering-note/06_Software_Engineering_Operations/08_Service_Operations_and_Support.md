@@ -17,9 +17,9 @@ aliases:
 created: 2026-07-21
 ---
 
-# 08 — Service Operations & Support
+# 08: Service Operations & Support
 
-> **Source:** SWEBOK v4 Chapter 06 — Software Engineering Operations, Section 6.4
+> **Source:** SWEBOK v4 Chapter 06, Software Engineering Operations, Section 6.4
 > **Focus:** The operational disciplines that keep services running and users supported: service reporting, service desk operations, incident and problem management, support models, and service level management.
 
 ---
@@ -30,11 +30,11 @@ Service operations is where software meets its users. A feature that works in de
 
 This note covers five interconnected domains:
 
-1. **Service Reporting** — what to measure and how to communicate it
-2. **Service Desk Operations** — the front door for all user issues
-3. **Incident vs. Problem Management** — fixing symptoms vs. fixing causes
-4. **Operations Support Models** — how to structure teams for 24/7 coverage
-5. **Service Level Management** — the contracts that bind everything together
+1. **Service Reporting:** what to measure and how to communicate it
+2. **Service Desk Operations:** the front door for all user issues
+3. **Incident vs. Problem Management:** fixing symptoms vs. fixing causes
+4. **Operations Support Models:** how to structure teams for 24/7 coverage
+5. **Service Level Management:** the contracts that bind everything together
 
 ---
 
@@ -44,7 +44,7 @@ This note covers five interconnected domains:
 
 Service reporting transforms raw operational data into actionable intelligence for stakeholders. Without reporting, monitoring data sits unused and leadership makes decisions based on intuition rather than evidence.
 
-**Key principle**: Every report must have an audience, a decision it enables, and an action it drives.
+**Key principle:** Every report must have an audience, a decision it enables, and an action it drives.
 
 ### 2. Types of Service Reports
 
@@ -92,37 +92,38 @@ Service reporting transforms raw operational data into actionable intelligence f
 
 ### 4. System Health Dashboards
 
-A well-designed operations dashboard follows the **monitoring hierarchy**:
+A well-designed operations dashboard follows the **monitoring hierarchy:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TB
-    subgraph Level 1: Overview
+    subgraph L1["Level 1: Overview"]
         SLO[SLO Status: Green/Yellow/Red]
         ALERT[Active Alerts: 3]
         DEPLOY[Last Deploy: 2h ago]
     end
-    subgraph Level 2: Service Health
+    subgraph L2["Level 2: Service Health"]
         API[API: Healthy]
         DB[Database: Warning]
         CACHE[Cache: Healthy]
         QUEUE[Queue: Backlog 5K]
     end
-    subgraph Level 3: Detail
+    subgraph L3["Level 3: Detail"]
         LATENCY[Latency P99: 450ms]
         ERRORS[Error Rate: 0.08%]
         CPU[CPU: 65%]
         DISK[Disk: 78%]
     end
-    Level 1 --> Level 2
-    Level 2 --> Level 3
+    L1 --> L2
+    L2 --> L3
 ```
 
 **Dashboard design principles:**
-- **Level 1**: At-a-glance status — can I go back to sleep? (for on-call)
-- **Level 2**: Service-level health — which component is degraded?
-- **Level 3**: Deep metrics — what exactly is wrong?
+- **Level 1:** At-a-glance status: can I go back to sleep? (for on-call)
+- **Level 2:** Service-level health: which component is degraded?
+- **Level 3:** Deep metrics: what exactly is wrong?
 - Use color coding: Green (healthy), Yellow (warning), Red (critical)
-- Avoid vanity metrics — every metric should drive a decision
+- Avoid vanity metrics: every metric should drive a decision
 
 ### 5. Security Posture Reporting
 
@@ -166,6 +167,7 @@ The service desk is the **single point of contact (SPOC)** between IT and users.
 ### 8. Support Tier Model
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     USER[User Reports Issue] --> T1[Tier 1: Service Desk]
     T1 -->|Resolved| CLOSE[Close Ticket]
@@ -205,7 +207,7 @@ flowchart TD
 
 ### 10. Knowledge Management
 
-A mature service desk maintains a **Known Error Database (KEDB)** and a **Knowledge Base (KB)**:
+A mature service desk maintains a **Known Error Database (KEDB)** and a **Knowledge Base (KB):**
 
 | Repository | Content | Purpose |
 |---|---|---|
@@ -231,11 +233,12 @@ A mature service desk maintains a **Known Error Database (KEDB)** and a **Knowle
 | **Problem** | The root cause of one or more incidents | **Eliminate the root cause** to prevent recurrence | Days to weeks |
 | **Known Error** | A problem with a documented root cause and workaround | Provide workaround while permanent fix is developed | Until permanent fix |
 
-> **Analogy**: If the building is on fire, incident management puts out the fire. Problem management investigates why the fire started and installs sprinklers.
+> **Analogy:** If the building is on fire, incident management puts out the fire. Problem management investigates why the fire started and installs sprinklers.
 
 ### 12. Incident Management Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Detection] --> B[Triage & Classification]
     B --> C[Diagnosis]
@@ -260,6 +263,7 @@ flowchart TD
 ### 13. Problem Management Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Problem Detection] --> B[Problem Logging]
     B --> C[Problem Categorization]
@@ -314,6 +318,7 @@ flowchart TD
 ### 16. Follow-the-Sun Model
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     subgraph Americas [Americas 8AM-5PM EST]
         A1[US East Team]
@@ -360,6 +365,7 @@ flowchart LR
 These three terms form a hierarchy from user-facing promise to technical measurement:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TB
     SLA[SLA: External Promise to Users] --> SLO[SLO: Internal Target]
     SLO --> SLI[SLI: What We Actually Measure]
@@ -378,7 +384,7 @@ flowchart TB
 - **SLOs** are what you aim for (internal targets, more strict than SLAs)
 - **SLAs** are what you promise (external contracts, with financial penalties)
 
-> **Golden rule**: Set SLOs tighter than SLAs to create a safety buffer. If SLA = 99.9%, set SLO = 99.95%.
+> **Golden rule:** Set SLOs tighter than SLAs to create a safety buffer. If SLA = 99.9%, set SLO = 99.95%.
 
 ### 19. Common SLI Categories
 
@@ -393,7 +399,7 @@ flowchart TB
 
 ### 20. Error Budgets
 
-An **error budget** is the inverse of an SLO. If your SLO is 99.9% availability, your error budget is 0.1% — the amount of unavailability you can "spend" on deployments, experiments, and incidents.
+An **error budget** is the inverse of an SLO. If your SLO is 99.9% availability, your error budget is 0.1%, the amount of unavailability you can "spend" on deployments, experiments, and incidents.
 
 | Month | SLO | Error Budget | Budget Used | Budget Remaining |
 |---|---|---|---|---|
@@ -466,9 +472,9 @@ Regular service reviews ensure accountability and continuous improvement:
 
 | Term | Definition |
 |---|---|
-| **SLA** | Service Level Agreement — external contract with consequences |
-| **SLO** | Service Level Objective — internal target for an SLI |
-| **SLI** | Service Level Indicator — quantitative measure of service behavior |
+| **SLA** | Service Level Agreement: external contract with consequences |
+| **SLO** | Service Level Objective: internal target for an SLI |
+| **SLI** | Service Level Indicator: quantitative measure of service behavior |
 | **Error budget** | Inverse of SLO; allowed unreliability for the period |
 | **MTBF** | Mean Time Between Failures |
 | **MTTR** | Mean Time to Recover |

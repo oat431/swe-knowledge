@@ -30,6 +30,7 @@ sequenceDiagram
     P-->>O: payment data
     O-->>G: order + payment
     G-->>C: response
+```
 
 
 | Concept | Meaning |

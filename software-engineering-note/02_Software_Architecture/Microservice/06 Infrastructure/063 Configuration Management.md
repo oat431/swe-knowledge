@@ -36,6 +36,7 @@ graph LR
     S1[Order Service] -->|pull config| CS
     S2[Payment Service] -->|pull config| CS
     S3[User Service] -->|pull config| CS
+```
 
 
 All config lives in Git. Services pull on startup and can refresh at runtime.

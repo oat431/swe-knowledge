@@ -48,6 +48,7 @@ graph TD
     S -->|routes to| P2
     S -->|routes to| P3
     I[Ingress] -->|external traffic| S
+```
 
 
 | Object | Purpose |

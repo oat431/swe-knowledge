@@ -32,6 +32,7 @@ graph LR
     S[Service Instance] -->|registers| R[Service Registry]
     C[Client] -->|queries| R
     C -->|calls| S
+```
 
 
 | Step | Action |
@@ -52,6 +53,7 @@ graph LR
     C[Client] -->|calls| LB[Load Balancer]
     LB -->|queries| R
     LB -->|routes to| S
+```
 
 
 | Step | Action |

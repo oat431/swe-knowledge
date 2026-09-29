@@ -52,6 +52,7 @@ graph TD
     A -->|OrderPlaced event| B
     B -->|PaymentConfirmed event| C
     C -->|Shipped event| A
+```
 
 
 ### 3. By Transaction Boundary

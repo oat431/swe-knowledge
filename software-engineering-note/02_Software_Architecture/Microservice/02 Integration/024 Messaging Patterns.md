@@ -61,6 +61,7 @@ Messages that can't be processed after N retries go to a DLQ for human inspectio
 graph LR
     Q[Normal Queue] -->|retry x3| DLQ[Dead Letter Queue]
     DLQ --> H[Human inspects,<br/>fixes, replays<br/>or discards]
+```
 
 
 ---

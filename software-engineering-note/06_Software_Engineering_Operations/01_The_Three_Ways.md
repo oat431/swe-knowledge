@@ -6,15 +6,15 @@ tags:
   - feedback
   - learning
   - software-engineering-operations
-source: "DevOps Handbook Part I — Kim, Humble, Debois, Willis"
+source: "DevOps Handbook Part I" 
 created: 2026-07-21
 ---
 
-# 01 — The Three Ways: Flow, Feedback, and Continual Learning
+# 01: The Three Ways: Flow, Feedback, and Continual Learning
 
 ## Overview
 
-Part I of *The DevOps Handbook* lays the theoretical foundation for DevOps by showing how decades of management and manufacturing philosophy converged into the Three Ways. DevOps is the outcome of applying Lean principles — originally developed for the Toyota Production System — to the **technology value stream**. The Three Ways (Flow, Feedback, Continual Learning & Experimentation) are the principles from which all DevOps behaviors and patterns are derived.
+Part I of *The DevOps Handbook* lays the theoretical foundation for DevOps by showing how decades of management and manufacturing philosophy converged into the Three Ways. DevOps is the outcome of applying Lean principles (originally developed for the Toyota Production System) to the **technology value stream**. The Three Ways (Flow, Feedback, Continual Learning & Experimentation) are the principles from which all DevOps behaviors and patterns are derived.
 
 ---
 
@@ -40,12 +40,12 @@ DevOps is not a single invention but a **convergence of movements** (John Willis
 ### Agile Infrastructure & Velocity Movement (2008–2009)
 
 - **2008 Agile Conference (Toronto):** Patrick Debois and Andrew Schafer held a "birds of a feather" session on applying Agile to infrastructure.
-- **2009 Velocity Conference:** John Allspaw and Paul Hammond presented *"10 Deploys per Day: Dev and Ops Cooperation at Flickr"* — a seminal talk on shared Dev/Ops goals and continuous integration.
+- **2009 Velocity Conference:** John Allspaw and Paul Hammond presented *"10 Deploys per Day: Dev and Ops Cooperation at Flickr"*, a seminal talk on shared Dev/Ops goals and continuous integration.
 - **2009 DevOpsDays (Ghent):** Patrick Debois, inspired by the Velocity talk, created the first DevOpsDays. The term "DevOps" was coined there.
 
 ### Continuous Delivery Movement (2006–2009)
 
-- Jez Humble and David Farley extended CI to **Continuous Delivery**: code and infrastructure always in a deployable state; all trunk changes can be safely deployed to production.
+- Jez Humble and David Farley extended CI to **Continuous Delivery:** code and infrastructure always in a deployable state; all trunk changes can be safely deployed to production.
 - First presented at Agile 2006; independently developed by Tim Fitz in 2009 ("Continuous Deployment").
 
 ### Toyota Kata (2009)
@@ -57,7 +57,7 @@ DevOps is not a single invention but a **convergence of movements** (John Willis
 ### Additional Foundations
 
 DevOps also builds upon:
-- **Infrastructure as Code** (Mark Burgess, Luke Kanies, Adam Jacob) — treating Operations work like application code.
+- **Infrastructure as Code** (Mark Burgess, Luke Kanies, Adam Jacob): treating Operations work like application code.
 - **Continuous Integration** (Grady Booch, Extreme Programming)
 - **Continuous Deployment** (Etsy, Wealthfront, Eric Ries/IMVU)
 
@@ -68,7 +68,7 @@ DevOps also builds upon:
 ### Manufacturing Value Stream
 
 > *"The sequence of activities an organization undertakes to deliver upon a customer request, including the dual flows of information and material."*
-> — Karen Martin & Mike Osterling
+> *Karen Martin & Mike Osterling*
 
 In manufacturing, the value stream is visible: a customer order triggers raw materials onto the plant floor. Fast, predictable lead times come from:
 - Smooth and even flow of work
@@ -86,7 +86,7 @@ Business Idea → Development (User Stories, Code) → Version Control →
 Integration & Test → Deployment → Production (Value Delivered)
 ```
 
-Value is created **only when services are running in production**. Deployment must not cause chaos — no outages, impairments, security, or compliance failures.
+Value is created **only when services are running in production**. Deployment must not cause chaos: no outages, impairments, security, or compliance failures.
 
 ### Deployment Lead Time (the book's focus)
 
@@ -99,7 +99,7 @@ Value is created **only when services are running in production**. Deployment mu
 | Design & Development | Lean Product Development | Highly variable, creative, uncertain |
 | Testing & Operations | Lean Manufacturing | Predictable, mechanistic, minimized variability |
 
-**Goal:** Testing and Operations happen **simultaneously** with Design/Development — not sequentially in large batches. Achieved via small batches + quality built into every step.
+**Goal:** Testing and Operations happen **simultaneously** with Design/Development, not sequentially in large batches. Achieved via small batches + quality built into every step.
 
 ### Lead Time vs. Processing Time
 
@@ -120,49 +120,52 @@ Value is created **only when services are running in production**. Deployment mu
 | **Deployment** | Heroics required at each stage | Self-service, automated |
 | **Failures** | Global disruptions | Small, contained failures |
 
-### %C/A — Percent Complete and Accurate
+### %C/A: Percent Complete and Accurate
 
-> *"The percentage of time downstream customers receive work that is 'usable as is' — without correction, missing information, or clarification."*
+> *"The percentage of time downstream customers receive work that is 'usable as is', without correction, missing information, or clarification."*
 
 The third key metric alongside lead time and processing time. Reflects quality of output at each value stream step.
 
 ---
 
-## 3. The Three Ways — Overview
+## 3. The Three Ways: Overview
 
 From *The Phoenix Project*, the Three Ways are the underpinning principles from which **all observed DevOps behaviors and patterns** are derived.
 
 
 
-### First Way — Flow (Left → Right)
+### First Way: Flow (Left → Right)
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     DEV["Dev"] -->|"Build & Test"| OPS["Ops"] -->|"Deploy"| CUST["Customer"]
     
-    style DEV fill:#dae8fc,stroke:#6c8ebf
-    style OPS fill:#d5e8d4,stroke:#82b366
-    style CUST fill:#fff2cc,stroke:#d6b656
+    style DEV fill:#00B5FF,stroke:#000000,color:#000000
+    style OPS fill:#1FB854,stroke:#000000,color:#000000
+    style CUST fill:#FFBE00,stroke:#000000,color:#000000
 ```
 
 Accelerate the delivery of work from Development to Operations to the customer. Make work visible, limit WIP, reduce batch sizes, reduce handoffs.
 
-### Second Way — Feedback (Right → Left)
+### Second Way: Feedback (Right → Left)
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart RL
     DEV["Dev"] <-.-|"Production telemetry"| OPS["Ops"] <-.-|"Usage & incidents"| CUST["Customer"]
     
-    style DEV fill:#dae8fc,stroke:#6c8ebf
-    style OPS fill:#d5e8d4,stroke:#82b366
-    style CUST fill:#fff2cc,stroke:#d6b656
+    style DEV fill:#00B5FF,stroke:#000000,color:#000000
+    style OPS fill:#1FB854,stroke:#000000,color:#000000
+    style CUST fill:#FFBE00,stroke:#000000,color:#000000
 ```
 
 Amplify feedback loops so corrections can be made continuously. See problems as they happen, swarm and solve, push quality to the source.
 
-### Third Way — Continual Learning (⟳)
+### Third Way: Continual Learning (⟳)
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph CULTURE["Culture of Experimentation"]
         LEARN["Learn & Experiment"]
@@ -171,7 +174,7 @@ flowchart TD
         LEARN --> IMPROVE --> SHARE --> LEARN
     end
     
-    style CULTURE fill:#e1d5e7,stroke:#9673a6
+    style CULTURE fill:#1FB8AB,stroke:#000000,color:#000000
 ```
 
 Create a culture of continual experimentation, taking risks, and learning from failure. Institutionalize improvement, convert local discoveries to global practices, inject resilience.
@@ -192,8 +195,8 @@ Create a culture of continual experimentation, taking risks, and learning from f
 
 ### 4.1 Make Our Work Visible
 
-- Technology work is **invisible** — unlike physical manufacturing, we can't see where flow is impeded or work is piling up.
-- Transferring work in tech is too easy (one click to reassign a ticket) — work bounces between teams, problems stay hidden.
+- Technology work is **invisible:** unlike physical manufacturing, we can't see where flow is impeded or work is piling up.
+- Transferring work in tech is too easy (one click to reassign a ticket); work bounces between teams, problems stay hidden.
 - **Solution:** Visual work boards (Kanban, sprint boards). Work starts on the left (backlog), flows through columns (work centers), finishes on the right ("Done" / "In Production").
 - **Work is done only when the application is running successfully in production**, not when Development finishes coding.
 - Making all work visible enables prioritization against global goals and single-tasking on highest-priority items.
@@ -201,11 +204,11 @@ Create a culture of continual experimentation, taking risks, and learning from f
 ### 4.2 Limit Work in Process (WIP)
 
 - In manufacturing, disruptions are visible and costly (scrapping WIP). In tech, interruptions are invisible but **more damaging** due to cognitive complexity.
-- Multitasking severely degrades performance — especially for cognitively complex technology work.
+- Multitasking severely degrades performance: especially for cognitively complex technology work.
 - **Kanban WIP limits:** codify and enforce an upper limit on cards per column. Nothing can be worked on unless first represented as a card.
 - WIP is a **leading indicator** of lead time (Dominica DeGrandis).
 - Limiting WIP exposes problems: when blocked, instead of starting new work, **find and fix the cause of the delay**.
-- > *"Stop starting. Start finishing."* — David J. Andersen
+- > *"Stop starting. Start finishing."* *(David J. Andersen)*
 
 ### 4.3 Reduce Batch Sizes
 
@@ -215,26 +218,26 @@ Create a culture of continual experimentation, taking risks, and learning from f
   - Large batch (fold all 10, then insert all 10, then seal all 10, then stamp all 10): first completed envelope at **310 seconds**; error found at 200 seconds, entire batch must be redone.
   - Small batch (complete one envelope entirely before starting next): first completed at **40 seconds** (8× faster); error only requires redoing one.
 - **Technology equivalent:** Continuous deployment = single-piece flow. Each version-control change is integrated, tested, and deployed to production.
-- > *"The batch size is the unit at which work-products move between stages."* — Eric Ries
+- > *"The batch size is the unit at which work-products move between stages."* *(Eric Ries)*
 
 ### 4.4 Reduce the Number of Handoffs
 
 - Long deployment lead times often mean hundreds (or thousands) of operations between version control and production.
 - Each handoff requires communication: requesting, specifying, signaling, coordinating, prioritizing, scheduling, deconflicting, testing, verifying.
 - Each handoff is a potential **queue** where work waits on shared resources.
-- **Knowledge is lost with every handoff** — enough handoffs and the original context is completely lost.
+- **Knowledge is lost with every handoff:** enough handoffs and the original context is completely lost.
 - **Countermeasure:** Automate significant portions of the work, or reorganize teams to deliver value independently without constant dependency on others.
 
 ### 4.5 Continually Identify and Elevate Our Constraints
 
-> *"In any value stream, there is always a direction of flow, and there is always one and only constraint; any improvement not made at that constraint is an illusion."* — Dr. Eliyahu Goldratt
+> *"In any value stream, there is always a direction of flow, and there is always one and only constraint; any improvement not made at that constraint is an illusion."* *(Dr. Eliyahu Goldratt)*
 
 **Goldratt's Five Focusing Steps:**
 1. Identify the system's constraint.
 2. Decide how to exploit the constraint.
 3. Subordinate everything else to the above decisions.
 4. Elevate the constraint.
-5. If the constraint is broken, go back to step 1 — don't let inertia create a new constraint.
+5. If the constraint is broken, go back to step 1: don't let inertia create a new constraint.
 
 **Typical DevOps constraint progression:**
 1. **Environment creation** → Create on-demand, self-serviced environments
@@ -251,13 +254,13 @@ Shigeo Shingo defined seven manufacturing wastes. Modern Lean reframes "eliminat
 
 | Waste | Description |
 |-------|-------------|
-| **Partially done work** | Work-in-queue, un-reviewed documents — loses value over time |
+| **Partially done work** | Work-in-queue, un-reviewed documents, loses value over time |
 | **Extra processes** | Documentation/reviews/approvals that don't add value |
-| **Extra features** | "Gold plating" — features not needed by customer or organization |
+| **Extra features** | "Gold plating", features not needed by customer or organization |
 | **Task switching** | Context switching across multiple projects and value streams |
-| **Waiting** | Delays between work centers — increases cycle time |
+| **Waiting** | Delays between work centers, increases cycle time |
 | **Motion** | Effort to move information between work centers; non-colocated teams |
-| **Defects** | Incorrect/missing/unclear information — harder to fix the longer detection is delayed |
+| **Defects** | Incorrect/missing/unclear information: harder to fix the longer detection is delayed |
 | **Nonstandard/manual work** | Dependencies on non-rebuilding servers, manual environments |
 | **Heroics** | Unreasonable acts becoming daily routine (2 AM production fixes, hundreds of tickets per release) |
 
@@ -273,7 +276,7 @@ Shigeo Shingo defined seven manufacturing wastes. Modern Lean reframes "eliminat
 
 - **Complex systems** defy any single person's ability to understand the whole. Tightly-coupled components make system-level behavior unpredictable.
 - Dr. Charles Perrow (Three Mile Island): impossible to understand how a nuclear reactor behaves in all circumstances.
-- Dr. Sidney Dekker: in complex systems, **doing the same thing twice won't necessarily produce the same result** — static checklists and best practices are insufficient.
+- Dr. Sidney Dekker: in complex systems, **doing the same thing twice won't necessarily produce the same result**; static checklists and best practices are insufficient.
 - **Failure is inherent and inevitable in complex systems.** We must design a safe system of work where errors are detected quickly, long before catastrophe.
 
 **Dr. Steven Spear's four conditions for safe complex systems:**
@@ -284,7 +287,7 @@ Shigeo Shingo defined seven manufacturing wastes. Modern Lean reframes "eliminat
 
 ### 5.2 See Problems as They Occur
 
-- Constantly test design and operating assumptions. Increase information flow — sooner, faster, cheaper, with clarity between cause and effect.
+- Constantly test design and operating assumptions. Increase information flow: sooner, faster, cheaper, with clarity between cause and effect.
 - **The more assumptions we invalidate, the faster we find and fix problems.**
 - Feedback and feedforward loops are critical to learning organizations (Dr. Peter Senge, *The Fifth Discipline*).
 
@@ -294,7 +297,7 @@ Shigeo Shingo defined seven manufacturing wastes. Modern Lean reframes "eliminat
 
 **Technology value stream:** Create automated build, integration, and test processes that immediately detect when a change takes us out of a deployable state. Pervasive telemetry shows how all system components are operating in production.
 
-> *"When I headed up quality engineering, I described my job as 'creating feedback cycles.' Feedback is critical because it allows us to steer."* — Elisabeth Hendrickson
+> *"When I headed up quality engineering, I described my job as 'creating feedback cycles.' Feedback is critical because it allows us to steer."* *(Elisabeth Hendrickson)*
 
 ### 5.3 Swarm and Solve Problems to Build New Knowledge
 
@@ -308,9 +311,9 @@ Shigeo Shingo defined seven manufacturing wastes. Modern Lean reframes "eliminat
 2. Prevents the work center from starting new work (which would introduce new errors).
 3. Without immediate action, the same problem will recur in the next cycle.
 
-**Technology equivalent:** Create the equivalent of an Andon cord — when a production incident occurs or a change breaks the CI/CD pipeline, **swarm to fix it and prevent new work until resolved**.
+**Technology equivalent:** Create the equivalent of an Andon cord: when a production incident occurs or a change breaks the CI/CD pipeline, **swarm to fix it and prevent new work until resolved**.
 
-> Swarming is the *"disciplined cycle of real-time problem recognition, diagnosis, and treatment... the Shewhart cycle (Plan-Do-Check-Act) accelerated to warp speed."* — Dr. Steven Spear
+> Swarming is the *"disciplined cycle of real-time problem recognition, diagnosis, and treatment... the Shewhart cycle (Plan-Do-Check-Act) accelerated to warp speed."* *(Dr. Steven Spear)*
 
 ### 5.4 Keep Pushing Quality Closer to the Source
 
@@ -322,19 +325,19 @@ Shigeo Shingo defined seven manufacturing wastes. Modern Lean reframes "eliminat
 - Everyone finds and fixes problems in their area of control as part of daily work.
 - Use **peer reviews** for proposed changes.
 - Automate quality checks typically done by QA or InfoSec.
-- Tests performed **on demand** — developers test and even deploy their own code.
+- Tests performed **on demand:** developers test and even deploy their own code.
 - Quality, security, and availability become **everyone's responsibility**.
 
-> *"It's impossible for a developer to learn anything when someone yells at them for something they broke six months ago — that's why we need to provide feedback to everyone as quickly as possible, in minutes, not months."* — Gary Gruver
+> *"It's impossible for a developer to learn anything when someone yells at them for something they broke six months ago (that's why we need to provide feedback to everyone as quickly as possible, in minutes, not months."*) Gary Gruver
 
 ### 5.5 Enable Optimizing for Downstream Work Centers
 
 - **Design for Manufacturability** (1980s): design parts so they can't be assembled wrong (asymmetrical parts, impossible-to-over-tighten screws).
 - Lean defines **two types of customers:**
-  1. **External customer** — pays for the service
-  2. **Internal customer** — receives and processes work immediately after us
+  1. **External customer:** pays for the service
+  2. **Internal customer:** receives and processes work immediately after us
 - **Our most important customer is our next step downstream.**
-- In technology: **Design for Operations** — operational non-functional requirements (architecture, performance, stability, testability, configurability, security) prioritized as highly as user features.
+- In technology: **Design for Operations:** operational non-functional requirements (architecture, performance, stability, testability, configurability, security) prioritized as highly as user features.
 
 ---
 
@@ -360,27 +363,27 @@ Shigeo Shingo defined seven manufacturing wastes. Modern Lean reframes "eliminat
 
 **In technology:** Conduct **blameless post-mortems** after every incident → understand how the accident occurred → agree on countermeasures → improve the system.
 
-> *"By removing blame, you remove fear; by removing fear, you enable honesty; and honesty enables prevention."* — Bethany Macri, Etsy
+> *"By removing blame, you remove fear; by removing fear, you enable honesty; and honesty enables prevention."* *(Bethany Macri, Etsy)*
 
-> *"Organizations become ever more self-diagnosing and self-improving, skilled at detecting problems and solving them."* — Dr. Steven Spear
+> *"Organizations become ever more self-diagnosing and self-improving, skilled at detecting problems and solving them."* *(Dr. Steven Spear)*
 
 ### 6.2 Institutionalize the Improvement of Daily Work
 
 - In the absence of improvements, processes **degrade over time** due to chaos and entropy (Mike Rother, *Toyota Kata*).
 - Avoiding fixes → problems and technical debt accumulate → all time spent on workarounds, no cycles for productive work.
 
-> *"Even more important than daily work is the improvement of daily work."* — Mike Orzen
+> *"Even more important than daily work is the improvement of daily work."* *(Mike Orzen)*
 
 **How to improve daily work:**
 - Reserve time in each development interval to pay down technical debt, fix defects, refactor.
-- Schedule **kaizen blitzes** — periods where engineers self-organize to fix any problem they want.
+- Schedule **kaizen blitzes:** periods where engineers self-organize to fix any problem they want.
 - Fix daily problems that have been worked around for months/years → then detect and respond to ever-weaker failure signals.
 
 **Alcoa case study (Paul O'Neill, CEO):**
 - 1987: 2% of 90,000 employees injured per year (~7 injuries per day).
 - O'Neill's first goal: **zero injuries.** Within 24 hours of any injury, notified to ensure learnings were generated.
 - Result: 95% reduction in injury rate over 10 years. Then started reporting near misses too.
-- > *"Coping, fire fighting, and making do were gradually replaced... by a dynamic of identifying opportunities for process and product improvement."* — Dr. Spear
+- > *"Coping, fire fighting, and making do were gradually replaced... by a dynamic of identifying opportunities for process and product improvement."* *(Dr. Spear)*
 
 ### 6.3 Transform Local Discoveries into Global Improvements
 
@@ -401,7 +404,7 @@ Shigeo Shingo defined seven manufacturing wastes. Modern Lean reframes "eliminat
 
 ### 6.4 Inject Resilience Patterns into Our Daily Work
 
-**Low performers** buffer against disruptions by adding "flab" — more inventory, more equipment, more people (increases cost).
+**Low performers** buffer against disruptions by adding "flab": more inventory, more equipment, more people (increases cost).
 
 **High performers** achieve the same by:
 - Improving daily operations
@@ -418,17 +421,17 @@ Shigeo Shingo defined seven manufacturing wastes. Modern Lean reframes "eliminat
 
 **Technology equivalents:**
 - Always reduce deployment lead times, increase test coverage, decrease test execution times, re-architect if needed.
-- **Game Day exercises** — rehearse large-scale failures (e.g., turning off entire data centers).
-- **Chaos Monkey** (Netflix) — randomly kill processes and servers in production to ensure resilience.
+- **Game Day exercises:** rehearse large-scale failures (e.g., turning off entire data centers).
+- **Chaos Monkey** (Netflix): randomly kill processes and servers in production to ensure resilience.
 
 ### 6.5 Leaders Reinforce a Learning Culture
 
 - Greatness is NOT achieved by leaders making all the right decisions. The leader's role is to **create the conditions so their team can discover greatness in their daily work.**
-- Leaders and frontline workers are **mutually dependent**: leaders aren't close enough to the work; frontline workers lack broader organizational context and authority.
+- Leaders and frontline workers are **mutually dependent:** leaders aren't close enough to the work; frontline workers lack broader organizational context and authority.
 - Leaders must **elevate the value of learning and disciplined problem solving.**
 
 **Mike Rother's Coaching Kata** (mirrors the scientific method):
-1. State True North goals (e.g., "sustain zero accidents" — Alcoa; "double throughput within a year" — Aisin).
+1. State True North goals (e.g., "sustain zero accidents" (Alcoa; "double throughput within a year") Aisin).
 2. Cascaded into iterative, shorter-term goals.
 3. Establish target conditions at the value stream level (e.g., "reduce lead time by 10% within the next two weeks").
 
@@ -441,13 +444,13 @@ Shigeo Shingo defined seven manufacturing wastes. Modern Lean reframes "eliminat
 - What is your next step? What is your expected outcome?
 - When can we check?
 
-> Toyota is *"an organization defined primarily by the unique behavior routines it continually teaches to all its members."* — Mike Rother
+> Toyota is *"an organization defined primarily by the unique behavior routines it continually teaches to all its members."* *(Mike Rother)*
 
 ---
 
 ## 7. Part I Conclusion
 
-The principles of Flow, Feedback, and Continual Learning form the foundation for successful DevOps organizations. These principles are not independent — **improving flow and feedback requires an iterative, scientific approach** that includes:
+The principles of Flow, Feedback, and Continual Learning form the foundation for successful DevOps organizations. These principles are not independent, **improving flow and feedback requires an iterative, scientific approach** that includes:
 
 1. Framing a target condition
 2. Stating a hypothesis of what will help get there
@@ -466,7 +469,7 @@ The outcomes are not only **better performance** but also **increased resilience
 | **Technology Value Stream** | Process of converting a business hypothesis into a technology-enabled service |
 | **Deployment Lead Time** | Time from version-control check-in to running successfully in production |
 | **Processing Time** | Time actually spent working (excludes queue time) |
-| **%C/A** | Percent Complete and Accurate — quality of output received by downstream |
+| **%C/A** | Percent Complete and Accurate: quality of output received by downstream |
 | **Single-Piece Flow** | Batch size of one; the theoretical limit for minimizing lead time |
 | **WIP (Work in Process)** | Work started but not yet completed; a leading indicator of lead time |
 | **Andon Cord** | Toyota practice: anyone can halt production to swarm on a problem |

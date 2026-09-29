@@ -632,7 +632,7 @@ flowchart TD
     C --> C2[Docker multi-stage builds]
     C --> C3[Shared CI/CD pipelines]
 
-    D --> D1[Contract testing (Pact)]
+    D --> D1["Contract testing (Pact)"]
     D --> D2[Integration test environments]
     D --> D3[Hardware-in-the-loop testing]
 

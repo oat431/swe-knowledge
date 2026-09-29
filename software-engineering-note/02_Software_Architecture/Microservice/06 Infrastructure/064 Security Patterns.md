@@ -50,6 +50,7 @@ sequenceDiagram
     G->>G: Validate JWT signature
     G->>S: GET /orders + X-User-Id header
     S-->>U: Response
+```
 
 
 ---

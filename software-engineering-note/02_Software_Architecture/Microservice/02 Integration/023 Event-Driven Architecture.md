@@ -34,6 +34,7 @@ graph LR
     EB -->|subscribe| P[Payment Service]
     EB -->|subscribe| S[Shipping Service]
     EB -->|subscribe| N[Notification Service]
+```
 
 
 One event, multiple consumers. Each service reacts independently.

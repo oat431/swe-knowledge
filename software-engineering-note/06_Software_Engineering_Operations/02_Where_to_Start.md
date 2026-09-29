@@ -7,14 +7,14 @@ tags:
   - software-engineering-operations
 ---
 
-# 02 — Where to Start
+# 02: Where to Start
 
 > **Source:** DevOps Handbook Part II (Kim, Humble, Debois, Willis)
-> **Purpose:** How to begin a DevOps transformation — organizational design via Conway's Law, team structures, integrating Ops into daily Dev work, and choosing where to start.
+> **Purpose:** How to begin a DevOps transformation: organizational design via Conway's Law, team structures, integrating Ops into daily Dev work, and choosing where to start.
 
 ## What Is This?
 
-Part II of the DevOps Handbook addresses the critical question: **where do we start a DevOps transformation?** The answer is not purely technical — it begins with _how we organize our teams_. Conway's Law dictates that system architecture mirrors organizational communication structures. To achieve fast flow from Development to Operations with high quality, we must design our organizations so Conway's Law works _for_ us, not against us.
+Part II of the DevOps Handbook addresses the critical question: **where do we start a DevOps transformation?** The answer is not purely technical; it begins with _how we organize our teams_. Conway's Law dictates that system architecture mirrors organizational communication structures. To achieve fast flow from Development to Operations with high quality, we must design our organizations so Conway's Law works _for_ us, not against us.
 
 The chapters cover: organizational archetypes (functional vs. market-oriented), designing team boundaries around business outcomes, creating loosely-coupled architectures, embedding Operations capabilities into Dev teams, and integrating Ops into daily Dev rituals (standups, retrospectives, kanban boards).
 
@@ -36,18 +36,18 @@ How we organize teams has a powerful effect on software architecture and product
 
 ### Problems of Functional Orientation ("Optimizing for Cost")
 
-- **Long lead times** — complex activities require tickets across multiple siloed groups, work waits in long queues
-- **Low visibility** — workers don't see how their work relates to value stream goals ("I'm just configuring servers because someone told me to")
-- **Resource contention** — multiple Dev teams compete for scarce Ops cycles, requiring constant escalation
-- **Poor handoffs** — rework, quality issues, bottlenecks, delays as work passes between silos
-- **Escalation gridlock** — when every team expedites, all projects move at the same slow crawl
+- **Long lead times:** complex activities require tickets across multiple siloed groups, work waits in long queues
+- **Low visibility:** workers don't see how their work relates to value stream goals ("I'm just configuring servers because someone told me to")
+- **Resource contention:** multiple Dev teams compete for scarce Ops cycles, requiring constant escalation
+- **Poor handoffs:** rework, quality issues, bottlenecks, delays as work passes between silos
+- **Escalation gridlock:** when every team expedites, all projects move at the same slow crawl
 
 ### Market-Oriented Teams ("Optimizing for Speed")
 
-To achieve DevOps outcomes, reduce functional orientation and enable market orientation — many small teams working safely and independently, quickly delivering customer value.
+To achieve DevOps outcomes, reduce functional orientation and enable market orientation; many small teams working safely and independently, quickly delivering customer value.
 
 **Characteristics:**
-- Cross-functional and independent — each team handles features, testing, security, deployment, and production support
+- Cross-functional and independent: each team handles features, testing, security, deployment, and production support
 - Responsible from idea conception to retirement
 - No manual dependencies on other teams
 - Functional skills (Ops, QA, Infosec) are either **embedded** into service teams or provided through **automated self-service platforms**
@@ -68,7 +68,7 @@ It is possible to achieve high-velocity DevOps outcomes with functional orientat
 
 ### Testing, Operations, and Security as Everyone's Job, Every Day
 
-In high-performing organizations, quality, availability, and security aren't the responsibility of individual departments — they are **everyone's job, every day**.
+In high-performing organizations, quality, availability, and security aren't the responsibility of individual departments; they are **everyone's job, every day**.
 
 **Jody Mulkey (CTO, Ticketmaster) metaphor:**
 > "Ops are the offensive linemen, and Dev are the 'skill' positions... the job of Ops is to help make sure Dev has enough time to properly execute the plays."
@@ -79,10 +79,10 @@ In high-performing organizations, quality, availability, and security aren't the
 
 Siloization occurs when departments "operate more like sovereign states" (Dr. Spear). Countermeasures:
 
-- **Enable every team member to be a generalist** — provide opportunities to learn all skills needed to build and run their systems
+- **Enable every team member to be a generalist:** provide opportunities to learn all skills needed to build and run their systems
 - **Rotate people through different roles** regularly
-- **Full-stack engineer** — familiar with the entire application stack (code, databases, OS, networking, cloud)
-- **Foster a growth mindset** (Carol Dweck) — value ability to acquire new skills, not just existing ones
+- **Full-stack engineer:** familiar with the entire application stack (code, databases, OS, networking, cloud)
+- **Foster a growth mindset** (Carol Dweck): value ability to acquire new skills, not just existing ones
 
 **CSG International (Scott Prugh):** "By cross-training and growing engineering skills, generalists can do orders of magnitude more work than their specialist counterparts, and it also improves our overall flow of work by removing queues and wait time."
 
@@ -129,10 +129,10 @@ Amazon's rule: a team only as large as can be fed with two pizzas (5–10 people
 
 **Four effects:**
 
-1. **Shared understanding** — as teams grow, communication required scales combinatorially
-2. **Limits growth rate** — by limiting team size, we limit the rate at which their system can evolve, maintaining shared understanding
-3. **Decentralizes power, enables autonomy** — each 2PT owns a key business metric (fitness function) and acts autonomously to maximize it
-4. **Leadership development** — leading a 2PT provides leadership experience where failure doesn't have catastrophic consequences
+1. **Shared understanding:** as teams grow, communication required scales combinatorially
+2. **Limits growth rate:** by limiting team size, we limit the rate at which their system can evolve, maintaining shared understanding
+3. **Decentralizes power, enables autonomy:** each 2PT owns a key business metric (fitness function) and acts autonomously to maximize it
+4. **Leadership development:** leading a 2PT provides leadership experience where failure doesn't have catastrophic consequences
 
 **Amazon CTO Werner Vogels:** "Small teams are fast... Each group assigned to a particular business is completely responsible for it.... The team scopes the fix, designs it, builds it, implements it and monitors its ongoing use."
 
@@ -140,7 +140,7 @@ Amazon's rule: a team only as large as can be fed with two pizzas (5–10 people
 
 | Strategy | Description | When to Use |
 |----------|-------------|-------------|
-| **Create Self-Service Capabilities** | Centralized platforms and tooling services any Dev team can use (production-like environments, deployment pipelines, automated testing, telemetry dashboards) | Always — the foundation. Available on-demand, no tickets required. |
+| **Create Self-Service Capabilities** | Centralized platforms and tooling services any Dev team can use (production-like environments, deployment pipelines, automated testing, telemetry dashboards) | Always, the foundation. Available on-demand, no tickets required. |
 | **Embed Ops Engineers** | Ops engineers join product teams full-time, attending all Dev rituals, influencing architecture, creating platform capabilities | For new large projects or teams that need deep Ops knowledge |
 | **Assign Ops Liaisons** | Designated Ops engineer responsible for understanding product functionality, operability, monitoring needs, infrastructure capacity, launch plans | When embedding isn't possible due to cost/scarcity; supports more teams with fewer people |
 
@@ -160,9 +160,9 @@ Amazon's rule: a team only as large as can be fed with two pizzas (5–10 people
 
 ## Case Studies
 
-### Etsy — Sprouter Elimination (2007–2011)
+### Etsy: Sprouter Elimination (2007–2011)
 
-**Problem:** Sprouter ("stored procedure router") sat between PHP application and Postgres database. Adding business logic required coordination between Dev, DBA, and Sprouter teams — three teams for what should have been one-layer changes. Almost every deployment caused a mini-outage.
+**Problem:** Sprouter ("stored procedure router") sat between PHP application and Postgres database. Adding business logic required coordination between Dev, DBA, and Sprouter teams, three teams for what should have been one-layer changes. Almost every deployment caused a mini-outage.
 
 **Solution (2009–2011):**
 - New CTO Chad Dickerson invested in site stability
@@ -173,7 +173,7 @@ Amazon's rule: a team only as large as can be fed with two pizzas (5–10 people
 
 **Result:** Eliminated multi-team coordination, decreased handoffs, increased deployment speed and success, improved site stability, higher developer productivity. Etsy became one of the most admired DevOps organizations ($200M revenue, 2015 IPO).
 
-### Target — API Enablement (2012–2015)
+### Target: API Enablement (2012–2015)
 
 **Problem:** Core data (inventory, pricing, stores) locked in legacy/mainframe systems. Multiple sources of truth between e-commerce and physical stores. New development teams needed 3–6 months for data integrations plus 3–6 months for manual testing. Required 20–30 team interactions per project, heavy project management overhead.
 
@@ -190,7 +190,7 @@ Amazon's rule: a team only as large as can be fed with two pizzas (5–10 people
 - Digital sales: +42% (2014 holidays), +32% (Q2 2015)
 - 280K in-store pickup orders on Black Friday 2015
 
-### Big Fish Games — Ops Liaison Model
+### Big Fish Games: Ops Liaison Model
 
 **Problem:** Centralized Ops supporting many autonomous business units with wildly different technologies. Scarce Ops resources competed for by multiple Dev teams. Unreliable test/integration environments, cumbersome release processes.
 
@@ -202,31 +202,31 @@ Amazon's rule: a team only as large as can be fed with two pizzas (5–10 people
 
 ## Key Takeaways
 
-1. **Conway's Law is destiny** — your org chart shapes your architecture. Design teams for the outcomes you want, not around functional silos.
+1. **Conway's Law is destiny:** your org chart shapes your architecture. Design teams for the outcomes you want, not around functional silos.
 
-2. **Optimize for speed, not just cost** — market-oriented, cross-functional teams outperform functionally-siloed organizations for DevOps outcomes.
+2. **Optimize for speed, not just cost:** market-oriented, cross-functional teams outperform functionally-siloed organizations for DevOps outcomes.
 
-3. **But functional orgs can work** — if built on high trust, transparent prioritization, sufficient slack, and automated self-service platforms (Etsy, Google, GitHub prove it).
+3. **But functional orgs can work:** if built on high trust, transparent prioritization, sufficient slack, and automated self-service platforms (Etsy, Google, GitHub prove it).
 
-4. **Quality, security, and availability are everyone's job** — not delegated to separate departments. Shared goals and shared pain (e.g., on-call rotations for devs) drive better outcomes.
+4. **Quality, security, and availability are everyone's job:** not delegated to separate departments. Shared goals and shared pain (e.g., on-call rotations for devs) drive better outcomes.
 
-5. **Invest in generalists** — cross-train engineers across the full stack; it removes queues and wait time while making work more fun.
+5. **Invest in generalists:** cross-train engineers across the full stack; it removes queues and wait time while making work more fun.
 
-6. **Fund products, not projects** — stable, ongoing service teams with dedicated engineers produce better long-term outcomes than transient project teams.
+6. **Fund products, not projects:** stable, ongoing service teams with dedicated engineers produce better long-term outcomes than transient project teams.
 
-7. **Loosely-coupled architectures enable autonomy** — services with bounded contexts, strict API interfaces, and no shared databases let small teams move fast independently.
+7. **Loosely-coupled architectures enable autonomy:** services with bounded contexts, strict API interfaces, and no shared databases let small teams move fast independently.
 
-8. **Keep teams small (two-pizza rule)** — 5–10 people max; limits communication overhead, enables autonomy, and creates leadership opportunities.
+8. **Keep teams small (two-pizza rule):** 5–10 people max; limits communication overhead, enables autonomy, and creates leadership opportunities.
 
-9. **Embed or liaison Ops into Dev** — self-service platforms, embedded Ops engineers, or Ops liaisons; all reduce dependency on centralized Operations.
+9. **Embed or liaison Ops into Dev:** self-service platforms, embedded Ops engineers, or Ops liaisons; all reduce dependency on centralized Operations.
 
-10. **Integrate Ops into Dev rituals** — standups, retrospectives, and shared kanban boards make Ops work visible and create fast feedback loops.
+10. **Integrate Ops into Dev rituals:** standups, retrospectives, and shared kanban boards make Ops work visible and create fast feedback loops.
 
 ## Related Notes
 
-- [[01_The_Three_Ways]] — Flow, Feedback, Continual Learning, Lean origins, DevOps history
-- [[03_Accelerating_Flow]] — Deployment pipeline, CI, CD, automated testing, low-risk releases
-- [[04_Amplifying_Feedback]] — Telemetry, monitoring, A/B testing, Dev/Ops collaboration
-- [[05_Continual_Learning]] — Blameless postmortems, just culture, org learning, resilience
-- [[06_DevSecOps_and_Compliance]] — Security integration, compliance as code, change management
-- [[Software Engineering Operations Overview]] — SWEBOK v4 Chapter 06 overview
+- [[01_The_Three_Ways]]: Flow, Feedback, Continual Learning, Lean origins, DevOps history
+- [[03_Accelerating_Flow]]: Deployment pipeline, CI, CD, automated testing, low-risk releases
+- [[04_Amplifying_Feedback]]: Telemetry, monitoring, A/B testing, Dev/Ops collaboration
+- [[05_Continual_Learning]]: Blameless postmortems, just culture, org learning, resilience
+- [[06_DevSecOps_and_Compliance]]: Security integration, compliance as code, change management
+- [[Software Engineering Operations Overview]]: SWEBOK v4 Chapter 06 overview

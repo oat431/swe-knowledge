@@ -96,6 +96,7 @@ graph TD
     E -->|Success| F[Return Response]
     E -->|Failure| G[Fallback]
     D -->|OPEN| G
+```
 
 
 ---

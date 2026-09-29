@@ -31,6 +31,7 @@ graph LR
     EP1 <-->|mTLS| EP2
     CP[Control Plane<br/>Istiod] -.->|configures| EP1
     CP -.->|configures| EP2
+```
 
 
 | Component | Role |

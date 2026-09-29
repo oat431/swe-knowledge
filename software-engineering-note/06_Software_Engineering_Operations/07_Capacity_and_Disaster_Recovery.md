@@ -16,9 +16,9 @@ aliases:
 created: 2026-07-21
 ---
 
-# 07 — Capacity Management & Disaster Recovery
+# 07: Capacity Management & Disaster Recovery
 
-> **Source:** SWEBOK v4 Chapter 06 — Software Engineering Operations, Section 6.2
+> **Source:** SWEBOK v4 Chapter 06, Software Engineering Operations, Section 6.2
 > **Focus:** Ensuring systems can handle current and future workloads, and that services can be recovered within acceptable time and data-loss boundaries after a disruptive event.
 
 ---
@@ -66,7 +66,7 @@ Before sizing infrastructure, characterize the workload:
 | **Read/write ratio** | 80% reads / 20% writes |
 | **Seasonality** | 3x traffic during holiday sales |
 
-Workload characterization feeds into **sizing models** — mathematical or simulation-based representations of how a system behaves under load.
+Workload characterization feeds into **sizing models:** mathematical or simulation-based representations of how a system behaves under load.
 
 #### 2.2 Sizing Approaches
 
@@ -102,6 +102,7 @@ Baselines should be captured after every significant change (new feature, infras
 ### 3. Capacity Planning Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     A[Business Requirements] --> B[Workload Forecasting]
     B --> C[Resource Modeling]
@@ -119,14 +120,14 @@ A capacity plan is a formal document that:
 1. **States current utilization** across all resource types
 2. **Projects future demand** for 3, 6, and 12 month horizons
 3. **Identifies constraints** (physical limits, licensing, budget)
-4. **Presents costed options** — each with trade-offs:
+4. **Presents costed options:** each with trade-offs:
 
 | Option | Description | Cost | Risk | Timeline |
 |---|---|---|---|---|
-| **Option A: Do nothing** | Accept current risk | $0 | High — projected demand exceeds capacity in 4 months | N/A |
-| **Option B: Vertical scale-up** | Upgrade to larger instances | $8K/mo | Low — proven approach | 1 week |
-| **Option C: Horizontal scale-out** | Add 4 more app servers | $12K/mo | Medium — requires load balancer tuning | 2 weeks |
-| **Option D: Architecture change** | Migrate to serverless | $15K/mo (variable) | High — re-architecture needed | 3 months |
+| **Option A: Do nothing** | Accept current risk | $0 | High; projected demand exceeds capacity in 4 months | N/A |
+| **Option B: Vertical scale-up** | Upgrade to larger instances | $8K/mo | Low; proven approach | 1 week |
+| **Option C: Horizontal scale-out** | Add 4 more app servers | $12K/mo | Medium, requires load balancer tuning | 2 weeks |
+| **Option D: Architecture change** | Migrate to serverless | $15K/mo (variable) | High; re-architecture needed | 3 months |
 
 #### 3.2 SLA-Driven Capacity Planning
 
@@ -140,7 +141,7 @@ Capacity decisions must be driven by **Service Level Agreements** (see [[08_Serv
 | Throughput | 10,000 req/s sustained | Horizontal scaling or vertical headroom |
 | Error rate | < 0.1% | Circuit breakers, retry budgets |
 
-**Headroom planning**: Always provision 20-30% above peak expected load to absorb:
+**Headroom planning:** Always provision 20-30% above peak expected load to absorb:
 - Traffic spikes
 - Instance failures (N-1 scenarios)
 - Background tasks (backups, compactions)
@@ -153,15 +154,15 @@ Capacity decisions must be driven by **Service Level Agreements** (see [[08_Serv
 | Aspect | Vertical (Scale Up) | Horizontal (Scale Out) |
 |---|---|---|
 | **Approach** | Bigger machine (more CPU/RAM/disk) | More machines |
-| **Complexity** | Low — same architecture | High — requires stateless design, load balancing |
+| **Complexity** | Low (same architecture | High) requires stateless design, load balancing |
 | **Limit** | Hardware ceiling (single machine max) | Theoretically unlimited |
 | **Downtime** | Often requires restart | Zero-downtime with rolling deploys |
 | **Cost curve** | Exponential (enterprise hardware) | Linear (commodity hardware) |
-| **State management** | Simple — local state | Complex — distributed state, consistency |
+| **State management** | Simple (local state | Complex) distributed state, consistency |
 | **Fault tolerance** | Single point of failure | Redundancy by design |
 | **Best for** | Databases (initially), legacy apps, stateful services | Web apps, microservices, stateless workloads |
 
-**Practical guidance**: Start vertical until you hit constraints, then go horizontal. Many systems benefit from a hybrid: vertically scaled database + horizontally scaled application tier.
+**Practical guidance:** Start vertical until you hit constraints, then go horizontal. Many systems benefit from a hybrid: vertically scaled database + horizontally scaled application tier.
 
 #### 4.1 Auto-Scaling Strategies
 
@@ -198,11 +199,11 @@ Capacity planning without monitoring is guessing. Key metrics:
 
 Disaster recovery (DR) is the set of policies, tools, and procedures to recover technology systems after a catastrophic event. Events include:
 
-- **Natural disasters**: Earthquakes, floods, hurricanes
-- **Infrastructure failures**: Datacenter power loss, network partition
-- **Cyber attacks**: Ransomware, data destruction
-- **Human error**: Accidental deletion, misconfiguration
-- **Supply chain**: Cloud provider outage, DNS failure
+- **Natural disasters:** Earthquakes, floods, hurricanes
+- **Infrastructure failures:** Datacenter power loss, network partition
+- **Cyber attacks:** Ransomware, data destruction
+- **Human error:** Accidental deletion, misconfiguration
+- **Supply chain:** Cloud provider outage, DNS failure
 
 #### 6.1 RPO and RTO
 
@@ -218,11 +219,12 @@ Derived metrics:
 
 | Metric | Definition |
 |---|---|
-| **MTTR** (Mean Time to Recover) | Actual average recovery time — must be < RTO |
+| **MTTR** (Mean Time to Recover) | Actual average recovery time; must be < RTO |
 | **MTD** (Maximum Tolerable Downtime) | Absolute ceiling beyond which the business cannot survive |
 | **WRT** (Work Recovery Time) | Time to verify data integrity and consistency after recovery |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','titleColor':'#1FB854','lineColor':'#1FB854','cScale0':'#19362D','cScale1':'#1EB88E','cScale2':'#1FB8AB','cScale3':'#00B5FF','timelineEventColor':'#1FB854','timelineEventTextColor':'#000000','timelineLabelColor':'#CAC9C9','fontSize':'14px'}}}%%
 timeline
     title Disaster Timeline
     section Data Loss Window
@@ -260,7 +262,7 @@ timeline
 
 #### 7.2 Backup Rotation Schemes
 
-**The 3-2-1 Rule**: 3 copies of data, on 2 different media types, with 1 copy offsite.
+**The 3-2-1 Rule:** 3 copies of data, on 2 different media types, with 1 copy offsite.
 
 | Scheme | Description | Pros | Cons |
 |---|---|---|---|
@@ -296,6 +298,7 @@ timeline
 #### 8.1 Active-Passive
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     LB[Load Balancer] --> A[Active Site]
     LB -.->|failover| P[Passive Site]
@@ -308,11 +311,12 @@ flowchart LR
 | **Data sync** | Synchronous or asynchronous replication |
 | **Failover time** | Minutes (manual) to seconds (automated health checks) |
 | **Cost** | 2x infrastructure, but passive can be smaller |
-| **Risk** | "Failover fright" — passive may not work if never tested |
+| **Risk** | "Failover fright"; passive may not work if never tested |
 
 #### 8.2 Active-Active
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     LB[Global Load Balancer] --> A1[Site A]
     LB --> A2[Site B]
@@ -336,6 +340,7 @@ flowchart LR
 | **Cold standby** | Hours to days | Low | Infrastructure blueprints ready, backups available, manual provisioning |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TB
     subgraph Hot Standby
         H1[Running Instance] -->|real-time sync| H2[Standby Instance]
@@ -352,7 +357,7 @@ flowchart TB
 
 ### 9. Recovery Rehearsal
 
-> *"Hope is not a strategy."* — Recovery must be practiced, not just documented.
+> *"Hope is not a strategy."* Recovery must be practiced, not just documented.
 
 #### 9.1 Types of Rehearsal
 
@@ -401,6 +406,7 @@ Infrastructure as Code (IaC) transforms DR from a manual, error-prone process in
 **DR with IaC workflow:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Git Repository] --> B[IaC Templates]
     B --> C{DR Event}
@@ -413,11 +419,11 @@ flowchart TD
 ```
 
 **Benefits of IaC for DR:**
-- **Reproducibility**: Identical environments every time
-- **Version control**: Track changes to DR infrastructure
-- **Testing**: Validate DR by applying to a test environment
-- **Speed**: Automated provisioning vs. manual setup
-- **Documentation**: The code IS the documentation
+- **Reproducibility:** Identical environments every time
+- **Version control:** Track changes to DR infrastructure
+- **Testing:** Validate DR by applying to a test environment
+- **Speed:** Automated provisioning vs. manual setup
+- **Documentation:** The code IS the documentation
 
 ---
 
@@ -441,7 +447,7 @@ flowchart TD
 | Best-of-breed services | Use each cloud's strengths | Integration complexity |
 | DR across providers | Active in one cloud, standby in another | Data transfer costs |
 
-**Multi-cloud reality check**: True multi-cloud (same app running on multiple clouds simultaneously) is extremely complex. Most organizations mean **multi-cloud adjacent** — different workloads on different clouds, with shared networking.
+**Multi-cloud reality check:** True multi-cloud (same app running on multiple clouds simultaneously) is extremely complex. Most organizations mean **multi-cloud adjacent:** different workloads on different clouds, with shared networking.
 
 ---
 
@@ -468,7 +474,7 @@ flowchart TD
 5. **Chaos engineering** closes the gap between DR documentation and actual recovery capability.
 6. **The 3-2-1 rule** (3 copies, 2 media, 1 offsite) remains the gold standard for backup strategy.
 7. **Start with vertical scaling** for simplicity; go horizontal when you hit limits or need fault tolerance.
-8. **Auto-scaling requires stateless design** — plan your architecture accordingly.
+8. **Auto-scaling requires stateless design:** plan your architecture accordingly.
 
 ---
 
@@ -476,11 +482,11 @@ flowchart TD
 
 | Term | Definition |
 |---|---|
-| **RPO** | Recovery Point Objective — maximum tolerable data loss |
-| **RTO** | Recovery Time Objective — maximum tolerable downtime |
-| **MTTR** | Mean Time to Recover — actual average recovery time |
-| **MTD** | Maximum Tolerable Downtime — absolute business survival limit |
-| **WRT** | Work Recovery Time — time to verify data after recovery |
+| **RPO** | Recovery Point Objective: maximum tolerable data loss |
+| **RTO** | Recovery Time Objective: maximum tolerable downtime |
+| **MTTR** | Mean Time to Recover: actual average recovery time |
+| **MTD** | Maximum Tolerable Downtime: absolute business survival limit |
+| **WRT** | Work Recovery Time: time to verify data after recovery |
 | **GFS** | Grandfather-Father-Son backup rotation scheme |
 | **Failover** | Automatic or manual switch to a standby system |
 | **Split-brain** | Two nodes believe they are both primary |

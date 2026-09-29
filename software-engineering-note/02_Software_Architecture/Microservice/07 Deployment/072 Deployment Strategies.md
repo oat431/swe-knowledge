@@ -44,6 +44,7 @@ graph LR
         N2c[New P2]
         O3c[Old P3] -->|replace| N3[New P3]
     end
+```
 
 
 | ✅ | ❌ |
@@ -74,6 +75,7 @@ graph LR
     
     L -->|100% traffic| G
     B
+```
 
 
 | Step | Action |
@@ -111,6 +113,7 @@ graph TD
     end
     V2A --> V1B
     V2B --> LB3
+```
 
 
 | Tool | How |

@@ -18,9 +18,9 @@ aliases:
 created: 2026-07-21
 ---
 
-# 09 — Operations Standards & Practices
+# 09: Operations Standards & Practices
 
-> **Source:** SWEBOK v4 Chapter 06 — Software Engineering Operations, Section 6.5
+> **Source:** SWEBOK v4 Chapter 06, Software Engineering Operations, Section 6.5
 > **Focus:** Standards, frameworks, and modern practices that structure operational work: ISO/IEC 29110, ITIL v4, environment parity, operational risk management, end-to-end automation, GitOps, and platform engineering.
 
 ---
@@ -31,13 +31,13 @@ Operational excellence requires more than tools and talent; it requires **struct
 
 This note covers:
 
-1. **ISO/IEC 29110** — Lifecycle profiles for Very Small Entities
-2. **ITIL v4** — The IT service management framework
-3. **Environment Parity** — Keeping dev, staging, and production consistent
-4. **Operational Risk Management** — Identifying and mitigating operational risks
-5. **End-to-End Automation** — From provisioning to remediation
-6. **GitOps** — Git as the single source of truth for infrastructure
-7. **Platform Engineering** — Internal developer platforms and golden paths
+1. **ISO/IEC 29110:** Lifecycle profiles for Very Small Entities
+2. **ITIL v4:** The IT service management framework
+3. **Environment Parity:** Keeping dev, staging, and production consistent
+4. **Operational Risk Management:** Identifying and mitigating operational risks
+5. **End-to-End Automation:** From provisioning to remediation
+6. **GitOps:** Git as the single source of truth for infrastructure
+7. **Platform Engineering:** Internal developer platforms and golden paths
 
 ---
 
@@ -49,7 +49,7 @@ ISO/IEC 29110 is a series of standards and guides titled **"Lifecycle profiles f
 
 | Aspect | Detail |
 |---|---|
-| **Full title** | ISO/IEC 29110: Systems and Software Engineering — Lifecycle Profiles for Very Small Entities |
+| **Full title** | ISO/IEC 29110: Systems and Software Engineering, Lifecycle Profiles for Very Small Entities |
 | **Target** | Very Small Entities (VSEs): 1-25 people |
 | **Structure** | 5-part standard with profiles, process definitions, assessment guidelines |
 | **Profiles** | Entry, Basic, Intermediate, Advanced |
@@ -70,6 +70,7 @@ ISO/IEC 29110 is a series of standards and guides titled **"Lifecycle profiles f
 The standard defines four profiles of increasing maturity:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     E[Entry Profile] --> B[Basic Profile]
     B --> I[Intermediate Profile]
@@ -95,10 +96,10 @@ ISO/IEC 29110 defines processes grouped into categories:
 | **Operational (OP)** | Operation, Maintenance | Post-delivery operations (Advanced profile) |
 
 **Each process is defined with:**
-- **Purpose**: What the process achieves
-- **Outcomes**: Measurable results
-- **Base practices**: Activities that achieve the outcomes
-- **Work products**: Outputs of the practices
+- **Purpose:** What the process achieves
+- **Outcomes:** Measurable results
+- **Base practices:** Activities that achieve the outcomes
+- **Work products:** Outputs of the practices
 
 ### 5. ISO 29110 Assessment
 
@@ -125,7 +126,7 @@ Assessment evaluates a VSE against a specific profile:
 | **CMMI** | All organizations | High | Maturity model adoption, government contracts |
 | **ISO 9001** | All organizations | Medium | Quality management systems |
 
-> **Key insight**: ISO 29110 is not a "lite" version of larger standards; it is a **right-sized** adaptation that acknowledges VSEs have different constraints and strengths.
+> **Key insight:** ISO 29110 is not a "lite" version of larger standards; it is a **right-sized** adaptation that acknowledges VSEs have different constraints and strengths.
 
 ---
 
@@ -145,6 +146,7 @@ ITIL (Information Technology Infrastructure Library) is the most widely adopted 
 ### 8. ITIL v4 Service Value System (SVS)
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TB
     GOV[Governance] --> SVC[Service Value Chain]
     SVC --> PRACTICES[Practices]
@@ -208,10 +210,10 @@ flowchart TB
 
 | Environment | Purpose | Data | Access | Stability Requirement |
 |---|---|---|---|---|
-| **Development** | Active coding, experimentation | Synthetic / mocked | Developers | Low — break freely |
-| **Integration / CI** | Automated build and test | Synthetic | Automated | Medium — must be reliable for CI |
-| **Staging / Pre-production** | Final validation before release | Production-like (masked) | QA + limited dev | High — mirrors production |
-| **Production** | Live user traffic | Real | Operations + controlled access | Highest — change-averse |
+| **Development** | Active coding, experimentation | Synthetic / mocked | Developers | Low; break freely |
+| **Integration / CI** | Automated build and test | Synthetic | Automated | Medium; must be reliable for CI |
+| **Staging / Pre-production** | Final validation before release | Production-like (masked) | QA + limited dev | High, mirrors production |
+| **Production** | Live user traffic | Real | Operations + controlled access | Highest; change-averse |
 
 ### 12. Environment Parity Problem
 
@@ -248,6 +250,7 @@ flowchart TB
 **Drift detection in CI/CD:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     A[Git: Desired State] --> B[CI Pipeline]
     B --> C[Drift Detection]
@@ -341,6 +344,7 @@ The goal of end-to-end automation is to minimize human intervention in routine o
 ### 20. Automation Maturity Model
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     L0[L0: Manual] --> L1[L1: Scripted]
     L1 --> L2[L2: Orchestrated]
@@ -374,6 +378,7 @@ GitOps is an operational framework that applies DevOps best practices (version c
 ### 22. GitOps Workflow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     DEV[Developer] -->|Push code| APP_REPO[Application Repo]
     DEV -->|Update config| ENV_REPO[Environment/Config Repo]
@@ -399,11 +404,11 @@ flowchart TD
 
 | Benefit | Challenge |
 |---|---|
-| **Auditability**: Every change is a Git commit with author, timestamp, and review | **Secret management**: Sensitive data must be encrypted (SOPS, Sealed Secrets) |
-| **Rollability**: Revert a Git commit to roll back | **Multi-environment**: Managing per-environment overlays (Kustomize) |
-| **Collaboration**: PRs enable review and discussion | **Drift**: Manual changes outside Git create reconciliation conflicts |
-| **Consistency**: Same workflow for app code and infra | **Learning curve**: Teams must learn declarative paradigm |
-| **Security**: Reduced access to production clusters | **Complexity**: Additional tooling and agent management |
+| **Auditability:** Every change is a Git commit with author, timestamp, and review | **Secret management:** Sensitive data must be encrypted (SOPS, Sealed Secrets) |
+| **Rollability:** Revert a Git commit to roll back | **Multi-environment:** Managing per-environment overlays (Kustomize) |
+| **Collaboration:** PRs enable review and discussion | **Drift:** Manual changes outside Git create reconciliation conflicts |
+| **Consistency:** Same workflow for app code and infra | **Learning curve:** Teams must learn declarative paradigm |
+| **Security:** Reduced access to production clusters | **Complexity:** Additional tooling and agent management |
 
 ---
 
@@ -424,26 +429,27 @@ Platform engineering is the discipline of building and maintaining **Internal De
 ### 26. IDP Components
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TB
-    subgraph Developer Experience
+    subgraph DE["Developer Experience"]
         CLI[CLI Tools]
         PORTAL[Developer Portal]
         TEMPLATES[Project Templates]
     end
-    subgraph Platform Services
+    subgraph PS["Platform Services"]
         CI[CI/CD Pipelines]
         OBS[Observability Stack]
         SECRETS[Secret Management]
         CATALOG[Service Catalog]
     end
-    subgraph Infrastructure
+    subgraph INF["Infrastructure"]
         K8S[Kubernetes Clusters]
         DB[Managed Databases]
         NET[Networking]
         STORAGE[Object Storage]
     end
-    Developer Experience --> Platform Services
-    Platform Services --> Infrastructure
+    DE --> PS
+    PS --> INF
 ```
 
 | Component | Purpose | Example Tools |
@@ -498,7 +504,7 @@ A **golden path** is the organization's recommended, well-supported way to accom
 |---|---|
 | [[01_The_Three_Ways|The Three Ways]] | Flow (automation reduces handoffs), Feedback (monitoring/reconciliation), Learning (platform iteration) |
 | [[02_Where_to_Start|Where to Start]] | ISO 29110 for VSEs starting their journey; platform engineering as maturity grows |
-| [[03_Accelerating_Flow|Accelerating Flow]] | Golden paths reduce friction; GitOps eliminates deployment bottlenecks |
+| [[03_Accelerating_Flow|Accelerating Flow]] | Golden paths reduce friction; gitOps eliminates deployment bottlenecks |
 | [[04_Amplifying_Feedback|Amplifying Feedback]] | Drift detection, risk monitoring, observability in IDPs |
 | [[05_Continual_Learning|Continual Learning]] | ITIL continual improvement, platform team retrospectives |
 | [[06_DevSecOps_and_Compliance|DevSecOps]] | Compliance as code, security in GitOps pipelines |
@@ -533,7 +539,7 @@ A **golden path** is the organization's recommended, well-supported way to accom
 | **Golden path** | Organization's recommended, well-supported workflow |
 | **Configuration drift** | Divergence between desired and actual state |
 | **GitOps** | Operational framework using Git as single source of truth |
-| **SOPS** | Secrets OPerationS — encrypted files in Git |
+| **SOPS** | Secrets OPerationS: encrypted files in Git |
 | **Reconciliation** | Process of bringing actual state in line with desired state |
 | **Platform engineering** | Discipline of building internal developer platforms |
 | **Paved road** | Easy, supported way to accomplish a task |

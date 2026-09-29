@@ -45,6 +45,7 @@ sequenceDiagram
     
     Note over P,I: On failure: publish PaymentFailed / ReservationFailed
     Note over O: Listen for failure events → compensate
+```
 
 
 **✅ Simple, loosely coupled** | **❌ Hard to see the full flow, cyclic dependencies possible**
@@ -71,6 +72,7 @@ sequenceDiagram
     Note over SO: Compensating transactions
     SO->>P: Refund Payment
     SO->>O: Cancel Order
+```
 
 
 **✅ Clear flow, easy to understand** | **❌ Orchestrator = single point of coordination**

@@ -32,13 +32,14 @@ Continuous Deploy:   Code → Build → Test → Deploy to Staging → Deploy to
 
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     BUILD["Build"] --> TEST["Test"] --> SCAN["Security Scan"] --> DEPLOY["Deploy"]
     
-    style BUILD fill:#dae8fc
-    style TEST fill:#d5e8d4
-    style SCAN fill:#fff2cc
-    style DEPLOY fill:#e1d5e7
+    style BUILD fill:#00B5FF,color:#000000
+    style TEST fill:#1FB854,color:#000000
+    style SCAN fill:#FFBE00,color:#000000
+    style DEPLOY fill:#1FB8AB,color:#000000
 ```
 
 
@@ -275,7 +276,7 @@ pipeline {
 
 ❌ **Running everything sequentially:**
 ```yaml
-# Slow — tests wait for lint, lint waits for build
+# Slow - tests wait for lint, lint waits for build
 jobs:
   build:
     ...
@@ -310,7 +311,7 @@ This produces 4 jobs: Java 17 × Ubuntu, Java 17 × Windows, Java 21 × Ubuntu, 
 
 ### Caching Dependencies
 
-❌ **No caching — download everything every time:**
+❌ **No caching: download everything every time:**
 ```yaml
 steps:
   - run: mvn clean verify  # ❌ downloads all deps from scratch
@@ -403,7 +404,7 @@ env:
 
 - [[04 API CI-CD]]
 - [[03 CI-CD & Headless Testing]]
-- [[07 Deployment Strategies]]
+- [[../02_Software_Architecture/Microservice/07 Deployment/072 Deployment Strategies|Deployment Strategies]]
 
 ---
 
@@ -412,4 +413,4 @@ env:
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
 - [GitLab CI/CD Documentation](https://docs.gitlab.com/ee/ci/)
 - [Jenkins Pipeline Documentation](https://www.jenkins.io/doc/book/pipeline/)
-- [The Twelve-Factor App — CI/CD](https://12factor.net/)
+- [The Twelve-Factor App: CI/CD](https://12factor.net/)

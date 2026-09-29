@@ -28,6 +28,7 @@ flowchart LR
     InternalLB --> SvcB1[Service B - 1]
     InternalLB --> SvcB2[Service B - 2]
     InternalLB --> SvcB3[Service B - 3]
+```
 
 
 ---

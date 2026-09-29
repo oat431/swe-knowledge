@@ -49,6 +49,7 @@ sequenceDiagram
     R->>B: Publish event
     B-->>R: ACK
     R->>DB: UPDATE outbox SET published_at = NOW()
+```
 
 
 Single DB transaction = atomic guarantee. The relay handles delivery separately.

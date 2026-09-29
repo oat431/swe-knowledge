@@ -11,23 +11,23 @@ tags:
   - microservices
 ---
 
-# Accelerating Flow — The Deployment Pipeline & Low-Risk Releases
+# Accelerating Flow: The Deployment Pipeline & Low-Risk Releases
 
-> **Source:** *The DevOps Handbook*, Part III — "The Technical Practices of Flow" (Chapters 12–13)
+> **Source:** *The DevOps Handbook*, Part III, "The Technical Practices of Flow" (Chapters 12–13)
 > **Purpose:** Enable fast, safe flow from Development to Operations via automated deployment pipelines, decoupled releases, and evolutionary architecture.
 
 ---
 
 ## The Problem: The Deployment Downward Spiral
 
-When deployments are manual, time-consuming, painful, and error-prone, teams deploy less frequently. Less frequent deployments mean larger batch sizes, which increase the risk of unexpected outcomes and make fixes harder. This creates a **self-reinforcing downward spiral**:
+When deployments are manual, time-consuming, painful, and error-prone, teams deploy less frequently. Less frequent deployments mean larger batch sizes, which increase the risk of unexpected outcomes and make fixes harder. This creates a **self-reinforcing downward spiral:**
 
 ```
 Painful deployments → Deploy less often → Larger batch size →
 Higher risk → More painful deployments → (repeat)
 ```
 
-**The goal:** Make deployments a **routine, low-risk part of everyone's daily work** — automated, repeatable, and predictable.
+**The goal:** Make deployments a **routine, low-risk part of everyone's daily work:** automated, repeatable, and predictable.
 
 ---
 
@@ -59,7 +59,7 @@ Higher risk → More painful deployments → (repeat)
 | Requirement | Why |
 |-------------|-----|
 | **Deploy the same way everywhere** | Production deployments succeed because they've been practiced dozens of times in lower environments |
-| **Smoke test deployments** | Verify connectivity to all supporting systems (DB, message bus, external services) and run a test transaction — **fail the deployment** if any smoke test fails |
+| **Smoke test deployments** | Verify connectivity to all supporting systems (DB, message bus, external services) and run a test transaction; **fail the deployment** if any smoke test fails |
 | **Maintain consistent environments** | Dev, test, and production must stay synchronized via a common build mechanism |
 
 When deployment problems occur: **pull the Andon cord** and swarm the problem.
@@ -70,12 +70,12 @@ Jenkins Build Pipeline plugin, ThoughtWorks Go.cd, Snap CI, Microsoft Visual Stu
 
 ---
 
-## Case Study: CSG International — Daily Deployments
+## Case Study: CSG International: Daily Deployments
 
 - **Context:** One of the largest US bill-printing operations. Production releases were twice per year (28-week intervals), while dev deployments happened daily.
 - **Problem:** "Practice team" (Dev) practiced daily in low-risk environments; "game team" (Ops) got few attempts, practicing only in high-risk production with different constraints (security, firewalls, load balancers, SAN).
 - **Solution:** Created a **Shared Operations Team (SOT)** managing all environments and performing daily deployments to dev/test, plus production releases every 14 weeks.
-- **Why it worked:** Daily deployments created motivation to automate and fix issues — problems left unfixed would recur the next day. Deployments were performed ~100 times before production release.
+- **Why it worked:** Daily deployments created motivation to automate and fix issues, problems left unfixed would recur the next day. Deployments were performed ~100 times before production release.
 - **Results:**
   - Production incidents: ↓ 91%
   - MTTR: ↓ 80%
@@ -113,22 +113,22 @@ Once deployment is automated, the pipeline must provide:
 3. **Push-button, self-service** deployment of any suitable version
 4. **Automated audit records** (what commands, which machines, when, who authorized, output)
 5. **Smoke tests** confirming system operation and config correctness
-6. **Fast feedback** — deployer must quickly know if deployment succeeded
+6. **Fast feedback:** deployer must quickly know if deployment succeeded
 
 > 2014 State of DevOps Report: High performers had deployment lead times in **minutes or hours**; lowest performers measured in **months**.
 
 ---
 
-## Case Study: Etsy — Self-Service Continuous Deployment
+## Case Study: Etsy: Self-Service Continuous Deployment
 
-- **Culture:** Anyone can deploy — Dev, Ops, Infosec. New engineers deploy on day one. Board members and even dogs have deployed.
+- **Culture:** Anyone can deploy: Dev, Ops, Infosec. New engineers deploy on day one. Board members and even dogs have deployed.
 - **Process:** Engineers queue in chat room (~15 people daily deploying ~25 changesets). Notified when it's their turn.
 - **Testing pipeline:**
   - 4,500 unit tests on workstation (<1 minute, external calls stubbed)
   - 7,000+ trunk tests on CI servers (11 minutes, parallelized across 10 Jenkins machines)
   - Smoke tests (cURL-driven PHPUnit)
   - Functional tests (GUI-driven, end-to-end) on a **production server taken out of rotation** ("Princess")
-- **Tool:** Deployinator — push-button deploys, chat notifications with diff links, email summaries
+- **Tool:** Deployinator: push-button deploys, chat notifications with diff links, email summaries
 - **Result:** 2009 = stress and fear; by 2011 = routine, 25–50 deploys/day
 
 ---
@@ -159,13 +159,14 @@ Once deployment is automated, the pipeline must provide:
 
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     ROUTER["Router"] --> BLUE["BLUE (staging)"]
     ROUTER --> GREEN["GREEN (LIVE)"]
     GREEN -->|"⚡ customer traffic"| USERS["Users"]
     
-    style BLUE fill:#dae8fc,stroke:#6c8ebf
-    style GREEN fill:#d5e8d4,stroke:#82b366
+    style BLUE fill:#00B5FF,stroke:#000000,color:#000000
+    style GREEN fill:#1FB854,stroke:#000000,color:#000000
 ```
 
 
@@ -183,11 +184,11 @@ flowchart LR
 - **Two databases** (blue and green DBs): backup blue DB, restore to green, switch traffic. Risk: potential transaction loss on rollback.
 - **Decouple DB changes from app changes** (expand/contract pattern): only additive DB changes, never mutate existing objects, app makes no assumptions about DB version.
 
-### Case Study: Dixons Retail — Blue-Green for Point-of-Sale
+### Case Study: Dixons Retail: Blue-Green for Point-of-Sale
 
 - Applied blue-green to thick-client POS systems (not just web services)
 - Used slow network links to push new POS client installers weeks ahead in inactive state
-- Store managers chose when to release — far better than centralized IT choosing
+- Store managers chose when to release: far better than centralized IT choosing
 - Result: smoother, faster release; higher manager satisfaction; minimal store disruption
 
 ### Canary Release
@@ -245,7 +246,7 @@ Deploy all functionality to production, keep it hidden behind feature toggles, t
 
 **Process:**
 1. Deploy code to production (feature hidden)
-2. Modify user sessions to make invisible calls to new features — log/discard results
+2. Modify user sessions to make invisible calls to new features: log/discard results
 3. Start with 1% of users, progressively increase
 4. Find and fix problems under realistic production loads
 5. On launch day: change toggle setting → feature goes live
@@ -259,7 +260,7 @@ Deploy all functionality to production, keep it hidden behind feature toggles, t
   - Chat visible only to Chat team → internal employees → hidden from external users via Gatekeeper
   - Every user's browser loaded a test harness: invisible chat messages sent to back-end service already in production
   - Every Facebook user became part of a massive load-testing program
-- **Launch:** Incremental rollout — internal → 1% → 5% → progressively larger segments
+- **Launch:** Incremental rollout: internal → 1% → 5% → progressively larger segments
 - **Result:** "The secret for going from zero to seventy million users overnight is to avoid doing it all in one fell swoop."
 
 ---
@@ -291,7 +292,7 @@ Tightly-coupled architectures create:
 
 ### Evolutionary Architecture
 
-> "Any successful product or organization's architecture will necessarily evolve over its life cycle." — Jez Humble
+> "Any successful product or organization's architecture will necessarily evolve over its life cycle." *(Jez Humble)*
 
 - eBay and Google are each on their **fifth entire rewrite**
 - The right architecture at startup (monolith for rapid prototyping) is wrong at scale (microservices for independent team velocity)
@@ -307,13 +308,13 @@ Tightly-coupled architectures create:
 
 ### Case Study: Amazon's Evolutionary Architecture (2002)
 
-- **Before (1996-2001):** Monolithic Obidos application — all business logic, display logic, and functionality in one tangle
-- **Problem:** "It couldn't evolve anymore" — complex sharing relationships meant nothing could be scaled independently
+- **Before (1996-2001):** Monolithic Obidos application: all business logic, display logic, and functionality in one tangle
+- **Problem:** "It couldn't evolve anymore": complex sharing relationships meant nothing could be scaled independently
 - **Transformation:** Two-tier monolith → fully-distributed, decentralized services platform
 - **Three lessons:**
   1. Strict service orientation achieves unprecedented isolation, ownership, and control
   2. Prohibiting direct DB access lets you scale/reliability-improve service state without involving clients
-  3. Each service has a dedicated team completely responsible for it — scoping, architecting, building, and operating
+  3. Each service has a dedicated team completely responsible for it: scoping, architecting, building, and operating
 - **Results:** 15,000 deploys/day (2011) → 136,000 deploys/day (2015)
 
 ### The Strangler Application Pattern
@@ -321,6 +322,7 @@ Tightly-coupled architectures create:
 > Coined by Martin Fowler (2004), inspired by strangler vines that gradually envelop and replace their host tree.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph LEGACY["Legacy Monolith (behind API)"]
         OLD_A["Old Func A"]
@@ -331,28 +333,28 @@ flowchart TD
     LEGACY --> API1["New API Service"]
     LEGACY --> API2["New API Service"]
     
-    style LEGACY fill:#f8cecc,stroke:#b85450
-    style API1 fill:#d5e8d4,stroke:#82b366
-    style API2 fill:#d5e8d4,stroke:#82b366
+    style LEGACY fill:#FF5861,stroke:#000000,color:#000000
+    style API1 fill:#1FB854,stroke:#000000,color:#000000
+    style API2 fill:#1FB854,stroke:#000000,color:#000000
 ```
 
 
 **Process:**
-1. Place existing functionality behind an API — stop making changes to it
+1. Place existing functionality behind an API: stop making changes to it
 2. Implement all **new** functionality in the desired architecture
 3. Call old system through versioned APIs when necessary
 4. Over time, legacy application shrinks; may disappear entirely
 
 **Versioned APIs (immutable services):** Create a new API version when arguments change; migrate dependent teams. Never allow new services to get tightly-coupled again (e.g., direct DB access).
 
-### Case Study: Blackboard Learn — Strangler Pattern (2011)
+### Case Study: Blackboard Learn: Strangler Pattern (2011)
 
 - **Context:** Legacy J2EE codebase dating to 1997, with fragments of Perl still embedded
 - **Symptoms:** Build/integration/test took 24-36 hours for feedback; lines of code increasing but commits decreasing
-- **Solution:** "Building Blocks" — separate modules decoupled from monolith, accessed through fixed APIs
+- **Solution:** "Building Blocks": separate modules decoupled from monolith, accessed through fixed APIs
 - **Results:**
   - Monolith codebase shrunk as developers moved to Building Blocks
-  - "Every developer given a choice would work in the Building Block codebase — more autonomy, freedom, and safety"
+  - "Every developer given a choice would work in the Building Block codebase: more autonomy, freedom, and safety"
   - Exponential growth in Building Block commits and code
   - Mistakes → small local failures instead of global catastrophes
 
@@ -379,9 +381,9 @@ flowchart TD
 
 ## Related Notes
 
-- [[Fundamental/13 CI CD Pipelines|CI/CD Pipelines]] — Practical pipeline implementation with GitHub Actions, GitLab CI, Jenkins
-- [[Fundamental/14 Docker & Containerization|Docker & Containerization]] — Container-based deployment infrastructure
-- [[Software Engineering Operations Overview]] — SWEBOK v4 overview of operations engineering
+- [[Fundamental/13 CI CD Pipelines|CI/CD Pipelines]]: Practical pipeline implementation with GitHub Actions, GitLab CI, Jenkins
+- [[Fundamental/14 Docker & Containerization|Docker & Containerization]]: Container-based deployment infrastructure
+- [[Software Engineering Operations Overview]]: SWEBOK v4 overview of operations engineering
 
 ---
 

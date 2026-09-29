@@ -8,7 +8,7 @@ tags:
 
 # Docker & Containerization
 
-Containers revolutionized how we package and deploy applications. Docker makes it possible to build once and run anywhere — from a developer laptop to production clusters. Understanding containers is non-negotiable for modern backend engineering.
+Containers revolutionized how we package and deploy applications. Docker makes it possible to build once and run anywhere, from a developer laptop to production clusters. Understanding containers is non-negotiable for modern backend engineering.
 
 ---
 
@@ -72,7 +72,7 @@ RUN mvn package
 
 ✅ **Copy dependency files first:**
 ```dockerfile
-# ✅ pom.xml changes rarely — dependencies cached in this layer
+# ✅ pom.xml changes rarely - dependencies cached in this layer
 COPY pom.xml .
 RUN mvn dependency:go-offline -B
 # Source changes only invalidate from here down
@@ -86,7 +86,7 @@ RUN mvn package -DskipTests
 ```dockerfile
 FROM eclipse-temurin:21
 COPY target/app.jar app.jar
-# ❌ Runs as root — security risk
+# ❌ Runs as root - security risk
 ENTRYPOINT ["java", "-jar", "app.jar"]
 ```
 
@@ -332,7 +332,7 @@ services:
 
 ## Related Notes
 
-- [[07 Containers & Orchestration]]
+- [[../02_Software_Architecture/Microservice/07 Deployment/071 Containers & Orchestration|Containers & Orchestration]]
 - [[03 Container & Cloud Security]]
 
 ---

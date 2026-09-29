@@ -21,6 +21,7 @@ stateDiagram-v2
     OPEN --> HALF_OPEN : Timeout expires
     HALF_OPEN --> CLOSED : Test request succeeds
     HALF_OPEN --> OPEN : Test request fails
+```
 
 
 | State | Behavior |

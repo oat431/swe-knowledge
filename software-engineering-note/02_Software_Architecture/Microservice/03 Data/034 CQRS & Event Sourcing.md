@@ -22,6 +22,7 @@ graph LR
     W --> E[Events]
     E --> R[Read Model<br/>Denormalized, optimized]
     Q[Query] --> R
+```
 
 
 | Write Side (Commands) | Read Side (Queries) |
