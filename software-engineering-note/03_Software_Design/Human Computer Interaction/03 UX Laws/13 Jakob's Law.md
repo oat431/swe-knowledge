@@ -11,7 +11,7 @@ tags:
 
 > **Users spend most of their time on OTHER websites. They prefer your site to work the same way as all the other sites they already know.**
 
-Don't reinvent the wheel. Users bring mental models from every other app they've used. If your app breaks those models, they'll struggle — no matter how "innovative" your design is.
+Don't reinvent the wheel. Users bring mental models from every other app they've used. If your app breaks those models, they'll struggle, no matter how "innovative" your design is.
 
 ---
 
@@ -39,7 +39,7 @@ Don't reinvent the wheel. Users bring mental models from every other app they've
 
 ## When to Break Jakob's Law
 
-You CAN deviate — but only when your new pattern is **significantly better** AND you teach users the new behavior.
+You CAN deviate, but only when your new pattern is **significantly better** AND you teach users the new behavior.
 
 | ✅ Worth Breaking Convention | ❌ Not Worth It |
 |---------------------------|-----------------|
@@ -55,7 +55,7 @@ You CAN deviate — but only when your new pattern is **significantly better** A
 
 | Rule | Why |
 |------|-----|
-| Use existing design systems | Material Design, Apple HIG — users already know them |
+| Use existing design systems | Material Design, Apple HIG, users already know them |
 | Copy patterns from category leaders | Your banking app should work like other banking apps |
 | Test with real users | "It's intuitive" = "it works like things I already use" |
 | Standard icons, standard positions | A floppy disk = save. A gear = settings. Don't get creative with these. |
@@ -64,5 +64,5 @@ You CAN deviate — but only when your new pattern is **significantly better** A
 
 ## Sources
 
-- *Laws of UX* — https://lawsofux.com/jakobs-law/
+- *Laws of UX*: https://lawsofux.com/jakobs-law/
 - Nielsen, J. (2000). *End of Web Design.* Nielsen Norman Group.

@@ -2,13 +2,13 @@
 tags: [design-quality, reviews, audits, metrics, software-design, swebok]
 ---
 
-# Design Quality Analysis — Reviews, Audits, and Metrics
+# Design Quality Analysis: Reviews, Audits, and Metrics
 
-> *Source: SWEBOK v4 Chapter 03 — Software Design*
+> *Source: SWEBOK v4 Chapter 03, Software Design*
 
 ## Purpose
 
-A design isn't finished when it's written — it's finished when it's verified. Design quality analysis ensures the design meets its quality requirements before construction begins. Finding a design flaw during design review costs hours; finding it during testing costs days; finding it in production costs weeks (or more).
+A design isn't finished when it's written; it's finished when it's verified. Design quality analysis ensures the design meets its quality requirements before construction begins. Finding a design flaw during design review costs hours; finding it during testing costs days; finding it in production costs weeks (or more).
 
 ## Design Reviews
 
@@ -24,12 +24,12 @@ A design isn't finished when it's written — it's finished when it's verified. 
 
 ### The Inspection Process (Fagan)
 
-1. **Planning** — Select reviewers, schedule, distribute materials
-2. **Overview** — Designer presents the design to reviewers (optional)
-3. **Preparation** — Reviewers study the design individually against checklists
-4. **Inspection meeting** — Moderator leads systematic review; defects found, NOT fixed
-5. **Rework** — Designer fixes all identified defects
-6. **Follow-up** — Moderator verifies all defects are resolved
+1. **Planning:** Select reviewers, schedule, distribute materials
+2. **Overview:** Designer presents the design to reviewers (optional)
+3. **Preparation:** Reviewers study the design individually against checklists
+4. **Inspection meeting:** Moderator leads systematic review; defects found, NOT fixed
+5. **Rework:** Designer fixes all identified defects
+6. **Follow-up:** Moderator verifies all defects are resolved
 
 ### Design Review Checklist
 
@@ -114,15 +114,15 @@ A design isn't finished when it's written — it's finished when it's verified. 
 
 ## Essential Concepts
 
-- **Reviews are cheaper than rework** — catching a design defect during review costs a fraction of fixing it in production.
-- **Use checklists** — they prevent reviewers from missing common defect categories.
-- **Metrics guide improvement** — they don't replace judgment. A "good" metric score doesn't mean "good" design.
-- **Static analysis catches the obvious** — freeing reviewers to focus on the subtle.
-- **Design quality is a continuous concern** — not a one-time gate.
+- **Reviews are cheaper than rework:** catching a design defect during review costs a fraction of fixing it in production.
+- **Use checklists:** they prevent reviewers from missing common defect categories.
+- **Metrics guide improvement:** they don't replace judgment. A "good" metric score doesn't mean "good" design.
+- **Static analysis catches the obvious:** freeing reviewers to focus on the subtle.
+- **Design quality is a continuous concern:** not a one-time gate.
 
 ## Related
 
-- [[Software Design Note Overview]] — All design topics
-- [[01_Design_Fundamentals_and_Principles]] — What makes a good design
-- [[../05_Software_Testing/Software Testing Overview|Software Testing]] — Testing validates the design
-- [[../02_Software_Architecture/09_Evaluation_and_Governance]] — Architecture evaluation (ATAM)
+- [[Software Design Note Overview]]: All design topics
+- [[01_Design_Fundamentals_and_Principles]]: What makes a good design
+- [[../05_Software_Testing/Software Testing Overview|Software Testing]]: Testing validates the design
+- [[../02_Software_Architecture/09_Evaluation_and_Governance]]: Architecture evaluation (ATAM)

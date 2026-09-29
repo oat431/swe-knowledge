@@ -16,13 +16,13 @@ Also known as: **Wrapper**
 
 ## Problem
 
-Imagine a notification library centered on a `Notifier` class with a single `send` method that emails a list of recipients. Users soon demand SMS, Facebook, and Slack notifications. The straightforward fix—subclassing `Notifier` for each channel—works until someone asks: *"Why can't I use several notification types at once?"*
+Imagine a notification library centered on a `Notifier` class with a single `send` method that emails a list of recipients. Users soon demand SMS, Facebook, and Slack notifications. The straightforward fix (subclassing `Notifier` for each channel) works until someone asks: *"Why can't I use several notification types at once?"*
 
 Creating subclasses for every combination (Email+SMS, Email+Slack, SMS+Facebook, all three, etc.) causes a **combinatorial explosion of subclasses**. The library and client code both bloat. Inheritance alone cannot scale this.
 
 Two deeper limitations of inheritance make it the wrong tool:
 
-- **Static.** You cannot alter an existing object's behavior at runtime—only replace the whole object with a different subclass instance.
+- **Static.** You cannot alter an existing object's behavior at runtime: only replace the whole object with a different subclass instance.
 - **Single-parent.** Most languages forbid inheriting behaviors from multiple classes simultaneously.
 
 ## Solution
@@ -31,7 +31,7 @@ Replace inheritance with **Aggregation** (or **Composition**): one object holds 
 
 A **wrapper** (the alternative name for Decorator) implements the same interface as the wrapped object and delegates all requests to it. The wrapper may *alter the result* by doing something either before or after the delegation.
 
-When the wrapper's reference field accepts *any* object following that interface, you can nest wrappers. The decorated object becomes a **stack**: the outermost decorator is what the client interacts with, but all layers share the same interface, so the client doesn't know or care how deep the stack goes.
+When the wrapper's reference field accepts *any* object following that interface, you can nest wrappers. The decorated object becomes a **stack:** the outermost decorator is what the client interacts with, but all layers share the same interface, so the client doesn't know or care how deep the stack goes.
 
 In the notification example:
 - Keep basic email behavior in the base `Notifier`.
@@ -46,6 +46,7 @@ Wearing clothes. When cold, you put on a sweater. Still cold? Add a jacket. Rain
 
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','classText':'#CDD3D1','mainBkg':'#19362D','nodeBorder':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 classDiagram
     class Component {
         <<interface>>
@@ -74,11 +75,11 @@ classDiagram
     BaseDecorator o-- Component : wrappee
 ```
 
-1. **Component** — declares the common interface for both wrappers and wrapped objects.
-2. **Concrete Component** — the class being wrapped; defines basic behavior that decorators can alter.
-3. **Base Decorator** — holds a reference to a wrapped object (typed as `Component` so it accepts both concrete components and other decorators). Delegates all operations to the wrappee.
-4. **Concrete Decorators** — override base decorator methods to execute extra behavior before or after the parent call.
-5. **Client** — wraps components in multiple layers of decorators; works with all objects via the Component interface.
+1. **Component:** declares the common interface for both wrappers and wrapped objects.
+2. **Concrete Component:** the class being wrapped; defines basic behavior that decorators can alter.
+3. **Base Decorator:** holds a reference to a wrapped object (typed as `Component` so it accepts both concrete components and other decorators). Delegates all operations to the wrappee.
+4. **Concrete Decorators:** override base decorator methods to execute extra behavior before or after the parent call.
+5. **Client:** wraps components in multiple layers of decorators; works with all objects via the Component interface.
 
 ## Pseudocode
 
@@ -133,7 +134,7 @@ class CompressionDecorator extends DataSourceDecorator is
         // 2. Try to decompress it if it's compressed.
         // 3. Return the result.
 
-// Client assembly — decorator stack built at runtime
+// Client assembly - decorator stack built at runtime
 class ApplicationConfigurator is
     method configurationExample() is
         source = new FileDataSource("salary.dat")
@@ -180,7 +181,7 @@ class SalaryManager is
 - Extend an object's behavior **without making a new subclass**.
 - **Add or remove responsibilities at runtime**.
 - **Combine multiple behaviors** by wrapping an object in several decorators.
-- **Single Responsibility Principle** — divide a monolithic class that implements many behavior variants into smaller, focused classes.
+- **Single Responsibility Principle:** divide a monolithic class that implements many behavior variants into smaller, focused classes.
 
 ### ❌ Cons
 - Hard to **remove a specific wrapper** from the middle of a stack.
@@ -191,10 +192,10 @@ class SalaryManager is
 
 | Pattern | Relationship |
 |---------|-------------|
-| **Adapter** | Adapter provides a *different* interface to an existing object. Decorator keeps the same interface (or extends it) and supports recursive composition—which Adapter cannot do. |
-| **Proxy** | Both share similar structure built on composition. Difference: Proxy *manages the lifecycle* of its service object; Decorator's composition is *always controlled by the client*. Proxy keeps the same interface; Decorator may enhance it. |
+| **Adapter** | Adapter provides a *different* interface to an existing object. Decorator keeps the same interface (or extends it) and supports recursive composition, which Adapter cannot do. |
+| **Proxy** | Both share similar structure built on composition. Difference: Proxy *manages the lifecycle* of its service object; decorator's composition is *always controlled by the client*. Proxy keeps the same interface; decorator may enhance it. |
 | **Chain of Responsibility** | Very similar class structures (recursive composition passing execution through a series of objects). Key difference: CoR handlers can execute *independent* operations and can *stop* the chain at any point. Decorators extend behavior *consistently* with the base interface and must **never break the request flow**. |
-| **Composite** | Similar structure diagrams (recursive composition of open-ended objects). Decorator is like a Composite with only *one child*. Composite "sums up" children's results; Decorator *adds extra responsibilities*. They can cooperate: use Decorator to extend a specific object inside a Composite tree. |
+| **Composite** | Similar structure diagrams (recursive composition of open-ended objects). Decorator is like a Composite with only *one child*. Composite "sums up" children's results; decorator *adds extra responsibilities*. They can cooperate: use Decorator to extend a specific object inside a Composite tree. |
 | **Prototype** | Designs heavy on Composite and Decorator benefit from Prototype to clone complex structures instead of rebuilding them from scratch. |
 | **Strategy** | Decorator changes the *skin* of an object; Strategy changes the *guts*. Decorator wraps from the outside; Strategy swaps internal algorithms. |
 

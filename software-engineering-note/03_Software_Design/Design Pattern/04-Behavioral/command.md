@@ -16,35 +16,36 @@ Also known as: **Action**, **Transaction**.
 
 ## Problem
 
-Imagine building a text editor with a toolbar full of buttons — Copy, Cut, Paste, Undo, and so on. All buttons inherit from the same `Button` base class. The naive solution: create a subclass for each button (`CopyButton`, `CutButton`, `PasteButton`, …), with click-handler code baked directly into each subclass.
+Imagine building a text editor with a toolbar full of buttons, Copy, Cut, Paste, Undo, and so on. All buttons inherit from the same `Button` base class. The naive solution: create a subclass for each button (`CopyButton`, `CutButton`, `PasteButton`, …), with click-handler code baked directly into each subclass.
 
 This approach implodes under three problems:
 
-1. **Subclass explosion.** Every new action demands a new `Button` subclass. Modify the base `Button` class and you risk breaking every subclass — the GUI layer becomes awkwardly dependent on volatile business logic.
-2. **Same action, multiple triggers.** Copying text isn't just a toolbar button — it's also a context-menu item, a keyboard shortcut (`Ctrl+C`), and maybe a voice command. Without Command, the code for "copy text" gets duplicated across every trigger class, or worse, menus become dependent on buttons.
+1. **Subclass explosion.** Every new action demands a new `Button` subclass. Modify the base `Button` class and you risk breaking every subclass, the GUI layer becomes awkwardly dependent on volatile business logic.
+2. **Same action, multiple triggers.** Copying text isn't just a toolbar button; it's also a context-menu item, a keyboard shortcut (`Ctrl+C`), and maybe a voice command. Without Command, the code for "copy text" gets duplicated across every trigger class, or worse, menus become dependent on buttons.
 3. **No undo.** A flat subclass-per-button design provides no natural place to track what was done, in what order, or how to reverse it.
 
 ## Solution
 
-The Command pattern suggests that **GUI objects should not send requests directly to business-logic objects**. Instead, extract every detail of a request — the receiver object, the method name, and the arguments — into a **stand-alone command object** with a single execution method.
+The Command pattern suggests that **GUI objects should not send requests directly to business-logic objects**. Instead, extract every detail of a request (the receiver object, the method name, and the arguments) into a **stand-alone command object** with a single execution method.
 
 
-From the GUI's perspective, a button stores a reference to some command and calls `command.execute()` on click. It does not know — and does not need to know — which business-logic object handles the request or how. Every GUI element tied to the same operation (toolbar button, menu item, shortcut) simply holds a reference to the **same** command object. No code duplication.
+From the GUI's perspective, a button stores a reference to some command and calls `command.execute()` on click. It does not know (and does not need to know) which business-logic object handles the request or how. Every GUI element tied to the same operation (toolbar button, menu item, shortcut) simply holds a reference to the **same** command object. No code duplication.
 
-Commands become a convenient middle layer that decouples the GUI layer from the business-logic layer. And because commands are objects, you can queue them, log them, serialize them, assemble simple commands into composite commands, and — crucially — **undo** them.
+Commands become a convenient middle layer that decouples the GUI layer from the business-logic layer. And because commands are objects, you can queue them, log them, serialize them, assemble simple commands into composite commands, and (crucially) **undo** them.
 
 ### Real-World Analogy
 
 You walk into a restaurant. The waiter writes your order on a slip of paper (the **command**), sticks it on the kitchen wall, and moves on. The chef picks it up when ready. The order contains everything the chef needs; they don't have to run to your table for clarification. The slip can sit in a queue, be reordered, or even be discarded if you cancel.
 
-The paper order *is* a command — a stand-alone object carrying all the information required to cook the meal.
+The paper order *is* a command, a stand-alone object carrying all the information required to cook the meal.
 
 ## Structure
 
 
-1. **Sender (Invoker)** — Holds a reference to a command. Triggers `command.execute()` instead of calling the receiver directly. Does *not* create commands; receives them from the client.
+1. **Sender (Invoker):** Holds a reference to a command. Triggers `command.execute()` instead of calling the receiver directly. Does *not* create commands; receives them from the client.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','classText':'#CDD3D1','mainBkg':'#19362D','nodeBorder':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 classDiagram
     class Command {
         <<interface>>
@@ -70,17 +71,17 @@ classDiagram
     Client --> ConcreteCommand : creates
     Client --> Receiver
 ```
-2. **Command interface** — Declares a single execution method (usually `execute()` with no parameters).
-3. **Concrete Commands** — Implement specific requests. Each stores the receiver reference and any parameters needed (set via constructor). Delegates the actual work to the receiver.
-4. **Receiver** — Contains the actual business logic. Almost any object can act as a receiver.
-5. **Client** — Creates and configures concrete commands (passing in the receiver and parameters), then attaches them to one or more senders.
+2. **Command interface:** Declares a single execution method (usually `execute()` with no parameters).
+3. **Concrete Commands:** Implement specific requests. Each stores the receiver reference and any parameters needed (set via constructor). Delegates the actual work to the receiver.
+4. **Receiver:** Contains the actual business logic. Almost any object can act as a receiver.
+5. **Client:** Creates and configures concrete commands (passing in the receiver and parameters), then attaches them to one or more senders.
 
 ## Pseudocode
 
 This example models a text editor with undoable Copy, Cut, Paste, and Undo operations using a `CommandHistory` stack. ✅ (from source)
 
 ```java
-// Base command class — declares the interface for all concrete commands
+// Base command class - declares the interface for all concrete commands
 abstract class Command {
     protected field app: Application
     protected field editor: Editor
@@ -101,7 +102,7 @@ abstract class Command {
         editor.text = backup
     }
 
-    // The execution method is declared abstract — each concrete command
+    // The execution method is declared abstract - each concrete command
     // provides its own implementation. Returns true if the command
     // changed the editor's state (and should be saved to history).
     abstract method execute(): boolean
@@ -134,7 +135,7 @@ class PasteCommand extends Command {
     }
 }
 
-// Undo is also a command — delegates to Application.undo()
+// Undo is also a command - delegates to Application.undo()
 class UndoCommand extends Command {
     method execute(): boolean {
         app.undo()
@@ -142,7 +143,7 @@ class UndoCommand extends Command {
     }
 }
 
-// Global command history — just a stack (LIFO)
+// Global command history - just a stack (LIFO)
 class CommandHistory {
     private field history: array of Command
 
@@ -155,7 +156,7 @@ class CommandHistory {
     }
 }
 
-// Editor is the receiver — all commands delegate execution to its methods
+// Editor is the receiver - all commands delegate execution to its methods
 class Editor {
     field text: string
 
@@ -196,7 +197,7 @@ class Application {
     }
 
     // Pop the most recent command from history and run its undo method.
-    // We don't know the command's concrete class — and we don't need to,
+    // We don't know the command's concrete class - and we don't need to,
     // because each command knows how to undo its own action.
     method undo() {
         command = history.pop()
@@ -216,7 +217,7 @@ Instead of storing state snapshots, each command can define an inverse operation
 
 ## Applicability
 
-✅ **Use Command when you want to parametrize objects with operations.** Turn a specific method call into a stand-alone object. You can pass commands as method arguments, store them inside other objects, and swap linked commands at runtime — useful for configurable context menus and macro toolbars.
+✅ **Use Command when you want to parametrize objects with operations.** Turn a specific method call into a stand-alone object. You can pass commands as method arguments, store them inside other objects, and swap linked commands at runtime, useful for configurable context menus and macro toolbars.
 
 ✅ **Use Command when you want to queue, schedule, or execute operations remotely.** Commands can be serialized (to strings, files, or databases) and restored later. You can delay execution, log commands for audit trails, or send them over the network.
 
@@ -225,7 +226,7 @@ Instead of storing state snapshots, each command can define an inverse operation
 ## How to Implement
 
 1. **Declare** the command interface with a single execution method.
-2. **Extract** requests into concrete command classes. Each class stores request arguments and a reference to the receiver object — all initialized via the constructor.
+2. **Extract** requests into concrete command classes. Each class stores request arguments and a reference to the receiver object; all initialized via the constructor.
 3. **Identify** classes that will act as senders. Add fields for storing commands. Senders communicate with commands only via the interface.
 4. **Change** senders so they execute the command instead of calling the receiver directly.
 5. **Client initialization order:**
@@ -245,27 +246,27 @@ Instead of storing state snapshots, each command can define an inverse operation
 
 ## Relations with Other Patterns
 
-- **Chain of Responsibility** — Passes a request sequentially along a dynamic chain of potential receivers until one handles it, while **Command** establishes a unidirectional connection between a sender and a specific receiver. Handlers in Chain of Responsibility can be implemented as Commands. Alternatively, the request itself can be a Command object, executing the same operation across different contexts linked in a chain.
+- **Chain of Responsibility:** Passes a request sequentially along a dynamic chain of potential receivers until one handles it, while **Command** establishes a unidirectional connection between a sender and a specific receiver. Handlers in Chain of Responsibility can be implemented as Commands. Alternatively, the request itself can be a Command object, executing the same operation across different contexts linked in a chain.
 
-- **Mediator** — Eliminates direct connections between senders and receivers, forcing indirect communication through a mediator. Command retains the connection but wraps it in an object.
+- **Mediator:** Eliminates direct connections between senders and receivers, forcing indirect communication through a mediator. Command retains the connection but wraps it in an object.
 
-- **Observer** — Lets receivers dynamically subscribe to and unsubscribe from requests. Command binds a sender to a known receiver at construction time.
+- **Observer:** Lets receivers dynamically subscribe to and unsubscribe from requests. Command binds a sender to a known receiver at construction time.
 
-- **Memento** — Used together with Command when implementing undo. Commands perform operations; Mementos save the object's state just before a command executes. This mitigates the problem where some application state is private and cannot be exposed to the command's `saveBackup()`.
+- **Memento:** Used together with Command when implementing undo. Commands perform operations; mementos save the object's state just before a command executes. This mitigates the problem where some application state is private and cannot be exposed to the command's `saveBackup()`.
 
-- **Strategy** — Both parameterize an object with some action, but their intents differ. **Command** converts any operation into an object (for deferral, queuing, undo). **Strategy** describes different ways of doing the *same thing*, letting you swap algorithms within a single context class.
+- **Strategy:** Both parameterize an object with some action, but their intents differ. **Command** converts any operation into an object (for deferral, queuing, undo). **Strategy** describes different ways of doing the *same thing*, letting you swap algorithms within a single context class.
 
-- **Prototype** — Useful when you need to save copies of Commands into history (clone them rather than keep references to the originals).
+- **Prototype:** Useful when you need to save copies of Commands into history (clone them rather than keep references to the originals).
 
-- **Visitor** — Can be seen as a powerful version of Command: its objects can execute operations over various objects of different classes.
+- **Visitor:** Can be seen as a powerful version of Command: its objects can execute operations over various objects of different classes.
 
-- **Iterator** — Both create objects that encapsulate an operation. Iterator encapsulates traversal logic; Command encapsulates a request to perform a specific action.
+- **Iterator:** Both create objects that encapsulate an operation. Iterator encapsulates traversal logic; Command encapsulates a request to perform a specific action.
 
 ## Summary Checklist
 
 - [ ] Have you declared a **Command interface** with a single `execute()` method?
 - [ ] Do concrete commands store **receiver references and parameters** via the constructor (immutable)?
-- [ ] Do **senders** communicate with commands only through the interface — never through concrete classes?
+- [ ] Do **senders** communicate with commands only through the interface, never through concrete classes?
 - [ ] Does the **client** wire receivers → commands → senders in the correct order?
 - [ ] For undo: do state-changing commands **save a backup** (or define a reverse operation) before executing?
 - [ ] Is the **command history** maintained as a stack (push on execute, pop on undo)?

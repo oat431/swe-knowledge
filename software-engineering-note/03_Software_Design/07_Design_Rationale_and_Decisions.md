@@ -5,7 +5,7 @@ source: "SWEBOK v4 Chapter 03"
 
 # Design Rationale and Decisions
 
-> *Source: SWEBOK v4 Chapter 03 — Software Design | ISO/IEC/IEEE 42010*
+> *Source: SWEBOK v4 Chapter 03, Software Design | ISO/IEC/IEEE 42010*
 
 ## Purpose
 
@@ -68,9 +68,9 @@ An **Architecture Decision Record (ADR)** is a lightweight, version-controlled d
 {What is the change that we're proposing and/or doing?}
 
 ## Alternatives Considered
-1. **{Alternative A}** — {description, pros, cons}
-2. **{Alternative B}** — {description, pros, cons}
-3. **{Alternative C}** — {description, pros, cons}
+1. **{Alternative A}** - {description, pros, cons}
+2. **{Alternative B}** - {description, pros, cons}
+3. **{Alternative C}** - {description, pros, cons}
 
 ## Rationale
 {Why this decision over the alternatives? What factors were decisive?}
@@ -94,6 +94,7 @@ An **Architecture Decision Record (ADR)** is a lightweight, version-controlled d
 ### ADR Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','clusterBkg':'#161212','clusterBorder':'#19362D','fontSize':'14px'}}}%%
 stateDiagram-v2
     [*] --> Proposed : Team identifies decision
     Proposed --> Accepted : Stakeholder approval
@@ -176,8 +177,8 @@ The **Pugh Matrix** (developed by Stuart Pugh) compares alternatives against a *
 | Team autonomy | S | + | + | S |
 | Development speed (initial) | S | - | + | + |
 | Debugging ease | S | - | - | S |
-| **Total +** | — | 3 | 4 | 4 |
-| **Total -** | — | 3 | 2 | 0 |
+| **Total +** | N/A | 3 | 4 | 4 |
+| **Total -** | N/A | 3 | 2 | 0 |
 | **Net** | 0 | 0 | +2 | +4 |
 
 **Process:**
@@ -208,6 +209,7 @@ Developed by the Software Engineering Institute (SEI), ATAM is a structured meth
 **ATAM Process:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     A[Present Architecture] --> B[Identify Architectural Approaches]
     B --> C[Generate Quality Attribute Utility Tree]
@@ -385,7 +387,7 @@ Technical debt often arises from decisions whose rationale has been forgotten:
 
 ### Rationale Debt
 
-Just as code accumulates technical debt, decisions accumulate **rationale debt**: the growing gap between what was decided and what is documented.
+Just as code accumulates technical debt, decisions accumulate **rationale debt:** the growing gap between what was decided and what is documented.
 
 **Signs of rationale debt:**
 - Frequent "why did we do this?" conversations
@@ -476,6 +478,7 @@ ISO/IEC/IEEE 42010 (Systems and Software Engineering: Architecture Description) 
 The standard treats rationale as a first-class element of architecture documentation, not an optional supplement.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     A[Stakeholders] -->|have| B[Concerns]
     B -->|addressed by| C[Architecture Views]

@@ -47,11 +47,11 @@ A classic interior design rule that works perfectly for UI:
 
 ### Gray Is Not Just Gray
 
-Good grays have a hint of color — usually blue or purple. Pure `#808080` looks flat and dead.
+Good grays have a hint of color, usually blue or purple. Pure `#808080` looks flat and dead.
 
 | ❌ Dead Gray | ✅ Alive Gray |
 |-------------|--------------|
-| `#808080` | `#6B7280` (Tailwind gray-500 — blue-tinted) |
+| `#808080` | `#6B7280` (Tailwind gray-500, blue-tinted) |
 | `#CCCCCC` | `#D1D5DB` (Tailwind gray-300) |
 
 ---
@@ -76,7 +76,7 @@ Opacity creates depth without adding more colors.
 | **Text on images** | Add a semi-transparent overlay (black at 40–60% opacity) between image and text |
 | **Disabled buttons** | Reduce opacity to 40–50% instead of changing color |
 | **Shadows** | Use black at 10–20% opacity instead of pure black |
-| **Borders** | Use your text color at 15–20% opacity — automatically matches the theme |
+| **Borders** | Use your text color at 15–20% opacity, automatically matches the theme |
 
 ---
 
@@ -94,4 +94,4 @@ Opacity creates depth without adding more colors.
 ## Sources
 
 - *Refactoring UI* by Adam Wathan & Steve Schoger
-- WebAIM Contrast Checker — https://webaim.org/resources/contrastchecker/
+- WebAIM Contrast Checker: https://webaim.org/resources/contrastchecker/

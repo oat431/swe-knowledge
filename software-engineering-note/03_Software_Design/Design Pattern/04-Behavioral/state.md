@@ -50,21 +50,22 @@ The State pattern suggests:
 
 1. **Create a class for each possible state** of the object.
 2. **Extract all state-specific behavior** into those classes.
-3. The original object — called the **context** — stores a reference to *one* state object representing its current state and **delegates all state-related work** to that object.
+3. The original object: called the **context:** stores a reference to *one* state object representing its current state and **delegates all state-related work** to that object.
 4. To **transition**, replace the active state object with another that represents the new state.
 
-All state classes follow the **same interface**, so the context works with them polymorphically. Crucially, **concrete states may be aware of each other and initiate transitions** — this is the key difference from Strategy.
+All state classes follow the **same interface**, so the context works with them polymorphically. Crucially, **concrete states may be aware of each other and initiate transitions**; this is the key difference from Strategy.
 
 > **Real-world analogy:** Smartphone buttons behave differently depending on device state: unlocked (execute functions), locked (show unlock screen), low charge (show charging screen).
 
 ## Structure
 
-1. **Context** — Stores a reference to a concrete state object; delegates all state-specific work to it via the state interface. Exposes a setter (`changeState`) for switching states.
-2. **State interface** — Declares state-specific methods that must make sense for *all* concrete states (no dead methods).
-3. **Concrete States** — Implement state-specific behavior. May hold a **backreference** to the context to fetch data and initiate transitions. Intermediate abstract classes can encapsulate shared behavior.
+1. **Context:** Stores a reference to a concrete state object; delegates all state-specific work to it via the state interface. Exposes a setter (`changeState`) for switching states.
+2. **State interface:** Declares state-specific methods that must make sense for *all* concrete states (no dead methods).
+3. **Concrete States:** Implement state-specific behavior. May hold a **backreference** to the context to fetch data and initiate transitions. Intermediate abstract classes can encapsulate shared behavior.
 4. Both context and concrete states can **set the next state** and trigger the transition by replacing the state object linked to the context.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','classText':'#CDD3D1','mainBkg':'#19362D','nodeBorder':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 classDiagram
     class Context {
         -state: State
@@ -234,7 +235,7 @@ class PlayingState extends State is
 ## How to Implement
 
 1. Decide on the **context** class (existing state-dependent class, or new one).
-2. Declare the **state interface** — mirror only methods that contain state-specific behavior.
+2. Declare the **state interface:** mirror only methods that contain state-specific behavior.
 3. For each actual state, create a class deriving from the state interface. Move context code related to that state into the new class. If state code depends on private context members: make them public, wrap behavior as a public context method, or nest state classes (if language supports it).
 4. In the context, add a **reference field** of the state interface type and a public **setter** for it.
 5. Replace empty state conditionals in context methods with **delegation calls** to the state object.
@@ -250,8 +251,8 @@ class PlayingState extends State is
 
 ## Relations with Other Patterns
 
-- **Bridge**, **State**, **Strategy** (and to some degree **Adapter**) share similar structures — all are based on **composition** (delegating work to other objects). However, they each solve *different* problems. A pattern is not merely a code structure recipe; it communicates the problem being solved.
-- **State can be considered an extension of Strategy.** Both change context behavior by delegating to helper objects via composition. **Strategy** makes helper objects completely independent and unaware of each other. **State** does *not* restrict dependencies between concrete states — it lets them alter the context's state at will.
+- **Bridge**, **State**, **Strategy** (and to some degree **Adapter**) share similar structures: all are based on **composition** (delegating work to other objects). However, they each solve *different* problems. A pattern is not merely a code structure recipe; it communicates the problem being solved.
+- **State can be considered an extension of Strategy.** Both change context behavior by delegating to helper objects via composition. **Strategy** makes helper objects completely independent and unaware of each other. **State** does *not* restrict dependencies between concrete states; it lets them alter the context's state at will.
 
 ## Summary Checklist
 
@@ -268,9 +269,9 @@ class PlayingState extends State is
 
 ## Related
 
-- [[strategy]] — Same structure (composition + delegation), but strategies are independent and unaware of each other; State allows states to know and transition to one another.
-- [[bridge]] — Similar delegation-based structure but solves orthogonal dimension separation (abstraction vs. implementation), not internal state changes.
-- [[observer]] — Can be combined with State to notify observers when state transitions occur.
-- [[memento]] — Complements State for undo/rollback scenarios: Memento captures snapshots, State manages which snapshot is current.
-- [[chain-of-responsibility]] — Both avoid hard-wired decision logic, but Chain passes along a linked list while State switches a single active delegate.
-- **solid-principles** — State enforces SRP (one class per state concern) and OCP (new states without modifying existing ones).
+- [[strategy]]: Same structure (composition + delegation), but strategies are independent and unaware of each other; State allows states to know and transition to one another.
+- [[bridge]]: Similar delegation-based structure but solves orthogonal dimension separation (abstraction vs. implementation), not internal state changes.
+- [[observer]]: Can be combined with State to notify observers when state transitions occur.
+- [[memento]]: Complements State for undo/rollback scenarios: Memento captures snapshots, State manages which snapshot is current.
+- [[chain-of-responsibility]]: Both avoid hard-wired decision logic, but Chain passes along a linked list while State switches a single active delegate.
+- **solid-principles:** State enforces SRP (one class per state concern) and OCP (new states without modifying existing ones).

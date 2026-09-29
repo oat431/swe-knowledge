@@ -13,7 +13,7 @@ tags:
 
 ## "There Will Be Code"
 
-Code will never disappear. Higher-level languages, DSLs, and code generation raise the abstraction level — but the specification that a machine can execute **is** code. Anyone who says code will vanish is like a mathematician hoping math will one day not need to be formal. Requirements are as formal as code.
+Code will never disappear. Higher-level languages, DSLs, and code generation raise the abstraction level, but the specification that a machine can execute **is** code. Anyone who says code will vanish is like a mathematician hoping math will one day not need to be formal. Requirements are as formal as code.
 
 > *"Remember that code is really the language in which we ultimately express the requirements."*
 
@@ -49,7 +49,7 @@ Management eventually caves and authorizes a rewrite. A "tiger team" starts fres
 
 This race can last **10 years**. By then, the tiger team has turned over and *their* code is now the mess. The cycle repeats.
 
-> **Spending time keeping code clean isn't just cost-effective — it's a matter of professional survival.**
+> **Spending time keeping code clean isn't just cost-effective; it's a matter of professional survival.**
 
 ---
 
@@ -69,7 +69,7 @@ It's **your job** to defend the code with the same passion managers defend the s
 
 | What we believe | The truth |
 |-----------------|-----------|
-| "I don't have time to write clean code — I'll miss the deadline" | Making a mess slows you down **instantly** |
+| "I don't have time to write clean code, I'll miss the deadline" | Making a mess slows you down **instantly** |
 | "I'll go fast by cutting corners" | The mess forces you to miss the deadline |
 | Speed now, quality later | **The only way to go fast is to keep the code clean at all times** |
 
@@ -80,22 +80,22 @@ It's **your job** to defend the code with the same passion managers defend the s
 ### Bjarne Stroustrup (C++ creator)
 > *"Clean code is elegant and efficient. Logic should be straightforward to make it hard for bugs to hide, dependencies minimal, error handling complete, and performance close to optimal."*
 
-- **Elegant** — pleasing to read, like a well-crafted music box
-- **Efficient** — wasted cycles tempt people to make the code messy with unprincipled optimizations
-- **Does one thing well** — focused, single-minded, undistracted
+- **Elegant:** pleasing to read, like a well-crafted music box
+- **Efficient:** wasted cycles tempt people to make the code messy with unprincipled optimizations
+- **Does one thing well:** focused, single-minded, undistracted
 
 ### Grady Booch (OOP pioneer)
 > *"Clean code reads like well-written prose. Clean code never obscures the designer's intent but rather is full of crisp abstractions and straightforward lines of control."*
 
-- **Reads like a novel** — words disappear, replaced by images
-- **Crisp abstraction** — matter-of-fact, not speculative. Contains only what's necessary
+- **Reads like a novel:** words disappear, replaced by images
+- **Crisp abstraction:** matter-of-fact, not speculative. Contains only what's necessary
 
 ### "Big" Dave Thomas (Eclipse godfather)
 > *"Clean code can be read and enhanced by a developer other than its original author. It has unit and acceptance tests."*
 
-- **Tests are non-negotiable** — code without tests is not clean, no matter how elegant
-- **Minimal** — small code, minimal dependencies, clear and minimal API
-- **Literate** — composed for humans to read
+- **Tests are non-negotiable:** code without tests is not clean, no matter how elegant
+- **Minimal:** small code, minimal dependencies, clear and minimal API
+- **Literate:** composed for humans to read
 
 ### Michael Feathers (Working Effectively with Legacy Code)
 > *"Clean code always looks like it was written by someone who cares."*
@@ -116,15 +116,15 @@ It's **your job** to defend the code with the same passion managers defend the s
 ### Ward Cunningham (Wiki inventor, Design Patterns)
 > *"You know you are working on clean code when each routine you read turns out to be pretty much what you expected."*
 
-- **No surprises** — every module sets the stage for the next
+- **No surprises:** every module sets the stage for the next
 - **Beautiful code** makes the language look like it was made for the problem
-- It's not the language that makes programs simple — it's the **programmer**
+- It's not the language that makes programs simple: it's the **programmer**
 
 ---
 
 ## Schools of Thought
 
-Martin presents Clean Code as **one school of thought** — the "Object Mentor School." Like martial arts (Gracie Jiu Jitsu, Jeet Kune Do):
+Martin presents Clean Code as **one school of thought:** the "Object Mentor School." Like martial arts (Gracie Jiu Jitsu, Jeet Kune Do):
 
 > *"None of these different schools is absolutely right. Yet within a particular school we act as though the teachings and techniques are right."*
 
@@ -136,7 +136,7 @@ The book's recommendations are controversial by design. You may violently disagr
 
 > **The ratio of time spent reading vs. writing code is well over 10:1.**
 
-Every line of code will be read dozens of times by many people (including future you). You are an **author**, writing for **readers**. Make it easy to read — even if it makes writing slightly harder.
+Every line of code will be read dozens of times by many people (including future you). You are an **author**, writing for **readers**. Make it easy to read, even if it makes writing slightly harder.
 
 > *"If you want to go fast, make it easy to read."*
 
@@ -158,11 +158,11 @@ Every check-in should be a little cleaner than the checkout. It doesn't have to 
 
 ## Code-Sense
 
-Writing clean code requires **code-sense** — a painstakingly acquired intuition that lets you:
+Writing clean code requires **code-sense:** a painstakingly acquired intuition that lets you:
 1. See that code is messy
 2. See the strategy for transforming it into clean code
 
-A programmer with code-sense looks at a mess and sees **options and variations**. Without it, you only see problems — not solutions. This book exists to help you develop that sense.
+A programmer with code-sense looks at a mess and sees **options and variations**. Without it, you only see problems, not solutions. This book exists to help you develop that sense.
 
 ---
 
@@ -185,8 +185,8 @@ A programmer with code-sense looks at a mess and sees **options and variations**
 
 ## Related
 
-- [[Naming Conventions]] — The first step to expressive code
-- [[Function Design]] — Small, do-one-thing functions
-- [[Comment Patterns]] — Self-documenting code over comments
-- [[Unit Testing]] — The three laws of TDD
-- [[Code Smells Catalog]] — Recognizing when code needs cleaning
+- [[Naming Conventions]]: The first step to expressive code
+- [[Function Design]]: Small, do-one-thing functions
+- [[Comment Patterns]]: Self-documenting code over comments
+- [[Unit Testing]]: The three laws of TDD
+- [[Code Smells Catalog]]: Recognizing when code needs cleaning

@@ -11,7 +11,7 @@ tags:
 
 > **The more choices you give someone, the longer they take to decide.**
 
-Every additional option increases decision time. This isn't linear — it's logarithmic. But the user experience impact IS linear: more options = more cognitive load = more abandonment.
+Every additional option increases decision time. This isn't linear; it's logarithmic. But the user experience impact IS linear: more options = more cognitive load = more abandonment.
 
 ---
 
@@ -32,7 +32,7 @@ $$RT = a + b \cdot \log_2(n)$$
 | RT | Reaction/decision time |
 | n | Number of equally likely choices |
 
-> Doubling the choices doesn't double the time — but it does increase it. More importantly, it increases **cognitive load** and **decision paralysis.**
+> Doubling the choices doesn't double the time, but it does increase it. More importantly, it increases **cognitive load** and **decision paralysis.**
 
 ---
 
@@ -66,8 +66,8 @@ Hick's Law applies to **unfamiliar** or **equally weighted** choices. When choic
 
 | Scenario | Apply Hick's Law? |
 |----------|:-----------------:|
-| Choosing from 20 unfamiliar SaaS plans | ✅ Yes — simplify to 3 tiers |
-| Picking your country from a list of 195 | ❌ No — users know their country; auto-detect or search works better than hiding options |
+| Choosing from 20 unfamiliar SaaS plans | ✅ Yes, simplify to 3 tiers |
+| Picking your country from a list of 195 | ❌ No, users know their country; auto-detect or search works better than hiding options |
 
 ---
 
@@ -78,11 +78,11 @@ Hick's Law applies to **unfamiliar** or **equally weighted** choices. When choic
 | **Categorize** | Instead of 30 settings, create 5 category tabs |
 | **Progressive disclosure** | Show basic options first; "Advanced" expandable section |
 | **Highlight recommended** | "Most Popular" badge on one pricing tier reduces decision from "which one?" to "this one?" |
-| **Filter and search** | Large lists get a search bar — typing is faster than scanning |
+| **Filter and search** | Large lists get a search bar, typing is faster than scanning |
 
 ---
 
 ## Sources
 
-- *Laws of UX* — https://lawsofux.com/hicks-law/
+- *Laws of UX*: https://lawsofux.com/hicks-law/
 - Hick, W.E. (1952). *On the rate of gain of information.*

@@ -7,7 +7,7 @@ tags:
 
 # Formatting Style
 
-> *Source: Robert C. Martin, "Clean Code" — Chapter 5: Formatting*
+> *Source: Robert C. Martin, "Clean Code", Chapter 5: Formatting*
 >
 > *"Code formatting is about communication, and communication is the professional developer's first order of business."*
 
@@ -27,10 +27,10 @@ Formatting is **not cosmetic**. The functionality you write today will change; t
 
 Think of a source file as a newspaper article:
 
-- **Headline (filename)**: Simple but explanatory — tells you whether you're in the right module.
-- **Opening paragraphs (top of file)**: High-level concepts and algorithms. Synopsis of the whole story.
-- **Descending detail**: Detail increases as you move downward, ending with the lowest-level functions and details.
-- **Many small articles**: A newspaper is composed of many short articles. Source files should be small — typically **under 200 lines**, with an upper limit of 500.
+- **Headline (filename):** Simple but explanatory: tells you whether you're in the right module.
+- **Opening paragraphs (top of file):** High-level concepts and algorithms. Synopsis of the whole story.
+- **Descending detail:** Detail increases as you move downward, ending with the lowest-level functions and details.
+- **Many small articles:** A newspaper is composed of many short articles. Source files should be small, typically **under 200 lines**, with an upper limit of 500.
 
 ### **Vertical Openness vs Vertical Density**
 
@@ -40,7 +40,7 @@ Think of a source file as a newspaper article:
 - Remove blank lines, and the code collapses into an illegible muddle.
 
 ```java
-// BEFORE: dense, hard to scan — everything blurs together
+// BEFORE: dense, hard to scan - everything blurs together
 package fitnesse.wikitext.widgets;
 import java.util.regex.*;
 public class BoldWidget extends ParentWidget {
@@ -105,7 +105,7 @@ public class ReporterConfig {
     }
 }
 
-// AFTER: fits in an "eye-full" — class structure is instantly visible
+// AFTER: fits in an "eye-full" - class structure is instantly visible
 public class ReporterConfig {
     private String m_className;
     private List<Property> m_properties = new ArrayList<Property>();
@@ -138,11 +138,11 @@ public int countTestCases() {
 }
 ```
 
-**Anti-pattern**: Burying instance variables mid-file (as in JUnit's `TestSuite` — two fields `fName` and `fTests` hidden halfway down among static methods). Everyone should know exactly where to go to see the declarations.
+**Anti-pattern:** Burying instance variables mid-file (as in JUnit's `TestSuite`, two fields `fName` and `fTests` hidden halfway down among static methods). Everyone should know exactly where to go to see the declarations.
 
 #### **Dependent Functions**
 
-If one function calls another, they should be vertically close, and the **caller should be above the callee**. This creates a natural downward flow — readers can trust that function definitions follow shortly after their use.
+If one function calls another, they should be vertically close, and the **caller should be above the callee**. This creates a natural downward flow, readers can trust that function definitions follow shortly after their use.
 
 ```java
 // Caller-above-callee creates a natural top-down reading flow
@@ -176,7 +176,7 @@ protected void loadPage(String resource, FitNesseContext context)
 
 #### **Conceptual Affinity**
 
-Some bits of code have affinity beyond direct dependence — shared naming schemes, similar operations, a common task. The stronger the affinity, the less vertical distance between them.
+Some bits of code have affinity beyond direct dependence, shared naming schemes, similar operations, a common task. The stronger the affinity, the less vertical distance between them.
 
 ```java
 // Strong conceptual affinity: shared naming scheme, same basic task
@@ -203,7 +203,7 @@ public class Assert {
 
 ### **Vertical Ordering (Caller Above Callee)**
 
-Function call dependencies should point **downward**. A called function is placed below the function that calls it. This creates a flow from high-level to low-level detail — exactly like a newspaper article.
+Function call dependencies should point **downward**. A called function is placed below the function that calls it. This creates a flow from high-level to low-level detail, exactly like a newspaper article.
 
 > The most important concepts come first, expressed with the least polluting detail. Low-level details come last. Readers skim the first few functions to get the gist, without immersing themselves in details.
 
@@ -219,7 +219,7 @@ Programmers prefer short lines. The empirical distribution across seven major Ja
 - **~30% of lines** are under 10 characters
 - Lines above 80 characters drop off significantly
 
-**Rule of thumb**: Strive to keep lines short. 80 is traditional; 100–120 is acceptable. Beyond 120 is probably careless. *"I personally set my limit at 120."* — Uncle Bob
+**Rule of thumb:** Strive to keep lines short. 80 is traditional; 100–120 is acceptable. Beyond 120 is probably careless. *"I personally set my limit at 120."* *(Uncle Bob)*
 
 ### **Horizontal Openness and Density**
 
@@ -227,10 +227,10 @@ Use horizontal white space to **associate** tightly related things and **disasso
 
 | Rule | Example |
 |---|---|
-| **Assignment operators**: surround with spaces to separate left from right | `lineCount++;` / `totalChars += lineSize;` |
-| **Function names and parentheses**: no space — function and arguments are closely related | `measureLine(line)` not `measureLine (line)` |
-| **Arguments within parentheses**: spaces after commas to show separation | `record(lineSize, lineCount)` |
-| **Operator precedence**: no space around high-precedence factors; space around low-precedence terms | `b*b - 4*a*c` |
+| **Assignment operators:** surround with spaces to separate left from right | `lineCount++;` / `totalChars += lineSize;` |
+| **Function names and parentheses:** no space, function and arguments are closely related | `measureLine(line)` not `measureLine (line)` |
+| **Arguments within parentheses:** spaces after commas to show separation | `record(lineSize, lineCount)` |
+| **Operator precedence:** no space around high-precedence factors; space around low-precedence terms | `b*b - 4*a*c` |
 
 ```java
 // Spaces accentuate assignment operators and operator precedence
@@ -245,7 +245,7 @@ private void measureLine(String line) {
 public class Quadratic {
     public static double root1(double a, double b, double c) {
         double determinant = determinant(a, b, c);
-        return (-b + Math.sqrt(determinant)) / (2*a);  // note: 2*a — tight for high precedence
+        return (-b + Math.sqrt(determinant)) / (2*a);  // note: 2*a - tight for high precedence
     }
 
     private static double determinant(double a, double b, double c) {
@@ -258,10 +258,10 @@ public class Quadratic {
 
 ### **Horizontal Alignment**
 
-**Don't do it.** Alignment of variable names or rvalues emphasizes the wrong things — it tempts the eye to read down a column of names without looking at types, or down a column of values without seeing the assignment operator.
+**Don't do it.** Alignment of variable names or rvalues emphasizes the wrong things; it tempts the eye to read down a column of names without looking at types, or down a column of values without seeing the assignment operator.
 
 ```java
-// BEFORE: aligned declarations — eye reads column of names, not types
+// BEFORE: aligned declarations - eye reads column of names, not types
 public class FitNesseExpediter implements ResponseSender {
     private Socket             socket;
     private InputStream        input;
@@ -271,7 +271,7 @@ public class FitNesseExpediter implements ResponseSender {
     private FitNesseContext    context;
 }
 
-// AFTER: unaligned — if the list is long enough to need alignment,
+// AFTER: unaligned - if the list is long enough to need alignment,
 // the class should probably be split up
 public class FitNesseExpediter implements ResponseSender {
     private Socket socket;
@@ -283,11 +283,11 @@ public class FitNesseExpediter implements ResponseSender {
 }
 ```
 
-**Key insight**: If you have long lists that seem to need alignment, the problem is the *length of the lists*, not the lack of alignment. That's a signal that the class should be split.
+**Key insight:** If you have long lists that seem to need alignment, the problem is the *length of the lists*, not the lack of alignment. That's a signal that the class should be split.
 
 ### **Indentation**
 
-A source file is a hierarchy — file → class → method → block → inner block. Indent in proportion to position in that hierarchy. **Without indentation, programs are virtually unreadable.**
+A source file is a hierarchy, file → class → method → block → inner block. Indent in proportion to position in that hierarchy. **Without indentation, programs are virtually unreadable.**
 
 | Scope Level | Indentation |
 |---|---|
@@ -296,19 +296,19 @@ A source file is a hierarchy — file → class → method → block → inner b
 | Method implementation | +1 level |
 | Blocks within methods | +1 level per nesting |
 
-### **Dummy Scopes — Never Collapse**
+### **Dummy Scopes: Never Collapse**
 
-Never collapse scopes onto a single line. Always indent the body and use braces — even for empty bodies:
+Never collapse scopes onto a single line. Always indent the body and use braces, even for empty bodies:
 
 ```java
-// BEFORE: collapsed scope — semicolon is nearly invisible
+// BEFORE: collapsed scope - semicolon is nearly invisible
 public class CommentWidget extends TextWidget {
     public static final String REGEXP = "^#[^\r\n]*(?:(?:\r\n)|\n|\r)?";
     public CommentWidget(ParentWidget parent, String text){super(parent, text);}
     public String render() throws Exception {return ""; }
 }
 
-// AFTER: expanded and indented — structure is immediately visible
+// AFTER: expanded and indented - structure is immediately visible
 public class CommentWidget extends TextWidget {
     public static final String REGEXP = "^#[^\r\n]*(?:(?:\r\n)|\n|\r)?";
 
@@ -322,10 +322,10 @@ public class CommentWidget extends TextWidget {
 }
 ```
 
-For empty loop bodies (dummy scopes), put the semicolon **on its own line, indented**:
+For empty loop bodies (dummy scopes), put the semicolon **on its own line, indented:**
 
 ```java
-// Dummy while-loop — semicolon on its own line, indented, with braces
+// Dummy while-loop - semicolon on its own line, indented, with braces
 while (dis.read(buf, 0, readBufferSize) != -1)
     ;
 ```
@@ -336,11 +336,11 @@ while (dis.read(buf, 0, readBufferSize) != -1)
 
 > *"A team of developers should agree upon a single formatting style, and every member of that team should use that style."*
 
-- A good software system is composed of documents that read nicely — they need a **consistent and smooth style**.
+- A good software system is composed of documents that read nicely: they need a **consistent and smooth style**.
 - The reader must trust that formatting seen in one file means the same thing in another.
 - Don't add complexity by writing code in a jumble of different individual styles.
 - **Encode the rules** into your IDE's code formatter and stick with them.
-- On the FitNesse project, the team decided on brace placement, indent size, naming conventions in **10 minutes** — then encoded them into tooling.
+- On the FitNesse project, the team decided on brace placement, indent size, naming conventions in **10 minutes:** then encoded them into tooling.
 
 The team rules. Not your personal preference. Not mine.
 
@@ -379,7 +379,7 @@ As illustrated by `CodeAnalyzer.java` (Listing 5-6):
 - [ ] Operator precedence reflected in spacing (tight for high-precedence, spaced for low)
 - [ ] No horizontal alignment of declarations or assignments
 - [ ] Consistent indentation at every scope level
-- [ ] No collapsed scopes — every block is indented with braces on its own lines
+- [ ] No collapsed scopes: every block is indented with braces on its own lines
 - [ ] Dummy loop bodies have the semicolon on its own indented line
 - [ ] Team has one agreed-upon style, enforced by automated tooling
 

@@ -11,7 +11,7 @@ tags:
 
 > **Elements that look similar are perceived as related or part of the same group.**
 
-The brain groups things by shared visual characteristics — color, shape, size, orientation. Similarity works even when elements are far apart.
+The brain groups things by shared visual characteristics, color, shape, size, orientation. Similarity works even when elements are far apart.
 
 ---
 
@@ -21,7 +21,7 @@ The brain groups things by shared visual characteristics — color, shape, size,
 
 *Source: lawsofux.com*
 
-You see **rows of black dots** and **rows of white dots** — not columns of mixed dots. Color similarity overrides spatial arrangement.
+You see **rows of black dots** and **rows of white dots:** not columns of mixed dots. Color similarity overrides spatial arrangement.
 
 ---
 
@@ -52,9 +52,9 @@ Primary actions share one style. Destructive/neutral actions share another. The 
 |-----------|---------|
 | **Color** | All links are blue; all error messages are red |
 | **Shape** | All buttons are rounded rectangles; all inputs are squared |
-| **Size** | H1 > H2 > H3 — consistent hierarchy throughout |
+| **Size** | H1 > H2 > H3, consistent hierarchy throughout |
 | **Typography** | All body text same font/size; all code blocks monospace |
-| **Icon style** | All icons filled, or all outlined — don't mix styles |
+| **Icon style** | All icons filled, or all outlined; don't mix styles |
 
 ---
 
@@ -65,7 +65,7 @@ When things look the same but do DIFFERENT things:
 | ❌ Bad | ✅ Good |
 |--------|---------|
 | Delete button styled same as Save | Delete gets distinct color/style (red, outline) |
-| All cards identical — some are clickable, some aren't | Interactive cards get hover effects; static ones don't |
+| All cards identical; some are clickable, some aren't | Interactive cards get hover effects; static ones don't |
 | "Cancel" and "Go Back" look the same but behave differently | Give them distinct styling or labels |
 
 ---
@@ -78,5 +78,5 @@ The Law of Similarity is why **design systems** exist. When every button uses th
 
 ## Sources
 
-- *Laws of UX* — https://lawsofux.com/law-of-similarity/
+- *Laws of UX*: https://lawsofux.com/law-of-similarity/
 - Wertheimer, M. (1923). *Laws of Organization in Perceptual Forms.*

@@ -9,7 +9,7 @@ tags:
 
 # 15 Tesler's Law (Law of Conservation of Complexity)
 
-> **Every system has an irreducible amount of complexity. The question is: who handles it — the user or the system?**
+> **Every system has an irreducible amount of complexity. The question is: who handles it, the user or the system?**
 
 You can't eliminate complexity. You can only move it. A good designer moves complexity into the system so the user doesn't have to deal with it.
 
@@ -55,7 +55,7 @@ You can't eliminate complexity. You can only move it. A good designer moves comp
 
 | ❌ | ✅ |
 |----|-----|
-| "Enter coupon code" — user must find, copy, paste, hope it works | Auto-apply best available coupon at checkout |
+| "Enter coupon code", user must find, copy, paste, hope it works | Auto-apply best available coupon at checkout |
 
 ---
 
@@ -63,11 +63,11 @@ You can't eliminate complexity. You can only move it. A good designer moves comp
 
 > **Simplicity for the user requires complexity in the codebase.**
 
-A "simple" UX often means a more complex backend. Auto-complete, smart defaults, fuzzy matching, graceful error handling — all of these add engineering complexity to reduce user complexity. **That's the tradeoff worth making.**
+A "simple" UX often means a more complex backend. Auto-complete, smart defaults, fuzzy matching, graceful error handling; all of these add engineering complexity to reduce user complexity. **That's the tradeoff worth making.**
 
 ---
 
 ## Sources
 
-- *Laws of UX* — https://lawsofux.com/teslers-law/
+- *Laws of UX*: https://lawsofux.com/teslers-law/
 - Tesler, L. (1984). *The Law of Conservation of Complexity.*

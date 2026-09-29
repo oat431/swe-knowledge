@@ -11,7 +11,7 @@ tags:
 
 > **80% of effects come from 20% of causes.**
 
-In UX: 80% of your users use 20% of your features. Focus your design effort on that 20% — the features people actually use.
+In UX: 80% of your users use 20% of your features. Focus your design effort on that 20%, the features people actually use.
 
 ---
 
@@ -60,5 +60,5 @@ Don't use Pareto as an excuse to ignore the 80% entirely. Some of that 80% is cr
 
 ## Sources
 
-- *Laws of UX* — https://lawsofux.com/pareto-principle/
+- *Laws of UX*: https://lawsofux.com/pareto-principle/
 - Pareto, V. (1906). *Manual of Political Economy.*

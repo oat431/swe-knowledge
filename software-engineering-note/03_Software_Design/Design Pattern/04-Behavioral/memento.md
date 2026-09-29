@@ -20,15 +20,15 @@ Imagine building a text editor with an undo feature. The naive approach: before 
 
 This "direct approach" runs into three hard problems:
 
-1. **Private state is private.** Most real objects hide significant data behind private fields. To produce a snapshot, you need access — but opening those fields violates encapsulation and makes the class fragile to refactoring (add, remove, or rename a field and every snapshot-copying class must change too).
+1. **Private state is private.** Most real objects hide significant data behind private fields. To produce a snapshot, you need access, but opening those fields violates encapsulation and makes the class fragile to refactoring (add, remove, or rename a field and every snapshot-copying class must change too).
 
 2. **Snapshot containers leak internals.** To represent an editor's state, you create a container class with fields mirroring the editor's fields (text, cursor coordinates, scroll position, selection, …). The container ends up with almost no methods, but dozens of public fields. Every class that reads or writes these snapshots now depends on the internal structure of the editor. A private-field change in the editor ripples outward.
 
-3. **Dead end.** You either expose all internal details of classes (making them too fragile) or restrict access to their state (making it impossible to produce snapshots). The fundamental problem is **broken encapsulation**: some objects try to do more than they are supposed to, invading the private space of other objects instead of letting those objects perform the action themselves.
+3. **Dead end.** You either expose all internal details of classes (making them too fragile) or restrict access to their state (making it impossible to produce snapshots). The fundamental problem is **broken encapsulation:** some objects try to do more than they are supposed to, invading the private space of other objects instead of letting those objects perform the action themselves.
 
 ## Solution
 
-The Memento pattern delegates creating state snapshots to the **actual owner of that state** — the *originator*. Instead of other objects trying to copy the editor's state from the "outside," the editor class itself makes the snapshot, since it has full access to its own state.
+The Memento pattern delegates creating state snapshots to the **actual owner of that state:** the *originator*. Instead of other objects trying to copy the editor's state from the "outside," the editor class itself makes the snapshot, since it has full access to its own state.
 
 The pattern stores the copy of the object's state in a special object called a **memento**. The contents of the memento are not accessible to any other object except the one that produced it. Other objects communicate with mementos through a **limited interface** that may allow fetching snapshot metadata (creation time, name of the performed operation, etc.), but *never* the original object's state.
 
@@ -40,6 +40,7 @@ In the text editor example: a separate `History` class acts as the caretaker. A 
 ## Structure
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','classText':'#CDD3D1','mainBkg':'#19362D','nodeBorder':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 classDiagram
     class Originator {
         -state
@@ -65,11 +66,11 @@ classDiagram
 
 ### 1. Implementation Based on Nested Classes
 
-The classic implementation (C++, C#, Java — languages with nested class support):
+The classic implementation (C++, C#, Java, languages with nested class support):
 
-1. **Originator** — Produces snapshots of its own state and restores its state from snapshots.
-2. **Memento** — A value object (snapshot of the originator's state). Immutable — data is passed once via the constructor. Nested inside the originator class, giving the originator full access to private fields while the caretaker sees almost nothing.
-3. **Caretaker** — Knows *when* and *why* to capture the originator's state and when to restore it. Keeps a stack (or other structure) of mementos. Fetches the topmost memento and passes it to the originator's restoration method on undo.
+1. **Originator:** Produces snapshots of its own state and restores its state from snapshots.
+2. **Memento:** A value object (snapshot of the originator's state). Immutable, data is passed once via the constructor. Nested inside the originator class, giving the originator full access to private fields while the caretaker sees almost nothing.
+3. **Caretaker:** Knows *when* and *why* to capture the originator's state and when to restore it. Keeps a stack (or other structure) of mementos. Fetches the topmost memento and passes it to the originator's restoration method on undo.
 
 
 ### 2. Implementation Based on an Intermediate Interface
@@ -78,14 +79,14 @@ For languages without nested classes (PHP, Python, JavaScript):
 
 1. Extract a **narrow interface** from the memento class declaring only metadata methods (`getName()`, `getDate()`).
 2. **Caretakers** work with mementos *only* through this interface.
-3. **Originators** work with the concrete memento class directly, accessing all fields (which must be declared public — the downside of this approach).
+3. **Originators** work with the concrete memento class directly, accessing all fields (which must be declared public, the downside of this approach).
 4. Convention (not compiler enforcement) prevents caretakers from accessing originator state.
 
 ### 3. Implementation with Even Stricter Encapsulation
 
 1. **Each memento is linked to the originator that created it.** The originator passes itself to the memento's constructor along with state values.
-2. The restoration method moves into the memento class — the memento knows how to restore its own originator.
-3. **Caretakers become independent from originators** — they call `memento.restore()` rather than `originator.restore(memento)`.
+2. The restoration method moves into the memento class: the memento knows how to restore its own originator.
+3. **Caretakers become independent from originators:** they call `memento.restore()` rather than `originator.restore(memento)`.
 4. Neither originators nor mementos expose their state to anyone. Supports multiple originator/memento type pairs.
 
 ## Pseudocode
@@ -132,7 +133,7 @@ class Editor {
         }
 
         // The memento itself knows how to restore its linked originator.
-        // No other object can call this — Snapshot is a nested private class.
+        // No other object can call this - Snapshot is a nested private class.
         method restore() {
             editor.setText(text)
             editor.setCursor(curX, curY)
@@ -168,11 +169,11 @@ class Command {
 
 ### Multi-Window Support
 
-Since each memento is linked to a specific editor object (passed via constructor), a centralized undo stack can support multiple independent editor windows — the `restore()` call restores the correct editor.
+Since each memento is linked to a specific editor object (passed via constructor), a centralized undo stack can support multiple independent editor windows, the `restore()` call restores the correct editor.
 
 ## Applicability
 
-✅ **Use Memento when you want to produce snapshots of an object's state to restore a previous state.** The Memento pattern lets you make full copies of an object's state (including private fields) and store them separately from the object. Beyond the classic "undo" use case, it's also indispensable for **transactions** — rolling back an operation on error.
+✅ **Use Memento when you want to produce snapshots of an object's state to restore a previous state.** The Memento pattern lets you make full copies of an object's state (including private fields) and store them separately from the object. Beyond the classic "undo" use case, it's also indispensable for **transactions:** rolling back an operation on error.
 
 ✅ **Use Memento when direct access to the object's fields/getters/setters would violate its encapsulation.** The Memento makes the object itself responsible for creating a snapshot of its state. No other object can read the snapshot contents, keeping the originator's private state safe.
 
@@ -184,30 +185,30 @@ Since each memento is linked to a specific editor object (passed via constructor
 4. **Restrict access.** If the language supports nested classes, nest the memento inside the originator. If not, extract a narrow interface from the memento class exposing only metadata methods (`getName()`, `getDate()`), and make all other objects use only the interface.
 5. **Add a snapshot-producing method** to the originator (`createSnapshot()` / `createMemento()`). The originator passes its state to the memento's constructor. The return type should be the narrow interface (if using the interface approach), though internally the method works with the concrete memento class.
 6. **Add a restoration method** to the originator (`restore(memento)`). The parameter type is the interface; typecast internally to the concrete memento class for full access.
-7. **Implement the caretaker.** Whether a command object, a history class, or something else — it should know when to request new mementos, how to store them, and when to restore with a particular memento.
+7. **Implement the caretaker.** Whether a command object, a history class, or something else; it should know when to request new mementos, how to store them, and when to restore with a particular memento.
 8. **Optional: move restoration into the memento.** Link each memento to its originator (pass `this` via constructor) and define `restore()` in the memento class. This decouples the caretaker from the originator entirely. Only makes sense if the originator provides sufficient public setters.
 
 ## Pros and Cons
 
 | ✅ Pros | ❌ Cons |
 |---------|---------|
-| **Preserves encapsulation.** Produce snapshots of an object's state without violating its encapsulation — the originator alone accesses the memento's internals. | **High RAM consumption.** If clients create mementos too often (e.g., on every keystroke), the history stack can consume significant memory. |
+| **Preserves encapsulation.** Produce snapshots of an object's state without violating its encapsulation, the originator alone accesses the memento's internals. | **High RAM consumption.** If clients create mementos too often (e.g., on every keystroke), the history stack can consume significant memory. |
 | **Simplifies originator code.** The caretaker handles the *when* and *how* of state history, letting the originator focus on its core responsibility. | **Caretakers must track lifecycle.** Caretakers need to know when to destroy obsolete mementos (e.g., bounded history size) to avoid unbounded memory growth. |
-| | **No state guarantees in dynamic languages.** PHP, Python, and JavaScript cannot enforce that the state within the memento stays untouched — encapsulation relies on convention, not compiler enforcement. |
+| | **No state guarantees in dynamic languages.** PHP, Python, and JavaScript cannot enforce that the state within the memento stays untouched, encapsulation relies on convention, not compiler enforcement. |
 
 ## Relations with Other Patterns
 
-- **Command** — Used together with Memento for implementing "undo." Commands perform operations over a target object; mementos save the state of that object *just before* a command executes. The command stores the memento as a backup, and restores from it on undo.
+- **Command:** Used together with Memento for implementing "undo." Commands perform operations over a target object; mementos save the state of that object *just before* a command executes. The command stores the memento as a backup, and restores from it on undo.
 
-- **Iterator** — Combined with Memento to capture the current iteration state and roll it back if necessary (e.g., resuming an interrupted traversal from exactly where it left off).
+- **Iterator:** Combined with Memento to capture the current iteration state and roll it back if necessary (e.g., resuming an interrupted traversal from exactly where it left off).
 
-- **Prototype** — Sometimes a simpler alternative to Memento. Works when the object whose state you want to save is straightforward, doesn't hold links to external resources, or those links are easy to re-establish. Instead of a separate memento class, you simply clone the originator.
+- **Prototype:** Sometimes a simpler alternative to Memento. Works when the object whose state you want to save is straightforward, doesn't hold links to external resources, or those links are easy to re-establish. Instead of a separate memento class, you simply clone the originator.
 
-- **State** — While State manages an object's *current* behavior based on internal state transitions, Memento preserves *past* states for rollback. They address orthogonal concerns but can coexist — a State-driven object could use Memento to snapshot its state history.
+- **State:** While State manages an object's *current* behavior based on internal state transitions, Memento preserves *past* states for rollback. They address orthogonal concerns but can coexist, a State-driven object could use Memento to snapshot its state history.
 
 ## Summary Checklist
 
-- [ ] Have you identified the **originator** — the class whose state needs snapshotting?
+- [ ] Have you identified the **originator:** the class whose state needs snapshotting?
 - [ ] Does the **memento class** mirror the originator's fields and accept them only via the constructor (immutable)?
 - [ ] Is the memento **nested inside the originator**, or accessed through a **narrow interface** that exposes only metadata?
 - [ ] Can the **caretaker** store mementos without being able to read or modify the originator's private state?

@@ -10,13 +10,13 @@ tags:
 **Source:** Robert C. Martin, *Clean Code*, Chapter 11 (pp. 153–170), by Dr. Kevin Dean Wampler
 
 > "Complexity kills. It sucks the life out of developers, it makes products difficult to plan, build, and test."
-> —Ray Ozzie, CTO, Microsoft Corporation
+> *Ray Ozzie, CTO, Microsoft Corporation*
 
 ---
 
 ## The City Metaphor
 
-Cities work because **no single person manages everything.** Separate teams own water, power, traffic, law enforcement — each with appropriate levels of abstraction and modularity. Software systems need the same: **clean separation of concerns at the system level,** not just at the module level.
+Cities work because **no single person manages everything.** Separate teams own water, power, traffic, law enforcement; each with appropriate levels of abstraction and modularity. Software systems need the same: **clean separation of concerns at the system level,** not just at the module level.
 
 ---
 
@@ -24,9 +24,9 @@ Cities work because **no single person manages everything.** Separate teams own 
 
 ### 1. Separate Construction from Use
 
-Construction and runtime are **different processes.** A hotel under construction — cranes, hard hats, bare concrete — looks nothing like the finished building with guests checking in. Software must separate the startup wiring phase from the runtime logic phase.
+Construction and runtime are **different processes.** A hotel under construction (cranes, hard hats, bare concrete) looks nothing like the finished building with guests checking in. Software must separate the startup wiring phase from the runtime logic phase.
 
-**The anti-pattern — Lazy Initialization mixed with business logic:**
+**The anti-pattern: Lazy Initialization mixed with business logic:**
 
 ```java
 // BEFORE: Construction and use are entangled
@@ -38,17 +38,17 @@ public Service getService() {
 ```
 
 Problems with this idiom:
-- **Hard-coded dependency** on `MyServiceImpl` — cannot compile without it.
-- **Testing is harder** — requires test doubles before the method is called.
-- **Violates SRP** — the method does construction AND business logic.
-- **Hidden global context** — is `MyServiceImpl` really right for *all* contexts?
+- **Hard-coded dependency** on `MyServiceImpl`: cannot compile without it.
+- **Testing is harder:** requires test doubles before the method is called.
+- **Violates SRP:** the method does construction AND business logic.
+- **Hidden global context:** is `MyServiceImpl` really right for *all* contexts?
 
 ```java
 // AFTER: Construction moved out; object receives its dependency
 public class OrderProcessor {
     private final Service service;
 
-    // Constructor injection — dependencies wired by main/container
+    // Constructor injection - dependencies wired by main/container
     public OrderProcessor(Service service) {
         this.service = service;
     }
@@ -87,12 +87,12 @@ main ──> LineItemFactoryImplementation ──implements──> LineItemFacto
 - The application is **decoupled** from construction details.
 
 ```java
-// Factory interface — application knows only this
+// Factory interface - application knows only this
 public interface LineItemFactory {
     LineItem create(Product product, int quantity);
 }
 
-// Concrete factory — on the main side, invisible to application
+// Concrete factory - on the main side, invisible to application
 public class LineItemFactoryImpl implements LineItemFactory {
     private final PricingService pricing;
 
@@ -105,7 +105,7 @@ public class LineItemFactoryImpl implements LineItemFactory {
     }
 }
 
-// Application code — uses factory, never knows implementation
+// Application code - uses factory, never knows implementation
 public class OrderProcessor {
     private final LineItemFactory lineItemFactory;
 
@@ -131,13 +131,13 @@ Dependency Injection is **Inversion of Control applied to dependency management.
 | **Setter injection** | Dependencies passed via setter methods | Optional or reconfigurable dependencies |
 | **Interface injection** | Object implements interface that receives dependencies | Less common; framework-specific |
 
-**JNDI lookups are a *partial* DI** — the object still *actively* resolves its dependency by name. True DI makes the class **completely passive.**
+**JNDI lookups are a *partial* DI**, the object still *actively* resolves its dependency by name. True DI makes the class **completely passive.**
 
 ```java
-// BEFORE: Active dependency resolution (JNDI — partial DI)
+// BEFORE: Active dependency resolution (JNDI - partial DI)
 MyService myService = (MyService) jndiContext.lookup("NameOfMyService");
 
-// AFTER: Passive — container injects via constructor or setter
+// AFTER: Passive - container injects via constructor or setter
 public class Client {
     private final MyService myService;
 
@@ -172,33 +172,33 @@ public class Client {
 At runtime, the container assembles a **Russian-doll chain of decorators:** Bank ↔ DAO ↔ DataSource. The client thinks it's calling `getAccounts()` on a `Bank`, but it's talking to the outermost decorator of a nested, transparently-proxied chain.
 
 ```java
-// Application code — nearly zero framework coupling
+// Application code - nearly zero framework coupling
 XmlBeanFactory bf = new XmlBeanFactory(new ClassPathResource("app.xml"));
 Bank bank = (Bank) bf.getBean("bank");
 ```
 
-**Lazy initialization is still possible with DI:** most containers don't construct objects until needed, and many provide proxy/factory mechanisms for lazy evaluation. But remember — lazy initialization is an *optimization* and may be premature.
+**Lazy initialization is still possible with DI:** most containers don't construct objects until needed, and many provide proxy/factory mechanisms for lazy evaluation. But remember, lazy initialization is an *optimization* and may be premature.
 
-### 5. Scale Incrementally — Don't Build a Highway Through a Village
+### 5. Scale Incrementally: Don't Build a Highway Through a Village
 
 > "It is a myth that we can get systems 'right the first time.'"
 
 Cities grow: narrow paths → paved roads → widened streets → highways. Services (power, water, internet) are added as density increases. You don't build a six-lane highway through a small town "just in case."
 
-**Software architectures CAN grow incrementally** — unlike physical buildings — because software is ephemeral and we can maintain proper separation of concerns.
+**Software architectures CAN grow incrementally:** unlike physical buildings, because software is ephemeral and we can maintain proper separation of concerns.
 
-**Counterexample — EJB2:** Did *not* separate concerns adequately.
+**Counterexample: EJB2:** Did *not* separate concerns adequately.
 - Required subclassing container types.
 - Required empty lifecycle methods (`ejbActivate`, `ejbPassivate`, etc.).
 - Tight coupling to heavyweight container made unit testing nearly impossible.
 - Reuse outside EJB2 impossible.
 - DTOs (Data Transfer Objects) created redundant types with boilerplate copying code.
-- One bean couldn't inherit from another — undermined OOP itself.
+- One bean couldn't inherit from another: undermined OOP itself.
 
 **EJB2 before vs. EJB3 after:**
 
 ```java
-// BEFORE: EJB2 — invasive, tightly coupled, verbose
+// BEFORE: EJB2 - invasive, tightly coupled, verbose
 public abstract class Bank implements javax.ejb.EntityBean {
     public abstract String getStreetAddr1();
     public abstract String getCity();
@@ -222,7 +222,7 @@ public abstract class Bank implements javax.ejb.EntityBean {
     public void unsetEntityContext() {}
 }
 
-// AFTER: EJB3 — clean POJO with annotations, testable
+// AFTER: EJB3 - clean POJO with annotations, testable
 @Entity
 @Table(name = "BANKS")
 public class Bank implements java.io.Serializable {
@@ -248,7 +248,7 @@ public class Bank implements java.io.Serializable {
 
 **Cross-cutting concerns** are concerns like persistence, transactions, security, caching, and logging that cut across natural domain object boundaries. You want a *consistent* persistence strategy, but the code implementing it ends up scattered across many objects.
 
-**Aspect-Oriented Programming (AOP)** restores modularity for these concerns. An *aspect* declares: "at these points in the system, modify behavior in this consistent way to support this concern" — all done *noninvasively* (no manual editing of target source code).
+**Aspect-Oriented Programming (AOP)** restores modularity for these concerns. An *aspect* declares: "at these points in the system, modify behavior in this consistent way to support this concern"; all done *noninvasively* (no manual editing of target source code).
 
 Three aspect-like mechanisms in Java, in increasing power and complexity:
 
@@ -263,7 +263,7 @@ public interface Bank {
     void setAccounts(Collection<Account> accounts);
 }
 
-// POJO implementation — pure business logic
+// POJO implementation - pure business logic
 public class BankImpl implements Bank {
     private List<Account> accounts;
 
@@ -273,7 +273,7 @@ public class BankImpl implements Bank {
     }
 }
 
-// InvocationHandler — persistence cross-cutting via proxy
+// InvocationHandler - persistence cross-cutting via proxy
 public class BankProxyHandler implements InvocationHandler {
     private Bank bank;
 
@@ -307,12 +307,12 @@ Bank bank = (Bank) Proxy.newProxyInstance(
 
 #### b. Pure Java AOP Frameworks (Spring AOP)
 
-Handles **80–90% of aspect use cases.** Write plain POJOs focused purely on domain logic — no dependencies on enterprise frameworks. Declare infrastructure (persistence, transactions, security, caching) in configuration files or annotations. The framework transparently handles proxies/byte-code manipulation.
+Handles **80–90% of aspect use cases.** Write plain POJOs focused purely on domain logic, no dependencies on enterprise frameworks. Declare infrastructure (persistence, transactions, security, caching) in configuration files or annotations. The framework transparently handles proxies/byte-code manipulation.
 
 **Spring transaction management example:**
 
 ```java
-// Pure POJO — no framework dependency
+// Pure POJO - no framework dependency
 public class OrderService {
     private final OrderRepository repository;
     private final PaymentGateway payment;
@@ -332,7 +332,7 @@ public class OrderService {
 
 Without any explicit transaction code, Spring's AOP framework wraps the method: opens a transaction before `placeOrder` executes, commits on success, rolls back on exception. The domain logic stays clean.
 
-**EJB3 adopted this model** — declarative cross-cutting concerns via annotations/XML, leaving pure POJOs underneath.
+**EJB3 adopted this model:** declarative cross-cutting concerns via annotations/XML, leaving pure POJOs underneath.
 
 #### c. AspectJ
 
@@ -350,10 +350,10 @@ The most **full-featured** AOP tool. An extension of Java providing first-class 
 
 **Big Design Up Front (BDUF) is harmful:**
 - Inhibits adapting to change (psychological resistance to discarding prior effort).
-- Architecture choices influence all subsequent design thinking — lock-in.
-- Physical architects must do BDUF (can't radically change a skyscraper mid-construction), but software is *economically feasible* to change — **if** concerns are well-separated.
+- Architecture choices influence all subsequent design thinking: lock-in.
+- Physical architects must do BDUF (can't radically change a skyscraper mid-construction), but software is *economically feasible* to change, **if** concerns are well-separated.
 
-**Strategy:** Start with a "naively simple" but well-decoupled architecture. Deliver working user stories quickly. Add infrastructure (caching, security, virtualization) incrementally as you scale. The world's largest websites achieved high availability and performance this way — not through BDUF.
+**Strategy:** Start with a "naively simple" but well-decoupled architecture. Deliver working user stories quickly. Add infrastructure (caching, security, virtualization) incrementally as you scale. The world's largest websites achieved high availability and performance this way, not through BDUF.
 
 ### 8. Defer Decisions to the Last Responsible Moment
 
@@ -367,7 +367,7 @@ The agility of a POJO system with modularized concerns *enables* just-in-time de
 
 Standards can make it easier to reuse ideas, recruit experienced people, encapsulate good practices, and wire components together. But:
 
-- **EJB2 was adopted because it was a standard** — even when lighter, simpler designs would have been sufficient.
+- **EJB2 was adopted because it was a standard:** even when lighter, simpler designs would have been sufficient.
 - Standards creation can be too slow for the industry.
 - Some standards lose touch with real adopter needs.
 
@@ -375,9 +375,9 @@ Standards can make it easier to reuse ideas, recruit experienced people, encapsu
 
 ### 10. Build Domain-Specific Languages (DSLs)
 
-DSLs minimize the **communication gap** between a domain concept and the code that implements it. A good DSL lets code read like structured prose that a domain expert would write — you're implementing domain logic in the *same language* the domain expert uses.
+DSLs minimize the **communication gap** between a domain concept and the code that implements it. A good DSL lets code read like structured prose that a domain expert would write; you're implementing domain logic in the *same language* the domain expert uses.
 
-DSLs raise the abstraction level above code idioms and design patterns. They allow all levels of abstraction — from high-level policy to low-level details — to be expressed as POJOs.
+DSLs raise the abstraction level above code idioms and design patterns. They allow all levels of abstraction (from high-level policy to low-level details) to be expressed as POJOs.
 
 ```java
 // Without DSL: low-level API, intent obscured
@@ -406,7 +406,7 @@ public Service getService() {
     return service;
 }
 
-// Anti-pattern: EJB2 Entity Bean — invasive, tightly coupled
+// Anti-pattern: EJB2 Entity Bean - invasive, tightly coupled
 public abstract class Bank implements javax.ejb.EntityBean {
     public abstract String getStreetAddr1();
     public abstract void setStreetAddr1(String s);
@@ -424,7 +424,7 @@ public abstract class Bank implements javax.ejb.EntityBean {
 ### After (Clean Separation, DI + AOP + POJOs)
 
 ```java
-// Constructor Injection — dependencies wired externally
+// Constructor Injection - dependencies wired externally
 public class OrderProcessor {
     private final Service service;
 
@@ -437,12 +437,12 @@ public class OrderProcessor {
     }
 }
 
-// Abstract Factory — app controls WHEN, main controls HOW
+// Abstract Factory - app controls WHEN, main controls HOW
 public interface LineItemFactory {
     LineItem create(Product product, int quantity);
 }
 
-// EJB3 / Spring POJO — clean, testable, annotated for cross-cutting concerns
+// EJB3 / Spring POJO - clean, testable, annotated for cross-cutting concerns
 @Entity
 @Table(name = "BANKS")
 public class Bank implements Serializable {
@@ -466,7 +466,7 @@ public class OrderService {
     @Transactional
     public void placeOrder(Order order) {
         payment.charge(order.getTotal());
-        repository.save(order);  // No transaction code — AOP handles it
+        repository.save(order);  // No transaction code - AOP handles it
     }
 }
 ```
@@ -475,16 +475,16 @@ public class OrderService {
 
 ## Checklist: System Architecture Design
 
-- [ ] **Startup wiring is separated from runtime logic** — no lazy initialization in business methods
-- [ ] **`main` (or DI container) owns all construction** — dependency arrows point one way, away from main
+- [ ] **Startup wiring is separated from runtime logic:** no lazy initialization in business methods
+- [ ] **`main` (or DI container) owns all construction:** dependency arrows point one way, away from main
 - [ ] **Abstract Factory is used** when the application controls *when* but not *how* to create objects
-- [ ] **Dependencies are injected** (constructor/setter), never looked up — classes are passive
-- [ ] **All domain logic lives in POJOs** — zero dependencies on frameworks or containers
+- [ ] **Dependencies are injected** (constructor/setter), never looked up, classes are passive
+- [ ] **All domain logic lives in POJOs:** zero dependencies on frameworks or containers
 - [ ] **Cross-cutting concerns** (persistence, transactions, security, caching) are handled via AOP or declarative configuration
-- [ ] **Architecture can be test-driven** — domain logic testable without mocking containers
-- [ ] **System grows incrementally** — no Big Design Up Front; start simple, scale as needed
-- [ ] **Decisions are deferred** to the last responsible moment — maximum information before commitment
-- [ ] **Standards are adopted only when they add demonstrable value** — not because they're trendy
+- [ ] **Architecture can be test-driven:** domain logic testable without mocking containers
+- [ ] **System grows incrementally:** no Big Design Up Front; start simple, scale as needed
+- [ ] **Decisions are deferred** to the last responsible moment: maximum information before commitment
+- [ ] **Standards are adopted only when they add demonstrable value:** not because they're trendy
 - [ ] **DSLs are used** where they reduce the communication gap between domain and code
 - [ ] **Simplest thing that can possibly work** is chosen at every level of abstraction
 

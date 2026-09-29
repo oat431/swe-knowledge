@@ -7,7 +7,7 @@ tags:
 
 # Case Study: JUnit Internals
 
-*Robert C. Martin — Clean Code, Chapter 15 (pp. 251–266)*
+*Robert C. Martin, Clean Code, Chapter 15 (pp. 251–266)*
 
 > *"No module is immune from improvement, and each of us has the responsibility to leave the code a little better than we found it."*
 
@@ -15,7 +15,7 @@ tags:
 
 ## ### What Is ComparisonCompactor?
 
-The `ComparisonCompactor` is a utility inside JUnit that produces human-readable string mismatch messages. Given two differing strings like `"ABCDE"` and `"ABXDE"`, it identifies the delta and wraps it in brackets with optional surrounding context—output: `<...B[X]D...>`.
+The `ComparisonCompactor` is a utility inside JUnit that produces human-readable string mismatch messages. Given two differing strings like `"ABCDE"` and `"ABXDE"`, it identifies the delta and wraps it in brackets with optional surrounding context; output: `<...B[X]D...>`.
 
 The **contextLength** parameter controls how many surrounding characters to show. A context of 0 produces ellipsis (`...`), while a context ≥1 shows that many characters before and after the difference.
 
@@ -23,7 +23,7 @@ The chapter walks through the author's real-world JUnit source code and refactor
 
 ---
 
-## ### The Test Suite — A Specification in Code
+## ### The Test Suite: A Specification in Code
 
 Before touching the production code, Martin presents the full test suite (**Listing 15-1**, 19 tests). The tests cover:
 
@@ -39,7 +39,7 @@ This is the safety net that makes aggressive refactoring possible. Without it, t
 
 ---
 
-## ### The Original Code — What's Wrong?
+## ### The Original Code: What's Wrong?
 
 The original `ComparisonCompactor.java` (**Listing 15-2**) is already "nicely partitioned, reasonably expressive, and simple in structure." But the Boy Scout Rule demands we leave it better. Here's what needs fixing:
 
@@ -50,7 +50,7 @@ The original `ComparisonCompactor.java` (**Listing 15-2**) is already "nicely pa
 | Local variables shadow member names (`expected`, `actual`) | [[Naming Conventions]] N4 | Ambiguous names |
 | Negative conditional (`shouldNotCompact`) | [[Code Smells Catalog]] G29 | Harder to parse than positive |
 | Method named `compact` that might not compact | [[Naming Conventions]] N7 | Misleading; side-effect hidden |
-| `compact()` both compacts AND formats — two responsibilities | [[Class Design & SOLID]] G30 | Cohesion problem |
+| `compact()` both compacts AND formats, two responsibilities | [[Class Design & SOLID]] G30 | Cohesion problem |
 | `findCommonSuffix` depends on `findCommonPrefix` being called first | [[Code Smells Catalog]] G31 | Hidden temporal coupling |
 | `suffixIndex` is 1-based rather than a true length, causing `+1` noise | [[Code Smells Catalog]] G33 | Off-by-one confusion |
 | Dead/useless `if` statements in `compactString()` | [[Code Smells Catalog]] G9 | Dead code |
@@ -141,13 +141,13 @@ public class ComparisonCompactor {
 }
 ```
 
-For perspective on how **bad** it *could* have been, the chapter also shows a "defactored" version with names like `ctxt`, `s1`, `s2`, `pfx`, `sfx`, and no methods extracted at all. The original is already far better than that—but we can do better still.
+For perspective on how **bad** it *could* have been, the chapter also shows a "defactored" version with names like `ctxt`, `s1`, `s2`, `pfx`, `sfx`, and no methods extracted at all. The original is already far better than that, but we can do better still.
 
 ---
 
 ## ### Refactoring Step 1: Remove Hungarian Notation
 
-**[[Naming Conventions]] — N6: Scope encoding is redundant.** Modern IDEs highlight member variables differently. The `f` prefix adds no value.
+**[[Naming Conventions]]: N6: Scope encoding is redundant.** Modern IDEs highlight member variables differently. The `f` prefix adds no value.
 
 ### Before
 ```java
@@ -173,7 +173,7 @@ private int suffix;
 
 ## ### Refactoring Step 2: Encapsulate the Guard Conditional
 
-**[[Function Design]] — G28: Encapsulate conditionals.** The inline `expected == null || actual == null || areStringsEqual()` hides intent. Extract it.
+**[[Function Design]]: G28: Encapsulate conditionals.** The inline `expected == null || actual == null || areStringsEqual()` hides intent. Extract it.
 
 ### Before
 ```java
@@ -203,7 +203,7 @@ private boolean shouldNotCompact() {
 
 ## ### Refactoring Step 3: Disambiguate Variable Names
 
-**[[Naming Conventions]] — N4: Don't shadow member variables.** After renaming `fExpected` to `expected`, the local variables `expected` and `actual` in `compact()` shadow the fields. They represent compacted versions, so name them accordingly.
+**[[Naming Conventions]]: N4: Don't shadow member variables.** After renaming `fExpected` to `expected`, the local variables `expected` and `actual` in `compact()` shadow the fields. They represent compacted versions, so name them accordingly.
 
 ### Before
 ```java
@@ -223,7 +223,7 @@ String compactActual = compactString(actual);
 
 ## ### Refactoring Step 4: Invert the Negative Conditional
 
-**[[Code Smells Catalog]] — G29: Avoid negatives.** `shouldNotCompact` is a double-negative thought. Invert to `canBeCompacted()` and flip the if/else.
+**[[Code Smells Catalog]]: G29: Avoid negatives.** `shouldNotCompact` is a double-negative thought. Invert to `canBeCompacted()` and flip the if/else.
 
 ### Before
 ```java
@@ -262,9 +262,9 @@ private boolean canBeCompacted() {
 
 ---
 
-## ### Refactoring Step 5: Rename Method — It Formats, Not Just Compacts
+## ### Refactoring Step 5: Rename Method: It Formats, Not Just Compacts
 
-**[[Naming Conventions]] — N7 & [[Function Design]] — G30.** The method named `compact` doesn't always compact—it also formats the message. And when it does compact, it bundles compacting with formatting.
+**[[Naming Conventions]]: N7 & [[Function Design]]: G30.** The method named `compact` doesn't always compact; it also formats the message. And when it does compact, it bundles compacting with formatting.
 
 **What it really does:** Formats a comparison. If compacting is appropriate, it compacts first, then formats.
 
@@ -307,7 +307,7 @@ private void compactExpectedAndActual() {
 
 ## ### Refactoring Step 6: Fix Side-Effect Methods to Return Values
 
-**[[Code Smells Catalog]] — G11: Inconsistent conventions.** Inside `compactExpectedAndActual()`, two lines mutate fields (`findCommonPrefix()`, `findCommonSuffix()`) and two lines return values (`compactString(...)`). This is inconsistent.
+**[[Code Smells Catalog]]: G11: Inconsistent conventions.** Inside `compactExpectedAndActual()`, two lines mutate fields (`findCommonPrefix()`, `findCommonSuffix()`) and two lines return values (`compactString(...)`). This is inconsistent.
 
 **Refactor `findCommonPrefix` and `findCommonSuffix` to return their results** instead of writing to fields:
 
@@ -369,7 +369,7 @@ private int findCommonSuffix() {
 
 ## ### Refactoring Step 7: Eliminate Hidden Temporal Coupling
 
-**[[Code Smells Catalog]] — G31: Hidden temporal coupling.** `findCommonSuffix()` depends on `findCommonPrefix()` being called first because it reads `prefixIndex`. If you swap the calls, you get a mystery bug.
+**[[Code Smells Catalog]]: G31: Hidden temporal coupling.** `findCommonSuffix()` depends on `findCommonPrefix()` being called first because it reads `prefixIndex`. If you swap the calls, you get a mystery bug.
 
 **First attempt:** Pass `prefixIndex` as an argument.
 ```java
@@ -406,7 +406,7 @@ private void findCommonPrefixAndSuffix() {
 
 ---
 
-## ### Refactoring Step 8: Clean Up the Suffix Loop — Extract Helper Methods
+## ### Refactoring Step 8: Clean Up the Suffix Loop: Extract Helper Methods
 
 The nested loop in `findCommonPrefixAndSuffix()` is hard to parse. Extract `charFromEnd()` and `suffixOverlapsPrefix()` to make the intent explicit.
 
@@ -456,9 +456,9 @@ private boolean suffixOverlapsPrefix(int suffixLength) {
 
 ---
 
-## ### Refactoring Step 9: Fix the Off-by-One — Make suffixLength Truly Zero-Based
+## ### Refactoring Step 9: Fix the Off-by-One: Make suffixLength Truly Zero-Based
 
-**[[Code Smells Catalog]] — G33: Off-by-one confusion.** `suffixIndex` is 1-based, not zero-based. This forces `+1` throughout the code, especially in `computeCommonSuffix()`.
+**[[Code Smells Catalog]]: G33: Off-by-one confusion.** `suffixIndex` is 1-based, not zero-based. This forces `+1` throughout the code, especially in `computeCommonSuffix()`.
 
 **Change `suffixIndex` to `suffixLength`** and make it zero-based:
 
@@ -507,9 +507,9 @@ private String compactString(String source) {
 
 **Bug discovered during refactoring:** After making `suffixLength` zero-based, the condition `if (suffixLength > 0)` should have become `if (suffixLength >= 0)` to preserve the same behavior. But it was left as `> 0`... and *it makes sense now!*
 
-**This means the original `>` was already a bug** — `suffixIndex` could *never* be less than 1 (it was 1-based), so the condition `suffixIndex > 0` was always true. The `if` statement was dead code that executed unconditionally. The same was true for `if (prefixIndex > 0)` when there's no prefix to show.
+**This means the original `>` was already a bug:** `suffixIndex` could *never* be less than 1 (it was 1-based), so the condition `suffixIndex > 0` was always true. The `if` statement was dead code that executed unconditionally. The same was true for `if (prefixIndex > 0)` when there's no prefix to show.
 
-**Martin comments out both `if` statements and runs the tests — they pass.** Both branches were semantically dead.
+**Martin comments out both `if` statements and runs the tests; they pass.** Both branches were semantically dead.
 
 ### Before (dead if-statements)
 ```java
@@ -537,7 +537,7 @@ private String compactString(String source) {
 }
 ```
 
-When `prefixLength` or `suffixLength` is 0, `computeCommonPrefix()` and `computeCommonSuffix()` naturally return `""` — no `if` needed.
+When `prefixLength` or `suffixLength` is 0, `computeCommonPrefix()` and `computeCommonSuffix()` naturally return `""`, no `if` needed.
 
 > **Rule:** When refactoring reveals dead code, **prove** it's dead with tests, then delete it. Don't leave commented-out code.
 
@@ -665,15 +665,15 @@ public class ComparisonCompactor {
 
 ### What Makes This Version Better
 
-1. **Two clean layers:** *Analysis functions* (find prefix/suffix) come first; *Synthesis functions* (build the output string) come last. Topologically sorted — each function is defined right after its last use.
+1. **Two clean layers:** *Analysis functions* (find prefix/suffix) come first; *Synthesis functions* (build the output string) come last. Topologically sorted; each function is defined right after its last use.
 
 2. **`compact(String s)` as a builder:** Uses `StringBuilder` with named private methods for each fragment: `startingEllipsis()`, `startingContext()`, `DELTA_START`, `delta(s)`, `DELTA_END`, `endingContext()`, `endingEllipsis()`. You can read the assembly order top to bottom.
 
-3. **No dead code, no off-by-one noise, no temporal coupling** — each function stands alone.
+3. **No dead code, no off-by-one noise, no temporal coupling:** each function stands alone.
 
-4. **Conditional intent is clear:** `shouldBeCompacted()` delegates to `shouldNotBeCompacted()` — both positive and negative forms are available. The original violated G29 (negatives are harder); this version gives you both explicitly.
+4. **Conditional intent is clear:** `shouldBeCompacted()` delegates to `shouldNotBeCompacted()`, both positive and negative forms are available. The original violated G29 (negatives are harder); this version gives you both explicitly.
 
-5. **Method name says what it does:** `formatCompactedComparison(String message)` — no surprises.
+5. **Method name says what it does:** `formatCompactedComparison(String message)`, no surprises.
 
 ---
 
@@ -686,10 +686,10 @@ public class ComparisonCompactor {
 | **Naming is half the battle** | `fContextLength` → `contextLength`. `compact()` → `formatCompactedComparison()`. `suffixIndex` → `suffixLength`. Each rename clarified intent. |
 | **Off-by-one errors hide in plain sight** | The 1-based `suffixIndex` caused invisible `+1` pollution. Normalizing to zero-based uncovered dead code and a latent bug. |
 | **Hidden temporal coupling is a time bomb** | `findCommonSuffix()` silently depended on `findCommonPrefix()`. Merging them into `findCommonPrefixAndSuffix()` made the dependency obvious and unbreakable. |
-| **Extract helpers to name intent** | `charFromEnd(s, i)` and `suffixOverlapsPrefix()` are one-liners. Their value isn't in code reuse — it's in giving names to concepts. |
+| **Extract helpers to name intent** | `charFromEnd(s, i)` and `suffixOverlapsPrefix()` are one-liners. Their value isn't in code reuse; it's in giving names to concepts. |
 | **Dead code doesn't always look dead** | The `if (prefixIndex > 0)` guard was *always true* in the original code. Only the refactoring exposed it. |
-| **Layered architecture emerges** | The final version has a clear analysis→synthesis pipeline. Good structure isn't designed upfront — it's revealed through cleaning. |
-| **Boy Scout Rule** | Always leave the code a little cleaner than you found it. Even JUnit — written by Kent Beck and Erich Gamma — had room for improvement. |
+| **Layered architecture emerges** | The final version has a clear analysis→synthesis pipeline. Good structure isn't designed upfront; it's revealed through cleaning. |
+| **Boy Scout Rule** | Always leave the code a little cleaner than you found it. Even JUnit (written by Kent Beck and Erich Gamma) had room for improvement. |
 
 ---
 
@@ -697,27 +697,27 @@ public class ComparisonCompactor {
 
 Use this when reviewing your own comparison/formatting code:
 
-- [ ] **No Hungarian notation** — field prefixes (`f`, `m_`, `_`) add no value in modern IDEs
-- [ ] **Conditionals are encapsulated** — `if (canBeCompacted())` beats `if (x != null && y != null && !equals())`
-- [ ] **Positive conditionals preferred** — `shouldCompact()` over `!shouldNotCompact()`
-- [ ] **Method names reflect full behavior** — `formatCompactedComparison()`, not just `compact()`
-- [ ] **No local/field name shadowing** — different concepts get different names
-- [ ] **Functions return values** — avoid void methods that mutate fields as primary output
-- [ ] **No hidden temporal coupling** — if A must run before B, merge them or make the dependency explicit
-- [ ] **Zero-based indices** — `length`, not `index + 1`
-- [ ] **Dead code removed** — prove it's dead with tests, then delete
-- [ ] **Analysis and synthesis separated** — compute first, assemble later
-- [ ] **Builder pattern for string composition** — `StringBuilder` with named fragment methods
-- [ ] **Tests pass at every step** — refactor in tiny steps; run tests after each change
+- [ ] **No Hungarian notation:** field prefixes (`f`, `m_`, `_`) add no value in modern IDEs
+- [ ] **Conditionals are encapsulated:** `if (canBeCompacted())` beats `if (x != null && y != null && !equals())`
+- [ ] **Positive conditionals preferred:** `shouldCompact()` over `!shouldNotCompact()`
+- [ ] **Method names reflect full behavior:** `formatCompactedComparison()`, not just `compact()`
+- [ ] **No local/field name shadowing:** different concepts get different names
+- [ ] **Functions return values:** avoid void methods that mutate fields as primary output
+- [ ] **No hidden temporal coupling:** if A must run before B, merge them or make the dependency explicit
+- [ ] **Zero-based indices:** `length`, not `index + 1`
+- [ ] **Dead code removed:** prove it's dead with tests, then delete
+- [ ] **Analysis and synthesis separated:** compute first, assemble later
+- [ ] **Builder pattern for string composition:** `StringBuilder` with named fragment methods
+- [ ] **Tests pass at every step:** refactor in tiny steps; run tests after each change
 
 ---
 
 ## ### Related Concepts
 
-- [[Clean Code Principles]] — Boy Scout Rule, the craftsmanship mindset
-- [[Function Design]] — Small functions, single responsibility, encapsulate conditionals (G28), side-effect-free (G30)
-- [[Naming Conventions]] — No Hungarian (N6), no shadowing (N4), accurate names (N1, N7)
-- [[Class Design & SOLID]] — Single Responsibility: separate analysis from synthesis
-- [[Code Smells Catalog]] — G9 (dead code), G11 (inconsistency), G28, G29, G30, G31, G32, G33
-- [[Unit Testing]] — Tests as safety net; 100% coverage enables aggressive refactoring
-- [[Function Design]] — Iterative process, trial and error, extract/inline round-tripping
+- [[Clean Code Principles]]: Boy Scout Rule, the craftsmanship mindset
+- [[Function Design]]: Small functions, single responsibility, encapsulate conditionals (G28), side-effect-free (G30)
+- [[Naming Conventions]]: No Hungarian (N6), no shadowing (N4), accurate names (N1, N7)
+- [[Class Design & SOLID]]: Single Responsibility: separate analysis from synthesis
+- [[Code Smells Catalog]]: G9 (dead code), G11 (inconsistency), G28, G29, G30, G31, G32, G33
+- [[Unit Testing]]: Tests as safety net; 100% coverage enables aggressive refactoring
+- [[Function Design]]: Iterative process, trial and error, extract/inline round-tripping

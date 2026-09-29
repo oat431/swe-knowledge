@@ -7,7 +7,7 @@ tags:
 
 # Boundaries & Dependencies
 
-**Source:** *Clean Code* — Robert C. Martin, Chapter 8 by James Grenning  
+**Source:** *Clean Code* by Robert C. Martin, Chapter 8 by James Grenning  
 **Domain:** [[Clean Code Principles]] · [[Class Design & SOLID]] · [[System Architecture]] · [[Code Smells Catalog]]
 
 ---
@@ -24,11 +24,11 @@ We seldom control all the software in our systems. Third-party packages, open-so
 
 ## Principles
 
-### **Encapsulate Third-Party APIs** — Never pass boundary interfaces around your system
+### **Encapsulate Third-Party APIs:** Never pass boundary interfaces around your system
 
-Third-party interfaces (like `java.util.Map`) are designed for **broad applicability**, not for your specific needs. They expose far more surface area than you need — `clear()`, `putAll()`, untyped entries — and their signatures change across versions (as `Map` did when Java 5 added generics).
+Third-party interfaces (like `java.util.Map`) are designed for **broad applicability**, not for your specific needs. They expose far more surface area than you need (`clear()`, `putAll()`, untyped entries) and their signatures change across versions (as `Map` did when Java 5 added generics).
 
-**Smell — raw Map leaking through the codebase:**
+**Smell: raw Map leaking through the codebase:**
 
 ```java
 // BAD: Map exposed everywhere; every caller must cast
@@ -40,7 +40,7 @@ Map<Sensor> sensors = new HashMap<Sensor>();
 Sensor s = sensors.get(sensorId);
 ```
 
-**Clean — boundary hidden inside one class:**
+**Clean: boundary hidden inside one class:**
 
 ```java
 // GOOD: Map is an implementation detail; casting lives in one place
@@ -51,7 +51,7 @@ public class Sensors {
         return sensors.get(id);
     }
 
-    // Business rules enforced here — no caller can clear(), putAll(), etc.
+    // Business rules enforced here - no caller can clear(), putAll(), etc.
 }
 ```
 
@@ -59,17 +59,17 @@ public class Sensors {
 
 ---
 
-### **Write Learning Tests** — Explore third-party code through tests, not production code
+### **Write Learning Tests:** Explore third-party code through tests, not production code
 
-When you don't know how a library works, the worst thing you can do is experiment inside your production code — mixing "learning" with "building." Instead, write isolated unit tests that call the API the way your application intends to use it.
+When you don't know how a library works, the worst thing you can do is experiment inside your production code, mixing "learning" with "building." Instead, write isolated unit tests that call the API the way your application intends to use it.
 
-**Jim Newkirk's learning test approach — progressive exploration of log4j:**
+**Jim Newkirk's learning test approach: progressive exploration of log4j:**
 
 | Attempt | What we learned |
 |---------|-----------------|
 | `Logger.getLogger("x").info("hello")` | We need an `Appender` |
-| `new ConsoleAppender()` — added | Appender has no output stream yet |
-| `new ConsoleAppender(new PatternLayout(...), SYSTEM_OUT)` | Works! But `SYSTEM_OUT` is optional — odd behaviour |
+| `new ConsoleAppender()`, added | Appender has no output stream yet |
+| `new ConsoleAppender(new PatternLayout(...), SYSTEM_OUT)` | Works! But `SYSTEM_OUT` is optional, odd behaviour |
 | `BasicConfigurator.configure()` | Simplest one-liner for console logging |
 
 ```java
@@ -107,30 +107,30 @@ public class LogTest {
 }
 ```
 
-**Value:** You had to learn the API anyway. Tests give you an **easy, isolated** way to get that knowledge — plus a regression suite that flags breaking changes when you upgrade the library.
+**Value:** You had to learn the API anyway. Tests give you an **easy, isolated** way to get that knowledge, plus a regression suite that flags breaking changes when you upgrade the library.
 
 ---
 
-### **Learning Tests Are Better Than Free** — They have positive ROI
+### **Learning Tests Are Better Than Free:** They have positive ROI
 
 Learning tests cost nothing because the time was already spent learning the API. But they also pay dividends:
 
 1. **Upgrade safety.** Run learning tests against new releases to detect behavioural differences *immediately*.
-2. **Migration confidence.** Without boundary tests, you'll be tempted to stay on old versions longer than you should — accumulating technical debt.
+2. **Migration confidence.** Without boundary tests, you'll be tempted to stay on old versions longer than you should, accumulating technical debt.
 3. **Living documentation.** The tests document *exactly* how your application expects the API to behave.
 
 > A clean boundary should be supported by a set of **outbound tests** that exercise the interface the same way the production code does.
 
 ---
 
-### **Define the Interface You Wish You Had** — Use the Adapter pattern for code that doesn't exist yet
+### **Define the Interface You Wish You Had:** Use the Adapter pattern for code that doesn't exist yet
 
-When a subsystem you depend on hasn't been built yet (or its API is undefined), don't wait. **Define your own interface** — the one you *wish* you had — and code against that. Later, when the real API arrives, bridge the gap with an **Adapter**.
+When a subsystem you depend on hasn't been built yet (or its API is undefined), don't wait. **Define your own interface:** the one you *wish* you had, and code against that. Later, when the real API arrives, bridge the gap with an **Adapter**.
 
 **The Transmitter example:**
 
 ```java
-// 1. Define the interface YOU control — the one you wish existed
+// 1. Define the interface YOU control - the one you wish existed
 public interface Transmitter {
     void transmit(Frequency frequency, DataStream stream);
 }
@@ -167,12 +167,12 @@ public class TransmitterAdapter implements Transmitter {
 **Why this wins:**
 - Your code stays **readable** and **focused** on what it's trying to accomplish.
 - `CommunicationsController` never knows about the real API.
-- You can test with a **FakeTransmitter** right away — no waiting.
+- You can test with a **FakeTransmitter** right away: no waiting.
 - When the real API changes, only the **one** Adapter needs updating.
 
 ---
 
-### **Clean Boundaries** — Fewer touch-points, stronger separation
+### **Clean Boundaries:** Fewer touch-points, stronger separation
 
 Change happens at boundaries. Good designs absorb it without huge rework.
 
@@ -180,7 +180,7 @@ Change happens at boundaries. Good designs absorb it without huge rework.
 |----------|-------------|
 | **Wrap** the library in your own class | The API is simple and you only need a subset (like `Map` → `Sensors`) |
 | **Adapter** from your ideal interface to the real one | The external system is complex or doesn't exist yet |
-| **Learning tests + outbound tests** | Always — for every third-party integration |
+| **Learning tests + outbound tests** | Always, for every third-party integration |
 
 **The invariant:** Have **very few places** in the code that refer to third-party details. Whether wrapping or adapting, your code should speak in *your* domain language, promote **internally consistent usage**, and have **fewer maintenance points** when the third-party code changes.
 
@@ -199,10 +199,10 @@ Change happens at boundaries. Good designs absorb it without huge rework.
 
 ## Related
 
-- [[Clean Code Principles]] — the chapter's parent discipline
-- [[Class Design & SOLID]] — Dependency Inversion: depend on abstractions you own
-- [[System Architecture]] — boundaries as architectural seams
-- [[Code Smells Catalog]] — *Inappropriate Intimacy* (with foreign code), *Shotgun Surgery* (Map signature changes)
-- [[software-engineering-note/03_Software_Design/Clean Code/Clean Code Overview]] — Adapter, Facade (wrapping), Seam (testing)
-- *Test-Driven Development* — Kent Beck (learning tests origin)
-- *Working Effectively with Legacy Code* — Michael Feathers (seams)
+- [[Clean Code Principles]]: the chapter's parent discipline
+- [[Class Design & SOLID]]: Dependency Inversion: depend on abstractions you own
+- [[System Architecture]]: boundaries as architectural seams
+- [[Code Smells Catalog]]: *Inappropriate Intimacy* (with foreign code), *Shotgun Surgery* (Map signature changes)
+- [[software-engineering-note/03_Software_Design/Clean Code/Clean Code Overview]]: Adapter, Facade (wrapping), Seam (testing)
+- *Test-Driven Development*: Kent Beck (learning tests origin)
+- *Working Effectively with Legacy Code*: Michael Feathers (seams)

@@ -28,7 +28,7 @@ Among competing designs that achieve the same goal, choose the one with the fewe
 | ❌ Over-Designed | ✅ Simplified |
 |-----------------|--------------|
 | Homepage with carousel, 3 hero CTAs, animated background, chat widget, newsletter popup | One headline, one CTA, one supporting image |
-| 8-column pricing table with feature comparison matrix | 3 tiers: Basic, Pro, Enterprise — with a "Most Popular" badge |
+| 8-column pricing table with feature comparison matrix | 3 tiers: Basic, Pro, Enterprise, with a "Most Popular" badge |
 | Settings page with 50 individual toggles | Grouped categories with smart defaults |
 
 ---
@@ -61,14 +61,14 @@ When you think your design is done, try cutting the number of:
 
 | Minimalism (Style) | Occam's Razor (Principle) |
 |-------------------|--------------------------|
-| A design aesthetic — few elements | A decision principle — simplest SOLUTION |
-| Can go too far (removing necessary info) | Doesn't remove what's necessary — removes what's unnecessary |
+| A design aesthetic (few elements | A decision principle) simplest SOLUTION |
+| Can go too far (removing necessary info) | Doesn't remove what's necessary, removes what's unnecessary |
 
-> "A design is finished not when there's nothing more to add, but when there's nothing left to take away." — Antoine de Saint-Exupéry
+> "A design is finished not when there's nothing more to add, but when there's nothing left to take away.", Antoine de Saint-Exupéry
 
 ---
 
 ## Sources
 
-- *Laws of UX* — https://lawsofux.com/occams-razor/
+- *Laws of UX*: https://lawsofux.com/occams-razor/
 - William of Ockham (14th century). *Principle of Parsimony.*

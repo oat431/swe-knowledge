@@ -30,7 +30,7 @@ Consistency is the single most powerful usability principle. When users learn so
 
 | One Inconsistency | User Impact |
 |------------------|-------------|
-| Delete is red on one page, blue on another | User hesitates — "Is this really delete?" |
+| Delete is red on one page, blue on another | User hesitates; "Is this really delete?" |
 | Cards are clickable on Page A, not on Page B | User taps dead cards, gets frustrated |
 | "Save" sometimes auto-saves, sometimes doesn't | User loses work, loses trust |
 
@@ -41,8 +41,8 @@ Consistency is the single most powerful usability principle. When users learn so
 | Technique | Tool/Pattern |
 |-----------|-------------|
 | **Design system** | A single source of truth for colors, typography, components |
-| **Component library** | Build once, reuse everywhere — buttons, inputs, modals |
-| **Design tokens** | Variables for colors, spacing, typography — change once, update everywhere |
+| **Component library** | Build once, reuse everywhere, buttons, inputs, modals |
+| **Design tokens** | Variables for colors, spacing, typography, change once, update everywhere |
 | **Linters** | Automatic checks: "You used a non-standard button color here." |
 
 ---
@@ -53,9 +53,9 @@ Consistency is not a prison. Break it when:
 
 | Reason | Example |
 |--------|---------|
-| **Critical difference** | Delete SHOULD look different from Save — the difference is intentional |
+| **Critical difference** | Delete SHOULD look different from Save, the difference is intentional |
 | **New pattern is clearly better** | Old pattern was confusing; new one tested better |
-| **Different context demands it** | Mobile nav differs from desktop — and that's expected |
+| **Different context demands it** | Mobile nav differs from desktop, and that's expected |
 
 > **Rule:** Break consistency intentionally, not accidentally. And only after research shows the new way is better.
 

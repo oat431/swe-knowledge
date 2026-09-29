@@ -2,35 +2,35 @@
 tags: [ux-design, wireframes, prototypes, information-architecture, user-flows, ux-ui-design]
 ---
 
-# 01 — UX Design
+# 01: UX Design
 
 > *Source: Information Architecture by Rosenfeld & Morville, Lean UX by Gothelf & Seiden, Nielsen Norman Group*
 
 ## Purpose
 
-UX Design translates user research into structured, usable interfaces. It focuses on **how the product works** — information architecture, user flows, wireframes, and prototypes — before any visual design begins.
+UX Design translates user research into structured, usable interfaces. It focuses on **how the product works:** information architecture, user flows, wireframes, and prototypes, before any visual design begins.
 
 ## Information Architecture (IA)
 
 ### What It Is
-The structural design of shared information environments — organizing, labeling, and structuring content so users can find what they need.
+The structural design of shared information environments, organizing, labeling, and structuring content so users can find what they need.
 
 ### IA Principles
-- **Organization** — Group related content logically (alphabetical, chronological, topical, audience-based)
-- **Labeling** — Clear, consistent names for categories and navigation
-- **Navigation** — How users move through the product (menus, breadcrumbs, search)
-- **Search** — When navigation isn't enough, users need to find content directly
+- **Organization:** Group related content logically (alphabetical, chronological, topical, audience-based)
+- **Labeling:** Clear, consistent names for categories and navigation
+- **Navigation:** How users move through the product (menus, breadcrumbs, search)
+- **Search:** When navigation isn't enough, users need to find content directly
 
 ### IA Deliverables
-- **Sitemap** — Hierarchical map of all pages/sections
-- **Content inventory** — Spreadsheet listing all content with metadata
-- **Navigation model** — Structure of menus, tabs, and links
-- **Taxonomy** — Classification system for content (tags, categories)
+- **Sitemap:** Hierarchical map of all pages/sections
+- **Content inventory:** Spreadsheet listing all content with metadata
+- **Navigation model:** Structure of menus, tabs, and links
+- **Taxonomy:** Classification system for content (tags, categories)
 
 ### IA Methods
-- **Card sorting** — Users group content into categories (open/closed)
-- **Tree testing** — Users find items in a proposed hierarchy (without seeing the UI)
-- **First-click testing** — Where users click first to find something
+- **Card sorting:** Users group content into categories (open/closed)
+- **Tree testing:** Users find items in a proposed hierarchy (without seeing the UI)
+- **First-click testing:** Where users click first to find something
 - **Tools:** OptimalSort, Treejack, Miro
 
 ## User Flows
@@ -39,16 +39,16 @@ The structural design of shared information environments — organizing, labelin
 Visual diagrams showing the steps a user takes to complete a task or achieve a goal.
 
 ### Components
-- **Entry point** — Where the user starts (homepage, email, ad)
-- **Decision points** — Where the user makes choices
-- **Actions** — What the user does (click, type, select)
-- **Screens** — What the user sees at each step
-- **Success/failure paths** — Happy path and error handling
+- **Entry point:** Where the user starts (homepage, email, ad)
+- **Decision points:** Where the user makes choices
+- **Actions:** What the user does (click, type, select)
+- **Screens:** What the user sees at each step
+- **Success/failure paths:** Happy path and error handling
 
 ### Flow Types
-- **Task flows** — Single task (e.g., "Sign up for an account")
-- **User flows** — Multiple paths through a feature (e.g., "Onboarding")
-- **Screen flows** — Visual map of every screen and connection
+- **Task flows:** Single task (e.g., "Sign up for an account")
+- **User flows:** Multiple paths through a feature (e.g., "Onboarding")
+- **Screen flows:** Visual map of every screen and connection
 
 ### User Flow Example
 ```
@@ -70,13 +70,13 @@ Welcome Screen → Dashboard
 ## Wireframes
 
 ### What They Are
-Low-fidelity sketches of a page layout — showing structure, content placement, and functionality without visual design.
+Low-fidelity sketches of a page layout, showing structure, content placement, and functionality without visual design.
 
 ### Wireframe Types
-- **Sketches** — Hand-drawn, quick, disposable
-- **Low-fidelity** — Basic boxes, lines, placeholder text (Balsamiq, wireframe.cc)
-- **Mid-fidelity** — More detail, real content, grayscale (Figma, Sketch)
-- **High-fidelity** — Close to final design, real content, interactions (Figma, Adobe XD)
+- **Sketches:** Hand-drawn, quick, disposable
+- **Low-fidelity:** Basic boxes, lines, placeholder text (Balsamiq, wireframe.cc)
+- **Mid-fidelity:** More detail, real content, grayscale (Figma, Sketch)
+- **High-fidelity:** Close to final design, real content, interactions (Figma, Adobe XD)
 
 ### What to Include
 - Page layout and structure
@@ -93,7 +93,7 @@ Low-fidelity sketches of a page layout — showing structure, content placement,
 
 ### Wireframe Best Practices
 - Start with sketches before digital tools
-- Use grayscale — color distracts from structure
+- Use grayscale: color distracts from structure
 - Label everything clearly
 - Include annotations explaining behavior
 - Create multiple variations before committing
@@ -101,7 +101,7 @@ Low-fidelity sketches of a page layout — showing structure, content placement,
 ## Prototypes
 
 ### What They Are
-Interactive simulations of the final product — clickable wireframes or designs that allow users to experience the flow.
+Interactive simulations of the final product, clickable wireframes or designs that allow users to experience the flow.
 
 ### Prototype Fidelity
 | Level | Description | Use Case |
@@ -112,12 +112,12 @@ Interactive simulations of the final product — clickable wireframes or designs
 | **High-fi** | Near-final design, animations, real content | Stakeholder presentations, final testing |
 
 ### Prototyping Tools
-- **Figma** — Industry standard, collaborative, browser-based
-- **Sketch** — Mac-only, strong plugin ecosystem
-- **Adobe XD** — Integrated with Adobe Creative Suite
-- **InVision** — Legacy, still used in some organizations
-- **Framer** — Advanced interactions, code-based
-- **Axure** — Complex logic, conditional interactions
+- **Figma:** Industry standard, collaborative, browser-based
+- **Sketch:** Mac-only, strong plugin ecosystem
+- **Adobe XD:** Integrated with Adobe Creative Suite
+- **InVision:** Legacy, still used in some organizations
+- **Framer:** Advanced interactions, code-based
+- **Axure:** Complex logic, conditional interactions
 
 ### Prototype Best Practices
 - Prototype only what you need to test
@@ -129,12 +129,12 @@ Interactive simulations of the final product — clickable wireframes or designs
 ## Interaction Design
 
 ### Principles
-- **Feedback** — Every action should have a visible response
-- **Consistency** — Similar actions should work the same way
-- **Affordance** — Elements should look like what they do
-- **Constraints** — Limit options to prevent errors
-- **Visibility** — Important elements should be visible
-- **Mapping** — Controls should relate logically to their effects
+- **Feedback:** Every action should have a visible response
+- **Consistency:** Similar actions should work the same way
+- **Affordance:** Elements should look like what they do
+- **Constraints:** Limit options to prevent errors
+- **Visibility:** Important elements should be visible
+- **Mapping:** Controls should relate logically to their effects
 
 ### Micro-interactions
 Small, focused interactions that provide feedback:
@@ -157,7 +157,7 @@ Small, focused interactions that provide feedback:
 
 ## Related
 
-- [[30 User Research Methods]] — Research that informs UX design decisions
-- [[32 UI Design Process]] — Visual design applied to wireframes
-- [[33 Usability Testing and AB Testing]] — Testing prototypes with users
-- [[UX UI Essential Documents]] — UX deliverables checklist
+- [[30 User Research Methods]]: Research that informs UX design decisions
+- [[32 UI Design Process]]: Visual design applied to wireframes
+- [[33 Usability Testing and AB Testing]]: Testing prototypes with users
+- [[UX UI Essential Documents]]: UX deliverables checklist

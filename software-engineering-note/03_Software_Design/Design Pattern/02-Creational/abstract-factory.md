@@ -14,9 +14,9 @@ tags:
 
 ## Problem
 
-When you need to create objects that belong to **families of related products** — for example, a furniture set consisting of `Chair`, `Sofa`, and `CoffeeTable` — you face two compounding challenges:
+When you need to create objects that belong to **families of related products:** for example, a furniture set consisting of `Chair`, `Sofa`, and `CoffeeTable`; you face two compounding challenges:
 
-1. **Variant explosion.** Each product may come in multiple variants — `Modern`, `Victorian`, `ArtDeco` — and every variant must be internally consistent: a `ModernChair` must pair with a `ModernSofa` and a `ModernCoffeeTable`. Mixing variants (a Victorian chair with an ArtDeco table) produces a broken set.
+1. **Variant explosion.** Each product may come in multiple variants (`Modern`, `Victorian`, `ArtDeco`) and every variant must be internally consistent: a `ModernChair` must pair with a `ModernSofa` and a `ModernCoffeeTable`. Mixing variants (a Victorian chair with an ArtDeco table) produces a broken set.
 
 2. **Extensibility without modification.** Vendors introduce new products and families frequently. Changing the core code every time a new variant appears is unsustainable.
 
@@ -26,7 +26,7 @@ Hard-coding `if (style == "modern")` / `else if (style == "victorian")` chains t
 
 The Abstract Factory pattern addresses both challenges with two layers of abstraction:
 
-- **Explicit product interfaces.** Declare one interface per product type (`Chair`, `Sofa`, `CoffeeTable`). Every variant implements those interfaces — `ModernChair` implements `Chair`, `VictorianSofa` implements `Sofa`, and so on. The client codes against the interfaces, never against concrete classes.
+- **Explicit product interfaces.** Declare one interface per product type (`Chair`, `Sofa`, `CoffeeTable`). Every variant implements those interfaces, `ModernChair` implements `Chair`, `VictorianSofa` implements `Sofa`, and so on. The client codes against the interfaces, never against concrete classes.
 
 - **Abstract factory per variant family.** Declare a `FurnitureFactory` interface with creation methods for each product: `createChair()`, `createSofa()`, `createCoffeeTable()`. Each method returns the *abstract* product type. Concrete factories (`ModernFurnitureFactory`, `VictorianFurnitureFactory`) implement this interface and instantiate only the products of their variant. The client receives a factory at initialization time (chosen by configuration or environment) and never knows which concrete factory it holds.
 
@@ -35,6 +35,7 @@ The result: adding a new variant means writing one new concrete factory and its 
 ## Structure
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','classText':'#CDD3D1','mainBkg':'#19362D','nodeBorder':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 classDiagram
     class AbstractProductA {
         <<interface>>
@@ -72,10 +73,10 @@ classDiagram
 ```
 
 1. **Abstract Products**
-2. **Concrete Products** — Variant-specific implementations of abstract products, grouped by variant (`ModernChair`, `VictorianChair`, …).
-3. **Abstract Factory** — Interface declaring creation methods for every abstract product. Return types are the abstract product interfaces.
-4. **Concrete Factories** — One per variant. Each implements the abstract factory interface and instantiates only its variant's concrete products. Method signatures return the *abstract* type, decoupling the client from concrete classes.
-5. **Client** — Works exclusively with the `AbstractFactory` and abstract product interfaces. It receives a concrete factory at initialization and never touches a `new ConcreteProduct()` call directly.
+2. **Concrete Products:** Variant-specific implementations of abstract products, grouped by variant (`ModernChair`, `VictorianChair`, …).
+3. **Abstract Factory:** Interface declaring creation methods for every abstract product. Return types are the abstract product interfaces.
+4. **Concrete Factories:** One per variant. Each implements the abstract factory interface and instantiates only its variant's concrete products. Method signatures return the *abstract* type, decoupling the client from concrete classes.
+5. **Client:** Works exclusively with the `AbstractFactory` and abstract product interfaces. It receives a concrete factory at initialization and never touches a `new ConcreteProduct()` call directly.
 
 ## Pseudocode (Cross-Platform GUI)
 
@@ -173,10 +174,10 @@ class ApplicationConfigurator is
 
 ### ✅ Pros
 
-- **Guaranteed product compatibility.** Every object produced by a single factory belongs to the same family — no mismatched variants.
+- **Guaranteed product compatibility.** Every object produced by a single factory belongs to the same family, no mismatched variants.
 - **Loose coupling.** Client code depends only on abstract interfaces, not on concrete product classes.
 - **Single Responsibility Principle.** Product creation logic is centralized in factory classes, separate from business logic.
-- **Open/Closed Principle.** New product variants can be introduced by adding a new concrete factory and its concrete products — existing code remains unchanged.
+- **Open/Closed Principle.** New product variants can be introduced by adding a new concrete factory and its concrete products, existing code remains unchanged.
 
 ### ❌ Cons
 
@@ -188,7 +189,7 @@ class ApplicationConfigurator is
 |---|---|
 | **Factory Method** | Many designs start with Factory Method (simpler, subclass-customizable) and evolve toward Abstract Factory as the number of product families grows. Abstract Factory classes are often built on a set of Factory Methods. |
 | **Builder** | Builder constructs complex objects step by step; Abstract Factory returns a product immediately. Builder lets you run additional construction steps before fetching the result. |
-| **Prototype** | Instead of composing Abstract Factory methods with Factory Methods, you can use Prototype — each factory method clones a prototype object and configures it. |
+| **Prototype** | Instead of composing Abstract Factory methods with Factory Methods, you can use Prototype; each factory method clones a prototype object and configures it. |
 | **Singleton** | Abstract Factories, Builders, and Prototypes can all be implemented as Singletons when only one instance of each factory is needed. |
 | **Bridge** | Use Abstract Factory together with Bridge when Bridge-defined abstractions can only work with specific implementations. Abstract Factory encapsulates these constraints and hides the coupling from client code. |
 | **Facade** | Abstract Factory can serve as an alternative to Facade when the goal is to hide *how* subsystem objects are created, not just how they are used. |
@@ -200,7 +201,7 @@ class ApplicationConfigurator is
 - [ ] Implemented **concrete product classes** for every variant of every product type.
 - [ ] Declared the **abstract factory interface** with one creation method per product type.
 - [ ] Implemented a **concrete factory class** for each variant.
-- [ ] Wired **factory selection logic** at initialization — reads config/environment and instantiates the correct concrete factory.
+- [ ] Wired **factory selection logic** at initialization: reads config/environment and instantiates the correct concrete factory.
 - [ ] Scanned all **direct product constructor calls** (`new Chair(…)`) and replaced them with factory creation methods.
 - [ ] Verified the client depends **only on abstract interfaces** (`AbstractFactory` and abstract products), not on concrete classes.
 

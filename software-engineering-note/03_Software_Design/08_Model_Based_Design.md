@@ -5,11 +5,11 @@ source: "SWEBOK v4 Chapter 03"
 
 # Model-Based Design
 
-> *Source: SWEBOK v4 Chapter 03 — Software Design*
+> *Source: SWEBOK v4 Chapter 03, Software Design*
 
 ## Purpose
 
-Traditional software design produces **documents**: UML diagrams, specification text, interface contracts. These documents describe the system, but they are not the system. They drift from reality the moment coding begins. **Model-Based Design (MBD)** inverts this relationship: the model *is* the primary artifact, and code, tests, and documentation are **generated** from it. When the model changes, everything derived from it updates automatically. This eliminates the gap between specification and implementation that plagues document-centric approaches.
+Traditional software design produces **documents:** UML diagrams, specification text, interface contracts. These documents describe the system, but they are not the system. They drift from reality the moment coding begins. **Model-Based Design (MBD)** inverts this relationship: the model *is* the primary artifact, and code, tests, and documentation are **generated** from it. When the model changes, everything derived from it updates automatically. This eliminates the gap between specification and implementation that plagues document-centric approaches.
 
 ## From Document-Based to Model-Based Artifacts
 
@@ -55,6 +55,7 @@ Traditional software design produces **documents**: UML diagrams, specification 
 **Model-Driven Architecture (MDA)** is a framework from the Object Management Group (OMG) that organizes models into abstraction levels and defines standard transformations between them.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     BIM["Business/Domain Model<br/>(BIM)"] -->|Business Rules Mapping| CIM
     CIM["Computation Independent Model<br/>(CIM)"] -->|PIM Transform| PIM
@@ -62,11 +63,11 @@ flowchart TD
     PSM["Platform Specific Model<br/>(PSM)"] -->|Code Generation| Code
     Code -->|Executable| System
     
-    style BIM fill:#1e3a5f,color:#fff
-    style CIM fill:#2a5a8f,color:#fff
-    style PIM fill:#3a7abf,color:#fff
-    style PSM fill:#4a9aef,color:#fff
-    style Code fill:#5abaff,color:#fff
+    style BIM fill:#19362D,color:#CDD3D1
+    style CIM fill:#1EB88E,color:#000000
+    style PIM fill:#1FB8AB,color:#000000
+    style PSM fill:#00B5FF,color:#000000
+    style Code fill:#00B5FF,color:#000000
 ```
 
 ### The Four Model Levels
@@ -247,6 +248,7 @@ A **language workbench** is a tool for creating, editing, and using DSLs with fu
 Grammar-driven DSLs define a **grammar** (BNF or EBNF) and generate everything from it:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     G[Grammar File] -->|Generates| Parser
     G -->|Generates| AST
@@ -295,6 +297,7 @@ From this grammar, Xtext generates a full parser, EMF model, Xtext editor with s
 ### Code Generation Architecture
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     M[Model] --> TG[Template/Transformation Engine]
     T[Templates] --> TG
@@ -366,6 +369,7 @@ Simulation allows you to **execute a design before implementing it**, discoverin
 ### Model Simulation Workflow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     M[Design Model] --> A[Analysis Tools]
     A --> R[Results / Reports]
@@ -398,6 +402,7 @@ These constraints can be checked automatically against the model, catching incon
 **Model-Based Testing (MBT)** generates test cases automatically from a model of the system's behavior. The model defines expected behavior; the test generator creates inputs and expected outputs.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     BM[Behavioral Model] --> TG[Test Generator]
     TG --> TC[Test Cases]
@@ -460,6 +465,7 @@ top relation ClassToTable {
 ATL is a widely used model transformation language from the Eclipse ecosystem.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     SM[Source Model] --> ATL[ATL Transformation Engine]
     TM[Target Metamodel] --> ATL
@@ -555,6 +561,7 @@ MBD addresses all four: the model is the specification, code is generated from i
 ### Automotive: AUTOSAR and Model-Based Development
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     SWC[Software Component Model] --> RTE[RTE Generation]
     RTE --> ASW[Application Software]
@@ -597,6 +604,7 @@ flowchart TD
 ### MIL/SIL/HIL Testing Progression
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     MIL["MIL<br/>(Model-in-Loop)"] -->|Replace plant model| SIL
     SIL["SIL<br/>(Software-in-Loop)"] -->|Replace target CPU| HIL
@@ -657,8 +665,8 @@ Model-Based Design elevates models from documentation artifacts to the primary s
 - [[05_Design_Strategies_and_Methods]]: Design methods that produce models
 - [[07_Design_Rationale_and_Decisions]]: Rationale for choosing MBD approaches
 - [[09_Variability_and_Feature_Models]]: Feature models as a form of model-based design
-- [[Design Pattern/index|Design Patterns]]: Patterns encoded in models and generators
-- [[Clean Architecture/index|Clean Architecture]]: Architecture constraints enforceable via models
+- [[Design Pattern/Design Pattern Overview|Design Patterns]]: Patterns encoded in models and generators
+- [[Clean Architecture/Foundations/Clean Architecture Overview|Clean Architecture]]: Architecture constraints enforceable via models
 
 ## References
 

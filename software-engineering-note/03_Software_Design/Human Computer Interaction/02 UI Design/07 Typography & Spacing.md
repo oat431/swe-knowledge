@@ -18,11 +18,11 @@ Typography is 90% of web design. Get the fonts, weights, sizes, and spacing righ
 Weight creates hierarchy without changing size or color.
 
 ```
-Light (300)    — The quick brown fox
-Regular (400)  — The quick brown fox
-Medium (500)   — The quick brown fox
-Semibold (600) — The quick brown fox
-Bold (700)     — The quick brown fox
+Light (300)    - The quick brown fox
+Regular (400)  - The quick brown fox
+Medium (500)   - The quick brown fox
+Semibold (600) - The quick brown fox
+Bold (700)     - The quick brown fox
 ```
 
 ### Rules
@@ -32,7 +32,7 @@ Bold (700)     — The quick brown fox
 | **2–3 weights max** per design | Regular + Bold is enough for most sites. Regular + Medium + Bold for content-heavy sites |
 | **Body text = Regular (400)** | Medium or Bold body text is exhausting to read |
 | **Headings = Bold/Semibold (600–700)** | Creates clear separation from body |
-| **Never use Light (300) for body text** | Too thin — hard to read, especially on low-res screens |
+| **Never use Light (300) for body text** | Too thin, hard to read, especially on low-res screens |
 
 ---
 
@@ -40,7 +40,7 @@ Bold (700)     — The quick brown fox
 
 | Element | Recommended Size | Notes |
 |---------|:---------------:|-------|
-| Body text | **16px minimum** | iOS Safari zooms on inputs < 16px — never go smaller |
+| Body text | **16px minimum** | iOS Safari zooms on inputs < 16px, never go smaller |
 | Small/captions | 12–14px | Only for secondary info |
 | H3 | 18–24px | |
 | H2 | 24–32px | |
@@ -51,7 +51,7 @@ Bold (700)     — The quick brown fox
 
 | ❌ | ✅ |
 |----|-----|
-| Body text at 14px — looks dense and intimidating | Body text at 16–18px — inviting and readable |
+| Body text at 14px (looks dense and intimidating | Body text at 16–18px) inviting and readable |
 | Line length: 100+ characters | Line length: 50–75 characters (ideal for reading) |
 
 ---
@@ -81,9 +81,9 @@ line-height: 1.6  ← Easy to scan. The eye flows naturally.
 
 | Element | Recommendation |
 |---------|---------------|
-| Body text | **0** (default) — never add letter-spacing to body |
-| Headings | **-0.5px to -1px** — tightens large text, looks more professional |
-| All-caps text | **+1px to +3px** — all-caps needs breathing room to be legible |
+| Body text | **0** (default), never add letter-spacing to body |
+| Headings | **-0.5px to -1px:** tightens large text, looks more professional |
+| All-caps text | **+1px to +3px:** all-caps needs breathing room to be legible |
 | Code | **0** (monospace already has natural spacing) |
 
 ---

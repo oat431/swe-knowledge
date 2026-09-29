@@ -16,7 +16,7 @@ tags:
 
 The Singleton pattern addresses two problems simultaneously (which also means it violates the Single Responsibility Principle):
 
-1. **Ensure a class has only one instance.** The most common reason is controlling access to a shared resource—a database connection, a file, a configuration object. A regular constructor *must* return a new object by design, so there is no built-in language mechanism to say "return the one we already made."
+1. **Ensure a class has only one instance.** The most common reason is controlling access to a shared resource, a database connection, a file, a configuration object. A regular constructor *must* return a new object by design, so there is no built-in language mechanism to say "return the one we already made."
 
 2. **Provide a global access point to that instance.** Global variables are convenient but unsafe: any code can overwrite them and crash the application. The pattern gives you the accessibility of a global variable while protecting the instance from being replaced by other code.
 
@@ -26,8 +26,8 @@ Additionally, the logic that guarantees a single instance should be centralized 
 
 Every Singleton implementation shares two steps:
 
-- **Make the default constructor private** — prevents other objects from using `new` with the Singleton class.
-- **Create a public static creation method** — this method calls the private constructor on the first call, caches the result in a private static field, and returns the cached instance on all subsequent calls.
+- **Make the default constructor private:** prevents other objects from using `new` with the Singleton class.
+- **Create a public static creation method:** this method calls the private constructor on the first call, caches the result in a private static field, and returns the cached instance on all subsequent calls.
 
 If client code has access to the Singleton class, it can call the static method and always receive the same object.
 
@@ -37,6 +37,7 @@ If client code has access to the Singleton class, it can call the static method 
 
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','classText':'#CDD3D1','mainBkg':'#19362D','nodeBorder':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 classDiagram
     class Singleton {
         -static instance: Singleton
@@ -106,13 +107,13 @@ Key thread-safety detail: **double-checked locking.** After acquiring the thread
 
 1. Add a **private static field** to the class for storing the singleton instance.
 2. Declare a **public static creation method** (`getInstance`).
-3. Implement **lazy initialization**: create the object on the first call, store it in the static field, and always return that instance on subsequent calls.
+3. Implement **lazy initialization:** create the object on the first call, store it in the static field, and always return that instance on subsequent calls.
 4. Make the **constructor private**. The static method can still call it; other objects cannot.
 5. Go over client code and **replace all direct constructor calls** with calls to `getInstance`.
 
 ## Applicability
 
-✅ **Use Singleton when** a class should have exactly one instance available to all clients—e.g., a single database object shared across the program.
+✅ **Use Singleton when** a class should have exactly one instance available to all clients; e.g., a single database object shared across the program.
 
 ✅ **Use Singleton when** you need stricter control over global variables. Unlike a raw global variable, the Singleton guarantees only one instance exists, and nothing except the Singleton class itself can replace the cached instance.
 
@@ -123,17 +124,17 @@ Key thread-safety detail: **double-checked locking.** After acquiring the thread
 | Pros | Cons |
 |------|------|
 | ✅ Guarantees a class has only a single instance | ❌ Violates the **Single Responsibility Principle** (solves two problems at once) |
-| ✅ Provides a **global access point** to that instance | ❌ Can **mask bad design**—components may know too much about each other |
+| ✅ Provides a **global access point** to that instance | ❌ Can **mask bad design:** components may know too much about each other |
 | ✅ The singleton object is initialized only when first requested (**lazy initialization**) | ❌ Requires **special treatment in multithreaded environments** to prevent multiple threads from creating separate instances |
-| | ❌ **Difficult to unit test**—private constructors block inheritance-based mocking, and static methods cannot be overridden in most languages |
+| | ❌ **Difficult to unit test:** private constructors block inheritance-based mocking, and static methods cannot be overridden in most languages |
 
 ## Relations with Other Patterns
 
-- **[[facade]]** — a Facade class can often be transformed into a Singleton, since a single facade object is sufficient in most cases.
-- **[[flyweight]]** — would resemble Singleton if you reduced all shared states to a single flyweight object. Two key differences:
+- **[[facade]]:** a Facade class can often be transformed into a Singleton, since a single facade object is sufficient in most cases.
+- **[[flyweight]]:** would resemble Singleton if you reduced all shared states to a single flyweight object. Two key differences:
   1. Only **one** Singleton instance exists; Flyweight can have **multiple** instances with different intrinsic states.
   2. Singleton objects **can be mutable**; Flyweight objects are **immutable**.
-- **[[abstract-factory]]**, **[[builder]]**, **[[prototype]]** — all can be implemented as Singletons when only one instance of the factory or builder is needed.
+- **[[abstract-factory]]**, **[[builder]]**, **[[prototype]]:** all can be implemented as Singletons when only one instance of the factory or builder is needed.
 
 ## Summary Checklist
 
@@ -142,7 +143,7 @@ Key thread-safety detail: **double-checked locking.** After acquiring the thread
 - [ ] Is thread safety handled (double-checked locking, eager initialization, or language-level singleton support)?
 - [ ] Does the singleton hold business logic beyond just holding state? (If it's a pure data bag, reconsider.)
 - [ ] Have you accounted for unit-testing difficulty? (Consider dependency injection as an alternative or wrapper.)
-- [ ] Would a simpler approach—like dependency injection or a plain global constant—suffice?
+- [ ] Would a simpler approach (like dependency injection or a plain global constant) suffice?
 
 ## Related
 

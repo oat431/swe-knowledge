@@ -11,7 +11,7 @@ tags:
 
 > **Design for the user, with the user, validated by the user.**
 
-User-Centered Design is not a single technique — it's a philosophy. Every design decision is evaluated by asking: "Does this serve the user's actual needs, or just the designer's assumptions?"
+User-Centered Design is not a single technique; it's a philosophy. Every design decision is evaluated by asking: "Does this serve the user's actual needs, or just the designer's assumptions?"
 
 ---
 
@@ -38,7 +38,7 @@ analytics      user flows     prototypes      feedback
 | Principle | What It Means |
 |-----------|--------------|
 | **Early focus on users** | Understand users BEFORE designing. Personas, interviews, observation. |
-| **Empirical measurement** | Test with real users. Opinions don't count — behavior does. |
+| **Empirical measurement** | Test with real users. Opinions don't count, behavior does. |
 | **Iterative design** | Build → test → learn → repeat. Never "one and done." |
 
 ---
@@ -47,7 +47,7 @@ analytics      user flows     prototypes      feedback
 
 | ❌ Not UCD | ✅ UCD |
 |-----------|-------|
-| "I think users will like this." | "We watched 5 users try it — 4 succeeded, 1 failed." |
+| "I think users will like this." | "We watched 5 users try it: 4 succeeded, 1 failed." |
 | Designing based on stakeholder requests | Designing based on user research |
 | Adding features because competitors have them | Adding features because users need them |
 | "The design is done." | "The design is ready for the next round of testing." |
@@ -68,4 +68,4 @@ Before shipping any feature, ask:
 ## Sources
 
 - Norman, D. (1988). *The Design of Everyday Things.*
-- ISO 9241-210:2019 — *Human-centred design for interactive systems.*
+- ISO 9241-210:2019: *Human-centred design for interactive systems.*

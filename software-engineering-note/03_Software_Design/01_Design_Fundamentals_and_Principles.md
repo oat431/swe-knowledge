@@ -4,23 +4,23 @@ tags: [design-fundamentals, design-principles, software-design, swebok]
 
 # Design Fundamentals and Principles
 
-> *Source: SWEBOK v4 Chapter 03 — Software Design*
+> *Source: SWEBOK v4 Chapter 03, Software Design*
 
 ## Purpose
 
-Software design fundamentals are the enduring principles that govern good design — independent of language, framework, or methodology. Every software engineer must internalize these as second nature.
+Software design fundamentals are the enduring principles that govern good design, independent of language, framework, or methodology. Every software engineer must internalize these as second nature.
 
 ## Design Thinking
 
-Design is a **five-step problem-solving process**:
+Design is a **five-step problem-solving process:**
 
-1. **Crystallize Purpose** — Understand what the design must accomplish. Clarify goals, constraints, and context before sketching solutions.
-2. **Formulate Concept** — Generate the core organizing idea. What's the central metaphor or structure?
-3. **Devise Mechanism** — Design the concrete structures, algorithms, and interactions that realize the concept.
-4. **Introduce Notation** — Choose the representation: diagrams, code, models. Notation shapes thought — pick the right vocabulary.
-5. **Apply** — Implement, test, and iterate. Design doesn't end at the whiteboard.
+1. **Crystallize Purpose:** Understand what the design must accomplish. Clarify goals, constraints, and context before sketching solutions.
+2. **Formulate Concept:** Generate the core organizing idea. What's the central metaphor or structure?
+3. **Devise Mechanism:** Design the concrete structures, algorithms, and interactions that realize the concept.
+4. **Introduce Notation:** Choose the representation: diagrams, code, models. Notation shapes thought; pick the right vocabulary.
+5. **Apply:** Implement, test, and iterate. Design doesn't end at the whiteboard.
 
-> **Design is vocabulary creation** — you're building the language to express both the problem and the solution.
+> **Design is vocabulary creation:** you're building the language to express both the problem and the solution.
 
 ## Core Design Principles
 
@@ -31,10 +31,10 @@ Design is a **five-step problem-solving process**:
 **Levels:** System → subsystem → component → module → function. Each level hides complexity below it.
 
 **Types:**
-- **Data abstraction** — What data represents, not how it's stored (e.g., Stack operations without knowing internal array/linked list)
-- **Procedural abstraction** — What a function does, not how (e.g., `sort()`, `encrypt()`)
+- **Data abstraction:** What data represents, not how it's stored (e.g., Stack operations without knowing internal array/linked list)
+- **Procedural abstraction:** What a function does, not how (e.g., `sort()`, `encrypt()`)
 
-> "The purpose of abstraction is not to be vague, but to create a new semantic level in which one can be absolutely precise." — Edsger Dijkstra
+> "The purpose of abstraction is not to be vague, but to create a new semantic level in which one can be absolutely precise." *(Edsger Dijkstra)*
 
 ### 2. Separation of Concerns
 
@@ -57,8 +57,8 @@ Design is a **five-step problem-solving process**:
 - Communicate through well-defined interfaces
 
 **Metrics:**
-- **Coupling** — Degree of inter-module dependency. Minimize it.
-- **Cohesion** — Degree of intra-module relatedness. Maximize it.
+- **Coupling:** Degree of inter-module dependency. Minimize it.
+- **Cohesion:** Degree of intra-module relatedness. Maximize it.
 
 ### 4. Coupling (Keep It Low)
 
@@ -112,7 +112,7 @@ Every design must address:
 |---|---|
 | **Quality Attributes** | What performance, security, reliability, usability levels are needed? |
 | **Component Organization** | How are responsibilities distributed? What owns what? |
-| **Crosscutting Concerns** | Logging, security, transactions — how are they applied consistently? |
+| **Crosscutting Concerns** | Logging, security, transactions, how are they applied consistently? |
 | **Concurrency** | What runs in parallel? How is shared state protected? |
 | **Persistence** | What data survives? Where? How is it accessed? |
 | **Distribution** | What runs where? How do components communicate? |
@@ -121,15 +121,15 @@ Every design must address:
 
 ## Essential Concepts
 
-- **Design is an iterative, creative activity** — not a mechanical translation of requirements.
+- **Design is an iterative, creative activity:** not a mechanical translation of requirements.
 - **Abstraction is the primary tool** for managing complexity.
 - **Low coupling + high cohesion** = the cardinal rule of modular design.
-- **Information hiding creates flexibility** — hide what changes, expose what's stable.
-- **SOLID is practical daily guidance** — not academic theory.
-- **Every design decision is a trade-off** — know what you're trading.
+- **Information hiding creates flexibility:** hide what changes, expose what's stable.
+- **SOLID is practical daily guidance:** not academic theory.
+- **Every design decision is a trade-off:** know what you're trading.
 
 ## Related
 
-- [[Software Design Note Overview]] — All design topics
-- [[Clean Architecture/Foundations/What Is Architecture]] — Architecture as a design discipline
-- [[Clean Code/Clean Code Principles]] — Practical design at the code level
+- [[Software Design Note Overview]]: All design topics
+- [[Clean Architecture/Foundations/What Is Architecture]]: Architecture as a design discipline
+- [[Clean Code/Clean Code Principles]]: Practical design at the code level

@@ -28,9 +28,9 @@ Looping over a flat list is trivial. Traversing a tree is not: one day you might
 
 ## Solution
 
-The Iterator pattern extracts traversal behavior into a separate object—the **iterator**. An iterator encapsulates all traversal details: the current position, how many elements remain, and the algorithm itself. Several iterators can traverse the same collection simultaneously and independently.
+The Iterator pattern extracts traversal behavior into a separate object, the **iterator**. An iterator encapsulates all traversal details: the current position, how many elements remain, and the algorithm itself. Several iterators can traverse the same collection simultaneously and independently.
 
-All iterators implement a **common interface**, typically providing one primary method for fetching the next element. The client calls this method until nothing is returned, signaling the end of the collection. Because the client depends only on the iterator interface, it works with any collection type and any traversal algorithm without modification. To add a new traversal strategy, you create a new iterator class—no changes to the collection or the client.
+All iterators implement a **common interface**, typically providing one primary method for fetching the next element. The client calls this method until nothing is returned, signaling the end of the collection. Because the client depends only on the iterator interface, it works with any collection type and any traversal algorithm without modification. To add a new traversal strategy, you create a new iterator class; no changes to the collection or the client.
 
 **Real-world analogy:** Visiting Rome's sights. You can wander randomly (inefficient), use a smartphone navigation app, or hire a local guide. Each option is an "iterator" over the same collection of attractions, offering a different traversal experience.
 
@@ -38,17 +38,18 @@ All iterators implement a **common interface**, typically providing one primary 
 
 ## Structure
 
-1. **Iterator** (interface) — Declares operations for traversal: `getNext()`, `hasMore()`, current position, restart, etc.
+1. **Iterator** (interface): Declares operations for traversal: `getNext()`, `hasMore()`, current position, restart, etc.
 
-2. **Concrete Iterators** — Implement specific traversal algorithms. Each iterator tracks its own traversal state independently, enabling multiple concurrent iterations over the same collection.
+2. **Concrete Iterators:** Implement specific traversal algorithms. Each iterator tracks its own traversal state independently, enabling multiple concurrent iterations over the same collection.
 
-3. **Collection** (interface) — Declares one or more factory methods that return iterators. The return type must be the `Iterator` interface so concrete collections can return different iterator implementations.
+3. **Collection** (interface): Declares one or more factory methods that return iterators. The return type must be the `Iterator` interface so concrete collections can return different iterator implementations.
 
-4. **Concrete Collections** — Return new instances of the appropriate concrete iterator each time the client requests one. The collection passes itself (`this`) to the iterator's constructor to establish the link.
+4. **Concrete Collections:** Return new instances of the appropriate concrete iterator each time the client requests one. The collection passes itself (`this`) to the iterator's constructor to establish the link.
 
-5. **Client** — Works with collections and iterators exclusively through their interfaces. Typically obtains iterators from the collection rather than creating them directly.
+5. **Client:** Works with collections and iterators exclusively through their interfaces. Typically obtains iterators from the collection rather than creating them directly.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','classText':'#CDD3D1','mainBkg':'#19362D','nodeBorder':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 classDiagram
     class Iterator {
         <<interface>>
@@ -81,7 +82,7 @@ classDiagram
 
 ## Pseudocode
 
-The example uses a social network profile iterator. The `SocialNetwork` interface declares factory methods for producing iterators; `Facebook` and `LinkedIn` are concrete implementations. The `ProfileIterator` interface exposes `getNext()` and `hasMore()`. The `FacebookIterator` concrete class holds a reference to the `Facebook` collection, a `currentPosition` pointer, and a lazily-initialized `cache` of profiles fetched via the social graph API. `SocialSpammer` is the client—it receives any `ProfileIterator` and sends emails without knowing which social network or traversal algorithm is in use. The `Application` class wires everything together at runtime.
+The example uses a social network profile iterator. The `SocialNetwork` interface declares factory methods for producing iterators; `Facebook` and `LinkedIn` are concrete implementations. The `ProfileIterator` interface exposes `getNext()` and `hasMore()`. The `FacebookIterator` concrete class holds a reference to the `Facebook` collection, a `currentPosition` pointer, and a lazily-initialized `cache` of profiles fetched via the social graph API. `SocialSpammer` is the client; it receives any `ProfileIterator` and sends emails without knowing which social network or traversal algorithm is in use. The `Application` class wires everything together at runtime.
 
 ```text
 // Collection interface
@@ -127,7 +128,7 @@ class FacebookIterator implements ProfileIterator is
         lazyInit()
         return currentPosition < cache.length
 
-// Client — works with any iterator
+// Client - works with any iterator
 class SocialSpammer is
     method send(iterator: ProfileIterator, message: string) is
         while (iterator.hasMore())
@@ -155,7 +156,7 @@ class Application is
         spammer.send(iterator, "Very important message")
 ```
 
-Key takeaway: you can pass an iterator to a client instead of the entire collection, hiding the collection and allowing runtime changes to traversal strategy—all without coupling the client to concrete classes.
+Key takeaway: you can pass an iterator to a client instead of the entire collection, hiding the collection and allowing runtime changes to traversal strategy; all without coupling the client to concrete classes.
 
 ---
 
@@ -179,7 +180,7 @@ Key takeaway: you can pass an iterator to a client instead of the entire collect
 
 3. **Implement concrete iterators.** Link each iterator to a specific collection instance, typically via the constructor. Store iteration state (current position, visited nodes, etc.) as private fields.
 
-4. **Implement the collection interface** in concrete collection classes. The collection passes itself to the iterator's constructor. This is the only place where concrete iterator classes are referenced—the client never sees them.
+4. **Implement the collection interface** in concrete collection classes. The collection passes itself to the iterator's constructor. This is the only place where concrete iterator classes are referenced, the client never sees them.
 
 5. **Refactor client code** to replace manual traversal loops with iterator usage. The client fetches a fresh iterator each time it needs to iterate.
 
@@ -203,11 +204,11 @@ Key takeaway: you can pass an iterator to a client instead of the entire collect
 
 ## Relations with Other Patterns
 
-- **[Composite](../02-Structural/composite.md)** — Iterators are the natural way to traverse Composite tree structures.
-- **[Factory Method](../01-Creational/factory-method.md)** — Use Factory Method alongside Iterator so collection subclasses can return different types of iterators compatible with those collections.
-- **[Memento](memento.md)** — Use Memento to capture the current iteration state and roll it back if needed.
-- **[Visitor](visitor.md)** — Combine Visitor with Iterator to traverse a complex data structure and execute operations over heterogeneous elements.
-- **[Command](command.md)** — Commands can use iterators internally when they need to operate over collections.
+- **[Composite](../02-Structural/composite.md):** Iterators are the natural way to traverse Composite tree structures.
+- **[Factory Method](../01-Creational/factory-method.md):** Use Factory Method alongside Iterator so collection subclasses can return different types of iterators compatible with those collections.
+- **[Memento](memento.md):** Use Memento to capture the current iteration state and roll it back if needed.
+- **[Visitor](visitor.md):** Combine Visitor with Iterator to traverse a complex data structure and execute operations over heterogeneous elements.
+- **[Command](command.md):** Commands can use iterators internally when they need to operate over collections.
 
 ---
 
@@ -218,6 +219,6 @@ Key takeaway: you can pass an iterator to a client instead of the entire collect
 - [ ] Each iterator maintains its own state → parallel iteration and pause/resume are free.
 - [ ] Collection interface provides factory methods that return the iterator interface type (not concrete classes).
 - [ ] Client obtains iterators from the collection; it never instantiates concrete iterators directly.
-- [ ] Adding new traversal strategies means creating a new iterator class—collections and clients stay unchanged (OCP).
+- [ ] Adding new traversal strategies means creating a new iterator class, collections and clients stay unchanged (OCP).
 - [ ] Best applied to complex data structures (trees, graphs) or when traversal code is duplicated across the app.
 - [ ] Avoid for simple flat collections where the abstraction isn't worth the indirection cost.

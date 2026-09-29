@@ -18,11 +18,11 @@ tags:
 
 Consider an online ordering system. Access is gated by a growing list of sequential checks:
 
-1. **Authentication** — verify user credentials before anything else.
-2. **Authorization** — administrative users need full access to all orders.
-3. **Data sanitization** — raw data must be cleaned before reaching the core system.
-4. **Brute-force protection** — filter repeated failed requests from the same IP.
-5. **Caching** — return cached results on duplicate requests to improve performance.
+1. **Authentication:** verify user credentials before anything else.
+2. **Authorization:** administrative users need full access to all orders.
+3. **Data sanitization:** raw data must be cleaned before reaching the core system.
+4. **Brute-force protection:** filter repeated failed requests from the same IP.
+5. **Caching:** return cached results on duplicate requests to improve performance.
 
 Each check was bolted on over months. The code became a bloated tangle of if-else blocks. Changing one check could break another. The worst part: when reusing those checks for other system components, code had to be duplicated because different components needed different subsets of checks. The system grew incomprehensible and expensive to maintain.
 
@@ -30,7 +30,7 @@ Each check was bolted on over months. The code became a bloated tangle of if-els
 
 ## Solution
 
-The pattern transforms each check into a **stand-alone handler object** — a class with a single method that performs the check. Handlers are then **linked into a chain**: each handler stores a reference to the next handler. A request travels along the chain until every handler has had a chance to process it.
+The pattern transforms each check into a **stand-alone handler object:** a class with a single method that performs the check. Handlers are then **linked into a chain:** each handler stores a reference to the next handler. A request travels along the chain until every handler has had a chance to process it.
 
 A handler can decide **not** to pass the request further, effectively stopping all downstream processing.
 
@@ -54,10 +54,11 @@ All handler classes implement the **same interface**. This lets you compose chai
 |---|---|
 | **Handler** | Declares the interface with a method for handling requests. May include a method for setting the next handler. |
 | **Base Handler** (optional) | Boilerplate: stores a reference to the next handler. Default behavior is forwarding to the next handler if it exists. |
-| **Concrete Handlers** | Contain the actual processing logic. Each decides (a) whether to process the request and (b) whether to pass it along. Self-contained and immutable — all data via constructor. |
-| **Client** | Composes the chain (once or dynamically) and sends requests to any handler in it — not necessarily the first. |
+| **Concrete Handlers** | Contain the actual processing logic. Each decides (a) whether to process the request and (b) whether to pass it along. Self-contained and immutable; all data via constructor. |
+| **Client** | Composes the chain (once or dynamically) and sends requests to any handler in it, not necessarily the first. |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','classText':'#CDD3D1','mainBkg':'#19362D','nodeBorder':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 classDiagram
     class Handler {
         <<interface>>
@@ -113,11 +114,11 @@ abstract class Container extends Component is
     children.add(child)
     child.container = this
 
-// Simple component — default behavior is sufficient
+// Simple component - default behavior is sufficient
 class Button extends Component is
   // ...
 
-// Complex component — overrides default with modal help
+// Complex component - overrides default with modal help
 class Panel extends Container is
   field modalHelpText: string
 
@@ -127,7 +128,7 @@ class Panel extends Container is
     else
       super.showHelp()
 
-// Another complex component — opens wiki page
+// Another complex component - opens wiki page
 class Dialog extends Container is
   field wikiPageURL: string
 
@@ -156,7 +157,7 @@ class Application is
     component.showHelp()
 ```
 
-**How it works:** When F1 is pressed on a GUI element, `showHelp()` is called. If the element has its own help (tooltip, modal text, wiki URL), it displays it. Otherwise, it delegates to its container. The request **bubbles up** through the object tree — Button → Panel → Dialog — until a handler can satisfy it. This leverages the Composite pattern's tree structure to form the chain implicitly.
+**How it works:** When F1 is pressed on a GUI element, `showHelp()` is called. If the element has its own help (tooltip, modal text, wiki URL), it displays it. Otherwise, it delegates to its container. The request **bubbles up** through the object tree (Button → Panel → Dialog) until a handler can satisfy it. This leverages the Composite pattern's tree structure to form the chain implicitly.
 
 ---
 
@@ -166,7 +167,7 @@ Use Chain of Responsibility when:
 
 - The program must process **different kinds of requests in various ways**, but the exact types and sequences are **unknown at development time**.
 - Multiple handlers must execute in a **specific, pre-defined order**.
-- The **set of handlers and their order needs to change at runtime** — insert, remove, or reorder handlers dynamically via setters.
+- The **set of handlers and their order needs to change at runtime:** insert, remove, or reorder handlers dynamically via setters.
 
 ---
 
@@ -174,9 +175,9 @@ Use Chain of Responsibility when:
 
 | ✅ Pros | ❌ Cons |
 |---|---|
-| You control the **order** of request handling. | Some requests may **end up unhandled** — no handler picks them up. |
-| **Single Responsibility Principle**: decouple invocation from execution. | |
-| **Open/Closed Principle**: introduce new handlers without modifying existing client code. | |
+| You control the **order** of request handling. | Some requests may **end up unhandled:** no handler picks them up. |
+| **Single Responsibility Principle:** decouple invocation from execution. | |
+| **Open/Closed Principle:** introduce new handlers without modifying existing client code. | |
 
 ---
 
@@ -187,8 +188,8 @@ Use Chain of Responsibility when:
 | **Command** | CoR passes requests sequentially along a dynamic chain; Command establishes a fixed unidirectional connection. Handlers can be implemented as Commands, or the request itself can be a Command object executed across chained contexts. |
 | **Mediator** | Mediator eliminates direct sender–receiver connections, forcing indirect communication. CoR keeps senders and receivers loosely coupled through a sequential chain. |
 | **Observer** | Observers dynamically subscribe/unsubscribe. CoR has a fixed chain structure. Both decouple senders from receivers, but in fundamentally different ways. |
-| **Composite** | Frequently used together. A leaf component passes a request up the parent chain to the root — the Composite tree *is* the chain. |
-| **Decorator** | Very similar class structures — both use recursive composition. Key difference: **CoR handlers can stop the chain at any point** and execute arbitrary, independent operations. **Decorators must not break the flow** and always extend behavior consistently with the base interface. |
+| **Composite** | Frequently used together. A leaf component passes a request up the parent chain to the root, the Composite tree *is* the chain. |
+| **Decorator** | Very similar class structures: both use recursive composition. Key difference: **CoR handlers can stop the chain at any point** and execute arbitrary, independent operations. **Decorators must not break the flow** and always extend behavior consistently with the base interface. |
 
 ---
 
@@ -201,7 +202,7 @@ Use Chain of Responsibility when:
 - [ ] Can the chain be derived from an existing object tree (Composite)?
 - [ ] Have you handled the edge case where **no handler processes the request**?
 - [ ] Are all handlers implementing a **single interface** to prevent tight coupling?
-- [ ] Does each handler respect SRP — one reason to change?
+- [ ] Does each handler respect SRP: one reason to change?
 
 ---
 

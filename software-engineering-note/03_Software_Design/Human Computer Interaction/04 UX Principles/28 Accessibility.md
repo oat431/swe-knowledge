@@ -9,9 +9,9 @@ tags:
 
 # 28 Accessibility (A11y)
 
-> **Design for everyone — including people with disabilities.**
+> **Design for everyone: including people with disabilities.**
 
-Accessibility is not a feature. It's a requirement. ~15% of the world's population has some form of disability. Accessible design helps everyone — not just people with permanent disabilities, but also people with temporary impairments (broken arm, lost glasses) and situational limitations (bright sunlight, loud environment).
+Accessibility is not a feature. It's a requirement. ~15% of the world's population has some form of disability. Accessible design helps everyone, not just people with permanent disabilities, but also people with temporary impairments (broken arm, lost glasses) and situational limitations (bright sunlight, loud environment).
 
 ---
 
@@ -32,9 +32,9 @@ Accessibility is not a feature. It's a requirement. ~15% of the world's populati
 |-------|-----|
 | **Color contrast** | Text vs background ≥ 4.5:1 (body), ≥ 3:1 (large text). Use WebAIM contrast checker. |
 | **Keyboard navigation** | Can you complete every task using only Tab, Enter, Escape? |
-| **Alt text on images** | Every `<img>` has `alt=""` — descriptive for content, empty for decoration |
+| **Alt text on images** | Every `<img>` has `alt=""`, descriptive for content, empty for decoration |
 | **Focus indicators** | Visible outline on the currently focused element. Never `outline: none` without replacement. |
-| **Form labels** | Every input has a `<label>` — not just placeholder text |
+| **Form labels** | Every input has a `<label>`, not just placeholder text |
 | **Heading hierarchy** | One `<h1>`, then `<h2>` → `<h3>` in order. Never skip levels for visual styling. |
 | **Touch targets** | ≥ 44×44px. No tiny close buttons. |
 
@@ -65,6 +65,6 @@ Accessibility is not a feature. It's a requirement. ~15% of the world's populati
 
 ## Resources
 
-- WCAG 2.2 Guidelines — https://www.w3.org/WAI/standards-guidelines/wcag/
-- WebAIM Contrast Checker — https://webaim.org/resources/contrastchecker/
-- The A11y Project — https://www.a11yproject.com/
+- WCAG 2.2 Guidelines: https://www.w3.org/WAI/standards-guidelines/wcag/
+- WebAIM Contrast Checker: https://webaim.org/resources/contrastchecker/
+- The A11y Project: https://www.a11yproject.com/

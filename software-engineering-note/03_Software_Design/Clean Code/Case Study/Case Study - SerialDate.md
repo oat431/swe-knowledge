@@ -8,7 +8,7 @@ tags:
 # Case Study: Refactoring SerialDate
 
 **Source:** Robert C. Martin, *Clean Code: A Handbook of Agile Software Craftsmanship*, Chapter 16, pp. 267–284
-**Context:** JCommon library — `org.jfree.date.SerialDate`, authored by David Gilbert.
+**Context:** JCommon library, `org.jfree.date.SerialDate`, authored by David Gilbert.
 
 > *"SerialDate is a class that represents a date in Java … This is not an activity of malice. Nor do I think that I am so much better than David that I somehow have a right to pass judgment on his code. … What I am about to do is nothing more and nothing less than a professional review. It is something that we should all be comfortable doing. And it is something we should welcome when it is done for us. It is only through critiques like these that we will learn."*
 
@@ -16,7 +16,7 @@ tags:
 
 ## 1. The Approach: First Make It Work, Then Make It Right
 
-The refactoring of SerialDate is a textbook demonstration of the Boy Scout Rule in action—leave the code cleaner than you found it. But before any cleaning begins, the code must *work*. Uncle Bob approaches this in two distinct phases:
+The refactoring of SerialDate is a textbook demonstration of the Boy Scout Rule in action, leave the code cleaner than you found it. But before any cleaning begins, the code must *work*. Uncle Bob approaches this in two distinct phases:
 
 | Phase | Goal | Key Technique |
 |-------|------|---------------|
@@ -27,26 +27,26 @@ The refactoring of SerialDate is a textbook demonstration of the Boy Scout Rule 
 
 ---
 
-## 2. Phase 1 — Make It Work: Test Coverage & Bug Fixing
+## 2. Phase 1: Make It Work: Test Coverage & Bug Fixing
 
 ### 2.1 The Starting State
 
 - **185 executable statements** in SerialDate.
-- Original tests cover only **91 statements (~50%)**—the coverage map looks "like a patchwork quilt."
-- Several dead functions have zero coverage (e.g., `MonthCodeToQuarter` is never called—**Code Smells Catalog#Dead Code**).
+- Original tests cover only **91 statements (~50%):** the coverage map looks "like a patchwork quilt."
+- Several dead functions have zero coverage (e.g., `MonthCodeToQuarter` is never called, **Code Smells Catalog#Dead Code**).
 
-**Key Insight:** *You cannot refactor what you cannot test.* The first step isn't cleaning code—it's writing tests that exercise the code.
+**Key Insight:** *You cannot refactor what you cannot test.* The first step isn't cleaning code; it's writing tests that exercise the code.
 
 ### 2.2 Writing Independent Unit Tests
 
 Uncle Bob writes a brand-new suite (`Listing B-4`) that achieves **170/185 statements (92%)**. Some tests are commented out because they represent *desired* behavior that the code doesn't yet support. As he refactors, he uncomments and makes these pass.
 
 ```java
-// Before — tests reveal missing behavior
+// Before - tests reveal missing behavior
 // Commented out because the method is case-sensitive
 // testWeekdayCodeToString() expects "Monday" == "monday"
 
-// Fix — two-line change
+// Fix - two-line change
 // Original (line 259, 263):
 if (s.equals(shortWeekdayNames[i])) { ... }
 if (s.equals(weekDayNames[i])) { ... }
@@ -56,14 +56,14 @@ if (s.equalsIgnoreCase(shortWeekdayNames[i])) { ... }
 if (s.equalsIgnoreCase(weekDayNames[i])) { ... }
 ```
 
-*Lesson:* Trivial fixes are fine when tests reveal them. Don't overthink—just fix and verify.
+*Lesson:* Trivial fixes are fine when tests reveal them. Don't overthink, just fix and verify.
 
 ### 2.3 Bugs Discovered Through Testing
 
 **Bug 1: `getFollowingDayOfWeek` boundary error (line 685)**
 
 ```java
-// Before — returns Dec 25 as the Saturday following Dec 25 (wrong!)
+// Before - returns Dec 25 as the Saturday following Dec 25 (wrong!)
 // Dec 25, 2004 is Saturday. Next Saturday should be Jan 1, 2005.
 if (baseDOW >= targetWeekday) {  // BUG: should be >
     ...
@@ -78,12 +78,12 @@ if (baseDOW > targetWeekday) {   // FIX: boundary condition
 **Bug 2: `getNearestDayOfWeek` algorithm is simply wrong**
 
 ```java
-// Before — dead branch at line 719; adjust is always negative,
+// Before - dead branch at line 719; adjust is always negative,
 // so adjust >= 4 is never true. The algorithm fails when the
 // nearest day is in the future.
-if (adjust >= 4) { ... }  // NEVER executed — dead code
+if (adjust >= 4) { ... }  // NEVER executed - dead code
 
-// After — correct algorithm
+// After - correct algorithm
 int delta = targetDOW - base.getDayOfWeek();
 int positiveDelta = delta + 7;
 int adjust = positiveDelta % 7;
@@ -92,12 +92,12 @@ if (adjust > 3)
 return SerialDate.addDays(adjust, base);
 ```
 
-*Lesson:* Code coverage tools don't just measure quantity—**they reveal dead branches** that are genuine bugs in disguise. A line that never executes is either dead code or a logic error. In this case, it was both.
+*Lesson:* Code coverage tools don't just measure quantity; **they reveal dead branches** that are genuine bugs in disguise. A line that never executes is either dead code or a logic error. In this case, it was both.
 
 **Bug 3: Exception handling vs. error strings**
 
 ```java
-// Before — returning error strings masks failures
+// Before - returning error strings masks failures
 public static String weekInMonthToString(int week) {
     switch (week) {
         case 1: return "First";
@@ -106,7 +106,7 @@ public static String weekInMonthToString(int week) {
     }
 }
 
-// After — throw an exception the caller can actually handle
+// After - throw an exception the caller can actually handle
 public static String weekInMonthToString(int week) {
     switch (week) {
         case 1: return "First";
@@ -120,34 +120,34 @@ public static String weekInMonthToString(int week) {
 
 ---
 
-## 3. Phase 2 — Make It Right: Systematic Refactoring
+## 3. Phase 2: Make It Right: Systematic Refactoring
 
-With tests passing and coverage high, the real work begins. The approach is **top-to-bottom, one change at a time, running all tests after every single change**. No batch refactoring—you break one thing, you know exactly which change broke it.
+With tests passing and coverage high, the real work begins. The approach is **top-to-bottom, one change at a time, running all tests after every single change**. No batch refactoring; you break one thing, you know exactly which change broke it.
 
 ### 3.1 Name the Class for What It Is, Not How It Works
 
-**The Problem:** The name `SerialDate` leaks implementation. The class is named after its *serial number* representation (days since Dec 30, 1899). An abstract class should not imply anything about its implementation—it should describe its *abstraction*.
+**The Problem:** The name `SerialDate` leaks implementation. The class is named after its *serial number* representation (days since Dec 30, 1899). An abstract class should not imply anything about its implementation; it should describe its *abstraction*.
 
 ```java
 // Before
 public abstract class SerialDate implements Comparable, Serializable { ... }
 
-// After — name at the correct level of abstraction
+// After - name at the correct level of abstraction
 public abstract class DayDate implements Comparable, Serializable { ... }
 ```
 
-The word "serial" is a clue about *how* dates are stored, not *what* the class represents. DayDate says "I represent a day on the calendar"—nothing more, nothing less.
+The word "serial" is a clue about *how* dates are stored, not *what* the class represents. DayDate says "I represent a day on the calendar", nothing more, nothing less.
 
-**Principle:** **Naming Conventions#Abstraction Level** — Class names should reveal the abstraction, not the implementation.
+**Principle:** **Naming Conventions#Abstraction Level:** Class names should reveal the abstraction, not the implementation.
 
 ---
 
 ### 3.2 Replace Constant Inheritance with Enums
 
-**The Problem:** `MonthConstants` (Listing B-3) is a class full of `public static final int` constants. `SerialDate` *inherits* from it—an old Java trick to avoid typing `MonthConstants.January`. This is the **Constant Interface Antipattern** applied to inheritance. It violates **Class Design & SOLID#Interface Segregation Principle** by forcing every subclass to "be" a bag of month constants.
+**The Problem:** `MonthConstants` (Listing B-3) is a class full of `public static final int` constants. `SerialDate` *inherits* from it, an old Java trick to avoid typing `MonthConstants.January`. This is the **Constant Interface Antipattern** applied to inheritance. It violates **Class Design & SOLID#Interface Segregation Principle** by forcing every subclass to "be" a bag of month constants.
 
 ```java
-// Before — inheriting from a bag of constants
+// Before - inheriting from a bag of constants
 public abstract class SerialDate extends MonthConstants { ... }
 
 // where MonthConstants contains:
@@ -159,7 +159,7 @@ public class MonthConstants {
 ```
 
 ```java
-// After — a proper enum with behavior
+// After - a proper enum with behavior
 public enum Month {
     JANUARY(1), FEBRUARY(2), MARCH(3), APRIL(4),
     MAY(5), JUNE(6), JULY(7), AUGUST(8),
@@ -182,18 +182,18 @@ public enum Month {
 
 **Immediate payoff:**
 
-- **Eliminates `isValidMonthCode()`** — the type system now guarantees validity.
+- **Eliminates `isValidMonthCode()`:** the type system now guarantees validity.
 - **Eliminates error-checking boilerplate** everywhere a month integer was passed.
-- **Methods that took `int month` now take `Month month`** — the compiler catches errors, not the developer.
+- **Methods that took `int month` now take `Month month`:** the compiler catches errors, not the developer.
 
 ```java
-// Before — fragile, error-prone
+// Before - fragile, error-prone
 public static int monthCodeToQuarter(int monthCode) {
     if (monthCode < 1 || monthCode > 12) { ... }  // guard clause
     // ...
 }
 
-// After — guard clause eliminated; type system guarantees correctness
+// After - guard clause eliminated; type system guarantees correctness
 public int quarter() {
     return 1 + (index - 1) / 3;
 }
@@ -206,12 +206,12 @@ public int quarter() {
 The pattern repeats for every set of integer constants:
 
 ```java
-// Before — integer constants for day-of-week
+// Before - integer constants for day-of-week
 public static final int MONDAY = Calendar.MONDAY;
 public static final int TUESDAY = Calendar.TUESDAY;
 // ... scattered across the class
 
-// After — Day enum with parsing built in
+// After - Day enum with parsing built in
 public enum Day {
     MONDAY(Calendar.MONDAY), TUESDAY(Calendar.TUESDAY),
     WEDNESDAY(Calendar.WEDNESDAY), THURSDAY(Calendar.THURSDAY),
@@ -234,19 +234,19 @@ public enum Day {
 
 ### 3.4 Eliminate Inheritance Knowledge: The DayDateFactory
 
-**The Problem:** `DayDate` (the abstract base class) contains constants like `MINIMUM_YEAR_SUPPORTED` and `MAXIMUM_YEAR_SUPPORTED` that are implementation-specific. Even worse, the code in `RelativeDayOfWeekRule` needs these values—but an abstract class shouldn't expose implementation details. This is a **Code Smells Catalog#Inappropriate Intimacy** between base and derived classes.
+**The Problem:** `DayDate` (the abstract base class) contains constants like `MINIMUM_YEAR_SUPPORTED` and `MAXIMUM_YEAR_SUPPORTED` that are implementation-specific. Even worse, the code in `RelativeDayOfWeekRule` needs these values, but an abstract class shouldn't expose implementation details. This is a **Code Smells Catalog#Inappropriate Intimacy** between base and derived classes.
 
 **The Pattern:** Abstract Factory + Singleton + Static Delegation
 
 ```java
-// Before — base class knows about implementation limits
+// Before - base class knows about implementation limits
 public abstract class DayDate {
     public static final int MINIMUM_YEAR_SUPPORTED = 1900;
     public static final int MAXIMUM_YEAR_SUPPORTED = 9999;
     // ... these belong in SpreadsheetDate, not here
 }
 
-// After — factory encapsulates implementation knowledge
+// After - factory encapsulates implementation knowledge
 public abstract class DayDateFactory {
     private static DayDateFactory factory = new SpreadsheetDateFactory();
 
@@ -254,13 +254,13 @@ public abstract class DayDateFactory {
         DayDateFactory.factory = factory;
     }
 
-    // Abstract methods — each implementation provides its own
+    // Abstract methods - each implementation provides its own
     protected abstract DayDate _makeDate(int ordinal);
     protected abstract DayDate _makeDate(int day, DayDate.Month month, int year);
     protected abstract int _getMinimumYear();
     protected abstract int _getMaximumYear();
 
-    // Public static API — delegates to the current factory
+    // Public static API - delegates to the current factory
     public static DayDate makeDate(int ordinal) {
         return factory._makeDate(ordinal);
     }
@@ -296,9 +296,9 @@ A recurring theme: methods live in the wrong classes. Uncle Bob systematically r
 
 | Method | Was In | Moved To | Reason |
 |--------|--------|----------|--------|
-| `stringToWeekdayCode` | DayDate | `Day` enum | It's the parse function for Day—belongs with the type |
+| `stringToWeekdayCode` | DayDate | `Day` enum | It's the parse function for Day, belongs with the type |
 | `weekdayCodeToString` | DayDate | `Day` enum (as `toString()`) | Belongs with the type |
-| `monthCodeToQuarter` | DayDate | `Month` enum (as `quarter()`) | Feature envy—asks Month data, should be on Month |
+| `monthCodeToQuarter` | DayDate | `Month` enum (as `quarter()`) | Feature envy, asks Month data, should be on Month |
 | `monthCodeToString` | DayDate | `Month` enum (as `toString()`) | Belongs with the type |
 | `stringToMonthCode` | DayDate | `Month` enum (as `parse()`) | Belongs with the type |
 | `getMonthNames` | DayDate | `DateUtil` | Utility function, not core to date abstraction |
@@ -309,7 +309,7 @@ A recurring theme: methods live in the wrong classes. Uncle Bob systematically r
 **The refactoring for `monthCodeToString` → `Month.toString()` + `Month.toShortString()`:**
 
 ```java
-// Before — twin methods with a boolean flag (code smell: flag argument)
+// Before - twin methods with a boolean flag (code smell: flag argument)
 public static String monthCodeToString(int month) {
     return monthCodeToString(month, false);
 }
@@ -317,7 +317,7 @@ public static String monthCodeToString(int month, boolean shortened) {
     // ... complex switch or array lookup with shortened flag
 }
 
-// After — two clear, single-purpose methods on the enum
+// After - two clear, single-purpose methods on the enum
 public enum Month {
     // ...
     public String toString() {
@@ -329,9 +329,9 @@ public enum Month {
 }
 ```
 
-*Lesson:* **Code Smells Catalog#Feature Envy** — when a method uses more data from another class than its own, move it. Flag arguments are also a smell; prefer separate methods with clear names.
+*Lesson:* **Code Smells Catalog#Feature Envy:** when a method uses more data from another class than its own, move it. Flag arguments are also a smell; prefer separate methods with clear names.
 
-### 3.6 Push Down Implementation Details; Pull Up Generic Behavior
+### 3.6 Push Down Implementation Details; pull Up Generic Behavior
 
 Two complementary forces in inheritance refactoring:
 
@@ -343,15 +343,15 @@ Two complementary forces in inheritance refactoring:
 - `MINIMUM_YEAR_SUPPORTED` / `MAXIMUM_YEAR_SUPPORTED` → `SpreadsheetDate`
 
 **Pull Up** (move to abstract base class):
-- `toDate()` — implementation doesn't depend on SpreadsheetDate internals
-- `compare()` — renamed to `daysSince()`, implementation is generic
-- `getDayOfWeek()` — after extracting one abstract hook (`getDayOfWeekForOrdinalZero()`)
+- `toDate()`: implementation doesn't depend on SpreadsheetDate internals
+- `compare()`: renamed to `daysSince()`, implementation is generic
+- `getDayOfWeek()`: after extracting one abstract hook (`getDayOfWeekForOrdinalZero()`)
 - Six more abstract methods that had generic implementations in SpreadsheetDate
 
-**The `getDayOfWeek` trap — logical vs. physical dependency:**
+**The `getDayOfWeek` trap: logical vs. physical dependency:**
 
 ```java
-// The implementation in SpreadsheetDate "works" generically—
+// The implementation in SpreadsheetDate "works" generically -
 // but it implicitly depends on the origin day (day 0 = Saturday).
 // Making the dependency explicit:
 
@@ -386,12 +386,12 @@ DayDate newDate = date.plusDays(7);  // Obvious: returns new instance
 ```
 
 ```java
-// Before — static, uses instance data through parameter
+// Before - static, uses instance data through parameter
 public static DayDate addDays(int days, DayDate base) {
     return createInstance(base.toSerial() + days);
 }
 
-// After — instance method, clear immutability contract
+// After - instance method, clear immutability contract
 public DayDate plusDays(int days) {
     return DayDateFactory.makeDate(toOrdinal() + days);
 }
@@ -400,7 +400,7 @@ public DayDate plusDays(int days) {
 **Same transformation for `addMonths` → `plusMonths`**, with explaining variables:
 
 ```java
-// Before — dense, hard to follow
+// Before - dense, hard to follow
 public static DayDate addMonths(int months, DayDate base) {
     int yy = (12 * base.getYYYY() + base.getMonth() + months - 1) / 12;
     int mm = (12 * base.getYYYY() + base.getMonth() + months - 1) % 12 + 1;
@@ -409,7 +409,7 @@ public static DayDate addMonths(int months, DayDate base) {
     return createInstance(dd, mm, yy);
 }
 
-// After — each step named, algorithm transparent
+// After - each step named, algorithm transparent
 public DayDate plusMonths(int months) {
     int thisMonthAsOrdinal = 12 * getYear() + getMonth().index - 1;
     int resultMonthAsOrdinal = thisMonthAsOrdinal + months;
@@ -430,9 +430,9 @@ See **Function Design#Explaining Variables**.
 The three day-of-week navigation methods (`getPreviousDayOfWeek`, `getFollowingDayOfWeek`, `getNearestDayOfWeek`) were overly complex. After fixing the bugs in Phase 1, Uncle Bob simplifies them to be consistent and expressive:
 
 ```java
-// Before — getPreviousDayOfWeek (lines 628-660), complex and long
+// Before - getPreviousDayOfWeek (lines 628-660), complex and long
 
-// After — 4 lines, self-documenting
+// After - 4 lines, self-documenting
 public DayDate getPreviousDayOfWeek(Day targetDayOfWeek) {
     int offsetToTarget = targetDayOfWeek.index - getDayOfWeek().index;
     if (offsetToTarget >= 0)
@@ -465,7 +465,7 @@ public DayDate getNearestDayOfWeek(Day targetDay) {
 `isInRange()` contained a switch on interval type. Instead, each enum constant provides its own implementation:
 
 ```java
-// Before — switch in the method
+// Before - switch in the method
 public boolean isInRange(DayDate d1, DayDate d2, int include) {
     // ...
     switch (include) {
@@ -476,7 +476,7 @@ public boolean isInRange(DayDate d1, DayDate d2, int include) {
     }
 }
 
-// After — polymorphic enum
+// After - polymorphic enum
 public enum DateInterval {
     OPEN {
         public boolean isIn(int d, int left, int right) {
@@ -517,7 +517,7 @@ Throughout the refactoring, Uncle Bob deletes:
 
 | Deletion | Reason |
 |----------|--------|
-| Change history comments (lines 1–60) | Source control tracks this now — **Code Smells Catalog#Obsolete Comment** |
+| Change history comments (lines 1–60) | Source control tracks this now, **Code Smells Catalog#Obsolete Comment** |
 | Javadoc on `stringToWeekdayCode` | Became wrong after switching to enum; signature says enough |
 | `final` keywords on locals and params | Adds clutter, no real safety benefit when you have unit tests |
 | `AGGREGATE_DAYS_TO_END_OF_MONTH` table | Never used anywhere in JCommon |
@@ -525,23 +525,23 @@ Throughout the refactoring, Uncle Bob deletes:
 | `description` field + accessor/mutator | Never used |
 | Default constructor (line 213) | Compiler generates it |
 | `isValidMonthCode()` | Type system guarantees validity now |
-| `weekInMonthToString()` + tests | Nobody called it except tests—deleted tests too |
-| `relativeToString()` + tests | Same—only test callers |
+| `weekInMonthToString()` + tests | Nobody called it except tests; deleted the tests too |
+| `relativeToString()` + tests | Same, only test callers |
 | `serialVersionUID` | Prefer automatic control; `InvalidClassException` is better than silent corruption |
 | Redundant Javadoc | "Redundant comments are just places to collect lies and misinformation" |
 
 **The `final` debate:** "Eliminating `final` flies in the face of some conventional wisdom … I think that there are a few good uses for `final`, such as the occasional `final` constant, but otherwise the keyword adds little value and creates a lot of clutter. Perhaps I feel this way because the kinds of errors that `final` might catch are already caught by the unit tests I write."
 
-### 3.11 The Deleted `weekInMonthToString` — A Cautionary Tale
+### 3.11 The Deleted `weekInMonthToString`: A Cautionary Tale
 
 Uncle Bob performed an elegant chain of refactorings:
 1. Move method to `WeekInMonth` enum → rename to `toString()` → change from static to instance → delete the method entirely → change tests to use enum names directly.
 
-**Then he realized:** the only callers were the tests he just modified. The function was dead code all along—he had refactored and tested something nobody used. He deleted both function and tests.
+**Then he realized:** the only callers were the tests he just modified. The function was dead code all along; he had refactored and tested something nobody used. He deleted both function and tests.
 
 > *"Fool me once, shame on you. Fool me twice, shame on me!"*
 
-*Lesson:* Before investing in refactoring a method, check if anything actually calls it. Dead code isn't worth polishing—it's worth deleting. **Code Smells Catalog#Dead Code**.
+*Lesson:* Before investing in refactoring a method, check if anything actually calls it. Dead code isn't worth polishing; it's worth deleting. **Code Smells Catalog#Dead Code**.
 
 ---
 
@@ -591,10 +591,10 @@ SerialDate (abstract)                     DayDate (abstract)
 
 ---
 
-## 5. Refactoring Lessons — The Checklist
+## 5. Refactoring Lessons: The Checklist
 
 ### Mindset
-- [ ] **Professional review is normal.** Critique code like doctors review cases—it's how we learn.
+- [ ] **Professional review is normal.** Critique code like doctors review cases; it's how we learn.
 - [ ] **First make it work, then make it right.** Never refactor without test coverage.
 - [ ] **Run tests after every single change.** One change, one test run. You break it, you know why.
 - [ ] **The Boy Scout Rule:** Leave the code cleaner than you found it. Every edit is an opportunity.
@@ -614,11 +614,11 @@ SerialDate (abstract)                     DayDate (abstract)
 - [ ] **Error strings as return values** → Throw exceptions instead
 
 ### Design Patterns Applied
-- [ ] **Enum with behavior** — Replaces constant classes + utility methods
-- [ ] **Abstract Factory** — `DayDateFactory` hides which concrete implementation is used
-- [ ] **Singleton** — Default factory instance
-- [ ] **Template Method** — `getDayOfWeek()` with `getDayOfWeekForOrdinalZero()` hook
-- [ ] **Strategy/Polymorphic Enum** — `DateInterval.isIn()` replaces switch statement
+- [ ] **Enum with behavior:** Replaces constant classes + utility methods
+- [ ] **Abstract Factory:** `DayDateFactory` hides which concrete implementation is used
+- [ ] **Singleton:** Default factory instance
+- [ ] **Template Method:** `getDayOfWeek()` with `getDayOfWeekForOrdinalZero()` hook
+- [ ] **Strategy/Polymorphic Enum:** `DateInterval.isIn()` replaces switch statement
 
 ---
 

@@ -4,7 +4,7 @@ tags: [design-strategies, ood, ddd, event-driven, software-design, swebok, desig
 
 # Design Strategies and Methods
 
-> *Source: SWEBOK v4 Chapter 03 — Software Design*
+> *Source: SWEBOK v4 Chapter 03, Software Design*
 
 ## Purpose
 
@@ -26,11 +26,11 @@ Design strategies are the high-level approaches to structuring a system. Choosin
 ## Object-Oriented Design (OOD)
 
 **Core concepts:**
-- **Objects** — Entities with state (attributes) and behavior (methods)
-- **Classes** — Templates for creating objects
-- **Inheritance** — "Is-a" relationships; reuse through hierarchy
-- **Polymorphism** — Same interface, different behavior
-- **Encapsulation** — Hide internal state behind methods
+- **Objects:** Entities with state (attributes) and behavior (methods)
+- **Classes:** Templates for creating objects
+- **Inheritance:** "Is-a" relationships; reuse through hierarchy
+- **Polymorphism:** Same interface, different behavior
+- **Encapsulation:** Hide internal state behind methods
 
 **Core principles (SOLID):**
 - Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion
@@ -59,10 +59,10 @@ Design strategies are the high-level approaches to structuring a system. Choosin
 | **Ubiquitous Language** | Shared vocabulary between developers and domain experts |
 
 **Strategic design patterns:**
-- **Context Map** — How bounded contexts relate to each other
-- **Shared Kernel** — Shared subset of the domain model
-- **Anti-Corruption Layer** — Translate between different models
-- **Open Host Service** — Well-defined protocol for integration
+- **Context Map:** How bounded contexts relate to each other
+- **Shared Kernel:** Shared subset of the domain model
+- **Anti-Corruption Layer:** Translate between different models
+- **Open Host Service:** Well-defined protocol for integration
 
 ## Function-Oriented Design
 
@@ -83,10 +83,10 @@ Design strategies are the high-level approaches to structuring a system. Choosin
 **Core idea:** Components communicate by producing and consuming events. No direct coupling between producers and consumers.
 
 **Patterns:**
-- **Event Notification** — "Something happened" (minimal payload)
-- **Event-Carried State Transfer** — Full data in the event (consumer doesn't call back)
-- **Event Sourcing** — Events as the source of truth; state rebuilt from event history
-- **CQRS** — Separate read and write models, optimized independently
+- **Event Notification:** "Something happened" (minimal payload)
+- **Event-Carried State Transfer:** Full data in the event (consumer doesn't call back)
+- **Event Sourcing:** Events as the source of truth; state rebuilt from event history
+- **CQRS:** Separate read and write models, optimized independently
 
 **Trade-offs:**
 | Pro | Con |
@@ -101,10 +101,10 @@ Design strategies are the high-level approaches to structuring a system. Choosin
 **Core idea:** Build systems from independently developed, deployable, and replaceable components.
 
 **Key properties:**
-- **Independently deployable** — Can be updated without rebuilding the system
-- **Well-defined interfaces** — Clear contracts for interaction
-- **Replaceable** — Can swap implementations without affecting clients
-- **Technology-agnostic** — Components may use different technologies
+- **Independently deployable:** Can be updated without rebuilding the system
+- **Well-defined interfaces:** Clear contracts for interaction
+- **Replaceable:** Can swap implementations without affecting clients
+- **Technology-agnostic:** Components may use different technologies
 
 ## Choosing a Strategy
 
@@ -122,7 +122,7 @@ Design strategies are the high-level approaches to structuring a system. Choosin
 
 ## Related
 
-- [[Software Design Note Overview]] — All design topics
-- [[01_Design_Fundamentals_and_Principles]] — Core design principles
-- [[Clean Architecture/Design Principles/SOLID Design Principles]] — SOLID in depth
-- [[Design Pattern/Design Pattern Overview|Design Patterns]] — Patterns for OOD
+- [[Software Design Note Overview]]: All design topics
+- [[01_Design_Fundamentals_and_Principles]]: Core design principles
+- [[Clean Architecture/Design Principles/SOLID Design Principles]]: SOLID in depth
+- [[Design Pattern/Design Pattern Overview|Design Patterns]]: Patterns for OOD

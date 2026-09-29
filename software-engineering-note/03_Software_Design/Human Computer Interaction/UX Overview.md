@@ -10,13 +10,13 @@ tags:
 
 # User Experience Design
 
-UX is the layer beneath the visuals — how users feel, behave, and decide. These notes cover the psychology laws and design principles that govern user behavior.
+UX is the layer beneath the visuals: how users feel, behave, and decide. These notes cover the psychology laws and design principles that govern user behavior.
 
 ---
 
-## UX Laws — How Users Behave
+## UX Laws: How Users Behave
 
-> [[10 Aesthetic Usability Effect]] — 15 psychology-backed principles
+> [[10 Aesthetic Usability Effect]]: 15 psychology-backed principles
 
 | # | Law | File | Core Idea |
 |---|-----|------|-----------|
@@ -25,7 +25,7 @@ UX is the layer beneath the visuals — how users feel, behave, and decide. Thes
 | 12 | Hick-Hyman | [[12 Hick-Hyman Law]] | More choices = slower decisions |
 | 13 | Jakob's Law | [[13 Jakob's Law]] | Users prefer your site to work like others |
 | 14 | Miller's Law | [[14 Miller's Law]] | 7 ± 2 items in working memory |
-| 15 | Tesler's Law | [[15 Tesler's Law]] | Complexity must live somewhere — put it in the system |
+| 15 | Tesler's Law | [[15 Tesler's Law]] | Complexity must live somewhere; put it in the system |
 | 16 | Occam's Razor | [[16 Occam's Razor]] | Simplest solution is best |
 | 17 | Pareto Principle | [[17 Pareto Principle]] | 80% of effects from 20% of causes |
 | 18 | Doherty Threshold | [[18 Doherty Threshold]] | Keep response < 400ms |
@@ -38,35 +38,35 @@ UX is the layer beneath the visuals — how users feel, behave, and decide. Thes
 
 ---
 
-## UX Principles — How to Design
+## UX Principles: How to Design
 
-> [[25 User-Centered Design]] — 5 high-level design philosophies
+> [[25 User-Centered Design]]: 5 high-level design philosophies
 
 | # | Principle | File |
 |---|-----------|------|
-| 25 | User-Centered Design | [[25 User-Centered Design]] — Research → Design → Test → Repeat |
-| 26 | Visual Hierarchy | [[26 Visual Hierarchy]] — Guide the eye with size, color, position |
-| 27 | Consistency | [[27 Consistency]] — Same thing, same way, every time |
-| 28 | Accessibility | [[28 Accessibility]] — Design for everyone (POUR principles) |
-| 29 | Comfort & Usability | [[29 Comfort & Usability]] — Don't make users think, struggle, or worry |
+| 25 | User-Centered Design | [[25 User-Centered Design]]: Research → Design → Test → Repeat |
+| 26 | Visual Hierarchy | [[26 Visual Hierarchy]]: Guide the eye with size, color, position |
+| 27 | Consistency | [[27 Consistency]]: Same thing, same way, every time |
+| 28 | Accessibility | [[28 Accessibility]]: Design for everyone (POUR principles) |
+| 29 | Comfort & Usability | [[29 Comfort & Usability]]: Don't make users think, struggle, or worry |
 
 ---
 
-## UX Process — How to Execute
+## UX Process: How to Execute
 
-> [[30 User Research Methods]] — The practical workflow
+> [[30 User Research Methods]]: The practical workflow
 
 | # | Topic | File |
 |---|-------|------|
-| 30 | User Research | [[30 User Research Methods]] — Interviews, surveys, personas, journey maps |
-| 31 | UX Design Process | [[31 UX Design Process]] — Wireframes, prototypes, information architecture |
-| 33 | Usability Testing | [[33 Usability Testing and AB Testing]] — Usability tests, A/B testing, analytics |
-| 34 | Essential Documents | [[UX UI Essential Documents|UX UI Essential Documents]] — Deliverables checklist by phase |
+| 30 | User Research | [[30 User Research Methods]]: Interviews, surveys, personas, journey maps |
+| 31 | UX Design Process | [[31 UX Design Process]]: Wireframes, prototypes, information architecture |
+| 33 | Usability Testing | [[33 Usability Testing and AB Testing]]: Usability tests, A/B testing, analytics |
+| 34 | Essential Documents | [[UX UI Essential Documents|UX UI Essential Documents]]: Deliverables checklist by phase |
 
 ---
 
 ## Sources
 
-- *Laws of UX* — https://lawsofux.com/
+- *Laws of UX*: https://lawsofux.com/
 - *Don't Make Me Think* by Steve Krug
 - *The Design of Everyday Things* by Don Norman

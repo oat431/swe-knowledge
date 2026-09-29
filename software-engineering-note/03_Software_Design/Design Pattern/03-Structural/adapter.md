@@ -18,11 +18,11 @@ Also known as: **Wrapper**.
 
 ## Problem
 
-You have a working system that expects data or calls through a specific interface. Now you need to integrate a third-party library, legacy module, or external service — but its interface is incompatible with yours.
+You have a working system that expects data or calls through a specific interface. Now you need to integrate a third-party library, legacy module, or external service, but its interface is incompatible with yours.
 
-**Example (from source):** A stock market monitoring app downloads data from multiple sources in XML and renders charts. You want to plug in a smart third-party analytics library, but the library only accepts JSON. You cannot modify the library — you might not have its source code, and even if you did, changing it could break other consumers.
+**Example (from source):** A stock market monitoring app downloads data from multiple sources in XML and renders charts. You want to plug in a smart third-party analytics library, but the library only accepts JSON. You cannot modify the library; you might not have its source code, and even if you did, changing it could break other consumers.
 
-The pattern addresses **three classic incompatibility triggers**:
+The pattern addresses **three classic incompatibility triggers:**
 - Legacy code with interfaces you cannot change.
 - Third-party libraries you don't control.
 - Subclasses that lack common functionality you can't add to the superclass.
@@ -31,7 +31,7 @@ The pattern addresses **three classic incompatibility triggers**:
 
 ## Solution
 
-Create an **adapter** — a middle-layer object that wraps the incompatible class and translates calls between the two interfaces.
+Create an **adapter:** a middle-layer object that wraps the incompatible class and translates calls between the two interfaces.
 
 **How it works (3 steps):**
 1. The adapter exposes an interface compatible with the **client**.
@@ -58,13 +58,14 @@ The wrapped object never knows the adapter exists. Adapters can convert data for
 | **Service** | Useful class (3rd-party/legacy) with an incompatible interface. |
 | **Adapter** | Implements the client interface and wraps the service object. Translates calls. |
 
-The client never couples to the concrete adapter — you can introduce new adapter types without changing client code.
+The client never couples to the concrete adapter; you can introduce new adapter types without changing client code.
 
 ### Class Adapter (Inheritance)
 
-Uses **multiple inheritance**: the adapter inherits from both the client interface and the service class. Adaptation happens inside overridden methods. Only possible in languages that support multiple inheritance (e.g., C++). No wrapping needed — the adapter _is_ both.
+Uses **multiple inheritance:** the adapter inherits from both the client interface and the service class. Adaptation happens inside overridden methods. Only possible in languages that support multiple inheritance (e.g., C++). No wrapping needed, the adapter _is_ both.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','classText':'#CDD3D1','mainBkg':'#19362D','nodeBorder':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 classDiagram
     class Client
     class ClientInterface {
@@ -132,7 +133,7 @@ hole.fits(rpeg)  // true
 
 small_sqpeg = new SquarePeg(5)
 large_sqpeg = new SquarePeg(10)
-hole.fits(small_sqpeg)  // ❌ won't compile — incompatible types
+hole.fits(small_sqpeg)  // ❌ won't compile - incompatible types
 
 small_adapter = new SquarePegAdapter(small_sqpeg)
 large_adapter = new SquarePegAdapter(large_sqpeg)
@@ -142,18 +143,18 @@ hole.fits(large_adapter)  // false (10 * √2/2 ≈ 7.07 > 5)
 
 ### Example 2: Stock Market XML Analytics ❌ (narrative from source)
 
-The app's data pipeline produces XML; a third-party analytics library consumes only JSON. Create `XmlToJsonAnalyticsAdapter` classes that implement the app's existing data-feed interface, internally convert XML payloads to JSON, and call the wrapped analytics library. The app never touches the library directly — all calls flow through adapters.
+The app's data pipeline produces XML; a third-party analytics library consumes only JSON. Create `XmlToJsonAnalyticsAdapter` classes that implement the app's existing data-feed interface, internally convert XML payloads to JSON, and call the wrapped analytics library. The app never touches the library directly; all calls flow through adapters.
 
 ---
 
 ## How to Implement
 
-1. **Identify incompatible interfaces** — a service class you can't change, and client classes that would benefit from it.
-2. **Declare the client interface** — describe how clients communicate with the service.
-3. **Create the adapter class** — make it follow the client interface (stub methods first).
-4. **Add a service reference field** — initialize via constructor (common) or pass as method parameter.
-5. **Implement each client-interface method** — delegate real work to the service object, handling only interface/data-format conversion.
-6. **Clients use the adapter through the client interface only** — enables swapping adapters without touching client code.
+1. **Identify incompatible interfaces:** a service class you can't change, and client classes that would benefit from it.
+2. **Declare the client interface:** describe how clients communicate with the service.
+3. **Create the adapter class:** make it follow the client interface (stub methods first).
+4. **Add a service reference field:** initialize via constructor (common) or pass as method parameter.
+5. **Implement each client-interface method:** delegate real work to the service object, handling only interface/data-format conversion.
+6. **Clients use the adapter through the client interface only:** enables swapping adapters without touching client code.
 
 ---
 
@@ -170,7 +171,7 @@ The app's data pipeline produces XML; a third-party analytics library consumes o
 
 ### ✅ Pros
 - **Single Responsibility Principle.** Interface/data conversion is isolated from core business logic.
-- **Open/Closed Principle.** New adapter types can be introduced without modifying existing client code — as long as clients depend on the interface.
+- **Open/Closed Principle.** New adapter types can be introduced without modifying existing client code, as long as clients depend on the interface.
 
 ### ❌ Cons
 - **Increased complexity.** Requires a new set of interfaces and classes. Sometimes it's simpler to change the service class directly (when you own it).
@@ -184,7 +185,7 @@ The app's data pipeline produces XML; a third-party analytics library consumes o
 | **Bridge** | Bridge is designed **up-front** to decouple abstraction from implementation. Adapter is applied **after the fact** to make incompatible classes work together. |
 | **Decorator** | Decorator **preserves or extends** the interface; Adapter **provides a completely different** interface. Decorator supports recursive composition; Adapter does not. |
 | **Proxy** | Proxy keeps the **same** interface; Adapter provides a **different** one. |
-| **Facade** | Facade defines a **new** simplified interface for a whole subsystem. Adapter makes an **existing** interface usable — usually wrapping just one object, not an entire subsystem. |
+| **Facade** | Facade defines a **new** simplified interface for a whole subsystem. Adapter makes an **existing** interface usable, usually wrapping just one object, not an entire subsystem. |
 | **State / Strategy / Bridge** | All share similar structures (composition, delegation), but solve **different problems**. The pattern name communicates intent, not just structure. |
 
 ---
@@ -192,11 +193,11 @@ The app's data pipeline produces XML; a third-party analytics library consumes o
 ## Summary Checklist
 
 - [ ] Adapter solves **interface incompatibility** without modifying either side.
-- [ ] Prefer **object adapter** (composition) — works in all languages, wraps the service.
+- [ ] Prefer **object adapter** (composition): works in all languages, wraps the service.
 - [ ] **Class adapter** (multiple inheritance) is C++-only; no wrapping needed.
 - [ ] Client code depends on the **client interface**, never the concrete adapter.
 - [ ] Use when you **can't** (or shouldn't) change the service class.
-- [ ] Don't over-engineer — if you own the service, sometimes just refactor it.
+- [ ] Don't over-engineer: if you own the service, sometimes just refactor it.
 
 ## Related
 

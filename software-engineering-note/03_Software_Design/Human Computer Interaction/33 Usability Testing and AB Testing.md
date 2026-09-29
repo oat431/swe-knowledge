@@ -2,13 +2,13 @@
 tags: [usability-testing, ab-testing, analytics, ux-ui-design]
 ---
 
-# 03 — Usability Testing and A/B Testing
+# 03: Usability Testing and A/B Testing
 
 > *Source: Rocket Surgery Made Easy by Steve Krug, Lean UX by Gothelf & Seiden, Nielsen Norman Group*
 
 ## Purpose
 
-Testing validates that your designs actually work for real users. Usability testing finds problems; A/B testing optimizes solutions. Both are essential — you can't design well without testing.
+Testing validates that your designs actually work for real users. Usability testing finds problems; A/B testing optimizes solutions. Both are essential; you can't design well without testing.
 
 ## Usability Testing
 
@@ -16,9 +16,9 @@ Testing validates that your designs actually work for real users. Usability test
 Observing real users attempting real tasks on your product to identify usability issues.
 
 ### When to Test
-- **Early** — Test wireframes and prototypes before development
-- **During** — Test working features during sprints
-- **After** — Test live product for continuous improvement
+- **Early:** Test wireframes and prototypes before development
+- **During:** Test working features during sprints
+- **After:** Test live product for continuous improvement
 - **Rule of thumb:** Test early, test often, test with 5 users
 
 ### Testing Methods
@@ -64,9 +64,9 @@ Observing real users attempting real tasks on your product to identify usability
 ### Usability Test Planning
 
 #### Task Design
-- **Realistic tasks** — Based on actual user goals, not feature descriptions
-- **Clear success criteria** — Define what "completing the task" looks like
-- **Avoid leading** — Don't tell users what to click
+- **Realistic tasks:** Based on actual user goals, not feature descriptions
+- **Clear success criteria:** Define what "completing the task" looks like
+- **Avoid leading:** Don't tell users what to click
 - **Example:**
   - ❌ "Click the blue Submit button"
   - ✅ "You want to save your changes. How would you do that?"
@@ -81,10 +81,10 @@ Observing real users attempting real tasks on your product to identify usability
 | **First-click accuracy** | Where users click first | > 80% correct |
 
 #### Reporting
-- **Severity ratings** — Critical, major, minor, cosmetic
-- **Frequency** — How many users encountered the issue
-- **Screenshots/video clips** — Evidence of the issue
-- **Recommendations** — Specific fixes, not vague suggestions
+- **Severity ratings:** Critical, major, minor, cosmetic
+- **Frequency:** How many users encountered the issue
+- **Screenshots/video clips:** Evidence of the issue
+- **Recommendations:** Specific fixes, not vague suggestions
 
 ## A/B Testing
 
@@ -92,24 +92,24 @@ Observing real users attempting real tasks on your product to identify usability
 Comparing two versions of a design to see which performs better on a specific metric.
 
 ### When to A/B Test
-- **After launch** — Optimizing existing features
-- **High-traffic pages** — Enough data for statistical significance
-- **Clear hypothesis** — "We believe changing X will improve Y"
-- **Measurable outcomes** — Conversion rate, click rate, time on task
+- **After launch:** Optimizing existing features
+- **High-traffic pages:** Enough data for statistical significance
+- **Clear hypothesis:** "We believe changing X will improve Y"
+- **Measurable outcomes:** Conversion rate, click rate, time on task
 
 ### A/B Test Process
-1. **Hypothesis** — "Changing the CTA button from blue to green will increase click-through rate"
-2. **Design variants** — Version A (control) and Version B (variant)
-3. **Split traffic** — Random 50/50 split (or other ratio)
-4. **Run test** — Until statistical significance (usually 1–4 weeks)
-5. **Analyze results** — Which version performed better?
-6. **Implement winner** — Roll out the winning version
+1. **Hypothesis:** "Changing the CTA button from blue to green will increase click-through rate"
+2. **Design variants:** Version A (control) and Version B (variant)
+3. **Split traffic:** Random 50/50 split (or other ratio)
+4. **Run test:** Until statistical significance (usually 1–4 weeks)
+5. **Analyze results:** Which version performed better?
+6. **Implement winner:** Roll out the winning version
 
 ### Sample Size Calculation
-- **Minimum detectable effect (MDE)** — Smallest difference you care about
-- **Statistical significance** — Usually 95% confidence (p < 0.05)
-- **Power** — Usually 80% (probability of detecting a real effect)
-- **Traffic** — Higher traffic = faster results
+- **Minimum detectable effect (MDE):** Smallest difference you care about
+- **Statistical significance:** Usually 95% confidence (p < 0.05)
+- **Power:** Usually 80% (probability of detecting a real effect)
+- **Traffic:** Higher traffic = faster results
 - **Tools:** Optimizely calculator, VWO calculator, Evan Miller's calculator
 
 ### A/B Test Metrics
@@ -122,13 +122,13 @@ Comparing two versions of a design to see which performs better on a specific me
 | **Revenue per visitor** | Average revenue generated | E-commerce |
 
 ### Common A/B Tests
-- **CTA buttons** — Color, text, size, placement
-- **Headlines** — Value proposition wording
-- **Forms** — Number of fields, layout, validation
-- **Pricing** — Price points, display format
-- **Images** — Hero images, product photos
-- **Navigation** — Menu structure, labels
-- **Social proof** — Testimonials, reviews, badges
+- **CTA buttons:** Color, text, size, placement
+- **Headlines:** Value proposition wording
+- **Forms:** Number of fields, layout, validation
+- **Pricing:** Price points, display format
+- **Images:** Hero images, product photos
+- **Navigation:** Menu structure, labels
+- **Social proof:** Testimonials, reviews, badges
 
 ### A/B Testing Anti-Patterns
 | Anti-Pattern | What It Looks Like | Fix |
@@ -151,12 +151,12 @@ Comparing two versions of a design to see which performs better on a specific me
 | **Task success** | Completion rate, time on task | How well users achieve goals |
 
 ### Analytics Tools
-- **Google Analytics** — Traffic, behavior, conversions
-- **Mixpanel** — Event-based analytics, funnels
-- **Amplitude** — Product analytics, user behavior
-- **Hotjar** — Heatmaps, session recordings, surveys
-- **FullStory** — Session replay, frustration signals
-- **LogRocket** — Session replay with console logs
+- **Google Analytics:** Traffic, behavior, conversions
+- **Mixpanel:** Event-based analytics, funnels
+- **Amplitude:** Product analytics, user behavior
+- **Hotjar:** Heatmaps, session recordings, surveys
+- **FullStory:** Session replay, frustration signals
+- **LogRocket:** Session replay with console logs
 
 ### Funnel Analysis
 Tracking users through multi-step processes:
@@ -179,16 +179,16 @@ Each drop-off point is an optimization opportunity.
 Test → Analyze → Hypothesize → Design → Implement → Test
 ```
 
-1. **Test** — Usability test or A/B test current design
-2. **Analyze** — What worked? What didn't? Why?
-3. **Hypothesize** — "We believe changing X will improve Y because Z"
-4. **Design** — Create the solution
-5. **Implement** — Build and ship
-6. **Test** — Validate the improvement
+1. **Test:** Usability test or A/B test current design
+2. **Analyze:** What worked? What didn't? Why?
+3. **Hypothesize:** "We believe changing X will improve Y because Z"
+4. **Design:** Create the solution
+5. **Implement:** Build and ship
+6. **Test:** Validate the improvement
 
 ## Related
 
-- [[30 User Research Methods]] — Research methods that complement testing
-- [[31 UX Design Process]] — Testing wireframes and prototypes
-- [[32 UI Design Process]] — Testing visual designs
-- [[UX UI Essential Documents]] — Testing deliverables checklist
+- [[30 User Research Methods]]: Research methods that complement testing
+- [[31 UX Design Process]]: Testing wireframes and prototypes
+- [[32 UI Design Process]]: Testing visual designs
+- [[UX UI Essential Documents]]: Testing deliverables checklist

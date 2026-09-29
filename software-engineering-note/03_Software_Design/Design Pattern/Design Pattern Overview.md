@@ -7,7 +7,7 @@ tags:
 - software-engineering
 ---
 
-# Design Patterns — Knowledge Base
+# Design Patterns: Knowledge Base
 
 > *Source: Dive Into Design Patterns by Alexander Shvets, Refactoring.Guru (2022), 411 pages*
 
@@ -60,7 +60,7 @@ Design Pattern/
 
 ## 📖 Chapter Map
 
-### Foundations — Core Concepts Before Patterns
+### Foundations: Core Concepts Before Patterns
 
 | # | File | Pages | Description |
 |---|------|-------|-------------|
@@ -71,7 +71,7 @@ Design Pattern/
 | 5 | **design-principles** | pp. 37–50 | Encapsulate What Varies, Program to Interface, Favor Composition |
 | 6 | **solid-principles** | pp. 51–70 | SRP, OCP, LSP, ISP, DIP |
 
-### Creational Patterns — Object Creation
+### Creational Patterns: Object Creation
 
 | # | File | Pages | One-liner |
 |---|------|-------|-----------|
@@ -81,7 +81,7 @@ Design Pattern/
 | 10 | [[prototype]] | pp. 124–137 | Copy existing objects without depending on their classes |
 | 11 | [[singleton]] | pp. 138–146 | Ensure a class has only one instance with global access |
 
-### Structural Patterns — Object Composition
+### Structural Patterns: Object Composition
 
 | # | File | Pages | One-liner |
 |---|------|-------|-----------|
@@ -93,7 +93,7 @@ Design Pattern/
 | 17 | [[flyweight]] | pp. 221–234 | Share common state to fit more objects in RAM |
 | 18 | [[proxy]] | pp. 235–246 | Placeholder that controls access to another object |
 
-### Behavioral Patterns — Object Communication
+### Behavioral Patterns: Object Communication
 
 | # | File | Pages | One-liner |
 |---|------|-------|-----------|
@@ -121,7 +121,7 @@ Design Pattern/
 1. **First-time reader** → Start with `01-Foundations/` in order (how-to-read → OOP → patterns intro → design principles → SOLID).
 2. **Pattern lookup** → Jump directly to the pattern in `02-Creational/`, `03-Structural/`, or `04-Behavioral/`. Each file is self-contained.
 3. **Cross-reference** → Every pattern file has a `## Related` section with `` to connected patterns and principles.
-4. **Quick review** → Each file has a `## Summary Checklist` — run through the checkboxes.
+4. **Quick review** → Each file has a `## Summary Checklist`: run through the checkboxes.
 5. **Graph view** → Open Obsidian's Graph View on this folder to see the web of pattern relationships.
 
 ---

@@ -9,14 +9,14 @@ tags:
 
 > *Source: Clean Code by Robert C. Martin, Chapter 4 (pp. 53–74)*
 
-> *"Don't comment bad code—rewrite it."*
-> — Brian W. Kernighan and P. J. Plaugher
+> *"Don't comment bad code, rewrite it."*
+> *Brian W. Kernighan and P. J. Plaugher*
 
 ---
 
 ## Core Philosophy
 
-**Comments are, at best, a necessary evil.** The proper use of comments is to compensate for our failure to express ourselves in code. Comments are always failures—not a cause for celebration.
+**Comments are, at best, a necessary evil.** The proper use of comments is to compensate for our failure to express ourselves in code. Comments are always failures, not a cause for celebration.
 
 **Comments lie.** Not always, and not intentionally, but too often. The older a comment is and the farther away from the code it describes, the more likely it is to be just plain wrong. Code changes and evolves; comments don't always follow.
 
@@ -82,14 +82,14 @@ for (int i = 0; i < 25000; i++) { ... }
 ```
 
 ### Clarification
-Translate obscure arguments or return values into something readable—especially when dealing with standard libraries or code you cannot change.
+Translate obscure arguments or return values into something readable, especially when dealing with standard libraries or code you cannot change.
 
 ```java
 assertTrue(a.compareTo(b) == -1); // a < b
 assertTrue(b.compareTo(a) == 1);  // b > a
 ```
 
-> ⚠ **Risk:** Clarifying comments are hard to verify. Before writing them, make sure there is no better way—and then make sure they're accurate.
+> ⚠ **Risk:** Clarifying comments are hard to verify. Before writing them, make sure there is no better way, and then make sure they're accurate.
 
 ### Warning of Consequences
 Warn other programmers about non-obvious side effects or dangers.
@@ -129,7 +129,7 @@ new ListItemWidget(this, listItemContent, this.level + 1);
 ```
 
 ### Javadocs in Public APIs
-Well-described public APIs are invaluable—the Java standard library javadocs are a case in point. If you're writing a public API, write good javadocs for it.
+Well-described public APIs are invaluable, the Java standard library javadocs are a case in point. If you're writing a public API, write good javadocs for it.
 
 > Javadocs can be just as misleading, nonlocal, and dishonest as any other kind of comment. The rest of this chapter still applies.
 
@@ -155,7 +155,7 @@ What loads the defaults? Where? Was this a reminder to come back later? A commen
 Restating what the code already says, but less precisely.
 
 ```java
-// ❌ Redundant—longer to read than the code
+// ❌ Redundant: longer to read than the code
 // Utility method that returns when this.closed is true. Throws an exception
 // if the timeout is reached.
 public synchronized void waitForClose(final long timeoutMillis)
@@ -169,13 +169,13 @@ public synchronized void waitForClose(final long timeoutMillis)
 ```
 
 ### Misleading Comments
-A comment that's imprecise enough to be wrong. In the `waitForClose` example above, the comment says "returns when this.closed is true"—but the method actually waits for a blind timeout and then throws if closed is still false. Subtle misinformation like this causes painful debugging sessions.
+A comment that's imprecise enough to be wrong. In the `waitForClose` example above, the comment says "returns when this.closed is true", but the method actually waits for a blind timeout and then throws if closed is still false. Subtle misinformation like this causes painful debugging sessions.
 
 ### Mandated Comments
 Rules like "every function must have a javadoc" or "every variable must have a comment" produce clutter that propagates lies.
 
 ```java
-// ❌ Mandated noise—adds nothing
+// ❌ Mandated noise: adds nothing
 /**
  * @param title The title of the CD
  * @param author The author of the CD
@@ -210,7 +210,7 @@ protected AnnualDateRule() { }
 private int dayOfMonth;
 ```
 
-We learn to ignore noise—then real comments get ignored too, and eventually everything lies as the code changes.
+We learn to ignore noise, then real comments get ignored too, and eventually everything lies as the code changes.
 
 ### Scary Noise
 Noisy javadocs, often with copy-paste errors.
@@ -255,7 +255,7 @@ Banner comments separating sections of a file.
 // Actions //////////////////////////////////
 ```
 
-Use sparingly—only when the benefit is significant. Overuse makes them invisible background noise.
+Use sparingly, only when the benefit is significant. Overuse makes them invisible background noise.
 
 ### Closing Brace Comments
 Labeling `}` with what block it closes.
@@ -287,7 +287,7 @@ response.setBody(formatter.getResultStream(), formatter.getByteCount());
 Others won't have the courage to delete it. It accumulates like sediment. **Just delete it.** Source control remembers.
 
 ### HTML Comments
-HTML markup in source code comments makes them unreadable in the editor—the one place they should be readable.
+HTML markup in source code comments makes them unreadable in the editor, the one place they should be readable.
 
 ```java
 // ❌ Unreadable in the IDE
@@ -308,7 +308,7 @@ If the tool (like Javadoc) needs HTML adornment, that's the tool's responsibilit
 Comments that describe something far away from where they sit.
 
 ```java
-// ❌ Describes the default port—something this function has no control over
+// ❌ Describes the default port: something this function has no control over
 /**
  * Port on which fitnesse would run. Defaults to <b>8082</b>.
  */
@@ -485,13 +485,13 @@ public class PrimeGenerator {
 }
 ```
 
-*Only 2 comments remain—both explanatory and necessary. Small, well-named functions replace inline comments. The single remaining inline comment explains the square-root optimization rationale, which cannot be expressed cleanly in code alone.*
+*Only 2 comments remain, both explanatory and necessary. Small, well-named functions replace inline comments. The single remaining inline comment explains the square-root optimization rationale, which cannot be expressed cleanly in code alone.*
 
 ---
 
 ## Summary Checklist
 
-- [ ] Treat every comment as a **failure of expression**—try to express the intent in code first
+- [ ] Treat every comment as a **failure of expression:** try to express the intent in code first
 - [ ] **Rewrite bad code** instead of commenting it
 - [ ] Use **legal comments** only as required; keep them brief and collapsible
 - [ ] Write **informative comments** sparingly; prefer better names or dedicated classes
@@ -501,16 +501,16 @@ public class PrimeGenerator {
 - [ ] Leave **TODO comments** for deferred work; scan and resolve them regularly
 - [ ] Use **amplification comments** to highlight importance of subtle details
 - [ ] Write thorough **javadocs for public APIs** only; skip them for internal code
-- [ ] **Never** commit commented-out code—delete it; source control remembers
-- [ ] **No** journal/log comments—source control already tracks this
+- [ ] **Never** commit commented-out code: delete it; source control remembers
+- [ ] **No** journal/log comments: source control already tracks this
 - [ ] **No** redundant comments that restate the code (`// increment i`)
 - [ ] **No** noise comments (`/** Default constructor. */`)
-- [ ] **No** closing-brace markers—shorten functions instead
+- [ ] **No** closing-brace markers: shorten functions instead
 - [ ] **No** position marker banners unless truly warranted
 - [ ] **No** attributions or bylines
-- [ ] **No** HTML in comments—let the documentation tool handle that
+- [ ] **No** HTML in comments: let the documentation tool handle that
 - [ ] Keep comments **local** to the code they describe
-- [ ] Keep comments **concise**—no historical essays or unnecessary detail
+- [ ] Keep comments **concise:** no historical essays or unnecessary detail
 - [ ] **Refactor** when tempted to write a comment; extract a function or rename a variable
 
 ---

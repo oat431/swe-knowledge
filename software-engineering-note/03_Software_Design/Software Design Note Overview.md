@@ -6,16 +6,16 @@ tags:
   - software-engineering
 ---
 
-# Software Design — Overview
+# Software Design: Overview
 
 > **Source:** SWEBOK v4 Chapter 03
 > **Purpose:** Transform requirements into implementable specifications through design principles, strategies, methods, and quality evaluation.
 
 ## What Is This?
 
-Software Design is the process of defining the architecture, components, interfaces, and other characteristics of a system. It bridges the gap between *what* the system should do (requirements) and *how* it will do it (construction). Good design makes software easier to build, maintain, extend, and reason about; bad design makes everything harder — exponentially so as the codebase grows.
+Software Design is the process of defining the architecture, components, interfaces, and other characteristics of a system. It bridges the gap between *what* the system should do (requirements) and *how* it will do it (construction). Good design makes software easier to build, maintain, extend, and reason about; bad design makes everything harder, exponentially so as the codebase grows.
 
-SWEBOK v4 distinguishes three stages of design: **architectural design** (system-wide fundamentals, now its own KA), **high-level design** (outward-facing: top-level structure, components, interfaces, data formats), and **detailed design** (inward-facing: algorithms, data structures, module internals). Design is fundamentally a problem-solving and vocabulary-creation activity — creating the language to express both problem and solution.
+SWEBOK v4 distinguishes three stages of design: **architectural design** (system-wide fundamentals, now its own KA), **high-level design** (outward-facing: top-level structure, components, interfaces, data formats), and **detailed design** (inward-facing: algorithms, data structures, module internals). Design is fundamentally a problem-solving and vocabulary-creation activity, creating the language to express both problem and solution.
 
 The chapter covers foundational principles (abstraction, separation of concerns, encapsulation, coupling/cohesion, SOLID), multiple design strategies (OOD, DDD, event-driven, component-based), recording approaches (UML, design patterns, DSLs, design rationale), and quality evaluation techniques (reviews, metrics, static analysis, verification vs. validation).
 
@@ -40,7 +40,7 @@ The chapter covers foundational principles (abstraction, separation of concerns,
 - Model-Based Design (MBD): shift from documents to tool-enabled models supporting simulation, analysis, and CI
 - Structural descriptions: class/component/deployment diagrams, ERDs, CRC cards, IDLs
 - Behavioral descriptions: activity/interaction/state diagrams, DFDs, decision tables, pseudocode
-- Design patterns (GoF 23): creational, structural, behavioral — reusable solutions as shared vocabulary
+- Design patterns (GoF 23): creational, structural, behavioral: reusable solutions as shared vocabulary
 
 ### Software Design Strategies and Methods
 - General strategies: divide-and-conquer, stepwise refinement, top-down vs. bottom-up, iterative/incremental
@@ -55,25 +55,25 @@ The chapter covers foundational principles (abstraction, separation of concerns,
 ## My Notes
 
 ### SWEBOK Design Foundations
-- [[01_Design_Fundamentals_and_Principles]] — Abstraction, coupling/cohesion, SOLID, design thinking
-- [[02_Design_Processes]] — High-level vs detailed design, iterative design, MBD
-- [[03_Design_Qualities]] — Concurrency, persistence, distribution, error handling
-- [[04_Recording_Software_Designs]] — MBD, UML, structural/behavioral descriptions, ADRs
-- [[05_Design_Strategies_and_Methods]] — OOD, DDD, event-driven, function-oriented, component-based
-- [[06_Design_Quality_Analysis]] — Reviews, inspections, metrics, static analysis
+- [[01_Design_Fundamentals_and_Principles]]: Abstraction, coupling/cohesion, SOLID, design thinking
+- [[02_Design_Processes]]: High-level vs detailed design, iterative design, MBD
+- [[03_Design_Qualities]]: Concurrency, persistence, distribution, error handling
+- [[04_Recording_Software_Designs]]: MBD, UML, structural/behavioral descriptions, ADRs
+- [[05_Design_Strategies_and_Methods]]: OOD, DDD, event-driven, function-oriented, component-based
+- [[06_Design_Quality_Analysis]]: Reviews, inspections, metrics, static analysis
 
 ### Design Practice
-- [[Clean Code/|Clean Code]]
-- [[Clean Architecture/|Clean Architecture]]
-- [[Design Pattern/|Design Pattern]]
-- [[Human Computer Interaction/|Human Computer Interaction]]
+- [[Clean Code/Clean Code Overview|Clean Code]]
+- [[Clean Architecture/Foundations/Clean Architecture Overview|Clean Architecture]]
+- [[Design Pattern/Design Pattern Overview|Design Pattern]]
+- [[Human Computer Interaction/Human Computer Interaction Overview|Human Computer Interaction]]
 
 ## Relationship to Other KAs
 
-- **[[Software Requirements Overview|Software Requirements]]** — Design transforms requirements into blueprints for construction
-- **[[Software Construction Overview|Software Construction]]** — Design produces the specifications that construction implements
-- **[[Software Testing Overview|Software Testing]]** — Testing validates design; design provides the foundation for test strategy
-- **[[Software Engineering Operations Overview|Software Engineering Operations]]** — Deployment architecture is shaped by operational needs
+- **[[Software Requirements Overview|Software Requirements]]:** Design transforms requirements into blueprints for construction
+- **[[Software Construction Overview|Software Construction]]:** Design produces the specifications that construction implements
+- **[[Software Testing Overview|Software Testing]]:** Testing validates design; design provides the foundation for test strategy
+- **[[Software Engineering Operations Overview|Software Engineering Operations]]:** Deployment architecture is shaped by operational needs
 
 ---
 

@@ -16,17 +16,18 @@ Design thinking is a human-centered, iterative problem-solving methodology that 
 ### The Five Steps
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[Empathize] --> B[Define]
     B --> C[Ideate]
     C --> D[Prototype]
     D --> E[Test]
     E --> A
-    style A fill:#4a9eff,stroke:#333,color:#fff
-    style B fill:#7c4dff,stroke:#333,color:#fff
-    style C fill:#ff6b6b,stroke:#333,color:#fff
-    style D fill:#ffa726,stroke:#333,color:#fff
-    style E fill:#66bb6a,stroke:#333,color:#fff
+    style A fill:#00B5FF,stroke:#000000,color:#000000
+    style B fill:#1FB8AB,stroke:#000000,color:#000000
+    style C fill:#FF5861,stroke:#000000,color:#000000
+    style D fill:#FFBE00,stroke:#000000,color:#000000
+    style E fill:#1FB854,stroke:#000000,color:#000000
 ```
 
 | Step | Purpose | Key Activities | Design Output |
@@ -41,11 +42,11 @@ graph LR
 
 Design thinking bridges the gap between business requirements and technical implementation:
 
-1. **Empathy for Users**: Understanding who will use the software, their mental models, their workflows, and their frustrations. This goes beyond stated requirements to uncover latent needs.
-2. **Problem Framing**: The way a problem is defined dramatically shapes the solution. Design thinking encourages reframing problems from the user perspective rather than the system perspective.
-3. **Divergent then Convergent Thinking**: First expand the solution space (ideation), then narrow it down (selection). This prevents premature optimization on the first viable idea.
-4. **Rapid Experimentation**: Prototyping allows testing assumptions before committing to expensive implementation. Fail fast, learn fast.
-5. **Iterative Refinement**: Each cycle through the loop produces better understanding and better solutions. Design is never "done" in one pass.
+1. **Empathy for Users:** Understanding who will use the software, their mental models, their workflows, and their frustrations. This goes beyond stated requirements to uncover latent needs.
+2. **Problem Framing:** The way a problem is defined dramatically shapes the solution. Design thinking encourages reframing problems from the user perspective rather than the system perspective.
+3. **Divergent then Convergent Thinking:** First expand the solution space (ideation), then narrow it down (selection). This prevents premature optimization on the first viable idea.
+4. **Rapid Experimentation:** Prototyping allows testing assumptions before committing to expensive implementation. Fail fast, learn fast.
+5. **Iterative Refinement:** Each cycle through the loop produces better understanding and better solutions. Design is never "done" in one pass.
 
 ### Design Thinking vs. Traditional Software Design
 
@@ -70,14 +71,15 @@ Change is the only constant in software. Requirements evolve, technologies advan
 
 **Key Strategies:**
 
-- **Separation of Concerns**: Isolate areas of change so that modifications in one area do not cascade through the system. See [[01_Design_Fundamentals_and_Principles#Separation of Concerns|Separation of Concerns]].
-- **Information Hiding**: Hide implementation details behind stable interfaces so that internal changes do not affect external consumers. See [[01_Design_Fundamentals_and_Principles#Information Hiding|Information Hiding]].
-- **Parameterization**: Make configurable what might change. Use configuration files, dependency injection, and strategy patterns rather than hard-coded behavior.
-- **Anticipation of Change**: Identify the axes of change and orient module boundaries along those axes. The goal is not to predict the future but to make change cheap along likely dimensions.
+- **Separation of Concerns:** Isolate areas of change so that modifications in one area do not cascade through the system. See [[01_Design_Fundamentals_and_Principles#Separation of Concerns|Separation of Concerns]].
+- **Information Hiding:** Hide implementation details behind stable interfaces so that internal changes do not affect external consumers. See [[01_Design_Fundamentals_and_Principles#Information Hiding|Information Hiding]].
+- **Parameterization:** Make configurable what might change. Use configuration files, dependency injection, and strategy patterns rather than hard-coded behavior.
+- **Anticipation of Change:** Identify the axes of change and orient module boundaries along those axes. The goal is not to predict the future but to make change cheap along likely dimensions.
 
 **Change Impact Analysis:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Change Request] --> B{Impact Analysis}
     B --> C[Scope: Local]
@@ -86,9 +88,9 @@ graph TD
     C --> F[Refactor within component]
     D --> G[Update interface + consumers]
     E --> H[Architecture review required]
-    style C fill:#66bb6a,stroke:#333,color:#fff
-    style D fill:#ffa726,stroke:#333,color:#fff
-    style E fill:#ff6b6b,stroke:#333,color:#fff
+    style C fill:#1FB854,stroke:#000000,color:#000000
+    style D fill:#FFBE00,stroke:#000000,color:#000000
+    style E fill:#FF5861,stroke:#000000,color:#000000
 ```
 
 ### Design for Reuse
@@ -106,10 +108,10 @@ Reuse operates at multiple levels: code reuse, design reuse, architecture reuse,
 
 **Design for Reuse Principles:**
 
-- **Generality**: Design components to handle a class of problems, not just one specific instance.
-- **Composability**: Components should work together through well-defined interfaces. See [[05_Design_Strategies_and_Methods|Design Strategies and Methods]].
-- **Discoverability**: Reusable components must be findable and understandable. Good naming, documentation, and cataloging are essential.
-- **Independence**: Minimize dependencies so components can be extracted and reused without dragging along the entire system.
+- **Generality:** Design components to handle a class of problems, not just one specific instance.
+- **Composability:** Components should work together through well-defined interfaces. See [[05_Design_Strategies_and_Methods|Design Strategies and Methods]].
+- **Discoverability:** Reusable components must be findable and understandable. Good naming, documentation, and cataloging are essential.
+- **Independence:** Minimize dependencies so components can be extracted and reused without dragging along the entire system.
 
 ### Design for Deployment
 
@@ -117,10 +119,10 @@ Deployment context shapes design decisions around packaging, configuration, data
 
 **Deployment Concerns:**
 
-- **Environment Parity**: Design to minimize differences between development, staging, and production environments. Configuration externalization, containerization, and infrastructure-as-code help bridge the gap.
-- **Zero-Downtime Deployment**: Design for blue-green deployments, canary releases, and rolling updates. This requires backward-compatible APIs, database migration strategies, and feature flags.
-- **Rollback Capability**: Every deployment should be reversible. Design database migrations as forward-and-backward compatible. Use feature flags to decouple deployment from release.
-- **Observability**: Build in logging, metrics, and tracing from the start. Design for the ability to diagnose problems in production without requiring code changes.
+- **Environment Parity:** Design to minimize differences between development, staging, and production environments. Configuration externalization, containerization, and infrastructure-as-code help bridge the gap.
+- **Zero-Downtime Deployment:** Design for blue-green deployments, canary releases, and rolling updates. This requires backward-compatible APIs, database migration strategies, and feature flags.
+- **Rollback Capability:** Every deployment should be reversible. Design database migrations as forward-and-backward compatible. Use feature flags to decouple deployment from release.
+- **Observability:** Build in logging, metrics, and tracing from the start. Design for the ability to diagnose problems in production without requiring code changes.
 
 ### Design for Operations
 
@@ -128,11 +130,11 @@ Operational design addresses how software will be monitored, maintained, scaled,
 
 **Operational Design Principles:**
 
-- **Health Checks**: Every service should expose its health status through standardized endpoints.
-- **Graceful Degradation**: Design for partial failure. When a dependency is unavailable, the system should degrade gracefully rather than fail catastrophically.
-- **Capacity Planning**: Design with growth in mind. Understand throughput requirements, storage growth, and scaling triggers.
-- **Automation**: Design for automated deployment, testing, monitoring, and recovery. Manual operational procedures are a design failure.
-- **Incident Response**: Design with the ability to quickly diagnose and mitigate issues. Structured logging, correlation IDs, and circuit breakers support rapid incident response.
+- **Health Checks:** Every service should expose its health status through standardized endpoints.
+- **Graceful Degradation:** Design for partial failure. When a dependency is unavailable, the system should degrade gracefully rather than fail catastrophically.
+- **Capacity Planning:** Design with growth in mind. Understand throughput requirements, storage growth, and scaling triggers.
+- **Automation:** Design for automated deployment, testing, monitoring, and recovery. Manual operational procedures are a design failure.
+- **Incident Response:** Design with the ability to quickly diagnose and mitigate issues. Structured logging, correlation IDs, and circuit breakers support rapid incident response.
 
 ---
 
@@ -157,6 +159,7 @@ Persistence design addresses how application state is stored, retrieved, and man
 **Persistence Architecture Patterns:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "Application Layer"
         A[Service] --> B[Repository Interface]
@@ -179,10 +182,10 @@ Distribution addresses how software is decomposed into communicating parts that 
 
 **Core Distribution Challenges:**
 
-- **Network Unreliability**: The network is not reliable. Design must account for message loss, reordering, duplication, and latency.
-- **Partial Failure**: In a distributed system, some components can fail while others continue. Design must handle partial failure gracefully.
-- **Consistency**: Distributed systems face fundamental trade-offs between consistency, availability, and partition tolerance (CAP theorem).
-- **Latency**: Network calls are orders of magnitude slower than local calls. Design must minimize the number of round trips and batch operations where possible.
+- **Network Unreliability:** The network is not reliable. Design must account for message loss, reordering, duplication, and latency.
+- **Partial Failure:** In a distributed system, some components can fail while others continue. Design must handle partial failure gracefully.
+- **Consistency:** Distributed systems face fundamental trade-offs between consistency, availability, and partition tolerance (CAP theorem).
+- **Latency:** Network calls are orders of magnitude slower than local calls. Design must minimize the number of round trips and batch operations where possible.
 
 ### Concurrency
 
@@ -190,10 +193,10 @@ Concurrency design addresses how multiple threads of execution interact safely a
 
 **Concurrency Design Challenges:**
 
-- **Race Conditions**: Multiple threads accessing shared state without proper synchronization.
-- **Deadlocks**: Circular dependencies between locks that prevent progress.
-- **Starvation**: Some threads are perpetually denied access to resources.
-- **Priority Inversion**: A high-priority thread is blocked by a low-priority thread holding a needed resource.
+- **Race Conditions:** Multiple threads accessing shared state without proper synchronization.
+- **Deadlocks:** Circular dependencies between locks that prevent progress.
+- **Starvation:** Some threads are perpetually denied access to resources.
+- **Priority Inversion:** A high-priority thread is blocked by a low-priority thread holding a needed resource.
 
 ### Security
 
@@ -201,10 +204,10 @@ Security design addresses how the system protects data, resists attacks, and enf
 
 **Security Design Principles:**
 
-- **Least Privilege**: Every component should operate with the minimum privileges necessary.
-- **Defense in Depth**: Multiple layers of security so that failure of one layer does not compromise the system.
-- **Fail Secure**: When errors occur, the system should default to denying access rather than granting it.
-- **Separation of Duties**: Critical operations should require multiple parties to complete.
+- **Least Privilege:** Every component should operate with the minimum privileges necessary.
+- **Defense in Depth:** Multiple layers of security so that failure of one layer does not compromise the system.
+- **Fail Secure:** When errors occur, the system should default to denying access rather than granting it.
+- **Separation of Duties:** Critical operations should require multiple parties to complete.
 
 ### Performance
 
@@ -226,6 +229,7 @@ Scalability design addresses how the system handles growing load without proport
 **Scaling Strategies:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[Scaling Need] --> B{Direction}
     B --> C[Vertical: Bigger Machine]
@@ -233,8 +237,8 @@ graph LR
     D --> E[Stateless Services]
     D --> F[Data Sharding]
     D --> G[Read Replicas]
-    style C fill:#ffa726,stroke:#333,color:#fff
-    style D fill:#66bb6a,stroke:#333,color:#fff
+    style C fill:#FFBE00,stroke:#000000,color:#000000
+    style D fill:#1FB854,stroke:#000000,color:#000000
 ```
 
 ---
@@ -259,6 +263,7 @@ Abstraction is the process of reducing complexity by focusing on essential chara
 **Abstraction in Practice:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "High-Level Abstraction"
         A[ProcessOrder]
@@ -289,19 +294,19 @@ Decomposition is the process of breaking a complex problem into smaller, managea
 
 **Decomposition Approaches:**
 
-- **Top-Down Decomposition**: Start with the whole system and progressively break it into subsystems, modules, and components. Good for systems with clear hierarchical structure.
-- **Modular Decomposition**: Identify coherent units of functionality and encapsulate them as independent modules. Good for systems with well-defined functional boundaries.
-- **Data-Driven Decomposition**: Decompose based on the data structures and their transformations. Good for data processing systems.
-- **Event-Driven Decomposition**: Decompose based on events and their handlers. Good for reactive systems.
+- **Top-Down Decomposition:** Start with the whole system and progressively break it into subsystems, modules, and components. Good for systems with clear hierarchical structure.
+- **Modular Decomposition:** Identify coherent units of functionality and encapsulate them as independent modules. Good for systems with well-defined functional boundaries.
+- **Data-Driven Decomposition:** Decompose based on the data structures and their transformations. Good for data processing systems.
+- **Event-Driven Decomposition:** Decompose based on events and their handlers. Good for reactive systems.
 
 **Decomposition Criteria:**
 
 A good decomposition should be:
 
-- **Complete**: Every part of the problem is covered by exactly one module.
-- **Minimal**: No module is redundant; each addresses a distinct concern.
-- **Coherent**: Related functionality is grouped together within a module.
-- **Loosely Coupled**: Modules interact through well-defined, minimal interfaces.
+- **Complete:** Every part of the problem is covered by exactly one module.
+- **Minimal:** No module is redundant; each addresses a distinct concern.
+- **Coherent:** Related functionality is grouped together within a module.
+- **Loosely Coupled:** Modules interact through well-defined, minimal interfaces.
 
 ### Encapsulation and Information Hiding
 
@@ -328,6 +333,7 @@ Modularity measures how well a system is decomposed into independent, self-conta
 **Cohesion (internal strength):**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph "Cohesion Spectrum"
         A[Coincidental] --> B[Logical]
@@ -337,13 +343,13 @@ graph LR
         E --> F[Sequential]
         F --> G[Functional]
     end
-    style A fill:#ff6b6b,stroke:#333,color:#fff
-    style B fill:#ff8a65,stroke:#333,color:#fff
-    style C fill:#ffa726,stroke:#333,color:#fff
-    style D fill:#ffca28,stroke:#333,color:#fff
-    style E fill:#66bb6a,stroke:#333,color:#fff
-    style F fill:#42a5f5,stroke:#333,color:#fff
-    style G fill:#4a9eff,stroke:#333,color:#fff
+    style A fill:#FF5861,stroke:#000000,color:#000000
+    style B fill:#FF5861,stroke:#000000,color:#000000
+    style C fill:#FFBE00,stroke:#000000,color:#000000
+    style D fill:#FFBE00,stroke:#000000,color:#000000
+    style E fill:#1FB854,stroke:#000000,color:#000000
+    style F fill:#1FB854,stroke:#000000,color:#000000
+    style G fill:#00B5FF,stroke:#000000,color:#000000
 ```
 
 | Level | Type | Description | Example |
@@ -378,6 +384,7 @@ Separation of concerns (SoC) is the principle that each part of a system should 
 **Horizontal Separation (Layers):**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "Presentation Layer"
         A[UI Components]
@@ -418,15 +425,16 @@ Each vertical slice represents a bounded context or feature module that encapsul
 
 These three principles guide the design of module interfaces:
 
-- **Sufficiency**: A module should capture enough features of the abstraction that it is useful. An insufficient module forces clients to work around its limitations. The module should do enough that clients do not need to reach past it for basic operations.
+- **Sufficiency:** A module should capture enough features of the abstraction that it is useful. An insufficient module forces clients to work around its limitations. The module should do enough that clients do not need to reach past it for basic operations.
 
-- **Completeness**: A module should capture all meaningful features of the abstraction. A complete module provides all operations that clients might reasonably need. Completeness must be balanced against simplicity; overly complete interfaces become unwieldy.
+- **Completeness:** A module should capture all meaningful features of the abstraction. A complete module provides all operations that clients might reasonably need. Completeness must be balanced against simplicity; overly complete interfaces become unwieldy.
 
-- **Primitiveness**: Operations in a module should be primitive, meaning they cannot be decomposed into other operations within the same module. Primitive operations are the building blocks from which more complex operations are composed. If an operation can be expressed as a combination of other operations in the module, it should not be included (or should be a convenience method).
+- **Primitiveness:** Operations in a module should be primitive, meaning they cannot be decomposed into other operations within the same module. Primitive operations are the building blocks from which more complex operations are composed. If an operation can be expressed as a combination of other operations in the module, it should not be included (or should be a convenience method).
 
 **Balancing the Three:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Module Interface Design] --> B{Too Few Operations?}
     A --> C{Too Many Operations?}
@@ -435,10 +443,10 @@ graph TD
     C --> F[Over-Complete: Interface bloat, maintenance burden]
     D --> G[Redundant: Can be composed from primitives]
     A --> H[Balanced: Sufficient, Complete, Primitive]
-    style E fill:#ff6b6b,stroke:#333,color:#fff
-    style F fill:#ffa726,stroke:#333,color:#fff
-    style G fill:#ffca28,stroke:#333,color:#fff
-    style H fill:#66bb6a,stroke:#333,color:#fff
+    style E fill:#FF5861,stroke:#000000,color:#000000
+    style F fill:#FFBE00,stroke:#000000,color:#000000
+    style G fill:#FFBE00,stroke:#000000,color:#000000
+    style H fill:#1FB854,stroke:#000000,color:#000000
 ```
 
 ---
@@ -453,9 +461,9 @@ Responsibility-driven design (Wirfs-Brock, 1990) organizes design around the res
 
 **Core Concepts:**
 
-- **Responsibilities**: What an object knows (knowledge) and what it does (behavior).
-- **Collaborators**: Other objects that help fulfill responsibilities.
-- **Roles**: Sets of related responsibilities that define how an object participates in the system.
+- **Responsibilities:** What an object knows (knowledge) and what it does (behavior).
+- **Collaborators:** Other objects that help fulfill responsibilities.
+- **Roles:** Sets of related responsibilities that define how an object participates in the system.
 
 **Design Process:**
 
@@ -534,14 +542,15 @@ The Open-Closed Principle (OCP), from Bertrand Meyer (1988), states that softwar
 **Example: Payment Processing**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[PaymentProcessor] --> B[PaymentStrategy interface]
     B --> C[CreditCardPayment]
     B --> D[PayPalPayment]
     B --> E[BankTransferPayment]
     B --> F[CryptoPayment]
-    style A fill:#4a9eff,stroke:#333,color:#fff
-    style B fill:#7c4dff,stroke:#333,color:#fff
+    style A fill:#00B5FF,stroke:#000000,color:#000000
+    style B fill:#1FB8AB,stroke:#000000,color:#000000
 ```
 
 Adding a new payment method requires creating a new class implementing `PaymentStrategy` without modifying `PaymentProcessor` or existing payment implementations.
@@ -554,7 +563,7 @@ Anti-patterns are common design mistakes that appear to be beneficial but result
 
 ### God Class
 
-**Description**: A single class that concentrates too much intelligence, data, or responsibility. It knows too much and does too much.
+**Description:** A single class that concentrates too much intelligence, data, or responsibility. It knows too much and does too much.
 
 **Symptoms:**
 - Class has hundreds or thousands of lines of code.
@@ -573,11 +582,11 @@ Anti-patterns are common design mistakes that appear to be beneficial but result
 1. Identify distinct responsibilities within the God Class.
 2. Extract each responsibility into its own class using Extract Class refactoring.
 3. Use delegation to forward calls from the original class to the new classes.
-4. Apply [[Clean Architecture|Clean Architecture]] principles to redistribute responsibilities.
+4. Apply [[Clean Architecture/Foundations/Clean Architecture Overview|Clean Architecture]] principles to redistribute responsibilities.
 
 ### Spaghetti Code
 
-**Description**: Code with a tangled, unstructured control flow that is difficult to follow and understand. Typically caused by excessive use of goto, deep nesting, lack of modularity, and absence of clear structure.
+**Description:** Code with a tangled, unstructured control flow that is difficult to follow and understand. Typically caused by excessive use of goto, deep nesting, lack of modularity, and absence of clear structure.
 
 **Symptoms:**
 - Long methods with deep nesting (5+ levels).
@@ -596,11 +605,11 @@ Anti-patterns are common design mistakes that appear to be beneficial but result
 1. Apply Extract Method to break long methods into smaller ones.
 2. Eliminate global variables by introducing proper data structures.
 3. Introduce clear module boundaries using layered or modular architecture.
-4. Apply [[Clean Code|Clean Code]] principles systematically.
+4. Apply [[Clean Code/Clean Code Overview|Clean Code]] principles systematically.
 
 ### Golden Hammer
 
-**Description**: The tendency to apply a familiar tool, technology, or pattern to every problem, regardless of its suitability. "When all you have is a hammer, everything looks like a nail."
+**Description:** The tendency to apply a familiar tool, technology, or pattern to every problem, regardless of its suitability. "When all you have is a hammer, everything looks like a nail."
 
 **Symptoms:**
 - Using the same technology for all problems (e.g., relational database for everything including graph queries, document storage, and caching).
@@ -622,7 +631,7 @@ Anti-patterns are common design mistakes that appear to be beneficial but result
 
 ### Second-System Effect
 
-**Description**: The tendency of a second system (or major revision) to be over-designed, over-engineered, and bloated because designers include all the features they wished they had in the first system. Coined by Fred Brooks in [[The Mythical Man-Month]].
+**Description:** The tendency of a second system (or major revision) to be over-designed, over-engineered, and bloated because designers include all the features they wished they had in the first system. Coined by Fred Brooks in [[The Mythical Man-Month]].
 
 **Symptoms:**
 - Excessive generalization and abstraction.
@@ -657,6 +666,7 @@ Anti-patterns are common design mistakes that appear to be beneficial but result
 ## Relationships to Other Notes
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[Design Thinking & Context] --> B[[01_Design_Fundamentals_and_Principles]]
     A --> C[[02_Design_Processes]]
@@ -665,7 +675,7 @@ graph LR
     A --> F[[11_Design_Issues_and_Qualities]]
     A --> G[[Clean Architecture]]
     A --> H[[Design Pattern]]
-    style A fill:#4a9eff,stroke:#333,color:#fff
+    style A fill:#00B5FF,stroke:#000000,color:#000000
 ```
 
 - [[01_Design_Fundamentals_and_Principles]]: Foundational principles (abstraction, encapsulation, modularity) are expanded here with practical application and metrics.
@@ -673,8 +683,8 @@ graph LR
 - [[03_Design_Qualities]]: Design context shapes which quality attributes are prioritized.
 - [[05_Design_Strategies_and_Methods]]: Design heuristics provide practical guidance for applying design strategies.
 - [[11_Design_Issues_and_Qualities]]: Key design issues (concurrency, distribution, security) are explored in depth in the companion note.
-- [[Clean Architecture]]: Remediation for God Class anti-pattern and separation of concerns.
-- [[Design Pattern]]: Patterns are the positive outcomes of applying design principles and heuristics.
+- [[Clean Architecture/Foundations/Clean Architecture Overview|Clean Architecture]]: Remediation for God Class anti-pattern and separation of concerns.
+- [[Design Pattern/Design Pattern Overview|Design Pattern]]: Patterns are the positive outcomes of applying design principles and heuristics.
 
 ---
 

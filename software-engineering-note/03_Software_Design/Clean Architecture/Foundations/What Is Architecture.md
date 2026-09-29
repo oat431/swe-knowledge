@@ -13,7 +13,7 @@ tags:
 
 ## Core Principle
 
-> **The primary purpose of architecture is to support the life cycle of the system — development, deployment, operation, and maintenance — by keeping as many options open as possible, for as long as possible. A good architect maximizes the number of decisions NOT made.**
+> **The primary purpose of architecture is to support the life cycle of the system (development, deployment, operation, and maintenance) by keeping as many options open as possible, for as long as possible. A good architect maximizes the number of decisions NOT made.**
 
 Architecture is the shape of a system: the division into components, their arrangement, and how they communicate. Its goal is not to make the system work (terrible architectures can work just fine) but to minimize lifetime cost and maximize programmer productivity. The strategy is simple: separate policy from detail, then defer all decisions about details until you have enough information to make them properly.
 
@@ -55,7 +55,7 @@ Deployment strategy is rarely considered during initial development. A micro-ser
 
 **Hardware is cheap and people are expensive. Architectures that impede operation are less costly than architectures that impede development, deployment, and maintenance.**
 
-Almost any operational difficulty can be resolved by throwing more hardware at the system without drastically changing the architecture. But architecture serves operation in a deeper way: a good architecture communicates the operational needs of the system. It elevates use cases, features, and required behaviors to first-class entities — visible landmarks that make the system readily apparent to developers, simplifying understanding and aiding development and maintenance.
+Almost any operational difficulty can be resolved by throwing more hardware at the system without drastically changing the architecture. But architecture serves operation in a deeper way: a good architecture communicates the operational needs of the system. It elevates use cases, features, and required behaviors to first-class entities, visible landmarks that make the system readily apparent to developers, simplifying understanding and aiding development and maintenance.
 
 ### 7. Maintenance: Architecture Mitigates Spelunking and Risk
 
@@ -65,14 +65,14 @@ A carefully thought-through architecture vastly mitigates these costs. By separa
 
 ### 8. Keeping Options Open: Separate Policy from Details
 
-**All software systems decompose into two elements: policy (business rules and procedures — where the true value lives) and details (IO devices, databases, web systems, frameworks, protocols — things that enable communication with the policy but don't impact its behavior).**
+**All software systems decompose into two elements: policy (business rules and procedures (where the true value lives) and details (IO devices, databases, web systems, frameworks, protocols) things that enable communication with the policy but don't impact its behavior).**
 
 The goal of the architect is to create a shape where policy is the most essential element and details are made irrelevant to that policy. This allows decisions about details to be delayed and deferred. For example:
 
-- You don't need to choose a database early — high-level policy shouldn't care if it's relational, distributed, hierarchical, or flat files.
-- You don't need to choose a web server early — high-level policy shouldn't know it's being delivered over the web.
-- You don't need to adopt REST, micro-services, or SOA frameworks early — high-level policy should be agnostic about the interface to the outside world.
-- You don't need a dependency injection framework early — high-level policy shouldn't care how dependencies are resolved.
+- You don't need to choose a database early: high-level policy shouldn't care if it's relational, distributed, hierarchical, or flat files.
+- You don't need to choose a web server early: high-level policy shouldn't know it's being delivered over the web.
+- You don't need to adopt REST, micro-services, or SOA frameworks early: high-level policy should be agnostic about the interface to the outside world.
+- You don't need a dependency injection framework early: high-level policy shouldn't care how dependencies are resolved.
 
 The longer you wait to make decisions, the more information you have, and the more experiments you can run.
 
@@ -86,9 +86,9 @@ The maxim: **a good architect maximizes the number of decisions not made.**
 
 **In the 1960s, programmers bound code directly to IO devices. When magnetic tape replaced punched cards, every program had to be rewritten. The lesson: decouple policy from the device.**
 
-Operating systems evolved to abstract IO devices into software functions — programs invoked OS services for abstract unit-record devices, and operators could connect those abstractions to card readers, magnetic tape, or any other device without changing the code. This was the Open–Closed Principle born before it was named.
+Operating systems evolved to abstract IO devices into software functions, programs invoked OS services for abstract unit-record devices, and operators could connect those abstractions to card readers, magnetic tape, or any other device without changing the code. This was the Open–Closed Principle born before it was named.
 
-In the junk mail example, a company printed personalized advertisements using an IBM 360. Their programs didn't care about devices because they used IO abstractions. Switching from a line printer to magnetic tape required no code changes — the tape was written in 10 minutes, then mounted on five offline printers running 24/7, producing hundreds of thousands of letters weekly.
+In the junk mail example, a company printed personalized advertisements using an IBM 360. Their programs didn't care about devices because they used IO abstractions. Switching from a line printer to magnetic tape required no code changes, the tape was written in 10 minutes, then mounted on five offline printers running 24/7, producing hundreds of thousands of letters weekly.
 
 **The lesson:** The policy was formatting names and addresses. The detail was the device. The decision about which device to use was deferred. The shape of the program disconnected policy from detail.
 
@@ -111,17 +111,17 @@ The junk mail and disk drive stories are small-scale examples of the principle a
 ## Summary Checklist
 
 - [ ] Is the architect still writing code and experiencing the same problems as the rest of the team?
-- [ ] Is the system shaped into well-defined components with stable interfaces — matching team structure without compromising deployment, operation, and maintenance?
+- [ ] Is the system shaped into well-defined components with stable interfaces, matching team structure without compromising deployment, operation, and maintenance?
 - [ ] Can the system be deployed with a **single action**?
-- [ ] Does the architecture reveal operational needs — are use cases and behaviors elevated to first-class visible landmarks?
+- [ ] Does the architecture reveal operational needs: are use cases and behaviors elevated to first-class visible landmarks?
 - [ ] Are components isolated through stable interfaces to minimize **spelunking** (finding where to make a change) and **risk** (inadvertent breakage)?
 - [ ] Is **policy** (business rules) cleanly separated from **details** (database, web, frameworks, protocols)?
 - [ ] Is the high-level policy agnostic about the database technology (relational, distributed, flat file)?
 - [ ] Is the high-level policy agnostic about delivery mechanism (web, desktop, console)?
 - [ ] Is the high-level policy agnostic about the interface to the outside world (REST, SOA, micro-services)?
 - [ ] Is the high-level policy agnostic about dependency injection or framework choices?
-- [ ] Are decisions about details **deferred** for as long as possible — until you have the maximum information to make them?
-- [ ] Are pre-existing company commitments treated as **deferrable** — does the architecture allow changing them later?
+- [ ] Are decisions about details **deferred** for as long as possible: until you have the maximum information to make them?
+- [ ] Are pre-existing company commitments treated as **deferrable:** does the architecture allow changing them later?
 - [ ] Is the architecture maximizing the **number of decisions NOT made**?
 
 ---

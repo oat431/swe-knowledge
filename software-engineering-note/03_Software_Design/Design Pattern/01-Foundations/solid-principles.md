@@ -10,13 +10,13 @@ tags:
 
 ## Core Principle
 
-> **SOLID** is an acronym for five design principles intended to make software designs more understandable, flexible, and maintainable. Introduced by Robert Martin in *Agile Software Development, Principles, Patterns, and Practices*. Apply pragmatically—mindlessly applying all five at once can cause more harm than good.
+> **SOLID** is an acronym for five design principles intended to make software designs more understandable, flexible, and maintainable. Introduced by Robert Martin in *Agile Software Development, Principles, Patterns, and Practices*. Apply pragmatically, mindlessly applying all five at once can cause more harm than good.
 
 ---
 
 ### Single Responsibility Principle
 
-**"A class should have only one reason to change."** Make every class responsible for a single part of the functionality, with that responsibility entirely encapsulated within the class. The goal is reducing complexity—when a class does too many things, you must change it every time *any* of those things changes, risking breakage of unrelated parts.
+**"A class should have only one reason to change."** Make every class responsible for a single part of the functionality, with that responsibility entirely encapsulated within the class. The goal is reducing complexity, when a class does too many things, you must change it every time *any* of those things changes, risking breakage of unrelated parts.
 
 ```java
 // ❌ BEFORE: Employee handles both data and report formatting
@@ -123,7 +123,7 @@ class Order {
 
 ### Liskov Substitution Principle
 
-**"Subclasses should be substitutable for their base classes."** When extending a class, you should be able to pass subclass objects in place of parent objects without breaking client code. The subclass must remain compatible with the behavior of the superclass—extend base behavior rather than replacing it with something entirely different.
+**"Subclasses should be substitutable for their base classes."** When extending a class, you should be able to pass subclass objects in place of parent objects without breaking client code. The subclass must remain compatible with the behavior of the superclass; extend base behavior rather than replacing it with something entirely different.
 
 The principle has formal requirements: (1) parameter types in overridden methods should match or be *more abstract*; (2) return types should match or be a *subtype*; (3) exception types thrown should match or be subtypes of what the base method throws; (4) pre-conditions must not be strengthened; (5) post-conditions must not be weakened; (6) invariants of the superclass must be preserved.
 
@@ -165,7 +165,7 @@ class Document {
     void open(String filename) {
         // read content from file
     }
-    // No save() here—base class makes no promises it can't keep
+    // No save() here: base class makes no promises it can't keep
 }
 
 class WritableDocument extends Document {
@@ -244,7 +244,7 @@ class DropboxProvider implements CloudStorage {
 
 // AWSProvider implements all the granular interfaces it needs
 class AWSProvider implements CloudStorage, CloudCompute, CloudNotifications, CloudCDN {
-    // All real implementations—no stubs
+    // All real implementations: no stubs
 }
 ```
 
@@ -252,7 +252,7 @@ class AWSProvider implements CloudStorage, CloudCompute, CloudNotifications, Clo
 
 ### Dependency Inversion Principle
 
-**"Depend upon abstractions, not concretions. High-level classes shouldn't depend on low-level classes—both should depend on abstractions. Abstractions shouldn't depend on details; details should depend on abstractions."**
+**"Depend upon abstractions, not concretions. High-level classes shouldn't depend on low-level classes, both should depend on abstractions. Abstractions shouldn't depend on details; details should depend on abstractions."**
 
 - **Low-level classes:** implement basic operations (disk I/O, network, database connections).
 - **High-level classes:** contain complex business logic that directs low-level classes.
@@ -282,13 +282,13 @@ class BudgetReport {
         database.execute("INSERT INTO reports VALUES (...)");
         database.disconnect();
     }
-    // Tightly coupled to MySQLDatabase—can't switch to Postgres, flat files, or API
+    // Tightly coupled to MySQLDatabase: can't switch to Postgres, flat files, or API
     // Any change in MySQLDatabase may break BudgetReport
 }
 ```
 
 ```java
-// ✅ AFTER: Dependency inverted—both depend on a high-level abstraction
+// ✅ AFTER: Dependency inverted; both depend on a high-level abstraction
 interface DataStore {
     String[] readData(String query);
     void writeData(String command);
@@ -325,21 +325,21 @@ class BudgetReport {
         // ... complex budget calculations
         store.writeData("INSERT INTO reports VALUES (...)");
     }
-    // Works with any DataStore implementation—MySQL, Postgres, flat files, mock
+    // Works with any DataStore implementation: MySQL, Postgres, flat files, mock
 }
 ```
 
-The direction of the original dependency has been **inverted**: low-level classes now depend on high-level abstractions, not the other way around. This principle often pairs with the Open/Closed Principle—you can extend low-level classes for different business logic without breaking existing code.
+The direction of the original dependency has been **inverted:** low-level classes now depend on high-level abstractions, not the other way around. This principle often pairs with the Open/Closed Principle; you can extend low-level classes for different business logic without breaking existing code.
 
 ---
 
 ## Summary Checklist
 
-- [ ] **Single Responsibility** — Each class has exactly one reason to change
-- [ ] **Open/Closed** — Classes are open for extension, closed for modification
-- [ ] **Liskov Substitution** — Subclasses are substitutable for their base classes without breaking clients
-- [ ] **Interface Segregation** — Interfaces are narrow; clients aren't forced to depend on methods they don't use
-- [ ] **Dependency Inversion** — Both high- and low-level classes depend on abstractions; details depend on abstractions
+- [ ] **Single Responsibility:** Each class has exactly one reason to change
+- [ ] **Open/Closed:** Classes are open for extension, closed for modification
+- [ ] **Liskov Substitution:** Subclasses are substitutable for their base classes without breaking clients
+- [ ] **Interface Segregation:** Interfaces are narrow; clients aren't forced to depend on methods they don't use
+- [ ] **Dependency Inversion:** Both high- and low-level classes depend on abstractions; details depend on abstractions
 
 ---
 

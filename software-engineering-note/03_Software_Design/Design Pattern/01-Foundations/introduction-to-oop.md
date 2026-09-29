@@ -21,12 +21,12 @@ Object-oriented programming (OOP) is a paradigm that wraps **data** and **behavi
 
 ### Classes and Objects
 
-A **class** is a blueprint that defines the structure for objects. An **object** is a concrete instance of a class — the actual entity created at runtime.
+A **class** is a blueprint that defines the structure for objects. An **object** is a concrete instance of a class, the actual entity created at runtime.
 
 **Fields** store data (attributes). **Methods** define behavior. Together, fields and methods are the **members** of a class.
 
 ```pseudocode
-// ✅ Class definition — the blueprint
+// ✅ Class definition - the blueprint
 class Cat is
   field name: string
   field age: integer
@@ -38,16 +38,16 @@ class Cat is
 ```
 
 ```pseudocode
-// ✅ Object instantiation — concrete instances
+// ✅ Object instantiation - concrete instances
 oscar = new Cat("Oscar", 3, "orange")
 luna  = new Cat("Luna", 2, "white")
-// Same fields, different values — same class, different state
+// Same fields, different values - same class, different state
 ```
 
 ### State and Behavior
 
-- **State** — data stored in an object's fields at any given moment (e.g., `oscar.age = 3`, `luna.age = 2`).
-- **Behavior** — defined by the object's methods (e.g., `meow()`, `sleep()`, `eat()`).
+- **State:** data stored in an object's fields at any given moment (e.g., `oscar.age = 3`, `luna.age = 2`).
+- **Behavior:** defined by the object's methods (e.g., `meow()`, `sleep()`, `eat()`).
 
 ### Class Hierarchies
 
@@ -75,7 +75,7 @@ class Dog extends Animal is
 ```
 
 ```pseudocode
-// ❌ Without hierarchy — duplication, no shared contract
+// ❌ Without hierarchy - duplication, no shared contract
 class Cat is
   field name: string
   field age: integer
@@ -89,12 +89,13 @@ class Dog is
   method breathe() is /* ... */
   method sleep() is /* ... */
   method bark() is /* ... */
-// Every class re-declares name, age, breathe, sleep — unmaintainable
+// Every class re-declares name, age, breathe, sleep - unmaintainable
 ```
 
-Hierarchies can extend multiple levels: `Organism → Animal → Cat`. A subclass inherits everything from every ancestor in the chain. Subclasses can **override** methods — either replacing or extending the parent's behavior.
+Hierarchies can extend multiple levels: `Organism → Animal → Cat`. A subclass inherits everything from every ancestor in the chain. Subclasses can **override** methods, either replacing or extending the parent's behavior.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','classText':'#CDD3D1','mainBkg':'#19362D','nodeBorder':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 classDiagram
     class Animal {
         +String name
@@ -131,24 +132,24 @@ In code: interfaces and abstract classes expose **what** an object does without 
 
 The ability of an object to **hide parts of its state and behavior** from other objects, exposing only a limited **interface** to the rest of the program.
 
-- `private` — accessible only within the owning class.
-- `protected` — accessible within the owning class and its subclasses.
-- `public` — the object's interface, accessible by everyone.
+- `private`: accessible only within the owning class.
+- `protected`: accessible within the owning class and its subclasses.
+- `public`: the object's interface, accessible by everyone.
 
 ```pseudocode
-// ✅ Encapsulated — internals hidden behind a simple interface
+// ✅ Encapsulated - internals hidden behind a simple interface
 class Car is
   private field engine: Engine
   private field battery: Battery
   method start() is
-    // complex wiring, crankshaft rotation, power cycle — all hidden
+    // complex wiring, crankshaft rotation, power cycle - all hidden
     engine.ignite()
     battery.drain()
-// Driver only calls start() — doesn't need to know the internals
+// Driver only calls start() - doesn't need to know the internals
 ```
 
 ```pseudocode
-// ❌ No encapsulation — everything exposed, caller must orchestrate
+// ❌ No encapsulation - everything exposed, caller must orchestrate
 class Car is
   public field engine: Engine
   public field battery: Battery
@@ -161,13 +162,13 @@ class Car is
 // Fragile, coupled, dangerous
 ```
 
-Interfaces declare **contracts** of interaction. Any class implementing `FlyingTransport` with `fly(origin, destination, passengers)` can be handled by an `Airport` — whether it's an `Airplane`, `Helicopter`, or `DomesticatedGryphon`. The interface guarantees the method exists; implementation details are irrelevant.
+Interfaces declare **contracts** of interaction. Any class implementing `FlyingTransport` with `fly(origin, destination, passengers)` can be handled by an `Airport`, whether it's an `Airplane`, `Helicopter`, or `DomesticatedGryphon`. The interface guarantees the method exists; implementation details are irrelevant.
 
 ---
 
 ### **Inheritance**
 
-The ability to **build new classes on top of existing ones**. The main benefit is **code reuse**: instead of duplicating code, extend an existing class and add only what's different.
+The ability to **build new classes on top of existing ones**. The main benefit is **code reuse:** instead of duplicating code, extend an existing class and add only what's different.
 
 **Key rule:** Subclasses have the same interface as their parent. You cannot hide a method declared in the superclass. You must implement all abstract methods, even if they don't make sense for your subclass.
 
@@ -197,11 +198,11 @@ for each Animal a in bag do
   a.makeSound()
 // Output: Meow!
 // Output: Woof!
-// The program doesn't know the concrete type — polymorphism resolves it
+// The program doesn't know the concrete type - polymorphism resolves it
 ```
 
 ```pseudocode
-// ❌ Without polymorphism — type-checking nightmare
+// ❌ Without polymorphism - type-checking nightmare
 for each item in bag do
   if item is Cat then
     (item as Cat).meow()
@@ -209,16 +210,16 @@ for each item in bag do
     (item as Dog).bark()
   else if item is Bird then
     (item as Bird).chirp()
-// Every new animal requires another branch — unscalable
+// Every new animal requires another branch - unscalable
 ```
 
-Think of polymorphism as an object's ability to **pretend** to be something else — usually a class it extends or an interface it implements. The dogs and cats in the bag "pretended" to be generic `Animal` objects.
+Think of polymorphism as an object's ability to **pretend** to be something else, usually a class it extends or an interface it implements. The dogs and cats in the bag "pretended" to be generic `Animal` objects.
 
 ---
 
 ## Relations Between Objects
 
-From **weakest** to **strongest**:
+From **weakest** to **strongest:**
 
 ### **Dependency** (Weakest)
 
@@ -229,7 +230,7 @@ Occurs when you use concrete class names in method signatures, instantiate objec
 ```pseudocode
 class Professor is
   method teach(Course c) is
-    // Professor depends on Course — if getKnowledge() changes, this breaks
+    // Professor depends on Course - if getKnowledge() changes, this breaks
     this.student.remember(c.getKnowledge())
 ```
 
@@ -243,7 +244,7 @@ class Professor is
 
 Object A **knows about** object B. Class A depends on B.
 
-A specialized kind of dependency where an object always has access to the objects it interacts with — typically via a **field** that stores a reference. Unlike simple dependency, association establishes a **permanent link**.
+A specialized kind of dependency where an object always has access to the objects it interacts with, typically via a **field** that stores a reference. Unlike simple dependency, association establishes a **permanent link**.
 
 ```pseudocode
 class Professor is
@@ -340,6 +341,7 @@ class Cat extends Animal is
 | **Inheritance** | Yes | No | No | No | Solid ▷ |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','classText':'#CDD3D1','mainBkg':'#19362D','nodeBorder':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 classDiagram
     direction LR
     
@@ -386,12 +388,12 @@ classDiagram
 - [ ] Distinguish **state** (fields) from **behavior** (methods)
 - [ ] Explain how **class hierarchies** enable code reuse via inheritance
 - [ ] Know what **overriding** means and when to use it
-- [ ] Define **Abstraction**: modeling only what matters for a specific context
-- [ ] Define **Encapsulation**: hiding internals behind a public interface
+- [ ] Define **Abstraction:** modeling only what matters for a specific context
+- [ ] Define **Encapsulation:** hiding internals behind a public interface
 - [ ] Differentiate `private`, `protected`, and `public` access levels
 - [ ] Explain why **interfaces** declare contracts without implementation
-- [ ] Define **Inheritance**: extending a class to reuse and specialize behavior
-- [ ] Define **Polymorphism**: calling subclass behavior through a superclass/interface reference
+- [ ] Define **Inheritance:** extending a class to reuse and specialize behavior
+- [ ] Define **Polymorphism:** calling subclass behavior through a superclass/interface reference
 - [ ] Rank the six object relations from weakest to strongest
 - [ ] Distinguish **Dependency** (temporary, fragile) from **Association** (permanent link via field)
 - [ ] Distinguish **Aggregation** (component can exist independently) from **Composition** (component's lifecycle is tied to container)

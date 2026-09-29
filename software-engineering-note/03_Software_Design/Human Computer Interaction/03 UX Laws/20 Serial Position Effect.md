@@ -36,9 +36,9 @@ The beginning (primacy effect) and end (recency effect) of any list are more mem
 
 | Position | Strategy |
 |----------|----------|
-| **Left (first)** | Cheapest tier — anchors the price and makes others look reasonable |
-| **Center** | Your recommended plan — badge it "Most Popular" |
-| **Right (last)** | Enterprise/highest tier — recency makes it memorable for high-value users |
+| **Left (first)** | Cheapest tier, anchors the price and makes others look reasonable |
+| **Center** | Your recommended plan, badge it "Most Popular" |
+| **Right (last)** | Enterprise/highest tier, recency makes it memorable for high-value users |
 
 ### Lists & Content
 
@@ -56,7 +56,7 @@ The middle gets forgotten. Strategies to fix this:
 
 | Strategy | Example |
 |----------|---------|
-| **Chunk it** | Break long lists into sections — each section has its own primacy/recency |
+| **Chunk it** | Break long lists into sections; each section has its own primacy/recency |
 | **Highlight one** | "Most Popular" badge on the middle pricing tier |
 | **Shorten the list** | 3–5 items instead of 10 |
 
@@ -64,5 +64,5 @@ The middle gets forgotten. Strategies to fix this:
 
 ## Sources
 
-- *Laws of UX* — https://lawsofux.com/serial-position-effect/
+- *Laws of UX*: https://lawsofux.com/serial-position-effect/
 - Murdock, B.B. (1962). *The serial position effect of free recall.*

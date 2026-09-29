@@ -35,22 +35,22 @@ Give users **less space and fewer options** and they'll complete tasks faster wi
 
 | ❌ | ✅ |
 |----|-----|
-| Empty canvas — "Write your post..." (paralysis) | Template with prompts: "Title", "What did you learn?", "Key takeaways" |
-| No character limit — users ramble | Character counter with recommended range |
+| Empty canvas, "Write your post..." (paralysis) | Template with prompts: "Title", "What did you learn?", "Key takeaways" |
+| No character limit, users ramble | Character counter with recommended range |
 
 ### Time-Boxing
 
 | Pattern | Example |
 |---------|---------|
-| Limited-time offers | "Sale ends in 2 hours" — Parkinson's + scarcity |
-| Multi-step checkout | Progress indicator: 3 short steps vs 1 long form — same inputs, faster completion |
-| Meeting scheduling | 30-min default slot vs open-ended — shorter meetings |
+| Limited-time offers | "Sale ends in 2 hours", Parkinson's + scarcity |
+| Multi-step checkout | Progress indicator: 3 short steps vs 1 long form, same inputs, faster completion |
+| Meeting scheduling | 30-min default slot vs open-ended, shorter meetings |
 
 ---
 
 ## The Counter-Principle
 
-Some tasks need space — creative work, writing, design. Don't over-constrain when the goal is quality over speed.
+Some tasks need space, creative work, writing, design. Don't over-constrain when the goal is quality over speed.
 
 | Apply Parkinson's Law | Don't Apply |
 |----------------------|-------------|

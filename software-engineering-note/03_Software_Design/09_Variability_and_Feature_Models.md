@@ -5,7 +5,7 @@ source: "SWEBOK v4 Chapter 03"
 
 # Variability and Feature Models
 
-> *Source: SWEBOK v4 Chapter 03 — Software Design*
+> *Source: SWEBOK v4 Chapter 03, Software Design*
 
 ## Purpose
 
@@ -18,6 +18,7 @@ Modern software is rarely a single, monolithic product. Organizations build **fa
 A **Software Product Line (SPL)** is a set of software-intensive systems that share a common, managed set of features satisfying the specific needs of a particular market segment or mission, and that are developed from a common set of core assets in a prescribed way.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     DE[Domain Engineering] --> CA[Core Assets]
     CA --> AE1[Application Engineering: Product A]
@@ -30,8 +31,8 @@ flowchart TD
     CF --> CA
     VF --> CA
     
-    style CA fill:#2a5a8f,color:#fff
-    style DE fill:#1e3a5f,color:#fff
+    style CA fill:#1EB88E,color:#000000
+    style DE fill:#19362D,color:#CDD3D1
 ```
 
 ### SPL vs Traditional Development
@@ -49,6 +50,7 @@ flowchart TD
 ### The SPL Two-Life-Cycle Model
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TB
     subgraph DE["Domain Engineering"]
         DA[Domain Analysis] --> DD[Domain Design]
@@ -65,8 +67,8 @@ flowchart TB
     CA --> AD
     AA -->|Feeds back to| DA
     
-    style DE fill:#1e3a5f,color:#fff
-    style AE fill:#3a7abf,color:#fff
+    style DE fill:#19362D,color:#CDD3D1
+    style AE fill:#1FB8AB,color:#000000
 ```
 
 | Phase | Activity | Output |
@@ -89,6 +91,7 @@ A **feature** is a prominent or distinctive user-visible aspect, quality, or cha
 A **feature diagram** (also called a **feature tree** or **feature model**) is a hierarchical representation of all features in a product line and the relationships between them.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     S["📱 Smartphone OS"] --> CM["📞 Communication"]
     S --> MM["📷 Multimedia"]
@@ -113,10 +116,10 @@ flowchart TD
     ENC --> FDE["Full Disk<br/>⊕ Exclusive-OR"]
     ENC --> FBE["File-Based"]
     
-    style S fill:#1e3a5f,color:#fff
-    style CM fill:#2a5a8f,color:#fff
-    style MM fill:#2a5a8f,color:#fff
-    style SEC fill:#2a5a8f,color:#fff
+    style S fill:#19362D,color:#CDD3D1
+    style CM fill:#1EB88E,color:#000000
+    style MM fill:#1EB88E,color:#000000
+    style SEC fill:#1EB88E,color:#000000
 ```
 
 ### Feature Dependency Types
@@ -165,6 +168,7 @@ A **feature configuration** is a valid selection of features from the feature mo
 **Configuration process:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     FM[Feature Model] --> CS[Configuration Session]
     CS --> S1[Select mandatory features]
@@ -302,6 +306,7 @@ features:
 #### 3. Plugin Architecture
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     CP[Core Platform] --> PI[Plugin Interface]
     PI --> P1[Plugin: Bluetooth]
@@ -435,11 +440,12 @@ if (featureFlags.isEnabled("new-checkout-flow")) {
 | **Aspect weaving** | Cross-cutting concerns added modularly | Compile/Runtime |
 | **Microservices** | Independent services composed at runtime | Runtime |
 
-> See also: [[Design Pattern/index|Design Patterns]] for detailed pattern descriptions, and [[Clean Architecture/index|Clean Architecture]] for architectural principles.
+> See also: [[Design Pattern/Design Pattern Overview|Design Patterns]] for detailed pattern descriptions, and [[Clean Architecture/Foundations/Clean Architecture Overview|Clean Architecture]] for architectural principles.
 
 ### PLA Structure
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TB
     subgraph CORE["Core Assets (Shared)"]
         FW[Framework]
@@ -463,9 +469,9 @@ flowchart TB
     CORE --> VAR
     VAR --> PROD
     
-    style CORE fill:#1e3a5f,color:#fff
-    style VAR fill:#2a5a8f,color:#fff
-    style PROD fill:#3a7abf,color:#fff
+    style CORE fill:#19362D,color:#CDD3D1
+    style VAR fill:#1EB88E,color:#000000
+    style PROD fill:#1FB8AB,color:#000000
 ```
 
 ## Domain Engineering vs Application Engineering
@@ -497,6 +503,7 @@ flowchart TB
 ### Relationship Between Domain and Application Engineering
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     subgraph Domain["Domain Engineering"]
         DA[Domain Analysis] --> DD[Domain Design]
@@ -673,6 +680,7 @@ Testing a product line means testing not just individual products but the **vari
 ### Test Asset Reuse in SPLs
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph Shared["Shared Test Assets"]
         TC[Core Test Cases]
@@ -719,6 +727,7 @@ flowchart TD
 ### SPL Evolution Strategies
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     CM[Change Request] --> CA{Change Analysis}
     CA -->|Core change| CC[Update Core Assets]
@@ -796,8 +805,8 @@ Software Product Lines transform the economics of software development: instead 
 - [[05_Design_Strategies_and_Methods]]: Domain-driven design and decomposition strategies
 - [[07_Design_Rationale_and_Decisions]]: Rationale for variability mechanism choices
 - [[08_Model_Based_Design]]: Feature models as model-based artifacts
-- [[Design Pattern/index|Design Patterns]]: Patterns used for variability (Strategy, Template Method, Plugin)
-- [[Clean Architecture/index|Clean Architecture]]: Clean Architecture's dependency rule supports SPL separation
+- [[Design Pattern/Design Pattern Overview|Design Patterns]]: Patterns used for variability (Strategy, Template Method, Plugin)
+- [[Clean Architecture/Foundations/Clean Architecture Overview|Clean Architecture]]: Clean Architecture's dependency rule supports SPL separation
 
 ## References
 

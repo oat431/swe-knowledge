@@ -49,7 +49,7 @@ Originally from TCP specification (Jon Postel, 1981), but applies perfectly to U
 
 | ❌ | ✅ |
 |----|-----|
-| "Error 403: Invalid input" | "The email address looks incomplete — did you mean user@gmail.com?" |
+| "Error 403: Invalid input" | "The email address looks incomplete, did you mean user@gmail.com?" |
 
 ---
 
@@ -66,5 +66,5 @@ Originally from TCP specification (Jon Postel, 1981), but applies perfectly to U
 
 ## Sources
 
-- *Laws of UX* — https://lawsofux.com/postels-law/
-- Postel, J. (1981). *RFC 793 — Transmission Control Protocol.*
+- *Laws of UX*: https://lawsofux.com/postels-law/
+- Postel, J. (1981). *RFC 793: Transmission Control Protocol.*

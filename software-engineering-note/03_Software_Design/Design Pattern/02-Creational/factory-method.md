@@ -18,12 +18,12 @@ tags:
 
 ## Problem
 
-You build a logistics management application. Version 1 handles only **trucks** — the `Truck` class is woven through the entire codebase. Then sea shipping companies want in. Adding `Ship` means touching nearly every file because the code is **tightly coupled to concrete classes**.
+You build a logistics management application. Version 1 handles only **trucks:** the `Truck` class is woven through the entire codebase. Then sea shipping companies want in. Adding `Ship` means touching nearly every file because the code is **tightly coupled to concrete classes**.
 
 Worse, every time you add another transport type (air, rail), the same cascade of changes repeats. The codebase degrades into a mess of **conditional switches** that branch on the transport class:
 
 ```java
-// ❌ Naive approach — tight coupling + conditionals everywhere
+// ❌ Naive approach - tight coupling + conditionals everywhere
 if (transportType == "truck") {
     Truck t = new Truck();
     t.deliver();
@@ -39,10 +39,10 @@ The root cause: the client code knows exactly *which* concrete class it needs an
 
 ## Solution
 
-The Factory Method pattern replaces **direct constructor calls** (`new`) with calls to a special **factory method**. Objects are still created with `new`, but the call lives *inside* the factory method — not scattered through client code.
+The Factory Method pattern replaces **direct constructor calls** (`new`) with calls to a special **factory method**. Objects are still created with `new`, but the call lives *inside* the factory method, not scattered through client code.
 
 ```java
-// ✅ Factory Method — client calls createTransport() without knowing the concrete class
+// ✅ Factory Method - client calls createTransport() without knowing the concrete class
 Transport t = logistics.createTransport();
 t.deliver();
 ```
@@ -60,13 +60,14 @@ Subclasses can return different product types **only if** those products share a
 | `RoadLogistics` | `createTransport()` | `Truck` |
 | `SeaLogistics` | `createTransport()` | `Ship` |
 
-Both `Truck` and `Ship` implement `Transport` (with a `deliver()` method). The client code works exclusively against the `Transport` interface — it neither knows nor cares which concrete product it receives.
+Both `Truck` and `Ship` implement `Transport` (with a `deliver()` method). The client code works exclusively against the `Transport` interface; it neither knows nor cares which concrete product it receives.
 
 ---
 
 ## Structure
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','classText':'#CDD3D1','mainBkg':'#19362D','nodeBorder':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 classDiagram
     class Product {
         <<interface>>
@@ -96,12 +97,12 @@ classDiagram
     Creator ..> Product : creates
 ```
 
-1. **Product** — Interface common to all objects the creator and its subclasses can produce.
-2. **Concrete Products** — Different implementations of the Product interface.
-3. **Creator** — Declares the factory method (abstract or with a default). Its return type matches the Product interface. **Note:** product creation is *not* the Creator's primary responsibility; the Creator has core business logic that *uses* products. The factory method decouples that logic from concrete product classes.
-4. **Concrete Creators** — Override the factory method to return a specific Concrete Product.
+1. **Product:** Interface common to all objects the creator and its subclasses can produce.
+2. **Concrete Products:** Different implementations of the Product interface.
+3. **Creator:** Declares the factory method (abstract or with a default). Its return type matches the Product interface. **Note:** product creation is *not* the Creator's primary responsibility; the Creator has core business logic that *uses* products. The factory method decouples that logic from concrete product classes.
+4. **Concrete Creators:** Override the factory method to return a specific Concrete Product.
 
-The factory method doesn't have to create *new* instances every time — it can return **cached objects, pooled objects, or objects from another source**.
+The factory method doesn't have to create *new* instances every time; it can return **cached objects, pooled objects, or objects from another source**.
 
 ---
 
@@ -133,12 +134,12 @@ class HTMLButton implements Button {
 ### Creator & Concrete Creators
 
 ```java
-// ✅ Creator — business logic lives here, not in product creation
+// ✅ Creator - business logic lives here, not in product creation
 abstract class Dialog {
     // Factory method
     abstract Button createButton();
 
-    // Core business logic — calls factory method, uses the product
+    // Core business logic - calls factory method, uses the product
     void render() {
         Button okButton = createButton();
         okButton.onClick(closeDialog);
@@ -146,7 +147,7 @@ abstract class Dialog {
     }
 }
 
-// ✅ Concrete creators — override factory method to return specific product
+// ✅ Concrete creators - override factory method to return specific product
 class WindowsDialog extends Dialog {
     Button createButton() { return new WindowsButton(); }
 }
@@ -159,7 +160,7 @@ class WebDialog extends Dialog {
 ### Client Code
 
 ```java
-// ✅ Client — picks creator based on config, works through base interface
+// ✅ Client - picks creator based on config, works through base interface
 class Application {
     Dialog dialog;
 
@@ -190,7 +191,7 @@ class Application {
 ### ✅ Use Factory Method when:
 
 1. **You don't know the exact types and dependencies of objects your code should work with ahead of time.**
-   - The pattern separates *construction* from *usage*. Adding a new product type means creating one new creator subclass — the rest of the codebase is untouched.
+   - The pattern separates *construction* from *usage*. Adding a new product type means creating one new creator subclass, the rest of the codebase is untouched.
 
 2. **You want to provide users of your library or framework a way to extend its internal components.**
    - Example: an open-source UI framework provides square buttons. User extends `Button` → `RoundButton`, then overrides `UIFramework.createButton()` in a subclass to return `RoundButton`. The framework uses the subclass without any internal changes.
@@ -200,8 +201,8 @@ class Application {
 
 ### ❌ Avoid Factory Method when:
 
-- The object graph is simple and unlikely to change — direct `new` is simpler.
-- You only have one product type — the pattern adds unnecessary abstraction.
+- The object graph is simple and unlikely to change: direct `new` is simpler.
+- You only have one product type: the pattern adds unnecessary abstraction.
 
 ---
 
@@ -209,7 +210,7 @@ class Application {
 
 | Pros | Cons |
 |------|------|
-| ✅ **Avoids tight coupling** between creator and concrete products. | ❌ **Adds complexity** — requires many new subclasses to implement the pattern. Best when introduced into an *existing* hierarchy of creator classes. |
+| ✅ **Avoids tight coupling** between creator and concrete products. | ❌ **Adds complexity:** requires many new subclasses to implement the pattern. Best when introduced into an *existing* hierarchy of creator classes. |
 | ✅ **Single Responsibility Principle.** Product creation code is centralized in one place, making the codebase easier to maintain. | |
 | ✅ **Open/Closed Principle.** New product types can be introduced without breaking existing client code. | |
 
@@ -217,11 +218,11 @@ class Application {
 
 ## Relations with Other Patterns
 
-- **Abstract Factory, Prototype, Builder** — Many designs start with Factory Method (simpler, subclass-driven) and evolve toward these more flexible (but more complex) patterns as requirements grow.
+- **Abstract Factory, Prototype, Builder:** Many designs start with Factory Method (simpler, subclass-driven) and evolve toward these more flexible (but more complex) patterns as requirements grow.
 - **Abstract Factory** classes are often built from a *set* of Factory Methods. Prototype can also be used to compose methods on Abstract Factory classes.
-- **Iterator** — Use Factory Method with Iterator to let collection subclasses return different iterator types compatible with the collections.
-- **Prototype** — Not based on inheritance (no subclass explosion), but requires a complicated initialization step for cloned objects. Factory Method is inheritance-based but needs no initialization step.
-- **Template Method** — Factory Method is a **specialization** of Template Method. A Factory Method may also serve as a single **step** within a larger Template Method.
+- **Iterator:** Use Factory Method with Iterator to let collection subclasses return different iterator types compatible with the collections.
+- **Prototype:** Not based on inheritance (no subclass explosion), but requires a complicated initialization step for cloned objects. Factory Method is inheritance-based but needs no initialization step.
+- **Template Method:** Factory Method is a **specialization** of Template Method. A Factory Method may also serve as a single **step** within a larger Template Method.
 
 ---
 
@@ -231,7 +232,7 @@ class Application {
 - [ ] Creator declares abstract (or default) factory method returning the product interface
 - [ ] Concrete creators override factory method to return specific product types
 - [ ] Client code works only against the product interface and creator base class
-- [ ] Product construction is centralized — no `new` scattered across client code
+- [ ] Product construction is centralized: no `new` scattered across client code
 - [ ] Adding a new product type requires **only** a new Concrete Creator subclass
 
 ---

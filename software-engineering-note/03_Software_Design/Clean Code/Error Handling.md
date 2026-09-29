@@ -8,7 +8,7 @@ tags:
 # Error Handling
 
 > *"Error handling is important, but if it obscures logic, it's wrong."*
-> — Michael Feathers, *Clean Code* Chapter 7
+> *Michael Feathers, *Clean Code* Chapter 7*
 
 **Source:** Robert C. Martin, *Clean Code: A Handbook of Agile Software Craftsmanship*, Chapter 7, by Michael Feathers.
 
@@ -16,7 +16,7 @@ tags:
 
 ## Core Principle
 
-Clean code is readable **and** robust — these are not conflicting goals. Treat error handling as a **separate concern**, viewable independently of main logic. When error handling dominates and obscures what the code actually does, the code is wrong.
+Clean code is readable **and** robust: these are not conflicting goals. Treat error handling as a **separate concern**, viewable independently of main logic. When error handling dominates and obscures what the code actually does, the code is wrong.
 
 ---
 
@@ -99,7 +99,7 @@ The `catch` must leave the program in a **consistent state** no matter what happ
 
 ### **Use Unchecked Exceptions**
 
-Checked exceptions violate the [[Class Design & SOLID]]: a new checked exception at a low level forces signature changes on every method in the call chain up to the handler. This breaks encapsulation — all intermediate methods must know about a low-level detail they don't care about.
+Checked exceptions violate the [[Class Design & SOLID]]: a new checked exception at a low level forces signature changes on every method in the call chain up to the handler. This breaks encapsulation; all intermediate methods must know about a low-level detail they don't care about.
 
 - **Cost:** Cascading signature changes, forced rebuilds/redeploys, broken encapsulation.
 - **Reality:** C#, C++, Python, and Ruby produce robust software without checked exceptions.
@@ -109,7 +109,7 @@ Checked exceptions violate the [[Class Design & SOLID]]: a new checked exception
 
 ### **Provide Context with Exceptions**
 
-Every exception should carry enough information to determine the **source**, **location**, and **intent** of the failed operation. A stack trace alone is insufficient — it can't tell you what the code was *trying* to do.
+Every exception should carry enough information to determine the **source**, **location**, and **intent** of the failed operation. A stack trace alone is insufficient; it can't tell you what the code was *trying* to do.
 
 - Mention the **operation that failed** and the **type of failure**.
 - Pass enough information to log the error meaningfully in the `catch` block.
@@ -179,11 +179,11 @@ public class LocalPort {
 }
 ```
 
-**Wrapping third-party APIs is a best practice:** it minimizes coupling, simplifies mocking in tests, and frees you from vendor API design choices. Often a single exception class per area of code is sufficient — use different classes only when you need to catch one and let another pass through.
+**Wrapping third-party APIs is a best practice:** it minimizes coupling, simplifies mocking in tests, and frees you from vendor API design choices. Often a single exception class per area of code is sufficient; use different classes only when you need to catch one and let another pass through.
 
 ---
 
-### **Define the Normal Flow — The Special Case Pattern**
+### **Define the Normal Flow: The Special Case Pattern**
 
 When exceptional behavior can be handled with a sensible default rather than aborting, encapsulate the special case in an object. The client code stays clean and free of `try-catch` clutter.
 
@@ -253,7 +253,7 @@ For third-party APIs that return null, **wrap them** with a method that either t
 
 ### **Don't Pass Null**
 
-Passing `null` is worse than returning it — most languages have no graceful way to handle a `null` argument from a careless caller. Forbid passing null by default: treat a null argument as an indication of a bug.
+Passing `null` is worse than returning it; most languages have no graceful way to handle a `null` argument from a careless caller. Forbid passing null by default: treat a null argument as an indication of a bug.
 
 ```java
 public double xProjection(Point p1, Point p2) {
@@ -278,8 +278,8 @@ Assertions (`assert p1 != null`) document intent but don't solve the runtime pro
 - [ ] Exception classes defined by caller's needs, not by source or category
 - [ ] Third-party APIs wrapped to translate exceptions into a common type
 - [ ] Special Case objects used where defaults can replace exceptional flow
-- [ ] Methods never return `null` — throw or return a Special Case / empty collection
-- [ ] Methods never accept `null` — treat it as a programming error
+- [ ] Methods never return `null`: throw or return a Special Case / empty collection
+- [ ] Methods never accept `null`: treat it as a programming error
 - [ ] Error handling is a separate concern, independently viewable from business logic
 
 ---

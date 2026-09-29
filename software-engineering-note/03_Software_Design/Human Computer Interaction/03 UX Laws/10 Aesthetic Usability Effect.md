@@ -11,7 +11,7 @@ tags:
 
 > **Users perceive aesthetically pleasing designs as more usable.**
 
-People are more tolerant of minor usability issues when the interface looks good — and more critical when it looks ugly. A beautiful UI creates a positive emotional response that masks small friction points.
+People are more tolerant of minor usability issues when the interface looks good, and more critical when it looks ugly. A beautiful UI creates a positive emotional response that masks small friction points.
 
 ---
 
@@ -25,7 +25,7 @@ People are more tolerant of minor usability issues when the interface looks good
 
 ## The Research
 
-In a 1995 study by Masaaki Kurosu and Kaori Kashimura, users tested ATMs with identical functionality but different visual designs. Users consistently rated the **attractive** interface as easier to use — even though both worked exactly the same.
+In a 1995 study by Masaaki Kurosu and Kaori Kashimura, users tested ATMs with identical functionality but different visual designs. Users consistently rated the **attractive** interface as easier to use, even though both worked exactly the same.
 
 ---
 
@@ -33,10 +33,10 @@ In a 1995 study by Masaaki Kurosu and Kaori Kashimura, users tested ATMs with id
 
 | Implication | Action |
 |------------|--------|
-| First impressions matter | Users judge your app in 50ms — before they click anything |
+| First impressions matter | Users judge your app in 50ms, before they click anything |
 | Beauty masks friction | A polished UI makes users more patient with loading times, confusing flows |
 | Ugly = untrustworthy | Users assume ugly sites are less secure, less reliable |
-| Don't launch ugly | "We'll make it pretty later" is wrong — pretty IS functional |
+| Don't launch ugly | "We'll make it pretty later" is wrong, pretty IS functional |
 
 ---
 
@@ -44,7 +44,7 @@ In a 1995 study by Masaaki Kurosu and Kaori Kashimura, users tested ATMs with id
 
 | ❌ Misinterpretation | ✅ Correct Understanding |
 |---------------------|------------------------|
-| "Just make it pretty — usability doesn't matter" | Aesthetic-usability works for MINOR issues. Major usability problems still drive users away. |
+| "Just make it pretty, usability doesn't matter" | Aesthetic-usability works for MINOR issues. Major usability problems still drive users away. |
 | "Form over function" | Form + Function > Form alone. A beautiful site that's impossible to navigate still fails. |
 
 ---
@@ -65,5 +65,5 @@ In a 1995 study by Masaaki Kurosu and Kaori Kashimura, users tested ATMs with id
 
 ## Sources
 
-- *Laws of UX* — https://lawsofux.com/aesthetic-usability-effect/
+- *Laws of UX*: https://lawsofux.com/aesthetic-usability-effect/
 - Kurosu, M. & Kashimura, K. (1995). *Apparent Usability vs. Inherent Usability.*

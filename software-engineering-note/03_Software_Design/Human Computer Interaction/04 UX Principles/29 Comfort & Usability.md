@@ -21,7 +21,7 @@ Reduce mental effort:
 
 | Rule | Example |
 |------|---------|
-| **Recognition over recall** | Show options — don't make users remember them. Autocomplete > free text. |
+| **Recognition over recall** | Show options; don't make users remember them. Autocomplete > free text. |
 | **Chunk information** | Break forms into steps. Group settings into categories. |
 | **Clear language** | "Save changes" not "Persist modifications to data store" |
 | **Smart defaults** | Pre-fill country, select most common option, default to "today's date" |
@@ -35,7 +35,7 @@ Reduce physical effort:
 | Rule | Example |
 |------|---------|
 | **Minimize clicks/taps** | Auto-advance fields (entering 4-digit code auto-submits). One-click checkout. |
-| **Thumb-friendly mobile** | Primary actions in the bottom half of the screen — reachable with one hand |
+| **Thumb-friendly mobile** | Primary actions in the bottom half of the screen, reachable with one hand |
 | **Reduce scrolling** | Put key info above the fold. Sticky CTAs for long pages. |
 | **Dark mode** | Reduces eye strain at night |
 
@@ -58,7 +58,7 @@ Reduce anxiety and friction:
 
 Steve Krug's first law of usability:
 
-> If a user has to stop and think about how something works — even for a second — the design has failed.
+> If a user has to stop and think about how something works (even for a second) the design has failed.
 
 | Making Users Think | Not Making Them Think |
 |-------------------|----------------------|

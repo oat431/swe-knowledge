@@ -13,20 +13,20 @@ tags:
 
 ## Core Principle
 
-> **OO is the ability, through the use of polymorphism, to gain absolute control over every source code dependency in the system—enabling a plugin architecture where high-level policy modules are independent of low-level detail modules.**
+> **OO is the ability, through the use of polymorphism, to gain absolute control over every source code dependency in the system, enabling a plugin architecture where high-level policy modules are independent of low-level detail modules.**
 
-Uncle Bob systematically dismantles the traditional "encapsulation + inheritance + polymorphism" definition. Encapsulation predates OO (C had it better), inheritance could be faked manually (C struct ordering trick), but **polymorphism**—specifically *safe, convenient* polymorphism via interface inheritance—is OO's real architectural superpower. It enables dependency inversion, which in turn enables independent deployability and the plugin architecture that Clean Architecture is built on.
+Uncle Bob systematically dismantles the traditional "encapsulation + inheritance + polymorphism" definition. Encapsulation predates OO (C had it better), inheritance could be faked manually (C struct ordering trick), but **polymorphism:** specifically *safe, convenient* polymorphism via interface inheritance; is OO's real architectural superpower. It enables dependency inversion, which in turn enables independent deployability and the plugin architecture that Clean Architecture is built on.
 
 ---
 
 ## The Rules / Key Concepts
 
-### 1. Encapsulation — OO Weakened It
+### 1. Encapsulation: OO Weakened It
 
-OO languages did not invent encapsulation; they actually **broke** the perfect encapsulation C already had. In C, header files forward-declared opaque structs and function signatures—clients had zero knowledge of struct members or implementation details.
+OO languages did not invent encapsulation; they actually **broke** the perfect encapsulation C already had. In C, header files forward-declared opaque structs and function signatures, clients had zero knowledge of struct members or implementation details.
 
 ```c
-// ❌ C: Perfect encapsulation — clients see nothing
+// ❌ C: Perfect encapsulation - clients see nothing
 // point.h
 struct Point;
 struct Point* makePoint(double x, double y);
@@ -34,7 +34,7 @@ double distance(struct Point* p1, struct Point* p2);
 ```
 
 ```cpp
-// ❌ C++: Encapsulation broken — member variables exposed in header
+// ❌ C++: Encapsulation broken - member variables exposed in header
 // point.h
 class Point {
 public:
@@ -47,7 +47,7 @@ private:
 ```
 
 ```java
-// ❌ Java/C#: Even worse — no header/implementation split at all
+// ❌ Java/C#: Even worse - no header/implementation split at all
 // Declaration and definition are inseparable
 public class Point {
     private double x;  // fully visible in the same file
@@ -61,7 +61,7 @@ public class Point {
 
 ---
 
-### 2. Inheritance — OO Made It Convenient, Not New
+### 2. Inheritance: OO Made It Convenient, Not New
 
 C programmers could fake single inheritance long before OO languages existed by exploiting struct member ordering. If a "derived" struct's first fields match the "base" struct's layout, you can cast between them.
 
@@ -71,13 +71,13 @@ C programmers could fake single inheritance long before OO languages existed by 
 struct NamedPoint;
 struct NamedPoint* makeNamedPoint(double x, double y, char* name);
 
-// namedPoint.c — first two fields match Point's layout
+// namedPoint.c - first two fields match Point's layout
 struct NamedPoint {
     double x, y;     // same order as Point
     char* name;      // extension
 };
 
-// main.c — manual upcast required
+// main.c - manual upcast required
 distance(
     (struct Point*) origin,       // explicit cast
     (struct Point*) upperRight);  // explicit cast
@@ -99,12 +99,12 @@ class NamedPoint extends Point {
 
 ---
 
-### 3. Polymorphism — The Real Differentiator
+### 3. Polymorphism: The Real Differentiator
 
-Polymorphism existed before OO through **pointers to functions** (vtables in manual form). UNIX IO drivers used this pattern: a `FILE` struct holds function pointers, and `getchar()` / `putchar()` dispatch through them. But raw function pointers are dangerous—they rely on manual conventions that are easy to forget and produce devilishly hard bugs.
+Polymorphism existed before OO through **pointers to functions** (vtables in manual form). UNIX IO drivers used this pattern: a `FILE` struct holds function pointers, and `getchar()` / `putchar()` dispatch through them. But raw function pointers are dangerous; they rely on manual conventions that are easy to forget and produce devilishly hard bugs.
 
 ```c
-// ❌ C: Polymorphism via function pointers — powerful but dangerous
+// ❌ C: Polymorphism via function pointers - powerful but dangerous
 struct FILE {
     void (*open)(char* name, int mode);
     void (*close)();
@@ -145,12 +145,12 @@ class ConsoleDevice implements IODevice {
 
 ---
 
-### 4. Plugin Architecture — Polymorphism Enables Device Independence
+### 4. Plugin Architecture: Polymorphism Enables Device Independence
 
 With safe polymorphism, modules that define interfaces don't depend on the modules that implement them. The classic example: a `copy()` program that reads from STDIN and writes to STDOUT.
 
 ```java
-// ✅ The copy program depends only on the IO interface — never on specific devices
+// ✅ The copy program depends only on the IO interface - never on specific devices
 void copy(Reader in, Writer out) {
     int c;
     while ((c = in.read()) != -1)
@@ -160,11 +160,11 @@ void copy(Reader in, Writer out) {
 // No recompilation. No changes. The IO devices are PLUGINS.
 ```
 
-✅ **The takeaway:** The UNIX operating system pioneered this for IO devices in the late 1950s. OO makes plugin architecture available **anywhere, for anything**—not just IO. This is the foundation of Clean Architecture's boundary enforcement.
+✅ **The takeaway:** The UNIX operating system pioneered this for IO devices in the late 1950s. OO makes plugin architecture available **anywhere, for anything:** not just IO. This is the foundation of Clean Architecture's boundary enforcement.
 
 ---
 
-### 5. Dependency Inversion — OO's Architectural Superpower
+### 5. Dependency Inversion: OO's Architectural Superpower
 
 Before safe polymorphism, source code dependencies inexorably followed the flow of control. `main()` calls high-level functions → which call mid-level → which call low-level. Every caller had to `#include` or `import` the callee's module. **The architect had no options.**
 
@@ -208,7 +208,7 @@ class LowLevelDetail implements IWorker {
 
 ---
 
-### 6. Independent Deployability — The Endgame
+### 6. Independent Deployability: The Endgame
 
 When business rules own the interfaces and low-level details implement them, the dependency arrows point **inward** toward policy:
 
@@ -225,7 +225,7 @@ When business rules own the interfaces and low-level details implement them, the
 ```
 
 ```java
-// ✅ Business rules define the interface — never import UI or DB
+// ✅ Business rules define the interface - never import UI or DB
 interface CustomerRepository {
     Customer findById(String id);
     void save(Customer customer);
@@ -239,25 +239,25 @@ class PlaceOrderUseCase {
     }
 }
 
-// MySQL implementation is a plugin — can be swapped without touching business rules
+// MySQL implementation is a plugin - can be swapped without touching business rules
 class MySqlCustomerRepository implements CustomerRepository {
     // database-specific code lives here
 }
 ```
 
-✅ **The takeaway:** Business rules, UI, and database can be compiled into **separate deployment units** (JARs, DLLs, gems) with dependencies matching source code. Changing the database requires redeploying only the database plugin—not the business rules. This is **independent deployability**, which enables **independent developability** by separate teams.
+✅ **The takeaway:** Business rules, UI, and database can be compiled into **separate deployment units** (JARs, DLLs, gems) with dependencies matching source code. Changing the database requires redeploying only the database plugin, not the business rules. This is **independent deployability**, which enables **independent developability** by separate teams.
 
 ---
 
 ## Summary Checklist
 
-- [ ] OO did **not** invent encapsulation — C had better encapsulation before OO languages broke it
-- [ ] OO did **not** invent inheritance — C programmers faked it with struct member ordering tricks
-- [ ] OO **did** make polymorphism **safe and convenient** — the compiler enforces conventions that were previously manual and error-prone
+- [ ] OO did **not** invent encapsulation: C had better encapsulation before OO languages broke it
+- [ ] OO did **not** invent inheritance: C programmers faked it with struct member ordering tricks
+- [ ] OO **did** make polymorphism **safe and convenient:** the compiler enforces conventions that were previously manual and error-prone
 - [ ] Polymorphism is fundamentally pointers to functions (vtables); OO imposes discipline on indirect transfer of control
-- [ ] Safe polymorphism enables **plugin architecture** — modules that own interfaces don't depend on implementers
+- [ ] Safe polymorphism enables **plugin architecture:** modules that own interfaces don't depend on implementers
 - [ ] Dependency inversion means source code dependencies can point **opposite** to the flow of control
-- [ ] With dependency inversion, **business rules never mention the UI or database** — they become plugins
+- [ ] With dependency inversion, **business rules never mention the UI or database:** they become plugins
 - [ ] Independent deployability: only the changed component needs redeployment
 - [ ] Independent developability: separate teams can work on separate deployable components
 - [ ] To the architect, OO = the ability to gain **absolute control over every source code dependency**

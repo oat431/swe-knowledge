@@ -15,7 +15,7 @@ tags:
 
 > **Names should reveal intent.** A variable, function, or class name should answer: why it exists, what it does, and how it's used.
 
-Choosing good names takes time — but saves more than it costs. Change names when you find better ones. Everyone who reads your code (including future you) will be happier.
+Choosing good names takes time, but saves more than it costs. Change names when you find better ones. Everyone who reads your code (including future you) will be happier.
 
 ---
 
@@ -59,7 +59,7 @@ public List<Cell> getFlaggedCells() {
 
 ### 2. Avoid Disinformation
 
-Don't leave false clues. `accountList` should **actually be a `List`** — otherwise use `accountGroup` or `accounts`. Avoid `hp`, `aix`, `sco` (Unix platform names). Never use lowercase `l` or uppercase `O` as variable names — they look like `1` and `0`.
+Don't leave false clues. `accountList` should **actually be a `List`:** otherwise use `accountGroup` or `accounts`. Avoid `hp`, `aix`, `sco` (Unix platform names). Never use lowercase `l` or uppercase `O` as variable names; they look like `1` and `0`.
 
 Spell similar concepts similarly. `XYZControllerForEfficientHandlingOfStrings` vs `XYZControllerForEfficientStorageOfStrings` is a bug waiting to happen.
 
@@ -68,14 +68,14 @@ Spell similar concepts similarly. `XYZControllerForEfficientHandlingOfStrings` v
 Don't satisfy the compiler with nonsense differences:
 
 ```java
-// ❌ Number-series naming — zero intent
+// ❌ Number-series naming - zero intent
 public static void copyChars(char a1[], char a2[]) { ... }
 
 // ✅ Meaningful distinctions
 public static void copyChars(char source[], char destination[]) { ... }
 ```
 
-**Noise words are redundant:** `ProductInfo`, `ProductData`, `ProductObject` — what's the difference? `NameString` — would a name ever be a float? `moneyAmount` = `money`. `theMessage` = `message`.
+**Noise words are redundant:** `ProductInfo`, `ProductData`, `ProductObject` (what's the difference? `NameString`) would a name ever be a float? `moneyAmount` = `money`. `theMessage` = `message`.
 
 ```java
 // ❌ Which one do I call?
@@ -129,7 +129,7 @@ for (int j=0; j < NUMBER_OF_TASKS; j++) {
 
 ### 6. Avoid Encodings
 
-No Hungarian notation. No `m_` member prefixes. Modern IDEs highlight types and members — encoding is visual debt.
+No Hungarian notation. No `m_` member prefixes. Modern IDEs highlight types and members, encoding is visual debt.
 
 ```java
 // ❌ Hungarian + member prefix
@@ -158,7 +158,7 @@ Smart programmers sometimes show off mental juggling. **Professional programmers
 
 - **Noun or noun phrase:** `Customer`, `WikiPage`, `Account`, `AddressParser`
 - **Not a verb:** Don't name a class `Process`, `Manage`, `Handle`
-- **Avoid:** `Manager`, `Processor`, `Data`, `Info` — these are noise words
+- **Avoid:** `Manager`, `Processor`, `Data`, `Info`: these are noise words
 
 ### 9. Method Names
 
@@ -198,7 +198,7 @@ One lexicon, consistently applied:
 |---------|--------------|
 | Get data | `get` (not `fetch`, `retrieve`, `pull`) |
 | Remove | `delete` (not `remove`, `destroy`, `kill`) |
-| Add to collection | `add` or `append` or `insert` — pick one |
+| Add to collection | `add` or `append` or `insert`; pick one |
 
 Same for class roles: don't have `DeviceManager`, `ProtocolController`, and `DataDriver` in the same codebase unless they're genuinely different.
 
@@ -228,7 +228,7 @@ Bare variables without context are opaque:
 
 ```java
 // ❌ firstName, lastName, street, city, state, zipcode
-//    — are these part of something bigger?
+//    - are these part of something bigger?
 
 // ✅ Wrap in a class
 class Address {
@@ -271,7 +271,7 @@ PostalAddress      // If you need to distinguish from MAC, URI, etc.
 
 ## Related
 
-- [[Function Design]] — Small functions reduce naming scope, making good names easier
-- [[Comment Patterns]] — A comment is a failure to express yourself in code
-- [[Class Design & SOLID]] — SRP keeps classes small, making class names more precise
-- [[Code Smells Catalog]] — N1–N7 (naming-related heuristics)
+- [[Function Design]]: Small functions reduce naming scope, making good names easier
+- [[Comment Patterns]]: A comment is a failure to express yourself in code
+- [[Class Design & SOLID]]: SRP keeps classes small, making class names more precise
+- [[Code Smells Catalog]]: N1–N7 (naming-related heuristics)

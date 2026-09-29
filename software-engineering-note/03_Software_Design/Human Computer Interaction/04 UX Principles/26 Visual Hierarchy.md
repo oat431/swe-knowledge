@@ -11,7 +11,7 @@ tags:
 
 > **Guide the user's eye by making important elements look important.**
 
-Users don't read — they scan. Visual hierarchy controls what they see first, second, and last. Without it, everything competes for attention and nothing wins.
+Users don't read; they scan. Visual hierarchy controls what they see first, second, and last. Without it, everything competes for attention and nothing wins.
 
 ---
 
@@ -50,7 +50,7 @@ F-Pattern:              Z-Pattern:
 
 ## Practical Rules
 
-| ❌ Flat — Everything Equal | ✅ Hierarchical — Clear Priority |
+| ❌ Flat (Everything Equal | ✅ Hierarchical) Clear Priority |
 |---------------------------|--------------------------------|
 | All text same size, same weight | H1 (40px bold) > H2 (28px) > Body (16px regular) |
 | 4 equally-styled buttons | 1 primary (solid color), 2 secondary (outline), 1 tertiary (text link) |
@@ -67,4 +67,4 @@ Squint at your design. Can you still tell what's most important? If everything b
 ## Sources
 
 - *Refactoring UI* by Adam Wathan & Steve Schoger
-- Nielsen Norman Group — https://www.nngroup.com/articles/visual-hierarchy/
+- Nielsen Norman Group: https://www.nngroup.com/articles/visual-hierarchy/

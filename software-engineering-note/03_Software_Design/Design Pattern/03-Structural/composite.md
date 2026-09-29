@@ -19,9 +19,9 @@ Also known as: **Object Tree**.
 
 When the core model of your application can be represented as a tree, you face a fundamental challenge: how do you treat individual objects and groups of objects uniformly?
 
-Consider an ordering system with `Product` and `Box` objects. A `Box` can contain multiple `Product`s as well as smaller `Box`es, which in turn can hold more `Product`s or even smaller `Box`es — an upside-down tree. An order might consist of simple products, boxes stuffed with products, boxes inside boxes, and so forth.
+Consider an ordering system with `Product` and `Box` objects. A `Box` can contain multiple `Product`s as well as smaller `Box`es, which in turn can hold more `Product`s or even smaller `Box`es, an upside-down tree. An order might consist of simple products, boxes stuffed with products, boxes inside boxes, and so forth.
 
-The direct approach — unwrapping every box, iterating all products, and calculating the total — becomes awkward or impossible. You must know the concrete classes of every object, the nesting level of boxes, and handle branching logic at every depth. This coupling explodes as the tree grows.
+The direct approach (unwrapping every box, iterating all products, and calculating the total) becomes awkward or impossible. You must know the concrete classes of every object, the nesting level of boxes, and handle branching logic at every depth. This coupling explodes as the tree grows.
 
 The core tension: **individual objects and compositions of objects require different treatment in naive code**, even though conceptually they represent the same thing from the client's perspective.
 
@@ -29,18 +29,18 @@ The core tension: **individual objects and compositions of objects require diffe
 
 ## Solution
 
-The Composite pattern introduces a **common interface** — the *Component* — that both leaves (simple objects) and composites (containers) implement. This interface declares the operations that make sense for both.
+The Composite pattern introduces a **common interface:** the *Component*; that both leaves (simple objects) and composites (containers) implement. This interface declares the operations that make sense for both.
 
 - For a **leaf** (e.g., a `Product`), the method simply returns its own value.
 - For a **composite** (e.g., a `Box`), the method iterates over its children, calls the same method on each, and aggregates the result.
 
-A box can add packaging costs on top. If a child is itself a box, it recursively delegates to its own children. The entire tree is traversed through polymorphism — no explicit type-checking or unwrapping required.
+A box can add packaging costs on top. If a child is itself a box, it recursively delegates to its own children. The entire tree is traversed through polymorphism, no explicit type-checking or unwrapping required.
 
 The key insight: **the client doesn't need to know whether it's working with a simple object or a complex composition.** When a method is called, objects themselves pass the request down the tree.
 
 ### Real-World Analogy
 
-Military hierarchies: an army consists of divisions, divisions consist of brigades, brigades consist of platoons, platoons consist of squads, and squads consist of individual soldiers. Orders are given at the top and cascade down through every level — each level knows how to receive an order and delegate it to subordinates without caring about the concrete composition below.
+Military hierarchies: an army consists of divisions, divisions consist of brigades, brigades consist of platoons, platoons consist of squads, and squads consist of individual soldiers. Orders are given at the top and cascade down through every level; each level knows how to receive an order and delegate it to subordinates without caring about the concrete composition below.
 
 ---
 
@@ -48,6 +48,7 @@ Military hierarchies: an army consists of divisions, divisions consist of brigad
 
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','classText':'#CDD3D1','mainBkg':'#19362D','nodeBorder':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 classDiagram
     class Component {
         <<interface>>
@@ -71,19 +72,19 @@ classDiagram
     Composite o-- Component : children
 ```
 
-1. **Component** — Interface declaring operations common to both simple and complex elements of the tree. May optionally declare child-management methods (`add`, `remove`, `getChild`).
+1. **Component:** Interface declaring operations common to both simple and complex elements of the tree. May optionally declare child-management methods (`add`, `remove`, `getChild`).
 
-2. **Leaf** — Basic element with no sub-elements. Does most of the real work since it has no one to delegate to.
+2. **Leaf:** Basic element with no sub-elements. Does most of the real work since it has no one to delegate to.
 
-3. **Composite (Container)** — Element that has sub-elements (leaves or other composites). Doesn't know the concrete classes of its children; works with all sub-elements via the `Component` interface. Delegates work to children, processes intermediate results, and returns the final result to the client.
+3. **Composite (Container):** Element that has sub-elements (leaves or other composites). Doesn't know the concrete classes of its children; works with all sub-elements via the `Component` interface. Delegates work to children, processes intermediate results, and returns the final result to the client.
 
-4. **Client** — Works with all elements through the `Component` interface. Can treat simple and complex elements identically.
+4. **Client:** Works with all elements through the `Component` interface. Can treat simple and complex elements identically.
 
 ---
 
 ## Pseudocode
 
-Geometric shapes editor example — the `CompoundGraphic` class acts as a container that holds any number of sub-shapes, including other compound shapes.
+Geometric shapes editor example, the `CompoundGraphic` class acts as a container that holds any number of sub-shapes, including other compound shapes.
 
 ```text
 // The component interface declares common operations for both
@@ -178,7 +179,7 @@ class ImageEditor is
 | When | Why |
 |------|-----|
 | You need to implement a **tree-like object structure** | The pattern provides two basic element types sharing a common interface: simple leaves and complex containers. Containers can hold both leaves and other containers, enabling nested recursive trees. |
-| You want **client code to treat simple and complex elements uniformly** | All elements share the `Component` interface. The client doesn't worry about the concrete class of objects it works with — everything is accessed through the same contract. |
+| You want **client code to treat simple and complex elements uniformly** | All elements share the `Component` interface. The client doesn't worry about the concrete class of objects it works with, everything is accessed through the same contract. |
 
 ### How to Implement
 
@@ -193,11 +194,11 @@ class ImageEditor is
 ## Pros and Cons
 
 ✅ **Pros**
-- **Simplified tree operations** — Use polymorphism and recursion to traverse and process complex tree structures elegantly.
-- **Open/Closed Principle** — Introduce new element types without breaking existing code. Existing code works with the object tree through the component interface.
+- **Simplified tree operations:** Use polymorphism and recursion to traverse and process complex tree structures elegantly.
+- **Open/Closed Principle:** Introduce new element types without breaking existing code. Existing code works with the object tree through the component interface.
 
 ❌ **Cons**
-- **Overgeneralized interface** — Providing a common interface for classes whose functionality differs too much can make the component contract hard to comprehend. Leaf classes end up with meaningless stub methods for child-management operations.
+- **Overgeneralized interface:** Providing a common interface for classes whose functionality differs too much can make the component contract hard to comprehend. Leaf classes end up with meaningless stub methods for child-management operations.
 
 ---
 
@@ -210,7 +211,7 @@ class ImageEditor is
 | **[[iterator]]** | Use Iterators to traverse Composite trees. |
 | **[[visitor]]** | Use Visitor to execute an operation over an entire Composite tree without polluting component classes with operation logic. |
 | **[[flyweight]]** | Implement shared leaf nodes of the Composite tree as Flyweights to save RAM. |
-| **[[decorator]]** | Similar structure diagrams — both rely on recursive composition. A Decorator is like a Composite with a single child. Key difference: Decorator *adds* responsibilities to the wrapped object; Composite *sums up* children's results. They can cooperate: use Decorator to extend behavior of a specific object inside a Composite tree. |
+| **[[decorator]]** | Similar structure diagrams, both rely on recursive composition. A Decorator is like a Composite with a single child. Key difference: Decorator *adds* responsibilities to the wrapped object; Composite *sums up* children's results. They can cooperate: use Decorator to extend behavior of a specific object inside a Composite tree. |
 | **[[prototype]]** | Designs heavy on Composite and Decorator can benefit from Prototype: clone complex structures instead of rebuilding them from scratch. |
 
 ---
@@ -219,7 +220,7 @@ class ImageEditor is
 
 - [ ] Core model representable as a **tree**? (simple elements + containers)
 - [ ] **Component interface** declared with operations common to both leaves and composites?
-- [ ] **Leaf classes** created — they do the actual work, no children?
+- [ ] **Leaf classes** created: they do the actual work, no children?
 - [ ] **Composite container class** with child array (typed as Component interface)?
 - [ ] Container methods **delegate to children** and aggregate results?
 - [ ] Child-management methods (`add`/`remove`) defined in container?

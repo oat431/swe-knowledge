@@ -10,7 +10,7 @@ tags:
 
 # Human Computer Interaction
 
-How to design software that humans can actually use. HCI sits at the intersection of psychology, design, and engineering — it's the science behind why some interfaces feel natural and others make you want to throw your computer out the window.
+How to design software that humans can actually use. HCI sits at the intersection of psychology, design, and engineering; it's the science behind why some interfaces feel natural and others make you want to throw your computer out the window.
 
 ---
 
@@ -18,11 +18,11 @@ How to design software that humans can actually use. HCI sits at the intersectio
 
 | Section | Folder | Topics |
 |---------|--------|--------|
-| **Gestalt Laws** | [[01 Law of Proximity]] | 5 principles of visual perception — how the brain groups elements |
+| **Gestalt Laws** | [[01 Law of Proximity]] | 5 principles of visual perception, how the brain groups elements |
 | **UI Design** | [[06 Mobile First Design]] | Practical tips: typography, color, spacing, mobile-first, dark mode |
 | **UX Laws** | [[10 Aesthetic Usability Effect]] | 15 psychology-backed laws that govern user behavior |
 | **UX Principles** | [[25 User-Centered Design]] | High-level design philosophy: user-centered design, accessibility, consistency |
-| **UX/UI Process** | [[30 User Research Methods]] | Research, wireframes, prototypes, testing, A/B testing — the practical workflow |
+| **UX/UI Process** | [[30 User Research Methods]] | Research, wireframes, prototypes, testing, A/B testing, the practical workflow |
 | **Essential Documents** | [[UX UI Essential Documents|UX UI Essential Documents]] | Deliverables checklist by phase |
 
 ---
@@ -54,6 +54,6 @@ Gestalt tells you **why** the eye groups things. UI tips tell you **how** to exe
 
 ## Sources
 
-- *Laws of UX* — https://lawsofux.com/
+- *Laws of UX*: https://lawsofux.com/
 - *Refactoring UI* by Adam Wathan & Steve Schoger
-- Nielsen Norman Group — https://www.nngroup.com/
+- Nielsen Norman Group: https://www.nngroup.com/

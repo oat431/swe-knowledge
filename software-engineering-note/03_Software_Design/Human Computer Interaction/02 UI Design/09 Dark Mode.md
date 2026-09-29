@@ -17,16 +17,16 @@ Dark mode isn't just "white background becomes black." It's a complete rethinkin
 
 | Reason | Detail |
 |--------|--------|
-| **User demand** | Many users prefer it — especially developers and night-time users |
+| **User demand** | Many users prefer it, especially developers and night-time users |
 | **Battery saving** | On OLED screens, black pixels use zero power |
 | **Accessibility** | Users with light sensitivity or visual impairments rely on it |
-| **Expectation** | OS-level dark mode support is now standard — apps that don't support it feel outdated |
+| **Expectation** | OS-level dark mode support is now standard, apps that don't support it feel outdated |
 
 ---
 
 ## The Core Principle: Elevation
 
-In light mode, shadows create depth. In dark mode, **light creates depth** — higher surfaces are lighter.
+In light mode, shadows create depth. In dark mode, **light creates depth:** higher surfaces are lighter.
 
 ```
 Light Mode:                    Dark Mode:
@@ -47,10 +47,10 @@ Light Mode:                    Dark Mode:
 
 | ❌ Don't | ✅ Do |
 |----------|------|
-| Use pure black `#000000` as background | Use dark gray `#121212` or `#1a1a1a` — pure black causes eye strain |
-| Use pure white `#FFFFFF` for text | Use off-white `#E0E0E0` or `#F5F5F5` — pure white glares on dark backgrounds |
-| Keep saturated colors at full brightness | **Desaturate** colors by 20–30% — saturated colors vibrate on dark backgrounds |
-| Use the same shadows as light mode | Shadows don't work on dark — use **lighter elevation** instead |
+| Use pure black `#000000` as background | Use dark gray `#121212` or `#1a1a1a`, pure black causes eye strain |
+| Use pure white `#FFFFFF` for text | Use off-white `#E0E0E0` or `#F5F5F5`, pure white glares on dark backgrounds |
+| Keep saturated colors at full brightness | **Desaturate** colors by 20–30%, saturated colors vibrate on dark backgrounds |
+| Use the same shadows as light mode | Shadows don't work on dark; use **lighter elevation** instead |
 
 ### Desaturation Example
 
@@ -68,9 +68,9 @@ Dark mode needs **lower contrast** than light mode for comfort:
 
 | Element | Light Mode | Dark Mode |
 |---------|-----------|-----------|
-| Body text on bg | `#111` on `#FFF` (17:1) | `#E0E0E0` on `#121212` (12:1) — still passes AAA |
+| Body text on bg | `#111` on `#FFF` (17:1) | `#E0E0E0` on `#121212` (12:1), still passes AAA |
 | Secondary text | `#666` on `#FFF` (5.5:1) | `#A0A0A0` on `#121212` (6:1) |
-| Borders | `#E0E0E0` | `#333333` — subtle, not invisible |
+| Borders | `#E0E0E0` | `#333333`, subtle, not invisible |
 
 ---
 
@@ -89,11 +89,11 @@ Dark mode needs **lower contrast** than light mode for comfort:
 }
 ```
 
-> Always provide a manual toggle too — don't force users to change their OS setting.
+> Always provide a manual toggle too; don't force users to change their OS setting.
 
 ---
 
 ## Sources
 
-- Material Design — Dark Theme: https://m3.material.io/styles/color/dark-theme
-- Apple HIG — Dark Mode: https://developer.apple.com/design/human-interface-guidelines/dark-mode
+- Material Design: Dark Theme: https://m3.material.io/styles/color/dark-theme
+- Apple HIG: Dark Mode: https://developer.apple.com/design/human-interface-guidelines/dark-mode

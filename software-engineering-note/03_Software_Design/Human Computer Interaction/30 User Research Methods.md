@@ -2,13 +2,13 @@
 tags: [user-research, ux, interviews, personas, journey-maps, ux-ui-design]
 ---
 
-# 00 — User Research Methods
+# 00: User Research Methods
 
 > *Source: Nielsen Norman Group, IDEO Design Thinking, Lean UX principles*
 
 ## Purpose
 
-User research is the foundation of good design. It answers: **Who are our users? What do they need? How do they behave?** Without research, you're designing based on assumptions — and assumptions are often wrong.
+User research is the foundation of good design. It answers: **Who are our users? What do they need? How do they behave?** Without research, you're designing based on assumptions, and assumptions are often wrong.
 
 ## Research Methods
 
@@ -55,10 +55,10 @@ User research is the foundation of good design. It answers: **Who are our users?
 - **What:** Data from actual user behavior (clicks, paths, conversions)
 - **When:** Continuous, post-launch
 - **Key metrics:**
-  - **Bounce rate** — % leaving after one page
-  - **Conversion rate** — % completing desired action
-  - **Time on task** — How long users take
-  - **Error rate** — How often users make mistakes
+  - **Bounce rate:** % leaving after one page
+  - **Conversion rate:** % completing desired action
+  - **Time on task:** How long users take
+  - **Error rate:** How often users make mistakes
 - **Tools:** Google Analytics, Mixpanel, Hotjar, Amplitude
 
 #### A/B Testing
@@ -92,10 +92,10 @@ User research is the foundation of good design. It answers: **Who are our users?
 - **What:** Visual representation of what users think, feel, say, and do
 - **When:** Synthesizing interview data, building shared understanding
 - **Quadrants:**
-  - **Think** — What's on their mind?
-  - **Feel** — What emotions are they experiencing?
-  - **Say** — What do they tell others?
-  - **Do** — What actions do they take?
+  - **Think:** What's on their mind?
+  - **Feel:** What emotions are they experiencing?
+  - **Say:** What do they tell others?
+  - **Do:** What actions do they take?
 
 #### Journey Maps
 - **What:** Visual timeline of a user's experience with a product/service
@@ -150,6 +150,6 @@ User research is the foundation of good design. It answers: **Who are our users?
 
 ## Related
 
-- [[31 UX Design Process]] — Using research to inform wireframes and prototypes
-- [[33 Usability Testing and AB Testing]] — Validating designs with users
-- [[UX UI Essential Documents]] — Research deliverables checklist
+- [[31 UX Design Process]]: Using research to inform wireframes and prototypes
+- [[33 Usability Testing and AB Testing]]: Validating designs with users
+- [[UX UI Essential Documents]]: Research deliverables checklist

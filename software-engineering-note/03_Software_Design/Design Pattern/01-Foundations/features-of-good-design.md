@@ -19,7 +19,7 @@ tags:
 ## Code Reuse
 
 - **Cost and time are the two most valuable metrics** in software development. Less time in development means entering the market earlier; lower costs leave more budget for marketing and broader customer reach.
-- Code reuse is the most straightforward way to cut development costs — *in theory*. In practice, making existing code work in a new context often takes significant extra effort.
+- Code reuse is the most straightforward way to cut development costs: *in theory*. In practice, making existing code work in a new context often takes significant extra effort.
 - **What kills reusability:**
   - Tight coupling between components
   - Dependencies on concrete classes instead of interfaces
@@ -36,11 +36,11 @@ Erich Gamma, one of the Gang of Four, describes reuse in three layers of increas
 | **Patterns** (middle) | Description of how classes relate and interact | Reuse design ideas independently of concrete code | Moderate | Observer, Strategy, Factory |
 | **Frameworks** (highest) | Distills design decisions; identifies key abstractions and defines relationships | You hook in via subclassing | High (significant investment) | JUnit, Spring |
 
-> *"The framework lets you define your custom behavior, and it will call you when it's your turn to do something. Same with JUnit, right? It calls you when it wants to execute a test for you, but the rest happens in the framework."* — Erich Gamma
+> *"The framework lets you define your custom behavior, and it will call you when it's your turn to do something. Same with JUnit, right? It calls you when it wants to execute a test for you, but the rest happens in the framework."* *(Erich Gamma)*
 
-This is the **Hollywood Principle**: *"Don't call us, we'll call you."*
+This is the **Hollywood Principle:** *"Don't call us, we'll call you."*
 
-- **Why patterns win the middle layer:** Patterns offer reuse that is less risky than frameworks. Building a framework is a high-risk, high-investment endeavor. Patterns let you reuse design ideas and concepts independently of concrete code — you get the design wisdom without locking into a framework's constraints.
+- **Why patterns win the middle layer:** Patterns offer reuse that is less risky than frameworks. Building a framework is a high-risk, high-investment endeavor. Patterns let you reuse design ideas and concepts independently of concrete code; you get the design wisdom without locking into a framework's constraints.
 
 ---
 
@@ -52,7 +52,7 @@ Three forces drive change in every software project:
 
 ### 1. Understanding Grows Over Time
 - By the time you finish the first version, you understand the problem much better than when you started.
-- You've grown professionally — and your own earlier code now looks like crap.
+- You've grown professionally: and your own earlier code now looks like crap.
 - Many developers finish v1 ready to rewrite from scratch.
 
 ### 2. The World Changes Around You
@@ -63,11 +63,11 @@ Three forces drive change in every software project:
 ### 3. The Goalposts Move
 - Clients see the excellent first version and realize *even more is possible*.
 - They request features they never mentioned in original planning sessions.
-- These aren't frivolous — the first version proved the value, and now they want to expand it.
+- These aren't frivolous: the first version proved the value, and now they want to expand it.
 
 > Bright side: *if someone asks you to change something in your app, that means someone still cares about it.*
 
-- **Takeaway:** Seasoned developers design architecture with future changes in mind from the start — not to predict every change, but to make changes *cheap* when they arrive.
+- **Takeaway:** Seasoned developers design architecture with future changes in mind from the start, not to predict every change, but to make changes *cheap* when they arrive.
 
 ---
 
@@ -78,7 +78,7 @@ Three forces drive change in every software project:
 - [ ] Know the three levels of reuse: classes → patterns → frameworks
 - [ ] Recognize that patterns offer design reuse with less risk than frameworks
 - [ ] Internalize the Hollywood Principle: "Don't call us, we'll call you"
-- [ ] Accept that change is constant — understanding grows, the world shifts, and goalposts move
+- [ ] Accept that change is constant: understanding grows, the world shifts, and goalposts move
 - [ ] Design architecture to make future changes cheap, not to predict every change
 
 ---

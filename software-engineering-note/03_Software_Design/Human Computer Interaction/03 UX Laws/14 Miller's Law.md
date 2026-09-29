@@ -73,5 +73,5 @@ Modern research suggests the real limit may be closer to **4 ± 1** for complex 
 
 ## Sources
 
-- *Laws of UX* — https://lawsofux.com/millers-law/
+- *Laws of UX*: https://lawsofux.com/millers-law/
 - Miller, G.A. (1956). *The magical number seven, plus or minus two.*

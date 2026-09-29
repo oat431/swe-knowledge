@@ -7,23 +7,23 @@ tags:
 
 # Concurrency
 
-*Clean Code — Robert C. Martin (by Brett L. Schuchert), pp. 177–196*
+*Clean Code* by Robert C. Martin (chapter by Brett L. Schuchert), pp. 177–196
 
 > "Objects are abstractions of processing. Threads are abstractions of schedule."
-> — James O. Coplien
+> *James O. Coplien*
 
 ---
 
 ## Why Concurrency?
 
-Concurrency is a **decoupling strategy** — it decouples *what* gets done from *when* it gets done. In single-threaded code, what and when are tightly coupled; the stack backtrace reveals the entire state. Decoupling them improves **throughput** and **structure**: the application looks like many collaborating computers rather than one main loop.
+Concurrency is a **decoupling strategy:** it decouples *what* gets done from *when* it gets done. In single-threaded code, what and when are tightly coupled; the stack backtrace reveals the entire state. Decoupling them improves **throughput** and **structure:** the application looks like many collaborating computers rather than one main loop.
 
 Motivations:
 
-- **Structural benefit** — The servlet model decouples request handling into independent executions.
-- **Throughput** — Hit multiple web sites concurrently instead of sequentially waiting on I/O.
-- **Responsiveness** — Handle many users concurrently instead of queuing them serially.
-- **Parallel processing** — Partition large data sets across processors.
+- **Structural benefit:** The servlet model decouples request handling into independent executions.
+- **Throughput:** Hit multiple web sites concurrently instead of sequentially waiting on I/O.
+- **Responsiveness:** Handle many users concurrently instead of queuing them serially.
+- **Parallel processing:** Partition large data sets across processors.
 
 ### Myths and Misconceptions
 
@@ -55,7 +55,7 @@ public class X {
 }
 ```
 
-Two threads calling `getNextId()` have **12,870 possible execution paths** at the bytecode level (int; 2,704,156 for `long`). Most paths produce valid results — but some don't. That's the problem: it works *nearly* all the time, until it doesn't.
+Two threads calling `getNextId()` have **12,870 possible execution paths** at the bytecode level (int; 2,704,156 for `long`). Most paths produce valid results, but some don't. That's the problem: it works *nearly* all the time, until it doesn't.
 
 ---
 
@@ -86,12 +86,12 @@ Every critical section that touches shared data is a liability. The more places 
 Avoid sharing in the first place. Copy objects, treat them as read-only, or collect results per-thread and merge in a single thread. The cost of extra object creation is often offset by savings from avoiding intrinsic locks and synchronization overhead.
 
 ```java
-// BEFORE — shared mutable state with locking
+// BEFORE - shared mutable state with locking
 public synchronized void accumulate(int value) {
     sharedTotal += value;
 }
 
-// AFTER — per-thread accumulation, merge once
+// AFTER - per-thread accumulation, merge once
 // Thread-local copies eliminate synchronization entirely
 ```
 
@@ -132,11 +132,11 @@ Also study: `java.util.concurrent.atomic`, `java.util.concurrent.locks`.
 
 ### Key Terminology
 
-- **Bound Resource** — Fixed-size resource in a concurrent environment (e.g., DB connection pool, read/write buffers).
-- **Mutual Exclusion** — Only one thread accesses shared data/resource at a time.
-- **Starvation** — Thread(s) denied progress for an excessively long time or forever.
-- **Deadlock** — Two+ threads each holding a resource the other needs; neither can proceed.
-- **Livelock** — Threads in lockstep, each yielding to the other, making no progress.
+- **Bound Resource:** Fixed-size resource in a concurrent environment (e.g., DB connection pool, read/write buffers).
+- **Mutual Exclusion:** Only one thread accesses shared data/resource at a time.
+- **Starvation:** Thread(s) denied progress for an excessively long time or forever.
+- **Deadlock:** Two+ threads each holding a resource the other needs; neither can proceed.
+- **Livelock:** Threads in lockstep, each yielding to the other, making no progress.
 
 ### **Producer-Consumer**
 
@@ -158,9 +158,9 @@ Most real-world concurrency problems are variations of these three. **Study and 
 
 Multiple `synchronized` methods on the same shared class invite subtle bugs. If you must call more than one, use one of three strategies:
 
-1. **Client-Based Locking** — Client acquires the server's lock before the first method call and releases after the last.
-2. **Server-Based Locking** — Server provides a method that locks, calls all methods, unlocks. Client calls that single method.
-3. **Adapted Server** — Intermediary does the locking; used when the original server cannot be changed.
+1. **Client-Based Locking:** Client acquires the server's lock before the first method call and releases after the last.
+2. **Server-Based Locking:** Server provides a method that locks, calls all methods, unlocks. Client calls that single method.
+3. **Adapted Server:** Intermediary does the locking; used when the original server cannot be changed.
 
 > **Avoid more than one synchronized method on a shared object. When unavoidable, pick one locking strategy and stick to it.**
 
@@ -168,17 +168,17 @@ Multiple `synchronized` methods on the same shared class invite subtle bugs. If 
 
 ## Keep Synchronized Sections Small
 
-`Synchronized` blocks introduce lock contention — expensive in both delay and overhead. Making critical sections *larger* than necessary increases contention and degrades performance. Make them as small as possible while still guarding correctness.
+`Synchronized` blocks introduce lock contention, expensive in both delay and overhead. Making critical sections *larger* than necessary increases contention and degrades performance. Make them as small as possible while still guarding correctness.
 
 ```java
-// BAD — overbroad lock
+// BAD - overbroad lock
 public synchronized void process() {
     expensiveSetup();          // doesn't need locking
     sharedCounter++;           // only this needs locking
     expensiveTeardown();       // doesn't need locking
 }
 
-// GOOD — minimal lock scope
+// GOOD - minimal lock scope
 public void process() {
     expensiveSetup();
     synchronized(this) {
@@ -202,7 +202,7 @@ Graceful shutdown creates its own deadlock risks. Common failure: a parent threa
 
 ## Testing Threaded Code
 
-Testing cannot prove correctness, but good testing minimizes risk — and threaded code multiplies that risk. Core testing commandments:
+Testing cannot prove correctness, but good testing minimizes risk, and threaded code multiplies that risk. Core testing commandments:
 
 ### **Treat Spurious Failures as Candidate Threading Issues**
 
@@ -213,7 +213,7 @@ A bug that appears once in a million executions is *still a bug*. "One-offs" and
 Test POJOs outside threads before layering concurrency on top. The more of your system in thread-ignorant POJOs, the more you can test deterministically.
 
 ```java
-// POJO — testable without any threading
+// POJO - testable without any threading
 public class IdGenerator {
     private int lastId;
     public synchronized int nextId() { return ++lastId; }
@@ -228,7 +228,7 @@ Run under multiple configurations:
 
 ### **Make Threaded Code Tunable**
 
-Allow thread count to be easily adjusted — even at runtime. Consider self-tuning based on throughput and utilization metrics.
+Allow thread count to be easily adjusted, even at runtime. Consider self-tuning based on throughput and utilization metrics.
 
 ### **Run with More Threads Than Processors**
 
@@ -296,7 +296,7 @@ Swap `jiggle()` implementations: production no-op, testing random delay/yield. C
 - [ ] Threaded code is pluggable and tunable (thread counts, test doubles, iterations)
 - [ ] Tests run with more threads than processors, on all target platforms
 - [ ] Code instrumented to force interleaving failures (hand-coded or automated jiggling)
-- [ ] Spurious test failures never dismissed — treated as threading defects until proven otherwise
+- [ ] Spurious test failures never dismissed: treated as threading defects until proven otherwise
 
 ---
 

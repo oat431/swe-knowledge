@@ -21,7 +21,7 @@ You have an object that is expensive to create, resource-heavy, or lives on a re
 - **Log every request** without modifying the original class.
 - **Cache results** to avoid redundant expensive operations.
 
-The naive fix — pushing deferred-init or logging code directly into every client — causes duplication and violates SRP. You can't always modify the service class itself (e.g. closed 3rd-party library, `final` class).
+The naive fix (pushing deferred-init or logging code directly into every client) causes duplication and violates SRP. You can't always modify the service class itself (e.g. closed 3rd-party library, `final` class).
 
 ## Solution
 
@@ -46,6 +46,7 @@ The proxy *disguises itself* as the service. Neither the client nor the real ser
 
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','classText':'#CDD3D1','mainBkg':'#19362D','nodeBorder':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 classDiagram
     class ServiceInterface {
         <<interface>>
@@ -77,7 +78,7 @@ interface ThirdPartyYouTubeLib {
     method downloadVideo(id)
 }
 
-// Concrete service — calls YouTube API. Slow; no caching built in.
+// Concrete service - calls YouTube API. Slow; no caching built in.
 // Cannot be modified (3rd-party / final).
 class ThirdPartyYouTubeClass implements ThirdPartyYouTubeLib {
     method listVideos() {
@@ -119,7 +120,7 @@ class CachedYouTubeClass implements ThirdPartyYouTubeLib {
     }
 }
 
-// Client — unchanged. Works through the interface.
+// Client - unchanged. Works through the interface.
 class YouTubeManager {
     protected field service: ThirdPartyYouTubeLib
 
@@ -143,7 +144,7 @@ class YouTubeManager {
     }
 }
 
-// Wiring — proxy wraps the real service transparently.
+// Wiring - proxy wraps the real service transparently.
 class Application {
     method init() {
         aYouTubeService = new ThirdPartyYouTubeClass()
@@ -171,15 +172,15 @@ The `YouTubeManager` never knows it received a proxy. Repeated calls to the same
 
 ### ✅ Pros
 
-- **Transparent control** — Clients don't know they're talking to a proxy.
-- **Lifecycle management** — Proxy owns the service; clients need not care about creation/destruction.
-- **Works with unavailable services** — Proxy handles the case where the real service isn't ready or reachable.
-- **Open/Closed Principle** — Introduce new proxy variants without touching the service or any client.
+- **Transparent control:** Clients don't know they're talking to a proxy.
+- **Lifecycle management:** Proxy owns the service; clients need not care about creation/destruction.
+- **Works with unavailable services:** Proxy handles the case where the real service isn't ready or reachable.
+- **Open/Closed Principle:** Introduce new proxy variants without touching the service or any client.
 
 ### ❌ Cons
 
-- **More classes** — Each proxy variant adds a new class; codebase complexity grows.
-- **Added latency** — The proxy's extra work (network hop, access check) may delay the response.
+- **More classes:** Each proxy variant adds a new class; codebase complexity grows.
+- **Added latency:** The proxy's extra work (network hop, access check) may delay the response.
 
 ## Relations with Other Patterns
 

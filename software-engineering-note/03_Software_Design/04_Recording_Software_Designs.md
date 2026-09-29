@@ -2,13 +2,13 @@
 tags: [recording-design, mbd, uml, structural, behavioral, software-design, swebok]
 ---
 
-# Recording Software Designs — Models, Views, and Descriptions
+# Recording Software Designs: Models, Views, and Descriptions
 
-> *Source: SWEBOK v4 Chapter 03 — Software Design*
+> *Source: SWEBOK v4 Chapter 03, Software Design*
 
 ## Purpose
 
-Designs must be communicated. Recording a design means representing it in forms that stakeholders can understand, analyze, implement, and maintain. A design that exists only in someone's head is not a design — it's a wish.
+Designs must be communicated. Recording a design means representing it in forms that stakeholders can understand, analyze, implement, and maintain. A design that exists only in someone's head is not a design; it's a wish.
 
 ## Why Record Designs?
 
@@ -23,13 +23,13 @@ Designs must be communicated. Recording a design means representing it in forms 
 
 ## Model-Based Design (MBD)
 
-**Definition:** Use models as the primary design artifacts — not just documentation but executable, analyzable specifications.
+**Definition:** Use models as the primary design artifacts, not just documentation but executable, analyzable specifications.
 
 **Key characteristics:**
-- **Models are the source of truth** — code may be generated from them
-- **Simulation and analysis** — Test the design before implementing
-- **Continuous integration** — Models evolve with the system, not as separate artifacts
-- **Tool-enabled** — MATLAB/Simulink, UML tools, domain-specific modeling tools
+- **Models are the source of truth:** code may be generated from them
+- **Simulation and analysis:** Test the design before implementing
+- **Continuous integration:** Models evolve with the system, not as separate artifacts
+- **Tool-enabled:** MATLAB/Simulink, UML tools, domain-specific modeling tools
 
 **Applicability:**
 - Safety-critical systems (DO-178C for avionics, ISO 26262 for automotive)
@@ -38,7 +38,7 @@ Designs must be communicated. Recording a design means representing it in forms 
 
 ## Structural Descriptions
 
-**Purpose:** Show what the system is made of — components, their relationships, and their static properties.
+**Purpose:** Show what the system is made of, components, their relationships, and their static properties.
 
 | Notation | What It Shows | When to Use |
 |---|---|---|
@@ -66,7 +66,7 @@ Deployment → Deployment Diagram
 
 ## Behavioral Descriptions
 
-**Purpose:** Show what the system does — how it behaves over time, how components interact, and how state changes.
+**Purpose:** Show what the system does: how it behaves over time, how components interact, and how state changes.
 
 | Notation | What It Shows | When to Use |
 |---|---|---|
@@ -95,11 +95,11 @@ Deployment → Deployment Diagram
 > **"Record what you need, not everything you can."**
 
 **Minimum Viable Design Documentation:**
-1. **Architecture overview** — One-page diagram of major components
-2. **Component interfaces** — API contracts, data formats
-3. **Key design decisions** — What was chosen and why (ADR format)
-4. **Critical algorithms** — Pseudocode for non-obvious logic
-5. **Data models** — ERD or class diagram for persistent data
+1. **Architecture overview:** One-page diagram of major components
+2. **Component interfaces:** API contracts, data formats
+3. **Key design decisions:** What was chosen and why (ADR format)
+4. **Critical algorithms:** Pseudocode for non-obvious logic
+5. **Data models:** ERD or class diagram for persistent data
 
 **The ADR (Architecture Decision Record) Format:**
 ```
@@ -112,14 +112,14 @@ Consequences: Added operational complexity; gained scalability and loose couplin
 
 ## Essential Concepts
 
-- **Models reduce ambiguity** — a picture is often worth 1024 words.
-- **Don't over-document** — record what's needed, discard what's obvious.
-- **Use multiple views** — no single diagram captures everything.
-- **ADRs preserve rationale** — why, not just what.
-- **MBD is for high-assurance systems** — not every project needs executable models.
+- **Models reduce ambiguity:** a picture is often worth 1024 words.
+- **Don't over-document:** record what's needed, discard what's obvious.
+- **Use multiple views:** no single diagram captures everything.
+- **ADRs preserve rationale:** why, not just what.
+- **MBD is for high-assurance systems:** not every project needs executable models.
 
 ## Related
 
-- [[Software Design Note Overview]] — All design topics
-- [[../02_Software_Architecture/07_Design_and_Documentation]] — Views and beyond (SAiP)
-- [[Design Pattern/Design Pattern Overview|Design Patterns]] — Patterns as reusable design vocabulary
+- [[Software Design Note Overview]]: All design topics
+- [[../02_Software_Architecture/07_Design_and_Documentation]]: Views and beyond (SAiP)
+- [[Design Pattern/Design Pattern Overview|Design Patterns]]: Patterns as reusable design vocabulary

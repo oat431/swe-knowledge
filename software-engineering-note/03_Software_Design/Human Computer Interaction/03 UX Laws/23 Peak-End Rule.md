@@ -9,7 +9,7 @@ tags:
 
 # 23 Peak-End Rule
 
-> **People judge an experience based on how they felt at its peak and at its end — not on the average or sum of every moment.**
+> **People judge an experience based on how they felt at its peak and at its end, not on the average or sum of every moment.**
 
 A mostly-good experience with a frustrating ending is remembered as bad. A mediocre experience with a delightful ending is remembered as good. The peak and the end write the memory.
 
@@ -27,9 +27,9 @@ A mostly-good experience with a frustrating ending is remembered as bad. A medio
 
 | Phase | Design Focus |
 |-------|-------------|
-| **Peak moment** | Create a deliberate high point — a moment of delight, surprise, or relief |
-| **End moment** | Ensure the experience ends positively — confirmation, celebration, clear next step |
-| **Pain points** | Reduce negative peaks — errors, long waits, confusion |
+| **Peak moment** | Create a deliberate high point, a moment of delight, surprise, or relief |
+| **End moment** | Ensure the experience ends positively, confirmation, celebration, clear next step |
+| **Pain points** | Reduce negative peaks, errors, long waits, confusion |
 
 ---
 
@@ -45,13 +45,13 @@ A mostly-good experience with a frustrating ending is remembered as bad. A medio
 
 | 😊 Peak | 😊 End |
 |--------|-------|
-| First "aha" moment — user achieves something real | "You're all set! Here's what to do next →" |
+| First "aha" moment, user achieves something real | "You're all set! Here's what to do next →" |
 
 ### Error Recovery
 
 | 😊 Peak (Relief) | 😊 End |
 |-----------------|-------|
-| "We found your account — reset link sent!" | User lands back on login, logs in successfully |
+| "We found your account; reset link sent!" | User lands back on login, logs in successfully |
 
 ---
 
@@ -69,5 +69,5 @@ A user's last interaction determines whether they come back:
 
 ## Sources
 
-- *Laws of UX* — https://lawsofux.com/peak-end-rule/
+- *Laws of UX*: https://lawsofux.com/peak-end-rule/
 - Kahneman, D. (1999). *Well-Being: The Foundations of Hedonic Psychology.*

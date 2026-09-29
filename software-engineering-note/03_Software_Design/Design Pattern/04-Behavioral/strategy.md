@@ -30,30 +30,31 @@ class Navigator is
 
 **The core weaknesses:**
 
-- **Any change to one algorithm** — a bug fix, a tweak to street scoring — risks breaking already-working algorithms in the same class.
+- **Any change to one algorithm:** a bug fix, a tweak to street scoring, risks breaking already-working algorithms in the same class.
 - **Merge conflicts multiply.** Multiple developers implementing different routing features all touch the same massive class simultaneously.
 - **The class becomes unmaintainable.** At a certain size, no one fully understands it anymore.
 
-The code doesn't just grow — it becomes a **brittle monolith** where fear of change stifles development.
+The code doesn't just grow; it becomes a **brittle monolith** where fear of change stifles development.
 
 ## Solution
 
 The Strategy pattern says: **extract each algorithm into its own class, called a strategy.**
 
-1. Create a **strategy interface** that declares a single method — e.g., `buildRoute(origin, destination)` — common to all routing algorithms.
+1. Create a **strategy interface** that declares a single method (e.g., `buildRoute(origin, destination)`) common to all routing algorithms.
 2. Implement each algorithm as a **concrete strategy class** (`RoadStrategy`, `WalkingStrategy`, `PublicTransportStrategy`).
 3. The original class, now called the **context**, stores a **reference to one strategy** and delegates all algorithm work to it.
 4. The **client** passes the desired strategy to the context. The context doesn't know *which* strategy it holds or *how* it works; it only knows the interface.
 
-> **Real-world analogy:** Getting to the airport — you can catch a bus, order a cab, or ride a bicycle. Each is a transportation *strategy*. You pick one based on budget, time, or preference. The destination doesn't change; the *how* does.
+> **Real-world analogy:** Getting to the airport; you can catch a bus, order a cab, or ride a bicycle. Each is a transportation *strategy*. You pick one based on budget, time, or preference. The destination doesn't change; the *how* does.
 
 In the navigation app, the main `Navigator` class no longer contains any routing logic. It simply calls `strategy.buildRoute(origin, destination)` and renders the returned checkpoints on the map. Swapping strategies becomes a one-liner: `navigator.setStrategy(new WalkingStrategy())`.
 
-The context becomes **independent of concrete strategies**. Add a new algorithm? Write a new class implementing the interface — no changes to the context or other strategies. The **Open/Closed Principle** holds.
+The context becomes **independent of concrete strategies**. Add a new algorithm? Write a new class implementing the interface; no changes to the context or other strategies. The **Open/Closed Principle** holds.
 
 ## Structure
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','classText':'#CDD3D1','mainBkg':'#19362D','nodeBorder':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 classDiagram
     class Context {
         -strategy: Strategy
@@ -78,10 +79,10 @@ classDiagram
     Client --> Context : configures
 ```
 
-1. **Context** — Maintains a reference to a concrete strategy. Communicates with it *only* via the strategy interface. Exposes a setter to replace the strategy at runtime.
-2. **Strategy interface** — Declares a method (or methods) common to all algorithm variants. The context uses this method to trigger the algorithm.
-3. **Concrete Strategies** — Each implements a distinct variant of the algorithm. They share the same interface, making them interchangeable.
-4. **Client** — Creates a specific strategy object and passes it to the context. Must be aware of the differences between strategies to select the right one.
+1. **Context:** Maintains a reference to a concrete strategy. Communicates with it *only* via the strategy interface. Exposes a setter to replace the strategy at runtime.
+2. **Strategy interface:** Declares a method (or methods) common to all algorithm variants. The context uses this method to trigger the algorithm.
+3. **Concrete Strategies:** Each implements a distinct variant of the algorithm. They share the same interface, making them interchangeable.
+4. **Client:** Creates a specific strategy object and passes it to the context. Must be aware of the differences between strategies to select the right one.
 
 ## Pseudocode
 
@@ -181,13 +182,13 @@ class ExampleApplication is
 
 ## Relations with Other Patterns
 
-- **Bridge**, **State**, **Strategy** (and to some degree **Adapter**) share very similar structures — all are based on **composition** (delegating work to other objects). But they solve *different* problems. A pattern isn't just a code structure recipe; it communicates the problem being solved.
+- **Bridge**, **State**, **Strategy** (and to some degree **Adapter**) share very similar structures: all are based on **composition** (delegating work to other objects). But they solve *different* problems. A pattern isn't just a code structure recipe; it communicates the problem being solved.
 - **Command and Strategy** may look similar because both parameterize an object with some action. However:
   - **Command** converts *any* operation into an object. The operation's parameters become fields. This enables deferred execution, queuing, command history, and remote dispatch.
   - **Strategy** describes *different ways of doing the same thing*, letting you swap algorithms within a single context class.
 - **Decorator** changes the **skin** of an object; **Strategy** changes the **guts**.
-- **Template Method** is based on **inheritance**: it alters parts of an algorithm by extending those parts in subclasses. It works at the **class level**, so it's static. **Strategy** is based on **composition**: you alter parts of behavior by supplying different strategy objects. It works at the **object level**, letting you switch behaviors at **runtime**.
-- **State** can be considered an **extension of Strategy**. Both change context behavior by delegating to helper objects via composition. **Strategy** makes helper objects completely **independent and unaware** of each other. **State** does *not* restrict dependencies between concrete states — it lets them alter the context's state at will.
+- **Template Method** is based on **inheritance:** it alters parts of an algorithm by extending those parts in subclasses. It works at the **class level**, so it's static. **Strategy** is based on **composition:** you alter parts of behavior by supplying different strategy objects. It works at the **object level**, letting you switch behaviors at **runtime**.
+- **State** can be considered an **extension of Strategy**. Both change context behavior by delegating to helper objects via composition. **Strategy** makes helper objects completely **independent and unaware** of each other. **State** does *not* restrict dependencies between concrete states; it lets them alter the context's state at will.
 
 ## Summary Checklist
 
@@ -204,9 +205,9 @@ class ExampleApplication is
 
 ## Related
 
-- [[state]] — Shares the composition + delegation structure. Strategy keeps strategies independent; State allows concrete states to know and transition between each other.
-- [[bridge]] — Similar delegation structure, but Bridge separates orthogonal dimensions (abstraction vs. implementation); Strategy swaps interchangeable behaviors.
-- [[command]] — Both parameterize objects with actions. Command wraps operations for deferred execution and history; Strategy swaps algorithmic behavior at runtime.
-- [[template-method]] — Inheritance-based alternative: Template Method defines a skeleton at class level (static); Strategy uses composition at object level (runtime-swappable).
-- [[decorator]] — Strategy changes the "guts" (core behavior); Decorator changes the "skin" (adds wrapping layers without altering the core interface).
-- **solid-principles** — Strategy directly embodies the Open/Closed Principle: new algorithms are added by creating classes, not by modifying the context.
+- [[state]]: Shares the composition + delegation structure. Strategy keeps strategies independent; State allows concrete states to know and transition between each other.
+- [[bridge]]: Similar delegation structure, but Bridge separates orthogonal dimensions (abstraction vs. implementation); Strategy swaps interchangeable behaviors.
+- [[command]]: Both parameterize objects with actions. Command wraps operations for deferred execution and history; Strategy swaps algorithmic behavior at runtime.
+- [[template-method]]: Inheritance-based alternative: Template Method defines a skeleton at class level (static); Strategy uses composition at object level (runtime-swappable).
+- [[decorator]]: Strategy changes the "guts" (core behavior); decorator changes the "skin" (adds wrapping layers without altering the core interface).
+- **solid-principles:** Strategy directly embodies the Open/Closed Principle: new algorithms are added by creating classes, not by modifying the context.

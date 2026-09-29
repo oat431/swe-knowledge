@@ -27,7 +27,7 @@ The next leap separated linking from loading: a dedicated **linker** produced a 
 
 ## The Three Principles of Component Cohesion
 
-### 1. REP &mdash; The Reuse/Release Equivalence Principle
+### 1. REP &mdash; the Reuse/Release Equivalence Principle
 
 > *The granule of reuse is the granule of release.*
 
@@ -35,7 +35,7 @@ Classes grouped into a component must be **releasable together** under a single 
 
 ---
 
-### 2. CCP &mdash; The Common Closure Principle
+### 2. CCP &mdash; the Common Closure Principle
 
 > *Gather into components those classes that change for the same reasons and at the same times. Separate into different components those classes that change at different times and for different reasons.*
 
@@ -45,13 +45,13 @@ This is the **Single Responsibility Principle restated for components**. If a re
 
 ---
 
-### 3. CRP &mdash; The Common Reuse Principle
+### 3. CRP &mdash; the Common Reuse Principle
 
 > *Don&rsquo;t force users of a component to depend on things they don&rsquo;t need.*
 
 Classes that are reused together belong together (e.g., a container and its iterators). But the stronger directive is about what *not* to put together: classes that are **not** tightly coupled should be separated. If component A uses only one class from component B, then every change to B&mdash;even to unrelated classes&mdash;forces revalidation and redeployment of A. CRP says: **make component dependencies total**. When you depend on a component, you should depend on *every class* in it. Otherwise you ship and revalidate more than necessary.
 
-> This is the **Interface Segregation Principle (ISP) applied to components**: just as ISP says don&rsquo;t depend on classes with unused methods, CRP says don&rsquo;t depend on components with unused classes. CRP is the **exclusive** principle&mdash;it drives components to be *smaller*.
+> This is the **Interface Segregation Principle (ISP) applied to components:** just as ISP says don&rsquo;t depend on classes with unused methods, CRP says don&rsquo;t depend on components with unused classes. CRP is the **exclusive** principle&mdash;it drives components to be *smaller*.
 
 > **Sound bite:** Don&rsquo;t depend on things you don&rsquo;t need.
 

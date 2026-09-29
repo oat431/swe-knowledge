@@ -7,7 +7,7 @@ tags:
 
 # Case Study - Args Parser
 
-**Source:** *Clean Code* by Robert C. Martin — Chapter 14, "Successive Refinement" (pp. 193–250)
+**Source:** *Clean Code* by Robert C. Martin, Chapter 14, "Successive Refinement" (pp. 193–250)
 
 > *"To write clean code, you must first write dirty code and then clean it."*
 
@@ -15,9 +15,9 @@ tags:
 
 ## Overview
 
-This chapter is a **step-by-step refactoring case study** of a command-line argument parser. Uncle Bob doesn't just show the final clean version—he shows the **entire journey**: the messy first draft, how it gradually rotted as features were added, the moment he decided to stop and refactor, and every tiny step that got him from the festering pile to the clean final product.
+This chapter is a **step-by-step refactoring case study** of a command-line argument parser. Uncle Bob doesn't just show the final clean version; he shows the **entire journey:** the messy first draft, how it gradually rotted as features were added, the moment he decided to stop and refactor, and every tiny step that got him from the festering pile to the clean final product.
 
-The key lesson: **clean code doesn't happen in one pass.** It happens through *successive refinement*—write a rough draft, then clean it up through many small, safe steps (each one keeping all tests passing).
+The key lesson: **clean code doesn't happen in one pass.** It happens through *successive refinement*, write a rough draft, then clean it up through many small, safe steps (each one keeping all tests passing).
 
 ---
 
@@ -175,7 +175,7 @@ public class IntegerArgumentMarshaler implements ArgumentMarshaler {
 
 ## The Rough Draft: How the Mess Developed
 
-### Stage 0: Boolean Only (Listing 14-9) — Clean but Fragile
+### Stage 0: Boolean Only (Listing 14-9): Clean but Fragile
 
 When only booleans existed, the code was simple:
 
@@ -197,9 +197,9 @@ public class Args {
 }
 ```
 
-This was compact and readable. But it contained the **seeds of the mess**: one `HashMap` per argument type, type-specific `set` methods, and type-specific `get` methods all in one class.
+This was compact and readable. But it contained the **seeds of the mess:** one `HashMap` per argument type, type-specific `set` methods, and type-specific `get` methods all in one class.
 
-### Stage 1: Boolean + String (Listing 14-10) — Growing Pains
+### Stage 1: Boolean + String (Listing 14-10): Growing Pains
 
 Adding string arguments required:
 - A second `HashMap<Character, String> stringArgs`
@@ -209,13 +209,13 @@ Adding string arguments required:
 
 The class doubled in size. The `setArgument` method now had an `if/else if` chain. Instance variables proliferated.
 
-### Stage 2: Boolean + String + Integer (Listing 14-8) — The Festering Pile
+### Stage 2: Boolean + String + Integer (Listing 14-8): The Festering Pile
 
-At this point the code became the "festering pile"—functionally correct but structurally rotten:
+At this point the code became the "festering pile", functionally correct but structurally rotten:
 
 ```java
 public class Args {
-  // Instance variable explosion — 13 fields!
+  // Instance variable explosion - 13 fields!
   private String schema;
   private String[] args;
   private boolean valid = true;
@@ -256,13 +256,13 @@ Each new type: 3+ new methods + 1 new HashMap + 1 new error code + additions to 
 
 ### The Central Insight
 
-> *"Each argument type required new code in three major places: schema parsing, command-line parsing, and value retrieval. Many different types, all with similar methods—that sounds like a class to me."*
+> *"Each argument type required new code in three major places: schema parsing, command-line parsing, and value retrieval. Many different types, all with similar methods; that sounds like a class to me."*
 
 This is the moment the **`ArgumentMarshaler`** concept is born. The refactoring target: **replace type-specific HashMaps + conditional chains with polymorphic dispatch**.
 
 ### Phase 1: Introduce the ArgumentMarshaler Skeleton (Zero-Risk)
 
-The very first change—adding empty inner classes—cannot break anything:
+The very first change (adding empty inner classes) cannot break anything:
 
 ```java
 private class ArgumentMarshaler {
@@ -289,7 +289,7 @@ private Map<Character, Boolean> booleanArgs = new HashMap<>();
 private Map<Character, ArgumentMarshaler> booleanArgs = new HashMap<>();
 ```
 
-Fix the three touch points—parse, set, get:
+Fix the three touch points, parse, set, get:
 
 ```java
 // Parse
@@ -300,7 +300,7 @@ private void parseBooleanSchemaElement(char elementId) {
 private void setBooleanArg(char argChar, boolean value) {
   booleanArgs.get(argChar).setBoolean(value);
 }
-// Get (bug introduced — NullPointerException when arg not found!)
+// Get (bug introduced - NullPointerException when arg not found!)
 public boolean getBoolean(char arg) {
   return falseIfNull(booleanArgs.get(arg).getBoolean());
 }
@@ -396,7 +396,7 @@ private boolean isBooleanArg(char argChar) {
 
 Once all references migrate to `marshalers`, **delete the three type-specific maps**.
 
-**Heuristic:** Use parallel structures during migration—add the new, keep the old, switch references one by one, then remove the old when nothing uses it.
+**Heuristic:** Use parallel structures during migration; add the new, keep the old, switch references one by one, then remove the old when nothing uses it.
 
 ### Phase 6: Eliminate the Type-Case in `setArgument`
 
@@ -415,7 +415,7 @@ private boolean setArgument(char argChar) throws ArgsException {
 }
 ```
 
-**Problem:** `setIntArg` and `setStringArg` reference `args[currentArgument]` directly—instance variables of `Args`. To push these into the marshalers, the marshalers need access to the argument iterator.
+**Problem:** `setIntArg` and `setStringArg` reference `args[currentArgument]` directly, instance variables of `Args`. To push these into the marshalers, the marshalers need access to the argument iterator.
 
 **Solution:** Convert the `args` array to a `List<String>` and pass an `Iterator<String>`:
 
@@ -523,9 +523,9 @@ public class ArgsException extends Exception {
 }
 ```
 
-**Heuristic:** `Args` should be about argument processing, not error message formatting. Extract cross-cutting concerns into their own classes. (*See [[Class Design & SOLID]] — SRP.*)
+**Heuristic:** `Args` should be about argument processing, not error message formatting. Extract cross-cutting concerns into their own classes. (*See [[Class Design & SOLID]]: SRP.*)
 
-### Phase 9: Adding a New Type (Double) — The Acid Test
+### Phase 9: Adding a New Type (Double): The Acid Test
 
 The refactoring proves its value when adding `double` takes minimal, isolated changes:
 
@@ -552,25 +552,25 @@ This case study is a masterclass in the following techniques (annotated with Unc
 ### 1. **Small, Safe Steps** (Incrementalism)
 > *"One of the best ways to ruin a program is to make massive changes to its structure."*
 
-Every change was tiny. Tests ran after each step. When a test broke, it was fixed *immediately*—never pile changes onto a broken system. This is the discipline of [[Clean Code Principles]] — TDD.
+Every change was tiny. Tests ran after each step. When a test broke, it was fixed *immediately*, never pile changes onto a broken system. This is the discipline of [[Clean Code Principles]]: TDD.
 
 ### 2. **Introduce Abstraction Gradually** (Parallel Change)
 Add the new structure alongside the old. Dual-populate both the old type-specific maps and the new unified map during migration. Switch references one at a time. Delete the old only when nothing references it.
 
 ### 3. **Push Behavior Down** (Replace Conditional with Polymorphism)
-Type-specific methods (`setBoolean`, `setString`, `setInteger`) and `instanceof` chains get pushed into polymorphic implementations. The base class shrinks to an interface. See [[Class Design & SOLID]] — Open/Closed Principle: open for extension (add new marshaler), closed for modification (no `if/else` chain to edit).
+Type-specific methods (`setBoolean`, `setString`, `setInteger`) and `instanceof` chains get pushed into polymorphic implementations. The base class shrinks to an interface. See [[Class Design & SOLID]]: Open/Closed Principle: open for extension (add new marshaler), closed for modification (no `if/else` chain to edit).
 
 ### 4. **Extract Class** (Separation of Concerns)
 - `ArgumentMarshaler` → owns value storage and parsing
 - `ArgsException` → owns error codes and message formatting
 - `Args` → owns schema parsing and argument dispatch
-Each class has one reason to change. See [[Code Smells Catalog]] — G16 (Large Class), G7 (Feature Envy).
+Each class has one reason to change. See [[Code Smells Catalog]]: G16 (Large Class), G7 (Feature Envy).
 
 ### 5. **Naming as You Go** [N5]
 When `argumentMarshaler` was too long, shorten to `am` in local scope. When `falseIfNull` became irrelevant after a refactoring, delete it immediately. Names must evolve with the code. See [[Naming Conventions]].
 
 ### 6. **Eliminate Dead Code Immediately**
-`falseIfNull()`, `zeroIfNull()`, `blankIfNull()` — once the null checks moved into the marshalers' `getValue` methods, these helpers were dead. Uncle Bob deleted them the moment they became unused.
+`falseIfNull()`, `zeroIfNull()`, `blankIfNull()`, once the null checks moved into the marshalers' `getValue` methods, these helpers were dead. Uncle Bob deleted them the moment they became unused.
 
 ### 7. **Keep Functions Small** [F1]
 The final `Args` class has methods that do one thing: `parseSchema` is ~5 lines, `parseArgumentCharacter` is ~10 lines. Each method fits on screen.
@@ -579,7 +579,7 @@ The final `Args` class has methods that do one thing: `parseSchema` is ~5 lines,
 Methods like `parseSchemaElement`, `parseArgumentStrings`, `validateSchemaElementId` describe exactly what they do. No comments needed.
 
 ### 9. **Don't Repeat Yourself** (DRY)
-The three type-specific HashMaps, three `isXxxArg` methods, three `setXxxArg` methods—all eliminated in favor of one map and polymorphic dispatch.
+The three type-specific HashMaps, three `isXxxArg` methods, three `setXxxArg` methods; all eliminated in favor of one map and polymorphic dispatch.
 
 ---
 
@@ -593,7 +593,7 @@ The three type-specific HashMaps, three `isXxxArg` methods, three `setXxxArg` me
 
 > *"If you made a mess in a module in the morning, it is easy to clean it up in the afternoon. Better yet, if you made a mess five minutes ago, it's very easy to clean it up right now."*
 
-> *"Much of good software design is simply about partitioning—creating appropriate places to put different kinds of code. This separation of concerns makes the code much simpler to understand and maintain."*
+> *"Much of good software design is simply about partitioning, creating appropriate places to put different kinds of code. This separation of concerns makes the code much simpler to understand and maintain."*
 
 > *"Refactoring is a lot like solving a Rubik's cube. There are lots of little steps required to achieve a large goal. Each step enables the next."*
 
@@ -619,9 +619,9 @@ Use this as a mental checklist when approaching your own refactoring:
 
 ## See Also
 
-- [[Clean Code Principles]] — TDD, Small Functions, DRY
-- [[Function Design]] — Function size, single responsibility, descriptive names
-- [[Naming Conventions]] — N1–N7: use intention-revealing, pronounceable, searchable names
-- [[Class Design & SOLID]] — SRP, OCP, ISP; extract class, push behavior down
-- [[Code Smells Catalog]] — G16 (Large Class), G23 (Type-case with instanceof), G7 (Feature Envy), F1 (too many arguments), N5 (long names)
-- [[Code Smells Catalog]] — Replace Conditional with Polymorphism, Extract Class, Inline Method, Pull Up / Push Down
+- [[Clean Code Principles]]: TDD, Small Functions, DRY
+- [[Function Design]]: Function size, single responsibility, descriptive names
+- [[Naming Conventions]]: N1–N7: use intention-revealing, pronounceable, searchable names
+- [[Class Design & SOLID]]: SRP, OCP, ISP; extract class, push behavior down
+- [[Code Smells Catalog]]: G16 (Large Class), G23 (Type-case with instanceof), G7 (Feature Envy), F1 (too many arguments), N5 (long names)
+- [[Code Smells Catalog]]: Replace Conditional with Polymorphism, Extract Class, Inline Method, Pull Up / Push Down

@@ -11,7 +11,7 @@ tags:
 
 > **Objects that are close together are perceived as a group.**
 
-The brain assumes things near each other belong together — even if they look completely different. This is the most powerful Gestalt principle for UI design.
+The brain assumes things near each other belong together, even if they look completely different. This is the most powerful Gestalt principle for UI design.
 
 ---
 
@@ -21,13 +21,13 @@ The brain assumes things near each other belong together — even if they look c
 
 *Source: lawsofux.com*
 
-The 12 dots on the left aren't seen as "12 dots." They're seen as **three groups of four** — purely because of spacing. The dots on the right are seen as two groups.
+The 12 dots on the left aren't seen as "12 dots." They're seen as **three groups of four:** purely because of spacing. The dots on the right are seen as two groups.
 
 ---
 
 ## In UI Design
 
-### ❌ Bad — Related things are far apart
+### ❌ Bad: Related things are far apart
 
 ```
 [Username: _______________]
@@ -39,7 +39,7 @@ The 12 dots on the left aren't seen as "12 dots." They're seen as **three groups
 
 The login button is far from the form fields. The brain doesn't connect them.
 
-### ✅ Good — Related things are together
+### ✅ Good: Related things are together
 
 ```
 [Username: _______________]
@@ -90,5 +90,5 @@ The button belongs to the form because it's close to the fields.
 
 ## Sources
 
-- *Laws of UX* — https://lawsofux.com/law-of-proximity/
+- *Laws of UX*: https://lawsofux.com/law-of-proximity/
 - Wertheimer, M. (1923). *Laws of Organization in Perceptual Forms.*

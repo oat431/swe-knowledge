@@ -30,6 +30,7 @@ Thread safety ensures that shared data structures behave correctly when accessed
 **Synchronization Primitives:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "Synchronization Mechanisms"
         A[Mutex] -->|Mutual exclusion| B[Single-thread access]
@@ -44,10 +45,10 @@ graph TB
 
 Deadlock occurs when two or more threads are blocked forever, each waiting for a resource held by another. Four conditions are necessary for deadlock:
 
-1. **Mutual Exclusion**: Resources cannot be shared.
-2. **Hold and Wait**: Threads hold resources while waiting for others.
-3. **No Preemption**: Resources cannot be forcibly taken.
-4. **Circular Wait**: A cycle exists in the wait-for graph.
+1. **Mutual Exclusion:** Resources cannot be shared.
+2. **Hold and Wait:** Threads hold resources while waiting for others.
+3. **No Preemption:** Resources cannot be forcibly taken.
+4. **Circular Wait:** A cycle exists in the wait-for graph.
 
 **Prevention Strategies:**
 
@@ -82,9 +83,9 @@ The Actor Model (Hewitt, 1973) treats actors as the universal primitives of comp
 
 **Actor Properties:**
 
-- **Isolation**: Actors do not share state. All communication is through asynchronous messages.
-- **Location Transparency**: Actors can be local or remote; the programming model is the same.
-- **Supervision**: Hierarchical actor systems provide fault tolerance through supervisor strategies.
+- **Isolation:** Actors do not share state. All communication is through asynchronous messages.
+- **Location Transparency:** Actors can be local or remote; the programming model is the same.
+- **Supervision:** Hierarchical actor systems provide fault tolerance through supervisor strategies.
 
 **Actor Model Implementations:**
 
@@ -98,6 +99,7 @@ The Actor Model (Hewitt, 1973) treats actors as the universal primitives of comp
 **Actor Communication Pattern:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','actorBkg':'#19362D','actorBorder':'#1FB854','actorTextColor':'#CDD3D1','actorLineColor':'#1FB854','signalColor':'#CDD3D1','signalTextColor':'#CDD3D1','labelBoxBkgColor':'#161212','labelBoxBorderColor':'#1FB854','labelTextColor':'#CDD3D1','loopTextColor':'#CAC9C9','noteBkgColor':'#1EB88E','noteTextColor':'#000C07','noteBorderColor':'#1EB88E','activationBkgColor':'#1EB88E','activationBorderColor':'#1FB8AB','sequenceNumberColor':'#000000','fontSize':'14px'}}}%%
 sequenceDiagram
     participant A as Actor A
     participant M as Mailbox B
@@ -197,6 +199,7 @@ The Repository pattern mediates between the domain and data mapping layers, acti
 **Repository Design:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "Application Layer"
         A[Application Service]
@@ -219,10 +222,10 @@ graph TB
 
 **Repository Best Practices:**
 
-- **One repository per aggregate root**: Not every entity needs a repository.
-- **Collection semantics**: Treat the repository as an in-memory collection (add, remove, find).
-- **Specification pattern**: Use specifications for complex queries rather than exposing query details.
-- **Unit of Work**: Coordinate persistence of changes across multiple repositories.
+- **One repository per aggregate root:** Not every entity needs a repository.
+- **Collection semantics:** Treat the repository as an in-memory collection (add, remove, find).
+- **Specification pattern:** Use specifications for complex queries rather than exposing query details.
+- **Unit of Work:** Coordinate persistence of changes across multiple repositories.
 
 ### Active Record vs. Data Mapper
 
@@ -240,6 +243,7 @@ graph TB
 CQRS separates the write model (commands) from the read model (queries), allowing each to be optimized independently.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "Command Side"
         A[Command Handler] --> B[Domain Model]
@@ -287,6 +291,7 @@ Service boundaries define where one service ends and another begins. Good bounda
 **Domain-Driven Design and Bounded Contexts:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     subgraph "Order Context"
         A[Order]
@@ -360,6 +365,7 @@ The Saga pattern manages distributed transactions by breaking them into a sequen
 **Saga Types:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph "Choreography Saga"
         A[Order Service] -->|OrderCreated| B[Payment Service]
@@ -396,6 +402,7 @@ The Circuit Breaker pattern (Michael Nygard, *Release It!*) prevents cascading f
 **Circuit Breaker States:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','clusterBkg':'#161212','clusterBorder':'#19362D','fontSize':'14px'}}}%%
 stateDiagram-v2
     [*] --> Closed
     Closed --> Open: Failure threshold exceeded
@@ -410,7 +417,7 @@ stateDiagram-v2
 |-------|----------|-------------|
 | **Closed** | Normal operation; calls pass through | Opens when failure count exceeds threshold |
 | **Open** | Fail fast; calls are rejected immediately | Transitions to Half-Open after timeout |
-| **Half-Open** | Limited probe calls to test recovery | Closes if probe succeeds; Opens if probe fails |
+| **Half-Open** | Limited probe calls to test recovery | Closes if probe succeeds; opens if probe fails |
 
 **Circuit Breaker Configuration:**
 
@@ -432,6 +439,7 @@ Security design addresses how the system protects data, resists attacks, and enf
 **OAuth 2.0 and OpenID Connect (OIDC):**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','actorBkg':'#19362D','actorBorder':'#1FB854','actorTextColor':'#CDD3D1','actorLineColor':'#1FB854','signalColor':'#CDD3D1','signalTextColor':'#CDD3D1','labelBoxBkgColor':'#161212','labelBoxBorderColor':'#1FB854','labelTextColor':'#CDD3D1','loopTextColor':'#CAC9C9','noteBkgColor':'#1EB88E','noteTextColor':'#000C07','noteBorderColor':'#1EB88E','activationBkgColor':'#1EB88E','activationBorderColor':'#1FB8AB','sequenceNumberColor':'#000000','fontSize':'14px'}}}%%
 sequenceDiagram
     participant U as User
     participant C as Client App
@@ -468,11 +476,11 @@ Header.Payload.Signature
 
 **JWT Best Practices:**
 
-- **Short expiration**: Access tokens should expire in minutes (5-15 min).
-- **Refresh tokens**: Use longer-lived refresh tokens to obtain new access tokens.
-- **Signature verification**: Always verify the signature before trusting claims.
-- **Minimal claims**: Include only necessary data; JWTs are not encrypted by default.
-- **Revocation strategy**: JWTs are hard to revoke; use short expiration + refresh token rotation.
+- **Short expiration:** Access tokens should expire in minutes (5-15 min).
+- **Refresh tokens:** Use longer-lived refresh tokens to obtain new access tokens.
+- **Signature verification:** Always verify the signature before trusting claims.
+- **Minimal claims:** Include only necessary data; JWTs are not encrypted by default.
+- **Revocation strategy:** JWTs are hard to revoke; use short expiration + refresh token rotation.
 
 ### Authorization Patterns
 
@@ -486,13 +494,14 @@ Header.Payload.Signature
 **RBAC Implementation:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     A[User] -->|assigned| B[Role]
     B -->|grants| C[Permission]
     C -->|allows| D[Resource + Action]
-    style A fill:#4a9eff,stroke:#333,color:#fff
-    style B fill:#7c4dff,stroke:#333,color:#fff
-    style C fill:#66bb6a,stroke:#333,color:#fff
+    style A fill:#00B5FF,stroke:#000000,color:#000000
+    style B fill:#1FB8AB,stroke:#000000,color:#000000
+    style C fill:#1FB854,stroke:#000000,color:#000000
 ```
 
 **ABAC Policy Example:**
@@ -537,11 +546,11 @@ ALLOW IF:
 
 **Secrets Best Practices:**
 
-- **Never commit secrets to source control**: Use `.gitignore` and pre-commit hooks.
-- **Dynamic secrets**: Generate short-lived credentials on demand (Vault dynamic secrets).
-- **Audit logging**: Track all secret access for compliance and incident response.
-- **Least privilege**: Grant secrets only to services that need them.
-- **Rotation**: Automate secret rotation to limit exposure window.
+- **Never commit secrets to source control:** Use `.gitignore` and pre-commit hooks.
+- **Dynamic secrets:** Generate short-lived credentials on demand (Vault dynamic secrets).
+- **Audit logging:** Track all secret access for compliance and incident response.
+- **Least privilege:** Grant secrets only to services that need them.
+- **Rotation:** Automate secret rotation to limit exposure window.
 
 ---
 
@@ -561,6 +570,7 @@ Performance design addresses how the system meets throughput, latency, and resou
 **Cache Hierarchy:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[Client Request] --> B{CDN Cache Hit?}
     B -->|Yes| C[CDN Response]
@@ -569,10 +579,10 @@ graph LR
     D -->|No| F{Database Cache Hit?}
     F -->|Yes| G[DB Cache Response]
     F -->|No| H[Database Query]
-    style C fill:#66bb6a,stroke:#333,color:#fff
-    style E fill:#66bb6a,stroke:#333,color:#fff
-    style G fill:#ffa726,stroke:#333,color:#fff
-    style H fill:#ff6b6b,stroke:#333,color:#fff
+    style C fill:#1FB854,stroke:#000000,color:#000000
+    style E fill:#1FB854,stroke:#000000,color:#000000
+    style G fill:#FFBE00,stroke:#000000,color:#000000
+    style H fill:#FF5861,stroke:#000000,color:#000000
 ```
 
 **Cache Invalidation Strategies:**
@@ -669,6 +679,7 @@ Sharding distributes data across multiple database instances (shards), each hold
 **Sharding Challenges:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Sharding Challenges] --> B[Cross-Shard Queries]
     A --> C[Rebalancing]
@@ -693,6 +704,7 @@ graph TD
 **Load Balancer Placement:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TB
     A[Client] --> B[DNS Load Balancer]
     B --> C[CDN / Edge]
@@ -719,10 +731,10 @@ Auto-scaling adjusts compute capacity based on demand, optimizing cost while mai
 
 **Auto-Scaling Considerations:**
 
-- **Warm-up time**: New instances need time to become ready (health checks, cache warming).
-- **Cooldown periods**: Prevent thrashing by waiting between scaling actions.
-- **Stateful services**: Scaling stateful services requires careful data management (sharding, replication).
-- **Cost optimization**: Right-size instances and use spot/preemptible instances for non-critical workloads.
+- **Warm-up time:** New instances need time to become ready (health checks, cache warming).
+- **Cooldown periods:** Prevent thrashing by waiting between scaling actions.
+- **Stateful services:** Scaling stateful services requires careful data management (sharding, replication).
+- **Cost optimization:** Right-size instances and use spot/preemptible instances for non-critical workloads.
 
 ---
 
@@ -795,6 +807,7 @@ service OrderService {
 **Format Selection Guide:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Choose Message Format] --> B{Human readable?}
     B -->|Yes| C[JSON]
@@ -813,10 +826,10 @@ Protocol Buffers (protobuf) are Google's language-neutral, platform-neutral exte
 
 **Protobuf Features:**
 
-- **Compact**: Binary format is 3-10x smaller than JSON.
-- **Fast**: Serialization/deserialization is 20-100x faster than JSON.
-- **Strongly Typed**: Schema defined in `.proto` files, code generated for multiple languages.
-- **Backward Compatible**: Field numbers allow schema evolution without breaking compatibility.
+- **Compact:** Binary format is 3-10x smaller than JSON.
+- **Fast:** Serialization/deserialization is 20-100x faster than JSON.
+- **Strongly Typed:** Schema defined in `.proto` files, code generated for multiple languages.
+- **Backward Compatible:** Field numbers allow schema evolution without breaking compatibility.
 
 **Schema Evolution Rules:**
 
@@ -840,10 +853,11 @@ Protocol Buffers (protobuf) are Google's language-neutral, platform-neutral exte
 **Anti-Corruption Layer:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[New System Model] --> B[Anti-Corruption Layer]
     B --> C[Legacy System Model]
-    style B fill:#ffa726,stroke:#333,color:#fff
+    style B fill:#FFBE00,stroke:#000000,color:#000000
 ```
 
 The ACL translates between the new system's clean domain model and the legacy system's messy model, preventing legacy design decisions from contaminating the new system.
@@ -868,6 +882,7 @@ Design issues do not exist in isolation. They interact and sometimes conflict:
 ## Relationships to Other Notes
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     A[Design Issues & Qualities] --> B[[01_Design_Fundamentals_and_Principles]]
     A --> C[[03_Design_Qualities]]
@@ -876,7 +891,7 @@ graph LR
     A --> F[[07_Design_Rationale_and_Decisions]]
     A --> G[[Design Pattern]]
     A --> H[[Clean Architecture]]
-    style A fill:#4a9eff,stroke:#333,color:#fff
+    style A fill:#00B5FF,stroke:#000000,color:#000000
 ```
 
 - [[01_Design_Fundamentals_and_Principles]]: Foundational principles underpin all design issues.
@@ -884,8 +899,8 @@ graph LR
 - [[10_Design_Thinking_and_Context]]: Design context frames which issues are most critical for a given system.
 - [[05_Design_Strategies_and_Methods]]: Design strategies provide systematic approaches to addressing design issues.
 - [[07_Design_Rationale_and_Decisions]]: Design rationale documents why specific trade-offs were made.
-- [[Design Pattern]]: Patterns provide proven solutions for recurring design issues.
-- [[Clean Architecture]]: Architectural patterns address cross-cutting concerns through layering and dependency management.
+- [[Design Pattern/Design Pattern Overview|Design Pattern]]: Patterns provide proven solutions for recurring design issues.
+- [[Clean Architecture/Foundations/Clean Architecture Overview|Clean Architecture]]: Architectural patterns address cross-cutting concerns through layering and dependency management.
 
 ---
 

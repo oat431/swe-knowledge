@@ -2,13 +2,14 @@
 tags: [overview, ux, ui, design, methodology, ux-ui-design]
 ---
 
-# UX/UI Design — Overview
+# UX/UI Design: Overview
 
-> *Purpose: A practical guide to the UX/UI design process — from user research through wireframes, prototypes, mockups, to usability testing and A/B testing.*
+> *Purpose: A practical guide to the UX/UI design process, from user research through wireframes, prototypes, mockups, to usability testing and A/B testing.*
 
 ## The Design Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     RESEARCH["User Research"] --> IA["Information Architecture"]
     IA --> WIREFRAME["Wireframes"]
@@ -64,7 +65,7 @@ flowchart LR
 | Have a design, need to validate it | **Testing** |
 | Need a complete design process | Start with Research → UX → UI → Test |
 
-## UX vs UI — What's the Difference?
+## UX vs UI: What's the Difference?
 
 | Aspect | UX (User Experience) | UI (User Interface) |
 |---|---|---|
@@ -79,6 +80,6 @@ flowchart LR
 
 ## Related
 
-- [[Software Methodology - Overview|Software Methodology]] — Agile/Lean processes that include design
-- [[Essential Documents - Overview|Essential Documents]] — Document checklists for all disciplines
-- [[Body of Knowledge - Overview|Body of Knowledge]] — Full BOK vaults
+- [[Software Methodology - Overview|Software Methodology]]: Agile/Lean processes that include design
+- [[Essential Documents - Overview|Essential Documents]]: Document checklists for all disciplines
+- [[Body of Knowledge - Overview|Body of Knowledge]]: Full BOK vaults

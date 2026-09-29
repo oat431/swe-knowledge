@@ -16,9 +16,9 @@ tags:
 
 ## Problem
 
-You maintain an app that models geographic data as a colossal graph. Nodes represent cities, industries, sightseeing areas — each node type is its own class, each specific node is an object.
+You maintain an app that models geographic data as a colossal graph. Nodes represent cities, industries, sightseeing areas; each node type is its own class, each specific node is an object.
 
-A new requirement arrives: **export the entire graph to XML**. The naive solution is to add an `export()` method to every node class and recursively traverse the graph — polymorphism handles the dispatch cleanly.
+A new requirement arrives: **export the entire graph to XML**. The naive solution is to add an `export()` method to every node class and recursively traverse the graph, polymorphism handles the dispatch cleanly.
 
 **Three obstacles block this approach:**
 
@@ -36,22 +36,22 @@ The Visitor pattern moves new behavior into a **separate visitor class** rather 
 
 ### The Dispatch Problem
 
-A naive visitor needs one method per concrete element type (`doForCity`, `doForIndustry`, `doForSightSeeing`). But how do you call the *correct* method when iterating over a heterogeneous collection? Each method has a different signature — polymorphism can't help. Even method overloading (Java/C#) fails: the compiler resolves overloads at compile-time against the *declared* type, not the actual runtime class, so it always defaults to the base `Node` parameter.
+A naive visitor needs one method per concrete element type (`doForCity`, `doForIndustry`, `doForSightSeeing`). But how do you call the *correct* method when iterating over a heterogeneous collection? Each method has a different signature, polymorphism can't help. Even method overloading (Java/C#) fails: the compiler resolves overloads at compile-time against the *declared* type, not the actual runtime class, so it always defaults to the base `Node` parameter.
 
 ### Double Dispatch
 
-The Visitor pattern solves this with a technique called **Double Dispatch**:
+The Visitor pattern solves this with a technique called **Double Dispatch:**
 
 1. The **client** calls `element.accept(visitor)` on any element, not knowing its concrete type.
-2. Each **concrete element** implements `accept()` by calling the matching visitor method — e.g., `visitor.doForCity(this)`. Since the element knows its own class at compile time, the correct overload is resolved.
+2. Each **concrete element** implements `accept()` by calling the matching visitor method, e.g., `visitor.doForCity(this)`. Since the element knows its own class at compile time, the correct overload is resolved.
 3. The **visitor** executes the appropriate behavior for that concrete element.
 
 ```
-// Client — no type-checking required
+// Client - no type-checking required
 foreach (Node node in graph)
     node.accept(exportVisitor)
 
-// City element — redirects to the right visitor method
+// City element - redirects to the right visitor method
 class City is
   method accept(Visitor v) is
     v.doForCity(this)
@@ -62,7 +62,7 @@ class Industry is
     v.doForIndustry(this)
 ```
 
-Yes, the element classes *are* modified — but the change is **trivial and one-time**: a single `accept()` method. From that point forward, any new behavior can be added by implementing a new visitor class, without touching the elements again.
+Yes, the element classes *are* modified, but the change is **trivial and one-time:** a single `accept()` method. From that point forward, any new behavior can be added by implementing a new visitor class, without touching the elements again.
 
 > **Real-world analogy:** A seasoned insurance agent visits every building in a neighborhood. Depending on the type of organization occupying the building, he offers specialized policies: medical insurance for residential buildings, theft insurance for banks, fire/flood insurance for coffee shops. The agent (visitor) adapts his offer to each building type (element).
 
@@ -72,13 +72,14 @@ Yes, the element classes *are* modified — but the change is **trivial and one-
 
 | Role | Responsibility |
 |---|---|
-| **Visitor** | Interface declaring a set of visiting methods — one per concrete element class. Each method takes the corresponding concrete element as a parameter. |
+| **Visitor** | Interface declaring a set of visiting methods; one per concrete element class. Each method takes the corresponding concrete element as a parameter. |
 | **Concrete Visitor** | Implements each visiting method with the actual algorithm tailored to each concrete element. Can accumulate internal state while traversing a complex structure (e.g., Composite tree). |
 | **Element** | Interface declaring the `accept(visitor)` method. The parameter is typed to the Visitor interface. |
 | **Concrete Element** | Implements `accept()` by calling `visitor.visitXxx(this)`. **Every subclass must override `accept()`**, even if the base class already implements it, to ensure the correct visitor method is dispatched. |
 | **Client** | Holds a collection of elements (often a Composite tree). Iterates over elements and calls `element.accept(visitor)` without knowing the concrete element classes. |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','classText':'#CDD3D1','mainBkg':'#19362D','nodeBorder':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 classDiagram
     class Visitor {
         <<interface>>
@@ -173,7 +174,7 @@ class XMLExportVisitor implements Visitor is
   method visitCompoundShape(cs: CompoundShape) is
     // Export the shape's ID as well as the list of its children's IDs.
 
-// Client code — no type-checking, no conditionals
+// Client code - no type-checking, no conditionals
 class Application is
   field allShapes: array of Shapes
 
@@ -193,10 +194,10 @@ Use the Visitor pattern when:
 
 - You need to **perform an operation on all elements of a complex object structure** (e.g., object tree, graph). The pattern gives you variants of the same operation for every target concrete class without iterative type-checking.
 - You want to **clean up auxiliary behaviors** that don't belong in the primary classes. Extract reporting, exporting, validation, or formatting logic into visitors, keeping the element classes focused on their core responsibilities (**Single Responsibility Principle**).
-- A behavior **makes sense only in some classes** of a hierarchy, not in others. You implement only the relevant `visitXxx` methods and leave the rest empty — no base-class pollution.
+- A behavior **makes sense only in some classes** of a hierarchy, not in others. You implement only the relevant `visitXxx` methods and leave the rest empty, no base-class pollution.
 
 **Do not use when:**
-- The element hierarchy is **unstable** — classes are frequently added or removed. Every change forces an update to *all* visitor interfaces and implementations.
+- The element hierarchy is **unstable:** classes are frequently added or removed. Every change forces an update to *all* visitor interfaces and implementations.
 
 ---
 
@@ -206,7 +207,7 @@ Use the Visitor pattern when:
 |---|---|
 | **Open/Closed Principle.** Introduce new behavior that works with objects of different classes without modifying those classes. | You must **update all visitors** each time a class is added to or removed from the element hierarchy. |
 | **Single Responsibility Principle.** Move multiple versions of the same behavior into a single visitor class. Element classes stay focused. | Visitors may lack **access to private fields and methods** of elements, forcing you to either break encapsulation or nest the visitor inside the element class (language-dependent). |
-| Visitors can **accumulate state** while traversing a complex object structure — useful for collecting metrics, building output, or caching intermediate results. | The Double Dispatch mechanism requires adding `accept()` methods to all elements — a one-time invasive change, though trivial. |
+| Visitors can **accumulate state** while traversing a complex object structure (useful for collecting metrics, building output, or caching intermediate results. | The Double Dispatch mechanism requires adding `accept()` methods to all elements) a one-time invasive change, though trivial. |
 
 ---
 
@@ -226,9 +227,9 @@ Use the Visitor pattern when:
 - [ ] Does the new behavior make sense across a heterogeneous collection of objects?
 - [ ] Is the behavior unrelated to the primary responsibility of the element classes (export, validation, reporting)?
 - [ ] Have you declared a `visitXxx()` method for **every** concrete element class in the Visitor interface?
-- [ ] Does every concrete element implement `accept()` by calling the correct `visitXxx(this)` — including subclasses that must override their parent's `accept()`?
+- [ ] Does every concrete element implement `accept()` by calling the correct `visitXxx(this)`, including subclasses that must override their parent's `accept()`?
 - [ ] Can the visitor accumulate intermediate state across the traversal (e.g., with a Composite tree)?
-- [ ] Have you handled encapsulation — either by making necessary fields public or nesting the visitor inside the element?
+- [ ] Have you handled encapsulation: either by making necessary fields public or nesting the visitor inside the element?
 - [ ] Is the client code free of `instanceof` checks and conditionals when dispatching to elements?
 
 ---

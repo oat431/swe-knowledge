@@ -11,7 +11,7 @@ tags:
 
 > **Elements within the same bounded area are perceived as a group.**
 
-If you put a border, background color, or card around things — the brain treats them as one unit. Common Region overrides Proximity when they conflict.
+If you put a border, background color, or card around things, the brain treats them as one unit. Common Region overrides Proximity when they conflict.
 
 ---
 
@@ -69,7 +69,7 @@ The card makes it obvious: everything inside is one form.
 | Principle | When It Wins |
 |-----------|-------------|
 | **Proximity** | Items are close but don't share a background/border |
-| **Common Region** | Items share a visible container — overrides proximity |
+| **Common Region** | Items share a visible container, overrides proximity |
 
 > If you want to group things that MUST be far apart, use Common Region. The card/border does the grouping for you.
 
@@ -79,7 +79,7 @@ The card makes it obvious: everything inside is one form.
 
 | Example | How Common Region Works |
 |---------|----------------------|
-| Facebook posts | Each post is a card — comments inside the card vs separate from other posts |
+| Facebook posts | Each post is a card, comments inside the card vs separate from other posts |
 | iOS Control Center | Each section (connectivity, brightness, music) has its own rounded container |
 | Twitter/X DM | Each message bubble is a distinct region separating sender from receiver |
 
@@ -87,5 +87,5 @@ The card makes it obvious: everything inside is one form.
 
 ## Sources
 
-- *Laws of UX* — https://lawsofux.com/law-of-common-region/
+- *Laws of UX*: https://lawsofux.com/law-of-common-region/
 - Palmer, S.E. (1992). *Common region: A new principle of perceptual grouping.*

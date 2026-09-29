@@ -1,5 +1,5 @@
 ---
-source: Clean Code — Robert C. Martin, Chapter 9, pp. 121–135
+source: Clean Code by Robert C. Martin, Chapter 9, pp. 121–135
 created: 2026-06-20
 tags:
 - clean-code
@@ -14,10 +14,10 @@ tags:
 # Unit Testing
 
 > *"Test code is just as important as production code. It is not a second-class citizen. It requires thought, design, and care. It must be kept as clean as production code."*
-> — Robert C. Martin, p. 124
+> *Robert C. Martin, p. 124*
 
 > *"Tests enable all the -ilities, because tests enable **change**."*
-> — p. 124
+> *p. 124*
 
 ---
 
@@ -29,12 +29,12 @@ Uncle Bob defines three laws that lock you into a ~30-second cycle. Tests and pr
 You may not write production code until you have written a **failing unit test**.
 
 ### **Second Law**
-You may not write **more** of a unit test than is sufficient to fail — and **not compiling is failing**.
+You may not write **more** of a unit test than is sufficient to fail, and **not compiling is failing**.
 
 ### **Third Law**
 You may not write **more** production code than is sufficient to pass the currently failing test.
 
-These laws produce a tight red-green-refactor loop. Over months, they generate thousands of tests that rival the size of the production codebase itself — making test cleanliness a critical management concern.
+These laws produce a tight red-green-refactor loop. Over months, they generate thousands of tests that rival the size of the production codebase itself, making test cleanliness a critical management concern.
 
 ---
 
@@ -46,7 +46,7 @@ Dirty tests are **worse than no tests**. Without a clean test suite:
 - Defect rate rises → customers grow frustrated
 - The test suite becomes a liability and is eventually **discarded**
 
-> *"If you let the tests rot, then your code will rot too."* — p. 133
+> *"If you let the tests rot, then your code will rot too."* *(p. 133)*
 
 ### **Test Code = Production Code**
 Tests demand the same standards: thoughtful naming, short functions, clean design, and disciplined refactoring. They are **not** a license to write "quick and dirty" code.
@@ -56,7 +56,7 @@ Tests demand the same standards: thoughtful naming, short functions, clean desig
 ## Clean Tests: Readability Matters
 
 > *"What makes a clean test? Three things. Readability, readability, and readability."*
-> — p. 124
+> *p. 124*
 
 A clean test says a lot with few expressions. The **BUILD-OPERATE-CHECK** pattern makes structure obvious.
 
@@ -96,7 +96,7 @@ public void testGetPageHierarchyAsXml() throws Exception {
 }
 ```
 
-The refactored version eliminates `PathParser` noise, response casting, and URL-building trivia — the reader grasps intent in seconds.
+The refactored version eliminates `PathParser` noise, response casting, and URL-building trivia, the reader grasps intent in seconds.
 
 ---
 
@@ -193,7 +193,7 @@ When one-assert-per-test forces excessive duplication (base classes, `@Before` o
 ## Single Concept per Test
 
 > *"Probably the best rule is that you should minimize the number of asserts per concept and test just one concept per test function."*
-> — p. 132
+> *p. 132*
 
 A test that exercises **three independent scenarios** forces the reader to decode which section tests what:
 
@@ -221,7 +221,7 @@ public void testAddMonths() {
 }
 ```
 
-Split into separate, well-named tests — one concept each. This also reveals **missing test cases**: incrementing February 28 should yield March 28, not March 31.
+Split into separate, well-named tests; one concept each. This also reveals **missing test cases:** incrementing February 28 should yield March 28, not March 31.
 
 ---
 
@@ -236,10 +236,10 @@ Tests must run **quickly**. Slow tests → infrequent runs → late bug discover
 No test should set up conditions for another. Tests must run in **any order**. Dependent tests cause cascading failures that hide root causes.
 
 ### **Repeatable**
-Tests must run in **any environment**: production, QA, laptop on a train without network. Environment-dependent tests give you an excuse for failure.
+Tests must run in **any environment:** production, QA, laptop on a train without network. Environment-dependent tests give you an excuse for failure.
 
 ### **Self-Validating**
-Tests output a **boolean**: pass or fail. No manual log inspection. No diffing text files. Subjective validation kills automation.
+Tests output a **boolean:** pass or fail. No manual log inspection. No diffing text files. Subjective validation kills automation.
 
 ### **Timely**
 Tests are written **just before** the production code that makes them pass. Writing tests after production code leads to untestable designs and the temptation to skip testing "hard-to-test" code.
@@ -253,7 +253,7 @@ Tests are written **just before** the production code that makes them pass. Writ
 - [ ] Tests follow **BUILD-OPERATE-CHECK** (or given-when-then) structure
 - [ ] A **domain-specific testing language** eliminates incidental detail
 - [ ] Performance shortcuts are acceptable in tests; **cleanliness is not compromised**
-- [ ] Number of asserts is **minimized** — one assert per concept, not necessarily one per method
+- [ ] Number of asserts is **minimized:** one assert per concept, not necessarily one per method
 - [ ] Each test function exercises a **single concept**
 - [ ] All tests pass **F.I.R.S.T.** (Fast, Independent, Repeatable, Self-Validating, Timely)
 - [ ] Test helpers (`makePages`, `submitRequest`) evolve through **continuous refactoring**
@@ -263,9 +263,9 @@ Tests are written **just before** the production code that makes them pass. Writ
 
 ## Related Notes
 
-- [[Clean Code Principles]] — overarching philosophy
-- [[Function Design]] — small, single-responsibility functions apply equally to tests
-- [[Class Design & SOLID]] — testability drives good class design
-- [[Code Smells Catalog]] — duplication [G5], obscurity, and mental mapping in test code
-- [[Unit Testing]] — the rhythm behind the Three Laws
-- [[Unit Testing]] — BDD-style test structuring (RSpec, Cucumber)
+- [[Clean Code Principles]]: overarching philosophy
+- [[Function Design]]: small, single-responsibility functions apply equally to tests
+- [[Class Design & SOLID]]: testability drives good class design
+- [[Code Smells Catalog]]: duplication [G5], obscurity, and mental mapping in test code
+- [[Unit Testing]]: the rhythm behind the Three Laws
+- [[Unit Testing]]: BDD-style test structuring (RSpec, Cucumber)

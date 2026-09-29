@@ -7,20 +7,20 @@ tags:
 
 # Emergent Design
 
-*Clean Code — Robert C. Martin (by Jeff Langr), pp. 171–176*
+*Clean Code* by Robert C. Martin (chapter by Jeff Langr), pp. 171–176
 
 > "The fact that we have these tests eliminates the fear that cleaning up the code will break it!"
 
 ## Kent Beck's Four Rules of Simple Design
 
-A design is "simple" if it satisfies these rules **in order of priority**:
+A design is "simple" if it satisfies these rules **in order of priority:**
 
-1. **Runs all the tests** — the system must be verifiably correct.
-2. **Contains no duplication** — the primary enemy of good design.
-3. **Expresses the intent of the programmer** — code as communication.
-4. **Minimizes the number of classes and methods** — avoid pointless dogmatism.
+1. **Runs all the tests:** the system must be verifiably correct.
+2. **Contains no duplication:** the primary enemy of good design.
+3. **Expresses the intent of the programmer:** code as communication.
+4. **Minimizes the number of classes and methods:** avoid pointless dogmatism.
 
-Following these rules in priority order creates pressure toward good object-oriented design—low coupling, high cohesion, SRP, and DIP—without requiring deep upfront expertise.
+Following these rules in priority order creates pressure toward good object-oriented design (low coupling, high cohesion, SRP, and DIP) without requiring deep upfront expertise.
 
 ---
 
@@ -36,7 +36,7 @@ A design is worthless if the system cannot be verified. A comprehensively tested
 
 > Tests are the enabler. Without them, refactoring is gambling. With them, refactoring is engineering.
 
-**Key takeaway:** Write tests first and run them continuously. Tests don't just verify behaviour—they actively shape better design.
+**Key takeaway:** Write tests first and run them continuously. Tests don't just verify behaviour; they actively shape better design.
 
 ---
 
@@ -50,14 +50,14 @@ Duplication is the **primary enemy** of a well-designed system. It creates extra
 - Similar lines that can be massaged to match, then unified.
 - Duplication of **implementation** (e.g. `isEmpty()` implemented independently from `size()`).
 
-#### Before — Duplication of Implementation
+#### Before: Duplication of Implementation
 
 ```java
 int size() { return counter; }
-boolean isEmpty() { return flag; }   // separate tracking — duplication
+boolean isEmpty() { return flag; }   // separate tracking - duplication
 ```
 
-#### After — Tied to Canonical Definition
+#### After: Tied to Canonical Definition
 
 ```java
 int size() { return counter; }
@@ -66,7 +66,7 @@ boolean isEmpty() {
 }
 ```
 
-#### Before — Duplicated Cleanup Logic
+#### Before: Duplicated Cleanup Logic
 
 ```java
 public void scaleToOneDimension(float desiredDimension, float imageDimension) {
@@ -90,7 +90,7 @@ public synchronized void rotate(int degrees) {
 }
 ```
 
-#### After — Extracted Commonality
+#### After: Extracted Commonality
 
 ```java
 public void scaleToOneDimension(float desiredDimension, float imageDimension) {
@@ -122,7 +122,7 @@ private void replaceImage(RenderedOp newImage) {
 When you eliminate duplication across methods that follow the same algorithm with one varying step, the **TEMPLATE METHOD** pattern surfaces naturally.
 
 ```java
-// BEFORE — near-identical methods, differing only in legal-minimum logic
+// BEFORE - near-identical methods, differing only in legal-minimum logic
 public class VacationPolicy {
     public void accrueUSDivisionVacation() {
         // calculate vacation based on hours worked
@@ -138,7 +138,7 @@ public class VacationPolicy {
 ```
 
 ```java
-// AFTER — TEMPLATE METHOD: invariant steps in base class, variant in subclass
+// AFTER - TEMPLATE METHOD: invariant steps in base class, variant in subclass
 abstract public class VacationPolicy {
     public void accrueVacation() {                // template method
         calculateBaseVacationHours();
@@ -163,20 +163,20 @@ public class EUVacationPolicy extends VacationPolicy {
 }
 ```
 
-> Refactoring to eliminate duplication doesn't just clean code—it **reveals abstractions** that were hiding in plain sight.
+> Refactoring to eliminate duplication doesn't just clean code; it **reveals abstractions** that were hiding in plain sight.
 
 ---
 
 ### 3. Expressive
 
-Code is read far more often than it is written. The majority of a software project's cost is in **long-term maintenance**. When you're deep in a problem, your own code seems obvious—but the next maintainer lacks that context.
+Code is read far more often than it is written. The majority of a software project's cost is in **long-term maintenance**. When you're deep in a problem, your own code seems obvious, but the next maintainer lacks that context.
 
 **Make intent unmistakable:**
 
-- **Good names** — a class or function name should never surprise the reader when they discover what it actually does.
-- **Small functions and classes** — small things are easy to name, easy to write, and easy to understand.
-- **Standard nomenclature** — use pattern names like COMMAND, VISITOR, or TEMPLATE METHOD in class names. They communicate design intent to anyone familiar with the Gang of Four.
-- **Well-written unit tests** — tests are **documentation by example**. A reader should be able to understand what a class does by reading its tests.
+- **Good names:** a class or function name should never surprise the reader when they discover what it actually does.
+- **Small functions and classes:** small things are easy to name, easy to write, and easy to understand.
+- **Standard nomenclature:** use pattern names like COMMAND, VISITOR, or TEMPLATE METHOD in class names. They communicate design intent to anyone familiar with the Gang of Four.
+- **Well-written unit tests:** tests are **documentation by example**. A reader should be able to understand what a class does by reading its tests.
 - **Try.** The most important technique is simply to care. Choose better names, split large functions, and take pride in workmanship. The next person reading your code is probably you.
 
 > "Care is a precious resource."
@@ -185,7 +185,7 @@ Code is read far more often than it is written. The majority of a software proje
 
 ### 4. Minimal Classes and Methods
 
-Even good principles—eliminating duplication, expressiveness, SRP—can be taken too far. Low priority doesn't mean unimportant; it means **don't sacrifice higher-priority rules for this one.**
+Even good principles (eliminating duplication, expressiveness, SRP) can be taken too far. Low priority doesn't mean unimportant; it means **don't sacrifice higher-priority rules for this one.**
 
 **Avoid dogmatism:**
 
@@ -219,15 +219,15 @@ This rule is last for a reason. A system with tests, no duplication, and clear i
    Rule 4: Minimal Classes/Methods ──▶ pragmatic restraint, avoid over-engineering
 ```
 
-Each rule creates pressure toward the next. Tests enable fearless refactoring. Refactoring eliminates duplication. Eliminating duplication surfaces meaningful abstractions. Clear abstractions are easier to name and express. And all of this is done with pragmatic restraint—no more code than necessary.
+Each rule creates pressure toward the next. Tests enable fearless refactoring. Refactoring eliminates duplication. Eliminating duplication surfaces meaningful abstractions. Clear abstractions are easier to name and express. And all of this is done with pragmatic restraint; no more code than necessary.
 
 ---
 
 ## Checklist: Emergent Design
 
-- [ ] All tests pass and run continuously—the system is verifiable.
+- [ ] All tests pass and run continuously: the system is verifiable.
 - [ ] No duplicated code. Not even a few lines. Not even duplicated implementation logic (`isEmpty()` vs `size()`).
-- [ ] No duplicated algorithm structure—TEMPLATE METHOD or STRATEGY used where appropriate.
+- [ ] No duplicated algorithm structure: TEMPLATE METHOD or STRATEGY used where appropriate.
 - [ ] Class and function names clearly convey intent; no surprises on inspection.
 - [ ] Functions and classes are small and single-purpose.
 - [ ] Unit tests serve as readable documentation by example.
@@ -240,9 +240,9 @@ Each rule creates pressure toward the next. Tests enable fearless refactoring. R
 
 ## Related Notes
 
-- [[Clean Code Principles]] — overarching values and mindset
-- [[Function Design]] — small functions, single responsibility, descriptive names
-- [[Class Design & SOLID]] — SRP, DIP, dependency injection, interfaces
-- [[Unit Testing]] — tests as safety net, documentation, and design pressure
-- [[Code Smells Catalog]] — recognising duplication, rigidity, opacity before they metastasise
-- [[software-engineering-note/03_Software_Design/Clean Code/Clean Code Overview]] — TEMPLATE METHOD, STRATEGY, and other patterns that emerge from refactoring
+- [[Clean Code Principles]]: overarching values and mindset
+- [[Function Design]]: small functions, single responsibility, descriptive names
+- [[Class Design & SOLID]]: SRP, DIP, dependency injection, interfaces
+- [[Unit Testing]]: tests as safety net, documentation, and design pressure
+- [[Code Smells Catalog]]: recognising duplication, rigidity, opacity before they metastasise
+- [[software-engineering-note/03_Software_Design/Clean Code/Clean Code Overview]]: TEMPLATE METHOD, STRATEGY, and other patterns that emerge from refactoring

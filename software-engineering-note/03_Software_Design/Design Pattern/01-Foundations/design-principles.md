@@ -63,7 +63,7 @@ Tax-related changes are now isolated. If the logic grows complex, it's a small s
 
 ### Class-Level Encapsulation
 
-Over time, a method accumulates responsibilities and helper fields that blur the primary responsibility of the containing class. Extract everything tax-related into a dedicated `TaxCalculator` class. Objects of the `Order` class delegate all tax work to that specialized object. The `Order` class no longer knows how tax is calculated—it just delegates.
+Over time, a method accumulates responsibilities and helper fields that blur the primary responsibility of the containing class. Extract everything tax-related into a dedicated `TaxCalculator` class. Objects of the `Order` class delegate all tax work to that specialized object. The `Order` class no longer knows how tax is calculated, it just delegates.
 
 ---
 
@@ -71,7 +71,7 @@ Over time, a method accumulates responsibilities and helper fields that blur the
 
 > Program to an interface, not an implementation. Depend on abstractions, not on concrete classes.
 
-A design is flexible if you can extend it without breaking existing code. A cat that eats *any food* is more flexible than a cat that eats only sausages—you can still feed it sausages (they are a subset), but the menu is open to extension.
+A design is flexible if you can extend it without breaking existing code. A cat that eats *any food* is more flexible than a cat that eats only sausages; you can still feed it sausages (they are a subset), but the menu is open to extension.
 
 ### Steps to Set Up Interface-Based Collaboration
 
@@ -80,7 +80,7 @@ A design is flexible if you can extend it without breaking existing code. A cat 
 3. Make the dependency class **implement** that interface.
 4. Make the collaborating class depend on the **interface**, not the concrete class.
 
-The code becomes *more complicated* upfront, but if it's a sensible extension point—or if others will extend it—the cost pays off.
+The code becomes *more complicated* upfront, but if it's a sensible extension point (or if others will extend it) the cost pays off.
 
 ### Example: Software Company Simulator
 
@@ -101,7 +101,7 @@ class Company is
         t.testSoftware()
 ```
 
-Step 1 — Extract a common `Employee` interface and use polymorphism:
+Step 1; extract a common `Employee` interface and use polymorphism:
 
 ```pseudocode
 🔶 BETTER: polymorphism via Employee interface, but still coupled
@@ -127,14 +127,14 @@ class Company is
 
 The `Company` class still knows about concrete employee classes when *creating* them. If new company types need different employees, you'd override most of `Company` instead of reusing code.
 
-Step 2 — Abstract employee creation (Factory Method pattern):
+Step 2; Abstract employee creation (Factory Method pattern):
 
 ```pseudocode
 ✅ AFTER: Company independent from concrete employee classes
 abstract class Company is
     field employees: array of Employee
 
-    // Factory Method — subclasses decide which employees to create
+    // Factory Method - subclasses decide which employees to create
     abstract method getEmployees(): array of Employee
 
     method createSoftware() is
@@ -158,7 +158,7 @@ Inheritance is the most obvious way to reuse code, but it comes with serious cav
 | Problem | Description |
 |---|---|
 | **Can't reduce interface** | Subclasses must implement all abstract methods of the parent, even unused ones |
-| **Fragile base class** | Overriding methods must remain compatible with the base behavior—any code expecting the superclass may receive the subclass |
+| **Fragile base class** | Overriding methods must remain compatible with the base behavior, any code expecting the superclass may receive the subclass |
 | **Breaks encapsulation** | Internal details of the parent become available to the subclass; superclass may become aware of subclass details |
 | **Tight coupling** | Any change in the superclass may break subclass functionality |
 | **Parallel hierarchies** | Reusing code across two or more dimensions explodes the class hierarchy into a combinatorial mess |
@@ -166,7 +166,7 @@ Inheritance is the most obvious way to reuse code, but it comes with serious cav
 Inheritance = **"is a"** relationship (a car *is a* transport).  
 Composition = **"has a"** relationship (a car *has an* engine).
 
-> This principle also applies to **aggregation** — a relaxed variant of composition where one object references another but doesn't manage its lifecycle (a car *has a* driver, who may use another car or walk).
+> This principle also applies to **aggregation:** a relaxed variant of composition where one object references another but doesn't manage its lifecycle (a car *has a* driver, who may use another car or walk).
 
 ### Example: Car Manufacturer Catalog
 

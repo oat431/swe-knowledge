@@ -10,49 +10,49 @@ tags:
 
 # User Interface Design
 
-UI is the visual layer — what users see and touch. These notes cover the psychology (Gestalt) and the craft (typography, color, layout).
+UI is the visual layer: what users see and touch. These notes cover the psychology (Gestalt) and the craft (typography, color, layout).
 
 ---
 
-## Gestalt Laws — How the Brain Sees
+## Gestalt Laws: How the Brain Sees
 
-> [[01 Law of Proximity]] — 5 principles of visual perception
+> [[01 Law of Proximity]]: 5 principles of visual perception
 
 | # | Law | File |
 |---|-----|------|
-| 1 | Proximity | [[01 Law of Proximity]] — Close things belong together |
-| 2 | Common Region | [[02 Common Region]] — Boundaries create groups |
-| 3 | Similarity | [[03 Law of Similarity]] — Same look = same function |
-| 4 | Continuity | [[04 Law of Continuity]] — The eye follows smooth paths |
-| 5 | Closure | [[05 Law of Closure]] — The brain fills in gaps |
+| 1 | Proximity | [[01 Law of Proximity]]: Close things belong together |
+| 2 | Common Region | [[02 Common Region]]: Boundaries create groups |
+| 3 | Similarity | [[03 Law of Similarity]]: Same look = same function |
+| 4 | Continuity | [[04 Law of Continuity]]: The eye follows smooth paths |
+| 5 | Closure | [[05 Law of Closure]]: The brain fills in gaps |
 
 ---
 
-## UI Design Tips — How to Execute
+## UI Design Tips: How to Execute
 
-> [[06 Mobile First Design]] — Practical techniques
+> [[06 Mobile First Design]]: Practical techniques
 
 | # | Topic | File |
 |---|-------|------|
-| 6 | Mobile First | [[06 Mobile First Design]] — Start small, scale up |
-| 7 | Typography & Spacing | [[07 Typography & Spacing]] — Fonts, weights, line height, letter spacing |
-| 8 | Color & Opacity | [[08 Color & Opacity]] — 60-30-10 rule, grays, accessibility |
-| 9 | Dark Mode | [[09 Dark Mode]] — Elevation, contrast, desaturation |
+| 6 | Mobile First | [[06 Mobile First Design]]: Start small, scale up |
+| 7 | Typography & Spacing | [[07 Typography & Spacing]]: Fonts, weights, line height, letter spacing |
+| 8 | Color & Opacity | [[08 Color & Opacity]]: 60-30-10 rule, grays, accessibility |
+| 9 | Dark Mode | [[09 Dark Mode]]: Elevation, contrast, desaturation |
 
 ---
 
-## UI Process — How to Execute
+## UI Process: How to Execute
 
-> [[32 UI Design Process]] — Mockups, design systems, visual design
+> [[32 UI Design Process]]: Mockups, design systems, visual design
 
 | # | Topic | File |
 |---|-------|------|
-| 32 | UI Design Process | [[32 UI Design Process]] — Mockups, design systems, visual design, accessibility |
-| 34 | Essential Documents | [[UX UI Essential Documents|UX UI Essential Documents]] — UI deliverables checklist |
+| 32 | UI Design Process | [[32 UI Design Process]]: Mockups, design systems, visual design, accessibility |
+| 34 | Essential Documents | [[UX UI Essential Documents|UX UI Essential Documents]]: UI deliverables checklist |
 
 ---
 
 ## Sources
 
 - *Refactoring UI* by Adam Wathan & Steve Schoger
-- *Laws of UX* — https://lawsofux.com/
+- *Laws of UX*: https://lawsofux.com/

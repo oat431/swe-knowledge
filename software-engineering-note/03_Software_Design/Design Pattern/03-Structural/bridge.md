@@ -10,7 +10,7 @@ tags:
 
 ## Intent
 
-> Bridge is a structural design pattern that lets you split a large class or a set of closely related classes into two separate hierarchies—abstraction and implementation—which can be developed independently of each other.
+> Bridge is a structural design pattern that lets you split a large class or a set of closely related classes into two separate hierarchies (abstraction and implementation) which can be developed independently of each other.
 
 ---
 
@@ -18,7 +18,7 @@ tags:
 
 Two independent dimensions of variation cause an exponential explosion of subclasses when modeled with inheritance alone.
 
-**The Shape × Color explosion.** Start with a `Shape` base class and two subclasses: `Circle` and `Square`. Now add color: `Red` and `Blue`. Since each shape needs every color variant, you get four class combinations (`BlueCircle`, `RedCircle`, `BlueSquare`, `RedSquare`). Adding a `Triangle` shape forces two more subclasses (one per color). Adding a new color afterwards forces *three* more subclasses (one per shape). The hierarchy grows in geometric progression — unmaintainable beyond a few combinations.
+**The Shape × Color explosion.** Start with a `Shape` base class and two subclasses: `Circle` and `Square`. Now add color: `Red` and `Blue`. Since each shape needs every color variant, you get four class combinations (`BlueCircle`, `RedCircle`, `BlueSquare`, `RedSquare`). Adding a `Triangle` shape forces two more subclasses (one per color). Adding a new color afterwards forces *three* more subclasses (one per shape). The hierarchy grows in geometric progression, unmaintainable beyond a few combinations.
 
 **Cross-platform GUIs.** A GUI app supporting multiple front-end variants (regular customer, admin) and multiple OS backends (Windows, Linux, macOS) becomes a giant spaghetti bowl. Hundreds of conditionals connect different GUI types with various APIs. Monolithic changes require understanding the *entire* codebase. Adding a new GUI or a new OS triggers yet more combinatorial growth.
 
@@ -30,7 +30,7 @@ Two independent dimensions of variation cause an exponential explosion of subcla
 
 The Bridge pattern replaces inheritance with **object composition**. You extract one dimension into its own class hierarchy and give the original class a reference to it. The original class then *delegates* work to the linked object instead of owning everything itself.
 
-**Shape × Color, solved.** Extract color-related code into a `Color` hierarchy with `Red` and `Blue` subclasses. `Shape` gets a reference field pointing to a `Color` object. The shape delegates color-related work to the linked color. That reference acts as a **bridge** between the two hierarchies. Adding a new color no longer touches the shape hierarchy — and vice versa.
+**Shape × Color, solved.** Extract color-related code into a `Color` hierarchy with `Red` and `Blue` subclasses. `Shape` gets a reference field pointing to a `Color` object. The shape delegates color-related work to the linked color. That reference acts as a **bridge** between the two hierarchies. Adding a new color no longer touches the shape hierarchy, and vice versa.
 
 **Abstraction vs. Implementation (GoF terms).** The *abstraction* is the high-level control layer (e.g., the GUI). It doesn't do real work; it delegates to the *implementation* layer (e.g., the OS API). These are conceptual roles, not programming-language constructs. You can extend both hierarchies independently: new GUIs without touching OS code, new OS support without touching GUI code.
 
@@ -49,6 +49,7 @@ The pattern turns one monolithic class hierarchy into several **related, composa
 | **Client** | Works with the abstraction. Links the abstraction to a concrete implementation (typically via the abstraction's constructor), then forgets about the implementation details. |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','classText':'#CDD3D1','mainBkg':'#19362D','nodeBorder':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 classDiagram
     class Client
     class Abstraction {
@@ -89,7 +90,7 @@ classDiagram
 The example divides a monolithic app that manages devices and their remote controls. `Device` classes act as the *implementation*; `Remote` classes act as the *abstraction*.
 
 ```
-// The "abstraction" — maintains a reference to a device and
+// The "abstraction" - maintains a reference to a device and
 // delegates all real work to it.
 class RemoteControl is
     protected field device: Device
@@ -113,13 +114,13 @@ class RemoteControl is
         device.setChannel(device.getChannel() + 1)
 
 
-// Refined abstraction — extends the remote independently of devices.
+// Refined abstraction - extends the remote independently of devices.
 class AdvancedRemoteControl extends RemoteControl is
     method mute() is
         device.setVolume(0)
 
 
-// The "implementation" interface — primitive operations that all
+// The "implementation" interface - primitive operations that all
 // devices must support. Doesn't have to match the abstraction's
 // interface; the two can be entirely different.
 interface Device is
@@ -140,7 +141,7 @@ class Radio implements Device is
     // ...
 
 
-// Client code — creates a device, passes it to the remote.
+// Client code - creates a device, passes it to the remote.
 tv = new Tv()
 remote = new RemoteControl(tv)
 remote.togglePower()
@@ -159,7 +160,7 @@ remote = new AdvancedRemoteControl(radio)
 
 - **Extend a class in several orthogonal (independent) dimensions.** When the class grows along multiple axes (form × color, GUI × platform, domain × infrastructure), Bridge extracts a separate hierarchy for each dimension. The original class delegates instead of absorbing everything.
 
-- **Switch implementations at runtime.** Bridge makes implementation replacement as simple as assigning a new value to a reference field. This is also the main reason people sometimes confuse Bridge with **Strategy** — the *intent* differs even when the structure looks similar.
+- **Switch implementations at runtime.** Bridge makes implementation replacement as simple as assigning a new value to a reference field. This is also the main reason people sometimes confuse Bridge with **Strategy:** the *intent* differs even when the structure looks similar.
 
 ---
 
@@ -168,7 +169,7 @@ remote = new AdvancedRemoteControl(radio)
 1. Identify the orthogonal dimensions (abstraction/platform, domain/infrastructure, front-end/back-end).
 2. Define the operations the client needs in the base abstraction class.
 3. Determine the operations available on all platforms and declare them in the general implementation interface.
-4. Create concrete implementation classes for each platform — all following the implementation interface.
+4. Create concrete implementation classes for each platform: all following the implementation interface.
 5. Add a reference field for the implementation type in the abstraction class. Delegate most work to that field.
 6. Create refined abstractions by extending the base abstraction for each high-level logic variant.
 7. Client passes an implementation object to the abstraction's constructor, then works only with the abstraction.
@@ -178,13 +179,13 @@ remote = new AdvancedRemoteControl(radio)
 ## Pros and Cons
 
 ### ✅ Pros
-- Platform-independent classes and apps — implementations are interchangeable as long as they follow the common interface.
+- Platform-independent classes and apps: implementations are interchangeable as long as they follow the common interface.
 - Client code works with high-level abstractions and is never exposed to platform details.
 - **Open/Closed Principle.** New abstractions and implementations can be introduced independently without modifying existing code.
 - **Single Responsibility Principle.** High-level logic lives in the abstraction; platform details live in the implementation.
 
 ### ❌ Cons
-- Applying the pattern to a highly cohesive class may introduce unnecessary complexity — you're splitting something that wasn't meant to be split.
+- Applying the pattern to a highly cohesive class may introduce unnecessary complexity; you're splitting something that wasn't meant to be split.
 
 ---
 
@@ -208,7 +209,7 @@ remote = new AdvancedRemoteControl(radio)
 - [ ] The base `Abstraction` class holds a reference to an `Implementation` object and delegates work to it.
 - [ ] Refined abstractions extend the base for high-level logic variants.
 - [ ] The client links an abstraction to a concrete implementation (typically via constructor injection).
-- [ ] After construction, the client works solely with the abstraction — implementation details are hidden.
+- [ ] After construction, the client works solely with the abstraction: implementation details are hidden.
 - [ ] Adding a new platform or a new abstraction variant requires no changes to existing code.
 
 ---

@@ -44,30 +44,31 @@ The Observer pattern adds a **subscription mechanism** to the publisher class:
 
 Whenever an important event happens, the publisher iterates over its subscriber list and calls a specific **notification method** on each one.
 
-**Decoupling through interfaces:** All subscribers implement the same `Subscriber` interface. The publisher communicates only through that interface — never directly with concrete subscriber classes. This lets you add new subscriber types without touching the publisher.
+**Decoupling through interfaces:** All subscribers implement the same `Subscriber` interface. The publisher communicates only through that interface, never directly with concrete subscriber classes. This lets you add new subscriber types without touching the publisher.
 
 If multiple publisher types exist, make them share a common publisher interface (with just subscription methods) so subscribers can observe any publisher without coupling to concrete classes.
 
 ### Real-World Analogy
 
-A **newspaper or magazine subscription.** You don't check the store for each new issue — the publisher sends it to your mailbox directly. The publisher maintains a list of subscribers and their interests. Subscribers can unsubscribe anytime.
+A **newspaper or magazine subscription.** You don't check the store for each new issue, the publisher sends it to your mailbox directly. The publisher maintains a list of subscribers and their interests. Subscribers can unsubscribe anytime.
 
 ---
 
 ## Structure
 
 
-1. **Publisher** — Issues events of interest. Contains subscription infrastructure (`subscribe`/`unsubscribe`/`notify`). When an event occurs, iterates over subscribers and calls `update()` on each.
+1. **Publisher:** Issues events of interest. Contains subscription infrastructure (`subscribe`/`unsubscribe`/`notify`). When an event occurs, iterates over subscribers and calls `update()` on each.
 
-2. **Subscriber interface** — Declares the notification contract. Usually a single `update()` method with optional parameters for contextual event data.
+2. **Subscriber interface:** Declares the notification contract. Usually a single `update()` method with optional parameters for contextual event data.
 
-3. **Concrete Subscribers** — Implement `update()` to respond to publisher events. The publisher is never coupled to these concrete classes.
+3. **Concrete Subscribers:** Implement `update()` to respond to publisher events. The publisher is never coupled to these concrete classes.
 
-4. **Client** — Creates publisher and subscriber objects separately, then registers subscribers with publishers.
+4. **Client:** Creates publisher and subscriber objects separately, then registers subscribers with publishers.
 
-5. **Context data** — Publishers often pass themselves (`this`) or event-specific data as arguments to `update()`, letting subscribers fetch what they need.
+5. **Context data:** Publishers often pass themselves (`this`) or event-specific data as arguments to `update()`, letting subscribers fetch what they need.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','classText':'#CDD3D1','mainBkg':'#19362D','nodeBorder':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 classDiagram
     class Publisher {
         -subscribers: List~Subscriber~
@@ -97,7 +98,7 @@ classDiagram
 
 ## Pseudocode ✅
 
-*Source pseudocode from the book — an event manager / text editor notification system.*
+*Source pseudocode from the book, an event manager / text editor notification system.*
 
 ### Publisher: EventManager (composition-based)
 
@@ -194,7 +195,7 @@ class Application is
 
 ✅ **Use Observer when changes to one object require changing others, and the actual set of dependent objects is unknown beforehand or changes dynamically.**
 
-*Example:* Custom GUI button classes — let clients hook custom code via subscriber classes that fire on button press. The subscription mechanism lives in the button; custom code plugs in through the subscriber interface.
+*Example:* Custom GUI button classes; let clients hook custom code via subscriber classes that fire on button press. The subscription mechanism lives in the button; custom code plugs in through the subscriber interface.
 
 ✅ **Use Observer when some objects must observe others, but only for a limited time or in specific cases.**
 
@@ -218,7 +219,7 @@ The subscription list is dynamic. Subscribers join and leave at runtime as neede
 3. Declare a **publisher interface** with `subscribe`/`unsubscribe` methods. Publishers work with subscribers only via the subscriber interface.
 4. Place subscription infrastructure in either an **abstract base publisher** (inheritance) or a **separate helper object** (composition, when extending existing classes).
 5. Concrete publishers call `notify()` on all subscribers whenever important events occur.
-6. Concrete subscribers implement `update()` — either receiving context data as arguments, fetching it from the publisher, or using a permanent publisher reference via constructor.
+6. Concrete subscribers implement `update()`: either receiving context data as arguments, fetching it from the publisher, or using a permanent publisher reference via constructor.
 7. Client creates subscribers and registers them with appropriate publishers.
 
 ---
@@ -243,7 +244,7 @@ The subscription list is dynamic. Subscribers join and leave at runtime as neede
 - [ ] Publisher holds subscriber list + `subscribe()` / `unsubscribe()` / `notify()` methods
 - [ ] All subscribers implement a common interface; publisher never depends on concrete subscribers
 - [ ] Subscribers can join or leave at runtime
-- [ ] Supports Open/Closed Principle — new subscribers without publisher changes
+- [ ] Supports Open/Closed Principle: new subscribers without publisher changes
 - [ ] Watch for: random notification order, potential memory leaks from lingering subscriptions
 - [ ] Composition-based subscription management (EventManager helper) for existing class hierarchies
 

@@ -11,7 +11,7 @@ tags:
 
 > **Design for the smallest screen first, then scale up.**
 
-It's easier to add features for larger screens than to cram a desktop design onto a phone. Mobile-first forces you to prioritize — you can only fit what matters.
+It's easier to add features for larger screens than to cram a desktop design onto a phone. Mobile-first forces you to prioritize; you can only fit what matters.
 
 ---
 
@@ -28,7 +28,7 @@ It's easier to add features for larger screens than to cram a desktop design ont
 | Reason | Explanation |
 |--------|------------|
 | **Forces prioritization** | You have 375px. What's actually essential? |
-| **Performance** | Mobile designs are naturally lighter — benefits desktop too |
+| **Performance** | Mobile designs are naturally lighter, benefits desktop too |
 | **Majority traffic** | Over 55% of web traffic is mobile (and growing) |
 | **Google ranking** | Mobile-first indexing since 2019 |
 | **Progressive enhancement** | Add complexity as screen size increases, not remove it |
@@ -94,5 +94,5 @@ Mobile users tap with fingers, not precision cursors:
 ## Sources
 
 - *Refactoring UI* by Adam Wathan & Steve Schoger
-- Google Material Design — https://m3.material.io/
-- Apple Human Interface Guidelines — https://developer.apple.com/design/human-interface-guidelines/
+- Google Material Design: https://m3.material.io/
+- Apple Human Interface Guidelines: https://developer.apple.com/design/human-interface-guidelines/

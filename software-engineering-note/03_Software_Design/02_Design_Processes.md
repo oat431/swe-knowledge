@@ -2,13 +2,13 @@
 tags: [design-process, high-level-design, detailed-design, software-design, swebok]
 ---
 
-# Design Processes — High-Level and Detailed Design
+# Design Processes: High-Level and Detailed Design
 
-> *Source: SWEBOK v4 Chapter 03 — Software Design*
+> *Source: SWEBOK v4 Chapter 03, Software Design*
 
 ## Purpose
 
-Design isn't a single step — it unfolds in layers of increasing detail. High-level design defines what the system looks like from the outside; detailed design defines how each piece works on the inside.
+Design isn't a single step; it unfolds in layers of increasing detail. High-level design defines what the system looks like from the outside; detailed design defines how each piece works on the inside.
 
 ## High-Level Design (Outward-Facing)
 
@@ -19,7 +19,7 @@ Design isn't a single step — it unfolds in layers of increasing detail. High-l
 | Artifact | Purpose |
 |---|---|
 | **Component diagram** | Major components, their responsibilities, and dependencies |
-| **Interface specifications** | APIs, contracts, data formats — how components talk |
+| **Interface specifications** | APIs, contracts, data formats, how components talk |
 | **Data architecture** | Data stores, schemas, flows, ownership |
 | **Deployment architecture** | Where each component runs, scaling strategy |
 | **Technology stack decisions** | Languages, frameworks, databases, infrastructure |
@@ -36,7 +36,7 @@ Design isn't a single step — it unfolds in layers of increasing detail. High-l
 
 ## Detailed Design (Inward-Facing)
 
-**Goal:** Define how each component works internally — algorithms, data structures, state management, error handling.
+**Goal:** Define how each component works internally, algorithms, data structures, state management, error handling.
 
 **Deliverables:**
 
@@ -56,7 +56,7 @@ Design isn't a single step — it unfolds in layers of increasing detail. High-l
 - What errors can occur, and how are they handled?
 - How are edge cases addressed?
 
-**Detailed design is sufficient when** a programmer can implement the component without making design decisions — only coding decisions remain.
+**Detailed design is sufficient when** a programmer can implement the component without making design decisions, only coding decisions remain.
 
 ## Design Process Models
 
@@ -108,12 +108,12 @@ Best for: Most modern software projects.
 ## Essential Concepts
 
 - **High-level design = "what" the system is.** Detailed design = "how" each part works.
-- **Interfaces are the most important design artifact** — they define the contract between components.
-- **Detailed design must be precise enough for implementation** — ambiguity here causes rework later.
-- **Design is iterative** — you'll revisit high-level decisions when detailed work reveals gaps.
+- **Interfaces are the most important design artifact:** they define the contract between components.
+- **Detailed design must be precise enough for implementation:** ambiguity here causes rework later.
+- **Design is iterative:** you'll revisit high-level decisions when detailed work reveals gaps.
 
 ## Related
 
-- [[Software Design Note Overview]] — All design topics
-- [[01_Design_Fundamentals_and_Principles]] — Core design principles
-- [[../02_Software_Architecture/01_Architecture_Fundamentals]] — Architecture vs. design distinction
+- [[Software Design Note Overview]]: All design topics
+- [[01_Design_Fundamentals_and_Principles]]: Core design principles
+- [[../02_Software_Architecture/01_Architecture_Fundamentals]]: Architecture vs. design distinction

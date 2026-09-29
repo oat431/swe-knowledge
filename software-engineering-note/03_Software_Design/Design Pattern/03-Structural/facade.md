@@ -25,7 +25,7 @@ The result: your business logic becomes **tightly coupled to implementation deta
 
 ## Solution
 
-Introduce a **facade class** — a single entry point that provides a simplified, convenient interface to the complex subsystem. The facade:
+Introduce a **facade class:** a single entry point that provides a simplified, convenient interface to the complex subsystem. The facade:
 
 - Exposes only the features clients actually need, not the subsystem's full power
 - Knows where to direct requests and how to operate all the moving parts
@@ -45,6 +45,7 @@ Introduce a **facade class** — a single entry point that provides a simplified
 | **Client** | Uses the facade instead of calling subsystem objects directly. |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#1B1717','primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','classText':'#CDD3D1','mainBkg':'#19362D','nodeBorder':'#1FB854','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 classDiagram
     class Facade {
         +operation()
@@ -66,7 +67,7 @@ classDiagram
 
 ## Pseudocode
 
-✅ **From source** — video conversion framework example:
+✅ **From source:** video conversion framework example:
 
 ```java
 // Complex 3rd-party video conversion framework (we don't control this code)
@@ -102,7 +103,7 @@ class VideoConverter is
         result = (new AudioMixer).fix(result)
         return new File(result)
 
-// Client code — depends only on the facade, not on dozens of framework classes
+// Client code - depends only on the facade, not on dozens of framework classes
 class Application is
     method main() is
         convertor = new VideoConverter()
@@ -114,11 +115,11 @@ class Application is
 
 ## Applicability
 
-- **You need a limited but straightforward interface to a complex subsystem.** Subsystems naturally grow more complex over time — even applying design patterns introduces more classes. The facade provides a shortcut to the most-used features that fit most client requirements.
+- **You need a limited but straightforward interface to a complex subsystem.** Subsystems naturally grow more complex over time, even applying design patterns introduces more classes. The facade provides a shortcut to the most-used features that fit most client requirements.
 
 - **You want to layer a subsystem.** Create facades as entry points to each layer (e.g., video layer, audio layer). Require layers to communicate only through their facades. This reduces coupling between multiple subsystems.
 
-- **You want to isolate client code from subsystem upgrades.** When the third-party library releases a new version, you only modify the facade — not every client that uses it.
+- **You want to isolate client code from subsystem upgrades.** When the third-party library releases a new version, you only modify the facade, not every client that uses it.
 
 ## Pros and Cons
 
@@ -133,8 +134,8 @@ class Application is
 | **Adapter** | Facade **defines a new** simplified interface; Adapter **makes an existing** interface usable. Adapter usually wraps one object; Facade wraps an entire subsystem. |
 | **Abstract Factory** | Can serve as an alternative to Facade when you only need to hide how subsystem objects are *created* from client code. |
 | **Flyweight** | Flyweight shows how to make many small objects; Facade shows how to make one object representing an entire subsystem. |
-| **Mediator** | Both organize collaboration between tightly coupled classes. **Facade**: simplified interface, no new functionality, subsystem is unaware of it, objects communicate directly. **Mediator**: centralizes communication, components only know the mediator, no direct communication. |
-| **Singleton** | A Facade class can often be transformed into a Singleton — a single facade instance is sufficient in most cases. |
+| **Mediator** | Both organize collaboration between tightly coupled classes. **Facade:** simplified interface, no new functionality, subsystem is unaware of it, objects communicate directly. **Mediator:** centralizes communication, components only know the mediator, no direct communication. |
+| **Singleton** | A Facade class can often be transformed into a Singleton, a single facade instance is sufficient in most cases. |
 | **Proxy** | Both buffer a complex entity and initialize it on their own. Unlike Facade, Proxy has the **same interface** as its service object, making them interchangeable. |
 
 ## Summary Checklist
