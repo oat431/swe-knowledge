@@ -5,7 +5,7 @@ tags:
 - protocols
 ---
 
-# 01 OSI & TCP/IP Models
+# 011 OSI & TCP-IP Models
 
 The OSI model is a reference. The TCP/IP model is reality. Both describe how data moves from an application on one machine to an application on another.
 

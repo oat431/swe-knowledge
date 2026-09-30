@@ -21,7 +21,7 @@
 - [ ] TLS terminated at the edge with auto-renewed certificates → [[03 Network & TLS]]
 - [ ] Health checks active on all upstream instances → [[../../software-engineering-note/02_Software_Architecture/Microservice/05 Observability/053 Health Checks|Health Checks]]
 - [ ] Unhealthy instances removed from pool automatically
-- [ ] Algorithm chosen with documented reasoning (round-robin default) → [[03 Load Balancing & Proxies]]
+- [ ] Algorithm chosen with documented reasoning (round-robin default) → [[032 Load Balancing & Proxies]]
 - [ ] Sticky sessions avoided unless specifically justified
 - [ ] Edge LB itself is not a SPOF
 

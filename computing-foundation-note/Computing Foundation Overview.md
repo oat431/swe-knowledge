@@ -71,7 +71,7 @@ Understanding these foundations gives software engineers the vocabulary and ment
 ## My Notes
 
 ### Core Topics
-- [[Computer Oraganization/Computer Organization Overview|Computer Organization]] — Abstractions, ISA, arithmetic, processor design, memory hierarchy, I/O, parallel computing
+- [[Computer Organization/Computer Organization Overview|Computer Organization]] — Abstractions, ISA, arithmetic, processor design, memory hierarchy, I/O, parallel computing
 - [[Programming Language Theory/Programming Language Theory Overview|Programming Language Theory]] — Expressions, binding, data types, syntax, type systems, operational semantics
 - [[Artificial_Intelligence/AI Overview|Artificial Intelligence]] — Search, logic, uncertainty, ML, reinforcement learning, NLP, vision, ethics
 - [[Algorithm Overview|Algorithm]] — Data structures, sorting, searching, DP, greedy, divide & conquer
@@ -80,7 +80,7 @@ Understanding these foundations gives software engineers the vocabulary and ment
 - [[00 Basic Concepts of a System|Basic Concepts of a System]] — Modularity, cohesion, coupling, system decomposition, integration, quality attributes
 - [[Operating Systems Overview|Operating Systems]] — Processes, memory, concurrency, file systems, IPC
 - [[Database Overview|Database]] — SQL, normalization, NoSQL, indexing, transactions, scaling
-- [[Computer Networks Overview|Computer Networks]] — OSI/TCP-IP, HTTP, DNS, TCP/UDP, load balancing, security
+- [[000 Computer Networks Overview|Computer Networks]] — OSI/TCP-IP, HTTP, DNS, TCP/UDP, load balancing, security
 - [[Design Pattern Overview|Design Patterns (Simplified)]] — Creational, structural, behavioral patterns
 - [[Clean Code Overview|Clean Code (Simplified)]] — Naming, functions, code smells, refactoring
 - [[HCI Overview|HCI (Simplified)]] — Usability principles, cognitive load, accessibility basics
@@ -88,28 +88,35 @@ Understanding these foundations gives software engineers the vocabulary and ment
 ### Gap-Filling Topics (Added 2026-07-21)
 - [[Programming Language Theory/08_Compiler_Design|Compiler Design]] — Compilation pipeline, lexing, parsing, semantic analysis, SSA, optimization, code generation, JIT
 - [[Operating Systems/04 Distributed Systems/04_Distributed_Systems|Distributed Systems]] — CAP theorem, Paxos/Raft, consistent hashing, CRDTs, fault tolerance, MapReduce
-- [[Computer Networks/02 Protocols/02_Wireless_and_Mobile|Wireless & Mobile Networks]] — WiFi, Bluetooth, cellular 1G-5G, FDMA/TDMA/CDMA/OFDMA, Mobile IP, WPA3
+- [[Computer Networks/02 Protocols/025 Wireless & Mobile|Wireless & Mobile Networks]] — WiFi, Bluetooth, cellular 1G-5G, FDMA/TDMA/CDMA/OFDMA, Mobile IP, WPA3
 - [[Database/04 Data Warehousing/04_Data_Warehousing_and_Mining|Data Warehousing & Mining]] — OLAP vs OLTP, star/snowflake schemas, ETL/ELT, data mining techniques
 - [[Artificial_Intelligence/09_AI_SE_Intersection|AI ↔ SE Intersection]] — AI for SE (defect prediction, test generation), SE for AI (ML pipelines, MLOps, responsible AI)
 - [[00 Basic Concepts of a System|Basic Concepts of a System]] — System definition, problem-to-solution mapping, modularity/cohesion/coupling, system lifecycle
 
+### Depth Expansion (Added 2026-09-30)
+Networks, OS, and Computer Organization were audited and expanded with 14 notes covering practitioner-level gaps:
+- **Computer Networks (+6):** [[Computer Networks/01 Fundamentals/015 Routing - BGP & OSPF|Routing — BGP & OSPF]] · [[Computer Networks/01 Fundamentals/012 Ethernet, Switching & VLANs|Ethernet, Switching & VLANs]] · [[Computer Networks/02 Protocols/023 TLS & PKI Deep Dive|TLS & PKI Deep Dive]] · [[Computer Networks/03 Infrastructure/031 Network Programming & Sockets|Network Programming & Sockets]] · [[Computer Networks/03 Infrastructure/033 Realtime Protocols - WebSockets, SSE & gRPC|Realtime Protocols]] · [[Computer Networks/03 Infrastructure/034 VPN & Overlay Networks|VPN & Overlay Networks]]
+- **Operating Systems (+6):** [[Operating Systems/05 Virtualization & Containers/05 Containers - Namespaces & Cgroups|Containers — Namespaces & Cgroups]] · [[Operating Systems/05 Virtualization & Containers/05 Virtualization - KVM & Hypervisors|Virtualization — KVM & Hypervisors]] · [[Operating Systems/06 Linux Internals/06 I O Models & Async|I/O Models & Async (epoll, io_uring)]] · [[Operating Systems/06 Linux Internals/06 Boot & systemd|Boot & systemd]] · [[Operating Systems/06 Linux Internals/06 Memory Pressure - OOM, PSI, Swap & NUMA|Memory Pressure — OOM, PSI, Swap & NUMA]] · [[Operating Systems/06 Linux Internals/06 OS Security Model - Capabilities, SELinux & Seccomp|OS Security Model]]
+- **Computer Organization (+2):** [[Computer Organization/08_Modern_ISAs_x86_ARM64_RISCV|Modern ISAs — x86-64, ARM64, RISC-V]] · [[Computer Organization/09_Speculative_Execution_and_Security|Speculative Execution & Security (Spectre/Meltdown)]]
+- **Fixes:** CPU Scheduling updated for EEVDF (Linux 6.6+ default, replacing CFS); folder typo `Computer Oraganization` → `Computer Organization` renamed vault-wide
+
 ## Coverage Status
 
-> **100% SWEBOK v4 Chapter 16 Coverage Achieved**
+> **100% SWEBOK v4 Chapter 16 Coverage Achieved** — plus practitioner depth beyond SWEBOK (2026-09-30 expansion)
 
 | Area | Status | Notes |
 |------|--------|-------|
-| Computer Architecture & Organization | ✅ Complete | 7 files + overview |
+| Computer Architecture & Organization | ✅ Complete | 9 files + overview (incl. modern ISAs, speculative execution) |
 | Data Structures & Algorithms | ✅ Complete | 25+ files (basic + advanced) |
 | Programming Fundamentals & Languages | ✅ Complete | 12 Fundamental + 8 PLT files |
-| Operating Systems | ✅ Complete | 9 files + Distributed Systems |
+| Operating Systems | ✅ Complete | 15 files + overview (incl. containers, virtualization, Linux internals) |
 | Database Management | ✅ Complete | 8 files + Data Warehousing |
-| Computer Networks | ✅ Complete | 8 files + Wireless/Mobile |
+| Computer Networks | ✅ Complete | 14 files + overview (incl. routing, TLS/PKI, sockets, VPN) |
 | Human Factors & HCI | ✅ Complete | 11 files (HCI, Clean Code, Design Patterns) |
 | AI & Machine Learning | ✅ Complete | 9 files + AI-SE Intersection |
-| Basic Concepts of a System | ✅ Complete | 1 file (10_Basic_Concepts_of_a_System) |
+| Basic Concepts of a System | ✅ Complete | 1 file (00_Basic_Concepts_of_a_System) |
 
-**Total:** 119 files covering all 9 SWEBOK Computing Foundations knowledge areas.
+**Total:** 138 files covering all 9 SWEBOK Computing Foundations knowledge areas.
 
 ## Relationship to Other Foundations
 

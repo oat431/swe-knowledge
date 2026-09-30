@@ -26,7 +26,7 @@ The OS decides which thread gets the CPU next. Understanding scheduling helps yo
 
 ## Linux CFS — Completely Fair Scheduler
 
-> The default Linux scheduler since 2.6.23 (2007).
+> The default Linux scheduler from 2.6.23 (2007) until **kernel 6.6 (Oct 2023)**, when it was replaced by **EEVDF** (Earliest Eligible Virtual Deadline First).
 
 ```
 Key idea: Each runnable thread gets a "fair share" of CPU time.
@@ -36,6 +36,29 @@ weighted by priority (nice value).
 Lower vruntime → runs next.
 Higher priority (lower nice) → vruntime accumulates slower → gets more CPU.
 ```
+
+### EEVDF — The Current Default (kernel 6.6+)
+
+> CFS was fair but weak at **latency**: it couldn't distinguish "needs CPU soon" from "needs a lot of CPU". EEVDF fixes this.
+
+```
+Each task requests a "time slice" (need) and gets a virtual deadline.
+A task is ELIGIBLE if it has received no more than its fair share so far.
+Among eligible tasks, the one with the EARLIEST virtual deadline runs.
+
+Latency-sensitive tasks request short slices → earlier deadlines → scheduled sooner.
+CPU-hungry tasks request long slices → run in bigger, cheaper-to-schedule chunks.
+```
+
+| | CFS | EEVDF |
+|---|---|---|
+| **Goal** | Fairness (equal share over time) | Fairness **bounded by latency** |
+| **Pick next by** | Lowest vruntime | Earliest virtual deadline among eligible |
+| **Latency-sensitive tasks** | Wait their turn (poor for interactive/RT-adjacent) | Short slice → early deadline → run sooner |
+| **sched_attr slice control** | N/A | `sched_setattr()` with `sched_runtime` to request slice length |
+| **In kernels** | 2.6.23 – 6.5 | 6.6+ (same nice-value interface, drop-in for users) |
+
+> In practice: `nice`, `taskset`, and cgroup CPU weights work the same. What changed is *which runnable thread wins* — EEVDF favors threads that need the CPU briefly and soon (audio, request handlers) over threads that want it for a long time (batch jobs).
 
 ### Nice Values
 
@@ -103,4 +126,6 @@ mpstat -P ALL 1
 ## Sources
 
 - Linux CFS Documentation — `Documentation/scheduler/sched-design-CFS.txt`
-- `man sched`, `man nice`, `man chrt`
+- Linux EEVDF Scheduler — `Documentation/scheduler/sched-eevdf.rst` (kernel 6.6+)
+- Ion Stoica & Hussein Abdel-Wahab. *Earliest Eligible Virtual Deadline First: A Flexible and Accurate Mechanism for Proportional Share Resource Allocation* (1995)
+- `man sched`, `man nice`, `man chrt`, `man sched_setattr`

@@ -386,7 +386,7 @@ A programming model for processing large datasets in parallel across a distribut
 ## Related
 
 - [[Operating Systems Overview]] — IPC, synchronization, deadlocks
-- [[Computer Networks Overview]] — Network protocols and communication
+- [[000 Computer Networks Overview]] — Network protocols and communication
 - [[Database Overview]] — Distributed databases, consistency models
 - [[Computer Organization Overview]] — Parallel computing architectures
 

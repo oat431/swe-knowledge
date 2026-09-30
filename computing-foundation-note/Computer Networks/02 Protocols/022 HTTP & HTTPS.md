@@ -5,7 +5,7 @@ tags:
 - protocols
 ---
 
-# 02 HTTP & HTTPS
+# 022 HTTP & HTTPS
 
 HTTP is the language of the web. Every API call, every page load, every WebSocket connection starts as an HTTP request. Understanding it deeply makes you a better backend developer.
 

@@ -9,7 +9,7 @@ tags:
 source: "Wireless Communications & Networks — Stallings; Wireless Communications: Principles and Practice — Rappaport"
 ---
 
-# Wireless and Mobile Networks
+# 025 Wireless & Mobile
 
 > **Source:** *Wireless Communications & Networks* by Stallings; *Wireless Communications: Principles and Practice* by Rappaport
 
@@ -287,10 +287,10 @@ Where M = number of signal levels.
 
 ## Related
 
-- [[Computer Networks Overview]] — OSI model, TCP/IP, HTTP
-- [[01 OSI & TCP-IP Models]] — Network protocol fundamentals
-- [[02 TCP & UDP]] — Transport layer protocols
-- [[03 Network Security]] — Network security fundamentals
+- [[000 Computer Networks Overview]] — OSI model, TCP/IP, HTTP
+- [[011 OSI & TCP-IP Models]] — Network protocol fundamentals
+- [[021 TCP & UDP]] — Transport layer protocols
+- [[035 Network Security]] — Network security fundamentals
 
 ---
 

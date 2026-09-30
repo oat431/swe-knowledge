@@ -5,7 +5,7 @@ tags:
 - protocols
 ---
 
-# 01 DNS Deep Dive
+# 014 DNS Deep Dive
 
 DNS is the phonebook of the internet. When it breaks, "the internet is down" — even though it's just name resolution failing.
 

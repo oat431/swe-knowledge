@@ -21,6 +21,8 @@ This vault covers **computer architecture and organization** — how computers w
 | [[05_Memory_Hierarchy]] | Caches (direct-mapped, set-associative), virtual memory, TLB, cache coherence | Ch 5 |
 | [[06_IO_and_Storage]] | Dependability, disk storage, flash, I/O buses, DMA, RAID | Ch 6 |
 | [[07_Parallel_Computing]] | Multicores, multiprocessors, SIMD, GPU architecture, roofline model | Ch 7 |
+| [[08_Modern_ISAs_x86_ARM64_RISCV]] | x86-64, ARM64/AArch64, RISC-V, calling conventions, memory ordering (TSO vs weak) | Beyond H&P |
+| [[09_Speculative_Execution_and_Security]] | Spectre/Meltdown, transient execution attacks, KPTI, retpoline, mitigations | Beyond H&P |
 
 ## How These Topics Relate
 
@@ -42,7 +44,9 @@ flowchart TD
 |---|---|
 | **How computers work** | [[01_Computer_Abstractions]] → [[02_Instruction_Set_Architecture]] → [[04_Processor_Design]] |
 | **Performance optimization** | [[05_Memory_Hierarchy]] → [[07_Parallel_Computing]] |
-| **Assembly programming** | [[02_Instruction_Set_Architecture]] |
+| **Assembly programming** | [[02_Instruction_Set_Architecture]] → [[08_Modern_ISAs_x86_ARM64_RISCV]] |
+| **Real-world hardware (servers, Apple Silicon, cloud)** | [[08_Modern_ISAs_x86_ARM64_RISCV]] |
+| **Hardware security** | [[04_Processor_Design]] → [[09_Speculative_Execution_and_Security]] |
 | **Hardware design** | [[03_Computer_Arithmetic]] → [[04_Processor_Design]] → [[05_Memory_Hierarchy]] |
 | **Systems programming** | [[05_Memory_Hierarchy]] → [[06_IO_and_Storage]] |
 

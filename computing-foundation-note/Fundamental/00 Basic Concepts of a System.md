@@ -467,7 +467,7 @@ flowchart LR
 | **Data consistency** | Keeping data consistent across modules | Saga pattern, eventual consistency, compensating transactions |
 | **Configuration drift** | Modules disagree on shared settings | Centralized configuration, infrastructure as code |
 
-> **Related**: See [[Design Patterns Simplify/02 Structural Patterns]] for Adapter and Bridge patterns used in integration. See [[Computer Networks]] for network-level integration concerns.
+> **Related**: See [[Design Patterns Simplify/02 Structural Patterns]] for Adapter and Bridge patterns used in integration. See [[000 Computer Networks Overview|Computer Networks]] for network-level integration concerns.
 
 ---
 
@@ -570,7 +570,7 @@ Cloud computing abstracts hardware but does not eliminate co-design concerns:
 - **Network topology**: availability zones, regions, edge locations
 - **Cost optimization**: right-sizing, spot instances, reserved capacity
 
-> **Related**: See [[Computer Oraganization]] for hardware architecture fundamentals. See [[Operating Systems]] for how the OS mediates between hardware and software.
+> **Related**: See [[Computer Organization Overview|Computer Organization]] for hardware architecture fundamentals. See [[Operating Systems Overview|Operating Systems]] for how the OS mediates between hardware and software.
 
 ---
 
@@ -768,7 +768,7 @@ Technical debt accumulates when short-term decisions compromise long-term qualit
 - **Evolution**: Bolt-on features that don't fit the original architecture, deferred refactoring
 - **Retirement**: Procrastinated decommissioning, unclear data ownership
 
-> **Related**: See [[Clean Code Simplify]] for practices that minimize technical debt during development. See [[Fundamental Overview]] for the complete Computing Foundations curriculum map.
+> **Related**: See [[Clean Code Overview|Clean Code]] for practices that minimize technical debt during development. See [[Fundamental Overview]] for the complete Computing Foundations curriculum map.
 
 ---
 
@@ -820,7 +820,7 @@ When designing or evaluating a system, use this checklist to ensure all fundamen
 - [[Design Patterns Simplify/03 Behavioral Patterns]] for Observer, Strategy, and Mediator patterns that manage component interaction
 - [[07 Error Handling]] for handling failures across module boundaries
 - [[08 Memory Management]] for understanding resource-level system concerns
-- [[Computer Oraganization]] for hardware architecture fundamentals
-- [[Operating Systems]] for OS-level system concepts
-- [[Computer Networks]] for distributed system communication
-- [[Clean Code Simplify]] for practices that maintain system quality during development
+- [[Computer Organization Overview|Computer Organization]] for hardware architecture fundamentals
+- [[Operating Systems Overview|Operating Systems]] for OS-level system concepts
+- [[000 Computer Networks Overview|Computer Networks]] for distributed system communication
+- [[Clean Code Overview|Clean Code]] for practices that maintain system quality during development

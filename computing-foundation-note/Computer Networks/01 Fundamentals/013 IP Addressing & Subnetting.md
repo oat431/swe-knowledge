@@ -5,7 +5,7 @@ tags:
 - protocols
 ---
 
-# 01 IP Addressing & Subnetting
+# 013 IP Addressing & Subnetting
 
 Every device on the internet has an IP address. Understanding how addressing works — and how subnetting controls routing — is essential for debugging connectivity issues.
 

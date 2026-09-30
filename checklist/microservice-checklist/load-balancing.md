@@ -15,7 +15,7 @@ last_updated: 2026-08-06
 
 ## Architecture Decision
 
-- [ ] **L4 vs L7 chosen:** document reasoning; do not assume edge is always L7 or internal traffic is always L4 → [[03 Load Balancing & Proxies]]
+- [ ] **L4 vs L7 chosen:** document reasoning; do not assume edge is always L7 or internal traffic is always L4 → [[032 Load Balancing & Proxies]]
 - [ ] L4 (transport): route by IP + port. Faster, simpler. Internal service-to-service
 - [ ] L7 (application): route by URL, headers, cookies. Can do auth, rate limit, transform. Edge/external
 - [ ] Edge: L7. Internal: L4 is often enough
@@ -88,7 +88,7 @@ last_updated: 2026-08-06
 
 ## Connection Management
 
-- [ ] **Connection pooling to upstreams:** HTTP keep-alive → [[03 Load Balancing & Proxies]]
+- [ ] **Connection pooling to upstreams:** HTTP keep-alive → [[032 Load Balancing & Proxies]]
 - [ ] Pool size tuned: max idle connections, max connections per host
 - [ ] Don't open new connection per request
 - [ ] **Request retry on connection failure:** only when the operation and failure window are safe to retry; HTTP idempotency is not a substitute for application-level idempotency keys
@@ -152,6 +152,6 @@ last_updated: 2026-08-06
 
 ## Sources
 
-- [[03 Load Balancing & Proxies]]: L4 vs L7, algorithms, NGINX/HAProxy config
+- [[032 Load Balancing & Proxies]]: L4 vs L7, algorithms, NGINX/HAProxy config
 - [[microservice-infrastructure]]: full infrastructure reference (Part 2)
 - [[Microservice Launch]]: system-wide launch checklist

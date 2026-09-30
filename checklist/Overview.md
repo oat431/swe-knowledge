@@ -62,6 +62,6 @@ The original checklists in `../` are your **reference manuals**; keep them for d
 | Microservices, Resilience, Patterns | [[Microservice Overview]] |
 | Security, OWASP, Auth, TLS | [[Cybersecurity Overview]] |
 | Testing, QA, CI/CD | [[QA Overview]] |
-| Networking, DNS, HTTP, TCP | [[Computer Networks Overview]] |
+| Networking, DNS, HTTP, TCP | [[000 Computer Networks Overview]] |
 | OS, Processes, Memory, Concurrency | [[Operating Systems Overview]] |
 | Clean Code, Architecture | Clean Code / Clean Architecture |
