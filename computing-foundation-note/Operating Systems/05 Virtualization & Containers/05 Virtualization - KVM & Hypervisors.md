@@ -6,9 +6,9 @@ tags:
 - virtualization
 ---
 
-# 05 Virtualization — KVM & Hypervisors
+# 05 Virtualization: KVM & Hypervisors
 
-Virtualization means presenting **virtual hardware** — CPU, RAM, disks, NICs — so an unmodified guest OS believes it owns a real machine. Where containers share one kernel ([[05 Containers - Namespaces & Cgroups]]), every VM boots its *own* kernel on top of a hypervisor. That hardware-enforced boundary is the whole point: it's why banks, clouds, and multi-tenant platforms run VMs.
+Virtualization means presenting **virtual hardware** (CPU, RAM, disks, NICs) so an unmodified guest OS believes it owns a real machine. Where containers share one kernel ([[05 Containers - Namespaces & Cgroups]]), every VM boots its *own* kernel on top of a hypervisor. That hardware-enforced boundary is the whole point: it's why banks, clouds, and multi-tenant platforms run VMs.
 
 ---
 
@@ -18,14 +18,14 @@ Virtualization means presenting **virtual hardware** — CPU, RAM, disks, NICs �
 |---|---|---|
 | Runs on | Hardware directly | Inside a host OS |
 | Examples | VMware ESXi, Xen, Microsoft Hyper-V, Proxmox VE (KVM) | VirtualBox, VMware Workstation/Fusion, Parallels |
-| Overhead | Minimal — no host OS in the path | Host OS scheduler/stack in the way |
+| Overhead | Minimal: no host OS in the path | Host OS scheduler/stack in the way |
 | Use case | Datacenter, production cloud | Dev laptops, testing |
 
 ### Where KVM actually sits
 
-KVM is a **Linux kernel module** (`kvm.ko` + `kvm-intel.ko`/`kvm-amd.ko`) that turns the Linux kernel itself into a hypervisor: it exposes `/dev/kvm` and handles CPU/memory virtualization. **QEMU** is the user-space half — device emulation (disks, NICs, BIOS/UEFI), VM process management. One VM = one QEMU process; each vCPU = one host thread.
+KVM is a **Linux kernel module** (`kvm.ko` + `kvm-intel.ko`/`kvm-amd.ko`) that turns the Linux kernel itself into a hypervisor: it exposes `/dev/kvm` and handles CPU/memory virtualization. **QEMU** is the user-space half: device emulation (disks, NICs, BIOS/UEFI), VM process management. One VM = one QEMU process; each vCPU = one host thread.
 
-> The taxonomy nuance: KVM doesn't run "on bare metal" — the Linux host is technically the hypervisor OS. But since guests run in hardware-assisted isolation and the host kernel *is* the hypervisor, it behaves as Type 1. That's why Proxmox (Debian + KVM) and every major cloud (EC2's older Nitro-predecessors, GCE, Azure Linux hosts) are classified Type 1.
+> The taxonomy nuance: KVM doesn't run "on bare metal": the Linux host is technically the hypervisor OS. But since guests run in hardware-assisted isolation and the host kernel *is* the hypervisor, it behaves as Type 1. That's why Proxmox (Debian + KVM) and every major cloud (EC2's older Nitro-predecessors, GCE, Azure Linux hosts) are classified Type 1.
 
 ```bash
 # Is this machine virtualization-capable?
@@ -37,16 +37,16 @@ sudo systemctl enable --now libvirtd
 
 ---
 
-## CPU Virtualization — A Short History
+## CPU Virtualization: A Short History
 
-The problem: x86 has 4 privilege rings, but a guest OS kernel expects ring 0 for itself. It can't have it (the hypervisor needs ring 0), yet **17 sensitive instructions** (e.g. `POPF`, `SGDT`, `LMSW`) don't trap when executed at reduced privilege — they just silently misbehave. Classic **trap-and-emulate** (Popek–Goldberg, 1974) fails on x86: *ring aliasing*.
+The problem: x86 has 4 privilege rings, but a guest OS kernel expects ring 0 for itself. It can't have it (the hypervisor needs ring 0), yet **17 sensitive instructions** (e.g. `POPF`, `SGDT`, `LMSW`) don't trap when executed at reduced privilege: they just silently misbehave. Classic **trap-and-emulate** (Popek–Goldberg, 1974) fails on x86: *ring aliasing*.
 
 | Era | Technique | How | Fate |
 |-----|-----------|-----|------|
 | ~1999 | **Binary translation** (VMware) | Rewrite guest kernel code on the fly; trap-prone instructions replaced with calls to the VMM | Worked on any x86; slow, complex |
 | 2003 | **Paravirtualization** (Xen) | *Modify* the guest OS to call the hypervisor directly ("hypercalls") instead of using privileged instructions | Fast, but guests must be ported |
 | 2005+ | **Hardware assist: VT-x / AMD-V** | CPU gains a mode *above* ring 0: **root mode** (hypervisor) vs **non-root mode** (guest). Guest runs full-speed in non-root; sensitive events trigger a **VM exit** → hypervisor handles → **VM entry** resumes. State saved in VMCS (Intel) / VMCB (AMD) | The universal answer; KVM exists because of this |
-| 2008+ | **EPT (Intel) / NPT or RVI (AMD)** | Hardware **nested page tables**: guest-physical → host-physical translation done by the MMU, no shadow-page bookkeeping | Made memory virtualization ~2× faster |
+| 2008+ | **EPT (Intel) / NPT or RVI (AMD)** | Hardware **nested page tables:** guest-physical → host-physical translation done by the MMU, no shadow-page bookkeeping | Made memory virtualization ~2× faster |
 
 ```
 VM entry ──▶ guest runs at full speed (non-root mode)
@@ -63,7 +63,7 @@ Exits cost ~0.5–2 µs each; hypervisor engineering is largely *exit avoidance*
 
 ## Memory Virtualization
 
-Three address levels: **guest virtual → guest physical → host physical**. Pre-EPT, hypervisors kept *shadow page tables* merging both translations — correct but brutally expensive on TLB flushes. With **EPT/NPT** the MMU walks two page tables in hardware; the hypervisor just maintains the G→H map.
+Three address levels: **guest virtual → guest physical → host physical**. Pre-EPT, hypervisors kept *shadow page tables* merging both translations: correct but brutally expensive on TLB flushes. With **EPT/NPT** the MMU walks two page tables in hardware; the hypervisor just maintains the G→H map.
 
 Memory overcommit tricks:
 
@@ -72,7 +72,7 @@ Memory overcommit tricks:
 | **Ballooning** (`virtio-balloon`) | A guest driver inflates a "balloon" of pages on host request; guest OS hands them over thinking they're in use → host reclaims. Cooperative, no guest crash. |
 | **KSM** (Kernel Samepage Merging) | Scans host RAM, merges *identical* pages (same OS image across 100 VMs → 1 copy, marked COW). Free density; small CPU cost, security caveat (side channels). |
 | **Huge pages** | Back guest RAM with 2 MB/1 GB pages → fewer EPT entries, fewer TLB misses. Standard for latency-sensitive VMs (NFV, databases). |
-| **Swap / page-out** | Host swaps cold guest pages. Last resort — guests double-swap unpredictably. |
+| **Swap / page-out** | Host swaps cold guest pages. Last resort: guests double-swap unpredictably. |
 
 ```bash
 cat /sys/kernel/mm/ksm/pages_shared      # KSM activity
@@ -81,7 +81,7 @@ grep Huge /proc/meminfo                  # hugepages in use
 
 ---
 
-## I/O Virtualization — Three Speeds
+## I/O Virtualization: Three Speeds
 
 | Approach | Mechanism | Cost | Example |
 |----------|-----------|------|---------|
@@ -102,6 +102,7 @@ SR-IOV:    guest driver ↔ NIC virtual function             (host bypassed)
 Move a running VM between hosts with near-zero downtime (**pre-copy**):
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'actorBkg':'#19362D','actorBorder':'#1FB854','actorTextColor':'#CDD3D1','actorLineColor':'#1FB854','signalColor':'#CDD3D1','signalTextColor':'#CDD3D1','labelBoxBkgColor':'#161212','labelBoxBorderColor':'#1FB854','labelTextColor':'#CDD3D1','loopTextColor':'#CAC9C9','noteBkgColor':'#1EB88E','noteTextColor':'#000C07','activationBkgColor':'#1EB88E','activationBorderColor':'#1FB8AB','sequenceNumberColor':'#000000','background':'#1B1717','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 sequenceDiagram
     participant S as Source host
     participant D as Destination
@@ -110,7 +111,7 @@ sequenceDiagram
     S->>D: 2. Iteratively re-send dirty pages<br/>(KVM dirty-page bitmap / dirty ring)
     Note over S,D: 3. Converge: dirty rate < network rate
     S->>D: 4. Pause VM, copy final dirty pages + CPU/device state
-    Note over D: 5. Resume on destination — downtime ~10–500 ms
+    Note over D: 5. Resume on destination - downtime ~10–500 ms
 ```
 
 Requirements: shared storage (or storage migration too), same CPU feature set (libvirt `cpu mode='custom'` masks differences), fast network vs dirty-page rate (write-heavy VMs may never converge → auto-converge throttles the guest vCPUs).
@@ -130,11 +131,11 @@ cat /sys/module/kvm_intel/parameters/nested   # Y
 egrep -c '(vmx|svm)' /proc/cpuinfo
 ```
 
-Works on GCP (with a license flag), Azure (Dv3/Ev3+), bare-metal anywhere; slower than level 1 — each level adds exit multiplexing.
+Works on GCP (with a license flag), Azure (Dv3/Ev3+), bare-metal anywhere; slower than level 1; each level adds exit multiplexing.
 
 ---
 
-## VM vs Container — and the Middle Ground
+## VM vs Container – and the Middle Ground
 
 | Dimension | **VM** | **Container** |
 |-----------|--------|---------------|
@@ -142,20 +143,20 @@ Works on GCP (with a license flag), Azure (Dv3/Ev3+), bare-metal anywhere; slowe
 | Attack surface escaped-to | Tiny, purpose-built hypervisor | Entire Linux kernel (~350 syscalls, reduced by seccomp) |
 | Boot time | Seconds–minutes (full OS) | Milliseconds |
 | Image size | GBs (whole OS) | MBs–hundreds of MB |
-| Kernel | Guest's own — any OS (Windows, BSD) | Host kernel only, Linux (or Windows) ABI |
+| Kernel | Guest's own: any OS (Windows, BSD) | Host kernel only, Linux (or Windows) ABI |
 | Density | Tens per host | Hundreds–thousands |
 | Resource overhead | Per-VM fixed cost (guest OS RAM) | Near zero beyond app |
 
 **When to use which:**
 - Untrusted / multi-tenant / third-party code, strong compliance, mixed OSes → **VMs** (or microVMs).
 - Your own trusted microservices, fast scaling, CI/CD → **containers**.
-- Untrusted code that must start like a container → **microVMs**:
+- Untrusted code that must start like a container → **microVMs:**
 
 | Tech | What it is |
 |------|-----------|
-| **Firecracker** (AWS) | Minimal Rust VMM on KVM: ~125 ms boot, <5 MB overhead per VM, virtio-only. Runs **AWS Lambda and Fargate** — container API, VM isolation. |
+| **Firecracker** (AWS) | Minimal Rust VMM on KVM: ~125 ms boot, <5 MB overhead per VM, virtio-only. Runs **AWS Lambda and Fargate:** container API, VM isolation. |
 | **gVisor** (Google) | Not a VM: a user-space kernel (*Sentry*, written in Go) intercepting syscalls via ptrace/KVM platform. Container-compatible, big syscall-compat & perf cost. |
-| **Kata Containers** | OCI runtime that puts each container (pod) in a lightweight QEMU/Firecracker VM — drops into Kubernetes via RuntimeClass. |
+| **Kata Containers** | OCI runtime that puts each container (pod) in a lightweight QEMU/Firecracker VM: drops into Kubernetes via RuntimeClass. |
 
 ```yaml
 # Kubernetes: pick the sandbox per workload
@@ -167,7 +168,7 @@ handler: kata-qemu
 
 ---
 
-## Practical Commands — libvirt & QEMU
+## Practical Commands: libvirt & QEMU
 
 ```bash
 # VM lifecycle
@@ -195,17 +196,17 @@ qemu-system-x86_64 -enable-kvm -m 2048 -smp 2 \
 
 # KVM health
 ls -l /dev/kvm                   # must exist
-kvm_stat -1                      # VM exits by reason — tuning gold
+kvm_stat -1                      # VM exits by reason - tuning gold
 ```
 
 ---
 
 ## Sources
 
-- Keith Adams & Ole Agesen. *A Comparison of Software and Hardware Techniques for x86 Virtualization* (VMware, ASPLOS 2006) — the definitive BT-vs-VT-x paper.
+- Keith Adams & Ole Agesen. *A Comparison of Software and Hardware Techniques for x86 Virtualization* (VMware, ASPLOS 2006): the definitive BT-vs-VT-x paper.
 - Intel SDM Vol. 3C: *Virtual-Machine Extensions* (VMCS, VM entry/exit); AMD APM Vol. 2: SVM.
 - Kernel docs: `Documentation/virt/kvm/` (API, dirty ring, nested), https://www.linux-kvm.org
 - QEMU/libvirt documentation: https://libvirt.org/docs.html, https://www.qemu.org/docs/master/
 - Agache et al. *Firecracker: Lightweight Virtualization for Serverless Applications* (NSDI 2020).
-- gVisor design docs — https://gvisor.dev/docs/architecture_guide/
-- Sotnikov & Keicher. *Virtualization: From Research to Production* (USENIX ;login: 2015) — KVM history.
+- gVisor design docs: https://gvisor.dev/docs/architecture_guide/
+- Sotnikov & Keicher. *Virtualization: From Research to Production* (USENIX ;login: 2015): KVM history.

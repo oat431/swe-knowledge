@@ -220,13 +220,13 @@ Single-level decision trees as weak learners.
 
 ### Explanation-Based Learning (EBL)
 
-Extract general rules from a single example through **explanation** and **generalization**:
+Extract general rules from a single example through **explanation** and **generalization:**
 1. Construct an explanation (proof tree) for the example
 2. Generalize constants in the explanation
 
 ### Inductive Logic Programming (ILP)
 
-Inductive learning in **first-order logic**:
+Inductive learning in **first-order logic:**
 - **Top-down:** Start from very general rules and refine
 - **Bottom-up:** Reverse the deduction process
 - Can automatically generate new predicates
@@ -316,7 +316,7 @@ Maximizing likelihood = minimizing $L_2$ loss (assuming Gaussian noise).
 
 ## Related
 
-- [[AI Overview]] — All AI topics
-- [[06_Reinforcement_Learning]] — RL as a learning paradigm
-- [[04_Uncertainty_and_Decisions]] — Probabilistic models
-- [[07_NLP_and_Perception]] — Applications of ML
+- [[AI Overview]]: All AI topics
+- [[06_Reinforcement_Learning]]: RL as a learning paradigm
+- [[04_Uncertainty_and_Decisions]]: Probabilistic models
+- [[07_NLP_and_Perception]]: Applications of ML

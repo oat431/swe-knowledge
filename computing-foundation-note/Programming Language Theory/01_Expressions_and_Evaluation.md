@@ -43,12 +43,12 @@ Few languages are exclusively imperative or exclusively functional:
 
 Being **effect-free** (pure) has advantages:
 - Independent of *how* a machine evaluates expressions
-- **Referential transparency**: replacing a subexpression with its value cannot be observed as evaluating differently
+- **Referential transparency:** replacing a subexpression with its value cannot be observed as evaluating differently
 - Final result does not depend on evaluation order
 - Easier to reason about programs in isolation
 - Easier for compilers to optimize
 
-> **Key insight**: It is too simplistic to say a language *is* imperative or functional. Rather, it is a **bias in perspective** in how we see computation and programs.
+> **Key insight:** It is too simplistic to say a language *is* imperative or functional. Rather, it is a **bias in perspective** in how we see computation and programs.
 
 - For **imperative** constructs → speak of *statement execution* modifying memory
 - For **functional** constructs → think of *expression evaluation* reducing to a value
@@ -82,11 +82,11 @@ if (1 < 2) 3 else 4  // Int = 3
 "Hello" + "!"   // String = "Hello!"
 ```
 
-> A **value** is an expression that cannot be evaluated any further — the result of evaluating an expression.
+> A **value** is an expression that cannot be evaluated any further, the result of evaluating an expression.
 
 ### Meta-Variables
 
-To refer to arbitrary entities in a language, we use **meta-variables**:
+To refer to arbitrary entities in a language, we use **meta-variables:**
 - `v` for a value
 - `τ` for a type
 - `e` for an expression
@@ -99,7 +99,7 @@ We assert types using the notation `e : τ` (expression `e` has type `τ`):
 42: Int                    // ✓ well-typed
 true: Boolean              // ✓ well-typed
 44 - 2: Int                // ✓ well-typed
-42: Boolean                // ✗ type mismatch — compilation error
+42: Boolean                // ✗ type mismatch - compilation error
 true - 2                   // ✗ value - is not a member of Boolean
 ```
 
@@ -115,7 +115,7 @@ true - 2                   // ✗ value - is not a member of Boolean
     └── 4: Int
 ```
 
-> **Scala is statically typed**: the compiler performs type checking at compile-time and only translates well-typed expressions.
+> **Scala is statically typed:** the compiler performs type checking at compile-time and only translates well-typed expressions.
 
 ### 3.2.2 Run-Time Errors
 
@@ -125,7 +125,7 @@ An expression may not always yield a value:
 42 / 0   // run-time error: ArithmeticException
 ```
 
-**Key terminology**:
+**Key terminology:**
 - **Static** = before evaluating the program (compile-time)
 - **Dynamic** = during the evaluation of the program (run-time)
 - **Dynamically typed** = no type checking before evaluation; run-time type errors raised when evaluation encounters an operation on wrong types
@@ -140,13 +140,13 @@ println("Hello!"): Unit
 (): Unit   // the single unit value
 ```
 
-> The `Unit` type has one single value `()` — usually associated with side-effecting expressions.
+> The `Unit` type has one single value `()`, usually associated with side-effecting expressions.
 
 ### 3.2.4 Operators
 
 Scala has all usual operators on numeric, Boolean, and String types. Implicit conversions exist (e.g., `toInt`, `toLong`, `toString`).
 
-**All operators are actually methods** — operator syntax is syntactic sugar:
+**All operators are actually methods:** operator syntax is syntactic sugar:
 
 ```scala
 3 + 4        // same as
@@ -156,7 +156,7 @@ Scala has all usual operators on numeric, Boolean, and String types. Implicit co
 "Hello".endsWith("lo")
 ```
 
-> **Syntactic sugar**: `3 + 4` is syntactic sugar for `3.+(4)`. This works for any binary method, not just symbolic ones.
+> **Syntactic sugar:** `3 + 4` is syntactic sugar for `3.+(4)`. This works for any binary method, not just symbolic ones.
 
 ## 3.3 Evaluation
 
@@ -165,7 +165,7 @@ Scala has all usual operators on numeric, Boolean, and String types. Implicit co
 The computation state is an expression. We write:
 
 ```
-e ⟶ e'    — expression e steps to expression e' in one step
+e ⟶ e'    - expression e steps to expression e' in one step
 ```
 
 Example (assuming left-to-right evaluation):
@@ -176,7 +176,7 @@ Example (assuming left-to-right evaluation):
 ### Multi-Step Evaluation
 
 ```
-e ⟶* e'    — expression e steps to e' in 0 or more steps
+e ⟶* e'    - expression e steps to e' in 0 or more steps
 ```
 
 Examples:
@@ -192,7 +192,7 @@ Examples:
 When we only care about the final value:
 
 ```
-e ⇓ v    — expression e evaluates to value v
+e ⇓ v    - expression e evaluates to value v
 ```
 
 Example:
@@ -202,7 +202,7 @@ Example:
 
 ### Evaluation Order
 
-**Eager evaluation**: sub-expressions are evaluated to values before applying the operation.
+**Eager evaluation:** sub-expressions are evaluated to values before applying the operation.
 
 Scala evaluates `+` **left-to-right**, which can be observed via side effects:
 
@@ -212,7 +212,7 @@ Scala evaluates `+` **left-to-right**, which can be observed via side effects:
 // Result: 10
 ```
 
-> If expressions are **pure** (effect-free), evaluation order cannot be observed — this is referential transparency.
+> If expressions are **pure** (effect-free), evaluation order cannot be observed; this is referential transparency.
 
 ## Summary of Notation
 
@@ -226,6 +226,6 @@ Scala evaluates `+` **left-to-right**, which can be observed via side effects:
 
 ## Related
 
-- [[Programming Language Theory Overview]] — All PLT topics
-- [[02_Binding_and_Scope]] — How names get their values
-- [[03_Data_Types_and_Polymorphism]] — Types and collections
+- [[Programming Language Theory Overview]]: All PLT topics
+- [[02_Binding_and_Scope]]: How names get their values
+- [[03_Data_Types_and_Polymorphism]]: Types and collections

@@ -7,7 +7,7 @@ tags:
 
 # 03 Operators & Expressions
 
-Operators are the building blocks of expressions — the instructions that compute values, compare conditions, and control program logic. Misunderstanding operator semantics (especially precedence and short-circuiting) is a top source of subtle bugs.
+Operators are the building blocks of expressions, the instructions that compute values, compare conditions, and control program logic. Misunderstanding operator semantics (especially precedence and short-circuiting) is a top source of subtle bugs.
 
 ---
 
@@ -22,7 +22,7 @@ Operators are the building blocks of expressions — the instructions that compu
 | `%` | Modulus (remainder) | `7 % 2` | `1` |
 
 ```java
-// Integer division truncates — a common source of bugs
+// Integer division truncates - a common source of bugs
 int result = 7 / 2;           // 3, not 3.5
 double precise = 7.0 / 2;     // 3.5
 ```
@@ -34,7 +34,7 @@ double precise = 7.0 / 2;     // 3.5
 ```
 
 ```typescript
-// JavaScript / TypeScript — all numbers are floating-point
+// JavaScript / TypeScript - all numbers are floating-point
 7 / 2    // 3.5
 Math.floor(7 / 2)  // 3
 ```
@@ -107,7 +107,7 @@ userPerm &= ~WRITE;                // 0b101 (5)
 ```
 
 ```python
-# Python — same bitwise logic
+# Python - same bitwise logic
 READ, WRITE, EXECUTE = 1, 2, 4
 perm = READ | WRITE
 can_read = bool(perm & READ)       # True
@@ -121,7 +121,7 @@ perm &= ~WRITE
 
 | Operator | Meaning | Equivalent To |
 |---|---|---|
-| `=` | Assign | — |
+| `=` | Assign | N/A |
 | `+=` | Add and assign | `a = a + b` |
 | `-=` | Subtract and assign | `a = a - b` |
 | `*=` | Multiply and assign | `a = a * b` |
@@ -154,17 +154,17 @@ const status = score >= 60 ? "Pass" : "Fail";
 status = "Pass" if score >= 60 else "Fail"
 ```
 
-> Keep ternaries simple. Nested ternaries are unreadable — use `if/else` instead.
+> Keep ternaries simple. Nested ternaries are unreadable; use `if/else` instead.
 
 ---
 
 ## Operator Precedence
 
-Highest to lowest (simplified — see JLS §15 for full table):
+Highest to lowest (simplified; see JLS §15 for full table):
 
 | Precedence | Operators | Associativity |
 |---|---|---|
-| 1 (highest) | `()` (parentheses) | — |
+| 1 (highest) | `()` (parentheses) | N/A |
 | 2 | `!`, `~`, `++`, `--`, unary `-` | Right to left |
 | 3 | `*`, `/`, `%` | Left to right |
 | 4 | `+`, `-` | Left to right |
@@ -188,18 +188,18 @@ Highest to lowest (simplified — see JLS §15 for full table):
 `&&` and `||` short-circuit: they stop evaluating as soon as the result is determined.
 
 ```java
-// && — stops at first false
+// && - stops at first false
 if (obj != null && obj.isValid()) {
     // obj.isValid() is never called if obj is null
 }
 
-// || — stops at first true
+// || - stops at first true
 String name = userInput != null ? userInput : "Default";
 // If userInput != null, the right side is never evaluated
 ```
 
 ```python
-# Python — same short-circuit behaviour
+# Python - same short-circuit behaviour
 if obj is not None and obj.is_valid():
     pass
 
@@ -213,29 +213,29 @@ name = user_input or "Default"
 ### `==` vs `.equals()` in Java
 
 ```java
-// ❌ WRONG — compares references, not content
+// ❌ WRONG - compares references, not content
 String a = new String("hello");
 String b = new String("hello");
 System.out.println(a == b);        // false (different objects)
 
-// ✅ CORRECT — compares actual string content
+// ✅ CORRECT - compares actual string content
 System.out.println(a.equals(b));   // true
 ```
 
 ### Floating-Point Comparison
 
 ```java
-// ❌ WRONG — floating point is imprecise
+// ❌ WRONG - floating point is imprecise
 double a = 0.1 + 0.2;
 System.out.println(a == 0.3);  // false!
 
-// ✅ CORRECT — compare with epsilon tolerance
+// ✅ CORRECT - compare with epsilon tolerance
 double epsilon = 1e-9;
 System.out.println(Math.abs(a - 0.3) < epsilon);  // true
 ```
 
 ```python
-# Python — use math.isclose()
+# Python - use math.isclose()
 import math
 math.isclose(0.1 + 0.2, 0.3)  # True
 ```
@@ -243,10 +243,10 @@ math.isclose(0.1 + 0.2, 0.3)  # True
 ### Integer Division Truncation
 
 ```java
-// ❌ WRONG — expecting a percentage
+// ❌ WRONG - expecting a percentage
 int percentage = (part / total) * 100;  // Always 0 if part < total
 
-// ✅ CORRECT — cast first
+// ✅ CORRECT - cast first
 double percentage = ((double) part / total) * 100;
 ```
 
@@ -254,6 +254,6 @@ double percentage = ((double) part / total) * 100;
 
 ## Sources
 
-- Oracle Java Language Specification §15 — Expressions
-- MDN — Expressions and Operators (developer.mozilla.org)
-- Python Docs — Expressions (docs.python.org)
+- Oracle Java Language Specification §15: Expressions
+- MDN: Expressions and Operators (developer.mozilla.org)
+- Python Docs: Expressions (docs.python.org)

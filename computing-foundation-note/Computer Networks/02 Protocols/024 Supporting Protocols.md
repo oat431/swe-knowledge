@@ -11,12 +11,12 @@ Beyond HTTP: the other protocols that keep the internet running. Email, file tra
 
 ---
 
-## SMTP — Sending Email
+## SMTP: Sending Email
 
 > Simple Mail Transfer Protocol. Push-only. Sends mail to a mail server.
 
 ```java
-// Spring Boot — JavaMailSender
+// Spring Boot - JavaMailSender
 @Autowired
 private JavaMailSender mailSender;
 
@@ -44,7 +44,7 @@ spring:
 
 ---
 
-## POP3 / IMAP — Reading Email
+## POP3 / IMAP: Reading Email
 
 | | POP3 | IMAP |
 |---|:---:|:---:|
@@ -55,7 +55,7 @@ spring:
 
 ---
 
-## FTP / SFTP — File Transfer
+## FTP / SFTP: File Transfer
 
 | | FTP | SFTP |
 |---|:---:|:---:|
@@ -68,7 +68,7 @@ spring:
 
 ---
 
-## DHCP — Automatic IP Assignment
+## DHCP: Automatic IP Assignment
 
 > "Hey, I'm new here. I need an IP address."
 
@@ -86,7 +86,7 @@ Server (DHCP ACK)      → "Confirmed. Lease: 24 hours."
 
 ---
 
-## SNMP — Network Monitoring
+## SNMP: Network Monitoring
 
 > Simple Network Management Protocol. Polls devices for status. Sends traps on events.
 
@@ -100,7 +100,7 @@ snmpwalk -v2c -c public 192.168.1.1 IF-MIB::ifDescr
 
 ---
 
-## ICMP — Internet Control Message Protocol
+## ICMP: Internet Control Message Protocol
 
 > Not for data transfer. For diagnostics and error reporting.
 
@@ -116,6 +116,6 @@ snmpwalk -v2c -c public 192.168.1.1 IF-MIB::ifDescr
 
 ## Sources
 
-- RFC 5321 — SMTP
-- RFC 3501 — IMAPv4
-- RFC 2131 — DHCP
+- RFC 5321: SMTP
+- RFC 3501: IMAPv4
+- RFC 2131: DHCP

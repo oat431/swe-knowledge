@@ -35,7 +35,7 @@ When Dr. Smith's email changes, you must update EVERY row. Miss one = inconsiste
 | **1NF** | Atomic values. Each cell holds one value. No repeating groups. | Multi-valued columns |
 | **2NF** | 1NF + no partial dependencies (non-key columns depend on the WHOLE primary key) | Redundancy from composite keys |
 | **3NF** | 2NF + no transitive dependencies (non-key doesn't depend on another non-key) | Indirect dependencies |
-| **BCNF** | Stronger 3NF — every determinant must be a candidate key | Edge cases 3NF misses |
+| **BCNF** | Stronger 3NF ;  every determinant must be a candidate key | Edge cases 3NF misses |
 | **4NF** | No multi-valued dependencies | Independent multi-valued facts |
 | **5NF** | No join dependencies | Can't be decomposed further without loss |
 
@@ -43,14 +43,14 @@ When Dr. Smith's email changes, you must update EVERY row. Miss one = inconsiste
 
 ---
 
-## 1NF — Atomic Values
+## 1NF: Atomic Values
 
 ```sql
--- ❌ NOT 1NF — multiple phone numbers in one field
+-- ❌ NOT 1NF - multiple phone numbers in one field
 customer_id | name  | phone_numbers
 1           | Alice | "555-0100, 555-0101"
 
--- ✅ 1NF — separate table or separate rows
+-- ✅ 1NF - separate table or separate rows
 customer_id | name
 1           | Alice
 
@@ -61,7 +61,7 @@ customer_id | phone_number
 
 ---
 
-## 2NF — No Partial Dependencies
+## 2NF: No Partial Dependencies
 
 Only applies to tables with **composite primary keys.**
 
@@ -73,14 +73,14 @@ order_id | product_id | product_name | quantity
 1        | P100       | Widget       | 5
 1        | P200       | Gadget       | 3
 
--- ✅ 2NF — split into two tables
+-- ✅ 2NF - split into two tables
 -- order_items: (order_id, product_id, quantity)
 -- products: (product_id, product_name)
 ```
 
 ---
 
-## 3NF — No Transitive Dependencies
+## 3NF: No Transitive Dependencies
 
 ```sql
 -- ❌ NOT 3NF
@@ -90,7 +90,7 @@ employee_id | name  | department_id | department_name
 1           | Alice | D01           | Engineering
 2           | Bob   | D01           | Engineering
 
--- ✅ 3NF — split into two tables
+-- ✅ 3NF - split into two tables
 -- employees: (employee_id, name, department_id)
 -- departments: (department_id, department_name)
 ```

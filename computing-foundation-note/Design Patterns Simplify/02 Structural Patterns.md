@@ -7,7 +7,7 @@ tags:
 
 # 02 Structural Patterns
 
-Structural patterns explain how to **assemble classes and objects into larger structures** while keeping them flexible and efficient. They focus on relationships — composition, delegation, wrapping, and hierarchy.
+Structural patterns explain how to **assemble classes and objects into larger structures** while keeping them flexible and efficient. They focus on relationships: composition, delegation, wrapping, and hierarchy.
 
 ---
 
@@ -29,7 +29,7 @@ Structural patterns explain how to **assemble classes and objects into larger st
 **Problem:** You have a class with the right functionality but the wrong interface. The Adapter wraps it and translates calls.
 
 ```java
-// Legacy system returns XML — your code expects JSON
+// Legacy system returns XML - your code expects JSON
 interface JsonDataSource {
     String getJson();
 }
@@ -64,7 +64,7 @@ class XmlToJsonAdapter implements JsonDataSource {
 
 **Problem:** You want to add behavior to an object without modifying its class or using subclass explosion. Stack decorators like layers.
 
-**Real-world:** Java I/O streams are the canonical example — `BufferedInputStream` decorates `FileInputStream`, adding buffering without changing the stream interface.
+**Real-world:** Java I/O streams are the canonical example; `BufferedInputStream` decorates `FileInputStream`, adding buffering without changing the stream interface.
 
 ```java
 // Base component
@@ -85,7 +85,7 @@ abstract class DataSourceDecorator implements DataSource {
     public String readData() { return wrappee.readData(); }
 }
 
-// Concrete decorators — stackable
+// Concrete decorators - stackable
 class CompressionDecorator extends DataSourceDecorator {
     CompressionDecorator(DataSource s) { super(s); }
     public String readData() {
@@ -100,7 +100,7 @@ class EncryptionDecorator extends DataSourceDecorator {
     }
 }
 
-// Usage — compose behavior by stacking
+// Usage - compose behavior by stacking
 DataSource source = new EncryptionDecorator(
     new CompressionDecorator(
         new FileDataSource("data.txt")
@@ -149,13 +149,13 @@ class OrderFacade {
 orderFacade.placeOrder(order);
 ```
 
-A Facade doesn't add new functionality — it's a convenience wrapper. Subsystems remain accessible for advanced use.
+A Facade doesn't add new functionality; it's a convenience wrapper. Subsystems remain accessible for advanced use.
 
 ---
 
 ## Proxy
 
-**Problem:** You need to control access to an object — for lazy loading, caching, access control, or remote communication.
+**Problem:** You need to control access to an object, for lazy loading, caching, access control, or remote communication.
 
 | Proxy Type | Purpose | Example |
 |-----------|---------|---------|
@@ -181,7 +181,7 @@ class HeavyImageProxy implements Image {
 }
 ```
 
-**Spring AOP** uses proxies extensively — `@Transactional`, `@Cacheable`, `@Async` all work by wrapping your bean in a proxy that intercepts method calls.
+**Spring AOP** uses proxies extensively; `@Transactional`, `@Cacheable`, `@Async` all work by wrapping your bean in a proxy that intercepts method calls.
 
 ---
 
@@ -189,10 +189,10 @@ class HeavyImageProxy implements Image {
 
 **Problem:** You have a tree structure where individual objects and groups of objects should be treated uniformly.
 
-**Real-world:** File system — files and folders both have names, sizes, and can be displayed. Folders contain files (and other folders).
+**Real-world:** File system, files and folders both have names, sizes, and can be displayed. Folders contain files (and other folders).
 
 ```java
-// Component — common interface for leaves and composites
+// Component - common interface for leaves and composites
 interface FileSystemItem {
     String getName();
     long getSize();
@@ -209,7 +209,7 @@ class File implements FileSystemItem {
     }
 }
 
-// Composite — contains children
+// Composite - contains children
 class Folder implements FileSystemItem {
     private String name;
     private List<FileSystemItem> children = new ArrayList<>();
@@ -250,7 +250,7 @@ class RasterRenderer implements Renderer {
     public void renderSquare(double s) { System.out.println("Drawing square as pixels"); }
 }
 
-// Abstraction — holds reference to implementation
+// Abstraction - holds reference to implementation
 abstract class Shape {
     protected Renderer renderer;
     Shape(Renderer renderer) { this.renderer = renderer; }
@@ -296,6 +296,6 @@ For full implementations with UML diagrams, participants, and trade-offs:
 
 ## Sources
 
-- Gamma et al. — *Design Patterns* (1994), Chapters 4, 6-8
-- Refactoring Guru — https://refactoring.guru/design-patterns/structural-patterns
-- Java I/O streams — `java.io` package (Decorator in practice)
+- Gamma et al.; *Design Patterns* (1994), Chapters 4, 6-8
+- Refactoring Guru: https://refactoring.guru/design-patterns/structural-patterns
+- Java I/O streams: `java.io` package (Decorator in practice)

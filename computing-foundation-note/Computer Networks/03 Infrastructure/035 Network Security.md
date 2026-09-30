@@ -14,12 +14,14 @@ Security at the network layer: protecting data in transit, blocking attackers, a
 ## The Defense Stack
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     D["<b>DDoS Protection</b><br>Cloudflare, AWS Shield"] --> F["<b>Firewall</b><br>Security Groups, iptables"]
     F --> W["<b>WAF</b><br>Web Application Firewall"]
     W --> T["<b>TLS Termination</b><br>Reverse Proxy"]
     T --> A["<b>Application</b><br>Spring Boot"]
 ```
+
 
 ---
 
@@ -28,7 +30,7 @@ graph TD
 > Controls what traffic can reach your server based on IP, port, and protocol.
 
 ```bash
-# iptables — Linux firewall
+# iptables - Linux firewall
 # Allow SSH from specific IP
 iptables -A INPUT -p tcp -s 203.0.113.5 --dport 22 -j ACCEPT
 
@@ -47,7 +49,7 @@ iptables -A INPUT -j DROP
     "SecurityGroup": "web-sg",
     "Inbound": [
         {"Port": 443, "Source": "0.0.0.0/0",   "Description": "HTTPS"},
-        {"Port": 22,  "Source": "10.0.0.0/8",    "Description": "SSH — internal only"},
+        {"Port": 22,  "Source": "10.0.0.0/8",    "Description": "SSH - internal only"},
         {"Port": 8080, "Source": "sg-loadbalancer", "Description": "Only from LB"}
     ]
 }
@@ -61,7 +63,7 @@ iptables -A INPUT -j DROP
 
 ---
 
-## WAF — Web Application Firewall
+## WAF: Web Application Firewall
 
 > Firewall at the HTTP level. Blocks SQL injection, XSS, CSRF, and other OWASP attacks before they reach your app.
 
@@ -78,12 +80,12 @@ iptables -A INPUT -j DROP
 | Attack Type | What It Does | Defense |
 |-----------|-------------|---------|
 | **Volumetric** (L3/L4) | Flood bandwidth with traffic | Cloudflare, AWS Shield. Absorb upstream. |
-| **Protocol** (L3/L4) | SYN flood — exhaust connection table | SYN cookies, rate limiting |
-| **Application** (L7) | Slowloris — hold connections open | Timeouts. WAF. Rate limiting per IP. |
+| **Protocol** (L3/L4) | SYN flood ;  exhaust connection table | SYN cookies, rate limiting |
+| **Application** (L7) | Slowloris ;  hold connections open | Timeouts. WAF. Rate limiting per IP. |
 
 ---
 
-## VPN — Virtual Private Network
+## VPN: Virtual Private Network
 
 > Encrypted tunnel between your machine and a private network.
 
@@ -107,12 +109,12 @@ iptables -A INPUT -j DROP
 
 ---
 
-## mTLS — Mutual TLS
+## mTLS: Mutual TLS
 
 > Standard TLS: client verifies server. mTLS: **both** verify each other. Essential for service-to-service communication.
 
 ```yaml
-# Spring Boot — require client certificate
+# Spring Boot - require client certificate
 server:
   ssl:
     client-auth: need
@@ -124,4 +126,4 @@ server:
 ## Sources
 
 - OWASP Network Security Cheat Sheet
-- NIST SP 800-207 — Zero Trust Architecture
+- NIST SP 800-207: Zero Trust Architecture

@@ -7,7 +7,7 @@ tags:
 
 # 014 DNS Deep Dive
 
-DNS is the phonebook of the internet. When it breaks, "the internet is down" — even though it's just name resolution failing.
+DNS is the phonebook of the internet. When it breaks, "the internet is down", even though it's just name resolution failing.
 
 ---
 
@@ -47,7 +47,7 @@ Browser asks: "What's the IP for api.example.com?"
 
 ---
 
-## TTL — Time to Live
+## TTL: Time to Live
 
 > How long a resolver can cache the record before asking again.
 
@@ -95,7 +95,7 @@ dig example.com +short
 
 ---
 
-## DNSSEC — Preventing Spoofing
+## DNSSEC: Preventing Spoofing
 
 > Normal DNS: no authentication. Anyone can spoof a response. DNSSEC cryptographically signs records.
 
@@ -106,10 +106,10 @@ With DNSSEC:    Responses are signed. Fake responses fail validation.
 
 ---
 
-## Spring Boot — DNS Caching
+## Spring Boot: DNS Caching
 
 ```java
-// Java caches DNS by default — can cause issues with dynamic DNS
+// Java caches DNS by default - can cause issues with dynamic DNS
 // Disable or reduce cache for services with changing IPs
 // In $JAVA_HOME/conf/security/java.security:
 networkaddress.cache.ttl=60        // Default: -1 (cache forever!)
@@ -120,6 +120,6 @@ networkaddress.cache.negative.ttl=10
 
 ## Sources
 
-- RFC 1034/1035 — DNS Specification
-- RFC 4033-4035 — DNSSEC
-- dig man page — `man dig`
+- RFC 1034/1035: DNS Specification
+- RFC 4033-4035: DNSSEC
+- dig man page: `man dig`

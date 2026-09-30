@@ -8,7 +8,7 @@ tags:
   - roofline-model
   - computer-architecture
   - co-and-d
-source: "Patterson & Hennessy — Computer Organization and Design, Ch 7"
+source: "Patterson & Hennessy, Computer Organization and Design, Ch 7"
 ---
 
 # 07 · Parallel Computing
@@ -21,7 +21,7 @@ source: "Patterson & Hennessy — Computer Organization and Design, Ch 7"
 
 | Problem | Era | Consequence |
 |---------|-----|-------------|
-| **Power wall** | ~2004 | Clock speed plateaued at ~4 GHz; Dennard scaling ended |
+| **Power wall** | ~2004 | Clock speed plateaued at ~4 GHz; dennard scaling ended |
 | **ILP wall** | ~2000s | Superscalar/wide-issue hit diminishing returns |
 | **Memory wall** | ongoing | DRAM latency ~100+ cycles; bandwidth is the bottleneck |
 
@@ -73,14 +73,14 @@ Multiple caches holding the same address → must stay **coherent**.
 
 **Snooping protocols** (bus-based, scales to ~16 cores):
 - All caches snoop (listen to) the shared bus
-- **MESI protocol** — four states per cache line:
+- **MESI protocol:** four states per cache line:
 
 | State | Meaning | Dirty? | Shared? |
 |-------|---------|--------|---------|
 | **M**odified | Only copy, modified | ✅ | ❌ |
 | **E**xclusive | Only copy, clean | ❌ | ❌ |
 | **S**hared | Multiple copies, clean | ❌ | ✅ |
-| **I**nvalid | Not valid | — | — |
+| **I**nvalid | Not valid | N/A | N/A |
 
 **Directory protocols** (for larger systems):
 - A central **directory** tracks which caches hold each line
@@ -111,7 +111,7 @@ atomic_exchange(lock, new_val) → old_val
 LL:  old = load_linked(addr)
 SC:  store_conditional(addr, new) → success/fail
 
-// Compare-and-swap (CAS) — used by x86 LOCK CMPXCHG
+// Compare-and-swap (CAS) - used by x86 LOCK CMPXCHG
 CAS(addr, expected, new) → old_value
 ```
 
@@ -120,7 +120,7 @@ CAS(addr, expected, new) → old_value
 ```c
 void lock(int *lock_var) {
     while (atomic_exchange(lock_var, 1) == 1)
-        ;  // spin — wastes cycles
+        ;  // spin - wastes cycles
 }
 
 void unlock(int *lock_var) {
@@ -130,7 +130,7 @@ void unlock(int *lock_var) {
 
 **Problem:** Spinning wastes memory bandwidth on shared bus.
 
-**Improvement:** Exponential backoff — wait longer between retries.
+**Improvement:** Exponential backoff; wait longer between retries.
 
 ### 3.3 Implementing Locks
 
@@ -165,7 +165,7 @@ Each node has **private memory**; communication via **send/receive** messages.
 
 ---
 
-## 5. SIMD — Data-Level Parallelism
+## 5. SIMD: Data-Level Parallelism
 
 One instruction operates on **multiple data elements** simultaneously.
 
@@ -182,10 +182,10 @@ ST   V3, R3       // Store 64 results
 ```
 
 **Key features:**
-- **Vector registers** — hold 64+ elements (e.g., 512-bit = 16×32-bit floats)
-- **Vector functional units** — pipelined, one result per clock
-- **Vector length register (VLR)** — handles arrays not divisible by vector width
-- **Strip mining** — loop that processes remainder elements
+- **Vector registers:** hold 64+ elements (e.g., 512-bit = 16×32-bit floats)
+- **Vector functional units:** pipelined, one result per clock
+- **Vector length register (VLR):** handles arrays not divisible by vector width
+- **Strip mining:** loop that processes remainder elements
 
 ### 5.2 x86 SIMD Extensions
 
@@ -241,10 +241,10 @@ Host (CPU)                Device (GPU)
 ```
 
 **Hierarchy:**
-- **Thread** — single execution unit
-- **Warp** — 32 threads execute in lockstep (SIMD)
-- **Thread block** — group of threads sharing shared memory
-- **Grid** — collection of thread blocks for one kernel launch
+- **Thread:** single execution unit
+- **Warp:** 32 threads execute in lockstep (SIMD)
+- **Thread block:** group of threads sharing shared memory
+- **Grid:** collection of thread blocks for one kernel launch
 
 **Key concept:** Threads in a warp must execute the same instruction. **Branch divergence** (threads take different paths) serializes execution.
 
@@ -293,7 +293,7 @@ $$P = \min\left(\text{Peak FLOPS},\ \text{Peak Bandwidth} \times \text{Arithmeti
 
 1. **Profile** the kernel: count FLOPs and bytes transferred
 2. **Calculate** arithmetic intensity = FLOPs ÷ Bytes
-3. **Plot** on roofline — see which limit applies
+3. **Plot** on roofline: see which limit applies
 4. **Optimize** the bottleneck:
    - Memory-bound → improve data reuse, tiling, compression
    - Compute-bound → use SIMD, better algorithm
@@ -323,7 +323,7 @@ Where $P$ = fraction parallelizable, $N$ = number of processors.
 
 ### Gustafson's Law
 
-Argues that as $N$ grows, the problem size grows too — so parallel fraction stays high:
+Argues that as $N$ grows, the problem size grows too, so parallel fraction stays high:
 
 $$\text{Scaled Speedup} = (1 - P) + N \times P$$
 
@@ -357,7 +357,7 @@ Reduce: Combine results (sum, max, etc.) → sequential bottleneck
 
 ---
 
-## Summary — Architecture Choices
+## Summary: Architecture Choices
 
 | Target | Best Architecture | Why |
 |--------|-------------------|-----|
@@ -371,6 +371,6 @@ Reduce: Combine results (sum, max, etc.) → sequential bottleneck
 ## Related
 
 - [[Computer Organization Overview|← Back to Overview]]
-- [[04_Processor_Design]] — Pipeline hazards (SIMD divergence is a hazard at scale)
-- [[05_Memory_Hierarchy]] — Cache coherence builds on cache design
-- [[06_IO_and_Storage]] — DMA and bus bandwidth relate to parallel data movement
+- [[04_Processor_Design]]: Pipeline hazards (SIMD divergence is a hazard at scale)
+- [[05_Memory_Hierarchy]]: Cache coherence builds on cache design
+- [[06_IO_and_Storage]]: DMA and bus bandwidth relate to parallel data movement

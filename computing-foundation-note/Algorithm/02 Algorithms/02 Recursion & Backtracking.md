@@ -15,17 +15,17 @@ Recursion: a function that calls itself. Backtracking: systematically trying pos
 
 Every recursive function needs:
 
-1. **Base case** — when to stop
-2. **Recursive case** — call itself with a smaller/simpler input
+1. **Base case:** when to stop
+2. **Recursive case:** call itself with a smaller/simpler input
 
 ```java
-// Factorial — classic recursion
+// Factorial - classic recursion
 int factorial(int n) {
     if (n <= 1) return 1;           // Base case
     return n * factorial(n - 1);    // Recursive case
 }
 
-// Fibonacci with memoization — O(n)
+// Fibonacci with memoization - O(n)
 Map<Integer, Long> memo = new HashMap<>();
 long fib(int n) {
     if (n <= 1) return n;
@@ -122,7 +122,7 @@ void solve(int row, int n, List<Integer> cols, List<List<String>> result) {
 
 ---
 
-## Pruning — Cut Dead Branches Early
+## Pruning: Cut Dead Branches Early
 
 Don't explore paths that can never lead to a solution.
 
@@ -136,15 +136,15 @@ if (remaining < nums[start]) return; // Remaining too small
 
 ## Sources
 
-- CLRS — Chapter 4 (Divide and Conquer)
-- LeetCode — Backtracking problem sets
+- CLRS: Chapter 4 (Divide and Conquer)
+- LeetCode: Backtracking problem sets
 
 
 ---
 
 ## Hands-On Exercises
 
-### Exercise 1: Recursion — Factorial and Fibonacci
+### Exercise 1: Recursion: Factorial and Fibonacci
 Implement both from the note. Then add memoization to Fibonacci.
 
 ```java
@@ -154,7 +154,7 @@ long fib(int n, Map<Integer, Long> memo) { /* TODO: with memoization */ }
 
 ---
 
-### Exercise 2: Backtracking — Generate All Subsets
+### Exercise 2: Backtracking: Generate All Subsets
 Given a set of distinct integers, return all possible subsets (the power set).
 
 ```java
@@ -165,11 +165,11 @@ List<List<Integer>> subsets(int[] nums) {
 }
 ```
 
-**Hint:** The include/exclude pattern — at each index, branch into "include nums[i]" and "exclude nums[i]".
+**Hint:** The include/exclude pattern, at each index, branch into "include nums[i]" and "exclude nums[i]".
 
 ---
 
-### Exercise 3: Backtracking — Permutations
+### Exercise 3: Backtracking: Permutations
 Implement the `permute` method from the note. Test with `[1,2,3]` → expect 6 permutations.
 
 ```java
@@ -195,8 +195,8 @@ List<List<Integer>> permute(int[] nums) {
 | 8 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) (LC 37) | 🔴 Hard | Backtracking |
 
 ### Assignment Guidelines
-- **Start** with 1–2 (Medium) — the two fundamental backtracking templates.
-- **Then** 3–6 (Medium) — backtracking with pruning.
+- **Start** with 1–2 (Medium): the two fundamental backtracking templates.
+- **Then** 3–6 (Medium): backtracking with pruning.
 - **Problems 7–8** (Hard) are the classic backtracking interview problems.
 - **Key insight:** Every backtracking problem follows the same template: Choose → Explore → Un-choose.
 - **Target time:** 20 min per Medium, 35 min per Hard.

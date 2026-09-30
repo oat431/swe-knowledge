@@ -7,7 +7,7 @@ tags:
 
 # 06 Object-Oriented Programming
 
-Object-Oriented Programming (OOP) models software as interacting objects that bundle data and behaviour together. It is the dominant paradigm in enterprise Java, C#, and C++ development. Understanding its four pillars — and its limitations — is critical for designing maintainable systems.
+Object-Oriented Programming (OOP) models software as interacting objects that bundle data and behaviour together. It is the dominant paradigm in enterprise Java, C#, and C++ development. Understanding its four pillars (and its limitations) is critical for designing maintainable systems.
 
 ---
 
@@ -20,7 +20,7 @@ Object-Oriented Programming (OOP) models software as interacting objects that bu
 **Why it matters:** Prevents external code from putting an object into an invalid state. Changes to internal representation don't break callers.
 
 ```java
-// ✅ GOOD — encapsulated
+// ✅ GOOD - encapsulated
 public class BankAccount {
     private double balance;
 
@@ -34,7 +34,7 @@ public class BankAccount {
     }
 }
 
-// ❌ BAD — exposed state
+// ❌ BAD - exposed state
 public class BankAccount {
     public double balance;  // anyone can set balance = -999999
 }
@@ -47,7 +47,7 @@ public class BankAccount {
 **Why it matters:** Reduces complexity. Callers don't need to know *how* something works, only *what* it does.
 
 ```java
-// Abstraction — the caller doesn't care about the sorting algorithm
+// Abstraction - the caller doesn't care about the sorting algorithm
 public interface Sortable {
     void sort();
 }
@@ -92,7 +92,7 @@ dog.bark();  // own method
 **Why it matters:** Enables writing flexible, extensible code. New types can be added without modifying existing logic.
 
 ```java
-// Polymorphism — same method call, different behaviour
+// Polymorphism - same method call, different behaviour
 public abstract class Shape {
     public abstract double area();
 }
@@ -124,8 +124,8 @@ for (Shape s : shapes) {
 
 | Concept | Description |
 |---|---|
-| **Class** | A blueprint/template — defines fields and methods |
-| **Object** | An instance of a class — occupies memory, has actual values |
+| **Class** | A blueprint/template ;  defines fields and methods |
+| **Object** | An instance of a class ;  occupies memory, has actual values |
 
 ```java
 // Class = blueprint
@@ -202,13 +202,13 @@ public class User {
 | **Use when** | Shared base with state and partial implementation | Defining a contract / capability |
 
 ```java
-// Interface — defines a contract
+// Interface - defines a contract
 public interface Drawable {
     void draw(Graphics g);
     default void clear() { /* default implementation */ }
 }
 
-// Abstract class — shared base with state
+// Abstract class - shared base with state
 public abstract class Vehicle {
     protected int speed;
     public abstract void accelerate();
@@ -230,10 +230,10 @@ public abstract class Vehicle {
 | **Fragile base class?** | ✅ Risk | ❌ Not affected |
 
 ```java
-// ❌ Inheritance — fragile, tight coupling
+// ❌ Inheritance - fragile, tight coupling
 public class ArrayList extends AbstractList { }
 
-// ✅ Composition — flexible, loose coupling
+// ✅ Composition - flexible, loose coupling
 public class UserRepository {
     private final Database db;  // "has-a"
 
@@ -247,7 +247,7 @@ public class UserRepository {
 }
 ```
 
-> **Favor composition over inheritance** is a foundational design principle. See [[01 Decomposition Patterns]] for structural decomposition strategies.
+> **Favor composition over inheritance** is a foundational design principle. See [[011 Decomposition Patterns|01 Decomposition Patterns]] for structural decomposition strategies.
 
 ---
 
@@ -255,11 +255,11 @@ public class UserRepository {
 
 | Principle | Meaning | Core Idea |
 |---|---|---|
-| **S** — Single Responsibility | A class should have one reason to change | One job per class |
-| **O** — Open/Closed | Open for extension, closed for modification | Use interfaces/polymorphism |
-| **L** — Liskov Substitution | Subtypes must be substitutable for their base types | Don't break the contract |
-| **I** — Interface Segregation | Many specific interfaces > one fat interface | Don't force unused methods |
-| **D** — Dependency Inversion | Depend on abstractions, not concretions | Program to interfaces |
+| **S** ;  Single Responsibility | A class should have one reason to change | One job per class |
+| **O** ;  Open/Closed | Open for extension, closed for modification | Use interfaces/polymorphism |
+| **L** ;  Liskov Substitution | Subtypes must be substitutable for their base types | Don't break the contract |
+| **I** ;  Interface Segregation | Many specific interfaces > one fat interface | Don't force unused methods |
+| **D** ;  Dependency Inversion | Depend on abstractions, not concretions | Program to interfaces |
 
 ---
 
@@ -288,12 +288,12 @@ public class MathUtils {
 
 ### God Classes
 
-❌ A single class doing everything — 2000+ lines, 50+ methods, impossible to test.
+❌ A single class doing everything; 2000+ lines, 50+ methods, impossible to test.
 ✅ Split into focused classes with single responsibilities.
 
 ### Deep Inheritance Hierarchies
 
-❌ `Dog extends Mammal extends Animal extends LivingThing extends Object` — fragile, hard to reason about.
+❌ `Dog extends Mammal extends Animal extends LivingThing extends Object`; fragile, hard to reason about.
 ✅ Prefer 1-2 levels of inheritance. Use composition for shared behaviour.
 
 ### Tight Coupling
@@ -305,7 +305,7 @@ public class MathUtils {
 
 ## Sources
 
-- *Clean Code* — Robert C. Martin, Chapters 6 & 10
-- *Effective Java* (3rd ed.) — Joshua Bloch, Items 19-21
-- *Head First Design Patterns* — Freeman & Robson
-- SOLID principles — Robert C. Martin (butunclebob.com)
+- *Clean Code*: Robert C. Martin, Chapters 6 & 10
+- *Effective Java* (3rd ed.): Joshua Bloch, Items 19-21
+- *Head First Design Patterns*: Freeman & Robson
+- SOLID principles: Robert C. Martin (butunclebob.com)

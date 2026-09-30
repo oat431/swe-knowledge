@@ -2,9 +2,9 @@
 tags: [algorithms, advanced, clrs, programming, overview]
 ---
 
-# Algorithm Advance — Advanced Topics (CLRS)
+# Algorithm Advance: Advanced Topics (CLRS)
 
-> **Source:** *Introduction to Algorithms* (CLRS) by Cormen, Leiserson, Rivest, Stein — 4th Edition
+> **Source:** *Introduction to Algorithms* (CLRS) by Cormen, Leiserson, Rivest, Stein, 4th Edition
 > Advanced topics that complement the practical Algorithm v1 notes.
 
 ## What Is This?
@@ -40,6 +40,7 @@ This vault extends [[Algorithm Overview|Algorithm v1]] with **advanced algorithm
 ## How v1 and v2 Relate
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph v1["Algorithm v1 (Practical)"]
         DS["Data Structures: arrays, stacks, trees, heaps, hash, graphs"]
@@ -77,21 +78,22 @@ flowchart TD
     ALG --> APP
 ```
 
+
 ## When to Study What
 
 | Your Goal | Start Here |
 |---|---|
-| **Interview prep** | v1 first — data structures, sorting, DP, greedy |
+| **Interview prep** | v1 first ;  data structures, sorting, DP, greedy |
 | **Deepen DS knowledge** | [[18_B-Trees]], [[19_Fibonacci_Heaps]], [[21_Disjoint_Sets]] |
 | **Graph problems** | [[23_Minimum_Spanning_Trees]], [[24_Single_Source_Shortest_Paths]], [[26_Maximum_Flow]] |
-| **Optimization** | [[29_Linear_Programming]] — resource allocation, scheduling |
-| **Cryptography** | [[31_Number_Theory_and_Cryptography]] — RSA, modular arithmetic |
+| **Optimization** | [[29_Linear_Programming]] ;  resource allocation, scheduling |
+| **Cryptography** | [[31_Number_Theory_and_Cryptography]] ;  RSA, modular arithmetic |
 | **Theory/academia** | [[34_NP_Completeness]], [[35_Approximation_Algorithms]] |
-| **Performance analysis** | [[17_Amortized_Analysis]] — understanding average-case bounds |
+| **Performance analysis** | [[17_Amortized_Analysis]] ;  understanding average-case bounds |
 
 ## Related
 
-- [[Algorithm Overview]] — The practical foundation
+- [[Algorithm Overview]]: The practical foundation
 - [[18_B-Trees]] → links back to v1's [[01 Trees & BSTs]]
 - [[19_Fibonacci_Heaps]] → links back to v1's [[01 Heaps & Priority Queues]]
 - [[21_Disjoint_Sets]] → links back to v1's [[01 Graphs]]

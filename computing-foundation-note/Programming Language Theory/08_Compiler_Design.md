@@ -5,7 +5,7 @@ tags:
   - swebok
   - programming-language-theory
   - optimization
-source: "Compilers: Principles, Techniques, and Tools (Dragon Book) — Aho, Lam, Sethi, Ullman"
+source: "Compilers: Principles, Techniques, and Tools (Dragon Book), Aho, Lam, Sethi, Ullman"
 ---
 
 # Compiler Design and Language Translation
@@ -19,6 +19,7 @@ source: "Compilers: Principles, Techniques, and Tools (Dragon Book) — Aho, Lam
 A compiler transforms source code from a high-level language to a low-level target (machine code, bytecode, or another language). The pipeline is traditionally divided into three phases:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     SRC[Source Code] --> PP[Preprocessor]
     PP --> LEX[Lexer / Scanner]
@@ -68,11 +69,12 @@ flowchart TD
         EXE
     end
 
-    style FRONT fill:#4CAF50,color:#fff
-    style MIDDLE fill:#2196F3,color:#fff
-    style BACK fill:#FF9800,color:#fff
-    style POST fill:#9C27B0,color:#fff
+    style FRONT fill:#1FB854,color:#000000
+    style MIDDLE fill:#00B5FF,color:#000000
+    style BACK fill:#FFBE00,color:#000000
+    style POST fill:#1FB8AB,color:#000000
 ```
+
 
 | Phase | Input | Output | Key Concerns |
 |-------|-------|--------|--------------|
@@ -84,6 +86,7 @@ flowchart TD
 ### LLVM Architecture
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     CLANG[Clang C/C++] --> IR[LLVM IR]
     RUSTC[Rustc] --> IR
@@ -95,10 +98,11 @@ flowchart LR
     BE --> ARM[ARM]
     BE --> RISC[RISC-V]
 
-    style IR fill:#2196F3,color:#fff
-    style OPT2 fill:#FF9800,color:#fff
-    style BE fill:#9C27B0,color:#fff
+    style IR fill:#00B5FF,color:#000000
+    style OPT2 fill:#FFBE00,color:#000000
+    style BE fill:#1FB8AB,color:#000000
 ```
+
 
 Each frontend produces LLVM IR; the optimizer and backends are shared across all languages.
 
@@ -142,7 +146,7 @@ The lexer converts a character stream into a stream of **tokens**.
 
 **Key challenges:**
 - **Longest match:** `>=` should match `>=`, not `>` followed by `=`
-- **Lookahead:** `1.23` vs `1.` followed by `23` — context matters
+- **Lookahead:** `1.23` vs `1.` followed by `23`: context matters
 - **Keywords vs identifiers:** `if` is a keyword, `iffy` is an identifier
 
 ---
@@ -247,13 +251,13 @@ y = x + 1             x₃ = φ(x₂, x₁)    // merge
 
 ### Bytecode Examples
 
-| VM | Language | Stack/Register | Notes |
-|----|----------|----------------|-------|
-| **JVM** | Java, Kotlin, Scala | Stack-based | JIT compiled by HotSpot |
-| **CPython** | Python | Stack-based | Interpreted; no JIT (until 3.13+) |
-| **CLR** | C#, F# | Stack-based | JIT compiled by RyuJIT |
-| **WebAssembly** | Many | Stack-based | Runs in browsers and standalone |
-| **LuaJIT** | Lua | Register-based | Tracing JIT, extremely fast |
+| VM              | Language            | Stack/Register | Notes                             |
+| --------------- | ------------------- | -------------- | --------------------------------- |
+| **JVM**         | Java, Kotlin, Scala | Stack-based    | JIT compiled by HotSpot           |
+| **CPython**     | Python              | Stack-based    | Interpreted; no JIT (until 3.13+) |
+| **CLR**         | C#, F#              | Stack-based    | JIT compiled by RyuJIT            |
+| **WebAssembly** | Many                | Stack-based    | Runs in browsers and standalone   |
+| **LuaJIT**      | Lua                 | Register-based | Tracing JIT, extremely fast       |
 
 ---
 
@@ -469,11 +473,11 @@ An assembler translates assembly language (mnemonics) into machine code (object 
 
 ## Related
 
-- [[Programming Language Theory Overview]] — Syntax, type systems, operational semantics
-- [[04_Syntax_and_Parsing]] — CFGs, lexing, parsing in depth
-- [[05_Type_Systems_and_Judgments]] — Type checking and inference
-- [[06_Operational_Semantics]] — Semantic interpretation of ASTs
-- [[Computer Organization Overview]] — Target architecture (ISA, memory hierarchy)
+- [[Programming Language Theory Overview]]: Syntax, type systems, operational semantics
+- [[04_Syntax_and_Parsing]]: CFGs, lexing, parsing in depth
+- [[05_Type_Systems_and_Judgments]]: Type checking and inference
+- [[06_Operational_Semantics]]: Semantic interpretation of ASTs
+- [[Computer Organization Overview]]: Target architecture (ISA, memory hierarchy)
 
 ---
 
@@ -483,4 +487,4 @@ An assembler translates assembly language (mnemonics) into machine code (object 
 - Cooper, K., & Torczon, L. *Engineering a Compiler* (2nd ed.)
 - Appel, A. W. *Modern Compiler Implementation in ML/Java/C*
 - Muchnick, S. S. *Advanced Compiler Design and Implementation*
-- SWEBOK v4, Chapter 16 — Computing Foundations
+- SWEBOK v4, Chapter 16: Computing Foundations

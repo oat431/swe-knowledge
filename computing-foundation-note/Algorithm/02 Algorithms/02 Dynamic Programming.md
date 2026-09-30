@@ -21,7 +21,7 @@ DP solves problems by breaking them into **overlapping subproblems** and storing
 | **When** | Easier to write, natural from recurrence | Better performance, no recursion limit |
 
 ```java
-// Fibonacci — Top-Down
+// Fibonacci - Top-Down
 long fib(int n, Map<Integer, Long> memo) {
     if (n <= 1) return n;
     if (memo.containsKey(n)) return memo.get(n);
@@ -30,7 +30,7 @@ long fib(int n, Map<Integer, Long> memo) {
     return result;
 }
 
-// Fibonacci — Bottom-Up
+// Fibonacci - Bottom-Up
 long fib(int n) {
     if (n <= 1) return n;
     long[] dp = new long[n + 1];
@@ -141,8 +141,8 @@ int coinChange(int[] coins, int amount) {
 
 ## Sources
 
-- CLRS — Chapter 15
-- LeetCode — Dynamic Programming problem sets
+- CLRS: Chapter 15
+- LeetCode: Dynamic Programming problem sets
 - Bellman, Richard. *Dynamic Programming*, 1957.
 
 
@@ -150,7 +150,7 @@ int coinChange(int[] coins, int amount) {
 
 ## Hands-On Exercises
 
-### Exercise 1: Fibonacci — Both Approaches
+### Exercise 1: Fibonacci: Both Approaches
 Implement both top-down (memoization) and bottom-up (tabulation) from the note. Compare them.
 
 ```java
@@ -166,7 +166,7 @@ long fibOptimized(int n) { /* TODO */ }
 
 ---
 
-### Exercise 2: Coin Change — Implement from Note
+### Exercise 2: Coin Change: Implement from Note
 Implement the `coinChange` method from the note. Test with `coins = [1,5,10,25]`, `amount = 30` → expect `2` (25 + 5).
 
 ```java
@@ -178,7 +178,7 @@ int coinChange(int[] coins, int amount) {
 
 ---
 
-### Exercise 3: Climbing Stairs — Classic DP Intro
+### Exercise 3: Climbing Stairs: Classic DP Intro
 You can climb 1 or 2 steps at a time. How many distinct ways to reach step `n`? This is Fibonacci in disguise.
 
 ```java
@@ -205,8 +205,8 @@ int climbStairs(int n) {
 | 9 | [Unique Paths](https://leetcode.com/problems/unique-paths/) (LC 62) | 🟡 Medium | 2D DP |
 
 ### Assignment Guidelines
-- **Start** with 1 (Easy) — recognize the Fibonacci pattern.
-- **Then** 2–4 (Medium, 1D DP) — single-sequence DP.
-- **Then** 5–9 (Medium, 2D DP) — two-sequence or grid DP.
+- **Start** with 1 (Easy): recognize the Fibonacci pattern.
+- **Then** 2–4 (Medium, 1D DP): single-sequence DP.
+- **Then** 5–9 (Medium, 2D DP): two-sequence or grid DP.
 - **Key insight:** If you see "minimum/maximum/number of ways/longest" + overlapping subproblems → it's DP.
 - **Target time:** 10 min per Easy, 25 min per Medium.

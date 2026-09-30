@@ -7,7 +7,7 @@ tags:
 
 # Logging & Structured Logging
 
-Logs are your eyes in production. Good logging means you can diagnose issues in minutes; bad logging means you're flying blind. Structured logging — writing logs as machine-parseable data rather than free-text strings — is the modern standard for any system that runs at scale.
+Logs are your eyes in production. Good logging means you can diagnose issues in minutes; bad logging means you're flying blind. Structured logging (writing logs as machine-parseable data rather than free-text strings) is the modern standard for any system that runs at scale.
 
 ---
 
@@ -25,7 +25,7 @@ Use levels consistently. Every log statement should have a clear purpose.
 
 ### Level Selection Rules
 
-- **INFO** is the default for business events — this is what ops teams watch
+- **INFO** is the default for business events: this is what ops teams watch
 - **DEBUG** should be safe to turn on in production without flooding logs
 - **ERROR** means something is broken and needs human investigation
 - **WARN** means something unexpected happened but the system recovered
@@ -84,10 +84,10 @@ log.debug("Payment of $500 processed for order #1234");  // This should be INFO
 Instead of free-text lines, log structured data that machines can parse and query.
 
 ```java
-// ❌ Unstructured — hard to query
+// ❌ Unstructured - hard to query
 log.info("User john@example.com placed order #12345 for $299.99");
 
-// ✅ Structured — queryable fields
+// ✅ Structured - queryable fields
 log.info("Order placed", Map.of(
     "orderId", "12345",
     "userId", "john@example.com",
@@ -170,7 +170,7 @@ Output:
 </configuration>
 ```
 
-### TypeScript (Node.js) — Winston
+### TypeScript (Node.js): Winston
 
 ```typescript
 import winston from 'winston';
@@ -208,7 +208,7 @@ In microservices, a single request spans multiple services. A `traceId` ties all
 ### MDC (Mapped Diagnostic Context)
 
 ```java
-// In a filter/interceptor — set once per request
+// In a filter/interceptor - set once per request
 MDC.put("traceId", request.getHeader("X-Trace-Id"));
 MDC.put("userId", getCurrentUserId());
 
@@ -221,7 +221,7 @@ try {
 }
 ```
 
-### Spring Boot — Automatic Trace Propagation
+### Spring Boot: Automatic Trace Propagation
 
 ```yaml
 # application.yml
@@ -239,17 +239,17 @@ Spring Boot 3 + Micrometer Tracing automatically:
 - Injects them into MDC
 - Propagates them to outgoing HTTP calls
 
-For deeper distributed tracing concepts, see [[05 Distributed Tracing]].
+For deeper distributed tracing concepts, see [[052 Distributed Tracing|05 Distributed Tracing]].
 
 ---
 
 ## Log Aggregation
 
-In production, logs go to centralized systems — not just stdout.
+In production, logs go to centralized systems, not just stdout.
 
 | Tool | Type | Notes |
 |------|------|-------|
-| **ELK Stack** | Self-hosted | Elasticsearch + Logstash + Kibana — full control |
+| **ELK Stack** | Self-hosted | Elasticsearch + Logstash + Kibana ;  full control |
 | **Datadog** | SaaS | Great UI, alerting, APM integration |
 | **Grafana Loki** | Self-hosted | Lightweight, label-based, pairs with Grafana |
 | **AWS CloudWatch** | Cloud-native | Automatic for Lambda/ECS/EKS |
@@ -260,7 +260,7 @@ In production, logs go to centralized systems — not just stdout.
 - ✅ All WARN and ERROR logs
 - ✅ All INFO business events
 - ✅ Request/response summaries (with sanitized bodies)
-- ❌ TRACE/DEBUG — keep local or sample at 1%
+- ❌ TRACE/DEBUG: keep local or sample at 1%
 
 ---
 
@@ -299,8 +299,8 @@ logging:
 - [ ] Business events logged at INFO (order created, payment processed)
 - [ ] Errors include context (what failed, why, relevant IDs)
 - [ ] Log levels configurable per environment
-- [ ] No string concatenation in log calls — use parameterized messages
+- [ ] No string concatenation in log calls: use parameterized messages
 
 ---
 
-**Sources:** SLF4J manual; Logback documentation; Spring Boot reference (logging section); Datadog logging best practices
+**Sources:** SLF4J manual; logback documentation; spring Boot reference (logging section); datadog logging best practices

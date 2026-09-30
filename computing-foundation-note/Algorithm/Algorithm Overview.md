@@ -6,11 +6,11 @@ tags:
 - programming
 ---
 
-# Algorithms & Data Structures — Overview
+# Algorithms & Data Structures: Overview
 
-Data structures organize data. Algorithms process it. Together they're the foundation of efficient software — and the core of technical interviews. This vault covers practical implementations, time/space complexity, and problem-solving patterns.
+Data structures organize data. Algorithms process it. Together they're the foundation of efficient software, and the core of technical interviews. This vault covers practical implementations, time/space complexity, and problem-solving patterns.
 
-> For mathematical foundations: **[[Graphs and Trees]]**, **[[Basics of Counting]]**, **[[Proof Techniques]]** in the Math vault.
+> For mathematical foundations: **[[05_graphs_and_trees|Graphs and Trees]]**, **[[03_basics_of_counting|Basics of Counting]]**, **[[01_proof_techniques|Proof Techniques]]** in the Math vault.
 
 ---
 
@@ -18,29 +18,29 @@ Data structures organize data. Algorithms process it. Together they're the found
 
 ### 01 Data Structures
 
-> [[01 Arrays & Linked Lists]] — Sequential storage, dynamic arrays, singly/doubly linked, operations
-> [[01 Stacks & Queues]] — LIFO/FIFO, implementations, monotonic stack, deque
-> [[01 Trees & BSTs]] — Binary trees, BST, AVL, traversals, trie
-> [[01 Heaps & Priority Queues]] — Min/max heap, heapify, heap sort, applications
-> [[01 Hash Tables]] — Hash functions, collision resolution, load factor, real-world usage
-> [[01 Graphs]] — Representations, BFS, DFS, shortest path, topological sort
-> [[01 Deque]] — Double-ended queue, monotonic deque, sliding window max/min
+> [[01 Arrays & Linked Lists]]: Sequential storage, dynamic arrays, singly/doubly linked, operations
+> [[01 Stacks & Queues]]: LIFO/FIFO, implementations, monotonic stack, deque
+> [[01 Trees & BSTs]]: Binary trees, BST, AVL, traversals, trie
+> [[01 Heaps & Priority Queues]]: Min/max heap, heapify, heap sort, applications
+> [[01 Hash Tables]]: Hash functions, collision resolution, load factor, real-world usage
+> [[01 Graphs]]: Representations, BFS, DFS, shortest path, topological sort
+> [[01 Deque]]: Double-ended queue, monotonic deque, sliding window max/min
 
 ### 02 Algorithms
 
-> [[02 Searching]] — Linear, binary, interpolation, search in rotated array
-> [[02 Sorting]] — Quick, merge, heap, counting, radix, stability
-> [[02 Recursion & Backtracking]] — Base case, call stack, permutations, N-Queens
-> [[02 Divide & Conquer]] — Merge sort, quick sort, binary search, master theorem
-> [[02 Greedy Algorithms]] — Activity selection, Huffman, Dijkstra, fractional knapsack
-> [[02 Dynamic Programming]] — Memoization vs tabulation, LCS, knapsack, coin change
-> [[02 String Algorithms]] — Naive matching, KMP, Rabin-Karp, string hashing
-> [[02 Math Algorithms]] — GCD/LCM, Sieve of Eratosthenes, modular exponentiation, combinatorics under mod
+> [[02 Searching]]: Linear, binary, interpolation, search in rotated array
+> [[02 Sorting]]: Quick, merge, heap, counting, radix, stability
+> [[02 Recursion & Backtracking]]: Base case, call stack, permutations, N-Queens
+> [[02 Divide & Conquer]]: Merge sort, quick sort, binary search, master theorem
+> [[02 Greedy Algorithms]]: Activity selection, Huffman, Dijkstra, fractional knapsack
+> [[02 Dynamic Programming]]: Memoization vs tabulation, LCS, knapsack, coin change
+> [[02 String Algorithms]]: Naive matching, KMP, Rabin-Karp, string hashing
+> [[02 Math Algorithms]]: GCD/LCM, Sieve of Eratosthenes, modular exponentiation, combinatorics under mod
 
 ### 03 Problem Solving
 
-> [[03 Patterns & Strategies]] — Big-O, space-time tradeoffs, amortized analysis
-> [[03 Patterns & Strategies]] — Two pointers, sliding window, fast-slow, prefix sum, intervals
+> [[03 Patterns & Strategies]]: Big-O, space-time tradeoffs, amortized analysis
+> [[03 Patterns & Strategies]]: Two pointers, sliding window, fast-slow, prefix sum, intervals
 
 ---
 
@@ -63,5 +63,5 @@ Data structures organize data. Algorithms process it. Together they're the found
 
 For deeper coverage of advanced algorithms (amortized analysis, B-trees, Fibonacci heaps, MST, max flow, NP-completeness, number theory, linear programming):
 
-→ [[Algorithm Advance - Overview]] — CLRS advanced topics that complement these practical notes
-- GeeksforGeeks — https://www.geeksforgeeks.org/
+→ [[Algorithm Advance - Overview]]: CLRS advanced topics that complement these practical notes
+- GeeksforGeeks: https://www.geeksforgeeks.org/

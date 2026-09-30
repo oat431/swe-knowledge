@@ -25,9 +25,9 @@ Every disk read, network packet, and keystroke involves I/O. The OS manages devi
 
 | Method | How | CPU Usage |
 |--------|-----|:---:|
-| **Polling** | CPU repeatedly checks "are you ready?" | High — spins waiting |
-| **Interrupts** | Device sends interrupt when ready. CPU notified. | Low — CPU does other work |
-| **DMA** (Direct Memory Access) | Device writes directly to RAM. CPU sets up, walks away. | Minimal — only setup/teardown |
+| **Polling** | CPU repeatedly checks "are you ready?" | High ;  spins waiting |
+| **Interrupts** | Device sends interrupt when ready. CPU notified. | Low ;  CPU does other work |
+| **DMA** (Direct Memory Access) | Device writes directly to RAM. CPU sets up, walks away. | Minimal ;  only setup/teardown |
 
 ```
 Without DMA: CPU reads from device → CPU writes to memory
@@ -42,16 +42,16 @@ With DMA:    CPU tells device "write to address 0x..." → device does it → in
 
 | Purpose | Where | Example |
 |---------|-------|---------|
-| **Buffer** | Smooth out speed differences | `BufferedInputStream` — reads 8KB at a time, not 1 byte |
-| **Cache** | Avoid repeated slow operations | OS page cache — recently read files served from RAM |
+| **Buffer** | Smooth out speed differences | `BufferedInputStream` ;  reads 8KB at a time, not 1 byte |
+| **Cache** | Avoid repeated slow operations | OS page cache ;  recently read files served from RAM |
 
 ```java
-// ❌ Unbuffered — system call per byte
+// ❌ Unbuffered - system call per byte
 FileInputStream fis = new FileInputStream("data.bin");
 int b;
 while ((b = fis.read()) != -1) { process(b); }  // read() syscall per byte!
 
-// ✅ Buffered — 8KB reads
+// ✅ Buffered - 8KB reads
 BufferedInputStream bis = new BufferedInputStream(new FileInputStream("data.bin"));
 // Internally reads 8KB chunks. read() returns from buffer, not syscall.
 ```
@@ -81,7 +81,7 @@ cat /sys/block/sda/queue/scheduler
 > Treat a file as if it's in memory. The OS handles loading/storing pages.
 
 ```java
-// mmap — zero-copy file access
+// mmap - zero-copy file access
 try (RandomAccessFile file = new RandomAccessFile("data.bin", "rw");
      FileChannel channel = file.getChannel()) {
     
@@ -92,12 +92,12 @@ try (RandomAccessFile file = new RandomAccessFile("data.bin", "rw");
     int value = buffer.getInt();
     buffer.putInt(0, 42);
 }
-// No read()/write() syscalls during access — just page faults
+// No read()/write() syscalls during access - just page faults
 ```
 
 ---
 
-## I/O in Practice — Linux Tools
+## I/O in Practice: Linux Tools
 
 ```bash
 # Disk I/O stats

@@ -7,7 +7,7 @@ tags:
 
 # 07 Error Handling
 
-Errors are inevitable — files don't exist, networks drop, users input garbage. Robust programs don't crash; they detect, report, and recover gracefully. Good error handling is the difference between software that works in the lab and software that survives production.
+Errors are inevitable, files don't exist, networks drop, users input garbage. Robust programs don't crash; they detect, report, and recover gracefully. Good error handling is the difference between software that works in the lab and software that survives production.
 
 ---
 
@@ -20,14 +20,14 @@ Errors are inevitable — files don't exist, networks drop, users input garbage.
 | **Error** | `Error` | ❌ Should never catch | `OutOfMemoryError`, `StackOverflowError` |
 
 ```java
-// Checked — compiler forces you to handle it
+// Checked - compiler forces you to handle it
 try {
     FileReader file = new FileReader("data.txt");
 } catch (FileNotFoundException e) {
     System.err.println("File not found: " + e.getMessage());
 }
 
-// Unchecked — no compiler enforcement, but still catchable
+// Unchecked - no compiler enforcement, but still catchable
 int[] arr = {1, 2, 3};
 try {
     int val = arr[10];  // ArrayIndexOutOfBoundsException
@@ -36,7 +36,7 @@ try {
 }
 ```
 
-> Python, JavaScript, and TypeScript have only unchecked exceptions — everything is a `RuntimeException` equivalent.
+> Python, JavaScript, and TypeScript have only unchecked exceptions, everything is a `RuntimeException` equivalent.
 
 ---
 
@@ -64,7 +64,7 @@ try {
 |---|---|
 | `try` | Always (until an exception is thrown) |
 | `catch` | Only if a matching exception was thrown |
-| `finally` | Always — used for cleanup (closing files, releasing locks) |
+| `finally` | Always ;  used for cleanup (closing files, releasing locks) |
 
 ---
 
@@ -123,7 +123,7 @@ public void withdraw(double amount) throws InsufficientFundsException {
 ### Throw Early (fail fast)
 
 ```java
-// ✅ GOOD — validate immediately, throw at the source
+// ✅ GOOD - validate immediately, throw at the source
 public void setAge(int age) {
     if (age < 0 || age > 150) {
         throw new IllegalArgumentException("Invalid age: " + age);
@@ -131,7 +131,7 @@ public void setAge(int age) {
     this.age = age;
 }
 
-// ❌ BAD — let invalid data propagate, fail much later
+// ❌ BAD - let invalid data propagate, fail much later
 public void setAge(int age) {
     this.age = age;  // stores garbage, fails somewhere downstream
 }
@@ -140,14 +140,14 @@ public void setAge(int age) {
 ### Catch Specific
 
 ```java
-// ❌ BAD — catches everything, hides real bugs
+// ❌ BAD - catches everything, hides real bugs
 try {
     parseConfig(file);
 } catch (Exception e) {
     log.error("Something went wrong");  // swallowed silently
 }
 
-// ✅ GOOD — catches specific, handles appropriately
+// ✅ GOOD - catches specific, handles appropriately
 try {
     parseConfig(file);
 } catch (FileNotFoundException e) {
@@ -162,10 +162,10 @@ try {
 
 ## Resource Management
 
-### Java — try-with-resources
+### Java: try-with-resources
 
 ```java
-// ✅ GOOD — resource auto-closed when block exits
+// ✅ GOOD - resource auto-closed when block exits
 try (BufferedReader reader = new BufferedReader(new FileReader("data.txt"))) {
     String line;
     while ((line = reader.readLine()) != null) {
@@ -173,7 +173,7 @@ try (BufferedReader reader = new BufferedReader(new FileReader("data.txt"))) {
     }
 }  // reader.close() called automatically, even if exception occurs
 
-// ❌ BAD — manual close, risks resource leak
+// ❌ BAD - manual close, risks resource leak
 BufferedReader reader = new BufferedReader(new FileReader("data.txt"));
 try {
     // ... use reader
@@ -182,10 +182,10 @@ try {
 }
 ```
 
-### Python — context managers
+### Python: context managers
 
 ```python
-# ✅ GOOD — with statement ensures cleanup
+# ✅ GOOD - with statement ensures cleanup
 with open("data.txt") as f:
     for line in f:
         process(line)
@@ -203,7 +203,7 @@ def managed_resource():
         release(resource)
 ```
 
-### C# — using statement
+### C#: using statement
 
 ```csharp
 using (var reader = new StreamReader("data.txt"))
@@ -225,7 +225,7 @@ using (var reader = new StreamReader("data.txt"))
 Instead of exceptions, return a value that encodes success or failure.
 
 ```rust
-// Rust — Result<T, E>
+// Rust - Result<T, E>
 fn read_file(path: &str) -> Result<String, io::Error> {
     fs::read_to_string(path)
 }
@@ -237,7 +237,7 @@ match read_file("data.txt") {
 ```
 
 ```go
-// Go — multiple return values
+// Go - multiple return values
 content, err := os.ReadFile("data.txt")
 if err != nil {
     log.Fatal(err)
@@ -247,10 +247,10 @@ fmt.Println(string(content))
 
 ### Option / Maybe Monad
 
-Represents a value that might be absent — eliminates null.
+Represents a value that might be absent, eliminates null.
 
 ```java
-// Java — Optional<T>
+// Java - Optional<T>
 Optional<String> name = findUser(id)
     .map(User::getName)
     .filter(n -> !n.isBlank());
@@ -259,7 +259,7 @@ name.orElse("Anonymous");
 ```
 
 ```typescript
-// TypeScript — null-safe patterns
+// TypeScript - null-safe patterns
 const name = user?.profile?.name ?? "Anonymous";
 ```
 
@@ -291,7 +291,7 @@ public void setRange(int start, int end) {
 ### Assertions
 
 ```java
-// Assertions — for development/testing, not production
+// Assertions - for development/testing, not production
 assert list.size() > 0 : "List should not be empty at this point";
 // Disabled by default in JVM; enable with -ea flag
 ```
@@ -302,11 +302,11 @@ assert list.size() > 0 : "List should not be empty at this point";
 
 | Situation | Action |
 |---|---|
-| Caller can recover | **Throw** — let the caller decide |
-| You're the final handler (e.g., top-level request handler) | **Log + handle** — log the error, return error response |
-| Unexpected invariant violated | **Throw** (or assert) — this is a bug, not a user error |
-| Informational / diagnostic | **Log** only — no exception needed |
-| Caught, handled, and re-thrown | **Log + throw** — log context, then re-throw |
+| Caller can recover | **Throw** ;  let the caller decide |
+| You're the final handler (e.g., top-level request handler) | **Log + handle** ;  log the error, return error response |
+| Unexpected invariant violated | **Throw** (or assert) ;  this is a bug, not a user error |
+| Informational / diagnostic | **Log** only ;  no exception needed |
+| Caught, handled, and re-thrown | **Log + throw** ;  log context, then re-throw |
 
 ---
 
@@ -319,7 +319,7 @@ assert list.size() > 0 : "List should not be empty at this point";
 try {
     riskyOperation();
 } catch (Exception e) {
-    // silent failure — the worst kind of bug
+    // silent failure - the worst kind of bug
 }
 ```
 
@@ -338,7 +338,7 @@ try {
 ### ❌ Catching `Exception` or `Throwable`
 
 ```java
-// ❌ Hides real bugs — NullPointerException, ClassCastException, etc.
+// ❌ Hides real bugs - NullPointerException, ClassCastException, etc.
 try {
     // 100 lines of code
 } catch (Exception e) {
@@ -379,7 +379,7 @@ try (Connection conn = dataSource.getConnection()) {
 
 ## Sources
 
-- *Effective Java* (3rd ed.) — Joshua Bloch, Items 69-73
-- *Clean Code* — Robert C. Martin, Chapter 7: Error Handling
-- Oracle Java Tutorials — Exceptions
-- Rust Book — Error Handling (doc.rust-lang.org)
+- *Effective Java* (3rd ed.): Joshua Bloch, Items 69-73
+- *Clean Code*: Robert C. Martin, Chapter 7: Error Handling
+- Oracle Java Tutorials: Exceptions
+- Rust Book: Error Handling (doc.rust-lang.org)

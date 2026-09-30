@@ -29,8 +29,8 @@ Contiguous memory. Fixed size (static) or resizable (dynamic).
 ArrayList<Integer> list = new ArrayList<>();
 list.add(10);         // [10]
 list.add(20);         // [10, 20]
-list.add(1, 15);      // [10, 15, 20]  — O(n) shift
-list.remove(1);       // [10, 20]      — O(n) shift
+list.add(1, 15);      // [10, 15, 20]  - O(n) shift
+list.remove(1);       // [10, 20]      - O(n) shift
 int x = list.get(0);  // O(1)
 ```
 
@@ -68,7 +68,7 @@ class ListNode {
 *O(1) with tail pointer.
 
 ```java
-// Reverse a linked list (iterative) — O(n) time, O(1) space
+// Reverse a linked list (iterative) - O(n) time, O(1) space
 ListNode reverse(ListNode head) {
     ListNode prev = null;
     ListNode curr = head;
@@ -91,7 +91,7 @@ ListNode reverse(ListNode head) {
 | **Two pointers** | Merge sorted lists, intersection |
 
 ```java
-// Detect cycle (Floyd's algorithm) — O(n) time, O(1) space
+// Detect cycle (Floyd's algorithm) - O(n) time, O(1) space
 boolean hasCycle(ListNode head) {
     ListNode slow = head, fast = head;
     while (fast != null && fast.next != null) {
@@ -120,15 +120,15 @@ boolean hasCycle(ListNode head) {
 
 ## Sources
 
-- CLRS — Chapters 10.1–10.2
-- LeetCode — Array / Linked List problem sets
+- CLRS: Chapters 10.1–10.2
+- LeetCode: Array / Linked List problem sets
 
 
 ---
 
 ## Hands-On Exercises
 
-### Exercise 1: Two Pointers — Remove Duplicates
+### Exercise 1: Two Pointers: Remove Duplicates
 Given a **sorted** array, remove duplicates in-place and return the new length. Use the two-pointer technique.
 
 ```java
@@ -144,7 +144,7 @@ int removeDuplicates(int[] nums) {
 
 ---
 
-### Exercise 2: Sliding Window — Max Sum Subarray of Size K
+### Exercise 2: Sliding Window: Max Sum Subarray of Size K
 Given an array of integers and a number `k`, find the maximum sum of a subarray of size `k`.
 
 ```java
@@ -159,7 +159,7 @@ int maxSumSubarray(int[] arr, int k) {
 
 ---
 
-### Exercise 3: Linked List — Reverse a Linked List
+### Exercise 3: Linked List: Reverse a Linked List
 Implement the iterative reverse algorithm shown in the note. Test with: `1 → 2 → 3 → 4 → 5` → expect `5 → 4 → 3 → 2 → 1`.
 
 ```java
@@ -171,7 +171,7 @@ ListNode reverse(ListNode head) {
 
 ---
 
-### Exercise 4: Fast & Slow Pointers — Find Middle of Linked List
+### Exercise 4: Fast & Slow Pointers: Find Middle of Linked List
 Given the head of a singly linked list, return the middle node. If two middle nodes, return the second.
 
 ```java

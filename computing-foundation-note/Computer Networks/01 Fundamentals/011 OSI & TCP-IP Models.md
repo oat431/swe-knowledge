@@ -37,9 +37,10 @@ The OSI model is a reference. The TCP/IP model is reality. Both describe how dat
 
 ---
 
-## Encapsulation — How Data Flows
+## Encapsulation: How Data Flows
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A["<b>Application</b><br><i>HTTP Request</i><br>GET /api/users HTTP/1.1"] -->|"+ TCP Header"| T["<b>Transport</b><br><i>TCP Segment</i><br>+ source/dest port, seq number"]
     T -->|"+ IP Header"| N["<b>Network</b><br><i>IP Packet</i><br>+ source/dest IP"]
@@ -47,13 +48,15 @@ graph TD
     D -->|"Bits on wire"| P["<b>Physical</b><br>101011100010..."]
 ```
 
+
 > **Encapsulation:** Each layer wraps the data from the layer above in its own header. At the destination, each layer strips its header and passes the remainder up.
 
 ---
 
-## TCP/IP Model — What Actually Runs the Internet
+## TCP/IP Model: What Actually Runs the Internet
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     subgraph "TCP/IP Model"
         A["<b>Application</b><br>HTTP, DNS, SMTP, SSH"]
@@ -73,9 +76,10 @@ graph LR
     N --- ON
 ```
 
+
 ---
 
-## What Happens at Each Layer — Backend Developer's View
+## What Happens at Each Layer: Backend Developer's View
 
 | Layer | What You Debug | Tool |
 |-------|---------------|------|
@@ -100,6 +104,6 @@ graph LR
 
 ## Sources
 
-- ISO/IEC 7498-1:1994 — OSI Basic Reference Model
-- RFC 1122 — Requirements for Internet Hosts
+- ISO/IEC 7498-1:1994: OSI Basic Reference Model
+- RFC 1122: Requirements for Internet Hosts
 - Kurose & Ross. *Computer Networking: A Top-Down Approach.*

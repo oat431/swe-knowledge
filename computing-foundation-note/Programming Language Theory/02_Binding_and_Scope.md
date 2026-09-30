@@ -31,7 +31,7 @@ val two = 2          // two ↦ 2
 val four = two + two // four ↦ 4
 ```
 
-Bindings produce a **value environment** — a finite map from names to values:
+Bindings produce a **value environment**, a finite map from names to values:
 
 $$[x_1 \mapsto v_1, \dots, x_n \mapsto v_n]$$
 
@@ -69,13 +69,13 @@ val c = {
 ```
 
 Key points:
-- Shadowing is **not** assignment — the outer binding still exists but is hidden in the inner scope.
+- Shadowing is **not** assignment: the outer binding still exists but is hidden in the inner scope.
 - We can **rename** bound variables to eliminate shadowing while preserving semantics.
 - Inner-scope bindings are **not** visible in the outer/global scope.
 
 ### Static (Lexical) Scoping
 
-Scala uses **static (lexical) scoping**: the binding for any name use is determined by examining the program text, independent of evaluation order.
+Scala uses **static (lexical) scoping:** the binding for any name use is determined by examining the program text, independent of evaluation order.
 
 **Rule:** For any use of variable `x`, the applicable binding is in the **innermost scope** that (a) contains the use of `x` and (b) has a binding for `x`.
 
@@ -91,7 +91,7 @@ In expression `e`:
 { val x = 3; x + y }  // x is bound, y is free
 ```
 
-- Free variables are **inputs** to an expression — evaluation requires an environment providing their bindings.
+- Free variables are **inputs** to an expression: evaluation requires an environment providing their bindings.
 - A **closed expression** has no free variables; it can be evaluated with an empty environment.
 - An **open expression** has at least one free variable.
 - When renaming bound variables within a sub-expression, we can rename consistently without changing semantics. Free variables **cannot** be renamed.
@@ -107,7 +107,7 @@ An **immutable** variable (`val`) binds a name to a fixed value. A **mutable** v
 | Java       | `final int x` | `int x = 1`   |
 | C          | `const int x` | `int x = 1`   |
 
-Mutable variables **break referential transparency** — the value of an expression may depend on when it runs. Immutable bindings let the compiler share references aggressively, producing more efficient code.
+Mutable variables **break referential transparency**, the value of an expression may depend on when it runs. Immutable bindings let the compiler share references aggressively, producing more efficient code.
 
 ## Functions and Tuples
 
@@ -129,7 +129,7 @@ def f(x₁: τ₁, …, xₙ: τₙ): τ = e
 
 ### First-Class Functions
 
-Functions are **values** in Scala — expressions can evaluate to function values. A **function literal** defines an anonymous function:
+Functions are **values** in Scala, expressions can evaluate to function values. A **function literal** defines an anonymous function:
 
 ```scala
 (x: Int) => x * x         // type: Int => Int
@@ -141,7 +141,7 @@ Function values are historically called **lambdas** (from Lambda Calculus).
 
 ## Related
 
-- [[Programming Language Theory Overview]] — All PLT topics
-- [[01_Expressions_and_Evaluation]] — Expressions and evaluation
-- [[05_Type_Systems_and_Judgments]] — Static scoping and type systems
-- [[06_Operational_Semantics]] — Closures and environments
+- [[Programming Language Theory Overview]]: All PLT topics
+- [[01_Expressions_and_Evaluation]]: Expressions and evaluation
+- [[05_Type_Systems_and_Judgments]]: Static scoping and type systems
+- [[06_Operational_Semantics]]: Closures and environments

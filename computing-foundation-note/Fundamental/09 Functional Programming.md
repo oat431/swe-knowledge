@@ -8,7 +8,7 @@ tags:
 
 # 09 Functional Programming
 
-Functional Programming (FP) is a paradigm that treats computation as the evaluation of mathematical functions — no mutable state, no side effects, no surprises. You don't need to write Haskell to benefit from FP. Modern Java, TypeScript, Python, and most languages now support FP patterns natively. Understanding FP makes you a better programmer in *any* language.
+Functional Programming (FP) is a paradigm that treats computation as the evaluation of mathematical functions; no mutable state, no side effects, no surprises. You don't need to write Haskell to benefit from FP. Modern Java, TypeScript, Python, and most languages now support FP patterns natively. Understanding FP makes you a better programmer in *any* language.
 
 ---
 
@@ -18,7 +18,7 @@ Functional Programming (FP) is a paradigm that treats computation as the evaluat
 |---|---|---|
 | **Pure functions** | Same input → same output, no side effects | Predictable, testable, cacheable |
 | **Immutability** | Data doesn't change after creation | No race conditions, safe to share |
-| **First-class functions** | Functions are values — pass, return, store | Enables composition and abstraction |
+| **First-class functions** | Functions are values ;  pass, return, store | Enables composition and abstraction |
 | **Declarative style** | Describe *what*, not *how* | More readable, less error-prone |
 
 ---
@@ -30,27 +30,27 @@ A function is **pure** if:
 2. It has no observable side effects (no I/O, no mutation, no global state)
 
 ```java
-// ❌ IMPURE — depends on external state, mutates it
+// ❌ IMPURE - depends on external state, mutates it
 int discount = 10;
 
 int applyDiscount(int price) {
     return price - discount;  // what if discount changes?
 }
 
-// ✅ PURE — all dependencies are explicit parameters
+// ✅ PURE - all dependencies are explicit parameters
 int applyDiscount(int price, int discount) {
     return price - discount;  // always same result for same inputs
 }
 ```
 
 ```typescript
-// ❌ IMPURE — mutates input array
+// ❌ IMPURE - mutates input array
 function addItem(cart: string[], item: string) {
     cart.push(item);  // caller's array is modified!
     return cart;
 }
 
-// ✅ PURE — returns new array, original unchanged
+// ✅ PURE - returns new array, original unchanged
 function addItem(cart: readonly string[], item: string): string[] {
     return [...cart, item];  // new array, original untouched
 }
@@ -74,15 +74,15 @@ Once created, data never changes. Instead of modifying, you create new versions.
 ### Java
 
 ```java
-// ❌ Mutable — risky
+// ❌ Mutable - risky
 List<String> names = new ArrayList<>();
 names.add("Alice");
 names.add("Bob");
 names.clear();  // oops, lost everything
 
-// ✅ Immutable — safe
+// ✅ Immutable - safe
 List<String> names = List.of("Alice", "Bob");
-// names.add("Charlie");  // COMPILE ERROR — UnsupportedOperationException
+// names.add("Charlie");  // COMPILE ERROR - UnsupportedOperationException
 
 // Create modified copies
 List<String> moreNames = new ArrayList<>(names);
@@ -97,7 +97,7 @@ List<String> immutable = List.copyOf(moreNames);
 const user = { name: "Alice", age: 30 };
 user.age = 31;  // original object changed
 
-// ✅ Immutable — spread operator creates new object
+// ✅ Immutable - spread operator creates new object
 const user = { name: "Alice", age: 30 } as const;
 const olderUser = { ...user, age: 31 };  // new object, original unchanged
 
@@ -120,10 +120,10 @@ Object.freeze(user);
 
 ## First-Class Functions
 
-Functions are values — you can assign them to variables, pass them as arguments, return them from other functions.
+Functions are values; you can assign them to variables, pass them as arguments, return them from other functions.
 
 ```java
-// Java — function references and lambdas
+// Java - function references and lambdas
 Predicate<String> isLong = s -> s.length() > 10;
 Function<String, Integer> length = String::length;
 BiFunction<Integer, Integer, Integer> add = Integer::sum;
@@ -135,7 +135,7 @@ List<String> filtered = names.stream()
 ```
 
 ```typescript
-// TypeScript — functions are first-class citizens
+// TypeScript - functions are first-class citizens
 const isLong = (s: string): boolean => s.length > 10;
 const length = (s: string): number => s.length;
 
@@ -151,7 +151,7 @@ const lengths = names.map(length);
 A function that takes a function as input, or returns a function as output.
 
 ```java
-// Java — higher-order function that returns a configured validator
+// Java - higher-order function that returns a configured validator
 Function<String, Predicate<String>> minLength = (min) ->
     (s) -> s.length() >= min;
 
@@ -165,7 +165,7 @@ atLeast8.test("password"); // true
 ```
 
 ```typescript
-// TypeScript — higher-order function
+// TypeScript - higher-order function
 function retry<T>(fn: () => T, attempts: number): T {
     let lastError: Error;
     for (let i = 0; i < attempts; i++) {
@@ -192,24 +192,24 @@ The three pillars of data transformation. Every language with FP support has the
 // Java Streams
 List<String> names = List.of("Alice", "Bob", "Charlie", "David");
 
-// map — transform each element
+// map - transform each element
 List<Integer> lengths = names.stream()
     .map(String::length)
     .collect(Collectors.toList());  // [5, 3, 7, 5]
 
-// filter — keep elements matching condition
+// filter - keep elements matching condition
 List<String> longNames = names.stream()
     .filter(name -> name.length() > 4)
     .collect(Collectors.toList());  // ["Alice", "Charlie", "David"]
 
-// reduce — combine all elements into one value
+// reduce - combine all elements into one value
 int totalLength = names.stream()
     .map(String::length)
     .reduce(0, Integer::sum);  // 20
 ```
 
 ```typescript
-// TypeScript — array methods
+// TypeScript - array methods
 const names = ["Alice", "Bob", "Charlie", "David"];
 
 // map
@@ -225,7 +225,7 @@ const totalLength = names
 ```
 
 ```python
-# Python — list comprehensions + built-ins
+# Python - list comprehensions + built-ins
 names = ["Alice", "Bob", "Charlie", "David"]
 
 # map
@@ -238,7 +238,7 @@ long_names = list(filter(lambda n: len(n) > 4, names))  # ["Alice", "Charlie", "
 from functools import reduce
 total_length = reduce(lambda acc, n: acc + len(n), names, 0)  # 20
 
-# Pythonic — list comprehensions (preferred)
+# Pythonic - list comprehensions (preferred)
 lengths = [len(n) for n in names]
 long_names = [n for n in names if len(n) > 4]
 ```
@@ -248,7 +248,7 @@ long_names = [n for n in names if len(n) > 4]
 Chain operations for readable data transformation:
 
 ```java
-// Java — stream pipeline
+// Java - stream pipeline
 double avgPrice = orders.stream()
     .filter(o -> o.getStatus() == Status.COMPLETED)
     .filter(o -> o.getDate().isAfter(LocalDate.now().minusDays(30)))
@@ -258,7 +258,7 @@ double avgPrice = orders.stream()
 ```
 
 ```typescript
-// TypeScript — chained pipeline
+// TypeScript - chained pipeline
 const avgPrice = orders
     .filter(o => o.status === "completed")
     .filter(o => o.date > thirtyDaysAgo)
@@ -273,7 +273,7 @@ const avgPrice = orders
 Building complex functions by combining simple ones.
 
 ```typescript
-// TypeScript — compose small functions into a pipeline
+// TypeScript - compose small functions into a pipeline
 const trim = (s: string) => s.trim();
 const toLowerCase = (s: string) => s.toLowerCase();
 const split = (sep: string) => (s: string) => s.split(sep);
@@ -294,7 +294,7 @@ normalize("  Hello  ");  // "hello"
 ```
 
 ```java
-// Java — Function composition
+// Java - Function composition
 Function<String, String> trim = String::trim;
 Function<String, String> lower = String::toLowerCase;
 Function<String, String[]> split = s -> s.split(" ");
@@ -312,7 +312,7 @@ normalizeAndSplit.apply("  Hello World  ");  // ["hello", "world"]
 A function that captures variables from its enclosing scope.
 
 ```typescript
-// TypeScript — closure captures `multiplier`
+// TypeScript - closure captures `multiplier`
 function createMultiplier(multiplier: number) {
     return (x: number) => x * multiplier;  // captures multiplier
 }
@@ -325,7 +325,7 @@ triple(5);  // 15
 ```
 
 ```java
-// Java — effectively final variables are captured by lambdas
+// Java - effectively final variables are captured by lambdas
 Function<Integer, Integer> createMultiplier(int multiplier) {
     return (x) -> x * multiplier;  // multiplier is effectively final
 }
@@ -342,7 +342,7 @@ triple.apply(5);  // 15
 Fixing some arguments of a function, producing a new function with fewer parameters.
 
 ```typescript
-// TypeScript — partial application
+// TypeScript - partial application
 function log(level: string, timestamp: Date, message: string) {
     console.log(`[${level}] ${timestamp.toISOString()}: ${message}`);
 }
@@ -357,14 +357,14 @@ debugLog("Query executed in 42ms");      // [DEBUG] 2026-07-11T...: Query execut
 
 ---
 
-## Option / Either — Handling Missing & Error Values
+## Option / Either: Handling Missing & Error Values
 
 FP replaces `null` and exceptions with explicit types that force the caller to handle both cases.
 
-### Option (Maybe) — Handles Absence
+### Option (Maybe): Handles Absence
 
 ```java
-// Java — Optional<T>
+// Java - Optional<T>
 public Optional<User> findById(int id) {
     return Optional.ofNullable(userMap.get(id));
 }
@@ -374,7 +374,7 @@ String name = findById(42)
     .map(User::getName)
     .orElse("Anonymous");
 
-// Chaining — clean pipeline, no null checks
+// Chaining - clean pipeline, no null checks
 String upperName = findById(42)
     .map(User::getName)
     .map(String::toUpperCase)
@@ -382,14 +382,14 @@ String upperName = findById(42)
 ```
 
 ```typescript
-// TypeScript — null-safe chaining (built-in)
+// TypeScript - null-safe chaining (built-in)
 const name = findById(42)?.name?.toUpperCase() ?? "UNKNOWN";
 ```
 
-### Either — Handles Errors
+### Either: Handles Errors
 
 ```typescript
-// TypeScript — Result type pattern
+// TypeScript - Result type pattern
 type Result<T, E> = { ok: true; value: T } | { ok: false; error: E };
 
 function divide(a: number, b: number): Result<number, string> {
@@ -399,14 +399,14 @@ function divide(a: number, b: number): Result<number, string> {
 
 const result = divide(10, 2);
 if (result.ok) {
-    console.log(result.value);  // 5 — TypeScript narrows the type
+    console.log(result.value);  // 5 - TypeScript narrows the type
 } else {
     console.error(result.error);
 }
 ```
 
 ```rust
-// Rust — Result<T, E> is built into the language
+// Rust - Result<T, E> is built into the language
 fn divide(a: f64, b: f64) -> Result<f64, String> {
     if b == 0.0 { Err("Division by zero".into()) }
     else { Ok(a / b) }
@@ -420,7 +420,7 @@ match divide(10.0, 2.0) {
 
 ---
 
-## FP vs OOP — When to Use Which
+## FP vs OOP: When to Use Which
 
 | Aspect | FP | OOP |
 |---|---|---|
@@ -441,15 +441,15 @@ Modern software uses **both**. The best code mixes paradigms:
 - **Infrastructure** → OOP (repositories, adapters, DI containers)
 
 ```java
-// ✅ Mixed paradigm — OOP structure, FP logic
+// ✅ Mixed paradigm - OOP structure, FP logic
 public class OrderService {
-    private final OrderRepository repo;  // OOP — dependency injection
+    private final OrderRepository repo;  // OOP - dependency injection
 
     public BigDecimal calculateTotal(List<OrderItem> items) {
-        return items.stream()                    // FP — stream pipeline
-            .filter(item -> item.isValid())      // FP — pure predicate
-            .map(OrderItem::getSubtotal)         // FP — method reference
-            .reduce(BigDecimal.ZERO, BigDecimal::add);  // FP — reduce
+        return items.stream()                    // FP - stream pipeline
+            .filter(item -> item.isValid())      // FP - pure predicate
+            .map(OrderItem::getSubtotal)         // FP - method reference
+            .reduce(BigDecimal.ZERO, BigDecimal::add);  // FP - reduce
     }
 }
 ```
@@ -461,7 +461,7 @@ public class OrderService {
 ### ❌ Overusing Streams / Pipelines
 
 ```java
-// ❌ Unreadable chain — when does it end?
+// ❌ Unreadable chain - when does it end?
 return items.stream()
     .filter(i -> i.getPrice() > 0)
     .map(Item::getCategory)
@@ -505,14 +505,14 @@ List<Integer> result = numbers.stream()
 ### ❌ Using FP for Side-Effect-Heavy Code
 
 ```java
-// ❌ forEach with side effects — not really FP
+// ❌ forEach with side effects - not really FP
 names.stream().forEach(name -> {
     database.save(name);        // side effect
     emailService.send(name);    // side effect
     logger.info("Saved: " + name);  // side effect
 });
 
-// ✅ Just use a for-loop — side effects aren't FP
+// ✅ Just use a for-loop - side effects aren't FP
 for (String name : names) {
     database.save(name);
     emailService.send(name);
@@ -520,15 +520,15 @@ for (String name : names) {
 }
 ```
 
-> **Rule of thumb:** Use `forEach` only for terminal side effects (logging, collecting). If you're mutating state inside a stream, you're fighting the paradigm — use a loop.
+> **Rule of thumb:** Use `forEach` only for terminal side effects (logging, collecting). If you're mutating state inside a stream, you're fighting the paradigm; use a loop.
 
 ---
 
 ## Sources
 
-- *Functional Programming in Scala* — Paul Chiusano & Rúnar Bjarnason
-- *Java Functional Programming* — Oracle Java Tutorials (docs.oracle.com)
-- *Functional-Light JavaScript* — Kyle Simpson (github.com/getify/Functional-Light-JS)
-- *Haskell Programming from First Principles* — Christopher Allen & Julie Moronuki
-- MDN — Array methods (developer.mozilla.org)
-- Martin Fowler — "Collection Pipeline" pattern (martinfowler.com)
+- *Functional Programming in Scala*: Paul Chiusano & Rúnar Bjarnason
+- *Java Functional Programming*: Oracle Java Tutorials (docs.oracle.com)
+- *Functional-Light JavaScript*: Kyle Simpson (github.com/getify/Functional-Light-JS)
+- *Haskell Programming from First Principles*: Christopher Allen & Julie Moronuki
+- MDN: Array methods (developer.mozilla.org)
+- Martin Fowler: "Collection Pipeline" pattern (martinfowler.com)

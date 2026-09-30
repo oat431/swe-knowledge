@@ -6,9 +6,9 @@ tags:
   - sdlc
 ---
 
-# Software Engineering Note — Content
+# Software Engineering Note: Content
 
-> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]] — IEEE Computer Society, 2024
+> **Source:** [[SWEBOK v4 - Overview|SWEBOK v4]]: IEEE Computer Society, 2024
 > **Purpose:** The master index for the software engineering knowledge vault, organized by the 15 SWEBOK v4 Software Engineering Knowledge Areas (chapters 16-18 are in separate foundation vaults).
 > **Last gap analysis:** 2026-07-21
 
@@ -109,13 +109,13 @@ quadrantChart
 
 > **Overall vault coverage:** ~91% across 15 KAs (improved from ~58%)
 > **Strongest:** Professional Practice (95%), Architecture/Process/SCM/Construction/Models (92%)
-> **Weakest:** Maintenance (88%), Economics (90%) — all KAs above 85%
+> **Weakest:** Maintenance (88%), Economics (90%); all KAs above 85%
 
 ---
 
 ## Related
 
-- [[Body of Knowledge - Overview|Body of Knowledge — Overview]]
-- [[Essential Documents - Overview|Essential Documents — Overview]]
+- [[Body of Knowledge - Overview|Body of Knowledge: Overview]]
+- [[Essential Documents - Overview|Essential Documents: Overview]]
 - [[SWEBOK v4 - Overview]]
 - [[SWEBOK Essential Documents]]

@@ -7,7 +7,7 @@ tags:
 
 # 02 String Algorithms
 
-String matching is everywhere — search engines, DNA sequencing, log parsing, compilers. A naive approach works for small inputs, but real-world text processing demands algorithms that avoid re-scanning the same characters. This note covers the three fundamental pattern-matching algorithms and common string techniques.
+String matching is everywhere; search engines, DNA sequencing, log parsing, compilers. A naive approach works for small inputs, but real-world text processing demands algorithms that avoid re-scanning the same characters. This note covers the three fundamental pattern-matching algorithms and common string techniques.
 
 ---
 
@@ -16,7 +16,7 @@ String matching is everywhere — search engines, DNA sequencing, log parsing, c
 The simplest approach: slide the pattern across the text one character at a time, checking for a full match at each position.
 
 ```java
-// Naive pattern search — O(n * m) time
+// Naive pattern search - O(n * m) time
 List<Integer> naiveSearch(String text, String pattern) {
     List<Integer> matches = new ArrayList<>();
     int n = text.length(), m = pattern.length();
@@ -42,7 +42,7 @@ List<Integer> naiveSearch(String text, String pattern) {
 
 ## KMP (Knuth-Morris-Pratt)
 
-KMP eliminates redundant comparisons by **pre-analyzing the pattern**. It builds a failure function (LPS array) that tells us exactly how far to shift on a mismatch — without backtracking in the text.
+KMP eliminates redundant comparisons by **pre-analyzing the pattern**. It builds a failure function (LPS array) that tells us exactly how far to shift on a mismatch, without backtracking in the text.
 
 ### The LPS Array (Longest Proper Prefix which is also Suffix)
 
@@ -60,7 +60,7 @@ At index 4 (`A`), `"AA"` is both a prefix and suffix of `"AABAA"` → `lps[4] = 
 ### Full Implementation
 
 ```java
-// KMP Pattern Search — O(n + m) time, O(m) space
+// KMP Pattern Search - O(n + m) time, O(m) space
 List<Integer> kmpSearch(String text, String pattern) {
     List<Integer> matches = new ArrayList<>();
     int n = text.length(), m = pattern.length();
@@ -81,7 +81,7 @@ List<Integer> kmpSearch(String text, String pattern) {
             j = lps[j - 1];      // Continue searching
         } else if (i < n && text.charAt(i) != pattern.charAt(j)) {
             if (j != 0) {
-                j = lps[j - 1];  // Jump using LPS — no backtracking in text!
+                j = lps[j - 1];  // Jump using LPS - no backtracking in text!
             } else {
                 i++;
             }
@@ -103,7 +103,7 @@ int[] buildLPS(String pattern) {
             i++;
         } else {
             if (len != 0) {
-                len = lps[len - 1];  // Fall back — don't increment i
+                len = lps[len - 1];  // Fall back - don't increment i
             } else {
                 lps[i] = 0;
                 i++;
@@ -152,7 +152,7 @@ To slide from "ABC" to "BCD":
 ### Full Implementation
 
 ```java
-// Rabin-Karp — O(n + m) average, O(nm) worst case
+// Rabin-Karp - O(n + m) average, O(nm) worst case
 List<Integer> rabinKarpSearch(String text, String pattern) {
     List<Integer> matches = new ArrayList<>();
     int n = text.length(), m = pattern.length();
@@ -177,7 +177,7 @@ List<Integer> rabinKarpSearch(String text, String pattern) {
     // Slide the window
     for (int i = 0; i <= n - m; i++) {
         if (winHash == patHash) {
-            // Hash match — verify character by character
+            // Hash match - verify character by character
             if (text.substring(i, i + m).equals(pattern)) {
                 matches.add(i);
             }
@@ -225,7 +225,7 @@ List<Integer> rabinKarpSearch(String text, String pattern) {
 ### Anagram Detection
 
 ```java
-// ✅ Frequency count — O(n)
+// ✅ Frequency count - O(n)
 boolean isAnagram(String s, String t) {
     if (s.length() != t.length()) return false;
     int[] freq = new int[26];
@@ -239,7 +239,7 @@ boolean isAnagram(String s, String t) {
     return true;
 }
 
-// ❌ Sorting — O(n log n), slower
+// ❌ Sorting - O(n log n), slower
 boolean isAnagramSort(String s, String t) {
     char[] a = s.toCharArray(), b = t.toCharArray();
     Arrays.sort(a);
@@ -250,7 +250,7 @@ boolean isAnagramSort(String s, String t) {
 
 ### Longest Common Substring
 
-Use **dynamic programming** — `dp[i][j]` = length of longest common suffix of `s1[0..i-1]` and `s2[0..j-1]`. Time O(n × m), Space O(n × m).
+Use **dynamic programming**; `dp[i][j]` = length of longest common suffix of `s1[0..i-1]` and `s2[0..j-1]`. Time O(n × m), Space O(n × m).
 
 ### String Hashing
 
@@ -265,8 +265,8 @@ Rolling hash (as in Rabin-Karp) generalizes to:
 
 ## Sources
 
-- CLRS — Chapter 32 (String Matching)
-- Sedgewick — Algorithms, Chapter 5.3
+- CLRS: Chapter 32 (String Matching)
+- Sedgewick: Algorithms, Chapter 5.3
 - Knuth, Morris, Pratt. "Fast Pattern Matching in Strings," 1977.
 
 
@@ -274,7 +274,7 @@ Rolling hash (as in Rabin-Karp) generalizes to:
 
 ## Hands-On Exercises
 
-### Exercise 1: KMP — Build the LPS Array
+### Exercise 1: KMP: Build the LPS Array
 Implement `buildLPS` from the note. Test with pattern `"AABAAAC"` → expect `[0,1,0,1,2,2,0]`.
 
 ```java
@@ -290,28 +290,28 @@ int[] buildLPS(String pattern) {
 
 ---
 
-### Exercise 2: Rabin-Karp — Implement Rolling Hash
+### Exercise 2: Rabin-Karp: Implement Rolling Hash
 Implement the rolling hash computation. Given a text `"ABCDEFG"` and pattern `"CDE"`, find the match.
 
 ```java
 List<Integer> rabinKarpSearch(String text, String pattern) {
     // TODO: Follow the implementation from the note
     // Compute initial hash for pattern and first window
-    // Slide: remove left char, add right char — O(1) per slide
+    // Slide: remove left char, add right char - O(1) per slide
     // On hash match: verify character by character
 }
 ```
 
 ---
 
-### Exercise 3: Anagram Detection — Two Methods
+### Exercise 3: Anagram Detection: Two Methods
 Implement both methods from the note and compare their performance.
 
 ```java
-// Method 1: Frequency count — O(n)
+// Method 1: Frequency count - O(n)
 boolean isAnagramFreq(String s, String t) { /* TODO */ }
 
-// Method 2: Sorting — O(n log n)
+// Method 2: Sorting - O(n log n)
 boolean isAnagramSort(String s, String t) { /* TODO */ }
 ```
 
@@ -333,8 +333,8 @@ boolean isAnagramSort(String s, String t) { /* TODO */ }
 | 8 | [Implement strStr()](https://leetcode.com/problems/implement-strstr/) (LC 28) | 🟢 Easy | KMP (apply LPS) |
 
 ### Assignment Guidelines
-- **Start** with 1–3 (Easy) — basic string matching and anagram patterns.
-- **Then** 4–5 (Medium) — palindrome and anagram grouping.
+- **Start** with 1–3 (Easy): basic string matching and anagram patterns.
+- **Then** 4–5 (Medium): palindrome and anagram grouping.
 - **Problems 6–7** (Hard) require KMP or advanced sliding window.
 - **Key insight:** KMP's LPS array is the same concept used in many string problems.
 - **Target time:** 10 min per Easy, 25 min per Medium, 35 min per Hard.

@@ -8,7 +8,7 @@ tags:
 
 # 02 Cognitive Load
 
-Cognitive load is how much mental effort your interface demands. Humans have limited working memory — overload it and users make mistakes, feel frustrated, or abandon the task entirely.
+Cognitive load is how much mental effort your interface demands. Humans have limited working memory; overload it and users make mistakes, feel frustrated, or abandon the task entirely.
 
 ---
 
@@ -42,7 +42,7 @@ Cognitive load is how much mental effort your interface demands. Humans have lim
 
 - 2 options: fast decision
 - 20 options: paralysis
-- **Fix:** Progressive disclosure — show only what's needed now, reveal more on demand.
+- **Fix:** Progressive disclosure: show only what's needed now, reveal more on demand.
 
 ---
 
@@ -62,7 +62,7 @@ Cognitive load is how much mental effort your interface demands. Humans have lim
 
 ## For Developers Specifically
 
-Cognitive load applies to **code** too — not just UIs:
+Cognitive load applies to **code** too, not just UIs:
 
 | High cognitive load code | Low cognitive load code |
 |---|---|
@@ -71,7 +71,7 @@ Cognitive load applies to **code** too — not just UIs:
 | Implicit state mutations | Explicit, traceable state changes |
 | Clever one-liners | Readable, obvious code |
 
-> "Any fool can write code that a computer can understand. Good programmers write code that humans can understand." — Martin Fowler
+> "Any fool can write code that a computer can understand. Good programmers write code that humans can understand." *(Martin Fowler)*
 
 ---
 

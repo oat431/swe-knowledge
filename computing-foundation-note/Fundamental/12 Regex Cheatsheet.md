@@ -7,7 +7,7 @@ tags:
 
 # Regex Cheatsheet
 
-Regular expressions are a compact language for matching text patterns. They're incredibly powerful for validation, parsing, and search-and-replace — but also notoriously hard to read. This cheatsheet covers the syntax you'll actually use, with examples in Java and TypeScript.
+Regular expressions are a compact language for matching text patterns. They're incredibly powerful for validation, parsing, and search-and-replace, but also notoriously hard to read. This cheatsheet covers the syntax you'll actually use, with examples in Java and TypeScript.
 
 ---
 
@@ -37,7 +37,7 @@ Regular expressions are a compact language for matching text patterns. They're i
 | `\s` | Whitespace `[ \t\n\r\f]` | `\S` | Non-whitespace |
 | `[abc]` | a, b, or c | `[^abc]` | Not a, b, or c |
 | `[a-z]` | Lowercase a-z | `[^a-z]` | Not lowercase a-z |
-| `[A-Za-z0-9]` | Alphanumeric | — | — |
+| `[A-Za-z0-9]` | Alphanumeric | N/A | N/A |
 
 ---
 
@@ -140,9 +140,9 @@ Pattern emailPattern = Pattern.compile("^[\\w.-]+@[\\w.-]+\\.\\w{2,}$");
 // Use Matcher for each input
 Matcher matcher = emailPattern.matcher("user@example.com");
 
-matcher.matches();  // true — full string match
-matcher.find();     // true — finds pattern anywhere in string
-matcher.group();    // "user@example.com" — the matched text
+matcher.matches();  // true - full string match
+matcher.find();     // true - finds pattern anywhere in string
+matcher.group();    // "user@example.com" - the matched text
 ```
 
 ### `matches()` vs `find()`
@@ -187,10 +187,10 @@ const dynamicRegex = new RegExp(`^${userInput}$`, 'i');
 ### Common Operations
 
 ```typescript
-// Test — returns boolean
+// Test - returns boolean
 /^[\w.-]+@[\w.-]+\.\w{2,}$/.test('user@example.com');  // true
 
-// Match — returns array or null
+// Match - returns array or null
 'hello 123 world 456'.match(/\d+/);           // ["123"]
 'hello 123 world 456'.match(/\d+/g);          // ["123", "456"]
 'hello 123 world 456'.match(/\d+/g);          // null if no match
@@ -222,39 +222,39 @@ match?.groups?.year;  // "2024"
 
 ### ✅ Do
 
-- **Compile once, use many** — In Java, `Pattern.compile()` is expensive; cache the `Pattern` object
-- **Use non-capturing groups** when you don't need the capture — `(?:...)` is faster than `(...)`
-- **Anchor your patterns** — `^` and `$` prevent unnecessary scanning
-- **Be specific** — `[0-9]` is faster than `.*` when you know the input is a digit
-- **Use possessive quantifiers** (Java) — `a++` instead of `a+` to avoid backtracking
+- **Compile once, use many:** In Java, `Pattern.compile()` is expensive; cache the `Pattern` object
+- **Use non-capturing groups** when you don't need the capture: `(?:...)` is faster than `(...)`
+- **Anchor your patterns:** `^` and `$` prevent unnecessary scanning
+- **Be specific:** `[0-9]` is faster than `.*` when you know the input is a digit
+- **Use possessive quantifiers** (Java): `a++` instead of `a+` to avoid backtracking
 
 ### ❌ Avoid
 
-- **Catastrophic backtracking** — patterns like `(a+)+` or `(a|a)+` on non-matching input
+- **Catastrophic backtracking:** patterns like `(a+)+` or `(a|a)+` on non-matching input
 
 ```regex
-// ❌ Catastrophic backtracking — exponential time on "aaaaaaaaaaaaaaaaab"
+// ❌ Catastrophic backtracking - exponential time on "aaaaaaaaaaaaaaaaab"
 (a+)+$
 
 // ✅ Non-backtracking equivalent
 a+$
 ```
 
-- **Nested quantifiers** — `(a+b?)+` can cause exponential backtracking
-- **Greedy `.*` when lazy `.*?` suffices** — especially in HTML parsing
-- **Regex for complex parsing** — use a proper parser for JSON, HTML, XML
+- **Nested quantifiers:** `(a+b?)+` can cause exponential backtracking
+- **Greedy `.*` when lazy `.*?` suffices**: especially in HTML parsing
+- **Regex for complex parsing:** use a proper parser for JSON, HTML, XML
 
 ### Testing for Backtracking
 
 If a regex takes more than a few milliseconds on short input, it likely has backtracking issues. Test with:
 ```java
-// Java — set a timeout
+// Java - set a timeout
 Pattern.compile(pattern);  // compile is the cheap part
 // Wrap matcher.find() in a timeout or use a watchdog
 ```
 
 ```typescript
-// TypeScript — measure time
+// TypeScript - measure time
 console.time('regex');
 result = pattern.test(input);
 console.timeEnd('regex');

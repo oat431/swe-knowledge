@@ -7,7 +7,7 @@ tags:
 
 # 04 Control Flow
 
-Control flow determines the order in which statements execute. It is the skeleton of every algorithm — conditionals decide *which* path to take, loops decide *how many times* to repeat, and recursion decides *how deep* to go. Mastering control flow means mastering the logic of programs.
+Control flow determines the order in which statements execute. It is the skeleton of every algorithm, conditionals decide *which* path to take, loops decide *how many times* to repeat, and recursion decides *how deep* to go. Mastering control flow means mastering the logic of programs.
 
 ---
 
@@ -61,7 +61,7 @@ match command:
 ```
 
 ```typescript
-// TypeScript — traditional switch
+// TypeScript - traditional switch
 switch (day) {
     case "Mon":
     case "Tue":
@@ -157,7 +157,7 @@ names.forEach(name => console.log(name));
 | Labeled `break` | Exit a specific outer loop (Java) |
 
 ```java
-// Labeled break — break out of an outer loop
+// Labeled break - break out of an outer loop
 outer:
 for (int i = 0; i < matrix.length; i++) {
     for (int j = 0; j < matrix[i].length; j++) {
@@ -170,7 +170,7 @@ for (int i = 0; i < matrix.length; i++) {
 ```
 
 ```python
-# Python — use for/else to detect "no break"
+# Python - use for/else to detect "no break"
 for item in items:
     if item.is_match():
         break
@@ -216,7 +216,7 @@ match command:
 Guard clauses flatten deeply nested conditionals by handling edge cases first and returning early.
 
 ```java
-// ❌ BAD — deep nesting
+// ❌ BAD - deep nesting
 public double calculateDiscount(Customer customer) {
     if (customer != null) {
         if (customer.isActive()) {
@@ -233,7 +233,7 @@ public double calculateDiscount(Customer customer) {
     }
 }
 
-// ✅ GOOD — guard clauses, flat structure
+// ✅ GOOD - guard clauses, flat structure
 public double calculateDiscount(Customer customer) {
     if (customer == null) return 0.0;
     if (!customer.isActive()) return 0.0;
@@ -277,7 +277,7 @@ def factorial(n: int) -> int:
 ### Off-by-One Errors
 
 ```java
-// ❌ WRONG — skips last element or goes out of bounds
+// ❌ WRONG - skips last element or goes out of bounds
 for (int i = 0; i <= array.length; i++) { }  // ArrayIndexOutOfBoundsException
 
 // ✅ CORRECT
@@ -287,7 +287,7 @@ for (int i = 0; i < array.length; i++) { }
 ### Infinite Loops
 
 ```java
-// ❌ WRONG — i never changes
+// ❌ WRONG - i never changes
 int i = 0;
 while (i < 10) {
     System.out.println(i);
@@ -305,10 +305,10 @@ while (i < 10) {
 ### Floating-Point Loop Counters
 
 ```java
-// ❌ WRONG — may loop 10 or 11 times due to floating-point imprecision
+// ❌ WRONG - may loop 10 or 11 times due to floating-point imprecision
 for (double x = 0.0; x != 1.0; x += 0.1) { }
 
-// ✅ CORRECT — use integer counters
+// ✅ CORRECT - use integer counters
 for (int i = 0; i <= 10; i++) {
     double x = i / 10.0;
 }
@@ -318,7 +318,7 @@ for (int i = 0; i <= 10; i++) {
 
 ## Sources
 
-- Oracle Java Tutorials — Control Flow Statements
-- Oracle Java Language Specification §14 — Blocks, Statements, and Patterns
-- Python Docs — Compound Statements (docs.python.org)
-- MDN — Control Flow (developer.mozilla.org)
+- Oracle Java Tutorials: Control Flow Statements
+- Oracle Java Language Specification §14: Blocks, Statements, and Patterns
+- Python Docs: Compound Statements (docs.python.org)
+- MDN: Control Flow (developer.mozilla.org)

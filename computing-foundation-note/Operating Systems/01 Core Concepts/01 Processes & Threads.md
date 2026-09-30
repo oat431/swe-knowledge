@@ -39,6 +39,7 @@ A process is a running program. A thread is a unit of execution within a process
 ## Process Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 stateDiagram-v2
     [*] --> Created
     Created --> Ready
@@ -50,6 +51,7 @@ stateDiagram-v2
     Terminated --> [*]
 ```
 
+
 | State | Meaning |
 |-------|---------|
 | **New** | Process being created |
@@ -60,7 +62,7 @@ stateDiagram-v2
 
 ---
 
-## Threads — Lightweight Processes
+## Threads: Lightweight Processes
 
 > Threads share the process's memory space. They're cheaper to create and switch between than processes.
 

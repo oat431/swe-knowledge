@@ -15,31 +15,31 @@ The OS decides which thread gets the CPU next. Understanding scheduling helps yo
 
 | Algorithm | How It Works | Pros | Cons |
 |-----------|-------------|------|------|
-| **FCFS** (First Come First Served) | Run in arrival order | Simple | Convoy effect — long job blocks short ones |
+| **FCFS** (First Come First Served) | Run in arrival order | Simple | Convoy effect ;  long job blocks short ones |
 | **SJF** (Shortest Job First) | Run shortest job next | Optimal avg wait time | Must know job length in advance |
-| **SRTF** (Shortest Remaining Time) | Preemptive SJF — new shorter job preempts | Better response time | Starvation of long jobs |
+| **SRTF** (Shortest Remaining Time) | Preemptive SJF ;  new shorter job preempts | Better response time | Starvation of long jobs |
 | **Round Robin** | Each thread gets a time slice (~10-100ms) | Fair. Good for interactive. | Higher context switch overhead |
 | **Priority** | Higher priority runs first | Critical tasks get CPU | Starvation of low priority |
 | **Multi-Level Queue** | Separate queues per priority class | Mixes batch + interactive | Complex |
 
 ---
 
-## Linux CFS — Completely Fair Scheduler
+## Linux CFS: Completely Fair Scheduler
 
 > The default Linux scheduler from 2.6.23 (2007) until **kernel 6.6 (Oct 2023)**, when it was replaced by **EEVDF** (Earliest Eligible Virtual Deadline First).
 
 ```
 Key idea: Each runnable thread gets a "fair share" of CPU time.
-CFS tracks virtual runtime (vruntime) — how long each thread has run,
+CFS tracks virtual runtime (vruntime) - how long each thread has run,
 weighted by priority (nice value).
 
 Lower vruntime → runs next.
 Higher priority (lower nice) → vruntime accumulates slower → gets more CPU.
 ```
 
-### EEVDF — The Current Default (kernel 6.6+)
+### EEVDF: The Current Default (kernel 6.6+)
 
-> CFS was fair but weak at **latency**: it couldn't distinguish "needs CPU soon" from "needs a lot of CPU". EEVDF fixes this.
+> CFS was fair but weak at **latency:** it couldn't distinguish "needs CPU soon" from "needs a lot of CPU". EEVDF fixes this.
 
 ```
 Each task requests a "time slice" (need) and gets a virtual deadline.
@@ -58,7 +58,7 @@ CPU-hungry tasks request long slices → run in bigger, cheaper-to-schedule chun
 | **sched_attr slice control** | N/A | `sched_setattr()` with `sched_runtime` to request slice length |
 | **In kernels** | 2.6.23 – 6.5 | 6.6+ (same nice-value interface, drop-in for users) |
 
-> In practice: `nice`, `taskset`, and cgroup CPU weights work the same. What changed is *which runnable thread wins* — EEVDF favors threads that need the CPU briefly and soon (audio, request handlers) over threads that want it for a long time (batch jobs).
+> In practice: `nice`, `taskset`, and cgroup CPU weights work the same. What changed is *which runnable thread wins*; EEVDF favors threads that need the CPU briefly and soon (audio, request handlers) over threads that want it for a long time (batch jobs).
 
 ### Nice Values
 
@@ -119,13 +119,13 @@ mpstat -P ALL 1
 | **SCHED_RR** | Like FIFO but with time slices for equal priorities. |
 | **SCHED_DEADLINE** | Tasks specify runtime, deadline, period. Earliest deadline first. |
 
-> ⚠️ Real-time threads can starve the entire system. Use sparingly. Reserved for audio, robotics, industrial control — not web servers.
+> ⚠️ Real-time threads can starve the entire system. Use sparingly. Reserved for audio, robotics, industrial control, not web servers.
 
 ---
 
 ## Sources
 
-- Linux CFS Documentation — `Documentation/scheduler/sched-design-CFS.txt`
-- Linux EEVDF Scheduler — `Documentation/scheduler/sched-eevdf.rst` (kernel 6.6+)
+- Linux CFS Documentation: `Documentation/scheduler/sched-design-CFS.txt`
+- Linux EEVDF Scheduler: `Documentation/scheduler/sched-eevdf.rst` (kernel 6.6+)
 - Ion Stoica & Hussein Abdel-Wahab. *Earliest Eligible Virtual Deadline First: A Flexible and Accurate Mechanism for Proportional Share Resource Allocation* (1995)
 - `man sched`, `man nice`, `man chrt`, `man sched_setattr`

@@ -10,11 +10,11 @@ source: CLRS
 
 # 21 · Disjoint Sets (Union-Find)
 
-> Maintains disjoint dynamic sets with near-O(1) operations. Union by rank + path compression yields O(m·α(n)) — one of the most efficient data structures known.
+> Maintains disjoint dynamic sets with near-O(1) operations. Union by rank + path compression yields O(m·α(n)); one of the most efficient data structures known.
 
 ### The Disjoint-Set Data Structure
 
-Maintains a collection $\{S_1, S_2, \ldots, S_k\}$ of **disjoint dynamic sets**. Each set has a **representative** — a distinguished member.
+Maintains a collection $\{S_1, S_2, \ldots, S_k\}$ of **disjoint dynamic sets**. Each set has a **representative**, a distinguished member.
 
 ### Operations
 
@@ -34,7 +34,7 @@ Each set = doubly-linked list with head pointing to representative.
 |---|---|
 | `MAKE-SET` | $O(1)$ |
 | `FIND-SET` | $O(1)$ |
-| `UNION` | $O(\min(n_1, n_2))$ — append shorter list |
+| `UNION` | $O(\min(n_1, n_2))$ ;  append shorter list |
 
 **Simple weighted-union heuristic:** Always append the shorter list to the longer one.
 
@@ -140,7 +140,7 @@ This rank-based partitioning, combined with the Ackermann function's explosive g
 | Forest + path compression | $O(m \lg n)$ |
 | **Forest + union by rank + path compression** | **$O(m \cdot \alpha(n))$** |
 
-> The combination of union by rank and path compression is **one of the most efficient data structures known** — nearly $O(1)$ per operation.
+> The combination of union by rank and path compression is **one of the most efficient data structures known**; nearly $O(1)$ per operation.
 
 ---
 
@@ -156,10 +156,10 @@ This rank-based partitioning, combined with the Ackermann function's explosive g
 ### The Amortized Analysis Thread
 
 All four structures rely on **amortized analysis** (Ch 17):
-- **B-trees:** Aggregate — $O(1)$ amortized splits per insertion
-- **Fibonacci heaps:** Potential method — $\Phi = t(H) + 2m(H)$
-- **vEB trees:** Not amortized — genuine $O(\lg \lg u)$ worst-case
-- **Disjoint sets:** Accounting via Ackermann — nearly $O(1)$ per operation
+- **B-trees:** Aggregate: $O(1)$ amortized splits per insertion
+- **Fibonacci heaps:** Potential method: $\Phi = t(H) + 2m(H)$
+- **vEB trees:** Not amortized: genuine $O(\lg \lg u)$ worst-case
+- **Disjoint sets:** Accounting via Ackermann: nearly $O(1)$ per operation
 
 ---
 
@@ -167,17 +167,17 @@ All four structures rely on **amortized analysis** (Ch 17):
 
 ## Related
 
-- [[Algorithm Overview]] — Practical data structures (trees, heaps, hash tables, graphs)
-- [[01_Amortized_Analysis]] — Amortized analysis of B-tree and Fibonacci heap operations
-- [[03_Advanced_Graph_Algorithms]] — Disjoint sets used in Kruskal's MST algorithm
-- [[01 Trees & BSTs]] — Binary search trees, the simpler cousin of B-trees
-- [[01 Heaps & Priority Queues]] — Binary heaps, the simpler cousin of Fibonacci heaps
+- [[Algorithm Overview]]: Practical data structures (trees, heaps, hash tables, graphs)
+- [[17_Amortized_Analysis|01 Amortized Analysis]]: Amortized analysis of B-tree and Fibonacci heap operations
+- [[23_Minimum_Spanning_Trees|03 Advanced Graph Algorithms]]: Disjoint sets used in Kruskal's MST algorithm
+- [[01 Trees & BSTs]]: Binary search trees, the simpler cousin of B-trees
+- [[01 Heaps & Priority Queues]]: Binary heaps, the simpler cousin of Fibonacci heaps
 
 ---
 
 ## Hands-On Exercises
 
-### Exercise 1: Disjoint Sets — Implement Union-Find
+### Exercise 1: Disjoint Sets: Implement Union-Find
 Implement the disjoint-set forest with **union by rank** and **path compression** from the note.
 
 ```java
@@ -191,13 +191,13 @@ class UnionFind {
     }
 
     int find(int x) {
-        // TODO: Path compression — make every node point to root
+        // TODO: Path compression - make every node point to root
         if (parent[x] != x) parent[x] = find(parent[x]);
         return parent[x];
     }
 
     void union(int x, int y) {
-        // TODO: Union by rank — attach shorter tree under taller
+        // TODO: Union by rank - attach shorter tree under taller
         int px = find(x), py = find(y);
         if (px == py) return;
         if (rank[px] < rank[py]) parent[px] = py;

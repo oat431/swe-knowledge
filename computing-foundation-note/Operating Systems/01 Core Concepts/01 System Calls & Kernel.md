@@ -64,7 +64,7 @@ System calls are the interface between your application and the OS kernel. Every
 
 | Signal | Number | Meaning | Default Action |
 |--------|:------:|---------|---------------|
-| **SIGINT** | 2 | Ctrl+C — interrupt | Terminate |
+| **SIGINT** | 2 | Ctrl+C ;  interrupt | Terminate |
 | **SIGKILL** | 9 | Force kill (can't be caught) | Terminate |
 | **SIGTERM** | 15 | Graceful shutdown (can be caught) | Terminate |
 | **SIGSTOP** | 19 | Pause (can't be caught) | Stop |
@@ -72,7 +72,7 @@ System calls are the interface between your application and the OS kernel. Every
 | **SIGHUP** | 1 | Terminal closed | Terminate |
 
 ```java
-// Graceful shutdown — catch SIGTERM
+// Graceful shutdown - catch SIGTERM
 Runtime.getRuntime().addShutdownHook(new Thread(() -> {
     log.info("Shutting down...");
     // Close connections, flush buffers, finish in-flight requests
@@ -82,7 +82,7 @@ Runtime.getRuntime().addShutdownHook(new Thread(() -> {
 
 ---
 
-## strace — Trace System Calls
+## strace: Trace System Calls
 
 ```bash
 # Trace all syscalls
@@ -110,6 +110,6 @@ strace -p <PID>
 
 ## Sources
 
-- `man 2 syscalls` — Linux system call table
-- `man 7 signal` — Signal overview
+- `man 2 syscalls`: Linux system call table
+- `man 7 signal`: Signal overview
 - `man strace`

@@ -8,7 +8,7 @@ tags:
 
 # Human-Computer Interaction (Simplified)
 
-HCI is the study of how humans interact with computers and how to design interfaces that work with human psychology, not against it. Every developer builds interfaces — whether it's a web UI, an API, a CLI, or an error message. Understanding HCI basics means fewer frustrated users.
+HCI is the study of how humans interact with computers and how to design interfaces that work with human psychology, not against it. Every developer builds interfaces, whether it's a web UI, an API, a CLI, or an error message. Understanding HCI basics means fewer frustrated users.
 
 ---
 
@@ -57,4 +57,4 @@ HCI is the study of how humans interact with computers and how to design interfa
 ## Sources
 
 - Norman, Don. *The Design of Everyday Things*, 2013.
-- Nielsen, Jakob. 10 Usability Heuristics — https://www.nngroup.com/articles/ten-usability-heuristics/
+- Nielsen, Jakob. 10 Usability Heuristics: https://www.nngroup.com/articles/ten-usability-heuristics/

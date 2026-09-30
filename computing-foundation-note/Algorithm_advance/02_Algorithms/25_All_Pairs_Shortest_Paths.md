@@ -11,7 +11,7 @@ source: CLRS
 
 # 25 · All-Pairs Shortest Paths
 
-> Find shortest paths between **every pair** of vertices. Floyd-Warshall is O(V³) for dense graphs; Johnson's combines reweighting with Dijkstra for sparse graphs.
+> Find shortest paths between **every pair** of vertices. Floyd-Warshall is O(V³) for dense graphs; johnson's combines reweighting with Dijkstra for sparse graphs.
 
 ### Problem Definition
 
@@ -26,7 +26,7 @@ Find shortest paths between **every pair** of vertices. Output: $n \times n$ mat
 
 ### Matrix Multiplication Approach (§25.1–25.2)
 
-Shortest paths can be computed via repeated matrix multiplication in the **min-plus semiring**:
+Shortest paths can be computed via repeated matrix multiplication in the **min-plus semiring:**
 
 $$d_{ij}^{(m)} = \min_{1 \leq k \leq n} \{d_{ik}^{(m-1)} + w_{kj}\}$$
 
@@ -72,7 +72,7 @@ $$t_{ij}^{(k)} = t_{ij}^{(k-1)} \lor (t_{ik}^{(k-1)} \land t_{kj}^{(k-1)})$$
 
 ### Johnson's Algorithm (§25.3)
 
-For **sparse graphs** — combines reweighting with Dijkstra.
+For **sparse graphs**, combines reweighting with Dijkstra.
 
 **Steps:**
 1. Create $G'$ by adding new vertex $s$ with zero-weight edges to all vertices
@@ -100,7 +100,7 @@ For **sparse graphs** — combines reweighting with Dijkstra.
 
 ## Hands-On Exercises
 
-### Exercise 3: Floyd-Warshall — Trace Matrix Updates
+### Exercise 3: Floyd-Warshall: Trace Matrix Updates
 Given 4-vertex graph with adjacency matrix:
 
 ```
@@ -129,5 +129,5 @@ Trace Floyd-Warshall for `k = 1, 2, 3, 4`:
 | 5 | [Find the City With Smallest Number of Neighbors](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/) (LC 1334) | 🟡 Medium | Floyd-Warshall |
 
 ### Assignment Guidelines
-- **Problem 1**: Floyd-Warshall to find all-pairs shortest paths, then count cities within threshold.
+- **Problem 1:** Floyd-Warshall to find all-pairs shortest paths, then count cities within threshold.
 - **Target time:** 20 min per Medium.

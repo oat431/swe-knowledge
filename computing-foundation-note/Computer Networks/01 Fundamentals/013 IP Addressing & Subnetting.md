@@ -7,11 +7,11 @@ tags:
 
 # 013 IP Addressing & Subnetting
 
-Every device on the internet has an IP address. Understanding how addressing works — and how subnetting controls routing — is essential for debugging connectivity issues.
+Every device on the internet has an IP address. Understanding how addressing works (and how subnetting controls routing) is essential for debugging connectivity issues.
 
 ---
 
-## IPv4 — 32 Bits, Dotted Decimal
+## IPv4: 32 Bits, Dotted Decimal
 
 ```
 192.168.1.100
@@ -23,7 +23,7 @@ Every device on the internet has an IP address. Understanding how addressing wor
 Binary: 11000000.10101000.00000001.01100100
 ```
 
-### Address Classes (Legacy — Replaced by CIDR)
+### Address Classes (Legacy: Replaced by CIDR)
 
 | Class | Range | Default Mask | Purpose |
 |:-----:|-------|:----------:|---------|
@@ -35,7 +35,7 @@ Binary: 11000000.10101000.00000001.01100100
 
 ---
 
-## CIDR — Classless Inter-Domain Routing
+## CIDR: Classless Inter-Domain Routing
 
 > `/24` means "the first 24 bits are the network portion."
 
@@ -72,22 +72,24 @@ Binary: 11000000.10101000.00000001.01100100
 
 ---
 
-## NAT — Network Address Translation
+## NAT: Network Address Translation
 
 > Private IPs can't route on the public internet. NAT translates private ↔ public.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     L["Laptop<br>192.168.1.100:45678"] --> R["Router<br>NAT Translation"]
     P["Phone<br>192.168.1.101:45679"] --> R
     R -->|"203.0.113.5:12345"| I["Internet"]
     R -->|"203.0.113.5:12346"| I
-    style R fill:#f9f,stroke:#333,stroke-width:2px
+    style R fill:#FF5861,stroke:#000000,stroke-width:2px,color:#000000
 ```
+
 
 ---
 
-## IPv6 — 128 Bits, Hex Notation
+## IPv6: 128 Bits, Hex Notation
 
 ```
 2001:0db8:85a3:0000:0000:8a2e:0370:7334
@@ -115,6 +117,6 @@ graph LR
 
 ## Sources
 
-- RFC 1918 — Address Allocation for Private Internets
-- RFC 4632 — Classless Inter-Domain Routing (CIDR)
-- RFC 8200 — Internet Protocol Version 6 (IPv6)
+- RFC 1918: Address Allocation for Private Internets
+- RFC 4632: Classless Inter-Domain Routing (CIDR)
+- RFC 8200: Internet Protocol Version 6 (IPv6)

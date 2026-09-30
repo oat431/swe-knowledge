@@ -7,7 +7,7 @@ tags:
 
 # 01 Core Concepts
 
-A program is a set of instructions that transforms input into output. Understanding how source code becomes an executing process — and the paradigms that shape how we write it — is the first step toward mastering any language.
+A program is a set of instructions that transforms input into output. Understanding how source code becomes an executing process (and the paradigms that shape how we write it) is the first step toward mastering any language.
 
 ---
 
@@ -15,9 +15,9 @@ A program is a set of instructions that transforms input into output. Understand
 
 At its simplest, a program follows this pipeline:
 
-1. **Source code** — human-readable text written in a programming language.
-2. **Translation** — compiled, interpreted, or JIT-compiled into something the CPU can execute.
-3. **Execution** — the translated instructions run on a processor, manipulating data in memory.
+1. **Source code:** human-readable text written in a programming language.
+2. **Translation:** compiled, interpreted, or JIT-compiled into something the CPU can execute.
+3. **Execution:** the translated instructions run on a processor, manipulating data in memory.
 
 ---
 
@@ -47,10 +47,10 @@ gcc main.c -o main
 
 ### Interpreted Languages
 
-The interpreter reads and executes the source (or an intermediate representation) directly. No separate compilation step — just run.
+The interpreter reads and executes the source (or an intermediate representation) directly. No separate compilation step, just run.
 
 ```python
-# Python — interpreted (CPython compiles to .pyc bytecode internally)
+# Python - interpreted (CPython compiles to .pyc bytecode internally)
 python main.py
 ```
 
@@ -81,7 +81,7 @@ Source Code
 | **IR** | A language- and platform-independent representation optimised for analysis |
 | **Code generation** | Translates IR into target machine code or bytecode |
 
-Understanding this pipeline helps when debugging cryptic compiler errors — the error always references a specific stage.
+Understanding this pipeline helps when debugging cryptic compiler errors, the error always references a specific stage.
 
 ---
 
@@ -89,9 +89,9 @@ Understanding this pipeline helps when debugging cryptic compiler errors — the
 
 | Paradigm | Core Idea | Focus | Examples |
 |---|---|---|---|
-| **Imperative** | Describe *how* — step-by-step state changes | Mutation, sequencing | C, Pascal |
+| **Imperative** | Describe *how* ;  step-by-step state changes | Mutation, sequencing | C, Pascal |
 | **Object-Oriented** | Encapsulate state + behaviour in objects | Abstraction, polymorphism | Java, C#, C++ |
-| **Functional** | Describe *what* — pure transformations, no mutation | Immutability, composition | Haskell, Clojure, (partial: JS, Python) |
+| **Functional** | Describe *what* ;  pure transformations, no mutation | Immutability, composition | Haskell, Clojure, (partial: JS, Python) |
 | **Declarative** | Describe the desired result, not the steps | Intent over implementation | SQL, HTML, Prolog |
 
 Most modern languages are **multi-paradigm**. Java supports imperative + OOP (and increasingly functional via lambdas). Python supports all four. Choosing the right paradigm for the problem is a hallmark of mature engineering.
@@ -102,15 +102,15 @@ Most modern languages are **multi-paradigm**. Java supports imperative + OOP (an
 
 ## Common Pitfalls
 
-- **Confusing compilation with interpretation** — Java is *compiled* (to bytecode) then *interpreted/JIT-compiled* (by the JVM). It is not purely either.
-- **Thinking paradigms are mutually exclusive** — real-world code mixes paradigms constantly.
-- **Ignoring the execution model** — understanding lexing/parsing helps you read compiler errors and write cleaner code.
+- **Confusing compilation with interpretation:** Java is *compiled* (to bytecode) then *interpreted/JIT-compiled* (by the JVM). It is not purely either.
+- **Thinking paradigms are mutually exclusive:** real-world code mixes paradigms constantly.
+- **Ignoring the execution model:** understanding lexing/parsing helps you read compiler errors and write cleaner code.
 
 ---
 
 ## Sources
 
-- *Crafting Interpreters* — Robert Nystrom (craftinginterpreters.com)
-- *Compilers: Principles, Techniques, and Tools* — Aho, Lam, Sethi, Ullman
+- *Crafting Interpreters*: Robert Nystrom (craftinginterpreters.com)
+- *Compilers: Principles, Techniques, and Tools*: Aho, Lam, Sethi, Ullman
 - *Structure and Interpretation of Computer Programs* (SICP)
 - Oracle JVM Specification

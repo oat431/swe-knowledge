@@ -12,14 +12,14 @@ When relational doesn't fit: wide-column for massive scale writes, graph for dee
 
 ---
 
-## Wide-Column — Cassandra
+## Wide-Column: Cassandra
 
 Optimized for **write-heavy, append-only** workloads at massive scale. Think: time-series, event logs, sensor data.
 
 ### Data Model
 
 ```sql
--- Cassandra Query Language (CQL) — looks like SQL, isn't SQL
+-- Cassandra Query Language (CQL) - looks like SQL, isn't SQL
 CREATE TABLE user_events (
     user_id UUID,
     event_time TIMESTAMP,
@@ -33,7 +33,7 @@ CREATE TABLE user_events (
 |---------|-----------|-----------|
 | **Primary Key** | Uniquely identifies a row | Partition key determines which node stores the data |
 | **WHERE clause** | Any column with an index | Only partition key + clustering columns |
-| **JOINs** | Yes | No — denormalize everything |
+| **JOINs** | Yes | No ;  denormalize everything |
 | **Transactions** | ACID | Row-level atomicity only |
 
 ### When to Use Cassandra
@@ -64,7 +64,7 @@ public interface UserEventRepo extends CassandraRepository<UserEvent, UserEventK
 
 ---
 
-## Graph — Neo4j
+## Graph: Neo4j
 
 Data where **relationships** are as important as the data itself. Social networks, recommendations, fraud detection.
 
@@ -115,5 +115,5 @@ LIMIT 5
 
 ## Sources
 
-- Cassandra Documentation — https://cassandra.apache.org/doc/latest/
-- Neo4j Documentation — https://neo4j.com/docs/
+- Cassandra Documentation: https://cassandra.apache.org/doc/latest/
+- Neo4j Documentation: https://neo4j.com/docs/

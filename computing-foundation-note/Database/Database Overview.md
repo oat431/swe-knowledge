@@ -7,7 +7,7 @@ tags:
 - sql
 ---
 
-# Database Design & Management — Overview
+# Database Design & Management: Overview
 
 Databases are not just storage. They're the foundation that determines how fast, reliable, and scalable your application can be. This vault covers relational fundamentals, NoSQL alternatives, and production operations.
 
@@ -17,24 +17,24 @@ Databases are not just storage. They're the foundation that determines how fast,
 
 ### 01 Relational Databases
 
-> [[01 SQL Fundamentals]] — DDL, DML, DCL, TCL, joins, subqueries, window functions
-> [[01 Normalization]] — 1NF → BCNF, when to denormalize, trade-offs
-> [[01 Indexing & Performance]] — B-trees, hash indexes, covering indexes, EXPLAIN plans
-> [[01 Transactions & Locking]] — ACID, isolation levels, pessimistic vs optimistic, deadlocks
+> [[01 SQL Fundamentals]]: DDL, DML, DCL, TCL, joins, subqueries, window functions
+> [[01 Normalization]]: 1NF → BCNF, when to denormalize, trade-offs
+> [[01 Indexing & Performance]]: B-trees, hash indexes, covering indexes, EXPLAIN plans
+> [[01 Transactions & Locking]]: ACID, isolation levels, pessimistic vs optimistic, deadlocks
 
 ### 02 NoSQL Databases
 
-> [[02 NoSQL Overview]] — CAP theorem, BASE, when to choose NoSQL over SQL
-> [[02 Key-Value & Document]] — Redis (cache/session), MongoDB (flexible schema)
-> [[02 Columnar & Graph]] — Cassandra (wide-column), Neo4j (graph relationships)
-> [[02 Time-Series & Search]] — InfluxDB (metrics), Elasticsearch (full-text)
-> [[02 Vector Databases]] — pgvector, Pinecone, Chroma, FAISS, ANN, HNSW, IVF
+> [[02 NoSQL Overview]]: CAP theorem, BASE, when to choose NoSQL over SQL
+> [[02 Key-Value & Document]]: Redis (cache/session), MongoDB (flexible schema)
+> [[02 Columnar & Graph]]: Cassandra (wide-column), Neo4j (graph relationships)
+> [[02 Time-Series & Search]]: InfluxDB (metrics), Elasticsearch (full-text)
+> [[02 Vector Databases]]: pgvector, Pinecone, Chroma, FAISS, ANN, HNSW, IVF
 
 ### 03 Database Operations
 
-> [[03 Migration Backup & Scaling]] — Flyway, Liquibase, version-controlled schema
-> [[03 Migration Backup & Scaling]] — Full, differential, PITR, disaster recovery
-> [[03 Migration Backup & Scaling]] — Replication, sharding, read replicas, connection pooling
+> [[03 Migration Backup & Scaling]]: Flyway, Liquibase, version-controlled schema
+> [[03 Migration Backup & Scaling]]: Full, differential, PITR, disaster recovery
+> [[03 Migration Backup & Scaling]]: Replication, sharding, read replicas, connection pooling
 
 ---
 
@@ -55,5 +55,5 @@ Databases are not just storage. They're the foundation that determines how fast,
 
 ## Sources
 
-- SWEBOK v4 — Chapter 16: Computing Foundations, Section 6: Database Management
-- PostgreSQL Documentation — https://www.postgresql.org/docs/
+- SWEBOK v4: Chapter 16: Computing Foundations, Section 6: Database Management
+- PostgreSQL Documentation: https://www.postgresql.org/docs/

@@ -190,7 +190,7 @@ $$\text{Power} = \text{Capacitive Load} \times \text{Voltage}^2 \times \text{Fre
 3. Must minimize **communication and synchronization** overhead.
 4. **Dependencies** between sub-tasks limit parallelism.
 
-> *Analogy:* Eight reporters on one story — scheduling, load balancing, and coordination overhead all reduce the theoretical 8× speedup.
+> *Analogy:* Eight reporters on one story, scheduling, load balancing, and coordination overhead all reduce the theoretical 8× speedup.
 
 ### Parallelism Themes Across the Book
 
@@ -228,17 +228,17 @@ $$\text{Power} = \text{Capacitive Load} \times \text{Voltage}^2 \times \text{Fre
 
 ## Key Takeaways
 
-1. **Abstraction** is the fundamental technique for managing complexity — layers of hardware and software hide lower-level details.
+1. **Abstraction** is the fundamental technique for managing complexity: layers of hardware and software hide lower-level details.
 2. The **ISA** is the critical hardware/software interface; multiple implementations can exist for one ISA.
-3. **Performance** = f(Instruction Count, CPI, Clock Rate) — measured as execution time.
+3. **Performance** = f(Instruction Count, CPI, Clock Rate): measured as execution time.
 4. The **power wall** ended the era of ever-increasing clock rates and forced the shift to **multicore**.
-5. **Parallelism** is now the primary path to performance improvement — but parallel programming remains a fundamental challenge.
+5. **Parallelism** is now the primary path to performance improvement: but parallel programming remains a fundamental challenge.
 6. **Moore's Law** (transistor doubling every 18–24 months) has driven the technology revolution for nearly 40 years.
 
 
 ## Related
 
-- [[Computer Organization Overview]] — All computer organization topics
-- [[02_Instruction_Set_Architecture]] — How instructions encode operations
-- [[04_Processor_Design]] — How the processor executes instructions
-- [[05_Memory_Hierarchy]] — How memory levels affect performance
+- [[Computer Organization Overview]]: All computer organization topics
+- [[02_Instruction_Set_Architecture]]: How instructions encode operations
+- [[04_Processor_Design]]: How the processor executes instructions
+- [[05_Memory_Hierarchy]]: How memory levels affect performance

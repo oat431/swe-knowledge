@@ -73,13 +73,13 @@ SEGMENTS-INTERSECT(p1, p2, p3, p4):
 
 ---
 
-### 33.2 Any-Segment-Intersection — Sweep Line
+### 33.2 Any-Segment-Intersection: Sweep Line
 
 **Problem:** Given $n$ line segments, determine if **any** pair intersects.
 
 **Technique:** Sweep line moving left to right, maintaining a **total preorder** $T$ of segments currently crossing the sweep line, ordered by $y$-coordinate at the current $x$.
 
-**Event points:** Segment endpoints (sorted lexicographically — left before right, bottom before top).
+**Event points:** Segment endpoints (sorted lexicographically; left before right, bottom before top).
 
 **Data structure:** Red-black tree for $T$ (ordered by $<_x$ relation); event queue (sorted by $x$).
 
@@ -98,9 +98,9 @@ ANY-SEGMENTS-INTERSECT(S):
     return FALSE
 ```
 
-**Running time:** $O(n \log n)$ — sorting is $O(n \log n)$, each of the $2n$ event points does $O(\log n)$ red-black tree operations plus $O(1)$ intersection tests.
+**Running time:** $O(n \log n)$, sorting is $O(n \log n)$, each of the $2n$ event points does $O(\log n)$ red-black tree operations plus $O(1)$ intersection tests.
 
-**Key insight:** We never need to check non-consecutive segments — if two segments intersect, they must become consecutive at the sweep line at some point before the leftmost intersection.
+**Key insight:** We never need to check non-consecutive segments; if two segments intersect, they must become consecutive at the sweep line at some point before the leftmost intersection.
 
 ---
 
@@ -108,7 +108,7 @@ ANY-SEGMENTS-INTERSECT(S):
 
 The **convex hull** $\text{CH}(Q)$ is the smallest convex polygon enclosing all points in $Q$. Think: rubber band around nails.
 
-#### Graham's Scan — $O(n \log n)$
+#### Graham's Scan: $O(n \log n)$
 
 **Idea:** Maintain a stack $S$ of candidate hull vertices, processing points in counterclockwise polar angle order relative to the lowest point $p_0$.
 
@@ -128,9 +128,9 @@ GRAHAM-SCAN(Q):
 
 **Correctness (loop invariant):** At the start of each iteration, stack $S$ contains exactly the vertices of $\text{CH}(\{p_0, \ldots, p_{i-1}\})$ in counterclockwise order.
 
-**Running time:** $O(n \log n)$ — sorting dominates. Each point is pushed once and popped at most once (aggregate analysis), so the while loop totals $O(n)$.
+**Running time:** $O(n \log n)$, sorting dominates. Each point is pushed once and popped at most once (aggregate analysis), so the while loop totals $O(n)$.
 
-#### Jarvis's March — $O(nh)$
+#### Jarvis's March: $O(nh)$
 
 **Idea:** Gift wrapping. Start at lowest point $p_0$, repeatedly find the point with the smallest polar angle relative to the current hull vertex. Build the right chain up to the highest point, then the left chain back down.
 
@@ -140,9 +140,9 @@ GRAHAM-SCAN(Q):
 
 | Method | Running Time |
 |---|---|
-| **Incremental** | $O(n \log n)$ — sort left-to-right, update hull incrementally |
-| **Divide-and-conquer** | $O(n \log n)$ — split, recurse, merge hulls in $O(n)$ |
-| **Prune-and-search** | $O(n \log h)$ — repeatedly discard constant fraction of points |
+| **Incremental** | $O(n \log n)$ ;  sort left-to-right, update hull incrementally |
+| **Divide-and-conquer** | $O(n \log n)$ ;  split, recurse, merge hulls in $O(n)$ |
+| **Prune-and-search** | $O(n \log h)$ ;  repeatedly discard constant fraction of points |
 
 ---
 
@@ -150,7 +150,7 @@ GRAHAM-SCAN(Q):
 
 **Problem:** Find the two points with minimum Euclidean distance among $n$ points.
 
-**Brute force:** $O(n^2)$ — check all $\binom{n}{2}$ pairs.
+**Brute force:** $O(n^2)$; check all $\binom{n}{2}$ pairs.
 
 **Divide-and-conquer:** $O(n \log n)$
 
@@ -186,7 +186,7 @@ CLOSEST-PAIR(P, X, Y):    // X sorted by x, Y sorted by y
 
 ## Hands-On Exercises
 
-### Exercise 1: Cross Product — Orientation Test
+### Exercise 1: Cross Product: Orientation Test
 Given three points: `p₀ = (0,0)`, `p₁ = (4,4)`, `p₂ = (1,2)`.
 
 1. Compute `(p₁ - p₀) × (p₂ - p₀)`.
@@ -220,10 +220,10 @@ Now try `p₃p₄ = (0,2)→(2,0)`. Does this intersect `p₁p₂`?
 ---
 
 
-### Exercise 3: Graham's Scan — Trace Convex Hull
+### Exercise 3: Graham's Scan: Trace Convex Hull
 Given points: `(0,0), (1,1), (2,2), (3,1), (3,3), (4,0), (2,0)`.
 
-1. Find `p₀` — the point with minimum y (leftmost on tie).
+1. Find `p₀`: the point with minimum y (leftmost on tie).
 2. Sort remaining points by polar angle around `p₀`.
 3. Trace Graham's scan:
    - Push `p₀`, `p₁`, `p₂` onto stack.
@@ -249,5 +249,5 @@ Given points: `(0,0), (1,1), (2,2), (3,1), (3,3), (4,0), (2,0)`.
 | 7 | **Implement Graham's Scan** | 🔴 Code | Convex hull |
 
 ### Assignment Guidelines
-- **Start** with 3 (Easy), then 2+4 (Medium), then 1 (Hard — Graham's scan).
+- **Start** with 3 (Easy), then 2+4 (Medium), then 1 (Hard: Graham's scan).
 - **Target time:** 10 min per Easy, 20 min per Medium, 30 min per Hard.

@@ -15,11 +15,11 @@ Creational patterns deal with **object creation mechanisms**. Instead of instant
 
 | Pattern | Intent | When to Use | Analogy |
 |---------|--------|-------------|---------|
-| **Factory Method** | Let subclasses decide which class to instantiate | You don't know the exact type at compile time | Restaurant menu — you order "pizza," kitchen decides the rest |
-| **Abstract Factory** | Create families of related objects | Multiple product variants that must be consistent | IKEA furniture series — all pieces match one style |
-| **Builder** | Construct complex objects step by step | Object has many optional parameters | Building a house — foundation, walls, roof, in order |
-| **Singleton** | Ensure only one instance exists | Global resource: config, connection pool, logger | Government — only one president at a time |
-| **Prototype** | Clone existing objects | Creating from scratch is expensive | Photocopier — clone the document instead of rewriting |
+| **Factory Method** | Let subclasses decide which class to instantiate | You don't know the exact type at compile time | Restaurant menu ;  you order "pizza," kitchen decides the rest |
+| **Abstract Factory** | Create families of related objects | Multiple product variants that must be consistent | IKEA furniture series ;  all pieces match one style |
+| **Builder** | Construct complex objects step by step | Object has many optional parameters | Building a house ;  foundation, walls, roof, in order |
+| **Singleton** | Ensure only one instance exists | Global resource: config, connection pool, logger | Government ;  only one president at a time |
+| **Prototype** | Clone existing objects | Creating from scratch is expensive | Photocopier ;  clone the document instead of rewriting |
 
 ---
 
@@ -79,7 +79,7 @@ class LightThemeFactory implements UIFactory {
     public Checkbox createCheckbox() { return new LightCheckbox(); }
 }
 
-// Client code works with any factory — no concrete types
+// Client code works with any factory - no concrete types
 void buildUI(UIFactory factory) {
     Button btn = factory.createButton();
     Checkbox cb = factory.createCheckbox();
@@ -90,7 +90,7 @@ void buildUI(UIFactory factory) {
 
 ## Builder
 
-**Problem:** Object has many parameters (some optional). Constructor telescoping is unreadable. Think of `StringBuilder` — you append piece by piece, then call `build()`.
+**Problem:** Object has many parameters (some optional). Constructor telescoping is unreadable. Think of `StringBuilder`; you append piece by piece, then call `build()`.
 
 ```java
 // ❌ Bad: telescoping constructor
@@ -126,7 +126,7 @@ public class Order {
     }
 }
 
-// Usage — readable, flexible
+// Usage - readable, flexible
 Order order = new Order.Builder("John")
     .address("123 Main St")
     .currency("EUR")
@@ -161,7 +161,7 @@ public class ConfigManager {
 ```
 
 ```java
-// ✅ Good: enum singleton — thread-safe, serialization-safe, reflection-proof
+// ✅ Good: enum singleton - thread-safe, serialization-safe, reflection-proof
 public enum ConfigManager {
     INSTANCE;
 
@@ -203,7 +203,7 @@ GameCharacter warrior = templateCharacter.clone();
 warrior.setName("Conan");
 ```
 
-**Caveat:** `Cloneable` is considered a broken API — prefer copy constructors or a static factory method (`GameCharacter.of(template)`).
+**Caveat:** `Cloneable` is considered a broken API; prefer copy constructors or a static factory method (`GameCharacter.of(template)`).
 
 ---
 
@@ -233,6 +233,6 @@ For full implementations with UML diagrams, participants, and trade-offs:
 
 ## Sources
 
-- Gamma et al. — *Design Patterns* (1994), Chapters 3-7
-- Joshua Bloch — *Effective Java*, Items 1-7 (Builder, Singleton)
-- Refactoring Guru — https://refactoring.guru/design-patterns/creational-patterns
+- Gamma et al.; *Design Patterns* (1994), Chapters 3-7
+- Joshua Bloch: *Effective Java*, Items 1-7 (Builder, Singleton)
+- Refactoring Guru: https://refactoring.guru/design-patterns/creational-patterns

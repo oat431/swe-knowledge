@@ -7,7 +7,7 @@ tags:
 
 # 05 Functions & Methods
 
-Functions are the primary unit of abstraction in programming. They encapsulate a piece of logic, give it a name, and let you reuse it without repeating yourself. Understanding how functions work — from parameters to the call stack — is essential for writing clean, testable code.
+Functions are the primary unit of abstraction in programming. They encapsulate a piece of logic, give it a name, and let you reuse it without repeating yourself. Understanding how functions work (from parameters to the call stack) is essential for writing clean, testable code.
 
 ---
 
@@ -31,14 +31,14 @@ Functions are the primary unit of abstraction in programming. They encapsulate a
 | **Body** | The statements that execute when the function is called |
 
 ```java
-// Java — method in a class
+// Java - method in a class
 public static int add(int a, int b) {
     return a + b;
 }
 ```
 
 ```typescript
-// TypeScript — standalone function
+// TypeScript - standalone function
 function add(a: number, b: number): number {
     return a + b;
 }
@@ -78,7 +78,7 @@ int result = multiply(3, 7);
 | **Pass by value of reference** | A copy of the reference (pointer), but the object is shared | Java (objects), JavaScript, Python |
 
 ```java
-// Java — always pass-by-value, but references are copied
+// Java - always pass-by-value, but references are copied
 void modify(int x, int[] arr) {
     x = 999;       // modifies local copy only
     arr[0] = 999;  // modifies the ORIGINAL array (same reference)
@@ -91,7 +91,7 @@ modify(num, data);
 ```
 
 ```cpp
-// C++ — true pass by reference
+// C++ - true pass by reference
 void swap(int& a, int& b) {
     int temp = a;
     a = b;
@@ -122,7 +122,7 @@ def greet(name: str, greeting: str = "Hello") -> str:
 ```
 
 ```java
-// Java — NO default parameters (use overloading instead)
+// Java - NO default parameters (use overloading instead)
 String greet(String name) {
     return greet(name, "Hello");
 }
@@ -134,7 +134,7 @@ String greet(String name, String greeting) {
 ### Rest / Spread Parameters
 
 ```typescript
-// TypeScript — rest parameters
+// TypeScript - rest parameters
 function sum(...numbers: number[]): number {
     return numbers.reduce((acc, n) => acc + n, 0);
 }
@@ -142,13 +142,13 @@ sum(1, 2, 3, 4);  // 10
 ```
 
 ```python
-# Python — *args and **kwargs
+# Python - *args and **kwargs
 def sum_all(*args: int) -> int:
     return sum(args)
 ```
 
 ```java
-// Java — varargs
+// Java - varargs
 int sum(int... numbers) {
     int total = 0;
     for (int n : numbers) total += n;
@@ -163,13 +163,13 @@ int sum(int... numbers) {
 Multiple functions with the **same name** but **different parameter lists** (type, number, or order).
 
 ```java
-// Java — overloading
+// Java - overloading
 int add(int a, int b) { return a + b; }
 double add(double a, double b) { return a + b; }
 int add(int a, int b, int c) { return a + b + c; }
 ```
 
-> Python and JavaScript do **not** support overloading — the last definition wins. Use default parameters or `*args` instead.
+> Python and JavaScript do **not** support overloading, the last definition wins. Use default parameters or `*args` instead.
 
 ---
 
@@ -184,12 +184,12 @@ int add(int a, int b, int c) { return a + b + c; }
 | Example | `Math.abs(x)` | `file.write(data)` |
 
 ```java
-// ✅ Pure — no side effects, deterministic
+// ✅ Pure - no side effects, deterministic
 static int square(int x) {
     return x * x;
 }
 
-// ❌ Impure — modifies external state
+// ❌ Impure - modifies external state
 static int counter = 0;
 static int increment() {
     return ++counter;
@@ -203,7 +203,7 @@ static int increment() {
 A function that takes another function as a parameter, or returns a function.
 
 ```java
-// Java — passing a function (via lambda)
+// Java - passing a function (via lambda)
 List<String> names = List.of("Alice", "Bob", "Charlie");
 List<String> upper = names.stream()
     .map(name -> name.toUpperCase())  // .map() is higher-order
@@ -211,7 +211,7 @@ List<String> upper = names.stream()
 ```
 
 ```typescript
-// TypeScript — higher-order function
+// TypeScript - higher-order function
 function applyTwice(f: (x: number) => number, x: number): number {
     return f(f(x));
 }
@@ -219,7 +219,7 @@ applyTwice(n => n * 2, 3);  // 12
 ```
 
 ```python
-# Python — higher-order function
+# Python - higher-order function
 def apply_twice(f, x):
     return f(f(x))
 
@@ -258,7 +258,7 @@ double = lambda x: x * 2
 A **closure** is a function that captures variables from its surrounding scope, even after that scope has finished executing.
 
 ```typescript
-// TypeScript — closure
+// TypeScript - closure
 function makeCounter(): () => number {
     let count = 0;
     return () => ++count;  // captures 'count' from enclosing scope
@@ -268,11 +268,11 @@ const counter = makeCounter();
 counter();  // 1
 counter();  // 2
 counter();  // 3
-// 'count' is private — only accessible through the returned function
+// 'count' is private - only accessible through the returned function
 ```
 
 ```java
-// Java — effectively final variables in lambdas
+// Java - effectively final variables in lambdas
 String prefix = "Hello";  // must be effectively final
 Function<String, String> greeter = name -> prefix + ", " + name;
 ```
@@ -315,7 +315,7 @@ When `validate()` returns, its frame is popped off and execution resumes in `cal
 
 ## Sources
 
-- *Clean Code* — Robert C. Martin, Chapter 3: Functions
-- *Effective Java* (3rd ed.) — Joshua Bloch, Items 19-21 (Lambdas)
-- MDN — Closures (developer.mozilla.org)
-- Oracle Java Tutorials — Lambda Expressions
+- *Clean Code*: Robert C. Martin, Chapter 3: Functions
+- *Effective Java* (3rd ed.): Joshua Bloch, Items 19-21 (Lambdas)
+- MDN: Closures (developer.mozilla.org)
+- Oracle Java Tutorials: Lambda Expressions

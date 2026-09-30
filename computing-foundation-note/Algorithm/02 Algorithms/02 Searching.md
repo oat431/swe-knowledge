@@ -69,10 +69,10 @@ int lowerBound(int[] arr, int target) {
 
 ## Binary Search on Answer
 
-Not searching an array — searching a **value range** for the answer that satisfies a condition.
+Not searching an array, searching a **value range** for the answer that satisfies a condition.
 
 ```java
-// Find square root (floor) — O(log n)
+// Find square root (floor) - O(log n)
 int sqrt(int x) {
     if (x < 2) return x;
     int left = 1, right = x / 2;
@@ -136,15 +136,15 @@ int searchRotated(int[] nums, int target) {
 
 ## Sources
 
-- CLRS — Chapter 2, 12
-- LeetCode — Binary Search problem sets
+- CLRS: Chapter 2, 12
+- LeetCode: Binary Search problem sets
 
 
 ---
 
 ## Hands-On Exercises
 
-### Exercise 1: Binary Search — Standard Implementation
+### Exercise 1: Binary Search: Standard Implementation
 Implement binary search from the note. Test with `arr = [1,3,5,7,9,11]`, `target = 7` → expect `3`.
 
 ```java
@@ -156,7 +156,7 @@ int binarySearch(int[] arr, int target) {
 
 ---
 
-### Exercise 2: Lower Bound — First Position ≥ Target
+### Exercise 2: Lower Bound: First Position ≥ Target
 Implement `lowerBound` from the note. Test with `arr = [1,3,3,5,7]`, `target = 3` → expect `1` (first index where `arr[i] >= 3`).
 
 ```java
@@ -168,7 +168,7 @@ int lowerBound(int[] arr, int target) {
 
 ---
 
-### Exercise 3: Binary Search on Answer — Koko Eating Bananas
+### Exercise 3: Binary Search on Answer: Koko Eating Bananas
 Koko has `h` hours to eat `n` piles of bananas. She eats at speed `k` bananas/hour (one pile per hour, finishes pile moves to next). Find the minimum `k` such that she finishes all piles in `h` hours.
 
 ```java
@@ -180,7 +180,7 @@ int minEatingSpeed(int[] piles, int h) {
 }
 ```
 
-**Hint:** This is "binary search on answer" — the condition is monotonic: if speed `k` works, then `k+1` also works.
+**Hint:** This is "binary search on answer", the condition is monotonic: if speed `k` works, then `k+1` also works.
 
 ---
 
@@ -198,7 +198,7 @@ int minEatingSpeed(int[] piles, int h) {
 | 8 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) (LC 74) | 🟡 Medium | Binary Search |
 
 ### Assignment Guidelines
-- **Start** with 1–3 (Easy) — standard binary search and lower bound.
-- **Then** 4–8 (Medium) — modified binary search and "binary search on answer" pattern.
+- **Start** with 1–3 (Easy): standard binary search and lower bound.
+- **Then** 4–8 (Medium): modified binary search and "binary search on answer" pattern.
 - **Problem 6** (Koko) is the key "binary search on answer" pattern from this note.
 - **Target time:** 10 min per Easy, 20 min per Medium.

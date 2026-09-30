@@ -29,7 +29,7 @@ An approximation scheme takes an additional parameter $\epsilon > 0$ and produce
 
 ---
 
-### 35.1 Vertex-Cover — 2-Approximation
+### 35.1 Vertex-Cover: 2-Approximation
 
 **Problem:** Find a minimum-size vertex cover in graph $G = (V, E)$.
 
@@ -52,13 +52,13 @@ APPROX-VERTEX-COVER(G):
 - Since edges in $A$ are disjoint (matching): $|\text{OPT}| \geq |A| = |C|/2$.
 - Therefore: $|C| \leq 2 \cdot |\text{OPT}|$.
 
-**Approximation ratio: 2** — the cover is at most twice the optimal size.
+**Approximation ratio: 2:** the cover is at most twice the optimal size.
 
-**Example of tightness:** A star graph $K_{1,n}$ — the algorithm picks the center + one leaf (picking the edge), while the optimal is just the center. Ratio → 2.
+**Example of tightness:** A star graph $K_{1,n}$, the algorithm picks the center + one leaf (picking the edge), while the optimal is just the center. Ratio → 2.
 
 ---
 
-### 35.2 Traveling Salesman Problem — 2-Approximation (Metric TSP)
+### 35.2 Traveling Salesman Problem: 2-Approximation (Metric TSP)
 
 **Metric TSP:** Distances satisfy the triangle inequality: $d(u, w) \leq d(u, v) + d(v, w)$.
 
@@ -84,7 +84,7 @@ $$\text{cost}(H) \leq 2 \cdot \text{cost}(T) \leq 2 \cdot \text{cost}(\text{OPT}
 
 ---
 
-### 35.3 Set Cover — Greedy $O(\ln n)$-Approximation
+### 35.3 Set Cover: Greedy $O(\ln n)$-Approximation
 
 **Problem:** Given a universe $U$ and a family $\mathcal{F}$ of subsets, find the minimum number of sets from $\mathcal{F}$ that cover $U$.
 
@@ -109,11 +109,11 @@ $$\text{cost}(C_{\text{greedy}}) \leq H(\max_i |S_i|) \cdot |\text{OPT}| \leq (\
 
 where $H(d) = 1 + 1/2 + 1/3 + \cdots + 1/d$ is the harmonic number and $n = |U|$.
 
-**Approximation ratio: $H(n) = O(\ln n)$** — essentially tight, since set cover is hard to approximate within $c \ln n$ for some constant $c > 0$.
+**Approximation ratio: $H(n) = O(\ln n)$:** essentially tight, since set cover is hard to approximate within $c \ln n$ for some constant $c > 0$.
 
 ---
 
-### 35.4 Subset Sum — Fully Polynomial-Time Approximation Scheme (FPTAS)
+### 35.4 Subset Sum: Fully Polynomial-Time Approximation Scheme (FPTAS)
 
 **Problem:** Given set $S = \{w_1, \ldots, w_n\}$ and target $t$, find the largest subset sum ≤ $t$.
 
@@ -137,7 +137,7 @@ APPROX-SUBSET-SUM(S, t, ε):
 **Analysis:**
 
 - After trimming, the largest remaining value $\hat{z}$ satisfies: $z^*/(1+\epsilon) \leq \hat{z} \leq z^*$ where $z^*$ is the exact answer.
-- **Running time:** $O(n^3/\epsilon)$ — polynomial in $n$ and $1/\epsilon$.
+- **Running time:** $O(n^3/\epsilon)$: polynomial in $n$ and $1/\epsilon$.
 
 **Approximation ratio: $1 + \epsilon$** for any $\epsilon > 0$.
 
@@ -154,12 +154,12 @@ This is a **FPTAS** (fully polynomial-time approximation scheme): polynomial in 
 | | Convex hull | Graham's scan | $O(n \log n)$ | Exact |
 | | Convex hull | Jarvis's march | $O(nh)$ | Exact |
 | | Closest pair | Divide & conquer | $O(n \log n)$ | Exact |
-| **NP-Complete** | SAT, 3-CNF-SAT | Reductions | — | NP-complete |
-| | CLIQUE | 3-CNF-SAT reduction | — | NP-complete |
-| | VERTEX-COVER | CLIQUE reduction | — | NP-complete |
-| | HAM-CYCLE | VC reduction | — | NP-complete |
-| | TSP | HAM-CYCLE reduction | — | NP-complete |
-| | SUBSET-SUM | 3-CNF-SAT reduction | — | NP-complete |
+| **NP-Complete** | SAT, 3-CNF-SAT | Reductions | N/A | NP-complete |
+| | CLIQUE | 3-CNF-SAT reduction | N/A | NP-complete |
+| | VERTEX-COVER | CLIQUE reduction | N/A | NP-complete |
+| | HAM-CYCLE | VC reduction | N/A | NP-complete |
+| | TSP | HAM-CYCLE reduction | N/A | NP-complete |
+| | SUBSET-SUM | 3-CNF-SAT reduction | N/A | NP-complete |
 | **Approximation** | Vertex cover | Maximal matching | $O(V + E)$ | 2-approx |
 | | Metric TSP | MST + preorder walk | $O(E \log V)$ | 2-approx |
 | | Set cover | Greedy (max coverage) | $O(|\mathcal{F}| \cdot |U|)$ | $\ln n$-approx |
@@ -169,7 +169,7 @@ This is a **FPTAS** (fully polynomial-time approximation scheme): polynomial in 
 
 ## Key Takeaways
 
-1. **Computational geometry** relies on cross products for $O(1)$ orientation tests — no division or trig needed. Sweep-line techniques reduce many problems to $O(n \log n)$.
+1. **Computational geometry** relies on cross products for $O(1)$ orientation tests; no division or trig needed. Sweep-line techniques reduce many problems to $O(n \log n)$.
 
 2. **NP-completeness** is established via **polynomial-time reductions**. The chain CIRCUIT-SAT → SAT → 3-CNF-SAT → many problems forms the backbone. If any NP-complete problem is in P, then P = NP.
 
@@ -178,22 +178,22 @@ This is a **FPTAS** (fully polynomial-time approximation scheme): polynomial in 
    - Structural properties (triangle inequality, matching) give constant factors
    - Trimming/packing techniques yield FPTAS for subset sum
 
-4. **The trade-off:** Exact algorithms for geometric problems are efficient ($O(n \log n)$). For NP-complete problems, we settle for approximation — the quality of the approximation depends on problem structure.
+4. **The trade-off:** Exact algorithms for geometric problems are efficient ($O(n \log n)$). For NP-complete problems, we settle for approximation, the quality of the approximation depends on problem structure.
 
 ---
 
 ## See Also
 
-- [[01_Amortized_Analysis]] — amortized analysis used in convex hull correctness proof
-- [[01 Heaps & Priority Queues]] — heap-based sorting for convex hull vertex ordering
-- [[03_Advanced_Graph_Algorithms]] — Prim's algorithm for MST in TSP approximation
+- [[17_Amortized_Analysis|01 Amortized Analysis]]: amortized analysis used in convex hull correctness proof
+- [[01 Heaps & Priority Queues]]: heap-based sorting for convex hull vertex ordering
+- [[23_Minimum_Spanning_Trees|03 Advanced Graph Algorithms]]: Prim's algorithm for MST in TSP approximation
 
 
 ---
 
 ## Hands-On Exercises
 
-### Exercise 5: Approximation Algorithm — Vertex Cover
+### Exercise 5: Approximation Algorithm: Vertex Cover
 Given graph:
 ```
 A -- B -- C
@@ -213,7 +213,7 @@ Edges: (A,B), (B,C), (C,F), (F,E), (E,D), (D,A).
 ---
 
 
-### Exercise 6: Approximation — Metric TSP
+### Exercise 6: Approximation: Metric TSP
 Given complete graph with 4 cities and distances satisfying triangle inequality:
 
 ```
@@ -242,7 +242,7 @@ Plus diagonal: A-C = 4, B-D = 6.
 | 8 | **Prove Set Cover ≤_P Dominating Set** | 🔴 Theory | NP reduction |
 
 ### Assignment Guidelines
-- **Problem 1**: Implement the 2-approximation vertex cover from the note.
-- **Problem 2**: Implement TSP approximation using MST.
-- **Problem 3**: Prove the ln(n) bound using the harmonic sum argument.
+- **Problem 1:** Implement the 2-approximation vertex cover from the note.
+- **Problem 2:** Implement TSP approximation using MST.
+- **Problem 3:** Prove the ln(n) bound using the harmonic sum argument.
 - **Target time:** 30 min per code, 40 min per theory.

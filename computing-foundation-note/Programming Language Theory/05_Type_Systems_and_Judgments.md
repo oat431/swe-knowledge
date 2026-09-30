@@ -90,7 +90,7 @@ const x    = (2 + 2); (x + x)
 const fuzz = (2 + 2); (fuzz + fuzz)
 ```
 
-All three have the same meaning — the binding structure is identical; only the name differs.
+All three have the same meaning, the binding structure is identical; only the name differs.
 
 ### Higher-Order Abstract Syntax (HOAS)
 
@@ -100,13 +100,13 @@ One way to encode binding structure into the AST is to use the **meta-language's
 case class ConstDecl(e1: Expr, e2: Double => Expr) extends Expr
 ```
 
-There is no `Var` AST node — object-language variable uses are represented by meta-language variable uses in the `e2` function. This is called **higher-order abstract syntax**.
+There is no `Var` AST node; object-language variable uses are represented by meta-language variable uses in the `e2` function. This is called **higher-order abstract syntax**.
 
 ## Judgments
 
 ### Judgment Forms and Inference Rules
 
-A **judgment** is a statement about syntactic objects — it asserts a relation on a set of objects. The **judgment form** describes the shape of the relation.
+A **judgment** is a statement about syntactic objects; it asserts a relation on a set of objects. The **judgment form** describes the shape of the relation.
 
 Example judgment form:
 
@@ -135,7 +135,7 @@ grammar:   Nat  n ::= z | s(n)
 
 $$\frac{}{z \in \text{Nat}} \text{Zero} \qquad \frac{n \in \text{Nat}}{s(n) \in \text{Nat}} \text{Successor}$$
 
-This defines the **judgment form** "$n \in \text{Nat}$" — "*syntactic object $n$ is an element of the set Nat.*"
+This defines the **judgment form** "$n \in \text{Nat}$": "*syntactic object $n$ is an element of the set Nat.*"
 
 Corresponding Scala:
 
@@ -166,7 +166,7 @@ A judgment holds **if and only if** there exists a derivation for it (the **leas
 
 #### Example: Structural Equality
 
-Define $n_1 =_{\text{Nat}} n_2$ — "*natural number $n_1$ is structurally equal to $n_2$*":
+Define $n_1 =_{\text{Nat}} n_2$: "*natural number $n_1$ is structurally equal to $n_2$*":
 
 $$\frac{}{z =_{\text{Nat}} z} \text{ZeroEq} \qquad \frac{n_1 =_{\text{Nat}} n_2}{s(n_1) =_{\text{Nat}} s(n_2)} \text{SuccessorEq}$$
 
@@ -194,7 +194,7 @@ Judgment forms are **inductively-defined relations**. When translated to code:
 
 #### Example: Semantics as a Function
 
-Define $n \Downarrow i$ — "*natural number $n$ evaluates to integer $i$*":
+Define $n \Downarrow i$: "*natural number $n$ evaluates to integer $i$*":
 
 $$\frac{}{z \Downarrow 0} \text{EvalZero} \qquad \frac{n \Downarrow i}{s(n) \Downarrow i+1} \text{EvalSuccessor}$$
 
@@ -234,7 +234,7 @@ $$\frac{}{n \text{ value}} \text{NumVal} \qquad \frac{}{b \text{ value}} \text{B
 
 ### Implicit Coercions
 
-Languages like JavaScript have **implicit coercions** — values are automatically converted between types depending on context. Three key coercion functions:
+Languages like JavaScript have **implicit coercions**, values are automatically converted between types depending on context. Three key coercion functions:
 
 | Function    | Signature            | Purpose                          |
 |-------------|----------------------|----------------------------------|
@@ -259,7 +259,7 @@ def extend(env: Env, x: String, v: Expr): Env = {
 }
 ```
 
-The `extend` function enforces that only **values** (not arbitrary expressions) are stored in the environment — a **representation invariant**.
+The `extend` function enforces that only **values** (not arbitrary expressions) are stored in the environment, a **representation invariant**.
 
 ## Meta-Language Correspondence
 
@@ -274,7 +274,7 @@ The `extend` function enforces that only **values** (not arbitrary expressions) 
 
 ## Related
 
-- [[02_Binding_and_Scope]] — Value bindings, scoping, closures
-- [[04_Syntax_and_Parsing]] — Grammars, concrete vs. abstract syntax
-- [[06_Operational_Semantics]] — Big-step evaluation judgments
+- [[02_Binding_and_Scope]]: Value bindings, scoping, closures
+- [[04_Syntax_and_Parsing]]: Grammars, concrete vs. abstract syntax
+- [[06_Operational_Semantics]]: Big-step evaluation judgments
 - [[Programming Language Theory Overview]]

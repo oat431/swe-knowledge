@@ -8,13 +8,13 @@ tags:
 
 # Comments & Documentation
 
-Comments are a necessary evil. Good code is self-documenting, but some things can't be expressed in code alone — intent, warnings, legal requirements. The goal is to write code so clear that comments become rare and valuable.
+Comments are a necessary evil. Good code is self-documenting, but some things can't be expressed in code alone: intent, warnings, legal requirements. The goal is to write code so clear that comments become rare and valuable.
 
 ---
 
 ## Bad Comments
 
-### ❌ Redundant — Restates the Obvious
+### ❌ Redundant: Restates the Obvious
 
 ```java
 // increment i by 1
@@ -26,10 +26,10 @@ if (user == null) {
 }
 ```
 
-### ❌ Misleading — Outdated or Wrong
+### ❌ Misleading: Outdated or Wrong
 
 ```java
-// Validates email format — (written 3 years ago, regex was changed twice since)
+// Validates email format - (written 3 years ago, regex was changed twice since)
 private boolean isValid(String email) {
     return email.contains("@");  // doesn't actually validate format
 }
@@ -45,7 +45,7 @@ private boolean isValid(String email) {
 ```
 This is what git is for. Delete it.
 
-### ❌ Noise — Adds Zero Information
+### ❌ Noise: Adds Zero Information
 
 ```java
 /**
@@ -107,10 +107,10 @@ public List<Report> generateDailyReport() { ... }
 
 Always include a ticket number or responsible person.
 
-### ✅ Amplification — Making the Unobvious Obvious
+### ✅ Amplification: Making the Unobvious Obvious
 
 ```java
-// The trim() is critical — upstream system sends trailing spaces
+// The trim() is critical - upstream system sends trailing spaces
 // that cause lookup failures in the database
 String normalized = input.trim().toLowerCase();
 ```
@@ -147,9 +147,9 @@ if (employee.isRetired()) { ... }
 | Non-obvious behavior | ✅ Yes | Side effects, thread safety, exceptions |
 | Complex algorithm | ✅ Yes | Explain the *why*, not every line |
 | Private helper methods | ⚠️ Only if complex | If it needs a comment, maybe it needs a better name |
-| Obvious getters/setters | ❌ Skip | `getName()` returns the name — no docs needed |
+| Obvious getters/setters | ❌ Skip | `getName()` returns the name, no docs needed |
 
-### Java — Javadoc
+### Java: Javadoc
 
 ```java
 /**
@@ -166,7 +166,7 @@ if (employee.isRetired()) { ... }
 public BigDecimal calculateDiscount(Customer customer, BigDecimal orderTotal) { ... }
 ```
 
-### TypeScript — JSDoc
+### TypeScript: JSDoc
 
 ```typescript
 /**
@@ -194,7 +194,7 @@ async function sendNotification(
 
 Every project should have a README with these sections:
 
-```markdown
+````markdown
 # Project Name
 
 One-line description of what this project does.
@@ -224,9 +224,11 @@ Link to detailed docs or auto-generated API docs.
 How to set up dev environment, run tests, submit PRs.
 
 ## License
+
 ```
 MIT / Apache 2.0 / Proprietary
 ```
+````
 
 ---
 
@@ -256,8 +258,8 @@ Key rules:
 ## Book Deep Dive
 
 For full chapter-level coverage:
-- [[Comment Patterns]] — when to comment, comment types, anti-patterns
+- [[Comment Patterns]]: when to comment, comment types, anti-patterns
 
 ---
 
-**Sources:** Robert C. Martin, *Clean Code*, Ch. 4 (2008); Divio documentation system; Google developer documentation style guide
+**Sources:** Robert C. Martin, *Clean Code*, Ch. 4 (2008); divio documentation system; google developer documentation style guide

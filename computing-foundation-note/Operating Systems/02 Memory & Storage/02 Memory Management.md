@@ -7,7 +7,7 @@ tags:
 
 # 02 Memory Management
 
-The OS gives every process the illusion of having its own private, contiguous memory — even though physical RAM is shared, fragmented, and limited.
+The OS gives every process the illusion of having its own private, contiguous memory, even though physical RAM is shared, fragmented, and limited.
 
 ---
 
@@ -58,7 +58,7 @@ Virtual Page # → Page Table → Physical Frame #
 
 ---
 
-## TLB — Translation Lookaside Buffer
+## TLB: Translation Lookaside Buffer
 
 > A hardware cache for page table entries. Without it, EVERY memory access would require TWO lookups (page table, then memory).
 
@@ -69,11 +69,11 @@ CPU → TLB (fast, hit ~99%) → Page Table (slow, on miss)
 
 ---
 
-## Page Replacement — When RAM Is Full
+## Page Replacement: When RAM Is Full
 
 | Algorithm | How | Notes |
 |-----------|-----|-------|
-| **FIFO** | Evict oldest page | Simple. Bad — may evict frequently used page. |
+| **FIFO** | Evict oldest page | Simple. Bad ;  may evict frequently used page. |
 | **LRU** (Least Recently Used) | Evict page unused longest | Good. Expensive to track. |
 | **NRU** (Not Recently Used) | Evict pages not accessed recently | Practical approximation. |
 | **Second Chance** (Clock) | FIFO + check accessed bit. Give one more chance. | Linux uses a variant. |
@@ -124,4 +124,4 @@ jcmd <PID> VM.native_memory summary
 ## Sources
 
 - Silberschatz et al. *Operating System Concepts*, Chapters 8–9.
-- Oracle JVM Memory Management — https://docs.oracle.com/javase/8/docs/technotes/guides/vm/
+- Oracle JVM Memory Management: https://docs.oracle.com/javase/8/docs/technotes/guides/vm/

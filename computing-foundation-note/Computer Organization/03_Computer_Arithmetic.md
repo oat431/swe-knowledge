@@ -2,13 +2,13 @@
 tags: [arithmetic, floating-point, ieee-754, computer-architecture, co-and-d]
 ---
 
-# 03 — Computer Arithmetic
+# 03: Computer Arithmetic
 
-> **Source:** *Computer Organization and Design* — Patterson & Hennessy, Chapter 3
+> **Source:** *Computer Organization and Design*, Patterson & Hennessy, Chapter 3
 
 ## Overview
 
-Chapter 3 covers how computers perform arithmetic: integer addition/subtraction with overflow detection, multiplication and division algorithms, and the IEEE 754 floating-point standard. The finite word size of computers means arithmetic can produce results that don't fit — understanding how hardware handles this is essential.
+Chapter 3 covers how computers perform arithmetic: integer addition/subtraction with overflow detection, multiplication and division algorithms, and the IEEE 754 floating-point standard. The finite word size of computers means arithmetic can produce results that don't fit, understanding how hardware handles this is essential.
 
 ---
 
@@ -31,14 +31,14 @@ Overflow occurs when the result cannot fit in the word size.
 
 ### MIPS Overflow Handling
 
-- `add`, `addi`, `sub` — trap on overflow
-- `addu`, `addiu`, `subu` — ignore overflow (used by C compilers)
+- `add`, `addi`, `sub`: trap on overflow
+- `addu`, `addiu`, `subu`: ignore overflow (used by C compilers)
 
-Overflow is detected via an **exception** (also called **interrupt**) — an unscheduled procedure call. The faulting instruction address is saved in the **EPC** (Exception Program Counter), and the CPU jumps to a predefined handler address.
+Overflow is detected via an **exception** (also called **interrupt**), an unscheduled procedure call. The faulting instruction address is saved in the **EPC** (Exception Program Counter), and the CPU jumps to a predefined handler address.
 
 ### SIMD / Multimedia Arithmetic
 
-Partitioning carry chains in a 64-bit adder allows parallel operations on vectors of eight 8-bit, four 16-bit, or two 32-bit operands. **Saturating operations** clamp results to max/min instead of wrapping around — useful for audio/video.
+Partitioning carry chains in a 64-bit adder allows parallel operations on vectors of eight 8-bit, four 16-bit, or two 32-bit operands. **Saturating operations** clamp results to max/min instead of wrapping around; useful for audio/video.
 
 ---
 
@@ -58,12 +58,12 @@ Repeat for all 32 bits. An n-bit × m-bit product needs **n + m bits**.
 | Version | Key Idea |
 |---|---|
 | First (Fig 3.4) | 64-bit Multiplicand register shifts left; 64-bit Product register accumulates |
-| Refined (Fig 3.6) | 32-bit ALU; Product shifts right; multiplier stored in right half of Product register |
+| Refined (Fig 3.6) | 32-bit ALU; product shifts right; multiplier stored in right half of Product register |
 | Fast (Fig 3.8) | 31 adders in parallel tree → log₂(32) = 5 add delays instead of 32 |
 
 ### Signed Multiplication
 
-Works with the same algorithm — just extend the sign bit during shifts.
+Works with the same algorithm, just extend the sign bit during shifts.
 
 ### MIPS Multiply
 
@@ -88,7 +88,7 @@ Works with the same algorithm — just extend the sign bit during shifts.
 
 ### Hardware
 
-Similar to multiply — a 64-bit Remainder register, 32-bit Divisor register, and 32-bit Quotient register. The refined version halves register/ALU widths by shifting the remainder left.
+Similar to multiply, a 64-bit Remainder register, 32-bit Divisor register, and 32-bit Quotient register. The refined version halves register/ALU widths by shifting the remainder left.
 
 ### Signed Division
 
@@ -159,17 +159,17 @@ Exponents use biased representation so that the most negative exponent is 00...0
 
 ## 5 Floating-Point Addition Algorithm
 
-1. **Align** exponents — shift the smaller significand right until exponents match
+1. **Align** exponents: shift the smaller significand right until exponents match
 2. **Add** significands
-3. **Normalize** the sum — shift left/right, adjust exponent, check overflow/underflow
-4. **Round** to fit significand width — if result denormalizes, repeat step 3
+3. **Normalize** the sum: shift left/right, adjust exponent, check overflow/underflow
+4. **Round** to fit significand width: if result denormalizes, repeat step 3
 
 ## 6 Floating-Point Multiplication Algorithm
 
 1. **Add** biased exponents, subtract one bias
 2. **Multiply** significands
 3. **Normalize** if necessary, check overflow/underflow
-4. **Round** — if result denormalizes, re-normalize
+4. **Round:** if result denormalizes, re-normalize
 5. **Set sign:** XOR of operand signs
 
 ---
@@ -197,7 +197,7 @@ These bits enable IEEE 754 to round as if intermediate results had infinite prec
 
 ### Non-Associativity
 
-Floating-point addition is **not associative**: $(x + y) + z \neq x + (y + z)$ in general. This matters for parallel programs — sequential and parallel versions may produce different results.
+Floating-point addition is **not associative:** $(x + y) + z \neq x + (y + z)$ in general. This matters for parallel programs: sequential and parallel versions may produce different results.
 
 ---
 
@@ -241,6 +241,6 @@ Floating-point addition is **not associative**: $(x + y) + z \neq x + (y + z)$ i
 
 ## Related
 
-- [[02_Instruction_Set_Architecture]] — MIPS integer instructions that arithmetic builds on
-- [[04_Processor_Design]] — How the ALU datapath implements these operations
+- [[02_Instruction_Set_Architecture]]: MIPS integer instructions that arithmetic builds on
+- [[04_Processor_Design]]: How the ALU datapath implements these operations
 - [[Computer Organization Overview]]

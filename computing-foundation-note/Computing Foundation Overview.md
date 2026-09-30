@@ -7,23 +7,23 @@ tags:
   - computer-science
 ---
 
-# Computing Foundations — Overview
+# Computing Foundations: Overview
 
-> **Source:** SWEBOK v4 Chapter 16 — Computing Foundations
-> **Purpose:** The fundamental computer science knowledge every software engineer needs — architecture, data structures, algorithms, OS, databases, networks, HCI, and AI/ML.
+> **Source:** SWEBOK v4 Chapter 16, Computing Foundations
+> **Purpose:** The fundamental computer science knowledge every software engineer needs: architecture, data structures, algorithms, OS, databases, networks, HCI, and AI/ML.
 
 ## What Is This?
 
-Computing Foundations covers the fundamental computer science knowledge that every software engineer needs. These aren't software engineering topics per se — they're the underlying science and technology that SE builds upon. You can't design good software without understanding what the machine is doing, how data is organized, how networks communicate, or how users think.
+Computing Foundations covers the fundamental computer science knowledge that every software engineer needs. These aren't software engineering topics per se; they're the underlying science and technology that SE builds upon. You can't design good software without understanding what the machine is doing, how data is organized, how networks communicate, or how users think.
 
-The breadth of this chapter spans the entire computing stack: from hardware architecture and how processors execute instructions, through data structures and algorithms that form the core of problem-solving, up to operating systems, databases, and networks that provide the platform for modern software. It also encompasses human-computer interaction — how people use systems — and the increasingly important field of AI and machine learning.
+The breadth of this chapter spans the entire computing stack: from hardware architecture and how processors execute instructions, through data structures and algorithms that form the core of problem-solving, up to operating systems, databases, and networks that provide the platform for modern software. It also encompasses human-computer interaction (how people use systems) and the increasingly important field of AI and machine learning.
 
-Understanding these foundations gives software engineers the vocabulary and mental models to make informed design decisions, diagnose performance problems, choose appropriate technologies, and communicate effectively with specialists across every layer of the stack. Without this knowledge, software engineering becomes superficial — you might build something that works, but you won't understand *why* it works or how to fix it when it breaks.
+Understanding these foundations gives software engineers the vocabulary and mental models to make informed design decisions, diagnose performance problems, choose appropriate technologies, and communicate effectively with specialists across every layer of the stack. Without this knowledge, software engineering becomes superficial; you might build something that works, but you won't understand *why* it works or how to fix it when it breaks.
 
 ## Knowledge Areas
 
 ### Basic Concepts of a System
-- [[00 Basic Concepts of a System|Basic Concepts of a System]] — Problem-to-solution mapping, modularity, cohesion, coupling, system decomposition, integration, quality attributes
+- [[00 Basic Concepts of a System|Basic Concepts of a System]]: Problem-to-solution mapping, modularity, cohesion, coupling, system decomposition, integration, quality attributes
 
 ### Computer Architecture and Organization
 - Von Neumann vs Harvard architecture, RISC vs CISC
@@ -71,38 +71,38 @@ Understanding these foundations gives software engineers the vocabulary and ment
 ## My Notes
 
 ### Core Topics
-- [[Computer Organization/Computer Organization Overview|Computer Organization]] — Abstractions, ISA, arithmetic, processor design, memory hierarchy, I/O, parallel computing
-- [[Programming Language Theory/Programming Language Theory Overview|Programming Language Theory]] — Expressions, binding, data types, syntax, type systems, operational semantics
-- [[Artificial_Intelligence/AI Overview|Artificial Intelligence]] — Search, logic, uncertainty, ML, reinforcement learning, NLP, vision, ethics
-- [[Algorithm Overview|Algorithm]] — Data structures, sorting, searching, DP, greedy, divide & conquer
-- [[Algorithm Advance - Overview|Algorithm (Advanced)]] — B-Trees, Fibonacci heaps, shortest paths, MST, max flow, NP-completeness
-- [[Fundamental Overview|Programming Fundamentals]] — Core concepts, variables, control flow, functions, OOP, FP, error handling
-- [[00 Basic Concepts of a System|Basic Concepts of a System]] — Modularity, cohesion, coupling, system decomposition, integration, quality attributes
-- [[Operating Systems Overview|Operating Systems]] — Processes, memory, concurrency, file systems, IPC
-- [[Database Overview|Database]] — SQL, normalization, NoSQL, indexing, transactions, scaling
-- [[000 Computer Networks Overview|Computer Networks]] — OSI/TCP-IP, HTTP, DNS, TCP/UDP, load balancing, security
-- [[Design Pattern Overview|Design Patterns (Simplified)]] — Creational, structural, behavioral patterns
-- [[Clean Code Overview|Clean Code (Simplified)]] — Naming, functions, code smells, refactoring
-- [[HCI Overview|HCI (Simplified)]] — Usability principles, cognitive load, accessibility basics
+- [[Computer Organization/Computer Organization Overview|Computer Organization]]: Abstractions, ISA, arithmetic, processor design, memory hierarchy, I/O, parallel computing
+- [[Programming Language Theory/Programming Language Theory Overview|Programming Language Theory]]: Expressions, binding, data types, syntax, type systems, operational semantics
+- [[Artificial_Intelligence/AI Overview|Artificial Intelligence]]: Search, logic, uncertainty, ML, reinforcement learning, NLP, vision, ethics
+- [[Algorithm Overview|Algorithm]]: Data structures, sorting, searching, DP, greedy, divide & conquer
+- [[Algorithm Advance - Overview|Algorithm (Advanced)]]: B-Trees, Fibonacci heaps, shortest paths, MST, max flow, NP-completeness
+- [[Fundamental Overview|Programming Fundamentals]]: Core concepts, variables, control flow, functions, OOP, FP, error handling
+- [[00 Basic Concepts of a System|Basic Concepts of a System]]: Modularity, cohesion, coupling, system decomposition, integration, quality attributes
+- [[Operating Systems Overview|Operating Systems]]: Processes, memory, concurrency, file systems, IPC
+- [[Database Overview|Database]]: SQL, normalization, NoSQL, indexing, transactions, scaling
+- [[000 Computer Networks Overview|Computer Networks]]: OSI/TCP-IP, HTTP, DNS, TCP/UDP, load balancing, security
+- [[Design Pattern Overview|Design Patterns (Simplified)]]: Creational, structural, behavioral patterns
+- [[Clean Code Overview|Clean Code (Simplified)]]: Naming, functions, code smells, refactoring
+- [[HCI Overview|HCI (Simplified)]]: Usability principles, cognitive load, accessibility basics
 
 ### Gap-Filling Topics (Added 2026-07-21)
-- [[Programming Language Theory/08_Compiler_Design|Compiler Design]] — Compilation pipeline, lexing, parsing, semantic analysis, SSA, optimization, code generation, JIT
-- [[Operating Systems/04 Distributed Systems/04_Distributed_Systems|Distributed Systems]] — CAP theorem, Paxos/Raft, consistent hashing, CRDTs, fault tolerance, MapReduce
-- [[Computer Networks/02 Protocols/025 Wireless & Mobile|Wireless & Mobile Networks]] — WiFi, Bluetooth, cellular 1G-5G, FDMA/TDMA/CDMA/OFDMA, Mobile IP, WPA3
-- [[Database/04 Data Warehousing/04_Data_Warehousing_and_Mining|Data Warehousing & Mining]] — OLAP vs OLTP, star/snowflake schemas, ETL/ELT, data mining techniques
-- [[Artificial_Intelligence/09_AI_SE_Intersection|AI ↔ SE Intersection]] — AI for SE (defect prediction, test generation), SE for AI (ML pipelines, MLOps, responsible AI)
-- [[00 Basic Concepts of a System|Basic Concepts of a System]] — System definition, problem-to-solution mapping, modularity/cohesion/coupling, system lifecycle
+- [[Programming Language Theory/08_Compiler_Design|Compiler Design]]: Compilation pipeline, lexing, parsing, semantic analysis, SSA, optimization, code generation, JIT
+- [[Operating Systems/04 Distributed Systems/04_Distributed_Systems|Distributed Systems]]: CAP theorem, Paxos/Raft, consistent hashing, CRDTs, fault tolerance, MapReduce
+- [[Computer Networks/02 Protocols/025 Wireless & Mobile|Wireless & Mobile Networks]]: WiFi, Bluetooth, cellular 1G-5G, FDMA/TDMA/CDMA/OFDMA, Mobile IP, WPA3
+- [[Database/04 Data Warehousing/04_Data_Warehousing_and_Mining|Data Warehousing & Mining]]: OLAP vs OLTP, star/snowflake schemas, ETL/ELT, data mining techniques
+- [[Artificial_Intelligence/09_AI_SE_Intersection|AI ↔ SE Intersection]]: AI for SE (defect prediction, test generation), SE for AI (ML pipelines, MLOps, responsible AI)
+- [[00 Basic Concepts of a System|Basic Concepts of a System]]: System definition, problem-to-solution mapping, modularity/cohesion/coupling, system lifecycle
 
 ### Depth Expansion (Added 2026-09-30)
 Networks, OS, and Computer Organization were audited and expanded with 14 notes covering practitioner-level gaps:
-- **Computer Networks (+6):** [[Computer Networks/01 Fundamentals/015 Routing - BGP & OSPF|Routing — BGP & OSPF]] · [[Computer Networks/01 Fundamentals/012 Ethernet, Switching & VLANs|Ethernet, Switching & VLANs]] · [[Computer Networks/02 Protocols/023 TLS & PKI Deep Dive|TLS & PKI Deep Dive]] · [[Computer Networks/03 Infrastructure/031 Network Programming & Sockets|Network Programming & Sockets]] · [[Computer Networks/03 Infrastructure/033 Realtime Protocols - WebSockets, SSE & gRPC|Realtime Protocols]] · [[Computer Networks/03 Infrastructure/034 VPN & Overlay Networks|VPN & Overlay Networks]]
-- **Operating Systems (+6):** [[Operating Systems/05 Virtualization & Containers/05 Containers - Namespaces & Cgroups|Containers — Namespaces & Cgroups]] · [[Operating Systems/05 Virtualization & Containers/05 Virtualization - KVM & Hypervisors|Virtualization — KVM & Hypervisors]] · [[Operating Systems/06 Linux Internals/06 I O Models & Async|I/O Models & Async (epoll, io_uring)]] · [[Operating Systems/06 Linux Internals/06 Boot & systemd|Boot & systemd]] · [[Operating Systems/06 Linux Internals/06 Memory Pressure - OOM, PSI, Swap & NUMA|Memory Pressure — OOM, PSI, Swap & NUMA]] · [[Operating Systems/06 Linux Internals/06 OS Security Model - Capabilities, SELinux & Seccomp|OS Security Model]]
-- **Computer Organization (+2):** [[Computer Organization/08_Modern_ISAs_x86_ARM64_RISCV|Modern ISAs — x86-64, ARM64, RISC-V]] · [[Computer Organization/09_Speculative_Execution_and_Security|Speculative Execution & Security (Spectre/Meltdown)]]
+- **Computer Networks (+6):** [[Computer Networks/01 Fundamentals/015 Routing - BGP & OSPF|Routing: BGP & OSPF]] · [[Computer Networks/01 Fundamentals/012 Ethernet, Switching & VLANs|Ethernet, Switching & VLANs]] · [[Computer Networks/02 Protocols/023 TLS & PKI Deep Dive|TLS & PKI Deep Dive]] · [[Computer Networks/03 Infrastructure/031 Network Programming & Sockets|Network Programming & Sockets]] · [[Computer Networks/03 Infrastructure/033 Realtime Protocols - WebSockets, SSE & gRPC|Realtime Protocols]] · [[Computer Networks/03 Infrastructure/034 VPN & Overlay Networks|VPN & Overlay Networks]]
+- **Operating Systems (+6):** [[Operating Systems/05 Virtualization & Containers/05 Containers - Namespaces & Cgroups|Containers: Namespaces & Cgroups]] · [[Operating Systems/05 Virtualization & Containers/05 Virtualization - KVM & Hypervisors|Virtualization : KVM & Hypervisors]] · [[Operating Systems/06 Linux Internals/06 I O Models & Async|I/O Models & Async (epoll, io_uring)]] · [[Operating Systems/06 Linux Internals/06 Boot & systemd|Boot & systemd]] · [[Operating Systems/06 Linux Internals/06 Memory Pressure - OOM, PSI, Swap & NUMA|Memory Pressure : OOM, PSI, Swap & NUMA]] · [[Operating Systems/06 Linux Internals/06 OS Security Model - Capabilities, SELinux & Seccomp|OS Security Model]]
+- **Computer Organization (+2):** [[Computer Organization/08_Modern_ISAs_x86_ARM64_RISCV|Modern ISAs: x86-64, ARM64, RISC-V]] · [[Computer Organization/09_Speculative_Execution_and_Security|Speculative Execution & Security (Spectre/Meltdown)]]
 - **Fixes:** CPU Scheduling updated for EEVDF (Linux 6.6+ default, replacing CFS); folder typo `Computer Oraganization` → `Computer Organization` renamed vault-wide
 
 ## Coverage Status
 
-> **100% SWEBOK v4 Chapter 16 Coverage Achieved** — plus practitioner depth beyond SWEBOK (2026-09-30 expansion)
+> **100% SWEBOK v4 Chapter 16 Coverage Achieved**, plus practitioner depth beyond SWEBOK (2026-09-30 expansion)
 
 | Area | Status | Notes |
 |------|--------|-------|
@@ -120,6 +120,6 @@ Networks, OS, and Computer Organization were audited and expanded with 14 notes 
 
 ## Relationship to Other Foundations
 
-- **[[Math For SE Note Overview|Mathematical Foundations]]** — Provides formal reasoning (logic, proofs, discrete structures) that underpin algorithms and verification
-- **[[Engineering Foundation Overview|Engineering Foundations]]** — Provides methodology (problem-solving, measurement, standards) for applying CS knowledge
-- **Software Engineering KAs** — Computing Foundations is the technology base that all SE knowledge areas build upon
+- **[[Math For SE Note Overview|Mathematical Foundations]]:** Provides formal reasoning (logic, proofs, discrete structures) that underpin algorithms and verification
+- **[[Engineering Foundation Overview|Engineering Foundations]]:** Provides methodology (problem-solving, measurement, standards) for applying CS knowledge
+- **Software Engineering KAs:** Computing Foundations is the technology base that all SE knowledge areas build upon

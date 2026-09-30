@@ -8,7 +8,7 @@ tags:
 
 # 03 Accessibility Basics
 
-Accessibility (a11y) means designing software that works for everyone — including people with visual, auditory, motor, or cognitive disabilities. It's not optional. It's an engineering requirement, often a legal one, and it makes software better for ALL users.
+Accessibility (a11y) means designing software that works for everyone, including people with visual, auditory, motor, or cognitive disabilities. It's not optional. It's an engineering requirement, often a legal one, and it makes software better for ALL users.
 
 ---
 
@@ -25,7 +25,7 @@ Accessibility (a11y) means designing software that works for everyone — includ
 
 ## WCAG (Web Content Accessibility Guidelines)
 
-The standard. Four principles — **POUR:**
+The standard. Four principles (**POUR**):
 
 | Principle | Meaning | Example |
 |-----------|---------|--------|
@@ -43,7 +43,7 @@ The standard. Four principles — **POUR:**
 | Mistake | Fix |
 |---------|-----|
 | Images without `alt` text | Always add descriptive alt (or `alt=""` for decorative) |
-| `<div>` with click handler instead of `<button>` | Use semantic HTML — it's keyboard/screen-reader accessible for free |
+| `<div>` with click handler instead of `<button>` | Use semantic HTML ;  it's keyboard/screen-reader accessible for free |
 | Low color contrast | WCAG AA: 4.5:1 for text, 3:1 for large text. Use contrast checkers. |
 | Form fields without `<label>` | Associate every input with a label (`for="id"` or wrapping) |
 | Focus not visible | Never `outline: none` without a replacement. Focus indicators are essential. |
@@ -58,7 +58,7 @@ The standard. Four principles — **POUR:**
 2. Try navigating your app with keyboard only (Tab, Enter, Escape)
 3. Check color contrast with WebAIM Contrast Checker
 4. Add `alt` text to every meaningful image
-5. Use `<button>`, `<a>`, `<nav>`, `<main>`, `<header>` — not `<div>` for everything
+5. Use `<button>`, `<a>`, `<nav>`, `<main>`, `<header>`: not `<div>` for everything
 
 ---
 
@@ -68,7 +68,7 @@ The standard. Four principles — **POUR:**
 |------|-------------|
 | **axe DevTools** | Browser extension, automated a11y audit |
 | **Lighthouse** | Chrome built-in, a11y score + recommendations |
-| **NVDA / VoiceOver** | Screen readers — test like your blind users |
+| **NVDA / VoiceOver** | Screen readers ;  test like your blind users |
 | **WebAIM Contrast Checker** | Check text/background contrast ratios |
 | **Stark (Figma plugin)** | Design-time contrast and simulation |
 
@@ -76,6 +76,6 @@ The standard. Four principles — **POUR:**
 
 ## Sources
 
-- WCAG 2.2 — https://www.w3.org/WAI/WCAG22/quickref/
-- WebAIM — https://webaim.org/
-- a11yproject.com — https://www.a11yproject.com/
+- WCAG 2.2: https://www.w3.org/WAI/WCAG22/quickref/
+- WebAIM: https://webaim.org/
+- a11yproject.com: https://www.a11yproject.com/

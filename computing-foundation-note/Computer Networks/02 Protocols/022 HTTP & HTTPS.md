@@ -35,7 +35,7 @@ Content-Length: 89
 | **HEAD** | ✅ | ✅ | GET but only headers (no body). |
 | **OPTIONS** | ✅ | ✅ | CORS preflight. "What methods are allowed?" |
 
-> **Idempotent:** Same request, same result. Safe to retry. POST is not idempotent — retrying creates duplicates.
+> **Idempotent:** Same request, same result. Safe to retry. POST is not idempotent, retrying creates duplicates.
 
 ---
 
@@ -67,11 +67,12 @@ Content-Length: 89
 
 ---
 
-## HTTPS — HTTP Over TLS
+## HTTPS: HTTP Over TLS
 
 ### TLS 1.3 Handshake
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'actorBkg':'#19362D','actorBorder':'#1FB854','actorTextColor':'#CDD3D1','actorLineColor':'#1FB854','signalColor':'#CDD3D1','signalTextColor':'#CDD3D1','labelBoxBkgColor':'#161212','labelBoxBorderColor':'#1FB854','labelTextColor':'#CDD3D1','loopTextColor':'#CAC9C9','noteBkgColor':'#1EB88E','noteTextColor':'#000C07','activationBkgColor':'#1EB88E','activationBorderColor':'#1FB8AB','sequenceNumberColor':'#000000','background':'#1B1717','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 sequenceDiagram
     participant C as Client
     participant S as Server
@@ -82,6 +83,7 @@ sequenceDiagram
     S-->>C: Finished
     Note over C,S: Encrypted Data
 ```
+
 
 > TLS 1.3: 1 round trip (1-RTT). TLS 1.2: 2 round trips (2-RTT). **~100ms saved on every new connection.**
 
@@ -127,6 +129,6 @@ public Order create(@Valid @RequestBody CreateOrderRequest request) {
 
 ## Sources
 
-- RFC 7230-7235 — HTTP/1.1
-- RFC 7540 — HTTP/2
-- RFC 9000 — QUIC (HTTP/3)
+- RFC 7230-7235: HTTP/1.1
+- RFC 7540: HTTP/2
+- RFC 9000: QUIC (HTTP/3)

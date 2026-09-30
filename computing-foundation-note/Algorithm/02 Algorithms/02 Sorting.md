@@ -89,7 +89,7 @@ void merge(int[] arr, int left, int mid, int right) {
 | **Bucket** | Distribute into buckets, sort each | Uniformly distributed floats |
 
 ```java
-// Counting Sort — O(n + k), stable
+// Counting Sort - O(n + k), stable
 void countingSort(int[] arr) {
     int max = Arrays.stream(arr).max().orElse(0);
     int[] count = new int[max + 1];
@@ -127,7 +127,7 @@ Unstable:[(B,1), (C,2), (A,2)]   ← A and C swapped
 
 | Scenario | Best Algorithm |
 |----------|:-------------:|
-| General purpose, in-memory | Quick (or Timsort — Java's default) |
+| General purpose, in-memory | Quick (or Timsort ;  Java's default) |
 | Need stability | Merge sort |
 | Mostly sorted data | Insertion sort |
 | Integer keys, limited range | Counting / Radix |
@@ -137,15 +137,15 @@ Unstable:[(B,1), (C,2), (A,2)]   ← A and C swapped
 
 ## Sources
 
-- CLRS — Chapters 6–8
-- Sedgewick — Chapter 2 (Sorting)
+- CLRS: Chapters 6–8
+- Sedgewick: Chapter 2 (Sorting)
 
 
 ---
 
 ## Hands-On Exercises
 
-### Exercise 1: Quick Sort — Implement Partition
+### Exercise 1: Quick Sort: Implement Partition
 Implement the `partition` method from the note. Test with `[3,6,8,10,1,2,1]`, pivot = last element.
 
 ```java
@@ -159,7 +159,7 @@ int partition(int[] arr, int low, int high) {
 
 ---
 
-### Exercise 2: Merge Sort — Implement Merge
+### Exercise 2: Merge Sort: Implement Merge
 Implement the `merge` method from the note. Given two sorted halves of an array, merge them in-place.
 
 ```java
@@ -172,7 +172,7 @@ void merge(int[] arr, int left, int mid, int right) {
 
 ---
 
-### Exercise 3: Counting Sort — Implement from Note
+### Exercise 3: Counting Sort: Implement from Note
 Implement counting sort for an array of non-negative integers.
 
 ```java
@@ -200,7 +200,7 @@ void countingSort(int[] arr) {
 | 8 | [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) (LC 315) | 🔴 Hard | Merge Sort + Count |
 
 ### Assignment Guidelines
-- **Start** with problem 2 (Easy) — merging sorted arrays.
-- **Then** 1, 3–6 (Medium) — sorting applications and quickselect.
+- **Start** with problem 2 (Easy): merging sorted arrays.
+- **Then** 1, 3–6 (Medium): sorting applications and quickselect.
 - **Problems 7–8** (Hard) require advanced sorting techniques.
 - **Target time:** 10 min per Easy, 20 min per Medium, 35 min per Hard.

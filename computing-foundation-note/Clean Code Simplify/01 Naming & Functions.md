@@ -8,7 +8,7 @@ tags:
 
 # Naming & Functions
 
-Names are everywhere in code — variables, functions, classes, packages. Good names eliminate the need for comments. Good functions are small, focused, and composable. This is the most impactful clean code skill to master.
+Names are everywhere in code, variables, functions, classes, packages. Good names eliminate the need for comments. Good functions are small, focused, and composable. This is the most impactful clean code skill to master.
 
 ---
 
@@ -49,7 +49,7 @@ Single-letter names and magic numbers are impossible to grep.
 
 ### 4. No Encodings (Hungarian Notation)
 
-Don't encode type information into names — that's what types are for.
+Don't encode type information into names; that's what types are for.
 
 | ❌ Bad | ✅ Good |
 |--------|---------|
@@ -58,7 +58,7 @@ Don't encode type information into names — that's what types are for.
 | `IUserRepository repo` | `UserRepository userRepository` |
 | `boolean bIsActive` | `boolean isActive` |
 
-### 5. Class Names — Nouns, Not Verbs
+### 5. Class Names: Nouns, Not Verbs
 
 | ❌ Bad | ✅ Good |
 |--------|---------|
@@ -66,7 +66,7 @@ Don't encode type information into names — that's what types are for.
 | `class ProcessPayment` | `class PaymentProcessor` |
 | `class Calculate` | `class TaxCalculator` |
 
-### 6. Method Names — Verbs
+### 6. Method Names: Verbs
 
 | ❌ Bad | ✅ Good |
 |--------|---------|
@@ -85,7 +85,7 @@ A function should be **under 20 lines**. If it's longer, it's probably doing too
 ```
 ✅ Ideal:  3-10 lines
 ⚠️ OK:     10-20 lines
-❌ Too big: 20+ lines — extract sub-functions
+❌ Too big: 20+ lines - extract sub-functions
 ```
 
 ### Do One Thing
@@ -164,10 +164,10 @@ public void createUser(String name, String email) {
 
 | Count | Verdict | Notes |
 |-------|---------|-------|
-| 0 | ✅ Ideal | Niladic — `now()`, `random()` |
-| 1 | ✅ Great | Monadic — `find(id)`, `sqrt(x)` |
-| 2 | ✅ Fine | Dyadic — `max(a, b)`, `copy(src, dst)` |
-| 3 | ⚠️ Acceptable | Triadic — consider if one param can be an object |
+| 0 | ✅ Ideal | Niladic ;  `now()`, `random()` |
+| 1 | ✅ Great | Monadic ;  `find(id)`, `sqrt(x)` |
+| 2 | ✅ Fine | Dyadic ;  `max(a, b)`, `copy(src, dst)` |
+| 3 | ⚠️ Acceptable | Triadic ;  consider if one param can be an object |
 | 4+ | ❌ Too many | Use parameter objects, builder pattern |
 
 ### Avoid Boolean Parameters
@@ -223,7 +223,7 @@ function createUser({ name, email, age, address }: CreateUserRequest): User;
 
 ## Checklist
 
-- [ ] Every name reveals intent — no `temp`, `data`, `obj`, `flag`
+- [ ] Every name reveals intent: no `temp`, `data`, `obj`, `flag`
 - [ ] Names are pronounceable and searchable
 - [ ] No Hungarian notation or type prefixes
 - [ ] Functions under 20 lines
@@ -238,9 +238,9 @@ function createUser({ name, email, age, address }: CreateUserRequest): User;
 ## Book Deep Dive
 
 For full chapter-level coverage:
-- [[Naming Conventions]] — comprehensive naming rules with examples
-- [[Function Design]] — function length, arguments, side effects
+- [[Naming Conventions]]: comprehensive naming rules with examples
+- [[Function Design]]: function length, arguments, side effects
 
 ---
 
-**Sources:** Robert C. Martin, *Clean Code*, Ch. 2-3 (2008); Steve McConnell, *Code Complete*, Ch. 7-9 (2004)
+**Sources:** Robert C. Martin, *Clean Code*, Ch. 2-3 (2008); steve McConnell, *Code Complete*, Ch. 7-9 (2004)

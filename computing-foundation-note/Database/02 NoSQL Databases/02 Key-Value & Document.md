@@ -8,13 +8,13 @@ tags:
 
 # 02 Key-Value & Document Databases
 
-Key-value is the simplest NoSQL model — a giant distributed hash map. Document stores extend that to semi-structured JSON documents with query capabilities.
+Key-value is the simplest NoSQL model, a giant distributed hash map. Document stores extend that to semi-structured JSON documents with query capabilities.
 
 ---
 
-## Key-Value — Redis
+## Key-Value: Redis
 
-Redis stores everything in memory. Blazing fast. Not just a cache — a data structure server.
+Redis stores everything in memory. Blazing fast. Not just a cache, a data structure server.
 
 ### Core Data Structures
 
@@ -29,7 +29,7 @@ Redis stores everything in memory. Blazing fast. Not just a cache — a data str
 ### Common Patterns
 
 ```java
-// Rate limiter — 100 requests per minute per user
+// Rate limiter - 100 requests per minute per user
 String key = "ratelimit:" + userId;
 Long count = redis.opsForValue().increment(key);
 if (count == 1) redis.expire(key, 60, TimeUnit.SECONDS);  // First request sets TTL
@@ -53,9 +53,9 @@ if (Boolean.TRUE.equals(locked)) {
 
 ---
 
-## Document — MongoDB
+## Document: MongoDB
 
-Stores JSON-like documents (BSON). Schema is flexible — each document can have different fields.
+Stores JSON-like documents (BSON). Schema is flexible; each document can have different fields.
 
 ### When MongoDB Excels
 
@@ -66,7 +66,7 @@ Stores JSON-like documents (BSON). Schema is flexible — each document can have
 | Read-heavy, few writes | Write-heavy with strict consistency needs |
 | Content management, user profiles, IoT data | Banking, ledger, anything with money |
 
-### Document Design — Embed vs Reference
+### Document Design: Embed vs Reference
 
 ```json
 // ✅ EMBED: One-to-few, read together
@@ -117,5 +117,5 @@ db.products.find({ $text: { $search: "wireless headphones" } })
 
 ## Sources
 
-- Redis Documentation — https://redis.io/docs/
-- MongoDB Documentation — https://www.mongodb.com/docs/
+- Redis Documentation: https://redis.io/docs/
+- MongoDB Documentation: https://www.mongodb.com/docs/

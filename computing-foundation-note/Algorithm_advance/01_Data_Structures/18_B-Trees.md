@@ -41,17 +41,17 @@ When $t = 2$, every internal node has 2–4 children → **2-3-4 tree**.
 
 $$h \leq \log_t \frac{n+1}{2}$$
 
-A B-tree with branching factor 1001 and height 2 stores **over 1 billion keys** — only 2 disk accesses needed (root cached in memory).
+A B-tree with branching factor 1001 and height 2 stores **over 1 billion keys**, only 2 disk accesses needed (root cached in memory).
 
 ### Operations
 
-#### Search — `B-TREE-SEARCH(x, k)`
+#### Search: `B-TREE-SEARCH(x, k)`
 - Multi-way branching at each node: $(x.n + 1)$-way decision
 - **Time:** $O(h)$ disk accesses, $O(th)$ CPU = $O(t \log_t n)$ CPU
 - Use **binary search within nodes** to reduce CPU to $O(\lg n)$
 
-#### Insertion — `B-TREE-INSERT(T, k)`
-- **Single top-down pass** — never backtracks
+#### Insertion: `B-TREE-INSERT(T, k)`
+- **Single top-down pass:** never backtracks
 - **Key trick:** Split any full node **proactively** as you descend
 - If root is full: create new root, split old root → tree grows **at the top**
 
@@ -66,8 +66,8 @@ A B-tree with branching factor 1001 and height 2 stores **over 1 billion keys** 
 2. Descend, splitting any full child encountered along the way
 3. Insert into the (guaranteed non-full) leaf
 
-#### Deletion — `B-TREE-DELETE(T, k)`
-More complex than insertion — handles multiple cases:
+#### Deletion: `B-TREE-DELETE(T, k)`
+More complex than insertion, handles multiple cases:
 
 | Case | Condition | Action |
 |---|---|---|
@@ -90,11 +90,11 @@ More complex than insertion — handles multiple cases:
 
 ## Hands-On Exercises
 
-### Exercise 2: B-Tree — Trace Insertion
+### Exercise 2: B-Tree: Trace Insertion
 Insert the keys `F, S, Q, K, C, L, H, T, V, W, M, R, N, P, A, B, X, Y, D, Z, E` into a B-tree with minimum degree `t = 3` (max 5 keys per node).
 
-1. After inserting `F, S, Q, K` — what does the root look like?
-2. Insert `C` — does the root split? What is the new root?
+1. After inserting `F, S, Q, K`: what does the root look like?
+2. Insert `C`: does the root split? What is the new root?
 3. Continue inserting the remaining keys. Draw the tree after every split.
 4. What is the height of the final tree?
 
@@ -109,6 +109,6 @@ Insert the keys `F, S, Q, K, C, L, H, T, V, W, M, R, N, P, A, B, X, Y, D, Z, E` 
 | 7 | **B-Tree Implementation** (mini-project) | 🟡 Code | B-tree insert/search/delete |
 
 ### Assignment Guidelines
-- **Problem 1**: Implement B-tree insert with split for t=3.
-- **Problem 2**: Trace deletion by hand.
+- **Problem 1:** Implement B-tree insert with split for t=3.
+- **Problem 2:** Trace deletion by hand.
 - **Target time:** 60 min for project, 20 min per theory.

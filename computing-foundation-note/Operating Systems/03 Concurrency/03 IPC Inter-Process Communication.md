@@ -5,7 +5,7 @@ tags:
 - programming
 ---
 
-# 03 IPC — Inter-Process Communication
+# 03 IPC: Inter-Process Communication
 
 Processes are isolated by design. IPC is how they talk to each other. Understanding the options helps you choose the right communication pattern.
 
@@ -32,7 +32,7 @@ Processes are isolated by design. IPC is how they talk to each other. Understand
 # Anonymous pipe (shell)
 ps aux | grep java | wc -l
 
-# Named pipe (FIFO) — any processes
+# Named pipe (FIFO) - any processes
 mkfifo /tmp/myfifo
 # Process A writes
 echo "hello" > /tmp/myfifo
@@ -47,7 +47,7 @@ cat /tmp/myfifo
 > Multiple processes map the same physical memory. NO copying. Fastest IPC.
 
 ```java
-// Java — MappedByteBuffer shared between processes
+// Java - MappedByteBuffer shared between processes
 RandomAccessFile file = new RandomAccessFile("/tmp/shared.dat", "rw");
 FileChannel channel = file.getChannel();
 MappedByteBuffer buffer = channel.map(
@@ -64,7 +64,7 @@ int value = buffer.getInt(0);  // 42
 
 ---
 
-## Sockets — Network IPC
+## Sockets: Network IPC
 
 > The universal IPC. Works across machines. Foundation of microservices.
 
@@ -75,14 +75,14 @@ Socket client = server.accept();
 BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
 String message = in.readLine();
 
-// Unix Domain Socket — faster than TCP for local IPC
+// Unix Domain Socket - faster than TCP for local IPC
 // Path: /tmp/app.sock
 // Same API as TCP but never leaves the machine. No TCP overhead.
 ```
 
 ---
 
-## Message Queues — POSIX & System V
+## Message Queues: POSIX & System V
 
 > Messages placed in a queue. Receiver picks them up. Persistent across process restarts (depending on implementation).
 
@@ -92,11 +92,11 @@ String message = in.readLine();
 | Priorities | Message types |
 | `mq_open`, `mq_send`, `mq_receive` | `msgget`, `msgsnd`, `msgrcv` |
 
-> Modern alternative: Redis, RabbitMQ — application-level message queues. More features, slower.
+> Modern alternative: Redis, RabbitMQ; application-level message queues. More features, slower.
 
 ---
 
-## Signals — Simple IPC
+## Signals: Simple IPC
 
 > OS-level notifications. Limited data (signal number + optional value). Good for process lifecycle management.
 

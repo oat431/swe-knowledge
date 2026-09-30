@@ -18,15 +18,15 @@ Processor design determines **clock cycle time** and **CPI** (clock cycles per i
 ### Basic MIPS Subset
 
 The implementation covers:
-- **Memory-reference**: `lw`, `sw`
-- **Arithmetic-logical**: `add`, `sub`, `AND`, `OR`, `slt`
-- **Branch/Jump**: `beq`, `j`
+- **Memory-reference:** `lw`, `sw`
+- **Arithmetic-logical:** `add`, `sub`, `AND`, `OR`, `slt`
+- **Branch/Jump:** `beq`, `j`
 
 ### Universal Instruction Steps
 
 Every instruction follows these first two steps:
-1. **Fetch** — send PC to instruction memory, read the instruction
-2. **Decode** — read one or two register operands from register file
+1. **Fetch:** send PC to instruction memory, read the instruction
+2. **Decode:** read one or two register operands from register file
 
 After that, behavior diverges by instruction class:
 - **Memory** → ALU computes address → access data memory → write back
@@ -46,12 +46,12 @@ After that, behavior diverges by instruction class:
 
 ### Clocking Methodology
 
-- **Edge-triggered**: state elements update only on a clock edge
+- **Edge-triggered:** state elements update only on a clock edge
 - A combinational block reads from state elements (written in previous cycle) and writes to state elements (readable in next cycle)
 - **Clock cycle time** = propagation delay through combinational logic + setup/hold times
 - Register file can be **read and written in the same clock cycle** (write in first half, read in second half)
 
-> **Key principle**: no feedback within a single clock cycle in edge-triggered design.
+> **Key principle:** no feedback within a single clock cycle in edge-triggered design.
 
 ---
 
@@ -65,9 +65,9 @@ PC → Instruction Memory → Instruction
   +4 → Adder → next PC
 ```
 
-- **Program Counter (PC)**: 32-bit register, updated every clock cycle
-- **Instruction memory**: read-only, treated as combinational logic
-- **Adder**: computes PC + 4
+- **Program Counter (PC):** 32-bit register, updated every clock cycle
+- **Instruction memory:** read-only, treated as combinational logic
+- **Adder:** computes PC + 4
 
 ### R-Type Instruction Datapath
 
@@ -76,7 +76,7 @@ Register File (2 read ports, 1 write port)
   ↓ rs, rt → ALU → result → Write back to rd
 ```
 
-- **Register file**: 32 registers, 2 read ports + 1 write port
+- **Register file:** 32 registers, 2 read ports + 1 write port
 - Read outputs are always valid; write controlled by `RegWrite` signal
 - Register numbers are 5 bits (2⁵ = 32)
 
@@ -88,8 +88,8 @@ Register[base] + Sign-Extend(offset) → ALU → Address → Data Memory
                                                     Write to register
 ```
 
-- **Sign-extend**: 16-bit immediate → 32-bit signed value
-- **Data memory**: separate from instruction memory, has read/write controls
+- **Sign-extend:** 16-bit immediate → 32-bit signed value
+- **Data memory:** separate from instruction memory, has read/write controls
 
 ### Branch Datapath
 
@@ -99,7 +99,7 @@ Register[rs] - Register[rt] → ALU Zero flag → Branch decision
 ```
 
 - Branch target = PC+4 + (sign-extended offset × 4)
-- ALU performs subtraction; Zero output indicates equality
+- ALU performs subtraction; zero output indicates equality
 
 ### Complete Single-Cycle Datapath
 
@@ -204,7 +204,7 @@ Three types of hazards prevent the next instruction from executing on the next c
 
 Hardware cannot support the combination of instructions in the same cycle.
 
-- **Solution**: duplicate resources (separate instruction and data memories)
+- **Solution:** duplicate resources (separate instruction and data memories)
 
 #### 2. Data Hazards
 
@@ -215,16 +215,16 @@ add $s0, $t0, $t1    # produces $s0
 sub $t2, $s0, $t3    # needs $s0 → HAZARD
 ```
 
-- **Forwarding (bypassing)**: route result from pipeline register directly to ALU input
-- **Load-use hazard**: forwarding alone insufficient; need 1-cycle stall
+- **Forwarding (bypassing):** route result from pipeline register directly to ALU input
+- **Load-use hazard:** forwarding alone insufficient; need 1-cycle stall
 
 #### 3. Control Hazards
 
 Branch decision not yet made when next instruction must be fetched.
 
-- **Stall**: wait until branch resolved (too slow)
-- **Predict not taken**: continue fetching sequentially; flush if wrong
-- **Dynamic prediction**: use history to predict branch outcomes
+- **Stall:** wait until branch resolved (too slow)
+- **Predict not taken:** continue fetching sequentially; flush if wrong
+- **Dynamic prediction:** use history to predict branch outcomes
 
 ### MIPS Design for Pipelining
 
@@ -384,9 +384,9 @@ Taken → Strongly Taken ← Taken
 ```
 
 #### Advanced Predictors
-- **Correlating predictors**: use global branch history + local history
-- **Tournament predictors**: multiple predictors with selector tracking which is more accurate
-- **Branch Target Buffer (BTB)**: caches destination PC for branches
+- **Correlating predictors:** use global branch history + local history
+- **Tournament predictors:** multiple predictors with selector tracking which is more accurate
+- **Branch Target Buffer (BTB):** caches destination PC for branches
 
 ### Delayed Branch
 
@@ -448,7 +448,7 @@ Parallelism among instructions that can be exploited.
 ### Static Multiple Issue (VLIW)
 
 - Compiler determines which instructions issue together
-- **Issue packet**: set of instructions issued in one cycle
+- **Issue packet:** set of instructions issued in one cycle
 - Compiler handles hazard avoidance via scheduling
 - Requires extra hardware: more register ports, multiple ALUs
 
@@ -473,11 +473,11 @@ Three major units:
 3. **Commit unit** with **reorder buffer** (in-order commit)
 
 Key concepts:
-- **Reservation stations**: buffer operands until ready
-- **Reorder buffer**: holds results until safe to commit
-- **Register renaming**: eliminate anti-dependences
-- **Out-of-order execution**: execute when data ready, not in program order
-- **In-order commit**: retire results in program order for precise exceptions
+- **Reservation stations:** buffer operands until ready
+- **Reorder buffer:** holds results until safe to commit
+- **Register renaming:** eliminate anti-dependences
+- **Out-of-order execution:** execute when data ready, not in program order
+- **In-order commit:** retire results in program order for precise exceptions
 
 ### Loop Unrolling
 
@@ -495,7 +495,7 @@ Key concepts:
 - 12-stage integer pipeline, 17-stage FP pipeline
 - Sustains **3 RISC operations per clock cycle**
 - Out-of-order execution with speculative pipeline
-- **Register renaming**: 16 architectural → 72 physical registers
+- **Register renaming:** 16 architectural → 72 physical registers
 - Extensive bypass network among functional units
 
 ### Pipeline Stages
@@ -515,13 +515,13 @@ Key concepts:
 
 ### Fallacies
 
-- **"Pipelining is easy"** — subtle bugs common; thousands of lines of Verilog
-- **"Pipelining ideas are technology-independent"** — delayed branch obsolete with deep pipelines; dynamic scheduling became practical with more transistors
+- **"Pipelining is easy":** subtle bugs common; thousands of lines of Verilog
+- **"Pipelining ideas are technology-independent":** delayed branch obsolete with deep pipelines; dynamic scheduling became practical with more transistors
 
 ### Pitfalls
 
-- **ISA design impacts pipelining** — variable instruction lengths, complex addressing modes, register-updating modes all complicate pipeline design
-- **Failure to consider instruction set design** — DEC VAX required 2.7× more clock cycles than MIPS for same benchmarks
+- **ISA design impacts pipelining:** variable instruction lengths, complex addressing modes, register-updating modes all complicate pipeline design
+- **Failure to consider instruction set design:** DEC VAX required 2.7× more clock cycles than MIPS for same benchmarks
 
 ---
 
@@ -544,8 +544,8 @@ Key concepts:
 
 ## Related
 
-- [[Computer Organization Overview]] — All computer organization topics
-- [[02_Instruction_Set_Architecture]] — Instructions the processor executes
-- [[03_Computer_Arithmetic]] — Arithmetic operations in the ALU
-- [[05_Memory_Hierarchy]] — Memory access and cache interactions
-- [[07_Parallel_Computing]] — Pipelining and ILP parallelism
+- [[Computer Organization Overview]]: All computer organization topics
+- [[02_Instruction_Set_Architecture]]: Instructions the processor executes
+- [[03_Computer_Arithmetic]]: Arithmetic operations in the ALU
+- [[05_Memory_Hierarchy]]: Memory access and cache interactions
+- [[07_Parallel_Computing]]: Pipelining and ILP parallelism

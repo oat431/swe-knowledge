@@ -24,10 +24,10 @@ Variables are named containers for data; data types define what kind of data a v
 | `char` | 16 bits | 0 to 65,535 (Unicode) | `'\u0000'` |
 | `boolean` | ~1 bit (JVM-dependent) | `true` / `false` | `false` |
 
-TypeScript and Python handle primitives differently — TypeScript's `number` covers both `int` and `float`; Python's `int` has arbitrary precision.
+TypeScript and Python handle primitives differently: TypeScript's `number` covers both `int` and `float`; Python's `int` has arbitrary precision.
 
 ```java
-// Java — explicit types
+// Java - explicit types
 int count = 42;
 double price = 19.99;
 boolean active = true;
@@ -35,7 +35,7 @@ char grade = 'A';
 ```
 
 ```typescript
-// TypeScript — type annotations
+// TypeScript - type annotations
 let count: number = 42;
 let price: number = 19.99;
 let active: boolean = true;
@@ -43,7 +43,7 @@ let grade: string = "A";
 ```
 
 ```python
-# Python — dynamic typing (types are inferred)
+# Python - dynamic typing (types are inferred)
 count = 42          # int
 price = 19.99       # float
 active = True       # bool
@@ -63,7 +63,7 @@ grade = "A"         # str
 | **Examples (TS)** | `number`, `string`, `boolean`, `bigint` | Objects, arrays, functions |
 
 ```java
-// Java — value vs reference behaviour
+// Java - value vs reference behaviour
 int a = 5;
 int b = a;       // b gets a COPY of 5
 b = 10;          // a is still 5
@@ -74,21 +74,21 @@ arr2[0] = 99;       // arr1[0] is now 99 too!
 ```
 
 ```typescript
-// TypeScript — same concept
+// TypeScript - same concept
 let a = 5;
 let b = a;
 b = 10;         // a is still 5
 
 let arr1 = [1, 2, 3];
 let arr2 = arr1;
-arr2[0] = 99;   // arr1[0] is now 99 — same reference
+arr2[0] = 99;   // arr1[0] is now 99 - same reference
 ```
 
 ---
 
 ## Type Coercion
 
-### Implicit Widening (safe — no data loss)
+### Implicit Widening (safe: no data loss)
 
 ```java
 int i = 42;
@@ -100,16 +100,16 @@ long l = i;      // int → long (automatic, safe)
 
 ```java
 double d = 9.78;
-int i = (int) d;  // 9 — truncates decimal part
+int i = (int) d;  // 9 - truncates decimal part
 
 long big = 300;
-byte b = (byte) big;  // 44 — overflow! 300 % 256 = 44
+byte b = (byte) big;  // 44 - overflow! 300 % 256 = 44
 ```
 
 ```typescript
 // TypeScript / JavaScript
 let x: number = 9.78;
-let y: number = Math.floor(x);  // 9 — explicit truncation
+let y: number = Math.floor(x);  // 9 - explicit truncation
 let z: number = parseInt("42");  // string → number
 ```
 
@@ -151,7 +151,7 @@ let z: number = parseInt("42");  // string → number
 | **Class scope** | Fields accessible via instances or class | Instance fields, static fields |
 
 ```java
-// Java — block scope
+// Java - block scope
 for (int i = 0; i < 10; i++) {
     int temp = i * 2;  // temp is block-scoped
 }
@@ -159,12 +159,12 @@ for (int i = 0; i < 10; i++) {
 ```
 
 ```typescript
-// TypeScript — let vs var
+// TypeScript - let vs var
 for (let i = 0; i < 10; i++) { }
-// console.log(i);  // ReferenceError — let is block-scoped
+// console.log(i);  // ReferenceError - let is block-scoped
 
 for (var j = 0; j < 10; j++) { }
-console.log(j);  // 10 — var leaks out of the loop (function-scoped)
+console.log(j);  // 10 - var leaks out of the loop (function-scoped)
 ```
 
 ---
@@ -175,17 +175,17 @@ console.log(j);  // 10 — var leaks out of the loop (function-scoped)
 
 ```java
 int max = Integer.MAX_VALUE;  // 2,147,483,647
-int overflow = max + 1;        // -2,147,483,648 — wraps around silently!
+int overflow = max + 1;        // -2,147,483,648 - wraps around silently!
 ```
 
 ### Floating-Point Precision
 
 ```java
-System.out.println(0.1 + 0.2);  // 0.30000000000000004 — not 0.3!
+System.out.println(0.1 + 0.2);  // 0.30000000000000004 - not 0.3!
 ```
 
 ```python
-# Python — use Decimal for precision-critical math
+# Python - use Decimal for precision-critical math
 from decimal import Decimal
 result = Decimal("0.1") + Decimal("0.2")  # Decimal('0.3')
 ```
@@ -206,7 +206,7 @@ if (name != null) {
 
 ## Sources
 
-- *Effective Java* (3rd ed.) — Joshua Bloch, Items 19-21
-- Oracle Java Language Specification — Primitive Types
-- TypeScript Handbook — Everyday Types (typescriptlang.org)
-- Python Docs — Built-in Types (docs.python.org)
+- *Effective Java* (3rd ed.): Joshua Bloch, Items 19-21
+- Oracle Java Language Specification: Primitive Types
+- TypeScript Handbook: Everyday Types (typescriptlang.org)
+- Python Docs: Built-in Types (docs.python.org)

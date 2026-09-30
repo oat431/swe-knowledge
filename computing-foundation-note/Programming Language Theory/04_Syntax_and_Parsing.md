@@ -10,7 +10,7 @@ source: "PLT Ch 11-13"
 
 # Syntax and Parsing
 
-> **Source**: Programming Language Theory, Chapters 11–13 — Concrete Syntax, Abstract Syntax & Parsing, Syntax Exercise.
+> **Source:** Programming Language Theory, Chapters 11–13: Concrete Syntax, Abstract Syntax & Parsing, Syntax Exercise.
 
 ---
 
@@ -23,8 +23,8 @@ The **syntax** of a language defines the *form* of programs (which strings are v
 | **Concrete syntax** | How programs are written as strings; readability & writability | Language users |
 | **Abstract syntax** | Representation of programs as trees; used internally by implementations | Language implementers |
 
-- Concrete syntax is the **user interface** — design focuses on readability, tradition (e.g., `{ … }` for blocks).
-- Abstract syntax makes the **tree structure explicit** — each node is a constructor, children are sub-expressions.
+- Concrete syntax is the **user interface:** design focuses on readability, tradition (e.g., `{ … }` for blocks).
+- Abstract syntax makes the **tree structure explicit:** each node is a constructor, children are sub-expressions.
 - A **parser** converts concrete syntax (strings) → abstract syntax (trees), resolving ambiguity along the way.
 
 ---
@@ -33,9 +33,9 @@ The **syntax** of a language defines the *form* of programs (which strings are v
 
 A **context-free grammar** defines a language inductively using:
 
-- **Terminals** — the alphabet Σ; basic building blocks (tokens)
-- **Non-terminals** (𝒩) — defined via productions; represent syntactic categories
-- **Productions** — rules of the form `N ::= α` where N ∈ 𝒩 and α ∈ (Σ ∪ 𝒩)*
+- **Terminals:** the alphabet Σ; basic building blocks (tokens)
+- **Non-terminals** (𝒩): defined via productions; represent syntactic categories
+- **Productions:** rules of the form `N ::= α` where N ∈ 𝒩 and α ∈ (Σ ∪ 𝒩)*
 
 > Notation: `::=` is sometimes written as `→`. The empty sequence is written ε.
 
@@ -63,7 +63,7 @@ A string is in the language iff we can **derive** it from the start symbol. A on
 
 A **leftmost derivation** always expands the leftmost non-terminal. A **rightmost derivation** expands the rightmost.
 
-**Example** — deriving `012`:
+**Example:** deriving `012`:
 
 ```
 i ⟹ n ⟹ dn ⟹ 0n ⟹ 0dn ⟹ 01n ⟹ 01d ⟹ 012
@@ -93,24 +93,24 @@ A grammar is **ambiguous** when some sentence has **more than one parse tree** (
 
 ### 3.1 Associativity
 
-**Problem**: `100 / 10 / 5` — is it `(100/10)/5 = 2` or `100/(10/5) = 50`?
+**Problem:** `100 / 10 / 5`; is it `(100/10)/5 = 2` or `100/(10/5) = 50`?
 
 Ambiguous grammar: `e ::= n | e / e`
 
-**Fix** — rewrite with left or right recursion:
+**Fix:** rewrite with left or right recursion:
 
 | | Ambiguous | Left-Recursive (left-associative) | Right-Recursive (right-associative) |
 |---|---|---|---|
 | Grammar | `e ::= n \| e / e` | `e ::= n \| e / n` | `e ::= n \| n / e` |
 
-- **Left-associative**: parse tree linearizes left → `(100/10)/5`
-- **Right-associative**: parse tree linearizes right → `100/(10/5)`
+- **Left-associative:** parse tree linearizes left → `(100/10)/5`
+- **Right-associative:** parse tree linearizes right → `100/(10/5)`
 
 ### 3.2 Precedence
 
-**Problem**: `10 - 10 / 10` — does `-` or `/` bind tighter?
+**Problem:** `10 - 10 / 10`, does `-` or `/` bind tighter?
 
-**Fix** — layer the grammar with multiple non-terminals:
+**Fix:** layer the grammar with multiple non-terminals:
 
 ```
 expressions  e ::= f | e - f        (- has lower precedence)
@@ -120,7 +120,7 @@ factors      f ::= n | f / n        (/ has higher precedence, left-associative)
 - Higher precedence = "binds tighter" = **lower** in the parse tree.
 - Lower precedence = "binds looser" = **higher** in the parse tree.
 
-> **Key insight**: Ambiguity is a *syntactic* concern (which tree?), distinct from *semantics* (what do operators mean?). But knowing semantics can help probe precedence in an unknown language.
+> **Key insight:** Ambiguity is a *syntactic* concern (which tree?), distinct from *semantics* (what do operators mean?). But knowing semantics can help probe precedence in an unknown language.
 
 ---
 
@@ -133,7 +133,7 @@ Abstract syntax makes tree structure **explicit** using constructors. Each produ
 e ::= n | e / e | e - e
 ```
 
-**Abstract syntax** (unambiguous — parentheses enforce grouping):
+**Abstract syntax** (unambiguous, parentheses enforce grouping):
 ```scala
 sealed trait Expr
 case class N(n: Int) extends Expr
@@ -159,7 +159,7 @@ Each case class instance is a **node** in an n-ary tree; each non-typed argument
 **Combinator parsers** use higher-order functions to build parsers from smaller parsers.
 
 Key characteristics:
-- Implements **recursive-descent parsing** — automates top-down leftmost derivation, trying productions left-to-right.
+- Implements **recursive-descent parsing:** automates top-down leftmost derivation, trying productions left-to-right.
 - Works best when the grammar is:
   1. **Unambiguous** (deterministic top-down derivation)
   2. **No left recursion** (each step consumes some prefix of input)
@@ -185,9 +185,9 @@ expressions e ::= t + t
 
 This is more restrictive (programmers must write more parentheses) but parses correctly with recursive descent.
 
-> **S-expressions**: commonly used in Lisp/Scheme/Racket; easy to parse because structure is explicit via parentheses.
+> **S-expressions:** commonly used in Lisp/Scheme/Racket; easy to parse because structure is explicit via parentheses.
 
-### 5.4 Scala Parser Combinators — Implementation
+### 5.4 Scala Parser Combinators: Implementation
 
 ```scala
 import scala.util.parsing.combinator.RegexParsers
@@ -212,14 +212,14 @@ object ExprParser extends RegexParsers {
 }
 ```
 
-**Key library methods**:
-- `|` — separates alternative productions
-- `~` — sequences symbols on the RHS of a production
-- `^^` — attaches a **semantic action** (converts parse result to AST node)
+**Key library methods:**
+- `|`: separates alternative productions
+- `~`: sequences symbols on the RHS of a production
+- `^^`: attaches a **semantic action** (converts parse result to AST node)
 
-**Parser[A]**: `A` is the result type. `Parser[Expr]` returns an AST; `Parser[String]` returns a matched string.
+**Parser[A]:** `A` is the result type. `Parser[Expr]` returns an AST; `Parser[String]` returns a matched string.
 
-**Either[String, A]**: `Left` = error message, `Right` = successful parse result.
+**Either[String, A]:** `Left` = error message, `Right` = successful parse result.
 
 ### 5.5 Regular Expressions for Terminals
 
@@ -233,7 +233,7 @@ Matches: `1`, `-1`, `.1`, `2e2`, `2e-10`, `2E10`, etc.
 
 ---
 
-## 6. AST Exercises — Boolean Expressions
+## 6. AST Exercises: Boolean Expressions
 
 Given grammar for Boolean expressions:
 
@@ -242,7 +242,7 @@ Boolean expressions  e ::= x | ¬e | e ∧ e | e ∨ e
 variables            x
 ```
 
-**Defining the inductive data type** — each production becomes a case class extending a sealed trait `Expr`, with constructors corresponding to each syntactic form.
+**Defining the inductive data type:** each production becomes a case class extending a sealed trait `Expr`, with constructors corresponding to each syntactic form.
 
 ---
 
@@ -253,7 +253,7 @@ variables            x
 | Concrete syntax | Human-readable string representation; specified by CFGs |
 | Abstract syntax | Machine-friendly tree representation; case classes / ASTs |
 | Context-free grammar | `N ::= α₁ | … | αₙ`; terminals, non-terminals, productions |
-| Derivation | `S ⟹* s` — sequence of production applications from start symbol |
+| Derivation | `S ⟹* s` ;  sequence of production applications from start symbol |
 | Parse tree | Bottom-up witness of string membership; captures syntactic structure |
 | Ambiguity | Multiple parse trees for one string; resolved by rewriting grammar |
 | Associativity | Left/right recursion in grammar enforces left/right grouping |
@@ -266,6 +266,6 @@ variables            x
 
 ## Related
 
-- [[Programming Language Theory Overview]] — All PLT topics
-- [[05_Type_Systems_and_Judgments]] — Static analysis after parsing
-- [[06_Operational_Semantics]] — Semantic interpretation of ASTs
+- [[Programming Language Theory Overview]]: All PLT topics
+- [[05_Type_Systems_and_Judgments]]: Static analysis after parsing
+- [[06_Operational_Semantics]]: Semantic interpretation of ASTs

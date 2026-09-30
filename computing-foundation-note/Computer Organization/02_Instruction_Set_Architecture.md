@@ -17,7 +17,7 @@ tags:
 
 ## 2.1 Introduction
 
-The **instruction set** is the vocabulary of commands understood by a given architecture. Computer languages are quite similar across architectures — more like regional dialects than independent languages — because all computers are built from similar underlying hardware technologies and must provide the same basic operations.
+The **instruction set** is the vocabulary of commands understood by a given architecture. Computer languages are quite similar across architectures (more like regional dialects than independent languages) because all computers are built from similar underlying hardware technologies and must provide the same basic operations.
 
 ### Stored-Program Concept
 
@@ -87,9 +87,9 @@ sub $s0, $t0, $t1    # f = t0 - t1
 
 ### Byte Addressing & Alignment
 
-- MIPS uses **byte addressing** — each byte has a unique address.
+- MIPS uses **byte addressing:** each byte has a unique address.
 - Words must start at addresses that are multiples of 4 (**alignment restriction**).
-- MIPS is **big-endian**: the leftmost byte is the word address.
+- MIPS is **big-endian:** the leftmost byte is the word address.
 - For array element `A[i]`, the byte offset is `4 × i`.
 
 ### Immediate (Constant) Operands
@@ -101,7 +101,7 @@ sub $s0, $t0, $t1    # f = t0 - t1
 
 ### Number Representation
 
-- **Binary (base 2)**: bits are numbered 0 (rightmost/LSB) to 31 (leftmost/MSB).
+- **Binary (base 2):** bits are numbered 0 (rightmost/LSB) to 31 (leftmost/MSB).
 - A 32-bit word can represent 2³² different values.
 
 ### Two's Complement Representation
@@ -185,9 +185,9 @@ All MIPS instructions are **32 bits** long.
 |-------------|--------|----|----|----|-----|-------|-------|
 | `add` | R | 0 | reg | reg | reg | 0 | 32 |
 | `sub` | R | 0 | reg | reg | reg | 0 | 34 |
-| `addi` | I | 8 | reg | reg | — | — | constant |
-| `lw` | I | 35 | reg | reg | — | — | address |
-| `sw` | I | 43 | reg | reg | — | — | address |
+| `addi` | I | 8 | reg | reg | N/A | N/A | constant |
+| `lw` | I | 35 | reg | reg | N/A | N/A | address |
+| `sw` | I | 43 | reg | reg | N/A | N/A | address |
 
 ### Hexadecimal Conversion
 
@@ -293,8 +293,8 @@ A **basic block** is a sequence of instructions without branches (except possibl
 - **Stack** – last-in-first-out data structure for spilling registers.
 - Stack pointer (`$sp`) points to the most recently allocated address.
 - Stacks **grow from high to low addresses** in MIPS.
-- **Push**: subtract from `$sp`, then `sw`.
-- **Pop**: `lw`, then add to `$sp`.
+- **Push:** subtract from `$sp`, then `sw`.
+- **Pop:** `lw`, then add to `$sp`.
 
 ### Leaf vs Non-Leaf Procedures
 
@@ -323,8 +323,8 @@ Low address   0x00000000  Reserved
 
 - 8-bit character encoding; nearly universal for English text.
 - Load/store byte instructions (`lb`, `lbu`, `sb`) handle character data.
-- **Strings in C**: terminated by null byte (0); variable length.
-- **Strings in Java**: include length field; use Unicode (16-bit characters).
+- **Strings in C:** terminated by null byte (0); variable length.
+- **Strings in Java:** include length field; use Unicode (16-bit characters).
 
 ### Load/Store for Characters
 
@@ -456,7 +456,7 @@ Produces an **executable file** with no unresolved references.
 ### Dynamically Linked Libraries (DLLs)
 
 - Linked at runtime, not at build time.
-- **Lazy procedure linkage**: each library routine is linked only on first call.
+- **Lazy procedure linkage:** each library routine is linked only on first call.
 - Saves memory (don't load unused routines) and allows library updates without recompilation.
 
 ### Java Translation
@@ -510,7 +510,7 @@ Native machine code
 |--------|-----------------|-------------------|
 | Address calculation | Inside loop (recompute each iteration) | Outside loop (increment pointer) |
 | Instructions per iteration | 6 | 4 (optimized) |
-| Key optimization | — | **Strength reduction** + **induction variable elimination** |
+| Key optimization | N/A | **Strength reduction** + **induction variable elimination** |
 
 - Modern optimizing compilers produce equivalent code for both styles.
 - Pointer arithmetic accounts for the size of the pointed-to object.
@@ -531,14 +531,14 @@ Native machine code
 | Shift as part of data ops | Yes | No (separate shift instructions) |
 | Block load/store | Yes (16-bit mask) | No |
 | Multiply | `mul` | `mult`/`multu` |
-| Divide | — | `div`/`divu` |
+| Divide | N/A | `div`/`divu` |
 
 ### ARM Unique Features
 
 - **Every instruction is conditional** (4-bit condition code prefix).
-- **Barrel shifter**: second register operand can be shifted before operation.
+- **Barrel shifter:** second register operand can be shifted before operation.
 - **Block load/store** (`LDM`/`STM`): save/restore multiple registers in one instruction.
-- **12-bit rotated immediate**: 8-bit value rotated right by 2×top4 bits; captures all powers of 2.
+- **12-bit rotated immediate:** 8-bit value rotated right by 2×top4 bits; captures all powers of 2.
 
 ### ARM Condition Codes
 
@@ -599,8 +599,8 @@ Native machine code
 
 ### x86 Strengths and Weaknesses
 
-- **Weakness**: Complex encoding, variable-length instructions, limited registers, two-operand format.
-- **Strength**: Backward compatibility; most frequently used components are not hard to implement fast; massive software ecosystem.
+- **Weakness:** Complex encoding, variable-length instructions, limited registers, two-operand format.
+- **Strength:** Backward compatibility; most frequently used components are not hard to implement fast; massive software ecosystem.
 
 ## 2.18 Fallacies and Pitfalls
 
@@ -653,11 +653,11 @@ Native machine code
 
 ### The Big Picture
 
-> **Execution time** is the only valid and unimpeachable measure of performance. The stored-program concept — instructions as numbers, programs in memory — is the foundation of all modern computing.
+> **Execution time** is the only valid and unimpeachable measure of performance. The stored-program concept (instructions as numbers, programs in memory) is the foundation of all modern computing.
 
 ## Related
 
-- [[01_Computer_Abstractions]] — Previous chapter on abstractions and performance
-- [[03_Computer_Arithmetic]] — Next chapter on integer and floating-point arithmetic
-- [[Computer Organization Overview]] — Full chapter index
-- [[Computing Foundation Overview]] — All computing foundation topics
+- [[01_Computer_Abstractions]]: Previous chapter on abstractions and performance
+- [[03_Computer_Arithmetic]]: Next chapter on integer and floating-point arithmetic
+- [[Computer Organization Overview]]: Full chapter index
+- [[Computing Foundation Overview]]: All computing foundation topics

@@ -7,7 +7,7 @@ tags:
 
 # 01 Deque
 
-A Deque (Double-Ended Queue) supports insertion and deletion at both ends in O(1). It's the Swiss Army knife of linear data structures — use it as a stack, a queue, or a sliding window engine.
+A Deque (Double-Ended Queue) supports insertion and deletion at both ends in O(1). It's the Swiss Army knife of linear data structures; use it as a stack, a queue, or a sliding window engine.
 
 ---
 
@@ -21,10 +21,10 @@ Java offers two `Deque` implementations. **Always prefer `ArrayDeque`** unless y
 | `LinkedList` | Doubly-linked list | O(1) | Node overhead per element | ❌ Pointer chasing |
 
 ```java
-// ✅ Good — use ArrayDeque
+// ✅ Good - use ArrayDeque
 Deque<Integer> deque = new ArrayDeque<>();
 
-// ❌ Bad — LinkedList is slower for deque operations
+// ❌ Bad - LinkedList is slower for deque operations
 Deque<Integer> deque = new LinkedList<>();
 ```
 
@@ -36,12 +36,12 @@ All core operations are **O(1)**.
 
 | Operation | Stack Name | Queue Name | Description |
 |-----------|------------|------------|-------------|
-| `addFirst(e)` | `push(e)` | — | Insert at front |
-| `addLast(e)` | — | `offer(e)` | Insert at back |
+| `addFirst(e)` | `push(e)` | N/A | Insert at front |
+| `addLast(e)` | N/A | `offer(e)` | Insert at back |
 | `removeFirst()` | `pop()` | `poll()` | Remove from front |
-| `removeLast()` | — | — | Remove from back |
+| `removeLast()` | N/A | N/A | Remove from back |
 | `peekFirst()` | `peek()` | `peek()` | View front |
-| `peekLast()` | — | — | View back |
+| `peekLast()` | N/A | N/A | View back |
 
 ```java
 Deque<Integer> dq = new ArrayDeque<>();
@@ -60,13 +60,13 @@ dq.peekLast();     // 1
 `ArrayDeque` is **faster than `Stack`** (which is synchronized and legacy). This is the recommended way to use a stack in Java.
 
 ```java
-// ✅ Good — ArrayDeque as stack
+// ✅ Good - ArrayDeque as stack
 Deque<Integer> stack = new ArrayDeque<>();
 stack.push(10);
 stack.push(20);
 int top = stack.pop();  // 20
 
-// ❌ Bad — legacy Stack class with synchronized overhead
+// ❌ Bad - legacy Stack class with synchronized overhead
 Stack<Integer> stack = new Stack<>();
 stack.push(10);
 ```
@@ -84,13 +84,13 @@ stack.push(10);
 Use `addLast` / `removeFirst` to simulate FIFO. **`ArrayDeque` is faster than `LinkedList`** for queue operations.
 
 ```java
-// ✅ Good — ArrayDeque as queue
+// ✅ Good - ArrayDeque as queue
 Deque<String> queue = new ArrayDeque<>();
 queue.addLast("A");
 queue.addLast("B");
 String first = queue.removeFirst();  // "A"
 
-// ❌ Bad — LinkedList has pointer overhead
+// ❌ Bad - LinkedList has pointer overhead
 Queue<String> queue = new LinkedList<>();
 queue.offer("A");
 ```
@@ -107,7 +107,7 @@ This is the **killer use case** for deques. A monotonic deque maintains elements
 3. The front of the deque is always the maximum in the current window
 
 ```java
-// Sliding Window Maximum — O(n) time, O(k) space
+// Sliding Window Maximum - O(n) time, O(k) space
 int[] maxSlidingWindow(int[] nums, int k) {
     if (nums == null || k <= 0) return new int[0];
     
@@ -128,7 +128,7 @@ int[] maxSlidingWindow(int[] nums, int k) {
         
         deque.offerLast(i);
         
-        // Window is full — record the max (front of deque)
+        // Window is full - record the max (front of deque)
         if (i >= k - 1) {
             result[i - k + 1] = nums[deque.peekFirst()];
         }
@@ -137,12 +137,12 @@ int[] maxSlidingWindow(int[] nums, int k) {
 }
 ```
 
-**Walkthrough** — `nums = [1, 3, -1, -3, 5, 3, 6, 7]`, `k = 3`:
+**Walkthrough:** `nums = [1, 3, -1, -3, 5, 3, 6, 7]`, `k = 3`:
 
 | i | nums[i] | Deque (indices) | Deque (values) | Window | Max |
 |---|---------|-----------------|----------------|--------|-----|
-| 0 | 1 | [0] | [1] | — | — |
-| 1 | 3 | [1] | [3] | — | — |
+| 0 | 1 | [0] | [1] | N/A | N/A |
+| 1 | 3 | [1] | [3] | N/A | N/A |
 | 2 | -1 | [1, 2] | [3, -1] | [1,3,-1] | 3 |
 | 3 | -3 | [1, 2, 3] | [3, -1, -3] | [3,-1,-3] | 3 |
 | 4 | 5 | [4] | [5] | [-1,-3,5] | 5 |
@@ -158,8 +158,8 @@ int[] maxSlidingWindow(int[] nums, int k) {
 
 | Need | Use |
 |------|-----|
-| Stack (LIFO) | `ArrayDeque` — push/pop at one end |
-| Queue (FIFO) | `ArrayDeque` — addLast/removeFirst |
+| Stack (LIFO) | `ArrayDeque` ;  push/pop at one end |
+| Queue (FIFO) | `ArrayDeque` ;  addLast/removeFirst |
 | Max/min in sliding window | Monotonic deque |
 | Palindrome check | Two-ended comparison |
 | Work stealing (concurrency) | `ConcurrentLinkedDeque` |
@@ -181,16 +181,16 @@ int[] maxSlidingWindow(int[] nums, int k) {
 
 ## Sources
 
-- CLRS — Chapter 10.1
-- Oracle Java Docs — `Deque` interface
-- LeetCode 239 — Sliding Window Maximum
+- CLRS: Chapter 10.1
+- Oracle Java Docs: `Deque` interface
+- LeetCode 239: Sliding Window Maximum
 
 
 ---
 
 ## Hands-On Exercises
 
-### Exercise 1: Deque as Stack — Valid Parentheses
+### Exercise 1: Deque as Stack: Valid Parentheses
 Use an `ArrayDeque` as a stack to check if a string of parentheses `()[]{}` is valid.
 
 ```java
@@ -207,7 +207,7 @@ boolean isValid(String s) {
 
 ---
 
-### Exercise 2: Monotonic Deque — Sliding Window Maximum
+### Exercise 2: Monotonic Deque: Sliding Window Maximum
 Implement the sliding window maximum from the note. Test with `nums = [1,3,-1,-3,5,3,6,7]`, `k = 3` → expect `[3,3,5,5,6,7]`.
 
 ```java
@@ -222,7 +222,7 @@ int[] maxSlidingWindow(int[] nums, int k) {
 
 ---
 
-### Exercise 3: Deque as Queue — BFS Level Order
+### Exercise 3: Deque as Queue: BFS Level Order
 Use an `ArrayDeque` as a queue to perform level-order traversal on a binary tree. Return a list of lists (one per level).
 
 ```java
@@ -247,6 +247,6 @@ List<List<Integer>> levelOrder(TreeNode root) {
 
 ### Assignment Guidelines
 - **Start** with problems 1–2 (Easy) to solidify deque-as-stack/queue usage.
-- **Then** tackle problem 3 (Sliding Window Maximum) — it's the core monotonic deque pattern from this note.
+- **Then** tackle problem 3 (Sliding Window Maximum): it's the core monotonic deque pattern from this note.
 - **Problems 4–6** build on the monotonic deque with variations.
 - **Target time:** 15 min per Easy, 30 min per Medium/Hard.

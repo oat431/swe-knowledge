@@ -8,7 +8,7 @@ tags:
 
 # Code Smells & Refactoring
 
-Code smells are surface-level indicators that something deeper is wrong with your design. They're not bugs — the code works. But they make maintenance painful. Refactoring is the disciplined process of improving code structure without changing behavior.
+Code smells are surface-level indicators that something deeper is wrong with your design. They're not bugs, the code works. But they make maintenance painful. Refactoring is the disciplined process of improving code structure without changing behavior.
 
 ---
 
@@ -26,7 +26,7 @@ Code smells are surface-level indicators that something deeper is wrong with you
 | 8 | **Divergent Change** | One class modified for many different reasons | Extract Class |
 | 9 | **Primitive Obsession** | Using primitives instead of small objects | Introduce Value Object |
 | 10 | **Switch Statements** | Long if/else or switch on type | Polymorphism / Strategy pattern |
-| 11 | **Speculative Generality** | Unused abstractions "for the future" | YAGNI — remove it |
+| 11 | **Speculative Generality** | Unused abstractions "for the future" | YAGNI ;  remove it |
 | 12 | **Dead Code** | Commented-out code, unreachable branches | Delete it (it's in git) |
 | 13 | **Temporary Field** | Fields only used in certain contexts | Extract to a new class |
 | 14 | **Message Chains** | `a.getB().getC().getD().doSomething()` | Hide Delegate, Law of Demeter |
@@ -91,7 +91,7 @@ function persistOrder(order: Order): void {
 
 ### Inline Method
 
-The reverse — when a method's body is as clear as its name, just inline it.
+The reverse, when a method's body is as clear as its name, just inline it.
 
 ```java
 // ❌ Unnecessary indirection
@@ -108,7 +108,7 @@ double bonus = rating * 0.05;
 If a method uses data from another class more than its own, it belongs there.
 
 ```java
-// ❌ Feature envy — Account uses mostly Bank data
+// ❌ Feature envy - Account uses mostly Bank data
 class Account {
     double overdraftCharge() {
         if (bank.isPremium(this)) return 0;
@@ -175,7 +175,7 @@ List<Entry> getEntriesBetween(DateRange dates, AgeRange ages);
 | **Bug fix reveals mess** | Refactor after fixing | Understand the code, then clean it |
 | **Red-green-refactor** | After tests pass | TDD cycle mandates refactoring |
 
-> ⚠️ **Never refactor without tests.** If the code doesn't have tests, write characterization tests first. Refactoring without tests is not refactoring — it's just changing things and hoping.
+> ⚠️ **Never refactor without tests.** If the code doesn't have tests, write characterization tests first. Refactoring without tests is not refactoring; it's just changing things and hoping.
 
 ---
 
@@ -185,23 +185,23 @@ List<Entry> getEntriesBetween(DateRange dates, AgeRange ages);
 - [ ] Refactoring is a separate commit from feature/fix work
 - [ ] Each step is small and verifiable
 - [ ] Run tests after every step
-- [ ] No behavior changes — only structure
+- [ ] No behavior changes: only structure
 - [ ] Commit message says "refactor: ..." not "fix: ..."
 
 ---
 
 ## Architectural Refactoring
 
-For larger-scale structural changes, see [[01 Decomposition Patterns]] — breaking monoliths, extracting services, and restructuring module boundaries.
+For larger-scale structural changes, see [[011 Decomposition Patterns|01 Decomposition Patterns]]: breaking monoliths, extracting services, and restructuring module boundaries.
 
 ---
 
 ## Book Deep Dive
 
 For the full code smells catalog with detailed examples and refactoring moves:
-- [[Code Smells Catalog]] — comprehensive smell list
-- [[Emergent Design]] — when design emerges from refactoring
+- [[Code Smells Catalog]]: comprehensive smell list
+- [[Emergent Design]]: when design emerges from refactoring
 
 ---
 
-**Sources:** Martin Fowler, *Refactoring* (2018); Robert C. Martin, *Clean Code*, Ch. 3, 17 (2008); refactoring.com/catalog
+**Sources:** Martin Fowler, *Refactoring* (2018); robert C. Martin, *Clean Code*, Ch. 3, 17 (2008); refactoring.com/catalog

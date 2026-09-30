@@ -5,9 +5,9 @@ tags:
 - programming
 ---
 
-# 03 OS in Practice — Linux Tools for Developers
+# 03 OS in Practice: Linux Tools for Developers
 
-The tools every backend developer needs to diagnose OS-level problems. Not the theory — the practice.
+The tools every backend developer needs to diagnose OS-level problems. Not the theory, the practice.
 
 ---
 
@@ -18,7 +18,7 @@ The tools every backend developer needs to diagnose OS-level problems. Not the t
 top
 htop  # Prettier, interactive
 
-# Process tree — who spawned what
+# Process tree - who spawned what
 pstree -p
 
 # Detailed process info
@@ -43,7 +43,7 @@ vmstat 1
 
 # Per-process memory
 pmap <PID>       # Memory map
-smem -k          # PSS (Proportional Set Size) — shared memory divided fairly
+smem -k          # PSS (Proportional Set Size) - shared memory divided fairly
 
 # JVM-specific
 jcmd <PID> GC.heap_info
@@ -56,7 +56,7 @@ jmap -heap <PID>
 ## I/O Analysis
 
 ```bash
-# Disk I/O — per device
+# Disk I/O - per device
 iostat -x 1
 # %util > 80% = bottleneck. await > 10ms = slow.
 
@@ -129,10 +129,10 @@ ulimit -u 4096             # Increase max processes
 
 ```bash
 jps -l                     # List Java processes
-jstack <PID>               # Thread dump — what's each thread doing?
+jstack <PID>               # Thread dump - what's each thread doing?
 jcmd <PID> Thread.print    # Same, modern
 jstat -gc <PID> 1000       # GC stats every second
-jmap -histo <PID> | head   # Object histogram — what's eating memory?
+jmap -histo <PID> | head   # Object histogram - what's eating memory?
 ```
 
 ### Common Thread States in jstack
@@ -141,7 +141,7 @@ jmap -histo <PID> | head   # Object histogram — what's eating memory?
 |-------|---------|
 | **RUNNABLE** | Thread is running or ready to run |
 | **BLOCKED** | Waiting for a monitor lock |
-| **WAITING** | `Object.wait()` — waiting to be notified |
+| **WAITING** | `Object.wait()` ;  waiting to be notified |
 | **TIMED_WAITING** | `Thread.sleep()`, `Lock.tryLock(timeout)` |
 | **TERMINATED** | Thread finished |
 

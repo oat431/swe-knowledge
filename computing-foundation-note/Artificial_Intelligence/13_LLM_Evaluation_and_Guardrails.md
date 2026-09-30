@@ -11,25 +11,27 @@ source: Interview preparation
 created: 2026-08-31
 ---
 
-# 13 — LLM Evaluation & Guardrails
+# 13: LLM Evaluation & Guardrails
 
-> "How do you know your AI feature is working?" — **The question that separates shippers from tinkerers.**
+> "How do you know your AI feature is working?", **The question that separates shippers from tinkerers.**
 
 ---
 
 ## The Three-Layer Evaluation Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     DEV["Development"] --> OFFLINE["Offline Evaluation"]
     OFFLINE --> GUARD["Guardrails"]
     GUARD --> ONLINE["Online Evaluation"]
     ONLINE --> FEEDBACK["Feedback Loop → Improve Offline Suite"]
     
-    style OFFLINE fill:#4CAF50,color:#fff
-    style GUARD fill:#FF9800,color:#fff
-    style ONLINE fill:#2196F3,color:#fff
+    style OFFLINE fill:#1FB854,color:#000000
+    style GUARD fill:#FFBE00,color:#000000
+    style ONLINE fill:#00B5FF,color:#000000
 ```
+
 
 | Layer | When | What It Tests | Analogy |
 |---|---|---|---|
@@ -75,7 +77,7 @@ eval_suite/
 - Run on every PR (CI/CD integration)
 - Build from real user queries (not synthetic ones)
 - Include edge cases: injection attempts, empty queries, very long queries, Thai + English mix
-- Track eval scores over time — don't let them degrade
+- Track eval scores over time: don't let them degrade
 
 ---
 
@@ -106,6 +108,7 @@ Guardrails are **inline checks** that run on every request and response. They're
 ### Guardrail Implementation Patterns
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     INPUT["User Input"] --> IG["Input Guardrails"]
     IG -->|"Pass"| LLM["LLM"]
@@ -115,9 +118,10 @@ flowchart LR
     OG -->|"Rewrite"| REWRITE["Rewrite Output"]
     OG -->|"Block"| FALLBACK["Fallback Response"]
     
-    style IG fill:#FF9800,color:#fff
-    style OG fill:#FF9800,color:#fff
+    style IG fill:#FFBE00,color:#000000
+    style OG fill:#FFBE00,color:#000000
 ```
+
 
 ---
 
@@ -139,9 +143,9 @@ flowchart LR
 | Signal | What It Means |
 |---|---|
 | **Fact in response NOT in retrieved context** | Likely hallucination |
-| **Price/stock/date in response doesn't match source** | High-confidence hallucination — critical |
+| **Price/stock/date in response doesn't match source** | High-confidence hallucination ;  critical |
 | **Response contains "I don't know" but the context has the answer** | Retrieval failure (false negative) |
-| **Response is confident but completely wrong** | Most dangerous — needs human review trigger |
+| **Response is confident but completely wrong** | Most dangerous ;  needs human review trigger |
 
 ### Production Monitoring Stack
 
@@ -180,16 +184,18 @@ flowchart LR
 ## The Eval-to-Guardrail Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     OFFLINE["Offline Eval: Discover failure mode"] --> GUARDRAIL["Add Guardrail: Prevent it in production"]
     GUARDRAIL --> MONITOR["Online Eval: Monitor guardrail effectiveness"]
     MONITOR --> FEEDBACK["New failure mode discovered"]
     FEEDBACK --> OFFLINE
     
-    style OFFLINE fill:#4CAF50,color:#fff
-    style GUARDRAIL fill:#FF9800,color:#fff
-    style MONITOR fill:#2196F3,color:#fff
+    style OFFLINE fill:#1FB854,color:#000000
+    style GUARDRAIL fill:#FFBE00,color:#000000
+    style MONITOR fill:#00B5FF,color:#000000
 ```
+
 
 **Example:** Offline eval discovers the LLM sometimes gives medical advice → Add "medical advice declination" guardrail → Monitor to see if it's triggered correctly → Discover that "mental health" queries are slipping through → Add to offline eval suite → Update guardrail.
 
@@ -209,8 +215,8 @@ flowchart TD
 
 ## Related
 
-- [[10_LLM_Production_Patterns]] — The patterns you're evaluating
-- [[11_Prompt_Engineering_and_Security]] — Guardrails overlap with injection defense
-- [[12_AI_ROI_and_Roadmap]] — Measuring business impact
-- [[09_AI_SE_Intersection]] — MLOps, model monitoring, A/B testing
-- [[AI Overview]] — All AI topics
+- [[10_LLM_Production_Patterns]]: The patterns you're evaluating
+- [[11_Prompt_Engineering_and_Security]]: Guardrails overlap with injection defense
+- [[12_AI_ROI_and_Roadmap]]: Measuring business impact
+- [[09_AI_SE_Intersection]]: MLOps, model monitoring, A/B testing
+- [[AI Overview]]: All AI topics

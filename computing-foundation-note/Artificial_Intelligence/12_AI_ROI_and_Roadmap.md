@@ -10,7 +10,7 @@ source: Interview preparation
 created: 2026-08-31
 ---
 
-# 12 — AI ROI Translation & Roadmap Thinking
+# 12: AI ROI Translation & Roadmap Thinking
 
 > The gap area for most engineers. Technical decisions **must** be translated into business value. Know the vocabulary and frameworks.
 
@@ -24,13 +24,13 @@ The ability to translate your technical decisions into business outcomes is what
 
 | Technical Claim | ROI Translation |
 |---|---|
-| "Deterministic retrieval means prices are always correct" | "Zero hallucination risk on the highest-stakes data (price/stock) — protects revenue and trust" |
-| "Provider-neutral config" | "We can swap to the cheapest/best model per use case without re-platforming — cost flexibility" |
-| "23 tests + 5 integration tests" | "Regression safety — we can ship AI changes without fearing silent breakage" |
-| "Prompt injection mitigations" | "Security-by-design — reduces the risk surface before we ship to real customers" |
-| "Keyword search over 30 SKUs" | "Right-sized solution — no unnecessary infra cost for a 30-item catalog" |
-| "Single-prompt with context injection" | "Lowest latency and cost per query — fits the problem size; no over-engineering" |
-| "Opaque error messages to users" | "No information leakage — protects internal architecture from attackers" |
+| "Deterministic retrieval means prices are always correct" | "Zero hallucination risk on the highest-stakes data (price/stock) ;  protects revenue and trust" |
+| "Provider-neutral config" | "We can swap to the cheapest/best model per use case without re-platforming ;  cost flexibility" |
+| "23 tests + 5 integration tests" | "Regression safety ;  we can ship AI changes without fearing silent breakage" |
+| "Prompt injection mitigations" | "Security-by-design ;  reduces the risk surface before we ship to real customers" |
+| "Keyword search over 30 SKUs" | "Right-sized solution ;  no unnecessary infra cost for a 30-item catalog" |
+| "Single-prompt with context injection" | "Lowest latency and cost per query ;  fits the problem size; no over-engineering" |
+| "Opaque error messages to users" | "No information leakage ;  protects internal architecture from attackers" |
 
 ### The ROI Translation Formula
 
@@ -51,20 +51,22 @@ Technical Claim → Business Metric → Why It Matters → Revenue/Cost/Risk Imp
 ### The 5-Step Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     IDENTIFY["1. Identify Opportunities"] --> PRIORITIZE["2. Prioritize by Impact × Feasibility"]
-    PRIORITIZE --> POC["3. POC — Small, Time-Boxed, Measurable"]
+    PRIORITIZE --> POC["3. POC - Small, Time-Boxed, Measurable"]
     POC --> MEASURE["4. Measure Against Success Criteria"]
     MEASURE --> DECIDE{"5. Scale or Kill?"}
     DECIDE -->|"Scale"| PRODUCTION["Ship to Production"]
     DECIDE -->|"Kill"| LEARN["Archive with Learnings"]
     
-    style IDENTIFY fill:#4CAF50,color:#fff
-    style PRIORITIZE fill:#2196F3,color:#fff
-    style POC fill:#FF9800,color:#fff
-    style MEASURE fill:#9C27B0,color:#fff
-    style DECIDE fill:#F44336,color:#fff
+    style IDENTIFY fill:#1FB854,color:#000000
+    style PRIORITIZE fill:#00B5FF,color:#000000
+    style POC fill:#FFBE00,color:#000000
+    style MEASURE fill:#1FB8AB,color:#000000
+    style DECIDE fill:#FF5861,color:#000000
 ```
+
 
 ### Step 1: Identify Opportunities
 
@@ -100,7 +102,7 @@ Low Impact, Low Feasibility    → DEPRIORITIZE
 - **Time-boxed:** 2-4 weeks
 - **Measurable:** Define success criteria BEFORE building
 - **Minimal:** Build the smallest thing that proves the hypothesis
-- **Template:** Your take-home is a POC — it demonstrates the concept, not the final product
+- **Template:** Your take-home is a POC: it demonstrates the concept, not the final product
 
 ### Step 4: Measure
 
@@ -132,9 +134,9 @@ Define success metrics before building:
 
 "Three places, in priority order:
 
-1. **Chat Center — AI Chatbot** (the obvious win). My take-home is a POC for exactly this. Deflection rate and accuracy are measurable. Impact: reduced support costs, faster response times.
+1. **Chat Center: AI Chatbot** (the obvious win). My take-home is a POC for exactly this. Deflection rate and accuracy are measurable. Impact: reduced support costs, faster response times.
 
-2. **AUTODIGI — Ad Optimization.** If there's historical campaign data, ML can find patterns humans miss on budget allocation, bidding, and audience targeting. Impact: better ROAS (return on ad spend) for SME merchants.
+2. **AUTODIGI: Ad Optimization.** If there's historical campaign data, ML can find patterns humans miss on budget allocation, bidding, and audience targeting. Impact: better ROAS (return on ad spend) for SME merchants.
 
 3. **Content Drafting for SME Merchants.** Ad copy, product descriptions, social media posts. Saves the content team time. Impact: faster time-to-market for merchant campaigns.
 
@@ -193,8 +195,8 @@ Expected ROI = (Probability of Success × Projected Value) - (Probability of Fai
 
 ## Related
 
-- [[10_LLM_Production_Patterns]] — The patterns you're making ROI decisions about
-- [[13_LLM_Evaluation_and_Guardrails]] — How to measure success
-- [[08_AI_Ethics_and_Future]] — Governance and accountability
-- [[09_AI_SE_Intersection]] — ML technical debt, organizational challenges
-- [[AI Overview]] — All AI topics
+- [[10_LLM_Production_Patterns]]: The patterns you're making ROI decisions about
+- [[13_LLM_Evaluation_and_Guardrails]]: How to measure success
+- [[08_AI_Ethics_and_Future]]: Governance and accountability
+- [[09_AI_SE_Intersection]]: ML technical debt, organizational challenges
+- [[AI Overview]]: All AI topics

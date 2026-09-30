@@ -6,7 +6,7 @@ tags:
   - swebok
   - cellular
   - wifi
-source: "Wireless Communications & Networks — Stallings; Wireless Communications: Principles and Practice — Rappaport"
+source: "Wireless Communications & Networks (Stallings; wireless Communications: Principles and Practice) Rappaport"
 ---
 
 # 025 Wireless & Mobile
@@ -45,8 +45,8 @@ source: "Wireless Communications & Networks — Stallings; Wireless Communicatio
 - **DSSS** (Direct Sequence Spread Spectrum): spreads signal over wider bandwidth using chipping code
 - **OFDM** (Orthogonal Frequency Division Multiplexing): divides channel into many narrow subcarriers
 - **MIMO** (Multiple Input Multiple Output): uses multiple antennas for spatial multiplexing
-- **MU-MIMO**: allows simultaneous communication with multiple clients
-- **OFDMA**: extends OFDM to allocate subsets of subcarriers to different users simultaneously
+- **MU-MIMO:** allows simultaneous communication with multiple clients
+- **OFDMA:** extends OFDM to allocate subsets of subcarriers to different users simultaneously
 - **CSMA/CA** (Carrier Sense Multiple Access with Collision Avoidance): the MAC protocol for Wi-Fi
 
 ### 2.2 Bluetooth (IEEE 802.15.1)
@@ -73,7 +73,7 @@ source: "Wireless Communications & Networks — Stallings; Wireless Communicatio
 | Range | 10-100 m (typical ~30 m indoor) |
 | Topology | Star, tree, mesh |
 | Max nodes | ~65,000 per network |
-| Power | Very low — battery life of years |
+| Power | Very low ;  battery life of years |
 
 **Use Cases:** Home automation, industrial control, sensor networks, smart energy.
 
@@ -86,7 +86,7 @@ source: "Wireless Communications & Networks — Stallings; Wireless Communicatio
 | Range | ~4 cm (near contact) |
 | Modes | Reader/Writer, Peer-to-Peer, Card Emulation |
 
-**NFC vs Bluetooth:** NFC is slower, shorter range, but requires no pairing — instant "tap" connection.
+**NFC vs Bluetooth:** NFC is slower, shorter range, but requires no pairing; instant "tap" connection.
 
 ---
 
@@ -132,7 +132,7 @@ source: "Wireless Communications & Networks — Stallings; Wireless Communicatio
 **CDMA Details:**
 - Each user multiplied by a unique **spreading code** (PN sequence / Walsh code)
 - **Processing gain** = chip rate / data rate
-- Soft capacity limit — more users = more noise, graceful degradation
+- Soft capacity limit: more users = more noise, graceful degradation
 - Near-far problem requires **power control**
 
 **OFDMA Details:**
@@ -163,7 +163,7 @@ source: "Wireless Communications & Networks — Stallings; Wireless Communicatio
 
 **Mobile IPv6 Improvements:**
 - Route optimization via **Binding Updates** sent directly to CN
-- No FA needed — MN generates its own CoA
+- No FA needed: MN generates its own CoA
 
 ---
 
@@ -173,7 +173,7 @@ source: "Wireless Communications & Networks — Stallings; Wireless Communicatio
 
 | Protocol | Encryption | Key Mgmt | Status |
 |----------|------------|----------|--------|
-| **WEP** | RC4 (40/104-bit) | Static shared key | Broken — never use |
+| **WEP** | RC4 (40/104-bit) | Static shared key | Broken ;  never use |
 | **WPA** | RC4 + TKIP | 802.1X / PSK | Deprecated |
 | **WPA2** | AES-CCMP (128-bit) | 802.1X / PSK | Vulnerable to KRACK |
 | **WPA3** | AES-GCMP (192/256-bit) | SAE | Recommended |
@@ -240,7 +240,7 @@ $$P_r = P_t G_t G_r \left(\frac{\lambda}{4\pi d}\right)^2$$
 ### Key Phenomena
 
 - **Shadow fading:** large-scale variations from obstacles (log-normal)
-- **Rayleigh fading:** no line-of-sight — deep fades
+- **Rayleigh fading:** no line-of-sight: deep fades
 - **Rician fading:** line-of-sight + scattered paths
 - **Doppler shift:** frequency change due to relative motion
 - **Multipath:** signal arrives via multiple paths with different delays
@@ -287,10 +287,10 @@ Where M = number of signal levels.
 
 ## Related
 
-- [[000 Computer Networks Overview]] — OSI model, TCP/IP, HTTP
-- [[011 OSI & TCP-IP Models]] — Network protocol fundamentals
-- [[021 TCP & UDP]] — Transport layer protocols
-- [[035 Network Security]] — Network security fundamentals
+- [[000 Computer Networks Overview]]: OSI model, TCP/IP, HTTP
+- [[011 OSI & TCP-IP Models]]: Network protocol fundamentals
+- [[021 TCP & UDP]]: Transport layer protocols
+- [[035 Network Security]]: Network security fundamentals
 
 ---
 
@@ -301,4 +301,4 @@ Where M = number of signal levels.
 - IEEE 802.11 Standards (Wi-Fi Alliance)
 - 3GPP TS 38 Series (5G NR)
 - RFC 5944 (Mobile IPv4), RFC 6275 (Mobile IPv6)
-- SWEBOK v4, Chapter 16 — Computing Foundations
+- SWEBOK v4, Chapter 16: Computing Foundations

@@ -12,11 +12,11 @@ source: CLRS
 
 # 23 · Minimum Spanning Trees
 
-> Find the spanning tree of minimum total weight. Kruskal's and Prim's are the two classic greedy algorithms — one edge-centric, one vertex-centric.
+> Find the spanning tree of minimum total weight. Kruskal's and Prim's are the two classic greedy algorithms; one edge-centric, one vertex-centric.
 
 ### Problem Definition
 
-Given a connected, undirected graph $G = (V, E)$ with a weight function $w: E \to \mathbb{R}$, find a **minimum spanning tree (MST)** — a spanning tree of minimum total weight.
+Given a connected, undirected graph $G = (V, E)$ with a weight function $w: E \to \mathbb{R}$, find a **minimum spanning tree (MST)**, a spanning tree of minimum total weight.
 
 **Key property:** A spanning tree connects all $|V|$ vertices with exactly $|V| - 1$ edges.
 
@@ -43,7 +43,7 @@ A **light edge** crossing a cut is one with minimum weight among all edges cross
 
 ### Kruskal's Algorithm
 
-**Strategy:** Greedy — process edges in order of increasing weight; add each edge if it connects two different components.
+**Strategy:** Greedy; process edges in order of increasing weight; add each edge if it connects two different components.
 
 ```
 KRUSKAL(G, w)
@@ -67,7 +67,7 @@ KRUSKAL(G, w)
 
 ### Prim's Algorithm
 
-**Strategy:** Greedy — grow a single tree from an arbitrary start vertex, always adding the cheapest edge connecting the tree to a new vertex. (Similar to Dijkstra's algorithm.)
+**Strategy:** Greedy; grow a single tree from an arbitrary start vertex, always adding the cheapest edge connecting the tree to a new vertex. (Similar to Dijkstra's algorithm.)
 
 ```
 PRIM(G, w, r)
@@ -102,7 +102,7 @@ PRIM(G, w, r)
 
 ## Hands-On Exercises
 
-### Exercise 1: Kruskal's MST — Trace by Hand
+### Exercise 1: Kruskal's MST: Trace by Hand
 Given graph with edges (sorted by weight):
 
 | Edge | Weight |
@@ -130,5 +130,5 @@ Vertices: {A, B, C, D, E}. Trace Kruskal's algorithm:
 | 1 | [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/) (LC 1584) | 🟡 Medium | Prim's / Kruskal's MST |
 
 ### Assignment Guidelines
-- **Start** with the LeetCode problem — implement Prim's or Kruskal's.
+- **Start** with the LeetCode problem: implement Prim's or Kruskal's.
 - **Target time:** 20 min per Medium.

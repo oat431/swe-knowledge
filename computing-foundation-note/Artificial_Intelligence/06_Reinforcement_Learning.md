@@ -9,7 +9,7 @@ source: "Russell & Norvig, Artificial Intelligence: A Modern Approach, Chapter 2
 
 ## 1. Introduction
 
-Reinforcement Learning (RL) differs from supervised learning — the agent is NOT told the correct action to take in each state, but only receives a **reward signal** to judge what is good and what is bad.
+Reinforcement Learning (RL) differs from supervised learning, the agent is NOT told the correct action to take in each state, but only receives a **reward signal** to judge what is good and what is bad.
 
 ### Reward
 
@@ -57,18 +57,18 @@ Where $S_0 = s$ and $\gamma$ is the discount factor.
 
 **Drawbacks:**
 - Reduces RL to a standard supervised learning problem
-- **Ignores dependencies between states** — utility values must satisfy the Bellman equation
+- **Ignores dependencies between states:** utility values must satisfy the Bellman equation
 - Hypothesis space is much larger than needed (includes functions violating Bellman equation)
 - Convergence is typically very **slow**
 
 ### Adaptive Dynamic Programming (ADP)
 
-**Core idea:** Exploit constraints between state utilities — learn the transition model, then solve the MDP with dynamic programming.
+**Core idea:** Exploit constraints between state utilities; learn the transition model, then solve the MDP with dynamic programming.
 
 **Algorithm (PASSIVE-ADP-AGENT):**
 1. Maintain a frequency table for transition model $P(s'|s, \pi(s))$
 2. Update frequency counts after each observed transition $s \xrightarrow{a} s'$
-3. Solve the Bellman equation using **policy evaluation**:
+3. Solve the Bellman equation using **policy evaluation:**
 
 $$U^\pi(s) = R(s) + \gamma \sum_{s'} P(s'|s, \pi(s)) U^\pi(s')$$
 
@@ -102,7 +102,7 @@ Where:
 
 **Convergence condition:** Learning rate $\alpha(n)$ decreases with state visit count (satisfies Robbins-Monro conditions), guaranteeing convergence to correct values.
 
-**Extension — Prioritized Sweeping:**
+**Extension (Prioritized Sweeping):**
 - Use heuristics to prioritize adjustments, executing only the most important ones
 - Prioritize states whose successors just experienced large utility changes
 - Can achieve learning speed close to ADP, with orders of magnitude better computational efficiency
@@ -139,7 +139,7 @@ Where:
 
 **Simple GLIE scheme:** Choose a random action with probability $1/t$, otherwise follow the greedy policy.
 
-**Better scheme:** Give higher weight to less-tried actions while tending to avoid actions known to have low utility — achievable by modifying the Bellman equation.
+**Better scheme:** Give higher weight to less-tried actions while tending to avoid actions known to have low utility; achievable by modifying the Bellman equation.
 
 ---
 
@@ -182,6 +182,6 @@ Where:
 
 ## Related
 
-- [[AI Overview]] — All AI topics
-- [[04_Uncertainty_and_Decisions]] — MDP framework
-- [[05_Machine_Learning]] — Supervised learning methods
+- [[AI Overview]]: All AI topics
+- [[04_Uncertainty_and_Decisions]]: MDP framework
+- [[05_Machine_Learning]]: Supervised learning methods

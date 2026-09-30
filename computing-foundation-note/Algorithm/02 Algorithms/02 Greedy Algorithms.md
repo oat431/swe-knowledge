@@ -7,7 +7,7 @@ tags:
 
 # 02 Greedy Algorithms
 
-Make the locally optimal choice at each step, hoping it leads to a globally optimal solution. Greedy algorithms are fast but don't always work — you must prove correctness.
+Make the locally optimal choice at each step, hoping it leads to a globally optimal solution. Greedy algorithms are fast but don't always work; you must prove correctness.
 
 ---
 
@@ -68,7 +68,7 @@ Take fractions of items to maximize value within weight limit.
 ```
 Strategy: Take items with highest value/weight ratio first
 
-Items: [(60,10), (100,20), (120,30)]  — (value, weight)
+Items: [(60,10), (100,20), (120,30)]  - (value, weight)
 Ratios: [6, 5, 4]
 Capacity: 50
 
@@ -109,7 +109,7 @@ Strategy: always expand the unvisited node with smallest distance
 | **Optimal substructure** | Optimal solution contains optimal solutions to subproblems |
 | **Greedy choice property** | Locally optimal choice leads to globally optimal solution |
 
-> **You must PROVE the greedy choice property holds.** Not all problems with optimal substructure can be solved greedily — some require DP.
+> **You must PROVE the greedy choice property holds.** Not all problems with optimal substructure can be solved greedily, some require DP.
 
 ---
 
@@ -126,15 +126,15 @@ Strategy: always expand the unvisited node with smallest distance
 
 ## Sources
 
-- CLRS — Chapter 16
-- LeetCode — Greedy problem sets
+- CLRS: Chapter 16
+- LeetCode: Greedy problem sets
 
 
 ---
 
 ## Hands-On Exercises
 
-### Exercise 1: Activity Selection — Implement from Note
+### Exercise 1: Activity Selection: Implement from Note
 Implement the `maxActivities` method from the note. Test with intervals `[[1,3],[2,5],[3,9],[5,8],[6,9],[8,10]]` → expect `3`.
 
 ```java
@@ -146,7 +146,7 @@ int maxActivities(int[][] intervals) {
 
 ---
 
-### Exercise 2: Jump Game — Greedy Reach
+### Exercise 2: Jump Game: Greedy Reach
 Given an array where each element is the maximum jump length from that position, determine if you can reach the last index.
 
 ```java
@@ -154,15 +154,15 @@ boolean canJump(int[] nums) {
     int maxReach = 0;
     // TODO: For each index i, update maxReach = max(maxReach, i + nums[i])
     // If maxReach >= last index, return true
-    // If i > maxReach, stuck — return false
+    // If i > maxReach, stuck - return false
 }
 ```
 
-**Hint:** This is a greedy approach — always track the farthest you can reach.
+**Hint:** This is a greedy approach, always track the farthest you can reach.
 
 ---
 
-### Exercise 3: Greedy vs DP — When Does Greedy Fail?
+### Exercise 3: Greedy vs DP: When Does Greedy Fail?
 Consider the **0/1 Knapsack** problem: items `[(60,10), (100,20), (120,30)]`, capacity = 50.
 
 1. Solve with **greedy** (highest value/weight ratio first). What value do you get?
@@ -187,8 +187,8 @@ Write your analysis as comments in your code.
 | 8 | [Candy](https://leetcode.com/problems/candy/) (LC 135) | 🔴 Hard | Greedy (two passes) |
 
 ### Assignment Guidelines
-- **Start** with 1 (Easy) — simple greedy tracking.
-- **Then** 2–7 (Medium) — each applies greedy in a different way.
+- **Start** with 1 (Easy): simple greedy tracking.
+- **Then** 2–7 (Medium): each applies greedy in a different way.
 - **Problem 8** (Candy) is a tricky greedy problem requiring two passes.
-- **Key insight:** Greedy works when the **greedy choice property** holds — always prove it first!
+- **Key insight:** Greedy works when the **greedy choice property** holds, always prove it first!
 - **Target time:** 10 min per Easy, 20 min per Medium, 30 min per Hard.

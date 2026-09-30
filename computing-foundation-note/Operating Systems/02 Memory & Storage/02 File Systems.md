@@ -11,9 +11,9 @@ The OS organizes raw disk blocks into files and directories. Understanding inode
 
 ---
 
-## Inodes — The Heart of Unix File Systems
+## Inodes: The Heart of Unix File Systems
 
-> An inode stores metadata about a file: size, permissions, timestamps, and pointers to data blocks. The filename is NOT in the inode — it's in the directory.
+> An inode stores metadata about a file: size, permissions, timestamps, and pointers to data blocks. The filename is NOT in the inode; it's in the directory.
 
 ```
 Inode #12345:
@@ -41,12 +41,12 @@ Inode:
 ```bash
 # Check inode usage (different from disk space!)
 df -i
-# If inodes are full → can't create new files — even if disk has space!
+# If inodes are full → can't create new files - even if disk has space!
 ```
 
 ---
 
-## Journaling — Crash Recovery
+## Journaling: Crash Recovery
 
 > Before modifying the file system, write your INTENT to a journal. After a crash, replay the journal.
 

@@ -6,7 +6,7 @@ tags:
   - database
   - analytics
   - business-intelligence
-source: "Data Warehouse Design — Kimball & Ross; Data Mining Concepts — Tanber, Kamber"
+source: "Data Warehouse Design: Kimball & Ross; data Mining Concepts: Tanber, Kamber"
 ---
 
 Here is the comprehensive markdown content for the Obsidian note:
@@ -22,7 +22,7 @@ Here is the comprehensive markdown content for the Obsidian note:
 
 ## 1. OLTP vs OLAP
 
-### OLTP — Online Transaction Processing
+### OLTP: Online Transaction Processing
 
 | Characteristic | OLTP |
 |---|---|
@@ -36,7 +36,7 @@ Here is the comprehensive markdown content for the Obsidian note:
 | **Concurrency** | Thousands of concurrent users |
 | **Example** | ATM withdrawal, order entry |
 
-### OLAP — Online Analytical Processing
+### OLAP: Online Analytical Processing
 
 | Characteristic | OLAP |
 |---|---|
@@ -76,6 +76,7 @@ OLAP: Optimized for READ     → Denormalized  → Historical    → Analytical
 ### 2.2 Star Schema
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 erDiagram
     DIM_Time {
         int time_key PK
@@ -127,15 +128,16 @@ erDiagram
 
 **Characteristics:**
 - **One fact table** at center, connected to **multiple dimension tables**
-- **Denormalized dimensions** — each dimension is a single flat table
-- **Simple joins** — one join per dimension
-- **Query performance** — excellent; minimal table joins
-- **Storage** — some redundancy in dimension tables
+- **Denormalized dimensions:** each dimension is a single flat table
+- **Simple joins:** one join per dimension
+- **Query performance:** excellent; minimal table joins
+- **Storage:** some redundancy in dimension tables
 - **Ralph Kimball's** preferred approach (bottom-up)
 
 ### 2.3 Snowflake Schema
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 erDiagram
     Category {
         int cat_key PK
@@ -184,15 +186,16 @@ erDiagram
 ```
 
 **Characteristics:**
-- **Normalized dimension tables** — dimensions split into sub-dimensions
-- **Reduced redundancy** — saves storage
-- **More complex queries** — requires more joins
-- **Slower queries** — due to additional joins
+- **Normalized dimension tables:** dimensions split into sub-dimensions
+- **Reduced redundancy:** saves storage
+- **More complex queries:** requires more joins
+- **Slower queries:** due to additional joins
 - **Inmon's** style favors normalization, snowflake aligns closer
 
 ### 2.4 Fact Constellation (Galaxy Schema)
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 erDiagram
     DIM_Time {
         int time_key PK
@@ -268,9 +271,10 @@ erDiagram
 
 ## 3. ETL vs ELT Pipelines
 
-### 3.1 ETL — Extract, Transform, Load
+### 3.1 ETL: Extract, Transform, Load
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     subgraph SOURCES["Source Systems"]
         DB[(Database)]
@@ -296,15 +300,16 @@ flowchart LR
     STAGING -->|Load| DW
 ```
 
-1. **Extract** — Pull raw data from heterogeneous sources (databases, APIs, flat files, CRM, ERP)
-2. **Transform** — In a staging area: cleanse, deduplicate, apply business rules, conform data types, calculate derived fields
-3. **Load** — Write transformed data into target data warehouse tables
+1. **Extract:** Pull raw data from heterogeneous sources (databases, APIs, flat files, CRM, ERP)
+2. **Transform:** In a staging area: cleanse, deduplicate, apply business rules, conform data types, calculate derived fields
+3. **Load:** Write transformed data into target data warehouse tables
 
 **When to use ETL:** Traditional on-premises data warehouses, compliance/regulatory requirements, sensitive data that must be transformed before entering the warehouse.
 
-### 3.2 ELT — Extract, Load, Transform
+### 3.2 ELT: Extract, Load, Transform
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     subgraph SOURCES["Source Systems"]
         DB2[(Database)]
@@ -323,9 +328,9 @@ flowchart LR
     TRANSFORM -->|SQL/Spark| VIEWS
 ```
 
-1. **Extract** — Same as ETL
-2. **Load** — Raw data loaded directly into target (data lake/warehouse)
-3. **Transform** — Transformation happens inside the target system using its compute power
+1. **Extract:** Same as ETL
+2. **Load:** Raw data loaded directly into target (data lake/warehouse)
+3. **Transform:** Transformation happens inside the target system using its compute power
 
 **When to use ELT:** Cloud data warehouses (BigQuery, Snowflake, Redshift), big data volumes, need for raw data retention, faster ingestion.
 
@@ -353,6 +358,7 @@ flowchart LR
 ### 4.1 Enterprise Data Warehouse (EDW)
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph EDW["Enterprise Data Warehouse"]
         direction TB
@@ -363,18 +369,18 @@ flowchart TD
     EDW --> FINANCE[Finance Data Mart]
     EDW --> HR[HR Data Mart]
 
-    style EDW fill:#2196F3,color:#fff
-    style SALES fill:#4CAF50,color:#fff
-    style FINANCE fill:#4CAF50,color:#fff
-    style HR fill:#4CAF50,color:#fff
+    style EDW fill:#00B5FF,color:#000000
+    style SALES fill:#1FB854,color:#000000
+    style FINANCE fill:#1FB854,color:#000000
+    style HR fill:#1FB854,color:#000000
 ```
 
 - **Centralized repository** for the entire organization
 - **Integrates data** from all departments and systems
-- **Single source of truth** — conformed dimensions and facts
+- **Single source of truth:** conformed dimensions and facts
 - **Long implementation timeline** (months to years)
 - **High cost** but maximum enterprise value
-- Inmon's approach: **top-down** — build EDW first, then derive data marts
+- Inmon's approach: **top-down:** build EDW first, then derive data marts
 
 ### 4.2 Data Mart
 
@@ -386,13 +392,14 @@ A **subset of a data warehouse** focused on a single department or business area
 | **Independent** | Built directly from source systems | Operational systems |
 | **Hybrid** | Combination of EDW + direct sources | Both |
 
-- **Kimball's approach**: **bottom-up** — build data marts first, then integrate into EDW (via conformed dimensions)
+- **Kimball's approach:** **bottom-up:** build data marts first, then integrate into EDW (via conformed dimensions)
 - **Faster to deploy** than full EDW
 - **Lower cost**, department-specific
 
 ### 4.3 Operational Data Store (ODS)
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     subgraph SOURCES["Source Systems"]
         CRM[CRM System]
@@ -412,8 +419,8 @@ flowchart TD
     SOURCES -->|Extract| ODS
     ODS -->|Load| DW2
 
-    style ODS fill:#FF9800,color:#fff
-    style DW2 fill:#2196F3,color:#fff
+    style ODS fill:#FFBE00,color:#000000
+    style DW2 fill:#00B5FF,color:#000000
 ```
 
 | Aspect | ODS | Data Warehouse |
@@ -430,7 +437,7 @@ flowchart TD
 - **Schema-on-read** (vs schema-on-write for DW)
 - Supports data science, ML, and exploratory analytics
 - Technologies: HDFS, Amazon S3, Azure Data Lake Storage
-- **Data Lakehouse**: Hybrid combining lake flexibility with warehouse structure (Delta Lake, Apache Iceberg)
+- **Data Lakehouse:** Hybrid combining lake flexibility with warehouse structure (Delta Lake, Apache Iceberg)
 
 ---
 
@@ -473,19 +480,19 @@ flowchart TD
 
 Dimensions change over time (customer moves, product repackaged). SCD strategies handle this:
 
-### Type 0 — Retain Original
-- **No change** — dimension value never updates
+### Type 0: Retain Original
+- **No change:** dimension value never updates
 - Use for: immutable attributes (birthdate, original enrollment date)
 
-### Type 1 — Overwrite
+### Type 1: Overwrite
 ```
 BEFORE: Customer 101, City = "New York"
 AFTER:  Customer 101, City = "Chicago"   ← overwritten, history lost
 ```
-- **No history** — current value replaces old
+- **No history:** current value replaces old
 - Simple, but loses historical accuracy
 
-### Type 2 — Add New Row (Most Common)
+### Type 2: Add New Row (Most Common)
 ```
 ┌─────────┬───────────┬────────┬────────────┬────────────┬───────┐
 │ sk      │ cust_id   │ name   │ city       │ start_date │end_date│
@@ -494,11 +501,11 @@ AFTER:  Customer 101, City = "Chicago"   ← overwritten, history lost
 │ 1002    │ 101       │ Alice  │ Chicago    │ 2024-03-15 │9999-12│  ← current
 └─────────┴───────────┴────────┴────────────┴────────────┴───────┘
 ```
-- **Full history** — new row for each change
+- **Full history:** new row for each change
 - Requires surrogate key (sk) and effective date range
 - Fact tables reference the correct version via surrogate key
 
-### Type 3 — Add New Column
+### Type 3: Add New Column
 ```
 ┌───────────┬──────┬──────────────┬──────────────┐
 │ cust_id   │ name │ current_city │ previous_city│
@@ -506,15 +513,15 @@ AFTER:  Customer 101, City = "Chicago"   ← overwritten, history lost
 │ 101       │ Alice│ Chicago      │ New York     │
 └───────────┴──────┴──────────────┴──────────────┘
 ```
-- **Limited history** — stores one previous value
+- **Limited history:** stores one previous value
 - Rarely used; limited practical value
 
-### Type 4 — Mini-Dimension
+### Type 4: Mini-Dimension
 - Move rapidly changing attributes (age band, income bracket) to a **separate mini-dimension**
 - Fact table references both the main dimension and the mini-dimension
 - Avoids inflating the main dimension table
 
-### Type 6 — Hybrid (1+2+3)
+### Type 6: Hybrid (1+2+3)
 - Combines Types 1, 2, and 3: new row (Type 2) + current value column (Type 1) + previous value column (Type 3)
 
 ---
@@ -542,22 +549,22 @@ A full data cube has dimensions for Region, Time, Product, etc., forming a hyper
 
 ### 7.2 OLAP Operations
 
-#### Roll-Up (Drill-Up) — Aggregation
+#### Roll-Up (Drill-Up): Aggregation
 ```
 City → State → Region → Country → Total
 
 Monthly → Quarterly → Yearly
 
-"Zoom out" — reduces dimensions or increases level of aggregation
+"Zoom out" - reduces dimensions or increases level of aggregation
 ```
 
-#### Drill-Down — Detail
+#### Drill-Down: Detail
 ```
 Country → Region → State → City
 
 Yearly → Quarterly → Monthly → Daily
 
-"Zoom in" — adds dimensions or decreases level of aggregation
+"Zoom in" - adds dimensions or decreases level of aggregation
 ```
 
 #### Slice
@@ -631,7 +638,7 @@ Frequent 3-itemsets: {bread, butter, milk}
 Rules: bread ∧ butter → milk (conf=0.70)
 ```
 
-**FP-Growth** — alternative to Apriori that avoids candidate generation by building a compressed FP-tree structure. More efficient for large datasets.
+**FP-Growth:** alternative to Apriori that avoids candidate generation by building a compressed FP-tree structure. More efficient for large datasets.
 
 ### 8.2 Clustering (Unsupervised Learning)
 
@@ -675,9 +682,9 @@ Cons: Struggles with varying densities, parameter-sensitive
 | Complexity | O(n·K·i) | O(n·log n) with index |
 
 #### Other Clustering Methods
-- **Hierarchical** (agglomerative/divisive) — builds a dendrogram
-- **Gaussian Mixture Models (GMM)** — probabilistic soft clustering
-- **Spectral Clustering** — uses graph Laplacian eigenvalues
+- **Hierarchical** (agglomerative/divisive): builds a dendrogram
+- **Gaussian Mixture Models (GMM):** probabilistic soft clustering
+- **Spectral Clustering:** uses graph Laplacian eigenvalues
 
 ### 8.3 Classification (Supervised Learning)
 
@@ -712,18 +719,18 @@ Training Data
      └──► ...             ──► ...               ──► ...
 ```
 
-- **Ensemble method** — builds many decision trees and aggregates
-- **Bagging** (Bootstrap Aggregating) — each tree trained on a random sample with replacement
-- **Feature randomness** — each split considers a random subset of features
+- **Ensemble method:** builds many decision trees and aggregates
+- **Bagging** (Bootstrap Aggregating): each tree trained on a random sample with replacement
+- **Feature randomness:** each split considers a random subset of features
 - **Pros:** Reduces overfitting, handles high-dimensional data, provides feature importance
 - **Cons:** Less interpretable than single tree, slower prediction, memory-intensive
 
 #### Other Classification Methods
-- **Naive Bayes** — probabilistic, assumes feature independence
-- **Support Vector Machines (SVM)** — finds optimal hyperplane
-- **K-Nearest Neighbors (KNN)** — classifies by majority vote of K neighbors
-- **Logistic Regression** — linear model for binary classification
-- **Neural Networks / Deep Learning** — multi-layer, non-linear
+- **Naive Bayes:** probabilistic, assumes feature independence
+- **Support Vector Machines (SVM):** finds optimal hyperplane
+- **K-Nearest Neighbors (KNN):** classifies by majority vote of K neighbors
+- **Logistic Regression:** linear model for binary classification
+- **Neural Networks / Deep Learning:** multi-layer, non-linear
 
 ### 8.4 Sequential Pattern Mining
 
@@ -740,10 +747,10 @@ Frequent sequential pattern (min_support=2):
 ```
 
 **Algorithms:**
-- **AprioriAll** — extends Apriori to sequences
-- **GSP** (Generalized Sequential Patterns) — uses Apriori property with time constraints
-- **PrefixSpan** — pattern-growth approach, more efficient
-- **SPADE** — vertical format, uses equivalence classes
+- **AprioriAll:** extends Apriori to sequences
+- **GSP** (Generalized Sequential Patterns): uses Apriori property with time constraints
+- **PrefixSpan:** pattern-growth approach, more efficient
+- **SPADE:** vertical format, uses equivalence classes
 
 **Applications:** Customer behavior analysis, web clickstream mining, DNA sequence analysis, intrusion detection.
 
@@ -763,10 +770,10 @@ Evaluation: R², RMSE, MAE
 ```
 
 #### Other Regression Methods
-- **Polynomial Regression** — fits curves (y = ax² + bx + c)
-- **Ridge/Lasso Regression** — regularized to prevent overfitting
+- **Polynomial Regression:** fits curves (y = ax² + bx + c)
+- **Ridge/Lasso Regression:** regularized to prevent overfitting
 - **SVR** (Support Vector Regression)
-- **Random Forest Regression** — ensemble of regression trees
+- **Random Forest Regression:** ensemble of regression trees
 - **Neural Network Regression**
 
 #### Classification vs Regression
@@ -930,11 +937,11 @@ Level 5: Autonomous/Adaptive AI   → "System decides and acts"
 
 ## Related Notes
 
-- [[Data Modeling]]
-- [[Machine Learning Fundamentals]]
-- [[Database Systems]]
-- [[Software Architecture]]
-- [[SWEBOK Knowledge Areas]]
+- [[../../../career-path/09_Data_and_ML_Engineer/02_Data_Modeling_and_Design/00_overview|Data Modeling]]
+- [[AI Overview|Machine Learning Fundamentals]]
+- [[Database Overview|Database Systems]]
+- [[Software Architecture Overview|Software Architecture]]
+- [[SWEBOK v4 - Overview|SWEBOK Knowledge Areas]]
 
 ---
 
@@ -943,7 +950,7 @@ Level 5: Autonomous/Adaptive AI   → "System decides and acts"
 - Inmon, W.H. *Building the Data Warehouse* (4th Ed.)
 - Kimball, R. & Ross, M. *The Data Warehouse Toolkit* (3rd Ed.)
 - Han, J., Kamber, M. & Pei, J. *Data Mining: Concepts and Techniques* (3rd Ed.)
-- SWEBOK Guide v4.0 — IEEE
+- SWEBOK Guide v4.0: IEEE
 - Chaudhuri, S. & Dayal, U. "An Overview of Data Warehousing and OLAP Technology" (1997)
 
 ---

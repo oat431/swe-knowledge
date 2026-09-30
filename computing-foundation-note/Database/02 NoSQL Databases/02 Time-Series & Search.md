@@ -12,7 +12,7 @@ Specialized databases for specialized problems: time-series for metrics/IoT, ful
 
 ---
 
-## Time-Series — InfluxDB & TimescaleDB
+## Time-Series: InfluxDB & TimescaleDB
 
 Optimized for data points with timestamps: metrics, sensor readings, stock prices, logs.
 
@@ -32,7 +32,7 @@ timestamp          | device_id | temperature | humidity
 | **Compression** | Specialized (delta-of-delta, run-length) | Generic. |
 | **Retention** | Auto-drop old data (downsampling) | Manual purging. |
 
-### InfluxDB — Purpose-Built Time-Series
+### InfluxDB: Purpose-Built Time-Series
 
 ```
 Measurement: temperature
@@ -41,12 +41,12 @@ Fields: value=22.5, humidity=65.0
 Timestamp: 2024-01-15T14:00:00Z
 ```
 
-### TimescaleDB — PostgreSQL Extension
+### TimescaleDB: PostgreSQL Extension
 
 Best of both worlds: PostgreSQL + time-series optimization (hypertables, automatic partitioning).
 
 ```sql
--- Create a hypertable — automatically partitions by time
+-- Create a hypertable - automatically partitions by time
 CREATE TABLE sensor_data (
     time TIMESTAMPTZ NOT NULL,
     device_id TEXT NOT NULL,
@@ -55,7 +55,7 @@ CREATE TABLE sensor_data (
 );
 SELECT create_hypertable('sensor_data', 'time');
 
--- Time-based query — hypertable automatically excludes irrelevant chunks
+-- Time-based query - hypertable automatically excludes irrelevant chunks
 SELECT time_bucket('1 hour', time) AS hour,
        device_id,
        AVG(temperature)
@@ -66,7 +66,7 @@ GROUP BY hour, device_id;
 
 ---
 
-## Full-Text Search — Elasticsearch
+## Full-Text Search: Elasticsearch
 
 Built on Apache Lucene. Turns unstructured text into searchable, analyzable data.
 
@@ -132,6 +132,6 @@ Inverted Index:
 
 ## Sources
 
-- InfluxDB Docs — https://docs.influxdata.com/
-- TimescaleDB Docs — https://docs.timescale.com/
-- Elasticsearch Guide — https://www.elastic.co/guide/en/elasticsearch/reference/current/
+- InfluxDB Docs: https://docs.influxdata.com/
+- TimescaleDB Docs: https://docs.timescale.com/
+- Elasticsearch Guide: https://www.elastic.co/guide/en/elasticsearch/reference/current/

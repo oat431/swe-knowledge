@@ -2,13 +2,13 @@
 tags: [computer-architecture, computer-organization, overview, co-and-d]
 ---
 
-# Computer Organization — Overview
+# Computer Organization: Overview
 
 > **Source:** *Computer Organization and Design: The Hardware/Software Interface* by David A. Patterson & John L. Hennessy (Morgan Kaufmann)
 
 ## What Is This?
 
-This vault covers **computer architecture and organization** — how computers work from the hardware/software interface up. It fills SWEBOK's Computing Foundations KA for architecture, ISA, arithmetic, processor design, memory hierarchy, I/O, and parallel computing.
+This vault covers **computer architecture and organization**; how computers work from the hardware/software interface up. It fills SWEBOK's Computing Foundations KA for architecture, ISA, arithmetic, processor design, memory hierarchy, I/O, and parallel computing.
 
 ## Files
 
@@ -27,6 +27,7 @@ This vault covers **computer architecture and organization** — how computers w
 ## How These Topics Relate
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     ABS["Abstractions & Technology"] --> ISA["Instruction Set Architecture"]
     ISA --> ARITH["Computer Arithmetic"]
@@ -37,6 +38,7 @@ flowchart TD
     PROC --> PAR["Parallel Computing"]
     MEM --> PAR
 ```
+
 
 ## Reading Paths
 
@@ -52,6 +54,6 @@ flowchart TD
 
 ## Related
 
-- [[Computing Foundation Overview]] — All computing foundation topics
-- [[Operating Systems/Operating Systems Overview|Operating Systems]] — OS concepts that build on architecture
-- [[Algorithm/Algorithm Overview|Algorithms]] — Algorithmic complexity and data structures
+- [[Computing Foundation Overview]]: All computing foundation topics
+- [[Operating Systems/Operating Systems Overview|Operating Systems]]: OS concepts that build on architecture
+- [[Algorithm/Algorithm Overview|Algorithms]]: Algorithmic complexity and data structures

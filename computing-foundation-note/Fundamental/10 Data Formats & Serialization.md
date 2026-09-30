@@ -31,7 +31,7 @@ Human-readable, language-agnostic, the lingua franca of web APIs.
 JSON has **no native date type**. Dates become strings, and every system formats them differently.
 
 ```json
-// ❌ Ambiguous — is this MM-DD or DD-MM?
+// ❌ Ambiguous - is this MM-DD or DD-MM?
 { "createdAt": "01/02/2024" }
 
 // ✅ ISO 8601 is the standard
@@ -41,7 +41,7 @@ JSON has **no native date type**. Dates become strings, and every system formats
 ```java
 // ❌ Don't serialize dates as timestamps
 @JsonFormat(shape = JsonFormat.Shape.NUMBER)
-private LocalDateTime createdAt;  // 1704197400000 — unreadable
+private LocalDateTime createdAt;  // 1704197400000 - unreadable
 
 // ✅ Use ISO format
 @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'")
@@ -52,7 +52,7 @@ private LocalDateTime createdAt;
 
 ## XML
 
-Verbose but powerful — schemas, namespaces, transformation (XSLT), and validation built-in.
+Verbose but powerful, schemas, namespaces, transformation (XSLT), and validation built-in.
 
 **When to use:** SOAP web services, enterprise integrations (banks, government), legacy systems, configuration (Maven, Spring).
 
@@ -114,11 +114,11 @@ protoc --plugin=protoc-gen-ts_proto=./node_modules/.bin/protoc-gen-ts_proto \
 
 ### Key Characteristics
 
-- **Binary format** — not human-readable, requires `.proto` schema to decode
-- **Forward/backward compatible** — field numbers are the contract, not field names
+- **Binary format:** not human-readable, requires `.proto` schema to decode
+- **Forward/backward compatible:** field numbers are the contract, not field names
 - **Much smaller** than JSON (typically 3-10x)
 - **Much faster** to serialize/deserialize (20-100x vs JSON)
-- **Strongly typed** — schema is the single source of truth
+- **Strongly typed:** schema is the single source of truth
 
 ---
 
@@ -126,7 +126,7 @@ protoc --plugin=protoc-gen-ts_proto=./node_modules/.bin/protoc-gen-ts_proto \
 
 Schema-based binary format with built-in schema evolution. The standard for big data ecosystems.
 
-**When to use:** [[02 Event-Driven Architecture]] with Kafka, Hadoop/Spark pipelines, any system requiring schema evolution without downtime.
+**When to use:** [[023 Event-Driven Architecture|02 Event-Driven Architecture]] with Kafka, Hadoop/Spark pipelines, any system requiring schema evolution without downtime.
 
 ### Schema Definition (.avsc)
 
@@ -146,8 +146,8 @@ Schema-based binary format with built-in schema evolution. The standard for big 
 
 | Change | Reader Compatibility |
 |--------|---------------------|
-| Add field with default | ✅ Safe — old data gets default |
-| Remove field with default | ✅ Safe — reader ignores unknown fields |
+| Add field with default | ✅ Safe ;  old data gets default |
+| Remove field with default | ✅ Safe ;  reader ignores unknown fields |
 | Add field without default | ❌ Breaks old readers |
 | Change field type | ❌ Breaks unless union |
 
@@ -179,7 +179,7 @@ Schema-based binary format with built-in schema evolution. The standard for big 
 
 ## Java Serialization
 
-Built-in Java object serialization — rarely recommended but important to understand.
+Built-in Java object serialization; rarely recommended but important to understand.
 
 ```java
 // ✅ Implement Serializable
@@ -196,15 +196,15 @@ public class User implements Serializable {
 
 | Concept | Purpose |
 |---------|---------|
-| `Serializable` | Marker interface — enables serialization |
-| `serialVersionUID` | Version control — mismatch causes `InvalidClassException` |
+| `Serializable` | Marker interface ;  enables serialization |
+| `serialVersionUID` | Version control ;  mismatch causes `InvalidClassException` |
 | `transient` | Skip field during serialization (passwords, tokens, caches) |
 
 ### ⚠️ Don't Use Java Serialization for New Projects
 
-- **Security vulnerabilities** — deserialization attacks (RCE via gadget chains)
-- **Not cross-language** — Java-only
-- **Verbose binary format** — larger than JSON, slower than Protobuf
+- **Security vulnerabilities:** deserialization attacks (RCE via gadget chains)
+- **Not cross-language:** Java-only
+- **Verbose binary format:** larger than JSON, slower than Protobuf
 - **Better alternatives:** JSON (Jackson), Protobuf, or Avro
 
 ```java
@@ -231,4 +231,4 @@ Need human-readable? → Yes → Is it a web API? → Yes → JSON
 
 ---
 
-**Sources:** Google Protocol Buffers docs; Apache Avro spec 1.11; Martin Kleppmann, *Designing Data-Intensive Applications* (2017); JSON.org
+**Sources:** Google Protocol Buffers docs; apache Avro spec 1.11; Martin Kleppmann, *Designing Data-Intensive Applications* (2017); JSON.org

@@ -10,7 +10,7 @@ source: "PLT Ch 18-20"
 
 # Operational Semantics
 
-An **operational semantics** describes how programs evaluate in terms of the language itself—essentially specifying an interpreter using mathematical relations between syntactic objects. Unlike compilation to a machine model, it defines meaning directly through inference rules.
+An **operational semantics** describes how programs evaluate in terms of the language itself; essentially specifying an interpreter using mathematical relations between syntactic objects. Unlike compilation to a machine model, it defines meaning directly through inference rules.
 
 ## Big-Step Operational Semantics
 
@@ -28,7 +28,7 @@ This **judgment form** states: "Expression `e` evaluates to value `v`." Defining
 
 A set of inference rules defining this judgment form constitutes the big-step operational semantics. Rules can be read:
 
-- **Top-down**: "If premises hold, then the conclusion holds"
+- **Top-down:** "If premises hold, then the conclusion holds"
 - **Bottom-up** (more implementation-oriented): "To evaluate X, do Y"
 
 ### Example: Numbers and Addition
@@ -83,7 +83,7 @@ values  v ::= n | b
 v ⇓ v
 ```
 
-When an operator receives incompatible operand types (e.g., `true + 2`), there is **no derivation** for the judgment—this is a **type error**. Detecting such errors at run time is **dynamic typing**:
+When an operator receives incompatible operand types (e.g., `true + 2`), there is **no derivation** for the judgment; this is a **type error**. Detecting such errors at run time is **dynamic typing:**
 
 ```scala
 case class DynamicTypeError(e: Expr) extends Exception
@@ -157,7 +157,7 @@ E ⊢ e₁ ⇓ v₁    E[x ↦ v₁] ⊢ e₂ ⇓ v₂
 E ⊢ const x = e₁; e₂ ⇓ v₂
 ```
 
-This reveals that `const x = e₁; e₂` evaluates `e₂` in an environment extended with `x` bound to the result of `e₁`—the scope of `x` is `e₂`.
+This reveals that `const x = e₁; e₂` evaluates `e₂` in an environment extended with `x` bound to the result of `e₁`, the scope of `x` is `e₂`.
 
 ## JavaScripty: Full Big-Step Semantics
 
@@ -192,7 +192,7 @@ values      v ::= (x) => e₁
 expressions e ::= e₁(e₂)
 ```
 
-Function literals are values—they cannot reduce further until called. Functions are **first-class**: they can be passed and returned like any other value.
+Function literals are values; they cannot reduce further until called. Functions are **first-class:** they can be passed and returned like any other value.
 
 ### Dynamic Scoping (The "Historical Mistake")
 
@@ -204,7 +204,7 @@ E ⊢ e₁ ⇓ (x) => e'    E ⊢ e₂ ⇓ v₂    E[x ↦ v₂] ⊢ e' ⇓ v'
 E ⊢ e₁(e₂) ⇓ v'
 ```
 
-This evaluates the function body `e'` in the **current** environment `E`, not the environment where the function was defined. This is **dynamic scoping**—the binding site of a variable depends on program execution.
+This evaluates the function body `e'` in the **current** environment `E`, not the environment where the function was defined. This is **dynamic scoping**, the binding site of a variable depends on program execution.
 
 **Example exhibiting dynamic scoping:**
 
@@ -214,8 +214,8 @@ const g = (y) => x;
 ((x) => g(2))(3)
 ```
 
-- Under **static scoping**: `x` in `g` always refers to the outer `x = 1`, result is `1`
-- Under **dynamic scoping**: `x` in `g` resolves to the caller's `x = 3`, result is `3`
+- Under **static scoping:** `x` in `g` always refers to the outer `x = 1`, result is `1`
+- Under **dynamic scoping:** `x` in `g` resolves to the caller's `x = 3`, result is `3`
 
 ## Closures (Static Scoping)
 
@@ -225,13 +225,13 @@ A **closure** captures both the function and its definition environment:
 v ::= (x) => e₁ [E]   "function literal with environment E"
 ```
 
-**EvalFun** — evaluating a function literal creates a closure:
+**EvalFun:** evaluating a function literal creates a closure:
 
 ```
 E ⊢ (x) => e ⇓ (x) => e [E]
 ```
 
-**EvalCall** — function body evaluated in the closure's environment:
+**EvalCall:** function body evaluated in the closure's environment:
 
 ```
 E ⊢ e₁ ⇓ (x) => e' [E']    E ⊢ e₂ ⇓ v₂    E'[x ↦ v₂] ⊢ e' ⇓ v'
@@ -252,7 +252,7 @@ case Call(e1, e2) => eval(env, e1) match {
 
 ## Substitution Model
 
-An alternative to closures for implementing static scoping is **substitution**: replace variable uses with their values eagerly, maintaining only closed expressions.
+An alternative to closures for implementing static scoping is **substitution:** replace variable uses with their values eagerly, maintaining only closed expressions.
 
 Write `[v₁/x]e` for substitution of value `v₁` for free variable uses of `x` in `e`.
 
@@ -294,9 +294,9 @@ The `xopt` is `Some(x)` for `x(y) => e₁` or `None` for `(y) => e₁`.
 
 JavaScript provides multiple concrete syntax forms for function literals:
 
-- `(x) => e` — arrow function (single expression)
-- `(x) => { body }` — arrow function with block body
-- `function x?(y) { body }` — traditional function syntax
+- `(x) => e`: arrow function (single expression)
+- `(x) => { body }`: arrow function with block body
+- `function x?(y) { body }`: traditional function syntax
 
 Function bodies (`body`) consist of declarations followed by `return e;`.
 
@@ -305,7 +305,7 @@ Function bodies (`body`) consist of declarations followed by `return e;`.
 | Concept | Definition |
 |---------|-----------|
 | **Big-step semantics** | Evaluation from expression to value in one step via inference rules |
-| **Judgment form** | `E ⊢ e ⇓ v` — in environment E, expression e evaluates to value v |
+| **Judgment form** | `E ⊢ e ⇓ v` ;  in environment E, expression e evaluates to value v |
 | **Dynamic typing** | Type errors detected at runtime when no derivation exists |
 | **Type coercion** | Implicit value conversion via judgment `v ⇝ n` |
 | **Dynamic scoping** | Variable binding depends on call-time environment |
@@ -315,5 +315,5 @@ Function bodies (`body`) consist of declarations followed by `return e;`.
 
 ## Related
 
-- [[01_Lambda_Calculus]] — Foundation of function abstraction
-- [[03_Type_Systems]] — Static typing as alternative to dynamic type checking
+- [[01_Expressions_and_Evaluation|01 Lambda Calculus]]: Foundation of function abstraction
+- [[05_Type_Systems_and_Judgments|03 Type Systems]]: Static typing as alternative to dynamic type checking

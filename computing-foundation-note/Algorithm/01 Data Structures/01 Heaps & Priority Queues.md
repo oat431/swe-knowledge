@@ -15,10 +15,10 @@ A heap is a complete binary tree where every parent is ordered relative to its c
 
 | Operation | Time |
 |-----------|:----:|
-| peek() — get min/max | O(1) |
-| insert() — push + bubble up | O(log n) |
-| poll() — remove root + bubble down | O(log n) |
-| heapify() — build from array | O(n) |
+| peek() ;  get min/max | O(1) |
+| insert() ;  push + bubble up | O(log n) |
+| poll() ;  remove root + bubble down | O(log n) |
+| heapify() ;  build from array | O(n) |
 
 ```java
 // Java PriorityQueue (min-heap by default)
@@ -38,7 +38,7 @@ PriorityQueue<Integer> maxHeap =
 
 ## Heap Internals
 
-Stored as an array (no pointers needed — complete tree property):
+Stored as an array (no pointers needed; complete tree property):
 
 ```
 Array index:
@@ -110,7 +110,7 @@ class MinHeap {
 ### Top K Elements
 
 ```java
-// Find K largest elements in array — O(n log k)
+// Find K largest elements in array - O(n log k)
 int[] topK(int[] nums, int k) {
     PriorityQueue<Integer> heap = new PriorityQueue<>(); // min-heap
     for (int n : nums) {
@@ -144,15 +144,15 @@ void heapSort(int[] arr) {
 
 ## Sources
 
-- CLRS — Chapter 6
-- LeetCode — Heap / Priority Queue problem sets
+- CLRS: Chapter 6
+- LeetCode: Heap / Priority Queue problem sets
 
 
 ---
 
 ## Hands-On Exercises
 
-### Exercise 1: Min-Heap Basics — Kth Smallest Element
+### Exercise 1: Min-Heap Basics: Kth Smallest Element
 Given an unsorted array, find the kth smallest element using a max-heap of size k.
 
 ```java
@@ -167,7 +167,7 @@ int kthSmallest(int[] nums, int k) {
 
 ---
 
-### Exercise 2: Top K Elements — Implement from Note
+### Exercise 2: Top K Elements: Implement from Note
 Implement the `topK` method from the note. Test with `nums = [3,1,5,12,2,11]`, `k = 3` → expect `[5,11,12]` (order may vary).
 
 ```java
@@ -181,7 +181,7 @@ int[] topK(int[] nums, int k) {
 
 ---
 
-### Exercise 3: Custom Heap — Build a Max-Heap from Scratch
+### Exercise 3: Custom Heap: Build a Max-Heap from Scratch
 Implement `insert` and `poll` for a max-heap (modify the MinHeap from the note).
 
 ```java
@@ -189,7 +189,7 @@ class MaxHeap {
     private List<Integer> heap = new ArrayList<>();
 
     void insert(int val) {
-        // TODO: Add to end, bubble UP — swap with parent if val > parent
+        // TODO: Add to end, bubble UP - swap with parent if val > parent
     }
 
     int poll() {
@@ -215,7 +215,7 @@ class MaxHeap {
 | 8 | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) (LC 621) | 🟡 Medium | Max-Heap + Cooldown |
 
 ### Assignment Guidelines
-- **Start** with 1–2 (Easy) — basic heap operations.
-- **Then** 3–5 (Medium) — the "Top K" pattern.
+- **Start** with 1–2 (Easy): basic heap operations.
+- **Then** 3–5 (Medium): the "Top K" pattern.
 - **Problems 6–7** (Hard) are classic heap interview questions. Study the two-heap median pattern carefully.
 - **Target time:** 10 min per Easy, 25 min per Medium, 35 min per Hard.

@@ -24,7 +24,7 @@ When something breaks between client and server, these tools tell you where and 
 
 ---
 
-## ping — Is It Alive?
+## ping: Is It Alive?
 
 ```bash
 ping api.example.com
@@ -41,7 +41,7 @@ ping api.example.com
 
 ---
 
-## dig / nslookup — DNS Resolution
+## dig / nslookup: DNS Resolution
 
 ```bash
 dig example.com
@@ -58,7 +58,7 @@ nslookup example.com         # Simpler, less detailed
 
 ---
 
-## netstat / ss — What's Listening?
+## netstat / ss: What's Listening?
 
 ```bash
 # netstat (older, widely available)
@@ -76,7 +76,7 @@ ss -tlnp | grep 8080
 
 ---
 
-## curl — The HTTP Swiss Army Knife
+## curl: The HTTP Swiss Army Knife
 
 ```bash
 # Basic GET
@@ -91,7 +91,7 @@ curl -X POST https://api.example.com/orders \
 # Show response headers
 curl -I https://api.example.com/
 
-# Verbose — show headers, TLS handshake, timing
+# Verbose - show headers, TLS handshake, timing
 curl -v https://api.example.com/
 
 # Timing breakdown
@@ -104,7 +104,7 @@ curl -L https://short.link/abc
 
 ---
 
-## telnet / nc — Raw TCP Connection
+## telnet / nc: Raw TCP Connection
 
 ```bash
 # Test if port is open
@@ -112,14 +112,14 @@ telnet api.example.com 443
 # Trying 198.51.100.42...
 # Connected to api.example.com.  ← Port is open!
 
-# nc (netcat) — more powerful
+# nc (netcat) - more powerful
 nc -zv api.example.com 443    # Scan: is port open?
 nc -zv api.example.com 80-90  # Scan range
 ```
 
 ---
 
-## traceroute — What Path?
+## traceroute: What Path?
 
 ```bash
 traceroute api.example.com
@@ -134,7 +134,7 @@ traceroute api.example.com
 
 ---
 
-## tcpdump — What's on the Wire?
+## tcpdump: What's on the Wire?
 
 ```bash
 # Capture traffic on port 443
@@ -152,7 +152,7 @@ tcpdump -i eth0 host 198.51.100.42
 
 ---
 
-## Wireshark — GUI Deep Dive
+## Wireshark: GUI Deep Dive
 
 > Graphical packet analyzer. Capture or open `.pcap` files. Filter, follow TCP streams, inspect TLS handshakes.
 
@@ -169,4 +169,4 @@ tls.handshake.type == 1     # Client Hello (TLS handshake)
 ## Sources
 
 - `man` pages for each tool
-- Wireshark User Guide — https://www.wireshark.org/docs/
+- Wireshark User Guide: https://www.wireshark.org/docs/

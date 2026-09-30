@@ -54,7 +54,7 @@ class PromoPricing implements PricingStrategy {
     public double calculate(Order o) { return o.getTotal() * 0.5; }
 }
 
-// Context uses strategy — swap at runtime
+// Context uses strategy - swap at runtime
 class OrderService {
     private PricingStrategy strategy;
     void setStrategy(PricingStrategy s) { this.strategy = s; }
@@ -70,13 +70,13 @@ const vipPricing: PricingStrategy = (total) => total * 0.8;
 const promoPricing: PricingStrategy = (total) => total * 0.5;
 ```
 
-**Real-world:** Java `Comparator` — pass different comparators to `Collections.sort()` to change sorting behavior.
+**Real-world:** Java `Comparator`; pass different comparators to `Collections.sort()` to change sorting behavior.
 
 ---
 
 ## Observer
 
-**Problem:** One object changes state and multiple others need to know — without tight coupling.
+**Problem:** One object changes state and multiple others need to know, without tight coupling.
 
 ```java
 // Subject
@@ -93,7 +93,7 @@ class EventBus {
     }
 }
 
-// Usage — loose coupling between publisher and subscribers
+// Usage - loose coupling between publisher and subscribers
 eventBus.subscribe("orderPlaced", data -> sendEmail(data));
 eventBus.subscribe("orderPlaced", data -> updateInventory(data));
 eventBus.subscribe("orderPlaced", data -> trackAnalytics(data));
@@ -145,7 +145,7 @@ class DeleteTextCommand implements Command {
     public void undo() { editor.insert(backup, position); }
 }
 
-// Invoker — history for undo/redo
+// Invoker - history for undo/redo
 class CommandHistory {
     private Deque<Command> history = new ArrayDeque<>();
 
@@ -232,7 +232,7 @@ State flow:
 
 ```java
 abstract class DataProcessor {
-    // Template method — final to prevent override
+    // Template method - final to prevent override
     public final void process() {
         readData();
         parseData();
@@ -321,7 +321,7 @@ function* inOrder<T>(node: TreeNode<T> | null): Generator<T> {
 
 ## Chain of Responsibility
 
-**Problem:** Multiple objects may handle a request. Don't hardcode the handler — pass the request along a chain until someone handles it.
+**Problem:** Multiple objects may handle a request. Don't hardcode the handler; pass the request along a chain until someone handles it.
 
 ```java
 // Handler base
@@ -410,6 +410,6 @@ For full implementations with UML diagrams, participants, and trade-offs:
 
 ## Sources
 
-- Gamma et al. — *Design Patterns* (1994), Chapters 5, 9-10
-- Refactoring Guru — https://refactoring.guru/design-patterns/behavioral-patterns
-- Spring Framework docs — Events, AOP, Security Filter Chain
+- Gamma et al.; *Design Patterns* (1994), Chapters 5, 9-10
+- Refactoring Guru: https://refactoring.guru/design-patterns/behavioral-patterns
+- Spring Framework docs: Events, AOP, Security Filter Chain

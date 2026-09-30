@@ -12,18 +12,18 @@ Transactions keep your data consistent when things go wrong. Locking keeps concu
 
 ---
 
-## ACID — The Four Guarantees
+## ACID: The Four Guarantees
 
 | Property | Meaning | Example |
 |----------|---------|---------|
-| **Atomicity** | All or nothing. A transaction either fully completes or fully rolls back. | Transfer $100 from A to B: debit A AND credit B — or neither. |
+| **Atomicity** | All or nothing. A transaction either fully completes or fully rolls back. | Transfer $100 from A to B: debit A AND credit B ;  or neither. |
 | **Consistency** | Transaction moves DB from one valid state to another. Constraints hold. | After transfer, total money in system is unchanged. |
 | **Isolation** | Concurrent transactions don't interfere with each other. | Two transfers at the same time don't create or destroy money. |
 | **Durability** | Committed data survives crashes, power loss, etc. | After "transaction committed," the data is safe. |
 
 ---
 
-## Isolation Levels — The Trade-Off
+## Isolation Levels: The Trade-Off
 
 Higher isolation = less concurrency. Lower isolation = more anomalies.
 
@@ -82,7 +82,7 @@ public class Account {
 
 // If two transactions read version=1,
 // first to commit updates to version=2.
-// Second gets OptimisticLockException — must retry.
+// Second gets OptimisticLockException - must retry.
 ```
 
 ---
@@ -119,5 +119,5 @@ public void transfer(Long fromId, Long toId, BigDecimal amount) {
 
 ## Sources
 
-- PostgreSQL Concurrency Control — https://www.postgresql.org/docs/current/mvcc.html
-- Java Persistence Locking — https://jakarta.ee/specifications/persistence/
+- PostgreSQL Concurrency Control: https://www.postgresql.org/docs/current/mvcc.html
+- Java Persistence Locking: https://jakarta.ee/specifications/persistence/

@@ -6,9 +6,9 @@ tags:
 - security
 ---
 
-# 06 OS Security Model — Capabilities, SELinux & Seccomp
+# 06 OS Security Model: Capabilities, SELinux & Seccomp
 
-Classic Unix security is one bit per process: root or not. Everything here — capabilities, seccomp, LSMs, user namespaces — is the kernel growing finer-grained controls so a compromised process doesn't own the machine. This is the security layer containers stand on; see [[05 Containers - Namespaces & Cgroups]] and [[01 System Calls & Kernel]] for the syscall path these mechanisms hook.
+Classic Unix security is one bit per process: root or not. Everything here (capabilities, seccomp, LSMs, user namespaces) is the kernel growing finer-grained controls so a compromised process doesn't own the machine. This is the security layer containers stand on; see [[05 Containers - Namespaces & Cgroups]] and [[01 System Calls & Kernel]] for the syscall path these mechanisms hook.
 
 ---
 
@@ -16,7 +16,7 @@ Classic Unix security is one bit per process: root or not. Everything here — c
 
 > DAC (discretionary access control): every file has an owner + permission bits, and the kernel checks them on each access. One exception: **UID 0 bypasses nearly every check.**
 
-The trouble: a web server that needs to `bind(80)` gets all of root — read any file, load kernel modules, reboot the box, change the firewall. One RCE in the app = total compromise. Capabilities, seccomp, and MAC all exist to split that single bit into pieces.
+The trouble: a web server that needs to `bind(80)` gets all of root; read any file, load kernel modules, reboot the box, change the firewall. One RCE in the app = total compromise. Capabilities, seccomp, and MAC all exist to split that single bit into pieces.
 
 ---
 
@@ -28,17 +28,17 @@ The trouble: a web server that needs to `bind(80)` gets all of root — read any
 
 | Capability | Grants |
 |------------|--------|
-| `CAP_SYS_ADMIN` | ~"the new root" — mount, namespaces, bpf, dozens of unrelated ioctls. Giant grab-bag; never grant casually |
+| `CAP_SYS_ADMIN` | ~"the new root" ;  mount, namespaces, bpf, dozens of unrelated ioctls. Giant grab-bag; never grant casually |
 | `CAP_NET_ADMIN` | Network config: interfaces, routing, iptables/nftables, `SO_PRIORITY` |
 | `CAP_NET_BIND_SERVICE` | `bind()` to ports < 1024 **without root** |
-| `CAP_NET_RAW` | Raw sockets — ping, packet crafting (also sniffing) |
+| `CAP_NET_RAW` | Raw sockets ;  ping, packet crafting (also sniffing) |
 | `CAP_DAC_OVERRIDE` | Bypass file read/write/execute permission checks |
 | `CAP_DAC_READ_SEARCH` | Bypass read + directory-search checks |
 | `CAP_CHOWN` | Change file ownership arbitrarily |
 | `CAP_FOWNER` | Bypass "must own the file" checks (chmod, utimes…) |
 | `CAP_SETUID` / `CAP_SETGID` | Arbitrary UID/GID transitions |
 | `CAP_KILL` | Signal any process |
-| `CAP_SYS_PTRACE` | ptrace anything — read other processes' memory (container-escape vector) |
+| `CAP_SYS_PTRACE` | ptrace anything ;  read other processes' memory (container-escape vector) |
 | `CAP_SYS_MODULE` | Load kernel modules = total root, permanently |
 | `CAP_SYS_RESOURCE` | Raise rlimits past hard limits |
 
@@ -51,14 +51,14 @@ getpcaps <pid>                      # per-process caps
 
 ### Docker's Default
 
-Docker **drops ALL** capabilities, then adds back a small default set (~14: `CHOWN`, `DAC_OVERRIDE`, `FSETID`, `FOWNER`, `MKNOD`, `NET_RAW`, `SETGID`, `SETUID`, `SETFCAP`, `SETPCAP`, `NET_BIND_SERVICE`, `SYS_CHROOT`, `KILL`, `AUDIT_WRITE`). Notably **absent**: `SYS_ADMIN`, `NET_ADMIN`, `SYS_MODULE`, `SYS_PTRACE`.
+Docker **drops ALL** capabilities, then adds back a small default set (~14: `CHOWN`, `DAC_OVERRIDE`, `FSETID`, `FOWNER`, `MKNOD`, `NET_RAW`, `SETGID`, `SETUID`, `SETFCAP`, `SETPCAP`, `NET_BIND_SERVICE`, `SYS_CHROOT`, `KILL`, `AUDIT_WRITE`). Notably **absent:** `SYS_ADMIN`, `NET_ADMIN`, `SYS_MODULE`, `SYS_PTRACE`.
 
 ```bash
 docker run --cap-drop=ALL --cap-add=NET_BIND_SERVICE myapp
 docker inspect -f '{{.HostConfig.CapDrop}} {{.HostConfig.CapAdd}}' <c>
 ```
 
-**Ambient capabilities** (kernel 4.3+): the fourth set that survives execve of a *non-privileged* binary — lets a non-root child keep e.g. `CAP_NET_BIND_SERVICE` without file caps. `systemd` `AmbientCapabilities=` uses this.
+**Ambient capabilities** (kernel 4.3+): the fourth set that survives execve of a *non-privileged* binary, lets a non-root child keep e.g. `CAP_NET_BIND_SERVICE` without file caps. `systemd` `AmbientCapabilities=` uses this.
 
 ### no_new_privs
 
@@ -78,21 +78,21 @@ app: read(fd,...) ──► syscall entry ──► BPF filter ──► allowed
 ```
 
 - Two modes: strict (only read/write/exit/sigreturn) and **filter** (`SECCOMP_MODE_FILTER`, the one everyone means); loaded via `prctl(PR_SET_SECCOMP)` or `seccomp(2)`
-- **Why it matters:** the kernel has ~450 syscalls; the average server app uses ~50. Every unused syscall is unexercised attack surface — seccomp deletes it. Log4Shell-style lesson: **apps have bugs; assume breach, then make the kernel say no.** A container escape RCE that can't call `keyctl`, `bpf`, `kexec_load`, `init_module`, `ptrace`, or `mount` has most of its exploit toolkit confiscated
-- **Docker's default profile** (~default.json, bundled with the engine) blocks ~44 syscalls — `keyctl/add_key/request_key` (kernel keyring exploits), `kexec_load*` (load a new kernel!), `bpf` (load programs), `mount/umount2`, `init_module`, `ptrace` (pre-4.8), `reboot`, `unshare/clone` with new namespaces (blocks nested privilege escalation)
+- **Why it matters:** the kernel has ~450 syscalls; the average server app uses ~50. Every unused syscall is unexercised attack surface; seccomp deletes it. Log4Shell-style lesson: **apps have bugs; assume breach, then make the kernel say no.** A container escape RCE that can't call `keyctl`, `bpf`, `kexec_load`, `init_module`, `ptrace`, or `mount` has most of its exploit toolkit confiscated
+- **Docker's default profile** (~default.json, bundled with the engine) blocks ~44 syscalls: `keyctl/add_key/request_key` (kernel keyring exploits), `kexec_load*` (load a new kernel!), `bpf` (load programs), `mount/umount2`, `init_module`, `ptrace` (pre-4.8), `reboot`, `unshare/clone` with new namespaces (blocks nested privilege escalation)
 - Real users: **Chromium** (each renderer sandboxed), **systemd** (`SystemCallFilter=` in units), Firefox sandboxes, gVisor-style userspace kernels intercept everything
 
 ---
 
-## LSM — Linux Security Modules
+## LSM: Linux Security Modules
 
-> A framework of **hook points** inside the kernel (on open, exec, bind, mount, ptrace…). After DAC passes, every loaded LSM gets a veto. LSMs can only *deny* — never grant past DAC.
+> A framework of **hook points** inside the kernel (on open, exec, bind, mount, ptrace…). After DAC passes, every loaded LSM gets a veto. LSMs can only *deny*; never grant past DAC.
 
 ### SELinux vs AppArmor
 
 | | SELinux | AppArmor |
 |---|---------|----------|
-| Model | **Label-based MAC** — every object (file, socket, process) has a security context in extended attributes | **Path-based** — profiles written against file paths/globs |
+| Model | **Label-based MAC** ;  every object (file, socket, process) has a security context in extended attributes | **Path-based**, profiles written against file paths/globs |
 | Policy | Massive typed policy: domains × types × classes × actions | Per-application profile, simpler to read/write |
 | Default on | RHEL, Fedora, CentOS, Android | Ubuntu, Debian, SUSE |
 | Config lives | `/etc/selinux/`, policy in `/etc/selinux/targeted/` | `/etc/apparmor.d/` |
@@ -115,7 +115,7 @@ ps -Z                            # process contexts
 | Mode | Behavior |
 |------|----------|
 | **Enforcing** | Policy applied; denials block + log |
-| **Permissive** | Everything allowed; denials **logged only** — the debugging mode |
+| **Permissive** | Everything allowed; denials **logged only** ;  the debugging mode |
 | **Disabled** | Off (requires reboot to re-enable; labels gone stale) |
 
 ```bash
@@ -125,7 +125,7 @@ semanage fcontext -a -t httpd_sys_content_t "/srv/www(/.*)?"
 restorecon -Rv /srv/www          # relabel properly
 ```
 
-**Why `chcon` quick-fixes are wrong:** `chcon` sets the label *now*, but `restorecon`/relabel-on-boot reverts it — and it papers over *why* the file had the wrong label. Fix the fcontext rule, then `restorecon`. Same for blindly feeding everything to `audit2allow`: it will happily write a rule that allows the **attack you're being alerted about** — read each denial first; many are genuine bugs (wrong label, wrong directory) not policy gaps.
+**Why `chcon` quick-fixes are wrong:** `chcon` sets the label *now*, but `restorecon`/relabel-on-boot reverts it (and it papers over *why* the file had the wrong label. Fix the fcontext rule, then `restorecon`. Same for blindly feeding everything to `audit2allow`: it will happily write a rule that allows the **attack you're being alerted about**) read each denial first; many are genuine bugs (wrong label, wrong directory) not policy gaps.
 
 ---
 
@@ -143,7 +143,7 @@ DAC = "my file, my rules." MAC = "admin's rules, regardless of what owners set."
 
 ## How It Stacks in Containers
 
-Defense in depth — each layer assumes the one below leaked:
+Defense in depth; each layer assumes the one below leaked:
 
 ```
         ┌───────────────────────────────┐
@@ -183,8 +183,8 @@ sysctl kernel.dmesg_restrict kernel.kptr_restrict
 ## Sources
 
 - `man 7 capabilities`, `man 2 seccomp`, `man 8 getcap`, `man 8 selinux`, `man 8 audit2allow`
-- Kernel docs: `Documentation/security/` (SELinux, AppArmor, LSM) — https://docs.kernel.org/security/
-- Docker default seccomp profile — https://github.com/moby/moby/blob/master/profiles/seccomp/default.json
-- Chrome OS / Chromium seccomp-bpf sandbox docs — https://chromium.googlesource.com/chromium/src/+/main/docs/design/sandbox.md
-- LWN: "LSM stacking" — https://lwn.net/Articles/777036/; "A seccomp overview" — https://lwn.net/Articles/656067/
+- Kernel docs: `Documentation/security/` (SELinux, AppArmor, LSM): https://docs.kernel.org/security/
+- Docker default seccomp profile: https://github.com/moby/moby/blob/master/profiles/seccomp/default.json
+- Chrome OS / Chromium seccomp-bpf sandbox docs: https://chromium.googlesource.com/chromium/src/+/main/docs/design/sandbox.md
+- LWN: "LSM stacking" (https://lwn.net/Articles/777036/; "A seccomp overview") https://lwn.net/Articles/656067/
 - National Cyber Security Centre / Red Hat SELinux guides

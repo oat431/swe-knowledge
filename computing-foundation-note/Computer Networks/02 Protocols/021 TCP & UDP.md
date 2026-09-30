@@ -11,13 +11,14 @@ TCP is the reliable workhorse. UDP is the fast-and-loose alternative. Every back
 
 ---
 
-## TCP — Transmission Control Protocol
+## TCP: Transmission Control Protocol
 
 > Connection-oriented, reliable, ordered, error-checked delivery of a stream of bytes.
 
 ### The 3-Way Handshake
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'actorBkg':'#19362D','actorBorder':'#1FB854','actorTextColor':'#CDD3D1','actorLineColor':'#1FB854','signalColor':'#CDD3D1','signalTextColor':'#CDD3D1','labelBoxBkgColor':'#161212','labelBoxBorderColor':'#1FB854','labelTextColor':'#CDD3D1','loopTextColor':'#CAC9C9','noteBkgColor':'#1EB88E','noteTextColor':'#000C07','activationBkgColor':'#1EB88E','activationBorderColor':'#1FB8AB','sequenceNumberColor':'#000000','background':'#1B1717','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 sequenceDiagram
     participant C as Client
     participant S as Server
@@ -27,9 +28,11 @@ sequenceDiagram
     Note over C,S: Data Transfer
 ```
 
+
 ### The 4-Way Teardown
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'actorBkg':'#19362D','actorBorder':'#1FB854','actorTextColor':'#CDD3D1','actorLineColor':'#1FB854','signalColor':'#CDD3D1','signalTextColor':'#CDD3D1','labelBoxBkgColor':'#161212','labelBoxBorderColor':'#1FB854','labelTextColor':'#CDD3D1','loopTextColor':'#CAC9C9','noteBkgColor':'#1EB88E','noteTextColor':'#000C07','activationBkgColor':'#1EB88E','activationBorderColor':'#1FB8AB','sequenceNumberColor':'#000000','background':'#1B1717','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 sequenceDiagram
     participant C as Client
     participant S as Server
@@ -40,6 +43,7 @@ sequenceDiagram
     Note right of C: TIME_WAIT (2MSL)
     Note over C,S: Connection closed
 ```
+
 
 ---
 
@@ -65,7 +69,7 @@ sequenceDiagram
 
 ---
 
-## UDP — User Datagram Protocol
+## UDP: User Datagram Protocol
 
 > Connectionless, unreliable, no ordering, no retransmission. Just sends datagrams.
 
@@ -74,7 +78,7 @@ sequenceDiagram
 | Connection-oriented (handshake) | Connectionless |
 | Guaranteed delivery | Best-effort delivery |
 | Ordered | No ordering guarantee |
-| Flow + congestion control | None — you control rate |
+| Flow + congestion control | None ;  you control rate |
 | Heavy header (20 bytes) | Light header (8 bytes) |
 | HTTP, SSH, SMTP, FTP | DNS, VoIP, video streaming, gaming, DHCP |
 
@@ -82,25 +86,25 @@ sequenceDiagram
 
 | ✅ Use UDP | ❌ Use TCP Instead |
 |-----------|------------------|
-| Real-time (VoIP, video calls) — lost packet < delayed retransmission | File transfers — missing data = corrupt file |
-| DNS queries (small, one-packet, fast) | HTTP — web pages must be complete |
-| Multiplayer games — latest state > complete history | Email — must arrive intact |
-| DHCP — broadcast discovery | Database replication |
+| Real-time (VoIP, video calls) ;  lost packet < delayed retransmission | File transfers, missing data = corrupt file |
+| DNS queries (small, one-packet, fast) | HTTP ;  web pages must be complete |
+| Multiplayer games ;  latest state > complete history | Email; must arrive intact |
+| DHCP ;  broadcast discovery | Database replication |
 
 ---
 
-## QUIC — The Best of Both
+## QUIC: The Best of Both
 
-> HTTP/3 uses QUIC (built on UDP). It adds TCP-like reliability at the application layer — no head-of-line blocking, faster handshakes, built-in TLS.
+> HTTP/3 uses QUIC (built on UDP). It adds TCP-like reliability at the application layer: no head-of-line blocking, faster handshakes, built-in TLS.
 
 ---
 
-## Spring Boot — TCP Timeouts
+## Spring Boot: TCP Timeouts
 
 ```yaml
 server:
   tomcat:
-    connection-timeout: 20000   # 20s — close idle connections
+    connection-timeout: 20000   # 20s - close idle connections
     keep-alive-timeout: 5000    # 5s after last request
 ```
 
@@ -117,6 +121,6 @@ template.setRequestFactory(factory);
 
 ## Sources
 
-- RFC 793 — TCP
-- RFC 768 — UDP
-- RFC 9000 — QUIC
+- RFC 793: TCP
+- RFC 768: UDP
+- RFC 9000: QUIC

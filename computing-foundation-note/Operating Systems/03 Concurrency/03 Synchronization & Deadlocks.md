@@ -14,7 +14,7 @@ When multiple threads share data, you need synchronization. When synchronization
 ## The Race Condition
 
 ```java
-// ❌ Race condition — two threads increment counter
+// ❌ Race condition - two threads increment counter
 public class Counter {
     private int count = 0;
     
@@ -36,7 +36,7 @@ public class Counter {
 > Only ONE thread can hold the lock at a time.
 
 ```java
-// Java — synchronized
+// Java - synchronized
 public synchronized void increment() {
     count++;  // Only one thread at a time
 }
@@ -58,7 +58,7 @@ public void increment() {
 > Allows N threads simultaneously. Counter-based.
 
 ```java
-// Connection pool — max 10 connections
+// Connection pool - max 10 connections
 Semaphore semaphore = new Semaphore(10);
 
 public Connection getConnection() throws InterruptedException {
@@ -75,7 +75,7 @@ public Connection getConnection() throws InterruptedException {
 | Mutex | Semaphore |
 |-------|-----------|
 | Binary (locked/unlocked) | Counter (0 to N) |
-| Ownership — only locker unlocks | Any thread can signal |
+| Ownership ;  only locker unlocks | Any thread can signal |
 | One thread at a time | N threads at a time |
 
 ### ReadWriteLock
@@ -131,7 +131,7 @@ try {
 
 ---
 
-## Deadlocks — The Four Conditions
+## Deadlocks: The Four Conditions
 
 > A deadlock requires ALL four conditions. Break ANY one → no deadlock.
 
@@ -143,11 +143,11 @@ try {
 | **Circular Wait** | A → waits → B → waits → C → waits → A | Always acquire locks in consistent order |
 
 ```java
-// ❌ Deadlock-prone — inconsistent lock order
+// ❌ Deadlock-prone - inconsistent lock order
 // Thread 1: lock(A) → lock(B)
 // Thread 2: lock(B) → lock(A)  ← Circular wait!
 
-// ✅ Consistent order — always lock lower ID first
+// ✅ Consistent order - always lock lower ID first
 Long first = Math.min(id1, id2);
 Long second = Math.max(id1, id2);
 synchronized(first) {
@@ -177,7 +177,7 @@ if (lock1.tryLock(1, TimeUnit.SECONDS)) {
 
 ## Lock-Free Programming
 
-> `AtomicInteger`, `AtomicReference`, `ConcurrentHashMap` — use hardware CAS (Compare-And-Swap) instead of locks.
+> `AtomicInteger`, `AtomicReference`, `ConcurrentHashMap`; use hardware CAS (Compare-And-Swap) instead of locks.
 
 ```java
 // ✅ Lock-free counter

@@ -131,15 +131,15 @@ void insert(TrieNode root, String word) {
 
 ## Sources
 
-- CLRS — Chapters 12, 13
-- Sedgewick — Chapter 3 (Trees)
+- CLRS: Chapters 12, 13
+- Sedgewick: Chapter 3 (Trees)
 
 
 ---
 
 ## Hands-On Exercises
 
-### Exercise 1: Tree Traversal — Inorder, Preorder, Postorder
+### Exercise 1: Tree Traversal: Inorder, Preorder, Postorder
 Implement all three recursive traversals for the tree in the note:
 ```
         1
@@ -157,12 +157,12 @@ void postorder(TreeNode root) { /* TODO */ }  // [4,5,2,3,1]
 
 ---
 
-### Exercise 2: BST Search — Validate BST
+### Exercise 2: BST Search: Validate BST
 Implement the search algorithm from the note, then write a function to check if a binary tree is a valid BST.
 
 ```java
 boolean isValidBST(TreeNode root) {
-    // TODO: Use inorder traversal — values must be strictly increasing
+    // TODO: Use inorder traversal - values must be strictly increasing
     // Or use min/max bounds recursively
 }
 ```
@@ -171,7 +171,7 @@ boolean isValidBST(TreeNode root) {
 
 ---
 
-### Exercise 3: Trie — Implement Insert and Search
+### Exercise 3: Trie: Implement Insert and Search
 Implement the Trie `insert` and `search` methods from the note.
 
 ```java
@@ -200,7 +200,7 @@ class Trie {
 | 8 | [Implement Trie](https://leetcode.com/problems/implement-trie-prefix-tree/) (LC 208) | 🟡 Medium | Trie |
 
 ### Assignment Guidelines
-- **Start** with 1–3 (Easy) — basic tree recursion.
-- **Then** 4–8 (Medium) — BST properties, BFS, LCA, Trie.
-- **Problem 4** (Validate BST) is a very common interview trap. Don't just check `left < node < right` locally — check with bounds.
+- **Start** with 1–3 (Easy): basic tree recursion.
+- **Then** 4–8 (Medium): BST properties, BFS, LCA, Trie.
+- **Problem 4** (Validate BST) is a very common interview trap. Don't just check `left < node < right` locally; check with bounds.
 - **Target time:** 10 min per Easy, 20 min per Medium.

@@ -1,6 +1,6 @@
 ---
 tags: [nlp, computer-vision, robotics, artificial-intelligence]
-source: "Russell & Norvig — AIMA Ch 22-25"
+source: "Russell & Norvig, AIMA Ch 22-25"
 ---
 
 # NLP and Perception (Ch 22-25)
@@ -15,17 +15,17 @@ source: "Russell & Norvig — AIMA Ch 22-25"
 
 N-gram models are the foundation of statistical language models. They learn probability distributions from sequences of characters or words.
 
-- **N-gram model:** $P(c_i | c_{i-2:i-1})$ — probability of the next symbol given the previous n-1 symbols
+- **N-gram model:** $P(c_i | c_{i-2:i-1})$: probability of the next symbol given the previous n-1 symbols
 - **Applications:** Language identification, genre classification, named entity recognition
 
-**Smoothing** — solving the zero-frequency problem for sequences not seen in the training corpus:
-- **Laplace smoothing (add-one):** The simplest method — add 1 to each count
+**Smoothing:** solving the zero-frequency problem for sequences not seen in the training corpus:
+- **Laplace smoothing (add-one):** The simplest method: add 1 to each count
 - **Backoff model:** Fall back to lower-order n-gram when higher-order counts are low
 - **Linear interpolation:** Linear combination of trigram, bigram, unigram
 $$P^*(c_i|c_{i-2:i-1}) = \lambda_3 P(c_i|c_{i-2:i-1}) + \lambda_2 P(c_i|c_{i-1}) + \lambda_1 P(c_i)$$
 
 **Model Evaluation:**
-- **Perplexity:** $\text{Perplexity}(c_{1:N}) = P(c_{1:N})^{-1/N}$ — normalized inverse probability. Lower is better
+- **Perplexity:** $\text{Perplexity}(c_{1:N}) = P(c_{1:N})^{-1/N}$: normalized inverse probability. Lower is better
 - **OOV (Out-of-Vocabulary):** Handle unknown words with `<UNK>` token
 
 ### 22.2 Text Classification
@@ -49,7 +49,7 @@ $$\arg\max_c P(c|\text{message}) = \arg\max_c P(\text{message}|c)P(c)$$
 Extracting structured information from text.
 
 - **Attribute-based extraction:** Pattern matching using regular expressions
-- **Relation extraction:** Extract relationships between multiple entities (e.g., FASTUS system — 5-stage cascade FSA)
+- **Relation extraction:** Extract relationships between multiple entities (e.g., FASTUS system; 5-stage cascade FSA)
   1. Tokenization
   2. Complex word handling
   3. Basic phrase processing (noun group, verb group)
@@ -133,7 +133,7 @@ Physical and geometric foundations of image formation.
   - Lambert's Cosine Law: $I = \rho I_0 \cos\theta$
   - Diffuse reflection vs Specular reflection
   - Shadows, indirect lighting (Interreflection)
-- **Color:** Trichromacy — all colors can be matched with R/G/B
+- **Color:** Trichromacy: all colors can be matched with R/G/B
 
 ### 24.2 Early Image-Processing Operations
 
@@ -193,7 +193,7 @@ Recovering 3D information from 2D images.
 Robots are agents that manipulate the physical world through physical effectors.
 
 - **Manipulator (Robot Arm):** Fixed in factory assembly lines, moves within workspace via joint chains
-- **Mobile Robot:** Moves with wheels/legs — UGV, UAV, AUV, planetary exploration
+- **Mobile Robot:** Moves with wheels/legs: UGV, UAV, AUV, planetary exploration
 - **Humanoid Robot:** Human form, integrated walking/manipulation
 
 ### 25.2 Robot Hardware
@@ -299,6 +299,6 @@ Planning under uncertainty.
 
 ## Related
 
-- [[AI Overview]] — All AI topics
-- [[05_Machine_Learning]] — ML techniques used in NLP/vision
-- [[08_AI_Ethics_and_Future]] — Societal impact
+- [[AI Overview]]: All AI topics
+- [[05_Machine_Learning]]: ML techniques used in NLP/vision
+- [[08_AI_Ethics_and_Future]]: Societal impact

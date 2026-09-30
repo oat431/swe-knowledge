@@ -8,7 +8,7 @@ tags:
 
 # 01 Usability Principles
 
-Jakob Nielsen's 10 usability heuristics — the minimum every developer should know about making interfaces usable. These aren't laws of physics, but violating them almost always creates user frustration.
+Jakob Nielsen's 10 usability heuristics, the minimum every developer should know about making interfaces usable. These aren't laws of physics, but violating them almost always creates user frustration.
 
 ---
 
@@ -31,9 +31,9 @@ Jakob Nielsen's 10 usability heuristics — the minimum every developer should k
 
 ## The 3 Most Violated (by developers)
 
-1. **No feedback** — User clicks, nothing happens. Is it loading? Broken? They click again.
-2. **Jargon** — Technical terms in user-facing messages. Users don't know what a "null reference" is.
-3. **No undo** — Destructive actions without confirmation or recovery path.
+1. **No feedback:** User clicks, nothing happens. Is it loading? Broken? They click again.
+2. **Jargon:** Technical terms in user-facing messages. Users don't know what a "null reference" is.
+3. **No undo:** Destructive actions without confirmation or recovery path.
 
 ---
 
@@ -48,4 +48,4 @@ Before shipping any interface, ask:
 
 ## Sources
 
-- Nielsen, Jakob. "10 Usability Heuristics for User Interface Design" — nngroup.com (1994, updated 2020)
+- Nielsen, Jakob. "10 Usability Heuristics for User Interface Design": nngroup.com (1994, updated 2020)

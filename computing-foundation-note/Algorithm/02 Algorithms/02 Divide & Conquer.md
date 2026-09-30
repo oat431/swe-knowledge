@@ -50,7 +50,7 @@ Combine: merge two sorted halves
 ```
 Divide:  partition around pivot
 Conquer: recursively sort left and right of pivot
-Combine: nothing — sorting happens in-place during partition
+Combine: nothing - sorting happens in-place during partition
 ```
 
 ### Binary Search
@@ -58,7 +58,7 @@ Combine: nothing — sorting happens in-place during partition
 ```
 Divide:  compare target with middle element
 Conquer: search in left OR right half (only one!)
-Combine: nothing — result propagates up
+Combine: nothing - result propagates up
 ```
 
 ---
@@ -96,15 +96,15 @@ For recurrences of the form: $T(n) = a \cdot T(n/b) + f(n)$
 
 ## Sources
 
-- CLRS — Chapter 4
-- LeetCode — Divide & Conquer problem sets
+- CLRS: Chapter 4
+- LeetCode: Divide & Conquer problem sets
 
 
 ---
 
 ## Hands-On Exercises
 
-### Exercise 1: Merge Sort — Full Implementation
+### Exercise 1: Merge Sort: Full Implementation
 Implement the complete merge sort from the note. Sort `[38,27,43,3,9,82,10]`.
 
 ```java
@@ -122,10 +122,10 @@ void mergeSort(int[] arr, int left, int right) {
 Given an integer array, find the contiguous subarray with the largest sum. Solve it two ways:
 
 ```java
-// Way 1: Kadane's algorithm — O(n) (greedy/DP approach)
+// Way 1: Kadane's algorithm - O(n) (greedy/DP approach)
 int maxSubArray(int[] nums) { /* TODO */ }
 
-// Way 2: Divide & Conquer — O(n log n)
+// Way 2: Divide & Conquer - O(n log n)
 int maxSubArrayDC(int[] nums, int left, int right) {
     // TODO: Divide at mid
     // Max is either: (a) entirely in left half, (b) entirely in right half,
@@ -137,7 +137,7 @@ int maxSubArrayDC(int[] nums, int left, int right) {
 
 ---
 
-### Exercise 3: Master Theorem — Identify Complexity
+### Exercise 3: Master Theorem: Identify Complexity
 For each recurrence, identify which Master Theorem case applies and state the result:
 
 1. `T(n) = 2T(n/2) + O(n)` → Answer: ?
@@ -160,7 +160,7 @@ Check your answers against the table in the note.
 | 6 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) (LC 4) | 🔴 Hard | Binary Search D&C |
 
 ### Assignment Guidelines
-- **Start** with 1–3 — merge sort and D&C fundamentals.
-- **Then** 4–5 — D&C applications.
+- **Start** with 1–3: merge sort and D&C fundamentals.
+- **Then** 4–5: D&C applications.
 - **Problem 6** (Median of Two Sorted Arrays) is one of the hardest classic interview problems. It requires binary search on partitioning.
 - **Target time:** 15 min per Easy/Medium, 40 min for Hard.

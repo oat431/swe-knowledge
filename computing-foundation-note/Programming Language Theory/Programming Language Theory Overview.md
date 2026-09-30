@@ -2,13 +2,13 @@
 tags: [programming-language-theory, overview, plt]
 ---
 
-# Programming Language Theory — Overview
+# Programming Language Theory: Overview
 
 > **Source:** *Principles and Practice of Programming Language*
 
 ## What Is This?
 
-This vault covers **programming language theory** — the principles, concepts, and ideas that underlie programming languages. It fills SWEBOK's Computing Foundations KA for language design, type systems, semantics, and implementation.
+This vault covers **programming language theory**, the principles, concepts, and ideas that underlie programming languages. It fills SWEBOK's Computing Foundations KA for language design, type systems, semantics, and implementation.
 
 ## Files
 
@@ -25,6 +25,7 @@ This vault covers **programming language theory** — the principles, concepts, 
 ## How These Topics Relate
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     EXPR["Expressions & Evaluation"] --> BIND["Binding & Scope"]
     BIND --> DATA["Data Types & Polymorphism"]
@@ -34,6 +35,7 @@ flowchart TD
     SEM --> EVAL["Evaluation & Functions"]
     DATA --> TYPE
 ```
+
 
 ## Reading Paths
 
@@ -47,6 +49,6 @@ flowchart TD
 
 ## Related
 
-- [[Computing Foundation Overview]] — All computing foundation topics
-- [[Fundamental/Fundamental Overview|Programming Fundamentals]] — Practical programming concepts
-- [[Design Patterns Simplify/Design Pattern Overview|Design Patterns]] — OOP design patterns
+- [[Computing Foundation Overview]]: All computing foundation topics
+- [[Fundamental/Fundamental Overview|Programming Fundamentals]]: Practical programming concepts
+- [[Design Patterns Simplify/Design Pattern Overview|Design Patterns]]: OOP design patterns

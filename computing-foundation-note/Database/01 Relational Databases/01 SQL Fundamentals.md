@@ -8,7 +8,7 @@ tags:
 
 # 01 SQL Fundamentals
 
-SQL is the universal language of relational databases. Every backend developer needs it — regardless of what ORM they use.
+SQL is the universal language of relational databases. Every backend developer needs it, regardless of what ORM they use.
 
 ---
 
@@ -23,7 +23,7 @@ SQL is the universal language of relational databases. Every backend developer n
 
 ---
 
-## DDL — Building the Structure
+## DDL: Building the Structure
 
 ```sql
 CREATE TABLE orders (
@@ -41,9 +41,9 @@ CREATE INDEX idx_orders_status ON orders(status) WHERE status = 'PENDING';  -- P
 
 ---
 
-## DML — The Core Operations
+## DML: The Core Operations
 
-### SELECT — The 80/20
+### SELECT: The 80/20
 
 ```sql
 -- Basic
@@ -97,14 +97,14 @@ DELETE FROM orders WHERE status = 'CANCELLED' AND created_at < NOW() - INTERVAL 
 ```
 INNER JOIN      → rows that match in BOTH tables
 LEFT JOIN       → ALL rows from left + matching from right
-RIGHT JOIN      → ALL rows from right + matching from left (rare — use LEFT instead)
+RIGHT JOIN      → ALL rows from right + matching from left (rare - use LEFT instead)
 FULL OUTER JOIN → ALL rows from both (PostgreSQL only among major DBs)
 CROSS JOIN      → Cartesian product (every row × every row)
 ```
 
 ---
 
-## Window Functions — The Power Tool
+## Window Functions: The Power Tool
 
 | Function | What It Does |
 |----------|-------------|
@@ -166,5 +166,5 @@ ORDER BY month;
 
 ## Sources
 
-- PostgreSQL Documentation — https://www.postgresql.org/docs/current/sql.html
+- PostgreSQL Documentation: https://www.postgresql.org/docs/current/sql.html
 - SWEBOK v4, Section 6: Database Management

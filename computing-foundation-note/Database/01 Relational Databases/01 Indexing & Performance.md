@@ -26,7 +26,7 @@ The default index type in PostgreSQL, MySQL, Oracle. A balanced tree structure:
 
 - O(log n) lookup, insert, delete
 - Supports equality (`=`) and range queries (`>`, `<`, `BETWEEN`)
-- Supports prefix matching (`LIKE 'ABC%'` — but NOT `LIKE '%ABC'`)
+- Supports prefix matching (`LIKE 'ABC%'`: but NOT `LIKE '%ABC'`)
 
 ---
 
@@ -53,7 +53,7 @@ The default index type in PostgreSQL, MySQL, Oracle. A balanced tree structure:
 | **GiST** | Geometric data, full-text search | PostgreSQL |
 | **BRIN** (Block Range) | Very large tables with natural sort order (time-series) | PostgreSQL |
 | **Partial** | Index only rows matching a condition (WHERE status = 'active') | PostgreSQL, SQL Server |
-| **Covering** | Index includes ALL columns needed for query — no table lookup | PostgreSQL, MySQL (InnoDB) |
+| **Covering** | Index includes ALL columns needed for query ;  no table lookup | PostgreSQL, MySQL (InnoDB) |
 
 ---
 
@@ -98,7 +98,7 @@ CREATE INDEX idx_orders_customer_id ON orders(customer_id);
 ### 2. LIKE with Leading Wildcard
 
 ```sql
--- ❌ Can't use B-tree index — scans entire table
+-- ❌ Can't use B-tree index - scans entire table
 SELECT * FROM products WHERE name LIKE '%widget%';
 
 -- ✅ Solution: Full-text search (GIN index)
@@ -109,7 +109,7 @@ SELECT * FROM products WHERE to_tsvector('english', name) @@ to_tsquery('widget'
 ### 3. Function in WHERE
 
 ```sql
--- ❌ Can't use index on created_at — function prevents it
+-- ❌ Can't use index on created_at - function prevents it
 SELECT * FROM orders WHERE DATE(created_at) = '2024-01-15';
 
 -- ✅ Use range query
@@ -135,5 +135,5 @@ List<Order> findAllWithCustomer();
 
 ## Sources
 
-- PostgreSQL Index Documentation — https://www.postgresql.org/docs/current/indexes.html
-- use-the-index-luke.com — Visual SQL indexing tutorial
+- PostgreSQL Index Documentation: https://www.postgresql.org/docs/current/indexes.html
+- use-the-index-luke.com: Visual SQL indexing tutorial

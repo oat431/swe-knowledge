@@ -29,7 +29,7 @@ The notation $d \mid a$ ("$d$ divides $a$") means $a = kd$ for some integer $k$.
 
 ### Primes and Composites
 
-An integer $a > 1$ whose only divisors are 1 and $a$ is **prime**. An integer $a > 1$ that is not prime is **composite**. The integer 1 is a **unit** — neither prime nor composite.
+An integer $a > 1$ whose only divisors are 1 and $a$ is **prime**. An integer $a > 1$ that is not prime is **composite**. The integer 1 is a **unit**; neither prime nor composite.
 
 ### Division Theorem and Modular Equivalence
 
@@ -69,7 +69,7 @@ where $p_1 < p_2 < \cdots < p_r$ are primes and $e_i > 0$.
 
 ---
 
-## 31.2 Greatest Common Divisor — Euclid's Algorithm
+## 31.2 Greatest Common Divisor: Euclid's Algorithm
 
 ### The GCD Recursion Theorem
 
@@ -123,9 +123,9 @@ A **group** $(S, \oplus)$ has: closure, identity, associativity, and inverses. I
 
 ### Modular Addition and Multiplication
 
-**Additive group:** $(\mathbb{Z}_n, +_n)$ — size $n$, identity 0, inverse of $a$ is $n - a$.
+**Additive group:** $(\mathbb{Z}_n, +_n)$; size $n$, identity 0, inverse of $a$ is $n - a$.
 
-**Multiplicative group:** $(\mathbb{Z}_n^*, \cdot_n)$ — elements are $\{a \in \mathbb{Z}_n : \gcd(a, n) = 1\}$, identity 1.
+**Multiplicative group:** $(\mathbb{Z}_n^*, \cdot_n)$, elements are $\{a \in \mathbb{Z}_n : \gcd(a, n) = 1\}$, identity 1.
 
 $$\mathbb{Z}_n^* = \{[a] \in \mathbb{Z}_n : \gcd(a, n) = 1\}$$
 
@@ -263,7 +263,7 @@ $$M = S_A(P_A(M)) = P_A(S_A(M))$$
 
 - **Encryption:** Bob uses Alice's public key: $C = P_A(M)$
 - **Decryption:** Alice uses her secret key: $M = S_A(C)$
-- **Digital signature:** Alice signs with secret key: $\sigma = S_A(M')$; Bob verifies with public key: $M' = P_A(\sigma)$
+- **Digital signature:** Alice signs with secret key: $\sigma = S_A(M')$; bob verifies with public key: $M' = P_A(\sigma)$
 
 **Security requirement:** Computing $S_A$ from $P_A$ must be computationally infeasible, even though everyone knows $P_A$.
 
@@ -331,16 +331,16 @@ If the sequence reaches 1 after a value other than $\pm 1$, that value is a nont
 | Extended GCD | $O(\lg b)$ | $O(\beta^3)$ |
 | Modular inverse $a^{-1} \bmod n$ | $O(\lg n)$ | $O(\beta^3)$ |
 | Modular exponentiation $a^b \bmod n$ | $O(\beta)$ | $O(\beta^3)$ |
-| CRT reconstruction | $O(k \lg^2 n)$ | — |
+| CRT reconstruction | $O(k \lg^2 n)$ | N/A |
 | Miller-Rabin (per round) | $O(\beta)$ | $O(\beta^3)$ |
 
 Where $\beta$ is the bit length of the largest input integer.
 
 ## Related
 
-- [[Algorithm Overview]] — Math algorithms (GCD, primes, modular exponentiation)
-- [[02 Math Algorithms]] — Basic number theory covered in v1
-- [[06_Geometry_NP_and_Approximation]] — Computational complexity of number-theoretic problems
+- [[Algorithm Overview]]: Math algorithms (GCD, primes, modular exponentiation)
+- [[02 Math Algorithms]]: Basic number theory covered in v1
+- [[35_Approximation_Algorithms|06 Geometry, NP & Approximation]]: Computational complexity of number-theoretic problems
 
 
 ---
@@ -350,7 +350,7 @@ Where $\beta$ is the bit length of the largest input integer.
 ### Exercise 1: Extended Euclidean Algorithm
 Implement `EXTENDED-EUCLID(a, b)` from the note. Trace it for:
 - `EXTENDED-EUCLID(99, 78)` → expect `(3, -11, 14)` so `99·(-11) + 78·14 = 3`
-- `EXTENDED-EUCLID(35, 15)` → expect `(5, ?)` — find x, y such that `35x + 15y = 5`
+- `EXTENDED-EUCLID(35, 15)` → expect `(5, ?)`: find x, y such that `35x + 15y = 5`
 
 ```java
 long[] extendedGcd(long a, long b) {
@@ -367,8 +367,8 @@ long[] extendedGcd(long a, long b) {
 
 ### Exercise 2: Modular Inverse
 Using `EXTENDED-EUCLID`, compute:
-1. `17⁻¹ mod 43` — find x such that `17x ≡ 1 (mod 43)`
-2. `3⁻¹ mod 11` — find x such that `3x ≡ 1 (mod 11)`
+1. `17⁻¹ mod 43`: find x such that `17x ≡ 1 (mod 43)`
+2. `3⁻¹ mod 11`: find x such that `3x ≡ 1 (mod 11)`
 3. Verify: `17 · (17⁻¹ mod 43) mod 43 = 1`
 
 ```java
@@ -404,7 +404,7 @@ long decrypted = modPow(C, d, n); // should be 9
 ---
 
 ### Exercise 4: Miller-Rabin Primality Test
-Implement one round of the Miller-Rabin test for `n = 561` (a Carmichael number — composite but passes Fermat's test).
+Implement one round of the Miller-Rabin test for `n = 561` (a Carmichael number; composite but passes Fermat's test).
 
 1. Write `n - 1 = 2^t · u` where `u` is odd. For 561: `560 = 2^4 · 35`.
 2. Choose witness `a = 2`.
@@ -456,8 +456,8 @@ x ≡ 2 (mod 7)
 | 8 | **Prove: if p is prime, a^{p-1} ≡ 1 (mod p)** | 🔴 Theory | Fermat's Little Theorem |
 
 ### Assignment Guidelines
-- **Start** with 1–5 (LeetCode) — these apply GCD, modular arithmetic, and number theory concepts.
+- **Start** with 1–5 (LeetCode): these apply GCD, modular arithmetic, and number theory concepts.
 - **Problem 5** (Water and Jug) is a beautiful application of Bézout's identity: you can measure `z` liters iff `z` is a multiple of `gcd(x, y)`.
-- **Problems 6–7** are coding projects — implement the full RSA pipeline and Miller-Rabin test.
-- **Problem 8** is a proof exercise — use Lagrange's theorem on the group `Z*_p`.
+- **Problems 6–7** are coding projects: implement the full RSA pipeline and Miller-Rabin test.
+- **Problem 8** is a proof exercise: use Lagrange's theorem on the group `Z*_p`.
 - **Target time:** 15 min per Medium, 45 min for RSA/Miller-Rabin projects.

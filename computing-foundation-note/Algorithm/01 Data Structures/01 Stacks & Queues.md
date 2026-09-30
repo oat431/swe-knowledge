@@ -38,7 +38,7 @@ int top = stack.pop();  // 20
 Maintains elements in increasing/decreasing order. Used when you need "next greater/smaller element."
 
 ```java
-// Next Greater Element — O(n)
+// Next Greater Element - O(n)
 int[] nextGreater(int[] nums) {
     int[] result = new int[nums.length];
     Deque<Integer> stack = new ArrayDeque<>();
@@ -60,7 +60,7 @@ int[] nextGreater(int[] nums) {
 |----------|---------|
 | **Balanced parentheses** | Push on '(', pop on ')' |
 | **Undo/redo** | Push state on each action |
-| **Function calls** | Call stack — recursion uses it implicitly |
+| **Function calls** | Call stack ;  recursion uses it implicitly |
 | **Expression evaluation** | Infix → postfix, evaluate RPN |
 | **DFS** | Stack-based traversal (or recursion) |
 
@@ -106,7 +106,7 @@ deque.removeLast();  // [0, 1]
 | **Sliding window** | Deque for max/min in window |
 | **Task scheduling** | Producer-consumer, thread pools |
 | **LRU Cache** | Queue + Hash Map |
-| **Message queues** | Kafka, RabbitMQ — at scale |
+| **Message queues** | Kafka, RabbitMQ ;  at scale |
 
 ---
 
@@ -123,15 +123,15 @@ deque.removeLast();  // [0, 1]
 
 ## Sources
 
-- CLRS — Chapter 10.1
-- LeetCode — Stack / Queue problem sets
+- CLRS: Chapter 10.1
+- LeetCode: Stack / Queue problem sets
 
 
 ---
 
 ## Hands-On Exercises
 
-### Exercise 1: Stack — Valid Parentheses
+### Exercise 1: Stack: Valid Parentheses
 Use a stack to check if parentheses are balanced. Handle `()`, `{}`, `[]`.
 
 ```java
@@ -147,7 +147,7 @@ boolean isValid(String s) {
 
 ---
 
-### Exercise 2: Monotonic Stack — Next Greater Element
+### Exercise 2: Monotonic Stack: Next Greater Element
 Implement the `nextGreater` method from the note. Test with `[4,5,2,25]` → expect `[5,25,25,-1]`.
 
 ```java
@@ -161,7 +161,7 @@ int[] nextGreater(int[] nums) {
 
 ---
 
-### Exercise 3: Queue — Implement a Queue Using Stacks
+### Exercise 3: Queue: Implement a Queue Using Stacks
 Implement a FIFO queue using only two stacks. `push`, `pop`, `peek`, `empty`.
 
 ```java
@@ -198,7 +198,7 @@ class MyQueue {
 | 8 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) (LC 84) | 🔴 Hard | Monotonic Stack |
 
 ### Assignment Guidelines
-- **Start** with 1–2 (Easy) — basic stack/queue operations.
-- **Then** 3–7 (Medium) — monotonic stack is the key pattern here.
+- **Start** with 1–2 (Easy): basic stack/queue operations.
+- **Then** 3–7 (Medium): monotonic stack is the key pattern here.
 - **Problem 8** (Hard) is a classic monotonic stack problem. Think about finding the next smaller element on both sides.
 - **Target time:** 10 min per Easy, 20 min per Medium, 35 min per Hard.

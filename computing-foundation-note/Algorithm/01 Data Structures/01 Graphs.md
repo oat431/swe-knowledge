@@ -9,7 +9,7 @@ tags:
 
 # 01 Graphs
 
-A graph G = (V, E) is a set of vertices connected by edges. Graphs model networks, dependencies, recommendations, maps — and they're the most common interview topic after arrays and trees.
+A graph G = (V, E) is a set of vertices connected by edges. Graphs model networks, dependencies, recommendations, maps, and they're the most common interview topic after arrays and trees.
 
 ---
 
@@ -131,15 +131,15 @@ int[] dijkstra(Map<Integer, List<Edge>> graph, int start, int n) {
 
 ## Sources
 
-- CLRS — Chapters 22–25
-- LeetCode — Graph problem sets
+- CLRS: Chapters 22–25
+- LeetCode: Graph problem sets
 
 
 ---
 
 ## Hands-On Exercises
 
-### Exercise 1: BFS — Shortest Path in Unweighted Graph
+### Exercise 1: BFS: Shortest Path in Unweighted Graph
 Implement BFS to find the shortest distance from a source node to all other nodes in an unweighted graph.
 
 ```java
@@ -153,7 +153,7 @@ int[] bfsShortestPath(Map<Integer, List<Integer>> graph, int start, int n) {
 
 ---
 
-### Exercise 2: DFS — Number of Islands
+### Exercise 2: DFS: Number of Islands
 Given a 2D grid of `'1'`s (land) and `'0'`s (water), count the number of islands. An island is formed by connecting adjacent lands horizontally or vertically.
 
 ```java
@@ -167,14 +167,14 @@ int numIslands(char[][] grid) {
 
 ---
 
-### Exercise 3: Topological Sort — Course Schedule
+### Exercise 3: Topological Sort: Course Schedule
 Given `numCourses` and prerequisites `[a, b]` meaning "to take `a`, you must first take `b`", determine if you can finish all courses (detect cycle in directed graph).
 
 ```java
 boolean canFinish(int numCourses, int[][] prerequisites) {
     // TODO: Build adjacency list, then either:
     //   - DFS with 3 colors (white/gray/black) for cycle detection
-    //   - BFS (Kahn's algorithm) — count processed nodes
+    //   - BFS (Kahn's algorithm) - count processed nodes
 }
 ```
 
@@ -194,8 +194,8 @@ boolean canFinish(int numCourses, int[][] prerequisites) {
 | 8 | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) (LC 743) | 🟡 Medium | Dijkstra's |
 
 ### Assignment Guidelines
-- **Start** with 1–2 (Easy) — grid-based DFS/BFS.
-- **Then** 3–6 (Medium) — graph traversal, cycle detection, topological sort.
+- **Start** with 1–2 (Easy): grid-based DFS/BFS.
+- **Then** 3–6 (Medium): graph traversal, cycle detection, topological sort.
 - **Problem 7** (Word Ladder) is a classic BFS interview problem. Treat each word as a node.
 - **Problem 8** (Network Delay Time) is a direct application of Dijkstra's from this note.
 - **Target time:** 10 min per Easy, 25 min per Medium, 35 min per Hard.

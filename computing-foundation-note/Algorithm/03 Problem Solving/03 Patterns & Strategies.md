@@ -45,7 +45,7 @@ n = 1,000,000 → O(n) or O(log n)
 Two indices moving through a sorted array. Opposite ends or same direction.
 
 ```java
-// Pair sum in sorted array — O(n)
+// Pair sum in sorted array - O(n)
 int[] pairSum(int[] arr, int target) {
     int left = 0, right = arr.length - 1;
     while (left < right) {
@@ -63,7 +63,7 @@ int[] pairSum(int[] arr, int target) {
 Maintain a window that slides across the array.
 
 ```java
-// Max sum subarray of size k — O(n)
+// Max sum subarray of size k - O(n)
 int maxSum(int[] arr, int k) {
     int windowSum = 0, maxSum = 0;
     for (int i = 0; i < k; i++) windowSum += arr[i];
@@ -85,7 +85,7 @@ One pointer moves twice as fast. Cycle detection, middle of list.
 Sort by start, then merge overlapping.
 
 ```java
-// Merge overlapping intervals — O(n log n)
+// Merge overlapping intervals - O(n log n)
 int[][] merge(int[][] intervals) {
     Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
     List<int[]> result = new ArrayList<>();
@@ -120,7 +120,7 @@ Dependency ordering. Course schedule, build systems.
 Precompute cumulative sums for O(1) range queries.
 
 ```java
-// Range sum queries — build O(n), query O(1)
+// Range sum queries - build O(n), query O(1)
 int[] prefix = new int[nums.length + 1];
 for (int i = 0; i < nums.length; i++) {
     prefix[i + 1] = prefix[i] + nums[i];
@@ -174,15 +174,15 @@ Efficient string search. Autocomplete, spell checker.
 
 ## Sources
 
-- LeetCode Explore cards — Patterns
-- Grokking the Coding Interview — https://www.educative.io/courses/grokking-the-coding-interview
+- LeetCode Explore cards: Patterns
+- Grokking the Coding Interview: https://www.educative.io/courses/grokking-the-coding-interview
 
 
 ---
 
 ## Hands-On Exercises
 
-### Exercise 1: Two Pointers — Container With Most Water
+### Exercise 1: Two Pointers: Container With Most Water
 Given `n` non-negative integers representing heights, find two lines that together with the x-axis form a container that holds the most water.
 
 ```java
@@ -197,7 +197,7 @@ int maxArea(int[] height) {
 
 ---
 
-### Exercise 2: Sliding Window — Longest Substring Without Repeating Characters
+### Exercise 2: Sliding Window: Longest Substring Without Repeating Characters
 Given a string, find the length of the longest substring without repeating characters.
 
 ```java
@@ -209,7 +209,7 @@ int lengthOfLongestSubstring(String s) {
 
 ---
 
-### Exercise 3: Merge Intervals — Implement from Note
+### Exercise 3: Merge Intervals: Implement from Note
 Implement the `merge` method from the note. Test with `[[1,3],[2,6],[8,10],[15,18]]` → expect `[[1,6],[8,10],[15,18]]`.
 
 ```java
@@ -220,7 +220,7 @@ int[][] merge(int[][] intervals) {
 
 ---
 
-### Exercise 4: Prefix Sum — Subarray Sum Equals K
+### Exercise 4: Prefix Sum: Subarray Sum Equals K
 Given an array of integers and an integer `k`, find the total number of continuous subarrays whose sum equals `k`.
 
 ```java
@@ -235,7 +235,7 @@ int subarraySum(int[] nums, int k) {
 
 ---
 
-### Exercise 5: Big-O Estimation — Practice
+### Exercise 5: Big-O Estimation: Practice
 For each code snippet, determine the Big-O complexity:
 
 ```java
@@ -277,7 +277,7 @@ Write your answers as comments, then verify with the quick estimation table in t
 ### Assignment Guidelines
 - **These problems cover all 10 patterns** from this note. Each problem maps to a specific pattern.
 - **Start** with 1 (Easy).
-- **Then** 2–9 (Medium) — try to identify which pattern each problem uses before solving.
-- **Problem 10** (Hard) — the ultimate binary search challenge.
+- **Then** 2–9 (Medium): try to identify which pattern each problem uses before solving.
+- **Problem 10** (Hard): the ultimate binary search challenge.
 - **After completing all:** Review which patterns you found easiest/hardest. Focus more practice on weak patterns.
 - **Target time:** 10 min per Easy, 20 min per Medium, 40 min for Hard.

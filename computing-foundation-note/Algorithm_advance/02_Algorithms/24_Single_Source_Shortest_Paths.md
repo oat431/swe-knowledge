@@ -11,7 +11,7 @@ source: CLRS
 
 # 24 · Single-Source Shortest Paths
 
-> From a source vertex, find shortest paths to all others. Bellman-Ford handles negative weights; Dijkstra's is faster for non-negative weights.
+> From a source vertex, find shortest paths to all others. Bellman-Ford handles negative weights; dijkstra's is faster for non-negative weights.
 
 ### Problem Definition
 
@@ -70,7 +70,7 @@ BELLMAN-FORD(G, w, s)
 
 ### DAG Shortest Paths
 
-For DAGs, process vertices in **topological order** — each edge relaxed exactly once.
+For DAGs, process vertices in **topological order**; each edge relaxed exactly once.
 
 ```
 DAG-SHORTEST-PATHS(G, w, s)
@@ -111,7 +111,7 @@ DIJKSTRA(G, w, s)
 | Binary min-heap | $O((V + E) \log V)$ |
 | Fibonacci heap | $O(V \log V + E)$ |
 
-**Greedy choice:** Always extract the vertex with minimum $d$ value — safe because all edge weights are nonnegative.
+**Greedy choice:** Always extract the vertex with minimum $d$ value; safe because all edge weights are nonnegative.
 
 ### Algorithm Comparison
 
@@ -131,7 +131,7 @@ Systems of inequalities of the form $x_j - x_i \leq b_k$ can be modeled as short
 
 ## Hands-On Exercises
 
-### Exercise 2: Bellman-Ford — Trace Relaxation
+### Exercise 2: Bellman-Ford: Trace Relaxation
 Given directed graph:
 ```
 S → A (weight 6)
@@ -173,7 +173,7 @@ Source: S. Trace Bellman-Ford:
 | 6 | [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/) (LC 778) | 🔴 Hard | Dijkstra's / Union-Find |
 
 ### Assignment Guidelines
-- **Problem 1**: Direct Dijkstra's application.
-- **Problem 2**: Modified Bellman-Ford with k-stops constraint.
-- **Problem 3**: Dijkstra's with max instead of min.
+- **Problem 1:** Direct Dijkstra's application.
+- **Problem 2:** Modified Bellman-Ford with k-stops constraint.
+- **Problem 3:** Dijkstra's with max instead of min.
 - **Target time:** 20 min per Medium.

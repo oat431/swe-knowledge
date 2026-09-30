@@ -1,5 +1,5 @@
 ---
-title: "AI Foundations — What is AI & Intelligent Agents"
+title: "AI Foundations: What is AI & Intelligent Agents"
 tags:
   - ai
   - agents
@@ -18,8 +18,8 @@ Russell & Norvig organize the definitions of AI along two dimensions: **thought 
 
 | | **Human-based** | **Ideal/rational** |
 |---|---|---|
-| **Thinking** | *Thinking humanly* — cognitive modeling (Newell & Simon's GPS) | *Thinking rationally* — laws of thought / logic (Aristotle, syllogisms) |
-| **Behavior** | *Acting humanly* — Turing Test | *Acting rationally* — rational agent approach ✓ (this book) |
+| **Thinking** | *Thinking humanly* ;  cognitive modeling (Newell & Simon's GPS) | *Thinking rationally*, laws of thought / logic (Aristotle, syllogisms) |
+| **Behavior** | *Acting humanly* ;  Turing Test | *Acting rationally*; rational agent approach ✓ (this book) |
 
 > **Rationality** = doing the "right thing," given what the agent knows.
 
@@ -53,7 +53,7 @@ AI draws from multiple disciplines:
 | Period | Key Events |
 |---|---|
 | **1943–1955 (Gestation)** | McCulloch & Pitts (artificial neurons, 1943), Hebb (Hebbian learning, 1949), Minsky & Edmonds (SNARC, 1950), Turing (1950 paper) |
-| **1956 (Birth)** | Dartmouth workshop — McCarthy coined "artificial intelligence." Newell & Simon demonstrated Logic Theorist. |
+| **1956 (Birth)** | Dartmouth workshop ;  McCarthy coined "artificial intelligence." Newell & Simon demonstrated Logic Theorist. |
 | **1952–1969 (Early enthusiasm)** | GPS (General Problem Solver), Samuel's checkers learning, McCarthy's Lisp (1958), Advice Taker, blocks world microworlds |
 | **1966–1973 (Reality check)** | Machine translation failures, combinatorial explosion, Minsky & Papert's *Perceptrons* limitations |
 | **1969–1979 (Knowledge-based systems)** | DENDRAL, MYCIN (expert systems), shift from weak methods to domain-specific knowledge |
@@ -82,16 +82,16 @@ AI draws from multiple disciplines:
 
 > **Agent** = anything that can be viewed as perceiving its environment through **sensors** and acting upon that environment through **actuators**.
 
-- **Percept** — agent's perceptual inputs at a given instant
-- **Percept sequence** — complete history of everything the agent has ever perceived
-- **Agent function** — abstract mathematical mapping from percept sequences → actions
-- **Agent program** — concrete implementation of the agent function in software/hardware
+- **Percept:** agent's perceptual inputs at a given instant
+- **Percept sequence:** complete history of everything the agent has ever perceived
+- **Agent function:** abstract mathematical mapping from percept sequences → actions
+- **Agent program:** concrete implementation of the agent function in software/hardware
 
 **Vacuum-cleaner world** (toy example): two locations A and B, agent perceives location and dirt status, can move left/right or suck.
 
 ### 2.2 Rationality
 
-> **Rational agent** — for each possible percept sequence, selects an action expected to **maximize its performance measure**, given the evidence from percepts and built-in knowledge.
+> **Rational agent**, for each possible percept sequence, selects an action expected to **maximize its performance measure**, given the evidence from percepts and built-in knowledge.
 
 **What determines rationality (four factors):**
 1. Performance measure (criterion of success)
@@ -100,11 +100,11 @@ AI draws from multiple disciplines:
 4. Percept sequence to date
 
 **Key distinctions:**
-- **Rationality ≠ Omniscience** — rational agents maximize *expected* performance, not *actual* (impossible to know all outcomes)
-- **Rationality ≠ Perfection** — rationality is about the best action given available information
-- **Information gathering** — rational agents should act to modify future percepts (e.g., looking before crossing the street)
-- **Learning** — agents should adapt from experience, not rely solely on designer's prior knowledge
-- **Autonomy** — an agent that relies on prior knowledge rather than its own percepts lacks autonomy; rational agents should be autonomous
+- **Rationality ≠ Omniscience:** rational agents maximize *expected* performance, not *actual* (impossible to know all outcomes)
+- **Rationality ≠ Perfection:** rationality is about the best action given available information
+- **Information gathering:** rational agents should act to modify future percepts (e.g., looking before crossing the street)
+- **Learning:** agents should adapt from experience, not rely solely on designer's prior knowledge
+- **Autonomy:** an agent that relies on prior knowledge rather than its own percepts lacks autonomy; rational agents should be autonomous
 
 ### 2.3 PEAS: Specifying Task Environments
 
@@ -128,7 +128,7 @@ Seven key dimensions that determine agent design:
 | **Deterministic vs. Stochastic** | Is the next state fully determined by current state + action? | Chess = deterministic; taxi = stochastic (tire blowouts, unpredictable traffic) |
 | **Episodic vs. Sequential** | Does each decision affect future episodes? | Part inspection = episodic; chess/taxi = sequential |
 | **Static vs. Dynamic** | Does the environment change while agent deliberates? | Crossword = static; taxi = dynamic; chess with clock = semidynamic |
-| **Discrete vs. Continuous** | State, time, percepts, actions — discrete or continuous? | Chess = discrete; taxi = continuous |
+| **Discrete vs. Continuous** | State, time, percepts, actions ;  discrete or continuous? | Chess = discrete; taxi = continuous |
 | **Known vs. Unknown** | Are the rules/outcomes of the environment known to the agent? | Solitaire = known (rules known, cards hidden); new video game = unknown |
 
 > **Hardest case:** partially observable, multiagent, stochastic, sequential, dynamic, continuous, unknown → taxi driving in a foreign country.
@@ -137,11 +137,11 @@ Seven key dimensions that determine agent design:
 
 Four basic agent architectures (in increasing sophistication):
 
-1. **Simple reflex agents** — act only on the current percept (condition-action rules)
-2. **Model-based reflex agents** — maintain internal state to track unobserved aspects of the world
-3. **Goal-based agents** — have goals that influence decision-making
-4. **Utility-based agents** — use a utility function to evaluate tradeoffs between states
-5. **Learning agents** — can improve performance over time by modifying components
+1. **Simple reflex agents:** act only on the current percept (condition-action rules)
+2. **Model-based reflex agents:** maintain internal state to track unobserved aspects of the world
+3. **Goal-based agents:** have goals that influence decision-making
+4. **Utility-based agents:** use a utility function to evaluate tradeoffs between states
+5. **Learning agents:** can improve performance over time by modifying components
 
 ---
 
@@ -149,7 +149,7 @@ Four basic agent architectures (in increasing sophistication):
 
 | Concept | Definition |
 |---|---|
-| **Artificial Intelligence** | The study of rational agents — systems that perceive and act to achieve the best outcomes |
+| **Artificial Intelligence** | The study of rational agents ;  systems that perceive and act to achieve the best outcomes |
 | **Rational Agent** | Acts to maximize expected performance measure given percepts and knowledge |
 | **Agent Function** | Abstract mapping from percept sequences to actions |
 | **PEAS** | Framework for specifying task environments (Performance, Environment, Actuators, Sensors) |
@@ -161,6 +161,6 @@ Four basic agent architectures (in increasing sophistication):
 
 ## Related
 
-- [[AI Overview]] — All AI topics
-- [[02_Search_and_CSP]] — Problem-solving agents
-- [[05_Machine_Learning]] — Learning agents
+- [[AI Overview]]: All AI topics
+- [[02_Search_and_CSP]]: Problem-solving agents
+- [[05_Machine_Learning]]: Learning agents

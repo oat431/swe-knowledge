@@ -7,13 +7,13 @@ tags:
 
 # Clean Code Overview
 
-Clean code is code that's easy to read, easy to change, and doesn't surprise the reader. It's not about clever one-liners — it's about making life easier for the next developer (including future you). These notes cover the most impactful clean code practices for daily work.
+Clean code is code that's easy to read, easy to change, and doesn't surprise the reader. It's not about clever one-liners; it's about making life easier for the next developer (including future you). These notes cover the most impactful clean code practices for daily work.
 
 ---
 
 ## Why Clean Code?
 
-> "Any fool can write code that a computer can understand. Good programmers write code that humans can understand." — Martin Fowler
+> "Any fool can write code that a computer can understand. Good programmers write code that humans can understand." *(Martin Fowler)*
 
 | Aspect | ❌ Dirty Code | ✅ Clean Code |
 |--------|--------------|---------------|
@@ -36,19 +36,19 @@ Clean code is code that's easy to read, easy to change, and doesn't surprise the
 
 ## Core Principles
 
-1. **Readability > Cleverness** — Write code for humans first, compiler second.
-2. **DRY** — Don't Repeat Yourself. Duplication is the root of all evil in code.
-3. **Single Responsibility** — Every module, class, and function should have one reason to change.
-4. **Boy Scout Rule** — Leave the code cleaner than you found it.
-5. **Fail Fast** — Surface errors as early as possible.
+1. **Readability > Cleverness:** Write code for humans first, compiler second.
+2. **DRY:** Don't Repeat Yourself. Duplication is the root of all evil in code.
+3. **Single Responsibility:** Every module, class, and function should have one reason to change.
+4. **Boy Scout Rule:** Leave the code cleaner than you found it.
+5. **Fail Fast:** Surface errors as early as possible.
 
 ---
 
 ## Related Topics
 
-- [[06 Object-Oriented Programming]] — encapsulation, polymorphism, SOLID principles
-- [[05 Functions & Methods]] — deeper dive into function design and composition
-- [[09 Functional Programming]] — immutability, pure functions, composition
+- [[06 Object-Oriented Programming]]: encapsulation, polymorphism, SOLID principles
+- [[05 Functions & Methods]]: deeper dive into function design and composition
+- [[09 Functional Programming]]: immutability, pure functions, composition
 
 ---
 
@@ -58,14 +58,14 @@ For book-level depth, see the **Clean Code** section in `software-engineering-no
 
 | Topic | Book Summary |
 |-------|-------------|
-| Naming rules & conventions | [[Naming Conventions]] — full chapter with examples |
-| Function design | [[Function Design]] — one thing, small, arguments, side effects |
-| Code smells | [[Code Smells Catalog]] — comprehensive smell list with refactoring moves |
-| Comments | [[Comment Patterns]] — when to comment, when not to |
-| Error handling | [[Error Handling]] — exceptions, null handling, boundaries |
-| SOLID & class design | [[Class Design & SOLID]] — SRP, OCP, LSP, ISP, DIP with examples |
-| Unit testing | [[Unit Testing]] — TDD, test design, assertions |
-| Formatting & style | [[Formatting Style]] — vertical formatting, indentation, team rules |
+| Naming rules & conventions | [[Naming Conventions]] ;  full chapter with examples |
+| Function design | [[Function Design]] ;  one thing, small, arguments, side effects |
+| Code smells | [[Code Smells Catalog]] ;  comprehensive smell list with refactoring moves |
+| Comments | [[Comment Patterns]] ;  when to comment, when not to |
+| Error handling | [[Error Handling]] ;  exceptions, null handling, boundaries |
+| SOLID & class design | [[Class Design & SOLID]] ;  SRP, OCP, LSP, ISP, DIP with examples |
+| Unit testing | [[Unit Testing]] ;  TDD, test design, assertions |
+| Formatting & style | [[Formatting Style]] ;  vertical formatting, indentation, team rules |
 
 Also see **Clean Architecture** (`software-engineering-note/Software Design/Clean Architecture/`) for:
 - Architecture layers and boundaries

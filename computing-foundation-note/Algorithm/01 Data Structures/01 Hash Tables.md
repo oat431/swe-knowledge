@@ -7,7 +7,7 @@ tags:
 
 # 01 Hash Tables
 
-Hash tables give O(1) average-time insert, delete, and lookup. They're the most-used data structure in practice — dictionaries, caches, sets, database indexes all use hashing.
+Hash tables give O(1) average-time insert, delete, and lookup. They're the most-used data structure in practice, dictionaries, caches, sets, database indexes all use hashing.
 
 ---
 
@@ -38,7 +38,7 @@ bucket[7]: ("Bob", 42)
 // Java HashMap uses chaining + red-black tree for large buckets
 HashMap<String, Integer> map = new HashMap<>();
 map.put("Alice", 25);
-map.get("Alice");  // 25 — O(1) average
+map.get("Alice");  // 25 - O(1) average
 ```
 
 ### Open Addressing
@@ -53,10 +53,10 @@ If bucket is taken, probe for next empty slot (linear probing, quadratic probing
 |---------|--------------|
 | **Load factor** | entries / capacity. Default threshold = 0.75. When exceeded → resize (double capacity, rehash all). |
 | **Hash function** | Maps key → integer. Must be deterministic, fast, uniform distribution. |
-| **Rehashing** | When resizing, all entries are re-inserted. O(n) — but amortized over many inserts. |
+| **Rehashing** | When resizing, all entries are re-inserted. O(n) ;  but amortized over many inserts. |
 
 ```java
-// Good hashCode() — uses all significant fields
+// Good hashCode() - uses all significant fields
 @Override
 public int hashCode() {
     return Objects.hash(name, email, age);
@@ -88,7 +88,7 @@ public boolean equals(Object o) {
 | **LRU Cache** | `LinkedHashMap` or `Map + DoublyLinkedList` | Evict least recently used |
 
 ```java
-// Two Sum — O(n)
+// Two Sum - O(n)
 int[] twoSum(int[] nums, int target) {
     Map<Integer, Integer> map = new HashMap<>();
     for (int i = 0; i < nums.length; i++) {
@@ -117,15 +117,15 @@ int[] twoSum(int[] nums, int target) {
 
 ## Sources
 
-- CLRS — Chapter 11
-- Java HashMap source — https://github.com/openjdk/jdk
+- CLRS: Chapter 11
+- Java HashMap source: https://github.com/openjdk/jdk
 
 
 ---
 
 ## Hands-On Exercises
 
-### Exercise 1: Two Sum — HashMap Pattern
+### Exercise 1: Two Sum: HashMap Pattern
 Implement the Two Sum algorithm from the note. Test with `nums = [2,7,11,15]`, `target = 9` → expect `[0,1]`.
 
 ```java
@@ -138,7 +138,7 @@ int[] twoSum(int[] nums, int target) {
 
 ---
 
-### Exercise 2: Frequency Count — First Non-Repeating Character
+### Exercise 2: Frequency Count: First Non-Repeating Character
 Given a string, return the index of the first non-repeating character. Return -1 if none exists.
 
 ```java
@@ -150,7 +150,7 @@ int firstUniqChar(String s) {
 
 ---
 
-### Exercise 3: Group By Key — Group Anagrams
+### Exercise 3: Group By Key: Group Anagrams
 Given an array of strings, group anagrams together. Two strings are anagrams if they have the same characters in the same frequencies.
 
 ```java
@@ -178,7 +178,7 @@ List<List<String>> groupAnagrams(String[] strs) {
 | 8 | [LRU Cache](https://leetcode.com/problems/lru-cache/) (LC 146) | 🟡 Medium | LinkedHashMap / Map+DLL |
 
 ### Assignment Guidelines
-- **Start** with 1–3 (Easy) — these are the core HashMap patterns.
-- **Then** 4–8 (Medium) — each uses a different hash table pattern.
+- **Start** with 1–3 (Easy): these are the core HashMap patterns.
+- **Then** 4–8 (Medium): each uses a different hash table pattern.
 - **LRU Cache** (problem 8) is a classic interview question. Implement it with `HashMap + DoublyLinkedList` for full understanding.
 - **Target time:** 10 min per Easy, 20 min per Medium.

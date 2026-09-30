@@ -9,11 +9,11 @@ tags:
 
 # 02 NoSQL Overview
 
-NoSQL doesn't mean "no SQL." It means "not only SQL" — databases designed for use cases where relational databases struggle: massive scale, flexible schemas, specialized data models.
+NoSQL doesn't mean "no SQL." It means "not only SQL", databases designed for use cases where relational databases struggle: massive scale, flexible schemas, specialized data models.
 
 ---
 
-## CAP Theorem — Pick Two
+## CAP Theorem: Pick Two
 
 > A distributed database can provide at most two of: **C**onsistency, **A**vailability, **P**artition Tolerance.
 
@@ -70,15 +70,15 @@ Availability    Partition Tolerance
 |----------|----------|
 | **ACID transactions across multiple rows/tables** | NoSQL typically lacks cross-collection transactions. |
 | **Complex ad-hoc queries** | SQL is unmatched for joins, aggregations, window functions. |
-| **Data integrity constraints** | Foreign keys, check constraints, unique constraints — enforced by DB, not app. |
-| **Mature tooling** | ORMs, migration tools, monitoring, backup — decades of ecosystem. |
+| **Data integrity constraints** | Foreign keys, check constraints, unique constraints ;  enforced by DB, not app. |
+| **Mature tooling** | ORMs, migration tools, monitoring, backup ;  decades of ecosystem. |
 | **Your data IS relational** | Don't force a graph model onto relational data, or vice versa. |
 
 ---
 
 ## The Polyglot Persistence Pattern
 
-> Use the right database for the right job — multiple databases in one application.
+> Use the right database for the right job; multiple databases in one application.
 
 ```
 E-Commerce Platform:
@@ -93,5 +93,5 @@ E-Commerce Platform:
 
 ## Sources
 
-- CAP Theorem — Brewer, Eric. "Towards Robust Distributed Systems," 2000.
+- CAP Theorem: Brewer, Eric. "Towards Robust Distributed Systems," 2000.
 - SWEBOK v4, Section 6: Database Management

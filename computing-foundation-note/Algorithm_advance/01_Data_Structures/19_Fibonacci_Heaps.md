@@ -10,11 +10,11 @@ source: CLRS
 
 # 19 · Fibonacci Heaps
 
-> Fibonacci heaps achieve **optimal amortized bounds** — especially `DECREASE-KEY` in O(1). This is the key to Dijkstra's and Prim's optimal complexity.
+> Fibonacci heaps achieve **optimal amortized bounds**, especially `DECREASE-KEY` in O(1). This is the key to Dijkstra's and Prim's optimal complexity.
 
 ### Motivation
 
-Fibonacci heaps achieve **optimal amortized bounds** for priority queue operations, especially **`DECREASE-KEY` in $O(1)$** — critical for graph algorithms like Dijkstra's and Prim's.
+Fibonacci heaps achieve **optimal amortized bounds** for priority queue operations, especially **`DECREASE-KEY` in $O(1)$**; critical for graph algorithms like Dijkstra's and Prim's.
 
 | Operation | Binary Heap | Fibonacci Heap |
 |---|---|---|
@@ -26,7 +26,7 @@ Fibonacci heaps achieve **optimal amortized bounds** for priority queue operatio
 | `DECREASE-KEY` | $\Theta(\lg n)$ | $\Theta(1)$ |
 | `DELETE` | $\Theta(\lg n)$ | $O(\lg n)$ |
 
-> Fibonacci heaps are predominantly of **theoretical interest** — constant factors and complexity make binary/k-ary heaps preferable in practice.
+> Fibonacci heaps are predominantly of **theoretical interest**; constant factors and complexity make binary/k-ary heaps preferable in practice.
 
 ### Structure
 
@@ -36,11 +36,11 @@ A Fibonacci heap is a **collection of min-heap-ordered rooted trees** with a laz
 - `key`, `degree` (number of children)
 - `parent`, `child` (pointer to any child)
 - `left`, `right` (circular doubly-linked sibling list)
-- `mark` — TRUE if node has lost a child **since becoming a child of its current parent**
+- `mark`: TRUE if node has lost a child **since becoming a child of its current parent**
 
 **Heap attributes:**
-- `min` — pointer to minimum node
-- `n` — total number of nodes
+- `min`: pointer to minimum node
+- `n`: total number of nodes
 
 ### Potential Function
 
@@ -50,16 +50,16 @@ where $t(H)$ = number of trees, $m(H)$ = number of marked nodes.
 
 ### Mergeable Heap Operations
 
-#### `FIB-HEAP-INSERT(H, x)` — $O(1)$ amortized
+#### `FIB-HEAP-INSERT(H, x)`: $O(1)$ amortized
 - Create single-node tree, add to root list
 - Update `min` if needed
 - Amortized cost: $O(1) + 1 = O(1)$
 
-#### `FIB-HEAP-UNION(H₁, H₂)` — $O(1)$ amortized
+#### `FIB-HEAP-UNION(H₁, H₂)`: $O(1)$ amortized
 - Concatenate root lists, update `min`
 - $\Delta\Phi = 0$, amortized cost = actual cost = $O(1)$
 
-#### `FIB-HEAP-EXTRACT-MIN(H)` — $O(\lg n)$ amortized
+#### `FIB-HEAP-EXTRACT-MIN(H)`: $O(\lg n)$ amortized
 1. Remove min node, add its children to root list
 2. **CONSOLIDATE:** Link trees of equal degree until at most one tree per degree
 
@@ -75,7 +75,7 @@ where $t(H)$ = number of trees, $m(H)$ = number of marked nodes.
 
 ### Decrease Key and Delete
 
-#### `FIB-HEAP-DECREASE-KEY(H, x, k)` — $O(1)$ amortized
+#### `FIB-HEAP-DECREASE-KEY(H, x, k)`: $O(1)$ amortized
 If min-heap order violated:
 1. **CUT** $x$ from its parent → make $x$ a root
 2. **CASCADING-CUT** up the tree:
@@ -89,7 +89,7 @@ If min-heap order violated:
 - Net: each cut "pays for itself" through potential reduction
 - Amortized cost: $O(1)$
 
-#### `FIB-HEAP-DELETE(H, x)` — $O(\lg n)$ amortized
+#### `FIB-HEAP-DELETE(H, x)`: $O(\lg n)$ amortized
 1. Decrease key to $-\infty$ → node becomes minimum
 2. Extract minimum
 
@@ -120,7 +120,7 @@ This is why the structure is called a **Fibonacci** heap.
 
 ## Hands-On Exercises
 
-### Exercise 3: Fibonacci Heap — Trace Operations
+### Exercise 3: Fibonacci Heap: Trace Operations
 Start with an empty Fibonacci heap. Perform:
 1. Insert keys: 7, 3, 17, 24, 1, 5
 2. Extract-min. What is the new minimum? How many trees are in the root list after consolidation?
@@ -138,6 +138,6 @@ For each step, draw the root list and mark any marked nodes. Track the potential
 | 8 | **Analyze Fibonacci Heap DECREASE-KEY** | 🟡 Theory | Potential method |
 
 ### Assignment Guidelines
-- **Problem 1**: Prove O(1) amortized using Φ = t(H) + 2m(H).
-- **Problem 2**: Major project — implement full Fibonacci heap.
+- **Problem 1:** Prove O(1) amortized using Φ = t(H) + 2m(H).
+- **Problem 2:** Major project: implement full Fibonacci heap.
 - **Target time:** 30 min per theory, 90 min for implementation.

@@ -67,6 +67,7 @@ The most critical step in building a system is understanding the **real problem*
 ### 2.2 From Problem to Solution Architecture
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     A["Stakeholder\nNeeds"] --> B["Problem\nAnalysis"]
     B --> C["Requirements\nSpecification"]
@@ -77,24 +78,25 @@ flowchart LR
     
     G -->|"Feedback"| B
     
-    style A fill:#1a1a2e,stroke:#e94560,color:#eee
-    style B fill:#16213e,stroke:#e94560,color:#eee
-    style C fill:#0f3460,stroke:#e94560,color:#eee
-    style D fill:#533483,stroke:#e94560,color:#eee
-    style E fill:#1a1a2e,stroke:#e94560,color:#eee
-    style F fill:#16213e,stroke:#e94560,color:#eee
-    style G fill:#0f3460,stroke:#e94560,color:#eee
+    style A fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style B fill:#161212,stroke:#FF5861,color:#CDD3D1
+    style C fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style D fill:#1FB8AB,stroke:#FF5861,color:#000000
+    style E fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style F fill:#161212,stroke:#FF5861,color:#CDD3D1
+    style G fill:#19362D,stroke:#FF5861,color:#CDD3D1
 ```
+
 
 ### 2.3 The Requirements Traceability Chain
 
 Every solution component must trace back to a problem statement. This traceability ensures:
 
-1. **No orphan code**: every component exists for a reason
-2. **No missing coverage**: every requirement is addressed by at least one component
-3. **Change impact analysis**: when a requirement changes, we know which components are affected
+1. **No orphan code:** every component exists for a reason
+2. **No missing coverage:** every requirement is addressed by at least one component
+3. **Change impact analysis:** when a requirement changes, we know which components are affected
 
-> **Related**: See [[01 Core Concepts]] for foundational programming abstractions that implement these solution components.
+> **Related:** See [[01 Core Concepts]] for foundational programming abstractions that implement these solution components.
 
 ---
 
@@ -141,6 +143,7 @@ E-Commerce System
 Break the system by **level of abstraction**. Each layer depends only on the layer below it.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TB
     subgraph "Presentation Layer"
         UI["User Interface"]
@@ -169,21 +172,22 @@ flowchart TB
     SVC --> CACHE
     SVC --> MQ
     
-    style UI fill:#1a1a2e,stroke:#e94560,color:#eee
-    style API fill:#1a1a2e,stroke:#e94560,color:#eee
-    style SVC fill:#16213e,stroke:#e94560,color:#eee
-    style VALID fill:#16213e,stroke:#e94560,color:#eee
-    style REPO fill:#0f3460,stroke:#e94560,color:#eee
-    style ORM fill:#0f3460,stroke:#e94560,color:#eee
-    style DB fill:#533483,stroke:#e94560,color:#eee
-    style CACHE fill:#533483,stroke:#e94560,color:#eee
-    style MQ fill:#533483,stroke:#e94560,color:#eee
+    style UI fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style API fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style SVC fill:#161212,stroke:#FF5861,color:#CDD3D1
+    style VALID fill:#161212,stroke:#FF5861,color:#CDD3D1
+    style REPO fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style ORM fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style DB fill:#1FB8AB,stroke:#FF5861,color:#000000
+    style CACHE fill:#1FB8AB,stroke:#FF5861,color:#000000
+    style MQ fill:#1FB8AB,stroke:#FF5861,color:#000000
 ```
+
 
 #### Domain-Driven Decomposition
 Break the system by **business domains**. Each component encapsulates a bounded context with its own model, language, and rules.
 
-> **Related**: See [[06 Object-Oriented Programming]] for how encapsulation and class hierarchies support domain decomposition. See also [[Design Patterns Simplify/02 Structural Patterns]] for structural patterns like Composite and Facade that manage decomposed structures.
+> **Related:** See [[06 Object-Oriented Programming]] for how encapsulation and class hierarchies support domain decomposition. See also [[Design Patterns Simplify/02 Structural Patterns]] for structural patterns like Composite and Facade that manage decomposed structures.
 
 ### 3.3 Decomposition Criteria
 
@@ -216,11 +220,11 @@ A good decomposition satisfies:
 
 An interface defines **what** a module does without revealing **how**. In software, interfaces take many forms:
 
-- **API (Application Programming Interface)**: REST endpoints, gRPC services, GraphQL schemas
-- **Function signatures**: parameters, return types, exceptions
-- **Abstract classes / protocols**: contracts that implementations must satisfy
-- **Events / messages**: asynchronous decoupled communication
-- **Shared schemas**: data contracts (Protobuf, Avro, JSON Schema)
+- **API (Application Programming Interface):** REST endpoints, gRPC services, GraphQL schemas
+- **Function signatures:** parameters, return types, exceptions
+- **Abstract classes / protocols:** contracts that implementations must satisfy
+- **Events / messages:** asynchronous decoupled communication
+- **Shared schemas:** data contracts (Protobuf, Avro, JSON Schema)
 
 ### 4.3 Information Hiding
 
@@ -232,7 +236,7 @@ David Parnas's principle of **information hiding** (1972) states that each modul
 4. **External system protocols** (which payment gateway, which auth provider)
 5. **Representation formats** (internal encoding, compression)
 
-> **Related**: See [[05 Functions & Methods]] for how function-level modularity works. See [[09 Functional Programming]] for how pure functions naturally enforce module boundaries.
+> **Related:** See [[05 Functions & Methods]] for how function-level modularity works. See [[09 Functional Programming]] for how pure functions naturally enforce module boundaries.
 
 ---
 
@@ -255,6 +259,7 @@ David Parnas's principle of **information hiding** (1972) states that each modul
 ### 5.2 Cohesion in Practice
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TB
     subgraph "Low Cohesion: Utility Module"
         U1["stringToDate()"]
@@ -271,17 +276,18 @@ flowchart TB
         E5["normalizeAddress()"]
     end
     
-    style U1 fill:#1a1a2e,stroke:#e94560,color:#eee
-    style U2 fill:#1a1a2e,stroke:#e94560,color:#eee
-    style U3 fill:#1a1a2e,stroke:#e94560,color:#eee
-    style U4 fill:#1a1a2e,stroke:#e94560,color:#eee
-    style U5 fill:#1a1a2e,stroke:#e94560,color:#eee
-    style E1 fill:#16213e,stroke:#4ecca3,color:#eee
-    style E2 fill:#16213e,stroke:#4ecca3,color:#eee
-    style E3 fill:#16213e,stroke:#4ecca3,color:#eee
-    style E4 fill:#16213e,stroke:#4ecca3,color:#eee
-    style E5 fill:#16213e,stroke:#4ecca3,color:#eee
+    style U1 fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style U2 fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style U3 fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style U4 fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style U5 fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style E1 fill:#161212,stroke:#1EB88E,color:#CDD3D1
+    style E2 fill:#161212,stroke:#1EB88E,color:#CDD3D1
+    style E3 fill:#161212,stroke:#1EB88E,color:#CDD3D1
+    style E4 fill:#161212,stroke:#1EB88E,color:#CDD3D1
+    style E5 fill:#161212,stroke:#1EB88E,color:#CDD3D1
 ```
+
 
 ### 5.3 Diagnosing Low Cohesion
 
@@ -315,6 +321,7 @@ Warning signs that a module has low cohesion:
 ### 6.2 Coupling Diagram
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TB
     subgraph "Content Coupling (Worst)"
         M1["Module A"] -->|"Reads/writes\nModule B's internals"| M2["Module B"]
@@ -330,16 +337,17 @@ flowchart TB
         M7["Module G"] -->|"Well-defined\nmessage/API"| M8["Module H"]
     end
     
-    style M1 fill:#e94560,stroke:#e94560,color:#fff
-    style M2 fill:#e94560,stroke:#e94560,color:#fff
-    style G fill:#f39c12,stroke:#f39c12,color:#fff
-    style M3 fill:#f39c12,stroke:#f39c12,color:#fff
-    style M4 fill:#f39c12,stroke:#f39c12,color:#fff
-    style M5 fill:#4ecca3,stroke:#4ecca3,color:#111
-    style M6 fill:#4ecca3,stroke:#4ecca3,color:#111
-    style M7 fill:#2ecc71,stroke:#2ecc71,color:#111
-    style M8 fill:#2ecc71,stroke:#2ecc71,color:#111
+    style M1 fill:#FF5861,stroke:#FF5861,color:#000000
+    style M2 fill:#FF5861,stroke:#FF5861,color:#000000
+    style G fill:#FFBE00,stroke:#FFBE00,color:#000000
+    style M3 fill:#FFBE00,stroke:#FFBE00,color:#000000
+    style M4 fill:#FFBE00,stroke:#FFBE00,color:#000000
+    style M5 fill:#1EB88E,stroke:#1EB88E,color:#000000
+    style M6 fill:#1EB88E,stroke:#1EB88E,color:#000000
+    style M7 fill:#1FB854,stroke:#1FB854,color:#000000
+    style M8 fill:#1FB854,stroke:#1FB854,color:#000000
 ```
+
 
 ### 6.3 Sources of Coupling in Modern Systems
 
@@ -352,7 +360,7 @@ flowchart TB
 | **Shared build pipeline** | Changes to A force rebuild of B | Independent build artifacts |
 | **Tightly coupled deployment** | A and B must deploy together | Independent deployability |
 
-> **Related**: See [[07 Error Handling]] for how coupling propagates error-handling complexity. See [[08 Memory Management]] for shared-memory coupling concerns.
+> **Related:** See [[07 Error Handling]] for how coupling propagates error-handling complexity. See [[08 Memory Management]] for shared-memory coupling concerns.
 
 ---
 
@@ -400,7 +408,7 @@ Coupling    │            │            │   Coupling
 | **Afferent/Efferent Coupling** | Incoming vs. outgoing dependencies | NDepend, JDepend, `madge` |
 | **Instability (I = Ce / (Ca + Ce))** | Ratio of efferent to total coupling | Architecture fitness functions |
 
-> **Related**: See [[Design Patterns Simplify/01 Creational Patterns]] for Factory and Builder patterns that reduce coupling by hiding construction logic. See [[Design Patterns Simplify/03 Behavioral Patterns]] for Observer and Mediator patterns that decouple communication.
+> **Related:** See [[Design Patterns Simplify/01 Creational Patterns]] for Factory and Builder patterns that reduce coupling by hiding construction logic. See [[Design Patterns Simplify/03 Behavioral Patterns]] for Observer and Mediator patterns that decouple communication.
 
 ---
 
@@ -424,6 +432,7 @@ Once a system is decomposed, the parts must be **integrated** back into a workin
 ### 8.2 Integration Patterns
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     subgraph "Point-to-Point"
         S1["Service A"] --> S2["Service B"]
@@ -442,19 +451,20 @@ flowchart LR
         EB --- E4["Consumer D"]
     end
     
-    style S1 fill:#1a1a2e,stroke:#e94560,color:#eee
-    style S2 fill:#1a1a2e,stroke:#e94560,color:#eee
-    style S3 fill:#1a1a2e,stroke:#e94560,color:#eee
-    style H fill:#f39c12,stroke:#f39c12,color:#111
-    style H1 fill:#16213e,stroke:#e94560,color:#eee
-    style H2 fill:#16213e,stroke:#e94560,color:#eee
-    style H3 fill:#16213e,stroke:#e94560,color:#eee
-    style EB fill:#4ecca3,stroke:#4ecca3,color:#111
-    style E1 fill:#1a1a2e,stroke:#e94560,color:#eee
-    style E2 fill:#16213e,stroke:#e94560,color:#eee
-    style E3 fill:#16213e,stroke:#e94560,color:#eee
-    style E4 fill:#16213e,stroke:#e94560,color:#eee
+    style S1 fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style S2 fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style S3 fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style H fill:#FFBE00,stroke:#FFBE00,color:#000000
+    style H1 fill:#161212,stroke:#FF5861,color:#CDD3D1
+    style H2 fill:#161212,stroke:#FF5861,color:#CDD3D1
+    style H3 fill:#161212,stroke:#FF5861,color:#CDD3D1
+    style EB fill:#1EB88E,stroke:#1EB88E,color:#000000
+    style E1 fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style E2 fill:#161212,stroke:#FF5861,color:#CDD3D1
+    style E3 fill:#161212,stroke:#FF5861,color:#CDD3D1
+    style E4 fill:#161212,stroke:#FF5861,color:#CDD3D1
 ```
+
 
 ### 8.3 Integration Challenges
 
@@ -467,7 +477,7 @@ flowchart LR
 | **Data consistency** | Keeping data consistent across modules | Saga pattern, eventual consistency, compensating transactions |
 | **Configuration drift** | Modules disagree on shared settings | Centralized configuration, infrastructure as code |
 
-> **Related**: See [[Design Patterns Simplify/02 Structural Patterns]] for Adapter and Bridge patterns used in integration. See [[000 Computer Networks Overview|Computer Networks]] for network-level integration concerns.
+> **Related:** See [[Design Patterns Simplify/02 Structural Patterns]] for Adapter and Bridge patterns used in integration. See [[000 Computer Networks Overview|Computer Networks]] for network-level integration concerns.
 
 ---
 
@@ -487,6 +497,7 @@ SWEBOK identifies several archetypal system configurations that software enginee
 ### 9.2 Integrated vs. Distributed
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TB
     subgraph "Integrated System"
         direction TB
@@ -509,19 +520,20 @@ flowchart TB
         DC --- DC_DB[("DB C")]
     end
     
-    style M fill:#1a1a2e,stroke:#e94560,color:#eee
-    style MA fill:#16213e,stroke:#e94560,color:#eee
-    style MB fill:#16213e,stroke:#e94560,color:#eee
-    style MC fill:#16213e,stroke:#e94560,color:#eee
-    style MDB fill:#533483,stroke:#e94560,color:#eee
-    style DA fill:#16213e,stroke:#4ecca3,color:#eee
-    style DB fill:#16213e,stroke:#4ecca3,color:#eee
-    style DC fill:#16213e,stroke:#4ecca3,color:#eee
-    style MQ fill:#4ecca3,stroke:#4ecca3,color:#111
-    style DA_DB fill:#533483,stroke:#4ecca3,color:#eee
-    style DB_DB fill:#533483,stroke:#4ecca3,color:#eee
-    style DC_DB fill:#533483,stroke:#4ecca3,color:#eee
+    style M fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style MA fill:#161212,stroke:#FF5861,color:#CDD3D1
+    style MB fill:#161212,stroke:#FF5861,color:#CDD3D1
+    style MC fill:#161212,stroke:#FF5861,color:#CDD3D1
+    style MDB fill:#1FB8AB,stroke:#FF5861,color:#000000
+    style DA fill:#161212,stroke:#1EB88E,color:#CDD3D1
+    style DB fill:#161212,stroke:#1EB88E,color:#CDD3D1
+    style DC fill:#161212,stroke:#1EB88E,color:#CDD3D1
+    style MQ fill:#1EB88E,stroke:#1EB88E,color:#000000
+    style DA_DB fill:#1FB8AB,stroke:#1EB88E,color:#000000
+    style DB_DB fill:#1FB8AB,stroke:#1EB88E,color:#000000
+    style DC_DB fill:#1FB8AB,stroke:#1EB88E,color:#000000
 ```
+
 
 ### 9.3 Choosing a System Type
 
@@ -555,22 +567,22 @@ Modern systems are rarely pure software. **Hardware-software co-design** conside
 
 For embedded systems, the hardware-software boundary is especially tight:
 
-- **Resource constraints**: limited CPU, memory, and storage demand efficient software
-- **Real-time requirements**: deterministic timing requires careful scheduling
-- **Power management**: software must actively manage hardware power states
-- **Peripheral integration**: software directly controls sensors, actuators, and communication modules
-- **Update mechanisms**: firmware updates must be reliable and atomic (OTA updates)
+- **Resource constraints:** limited CPU, memory, and storage demand efficient software
+- **Real-time requirements:** deterministic timing requires careful scheduling
+- **Power management:** software must actively manage hardware power states
+- **Peripheral integration:** software directly controls sensors, actuators, and communication modules
+- **Update mechanisms:** firmware updates must be reliable and atomic (OTA updates)
 
 ### 10.3 Cloud and Virtualization
 
 Cloud computing abstracts hardware but does not eliminate co-design concerns:
 
-- **Instance type selection**: compute-optimized vs. memory-optimized vs. GPU instances
-- **Storage tiers**: SSD vs. HDD vs. object storage trade cost vs. latency
-- **Network topology**: availability zones, regions, edge locations
-- **Cost optimization**: right-sizing, spot instances, reserved capacity
+- **Instance type selection:** compute-optimized vs. memory-optimized vs. GPU instances
+- **Storage tiers:** SSD vs. HDD vs. object storage trade cost vs. latency
+- **Network topology:** availability zones, regions, edge locations
+- **Cost optimization:** right-sizing, spot instances, reserved capacity
 
-> **Related**: See [[Computer Organization Overview|Computer Organization]] for hardware architecture fundamentals. See [[Operating Systems Overview|Operating Systems]] for how the OS mediates between hardware and software.
+> **Related:** See [[Computer Organization Overview|Computer Organization]] for hardware architecture fundamentals. See [[Operating Systems Overview|Operating Systems]] for how the OS mediates between hardware and software.
 
 ---
 
@@ -596,6 +608,7 @@ Quality attributes (also called non-functional requirements or "-ilities") defin
 Quality attributes frequently conflict. Understanding these trade-offs is essential for architectural decision-making.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TB
     PERF["Performance"] <-->|"Cache invalidation\nvs. data freshness"| REL["Reliability"]
     SEC["Security"] <-->|"Encryption overhead\nvs. throughput"| PERF
@@ -604,15 +617,16 @@ flowchart TB
     PORT["Portability"] <-->|"Standard APIs\nvs. platform features"| PERF
     SCALE["Scalability"] <-->|"Distribution\nvs. consistency"| CONSISTENCY
     
-    style PERF fill:#e94560,stroke:#e94560,color:#fff
-    style REL fill:#4ecca3,stroke:#4ecca3,color:#111
-    style SEC fill:#f39c12,stroke:#f39c12,color:#111
-    style AVAIL fill:#1a1a2e,stroke:#e94560,color:#eee
-    style CONSISTENCY fill:#16213e,stroke:#e94560,color:#eee
-    style MAINT fill:#533483,stroke:#e94560,color:#eee
-    style PORT fill:#0f3460,stroke:#e94560,color:#eee
-    style SCALE fill:#1a1a2e,stroke:#4ecca3,color:#eee
+    style PERF fill:#FF5861,stroke:#FF5861,color:#000000
+    style REL fill:#1EB88E,stroke:#1EB88E,color:#000000
+    style SEC fill:#FFBE00,stroke:#FFBE00,color:#000000
+    style AVAIL fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style CONSISTENCY fill:#161212,stroke:#FF5861,color:#CDD3D1
+    style MAINT fill:#1FB8AB,stroke:#FF5861,color:#000000
+    style PORT fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style SCALE fill:#19362D,stroke:#1EB88E,color:#CDD3D1
 ```
+
 
 ### 11.3 Quality Attribute Scenarios
 
@@ -627,7 +641,7 @@ Each quality attribute should be specified with a concrete scenario:
 | **Response** | What the system does | Authenticate and respond, failover to replica |
 | **Response Measure** | How the response is measured | Response < 200ms, failover < 5s, zero data loss |
 
-**Example scenario**: "Under normal load (environment), when 1000 concurrent users submit orders (stimulus), the order processing service (artifact) shall confirm each order (response) within 500ms at the 95th percentile (response measure)."
+**Example scenario:** "Under normal load (environment), when 1000 concurrent users submit orders (stimulus), the order processing service (artifact) shall confirm each order (response) within 500ms at the 95th percentile (response measure)."
 
 ---
 
@@ -638,6 +652,7 @@ A system's **boundary** defines what is inside the system and what is in its env
 ### 12.1 Defining System Boundaries
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TB
     subgraph ENV["External Environment"]
         USER["Users"]
@@ -658,17 +673,18 @@ flowchart TB
     REG -->|"Compliance"| BIZ
     INFRA -->|"Resources"| DATA
     
-    style ENV fill:#1a1a2e,stroke:#e94560,color:#eee
-    style BOUNDARY fill:#16213e,stroke:#4ecca3,color:#eee,stroke-width:3px
-    style SYS fill:#0f3460,stroke:#4ecca3,color:#eee
-    style USER fill:#533483,stroke:#e94560,color:#eee
-    style EXT fill:#533483,stroke:#e94560,color:#eee
-    style REG fill:#533483,stroke:#e94560,color:#eee
-    style INFRA fill:#533483,stroke:#e94560,color:#eee
-    style API fill:#1a1a2e,stroke:#e94560,color:#eee
-    style BIZ fill:#1a1a2e,stroke:#e94560,color:#eee
-    style DATA fill:#1a1a2e,stroke:#e94560,color:#eee
+    style ENV fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style BOUNDARY fill:#161212,stroke:#1EB88E,color:#CDD3D1,stroke-width:3px
+    style SYS fill:#19362D,stroke:#1EB88E,color:#CDD3D1
+    style USER fill:#1FB8AB,stroke:#FF5861,color:#000000
+    style EXT fill:#1FB8AB,stroke:#FF5861,color:#000000
+    style REG fill:#1FB8AB,stroke:#FF5861,color:#000000
+    style INFRA fill:#1FB8AB,stroke:#FF5861,color:#000000
+    style API fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style BIZ fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style DATA fill:#19362D,stroke:#FF5861,color:#CDD3D1
 ```
+
 
 ### 12.2 Interface Types
 
@@ -684,11 +700,11 @@ flowchart TB
 
 Every system operates within constraints imposed by its environment:
 
-- **Regulatory**: GDPR data residency, HIPAA access controls, financial reporting requirements
-- **Technical**: network bandwidth, storage capacity, compute limits, legacy system protocols
-- **Organizational**: team skills, budget, timeline, existing processes
-- **Physical**: data center location, power availability, cooling requirements
-- **Social**: user expectations, accessibility requirements, cultural considerations
+- **Regulatory:** GDPR data residency, HIPAA access controls, financial reporting requirements
+- **Technical:** network bandwidth, storage capacity, compute limits, legacy system protocols
+- **Organizational:** team skills, budget, timeline, existing processes
+- **Physical:** data center location, power availability, cooling requirements
+- **Social:** user expectations, accessibility requirements, cultural considerations
 
 ### 12.4 Context Diagrams
 
@@ -722,6 +738,7 @@ Every system passes through a lifecycle from conception to retirement. Understan
 ### 13.1 Lifecycle Phases
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     C["Conception"] --> D["Development"]
     D --> OP["Operation"]
@@ -729,12 +746,13 @@ flowchart LR
     E --> R["Retirement"]
     R -->|"New system"| C
     
-    style C fill:#1a1a2e,stroke:#e94560,color:#eee
-    style D fill:#16213e,stroke:#e94560,color:#eee
-    style OP fill:#0f3460,stroke:#e94560,color:#eee
-    style E fill:#533483,stroke:#e94560,color:#eee
-    style R fill:#e94560,stroke:#e94560,color:#fff
+    style C fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style D fill:#161212,stroke:#FF5861,color:#CDD3D1
+    style OP fill:#19362D,stroke:#FF5861,color:#CDD3D1
+    style E fill:#1FB8AB,stroke:#FF5861,color:#000000
+    style R fill:#FF5861,stroke:#FF5861,color:#000000
 ```
+
 
 ### 13.2 Phase Details
 
@@ -762,13 +780,13 @@ Different phases demand different architectural priorities:
 
 Technical debt accumulates when short-term decisions compromise long-term quality. It manifests differently at each phase:
 
-- **Conception**: Over-ambitious scope, under-specified requirements
-- **Development**: Quick hacks, skipped tests, copy-paste duplication
-- **Operation**: Workarounds for production issues, deferred monitoring
-- **Evolution**: Bolt-on features that don't fit the original architecture, deferred refactoring
-- **Retirement**: Procrastinated decommissioning, unclear data ownership
+- **Conception:** Over-ambitious scope, under-specified requirements
+- **Development:** Quick hacks, skipped tests, copy-paste duplication
+- **Operation:** Workarounds for production issues, deferred monitoring
+- **Evolution:** Bolt-on features that don't fit the original architecture, deferred refactoring
+- **Retirement:** Procrastinated decommissioning, unclear data ownership
 
-> **Related**: See [[Clean Code Overview|Clean Code]] for practices that minimize technical debt during development. See [[Fundamental Overview]] for the complete Computing Foundations curriculum map.
+> **Related:** See [[Clean Code Overview|Clean Code]] for practices that minimize technical debt during development. See [[Fundamental Overview]] for the complete Computing Foundations curriculum map.
 
 ---
 

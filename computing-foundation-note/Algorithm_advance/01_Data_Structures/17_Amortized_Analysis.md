@@ -9,7 +9,7 @@ source: CLRS Chapter 17
 
 # Amortized Analysis
 
-> In an amortized analysis, we average the time required to perform a sequence of data-structure operations over all the operations performed. The average cost per operation is small even though a single operation within the sequence might be expensive. Unlike average-case analysis, **probability is not involved** — an amortized analysis guarantees the average performance of each operation **in the worst case**.
+> In an amortized analysis, we average the time required to perform a sequence of data-structure operations over all the operations performed. The average cost per operation is small even though a single operation within the sequence might be expensive. Unlike average-case analysis, **probability is not involved**, an amortized analysis guarantees the average performance of each operation **in the worst case**.
 
 ## Key Distinction: Amortized vs Average-Case
 
@@ -23,16 +23,16 @@ source: CLRS Chapter 17
 
 ## 17.1 Aggregate Analysis
 
-**Idea:** Determine an upper bound $T(n)$ on the total cost of a sequence of $n$ operations. The amortized cost per operation is $T(n)/n$ — the same for every operation, regardless of type.
+**Idea:** Determine an upper bound $T(n)$ on the total cost of a sequence of $n$ operations. The amortized cost per operation is $T(n)/n$, the same for every operation, regardless of type.
 
 ### Example 1: Stack with MULTIPOP
 
 Standard stack operations (each $O(1)$):
-- `PUSH(S, x)` — push object onto stack
-- `POP(S)` — pop top object
+- `PUSH(S, x)`: push object onto stack
+- `POP(S)`: pop top object
 
 Augmented with:
-- `MULTIPOP(S, k)` — pop up to $k$ objects (or until empty)
+- `MULTIPOP(S, k)`: pop up to $k$ objects (or until empty)
 
 ```
 MULTIPOP(S, k):
@@ -79,7 +79,7 @@ $$T(n) = O(n) \implies \text{amortized cost} = O(1) \text{ per INCREMENT}$$
 
 1. Assign an amortized cost $\hat{c}_i$ to each operation $i$ (may differ from actual cost $c_i$).
 2. Credit after $n$ operations = $\sum_{i=1}^n (\hat{c}_i - c_i) \geq 0$.
-3. If credit is always ≥ 0, then $\sum \hat{c}_i \geq \sum c_i$ — the amortized cost upper-bounds the actual total cost.
+3. If credit is always ≥ 0, then $\sum \hat{c}_i \geq \sum c_i$: the amortized cost upper-bounds the actual total cost.
 
 ### Stack Example
 
@@ -168,7 +168,7 @@ Amortized cost per INSERT = **3** (constant!).
 
 ### Table Expansion and Contraction
 
-**Strategy:** When a deletion drops `num` to `size/4`, shrink the table to half size. (The load factor stays between 1/4 and 1, with the threshold at 1/4 — not 1/2 — to avoid thrashing on alternating insert/delete near the boundary.)
+**Strategy:** When a deletion drops `num` to `size/4`, shrink the table to half size. (The load factor stays between 1/4 and 1, with the threshold at 1/4 (not 1/2) to avoid thrashing on alternating insert/delete near the boundary.)
 
 **Potential function:**
 
@@ -190,7 +190,7 @@ This ensures $\Phi \geq 0$ and that contraction (like expansion) has $O(1)$ amor
 | **Math** | Summation / counting | Bookkeeping of deposits & withdrawals | Telescoping sum of $\Delta\Phi$ |
 | **Best for** | Uniform operations | Intuitive per-object reasoning | Complex state-dependent costs |
 
-All three methods yield the **same amortized bounds** when applied to the same problem — they are different lenses on the same phenomenon.
+All three methods yield the **same amortized bounds** when applied to the same problem; they are different lenses on the same phenomenon.
 
 ---
 
@@ -209,18 +209,18 @@ All three methods yield the **same amortized bounds** when applied to the same p
 
 ## See Also
 
-- [[01 Stacks & Queues]] — underlying data structures for amortized examples
-- [[01 Hash Tables]] — dynamic tables as hash table backing
-- [[01 Heaps & Priority Queues]] — binary counter bit-flipping analysis
-- [[02_Advanced_Data_Structures]] — Fibonacci heaps (advanced amortized application)
-- [[02_Advanced_Data_Structures]] — Disjoint sets (union-by-rank / path compression)
+- [[01 Stacks & Queues]]: underlying data structures for amortized examples
+- [[01 Hash Tables]]: dynamic tables as hash table backing
+- [[01 Heaps & Priority Queues]]: binary counter bit-flipping analysis
+- [[19_Fibonacci_Heaps|02 Advanced Data Structures]]: Fibonacci heaps (advanced amortized application)
+- [[19_Fibonacci_Heaps|02 Advanced Data Structures]]: Disjoint sets (union-by-rank / path compression)
 
 
 ---
 
 ## Hands-On Exercises
 
-### Exercise 1: Aggregate Analysis — Stack with MULTIPOP
+### Exercise 1: Aggregate Analysis: Stack with MULTIPOP
 Consider a sequence of 10 operations on an initially empty stack: `PUSH, PUSH, PUSH, MULTIPOP(5), PUSH, PUSH, MULTIPOP(3), PUSH, MULTIPOP(10), PUSH`.
 
 1. Count the **total number of actual pops** across all operations.
@@ -238,7 +238,7 @@ Consider a sequence of 10 operations on an initially empty stack: `PUSH, PUSH, P
 
 ---
 
-### Exercise 2: Accounting Method — Binary Counter
+### Exercise 2: Accounting Method: Binary Counter
 A 4-bit counter starts at `0000`. Run 16 increments (`0000` → `1111`).
 
 1. For each increment, count the number of bit flips (actual cost).
@@ -249,14 +249,14 @@ A 4-bit counter starts at `0000`. Run 16 increments (`0000` → `1111`).
 ```java
 // Fill in a table:
 // Counter | Binary | Bit Flips | Amortized Cost | Credit Change | Total Credit
-// 0       | 0000   |     —     |       —        |       —       |     0
+// 0       | 0000   |     -     |       -        |       -       |     0
 // 1       | 0001   |     ?     |       2        |       ?       |     ?
 // ... (fill all 16)
 ```
 
 ---
 
-### Exercise 3: Potential Method — Dynamic Table INSERT
+### Exercise 3: Potential Method: Dynamic Table INSERT
 A dynamic table starts with capacity 1. We insert 8 elements, doubling capacity each time it's full.
 
 Potential function: `Φ(T) = 2·num − size`
@@ -299,7 +299,7 @@ Confirm all three methods give the same O(1) amortized bound.
 | 6 | [Implement Dynamic Array](https://leetcode.com/problems/design-an-ordered-stream/) (LC 1656) | 🟢 Code | Dynamic table |
 
 ### Assignment Guidelines
-- **Problems 1–3** are core exercises — they directly apply the three methods from this note.
+- **Problems 1–3** are core exercises: they directly apply the three methods from this note.
 - **Problem 4** (Splay Trees) is a classic but challenging potential method application. Don't attempt until comfortable with the stack and counter examples.
-- **Problem 5** connects to [[02_Advanced_Data_Structures]] — the `O(m·α(n))` bound uses accounting-style arguments.
+- **Problem 5** connects to [[19_Fibonacci_Heaps|02 Advanced Data Structures]]: the `O(m·α(n))` bound uses accounting-style arguments.
 - **Target time:** 20 min per Theory problem, 30 min for code.

@@ -31,7 +31,7 @@ A decision table has four quadrants divided by bold horizontal and vertical line
 
 | | **Stub** (what) | **Entry** (values) |
 |---|---|---|
-| **Condition** (above) | Condition Stub: lists all conditions | Condition Entries: T/F/— values |
+| **Condition** (above) | Condition Stub: lists all conditions | Condition Entries: T/F/– values |
 | **Action** (below) | Action Stub (lists all actions | Action Entries) X marks selected actions |
 
 - A **rule** is one column in the entry portion: it specifies which actions fire for a given set of condition values.
@@ -43,7 +43,7 @@ A decision table has four quadrants divided by bold horizontal and vertical line
 
 #### Completeness and Rule Counting
 
-For an LEDT with *n* conditions, there must be 2ⁿ independent rules. Don't care entries ("—") mean the condition is irrelevant or doesn't apply. The rule count algorithm:
+For an LEDT with *n* conditions, there must be 2ⁿ independent rules. Don't care entries ("–") mean the condition is irrelevant or doesn't apply. The rule count algorithm:
 
 > Rules with no don't cares count as 1. Each don't care entry doubles the count of that rule. The sum of rule counts must equal 2ⁿ.
 

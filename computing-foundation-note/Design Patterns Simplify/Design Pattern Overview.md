@@ -7,7 +7,7 @@ tags:
 
 # Design Pattern Overview
 
-Design patterns are reusable solutions to common software design problems. They aren't finished code — they're templates you adapt to your context. Knowing *when* to apply a pattern matters more than knowing the pattern itself.
+Design patterns are reusable solutions to common software design problems. They aren't finished code; they're templates you adapt to your context. Knowing *when* to apply a pattern matters more than knowing the pattern itself.
 
 ---
 
@@ -70,17 +70,17 @@ For book-level depth on each pattern, see the **Design Pattern** section in `sof
 
 | Pattern | Book Summary |
 |---------|-------------|
-| Singleton, Factory Method, Abstract Factory, Builder, Prototype |  — each pattern with intent, structure, Java examples |
-| Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy |  — each pattern with UML, real-world usage |
-| Chain of Responsibility, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor |  — each pattern with participants, collaboration diagrams |
+| Singleton, Factory Method, Abstract Factory, Builder, Prototype |  ;  each pattern with intent, structure, Java examples |
+| Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy |  ;  each pattern with UML, real-world usage |
+| Chain of Responsibility, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor |  ;  each pattern with participants, collaboration diagrams |
 | Design Principles & SOLID | **design-principles**, **solid-principles** |
 
-> The notes here are **quick references** — pattern-per-use-case with short examples. The book summaries are **deep dives** with UML, trade-offs, and implementation details.
+> The notes here are **quick references:** pattern-per-use-case with short examples. The book summaries are **deep dives** with UML, trade-offs, and implementation details.
 
 ---
 
 ## Sources
 
-- Gamma, Helm, Johnson, Vlissides — *Design Patterns* (1994)
-- Refactoring Guru — https://refactoring.guru/design-patterns
-- Head First Design Patterns — Freeman & Robson
+- Gamma, Helm, Johnson, Vlissides: *Design Patterns* (1994)
+- Refactoring Guru: https://refactoring.guru/design-patterns
+- Head First Design Patterns: Freeman & Robson

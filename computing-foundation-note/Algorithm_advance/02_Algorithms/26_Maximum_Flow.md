@@ -43,7 +43,7 @@ FORD-FULKERSON-METHOD(G, s, t)
 
 #### Residual Network
 
-Given flow $f$, the residual network $G_f = (V, E_f)$ has edges with **residual capacity**:
+Given flow $f$, the residual network $G_f = (V, E_f)$ has edges with **residual capacity:**
 
 $$c_f(u, v) = \begin{cases} c(u, v) - f(u, v) & \text{if } (u, v) \in E \\ f(v, u) & \text{if } (v, u) \in E \\ 0 & \text{otherwise} \end{cases}$$
 
@@ -157,18 +157,18 @@ A specific, efficient implementation of push-relabel using a neighbor list.
 
 | Concept | MST (Ch23) | Shortest Path (Ch24–25) | Max Flow (Ch26) |
 |---|---|---|---|
-| **Greedy** | Kruskal, Prim | Dijkstra | — |
-| **Dynamic programming** | — | Floyd-Warshall | — |
-| **Relaxation** | — | Core operation | — |
+| **Greedy** | Kruskal, Prim | Dijkstra | N/A |
+| **Dynamic programming** | N/A | Floyd-Warshall | N/A |
+| **Relaxation** | N/A | Core operation | N/A |
 | **Graph type** | Undirected | Directed | Directed |
 | **Optimality** | Cut property | Relaxation theorem | Max-flow min-cut |
-| **Union-Find** | Kruskal | — | — |
-| **BFS** | — | Unweighted SP | Edmonds-Karp |
+| **Union-Find** | Kruskal | N/A | N/A |
+| **BFS** | N/A | Unweighted SP | Edmonds-Karp |
 
 ### Common Techniques
-- **Greedy:** Kruskal, Prim, Dijkstra — locally optimal → globally optimal with right invariant
+- **Greedy:** Kruskal, Prim, Dijkstra: locally optimal → globally optimal with right invariant
 - **Relaxation:** Progressive improvement of estimates (all SP algorithms)
-- **Augmenting paths:** Ford-Fulkerson method — find path → push flow → repeat
+- **Augmenting paths:** Ford-Fulkerson method: find path → push flow → repeat
 - **Cut-based arguments:** MST cut property, max-flow min-cut theorem
 
 ---
@@ -188,18 +188,18 @@ A specific, efficient implementation of push-relabel using a neighbor list.
 
 ## Related
 
-- [[Algorithm Overview]] — Practical graph algorithms (BFS, DFS, topological sort)
-- [[01 Graphs]] — Graph representations and basic traversals
-- [[02 Greedy Algorithms]] — Greedy approach used in MST (Kruskal's, Prim's)
-- [[02_Advanced_Data_Structures]] — Disjoint sets for Kruskal's, Fibonacci heaps for Prim's
-- [[01_Amortized_Analysis]] — Amortized analysis of priority queue operations
+- [[Algorithm Overview]]: Practical graph algorithms (BFS, DFS, topological sort)
+- [[01 Graphs]]: Graph representations and basic traversals
+- [[02 Greedy Algorithms]]: Greedy approach used in MST (Kruskal's, Prim's)
+- [[19_Fibonacci_Heaps|02 Advanced Data Structures]]: Disjoint sets for Kruskal's, Fibonacci heaps for Prim's
+- [[17_Amortized_Analysis|01 Amortized Analysis]]: Amortized analysis of priority queue operations
 
 
 ---
 
 ## Hands-On Exercises
 
-### Exercise 4: Ford-Fulkerson Max Flow — Trace Augmenting Paths
+### Exercise 4: Ford-Fulkerson Max Flow: Trace Augmenting Paths
 Given flow network:
 ```
      S --16--> A --10--> T
@@ -232,5 +232,5 @@ Actually use: S→A:10, S→B:10, A→B:2, A→T:10, B→T:10.
 | 8 | **Implement Edmonds-Karp Max Flow** | 🔴 Code | Ford-Fulkerson + BFS |
 
 ### Assignment Guidelines
-- **Problem 3** is a coding project — implement Edmonds-Karp and test on flow networks.
+- **Problem 3** is a coding project: implement Edmonds-Karp and test on flow networks.
 - **Target time:** 30 min per Hard, 45 min for Max Flow project.

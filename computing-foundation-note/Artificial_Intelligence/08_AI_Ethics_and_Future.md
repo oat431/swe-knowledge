@@ -6,16 +6,16 @@ tags: [ai-ethics, philosophy, ai-future, artificial-intelligence]
 
 > **Source:** Russell & Norvig, *Artificial Intelligence: A Modern Approach*, Ch 26–27
 
-## Chapter 26 — Philosophical Foundations
+## Chapter 26: Philosophical Foundations
 
 ### 26.1 Weak AI: Can Machines Act Intelligently?
 
-**Weak AI** holds that machines can *simulate* intelligent behaviour — the question is whether the output is indistinguishable from human performance, not whether the machine truly "understands."
+**Weak AI** holds that machines can *simulate* intelligent behaviour, the question is whether the output is indistinguishable from human performance, not whether the machine truly "understands."
 
 #### The Turing Test
 - Proposed by Alan Turing (1950) as an operational definition of intelligence.
 - A human judge converses with a machine and a human (both hidden); if the judge cannot reliably tell which is the machine, the machine passes.
-- **Turing's "polite convention":** in everyday life we never have direct access to others' mental states, yet we extend the courtesy of assuming they think — the same courtesy should extend to sufficiently capable machines.
+- **Turing's "polite convention":** in everyday life we never have direct access to others' mental states, yet we extend the courtesy of assuming they think, the same courtesy should extend to sufficiently capable machines.
 - Weak AI sidesteps metaphysical debates: intelligence is assessed by *behaviour*, not by internal experience.
 
 #### The Mathematical Objection (Gödel's Incompleteness)
@@ -23,19 +23,19 @@ tags: [ai-ethics, philosophy, ai-future, artificial-intelligence]
 - **Lucas–Penrose claim:** humans can see the truth of G(F) while machines (as formal systems) cannot, so machines are mentally inferior.
 - **Three counter-arguments:**
   1. Computers are finite, so they can be described in propositional logic (not subject to Gödel's theorem).
-  2. There are sentences that any given human cannot consistently assert — this doesn't make humans mentally defective.
+  2. There are sentences that any given human cannot consistently assert: this doesn't make humans mentally defective.
   3. There is no evidence that humans are immune from the incompleteness limitations; the claim that humans transcend formal systems is unprovable.
 
 #### The Argument from Informality
 - **Dreyfus critique:** human behaviour is too complex and context-dependent to be captured by any set of rules; computers can only follow rules → computers cannot be truly intelligent.
-- The **qualification problem** — it is impossible to specify all preconditions for an action in logical rules.
+- The **qualification problem:** it is impossible to specify all preconditions for an action in logical rules.
 - Dreyfus targets GOFAI ("Good Old-Fashioned AI"): rule-based, logical agents.
 - **Rebuttal:** probabilistic reasoning (Ch 13–17), learning algorithms (Ch 18–21), and embodied cognition address many of Dreyfus's objections. His critique is valid against simple rule-based systems, not against modern AI.
 - **Embodied cognition:** cognition takes place within a body embedded in an environment; robotics and perception are central, not peripheral.
 
 ### 26.2 Strong AI: Can Machines Really Think?
 
-**Strong AI** claims that a suitably programmed computer does not merely *simulate* a mind — it literally *has* a mind, with understanding, consciousness, and mental states.
+**Strong AI** claims that a suitably programmed computer does not merely *simulate* a mind; it literally *has* a mind, with understanding, consciousness, and mental states.
 
 #### The Argument from Consciousness
 - Jefferson (1949): a machine must *feel* thoughts and emotions, not merely manipulate symbols.
@@ -43,15 +43,15 @@ tags: [ai-ethics, philosophy, ai-future, artificial-intelligence]
 - Turing's response: the question is ill-defined; the "polite convention" will naturally extend to machines as they become more sophisticated.
 
 #### The Mind–Body Problem
-- **Dualism** (Descartes): mind and body are separate substances — raises the question of how the immaterial mind controls the material body.
-- **Physicalism / Monism**: mental states *are* physical states (brain states). Most modern philosophers hold this view. It allows, in principle, for strong AI.
+- **Dualism** (Descartes): mind and body are separate substances: raises the question of how the immaterial mind controls the material body.
+- **Physicalism / Monism:** mental states *are* physical states (brain states). Most modern philosophers hold this view. It allows, in principle, for strong AI.
 - **Brain-in-a-vat thought experiment:** a brain fed simulated sensory input would have the same brain state as a real person, yet wouldn't truly "know" it is eating a hamburger.
   - **Wide content:** mental state depends on brain state *and* environment history.
   - **Narrow content:** mental state depends only on brain state (functional role).
 
 #### Functionalism
 - A mental state is any intermediate *causal condition* between input and output.
-- Any two systems with **isomorphic causal processes** have the same mental states — regardless of substrate.
+- Any two systems with **isomorphic causal processes** have the same mental states, regardless of substrate.
 - **Brain replacement experiment** (Moravec): gradually replace neurons with electronic equivalents that preserve input–output behaviour. If behaviour is unchanged, is consciousness preserved?
   - Functionalists say yes (consciousness depends on functional organisation, not substrate).
   - Biological naturalists (Searle) say no (consciousness requires specific biological causal powers).
@@ -64,20 +64,20 @@ tags: [ai-ethics, philosophy, ai-future, artificial-intelligence]
   2. Human minds have mental contents (semantic).
   3. Syntax alone is neither constitutive of nor sufficient for semantics.
   4. Brains cause minds.
-- **Systems reply:** the *room as a whole* understands Chinese, even if the human inside does not — just as the CPU doesn't take cube roots but the computer does.
+- **Systems reply:** the *room as a whole* understands Chinese, even if the human inside does not, just as the CPU doesn't take cube roots but the computer does.
 - **Searle's rebuttal:** understanding is not in the human and cannot be in the paper, so there is no understanding.
-- **Critique:** Searle's argument is essentially an **intuition pump** — it reinforces prior intuitions rather than providing proof. Whether axiom 3 is accepted determines the conclusion.
+- **Critique:** Searle's argument is essentially an **intuition pump:** it reinforces prior intuitions rather than providing proof. Whether axiom 3 is accepted determines the conclusion.
 
 #### Consciousness, Qualia, and the Explanatory Gap
 - **Qualia:** the intrinsic, subjective quality of experience (what it *feels like* to see red, taste chocolate, etc.).
 - **Inverted spectrum thought experiment:** two people could have identical functional organisation but different subjective colour experiences.
 - **Explanatory gap:** no currently accepted scientific reasoning bridges the gap between physical brain processes and subjective experience.
-- Dennett (1991): denies qualia exist as a distinct philosophical category — they are a confusion.
+- Dennett (1991): denies qualia exist as a distinct philosophical category; they are a confusion.
 - Turing's position: consciousness is a mystery, but it need not be solved before building intelligent programs.
 
 ---
 
-## Chapter 27 — AI: The Present and the Future
+## Chapter 27: AI: The Present and the Future
 
 ### 27.1 AI Components and Achievements
 
@@ -94,20 +94,20 @@ Modern AI systems combine multiple techniques. Key components that have achieved
 
 ### 27.2 The State of the Art
 
-- **Narrow AI dominance:** virtually all deployed AI systems are narrow — they excel at specific tasks but lack general intelligence.
+- **Narrow AI dominance:** virtually all deployed AI systems are narrow: they excel at specific tasks but lack general intelligence.
 - **Deep learning revolution** (2012–present): large neural networks trained on massive datasets have driven breakthroughs in vision, language, and decision-making.
-- **Foundation models / Large Language Models:** GPT, LLaMA, and similar models demonstrate emergent capabilities from scale — few-shot learning, reasoning, code generation.
+- **Foundation models / Large Language Models:** GPT, LLaMA, and similar models demonstrate emergent capabilities from scale: few-shot learning, reasoning, code generation.
 - **Reinforcement learning successes:** game playing (Atari, Go, StarCraft), robotic control, chip design, protein folding (AlphaFold).
 
 ### 27.3 Ethical and Societal Concerns
 
 #### Fairness and Bias
 - AI systems trained on historical data can **perpetuate and amplify** existing biases (racial, gender, socioeconomic).
-- **Algorithmic fairness** metrics: demographic parity, equalised odds, calibration — often mathematically incompatible with each other (impossibility theorems).
+- **Algorithmic fairness** metrics: demographic parity, equalised odds, calibration, often mathematically incompatible with each other (impossibility theorems).
 - Mitigation: bias audits, diverse training data, fairness-aware learning, post-hoc corrections.
 
 #### Transparency and Explainability
-- Many high-performing models (deep neural networks) are **black boxes** — their decisions are difficult to interpret.
+- Many high-performing models (deep neural networks) are **black boxes:** their decisions are difficult to interpret.
 - **Explainable AI (XAI):** techniques to make model decisions understandable to humans (LIME, SHAP, attention visualisation).
 - Regulatory pressure: GDPR "right to explanation"; EU AI Act requirements for high-risk systems.
 
@@ -123,7 +123,7 @@ Modern AI systems combine multiple techniques. Key components that have achieved
 
 #### Autonomy and Control
 - **Alignment problem:** ensuring AI systems pursue goals aligned with human values and intentions.
-- **Value alignment:** how to specify human values formally — the reward modelling approach (inverse reinforcement learning, RLHF).
+- **Value alignment:** how to specify human values formally: the reward modelling approach (inverse reinforcement learning, RLHF).
 - **Corrigibility:** designing systems that allow humans to correct or shut them down.
 - **Superintelligence risk** (Bostrom, 2014): a sufficiently advanced AI with misaligned goals could be catastrophic; the control problem must be solved *before* such systems are built.
 
@@ -171,7 +171,7 @@ Modern AI systems combine multiple techniques. Key components that have achieved
 | Topic | Key Takeaway |
 |---|---|
 | Weak AI vs Strong AI | Weak AI simulates intelligence; strong AI claims machines can truly have minds |
-| Turing Test | Behavioural test — if a machine fools a judge, it exhibits intelligence |
+| Turing Test | Behavioural test ;  if a machine fools a judge, it exhibits intelligence |
 | Gödel's objection | Applies to infinite formal systems; does not prove human superiority |
 | Chinese Room | Syntax ≠ semantics (Searle); controversial intuition pump |
 | Functionalism | Mental states are defined by causal roles, not substrate |
@@ -184,7 +184,7 @@ Modern AI systems combine multiple techniques. Key components that have achieved
 
 ## Related
 
-- [[AI Overview]] — All AI topics
-- [[01_AI_Foundations]] — What is AI
-- [[05_Machine_Learning]] — Current AI capabilities
-- [[07_NLP_and_Perception]] — AI applications
+- [[AI Overview]]: All AI topics
+- [[01_AI_Foundations]]: What is AI
+- [[05_Machine_Learning]]: Current AI capabilities
+- [[07_NLP_and_Perception]]: AI applications

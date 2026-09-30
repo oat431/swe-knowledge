@@ -31,9 +31,9 @@ $$x \in L \iff \exists\, y \text{ with } |y| \leq p(|x|) \text{ such that } A(x,
 The string $y$ is the **certificate** (or witness). The verifier $A$ checks it in polynomial time.
 
 Examples:
-- **HAM-CYCLE:** certificate is the vertex sequence; verifier checks it visits all vertices and forms a cycle — $O(n)$.
-- **CLIQUE:** certificate is the subset of $k$ vertices; verifier checks all $\binom{k}{2}$ edges exist — $O(k^2)$.
-- **SAT:** certificate is a truth assignment; verifier evaluates the formula — $O(|\phi|)$.
+- **HAM-CYCLE:** certificate is the vertex sequence; verifier checks it visits all vertices and forms a cycle; $O(n)$.
+- **CLIQUE:** certificate is the subset of $k$ vertices; verifier checks all $\binom{k}{2}$ edges exist; $O(k^2)$.
+- **SAT:** certificate is a truth assignment; verifier evaluates the formula; $O(|\phi|)$.
 
 **Key relationship:** $\text{P} \subseteq \text{NP}$. If you can solve a problem in polynomial time, you can certainly verify a solution in polynomial time (ignore the certificate and recompute).
 
@@ -60,7 +60,7 @@ $$x \in A \iff f(x) \in B$$
 
 ---
 
-### 34.4 NP-Completeness Proofs — The Reduction Chain
+### 34.4 NP-Completeness Proofs: The Reduction Chain
 
 The foundational chain of reductions:
 
@@ -107,7 +107,7 @@ Given a 3-CNF formula $\phi = C_1 \land C_2 \land \cdots \land C_k$:
 **Claim:** $\phi$ is satisfiable $\iff$ $G$ has a clique of size $k$.
 
 - **→:** Pick one "true" literal per clause → $k$ vertices forming a clique (all consistent).
-- **←:** A $k$-clique has exactly one vertex per triple (no intra-triple edges). Set those literals to 1 — no conflicts (no edges between inconsistent literals).
+- **←:** A $k$-clique has exactly one vertex per triple (no intra-triple edges). Set those literals to 1; no conflicts (no edges between inconsistent literals).
 
 #### VERTEX-COVER (Theorem 34.12)
 
@@ -170,8 +170,8 @@ No carries between digit positions (base ≥ 7, max digit sum is 6), so digits a
 
 ## Hands-On Exercises
 
-### Exercise 4: NP-Completeness — Reduction Practice
-Prove that **CLIQUE ≤_P INDEPENDENT-SET**:
+### Exercise 4: NP-Completeness: Reduction Practice
+Prove that **CLIQUE ≤_P INDEPENDENT-SET:**
 
 An independent set in graph G is a subset S of vertices where no two vertices in S are connected by an edge.
 

@@ -2,13 +2,13 @@
 tags: [linear-programming, optimization, clrs, simplex, duality, algorithms]
 ---
 
-# 04 — Linear Programming
+# 04: Linear Programming
 
-> *Source: CLRS Chapter 29 — Linear Programming*
+> *Source: CLRS Chapter 29: Linear Programming*
 
 ## Purpose
 
-Linear programming is the cornerstone of operations research. Many real-world problems — from political campaign strategy to airline scheduling, from network flow to combinatorial optimization — can be modeled as linear programs.
+Linear programming is the cornerstone of operations research. Many real-world problems (from political campaign strategy to airline scheduling, from network flow to combinatorial ) can be modeled as linear programs.
 
 ## Overview & Applications
 
@@ -28,7 +28,7 @@ Linear programming is the cornerstone of operations research. Many real-world pr
 | **Ellipsoid** | Polynomial | Slow in practice |
 | **Interior-point** | Polynomial | Competitive with Simplex for large-scale problems |
 
-> **Note:** Integer Linear Programming (ILP) is NP-hard — no known polynomial-time algorithm.
+> **Note:** Integer Linear Programming (ILP) is NP-hard; no known polynomial-time algorithm.
 
 ---
 
@@ -86,7 +86,7 @@ Any LP can be converted to standard form:
 
 ## 2. Slack Form
 
-Slack form converts inequality constraints to equalities — the working form for the Simplex algorithm.
+Slack form converts inequality constraints to equalities, the working form for the Simplex algorithm.
 
 ### From Standard to Slack Form
 
@@ -100,10 +100,10 @@ $$z = \nu + \sum_{j \in N} c_j x_j$$
 $$x_i = b_i - \sum_{j \in N} a_{ij} x_j, \quad \text{for } i \in B$$
 
 Where:
-- $N$ — index set of **nonbasic variables**
-- $B$ — index set of **basic variables**
+- $N$: index set of **nonbasic variables**
+- $B$: index set of **basic variables**
 - $|N| = n, \; |B| = m, \; N \cup B = \{1, 2, \ldots, n+m\}$
-- $\nu$ — constant term of the objective function
+- $\nu$: constant term of the objective function
 
 > **Key note:** $a_{ij}$ in slack form are the **negatives** of the actual coefficients in the constraint.
 
@@ -154,7 +154,7 @@ If all $x_i \ge 0$, it's a **basic feasible solution**.
 
 ### Iteration: The Pivot Operation
 
-Each iteration performs one **pivot**:
+Each iteration performs one **pivot:**
 
 1. **Choose entering variable** $x_e$: select a nonbasic variable with $c_e > 0$
 2. **Choose leaving variable** $x_l$: select the basic variable that most tightly limits the increase of $x_e$
@@ -239,7 +239,7 @@ subject to
 | 0 | $x_1$ | $x_6$ | $(0,0,0,30,24,36)$ | 0 |
 | 1 | $x_3$ | $x_5$ | $(9,0,0,21,6,0)$ | 27 |
 | 2 | $x_2$ | $x_4$ | $(33/4,0,3/2,69/4,0,0)$ | 111/4 |
-| 3 | — | — | $(8,4,0,18,0,0)$ | **28** ✓ |
+| 3 | – | – | $(8,4,0,18,0,0)$ | **28** ✓ |
 
 ### Algorithm Analysis
 
@@ -293,7 +293,7 @@ INITIALIZE-SIMPLEX(A, b, c):
 
 ## 5. Duality
 
-Duality is one of the deepest concepts in LP theory — every LP is associated with a "dual" program.
+Duality is one of the deepest concepts in LP theory: every LP is associated with a "dual" program.
 
 ### Primal and Dual Problems
 
@@ -414,7 +414,7 @@ Each commodity satisfies its own flow conservation.
 ### LP Relationship to Other Techniques
 
 ```mermaid
-%%{init: {'theme':'dark'}}%%
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     LP["LP (continuous)"]
     ILP["ILP (integer)"]
@@ -431,8 +431,8 @@ graph LR
     ILP --> ILP3["Facility location"]
     ILP --> ILP4["Combinatorial optimization"]
 
-    style LP fill:#2d6a4f,stroke:#40916c,color:#fff
-    style ILP fill:#6b5b95,stroke:#8b7bb5,color:#fff
+    style LP fill:#1FB854,stroke:#1FB854,color:#000000
+    style ILP fill:#00B5FF,stroke:#00B5FF,color:#000000
 ```
 
 ---
@@ -452,9 +452,9 @@ graph LR
 
 ## Related
 
-- [[Algorithm Overview]] — Algorithm design paradigms
-- [[06_Geometry_NP_and_Approximation]] — LP relaxation for approximation algorithms
-- [[02 Greedy Algorithms]] — Greedy approach relates to LP duality
+- [[Algorithm Overview]]: Algorithm design paradigms
+- [[35_Approximation_Algorithms|06 Geometry, NP & Approximation]]: LP relaxation for approximation algorithms
+- [[02 Greedy Algorithms]]: Greedy approach relates to LP duality
 
 
 ---
@@ -515,7 +515,7 @@ subject to
 Trace the first pivot:
 1. Convert to slack form. Identify B, N, b, c, ν.
 2. **Entering variable:** Which nonbasic variable has `c_e > 0`? (Choose any.)
-3. **Leaving variable:** Apply the minimum ratio test — compute `Δᵢ = bᵢ / aᵢₑ` for each basic variable where `aᵢₑ > 0`.
+3. **Leaving variable:** Apply the minimum ratio test: compute `Δᵢ = bᵢ / aᵢₑ` for each basic variable where `aᵢₑ > 0`.
 4. Perform the pivot. Write the new slack form.
 5. What is the new basic solution and objective value?
 
@@ -542,7 +542,7 @@ subject to
   y₁, y₂ ≥ 0
 ```
 
-For each: write the dual, then verify **weak duality** — plug in any feasible primal solution and any feasible dual solution, and confirm primal objective ≤ dual objective.
+For each: write the dual, then verify **weak duality:** plug in any feasible primal solution and any feasible dual solution, and confirm primal objective ≤ dual objective.
 
 ---
 
@@ -571,8 +571,8 @@ A bakery makes cakes and cookies. Each cake requires 2 hours of baking and 1 hou
 | 8 | **Implement Simplex in Java** | 🔴 Code | Full Simplex algorithm |
 
 ### Assignment Guidelines
-- **Problems 1–3** are core — standard form, slack form, Simplex, duality.
-- **Problems 4–5** develop LP modeling skills — the most valuable practical skill.
+- **Problems 1–3** are core: standard form, slack form, Simplex, duality.
+- **Problems 4–5** develop LP modeling skills, the most valuable practical skill.
 - **Problem 6** (Complementary Slackness) is a theoretical deep-dive.
-- **Problem 8** (Implement Simplex) is a substantial project — handle pivot, minimum ratio test, and initialization.
+- **Problem 8** (Implement Simplex) is a substantial project: handle pivot, minimum ratio test, and initialization.
 - **Target time:** 20 min per Theory, 60 min for Simplex implementation.

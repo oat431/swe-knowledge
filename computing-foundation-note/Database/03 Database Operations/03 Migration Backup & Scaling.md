@@ -12,7 +12,7 @@ Databases in production need care. Schema changes must be versioned. Data must b
 
 ---
 
-## Schema Migration — Flyway & Liquibase
+## Schema Migration: Flyway & Liquibase
 
 > Version control your database schema just like your code. No manual SQL in production. Ever.
 
@@ -50,7 +50,7 @@ spring:
 | Rule | Why |
 |------|-----|
 | **Migrations are immutable** | Once applied, NEVER modify. Add a new migration instead. |
-| **One change per migration** | `V3_add_column.sql` and `V4_add_index.sql` — not one mega-migration. |
+| **One change per migration** | `V3_add_column.sql` and `V4_add_index.sql` ;  not one mega-migration. |
 | **Always reversible** | Write `V3__...sql` AND `U3__...sql` (undo). |
 | **Test on copy of production** | Schema changes can lock tables. Test first. |
 | **Backward-compatible** | Old app code must work with new schema during deployment. |
@@ -69,11 +69,11 @@ spring:
 ### PostgreSQL Backup Commands
 
 ```bash
-# Logical backup (SQL dump) — portable, slower
+# Logical backup (SQL dump) - portable, slower
 pg_dump mydb > mydb_backup.sql
 pg_restore -d mydb mydb_backup.sql
 
-# Physical backup (file-level) — fast, not portable
+# Physical backup (file-level) - fast, not portable
 pg_basebackup -D /backup/mydb -Ft -z -P
 
 # Continuous archiving (PITR)
@@ -86,7 +86,7 @@ pg_basebackup -D /backup/mydb -Ft -z -P
 - **3** copies of your data
 - **2** different media types (disk + cloud)
 - **1** copy off-site
-- **Test your restores** — a backup you can't restore is not a backup
+- **Test your restores:** a backup you can't restore is not a backup
 
 ---
 
@@ -107,6 +107,7 @@ pg_basebackup -D /backup/mydb -Ft -z -P
 > Primary handles writes. Replicas handle reads.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     W[Writes] --> P[Primary]
     P -->|Replication| R1[Replica 1]
@@ -114,9 +115,8 @@ graph LR
     R1 -.->|Reads| C1[Clients]
     R2 -.->|Reads| C1
 ```
-
 ```yaml
-# Spring Boot — read/write split
+# Spring Boot - read/write split
 spring:
   datasource:
     primary:
@@ -130,6 +130,7 @@ spring:
 > Split data across multiple independent databases by a shard key.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     A[Application] --> H{Hash Router<br/>user_id % 4}
     H -->|0| S0[Shard 0]
@@ -138,6 +139,7 @@ graph TD
     H -->|3| S3[Shard 3]
 ```
 
+
 | ✅ Pros | ❌ Cons |
 |--------|--------|
 | Near-linear scalability | Complex queries across shards |
@@ -145,16 +147,15 @@ graph TD
 | | No cross-shard JOINs or transactions |
 
 ### Connection Pooling
-
 ```yaml
-# HikariCP — default in Spring Boot
+# HikariCP - default in Spring Boot
 spring:
   datasource:
     hikari:
       maximum-pool-size: 20       # Don't exceed DB connection limit
       minimum-idle: 5
       idle-timeout: 300000        # 5 min
-      connection-timeout: 30000   # 30 sec — fail fast, don't hang
+      connection-timeout: 30000   # 30 sec - fail fast, don't hang
       max-lifetime: 1800000       # 30 min
 ```
 
@@ -162,5 +163,5 @@ spring:
 
 ## Sources
 
-- Flyway Documentation — https://flywaydb.org/documentation/
-- PostgreSQL Backup Documentation — https://www.postgresql.org/docs/current/backup.html
+- Flyway Documentation: https://flywaydb.org/documentation/
+- PostgreSQL Backup Documentation: https://www.postgresql.org/docs/current/backup.html

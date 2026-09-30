@@ -7,7 +7,7 @@ tags:
 
 # 08 Memory Management
 
-Every program needs memory to store data — variables, objects, function calls. How that memory is allocated, used, and reclaimed varies dramatically across languages and directly impacts performance, correctness, and security. Understanding memory management prevents the most insidious category of bugs: those that crash silently or degrade over hours.
+Every program needs memory to store data, variables, objects, function calls. How that memory is allocated, used, and reclaimed varies dramatically across languages and directly impacts performance, correctness, and security. Understanding memory management prevents the most insidious category of bugs: those that crash silently or degrade over hours.
 
 ---
 
@@ -62,42 +62,42 @@ void example() {
 | **Reference type** (`String`, `Object`, arrays) | Reference (pointer) on stack, object on heap | Copies the reference (both point to same object) |
 
 ```java
-// Value type — independent copies
+// Value type - independent copies
 int a = 42;
 int b = a;
 b = 99;
-// a is still 42 — separate memory locations
+// a is still 42 - separate memory locations
 
-// Reference type — shared object
+// Reference type - shared object
 int[] arr1 = {1, 2, 3};
 int[] arr2 = arr1;
 arr2[0] = 99;
-// arr1[0] is now 99 — same heap object
+// arr1[0] is now 99 - same heap object
 ```
 
 ```typescript
-// TypeScript — same concept
+// TypeScript - same concept
 let a = 42;
 let b = a;
 b = 99;        // a is still 42
 
 let arr1 = [1, 2, 3];
 let arr2 = arr1;
-arr2[0] = 99;  // arr1[0] is now 99 — same reference
+arr2[0] = 99;  // arr1[0] is now 99 - same reference
 ```
 
 ---
 
 ## Garbage Collection Basics
 
-Garbage collection (GC) automatically reclaims heap memory that is no longer reachable. It eliminates manual `free`/`delete` calls and prevents most memory leaks — but introduces pause-time trade-offs.
+Garbage collection (GC) automatically reclaims heap memory that is no longer reachable. It eliminates manual `free`/`delete` calls and prevents most memory leaks, but introduces pause-time trade-offs.
 
 ### Mark-and-Sweep
 
 The fundamental GC algorithm:
 
-1. **Mark** — Starting from GC roots (local variables, static fields, active threads), traverse all reachable objects and mark them as "alive."
-2. **Sweep** — Iterate over all heap objects; anything not marked is unreachable and gets reclaimed.
+1. **Mark:** Starting from GC roots (local variables, static fields, active threads), traverse all reachable objects and mark them as "alive."
+2. **Sweep:** Iterate over all heap objects; anything not marked is unreachable and gets reclaimed.
 
 ```
 GC Roots (local vars, statics)
@@ -129,10 +129,10 @@ New object → Eden → (survives minor GC) → Survivor → (survives more GCs)
 
 ## Manual Memory Management
 
-### C/C++ — malloc/free, new/delete
+### C/C++: malloc/free, new/delete
 
 ```c
-// C — manual allocation and deallocation
+// C - manual allocation and deallocation
 int* arr = (int*)malloc(100 * sizeof(int));
 if (arr == NULL) {
     // handle allocation failure
@@ -144,7 +144,7 @@ arr = NULL; // avoid dangling pointer
 ```
 
 ```cpp
-// C++ — RAII (Resource Acquisition Is Initialization)
+// C++ - RAII (Resource Acquisition Is Initialization)
 {
     std::vector<int> data = {1, 2, 3};
     // data automatically freed when it goes out of scope
@@ -155,7 +155,7 @@ int* p = new int(42);
 delete p;  // must manually delete
 ```
 
-### Rust — Ownership
+### Rust: Ownership
 
 Rust eliminates manual memory management without a GC through its ownership system:
 
@@ -165,7 +165,7 @@ fn main() {
     let s2 = s1;                      // ownership moves to s2
     // println!("{}", s1);            // COMPILE ERROR: s1 no longer valid
 
-    let s3 = s2.clone();             // deep copy — both valid
+    let s3 = s2.clone();             // deep copy - both valid
     println!("{} {}", s2, s3);       // both valid
 }
 // s2 and s3 automatically freed here (Rust's Drop trait)
@@ -204,15 +204,15 @@ A memory leak occurs when allocated memory is never freed, even though it's no l
 | Reference Type | Prevents GC? | Use Case |
 |---|---|---|
 | **Strong** | ✅ Yes | Normal object references (default) |
-| **Weak** | ❌ No | Caches, observer patterns — GC can reclaim at any time |
-| **Soft** | ⚠️ Only under memory pressure | Memory-sensitive caches — GC reclaims only when memory is low |
+| **Weak** | ❌ No | Caches, observer patterns ;  GC can reclaim at any time |
+| **Soft** | ⚠️ Only under memory pressure | Memory-sensitive caches ;  GC reclaims only when memory is low |
 
 ```java
-// Weak reference — doesn't prevent GC
+// Weak reference - doesn't prevent GC
 WeakReference<BigObject> weak = new WeakReference<>(new BigObject());
 BigObject obj = weak.get();  // may return null if GC'd
 
-// WeakHashMap — entries are auto-removed when key is GC'd
+// WeakHashMap - entries are auto-removed when key is GC'd
 WeakHashMap<CacheKey, Data> cache = new WeakHashMap<>();
 ```
 
@@ -225,17 +225,17 @@ Java maintains a special memory region called the **String Pool** (in the heap) 
 ```java
 String a = "hello";          // stored in string pool
 String b = "hello";          // reuses the same pooled object
-System.out.println(a == b);  // true — same reference
+System.out.println(a == b);  // true - same reference
 
 String c = new String("hello");  // NEW object on heap, NOT pooled
-System.out.println(a == c);      // false — different references
-System.out.println(a.equals(c)); // true — same content
+System.out.println(a == c);      // false - different references
+System.out.println(a.equals(c)); // true - same content
 
 String d = c.intern();           // returns pooled reference
 System.out.println(a == d);      // true
 ```
 
-> String interning saves memory when many identical strings exist (e.g., parsing CSV files with repeated values). Be careful — the pool is a form of cache that consumes memory too.
+> String interning saves memory when many identical strings exist (e.g., parsing CSV files with repeated values). Be careful, the pool is a form of cache that consumes memory too.
 
 ---
 
@@ -251,11 +251,11 @@ Immutable objects cannot change state after creation. This has direct memory con
 | **Memory overhead** | Lower for frequent updates | Higher for frequent updates |
 
 ```java
-// Mutable — modifies in place
+// Mutable - modifies in place
 StringBuilder sb = new StringBuilder("hello");
 sb.append(" world");  // same object modified
 
-// Immutable — creates new object
+// Immutable - creates new object
 String s = "hello";
 s = s + " world";  // new String object created (old one may be GC'd)
 ```
@@ -269,24 +269,24 @@ s = s + " world";  // new String object created (old one may be GC'd)
 ### Dangling Pointers (C/C++)
 
 ```c
-// ❌ DANGEROUS — pointer to freed memory
+// ❌ DANGEROUS - pointer to freed memory
 int* p = (int*)malloc(sizeof(int));
 *p = 42;
 free(p);
-printf("%d", *p);  // UNDEFINED BEHAVIOUR — dangling pointer
+printf("%d", *p);  // UNDEFINED BEHAVIOUR - dangling pointer
 
-// ✅ CORRECT — nullify after free
+// ✅ CORRECT - nullify after free
 free(p);
 p = NULL;
 if (p != NULL) {
-    printf("%d", *p);  // safe — never reached
+    printf("%d", *p);  // safe - never reached
 }
 ```
 
 ### Memory Leaks from Event Listeners (JavaScript)
 
 ```javascript
-// ❌ LEAK — listener holds reference to large data
+// ❌ LEAK - listener holds reference to large data
 function setup() {
     const largeData = new Array(1000000).fill("*");
     document.getElementById("btn").addEventListener("click", () => {
@@ -294,7 +294,7 @@ function setup() {
     });
 }
 
-// ✅ FIX — remove listener when done
+// ✅ FIX - remove listener when done
 function setup() {
     const largeData = new Array(1000000).fill("*");
     const handler = () => console.log(largeData.length);
@@ -355,9 +355,9 @@ class Node:
 
 ## Sources
 
-- *Effective Java* (3rd ed.) — Joshua Bloch, Items 6-7 (Cleaners, try-with-resources)
-- JVM Specification — Run-Time Data Areas
-- The Rust Book — Understanding Ownership (doc.rust-lang.org)
-- MDN — Memory Management (developer.mozilla.org)
-- Python Docs — `weakref` module
-- *What Every Programmer Should Know About Memory* — Ulrich Drepper
+- *Effective Java* (3rd ed.): Joshua Bloch, Items 6-7 (Cleaners, try-with-resources)
+- JVM Specification: Run-Time Data Areas
+- The Rust Book: Understanding Ownership (doc.rust-lang.org)
+- MDN: Memory Management (developer.mozilla.org)
+- Python Docs: `weakref` module
+- *What Every Programmer Should Know About Memory*: Ulrich Drepper

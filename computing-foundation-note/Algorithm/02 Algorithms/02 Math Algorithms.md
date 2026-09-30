@@ -19,7 +19,7 @@ Computational math algorithms are the "how to compute" companion to mathematical
 The greatest common divisor of two numbers can be computed in **O(log(min(a, b)))** using repeated modulo operations.
 
 ```java
-// Iterative GCD — O(log(min(a, b)))
+// Iterative GCD - O(log(min(a, b)))
 long gcd(long a, long b) {
     while (b != 0) {
         long temp = b;
@@ -68,10 +68,10 @@ Find **all primes up to n** in O(n log log n). Much faster than checking each nu
 3. For each number `i` from 2 to √n: if `isPrime[i]` is `true`, mark all multiples of `i` as `false`
 4. Remaining `true` entries are primes
 
-### Full Implementation (Optimized — Skip Evens)
+### Full Implementation (Optimized: Skip Evens)
 
 ```java
-// Sieve of Eratosthenes — O(n log log n) time, O(n) space
+// Sieve of Eratosthenes - O(n log log n) time, O(n) space
 boolean[] sieve(int n) {
     boolean[] isPrime = new boolean[n + 1];
     Arrays.fill(isPrime, true);
@@ -131,7 +131,7 @@ Walk through bits of the exponent. Square the base at each step; multiply into r
 ### Full Implementation (Iterative)
 
 ```java
-// Fast modular exponentiation — O(log exp)
+// Fast modular exponentiation - O(log exp)
 long modPow(long base, long exp, long mod) {
     long result = 1;
     base %= mod;
@@ -179,7 +179,7 @@ It exists only when `gcd(a, m) = 1` (a and m are coprime).
 If `m` is prime: `a⁻¹ ≡ a^(m-2) (mod m)`
 
 ```java
-// Modular inverse using Fermat's Little Theorem — O(log m)
+// Modular inverse using Fermat's Little Theorem - O(log m)
 // Only works when m is prime
 long modInverseFermat(long a, long m) {
     return modPow(a, m - 2, m);
@@ -191,7 +191,7 @@ long modInverseFermat(long a, long m) {
 Finds `x` such that `a * x + m * y = gcd(a, m) = 1`. Then `x` is the modular inverse.
 
 ```java
-// Extended Euclidean Algorithm — O(log(min(a, m)))
+// Extended Euclidean Algorithm - O(log(min(a, m)))
 // Returns {gcd, x, y} where a*x + m*y = gcd
 long[] extendedGcd(long a, long b) {
     if (b == 0) return new long[]{a, 1, 0};
@@ -200,7 +200,7 @@ long[] extendedGcd(long a, long b) {
     return new long[]{g, x, y};
 }
 
-// Modular inverse using Extended GCD — works for any coprime a, m
+// Modular inverse using Extended GCD - works for any coprime a, m
 long modInverse(long a, long m) {
     long[] result = extendedGcd(a, m);
     if (result[0] != 1) throw new ArithmeticException("Inverse doesn't exist");
@@ -229,7 +229,7 @@ nCr % p = n! × (r!)⁻¹ × ((n-r)!)⁻¹  mod p
 ### Precompute Factorials + Inverse Factorials
 
 ```java
-// Precompute factorials and inverse factorials modulo p — O(n)
+// Precompute factorials and inverse factorials modulo p - O(n)
 class Combinatorics {
     static final long MOD = 1_000_000_007;
     long[] fact;      // fact[i] = i! % MOD
@@ -281,22 +281,22 @@ class Combinatorics {
 | Find a⁻¹ mod m (general) | Extended Euclidean | O(log(min(a,m))) |
 | nCr % p (many queries) | Precompute factorials | O(n) + O(1)/query |
 
-> For mathematical theory behind these algorithms, see [[Number Theory]] and [[Basics of Counting]] in the Math vault.
+> For mathematical theory behind these algorithms, see [[08_number_theory|Number Theory]] and [[03_basics_of_counting|Basics of Counting]] in the Math vault.
 
 ---
 
 ## Sources
 
-- CLRS — Chapter 31 (Number-Theoretic Algorithms)
-- Competitive Programming 3 — Steven Halim, Chapters 5-7
-- GeeksforGeeks — Modular Arithmetic
+- CLRS: Chapter 31 (Number-Theoretic Algorithms)
+- Competitive Programming 3: Steven Halim, Chapters 5-7
+- GeeksforGeeks: Modular Arithmetic
 
 
 ---
 
 ## Hands-On Exercises
 
-### Exercise 1: GCD/LCM — Implement Both
+### Exercise 1: GCD/LCM: Implement Both
 Implement `gcd` (Euclidean) and `lcm` from the note. Test with `gcd(48, 18)` → expect `6`, `lcm(4, 6)` → expect `12`.
 
 ```java
@@ -306,7 +306,7 @@ long lcm(long a, long b) { /* TODO: a / gcd(a,b) * b */ }
 
 ---
 
-### Exercise 2: Sieve of Eratosthenes — Find Primes ≤ 100
+### Exercise 2: Sieve of Eratosthenes: Find Primes ≤ 100
 Implement the sieve from the note. Find all primes ≤ 100. Expected: `[2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97]` (25 primes).
 
 ```java
@@ -347,8 +347,8 @@ long modPow(long base, long exp, long mod) {
 | 8 | [Nth Magical Number](https://leetcode.com/problems/nth-magical-number/) (LC 878) | 🔴 Hard | LCM + Binary Search |
 
 ### Assignment Guidelines
-- **Start** with 4–5 (Easy) — basic GCD/number properties.
-- **Then** 1–3, 6–7 (Medium) — sieve, fast pow, combinatorics.
+- **Start** with 4–5 (Easy): basic GCD/number properties.
+- **Then** 1–3, 6–7 (Medium): sieve, fast pow, combinatorics.
 - **Problem 8** (Hard) combines LCM with binary search.
 - **Key insight:** Modular arithmetic is essential for competitive programming and cryptography.
 - **Target time:** 10 min per Easy, 20 min per Medium, 35 min per Hard.

@@ -35,10 +35,10 @@ index(x, y) = x · ⌊√u⌋ + y  → reconstruct value
 
 ### Proto van Emde Boas Structure
 
-**Base case:** $u = 2$ — a 2-bit array $A[0..1]$
+**Base case:** $u = 2$, a 2-bit array $A[0..1]$
 
 **Recursive case ($u > 2$):**
-- `summary`: proto-vEB($\lceil\sqrt{u}\rceil$) — tracks non-empty clusters
+- `summary`: proto-vEB($\lceil\sqrt{u}\rceil$): tracks non-empty clusters
 - `cluster[0..⌈√u⌉−1]`: array of proto-vEB($\lfloor\sqrt{u}\rfloor$) pointers
 
 **Problem:** Most operations make **two** recursive calls → $T(u) = 2T(\sqrt{u}) + O(1) = O(\lg u)$, not $O(\lg \lg u)$.
@@ -52,10 +52,10 @@ index(x, y) = x · ⌊√u⌋ + y  → reconstruct value
 - `max` stores the maximum (may also appear in a cluster if $|S| \geq 2$)
 
 **This breaks the two-call pattern:**
-- `MINIMUM`/`MAXIMUM`: Return `min`/`max` in $O(1)$ — no recursion
+- `MINIMUM`/`MAXIMUM`: Return `min`/`max` in $O(1)$: no recursion
 - `SUCCESSOR`: Check cluster's `max` to decide if successor is local → one recursive call
-- `INSERT` into empty tree: Just set `min` and `max` — no recursion
-- `DELETE` from single-element tree: Clear `min` and `max` — no recursion
+- `INSERT` into empty tree: Just set `min` and `max`: no recursion
+- `DELETE` from single-element tree: Clear `min` and `max`: no recursion
 
 **Result:** $T(u) = T(\lceil\sqrt{u}\rceil) + O(1) = O(\lg \lg u)$
 
@@ -107,11 +107,11 @@ VEB-TREE-DELETE(V, x):
     update V.max if needed
 ```
 
-**Critical observation:** The two recursive calls (lines 13 and 15) are **mutually exclusive** — if the cluster becomes empty (triggering summary update), the first call was $O(1)$ because it deleted the sole element.
+**Critical observation:** The two recursive calls (lines 13 and 15) are **mutually exclusive**; if the cluster becomes empty (triggering summary update), the first call was $O(1)$ because it deleted the sole element.
 
 ### Space and Construction
 
-- **Space:** $O(u)$ — pre-allocated for all possible universe values
+- **Space:** $O(u)$: pre-allocated for all possible universe values
 - **Construction:** $O(u)$ time (vs. $O(1)$ for red-black trees)
 - Trade-off: expensive initialization pays off only with many operations
 
@@ -127,7 +127,7 @@ Replace the `cluster` array with a **hash table** (dynamic table):
 
 ## Hands-On Exercises
 
-### Exercise 4: vEB Tree — Conceptual Understanding
+### Exercise 4: vEB Tree: Conceptual Understanding
 For a vEB tree with universe size `u = 16`:
 
 1. How many clusters are there? What is each cluster's size?
@@ -148,6 +148,6 @@ For a vEB tree with universe size `u = 16`:
 | 3 | **Why does explicit min/max break the two-call pattern?** | 🟡 Theory | Recursion depth |
 
 ### Assignment Guidelines
-- **Problem 1**: Trace on paper with u=16.
-- **Problem 2**: Implement proto-vEB (without min/max optimization).
+- **Problem 1:** Trace on paper with u=16.
+- **Problem 2:** Implement proto-vEB (without min/max optimization).
 - **Target time:** 20 min per theory, 45 min for code.

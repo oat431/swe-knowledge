@@ -14,13 +14,13 @@ created: 2026-08-31
 
 # 02 Vector Databases
 
-> **Core idea:** Vector databases store embeddings (high-dimensional float arrays) and perform fast approximate nearest neighbor (ANN) search. Used for semantic retrieval — "find me things similar to this meaning," not just "things containing this keyword."
+> **Core idea:** Vector databases store embeddings (high-dimensional float arrays) and perform fast approximate nearest neighbor (ANN) search. Used for semantic retrieval: "find me things similar to this meaning," not just "things containing this keyword."
 
 ---
 
 ## What Are Vector Databases?
 
-A vector database is a specialized database that stores, indexes, and queries **vector embeddings** — dense numerical representations of data (text, images, audio) that capture semantic meaning. Unlike traditional databases that match exact values or keywords, vector databases find **similarity**: "what is semantically close to this query?"
+A vector database is a specialized database that stores, indexes, and queries **vector embeddings:** dense numerical representations of data (text, images, audio) that capture semantic meaning. Unlike traditional databases that match exact values or keywords, vector databases find **similarity:** "what is semantically close to this query?"
 
 ### Embeddings Refresher
 
@@ -51,7 +51,7 @@ Traditional databases use exact-match indexes (B-trees, hash indexes). Vector se
 | Scenario | Why |
 |---|---|
 | **Small, structured, exact-match data** (30 SKUs with prices) | Keyword search is simpler, faster, and auditable |
-| **When wrong matches have high cost** (quoting wrong price) | Embedding similarity is fuzzy — you can't guarantee exact matches |
+| **When wrong matches have high cost** (quoting wrong price) | Embedding similarity is fuzzy ;  you can't guarantee exact matches |
 | **When you need auditability** | Keyword matches are inspectable; embedding similarity is opaque |
 | **When you already have Postgres** and the data is small | pgvector adds vector capability without a new database |
 
@@ -61,7 +61,7 @@ Traditional databases use exact-match indexes (B-trees, hash indexes). Vector se
 
 | Tool | Type | Best For | Thai-Market Note |
 |---|---|---|---|
-| **pgvector** | PostgreSQL extension | You already have Postgres; want vectors + transactions in one DB; operational simplicity | Likely the right production choice for Thai SMEs — they have relational catalogs |
+| **pgvector** | PostgreSQL extension | You already have Postgres; want vectors + transactions in one DB; operational simplicity | Likely the right production choice for Thai SMEs ;  they have relational catalogs |
 | **Pinecone** | Managed SaaS | Pure vector workloads at scale; no ops burden | Adds a vendor + cost; data leaves your infra |
 | **Chroma** | Open-source, embedded | Local dev, prototyping, small-medium datasets | Good for POC; runs in-process |
 | **FAISS** | Library (Meta) | High-performance on-prem; you own serving | Best for large-scale, low-latency; no managed service |
@@ -81,16 +81,16 @@ Traditional databases use exact-match indexes (B-trees, hash indexes). Vector se
 
 ### HNSW (Hierarchical Navigable Small World)
 
-- **How it works:** Graph-based — builds a multi-layer graph where each node connects to its nearest neighbors. Search traverses the graph from coarse to fine.
-- **Fast query** — typically sub-10ms at 95%+ recall
-- **Higher memory** — stores the graph structure in RAM
+- **How it works:** Graph-based: builds a multi-layer graph where each node connects to its nearest neighbors. Search traverses the graph from coarse to fine.
+- **Fast query:** typically sub-10ms at 95%+ recall
+- **Higher memory:** stores the graph structure in RAM
 - **Best for:** Low-latency, high-throughput production
 
 ### IVF (Inverted File Index)
 
-- **How it works:** Cluster-based — partitions vectors into clusters using k-means. At query time, only searches the nearest clusters.
-- **Lower memory** — stores only cluster centroids + vectors
-- **Slightly slower** — must search multiple clusters for good recall
+- **How it works:** Cluster-based: partitions vectors into clusters using k-means. At query time, only searches the nearest clusters.
+- **Lower memory:** stores only cluster centroids + vectors
+- **Slightly slower:** must search multiple clusters for good recall
 - **Best for:** Memory-constrained environments, large datasets
 
 ### Which to Choose?
@@ -132,13 +132,14 @@ ORDER BY embedding <=> query_embedding
 LIMIT 5;
 ```
 
-**Key design insight:** The `build_context()` interface doesn't change — only the `catalog.search()` implementation swaps from keyword to vector. This is the provider-neutral design pattern.
+**Key design insight:** The `build_context()` interface doesn't change, only the `catalog.search()` implementation swaps from keyword to vector. This is the provider-neutral design pattern.
 
 ---
 
 ## Vector Database Architecture in Production
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     DOCS["Documents / Products"] --> CHUNK["Chunking Strategy"]
     CHUNK --> EMBED["Embedding Model"]
@@ -148,10 +149,11 @@ flowchart TD
     SEARCH --> RERANK["Re-ranking (optional)"]
     RERANK --> RESULTS["Top-K Results"]
     
-    style STORE fill:#4CAF50,color:#fff
-    style EMBED fill:#2196F3,color:#fff
-    style SEARCH fill:#FF9800,color:#fff
+    style STORE fill:#1FB854,color:#000000
+    style EMBED fill:#00B5FF,color:#000000
+    style SEARCH fill:#FFBE00,color:#000000
 ```
+
 
 ---
 
@@ -163,7 +165,7 @@ flowchart TD
 | **ANN (Approximate Nearest Neighbor)** | Fast, approximate similarity search (trades a tiny bit of accuracy for 100-1000x speed) |
 | **Cosine similarity** | Most common distance metric for text embeddings; measures angle between vectors |
 | **Recall@k** | What fraction of the true top-k nearest neighbors are returned by the ANN index |
-| **Chunking** | How you split documents before embedding — affects retrieval quality significantly |
+| **Chunking** | How you split documents before embedding ;  affects retrieval quality significantly |
 | **Hybrid search** | Combining dense (vector) + sparse (BM25/keyword) retrieval for better results |
 | **Reranking** | A second-pass model that re-scores retrieved candidates for higher precision |
 
@@ -173,7 +175,7 @@ flowchart TD
 
 **Q: "How would you add semantic search to your take-home?"**
 
-A: Embed each product's name+description with a small embedding model (e.g., `text-embedding-3-small`), store in pgvector alongside the catalog table, and at query time embed the query and do `ORDER BY embedding <=> query_embedding LIMIT 5`. The `build_context()` interface doesn't change — only the `catalog.search()` implementation swaps from keyword to vector.
+A: Embed each product's name+description with a small embedding model (e.g., `text-embedding-3-small`), store in pgvector alongside the catalog table, and at query time embed the query and do `ORDER BY embedding <=> query_embedding LIMIT 5`. The `build_context()` interface doesn't change, only the `catalog.search()` implementation swaps from keyword to vector.
 
 **Q: "When would you choose Pinecone over pgvector?"**
 
@@ -187,7 +189,7 @@ A: HNSW gives faster queries at the cost of higher memory (stores the graph). IV
 
 ## Related
 
-- [[02 NoSQL Overview]] — CAP theorem, BASE vs ACID
-- [[01 Indexing & Performance]] — B-trees and traditional indexing
-- [[10_LLM_Production_Patterns]] — RAG, where vector DBs are the retrieval layer
-- [[09_AI_SE_Intersection]] — SE for AI, MLOps
+- [[02 NoSQL Overview]]: CAP theorem, BASE vs ACID
+- [[01 Indexing & Performance]]: B-trees and traditional indexing
+- [[10_LLM_Production_Patterns]]: RAG, where vector DBs are the retrieval layer
+- [[09_AI_SE_Intersection]]: SE for AI, MLOps

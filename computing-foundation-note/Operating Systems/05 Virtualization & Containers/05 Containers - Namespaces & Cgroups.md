@@ -6,7 +6,7 @@ tags:
 - containers
 ---
 
-# 05 Containers — Namespaces & Cgroups
+# 05 Containers: Namespaces & Cgroups
 
 A container is not a small VM. It's an ordinary Linux process whose *view* of the system is restricted by **namespaces** (what it can see) and whose *resource use* is capped by **cgroups** (what it can consume). One kernel, many isolated worlds. Everything "Docker" does on Linux is user-space tooling wrapped around these two kernel features plus layered filesystems.
 
@@ -49,7 +49,7 @@ Each namespace wraps one global kernel resource so processes inside see a privat
 | **net** | `CLONE_NEWNET` | Network stack: devices, IPs, ports, routes, iptables | 2.6.29 |
 | **ipc** | `CLONE_NEWIPC` | System V IPC, POSIX message queues | 2.6.19 |
 | **uts** | `CLONE_NEWUTS` | Hostname and domain name | 2.6.19 |
-| **user** | `CLONE_NEWUSER` | UID/GID mapping — root inside ≠ root outside | 3.8 |
+| **user** | `CLONE_NEWUSER` | UID/GID mapping ;  root inside ≠ root outside | 3.8 |
 | **cgroup** | `CLONE_NEWCGROUP` | View of `/proc/<pid>/cgroup` and cgroup mounts | 4.6 |
 | **time** | `CLONE_NEWTIME` | Offsets for `CLOCK_MONOTONIC` and `CLOCK_BOOTTIME` | 5.6 |
 
@@ -72,11 +72,11 @@ ls -l /proc/$$/ns/
 
 ---
 
-## PID Namespace — You Are PID 1 Now
+## PID Namespace: You Are PID 1 Now
 
 - First process in the namespace is **PID 1**; children get 2, 3, … The same process still has a *different* PID on the host.
 - PID 1 has special duties a normal app doesn't implement: **reaping orphaned zombies** (`SIGCHLD` + `wait()`). If your container's entrypoint is `python app.py`, zombies from short-lived children pile up forever.
-- PID 1 also **ignores default signal actions** — `kill -TERM 1` inside the namespace does nothing unless the app installs a handler. This is why `docker stop` sometimes waits the full 10 s before SIGKILL.
+- PID 1 also **ignores default signal actions:** `kill -TERM 1` inside the namespace does nothing unless the app installs a handler. This is why `docker stop` sometimes waits the full 10 s before SIGKILL.
 
 Fix: run a tiny init as PID 1.
 
@@ -89,15 +89,15 @@ ENTRYPOINT ["tini", "--", "java", "-jar", "app.jar"]
 ```bash
 # See PID namespaces from inside vs outside
 sudo unshare --pid --fork --mount-proc bash
-echo $$        # prints 1 — you are init
+echo $$        # prints 1 - you are init
 ps aux         # mount-proc gave this namespace its own /proc
 ```
 
 ---
 
-## Network Namespace — veth Pairs & Bridges
+## Network Namespace: veth Pairs & Bridges
 
-A net namespace starts **empty**: only `lo` (down). No eth0, no DNS, no routes. You build connectivity with **veth pairs** — virtual ethernet cables where bytes in one end come out the other.
+A net namespace starts **empty:** only `lo` (down). No eth0, no DNS, no routes. You build connectivity with **veth pairs:** virtual ethernet cables where bytes in one end come out the other.
 
 ```
         HOST netns                          CONTAINER netns
@@ -130,7 +130,7 @@ sudo nsenter --net=/var/run/netns/web ip a
 
 ---
 
-## User Namespaces — Rootless Containers
+## User Namespaces: Rootless Containers
 
 Map container UID 0 to an unprivileged host UID: the process is **root inside, nobody outside**. A container escape lands you as `uid 100000`, not root.
 
@@ -142,18 +142,18 @@ Container UID   →  Host UID
 ```
 
 ```bash
-cat /etc/subuid            # admin:100000:65536 — your UID range
-sudo unshare --user --map-root-user id   # uid=0(root) — but only inside
+cat /etc/subuid            # admin:100000:65536 - your UID range
+sudo unshare --user --map-root-user id   # uid=0(root) - but only inside
 grep -E 'Uid|Gid' /proc/self/status      # real host IDs unchanged
 
 podman run --uidmap 0:100000:65536 alpine id   # rootless podman
 ```
 
-This is why **Podman** can run fully daemonless and rootless — no root-owned daemon on the host is one less thing to compromise.
+This is why **Podman** can run fully daemonless and rootless: no root-owned daemon on the host is one less thing to compromise.
 
 ---
 
-## Cgroups v2 — The Resource Leash
+## Cgroups v2: The Resource Leash
 
 Namespaces hide resources; cgroups **limit** them. v2 (unified hierarchy, default on modern distros) puts every controller in one tree under `/sys/fs/cgroup`. A process is in exactly one leaf cgroup; children inherit.
 
@@ -164,7 +164,7 @@ Namespaces hide resources; cgroups **limit** them. v2 (unified hierarchy, defaul
 | **io** | `io.max` (`"253:0 rbps=1048576 wbps=max"`), `io.weight` | Bandwidth/IOPS caps per block device |
 | **pids** | `pids.max` | Fork-bomb stopper: `fork()` returns EAGAIN |
 
-> Throttle vs OOMKill: CPU is a *compressible* resource — overuse gets you paused. Memory is *incompressible* — overuse gets you killed. That asymmetry is why memory limits need headroom and CPU limits mostly just add latency spikes.
+> Throttle vs OOMKill: CPU is a *compressible* resource (overuse gets you paused. Memory is *incompressible*) overuse gets you killed. That asymmetry is why memory limits need headroom and CPU limits mostly just add latency spikes.
 
 ```bash
 # Build a cgroup by hand (v2)
@@ -174,11 +174,11 @@ echo "50000 100000"  | sudo tee /sys/fs/cgroup/demo/cpu.max   # 0.5 CPU
 echo "64M"           | sudo tee /sys/fs/cgroup/demo/memory.max
 echo "50"            | sudo tee /sys/fs/cgroup/demo/pids.max
 echo $$              | sudo tee /sys/fs/cgroup/demo/cgroup.procs
-# this shell is now limited — try `stress-ng --vm 1 --vm-bytes 128M`
+# this shell is now limited - try `stress-ng --vm 1 --vm-bytes 128M`
 
 # Inspect what a container sees
 cat /sys/fs/cgroup/memory.max
-cat /sys/fs/cgroup/cpu.stat        # nr_throttled, throttled_usec — proof of throttling
+cat /sys/fs/cgroup/cpu.stat        # nr_throttled, throttled_usec - proof of throttling
 cat /proc/<pid>/cgroup             # 0::/system.slice/docker-<id>.scope
 systemd-cgls                       # whole tree
 ```
@@ -188,6 +188,7 @@ systemd-cgls                       # whole tree
 ## The Container Runtime Stack
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph TD
     K[kubelet] -->|CRI gRPC| C[containerd / CRI-O]
     D[docker CLI] --> DD[dockerd] --> C
@@ -197,6 +198,7 @@ graph TD
     R -->|clone + namespaces + cgroups| K2[Linux Kernel]
     K2 --> A[Your app process]
 ```
+
 
 | Layer | What it is | What it does |
 |-------|-----------|--------------|
@@ -208,7 +210,7 @@ graph TD
 | **Podman** | CLI, daemonless | Same OCI flow, rootless-friendly, systemd integration |
 
 ```bash
-# A container is just a process — find it
+# A container is just a process - find it
 docker inspect -f '{{.State.Pid}}' mycontainer
 sudo ls -l /proc/<pid>/ns/          # its namespaces
 sudo cat /proc/<pid>/cgroup         # its cgroup
@@ -217,7 +219,7 @@ ps -eo pid,ns,comm | head           # ns column, util-linux ≥ 2.36
 
 ---
 
-## Images & Layers — OverlayFS Copy-on-Write
+## Images & Layers: OverlayFS Copy-on-Write
 
 An image = **stacked read-only layers** + a JSON config (env, entrypoint). Running adds one **writable layer** on top via overlayfs: reads fall through to lower layers; first write to a file **copies it up** into the writable layer (copy-up). Delete a lower-layer file → a *whiteout* marker hides it (size isn't reclaimed until you rebuild).
 
@@ -237,18 +239,18 @@ docker inspect -f '{{.GraphDriver.Data}}' <cid>   # lowerdir/upperdir/merged
 mount | grep overlay
 ```
 
-Consequences: layer caching makes builds fast; **write-heavy paths** (databases) suffer copy-up — use volumes (bypass overlay entirely); deleting a huge file your base image contains does *not* shrink your image.
+Consequences: layer caching makes builds fast; **write-heavy paths** (databases) suffer copy-up; use volumes (bypass overlay entirely); deleting a huge file your base image contains does *not* shrink your image.
 
 ---
 
 ## What Containers Do NOT Isolate
 
 - **The kernel itself.** One kernel, one syscall table, one scheduler. A kernel LPE bug (Dirty COW, Dirty Pipe, netfilter UAFs) = every container on the host falls.
-- **`/proc` quirks.** `/proc/cpuinfo`, `/proc/meminfo`, `uptime`, `/proc/loadavg` still show **host** values — they're not namespaced. Only `/proc/[pid]` listings follow the PID namespace.
-- **Time** (offsets only since 5.6 — and container runtimes don't use it; you can't give a container its own clock rate).
+- **`/proc` quirks.** `/proc/cpuinfo`, `/proc/meminfo`, `uptime`, `/proc/loadavg` still show **host** values; they're not namespaced. Only `/proc/[pid]` listings follow the PID namespace.
+- **Time** (offsets only since 5.6: and container runtimes don't use it; you can't give a container its own clock rate).
 - **`dmesg`** (restricted, not virtualized), kernel modules, hardware clocks.
 
-> A container escape (break out of namespaces → host root) is categorically easier than a VM escape (defeat the hypervisor's hardware-enforced boundary). That's why untrusted multi-tenant code goes in microVMs — see [[05 Virtualization - KVM & Hypervisors]].
+> A container escape (break out of namespaces → host root) is categorically easier than a VM escape (defeat the hypervisor's hardware-enforced boundary). That's why untrusted multi-tenant code goes in microVMs; see [[05 Virtualization - KVM & Hypervisors]].
 
 ### Security defaults
 
@@ -265,14 +267,14 @@ Because `/proc/meminfo` and `nproc` show the **host**, an unaware runtime sizes 
 | **JVM ≤ 8u131** | Heap sized from host RAM | Upgrade; or `-XX:+UseContainerSupport` (default on since 8u191/10) reads cgroup limits |
 | **JVM** | CPU-based GC/JIT threads from host core count | Same flag; `-XX:MaxRAMPercentage=75` beats fixed `-Xmx` in containers |
 | **Go ≤ 1.18** | `GOMAXPROCS` = host CPUs → excess context switches & latency | Go 1.19+: still host-based! Use `automaxprocs` or set `GOMAXPROCS` explicitly |
-| **.NET ≥ 3.0** | — | Container-aware by default (`DOTNET_SYSTEM_GLOBALIZATION_INVARIANT` era fixes) |
+| **.NET ≥ 3.0** | N/A | Container-aware by default (`DOTNET_SYSTEM_GLOBALIZATION_INVARIANT` era fixes) |
 
 ```bash
 # What the JVM actually sees
 docker run -m 512m eclipse-temurin:21 java -XX:+PrintFlagsFinal -version | grep -i maxheap
 # Compare inside:
 cat /sys/fs/cgroup/memory.max     # 536870912
-head -1 /proc/meminfo             # host total — the lie
+head -1 /proc/meminfo             # host total - the lie
 ```
 
 Rule of thumb: leave ~25 % headroom between app heap and `memory.max` (metaspace, threads, glibc arenas, page cache all count).
@@ -281,11 +283,11 @@ Rule of thumb: leave ~25 % headroom between app heap and `memory.max` (metaspace
 
 ## Sources
 
-- LWN: *Namespaces in operation* series — https://lwn.net/Articles/531114/ (Michael Kerrisk).
+- LWN: *Namespaces in operation* series: https://lwn.net/Articles/531114/ (Michael Kerrisk).
 - LWN: *Control Group v2* documentation & *The unified hierarchy* articles.
 - Kernel docs: `Documentation/admin-guide/cgroup-v2.rst`, `Documentation/userspace-api/namespaces/`.
 - `man` pages: `namespaces(7)`, `cgroups(7)`, `unshare(1)`, `nsenter(1)`, `lsns(8)`, `ip-netns(8)`.
 - Nigel Poulton. *Docker Deep Dive* (2024 ed.).
-- Liz Rice. *Container Security* (O'Reilly, 2020) — namespaces, capabilities, escapes.
-- OCI Runtime Specification — https://github.com/opencontainers/runtime-spec
-- JVM container support: JDK-8146115 / `-XX:+UseContainerSupport` docs; Uber `automaxprocs`.
+- Liz Rice. *Container Security* (O'Reilly, 2020): namespaces, capabilities, escapes.
+- OCI Runtime Specification: https://github.com/opencontainers/runtime-spec
+- JVM container support: JDK-8146115 / `-XX:+UseContainerSupport` docs; uber `automaxprocs`.

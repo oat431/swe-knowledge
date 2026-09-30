@@ -2,13 +2,13 @@
 tags: [artificial-intelligence, overview, ai]
 ---
 
-# Artificial Intelligence — Overview
+# Artificial Intelligence: Overview
 
 > **Source:** *Artificial Intelligence: A Modern Approach* by Stuart Russell & Peter Norvig (Pearson)
 
 ## What Is This?
 
-This vault covers **artificial intelligence** — the theory and practice of building intelligent agents. It fills the last gap in SWEBOK's Computing Foundations KA for AI/ML.
+This vault covers **artificial intelligence**, the theory and practice of building intelligent agents. It fills the last gap in SWEBOK's Computing Foundations KA for AI/ML.
 
 ## Files
 
@@ -31,6 +31,7 @@ This vault covers **artificial intelligence** — the theory and practice of bui
 ## How These Topics Relate
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     FOUND["AI Foundations"] --> SEARCH["Search & CSP"]
     FOUND --> LOGIC["Logic & Reasoning"]
@@ -42,6 +43,7 @@ flowchart TD
     NLP --> ETHICS["AI Ethics & Future"]
     RL --> ETHICS
 ```
+
 
 ## Reading Paths
 
@@ -59,7 +61,7 @@ flowchart TD
 
 ## Related
 
-- [[Computing Foundation Overview]] — All computing foundation topics
-- [[Programming Language Theory/Programming Language Theory Overview|Programming Language Theory]] — Type systems and formal semantics
-- [[Algorithm/Algorithm Overview|Algorithms]] — Algorithmic foundations
-- [[Database/Database Overview|Database]] — [[02 Vector Databases]] for vector search
+- [[Computing Foundation Overview]]: All computing foundation topics
+- [[Programming Language Theory/Programming Language Theory Overview|Programming Language Theory]]: Type systems and formal semantics
+- [[Algorithm/Algorithm Overview|Algorithms]]: Algorithmic foundations
+- [[Database/Database Overview|Database]]: [[02 Vector Databases]] for vector search

@@ -11,7 +11,7 @@ source: Interview preparation
 created: 2026-08-31
 ---
 
-# 10 — LLM Production Patterns: RAG, Agents, Function-Calling
+# 10: LLM Production Patterns: RAG, Agents, Function-Calling
 
 > Core AI Engineer vocabulary. Know **what** each pattern is, **when** to use it, and **why** you chose one over another.
 
@@ -33,6 +33,7 @@ created: 2026-08-31
 ### How It Works
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart LR
     QUERY["User Query"] --> EMBED["Embed Query"]
     EMBED --> RETRIEVE["Vector Search"]
@@ -41,17 +42,18 @@ flowchart LR
     PROMPT --> LLM["LLM Generation"]
     LLM --> ANSWER["Grounded Answer"]
     
-    style RETRIEVE fill:#4CAF50,color:#fff
-    style LLM fill:#2196F3,color:#fff
-    style ANSWER fill:#FF9800,color:#fff
+    style RETRIEVE fill:#1FB854,color:#000000
+    style LLM fill:#00B5FF,color:#000000
+    style ANSWER fill:#FFBE00,color:#000000
 ```
+
 
 ### Key Components
 
-1. **Chunking** — How you split documents before embedding. Too small = lost context. Too large = diluted relevance. Common: 256-512 token chunks with overlap.
-2. **Retrieval** — Semantic search over embeddings (see [[02 Vector Databases]]). Can be dense (vector), sparse (BM25/keyword), or hybrid (both).
-3. **Augmentation** — Inject retrieved documents into the system prompt as context. The LLM sees: `System: You are a helpful assistant. Context: [docs]. User: [query]`
-4. **Generation** — LLM produces answer grounded in retrieved context, with citations.
+1. **Chunking:** How you split documents before embedding. Too small = lost context. Too large = diluted relevance. Common: 256-512 token chunks with overlap.
+2. **Retrieval:** Semantic search over embeddings (see [[02 Vector Databases]]). Can be dense (vector), sparse (BM25/keyword), or hybrid (both).
+3. **Augmentation:** Inject retrieved documents into the system prompt as context. The LLM sees: `System: You are a helpful assistant. Context: [docs]. User: [query]`
+4. **Generation:** LLM produces answer grounded in retrieved context, with citations.
 
 ### When to Use RAG
 
@@ -74,7 +76,7 @@ flowchart LR
 | **Embedding model** | Better embeddings = better retrieval |
 | **Retrieval strategy** | Hybrid (dense + sparse) typically beats either alone |
 | **Reranking** | A second-pass model re-scores candidates; significant quality boost |
-| **Prompt template** | How you frame the context matters — "Answer ONLY from the provided context" |
+| **Prompt template** | How you frame the context matters ;  "Answer ONLY from the provided context" |
 
 ---
 
@@ -98,15 +100,15 @@ flowchart LR
 ### When NOT to Use
 
 - The function result is deterministic and you can pre-compute it (just inject it)
-- The action is irreversible (create order, charge card) — add human confirmation
+- The action is irreversible (create order, charge card): add human confirmation
 - The LLM can hallucinate function calls (OpenAI function-calling is reliable; open-source models vary)
 
 ### Safety Considerations
 
-- **Validate function arguments** before execution — never trust LLM output directly
-- **Limit blast radius** — functions should be read-only where possible, write with confirmation
-- **Rate limit** — an agent loop can call functions rapidly; set per-user limits
-- **Audit log** — log every function call with arguments for debugging
+- **Validate function arguments** before execution: never trust LLM output directly
+- **Limit blast radius:** functions should be read-only where possible, write with confirmation
+- **Rate limit:** an agent loop can call functions rapidly; set per-user limits
+- **Audit log:** log every function call with arguments for debugging
 
 ---
 
@@ -115,6 +117,7 @@ flowchart LR
 ### How It Works
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     START["User Query"] --> THINK["LLM: Think"]
     THINK --> DECIDE{"Action?"}
@@ -124,9 +127,10 @@ flowchart TD
     SEARCH --> THINK
     TOOL --> THINK
     
-    style THINK fill:#2196F3,color:#fff
-    style ANSWER fill:#4CAF50,color:#fff
+    style THINK fill:#00B5FF,color:#000000
+    style ANSWER fill:#1FB854,color:#000000
 ```
+
 
 The LLM decides the next step iteratively: it might search, then reason, then search again, then call a tool, then reply. Each step is one LLM call.
 
@@ -176,7 +180,7 @@ Your take-home's approach: 30 SKUs + short FAQ fit in the context window. The ca
 
 | Term | Definition |
 |---|---|
-| **Grounding** | Tying LLM output to retrieved facts — the output is "grounded" in real data, not invented |
+| **Grounding** | Tying LLM output to retrieved facts ;  the output is "grounded" in real data, not invented |
 | **Hallucination** | LLM invents facts that aren't in the context or training data |
 | **Context window** | How much text the model can see at once (e.g., 128K tokens for GPT-4o) |
 | **Temperature** | Randomness; 0 = deterministic, 1 = creative. Use 0-0.3 for factual tasks |
@@ -190,6 +194,7 @@ Your take-home's approach: 30 SKUs + short FAQ fit in the context window. The ca
 ## Decision Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 flowchart TD
     START["Does all knowledge fit in the context window?"] -->|Yes| SINGLE["Single-Prompt with Context Injection"]
     START -->|No| RAG_Q["Do you need real-time data?"]
@@ -198,18 +203,19 @@ flowchart TD
     FC_Q -->|No| FC["RAG + Function-Calling"]
     FC_Q -->|Yes| AGENT["RAG + Agent Loop"]
 
-    style SINGLE fill:#4CAF50,color:#fff
-    style RAG fill:#2196F3,color:#fff
-    style FC fill:#FF9800,color:#fff
-    style AGENT fill:#9C27B0,color:#fff
+    style SINGLE fill:#1FB854,color:#000000
+    style RAG fill:#00B5FF,color:#000000
+    style FC fill:#FFBE00,color:#000000
+    style AGENT fill:#1FB8AB,color:#000000
 ```
+
 
 ---
 
 ## Related
 
-- [[02 Vector Databases]] — The retrieval layer for RAG
-- [[11_Prompt_Engineering_and_Security]] — Prompt design and injection defense
-- [[13_LLM_Evaluation_and_Guardrails]] — How to evaluate if your pattern is working
-- [[09_AI_SE_Intersection]] — MLOps, model serving, monitoring
-- [[AI Overview]] — All AI topics
+- [[02 Vector Databases]]: The retrieval layer for RAG
+- [[11_Prompt_Engineering_and_Security]]: Prompt design and injection defense
+- [[13_LLM_Evaluation_and_Guardrails]]: How to evaluate if your pattern is working
+- [[09_AI_SE_Intersection]]: MLOps, model serving, monitoring
+- [[AI Overview]]: All AI topics

@@ -18,10 +18,10 @@ tags:
 
 Programs exhibit **locality**, which makes a memory hierarchy possible:
 
-- **Temporal locality**: if an item is referenced, it will tend to be referenced again soon.
-- **Spatial locality**: if an item is referenced, items whose addresses are close by will tend to be referenced soon.
+- **Temporal locality:** if an item is referenced, it will tend to be referenced again soon.
+- **Spatial locality:** if an item is referenced, items whose addresses are close by will tend to be referenced soon.
 
-A **memory hierarchy** uses multiple levels of memories — as the distance from the processor increases, both the size and access time increase.
+A **memory hierarchy** uses multiple levels of memories, as the distance from the processor increases, both the size and access time increase.
 
 | Technology | Typical Access Time | $ per GB (2008) |
 |------------|---------------------|-----------------|
@@ -31,13 +31,13 @@ A **memory hierarchy** uses multiple levels of memories — as the distance from
 
 ### Key Terminology
 
-- **Block (line)**: the minimum unit of information that can be present or not in a cache.
-- **Hit**: data requested is found in the upper level.
-- **Miss**: data requested is not found in the upper level.
-- **Hit rate**: fraction of memory accesses found in a level.
-- **Miss rate**: 1 − hit rate.
-- **Hit time**: time to access the upper level (including hit/miss determination).
-- **Miss penalty**: time to fetch a block from the lower level and deliver it to the processor.
+- **Block (line):** the minimum unit of information that can be present or not in a cache.
+- **Hit:** data requested is found in the upper level.
+- **Miss:** data requested is not found in the upper level.
+- **Hit rate:** fraction of memory accesses found in a level.
+- **Miss rate:** 1 − hit rate.
+- **Hit time:** time to access the upper level (including hit/miss determination).
+- **Miss penalty:** time to fetch a block from the lower level and deliver it to the processor.
 
 ---
 
@@ -57,10 +57,10 @@ If the number of entries is a power of 2, use the low-order log₂(cache size) b
 | Tag | Index | Block offset | Byte offset |
 ```
 
-- **Tag**: upper address bits used to identify the block.
-- **Index**: selects the cache block.
-- **Block offset**: selects the word within the block.
-- **Byte offset**: selects the byte within the word (2 bits for MIPS).
+- **Tag:** upper address bits used to identify the block.
+- **Index:** selects the cache block.
+- **Block offset:** selects the word within the block.
+- **Byte offset:** selects the byte within the word (2 bits for MIPS).
 
 Each cache entry has a **valid bit** indicating whether it contains valid data.
 
@@ -73,7 +73,7 @@ Tag size = 32 − (n + m + 2)
 Total bits = 2ⁿ × (2ᵐ × 32 + tag size + 1)
 ```
 
-> **Example**: 16 KB cache, 4-word blocks → 2¹⁰ blocks, tag = 18 bits, total = 2¹⁰ × 147 = 147 Kbits (≈ 18.4 KB for 16 KB data).
+> **Example:** 16 KB cache, 4-word blocks → 2¹⁰ blocks, tag = 18 bits, total = 2¹⁰ × 147 = 147 Kbits (≈ 18.4 KB for 16 KB data).
 
 ### Handling Cache Misses
 
@@ -92,9 +92,9 @@ On a data miss: stall the processor until memory responds.
 | **Write-through** | Write to both cache and memory | Simple; no inconsistency | Slow (every write goes to memory); needs write buffer |
 | **Write-back** | Write only to cache; write to memory on replacement | Better performance; fewer memory writes | More complex; needs dirty bit |
 
-- **Write buffer**: holds data waiting to be written to memory; processor continues after writing to cache + buffer.
-- **Write allocate**: on a write miss, fetch block from memory, then overwrite (most common).
-- **No write allocate**: update memory directly without loading into cache.
+- **Write buffer:** holds data waiting to be written to memory; processor continues after writing to cache + buffer.
+- **Write allocate:** on a write miss, fetch block from memory, then overwrite (most common).
+- **No write allocate:** update memory directly without loading into cache.
 
 ### Multiword Blocks and Spatial Locality
 
@@ -103,19 +103,19 @@ Larger blocks exploit spatial locality → lower miss rate. However:
 - Too-large blocks → fewer blocks in cache → more conflicts.
 - Miss penalty increases with block size (more data to transfer).
 
-**Memory bandwidth optimization**:
-- **Wider memory**: read multiple words per access.
-- **Interleaved memory**: multiple banks accessed in parallel.
-- **DDR DRAM**: transfers on both clock edges for double bandwidth.
-- **Burst mode**: sequential accesses to buffered row with low latency.
+**Memory bandwidth optimization:**
+- **Wider memory:** read multiple words per access.
+- **Interleaved memory:** multiple banks accessed in parallel.
+- **DDR DRAM:** transfers on both clock edges for double bandwidth.
+- **Burst mode:** sequential accesses to buffered row with low latency.
 
 ### Example: Intrinsity FastMATH
 
 - 16 KB instruction cache + 16 KB data cache (split cache).
 - 16-word blocks, direct-mapped.
-- Instruction miss rate: 0.4%; Data miss rate: 11.4%; Combined: 3.2%.
+- Instruction miss rate: 0.4%; data miss rate: 11.4%; combined: 3.2%.
 
-> **Split cache** enables simultaneous instruction and data access, doubling cache bandwidth — outweighs the slightly higher miss rate vs. a combined cache.
+> **Split cache** enables simultaneous instruction and data access, doubling cache bandwidth, outweighs the slightly higher miss rate vs. a combined cache.
 
 ---
 
@@ -153,23 +153,23 @@ AMAT = Hit time + Miss rate × Miss penalty
 
 #### Replacement Policies
 
-- **LRU (Least Recently Used)**: replace block unused for the longest time. Costly for high associativity.
-- **Random**: simple hardware; miss rate ~1.1× LRU for 2-way.
+- **LRU (Least Recently Used):** replace block unused for the longest time. Costly for high associativity.
+- **Random:** simple hardware; miss rate ~1.1× LRU for 2-way.
 - For high associativity, LRU is approximated or random is used.
 
 ### Multilevel Caches
 
-- **L1**: focuses on minimizing **hit time** (small, fast).
-- **L2**: focuses on minimizing **miss rate** (larger, higher associativity).
+- **L1:** focuses on minimizing **hit time** (small, fast).
+- **L2:** focuses on minimizing **miss rate** (larger, higher associativity).
 
 ```
 Total CPI = Base CPI + L1 stalls/instruction + L2 stalls/instruction
 ```
 
-- **Global miss rate**: fraction of references that miss in all levels.
-- **Local miss rate**: misses at a level / accesses to that level (much higher than global for L2).
+- **Global miss rate:** fraction of references that miss in all levels.
+- **Local miss rate:** misses at a level / accesses to that level (much higher than global for L2).
 
-> **Example**: Base CPI=1, L1 miss rate=2%, L2 access=20 cycles, main memory=400 cycles, global miss rate=0.5%.
+> **Example:** Base CPI=1, L1 miss rate=2%, L2 access=20 cycles, main memory=400 cycles, global miss rate=0.5%.
 > CPI = 1 + 2%×20 + 0.5%×400 = 1 + 0.4 + 2.0 = **3.4** (vs. 9.0 without L2).
 
 ---
@@ -178,8 +178,8 @@ Total CPI = Base CPI + L1 stalls/instruction + L2 stalls/instruction
 
 ### Motivation
 
-- **Sharing**: multiple processes safely share main memory with protection.
-- **Illusion of large memory**: programs can exceed physical memory size.
+- **Sharing:** multiple processes safely share main memory with protection.
+- **Illusion of large memory:** programs can exceed physical memory size.
 
 ### Key Concepts
 
@@ -209,7 +209,7 @@ Virtual address → [Virtual page number | Page offset]
 ### Design Decisions (driven by enormous page fault cost)
 
 1. **Large pages** (4–16 KB) to amortize disk access time.
-2. **Fully associative** placement — any virtual page can go in any physical page.
+2. **Fully associative** placement: any virtual page can go in any physical page.
 3. **Software handling** of page faults (overhead is small relative to disk access).
 4. **Write-back** only (write-through to disk is impractical).
 5. **Dirty bit** tracks modified pages to avoid writing back clean pages.
@@ -217,20 +217,20 @@ Virtual address → [Virtual page number | Page offset]
 
 ### Reducing Page Table Size
 
-1. **Limit register**: restricts page table size to actual usage.
+1. **Limit register:** restricts page table size to actual usage.
 2. **Two segments** (stack + heap): two page tables growing in opposite directions.
-3. **Inverted page table**: indexed by hash of virtual address; size = number of physical pages.
-4. **Multi-level page tables**: first-level maps large segments, second-level maps pages within segments.
+3. **Inverted page table:** indexed by hash of virtual address; size = number of physical pages.
+4. **Multi-level page tables:** first-level maps large segments, second-level maps pages within segments.
 5. **Page the page tables** themselves (page tables reside in virtual address space).
 
 ### TLB (Translation-Lookaside Buffer)
 
-A cache for page table entries — avoids accessing memory for every translation.
+A cache for page table entries, avoids accessing memory for every translation.
 
-- **Typical values**: 16–512 entries, 0.5–1 cycle hit time, 10–100 cycle miss penalty, 0.01%–1% miss rate.
+- **Typical values:** 16–512 entries, 0.5–1 cycle hit time, 10–100 cycle miss penalty, 0.01%–1% miss rate.
 - Often fully associative (small, so cost is manageable) or set-associative for larger TLBs.
 - Each entry: tag (virtual page number) + physical page number + valid + dirty + reference bits.
-- On **TLB miss**: check page table → if valid, load into TLB; if invalid, **page fault** → invoke OS.
+- On **TLB miss:** check page table → if valid, load into TLB; if invalid, **page fault** → invoke OS.
 - Replacement: random (MIPS) or LRU approximation.
 
 ### Integrating TLB, Cache, and Virtual Memory
@@ -243,11 +243,11 @@ Possible combinations:
 
 | TLB | Page Table | Cache | Possible? |
 |-----|-----------|-------|-----------|
-| Hit | — | Hit | Yes (normal fast path) |
+| Hit | N/A | Hit | Yes (normal fast path) |
 | Miss | Hit | Hit | Yes (TLB miss, then cache hit) |
 | Miss | Hit | Miss | Yes (TLB miss, then cache miss) |
 | Miss | Miss | Miss | Yes (page fault) |
-| Hit | Miss | — | **Impossible** (can't have TLB entry for absent page) |
+| Hit | Miss | N/A | **Impossible** (can't have TLB entry for absent page) |
 | Miss | Miss | Hit | **Impossible** (data can't be in cache if page not in memory) |
 
 ### Cache Addressing Options
@@ -261,12 +261,12 @@ Possible combinations:
 ### Protection
 
 Hardware must provide:
-1. **Two modes**: user and supervisor (kernel).
-2. **Protected state**: user/supervisor bit, page table pointer, TLB — readable by user, writable only in supervisor mode.
-3. **Mode transitions**: `syscall` (user → kernel), `ERET` (kernel → user).
+1. **Two modes:** user and supervisor (kernel).
+2. **Protected state:** user/supervisor bit, page table pointer, TLB: readable by user, writable only in supervisor mode.
+3. **Mode transitions:** `syscall` (user → kernel), `ERET` (kernel → user).
 
 - **Write access bit** in page table/TLB prevents unauthorized writes.
-- **ASID (Address Space ID)**: avoids flushing TLB on context switch by tagging entries with process ID.
+- **ASID (Address Space ID):** avoids flushing TLB on context switch by tagging entries with process ID.
 
 ### TLB Miss Handling (MIPS Example)
 
@@ -321,14 +321,14 @@ In multiprocessors with shared memory, each processor has its own cache. Without
 A memory system is coherent if:
 1. A read by processor P to location X after P's write to X (with no intervening writes by others) returns P's written value.
 2. A read returns the most recently written value if sufficiently separated in time.
-3. **Writes to the same location are serialized** — all processors see writes in the same order.
+3. **Writes to the same location are serialized:** all processors see writes in the same order.
 
 ### Snooping Protocols
 
 - Every cache monitors (snoops) the shared bus/network for accesses to cached blocks.
-- **Write invalidate**: before writing, invalidate all other cached copies → exclusive access.
+- **Write invalidate:** before writing, invalidate all other cached copies → exclusive access.
   - Ensures write serialization and coherence.
-  - **False sharing**: unrelated variables in the same cache block cause unnecessary invalidations.
+  - **False sharing:** unrelated variables in the same cache block cause unnecessary invalidations.
 
 ### Directory-Based Protocols
 
@@ -357,9 +357,9 @@ A memory system is coherent if:
 ## Key Takeaways
 
 1. **Locality** (temporal + spatial) is the fundamental principle enabling memory hierarchies.
-2. **AMAT = Hit time + Miss rate × Miss penalty** — optimize by reducing all three.
+2. **AMAT = Hit time + Miss rate × Miss penalty:** optimize by reducing all three.
 3. **Associativity** reduces conflict misses; 2-way is the sweet spot for most designs.
-4. **Multilevel caches**: L1 optimizes hit time, L2+ optimizes miss rate.
+4. **Multilevel caches:** L1 optimizes hit time, L2+ optimizes miss rate.
 5. **Virtual memory** provides protection, sharing, and the illusion of unlimited memory.
 6. **TLB** caches translations to avoid double memory access on every reference.
 7. **Write-back** is preferred for virtual memory (and increasingly for caches) due to bandwidth.
@@ -368,7 +368,7 @@ A memory system is coherent if:
 
 ## Related
 
-- [[Computer Organization Overview]] — All computer organization topics
-- [[04_Processor_Design]] — Processor pipeline and memory access
-- [[06_IO_and_Storage]] — Disk and flash storage
-- [[07_Parallel_Computing]] — Cache coherence in multiprocessors
+- [[Computer Organization Overview]]: All computer organization topics
+- [[04_Processor_Design]]: Processor pipeline and memory access
+- [[06_IO_and_Storage]]: Disk and flash storage
+- [[07_Parallel_Computing]]: Cache coherence in multiprocessors

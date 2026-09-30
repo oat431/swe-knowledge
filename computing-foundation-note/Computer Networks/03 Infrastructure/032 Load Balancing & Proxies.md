@@ -21,12 +21,14 @@ Distributing traffic across multiple servers. Reverse proxies sit in front. Load
 | **Often combined** | ✅ Most load balancers ARE reverse proxies | |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     I["Internet"] --> LB["Load Balancer"]
     LB --> A1["App Server 1"]
     LB --> A2["App Server 2"]
     LB --> A3["App Server 3"]
 ```
+
 
 ---
 
@@ -56,7 +58,6 @@ graph LR
 ---
 
 ## NGINX Configuration
-
 ```nginx
 # Reverse proxy + load balancing
 upstream backend {
@@ -117,15 +118,17 @@ management:
 
 ---
 
-## CDN — Content Delivery Network
+## CDN: Content Delivery Network
 
 > Cache static (and dynamic) content at edge locations close to users.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
     U["User in Bangkok"] -->|"20ms"| E["CDN Edge<br>Bangkok"]
     E -->|"200ms"| O["Origin Server<br>US East"]
 ```
+
 
 | CDN | Best For |
 |-----|----------|
@@ -137,5 +140,5 @@ graph LR
 
 ## Sources
 
-- NGINX Admin Guide — https://nginx.org/en/docs/
-- HAProxy Documentation — https://www.haproxy.org/
+- NGINX Admin Guide: https://nginx.org/en/docs/
+- HAProxy Documentation: https://www.haproxy.org/

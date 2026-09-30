@@ -6,7 +6,7 @@ tags:
   - architecture
   - fault-tolerance
   - consensus
-source: "Distributed Systems: Principles and Paradigms — Tanenbaum & Van Steen; Designing Data-Intensive Applications — Kleppmann"
+source: "Distributed Systems: Principles and Paradigms (Tanenbaum & Van Steen; designing Data-Intensive Applications) Kleppmann"
 ---
 
 # Distributed Systems
@@ -17,12 +17,12 @@ source: "Distributed Systems: Principles and Paradigms — Tanenbaum & Van Steen
 
 ## 1. What Is a Distributed System?
 
-> A distributed system is a collection of independent computers that appears to its users as a single coherent system. — Tanenbaum
+> A distributed system is a collection of independent computers that appears to its users as a single coherent system. *(Tanenbaum)*
 
 Nodes communicate by **message passing** over a network, introducing challenges of:
-- **Partial failure** — some nodes may fail while others continue
-- **Concurrency** — multiple nodes operate simultaneously
-- **No global clock** — no shared notion of time
+- **Partial failure:** some nodes may fail while others continue
+- **Concurrency:** multiple nodes operate simultaneously
+- **No global clock:** no shared notion of time
 
 ---
 
@@ -68,6 +68,7 @@ Nodes communicate by **message passing** over a network, introducing challenges 
 **Key challenges:** Service discovery, distributed tracing, data consistency across services, operational complexity.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','secondaryColor':'#161212','tertiaryColor':'#1B1717','background':'#1B1717','mainBkg':'#19362D','nodeBorder':'#1FB854','clusterBkg':'#161212','clusterBorder':'#19362D','titleColor':'#1FB854','edgeLabelBackground':'#161212','fontSize':'14px'}}}%%
 graph LR
   Client --> Gateway[API Gateway]
   Gateway --> A[Service A]
@@ -80,6 +81,7 @@ graph LR
   MQ -.-> B
   MQ -.-> C
 ```
+
 
 ---
 
@@ -385,10 +387,10 @@ A programming model for processing large datasets in parallel across a distribut
 
 ## Related
 
-- [[Operating Systems Overview]] — IPC, synchronization, deadlocks
-- [[000 Computer Networks Overview]] — Network protocols and communication
-- [[Database Overview]] — Distributed databases, consistency models
-- [[Computer Organization Overview]] — Parallel computing architectures
+- [[Operating Systems Overview]]: IPC, synchronization, deadlocks
+- [[000 Computer Networks Overview]]: Network protocols and communication
+- [[Database Overview]]: Distributed databases, consistency models
+- [[Computer Organization Overview]]: Parallel computing architectures
 
 ---
 
@@ -399,4 +401,4 @@ A programming model for processing large datasets in parallel across a distribut
 - Lamport, L. "The Part-Time Parliament" (Paxos, 1998)
 - Ongaro, D., & Ousterhout, J. "In Search of an Understandable Consensus Algorithm" (Raft, 2014)
 - Brewer, E. "CAP Twelve Years Later" (2012)
-- SWEBOK v4, Chapter 16 — Computing Foundations
+- SWEBOK v4, Chapter 16: Computing Foundations
