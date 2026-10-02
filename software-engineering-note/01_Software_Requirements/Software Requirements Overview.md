@@ -8,7 +8,11 @@ tags: [software-requirements, overview, requirements-engineering, swebok]
 
 ## What Is This?
 
-This vault covers **software requirements engineering:** the process of eliciting, documenting, validating, and managing requirements. It fills SWEBOK's Software Requirements KA with practical, industry-tested techniques from Karl Wiegers' classic reference.
+**Software requirements engineering** is the discipline of discovering, documenting, validating, and managing what a system must do, and the constraints under which it must operate. Requirements are the bridge between the stakeholder's world (needs, goals, business rules) and the engineer's world (design, code, tests): the reference against which every later decision is made. They are also where defects cost the most: errors that leak from requirements into design, construction, and testing become orders of magnitude more expensive to fix the later they are found.
+
+This folder covers both halves of the discipline. **Requirements development** produces the requirements: elicitation through interviews, workshops, and observation; analysis; specification via use cases, user stories, models, and the SRS; and validation. **Requirements management** keeps them stable under change: baselines, version control, change control boards, impact analysis, and traceability.
+
+The techniques here come from Karl Wiegers' *Software Requirements* (3rd edition), the classic industry reference, mapped against SWEBOK v4's Software Requirements KA. New to the topic? Start with [[01_Requirements_Fundamentals]] and [[03_Requirements_Elicitation]]; more entry points are in the Reading Paths table below.
 
 ## Files
 
