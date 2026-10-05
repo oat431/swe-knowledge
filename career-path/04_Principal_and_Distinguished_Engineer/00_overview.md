@@ -37,14 +37,14 @@ The distinction between principal and distinguished varies widely. In general, p
 
 ## Capability Areas
 
-| Capability | Expected scope | Existing vault anchor |
+| Capability | Expected scope | Detailed notes |
 |---|---|---|
-| Technology strategy | Connects architecture and investment to business direction | [[software-engineering-note/15_Software_Engineering_Economics/Software Engineering Economics Overview]] |
-| Enterprise systems thinking | Understands organization, ecosystem, and system-of-systems effects | [[body-of-knowledge/System Engineer BOK/11_Enterprise_Systems_Engineering]] |
-| Decision governance | Establishes decision principles without unnecessary bureaucracy | [[software-engineering-note/02_Software_Architecture/09_Evaluation_and_Governance]] |
-| Organizational influence | Shapes decisions across executive, technical, and product groups | [[software-engineering-note/14_Software_Engineering_Professional_Practice/03_Communication_Skills]] |
-| Future readiness | Uses prototypes, research, and technology roadmaps to reduce uncertainty | [[body-of-knowledge/System Engineer BOK/21_Emerging_Knowledge]] |
-| Technical culture | Develops other technical leaders and improves engineering norms | [[body-of-knowledge/System Engineer BOK/15_Enabling_Teams_and_Individuals]] |
+| Technology strategy | Connects architecture and investment to business direction | [[01_Technology_Strategy/00_overview]] |
+| Enterprise and systems of systems thinking | Understands organization, ecosystem, and system-of-systems effects | [[02_Enterprise_and_Systems_of_Systems_Thinking/00_overview]] |
+| Decision governance and principles | Establishes decision principles without unnecessary bureaucracy | [[03_Decision_Governance_and_Principles/00_overview]] |
+| Organizational influence | Shapes decisions across executive, technical, and product groups | [[04_Organizational_Influence/00_overview]] |
+| Future readiness and research | Uses prototypes, research, and technology roadmaps to reduce uncertainty | [[05_Future_Readiness_and_Research/00_overview]] |
+| Technical culture and leadership development | Develops other technical leaders and improves engineering norms | [[06_Technical_Culture_and_Leadership_Development/00_overview]] |
 
 ## Typical Progression
 
