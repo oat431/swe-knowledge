@@ -43,15 +43,15 @@ These paths are different from ordinary marketing because technical credibility 
 
 ## Capability Areas
 
-| Capability | Role behavior | Existing vault anchor |
+| Capability | Role behavior | Detailed notes |
 |---|---|---|
-| Technical communication | Explains complex ideas accurately for different audiences | [[software-engineering-note/14_Software_Engineering_Professional_Practice/03_Communication_Skills]] |
-| Documentation | Creates usable guides, examples, references, and troubleshooting paths | [[software-engineering-note/04_Software_Construction/10_Code_Style_and_Documentation]] |
-| Facilitation | Runs workshops, demos, discovery sessions, and technical reviews | [[body-of-knowledge/BABOK/02_Elicitation_and_Collaboration]] |
-| Customer understanding | Finds needs, constraints, and obstacles through interaction | [[BABOK v3 - Overview]] |
-| Solution guidance | Connects a customer's problem to an appropriate technical approach | [[SEBoK v2 - Overview]] |
-| Community building | Creates durable learning and feedback networks | [[software-engineering-note/14_Software_Engineering_Professional_Practice/06_Professional_Societies_and_Community]] |
-| Product feedback | Converts ecosystem signals into product and engineering insight | [[career-path/14_Product_Manager/00_overview|Product Manager]] |
+| Technical communication | Explains complex ideas accurately for different audiences | [[01_Technical_Communication/00_overview]] |
+| Documentation | Creates usable guides, examples, references, and troubleshooting paths | [[02_Documentation_and_Learning_Materials/00_overview]] |
+| Facilitation | Runs workshops, demos, discovery sessions, and technical reviews | [[03_Facilitation_and_Enablement/00_overview]] |
+| Customer understanding | Finds needs, constraints, and obstacles through interaction | [[04_Customer_and_Developer_Understanding/00_overview]] |
+| Solution guidance | Connects a customer's problem to an appropriate technical approach | [[05_Solution_Guidance/00_overview]] |
+| Community building | Creates durable learning and feedback networks | [[06_Community_and_Ecosystem/00_overview]] |
+| Product feedback | Converts ecosystem signals into product and engineering insight | [[07_Product_Feedback_and_Ecosystem_Strategy/00_overview]] |
 
 ## Typical Progression
 
