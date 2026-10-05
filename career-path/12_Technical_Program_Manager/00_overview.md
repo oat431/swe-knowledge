@@ -43,15 +43,15 @@ The TPM is not simply a project administrator. The role creates clarity across b
 
 ## Capability Areas
 
-| Capability | TPM behavior | Existing vault anchor |
+| Capability | TPM behavior | Detailed notes |
 |---|---|---|
-| Program structure | Defines outcomes, workstreams, milestones, and governance | [[PMBOK v8 - Overview]] |
-| Technical integration | Understands system boundaries, interfaces, and integration sequence | [[SEBoK v2 - Overview]] |
-| Dependency management | Tracks and resolves dependencies across teams and suppliers | [[software-engineering-note/09_Software_Engineering_Management/08_Risk_Management_and_Control]] |
-| Risk and issue management | Escalates important uncertainty and coordinates mitigation | [[PMBOK v8 - Overview]] |
-| Stakeholder alignment | Creates shared context among technical and business groups | [[BABOK v3 - Overview]] |
-| Decision facilitation | Helps the right people make timely, documented decisions | [[software-engineering-note/03_Software_Design/07_Design_Rationale_and_Decisions]] |
-| Benefits and outcomes | Keeps delivery connected to value, not only activity completion | [[PMBOK v8 - Overview]] |
+| Program structure | Defines outcomes, workstreams, milestones, and governance | [[01_Program_Structure_and_Charter/00_overview]] |
+| Technical integration | Understands system boundaries, interfaces, and integration sequence | [[02_Technical_Integration_and_Architecture/00_overview]] |
+| Dependency management | Tracks and resolves dependencies across teams and suppliers | [[03_Dependency_Management/00_overview]] |
+| Risk and issue leadership | Escalates important uncertainty and coordinates mitigation | [[04_Risk_and_Issue_Leadership/00_overview]] |
+| Stakeholder alignment | Creates shared context among technical and business groups | [[05_Stakeholder_Alignment/00_overview]] |
+| Decision facilitation | Helps the right people make timely, documented decisions | [[06_Decision_Facilitation/00_overview]] |
+| Benefits and outcomes | Keeps delivery connected to value, not only activity completion | [[07_Benefits_and_Outcome_Measurement/00_overview]] |
 
 ## Typical Progression
 

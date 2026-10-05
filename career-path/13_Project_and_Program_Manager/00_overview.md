@@ -41,15 +41,15 @@ A software engineering background is valuable because it helps the manager under
 
 ## Capability Areas
 
-| Capability | Project or program behavior | Existing vault anchor |
+| Capability | Project or program behavior | Detailed notes |
 |---|---|---|
-| Initiation | Clarifies objectives, value, authority, and success conditions | [[body-of-knowledge/PMBOK/00_Introduction]] |
-| Scope and planning | Defines work, sequencing, resources, and baselines | [[body-of-knowledge/PMBOK/05_Scope_Performance_Domain]] |
-| Schedule and cost | Builds forecasts and communicates variance honestly | [[body-of-knowledge/PMBOK/06_Schedule_Performance_Domain]] |
-| Risk and issues | Manages uncertainty, escalation, response, and contingency | [[body-of-knowledge/PMBOK/10_Risk_Performance_Domain]] |
-| Stakeholders | Plans engagement, communication, and decision participation | [[body-of-knowledge/PMBOK/08_Stakeholders_Performance_Domain]] |
-| Governance | Creates decision rights, controls, and accountability | [[body-of-knowledge/PMBOK/04_Governance_Performance_Domain]] |
-| Benefits | Connects deliverables to outcomes and organizational value | [[body-of-knowledge/PMBOK/01_Value_Delivery_System]] |
+| Initiation | Clarifies objectives, value, authority, and success conditions | [[01_Initiation_and_Charter/00_overview]] |
+| Scope and planning | Defines work, sequencing, resources, and baselines | [[02_Scope_and_Planning/00_overview]] |
+| Schedule and cost | Builds forecasts and communicates variance honestly | [[03_Schedule_and_Cost/00_overview]] |
+| Risk and issues | Manages uncertainty, escalation, response, and contingency | [[04_Risk_and_Issues/00_overview]] |
+| Stakeholders | Plans engagement, communication, and decision participation | [[05_Stakeholder_Engagement/00_overview]] |
+| Governance | Creates decision rights, controls, and accountability | [[06_Governance_and_Change_Control/00_overview]] |
+| Benefits | Connects deliverables to outcomes and organizational value | [[07_Benefits_and_Closure/00_overview]] |
 | Technical context | Understands enough engineering to challenge assumptions and support decisions | [[SWEBOK v4 - Overview]] |
 
 ## Project Manager versus Program Manager
