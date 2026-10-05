@@ -18,7 +18,7 @@ tags:
   - entrepreneurship
   - independent-work
 ---
-
+		
 # Independent Consultant and Technical Founder
 
 > **Positioning:** An independent path in which the engineer creates value through consulting, contracting, building products, founding a company, or combining technical work with business ownership.
@@ -40,15 +40,15 @@ This path is not simply freedom from employment. It combines engineering with bu
 
 ## Capability Areas
 
-| Capability | Independent behavior | Existing vault anchor |
+| Capability | Independent behavior | Detailed notes |
 |---|---|---|
-| Problem discovery | Finds a real customer need rather than starting with technology | [[body-of-knowledge/BABOK/04_Strategy_Analysis]] |
-| Product and service design | Defines an offer, scope, value proposition, and delivery model | [[career-path/14_Product_Manager/00_overview|Product Manager]] |
-| Business case | Evaluates cost, revenue, risk, and opportunity | [[software-engineering-note/15_Software_Engineering_Economics/Software Engineering Economics Overview]] |
-| Delivery | Plans and executes work with explicit commitments | [[PMBOK v8 - Overview]] |
-| Architecture | Builds a system appropriate for current and future constraints | [[software-engineering-note/02_Software_Architecture/Software Architecture Overview]] |
-| Sales and communication | Explains value and builds trusted relationships | [[software-engineering-note/14_Software_Engineering_Professional_Practice/03_Communication_Skills]] |
-| Governance and risk | Handles contracts, security, privacy, and continuity responsibly | [[CyBOK v1 - Overview]] |
+| Problem discovery | Finds a real customer need rather than starting with technology | [[01_Problem_Discovery_and_Customer_Validation/00_overview]] |
+| Product and service design | Defines an offer, scope, value proposition, and delivery model | [[02_Product_and_Service_Design/00_overview]] |
+| Business case | Evaluates cost, revenue, risk, and opportunity | [[03_Business_Case_and_Economics/00_overview]] |
+| Delivery | Plans and executes work with explicit commitments | [[04_Delivery_and_Client_Management/00_overview]] |
+| Architecture | Builds a system appropriate for current and future constraints | [[05_Architecture_for_Independents/00_overview]] |
+| Sales and communication | Explains value and builds trusted relationships | [[06_Sales_and_Client_Communication/00_overview]] |
+| Governance and risk | Handles contracts, security, privacy, and continuity responsibly | [[07_Governance_Risk_and_Continuity/00_overview]] |
 
 ## Typical Progression
 

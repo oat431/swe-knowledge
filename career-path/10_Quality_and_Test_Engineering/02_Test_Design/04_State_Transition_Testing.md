@@ -370,4 +370,4 @@ Test both when guard is true and when guard is false.
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/05_Software_Testing/03_Decision_Tables_and_State_Based]]: State transition testing fundamentals
+- [[software-engineering-note/05_Software_Testing/03_Decision_Table_and_Path]]: State transition testing fundamentals

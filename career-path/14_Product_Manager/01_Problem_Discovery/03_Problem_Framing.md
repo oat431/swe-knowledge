@@ -301,7 +301,7 @@ Priority: [Release planning]
 
 ## Resources
 
-- [[career-path/02_Senior_Software_Engineer/02_Problem_Framing_and_Requirements]] - Technical problem framing
+- [[career-path/02_Senior_Software_Engineer/02_Problem_Framing_and_Requirements/00_overview]] - Technical problem framing
 - Are Your Lights On? by Donald Gause and Gerald Weinberg
 - Problem Solving 101 by Ken Watanabe
 

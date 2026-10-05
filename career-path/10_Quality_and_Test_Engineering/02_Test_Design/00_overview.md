@@ -56,9 +56,9 @@ Strong test design delivers:
 ## Existing Vault Connections
 
 This area builds on:
-- [[software-engineering-note/05_Software_Testing/02_Test_Design_Techniques]]: Test design fundamentals
+- [[software-engineering-note/05_Software_Testing/02_Boundary_and_Equivalence]]: Test design fundamentals
 - [[software-engineering-note/05_Software_Testing/02_Boundary_and_Equivalence]]: Boundary and equivalence techniques
-- [[software-engineering-note/05_Software_Testing/03_Decision_Tables_and_State_Based]]: Decision and state-based testing
+- [[software-engineering-note/05_Software_Testing/03_Decision_Table_and_Path]]: Decision and state-based testing
 
 ## Success Criteria
 

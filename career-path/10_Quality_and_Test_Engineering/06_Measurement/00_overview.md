@@ -57,9 +57,9 @@ With proper measurement:
 ## Existing Vault Connections
 
 This area builds on:
-- [[software-engineering-note/12_Software_Quality/07_Quality_Metrics]]: Quality metrics fundamentals
-- [[software-engineering-note/05_Software_Testing/15_Test_Metrics]]: Testing metrics
-- [[software-engineering-note/13_Software_Engineering_Economics/01_Software_Economics]]: Cost of quality
+- [[software-engineering-note/12_Software_Quality/04_Metrics_and_Quality_Costs]]: Quality metrics fundamentals
+- [[software-engineering-note/05_Software_Testing/12_Test_Process_and_Measures]]: Testing metrics
+- [[software-engineering-note/15_Software_Engineering_Economics/01_Economics_Fundamentals]]: Cost of quality
 
 ## Success Criteria
 

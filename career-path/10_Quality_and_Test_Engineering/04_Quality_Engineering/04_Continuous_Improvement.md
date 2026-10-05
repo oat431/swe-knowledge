@@ -583,4 +583,4 @@ Not safe:
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/12_Software_Quality/06_Continuous_Improvement]]: Continuous improvement practices
+- [[software-engineering-note/12_Software_Quality/05_Standards_and_Organization]]: Continuous improvement practices

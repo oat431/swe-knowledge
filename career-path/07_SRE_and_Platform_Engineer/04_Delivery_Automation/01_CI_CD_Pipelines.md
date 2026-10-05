@@ -141,7 +141,7 @@ flowchart LR
 ## Knowledge Connections
 
 - [[software-engineering-note/06_Software_Engineering_Operations/Fundamental/13 CI CD Pipelines]] — foundational CI/CD concepts
-- [[software-engineering-note/02_Software_Architecture/Microservice/07 Deployment/074 GitOps and CI-CD Pipelines]] — GitOps integration patterns
+- [[software-engineering-note/02_Software_Architecture/Microservice/07 Deployment/074 GitOps & CI-CD Pipelines]] — GitOps integration patterns
 - [[02_Progressive_Delivery]] — pipelines feed artifacts into progressive rollout controllers
 - [[04_GitOps]] — GitOps extends CI/CD with declarative state reconciliation
 - [[05_Rollback_and_Recovery]] — pipelines trigger automated rollbacks on verification failure

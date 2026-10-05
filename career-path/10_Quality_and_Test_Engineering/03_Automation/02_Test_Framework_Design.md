@@ -577,4 +577,4 @@ def test_user_registration():
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/05_Software_Testing/11_Test_Automation]]: Automation frameworks and patterns
+- [[software-engineering-note/05_Software_Testing/QA/03 Test Automation/03 CI-CD & Headless Testing]]: Automation frameworks and patterns

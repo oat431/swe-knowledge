@@ -450,4 +450,4 @@ jobs:
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/05_Software_Testing/06_Performance_Testing]]: Performance testing techniques
+- [[software-engineering-note/05_Software_Testing/QA/02 Testing Types/02 Non-Functional Testing]]: Performance testing techniques

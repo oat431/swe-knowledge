@@ -229,7 +229,7 @@ A senior engineer ensures that risk management is not a separate activity but in
 - [[06_Ambiguity_Reduction]] : ambiguity reduction techniques address ambiguity risks
 - [[07_Prioritization]] : prioritization decisions affect which risks are accepted
 - [[software-engineering-note/01_Software_Requirements/11_Tools_Process_Improvement_and_Risk]] : requirements tools and risk management
-- [[software-engineering-note/10_Software_Engineering_Project_Management/02_Risk_and_Quality]] : project risk management
+- [[software-engineering-note/09_Software_Engineering_Management/08_Risk_Management_and_Control]] : project risk management
 
 ## Key Takeaways
 

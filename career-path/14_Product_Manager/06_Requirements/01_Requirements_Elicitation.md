@@ -359,7 +359,7 @@ Ask: "What problems are you trying to solve?"
 
 ## Resources
 
-- [[body-of-knowledge/BABOK/04_Elicitation]] - Requirements elicitation
+- [[body-of-knowledge/BABOK/02_Elicitation_and_Collaboration]] - Requirements elicitation
 - User Stories Applied by Mike Cohn
 - The Mom Test by Rob Fitzpatrick
 

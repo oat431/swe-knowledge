@@ -4,7 +4,7 @@ note_type: capability-topic
 capability_area: quality-reliability-security
 career_path: senior-software-engineer
 prerequisite:
-  - "[[body-of-knowledge/CyBOK/01_Security_and_Compliance]]"
+  - "[[body-of-knowledge/CyBOK/01_Risk_Management_and_Governance]]"
   - "[[01_Testing_Strategy]]"
 tags:
   - career-path
@@ -257,7 +257,7 @@ When a security incident occurs (data breach, vulnerability exploited):
 
 ## Knowledge Connections
 
-- [[body-of-knowledge/CyBOK/CyBOK - Overview]] : security body of knowledge
+- [[body-of-knowledge/CyBOK/CyBOK v1 - Overview]] : security body of knowledge
 - [[01_Testing_Strategy]] : security testing is part of quality engineering
 - [[04_Incident_Response]] : security incidents require specialized response
 - [[05_Security_Practices]] : security monitoring is part of observability

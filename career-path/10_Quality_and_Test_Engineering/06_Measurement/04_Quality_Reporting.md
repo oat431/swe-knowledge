@@ -468,4 +468,4 @@ Honesty:
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/10_Software_Engineering_Management/03_Project_Metrics]]: Project reporting
+- [[software-engineering-note/09_Software_Engineering_Management/07_Measurement_and_Metrics]]: Project reporting

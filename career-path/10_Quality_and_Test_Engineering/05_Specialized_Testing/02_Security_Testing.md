@@ -441,5 +441,5 @@ jobs:
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/05_Software_Testing/07_Security_Testing]]: Security testing techniques
-- [[body-of-knowledge/CyBOK]]: Cybersecurity Body of Knowledge
+- [[software-engineering-note/05_Software_Testing/QA/02 Testing Types/02 Non-Functional Testing]]: Security testing techniques
+- [[body-of-knowledge/CyBOK/CyBOK v1 - Overview]]: Cybersecurity Body of Knowledge

@@ -388,4 +388,4 @@ quadrantChart
 ## Existing Vault Connections
 
 - [[software-engineering-note/05_Software_Testing/06_Model_Based_and_Lifecycle]]: Risk-based testing in test lifecycle
-- [[software-engineering-note/12_Software_Quality/04_Quality_Management]]: Risk management in quality processes
+- [[software-engineering-note/12_Software_Quality/Software Quality Overview]]: Risk management in quality processes

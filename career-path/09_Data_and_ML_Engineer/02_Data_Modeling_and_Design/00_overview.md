@@ -126,4 +126,4 @@ Before proceeding, honestly assess your readiness:
 
 - [[DMBoK v2 - Overview]] : Foundational data modeling knowledge area
 - [[01_Data_Architecture/00_overview]] : Architecture decisions that constrain modeling
-- [[03_Data_Integration_and_Pipelines/00_overview]] : Pipelines that populate the models
+- [[03_Data_Integration_and_Interoperability/00_overview]] : Pipelines that populate the models

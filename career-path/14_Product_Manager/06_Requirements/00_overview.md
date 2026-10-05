@@ -190,9 +190,9 @@ Technical Requirements (How system works)
 
 ## Connections
 
-- [[body-of-knowledge/BABOK/04_Elicitation]] - Requirements elicitation
+- [[body-of-knowledge/BABOK/02_Elicitation_and_Collaboration]] - Requirements elicitation
 - [[body-of-knowledge/BABOK/05_Requirements_Analysis_and_Design]] - Requirements analysis
-- [[career-path/02_Senior_Software_Engineer/01_Technical_Strategy_and_Vision/02_Requirements_Engineering]] - Requirements engineering
+- [[career-path/02_Senior_Software_Engineer/02_Problem_Framing_and_Requirements/00_overview]] - Requirements engineering
 
 ## Evidence for Promotion
 

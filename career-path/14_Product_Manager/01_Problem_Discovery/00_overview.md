@@ -69,7 +69,7 @@ A senior product manager demonstrates problem discovery by:
 
 - [[body-of-knowledge/BABOK/02_Elicitation_and_Collaboration]] - Elicitation techniques
 - [[body-of-knowledge/BABOK/03_Requirements_Life_Cycle_Management]] - Managing requirements
-- [[career-path/02_Senior_Software_Engineer/02_Problem_Framing_and_Requirements]] - Technical problem framing
+- [[career-path/02_Senior_Software_Engineer/02_Problem_Framing_and_Requirements/00_overview]] - Technical problem framing
 
 ## Evidence for Promotion
 

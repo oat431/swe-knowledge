@@ -137,7 +137,7 @@ For program managers, the critical path crosses project boundaries:
 - [[07_Schedule_Compression_and_Recovery]]: crashing and fast-tracking act on the critical path
 - [[05_Schedule_and_Cost_Tracking]]: tracking actuals against the critical path baseline
 - [[02_Scope_and_Planning/00_overview|Scope and Planning]]: scope changes alter the activity network
-- [[career-path/12_Technical_Program_Manager/03_Cross_Team_Execution_Coordination/00_overview|Cross-Team Execution (TPM)]]: program-level dependency management
+- [[career-path/12_Technical_Program_Manager/03_Dependency_Management/00_overview|Dependency Management (TPM)]]: program-level dependency management
 
 ## Summary
 

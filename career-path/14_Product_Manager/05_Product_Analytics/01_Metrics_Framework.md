@@ -407,7 +407,7 @@ Timeframe: 6 months
 ## Resources
 
 - Lean Analytics by Alistair Croll and Benjamin Yoskovitz
-- [[body-of-knowledge/DMBOK/11_Data_Analytics]] - Data analytics
+- [[body-of-knowledge/DMBOK/09_Data_Warehousing_and_BI]] - Data analytics
 - How to Measure Anything by Douglas Hubbard
 
 ## Checklist

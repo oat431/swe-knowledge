@@ -506,4 +506,4 @@ Behaviors:
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/12_Software_Quality/08_Quality_Culture]]: Building quality culture
+- [[software-engineering-note/12_Software_Quality/05_Standards_and_Organization]]: Building quality culture

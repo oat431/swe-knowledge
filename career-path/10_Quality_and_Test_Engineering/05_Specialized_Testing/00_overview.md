@@ -56,9 +56,9 @@ Specialized testing delivers:
 ## Existing Vault Connections
 
 This area builds on:
-- [[software-engineering-note/05_Software_Testing/06_Performance_Testing]]: Performance testing
-- [[software-engineering-note/05_Software_Testing/07_Security_Testing]]: Security testing
-- [[software-engineering-note/05_Software_Testing/08_Reliability_Testing]]: Reliability testing
+- [[software-engineering-note/05_Software_Testing/QA/02 Testing Types/02 Non-Functional Testing]]: Performance testing
+- [[software-engineering-note/05_Software_Testing/QA/02 Testing Types/02 Non-Functional Testing]]: Security testing
+- [[software-engineering-note/05_Software_Testing/QA/02 Testing Types/02 Non-Functional Testing]]: Reliability testing
 
 ## Success Criteria
 

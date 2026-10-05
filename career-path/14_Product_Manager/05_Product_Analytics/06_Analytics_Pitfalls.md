@@ -429,7 +429,7 @@ Revenue: Completed transactions, excluding refunds,
 
 ## Resources
 
-- [[body-of-knowledge/DMBOK/11_Data_Analytics]] - Data analytics
+- [[body-of-knowledge/DMBOK/09_Data_Warehousing_and_BI]] - Data analytics
 - Calling Bullshit by Carl Bergstrom and Jevin West
 - The Signal and the Noise by Nate Silver
 

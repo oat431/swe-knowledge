@@ -137,7 +137,7 @@ EVM is not free — it requires scope definition, time-phased budgeting, and hon
 - [[01_Schedule_Development]]: the time-phased plan feeds PV
 - [[05_Schedule_and_Cost_Tracking]]: EVM data comes from tracking actuals
 - [[06_Variance_Analysis_and_Reporting]]: EVM variances drive analysis
-- [[career-path/11_Engineering_Manager/04_Delivery_Leadership_for_Managers/07_Delivery_Metrics_and_Health|Delivery Metrics and Health (EM)]]: team-level delivery measurement
+- [[career-path/05_Tech_Lead/04_Team_Delivery_and_Execution_Leadership/07_Delivery_Metrics_and_Health|Delivery Metrics and Health (Tech Lead)]]: team-level delivery measurement
 
 ## Summary
 

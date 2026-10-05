@@ -364,7 +364,7 @@ Not chosen:
 
 - Decisive by Chip Heath and Dan Heath
 - Thinking in Bets by Annie Duke
-- [[body-of-knowledge/BABOK/03_Analysis]] - Business analysis
+- [[body-of-knowledge/BABOK/05_Requirements_Analysis_and_Design]] - Business analysis
 
 ## Checklist
 

@@ -427,5 +427,5 @@ After testing, ask:
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/05_Software_Testing/01_Test_Design_Fundamentals]]: Test design fundamentals
+- [[software-engineering-note/05_Software_Testing/QA/01 Fundamentals/01 Test Planning & Design]]: Test design fundamentals
 - [[software-engineering-note/05_Software_Testing/12_Test_Process_and_Measures]]: Test planning and strategy

@@ -460,4 +460,4 @@ test_cases = [
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/05_Software_Testing/12_Mobile_Testing]]: Mobile testing techniques
+- [[software-engineering-note/05_Software_Testing/10_Domain_Specific_Testing]]: Mobile testing techniques

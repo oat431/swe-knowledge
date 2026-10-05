@@ -310,7 +310,7 @@ Stakeholders agree these metrics define success.
 
 ## Resources
 
-- [[body-of-knowledge/BABOK/09_Stakeholder_Engagement]] - Stakeholder engagement
+- [[body-of-knowledge/BABOK/02_Elicitation_and_Collaboration]] - Stakeholder engagement
 - Crucial Conversations by Kerry Patterson et al.
 - Never Split the Difference by Chris Voss
 

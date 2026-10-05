@@ -322,4 +322,4 @@ Rule 2: Premium, Order <= $200 → 10% discount (membership doesn't matter)
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/05_Software_Testing/03_Decision_Tables_and_State_Based]]: Decision table testing fundamentals
+- [[software-engineering-note/05_Software_Testing/03_Decision_Table_and_Path]]: Decision table testing fundamentals

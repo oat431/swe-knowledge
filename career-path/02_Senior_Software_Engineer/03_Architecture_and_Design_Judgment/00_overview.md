@@ -4,7 +4,7 @@ note_type: capability-area-overview
 capability_area: architecture-judgment
 career_path: senior-software-engineer
 source_frameworks:
-  - "[[body-of-knowledge/SWEBOK/Software Engineering Body of Knowledge Overview]]"
+  - "[[body-of-knowledge/SWEBOK/SWEBOK v4 - Overview]]"
   - "[[software-engineering-note/02_Software_Architecture/Software Architecture Overview]]"
   - "[[software-engineering-note/03_Software_Design/Software Design Note Overview]]"
 tags:
@@ -101,7 +101,7 @@ Before diving into architecture judgment, you should understand:
 
 ## Knowledge Connections
 
-- [[body-of-knowledge/SWEBOK/Software Engineering Body of Knowledge Overview]] : SWEBOK foundation
+- [[body-of-knowledge/SWEBOK/SWEBOK v4 - Overview]] : SWEBOK foundation
 - [[software-engineering-note/02_Software_Architecture/Software Architecture Overview]] : Architecture knowledge base
 - [[software-engineering-note/03_Software_Design/Software Design Note Overview]] : Design knowledge base
 - [[01_Technical_Ownership/05_Decision_Ownership]] : Decision ownership complements architecture judgment

@@ -114,7 +114,7 @@ Products with roadmaps:
 
 - [[body-of-knowledge/PMBOK/03_Project_Life_Cycles]] - Project planning
 - [[body-of-knowledge/PMBOK/06_Schedule_Performance_Domain]] - Schedule management
-- [[career-path/02_Senior_Software_Engineer/09_Delivery_and_Operational_Excellence]] - Delivery planning
+- [[career-path/02_Senior_Software_Engineer/04_Delivery_and_Execution/00_overview]] - Delivery planning
 
 ## Evidence for Promotion
 

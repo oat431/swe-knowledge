@@ -100,4 +100,4 @@ Before proceeding, honestly assess your readiness:
 
 - [[DMBoK v2 - Overview]] : Foundational data management knowledge areas
 - [[02_Data_Modeling_and_Design/00_overview]] : Complementary modeling discipline
-- [[03_Data_Integration_and_Pipelines/00_overview]] : Implementation patterns
+- [[03_Data_Integration_and_Interoperability/00_overview]] : Implementation patterns

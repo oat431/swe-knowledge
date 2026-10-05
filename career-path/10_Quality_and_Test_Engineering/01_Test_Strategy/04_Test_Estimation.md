@@ -517,5 +517,5 @@ Before finalizing estimate, verify:
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/09_Software_Engineering_Management/02_Planning_and_Coordination]]: Project estimation techniques
+- [[software-engineering-note/09_Software_Engineering_Management/07_Estimation_and_Planning]]: Project estimation techniques
 - [[software-engineering-note/05_Software_Testing/12_Test_Process_and_Measures]]: Test effort estimation

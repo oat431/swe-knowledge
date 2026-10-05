@@ -458,7 +458,7 @@ Improve navigation and information architecture
 
 ## Resources
 
-- [[body-of-knowledge/DMBOK/11_Data_Analytics]] - Data analytics
+- [[body-of-knowledge/DMBOK/09_Data_Warehousing_and_BI]] - Data analytics
 - Hooked by Nir Eyal
 - Don't Make Me Think by Steve Krug
 

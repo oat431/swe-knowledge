@@ -145,10 +145,10 @@ A senior engineer demonstrates Communication and Influence when they:
 
 ## Related Capabilities
 
-- [[00_Senior_Software_Engineer_Overview#Leadership and Influence|Leadership and Influence]] (Senior Engineer Overview)
-- [[01_Technical_Ownership#Accountability|Technical Ownership - Accountability]]
-- [[02_Problem_Framing_and_Requirements#Stakeholder Management|Problem Framing - Stakeholder Management]]
-- [[07_Mentoring_and_Team_Leadership|07_Mentoring_and_Team_Leadership]] (next capability)
+- [[career-path/02_Senior_Software_Engineer/00_overview#Leadership and Influence|Leadership and Influence]] (Senior Engineer Overview)
+- [[01_Technical_Ownership/00_overview#Accountability|Technical Ownership - Accountability]]
+- [[02_Problem_Framing_and_Requirements/00_overview#Stakeholder Management|Problem Framing - Stakeholder Management]]
+- [[07_Mentoring_and_Team_Leadership/00_overview|07_Mentoring_and_Team_Leadership]] (next capability)
 
 ## Summary
 

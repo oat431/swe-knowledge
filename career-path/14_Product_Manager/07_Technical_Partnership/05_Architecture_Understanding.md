@@ -634,7 +634,7 @@ Coordinated initiatives
 
 ## Resources
 
-- [[career-path/02_Senior_Software_Engineer/08_Architectural_Ownership]] - Architecture ownership
+- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/00_overview]] - Architecture ownership
 - Software Architecture for Developers by Simon Brown
 - Fundamentals of Software Architecture by Mark Richards and Neal Ford
 

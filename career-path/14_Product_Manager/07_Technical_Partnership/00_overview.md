@@ -345,9 +345,9 @@ Together: "Simplified version is 2 weeks, full version is 4 weeks"
 
 ## Connections
 
-- [[body-of-knowledge/SWEBOK/10_Software_Engineering_Management]] - Software engineering management
-- [[career-path/02_Senior_Software_Engineer]] - Senior software engineer capabilities
-- [[career-path/02_Senior_Software_Engineer/09_Delivery_and_Operational_Excellence]] - Delivery excellence
+- [[body-of-knowledge/SWEBOK/09_Software_Engineering_Management]] - Software engineering management
+- [[career-path/02_Senior_Software_Engineer/00_overview]] - Senior software engineer capabilities
+- [[career-path/02_Senior_Software_Engineer/04_Delivery_and_Execution/00_overview]] - Delivery excellence
 
 ## Evidence for Promotion
 
@@ -362,4 +362,4 @@ To demonstrate senior-level technical partnership:
 
 - Inspired by Marty Cagan
 - The Manager's Path by Camille Fournier
-- [[career-path/02_Senior_Software_Engineer]] - Understanding engineering
+- [[career-path/02_Senior_Software_Engineer/00_overview]] - Understanding engineering

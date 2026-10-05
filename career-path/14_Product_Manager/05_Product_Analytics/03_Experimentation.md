@@ -397,7 +397,7 @@ is between 0.5% and 3.5%
 ## Resources
 
 - Trustworthy Online Controlled Experiments by Ron Kohavi et al.
-- [[body-of-knowledge/DMBOK/11_Data_Analytics]] - Data analytics
+- [[body-of-knowledge/DMBOK/09_Data_Warehousing_and_BI]] - Data analytics
 - Running Lean by Ash Maurya
 
 ## Checklist

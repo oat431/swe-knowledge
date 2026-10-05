@@ -333,7 +333,7 @@ Marketing:
 
 ## Resources
 
-- [[body-of-knowledge/BABOK/09_Stakeholder_Engagement]] - Stakeholder communication
+- [[body-of-knowledge/BABOK/02_Elicitation_and_Collaboration]] - Stakeholder communication
 - Made to Stick by Chip Heath and Dan Heath
 - The Advantage by Patrick Lencioni
 

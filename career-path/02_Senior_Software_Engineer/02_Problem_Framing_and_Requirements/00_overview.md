@@ -102,5 +102,5 @@ Use this to gauge your current level of problem framing skill:
 
 - [[00_overview|Senior Software Engineer Overview]]
 - [[01_Technical_Ownership/00_overview|Technical Ownership]] : problem framing is the first phase of lifecycle ownership
-- [[career-path/04_Engineering_Manager/00_overview|Engineering Manager]] : at EM level, problem framing expands to team and organizational problems
-- [[career-path/06_Product_Manager/00_overview|Product Manager]] : product managers and senior engineers collaborate closely on problem framing
+- [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]] : at EM level, problem framing expands to team and organizational problems
+- [[career-path/14_Product_Manager/00_overview|Product Manager]] : product managers and senior engineers collaborate closely on problem framing

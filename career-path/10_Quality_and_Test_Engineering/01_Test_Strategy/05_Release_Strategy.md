@@ -652,5 +652,5 @@ Action Items:
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/06_Software_Engineering_Operations/04_Deployment_and_Release]]: Release management practices
+- [[software-engineering-note/06_Software_Engineering_Operations/Fundamental/13 CI CD Pipelines]]: Release management practices
 - [[software-engineering-note/05_Software_Testing/12_Test_Process_and_Measures]]: Test completion criteria

@@ -626,4 +626,4 @@ Evidence:
 ## Existing Vault Connections
 
 - [[software-engineering-note/14_Software_Engineering_Professional_Practice/03_Communication_Skills]]: General communication skills
-- [[software-engineering-note/09_Software_Engineering_Management/05_Stakeholder_Management]]: Stakeholder management principles
+- [[software-engineering-note/14_Software_Engineering_Professional_Practice/03_Communication_Skills]]: Stakeholder management principles

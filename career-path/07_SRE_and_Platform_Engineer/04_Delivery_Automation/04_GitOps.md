@@ -159,7 +159,7 @@ flowchart TD
 
 ## Knowledge Connections
 
-- [[software-engineering-note/02_Software_Architecture/Microservice/07 Deployment/074 GitOps and CI-CD Pipelines]] — GitOps and CI integration patterns
+- [[software-engineering-note/02_Software_Architecture/Microservice/07 Deployment/074 GitOps & CI-CD Pipelines]] — GitOps and CI integration patterns
 - [[03_Infrastructure_as_Code]] — GitOps requires declarative infrastructure as its foundation
 - [[01_CI_CD_Pipelines]] — CI pipelines produce the manifests that GitOps controllers reconcile
 - [[02_Progressive_Delivery]] — Argo Rollouts and Flagger integrate progressive delivery into GitOps flows

@@ -4,8 +4,8 @@ note_type: capability-area-overview
 capability_area: quality-reliability-security
 career_path: senior-software-engineer
 source_frameworks:
-  - "[[body-of-knowledge/SWEBOK/Software Engineering Body of Knowledge Overview]]"
-  - "[[body-of-knowledge/CyBOK/CyBOK - Overview]]"
+  - "[[body-of-knowledge/SWEBOK/SWEBOK v4 - Overview]]"
+  - "[[body-of-knowledge/CyBOK/CyBOK v1 - Overview]]"
 tags:
   - career-path
   - senior-engineer
@@ -83,7 +83,7 @@ Before diving into quality, reliability, and security, you should understand:
 
 - [[software-engineering-note/12_Software_Quality/01_Quality_Fundamentals]]: Quality fundamentals and verification/validation
 - [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]]: Operations and deployment
-- [[body-of-knowledge/CyBOK/01_Security_and_Compliance]]: Security and compliance basics
+- [[body-of-knowledge/CyBOK/01_Risk_Management_and_Governance]]: Security and compliance basics
 - [[01_Technical_Ownership/04_Production_Responsibility]]: Production responsibility from Technical Ownership capability
 
 ## Progress Tracker
@@ -98,10 +98,10 @@ Before diving into quality, reliability, and security, you should understand:
 
 ## Knowledge Connections
 
-- [[body-of-knowledge/SWEBOK/Software Engineering Body of Knowledge Overview]] : SWEBOK foundation
+- [[body-of-knowledge/SWEBOK/SWEBOK v4 - Overview]] : SWEBOK foundation
 - [[software-engineering-note/12_Software_Quality/Software Quality Overview]] : Quality engineering overview
 - [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]] : Operations and SRE
-- [[body-of-knowledge/CyBOK/CyBOK - Overview]] : Security body of knowledge
+- [[body-of-knowledge/CyBOK/CyBOK v1 - Overview]] : Security body of knowledge
 - [[01_Technical_Ownership/04_Production_Responsibility]] : Production responsibility and operational readiness
 - [[04_Delivery_and_Execution/05_Release_Management]] : Release strategies and deployment safety
 

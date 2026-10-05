@@ -370,4 +370,4 @@ For each test case:
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/05_Software_Testing/04_Use_Case_Testing]]: Use case testing fundamentals
+- [[software-engineering-note/05_Software_Testing/06_Model_Based_and_Lifecycle]]: Use case testing fundamentals

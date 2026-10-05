@@ -163,9 +163,9 @@ Products with analytics:
 
 ## Connections
 
-- [[body-of-knowledge/BABOK/03_Analysis]] - Business analysis
-- [[body-of-knowledge/DMBOK/11_Data_Analytics]] - Data analytics
-- [[career-path/02_Senior_Software_Engineer/04_Design_and_Architecture/07_Observability_and_Monitoring_Driven_Design]] - Observability
+- [[body-of-knowledge/BABOK/05_Requirements_Analysis_and_Design]] - Business analysis
+- [[body-of-knowledge/DMBOK/09_Data_Warehousing_and_BI]] - Data analytics
+- [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/03_Observability]] - Observability
 
 ## Evidence for Promotion
 

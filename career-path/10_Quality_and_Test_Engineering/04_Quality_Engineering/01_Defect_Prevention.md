@@ -475,4 +475,4 @@ Rework:
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/12_Software_Quality/03_Defect_Prevention]]: Defect prevention techniques
+- [[software-engineering-note/12_Software_Quality/01_Quality_Fundamentals]]: Defect prevention techniques

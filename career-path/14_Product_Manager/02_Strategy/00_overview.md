@@ -179,7 +179,7 @@ We will not:
 ## Connections
 
 - [[body-of-knowledge/BABOK/04_Strategy_Analysis]] - Strategy analysis techniques
-- [[career-path/02_Senior_Software_Engineer/07_Architectural_Vision]] - Technical vision alignment
+- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/00_overview]] - Technical vision alignment
 
 ## Evidence for Promotion
 

@@ -207,7 +207,7 @@ This approach ensures patterns are applied based on actual needs, not anticipate
 - [[04_Architecture_Decision_Records]] : document pattern decisions in ADRs
 - [[software-engineering-note/03_Software_Design/01_Design_Fundamentals_and_Principles]] : design fundamentals
 - [[software-engineering-note/03_Software_Design/05_Design_Strategies_and_Methods]] : design strategies and methods
-- [[software-engineering-note/03_Software_Design/Design Pattern]] : design pattern catalog
+- [[software-engineering-note/03_Software_Design/Design Pattern/Design Pattern Overview]] : design pattern catalog
 
 ## Key Takeaways
 

@@ -487,7 +487,7 @@ Weighted scoring with:
 
 ## Resources
 
-- [[body-of-knowledge/BABOK/06_Strategy]] - Strategic prioritization
+- [[body-of-knowledge/BABOK/04_Strategy_Analysis]] - Strategic prioritization
 - The Lean Startup by Eric Ries
 - Escaping the Build Trap by Melissa Perri
 

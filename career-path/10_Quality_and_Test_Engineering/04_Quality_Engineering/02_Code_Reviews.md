@@ -487,4 +487,4 @@ Top Reviewers:
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/12_Software_Quality/04_Code_Reviews]]: Code review practices
+- [[software-engineering-note/12_Software_Quality/03_Reviews_and_Infrastructure]]: Code review practices

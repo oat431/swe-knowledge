@@ -36,7 +36,7 @@ Products with prioritization:
 | 03 | [[03_Prioritization_Frameworks]] | Structured approaches to ranking |
 | 04 | [[04_Stakeholder_Management]] | Navigating competing priorities |
 | 05 | [[05_Roadmap_Planning]] | Sequencing work over time |
-| 06 | [[06_Re-prioritization]] | Adapting priorities as context changes |
+| 06 | [[06_Re_prioritization]] | Adapting priorities as context changes |
 
 ## Prioritization Principles
 

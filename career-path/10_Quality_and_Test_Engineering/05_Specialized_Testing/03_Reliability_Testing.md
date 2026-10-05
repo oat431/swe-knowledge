@@ -485,4 +485,4 @@ def check_database():
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/05_Software_Testing/08_Reliability_Testing]]: Reliability testing techniques
+- [[software-engineering-note/05_Software_Testing/QA/02 Testing Types/02 Non-Functional Testing]]: Reliability testing techniques

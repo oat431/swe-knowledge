@@ -466,4 +466,4 @@ Complexity:
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/12_Software_Quality/05_Static_Analysis]]: Static analysis tools and techniques
+- [[software-engineering-note/12_Software_Quality/03_Reviews_and_Infrastructure]]: Static analysis tools and techniques

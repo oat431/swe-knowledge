@@ -459,4 +459,4 @@ slope, intercept, r_value, p_value, std_err = stats.linregress(
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/12_Software_Quality/07_Quality_Metrics]]: Quality data sources
+- [[software-engineering-note/12_Software_Quality/04_Metrics_and_Quality_Costs]]: Quality data sources

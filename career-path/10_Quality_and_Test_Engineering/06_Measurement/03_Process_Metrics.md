@@ -434,5 +434,5 @@ Time-bound: Achieve by end of Q3
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/10_Software_Engineering_Management/03_Project_Metrics]]: Project metrics
-- [[software-engineering-note/06_Software_Engineering_Operations/02_CI_CD]]: CI/CD metrics
+- [[software-engineering-note/09_Software_Engineering_Management/07_Measurement_and_Metrics]]: Project metrics
+- [[software-engineering-note/06_Software_Engineering_Operations/Fundamental/13 CI CD Pipelines]]: CI/CD metrics

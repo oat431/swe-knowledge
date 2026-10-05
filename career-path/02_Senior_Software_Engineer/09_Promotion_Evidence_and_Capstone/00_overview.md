@@ -222,11 +222,11 @@ Remember: **Promotion is not about tenure or effort:it's about demonstrating sus
 
 ## Related Areas
 
-- [[../01_Technical_Mastery/00_overview|01. Technical Mastery]]
-- [[../02_System_Design/00_overview|02. System Design]]
-- [[../03_Project_Leadership/00_overview|03. Project Leadership]]
+- [[../01_Technical_Ownership/00_overview|01. Technical Mastery]]
+- [[../03_Architecture_and_Design_Judgment/00_overview|02. System Design]]
+- [[../04_Delivery_and_Execution/00_overview|03. Project Leadership]]
 - [[../04_Delivery_and_Execution/00_overview|04. Delivery & Execution]]
-- [[../05_Quality_Reliability_and_Security/00_overview|05. Quality & Reliability]]
+- [[../05_Quality_Reliability_Security/00_overview|05. Quality & Reliability]]
 - [[../06_Communication_and_Influence/00_overview|06. Communication & Influence]]
 - [[../07_Mentoring_and_Team_Leadership/00_overview|07. Mentoring & Team Leadership]]
 - [[../08_Engineering_Economics_and_Trade_Offs/00_overview|08. Engineering Economics]]

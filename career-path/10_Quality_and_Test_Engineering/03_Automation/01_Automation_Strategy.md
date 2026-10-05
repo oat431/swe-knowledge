@@ -473,4 +473,4 @@ Test Automation Strategy: [Project Name]
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/05_Software_Testing/11_Test_Automation]]: Automation fundamentals and strategy
+- [[software-engineering-note/05_Software_Testing/QA/03 Test Automation/03 CI-CD & Headless Testing]]: Automation fundamentals and strategy

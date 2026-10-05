@@ -602,8 +602,8 @@ Balanced approach: Take debt strategically, pay it back
 ## Resources
 
 - Managing Technical Debt by Philippe Kruchten et al.
-- [[career-path/02_Senior_Software_Engineer/01_Technical_Judgment]] - Technical judgment
-- [[career-path/02_Senior_Software_Engineer/08_Architectural_Ownership]] - Architecture
+- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/00_overview]] - Technical judgment
+- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/00_overview]] - Architecture
 
 ## Checklist
 

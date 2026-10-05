@@ -431,4 +431,4 @@ flowchart LR
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/12_Software_Quality/07_Quality_Metrics]]: Quality metrics fundamentals
+- [[software-engineering-note/12_Software_Quality/04_Metrics_and_Quality_Costs]]: Quality metrics fundamentals

@@ -77,7 +77,7 @@ EVM turns "we're a bit behind" into numbers a steering committee can act on.
 
 - [[02_Scope_and_Planning/00_overview|Scope and Planning]]: scope changes drive schedule and cost changes
 - [[04_Risk_and_Issues/00_overview|Risk and Issues]]: contingency is sized from risk analysis
-- [[career-path/11_Engineering_Manager/04_Delivery_Leadership_for_Managers/07_Delivery_Metrics_and_Health|Delivery Metrics and Health (EM)]]: team-level delivery measurement
+- [[career-path/05_Tech_Lead/04_Team_Delivery_and_Execution_Leadership/07_Delivery_Metrics_and_Health|Delivery Metrics and Health (Tech Lead)]]: team-level delivery measurement
 
 ## Summary
 

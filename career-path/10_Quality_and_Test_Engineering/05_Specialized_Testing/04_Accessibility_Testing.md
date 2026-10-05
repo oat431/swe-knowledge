@@ -476,4 +476,4 @@ Scenario 3: Navigate site
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/05_Software_Testing/09_Accessibility_Testing]]: Accessibility testing techniques
+- [[software-engineering-note/05_Software_Testing/QA/02 Testing Types/02 Non-Functional Testing]]: Accessibility testing techniques

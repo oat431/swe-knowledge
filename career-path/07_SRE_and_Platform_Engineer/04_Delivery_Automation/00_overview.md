@@ -64,7 +64,7 @@ flowchart LR
 | Existing Note | Relevance |
 |---------------|-----------|
 | [[software-engineering-note/06_Software_Engineering_Operations/Fundamental/13 CI CD Pipelines]] | Foundational CI/CD concepts, pipeline stages, tooling |
-| [[software-engineering-note/02_Software_Architecture/Microservice/07 Deployment/074 GitOps and CI-CD Pipelines]] | GitOps patterns, ArgoCD, Flux integration with CI |
+| [[software-engineering-note/02_Software_Architecture/Microservice/07 Deployment/074 GitOps & CI-CD Pipelines]] | GitOps patterns, ArgoCD, Flux integration with CI |
 | [[software-engineering-note/02_Software_Architecture/Microservice/07 Deployment/072 Deployment Strategies]] | Blue-green, canary, rolling update strategies |
 | [[software-engineering-note/06_Software_Engineering_Operations/01_The_Three_Ways]] | DevOps principles — flow, feedback, continuous learning |
 
@@ -83,5 +83,5 @@ Use this to gauge your depth in Delivery Automation. A specialist should confide
 ## Related Capability Areas
 
 - [[00_overview|07_SRE_and_Platform_Engineer Overview]] — parent capability area
-- [[../03_Observability_and_Monitoring/00_overview|Observability and Monitoring]] — pipelines produce metrics that observability consumes
-- [[../02_Reliability_Engineering/00_overview|Reliability Engineering]] — delivery automation enables reliability through safe, reversible changes
+- [[../02_Observability/00_overview|Observability and Monitoring]] — pipelines produce metrics that observability consumes
+- [[../05_Capacity_and_Resilience/00_overview|Reliability Engineering]] — delivery automation enables reliability through safe, reversible changes

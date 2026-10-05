@@ -625,7 +625,7 @@ Together: "Balance speed and sustainability"
 
 ## Resources
 
-- [[body-of-knowledge/SWEBOK/10_Software_Engineering_Management]] - Project planning
+- [[body-of-knowledge/SWEBOK/09_Software_Engineering_Management]] - Project planning
 - Software Estimation by Steve McConnell
 - The Pragmatic Programmer by David Thomas and Andrew Hunt
 

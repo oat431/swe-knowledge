@@ -485,7 +485,7 @@ Retrospective findings:
 
 ## Resources
 
-- [[body-of-knowledge/BABOK/07_Requirements_Life_Cycle_Management]] - Requirements management
+- [[body-of-knowledge/BABOK/03_Requirements_Life_Cycle_Management]] - Requirements management
 - Software Requirements by Karl Wiegers
 - Mastering the Requirements Process by Suzanne Robertson
 

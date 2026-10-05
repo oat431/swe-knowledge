@@ -157,7 +157,7 @@ flowchart TD
 - [[04_GitOps]] — GitOps uses IaC as its declarative foundation and Git as the reconciliation source
 - [[01_CI_CD_Pipelines]] — CI/CD pipelines run plan, validate, and apply stages for infrastructure changes
 - [[05_Rollback_and_Recovery]] — IaC state history enables infrastructure rollback alongside application rollback
-- [[../01_Platform_Engineering_Fundamentals/00_overview|Platform Engineering Fundamentals]] — IaC is the backbone of internal developer platforms
+- [[../06_Developer_Platform/00_overview|Platform Engineering Fundamentals]] — IaC is the backbone of internal developer platforms
 
 ## Key Takeaways
 

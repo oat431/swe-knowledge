@@ -54,9 +54,9 @@ Quality engineering delivers:
 ## Existing Vault Connections
 
 This area builds on:
-- [[software-engineering-note/12_Software_Quality/01_Software_Quality_Fundamentals]]: Quality concepts
-- [[software-engineering-note/12_Software_Quality/02_Quality_Management]]: Quality management
-- [[software-engineering-note/14_Software_Engineering_Professional_Practice/01_Professional_Practice]]: Professional practices
+- [[software-engineering-note/12_Software_Quality/01_Quality_Fundamentals]]: Quality concepts
+- [[software-engineering-note/12_Software_Quality/Software Quality Overview]]: Quality management
+- [[software-engineering-note/14_Software_Engineering_Professional_Practice/01_Professionalism_Ethics_and_Legal]]: Professional practices
 
 ## Success Criteria
 

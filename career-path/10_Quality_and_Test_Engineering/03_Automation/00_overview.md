@@ -56,8 +56,8 @@ Strong automation delivers:
 
 This area builds on:
 - [[software-engineering-note/05_Software_Testing/09_Testing_Tools_and_Standards]]: Test automation tools
-- [[software-engineering-note/06_Software_Engineering_Operations/04_Deployment_and_Release]]: CI/CD pipelines
-- [[software-engineering-note/05_Software_Testing/11_Test_Automation]]: Automation fundamentals
+- [[software-engineering-note/06_Software_Engineering_Operations/Fundamental/13 CI CD Pipelines]]: CI/CD pipelines
+- [[software-engineering-note/05_Software_Testing/QA/03 Test Automation/03 CI-CD & Headless Testing]]: Automation fundamentals
 
 ## Success Criteria
 

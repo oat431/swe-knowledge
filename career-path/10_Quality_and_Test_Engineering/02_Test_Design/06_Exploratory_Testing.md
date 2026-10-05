@@ -459,4 +459,4 @@ flowchart LR
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/05_Software_Testing/06_Exploratory_Testing]]: Exploratory testing fundamentals
+- [[software-engineering-note/05_Software_Testing/QA/01 Fundamentals/01 Testing Mindset & Approaches]]: Exploratory testing fundamentals

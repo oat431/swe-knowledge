@@ -689,7 +689,7 @@ Make accessible to team
 
 - Software Architecture: The Hard Parts by Neal Ford et al.
 - Building Evolutionary Architectures by Neal Ford et al.
-- [[career-path/02_Senior_Software_Engineer/01_Technical_Judgment]] - Technical judgment
+- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/00_overview]] - Technical judgment
 
 ## Checklist
 

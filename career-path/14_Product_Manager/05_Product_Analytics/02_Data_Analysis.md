@@ -384,7 +384,7 @@ Decision: Should we invest more in search features?
 
 ## Resources
 
-- [[body-of-knowledge/DMBOK/11_Data_Analytics]] - Data analytics
+- [[body-of-knowledge/DMBOK/09_Data_Warehousing_and_BI]] - Data analytics
 - Naked Statistics by Charles Wheelan
 - Thinking, Fast and Slow by Daniel Kahneman
 

@@ -625,7 +625,7 @@ Example:
 
 - The Manager's Path by Camille Fournier
 - Staff Engineer by Will Larson
-- [[career-path/02_Senior_Software_Engineer/09_Delivery_and_Operational_Excellence]] - Delivery excellence
+- [[career-path/02_Senior_Software_Engineer/04_Delivery_and_Execution/00_overview]] - Delivery excellence
 
 ## Checklist
 

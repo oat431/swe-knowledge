@@ -152,7 +152,7 @@ flowchart TD
 - [[01_CI_CD_Pipelines]] — pipelines produce the artifacts that progressive delivery controllers consume
 - [[04_GitOps]] — GitOps controllers like Argo Rollouts integrate progressive delivery with declarative state
 - [[05_Rollback_and_Recovery]] — progressive delivery limits blast radius; rollback recovers from what slips through
-- [[../03_Observability_and_Monitoring/00_overview|Observability and Monitoring]] — analysis automation depends on rich, real-time observability data
+- [[../02_Observability/00_overview|Observability and Monitoring]] — analysis automation depends on rich, real-time observability data
 
 ## Key Takeaways
 

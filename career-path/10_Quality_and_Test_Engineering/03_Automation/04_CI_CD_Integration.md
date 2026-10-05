@@ -626,5 +626,5 @@ jobs:
 
 ## Existing Vault Connections
 
-- [[software-engineering-note/06_Software_Engineering_Operations/04_Deployment_and_Release]]: CI/CD pipelines
-- [[software-engineering-note/05_Software_Testing/11_Test_Automation]]: Test automation in CI/CD
+- [[software-engineering-note/06_Software_Engineering_Operations/Fundamental/13 CI CD Pipelines]]: CI/CD pipelines
+- [[software-engineering-note/05_Software_Testing/QA/03 Test Automation/03 CI-CD & Headless Testing]]: Test automation in CI/CD
