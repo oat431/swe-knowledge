@@ -43,15 +43,15 @@ Titles and boundaries vary. The common feature is that the architect must operat
 
 ## Capability Areas
 
-| Capability | Architect behavior | Existing vault anchor |
+| Capability | Architect behavior | Detailed notes |
 |---|---|---|
-| Business analysis | Understands needs, capabilities, and desired change | [[body-of-knowledge/BABOK/04_Strategy_Analysis]] |
-| Solution architecture | Translates needs into a feasible system and delivery approach | [[body-of-knowledge/System Engineer BOK/07_System_Definition_and_Architecture]] |
-| Enterprise architecture | Connects business, information, applications, and technology | [[body-of-knowledge/System Engineer BOK/11_Enterprise_Systems_Engineering]] |
-| Data architecture | Aligns data ownership, flow, governance, and value | [[DMBoK v2 - Overview]] |
-| Security and risk | Integrates security, privacy, resilience, and compliance | [[CyBOK v1 - Overview]] |
-| Roadmaps | Defines transition steps, dependencies, and investment choices | [[PMBOK v8 - Overview]] |
-| Communication | Presents architecture in stakeholder-relevant views | [[software-engineering-note/02_Software_Architecture/07_Design_and_Documentation]] |
+| Business analysis | Understands needs, capabilities, and desired change | [[01_Business_Analysis_and_Capability_Mapping/00_overview]] |
+| Solution architecture | Translates needs into a feasible system and delivery approach | [[02_Solution_Architecture_and_Design/00_overview]] |
+| Enterprise architecture | Connects business, information, applications, and technology | [[03_Enterprise_Architecture_Practice/00_overview]] |
+| Data architecture | Aligns data ownership, flow, governance, and value | [[04_Enterprise_Data_Architecture/00_overview]] |
+| Security and risk | Integrates security, privacy, resilience, and compliance | [[05_Security_Risk_and_Compliance/00_overview]] |
+| Roadmaps | Defines transition steps, dependencies, and investment choices | [[06_Transformation_Roadmaps_and_Portfolio/00_overview]] |
+| Communication | Presents architecture in stakeholder-relevant views | [[07_Architecture_Communication/00_overview]] |
 
 ## Solutions Architect versus Enterprise Architect
 
