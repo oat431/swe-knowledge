@@ -6,21 +6,21 @@ tags:
 - babok
 ---
 
-# 01 — Business Analysis Planning and Monitoring
+# 01: Business Analysis Planning and Monitoring
 
-> *Source: BABOK® Guide v3 by IIBA, Chapter 2 — BA Planning and Monitoring*
+> *Source: BABOK® Guide v3 by IIBA, Chapter 2: BA Planning and Monitoring*
 
 ## Purpose
 
-The **Business Analysis Planning and Monitoring** knowledge area defines the tasks business analysts perform to organize and coordinate the efforts of business analysts and stakeholders. These tasks produce outputs that serve as key inputs and guidelines for the other knowledge areas. Planning and monitoring activities occur throughout the initiative lifecycle—beginning with scoping and selecting an approach, and continuing as plans are revisited and updated to address changing business conditions and newly raised issues.
+The **Business Analysis Planning and Monitoring** knowledge area defines the tasks business analysts perform to organize and coordinate the efforts of business analysts and stakeholders. These tasks produce outputs that serve as key inputs and guidelines for the other knowledge areas. Planning and monitoring activities occur throughout the initiative lifecycle: beginning with scoping and selecting an approach, and continuing as plans are revisited and updated to address changing business conditions and newly raised issues.
 
 This knowledge area addresses five core tasks:
 
-1. **Plan Business Analysis Approach** — define the method for conducting BA activities
-2. **Plan Stakeholder Engagement** — establish effective working relationships with stakeholders
-3. **Plan Business Analysis Governance** — define decision-making for requirements and designs
-4. **Plan Business Analysis Information Management** — define how BA information is stored and accessed
-5. **Identify Business Analysis Performance Improvements** — monitor, assess, and improve BA work
+1. **Plan Business Analysis Approach**: define the method for conducting BA activities
+2. **Plan Stakeholder Engagement**: establish effective working relationships with stakeholders
+3. **Plan Business Analysis Governance**: define decision-making for requirements and designs
+4. **Plan Business Analysis Information Management**: define how BA information is stored and accessed
+5. **Identify Business Analysis Performance Improvements**: monitor, assess, and improve BA work
 
 ## The BACCM™ in Business Analysis Planning and Monitoring
 
@@ -45,7 +45,7 @@ Define an appropriate method to conduct business analysis activities.
 
 ### Description
 
-Business analysis approaches describe the overall method for performing BA work on a given initiative—how and when tasks will be performed and the deliverables that will be produced. The approach may be defined by a methodology or organizational standards. Even where a standard approach exists, it may be tailored to the needs of a specific initiative. If organizational standards do not exist, the business analyst works with stakeholders to determine how the work will be completed.
+Business analysis approaches describe the overall method for performing BA work on a given initiative: how and when tasks will be performed and the deliverables that will be produced. The approach may be defined by a methodology or organizational standards. Even where a standard approach exists, it may be tailored to the needs of a specific initiative. If organizational standards do not exist, the business analyst works with stakeholders to determine how the work will be completed.
 
 The business analysis approach should:
 - Align to the overall goals of the change
@@ -55,7 +55,7 @@ The business analysis approach should:
 
 ### Inputs
 
-- **Needs** — the problem or opportunity faced by the organization shapes the approach. Understanding evolves throughout BA activities; the approach acknowledges what is known at planning time.
+- **Needs**: the problem or opportunity faced by the organization shapes the approach. Understanding evolves throughout BA activities; the approach acknowledges what is known at planning time.
 
 ### Elements
 
@@ -66,7 +66,7 @@ Planning methods fit along a continuum between predictive and adaptive approache
 | Aspect | Predictive | Adaptive |
 |---|---|---|
 | **Solution Definition** | Defined before implementation to maximize control and minimize risk | Defined in iterations to arrive at best solution or improve existing one |
-| **Level of Formality** | Formal — information captured in standardized templates | Informal — gathered through team interaction and feedback |
+| **Level of Formality** | Formal: information captured in standardized templates | Informal: gathered through team interaction and feedback |
 | **Activities** | Activities to complete deliverables identified first, then divided into tasks | Activities divided into iterations with deliverables first, then associated tasks identified |
 | **Timing** | Tasks performed in specific phases | Tasks performed iteratively |
 
@@ -129,40 +129,40 @@ The BA approach is reviewed and agreed upon by key stakeholders. In more structu
 
 ### Guidelines and Tools
 
-- **Business Analysis Performance Assessment** — results of previous assessments to review and incorporate
-- **Business Policies** — regulations, contracts, agreements, warranties, certifications, or legal obligations that define decision limits
-- **Expert Judgment** — expertise from stakeholders, Centres of Excellence, consultants, associations, and industry groups. Prior experiences of the BA and stakeholders considered
-- **Methodologies and Frameworks** — provide methods, techniques, procedures, working concepts, and rules; may need tailoring to specific business challenges
-- **Stakeholder Engagement Approach** — understanding stakeholders and their concerns influences approach decisions
+- **Business Analysis Performance Assessment**: results of previous assessments to review and incorporate
+- **Business Policies**: regulations, contracts, agreements, warranties, certifications, or legal obligations that define decision limits
+- **Expert Judgment**: expertise from stakeholders, Centres of Excellence, consultants, associations, and industry groups. Prior experiences of the BA and stakeholders considered
+- **Methodologies and Frameworks**: provide methods, techniques, procedures, working concepts, and rules; may need tailoring to specific business challenges
+- **Stakeholder Engagement Approach**: understanding stakeholders and their concerns influences approach decisions
 
 ### Techniques
 
-- **Brainstorming** — identify possible BA activities, techniques, risks, and relevant items
-- **Business Cases** — understand time-sensitive, high-value elements or uncertainties
-- **Document Analysis** — review existing organizational assets to assist planning
-- **Estimation** — determine how long BA activities may take
-- **Financial Analysis** — assess how different approaches affect value delivered
-- **Functional Decomposition** — break down complex BA processes into feasible components
-- **Interviews** — build the plan with an individual or small group
-- **Item Tracking** — track issues and risk-related items raised during planning
-- **Lessons Learned** — identify enterprise's previous experience with planning BA approach
-- **Process Modelling** — define and document the BA approach
-- **Reviews** — validate the selected approach with stakeholders
-- **Risk Analysis and Management** — assess risks to select proper approach
-- **Scope Modelling** — determine solution boundaries as input to planning and estimating
-- **Survey or Questionnaire** — identify possible BA activities, techniques, risks
-- **Workshops** — build the plan in a team setting
+- **Brainstorming**: identify possible BA activities, techniques, risks, and relevant items
+- **Business Cases**: understand time-sensitive, high-value elements or uncertainties
+- **Document Analysis**: review existing organizational assets to assist planning
+- **Estimation**: determine how long BA activities may take
+- **Financial Analysis**: assess how different approaches affect value delivered
+- **Functional Decomposition**: break down complex BA processes into feasible components
+- **Interviews**: build the plan with an individual or small group
+- **Item Tracking**: track issues and risk-related items raised during planning
+- **Lessons Learned**: identify enterprise's previous experience with planning BA approach
+- **Process Modelling**: define and document the BA approach
+- **Reviews**: validate the selected approach with stakeholders
+- **Risk Analysis and Management**: assess risks to select proper approach
+- **Scope Modelling**: determine solution boundaries as input to planning and estimating
+- **Survey or Questionnaire**: identify possible BA activities, techniques, risks
+- **Workshops**: build the plan in a team setting
 
 ### Stakeholders
 
-- **Domain Subject Matter Expert** — can be a source of risk when involvement is required and availability is lacking
-- **Project Manager** — determines that the approach is realistic for overall schedule and timelines; BA approach must be compatible with other activities
-- **Regulator** — may need to provide approval for aspects of the BA approach or decisions in tailoring the process, especially for audited processes
-- **Sponsor** — provides needs and objectives for the approach; ensures organizational policies are followed
+- **Domain Subject Matter Expert**: can be a source of risk when involvement is required and availability is lacking
+- **Project Manager**: determines that the approach is realistic for overall schedule and timelines; BA approach must be compatible with other activities
+- **Regulator**: may need to provide approval for aspects of the BA approach or decisions in tailoring the process, especially for audited processes
+- **Sponsor**: provides needs and objectives for the approach; ensures organizational policies are followed
 
 ### Outputs
 
-- **Business Analysis Approach** — identifies the BA approach and activities to be performed across an initiative: who will perform activities, timing and sequencing, deliverables produced, and techniques that may be utilized. Remaining outputs of this knowledge area may be integrated into the overall approach or be independent.
+- **Business Analysis Approach**: identifies the BA approach and activities to be performed across an initiative: who will perform activities, timing and sequencing, deliverables produced, and techniques that may be utilized. Remaining outputs of this knowledge area may be integrated into the overall approach or be independent.
 
 ---
 
@@ -174,12 +174,12 @@ Plan an approach for establishing and maintaining effective working relationship
 
 ### Description
 
-Plan Stakeholder Engagement involves conducting a thorough stakeholder analysis to identify all involved stakeholders and analyze their characteristics. Results are then utilized to define the best collaboration and communication approaches and to appropriately plan for stakeholder risks. The degree of complexity increases disproportionately as the number of stakeholders increases—new or different techniques may be required when moving from a few stakeholders to dozens, hundreds, or thousands.
+Plan Stakeholder Engagement involves conducting a thorough stakeholder analysis to identify all involved stakeholders and analyze their characteristics. Results are then utilized to define the best collaboration and communication approaches and to appropriately plan for stakeholder risks. The degree of complexity increases disproportionately as the number of stakeholders increases. New or different techniques may be required when moving from a few stakeholders to dozens, hundreds, or thousands.
 
 ### Inputs
 
-- **Needs** — understanding the business need and the parts of the enterprise it affects helps identify stakeholders. The need may evolve as stakeholder analysis is performed
-- **Business Analysis Approach** — incorporating the overall BA approach into stakeholder analysis, collaboration, and communication approaches ensures consistency
+- **Needs**: understanding the business need and the parts of the enterprise it affects helps identify stakeholders. The need may evolve as stakeholder analysis is performed
+- **Business Analysis Approach**: incorporating the overall BA approach into stakeholder analysis, collaboration, and communication approaches ensures consistency
 
 ### Elements
 
@@ -193,9 +193,9 @@ Sources for identifying stakeholders:
 - Existing contracts, anticipated vendors, regulatory/governing bodies (external)
 - Shareholders, customers, and suppliers
 
-**Roles** — Identify stakeholder roles to understand where and how stakeholders will contribute. The BA must be aware of the various roles a stakeholder is responsible for within the organization.
+**Roles**: Identify stakeholder roles to understand where and how stakeholders will contribute. The BA must be aware of the various roles a stakeholder is responsible for within the organization.
 
-**Attitudes** — Stakeholder attitudes can positively or negatively impact a change. BAs analyze attitudes about:
+**Attitudes**: Stakeholder attitudes can positively or negatively impact a change. BAs analyze attitudes about:
 - Business goals, objectives of the initiative, and proposed solutions
 - Business analysis in general
 - Level of interest in the change
@@ -205,9 +205,9 @@ Sources for identifying stakeholders:
 
 Positive stakeholders may be strong champions and contributors. Negative stakeholders in key roles may require collaboration approaches that increase their cooperation.
 
-**Decision Making Authority** — Identify the authority level a stakeholder possesses over BA activities, deliverables, and changes to BA work. Understanding authority levels eliminates confusion and ensures the BA collaborates with the proper stakeholders for decisions and approvals.
+**Decision Making Authority**: Identify the authority level a stakeholder possesses over BA activities, deliverables, and changes to BA work. Understanding authority levels eliminates confusion and ensures the BA collaborates with the proper stakeholders for decisions and approvals.
 
-**Level of Power or Influence** — Understanding influence structures and channels within an organization helps build relationships and trust. BAs evaluate how much influence is needed to implement a change compared to the influence key stakeholders can bring. If there is a mismatch, BAs develop risk plans, responses, and strategies to obtain the required level of support.
+**Level of Power or Influence**: Understanding influence structures and channels within an organization helps build relationships and trust. BAs evaluate how much influence is needed to implement a change compared to the influence key stakeholders can bring. If there is a mismatch, BAs develop risk plans, responses, and strategies to obtain the required level of support.
 
 #### .2 Define Stakeholder Collaboration
 
@@ -236,39 +236,39 @@ Communication considerations can be documented as a stakeholder communication pl
 
 ### Guidelines and Tools
 
-- **Business Analysis Performance Assessment** — results of previous assessments to review and incorporate
-- **Change Strategy** — used for improved assessment of stakeholder impact and more effective stakeholder engagement strategies
-- **Current State Description** — provides the context within which work needs to be completed; leads to more effective stakeholder analysis and better understanding of change impact
+- **Business Analysis Performance Assessment**: results of previous assessments to review and incorporate
+- **Change Strategy**: used for improved assessment of stakeholder impact and more effective stakeholder engagement strategies
+- **Current State Description**: provides the context within which work needs to be completed; leads to more effective stakeholder analysis and better understanding of change impact
 
 ### Techniques
 
-- **Brainstorming** — produce stakeholder list and identify roles and responsibilities
-- **Business Rules Analysis** — identify stakeholders who were the source of business rules
-- **Document Analysis** — review existing organizational assets to assist planning
-- **Interviews** — interact with specific stakeholders to gain more information about stakeholder groups
-- **Lessons Learned** — identify enterprise's previous experience with planning stakeholder engagement
-- **Mind Mapping** — identify potential stakeholders and understand relationships between them
-- **Organizational Modelling** — determine if organizational units or people have unique needs and interests; describe roles, functions, and interaction patterns
-- **Process Modelling** — categorize stakeholders by the systems that support their business processes
-- **Risk Analysis and Management** — identify risks from stakeholder attitudes or inability of key stakeholders to participate
-- **Scope Modelling** — show stakeholders that fall outside solution scope but still interact with it
-- **Stakeholder List, Map, or Personas** — depict relationship of stakeholders to the solution and one another
-- **Survey or Questionnaire** — identify shared characteristics of a stakeholder group
-- **Workshops** — interact with groups of stakeholders to gain more information
+- **Brainstorming**: produce stakeholder list and identify roles and responsibilities
+- **Business Rules Analysis**: identify stakeholders who were the source of business rules
+- **Document Analysis**: review existing organizational assets to assist planning
+- **Interviews**: interact with specific stakeholders to gain more information about stakeholder groups
+- **Lessons Learned**: identify enterprise's previous experience with planning stakeholder engagement
+- **Mind Mapping**: identify potential stakeholders and understand relationships between them
+- **Organizational Modelling**: determine if organizational units or people have unique needs and interests; describe roles, functions, and interaction patterns
+- **Process Modelling**: categorize stakeholders by the systems that support their business processes
+- **Risk Analysis and Management**: identify risks from stakeholder attitudes or inability of key stakeholders to participate
+- **Scope Modelling**: show stakeholders that fall outside solution scope but still interact with it
+- **Stakeholder List, Map, or Personas**: depict relationship of stakeholders to the solution and one another
+- **Survey or Questionnaire**: identify shared characteristics of a stakeholder group
+- **Workshops**: interact with groups of stakeholders to gain more information
 
 ### Stakeholders
 
-- **Customers** — source of external stakeholders
-- **Domain Subject Matter Expert** — may help identify stakeholders and may fulfill one or more roles
-- **End User** — source of internal stakeholders
-- **Project Manager** — may identify and recommend stakeholders; responsibility for stakeholder identification and management may be shared with the BA
-- **Regulator** — may require specific stakeholder representatives or groups be involved
-- **Sponsor** — may request that specific stakeholders be involved
-- **Supplier** — source of external stakeholders
+- **Customers**: source of external stakeholders
+- **Domain Subject Matter Expert**: may help identify stakeholders and may fulfill one or more roles
+- **End User**: source of internal stakeholders
+- **Project Manager**: may identify and recommend stakeholders; responsibility for stakeholder identification and management may be shared with the BA
+- **Regulator**: may require specific stakeholder representatives or groups be involved
+- **Sponsor**: may request that specific stakeholders be involved
+- **Supplier**: source of external stakeholders
 
 ### Outputs
 
-- **Stakeholder Engagement Approach** — contains: stakeholder list with analyzed characteristics, listing of roles and responsibilities for the change, and the collaboration and communication approaches the BA will utilize during the initiative.
+- **Stakeholder Engagement Approach**: contains: stakeholder list with analyzed characteristics, listing of roles and responsibilities for the change, and the collaboration and communication approaches the BA will utilize during the initiative.
 
 ---
 
@@ -290,8 +290,8 @@ Business analysts ensure that a governance process is in place and clarify any a
 
 ### Inputs
 
-- **Business Analysis Approach** — incorporating the overall BA approach into the governance approach ensures consistency
-- **Stakeholder Engagement Approach** — identifying stakeholders and understanding their communication and collaboration needs helps determine their participation in governance
+- **Business Analysis Approach**: incorporating the overall BA approach into the governance approach ensures consistency
+- **Stakeholder Engagement Approach**: identifying stakeholders and understanding their communication and collaboration needs helps determine their participation in governance
 
 ### Elements
 
@@ -309,24 +309,24 @@ The decision-making process defines what happens when teams cannot reach consens
 
 When developing a change control process, business analysts:
 
-- **Determine the process for requesting changes** — specify which requirements and designs the process covers, whether it applies to all changes or only those of a specific size/cost/effort, steps for proposing a change, when changes can be proposed, who can propose changes, and how change requests are communicated
+- **Determine the process for requesting changes**: specify which requirements and designs the process covers, whether it applies to all changes or only those of a specific size/cost/effort, steps for proposing a change, when changes can be proposed, who can propose changes, and how change requests are communicated
 
-- **Determine the elements of the change request** — possible components:
-  - **Cost and time estimates** — for each affected area
-  - **Benefits** — how the change aligns with initiative and business objectives (financial and tactical benefits: scope, time, cost, quality, resources)
-  - **Risks** — analysis of risks to the initiative, solution, or business objectives
-  - **Priority** — level of importance relative to organizational objectives, regulatory compliance, and stakeholder needs
-  - **Course(s) of action** — assessment of cost, time, benefits, risks, and priority; often includes several alternatives
+- **Determine the elements of the change request**: possible components:
+  - **Cost and time estimates**: for each affected area
+  - **Benefits**: how the change aligns with initiative and business objectives (financial and tactical benefits: scope, time, cost, quality, resources)
+  - **Risks**: analysis of risks to the initiative, solution, or business objectives
+  - **Priority**: level of importance relative to organizational objectives, regulatory compliance, and stakeholder needs
+  - **Course(s) of action**: assessment of cost, time, benefits, risks, and priority; often includes several alternatives
 
-- **Determine how changes will be prioritized** — priority established relative to competing interests within the initiative
+- **Determine how changes will be prioritized**: priority established relative to competing interests within the initiative
 
-- **Determine how changes will be documented** — configuration management and traceability standards establish baselines and version control practices
+- **Determine how changes will be documented**: configuration management and traceability standards establish baselines and version control practices
 
-- **Determine how changes will be communicated** — how proposed, under-review, approved, declined, or deferred changes are communicated
+- **Determine how changes will be communicated**: how proposed, under-review, approved, declined, or deferred changes are communicated
 
-- **Determine who will perform the impact analysis** — responsibility for analyzing impacts across the initiative
+- **Determine who will perform the impact analysis**: responsibility for analyzing impacts across the initiative
 
-- **Determine who will authorize changes** — who can approve changes and what BA information their authority covers
+- **Determine who will authorize changes**: who can approve changes and what BA information their authority covers
 
 #### .3 Plan Prioritization Approach
 
@@ -355,34 +355,34 @@ Planning for approvals also includes the schedule of events where approvals will
 
 ### Guidelines and Tools
 
-- **Business Analysis Performance Assessment** — results of previous assessments to review and incorporate
-- **Business Policies** — regulations, contracts, agreements, warranties, certifications, or other legal obligations that define decision limits
-- **Current State Description** — provides context for how to make better decisions
-- **Legal/Regulatory Information** — legislative rules or regulations to follow; helps develop a framework ensuring sound business decision making
+- **Business Analysis Performance Assessment**: results of previous assessments to review and incorporate
+- **Business Policies**: regulations, contracts, agreements, warranties, certifications, or other legal obligations that define decision limits
+- **Current State Description**: provides context for how to make better decisions
+- **Legal/Regulatory Information**: legislative rules or regulations to follow; helps develop a framework ensuring sound business decision making
 
 ### Techniques
 
-- **Brainstorming** — generate initial list of potential stakeholders who may need approval roles in governance
-- **Document Analysis** — evaluate existing governance processes or templates
-- **Interviews** — identify possible decision-making, change control, approval, or prioritization approaches and participants
-- **Item Tracking** — track issues that arise when planning governance
-- **Lessons Learned** — find if past initiatives have identified valuable governance experiences
-- **Organizational Modelling** — understand roles/responsibilities to define governance involving the right stakeholders
-- **Process Modelling** — document the process or method for governing business analysis
-- **Reviews** — review the proposed governance plan with key stakeholders
-- **Survey or Questionnaire** — identify possible decision-making, change control, approval, or prioritization approaches and participants
-- **Workshops** — identify approaches and participants within a team setting
+- **Brainstorming**: generate initial list of potential stakeholders who may need approval roles in governance
+- **Document Analysis**: evaluate existing governance processes or templates
+- **Interviews**: identify possible decision-making, change control, approval, or prioritization approaches and participants
+- **Item Tracking**: track issues that arise when planning governance
+- **Lessons Learned**: find if past initiatives have identified valuable governance experiences
+- **Organizational Modelling**: understand roles/responsibilities to define governance involving the right stakeholders
+- **Process Modelling**: document the process or method for governing business analysis
+- **Reviews**: review the proposed governance plan with key stakeholders
+- **Survey or Questionnaire**: identify possible decision-making, change control, approval, or prioritization approaches and participants
+- **Workshops**: identify approaches and participants within a team setting
 
 ### Stakeholders
 
-- **Domain Subject Matter Expert** — possible source of requested change or identified as needing involvement in change discussions
-- **Project Manager** — ensures overall project governance aligns with BA governance approach
-- **Regulator** — may impose rules or regulations to consider; may be a source of requested change
-- **Sponsor** — can impose requirements for how BA information should be managed; participates in change discussions and approves proposed changes
+- **Domain Subject Matter Expert**: possible source of requested change or identified as needing involvement in change discussions
+- **Project Manager**: ensures overall project governance aligns with BA governance approach
+- **Regulator**: may impose rules or regulations to consider; may be a source of requested change
+- **Sponsor**: can impose requirements for how BA information should be managed; participates in change discussions and approves proposed changes
 
 ### Outputs
 
-- **Governance Approach** — identifies stakeholders with responsibility and authority to make decisions about BA work, including who sets priorities and who approves changes to BA information. Also defines the process to manage requirement and design changes across the initiative.
+- **Governance Approach**: identifies stakeholders with responsibility and authority to make decisions about BA work, including who sets priorities and who approves changes to BA information. Also defines the process to manage requirement and design changes across the initiative.
 
 ---
 
@@ -394,7 +394,7 @@ Develop an approach for how business analysis information will be stored and acc
 
 ### Description
 
-Business analysis information is comprised of all information BAs elicit, create, compile, and disseminate in the course of performing business analysis. This includes models, scope statements, stakeholder concerns, elicitation results, requirements, designs, and solution options—from lightweight user stories to formal requirement documents to functioning prototypes.
+Business analysis information is comprised of all information BAs elicit, create, compile, and disseminate in the course of performing business analysis. This includes models, scope statements, stakeholder concerns, elicitation results, requirements, designs, and solution options: from lightweight user stories to formal requirement documents to functioning prototypes.
 
 Information management entails identifying:
 - How information should be organized
@@ -408,9 +408,9 @@ Information management helps ensure that BA information is organized in a functi
 
 ### Inputs
 
-- **Business Analysis Approach** — incorporating the overall BA approach ensures consistency
-- **Governance Approach** — defines how BAs manage changes to requirements and designs, how decisions and approvals are made, and how priorities are set
-- **Stakeholder Engagement Approach** — identifying stakeholders and understanding their communication and collaboration needs helps determine their specific information management needs
+- **Business Analysis Approach**: incorporating the overall BA approach ensures consistency
+- **Governance Approach**: defines how BAs manage changes to requirements and designs, how decisions and approvals are made, and how priorities are set
+- **Stakeholder Engagement Approach**: identifying stakeholders and understanding their communication and collaboration needs helps determine their specific information management needs
 
 ### Elements
 
@@ -444,7 +444,7 @@ BAs plan to ensure the approach is at a level of detail that adds value without 
 
 #### .4 Plan for Requirements Reuse
 
-Reusing requirements can save time, effort, and cost—provided requirements are accessible and structured to support reuse. Candidates for long-term use include requirements an organization must meet on an ongoing basis:
+Reusing requirements can save time, effort, and cost, provided requirements are accessible and structured to support reuse. Candidates for long-term use include requirements an organization must meet on an ongoing basis:
 - Regulatory requirements
 - Contractual obligations
 - Quality standards
@@ -470,44 +470,44 @@ The BA approach defines how various tools will be used on the initiative and how
 Requirements attributes provide information about requirements and aid in ongoing management throughout the change. They are planned for and determined with the requirements themselves. Attributes help the team efficiently make trade-offs between requirements, identify stakeholders affected by potential changes, and understand the effect of proposed changes.
 
 Commonly used requirements attributes include:
-- **Absolute reference** — unique identifier; not altered or reused if the requirement is moved, changed, or deleted
-- **Author** — name of the person to consult if the requirement is ambiguous, unclear, or in conflict
-- **Complexity** — indicates how difficult the requirement will be to implement
-- **Ownership** — individual or group that needs the requirement or will be the business owner after solution implementation
-- **Priority** — relative importance of requirements; can refer to relative value or implementation sequence
-- **Risks** — uncertain events that may impact requirements
-- **Source** — origin of the requirement; consulted if the requirement changes or more information is needed
-- **Stability** — indicates the maturity of the requirement
-- **Status** — state of the requirement (proposed, accepted, verified, postponed, cancelled, or implemented)
-- **Urgency** — how soon the requirement is needed; usually only specified separately from priority when a deadline exists
+- **Absolute reference**: unique identifier; not altered or reused if the requirement is moved, changed, or deleted
+- **Author**: name of the person to consult if the requirement is ambiguous, unclear, or in conflict
+- **Complexity**: indicates how difficult the requirement will be to implement
+- **Ownership**: individual or group that needs the requirement or will be the business owner after solution implementation
+- **Priority**: relative importance of requirements; can refer to relative value or implementation sequence
+- **Risks**: uncertain events that may impact requirements
+- **Source**: origin of the requirement; consulted if the requirement changes or more information is needed
+- **Stability**: indicates the maturity of the requirement
+- **Status**: state of the requirement (proposed, accepted, verified, postponed, cancelled, or implemented)
+- **Urgency**: how soon the requirement is needed; usually only specified separately from priority when a deadline exists
 
 ### Guidelines and Tools
 
-- **Business Analysis Performance Assessment** — results of previous assessments to review and incorporate
-- **Business Policies** — regulations, contracts, agreements, warranties, certifications, or other legal obligations
-- **Information Management Tools** — tools to store, retrieve, and share BA information (from whiteboards to global wikis to robust requirements management tools)
-- **Legal/Regulatory Information** — legislative rules or regulations that determine how BA information will be managed
+- **Business Analysis Performance Assessment**: results of previous assessments to review and incorporate
+- **Business Policies**: regulations, contracts, agreements, warranties, certifications, or other legal obligations
+- **Information Management Tools**: tools to store, retrieve, and share BA information (from whiteboards to global wikis to robust requirements management tools)
+- **Legal/Regulatory Information**: legislative rules or regulations that determine how BA information will be managed
 
 ### Techniques
 
-- **Brainstorming** — help stakeholders uncover BA information management needs
-- **Interviews** — help specific stakeholders uncover their BA information management needs
-- **Item Tracking** — track issues with current information management processes
-- **Lessons Learned** — create a source of information for analyzing approaches for efficiently managing BA information
-- **Mind Mapping** — identify and categorize the kinds of information that need to be managed
-- **Process Modelling** — document the process or method for managing BA information
-- **Survey or Questionnaire** — ask stakeholders to provide input into defining BA information management
-- **Workshops** — uncover BA information management needs in a group setting
+- **Brainstorming**: help stakeholders uncover BA information management needs
+- **Interviews**: help specific stakeholders uncover their BA information management needs
+- **Item Tracking**: track issues with current information management processes
+- **Lessons Learned**: create a source of information for analyzing approaches for efficiently managing BA information
+- **Mind Mapping**: identify and categorize the kinds of information that need to be managed
+- **Process Modelling**: document the process or method for managing BA information
+- **Survey or Questionnaire**: ask stakeholders to provide input into defining BA information management
+- **Workshops**: uncover BA information management needs in a group setting
 
 ### Stakeholders
 
-- **Domain Subject Matter Expert** — may need to access and work with BA information; interested in a more specific view relating to their area of expertise
-- **Regulator** — may define rules and processes related to information management
-- **Sponsor** — reviews, comments on, and approves BA information
+- **Domain Subject Matter Expert**: may need to access and work with BA information; interested in a more specific view relating to their area of expertise
+- **Regulator**: may define rules and processes related to information management
+- **Sponsor**: reviews, comments on, and approves BA information
 
 ### Outputs
 
-- **Information Management Approach** — includes the defined approach for how BA information will be stored, accessed, and utilized during the change and after the change is complete.
+- **Information Management Approach**: includes the defined approach for how BA information will be stored, accessed, and utilized during the change and after the change is complete.
 
 ---
 
@@ -523,8 +523,8 @@ To monitor and improve performance, it is necessary to establish performance mea
 
 ### Inputs
 
-- **Business Analysis Approach** — identifies BA deliverables, activities (including when and by whom), and techniques to be used
-- **Performance Objectives (external)** — the desired performance outcomes that an enterprise or organization hopes to achieve
+- **Business Analysis Approach**: identifies BA deliverables, activities (including when and by whom), and techniques to be used
+- **Performance Objectives (external)**: the desired performance outcomes that an enterprise or organization hopes to achieve
 
 ### Elements
 
@@ -541,13 +541,13 @@ Measures may be both quantitative and qualitative. Qualitative measures are subj
 > ⚠ **Important:** All performance metrics will encourage certain behaviours and discourage others. Poorly chosen metrics may drive behaviour that is detrimental to the enterprise as a whole.
 
 Possible measures include:
-- **Accuracy and Completeness** — were BA work products correct and relevant when delivered, or were ongoing revisions needed for stakeholder acceptance?
-- **Knowledge** — did the BA have the skills and/or experience to perform the assigned task?
-- **Effectiveness** — were BA work products easy to use as standalone deliverables, or did they require extensive explanation?
-- **Organizational Support** — were adequate resources available to complete BA activities as needed?
-- **Significance** — was the cost, time, and resource investment justified for the value delivered?
-- **Strategic** — were business objectives met, problems solved, and improvements achieved?
-- **Timeliness** — did the BA deliver work on time per stakeholder expectations and schedule?
+- **Accuracy and Completeness**: were BA work products correct and relevant when delivered, or were ongoing revisions needed for stakeholder acceptance?
+- **Knowledge**: did the BA have the skills and/or experience to perform the assigned task?
+- **Effectiveness**: were BA work products easy to use as standalone deliverables, or did they require extensive explanation?
+- **Organizational Support**: were adequate resources available to complete BA activities as needed?
+- **Significance**: was the cost, time, and resource investment justified for the value delivered?
+- **Strategic**: were business objectives met, problems solved, and improvements achieved?
+- **Timeliness**: did the BA deliver work on time per stakeholder expectations and schedule?
 
 #### .3 Analyze Results
 
@@ -556,48 +556,48 @@ The BA process and deliverables are compared against the set of defined measures
 #### .4 Recommend Actions for Improvement
 
 Once performance analysis is complete, the BA engages appropriate stakeholders to identify:
-- **Preventive actions** — reduce the probability of an event with a negative impact
-- **Corrective actions** — establish ways to reduce the negative impact of an event
-- **Improvement actions** — establish ways to increase the probability or impact of events with a positive impact
+- **Preventive actions**: reduce the probability of an event with a negative impact
+- **Corrective actions**: establish ways to reduce the negative impact of an event
+- **Improvement actions**: establish ways to increase the probability or impact of events with a positive impact
 
 These actions are likely to result in changes to the BA approach, repeatable processes, and tools.
 
 ### Guidelines and Tools
 
-- **Organizational Performance Standards** — may include performance metrics or expectations for BA work mandated by the organization
+- **Organizational Performance Standards**: may include performance metrics or expectations for BA work mandated by the organization
 
 ### Techniques
 
-- **Brainstorming** — generate ideas for improvement opportunities
-- **Interviews** — gather assessments of BA performance
-- **Item Tracking** — track issues that occur during BA performance for later resolution
-- **Lessons Learned** — identify recommended changes to BA processes, deliverables, templates, and other organizational process assets
-- **Metrics and Key Performance Indicators (KPIs)** — determine what metrics are appropriate for assessing BA performance and how they may be tracked
-- **Observation** — witness BA performance
-- **Process Analysis** — analyze existing BA processes and identify improvement opportunities
-- **Process Modelling** — define BA processes and understand how to improve them to reduce hand-off problems, improve cycle times, or alter how BA work supports downstream improvements
-- **Reviews** — identify changes to BA processes and deliverables for future work
-- **Risk Analysis and Management** — identify and manage potential conditions or events that may impact BA performance
-- **Root Cause Analysis** — help identify the underlying cause of failures or difficulties in accomplishing BA work
-- **Survey or Questionnaire** — gather feedback from stakeholders about satisfaction with BA activities and deliverables
-- **Workshops** — gather assessments of BA performance and generate ideas for improvement
+- **Brainstorming**: generate ideas for improvement opportunities
+- **Interviews**: gather assessments of BA performance
+- **Item Tracking**: track issues that occur during BA performance for later resolution
+- **Lessons Learned**: identify recommended changes to BA processes, deliverables, templates, and other organizational process assets
+- **Metrics and Key Performance Indicators (KPIs)**: determine what metrics are appropriate for assessing BA performance and how they may be tracked
+- **Observation**: witness BA performance
+- **Process Analysis**: analyze existing BA processes and identify improvement opportunities
+- **Process Modelling**: define BA processes and understand how to improve them to reduce hand-off problems, improve cycle times, or alter how BA work supports downstream improvements
+- **Reviews**: identify changes to BA processes and deliverables for future work
+- **Risk Analysis and Management**: identify and manage potential conditions or events that may impact BA performance
+- **Root Cause Analysis**: help identify the underlying cause of failures or difficulties in accomplishing BA work
+- **Survey or Questionnaire**: gather feedback from stakeholders about satisfaction with BA activities and deliverables
+- **Workshops**: gather assessments of BA performance and generate ideas for improvement
 
 ### Stakeholders
 
-- **Domain Subject Matter Experts** — should be informed about BA activities to set expectations regarding their involvement and to elicit feedback regarding possible improvements
-- **Project Manager** — accountable for project success; must be kept informed of current BA work status. If problems or improvement opportunities are identified, the project manager must be consulted before changes are implemented to assess project impact. May also deliver BA performance reports to the sponsor
-- **Sponsor** — may require reports on BA performance to address problems as identified. A manager of business analysts may also sponsor initiatives to improve BA performance
+- **Domain Subject Matter Experts**: should be informed about BA activities to set expectations regarding their involvement and to elicit feedback regarding possible improvements
+- **Project Manager**: accountable for project success; must be kept informed of current BA work status. If problems or improvement opportunities are identified, the project manager must be consulted before changes are implemented to assess project impact. May also deliver BA performance reports to the sponsor
+- **Sponsor**: may require reports on BA performance to address problems as identified. A manager of business analysts may also sponsor initiatives to improve BA performance
 
 ### Outputs
 
-- **Business Analysis Performance Assessment** — includes a comparison of planned versus actual performance, root cause of variances from expected performance, proposed approaches to address issues, and other findings to help understand the performance of BA processes.
+- **Business Analysis Performance Assessment**: includes a comparison of planned versus actual performance, root cause of variances from expected performance, proposed approaches to address issues, and other findings to help understand the performance of BA processes.
 
 ---
 
 ## Related Chapters
 
-- [[02_Elicitation_and_Collaboration]] — *BABOK Ch3:* Obtaining information from stakeholders and confirming results
-- [[03_Requirements_Life_Cycle_Management]] — *BABOK Ch4:* Managing requirements and designs from inception to retirement
-- [[04_Strategy_Analysis]] — *BABOK Ch5:* Analyzing current state, defining future state, assessing risks, and defining change strategy
-- [[05_Requirements_Analysis_and_Design]] — *BABOK Ch6:* Structuring, refining, and specifying requirements and designs
-- [[06_Solution_Evaluation]] — *BABOK Ch7:* Assessing solution performance and value delivered
+- [[02_Elicitation_and_Collaboration]]: *BABOK Ch3:* Obtaining information from stakeholders and confirming results
+- [[03_Requirements_Life_Cycle_Management]]: *BABOK Ch4:* Managing requirements and designs from inception to retirement
+- [[04_Strategy_Analysis]]: *BABOK Ch5:* Analyzing current state, defining future state, assessing risks, and defining change strategy
+- [[05_Requirements_Analysis_and_Design]]: *BABOK Ch6:* Structuring, refining, and specifying requirements and designs
+- [[06_Solution_Evaluation]]: *BABOK Ch7:* Assessing solution performance and value delivered

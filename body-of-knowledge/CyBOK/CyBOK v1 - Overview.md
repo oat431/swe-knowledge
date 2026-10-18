@@ -2,7 +2,7 @@
 tags: [overview, cyber-security, cybok]
 ---
 
-# CyBOK v1.1 — Cyber Security Body of Knowledge
+# CyBOK v1.1: Cyber Security Body of Knowledge
 
 > **The Cyber Security Body of Knowledge (CyBOK) v1.1**
 > National Cyber Security Centre (NCSC), UK Government, July 2021
@@ -44,11 +44,11 @@ Plus [[00_Introduction_to_CyBOK]] for the cyber security definition and how to d
 ## How to Use This Vault
 
 Each Knowledge Area follows a consistent SWEBOK-style reference format:
-1. **Purpose** — What the KA covers and why it matters
-2. **Core Content** — Key concepts, models, techniques, and principles
-3. **Related Chapters** —  connecting across CyBOK
+1. **Purpose**: What the KA covers and why it matters
+2. **Core Content**: Key concepts, models, techniques, and principles
+3. **Related Chapters**:  connecting across CyBOK
 
-Start with [[00_Introduction_to_CyBOK]] for the big picture. Then explore by need — the  pull you naturally into related areas.
+Start with [[00_Introduction_to_CyBOK]] for the big picture. Then explore by need: the  pull you naturally into related areas.
 
 ## Reading Paths
 
@@ -60,6 +60,6 @@ Start with [[00_Introduction_to_CyBOK]] for the big picture. Then explore by nee
 
 ## Related
 
-- [[Body of Knowledge - Overview|Body of Knowledge — Overview]] — All five BOKs
-- [[SWEBOK v4 - Overview|SWEBOK v4]] — Software Engineering
-- [[SEBoK v2 - Overview|SEBoK v2]] — Systems Engineering
+- [[Body of Knowledge - Overview|Body of Knowledge - Overview]]: All five BOKs
+- [[SWEBOK v4 - Overview|SWEBOK v4]]: Software Engineering
+- [[SEBoK v2 - Overview|SEBoK v2]]: Systems Engineering

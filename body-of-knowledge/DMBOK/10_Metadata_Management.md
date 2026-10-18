@@ -82,18 +82,18 @@ The implementation of a successful Metadata solution follows these guiding princ
 
 ### Metadata vs. Data
 
-Metadata is a kind of data, and it should be managed as such. One question that some organizations face is where to draw the line between data that is not Metadata and data that is Metadata. Conceptually, this line is related to the level of abstraction represented by the data. A rule of thumb: **one person's Metadata is another's data.** Even something that seems like Metadata (e.g., a list of column names) may be just plain data — if it were the input for an analysis aimed at understanding data content across different organizations.
+Metadata is a kind of data, and it should be managed as such. One question that some organizations face is where to draw the line between data that is not Metadata and data that is Metadata. Conceptually, this line is related to the level of abstraction represented by the data. A rule of thumb: **one person's Metadata is another's data.** Even something that seems like Metadata (e.g., a list of column names) may be just plain data, if it were the input for an analysis aimed at understanding data content across different organizations.
 
 To manage their Metadata, organizations should not worry about the philosophical distinctions. Instead they should define Metadata requirements focused on **what they need Metadata for** (to create new data, understand existing data, enable movement between systems, access data, to share data) and source data to meet these requirements.
 
 ### Types of Metadata
 
-Metadata is often categorized into three types: **business**, **technical**, and **operational**. These categories enable people to understand the range of information that falls under the overall umbrella of Metadata, as well as the functions through which Metadata is produced. It is best to think of these categories in relation to **where Metadata originates**, rather than how it is used. In relation to usage, the distinctions between Metadata types are not strict — technical and operational staff use "business" Metadata and vice versa.
+Metadata is often categorized into three types: **business**, **technical**, and **operational**. These categories enable people to understand the range of information that falls under the overall umbrella of Metadata, as well as the functions through which Metadata is produced. It is best to think of these categories in relation to **where Metadata originates**, rather than how it is used. In relation to usage, the distinctions between Metadata types are not strict. Technical and operational staff use "business" Metadata and vice versa.
 
 Outside of information technology (e.g., in library or information science), Metadata is described using a different set of categories:
-- **Descriptive Metadata** — describes a resource and enables identification and retrieval (e.g., title, author, subject)
-- **Structural Metadata** — describes relationships within and among resources and their component parts (e.g., number of pages, number of chapters)
-- **Administrative Metadata** — used to manage resources over their lifecycle (e.g., version numbers, archive dates)
+- **Descriptive Metadata**: describes a resource and enables identification and retrieval (e.g., title, author, subject)
+- **Structural Metadata**: describes relationships within and among resources and their component parts (e.g., number of pages, number of chapters)
+- **Administrative Metadata**: used to manage resources over their lifecycle (e.g., version numbers, archive dates)
 
 #### Business Metadata
 
@@ -165,14 +165,14 @@ ISO's Metadata Registry Standard, ISO/IEC 11179, provides a framework for defini
 
 ### Metadata for Unstructured Data
 
-Metadata is as essential to the management of unstructured data as it is to the management of structured data — perhaps even more so. Metadata for unstructured data includes:
+Metadata is as essential to the management of unstructured data as it is to the management of structured data, perhaps even more so. Metadata for unstructured data includes:
 
-- **Descriptive Metadata** — catalog information and thesauri keywords
-- **Structural Metadata** — tags, field structures, format
-- **Administrative Metadata** — sources, update schedules, access rights, navigation information
-- **Bibliographic Metadata** — library catalog entries
-- **Record keeping Metadata** — retention policies
-- **Preservation Metadata** — storage, archival condition, rules for conservation
+- **Descriptive Metadata**: catalog information and thesauri keywords
+- **Structural Metadata**: tags, field structures, format
+- **Administrative Metadata**: sources, update schedules, access rights, navigation information
+- **Bibliographic Metadata**: library catalog entries
+- **Record keeping Metadata**: retention policies
+- **Preservation Metadata**: storage, archival condition, rules for conservation
 
 New practices are emerging around managing unstructured data in data lakes. Organizations wanting to take advantage of data lakes, using Big Data platforms such as Hadoop, are finding that they must catalog ingested data in order to enable later access. Most put in place processes to collect Metadata as part of data ingestion. A minimum set of Metadata attributes needs to be collected about each object ingested in the data lake (e.g., name, format, source, version, date received, etc.). This produces a catalog of data lake contents. (See **Document and Content Management**.)
 
@@ -292,11 +292,11 @@ A Metadata strategy describes how an organization intends to manage its Metadata
 
 Steps include:
 
-1. **Initiate Metadata strategy planning** — Define short- and long-term goals. Draft a charter, scope, and objectives aligned with overall governance efforts. Establish a communications plan. Involve key stakeholders.
-2. **Conduct key stakeholder interviews** — Interviews with business and technical stakeholders provide a foundation of knowledge.
-3. **Assess existing Metadata sources and information architecture** — Determine the relative degree of difficulty in solving Metadata and systems issues. Conduct detailed interviews of key IT staff and review documentation of system architectures, data models, etc.
-4. **Develop future Metadata architecture** — Refine and confirm the future vision, and develop the long-term target architecture. Account for: organization structure, alignment with data governance and stewardship, managed Metadata architecture, Metadata delivery architecture, technical architecture, and security architecture.
-5. **Develop a phased implementation plan** — Validate, integrate, and prioritize findings. Document the Metadata strategy and define a phased implementation approach.
+1. **Initiate Metadata strategy planning**: Define short- and long-term goals. Draft a charter, scope, and objectives aligned with overall governance efforts. Establish a communications plan. Involve key stakeholders.
+2. **Conduct key stakeholder interviews**: Interviews with business and technical stakeholders provide a foundation of knowledge.
+3. **Assess existing Metadata sources and information architecture**: Determine the relative degree of difficulty in solving Metadata and systems issues. Conduct detailed interviews of key IT staff and review documentation of system architectures, data models, etc.
+4. **Develop future Metadata architecture**: Refine and confirm the future vision, and develop the long-term target architecture. Account for: organization structure, alignment with data governance and stewardship, managed Metadata architecture, Metadata delivery architecture, technical architecture, and security architecture.
+5. **Develop a phased implementation plan**: Validate, integrate, and prioritize findings. Document the Metadata strategy and define a phased implementation approach.
 
 > The strategy will evolve over time, as Metadata requirements, the architecture, and the lifecycle of Metadata are better understood.
 
@@ -336,14 +336,14 @@ Create a data model for the Metadata repository, or metamodel, as one of the fir
 
 In addition to being a planning tool and a means of articulating requirements, the metamodel is in itself a valuable source of Metadata.
 
-A typical metamodel includes entities such as: Architecture, Business Glossary, System, Logical Data Model, Physical Data Model, Data Store, Application, Entity, File/Table, Attribute, Field/Column, Codified Domain, Code Sets, Code Value, Business Value, and Glossary Terms — integrating both Business Metadata and Technical Metadata.
+A typical metamodel includes entities such as: Architecture, Business Glossary, System, Logical Data Model, Physical Data Model, Data Store, Application, Entity, File/Table, Attribute, Field/Column, Codified Domain, Code Sets, Code Value, Business Value, and Glossary Terms, integrating both Business Metadata and Technical Metadata.
 
 #### Apply Metadata Standards
 
 The Metadata solution should adhere to agreed-upon internal and external standards as identified in the Metadata strategy. Metadata should be monitored for compliance by governance activities.
 
-- **Internal Metadata standards** — naming conventions, custom attributions, security, visibility, and processing documentation
-- **External Metadata standards** — data exchange formats and application-programming interfaces design
+- **Internal Metadata standards**: naming conventions, custom attributions, security, visibility, and processing documentation
+- **External Metadata standards**: data exchange formats and application-programming interfaces design
 
 #### Manage Metadata Stores
 
@@ -382,13 +382,13 @@ Implement control activities to manage the Metadata environment. Control of repo
 
 ### 4. Create and Maintain Metadata
 
-Metadata is created through a range of processes and stored in many places within an organization. To be of high quality, Metadata should be managed as a product. Good Metadata is not created by accident — it requires planning. (See **Data Quality**.)
+Metadata is created through a range of processes and stored in many places within an organization. To be of high quality, Metadata should be managed as a product. Good Metadata is not created by accident. It requires planning. (See **Data Quality**.)
 
 Several general principles of Metadata management describe the means to manage Metadata for quality:
 
-- **Accountability** — Recognize that Metadata is often produced through existing processes (data modeling, SDLC, business process definition) and hold process owners accountable for the quality of Metadata
-- **Standards** — Set, enforce, and audit standards for Metadata to simplify integration and enable use
-- **Improvement** — Create a feedback mechanism so that consumers can inform the Metadata Management team of Metadata that is incorrect or out-of-date
+- **Accountability**: Recognize that Metadata is often produced through existing processes (data modeling, SDLC, business process definition) and hold process owners accountable for the quality of Metadata
+- **Standards**: Set, enforce, and audit standards for Metadata to simplify integration and enable use
+- **Improvement**: Create a feedback mechanism so that consumers can inform the Metadata Management team of Metadata that is incorrect or out-of-date
 
 Like other data, Metadata can be profiled and inspected for quality. Its maintenance should be scheduled or completed as an auditable part of project work.
 
@@ -406,10 +406,10 @@ Two approaches to repository scanning:
 | **Semi-proprietary interface** | Two-step process. A scanner collects Metadata from a source system and outputs it into a format-specific data file. The receiving repository reads and loads the file appropriately. More open architecture. |
 
 A scanning process uses and produces several types of files:
-- **Control file** — containing the source structure of the data model
-- **Reuse file** — containing the rules for managing reuse of process loads
-- **Log files** — produced during each phase, one for each scan/extract and one for each load cycle
-- **Temporary and backup files** — used during the process or for traceability
+- **Control file**: containing the source structure of the data model
+- **Reuse file**: containing the rules for managing reuse of process loads
+- **Log files**: produced during each phase, one for each scan/extract and one for each load cycle
+- **Temporary and backup files**: used during the process or for traceability
 
 Use a non-persistent Metadata staging area to store temporary and backup files. The staging area supports rollback and recovery processes, and provides an interim audit trail.
 
@@ -435,7 +435,7 @@ Metadata guides the use of data assets. Use Metadata in:
 
 - **Business Intelligence** (reporting and analysis)
 - **Business decisions** (operational, tactical, strategic)
-- **Business semantics** (what they say, what they mean — business lingo)
+- **Business semantics** (what they say, what they mean; business lingo)
 
 A Metadata repository must have a front-end application that supports the search-and-retrieval functionality required for all this guidance and management of data assets. The interface provided to business users may have a different set of functional requirements than that for technical users and developers. Some reports facilitate future development such as change impact analysis, or trouble shoot varying definitions for data warehouse and Business Intelligence projects, such as data lineage reports.
 
@@ -463,8 +463,8 @@ Metadata management tools and repositories themselves are also a source of Metad
 A key benefit of discovering and documenting Metadata about the physical assets is to provide information on how data is transformed as it moves between systems. Many Metadata tools carry information about what is happening to the data within their environments and provide capabilities to view the lineage across the span of the systems or applications they interface.
 
 Two types of lineage:
-- **"As Implemented Lineage"** — the current version of lineage based on programming code
-- **"As Designed Lineage"** — lineage described in mapping specification documents
+- **"As Implemented Lineage"**: the current version of lineage based on programming code
+- **"As Designed Lineage"**: lineage described in mapping specification documents
 
 The process of connecting the pieces of the data lineage is referred to as **stitching**. It results in a holistic visualization of the data as it moves from its original locations (official source or system of record) until it lands in its final destination.
 
@@ -525,7 +525,7 @@ Organizations should determine their specific requirements for the management of
 
 ### Process Controls
 
-The **Data Governance** team should be responsible for defining the standards and managing status changes for Metadata — often with workflow or collaboration software — and may be responsible for promotional activities and training development or actual training across the organization.
+The **Data Governance** team should be responsible for defining the standards and managing status changes for Metadata (often with workflow or collaboration software) and may be responsible for promotional activities and training development or actual training across the organization.
 
 More mature Metadata governance will require business terms and definitions to progress through varying status changes or governance gates; for example, from a **candidate term**, to **approved**, to **published**, and to a final point in the lifecycle of **replaced or retired**. The governance team may also manage business term associations such as related terms, as well as the categorization of and grouping of the terms.
 
@@ -554,7 +554,7 @@ Metadata standards are essential in the exchange of data with operational tradin
 - Adopt industry-based and sector-sensitive Metadata standards early in the planning cycle
 - Use the standards to evaluate Metadata Management technologies
 - Many leading vendors support multiple standards, and some can assist in customizing industry-based and sector-sensitive standards
-- Tool vendors provide XML and JSON or REST support to exchange Metadata; they use XML schema definitions (XSD) accessed through proprietary interfaces — custom development is required to integrate these tools into a Metadata management environment
+- Tool vendors provide XML and JSON or REST support to exchange Metadata; they use XML schema definitions (XSD) accessed through proprietary interfaces. Custom development is required to integrate these tools into a Metadata management environment
 
 Guidelines include templates and associated examples and training on expected inputs and updates including such rules as "do not define a term by using the term" and completeness statements. Different templates are developed for different types of Metadata.
 
@@ -573,7 +573,7 @@ Suggested metrics on Metadata environments include:
 | **Metadata repository completeness** | Compare ideal coverage of the enterprise Metadata (all artifacts and all instances within scope) to actual coverage. Reference the strategy for scope definitions |
 | **Metadata Management Maturity** | Metrics developed to judge the Metadata maturity of the enterprise, based on the Capability Maturity Model (CMM-DMM) approach to maturity assessment. (See **Data Management Maturity Assessment**) |
 | **Steward representation** | Organizational commitment to Metadata as assessed by the appointment of stewards, coverage across the enterprise for stewardship, and documentation of the roles in job descriptions |
-| **Metadata usage** | User uptake on the Metadata repository usage can be measured by repository login counts. Reference to Metadata by users in business practice is a more difficult measure to track — anecdotal measures on qualitative surveys may be required |
+| **Metadata usage** | User uptake on the Metadata repository usage can be measured by repository login counts. Reference to Metadata by users in business practice is a more difficult measure to track. Anecdotal measures on qualitative surveys may be required |
 | **Business Glossary activity** | Usage, update, resolution of definitions, coverage |
 | **Master Data service data compliance** | Shows the reuse of data in SOA solutions. Metadata on the data services assists developers in deciding when new development could use an existing service |
 | **Metadata documentation quality** | Assess through automatic methods (collision logic comparing sources, percentage of attributes with definitions trending over time) and manual methods (random or complete survey based on enterprise quality definitions) |

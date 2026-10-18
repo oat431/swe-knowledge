@@ -41,16 +41,16 @@ A **digital (forensic) trace** is an explicit, or implicit, record that testifie
 The first published accounts of misuse and manipulation of computer systems for illegal purposes date back to the 1960s. In the early-to-mid 1980s, targeted computer crime legislation emerged across Europe and North America.
 
 In the UK, the **Computer Misuse Act 1990** defines computer-specific crimes:
-- **S1** — Unauthorised Access To Computer Material
-- **S2** — Unauthorised Access with Intent to Commit Other Offences
-- **S3** — Unauthorised Acts with Intent to Impair Operation
-- **S3A** — Making, Supplying or Obtaining
+- **S1**: Unauthorised Access To Computer Material
+- **S2**: Unauthorised Access with Intent to Commit Other Offences
+- **S3**: Unauthorised Acts with Intent to Impair Operation
+- **S3A**: Making, Supplying or Obtaining
 
 The Police & Criminal Evidence Act 1984 and Criminal Justice & Police Act 2001 address computer-specific concerns with respect to warrants, search and seizure.
 
 #### Daubert Standard
 
-The US supreme court, using three specific cases — Daubert v. Merrell Dow Pharmaceuticals (1993), General Electric Co. v. Joiner (1997), and Kumho Tire Co. v. Carmichael (1999) — established the **Daubert standard** for the presentation of scientific evidence in legal proceedings. The four basic criteria:
+The US supreme court, using three specific cases (Daubert v. Merrell Dow Pharmaceuticals (1993), General Electric Co. v. Joiner (1997), and Kumho Tire Co. v. Carmichael (1999)) established the **Daubert standard** for the presentation of scientific evidence in legal proceedings. The four basic criteria:
 
 1. The theoretical underpinnings of the methods must yield testable predictions by means of which the theory could be falsified.
 2. The methods should preferably be published in a peer-reviewed journal.
@@ -100,7 +100,7 @@ Historically, the principal approach to forensics has been predominantly **state
 
 #### 9.1.3.1 Cognitive Task Model
 
-The **Pirolli & Card cognitive model** describes the sense-making process for intelligence analysis — a cognitive task very similar to forensic analysis. The model maps the investigative process:
+The **Pirolli & Card cognitive model** describes the sense-making process for intelligence analysis, a cognitive task very similar to forensic analysis. The model maps the investigative process:
 
 ```
 External Data → Shoebox → Evidence File → Schema → Hypothesis → Presentation
@@ -117,25 +117,25 @@ Information transformation processes can be classified as:
 
 ##### Bottom-Up Processes
 
-1. **Search and filter** — External data sources are searched based on keywords, time constraints
-2. **Read and extract** — Collections are analysed to extract individual facts and relationships
-3. **Schematize** — Facts are organised into schemas (timelines, graphs, charts) that help identify significance
-4. **Build case** — Testable theories/working hypotheses that explain the evidence
-5. **Tell story** — Final report and oral presentation in court
+1. **Search and filter**: External data sources are searched based on keywords, time constraints
+2. **Read and extract**: Collections are analysed to extract individual facts and relationships
+3. **Schematize**: Facts are organised into schemas (timelines, graphs, charts) that help identify significance
+4. **Build case**: Testable theories/working hypotheses that explain the evidence
+5. **Tell story**: Final report and oral presentation in court
 
 ##### Top-Down Processes
 
-1. **Re-evaluate** — Feedback from clients may necessitate re-evaluations
-2. **Search for support** — Hypothesis testing against alternative explanations
-3. **Search for evidence** — Re-evaluation of evidence significance/provenance
-4. **Search for relations** — New searches for facts and relations
-5. **Search for information** — New sources or re-examination of filtered-out information
+1. **Re-evaluate**: Feedback from clients may necessitate re-evaluations
+2. **Search for support**: Hypothesis testing against alternative explanations
+3. **Search for evidence**: Re-evaluation of evidence significance/provenance
+4. **Search for relations**: New searches for facts and relations
+5. **Search for information**: New sources or re-examination of filtered-out information
 
 #### 9.1.3.6 Data Extraction vs. Analysis vs. Legal Interpretation
 
 - **Tool developers** provide the means to acquire digital evidence, extract data objects, and essential tools to search, filter, and organize it.
 - **Forensic investigators** are the primary users employing these capabilities to analyse specific cases and present legally-relevant conclusions.
-- **Legal experts** operate in the upper right-hand corner — building/disproving legal theories.
+- **Legal experts** operate in the upper right-hand corner: building/disproving legal theories.
 
 #### 9.1.3.7 Forensic Process
 
@@ -151,7 +151,7 @@ The defining characteristic of forensic investigations is that their results mus
 The traditional **gold standard** is a bit-level copy of the forensic target. As storage devices increase in complexity and encryption becomes default, a (partial) logical acquisition may be the only possibility.
 
 ##### Scientific Methodology
-- **Reproducibility** — Starting with the same data and following the same process should allow a third party to arrive at the same result.
+- **Reproducibility**: Starting with the same data and following the same process should allow a third party to arrive at the same result.
 - Processing methods should have scientifically established **error rates**.
 - Different forensic tools implementing the same type of data processing should yield identical results, or results within known statistical error boundaries.
 
@@ -170,7 +170,7 @@ Strict adherence to established standards and court-imposed restrictions is the 
 
 > **References:** [923, 938, 939]
 
-Modern computer systems follow the original **von Neumann architecture** — CPU, main memory, and secondary storage connected via data buses. The actual investigative targets are the different OS modules controlling the hardware subsystems and their respective data structures.
+Modern computer systems follow the original **von Neumann architecture**: CPU, main memory, and secondary storage connected via data buses. The actual investigative targets are the different OS modules controlling the hardware subsystems and their respective data structures.
 
 The OS functions at a higher level of privilege relative to user applications and directly manages all the computer system's resources. System analysis employs knowledge of how operating systems function to reach conclusions about events and actions of interest.
 
@@ -184,10 +184,10 @@ Computer systems organise raw storage in successive layers of abstraction. Foren
 
 | Layer | Description |
 |---|---|
-| **Physical Media** | Lowest level — extracting data bit by bit. May involve chip-off approaches, JTAG interfaces, or Host Bus Adapter (HBA) protocols (SATA, SCSI, NVMe). |
+| **Physical Media** | Lowest level: extracting data bit by bit. May involve chip-off approaches, JTAG interfaces, or Host Bus Adapter (HBA) protocols (SATA, SCSI, NVMe). |
 | **Block Device** | Medium presented as a sequence of fixed-size blocks (512 or 4096 bytes). Typical data acquisition (imaging) works at this level. |
 | **File System** | Organises block storage into a file-based store with files, directories, metadata (name, size, owner, timestamps, access permissions). |
-| **Application Artifacts** | User applications store artifacts — documents, images, messages. Application-level analysis yields the most immediately relevant results. |
+| **Application Artifacts** | User applications store artifacts: documents, images, messages. Application-level analysis yields the most immediately relevant results. |
 
 **Why independent forensic reconstruction is critical:**
 1. Enables recovery of evidentiary data not available through the normal data access interface
@@ -286,7 +286,7 @@ The early view of best forensic practices was to literally pull the plug. Howeve
 | Method | Characteristics |
 |---|---|
 | **Live forensics** | Trusted agent pre-installed; remote operator has full control. Primarily used in large enterprise deployments. Main problem: if compromised, results are not trustworthy. |
-| **Snapshot (memory dump)** | Analysis of RAM capture. More difficult than live analysis (no APIs available). Forensic tools need to rebuild semantic information from raw capture — this is the **semantic gap problem**. |
+| **Snapshot (memory dump)** | Analysis of RAM capture. More difficult than live analysis (no APIs available). Forensic tools need to rebuild semantic information from raw capture. This is the **semantic gap problem**. |
 
 Memory content can also be obtained from a system hibernation file, page swap, or a crash dump.
 
@@ -309,11 +309,11 @@ Six main sources of forensically interesting information:
 | **URL/search history** | Complete browsing history; search queries encoded in URLs provide clear clues about user intent |
 | **Form data** | Auto-completed passwords and other form data (address, credit card info) |
 | **Temporary files** | Local file cache provides chronology of web activities with stored versions of downloaded objects |
-| **Downloaded files** | By default, never deleted — valuable source of activity information |
+| **Downloaded files** | By default, never deleted: valuable source of activity information |
 | **HTML5 local storage** | Standard means for web applications to store information locally |
 | **Cookies** | Opaque data used by servers; may be time-limited access tokens to online accounts |
 
-Most local browser information is stored in **SQLite databases**, which provide a secondary target for data recovery — ostensibly deleted records may persist until the database is explicitly 'vacuumed'.
+Most local browser information is stored in **SQLite databases**, which provide a secondary target for data recovery. Ostensibly deleted records may persist until the database is explicitly 'vacuumed'.
 
 ---
 
@@ -344,17 +344,17 @@ Three canonical service models:
 
 ### 9.5.3 SaaS Forensics
 
-The traditional analytical model of digital forensics is **physical device-centric**. The new software delivery model — **Software as a Service (SaaS)** — completely breaks with this approach. Computation is split between client and server, code and data are downloaded on demand and have no persistent place on the client.
+The traditional analytical model of digital forensics is **physical device-centric**. The new software delivery model, **Software as a Service (SaaS)**, completely breaks with this approach. Computation is split between client and server, code and data are downloaded on demand and have no persistent place on the client.
 
 #### Case Study: Cloud Drive Acquisition
 
 Three major concerns with client-side acquisition of cloud drives:
 
-1. **Partial replication** — No guarantee that any client has a complete copy; cloud metadata is needed to ascertain contents
-2. **Revision acquisition** — Most drive services provide revision history that only resides in the cloud; client-side acquisition misses prior revisions
-3. **Cloud-native artifacts** — Web-based artifacts (e.g., Google Docs) have no serialised representation in the local filesystem; only an opaque link exists locally
+1. **Partial replication**: No guarantee that any client has a complete copy; cloud metadata is needed to ascertain contents
+2. **Revision acquisition**: Most drive services provide revision history that only resides in the cloud; client-side acquisition misses prior revisions
+3. **Cloud-native artifacts**: Web-based artifacts (e.g., Google Docs) have no serialised representation in the local filesystem; only an opaque link exists locally
 
-**Conclusion:** A new approach is needed — one that obtains the data directly from the cloud service.
+**Conclusion:** A new approach is needed: one that obtains the data directly from the cloud service.
 
 ---
 
@@ -368,14 +368,14 @@ Three major concerns with client-side acquisition of cloud drives:
 
 **Key properties:**
 - A hash function takes an arbitrary string of binary data and produces a **digest** within a predefined range
-- **Collision-resistant** — computationally infeasible to find two different inputs with the same output
+- **Collision-resistant**: computationally infeasible to find two different inputs with the same output
 - Standard functions: MD5, RIPEMD-160, SHA-1, SHA-2, SHA-3 (128- to 512-bit results)
 
 **Usage:**
 - **Integrity validation:** Compare before-and-after hashes at important points in the investigation (demonstrating chain of custody)
 - **Known file identification:** Remove common files (OS/application installations) or pinpoint known files of interest (malware, contraband)
 
-**NIST** maintains the **National Software Reference Library (NSRL)** — covering the most common OS installation and application packages.
+**NIST** maintains the **National Software Reference Library (NSRL)**, covering the most common OS installation and application packages.
 
 ### 9.6.2 Block-Level Analysis
 
@@ -406,9 +406,9 @@ A **similarity digest** (fingerprint/signature) is a compressed representation o
 
 ### 9.6.4 Cloud-Native Artifacts
 
-Analysis of **cloud-native artifacts** — data objects that maintain the persistent state of web/SaaS applications — is a new and promising area. Unlike traditional applications where persistent state takes the form of files, web apps download necessary state on the fly.
+Analysis of **cloud-native artifacts** (data objects that maintain the persistent state of web/SaaS applications) is a new and promising area. Unlike traditional applications where persistent state takes the form of files, web apps download necessary state on the fly.
 
-From a forensic perspective, the most interesting API calls involve **complete state transfer** (e.g., opening a document triggers transfer of its full content). Cloud artifacts often have a completely different structure — for example, Google Docs documents are internally represented as the complete history (log) of every editing action. Obtaining only a PDF snapshot ignores potentially critical information on the evolution of a document over time.
+From a forensic perspective, the most interesting API calls involve **complete state transfer** (e.g., opening a document triggers transfer of its full content). Cloud artifacts often have a completely different structure. For example, Google Docs documents are internally represented as the complete history (log) of every editing action. Obtaining only a PDF snapshot ignores potentially critical information on the evolution of a document over time.
 
 ---
 
@@ -434,17 +434,17 @@ Some of the most important emerging questions in digital forensics:
 | 9.1 Definitions and Conceptual Models | Legal standards, Daubert, ACPO, DFRWS definitions, cognitive models | [919–923] |
 | 9.2 Operating System Analysis | Storage forensics, data acquisition, filesystem analysis, carving, slack space | [923, 938, 939] |
 | 9.3 Main Memory Forensics | RAM acquisition, live vs. snapshot analysis, semantic gap | [949] |
-| 9.4 Application Forensics | Web browser forensics, SQLite recovery | — |
-| 9.5 Cloud Forensics | SaaS/PaaS/IaaS challenges, cloud drive acquisition, cloud-native artifacts | — |
+| 9.4 Application Forensics | Web browser forensics, SQLite recovery | N/A |
+| 9.5 Cloud Forensics | SaaS/PaaS/IaaS challenges, cloud drive acquisition, cloud-native artifacts | N/A |
 | 9.6 Artifact Analysis | Cryptographic hashing, block-level analysis, approximate matching, NSRL | [954–958] |
 
 ---
 
 ## See Also
 
-- **Security Operations & Incident Management** (Chapter 8) — complementary operational perspective
-- **Law & Regulation** (Chapter 3) — legal processes for digital evidence
-- **Malware & Attack Technologies** (Chapter 6) — malware detection and analysis
-- **Network Security** — network-based evidence collection and analysis
-- **Software Security** (Chapter 10) — relates to application-level forensic analysis
-- **Hardware Security** — physical acquisition and hardware-level forensics
+- **Security Operations & Incident Management** (Chapter 8): complementary operational perspective
+- **Law & Regulation** (Chapter 3): legal processes for digital evidence
+- **Malware & Attack Technologies** (Chapter 6): malware detection and analysis
+- **Network Security**: network-based evidence collection and analysis
+- **Software Security** (Chapter 10): relates to application-level forensic analysis
+- **Hardware Security**: physical acquisition and hardware-level forensics

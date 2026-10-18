@@ -13,7 +13,7 @@ knowledge_area: "11"
 
 **Data Quality Management** is the planning, implementation, and control of activities that apply quality management techniques to data, in order to assure it is fit for consumption and meets the needs of data consumers. It is Knowledge Area 11 of the DAMA-DMBOK2 framework.
 
-Data is of **high quality** to the degree that it meets the expectations and needs of data consumers — if the data is *fit for the purposes* to which they want to apply it. It is of **low quality** if it is not fit for those purposes. Data quality is thus dependent on context and on the needs of the data consumer.
+Data is of **high quality** to the degree that it meets the expectations and needs of data consumers, if the data is *fit for the purposes* to which they want to apply it. It is of **low quality** if it is not fit for those purposes. Data quality is thus dependent on context and on the needs of the data consumer.
 
 ### Goals
 
@@ -30,7 +30,7 @@ The business drivers for establishing a formal Data Quality Management program i
 
 - **Increasing the value** of organizational data and the opportunities to use it
 - **Reducing risks and costs** associated with poor quality data (fines, lost revenue, lost customers, negative media exposure)
-- **Improving organizational efficiency and productivity** — employees spend less time verifying data and more time using it
+- **Improving organizational efficiency and productivity**: employees spend less time verifying data and more time using it
 - **Protecting and enhancing** the organization's reputation
 
 Direct costs of poor quality data include: inability to invoice correctly, increased customer service calls, revenue loss from missed business opportunities, delays in merger integration, increased fraud exposure, and bad business decisions.
@@ -45,7 +45,7 @@ Data Quality programs should be guided by these principles:
 |-----------|-------------|
 | **Criticality** | Focus on the data most critical to the enterprise and its customers. Prioritize based on criticality and risk level. |
 | **Lifecycle management** | Manage quality across the entire data lifecycle, from creation/procurement through disposal, including data in motion between systems. |
-| **Prevention** | Focus on preventing data errors and conditions that reduce usability — not simply correcting records. |
+| **Prevention** | Focus on preventing data errors and conditions that reduce usability, not simply correcting records. |
 | **Root cause remediation** | Understand and address problems at their root causes, not just symptoms. Often requires changes to processes and systems. |
 | **Governance** | Data Governance activities must support high quality data, and DQ program activities must sustain a governed data environment. |
 | **Standards-driven** | Define requirements as measurable standards and expectations against which quality can be measured. |
@@ -82,15 +82,15 @@ A **Data Quality dimension** is a measurable feature or characteristic of data. 
 
 ### Other Influential Frameworks
 
-- **Strong-Wang (1996)**: 15 dimensions across four categories — *Intrinsic DQ* (accuracy, objectivity, believability, reputation), *Contextual DQ* (value-added, relevancy, timeliness, completeness), *Representational DQ* (interpretability, ease of understanding, consistency, concise representation), *Accessibility DQ* (accessibility, access security).
-- **Redman (1996, 2001)**: Dimensions rooted in data structure — organized around *Data Model* (content, level of detail, composition, consistency, reaction to change), *Data Values* (accuracy, completeness, currency, consistency), and *Representation* (appropriateness, interpretability, portability, format precision).
+- **Strong-Wang (1996)**: 15 dimensions across four categories: *Intrinsic DQ* (accuracy, objectivity, believability, reputation), *Contextual DQ* (value-added, relevancy, timeliness, completeness), *Representational DQ* (interpretability, ease of understanding, consistency, concise representation), *Accessibility DQ* (accessibility, access security).
+- **Redman (1996, 2001)**: Dimensions rooted in data structure, organized around *Data Model* (content, level of detail, composition, consistency, reaction to change), *Data Values* (accuracy, completeness, currency, consistency), and *Representation* (appropriateness, interpretability, portability, format precision).
 - **English (1999, 2009)**: Divided into *Inherent* characteristics (definitional conformance, completeness of values, validity, accuracy to surrogate source, accuracy to reality, precision, non-duplication, equivalence, concurrency) and *Pragmatic* characteristics (accessibility, timeliness, contextual clarity, usability, derivation integrity, fact completeness).
 
-> See **Metadata Management** for the critical relationship between metadata and data quality — metadata defines what data represents and is the primary means of clarifying quality expectations.
+> See **Metadata Management** for the critical relationship between metadata and data quality. Metadata defines what data represents and is the primary means of clarifying quality expectations.
 
 ---
 
-## ISO 8000 — International Standard for Data Quality
+## ISO 8000: International Standard for Data Quality
 
 ISO 8000 defines characteristics that can be tested by any organization in the data supply chain to objectively determine conformance. Key aspects:
 
@@ -103,9 +103,10 @@ ISO 8000 defines characteristics that can be tested by any organization in the d
 
 ## Data Quality Improvement Lifecycle (PDCA)
 
-Most approaches to improving data quality are based on the **Shewhart/Deming cycle** — *Plan-Do-Check-Act*:
+Most approaches to improving data quality are based on the **Shewhart/Deming cycle**, *Plan-Do-Check-Act*:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px','cScale0':'#1FB854','cScale1':'#1EB88E','cScale2':'#1FB8AB','cScale3':'#00B5FF','cScale4':'#FFBE00','cScale5':'#19362D','cScale6':'#FF5861','cScale7':'#CDD3D1','cScale8':'#00A96E','cScale9':'#CAC9C9','cScale10':'#1EB88E','cScale11':'#1FB8AB'}}}%%
 flowchart LR
     P[Plan: Assess scope, impact,<br/>priority; root cause analysis] --> D[Do: Address root causes;<br/>implement process changes]
     D --> C[Check: Actively monitor<br/>quality against thresholds]
@@ -118,7 +119,7 @@ flowchart LR
 | **Plan** | Assess scope, impact, and priority of known issues. Evaluate alternatives based on root cause analysis. Formulate action plan. |
 | **Do** | Lead efforts to address root causes. Work with process owners for non-technical changes; with technical teams for system changes. |
 | **Check** | Actively monitor quality as measured against requirements. If data meets thresholds, no additional action needed. |
-| **Act** | Address and resolve emerging data quality issues. The cycle restarts — continuous improvement. |
+| **Act** | Address and resolve emerging data quality issues. The cycle restarts: continuous improvement. |
 
 New cycles begin when: existing measurements fall below thresholds, new data sets come under investigation, new requirements emerge, or business rules/standards change.
 
@@ -155,7 +156,7 @@ Business rules describe how data should exist to be useful and usable. They are 
 ### 2. Issues Caused by Data Entry Processes
 - Poorly designed data entry interfaces without edits/controls
 - List entry placement (dropdown ordering) contributing to errors
-- **Field overloading** — re-using fields for different purposes over time
+- **Field overloading**: re-using fields for different purposes over time
 - Training issues: lack of process knowledge; incentives for speed over accuracy
 - Inconsistent business process execution
 - Business rule changes not propagated throughout systems
@@ -175,7 +176,7 @@ Business rules describe how data should exist to be useful and usable. They are 
 - Data duplication (single source with multiple local instances; multiple sources for single instance)
 
 ### 5. Issues Caused by Fixing Issues
-- Manual data patches (direct database changes) — high risk of unintended consequences
+- Manual data patches (direct database changes): high risk of unintended consequences
 - Not propagating patches to all historical data
 - Generally not undo-able without complete restore from backup
 
@@ -192,7 +193,7 @@ Business rules describe how data should exist to be useful and usable. They are 
 | **Counts of nulls** | Identifies nulls and whether they are allowable |
 | **Max/Min values** | Identifies outliers like negatives |
 | **Max/Min length** | Identifies outliers or invalids for fields with length requirements |
-| **Frequency distribution** | Enables assessment of reasonability — distribution of values, frequently/infrequently occurring values, percentage of defaulted values |
+| **Frequency distribution** | Enables assessment of reasonability: distribution of values, frequently/infrequently occurring values, percentage of defaulted values |
 | **Data type and format** | Identifies non-conformance to format requirements; unexpected formats (decimals, embedded spaces) |
 
 ### Advanced Profiling
@@ -222,20 +223,20 @@ Adding attributes to a data set to increase quality and usability:
 
 | Enhancement Type | Examples |
 |------------------|----------|
-| **Time/Date stamps** | Document creation, modification, retirement times — valuable for root cause analysis |
+| **Time/Date stamps** | Document creation, modification, retirement times: valuable for root cause analysis |
 | **Audit data** | Document data lineage for historical tracking and validation |
 | **Reference vocabularies** | Business-specific terminology, ontologies, glossaries |
 | **Contextual information** | Location, environment, access methods; tagging for review |
 | **Geographic information** | Address standardization, geocoding, latitude/longitude, regional coding |
 | **Demographic information** | Age, marital status, gender, income, ethnic coding; business revenue, employee count |
-| **Psychographic information** | Behaviors, habits, preferences — segmentation data |
+| **Psychographic information** | Behaviors, habits, preferences: segmentation data |
 | **Valuation information** | Asset valuation, inventory, and sale data |
 
 ### Data Parsing and Formatting
 
 - **Parsing**: Analyzing data using pre-determined rules to define content or value. Pattern matching triggers actions.
 - **Standardization**: Mapping data from source patterns into a corresponding target representation (e.g., telephone numbers, customer names).
-- **Transformation**: Rule-based conversions building on standardization techniques — parsed components rearranged, corrected, or changed per knowledge base rules.
+- **Transformation**: Rule-based conversions building on standardization techniques: parsed components rearranged, corrected, or changed per knowledge base rules.
 
 ---
 
@@ -265,7 +266,7 @@ Start with a small, focused proof-of-concept:
 - Confirm issues and priorities with Data Stewards and SMEs
 
 ### 5. Identify and Prioritize Potential Improvements
-Apply the improvement process strategically: full-scale profiling of larger data sets, stakeholder interviews, and business impact analysis. Profiling helps identify issues but does not determine root causes or business impact — that requires stakeholder input.
+Apply the improvement process strategically: full-scale profiling of larger data sets, stakeholder interviews, and business impact analysis. Profiling helps identify issues but does not determine root causes or business impact. That requires stakeholder input.
 
 ### 6. Define Goals for Data Quality Improvement
 Set specific, achievable goals based on consistent quantification of business value. Determine ROI of fixes based on: criticality of data, amount of data affected, age of data, number and type of impacted processes, customers affected, risks, costs of remediation, and costs of work-arounds.
@@ -288,7 +289,7 @@ Measurement can be **in-stream** (during data creation or handoff) or **batch** 
 - **Formulating remediation options**: Address non-technical root causes, modify systems, develop controls, introduce inspection, directly correct flawed data, or take no action based on cost/benefit
 - **Resolving issues**: Assess costs/merits of alternatives, recommend and implement resolution
 
-Track decisions in an **incident tracking system** — it provides insight about causes and costs of data issues.
+Track decisions in an **incident tracking system**. It provides insight about causes and costs of data issues.
 
 #### Data Quality Service Level Agreements (SLAs)
 An SLA specifies expectations for response and remediation. Includes: data elements covered, business impacts, DQ dimensions, quality expectations, measurement methods, acceptability thresholds, stewards to notify, timelines, and escalation strategies.
@@ -310,7 +311,7 @@ Reports should focus on: data quality scorecards, quality trends over time, SLA 
 
 ### Corrective Actions
 - **Automated correction**: Rule-based standardization, normalization, and correction without manual intervention (requires well-defined standards and known error patterns)
-- **Manually-directed correction**: Automated tools with manual review — corrections scored; low-confidence corrections presented to stewards for approval
+- **Manually-directed correction**: Automated tools with manual review: corrections scored; low-confidence corrections presented to stewards for approval
 - **Manual correction**: Through controlled interfaces with audit trails. Avoid direct production changes.
 
 ### Quality Check and Audit Code Modules
@@ -320,7 +321,7 @@ Create shareable, linkable, re-usable code modules for repeated DQ checks. Well-
 Metrics must be: **measurable** (countable with quantifiable results), **business-relevant** (related to business operations), **acceptable** (compared against defined thresholds), **accountable** (understood by stewards who take corrective action), **controllable** (triggers action when out of range), and **trending** (enables measurement of improvement over time).
 
 ### Statistical Process Control (SPC)
-A method to manage processes by analyzing variation in inputs, outputs, or steps. Based on the assumption: consistent inputs + consistent execution = consistent outputs. Uses **control charts** to establish baselines and detect special causes of variation. Applied to data as the product of a process — useful for control, detection, and improvement.
+A method to manage processes by analyzing variation in inputs, outputs, or steps. Based on the assumption: consistent inputs + consistent execution = consistent outputs. Uses **control charts** to establish baselines and detect special causes of variation. Applied to data as the product of a process, useful for control, detection, and improvement.
 
 ### Root Cause Analysis
 Understanding factors that contribute to problems. Common techniques:
@@ -334,7 +335,7 @@ Understanding factors that contribute to problems. Common techniques:
 
 ## Implementation Guidelines
 
-A hybrid approach works best — **top-down** for sponsorship, consistency, and resources; **bottom-up** to discover what is actually broken and achieve incremental successes.
+A hybrid approach works best: **top-down** for sponsorship, consistency, and resources; **bottom-up** to discover what is actually broken and achieve incremental successes.
 
 ### Readiness Assessment
 Assess organizational readiness by evaluating:
@@ -345,12 +346,12 @@ Assess organizational readiness by evaluating:
 - Cultural and technical readiness for scalable DQ monitoring
 
 ### Organization and Cultural Change
-Improving data quality requires a **mindset change** — every person who touches data can impact quality. Training should focus on:
+Improving data quality requires a **mindset change**. Every person who touches data can impact quality. Training should focus on:
 - Common causes of data problems
 - Relationships within the organization's data ecosystem
 - Consequences of poor quality data
 - Necessity for ongoing improvement
-- Becoming 'data-lingual' — articulating data's impact on strategy, compliance, and customer satisfaction
+- Becoming 'data-lingual': articulating data's impact on strategy, compliance, and customer satisfaction
 
 ---
 
@@ -386,7 +387,7 @@ Each policy should include: purpose, scope and applicability, definitions of ter
 ## Tools
 
 - **Data Profiling Tools**: Produce high-level statistics for pattern identification and initial quality assessment. Essential for data discovery; augmented with visualization aids the discovery process.
-- **Data Querying Tools**: Enable deeper querying beyond profiling — answering questions about uniqueness, integrity, and root causes.
+- **Data Querying Tools**: Enable deeper querying beyond profiling, answering questions about uniqueness, integrity, and root causes.
 - **Modeling and ETL Tools**: Direct impact on data quality. DQ teams should work with development teams to ensure quality risks are addressed.
 - **Data Quality Rule Templates**: Capture expectations for data; bridge communication between business and technical teams.
 - **Metadata Repositories**: Store DQ requirements, rules, measurement results, and issue documentation for consumer access.
@@ -405,18 +406,18 @@ Each policy should include: purpose, scope and applicability, definitions of ter
 - Redman, Thomas. *Data Quality for the Information Age* (1996) and *Data Quality: The Field Guide* (2001)
 - Sebastian-Coleman, Laura. *Measuring Data Quality for Ongoing Improvement* (2013)
 - Strong, Diane M. and Wang, Richard Y. *"Beyond Accuracy: What Data Quality Means to Data Consumers"* (1996)
-- DAMA UK White Paper (2013) — six core dimensions of data quality
-- ISO 8000 — International Standard for Data Quality
+- DAMA UK White Paper (2013): six core dimensions of data quality
+- ISO 8000: International Standard for Data Quality
 
 ---
 
 ## Related DMBOK Knowledge Areas
 
-- **Data Governance** — provides the guidance and business context for DQ activities
-- **Metadata Management** — defines what data represents; primary means of clarifying quality expectations
-- **Data Architecture** — architectural decisions impact data quality throughout the lifecycle
-- **Data Modeling and Design** — data model accuracy directly affects quality
-- **Data Integration and Interoperability** — ETL and integration processes impact quality
-- **Master Data Management** — MDM requires ongoing DQ monitoring and provides reference sources
-- **Data Warehousing and Business Intelligence** — DQ is essential for reliable analytics
-- **Data Storage and Operations** — database operations enforce quality constraints
+- **Data Governance**: provides the guidance and business context for DQ activities
+- **Metadata Management**: defines what data represents; primary means of clarifying quality expectations
+- **Data Architecture**: architectural decisions impact data quality throughout the lifecycle
+- **Data Modeling and Design**: data model accuracy directly affects quality
+- **Data Integration and Interoperability**: ETL and integration processes impact quality
+- **Master Data Management**: MDM requires ongoing DQ monitoring and provides reference sources
+- **Data Warehousing and Business Intelligence**: DQ is essential for reliable analytics
+- **Data Storage and Operations**: database operations enforce quality constraints

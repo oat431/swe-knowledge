@@ -2,13 +2,13 @@
 tags: [introduction, systems-engineering, sebok]
 ---
 
-> *Source: SEBoK v2, Part 1 — SEBoK Introduction*
+> *Source: SEBoK v2, Part 1: SEBoK Introduction*
 
-# 00 — Introduction to the SEBoK
+# 00: Introduction to the SEBoK
 
 ## Purpose
 
-The **Guide to the Systems Engineering Body of Knowledge (SEBoK)** is a widely accepted, community-based, and regularly updated baseline of **systems engineering (SE)** knowledge. It is a curated, living authoritative guide — not a self-contained knowledge resource — that defines the boundaries, terminology, content, and structure of systems engineering. The SEBoK points readers to detailed sources for additional information.
+The **Guide to the Systems Engineering Body of Knowledge (SEBoK)** is a widely accepted, community-based, and regularly updated baseline of **systems engineering (SE)** knowledge. It is a curated, living authoritative guide (not a self-contained knowledge resource) that defines the boundaries, terminology, content, and structure of systems engineering. The SEBoK points readers to detailed sources for additional information.
 
 The SEBoK serves **six broad purposes**:
 
@@ -30,7 +30,7 @@ The SEBoK is **global in applicability**, authored and reviewed by experts from 
 The SEBoK:
 
 - Provides a **guide to the body of SE knowledge** with references to detailed sources; it is not a self-contained knowledge resource.
-- Focuses on **engineered systems** (ES) contexts — socio-technical systems with a recognized SE life cycle — while treating social and natural systems as relevant environmental considerations (see [[01_Systems_Engineering_Fundamentals]]).
+- Focuses on **engineered systems** (ES) contexts (socio-technical systems with a recognized SE life cycle) while treating social and natural systems as relevant environmental considerations (see [[01_Systems_Engineering_Fundamentals]]).
 - Describes generic **SE life cycle and process knowledge** (see [[05_Life_Cycles_and_Processes]]).
 - Recognizes that SE principles can be applied differently to different types of **products, services, enterprises, and systems of systems (SoS)** (see [[10_Product_and_Service_Systems_Engineering]]).
 - Provides resources for **organization support** of SE activities (see [[14_Enabling_Businesses_and_Enterprises]]).
@@ -51,7 +51,7 @@ The SEBoK is organized into **eight parts**:
 | **Part 2** | [[01_Systems_Engineering_Fundamentals]] | Provides the conceptual foundations of SE: definitions and basic concepts of systems; principles, concepts, methods, and models from systems science; systems thinking; and systems modelling. |
 | **Part 3** | [[05_Life_Cycles_and_Processes]] | Describes generic knowledge on the practice of SE and related management activities: life cycle models, technical activities (requirements, architecture, test and evaluation), and management activities (planning, measurement, risk). |
 | **Part 4** | [[10_Product_and_Service_Systems_Engineering]] | Describes how to apply SE principles to different types of system context: products, services, enterprises, and systems of systems (SoS). |
-| **Part 5** | [[14_Enabling_Businesses_and_Enterprises]] | Approaches to organization that enable successful performance of SE activities at the enterprise, team, and individual levels — from value proposition and governance to competency, personal development, and ethics. |
+| **Part 5** | [[14_Enabling_Businesses_and_Enterprises]] | Approaches to organization that enable successful performance of SE activities at the enterprise, team, and individual levels: from value proposition and governance to competency, personal development, and ethics. |
 | **Part 6** | [[16_SE_and_Project_Management]] | Describes the relationships between SE and other disciplines: software engineering, project management, industrial engineering, procurement/acquisition, and specialty engineering (the "–ilities"). |
 | **Part 7** | [[20_Implementation_Examples]] | Real-world case studies and vignettes demonstrating implementations of SE knowledge in domains such as aerospace, medicine, and software. |
 | **Part 8** | [[21_Emerging_Knowledge]] | Cutting-edge and emerging ideas not yet covered in other parts; as these areas mature, they migrate into Parts 2–7. |
@@ -60,7 +60,7 @@ The SEBoK also contains a **Glossary of Terms**, a list of **Primary References*
 
 ---
 
-## Introduction to Systems Engineering — Chapter Overview
+## Introduction to Systems Engineering: Chapter Overview
 
 The **Introduction to Systems Engineering** knowledge area within Part 1 contains topic articles providing an overview of SE practice and discussing its economic value, historic evolution, and key relationships.
 
@@ -74,7 +74,7 @@ Key elements include:
 
 - **System**: An interacting combination of system elements (hardware, software, firmware, people, information, techniques, facilities, services, and other support elements) that accomplish defined objective(s).
 - **Systems Engineer**: A person or role who supports the transdisciplinary approach, serving to elicit and translate customer needs into specifications that can be realized by the system development team.
-- **Life Cycle Processes**: The systems engineer supports processes beginning early in conceptual design and continuing throughout the life cycle — manufacturing, deployment, use, and disposal. Activities include analyzing, specifying, designing, and verifying the system to balance functional, interface, performance, physical, quality, and cost characteristics.
+- **Life Cycle Processes**: The systems engineer supports processes beginning early in conceptual design and continuing throughout the life cycle: manufacturing, deployment, use, and disposal. Activities include analyzing, specifying, designing, and verifying the system to balance functional, interface, performance, physical, quality, and cost characteristics.
 
 The scope of SE does not include everything involved in engineering and management. Activities such as system construction, manufacturing, funding, and general management are part of the **SE environment** but not SE itself. SE is performed as part of a life cycle approach involving collaboration among systems engineers, systems developers, and project-external bodies (users, owners, external systems).
 
@@ -82,7 +82,7 @@ An **engineered system** is a technical or socio-technical system which is the s
 
 ### Fundamentals for Digital Engineering
 
-**Digital Engineering (DE)** is a systemic intervention — a holistic approach to SE transformation involving **people, processes, data, and technology**. It is not just about technology, but a paradigm shift from traditional paper-based SE to an integrated digital approach leveraging authoritative sources of systems data and models as a continuum across disciplines.
+**Digital Engineering (DE)** is a systemic intervention: a holistic approach to SE transformation involving **people, processes, data, and technology**. It is not just about technology, but a paradigm shift from traditional paper-based SE to an integrated digital approach leveraging authoritative sources of systems data and models as a continuum across disciplines.
 
 The INCOSE Vision 2035 highlights key trends: digital transformation, sustainability, smart systems, complexity growth, and advancements in modeling and simulation. Future SE will move towards a fully **model-based SE (MBSE)** environment, with data science techniques infused into practice.
 
@@ -90,10 +90,10 @@ DE comprises four fundamental components (the DE Systemic Framework):
 
 | Component | Focus |
 |-----------|-------|
-| **Why** — Strategic Intent | Aligning DE initiatives with broader organizational strategy; establishing goals and objectives for digital transformation. |
-| **Who** — Digitally Enabled Workforce | Skills, roles, responsibilities, and capabilities needed; a shift in mindset toward collaborative agile approaches and continuous learning. |
-| **What** — Data, Technology, and Knowledge | Integrated models, data as a critical asset, common mental models across stakeholders, and technologies (digital twins, AI, ML, IoT, modeling and simulation). |
-| **How** — Processes and Systems | Model-based approaches leveraging MBSE; standardized digital representations; end-to-end digital representation of the enterprise. |
+| **Why**: Strategic Intent | Aligning DE initiatives with broader organizational strategy; establishing goals and objectives for digital transformation. |
+| **Who**: Digitally Enabled Workforce | Skills, roles, responsibilities, and capabilities needed; a shift in mindset toward collaborative agile approaches and continuous learning. |
+| **What**: Data, Technology, and Knowledge | Integrated models, data as a critical asset, common mental models across stakeholders, and technologies (digital twins, AI, ML, IoT, modeling and simulation). |
+| **How**: Processes and Systems | Model-based approaches leveraging MBSE; standardized digital representations; end-to-end digital representation of the enterprise. |
 
 The key shift enabled by DE is a move to collaborative **data-driven problem-solving** and a "single source of truth" approach to decision-making.
 
@@ -122,7 +122,7 @@ Challenges have evolved from organizing ancient cities, through the Industrial R
 - Awareness of **human factors** reoriented SE from traditional "hard" SE toward "soft" SE approaches: emergent requirements, concurrent definition of requirements and solutions, evolutionary development.
 - Since 1990, rapidly increasing scale, dynamism, and vulnerabilities have created the need for lean, agile, iterative, and evolutionary SE approaches.
 - **Systems of Systems (SoS)** and **Enterprise Systems Engineering (ESE)** approaches have emerged.
-- Emerging technologies — AI, machine learning, IoT, digital thread, additive manufacturing — continue to challenge SE.
+- Emerging technologies (AI, machine learning, IoT, digital thread, additive manufacturing) continue to challenge SE.
 - **MBSE** has evolved to manage the breadth and complexity of systems information.
 - The **INCOSE Vision 2025** sees future systems needing to respond to growing societal needs, harness technology innovations, and be engineered by an evolving, diverse workforce.
 
@@ -139,7 +139,7 @@ SE is holistic and stakeholder value-oriented, in contrast to component-oriented
 - **Technical Management (TM)**: A specialization of project management; SE and PM have significant common content but neither is a subset of the other (see [[16_SE_and_Project_Management]]).
 - **Procurement and Acquisition**: Practitioners draw upon SE to determine scope and requirements, prepare RFPs, design source selection processes, and monitor progress.
 
-Most good systems engineers are **"T-shaped" people** — having both a working knowledge of wider-system considerations and deep expertise in a relevant domain.
+Most good systems engineers are **"T-shaped" people**, having both a working knowledge of wider-system considerations and deep expertise in a relevant domain.
 
 ### Fundamentals for Future Systems Engineering
 
@@ -149,11 +149,11 @@ Future trends per the INCOSE Vision:
 - **More Intelligent and Autonomous Systems**: Systems will become smarter, self-organized, sustainable, resource-efficient, robust, and safer.
 - **Theoretical Foundations**: SE will be supported by a more encompassing foundation of theory and sophisticated model-based methods.
 
-The evolution of SE moves from a total control model to a **shared responsibility model** — something more like "collective actualization." Systems will represent a combination and interplay of technology and social factors. Foundations must expand to include principles, theories, models, and patterns of the human, biological, social, and agent realm. Ethical considerations include how to allocate responsibility in a shared responsibility model.
+The evolution of SE moves from a total control model to a **shared responsibility model**: something more like "collective actualization." Systems will represent a combination and interplay of technology and social factors. Foundations must expand to include principles, theories, models, and patterns of the human, biological, social, and agent realm. Ethical considerations include how to allocate responsibility in a shared responsibility model.
 
 ---
 
-## SEBoK Users and Uses — Overview
+## SEBoK Users and Uses: Overview
 
 The SEBoK is intended for a wide variety of users. Six key **personas** represent different target audiences:
 
@@ -163,11 +163,11 @@ For undergraduate students and those new to SE:
 
 1. **Learn the basic terms**: system, engineered system, systems engineering, systems engineer.
 2. **Get an overview**: read **#Systems Engineering Overview**, **#Economic Value of Systems Engineering**, **#Systems Engineering and Other Disciplines**, and **#Systems Engineering: Historic and Future Challenges**.
-3. **Learn about systems**: Part 2 — What is a System?, Systems Science, Systems Thinking, Representing Systems with Models.
+3. **Learn about systems**: Part 2: What is a System?, Systems Science, Systems Thinking, Representing Systems with Models.
 4. **Learn the systems approach**: the eight articles in Systems Approach Applied to Engineered Systems.
-5. **Explore SE methods**: Part 3 — Life Cycle Models through Systems Engineering Standards.
-6. **Explore applications**: Part 4 — Product, Service, Enterprise, and SoS SE.
-7. **Read case studies**: Part 7 — scan case studies and vignettes in areas of interest.
+5. **Explore SE methods**: Part 3: Life Cycle Models through Systems Engineering Standards.
+6. **Explore applications**: Part 4: Product, Service, Enterprise, and SoS SE.
+7. **Read case studies**: Part 7: scan case studies and vignettes in areas of interest.
 8. **Later reading**: Part 6 (Related Disciplines) and Part 5 (Enabling SE).
 
 ### Guidance for Systems Engineers
@@ -193,7 +193,7 @@ For engineers from non-SE backgrounds (biomedical, civil, electrical, chemical, 
 - Part 6 (SE and Other Disciplines) is key, especially SE and Software Engineering, SE and Quality Attributes.
 - Part 7 illustrates SE practices in real settings.
 
-Engineers should not skip management-sounding topics — they describe how SE orchestrates multiple disciplines, not administrative management.
+Engineers should not skip management-sounding topics. They describe how SE orchestrates multiple disciplines, not administrative management.
 
 ### Guidance for Systems Engineering Customers
 
@@ -237,10 +237,10 @@ The SEBoK complements the general management guidance available in sources such 
 
 ## Related Chapters
 
-- [[01_Systems_Engineering_Fundamentals]] — Definitions, systems science, systems thinking, and modelling foundations
-- [[05_Life_Cycles_and_Processes]] — Life cycle models, technical processes, and SE management
-- [[10_Product_and_Service_Systems_Engineering]] — Product, service, enterprise, and SoS contexts
-- [[14_Enabling_Businesses_and_Enterprises]] — Individuals, teams, and organizations enabling SE
-- [[16_SE_and_Project_Management]] — SE and software engineering, project management, specialty engineering
-- [[20_Implementation_Examples]] — Case studies and vignettes from real projects
-- [[21_Emerging_Knowledge]] — Cutting-edge and evolving SE topics
+- [[01_Systems_Engineering_Fundamentals]]: Definitions, systems science, systems thinking, and modelling foundations
+- [[05_Life_Cycles_and_Processes]]: Life cycle models, technical processes, and SE management
+- [[10_Product_and_Service_Systems_Engineering]]: Product, service, enterprise, and SoS contexts
+- [[14_Enabling_Businesses_and_Enterprises]]: Individuals, teams, and organizations enabling SE
+- [[16_SE_and_Project_Management]]: SE and software engineering, project management, specialty engineering
+- [[20_Implementation_Examples]]: Case studies and vignettes from real projects
+- [[21_Emerging_Knowledge]]: Cutting-edge and evolving SE topics

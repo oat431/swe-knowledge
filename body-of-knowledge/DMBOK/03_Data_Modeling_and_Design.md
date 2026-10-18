@@ -1,6 +1,6 @@
 ---
 title: "Data Modeling and Design"
-source: "DMBoK v2 — Chapter 5"
+source: "DMBoK v2, Chapter 5"
 tags:
   - data-modeling
   - data-management
@@ -14,7 +14,7 @@ created: 2026-07-09
 
 # Data Modeling and Design
 
-> **DMBOK2 Chapter 5.** Data Modeling and Design is the process of discovering, analyzing, representing, and communicating data requirements in a precise form called a **data model**. This chapter covers the essential concepts, activities, tools, best practices, and governance around data modeling — including ERD, dimensional modeling, normalization, abstraction, forward/reverse engineering, and quality measurement.
+> **DMBOK2 Chapter 5.** Data Modeling and Design is the process of discovering, analyzing, representing, and communicating data requirements in a precise form called a **data model**. This chapter covers the essential concepts, activities, tools, best practices, and governance around data modeling, including ERD, dimensional modeling, normalization, abstraction, forward/reverse engineering, and quality measurement.
 
 ---
 
@@ -29,7 +29,7 @@ A data model can be built following different **schemes** (approaches), each sui
 | **Relational** | Data organized into relations (tables) with rows and columns; uses keys and joins. Based on set theory and relational algebra. | OLTP, operational systems, most general-purpose applications. |
 | **Dimensional** | Facts (measures) surrounded by dimensions (context); star/snowflake schemas. Denormalized for query performance. | Data warehousing, BI, OLAP, reporting. |
 | **Object-Oriented** | Data modeled as objects with attributes and methods; supports inheritance, encapsulation. | CAD/CAM, embedded real-time systems, multimedia. |
-| **Fact-Based / ORM** | Models facts as relationships between objects using natural language; no attributes — everything is a relationship. Object-Role Modeling (ORM). | Conceptual modeling, business rule capture, terminology alignment. |
+| **Fact-Based / ORM** | Models facts as relationships between objects using natural language; no attributes: everything is a relationship. Object-Role Modeling (ORM). | Conceptual modeling, business rule capture, terminology alignment. |
 | **Time-Based / Temporal** | Data vault, anchor modeling; tracks data changes over time with timestamps. | Data warehousing with history tracking, audit trails. |
 | **NoSQL** | Schema-on-read; document, key-value, graph, column-family, triplestore. | Big Data, real-time web apps, unstructured/semi-structured data. |
 
@@ -60,7 +60,7 @@ An **ERD** (Entity-Relationship Diagram) is the most common notation for data mo
 - **Entity:** A thing of significance to the business about which data must be held (e.g., Customer, Order, Product). Represented as a rectangle. In physical models, becomes a **table**.
 - **Attribute:** A property or characteristic of an entity (e.g., Customer Name, Order Date). In physical models, becomes a **column**.
 - **Relationship:** An association between two entities (e.g., Customer *places* Order). Represented as a line.
-- **Cardinality:** The number of instances on each side of a relationship — one-to-one (1:1), one-to-many (1:M), many-to-many (M:N).
+- **Cardinality:** The number of instances on each side of a relationship: one-to-one (1:1), one-to-many (1:M), many-to-many (M:N).
 - **Primary Key (PK):** An attribute or set of attributes that uniquely identifies each entity instance.
 - **Foreign Key (FK):** An attribute in one entity that references the primary key of another entity.
 - **Alternate Key (AK):** A candidate key not chosen as the primary key.
@@ -94,7 +94,7 @@ Normalization is the process of organizing data to reduce redundancy and improve
 
 > **In practice, "normalized" typically means 3NF.** BCNF, 4NF, and 5NF are needed only in rare situations.
 
-**Denormalization** is the deliberate introduction of redundancy for performance gains — common in dimensional models and read-heavy workloads. The benefit of improved query performance must outweigh the cost of duplicate storage and synchronization overhead.
+**Denormalization** is the deliberate introduction of redundancy for performance gains, common in dimensional models and read-heavy workloads. The benefit of improved query performance must outweigh the cost of duplicate storage and synchronization overhead.
 
 ### 1.6 Abstraction
 
@@ -144,8 +144,8 @@ Forward engineering builds a new application from requirements: CDM → LDM → 
 
 ##### 2.2.1.1 Conceptual Data Modeling (CDM)
 
-1. **Select Scheme:** Relational, dimensional, fact-based, or NoSQL — depends on the use case.
-2. **Select Notation:** IE/Crow's Foot, IDEF1X, UML, ORM — depends on organizational standards and audience familiarity.
+1. **Select Scheme:** Relational, dimensional, fact-based, or NoSQL; depends on the use case.
+2. **Select Notation:** IE/Crow's Foot, IDEF1X, UML, ORM; depends on organizational standards and audience familiarity.
 3. **Complete Initial CDM:** Capture the viewpoint of a user group without trying to reconcile enterprise-wide. Collect highest-level nouns (Time, Geography, Customer, Product, Transaction) and verbs (relationships).
 4. **Incorporate Enterprise Terminology:** Align the model with enterprise standards (e.g., reconcile "Client" → "Customer").
 5. **Obtain Sign-off:** Review for best practices and requirements coverage.
@@ -155,7 +155,7 @@ Forward engineering builds a new application from requirements: CDM → LDM → 
 1. **Analyze Information Requirements:** Elicit, organize, document, review, refine, and approve business data requirements. Maintain a balanced view of data (nouns) and processes (verbs).
 2. **Analyze Existing Documentation:** Leverage existing data models, databases, industry data models, and reusable patterns. Validate with SMEs.
 3. **Add Associative Entities:** Resolve M:N relationships with associative entities that carry relationship-specific attributes (effective dates, expiration dates). These become fact tables in dimensional models or nodes in graph databases.
-4. **Add Attributes:** Each attribute must be atomic — one piece of data that cannot be divided. Example: `Phone Number` → `Phone Type Code`, `Country Code`, `Area Code`, `Prefix`, `Base Number`, `Extension`.
+4. **Add Attributes:** Each attribute must be atomic, one piece of data that cannot be divided. Example: `Phone Number` → `Phone Type Code`, `Country Code`, `Area Code`, `Prefix`, `Base Number`, `Extension`.
 5. **Assign Domains:** Apply consistent formats and value sets across entities.
 6. **Assign Keys:** Distinguish key attributes (identify unique instances) from non-key attributes (describe instances). Identify primary and alternate keys.
 
@@ -167,9 +167,9 @@ Forward engineering builds a new application from requirements: CDM → LDM → 
 2. **Add Attribute Details:** Technical names, physical data types, lengths, nullability, default values, constraints.
 3. **Add Reference Data Objects:** Small reference value sets can be implemented as:
    - Separate code tables (many small tables)
-   - Master shared code table (one consolidated table — watch for code collisions)
+   - Master shared code table (one consolidated table; watch for code collisions)
    - Embedded constraints/rules in the object definition
-4. **Assign Surrogate Keys:** Meaningless, business-invisible unique identifiers. Optional — used when the natural key is large, composite, or has values that change over time. **Always define an alternate key on the original natural key.**
+4. **Assign Surrogate Keys:** Meaningless, business-invisible unique identifiers. Optional: used when the natural key is large, composite, or has values that change over time. **Always define an alternate key on the original natural key.**
 5. **Denormalize for Performance:** Add controlled redundancy where the query performance gain outweighs storage and sync costs. Dimensional structures are the primary means.
 6. **Index for Performance:** Alternate access paths to optimize query performance. Types: unique/non-unique, clustered/non-clustered, partitioned/non-partitioned, single-column/multi-column, B-tree/bitmap/hash. Index on large tables using frequently referenced columns (keys, especially).
 7. **Partition for Performance:** Strategically split data, especially when facts have sparse dimensional keys. Date-key partitioning is recommended.
@@ -180,7 +180,7 @@ Forward engineering builds a new application from requirements: CDM → LDM → 
 Reverse engineering documents an existing database: PDM → LDM → CDM.
 
 - Data modeling tools can reverse-engineer from a variety of databases.
-- Creating a readable layout still requires a modeler — contextual organization (grouping by subject area/function) is largely manual.
+- Creating a readable layout still requires a modeler. Contextual organization (grouping by subject area/function) is largely manual.
 - Common layouts: orthogonal, dimensional, hierarchical.
 
 ### 2.3 Review the Data Models
@@ -224,7 +224,7 @@ Reference standard: **ISO 11179** (Metadata Registry).
 - Names must be **unique** and **as descriptive as possible**.
 - Publish and enforce naming standards for all object types: entities, tables, attributes, keys, views, indexes.
 
-### 4.2 Database Design Principles — **PRISM**
+### 4.2 Database Design Principles: **PRISM**
 
 | Principle | Description |
 |-----------|-------------|
@@ -278,7 +278,7 @@ Each change should document:
 
 Use data modeling tool repositories or standard source code management (DDL exports, XML files, check-in/check-out like application code).
 
-### 5.2 Data Modeling Metrics — The Data Model Scorecard®
+### 5.2 Data Modeling Metrics: The Data Model Scorecard®
 
 The Data Model Scorecard® (Hoberman, 2015) provides 11 quality metrics across 10 categories:
 
@@ -300,16 +300,16 @@ The Data Model Scorecard® (Hoberman, 2015) provides 11 quality metrics across 1
 
 ## 6. Related DMBOK Chapters
 
-- [[01_Data_Governance|Data Governance]] — Policies, standards, and stewardship for data models.
-- [[02_Data_Architecture|Data Architecture]] — Enterprise data architecture that data models must conform to.
-- [[04_Data_Storage_and_Operations|Data Storage and Operations]] — Physical implementation and database administration.
-- [[05_Data_Security|Data Security]] — Security constraints on data models and databases.
-- [[06_Data_Integration_and_Interoperability|Data Integration & Interoperability]] — Source-to-target mappings, ETL/ELT, data lineage.
-- [[07_Document_and_Content_Management|Document & Content Management]] — Unstructured and semi-structured data modeling.
-- **Data Warehousing & BI** — Dimensional modeling, star schemas, OLAP.
-- **Metadata Management** — Metadata repositories, data dictionaries, model definitions.
-- **Data Quality** — Data profiling, quality validation against models.
-- **Reference & Master Data** — Reference data tables, master data entities.
+- [[01_Data_Governance|Data Governance]]: Policies, standards, and stewardship for data models.
+- [[02_Data_Architecture|Data Architecture]]: Enterprise data architecture that data models must conform to.
+- [[04_Data_Storage_and_Operations|Data Storage and Operations]]: Physical implementation and database administration.
+- [[05_Data_Security|Data Security]]: Security constraints on data models and databases.
+- [[06_Data_Integration_and_Interoperability|Data Integration & Interoperability]]: Source-to-target mappings, ETL/ELT, data lineage.
+- [[07_Document_and_Content_Management|Document & Content Management]]: Unstructured and semi-structured data modeling.
+- **Data Warehousing & BI**: Dimensional modeling, star schemas, OLAP.
+- **Metadata Management**: Metadata repositories, data dictionaries, model definitions.
+- **Data Quality**: Data profiling, quality validation against models.
+- **Reference & Master Data**: Reference data tables, master data entities.
 
 ---
 
@@ -323,4 +323,4 @@ The Data Model Scorecard® (Hoberman, 2015) provides 11 quality metrics across 1
 - Hay, David C. *Data Model Patterns: A Metadata Map.* Morgan Kaufmann, 2006.
 - Simsion, Graeme & Graham Witt. *Data Modeling Essentials.* 3rd ed. Morgan Kaufmann, 2004.
 - Date, C.J. *An Introduction to Database Systems.* 8th ed. Addison-Wesley, 2003.
-- ISO 11179 — Metadata Registry (naming standards reference).
+- ISO 11179: Metadata Registry (naming standards reference).

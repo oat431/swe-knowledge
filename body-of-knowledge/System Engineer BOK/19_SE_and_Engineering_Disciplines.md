@@ -2,13 +2,13 @@
 tags: [engineering-disciplines, related-disciplines, systems-engineering, sebok]
 ---
 
-# 19 — Systems Engineering and Other Engineering Disciplines
+# 19: Systems Engineering and Other Engineering Disciplines
 
-> *Source: SEBoK v2, Part 6 — SE and Other Engineering Disciplines*
+> *Source: SEBoK v2, Part 6: SE and Other Engineering Disciplines*
 
 ## Purpose
 
-Systems Engineering is inherently interdisciplinary — it integrates inputs from and coordinates across multiple engineering disciplines. This Knowledge Area summarizes SE's relationship with key engineering fields, highlighting the interfaces, shared concerns, and what each discipline contributes to the system.
+Systems Engineering is inherently interdisciplinary. It integrates inputs from and coordinates across multiple engineering disciplines. This Knowledge Area summarizes SE's relationship with key engineering fields, highlighting the interfaces, shared concerns, and what each discipline contributes to the system.
 
 ## SE and Environmental Engineering
 
@@ -16,7 +16,7 @@ Environmental engineering ensures systems comply with environmental regulations 
 
 ## SE and Geospatial/Geodetic Engineering
 
-Geospatial engineering provides the spatial data infrastructure for systems that depend on location — navigation, mapping, earth observation, and positioning systems. SE integration includes: geospatial data requirements, coordinate reference systems, accuracy specifications, and interface standards for geospatial data exchange.
+Geospatial engineering provides the spatial data infrastructure for systems that depend on location: navigation, mapping, earth observation, and positioning systems. SE integration includes: geospatial data requirements, coordinate reference systems, accuracy specifications, and interface standards for geospatial data exchange.
 
 ## SE and Industrial Engineering
 
@@ -36,7 +36,7 @@ Mechanical engineering addresses the physical realization of systems: structures
 
 ## SE and Civil Engineering
 
-Civil engineering applies to large-scale infrastructure systems: transportation, water resources, buildings, and urban systems. SE brings a systematic approach to civil infrastructure — stakeholder needs analysis, requirements management, system-level optimization, life cycle costing, and integration of subsystems (structural, electrical, environmental, transportation).
+Civil engineering applies to large-scale infrastructure systems: transportation, water resources, buildings, and urban systems. SE brings a systematic approach to civil infrastructure: stakeholder needs analysis, requirements management, system-level optimization, life cycle costing, and integration of subsystems (structural, electrical, environmental, transportation).
 
 ## SE and Economics
 
@@ -48,7 +48,7 @@ Enterprise IT systems present unique SE challenges: rapid technology refresh, le
 
 ## Related Chapters
 
-- [[18_SE_and_Quality_Attributes]] — Cross-cutting quality concerns relevant to all disciplines
-- [[07_System_Definition_and_Architecture]] — Architecture integration across disciplines
-- [[04_Systems_Models_and_Approach]] — The systems approach that unifies all disciplines
-- [[01_Systems_Engineering_Fundamentals]] — Core principles applicable across disciplines
+- [[18_SE_and_Quality_Attributes]]: Cross-cutting quality concerns relevant to all disciplines
+- [[07_System_Definition_and_Architecture]]: Architecture integration across disciplines
+- [[04_Systems_Models_and_Approach]]: The systems approach that unifies all disciplines
+- [[01_Systems_Engineering_Fundamentals]]: Core principles applicable across disciplines

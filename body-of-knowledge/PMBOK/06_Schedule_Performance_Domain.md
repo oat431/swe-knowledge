@@ -2,7 +2,7 @@
 tags: [schedule, performance-domain, project-management, pmbok]
 ---
 
-> *Source: PMBOK® Guide — Eighth Edition by PMI, §2.3 Schedule Performance Domain (pp. 47–58)*
+> *Source: PMBOK® Guide: Eighth Edition by PMI, §2.3 Schedule Performance Domain (pp. 47–58)*
 
 ## Purpose
 
@@ -13,14 +13,14 @@ The **Schedule Performance Domain** provides a plan that represents *how and whe
 ### Project Schedule
 An output of a schedule model that presents **linked activities** with planned dates, durations, milestones, and resources. Includes:
 - Start and finish dates
-- **Duration** — total number of work periods (hours, days, weeks) required to complete an activity or **WBS** component
-- **Milestones** — significant points or events in the project
+- **Duration**: total number of work periods (hours, days, weeks) required to complete an activity or **WBS** component
+- **Milestones**: significant points or events in the project
 - Resources (see also [[09_Resources_Performance_Domain]])
 
 ### Estimate
 A quantitative assessment of a variable's likely amount or outcome:
-- **Effort** — number of labor units required to complete a schedule activity or WBS component
-- **Duration** — number of work periods needed to complete individual activities with the estimated resources
+- **Effort**: number of labor units required to complete a schedule activity or WBS component
+- **Duration**: number of work periods needed to complete individual activities with the estimated resources
 
 ### Schedule Baseline
 The **approved version** of a schedule model, changed only through formal change control procedures. Used as the basis for comparison to actual results. Formality ranges from rigid (predictive) to flexible or nonexistent (adaptive/agile).
@@ -51,7 +51,7 @@ The Schedule Performance Domain includes three processes aligned with the Planni
 |---|---|
 | **Key Inputs** | Project charter, project management plan (scope management plan), development approach, EEFs, OPAs |
 | **Tools & Techniques** | Expert judgment, data analysis (alternative analysis), meetings |
-| **Key Output** | **Schedule management plan** — covering schedule development approach, release/iteration length, level of accuracy, units of measurement, links to organizational procedures, schedule maintenance, control thresholds, rules of performance measurement, and reporting formats |
+| **Key Output** | **Schedule management plan**: covering schedule development approach, release/iteration length, level of accuracy, units of measurement, links to organizational procedures, schedule maintenance, control thresholds, rules of performance measurement, and reporting formats |
 
 ### 2. Develop Schedule
 **Purpose:** Analyze sequences, durations, resource requirements, and schedule constraints to create a **schedule model** for project execution and monitoring & controlling. This is an *iterative* process.
@@ -89,10 +89,10 @@ Determine the number of work periods needed to complete each activity with estim
 *Factors influencing duration estimates:*
 - Constraints (fixed duration, fixed effort, fixed resources)
 - Team experience and risk profile
-- **Law of diminishing returns** — adding more of one factor eventually yields progressively smaller output increases
-- **Number of resources** — doubling resources does not halve duration; may increase it due to knowledge transfer, learning curves, and coordination overhead
+- **Law of diminishing returns**: adding more of one factor eventually yields progressively smaller output increases
+- **Number of resources**: doubling resources does not halve duration; may increase it due to knowledge transfer, learning curves, and coordination overhead
 - Advances in technology
-- **Cognitive bias** — planning fallacy, end-of-story illusion, Hofstadter's Law, team motivation
+- **Cognitive bias**: planning fallacy, end-of-story illusion, Hofstadter's Law, team motivation
 - Level of decomposition (control account, work package, or activity level)
 
 **Step 4: Adjust**
@@ -104,7 +104,7 @@ Review the draft schedule and apply techniques to find alternative schedule opti
 
 #### Critical Path Method (CPM)
 
-The **Critical Path Method** is a schedule network analysis technique used to determine the minimum project duration and the amount of scheduling flexibility (float) on each network path. The critical path is the **longest path** through the network diagram and represents the shortest possible project duration — any delay on a critical path activity directly delays the project finish date.
+The **Critical Path Method** is a schedule network analysis technique used to determine the minimum project duration and the amount of scheduling flexibility (float) on each network path. The critical path is the **longest path** through the network diagram and represents the shortest possible project duration. Any delay on a critical path activity directly delays the project finish date.
 
 CPM is applied during *Develop Schedule* and used again during *Monitor and Control Schedule* to assess the impact of variances and what-if scenarios.
 
@@ -112,9 +112,9 @@ CPM is applied during *Develop Schedule* and used again during *Monitor and Cont
 An alternative to CPM that accounts for resource constraints and builds buffers (feeding buffers, project buffer) rather than floating individual activities. Used when resource availability is the primary scheduling constraint.
 
 #### Schedule Compression
-Techniques used during the *Adjust* step — and during monitoring & controlling — to shorten the schedule without reducing scope:
-- **Crashing** — adding resources to critical path activities (increases cost)
-- **Fast tracking** — performing activities in parallel that would normally be sequential (increases risk)
+Techniques used during the *Adjust* step (and during monitoring & controlling) to shorten the schedule without reducing scope:
+- **Crashing**: adding resources to critical path activities (increases cost)
+- **Fast tracking**: performing activities in parallel that would normally be sequential (increases risk)
 
 ### 3. Monitor and Control Schedule
 **Purpose:** Monitor project status to update the project schedule and manage changes to the agreed-upon schedule. Maintains a realistic schedule throughout the project.
@@ -168,8 +168,8 @@ Regular and milestone status updates from contractors, plus scheduled status rev
 
 ### Scheduling Approaches and Methods
 - **Location-Based Scheduling (LBS):** Allocates quantities to locations considering production rates, crew sizing, logic, and splitting/buffering.
-- **Lean scheduling:** Based on lean project delivery — pull-planning sessions, limiting queues, master scheduling → phase scheduling → look-ahead planning. Uses Last Planner System®.
-- **Critical Path Method / Critical Chain Method / Gantt charts / Kanban** — selected based on industry and project context.
+- **Lean scheduling:** Based on lean project delivery: pull-planning sessions, limiting queues, master scheduling → phase scheduling → look-ahead planning. Uses Last Planner System®.
+- **Critical Path Method / Critical Chain Method / Gantt charts / Kanban**: selected based on industry and project context.
 - **Schedule and deliverable alignment:** Ensure WBS elements have commensurate schedule detail levels.
 
 ## Interactions With Other Domains
@@ -178,14 +178,14 @@ The Schedule Performance Domain closely interacts with:
 
 | Domain | Nature of Interaction |
 |---|---|
-| [[05_Scope_Performance_Domain|Scope]] | Scope, Schedule, and Finance form the "triple constraint" — changes in one impact the others. Scope defines the work to be scheduled. |
+| [[05_Scope_Performance_Domain|Scope]] | Scope, Schedule, and Finance form the "triple constraint": changes in one impact the others. Scope defines the work to be scheduled. |
 | [[07_Finance_Performance_Domain|Finance]] | Duration depends on cost/funding; schedule compression often increases costs. |
 | [[09_Resources_Performance_Domain|Resources]] | Resource availability, skill levels, and calendars directly determine activity durations and scheduling feasibility. |
 | [[04_Governance_Performance_Domain|Governance]] | All domains function under governance; change control procedures for the schedule baseline are governed here. |
 | [[08_Stakeholders_Performance_Domain|Stakeholders]] | Stakeholder expectations shape the schedule; stakeholder involvement is critical during development. |
 | [[10_Risk_Performance_Domain|Risk]] | Schedule reserves and buffers address known-unknowns; risk events can directly impact the schedule. |
 
-The triple constraint relationship — Scope, Schedule, and Finance — means any change in one domain likely impacts the others. These three domains are directly linked to project outcomes, while Stakeholders, Resources, and Risk maintain balance in parallel.
+The triple constraint relationship (Scope, Schedule, and Finance) means any change in one domain likely impacts the others. These three domains are directly linked to project outcomes, while Stakeholders, Resources, and Risk maintain balance in parallel.
 
 ## Check Results
 
@@ -201,13 +201,13 @@ The triple constraint relationship — Scope, Schedule, and Finance — means an
 
 ## Related Chapters
 
-- [[05_Scope_Performance_Domain]] — Work packages and decomposition that feed activity definition
-- [[09_Resources_Performance_Domain]] — Resource estimation, calendars, and leveling
-- [[07_Finance_Performance_Domain]] — Cost/schedule trade-offs, triple constraint
-- [[04_Governance_Performance_Domain]] — Change control for schedule baseline
-- [[08_Stakeholders_Performance_Domain]] — Stakeholder involvement in schedule development
-- [[10_Risk_Performance_Domain]] — Schedule reserves, buffers, and risk-driven schedule impacts
-- **PERT** — Program Evaluation and Review Technique for probabilistic duration estimating
-- **Critical Path Method** — CPM for determining minimum project duration and float
-- **Critical Chain Method** — Buffer-based scheduling accounting for resource constraints
-- **WBS** — Work Breakdown Structure decomposition
+- [[05_Scope_Performance_Domain]]: Work packages and decomposition that feed activity definition
+- [[09_Resources_Performance_Domain]]: Resource estimation, calendars, and leveling
+- [[07_Finance_Performance_Domain]]: Cost/schedule trade-offs, triple constraint
+- [[04_Governance_Performance_Domain]]: Change control for schedule baseline
+- [[08_Stakeholders_Performance_Domain]]: Stakeholder involvement in schedule development
+- [[10_Risk_Performance_Domain]]: Schedule reserves, buffers, and risk-driven schedule impacts
+- **PERT**: Program Evaluation and Review Technique for probabilistic duration estimating
+- **Critical Path Method**: CPM for determining minimum project duration and float
+- **Critical Chain Method**: Buffer-based scheduling accounting for resource constraints
+- **WBS**: Work Breakdown Structure decomposition

@@ -8,9 +8,9 @@ tags:
 
 # Life Cycles and Processes
 
-> *Source: SEBoK v2, Part 3a-3b — Life Cycle Concepts and Process Concepts*
+> *Source: SEBoK v2, Part 3a-3b: Life Cycle Concepts and Process Concepts*
 
-> **Purpose:** This knowledge area covers the fundamental concepts of system life cycles, development approaches, agile methods, process description and application, and the selection and tailoring of both life cycle models and processes. Together they form the backbone of disciplined systems engineering practice — differentiating it from ad-hoc approaches — by providing a structured framework of processes and activities organized into stages, combined with the flexibility to select, adapt, and tailor those frameworks to the specific needs of each project and system.
+> **Purpose:** This knowledge area covers the fundamental concepts of system life cycles, development approaches, agile methods, process description and application, and the selection and tailoring of both life cycle models and processes. Together they form the backbone of disciplined systems engineering practice (differentiating it from ad-hoc approaches) by providing a structured framework of processes and activities organized into stages, combined with the flexibility to select, adapt, and tailor those frameworks to the specific needs of each project and system.
 
 ## Life Cycle Terms and Concepts
 
@@ -37,22 +37,22 @@ Four common principles associated with life cycle models:
 
 ### Decision Gates and Entry/Exit Criteria
 
-Movement between stages represents a **decision gate** — a milestone with specific entry and exit criteria. Decision options at each gate include: begin another stage, continue this stage, restart another stage, pause activity, or terminate. Criteria can include an assessment of **technical debt** and its implications for other stages. Not all parts of a system-of-interest reach the same maturity at the same time, so interim maturity reviews are essential.
+Movement between stages represents a **decision gate**: a milestone with specific entry and exit criteria. Decision options at each gate include: begin another stage, continue this stage, restart another stage, pause activity, or terminate. Criteria can include an assessment of **technical debt** and its implications for other stages. Not all parts of a system-of-interest reach the same maturity at the same time, so interim maturity reviews are essential.
 
 ### Technical Reviews and Audits
 
 A **technical review** is a series of SE activities conducted at logical transition points, assessing project progress against technical requirements using pre-established criteria. An **audit** is an independent examination of work products to assess compliance with specifications, standards, or contractual agreements.
 
 Technical reviews and audits support:
-- **Project assessment and control** — visibility into technical progress and risks, supporting decision gates
-- **Configuration management** — establishing, revising, and verifying configuration baselines
-- **Validation** — through involvement of appropriate stakeholders including end users
+- **Project assessment and control**: visibility into technical progress and risks, supporting decision gates
+- **Configuration management**: establishing, revising, and verifying configuration baselines
+- **Validation**: through involvement of appropriate stakeholders including end users
 
 Reviews can be **schedule-based** (explicit dates), **event-based** (end of a phase/delivery of artifacts), or **evidence-based** (achieving a specific technical risk level). The review process follows: Prepare → Conduct → Complete.
 
 ### Life Cycle Spectrum
 
-All life cycle approaches fall on a spectrum from fully plan-driven (high certainty, stable requirements) to fully agile/emergent (high uncertainty, evolving requirements). Neither extreme is common in practice. The DevOps/DevSecOps infinity loop model represents one end of this spectrum, where there is no distinction between development and support — the work is never "done" — and retirement risks are considered negligible.
+All life cycle approaches fall on a spectrum from fully plan-driven (high certainty, stable requirements) to fully agile/emergent (high uncertainty, evolving requirements). Neither extreme is common in practice. The DevOps/DevSecOps infinity loop model represents one end of this spectrum, where there is no distinction between development and support (the work is never "done") and retirement risks are considered negligible.
 
 ## Development Approaches
 
@@ -67,9 +67,9 @@ The sequential approach follows a structured, phase-based process. The original 
 **Practical considerations:** Late modifications are costly and time-consuming. Early engagement in requirement analysis and design is critical. Verification and validation typically occur after integration, demanding thorough interface definitions and systems thinking during earlier phases.
 
 **Vee Model:** An extension of the Waterfall model that integrates verification and validation explicitly. Visualized as a "V" shape:
-- **Left side (decomposition):** System definition — requirements flow down from system to subsystem to component
+- **Left side (decomposition):** System definition. Requirements flow down from system to subsystem to component
 - **Bottom:** The "build" point
-- **Right side (integration):** System realization — verification and validation flow upward from component to subsystem to system
+- **Right side (integration):** System realization. Verification and validation flow upward from component to subsystem to system
 
 The Vee model highlights continuous validation with stakeholders, the need to define verification plans during requirements development, and the importance of continuous risk assessment. It depicts relationships between decomposition and integration levels, encouraging engineers to think ahead about how each part will be verified to reduce late failures. Note: the Vee Model covers only the development stage, not the full life cycle.
 
@@ -79,7 +79,7 @@ The Vee model highlights continuous validation with stakeholders, the need to de
 
 System development proceeds through repeated cycles of planning, designing, implementing, and evaluating. Each cycle may result in a tangible increment (deliverable/prototype) or serve as a learning opportunity. Early increments provide stakeholders with partial versions enabling verification, validation, and feedback before the final system is complete.
 
-**Practical considerations:** Traceability and configuration management take on different character than sequential — requirements, design elements, and interfaces may evolve over iterations. Robust version control and clear documentation of assumptions are essential. Validation and verification activities are distributed across the timeline rather than concentrated at the end, demanding flexible test planning.
+**Practical considerations:** Traceability and configuration management take on different character than sequential: requirements, design elements, and interfaces may evolve over iterations. Robust version control and clear documentation of assumptions are essential. Validation and verification activities are distributed across the timeline rather than concentrated at the end, demanding flexible test planning.
 
 **Incremental Commitment Spiral Model (ICSM):** A modern incremental approach extending Boehm's Spiral Model. Divides development into a series of cycles, each leading to a commitment review. Stakeholders and engineers make incremental commitments only as far as evidence and confidence gathered in each cycle justify. Each cycle involves stakeholder engagement, feasibility assessments, risk analysis, and prototype development. Provides clear decision checkpoints useful in defense, transportation, and critical infrastructure.
 
@@ -89,9 +89,9 @@ System development proceeds through repeated cycles of planning, designing, impl
 
 Systems are developed, built, and delivered in a series of working iterations, each released to users. Feedback from users, performance data, and market response shape subsequent versions. Each iteration adds new capabilities or improves existing ones.
 
-**Practical considerations:** Architecture must be modular and scalable to accommodate extension without major rework. Interfaces should be well-defined and loosely coupled. Each iteration must meet quality standards independently. Traceability and configuration management are even more important — maintaining clear documentation of what changed, why, and its impact is essential. Close ongoing collaboration with stakeholders is vital.
+**Practical considerations:** Architecture must be modular and scalable to accommodate extension without major rework. Interfaces should be well-defined and loosely coupled. Each iteration must meet quality standards independently. Traceability and configuration management are even more important. Maintaining clear documentation of what changed, why, and its impact is essential. Close ongoing collaboration with stakeholders is vital.
 
-**DevOps as example:** A set of principles blending development, operations, and continuous feedback loops. Promotes CI/CD (continuous integration / continuous delivery), enabling rapid iteration and frequent releases. Can also be understood as a life cycle model — an infinite repetition of development and operations.
+**DevOps as example:** A set of principles blending development, operations, and continuous feedback loops. Promotes CI/CD (continuous integration / continuous delivery), enabling rapid iteration and frequent releases. Can also be understood as a life cycle model: an infinite repetition of development and operations.
 
 ### Agile Development Approach
 
@@ -107,21 +107,21 @@ Agile development is based on iterative development, frequent inspection and ada
 
 These principles were crafted for software development and may not transfer seamlessly to the broader domain of systems engineering, which involves hardware, human elements, and processes with different considerations, timelines, and integration points.
 
-**Practical considerations:** Teams use system-level user stories ("As a <role>, I want <activity> so that <business value>"). Frequent stand-ups, sprint planning, reviews, and retrospectives foster continuous learning. Decision points avoid terms like "milestones" and "decision gates" — stakeholder interaction is more frequent, smaller in scope, and less formal.
+**Practical considerations:** Teams use system-level user stories ("As a <role>, I want <activity> so that <business value>"). Frequent stand-ups, sprint planning, reviews, and retrospectives foster continuous learning. Decision points avoid terms like "milestones" and "decision gates". Stakeholder interaction is more frequent, smaller in scope, and less formal.
 
-**Frameworks:** Scrum (most widely used — time-boxed sprints, defined roles), SAFe (Scaled Agile Framework — scales Agile across multiple teams with synchronized delivery cycles), and LeSS (Large-Scale Scrum — a lighter-weight alternative extending Scrum principles to multiple teams).
+**Frameworks:** Scrum (most widely used: time-boxed sprints, defined roles), SAFe (Scaled Agile Framework, scales Agile across multiple teams with synchronized delivery cycles), and LeSS (Large-Scale Scrum, a lighter-weight alternative extending Scrum principles to multiple teams).
 
 ### Lean Engineering
 
 **Lean Systems Engineering (LSE)** is the application of lean thinking to SE and related enterprise and project management. The goal is to deliver the best life-cycle value for technically complex systems with minimal waste.
 
 **Six Lean Principles (Oppenheim, 2011):**
-1. **Capture value defined by the customer** — with precision, clarity, and completeness before resource expenditures ramp up.
-2. **Map the value stream and eliminate waste** — map end-to-end linked tasks and eliminate non-value-added activities.
-3. **Flow the work** — through planned, streamlined value-adding steps without stopping, unplanned rework, or backflow.
-4. **Let customers pull value** — every task must be justified by a specific need and completed when the customer needs the output.
-5. **Pursue perfection** — continuously improve processes (distinguish process improvement from work output refinement, which is bounded by value proposition).
-6. **Respect for people** — people are the most important resource; they identify problems honestly and plan solutions by consensus.
+1. **Capture value defined by the customer**: with precision, clarity, and completeness before resource expenditures ramp up.
+2. **Map the value stream and eliminate waste**: map end-to-end linked tasks and eliminate non-value-added activities.
+3. **Flow the work**: through planned, streamlined value-adding steps without stopping, unplanned rework, or backflow.
+4. **Let customers pull value**: every task must be justified by a specific need and completed when the customer needs the output.
+5. **Pursue perfection**: continuously improve processes (distinguish process improvement from work output refinement, which is bounded by value proposition).
+6. **Respect for people**: people are the most important resource; they identify problems honestly and plan solutions by consensus.
 
 **Lean Enablers for Systems Engineering (LEfSE):** A collection of "dos" and "don'ts" of SE based on lean thinking, covering a spectrum of SE and enterprise management practices. Not intended to be mandatory but to serve as a checklist of good practices.
 
@@ -187,9 +187,9 @@ Life cycle models must be **continuously evaluated and improved** to keep pace w
 
 ### Adapting the Life Cycle Model
 
-Adaptation tailors the model to specific project needs — adding, deleting, combining, or modifying stages and their entry/exit criteria. Adaptation guidelines specify the extent to which models may be adapted; exceeding these limits requires organizational approval. All adaptations must be documented.
+Adaptation tailors the model to specific project needs: adding, deleting, combining, or modifying stages and their entry/exit criteria. Adaptation guidelines specify the extent to which models may be adapted; exceeding these limits requires organizational approval. All adaptations must be documented.
 
-**Adaptation for multi-party scenarios:** An organization might buy a concept, develop the system, outsource production, sell to a customer who operates it, and handle disposal — requiring careful management of life cycle stage boundaries and transitions.
+**Adaptation for multi-party scenarios:** An organization might buy a concept, develop the system, outsource production, sell to a customer who operates it, and handle disposal, requiring careful management of life cycle stage boundaries and transitions.
 
 **Adaptation for domains:** A life cycle model appropriate for software may differ from one for hardware. A system with both may use a combination of life cycle models, synchronized at certain points.
 
@@ -217,7 +217,7 @@ Since every project is unique, the development approach must be adapted. Reasons
 
 **Adaptation for domains:** For large complex systems using different approaches for different elements, development results must be regularly aligned. Intervals should not be too short (hardware doesn't change as fast as software) or too long (design decisions may be made without cross-domain consideration).
 
-**Adaptation for quality characteristics:** Certain quality characteristics dominate — stealth in military submarines demands tight cross-element coordination; safety and security in healthcare demand predictability, stability, repeatability, and high assurance (characteristics of sequential approaches).
+**Adaptation for quality characteristics:** Certain quality characteristics dominate. Stealth in military submarines demands tight cross-element coordination; safety and security in healthcare demand predictability, stability, repeatability, and high assurance (characteristics of sequential approaches).
 
 ## Process Concepts
 
@@ -241,11 +241,11 @@ System life cycle processes are not linear and sequential. Three concepts ensure
 
 **Concurrency:** Performing two or more processes in parallel when they do not strongly depend on each other's outputs. Risk management and measurement processes are typically continuous and concurrent. Processes like requirements definition, architecture definition, and verification may occur simultaneously.
 
-**Iteration:** Repeated application and interaction between processes to accommodate stakeholder decisions, incorporate learning and feedback, and handle evolving understanding, architectural constraints, and trade-offs. Frequently occurs between system requirements definition and system architecture definition — evolving requirements drive architectural changes, which prompt updates to requirements, design, or trade-offs.
+**Iteration:** Repeated application and interaction between processes to accommodate stakeholder decisions, incorporate learning and feedback, and handle evolving understanding, architectural constraints, and trade-offs. Frequently occurs between system requirements definition and system architecture definition. Evolving requirements drive architectural changes, which prompt updates to requirements, design, or trade-offs.
 
 **Recursion:** Repeated application of life cycle processes throughout the system structure (decomposition layers). Technical Management and Technical Processes are applied recursively at each level until decisions on make, buy, or reuse are made. Outputs from one element level serve as inputs for another, ensuring consistency and integrity across the system hierarchy.
 
-The process activity intensity varies across the life cycle — often visualized as a "hump diagram" where each process peaks during its primary stage but has through-life presence. Solution synthesis typically employs a combination of top-down (problem to solution) and bottom-up (evolution of existing solutions) approaches, often referred to as "middle-out."
+The process activity intensity varies across the life cycle, often visualized as a "hump diagram" where each process peaks during its primary stage but has through-life presence. Solution synthesis typically employs a combination of top-down (problem to solution) and bottom-up (evolution of existing solutions) approaches, often referred to as "middle-out."
 
 ## Process Selection and Tailoring
 
@@ -255,7 +255,7 @@ Selecting appropriate life cycle processes is a strategic challenge. The goal is
 
 **Core principles:**
 - **Risk and context:** Process rigor should match system complexity, criticality, and regulatory environment.
-- **Tailoring upfront:** Consider it from the start — it will happen. A process framework with tailoring guidelines is more effective than a single uniform process.
+- **Tailoring upfront:** Consider it from the start. It will happen. A process framework with tailoring guidelines is more effective than a single uniform process.
 - **Traceability:** End-to-end traceability between requirements, design, implementation, verification, and other artifacts.
 - **Tool and data integration:** Processes connect with PLM/ALM/CM tools for automation, audit trails, and reporting.
 - **Governance and accountability:** Clear process ownership, change control boards, and role definitions.
@@ -265,13 +265,13 @@ Selecting appropriate life cycle processes is a strategic challenge. The goal is
 ### Using ISO/IEC/IEEE 24748-2
 
 ISO/IEC/IEEE 24748-2 provides guidelines for applying ISO/IEC/IEEE 15288. It addresses:
-- **Application strategy** — plan, adapt, pilot, formalize, institutionalize
-- **System concepts** — defining SoI, system structure, interfacing/enabling/interoperating systems
-- **Life cycle concepts** — generic stages, decision gates, application approaches
-- **Organizational concepts** — internal application or through agreements
-- **Project concepts** — how the four process groups establish common understanding
-- **Process concepts** — detailed guidelines for each 15288 process
-- **Conformance and adaptation concepts** — guidelines for tailoring
+- **Application strategy**: plan, adapt, pilot, formalize, institutionalize
+- **System concepts**: defining SoI, system structure, interfacing/enabling/interoperating systems
+- **Life cycle concepts**: generic stages, decision gates, application approaches
+- **Organizational concepts**: internal application or through agreements
+- **Project concepts**: how the four process groups establish common understanding
+- **Process concepts**: detailed guidelines for each 15288 process
+- **Conformance and adaptation concepts**: guidelines for tailoring
 
 ISO/IEC/IEEE 15288 serves as a foundation for domain-specific standards (ASPICE, ISO 26262, DO-178C, DO-254, IEC 62304, ISO 13485).
 
@@ -285,13 +285,13 @@ Tailoring adapts ISO/IEC/IEEE 15288 processes to the specific project environmen
 - **Fact-based tailoring:** Decisions based on evidence and risk assessment, not intuition. Use structured Decision Management to document alternatives, trade-offs, and rationales.
 - **Document assumptions and rationale:** Every tailoring choice should be explicitly justified and recorded.
 - **Collaborate with stakeholders:** Involve acquirers, suppliers, and regulators in defining and approving the tailoring approach.
-- **Integrate with project planning:** Tailoring should be conducted in parallel with planning — scope, schedule, budget, milestones are linked to chosen processes.
+- **Integrate with project planning:** Tailoring should be conducted in parallel with planning. Scope, schedule, budget, milestones are linked to chosen processes.
 - **Dynamic assessment and control:** Tailoring is not static. Effectiveness and efficiency should be continuously assessed and adjusted as risks and circumstances evolve.
 - **Purpose-driven tool selection:** Tools should support tailored processes; process comes before tool.
 
 **Common tailoring traps:**
 - Reusing baselines blindly without revisiting assumptions
-- Over-engineering — applying all processes "just to be safe"
+- Over-engineering: applying all processes "just to be safe"
 - Assuming uniformity across all projects
 - Failing to engage stakeholders, leading to lack of buy-in
 
@@ -303,17 +303,17 @@ Tailoring adapts ISO/IEC/IEEE 15288 processes to the specific project environmen
 
 ## Essential Concepts
 
-- **Life cycle ≠ development approach.** The adjectives "waterfall," "incremental," and "evolutionary" apply to the development stage only — not to the life cycle as a whole. There is no such thing as "waterfall production" or "evolutionary retirement."
+- **Life cycle ≠ development approach.** The adjectives "waterfall," "incremental," and "evolutionary" apply to the development stage only, not to the life cycle as a whole. There is no such thing as "waterfall production" or "evolutionary retirement."
 
 - **Sequential approaches still iterate.** Fully sequential approaches are purely theoretical. In practice, sequential development incorporates planned iterations, especially in early phases, while maintaining an overall linear flow with well-defined stage boundaries.
 
-- **Agile SE is about *being* agile, not *doing* agile.** It's a strategic capability — sense changes, respond effectively, evolve solutions — not a fixed method. The eight core aspects work in concert; the degree of agility depends on how many are operational and how effectively each contributes.
+- **Agile SE is about *being* agile, not *doing* agile.** It's a strategic capability (sense changes, respond effectively, evolve solutions), not a fixed method. The eight core aspects work in concert; the degree of agility depends on how many are operational and how effectively each contributes.
 
-- **DevOps can be both a development approach and a life cycle model.** As a development approach, it's evolutionary — continuous iteration, deployment, and feedback. As a life cycle model (infinity loop), it removes the distinction between development and support, with work never truly "done."
+- **DevOps can be both a development approach and a life cycle model.** As a development approach, it's evolutionary: continuous iteration, deployment, and feedback. As a life cycle model (infinity loop), it removes the distinction between development and support, with work never truly "done."
 
 - **The Vee model is not a life cycle model.** It covers only the development stage. It visualizes the relationship between system definition (decomposition) and system realization (integration), emphasizing that verification planning should begin during requirements development.
 
-- **Process descriptions require only Name, Purpose, and Outcomes** (ISO/IEC/IEEE 24774). Activities, tasks, inputs, and outputs are optional elaborations. The core elements focus on the intended results — the "what" — without prescribing the "how."
+- **Process descriptions require only Name, Purpose, and Outcomes** (ISO/IEC/IEEE 24774). Activities, tasks, inputs, and outputs are optional elaborations. The core elements focus on the intended results (the "what") without prescribing the "how."
 
 - **Processes are not executed in serial, sequential fashion.** Concurrency (parallel execution), iteration (repeated application for refinement), and recursion (application at each system hierarchy level) are fundamental to effective SE practice.
 
@@ -321,7 +321,7 @@ Tailoring adapts ISO/IEC/IEEE 15288 processes to the specific project environmen
 
 - **Life cycle models should be organization-specific and continuously improved.** Models that work excellently in one organization cannot easily be transferred. They must be reviewed and adapted as the organization, technology, and market change.
 
-- **Tailoring balances risk and process overhead.** The goal is not minimizing process effort or maximizing bureaucracy — it's applying the right processes, at the right level of rigor, at the right time.
+- **Tailoring balances risk and process overhead.** The goal is not minimizing process effort or maximizing bureaucracy. It's applying the right processes, at the right level of rigor, at the right time.
 
 - **Tailoring is dynamic, not one-time.** As risks and circumstances evolve throughout the project, tailoring should be revisited and adjusted. It requires continuous assessment and control.
 
@@ -337,20 +337,20 @@ Tailoring adapts ISO/IEC/IEEE 15288 processes to the specific project environmen
 
 | Standard | Title |
 |---|---|
-| ISO/IEC/IEEE 15288:2023 | Systems and software engineering — System life cycle processes |
-| ISO/IEC/IEEE 24748-1:2024 | Life cycle management — Part 1: Guidelines for life cycle management |
-| ISO/IEC/IEEE 24748-2:2024 | Life cycle management — Part 2: Guidelines for the application of ISO/IEC/IEEE 15288 |
-| ISO/IEC/IEEE 24748-8:2019 | Life cycle management — Part 8: Technical reviews and audits on defense programs |
-| ISO/IEC/IEEE 24748-10:2026 | Life cycle management — Part 10: Guidelines for systems engineering agility |
-| ISO/IEC/IEEE 24774:2021 | Life cycle management — Specification for process description |
-| ISO/IEC/IEEE 32675:2022 | Information technology — DevOps — Building reliable and secure systems |
+| ISO/IEC/IEEE 15288:2023 | Systems and software engineering: System life cycle processes |
+| ISO/IEC/IEEE 24748-1:2024 | Life cycle management: Part 1: Guidelines for life cycle management |
+| ISO/IEC/IEEE 24748-2:2024 | Life cycle management: Part 2: Guidelines for the application of ISO/IEC/IEEE 15288 |
+| ISO/IEC/IEEE 24748-8:2019 | Life cycle management: Part 8: Technical reviews and audits on defense programs |
+| ISO/IEC/IEEE 24748-10:2026 | Life cycle management: Part 10: Guidelines for systems engineering agility |
+| ISO/IEC/IEEE 24774:2021 | Life cycle management: Specification for process description |
+| ISO/IEC/IEEE 32675:2022 | Information technology: DevOps: Building reliable and secure systems |
 | ISO/IEC/IEEE 26515:2018 | Developing information for users in an agile environment |
 | INCOSE SEH v5 (2023) | Systems Engineering Handbook, 5th Edition |
 
 ## Related Chapters
 
 - [[00_Introduction_to_SEBoK]]: Foundational SE principles and the systems approach
-- [[03_Systems_Science_and_Thinking]]: The intellectual foundation — concurrency, iteration, recursion in problem-solving
+- [[03_Systems_Science_and_Thinking]]: The intellectual foundation: concurrency, iteration, recursion in problem-solving
 - [[07_System_Definition_and_Architecture]]: Concept definition and requirements definition processes
 - [[08_System_Realization_and_Maintenance]]: Implementation, integration, verification, and validation processes
 - [[06_Technical_Management_Processes]]: Project planning, assessment, control, risk, and decision management

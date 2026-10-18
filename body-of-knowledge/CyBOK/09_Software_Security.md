@@ -1,7 +1,7 @@
 ---
 title: "Software Security"
 tags: [software-security, cyber-security, cybok]
-source: "CyBOK v1.1 — Chapter 15 (Software Security Knowledge Area)"
+source: "CyBOK v1.1: Chapter 15 (Software Security Knowledge Area)"
 author: "Frank Piessens, KU Leuven"
 date: 2021-07
 ---
@@ -26,16 +26,16 @@ Occur primarily in **memory-unsafe languages** (C, C++), where the language spec
 
 | Type | Description | Example |
 |------|-------------|---------|
-| **Spatial** | Indexing out-of-bounds into a valid memory range | **Buffer Overflow** — accessing array beyond its bounds |
+| **Spatial** | Indexing out-of-bounds into a valid memory range | **Buffer Overflow**: accessing array beyond its bounds |
 | **Temporal** | Accessing memory that was deallocated | **Use-After-Free** / dereferencing a dangling pointer |
 
 **Attack techniques exploiting memory vulnerabilities:**
-- **Code corruption attack** — modify compiled program code to attacker-specified code
-- **Control-flow hijack** — modify a code pointer (return address, function pointer) to execute attacker code:
-  - *Direct code injection* — inject and execute attacker-provided code
-  - *Code-reuse attack* — reuse existing code (e.g., **Return-to-Libc**, **Return-Oriented Programming (ROP)**)
-- **Data-only attack** — modify data variables to escalate privileges
-- **Information leak** — read memory to exfiltrate secrets or runtime metadata (e.g., addresses for bypassing **ASLR**)
+- **Code corruption attack**: modify compiled program code to attacker-specified code
+- **Control-flow hijack**: modify a code pointer (return address, function pointer) to execute attacker code:
+  - *Direct code injection*: inject and execute attacker-provided code
+  - *Code-reuse attack*: reuse existing code (e.g., **Return-to-Libc**, **Return-Oriented Programming (ROP)**)
+- **Data-only attack**: modify data variables to escalate privileges
+- **Information leak**: read memory to exfiltrate secrets or runtime metadata (e.g., addresses for bypassing **ASLR**)
 
 ### 1.2 Structured Output Generation Vulnerabilities
 
@@ -52,18 +52,18 @@ Also known as ****Injection Vulnerabilities****:
 
 **Key challenges:**
 - Structured output languages may support sub-languages (e.g., HTML contains JavaScript, CSS, SVG)
-- **Higher-order / stored injection** — output from one phase is stored and later used as input for another phase (e.g., stored XSS, second-order SQL injection)
+- **Higher-order / stored injection**: output from one phase is stored and later used as input for another phase (e.g., stored XSS, second-order SQL injection)
 
 ### 1.3 Race Condition Vulnerabilities
 
-Occur when a program shares resources with concurrent actors and the program's assumptions about the environment are violated. This introduces **non-determinism** — behaviour depends on timing/interleaving.
+Occur when a program shares resources with concurrent actors and the program's assumptions about the environment are violated. This introduces **non-determinism**. Behaviour depends on timing/interleaving.
 
-- ****TOCTOU** (Time-of-Check, Time-of-Use)** — the attacker invalidates a condition between when it is checked and when it is used
+- ****TOCTOU** (Time-of-Check, Time-of-Use)**: the attacker invalidates a condition between when it is checked and when it is used
 - Common in: filesystem access by privileged programs, multi-threaded web servers, session state in web applications
 
 ### 1.4 API Vulnerabilities
 
-Violations of **API contracts** — using an API incorrectly can put the system in an error state exploitable by attackers.
+Violations of **API contracts**. Using an API incorrectly can put the system in an error state exploitable by attackers.
 
 - Particularly dangerous with **security-sensitive APIs**: cryptographic libraries, access control mechanisms
 - Empirical evidence shows developers frequently misuse cryptographic APIs, introducing vulnerabilities
@@ -73,15 +73,15 @@ Violations of **API contracts** — using an API incorrectly can put the system 
 
 A **side-channel** is an information channel that communicates about program execution via effects from which the program's code abstracts (e.g., power consumption, EM radiation, execution time, micro-architectural state like caches).
 
-- **Software-based side-channels** — observable from software running on the same hardware (e.g., cache timing)
+- **Software-based side-channels**: observable from software running on the same hardware (e.g., cache timing)
 - Most commonly a **confidentiality threat** (leaking information), but can also be an integrity threat (**fault injection**)
-- Example: **Rowhammer** — crafted memory access patterns flip bits in DRAM
-- Closely related: **covert channels** — attacker controls both the leaking program and the observing program
+- Example: **Rowhammer**. Crafted memory access patterns flip bits in DRAM
+- Closely related: **covert channels**. Attacker controls both the leaking program and the observing program
 
 ### 1.6 Discussion
 
 - **Information flow security**: Some security objectives cannot be expressed as properties of single executions. e.g., requiring that confidential inputs never influence public outputs across *any* pair of executions.
-- **Side-channel uniqueness**: Side-channel vulnerabilities are not violations of source-code-level specifications — they use effects the source code abstracts from.
+- **Side-channel uniqueness**: Side-channel vulnerabilities are not violations of source-code-level specifications: they use effects the source code abstracts from.
 - **Vulnerabilities as faults**: Implementation vulnerabilities can be understood through the lens of **Dependable Computing** fault taxonomies.
 
 ---
@@ -102,12 +102,12 @@ A language is **memory-safe** if its definition implies no untrapped memory mana
 
 - **Memory-safe languages**: Java, C#, Python, Haskell, Rust, SPARK (via a combination of static/dynamic checks and garbage collection)
 - **Not memory-safe**: C, C++ (language definition allows untrapped errors; safe implementations exist at performance cost)
-- **Rust** achieves memory safety without garbage collection via an **ownership type system** — the compiler statically reasons about pointer lifetimes
+- **Rust** achieves memory safety without garbage collection via an **ownership type system**: the compiler statically reasons about pointer lifetimes
 
 #### Structured Output Generation
 
-- **Regular expression types** — XML documents as first-class values with typed structure guarantees
-- ****LINQ**** (Language Integrated Query) — query expressions as language syntax rather than string concatenation
+- **Regular expression types**: XML documents as first-class values with typed structure guarantees
+- ****LINQ**** (Language Integrated Query): query expressions as language syntax rather than string concatenation
 
 #### Race Conditions
 
@@ -117,7 +117,7 @@ A language is **memory-safe** if its definition implies no untrapped memory mana
 
 ### 2.2 API Design
 
-APIs should be designed to **avoid untrapped execution errors** — make it hard to violate the API contract, and trap violations when they occur.
+APIs should be designed to **avoid untrapped execution errors**: make it hard to violate the API contract, and trap violations when they occur.
 
 | Approach | Examples |
 |----------|----------|
@@ -125,7 +125,7 @@ APIs should be designed to **avoid untrapped execution errors** — make it hard
 | Safer structured output APIs | **Prepared Statements**, ORM frameworks, LINQ libraries |
 | Safer cryptography APIs | Simplification, secure defaults, better documentation, auxiliary task support |
 | **Design by contract** | Explicit pre-conditions/post-conditions, defensive programming |
-| **Object-capability systems** | Language + API supporting least privilege — each code part only has needed privileges |
+| **Object-capability systems** | Language + API supporting least privilege: each code part only has needed privileges |
 
 ### 2.3 Coding Practices
 
@@ -154,8 +154,8 @@ Detection techniques operate on existing source code and must trade off between:
 
 | Property | Meaning | Approach |
 |----------|---------|----------|
-| **Soundness** | No false negatives (finds all vulnerabilities) | Static analysis — covers all executions via abstraction |
-| **Completeness** | No false positives (all reported are real) | Dynamic testing — concrete executions as witnesses |
+| **Soundness** | No false negatives (finds all vulnerabilities) | Static analysis: covers all executions via abstraction |
+| **Completeness** | No false positives (all reported are real) | Dynamic testing: concrete executions as witnesses |
 
 **Rice's Theorem** implies no technique can be both sound and complete for non-trivial categories.
 
@@ -182,7 +182,7 @@ Aims to be sound for well-defined vulnerability categories (defined as specifica
 |-----------|-------------|
 | **Program Verification** | Uses program logics (e.g., **Separation Logic**) with programmer-provided invariants, pre/post-conditions. Typically interactive, not automatic. |
 | **Abstract Interpretation** | Maps concrete values to finite abstract domains; automatic for imperative programs without dynamic allocation/recursion. |
-| **Model Checking** | Exhaustive state exploration; limited by state explosion. **Bounded model checking** limits loop iterations — unsound but finds many vulnerabilities. |
+| **Model Checking** | Exhaustive state exploration; limited by state explosion. **Bounded model checking** limits loop iterations: unsound but finds many vulnerabilities. |
 
 > **"Soundiness"**: In practice, implementations under-approximate some language features to reduce false positives, sacrificing soundness for usefulness. See the [Soundiness Manifesto](https://soundiness.org/).
 
@@ -193,18 +193,18 @@ Executes the program and monitors for vulnerability indicators. Two aspects: **h
 #### 3.2.1 Monitoring
 
 - **Memory management**: Complete monitors possible but expensive; modern C compilers include monitoring options (compiler-instrumented)
-- **Structured output**: No explicit specification to monitor — relies on heuristics like fine-grained dynamic taint analysis tracking untrusted input's impact on parse trees
+- **Structured output**: No explicit specification to monitor; relies on heuristics like fine-grained dynamic taint analysis tracking untrusted input's impact on parse trees
 - **API contracts**: Design-by-contract assertions compiled into runtime checks
 - **Race conditions**: Monitoring for consistent locking disciplines
 
-#### 3.2.2 Generating Relevant Executions — Fuzzing
+#### 3.2.2 Generating Relevant Executions: Fuzzing
 
 ****Fuzz Testing**** generates inputs to discover new vulnerabilities:
 
 | Type | Approach |
 |------|----------|
 | **Black-box fuzzing** | Depends only on I/O behaviour: random, model-based (grammar-driven), or mutation-based |
-| **White-box fuzzing** | Analyses internal program structure. Key technique: ****Dynamic Symbolic Execution**** — builds path conditions (logical constraints) and solves for inputs that drive new execution paths |
+| **White-box fuzzing** | Analyses internal program structure. Key technique: ****Dynamic Symbolic Execution****; builds path conditions (logical constraints) and solves for inputs that drive new execution paths |
 
 ---
 
@@ -219,8 +219,8 @@ Detect attacks by monitoring execution for property violations:
 | Technique | What It Detects |
 |-----------|----------------|
 | ****Stack Canaries**** | Corruption of activation records; detects return address modification |
-| **NX (No-eXecute) / DEP** | Direct code injection — prevents execution from data memory |
-| ****Control-Flow Integrity (CFI)**** | Code-reuse attacks — monitors whether runtime control flow complies with expected CFG |
+| **NX (No-eXecute) / DEP** | Direct code injection: prevents execution from data memory |
+| ****Control-Flow Integrity (CFI)**** | Code-reuse attacks: monitors whether runtime control flow complies with expected CFG |
 
 On detection, the typical response is **program termination** (protects against further damage but impacts availability).
 
@@ -228,7 +228,7 @@ On detection, the typical response is **program termination** (protects against 
 
 Exploitation often relies on implementation details (memory layout, database specifics). **Diversifying** these details raises the bar:
 
-- ****ASLR** (Address Space Layout Randomization)** — randomises code, stack, and heap layout
+- ****ASLR** (Address Space Layout Randomization)**: randomises code, stack, and heap layout
   - Coarse-grained: random base addresses for segments
   - Fine-grained: random addresses for individual functions, stack frames, or heap objects
 - Compilation-time / installation-time diversification
@@ -238,16 +238,16 @@ Exploitation often relies on implementation details (memory layout, database spe
 
 Constrain what exploited software can do:
 
-- ****Sandboxing**** — execute software in a controlled environment with resource access policies (VM, OS process, jails, Java sandbox)
-- **Compartimentalisation** — divide software into compartments, each with bounded privileges (e.g., browser rendering engine denied filesystem access)
-- **Object-capability systems** — each application-level object is its own protection domain (finest granularity)
+- ****Sandboxing****: execute software in a controlled environment with resource access policies (VM, OS process, jails, Java sandbox)
+- **Compartimentalisation**: divide software into compartments, each with bounded privileges (e.g., browser rendering engine denied filesystem access)
+- **Object-capability systems**: each application-level object is its own protection domain (finest granularity)
 - For side-channels: **isolation** on separate cores or hardware
 
 ### 4.4 Software Integrity Checking
 
 Under the umbrella of ****Trusted Computing****: measure system state and enforce access only from trusted states.
 
-- **Trusted Boot** — accumulates measurements for each executed program; modifications (e.g., from attacks) produce different measurements
+- **Trusted Boot**: accumulates measurements for each executed program; modifications (e.g., from attacks) produce different measurements
 - Secret keys accessible only from a state with a specified measurement
 
 ---
@@ -266,8 +266,8 @@ Under the umbrella of ****Trusted Computing****: measure system state and enforc
 
 ## Further Reading
 
-- **Building Secure Software** (Viega & McGraw, 2002) — first book on developing secure programs
-- **24 Deadly Sins of Software Security** (Howard, LeBlanc & Viega) — updated catalogue of vulnerabilities
-- **The Art of Software Security Assessment** (Dowd, McDonald & Schuh) — detailed vulnerability class descriptions
-- **Surreptitious Software** (Collberg & Nagra) — obfuscation, watermarking, tamperproofing
-- ****OWASP** Resources** — practice-oriented guides, tools, and awareness instruments for application security
+- **Building Secure Software** (Viega & McGraw, 2002): first book on developing secure programs
+- **24 Deadly Sins of Software Security** (Howard, LeBlanc & Viega): updated catalogue of vulnerabilities
+- **The Art of Software Security Assessment** (Dowd, McDonald & Schuh): detailed vulnerability class descriptions
+- **Surreptitious Software** (Collberg & Nagra): obfuscation, watermarking, tamperproofing
+- ****OWASP** Resources**: practice-oriented guides, tools, and awareness instruments for application security

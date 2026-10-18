@@ -8,13 +8,13 @@ tags:
 - sebok
 ---
 
-# 18 — SE and Quality Attributes
+# 18: SE and Quality Attributes
 
-> *Source: SEBoK v2, Part 6 — Systems Engineering and Quality Attributes*
+> *Source: SEBoK v2, Part 6: Systems Engineering and Quality Attributes*
 
 ## Purpose
 
-This chapter summarizes the **Systems Engineering and Quality Attributes** Knowledge Area (KA) from Part 6 of the SEBoK. Every system has properties that are largely a function of the system as a whole rather than just its constituent parts — properties such as security, reliability, safety, resistance to electromagnetic interference, usability, and resilience. Alternatively called **quality attributes**, **non-functional requirements**, **-ilities**, or **specialties**, these properties are often interdependent rather than orthogonal; trade-offs among them are a core responsibility of the systems engineer. The term **specialty engineering** refers to the collective engineering of all quality attributes of a system.
+This chapter summarizes the **Systems Engineering and Quality Attributes** Knowledge Area (KA) from Part 6 of the SEBoK. Every system has properties that are largely a function of the system as a whole rather than just its constituent parts: properties such as security, reliability, safety, resistance to electromagnetic interference, usability, and resilience. Alternatively called **quality attributes**, **non-functional requirements**, **-ilities**, or **specialties**, these properties are often interdependent rather than orthogonal; trade-offs among them are a core responsibility of the systems engineer. The term **specialty engineering** refers to the collective engineering of all quality attributes of a system.
 
 ---
 
@@ -22,7 +22,7 @@ This chapter summarizes the **Systems Engineering and Quality Attributes** Knowl
 
 ### Loss-Driven Systems Engineering (LDSE)
 
-A unifying framework views many quality attributes through the **lens of loss**. Loss-driven systems engineering (LDSE) is the value-adding unification of specialty areas that address potential losses associated with developing and using systems — including resilience, safety, security, operational risk, environmental protection, quality, and availability.
+A unifying framework views many quality attributes through the **lens of loss**. Loss-driven systems engineering (LDSE) is the value-adding unification of specialty areas that address potential losses associated with developing and using systems, including resilience, safety, security, operational risk, environmental protection, quality, and availability.
 
 **Commonality among loss-driven areas**: They share assets, loss types, adversity types, coping strategies, and aspects of the system/environment under consideration. Synergies include shared loss scenarios, requirements, modeling/analysis techniques, architecture/design solutions, and risk management.
 
@@ -45,23 +45,23 @@ Specialty engineering must be integrated throughout the project life cycle. The 
 
 ## Human Systems Integration
 
-**Human Systems Integration (HSI)** is "the management and technical discipline of planning, enabling, coordinating, and optimizing all human-related considerations during system design, development, test, production, use, and disposal" (SAE 2019). Initiated by the U.S. DoD as part of the "total system approach" to acquisition, HSI aims to optimize total system performance — hardware, software, and human.
+**Human Systems Integration (HSI)** is "the management and technical discipline of planning, enabling, coordinating, and optimizing all human-related considerations during system design, development, test, production, use, and disposal" (SAE 2019). Initiated by the U.S. DoD as part of the "total system approach" to acquisition, HSI aims to optimize total system performance: hardware, software, and human.
 
 ### Seven HSI Domains (DoD)
 
-1. **Manpower** — Determining the most efficient and cost-effective mix of manpower and contract support
-2. **Personnel** — Selecting appropriate cognitive, physical, and social capabilities for operators and maintainers
-3. **Training** — Developing efficient options for individual, collective, and joint training
-4. **Human Factors Engineering (HFE)** — Designing human-machine interfaces consistent with user physical, cognitive, and sensory abilities
-5. **Safety & Occupational Health** — Minimizing risks of illness, disability, injury, and death
-6. **Force Protection & Survivability** — Protecting individuals from direct threat events and accidents
-7. **Habitability** — Establishing living and working conditions that sustain morale, safety, health, and comfort
+1. **Manpower**: Determining the most efficient and cost-effective mix of manpower and contract support
+2. **Personnel**: Selecting appropriate cognitive, physical, and social capabilities for operators and maintainers
+3. **Training**: Developing efficient options for individual, collective, and joint training
+4. **Human Factors Engineering (HFE)**: Designing human-machine interfaces consistent with user physical, cognitive, and sensory abilities
+5. **Safety & Occupational Health**: Minimizing risks of illness, disability, injury, and death
+6. **Force Protection & Survivability**: Protecting individuals from direct threat events and accidents
+7. **Habitability**: Establishing living and working conditions that sustain morale, safety, health, and comfort
 
 ### Key Practices
 
 - HSI activities must begin early in system development and continue throughout
 - The human systems integrator is a member of the systems engineering team, not a domain specialist
-- HSI should not be confused with HFE — HFE is a domain within HSI; HSI is about mutual integration of technology, organizations, and people
+- HSI should not be confused with HFE. HFE is a domain within HSI; HSI is about mutual integration of technology, organizations, and people
 - Key tools: C3TRACE, CHIEF, HARPS, HSIF, IMPRINT
 - Pitfall: Relegating HSI to a "specialty engineering" team deprives the integrator of sufficient scope
 
@@ -71,7 +71,7 @@ Specialty engineering must be integrated throughout the project life cycle. The 
 
 **Manufacturability** is the ease of manufacture; **producibility** also encompasses other dimensions of the production task including packaging and shipping. Both attributes can be improved by incorporating proper design decisions that consider the entire system life cycle.
 
-The machines and processes used to build a system must be architected and designed — manufacturing equipment and processes can sometimes cost more than the system being built. Manufacturability and producibility can be a discriminator between competing system solution concepts and must be considered early, as well as during design maturation.
+The machines and processes used to build a system must be architected and designed. Manufacturing equipment and processes can sometimes cost more than the system being built. Manufacturability and producibility can be a discriminator between competing system solution concepts and must be considered early, as well as during design maturation.
 
 Key references include Design for Manufacturability (Boothroyd, Dewhurst, and Knight) and *The Art of Systems Architecting* (Maier and Rechtin).
 
@@ -79,14 +79,14 @@ Key references include Design for Manufacturability (Boothroyd, Dewhurst, and Kn
 
 ## System Affordability
 
-Affordability is the ability to fund desired investment — solutions are affordable if they can be deployed in sufficient quantity to meet mission needs within the likely available budget. **Design for affordability** is the practice of considering affordability as a design characteristic or constraint.
+Affordability is the ability to fund desired investment. Solutions are affordable if they can be deployed in sufficient quantity to meet mission needs within the likely available budget. **Design for affordability** is the practice of considering affordability as a design characteristic or constraint.
 
 ### Key Principles
 
 - Cost and schedule estimation must be coupled with technical SE trade-off analyses
 - Modularization of architecture around the most frequent sources of change (Parnas 1979) is a key SE principle for affordability
 - Extend the focus from life cycle costs to **total ownership costs**, encompassing costs of failures
-- Different stakeholders have different utility functions — resolving multi-criteria decision analysis (MCDA) problems is a central challenge
+- Different stakeholders have different utility functions. Resolving multi-criteria decision analysis (MCDA) problems is a central challenge
 - Methods needed: new trade-off analyses between cost, schedule, effectiveness, and resilience; methods to adjust priorities to meet budgets; more affordable development processes
 
 ---
@@ -103,7 +103,7 @@ Affordability is the ability to fund desired investment — solutions are afford
 
 ### Life Cycle Concerns
 
-Hardware assurance should be applied from architecture and design through manufacturing, testing, deployment, sustainment, and disposal. The "bake-in" principle applies — risks created early are challenging to address later. The value of the component and the cost of mitigating risks increase at each stage.
+Hardware assurance should be applied from architecture and design through manufacturing, testing, deployment, sustainment, and disposal. The "bake-in" principle applies. Risks created early are challenging to address later. The value of the component and the cost of mitigating risks increase at each stage.
 
 ### Risk Areas
 
@@ -111,14 +111,14 @@ Three basic operational risk areas: (1) failure to meet quality standards, (2) m
 
 ### Quantification Methods
 
-- **FMEA** (Failure Mode and Effects Analysis) — semi-quantitative, adapted from quality/reliability engineering
-- **Game theoretic analysis** — models of conflict and cooperation between intelligent decision-makers
-- **SAE AS6171** — confidence intervals for detecting counterfeit microelectronics
-- **Distributed ledger technology (DLT)** — emerging for tamper resistance, provenance, and traceability
+- **FMEA** (Failure Mode and Effects Analysis): semi-quantitative, adapted from quality/reliability engineering
+- **Game theoretic analysis**: models of conflict and cooperation between intelligent decision-makers
+- **SAE AS6171**: confidence intervals for detecting counterfeit microelectronics
+- **Distributed ledger technology (DLT)**: emerging for tamper resistance, provenance, and traceability
 
 ### Risk Management
 
-Risk management seeks to decrease weakness-based attack surfaces while improving confidence in exploitation resistance. **Mitigation-in-depth** — multiple coordinated mitigations — is essential. A **dynamic risk profile** tracks and addresses risks throughout the complete hardware and system life cycles.
+Risk management seeks to decrease weakness-based attack surfaces while improving confidence in exploitation resistance. **Mitigation-in-depth** (multiple coordinated mitigations) is essential. A **dynamic risk profile** tracks and addresses risks throughout the complete hardware and system life cycles.
 
 ---
 
@@ -132,16 +132,16 @@ Risk management seeks to decrease weakness-based attack surfaces while improving
 
 ### Development Life Cycle Processes (GEIA 2008)
 
-1. **Understanding user requirements and constraints** — Eliciting RAM requirements conditioned on operating environments
-2. **Design for reliability** — Redundancy, diversity, built-in testing, advanced diagnostics, modularity, use of higher-strength materials, quality components, thermal/EMI analyses
-3. **Production for reliability** — Repeatability, uniformity, unambiguous specifications, configuration management
-4. **Monitoring during operation and use** — FRACAS (Failure Reporting and Corrective Action System), tracking operating time and outage duration
+1. **Understanding user requirements and constraints**: Eliciting RAM requirements conditioned on operating environments
+2. **Design for reliability**: Redundancy, diversity, built-in testing, advanced diagnostics, modularity, use of higher-strength materials, quality components, thermal/EMI analyses
+3. **Production for reliability**: Repeatability, uniformity, unambiguous specifications, configuration management
+4. **Monitoring during operation and use**: FRACAS (Failure Reporting and Corrective Action System), tracking operating time and outage duration
 
 ### Key Analysis Models
 
-- **Reliability Block Diagrams (RBD)** — Graphical representation of reliability dependence; directed, acyclic graph showing paths to success
-- **Fault Trees** — Graphical representation of failure modes using AND, OR, NOT, K-of-N gates; show paths to failure
-- **Failure Mode Effects and Criticality Analysis (FMECA)** — Table listing failure modes, likelihood, and effects; criticality = consequence × likelihood
+- **Reliability Block Diagrams (RBD)**: Graphical representation of reliability dependence; directed, acyclic graph showing paths to success
+- **Fault Trees**: Graphical representation of failure modes using AND, OR, NOT, K-of-N gates; show paths to failure
+- **Failure Mode Effects and Criticality Analysis (FMECA)**: Table listing failure modes, likelihood, and effects; criticality = consequence × likelihood
 - **Probability distributions**: Exponential, Weibull, log-normal, generalized gamma for life data; discrete (Bernoulli, Binomial, Poisson) for expected failure counts
 
 ### Testing Types
@@ -150,13 +150,13 @@ Reliability life tests, accelerated life tests (ALT), HALT/HASS, parts screening
 
 ### Availability Classifications
 
-- **Inherent availability** — only corrective maintenance downtime counts
-- **Achieved availability** — both corrective and preventive maintenance downtime counts
-- **Operational availability** — all sources of downtime including logistical and administrative
+- **Inherent availability**: only corrective maintenance downtime counts
+- **Achieved availability**: both corrective and preventive maintenance downtime counts
+- **Operational availability**: all sources of downtime including logistical and administrative
 
 ### Data Challenges
 
-RAM data is often censored, biased, observational, and missing covariates. Small sample sizes from expensive testing produce imprecise estimates. Sophisticated strategies are needed — proper prior planning for data collection (FRACAS design) prevents poor performance.
+RAM data is often censored, biased, observational, and missing covariates. Small sample sizes from expensive testing produce imprecise estimates. Sophisticated strategies are needed. Proper prior planning for data collection (FRACAS design) prevents poor performance.
 
 ---
 
@@ -168,9 +168,9 @@ RAM data is often censored, biased, observational, and missing covariates. Small
 
 #### Fundamental Objectives
 
-1. **Avoid adversity** — eliminate or reduce exposure to stress
-2. **Withstand adversity** — resist capability degradation when stressed
-3. **Recover from adversity** — replenish lost capability after degradation
+1. **Avoid adversity**: eliminate or reduce exposure to stress
+2. **Withstand adversity**: resist capability degradation when stressed
+3. **Recover from adversity**: replenish lost capability after degradation
 
 #### Means Objectives (Layer 2 Taxonomy)
 
@@ -204,9 +204,9 @@ Resilience modeling is an emerging topic in digital engineering, MBSE, and AI/ML
 
 #### Approaches
 
-- **Resilience Contracts (RCs)** — Extension of Contract-Based Design using Partially Observable Markov Decision Processes (POMDPs) to handle uncertainty and unpredictability
-- **System Dynamics** — Captures behavior over time; uses causal loop diagrams, archetypes, and quantitative models (first-order linear differential equations); supports participatory model building and interactive "what-if" experimentation
-- **Constraint Theory** — Checks whether complex models are internally consistent; identifies over-constrained and under-constrained computational sets that can lead to incorrect predictions
+- **Resilience Contracts (RCs)**: Extension of Contract-Based Design using Partially Observable Markov Decision Processes (POMDPs) to handle uncertainty and unpredictability
+- **System Dynamics**: Captures behavior over time; uses causal loop diagrams, archetypes, and quantitative models (first-order linear differential equations); supports participatory model building and interactive "what-if" experimentation
+- **Constraint Theory**: Checks whether complex models are internally consistent; identifies over-constrained and under-constrained computational sets that can lead to incorrect predictions
 
 ---
 
@@ -233,13 +233,13 @@ Resilience modeling is an emerging topic in digital engineering, MBSE, and AI/ML
 
 ### Key Relationships
 
-System safety is closely tied to RAM — they share concerns about failure modes, severity, criticality, hazard identification, risk, and mitigation. Safety Working Groups (SWG) and Management Safety Review Boards (MSRB) coordinate safety across integrated product teams.
+System safety is closely tied to RAM. They share concerns about failure modes, severity, criticality, hazard identification, risk, and mitigation. Safety Working Groups (SWG) and Management Safety Review Boards (MSRB) coordinate safety across integrated product teams.
 
 ---
 
 ## System Security
 
-**Systems Security** is about engineering for intended and authorized system behavior and outcomes despite anticipated and unanticipated adversity — threats, attacks, hazards, disruptions, and exposures.
+**Systems Security** is about engineering for intended and authorized system behavior and outcomes despite anticipated and unanticipated adversity: threats, attacks, hazards, disruptions, and exposures.
 
 ### Three Essential Characteristics
 
@@ -249,7 +249,7 @@ System safety is closely tied to RAM — they share concerns about failure modes
 
 ### Core Principles
 
-- Security must be engineered from inception — "Unless security is engineered into a system from its inception, there is little chance that it can be made secure by retrofit" (Anderson 1972)
+- Security must be engineered from inception: "Unless security is engineered into a system from its inception, there is little chance that it can be made secure by retrofit" (Anderson 1972)
 - A system should be **as secure as reasonably practical (ASARP)** while meeting minimum stakeholder expectations
 - **Commensurate trustworthiness**: trustworthy to a level commensurate with the most significant adverse effect resulting from loss or failure
 - Focus on a system's **trustworthiness** rather than singularly on risk
@@ -276,13 +276,13 @@ Security should shift from a tactics/forensics problem (threat defense, incident
 
 ### Enterprise and Discipline Relationships
 
-Systems security shares commonality with safety, quality management, RAM, survivability, operational risk management, and resilience — overlapping concerns with assets, losses, adversities, requirements, and engineering analyses (e.g., STPA — System Theoretic Process Analysis).
+Systems security shares commonality with safety, quality management, RAM, survivability, operational risk management, and resilience, overlapping concerns with assets, losses, adversities, requirements, and engineering analyses (e.g., STPA: System Theoretic Process Analysis).
 
 ---
 
 ## Related Chapters
 
-- [[00_Introduction_to_SEBoK]] — Overview and structure of the SEBoK
-- [[04_Systems_Models_and_Approach]] — Modeling and the systems approach
-- [[05_Life_Cycles_and_Processes]] — Life cycle processes that integrate quality attributes
-- [[06_Technical_Management_Processes]] — Risk management, decision management, and technical planning
+- [[00_Introduction_to_SEBoK]]: Overview and structure of the SEBoK
+- [[04_Systems_Models_and_Approach]]: Modeling and the systems approach
+- [[05_Life_Cycles_and_Processes]]: Life cycle processes that integrate quality attributes
+- [[06_Technical_Management_Processes]]: Risk management, decision management, and technical planning

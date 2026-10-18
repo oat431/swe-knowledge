@@ -8,16 +8,16 @@ created: 2026-07-09
 
 # Operating Systems & Virtualisation
 
-> **CyBOK Knowledge Area — Chapter 11**  
+> **CyBOK Knowledge Area: Chapter 11**  
 > Introduces the principles, primitives and practices for ensuring security at the operating system and hypervisor levels.
 
 ---
 
 ## Overview
 
-Operating systems and hypervisors are the **most privileged components** in the software stack — the bedrock on which all higher-level security is built. They manage resources (CPU, memory, disk) and enforce isolation between **security domains**: kernels, user processes, trusted execution environments, and virtual machines.
+Operating systems and hypervisors are the **most privileged components** in the software stack, the bedrock on which all higher-level security is built. They manage resources (CPU, memory, disk) and enforce isolation between **security domains**: kernels, user processes, trusted execution environments, and virtual machines.
 
-The challenges have evolved (from multi-user mainframes to shared clouds), but the core principle remains: **isolation**. However, threats have grown tremendously — from memory corruption to speculative-execution side channels — and so have the defence mechanisms.
+The challenges have evolved (from multi-user mainframes to shared clouds), but the core principle remains: **isolation**. However, threats have grown tremendously (from memory corruption to speculative-execution side channels) and so have the defence mechanisms.
 
 > Saltzer & Schroeder's **Principle of Least Common Mechanism**: every mechanism shared between security domains may become a channel through which sensitive data may leak.
 
@@ -42,13 +42,13 @@ Attackers aim to violate the **CIA triad** at the OS/hypervisor level:
 | **Concurrency Bugs / Double Fetch** | TOCTOU-like race where OS reads a userspace value twice, attacker changes it between reads |
 | **Side Channels (hardware)** | Cache, TLB timing; attackers detect victim's resource usage patterns |
 | **Side Channels (speculative)** | **Spectre**/**Meltdown**-class: speculative execution leaves micro-architectural traces (Foreshadow, RIDL) |
-| **Side Channels (software)** | Memory deduplication, page caches — attacker measures write latency to infer shared content |
+| **Side Channels (software)** | Memory deduplication, page caches: attacker measures write latency to infer shared content |
 | **Resource Depletion (DoS)** | Hogging CPU, memory, buses to starve other processes |
 | **Deadlocks/Hangs (DoS)** | Inducing deadlock states |
 
 ### Attack Surface
 
-The **attack surface** **attack-surface** is a useful metric — all points an attacker can reach. Includes:
+The **attack surface** **attack-surface** is a useful metric: all points an attacker can reach. Includes:
 - System calls + arguments + implementation code (local)
 - Network stack + device drivers (remote)
 - DMA-accessible memory (malicious peripherals)
@@ -73,7 +73,7 @@ The OS provides **isolation** of security domains and **mediation** of all opera
 | Design | Description | Security Implication |
 |---|---|---|
 | **(a) Single Domain** | OS + apps in one domain (embedded systems) | No isolation; any component can corrupt any other |
-| **(b) Monolithic OS** | Linux, Windows, macOS — OS in one kernel domain, isolated from user processes | Efficient (function calls); compromise of one component (e.g. driver) voids all security |
+| **(b) Monolithic OS** | Linux, Windows, macOS: OS in one kernel domain, isolated from user processes | Efficient (function calls); compromise of one component (e.g. driver) voids all security |
 | **(c) Microkernel Multi-Server** | OS decomposed into separate processes (e.g. MINIX 3) communicating via IPC | Compromised driver cannot easily compromise rest of system; higher IPC overhead |
 | **(d) Unikernel / Library OS** | App + minimal libOS on thin hypervisor/exokernel | Small TCB; libOS is app-specific and not shared; no privilege separation within domain |
 
@@ -86,12 +86,12 @@ The OS provides **isolation** of security domains and **mediation** of all opera
 - All OS components are isolated processes
 - Functions like a distributed system with reliable IPC (no network unreliability)
 - **Security advantage**: damage containment
-- **Cost**: higher overhead — the price of safety
+- **Cost**: higher overhead, the price of safety
 
 #### Unikernels
 - Resurgence in virtualised environments
 - Small TCB: only hypervisor + needed libOS code
-- Each application gets its own libOS — no sharing = compromised libOS only affects one app
+- Each application gets its own libOS: no sharing = compromised libOS only affects one app
 - Compares favourably to microkernels on TCB size, but lacks internal privilege separation
 
 #### The Tanenbaum–Torvalds Debate (1992)
@@ -105,7 +105,7 @@ The famous "flame war" about monolithic vs microkernel design. Tanenbaum (MINIX)
 | **OS-Level Virtualisation (Containers)** | Multiple environments share one kernel (**Docker**, FreeBSD Jails, `chroot`) | Lightweight; shared kernel = larger attack surface than VMs; enables microservices |
 | **Integrated** | **QubesOS**: each user process in its own VM | Extreme isolation |
 
-**Containers vs VMs**: VMs partition resources more strictly (only hypervisor shared). Containers share the kernel — but their lightweight nature enables microservices with well-defined interfaces, reducing overall attack surface. Trade-off is active debate.
+**Containers vs VMs**: VMs partition resources more strictly (only hypervisor shared). Containers share the kernel, but their lightweight nature enables microservices with well-defined interfaces, reducing overall attack surface. Trade-off is active debate.
 
 ### IoT / Embedded OS
 - Extreme resource constraints (RIOT OS < 10KB)
@@ -133,9 +133,9 @@ Additional principles: **Minimise the TCB** (Trusted Computing Base), **Principl
 
 ### Applying Principles to OS Designs
 
-- **Single domain**: TCB = all software; no mediation; maximum common mechanism — worst case
-- **Monolithic**: applications isolated, but OS itself is one domain — driver compromise voids all
-- **Multi-server**: best alignment — minimal microkernel, fail-safe mediation, POLA, small TCB per component
+- **Single domain**: TCB = all software; no mediation; maximum common mechanism; worst case
+- **Monolithic**: applications isolated, but OS itself is one domain; driver compromise voids all
+- **Multi-server**: best alignment; minimal microkernel, fail-safe mediation, POLA, small TCB per component
 - **Unikernel**: Economy of Mechanism (small libOS), but no internal privilege separation; TCB limited to hypervisor + this app's components
 
 ### Security Models
@@ -148,7 +148,7 @@ Additional principles: **Minimise the TCB** (Trusted Computing Base), **Principl
 - Mandatory Access Control (MAC)
 
 #### Biba (Integrity) **Biba-model**
-- **"Read up, write down"** — exact opposite of Bell-LaPadula
+- **"Read up, write down"**: exact opposite of Bell-LaPadula
 - Prevents low-integrity subjects from corrupting high-integrity data
 
 #### Access Control Types
@@ -174,16 +174,16 @@ DAC and MAC can be combined: users have freedom within MAC policy constraints.
 
 ### Core Primitives
 
-1. **Authentication** — verify user/domain identity
-2. **Access Control** — decide who can access what
-3. **Memory Protection** — prevent unauthorised reads from another domain's memory
-4. **Privilege Separation** — only privileged code configures isolation and guarantees mediation
+1. **Authentication**: verify user/domain identity
+2. **Access Control**: decide who can access what
+3. **Memory Protection**: prevent unauthorised reads from another domain's memory
+4. **Privilege Separation**: only privileged code configures isolation and guarantees mediation
 
 ### 11.4.1 Authentication
 - Traditionally: username + password
 - Modern: multi-factor (something you know + own + are)
 - OS maintains: user ID, group membership, process ownership, binary ownership
-- **Credentials stored securely** — hardware-backed: **TPM** for disk encryption keys, separate VM for credential store
+- **Credentials stored securely**: hardware-backed; **TPM** for disk encryption keys, separate VM for credential store
 
 ### 11.4.2 Access Control Lists (ACLs) **access-control-list**
 - Concept introduced in Multics filesystem (Daley & Neumann)
@@ -191,13 +191,13 @@ DAC and MAC can be combined: users have freedom within MAC policy constraints.
 - **UNIX implementation**: owner + group + other, with r/w/x bits
 - Modern Linux/Windows: extended ACLs (multiple users/groups)
 - **Reference monitors**: Linux pluggable framework; vet every security-sensitive operation
-- ****SELinux**** (Security-Enhanced Linux): MAC via contexts — (username, role, domain); supports RBAC; derived from FLASK architecture; can enforce Bell-LaPadula, Biba, or custom policies
-- **Distributed Information Flow Control**: research OS like Asbestos, HiStar, Flume — any process can create security labels and classify/declassify data
+- ****SELinux**** (Security-Enhanced Linux): MAC via contexts (username, role, domain); supports RBAC; derived from FLASK architecture; can enforce Bell-LaPadula, Biba, or custom policies
+- **Distributed Information Flow Control**: research OS like Asbestos, HiStar, Flume. Any process can create security labels and classify/declassify data
 
 ### 11.4.3 Capabilities **capability-based-security**
-- Alternative to ACLs: "token, ticket, or key that gives the possessor permission to access an entity" (Henry Levy, 1966 — Dennis & Van Horn)
+- Alternative to ACLs: "token, ticket, or key that gives the possessor permission to access an entity" (Henry Levy, 1966: Dennis & Van Horn)
 - Possession of capability = proof of access rights
-- **Principle of Intentional Use** (Neumann): avoid confused deputy problem — a security domain unintentionally exercising a privilege on behalf of another
+- **Principle of Intentional Use** (Neumann): avoid confused deputy problem, a security domain unintentionally exercising a privilege on behalf of another
 - **Protection from forgery**:
   - Kernel stores capabilities in protected memory; process uses references (e.g. file descriptors)
   - Cryptographic protection: process can hold capability but cannot modify it undetected
@@ -207,6 +207,7 @@ DAC and MAC can be combined: users have freedom within MAC policy constraints.
 ## Key Concepts Summary
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px','cScale0':'#1FB854','cScale1':'#1EB88E','cScale2':'#1FB8AB','cScale3':'#00B5FF','cScale4':'#FFBE00','cScale5':'#19362D','cScale6':'#FF5861','cScale7':'#CDD3D1','cScale8':'#00A96E','cScale9':'#CAC9C9','cScale10':'#1EB88E','cScale11':'#1FB8AB'}}}%%
 mindmap
   root((OS & Virtualisation Security))
     Attacker Model
@@ -247,11 +248,11 @@ mindmap
 
 ## See Also
 
-- **CyBOK-Cryptography** — Ch10, Cryptographic primitives underpinning OS security
-- **CyBOK-Software-Security** — Ch? Memory errors, exploitation techniques
-- **CyBOK-Authentication-Authorisation-Accountability** — Ch14, Detailed auth coverage
-- **TCSEC-Orange-Book** — Trusted Computer System Evaluation Criteria
-- **SELinux** — Security-Enhanced Linux
-- **QubesOS** — Security-oriented OS using VM isolation
-- **Spectre-Meltdown** — Speculative execution attacks
-- **Rowhammer** — DRAM disturbance attack
+- **CyBOK-Cryptography**: Ch10, Cryptographic primitives underpinning OS security
+- **CyBOK-Software-Security**: Ch? Memory errors, exploitation techniques
+- **CyBOK-Authentication-Authorisation-Accountability**: Ch14, Detailed auth coverage
+- **TCSEC-Orange-Book**: Trusted Computer System Evaluation Criteria
+- **SELinux**: Security-Enhanced Linux
+- **QubesOS**: Security-oriented OS using VM isolation
+- **Spectre-Meltdown**: Speculative execution attacks
+- **Rowhammer**: DRAM disturbance attack

@@ -7,11 +7,11 @@ tags:
 
 # Underlying Competencies
 
-> *Source: BABOK® Guide v3 by IIBA, Chapter 9 — Underlying Competencies*
+> *Source: BABOK® Guide v3 by IIBA, Chapter 9: Underlying Competencies*
 
 ## Purpose
 
-Underlying competencies are the foundational skills, knowledge, and behaviours that enable business analysts to perform their work effectively. Unlike the task-based knowledge areas, these competencies describe *how* business analysts think, behave, and interact — they underpin every business analysis activity regardless of domain, methodology, or organizational context. The six competency areas are: Analytical Thinking and Problem Solving, Behavioural Characteristics, Business Knowledge, Communication Skills, Interaction Skills, and Tools and Technology.
+Underlying competencies are the foundational skills, knowledge, and behaviours that enable business analysts to perform their work effectively. Unlike the task-based knowledge areas, these competencies describe *how* business analysts think, behave, and interact. They underpin every business analysis activity regardless of domain, methodology, or organizational context. The six competency areas are: Analytical Thinking and Problem Solving, Behavioural Characteristics, Business Knowledge, Communication Skills, Interaction Skills, and Tools and Technology.
 
 ---
 
@@ -19,7 +19,7 @@ Underlying competencies are the foundational skills, knowledge, and behaviours t
 
 > **Purpose:** Equip business analysts to analyze problems and opportunities effectively, identify which changes deliver the most value, and work with stakeholders to understand the impact of those changes.
 
-Analytical thinking involves rapidly assimilating various types of information (diagrams, stakeholder concerns, customer feedback, schematics, spreadsheets) and identifying what is relevant. It enables business analysts to choose effective, adaptable methods for each situation and present information in forms best suited to their audience — for example, using graphics instead of text where concepts are more easily understood visually.
+Analytical thinking involves rapidly assimilating various types of information (diagrams, stakeholder concerns, customer feedback, schematics, spreadsheets) and identifying what is relevant. It enables business analysts to choose effective, adaptable methods for each situation and present information in forms best suited to their audience: for example, using graphics instead of text where concepts are more easily understood visually.
 
 ### Key Elements
 
@@ -64,7 +64,7 @@ Analytical thinking involves rapidly assimilating various types of information (
 
 #### Systems Thinking (9.1.5)
 - **Purpose:** Understand how people, processes, and technology within an organization interact, providing a holistic point of view.
-- **Definition:** Systems theory holds that a system as a whole has properties, behaviours, and characteristics that emerge from the interaction of its components — not predictable from understanding components alone. The term *system* includes people, interactions between them, external forces, and all other relevant elements.
+- **Definition:** Systems theory holds that a system as a whole has properties, behaviours, and characteristics that emerge from the interaction of its components, not predictable from understanding components alone. The term *system* includes people, interactions between them, external forces, and all other relevant elements.
 - **Effectiveness Measures:**
   - Communicating how a change to a component affects the system as a whole
   - Communicating how a change to a system affects its environment
@@ -147,7 +147,7 @@ These characteristics are not unique to business analysis but have been found to
 
 #### Adaptability (9.2.5)
 - **Purpose:** Adjust behavioural style and method of approach to increase effectiveness when interacting with different stakeholders, organizations, and situations in rapidly changing environments.
-- **Definition:** The ability to change techniques, style, methods, and approach. Business analysts modify how they interact — some stakeholders are visual, others verbal. When organizational goals change or unanticipated problems occur, business analysts adapt by altering plans and identifying options to deliver maximum value.
+- **Definition:** The ability to change techniques, style, methods, and approach. Business analysts modify how they interact. Some stakeholders are visual, others verbal. When organizational goals change or unanticipated problems occur, business analysts adapt by altering plans and identifying options to deliver maximum value.
 - **Effectiveness Measures:**
   - Demonstrating the courage to act differently from others
   - Adapting to changing conditions and environments
@@ -275,7 +275,7 @@ Business analysts are uniquely positioned to facilitate stakeholder communicatio
 
 #### Facilitation (9.5.1)
 - **Purpose:** Help stakeholders make a decision, solve a problem, exchange ideas and information, or reach agreement regarding the priority and nature of requirements.
-- **Definition:** The skill of moderating discussions within a group to enable all participants to effectively articulate their views and ensure participants recognize and appreciate differing points of view. The facilitator is a third party — not a decision maker or the owner of the topic.
+- **Definition:** The skill of moderating discussions within a group to enable all participants to effectively articulate their views and ensure participants recognize and appreciate differing points of view. The facilitator is a third party, not a decision maker or the owner of the topic.
 - **Effectiveness Measures:**
   - Making it clear that the facilitator is a third party, not a decision maker or topic owner
   - Encouraging participation from all attendees
@@ -310,12 +310,12 @@ Business analysts are uniquely positioned to facilitate stakeholder communicatio
 
 #### Negotiation and Conflict Resolution (9.5.4)
 - **Purpose:** Mediate negotiations between stakeholders to reach common understanding or agreement, resolving conflicts while maintaining and strengthening working relationships.
-- **Definition:** Mediating discussions to help participants recognize differing views, resolve differences, and reach conclusions with agreement of all participants. Successful negotiation includes identifying the underlying interests of parties, distinguishing interests from stated positions, and helping parties identify solutions that satisfy those underlying interests — while ensuring the outcome aligns with the overall solution and business needs.
+- **Definition:** Mediating discussions to help participants recognize differing views, resolve differences, and reach conclusions with agreement of all participants. Successful negotiation includes identifying the underlying interests of parties, distinguishing interests from stated positions, and helping parties identify solutions that satisfy those underlying interests, while ensuring the outcome aligns with the overall solution and business needs.
 - **Effectiveness Measures:**
   - A planned approach accounting for tone of voice, conveyed attitude, methods used, and concern for the other side's feelings and needs
-  - Recognizing that parties' needs are not always in opposition — often possible to satisfy both without either losing
+  - Recognizing that parties' needs are not always in opposition: often possible to satisfy both without either losing
   - An objective approach separating the problem from the person so real issues are debated without damaging working relationships
-  - Recognizing that effective negotiation is not always achieved in a single meeting — sometimes several meetings are required
+  - Recognizing that effective negotiation is not always achieved in a single meeting: sometimes several meetings are required
 
 #### Teaching (9.5.5)
 - **Purpose:** Effectively communicate business analysis information, concepts, ideas, and issues, ensuring they are understood and retained by stakeholders.
@@ -381,12 +381,12 @@ Business analysts use word processing for documentation, prototyping and simulat
 
 ## Related Chapters
 
-- [[00_Introduction_to_BABOK]] — Foundational concepts, the Business Analysis Core Concept Model™ (BACCM™), and key terms
-- [[01_BA_Planning_and_Monitoring]] — Planning the business analysis approach; competencies inform how the approach is tailored
-- [[02_Elicitation_and_Collaboration]] — Elicitation relies heavily on communication, interaction, and behavioural competencies
-- [[03_Requirements_Life_Cycle_Management]] — Managing requirements requires organization, accountability, and tool proficiency
-- [[04_Strategy_Analysis]] — Analytical thinking and business knowledge are essential for strategy analysis
-- [[05_Requirements_Analysis_and_Design]] — Systems thinking, conceptual thinking, and visual thinking directly support analysis and design
-- [[06_Solution_Evaluation]] — Decision making and problem solving underpin solution evaluation
-- [[08_Techniques_Catalog]] — Techniques are enabled and enhanced by the underlying competencies described in this chapter
-- [[09_Perspectives]] — Different perspectives may emphasize different underlying competencies
+- [[00_Introduction_to_BABOK]]: Foundational concepts, the Business Analysis Core Concept Model™ (BACCM™), and key terms
+- [[01_BA_Planning_and_Monitoring]]: Planning the business analysis approach; competencies inform how the approach is tailored
+- [[02_Elicitation_and_Collaboration]]: Elicitation relies heavily on communication, interaction, and behavioural competencies
+- [[03_Requirements_Life_Cycle_Management]]: Managing requirements requires organization, accountability, and tool proficiency
+- [[04_Strategy_Analysis]]: Analytical thinking and business knowledge are essential for strategy analysis
+- [[05_Requirements_Analysis_and_Design]]: Systems thinking, conceptual thinking, and visual thinking directly support analysis and design
+- [[06_Solution_Evaluation]]: Decision making and problem solving underpin solution evaluation
+- [[08_Techniques_Catalog]]: Techniques are enabled and enhanced by the underlying competencies described in this chapter
+- [[09_Perspectives]]: Different perspectives may emphasize different underlying competencies

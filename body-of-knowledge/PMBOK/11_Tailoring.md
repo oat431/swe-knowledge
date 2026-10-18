@@ -5,20 +5,20 @@ tags:
 - pmbok
 ---
 
-# 11 — Tailoring
+# 11: Tailoring
 
-> *Source: PMBOK® Guide — Eighth Edition by PMI, §3 Tailoring (pp. 103–112)*
+> *Source: PMBOK® Guide: Eighth Edition by PMI, §3 Tailoring (pp. 103–112)*
 
 ## Purpose
 
-Tailoring is the deliberate adaptation of the project management approach, governance, and processes to align with the project's unique environment and objectives. It involves analyzing and modifying the development approach, life cycle, processes, and stakeholder engagement to better fit the project context and intended outcomes. Tailoring is not a one-time exercise — it is a continuous activity of inspection and adaptation driven by the guiding [[04_Governance_Performance_Domain|project management principles]].
+Tailoring is the deliberate adaptation of the project management approach, governance, and processes to align with the project's unique environment and objectives. It involves analyzing and modifying the development approach, life cycle, processes, and stakeholder engagement to better fit the project context and intended outcomes. Tailoring is not a one-time exercise. It is a continuous activity of inspection and adaptation driven by the guiding [[04_Governance_Performance_Domain|project management principles]].
 
 ## Why Tailor?
 
 There is no single project management approach that suits all projects all of the time. The structure used to deliver projects can be extensive or minimal, rigorous or lightweight, and comprehensive or streamlined. Variables that influence the need for tailoring include:
 
-- **Project criticality** — a nuclear reactor requires far more rigor than an office building
-- **Scale and duration** — communication needs differ vastly between a 10-member team and a 200-member team
+- **Project criticality**: a nuclear reactor requires far more rigor than an office building
+- **Scale and duration**: communication needs differ vastly between a 10-member team and a 200-member team
 - **Complexity, industry standards, organizational culture**
 - **Number of stakeholders and organizational PM maturity**
 
@@ -34,7 +34,7 @@ Three aspects of a project can be tailored:
 
 ### Life Cycle and Development Approach
 
-Selecting the life cycle and its phases is itself a tailoring activity. A single project may combine approaches — for example, a new data center might use a **predictive** approach for construction and an **adaptive** approach for computing capabilities, resulting in a **hybrid** approach at the project level.
+Selecting the life cycle and its phases is itself a tailoring activity. A single project may combine approaches. For example, a new data center might use a **predictive** approach for construction and an **adaptive** approach for computing capabilities, resulting in a **hybrid** approach at the project level.
 
 ### Processes
 
@@ -52,9 +52,9 @@ Process tailoring determines which elements should be:
 
 Tailoring engagement for the people involved includes:
 
-- **People** — Assessing skills and capabilities of the project leadership and team, ensuring they adapt to evolving needs.
-- **Empowerment** — Choosing which responsibilities and local decision-making authority to delegate to the project team. High-capability teams may warrant high empowerment; other situations call for more supervision.
-- **Integration** — Creating one cohesive project team from diverse contributors (contractors, channel partners, external entities, and internal staff).
+- **People**: Assessing skills and capabilities of the project leadership and team, ensuring they adapt to evolving needs.
+- **Empowerment**: Choosing which responsibilities and local decision-making authority to delegate to the project team. High-capability teams may warrant high empowerment; other situations call for more supervision.
+- **Integration**: Creating one cohesive project team from diverse contributors (contractors, channel partners, external entities, and internal staff).
 
 ## The Tailoring Process
 
@@ -62,7 +62,7 @@ Tailoring follows a four-step cycle that begins before the project and continues
 
 ### Step 1: Select Initial Development Approach
 
-Determine whether a **predictive**, **adaptive**, or **hybrid** approach is best suited for the endeavor. Project teams apply their knowledge of the product, delivery cadence, and available options. A **suitability filter** — not a rigid method but a decision-making tool — helps evaluate the project's characteristics against criteria of culture, team dynamics, and project factors to guide the initial selection.
+Determine whether a **predictive**, **adaptive**, or **hybrid** approach is best suited for the endeavor. Project teams apply their knowledge of the product, delivery cadence, and available options. A **suitability filter** (not a rigid method but a decision-making tool) helps evaluate the project's characteristics against criteria of culture, team dynamics, and project factors to guide the initial selection.
 
 ### Step 2: Tailor for the Organization
 
@@ -92,7 +92,7 @@ Tailoring is not a one-time exercise. During progressive elaboration, review poi
 
 ## Tailoring the Performance Domains
 
-The work associated with each of the eight [[04_Governance_Performance_Domain|project performance domains]] can also be tailored based on project uniqueness. The **principles of project management** guide practitioner behavior as they tailor each domain — including **Stakeholders**, **Team**, **Development Approach and Life Cycle**, **Planning**, **Project Work**, **Delivery**, **Measurement**, and **Uncertainty** — to the project context and environment.
+The work associated with each of the eight [[04_Governance_Performance_Domain|project performance domains]] can also be tailored based on project uniqueness. The **principles of project management** guide practitioner behavior as they tailor each domain (including **Stakeholders**, **Team**, **Development Approach and Life Cycle**, **Planning**, **Project Work**, **Delivery**, **Measurement**, and **Uncertainty**) to the project context and environment.
 
 ## Diagnostics
 
@@ -111,7 +111,7 @@ Periodic reviews (retrospectives, lessons learned) help assess whether current a
 
 ## Summary
 
-Tailoring adapts the approach, governance, and processes to fit the project's environment and objectives. The four-step tailoring process — **Select Initial Development Approach → Tailor for the Organization → Tailor for the Project → Implement Ongoing Improvement** — is led by project stakeholders with organizational guidelines ensuring alignment. Tailoring is not just about making changes, but about verifying and validating that the tailored approaches are effective and aligned with project outcomes.
+Tailoring adapts the approach, governance, and processes to fit the project's environment and objectives. The four-step tailoring process (**Select Initial Development Approach → Tailor for the Organization → Tailor for the Project → Implement Ongoing Improvement**) is led by project stakeholders with organizational guidelines ensuring alignment. Tailoring is not just about making changes, but about verifying and validating that the tailored approaches are effective and aligned with project outcomes.
 
 ## Related Chapters
 

@@ -19,7 +19,7 @@ created: "2026-07-09"
 
 ## 1. Introduction
 
-In any organization, certain data is required across business areas, processes, and systems. The overall organization and its customers benefit if this data is shared — customer lists, geographic location codes, business unit lists, delivery options, part lists, accounting cost center codes, governmental tax codes, and other data used to run the business.
+In any organization, certain data is required across business areas, processes, and systems. The overall organization and its customers benefit if this data is shared: customer lists, geographic location codes, business unit lists, delivery options, part lists, accounting cost center codes, governmental tax codes, and other data used to run the business.
 
 Systems and data often evolve organically, particularly through mergers and acquisitions, resulting in multiple systems executing essentially the same functions but isolated from each other. These conditions lead to inconsistencies in data structure and values, increasing costs and risks. Both can be reduced through the management of **Master Data** and **Reference Data**.
 
@@ -43,7 +43,7 @@ Drivers for managing Reference Data are similar: consistent Reference Data reduc
 
 **Guiding principles:**
 - **Shared Data:** Reference and Master Data must be shareable across the organization.
-- **Ownership:** They belong to the organization — not to a particular application or department. Require high-level stewardship.
+- **Ownership:** They belong to the organization, not to a particular application or department. Require high-level stewardship.
 - **Quality:** Require ongoing **Data Quality** monitoring and governance.
 - **Stewardship:** **Business Data Stewards** are accountable for controlling and ensuring quality.
 - **Controlled Change:** Changes to values should follow a defined, approved process. Identifier merges/splits must be reversible.
@@ -74,7 +74,7 @@ Malcolm Chisholm proposed a six-layer taxonomy of data: Metadata, Reference Data
 
 ### 2.2 Reference Data
 
-Reference Data is any data used to characterize or classify other data, or to relate data to information external to an organization. It exists in virtually every data store — statuses, types, geographic codes, standards information.
+Reference Data is any data used to characterize or classify other data, or to relate data to information external to an organization. It exists in virtually every data store: statuses, types, geographic codes, standards information.
 
 Common storage techniques:
 - Code tables in relational databases (linked via foreign keys)
@@ -83,7 +83,7 @@ Common storage techniques:
 
 #### 2.2.1 Reference Data Structure
 
-**Lists:** The simplest form — pairs a code value with a description. May include additional attributes (definitions, context). Example: Country codes (US → United States of America, GB → United Kingdom).
+**Lists:** The simplest form: pairs a code value with a description. May include additional attributes (definitions, context). Example: Country codes (US → United States of America, GB → United Kingdom).
 
 **Cross-Reference Lists:** Translate between different code sets representing the same concept at different granularities or with different values. Example: USPS State Codes ↔ FIPS State Codes ↔ ISO State Codes. Multi-language lists are a special case.
 
@@ -130,7 +130,7 @@ Common organizational Master Data:
 | Term | Definition |
 |------|------------|
 | **System of Record (SOR)** | Authoritative system where data is created/captured and/or maintained (e.g., ERP for sell-to customers) |
-| **System of Reference** | Authoritative system where consumers obtain reliable data — even if data didn't originate there (MDM hubs, Data Warehouses) |
+| **System of Reference** | Authoritative system where consumers obtain reliable data, even if data didn't originate there (MDM hubs, Data Warehouses) |
 
 #### 2.3.2 Trusted Source and Golden Record
 
@@ -180,7 +180,7 @@ Data Model Management → Data Acquisition → Data Validation, Standardization 
 
 ##### 2.3.4.1 Data Model Management
 
-The model helps overcome "system speak" — terms that make sense within a source system may not make sense at the enterprise level. Enterprise-level definitions must be in the context of business conducted across the organization. Source systems may present identical attribute names with different data values, or different attribute names that coalesce to a single enterprise attribute.
+The model helps overcome "system speak". Terms that make sense within a source system may not make sense at the enterprise level. Enterprise-level definitions must be in the context of business conducted across the organization. Source systems may present identical attribute names with different data values, or different attribute names that coalesce to a single enterprise attribute.
 
 ##### 2.3.4.2 Data Acquisition
 
@@ -203,7 +203,7 @@ To enable entity resolution, data must be made consistent:
 
 ##### 2.3.4.4 Entity Resolution and Identifier Management
 
-Entity resolution determines whether two references to real-world objects refer to the same object. It is a decision-making process critical to MDM — matching and merging records enables construction of the Master Data set.
+Entity resolution determines whether two references to real-world objects refer to the same object. It is a decision-making process critical to MDM. Matching and merging records enables construction of the Master Data set.
 
 Activities: reference extraction → reference preparation → reference resolution → identity management → relationship analysis.
 
@@ -213,7 +213,7 @@ Risks:
 - **False positives:** Two references that do NOT represent the same entity are linked → one identifier refers to multiple entities.
 - **False negatives:** Two references representing the same entity are NOT linked → multiple identifiers for one entity.
 
-Both addressed through **similarity analysis** — scoring the degree of similarity between records using weighted approximate matching. If score exceeds threshold → match.
+Both addressed through **similarity analysis**, scoring the degree of similarity between records using weighted approximate matching. If score exceeds threshold → match.
 
 **Two matching approaches:**
 
@@ -225,8 +225,8 @@ Both addressed through **similarity analysis** — scoring the degree of similar
 ###### Identity Resolution
 
 Matches vary in confidence. Examples of ambiguity:
-- Same last name, first name, birth date, SSN — but different street address → changed mailing address?
-- Same SSN, street address, first name — but different last name → changed name? (Depends on gender and age?)
+- Same last name, first name, birth date, SSN, but different street address → changed mailing address?
+- Same SSN, street address, first name, but different last name → changed name? (Depends on gender and age?)
 
 Match history must be maintained so matches can be undone if discovered incorrect. Match rate metrics monitor effectiveness.
 
@@ -238,7 +238,7 @@ Match history must be maintained so matches can be undone if discovered incorrec
 | **Match-Link** | Cross-reference records to a master without updating content; easy to reverse | Medium |
 | **Match-Merge** | Merge data into a single, unified, reconciled record across sources; complex field-level trust rules | High |
 
-Match-merge is complex because it must identify which field from which source is trusted. New sources can change trust rules. Match-link is simpler — it operates on the cross-reference registry, not individual attributes. Periodically re-evaluate rules as confidence levels change.
+Match-merge is complex because it must identify which field from which source is trusted. New sources can change trust rules. Match-link is simpler. It operates on the cross-reference registry, not individual attributes. Periodically re-evaluate rules as confidence levels change.
 
 ###### Master Data ID Management
 
@@ -285,7 +285,7 @@ Data about individuals, organizations, and their roles in business relationships
 
 ##### Financial Master Data
 
-Data about business units, cost centers, profit centers, general ledger accounts, budgets, projections, and projects. **ERP** systems typically serve as the central hub (chart of accounts). Financial MDM solutions can simulate how structural changes affect the bottom line — modeling versions of financial structures to understand potential impacts before disseminating changes.
+Data about business units, cost centers, profit centers, general ledger accounts, budgets, projections, and projects. **ERP** systems typically serve as the central hub (chart of accounts). Financial MDM solutions can simulate how structural changes affect the bottom line, modeling versions of financial structures to understand potential impacts before disseminating changes.
 
 ##### Legal Master Data
 
@@ -344,7 +344,7 @@ Drivers include improved customer service, operational efficiency, and risk redu
 
 #### 3.1.2 Evaluate and Assess Data Sources
 
-Understand structure, content, and collection processes. Assess completeness and quality. Semantic issues will arise — **Data Stewards** must collaborate on reconciliation of attribute naming and enterprise-level definitions. Never assume data is high quality. Disparity between sources is the biggest challenge.
+Understand structure, content, and collection processes. Assess completeness and quality. Semantic issues will arise. **Data Stewards** must collaborate on reconciliation of attribute naming and enterprise-level definitions. Never assume data is high quality. Disparity between sources is the biggest challenge.
 
 For client/customer/vendor entities, standardized data can be purchased from vendors (Reference Directories).
 
@@ -352,7 +352,7 @@ For client/customer/vendor entities, standardized data can be purchased from ven
 
 Depends on business strategy, existing platforms, data lineage, volatility, and latency requirements. Architecture must account for consumption and sharing models. Small organizations may use a transaction hub; global organizations with multiple systems likely use a registry; siloed business units may choose consolidated.
 
-The data sharing hub architecture is particularly useful when no clear SOR exists — new data from one system can be reconciled with data from another.
+The data sharing hub architecture is particularly useful when no clear SOR exists. New data from one system can be reconciled with data from another.
 
 #### 3.1.4 Model Master Data
 
@@ -360,7 +360,7 @@ MDM is a data integration process. A logical/canonical model over subject areas 
 
 #### 3.1.5 Define Stewardship and Maintenance Processes
 
-Technical solutions handle matching, merging, and identifier management — but stewardship is needed for records that fall out of the process and to remediate root causes. Account for resources to support ongoing quality.
+Technical solutions handle matching, merging, and identifier management, but stewardship is needed for records that fall out of the process and to remediate root causes. Account for resources to support ongoing quality.
 
 #### 3.1.6 Establish Governance Policies
 
@@ -382,7 +382,7 @@ Account for volatility, update frequency, consumption models, and whether histor
 
 #### 3.2.4 Model Reference Data Sets
 
-Beyond simple codes and descriptions — Reference Data often includes complex relationships (e.g., ZIP codes with state/county/geo-political attributes). Models help consumers understand relationships and establish quality rules.
+Beyond simple codes and descriptions, Reference Data often includes complex relationships (e.g., ZIP codes with state/county/geo-political attributes). Models help consumers understand relationships and establish quality rules.
 
 #### 3.2.5 Define Stewardship and Maintenance Processes
 
@@ -390,7 +390,7 @@ Stewards ensure values are complete, current, and clearly defined. Capture Metad
 
 #### 3.2.6 Establish Reference Data Governance Policies
 
-Value only comes if people actually use centrally managed Reference Data. Policies must mandate use — whether directly from the repository or indirectly from a system of reference.
+Value only comes if people actually use centrally managed Reference Data. Policies must mandate use, whether directly from the repository or indirectly from a system of reference.
 
 ---
 
@@ -429,7 +429,7 @@ Data integration processes should ensure timely extraction and distribution. Mon
 
 ### 5.3 Manage Reference Data Change
 
-Reference Data is a shared resource — it cannot be changed arbitrarily. Key to success: organizational willingness to relinquish local control.
+Reference Data is a shared resource. It cannot be changed arbitrarily. Key to success: organizational willingness to relinquish local control.
 
 **Types of changes:**
 - Row-level changes to external sets
@@ -452,13 +452,13 @@ Reference and Master Data Management require people to relinquish control of the
 
 Fortunately, most people recognize the fundamental value: it is better to have one accurate, complete view of a customer than multiple partial views.
 
-**Most challenging cultural change:** Determining who is accountable for which decisions — business Data Stewards, Architects, Managers, Executives — and which decisions governance bodies should make collaboratively.
+**Most challenging cultural change:** Determining who is accountable for which decisions (business Data Stewards, Architects, Managers, Executives) and which decisions governance bodies should make collaboratively.
 
 ---
 
 ## 7. Reference and Master Data Governance
 
-Because they are shared resources, Reference and Master Data require governance and stewardship. Not all inconsistencies can be resolved through automation — some require conversation. Without governance, MDM/RDM solutions are just additional data integration utilities.
+Because they are shared resources, Reference and Master Data require governance and stewardship. Not all inconsistencies can be resolved through automation. Some require conversation. Without governance, MDM/RDM solutions are just additional data integration utilities.
 
 **Governance processes determine:**
 - Data sources to be integrated
@@ -502,11 +502,11 @@ Governance also brings compliance and legal stakeholders together with informati
 
 ## Related DMBOK Chapters
 
-- **Chapter 2: Data Governance** — stewardship and accountability
-- **Chapter 3: Data Architecture** — architectural approaches
-- **Chapter 4: Data Modeling and Design** — canonical/logical models
-- **Chapter 7: Data Integration and Interoperability** — integration principles
-- **Chapter 8: Document and Content Management** — ontologies and taxonomies
-- **Chapter 10: Data Warehousing and BI** — data sharing hubs as systems of reference
-- **Chapter 11: Metadata Management** — Reference Data metadata
-- **Chapter 12: Data Quality** — quality monitoring and metrics
+- **Chapter 2: Data Governance**: stewardship and accountability
+- **Chapter 3: Data Architecture**: architectural approaches
+- **Chapter 4: Data Modeling and Design**: canonical/logical models
+- **Chapter 7: Data Integration and Interoperability**: integration principles
+- **Chapter 8: Document and Content Management**: ontologies and taxonomies
+- **Chapter 10: Data Warehousing and BI**: data sharing hubs as systems of reference
+- **Chapter 11: Metadata Management**: Reference Data metadata
+- **Chapter 12: Data Quality**: quality monitoring and metrics

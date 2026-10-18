@@ -6,13 +6,13 @@ tags:
 - pmbok
 ---
 
-# 04 — Governance Performance Domain
+# 04: Governance Performance Domain
 
-> *Source: PMBOK® Guide — Eighth Edition by PMI, §2.1 Governance Performance Domain (pp. 7–35)*
+> *Source: PMBOK® Guide: Eighth Edition by PMI, §2.1 Governance Performance Domain (pp. 7–35)*
 
 ## Purpose
 
-The Governance performance domain provides the **framework, functions, and processes** that guide project management decisions and activities to optimize the project's value delivery. It encompasses project integration management related to strategic alignment, decision-making and change, project success criteria, and risk and opportunity management. Governance ensures that project activities remain aligned with the portfolio, organizational strategy, and goals — functioning as an integrated system rather than a siloed activity. It applies across all approaches (predictive, adaptive, hybrid), with variations based on industry, organizational context, and project specifics.
+The Governance performance domain provides the **framework, functions, and processes** that guide project management decisions and activities to optimize the project's value delivery. It encompasses project integration management related to strategic alignment, decision-making and change, project success criteria, and risk and opportunity management. Governance ensures that project activities remain aligned with the portfolio, organizational strategy, and goals, functioning as an integrated system rather than a siloed activity. It applies across all approaches (predictive, adaptive, hybrid), with variations based on industry, organizational context, and project specifics.
 
 ## Key Concepts
 
@@ -51,8 +51,8 @@ Regardless of the model, effective governance requires three core components:
 
 Predictive project environments may require two additional governance components:
 
-- **Escalation** — useful in hierarchical organizations where decision-making authority includes individuals outside the project team, or where higher-ranking individuals can remove persistent obstacles.
-- **Investment control** — required in environments calling for formal stewardship of project investment funding (public corporations, government agencies, financial entities). Often involves defined decision points (e.g., in lender-financed construction projects) to determine whether the next round of funding still makes good business sense.
+- **Escalation**: useful in hierarchical organizations where decision-making authority includes individuals outside the project team, or where higher-ranking individuals can remove persistent obstacles.
+- **Investment control**: required in environments calling for formal stewardship of project investment funding (public corporations, government agencies, financial entities). Often involves defined decision points (e.g., in lender-financed construction projects) to determine whether the next round of funding still makes good business sense.
 
 ### 2.1.5 Key Concepts Detail
 
@@ -73,7 +73,7 @@ Governance decisions about whether to insource or outsource project work must co
 The Governance performance domain encompasses **10 processes** that span the full project life cycle:
 
 ### 2.1.6.1 Initiate Project or Phase
-Officially authorizes the start of a project by creating a project charter (or similar document) that establishes a link between the project, the business case, and strategic goals. Grants the project manager authority to allocate resources. In adaptive approaches, charters are more flexible — ranging from concise vision statements to moderately detailed documents — focusing on why, who, what, where, when, how, and who the customer is.
+Officially authorizes the start of a project by creating a project charter (or similar document) that establishes a link between the project, the business case, and strategic goals. Grants the project manager authority to allocate resources. In adaptive approaches, charters are more flexible, ranging from concise vision statements to moderately detailed documents, focusing on why, who, what, where, when, how, and who the customer is.
 
 **Key inputs:** Business documents (business case, benefits management plan), agreements, enterprise environmental factors, organizational process assets.
 
@@ -87,7 +87,7 @@ Consolidates and aligns all plan components from each performance domain into a 
 **Key outputs:** Project management plan.
 
 ### 2.1.6.3 Plan Sourcing Strategy
-Documents project sourcing decisions — specifying whether work is insourced or outsourced, the source selection approach, scope of work for external sourcing, and appropriate contract types. Establishes source selection criteria (cost, technical capability, past performance, financial stability, compliance, sustainability alignment). Distinct from Plan Resource Management (§2.6.2) because it focuses on outsourcing project work and deliverables.
+Documents project sourcing decisions: specifying whether work is insourced or outsourced, the source selection approach, scope of work for external sourcing, and appropriate contract types. Establishes source selection criteria (cost, technical capability, past performance, financial stability, compliance, sustainability alignment). Distinct from Plan Resource Management (§2.6.2) because it focuses on outsourcing project work and deliverables.
 
 **Key inputs:** Project charter, project management plan (scope, quality, schedule, financial, resource components), project documents, enterprise environmental factors.
 
@@ -104,8 +104,8 @@ Leads and performs the work defined in the project management plan and implement
 Ensures project processes are performed consistently with stakeholder expectations by implementing planned and systematic activities from the quality management plan. Builds confidence in future outputs, improves process efficiency and effectiveness, and ensures proper project governance.
 
 Quality assurance (process-focused) is distinct from quality control (deliverable-focused):
-- **Quality assurance** — following and meeting standards; related to regulations, compliance, and audits.
-- **Quality control** — creating deliverables that meet defined specifications; related to product design, testing, and defects.
+- **Quality assurance**: following and meeting standards; related to regulations, compliance, and audits.
+- **Quality control**: creating deliverables that meet defined specifications; related to product design, testing, and defects.
 
 In agile projects, QA can be performed formally or informally. In predictive projects, QA is typically formalized.
 
@@ -116,8 +116,8 @@ In agile projects, QA can be performed formally or informally. In predictive pro
 ### 2.1.6.6 Manage Project Knowledge
 Uses existing knowledge and creates new knowledge to achieve project objectives and contribute to organizational learning. Manages both:
 
-- **Explicit knowledge** — codifiable, formal, systematic; easily communicated through manuals, procedures, databases.
-- **Tacit knowledge** — personal, experience-based, difficult to articulate; shared through conversations, mentoring, collaboration.
+- **Explicit knowledge**: codifiable, formal, systematic; easily communicated through manuals, procedures, databases.
+- **Tacit knowledge**: personal, experience-based, difficult to articulate; shared through conversations, mentoring, collaboration.
 
 Key activities include knowledge sharing, integration, after-action reviews, retrospectives, and storytelling. AI technologies (e.g., interview bots) add new capabilities for capturing both types of knowledge, though projects should establish responsible AI policies to manage associated risks (sensitive information exposure, hallucinations).
 
@@ -165,7 +165,7 @@ Governance should be tailored to the industry, regulatory environment, organizat
 
 - **Organizational governance.** Identify control boards, committees, and stakeholders; define status reporting requirements; determine whether and how a PMO should be involved; decide if a governance board is needed.
 - **Guided self-governance.** Adaptive teams operate with autonomy, light governance, and clear boundaries. They manage work through iterative planning, collaborative decision-making, and focused communication (e.g., daily coordination meetings). Successful self-governing teams are comfortable with uncertainty and use constructive feedback.
-- **Project life cycle adaptations.** Governance should be appropriate for predictive, adaptive, or hybrid life cycles — using "just enough" processes, methods, templates, and artifacts. Factors influencing tailoring include: business environment, regulatory requirements, need for innovation, market conditions, team size, degree of uncertainty, and project complexity.
+- **Project life cycle adaptations.** Governance should be appropriate for predictive, adaptive, or hybrid life cycles, using "just enough" processes, methods, templates, and artifacts. Factors influencing tailoring include: business environment, regulatory requirements, need for innovation, market conditions, team size, degree of uncertainty, and project complexity.
 
 **Examples:**
 1. A small organization may have the project manager make governance decisions with key leaders; a large organization with a PMO may partner with PMO leadership for strategic alignment.
@@ -178,7 +178,7 @@ The Governance performance domain is interrelated with all other performance dom
 
 | Performance Domain | Interaction |
 |---|---|
-| [[05_Scope_Performance_Domain]] | The most important domain interaction — scope carries the project's core value. Governance decisions about formal vs. informal scope controls are pivotal. |
+| [[05_Scope_Performance_Domain]] | The most important domain interaction: scope carries the project's core value. Governance decisions about formal vs. informal scope controls are pivotal. |
 | [[06_Schedule_Performance_Domain]] | Value propositions are often time-sensitive. Well-applied governance can increase speed and effectiveness; poorly applied governance can slow progress or produce ineffective outcomes. |
 | [[07_Finance_Performance_Domain]] | All projects are investments, and the value proposition is sensitive to cost. Governance interactions impact projects with cost overruns or underruns. |
 | [[08_Stakeholders_Performance_Domain]] | Governance ensures all stakeholders are engaged at the right time, considering all vantage points so individuals can give input, provide advice, or perform work at appropriate times. |
@@ -199,10 +199,10 @@ The following outcomes confirm effective governance implementation:
 
 ## Related Chapters
 
-- [[05_Scope_Performance_Domain]] — Defines and manages project scope and quality, carrying the project's core value.
-- [[06_Schedule_Performance_Domain]] — Plans and controls the project timeline; heavily interdependent with governance.
-- [[07_Finance_Performance_Domain]] — Manages project costs and budgets; governance ensures financial alignment with value.
-- [[08_Stakeholders_Performance_Domain]] — Identifies and engages stakeholders; governance coordinates engagement timing.
-- [[09_Resources_Performance_Domain]] — Plans and manages project resources; governance allocates resources across priorities.
-- [[10_Risk_Performance_Domain]] — Identifies, analyzes, and responds to risks; governance aligns risk responses with strategy.
-- [[PMBOK v8 - Overview]] — Full table of contents and performance domain overview.
+- [[05_Scope_Performance_Domain]]: Defines and manages project scope and quality, carrying the project's core value.
+- [[06_Schedule_Performance_Domain]]: Plans and controls the project timeline; heavily interdependent with governance.
+- [[07_Finance_Performance_Domain]]: Manages project costs and budgets; governance ensures financial alignment with value.
+- [[08_Stakeholders_Performance_Domain]]: Identifies and engages stakeholders; governance coordinates engagement timing.
+- [[09_Resources_Performance_Domain]]: Plans and manages project resources; governance allocates resources across priorities.
+- [[10_Risk_Performance_Domain]]: Identifies, analyzes, and responds to risks; governance aligns risk responses with strategy.
+- [[PMBOK v8 - Overview]]: Full table of contents and performance domain overview.

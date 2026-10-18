@@ -2,9 +2,9 @@
 tags: [technical-management, processes, systems-engineering, sebok]
 ---
 
-> *Source: SEBoK v2, Part 3c — Technical Management Processes*
+> *Source: SEBoK v2, Part 3c: Technical Management Processes*
 
-# 06 — Technical Management Processes
+# 06: Technical Management Processes
 
 ## Purpose
 
@@ -19,7 +19,7 @@ The Technical Management Knowledge Area covers the following processes:
 | **Decision Management** | Provide a structured, analytical framework for evaluating alternatives and selecting the most beneficial course of action |
 | **Requirements Management** | Ensure alignment of requirements with other representations, analyses, and system artifacts across the life cycle |
 | **Risk Management** | Reduce risks to an acceptable level before they occur, throughout the life of the product or project |
-| **Configuration Management** | Manage system and element configurations over the life cycle — tracking changes, managing versions, maintaining consistency |
+| **Configuration Management** | Manage system and element configurations over the life cycle: tracking changes, managing versions, maintaining consistency |
 | **Information Management** | Generate, obtain, confirm, transform, retain, retrieve, disseminate, and dispose of information to designated stakeholders |
 | **Quality Management** | Assure the deliverable meets the needs of the customer and is fit for use |
 | **Measurement** | Provide objective information about products, services, and processes to support effective management |
@@ -38,7 +38,7 @@ SE planning is performed concurrently and collaboratively with project planning.
 - Tailoring of engineering processes, practices, methods, and enabling environments
 - Definition of technical organizational, personnel, and team functions and responsibilities
 - Definition of the appropriate life cycle model
-- Definition and timing of technical reviews, assessments, and control mechanisms across the life cycle — including cost, schedule, and technical performance success criteria at identified milestones
+- Definition and timing of technical reviews, assessments, and control mechanisms across the life cycle, including cost, schedule, and technical performance success criteria at identified milestones
 - Estimation of technical cost and schedule based on the effort needed to meet requirements
 - Determination of critical technologies, associated risks, and actions needed to manage them
 - Identification of linkages to other project management efforts
@@ -46,7 +46,7 @@ SE planning is performed concurrently and collaboratively with project planning.
 
 ### Key Planning Documents
 
-The **Systems Engineering Management Plan (SEMP)** — also called the Systems Engineering Plan (SEP) — is the highest-level technical plan, subordinate to the project plan. It often has subordinate technical plans for specific focus areas. In U.S. defense work, the SEP (written by the government customer) and the SEMP (written by the developer/contractor) are distinct documents with different intents and content.
+The **Systems Engineering Management Plan (SEMP)**, also called the Systems Engineering Plan (SEP), is the highest-level technical plan, subordinate to the project plan. It often has subordinate technical plans for specific focus areas. In U.S. defense work, the SEP (written by the government customer) and the SEMP (written by the developer/contractor) are distinct documents with different intents and content.
 
 ### Scope and Integration
 
@@ -107,8 +107,8 @@ The SEAC process employs a series of formal reviews throughout the life cycle (f
 
 | Pitfall | Good Practice |
 |---------|---------------|
-| No measurement — assessment without measurement is ineffective | Provide independent assessment and recommendations |
-| "Something in time" culture — schedule takes priority over quality | Use peer reviews before gate reviews |
+| No measurement: assessment without measurement is ineffective | Provide independent assessment and recommendations |
+| "Something in time" culture: schedule takes priority over quality | Use peer reviews before gate reviews |
 | Technical review gates lack "teeth" (can be overridden) | Accept and communicate uncertainties |
 | Baselining requirements or designs too early | Just-in-time baselining |
 | | Leverage previous root cause analysis |
@@ -130,25 +130,25 @@ The method most commonly employed by systems engineers is the **trade study**. T
 
 ### Decision Management Process Activities
 
-1. **Framing and Tailoring the Decision** — Describe the system baseline, boundaries, interfaces, decision context, life cycle stage, decision makers and stakeholders, and available resources. Define a decision problem statement.
+1. **Framing and Tailoring the Decision**: Describe the system baseline, boundaries, interfaces, decision context, life cycle stage, decision makers and stakeholders, and available resources. Define a decision problem statement.
 
-2. **Developing Objectives and Measures** — Develop fundamental objectives and measures using interviews and focus groups with SMEs and stakeholders. Typical competing objectives: performance, development schedule, unit cost, support costs, and growth potential. Test objectives for completeness, non-redundancy, conciseness, specificity, and understandability.
+2. **Developing Objectives and Measures**: Develop fundamental objectives and measures using interviews and focus groups with SMEs and stakeholders. Typical competing objectives: performance, development schedule, unit cost, support costs, and growth potential. Test objectives for completeness, non-redundancy, conciseness, specificity, and understandability.
 
-3. **Value Functions** — Transform from measure space to value space using value functions. Define a *walk-away point* (minimum acceptable) mapped to 0 value, and a *stretch goal* (ideal) mapped to 100. Document rationale for shape of value functions.
+3. **Value Functions**: Transform from measure space to value space using value functions. Define a *walk-away point* (minimum acceptable) mapped to 0 value, and a *stretch goal* (ideal) mapped to 100. Document rationale for shape of value functions.
 
-4. **Swing Weight Matrix** — Determine priority weighting using the swing weight matrix, which considers both importance (defining/critical/enabling function) and the gap between current and desired capability.
+4. **Swing Weight Matrix**: Determine priority weighting using the swing weight matrix, which considers both importance (defining/critical/enabling function) and the gap between current and desired capability.
 
-5. **Generating Creative Alternatives** — Use an alternative generation table (morphological box) to create a comprehensive set of alternatives spanning the decision space.
+5. **Generating Creative Alternatives**: Use an alternative generation table (morphological box) to create a comprehensive set of alternatives spanning the decision space.
 
-6. **Assessing Alternatives via Deterministic Analysis** — Engage SMEs with operational data, test data, simulations, models, and expert knowledge. Capture scores on scoring sheets with source and rationale.
+6. **Assessing Alternatives via Deterministic Analysis**: Engage SMEs with operational data, test data, simulations, models, and expert knowledge. Capture scores on scoring sheets with source and rationale.
 
-7. **Synthesizing Results** — Transform scores into value tables, use color heat maps, additive value models, value component charts, and stakeholder value scatter plots to visualize multi-dimensional trade-offs.
+7. **Synthesizing Results**: Transform scores into value tables, use color heat maps, additive value models, value component charts, and stakeholder value scatter plots to visualize multi-dimensional trade-offs.
 
-8. **Identifying Uncertainty and Conducting Probabilistic Analysis** — Use Monte Carlo Simulation and sensitivity analysis (tornado diagrams, waterfall diagrams) to assess uncertainty impact.
+8. **Identifying Uncertainty and Conducting Probabilistic Analysis**: Use Monte Carlo Simulation and sensitivity analysis (tornado diagrams, waterfall diagrams) to assess uncertainty impact.
 
-9. **Improving Alternatives** — Use value-focused thinking to modify design choices and generate improved alternatives.
+9. **Improving Alternatives**: Use value-focused thinking to modify design choices and generate improved alternatives.
 
-10. **Communicating Trade-offs and Presenting Recommendations** — Identify key observations and present recommendations as actionable task lists with comprehensive reports.
+10. **Communicating Trade-offs and Presenting Recommendations**: Identify key observations and present recommendations as actionable task lists with comprehensive reports.
 
 ### Cognitive Bias in Decision Making
 
@@ -207,22 +207,22 @@ The purpose of risk management is to reduce risks to an acceptable level before 
 
 Two prominent definitions are recognized in the INCOSE Handbook:
 
-1. **The effect of uncertainty on objectives** (ISO 15288, ISO 31000, ISO 16085) — effects may be negative or positive. Ties risks to specified objectives.
-2. **The combination of the probability of occurrence of harm and the severity of that harm** (ISO Guide 51, ISO 14971) — accommodates only negative effects. Used extensively in safety engineering.
+1. **The effect of uncertainty on objectives** (ISO 15288, ISO 31000, ISO 16085). Effects may be negative or positive. Ties risks to specified objectives.
+2. **The combination of the probability of occurrence of harm and the severity of that harm** (ISO Guide 51, ISO 14971): accommodates only negative effects. Used extensively in safety engineering.
 
 A long-established approach characterizes each individual risk as the combination of: (1) **probability** (likelihood) of failing to achieve a particular outcome, and (2) **consequences** (impact) of failing to achieve that outcome. This supports the use of the risk matrix (risk cube). ISO 31010:2019 describes 41 risk assessment techniques.
 
 ### Risk Management Process Activities
 
-1. **Risk Management Planning** — Establish and maintain the strategy; document in a Risk Management Plan (RMP). The RMP should include: project summary, acquisition/contracting strategies, key definitions, process steps, inputs/tools/outputs, linkages to other processes, ground rules, risk categories, and roles/responsibilities.
+1. **Risk Management Planning**: Establish and maintain the strategy; document in a Risk Management Plan (RMP). The RMP should include: project summary, acquisition/contracting strategies, key definitions, process steps, inputs/tools/outputs, linkages to other processes, ground rules, risk categories, and roles/responsibilities.
 
-2. **Risk Identification** — Examine project products, processes, and requirements using top-level approaches (WBS, key processes/requirements evaluation) and lower-level approaches (brainstorming, checklists, taxonomies, expert judgment, Ishikawa diagrams). Use structured risk descriptions (e.g., if-then format). Perform continuously at both individual and structured levels.
+2. **Risk Identification**: Examine project products, processes, and requirements using top-level approaches (WBS, key processes/requirements evaluation) and lower-level approaches (brainstorming, checklists, taxonomies, expert judgment, Ishikawa diagrams). Use structured risk descriptions (e.g., if-then format). Perform continuously at both individual and structured levels.
 
-3. **Risk Analysis** — Systematically evaluate each identified risk to estimate probability and consequence of occurrence, converting results to a risk level or rating. Methods grouped into qualitative and quantitative. Prioritize risks by risk level, score, time-frame, frequency, and interrelationships.
+3. **Risk Analysis**: Systematically evaluate each identified risk to estimate probability and consequence of occurrence, converting results to a risk level or rating. Methods grouped into qualitative and quantitative. Prioritize risks by risk level, score, time-frame, frequency, and interrelationships.
 
-4. **Risk Treatment** — Identify and select options and implement the desired option to reduce risk to an acceptable level, given program constraints. Options include: **assumption**, **avoidance**, **control (mitigation)**, and **transfer**. All four should be evaluated; hybrid strategies are possible. Buying information (prototypes, benchmarking, modeling) can clarify treatment decisions.
+4. **Risk Treatment**: Identify and select options and implement the desired option to reduce risk to an acceptable level, given program constraints. Options include: **assumption**, **avoidance**, **control (mitigation)**, and **transfer**. All four should be evaluated; hybrid strategies are possible. Buying information (prototypes, benchmarking, modeling) can clarify treatment decisions.
 
-5. **Risk Monitoring** — Evaluate effectiveness of risk treatment activities against established metrics. Approaches include: earned value, program metrics, Technical Performance Measures (TPMs), schedule analysis, and variations in risk level.
+5. **Risk Monitoring**: Evaluate effectiveness of risk treatment activities against established metrics. Approaches include: earned value, program metrics, Technical Performance Measures (TPMs), schedule analysis, and variations in risk level.
 
 ### Opportunity Management
 
@@ -237,23 +237,23 @@ Per ISO 31000:2018, integrating risk management with all organizational processe
 | Pitfall | Good Practice |
 |---------|---------------|
 | Over-reliance on process without attention to human/organizational behavior | Both top-down and bottom-up risk management |
-| Lack of continuity — risk management done only for reviews | Early planning |
+| Lack of continuity: risk management done only for reviews | Early planning |
 | Over-reliance on tools and techniques | Understand limitations of analysis tools |
 | Automatic mitigation selection (not evaluating all options) | Robust risk treatment strategy (reduce both probability and consequence) |
-| "Sea of green" — plan progress tracked, but risk itself unaffected | Structured risk monitoring |
-| Band-aid risk treatment — patching symptoms | Update risk database throughout the program |
+| "Sea of green": plan progress tracked, but risk itself unaffected | Structured risk monitoring |
+| Band-aid risk treatment: patching symptoms | Update risk database throughout the program |
 
 ---
 
 ## Configuration Management
 
-Configuration Management (CM) helps teams keep track of changes to a system over its life cycle — ensuring that what is built matches what was planned, and that everyone stays aligned as updates occur. Per ISO/IEC/IEEE 15288: *the purpose of the CM process is to manage system and system element configurations over their life cycle*.
+Configuration Management (CM) helps teams keep track of changes to a system over its life cycle, ensuring that what is built matches what was planned, and that everyone stays aligned as updates occur. Per ISO/IEC/IEEE 15288: *the purpose of the CM process is to manage system and system element configurations over their life cycle*.
 
 ### Fundamental Concepts
 
 - **Configuration**: The interrelated functional and physical characteristics outlined in configuration information
 - **Configuration Items (CI)**: The system and its individual elements that fall under CM
-- **Configuration Information**: Comprehensive data necessary to describe and document CIs throughout the life cycle — including requirement specifications, architecture descriptions, design descriptions, and user documentation
+- **Configuration Information**: Comprehensive data necessary to describe and document CIs throughout the life cycle, including requirement specifications, architecture descriptions, design descriptions, and user documentation
 
 CM objectives: guarantee consistency between system and configuration information, ensure integrity and traceability of information and its changes, and facilitate reproducibility.
 
@@ -263,15 +263,15 @@ CM focuses on the relevance of information related to the system and its evoluti
 
 ### CM Process Activities
 
-1. **CM Planning and Management** — Define scope and organization of CM tasks. Formalize in a CM plan covering: CM tasks, organization, schedule, responsibilities, and tools. Must accommodate acquisition, subcontracting, and partnership situations.
+1. **CM Planning and Management**: Define scope and organization of CM tasks. Formalize in a CM plan covering: CM tasks, organization, schedule, responsibilities, and tools. Must accommodate acquisition, subcontracting, and partnership situations.
 
-2. **Configuration Identification** — Identify which system elements and information should be under CM. Define identification rules, structure items and their relationships, define validation/release rules, and define baselines to be established at life cycle milestones.
+2. **Configuration Identification**: Identify which system elements and information should be under CM. Define identification rules, structure items and their relationships, define validation/release rules, and define baselines to be established at life cycle milestones.
 
-3. **Configuration Change Management** — Encompasses analysis, justification, evaluation, coordination, and disposition of changes and variances. Managed through **Configuration Control Boards (CCBs)** which typically include: a CCB Chair, Configuration Manager, systems engineer, domain SMEs, and procurement/contracting specialists. A **Technical Review Board (TRB)** may precede the CCB for complex systems to ensure thoroughness and correctness of supporting information.
+3. **Configuration Change Management**: Encompasses analysis, justification, evaluation, coordination, and disposition of changes and variances. Managed through **Configuration Control Boards (CCBs)** which typically include: a CCB Chair, Configuration Manager, systems engineer, domain SMEs, and procurement/contracting specialists. A **Technical Review Board (TRB)** may precede the CCB for complex systems to ensure thoroughness and correctness of supporting information.
 
-4. **Configuration Status Accounting** — All reporting tasks providing dedicated reporting about configuration information and CM activities (internal reports, external deliverables, certificates, conformity reports).
+4. **Configuration Status Accounting**: All reporting tasks providing dedicated reporting about configuration information and CM activities (internal reports, external deliverables, certificates, conformity reports).
 
-5. **Configuration Verification and Audit** — Verify that the system conforms to its configuration information through Functional Configuration Audits (FCA) and Physical Configuration Audits (PCA).
+5. **Configuration Verification and Audit**: Verify that the system conforms to its configuration information through Functional Configuration Audits (FCA) and Physical Configuration Audits (PCA).
 
 ### Configuration Baselines
 
@@ -291,7 +291,7 @@ Each baseline has associated documentation: Functional Configuration Documentati
 - **CCB Organization**: Small organizations may use a single CCB; large/complex systems may use TRB + CCB hierarchy
 - **CM Training**: All stakeholders trained to minimum awareness; CCB members understand workflow and artifacts
 - **CM Measurement**: Effectiveness (strategy deployment, maturity, stakeholder awareness, tool adequacy) and performance (CI volume, change volume/costs, impact analysis duration, change approval/implementation time, discrepancies, audit pass rates)
-- **CM Tools**: Product Lifecycle Management, Application Lifecycle Management — federated environment encompassing information management, tracking, version management, release management, baseline management, and breakdown structures
+- **CM Tools**: Product Lifecycle Management, Application Lifecycle Management: federated environment encompassing information management, tracking, version management, release management, baseline management, and breakdown structures
 
 ---
 
@@ -303,7 +303,7 @@ Information Management (IM) helps teams access and manage information over its l
 
 - **Data vs. Information**: Data are raw unstructured values; information is structured data in context that has been analyzed and interpreted.
 - **Information Asset**: Any piece or collection of information that must be managed independently. Can exist in tangible or intangible forms, in electronic or physical format.
-- **Metadata**: "Data about data" — characterizes the information to be managed (title, author, provenance, status). Key role in organizing information governance, search, and navigation.
+- **Metadata**: "Data about data": characterizes the information to be managed (title, author, provenance, status). Key role in organizing information governance, search, and navigation.
 
 ### IM Enables Business Objectives
 
@@ -325,18 +325,18 @@ IM and CM are closely interconnected. Whenever information assets correspond to 
 
 ### Information Security Management
 
-IM incorporates the fundamental need to manage information security — broader than cybersecurity. Five major steps:
+IM incorporates the fundamental need to manage information security, broader than cybersecurity. Five major steps:
 
-1. **Define Sensitive Information** — Determine sensitivity levels relative to pre-defined criteria
-2. **Define Data and Asset Classifications** — Global classification dictionary with clear rules
-3. **Determine Security Controls** — Encryption, digital signatures, distribution restrictions, NDAs, user education
-4. **Implement Security Controls** — Adapted to each classification and organizational context
-5. **Monitor Execution** — Measures to provide insights and status about information security
+1. **Define Sensitive Information**: Determine sensitivity levels relative to pre-defined criteria
+2. **Define Data and Asset Classifications**: Global classification dictionary with clear rules
+3. **Determine Security Controls**: Encryption, digital signatures, distribution restrictions, NDAs, user education
+4. **Implement Security Controls**: Adapted to each classification and organizational context
+5. **Monitor Execution**: Measures to provide insights and status about information security
 
 ### IM Process (Inspired by INCOSE SE Handbook)
 
-- **Prepare for IM** — Define scope (relevant information, directives/standards, policies/constraints, stakeholders), define approach (information dictionary, lifecycle, transition triggers, change process, authorized formats, storage/archive policy), develop IM plan (identification rules, management requirements, control/security rules, auditing, roles/responsibilities/authorities)
-- **Perform IM** — Collect, organize, analyze, distribute, protect, and manage end-of-life of information
+- **Prepare for IM**: Define scope (relevant information, directives/standards, policies/constraints, stakeholders), define approach (information dictionary, lifecycle, transition triggers, change process, authorized formats, storage/archive policy), develop IM plan (identification rules, management requirements, control/security rules, auditing, roles/responsibilities/authorities)
+- **Perform IM**: Collect, organize, analyze, distribute, protect, and manage end-of-life of information
 
 ### Information Management System (IMS)
 
@@ -363,10 +363,10 @@ Whether a systems engineer delivers a product, a service, or an enterprise, the 
 
 ### Stages of the Quality Movement
 
-1. **Acceptance Sampling** — Apply statistical tests to decide whether to accept a lot of material based on a random sample
-2. **Statistical Process Control (SPC)** — Determine if production processes are stable; measure processes instead of products
-3. **Design for Quality** — Design processes robust against causes of variation, reducing monitoring requirements
-4. **Six Sigma** — Apply statistical thinking to improve business processes
+1. **Acceptance Sampling**: Apply statistical tests to decide whether to accept a lot of material based on a random sample
+2. **Statistical Process Control (SPC)**: Determine if production processes are stable; measure processes instead of products
+3. **Design for Quality**: Design processes robust against causes of variation, reducing monitoring requirements
+4. **Six Sigma**: Apply statistical thinking to improve business processes
 
 ### Key Definitions (ASQ)
 
@@ -377,11 +377,11 @@ Whether a systems engineer delivers a product, a service, or an enterprise, the 
 
 ### Quality Attributes
 
-Quality attributes (non-functional requirements) are used to evaluate system performance. It is important to conduct trade-off analysis to identify relationships between attributes — e.g., flexibility and maintainability may correlate positively, while flexibility and reliability may trade off. To achieve high quality, one must: identify and prioritize attributes → identify metrics → measure and monitor → validate measurements → analyze results → establish improvement processes.
+Quality attributes (non-functional requirements) are used to evaluate system performance. It is important to conduct trade-off analysis to identify relationships between attributes, e.g., flexibility and maintainability may correlate positively, while flexibility and reliability may trade off. To achieve high quality, one must: identify and prioritize attributes → identify metrics → measure and monitor → validate measurements → analyze results → establish improvement processes.
 
 #### Quality Attributes by Domain
 
-- **Products**: Conformance to specifications — physical characteristics within tolerance ranges. Summarized as "in compliance" or "defective."
+- **Products**: Conformance to specifications: physical characteristics within tolerance ranges. Summarized as "in compliance" or "defective."
 - **Services**: Customer satisfaction is the primary measure. Attributes include: affordability, availability, dependability, efficiency, predictability, reliability, responsiveness, safety, security, usability.
 - **Enterprises**: Large, complex interconnected entities with many stakeholders. Quality attributes vary by stakeholder group (e.g., passengers care about safety and affordability; airlines care about adaptability and profitability).
 
@@ -400,7 +400,7 @@ A set of measuring instruments providing adequate capability for monitoring and 
 
 ### Quality Standards
 
-Primary standards maintained by ISO (ISO 9000 series) provide requirements for quality management systems without specifying how they are to be met — the key requirement is that systems must be audited. In the U.S., the Malcolm Baldrige National Quality Award Criteria have become de facto standards for assessing organizational quality performance.
+Primary standards maintained by ISO (ISO 9000 series) provide requirements for quality management systems without specifying how they are to be met. The key requirement is that systems must be audited. In the U.S., the Malcolm Baldrige National Quality Award Criteria have become de facto standards for assessing organizational quality performance.
 
 ---
 
@@ -413,32 +413,32 @@ Measurement and the accompanying analysis are fundamental elements of systems en
 Three key SE measurement concepts:
 
 1. SE measurement is a consistent but flexible process **tailored to unique information needs** and characteristics of a particular project or organization, revised as needs change
-2. Decision makers must **understand what is being measured** — connecting measures to what they need to know as part of a closed-loop, feedback control process
-3. Measurement **must be used to be effective** — measuring quality alongside cost and schedule provides the overall effectiveness picture
+2. Decision makers must **understand what is being measured**: connecting measures to what they need to know as part of a closed-loop, feedback control process
+3. Measurement **must be used to be effective**. Measuring quality alongside cost and schedule provides the overall effectiveness picture
 
 ### Measurement Process (PSM / ISO/IEC/IEEE 15939)
 
 Four activities:
 
-1. **Establish and Sustain Commitment** — Establish resources, training, and tools; ensure management commitment to use the information produced.
+1. **Establish and Sustain Commitment**: Establish resources, training, and tools; ensure management commitment to use the information produced.
 
-2. **Plan Measurement** — Define measures providing insight into information needs. Approaches include: PSM (information categories, measurable concepts, prospective measures), Goal-Question-Metric (GQM), and ISO/IEC/IEEE 15939. Good measures have attributes of relevance, completeness, timeliness, simplicity, cost effectiveness, repeatability, and accuracy. Each measure must be unambiguously defined and documented.
+2. **Plan Measurement**: Define measures providing insight into information needs. Approaches include: PSM (information categories, measurable concepts, prospective measures), Goal-Question-Metric (GQM), and ISO/IEC/IEEE 15939. Good measures have attributes of relevance, completeness, timeliness, simplicity, cost effectiveness, repeatability, and accuracy. Each measure must be unambiguously defined and documented.
 
-3. **Perform Measurement** — Collect and prepare measurement data (verification, normalization, aggregation), perform analysis (estimation, feasibility analysis, performance analysis), and present results to inform decision makers. Data quality depends on valid, accurate, and unbiased collection.
+3. **Perform Measurement**: Collect and prepare measurement data (verification, normalization, aggregation), perform analysis (estimation, feasibility analysis, performance analysis), and present results to inform decision makers. Data quality depends on valid, accurate, and unbiased collection.
 
-4. **Evaluate Measurement** — Periodically evaluate and improve the measurement process and specific measures. Ensure measures continue to align with business goals and information needs.
+4. **Evaluate Measurement**: Periodically evaluate and improve the measurement process and specific measures. Ensure measures continue to align with business goals and information needs.
 
 ### Systems Engineering Leading Indicators
 
-Leading indicators provide **predictive insight** pertaining to an information need — evaluating the effectiveness of how a specific activity is applied in a manner that provides information about impacts likely to affect system performance objectives. A leading indicator is composed of characteristics, a condition, and a predicted behavior, analyzed periodically to predict future states.
+Leading indicators provide **predictive insight** pertaining to an information need, evaluating the effectiveness of how a specific activity is applied in a manner that provides information about impacts likely to affect system performance objectives. A leading indicator is composed of characteristics, a condition, and a predicted behavior, analyzed periodically to predict future states.
 
 ### Technical Measurement
 
 Technical measurement provides information about progress in definition and development of the technical solution, ongoing assessment of associated risks, and the likelihood of meeting critical objectives. Three types of technical measures:
 
-- **Measures of Effectiveness (MOEs)** — Operational measures of success related to mission accomplishment
-- **Measures of Performance (MOPs)** — Measures characterizing physical or functional attributes of the system
-- **Technical Performance Measures (TPMs)** — Measures predicting the degree to which the system will meet performance requirements
+- **Measures of Effectiveness (MOEs)**: Operational measures of success related to mission accomplishment
+- **Measures of Performance (MOPs)**: Measures characterizing physical or functional attributes of the system
+- **Technical Performance Measures (TPMs)**: Measures predicting the degree to which the system will meet performance requirements
 
 These are planned early in the life cycle and performed throughout with increasing fidelity as the technical solution develops.
 
@@ -456,30 +456,30 @@ The CID Measurement Framework details common information needs and measures effe
 
 ### Linkages
 
-- **Project Planning** — Historical data and estimation support
-- **Project Assessment and Control** — Objective information for assessment and control actions
-- **Risk Management** — Quantifies risks and provides data for treatment evaluation
-- **Decision Management** — Objective insight for informed decision making
+- **Project Planning**: Historical data and estimation support
+- **Project Assessment and Control**: Objective information for assessment and control actions
+- **Risk Management**: Quantifies risks and provides data for treatment evaluation
+- **Decision Management**: Objective insight for informed decision making
 
 ### Pitfalls and Good Practices
 
 | Pitfall | Good Practice |
 |---------|---------------|
-| Golden measures — looking for one-size-fits-all | Regularly review each measure collected |
-| Single-pass perspective — viewing measurement as one-time | Action-driven — measurement results provided to decision makers |
-| Unknown information need — measuring without understanding why | Integration into project processes and business rhythm |
-| Inappropriate usage — measuring individuals or without context | Timely information — early enough to take action |
-| | Data availability — use best available data, complemented by qualitative insight |
+| Golden measures: looking for one-size-fits-all | Regularly review each measure collected |
+| Single-pass perspective: viewing measurement as one-time | Action-driven: measurement results provided to decision makers |
+| Unknown information need: measuring without understanding why | Integration into project processes and business rhythm |
+| Inappropriate usage: measuring individuals or without context | Timely information: early enough to take action |
+| | Data availability: use best available data, complemented by qualitative insight |
 | | Use historical data as the basis of plans |
 
 ---
 
 ## Related Chapters
 
-- [[00_Introduction_to_SEBoK]] — Overview and structure of the SEBoK
-- [[02_Nature_of_Systems]] — Foundational systems concepts
-- [[05_Life_Cycles_and_Processes]] — SE life cycle and process knowledge
-- [[10_Product_and_Service_Systems_Engineering]] — Domain-specific SE applications
-- [[14_Enabling_Businesses_and_Enterprises]] — Organizational support for SE
-- [[16_SE_and_Project_Management]] — SE interaction with other disciplines (Project Management, Software Engineering, Quality Attributes, etc.)
-- [[20_Implementation_Examples]] — Case studies and vignettes
+- [[00_Introduction_to_SEBoK]]: Overview and structure of the SEBoK
+- [[02_Nature_of_Systems]]: Foundational systems concepts
+- [[05_Life_Cycles_and_Processes]]: SE life cycle and process knowledge
+- [[10_Product_and_Service_Systems_Engineering]]: Domain-specific SE applications
+- [[14_Enabling_Businesses_and_Enterprises]]: Organizational support for SE
+- [[16_SE_and_Project_Management]]: SE interaction with other disciplines (Project Management, Software Engineering, Quality Attributes, etc.)
+- [[20_Implementation_Examples]]: Case studies and vignettes

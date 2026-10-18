@@ -2,9 +2,9 @@
 tags: [project-management, related-disciplines, systems-engineering, sebok]
 ---
 
-# 16 — Systems Engineering and Project Management
+# 16: Systems Engineering and Project Management
 
-> *Source: SEBoK v2, Part 6 — Systems Engineering and Project Management*
+> *Source: SEBoK v2, Part 6: Systems Engineering and Project Management*
 
 ## Purpose
 
@@ -23,11 +23,11 @@ Project management is the application of knowledge, skills, tools, and technique
 ## Overview of the PMBOK® Guide (in SE Context)
 
 The PMBOK® Guide provides a framework of processes organized into performance domains. For systems engineers, the most relevant PMBOK areas are:
-- **Integration Management** — Aligning SE activities with overall project plans
-- **Scope Management** — Translating system requirements into project scope
-- **Schedule Management** — Sequencing SE activities (reviews, analyses, integration events)
-- **Risk Management** — Coordinating technical risk with project risk
-- **Stakeholder Management** — Engaging technical and non-technical stakeholders
+- **Integration Management**: Aligning SE activities with overall project plans
+- **Scope Management**: Translating system requirements into project scope
+- **Schedule Management**: Sequencing SE activities (reviews, analyses, integration events)
+- **Risk Management**: Coordinating technical risk with project risk
+- **Stakeholder Management**: Engaging technical and non-technical stakeholders
 
 ## Relationships between SE and PM
 
@@ -46,19 +46,19 @@ Key integration points: Work Breakdown Structure (WBS), Integrated Master Schedu
 ## Influence of Project Structure and Governance
 
 The organizational relationship between SE and PM significantly affects outcomes:
-- **SE reports to PM** — Common in smaller projects; PM controls all resources
-- **SE and PM as peers** — Balanced approach for complex systems; requires strong collaboration
-- **SE as independent authority** — Common in safety-critical or highly regulated domains; SE has veto power on technical decisions
-- **IPPD/IPT structures** — Integrated Product Teams with co-leadership from SE and PM
+- **SE reports to PM**: Common in smaller projects; PM controls all resources
+- **SE and PM as peers**: Balanced approach for complex systems; requires strong collaboration
+- **SE as independent authority**: Common in safety-critical or highly regulated domains; SE has veto power on technical decisions
+- **IPPD/IPT structures**: Integrated Product Teams with co-leadership from SE and PM
 
 ## Cost Estimating and Analysis in SE
 
 Systems engineers contribute to cost estimation through:
-- **Technical baseline definition** — What are we building? Defines the scope for cost estimation
-- **Parametric estimation** — Using historical data and system parameters (weight, lines of code, complexity)
-- **Life cycle cost analysis** — Considering development, production, operations, support, and disposal
-- **Trade studies** — Balancing cost against performance, schedule, and risk
-- **Earned Value Management (EVM)** — SE contributes technical progress assessment to EVM
+- **Technical baseline definition**: What are we building? Defines the scope for cost estimation
+- **Parametric estimation**: Using historical data and system parameters (weight, lines of code, complexity)
+- **Life cycle cost analysis**: Considering development, production, operations, support, and disposal
+- **Trade studies**: Balancing cost against performance, schedule, and risk
+- **Earned Value Management (EVM)**: SE contributes technical progress assessment to EVM
 
 ## Procurement and Acquisition
 
@@ -80,7 +80,7 @@ At the portfolio level, SE contributes to:
 
 ## Related Chapters
 
-- [[05_Life_Cycles_and_Processes]] — Life cycle models that coordinate SE and PM activities
-- [[06_Technical_Management_Processes]] — Technical planning, assessment, and risk management
-- [[14_Enabling_Businesses_and_Enterprises]] — Organizational structures for SE and PM
-- [[11_Enterprise_Systems_Engineering]] — Portfolio management at the enterprise level
+- [[05_Life_Cycles_and_Processes]]: Life cycle models that coordinate SE and PM activities
+- [[06_Technical_Management_Processes]]: Technical planning, assessment, and risk management
+- [[14_Enabling_Businesses_and_Enterprises]]: Organizational structures for SE and PM
+- [[11_Enterprise_Systems_Engineering]]: Portfolio management at the enterprise level

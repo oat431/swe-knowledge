@@ -2,9 +2,9 @@
 tags: [techniques, reference, business-analysis, babok]
 ---
 
-# 08 — Techniques Catalog
+# 08: Techniques Catalog
 
-> *Source: BABOK® Guide v3 by IIBA, Chapter 9 — Techniques*
+> *Source: BABOK® Guide v3 by IIBA, Chapter 9: Techniques*
 
 ## Purpose
 
@@ -170,8 +170,8 @@ Refer to **Chapter 11** for the complete cross-reference mapping each technique 
 
 ## Related Chapters
 
-- [[01_BA_Planning_and_Monitoring]] — Techniques for planning the BA approach
-- [[02_Elicitation_and_Collaboration]] — Elicitation and collaboration techniques in context
-- [[04_Strategy_Analysis]] — Strategy analysis techniques
-- [[05_Requirements_Analysis_and_Design]] — Analysis and design techniques
-- [[06_Solution_Evaluation]] — Evaluation techniques
+- [[01_BA_Planning_and_Monitoring]]: Techniques for planning the BA approach
+- [[02_Elicitation_and_Collaboration]]: Elicitation and collaboration techniques in context
+- [[04_Strategy_Analysis]]: Strategy analysis techniques
+- [[05_Requirements_Analysis_and_Design]]: Analysis and design techniques
+- [[06_Solution_Evaluation]]: Evaluation techniques

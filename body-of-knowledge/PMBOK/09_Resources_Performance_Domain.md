@@ -4,11 +4,11 @@ tags: [resources, performance-domain, project-management, pmbok]
 
 # Resources Performance Domain
 
-> *Source: PMBOK® Guide — Eighth Edition by PMI, §2.6 Resources Performance Domain (pp. 79–92)*
+> *Source: PMBOK® Guide: Eighth Edition by PMI, §2.6 Resources Performance Domain (pp. 79–92)*
 
 ## Purpose
 
-The Resources performance domain addresses how effectively and efficiently a project team plans for and utilizes its available resources — encompassing both **human resources** (the project team) and **physical or virtual resources** (equipment, materials, supplies, facilities, infrastructure, software, testing environments, licenses, services, information, documents). It also covers resource availability, utilization, and maintenance. The goal is to ensure the right resources are available to the project manager and project team at the right time and place.
+The Resources performance domain addresses how effectively and efficiently a project team plans for and utilizes its available resources, encompassing both **human resources** (the project team) and **physical or virtual resources** (equipment, materials, supplies, facilities, infrastructure, software, testing environments, licenses, services, information, documents). It also covers resource availability, utilization, and maintenance. The goal is to ensure the right resources are available to the project manager and project team at the right time and place.
 
 ## Key Concepts
 
@@ -16,7 +16,7 @@ The Resources performance domain addresses how effectively and efficiently a pro
 
 - **Resource Manager.** An individual with management authority over one or more resources. The project team may not have direct control over resource selection due to collective bargaining agreements, subcontractor personnel, matrix environments, or internal/external reporting relationships. Internal resources are acquired (assigned) from functional or resource managers; external resources are obtained through partnerships, joint ventures, or procurement processes (see [[Appendix_A3_Procurement]]).
 
-- **Human Resources (Project Team Members).** Individuals with assigned roles and responsibilities who work collectively toward a shared project goal. Involvement of all team members in planning and decision-making strengthens commitment. Teams may be guided by top-down leadership (centralized management) or may self-organize with decentralized decision-making (distributed management) — see [[13_Tools_and_Techniques]].
+- **Human Resources (Project Team Members).** Individuals with assigned roles and responsibilities who work collectively toward a shared project goal. Involvement of all team members in planning and decision-making strengthens commitment. Teams may be guided by top-down leadership (centralized management) or may self-organize with decentralized decision-making (distributed management), see [[13_Tools_and_Techniques]].
 
 - **Physical, Material, or Virtual Resources.** Any non-person resource needed for project completion: equipment, materials, supplies, facilities, infrastructure, software, testing environments, licenses, services, etc. Organizations need sufficient data on resource demands (current and future), required configurations, and supply. Large-scale projects may require significant procurement activities (see [[Appendix_A3_Procurement]]).
 
@@ -64,26 +64,26 @@ The process of obtaining the team, physical, or virtual resources necessary to c
 
 The process of guiding, developing, and managing the team to enhance performance and achieve project goals through feedback, collaboration, conflict resolution, and escalation. Its key benefit is influencing team behavior, managing conflict, and resolving issues. Combines both management and leadership activities:
 
-- **Management activities:** Focus on means — effective processes, planning, coordinating, measuring, monitoring work.
-- **Leadership activities:** Focus on people — influencing, motivating, listening, enabling.
+- **Management activities:** Focus on means: effective processes, planning, coordinating, measuring, monitoring work.
+- **Leadership activities:** Focus on people: influencing, motivating, listening, enabling.
 
 **Common Aspects of Team Development:**
-- **Vision and objectives** — Communicated throughout the project; referenced in decision-making and problem-solving.
-- **Roles and responsibilities** — Ensure team members understand and fulfill their roles; identify knowledge/skill gaps and address through training, mentoring, or coaching.
-- **Project team operations** — Facilitate communication, problem-solving, consensus building; develop team charter and operating guidelines/norms.
-- **Guidance** — Directed at the overall team and individual members on specific tasks or deliverables.
-- **Growth** — Identify areas of strength and improvement; work collaboratively toward growth goals.
+- **Vision and objectives**: Communicated throughout the project; referenced in decision-making and problem-solving.
+- **Roles and responsibilities**: Ensure team members understand and fulfill their roles; identify knowledge/skill gaps and address through training, mentoring, or coaching.
+- **Project team operations**: Facilitate communication, problem-solving, consensus building; develop team charter and operating guidelines/norms.
+- **Guidance**: Directed at the overall team and individual members on specific tasks or deliverables.
+- **Growth**: Identify areas of strength and improvement; work collaboratively toward growth goals.
 
 **Characteristics of High-Performing Teams:**
-- Open communication — environment that fosters safe, productive dialogue.
-- Shared understanding — common purpose and alignment with organizational mission.
-- Shared ownership — team members feel ownership over outcomes.
-- Trust — willingness to perform at higher levels.
-- Collaboration — working as a team rather than in silos or competitively.
-- Adaptability — ability to adapt work methods to environment or situation.
-- Resilience — quick recovery from issues or failures.
-- Empowerment, delegation, and autonomy — decision-making authority improves performance and satisfaction.
-- Recognition — appreciation reinforces positive behaviors.
+- Open communication: environment that fosters safe, productive dialogue.
+- Shared understanding: common purpose and alignment with organizational mission.
+- Shared ownership: team members feel ownership over outcomes.
+- Trust: willingness to perform at higher levels.
+- Collaboration: working as a team rather than in silos or competitively.
+- Adaptability: ability to adapt work methods to environment or situation.
+- Resilience: quick recovery from issues or failures.
+- Empowerment, delegation, and autonomy: decision-making authority improves performance and satisfaction.
+- Recognition: appreciation reinforces positive behaviors.
 
 **Key Inputs:** Resource management plan, issue log, lessons learned register, project schedule, resource calendars, team charter, work performance reports, project team assignments, team performance assessments.
 
@@ -120,20 +120,20 @@ The process of ensuring that physical or virtual resources assigned and allocate
 Given the uniqueness of each project, activities and processes within the Resources performance domain may be tailored. Key considerations include:
 
 - **Development Approach Selection.** Leadership styles are tailored to project needs, environment, and stakeholders.
-  - **Predictive approach:** Resource management is planned and structured in advance — define requirements early, allocate based on schedule, create detailed resource management plan, ensure availability throughout.
+  - **Predictive approach:** Resource management is planned and structured in advance: define requirements early, allocate based on schedule, create detailed resource management plan, ensure availability throughout.
   - **Adaptive approach:** Projects with high variability benefit from self-organizing teams with generalizing specialists. Collaboration boosts productivity, accelerates integration of work activities, improves communication and knowledge sharing, and provides flexibility. Less time for centralized tasking and decision-making.
 
 - **Maturity of Project Team Culture.** Cross-organizational teams (contracts, partnerships) may have more formalized, less flexible roles. Requires up-front work to establish a "one team" mindset and integrate skills, capabilities, and processes. Key dimensions:
-  - **Unique team culture** — Each team develops its own culture through norms or informal behaviors, operating within the organization's culture.
-  - **Transparency on bias** — Openness about biases (e.g., Gantt chart preferences, planning horizons) establishes a culture of trust enabling consensus and collaboration.
-  - **Project manager role modeling** — Establishing a safe, respectful, nonjudgmental environment through:
-    - *Transparency* — in thinking, choices, information processing, and biases.
-    - *Integrity* — ethical behavior, honesty (sharing risks, assumptions, bad news early, accurate status).
-    - *Respect* — for each person, their thinking, skills, perspective, and expertise.
-    - *Positive discourse* — dialogue (resolving divergent opinions together) rather than debate (win-lose).
-    - *Support* — problem-solving, removing impediments, encouragement, empathy, active listening.
-    - *Courage* — suggesting new approaches, disagreeing with authority, trying new things.
-    - *Celebrating success* — recognizing innovation, adaptation, service, learning, and "quick wins."
+  - **Unique team culture**: Each team develops its own culture through norms or informal behaviors, operating within the organization's culture.
+  - **Transparency on bias**: Openness about biases (e.g., Gantt chart preferences, planning horizons) establishes a culture of trust enabling consensus and collaboration.
+  - **Project manager role modeling**: Establishing a safe, respectful, nonjudgmental environment through:
+    - *Transparency*: in thinking, choices, information processing, and biases.
+    - *Integrity*: ethical behavior, honesty (sharing risks, assumptions, bad news early, accurate status).
+    - *Respect*: for each person, their thinking, skills, perspective, and expertise.
+    - *Positive discourse*: dialogue (resolving divergent opinions together) rather than debate (win-lose).
+    - *Support*: problem-solving, removing impediments, encouragement, empathy, active listening.
+    - *Courage*: suggesting new approaches, disagreeing with authority, trying new things.
+    - *Celebrating success*: recognizing innovation, adaptation, service, learning, and "quick wins."
 
 - **Industry Context.** Some industries have adopted lean management, just-in-time (JIT) manufacturing, Kaizen, total productive maintenance (TPM), theory of constraints (TOC), and other resource-related methods. Project managers should determine whether the performing organization has adopted such methods and adapt accordingly.
 
@@ -156,15 +156,15 @@ Given the uniqueness of each project, activities and processes within the Resour
 
 The Resources performance domain interacts with all other performance domains. Key interactions include:
 
-- **[[08_Stakeholders_Performance_Domain]], Resources, and [[10_Risk_Performance_Domain]]** — These three significantly impact project outcomes defined by schedule, cost, and scope parameters. Other projects may compete for the same available resources at the same time and location, considerably impacting costs, schedules, risks, scope, and quality.
+- **[[08_Stakeholders_Performance_Domain]], Resources, and [[10_Risk_Performance_Domain]]**: These three significantly impact project outcomes defined by schedule, cost, and scope parameters. Other projects may compete for the same available resources at the same time and location, considerably impacting costs, schedules, risks, scope, and quality.
 
-- **[[06_Schedule_Performance_Domain]]** — The Estimate Resources process is closely coordinated with schedule estimation; resource availability directly influences activity durations and sequencing.
+- **[[06_Schedule_Performance_Domain]]**: The Estimate Resources process is closely coordinated with schedule estimation; resource availability directly influences activity durations and sequencing.
 
-- **[[07_Finance_Performance_Domain]]** — The Estimate Resources process is closely coordinated with the Estimate Costs process to align resource estimation with the project's overall budget and financial constraints, ensuring financial viability and optimal resource utilization.
+- **[[07_Finance_Performance_Domain]]**: The Estimate Resources process is closely coordinated with the Estimate Costs process to align resource estimation with the project's overall budget and financial constraints, ensuring financial viability and optimal resource utilization.
 
-- **[[05_Scope_Performance_Domain]]** — Resource requirements derive from the scope baseline; scope changes trigger resource reassessment.
+- **[[05_Scope_Performance_Domain]]**: Resource requirements derive from the scope baseline; scope changes trigger resource reassessment.
 
-- **Integration across all domains** — Project managers lead the team to focus on what is essential at the project level through integration of processes, knowledge, and people. The project manager's main concern is leading the project team to achieve project objectives.
+- **Integration across all domains**: Project managers lead the team to focus on what is essential at the project level through integration of processes, knowledge, and people. The project manager's main concern is leading the project team to achieve project objectives.
 
 ## Check Results
 
@@ -182,10 +182,10 @@ Activities in the Resources performance domain are considered successful only if
 
 ## Related Chapters
 
-- [[06_Schedule_Performance_Domain]] — Resource estimation is closely coordinated with schedule estimation; resource availability directly impacts activity durations and sequencing.
-- [[07_Finance_Performance_Domain]] — Estimate Resources coordinates with Estimate Costs to align with the project budget and financial constraints.
-- [[08_Stakeholders_Performance_Domain]] — Stakeholder expectations influence resourcing decisions; stakeholder engagement is critical for resource acquisition.
-- [[10_Risk_Performance_Domain]] — Resource unavailability, shortages, and competition are significant project risks; risk management informs resource contingency planning.
-- [[11_Tailoring]] — Development approach selection, team culture maturity, virtual teams, and industry context all drive tailoring decisions for resource management.
-- [[13_Tools_and_Techniques]] — Detailed coverage of RAM (responsibility assignment matrix), SWOT analysis, Tuckman ladder, leadership styles (centralized, distributed, servant), emotional intelligence, Six Thinking Hats®, and green human resource management.
-- [[Appendix_A3_Procurement]] — External resources are obtained through procurement processes; large-scale projects with significant physical resources require procurement planning and management.
+- [[06_Schedule_Performance_Domain]]: Resource estimation is closely coordinated with schedule estimation; resource availability directly impacts activity durations and sequencing.
+- [[07_Finance_Performance_Domain]]: Estimate Resources coordinates with Estimate Costs to align with the project budget and financial constraints.
+- [[08_Stakeholders_Performance_Domain]]: Stakeholder expectations influence resourcing decisions; stakeholder engagement is critical for resource acquisition.
+- [[10_Risk_Performance_Domain]]: Resource unavailability, shortages, and competition are significant project risks; risk management informs resource contingency planning.
+- [[11_Tailoring]]: Development approach selection, team culture maturity, virtual teams, and industry context all drive tailoring decisions for resource management.
+- [[13_Tools_and_Techniques]]: Detailed coverage of RAM (responsibility assignment matrix), SWOT analysis, Tuckman ladder, leadership styles (centralized, distributed, servant), emotional intelligence, Six Thinking Hats®, and green human resource management.
+- [[Appendix_A3_Procurement]]: External resources are obtained through procurement processes; large-scale projects with significant physical resources require procurement planning and management.

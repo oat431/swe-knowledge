@@ -35,10 +35,10 @@ Systems without a centralised coordination service. Decentralised un-timed contr
 #### 2. Coordinated Clustering Across Distributed Resources and Services
 
 This broad class sub-divides into:
-- **(a) Coordination of resources** — e.g., virtual machine orchestration, elastic scaling
-- **(b) Coordination of services** — e.g., transactional databases, ledgers
+- **(a) Coordination of resources**: e.g., virtual machine orchestration, elastic scaling
+- **(b) Coordination of services**: e.g., transactional databases, ledgers
 
-**Examples:** **Client-Server** models, n-Tier Multi-tenancy models, elastic on-demand geo-dispersed aggregation of resources (Clouds — public, private, hybrid, multi-Cloud), Big Data services, High Performance Computing, transactional services such as **Databases**, **Ledgers**, Storage Systems, Key Value Stores (**KVS**). The **Google File System**, **Amazon Web Services**, **Azure**, and **Apache Cassandra** are examples.
+**Examples:** **Client-Server** models, n-Tier Multi-tenancy models, elastic on-demand geo-dispersed aggregation of resources (Clouds: public, private, hybrid, multi-Cloud), Big Data services, High Performance Computing, transactional services such as **Databases**, **Ledgers**, Storage Systems, Key Value Stores (**KVS**). The **Google File System**, **Amazon Web Services**, **Azure**, and **Apache Cassandra** are examples.
 
 Both sub-classes are typically coordinated via communication exchanges and coordination services with the intended outcome of providing a "virtually centralised system" where properties such as **causality**, **ordering of tasks**, **replication handling**, and **consistency** are ensured.
 
@@ -70,7 +70,7 @@ Determines the authorised participation of a resource, user, or service within a
 **Threats include:**
 - Masquerading or **Spoofing** of identity to gain access rights
 - **Denial of Service** (DoS) attacks that detrimentally limit access, leading to inaccessibility and unavailability of distributed resources/services
-- Identity tampering — since authorisation may be specified in terms of user/resource identity (login names, passwords)
+- Identity tampering: since authorisation may be specified in terms of user/resource identity (login names, passwords)
 
 > Resource distribution often entails more points for access control and more information transported to support access control, thus **increasing the attack surface**.
 
@@ -112,17 +112,17 @@ See also: **Malware & Attack Technologies** (CyBOK Ch6)
 ## 12.2 Decentralised P2P Models
 
 Peer-to-Peer (**P2P**) systems constitute the decentralised variant of distributed systems. Their popularity is driven by:
-- **Scalability** — no changes to protocol design needed with increasing numbers of peers
-- **Decentralised coordination** — inherent resilience against individual peer failures
-- **Low cost** — peer population itself represents the service provisioning infrastructure
+- **Scalability**: no changes to protocol design needed with increasing numbers of peers
+- **Decentralised coordination**: inherent resilience against individual peer failures
+- **Low cost**: peer population itself represents the service provisioning infrastructure
 
 ### Five Core P2P Principles
 
-1. **Symmetry of interfaces** — peers take interchangeable duties as both servers and clients
-2. **Resilience** — to perturbations in the underlying communication network substrate and peer failures
-3. **Data and service survivability** — through replication schemes
-4. **Usage of peer resources at the network's edge** — imposing low infrastructure costs
-5. **Address variance** — of resource provisioning among peers
+1. **Symmetry of interfaces**: peers take interchangeable duties as both servers and clients
+2. **Resilience**: to perturbations in the underlying communication network substrate and peer failures
+3. **Data and service survivability**: through replication schemes
+4. **Usage of peer resources at the network's edge**: imposing low infrastructure costs
+5. **Address variance**: of resource provisioning among peers
 
 Applications include: file sharing (eMule, KaZaA), social networks, multimedia content distribution, online games, internet telephony, instant messaging, **Internet of Things** (IoT), car-to-car communication, **SCADA** systems, wide area monitoring systems, and **Distributed Ledgers**.
 
@@ -174,7 +174,7 @@ This improves lookup performance and generates fewer network messages. Popular c
 
 | Element | Description | Accessibility |
 |---------|-------------|---------------|
-| **P2P Operations (P-OP)** | Discovery, query, routing, download — accessible through service interface | Network level |
+| **P2P Operations (P-OP)** | Discovery, query, routing, download: accessible through service interface | Network level |
 | **P2P Data Structures (P-DS)** | Data in routing tables, shared resources | Network or local host level |
 
 Attacks correspond to disrupting connectivity/access to other nodes OR corrupting data structures.
@@ -213,7 +213,7 @@ An attacker monopolises all connections to and from a specific honest peer, effe
 
 #### Free-Riding
 
-Peers consume services without contributing resources — while not a direct security attack, it degrades system availability and fairness.
+Peers consume services without contributing resources. While not a direct security attack, it degrades system availability and fairness.
 
 ---
 
@@ -280,7 +280,7 @@ The **FLP Impossibility** result (Fischer, Lynch, Paterson, 1985) proves that in
 2. **Smart Contract Vulnerabilities**
    - **Reentrancy attacks** (e.g., the DAO hack)
    - Integer overflow/underflow
-   - **Front-running** — miners/validators reorder transactions for profit
+   - **Front-running**: miners/validators reorder transactions for profit
    - Access control flaws
    - Oracle manipulation
 
@@ -382,24 +382,24 @@ Coordination services like **Apache ZooKeeper**, **etcd**, and **Consul** provid
 
 ## Cross-References
 
-- **Authentication, Authorisation & Accountability** (CyBOK Ch14) — Authentication and authorisation in distributed systems
-- **Network Security** (CyBOK Ch19) — Network-level threats and protections
-- **Operating Systems & Virtualisation** (CyBOK Ch11) — Resource access and isolation primitives
-- **Malware & Attack Technologies** (CyBOK Ch6) — Malicious applications, code, and viruses
-- **Hardware Security** (CyBOK Ch20) — TPM, secure elements, hardware root of trust
-- **Cyber-Physical Systems Security** (CyBOK Ch21) — IoT and embedded systems security
-- **Software Security** (CyBOK Ch15) — Secure coding, memory safety
+- **Authentication, Authorisation & Accountability** (CyBOK Ch14): Authentication and authorisation in distributed systems
+- **Network Security** (CyBOK Ch19): Network-level threats and protections
+- **Operating Systems & Virtualisation** (CyBOK Ch11): Resource access and isolation primitives
+- **Malware & Attack Technologies** (CyBOK Ch6): Malicious applications, code, and viruses
+- **Hardware Security** (CyBOK Ch20): TPM, secure elements, hardware root of trust
+- **Cyber-Physical Systems Security** (CyBOK Ch21): IoT and embedded systems security
+- **Software Security** (CyBOK Ch15): Secure coding, memory safety
 
 ---
 
 ## Further Reading
 
-- Tanenbaum, A.S. and Van Steen, M. — *Distributed Systems: Principles and Paradigms*
-- Coulouris, G. et al. — *Distributed Systems: Concepts and Design*
-- Narayanan, A. et al. — *Bitcoin and Cryptocurrency Technologies*
-- Antonopoulos, A.M. — *Mastering Bitcoin*
-- Castro, M. and Liskov, B. — *Practical Byzantine Fault Tolerance* (OSDI 1999)
-- Lamport, L. — *The Part-Time Parliament* (Paxos)
-- Ongaro, D. and Ousterhout, J. — *In Search of an Understandable Consensus Algorithm* (Raft)
-- Urdaneta, G., Pierre, G. and van Steen, M. — *A Survey of DHT Security Techniques* (ACM Computing Surveys)
-- Wallach, D.S. — *A Survey of Peer-to-Peer Security Issues* (ISSS 2002)
+- Tanenbaum, A.S. and Van Steen, M.: *Distributed Systems: Principles and Paradigms*
+- Coulouris, G. et al.: *Distributed Systems: Concepts and Design*
+- Narayanan, A. et al.: *Bitcoin and Cryptocurrency Technologies*
+- Antonopoulos, A.M.: *Mastering Bitcoin*
+- Castro, M. and Liskov, B.: *Practical Byzantine Fault Tolerance* (OSDI 1999)
+- Lamport, L.: *The Part-Time Parliament* (Paxos)
+- Ongaro, D. and Ousterhout, J.: *In Search of an Understandable Consensus Algorithm* (Raft)
+- Urdaneta, G., Pierre, G. and van Steen, M.: *A Survey of DHT Security Techniques* (ACM Computing Surveys)
+- Wallach, D.S.: *A Survey of Peer-to-Peer Security Issues* (ISSS 2002)

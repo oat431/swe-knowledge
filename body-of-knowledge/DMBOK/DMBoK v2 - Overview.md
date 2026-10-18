@@ -2,15 +2,15 @@
 tags: [overview, data-management, dmbok]
 ---
 
-# DMBoK v2 — Data Management Body of Knowledge
+# DMBoK v2: Data Management Body of Knowledge
 
-> **DAMA-DMBOK — Data Management Body of Knowledge, 2nd Edition**
+> **DAMA-DMBOK: Data Management Body of Knowledge, 2nd Edition**
 > DAMA International, 2017
 > 11 Knowledge Areas | ~628 pages
 
 ## What Is This?
 
-The **DAMA Guide to the Data Management Body of Knowledge (DMBoK)** is the definitive reference for the data management profession. Published by DAMA International, it defines a comprehensive framework of 11 Knowledge Areas that together constitute the discipline of data management — from governance and architecture through modeling, storage, integration, quality, and security.
+The **DAMA Guide to the Data Management Body of Knowledge (DMBoK)** is the definitive reference for the data management profession. Published by DAMA International, it defines a comprehensive framework of 11 Knowledge Areas that together constitute the discipline of data management, from governance and architecture through modeling, storage, integration, quality, and security.
 
 ## The 11 Knowledge Areas
 
@@ -32,4 +32,4 @@ Plus [[00_Introduction_to_DMBOK]] for the data management overview.
 
 ## Related
 
-- [[Body of Knowledge - Overview|Body of Knowledge — Overview]] — All six BOKs
+- [[Body of Knowledge - Overview|Body of Knowledge: Overview]]: All six BOKs

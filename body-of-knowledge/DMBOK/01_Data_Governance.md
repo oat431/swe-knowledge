@@ -9,9 +9,9 @@ created: 2026-07-09
 
 ## Overview
 
-**Data Governance (DG)** is the exercise of authority and control — planning, monitoring, and enforcement — over the management of data assets. It guides all other [[00_Introduction_to_DMBOK|data management functions]] to ensure data is managed properly, according to policies and best practices.
+**Data Governance (DG)** is the exercise of authority and control (planning, monitoring, and enforcement) over the management of data assets. It guides all other [[00_Introduction_to_DMBOK|data management functions]] to ensure data is managed properly, according to policies and best practices.
 
-> *"The purpose of Data Governance is to ensure that data is managed properly, according to policies and best practices."* — DMBoK v2
+> *"The purpose of Data Governance is to ensure that data is managed properly, according to policies and best practices."* (DMBoK v2)
 
 While [[00_Introduction_to_DMBOK|data management]] overall drives toward getting value from data, DG focuses on *how decisions are made* about data and *how people and processes are expected to behave* in relation to data.
 
@@ -28,16 +28,16 @@ While [[00_Introduction_to_DMBOK|data management]] overall drives toward getting
 ## Business Drivers
 
 ### Reducing Risk
-- **General risk management** — oversight of risks data poses to finances or reputation (including legal/regulatory)
-- **[[05_Data_Security|Data security]]** — protection of data assets through controls for availability, usability, integrity, consistency, auditability
-- **Privacy** — control of private/confidential/PII through policy and compliance monitoring
+- **General risk management**: oversight of risks data poses to finances or reputation (including legal/regulatory)
+- **[[05_Data_Security|Data security]]**: protection of data assets through controls for availability, usability, integrity, consistency, auditability
+- **Privacy**: control of private/confidential/PII through policy and compliance monitoring
 
 ### Improving Processes
-- **Regulatory compliance** — efficient, consistent response to regulatory requirements
-- **[[11_Data_Quality|Data quality improvement]]** — making data more reliable to improve business performance
-- **[[10_Metadata_Management|Metadata Management]]** — establishing a business glossary; managing the full range of metadata
-- **SDLC efficiency** — addressing data management issues across the development lifecycle, including data-specific technical debt
-- **Vendor management** — control of contracts dealing with data (cloud storage, data purchase, data as a product, outsourcing)
+- **Regulatory compliance**: efficient, consistent response to regulatory requirements
+- **[[11_Data_Quality|Data quality improvement]]**: making data more reliable to improve business performance
+- **[[10_Metadata_Management|Metadata Management]]**: establishing a business glossary; managing the full range of metadata
+- **SDLC efficiency**: addressing data management issues across the development lifecycle, including data-specific technical debt
+- **Vendor management**: control of contracts dealing with data (cloud storage, data purchase, data as a product, outsourcing)
 
 ---
 
@@ -48,16 +48,16 @@ Successful DG programs are:
 | Principle | Description |
 |-----------|-------------|
 | **Sustainable** | DG is an ongoing process, not a project. Requires organizational commitment and business leadership/sponsorship. |
-| **Embedded** | DG activities must be incorporated into SDLC, analytics, MDM, and risk management — not an add-on. |
+| **Embedded** | DG activities must be incorporated into SDLC, analytics, MDM, and risk management, not an add-on. |
 | **Measured** | DG done well has positive financial impact; requires understanding baseline and planning for measurable improvement. |
 
 ### Guiding Principles for DG Foundation
-- **Leadership and strategy** — visionary, committed leadership; data strategy driven by business strategy
-- **Business-driven** — DG governs IT decisions about data as much as business interaction with data
-- **Shared responsibility** — between business data stewards and technical data management professionals across all knowledge areas
-- **Multi-layered** — occurs at enterprise, local, and intermediate levels
-- **Framework-based** — an operating framework defining accountabilities and interactions
-- **Principle-based** — guiding principles are the foundation of DG activity and especially DG policy
+- **Leadership and strategy**: visionary, committed leadership; data strategy driven by business strategy
+- **Business-driven**: DG governs IT decisions about data as much as business interaction with data
+- **Shared responsibility**: between business data stewards and technical data management professionals across all knowledge areas
+- **Multi-layered**: occurs at enterprise, local, and intermediate levels
+- **Framework-based**: an operating framework defining accountabilities and interactions
+- **Principle-based**: guiding principles are the foundation of DG activity and especially DG policy
 
 ---
 
@@ -84,9 +84,9 @@ A data-centric organization values data as an asset through all lifecycle phases
 ### Data Governance Organization Structure
 
 DG can be understood through a political governance lens:
-- **Legislative functions** — defining policies, standards, enterprise data architecture
-- **Judicial functions** — issue management and escalation
-- **Executive functions** — protecting, serving, and administrative responsibilities
+- **Legislative functions**: defining policies, standards, enterprise data architecture
+- **Judicial functions**: issue management and escalation
+- **Executive functions**: protecting, serving, and administrative responsibilities
 
 Most organizations adopt a *representative* form of governance so all stakeholders are heard.
 
@@ -117,10 +117,10 @@ Most organizations adopt a *representative* form of governance so all stakeholde
 > A steward manages the property of another person. Data Stewards manage data assets on behalf of others and in the best interests of the organization.
 
 ### Stewardship Activities
-1. **Creating and managing core Metadata** — definition and management of business terminology, valid data values, and the Business Glossary (system of record for business terms)
-2. **Documenting rules and standards** — business rules, data standards, data quality rules; surfacing consensus on expectations
-3. **Managing data quality issues** — identification and resolution of data-related issues
-4. **Executing operational DG activities** — day-to-day, project-by-project adherence to DG policies and initiatives
+1. **Creating and managing core Metadata**: definition and management of business terminology, valid data values, and the Business Glossary (system of record for business terms)
+2. **Documenting rules and standards**: business rules, data standards, data quality rules; surfacing consensus on expectations
+3. **Managing data quality issues**: identification and resolution of data-related issues
+4. **Executing operational DG activities**: day-to-day, project-by-project adherence to DG policies and initiatives
 
 ### Types of Data Stewards
 
@@ -140,7 +140,7 @@ Most organizations adopt a *representative* form of governance so all stakeholde
 
 **Data policies** are directives that codify principles and management intent into fundamental rules governing the creation, acquisition, integrity, security, quality, and use of data and information.
 
-- Data policies are **global** — they support data standards and expected behaviors
+- Data policies are **global**. They support data standards and expected behaviors
 - Policies describe **"what"** to do (and what not to do)
 - Standards and procedures describe **"how"** to do it
 - There should be relatively few policies, stated briefly and directly
@@ -159,11 +159,11 @@ Policies must be effectively communicated, monitored, enforced, and periodically
 Data asset valuation is the process of understanding and calculating the economic value of data.
 
 ### Valuation Approaches
-- **Replacement cost** — cost of data lost in a disaster or breach (transactions, domains, catalogs, documents, metrics)
-- **Market value** — value as a business asset at merger or acquisition
-- **Identified opportunities** — income gained from opportunities in data (BI, transactions, selling data)
-- **Selling data** — packaging data as a product or selling insights
-- **Risk cost** — valuation based on potential penalties, remediation costs, and litigation expenses
+- **Replacement cost**: cost of data lost in a disaster or breach (transactions, domains, catalogs, documents, metrics)
+- **Market value**: value as a business asset at merger or acquisition
+- **Identified opportunities**: income gained from opportunities in data (BI, transactions, selling data)
+- **Selling data**: packaging data as a product or selling insights
+- **Risk cost**: valuation based on potential penalties, remediation costs, and litigation expenses
 
 ### Generally Accepted Information Principles
 
@@ -189,27 +189,27 @@ Align DG efforts with business strategy and goals. DG enables shared responsibil
 
 ### 2. Perform Readiness Assessment
 Assessments describing the current state of information management capabilities:
-- **Data management maturity** — what the organization does with data; current capabilities and capacity
-- **Capacity to change** — measure the organization's ability to change behaviors; identify resistance points
-- **Collaborative readiness** — ability to collaborate in managing and using data (stewardship crosses functional areas)
-- **Business alignment** — how well the organization aligns data use with business strategy
+- **Data management maturity**: what the organization does with data; current capabilities and capacity
+- **Capacity to change**: measure the organization's ability to change behaviors; identify resistance points
+- **Collaborative readiness**: ability to collaborate in managing and using data (stewardship crosses functional areas)
+- **Business alignment**: how well the organization aligns data use with business strategy
 
 ### 3. Perform Discovery and Business Alignment
 Identify and assess effectiveness of existing policies and guidelines. Data Quality analysis provides insight into existing issues, obstacles, and risks. Derive DG requirements from discovery and alignment activities.
 
 ### 4. Develop Organizational Touch Points
 The CDO works with:
-- **Procurement & Contracts** — standard contract language for data management
-- **Budget & Funding** — preventing duplicate efforts, optimizing acquired data assets
-- **Regulatory Compliance** — understanding and working within local, national, international regulatory environments
-- **SDLC / Development Framework** — control points for enterprise policies, processes, and standards in development lifecycles
+- **Procurement & Contracts**: standard contract language for data management
+- **Budget & Funding**: preventing duplicate efforts, optimizing acquired data assets
+- **Regulatory Compliance**: understanding and working within local, national, international regulatory environments
+- **SDLC / Development Framework**: control points for enterprise policies, processes, and standards in development lifecycles
 
 ### 5. Develop Data Governance Strategy
 Deliverables include:
-- **Charter** — business drivers, vision, mission, principles, readiness assessment, success criteria
-- **Operating framework and accountabilities** — structure and responsibility for DG activities
-- **Implementation roadmap** — timeframes for policies, business glossary, architecture, asset valuation, standards
-- **Plan for operational success** — target state of sustainable DG activities
+- **Charter**: business drivers, vision, mission, principles, readiness assessment, success criteria
+- **Operating framework and accountabilities**: structure and responsibility for DG activities
+- **Implementation roadmap**: timeframes for policies, business glossary, architecture, asset valuation, standards
+- **Plan for operational success**: target state of sustainable DG activities
 
 ### 6. Define the DG Operating Framework
 Consider:
@@ -242,25 +242,25 @@ DGC defines business cases, oversees project status on data management improveme
 
 ### 10. Engage in Issue Management
 Process for identifying, quantifying, prioritizing, and resolving DG-related issues:
-- **Authority** — decision rights and procedures
-- **Change management escalations** — issues from the change process
-- **Compliance** — meeting compliance requirements
-- **Conflicts** — conflicting policies, procedures, business rules, names, definitions, standards, architecture, data ownership
-- **Conformance** — conformance to policies, standards, architecture, and procedures
-- **Contracts** — data sharing agreements, buying/selling data, cloud storage
-- **Data security and identity** — privacy/confidentiality issues, breach investigations
-- **Data quality** — detection and resolution of data quality issues
+- **Authority**: decision rights and procedures
+- **Change management escalations**: issues from the change process
+- **Compliance**: meeting compliance requirements
+- **Conflicts**: conflicting policies, procedures, business rules, names, definitions, standards, architecture, data ownership
+- **Conformance**: conformance to policies, standards, architecture, and procedures
+- **Contracts**: data sharing agreements, buying/selling data, cloud storage
+- **Data security and identity**: privacy/confidentiality issues, breach investigations
+- **Data quality**: detection and resolution of data quality issues
 
 **Escalation Path:** 80-85% resolved at Data Stewardship Teams → <20% to DGC → <5% to Steering Committee
 
 ### 11. Assess Regulatory Compliance Requirements
 Every enterprise is affected by governmental and industry regulations. Key regulations:
-- **BCBS 239 / Basel II** — banking risk data aggregation and reporting
-- **CPG 235** — Australian banking/insurance data risk management
-- **PCI-DSS** — payment card industry data security
-- **Solvency II** — EU insurance industry regulations
-- **GDPR and other privacy laws** — local, sovereign, and international
-- **GASB / FASB** — accounting standards (US)
+- **BCBS 239 / Basel II**: banking risk data aggregation and reporting
+- **CPG 235**: Australian banking/insurance data risk management
+- **PCI-DSS**: payment card industry data security
+- **Solvency II**: EU insurance industry regulations
+- **GDPR and other privacy laws**: local, sovereign, and international
+- **GASB / FASB**: accounting standards (US)
 
 Key questions: relevance, what constitutes compliance, when required, industry standards, demonstration, penalty/risk, how non-compliance is managed.
 
@@ -272,7 +272,7 @@ Requires an implementation roadmap with timeframes and relationships between act
 - Assigning financial value to data assets
 
 ### 13. Sponsor Data Standards and Procedures
-**Standards** — codified decisions that promote consistent results; should be mandatory, communicated, monitored, and periodically reviewed. **Procedures** — documented methods, techniques, and steps to accomplish specific activities.
+**Standards**: codified decisions that promote consistent results; should be mandatory, communicated, monitored, and periodically reviewed. **Procedures**: documented methods, techniques, and steps to accomplish specific activities.
 
 Standardization applies across all knowledge areas: data architecture, modeling, storage, security, integration, documents/content, reference/master data, warehousing/BI, metadata, data quality, and Big Data/Data Science.
 
@@ -283,7 +283,7 @@ Data Stewards are responsible for business glossary content. Objectives:
 - Improve alignment between technology assets and business organization
 - Maximize search capability and access to documented institutional knowledge
 
-A business glossary is *not merely a list of terms and definitions* — each term is associated with synonyms, metrics, lineage, business rules, and the steward responsible.
+A business glossary is *not merely a list of terms and definitions*. Each term is associated with synonyms, metrics, lineage, business rules, and the steward responsible.
 
 ### 15. Coordinate with Architecture Groups
 DGC sponsors and approves data architecture artifacts (e.g., enterprise data model). May appoint or interact with an Enterprise Data Architecture Steering Committee or Architecture Review Board (ARB). The enterprise data model is developed jointly by data architects and Data Stewards.
@@ -313,7 +313,7 @@ Sustainability means processes and funding are in place for continued DG perform
 ### Organization and Culture
 - DG requires a **cultural shift** in organizational thinking and behavior about data
 - An ongoing program of change management must support new thinking, behaviors, policies, and processes
-- **Sustainability** is the target — measuring how easy it is for the process to continue adding value
+- **Sustainability** is the target: measuring how easy it is for the process to continue adding value
 - Ignoring culture diminishes chances for success regardless of strategy quality
 
 ### Adjustment and Communication
@@ -344,7 +344,7 @@ Sustainability means processes and funding are in place for continued DG perform
 
 ## Relationship to Data Handling Ethics
 
-Data Governance has a particular oversight requirement to review plans and decisions proposed by BI, analytics, and Data Science studies. Oversight for appropriate handling of data falls under both DG and legal counsel — together they must:
+Data Governance has a particular oversight requirement to review plans and decisions proposed by BI, analytics, and Data Science studies. Oversight for appropriate handling of data falls under both DG and legal counsel. Together they must:
 
 - Keep up-to-date on legal changes
 - Reduce the risk of ethical impropriety by ensuring employees are aware of their obligations
@@ -361,5 +361,5 @@ See [[00_Introduction_to_DMBOK|Data Handling Ethics]] for ethical principles inc
 - Plotkin, David. *Data Stewardship: An Actionable Guide to Effective Data Management and Data Governance*. Morgan Kaufmann, 2013.
 - McGilvray, Danette. *Executing Data Quality Projects*. Morgan Kaufmann, 2008.
 - Hiatt, Jeff and Creasey, Timothy. *Change Management: The People Side of Change*. Prosci, 2012.
-- The Data Governance Institute — [datagovernance.com](http://datagovernance.com)
+- The Data Governance Institute: [datagovernance.com](http://datagovernance.com)
 

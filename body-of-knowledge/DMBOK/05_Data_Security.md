@@ -44,10 +44,10 @@ Risk reduction and business growth are the primary drivers of data security acti
 
 As data regulations increase, so do compliance requirements. Security organizations manage IT compliance, policies, practices, **data classifications**, and access authorization rules. The overall process includes:
 
-1. **Identify and classify sensitive data assets** — personal, medical, financial, and more.
-2. **Locate sensitive data throughout the enterprise** — a significant amount of sensitive data in a single location poses high risk.
-3. **Determine how each asset needs to be protected** — measures vary by data content and technology.
-4. **Identify how this information interacts with business processes** — determine what access is allowed and under what conditions.
+1. **Identify and classify sensitive data assets**: personal, medical, financial, and more.
+2. **Locate sensitive data throughout the enterprise**: a significant amount of sensitive data in a single location poses high risk.
+3. **Determine how each asset needs to be protected**: measures vary by data content and technology.
+4. **Identify how this information interacts with business processes**: determine what access is allowed and under what conditions.
 
 In addition to classifying data, organizations must assess **external threats** (hackers, criminals) and **internal risks** (employees, processes). Much data is lost through employee ignorance, bypassed security policies, or unenforced controls.
 
@@ -78,7 +78,7 @@ Security-related **metadata** becomes a strategic asset. When sensitive data is 
 
 | Term | Definition |
 |------|-----------|
-| **Vulnerability** | A weakness or defect in a system that allows it to be successfully attacked — a hole in defenses. Non-production environments are often more vulnerable than production environments. |
+| **Vulnerability** | A weakness or defect in a system that allows it to be successfully attacked, a hole in defenses. Non-production environments are often more vulnerable than production environments. |
 | **Threat** | A potential offensive action against an organization. Can be internal or external, malicious or unintentional. Also called an *attack surface*. |
 | **Risk** | The possibility of loss and the condition that poses the potential loss. Calculated based on probability, damage amount, effect on revenue, cost to fix, cost to prevent, and attacker intent. |
 
@@ -96,7 +96,7 @@ Depending on enterprise size, the Information Security function may be a dedicat
 
 > Data managers need to be actively engaged with IT developers and cyber security professionals so that regulated data may be identified, sensitive systems properly protected, and user access controls designed.
 
-### 2.4 Security Processes — The Four A's + E
+### 2.4 Security Processes: The Four A's + E
 
 1. **Access:** Enable individuals with authorization to access systems in a timely manner.
 2. **Audit:** Review security actions and user activity to ensure compliance with regulations and conformance with policy.
@@ -104,11 +104,11 @@ Depending on enterprise size, the Information Security function may be a dedicat
 4. **Authorization:** Grant privileges to access specific views of data, appropriate to role.
 5. **Entitlement:** The sum total of all data elements exposed to a user by a single access authorization decision.
 
-**Monitoring** — both active (real-time detection) and passive (trend-based assessment) — is also essential.
+**Monitoring**, both active (real-time detection) and passive (trend-based assessment), is also essential.
 
 ### 2.5 Data Integrity
 
-In security, **data integrity** is the state of being whole — protected from improper alteration, deletion, or addition. For example, **SOX** regulations focus on protecting financial information integrity by defining rules for how financial information can be created and edited.
+In security, **data integrity** is the state of being whole, protected from improper alteration, deletion, or addition. For example, **SOX** regulations focus on protecting financial information integrity by defining rules for how financial information can be created and edited.
 
 ### 2.6 Encryption
 
@@ -122,7 +122,7 @@ Encryption translates plain text into complex codes. Four main methods:
 
 ### 2.7 Obfuscation / Masking
 
-Data can be made less available by obfuscation or masking — removing, shuffling, or changing data appearance without losing meaning or relationships.
+Data can be made less available by obfuscation or masking: removing, shuffling, or changing data appearance without losing meaning or relationships.
 
 **Persistent Data Masking:** Permanently and irreversibly alters data. Used between production and non-production environments.
 - *In-flight masking:* Data masked while moving between environments.
@@ -139,11 +139,11 @@ Data can be made less available by obfuscation or masking — removing, shufflin
 - **Cookie:** Small data file installed by websites to identify returning visitors.
 - **Firewall:** Software/hardware filtering network traffic to protect from unauthorized access.
 - **Perimeter:** Boundary between an organization's environments and exterior systems.
-- **DMZ:** De-militarized zone — area on the perimeter with firewalls on both sides, used to pass data between organizations.
+- **DMZ:** De-militarized zone, area on the perimeter with firewalls on both sides, used to pass data between organizations.
 - **Super User Account:** Administrator/root access account used only in emergencies, with short-lived credentials.
 - **Key Logger:** Attack software recording keystrokes and sending them elsewhere.
 - **Penetration Testing:** Ethical hacking to identify system vulnerabilities before release.
-- **VPN:** Virtual Private Network — creates a secure, encrypted tunnel into an organization's environment.
+- **VPN:** Virtual Private Network. Creates a secure, encrypted tunnel into an organization's environment.
 
 ### 2.9 Types of Data Security
 
@@ -281,7 +281,7 @@ Controls should cover:
 ## 5. Techniques
 
 ### 5.1 CRUD Matrix Usage
-Create data-to-process and data-to-role relationship (CRUD — Create, Read, Update, Delete) matrices to map data access needs and guide role group definitions. Some versions add **E** for Execute (**CRUDE**).
+Create data-to-process and data-to-role relationship (CRUD: Create, Read, Update, Delete) matrices to map data access needs and guide role group definitions. Some versions add **E** for Execute (**CRUDE**).
 
 ### 5.2 Immediate Security Patch Deployment
 Install security patches as quickly as possible on all machines. A malicious hacker only needs root access to one machine to attack the network.

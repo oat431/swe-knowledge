@@ -2,9 +2,9 @@
 tags: [tools-techniques, reference, project-management, pmbok]
 ---
 
-# 13 — Tools and Techniques
+# 13: Tools and Techniques
 
-> *Source: PMBOK® Guide — Eighth Edition by PMI, §5 Tools and Techniques (pp. 145–216)*
+> *Source: PMBOK® Guide: Eighth Edition by PMI, §5 Tools and Techniques (pp. 145–216)*
 
 ## Purpose
 
@@ -49,7 +49,7 @@ Reviewing the validity of assumptions and the impact of constraints on project o
 A financial analysis technique comparing the expected costs of a decision against its expected benefits to determine the best course of action. Used in quality planning, design decisions, and risk response selection.
 
 ### Decision Tree Analysis
-A diagramming method depicting decisions and their possible consequences — including chance events, resource costs, and utility. Used to evaluate risk response options under uncertainty.
+A diagramming method depicting decisions and their possible consequences, including chance events, resource costs, and utility. Used to evaluate risk response options under uncertainty.
 
 ### Document Analysis
 Reviewing existing documentation to identify requirements, risks, lessons learned, and other information relevant to the current project.
@@ -73,7 +73,7 @@ A computational technique that runs thousands of iterations with varying input v
 Comparing actual project performance (cost, schedule, scope) against the performance measurement baseline to identify variances and trends.
 
 ### Process Analysis
-Reviewing existing processes to identify improvement opportunities — examines process steps, inputs, outputs, handoffs, and bottlenecks.
+Reviewing existing processes to identify improvement opportunities: examines process steps, inputs, outputs, handoffs, and bottlenecks.
 
 ### Regression Analysis
 A statistical technique for modeling the relationship between variables. Used in estimating and forecasting to predict outcomes based on historical data.
@@ -82,7 +82,7 @@ A statistical technique for modeling the relationship between variables. Used in
 Determining how much contingency reserve (for known risks) and management reserve (for unknown risks) is needed based on the risk exposure of the project.
 
 ### Risk Data Quality Assessment
-Evaluating the degree to which risk data is useful for risk management — examines accuracy, reliability, integrity, and relevance of data about individual risks.
+Evaluating the degree to which risk data is useful for risk management: examines accuracy, reliability, integrity, and relevance of data about individual risks.
 
 ### Risk Probability and Impact Assessment
 Evaluating the likelihood of each risk occurring and its potential effect on project objectives (schedule, cost, scope, quality). Forms the basis for risk prioritization.
@@ -100,7 +100,7 @@ Systematically gathering and analyzing quantitative and qualitative information 
 Assessing an organization, project, or option from the perspective of Strengths, Weaknesses, Opportunities, and Threats. Used in risk identification and strategic planning.
 
 ### Technical Performance Analysis
-Comparing technical accomplishments against the technical performance baseline — evaluates whether deliverables meet technical specifications.
+Comparing technical accomplishments against the technical performance baseline: evaluates whether deliverables meet technical specifications.
 
 ### Trend Analysis
 Examining project performance data over time to determine whether performance is improving or deteriorating. Uses run charts, control charts, and statistical methods.
@@ -146,13 +146,13 @@ A radial diagram that organizes ideas and information around a central concept. 
 A grid that maps the probability of each risk occurring against its impact on project objectives. Used to categorize risks as high, medium, or low priority.
 
 ### Scatter Diagrams
-Plots of ordered pairs (X, Y) showing the relationship between two variables. Used to identify correlations — positive, negative, or none — between variables like effort and defect count.
+Plots of ordered pairs (X, Y) showing the relationship between two variables. Used to identify correlations (positive, negative, or none) between variables like effort and defect count.
 
 ### Stakeholder Engagement Assessment Matrix
 A technique that compares current stakeholder engagement levels against desired levels across categories: Unaware, Resistant, Neutral, Supportive, Leading.
 
 ### Text-Oriented Charts
-Structured textual representations of information such as requirement lists, activity lists, and responsibility matrices (RACI — Responsible, Accountable, Consulted, Informed).
+Structured textual representations of information such as requirement lists, activity lists, and responsibility matrices (RACI: Responsible, Accountable, Consulted, Informed).
 
 ---
 
@@ -181,10 +181,10 @@ Identifying the preferred communication method, format, and content for differen
 Resolving disagreements between team members or stakeholders using approaches: Collaborate/Problem-Solve (win-win), Compromise/Reconcile (partial satisfaction), Force/Direct (win-lose), Smooth/Accommodate (emphasize agreement), Withdraw/Avoid (postpone).
 
 ### Emotional Intelligence
-The ability to perceive, evaluate, manage, and express emotions — both one's own and others'. Improves leadership, stakeholder relationships, and team dynamics.
+The ability to perceive, evaluate, manage, and express emotions, both one's own and others'. Improves leadership, stakeholder relationships, and team dynamics.
 
 ### Facilitation
-Guiding a group through a structured process to achieve a specific objective — decision-making, problem-solving, requirements gathering. The facilitator focuses on process; the group owns the content.
+Guiding a group through a structured process to achieve a specific objective: decision-making, problem-solving, requirements gathering. The facilitator focuses on process; the group owns the content.
 
 ### Influencing
 The ability to persuade stakeholders to support decisions and actions, even without formal authority. Uses credibility, data, relationships, and understanding of stakeholder interests.
@@ -228,7 +228,7 @@ Using optimistic (O), most likely (M), and pessimistic (P) estimates to calculat
 ## Scheduling & Network Analysis
 
 ### Critical Path Method (CPM)
-Identifying the longest path of planned activities from start to finish, determining the shortest possible project duration. Activities on the critical path have zero float — any delay directly impacts the finish date.
+Identifying the longest path of planned activities from start to finish, determining the shortest possible project duration. Activities on the critical path have zero float. Any delay directly impacts the finish date.
 
 ### Critical Chain Method
 An extension of CPM that accounts for resource constraints. Adds buffers (project buffer, feeding buffers) instead of individual activity buffers. Focuses on managing buffer consumption rather than individual activity dates.
@@ -253,7 +253,7 @@ Structured, independent reviews to determine whether project activities comply w
 Analyzing the total cost of quality-related activities: Prevention costs, Appraisal costs (cost of conformance), Internal/External Failure costs (cost of nonconformance). Optimal quality investment balances these categories.
 
 ### Design for X (DfX)
-A systematic approach to design that optimizes for a specific characteristic — Design for Reliability, Design for Manufacturability, Design for Sustainability, Design for Cost, etc.
+A systematic approach to design that optimizes for a specific characteristic: Design for Reliability, Design for Manufacturability, Design for Sustainability, Design for Cost, etc.
 
 ### Inspections
 Examining a work product to determine whether it conforms to documented standards and requirements. Includes reviews, walkthroughs, peer reviews, and testing.
@@ -262,7 +262,7 @@ Examining a work product to determine whether it conforms to documented standard
 A structured approach to resolving issues: Define the problem, Identify root causes, Generate solutions, Select the best solution, Implement, Verify effectiveness. Often uses the Plan-Do-Check-Act (PDCA) cycle.
 
 ### Quality Improvement Methods
-Structured approaches to continuous improvement: Plan-Do-Check-Act (PDCA), Six Sigma (DMAIC — Define, Measure, Analyze, Improve, Control), Total Quality Management (TQM), Kaizen.
+Structured approaches to continuous improvement: Plan-Do-Check-Act (PDCA), Six Sigma (DMAIC: Define, Measure, Analyze, Improve, Control), Total Quality Management (TQM), Kaizen.
 
 ### Testing/Product Evaluation
 Systematically examining a deliverable or its components to verify it works correctly and meets requirements. Includes unit testing, integration testing, system testing, user acceptance testing (UAT).
@@ -275,7 +275,7 @@ Systematically examining a deliverable or its components to verify it works corr
 A high-level planning technique that provides a summary timeline of releases, typically covering 3–6 months. Balances scope, schedule, and team capacity at the release level.
 
 ### Communication Methods
-The three categories of communication exchange: Interactive (meetings, calls, video — multidirectional), Push (emails, reports, memos — sent to recipients), Pull (intranets, knowledge repositories — recipients access on demand).
+The three categories of communication exchange: Interactive (meetings, calls, video, multidirectional), Push (emails, reports, memos, sent to recipients), Pull (intranets, knowledge repositories; recipients access on demand).
 
 ### Communication Models
 Frameworks for understanding communication dynamics: Basic sender-receiver model (encode → transmit → decode → acknowledge → feedback), Cross-cultural communication model (accounts for cultural frames of reference).
@@ -287,7 +287,7 @@ Structured approaches to giving, receiving, and acting on feedback. Includes ret
 Systems and processes for creating, storing, retrieving, distributing, and disposing of project information. Includes document management systems, wikis, and project management information systems (PMIS).
 
 ### Presentations
-Formal delivery of information to stakeholders — project kickoffs, status reviews, steering committee updates, phase-gate reviews. Effective presentations are audience-tailored, clear, and actionable.
+Formal delivery of information to stakeholders: project kickoffs, status reviews, steering committee updates, phase-gate reviews. Effective presentations are audience-tailored, clear, and actionable.
 
 ---
 
@@ -303,7 +303,7 @@ Brief (15-minute) daily team meetings where each member answers: What did I do y
 A shared checklist of criteria that must be met before a product increment is considered complete. Ensures consistent quality across all deliverables.
 
 ### Iteration Planning
-Planning the work for a single iteration/sprint — the team selects backlog items, breaks them into tasks, and commits to the iteration goal. Typically timeboxed to 2–4 hours.
+Planning the work for a single iteration/sprint. The team selects backlog items, breaks them into tasks, and commits to the iteration goal. Typically timeboxed to 2–4 hours.
 
 ### Kanban Boards
 Visual workflow management tools showing work items moving through stages (To Do → In Progress → In Review → Done). Promotes flow, limits WIP, and highlights bottlenecks.
@@ -322,10 +322,10 @@ A visual technique that arranges user stories along two dimensions: user activit
 Breaking down project deliverables into smaller, more manageable components (work packages and activities). The foundation of the WBS and activity definition.
 
 ### Expert Judgment
-Leveraging specialized knowledge from individuals or groups with expertise in the relevant domain — technical, financial, legal, industry-specific. Used throughout all processes.
+Leveraging specialized knowledge from individuals or groups with expertise in the relevant domain: technical, financial, legal, industry-specific. Used throughout all processes.
 
 ### Project Management Information System (PMIS)
-The suite of software tools used for project management — scheduling tools, cost management tools, collaboration platforms, document repositories, and work authorization systems.
+The suite of software tools used for project management: scheduling tools, cost management tools, collaboration platforms, document repositories, and work authorization systems.
 
 ### Meetings
 Structured gatherings of project stakeholders for a specific purpose. Types: kickoff meetings, status reviews, steering committee meetings, technical design reviews, planning workshops, standups, retrospectives.
@@ -346,9 +346,9 @@ Structured gatherings of project stakeholders for a specific purpose. Types: kic
 
 ## Related Chapters
 
-- [[12_Inputs_and_Outputs]] — The inputs these tools consume and outputs they produce
-- [[04_Governance_Performance_Domain]] — Governance processes that use integration tools
-- [[06_Schedule_Performance_Domain]] — Schedule-specific tools (CPM, resource optimization, compression)
-- [[07_Finance_Performance_Domain]] — Finance-specific tools (EVA, cost-benefit analysis, ROI)
-- [[10_Risk_Performance_Domain]] — Risk-specific tools (Monte Carlo, SWOT, decision trees)
-- [[11_Tailoring]] — How to select and adapt tools for your project context
+- [[12_Inputs_and_Outputs]]: The inputs these tools consume and outputs they produce
+- [[04_Governance_Performance_Domain]]: Governance processes that use integration tools
+- [[06_Schedule_Performance_Domain]]: Schedule-specific tools (CPM, resource optimization, compression)
+- [[07_Finance_Performance_Domain]]: Finance-specific tools (EVA, cost-benefit analysis, ROI)
+- [[10_Risk_Performance_Domain]]: Risk-specific tools (Monte Carlo, SWOT, decision trees)
+- [[11_Tailoring]]: How to select and adapt tools for your project context

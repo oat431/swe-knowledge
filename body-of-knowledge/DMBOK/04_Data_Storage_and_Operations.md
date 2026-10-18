@@ -8,14 +8,14 @@ created: 2026-07-09
 
 # Data Storage and Operations
 
-> **DMBOK2 Chapter 6** — The design, implementation, and support of stored data to maximize its value throughout its lifecycle, from creation/acquisition to disposal.
+> **DMBOK2 Chapter 6**: The design, implementation, and support of stored data to maximize its value throughout its lifecycle, from creation/acquisition to disposal.
 
 ## Overview
 
 **Data Storage and Operations** includes the design, implementation, and support of stored data, to maximize its value throughout its lifecycle. It comprises two sub-activities:
 
-1. **Database support** — Activities related to the data lifecycle: initial implementation, obtaining, backing up, and purging data, plus ensuring database performance through monitoring and tuning.
-2. **Database technology support** — Defining technical requirements, technical architecture, installing and administering technology, and resolving technology-related issues.
+1. **Database support**: Activities related to the data lifecycle: initial implementation, obtaining, backing up, and purging data, plus ensuring database performance through monitoring and tuning.
+2. **Database technology support**: Defining technical requirements, technical architecture, installing and administering technology, and resolving technology-related issues.
 
 **Database Administrators** (DBAs) play key roles in both aspects. The DBA role is the most established and widely adopted data professional role.
 
@@ -27,11 +27,11 @@ created: 2026-07-09
 
 ### Guiding Principles
 
-- **Identify and act on automation opportunities** — Automate database development processes to shorten cycles, reduce errors, and minimize impact on development teams
-- **Build with reuse in mind** — Develop abstracted, reusable data objects that prevent tight coupling to database schemas
-- **Understand and appropriately apply best practices** — Promote standards as requirements but be flexible when deviations are justified
-- **Connect database standards to support requirements** — SLAs should reflect DBA-recommended methods
-- **Set expectations for the DBA role in project work** — Onboard DBAs in the project definition phase
+- **Identify and act on automation opportunities**: Automate database development processes to shorten cycles, reduce errors, and minimize impact on development teams
+- **Build with reuse in mind**: Develop abstracted, reusable data objects that prevent tight coupling to database schemas
+- **Understand and appropriately apply best practices**: Promote standards as requirements but be flexible when deviations are justified
+- **Connect database standards to support requirements**: SLAs should reflect DBA-recommended methods
+- **Set expectations for the DBA role in project work**: Onboard DBAs in the project definition phase
 
 ---
 
@@ -84,7 +84,7 @@ DBAs maintain and assure the accuracy and consistency of data over its entire li
 ### 1.4 Database Architecture Types
 
 #### Centralized Databases
-All data resides in one system at one location. Simple but risky — a single point of failure.
+All data resides in one system at one location. Simple but risky: a single point of failure.
 
 #### Distributed Databases
 Data spread across multiple nodes for quick access. Designed to scale out using commodity hardware. The software replicates data among servers for high availability and handles node failures automatically.
@@ -98,7 +98,7 @@ Maps multiple autonomous database systems into a single federated database witho
 - **Tightly coupled**: Independent processes construct and publish an integrated federated schema
 
 #### Blockchain Databases
-A type of federated database for secure transaction management. Uses chains of time-bound transaction groups (blocks) with hash algorithms. Once a block is created, its hash should never change — tampering is detectable.
+A type of federated database for secure transaction management. Uses chains of time-bound transaction groups (blocks) with hash algorithms. Once a block is created, its hash should never change. Tampering is detectable.
 
 #### Virtualization / Cloud Platforms
 
@@ -132,9 +132,9 @@ Key virtualization strategies:
 
 #### CAP Theorem (Brewer's Theorem)
 A distributed system cannot simultaneously guarantee all three:
-- **Consistency** — System operates as expected at all times
-- **Availability** — System responds to each request
-- **Partition Tolerance** — System continues during data loss or partial failure
+- **Consistency**: System operates as expected at all times
+- **Availability**: System responds to each request
+- **Partition Tolerance**: System continues during data loss or partial failure
 
 > At most two of the three properties can exist in any shared-data system. This drives architectures like Lambda Architecture (speed path: availability + partition tolerance; batch path: consistency + availability).
 
@@ -258,7 +258,7 @@ Recovery plans must cover:
 - Loss of database or log segment filesystems
 - Loss of backup files
 
-> Keep a copy of the recovery plan, DBMS software, and security codes in a secure off-site location. Regular backups are essential — and they must be tested for readability.
+> Keep a copy of the recovery plan, DBMS software, and security codes in a secure off-site location. Regular backups are essential, and they must be tested for readability.
 
 **Backup Strategy:**
 - Backup frequency specified in SLA
@@ -371,7 +371,7 @@ Smaller mapping granularity = faster Metadata update, less extra capacity needed
 Install and test upgrades/patches on the lowest environment first (development), then progressively higher environments, with production last. This ensures installer experience and minimizes production disruption.
 
 ### 4.2 Physical Naming Standards
-Consistency in naming speeds understanding. Reference: **ISO/IEC 11179** — Metadata registries (MDR), particularly Part 5 — Naming and Identification Principles.
+Consistency in naming speeds understanding. Reference: **ISO/IEC 11179**, Metadata registries (MDR), particularly Part 5: Naming and Identification Principles.
 
 ### 4.3 Script Usage for All Changes
 Place all database changes into update script files and test thoroughly in non-production environments before applying to production. Direct data changes are extremely risky.
@@ -401,11 +401,11 @@ DBAs often fail to promote the value of their work. Common challenges:
 - DBAs slow to adapt to new technologies and development methods (Agile, XP, Scrum)
 
 **Recommendations for DBAs:**
-- **Proactively communicate** — Close communication with project teams during and after implementation
-- **Communicate on their level** — Business terms for business people; technical terms for developers
-- **Stay business-focused** — Objective is meeting business requirements
-- **Be helpful** — Avoid always saying "no"; help people succeed
-- **Learn continually** — Apply lessons learned from setbacks
+- **Proactively communicate**: Close communication with project teams during and after implementation
+- **Communicate on their level**: Business terms for business people; technical terms for developers
+- **Stay business-focused**: Objective is meeting business requirements
+- **Be helpful**: Avoid always saying "no"; help people succeed
+- **Learn continually**: Apply lessons learned from setbacks
 
 ---
 
@@ -474,11 +474,11 @@ DBAs support audits and validation by:
 
 ## Related DMBOK Chapters
 
-- [[00_Introduction_to_CyBOK]] — Data lifecycle and core concepts
-- [[01_Data_Governance]] — Governance and stewardship
-- [[02_Data_Architecture]] — Enterprise architecture and data design
-- [[03_Data_Modeling_and_Design]] — Logical and physical data modeling
-- [[05_Data_Security]] — Access controls, encryption, and auditing
-- [[06_Data_Integration_and_Interoperability]] — ETL and data movement
-- [[08_Reference_and_Master_Data]] — Master data lifecycle management
-- [[09_Data_Warehousing_and_BI]] — OLAP, cubes, and analytics
+- [[00_Introduction_to_CyBOK]]: Data lifecycle and core concepts
+- [[01_Data_Governance]]: Governance and stewardship
+- [[02_Data_Architecture]]: Enterprise architecture and data design
+- [[03_Data_Modeling_and_Design]]: Logical and physical data modeling
+- [[05_Data_Security]]: Access controls, encryption, and auditing
+- [[06_Data_Integration_and_Interoperability]]: ETL and data movement
+- [[08_Reference_and_Master_Data]]: Master data lifecycle management
+- [[09_Data_Warehousing_and_BI]]: OLAP, cubes, and analytics

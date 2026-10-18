@@ -15,7 +15,7 @@ created: 2026-07-09
 
 **Data Management** is the development, execution, and supervision of plans, policies, programs, and practices that deliver, control, protect, and enhance the value of data and information assets throughout their lifecycles.
 
-A **Data Management Professional** is any person who works in any facet of data management — from technical management of data throughout its lifecycle to ensuring that data is properly utilized and leveraged — to meet strategic organizational goals. Roles range from highly technical (database administrators, network administrators, programmers) to strategic business (Data Stewards, Data Strategists, Chief Data Officers).
+A **Data Management Professional** is any person who works in any facet of data management (from technical management of data throughout its lifecycle to ensuring that data is properly utilized and leveraged) to meet strategic organizational goals. Roles range from highly technical (database administrators, network administrators, programmers) to strategic business (Data Stewards, Data Strategists, Chief Data Officers).
 
 Data management activities are wide-ranging and require both technical and non-technical ("business") skills. Responsibility for managing data must be shared between business and IT roles, and people in both areas must collaborate to ensure high quality data that meets strategic needs.
 
@@ -27,7 +27,7 @@ Information and knowledge hold the key to competitive advantage. Organizations w
 
 Within an organization, data management goals include:
 
-1. Understanding and supporting the information needs of the enterprise and its stakeholders — including customers, employees, and business partners
+1. Understanding and supporting the information needs of the enterprise and its stakeholders, including customers, employees, and business partners
 2. Capturing, storing, protecting, and ensuring the integrity of data assets
 3. Ensuring the quality of data and information
 4. Ensuring the privacy and confidentiality of stakeholder data
@@ -38,7 +38,7 @@ Within an organization, data management goals include:
 
 ### Data
 
-Data represents facts about the world. In the context of information technology, data is information stored in digital form — though data management principles also apply to data on paper and in databases. Data is both an interpretation of the objects it represents and an object that must itself be interpreted. Context — provided by **Metadata** — is required for data to be meaningful.
+Data represents facts about the world. In the context of information technology, data is information stored in digital form, though data management principles also apply to data on paper and in databases. Data is both an interpretation of the objects it represents and an object that must itself be interpreted. Context (provided by **Metadata**) is required for data to be meaningful.
 
 Organizations often have multiple ways of representing the same concept, which is why **Data Architecture**, **Data Modeling and Design**, **Data Governance**, and **Data Quality** management are needed.
 
@@ -46,7 +46,7 @@ Organizations often have multiple ways of representing the same concept, which i
 
 Data has been called the "raw material of information" and information has been called "data in context." While the traditional DIKW pyramid (Data → Information → Knowledge → Wisdom) is conceptually useful, it has limitations:
 
-- Data doesn't simply exist — it must be **created**, and it takes knowledge to do so
+- Data doesn't simply exist. It must be **created**, and it takes knowledge to do so
 - Data and information are intertwined and dependent on each other; data is a form of information and vice versa
 - Both data and information need to be managed together with uses and customer requirements in mind
 
@@ -85,22 +85,22 @@ Data management has local applications but must be applied across the enterprise
 Data is fluid. Data management must constantly evolve to keep up with the ways data is created, used, and the data consumers who use it.
 
 ### 9. Data management is lifecycle management
-Data has a lifecycle — from creation/obtainment through storage, maintenance, use, enhancement, and disposal. Managing data requires managing its lifecycle. Key lifecycle activities include:
+Data has a lifecycle: from creation/obtainment through storage, maintenance, use, enhancement, and disposal. Managing data requires managing its lifecycle. Key lifecycle activities include:
 - **Plan & Design**: Architecture, modeling, design
 - **Enable & Maintain**: Storage, operations, integration, security
 - **Use & Enhance**: Warehousing, business intelligence, analytics, data science
 
 ### 10. Different types of data have different lifecycle characteristics
-Different types of data — transactional, **reference data**, **master data**, **Metadata** — have different management requirements. Data management practices must be flexible enough to accommodate these differences.
+Different types of data (transactional, **reference data**, **master data**, **Metadata**) have different management requirements. Data management practices must be flexible enough to accommodate these differences.
 
 ### 11. Managing data includes managing the risks associated with data
 Data represents risk as well as value. Data can be lost, stolen, or misused. Organizations must consider the ethical implications of data use and manage data-related risks throughout the lifecycle. See **Data Security** and **Data Handling Ethics**.
 
 ### 12. Data management requirements must drive Information Technology decisions
-Data and data management are deeply intertwined with IT, but managing technology is not the same as managing data. Technology should serve — not drive — an organization's strategic data needs.
+Data and data management are deeply intertwined with IT, but managing technology is not the same as managing data. Technology should serve, not drive, an organization's strategic data needs.
 
 ### 13. Effective data management requires leadership commitment
-Data management involves complex processes requiring coordination, collaboration, and commitment. This requires not only management skills but also the vision and purpose that come from committed leadership — often embodied in the role of **Chief Data Officer**.
+Data management involves complex processes requiring coordination, collaboration, and commitment. This requires not only management skills but also the vision and purpose that come from committed leadership, often embodied in the role of **Chief Data Officer**.
 
 ## Data Management Challenges
 
@@ -188,7 +188,7 @@ Includes ongoing reconciliation and maintenance of core critical shared data to 
 Includes the planning, implementation, and control processes to manage decision support data and to enable knowledge workers to get value from data via analysis and reporting.
 
 ### 10. **Metadata** (Chapter 12)
-Includes planning, implementation, and control activities to enable access to high quality, integrated Metadata — including definitions, models, data flows, and other information critical to understanding data and the systems through which it is created, maintained, and accessed.
+Includes planning, implementation, and control activities to enable access to high quality, integrated Metadata, including definitions, models, data flows, and other information critical to understanding data and the systems through which it is created, maintained, and accessed.
 
 ### 11. **Data Quality** (Chapter 13)
 Includes the planning and implementation of quality management techniques to measure, assess, and improve the fitness of data for use within an organization.
@@ -197,11 +197,11 @@ Includes the planning and implementation of quality management techniques to mea
 
 Beyond the eleven Knowledge Areas, the DMBOK also covers:
 
-- ****Data Handling Ethics**** (Chapter 2) — The central role that data ethics plays in making informed, socially responsible decisions about data and its uses.
-- ****Big Data and Data Science**** (Chapter 14) — Technologies and business processes emerging as our ability to collect and analyze large, diverse data sets increases.
-- ****Data Management Maturity Assessment**** (Chapter 15) — Approaches to evaluating and improving an organization's data management capabilities.
-- ****Data Management Organization and Role Expectations**** (Chapter 16) — Best practices for organizing data management teams and enabling successful practices.
-- ****Data Management and Organizational Change Management**** (Chapter 17) — How to plan for and successfully move through cultural changes necessary to embed effective data management practices.
+- ****Data Handling Ethics**** (Chapter 2): The central role that data ethics plays in making informed, socially responsible decisions about data and its uses.
+- ****Big Data and Data Science**** (Chapter 14): Technologies and business processes emerging as our ability to collect and analyze large, diverse data sets increases.
+- ****Data Management Maturity Assessment**** (Chapter 15): Approaches to evaluating and improving an organization's data management capabilities.
+- ****Data Management Organization and Role Expectations**** (Chapter 16): Best practices for organizing data management teams and enabling successful practices.
+- ****Data Management and Organizational Change Management**** (Chapter 17): How to plan for and successfully move through cultural changes necessary to embed effective data management practices.
 
 ## DMBOK Evolution: Alternative Frameworks
 
@@ -217,7 +217,7 @@ Recognizes that **Business Intelligence and Analytics** depend on all other func
 
 ### DAMA Data Management Function Framework
 Organizes data management into three layers:
-- **Oversight**: **Data Governance** — strategy, principles, policy, stewardship, culture change
+- **Oversight**: **Data Governance**, strategy, principles, policy, stewardship, culture change
 - **Lifecycle Management**: Plan & Design → Enable & Maintain → Use & Enhance
 - **Foundational Activities**: Data Risk Management (**Security**, Privacy, Compliance), **Metadata** Management, **Data Quality** Management
 

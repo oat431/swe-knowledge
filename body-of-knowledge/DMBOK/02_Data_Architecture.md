@@ -42,11 +42,11 @@ Data Architecture operates in the context of other architecture domains, includi
 
 ### 2.2 Enterprise Architecture Frameworks
 
-An architecture framework is a foundational structure used to develop a broad range of related architectures. It provides ways of thinking about and understanding architecture — an "architecture for architecture." IEEE Computer Society maintains ISO/IEC/IEEE 42010:2011 as a standard for Enterprise Architecture Frameworks.
+An architecture framework is a foundational structure used to develop a broad range of related architectures. It provides ways of thinking about and understanding architecture, an "architecture for architecture." IEEE Computer Society maintains ISO/IEC/IEEE 42010:2011 as a standard for Enterprise Architecture Frameworks.
 
 #### 2.2.1 Zachman Framework for Enterprise Architecture
 
-The most well-known enterprise architectural framework, developed by John A. Zachman in the 1980s, recognizes that different audiences have different perspectives on architecture. The Zachman Framework is an **ontology** — a 6×6 matrix comprising the complete set of models required to describe an enterprise and the relationships between them.
+The most well-known enterprise architectural framework, developed by John A. Zachman in the 1980s, recognizes that different audiences have different perspectives on architecture. The Zachman Framework is an **ontology**, a 6×6 matrix comprising the complete set of models required to describe an enterprise and the relationships between them.
 
 **Two Dimensions:**
 
@@ -79,12 +79,12 @@ Each cell in the Zachman Framework represents a unique type of design artifact, 
 
 ### 2.3 Enterprise Data Architecture
 
-Enterprise Data Architecture defines standard terms and designs for elements important to the organization. It includes depiction of business data — collection, storage, integration, movement, and distribution. As data flows through an organization, it is secured, integrated, stored, recorded, catalogued, shared, reported on, analyzed, and delivered to stakeholders. Along the way, data may be verified, enhanced, linked, certified, aggregated, anonymized, and used for analytics until archived or purged.
+Enterprise Data Architecture defines standard terms and designs for elements important to the organization. It includes depiction of business data: collection, storage, integration, movement, and distribution. As data flows through an organization, it is secured, integrated, stored, recorded, catalogued, shared, reported on, analyzed, and delivered to stakeholders. Along the way, data may be verified, enhanced, linked, certified, aggregated, anonymized, and used for analytics until archived or purged.
 
 Enterprise Data Architecture descriptions must include both:
 
-1. **Enterprise Data Models (EDM)** — data structures and data specifications
-2. **Data Flow Design** — requirements and blueprints for storage and processing
+1. **Enterprise Data Models (EDM)**: data structures and data specifications
+2. **Data Flow Design**: requirements and blueprints for storage and processing
 
 #### 2.3.1 Enterprise Data Model (EDM)
 
@@ -103,7 +103,7 @@ The EDM sets the foundation for all data and data-related projects. Any project-
 - EDMs can be built at different levels of detail; resource availability influences initial scope
 - Most successful EDMs are built **incrementally and iteratively**, using layers
 
-**Model Layers (Figure 23 — Enterprise Data Model Hierarchy):**
+**Model Layers (Figure 23: Enterprise Data Model Hierarchy):**
 
 1. **Enterprise Conceptual Model:** 1 diagram with 12–20 significant business subject areas and relationships
 2. **Subject Area Models:** 1+ diagrams per subject area, 50+ significant entities within each subject area with relationships
@@ -148,7 +148,7 @@ Data flows are a type of **data lineage** documentation depicting how data moves
 
 **Representation formats:**
 
-- **Two-dimensional matrices (CRUD matrices):** Show which processes create/use which data entities. Takes into account that data does not flow in only one direction — exchanges between processes are many-to-many. Originated from IBM's Business Systems Planning (BSP) method and popularized by James Martin's Information Systems Planning (ISP).
+- **Two-dimensional matrices (CRUD matrices):** Show which processes create/use which data entities. Takes into account that data does not flow in only one direction. Exchanges between processes are many-to-many. Originated from IBM's Business Systems Planning (BSP) method and popularized by James Martin's Information Systems Planning (ISP).
 - **Data flow diagrams:** Traditional high-level diagrams depicting what kind of data flows between systems.
 
 ---
@@ -157,7 +157,7 @@ Data flows are a type of **data lineage** documentation depicting how data moves
 
 Data and enterprise architecture deal with complexity from two viewpoints:
 
-- **Quality-oriented:** Focus on improving execution within business and IT development cycles. Unless architecture is managed, it deteriorates — systems become more complex and inflexible, creating risk.
+- **Quality-oriented:** Focus on improving execution within business and IT development cycles. Unless architecture is managed, it deteriorates. Systems become more complex and inflexible, creating risk.
 - **Innovation-oriented:** Focus on transforming business and IT to address new expectations and opportunities, driving innovation with disruptive technologies.
 
 ### 3.1 Establish Data Architecture Practice
@@ -231,7 +231,7 @@ Data modeling tools and model repositories are necessary for managing the enterp
 
 ### 4.2 Asset Management Software
 
-Asset management software inventories systems, describes their content, and tracks relationships between them. These tools collect valuable Metadata about systems and the data they contain — helpful for creating data flows or researching current state.
+Asset management software inventories systems, describes their content, and tracks relationships between them. These tools collect valuable Metadata about systems and the data they contain, helpful for creating data flows or researching current state.
 
 ### 4.3 Graphical Design Applications
 
@@ -282,8 +282,8 @@ Implementation can begin in a part of the organization or a data domain (e.g., p
 
 **Implementation approaches based on organizational drivers:**
 
-- **Innovation-oriented culture:** Agile implementation — outlined subject area model at overall level while participating in detail in agile sprints. Enterprise Data Architecture evolves incrementally. Ensures data architects are engaged early.
-- **Quality-oriented culture:** Traditional approach — starts with Master Data areas needing improvement, then expands to business event (transactional) data. Enterprise Data Architects produce blueprints and templates used throughout the system landscape, ensuring compliance via governance.
+- **Innovation-oriented culture:** Agile implementation: outlined subject area model at overall level while participating in detail in agile sprints. Enterprise Data Architecture evolves incrementally. Ensures data architects are engaged early.
+- **Quality-oriented culture:** Traditional approach: starts with Master Data areas needing improvement, then expands to business event (transactional) data. Enterprise Data Architects produce blueprints and templates used throughout the system landscape, ensuring compliance via governance.
 
 ### 6.1 Readiness Assessment / Risk Assessment
 
@@ -389,4 +389,4 @@ Data Architecture is the master blueprint for managing data assets across the en
 - **Integration with enterprise architecture** to ensure alignment with business strategy and other architecture domains
 - **Governance** to ensure compliance, manage lifecycle, define standards, and measure business value
 
-The Zachman Framework provides the foundational ontology for understanding the different perspectives and artifacts needed. Successful implementation requires both quality-oriented and innovation-oriented approaches, strong management support, cultural readiness, and an incremental, iterative build-out of the enterprise data model — typically starting with Master Data domains and expanding outward.
+The Zachman Framework provides the foundational ontology for understanding the different perspectives and artifacts needed. Successful implementation requires both quality-oriented and innovation-oriented approaches, strong management support, cultural readiness, and an incremental, iterative build-out of the enterprise data model, typically starting with Master Data domains and expanding outward.

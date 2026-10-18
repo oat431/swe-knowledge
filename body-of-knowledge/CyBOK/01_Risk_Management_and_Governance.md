@@ -4,7 +4,7 @@ tags: [risk-management, governance, cyber-security, cybok]
 
 # Risk Management and Governance
 
-> *Source: CyBOK v1.1 by NCSC, Chapter 2 — Risk Management and Governance*
+> *Source: CyBOK v1.1 by NCSC, Chapter 2: Risk Management and Governance*
 
 ## Purpose
 
@@ -22,21 +22,21 @@ Risk is grounded in **human value**. Renn's working definition: *the possibility
 2. **Possibility of occurrence** (uncertainty).
 3. A **formula** to combine both elements.
 
-**Risk assessment** is the process of collating observations and perceptions justified by logical reasoning or comparison with actual outcomes. **Risk management** is the process of developing and evaluating options to address risks in a manner agreeable to stakeholders. **Risk governance** is the overarching set of ongoing processes and principles that ensures awareness, education, responsibility, and accountability — underpinning collective decision-making and encompassing legal, social, organisational, and economic contexts.
+**Risk assessment** is the process of collating observations and perceptions justified by logical reasoning or comparison with actual outcomes. **Risk management** is the process of developing and evaluating options to address risks in a manner agreeable to stakeholders. **Risk governance** is the overarching set of ongoing processes and principles that ensures awareness, education, responsibility, and accountability, underpinning collective decision-making and encompassing legal, social, organisational, and economic contexts.
 
 ### Why Risk Assessment and Management Matters
 
 Risk assessment involves three core components:
-- **Identification/estimation of hazard** — establishing events and outcomes.
-- **Assessment of exposure and/or vulnerability** — aspects of a system open to threat actors and attributes that could be targeted.
-- **Estimation of risk** — combining likelihood and severity (quantitative or qualitative).
+- **Identification/estimation of hazard**: establishing events and outcomes.
+- **Assessment of exposure and/or vulnerability**: aspects of a system open to threat actors and attributes that could be targeted.
+- **Estimation of risk**: combining likelihood and severity (quantitative or qualitative).
 
-An often overlooked part is **concern assessment** — capturing wider stakeholder perceptions of hazards, fear/dread, personal/institutional control, and trust in risk managers.
+An often overlooked part is **concern assessment**: capturing wider stakeholder perceptions of hazards, fear/dread, personal/institutional control, and trust in risk managers.
 
 Risk management decisions lead to three outcomes:
-- **Intolerable** — abandon/replace, or reduce vulnerabilities and limit exposure.
-- **Tolerable** — reduce risk to ALARP/ALARA levels; options include mitigating, sharing, or transferring risk.
-- **Acceptable** — no intervention needed; risk may even be embraced as opportunity ("upside risk").
+- **Intolerable**: abandon/replace, or reduce vulnerabilities and limit exposure.
+- **Tolerable**: reduce risk to ALARP/ALARA levels; options include mitigating, sharing, or transferring risk.
+- **Acceptable**: no intervention needed; risk may even be embraced as opportunity ("upside risk").
 
 ### Four Types of Risk (Renn)
 
@@ -61,9 +61,9 @@ Risk governance is the overarching set of ongoing processes and principles aimed
 
 ### Three Governance Models (Millstone et al.)
 
-1. **Technocratic** — Policy directly informed by science and domain expertise evidence.
-2. **Decisionistic** — Risk evaluation and policy use inputs beyond science alone (e.g., social and economic drivers).
-3. **Transparent (Inclusive)** — Context for risk assessment considered from the outset with input from science, politics, economics, and civil society ("pre-assessment").
+1. **Technocratic**: Policy directly informed by science and domain expertise evidence.
+2. **Decisionistic**: Risk evaluation and policy use inputs beyond science alone (e.g., social and economic drivers).
+3. **Transparent (Inclusive)**: Context for risk assessment considered from the outset with input from science, politics, economics, and civil society ("pre-assessment").
 
 The more inclusive and transparent the policy development, the more likely support and buy-in from wider stakeholder groups.
 
@@ -71,20 +71,20 @@ The more inclusive and transparent the policy development, the more likely suppo
 
 The International Risk Governance Council (IRGC) framework, inspired by Renn, comprises four core areas with cross-cutting communication:
 
-- **Pre-assessment** — Problem framing, identification of actors/stakeholders, capturing risk perspectives.
-- **Appraisal** — Assessment of causes and consequences of risk; developing a knowledge base of risks and mitigation options.
-- **Characterisation** — Judgment about the significance and tolerance of risks.
-- **Management** — Deciding on and implementing the risk management plan (accept, avoid, mitigate, share, transfer).
+- **Pre-assessment**: Problem framing, identification of actors/stakeholders, capturing risk perspectives.
+- **Appraisal**: Assessment of causes and consequences of risk; developing a knowledge base of risks and mitigation options.
+- **Characterisation**: Judgment about the significance and tolerance of risks.
+- **Management**: Deciding on and implementing the risk management plan (accept, avoid, mitigate, share, transfer).
 
-Risk communication sits at the heart of the governance process. The governance process is iterative — always seeking awareness of new problems and evolving threats.
+Risk communication sits at the heart of the governance process. The governance process is iterative, always seeking awareness of new problems and evolving threats.
 
 ### NIST SP 800-30 Risk Assessment Process
 
 The US NIST guidelines capture risk management in a cycle:
-1. **Prepare** — Identify purpose, scope, assumptions, constraints, and risk tolerances.
-2. **Conduct** — Identify threats, vulnerabilities, likelihood, and impact.
-3. **Communicate** — Present results appropriately to each stakeholder group.
-4. **Maintain** — Ongoing phase to continually update risk assessment as systems and environments change.
+1. **Prepare**: Identify purpose, scope, assumptions, constraints, and risk tolerances.
+2. **Conduct**: Identify threats, vulnerabilities, likelihood, and impact.
+3. **Communicate**: Present results appropriately to each stakeholder group.
+4. **Maintain**: Ongoing phase to continually update risk assessment as systems and environments change.
 
 ### ISO/IEC 27005 Process
 
@@ -114,7 +114,7 @@ People fail to follow required security behaviour for two reasons:
 1. **Unable** to behave as required (not technically possible; policies too large/difficult/unclear).
 2. **Do not want** to behave as required (easier to work around; disagree with policy).
 
-A set of rules dictating security risk management will almost certainly fail unless necessary actions are seen as linked to broader organisational governance — just like HR and finance policy. People must be enabled to operate securely and not be subject to a blame culture.
+A set of rules dictating security risk management will almost certainly fail unless necessary actions are seen as linked to broader organisational governance, just like HR and finance policy. People must be enabled to operate securely and not be subject to a blame culture.
 
 Security education should be a formal part of **continual professional development**, with reinforced messaging around why cybersecurity is important and each employee's role and duties.
 
@@ -139,12 +139,12 @@ Risk cannot be mitigated with technology alone; concern assessment is essential.
 ### Risk Communication Principles
 
 Risk communication plays a key role in governance, including:
-- **Education** — Risk awareness and day-to-day handling of risks.
-- **Training and behaviour change** — Changing internal practices and processes to adhere to security policy.
-- **Creation of confidence** — Building trust in organisational risk management through strong performance.
-- **Involvement** — Giving stakeholders opportunity to participate in risk/concern assessment and conflict resolution.
+- **Education**: Risk awareness and day-to-day handling of risks.
+- **Training and behaviour change**: Changing internal practices and processes to adhere to security policy.
+- **Creation of confidence**: Building trust in organisational risk management through strong performance.
+- **Involvement**: Giving stakeholders opportunity to participate in risk/concern assessment and conflict resolution.
 
-**Leading by example** is paramount — people resent it if senior management does not abide by the same rules.
+**Leading by example** is paramount. People resent it if senior management does not abide by the same rules.
 
 ### Just Culture (Dekker)
 
@@ -173,16 +173,16 @@ Useful questions and metrics for improving security culture:
 | **Component-driven** (bottom-up) | Individual technical components; threats and vulnerabilities they face | Less complex systems with well-understood connections; working at levels where physical function is agreed |
 | **System-driven** (top-down) | Goals of the entire system; sub-system interactions and dependencies | Complex interactions; establishing requirements before physical design; bringing together multiple stakeholder views |
 
-Rasmussen's hierarchy of abstraction shows how these perspectives are complementary — higher levels consider goals and dependencies, lower levels consider capabilities and functionality of real-world artefacts.
+Rasmussen's hierarchy of abstraction shows how these perspectives are complementary. Higher levels consider goals and dependencies, lower levels consider capabilities and functionality of real-world artefacts.
 
 ### Elements of Risk
 
 Four core concepts underpinning risk assessment in most models:
 
-1. **Vulnerability** — Something open to attack or misuse that could lead to an undesirable outcome (socio-technical: technology, people, legal, etc.).
-2. **Threat** — An individual, event, or action that has the capability to exploit a vulnerability (hackers, poorly trained employees, poorly designed software, etc.).
-3. **Likelihood** — A measure capturing the degree of possibility that a threat will exploit a vulnerability (qualitative: low/medium/high; quantitative: 1-10 scale or percentage).
-4. **Impact** — The result of a threat exploiting a vulnerability, having a negative effect on the objectives being assessed.
+1. **Vulnerability**: Something open to attack or misuse that could lead to an undesirable outcome (socio-technical: technology, people, legal, etc.).
+2. **Threat**: An individual, event, or action that has the capability to exploit a vulnerability (hackers, poorly trained employees, poorly designed software, etc.).
+3. **Likelihood**: A measure capturing the degree of possibility that a threat will exploit a vulnerability (qualitative: low/medium/high; quantitative: 1-10 scale or percentage).
+4. **Impact**: The result of a threat exploiting a vulnerability, having a negative effect on the objectives being assessed.
 
 ### Common Risk Assessment Methods
 
@@ -235,28 +235,28 @@ Ongoing debate: what to measure, how to measure, and why measure at all.
 
 **Bad metrics**: Inconsistently measured, labour-intensive, rely on qualitative labels (traffic lights, letter grades).
 
-Herrmann provides a pragmatic view based on regulatory compliance, resilience, and return on investment — measuring whether controls are fit for purpose and whether they add more value than their cost.
+Herrmann provides a pragmatic view based on regulatory compliance, resilience, and return on investment: measuring whether controls are fit for purpose and whether they add more value than their cost.
 
 ### Business Continuity: Incident Response and Recovery
 
 Despite best efforts, breaches will occur. Essential parts of risk governance include incident response planning:
 
 **ISO/IEC 27035-1:2016** phases:
-1. Plan and Prepare — Define policy, establish team.
-2. Detection and Reporting — Observe, monitor, detect, report.
-3. Assessment and Decision — Determine severity, take decisive action.
-4. Response — Forensic analysis, patching, containment, remediation.
-5. Learning — Make improvements to reduce likelihood of future breaches.
+1. Plan and Prepare: Define policy, establish team.
+2. Detection and Reporting: Observe, monitor, detect, report.
+3. Assessment and Decision: Determine severity, take decisive action.
+4. Response: Forensic analysis, patching, containment, remediation.
+5. Learning: Make improvements to reduce likelihood of future breaches.
 
 **NCSC Ten Steps**: Establish capability → Training → Assign roles → Recovery (tested backups) → Test recovery plans → Report → Gather evidence → Develop/refine → Maintain awareness → Report to law enforcement.
 
-Information sharing about breaches is still nascent — organisations often prefer anonymity to prevent reputational damage, despite competitors potentially benefiting from shared intelligence.
+Information sharing about breaches is still nascent. Organisations often prefer anonymity to prevent reputational damage, despite competitors potentially benefiting from shared intelligence.
 
 ---
 
 ## Related Chapters
 
-- [[02_Law_and_Regulation]] — Legal context for risk management; NIS Directive; regulatory compliance obligations.
-- [[03_Human_Factors]] — Human factors in security; why people fail to follow security behaviour; usability of security tools.
-- [[07_Security_Operations_and_Incident_Management]] — Detailed incident management processes; forensics; security operations.
-- [[19_Cyber_Physical_Systems_Security]] — OT/ICS security; safety-critical systems; vulnerability management in CPS environments.
+- [[02_Law_and_Regulation]]: Legal context for risk management; NIS Directive; regulatory compliance obligations.
+- [[03_Human_Factors]]: Human factors in security; why people fail to follow security behaviour; usability of security tools.
+- [[07_Security_Operations_and_Incident_Management]]: Detailed incident management processes; forensics; security operations.
+- [[19_Cyber_Physical_Systems_Security]]: OT/ICS security; safety-critical systems; vulnerability management in CPS environments.

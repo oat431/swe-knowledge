@@ -11,7 +11,7 @@ aliases: ["SOIM", "SOC", "SIEM", "IDS", "IPS", "IDPS", "SOAR"]
 
 ## Overview
 
-Security Operations and Incident Management (SOIM) traces its roots to James Anderson's 1981 report, which theorised that **full protection of ICT infrastructure is impossible** — from both technical and economic perspectives. The report promoted the use of **detection techniques to complement protection**, a paradigm that remains foundational today.
+Security Operations and Incident Management (SOIM) traces its roots to James Anderson's 1981 report, which theorised that **full protection of ICT infrastructure is impossible**, from both technical and economic perspectives. The report promoted the use of **detection techniques to complement protection**, a paradigm that remains foundational today.
 
 The theoretical basis for most SOIM work is Denning's **intrusion detection model** (1987). SOIM can be viewed as an application of the **MAPE-K (Monitor-Analyze-Plan-Execute-Knowledge) autonomic computing loop** to cybersecurity.
 
@@ -21,7 +21,7 @@ The theoretical basis for most SOIM work is Denning's **intrusion detection mode
 
 ## 8.1 Fundamental Concepts
 
-### 8.1.1 Workflows and Vocabulary — The MAPE-K Loop
+### 8.1.1 Workflows and Vocabulary: The MAPE-K Loop
 
 The SOIM domain implements the MAPE-K loop through three nested partial loops:
 
@@ -32,6 +32,7 @@ The SOIM domain implements the MAPE-K loop through three nested partial loops:
 | **Outer** | **SOAR** platforms | Recent | Advanced analytics, automated response, CTI integration |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px','cScale0':'#1FB854','cScale1':'#1EB88E','cScale2':'#1FB8AB','cScale3':'#00B5FF','cScale4':'#FFBE00','cScale5':'#19362D','cScale6':'#FF5861','cScale7':'#CDD3D1','cScale8':'#00A96E','cScale9':'#CAC9C9','cScale10':'#1EB88E','cScale11':'#1FB8AB'}}}%%
 flowchart LR
     subgraph MAPE-K["MAPE-K Autonomic Loop (SOIM)"]
         M["Monitor\n(IDS Sensors)"] --> A["Analyze\n(Detection Algorithms)"]
@@ -55,7 +56,7 @@ flowchart LR
 - **Analyze** → covered by IDSes (detection algorithms, §8.3).
 - **Plan** → realm of **SIEM** platforms (alert management, correlation).
 - **Execute** → historically manual, now increasingly automated via **SOAR**.
-- **IDS** → **IDPS** (Intrusion Detection and Prevention Systems) — modern sensors block in addition to detecting.
+- **IDS** → **IDPS** (Intrusion Detection and Prevention Systems): modern sensors block in addition to detecting.
 
 ### 8.1.2 Architectural Principles
 
@@ -100,8 +101,8 @@ A typical SOIM deployment in an ICT infrastructure:
   3. **Reporting** → crucial for managed services; analyse SOC/SIEM functioning for improvement.
 
 **External intelligence inputs:**
-- ****CTI** (Cyber Threat Intelligence)** — commercial feeds, OSINT; fuzzy/reliability varies.
-- ****ISAC** / **CERT**** — trusted sectoral information sharing, often regulatory-governed.
+- ****CTI** (Cyber Threat Intelligence)**: commercial feeds, OSINT; fuzzy/reliability varies.
+- ****ISAC** / **CERT****: trusted sectoral information sharing, often regulatory-governed.
 
 ---
 
@@ -114,6 +115,7 @@ Data sources are **event streams** (traces of activity). They feed into sensors,
 ### Data Source Landscape
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px','cScale0':'#1FB854','cScale1':'#1EB88E','cScale2':'#1FB8AB','cScale3':'#00B5FF','cScale4':'#FFBE00','cScale5':'#19362D','cScale6':'#FF5861','cScale7':'#CDD3D1','cScale8':'#00A96E','cScale9':'#CAC9C9','cScale10':'#1EB88E','cScale11':'#1FB8AB'}}}%%
 mindmap
   root((Data Sources))
     Host Behaviour
@@ -163,17 +165,17 @@ The **de-facto standard** for intrusion detection data. Uses **libpcap** library
 | **Timestamps** | Not in packet headers; added by capture software relying on external clock. |
 | **MAC layer** | Requires specific config and network segment knowledge; needed for ARP poisoning detection. |
 | **Application layer** | TCP dynamics, application logic understanding needed; hard to acquire/reproduce. |
-| **Encryption (TLS)** | Widespread TLS makes payload analysis impossible. Solution: **HSM (Hardware Security Module)** — terminates TLS before the application server, enabling clear-text analysis by network IDPS and **WAF**. |
+| **Encryption (TLS)** | Widespread TLS makes payload analysis impossible. Solution: **HSM (Hardware Security Module)**. Terminates TLS before the application server, enabling clear-text analysis by network IDPS and **WAF**. |
 
 **IoT/Industrial protocol considerations:**
-- **LoRa** — low bandwidth, limited packets/day; needs communication context for useful detection.
-- **PROFINET IRT** — strict timing requirements; inserting IDPS must not alter real-time guarantees.
+- **LoRa**: low bandwidth, limited packets/day; needs communication context for useful detection.
+- **PROFINET IRT**: strict timing requirements; inserting IDPS must not alter real-time guarantees.
 
 ---
 
 ### 8.2.2 Network Aggregates: Netflow
 
-**Netflow** (standardised as **IPFIX**, RFC 7011) provides a synthetic aggregated view — counting packets sharing source, destination, protocol, or interface characteristics.
+**Netflow** (standardised as **IPFIX**, RFC 7011) provides a synthetic aggregated view, counting packets sharing source, destination, protocol, or interface characteristics.
 
 **Strengths:**
 - Well-integrated in network equipment (Cisco origin).
@@ -182,7 +184,7 @@ The **de-facto standard** for intrusion detection data. Uses **libpcap** library
 
 **Limitations:**
 - **Performance impact** on router CPU (though newer hardware offloading mitigates this).
-- **Sampling mode** commonly deployed (1 in N thousand packets analysed) — may completely miss events below sampling scale.
+- **Sampling mode** commonly deployed (1 in N thousand packets analysed): may completely miss events below sampling scale.
 - Reliable only for **large-scale events** (e.g., DDoS); insufficient alone for precise security detection.
 
 ---
@@ -200,17 +202,17 @@ The **de-facto standard** for intrusion detection data. Uses **libpcap** library
 
 #### 8.2.3.2 Routing (BGP)
 
-**BGP** incidents — mostly human error rather than malicious hijacks. Malicious BGP hijacks exist but the effort/reward ratio currently discourages widespread attacks.
+**BGP** incidents: mostly human error rather than malicious hijacks. Malicious BGP hijacks exist but the effort/reward ratio currently discourages widespread attacks.
 
 ---
 
 ### 8.2.4 Application Logs
 
-**Advantage:** Similarity to reality; precision and accuracy of information. Originally created for debugging/system management — textual and intelligible.
+**Advantage:** Similarity to reality; precision and accuracy of information. Originally created for debugging/system management: textual and intelligible.
 
 #### 8.2.4.1 Web Server Logs
 
-- **Common Log Format (CLF)** and **Extended Common Log Format (ECLF)** — de-facto standard (Apache, etc.).
+- **Common Log Format (CLF)** and **Extended Common Log Format (ECLF)**: de-facto standard (Apache, etc.).
 - Records: requested resource, server response code.
 - **Limitation:** Log is written AFTER request is served → the attack has already occurred. Not suitable for real-time blocking (IDPS needs to intercept the data stream before processing).
 
@@ -224,7 +226,7 @@ Rich document formats (PDF, Flash, Office suites, HTML email) are **attack vecto
 
 ### 8.2.5 System and Kernel Logs
 
-**Historical context:** Denning's original model included system audit trails. However, most system logs are **insufficient** for intrusion detection — lacking precision (e.g., Unix accounting records only first 8 chars of command names).
+**Historical context:** Denning's original model included system audit trails. However, most system logs are **insufficient** for intrusion detection, lacking precision (e.g., Unix accounting records only first 8 chars of command names).
 
 **Orange Book audit trail:**
 - Required precise privileged-user activity traces via system call interception.
@@ -242,7 +244,7 @@ Rich document formats (PDF, Flash, Office suites, HTML email) are **attack vecto
 
 ### 8.2.6 Syslog
 
-**Syslog** provides a pervasive, generic logging infrastructure — an extremely efficient multi-purpose data source.
+**Syslog** provides a pervasive, generic logging infrastructure, an extremely efficient multi-purpose data source.
 
 **Evolution:**
 - **Original:** BSD Unix syslog → retro-specified as **RFC 3164**
@@ -278,8 +280,8 @@ Many data sources (applications, networking equipment, OS) feed through syslog i
 
 *[This section covers SIEM platforms, alert correlation, and Security Operations Centers:]*
 
-- ****SIEM** (Security Information and Event Management)** — consolidates alerts from multiple sensors, provides correlation, prioritisation, and decision support.
-- ****SOC** (Security Operations Center)** — combines SIEM technology with human analyst teams for 24/7 monitoring.
+- ****SIEM** (Security Information and Event Management)**: consolidates alerts from multiple sensors, provides correlation, prioritisation, and decision support.
+- ****SOC** (Security Operations Center)**: combines SIEM technology with human analyst teams for 24/7 monitoring.
 - Alert triage workflows: ignore, automated response, escalate to Tier 2/3 analysts.
 - Second-generation SIEM platforms handle increasing data volumes and diverse formats.
 
@@ -289,7 +291,7 @@ Many data sources (applications, networking equipment, OS) feed through syslog i
 
 *[This section covers the execution/response phase:]*
 
-- ****SOAR** (Security Orchestration, Automation and Response)** — extends SIEM with automated response capabilities.
+- ****SOAR** (Security Orchestration, Automation and Response)**: extends SIEM with automated response capabilities.
 - Security orchestration → coordinating multiple security tools.
 - Automation → playbooks and runbooks for incident response.
 - Response actions: blocking IPs, quarantining hosts, triggering **IR** (Incident Response) processes.
@@ -301,9 +303,9 @@ Many data sources (applications, networking equipment, OS) feed through syslog i
 
 *[This section covers the knowledge foundation:]*
 
-- **Configuration knowledge** — system/network topology, asset inventories.
-- **Detection signatures** — rules, patterns, IoCs (**Indicators of Compromise**).
-- ****CTI** (Cyber Threat Intelligence)** — external threat feeds, TTPs (Tactics, Techniques, Procedures), threat actor profiles.
+- **Configuration knowledge**: system/network topology, asset inventories.
+- **Detection signatures**: rules, patterns, IoCs (**Indicators of Compromise**).
+- ****CTI** (Cyber Threat Intelligence)**: external threat feeds, TTPs (Tactics, Techniques, Procedures), threat actor profiles.
 - **Vulnerability databases** (**CVE**, **NVD**).
 - ****MITRE ATT&CK**** framework integration.
 
@@ -323,23 +325,23 @@ Many data sources (applications, networking equipment, OS) feed through syslog i
 
 ## Key Takeaways
 
-1. **Full protection is impossible** — SOIM accepts this premise and focuses on detection + response.
+1. **Full protection is impossible**: SOIM accepts this premise and focuses on detection + response.
 2. The **MAPE-K loop** (Monitor → Analyze → Plan → Execute, underpinned by Knowledge) is the conceptual backbone.
 3. **Three generations** of technology: IDS → SIEM → SOAR, each expanding automation and scope.
 4. **Data sources** span network (packets, flows), host (logs, system calls), and application layers, each with distinct strengths and limitations.
 5. **Syslog** is the universal logging glue; **pcap** is the network analysis standard; **Netflow** provides scalable aggregate views.
-6. **TLS encryption** is the major challenge for network-based detection — HSMs provide a workaround.
+6. **TLS encryption** is the major challenge for network-based detection: HSMs provide a workaround.
 7. Modern SOIM integrates **external threat intelligence** (CTI, ISAC, CERT) and increasingly **automates response** via SOAR playbooks.
 
 ---
 
 ## Related Knowledge Areas
 
-- **Risk Management & Governance** (CyBOK Ch2) — risk context for SOIM decisions
-- **Malware & Attack Technologies** (CyBOK Ch6) — malware detection as sensor input
-- **Adversarial Behaviours** (CyBOK Ch7) — understanding attacker motivations and TTPs
-- **Forensics** (CyBOK Ch9) — post-incident investigation complements real-time SOIM
-- **Network Security** (CyBOK Ch18) — network-level protections feed into monitoring
+- **Risk Management & Governance** (CyBOK Ch2): risk context for SOIM decisions
+- **Malware & Attack Technologies** (CyBOK Ch6): malware detection as sensor input
+- **Adversarial Behaviours** (CyBOK Ch7): understanding attacker motivations and TTPs
+- **Forensics** (CyBOK Ch9): post-incident investigation complements real-time SOIM
+- **Network Security** (CyBOK Ch18): network-level protections feed into monitoring
 
 ---
 
@@ -348,6 +350,6 @@ Many data sources (applications, networking equipment, OS) feed through syslog i
 - Anderson, J.P. (1981). *Computer Security Threat Monitoring and Surveillance*. [834]
 - Denning, D.E. (1987). An Intrusion-Detection Model. *IEEE TSE*. [835]
 - Kephart, J.O. & Chess, D.M. (2003). The Vision of Autonomic Computing. *IEEE Computer*. [836]
-- RFC 7011 — IPFIX (Netflow standard)
-- RFC 5424 — Syslog Protocol
-- RFC 3164 — BSD Syslog Protocol
+- RFC 7011: IPFIX (Netflow standard)
+- RFC 5424: Syslog Protocol
+- RFC 3164: BSD Syslog Protocol

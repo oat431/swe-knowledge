@@ -2,13 +2,13 @@
 tags: [formal-methods, cyber-security, cybok]
 ---
 
-# 12 — Formal Methods for Security
+# 12: Formal Methods for Security
 
-> *Source: CyBOK v1.1 by NCSC, Chapter 13 — Formal Methods for Security*
+> *Source: CyBOK v1.1 by NCSC, Chapter 13: Formal Methods for Security*
 
 ## Purpose
 
-Formal methods apply mathematical rigor to the specification, design, and verification of security properties in systems. They provide the highest level of assurance by proving that a system satisfies its security requirements under all possible conditions — essential for high-assurance systems (avionics, cryptographic protocols, safety-critical).
+Formal methods apply mathematical rigor to the specification, design, and verification of security properties in systems. They provide the highest level of assurance by proving that a system satisfies its security requirements under all possible conditions, essential for high-assurance systems (avionics, cryptographic protocols, safety-critical).
 
 ## Key Concepts
 
@@ -25,13 +25,13 @@ Using logical deduction to prove that a system satisfies its specification. Inte
 Automated analysis of source code or models without execution. Includes: abstract interpretation, data-flow analysis, type systems. Used to detect buffer overflows, injection vulnerabilities, information leaks.
 
 ### Applications in Security
-- **Protocol verification** — Proving cryptographic protocols satisfy authentication and secrecy properties
-- **Hardware verification** — Ensuring hardware implementations match specifications
-- **Software verification** — Proving absence of specific vulnerability classes
-- **Security policy analysis** — Verifying access control policies for consistency and completeness
+- **Protocol verification**: Proving cryptographic protocols satisfy authentication and secrecy properties
+- **Hardware verification**: Ensuring hardware implementations match specifications
+- **Software verification**: Proving absence of specific vulnerability classes
+- **Security policy analysis**: Verifying access control policies for consistency and completeness
 
 ## Related Chapters
 
-- [[09_Software_Security]] — Static analysis and bug detection
-- [[14_Secure_Software_Lifecycle]] — Where formal methods fit in the SDLC
-- [[16_Applied_Cryptography]] — Cryptographic protocol verification
+- [[09_Software_Security]]: Static analysis and bug detection
+- [[14_Secure_Software_Lifecycle]]: Where formal methods fit in the SDLC
+- [[16_Applied_Cryptography]]: Cryptographic protocol verification

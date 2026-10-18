@@ -7,7 +7,7 @@ tags:
 
 # Perspectives
 
-> *Source: BABOK® Guide v3 by IIBA, Chapter 10 — Perspectives*
+> *Source: BABOK® Guide v3 by IIBA, Chapter 10: Perspectives*
 
 > **Purpose:** Perspectives provide ways to approach business analysis work in a more focused manner suitable to the context. While the business analysis tasks detailed in the BABOK® Guide are applicable across all areas, each perspective interprets and understands the knowledge areas and tasks from the lens in which one is currently working. Each perspective follows a common structure: Change Scope, Business Analysis Scope, Methodologies/Approaches/Techniques, Underlying Competencies, and Impact on Knowledge Areas.
 
@@ -17,7 +17,7 @@ tags:
 
 ### Overview
 
-The Agile Perspective highlights business analysis practiced in agile environments — characterized by a flexible mindset, constant change, and continuous reassessment. Business analysts perform analysis at the *last responsible moment*: detailed work is done just in time, not ahead of time. BA work is performed continuously throughout an initiative and relies heavily on interpersonal skills (communication, facilitation, coaching, negotiation).
+The Agile Perspective highlights business analysis practiced in agile environments, characterized by a flexible mindset, constant change, and continuous reassessment. Business analysts perform analysis at the *last responsible moment*: detailed work is done just in time, not ahead of time. BA work is performed continuously throughout an initiative and relies heavily on interpersonal skills (communication, facilitation, coaching, negotiation).
 
 **Core questions BAs help agile teams answer:**
 - What need are we trying to satisfy?
@@ -74,8 +74,8 @@ The BI Perspective focuses on transforming data into value-added information: wh
 ### Change Scope
 
 - **Breadth:** Establishes a "single point of truth" across the organization. Integrates multiple data sources (internal, external, unstructured) into an enterprise data view.
-- **Depth:** Supports decision making at three levels — executive (strategic), management (tactical), process (operational). Needs may involve reporting, analytic functionality, or data integration.
-- **Value Delivery:** Timely, accurate, high-value, actionable information for better decisions — leading to improved performance in strategic, tactical, and operational processes (increased revenues, reduced costs).
+- **Depth:** Supports decision making at three levels: executive (strategic), management (tactical), process (operational). Needs may involve reporting, analytic functionality, or data integration.
+- **Value Delivery:** Timely, accurate, high-value, actionable information for better decisions, leading to improved performance in strategic, tactical, and operational processes (increased revenues, reduced costs).
 - **Delivery:** Phased/incremental; extensible architecture supports progressive introduction at different organizational levels and functional areas. Often uses COTS packages.
 
 ### BA Impact
@@ -114,7 +114,7 @@ Business data and functional usage, complex data structure analysis, KPIs and me
 
 ### Overview
 
-The IT Perspective highlights BA when undertaken from the viewpoint of the impact of change on information technology systems. IT BAs deal with a wide range of complexity — from minor bug fixes to re-engineering entire IT infrastructures. They serve as translators between business and technology stakeholders.
+The IT Perspective highlights BA when undertaken from the viewpoint of the impact of change on information technology systems. IT BAs deal with a wide range of complexity: from minor bug fixes to re-engineering entire IT infrastructures. They serve as translators between business and technology stakeholders.
 
 **Key factors for IT BAs:** Solution impact (value/risk), organizational maturity (formality/flexibility of change processes), and change scope (breadth, depth, complexity).
 
@@ -166,7 +166,7 @@ Systems thinking (seeing the larger picture), understanding of technical feasibi
 Business architecture models the enterprise to show how strategic concerns of key stakeholders are met and to support ongoing business transformation. It provides architectural descriptions and views (blueprints) to align strategic objectives with tactical demands. Solutions may include changes in business model, operating model, organizational structure, or drive other initiatives.
 
 **Fundamental architectural principles:**
-- **Scope:** The entire enterprise — not a single project, process, or piece of information
+- **Scope:** The entire enterprise, not a single project, process, or piece of information
 - **Separation of concerns:** Separates what the business does from how, who, where, when, why, and how well
 - **Scenario driven:** Different business questions require different blueprints
 - **Knowledge based:** Architectural components are catalogued in a knowledge base/repository
@@ -219,7 +219,7 @@ BPM is a management discipline and set of enabling technologies that focuses on 
 - **Designing:** Identify processes, define as-is and to-be states
 - **Modelling:** Graphical representation; simulation with quantitative data to analyze potential value
 - **Execution and Monitoring:** Collect actual process flow data for objective analysis
-- **Optimizing:** Ongoing iteration — remove inefficiencies, add value
+- **Optimizing:** Ongoing iteration: remove inefficiencies, add value
 
 ### Change Scope
 

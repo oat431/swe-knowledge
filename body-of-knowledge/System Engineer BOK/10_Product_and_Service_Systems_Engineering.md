@@ -2,11 +2,11 @@
 tags: [product-se, service-se, applications, systems-engineering, sebok]
 ---
 
-> *Source: SEBoK v2, Part 4 — Product & Service Systems Engineering*
+> *Source: SEBoK v2, Part 4: Product & Service Systems Engineering*
 
 ## Purpose
 
-**Product Systems Engineering (PSE)** and **Service Systems Engineering (SSE)** are two distinct but interrelated applications of systems engineering — both focus on the creation, delivery, and life cycle management of engineered systems, but from complementary perspectives. PSE centers on tangible/intangible artifacts (products) and their enabling systems, while SSE centers on value co-creation through stakeholder interactions and service transactions. Together with Enterprise SE and Systems of Systems, they form the four SE application contexts of SEBoK Part 4.
+**Product Systems Engineering (PSE)** and **Service Systems Engineering (SSE)** are two distinct but interrelated applications of systems engineering. Both focus on the creation, delivery, and life cycle management of engineered systems, but from complementary perspectives. PSE centers on tangible/intangible artifacts (products) and their enabling systems, while SSE centers on value co-creation through stakeholder interactions and service transactions. Together with Enterprise SE and Systems of Systems, they form the four SE application contexts of SEBoK Part 4.
 
 ---
 
@@ -14,10 +14,10 @@ tags: [product-se, service-se, applications, systems-engineering, sebok]
 
 ### Background and Fundamentals
 
-**Product Systems Engineering (PSE)** is at the core of the **New Product Development Process (NPDP)** — the integrated activity of bringing a new product to market. NPDP has two overlapping streams:
+**Product Systems Engineering (PSE)** is at the core of the **New Product Development Process (NPDP)**: the integrated activity of bringing a new product to market. NPDP has two overlapping streams:
 
-1. **Systems Engineering** — concept generation, engineering design/development, and deployment.
-2. **Market Development** — market research, analysis, product acceptance, and adoption/diffusion.
+1. **Systems Engineering**: concept generation, engineering design/development, and deployment.
+2. **Market Development**: market research, analysis, product acceptance, and adoption/diffusion.
 
 NPDP also encompasses manufacturability, logistics, distribution, quality, disposal, conformance to standards, stakeholder value, and customer expectations. Internal enterprise capabilities (customer support, sales, maintenance, training) must also be factored in.
 
@@ -54,7 +54,7 @@ Product types are not limited to hardware/software. Martin's taxonomy includes: 
 
 **Architecture** (per IEEE 1471 / ISO/IEC 42010) is the fundamental organization of a system embodied in its components, their relationships, and design principles. The systems architect:
 
-1. Starts at the highest abstraction level — needs, functions, characteristics, constraints
+1. Starts at the highest abstraction level: needs, functions, characteristics, constraints
 2. Documents architectural descriptions (models) representing stakeholder views
 3. Uses modeling techniques: hierarchical decomposition, functional/architectural block diagrams, use case diagrams, sequence diagrams, state diagrams, data flow diagrams
 4. Transforms requirements into products and processes
@@ -124,7 +124,7 @@ Technology planning defines the technical evolution roadmap, forecasts, maturati
 
 #### Increasing Role of Software
 
-Software implements an ever-increasing portion of product functionality — from embedded systems (cars, phones, medical devices) to the "internet of things." Software engineers need systems thinking to bridge problem-solving with business objectives.
+Software implements an ever-increasing portion of product functionality, from embedded systems (cars, phones, medical devices) to the "internet of things." Software engineers need systems thinking to bridge problem-solving with business objectives.
 
 ---
 
@@ -142,10 +142,10 @@ Economies follow a progression: agriculture/mining → manufacturing → service
 
 A **service system** is a system of interacting and interdependent parts (people, technologies, organizations) that is externally oriented to achieve and maintain competitive advantage. Service system entities dynamically configure four resource types:
 
-1. **People** — service providers, support providers, customers
-2. **Technology/Environment Infrastructure** — buildings, equipment, IT
-3. **Organizations/Institutions** — governance, processes, rules
-4. **Shared Information/Symbolic Knowledge** — data, knowledge, procedures
+1. **People**: service providers, support providers, customers
+2. **Technology/Environment Infrastructure**: buildings, equipment, IT
+3. **Organizations/Institutions**: governance, processes, rules
+4. **Shared Information/Symbolic Knowledge**: data, knowledge, procedures
 
 Service systems can be **formal** (governed by Service Level Agreements, SLAs) or **informal** (based on relationships and promises, e.g., emergency services).
 
@@ -153,11 +153,11 @@ Service systems can be **formal** (governed by Service Level Agreements, SLAs) o
 
 The value chain links entities through network-centric operations: B2B, B2C, B2G, G2B, G2C, etc. Services are:
 
-- **Information-driven** — creation, management, and sharing of information
-- **Customer-centric** — customers are co-producers
-- **E-oriented** — e-access, e-commerce, e-customer management
-- **Productivity-focused** — both efficiency and effectiveness matter
-- **Value-adding** — value for customers assures profitability
+- **Information-driven**: creation, management, and sharing of information
+- **Customer-centric**: customers are co-producers
+- **E-oriented**: e-access, e-commerce, e-customer management
+- **Productivity-focused**: both efficiency and effectiveness matter
+- **Value-adding**: value for customers assures profitability
 
 #### Value from Multiple Stakeholder Perspectives
 
@@ -186,19 +186,19 @@ An **SLA** is a negotiated set of technical (functional) and non-technical (non-
 - **QoS properties**: availability, resilience, security, reliability, scalability, response times, repair times
 - **Context properties**: time and location
 
-SLAs are the basis for **Service Level Management (SLM)** — ensuring providers meet and maintain prescribed quality of service.
+SLAs are the basis for **Service Level Management (SLM)**: ensuring providers meet and maintain prescribed quality of service.
 
 #### Key Performance Indicators (KPIs)
 
 KPIs decompose into:
-- **Service Process Measures (SPM)** — provisioning time, time-to-restore, end-to-end response times
-- **Technical Performance Measures (TPM)** — latency, throughput, jitter, defect rates
+- **Service Process Measures (SPM)**: provisioning time, time-to-restore, end-to-end response times
+- **Technical Performance Measures (TPM)**: latency, throughput, jitter, defect rates
 
 Both objective (TPM/SPM) and subjective (customer perception via surveys and MOS techniques) measures are correlated for **Continuous Service Improvement (CSI)**.
 
 #### Non-Inventory and Demand-Variability
 
-- Services **cannot be inventoried** — they are rendered at request time
+- Services **cannot be inventoried**. They are rendered at request time
 - Demand loads vary by time of day, day of week, season, or unexpected events
 - Design and operations require balancing resources with demands for optimal QoS
 
@@ -240,7 +240,7 @@ Chang's 12 SSME skills: **Management of Service Systems, Operations, Service Pro
 
 Key frameworks: **Zachman, TOGAF, eTOM, SOA, DoDAF, NIST Smart Grid Reference Model, ITIL v.3, WS-BPEL**. No single framework covers all service system views; combinations are typically required. Example: the NIST Smart Grid model identifies standards/protocols for interoperability, cyber security, and architectures across energy subsystems.
 
-Dynamic frameworks are an active research area — enabling real-time analysis of service changes on business processes, organizations, and revenue.
+Dynamic frameworks are an active research area, enabling real-time analysis of service changes on business processes, organizations, and revenue.
 
 ### Service SE Stages
 
@@ -283,13 +283,13 @@ Three domains:
 
 ## Related Chapters
 
-- [[02_Nature_of_Systems]] — Product, Service, Enterprise, and SoS contexts
-- [[04_Systems_Models_and_Approach]] — architecture frameworks, modeling techniques
-- [[04_Systems_Models_and_Approach]] — structured methods for SE practice
-- [[05_Life_Cycles_and_Processes]] — generic SE life cycle models
-- [[06_Technical_Management_Processes]] — planning, risk, configuration, quality management
-- [[14_Enabling_Businesses_and_Enterprises]] — SE in enterprise context
-- [[11_Enterprise_Systems_Engineering]] — ESE as a related application context
-- [[12_Systems_of_Systems]] — SoS as a related application context
-- [[05_Life_Cycles_and_Processes]] — Life Cycle Processes
-- [[10_Product_and_Service_Systems_Engineering]] — Full SEBoK Part 4: Applications of Systems Engineering
+- [[02_Nature_of_Systems]]: Product, Service, Enterprise, and SoS contexts
+- [[04_Systems_Models_and_Approach]]: architecture frameworks, modeling techniques
+- [[04_Systems_Models_and_Approach]]: structured methods for SE practice
+- [[05_Life_Cycles_and_Processes]]: generic SE life cycle models
+- [[06_Technical_Management_Processes]]: planning, risk, configuration, quality management
+- [[14_Enabling_Businesses_and_Enterprises]]: SE in enterprise context
+- [[11_Enterprise_Systems_Engineering]]: ESE as a related application context
+- [[12_Systems_of_Systems]]: SoS as a related application context
+- [[05_Life_Cycles_and_Processes]]: Life Cycle Processes
+- [[10_Product_and_Service_Systems_Engineering]]: Full SEBoK Part 4: Applications of Systems Engineering

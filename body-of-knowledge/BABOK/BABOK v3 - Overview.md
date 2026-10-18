@@ -2,7 +2,7 @@
 tags: [overview, business-analysis, babok]
 ---
 
-# BABOK® Guide v3 — Business Analysis Body of Knowledge
+# BABOK® Guide v3: Business Analysis Body of Knowledge
 
 > **A Guide to the Business Analysis Body of Knowledge (BABOK® Guide) v3**
 > International Institute of Business Analysis (IIBA), 2015
@@ -16,7 +16,7 @@ Business analysis is the practice of **enabling change in an enterprise** by def
 
 ## The Business Analysis Core Concept Model (BACCM)
 
-At the heart of the BABOK® Guide is the BACCM — six interdependent core concepts that define the BA profession:
+At the heart of the BABOK® Guide is the BACCM, six interdependent core concepts that define the BA profession:
 
 | Concept | Definition |
 |---|---|
@@ -27,7 +27,7 @@ At the heart of the BABOK® Guide is the BACCM — six interdependent core conce
 | **Value** | The worth, importance, or usefulness of something to a stakeholder |
 | **Context** | The circumstances that influence, are influenced by, and provide understanding of the change |
 
-Every BA task can be described in terms of these six concepts — they form the common vocabulary of business analysis.
+Every BA task can be described in terms of these six concepts. They form the common vocabulary of business analysis.
 
 ## The 6 Knowledge Areas
 
@@ -76,9 +76,9 @@ Every BA task can be described in terms of these six concepts — they form the 
 ## How to Use This Vault
 
 Each Knowledge Area file follows a consistent structure:
-1. **Purpose** — What the KA covers and why it matters
-2. **Tasks** — Each task described with: purpose, inputs, elements, guidelines/tools, techniques, stakeholders, outputs
-3. **Related Chapters** —  connecting across the BABOK
+1. **Purpose**: What the KA covers and why it matters
+2. **Tasks**: Each task described with: purpose, inputs, elements, guidelines/tools, techniques, stakeholders, outputs
+3. **Related Chapters**: connecting across the BABOK
 
 Start with [[00_Introduction_to_BABOK]] for the BACCM and foundational concepts. Then follow the KAs in order (01–06) for a complete walkthrough of the BA discipline.
 
@@ -88,11 +88,11 @@ Start with [[00_Introduction_to_BABOK]] for the BACCM and foundational concepts.
 - **Senior BA / Lead:** [[04_Strategy_Analysis|Strategy]] → [[05_Requirements_Analysis_and_Design|Analysis & Design]] → [[06_Solution_Evaluation|Evaluation]] → [[09_Perspectives|Perspectives]]
 - **CBAP/CCBA Exam Prep:** All 6 Knowledge Areas (01–06) + [[07_Underlying_Competencies]] + [[08_Techniques_Catalog]] + [[09_Perspectives]]
 - **Agile practitioner:** [[09_Perspectives|Agile Perspective]] → [[02_Elicitation_and_Collaboration|Collaboration]] → [[08_Techniques_Catalog|User Stories, Backlog Mgmt]]
-- **Quick reference:** [[08_Techniques_Catalog|Techniques Catalog]] — lookup any of the 50 techniques
+- **Quick reference:** [[08_Techniques_Catalog|Techniques Catalog]]: lookup any of the 50 techniques
 
 ## Related
 
-- [[Body of Knowledge - Overview|Body of Knowledge — Overview]] — All four BOKs
-- [[PMBOK v8 - Overview|PMBOK v8]] — Project Management
-- [[SWEBOK v4 - Overview|SWEBOK v4]] — Software Engineering
-- [[SEBoK v2 - Overview|SEBoK v2]] — Systems Engineering
+- [[Body of Knowledge - Overview|Body of Knowledge (Overview)]]: All four BOKs
+- [[PMBOK v8 - Overview|PMBOK v8]]: Project Management
+- [[SWEBOK v4 - Overview|SWEBOK v4]]: Software Engineering
+- [[SEBoK v2 - Overview|SEBoK v2]]: Systems Engineering

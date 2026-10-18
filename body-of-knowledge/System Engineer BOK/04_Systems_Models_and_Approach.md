@@ -6,16 +6,16 @@ tags:
 - sebok
 ---
 
-# 04 — Systems Models and Approach
+# 04: Systems Models and Approach
 
-> *Source: SEBoK v2, Part 2 — Representing Systems with Models & Systems Approach Applied to Engineered Systems*
+> *Source: SEBoK v2, Part 2: Representing Systems with Models & Systems Approach Applied to Engineered Systems*
 
 ## Purpose
 
 This chapter summarizes two foundational Knowledge Areas from Part 2 (Foundations of Systems Engineering) of the Guide to the Systems Engineering Body of Knowledge (SEBoK v2):
 
-1. **Representing Systems with Models** — the role of abstraction, modeling languages, model types, and standards in understanding, designing, and communicating about systems.
-2. **Systems Approach Applied to Engineered Systems** — a structured, holistic problem-solving paradigm that spans the entire life of an engineered system, from identifying problems through deploying and sustaining solutions.
+1. **Representing Systems with Models**: the role of abstraction, modeling languages, model types, and standards in understanding, designing, and communicating about systems.
+2. **Systems Approach Applied to Engineered Systems**: a structured, holistic problem-solving paradigm that spans the entire life of an engineered system, from identifying problems through deploying and sustaining solutions.
 
 Together, these KAs equip the systems engineer with the conceptual tools (models) and the methodical framework (the systems approach) needed to tackle complex engineered system problems.
 
@@ -25,7 +25,7 @@ Together, these KAs equip the systems engineer with the conceptual tools (models
 
 A **model** is a simplified, selective representation of a system at some point in time or space, intended to promote understanding. As an abstraction, it offers insight into one or more aspects: function, structure, properties, performance, behavior, or cost.
 
-Modeling serves to make concepts concrete and formal, enhance quality and productivity, and reduce the cost and risk of systems development. It occurs at many levels — component, subsystem, system, and system-of-systems — and throughout the entire life cycle.
+Modeling serves to make concepts concrete and formal, enhance quality and productivity, and reduce the cost and risk of systems development. It occurs at many levels (component, subsystem, system, and system-of-systems) and throughout the entire life cycle.
 
 ### What is a Model?
 
@@ -37,13 +37,13 @@ A model can take physical, mathematical, or logical form:
 
 A model is expressed in a **modeling language** that has:
 
-- **Abstract syntax** — the constructs and rules for building well-formed models.
-- **Concrete syntax** — the symbols or text used to express those constructs.
-- **Semantics** — the meaning assigned to each construct.
+- **Abstract syntax**: the constructs and rules for building well-formed models.
+- **Concrete syntax**: the symbols or text used to express those constructs.
+- **Semantics**: the meaning assigned to each construct.
 
 Models are built using **modeling tools** (typically software) that provide tool palettes, syntax checking, and conformance enforcement.
 
-**Model-Based Systems Engineering (MBSE)** is "the formalized application of modeling to support system requirements, design, analysis, verification, and validation activities beginning in the conceptual design phase and continuing throughout development and later life cycle phases" (INCOSE 2007). In MBSE, models are the primary artifacts — managed, controlled, and integrated — in contrast to the traditional document-centric approach.
+**Model-Based Systems Engineering (MBSE)** is "the formalized application of modeling to support system requirements, design, analysis, verification, and validation activities beginning in the conceptual design phase and continuing throughout development and later life cycle phases" (INCOSE 2007). In MBSE, models are the primary artifacts (managed, controlled, and integrated) in contrast to the traditional document-centric approach.
 
 ### Why Model?
 
@@ -60,9 +60,9 @@ System models serve many purposes throughout the life cycle:
 
 **Indicators of an effective model:**
 
-- **Scope** — appropriate breadth (requirements coverage), depth (decomposition level), and fidelity (level of detail).
-- **Quality** — adherence to modeling guidelines (naming conventions, proper use of constructs, reuse considerations). Model quality is distinct from design quality.
-- **Metrics** — models provide data for progress assessment, effort/cost estimation, technical quality/risk assessment, and model quality assessment.
+- **Scope**: appropriate breadth (requirements coverage), depth (decomposition level), and fidelity (level of detail).
+- **Quality**: adherence to modeling guidelines (naming conventions, proper use of constructs, reuse considerations). Model quality is distinct from design quality.
+- **Metrics**: models provide data for progress assessment, effort/cost estimation, technical quality/risk assessment, and model quality assessment.
 
 ### Types of Models
 
@@ -72,10 +72,10 @@ System models serve many purposes throughout the life cycle:
 
 | Type | Sub-type | Description |
 |---|---|---|
-| **Physical** | — | Concrete, tangible representation |
-| **Abstract — Descriptive** | — | Describes logical relationships (whole-part trees, interconnections, functions, test cases) |
-| **Abstract — Analytical** | Dynamic | Time-varying state (aircraft position, velocity, fuel consumption over time) |
-| **Abstract — Analytical** | Static | Non-time-varying computations (mass properties, reliability predictions) |
+| **Physical** | N/A | Concrete, tangible representation |
+| **Abstract: Descriptive** | N/A | Describes logical relationships (whole-part trees, interconnections, functions, test cases) |
+| **Abstract: Analytical** | Dynamic | Time-varying state (aircraft position, velocity, fuel consumption over time) |
+| **Abstract: Analytical** | Static | Non-time-varying computations (mass properties, reliability predictions) |
 
 Hybrid models combine descriptive and analytical aspects.
 
@@ -83,7 +83,7 @@ Hybrid models combine descriptive and analytical aspects.
 
 **Simulation** is the method for implementing a model over time. Classifications include: stochastic/deterministic, steady-state/dynamic, continuous/discrete, local/distributed. Simulations may be live, virtual, or constructive, and can integrate real hardware/software in the loop.
 
-**Model integration** across domains requires semantic interoperability — ensuring the same construct means the same thing across models. This is achieved through model transformations, standard data exchange formats, and shared repositories.
+**Model integration** across domains requires semantic interoperability: ensuring the same construct means the same thing across models. This is achieved through model transformations, standard data exchange formats, and shared repositories.
 
 ### System Modeling Concepts
 
@@ -113,7 +113,7 @@ Standards enable cross-discipline, cross-project, and cross-organization communi
 |---|---|
 | Functional Flow Block Diagram (FFBD) | Functional modeling |
 | IDEF0 | Functional modeling |
-| Object-Process Methodology (OPM) — ISO/PAS 19450 | Holistic system modeling |
+| Object-Process Methodology (OPM): ISO/PAS 19450 | Holistic system modeling |
 | SysML (OMG) | General-purpose systems modeling |
 | UPDM (DoDAF/MODAF profile) | Architecture frameworks |
 | OWL (W3C) | Ontology / knowledge representation |
@@ -132,7 +132,7 @@ Standards enable cross-discipline, cross-project, and cross-organization communi
 
 ## Systems Approach Applied to Engineered Systems
 
-The **systems approach** is a comprehensive problem identification and resolution paradigm based on the principles, concepts, and tools of systems thinking and systems science, combined with engineering problem-solving. It incorporates a holistic view covering the larger context — engineering and operational environments, stakeholders, and the entire life cycle.
+The **systems approach** is a comprehensive problem identification and resolution paradigm based on the principles, concepts, and tools of systems thinking and systems science, combined with engineering problem-solving. It incorporates a holistic view covering the larger context: engineering and operational environments, stakeholders, and the entire life cycle.
 
 ### Overview of the Systems Approach
 
@@ -140,13 +140,13 @@ The systems approach for engineered systems examines the **"whole system, whole 
 
 **Four key themes:**
 
-1. **Whole System** — Multiple system types must be understood (Lawson's System Coupling Diagram: situation system, respondent system, system assets; Martin's "seven samurai": context, intervention, realization, deployed, collaborating, sustainment, and competing systems).
+1. **Whole System**: Multiple system types must be understood (Lawson's System Coupling Diagram: situation system, respondent system, system assets; Martin's "seven samurai": context, intervention, realization, deployed, collaborating, sustainment, and competing systems).
 
-2. **Whole Lifecycle** — Ring's Ellipse Graphic represents the continuous cycle of value-seeking system management, applicable to long-life and rapidly refreshed systems alike.
+2. **Whole Lifecycle**: Ring's Ellipse Graphic represents the continuous cycle of value-seeking system management, applicable to long-life and rapidly refreshed systems alike.
 
-3. **Whole Problem** — Problems range from "tame" to "wicked" (Rittel & Webber). Frameworks like PESTLE and STEEPLED capture the full scope. Sillitto emphasizes that some problem parts are "solved" while others must be "managed."
+3. **Whole Problem**: Problems range from "tame" to "wicked" (Rittel & Webber). Frameworks like PESTLE and STEEPLED capture the full scope. Sillitto emphasizes that some problem parts are "solved" while others must be "managed."
 
-4. **Multi-Disciplinary** — Systems thinking methods must span product, service, enterprise, and system-of-systems contexts. Traditional SE standards focus on system solution development; a full systems approach requires broader problem exploration and purpose-driven life cycle thinking.
+4. **Multi-Disciplinary**: Systems thinking methods must span product, service, enterprise, and system-of-systems contexts. Traditional SE standards focus on system solution development; a full systems approach requires broader problem exploration and purpose-driven life cycle thinking.
 
 **Hitchins' seven SE principles:**
 
@@ -160,7 +160,7 @@ The systems approach for engineered systems examines the **"whole system, whole 
 | F: Progressive Entropy Reduction | Continue to make systems work through maintenance, sustainment, and upgrades |
 | G: Adaptive Satisfying | A system succeeds only if it makes winners of its success-critical stakeholders |
 
-**Synthesis for SEBoK** — the systems approach activities:
+**Synthesis for SEBoK:** the systems approach activities:
 
 1. Identify and understand relationships between problems and opportunities
 2. Gain thorough understanding of the problem in its wider context
@@ -184,11 +184,11 @@ The single most important principle: the systems approach is applied to an **eng
 
 **System context boundaries:**
 
-- **Narrower System-of-Interest (NSoI)** — system of direct concern; scope of authority or control.
-- **Wider System-of-Interest (WSoI)** — logical boundary containing all elements needed to fully understand system behavior.
-- **Environment** — engineered, natural, and/or social systems with which the WSoI directly interacts.
-- **Wider Environment** — systems with no direct interaction but which influence life cycle decisions.
-- **Meta-system (MS)** — exists outside the WSoI and exercises direct control over it.
+- **Narrower System-of-Interest (NSoI)**: system of direct concern; scope of authority or control.
+- **Wider System-of-Interest (WSoI)**: logical boundary containing all elements needed to fully understand system behavior.
+- **Environment**: engineered, natural, and/or social systems with which the WSoI directly interacts.
+- **Wider Environment**: systems with no direct interaction but which influence life cycle decisions.
+- **Meta-system (MS)**: exists outside the WSoI and exercises direct control over it.
 
 ### Identifying and Understanding Problems
 
@@ -201,9 +201,9 @@ The first step in the systems approach is "the recognition and formulation of th
 
 **Problem classification** (Edson):
 
-- **Tame problems** — solution may be well-defined and obvious.
-- **Regular problems** — encountered regularly; solutions not obvious but tractable.
-- **Wicked problems** — cannot be fully solved or even fully defined; full effects of interventions are unknowable.
+- **Tame problems**: solution may be well-defined and obvious.
+- **Regular problems**: encountered regularly; solutions not obvious but tractable.
+- **Wicked problems**: cannot be fully solved or even fully defined; full effects of interventions are unknowable.
 
 **Key questions for problem understanding:** How difficult/well understood is the problem? Who or what is impacted? What are the various stakeholder viewpoints?
 
@@ -221,25 +221,25 @@ System synthesis produces one or more solution options based on the problem cont
 - Provide solution options that are potentially realizable within time, cost, and risk constraints.
 - Assess each candidate in its wider system context.
 
-**Essential concept: Holism** — the system must be considered as a whole; behavior derives from parts plus interactions between parts plus interactions with other systems. Emergent properties (unpredictable from elements alone) must be evaluated.
+**Essential concept: Holism**: the system must be considered as a whole; behavior derives from parts plus interactions between parts plus interactions with other systems. Emergent properties (unpredictable from elements alone) must be evaluated.
 
 **Synthesis activities:**
 
-1. **Identification of the boundary** — what is inside vs. outside the system.
-2. **Identification of functions** — what the system must do in its larger context.
-3. **Identification of elements** — physical (hardware, software, humans), conceptual (ideas, plans, hypotheses), or processes.
-4. **Division of elements** — decomposition into hierarchical layers.
-5. **Grouping of elements** — forming subsystems; the largest group is the SoI.
-6. **Identification of interactions** — interfaces between elements (both technical and managerial aspects).
+1. **Identification of the boundary**: what is inside vs. outside the system.
+2. **Identification of functions**: what the system must do in its larger context.
+3. **Identification of elements**: physical (hardware, software, humans), conceptual (ideas, plans, hypotheses), or processes.
+4. **Division of elements**: decomposition into hierarchical layers.
+5. **Grouping of elements**: forming subsystems; the largest group is the SoI.
+6. **Identification of interactions**: interfaces between elements (both technical and managerial aspects).
 
-**Top-down vs. bottom-up:** A top-down (behavioral) approach starts with system boundary and functions then decomposes. A bottom-up (structural) approach starts with major elements and builds out. Both are driven toward realizable solutions — elements that are already available, can be created from existing elements, or are described as system contexts needing future synthesis.
+**Top-down vs. bottom-up:** A top-down (behavioral) approach starts with system boundary and functions then decomposes. A bottom-up (structural) approach starts with major elements and builds out. Both are driven toward realizable solutions: elements that are already available, can be created from existing elements, or are described as system contexts needing future synthesis.
 
 ### Analysis and Selection
 
 System analysis evaluates solution artifacts against assessment criteria derived from the problem context:
 
-- **Effectiveness analysis** — performance against primary and enabling functions; includes generic non-functional qualities (safety, security, reliability, maintainability for products; agility, resilience, flexibility for services/enterprises).
-- **Trade-off studies** — comparing characteristics of each candidate to determine the best global balance. Variables: cost, technical risk, effectiveness.
+- **Effectiveness analysis**: performance against primary and enabling functions; includes generic non-functional qualities (safety, security, reliability, maintainability for products; agility, resilience, flexibility for services/enterprises).
+- **Trade-off studies**: comparing characteristics of each candidate to determine the best global balance. Variables: cost, technical risk, effectiveness.
 
 **Trade-off study components:**
 
@@ -262,21 +262,21 @@ System analysis evaluates solution artifacts against assessment criteria derived
 
 ### Implementing and Proving
 
-**Verification** — determination that each system element meets documented specification requirements. Performed at each level of the system hierarchy.
+**Verification**: determination that each system element meets documented specification requirements. Performed at each level of the system hierarchy.
 
-**Validation** — determination that the entire system meets stakeholder needs. Occurs only at the top level of the system hierarchy.
+**Validation**: determination that the entire system meets stakeholder needs. Occurs only at the top level of the system hierarchy.
 
 In the systems approach, proving is the abstract level of providing evidence. In SE practice, it involves quantitative evidence from tests, demonstrations, and other methods.
 
 ### Deploying, Using, and Sustaining
 
-A systems approach considers the total system and total life cycle. Creation of the system is rarely what solves the problem — it is the *use* of the system solution.
+A systems approach considers the total system and total life cycle. Creation of the system is rarely what solves the problem. It is the *use* of the system solution.
 
 **Deployment (Transition):** Transferring custody from development to operations. Two parts: (1) ensuring interoperability with surrounding systems, (2) ensuring safety and critical operational properties. Transition of service systems is often two-stage: infrastructure acceptance then per-realization acceptance.
 
 **Use (Operation):** System effectiveness is considered throughout operational life. Emergent behavior must be addressed in three ways: planned-for during realization, mechanisms for handling unexpected emergence during use, and procedures for wider-system consequences.
 
-**Sustainment (Maintenance):** Handles entropy — maintaining the SoI in a viable state through resource management (acquisition, storage, distribution, conversion, disposal) and viability management (homeostasis, resilience, adaptability).
+**Sustainment (Maintenance):** Handles entropy, maintaining the SoI in a viable state through resource management (acquisition, storage, distribution, conversion, disposal) and viability management (homeostasis, resilience, adaptability).
 
 **Disposal:** Removal of system elements from the operational environment with permanent termination of use, including handling of hazardous/toxic materials and waste products. Requires its own enabling systems and must be considered from early in the life cycle.
 
@@ -284,7 +284,7 @@ A systems approach considers the total system and total life cycle. Creation of 
 
 The systems approach is applied dynamically through three key principles:
 
-**Concurrency** — Activities of problem identification, solution synthesis, analysis/selection, implementation/proving, and deployment/sustainment/use are applied concurrently, reflecting their interrelationships. The "hump diagram" shows activity intensities varying across life cycle stages.
+**Concurrency**: Activities of problem identification, solution synthesis, analysis/selection, implementation/proving, and deployment/sustainment/use are applied concurrently, reflecting their interrelationships. The "hump diagram" shows activity intensities varying across life cycle stages.
 
 Six questions cycle around the value cycle:
 1. What values do stakeholders want/need?
@@ -294,7 +294,7 @@ Six questions cycle around the value cycle:
 5. How do we deploy and use the system to achieve the outcomes?
 6. Do these outcomes provide the expected improvement in value?
 
-**Iteration** — The approach is applied iteratively to move toward an acceptable solution. Three iteration types:
+**Iteration**: The approach is applied iteratively to move toward an acceptable solution. Three iteration types:
 
 | Type | Description |
 |---|---|
@@ -302,16 +302,16 @@ Six questions cycle around the value cycle:
 | Incremental | Successive versions; each increment adds functionality/effectiveness |
 | Evolutionary | Series of applications for alternative solutions; each cycle provides learning for the next |
 
-**Recursion** — The systems approach for one SoI is nested inside another. Examples: trades at one level require trades at a lower level; analysis of a system requires analysis of a system element; synthesis of a solution requires sub-system elements. At some level the approach completes and "rolls up" to allow higher levels to progress.
+**Recursion**: The systems approach for one SoI is nested inside another. Examples: trades at one level require trades at a lower level; analysis of a system requires analysis of a system element; synthesis of a solution requires sub-system elements. At some level the approach completes and "rolls up" to allow higher levels to progress.
 
 **Stakeholder responsibilities in different contexts:**
 
 | Role | Product Context | Service Context | Enterprise Context |
 |---|---|---|---|
 | Acquirer | Procures product from supplier | Procures service system | May be internal or external |
-| Supplier | Delivers product; may offer support services | Delivers service system; may use products not owned by enterprise | — |
-| Operator | Uses knowledge/skills/procedures to operate the system | — | — |
-| User/Customer | Benefits from operation | Co-creates value at time of service request | — |
+| Supplier | Delivers product; may offer support services | Delivers service system; may use products not owned by enterprise | N/A |
+| Operator | Uses knowledge/skills/procedures to operate the system | N/A | N/A |
+| User/Customer | Benefits from operation | Co-creates value at time of service request | N/A |
 
 ---
 
@@ -319,7 +319,7 @@ Six questions cycle around the value cycle:
 
 - [[SEBoK v2 - Overview]]: Structure and scope of the SEBoK
 - [[01_Systems_Engineering_Fundamentals]]: Systems thinking, systems science, and the nature of systems that underpin both modeling and the systems approach
-- [[05_Life_Cycles_and_Processes]]: Part 3 of the SEBoK — how the systems approach activities map to formal SE technical and management processes
+- [[05_Life_Cycles_and_Processes]]: Part 3 of the SEBoK: how the systems approach activities map to formal SE technical and management processes
 - [[SWEBOK v4 - Overview]]: Software Engineering Body of Knowledge; related modeling and engineering process concepts
 
 ---

@@ -163,7 +163,7 @@ Integration Platform-as-a-Service: systems integration delivered as a cloud serv
 
 ### 1.8 Data Exchange Standards
 
-Formal rules for the structure of data elements (e.g., ISO standards, industry-specific standards). An exchange pattern defines a structure for data transformations. Example: **National Information Exchange Model (NIEM)** — developed for document and transaction exchange across US government organizations using XML.
+Formal rules for the structure of data elements (e.g., ISO standards, industry-specific standards). An exchange pattern defines a structure for data transformations. Example: **National Information Exchange Model (NIEM)**, developed for document and transaction exchange across US government organizations using XML.
 
 ---
 
@@ -299,7 +299,7 @@ Key techniques for designing DII solutions:
 - Focus on implementing solutions where **none or limited integration** currently exists, rather than replacing working solutions
 - Data projects (data warehouse, MDM hub) can justify a focused DII solution; additional uses add value to the investment
 - Sponsor enterprise DII programs from a level with sufficient authority over solution design and technology purchase
-- Retain focus on **business goals and requirements** — include business/application-oriented participants, not just tool experts
+- Retain focus on **business goals and requirements**. Include business/application-oriented participants, not just tool experts
 
 ### 5.2 Organization and Cultural Change
 - Determine centralized vs. decentralized responsibility for managing DII implementations
@@ -348,17 +348,17 @@ Prior to developing interfaces, develop a **data sharing agreement** or **memora
 ## 7. Dependencies on Other Knowledge Areas
 
 DII depends on:
-- ****Data Governance**** — Governing transformation rules and message structures
-- ****Data Architecture**** — Designing solutions
-- ****Data Security**** — Ensuring solutions protect data security (persistent, virtual, or in motion)
-- ****Metadata Management**** — Tracking technical inventory, business meaning, transformation rules, operational history, and lineage
-- ****Data Storage and Operations**** — Managing physical instantiation of solutions
-- ****Data Modeling and Design**** — Designing data structures (persistent, virtual, and message structures)
+- ****Data Governance****: Governing transformation rules and message structures
+- ****Data Architecture****: Designing solutions
+- ****Data Security****: Ensuring solutions protect data security (persistent, virtual, or in motion)
+- ****Metadata Management****: Tracking technical inventory, business meaning, transformation rules, operational history, and lineage
+- ****Data Storage and Operations****: Managing physical instantiation of solutions
+- ****Data Modeling and Design****: Designing data structures (persistent, virtual, and message structures)
 
 DII is critical to:
-- ****Data Warehousing and Business Intelligence**** — Transforming and integrating data from source systems to consolidated hubs
-- ****Reference and Master Data**** — Integrating data from sources to hubs and from hubs to target systems
-- **Big Data Management** — Integrating structured, unstructured, audio, video, and streaming data for mining and predictive models
+- ****Data Warehousing and Business Intelligence****: Transforming and integrating data from source systems to consolidated hubs
+- ****Reference and Master Data****: Integrating data from sources to hubs and from hubs to target systems
+- **Big Data Management**: Integrating structured, unstructured, audio, video, and streaming data for mining and predictive models
 
 ---
 
@@ -369,7 +369,7 @@ DII is critical to:
 | **ETL/ELT** | Core process: Extract → Transform → Load (or Extract → Load → Transform for Big Data) |
 | **Latency Spectrum** | From batch (high latency) to streaming (ultra-low latency), choose based on business requirements |
 | **Interaction Models** | Hub-and-spoke preferred over point-to-point for enterprise scale; publish-subscribe for event-driven |
-| **Loose Coupling** | Preferred architectural approach — SOA, ESB, asynchronous messaging |
+| **Loose Coupling** | Preferred architectural approach: SOA, ESB, asynchronous messaging |
 | **Canonical Model** | Common message format reduces transformation complexity across many systems |
 | **Business-Driven** | Rules, mappings, and transformations must be owned by business stakeholders |
 | **Metadata Foundation** | All DII activities depend on and produce Metadata that must be managed |

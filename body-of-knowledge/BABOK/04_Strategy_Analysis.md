@@ -4,11 +4,11 @@ tags: [strategy, analysis, business-analysis, babok]
 
 # Strategy Analysis
 
-> *Source: BABOK® Guide v3 by IIBA, Chapter 5 — Strategy Analysis*
+> *Source: BABOK® Guide v3 by IIBA, Chapter 5: Strategy Analysis*
 
 ## Purpose
 
-Strategy Analysis defines the most effective way to apply the capabilities of an enterprise to reach a desired set of goals and objectives. Strategies may span the entire enterprise, a division, department, or region, and may involve changes to any aspect of the enterprise: organizational structure, culture, business processes, technology, infrastructure, or policies. When the outcome is predictable, a clear strategy can be planned out. When unpredictable, the strategy focuses more on mitigating risk, testing assumptions, and changing course until success is achieved — or until the initiative ends.
+Strategy Analysis defines the most effective way to apply the capabilities of an enterprise to reach a desired set of goals and objectives. Strategies may span the entire enterprise, a division, department, or region, and may involve changes to any aspect of the enterprise: organizational structure, culture, business processes, technology, infrastructure, or policies. When the outcome is predictable, a clear strategy can be planned out. When unpredictable, the strategy focuses more on mitigating risk, testing assumptions, and changing course until success is achieved, or until the initiative ends.
 
 The Strategy Analysis knowledge area includes four tasks:
 
@@ -31,7 +31,7 @@ Understand the reasons why an enterprise needs to change some aspect of how it o
 ### Description
 Change is triggered by problems or opportunities that cannot be addressed without altering the current state. Business analysts help stakeholders enable change by exploring and articulating the business needs that drive the desire to change. The current state is explored in just enough detail to validate the need for a change and/or the change strategy.
 
-The scope of the current state describes the important existing characteristics of the environment, bounded by the components of the enterprise and its environment as they relate to the needs. The current state can be described at different levels — from the entire enterprise to small components of a solution. It is rarely static while a change is being developed; internal and external influencers, as well as other organizational changes, can force alterations in the desired future state or change strategy.
+The scope of the current state describes the important existing characteristics of the environment, bounded by the components of the enterprise and its environment as they relate to the needs. The current state can be described at different levels: from the entire enterprise to small components of a solution. It is rarely static while a change is being developed; internal and external influencers, as well as other organizational changes, can force alterations in the desired future state or change strategy.
 
 ### Inputs
 - **Elicitation Results**: define and understand the current state
@@ -165,7 +165,7 @@ Defines which kinds of options will be considered when investigating possible so
 Aspects of the current state, planned future state that may not be changed, or mandatory design elements. May reflect: budgetary restrictions, time restrictions, technology, infrastructure, policies, resource limits, skill restrictions, stakeholder non-impact requirements, regulatory compliance, or any other restriction. Must be carefully examined for accuracy and justification.
 
 #### .4–.9 Organizational Structure & Culture, Capabilities & Processes, Technology & Infrastructure, Policies, Business Architecture, Internal Assets
-Describes the desired state of each component — what needs to change, what new resources or capabilities are needed, what technical constraints exist, how policies may open or restrict options, and how all elements must effectively support one another and contribute to meeting business goals.
+Describes the desired state of each component: what needs to change, what new resources or capabilities are needed, what technical constraints exist, how policies may open or restrict options, and how all elements must effectively support one another and contribute to meeting business goals.
 
 #### .10 Identify Assumptions
 Most strategies are predicated on assumptions that determine whether the strategy can succeed, particularly in uncertain environments. Assumptions must be identified and clearly understood so appropriate decisions can be made if they later prove invalid. Change strategies can be structured to test assumptions as early as possible.
@@ -223,7 +223,7 @@ When assessing risk, there will be uncertainty in likelihood and impact. Busines
 These can be analyzed for risks and sometimes should be managed as risks themselves. If related to an aspect of a change, they can be restated as a risk by identifying the event or condition and consequences that could occur.
 
 #### .3 Negative Impact to Value
-Risks are expressed as conditions that increase the likelihood or severity of a negative impact to value. Business analysts clearly identify and express each risk and estimate its likelihood and impact to determine the level of risk. A total risk level can be estimated from the aggregated set of risks — in some cases quantified in financial terms, time, effort, or other measures.
+Risks are expressed as conditions that increase the likelihood or severity of a negative impact to value. Business analysts clearly identify and express each risk and estimate its likelihood and impact to determine the level of risk. A total risk level can be estimated from the aggregated set of risks, in some cases quantified in financial terms, time, effort, or other measures.
 
 #### .4 Risk Tolerance
 How much uncertainty a stakeholder or enterprise is willing to take on in exchange for potential value:
@@ -296,7 +296,7 @@ Can be described in terms of: capabilities, technology, business rules, business
 #### .2 Gap Analysis
 Identifies the difference between current state and future state capabilities. Using the same techniques to describe both states simplifies the comparison. Capabilities analyzed can include: processes, functions, lines of business, organizational structures, locations, data and information, staff competencies, knowledge and skills, training, facilities, application systems, and technology infrastructure.
 
-Gap analysis can determine if the enterprise can meet its needs using its existing structure, resources, capabilities, and technology. If yes, the change will likely be small — or there may be no change at all.
+Gap analysis can determine if the enterprise can meet its needs using its existing structure, resources, capabilities, and technology. If yes, the change will likely be small, or there may be no change at all.
 
 #### .3 Enterprise Readiness Assessment
 Analyzes the enterprise to assess its capacity to:
@@ -354,7 +354,7 @@ Customer, Domain Subject Matter Expert, End User, Implementation Subject Matter 
 
 ## Related Chapters
 
-- [[05_Requirements_Analysis_and_Design]]: Strategy Analysis outputs — especially Business Requirements, Business Objectives, and Solution Scope — feed directly into Requirements Analysis and Design Definition tasks
+- [[05_Requirements_Analysis_and_Design]]: Strategy Analysis outputs (especially Business Requirements, Business Objectives, and Solution Scope) feed directly into Requirements Analysis and Design Definition tasks
 - [[05_Requirements_Analysis_and_Design]]: Follows Strategy Analysis in the business analysis value spectrum; strategic outputs become inputs to specifying, modelling, and validating requirements
 - [[06_Solution_Evaluation]]: Measures actual performance against the business objectives and potential value defined during Strategy Analysis
 - [[01_BA_Planning_and_Monitoring]]: Business Analysis Approach (defined in planning) guides how all Strategy Analysis tasks are performed

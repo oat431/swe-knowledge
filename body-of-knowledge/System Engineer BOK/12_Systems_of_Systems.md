@@ -2,9 +2,9 @@
 tags: [sos, systems-of-systems, applications, systems-engineering, sebok]
 ---
 
-# 12 — Systems of Systems (SoS)
+# 12: Systems of Systems (SoS)
 
-> *Source: SEBoK v2, Part 4 — Systems of Systems*
+> *Source: SEBoK v2, Part 4: Systems of Systems*
 
 ## Purpose
 
@@ -14,19 +14,19 @@ A System of Systems (SoS) is a collection of independent systems that are integr
 
 SoS architecting differs from traditional system architecting because constituent systems are independently owned, managed, and operated. Key approaches include:
 
-- **Directed SoS** — A central authority designs and manages the SoS. Constituent systems operate independently but conform to SoS-level direction.
-- **Acknowledged SoS** — Constituent systems voluntarily collaborate with recognized objectives, a designated manager, and resources, while maintaining independent ownership.
-- **Collaborative SoS** — Constituent systems voluntarily agree to work together toward common goals without a central authority.
-- **Virtual SoS** — No central management or agreed-upon objectives; emergent behavior arises from constituent system interactions.
+- **Directed SoS**: A central authority designs and manages the SoS. Constituent systems operate independently but conform to SoS-level direction.
+- **Acknowledged SoS**: Constituent systems voluntarily collaborate with recognized objectives, a designated manager, and resources, while maintaining independent ownership.
+- **Collaborative SoS**: Constituent systems voluntarily agree to work together toward common goals without a central authority.
+- **Virtual SoS**: No central management or agreed-upon objectives; emergent behavior arises from constituent system interactions.
 
 ## Systems Engineering for SoS
 
 SE for SoS extends traditional SE practices to account for:
 
-- **Independence of constituents** — Each system has its own stakeholders, funding, life cycle, and evolution path
-- **Emergent behavior** — Capabilities and risks arise from interactions that cannot be predicted from individual system analysis alone
-- **Evolutionary development** — SoS capabilities evolve incrementally as constituent systems are added, upgraded, or retired
-- **Governance across organizational boundaries** — Requires negotiation, standards, and interfaces rather than direct control
+- **Independence of constituents**: Each system has its own stakeholders, funding, life cycle, and evolution path
+- **Emergent behavior**: Capabilities and risks arise from interactions that cannot be predicted from individual system analysis alone
+- **Evolutionary development**: SoS capabilities evolve incrementally as constituent systems are added, upgraded, or retired
+- **Governance across organizational boundaries**: Requires negotiation, standards, and interfaces rather than direct control
 
 ## SoS Analytic Approaches
 
@@ -39,7 +39,7 @@ Analysis of SoS requires methods that handle scale, heterogeneity, and emergent 
 
 ## SoS and Complexity
 
-SoS exemplifies complex systems behavior: non-linear interactions, adaptation, self-organization, and emergence. Understanding complexity is essential for effective SoS engineering — traditional reductionist approaches that work for individual systems may fail to capture SoS-level behavior.
+SoS exemplifies complex systems behavior: non-linear interactions, adaptation, self-organization, and emergence. Understanding complexity is essential for effective SoS engineering. Traditional reductionist approaches that work for individual systems may fail to capture SoS-level behavior.
 
 ## Socio-Technical Features of SoS
 
@@ -59,7 +59,7 @@ Mission engineering extends capability engineering by focusing on specific missi
 
 ## Related Chapters
 
-- [[11_Enterprise_Systems_Engineering]] — Enterprise SE shares many SoS challenges at the organizational level
-- [[07_System_Definition_and_Architecture]] — Architecture methods applicable to SoS
-- [[04_Systems_Models_and_Approach]] — The systems approach applied to complex engineered systems
-- [[03_Systems_Science_and_Thinking]] — Complexity theory and emergence
+- [[11_Enterprise_Systems_Engineering]]: Enterprise SE shares many SoS challenges at the organizational level
+- [[07_System_Definition_and_Architecture]]: Architecture methods applicable to SoS
+- [[04_Systems_Models_and_Approach]]: The systems approach applied to complex engineered systems
+- [[03_Systems_Science_and_Thinking]]: Complexity theory and emergence

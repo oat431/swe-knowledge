@@ -2,9 +2,9 @@
 tags: [inputs-outputs, reference, project-management, pmbok]
 ---
 
-# 12 — Inputs and Outputs
+# 12: Inputs and Outputs
 
-> *Source: PMBOK® Guide — Eighth Edition by PMI, §4 Inputs and Outputs (pp. 113–144)*
+> *Source: PMBOK® Guide: Eighth Edition by PMI, §4 Inputs and Outputs (pp. 113–144)*
 
 ## Purpose
 
@@ -19,7 +19,7 @@ Multiple attributes associated with each schedule activity (ID, WBS ID, labels, 
 A documented tabulation of schedule activities showing activity description, identifier, and scope of work description. **Processes:** Develop Schedule (I), Monitor and Control Schedule (I).
 
 ### Agreements
-Any document or communication defining initial intentions of a project — contracts, SLAs, MOUs, letters of agreement, purchase orders, emails. **Processes:** Plan Sourcing Strategy (O), Acquire Resources (I).
+Any document or communication defining initial intentions of a project: contracts, SLAs, MOUs, letters of agreement, purchase orders, emails. **Processes:** Plan Sourcing Strategy (O), Acquire Resources (I).
 
 ### Approved Change Requests
 Change requests processed through the change management plan and approved, deferred, or rejected. Implemented via Manage Project Execution. **Processes:** Assess and Implement Changes (O), Manage Project Execution (I).
@@ -34,7 +34,7 @@ A project document recording all assumptions and constraints throughout the proj
 An ordered list of work to be done (often user stories), prioritized to manage adaptive/agile project work. Types: product backlog, iteration backlog, release backlog. **Processes:** Plan Scope Management (O), Develop Scope Structure (O).
 
 ### Basis of Estimates
-Supporting documentation detailing how estimates were derived — assumptions, constraints, confidence levels, and data sources. **Processes:** Estimate Costs (O), Estimate Resources (O), Develop Schedule (O).
+Supporting documentation detailing how estimates were derived: assumptions, constraints, confidence levels, and data sources. **Processes:** Estimate Costs (O), Estimate Resources (O), Develop Schedule (O).
 
 ### Benefits Management Plan
 Documents the planned benefits of the project and how they will be measured and sustained. **Processes:** Initiate Project or Phase (O).
@@ -88,7 +88,7 @@ Describes how project costs will be planned, structured, estimated, budgeted, an
 Requests for funding to support the project budget. **Processes:** Develop Budget (O).
 
 ### Funding Strategy
-The approach for securing project funding — internal allocation, external investment, grants, loans. **Processes:** Plan Financial Management (O).
+The approach for securing project funding: internal allocation, external investment, grants, loans. **Processes:** Plan Financial Management (O).
 
 ### Issue Log
 A project document recording all issues, their status, assigned owners, and resolution. **Processes:** Manage Project Execution (O), Monitor and Control Project Performance (I).
@@ -97,7 +97,7 @@ A project document recording all issues, their status, assigned owners, and reso
 A repository of knowledge gained during the project, used to improve future performance. **Processes:** Manage Project Knowledge (O), various processes (I).
 
 ### Milestone List
-A list of significant points or events in the project with zero duration — used for tracking major deliverables. **Processes:** Develop Schedule (O).
+A list of significant points or events in the project with zero duration: used for tracking major deliverables. **Processes:** Develop Schedule (O).
 
 ### Organizational Process Asset Updates
 Changes to OPAs identified during the project. **Processes:** Various processes (O).
@@ -106,7 +106,7 @@ Changes to OPAs identified during the project. **Processes:** Various processes 
 Documentation of which physical or virtual resources are assigned to which activities. **Processes:** Acquire Resources (O).
 
 ### Procurement Documentation
-All documents used in procurement — RFPs, bids, contracts, statements of work. **Processes:** Plan Sourcing Strategy (O).
+All documents used in procurement: RFPs, bids, contracts, statements of work. **Processes:** Plan Sourcing Strategy (O).
 
 ### Procurement Management Plan
 Describes how procurement processes will be managed from sourcing strategy through contract closure. **Processes:** Plan Sourcing Strategy (O).
@@ -118,7 +118,7 @@ Calendars identifying working days, shifts, and nonworking periods for project a
 A document formally authorizing the project and providing the project manager authority to apply resources. **Processes:** Initiate Project or Phase (O).
 
 ### Project Communications
-All communications artifacts produced during the project — presentations, reports, emails, meeting minutes. **Processes:** Manage Communications (O).
+All communications artifacts produced during the project: presentations, reports, emails, meeting minutes. **Processes:** Manage Communications (O).
 
 ### Project Document Updates
 Changes to any project document resulting from process execution. **Processes:** Most processes (O).
@@ -130,7 +130,7 @@ Total funding requirements and periodic funding needs derived from the cost base
 The document describing how the project will be executed, monitored, controlled, and closed. Consolidates all subsidiary management plans. **Processes:** Integrate and Align Project Plans (O), most processes (I).
 
 ### Project Schedule
-The output of schedule development — presents linked activities with planned dates, durations, milestones, and resources. **Processes:** Develop Schedule (O), Monitor and Control Schedule (I).
+The output of schedule development: presents linked activities with planned dates, durations, milestones, and resources. **Processes:** Develop Schedule (O), Monitor and Control Schedule (I).
 
 ### Project Schedule Network Diagram
 A graphical representation of logical relationships among project schedule activities. **Processes:** Develop Schedule (O).
@@ -145,7 +145,7 @@ Documentation of which team members are assigned to which roles and activities. 
 Results of quality control activities used to analyze and evaluate quality. **Processes:** Manage Quality Assurance (I).
 
 ### Quality Management Plan
-Describes how quality policies will be implemented — quality standards, objectives, roles, and responsibilities. **Processes:** Integrate and Align Project Plans (O).
+Describes how quality policies will be implemented: quality standards, objectives, roles, and responsibilities. **Processes:** Integrate and Align Project Plans (O).
 
 ### Quality Metrics
 Specific measurements used to assess whether deliverables meet quality requirements. **Processes:** Manage Quality Assurance (O).
@@ -193,7 +193,7 @@ Summarizes individual and overall project risks for senior management review. **
 The approved version of the schedule model, used as a basis for comparison to actual results. **Processes:** Develop Schedule (O), Monitor and Control Schedule (I).
 
 ### Schedule Data
-The collection of information supporting the schedule — activity attributes, assumptions, constraints. **Processes:** Develop Schedule (O).
+The collection of information supporting the schedule: activity attributes, assumptions, constraints. **Processes:** Develop Schedule (O).
 
 ### Schedule Forecasts
 Predictions of future schedule conditions based on performance to date. **Processes:** Monitor and Control Schedule (O).
@@ -202,7 +202,7 @@ Predictions of future schedule conditions based on performance to date. **Proces
 Describes how the schedule will be developed, monitored, and controlled. **Processes:** Plan Schedule Management (O).
 
 ### Scope Baseline
-The approved version of the scope statement, WBS, and WBS dictionary — used for comparison. **Processes:** Develop Scope Structure (O), Monitor and Control Scope (I).
+The approved version of the scope statement, WBS, and WBS dictionary: used for comparison. **Processes:** Develop Scope Structure (O), Monitor and Control Scope (I).
 
 ### Scope Management Plan
 Describes how scope will be defined, developed, monitored, controlled, and validated. **Processes:** Plan Scope Management (O).
@@ -211,7 +211,7 @@ Describes how scope will be defined, developed, monitored, controlled, and valid
 A mapping of team members' skills, competencies, and experience levels against project needs. **Processes:** Estimate Resources (I), Acquire Resources (I).
 
 ### Sourcing Strategy Plan
-Documents the approach for acquiring goods and services — make-or-buy decisions, contract types, supplier selection. **Processes:** Plan Sourcing Strategy (O).
+Documents the approach for acquiring goods and services: make-or-buy decisions, contract types, supplier selection. **Processes:** Plan Sourcing Strategy (O).
 
 ### Stakeholder Engagement Plan
 Describes strategies and actions to engage stakeholders based on their needs, interests, and impact. **Processes:** Plan Stakeholder Engagement (O).
@@ -220,13 +220,13 @@ Describes strategies and actions to engage stakeholders based on their needs, in
 A repository of identified stakeholders with their assessment information, classification, and engagement needs. **Processes:** Identify Stakeholders (O).
 
 ### Status Report
-A periodic summary of project status — progress against baselines, achievements, issues, risks. **Processes:** Monitor and Control Project Performance (O).
+A periodic summary of project status: progress against baselines, achievements, issues, risks. **Processes:** Monitor and Control Project Performance (O).
 
 ### Team Charter
 Documents team values, agreements, operating guidelines, and behavioral expectations. **Processes:** Plan Resource Management (O).
 
 ### Team Performance Assessments
-Evaluations of team performance against goals — skill improvements, turnover, team cohesion. **Processes:** Lead the Team (O).
+Evaluations of team performance against goals: skill improvements, turnover, team cohesion. **Processes:** Lead the Team (O).
 
 ### User Stories
 Brief descriptions of a feature from an end-user perspective, capturing the who, what, and why. **Processes:** Elicit and Analyze Requirements (O).
@@ -238,10 +238,10 @@ Deliverables that have been completed and checked for correctness through qualit
 Raw observations and measurements identified during activities performed to carry out project work. **Processes:** Manage Project Execution (O), various monitoring processes (I).
 
 ### Work Performance Information
-Performance data integrated and analyzed in context — provides status against baselines. **Processes:** Various monitoring and controlling processes (O).
+Performance data integrated and analyzed in context: provides status against baselines. **Processes:** Various monitoring and controlling processes (O).
 
 ### Work Performance Reports
-Physical or electronic representations of work performance information — status reports, dashboards, memos. **Processes:** Monitor and Control Project Performance (O).
+Physical or electronic representations of work performance information: status reports, dashboards, memos. **Processes:** Monitor and Control Project Performance (O).
 
 ---
 
@@ -259,7 +259,7 @@ Physical or electronic representations of work performance information — statu
 
 ## Related Chapters
 
-- [[04_Governance_Performance_Domain]] — Processes that produce/consume governance-related I/Os
-- [[05_Scope_Performance_Domain]] — Scope-related inputs and outputs in context
-- [[13_Tools_and_Techniques]] — Tools used to transform inputs into outputs
-- [[11_Tailoring]] — Tailoring which I/Os are needed for your project context
+- [[04_Governance_Performance_Domain]]: Processes that produce/consume governance-related I/Os
+- [[05_Scope_Performance_Domain]]: Scope-related inputs and outputs in context
+- [[13_Tools_and_Techniques]]: Tools used to transform inputs into outputs
+- [[11_Tailoring]]: Tailoring which I/Os are needed for your project context

@@ -2,9 +2,9 @@
 tags: [procurement, appendix, project-management, pmbok]
 ---
 
-# Appendix A3 — Procurement
+# Appendix A3: Procurement
 
-> *Source: PMBOK® Guide — Eighth Edition by PMI, Appendix X4 — Procurement (pp. 245–254)*
+> *Source: PMBOK® Guide: Eighth Edition by PMI, Appendix X4: Procurement (pp. 245–254)*
 
 ## Purpose
 
@@ -32,7 +32,7 @@ The procurement lifecycle has three stages:
 - Manage procurement relationships and monitor contract performance
 - Make necessary changes and corrections
 - Address issues/discrepancies promptly
-- Close out contracts — ensure all obligations fulfilled, no outstanding issues
+- Close out contracts: ensure all obligations fulfilled, no outstanding issues
 
 ## Make-or-Buy Analysis
 
@@ -96,11 +96,11 @@ Capability and capacity · Product and life cycle cost · Delivery dates · Regu
 | **Target-Cost** | Target cost with savings/overrun sharing | Encourages cost control; needs clear sharing mechanisms | Efficiency incentives; partial overrun risk |
 
 ### Emerging Trends
-- **Agile Contracting** — Flexibility, iterative delivery, continuous collaboration
-- **Smart Contracts** — Blockchain integration, automated execution, milestone-based payments
-- **Outcome-Based Contracts** — Shift from input-based pricing to measurable results
-- **Sustainable Contracting** — ESG principles embedded in contractual agreements
-- **Collaborative Contracting** — Enhanced risk/reward sharing, joint problem-solving
+- **Agile Contracting**: Flexibility, iterative delivery, continuous collaboration
+- **Smart Contracts**: Blockchain integration, automated execution, milestone-based payments
+- **Outcome-Based Contracts**: Shift from input-based pricing to measurable results
+- **Sustainable Contracting**: ESG principles embedded in contractual agreements
+- **Collaborative Contracting**: Enhanced risk/reward sharing, joint problem-solving
 
 ## Claims Administration
 
@@ -113,7 +113,7 @@ Disputes can cost 0.5%–5% of total contract value. Key ADR methods:
 | **Arbitration** | Formal process; arbitrator/panel makes binding decision |
 | **Dispute Review Boards** | Panel of neutral experts appointed at project start |
 | **Expert Determination** | Independent expert decides on specific technical/financial issue |
-| **Litigation** | Last resort — dispute referred to court |
+| **Litigation** | Last resort: dispute referred to court |
 
 ### Relevance to Project Managers
 - Understand contract terms thoroughly to identify potential disputes
@@ -126,7 +126,7 @@ Disputes can cost 0.5%–5% of total contract value. Key ADR methods:
 
 ## Related Chapters
 
-- [[04_Governance_Performance_Domain]] — Plan Sourcing Strategy process
-- [[07_Finance_Performance_Domain]] — Cost estimation and budgeting for procurement
-- [[10_Risk_Performance_Domain]] — Procurement risk management
-- [[13_Tools_and_Techniques]] — Make-or-buy analysis, source selection techniques
+- [[04_Governance_Performance_Domain]]: Plan Sourcing Strategy process
+- [[07_Finance_Performance_Domain]]: Cost estimation and budgeting for procurement
+- [[10_Risk_Performance_Domain]]: Procurement risk management
+- [[13_Tools_and_Techniques]]: Make-or-buy analysis, source selection techniques

@@ -8,7 +8,7 @@ tags:
 
 # Requirements Life Cycle Management
 
-> *Source: BABOK® Guide v3 by IIBA, Chapter 4 — Requirements Life Cycle Management*
+> *Source: BABOK® Guide v3 by IIBA, Chapter 4: Requirements Life Cycle Management*
 
 ## Purpose
 
@@ -22,7 +22,7 @@ The BACCM™ (Business Analysis Core Concept Model™) frames this knowledge are
 Ensure that requirements and designs at different levels are aligned to one another, and manage the effects of change to one level on related requirements.
 
 ### Description
-Requirements traceability identifies and documents the lineage of each requirement — backward traceability (to higher-level needs), forward traceability (to design, build, test), and relationships to other requirements. Traceability helps ensure solution conformance and assists in scope, change, risk, time, cost, and communication management. It detects missing functionality and identifies implemented functionality unsupported by any requirement.
+Requirements traceability identifies and documents the lineage of each requirement: backward traceability (to higher-level needs), forward traceability (to design, build, test), and relationships to other requirements. Traceability helps ensure solution conformance and assists in scope, change, risk, time, cost, and communication management. It detects missing functionality and identifies implemented functionality unsupported by any requirement.
 
 Traceability enables faster impact analysis, more reliable discovery of inconsistencies and gaps, deeper insights into scope and complexity of change, and reliable assessment of which requirements have been addressed. The business analyst balances the number of relationship types maintained against the benefit gained.
 
@@ -113,7 +113,7 @@ Requirements representing ongoing needs must be maintained to remain valid over 
 Rank requirements in the order of relative importance.
 
 ### Description
-Prioritization determines the relative importance of requirements to stakeholders. Priority can refer to relative value or to the sequence of implementation. It is an ongoing process — priorities change as the context changes. Inter-dependencies between requirements are identified and used as a basis for prioritization. Prioritization is critical to ensure maximum value is achieved.
+Prioritization determines the relative importance of requirements to stakeholders. Priority can refer to relative value or to the sequence of implementation. It is an ongoing process. Priorities change as the context changes. Inter-dependencies between requirements are identified and used as a basis for prioritization. Prioritization is critical to ensure maximum value is achieved.
 
 ### Inputs
 - **Requirements**: Any requirements in text, matrices, or diagrams ready to prioritize.
@@ -171,7 +171,7 @@ Prioritization determines the relative importance of requirements to stakeholder
 Evaluate the implications of proposed changes to requirements and designs.
 
 ### Description
-Performed as new needs or possible solutions are identified — which may or may not align with the change strategy or solution scope. Assessment determines whether a proposed change will increase solution value and what action should be taken. Business analysts assess the potential effect on solution value, whether changes introduce conflicts with other requirements or increase risk, and ensure each proposed change traces back to a need.
+Performed as new needs or possible solutions are identified, which may or may not align with the change strategy or solution scope. Assessment determines whether a proposed change will increase solution value and what action should be taken. Business analysts assess the potential effect on solution value, whether changes introduce conflicts with other requirements or increase risk, and ensure each proposed change traces back to a need.
 
 When assessing changes, business analysts consider if each proposed change: aligns with overall strategy, affects value delivered, impacts time/resources to deliver, and alters risks, opportunities, or constraints.
 

@@ -5,9 +5,9 @@ tags:
 - babok
 ---
 
-# 06 — Solution Evaluation
+# 06: Solution Evaluation
 
-> *Source: BABOK® Guide v3 by IIBA, Chapter 7 — Solution Evaluation*
+> *Source: BABOK® Guide v3 by IIBA, Chapter 7: Solution Evaluation*
 
 ## Purpose
 
@@ -56,17 +56,17 @@ Performance may be assessed through **key performance indicators (KPIs)** aligne
 ### Inputs
 
 - **Business Objectives**: measurable results the enterprise wants to achieve; provides a benchmark against which solution performance can be assessed.
-- **Implemented Solution (external)**: a solution (or component) that exists in some form — an operating solution, a prototype, or a pilot/beta solution.
+- **Implemented Solution (external)**: a solution (or component) that exists in some form: an operating solution, a prototype, or a pilot/beta solution.
 
 ### Elements
 
-1. **Define Solution Performance Measures** — Determine if current measures exist or if methods for capturing them are in place. Ensure existing measures are accurate, relevant, and elicit additional measures from stakeholders. Measures may be:
-   - **Quantitative**: numerical, countable, or finite — involving amounts, quantities, or rates.
-   - **Qualitative**: subjective — attitudes, perceptions, and other subjective responses from customers, users, and others involved in the operation of a solution.
+1. **Define Solution Performance Measures**: Determine if current measures exist or if methods for capturing them are in place. Ensure existing measures are accurate, relevant, and elicit additional measures from stakeholders. Measures may be:
+   - **Quantitative**: numerical, countable, or finite, involving amounts, quantities, or rates.
+   - **Qualitative**: subjective: attitudes, perceptions, and other subjective responses from customers, users, and others involved in the operation of a solution.
 
-2. **Validate Performance Measures** — Validate the performance measures and any influencing criteria with stakeholders. Specific performance measures should align with any higher-level measures that exist within the context affecting the solution. Decisions about which measures to use often reside with the sponsor.
+2. **Validate Performance Measures**: Validate the performance measures and any influencing criteria with stakeholders. Specific performance measures should align with any higher-level measures that exist within the context affecting the solution. Decisions about which measures to use often reside with the sponsor.
 
-3. **Collect Performance Measures** — Employ basic statistical sampling concepts, considering:
+3. **Collect Performance Measures**: Employ basic statistical sampling concepts, considering:
    - **Volume or Sample Size**: appropriate for the initiative; too small skews results, too large may be impractical.
    - **Frequency and Timing**: may affect the outcome of measurements.
    - **Currency**: more recent measurements tend to be more representative than older data.
@@ -130,15 +130,15 @@ To meaningfully analyze performance measures, business analysts require a thorou
 
 ### Elements
 
-1. **Solution Performance versus Desired Value** — Examine measures to assess their ability to help stakeholders understand the solution's value. A high-performing solution might contribute lower value than expected, while a low-performing but potentially valuable solution can be enhanced. If measures are insufficient, collect more measurements or treat the lack of measures as a solution risk.
+1. **Solution Performance versus Desired Value**: Examine measures to assess their ability to help stakeholders understand the solution's value. A high-performing solution might contribute lower value than expected, while a low-performing but potentially valuable solution can be enhanced. If measures are insufficient, collect more measurements or treat the lack of measures as a solution risk.
 
-2. **Risks** — Performance measures may uncover new risks to solution performance and to the enterprise. These risks are identified and managed like any other risks.
+2. **Risks**: Performance measures may uncover new risks to solution performance and to the enterprise. These risks are identified and managed like any other risks.
 
-3. **Trends** — Consider the time period when data was collected to guard against anomalies and skewed trends. A large enough sample size over a sufficient period provides an accurate depiction. Note pronounced and repeated trends (e.g., increase in errors at certain times, change in process speed when volume increases).
+3. **Trends**: Consider the time period when data was collected to guard against anomalies and skewed trends. A large enough sample size over a sufficient period provides an accurate depiction. Note pronounced and repeated trends (e.g., increase in errors at certain times, change in process speed when volume increases).
 
-4. **Accuracy** — Test and analyze data collected by performance measures to ensure accuracy. To be considered accurate and reliable, results should be reproducible and repeatable.
+4. **Accuracy**: Test and analyze data collected by performance measures to ensure accuracy. To be considered accurate and reliable, results should be reproducible and repeatable.
 
-5. **Performance Variances** — The difference between expected and actual performance represents a variance. Root cause analysis may be necessary to determine underlying causes of significant variances. Recommendations for improvement are made in *Recommend Actions to Increase Solution Value*.
+5. **Performance Variances**: The difference between expected and actual performance represents a variance. Root cause analysis may be necessary to determine underlying causes of significant variances. Recommendations for improvement are made in *Recommend Actions to Increase Solution Value*.
 
 ### Guidelines and Tools
 
@@ -181,7 +181,7 @@ To determine the factors **internal to the solution** that restrict the full rea
 
 ### Description
 
-Assessing solution limitations identifies the root causes for under-performing and ineffective solutions and solution components. This task is closely linked to *Assess Enterprise Limitations*; these tasks may be performed concurrently. If the solution has not met its potential value, business analysts determine which factors — both internal and external to the solution — are limiting value. This task focuses on factors **internal** to the solution.
+Assessing solution limitations identifies the root causes for under-performing and ineffective solutions and solution components. This task is closely linked to *Assess Enterprise Limitations*; these tasks may be performed concurrently. If the solution has not met its potential value, business analysts determine which factors (both internal and external to the solution) are limiting value. This task focuses on factors **internal** to the solution.
 
 This assessment may be performed at any point during the solution life cycle: on a solution component during development, on a completed solution prior to full implementation, or on an existing operational solution.
 
@@ -192,13 +192,13 @@ This assessment may be performed at any point during the solution life cycle: on
 
 ### Elements
 
-1. **Identify Internal Solution Component Dependencies** — Solutions often have internal dependencies that limit overall performance to the performance of the least effective component. Identify solution components with dependencies on other components, then determine if those dependencies limit solution performance and value realization.
+1. **Identify Internal Solution Component Dependencies**: Solutions often have internal dependencies that limit overall performance to the performance of the least effective component. Identify solution components with dependencies on other components, then determine if those dependencies limit solution performance and value realization.
 
-2. **Investigate Solution Problems** — When the solution consistently or repeatedly produces ineffective outputs, perform problem analysis to identify the source. Problems may be indicated by:
+2. **Investigate Solution Problems**: When the solution consistently or repeatedly produces ineffective outputs, perform problem analysis to identify the source. Problems may be indicated by:
    - Inability to meet a stated goal, objective, or requirement.
    - Failure to realize a benefit projected during *Define Change Strategy* or *Recommend Actions to Increase Solution Value*.
 
-3. **Impact Assessment** — Review identified problems to assess the effect on the organization's operations or the solution's ability to deliver potential value. Determine:
+3. **Impact Assessment**: Review identified problems to assess the effect on the organization's operations or the solution's ability to deliver potential value. Determine:
    - **Severity** of the problem.
    - **Probability** of re-occurrence.
    - **Impact** on business operations.
@@ -263,21 +263,21 @@ Assessing enterprise limitations identifies root causes and describes how enterp
 
 ### Elements
 
-1. **Enterprise Culture Assessment** — Evaluate the deeply rooted beliefs, values, and norms shared by members of the enterprise. Business analysts:
+1. **Enterprise Culture Assessment**: Evaluate the deeply rooted beliefs, values, and norms shared by members of the enterprise. Business analysts:
    - Identify whether stakeholders understand why a solution exists.
    - Ascertain whether stakeholders view the solution as beneficial and are supportive of the change.
    - Determine what cultural changes are required to better realize value.
    - Evaluate the enterprise's ability and willingness to adapt to cultural changes.
    - Assess internal and external stakeholders to gauge understanding, acceptance, perception of value, and communication needs.
 
-2. **Stakeholder Impact Analysis** — Provide insight into how the solution affects a particular stakeholder group by considering:
-   - **Functions**: the processes in which the stakeholder uses the solution — inputs provided, how the solution is used to execute the process, and outputs received.
+2. **Stakeholder Impact Analysis**: Provide insight into how the solution affects a particular stakeholder group by considering:
+   - **Functions**: the processes in which the stakeholder uses the solution: inputs provided, how the solution is used to execute the process, and outputs received.
    - **Locations**: geographic locations of stakeholders; disparate locations may impact use and value realization.
    - **Concerns**: issues, risks, and overall concerns stakeholders have with the solution, including its use, perceptions of value, and impact on the stakeholder's ability to perform necessary functions.
 
-3. **Organizational Structure Changes** — Assess how the organization's structure is impacted by a solution. The reporting structure may be too complex or too simple to allow a solution to perform effectively. Formal and informal relationships (alliances, friendships, matrix-reporting) among stakeholders can enable or block adoption. Consider both formal and informal relationships.
+3. **Organizational Structure Changes**: Assess how the organization's structure is impacted by a solution. The reporting structure may be too complex or too simple to allow a solution to perform effectively. Formal and informal relationships (alliances, friendships, matrix-reporting) among stakeholders can enable or block adoption. Consider both formal and informal relationships.
 
-4. **Operational Assessment** — Determine if the enterprise is able to adapt to or effectively use a solution. Identify which processes and tools are adequately equipped to benefit from the solution, and if sufficient and appropriate assets are in place. Consider:
+4. **Operational Assessment**: Determine if the enterprise is able to adapt to or effectively use a solution. Identify which processes and tools are adequately equipped to benefit from the solution, and if sufficient and appropriate assets are in place. Consider:
    - Policies and procedures
    - Capabilities and processes that enable other capabilities
    - Skill and training needs
@@ -347,9 +347,9 @@ This task focuses on understanding the aggregate of the performed assessments an
 
 ### Elements
 
-1. **Adjust Solution Performance Measures** — In some cases, performance is considered acceptable but may not support the fulfillment of business goals and objectives. Identify and define more appropriate measures.
+1. **Adjust Solution Performance Measures**: In some cases, performance is considered acceptable but may not support the fulfillment of business goals and objectives. Identify and define more appropriate measures.
 
-2. **Recommendations** — Depending on the reason for lower-than-expected performance, recommendations may include:
+2. **Recommendations**: Depending on the reason for lower-than-expected performance, recommendations may include:
 
    - **Do Nothing**: recommended when the value of a change is low relative to the effort required, when risks of change significantly outweigh the risks of remaining in the current state, or when change is impossible with available resources or within the allotted time frame.
 
@@ -375,7 +375,7 @@ This task focuses on understanding the aggregate of the performed assessments an
      - **Ongoing Cost versus Initial Investment**: existing solutions often have increasing costs over time; alternatives may have higher upfront investment but lower maintenance costs.
      - **Opportunity Cost**: the potential value that could be realized by pursuing alternative courses of action.
      - **Necessity**: most solution components have a limited lifespan due to obsolescence, changing market conditions, and other causes.
-     - **Sunk Cost**: money and effort already committed — psychologically difficult to set aside, but effectively irrelevant for future decision-making. Decisions should be based on future investment required and future benefits that can be gained.
+     - **Sunk Cost**: money and effort already committed, psychologically difficult to set aside, but effectively irrelevant for future decision-making. Decisions should be based on future investment required and future benefits that can be gained.
 
 ### Guidelines and Tools
 
@@ -434,9 +434,9 @@ This task focuses on understanding the aggregate of the performed assessments an
 
 ## Related Chapters
 
-- [[00_Introduction_to_BABOK]] — Business Analysis Core Concept Model (BACCM), key terms, requirements classification schema
-- [[01_BA_Planning_and_Monitoring]] — Planning the business analysis approach, including governance and performance improvements
-- [[02_Elicitation_and_Collaboration]] — Eliciting information from stakeholders about solution performance
-- [[03_Requirements_Life_Cycle_Management]] — Managing requirements that inform performance measurement baselines
-- [[04_Strategy_Analysis]] — Defining change strategy, future state, and potential value benchmarks used in evaluation
-- [[05_Requirements_Analysis_and_Design]] — Specifying and modeling requirements that shape the designed solution
+- [[00_Introduction_to_BABOK]]: Business Analysis Core Concept Model (BACCM), key terms, requirements classification schema
+- [[01_BA_Planning_and_Monitoring]]: Planning the business analysis approach, including governance and performance improvements
+- [[02_Elicitation_and_Collaboration]]: Eliciting information from stakeholders about solution performance
+- [[03_Requirements_Life_Cycle_Management]]: Managing requirements that inform performance measurement baselines
+- [[04_Strategy_Analysis]]: Defining change strategy, future state, and potential value benchmarks used in evaluation
+- [[05_Requirements_Analysis_and_Design]]: Specifying and modeling requirements that shape the designed solution

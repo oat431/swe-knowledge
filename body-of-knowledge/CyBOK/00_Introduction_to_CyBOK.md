@@ -3,11 +3,11 @@ tags: [introduction, cyber-security, cybok]
 created: 2026-07-09
 ---
 
-> *Source: CyBOK v1.1 by NCSC/UK Government, Chapter 1 — Introduction*
+> *Source: CyBOK v1.1 by NCSC/UK Government, Chapter 1: Introduction*
 
 ## Purpose
 
-The Cyber Security Body of Knowledge (CyBOK) aims to codify the foundational and generally recognised knowledge on cyber security. In the same fashion as the IEEE Software Engineering Body of Knowledge (SWEBOK), CyBOK serves as a guide to the body of knowledge — mapping established knowledge from textbooks, academic research articles, technical reports, white papers, and standards, rather than replicating everything ever written on the subject. Educational programmes ranging from secondary and undergraduate education to postgraduate and continuing professional development can be built on the basis of CyBOK.
+The Cyber Security Body of Knowledge (CyBOK) aims to codify the foundational and generally recognised knowledge on cyber security. In the same fashion as the IEEE Software Engineering Body of Knowledge (SWEBOK), CyBOK serves as a guide to the body of knowledge, mapping established knowledge from textbooks, academic research articles, technical reports, white papers, and standards, rather than replicating everything ever written on the subject. Educational programmes ranging from secondary and undergraduate education to postgraduate and continuing professional development can be built on the basis of CyBOK.
 
 The field of cyber security suffers from fragmented foundational knowledge, making it difficult for students and educators to map coherent paths of progression. CyBOK addresses this by providing a common vocabulary, core understanding, and structured organisation of 21 Knowledge Areas (KAs) grouped into five broad categories.
 
@@ -19,7 +19,7 @@ CyBOK adopts the definition from the UK National Cyber Security Strategy:
 
 > **Cyber security** refers to the protection of information systems (hardware, software and associated infrastructure), the data on them, and the services they provide, from unauthorised access, harm or misuse. This includes harm caused intentionally by the operator of the system, or accidentally, as a result of failing to follow security procedures.
 
-This definition expresses the breadth of coverage within the topic. Human behaviours are a crucial element — the impact of loss of information, reduced safety, and how security and privacy breaches impact trust in connected systems and infrastructures must also be considered.
+This definition expresses the breadth of coverage within the topic. Human behaviours are a crucial element: the impact of loss of information, reduced safety, and how security and privacy breaches impact trust in connected systems and infrastructures must also be considered.
 
 A large contributor to the notion of cyber security is **Information Security**, defined by ISO 27000 as:
 
@@ -31,7 +31,7 @@ Related terms include Computer Security, Network Security, Information Assurance
 
 ## CyBOK Knowledge Areas Overview
 
-The CyBOK is divided into 21 top-level Knowledge Areas (KAs), grouped into five broad categories. These categories are not entirely orthogonal — there are numerous dependencies across the KAs which are cross-referenced in the documentation and captured visually on the [CyBOK website](https://www.cybok.org).
+The CyBOK is divided into 21 top-level Knowledge Areas (KAs), grouped into five broad categories. These categories are not entirely orthogonal. There are numerous dependencies across the KAs which are cross-referenced in the documentation and captured visually on the [CyBOK website](https://www.cybok.org).
 
 ### I. Human, Organisational & Regulatory Aspects
 
@@ -65,7 +65,7 @@ The CyBOK is divided into 21 top-level Knowledge Areas (KAs), grouped into five 
 
 | # | Knowledge Area | Chapter | Description |
 |---|---------------|---------|-------------|
-| 14 | **Software Security** | [[09_Software_Security]] | Known categories of programming errors resulting in security bugs, and techniques for avoiding these errors — both through coding practice and improved language design — and tools, techniques, and methods for detection of such errors in existing systems. |
+| 14 | **Software Security** | [[09_Software_Security]] | Known categories of programming errors resulting in security bugs, and techniques for avoiding these errors (both through coding practice and improved language design) and tools, techniques, and methods for detection of such errors in existing systems. |
 | 15 | **Web & Mobile Security** | [[15_Web_and_Mobile_Security]] | Issues related to web applications and services distributed across devices and frameworks, including the diverse programming paradigms and protection models. |
 | 16 | **Secure Software Lifecycle** | [[14_Secure_Software_Lifecycle]] | The application of security software engineering techniques in the whole systems development lifecycle resulting in software that is secure by default. |
 
@@ -89,9 +89,9 @@ Cyber security entails protection against an adversary or against physical or ra
 
 Security controls affect **people, process, and technology**. Some focus on **prevention** of bad outcomes; others on **detection and reaction**. Selection of controls is approached through:
 
-- **Risk Management** — see [[01_Risk_Management_and_Governance]]
-- **Human Factors** — leveraging humans as a linchpin for improving security cultures, see [[03_Human_Factors]]
-- **Privacy & Online Rights** — see [[04_Privacy_and_Online_Rights]]
+- **Risk Management**: see [[01_Risk_Management_and_Governance]]
+- **Human Factors**: leveraging humans as a linchpin for improving security cultures, see [[03_Human_Factors]]
+- **Privacy & Online Rights**: see [[04_Privacy_and_Online_Rights]]
 
 Security also requires **vulnerability analysis**. A system without vulnerabilities would be impervious to all threats; a highly vulnerable system in benign circumstances would have no incidents. The **security assurance** domain addresses whether controls are deployed appropriately and effectively.
 
@@ -100,9 +100,9 @@ Security also requires **vulnerability analysis**. A system without vulnerabilit
 When adversaries achieve their goal, security controls have failed. Operationally, one or more failures may give rise to a **security incident**, described in terms of harm: theft or damage of information, devices, services, or networks. In the cyber-physical domain, harms to humans may arise from information loss, unintended physical action, or both.
 
 Key KAs for incident handling:
-- **Security Operations & Incident Management** — detection and reaction, see [[07_Security_Operations_and_Incident_Management]]
-- **Malware & Attack Technologies** — attack vector analysis, see [[05_Malware_and_Attack_Technologies]]
-- **Forensics** — post-attack analysis, see [[08_Forensics]]
+- **Security Operations & Incident Management**: detection and reaction, see [[07_Security_Operations_and_Incident_Management]]
+- **Malware & Attack Technologies**: attack vector analysis, see [[05_Malware_and_Attack_Technologies]]
+- **Forensics**: post-attack analysis, see [[08_Forensics]]
 
 A recurrent theme is the **"layer below" problem**: security controls defined within a particular abstraction may be bypassed when an adversary attacks the layer below. Examples include side-channel attacks (RF emissions, power analysis), SQL injection, and abstraction failures in formal refinement. See [[10_Operating_Systems_and_Virtualisation]], [[18_Hardware_Security]], [[09_Software_Security]], [[15_Web_and_Mobile_Security]], and [[12_Formal_Methods_for_Security]].
 
@@ -111,15 +111,15 @@ A recurrent theme is the **"layer below" problem**: security controls defined wi
 There is no limit in principle to the effort expended on security controls. **Risk Assessment** and **Risk Management** provide the over-arching approach to balance resources with harms and opportunities. See [[01_Risk_Management_and_Governance]].
 
 Key elements of risk calculation:
-- **Likelihood** of events — presence of vulnerabilities (known or unknown) and nature of the threat
-- **Estimated impact** — consequences arising from those events
+- **Likelihood** of events: presence of vulnerabilities (known or unknown) and nature of the threat
+- **Estimated impact**: consequences arising from those events
 - Management responses: additional controls, accepting risk, transferring/sharing risk (e.g., insurance), or deciding not to proceed
 
 **Security management** encompasses all actions to maintain system security during its lifetime. Functions are grouped into:
-- **Physical security** — physical protection, access control, asset management (outside CyBOK scope)
-- **Personnel security** — security usability, behaviour shaping, vetting, acceptable usage (see [[03_Human_Factors]], [[02_Law_and_Regulation]])
-- **Information system management** — access management (see [[13_Authentication_Authorisation_Accountability]]), system logging (see [[07_Security_Operations_and_Incident_Management]])
-- **Incident management** — security monitoring, incident detection and response (see [[07_Security_Operations_and_Incident_Management]])
+- **Physical security**: physical protection, access control, asset management (outside CyBOK scope)
+- **Personnel security**: security usability, behaviour shaping, vetting, acceptable usage (see [[03_Human_Factors]], [[02_Law_and_Regulation]])
+- **Information system management**: access management (see [[13_Authentication_Authorisation_Accountability]]), system logging (see [[07_Security_Operations_and_Incident_Management]])
+- **Incident management**: security monitoring, incident detection and response (see [[07_Security_Operations_and_Incident_Management]])
 
 ---
 
@@ -129,18 +129,18 @@ Key elements of risk calculation:
 
 Eight design principles for engineering security controls, originally for secure multi-user operating systems but broadly applicable:
 
-1. **Economy of Mechanism** — Keep security controls as simple as possible for high assurance. Underlies the notion of Trusted Computing Base (TCB).
-2. **Fail-Safe Defaults** — Define operations positively in accordance with a security policy; reject all others by default.
-3. **Complete Mediation** — Check all operations on all objects against the security policy.
-4. **Open Design** — Security must not rely on secrecy of how the control operates (no "security by obscurity").
-5. **Separation of Privilege** — Require multiple subjects to authorise an operation for higher assurance.
-6. **Least Privilege** — Grant the minimum set of privileges needed for each operation.
-7. **Least Common Mechanism** — Minimise sharing of resources and mechanisms between different parties.
-8. **Psychological Acceptability** — Security controls should be naturally usable so users routinely and automatically apply protection.
+1. **Economy of Mechanism**: Keep security controls as simple as possible for high assurance. Underlies the notion of Trusted Computing Base (TCB).
+2. **Fail-Safe Defaults**: Define operations positively in accordance with a security policy; reject all others by default.
+3. **Complete Mediation**: Check all operations on all objects against the security policy.
+4. **Open Design**: Security must not rely on secrecy of how the control operates (no "security by obscurity").
+5. **Separation of Privilege**: Require multiple subjects to authorise an operation for higher assurance.
+6. **Least Privilege**: Grant the minimum set of privileges needed for each operation.
+7. **Least Common Mechanism**: Minimise sharing of resources and mechanisms between different parties.
+8. **Psychological Acceptability**: Security controls should be naturally usable so users routinely and automatically apply protection.
 
 Two further (imperfectly applicable) principles:
-- **Work Factor** — Controls should require more resources to circumvent than available to the adversary.
-- **Compromise Recording** — Reliable logs may be used as an alternative to preventive controls.
+- **Work Factor**: Controls should require more resources to circumvent than available to the adversary.
+- **Compromise Recording**: Reliable logs may be used as an alternative to preventive controls.
 
 These principles draw on Kerckhoff's principles for cryptographic systems (open design, practical security, usability).
 
@@ -155,13 +155,13 @@ NIST extends Saltzer and Schroeder with three families:
 | **Life Cycle Security** | Hierarchical Trust, Inverse Modification Threshold, Hierarchical Protection, Trusted Communication Channels, Secure Distributed Composition, Self-Reliant Trustworthiness, Economic Security, Performance Security, Human Factored Security, Acceptable Security |
 
 Three key security architecture strategies from NIST:
-- **Reference Monitor Concept** — An abstract control sufficient to enforce system security properties.
-- **Defence in Depth** — Multiple overlapping controls.
-- **Isolation** — Physical or logical separation of components.
+- **Reference Monitor Concept**: An abstract control sufficient to enforce system security properties.
+- **Defence in Depth**: Multiple overlapping controls.
+- **Isolation**: Physical or logical separation of components.
 
 ### Latent Design Conditions
 
-From James Reason's safety-critical systems research: **latent design conditions** arise from past decisions about a system, often remaining hidden until certain events or settings align — the "Swiss Cheese model." As legacy cyber-physical systems become connected, latent insecure design conditions may be manifested. Security must now consider **safety implications** alongside information loss. See [[03_Human_Factors]].
+From James Reason's safety-critical systems research: **latent design conditions** arise from past decisions about a system, often remaining hidden until certain events or settings align: the "Swiss Cheese model." As legacy cyber-physical systems become connected, latent insecure design conditions may be manifested. Security must now consider **safety implications** alongside information loss. See [[03_Human_Factors]].
 
 ### The Precautionary Principle
 
@@ -175,9 +175,9 @@ Designers must consider security and privacy implications of their choices from 
 
 A synthesis between computer and social science combining microeconomic theory and game theory with information security. Three sub-areas:
 
-1. **Defender economics** — Incentives of legitimate market players (ISPs, software vendors) and how they lead to optimal or sub-optimal security outcomes.
-2. **Attacker economics** — Cost-benefit analyses of attackers exploiting vulnerabilities and formulating protective countermeasures.
-3. **Economics of deviant security** — How cyber criminals apply security to defend their own systems against disruption (e.g., botnet resilience mechanisms, anti-forensic techniques).
+1. **Defender economics**: Incentives of legitimate market players (ISPs, software vendors) and how they lead to optimal or sub-optimal security outcomes.
+2. **Attacker economics**: Cost-benefit analyses of attackers exploiting vulnerabilities and formulating protective countermeasures.
+3. **Economics of deviant security**: How cyber criminals apply security to defend their own systems against disruption (e.g., botnet resilience mechanisms, anti-forensic techniques).
 
 Security economics is a socio-technical approach acknowledging that security is fundamentally a human problem where cost versus benefits trade-offs are key to understanding decisions of both defenders and attackers.
 
@@ -185,12 +185,12 @@ Security economics is a socio-technical approach acknowledging that security is 
 
 The high-level design of a system from a security perspective, bound up with the system lifecycle from conception to decommissioning. Key steps:
 
-1. **Review proposed use** — Identify interactions between users, data, and services.
-2. **Risk assessment** — Identify high-risk interactions; consider compliance and contractual obligations.
-3. **Group users and data** — Role-access requirements, formal data classification, user clearance → potential system compartments.
-4. **Compartmentalise** — Enforce with network partitioning controls (see [[17_Network_Security]]).
-5. **Detailed design within compartments** — Access controls (see [[13_Authentication_Authorisation_Accountability]]), user roles, data design.
-6. **Uniform security infrastructure** — Key management, network protocols ([[17_Network_Security]]), resource management ([[11_Distributed_Systems_Security]]), user access ([[03_Human_Factors]]), intrusion detection ([[07_Security_Operations_and_Incident_Management]]).
+1. **Review proposed use**: Identify interactions between users, data, and services.
+2. **Risk assessment**: Identify high-risk interactions; consider compliance and contractual obligations.
+3. **Group users and data**: Role-access requirements, formal data classification, user clearance → potential system compartments.
+4. **Compartmentalise**: Enforce with network partitioning controls (see [[17_Network_Security]]).
+5. **Detailed design within compartments**: Access controls (see [[13_Authentication_Authorisation_Accountability]]), user roles, data design.
+6. **Uniform security infrastructure**: Key management, network protocols ([[17_Network_Security]]), resource management ([[11_Distributed_Systems_Security]]), user access ([[03_Human_Factors]]), intrusion detection ([[07_Security_Operations_and_Incident_Management]]).
 
 The concepts of **"security by design"** and **"secure by default"** capture the importance of considering security throughout the entire lifecycle, including default configurations.
 
@@ -198,24 +198,24 @@ The concepts of **"security by design"** and **"secure by default"** capture the
 
 ## Related Chapters
 
-- [[01_Risk_Management_and_Governance]] — Risk management systems and organisational controls
-- [[02_Law_and_Regulation]] — Legal and regulatory frameworks
-- [[03_Human_Factors]] — Usable security and human behaviour
-- [[04_Privacy_and_Online_Rights]] — Privacy techniques and online rights
-- [[05_Malware_and_Attack_Technologies]] — Exploits and malicious systems
-- [[06_Adversarial_Behaviours]] — Attacker motivations and methods
-- [[07_Security_Operations_and_Incident_Management]] — Security operations and incident response
-- [[08_Forensics]] — Digital evidence and forensic analysis
-- [[16_Applied_Cryptography]] — Cryptographic primitives and protocols
-- [[10_Operating_Systems_and_Virtualisation]] — OS and virtualisation protection
-- [[11_Distributed_Systems_Security]] — Distributed systems security
-- [[12_Formal_Methods_for_Security]] — Formal modelling and verification
-- [[13_Authentication_Authorisation_Accountability]] — Identity, auth, and accountability
-- [[09_Software_Security]] — Software vulnerabilities and mitigations
-- [[15_Web_and_Mobile_Security]] — Web and mobile platform security
-- [[14_Secure_Software_Lifecycle]] — Security in the SDLC
-- [[16_Applied_Cryptography]] — Cryptographic implementation and key management
-- [[17_Network_Security]] — Network protocol and infrastructure security
-- [[18_Hardware_Security]] — Hardware design and trusted computing
-- [[19_Cyber_Physical_Systems_Security]] — CPS and IoT security
-- [[20_Physical_Layer_and_Telecommunications_Security]] — Physical layer security
+- [[01_Risk_Management_and_Governance]]: Risk management systems and organisational controls
+- [[02_Law_and_Regulation]]: Legal and regulatory frameworks
+- [[03_Human_Factors]]: Usable security and human behaviour
+- [[04_Privacy_and_Online_Rights]]: Privacy techniques and online rights
+- [[05_Malware_and_Attack_Technologies]]: Exploits and malicious systems
+- [[06_Adversarial_Behaviours]]: Attacker motivations and methods
+- [[07_Security_Operations_and_Incident_Management]]: Security operations and incident response
+- [[08_Forensics]]: Digital evidence and forensic analysis
+- [[16_Applied_Cryptography]]: Cryptographic primitives and protocols
+- [[10_Operating_Systems_and_Virtualisation]]: OS and virtualisation protection
+- [[11_Distributed_Systems_Security]]: Distributed systems security
+- [[12_Formal_Methods_for_Security]]: Formal modelling and verification
+- [[13_Authentication_Authorisation_Accountability]]: Identity, auth, and accountability
+- [[09_Software_Security]]: Software vulnerabilities and mitigations
+- [[15_Web_and_Mobile_Security]]: Web and mobile platform security
+- [[14_Secure_Software_Lifecycle]]: Security in the SDLC
+- [[16_Applied_Cryptography]]: Cryptographic implementation and key management
+- [[17_Network_Security]]: Network protocol and infrastructure security
+- [[18_Hardware_Security]]: Hardware design and trusted computing
+- [[19_Cyber_Physical_Systems_Security]]: CPS and IoT security
+- [[20_Physical_Layer_and_Telecommunications_Security]]: Physical layer security

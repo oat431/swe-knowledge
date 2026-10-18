@@ -2,7 +2,7 @@
 tags: [life-cycle, project-management, pmbok]
 ---
 
-> *Source: PMBOK® Guide — Eighth Edition by PMI, The Standard for Project Management §4 (pp. 57–74)*
+> *Source: PMBOK® Guide: Eighth Edition by PMI, The Standard for Project Management §4 (pp. 57–74)*
 
 ## Purpose
 
@@ -10,7 +10,7 @@ The **project life cycle** is the series of activities and/or phases that a proj
 
 ## Project Phases
 
-A **project phase** is a collection of logically related project activities that culminates in the completion of one or more deliverables and/or outcomes. Phases may be **sequential**, **transitional**, or **overlapping** — and a combination may be used within a single project.
+A **project phase** is a collection of logically related project activities that culminates in the completion of one or more deliverables and/or outcomes. Phases may be **sequential**, **transitional**, or **overlapping**, and a combination may be used within a single project.
 
 ### Phase Attributes
 
@@ -29,8 +29,8 @@ Each phase can be described by measurable, phase-specific attributes:
 
 A **phase gate** (also called *stage gate*, *gate review*, *iteration review*, or *decision point review*) is a review checkpoint that verifies desired outcomes or exit criteria have been achieved before proceeding. Phase gates may be placed:
 
-- At the **end** of a phase (traditional) — review progress and make go/no-go decisions
-- At the **start** of a phase (*pre-phase gates*) — ensure alignment, resources, and risk assessment before work begins
+- At the **end** of a phase (traditional): review progress and make go/no-go decisions
+- At the **start** of a phase (*pre-phase gates*): ensure alignment, resources, and risk assessment before work begins
 
 Possible decisions at a phase gate:
 - Proceed to the next phase
@@ -84,7 +84,7 @@ Also referred to as *waterfall*, *plan-driven*, or *traditional*. Optimal when p
 
 **Incremental Delivery Within Predictive:**
 
-Even in predictive approaches, delivery can be **incremental** — the overall scope is planned up front, but the project is divided into phases/increments, each delivering a usable part of the product. This provides earlier stakeholder value while maintaining structured planning and controlled change management.
+Even in predictive approaches, delivery can be **incremental**. The overall scope is planned up front, but the project is divided into phases/increments, each delivering a usable part of the product. This provides earlier stakeholder value while maintaining structured planning and controlled change management.
 
 **Sample Predictive Life Cycle:**
 ```
@@ -116,14 +116,14 @@ When constraints must be traded off, adaptive approaches offer flexibility:
 | Scope | Budget and Schedule |
 | Budget and Schedule | Scope |
 
-**Agile Methods — Breadth vs. Depth:**
+**Agile Methods: Breadth vs. Depth:**
 
 Agile methods vary by breadth (how much of the project/product life cycle they cover) and depth (how detailed/prescriptive the guidance is). Examples plotted on this spectrum include Scrum, Kanban, Crystal, LeSS, Scrum of Scrums, SAFe, and Lean. **PMI Disciplined Agile® (DA®)** is a **tool kit** (a collection of flexible tools and techniques) rather than a prescriptive method.
 
 **Best suited for:**
-- **Design projects** — requirements not fully defined up front; partial deliveries and changes expected
-- **New product development** — final features refined based on market needs (e.g., mobile apps, web services)
-- **Digital/software projects** — evolving scope, high uncertainty, need for early or incremental delivery
+- **Design projects**: requirements not fully defined up front; partial deliveries and changes expected
+- **New product development**: final features refined based on market needs (e.g., mobile apps, web services)
+- **Digital/software projects**: evolving scope, high uncertainty, need for early or incremental delivery
 
 ### Hybrid Approach
 
@@ -144,9 +144,9 @@ A combination of adaptive and predictive approaches. Most projects today benefit
 - **Level 3:** Adaptive is dominant; predictive elements satisfy business constraints
 
 **Example Scenarios:**
-- **Construction with IT integration** — building a smart building (predictive construction + adaptive IT systems)
-- **Healthcare solutions** — electronic medical records implementation (predictive infrastructure + adaptive UI development)
-- **Modular deliverables** — one deliverable developed adaptively (software), another predictively (data center)
+- **Construction with IT integration**: building a smart building (predictive construction + adaptive IT systems)
+- **Healthcare solutions**: electronic medical records implementation (predictive infrastructure + adaptive UI development)
+- **Modular deliverables**: one deliverable developed adaptively (software), another predictively (data center)
 
 ## Considerations for Approach Selection
 
@@ -162,9 +162,9 @@ Selection factors fall into three categories. Multiple development approaches ma
 | **Ease of change** | Difficult or costly to change | Easy to incorporate changes |
 | **Delivery options** | Single, final delivery | Component-based or progressive elaboration |
 | **Risk** | Manageable through up-front planning | Adaptive approaches help manage uncertainty |
-| **Safety requirements** | Rigorous safety needs → significant up-front planning | — |
-| **Feedback value** | — | High value from frequent end-user/stakeholder feedback |
-| **Regulations** | Significant regulatory oversight → documented processes | — |
+| **Safety requirements** | Rigorous safety needs → significant up-front planning | N/A |
+| **Feedback value** | N/A | High value from frequent end-user/stakeholder feedback |
+| **Regulations** | Significant regulatory oversight → documented processes | N/A |
 
 ### Project Factors
 
@@ -199,7 +199,7 @@ Based on the selected development approach, projects can adopt one of four deliv
 
 ## Project Management Focus Areas
 
-The five **Project Management Focus Areas** (formerly known as Process Groups) describe fundamental actions that occur in every project, regardless of development approach. They are **not project phases** — they overlap and interact dynamically throughout the project life cycle.
+The five **Project Management Focus Areas** (formerly known as Process Groups) describe fundamental actions that occur in every project, regardless of development approach. They are **not project phases**. They overlap and interact dynamically throughout the project life cycle.
 
 ### The Five Focus Areas
 
@@ -224,7 +224,7 @@ Establishes the intended scope, defines and refines objectives, and develops the
 **Key actions:**
 - Develop artifacts such as a product backlog or **project management plan**
 - Use repeated feedback loops for additional analysis
-- Apply **progressive elaboration** — ongoing refinement as more information becomes available
+- Apply **progressive elaboration**: ongoing refinement as more information becomes available
 
 **Predictive vs. Adaptive Planning:**
 - **Predictive:** Front-loads planning; updates and refinements occur but less frequently
@@ -253,13 +253,13 @@ Tracks, measures, reviews, and regulates the progress and performance of the pro
 - **Monitoring:** Compare performance data, produce performance measures, compare actual vs. planned, report performance information
 - **Controlling:** Analyze variances, assess trends for process improvements, evaluate alternatives, recommend corrective actions
 
-**Key benefit:** Ensures the project is on track to meet expectations. Performed at regular intervals, at appropriate events, or when exceptional conditions occur. Runs **in parallel** with the other Focus Areas — it is not a separate, stand-alone area.
+**Key benefit:** Ensures the project is on track to meet expectations. Performed at regular intervals, at appropriate events, or when exceptional conditions occur. Runs **in parallel** with the other Focus Areas. It is not a separate, stand-alone area.
 
 > For projects with a stable plan, M&C effort is fairly consistent. For projects with frequent changes (common in adaptive approaches), M&C efforts are likely less consistent but more continuous.
 
 #### 5. Closing
 
-Formally completes or closes a project, phase, or contract — or terminates a project before completion.
+Formally completes or closes a project, phase, or contract, or terminates a project before completion.
 
 **Key actions:**
 - Verify that specific actions are completed for other Focus Areas before declaring closure
@@ -271,7 +271,7 @@ Formally completes or closes a project, phase, or contract — or terminates a p
 
 ### Focus Area Interactions
 
-The five Focus Areas are **independent of application area** (marketing, IT, accounting) or industry focus (construction, aerospace, telecommunications). They are also **independent of approach** — all development approaches honor these five in some manner.
+The five Focus Areas are **independent of application area** (marketing, IT, accounting) or industry focus (construction, aerospace, telecommunications). They are also **independent of approach**. All development approaches honor these five in some manner.
 
 **Predictive Projects (Figure 4-13):**
 - Focus Areas show varying levels of effort across distinct project phases (Engineering, Procurement, Construction, Commissioning, Handover)
@@ -286,8 +286,8 @@ The five Focus Areas are **independent of application area** (marketing, IT, acc
 
 ## Related Chapters
 
-- [[01_Value_Delivery_System|Chapter 2: A System for Value Delivery]] — how projects fit within the broader organizational value delivery system
-- [[04_Governance_Performance_Domain|Chapter 4: Project Performance Domains]] — the eight domains that intersect with Focus Areas
-- [[11_Tailoring|Chapter 5: Tailoring]] — adapting approaches, life cycles, and processes to individual projects
-- [[13_Tools_and_Techniques|Chapter 6: Models, Methods, and Artifacts]] — commonly used tools and techniques across project management
-- [[02_Project_Management_Principles|Project Management Principles]] — the 12 principles that underpin the Focus Areas and development approaches
+- [[01_Value_Delivery_System|Chapter 2: A System for Value Delivery]]: how projects fit within the broader organizational value delivery system
+- [[04_Governance_Performance_Domain|Chapter 4: Project Performance Domains]]: the eight domains that intersect with Focus Areas
+- [[11_Tailoring|Chapter 5: Tailoring]]: adapting approaches, life cycles, and processes to individual projects
+- [[13_Tools_and_Techniques|Chapter 6: Models, Methods, and Artifacts]]: commonly used tools and techniques across project management
+- [[02_Project_Management_Principles|Project Management Principles]]: the 12 principles that underpin the Focus Areas and development approaches

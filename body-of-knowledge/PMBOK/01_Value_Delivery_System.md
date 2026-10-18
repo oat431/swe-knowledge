@@ -5,17 +5,17 @@ tags:
 - pmbok
 ---
 
-# 01 — A System for Value Delivery
+# 01: A System for Value Delivery
 
-> *Source: PMBOK® Guide — Eighth Edition by PMI, The Standard for Project Management §2 (pp. 13–34)*
+> *Source: PMBOK® Guide: Eighth Edition by PMI, The Standard for Project Management §2 (pp. 13–34)*
 
 ## Purpose
 
-This section of *The Standard for Project Management* establishes the foundational context for project management by describing the **value delivery system** — the integrated framework through which portfolios, programs, projects, products, and operations collectively generate value for organizations and their stakeholders. It defines the environment in which projects operate, the functions that support project delivery, and the roles of professionals who engage with projects. Together, these elements form a principle-based standard that guides the behaviours and actions of project professionals.
+This section of *The Standard for Project Management* establishes the foundational context for project management by describing the **value delivery system**: the integrated framework through which portfolios, programs, projects, products, and operations collectively generate value for organizations and their stakeholders. It defines the environment in which projects operate, the functions that support project delivery, and the roles of professionals who engage with projects. Together, these elements form a principle-based standard that guides the behaviours and actions of project professionals.
 
 ## Creating Value
 
-Organizations — broadly encompassing government agencies, enterprises, contractual arrangements, joint ventures, and other entities — create value for stakeholders. Any project investment should meet or exceed target thresholds, both financial and nonfinancial. Projects are designed to deliver value or enhance value production capabilities, enabling organizations to maximize value while balancing competing constraints. Value delivery also extends beyond organizational objectives to include **societal impact and sustainability goals**.
+Organizations (broadly encompassing government agencies, enterprises, contractual arrangements, joint ventures, and other entities) create value for stakeholders. Any project investment should meet or exceed target thresholds, both financial and nonfinancial. Projects are designed to deliver value or enhance value production capabilities, enabling organizations to maximize value while balancing competing constraints. Value delivery also extends beyond organizational objectives to include **societal impact and sustainability goals**.
 
 **Business value** is a net quantifiable benefit comprising tangible or intangible elements that contribute to the overall health and well-being of the organization during a project, at its completion, or in the long term.
 
@@ -55,9 +55,9 @@ The components create **deliverables** → which produce **outcomes** → which 
 
 Project success is evaluated along **two dimensions**:
 
-1. **Success of project outcomes** — the effectiveness of the project in realizing intended value. Value realization may occur during the project, immediately after completion, or in the short or long term. Includes achieving strategic objectives: sales targets, ROI, new customer acquisition, first-to-market positioning, technological or process improvements, standards compliance, and sustainability goals.
+1. **Success of project outcomes**: the effectiveness of the project in realizing intended value. Value realization may occur during the project, immediately after completion, or in the short or long term. Includes achieving strategic objectives: sales targets, ROI, new customer acquisition, first-to-market positioning, technological or process improvements, standards compliance, and sustainability goals.
 
-2. **Success of project management processes** — the efficiency of project execution measured by adherence to constraints (cost, scope, time, quality). Assesses delivery on time, on budget, and to required standards.
+2. **Success of project management processes**: the efficiency of project execution measured by adherence to constraints (cost, scope, time, quality). Assesses delivery on time, on budget, and to required standards.
 
 Both dimensions are essential. Efficient execution alone does not guarantee business value, and strong outcomes are weakened by poor execution. The **Sydney Opera House** (massive cost/time overrun but extraordinary long-term value) and the **Montreal Highway 15 overpass** (well-managed construction but demolished after one year due to misalignment with bridge redevelopment plans) illustrate the need for balanced focus.
 
@@ -71,25 +71,25 @@ EEFs are conditions not directly influenced by the project team that impact, con
 
 #### Internal EEFs
 
-- **Organizational culture, structure, and governance** — vision, mission, values, beliefs, cultural norms, leadership styles, hierarchy, ethics, codes of conduct
-- **Geographic distribution of facilities and resources** — physical locations, corporate offices, R&D centres, virtual/hybrid teams
-- **Infrastructure** — existing facilities, equipment, telecommunications, IT hardware, availability, and capacity
-- **Information technology systems** — task management tools, cost/scheduling software, configuration management systems, work authorization systems
-- **Resource availability** — contracting/purchasing constraints, staffing levels, team capacity, collaboration agreements
-- **Employee capability** — human resources expertise, skills, competencies, specialized knowledge
-- **Financial capability** — external funding options, additional financial resources
+- **Organizational culture, structure, and governance**: vision, mission, values, beliefs, cultural norms, leadership styles, hierarchy, ethics, codes of conduct
+- **Geographic distribution of facilities and resources**: physical locations, corporate offices, R&D centres, virtual/hybrid teams
+- **Infrastructure**: existing facilities, equipment, telecommunications, IT hardware, availability, and capacity
+- **Information technology systems**: task management tools, cost/scheduling software, configuration management systems, work authorization systems
+- **Resource availability**: contracting/purchasing constraints, staffing levels, team capacity, collaboration agreements
+- **Employee capability**: human resources expertise, skills, competencies, specialized knowledge
+- **Financial capability**: external funding options, additional financial resources
 
 #### External EEFs
 
-- **Marketplace conditions** — competitors, customer behaviour, market share, brand recognition, trademarks
-- **Social and cultural influences** — political climate, codes of conduct, ethics, perceptions
-- **Legal restrictions** — country/local laws on security, data protection, business conduct, employment, procurement
-- **Academic research** — industry studies, publications, benchmarking, empirical data, emerging trends
-- **Government or industry standards** — regulatory agency regulations on products, production, environment, safety, quality, workmanship
-- **Financial considerations** — currency exchange rates, interest rates, inflation, tariffs, taxes, geographic location
-- **Physical environmental elements** — working conditions, weather, geopolitical constraints
-- **Emerging technologies and innovations** — AI, automation, blockchain, IoT
-- **Public health and safety regulations** — health protocols, travel restrictions, quarantine measures, social distancing, public safety mandates
+- **Marketplace conditions**: competitors, customer behaviour, market share, brand recognition, trademarks
+- **Social and cultural influences**: political climate, codes of conduct, ethics, perceptions
+- **Legal restrictions**: country/local laws on security, data protection, business conduct, employment, procurement
+- **Academic research**: industry studies, publications, benchmarking, empirical data, emerging trends
+- **Government or industry standards**: regulatory agency regulations on products, production, environment, safety, quality, workmanship
+- **Financial considerations**: currency exchange rates, interest rates, inflation, tariffs, taxes, geographic location
+- **Physical environmental elements**: working conditions, weather, geopolitical constraints
+- **Emerging technologies and innovations**: AI, automation, blockchain, IoT
+- **Public health and safety regulations**: health protocols, travel restrictions, quarantine measures, social distancing, public safety mandates
 
 ### Organizational Process Assets (OPAs)
 
@@ -97,7 +97,7 @@ OPAs are the plans, processes, documents, templates, and knowledge repositories 
 
 Two categories:
 
-1. **Policies, processes, and procedures** — generally established by the PMO or another function outside the project. Updated only through appropriate organizational policies. Includes:
+1. **Policies, processes, and procedures**: generally established by the PMO or another function outside the project. Updated only through appropriate organizational policies. Includes:
    - Tailoring guidelines and criteria
    - Product and project life cycles, methods, and procedures
    - Templates (project management plans, registers, contracts, risk matrices)
@@ -112,7 +112,7 @@ Two categories:
    - Service-level agreements (SLAs)
    - Project closure guidelines
 
-2. **Organizational knowledge repositories** — updated throughout the project with project information. Includes:
+2. **Organizational knowledge repositories**: updated throughout the project with project information. Includes:
    - Configuration management repositories (software/hardware versions, baselines)
    - Financial data repositories (labour hours, costs, budgets, overruns)
    - Historical information and lessons learned
@@ -129,9 +129,9 @@ The appropriate organizational structure depends on variables such as organizati
 | Organic or simple | Low | Part-time; may not be designated | Low |
 | Functional (centralized) | Low | Part-time; may not be designated | Low |
 | Multidivisional | Low | Part-time; may not be designated | Low |
-| Matrix — strong | Moderate to high | Full-time, designated role | Moderate to high |
-| Matrix — weak | Low | Part-time; not a designated role | Low |
-| Matrix — balanced | Low to moderate | Part-time; embedded skill | Low to moderate |
+| Matrix: strong | Moderate to high | Full-time, designated role | Moderate to high |
+| Matrix: weak | Low | Part-time; not a designated role | Low |
+| Matrix: balanced | Low to moderate | Part-time; embedded skill | Low to moderate |
 | Project-oriented (composite, hybrid) | High to almost total | Full-time, designated role | High to almost total |
 | Virtual/network | Low to moderate | Full-time or part-time | Low to moderate |
 | Hybrid | Mixed | Mixed | Mixed |
@@ -142,15 +142,15 @@ Product management is the integration of people, data, processes, and business s
 
 **Relationship models** among these disciplines include:
 
-- **Program management within a product life cycle** — for large or long-term products, one or more product life cycle phases may merit a set of programs and projects
-- **Project management within a product life cycle** — portfolio governance charters individual projects for enhancements and improvements
-- **Product management within a portfolio** — the entire product life cycle is managed within a single portfolio, ensuring investment alignment with business strategy
-- **Product management within a program or project** — product-related responsibilities defined as components of a program or stand-alone projects
-- **Product management across programs and projects** — a product life cycle spans multiple programs and projects
+- **Program management within a product life cycle**: for large or long-term products, one or more product life cycle phases may merit a set of programs and projects
+- **Project management within a product life cycle**: portfolio governance charters individual projects for enhancements and improvements
+- **Product management within a portfolio**: the entire product life cycle is managed within a single portfolio, ensuring investment alignment with business strategy
+- **Product management within a program or project**: product-related responsibilities defined as components of a program or stand-alone projects
+- **Product management across programs and projects**: a product life cycle spans multiple programs and projects
 
 **Key supporting roles** bridging project and product management:
-- **Product owner** — ensures the development team focuses on delivering valuable features by maintaining and prioritizing the product backlog
-- **Business analyst** — gathers and documents requirements, ensuring project scope and product functionality align with business needs
+- **Product owner**: ensures the development team focuses on delivering valuable features by maintaining and prioritizing the product backlog
+- **Business analyst**: gathers and documents requirements, ensuring project scope and product functionality align with business needs
 
 ## Functions Associated With Projects
 
@@ -175,7 +175,7 @@ Contribute specialized knowledge, vision, and skills in a specific subject area.
 Prioritize requirements or scope based on value, dependencies, and technical/operational risks. Set the course for the next increment or element. In adaptive environments, direction comes from regular review cycles; in predictive environments, from milestone checkpoints. Roles: portfolio managers, project sponsors, product owners.
 
 ### 7. Provide Resources
-Secure necessary resources — funding, physical resources, personnel, and authority. Portfolio managers and sponsors champion the project at the organizational level. Functional and resource managers allocate the right personnel, equipment, and expertise, and address resource gaps during the project life cycle.
+Secure necessary resources: funding, physical resources, personnel, and authority. Portfolio managers and sponsors champion the project at the organizational level. Functional and resource managers allocate the right personnel, equipment, and expertise, and address resource gaps during the project life cycle.
 
 ## Project Management Roles
 
@@ -186,17 +186,17 @@ May consist of a single project manager or a team. Essential for guiding the pro
 
 The project management team operates within multiple **spheres of influence**: project team, stakeholders, the organization, the PMO, and operational management. Core competencies include:
 
-- **Social responsibilities** — decisions aligned to the common good; giving back to the profession and society; adhering to ethical standards; self-development and continuous improvement
-- **Power skills** — adaptability, emotional intelligence, critical thinking, sound judgment, decision-making, team motivation, negotiation, and conflict resolution
-- **Business acumen** — strategic thinking, alignment within organizational context, project selection criteria, industry knowledge, business case development, financial analysis
-- **Ways of working** — applying appropriate methodologies (predictive, adaptive, hybrid), brainstorming, change management techniques
-- **Results** — problem-solving, working within organizational policies, dealing with enterprise politics (influence, negotiation, autonomy, power)
+- **Social responsibilities**: decisions aligned to the common good; giving back to the profession and society; adhering to ethical standards; self-development and continuous improvement
+- **Power skills**: adaptability, emotional intelligence, critical thinking, sound judgment, decision-making, team motivation, negotiation, and conflict resolution
+- **Business acumen**: strategic thinking, alignment within organizational context, project selection criteria, industry knowledge, business case development, financial analysis
+- **Ways of working**: applying appropriate methodologies (predictive, adaptive, hybrid), brainstorming, change management techniques
+- **Results**: problem-solving, working within organizational policies, dealing with enterprise politics (influence, negotiation, autonomy, power)
 
 In adaptive environments, functions such as product owner, scrum master, agile coach, or team lead may share project management responsibilities. The essence of project management lies in the characteristics of the project, not the title of the individual.
 
 **Competency development** is fostered by mixing team members of different seniority levels, providing mentorship and coaching, identifying individual learning needs, and promoting a culture of continuous improvement and reflective practice.
 
-**Technological impact** — tools for task scheduling, resource allocation, automation, data visualization, AI/ML for predictive insights, and cloud collaboration technologies enhance efficiency. The project management team must ensure data accuracy, neutrality of outputs, and alignment with the organization's IT department for information security.
+**Technological impact**: tools for task scheduling, resource allocation, automation, data visualization, AI/ML for predictive insights, and cloud collaboration technologies enhance efficiency. The project management team must ensure data accuracy, neutrality of outputs, and alignment with the organization's IT department for information security.
 
 ### Sponsor, Customer, or Product Owner
 Provide decision leadership outside the project management team's authority. They communicate the organization's vision, goals, and expectations; facilitate executive-level decisions; help secure resources; advocate for the project team; and address obstacles beyond the project management team's authority. Critical for achieving project sustainability and ESG goals. Their strategic link empowers the project team and increases the likelihood of achieving desired outcomes.
@@ -209,5 +209,5 @@ Project management teams should engage in continuous dialogue with end users, in
 
 ## Related Chapters
 
-- [[02_Project_Management_Principles]] — Section 3 of The Standard for Project Management: the twelve principle-based guidelines for project professional behaviour and decision-making
-- [[SWEBOK v4 - Overview]] — Software Engineering Body of Knowledge; Chapter 09 (Software Engineering Management) aligns with PMBOK project management practices
+- [[02_Project_Management_Principles]]: Section 3 of The Standard for Project Management: the twelve principle-based guidelines for project professional behaviour and decision-making
+- [[SWEBOK v4 - Overview]]: Software Engineering Body of Knowledge; Chapter 09 (Software Engineering Management) aligns with PMBOK project management practices

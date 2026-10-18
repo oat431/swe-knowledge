@@ -2,17 +2,17 @@
 tags: [principles, project-management, pmbok]
 ---
 
-> *Source: PMBOK® Guide — Eighth Edition by PMI, The Standard for Project Management §3 (pp. 35–56)*
+> *Source: PMBOK® Guide: Eighth Edition by PMI, The Standard for Project Management §3 (pp. 35–56)*
 
 ## Purpose
 
-The principles of project management serve as foundational guidelines for professional behavior, decision-making, and problem-solving. Unlike prescriptive laws or rules, these principles are intended to reinforce the **project management mindset** and guide the behavior of people involved in projects. They are complementary and supplement one another — no principle contradicts another, though they may overlap in practice, reflecting the complex and interconnected nature of project management.
+The principles of project management serve as foundational guidelines for professional behavior, decision-making, and problem-solving. Unlike prescriptive laws or rules, these principles are intended to reinforce the **project management mindset** and guide the behavior of people involved in projects. They are complementary and supplement one another. No principle contradicts another, though they may overlap in practice, reflecting the complex and interconnected nature of project management.
 
 The six principles collectively describe the mindset of project management, which in turn guides the **mechanics** of project management (performance domains, processes, and methods).
 
 ## The Project Management Mindset
 
-Project management is more than a collection of performance domains, processes, and methods — it represents a **growth mindset** fundamental for executing strategy, fostering adaptability, driving change, and generating value. The mindset is composed of three dimensions, each integrating two of the six principles:
+Project management is more than a collection of performance domains, processes, and methods. It represents a **growth mindset** fundamental for executing strategy, fostering adaptability, driving change, and generating value. The mindset is composed of three dimensions, each integrating two of the six principles:
 
 ### Proactive Dimension
 
@@ -39,13 +39,13 @@ Emphasizes delivering **maximum value** by seamlessly integrating **sustainabili
 - **#Focus on Value**
 - **#Integrate Sustainability Within All Project Areas**
 
-Promotes a balance between achieving measurable success and advancing broader sustainability goals — the triple bottom line of **people, profit, and planet**.
+Promotes a balance between achieving measurable success and advancing broader sustainability goals: the triple bottom line of **people, profit, and planet**.
 
 ---
 
 ## Principles and Performance Domains
 
-**Performance domains** are the mechanics of project management — the knowledge, processes, and methods essential for effective project delivery. They include: **Governance**, **Scope** (including quality), **Schedule**, **Finance**, **Stakeholders**, **Resources**, and **Risk**. Each domain operationalizes the principles by providing a structured approach to managing project aspects, while the principles serve as their foundation.
+**Performance domains** are the mechanics of project management: the knowledge, processes, and methods essential for effective project delivery. They include: **Governance**, **Scope** (including quality), **Schedule**, **Finance**, **Stakeholders**, **Resources**, and **Risk**. Each domain operationalizes the principles by providing a structured approach to managing project aspects, while the principles serve as their foundation.
 
 While all principles relate to all domains, some connections are stronger than others:
 
@@ -64,16 +64,16 @@ While all principles relate to all domains, some connections are stronger than o
 
 ### 1. Adopt a Holistic View
 
-**Description:** Understand and manage projects by considering all components and their interdependencies as part of a larger system. This perspective aligns with **systems thinking**, which emphasizes the interconnectedness of elements within a project. It provides a framework for viewing interrelationships in their full context and for seeing patterns rather than static snapshots. Embracing a holistic perspective is crucial for managing project complexity — it enables project managers to grasp the overall situation, pinpoint root causes of challenges, and foster an interdisciplinary approach that leads to more innovative and effective solutions.
+**Description:** Understand and manage projects by considering all components and their interdependencies as part of a larger system. This perspective aligns with **systems thinking**, which emphasizes the interconnectedness of elements within a project. It provides a framework for viewing interrelationships in their full context and for seeing patterns rather than static snapshots. Embracing a holistic perspective is crucial for managing project complexity. It enables project managers to grasp the overall situation, pinpoint root causes of challenges, and foster an interdisciplinary approach that leads to more innovative and effective solutions.
 
 **Project Impact:**
 
-- **Alignment with organizational strategy and goals** — projects are more likely to contribute positively to strategic objectives.
-- **Integrated decision-making** — decisions consider disparate perspectives across the entire project ecosystem, ensuring sustainable and effective outcomes.
-- **Enhanced communication** — clear and consistent communication across all stakeholders keeps everyone informed and aligned.
-- **Managing uncertainty and complexity** — for high-uncertainty projects, a holistic view ensures planning incorporates techniques to progressively identify and address sources of uncertainty; for highly complex projects, it seeks to understand and simplify intricate interdependencies.
-- **Proactive and pragmatic risk management** — a wider and clearer understanding of interconnectedness enables informed, timely decision-making to effectively mitigate threats and exploit opportunities.
-- **Sustainability alignment** — ensures all aspects of the project contribute positively (or that negative contributions are quantified), relating to environmental cost/impact and benefits delivered.
+- **Alignment with organizational strategy and goals**: projects are more likely to contribute positively to strategic objectives.
+- **Integrated decision-making**: decisions consider disparate perspectives across the entire project ecosystem, ensuring sustainable and effective outcomes.
+- **Enhanced communication**: clear and consistent communication across all stakeholders keeps everyone informed and aligned.
+- **Managing uncertainty and complexity**: for high-uncertainty projects, a holistic view ensures planning incorporates techniques to progressively identify and address sources of uncertainty; for highly complex projects, it seeks to understand and simplify intricate interdependencies.
+- **Proactive and pragmatic risk management**: a wider and clearer understanding of interconnectedness enables informed, timely decision-making to effectively mitigate threats and exploit opportunities.
+- **Sustainability alignment**: ensures all aspects of the project contribute positively (or that negative contributions are quantified), relating to environmental cost/impact and benefits delivered.
 
 **Principle in Action:**
 
@@ -95,7 +95,7 @@ While all principles relate to all domains, some connections are stronger than o
 
 ### 2. Focus on Value
 
-**Description:** Value is the ultimate success indicator and driver of projects. It can be assessed using measurable metrics (e.g., return on investment) or qualitative observations (e.g., testimonials, societal benefits). Value represents the overall worth of project outcomes and the net benefits to stakeholders — encompassing deliverables and their related outcomes, particularly from key stakeholders' perspective. Value can be expressed as financial contributions, social benefits, or the customer's perceived benefits. All projects exist to pursue target organizational objectives that are worth more than what is invested in pursuit of those objectives.
+**Description:** Value is the ultimate success indicator and driver of projects. It can be assessed using measurable metrics (e.g., return on investment) or qualitative observations (e.g., testimonials, societal benefits). Value represents the overall worth of project outcomes and the net benefits to stakeholders, encompassing deliverables and their related outcomes, particularly from key stakeholders' perspective. Value can be expressed as financial contributions, social benefits, or the customer's perceived benefits. All projects exist to pursue target organizational objectives that are worth more than what is invested in pursuit of those objectives.
 
 Project justification and organizational strategy (often detailed in a **business case**) provide the team with information to make decisions that meet or exceed intended business value. Desired outcomes should be clearly described, iteratively assessed, and updated throughout the project life cycle using quality gates, feedback loops, and regular reviews. If misalignment persists or the project is unlikely to deliver intended value, it may be best to **terminate the effort**.
 
@@ -103,7 +103,7 @@ A focus on value aims to maximize return on project investments by delivering re
 
 **Project Impact:**
 
-Shifting focus from **deliverables** to **intended outcomes** allows project teams to deliver on the project's vision or purpose, rather than merely creating a specific deliverable. For example, customers may want specific software because they believe it will resolve their business need for higher productivity. The software is the output, but it does not enable productivity by itself — adding training as a deliverable can enable a higher-value outcome. If the output fails to enable desired productivity, the value proposition is undermined.
+Shifting focus from **deliverables** to **intended outcomes** allows project teams to deliver on the project's vision or purpose, rather than merely creating a specific deliverable. For example, customers may want specific software because they believe it will resolve their business need for higher productivity. The software is the output, but it does not enable productivity by itself. Adding training as a deliverable can enable a higher-value outcome. If the output fails to enable desired productivity, the value proposition is undermined.
 
 - Deliverables that support, but may not fully achieve, the project's vision or purpose without complementary outcomes.
 - Continuous evaluation of alignment with desired outputs, baselines, business case, and intended outcomes.
@@ -119,7 +119,7 @@ Shifting focus from **deliverables** to **intended outcomes** allows project tea
 |---|---|
 | **Governance** | Establishes frameworks and processes that align decisions with value objectives; governance is "right-sized" to focus on value delivery, not bureaucracy. |
 | **Scope** | Defines and controls scope to ensure all work contributes to intended value; prevents scope creep and gold plating through continuous scope management. |
-| **Schedule** | Ensures time is managed effectively to deliver expected value by — or earlier than — the target date; avoids delays that could diminish value. |
+| **Schedule** | Ensures time is managed effectively to deliver expected value by (or earlier than) the target date; avoids delays that could diminish value. |
 | **Finance** | Allocates financial resources efficiently to maximize value; continuous assessment of financial performance against the business case ensures viability. |
 | **Stakeholders** | Engages stakeholders to understand their needs and expectations; aligns outputs with desired outcomes and enhances satisfaction. |
 | **Resources** | Informs decisions around physical assets and talent; financial constraints may spark alternative solutions such as cross-training existing team members. |
@@ -133,15 +133,15 @@ Shifting focus from **deliverables** to **intended outcomes** allows project tea
 
 Foundational to embedding target quality thresholds is **continuous improvement** and **waste elimination**. Quality spans several dimensions applicable to both deliverables and processes:
 
-- **Performance** — Do deliverables or processes function as intended?
-- **Conformity** — Are deliverables and processes aligned with specifications and fit for use?
-- **Reliability** — Do deliverables and processes maintain necessary consistency?
-- **Resilience** — Can deliverables and processes cope with unforeseen failures and recover quickly?
-- **Satisfaction** — Do deliverables and processes elicit valuable feedback, including usability and user experience?
-- **Uniformity** — Do deliverables and processes demonstrate parity across similar outputs or workflows?
-- **Efficiency** — Are deliverables and processes optimized to produce the greatest output with the least input?
-- **Sustainability** — Do deliverables and processes contribute positively to economic, social, and environmental outcomes?
-- **Compliance** — Do deliverables and processes comply with regulatory, industry, and organizational standards?
+- **Performance**: Do deliverables or processes function as intended?
+- **Conformity**: Are deliverables and processes aligned with specifications and fit for use?
+- **Reliability**: Do deliverables and processes maintain necessary consistency?
+- **Resilience**: Can deliverables and processes cope with unforeseen failures and recover quickly?
+- **Satisfaction**: Do deliverables and processes elicit valuable feedback, including usability and user experience?
+- **Uniformity**: Do deliverables and processes demonstrate parity across similar outputs or workflows?
+- **Efficiency**: Are deliverables and processes optimized to produce the greatest output with the least input?
+- **Sustainability**: Do deliverables and processes contribute positively to economic, social, and environmental outcomes?
+- **Compliance**: Do deliverables and processes comply with regulatory, industry, and organizational standards?
 
 **Project Impact:**
 
@@ -155,41 +155,41 @@ Foundational to embedding target quality thresholds is **continuous improvement*
 
 **Principle in Action:**
 
-> A company expands its wholesale shipping services to support an unfamiliar regional market. A conventional approach focuses on meeting governmental shipping specifications and ensuring regulatory compliance for each target market. In contrast, a quality-driven approach investigates the expectations of the broader stakeholder system, including target distributors and retailers. This deeper analysis reveals that high-value customers have stricter standards than regulatory bodies — influencing packaging, delivery times, or product handling. By addressing these higher standards, the company not only meets legal requirements but exceeds customer expectations, leading to stronger market entry, enhanced satisfaction, and potentially greater market share.
+> A company expands its wholesale shipping services to support an unfamiliar regional market. A conventional approach focuses on meeting governmental shipping specifications and ensuring regulatory compliance for each target market. In contrast, a quality-driven approach investigates the expectations of the broader stakeholder system, including target distributors and retailers. This deeper analysis reveals that high-value customers have stricter standards than regulatory bodies, influencing packaging, delivery times, or product handling. By addressing these higher standards, the company not only meets legal requirements but exceeds customer expectations, leading to stronger market entry, enhanced satisfaction, and potentially greater market share.
 
 **Connected Performance Domains:**
 
 | Domain | Impact |
 |---|---|
 | **Governance** | Improves transparency and accountability; governance structures help ensure quality standards are met and decisions prioritize quality. |
-| **Scope** | Particularly strong connection — scope management inherently involves quality management; ensures deliverables meet requirements, standards, and specifications. |
+| **Scope** | Particularly strong connection: scope management inherently involves quality management; ensures deliverables meet requirements, standards, and specifications. |
 | **Schedule** | Ensures scheduling practices are reviewed for completeness and correctness; integrates product quality reviews as milestones; practices a "shift-left" approach prioritizing quality early in the life cycle. |
 | **Finance** | Controls costs by preventing rework and reducing waste; aligns financial management with quality objectives. |
 | **Stakeholders** | Ensures stakeholder expectations are met through continuous communication; integrates feedback for increased satisfaction, collaboration, and credibility. |
-| **Resources** | Ensures right resources are allocated to maintain target quality thresholds — skilled personnel and appropriate tools. |
+| **Resources** | Ensures right resources are allocated to maintain target quality thresholds: skilled personnel and appropriate tools. |
 | **Risk** | Proactively manages quality-related risks; anticipates and mitigates potential quality issues, reducing risk of defects and noncompliance. |
 
 ---
 
 ### 4. Be an Accountable Leader
 
-**Description:** Projects create a unique need for effective leadership. Unlike general business operations where roles are often established and consistent, projects may involve multiple organizations, departments, functions, or vendors that do not interact regularly. Moreover, projects may carry higher stakes and expectations. This diversity of influence often creates higher degrees of confusion and conflict — consequently, effective leadership behaviors are found more frequently on high-performing projects.
+**Description:** Projects create a unique need for effective leadership. Unlike general business operations where roles are often established and consistent, projects may involve multiple organizations, departments, functions, or vendors that do not interact regularly. Moreover, projects may carry higher stakes and expectations. This diversity of influence often creates higher degrees of confusion and conflict. Consequently, effective leadership behaviors are found more frequently on high-performing projects.
 
 Accountable leadership is about being **responsible** and taking **ownership** of the project's target business objectives, as well as the actions taken and decisions made. Key characteristics include:
 
-- **Integrity, honesty, and fairness** — moral principles that guide decisions, particularly in tough situations; focused on the common good.
-- **Self-awareness** — the capability to make connections among feelings, thoughts, and actions by understanding motives, values, and strengths.
-- **Respectfulness, humility, and availability** — openness to feedback; working for the team, supporting their needs and removing barriers (servant leadership).
-- **Flexibility and adaptability** — the capability to adapt leadership style to the situation and audience without losing core values.
-- **Shared leadership** — leadership is not exclusive to any specific role; high-performing projects feature multiple people exercising leadership skills. Leadership differs from authority: authority is the position of control, whereas leadership is about inspiring and motivating others through leading by example.
+- **Integrity, honesty, and fairness**: moral principles that guide decisions, particularly in tough situations; focused on the common good.
+- **Self-awareness**: the capability to make connections among feelings, thoughts, and actions by understanding motives, values, and strengths.
+- **Respectfulness, humility, and availability**: openness to feedback; working for the team, supporting their needs and removing barriers (servant leadership).
+- **Flexibility and adaptability**: the capability to adapt leadership style to the situation and audience without losing core values.
+- **Shared leadership**: leadership is not exclusive to any specific role; high-performing projects feature multiple people exercising leadership skills. Leadership differs from authority: authority is the position of control, whereas leadership is about inspiring and motivating others through leading by example.
 
 **Project Impact:**
 
-- **Enhanced team performance** — accountable leaders influence all professionals through leadership, effective communication, decision-making, emotional intelligence, problem-solving, stakeholder engagement, and strategic thinking.
-- **Increased trust and morale** — emotional intelligence enables navigating conflicts and stress.
-- **Improved decision-making** — strong stakeholder engagement helps secure support and buy-in.
-- **Greater stakeholder confidence** — leaders commit to promoting the growth of other leaders and making a positive impact on their area of influence.
-- **Resilience in facing challenges** — leadership style directly shapes team dynamics, motivation, and overall performance.
+- **Enhanced team performance**: accountable leaders influence all professionals through leadership, effective communication, decision-making, emotional intelligence, problem-solving, stakeholder engagement, and strategic thinking.
+- **Increased trust and morale**: emotional intelligence enables navigating conflicts and stress.
+- **Improved decision-making**: strong stakeholder engagement helps secure support and buy-in.
+- **Greater stakeholder confidence**: leaders commit to promoting the growth of other leaders and making a positive impact on their area of influence.
+- **Resilience in facing challenges**: leadership style directly shapes team dynamics, motivation, and overall performance.
 
 **Principle in Action:**
 
@@ -202,7 +202,7 @@ Accountable leadership is about being **responsible** and taking **ownership** o
 | **Governance** | Ensures decisions are made transparently and ethically; leaders take ownership of direction and outcomes, fostering trust. |
 | **Scope** | Strong leadership confronts and resolves scope disagreements in a way that unites stakeholders on the value proposition. |
 | **Schedule** | Ensures collaborative discussions include appropriate parties and there is alignment on schedule activities and artifacts. |
-| **Finance** | Encourages practitioners to manage pressures when costs are scrutinized, reserves are applied, or financial challenges arise — neither ignoring nor carelessly addressing financial considerations. |
+| **Finance** | Encourages practitioners to manage pressures when costs are scrutinized, reserves are applied, or financial challenges arise, neither ignoring nor carelessly addressing financial considerations. |
 | **Stakeholders** | Effective leaders engage and influence stakeholders and sponsors to secure and maintain needed support. |
 | **Resources** | Self-awareness helps build relationships; effective leaders manage resources with responsibility and integrity. |
 | **Risk** | Effective leaders adapt and are flexible to opportunities or threats; demonstrate integrity and accountability to ensure risk is managed to protect and enhance the value proposition. |
@@ -213,14 +213,14 @@ Accountable leadership is about being **responsible** and taking **ownership** o
 
 **Description:** Meeting present needs without compromising the ability of future generations to meet their own needs. This principle involves adopting technology responsibly to foster a better future, while systematically identifying and mitigating any adverse impacts on the organization, community, and environment.
 
-Strategies for addressing externalities follow an increasingly impactful hierarchy — the **Sustainability Pyramid**:
+Strategies for addressing externalities follow an increasingly impactful hierarchy, the **Sustainability Pyramid**:
 
 1. **Avoid** negative outcomes altogether
 2. **Minimize** negative outcomes generated
 3. **Restore** impacts of negative outcomes
 4. **Compensate/offset** for negative outcomes generated
 
-Sustainability is essential for addressing global challenges such as climate change, biodiversity loss, pollution, societal inequities, and community well-being. By integrating sustainability, organizations can align with the **triple bottom line** — balancing social equity, environmental stewardship, and economic prosperity.
+Sustainability is essential for addressing global challenges such as climate change, biodiversity loss, pollution, societal inequities, and community well-being. By integrating sustainability, organizations can align with the **triple bottom line**, balancing social equity, environmental stewardship, and economic prosperity.
 
 **Benefits of implementing sustainability:**
 
@@ -231,7 +231,7 @@ Sustainability is essential for addressing global challenges such as climate cha
 
 **Challenges:**
 
-- Integrating sustainability broadens the scope of project management by considering broader time orientations and more stakeholders — this may increase costs or complexities.
+- Integrating sustainability broadens the scope of project management by considering broader time orientations and more stakeholders. This may increase costs or complexities.
 - Sustainability risks arise when project activities fail to balance societal, economic, and environmental considerations.
 - Assessing a project's success is challenging due to the lack of universal sustainability criteria; each project requires a tailored approach.
 
@@ -248,9 +248,9 @@ Sustainability-related KPIs may be included in the project scope statement, proj
 
 **Principle in Action:**
 
-> A construction project requires materials derived from natural resources, potentially sourced externally. If sustainability principles are overlooked, the project team might choose the least expensive materials, potentially harming the environment and human health. By adhering to sustainability principles, the project team not only focuses on value and the internal rate of return, but also demonstrates commitment to environmental sustainability and responsible use of materials — carefully planning required materials, selecting sources with the least environmental impact, or seeking materials that mimic natural processes (e.g., constructing urban buildings with wood or using recycled concrete instead of natural stone).
+> A construction project requires materials derived from natural resources, potentially sourced externally. If sustainability principles are overlooked, the project team might choose the least expensive materials, potentially harming the environment and human health. By adhering to sustainability principles, the project team not only focuses on value and the internal rate of return, but also demonstrates commitment to environmental sustainability and responsible use of materials, carefully planning required materials, selecting sources with the least environmental impact, or seeking materials that mimic natural processes (e.g., constructing urban buildings with wood or using recycled concrete instead of natural stone).
 >
-> Technology projects can enhance sustainability by integrating eco-friendly practices, emphasizing social responsibility, and maximizing social impact — reducing resource consumption and waste, streamlining processes, improving efficiency, and creating positive social impacts such as improving access to education and healthcare through technology.
+> Technology projects can enhance sustainability by integrating eco-friendly practices, emphasizing social responsibility, and maximizing social impact: reducing resource consumption and waste, streamlining processes, improving efficiency, and creating positive social impacts such as improving access to education and healthcare through technology.
 
 **Connected Performance Domains:**
 
@@ -272,11 +272,11 @@ Sustainability-related KPIs may be included in the project scope statement, proj
 
 Key enablers of an empowered culture:
 
-- **Diversity** — a diverse project team enriches the project environment by bringing together different perspectives. Cultivating a team environment that honors diversity and harnesses it constructively fosters an atmosphere where conflicts can be managed efficiently.
-- **Process definition** — project teams should define processes that enable completion of tasks and work assignments, and engage stakeholders to understand, consider, communicate, and respond to their interests and needs.
-- **Interpersonal skills** — team members and stakeholders should develop initiative, integrity, honesty, collaboration, respect, empathy, and confidence. Coupled with active stakeholder involvement from inception to completion, these competencies pave the way for success.
-- **Knowledge of organizational structures** — being aware of various configurations and relationships among project tasks and organizational procedures is important. Teams tailor and employ frameworks that facilitate synchronization of personal contributions within project tasks.
-- **Team agreements** — a set of behavioral parameters and working norms established by the project team and upheld through individual and team commitments. These should be created at the beginning of a project to determine essential norms and practices that facilitate ongoing collaborative success.
+- **Diversity**: a diverse project team enriches the project environment by bringing together different perspectives. Cultivating a team environment that honors diversity and harnesses it constructively fosters an atmosphere where conflicts can be managed efficiently.
+- **Process definition**: project teams should define processes that enable completion of tasks and work assignments, and engage stakeholders to understand, consider, communicate, and respond to their interests and needs.
+- **Interpersonal skills**: team members and stakeholders should develop initiative, integrity, honesty, collaboration, respect, empathy, and confidence. Coupled with active stakeholder involvement from inception to completion, these competencies pave the way for success.
+- **Knowledge of organizational structures**: being aware of various configurations and relationships among project tasks and organizational procedures is important. Teams tailor and employ frameworks that facilitate synchronization of personal contributions within project tasks.
+- **Team agreements**: a set of behavioral parameters and working norms established by the project team and upheld through individual and team commitments. These should be created at the beginning of a project to determine essential norms and practices that facilitate ongoing collaborative success.
 
 **Project Impact:**
 
@@ -300,7 +300,7 @@ Remote and virtual teams face heightened challenges due to varying work styles, 
 | **Scope** | Open-channel communication proactively calibrates to evolving needs to add, adjust quality, or remove elements of scope and quality requirements. |
 | **Schedule** | Empowered teams offer ideas to accelerate, slow down, or stop delivery of key activities to maximize available opportunities. |
 | **Finance** | Empowered teams reduce or eliminate unplanned expenditures by increasing focus on value creation; benefits realization occurs through generating and identifying long-term goals. |
-| **Stakeholders** | Teams establish, influence, or define the level and character of engagement with appropriate stakeholders — both inside and outside the performing organization. |
+| **Stakeholders** | Teams establish, influence, or define the level and character of engagement with appropriate stakeholders, both inside and outside the performing organization. |
 | **Resources** | Teams restrict or enable access to physical resources in line with requirements; the same applies for people with the skills, knowledge, and experience needed, promoting a learning culture. |
 | **Risk** | The team defines risk thresholds and participates in subsequent risk management activities. |
 
@@ -308,8 +308,8 @@ Remote and virtual teams face heightened challenges due to varying work styles, 
 
 ## Related Chapters
 
-- [[body-of-knowledge/PMBOK/00_Introduction|PMBOK Introduction]] — Section 1: Introduction and Section 2: A System for Value Delivery
-- [[03_Project_Life_Cycles|PMBOK Project Life Cycles]] — Section 4: Project life cycles, phases, development approaches, delivery cadence, and focus areas
+- [[body-of-knowledge/PMBOK/00_Introduction|PMBOK Introduction]]: Section 1: Introduction and Section 2: A System for Value Delivery
+- [[03_Project_Life_Cycles|PMBOK Project Life Cycles]]: Section 4: Project life cycles, phases, development approaches, delivery cadence, and focus areas
 - [[04_Governance_Performance_Domain|Governance Performance Domain]]
 - [[05_Scope_Performance_Domain|Scope Performance Domain]]
 - [[06_Schedule_Performance_Domain|Schedule Performance Domain]]
@@ -317,4 +317,4 @@ Remote and virtual teams face heightened challenges due to varying work styles, 
 - [[08_Stakeholders_Performance_Domain|Stakeholders Performance Domain]]
 - [[09_Resources_Performance_Domain|Resources Performance Domain]]
 - [[10_Risk_Performance_Domain|Risk Performance Domain]]
-- [[body-of-knowledge/PMBOK/00_Introduction|PMBOK Guide — Eighth Edition]] — Full reference
+- [[body-of-knowledge/PMBOK/00_Introduction|PMBOK Guide: Eighth Edition]]: Full reference

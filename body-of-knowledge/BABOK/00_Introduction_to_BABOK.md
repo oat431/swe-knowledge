@@ -7,7 +7,7 @@ tags:
 
 # Introduction to BABOK® Guide v3
 
-> *Source: BABOK® Guide v3 by IIBA (International Institute of Business Analysis), Chapter 1 — Introduction, Chapter 2 — Business Analysis Key Concepts*
+> *Source: BABOK® Guide v3 by IIBA (International Institute of Business Analysis), Chapter 1: Introduction, Chapter 2: Business Analysis Key Concepts*
 
 ## Purpose
 
@@ -54,12 +54,12 @@ The BABOK® Guide is organized into several major components:
 
 Knowledge areas are collections of logically (but not sequentially) related business analysis tasks. The **six knowledge areas** are:
 
-1. **[[01_BA_Planning_and_Monitoring]]** — tasks to organize and coordinate the efforts of business analysts and stakeholders
-2. **[[02_Elicitation_and_Collaboration]]** — tasks for preparing, conducting, and confirming elicitation activities and ongoing stakeholder collaboration
-3. **[[03_Requirements_Life_Cycle_Management]]** — tasks to manage and maintain requirements and design information from inception to retirement
-4. **[[04_Strategy_Analysis]]** — tasks to identify a business need of strategic or tactical importance and align the resulting strategy
-5. **[[05_Requirements_Analysis_and_Design]]** — tasks to structure, specify, model, validate, and verify requirements and designs
-6. **[[06_Solution_Evaluation]]** — tasks to assess the performance and value delivered by a solution in use
+1. **[[01_BA_Planning_and_Monitoring]]**: tasks to organize and coordinate the efforts of business analysts and stakeholders
+2. **[[02_Elicitation_and_Collaboration]]**: tasks for preparing, conducting, and confirming elicitation activities and ongoing stakeholder collaboration
+3. **[[03_Requirements_Life_Cycle_Management]]**: tasks to manage and maintain requirements and design information from inception to retirement
+4. **[[04_Strategy_Analysis]]**: tasks to identify a business need of strategic or tactical importance and align the resulting strategy
+5. **[[05_Requirements_Analysis_and_Design]]**: tasks to structure, specify, model, validate, and verify requirements and designs
+6. **[[06_Solution_Evaluation]]**: tasks to assess the performance and value delivered by a solution in use
 
 ### Extended Content
 
@@ -134,7 +134,7 @@ The BABOK® Guide classifies requirements into four categories, ordered by level
 |---|---|
 | **Business Requirements** | Statements of goals, objectives, and outcomes that describe *why* a change has been initiated. They can apply to the whole enterprise, a business area, or a specific initiative. |
 | **Stakeholder Requirements** | Describe the needs of stakeholders that must be met to achieve the business requirements. They serve as a bridge between business and solution requirements. |
-| **Solution Requirements** | Describe the capabilities and qualities of a solution that meets stakeholder requirements. Divided into: (a) **functional requirements** — the behaviour and information the solution must manage; (b) **non-functional requirements** (quality of service) — conditions under which a solution must remain effective or qualities it must have. |
+| **Solution Requirements** | Describe the capabilities and qualities of a solution that meets stakeholder requirements. Divided into: (a) **functional requirements**: the behaviour and information the solution must manage; (b) **non-functional requirements** (quality of service): conditions under which a solution must remain effective or qualities it must have. |
 | **Transition Requirements** | Describe capabilities the solution must have and conditions it must meet to facilitate transition from the current state to the future state. They are temporary in nature and are not needed once the change is complete. Examples include data conversion, training, and business continuity. |
 
 ## Stakeholders
@@ -164,7 +164,7 @@ Requirements and designs are closely related but have a distinct focus:
 - **Requirements** are focused on the *need* (what kind of value could be delivered)
 - **Designs** are focused on the *solution* (how value might be realized)
 
-The distinction is not always clear-cut. The same techniques are used to elicit, model, and analyze both. A requirement leads to a design, which in turn may drive the discovery and analysis of more requirements — creating a cyclical, recursive relationship:
+The distinction is not always clear-cut. The same techniques are used to elicit, model, and analyze both. A requirement leads to a design, which in turn may drive the discovery and analysis of more requirements, creating a cyclical, recursive relationship:
 
 > **Business Requirements** → *Why do I want it?* → **Stakeholder Requirements** → *What are the needs?* → **Solution Requirements** → *What do I want?* → **Design** → (cycle continues until requirements are met) → **Transition Requirements** → *What are the conditions?*
 
@@ -180,7 +180,7 @@ Business analysis can be complex and recursive: a requirement may be used to def
 | Develop business strategy, goals, and objectives for a new business | Business Capability Model |
 | Provide information in English and French | Prototype with text displayed in English and French |
 
-The importance of the business analyst's role lies in continuously asking **"Why?"** — why is either the requirement or design necessary to provide value and facilitate the realization of enterprise goals and objectives.
+The importance of the business analyst's role lies in continuously asking **"Why?"**: why is either the requirement or design necessary to provide value and facilitate the realization of enterprise goals and objectives.
 
 ## Related Chapters
 

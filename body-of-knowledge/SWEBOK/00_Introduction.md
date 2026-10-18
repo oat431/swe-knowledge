@@ -11,7 +11,7 @@ tags:
 
 ## What Is the SWEBOK Guide?
 
-The SWEBOK Guide is **not** the body of knowledge itself—that exists in published literature. Rather, the Guide describes, organizes, and provides topical access to the *generally accepted* portion of that body of knowledge. It serves five explicit objectives:
+The SWEBOK Guide is **not** the body of knowledge itself; that exists in published literature. Rather, the Guide describes, organizes, and provides topical access to the *generally accepted* portion of that body of knowledge. It serves five explicit objectives:
 
 1. **Promote a consistent worldwide view** of software engineering
 2. **Specify the scope** of software engineering and clarify its place relative to other disciplines
@@ -23,12 +23,12 @@ The V4 development process engaged over 130 reviewers from the Americas, Asia, E
 
 ## Structure of the Guide
 
-The Guide comprises **18 Knowledge Areas (KAs)** followed by three appendixes. A KA is an identified area of software engineering described in terms of its generally accepted knowledge—processes, practices, inputs, outputs, tools, and techniques.
+The Guide comprises **18 Knowledge Areas (KAs)** followed by three appendixes. A KA is an identified area of software engineering described in terms of its generally accepted knowledge: processes, practices, inputs, outputs, tools, and techniques.
 
 The 18 KAs divide into two groups:
 
-- **Chapters 1–15: Software engineering KAs** — covering the practice and engineering economics of the discipline, from requirements through maintenance, security, and professional practice.
-- **Chapters 16–18: Foundation KAs** — Computing Foundations, Mathematical Foundations, and Engineering Foundations, which distill the relevant theory from computer science and engineering.
+- **Chapters 1–15: Software engineering KAs**: covering the practice and engineering economics of the discipline, from requirements through maintenance, security, and professional practice.
+- **Chapters 16–18: Foundation KAs**: Computing Foundations, Mathematical Foundations, and Engineering Foundations, which distill the relevant theory from computer science and engineering.
 
 Each KA uses a **two- or three-level hierarchical breakdown** into labeled topics and subtopics, compatible with major schools of thought and industry practice. Breakdowns are not designed for particular application domains, business models, or development methodologies; they describe what is generally found across the discipline.
 

@@ -8,7 +8,7 @@ tags:
 
 # Requirements Analysis and Design Definition
 
-> **Source:** *BABOK® Guide v3 by IIBA, Chapter 6 — Requirements Analysis and Design Definition*
+> **Source:** *BABOK® Guide v3 by IIBA, Chapter 6: Requirements Analysis and Design Definition*
 >
 > **Purpose:** This knowledge area describes the tasks business analysts perform to structure and organize requirements discovered during elicitation, specify and model requirements and designs, validate and verify information, identify solution options that meet business needs, and estimate the potential value that could be realized for each solution option. It covers the full spectrum from initial elicitation results through to a recommended solution.
 
@@ -47,7 +47,7 @@ Specifying and modelling activities include capturing attributes/metadata about 
 
 ### Elements
 
-1. **Model Requirements** — A model is a descriptive and visual way to convey information to support analysis, communication, and understanding. Models confirm knowledge, identify information gaps, and identify duplicate information.
+1. **Model Requirements**: A model is a descriptive and visual way to convey information to support analysis, communication, and understanding. Models confirm knowledge, identify information gaps, and identify duplicate information.
 
    Modelling formats:
    - **Matrices:** for requirements with complex but uniform structure (data dictionaries, traceability, gap analysis, prioritization, attributes).
@@ -60,11 +60,11 @@ Specifying and modelling activities include capturing attributes/metadata about 
    - **Capability:** Business Capability Analysis, Functional Decomposition, Prototyping.
    - **Data and Information:** Data Dictionary, Data Flow Diagrams, Data Modelling, Glossary, State Modelling, Interface Analysis.
 
-2. **Analyze Requirements** — Decompose business analysis information to examine what must change, what should stay the same, missing components, unnecessary components, and constraints/assumptions. The level of decomposition varies by stakeholder knowledge, misunderstanding risk, organizational standards, and regulatory obligations.
+2. **Analyze Requirements**: Decompose business analysis information to examine what must change, what should stay the same, missing components, unnecessary components, and constraints/assumptions. The level of decomposition varies by stakeholder knowledge, misunderstanding risk, organizational standards, and regulatory obligations.
 
-3. **Represent Requirements and Attributes** — Explicitly represent requirements with enough detail to exhibit quality characteristics. Specify attributes per the information management plan. Categorize requirements according to the classification schema to ensure completeness and appropriate traceability between types.
+3. **Represent Requirements and Attributes**: Explicitly represent requirements with enough detail to exhibit quality characteristics. Specify attributes per the information management plan. Categorize requirements according to the classification schema to ensure completeness and appropriate traceability between types.
 
-4. **Implement the Appropriate Levels of Abstraction** — Vary the level of abstraction based on requirement type and audience. Produce different viewpoints for different stakeholders while maintaining the meaning and intent of requirements across all representations.
+4. **Implement the Appropriate Levels of Abstraction**: Vary the level of abstraction based on requirement type and audience. Produce different viewpoints for different stakeholders while maintaining the meaning and intent of requirements across all representations.
 
 ### Guidelines and Tools
 
@@ -96,7 +96,7 @@ To ensure that requirements and designs specifications and models meet quality s
 
 ### Description
 
-Verification constitutes a check that requirements and designs have been defined correctly. It determines that requirements are ready for validation and provides information for further work. A high-quality specification is well-written and easily understood; a high-quality model follows notation standards and effectively represents reality. The most important characteristic is **fitness for use** — quality is ultimately determined by stakeholders.
+Verification constitutes a check that requirements and designs have been defined correctly. It determines that requirements are ready for validation and provides information for further work. A high-quality specification is well-written and easily understood; a high-quality model follows notation standards and effectively represents reality. The most important characteristic is **fitness for use**. Quality is ultimately determined by stakeholders.
 
 ### Inputs
 
@@ -115,7 +115,7 @@ Verification constitutes a check that requirements and designs have been defined
    - **Prioritized:** ranked, grouped, or negotiated in terms of importance and value.
    - **Understandable:** represented using common terminology of the audience.
 
-2. **Verification Activities** — performed iteratively throughout analysis:
+2. **Verification Activities**: performed iteratively throughout analysis:
    - Checking compliance with organizational performance standards for business analysis.
    - Checking correct use of modelling notation, templates, or forms.
    - Checking for completeness within each model.
@@ -123,7 +123,7 @@ Verification constitutes a check that requirements and designs have been defined
    - Ensuring terminology is understandable to stakeholders and consistent within the organization.
    - Adding examples where appropriate for clarification.
 
-3. **Checklists** — used for quality control during verification. May include standard quality elements or be specifically developed to capture issues of concern. Ensures important items are included in final deliverables and required verification steps are followed.
+3. **Checklists**: used for quality control during verification. May include standard quality elements or be specifically developed to capture issues of concern. Ensures important items are included in final deliverables and required verification steps are followed.
 
 ### Guidelines and Tools
 
@@ -162,11 +162,11 @@ Validation is an ongoing process ensuring that stakeholder, solution, and transi
 
 ### Elements
 
-1. **Identify Assumptions** — When launching unprecedented products/services, assumptions about stakeholder response may be necessary. Assumptions about benefits resulting from requirement implementation are identified and defined so associated risks can be managed.
+1. **Identify Assumptions**: When launching unprecedented products/services, assumptions about stakeholder response may be necessary. Assumptions about benefits resulting from requirement implementation are identified and defined so associated risks can be managed.
 
-2. **Define Measurable Evaluation Criteria** — Define the evaluation criteria used to assess how successful the change has been after implementation. Baseline metrics may be established based on the current state; target metrics are developed to reflect achievement of business objectives.
+2. **Define Measurable Evaluation Criteria**: Define the evaluation criteria used to assess how successful the change has been after implementation. Baseline metrics may be established based on the current state; target metrics are developed to reflect achievement of business objectives.
 
-3. **Evaluate Alignment with Solution Scope** — A requirement that does not deliver benefit to a stakeholder is a strong candidate for elimination. When requirements do not align, either the future state must be re-evaluated and the solution scope changed, or the requirement removed from scope. If a design cannot be validated to support a requirement, there may be a missing or misunderstood requirement, or the design must change.
+3. **Evaluate Alignment with Solution Scope**: A requirement that does not deliver benefit to a stakeholder is a strong candidate for elimination. When requirements do not align, either the future state must be re-evaluated and the solution scope changed, or the requirement removed from scope. If a design cannot be validated to support a requirement, there may be a missing or misunderstood requirement, or the design must change.
 
 ### Guidelines and Tools
 
@@ -205,7 +205,7 @@ To ensure that the requirements collectively support one another to fully achiev
 
 Requirements architecture is the structure of all requirements of a change. It fits individual models and specifications together to ensure all requirements form a single whole supporting overall business objectives and producing a useful outcome. Business analysts use requirements architecture to: understand which models are appropriate; organize requirements for different stakeholders; illustrate how requirements/models interact and relate; ensure requirements work together to achieve objectives; and make trade-off decisions considering overall objectives.
 
-Requirements architecture shows how elements work in harmony — it is broader than traceability. Traceability proves each requirement links back to an objective but does not prove the solution is a cohesive whole that will work.
+Requirements architecture shows how elements work in harmony. It is broader than traceability. Traceability proves each requirement links back to an objective but does not prove the solution is a cohesive whole that will work.
 
 ### Inputs
 
@@ -215,24 +215,24 @@ Requirements architecture shows how elements work in harmony — it is broader t
 
 ### Elements
 
-1. **Requirements Viewpoints and Views** — A **viewpoint** is a set of conventions defining how requirements will be represented, organized, and related. Viewpoints provide templates addressing concerns of particular stakeholder groups, including standards for model types, attributes, notations, and analytical approaches for relationships.
+1. **Requirements Viewpoints and Views**: A **viewpoint** is a set of conventions defining how requirements will be represented, organized, and related. Viewpoints provide templates addressing concerns of particular stakeholder groups, including standards for model types, attributes, notations, and analytical approaches for relationships.
 
    Example viewpoints: business process models, data models and information, user interactions (use cases, user experience), audit and security, business models.
 
    No single viewpoint alone forms an entire architecture. Each is stronger for some aspects and weaker for others. The actual requirements and designs for a solution from a chosen viewpoint are referred to as a **view**. A collection of views makes up the requirements architecture. Viewpoints tell business analysts *what* information to provide; views describe the *actual* requirements and designs produced.
 
-2. **Template Architectures** — An architectural framework is a collection of viewpoints standard across an industry, sector, or organization. Frameworks serve as predefined templates; when populated with domain-specific information, they form even more useful templates.
+2. **Template Architectures**: An architectural framework is a collection of viewpoints standard across an industry, sector, or organization. Frameworks serve as predefined templates; when populated with domain-specific information, they form even more useful templates.
 
-3. **Completeness** — The architecture helps ensure the entire set of requirements is complete, cohesive, and tells a full story. No requirements should be missing, inconsistent, or contradictory. Dependencies between requirements that could keep objectives from being achieved must be accounted for. Structuring requirements according to different viewpoints helps ensure completeness; iterations of elicitation, specification, and analysis help identify gaps.
+3. **Completeness**: The architecture helps ensure the entire set of requirements is complete, cohesive, and tells a full story. No requirements should be missing, inconsistent, or contradictory. Dependencies between requirements that could keep objectives from being achieved must be accounted for. Structuring requirements according to different viewpoints helps ensure completeness; iterations of elicitation, specification, and analysis help identify gaps.
 
-4. **Relate and Verify Requirements Relationships** — Examine and analyze requirements to define relationships. Relationship quality criteria:
+4. **Relate and Verify Requirements Relationships**: Examine and analyze requirements to define relationships. Relationship quality criteria:
    - **Defined:** the relationship exists and its type is described.
    - **Necessary:** the relationship is necessary for holistic understanding.
    - **Correct:** the elements actually have the relationship described.
    - **Unambiguous:** no relationships link elements in two different and conflicting ways.
    - **Consistent:** relationships are described using the same standard descriptions as defined in viewpoints.
 
-5. **Business Analysis Information Architecture** — The structure of business analysis information, defined in Plan Business Analysis Information Management. It describes how all business analysis information (requirements, designs, models, elicitation results) relates, helping ensure the full set of requirements is complete.
+5. **Business Analysis Information Architecture**: The structure of business analysis information, defined in Plan Business Analysis Information Management. It describes how all business analysis information (requirements, designs, models, elicitation results) relates, helping ensure the full set of requirements is complete.
 
 ### Guidelines and Tools
 
@@ -273,24 +273,24 @@ When designing a solution, one or more design options may be identified. Each de
 ### Inputs
 
 - **Change Strategy:** describes the approach to transition to the future state; may impact design decisions regarding feasibility.
-- **Requirements (validated, prioritized):** only validated requirements are considered. Priorities aid in suggesting reasonable design options — higher-priority requirements deserve more weight in choosing solution components.
+- **Requirements (validated, prioritized):** only validated requirements are considered. Priorities aid in suggesting reasonable design options. Higher-priority requirements deserve more weight in choosing solution components.
 - **Requirements Architecture:** the full set of requirements and their relationships is important for defining design options that address the holistic set.
 
 ### Elements
 
-1. **Define Solution Approaches** — Describes whether solution components will be created or purchased, or some combination:
+1. **Define Solution Approaches**: Describes whether solution components will be created or purchased, or some combination:
    - **Create:** components are assembled, constructed, or developed by experts. Includes modifying an existing solution.
    - **Purchase:** components are selected from third-party offerings (products or services).
    - **Combination of both:** design options may include a mix of creation and purchase. Proposed integration of components is also considered within the design option.
 
-2. **Identify Improvement Opportunities** — Common examples include:
+2. **Identify Improvement Opportunities**: Common examples include:
    - **Increase Efficiencies:** automate or simplify work by re-engineering or sharing processes, changing responsibilities, or outsourcing. Automation may increase consistency of behavior.
    - **Improve Access to Information:** provide greater amounts of information to staff, reducing the need for specialists.
    - **Identify Additional Capabilities:** highlight capabilities with potential future value that can be supported by the solution.
 
-3. **Requirements Allocation** — The process of assigning requirements to solution components and releases to best achieve objectives. Allocation is supported by assessing trade-offs between alternatives to maximize benefits and minimize costs. Value may vary depending on how requirements are implemented and when the solution becomes available. Requirements may be allocated between organizational units, job functions, solution components, or releases. Allocation typically begins when a solution approach is determined and continues through design and implementation.
+3. **Requirements Allocation**: The process of assigning requirements to solution components and releases to best achieve objectives. Allocation is supported by assessing trade-offs between alternatives to maximize benefits and minimize costs. Value may vary depending on how requirements are implemented and when the solution becomes available. Requirements may be allocated between organizational units, job functions, solution components, or releases. Allocation typically begins when a solution approach is determined and continues through design and implementation.
 
-4. **Describe Design Options** — Design options are investigated and developed while considering the desired future state. A design option usually consists of many design components, each described by a design element. Design elements may describe: business policies and rules, business processes, people (job functions and responsibilities), operational business decisions, software applications and components, and organizational structures (including interactions with customers and suppliers).
+4. **Describe Design Options**: Design options are investigated and developed while considering the desired future state. A design option usually consists of many design components, each described by a design element. Design elements may describe: business policies and rules, business processes, people (job functions and responsibilities), operational business decisions, software applications and components, and organizational structures (including interactions with customers and suppliers).
 
 ### Guidelines and Tools
 
@@ -334,7 +334,7 @@ To estimate the potential value for each design option and to establish which on
 
 ### Description
 
-This task describes how to estimate and model the potential value delivered by requirements, designs, or design options. Potential value is analyzed many times over the course of a change — it may be planned or triggered by modifications to context or scope. Analysis includes consideration of uncertainty in estimates. Value can be described in terms of finance, reputation, or marketplace impact. Any change may include a mix of increases and decreases in value.
+This task describes how to estimate and model the potential value delivered by requirements, designs, or design options. Potential value is analyzed many times over the course of a change. It may be planned or triggered by modifications to context or scope. Analysis includes consideration of uncertainty in estimates. Value can be described in terms of finance, reputation, or marketplace impact. Any change may include a mix of increases and decreases in value.
 
 Design options are evaluated by comparing potential value. Each option has advantages and disadvantages. Depending on the reasons for change, there may be no best option, a clear best choice, or the best recommendation may be to begin work against multiple design options (e.g., proofs of concept). In other instances, all proposed designs may be rejected, or the best recommendation may be to **do nothing**.
 
@@ -345,17 +345,17 @@ Design options are evaluated by comparing potential value. Each option has advan
 
 ### Elements
 
-1. **Expected Benefits** — The positive value a solution is intended to deliver. Value can include benefits, reduced risk, compliance with business policies/regulations, improved user experience, or any other positive outcome. Benefits are determined by analyzing what stakeholders desire and what is possible to attain. Expected benefits can be calculated at the requirement level by considering how much of an overall business objective the set of requirements contributes to if fulfilled. The total expected benefit is the net benefit of all requirements a design option addresses. Benefits are often realized over time.
+1. **Expected Benefits**: The positive value a solution is intended to deliver. Value can include benefits, reduced risk, compliance with business policies/regulations, improved user experience, or any other positive outcome. Benefits are determined by analyzing what stakeholders desire and what is possible to attain. Expected benefits can be calculated at the requirement level by considering how much of an overall business objective the set of requirements contributes to if fulfilled. The total expected benefit is the net benefit of all requirements a design option addresses. Benefits are often realized over time.
 
-2. **Expected Costs** — Any potential negative value associated with a solution, including: timeline, effort, operating costs, purchase/implementation costs, maintenance costs, physical resources, information resources, and human resources. Expected costs for a design option consider the cumulative costs of design components.
+2. **Expected Costs**: Any potential negative value associated with a solution, including: timeline, effort, operating costs, purchase/implementation costs, maintenance costs, physical resources, information resources, and human resources. Expected costs for a design option consider the cumulative costs of design components.
 
    **Opportunity cost** is also considered: the value of the best alternative not selected. The opportunity cost of any design option equals the value of the next-best forgone alternative.
 
-3. **Determine Value** — The potential value is based on benefits delivered minus associated costs. Value can be positive (benefits exceed costs) or negative (costs exceed benefits). Value to the enterprise is almost always more heavily weighted than value for individual stakeholder groups.
+3. **Determine Value**: The potential value is based on benefits delivered minus associated costs. Value can be positive (benefits exceed costs) or negative (costs exceed benefits). Value to the enterprise is almost always more heavily weighted than value for individual stakeholder groups.
 
    Potential value is **uncertain value**. There are always events or conditions that could increase or decrease actual value. Many changes are proposed with intangible/uncertain benefits but tangible/absolute costs, making comparison difficult. Business analysts define complete estimates by considering tangible and intangible costs alongside tangible and intangible benefits, accounting for the degree of uncertainty at the time estimates are made.
 
-4. **Assess Design Options and Recommend Solution** — Each design option is assessed based on expected potential value. Re-evaluation of design element allocation may become necessary as costs are better understood. Factors to consider:
+4. **Assess Design Options and Recommend Solution**: Each design option is assessed based on expected potential value. Re-evaluation of design element allocation may become necessary as costs are better understood. Factors to consider:
    - **Available Resources:** limitations on what can be implemented based on allocated resources; a business case may justify additional investment.
    - **Constraints on the Solution:** regulatory requirements or business decisions may require certain requirements to be handled manually or automatically, or prioritized above others.
    - **Dependencies between Requirements:** some capabilities may provide limited value themselves but are needed to support other high-value requirements.
@@ -408,7 +408,7 @@ Design options are evaluated by comparing potential value. Each option has advan
 ## Related Chapters
 
 - [[04_Strategy_Analysis]]: Strategy Analysis identifies the business need and defines the change strategy that Requirements Analysis and Design Definition acts upon.
-- [[06_Solution_Evaluation]]: Solution Evaluation assesses the performance and value of the implemented solution — the actual value realization of what this knowledge area defines as potential value.
+- [[06_Solution_Evaluation]]: Solution Evaluation assesses the performance and value of the implemented solution: the actual value realization of what this knowledge area defines as potential value.
 - [[02_Elicitation_and_Collaboration]]: Elicitation results are the primary input that Requirements Analysis and Design Definition transforms into specified requirements and designs.
 - [[01_BA_Planning_and_Monitoring]]: Planning activities (information management approach, governance) define the framework within which analysis and design tasks are performed.
 - [[03_Requirements_Life_Cycle_Management]]: Requirements Life Cycle Management tasks (traceability, prioritization, approval) are closely interleaved with analysis and design activities.
