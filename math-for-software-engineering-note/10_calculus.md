@@ -7,7 +7,7 @@ tags:
 
 # Topic 12: Calculus
 
-Calculus studies continuous change — how functions grow, shrink, and accumulate. Essential for optimization, computer graphics, physics simulation, machine learning, and understanding performance curves.
+Calculus studies continuous change: how functions grow, shrink, and accumulate. Essential for optimization, computer graphics, physics simulation, machine learning, and understanding performance curves.
 
 ---
 
@@ -19,7 +19,7 @@ $$\lim_{x \to a} f(x) = L$$
 
 Means: "$f(x)$ gets arbitrarily close to $L$ as $x$ gets close to $a$."
 
-**Example:** $\lim_{x \to 2} (3x + 1) = 7$ — as $x \to 2$, $3x + 1 \to 7$.
+**Example:** $\lim_{x \to 2} (3x + 1) = 7$: as $x \to 2$, $3x + 1 \to 7$.
 
 **In code:** Limits formalize "as input grows..." for Big-O analysis:
 $$\lim_{n \to \infty} \frac{n\log n}{n^2} = 0 \implies O(n \log n) \subset O(n^2)$$
@@ -31,13 +31,13 @@ $$\lim_{n \to \infty} \frac{n\log n}{n^2} = 0 \implies O(n \log n) \subset O(n^2
 A function is **continuous** at $a$ if:
 $$\lim_{x \to a} f(x) = f(a)$$
 
-No gaps, no jumps — you can draw it without lifting the pen. Most real-world functions are continuous; discrete jumps appear at boundaries (e.g., step functions, conditionals).
+No gaps, no jumps; you can draw it without lifting the pen. Most real-world functions are continuous; discrete jumps appear at boundaries (e.g., step functions, conditionals).
 
 ---
 
 ## 3. Differentiation
 
-The **derivative** measures the instantaneous rate of change — the slope of the tangent line.
+The **derivative** measures the instantaneous rate of change, the slope of the tangent line.
 
 $$f'(x) = \frac{dy}{dx} = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
 
@@ -63,7 +63,7 @@ $$f'(x) = \frac{dy}{dx} = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
 
 ## 4. Integration
 
-The **integral** measures accumulation — area under a curve.
+The **integral** measures accumulation, area under a curve.
 
 $$\int_a^b f(x) \, dx$$
 
@@ -77,7 +77,7 @@ $$\frac{d}{dx} \int_a^x f(t) \, dt = f(x)$$
 | Type | Formula | Use |
 |------|---------|-----|
 | Definite integral | $\int_a^b f(x) dx$ | Exact area between $a$ and $b$ |
-| Indefinite integral | $\int f(x) dx = F(x) + C$ | Antiderivative — reverse of differentiation |
+| Indefinite integral | $\int f(x) dx = F(x) + C$ | Antiderivative: reverse of differentiation |
 
 **In code:** Integrals appear in:
 - Physics engines (position = integral of velocity)
@@ -103,7 +103,7 @@ Extends calculus to 3D space. Key operations on vector fields:
 
 ## 6. Transcendental Functions
 
-Functions that "transcend" algebra — cannot be expressed as finite polynomials:
+Functions that "transcend" algebra: cannot be expressed as finite polynomials:
 
 | Function | Notation | Key property |
 |----------|----------|-------------|
@@ -113,9 +113,10 @@ Functions that "transcend" algebra — cannot be expressed as finite polynomials
 
 ---
 
-## Calculus in Software Engineering — Decision Map
+## Calculus in Software Engineering: Decision Map
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     START["SE Problem involving\ncontinuous change"] --> Q1["Rate of change?"]
     Q1 -->|Yes| DERIV["Derivatives\nf'&#40;x&#41; = instantaneous rate"]
@@ -135,12 +136,12 @@ flowchart TD
     OPT -.->|SE Applications| O_APP["Hyperparameter tuning\nCost minimization\nResource allocation"]
     DIFFEQ -.->|SE Applications| DE_APP["Population models\nQueueing theory\nPhysics simulation"]
 
-    style START fill:#2d6a4f,stroke:#40916c,color:#fff
-    style DERIV fill:#1a5276,stroke:#2e86c1,color:#fff
-    style INTEG fill:#5c3d2e,stroke:#a67c52,color:#fff
-    style OPT fill:#6b3a6b,stroke:#9b6b9b,color:#fff
-    style DIFFEQ fill:#5c2e2e,stroke:#a65252,color:#fff
-    style APPROX fill:#333,stroke:#666,color:#fff
+    style START fill:#1FB854,stroke:#000000,color:#000000
+    style DERIV fill:#00B5FF,stroke:#000000,color:#000000
+    style INTEG fill:#FFBE00,stroke:#000000,color:#000000
+    style OPT fill:#1FB8AB,stroke:#000000,color:#000000
+    style DIFFEQ fill:#FF5861,stroke:#000000,color:#000000
+    style APPROX fill:#19362D,stroke:#000000,color:#CDD3D1
 ```
 
 ---
@@ -162,4 +163,4 @@ flowchart TD
 ## Sources
 
 - [2*] E.W. Cheney and D.R. Kincaid, *Numerical Mathematics and Computing*, 7th ed., Addison Wesley, 2020.
-- SWEBOK v4.0 — Chapter 17: Mathematical Foundations
+- SWEBOK v4.0, Chapter 17: Mathematical Foundations

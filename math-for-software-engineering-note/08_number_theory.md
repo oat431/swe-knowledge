@@ -8,7 +8,7 @@ tags:
 
 # Topic 7: Number Theory
 
-Number theory studies the properties of integers. It underpins cryptography, hashing, random number generation, and modular arithmetic — essential for security engineering and efficient algorithms.
+Number theory studies the properties of integers. It underpins cryptography, hashing, random number generation, and modular arithmetic, essential for security engineering and efficient algorithms.
 
 ---
 
@@ -19,9 +19,9 @@ Number theory studies the properties of integers. It underpins cryptography, has
 | Natural | $\mathbb{N}$ | $\{1, 2, 3, \dots\}$ (sometimes includes 0) | 1, 42, 1000 |
 | Integer | $\mathbb{Z}$ | $\{\dots, -2, -1, 0, 1, 2, \dots\}$ | -5, 0, 7 |
 | Rational | $\mathbb{Q}$ | $\frac{a}{b}$ where $a,b \in \mathbb{Z}, b \neq 0$ | $\frac{1}{2}, -3, 0.75$ |
-| Irrational | — | Cannot be expressed as $\frac{a}{b}$ | $\pi, \sqrt{2}, e$ |
+| Irrational | N/A | Cannot be expressed as $\frac{a}{b}$ | $\pi, \sqrt{2}, e$ |
 | Real | $\mathbb{R}$ | All points on the number line | $\pi, -2, 0, \sqrt{3}$ |
-| Imaginary | — | Multiples of $i = \sqrt{-1}$ | $3i, -i$ |
+| Imaginary | N/A | Multiples of $i = \sqrt{-1}$ | $3i, -i$ |
 | Complex | $\mathbb{C}$ | $a + bi$ where $a,b \in \mathbb{R}$ | $2 + 3i$ |
 
 ---
@@ -46,7 +46,7 @@ $$a = bq + r, \quad 0 \leq r < b$$
 
 $a \bmod m$ is the remainder when $a$ is divided by $m$.
 
-**Congruence:** $a \equiv b \pmod{m}$ means $m \mid (a - b)$ — they have the same remainder modulo $m$.
+**Congruence:** $a \equiv b \pmod{m}$ means $m \mid (a - b)$: they have the same remainder modulo $m$.
 
 **Properties (under modulo $m$):**
 - $(a + b) \bmod m = ((a \bmod m) + (b \bmod m)) \bmod m$
@@ -56,7 +56,7 @@ $a \bmod m$ is the remainder when $a$ is divided by $m$.
 
 **In code:**
 ```python
-# Clock arithmetic — hours wrap at 12
+# Clock arithmetic: hours wrap at 12
 (10 + 5) % 12  # = 3 (3 PM)
 
 # Hash table index
@@ -99,13 +99,13 @@ def gcd(a, b):
 # Example: gcd(48, 18) → gcd(18, 12) → gcd(12, 6) → gcd(6, 0) = 6
 ```
 
-**Coprime / Relatively prime:** $\gcd(a, b) = 1$ — they share no common prime factors.
+**Coprime / Relatively prime:** $\gcd(a, b) = 1$: they share no common prime factors.
 
 **Applications:** Simplifying fractions, finding modular inverses (Extended Euclidean Algorithm), RSA key generation.
 
 ---
 
-## RSA Public-Key Cryptography — Worked Example
+## RSA Public-Key Cryptography: Worked Example
 
 RSA is the practical application that ties together primes, modular arithmetic, and the Extended Euclidean Algorithm. Here's a complete walkthrough with small numbers.
 
@@ -117,9 +117,9 @@ RSA is the practical application that ties together primes, modular arithmetic, 
 4. **Choose** $e$ such that $1 < e < \phi(n)$ and $\gcd(e, \phi(n)) = 1$. Pick $e = 7$.
 5. **Compute** $d = e^{-1} \bmod \phi(n)$ using the Extended Euclidean Algorithm: $d = 103$ (since $7 \times 103 = 721 \equiv 1 \pmod{120}$)
 
-**Public key:** $(n, e) = (143, 7)$ — share freely
+**Public key:** $(n, e) = (143, 7)$, share freely
 
-**Private key:** $(n, d) = (143, 103)$ — keep secret
+**Private key:** $(n, d) = (143, 103)$, keep secret
 
 ### Step 2: Encryption (Bob sends message to Alice)
 
@@ -149,6 +149,7 @@ In practice this is done with fast modular exponentiation (repeated squaring). T
 ### RSA Process Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     BOB["Bob: message m = 9"] --> ENC["Encrypt: c = m^e mod n\nc = 9^7 mod 143 = 48"]
     ENC --> WIRE["Ciphertext c = 48\nsent over insecure channel"]
@@ -165,15 +166,15 @@ flowchart TD
     PUB -.-> ENC
     PRI -.-> DEC
 
-    style ALICE_KEYS fill:#1a1a2e,stroke:#4a90e2,color:#fff
-    style ENC fill:#2d6a4f,stroke:#40916c,color:#fff
-    style DEC fill:#2d6a4f,stroke:#40916c,color:#fff
-    style WIRE fill:#5c3d2e,stroke:#a67c52,color:#fff
+    style ALICE_KEYS fill:#19362D,stroke:#00B5FF,color:#CDD3D1
+    style ENC fill:#1FB854,stroke:#000000,color:#000000
+    style DEC fill:#1FB854,stroke:#000000,color:#000000
+    style WIRE fill:#FFBE00,stroke:#000000,color:#000000
 ```
 
 ### Modular Exponentiation Algorithm
 
-The key efficiency trick — computing $a^b \bmod n$ without calculating $a^b$ directly:
+The key efficiency trick: computing $a^b \bmod n$ without calculating $a^b$ directly:
 
 ```python
 def mod_exp(base, exp, mod):
@@ -191,11 +192,11 @@ def mod_exp(base, exp, mod):
 print(mod_exp(9, 7, 143))  # Output: 48
 ```
 
-This runs in $O(\log b)$ time — essential for real-world RSA where $e$ and $d$ are hundreds of digits long.
+This runs in $O(\log b)$ time, essential for real-world RSA where $e$ and $d$ are hundreds of digits long.
 
 ### Why RSA Is Secure
 
-The security rests on the **difficulty of integer factorization**: given $n = 143$, an attacker could factor it to find $p = 11, q = 13$, then compute $d$. For 2048-bit $n$, no known classical algorithm can factor it in feasible time. Quantum computers (Shor's algorithm) could break this — hence the field of post-quantum cryptography.
+The security rests on the **difficulty of integer factorization**: given $n = 143$, an attacker could factor it to find $p = 11, q = 13$, then compute $d$. For 2048-bit $n$, no known classical algorithm can factor it in feasible time. Quantum computers (Shor's algorithm) could break this; hence the field of post-quantum cryptography.
 
 ---
 
@@ -216,4 +217,4 @@ The security rests on the **difficulty of integer factorization**: given $n = 14
 ## Sources
 
 - [1*] K. Rosen, *Discrete Mathematics and Its Applications*, 8th ed., McGraw-Hill, 2018.
-- SWEBOK v4.0 — Chapter 17: Mathematical Foundations
+- SWEBOK v4.0, Chapter 17: Mathematical Foundations

@@ -63,9 +63,9 @@ Let $x^*$ be the computed (approximate) value and $x$ be the true value.
 | Error Type | Formula | Meaning |
 |-----------|---------|---------|
 | Absolute error | $|x^* - x|$ | Raw difference |
-| Relative error | $\frac{|x^* - x|}{|x|}$ | Error as a proportion — scale-independent |
+| Relative error | $\frac{|x^* - x|}{|x|}$ | Error as a proportion: scale-independent |
 
-**Example:** Measuring 1 km with 1 m error = 0.1% relative error. Measuring 1 cm with 1 m error = 10,000% — same absolute error, vastly different significance.
+**Example:** Measuring 1 km with 1 m error = 0.1% relative error. Measuring 1 cm with 1 m error = 10,000%; same absolute error, vastly different significance.
 
 ---
 
@@ -81,7 +81,7 @@ The number of meaningful digits in a value. Rules:
 |-------|-------------------|
 | 123.45 | 5 |
 | 0.00420 | 3 |
-| 1200 | Ambiguous (2, 3, or 4 — use scientific notation: $1.200 \times 10^3$ = 4) |
+| 1200 | Ambiguous (2, 3, or 4; use scientific notation: $1.200 \times 10^3$ = 4) |
 
 ---
 
@@ -92,7 +92,7 @@ The number of meaningful digits in a value. Rules:
 3. **Efficiency:** Minimize computation while preserving accuracy
 
 **Common sources of numerical error:**
-- **Catastrophic cancellation:** Subtracting nearly equal numbers loses precision (e.g., $1.0000001 - 1.0000000 = 0.0000001$ — only 1 significant digit survives)
+- **Catastrophic cancellation:** Subtracting nearly equal numbers loses precision (e.g., $1.0000001 - 1.0000000 = 0.0000001$, only 1 significant digit survives)
 - **Swamping:** Adding a tiny number to a huge number ($10^{15} + 1$ may be indistinguishable from $10^{15}$ in floating-point)
 - **Error accumulation:** Repeated operations compound rounding errors
 
@@ -119,7 +119,7 @@ Starting with $x_0 = 1$:
 | 2 | 1.4167 | 2.0069 | 0.0025 |
 | 3 | 1.4142 | 2.0000 | 0.0000 |
 
-Converges to $\sqrt{2} \approx 1.4142$ in 3 iterations — **quadratic convergence** (doubles of correct digits per step).
+Converges to $\sqrt{2} \approx 1.4142$ in 3 iterations, **quadratic convergence** (doubles of correct digits per step).
 
 ### Bisection Method (Guaranteed Convergence)
 
@@ -149,6 +149,7 @@ Bisection is slower (linear convergence) but **guaranteed** to converge if $f$ i
 ### Convergence Comparison
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     NEWTON["Newton's Method\nx_n+1 = x_n - f&#40;x_n&#41;/f'&#40;x_n&#41;"] --> FAST["Quadratic convergence\nDoubles correct digits per step"]
     NEWTON --> RISK["Risk: diverges if\nguess is poor or f'&#40;x&#41; = 0"]
@@ -156,12 +157,12 @@ flowchart LR
     BISECT["Bisection Method\nHalve interval each step"] --> SAFE["Guaranteed convergence\nif f is continuous"]
     BISECT --> SLOW["Linear convergence\nOne bit per step"]
 
-    style NEWTON fill:#2d6a4f,stroke:#40916c,color:#fff
-    style BISECT fill:#1a5276,stroke:#2e86c1,color:#fff
-    style FAST fill:#333,stroke:#40916c,color:#fff
-    style RISK fill:#5c2e2e,stroke:#a65252,color:#fff
-    style SAFE fill:#333,stroke:#2e86c1,color:#fff
-    style SLOW fill:#333,stroke:#a67c52,color:#fff
+    style NEWTON fill:#1FB854,stroke:#000000,color:#000000
+    style BISECT fill:#00B5FF,stroke:#000000,color:#000000
+    style FAST fill:#19362D,stroke:#1FB854,color:#CDD3D1
+    style RISK fill:#FF5861,stroke:#000000,color:#000000
+    style SAFE fill:#19362D,stroke:#00B5FF,color:#CDD3D1
+    style SLOW fill:#19362D,stroke:#FFBE00,color:#CDD3D1
 ```
 
 ---
@@ -170,7 +171,7 @@ flowchart LR
 
 | Concept | SE Application |
 |---------|---------------|
-| Floating-point | Never use `==` for float comparison — use tolerance: `abs(a - b) < epsilon` |
+| Floating-point | Never use `==` for float comparison; use tolerance: `abs(a - b) < epsilon` |
 | Overflow/underflow | Integer overflow bugs (Ariane 5 explosion), buffer size calculations |
 | Absolute vs relative error | Choosing the right tolerance for assertion tests |
 | Catastrophic cancellation | Financial calculations, physics simulations, matrix operations |
@@ -183,4 +184,4 @@ flowchart LR
 ## Sources
 
 - [2*] E.W. Cheney and D.R. Kincaid, *Numerical Mathematics and Computing*, 7th ed., Addison Wesley, 2020.
-- SWEBOK v4.0 — Chapter 17: Mathematical Foundations
+- SWEBOK v4.0, Chapter 17: Mathematical Foundations

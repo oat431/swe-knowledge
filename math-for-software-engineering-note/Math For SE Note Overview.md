@@ -8,18 +8,18 @@ tags:
   - discrete-mathematics
 ---
 
-# Mathematical Foundations — Overview
+# Mathematical Foundations: Overview
 
-> **Source:** SWEBOK v4 Chapter 17 — Mathematical Foundations
-> **Purpose:** Logic, proof techniques, set theory, graphs & trees, FSMs, grammars, probability, numerical methods, and algebraic structures — the formal bedrock for rigorous specification and verification.
+> **Source:** SWEBOK v4, Chapter 17: Mathematical Foundations
+> **Purpose:** Logic, proof techniques, set theory, graphs & trees, FSMs, grammars, probability, numerical methods, and algebraic structures: the formal bedrock for rigorous specification and verification.
 
 ## What Is This?
 
-Mathematical Foundations covers the discrete mathematics and formal reasoning that underpin software engineering. These aren't math for math's sake — they're the tools for specifying systems precisely, proving properties about algorithms, reasoning about state machines, analyzing complexity, and managing uncertainty. Every time you write a loop invariant, design a state machine, or estimate a probability, you're using these foundations.
+Mathematical Foundations covers the discrete mathematics and formal reasoning that underpin software engineering. These aren't math for math's sake; they're the tools for specifying systems precisely, proving properties about algorithms, reasoning about state machines, analyzing complexity, and managing uncertainty. Every time you write a loop invariant, design a state machine, or estimate a probability, you're using these foundations.
 
 The twelve knowledge areas form a progression: logic and proof techniques give you the language and methods for rigorous argument; sets, relations, and functions provide the structures; graphs, trees, and FSMs model system behavior; grammars define languages; counting and probability quantify uncertainty; numerical methods handle real-world computation limits; and algebraic structures abstract recurring patterns into reusable frameworks.
 
-Together, these topics equip a software engineer to read and write formal specifications, verify correctness claims, analyze algorithm complexity, design robust protocols, and reason about security and reliability — moving beyond intuition into demonstrable, repeatable engineering.
+Together, these topics equip a software engineer to read and write formal specifications, verify correctness claims, analyze algorithm complexity, design robust protocols, and reason about security and reliability, moving beyond intuition into demonstrable, repeatable engineering.
 
 ## Knowledge Areas
 
@@ -85,19 +85,19 @@ Together, these topics equip a software engineer to read and write formal specif
 
 ## My Notes
 
-- [[00_basic_logic]] — Propositional and predicate logic, truth tables, inference
-- [[01_proof_techniques]] — Direct, contradiction, induction, contrapositive
-- [[02_sets_relations_functions]] — Set operations, relations, functions, cardinality
-- [[03_basics_of_counting]] — Sum/product rule, permutations, combinations, recursion
-- [[04_discrete_probability]] — Sample space, random variables, mean/variance
-- [[05_graphs_and_trees]] — Graph types, representations, trees, traversals
-- [[06_finite_state_machines]] — DFA, NFA, regular expressions, state diagrams
-- [[07_grammars]] — Chomsky hierarchy, production rules, formal languages
-- [[08_number_theory]] — Divisibility, modular arithmetic, primes, GCD
-- [[09_algebraic_structures]] — Groups, rings, fields, monoids
-- [[10_calculus]] — Limits, differentiation, integration, vector calculus
-- [[11_numerical_precision]] — Floating-point, error types, rounding
-- [[12_new_advancements]] — Computational neuroscience, genomics & bioinformatics
+- [[00_basic_logic]]: Propositional and predicate logic, truth tables, inference
+- [[01_proof_techniques]]: Direct, contradiction, induction, contrapositive
+- [[02_sets_relations_functions]]: Set operations, relations, functions, cardinality
+- [[03_basics_of_counting]]: Sum/product rule, permutations, combinations, recursion
+- [[04_discrete_probability]]: Sample space, random variables, mean/variance
+- [[05_graphs_and_trees]]: Graph types, representations, trees, traversals
+- [[06_finite_state_machines]]: DFA, NFA, regular expressions, state diagrams
+- [[07_grammars]]: Chomsky hierarchy, production rules, formal languages
+- [[08_number_theory]]: Divisibility, modular arithmetic, primes, GCD
+- [[09_algebraic_structures]]: Groups, rings, fields, monoids
+- [[10_calculus]]: Limits, differentiation, integration, vector calculus
+- [[11_numerical_precision]]: Floating-point, error types, rounding
+- [[12_new_advancements]]: Computational neuroscience, genomics & bioinformatics
 
 ## What's Missing
 
@@ -105,6 +105,6 @@ Together, these topics equip a software engineer to read and write formal specif
 
 ## Relationship to Other Foundations
 
-- **[[Computing Foundation Overview|Computing Foundations]]** — Algorithms and data structures directly use discrete math; complexity analysis uses counting and probability
-- **[[Engineering Foundation Overview|Engineering Foundations]]** — Statistical methods and measurement theory build on probability and calculus
-- **Software Engineering KAs** — Formal methods, testing (mutation/coverage), security (cryptography) all depend on mathematical foundations
+- **[[Computing Foundation Overview|Computing Foundations]]:** Algorithms and data structures directly use discrete math; complexity analysis uses counting and probability
+- **[[Engineering Foundation Overview|Engineering Foundations]]:** Statistical methods and measurement theory build on probability and calculus
+- **Software Engineering KAs:** Formal methods, testing (mutation/coverage), security (cryptography) all depend on mathematical foundations

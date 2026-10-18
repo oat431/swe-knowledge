@@ -8,7 +8,7 @@ tags:
 
 # Topic 4: Graphs and Trees
 
-Graphs model pairwise relationships between objects. Trees are a special case — connected, acyclic graphs that form the backbone of hierarchical data structures. Together they're the mathematical foundation for networks, dependency management, and efficient search.
+Graphs model pairwise relationships between objects. Trees are a special case: connected, acyclic graphs that form the backbone of hierarchical data structures. Together they're the mathematical foundation for networks, dependency management, and efficient search.
 
 ---
 
@@ -42,7 +42,7 @@ A **graph** $G = (V, E)$ consists of a set of **vertices** (nodes) $V$ and a set
 | Representation | Structure | Best for |
 |---------------|-----------|----------|
 | Adjacency list | `Map<V, List<V>>` | Sparse graphs (most real-world graphs) |
-| Adjacency matrix | `boolean[n][n]` — $M[i][j] = 1$ if edge exists | Dense graphs, $O(1)$ edge lookup |
+| Adjacency matrix | `boolean[n][n]`: $M[i][j] = 1$ if edge exists | Dense graphs, $O(1)$ edge lookup |
 
 **Example (adjacency list):**
 ```
@@ -52,7 +52,7 @@ C: [A, D]
 D: [B, C]
 ```
 
-**In code:** Graphs model anything with pairwise connections — package dependencies (npm/pip), social graphs, road networks, git commit history, state machines, and neural network architectures.
+**In code:** Graphs model anything with pairwise connections: package dependencies (npm/pip), social graphs, road networks, git commit history, state machines, and neural network architectures.
 
 ---
 
@@ -97,15 +97,16 @@ Post-order: 4 → 5 → 2 → 3 → 1
 
 ### Spanning Trees
 
-A **spanning tree** of a graph $G$ is a subgraph that includes all vertices of $G$ and is a tree (no cycles). A **minimum spanning tree (MST)** minimizes total edge weight — used in network design and clustering.
+A **spanning tree** of a graph $G$ is a subgraph that includes all vertices of $G$ and is a tree (no cycles). A **minimum spanning tree (MST)** minimizes total edge weight, used in network design and clustering.
 
-**In code:** Trees are everywhere — DOM (Document Object Model), file systems, ASTs (Abstract Syntax Trees, what compilers build), decision trees, trie data structures, and heap priority queues. BSTs enable $O(\log n)$ lookup, insert, and delete.
+**In code:** Trees are everywhere: DOM (Document Object Model), file systems, ASTs (Abstract Syntax Trees, what compilers build), decision trees, trie data structures, and heap priority queues. BSTs enable $O(\log n)$ lookup, insert, and delete.
 
 ---
 
 ## Graph Algorithm Selection Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     START["What graph problem\nare you solving?"] --> Q1["Finding shortest path?"]
     Q1 -->|Yes| Q2["Edge weights?"]
@@ -125,13 +126,13 @@ flowchart TD
     Q4 -->|Single source| DIJ
     Q4 -->|All pairs| FW["Floyd-Warshall\nO&#40;V^3&#41;\nDynamic programming"]
 
-    style START fill:#2d6a4f,stroke:#40916c,color:#fff
-    style BFS fill:#1a5276,stroke:#2e86c1,color:#fff
-    style DFS fill:#1a5276,stroke:#2e86c1,color:#fff
-    style DIJ fill:#5c3d2e,stroke:#a67c52,color:#fff
-    style BF fill:#5c3d2e,stroke:#a67c52,color:#fff
-    style FW fill:#6b3a6b,stroke:#9b6b9b,color:#fff
-    style TREE fill:#333,stroke:#666,color:#fff
+    style START fill:#1FB854,stroke:#000000,color:#000000
+    style BFS fill:#00B5FF,stroke:#000000,color:#000000
+    style DFS fill:#00B5FF,stroke:#000000,color:#000000
+    style DIJ fill:#FFBE00,stroke:#000000,color:#000000
+    style BF fill:#FFBE00,stroke:#000000,color:#000000
+    style FW fill:#1FB8AB,stroke:#000000,color:#000000
+    style TREE fill:#19362D,stroke:#000000,color:#CDD3D1
 ```
 
 ### Graph Traversal Comparison
@@ -163,4 +164,4 @@ flowchart TD
 ## Sources
 
 - [1*] K. Rosen, *Discrete Mathematics and Its Applications*, 8th ed., McGraw-Hill, 2018.
-- SWEBOK v4.0 — Chapter 17: Mathematical Foundations
+- SWEBOK v4.0, Chapter 17: Mathematical Foundations

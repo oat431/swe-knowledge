@@ -8,7 +8,7 @@ tags:
 
 # Topic 1: Basic Logic
 
-Logic is the foundation of all mathematical reasoning and all automated reasoning. The rules of logic specify the meaning of mathematical statements — they help us determine what follows from what. In software engineering, logic is directly translated into conditional expressions, loop guards, and formal specifications.
+Logic is the foundation of all mathematical reasoning and all automated reasoning. The rules of logic specify the meaning of mathematical statements; they help us determine what follows from what. In software engineering, logic is directly translated into conditional expressions, loop guards, and formal specifications.
 
 ---
 
@@ -65,7 +65,7 @@ Exhaustive listing of all possible truth values:
 | F | T | T |
 | F | F | F |
 
-**Implication** (the trickiest — "false implies anything"):
+**Implication** (the trickiest, "false implies anything"):
 
 | $P$ | $Q$ | $P \rightarrow Q$ |
 |-----|-----|------------------|
@@ -74,7 +74,7 @@ Exhaustive listing of all possible truth values:
 | F | T | T |
 | F | F | T |
 
-⚠️ **Key insight:** $P \rightarrow Q$ is equivalent to $\neg P \lor Q$. When the premise is false, the implication is true regardless — this is why "if the moon is made of cheese, then 2+2=4" is technically true.
+⚠️ **Key insight:** $P \rightarrow Q$ is equivalent to $\neg P \lor Q$. When the premise is false, the implication is true regardless; this is why "if the moon is made of cheese, then 2+2=4" is technically true.
 
 **Biconditional:**
 
@@ -107,7 +107,7 @@ Two propositions are **logically equivalent** ($\equiv$) if they have identical 
 | Distributive | $P \land (Q \lor R) \equiv (P \land Q) \lor (P \land R)$ |
 | Implication | $P \rightarrow Q \equiv \neg P \lor Q$ |
 
-**In code — De Morgan's laws in action:**
+**In code: De Morgan's laws in action**
 ```python
 # These two are equivalent:
 if not (is_admin and is_active):
@@ -128,7 +128,7 @@ if not is_guest and not is_banned:
 
 ## 2. Predicate Logic
 
-Predicate logic extends propositional logic to handle statements about **objects** and their **properties/relationships** — it lets us say things about "all" or "some" without naming each one individually.
+Predicate logic extends propositional logic to handle statements about **objects** and their **properties/relationships**; it lets us say things about "all" or "some" without naming each one individually.
 
 ### Predicates
 
@@ -136,10 +136,10 @@ A **predicate** $P(x)$ is a statement template with variables. It becomes a prop
 
 | Expression | Meaning |
 |-----------|---------|
-| $P(x)$: "$x$ is red" | Template — not yet true or false |
-| $P(\text{rose})$ | "The rose is red" — now a proposition (T or F) |
+| $P(x)$: "$x$ is red" | Template: not yet true or false |
+| $P(\text{rose})$ | "The rose is red", now a proposition (T or F) |
 | $Q(x, y)$: "$x > y$" | Two-variable predicate |
-| $Q(5, 3)$ | "$5 > 3$" — T |
+| $Q(5, 3)$ | "$5 > 3$", T |
 
 ### Quantifiers
 
@@ -151,10 +151,10 @@ Quantifiers let us make claims about entire collections without enumerating ever
 | Existential | $\exists x \; P(x)$ | "there exists $x$ such that $P(x)$" | $P(x)$ is true for **at least one** $x$ in the domain |
 
 **Examples:**
-- $\forall x \; \text{Tiger}(x) \rightarrow \text{Mammal}(x)$ — "All tigers are mammals." (T)
-- $\exists x \; \text{Tiger}(x) \land \text{ManEater}(x)$ — "Some tigers are man-eaters." (T)
-- $\forall x \in \mathbb{N} \; x \geq 0$ — "Every natural number is non-negative." (T)
-- $\exists x \in \mathbb{Z} \; x^2 = 4$ — "There is an integer whose square is 4." (T: $x=2$ or $x=-2$)
+- $\forall x \; \text{Tiger}(x) \rightarrow \text{Mammal}(x)$: "All tigers are mammals." (T)
+- $\exists x \; \text{Tiger}(x) \land \text{ManEater}(x)$: "Some tigers are man-eaters." (T)
+- $\forall x \in \mathbb{N} \; x \geq 0$: "Every natural number is non-negative." (T)
+- $\exists x \in \mathbb{Z} \; x^2 = 4$: "There is an integer whose square is 4." (T: $x=2$ or $x=-2$)
 
 ### Negating Quantifiers
 
@@ -169,16 +169,16 @@ Quantifiers let us make claims about entire collections without enumerating ever
 
 Order matters with mixed quantifiers:
 
-- $\forall x \; \exists y \; (x + y = 0)$ — "For every integer $x$, there exists a $y$ (namely $-x$)" — TRUE
-- $\exists y \; \forall x \; (x + y = 0)$ — "There is a single $y$ that works for every $x$" — FALSE
+- $\forall x \; \exists y \; (x + y = 0)$: "For every integer $x$, there exists a $y$ (namely $-x$)", TRUE
+- $\exists y \; \forall x \; (x + y = 0)$: "There is a single $y$ that works for every $x$", FALSE
 
-**In code:** Nested quantifiers mirror nested loops. $\forall x \; \exists y$ is "for each $x$, I can find a $y$" — different $y$ per $x$. $\exists y \; \forall x$ is "one $y$ fits all $x$."
+**In code:** Nested quantifiers mirror nested loops. $\forall x \; \exists y$ is "for each $x$, I can find a $y$": different $y$ per $x$. $\exists y \; \forall x$ is "one $y$ fits all $x$."
 
 ---
 
-## Karnaugh Map — Simplifying Boolean Expressions
+## Karnaugh Map: Simplifying Boolean Expressions
 
-A **Karnaugh map (K-map)** is a visual tool for simplifying Boolean expressions — it finds minimal sum-of-products forms without algebraic manipulation.
+A **Karnaugh map (K-map)** is a visual tool for simplifying Boolean expressions; it finds minimal sum-of-products forms without algebraic manipulation.
 
 **Example:** Simplify $F(A, B, C) = \bar{A}\bar{B}C + \bar{A}B\bar{C} + \bar{A}BC + A\bar{B}C + AB\bar{C} + ABC$
 
@@ -195,10 +195,10 @@ Group adjacent 1s in powers of 2:
 
 **In code:** K-maps are used in digital logic design, FPGA programming, and compiler optimization for Boolean simplification:
 ```python
-# Before simplification — 6 conditions
+# Before simplification: 6 conditions
 if (not A and not B and C) or (not A and B and not C) or ...
 
-# After K-map — 2 conditions
+# After K-map: 2 conditions
 if B or C:
     ...
 ```
@@ -206,6 +206,7 @@ if B or C:
 ### Logic Simplification Decision Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     START["Complex Boolean Expression"] --> Q1["How many variables?"]
     Q1 -->|"2-4 vars"| KMAP["Use Karnaugh Map\nVisual grouping of minterms"]
@@ -215,9 +216,9 @@ flowchart TD
     QM --> MINIMAL
     MINIMAL --> CODE["Translate to code:\nfewer conditions = faster execution"]
 
-    style START fill:#2d6a4f,stroke:#40916c,color:#fff
-    style KMAP fill:#1a5276,stroke:#2e86c1,color:#fff
-    style CODE fill:#5c3d2e,stroke:#a67c52,color:#fff
+    style START fill:#1FB854,stroke:#000000,color:#000000
+    style KMAP fill:#00B5FF,stroke:#000000,color:#000000
+    style CODE fill:#FFBE00,stroke:#000000,color:#000000
 ```
 
 ---
@@ -240,4 +241,4 @@ flowchart TD
 ## Sources
 
 - [1*] K. Rosen, *Discrete Mathematics and Its Applications*, 8th ed., McGraw-Hill, 2018.
-- SWEBOK v4.0 — Chapter 17: Mathematical Foundations
+- SWEBOK v4.0, Chapter 17: Mathematical Foundations

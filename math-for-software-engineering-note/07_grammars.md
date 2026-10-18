@@ -35,15 +35,15 @@ Four levels of formal grammars, each more powerful (and harder to parse) than th
 
 - **Rules:** $A \rightarrow aB$ or $A \rightarrow a$ (right-linear) or $A \rightarrow Ba$ or $A \rightarrow a$ (left-linear)
 - **Recognized by:** Finite-State Machines (DFA/NFA)
-- **Power:** Cannot count — cannot recognize $a^n b^n$ (balanced nesting)
+- **Power:** Cannot count; cannot recognize $a^n b^n$ (balanced nesting)
 - **Applications:** Lexical analysis (tokenization), regular expressions, simple pattern matching
 
 ### Type 2: Context-Free Grammars (CFG)
 
 - **Rules:** $A \rightarrow \gamma$ where $\gamma$ is any string of terminals/nonterminals (single nonterminal on LHS)
 - **Recognized by:** Pushdown Automata (PDA)
-- **Power:** Can handle nesting/recursion — can recognize $a^n b^n$
-- **Applications:** **Programming language syntax** — this is the level of most parser generators (YACC, Bison, ANTLR)
+- **Power:** Can handle nesting/recursion; can recognize $a^n b^n$
+- **Applications:** **Programming language syntax:** this is the level of most parser generators (YACC, Bison, ANTLR)
 
 ### Type 1: Context-Sensitive Grammars (CSG)
 
@@ -57,7 +57,7 @@ Four levels of formal grammars, each more powerful (and harder to parse) than th
 - **Rules:** No restrictions whatsoever
 - **Recognized by:** Turing Machines
 - **Power:** Equivalent to general computation
-- **Applications:** Theoretical — anything computable can be described
+- **Applications:** Theoretical: anything computable can be described
 
 ### Hierarchy Summary
 
@@ -95,13 +95,14 @@ Backus-Naur Form is how CFGs are written in practice:
 <factor>     ::= <number> | "(" <expression> ")"
 ```
 
-This is the grammar for arithmetic expressions — it captures operator precedence (multiplication binds tighter than addition) through the structure.
+This is the grammar for arithmetic expressions; it captures operator precedence (multiplication binds tighter than addition) through the structure.
 
 ### Worked Parse Tree: Parsing `3 + 4 * 2`
 
 Given the CFG above, the string `3 + 4 * 2` parses as follows. Notice how the tree structure encodes precedence: `*` binds tighter because it's deeper in the tree.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     EXPR1["&lt;expression&gt;"] --> TERM1["&lt;term&gt;"]
     EXPR1 --> PLUS["+"]
@@ -120,19 +121,19 @@ flowchart TD
 
     FACTOR2 --> N3["2"]
 
-    style EXPR1 fill:#1a5276,stroke:#2e86c1,color:#fff
-    style EXPR2 fill:#1a5276,stroke:#2e86c1,color:#fff
-    style TERM1 fill:#2d6a4f,stroke:#40916c,color:#fff
-    style TERM2 fill:#2d6a4f,stroke:#40916c,color:#fff
-    style TERM3 fill:#2d6a4f,stroke:#40916c,color:#fff
-    style FACTOR1 fill:#5c3d2e,stroke:#a67c52,color:#fff
-    style FACTOR2 fill:#5c3d2e,stroke:#a67c52,color:#fff
-    style FACTOR3 fill:#5c3d2e,stroke:#a67c52,color:#fff
-    style N1 fill:#333,stroke:#666,color:#fff
-    style N2 fill:#333,stroke:#666,color:#fff
-    style N3 fill:#333,stroke:#666,color:#fff
-    style PLUS fill:#333,stroke:#666,color:#fff
-    style STAR fill:#333,stroke:#666,color:#fff
+    style EXPR1 fill:#00B5FF,stroke:#000000,color:#000000
+    style EXPR2 fill:#00B5FF,stroke:#000000,color:#000000
+    style TERM1 fill:#1FB854,stroke:#000000,color:#000000
+    style TERM2 fill:#1FB854,stroke:#000000,color:#000000
+    style TERM3 fill:#1FB854,stroke:#000000,color:#000000
+    style FACTOR1 fill:#FFBE00,stroke:#000000,color:#000000
+    style FACTOR2 fill:#FFBE00,stroke:#000000,color:#000000
+    style FACTOR3 fill:#FFBE00,stroke:#000000,color:#000000
+    style N1 fill:#19362D,stroke:#000000,color:#CDD3D1
+    style N2 fill:#19362D,stroke:#000000,color:#CDD3D1
+    style N3 fill:#19362D,stroke:#000000,color:#CDD3D1
+    style PLUS fill:#19362D,stroke:#000000,color:#CDD3D1
+    style STAR fill:#19362D,stroke:#000000,color:#CDD3D1
 ```
 
 **Reading the tree:**
@@ -142,7 +143,7 @@ flowchart TD
 
 This is exactly how ANTLR, YACC, and other parser generators produce ASTs from BNF grammars.
 
-### Ambiguous Grammars — A Practical Problem
+### Ambiguous Grammars: A Practical Problem
 
 A grammar is **ambiguous** if a string has more than one valid parse tree. The classic example is the `dangling else`:
 
@@ -160,6 +161,7 @@ Parser generators handle ambiguity through precedence declarations or grammar re
 ### The Chomsky Hierarchy Decision Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     START["What language feature\ndo you need to describe?"] --> Q1["Need nesting or recursion?\ne.g. balanced parentheses"]
     Q1 -->|No| REGEX["Type 3: Regular\nUse regex or FSM"]
@@ -173,11 +175,11 @@ flowchart TD
     CFG -.->|Examples| CFG_EX["Programming language syntax\nJSON, XML parsers\nSQL grammar"]
     CSG -.->|Examples| CSG_EX["Type checking\nsemantic analysis\nnatural language"]
 
-    style START fill:#2d6a4f,stroke:#40916c,color:#fff
-    style REGEX fill:#1a5276,stroke:#2e86c1,color:#fff
-    style CFG fill:#5c3d2e,stroke:#a67c52,color:#fff
-    style CSG fill:#6b3a6b,stroke:#9b6b9b,color:#fff
-    style UNR fill:#8b0000,stroke:#c44,color:#fff
+    style START fill:#1FB854,stroke:#000000,color:#000000
+    style REGEX fill:#00B5FF,stroke:#000000,color:#000000
+    style CFG fill:#FFBE00,stroke:#000000,color:#000000
+    style CSG fill:#1FB8AB,stroke:#000000,color:#000000
+    style UNR fill:#FF5861,stroke:#000000,color:#000000
 ```
 
 ---
@@ -190,12 +192,12 @@ flowchart TD
 | Context-free grammars | Parser generators (ANTLR, YACC/Bison, Tree-sitter), IDE syntax highlighting |
 | BNF/EBNF | Language specification documents (ECMAScript, SQL, Python grammar) |
 | Production rules | Compiler front-ends: lexer → parser → AST → code generation |
-| Chomsky hierarchy | Understanding what can and cannot be parsed — regex cannot parse HTML/XML (nested tags) |
-| Language recognition | Deciding whether an input string belongs to a language — the core of parsing |
+| Chomsky hierarchy | Understanding what can and cannot be parsed: regex cannot parse HTML/XML (nested tags) |
+| Language recognition | Deciding whether an input string belongs to a language: the core of parsing |
 
 ---
 
 ## Sources
 
 - [1*] K. Rosen, *Discrete Mathematics and Its Applications*, 8th ed., McGraw-Hill, 2018.
-- SWEBOK v4.0 — Chapter 17: Mathematical Foundations
+- SWEBOK v4.0, Chapter 17: Mathematical Foundations

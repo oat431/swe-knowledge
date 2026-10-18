@@ -6,7 +6,7 @@ tags:
 
 # Topic 9: Discrete Probability
 
-Probability quantifies uncertainty — how likely events are to occur. Discrete probability deals with finite sample spaces. It's the mathematical foundation for machine learning, randomized algorithms, reliability engineering, and performance modeling.
+Probability quantifies uncertainty: how likely events are to occur. Discrete probability deals with finite sample spaces. It's the mathematical foundation for machine learning, randomized algorithms, reliability engineering, and performance modeling.
 
 ---
 
@@ -40,7 +40,7 @@ A **random variable** $X$ assigns a numeric value to each outcome in $S$.
 
 For discrete $X$, the probability distribution $p(x) = P(X = x)$ lists the probability of each value.
 
-**Example — fair die roll:**
+**Example: fair die roll**
 
 | $x$ | 1 | 2 | 3 | 4 | 5 | 6 |
 |-----|---|---|---|---|---|---|
@@ -54,9 +54,9 @@ For discrete $X$, the probability distribution $p(x) = P(X = x)$ lists the proba
 |---------|---------|---------|
 | Mean (expected value) | $\mu = E[X] = \sum x_i \cdot p(x_i)$ | "Average" outcome over many trials |
 | Variance | $\sigma^2 = \sum (x_i - \mu)^2 \cdot p(x_i)$ | Spread of the distribution |
-| Standard deviation | $\sigma = \sqrt{\sigma^2}$ | Same units as the data — easier to interpret |
+| Standard deviation | $\sigma = \sqrt{\sigma^2}$ | Same units as the data: easier to interpret |
 
-**Example — fair die:**
+**Example: fair die**
 - $\mu = 1\cdot\frac{1}{6} + 2\cdot\frac{1}{6} + \dots + 6\cdot\frac{1}{6} = 3.5$
 - $\sigma^2 = (1-3.5)^2\cdot\frac{1}{6} + \dots + (6-3.5)^2\cdot\frac{1}{6} \approx 2.92$
 - $\sigma \approx 1.71$
@@ -101,7 +101,7 @@ $$P(\text{fail} \mid \text{mobile}) = \frac{P(\text{fail} \cap \text{mobile})}{P
 Events $A$ and $B$ are **independent** if:
 $$P(A \cap B) = P(A) \cdot P(B) \quad \iff \quad P(A \mid B) = P(A)$$
 
-Knowing $B$ happened tells you nothing about $A$. Most real-world events are NOT independent — that's why conditional probability matters.
+Knowing $B$ happened tells you nothing about $A$. Most real-world events are NOT independent; that's why conditional probability matters.
 
 ---
 
@@ -139,6 +139,7 @@ $$P(\text{spam} \mid \text{"FREE"}) = \frac{0.80 \times 0.30}{0.275} = \frac{0.2
 ### Bayes' Theorem Decision Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     START["You observe evidence B"] --> Q1["Do you know P&#40;B&#124;A&#41; directly?"]
     Q1 -->|Yes| APPLY["Apply Bayes':\nP&#40;A&#124;B&#41; = P&#40;B&#124;A&#41; P&#40;A&#41; / P&#40;B&#41;"]
@@ -149,9 +150,9 @@ flowchart TD
     MEASURE --> APPLY
     APPLY --> INTERPRET["Interpret posterior:\nHow likely is A given B?"]
 
-    style START fill:#2d6a4f,stroke:#40916c,color:#fff
-    style APPLY fill:#1a5276,stroke:#2e86c1,color:#fff
-    style INTERPRET fill:#5c3d2e,stroke:#a67c52,color:#fff
+    style START fill:#1FB854,stroke:#000000,color:#000000
+    style APPLY fill:#00B5FF,stroke:#000000,color:#000000
+    style INTERPRET fill:#FFBE00,stroke:#000000,color:#000000
 ```
 
 ---
@@ -175,4 +176,4 @@ flowchart TD
 ## Sources
 
 - [1*] K. Rosen, *Discrete Mathematics and Its Applications*, 8th ed., McGraw-Hill, 2018.
-- SWEBOK v4.0 — Chapter 17: Mathematical Foundations
+- SWEBOK v4.0, Chapter 17: Mathematical Foundations

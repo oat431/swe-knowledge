@@ -54,7 +54,7 @@ Visual representation. Circles = states, arrows = transitions labeled with `inpu
 
 ### Information Capacity
 
-$C = \log_2 |S|$ — the number of bits needed to encode the machine's state. A system with 8 states has an information capacity of 3 bits. This quantifies the memory requirements of the system.
+$C = \log_2 |S|$: the number of bits needed to encode the machine's state. A system with 8 states has an information capacity of 3 bits. This quantifies the memory requirements of the system.
 
 ---
 
@@ -77,6 +77,7 @@ Simple, but already demonstrates: finite states, deterministic transitions, cycl
 ## FSM Design and Application Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     START["You need to model\nsequential behavior"] --> Q1["Finite number of states?"]
     Q1 -->|No| TM["Not an FSM\nNeed a Turing Machine\nor infinite-state model"]
@@ -95,12 +96,12 @@ flowchart TD
     IMPL -.->|Examples| EX1["Lexer tokenizer\nProtocol state machine\nUI workflow engine"]
     CONVERT -.->|Examples| EX2["Regex engine\nPattern matching\nInput validation"]
 
-    style START fill:#2d6a4f,stroke:#40916c,color:#fff
-    style MEALY fill:#1a5276,stroke:#2e86c1,color:#fff
-    style MOORE fill:#5c3d2e,stroke:#a67c52,color:#fff
-    style DESIGN fill:#333,stroke:#666,color:#fff
-    style IMPL fill:#6b3a6b,stroke:#9b6b9b,color:#fff
-    style CONVERT fill:#6b3a6b,stroke:#9b6b9b,color:#fff
+    style START fill:#1FB854,stroke:#000000,color:#000000
+    style MEALY fill:#00B5FF,stroke:#000000,color:#000000
+    style MOORE fill:#FFBE00,stroke:#000000,color:#000000
+    style DESIGN fill:#19362D,stroke:#000000,color:#CDD3D1
+    style IMPL fill:#1FB8AB,stroke:#000000,color:#000000
+    style CONVERT fill:#1FB8AB,stroke:#000000,color:#000000
 ```
 
 ### Moore vs Mealy Comparison
@@ -120,10 +121,10 @@ flowchart TD
 
 | Application | How FSMs Are Used |
 |------------|-------------------|
-| **Lexical analysis** | Tokenizers are FSMs — they scan source code character-by-character to identify tokens (keywords, identifiers, numbers) |
+| **Lexical analysis** | Tokenizers are FSMs: they scan source code character-by-character to identify tokens (keywords, identifiers, numbers) |
 | **Regex engines** | Every regular expression compiles to an FSM (NFA → DFA) |
 | **Protocol design** | TCP states (LISTEN, SYN-SENT, ESTABLISHED, etc.) form an FSM |
-| **UI state management** | Redux/state machines — screen states, loading/error/success transitions |
+| **UI state management** | Redux/state machines: screen states, loading/error/success transitions |
 | **Game AI** | NPC behavior modeled as states: PATROL, CHASE, ATTACK, FLEE |
 | **Workflow engines** | Business process states: DRAFT → REVIEW → APPROVED → PUBLISHED |
 | **Validation logic** | Form validators that track field states (pristine, dirty, valid, invalid) |
@@ -153,4 +154,4 @@ def transition(state, event):
 ## Sources
 
 - [1*] K. Rosen, *Discrete Mathematics and Its Applications*, 8th ed., McGraw-Hill, 2018.
-- SWEBOK v4.0 — Chapter 17: Mathematical Foundations
+- SWEBOK v4.0, Chapter 17: Mathematical Foundations

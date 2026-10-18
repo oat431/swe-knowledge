@@ -31,7 +31,7 @@ A **set** is an unordered collection of distinct objects (elements). Denoted wit
 
 ### Set Builder Notation
 
-$A = \{x \mid P(x)\}$ — "the set of all $x$ such that $P(x)$ is true."
+$A = \{x \mid P(x)\}$: "the set of all $x$ such that $P(x)$ is true."
 
 Example: $E = \{x \in \mathbb{Z} \mid x \text{ is even}\} = \{\dots, -2, 0, 2, 4, \dots\}$
 
@@ -62,7 +62,7 @@ Visual representations of sets as overlapping circles. Useful for understanding 
 
 ## 2. Relations
 
-A **relation** $R$ from set $A$ to set $B$ is a subset of $A \times B$ — a collection of ordered pairs $(a, b)$ where $a \in A$ and $b \in B$. If $(a, b) \in R$, we write $a R b$.
+A **relation** $R$ from set $A$ to set $B$ is a subset of $A \times B$, a collection of ordered pairs $(a, b)$ where $a \in A$ and $b \in B$. If $(a, b) \in R$, we write $a R b$.
 
 ### Properties of Relations (on a set $A$)
 
@@ -75,8 +75,8 @@ A **relation** $R$ from set $A$ to set $B$ is a subset of $A \times B$ — a col
 
 ### Special Relation Types
 
-- **Equivalence relation:** Reflexive + Symmetric + Transitive — partitions a set into equivalence classes (e.g., "has the same remainder modulo $n$")
-- **Partial order:** Reflexive + Antisymmetric + Transitive — defines a hierarchy (e.g., $\subseteq$ on sets, divisibility on integers)
+- **Equivalence relation:** Reflexive + Symmetric + Transitive; partitions a set into equivalence classes (e.g., "has the same remainder modulo $n$")
+- **Partial order:** Reflexive + Antisymmetric + Transitive; defines a hierarchy (e.g., $\subseteq$ on sets, divisibility on integers)
 
 **In code:** Relations model database foreign keys (`ORDER.customer_id → CUSTOMER.id`), graph edges, and comparison operators. Equivalence classes are used in union-find / disjoint-set data structures.
 
@@ -94,9 +94,9 @@ A **function** $f: A \rightarrow B$ is a special relation where **every element 
 
 | Property | Definition |
 |----------|------------|
-| Injective (one-to-one) | $f(a_1) = f(a_2) \implies a_1 = a_2$ — distinct inputs → distinct outputs |
-| Surjective (onto) | $\forall b \in B, \exists a \in A: f(a) = b$ — every output is hit |
-| Bijective | Both injective and surjective — perfect one-to-one correspondence |
+| Injective (one-to-one) | $f(a_1) = f(a_2) \implies a_1 = a_2$: distinct inputs → distinct outputs |
+| Surjective (onto) | $\forall b \in B, \exists a \in A: f(a) = b$: every output is hit |
+| Bijective | Both injective and surjective: perfect one-to-one correspondence |
 
 ### The Vertical Line Test
 
@@ -109,6 +109,7 @@ On a graph, a curve represents a function iff any vertical line intersects it at
 ## Function Types Decision Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     START["Function f: A → B"] --> Q1["Every element in A\nhas exactly one image?"]
     Q1 -->|Yes| FUNC["Valid Function ✓"]
@@ -134,11 +135,11 @@ flowchart TD
     INJ -.->|Examples| EX2["Unique ID assignment\nPrimary key mapping"]
     SURJ -.->|Examples| EX3["Load balancer covers\nall backend servers"]
 
-    style START fill:#2d6a4f,stroke:#40916c,color:#fff
-    style FUNC fill:#333,stroke:#666,color:#fff
-    style SURJ fill:#1a5276,stroke:#2e86c1,color:#fff
-    style INJ fill:#5c3d2e,stroke:#a67c52,color:#fff
-    style BIJ fill:#6b3a6b,stroke:#9b6b9b,color:#fff
+    style START fill:#1FB854,stroke:#000000,color:#000000
+    style FUNC fill:#19362D,stroke:#000000,color:#CDD3D1
+    style SURJ fill:#00B5FF,stroke:#000000,color:#000000
+    style INJ fill:#FFBE00,stroke:#000000,color:#000000
+    style BIJ fill:#1FB8AB,stroke:#000000,color:#000000
 ```
 
 ---
@@ -160,4 +161,4 @@ flowchart TD
 ## Sources
 
 - [1*] K. Rosen, *Discrete Mathematics and Its Applications*, 8th ed., McGraw-Hill, 2018.
-- SWEBOK v4.0 — Chapter 17: Mathematical Foundations
+- SWEBOK v4.0, Chapter 17: Mathematical Foundations
