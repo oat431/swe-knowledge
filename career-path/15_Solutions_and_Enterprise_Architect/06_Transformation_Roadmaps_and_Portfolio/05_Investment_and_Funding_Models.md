@@ -16,15 +16,15 @@ tags:
 
 # Investment and Funding Models
 
-> **Core skill:** The architect frames transformation investment with evidence — full lifecycle cost, benefits, risk, and optionality — and works with funding models that match how architecture delivers: phased gates, honest run costs, and money for the unglamorous work of coexistence and decommissioning.
+> **Core skill:** The architect frames transformation investment with evidence (full lifecycle cost, benefits, risk, and optionality) and works with funding models that match how architecture delivers: phased gates, honest run costs, and money for the unglamorous work of coexistence and decommissioning.
 
 ## Why This Matters
 
-Funding models shape architecture more than most design debates, because money decides what gets built. A funding regime that only pays for new construction systematically starves the estate of maintenance, migration, and retirement — producing exactly the sprawl the portfolio is trying to fix. The architect who understands funding can argue for the work the architecture actually requires: transition costs, double-running, decommissioning, and capability building.
+Funding models shape architecture more than most design debates, because money decides what gets built. A funding regime that only pays for new construction systematically starves the estate of maintenance, migration, and retirement, producing exactly the sprawl the portfolio is trying to fix. The architect who understands funding can argue for the work the architecture actually requires: transition costs, double-running, decommissioning, and capability building.
 
-Transformation investments are unusually hard to justify because their returns are structural: reduced risk, lower run cost, faster change, fewer incidents. These are real but diffuse, and they arrive after the costs. The architect's contribution is to make the full picture fundable — not by overselling, but by framing benefits in terms finance recognizes and costs at their true, lifecycle scale.
+Transformation investments are unusually hard to justify because their returns are structural: reduced risk, lower run cost, faster change, fewer incidents. These are real but diffuse, and they arrive after the costs. The architect's contribution is to make the full picture fundable, not by overselling, but by framing benefits in terms finance recognizes and costs at their true, lifecycle scale.
 
-Funding also decides optionality. Wholesale commitment to a multi-year plan locks the enterprise into assumptions that will decay; phased funding with gates preserves the ability to adjust as evidence arrives. The architect argues for structures that buy information cheaply — pilots, first waves, proof points — so the big commitments are made with better data than the business case had.
+Funding also decides optionality. Wholesale commitment to a multi-year plan locks the enterprise into assumptions that will decay; phased funding with gates preserves the ability to adjust as evidence arrives. The architect argues for structures that buy information cheaply (pilots, first waves, proof points) so the big commitments are made with better data than the business case had.
 
 ## What Funders Need to See
 
@@ -60,6 +60,7 @@ Funding also decides optionality. Wholesale commitment to a multi-year plan lock
 ## The Funding Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CASE["Business case and value framing"] --> MODEL["Funding model selection"]
     MODEL["Funding model selection"] --> GATE["Stage gates release funds"]
@@ -91,7 +92,7 @@ flowchart LR
 ### Business Case Skeleton
 
 ```markdown
-## Investment Case — <initiative>
+## Investment Case: <initiative>
 
 | Section | Content |
 |---------|---------|
@@ -132,4 +133,4 @@ flowchart LR
 
 ## Summary
 
-Investment and funding models decide which architectures are possible: lifecycle costing replaces build-cost illusions, benefits are framed in the terms funders measure, and phased gates preserve the ability to stop, adjust, or accelerate as evidence arrives. The architect fights for the unglamorous lines — transition, coexistence, decommissioning, capability — because those are the costs that, left unfunded, turn a transformation into a permanent half-finished estate.
+Investment and funding models decide which architectures are possible: lifecycle costing replaces build-cost illusions, benefits are framed in the terms funders measure, and phased gates preserve the ability to stop, adjust, or accelerate as evidence arrives. The architect fights for the unglamorous lines (transition, coexistence, decommissioning, capability) because those are the costs that, left unfunded, turn a transformation into a permanent half-finished estate.

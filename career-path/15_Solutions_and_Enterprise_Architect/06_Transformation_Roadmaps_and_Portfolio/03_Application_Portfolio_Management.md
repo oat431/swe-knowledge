@@ -16,15 +16,15 @@ tags:
 
 # Application Portfolio Management
 
-> **Core skill:** The architect assesses the application portfolio — business value against technical health — to decide invest, tolerate, migrate, or eliminate, and keeps the estate contracting as capabilities consolidate instead of growing with every new initiative.
+> **Core skill:** The architect assesses the application portfolio (business value against technical health) to decide invest, tolerate, migrate, or eliminate, and keeps the estate contracting as capabilities consolidate instead of growing with every new initiative.
 
 ## Why This Matters
 
-Every enterprise accumulates applications faster than it retires them. Each one carries run cost, failure risk, integration weight, and cognitive load. Left alone, the portfolio grows until the estate becomes unhangeable — every change touches a spiderweb of overlapping systems, and nobody dares remove anything because the dependencies are unknown. Application portfolio management is the discipline that keeps the landscape from becoming a museum.
+Every enterprise accumulates applications faster than it retires them. Each one carries run cost, failure risk, integration weight, and cognitive load. Left alone, the portfolio grows until the estate becomes unhangeable: every change touches a spiderweb of overlapping systems, and nobody dares remove anything because the dependencies are unknown. Application portfolio management is the discipline that keeps the landscape from becoming a museum.
 
-APM is an architecture instrument, not a spreadsheet exercise. Every disposition decision — invest, tolerate, migrate, eliminate — changes the landscape, feeds the roadmap, and shifts the integration burden. The architect is well placed to run it because the assessment requires both business value (what the app does for the enterprise) and technical health (how well it does it, and what it costs to keep). Neither view alone produces good dispositions.
+APM is an architecture instrument, not a spreadsheet exercise. Every disposition decision (invest, tolerate, migrate, eliminate) changes the landscape, feeds the roadmap, and shifts the integration burden. The architect is well placed to run it because the assessment requires both business value (what the app does for the enterprise) and technical health (how well it does it, and what it costs to keep). Neither view alone produces good dispositions.
 
-The hardest part is retirement. Decommissioning is a project with prerequisites — data migration, integration redirection, records retention, user transition, license exit — and it competes for funding against new work that feels more exciting. The architect designs the retirement path so that "eliminate" is a plan with dates and owners, not an aspiration that leaves zombies in the landscape for another decade.
+The hardest part is retirement. Decommissioning is a project with prerequisites (data migration, integration redirection, records retention, user transition, license exit), and it competes for funding against new work that feels more exciting. The architect designs the retirement path so that "eliminate" is a plan with dates and owners, not an aspiration that leaves zombies in the landscape for another decade.
 
 ## The Inventory: What to Capture
 
@@ -32,7 +32,7 @@ The hardest part is retirement. Decommissioning is a project with prerequisites 
 |-----------|----------------|
 | Business capability served | Links the app to what the enterprise does; exposes duplication |
 | Users and criticality | Determines tolerance for disruption and retirement sequencing |
-| Cost profile | Build, run, license, support — the price of keeping it |
+| Cost profile | Build, run, license, support: the price of keeping it |
 | Technical health | Age, support status, security posture, maintainability |
 | Integration footprint | Interfaces consume and export; retirement complexity |
 | Data holdings | What would need migration or retention if retired |
@@ -47,7 +47,7 @@ The hardest part is retirement. Decommissioning is a project with prerequisites 
 | Migrate or consolidate | Low | Strong | Fold into a strategic platform; sunset the duplicate |
 | Eliminate | Low | Weak | Retire as soon as dependencies and data are handled |
 
-Calibration matters more than the model. Assessments run by one team with one scale drift toward whatever outcome is politically convenient; the architect anchors the scales with evidence — cost data, incident history, usage figures — and re-scores periodically.
+Calibration matters more than the model. Assessments run by one team with one scale drift toward whatever outcome is politically convenient; the architect anchors the scales with evidence (cost data, incident history, usage figures) and re-scores periodically.
 
 ## Disposition Options and Prerequisites
 
@@ -62,6 +62,7 @@ Calibration matters more than the model. Assessments run by one team with one sc
 ## The Portfolio Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     INVENTORY["Application inventory and attributes"] --> ASSESS["Assess value and technical health"]
     ASSESS["Assess value and technical health"] --> DISPOSE["Disposition decision"]
@@ -89,12 +90,12 @@ flowchart LR
 - [ ] Assessments combine value and technical health evidence, recalibrated each cycle
 - [ ] Every application has a current disposition with a reason and a review date
 - [ ] Retirement work is explicitly funded and staffed, not left implicit
-- [ ] Landscape views shrink — retirements actually land on the architecture diagram
+- [ ] Landscape views shrink: retirements actually land on the architecture diagram
 
 ### Portfolio Review Summary
 
 ```markdown
-## Portfolio Review — <period>
+## Portfolio Review: <period>
 
 | Metric | This Cycle | Prior Cycle | Trend |
 |--------|-----------|-------------|-------|
@@ -129,8 +130,8 @@ flowchart LR
 - [[04_Technology_Portfolio_and_Standards]]
 - [[02_Transformation_Roadmap_Development]]
 - [[06_Migration_and_Coexistence_Strategies]]
-- [[04_Enterprise_Data_Architecture/00_overview|Enterprise Data Architecture]]
+- [[career-path/15_Solutions_and_Enterprise_Architect/04_Enterprise_Data_Architecture/00_overview|Enterprise Data Architecture]]
 
 ## Summary
 
-Application portfolio management keeps the estate honest about what it runs: an owned inventory, assessments that weigh business value against technical health, dispositions that say invest, tolerate, consolidate, or retire, and retirement treated as funded delivery work with prerequisites handled. The architect's goal is a portfolio that contracts as capabilities consolidate — because an estate that never removes anything will eventually have no room to change anything.
+Application portfolio management keeps the estate honest about what it runs: an owned inventory, assessments that weigh business value against technical health, dispositions that say invest, tolerate, consolidate, or retire, and retirement treated as funded delivery work with prerequisites handled. The architect's goal is a portfolio that contracts as capabilities consolidate, because an estate that never removes anything will eventually have no room to change anything.

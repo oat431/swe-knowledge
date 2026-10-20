@@ -14,11 +14,11 @@ tags:
 
 # Architecture Communication
 
-> **Core capability:** The architect presents architecture in stakeholder-relevant views — business language for executives, capability language for product, technical language for engineers — and makes the architecture a shared reference rather than a personal document.
+> **Core capability:** The architect presents architecture in stakeholder-relevant views (business language for executives, capability language for product, technical language for engineers) and makes the architecture a shared reference rather than a personal document.
 
 ## Why This Matters
 
-Enterprise architecture lives or dies on communication. The board does not read component diagrams; the engineering team does not want a capability map. The architect's job is translation: the same architecture expressed in the language each audience uses to make decisions — and enough shared artifacts that the audiences reference the same truth.
+Enterprise architecture lives or dies on communication. The board does not read component diagrams; the engineering team does not want a capability map. The architect's job is translation: the same architecture expressed in the language each audience uses to make decisions, and enough shared artifacts that the audiences reference the same truth.
 
 This area also covers the architect's external voice: vendors, partners, auditors, and customers all interact with the architecture through the architect's communication. Whether the architecture is trusted often depends less on whether it is right and more on whether it is understood.
 
@@ -37,6 +37,7 @@ This area also covers the architect's external voice: vendors, partners, auditor
 ## Audience-View Mapping
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ARCH["Architecture: one coherent design"] --> EXEC["Executive view: value, risk, cost, timeline"]
     ARCH --> BUSINESS["Business view: capabilities, processes, change"]
@@ -44,7 +45,7 @@ flowchart TD
     ARCH --> EXTERNAL["External view: vendors, partners, auditors"]
 ```
 
-One architecture — four translations. Inconsistency between them destroys trust.
+One architecture: four translations. Inconsistency between them destroys trust.
 
 ## Practical Applications
 
@@ -73,11 +74,11 @@ One architecture — four translations. Inconsistency between them destroys trus
 
 ## Related Capabilities
 
-- [[03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: communication makes the practice influential
-- [[06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: roadmaps are communication artifacts
+- [[career-path/15_Solutions_and_Enterprise_Architect/03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: communication makes the practice influential
+- [[career-path/15_Solutions_and_Enterprise_Architect/06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: roadmaps are communication artifacts
 - [[career-path/06_Software_Architect/03_Architecture_Description_and_Views/00_overview|Architecture Description and Views (Architect)]]: the view techniques this builds on
 - [[career-path/11_Engineering_Manager/07_Manager_Communication/00_overview|Manager Communication (EM)]]: the organizational communication craft
 
 ## Summary
 
-Architecture communication is translation at scale: one coherent architecture expressed in as many views as there are audiences, documentation that stays alive, facilitation that turns meetings into decisions, and an external voice that keeps vendors and partners aligned. The architecture that cannot be explained to the board cannot be funded — and the one that cannot be explained to engineers cannot be built.
+Architecture communication is translation at scale: one coherent architecture expressed in as many views as there are audiences, documentation that stays alive, facilitation that turns meetings into decisions, and an external voice that keeps vendors and partners aligned. The architecture that cannot be explained to the board cannot be funded, and the one that cannot be explained to engineers cannot be built.

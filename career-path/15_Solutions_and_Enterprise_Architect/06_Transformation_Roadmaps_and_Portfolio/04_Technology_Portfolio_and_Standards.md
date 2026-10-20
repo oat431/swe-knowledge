@@ -16,7 +16,7 @@ tags:
 
 # Technology Portfolio and Standards
 
-> **Core skill:** The architect manages technology as a portfolio with lifecycles — strategic, emerging, tactical, contained, retiring — so adoption decisions are informed, variation is deliberate, and the estate never becomes a museum of accumulated experiments.
+> **Core skill:** The architect manages technology as a portfolio with lifecycles (strategic, emerging, tactical, contained, retiring) so adoption decisions are informed, variation is deliberate, and the estate never becomes a museum of accumulated experiments.
 
 ## Why This Matters
 
@@ -24,7 +24,7 @@ Every technology choice that enters the estate must one day be maintained, patch
 
 Standards governance has a reputation problem because it is often practiced as a list of bans enforced by a review board, which drives adoption underground into shadow projects. The working version is enabling: a small set of well-supported choices, guidance and templates that make standard paths the fastest path, and a radar that tells teams where each technology stands and where it is going.
 
-The architect also owes the organization honesty about transitions. Technologies exit the portfolio, and that exit is a project: systems built on a retirant need migration paths, timelines, and support commitments. The lifecycle position is a promise about the future — announced early enough that downstream decisions can take it into account.
+The architect also owes the organization honesty about transitions. Technologies exit the portfolio, and that exit is a project: systems built on a retirant need migration paths, timelines, and support commitments. The lifecycle position is a promise about the future, announced early enough that downstream decisions can take it into account.
 
 ## Standards Lifecycle Positions
 
@@ -50,7 +50,7 @@ The architect also owes the organization honesty about transitions. Technologies
 
 | Element | Rule |
 |---------|------|
-| Justification | An exception states the requirement the standard cannot meet — not preference |
+| Justification | An exception states the requirement the standard cannot meet, not preference |
 | Register | All variants visible with owner, scope, and expiry |
 | Cost awareness | The variant's lifecycle burden becomes visible in the decision |
 | Consolidation path | Every exception names when and how the system returns to standard |
@@ -59,6 +59,7 @@ The architect also owes the organization honesty about transitions. Technologies
 ## The Standards Lifecycle Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PROPOSE["Technology proposal from projects or strategy"] --> ASSESS["Assess against the reference model"]
     ASSESS["Assess against the reference model"] --> POSITION["Assign lifecycle position and guidance"]
@@ -90,7 +91,7 @@ flowchart LR
 ### Radar Entry Template
 
 ```markdown
-## Technology Radar Entry — <technology>
+## Technology Radar Entry: <technology>
 
 | Attribute | Value |
 |-----------|-------|
@@ -125,9 +126,9 @@ flowchart LR
 
 - [[03_Application_Portfolio_Management]]
 - [[05_Investment_and_Funding_Models]]
-- [[03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]
+- [[career-path/15_Solutions_and_Enterprise_Architect/03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]
 - [[career-path/03_Staff_Engineer/02_Cross_Team_Technical_Leadership/04_Migration_Leadership|Migration Leadership (Staff)]]
 
 ## Summary
 
-Technology portfolio management keeps variation deliberate: lifecycle positions from strategic through retiring, a reference model that assigns ownership per layer, exceptions that are visible and time-boxed, and a paved road that makes the standard choice the fast choice. The architect's test is behavioral — do teams adopt the standards because they work, or evade them because they obstruct? Only the first kind of standard survives contact with delivery.
+Technology portfolio management keeps variation deliberate: lifecycle positions from strategic through retiring, a reference model that assigns ownership per layer, exceptions that are visible and time-boxed, and a paved road that makes the standard choice the fast choice. The architect's test is behavioral: do teams adopt the standards because they work, or evade them because they obstruct? Only the first kind of standard survives contact with delivery.

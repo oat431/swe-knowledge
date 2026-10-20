@@ -16,15 +16,15 @@ tags:
 
 # MVP and Offer Iteration
 
-> **Core skill:** Launching the smallest sellable version of an offer and iterating on the offer itself — informed by delivery friction, objections, and margins — rather than only polishing the product inside it.
+> **Core skill:** Launching the smallest sellable version of an offer and iterating on the offer itself (informed by delivery friction, objections, and margins) rather than only polishing the product inside it.
 
 ## Why This Matters
 
-MVP is usually discussed for products, but the independent's first version of any offer is also an MVP: a concierge delivery, a single-client pilot, a one-outcome sprint. What it tests is the offer itself — who buys, what they pay, and what delivery actually costs — and it tests those questions for the price of a few weeks rather than a few quarters of building. A product launch can hide a broken offer behind a beta; a pilot cannot.
+MVP is usually discussed for products, but the independent's first version of any offer is also an MVP: a concierge delivery, a single-client pilot, a one-outcome sprint. What it tests is the offer itself (who buys, what they pay, and what delivery actually costs), and it tests those questions for the price of a few weeks rather than a few quarters of building. A product launch can hide a broken offer behind a beta; a pilot cannot.
 
 The operative principle is the smallest thing someone will actually pay for. Manual delivery is allowed, and early on it is often best: the client buys an outcome, and the independent delivers it however is honest and reliable. Transparent concierge delivery is a service; pretending manual work is a finished product is not a strategy, it is a liability. The line between them is disclosure and pricing, not elegance of implementation.
 
-Iteration applies to the offer, not only inside it. Price, scope, promise, cadence, and positioning all update from evidence: sales objections, delivery hours, scope variance, churn reasons, and margin. Version the offer explicitly — v1, v2, with a changelog — so changes trace to signals instead of to boredom. Market-facing iteration, with clients in the loop, is what keeps the offer alive; internal polishing without market contact is what keeps it expensive.
+Iteration applies to the offer, not only inside it. Price, scope, promise, cadence, and positioning all update from evidence: sales objections, delivery hours, scope variance, churn reasons, and margin. Version the offer explicitly (v1, v2, with a changelog), so changes trace to signals instead of to boredom. Market-facing iteration, with clients in the loop, is what keeps the offer alive; internal polishing without market contact is what keeps it expensive.
 
 ## MVP Forms for Offers
 
@@ -61,6 +61,7 @@ Iteration applies to the offer, not only inside it. Price, scope, promise, caden
 ## The Offer Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SELL["Sell the smallest version"] --> DELIVER["Deliver manually if needed"]
     DELIVER --> LEARN["Collect friction and objections"]
@@ -68,7 +69,7 @@ flowchart LR
     REVISE --> SELL
 ```
 
-The loop runs on customer contact. Each cycle should change one meaningful thing — price, scope, or promise — and produce fewer support hours or cleaner sales than the last.
+The loop runs on customer contact. Each cycle should change one meaningful thing (price, scope, or promise), and produce fewer support hours or cleaner sales than the last.
 
 ## Practical Applications
 
@@ -84,7 +85,7 @@ The loop runs on customer contact. Each cycle should change one meaningful thing
 ### Offer Iteration Log
 
 ```markdown
-## Offer Iteration Log — <offer name>
+## Offer Iteration Log: <offer name>
 
 | Version | Date | Change | Signal That Caused It |
 |---------|------|--------|-----------------------|
@@ -119,8 +120,8 @@ Next review: <date>.
 - [[01_Service_Offers_and_Packaging]]
 - [[04_Product_vs_Service_Decisions]]
 - [[05_Scoping_and_Deliverable_Definition]]
-- [[01_Problem_Discovery_and_Customer_Validation/00_overview|Problem Discovery and Customer Validation]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/01_Problem_Discovery_and_Customer_Validation/00_overview|Problem Discovery and Customer Validation]]
 
 ## Summary
 
-MVP and offer iteration apply the startup's cheapest-experiment logic to an independent's business: sell the smallest version someone will pay for, deliver it honestly, collect friction and objections as data, and revise the offer — price, scope, promise — on a versioned cadence. The offer improves the way products improve: through contact with paying reality, one measured change at a time.
+MVP and offer iteration apply the startup's cheapest-experiment logic to an independent's business: sell the smallest version someone will pay for, deliver it honestly, collect friction and objections as data, and revise the offer (price, scope, promise) on a versioned cadence. The offer improves the way products improve: through contact with paying reality, one measured change at a time.

@@ -16,13 +16,13 @@ tags:
 
 # Managing Decision Disagreement
 
-> **Core skill:** The TPM manages disagreement within the decision process — classifying the source, structuring the argument around criteria and evidence, recording dissent without erasing it, and producing commitment from those who argued against the decision.
+> **Core skill:** The TPM manages disagreement within the decision process, classifying the source, structuring the argument around criteria and evidence, recording dissent without erasing it, and producing commitment from those who argued against the decision.
 
 ## Why This Matters
 
-Disagreement is not a threat to the decision process — it is evidence that the process is working. A decision with no dissent is either trivial or suppressed. A decision with surfaced, structured, and recorded dissent is a decision that has been tested — and a decision that has been tested is more likely to survive execution because its weaknesses were examined before commitment.
+Disagreement is not a threat to the decision process; it is evidence that the process is working. A decision with no dissent is either trivial or suppressed. A decision with surfaced, structured, and recorded dissent is a decision that has been tested, and a decision that has been tested is more likely to survive execution because its weaknesses were examined before commitment.
 
-The TPM's disagreement management discipline is distinct from stakeholder conflict resolution. Stakeholder conflict is about interests — what different groups want from the program. Decision disagreement is about choices — which option best serves the program's outcomes given the criteria and the evidence. The TPM manages both, but the tools are different: conflict resolution uses interest-based negotiation; decision disagreement uses criteria-based evaluation.
+The TPM's disagreement management discipline is distinct from stakeholder conflict resolution. Stakeholder conflict is about interests, what different groups want from the program. Decision disagreement is about choices, which option best serves the program's outcomes given the criteria and the evidence. The TPM manages both, but the tools are different: conflict resolution uses interest-based negotiation; decision disagreement uses criteria-based evaluation.
 
 ## The Disagreement Taxonomy
 
@@ -33,10 +33,10 @@ Classify before you manage. Different types of disagreement need different resol
 | Evidence disagreement | "Your data on migration cost is wrong" | Different data sources, methodologies, or interpretations | Joint data review; agree on data before arguing conclusions |
 | Criteria disagreement | "You are optimizing for cost; I am optimizing for reliability" | Different values; different weighting of trade-off dimensions | Agree criteria and weights before evaluating options |
 | Prediction disagreement | "You say the migration will take 8 weeks; I say 16" | Different assumptions about the future; genuine uncertainty | Run a pilot; agree on leading indicators that will resolve the prediction |
-| Preference disagreement | "I prefer PostgreSQL" — "I prefer DynamoDB" — with no criteria | Personal preference masquerading as technical judgment | Surface the preference; map it to criteria; let criteria arbitrate |
-| Risk appetite disagreement | "That risk is acceptable" — "That risk is unacceptable" | Different tolerance for downside | Explicit risk framing: probability × impact; agree on risk thresholds |
+| Preference disagreement | "I prefer PostgreSQL", "I prefer DynamoDB", with no criteria | Personal preference masquerading as technical judgment | Surface the preference; map it to criteria; let criteria arbitrate |
+| Risk appetite disagreement | "That risk is acceptable", "That risk is unacceptable" | Different tolerance for downside | Explicit risk framing: probability × impact; agree on risk thresholds |
 
-Criteria disagreement is the most common and the most consequential. When two stakeholders disagree on which option is best, they are usually disagreeing on what "best" means — and that is a criteria disagreement. The TPM who surfaces the criteria disagreement before the options are debated prevents the most common form of decision deadlock.
+Criteria disagreement is the most common and the most consequential. When two stakeholders disagree on which option is best, they are usually disagreeing on what "best" means, and that is a criteria disagreement. The TPM who surfaces the criteria disagreement before the options are debated prevents the most common form of decision deadlock.
 
 ## The Structured Disagreement Process
 
@@ -52,11 +52,11 @@ When a decision faces genuine disagreement that cannot be resolved by clarifying
 | 6. Decide | The decider chooses based on the joint evaluation | A decision with the dissenter's position preserved |
 | 7. Record and commit | Dissent recorded; both sides commit | Recorded decision with explicit commitments |
 
-The "what would change your mind" question in step 3 is the most powerful tool in the process. It forces both sides to articulate their evidence threshold — the condition under which they would switch positions. When both sides can name what would change their mind, the disagreement is no longer a clash of wills — it is a search for evidence.
+The "what would change your mind" question in step 3 is the most powerful tool in the process. It forces both sides to articulate their evidence threshold, the condition under which they would switch positions. When both sides can name what would change their mind, the disagreement is no longer a clash of wills; it is a search for evidence.
 
 ## Facilitating Disagreement in Decision Meetings
 
-Disagreement in the decision meeting is managed differently from the structured process — faster, more constrained, but with the same principles.
+Disagreement in the decision meeting is managed differently from the structured process: faster, more constrained, but with the same principles.
 
 | Situation | Facilitation Move |
 |-----------|-------------------|
@@ -77,7 +77,7 @@ Disagree and commit is the mechanism by which a decision proceeds with dissent o
 | The dissenter's concerns are never revisited | The decision record includes a re-review trigger: "If [condition], we revisit." |
 | If the decision fails, the dissenter is blamed or the dissenter says "I told you so" | The re-review evaluates both positions against the outcome data |
 
-The TPM's role in disagree-and-commit: ensure the dissent is recorded accurately, ask the dissenter for explicit commitment, set the re-review conditions, and hold both sides accountable for their commitments. The TPM never uses "disagree and commit" to silence dissent — that is process abuse, and it destroys the trust that keeps dissent surfacing.
+The TPM's role in disagree-and-commit: ensure the dissent is recorded accurately, ask the dissenter for explicit commitment, set the re-review conditions, and hold both sides accountable for their commitments. The TPM never uses "disagree and commit" to silence dissent; that is process abuse, and it destroys the trust that keeps dissent surfacing.
 
 ## When Disagreement Becomes Obstruction
 
@@ -93,6 +93,7 @@ Not all disagreement is constructive. The TPM distinguishes genuine disagreement
 The TPM's escalation for obstruction: name the pattern to the dissenter privately, escalate to the sponsor if it continues, and escalate to the steering committee if it threatens the program. The pattern is always named in behavioral terms: "You have raised the same objection in three forums without new evidence. The decision is made. Continuing to raise it is obstructing execution."
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DISAGREE["Disagreement surfaces in the decision process"] --> CLASSIFY["Classify: evidence, criteria, prediction, preference, or risk appetite?"]
     CLASSIFY --> STRUCTURE["Structure: written positions, agreed criteria, joint evaluation"]
@@ -107,7 +108,7 @@ flowchart TD
 ### Disagreement Brief Template
 
 ```markdown
-# Disagreement Brief — [DR-###] — [Decision Name]
+# Disagreement Brief: [DR-###], [Decision Name]
 
 ## The Disagreement
 - Between: [Person A] and [Person B]
@@ -154,7 +155,7 @@ flowchart TD
 |---------|---------------------|-----------------|
 | **Suppressing disagreement** | Dissent goes underground; surfaces later as passive resistance or sabotage | Surface, structure, record, and commit |
 | **Arguing without criteria** | Both sides are right on different dimensions; the deadlock is artificial | Agree criteria and weights before evaluating options |
-| **Fake disagree-and-commit** | "Fine, whatever" — not commitment, just exhaustion | Ask for explicit commitment: "Can you state that you will make this work?" |
+| **Fake disagree-and-commit** | "Fine, whatever": not commitment, just exhaustion | Ask for explicit commitment: "Can you state that you will make this work?" |
 | **Treating all disagreement as obstruction** | Genuine concerns are silenced; the decision loses the dissenter's insight | Distinguish obstruction from disagreement by evidence and behavior |
 | **No re-review trigger** | Dissenter's concerns are never checked against reality; trust erodes | Set a measurable trigger for re-review in the decision record |
 
@@ -171,9 +172,9 @@ flowchart TD
 - [[02_Decision_Framing]]: the framing document that surfaces criteria and options
 - [[03_Facilitating_Decision_Meetings]]: managing disagreement in the decision forum
 - [[04_Decision_Documentation]]: recording dissent in the decision record
-- [[05_Stakeholder_Alignment/06_Stakeholder_Conflict_Resolution|Stakeholder Conflict Resolution]]: the stakeholder-side counterpart
+- [[career-path/12_Technical_Program_Manager/05_Stakeholder_Alignment/06_Stakeholder_Conflict_Resolution|Stakeholder Conflict Resolution]]: the stakeholder-side counterpart
 - [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/03_Managing_Disagreement|Managing Disagreement (Staff)]]: the staff engineer's disagreement discipline
 
 ## Summary
 
-Managing decision disagreement is the TPM's process for turning dissent into better decisions: classifying the disagreement type, structuring it through written positions and agreed criteria, recording dissent without erasing it, and producing explicit commitment from those who argued against the outcome. Disagreement is not a threat to the decision process — it is how the process tests decisions before they meet reality. The TPM who suppresses disagreement gets fake consensus; the TPM who channels it into structured resolution gets tested decisions and real commitment.
+Managing decision disagreement is the TPM's process for turning dissent into better decisions: classifying the disagreement type, structuring it through written positions and agreed criteria, recording dissent without erasing it, and producing explicit commitment from those who argued against the outcome. Disagreement is not a threat to the decision process; it is how the process tests decisions before they meet reality. The TPM who suppresses disagreement gets fake consensus; the TPM who channels it into structured resolution gets tested decisions and real commitment.

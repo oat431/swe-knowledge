@@ -16,13 +16,13 @@ tags:
 
 # Organizational Conflict Resolution
 
-> **Core skill:** The principal resolves technical and strategic deadlocks between senior leaders — applying a mediation approach that finds shared criteria, documents resolution, and escalates only when the conflict cannot be resolved at the principal's level.
+> **Core skill:** The principal resolves technical and strategic deadlocks between senior leaders, applying a mediation approach that finds shared criteria, documents resolution, and escalates only when the conflict cannot be resolved at the principal's level.
 
 ## Why This Matters
 
-At principal level, the conflicts that reach you are not team disagreements about implementation patterns — those are resolved at staff level. The conflicts that reach the principal are deadlocks between senior leaders: the CTO and the CPO disagreeing on platform vs product investment, two VPs of engineering with conflicting architecture visions, a business unit leader and the CISO deadlocked on security vs speed. These conflicts are expensive because they consume the organization's most senior time and block consequential decisions. They are also fragile — handled badly, they damage relationships that the organization needs.
+At principal level, the conflicts that reach you are not team disagreements about implementation patterns. Those are resolved at staff level. The conflicts that reach the principal are deadlocks between senior leaders: the CTO and the CPO disagreeing on platform vs product investment, two VPs of engineering with conflicting architecture visions, a business unit leader and the CISO deadlocked on security vs speed. These conflicts are expensive because they consume the organization's most senior time and block consequential decisions. They are also fragile: handled badly, they damage relationships that the organization needs.
 
-The principal is often the person best positioned to mediate: technically credible enough to assess the substance, organizationally senior enough to be respected by both parties, and structurally neutral enough — the principal does not report to either party and does not have a stake in either outcome. The principal's mediation approach finds shared criteria, separates interests from positions, documents the resolution, and escalates cleanly when the conflict exceeds the principal's authority to resolve.
+The principal is often the person best positioned to mediate: technically credible enough to assess the substance, organizationally senior enough to be respected by both parties, and structurally neutral enough (the principal does not report to either party and does not have a stake in either outcome). The principal's mediation approach finds shared criteria, separates interests from positions, documents the resolution, and escalates cleanly when the conflict exceeds the principal's authority to resolve.
 
 ## The Mediation Approach
 
@@ -40,7 +40,7 @@ Before engaging with the substance, the principal ensures the conflict is about 
 
 ### Step Two: Find Shared Criteria
 
-The principal identifies criteria that both parties agree should govern the decision — even if they disagree on how the criteria apply.
+The principal identifies criteria that both parties agree should govern the decision, even if they disagree on how the criteria apply.
 
 | Shared Criteria Examples | How to Elicit Them |
 |-------------------------|-------------------|
@@ -49,7 +49,7 @@ The principal identifies criteria that both parties agree should govern the deci
 | "The decision should minimize the risk of an incident that affects customers" | "Can we agree on the risk tolerance for this decision?" |
 | "The decision should optimize for long-term cost, not short-term convenience" | "Can we agree on the time horizon for evaluating cost?" |
 
-Shared criteria do not resolve the conflict — they frame it. With shared criteria, the debate shifts from "my option vs yours" to "which option better meets the criteria we both agree on."
+Shared criteria do not resolve the conflict. They frame it. With shared criteria, the debate shifts from "my option vs yours" to "which option better meets the criteria we both agree on."
 
 ### Step Three: Price the Options Against Shared Criteria
 
@@ -60,7 +60,7 @@ With shared criteria established, the principal leads the parties through pricin
 | Option A | High: directly supports the platform strategy | Low: requires a two-year commitment | Medium: migration risk during transition | Lower over five years |
 | Option B | Medium: partial alignment | High: reversible within a quarter | Low: incremental change | Higher over five years |
 
-The table makes the conflict legible: the parties may discover they agree on the facts and disagree on how to weight the criteria — a resolvable disagreement. Or they may discover the facts themselves are contested, in which case the next step is to agree on how to resolve the factual disagreement: a spike, a prototype, or external data.
+The table makes the conflict legible: the parties may discover they agree on the facts and disagree on how to weight the criteria, a resolvable disagreement. Or they may discover the facts themselves are contested, in which case the next step is to agree on how to resolve the factual disagreement: a spike, a prototype, or external data.
 
 ### Step Four: Find the Decision
 
@@ -76,7 +76,7 @@ With shared criteria and priced options, the principal guides the parties to a d
 
 ### Step Five: Document the Resolution
 
-Every resolved conflict is documented. An undocumented resolution is a conflict deferred — it will be re-argued when memories fade or one party leaves.
+Every resolved conflict is documented. An undocumented resolution is a conflict deferred. It will be re-argued when memories fade or one party leaves.
 
 ```markdown
 # Conflict Resolution Record: [Topic]
@@ -124,13 +124,13 @@ Not every conflict can be resolved at the principal's level. The principal recog
 | **The decision exceeds the principal's authority** | The decision is CEO-level or board-level in materiality | "The options and trade-offs are documented. The decision requires CEO or board authority." |
 | **The conflict is about organizational design** | The conflict is not about a technical decision but about who reports to whom or who owns what | "This conflict is organizational, not technical. It requires the CEO's decision on organizational design." |
 
-Escalation is not failure — it is recognizing the limits of the principal's mediation authority and moving the conflict to the level where it can be resolved.
+Escalation is not failure. It is recognizing the limits of the principal's mediation authority and moving the conflict to the level where it can be resolved.
 
 ## Practical Applications
 
 ### Conflict Resolution Checklist
 
-- [ ] The conflict is about a decision, not about the people — if it is personal, address that first
+- [ ] The conflict is about a decision, not about the people. If it is personal, address that first
 - [ ] Shared criteria are identified before options are debated
 - [ ] Options are priced against shared criteria in a table both parties can see
 - [ ] The resolution is documented with revisit conditions
@@ -151,7 +151,7 @@ Escalation is not failure — it is recognizing the limits of the principal's me
 ## Success Indicators
 
 - Conflicts are resolved with documented shared criteria and revisit conditions
-- Resolved conflicts stay resolved — they are not re-argued
+- Resolved conflicts stay resolved. They are not re-argued
 - Dissenting views are recorded and respected, not suppressed
 - The principal is sought as a mediator because prior mediations have been fair and effective
 - Escalations are rare and, when they occur, carry complete analysis
@@ -166,4 +166,4 @@ Escalation is not failure — it is recognizing the limits of the principal's me
 
 ## Summary
 
-Organizational conflict resolution at principal level is mediation between senior leaders deadlocked on technical and strategic decisions. The principal applies a structured approach: separate people from the problem, find shared criteria, price options against those criteria, guide to a decision, and document the resolution with revisit conditions. The principal remains neutral, records dissent rather than suppressing it, and escalates cleanly when the conflict exceeds the principal's mediation authority — because an unresolved conflict at the senior level costs the organization more than any mediated decision ever could.
+Organizational conflict resolution at principal level is mediation between senior leaders deadlocked on technical and strategic decisions. The principal applies a structured approach: separate people from the problem, find shared criteria, price options against those criteria, guide to a decision, and document the resolution with revisit conditions. The principal remains neutral, records dissent rather than suppressing it, and escalates cleanly when the conflict exceeds the principal's mediation authority, because an unresolved conflict at the senior level costs the organization more than any mediated decision ever could.

@@ -16,15 +16,15 @@ tags:
 
 # RAG with Customer Data
 
-> **Core skill:** Grounding models in customer knowledge with real quality control — index the right sources, respect permission boundaries, keep the corpus fresh, and prove retrieval quality on the customer's own material.
+> **Core skill:** Grounding models in customer knowledge with real quality control: index the right sources, respect permission boundaries, keep the corpus fresh, and prove retrieval quality on the customer's own material.
 
 ## Why This Matters
 
-Customer knowledge lives everywhere except in one place: policy documents in a document management system, procedures on a wiki that half the company edits, answers buried in resolved tickets, contracts in PDF folders, and the definitive version inside the head of someone who has been there twenty years. A retrieval-augmented system that grounds its answers in that material is the most common shape of enterprise AI deployment — and the most common shape of failure. When a grounded system answers wrongly, the failure is usually retrieval: the decisive passage never reached the model, or the wrong passage did.
+Customer knowledge lives everywhere except in one place: policy documents in a document management system, procedures on a wiki that half the company edits, answers buried in resolved tickets, contracts in PDF folders, and the definitive version inside the head of someone who has been there twenty years. A retrieval-augmented system that grounds its answers in that material is the most common shape of enterprise AI deployment, and the most common shape of failure. When a grounded system answers wrongly, the failure is usually retrieval: the decisive passage never reached the model, or the wrong passage did.
 
 Customer data adds constraints that product RAG never meets. Documents carry permissions: a retrieval system that ignores access rules is a data-leak machine wearing a helpful face. Material is stale in ways nobody tracks. The same policy exists in three versions across two systems, and the retrieval results must show the current one or cite clearly. Vocabulary is local: acronyms, product names, and internal shorthand that public embeddings handle poorly and that no public corpus explains.
 
-Quality control is therefore the FDE's real deliverable. Indexing is a few days; the engagement is won or lost on whether retrieval returns the correct, current, permitted passage — and whether anyone can prove it. That proof comes from retrieval evaluation on customer questions with known answers, reviewed with the customer's experts, and re-run whenever sources, chunking, or models change.
+Quality control is therefore the FDE's real deliverable. Indexing is a few days; the engagement is won or lost on whether retrieval returns the correct, current, permitted passage, and whether anyone can prove it. That proof comes from retrieval evaluation on customer questions with known answers, reviewed with the customer's experts, and re-run whenever sources, chunking, or models change.
 
 ## The Customer Corpus
 
@@ -58,6 +58,7 @@ Quality control is therefore the FDE's real deliverable. Indexing is a few days;
 | Refusal behavior | Confident answers where no source exists | Questions with no answer in the corpus; check refusal or escalation |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     INGEST["Ingest and clean the sources"] --> INDEX["Index with permission metadata"]
     INDEX --> RETRIEVE["Retrieve with filters for the user"]
@@ -81,7 +82,7 @@ flowchart LR
 ### Corpus Inventory Template
 
 ```markdown
-## Corpus Inventory — <source>
+## Corpus Inventory: <source>
 
 | Field | Value |
 |-------|-------|
@@ -111,7 +112,7 @@ flowchart LR
 - Permission tests pass across roles, and security signs off without exception lists
 - Freshness monitors catch stale sources before users cite them
 - Users click citations and verify answers as a normal habit
-- Knowledge gaps surface as corpus requests — a sign retrieval is being trusted enough to probe
+- Knowledge gaps surface as corpus requests: a sign retrieval is being trusted enough to probe
 
 ## Related Topics
 
@@ -119,8 +120,8 @@ flowchart LR
 - [[03_Field_Evaluation_and_Quality]]
 - [[04_Model_Constraints_and_Data_Residency]]
 - [[career-path/18_Applied_AI_Engineer/01_LLM_Application_Patterns/00_overview|LLM Application Patterns (Applied AI)]]
-- [[01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]
+- [[career-path/19_Forward_Deployed_Engineer/01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]
 
 ## Summary
 
-RAG with customer data is quality control wearing engineering clothes: inventory the sources, index with permission and version metadata, retrieve through the user's access filters, and prove with evaluation that the right passage surfaces for real questions. The model is rarely the problem in a grounded system — retrieval is — so the FDE invests where the failures actually live: permissions, freshness, vocabulary, chunking, and citations, reviewed on the customer's own material with the customer's own experts.
+RAG with customer data is quality control wearing engineering clothes: inventory the sources, index with permission and version metadata, retrieve through the user's access filters, and prove with evaluation that the right passage surfaces for real questions. The model is rarely the problem in a grounded system (retrieval is), so the FDE invests where the failures actually live: permissions, freshness, vocabulary, chunking, and citations, reviewed on the customer's own material with the customer's own experts.

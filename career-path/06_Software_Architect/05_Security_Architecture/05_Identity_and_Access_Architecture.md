@@ -16,13 +16,13 @@ tags:
 
 # Identity and Access Architecture
 
-> **Core skill:** The architect designs how identity is established, propagated, and verified across every component — authentication architecture, authorization models, and service identity — as one system-wide scheme rather than per-service improvisation.
+> **Core skill:** The architect designs how identity is established, propagated, and verified across every component (authentication architecture, authorization models, and service identity) as one system-wide scheme rather than per-service improvisation.
 
 ## Why This Matters
 
 Identity is the control plane of a modern system. Every request carries an identity claim somewhere, and the architecture decides where that claim is proven, what it means, how it travels between services, and what it is allowed to do at each stop. Almost every lateral-movement incident is an identity architecture failure: a token that was valid anywhere in the network, a service that acted with more authority than its caller, a revocation that never propagated.
 
-The choices are structural and they constrain everything built afterward. Single sign-on versus per-application accounts, one identity provider versus per-domain providers, tokens versus server sessions, centralized policy versus embedded rules, shared secrets versus workload identity — each decision reaches into every call path. Retrofitting an identity architecture is expensive because there is no part of the system it does not touch.
+The choices are structural and they constrain everything built afterward. Single sign-on versus per-application accounts, one identity provider versus per-domain providers, tokens versus server sessions, centralized policy versus embedded rules, shared secrets versus workload identity: each decision reaches into every call path. Retrofitting an identity architecture is expensive because there is no part of the system it does not touch.
 
 Authorization models carry the same weight. Role-based access control is simple and auditable but coarse; attribute-based access control is expressive but its policies become software in their own right; relationship-based access control answers questions the other two cannot, at the cost of a relationship store to maintain. The model determines which access questions the system can answer at all, and which it can only approximate.
 
@@ -58,11 +58,12 @@ Services are principals too, and they need identity that is verifiable, scoped, 
 
 ## Identity Propagation Across Services
 
-How identity travels is a decision made once and inherited everywhere. The propagation model narrows authority as it moves: a user token presented to a gateway is exchanged for a scoped token per downstream call, or re-verified at each hop with audience restriction. Whatever the mechanism, two rules hold — identity must not widen as it travels, and every hop authorizes against local policy rather than inheriting trust. The confused deputy failure appears when one service uses its own broad identity to serve a narrowly entitled caller.
+How identity travels is a decision made once and inherited everywhere. The propagation model narrows authority as it moves: a user token presented to a gateway is exchanged for a scoped token per downstream call, or re-verified at each hop with audience restriction. Whatever the mechanism, two rules hold: identity must not widen as it travels, and every hop authorizes against local policy rather than inheriting trust. The confused deputy failure appears when one service uses its own broad identity to serve a narrowly entitled caller.
 
 ## The Identity Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     ACTOR["User or workload"] --> IDP["Identity provider authenticates"]
     IDP --> TOKEN["Scoped token issued with audience"]
@@ -75,7 +76,7 @@ flowchart LR
 
 ### Identity Architecture Checklist
 
-- [ ] Every principal type — user, service, workload, third party — has a named identity source
+- [ ] Every principal type (user, service, workload, third party) has a named identity source
 - [ ] Every authentication flow names its token or session lifetime and its revocation mechanism
 - [ ] The authorization model is explicit, and each service enforces it consistently
 - [ ] Service-to-service calls carry verifiable workload identity with automatic rotation
@@ -84,7 +85,7 @@ flowchart LR
 ### Identity Architecture Record
 
 ```markdown
-## Identity Architecture Record — <system>
+## Identity Architecture Record: <system>
 
 | Concern | Decision | Rationale | Consequence |
 |---------|----------|-----------|-------------|
@@ -99,7 +100,7 @@ flowchart LR
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
 | **Authentication without authorization** | Proves who called, then grants whatever the service can do | Every authenticated call is authorized against local policy |
-| **Long-lived bearer tokens** | A stolen token is valid everywhere until it expires — eventually | Short lifetimes, audience restriction, revocation path |
+| **Long-lived bearer tokens** | A stolen token is valid everywhere until it expires (eventually) | Short lifetimes, audience restriction, revocation path |
 | **Per-service local identity** | Every service invents accounts and flows; policy is inconsistent | One identity provider and one token verification path |
 | **Org-chart roles** | Roles mirror reporting lines and multiply without bound | Map roles to capabilities and resources, not people |
 | **Confused deputy** | A privileged service performs actions a caller had no right to request | Scoped tokens per call; per-hop authorization |

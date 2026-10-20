@@ -16,15 +16,15 @@ tags:
 
 # Trust Boundaries
 
-> **Core skill:** The architect draws the lines where trust changes — process, host, network, region, organization — and makes every crossing carry an explicit authentication and authorization decision.
+> **Core skill:** The architect draws the lines where trust changes (process, host, network, region, organization) and makes every crossing carry an explicit authentication and authorization decision.
 
 ## Why This Matters
 
-A trust boundary is any line in the system where the level of trust changes: where data or control crosses from something one party controls into something another party controls, or between parties with different privilege. Almost every serious exploit abuses a boundary — a request that the receiving side assumed was already validated, an internal call that skipped authentication because it was internal, a data flow into analytics that never rechecked classification.
+A trust boundary is any line in the system where the level of trust changes: where data or control crosses from something one party controls into something another party controls, or between parties with different privilege. Almost every serious exploit abuses a boundary: a request that the receiving side assumed was already validated, an internal call that skipped authentication because it was internal, a data flow into analytics that never rechecked classification.
 
 The architect's job is to make these seams visible and explicit. Unnamed boundaries are where everybody assumed somebody else checked. Once drawn, each boundary generates two questions for every crossing: who is on the other side, and what are they allowed to do here. A crossing without an answer to both is a structural vulnerability, regardless of how good the code on either side of it is.
 
-Boundaries are not only logical. They exist at the process level, the host level, the network level, the cloud region level, and the organization level — and each type changes which controls are feasible. A process boundary can carry in-memory identity; an organization boundary requires contracts, tokens, and independent verification on both sides. The architect maps all of them onto the same picture so the security conversation starts from structure.
+Boundaries are not only logical. They exist at the process level, the host level, the network level, the cloud region level, and the organization level, and each type changes which controls are feasible. A process boundary can carry in-memory identity; an organization boundary requires contracts, tokens, and independent verification on both sides. The architect maps all of them onto the same picture so the security conversation starts from structure.
 
 ## Boundary Types
 
@@ -60,11 +60,12 @@ Every crossing has an authentication decision, and the decision has a placement:
 
 ## Authorization Across Boundaries
 
-Authentication does not transfer across a boundary; authorization must be re-decided on the receiving side against local policy. The recurring failure is the confused deputy: a privileged service performs an action on behalf of a caller without checking whether that caller would be allowed to do it directly. The structural defenses are token scoping — the caller presents only the authority it holds, narrowly scoped to this call — audience restriction, where tokens are valid only at the intended recipient, and per-hop authorization that re-evaluates rather than inherits.
+Authentication does not transfer across a boundary; authorization must be re-decided on the receiving side against local policy. The recurring failure is the confused deputy: a privileged service performs an action on behalf of a caller without checking whether that caller would be allowed to do it directly. The structural defenses are token scoping (the caller presents only the authority it holds, narrowly scoped to this call), audience restriction, where tokens are valid only at the intended recipient, and per-hop authorization that re-evaluates rather than inherits.
 
 ## Drawing Trust Boundaries
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     EXT["Untrusted zone"] --> EDGE["Edge boundary with authentication"]
     EDGE --> APP["Application zone with per-call authorization"]
@@ -125,8 +126,8 @@ Assume the zone outside your control is hostile and design inward from there. Ex
 - [[01_Secure_by_Design_Principles]]
 - [[05_Identity_and_Access_Architecture]]
 - [[03_Threat_Modeling_Architecture_Level]]
-- [[03_Architecture_Description_and_Views/00_overview|Architecture Description and Views]]
+- [[career-path/06_Software_Architect/03_Architecture_Description_and_Views/00_overview|Architecture Description and Views]]
 
 ## Summary
 
-Trust boundaries are the lines in the system where the level of trust changes, and they are where attacks concentrate. The architect's discipline is to draw every boundary — process, host, network, region, organization, tenant — and require each crossing to answer two questions: who is on the other side, and what are they allowed to do here. Authentication and authorization are re-decided at each line rather than inherited, the untrusted zone is designed inward from hostile assumptions, and the boundary set stays small enough to defend.
+Trust boundaries are the lines in the system where the level of trust changes, and they are where attacks concentrate. The architect's discipline is to draw every boundary (process, host, network, region, organization, tenant) and require each crossing to answer two questions: who is on the other side, and what are they allowed to do here. Authentication and authorization are re-decided at each line rather than inherited, the untrusted zone is designed inward from hostile assumptions, and the boundary set stays small enough to defend.

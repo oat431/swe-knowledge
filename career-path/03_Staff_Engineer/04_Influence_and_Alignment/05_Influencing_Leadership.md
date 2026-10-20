@@ -16,13 +16,13 @@ tags:
 
 # Influencing Leadership
 
-> **Core skill:** The staff engineer frames technical reality in the terms leaders decide by — outcomes, risk, options, and asks — and builds the relationship before it is needed, so technical truth reaches decisions intact.
+> **Core skill:** The staff engineer frames technical reality in the terms leaders decide by (outcomes, risk, options, and asks) and builds the relationship before it is needed, so technical truth reaches decisions intact.
 
 ## Why This Matters
 
-Leadership does not reject technical arguments because it disagrees with them; it rejects them because they arrive in the wrong currency. A leader deciding between initiatives is weighing outcomes, risk, and cost — and a proposal that arrives as "we need to migrate to the event-driven architecture" is a proposal that never gets priced, because its value was never translated. The staff engineer who cannot translate loses every argument that matters, regardless of technical merit.
+Leadership does not reject technical arguments because it disagrees with them; it rejects them because they arrive in the wrong currency. A leader deciding between initiatives is weighing outcomes, risk, and cost, and a proposal that arrives as "we need to migrate to the event-driven architecture" is a proposal that never gets priced, because its value was never translated. The staff engineer who cannot translate loses every argument that matters, regardless of technical merit.
 
-Influencing leadership is not flattery or salesmanship; it is translation plus timing. The engineer who can state what a decision costs, what it protects, and what the alternatives are becomes the leader's trusted technical advisor — the person called before the decision, not after the surprise.
+Influencing leadership is not flattery or salesmanship; it is translation plus timing. The engineer who can state what a decision costs, what it protects, and what the alternatives are becomes the leader's trusted technical advisor: the person called before the decision, not after the surprise.
 
 ## How Leaders Read
 
@@ -30,12 +30,12 @@ Leaders process proposals through a fixed set of filters. Knowing the filters is
 
 | Filter | The Question Behind It | The Translation |
 |--------|------------------------|-----------------|
-| Outcomes | What changes for the business? | Revenue, cost, risk, speed, customers — named and quantified |
+| Outcomes | What changes for the business? | Revenue, cost, risk, speed, customers, named and quantified |
 | Risk | What could go wrong, and what does it cost? | Failure modes with probabilities and mitigations |
 | Options | What else could we do? | Real alternatives with their own trade-offs |
-| Asks | What exactly do you want from me? | A decision, a resource, or a date — stated in one sentence |
+| Asks | What exactly do you want from me? | A decision, a resource, or a date, stated in one sentence |
 
-A proposal that passes all four filters in order — outcome first, risk second, options third, ask last — is readable by any leader in the organization. A proposal that leads with the technology is readable only by engineers.
+A proposal that passes all four filters in order (outcome first, risk second, options third, ask last) is readable by any leader in the organization. A proposal that leads with the technology is readable only by engineers.
 
 ## Framing Technical Work in Business Terms
 
@@ -55,7 +55,7 @@ The core translation table, learned by every staff engineer:
 | Optionality | The platform bet that makes three future product moves possible |
 | Risk registers | The ranked list of technical exposures with owners and dates |
 
-The four concepts in the second table — revenue protection, cost curves, optionality, risk registers — cover most of what leaders are actually buying when they fund technical work. If a proposal cannot be expressed through one of them, the proposal is probably not ready.
+The four concepts in the second table (revenue protection, cost curves, optionality, risk registers) cover most of what leaders are actually buying when they fund technical work. If a proposal cannot be expressed through one of them, the proposal is probably not ready.
 
 ## The Executive Communication Stack
 
@@ -67,7 +67,7 @@ Executive communication is layered, because leaders read at different depths dep
 | One-pager | The problem, the recommendation, the options, the risk | One page | The decision document |
 | Appendix | Data, methodology, prior art, full analysis | As long as needed | The verification layer for skeptics |
 
-The discipline is that each layer stands alone: the one-liner must be true if nothing else is read, and the appendix must answer any challenge the one-pager raises. The stack is what makes "send me the details" a safe answer — the details exist, organized, before they are asked for.
+The discipline is that each layer stands alone: the one-liner must be true if nothing else is read, and the appendix must answer any challenge the one-pager raises. The stack is what makes "send me the details" a safe answer: the details exist, organized, before they are asked for.
 
 ## Timing Asks to Planning Cycles
 
@@ -84,7 +84,7 @@ The timing discipline has a second half: the ask is prepared before the window o
 
 ## Building the Relationship Before You Need It
 
-The trusted-advisor position cannot be built during the ask. It is built in the quiet quarters: the risk called early, the forecast that held, the bad news delivered with options, the leader's question answered completely and briefly. The deposit schedule is steady and small — one visible act of technical honesty per month is enough — and the withdrawals are rare and large.
+The trusted-advisor position cannot be built during the ask. It is built in the quiet quarters: the risk called early, the forecast that held, the bad news delivered with options, the leader's question answered completely and briefly. The deposit schedule is steady and small (one visible act of technical honesty per month is enough) and the withdrawals are rare and large.
 
 The relationship is built with the leader's staff too: the chief of staff, the finance partner, the product counterpart who briefs the leader. These are the people who decide what the leader reads, and being useful to them is being present in the leader's information flow.
 
@@ -112,9 +112,10 @@ The end state of this craft is a position, not a technique: the leader who calls
 | Heard in full | Technical truth reaches the decision without dilution |
 | Consulted repeatedly | The relationship survives noes; the advice is still sought |
 
-The position is fragile in one way: it depends on honesty outranking advocacy. The advisor who starts bending truth to win the current argument loses the position permanently — leaders forgive a lost proposal, but not a manipulated one.
+The position is fragile in one way: it depends on honesty outranking advocacy. The advisor who starts bending truth to win the current argument loses the position permanently: leaders forgive a lost proposal, but not a manipulated one.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     UNDERSTAND["Understand how leaders read"] --> FRAME["Frame in business terms"]
     FRAME --> STACK["Build the one-liner one-page appendix stack"]
@@ -133,7 +134,7 @@ flowchart TD
 # Decision Brief: [Title]
 
 ## One-Liner
-[The decision, the outcome, the ask — one sentence]
+[The decision, the outcome, the ask: one sentence]
 
 ## The Problem
 - Business impact: [outcome at risk, quantified]
@@ -191,10 +192,10 @@ flowchart TD
 
 - [[01_Writing_Proposals_That_Get_Adopted]]: the proposal as the ask vehicle
 - [[04_Building_Trust_Across_Teams]]: the trust leadership buys into
-- [[03_Technical_Strategy/00_overview|Technical Strategy]]: the strategy leaders approve
+- [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy]]: the strategy leaders approve
 - [[career-path/11_Engineering_Manager/05_Organizational_Awareness_and_Influence/00_overview|Organizational Awareness and Influence (EM)]]: the manager's parallel craft
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/02_Stakeholder_Communication|Stakeholder Communication (Senior)]]: the foundation this scales
 
 ## Summary
 
-Influencing leadership is translation plus timing: frame technical work through outcomes, risk, options, and asks; express value in business terms like cost curves and optionality; build the one-liner, one-pager, appendix stack; and land asks in the right planning windows. The relationship is built in quiet quarters and spent on rare, priced asks, and a no is read for its cause and re-approached only with new evidence. The end state is the trusted technical advisor — called early, heard in full, and honest enough to stay.
+Influencing leadership is translation plus timing: frame technical work through outcomes, risk, options, and asks; express value in business terms like cost curves and optionality; build the one-liner, one-pager, appendix stack; and land asks in the right planning windows. The relationship is built in quiet quarters and spent on rare, priced asks, and a no is read for its cause and re-approached only with new evidence. The end state is the trusted technical advisor, called early, heard in full, and honest enough to stay.

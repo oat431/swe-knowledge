@@ -19,9 +19,9 @@ tags:
 
 ## Why This Matters
 
-People do what the system pays them to do. Not what the mission says, not what the strategy deck says — what the metrics, reviews, and rewards actually reinforce. When a team hoards knowledge, batches work, or avoids risk, the honest first question is not "who is wrong" but "what does the system reward here."
+People do what the system pays them to do. Not what the mission says, not what the strategy deck says: what the metrics, reviews, and rewards actually reinforce. When a team hoards knowledge, batches work, or avoids risk, the honest first question is not "who is wrong" but "what does the system reward here."
 
-Repeated "people problems" are almost always incentive problems wearing a human costume. The staff engineer's move is to audit the incentive structure the way you would audit an architecture: find what the system actually rewards, trace the side effects, and change the incentive — not the people. This is uncomfortable work, because it means admitting that metrics you inherited are quietly manufacturing the behavior you complain about.
+Repeated "people problems" are almost always incentive problems wearing a human costume. The staff engineer's move is to audit the incentive structure the way you would audit an architecture: find what the system actually rewards, trace the side effects, and change the incentive, not the people. This is uncomfortable work, because it means admitting that metrics you inherited are quietly manufacturing the behavior you complain about.
 
 ## The Incentive Audit
 
@@ -47,7 +47,7 @@ Run this audit before every "why won't they just..." conversation. The answer is
 | **Ticket count** | Splitting and gaming tickets | Noise grows; real problems hide in fake granularity |
 | **Deployment count** | Deploying for the number, not the value | Churn; incidents from meaningless releases |
 
-The signature of an incentive failure is metric improvement with outcome deterioration. If the number goes up and the org gets worse, the metric is doing its job — the job is wrong.
+The signature of an incentive failure is metric improvement with outcome deterioration. If the number goes up and the org gets worse, the metric is doing its job. The job is wrong.
 
 ## Aligning Incentives with Goals
 
@@ -61,7 +61,7 @@ The fix is to attach metrics to the outcome you actually want, at the level wher
 | Quality | Defect escape rate trending down | Root-cause loops feeding the right teams |
 | Cross-team health | Handoff latency between teams | Friction reviews, not heroics |
 
-Outcome metrics at team level create the right unit of accountability: the team owns the outcome and the structure that produces it. Individual metrics survive only where the individual genuinely owns the outcome alone — a shrinking set in modern engineering.
+Outcome metrics at team level create the right unit of accountability: the team owns the outcome and the structure that produces it. Individual metrics survive only where the individual genuinely owns the outcome alone, a shrinking set in modern engineering.
 
 ## The Incentive Intervention Ladder
 
@@ -76,6 +76,7 @@ Intervene in this order, cheapest first:
 Most interventions fail because they stop at rung one while the structure still punishes the new behavior. If the goal is knowledge sharing but the review still rewards solo heroics, the sharing will be a hobby, not a behavior.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     METRIC["Metric chosen"] --> BEHAVIOR["Behavior it rewards"]
     BEHAVIOR --> GAMING["Gaming and side effects"]
@@ -140,7 +141,7 @@ The discipline is second-order thinking about every metric: what will people do 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---|---|---|
 | **Blame before audit** | Assuming people are the problem skips the producing structure | Audit the incentive before judging the behavior |
-| **Metric without second order** | The gaming arrives exactly as predicted — by you, later | Name the second-order effect before shipping the metric |
+| **Metric without second order** | The gaming arrives exactly as predicted, by you, later | Name the second-order effect before shipping the metric |
 | **Individual metrics for team outcomes** | Rewards solo behavior in work that is inherently collective | Measure at the level where the outcome is owned |
 | **Changing metrics, not rewards** | The old reward keeps paying for the old behavior | Move up the ladder: metric, reward, structure |
 | **Goodhart denial** | Pretending your metric is immune to gaming | Assume it will be gamed; design the response |
@@ -159,9 +160,9 @@ The discipline is second-order thinking about every metric: what will people do 
 - [[01_Systems_Thinking_Fundamentals]]: incentives as the rules of the system
 - [[04_Organizational_Design_Options]]: structure is the deepest incentive
 - [[07_Limits_of_Local_Optimization]]: metrics that reward the local and harm the global
-- [[04_Influence_and_Alignment/00_overview|Influence and Alignment]]: changing what the org pays attention to
+- [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/00_overview|Influence and Alignment]]: changing what the org pays attention to
 - [[career-path/11_Engineering_Manager/01_People_Development/00_overview|People Development (EM)]]: the manager's view of the same system
 
 ## Summary
 
-Incentives are the rules of the organizational game: people do what the system rewards, and the system's failures are usually the metrics' fault, not the people's. Audit what is actually rewarded, watch for second-order effects and Goodhart's Law, and intervene up the ladder — metric, reward, structure — with a named prediction. The org that changes its incentives changes its behavior without ever having a culture conversation.
+Incentives are the rules of the organizational game: people do what the system rewards, and the system's failures are usually the metrics' fault, not the people's. Audit what is actually rewarded, watch for second-order effects and Goodhart's Law, and intervene up the ladder (metric, reward, structure) with a named prediction. The org that changes its incentives changes its behavior without ever having a culture conversation.

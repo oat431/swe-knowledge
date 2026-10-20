@@ -80,7 +80,7 @@ Design fault tolerance for a data pipeline you are building:
 - [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]]: reliability engineering
 - [[01_Distributed_Systems_for_Data]]: distributed systems have more failure modes
 - [[06_Operational_Runbooks_and_On_Call]]: runbooks for failure recovery
-- [[04_Data_Quality/00_overview|Data Quality]]: data quality checks catch corruption
+- [[career-path/09_Data_and_ML_Engineer/04_Data_Quality/00_overview|Data Quality]]: data quality checks catch corruption
 - [[05_CI_CD_for_Data_and_ML]]: testing failure scenarios in CI
 
 ## Common Pitfalls

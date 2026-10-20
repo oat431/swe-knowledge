@@ -14,11 +14,11 @@ tags:
 
 # Project Closure Process
 
-> **Core skill:** Formally closing the project — obtaining deliverable acceptance, completing administrative close, releasing resources, archiving knowledge, and producing the closure report — so the project ends as a deliberate event, not a drift into silence.
+> **Core skill:** Formally closing the project (obtaining deliverable acceptance, completing administrative close, releasing resources, archiving knowledge, and producing the closure report), so the project ends as a deliberate event, not a drift into silence.
 
 ## Why This Matters
 
-Projects that are not formally closed do not end — they drift. Resources are half-released, contracts linger, stakeholders assume the project is still active, and the organization carries the project on its books without accountability. A project that never closes becomes organizational debt: consuming attention, confusing priorities, and providing cover for work that should have been stopped or transitioned.
+Projects that are not formally closed do not end; they drift. Resources are half-released, contracts linger, stakeholders assume the project is still active, and the organization carries the project on its books without accountability. A project that never closes becomes organizational debt: consuming attention, confusing priorities, and providing cover for work that should have been stopped or transitioned.
 
 Formal closure is the project manager's final deliverable: obtaining sponsor acceptance that the project's objectives have been met (or that the project is being terminated), completing the administrative and contractual close, releasing resources with clarity, archiving project knowledge so it is accessible to future projects, and producing the closure report that tells the project's story honestly. The project manager who closes well leaves a clean slate; the one who avoids closure leaves a ghost.
 
@@ -27,15 +27,16 @@ Formal closure is the project manager's final deliverable: obtaining sponsor acc
 | Trigger | Description |
 |---------|-------------|
 | **Normal completion** | All deliverables accepted; project objectives met |
-| **Early termination** | Project stopped by governance — business case invalidated, funding withdrawn, priority superseded |
+| **Early termination** | Project stopped by governance: business case invalidated, funding withdrawn, priority superseded |
 | **Integration** | Project absorbed into a larger program or operational function |
 | **Contractual end** | Fixed-term or fixed-scope contract completed |
 
-Closure is triggered by the condition, not the calendar. The project manager initiates closure when the trigger condition is met — or recommends closure when it should be met but governance is avoiding the decision.
+Closure is triggered by the condition, not the calendar. The project manager initiates closure when the trigger condition is met, or recommends closure when it should be met but governance is avoiding the decision.
 
 ## The Closure Sequence
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     TRIGGER["Closure trigger met"] --> ACCEPTANCE["Obtain deliverable acceptance"]
     ACCEPTANCE --> TRANSITION["Complete transition to operations"]
@@ -59,7 +60,7 @@ The first closure step is formal acceptance that the project has delivered what 
 | **Customer/sponsor sign-off** | Formal written acceptance from the sponsor or customer that deliverables are accepted |
 | **Outstanding items** | Any incomplete or deferred items are documented with owners, rationale, and plan |
 
-Acceptance is not "everyone is happy" — it is "the deliverables match the agreed scope and quality criteria." Items outside the scope baseline are not blockers to acceptance; they are candidates for a future phase or project.
+Acceptance is not "everyone is happy"; it is "the deliverables match the agreed scope and quality criteria." Items outside the scope baseline are not blockers to acceptance; they are candidates for a future phase or project.
 
 ## Administrative Close
 
@@ -96,14 +97,14 @@ The project's knowledge assets must survive its closure:
 
 | Asset | Archiving Action |
 |-------|-----------------|
-| Project management artifacts | Charter, plans, baselines, registers, logs — archived in organizational repository |
-| Technical documentation | Architecture, design, specifications — handed to operations or archived |
-| Lessons learned | Final lessons learned report — distributed and archived |
-| Decision and change history | Decision log, change log — archived for audit and future reference |
+| Project management artifacts | Charter, plans, baselines, registers, logs; archived in organizational repository |
+| Technical documentation | Architecture, design, specifications; handed to operations or archived |
+| Lessons learned | Final lessons learned report, distributed and archived |
+| Decision and change history | Decision log, change log; archived for audit and future reference |
 | Contracts and legal | Archived per organizational retention policy |
 | Communications | Key stakeholder communications archived per policy |
 
-The archive is not a folder on the PM's laptop — it is the organizational repository where the next project manager can find the lessons from this project.
+The archive is not a folder on the PM's laptop; it is the organizational repository where the next project manager can find the lessons from this project.
 
 ## The Project Closure Report
 
@@ -120,11 +121,11 @@ The closure report is the project's definitive summary:
 | **Risk and issue summary** | Major risks and issues; how they were resolved |
 | **Stakeholder summary** | Key stakeholder engagement and feedback |
 | **Lessons learned** | Summary of key lessons; reference to full lessons learned report |
-| **Outstanding items** | Incomplete work, open issues, deferred items — with owners |
+| **Outstanding items** | Incomplete work, open issues, deferred items, with owners |
 | **Post-closure plan** | Benefits measurement schedule; support arrangements; warranty periods |
 | **Appendices** | Key artifacts referenced in the report |
 
-The closure report is the project's epitaph — and it should be honest enough that the next project manager who reads it understands both what was achieved and what was learned.
+The closure report is the project's epitaph, and it should be honest enough that the next project manager who reads it understands both what was achieved and what was learned.
 
 ## Closing an Early-Terminated Project
 
@@ -166,10 +167,10 @@ A well-closed terminated project preserves the organization's learning and the t
 
 ## Success Indicators
 
-- Project closure is a deliberate event — scheduled, communicated, and completed
+- Project closure is a deliberate event, scheduled, communicated, and completed
 - The closure report is honest, complete, and approved by the sponsor
 - Project knowledge is archived and accessible to future projects
-- Resources are released with clarity — no ambiguity about "are we still on the project?"
+- Resources are released with clarity; no ambiguity about "are we still on the project?"
 - Post-closure benefits measurement is scheduled and owned by benefit owners
 
 ## Related Topics
@@ -178,8 +179,8 @@ A well-closed terminated project preserves the organization's learning and the t
 - [[05_Transition_to_Operations]]: the operational handover that precedes administrative close
 - [[06_Lessons_Learned_and_Retrospectives]]: lessons that must be captured before the team disperses
 - [[07_Post_Project_Evaluation]]: the evaluation that follows closure
-- [[01_Initiation_and_Charter/00_overview|Initiation and Charter]]: closure criteria defined at initiation
+- [[career-path/13_Project_and_Program_Manager/01_Initiation_and_Charter/00_overview|Initiation and Charter]]: closure criteria defined at initiation
 
 ## Summary
 
-The project closure process is the deliberate end of the project's organizational existence: obtaining sponsor acceptance that deliverables meet the agreed scope, completing financial and contractual close, releasing resources with clarity, archiving knowledge so it survives the project, and producing a closure report that tells the project's story honestly — achievements, shortfalls, benefits, and lessons. A project that is formally closed leaves a clean slate for the organization and a knowledge base for the next project; a project that is never closed drifts forever, consuming attention and avoiding accountability. The project manager who closes well completes the project; the one who avoids closure abandons it. The closure report is the project's epitaph — write one the next project manager will thank you for.
+The project closure process is the deliberate end of the project's organizational existence: obtaining sponsor acceptance that deliverables meet the agreed scope, completing financial and contractual close, releasing resources with clarity, archiving knowledge so it survives the project, and producing a closure report that tells the project's story honestly: achievements, shortfalls, benefits, and lessons. A project that is formally closed leaves a clean slate for the organization and a knowledge base for the next project; a project that is never closed drifts forever, consuming attention and avoiding accountability. The project manager who closes well completes the project; the one who avoids closure abandons it. The closure report is the project's epitaph: write one the next project manager will thank you for.

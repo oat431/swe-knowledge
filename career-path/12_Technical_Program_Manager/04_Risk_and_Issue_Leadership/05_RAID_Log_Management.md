@@ -15,15 +15,15 @@ tags:
 
 # RAID Log Management
 
-> **Core skill:** Running the Risks, Assumptions, Issues, and Decisions log as the program's central nervous system — a single, shared, living artifact that makes the program's uncertainty, constraints, problems, and choices visible to everyone who needs to act on them.
+> **Core skill:** Running the Risks, Assumptions, Issues, and Decisions log as the program's central nervous system: a single, shared, living artifact that makes the program's uncertainty, constraints, problems, and choices visible to everyone who needs to act on them.
 
 ## Why This Matters
 
-Every program has risks, assumptions, issues, and decisions. The difference between programs that manage them and programs that are managed by them is whether these four things live in one place, visible to all, reviewed regularly — or scattered across spreadsheets, slide decks, meeting notes, and people's heads.
+Every program has risks, assumptions, issues, and decisions. The difference between programs that manage them and programs that are managed by them is whether these four things live in one place, visible to all, reviewed regularly, or scattered across spreadsheets, slide decks, meeting notes, and people's heads.
 
 The RAID log is the TPM's primary artifact. It is to program management what the codebase is to engineering: the single source of truth that everyone can inspect, contribute to, and rely on. When a stakeholder asks "what are we worried about?", the RAID log answers. When a new team member asks "why did we choose this architecture?", the Decisions section answers. When an assumption is about to expire, the log flags it.
 
-The RAID log is not a compliance document written for auditors. It is an operational tool written for the program team — reviewed in every status cycle, updated continuously, and treated as the agenda for program governance. A RAID log that is only opened before steering committee meetings is a RAID log that has already failed.
+The RAID log is not a compliance document written for auditors. It is an operational tool written for the program team, reviewed in every status cycle, updated continuously, and treated as the agenda for program governance. A RAID log that is only opened before steering committee meetings is a RAID log that has already failed.
 
 ## The Four Sections
 
@@ -46,7 +46,7 @@ See [[02_Risk_Identification_and_Assessment]] and [[03_Risk_Response_Planning]] 
 
 ### Assumptions
 
-Assumptions are beliefs the program is treating as facts — without verification. Every assumption is a risk wearing a different label: if the assumption is wrong, the program is damaged.
+Assumptions are beliefs the program is treating as facts, without verification. Every assumption is a risk wearing a different label: if the assumption is wrong, the program is damaged.
 
 | Field | Content |
 |-------|---------|
@@ -64,7 +64,7 @@ Assumptions are beliefs the program is treating as facts — without verificatio
 | "The vendor's API will support our peak load of 10K req/s" | Load test completed by 10/01 |
 | "The security review will take no more than two weeks" | Security team confirms timeline by 09/15 |
 
-The TPM's discipline: every assumption is either validated (and removed from the log) or proven false (and converted to a risk or issue) — before its expiry date. An assumption that lives past its expiry date is a program liability.
+The TPM's discipline: every assumption is either validated (and removed from the log) or proven false (and converted to a risk or issue), before its expiry date. An assumption that lives past its expiry date is a program liability.
 
 ### Issues
 
@@ -83,7 +83,7 @@ See [[04_Issue_Tracking_and_Resolution]] for the full issue discipline. In the R
 
 ### Decisions
 
-Decisions are the program's institutional memory. Every significant choice — architecture, vendor selection, scope trade-off, date commitment — is recorded with its context and rationale.
+Decisions are the program's institutional memory. Every significant choice (architecture, vendor selection, scope trade-off, date commitment) is recorded with its context and rationale.
 
 | Field | Content |
 |-------|---------|
@@ -96,7 +96,7 @@ Decisions are the program's institutional memory. Every significant choice — a
 | Date | When the decision was made |
 | Review date | When the decision will be revisited (if applicable) |
 
-Decisions prevent the program from re-litigating settled questions. When someone asks "why did we choose this vendor?", the answer is DEC-017 — not a thirty-minute rehash of a debate that concluded two months ago.
+Decisions prevent the program from re-litigating settled questions. When someone asks "why did we choose this vendor?", the answer is DEC-017, not a thirty-minute rehash of a debate that concluded two months ago.
 
 ## RAID Log Structure and Tooling
 
@@ -132,7 +132,7 @@ A RAID log degrades without active maintenance. The TPM's hygiene practices:
 | **Duplicate or superseded entries are merged or retired** | Log bloat; signal-to-noise degradation |
 | **Entries are written in plain language** | Jargon entries that only the author understands |
 
-The TPM spends thirty minutes a week on RAID hygiene. It is the highest-leverage thirty minutes in the program management calendar — because a clean RAID log is a program that knows its own state.
+The TPM spends thirty minutes a week on RAID hygiene. It is the highest-leverage thirty minutes in the program management calendar, because a clean RAID log is a program that knows its own state.
 
 ## The RAID Log as a Communication Tool
 
@@ -141,10 +141,10 @@ The TPM spends thirty minutes a week on RAID hygiene. It is the highest-leverage
 | **Program team** | Full log; filtered by workstream; updated in real time |
 | **Sponsor** | Top risks; active issues; decisions needed; assumption expiry watch |
 | **Steering committee** | RAID health summary: counts by status, aging trends, systemic patterns |
-| **New team members** | Decisions section — the program's rationale archive |
+| **New team members** | Decisions section: the program's rationale archive |
 | **Auditors / post-program review** | Complete record of what was anticipated, what happened, and what was decided |
 
-The RAID log is one artifact with many audiences. The TPM curates the view — nobody reads the full log except the TPM and the program team.
+The RAID log is one artifact with many audiences. The TPM curates the view; nobody reads the full log except the TPM and the program team.
 
 ## Practical Applications
 
@@ -162,7 +162,7 @@ The RAID log is one artifact with many audiences. The TPM curates the view — n
 | **RAID as shelfware** | Created at program start; never opened again | Living artifact; reviewed at every status cycle |
 | **Four separate documents** | Risks in one spreadsheet, issues in another, decisions in meeting notes | Single artifact; cross-references between sections |
 | **No assumption validation** | Assumptions sit unvalidated; become silent risks | Every assumption has an expiry date and a validation plan |
-| **Decisions without rationale** | "We chose Vendor X" — but nobody remembers why | Every decision records context, options, and rationale |
+| **Decisions without rationale** | "We chose Vendor X", but nobody remembers why | Every decision records context, options, and rationale |
 | **Log bloat** | Hundreds of entries; no differentiation between critical and trivial | Classify by criticality; archive low-criticality resolved entries |
 | **Hidden log** | RAID log is a private TPM document | Visible to the full program team; transparency is leverage |
 
@@ -183,4 +183,4 @@ The RAID log is one artifact with many audiences. The TPM curates the view — n
 
 ## Summary
 
-The RAID log is the TPM's central artifact — a single, shared, living document that holds the program's risks, assumptions, issues, and decisions. It is reviewed at every status cycle, maintained through weekly hygiene, and curated for different audiences. The RAID log's quality is the TPM's quality: a clean, current, honest RAID log is the sign of a program that knows itself. A stale, bloated, hidden RAID log is the sign of a program that will be surprised by what it should have seen coming.
+The RAID log is the TPM's central artifact: a single, shared, living document that holds the program's risks, assumptions, issues, and decisions. It is reviewed at every status cycle, maintained through weekly hygiene, and curated for different audiences. The RAID log's quality is the TPM's quality: a clean, current, honest RAID log is the sign of a program that knows itself. A stale, bloated, hidden RAID log is the sign of a program that will be surprised by what it should have seen coming.

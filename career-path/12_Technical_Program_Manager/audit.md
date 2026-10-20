@@ -81,11 +81,11 @@ tags:
 |---|---|---|
 | 01 Program Structure & Charter | ✅ Strong | Add agile/scaled cadence alignment |
 | 02 Technical Integration & Architecture | ✅ Excellent (defining module) | Add launch readiness and go-live |
-| 03 Dependency Management | ✅ Strong (external dependencies) | — |
+| 03 Dependency Management | ✅ Strong (external dependencies) | N/A |
 | 04 Risk & Issue Leadership | ✅ Strong | Add AI program risk patterns; distinguish from PM path module 04 |
 | 05 Stakeholder Alignment | ✅ Strong | Shares 2 topic names with the PM path; add a boundary note |
-| 06 Decision Facilitation | ✅ Excellent | — |
-| 07 Benefits & Outcome Measurement | ✅ Excellent | — |
+| 06 Decision Facilitation | ✅ Excellent | N/A |
+| 07 Benefits & Outcome Measurement | ✅ Excellent | N/A |
 
 ## Quick Fixes
 

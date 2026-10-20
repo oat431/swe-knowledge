@@ -16,11 +16,11 @@ tags:
 
 # Communicating Architecture
 
-> **Core skill:** The architect presents architecture as a story — adapting depth, emphasis, and language to each stakeholder audience so that engineers, leadership, and external reviewers each leave with the understanding they need to act.
+> **Core skill:** The architect presents architecture as a story, adapting depth, emphasis, and language to each stakeholder audience so that engineers, leadership, and external reviewers each leave with the understanding they need to act.
 
 ## Why This Matters
 
-The best architecture description in the world is worthless if nobody reads it — or if they read it and draw the wrong conclusions. Architecture communication is a performance skill as much as a writing skill: the architect must size up an audience in real time, select the right views from the larger description, and present them in a narrative that connects structural choices to audience concerns.
+The best architecture description in the world is worthless if nobody reads it, or if they read it and draw the wrong conclusions. Architecture communication is a performance skill as much as a writing skill: the architect must size up an audience in real time, select the right views from the larger description, and present them in a narrative that connects structural choices to audience concerns.
 
 Different audiences need different stories from the same architecture. An engineering team needs detail: interfaces, dependencies, failure modes. A leadership audience needs trade-offs: cost, risk, timeline impact. An external reviewer needs evidence: scenarios evaluated, risks identified, decisions justified. The architect who presents the same deck to every audience is communicating with nobody.
 
@@ -42,7 +42,7 @@ Different audiences need different stories from the same architecture. An engine
 | Trade-offs and their costs | Decision matrix: what we chose, what we gave up, what it costs | Interface signatures, protocol details |
 | Risk summary | Top 3 risks with mitigation and timeline | Complete risk register with all sensitivity points |
 | Timeline and staffing impact | What the architecture means for delivery dates and team needs | Module decomposition detail |
-| Architecture rationale | Why this structure — the one-sentence version | The three alternatives we rejected in detail |
+| Architecture rationale | Why this structure: the one-sentence version | The three alternatives we rejected in detail |
 
 ### External Reviewers and Governance
 
@@ -89,6 +89,7 @@ A structured format for presenting architecture to any audience, adaptable in de
 The most effective architecture presentations follow a narrative structure:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PROBLEM["The Problem: What Stakeholder Pain Exists"] --> CONSTRAINTS["The Constraints: What Limited Our Choices"]
     CONSTRAINTS --> CHOICES["The Choices: What We Decided and Why"]
@@ -97,7 +98,7 @@ flowchart TD
     EVIDENCE --> FUTURE["The Future: What Comes Next"]
 ```
 
-Each step answers a question the audience is actually asking — starting with "why should I care?" and ending with "what do I need to do?"
+Each step answers a question the audience is actually asking, starting with "why should I care?" and ending with "what do I need to do?"
 
 ## New-Engineer Orientation from Architecture Docs
 
@@ -139,12 +140,12 @@ The architecture description should enable a new engineer to orient without a on
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
-| **Same deck, every audience** | Engineers get bored by context; leadership drowns in detail — nobody is served | Prepare audience-specific views and emphasis; same architecture, different story |
-| **Architecture as blueprint, not story** | List of components and connectors with no narrative — audience cannot follow | Structure as problem-to-solution narrative; every diagram answers a question |
-| **Risks without owners** | List of risks presented with no accountability — audience leaves worried but unempowered | Every risk presented has an owner, a mitigation, and a review date |
-| **Trade-offs hidden** | Architect presents only the chosen path — audience suspects alternatives were not considered | Explicitly state what was given up and why; it builds credibility |
+| **Same deck, every audience** | Engineers get bored by context; leadership drowns in detail; nobody is served | Prepare audience-specific views and emphasis; same architecture, different story |
+| **Architecture as blueprint, not story** | List of components and connectors with no narrative; audience cannot follow | Structure as problem-to-solution narrative; every diagram answers a question |
+| **Risks without owners** | List of risks presented with no accountability; audience leaves worried but unempowered | Every risk presented has an owner, a mitigation, and a review date |
+| **Trade-offs hidden** | Architect presents only the chosen path; audience suspects alternatives were not considered | Explicitly state what was given up and why; it builds credibility |
 | **No architecture description to hand** | Briefing relies on slides; audience cannot revisit or reference the material later | Briefing references a maintained architecture description that audience can access |
-| **New-hire reliance on architect walkthrough** | Every new engineer needs personal orientation — architect becomes bottleneck | Architecture description must support self-service orientation within a day |
+| **New-hire reliance on architect walkthrough** | Every new engineer needs personal orientation; architect becomes bottleneck | Architecture description must support self-service orientation within a day |
 
 ## Success Indicators
 
@@ -152,7 +153,7 @@ The architecture description should enable a new engineer to orient without a on
 - Leadership can restate the top trade-offs and risks after a single briefing
 - New engineers self-orient from the architecture description within one day
 - Briefings produce tracked action items, not just shared understanding
-- The architecture description is referenced during briefings — not slides that diverge from it
+- The architecture description is referenced during briefings, not slides that diverge from it
 
 ## Related Topics
 
@@ -164,4 +165,4 @@ The architecture description should enable a new engineer to orient without a on
 
 ## Summary
 
-Communicating architecture is a performance skill: selecting the right views, structuring them as a narrative, and adapting depth, emphasis, and language to each audience. The architecture briefing format — context, views, decisions, risks, open items — provides a repeatable structure. The goal is not to present everything known about the architecture but to give each audience exactly what they need to act — and to leave behind a maintained description they can return to when the meeting ends.
+Communicating architecture is a performance skill: selecting the right views, structuring them as a narrative, and adapting depth, emphasis, and language to each audience. The architecture briefing format (context, views, decisions, risks, open items) provides a repeatable structure. The goal is not to present everything known about the architecture but to give each audience exactly what they need to act, and to leave behind a maintained description they can return to when the meeting ends.

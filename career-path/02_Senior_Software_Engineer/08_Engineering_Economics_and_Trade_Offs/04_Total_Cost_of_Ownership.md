@@ -31,6 +31,7 @@ Understanding TCO prevents decisions that look cheap initially but become expens
 ## TCO Components
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph Acquisition Costs
         A[Purchase/License] --> B[Implementation]
@@ -457,7 +458,7 @@ Year 3: $100K / 1.331 = $75K
 
 | Scenario | 5-Year TCO | Change from Base |
 |----------|------------|------------------|
-| Base case | $1,250K | - |
+| Base case | $1,250K | N/A |
 | 2x growth | $1,680K | +34% |
 | 20% price increase | $1,430K | +14% |
 | Early migration (year 3) | $1,380K | +10% |

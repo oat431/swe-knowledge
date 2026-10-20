@@ -43,19 +43,20 @@ These are related but distinct specializations. A data engineer usually emphasiz
 
 | Capability | Focus | Files |
 |---|---|---|
-| [[01_Data_Architecture/00_overview\|Data Architecture]] | Storage strategy, platform patterns, lifecycle, catalog, ownership | 1 overview + 6 topics |
-| [[02_Data_Modeling_and_Design/00_overview\|Data Modeling and Design]] | Conceptual/logical models, physical design, schema evolution, contracts | 1 overview + 6 topics |
-| [[03_Data_Integration_and_Interoperability/00_overview\|Data Integration and Interoperability]] | Batch ETL, streaming, CDC, API contracts, orchestration, lineage | 1 overview + 6 topics |
-| [[04_Data_Quality/00_overview\|Data Quality]] | Dimensions, profiling, validation rules, observability, scorecards | 1 overview + 6 topics |
-| [[05_Data_Security_and_Privacy/00_overview\|Data Security and Privacy]] | Classification, encryption, access control, privacy, audit, sharing | 1 overview + 6 topics |
-| [[06_ML_Lifecycle_and_MLOps/00_overview\|ML Lifecycle and MLOps]] | Experiment tracking, features, training, serving, monitoring, governance | 1 overview + 6 topics |
-| [[07_Production_Engineering/00_overview\|Production Engineering]] | Distributed systems, scaling, reliability, cost, CI/CD, operations | 1 overview + 6 topics |
+| [[career-path/09_Data_and_ML_Engineer/01_Data_Architecture/00_overview|Data Architecture]] | Storage strategy, platform patterns, lifecycle, catalog, ownership | 1 overview + 6 topics |
+| [[career-path/09_Data_and_ML_Engineer/02_Data_Modeling_and_Design/00_overview|Data Modeling and Design]] | Conceptual/logical models, physical design, schema evolution, contracts | 1 overview + 6 topics |
+| [[career-path/09_Data_and_ML_Engineer/03_Data_Integration_and_Interoperability/00_overview|Data Integration and Interoperability]] | Batch ETL, streaming, CDC, API contracts, orchestration, lineage | 1 overview + 6 topics |
+| [[career-path/09_Data_and_ML_Engineer/04_Data_Quality/00_overview|Data Quality]] | Dimensions, profiling, validation rules, observability, scorecards | 1 overview + 6 topics |
+| [[career-path/09_Data_and_ML_Engineer/05_Data_Security_and_Privacy/00_overview|Data Security and Privacy]] | Classification, encryption, access control, privacy, audit, sharing | 1 overview + 6 topics |
+| [[career-path/09_Data_and_ML_Engineer/06_ML_Lifecycle_and_MLOps/00_overview|ML Lifecycle and MLOps]] | Experiment tracking, features, training, serving, monitoring, governance | 1 overview + 6 topics |
+| [[career-path/09_Data_and_ML_Engineer/07_Production_Engineering/00_overview|Production Engineering]] | Distributed systems, scaling, reliability, cost, CI/CD, operations | 1 overview + 6 topics |
 
 **Total:** 7 capability areas × 7 files = 49 topic files + 1 path overview = 50 files
 
 ## Typical Progression
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SENIOR["Senior Software Engineer"] --> DATA["Build reliable data systems"]
     DATA --> PLATFORM["Own data or ML platform"]

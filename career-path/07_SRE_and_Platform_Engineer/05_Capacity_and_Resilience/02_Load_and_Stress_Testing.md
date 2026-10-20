@@ -26,6 +26,7 @@ The difference is not tool knowledge. It is **testing discipline**: turning ad-h
 ## Load Testing Types
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     LOAD["Load testing"] --> STRESS["Stress testing"]
     STRESS --> SOAK["Soak testing"]
@@ -44,6 +45,7 @@ flowchart LR
 ## Load Testing Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DEFINE["Define objectives"] --> SCENARIO["Design scenarios"]
     SCENARIO --> SCRIPT["Write test scripts"]
@@ -141,7 +143,7 @@ flowchart TD
 - [[01_Capacity_Planning]] : load tests validate capacity forecasts
 - [[05_Auto_Scaling_Design]] : tests validate scaling policies
 - [[04_Chaos_Engineering]] : chaos tests build on load testing foundations
-- [[02_Observability/01_Metrics_and_Dashboards]] : metrics are essential for analyzing test results
+- [[career-path/07_SRE_and_Platform_Engineer/02_Observability/01_Metrics_and_Dashboards]] : metrics are essential for analyzing test results
 - [[software-engineering-note/06_Software_Engineering_Operations/07_Capacity_and_Disaster_Recovery]] : capacity and DR foundations
 
 ## Key Takeaways

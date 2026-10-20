@@ -16,13 +16,13 @@ tags:
 
 # Engineering Excellence Programs
 
-> **Core skill:** The principal engineer designs recognition and excellence programs — internal awards, publications, patent programs, engineering blogs, and tech talks — that reinforce the organization's technical values and set a visible standard for what great engineering looks like.
+> **Core skill:** The principal engineer designs recognition and excellence programs (internal awards, publications, patent programs, engineering blogs, and tech talks) that reinforce the organization's technical values and set a visible standard for what great engineering looks like.
 
 ## Why This Matters
 
-What an organization celebrates shapes what its engineers aspire to. If the only visible recognition is for shipping features on deadline, engineers optimize for shipping features on deadline — quality, craft, and technical depth become invisible. The principal designs recognition programs that make the full spectrum of engineering excellence visible: the elegant architecture, the carefully considered simplification, the knowledge generously shared, the incident that produced lasting learning.
+What an organization celebrates shapes what its engineers aspire to. If the only visible recognition is for shipping features on deadline, engineers optimize for shipping features on deadline. Quality, craft, and technical depth become invisible. The principal designs recognition programs that make the full spectrum of engineering excellence visible: the elegant architecture, the carefully considered simplification, the knowledge generously shared, the incident that produced lasting learning.
 
-Recognition programs are also retention and brand mechanisms. Engineers stay where their work is seen and valued. External visibility — through blogs, conference talks, open-source contributions, and patents — builds the organization's engineering brand, which attracts talent and signals technical credibility to customers and partners. The principal architects this visibility.
+Recognition programs are also retention and brand mechanisms. Engineers stay where their work is seen and valued. External visibility (through blogs, conference talks, open-source contributions, and patents) builds the organization's engineering brand, which attracts talent and signals technical credibility to customers and partners. The principal architects this visibility.
 
 ## Recognition Program Portfolio
 
@@ -53,7 +53,7 @@ The selection criteria are public. Every engineer should be able to read the cri
 
 ## The Principal as Recognition Architect
 
-The principal's role in recognition is not to hand out awards — it is to design the system that produces the right awards going to the right people for the right reasons.
+The principal's role in recognition is not to hand out awards. It is to design the system that produces the right awards going to the right people for the right reasons.
 
 | Activity | What the Principal Does |
 |----------|------------------------|
@@ -64,7 +64,7 @@ The principal's role in recognition is not to hand out awards — it is to desig
 | **Ceremony presence** | Attends and speaks at recognition events; the principal's presence signals that the recognition matters |
 | **Program review** | Reviews each program's impact annually: who was recognized, did it reflect the org's values, did winners influence others? |
 
-After the first 1-2 cycles, the principal should not be the person running the programs. Staff engineers, tech leads, and engineering managers should run them — the principal has designed the system and receded to ensure it is institutionalized, not personality-dependent.
+After the first 1-2 cycles, the principal should not be the person running the programs. Staff engineers, tech leads, and engineering managers should run them. The principal has designed the system and receded to ensure it is institutionalized, not personality-dependent.
 
 ## The Engineering Blog and External Voice
 
@@ -97,6 +97,7 @@ The principal reviews these measures annually and adjusts or kills programs that
 ## The Excellence Program System
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     VALUES["Engineering values defined: simplicity, learning, knowledge sharing, depth, mentoring"] --> DESIGN["Design recognition programs aligned to values"]
     DESIGN --> PROGRAMS["Programs: awards, blog, tech talks, patents, open source, conferences"]
@@ -139,7 +140,7 @@ flowchart TD
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
-| **Volume recognition** | Awards go to the most visible work, not the most excellent work | Criteria emphasize impact, craft, and learning — not volume or visibility |
+| **Volume recognition** | Awards go to the most visible work, not the most excellent work | Criteria emphasize impact, craft, and learning, not volume or visibility |
 | **Awards as popularity contest** | Winners are whoever is best-known, not whoever did the best work | Blind or criteria-driven judging; diverse panel; nomination outreach for quiet contributors |
 | **Programs without values alignment** | Recognition programs that do not reinforce stated engineering values create confusion about what matters | Map every program to a value; kill programs that do not align |
 | **Principal as award emperor** | The principal personally selects winners; the program is perceived as favoritism | Design a judging panel with diverse membership and rotation; the principal may sit on it but does not control it |
@@ -159,9 +160,9 @@ flowchart TD
 - [[01_Building_Technical_Culture_at_Scale]]: the values that recognition programs reinforce
 - [[02_Growing_Staff_and_Principal_Engineers]]: recognition as a signal in promotion cases
 - [[04_Technical_Community_Building]]: communities as recognition distribution channels
-- [[04_Organizational_Influence/00_overview|Organizational Influence]]: the external voice these programs amplify
+- [[career-path/04_Principal_and_Distinguished_Engineer/04_Organizational_Influence/00_overview|Organizational Influence]]: the external voice these programs amplify
 - [[career-path/03_Staff_Engineer/07_Organizational_Learning_and_Mentoring/03_Communities_of_Practice|Communities of Practice (Staff)]]: communities that produce recognition-worthy work
 
 ## Summary
 
-Engineering excellence programs are the principal's design for what gets celebrated: creating a portfolio of awards, publications, tech talks, patents, open-source recognition, and conference participation that maps every program to a stated engineering value, defines selection criteria that reward craft and impact over volume and visibility, builds judging and editorial systems that survive the principal's direct involvement, and measures impact through behavioral outcomes — did recognized work change how other teams operate — rather than participation counts. The organization that celebrates the right work produces more of it; the principal designs the celebration to produce more of what the engineering culture needs.
+Engineering excellence programs are the principal's design for what gets celebrated: creating a portfolio of awards, publications, tech talks, patents, open-source recognition, and conference participation that maps every program to a stated engineering value, defines selection criteria that reward craft and impact over volume and visibility, builds judging and editorial systems that survive the principal's direct involvement, and measures impact through behavioral outcomes (did recognized work change how other teams operate) rather than participation counts. The organization that celebrates the right work produces more of it; the principal designs the celebration to produce more of what the engineering culture needs.

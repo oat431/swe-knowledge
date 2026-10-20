@@ -14,13 +14,13 @@ tags:
 
 # Decision Facilitation
 
-> **Core capability:** The TPM helps the right people make timely, documented decisions — framing options, managing the decision process, and ensuring decisions stick because they were made by the people with the authority and context to make them.
+> **Core capability:** The TPM helps the right people make timely, documented decisions, framing options, managing the decision process, and ensuring decisions stick because they were made by the people with the authority and context to make them.
 
 ## Why This Matters
 
-Programs stall on unmade decisions. The architecture choice nobody owns, the scope trade-off that keeps getting deferred, the vendor selection stuck in analysis — these are not technical problems; they are decision-process problems. The TPM does not make these decisions. The TPM makes the decisions happen: who decides, by when, based on what criteria, with what options, recorded where.
+Programs stall on unmade decisions. The architecture choice nobody owns, the scope trade-off that keeps getting deferred, the vendor selection stuck in analysis: these are not technical problems; they are decision-process problems. The TPM does not make these decisions. The TPM makes the decisions happen: who decides, by when, based on what criteria, with what options, recorded where.
 
-Decision facilitation is the TPM's highest-leverage activity because one unmade decision blocks an entire workstream, while one well-facilitated decision unblocks weeks of dependent work. The skill is process design, not content — framing options without advocating, managing disagreement without taking sides, and producing a record that survives the meeting.
+Decision facilitation is the TPM's highest-leverage activity because one unmade decision blocks an entire workstream, while one well-facilitated decision unblocks weeks of dependent work. The skill is process design, not content: framing options without advocating, managing disagreement without taking sides, and producing a record that survives the meeting.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ Decision facilitation is the TPM's highest-leverage activity because one unmade 
 ## The Decision Facilitation Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     IDENTIFY["Identify: what must be decided, by when"] --> FRAME["Frame: options, criteria, implications"]
     FRAME --> SCHEDULE["Schedule: right people, right forum, pre-read"]
@@ -53,7 +54,7 @@ The TPM owns the process; the deciders own the decision.
 ### Decision Facilitation Checklist
 
 - [ ] Every consequential program decision has a named decider and a target date
-- [ ] Decisions are framed with options, criteria, and trade-offs — not just a recommendation
+- [ ] Decisions are framed with options, criteria, and trade-offs, not just a recommendation
 - [ ] Decision meetings have pre-reads so time is spent deciding, not briefing
 - [ ] Decisions are documented with rationale and options considered
 - [ ] Dissent is recorded without sabotaging commitment
@@ -77,11 +78,11 @@ The TPM owns the process; the deciders own the decision.
 
 ## Related Capabilities
 
-- [[01_Program_Structure_and_Charter/00_overview|Program Structure and Charter]]: governance defines decision rights
-- [[05_Stakeholder_Alignment/00_overview|Stakeholder Alignment]]: decisions are where alignment becomes action
+- [[career-path/12_Technical_Program_Manager/01_Program_Structure_and_Charter/00_overview|Program Structure and Charter]]: governance defines decision rights
+- [[career-path/12_Technical_Program_Manager/05_Stakeholder_Alignment/00_overview|Stakeholder Alignment]]: decisions are where alignment becomes action
 - [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/00_overview|Influence and Alignment (Staff)]]: the staff engineer's decision influence
 - [[career-path/06_Software_Architect/01_Architecture_Fundamentals/04_Architecture_Decision_Making|Architecture Decision Making (Architect)]]: technical decision content
 
 ## Summary
 
-Decision facilitation is the TPM's highest-leverage activity: designing the decision process, framing options neutrally, running meetings that produce decisions, recording them so they stick, and following through so they become action. The TPM never decides for the decider — but the decider rarely decides on time without the TPM's process behind them.
+Decision facilitation is the TPM's highest-leverage activity: designing the decision process, framing options neutrally, running meetings that produce decisions, recording them so they stick, and following through so they become action. The TPM never decides for the decider, but the decider rarely decides on time without the TPM's process behind them.

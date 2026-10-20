@@ -45,17 +45,18 @@ These paths are different from ordinary marketing because technical credibility 
 
 | Capability | Role behavior | Detailed notes |
 |---|---|---|
-| Technical communication | Explains complex ideas accurately for different audiences | [[01_Technical_Communication/00_overview]] |
-| Documentation | Creates usable guides, examples, references, and troubleshooting paths | [[02_Documentation_and_Learning_Materials/00_overview]] |
-| Facilitation | Runs workshops, demos, discovery sessions, and technical reviews | [[03_Facilitation_and_Enablement/00_overview]] |
-| Customer understanding | Finds needs, constraints, and obstacles through interaction | [[04_Customer_and_Developer_Understanding/00_overview]] |
-| Solution guidance | Connects a customer's problem to an appropriate technical approach | [[05_Solution_Guidance/00_overview]] |
-| Community building | Creates durable learning and feedback networks | [[06_Community_and_Ecosystem/00_overview]] |
-| Product feedback | Converts ecosystem signals into product and engineering insight | [[07_Product_Feedback_and_Ecosystem_Strategy/00_overview]] |
+| Technical communication | Explains complex ideas accurately for different audiences | [[career-path/16_Developer_Advocate_and_Technical_Consultant/01_Technical_Communication/00_overview]] |
+| Documentation | Creates usable guides, examples, references, and troubleshooting paths | [[career-path/16_Developer_Advocate_and_Technical_Consultant/02_Documentation_and_Learning_Materials/00_overview]] |
+| Facilitation | Runs workshops, demos, discovery sessions, and technical reviews | [[career-path/16_Developer_Advocate_and_Technical_Consultant/03_Facilitation_and_Enablement/00_overview]] |
+| Customer understanding | Finds needs, constraints, and obstacles through interaction | [[career-path/16_Developer_Advocate_and_Technical_Consultant/04_Customer_and_Developer_Understanding/00_overview]] |
+| Solution guidance | Connects a customer's problem to an appropriate technical approach | [[career-path/16_Developer_Advocate_and_Technical_Consultant/05_Solution_Guidance/00_overview]] |
+| Community building | Creates durable learning and feedback networks | [[career-path/16_Developer_Advocate_and_Technical_Consultant/06_Community_and_Ecosystem/00_overview]] |
+| Product feedback | Converts ecosystem signals into product and engineering insight | [[career-path/16_Developer_Advocate_and_Technical_Consultant/07_Product_Feedback_and_Ecosystem_Strategy/00_overview]] |
 
 ## Typical Progression
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SENIOR["Senior Software Engineer"] --> EXPLAIN["Explain technology clearly"]
     EXPLAIN --> COMMUNITY["Build developer or customer relationships"]

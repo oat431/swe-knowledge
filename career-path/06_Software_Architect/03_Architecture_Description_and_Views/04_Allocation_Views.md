@@ -16,13 +16,13 @@ tags:
 
 # Allocation Views
 
-> **Core skill:** The architect maps software to its environment — deployment topology, file and configuration layout, and team-to-module assignments — so that operations, infrastructure, and program management can plan, provision, and staff the system.
+> **Core skill:** The architect maps software to its environment (deployment topology, file and configuration layout, and team-to-module assignments) so that operations, infrastructure, and program management can plan, provision, and staff the system.
 
 ## Why This Matters
 
-A system that runs perfectly on the architect's laptop but cannot be deployed, installed, or operated in production is not architecture — it is a prototype. Allocation views bridge the gap between logical design and physical reality: what hardware runs what software, how configurations are distributed across environments, and which teams own which modules.
+A system that runs perfectly on the architect's laptop but cannot be deployed, installed, or operated in production is not architecture. It is a prototype. Allocation views bridge the gap between logical design and physical reality: what hardware runs what software, how configurations are distributed across environments, and which teams own which modules.
 
-These views also make Conway's Law visible. When the work assignment view shows that two modules owned by different teams communicate synchronously, the architect can see the organizational friction before anyone feels it. Allocation views are where architecture meets operations, infrastructure, and management — and they are the views most likely to be neglected until deployment week, when neglect becomes expensive.
+These views also make Conway's Law visible. When the work assignment view shows that two modules owned by different teams communicate synchronously, the architect can see the organizational friction before anyone feels it. Allocation views are where architecture meets operations, infrastructure, and management, and they are the views most likely to be neglected until deployment week, when neglect becomes expensive.
 
 ## Deployment View
 
@@ -33,7 +33,7 @@ Shows the mapping of software components to hardware and cloud infrastructure: s
 | Element | What It Shows | Audience |
 |---------|---------------|----------|
 | **Nodes** | Physical or virtual machines, containers, serverless functions | Operations, infrastructure |
-| **Environments** | dev, staging, production — each with its own deployment topology | Operations, QA |
+| **Environments** | dev, staging, production, each with its own deployment topology | Operations, QA |
 | **Regions and zones** | Geographic distribution and failure domains | Infrastructure, DR planning |
 | **Network topology** | VPCs, subnets, firewalls, load balancers, CDN | Security, networking |
 | **Resource sizing** | CPU, memory, disk, instance count per node | Infrastructure, cost management |
@@ -66,6 +66,7 @@ Documents the file system layout, configuration files, environment variables, an
 Maps modules or components to the teams that own them. This view makes organizational structure visible and is the primary tool for detecting Conway's Law friction.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     TEAM_A["Team A: Checkout"] --> MOD_ORDER["Order Service"]
     TEAM_A --> MOD_PAYMENT["Payment Service"]
@@ -116,7 +117,7 @@ flowchart TD
 | **Production-only deployment view** | Dev and staging environments differ from production in ways nobody documented | Document all environments; call out parity gaps explicitly |
 | **Missing installation view** | New operator cannot start the system without tribal knowledge | Document startup sequence, config locations, and environment variables |
 | **Work assignment view absent** | Cross-team dependencies are invisible until a coordination failure occurs | Maintain and review the work assignment view quarterly |
-| **Static sizing** | Node resource allocations from inception never revisited — over-provisioned or under-provisioned | Review sizing against production metrics quarterly |
+| **Static sizing** | Node resource allocations from inception never revisited: over-provisioned or under-provisioned | Review sizing against production metrics quarterly |
 | **Single-region deployment without explicit acceptance** | The business assumes DR capability that does not exist | Document region strategy explicitly; if single-region, state it as an accepted risk |
 
 ## Success Indicators
@@ -132,9 +133,9 @@ flowchart TD
 - [[01_Views_and_Viewpoints]]
 - [[03_Component_and_Connector_Views]]
 - [[07_Communicating_Architecture]]
-- [[01_Architecture_Fundamentals/00_overview|Architecture Fundamentals]]
-- [[07_Operations_and_Infrastructure_Architecture/00_overview|Operations and Infrastructure Architecture]]
+- [[career-path/06_Software_Architect/01_Architecture_Fundamentals/00_overview|Architecture Fundamentals]]
+- [[career-path/06_Software_Architect/07_Operations_and_Infrastructure_Architecture/00_overview|Operations and Infrastructure Architecture]]
 
 ## Summary
 
-Allocation views map software to the real world: deployment to hardware and cloud, installation to file systems and configuration, and work assignment to teams. They are the views that make architecture operational — because a system that cannot be deployed, installed, or staffed is not yet a system. The architect's responsibility is to produce these views before deployment week, co-author them with the teams who will live with them, and keep them current as infrastructure and organization evolve.
+Allocation views map software to the real world: deployment to hardware and cloud, installation to file systems and configuration, and work assignment to teams. They are the views that make architecture operational, because a system that cannot be deployed, installed, or staffed is not yet a system. The architect's responsibility is to produce these views before deployment week, co-author them with the teams who will live with them, and keep them current as infrastructure and organization evolve.

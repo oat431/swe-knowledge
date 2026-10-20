@@ -14,11 +14,11 @@ tags:
 
 # Team Delivery and Execution Leadership
 
-> **Core capability:** The tech lead keeps the team's work moving — planned honestly, unblocked quickly, coordinated across teams, and landing in production safely.
+> **Core capability:** The tech lead keeps the team's work moving: planned honestly, unblocked quickly, coordinated across teams, and landing in production safely.
 
 ## Why This Matters
 
-Delivery is where technical leadership meets promises. The tech lead is the person who can see both the technical reality (what the work actually involves) and the delivery commitment (what has been promised) — and keeps the two in honest contact.
+Delivery is where technical leadership meets promises. The tech lead is the person who can see both the technical reality (what the work actually involves) and the delivery commitment (what has been promised), and keeps the two in honest contact.
 
 Teams without delivery leadership overcommit, discover blockers late, and coordinate by accident. The tech lead adds a delivery system on top of individual execution: planning that reflects reality, a visible blocker culture, risk registers that get read, and release paths that are boring.
 
@@ -37,6 +37,7 @@ Teams without delivery leadership overcommit, discover blockers late, and coordi
 ## The Delivery Leadership Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PLAN["Plan honestly"] --> EXECUTE["Execute with visibility"]
     EXECUTE --> UNBLOCK["Unblock fast"]
@@ -80,18 +81,18 @@ flowchart LR
 
 ## Success Indicators
 
-- Commitments are met or renegotiated early — rarely broken silently
+- Commitments are met or renegotiated early, rarely broken silently
 - Blockers surface within a day, not within a sprint
 - Stakeholders trust the team's "no" because its "yes" is reliable
 - Releases are routine; nobody schedules adrenaline
 
 ## Related Capabilities
 
-- [[05_Team_Development_and_Mentoring_Leadership/00_overview|Team Development and Mentoring Leadership]]: delivery is how engineers grow — allocate work as development
-- [[06_Process_and_Quality_Stewardship/00_overview|Process and Quality Stewardship]]: the delivery loop runs on team process
+- [[career-path/05_Tech_Lead/05_Team_Development_and_Mentoring_Leadership/00_overview|Team Development and Mentoring Leadership]]: delivery is how engineers grow. Allocate work as development
+- [[career-path/05_Tech_Lead/06_Process_and_Quality_Stewardship/00_overview|Process and Quality Stewardship]]: the delivery loop runs on team process
 - [[career-path/02_Senior_Software_Engineer/04_Delivery_and_Execution/00_overview|Delivery and Execution (Senior)]]: the personal delivery skills this area scales to a team
 - [[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]: the neighboring path specialized in cross-team delivery
 
 ## Summary
 
-Delivery leadership is a system: honest planning, fast unblocking, visible risk, explicit coordination, and boring releases. The tech lead runs the system so the team can run the work — and uses delivery itself as the training ground for growing engineers.
+Delivery leadership is a system: honest planning, fast unblocking, visible risk, explicit coordination, and boring releases. The tech lead runs the system so the team can run the work, and uses delivery itself as the training ground for growing engineers.

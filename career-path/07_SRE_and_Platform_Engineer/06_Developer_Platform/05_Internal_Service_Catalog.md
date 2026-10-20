@@ -28,6 +28,7 @@ The difference is not using the catalog. It is **building the catalog as a sourc
 ### Service Catalog Architecture
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph SOURCES["Data Sources"]
         S1["Git repositories"]
@@ -118,6 +119,7 @@ flowchart TD
 ## Service Catalog Maturity
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     L1["Level 1: spreadsheet or wiki"]
     L2["Level 2: basic database or tool"]
@@ -175,7 +177,7 @@ flowchart LR
 - [[02_Self_Service_Infrastructure]] : catalog exposes self-service options
 - [[03_Golden_Paths]] : catalog documents golden path services
 - [[04_Developer_Experience]] : catalog improves DX by enabling discovery
-- [[02_Observability/00_overview|Observability]] : catalog provides context for observability data
+- [[career-path/07_SRE_and_Platform_Engineer/02_Observability/00_overview|Observability]] : catalog provides context for observability data
 - [[software-engineering-note/02_Software_Architecture/Microservice/Microservice Overview|Microservice Overview]] : catalog manages microservice complexity
 
 ## Key Takeaways

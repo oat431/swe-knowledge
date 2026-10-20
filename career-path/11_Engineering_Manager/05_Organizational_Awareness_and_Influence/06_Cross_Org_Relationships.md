@@ -16,11 +16,11 @@ tags:
 
 # Cross-Org Relationships
 
-> **Core skill:** Building a network of peer managers before it is needed — a favor economy, negotiated shared platforms, managed dependencies, and an early-warning sensor for the whole organization.
+> **Core skill:** Building a network of peer managers before it is needed: a favor economy, negotiated shared platforms, managed dependencies, and an early-warning sensor for the whole organization.
 
 ## Why This Matters
 
-The team's biggest external risks are rarely decided by executives alone; they are shaped by peer managers — the platform lead who deprioritizes your migration, the product manager who over-promises your capacity, the other EM whose team keeps breaking your integration. These relationships are negotiable, but only if they exist before the conflict.
+The team's biggest external risks are rarely decided by executives alone; they are shaped by peer managers: the platform lead who deprioritizes your migration, the product manager who over-promises your capacity, the other EM whose team keeps breaking your integration. These relationships are negotiable, but only if they exist before the conflict.
 
 A peer network built when times are good is the difference between a negotiation and a fight when times are tight. It is also the organization's early-warning system: peers hear about strategy shifts, budget moves, and re-orgs before they are announced, and a manager with a real network learns about trouble in time to act instead of react.
 
@@ -39,7 +39,7 @@ The currency of the network is proximity before need. Relationships started with
 ## The Favor Economy
 
 - Give first, ask later; favors granted are deposits into a shared account
-- Track nothing — a ledger of favors turns reciprocity into debt collection
+- Track nothing: a ledger of favors turns reciprocity into debt collection
 - Make the favor visible enough to be known, modest enough to be repaid
 - Ask for favors early in a relationship's life; small asks build the muscle
 - When you receive, acknowledge and reciprocate naturally, not mechanically
@@ -64,13 +64,13 @@ The principle: negotiate the framework before the specific conflict. Teams that 
 ### As Customer
 
 - Treat dependency teams like vendors: contracts, SLAs, escalation paths
-- Give them roadmap visibility into your demand — surprises flow both ways
+- Give them roadmap visibility into your demand: surprises flow both ways
 - Escalate late only; early warning builds their goodwill
 
 ### As Provider
 
 - Publish your commitments and capacity like a product
-- Tell dependents about changes before they break — change notice is a courtesy with compounding returns
+- Tell dependents about changes before they break: change notice is a courtesy with compounding returns
 - When you must deprioritize a dependent, say so early with alternatives
 
 | Role | Commitments You Owe | What You Should Demand |
@@ -80,7 +80,7 @@ The principle: negotiate the framework before the specific conflict. Teams that 
 
 ## Org-Wide Initiatives
 
-Cross-cutting initiatives — standards, communities of practice, hiring drives, diversity programs — are where visibility is built:
+Cross-cutting initiatives (standards, communities of practice, hiring drives, diversity programs) are where visibility is built:
 
 - Contribute visibly to at least one initiative outside your team
 - Choose initiatives where your team's strengths show
@@ -91,11 +91,11 @@ Cross-cutting initiatives — standards, communities of practice, hiring drives,
 
 | Step | Action |
 |------|--------|
-| 1 | Go direct first — the conversation is almost always easier than imagined |
+| 1 | Go direct first: the conversation is almost always easier than imagined |
 | 2 | Frame as shared problem: "our teams keep colliding on X" |
 | 3 | Bring data and options, not blame |
 | 4 | Agree on the fix and the follow-up |
-| 5 | Escalate only if the peer is unwilling or unable — with the peer informed first |
+| 5 | Escalate only if the peer is unwilling or unable, with the peer informed first |
 
 Conflict resolution with peers is the same discipline as with anyone else, minus the authority: direct first, escalate reluctantly, and always with the other party aware.
 
@@ -103,12 +103,13 @@ Conflict resolution with peers is the same discipline as with anyone else, minus
 
 The peer network is your early-warning system:
 
-- Budget shifts, strategy pivots, re-org rumors, hiring freezes — heard first through peers
+- Budget shifts, strategy pivots, re-org rumors, hiring freezes: heard first through peers
 - Ask your network what they are hearing, monthly
 - Return the favor: share what you know that matters to them
 - Distinguish signal from noise; the network amplifies both
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     BUILD["Build relationships before needed"] --> GIVE["Give favors first"]
     GIVE --> NEGOTIATE["Negotiate shared platforms on frameworks"]
@@ -132,7 +133,7 @@ flowchart TD
 ### Peer Network Map
 
 ```markdown
-## Peer Network — [quarter]
+## Peer Network: [quarter]
 | Peer | Why They Matter | Relationship Health | Last Contact | Next Step |
 |------|-----------------|---------------------|--------------|-----------|
 | [name] | [dependency/shared platform] | [strong/weak] | [date] | [lunch, joint retro] |
@@ -148,7 +149,7 @@ flowchart TD
 | [X] | [we provide/we consume] | [yes/no] | [path] |
 
 ## Early Signals This Quarter
-- [signal] — source: [peer] — action: [X]
+- [signal]: source: [peer]; action: [X]
 ```
 
 ## Common Pitfalls
@@ -175,9 +176,9 @@ flowchart TD
 - [[01_Reading_the_Organization]]: peers are nodes and sensors in the map
 - [[02_Influence_Strategies_for_Managers]]: coalitions are built from peer networks
 - [[05_Navigating_Reorgs_and_Change]]: the network survives structure changes
-- [[04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: dependencies are delivery reality
+- [[career-path/11_Engineering_Manager/04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: dependencies are delivery reality
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/07_Conflict_Resolution|Conflict Resolution (Senior)]]: the direct-first discipline formalized
 
 ## Summary
 
-Cross-org relationships are built before they are needed: monthly proximity, a favor economy with no ledger, framework-based platform negotiations, dependency management in both directions, visible contribution to org-wide initiatives, and direct-first conflict resolution. The network doubles as an early-warning sensor that turns organizational news into advance notice — the difference between a manager who reacts to the org and one who sees it coming.
+Cross-org relationships are built before they are needed: monthly proximity, a favor economy with no ledger, framework-based platform negotiations, dependency management in both directions, visible contribution to org-wide initiatives, and direct-first conflict resolution. The network doubles as an early-warning sensor that turns organizational news into advance notice: the difference between a manager who reacts to the org and one who sees it coming.

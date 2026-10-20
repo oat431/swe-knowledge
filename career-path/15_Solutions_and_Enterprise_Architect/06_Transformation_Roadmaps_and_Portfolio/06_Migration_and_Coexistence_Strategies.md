@@ -16,13 +16,13 @@ tags:
 
 # Migration and Coexistence Strategies
 
-> **Core skill:** The architect chooses migration strategies — strangler, parallel run, phased cutover — and designs coexistence explicitly, so that old and new systems operate side by side safely across data, identity, interfaces, and support until the old can actually be retired.
+> **Core skill:** The architect chooses migration strategies (strangler, parallel run, phased cutover) and designs coexistence explicitly, so that old and new systems operate side by side safely across data, identity, interfaces, and support until the old can actually be retired.
 
 ## Why This Matters
 
 Migrations rarely happen in one clean move. The normal state of a transformation is coexistence: the old system and its replacement running together while data synchronizes, interfaces route both ways, staff support both, and the business continues without noticing the surgery. Coexistence is where migrations are won or lost, and it is an architecture problem before it is a project problem.
 
-Strategy selection follows from risk and reversibility. A big-bang cutover concentrates risk but ends coexistence immediately; a strangler spreads risk across many small moves but stretches the coexistence tail. Parallel run proves correctness before commitment at the cost of running everything twice. The architect's job is to choose per migration candidate — because a portfolio contains several kinds of moves, not one.
+Strategy selection follows from risk and reversibility. A big-bang cutover concentrates risk but ends coexistence immediately; a strangler spreads risk across many small moves but stretches the coexistence tail. Parallel run proves correctness before commitment at the cost of running everything twice. The architect's job is to choose per migration candidate, because a portfolio contains several kinds of moves, not one.
 
 Every coexistence period needs an exit. Temporary synchronization, dual entry, and bridge interfaces are debts with interest; if they are not scheduled for removal, they outlive the migration and become the next legacy problem. The architect designs coexistence with expiry dates and decommissioning as a funded deliverable, so the transformation actually finishes.
 
@@ -60,6 +60,7 @@ Every coexistence period needs an exit. Temporary synchronization, dual entry, a
 ## The Migration Sequence
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     ASSESS["Assess migration candidates and constraints"] --> STRATEGY["Select migration strategy"]
     STRATEGY["Select migration strategy"] --> COEXIST["Design coexistence patterns"]
@@ -83,7 +84,7 @@ flowchart LR
 ### Migration Design Checklist
 
 - [ ] Each migration candidate has an explicitly chosen strategy with its rationale recorded
-- [ ] Coexistence concerns — data, identity, interfaces, reporting, support — each have owners
+- [ ] Coexistence concerns (data, identity, interfaces, reporting, support) each have owners
 - [ ] Every temporary mechanism has an expiry date and a removal owner
 - [ ] Cutover has go and no-go criteria and a tested rollback route
 - [ ] Decommissioning is planned and funded as part of the same migration
@@ -91,7 +92,7 @@ flowchart LR
 ### Coexistence Design Template
 
 ```markdown
-## Coexistence Design — <migration>
+## Coexistence Design: <migration>
 
 | Aspect | Design |
 |--------|--------|
@@ -131,4 +132,4 @@ flowchart LR
 
 ## Summary
 
-Migration and coexistence strategies turn system replacement into a controlled operation: strategies chosen per candidate according to risk and reversibility, coexistence concerns designed explicitly across data, identity, interfaces, reporting, and support, cutovers governed by pre-agreed criteria, and every temporary mechanism born with an expiry date. The migration is complete only when the old system is gone — and the architecture has planned for that moment from the beginning.
+Migration and coexistence strategies turn system replacement into a controlled operation: strategies chosen per candidate according to risk and reversibility, coexistence concerns designed explicitly across data, identity, interfaces, reporting, and support, cutovers governed by pre-agreed criteria, and every temporary mechanism born with an expiry date. The migration is complete only when the old system is gone, and the architecture has planned for that moment from the beginning.

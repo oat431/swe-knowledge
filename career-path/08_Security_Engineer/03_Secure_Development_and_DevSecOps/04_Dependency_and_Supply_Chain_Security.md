@@ -6,7 +6,7 @@ career_path: security-engineer
 level: senior-specialist
 prerequisite:
   - "[[03_DevSecOps_Pipeline_Controls|DevSecOps Pipeline Controls]]"
-  - "[[01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]"
+  - "[[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]"
 source_frameworks:
   - "[[body-of-knowledge/CyBOK/09_Software_Security]]"
   - "[[software-engineering-note/13_Software_Security/Cybersecurity/02 Secure Development/02 Dependency & Supply Chain]]"
@@ -57,6 +57,7 @@ An SBOM is useful when it can answer operational questions:
 - Can we revoke or rebuild the affected artifact?
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SOURCE["Dependency sources"] --> RESOLVE["Lock and resolve versions"]
     RESOLVE --> BUILD["Build with controlled inputs"]
@@ -130,8 +131,8 @@ Choose one service and its deployment artifact:
 - [SCA Report](F:\obsidian_note\document_template\14_Security/SCA-Report.md): report artifact for component findings
 - [[03_DevSecOps_Pipeline_Controls|DevSecOps Pipeline Controls]]: pipeline trust and artifact gates
 - [[05_Security_Configuration_as_Code|Security Configuration as Code]]: policy and deployment invariants
-- [[04_Security_Verification_and_Testing/03_SCA_and_Container_Scanning|SCA and Container Scanning]]: interpreting scan evidence
-- [[07_Vulnerability_Management_and_Governance/00_overview|Vulnerability Management and Governance]]: lifecycle treatment and exception governance
+- [[career-path/08_Security_Engineer/04_Security_Verification_and_Testing/03_SCA_and_Container_Scanning|SCA and Container Scanning]]: interpreting scan evidence
+- [[career-path/08_Security_Engineer/07_Vulnerability_Management_and_Governance/00_overview|Vulnerability Management and Governance]]: lifecycle treatment and exception governance
 
 ## Key Takeaways
 

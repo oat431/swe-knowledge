@@ -9,7 +9,7 @@ tags: [career-path, applied-ai, ai-engineering, inference, cost-optimization, ov
 
 # Model and Inference Operations
 
-> **Capability area:** Selecting the right models and running them in production at the intersection of quality, cost, latency, and reliability — the operating discipline of applied AI.
+> **Capability area:** Selecting the right models and running them in production at the intersection of quality, cost, latency, and reliability, the operating discipline of applied AI.
 
 ## Why This Matters at Senior Level
 
@@ -18,7 +18,7 @@ A mid-level engineer calls the biggest available model from one provider and mov
 Senior judgment shows in:
 
 - Matching model class and size to task difficulty instead of defaulting to the frontier model
-- Knowing the break-even utilization at which self-hosting beats API pricing — and re-checking it as prices and hardware move
+- Knowing the break-even utilization at which self-hosting beats API pricing, and re-checking it as prices and hardware move
 - Budgeting cost per task and latency per request before building, not after the first bill
 - Designing model routing and fallbacks so a provider outage degrades the product, not breaks it
 - Treating provider health, rate limits, and queue depth as capacity problems to be engineered, not surprises to be survived
@@ -37,6 +37,7 @@ Senior judgment shows in:
 ## The Inference Request Path
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     REQ["Client Request"] --> ROUTE["Routing Layer<br/>(model + provider choice)"]
     ROUTE --> CACHE{"Semantic cache hit?"}
@@ -47,9 +48,9 @@ flowchart LR
     RESP --> TELE["Telemetry<br/>(latency, cost, quality)"]
     TELE -->|Feeds routing decisions| ROUTE
 
-    style CACHE fill:#4CAF50,color:#fff
-    style ROUTE fill:#2196F3,color:#fff
-    style TELE fill:#FF9800,color:#fff
+    style CACHE fill:#1FB854,stroke:#000000,color:#000000
+    style ROUTE fill:#00B5FF,stroke:#000000,color:#000000
+    style TELE fill:#FFBE00,stroke:#000000,color:#000000
 ```
 
 Every stage of this path is a decision surface. The routing layer chooses model and provider per request; the cache absorbs repeat work; the provider call is where rate limits, latency, and cost materialize; telemetry feeds the next routing decision. Each topic in this area engineers one or more of these stages.
@@ -58,12 +59,12 @@ Every stage of this path is a decision surface. The routing layer chooses model 
 
 **In scope:** model selection and benchmarking against your own workload; API versus self-hosted economics; cost reduction that holds quality (caching, batching, prompt compression, small-model cascades, routing); latency engineering (TTFT, streaming, timeouts, parallel calls, fallbacks); serving infrastructure and scaling (GPU serving stacks, autoscaling, rate limits, queueing); multi-provider routing and provider-health management.
 
-**Out of scope — with cross-area pointers:**
+**Out of scope, with cross-area pointers:**
 
-- Model cards, governance, and AI ROI framing belong to area 06 (Responsible AI and Governance); this area consumes their outputs — cost targets, usage policies — rather than producing them.
-- Classic MLOps for models you train — experiment tracking, training pipelines, drift — belongs to [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]]. Here the model is usually a given; only its operation is ours.
+- Model cards, governance, and AI ROI framing belong to area 06 (Responsible AI and Governance); this area consumes their outputs (cost targets, usage policies) rather than producing them.
+- Classic MLOps for models you train (experiment tracking, training pipelines, drift) belongs to [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]]. Here the model is usually a given; only its operation is ours.
 - SLO definitions, incident command, and deep capacity engineering belong to [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]]; this area touches them only as consumer requirements.
-- Observability tooling specifics — tracing, eval dashboards, online quality monitoring — belong to [[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability]]; this area treats telemetry as a routing input.
+- Observability tooling specifics (tracing, eval dashboards, online quality monitoring) belong to [[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability]]; this area treats telemetry as a routing input.
 
 ## Sources
 

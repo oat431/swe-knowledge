@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-Every significant technology choice is a bet: a commitment of capacity and direction made under uncertainty. The difference between organizations that bet well and those that bet badly is not intelligence — it is structure. A structured bet names its thesis, its size, its reversibility, and the evidence that would end it. An unstructured bet is just an argument that someone eventually wins.
+Every significant technology choice is a bet: a commitment of capacity and direction made under uncertainty. The difference between organizations that bet well and those that bet badly is not intelligence. It is structure. A structured bet names its thesis, its size, its reversibility, and the evidence that would end it. An unstructured bet is just an argument that someone eventually wins.
 
 The staff engineer is the person who makes the bet portfolio visible, sizes commitments honestly, and reviews them without the sunk cost bias that protects bad decisions. This discipline is what keeps a platform strategy from becoming a graveyard of abandoned frameworks.
 
@@ -38,7 +38,7 @@ Classify every bet on three axes before doing anything else. The classification 
 
 One-way doors are choices that are genuinely hard to reverse: a database migration, a rewrite of a core service, an org-wide language change. Two-way doors are choices that can be undone cheaply: a library choice behind an interface, a new tool trialed by one team.
 
-The discipline is to know which door you are walking through before you walk through it. Irreversible bets get commitment points — scheduled moments where the bet is re-evaluated with fresh evidence and the cost of turning back is stated explicitly. Reversible bets get a trial period and a lightweight review.
+The discipline is to know which door you are walking through before you walk through it. Irreversible bets get commitment points: scheduled moments where the bet is re-evaluated with fresh evidence and the cost of turning back is stated explicitly. Reversible bets get a trial period and a lightweight review.
 
 ## Sizing Bets with Commitment Points
 
@@ -95,6 +95,7 @@ Every bet that is not a trivial experiment gets a memo. The memo is short, writt
 ## Reviewing Bets Honestly
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     IDENTIFY["Identify candidate bets"] --> CLASSIFY["Classify by reversibility and cost"]
     CLASSIFY --> SIZE["Size with commitment points"]
@@ -150,8 +151,8 @@ Sunk cost resistance is a habit: record predictions at each commitment point, th
 - [[03_Capacity_and_Investment_Allocation]]: the capacity bets consume
 - [[05_Strategy_Review_and_Adaptation]]: reviewing bets on the strategy cadence
 - [[career-path/02_Senior_Software_Engineer/08_Engineering_Economics_and_Trade_Offs/06_Trade_Off_Evaluation|Trade Off Evaluation (Senior)]]: the economic foundations
-- [[06_Technical_Risk_and_Judgment/00_overview|Technical Risk and Judgment]]: risk framing for big commitments
+- [[career-path/03_Staff_Engineer/06_Technical_Risk_and_Judgment/00_overview|Technical Risk and Judgment]]: risk framing for big commitments
 
 ## Summary
 
-Technology betting turns opinionated choices into structured commitments: classify by reversibility and cost, size with commitment points, write a memo with exit and kill criteria, and hold the portfolio to a shape that actual capacity can fund. The discipline is not in picking winners — it is in reviewing bets honestly against written predictions and letting failed bets end on schedule.
+Technology betting turns opinionated choices into structured commitments: classify by reversibility and cost, size with commitment points, write a memo with exit and kill criteria, and hold the portfolio to a shape that actual capacity can fund. The discipline is not in picking winners. It is in reviewing bets honestly against written predictions and letting failed bets end on schedule.

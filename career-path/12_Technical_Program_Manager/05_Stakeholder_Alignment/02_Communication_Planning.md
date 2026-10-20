@@ -16,13 +16,13 @@ tags:
 
 # Communication Planning
 
-> **Core skill:** The TPM designs a communication architecture — cadence, channel, content, and owner per stakeholder group — so that every person who influences the program receives the right information at the right time in the right form, and nobody learns about the program from a surprise.
+> **Core skill:** The TPM designs a communication architecture (cadence, channel, content, and owner per stakeholder group) so that every person who influences the program receives the right information at the right time in the right form, and nobody learns about the program from a surprise.
 
 ## Why This Matters
 
-A program with 200 stakeholders and no communication plan generates 200 different understandings of reality. The engineering team thinks the date is a target; product treats it as a commitment; the executive builds a roadmap on it. The TPM's communication plan is the architecture that prevents this divergence — a deliberate design of who hears what, when, through which channel, in whose voice.
+A program with 200 stakeholders and no communication plan generates 200 different understandings of reality. The engineering team thinks the date is a target; product treats it as a commitment; the executive builds a roadmap on it. The TPM's communication plan is the architecture that prevents this divergence, a deliberate design of who hears what, when, through which channel, in whose voice.
 
-Communication planning is not a calendar of meetings. It is the answer to five questions per stakeholder group: what do they need to know, when do they need to know it, through which channel, in what level of detail, and from whom. A plan that answers these five questions produces a shared understanding of program reality. A plan that answers zero produces a program where every stakeholder's reality is different — and the divergence is discovered in the worst possible forum.
+Communication planning is not a calendar of meetings. It is the answer to five questions per stakeholder group: what do they need to know, when do they need to know it, through which channel, in what level of detail, and from whom. A plan that answers these five questions produces a shared understanding of program reality. A plan that answers zero produces a program where every stakeholder's reality is different, and the divergence is discovered in the worst possible forum.
 
 ## The Communication Plan: Five Dimensions
 
@@ -38,7 +38,7 @@ Every stakeholder group gets five decisions in the communication plan. Miss one 
 
 ## Content by Stakeholder Group
 
-Different stakeholders need different slices of the same program reality. The TPM does not write one status report and send it to everyone — the TPM writes one status truth and presents it five ways.
+Different stakeholders need different slices of the same program reality. The TPM does not write one status report and send it to everyone; the TPM writes one status truth and presents it five ways.
 
 | Stakeholder Group | What They Need | Content Format |
 |-------------------|----------------|----------------|
@@ -76,7 +76,7 @@ The rule: match the channel to the communication's purpose. A status report deli
 
 ## The Communication Owner Rule
 
-Every communication in the plan has a named owner. The owner is not always the TPM. Some messages gain credibility from their source — and the TPM is not always the most credible source.
+Every communication in the plan has a named owner. The owner is not always the TPM. Some messages gain credibility from their source, and the TPM is not always the most credible source.
 
 | Message Type | Best Owner | Why |
 |--------------|------------|-----|
@@ -89,6 +89,7 @@ Every communication in the plan has a named owner. The owner is not always the T
 When the TPM delivers a message that belongs to someone else, it lands as hearsay. When the right owner delivers it, it lands as fact.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MAP["Stakeholder map: who, what they care about"] --> PLAN["Plan per group: content, cadence, channel, depth, owner"]
     PLAN --> CALENDAR["Build the communication calendar"]
@@ -103,7 +104,7 @@ flowchart TD
 ### Communication Plan Template
 
 ```markdown
-# Communication Plan — [Program Name]
+# Communication Plan: [Program Name]
 
 ## Stakeholder Communication Matrix
 | Group | Content Need | Cadence | Channel | Depth | Owner |
@@ -159,9 +160,9 @@ flowchart TD
 - [[01_Stakeholder_Mapping]]: the map feeds the plan
 - [[03_Executive_Communication_for_TPMs]]: the executive slice of the plan
 - [[04_Managing_Stakeholder_Expectations]]: when the plan reveals expectation drift
-- [[01_Program_Structure_and_Charter/00_overview|Program Structure and Charter]]: governance defines the communication forums
+- [[career-path/12_Technical_Program_Manager/01_Program_Structure_and_Charter/00_overview|Program Structure and Charter]]: governance defines the communication forums
 - [[career-path/11_Engineering_Manager/07_Manager_Communication/06_Communication_Rhythms_and_Channels|Communication Rhythms and Channels (EM)]]: the manager's channel architecture
 
 ## Summary
 
-Communication planning is the TPM's architecture for shared understanding: defining content, cadence, channel, depth, and owner per stakeholder group, building a calendar of recurring touchpoints, matching channels to purpose, and assigning owners by message type so that credibility travels with authority. A plan that answers these five questions per group produces one shared reality across 200 stakeholders; a plan that answers none produces 200 different realities — discovered too late.
+Communication planning is the TPM's architecture for shared understanding: defining content, cadence, channel, depth, and owner per stakeholder group, building a calendar of recurring touchpoints, matching channels to purpose, and assigning owners by message type so that credibility travels with authority. A plan that answers these five questions per group produces one shared reality across 200 stakeholders; a plan that answers none produces 200 different realities, discovered too late.

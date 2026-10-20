@@ -20,11 +20,11 @@ tags:
 
 ## Why This Matters
 
-Governance is where architecture stops being advice. Current-state views, targets, and principles only matter if something tests proposals against them at the moment decisions are made — funding, design approval, procurement, or delivery. Without governance, the target is a wall poster; with bad governance, the practice becomes the bottleneck everyone routes around, and its existence accelerates the fragmentation it was meant to prevent.
+Governance is where architecture stops being advice. Current-state views, targets, and principles only matter if something tests proposals against them at the moment decisions are made: funding, design approval, procurement, or delivery. Without governance, the target is a wall poster; with bad governance, the practice becomes the bottleneck everyone routes around, and its existence accelerates the fragmentation it was meant to prevent.
 
-The enabling model treats governance as a service with customers: clear criteria, published calendars, defined decision rights, and turnaround times measured in days, not months. Teams come because a review improves their proposal — catches a duplication, surfaces a cheaper reuse path, connects them to a standard platform — not merely because a process demands a stamp.
+The enabling model treats governance as a service with customers: clear criteria, published calendars, defined decision rights, and turnaround times measured in days, not months. Teams come because a review improves their proposal (catches a duplication, surfaces a cheaper reuse path, connects them to a standard platform), not merely because a process demands a stamp.
 
-The senior architect designs governance at the right altitude and volume. Tier reviews by risk and cost: most proposals clear at a lightweight channel in hours; the small fraction with enterprise-wide consequences get deep scrutiny. Exceptions are first-class citizens — logged, time-bound, reviewed as a portfolio — because an unmanaged exception culture silently repeals every standard the practice publishes.
+The senior architect designs governance at the right altitude and volume. Tier reviews by risk and cost: most proposals clear at a lightweight channel in hours; the small fraction with enterprise-wide consequences get deep scrutiny. Exceptions are first-class citizens (logged, time-bound, reviewed as a portfolio) because an unmanaged exception culture silently repeals every standard the practice publishes.
 
 ## What Governance Covers
 
@@ -95,6 +95,7 @@ The tiering principle is constant: intensity scales with blast radius. A team se
 ## The Proposal Triage Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     INTAKE["Proposal intake"] --> TRIAGE["Triage by risk and impact"]
     TRIAGE --> REVIEW["Architecture review with published criteria"]
@@ -107,7 +108,7 @@ flowchart LR
 ### Governance Effectiveness Checklist
 
 - [ ] Intake, criteria, and SLAs are published where teams can find them
-- [ ] Reviews are tiered by risk and cost — most proposals clear quickly
+- [ ] Reviews are tiered by risk and cost: most proposals clear quickly
 - [ ] Decisions record which principles and targets were applied
 - [ ] Exceptions are logged, owned, time-bound, and reviewed as a portfolio
 - [ ] Governance metrics include turnaround time and avoided duplication
@@ -153,7 +154,7 @@ flowchart LR
 
 - Teams describe reviews as useful, and most submissions improve before decision
 - Turnaround metrics meet published SLAs for standard tiers
-- Waivers are few, owned, and shrinking — or the standards they challenge get revised
+- Waivers are few, owned, and shrinking, or the standards they challenge get revised
 - Duplicate spending is caught before funding, with the catch attributed to review
 - Executive decisions on major proposals cite architecture assessment in their records
 
@@ -161,9 +162,9 @@ flowchart LR
 
 - [[05_Architecture_Principles_for_the_Enterprise]]: the rules governance enforces
 - [[07_Building_the_EA_Practice]]: governance as a component of the standing practice
-- [[06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: where governance meets funded sequencing
+- [[career-path/15_Solutions_and_Enterprise_Architect/06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: where governance meets funded sequencing
 - [[career-path/04_Principal_and_Distinguished_Engineer/03_Decision_Governance_and_Principles/00_overview|Decision Governance and Principles (Principal)]]: the engineering-side governance counterpart
 
 ## Summary
 
-Enterprise architecture governance is the mechanism that turns targets and principles into decisions — funded, shaped, conditioned, or refused — through tiered reviews with published criteria, service levels, and exception management. The senior architect designs it as a service teams choose to use: light where the blast radius is small, rigorous where the stakes are enterprise-wide, and honest enough to treat a rising exception rate as a signal to revise the rules rather than police them harder.
+Enterprise architecture governance is the mechanism that turns targets and principles into decisions (funded, shaped, conditioned, or refused) through tiered reviews with published criteria, service levels, and exception management. The senior architect designs it as a service teams choose to use: light where the blast radius is small, rigorous where the stakes are enterprise-wide, and honest enough to treat a rising exception rate as a signal to revise the rules rather than police them harder.

@@ -16,15 +16,15 @@ tags:
 
 # Cost and Capacity Architecture
 
-> **Core skill:** The architect treats cost as a design driver — elastic versus reserved capacity, pay-per-use versus fixed cost models, deliberate storage tiering — and bounds capacity with projections instead of discovering both in the invoice.
+> **Core skill:** The architect treats cost as a design driver (elastic versus reserved capacity, pay-per-use versus fixed cost models, deliberate storage tiering) and bounds capacity with projections instead of discovering both in the invoice.
 
 ## Why This Matters
 
-Every structural choice carries a cost shape. Serverless moves cost from idle capacity to per-invocation usage; reserved capacity is a bet on a baseline that might not hold; replication and retention multiply storage silently; egress charges follow topology wherever data travels. These are design properties, and a design that ignores them gets optimized by finance after the fact — through cuts that respect no architecture reasoning at all.
+Every structural choice carries a cost shape. Serverless moves cost from idle capacity to per-invocation usage; reserved capacity is a bet on a baseline that might not hold; replication and retention multiply storage silently; egress charges follow topology wherever data travels. These are design properties, and a design that ignores them gets optimized by finance after the fact: through cuts that respect no architecture reasoning at all.
 
-Capacity planning at architecture level is a chain of decisions: demand assumptions, a capacity model that turns those into resource requirements, a scaling strategy that follows the load's shape, and a cost projection that survives being compared with actuals. The architect sets the shape — elastic or reserved, pooled or partitioned, buffered or rejected — and operational FinOps practices refine within it. Getting the shape wrong is not fixable by dashboard discipline.
+Capacity planning at architecture level is a chain of decisions: demand assumptions, a capacity model that turns those into resource requirements, a scaling strategy that follows the load's shape, and a cost projection that survives being compared with actuals. The architect sets the shape (elastic or reserved, pooled or partitioned, buffered or rejected) and operational FinOps practices refine within it. Getting the shape wrong is not fixable by dashboard discipline.
 
-Surprise bills are architecture failure, not billing failure. A service that chatters across availability zones for data it could hold locally, a log pipeline that ingests everything at premium retention, a chatty synchronous design that turns one user action into fifty billable calls — each was a design decision that nobody costed. Projecting cost at design time, and attributing actual spend back to the components and decisions that cause it, is how the architecture stays accountable for its economics.
+Surprise bills are architecture failure, not billing failure. A service that chatters across availability zones for data it could hold locally, a log pipeline that ingests everything at premium retention, a chatty synchronous design that turns one user action into fifty billable calls: each was a design decision that nobody costed. Projecting cost at design time, and attributing actual spend back to the components and decisions that cause it, is how the architecture stays accountable for its economics.
 
 ## Cost Models
 
@@ -48,12 +48,12 @@ Surprise bills are architecture failure, not billing failure. A service that cha
 
 ## Storage Tiering for Cost
 
-Data age and access frequency map to storage classes: hot tiers for active data, warm for occasional reads, cold archive for compliance-held history. The tiering policy follows the retention schedule, and the retrieval path is designed and tested before the first byte is archived — an archive whose restore latency was never measured is a deletion plan with extra steps. Cost per gigabyte is only half the equation; retrieval cost, request pricing, and minimum storage durations decide the real total.
+Data age and access frequency map to storage classes: hot tiers for active data, warm for occasional reads, cold archive for compliance-held history. The tiering policy follows the retention schedule, and the retrieval path is designed and tested before the first byte is archived: an archive whose restore latency was never measured is a deletion plan with extra steps. Cost per gigabyte is only half the equation; retrieval cost, request pricing, and minimum storage durations decide the real total.
 
 ## Cost Projection for Architecture Decisions
 
 ```markdown
-## Cost Projection — <architecture change>
+## Cost Projection: <architecture change>
 
 | Field | Value |
 |-------|-------|
@@ -69,6 +69,7 @@ Data age and access frequency map to storage classes: hot tiers for active data,
 ## FinOps as Architecture Governance
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MODELS["Cost model per architecture choice"] --> PROJECT["Project cost at design time"]
     PROJECT --> MONITOR["Monitor actual spend against projection"]
@@ -101,7 +102,7 @@ flowchart TD
 ### Capacity Model Template
 
 ```markdown
-## Capacity Model — <capability>
+## Capacity Model: <capability>
 
 | Element | Value |
 |---------|-------|
@@ -128,7 +129,7 @@ flowchart TD
 
 - Every significant design review includes a cost projection and a stated cost owner
 - Monthly actuals are compared with projections; deviations trigger design conversations
-- Cost per unit of business value — order, tenant, session — is known and tracked
+- Cost per unit of business value (order, tenant, session) is known and tracked
 - Storage costs follow retention policy, and retrieval paths are tested
 - Cost optimization proposals reference architecture structure, not just provider discounts
 
@@ -141,4 +142,4 @@ flowchart TD
 
 ## Summary
 
-Cost and capacity architecture makes economics a design property: cost models chosen per capability — elastic, reserved, pay-per-use, fixed, tiered — against the load's real shape; capacity models that connect demand assumptions to scaling strategy and recovery needs; storage tiering that follows retention with tested retrieval. Projections at design time and attribution of actuals to components keep cost accountable to the architecture, and the anti-patterns — over-provisioning, under-utilization, surprise bills from uncosted topology — are treated for what they are: design failures, not billing mysteries.
+Cost and capacity architecture makes economics a design property: cost models chosen per capability (elastic, reserved, pay-per-use, fixed, tiered) against the load's real shape; capacity models that connect demand assumptions to scaling strategy and recovery needs; storage tiering that follows retention with tested retrieval. Projections at design time and attribution of actuals to components keep cost accountable to the architecture, and the anti-patterns (over-provisioning, under-utilization, surprise bills from uncosted topology) are treated for what they are: design failures, not billing mysteries.

@@ -17,13 +17,13 @@ tags:
 
 # Training and Curriculum Design
 
-> **Core skill:** Structuring learning journeys — objectives, exercises, assessment, sequencing — so learners move from awareness to independent capability instead of passive familiarity.
+> **Core skill:** Structuring learning journeys (objectives, exercises, assessment, sequencing) so learners move from awareness to independent capability instead of passive familiarity.
 
 ## Why This Matters
 
-Workshops and enablement programs stand on something deeper than good delivery: the design of the learning itself. A curriculum is an argument about how capability forms — what learners must try, in what order, with what feedback, and how anyone will know it worked. Advocates and consultants are asked to build these structures for courses, certifications, partner training, and developer learning paths, and the design quality shows up directly in whether learners can do the job afterward.
+Workshops and enablement programs stand on something deeper than good delivery: the design of the learning itself. A curriculum is an argument about how capability forms: what learners must try, in what order, with what feedback, and how anyone will know it worked. Advocates and consultants are asked to build these structures for courses, certifications, partner training, and developer learning paths, and the design quality shows up directly in whether learners can do the job afterward.
 
-Technical people tend to design curricula from the structure of the technology rather than the structure of learning: every feature gets a module, in the order the system was built. Learners cannot absorb that. Capability forms through doing progressively harder versions of the real work, so strong curriculum design works backward from the target performance — what the learner will do on the job — and arranges objectives, exercises, and assessment to build toward exactly that.
+Technical people tend to design curricula from the structure of the technology rather than the structure of learning: every feature gets a module, in the order the system was built. Learners cannot absorb that. Capability forms through doing progressively harder versions of the real work, so strong curriculum design works backward from the target performance (what the learner will do on the job) and arranges objectives, exercises, and assessment to build toward exactly that.
 
 Assessment is the part most technical curricula skip, and it is the part that makes the rest honest. Without it, nobody can tell a learner who understood from one who nodded along, trainers optimize for comfort, and certifications become attendance records. Designing assessment first, before content, is the single highest-leverage habit in this skill: it forces specificity about what capability means.
 
@@ -89,6 +89,7 @@ Assessment is the part most technical curricula skip, and it is the part that ma
 | Integration task at the end | Everything combined the way work actually arrives |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     OUTCOMES["Define the target capability and audience"] --> OBJECTIVES["Write measurable learning objectives"]
     OBJECTIVES --> MODULES["Sequence modules and exercises"]
@@ -146,11 +147,11 @@ flowchart LR
 
 ## Related Topics
 
-- [[05_Enablement_Programs]] — the program scale this curriculum design serves
-- [[01_Workshops_and_Hands_On_Sessions]] — the live delivery format for designed modules
-- [[02_Documentation_and_Learning_Materials/00_overview|Documentation and Learning Materials]] — reference materials that complement training
-- [[07_Facilitation_Techniques]] — the delivery craft trainers need for any module
-- [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/04_Facilitation|Facilitation (Senior)]] — the facilitation foundation this builds on
+- [[05_Enablement_Programs]]: the program scale this curriculum design serves
+- [[01_Workshops_and_Hands_On_Sessions]]: the live delivery format for designed modules
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/02_Documentation_and_Learning_Materials/00_overview|Documentation and Learning Materials]]: reference materials that complement training
+- [[07_Facilitation_Techniques]]: the delivery craft trainers need for any module
+- [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/04_Facilitation|Facilitation (Senior)]]: the facilitation foundation this builds on
 
 ## Summary
 

@@ -16,13 +16,13 @@ tags:
 
 # Growing Staff and Principal Engineers
 
-> **Core skill:** The principal engineer builds the pipeline from senior to staff and principal — identifying potential early, designing development arcs that build track records, sponsoring candidates into scope, and constructing promotion cases that withstand scrutiny.
+> **Core skill:** The principal engineer builds the pipeline from senior to staff and principal, identifying potential early, designing development arcs that build track records, sponsoring candidates into scope, and constructing promotion cases that withstand scrutiny.
 
 ## Why This Matters
 
-The staff and principal pipeline is the organization's technical leadership supply chain. When the pipeline is weak, the organization promotes engineers who are not ready — producing staff engineers who do senior work with a better title, eroding the role's credibility. When the pipeline is absent, the organization hires externally for technical leadership, importing culture and paying premiums for capability it could have grown.
+The staff and principal pipeline is the organization's technical leadership supply chain. When the pipeline is weak, the organization promotes engineers who are not ready, producing staff engineers who do senior work with a better title, eroding the role's credibility. When the pipeline is absent, the organization hires externally for technical leadership, importing culture and paying premiums for capability it could have grown.
 
-The principal owns this pipeline. Not as an HR function — as a leadership function. The principal identifies engineers with the potential for staff and principal scope, designs development arcs that build the necessary skills and track records, sponsors candidates into the work that proves readiness, and writes or reviews the promotion cases that evidence the transition. A principal who grows three staff engineers has multiplied their impact more than a principal who wrote three strategy documents.
+The principal owns this pipeline. Not as an HR function, as a leadership function. The principal identifies engineers with the potential for staff and principal scope, designs development arcs that build the necessary skills and track records, sponsors candidates into the work that proves readiness, and writes or reviews the promotion cases that evidence the transition. A principal who grows three staff engineers has multiplied their impact more than a principal who wrote three strategy documents.
 
 ## Identifying Potential
 
@@ -35,13 +35,13 @@ Staff and principal potential is not senior performance at higher volume. It is 
 | **Influence without authority** | The engineer changes decisions outside their team through the quality of their reasoning, not their position | Staff and principal roles have wide scope but narrow authority; influence is the primary tool |
 | **Mentoring appetite** | The engineer invests in others' growth without being asked; their mentees cite them as career-defining | Staff and principal roles include mentoring as a core responsibility, not an optional activity |
 | **Technical judgment in depth** | The engineer can reason about trade-offs at multiple levels: code, architecture, organization, and business | Principal decisions span all four levels; judgment that works at only one level is insufficient |
-| **Written communication clarity** | The engineer produces written artifacts — design docs, proposals, post-mortems — that influence decisions | Writing is the principal's scaling mechanism; candidates who cannot write clearly cannot lead at scale |
+| **Written communication clarity** | The engineer produces written artifacts (design docs, proposals, post-mortems) that influence decisions | Writing is the principal's scaling mechanism; candidates who cannot write clearly cannot lead at scale |
 
 The principal identifies candidates through observation, not through manager nominations alone. The best potential signals emerge in architecture reviews, incident response, cross-team working groups, and the written artifacts engineers produce voluntarily.
 
 ## The Development Arc
 
-Growing a staff or principal engineer takes 2-4 years of deliberate development. The arc is not a checklist — it is a sequence of expanding scope with support that gradually recedes.
+Growing a staff or principal engineer takes 2-4 years of deliberate development. The arc is not a checklist. It is a sequence of expanding scope with support that gradually recedes.
 
 | Phase | Duration | Focus | Principal's Role |
 |-------|----------|-------|-----------------|
@@ -63,7 +63,7 @@ Sponsorship and mentoring are distinct and both are essential for growing staff 
 | **Visibility** | Often private; between mentor and mentee | Public; the sponsor's reputation is attached to the candidate's performance |
 | **Primary risk** | Advice that does not fit the candidate's context | Sponsoring a candidate who is not ready; the sponsor's judgment is questioned |
 
-The principal provides both: mentoring in private, sponsorship in public. The distinction matters because many organizations have mentoring programs but no sponsorship culture — mentors advise but nobody opens doors. The principal's sponsorship is the door-opening: "I believe this engineer is ready for this scope; I am attaching my reputation to their success."
+The principal provides both: mentoring in private, sponsorship in public. The distinction matters because many organizations have mentoring programs but no sponsorship culture: mentors advise but nobody opens doors. The principal's sponsorship is the door-opening: "I believe this engineer is ready for this scope; I am attaching my reputation to their success."
 
 ## The Promotion Case
 
@@ -75,10 +75,10 @@ A staff or principal promotion case is not a performance review. It is an eviden
 | **Influence evidence** | Specific decisions the candidate changed through reasoning, not authority; who they influenced and how | Vague claims of "influence" without named decisions or people |
 | **Mentoring evidence** | Mentees who cite the candidate as career-defining; growth of those mentees after the relationship | A list of people the candidate "mentored" without evidence of their growth |
 | **Technical judgment evidence** | Decisions where the candidate's judgment produced a better outcome than the default path | Retelling of decisions where the candidate was right; no evidence the alternative would have been worse |
-| **Writing and communication evidence** | Written artifacts — design docs, proposals, post-mortems, strategy — that influenced org-level decisions | Artifacts that were written but not read or acted upon |
+| **Writing and communication evidence** | Written artifacts (design docs, proposals, post-mortems, strategy) that influenced org-level decisions | Artifacts that were written but not read or acted upon |
 | **Peer and stakeholder feedback** | Direct quotes from engineers, managers, and leaders describing the candidate's impact | Generic praise without specific examples |
 
-The principal's role in the promotion case: ensure the evidence is specific, verifiable, and demonstrates the candidate is already doing the work — not that they are "ready to try."
+The principal's role in the promotion case: ensure the evidence is specific, verifiable, and demonstrates the candidate is already doing the work, not that they are "ready to try."
 
 ## Growing Multiple Candidates
 
@@ -93,6 +93,7 @@ A healthy pipeline has multiple candidates at different stages. The principal ma
 | **External hires at staff+** | Occasional, deliberate hires that fill specific gaps | Every staff+ hire is external; internal pipeline is not producing |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     IDENTIFY["Identify potential: scope-seeking, ambiguity comfort, influence, mentoring, judgment, writing"] --> EXPOSE["Exposure phase: observe staff work, attend reviews, shadow"]
     EXPOSE --> GUIDE["Guided practice: lead bounded initiative with sponsor support"]
@@ -110,7 +111,7 @@ flowchart TD
 - [ ] At least 1-2 engineers are identified as principal candidates
 - [ ] Each candidate has a named sponsor (not necessarily the principal for every candidate)
 - [ ] Development arcs are reviewed quarterly: is the candidate progressing through phases?
-- [ ] Promotion cases contain specific, verifiable evidence — not generic claims
+- [ ] Promotion cases contain specific, verifiable evidence, not generic claims
 - [ ] At least one staff promotion was achieved in the last 18 months
 
 ### Development Arc Template
@@ -157,4 +158,4 @@ flowchart TD
 
 ## Summary
 
-Growing staff and principal engineers is the principal's talent supply chain: identifying potential through signals of scope-seeking, ambiguity comfort, influence, mentoring appetite, and technical judgment; designing development arcs that progress from exposure through guided practice, independent practice, and sponsorship over 2-4 years; actively sponsoring candidates into the work that proves readiness, not just mentoring them in private; and constructing promotion cases with specific, verifiable evidence that the candidate is already operating at the target level. The measure of success is not how many candidates the principal advises — it is how many staff and principal engineers the organization promotes from its own pipeline.
+Growing staff and principal engineers is the principal's talent supply chain: identifying potential through signals of scope-seeking, ambiguity comfort, influence, mentoring appetite, and technical judgment; designing development arcs that progress from exposure through guided practice, independent practice, and sponsorship over 2-4 years; actively sponsoring candidates into the work that proves readiness, not just mentoring them in private; and constructing promotion cases with specific, verifiable evidence that the candidate is already operating at the target level. The measure of success is not how many candidates the principal advises. It is how many staff and principal engineers the organization promotes from its own pipeline.

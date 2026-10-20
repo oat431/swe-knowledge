@@ -15,11 +15,11 @@ tags:
 
 # Business Architecture Domain
 
-> **Core skill:** Operating in the business architecture domain — capabilities, value streams, organization, and business information — as the discipline that connects strategy to execution and supplies the enterprise architect's business foundation.
+> **Core skill:** Operating in the business architecture domain (capabilities, value streams, organization, and business information) as the discipline that connects strategy to execution and supplies the enterprise architect's business foundation.
 
 ## Why This Matters
 
-Enterprise architecture is usually described as four domains: business, data, application, and technology. The business domain is first because everything else exists to serve it — and the domain most often skipped because it feels like someone else's job. Business architects, business analysts, and strategy teams all touch it; without a coherent discipline, the result is a pile of process models, org charts, and strategy slides that never compose into an architecture. The domain exists to make that composition systematic.
+Enterprise architecture is usually described as four domains: business, data, application, and technology. The business domain is first because everything else exists to serve it, and the domain most often skipped because it feels like someone else's job. Business architects, business analysts, and strategy teams all touch it; without a coherent discipline, the result is a pile of process models, org charts, and strategy slides that never compose into an architecture. The domain exists to make that composition systematic.
 
 For the solutions architect, business architecture literacy is the difference between designing for a stated requirement and designing for the business that will live with the result. Capabilities frame what the solution must enable; value streams frame what the solution must accelerate; the business information view frames what the solution must own or exchange; the organizational view frames who must adopt it. Each frame catches a class of design error that no requirements document reliably captures.
 
@@ -63,6 +63,7 @@ Technique selection follows the decision at hand. Enterprise planning leans on c
 ## From Strategy to Delivery
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     STRATEGY["Business strategy"] --> BIZARCH["Business architecture"]
     BIZARCH["Business architecture"] --> CAPS["Capabilities and value streams"]
@@ -70,7 +71,7 @@ flowchart TD
     SOLUTION["Solution architecture"] --> TECH["Technology delivery"]
 ```
 
-The chain must survive contact with reality at every link: strategy that cannot name the capabilities it needs is a slogan; capabilities with no owner are aspirations; solutions that do not cite capability impact are features in search of funding. The business architecture domain is what keeps the chain connected — and keeps every downstream decision answerable to the strategy it serves.
+The chain must survive contact with reality at every link: strategy that cannot name the capabilities it needs is a slogan; capabilities with no owner are aspirations; solutions that do not cite capability impact are features in search of funding. The business architecture domain is what keeps the chain connected, and keeps every downstream decision answerable to the strategy it serves.
 
 ## The Practice Around the Domain
 
@@ -88,7 +89,7 @@ The chain must survive contact with reality at every link: strategy that cannot 
 
 - [ ] Capabilities, value streams, and business information models exist and link to each other
 - [ ] Each element has a business owner, not only an architecture custodian
-- [ ] Models are maintained against real decisions — planning, investment, design
+- [ ] Models are maintained against real decisions: planning, investment, design
 - [ ] The business information model is agreed with the data architecture function
 - [ ] Strategy documents reference capabilities; capability models reference strategy goals
 - [ ] Initiatives cite business architecture impact in their charters and cases
@@ -129,9 +130,9 @@ Open issues: <gaps, conflicts, decisions needed>
 - [[02_Capability_Mapping]]: the core modeling technique of the domain
 - [[03_Value_Stream_Analysis]]: the flow view the domain is built around
 - [[01_Business_Needs_Analysis]]: needs framed against the domain's structures
-- [[03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: how the domain operates inside EA
-- [[04_Enterprise_Data_Architecture/00_overview|Enterprise Data Architecture]]: the receiving domain for business information
+- [[career-path/15_Solutions_and_Enterprise_Architect/03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: how the domain operates inside EA
+- [[career-path/15_Solutions_and_Enterprise_Architect/04_Enterprise_Data_Architecture/00_overview|Enterprise Data Architecture]]: the receiving domain for business information
 
 ## Summary
 
-The business architecture domain — capabilities, value streams, organization, business information, processes, and strategy — is the structured layer between strategic intent and technical execution. Its techniques compose into a navigable whole only when the links between elements are maintained and owned, and it proves its value only by being cited in real decisions. For the solutions architect it provides the frames that catch design errors no requirements document captures; for the enterprise architect it is the foundation on which every other domain rests. Business architecture done well is invisible — it is simply the way the organization understands itself before it changes.
+The business architecture domain (capabilities, value streams, organization, business information, processes, and strategy) is the structured layer between strategic intent and technical execution. Its techniques compose into a navigable whole only when the links between elements are maintained and owned, and it proves its value only by being cited in real decisions. For the solutions architect it provides the frames that catch design errors no requirements document captures; for the enterprise architect it is the foundation on which every other domain rests. Business architecture done well is invisible. It is simply the way the organization understands itself before it changes.

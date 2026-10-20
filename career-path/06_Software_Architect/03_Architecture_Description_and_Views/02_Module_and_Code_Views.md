@@ -16,19 +16,19 @@ tags:
 
 # Module and Code Views
 
-> **Core skill:** The architect communicates static structure — how the system is built from modules, how they depend on each other, and where layers and data models sit — so that developers can navigate, extend, and maintain the codebase with confidence.
+> **Core skill:** The architect communicates static structure (how the system is built from modules, how they depend on each other, and where layers and data models sit) so that developers can navigate, extend, and maintain the codebase with confidence.
 
 ## Why This Matters
 
 Static structure is the architecture's skeleton. Before the system runs, before processes start or messages flow, there is a buildable codebase organized into modules with declared dependencies and enforced boundaries. When a developer opens the repository and asks "where does this go?" or "what can I call from here?", the answer lives in the module and code views.
 
-These views are the closest the architect gets to the code itself. They constrain what can depend on what, enforce layering discipline, and make the data model explicit. A system whose runtime behavior is elegant but whose module structure is a tangle of cyclic dependencies will degrade under maintenance — and the degradation starts in the static views.
+These views are the closest the architect gets to the code itself. They constrain what can depend on what, enforce layering discipline, and make the data model explicit. A system whose runtime behavior is elegant but whose module structure is a tangle of cyclic dependencies will degrade under maintenance, and the degradation starts in the static views.
 
 ## Core Module View Types
 
 ### Decomposition View
 
-Shows how the system is partitioned into implementation units: modules, packages, namespaces, or source files. The purpose is to make the system intellectually manageable — each module has a clear responsibility, a defined interface, and a reason to exist.
+Shows how the system is partitioned into implementation units: modules, packages, namespaces, or source files. The purpose is to make the system intellectually manageable: each module has a clear responsibility, a defined interface, and a reason to exist.
 
 | Principle | Description | Test |
 |-----------|-------------|------|
@@ -42,6 +42,7 @@ Shows how the system is partitioned into implementation units: modules, packages
 The dependency map: what modules use what other modules. This view answers "if I change module X, what else might break?" and "can I extract this module into a separate service?"
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PRESENTATION["Presentation Layer"] --> APPLICATION["Application Layer"]
     APPLICATION --> DOMAIN["Domain Layer"]
@@ -52,7 +53,7 @@ flowchart TD
 
 ### Layered View
 
-A specialization of the uses view where dependencies flow in one direction — typically downward — through named layers. The layering rules are explicit: a layer may only depend on the layer directly beneath it (strict layering) or on any lower layer (relaxed layering).
+A specialization of the uses view where dependencies flow in one direction (typically downward) through named layers. The layering rules are explicit: a layer may only depend on the layer directly beneath it (strict layering) or on any lower layer (relaxed layering).
 
 | Layer | Responsibility | Dependency Rule |
 |-------|----------------|-----------------|
@@ -63,7 +64,7 @@ A specialization of the uses view where dependencies flow in one direction — t
 
 ### Data Model View
 
-The conceptual and logical data model — entities, relationships, cardinalities, and constraints. This view may be expressed as an ER diagram, a UML class diagram focused on domain objects, or a set of table definitions.
+The conceptual and logical data model: entities, relationships, cardinalities, and constraints. This view may be expressed as an ER diagram, a UML class diagram focused on domain objects, or a set of table definitions.
 
 ## Diagram Conventions
 
@@ -80,7 +81,7 @@ The conceptual and logical data model — entities, relationships, cardinalities
 
 | C4 Level | Shows | Maps To |
 |----------|-------|---------|
-| **System Context** | System and its external actors | Not a module view — context |
+| **System Context** | System and its external actors | Not a module view: context |
 | **Container** | Deployable units (web app, database, file system) | High-level decomposition |
 | **Component** | Logical components within a container | Decomposition and uses views |
 | **Code** | Classes, interfaces (generated from code) | Detailed uses view |
@@ -116,7 +117,7 @@ The conceptual and logical data model — entities, relationships, cardinalities
 | Metric | Current | Target | Trend |
 |--------|---------|--------|-------|
 | Module count | 42 | 40–50 | Stable |
-| Cyclic dependencies | 0 | 0 | — |
+| Cyclic dependencies | 0 | 0 | N/A |
 | Average dependencies per module | 3.2 | < 5 | Improving |
 | Modules with >10 dependents | 2 | < 3 | At risk |
 | Max dependency depth | 5 | < 6 | Acceptable |
@@ -126,10 +127,10 @@ The conceptual and logical data model — entities, relationships, cardinalities
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
-| **Missing decomposition view** | Developers discover module boundaries by reading code — slow, error-prone | Produce and maintain a decomposition diagram at C4 Component level |
+| **Missing decomposition view** | Developers discover module boundaries by reading code, slow, error-prone | Produce and maintain a decomposition diagram at C4 Component level |
 | **Cyclic dependencies tolerated** | Changes cascade unpredictably; extraction into services becomes impossible | Detect cycles at build time; break them on discovery |
-| **Layers in name only** | "Service" classes that call across layers — layering rules exist only on the diagram | Enforce with ArchUnit or equivalent; treat violations as build failures |
-| **Data model absent from architecture** | Developers reconstruct the model from schemas and ORM mappings — inconsistencies multiply | Maintain a conceptual data model view as a living architecture artifact |
+| **Layers in name only** | "Service" classes that call across layers; layering rules exist only on the diagram | Enforce with ArchUnit or equivalent; treat violations as build failures |
+| **Data model absent from architecture** | Developers reconstruct the model from schemas and ORM mappings; inconsistencies multiply | Maintain a conceptual data model view as a living architecture artifact |
 | **Module-to-team mismatch** | Modules cross team boundaries; every change requires cross-team coordination | Align module boundaries with team ownership (Inverse Conway Maneuver) |
 | **Over-decomposition** | Too many modules; overhead of inter-module navigation exceeds benefit of separation | Start coarse; split only when a module has multiple change reasons |
 

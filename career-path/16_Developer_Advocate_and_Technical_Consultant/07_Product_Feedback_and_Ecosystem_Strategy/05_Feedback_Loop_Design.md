@@ -16,15 +16,15 @@ tags:
 
 # Feedback Loop Design
 
-> **Core skill:** Designing the channels and processes that make developer feedback flow in, get triaged honestly, and return to the people who raised it — so the loop is a system, not a lottery.
+> **Core skill:** Designing the channels and processes that make developer feedback flow in, get triaged honestly, and return to the people who raised it, so the loop is a system, not a lottery.
 
 ## Why This Matters
 
-Developers keep giving feedback only as long as feedback keeps mattering. The first time a report disappears into silence, the reporter learns that the channel is decorative; after two or three such lessons, even enthusiastic developers stop typing. The feedback black hole is the default state of organizational life — reports arrive, urgency smears them across inboxes, and nothing returns. Closing the loop is the advocate's structural job, and it is one of the highest-leverage systems the role owns.
+Developers keep giving feedback only as long as feedback keeps mattering. The first time a report disappears into silence, the reporter learns that the channel is decorative; after two or three such lessons, even enthusiastic developers stop typing. The feedback black hole is the default state of organizational life: reports arrive, urgency smears them across inboxes, and nothing returns. Closing the loop is the advocate's structural job, and it is one of the highest-leverage systems the role owns.
 
-A designed loop has three movements: intake (channels where signal can enter from every direction), triage (a consistent path that turns raw reports into ranked, routed items), and response (the return message, whether fix, defer, decline, or duplicate — each with reasoning). Most organizations build intake enthusiastically, improvise triage, and skip response entirely. The advocate's contribution is building the missing movements and making all three visible.
+A designed loop has three movements: intake (channels where signal can enter from every direction), triage (a consistent path that turns raw reports into ranked, routed items), and response (the return message, whether fix, defer, decline, or duplicate; each with reasoning). Most organizations build intake enthusiastically, improvise triage, and skip response entirely. The advocate's contribution is building the missing movements and making all three visible.
 
-The loop must also be honest to survive. Triage that hides hard decisions — silent declines, zombie tickets, feedback theater consultations — buys short-term comfort with long-term cynicism. The designed loop says no clearly, says why, and says how the decision could be revisited. A clear no keeps the channel credible; a fog of maybes destroys it.
+The loop must also be honest to survive. Triage that hides hard decisions (silent declines, zombie tickets, feedback theater consultations) buys short-term comfort with long-term cynicism. The designed loop says no clearly, says why, and says how the decision could be revisited. A clear no keeps the channel credible; a fog of maybes destroys it.
 
 ## The Loop Anatomy
 
@@ -49,7 +49,7 @@ The loop must also be honest to survive. Triage that hides hard decisions — si
 | Direct conversations | Depth; trust | Small n; memory loss | Advocate, logged same day |
 | Surveys | Comparability over time | Asked rarely; self-report bias | Research team |
 
-Design a portfolio that covers high-volume, high-context, and high-severity needs — then publish which channel is watched by whom, so users stop guessing.
+Design a portfolio that covers high-volume, high-context, and high-severity needs; then publish which channel is watched by whom, so users stop guessing.
 
 ## Triage Discipline
 
@@ -74,15 +74,16 @@ Design a portfolio that covers high-volume, high-context, and high-severity need
 | Duplicate | "X is tracked in [id]; your case was added to its count" | At triage |
 | Not ours but noted | "X belongs to [project]; we passed it along and are tracking" | At routing |
 
-The declined response is the load-bearing one. Organizations that cannot say no clearly end up saying yes to everything slowly — and nothing corrodes a feedback channel faster than a backlog of implied promises.
+The declined response is the load-bearing one. Organizations that cannot say no clearly end up saying yes to everything slowly, and nothing corrodes a feedback channel faster than a backlog of implied promises.
 
 ## Feedback Debt
 
-Every unclosed item is a withdrawal from future participation. Track the size of the open backlog aged beyond its stated windows — that is feedback debt, and it should be reported like any other liability: trend, worst offenders, and a repay plan. The rule of thumb: if the queue's oldest open item predates two planning cycles, the channel has already been marked unreliable in the field's mental model.
+Every unclosed item is a withdrawal from future participation. Track the size of the open backlog aged beyond its stated windows. That is feedback debt, and it should be reported like any other liability: trend, worst offenders, and a repay plan. The rule of thumb: if the queue's oldest open item predates two planning cycles, the channel has already been marked unreliable in the field's mental model.
 
 ## The Feedback Cycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     INTAKE["Intake - channels catch the signal"] --> TRIAGE["Triage - rank, dedupe, route"]
     TRIAGE --> DECIDE["Decide - fix, plan, decline, defer"]
@@ -97,17 +98,17 @@ flowchart TD
 - [ ] Every channel has a named watcher and a published purpose
 - [ ] One queue of record holds all normalized, deduped items
 - [ ] Triage runs on a fixed cadence with defined ranking criteria
-- [ ] Every item has a state within a stated window — no zombies
+- [ ] Every item has a state within a stated window: no zombies
 - [ ] Decline messages include reasons and revisit conditions
 - [ ] Reporters hear outcomes through the channel they used
-- [ ] Feedback debt — aged open items — is measured and reported
+- [ ] Feedback debt (aged open items) is measured and reported
 
 ### Loop Design Template
 
 ```markdown
-## Feedback Loop — [product or area]
+## Feedback Loop: [product or area]
 - Channels and watchers: [list]
-- Queue of record: [tool] — normalization rules: [x]
+- Queue of record: [tool]; normalization rules: [x]
 - Triage: [cadence, participants, ranking criteria]
 - Response SLAs: [acknowledge in x days; decide in y]
 - Decision log: [where, who records]
@@ -144,4 +145,4 @@ flowchart TD
 
 ## Summary
 
-Feedback loop design builds the three movements organizations usually leave unfinished: intake with named watchers, triage with one queue of record and honest ranking, and response that returns every outcome — fix, plan, defer, or no — to the person who wrote in. Track the loop's own debt, cap it, and repay it in the open. A loop that reliably closes is what turns a stream of developer reports into a durable, trusted institutional asset.
+Feedback loop design builds the three movements organizations usually leave unfinished: intake with named watchers, triage with one queue of record and honest ranking, and response that returns every outcome (fix, plan, defer, or no) to the person who wrote in. Track the loop's own debt, cap it, and repay it in the open. A loop that reliably closes is what turns a stream of developer reports into a durable, trusted institutional asset.

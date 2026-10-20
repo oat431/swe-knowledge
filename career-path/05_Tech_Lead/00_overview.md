@@ -42,17 +42,18 @@ A useful distinction is: the Tech Lead is primarily accountable for the **system
 
 | Capability | Tech Lead behavior | Detailed notes |
 |---|---|---|
-| The Tech Lead role and operating model | Defines the mandate, partners with the EM, and balances leading with building | [[01_The_Tech_Lead_Role_and_Operating_Model/00_overview]] |
-| System ownership and production responsibility | Guards the health, debt, dependencies, and support model of the team's system | [[02_System_Ownership_and_Production_Responsibility/00_overview]] |
-| Technical direction and architecture | Sets vision, standards, and a decision process that keeps the system coherent | [[03_Technical_Direction_and_Architecture/00_overview]] |
-| Team delivery and execution leadership | Keeps work planned honestly, unblocked fast, coordinated, and landed safely | [[04_Team_Delivery_and_Execution_Leadership/00_overview]] |
-| Team development and mentoring leadership | Grows the team's capability through work allocation, structures, and delegation | [[05_Team_Development_and_Mentoring_Leadership/00_overview]] |
-| Process and quality stewardship | Owns how the team works; tunes process and quality weight to context | [[06_Process_and_Quality_Stewardship/00_overview]] |
-| Incident leadership and production excellence | Leads the response, learns blamelessly, and builds preventive practices | [[07_Incident_Leadership_and_Production_Excellence/00_overview]] |
+| The Tech Lead role and operating model | Defines the mandate, partners with the EM, and balances leading with building | [[career-path/05_Tech_Lead/01_The_Tech_Lead_Role_and_Operating_Model/00_overview]] |
+| System ownership and production responsibility | Guards the health, debt, dependencies, and support model of the team's system | [[career-path/05_Tech_Lead/02_System_Ownership_and_Production_Responsibility/00_overview]] |
+| Technical direction and architecture | Sets vision, standards, and a decision process that keeps the system coherent | [[career-path/05_Tech_Lead/03_Technical_Direction_and_Architecture/00_overview]] |
+| Team delivery and execution leadership | Keeps work planned honestly, unblocked fast, coordinated, and landed safely | [[career-path/05_Tech_Lead/04_Team_Delivery_and_Execution_Leadership/00_overview]] |
+| Team development and mentoring leadership | Grows the team's capability through work allocation, structures, and delegation | [[career-path/05_Tech_Lead/05_Team_Development_and_Mentoring_Leadership/00_overview]] |
+| Process and quality stewardship | Owns how the team works; tunes process and quality weight to context | [[career-path/05_Tech_Lead/06_Process_and_Quality_Stewardship/00_overview]] |
+| Incident leadership and production excellence | Leads the response, learns blamelessly, and builds preventive practices | [[career-path/05_Tech_Lead/07_Incident_Leadership_and_Production_Excellence/00_overview]] |
 
 ## Typical Progression
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SENIOR["Senior Software Engineer"] --> TEAM["Guide one team"]
     TEAM --> SYSTEM["Own system direction"]

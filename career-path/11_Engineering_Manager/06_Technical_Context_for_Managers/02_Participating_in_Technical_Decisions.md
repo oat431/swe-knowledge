@@ -16,13 +16,13 @@ tags:
 
 # Participating in Technical Decisions
 
-> **Core skill:** Calibrated involvement in technical decisions — informed or consulted by default, escalating participation when the decision is consequential, and sharpening designs with questions instead of redirecting them.
+> **Core skill:** Calibrated involvement in technical decisions: informed or consulted by default, escalating participation when the decision is consequential, and sharpening designs with questions instead of redirecting them.
 
 ## Why This Matters
 
-The manager's participation in technical decisions is a dial, not a switch. At one extreme, the manager is absent: the team decides everything, and the manager cannot defend, fund, or explain the choices — nor notice when a decision carries hidden risk. At the other, the manager is the decider: the team stops thinking, the tech lead becomes a title, and every design waits for the manager's blessing.
+The manager's participation in technical decisions is a dial, not a switch. At one extreme, the manager is absent: the team decides everything, and the manager cannot defend, fund, or explain the choices, nor notice when a decision carries hidden risk. At the other, the manager is the decider: the team stops thinking, the tech lead becomes a title, and every design waits for the manager's blessing.
 
-The skill is knowing where the dial sits for each decision and moving it deliberately. Most decisions belong to the team, with the manager informed. A small set — consequential, cross-team, high-risk, or personnel-impacting — earns deeper participation. The manager who participates in everything is a bottleneck; the manager who participates in nothing is a passenger.
+The skill is knowing where the dial sits for each decision and moving it deliberately. Most decisions belong to the team, with the manager informed. A small set (consequential, cross-team, high-risk, or personnel-impacting) earns deeper participation. The manager who participates in everything is a bottleneck; the manager who participates in nothing is a passenger.
 
 ## The Participation Spectrum
 
@@ -35,7 +35,7 @@ The skill is knowing where the dial sits for each decision and moving it deliber
 
 ## The Default Position
 
-Default to informed or consulted. The team closest to the work has the best technical information, and their ownership of decisions is the engine of their growth. Your default participation is the question — the one that sharpens thinking without redirecting it.
+Default to informed or consulted. The team closest to the work has the best technical information, and their ownership of decisions is the engine of their growth. Your default participation is the question, the one that sharpens thinking without redirecting it.
 
 State the default explicitly so the team knows where they stand: "Design decisions are yours; I want to hear about them before they ship. If a decision is consequential, cross-team, or expensive, we decide together."
 
@@ -50,7 +50,7 @@ State the default explicitly so the team knows where they stand: "Design decisio
 | Cost | The infrastructure commitment with a large bill | Decider |
 | Irreversible | The platform choice that will not be changed | Co-decider at minimum |
 
-The trigger is not "interesting" or "I have opinions" — it is consequence. If the decision is cheap to reverse, the team decides.
+The trigger is not "interesting" or "I have opinions"; it is consequence. If the decision is cheap to reverse, the team decides.
 
 ## The Question Toolkit for Design Reviews
 
@@ -65,15 +65,15 @@ When you attend a design review, your instrument is questions, not opinions:
 | What are we not doing? | The alternatives implicitly rejected |
 | What changes next year? | The assumptions with a shelf life |
 
-These questions work because they are cheap to answer well and expensive to answer badly — and they keep the manager in judge mode, not designer mode.
+These questions work because they are cheap to answer well and expensive to answer badly, and they keep the manager in judge mode, not designer mode.
 
 ## Staying in Question Mode
 
 The temptation is to redirect: "Have you considered X?" becomes "Do X." The discipline:
 
 - Ask the question; let the team answer it
-- If the team's answer is sound, the design stands — even if you would have chosen differently
-- If the team cannot answer, that is the finding — a design that cannot answer "what breaks" is not ready
+- If the team's answer is sound, the design stands, even if you would have chosen differently
+- If the team cannot answer, that is the finding: a design that cannot answer "what breaks" is not ready
 - Reserve direct opinions for the escalated decisions where you are co-decider or decider
 
 The manager's question that changes the outcome once is worth more than the manager's opinion that is ignored ten times.
@@ -90,7 +90,7 @@ The record serves two purposes: it keeps you honest about where the dial was, an
 
 ## The Re-Entry Problem
 
-After absence — a long stretch away from technical discussion, a re-org, a new domain — the temptation is to opine from stale context. The discipline is the reverse:
+After absence (a long stretch away from technical discussion, a re-org, a new domain) the temptation is to opine from stale context. The discipline is the reverse:
 
 1. Rebuild context first: read the design doc, the ADRs, the recent diffs
 2. Attend as a listener; ask questions, make no judgments
@@ -100,6 +100,7 @@ After absence — a long stretch away from technical discussion, a re-org, a new
 A manager who re-enters with fresh questions earns the room; a manager who re-enters with stale opinions loses it.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DECISION["A technical decision arises"] --> ASSESS["Assess consequence and reversibility"]
     ASSESS --> ROUTINE["Routine and reversible"]
@@ -116,7 +117,7 @@ flowchart TD
 ### Participation Checklist
 
 - [ ] I know the dial position for every live technical decision
-- [ ] My default is informed or consulted — not decider
+- [ ] My default is informed or consulted, not decider
 - [ ] I attended the design reviews where decisions were consequential
 - [ ] My questions sharpened the design; I did not redirect it
 - [ ] Flagged risks and reservations are recorded
@@ -125,13 +126,13 @@ flowchart TD
 ### Design Review Participation Record
 
 ```markdown
-## Design Reviews — [month]
+## Design Reviews: [month]
 | Design | Dial | My Questions | Flags | Outcome |
 |--------|------|--------------|-------|---------|
 | [X] | [consulted] | [what breaks?] | [rollback undefined] | [decided with flag] |
 
 ## Decisions Ratified with Reservations
-- [date]: [decision] — reservation: [X] — revisit by: [date]
+- [date]: [decision]; reservation: [X]; revisit by: [date]
 ```
 
 ## Common Pitfalls
@@ -162,4 +163,4 @@ flowchart TD
 
 ## Summary
 
-Participating in technical decisions is a calibrated dial: informed or consulted by default, escalated deliberately when a decision is consequential, cross-team, risky, costly, or irreversible. The manager's instrument is the sharpening question — what breaks, what it costs, what happens on failure, who maintains it — and the discipline is staying in question mode, recording flags, and rebuilding context after absence. The team that decides freely and the manager who judges consequence are the same healthy system.
+Participating in technical decisions is a calibrated dial: informed or consulted by default, escalated deliberately when a decision is consequential, cross-team, risky, costly, or irreversible. The manager's instrument is the sharpening question (what breaks, what it costs, what happens on failure, who maintains it) and the discipline is staying in question mode, recording flags, and rebuilding context after absence. The team that decides freely and the manager who judges consequence are the same healthy system.

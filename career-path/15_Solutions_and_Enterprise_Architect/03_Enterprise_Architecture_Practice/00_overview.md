@@ -14,13 +14,13 @@ tags:
 
 # Enterprise Architecture Practice
 
-> **Core capability:** The enterprise architect connects business, information, application, and technology domains — maintaining the current-state picture, defining the target, and governing the evolution of the enterprise landscape.
+> **Core capability:** The enterprise architect connects business, information, application, and technology domains, maintaining the current-state picture, defining the target, and governing the evolution of the enterprise landscape.
 
 ## Why This Matters
 
-Enterprises accumulate technology the way cities accumulate buildings: organically, with no master plan, each addition rational in isolation and incoherent in aggregate. The enterprise architect is the city planner — maintaining the map, defining the target, and making the connections between business intent and technology reality visible to decision makers.
+Enterprises accumulate technology the way cities accumulate buildings: organically, with no master plan, each addition rational in isolation and incoherent in aggregate. The enterprise architect is the city planner: maintaining the map, defining the target, and making the connections between business intent and technology reality visible to decision makers.
 
-Enterprise architecture fails when it becomes documentation theater: impressive artifacts, no influence. It succeeds when the capability map, current-state assessment, target architecture, and governance actually shape investment decisions — when proposals cite the target state and duplications get caught before they are funded.
+Enterprise architecture fails when it becomes documentation theater: impressive artifacts, no influence. It succeeds when the capability map, current-state assessment, target architecture, and governance actually shape investment decisions: when proposals cite the target state and duplications get caught before they are funded.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ Enterprise architecture fails when it becomes documentation theater: impressive 
 ## The EA Operating Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     BUSINESS["Business strategy and capability needs"] --> CURRENT["Current state: what exists"]
     CURRENT --> TARGET["Target state: where we are going"]
@@ -52,7 +53,7 @@ The loop never ends: every funded project changes the current state.
 
 ### EA Practice Checklist
 
-- [ ] A framework is adopted pragmatically — tailored, not followed blindly
+- [ ] A framework is adopted pragmatically, tailored, not followed blindly
 - [ ] The architecture landscape covers business, data, application, technology layers
 - [ ] Current-state and target-state artifacts exist and are current
 - [ ] Architecture principles are written, socialized, and used in governance
@@ -75,11 +76,11 @@ The loop never ends: every funded project changes the current state.
 
 ## Related Capabilities
 
-- [[02_Solution_Architecture_and_Design/00_overview|Solution Architecture and Design]]: solutions realize the enterprise target
-- [[06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: the transition from current to target
+- [[career-path/15_Solutions_and_Enterprise_Architect/02_Solution_Architecture_and_Design/00_overview|Solution Architecture and Design]]: solutions realize the enterprise target
+- [[career-path/15_Solutions_and_Enterprise_Architect/06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: the transition from current to target
 - [[career-path/06_Software_Architect/04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs (Architect)]]: evaluation methods EA governance relies on
 - [[career-path/04_Principal_and_Distinguished_Engineer/03_Decision_Governance_and_Principles/00_overview|Decision Governance and Principles (Principal)]]: the engineering-side governance counterpart
 
 ## Summary
 
-Enterprise architecture practice maintains the enterprise's technology picture — current state, target state, principles, and governance — and makes it useful for decisions. The test of the practice is influence: proposals that cite the target, duplications caught before funding, and governance that enables delivery rather than blocking it.
+Enterprise architecture practice maintains the enterprise's technology picture (current state, target state, principles, and governance) and makes it useful for decisions. The test of the practice is influence: proposals that cite the target, duplications caught before funding, and governance that enables delivery rather than blocking it.

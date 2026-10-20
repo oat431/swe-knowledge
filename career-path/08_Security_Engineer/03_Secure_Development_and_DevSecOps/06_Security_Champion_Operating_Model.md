@@ -68,6 +68,7 @@ The champion is a multiplier and early-warning role. They should not silently in
 ### 4. Escalation Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     TEAM["Product team notices a security question"] --> CHAMP["Champion frames context and evidence"]
     CHAMP --> ROUTE{"Local pattern is sufficient"}
@@ -137,8 +138,8 @@ Design a pilot for three teams:
 - [Security Policy](F:\obsidian_note\document_template\14_Security/Security-Policy.md): policy context and accountability
 - [[02_Secure_Coding_Enablement|Secure Coding Enablement]]: learning and paved-road capabilities
 - [[03_DevSecOps_Pipeline_Controls|DevSecOps Pipeline Controls]]: automated feedback and exception paths
-- [[04_Security_Verification_and_Testing/05_Findings_Triage_and_False_Positives|Findings Triage and False Positives]]: shared interpretation of evidence
-- [[07_Vulnerability_Management_and_Governance/00_overview|Vulnerability Management and Governance]]: ownership and risk acceptance lifecycle
+- [[career-path/08_Security_Engineer/04_Security_Verification_and_Testing/05_Findings_Triage_and_False_Positives|Findings Triage and False Positives]]: shared interpretation of evidence
+- [[career-path/08_Security_Engineer/07_Vulnerability_Management_and_Governance/00_overview|Vulnerability Management and Governance]]: ownership and risk acceptance lifecycle
 
 ## Key Takeaways
 

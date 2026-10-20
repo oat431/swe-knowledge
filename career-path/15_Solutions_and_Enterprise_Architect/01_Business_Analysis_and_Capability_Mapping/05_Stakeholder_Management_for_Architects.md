@@ -15,13 +15,13 @@ tags:
 
 # Stakeholder Management for Architects
 
-> **Core skill:** Working deliberately with sponsors, business owners, delivery teams, and executives — mapping their interests, influence, and decision roles so the architecture serves real needs and survives real politics.
+> **Core skill:** Working deliberately with sponsors, business owners, delivery teams, and executives, mapping their interests, influence, and decision roles so the architecture serves real needs and survives real politics.
 
 ## Why This Matters
 
-Architecture is a social artifact as much as a technical one. A design that is technically sound but owned by no one, funded by no one, and trusted by no one will not be built. Stakeholder management for architects is the discipline of knowing who matters, what each party needs from the architecture, and what the architecture needs from each party — then designing the engagement so both are satisfied.
+Architecture is a social artifact as much as a technical one. A design that is technically sound but owned by no one, funded by no one, and trusted by no one will not be built. Stakeholder management for architects is the discipline of knowing who matters, what each party needs from the architecture, and what the architecture needs from each party, then designing the engagement so both are satisfied.
 
-Architects operate without line authority over most of the people whose cooperation they need. The delivery team is not their team; the vendor is not their employee; the business sponsor is not their subordinate. Influence is built from credibility, evidence, and relationships — and it is spent when decisions are contested. An architect who has not invested in stakeholder relationships discovers the deficit precisely when the difficult trade-off needs to be defended.
+Architects operate without line authority over most of the people whose cooperation they need. The delivery team is not their team; the vendor is not their employee; the business sponsor is not their subordinate. Influence is built from credibility, evidence, and relationships, and it is spent when decisions are contested. An architect who has not invested in stakeholder relationships discovers the deficit precisely when the difficult trade-off needs to be defended.
 
 This discipline is also the architect's early-warning system. Stakeholders reveal intent through their concerns: a security officer's persistent questions about the perimeter, a finance owner's fixation on run costs, a regional head's anxiety about local workarounds. Managed well, these signals shape the architecture before they become objections. Managed poorly, they become review failures at the worst possible moment.
 
@@ -61,6 +61,7 @@ Each stakeholder relationship has a currency: executives and business owners tra
 | **Operations readiness** | At design and pre-transition | Operability as a design property |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     STAKE["Stakeholder map"] --> CONCERNS["Concerns and interests"]
     CONCERNS["Concerns and interests"] --> ENGAGEMENT["Engagement plan"]
@@ -128,10 +129,10 @@ Current issue: <open concern and planned response>
 
 - [[01_Business_Needs_Analysis]]: sponsor and owner alignment anchored in the validated need
 - [[06_Business_Case_and_Options_Analysis]]: stakeholders as decision-makers on options
-- [[07_Architecture_Communication/00_overview|Architecture Communication]]: the communication craft this discipline depends on
+- [[career-path/15_Solutions_and_Enterprise_Architect/07_Architecture_Communication/00_overview|Architecture Communication]]: the communication craft this discipline depends on
 - [[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]]: the delivery-side stakeholder discipline
 - [[career-path/03_Staff_Engineer/02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership (Staff)]]: influence without authority in a wider setting
 
 ## Summary
 
-Stakeholder management for architects is influence without authority made deliberate: map who matters, understand what each party fears and values, name who decides what, and design engagement that gives every party what it needs from the architecture while getting what the architecture needs from them. It is the discipline that converts a technically sound design into a funded, built, and trusted one — and the early-warning system that turns objections into design inputs before they become review failures.
+Stakeholder management for architects is influence without authority made deliberate: map who matters, understand what each party fears and values, name who decides what, and design engagement that gives every party what it needs from the architecture while getting what the architecture needs from them. It is the discipline that converts a technically sound design into a funded, built, and trusted one, and the early-warning system that turns objections into design inputs before they become review failures.

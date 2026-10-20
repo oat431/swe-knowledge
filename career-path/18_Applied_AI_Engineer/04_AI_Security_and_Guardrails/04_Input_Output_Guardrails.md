@@ -16,13 +16,13 @@ tags:
 
 # Input Output Guardrails
 
-> Runtime policy checks on every request and response — the enforcement layer that decides what reaches the model and what reaches the user, engineered as a testable system rather than a pile of if-statements.
+> Runtime policy checks on every request and response: the enforcement layer that decides what reaches the model and what reaches the user, engineered as a testable system rather than a pile of if-statements.
 
 ## Why This Is a Senior Skill
 
 Mid-level engineers wire a moderation API onto the chat endpoint and move on. Senior engineers build guardrails as a policy engine: every check has a defined trigger, an action, a documented failure mode (fail-open or fail-closed), a latency budget, and a regression suite. They know guardrails are security controls that are themselves attack surface, that false positives cost real users, and that a guardrail no one monitors is decoration.
 
-The senior framing is that guardrails are the *enforcement* layer between the threat model ([[01_LLM_Threat_Modeling]]) and the world. Each OWASP risk that can be stopped at runtime — injection patterns, harmful content, PII, malformed output, DoS — becomes one or more checks with an owner and a metric. Guardrail effectiveness is measured in [[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability]]: trigger rates, bypass rates, false-positive rates, added latency — not in the existence of a policy document.
+The senior framing is that guardrails are the *enforcement* layer between the threat model ([[01_LLM_Threat_Modeling]]) and the world. Each OWASP risk that can be stopped at runtime (injection patterns, harmful content, PII, malformed output, DoS) becomes one or more checks with an owner and a metric. Guardrail effectiveness is measured in [[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability]]: trigger rates, bypass rates, false-positive rates, added latency, not in the existence of a policy document.
 
 ## Core Frameworks
 
@@ -70,17 +70,17 @@ The senior framing is that guardrails are the *enforcement* layer between the th
 
 **Enforce the invariant: every request and response passes a defined policy boundary.** Route all model calls through one gateway or guardrail module so no code path can bypass policy. If individual endpoints can call the model directly, the guardrails are advisory, and advisories do not hold in production.
 
-**Design each guardrail with a trigger, action, and failure mode.** For every check, write down what triggers it, what happens (block, mask, rewrite, retry, escalate, fallback), and what happens when the check itself errors. Fail closed for high-risk checks — never let a crashed PII scanner pass data — and fail open only for low-risk UX paths, deliberately and in writing.
+**Design each guardrail with a trigger, action, and failure mode.** For every check, write down what triggers it, what happens (block, mask, rewrite, retry, escalate, fallback), and what happens when the check itself errors. Fail closed for high-risk checks (never let a crashed PII scanner pass data) and fail open only for low-risk UX paths, deliberately and in writing.
 
-**Cascade from cheap to expensive checks.** Deterministic schema and blocklist checks first, classifiers second, LLM-as-guard last for the ambiguous remainder. Measure the added p50 and p99 latency per check and keep the whole pipeline inside the product's latency budget — a guardrail that doubles response time is a performance regression with a policy attached.
+**Cascade from cheap to expensive checks.** Deterministic schema and blocklist checks first, classifiers second, LLM-as-guard last for the ambiguous remainder. Measure the added p50 and p99 latency per check and keep the whole pipeline inside the product's latency budget. A guardrail that doubles response time is a performance regression with a policy attached.
 
-**Treat guardrails as part of the eval loop, not a firewall.** Every bypass found in offline evaluation or production becomes a new test case and usually a new rule. The loop — eval finds failure, guardrail prevents it, monitoring confirms it — is the mechanism by which guardrails get better; without it they only get older.
+**Treat guardrails as part of the eval loop, not a firewall.** Every bypass found in offline evaluation or production becomes a new test case and usually a new rule. The loop (eval finds failure, guardrail prevents it, monitoring confirms it) is the mechanism by which guardrails get better; without it they only get older.
 
 **Watch false positives as a product metric.** Overblocking is silent churn: legitimate users get rejected, deflect to support, or leave. Track override and human-review rates per rule, and tune or remove rules whose false-positive cost exceeds their protection value. Precision is a safety property of the business, not a nicety.
 
 **Make guardrail decisions audit records.** Log the trigger, the redacted input or output, the action taken, and the latency of each check. These records are what [[06_Incident_Response_for_AI_Abuse]] depends on: without them, an incident investigation starts from zero.
 
-**The guardrail itself must not leak policy.** Verbose rejection messages teach attackers which rules exist and how to phrase around them. Denials should be minimal and uniform — "I can't help with that" — while detailed reasons go to logs and internal dashboards, never to the requester.
+**The guardrail itself must not leak policy.** Verbose rejection messages teach attackers which rules exist and how to phrase around them. Denials should be minimal and uniform ("I can't help with that") while detailed reasons go to logs and internal dashboards, never to the requester.
 
 ## Practical Exercise
 

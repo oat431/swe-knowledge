@@ -16,13 +16,13 @@ tags:
 
 # Working With Product Strategy
 
-> **Core skill:** The staff engineer couples technical strategy to product direction — sharing assumptions, negotiating the capacity handshake, and translating constraints in both directions so neither side plans against fiction.
+> **Core skill:** The staff engineer couples technical strategy to product direction: sharing assumptions, negotiating the capacity handshake, and translating constraints in both directions so neither side plans against fiction.
 
 ## Why This Matters
 
-Technical strategy and product strategy are planned by different people, on different timelines, against different evidence — and then executed by the same engineers. When the two documents contradict each other, the contradiction is resolved by whoever escalates loudest, not by whoever is right. The result is a roadmap that promises what the platform cannot deliver, or a platform built for a product that has already pivoted.
+Technical strategy and product strategy are planned by different people, on different timelines, against different evidence, and then executed by the same engineers. When the two documents contradict each other, the contradiction is resolved by whoever escalates loudest, not by whoever is right. The result is a roadmap that promises what the platform cannot deliver, or a platform built for a product that has already pivoted.
 
-The staff engineer is the coupling point. Product leaders own the market question; engineering owns the capability question; nobody else sits in both conversations. Making the two strategies reference each other's constraints is not a coordination nicety — it is the difference between a roadmap that ships and one that stalls mid-quarter.
+The staff engineer is the coupling point. Product leaders own the market question; engineering owns the capability question; nobody else sits in both conversations. Making the two strategies reference each other's constraints is not a coordination nicety. It is the difference between a roadmap that ships and one that stalls mid-quarter.
 
 ## Shared Assumptions Documents
 
@@ -34,7 +34,7 @@ The most common failure is hidden assumptions: product assumes the platform can 
 | Timeline | "Launch in Q3" | "Migration completes Q4; Q3 launch means a degraded path" | Conflict, unresolved |
 | Longevity | "The legacy UI survives indefinitely" | "The legacy UI blocks the platform bet" | Conflict, unresolved |
 
-The document is reviewed jointly at each planning cycle, and every conflict gets an owner and a date. Its purpose is not agreement — it is that disagreements become visible decisions instead of surprises.
+The document is reviewed jointly at each planning cycle, and every conflict gets an owner and a date. Its purpose is not agreement. It is that disagreements become visible decisions instead of surprises.
 
 ## The Capacity Handshake
 
@@ -101,9 +101,10 @@ The coupling question runs both ways: does technology serve product direction, o
 | Enabler | Technology executes the product vision | Make capability delivery predictable; translate cost curves |
 | Driver | A technical capability opens a product possibility | Surface the possibility in product terms; help price it |
 
-Most organizations live in enabler mode most of the time. The staff engineer's opportunity is recognizing driver moments — when a platform capability, a performance ceiling, or a data asset creates a product option nobody has priced — and bringing them to product as options, not as tech self-indulgence.
+Most organizations live in enabler mode most of the time. The staff engineer's opportunity is recognizing driver moments (when a platform capability, a performance ceiling, or a data asset creates a product option nobody has priced) and bringing them to product as options, not as tech self-indulgence.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SHARE["Share assumptions documents"] --> HANDSHAKE["Negotiate the capacity handshake"]
     HANDSHAKE --> TRANSLATE["Translate constraints both ways"]
@@ -172,7 +173,7 @@ flowchart TD
 - [[03_Capacity_and_Investment_Allocation]]: the capacity the handshake allocates
 - [[04_Saying_No_at_Scale]]: declining what does not fit the coupled plan
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/02_Stakeholder_Communication|Stakeholder Communication (Senior)]]: the stakeholder craft this scales
-- [[04_Influence_and_Alignment/00_overview|Influence and Alignment]]: how the coupling gets agreed
+- [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/00_overview|Influence and Alignment]]: how the coupling gets agreed
 
 ## Summary
 

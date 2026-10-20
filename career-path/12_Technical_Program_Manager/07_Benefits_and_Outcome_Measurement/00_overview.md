@@ -14,7 +14,7 @@ tags:
 
 # Benefits and Outcome Measurement
 
-> **Core capability:** The TPM keeps the program connected to value — defining measurable outcomes, tracking whether delivery is achieving them, and ensuring the program closes with an honest assessment of what was realized versus what was promised.
+> **Core capability:** The TPM keeps the program connected to value, defining measurable outcomes, tracking whether delivery is achieving them, and ensuring the program closes with an honest assessment of what was realized versus what was promised.
 
 ## Why This Matters
 
@@ -37,6 +37,7 @@ This area is also where the TPM's career compounds: programs that demonstrably d
 ## The Benefits Chain
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     ACTIVITY["Activity: work performed"] --> OUTPUT["Output: deliverable produced"]
     OUTPUT --> OUTCOME["Outcome: behavior or state changed"]
@@ -75,11 +76,11 @@ The TPM's discipline: measuring at every link, not just the first.
 
 ## Related Capabilities
 
-- [[01_Program_Structure_and_Charter/00_overview|Program Structure and Charter]]: outcomes defined in the charter drive benefits
-- [[04_Risk_and_Issue_Leadership/00_overview|Risk and Issue Leadership]]: benefit risk is a category of program risk
+- [[career-path/12_Technical_Program_Manager/01_Program_Structure_and_Charter/00_overview|Program Structure and Charter]]: outcomes defined in the charter drive benefits
+- [[career-path/12_Technical_Program_Manager/04_Risk_and_Issue_Leadership/00_overview|Risk and Issue Leadership]]: benefit risk is a category of program risk
 - [[career-path/14_Product_Manager/05_Product_Analytics/00_overview|Product Analytics (PM)]]: outcome measurement from the product perspective
 - [[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]]: the formal benefits management discipline
 
 ## Summary
 
-Benefits and outcome measurement is the TPM's value discipline: distinguishing output from outcome, tracing benefits to workstreams, measuring leading indicators during delivery, assessing realization honestly at closure, and ensuring sustainment after the program ends. The TPM who only tracks activity manages a program; the TPM who tracks outcomes delivers value — and has the evidence to prove it.
+Benefits and outcome measurement is the TPM's value discipline: distinguishing output from outcome, tracing benefits to workstreams, measuring leading indicators during delivery, assessing realization honestly at closure, and ensuring sustainment after the program ends. The TPM who only tracks activity manages a program; the TPM who tracks outcomes delivers value, and has the evidence to prove it.

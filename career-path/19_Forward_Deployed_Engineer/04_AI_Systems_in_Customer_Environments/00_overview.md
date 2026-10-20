@@ -13,7 +13,7 @@ tags:
 
 # AI Systems in Customer Environments
 
-> **Core capability:** The FDE deploys AI capabilities onto customer data and workflows — adapting product AI to field constraints, evaluating quality against the customer's definition of correct, and earning trust where models are probabilistic and stakes are real.
+> **Core capability:** The FDE deploys AI capabilities onto customer data and workflows: adapting product AI to field constraints, evaluating quality against the customer's definition of correct, and earning trust where models are probabilistic and stakes are real.
 
 ## Why This Matters
 
@@ -21,7 +21,7 @@ The 2025–2026 wave that made forward deployment strategic is the enterprise AI
 
 An FDE deploying AI is therefore a translator of three languages at once: the model's behavior and limits, the customer's domain knowledge, and the engineering reality of the deployment environment. The product team supplies patterns (retrieval, tool use, guardrails) developed on product conditions. The FDE adapts them to conditions the product team never saw: an on-prem model gateway, a glossary of internal jargon, a quality bar defined by a regulator, or an evaluation that must run inside the customer's network.
 
-The trust dynamics are unique to AI. Everything a customer accepts about deterministic software ("I will test it") meets something new ("it will be right most of the time, and we will manage the rest"). The FDE's job is not to promise perfection but to build the scaffolding around imperfection: evaluation, review workflows, escalation paths, and honest communication about confidence — so the capability can be used, not just admired.
+The trust dynamics are unique to AI. Everything a customer accepts about deterministic software ("I will test it") meets something new ("it will be right most of the time, and we will manage the rest"). The FDE's job is not to promise perfection but to build the scaffolding around imperfection: evaluation, review workflows, escalation paths, and honest communication about confidence, so the capability can be used, not just admired.
 
 ## Topics in This Capability Area
 
@@ -38,6 +38,7 @@ The trust dynamics are unique to AI. Everything a customer accepts about determi
 ## Grounding the Model in the Customer's World
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     QUESTION["User question"] --> RETRIEVE["Retrieve from customer knowledge"]
     RETRIEVE --> GENERATE["Model produces answer"]
@@ -46,13 +47,13 @@ flowchart LR
     REVIEW --> USE["Answer used in real work"]
 ```
 
-Every arrow is a place quality is won or lost — and every one of them is the FDE's to instrument.
+Every arrow is a place quality is won or lost, and every one of them is the FDE's to instrument.
 
 ## Practical Applications
 
 ### Field AI Deployment Checklist
 
-- [ ] The customer's definition of "correct" is written down with real examples — including edge cases
+- [ ] The customer's definition of "correct" is written down with real examples, including edge cases
 - [ ] Evaluation runs on customer data, not product demo data, and its results were reviewed with the customer
 - [ ] Data residency and vendor constraints are confirmed with the customer's security function, in writing
 - [ ] A human review path exists for outputs that carry legal, financial, or safety weight
@@ -74,17 +75,17 @@ Every arrow is a place quality is won or lost — and every one of them is the F
 - The customer can describe, accurately, what the AI does well and where review is required
 - Evaluation evidence exists on customer data and both sides cite the same numbers
 - Review workflows catch and route genuinely wrong outputs without drowning users
-- Usage grows because trust grew — not because of a mandate
+- Usage grows because trust grew, not because of a mandate
 - The next AI deployment in the same account reuses this one's evaluation harness
 
 ## Related Capabilities
 
-- [[03_Integration_and_Deployment_Engineering/00_overview|Integration and Deployment Engineering]]: the deployment substrate for every AI capability
-- [[05_Enterprise_Navigation_Security_and_Compliance/00_overview|Enterprise Navigation: Security and Compliance]]: where residency and vendor constraints are decided
-- [[01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]: the domain understanding that evaluation depends on
+- [[career-path/19_Forward_Deployed_Engineer/03_Integration_and_Deployment_Engineering/00_overview|Integration and Deployment Engineering]]: the deployment substrate for every AI capability
+- [[career-path/19_Forward_Deployed_Engineer/05_Enterprise_Navigation_Security_and_Compliance/00_overview|Enterprise Navigation: Security and Compliance]]: where residency and vendor constraints are decided
+- [[career-path/19_Forward_Deployed_Engineer/01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]: the domain understanding that evaluation depends on
 - [[career-path/18_Applied_AI_Engineer/00_overview|Applied AI Engineer]]: the product-side discipline this capability fields
 - [[career-path/18_Applied_AI_Engineer/04_AI_Security_and_Guardrails/00_overview|AI Security and Guardrails (Applied AI Engineer)]]: guardrail patterns the FDE adapts
 
 ## Summary
 
-AI systems in customer environments is the FDE capability at the center of the current deployment wave: adapting product AI to customer conditions, grounding it in customer data, evaluating it against the customer's definition of correct, working within residency and vendor constraints, and building review workflows that make imperfection manageable. The goal is not a flawless model — it is a capability the customer can actually trust with real work.
+AI systems in customer environments is the FDE capability at the center of the current deployment wave: adapting product AI to customer conditions, grounding it in customer data, evaluating it against the customer's definition of correct, working within residency and vendor constraints, and building review workflows that make imperfection manageable. The goal is not a flawless model. It is a capability the customer can actually trust with real work.

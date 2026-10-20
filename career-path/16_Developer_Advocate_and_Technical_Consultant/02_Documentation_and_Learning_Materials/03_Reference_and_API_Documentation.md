@@ -16,15 +16,15 @@ tags:
 
 # Reference and API Documentation
 
-> **Core skill:** The advocate documents the exact contract — every parameter, default, error, limit, and version — in a form that stays true to the code, because reference is where developers answer their own questions at scale.
+> **Core skill:** The advocate documents the exact contract (every parameter, default, error, limit, and version) in a form that stays true to the code, because reference is where developers answer their own questions at scale.
 
 ## Why This Matters
 
-Reference documentation is the contract between a system and everyone who calls it. Tutorials teach, guides solve, but reference answers the question a developer asks forty times a week: what exactly does this do, what can it accept, and what happens when I get it wrong. That audience arrives mid-task, scanning for one fact; it does not read, it looks up. The reference's value is measured in seconds saved per lookup and errors prevented per parameter — precision is not polish here, it is the entire product.
+Reference documentation is the contract between a system and everyone who calls it. Tutorials teach, guides solve, but reference answers the question a developer asks forty times a week: what exactly does this do, what can it accept, and what happens when I get it wrong. That audience arrives mid-task, scanning for one fact; it does not read, it looks up. The reference's value is measured in seconds saved per lookup and errors prevented per parameter. Precision is not polish here, it is the entire product.
 
 The failure mode of reference is drift. Documentation written from memory diverges from the code within one release; defaults change, errors are renamed, limits move, and every stale fact misleads a developer who trusted it. The professional response is structural: derive reference from the code wherever possible, keep handwritten prose tied to the same review cycle as the interface it describes, and treat an undocumented public surface as a defect in the interface itself. A public function without documentation is an unkept promise with a signature.
 
-Reference also carries responsibilities the teaching content can ignore: completeness beyond the happy path — every error code, every quota, the behavior under retries — and stability communicated over time. Deprecations must arrive early and with a path; versions must be switchable; archived behavior must say which version it belonged to. Developers build on contracts they believe to be stable, and the reference is what tells them, precisely and currently, what that contract is.
+Reference also carries responsibilities the teaching content can ignore: completeness beyond the happy path (every error code, every quota, the behavior under retries) and stability communicated over time. Deprecations must arrive early and with a path; versions must be switchable; archived behavior must say which version it belonged to. Developers build on contracts they believe to be stable, and the reference is what tells them, precisely and currently, what that contract is.
 
 ## Elements of Complete Reference
 
@@ -65,6 +65,7 @@ The professional pattern is a hybrid with a bias: derive everything mechanical, 
 ## The Reference Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SURFACE["Enumerate every public surface"] --> CONTRACT["Document the contract and edge cases"]
     CONTRACT["Document the contract and edge cases"] --> SOURCE["Generate from source where possible"]
@@ -129,4 +130,4 @@ Enumerate first: the most dangerous undocumented surface is the one nobody remem
 
 ## Summary
 
-Reference and API documentation is the system's contract made readable: exact signatures, types, defaults, errors, limits, and versions — mechanically derived where possible, human-reviewed where judgment is required, and released with the code it describes. The advocate who keeps reference true gives developers the one thing that scales trust without human contact: answers they can rely on at the moment they need them.
+Reference and API documentation is the system's contract made readable: exact signatures, types, defaults, errors, limits, and versions, mechanically derived where possible, human-reviewed where judgment is required, and released with the code it describes. The advocate who keeps reference true gives developers the one thing that scales trust without human contact: answers they can rely on at the moment they need them.

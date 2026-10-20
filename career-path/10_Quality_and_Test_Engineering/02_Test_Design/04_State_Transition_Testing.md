@@ -65,6 +65,7 @@ For each state, determine:
 Visual representation of states and transitions:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     S1[State 1] -->|Event A| S2[State 2]
     S1 -->|Event B| S3[State 3]
@@ -110,6 +111,7 @@ Based on coverage criteria:
 **State Diagram:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     S1[Waiting for PIN] -->|Correct PIN| S5[Access Granted]
     S1 -->|Incorrect PIN| S2[1st Attempt Failed]
@@ -156,6 +158,7 @@ flowchart LR
 **State Diagram:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TB
     S1[Pending] -->|Confirm| S2[Confirmed]
     S1 -->|Cancel| S6[Cancelled]
@@ -199,6 +202,7 @@ flowchart TB
 **State Diagram:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     S1[Draft] -->|Submit| S2[Under Review]
     S2 -->|Approve| S3[Approved]
@@ -313,6 +317,7 @@ flowchart LR
 For complex systems, use nested states:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TB
     subgraph "Order Processing"
         S1[Pending] --> S2[Confirmed]

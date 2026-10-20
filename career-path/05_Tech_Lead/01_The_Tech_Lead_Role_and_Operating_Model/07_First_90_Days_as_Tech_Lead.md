@@ -16,13 +16,13 @@ tags:
 
 # First 90 Days as Tech Lead
 
-> **Core skill:** Transitioning into the tech lead role deliberately — mapping before directing, establishing before expanding, and earning the right to set direction.
+> **Core skill:** Transitioning into the tech lead role deliberately: mapping before directing, establishing before expanding, and earning the right to set direction.
 
 ## Why This Matters
 
-The first 90 days set the trajectory of your whole tenure. Early decisions — what you fix, what you tolerate, how you run the first review, what you promise stakeholders — become the baseline everyone measures later work against. A lead who starts by directing before understanding pays for it in credibility for months. A lead who maps first, then establishes a few reliable structures, then directs, compounds that early patience into trust.
+The first 90 days set the trajectory of your whole tenure. Early decisions (what you fix, what you tolerate, how you run the first review, what you promise stakeholders) become the baseline everyone measures later work against. A lead who starts by directing before understanding pays for it in credibility for months. A lead who maps first, then establishes a few reliable structures, then directs, compounds that early patience into trust.
 
-The transition is also a shift of identity: from being evaluated on your own output to being evaluated on the team's. That shift feels like a demotion in the first month — your hands-on output drops while your responsibility rises. Planning the transition in phases makes the shift survivable and legible to everyone around you.
+The transition is also a shift of identity: from being evaluated on your own output to being evaluated on the team's. That shift feels like a demotion in the first month. Your hands-on output drops while your responsibility rises. Planning the transition in phases makes the shift survivable and legible to everyone around you.
 
 ## The 30-60-90 Model
 
@@ -32,7 +32,7 @@ The transition is also a shift of identity: from being evaluated on your own out
 | Days 31-60 | Establish | Mandate agreement, operating rhythm, quick wins delivered |
 | Days 61-90 | Direct | First direction decisions, delegation structure, stakeholder cadence |
 
-The phases overlap — you never stop listening — but each has a dominant verb: map, establish, direct.
+The phases overlap (you never stop listening) but each has a dominant verb: map, establish, direct.
 
 ## Days 1-30: Listen and Map
 
@@ -44,18 +44,18 @@ The phases overlap — you never stop listening — but each has a dominant verb
 | The stakeholders | Who cares, who decides, what they believe about the team | The stakeholder map from the stakeholder skill |
 | The debt | What is decaying, what is risky, what nobody owns | Incident history, dependency list, monitoring gaps |
 
-The output of the month is not a report to management — it is your own map, and a short private list of the three to five things you believe need to change.
+The output of the month is not a report to management. It is your own map, and a short private list of the three to five things you believe need to change.
 
 ## Days 31-60: Establish
 
 The second month is about a small number of durable structures:
 
 - **Mandate agreement**: the written mandate, agreed with the EM and manager
-- **Operating rhythm**: the cadences you will run — planning, review, sync, demo
+- **Operating rhythm**: the cadences you will run (planning, review, sync, demo)
 - **Quick wins**: two or three small, visible improvements that prove the team can change
 - **Boundaries**: what you will and will not decide, published to the team
 
-Quick wins matter disproportionately. They should be cheap, unambiguous, and chosen with the team — fixing a painful runbook, closing a monitoring gap, unblocking a stuck decision. They are not about ego; they are evidence that your leadership produces change.
+Quick wins matter disproportionately. They should be cheap, unambiguous, and chosen with the team: fixing a painful runbook, closing a monitoring gap, unblocking a stuck decision. They are not about ego; they are evidence that your leadership produces change.
 
 ## Days 61-90: Direct
 
@@ -64,7 +64,7 @@ With the map and the structures in place, direction becomes legitimate:
 - Make the first consequential direction decisions, with reasoning recorded (ADRs)
 - Establish the delegation structure: who owns what subsystem or domain
 - Set the stakeholder cadence and deliver the first honest status reviews
-- Publish the first version of the technical direction — one page, not a thesis
+- Publish the first version of the technical direction, one page, not a thesis
 
 The first direction decisions should be the ones the map says are cheapest and most certain, so the team sees direction working before the hard calls arrive.
 
@@ -73,7 +73,7 @@ The first direction decisions should be the ones the map says are cheapest and m
 | Dimension | Inherited team | New team |
 |-----------|----------------|----------|
 | Your context | Everyone knows the history except you | Nobody has history; you define it |
-| Quick wins | Easy to find, delicate to choose — respect prior work | Nothing to break; everything is new |
+| Quick wins | Easy to find, delicate to choose: respect prior work | Nothing to break; everything is new |
 | Trust baseline | Earned against the previous lead's shadow | Earned from zero, faster if you are decisive |
 | Risk | Preexisting debt and politics you inherit | Underdefined expectations and missing practice |
 | Pace | Slower; change must be negotiated | Faster; change is the default |
@@ -92,6 +92,7 @@ Neither is easier. The inherited team rewards listening and patience; the new te
 | Staying a senior engineer | You keep doing the old job and never build the new one | Track time against the new job from day one |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     D1["Days 1-30 map system and people"] --> D2["Days 31-60 establish mandate and rhythm"]
     D2 --> D3["Days 61-90 direct and delegate"]
@@ -143,7 +144,7 @@ First-90-days checklist:
 - By day 90 you can explain the system, the people, and the politics without notes
 - The team can name the mandate and the operating rhythm
 - Two to three quick wins are visible and credited to the team
-- The first direction decisions hold up in review — no reversals
+- The first direction decisions hold up in review, no reversals
 - Stakeholders describe the team's status in the same terms you use
 
 ## Related Topics
@@ -156,4 +157,4 @@ First-90-days checklist:
 
 ## Summary
 
-The first 90 days are a three-phase transition: map (listen to system, people, and stakeholders), establish (mandate, rhythm, quick wins), then direct (first decisions, delegation, cadence). The discipline is sequencing — no consequential direction before a credible map, no structure without listening, no delegation before direction. Leads who honor the sequence earn trust that carries through the hard quarters that follow.
+The first 90 days are a three-phase transition: map (listen to system, people, and stakeholders), establish (mandate, rhythm, quick wins), then direct (first decisions, delegation, cadence). The discipline is sequencing: no consequential direction before a credible map, no structure without listening, no delegation before direction. Leads who honor the sequence earn trust that carries through the hard quarters that follow.

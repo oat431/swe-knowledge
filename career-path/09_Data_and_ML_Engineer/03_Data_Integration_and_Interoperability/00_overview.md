@@ -39,6 +39,7 @@ Data integration is the circulatory system of any data-driven organization. With
 ## How the Topics Connect
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ETL["01 Batch ETL Design"] --> ORCH["05 Cross-System Orchestration"]
     STREAM["02 Streaming and Real-Time Pipelines"] --> ORCH
@@ -78,6 +79,6 @@ These topic notes **do not duplicate** the existing knowledge base. They layer s
 ## Related
 
 - [[00_overview|Data and ML Engineer Overview]]
-- [[04_Data_Quality/00_overview|Data Quality]] : quality depends on integration correctness
-- [[01_Data_Architecture/00_overview|Data Architecture]] : architecture defines what to integrate
+- [[career-path/09_Data_and_ML_Engineer/04_Data_Quality/00_overview|Data Quality]] : quality depends on integration correctness
+- [[career-path/09_Data_and_ML_Engineer/01_Data_Architecture/00_overview|Data Architecture]] : architecture defines what to integrate
 - [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/00_overview|Architecture and Design Judgment]] : general architecture decision-making

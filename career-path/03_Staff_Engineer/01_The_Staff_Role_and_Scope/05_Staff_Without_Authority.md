@@ -16,13 +16,13 @@ tags:
 
 # Staff Without Authority
 
-> **Core skill:** Making decisions stick across teams you do not manage — through borrowed, earned, and structural authority — and knowing exactly when real authority is needed and how to get it involved.
+> **Core skill:** Making decisions stick across teams you do not manage (through borrowed, earned, and structural authority) and knowing exactly when real authority is needed and how to get it involved.
 
 ## Why This Matters
 
-The staff engineer's hardest daily reality: you are accountable for outcomes you cannot command. Teams do not report to you; their backlogs are not yours; their incentives point elsewhere. Yet the org expects your proposals to land and your decisions to hold. The gap between expectation and authority is the whole game of the staff role — and it is winnable, because authority in an engineering org is mostly not what people think it is.
+The staff engineer's hardest daily reality: you are accountable for outcomes you cannot command. Teams do not report to you; their backlogs are not yours; their incentives point elsewhere. Yet the org expects your proposals to land and your decisions to hold. The gap between expectation and authority is the whole game of the staff role, and it is winnable, because authority in an engineering org is mostly not what people think it is.
 
-Authority at staff level is a portfolio of three sources: **borrowed** (leadership sponsorship), **earned** (a track record of good calls), and **structural** (the standing processes you own, like standards boards or review gates). The staff engineer assembles the portfolio deliberately. Decisions stick not because someone said so, but because they were recorded, publicly committed to, and enabled — three properties that are all within your control.
+Authority at staff level is a portfolio of three sources: **borrowed** (leadership sponsorship), **earned** (a track record of good calls), and **structural** (the standing processes you own, like standards boards or review gates). The staff engineer assembles the portfolio deliberately. Decisions stick not because someone said so, but because they were recorded, publicly committed to, and enabled: three properties that are all within your control.
 
 ## Authority Variants
 
@@ -32,7 +32,7 @@ Authority at staff level is a portfolio of three sources: **borrowed** (leadersh
 | Earned | Track record | Past good calls make teams trust the next one |
 | Structural | Standing processes | Boards, standards, review gates you own give decisions a home |
 
-Borrowed authority depreciates fast — use it to get earned authority started, never as the daily currency. Earned authority compounds slowly and survives leadership changes. Structural authority is the quietest and most durable: a decision that flows through a process you own does not need you in the room.
+Borrowed authority depreciates fast. Use it to get earned authority started, never as the daily currency. Earned authority compounds slowly and survives leadership changes. Structural authority is the quietest and most durable: a decision that flows through a process you own does not need you in the room.
 
 ## Making Decisions Stick
 
@@ -43,7 +43,7 @@ Borrowed authority depreciates fast — use it to get earned authority started, 
 | Enablement | Tooling, templates, and examples that make compliance easy | The right path becomes the easy path |
 | Feedback loop | A review date and a dissent channel | The decision can be corrected without being reopened |
 
-A decision that is recorded, committed, and enabled is a decision that is implemented. A decision that is announced in a meeting and forgotten is not a decision — it is a wish.
+A decision that is recorded, committed, and enabled is a decision that is implemented. A decision that is announced in a meeting and forgotten is not a decision. It is a wish.
 
 ## When Authority Is Genuinely Needed
 
@@ -56,7 +56,7 @@ Some decisions cannot be made by influence alone:
 | Cross-org mandates | One team cannot be forced to comply | Escalate to the level that holds both teams |
 | Policy enforcement | Repeated non-compliance needs teeth | Use the structural process, not personal pressure |
 
-The move is not to complain about the missing authority — it is to **get the authority involved**. Frame it as "this decision needs your weight," name exactly what you need, and hand the decision-maker the material they need to make it well. Leadership usually grants authority when the alternative is a stalled initiative they own.
+The move is not to complain about the missing authority. It is to **get the authority involved**. Frame it as "this decision needs your weight," name exactly what you need, and hand the decision-maker the material they need to make it well. Leadership usually grants authority when the alternative is a stalled initiative they own.
 
 ## The Anti-Pattern: Complaining About Lack of Authority
 
@@ -67,7 +67,7 @@ The move is not to complain about the missing authority — it is to **get the a
 | "They should just do it" | Commitment was never negotiated | Public commitment: owners, dates, outcomes |
 | "Decisions never stick" | Decisions were announced, not enabled | Record, commit, enable, and follow up |
 
-The complaining staff engineer is a signal to leadership that the role is not working. The staff engineer who treats authority as an assembly problem — pieces to be gathered and maintained — rarely needs to complain.
+The complaining staff engineer is a signal to leadership that the role is not working. The staff engineer who treats authority as an assembly problem (pieces to be gathered and maintained) rarely needs to complain.
 
 ## Influence Budget Accounting
 
@@ -80,6 +80,7 @@ Influence is finite. Every ask spends it; every delivered win earns it back:
 | Audit | Quarterly: what did the org do because of you, and what did it cost them? |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     NEED["Decision needed across teams"] --> SOURCES["Assemble authority sources"]
     SOURCES --> RECORD["Write the decision record"]
@@ -94,13 +95,13 @@ flowchart TD
 ## Practical Applications
 
 ```markdown
-# Decision Record — [title] — [date]
+# Decision Record: [title], [date]
 
 ## Decision
 - [ ] What was decided: [one sentence]
 
 ## Authority
-- [ ] Sources: [borrowed / earned / structural] — [who sponsors]
+- [ ] Sources: [borrowed / earned / structural], [who sponsors]
 - [ ] If authority was missing: [who was brought in, and how]
 
 ## Commitment
@@ -142,11 +143,11 @@ Checklist:
 
 ## Related Topics
 
-- [[02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: the arena where staff authority is exercised
-- [[04_Influence_and_Alignment/00_overview|Influence and Alignment]]: the mechanism behind borrowed and earned authority
+- [[career-path/03_Staff_Engineer/02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: the arena where staff authority is exercised
+- [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/00_overview|Influence and Alignment]]: the mechanism behind borrowed and earned authority
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/03_Influence_Without_Authority|Influence Without Authority (Senior)]]: the team-level foundation
 - [[02_Staff_vs_Senior_Scope]]: why the role stays influence-based, not management-based
 
 ## Summary
 
-Staff authority is assembled, not granted: borrowed from leadership sponsorship, earned through a track record, and structural through the processes you own. Decisions stick when they are recorded, publicly committed, and enabled — and when genuine authority is missing for personnel or budget calls, the move is to bring the right authority in with the case already built. Complaints about authority are the anti-pattern; an influence ledger, audited quarterly, is the practice.
+Staff authority is assembled, not granted: borrowed from leadership sponsorship, earned through a track record, and structural through the processes you own. Decisions stick when they are recorded, publicly committed, and enabled, and when genuine authority is missing for personnel or budget calls, the move is to bring the right authority in with the case already built. Complaints about authority are the anti-pattern; an influence ledger, audited quarterly, is the practice.

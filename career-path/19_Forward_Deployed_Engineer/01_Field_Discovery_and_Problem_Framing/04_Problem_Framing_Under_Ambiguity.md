@@ -16,11 +16,11 @@ tags:
 
 # Problem Framing Under Ambiguity
 
-> **Core skill:** Turning vague asks into a well-framed, testable problem — naming the user, the pain, the evidence, and the measurable change — and getting the customer to agree to it.
+> **Core skill:** Turning vague asks into a well-framed, testable problem (naming the user, the pain, the evidence, and the measurable change) and getting the customer to agree to it.
 
 ## Why This Matters
 
-Customers rarely hand over problems; they hand over solutions they have already imagined. "Build us a chatbot," "give us a dashboard," "automate the intake process" — each ask contains a buried theory about where the pain lives and what will fix it, and that theory is often wrong in the details that matter most. The FDE's job in a deployment's first weeks is to dig out the real problem underneath the requested artifact, because a well-built solution to a mis-framed problem fails inside the customer's production environment, where failure is public and expensive.
+Customers rarely hand over problems; they hand over solutions they have already imagined. "Build us a chatbot," "give us a dashboard," "automate the intake process": each ask contains a buried theory about where the pain lives and what will fix it, and that theory is often wrong in the details that matter most. The FDE's job in a deployment's first weeks is to dig out the real problem underneath the requested artifact, because a well-built solution to a mis-framed problem fails inside the customer's production environment, where failure is public and expensive.
 
 Framing is also an act of compression. Field reality is messy: dozens of observed frictions, competing accounts from different roles, a decade of scar tissue. A frame that cannot fit on a page cannot be agreed to, and a problem that cannot be agreed to cannot be scoped, measured, or defended when priorities shift. The discipline is to keep the frame small enough to hold in a meeting and honest enough to survive contact with the operators.
 
@@ -33,7 +33,7 @@ Ambiguity itself is not the enemy. Ambiguity is data: it marks the places where 
 | "Build us an AI assistant" | The bottleneck is access to information | Where do people wait the longest today, and for what? |
 | "Give us a dashboard of everything" | Seeing the numbers changes the behavior | Which decision is currently made without data, by whom? |
 | "Automate this approval flow" | The flow as designed is the right flow | What does the approval actually protect against? |
-| "Make the process faster" | Speed is the constraint | Where does the work actually stall — waiting, rework, or search? |
+| "Make the process faster" | Speed is the constraint | Where does the work actually stall: waiting, rework, or search? |
 | "The other team needs to share their data with us" | Access is the problem | What breaks downstream when the data arrives late or wrong? |
 | "We need this in three months" | The date is a requirement | What event drives the date, and what is the smallest thing that must be true by then? |
 
@@ -63,6 +63,7 @@ A frame that fills every row is testable: someone could later falsify it with da
 | 5 | Get written acknowledgment | Sponsor and operating lead both sign the page |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     ASK["Stated ask"] --> EVIDENCE["Gather field evidence"]
     EVIDENCE --> DRAFT["Draft the frame"]
@@ -77,7 +78,7 @@ Re-testing happens whenever evidence changes. A frame is a working hypothesis ab
 ### Problem Statement One-Pager
 
 ```markdown
-## Problem Statement — <customer>
+## Problem Statement: <customer>
 
 | Element | Statement |
 |---------|-----------|
@@ -128,4 +129,4 @@ Re-testing happens whenever evidence changes. A frame is a working hypothesis ab
 
 ## Summary
 
-Problem framing under ambiguity is the FDE's core intellectual move: taking the customer's solution-shaped ask, gathering field evidence, and compressing reality into a one-page, testable problem statement that names the user, the pain, the baseline, and the measurable change — then getting it agreed in writing. The frame is what converts an ambiguous field situation into something that can be scoped, designed, and honestly measured.
+Problem framing under ambiguity is the FDE's core intellectual move: taking the customer's solution-shaped ask, gathering field evidence, and compressing reality into a one-page, testable problem statement that names the user, the pain, the baseline, and the measurable change, then getting it agreed in writing. The frame is what converts an ambiguous field situation into something that can be scoped, designed, and honestly measured.

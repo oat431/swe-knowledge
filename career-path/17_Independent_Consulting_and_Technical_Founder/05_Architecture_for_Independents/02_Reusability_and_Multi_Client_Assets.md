@@ -16,15 +16,15 @@ tags:
 
 # Reusability and Multi Client Assets
 
-> **Core skill:** The independent decides deliberately when shared assets — templates, libraries, accelerators, and platforms — serve multiple clients profitably, and when reuse would cost fit, ownership clarity, or fresh thinking.
+> **Core skill:** The independent decides deliberately when shared assets (templates, libraries, accelerators, and platforms) serve multiple clients profitably, and when reuse would cost fit, ownership clarity, or fresh thinking.
 
 ## Why This Matters
 
-Every engagement produces artifacts that could serve the next one: a deployment template, an authentication module, an intake questionnaire, a component library. Reuse is how an independent compounds leverage — the second similar engagement should start further ahead than the first, and the tenth should not rebuild what the third already proved. Without reuse, the business stays a series of disconnected sprints; with it, each project can leave behind an asset that quietly raises the floor for everything after.
+Every engagement produces artifacts that could serve the next one: a deployment template, an authentication module, an intake questionnaire, a component library. Reuse is how an independent compounds leverage: the second similar engagement should start further ahead than the first, and the tenth should not rebuild what the third already proved. Without reuse, the business stays a series of disconnected sprints; with it, each project can leave behind an asset that quietly raises the floor for everything after.
 
-Reuse also has a dark side. Assets built for one client's context bias every later solution toward that context; a toolkit applied without judgment turns engagements into assembly of yesterday's answers. And the ownership question is a trust landmine: unless the contract says otherwise, clients often assume that what they paid for is theirs, while the independent assumes the general patterns remain theirs. Ambiguity discovered late — when a client sees something resembling their system in someone else's hands — can cost the relationship entirely.
+Reuse also has a dark side. Assets built for one client's context bias every later solution toward that context; a toolkit applied without judgment turns engagements into assembly of yesterday's answers. And the ownership question is a trust landmine: unless the contract says otherwise, clients often assume that what they paid for is theirs, while the independent assumes the general patterns remain theirs. Ambiguity discovered late (when a client sees something resembling their system in someone else's hands) can cost the relationship entirely.
 
-The practical stance is layered. Invest in reusable assets at the layers clients do not differentiate on — authentication, billing glue, deployment, monitoring, document templates — while keeping client-facing surfaces purpose-built. Harvest deliberately at the end of each engagement, sanitize completely, maintain only what earns its keep, and carry an explicit, plainly stated ownership position in every contract.
+The practical stance is layered. Invest in reusable assets at the layers clients do not differentiate on (authentication, billing glue, deployment, monitoring, document templates), while keeping client-facing surfaces purpose-built. Harvest deliberately at the end of each engagement, sanitize completely, maintain only what earns its keep, and carry an explicit, plainly stated ownership position in every contract.
 
 ## The Reuse Decision Matrix
 
@@ -56,11 +56,12 @@ The practical stance is layered. Invest in reusable assets at the layers clients
 | Internal accelerator | A maintained toolkit with docs and tests | Moderate, recurring | When a repeat niche is proven |
 | Paid product | A packaged offering sold independently of your hours | Large | When demand exists beyond your delivery capacity |
 
-Each rung requires more maintenance than the one below it. Climb only when repeat demand is visible, not hoped for — an accelerator nobody reuses is a hobby, and a product nobody maintains is a future incident.
+Each rung requires more maintenance than the one below it. Climb only when repeat demand is visible, not hoped for. An accelerator nobody reuses is a hobby, and a product nobody maintains is a future incident.
 
 ## The Reuse Gravity Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DELIVER["Deliver a client engagement"] --> HARVEST["Harvest candidate assets with permission"]
     HARVEST --> SANITIZE["Sanitize client data and specifics"]
@@ -84,7 +85,7 @@ Reuse compounds only when the harvesting step is deliberate and the maintenance 
 ### Asset Harvest Note
 
 ```markdown
-## Asset Harvest — <engagement name>
+## Asset Harvest: <engagement name>
 
 | Field | Value |
 |-------|-------|
@@ -119,9 +120,9 @@ Reuse compounds only when the harvesting step is deliberate and the maintenance 
 
 - [[01_Right_Sized_Architecture]]
 - [[07_Maintaining_Systems_You_Sold]]
-- [[04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]
 - [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy (Staff)]]
 
 ## Summary
 
-Reusability and multi client assets are how an independent converts experience into leverage: templates, accelerators, and libraries that make each engagement start further ahead. The discipline is choosing what to standardize — plumbing, not client-facing craft — sanitizing anything derived from client work, maintaining only what pays for itself, and stating ownership clearly so reuse never becomes a trust incident.
+Reusability and multi client assets are how an independent converts experience into leverage: templates, accelerators, and libraries that make each engagement start further ahead. The discipline is choosing what to standardize (plumbing, not client-facing craft), sanitizing anything derived from client work, maintaining only what pays for itself, and stating ownership clearly so reuse never becomes a trust incident.

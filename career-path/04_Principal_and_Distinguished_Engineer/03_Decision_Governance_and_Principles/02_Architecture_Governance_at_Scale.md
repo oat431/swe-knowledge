@@ -16,13 +16,13 @@ tags:
 
 # Architecture Governance at Scale
 
-> **Core skill:** The principal designs the lightest governance that actually works at 500+ engineers — a system of principles, standards, decision rights, and advisory boards that improves decisions when the principal is absent.
+> **Core skill:** The principal designs the lightest governance that actually works at 500+ engineers, a system of principles, standards, decision rights, and advisory boards that improves decisions when the principal is absent.
 
 ## Why This Matters
 
-At 500+ engineers, architecture governance faces a structural tension: too much governance creates a bottleneck that teams route around; too little governance produces divergence that compounds into systemic fragility. The principal's job is to design governance that sits at the inflection point — enough structure that independent teams make decisions the organization can live with, and not one process more.
+At 500+ engineers, architecture governance faces a structural tension: too much governance creates a bottleneck that teams route around; too little governance produces divergence that compounds into systemic fragility. The principal's job is to design governance that sits at the inflection point: enough structure that independent teams make decisions the organization can live with, and not one process more.
 
-The working governance model is never imported whole from another organization. It is assembled from principles that match the organization's actual tensions, decision rights that reflect its real structure, advisory boards sized to its decision volume, and standards selected for problems where the cost of divergence exceeds the cost of the standard. The principal designs the model, tunes it as the organization grows, and measures its health by whether decisions improve when the principal is absent — not by whether review meetings are well-attended.
+The working governance model is never imported whole from another organization. It is assembled from principles that match the organization's actual tensions, decision rights that reflect its real structure, advisory boards sized to its decision volume, and standards selected for problems where the cost of divergence exceeds the cost of the standard. The principal designs the model, tunes it as the organization grows, and measures its health by whether decisions improve when the principal is absent, not by whether review meetings are well-attended.
 
 ## The Governance Design Space
 
@@ -35,7 +35,7 @@ Governance models vary along two axes: formality (light-touch to formal) and cen
 | **Centralized review** | Architecture review board gates major decisions; standards are mandatory; exceptions require board approval | 500+ engineers; high regulatory or systemic risk; platform-heavy | Bottleneck risk; teams route around the board |
 | **Hybrid** | Principles and standards are centralized; decision rights are federated with escalation paths; advisory board reviews, does not gate | 500-2000+ engineers; diverse product portfolio | Complexity; the model must be understood to work |
 
-The hybrid model is the asymptote for most large organizations: principles and standards are owned centrally, decisions are made by teams with clear rights and escalation paths, and the advisory board reviews for consistency and systemic risk — it does not approve every decision.
+The hybrid model is the asymptote for most large organizations: principles and standards are owned centrally, decisions are made by teams with clear rights and escalation paths, and the advisory board reviews for consistency and systemic risk. It does not approve every decision.
 
 ## The Governance Board Design
 
@@ -87,7 +87,7 @@ The principal keeps governance light by applying three tests to every governance
 | **The friction test** | Does a team need to wait for this mechanism before shipping? | Redesign it to be async or advisory; remove the wait |
 | **The citation test** | Do teams cite this mechanism's outputs in their own decisions? | Keep it; it is actually used |
 
-A mechanism that fails all three tests is ceremony — remove it.
+A mechanism that fails all three tests is ceremony. Remove it.
 
 ## Measuring Governance Health
 
@@ -130,7 +130,7 @@ Each transition requires the principal to add structure and then test whether it
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
-| **Governance as gatekeeping** | Review boards become approval gates; teams route around them or ship without review | Advisory model: review, recommend, ratify — teams decide |
+| **Governance as gatekeeping** | Review boards become approval gates; teams route around them or ship without review | Advisory model: review, recommend, ratify; teams decide |
 | **One-size governance** | The model imported from a 2000-person company crushes a 300-person org | Design governance for current size; re-tune at each doubling |
 | **Governance without decisions** | Meetings that discuss architecture but produce no recorded decisions | Every review produces a decision record; publish within 48 hours |
 | **ADR graveyard** | ADRs are written but never searched or cited; decisions are reinvented | Make ADRs discoverable; link from design review templates |
@@ -155,4 +155,4 @@ Each transition requires the principal to add structure and then test whether it
 
 ## Summary
 
-Architecture governance at scale is the principal's design problem: assemble principles, standards, decision rights, and advisory boards into the lightest system that actually works at the organization's current size, measured by whether decisions improve when the principal is absent. The model is tuned at each organizational doubling, tested by the absentee, friction, and citation tests, and governed by the rule that every governance mechanism must earn its keep — or be removed.
+Architecture governance at scale is the principal's design problem: assemble principles, standards, decision rights, and advisory boards into the lightest system that actually works at the organization's current size, measured by whether decisions improve when the principal is absent. The model is tuned at each organizational doubling, tested by the absentee, friction, and citation tests, and governed by the rule that every governance mechanism must earn its keep, or be removed.

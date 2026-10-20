@@ -16,13 +16,13 @@ tags:
 
 # Pre-Alignment and Coalitions
 
-> **Core skill:** The staff engineer wins decisions before the meeting starts — mapping the people who matter, holding one-on-one conversations that surface objections, and incorporating input so visibly that the proposal becomes partly theirs.
+> **Core skill:** The staff engineer wins decisions before the meeting starts: mapping the people who matter, holding one-on-one conversations that surface objections, and incorporating input so visibly that the proposal becomes partly theirs.
 
 ## Why This Matters
 
-Meetings do not make decisions; they confirm them. By the time a consequential proposal reaches a room, the outcome has usually been shaped by the conversations that happened before it — who was consulted, whose objections were answered, whose fingerprints are on the document. A proposal that enters the meeting cold is decided by whoever talks loudest or most senior; a proposal that enters pre-aligned is decided on its merits, because the merits were already debated privately where honesty is cheaper.
+Meetings do not make decisions; they confirm them. By the time a consequential proposal reaches a room, the outcome has usually been shaped by the conversations that happened before it: who was consulted, whose objections were answered, whose fingerprints are on the document. A proposal that enters the meeting cold is decided by whoever talks loudest or most senior; a proposal that enters pre-aligned is decided on its merits, because the merits were already debated privately where honesty is cheaper.
 
-Pre-alignment is not manipulation; it is the ordinary work of making a decision well. Objections raised in a one-on-one can be answered with evidence; objections raised in a room become positions that people must defend in public. The staff engineer who skips pre-alignment is not being more honest — they are outsourcing the hard conversation to the worst possible venue.
+Pre-alignment is not manipulation; it is the ordinary work of making a decision well. Objections raised in a one-on-one can be answered with evidence; objections raised in a room become positions that people must defend in public. The staff engineer who skips pre-alignment is not being more honest. They are outsourcing the hard conversation to the worst possible venue.
 
 ## The Pre-Alignment Map
 
@@ -35,7 +35,7 @@ Before any conversation, map the people who matter for the decision. The map has
 | Affected | Teams whose work the decision changes | To see the impact early; to shape the rollout |
 | Executors | People who will implement the decision | To understand it and to have raised their objections first |
 
-The map is written down — a table with names and roles — because the failure mode is forgetting the quiet influencer until the meeting. The most dangerous person in any decision is the one who was never consulted and discovers the proposal in the room.
+The map is written down (a table with names and roles) because the failure mode is forgetting the quiet influencer until the meeting. The most dangerous person in any decision is the one who was never consulted and discovers the proposal in the room.
 
 ## The One-on-One Pre-Conversation
 
@@ -43,7 +43,7 @@ Each pre-conversation has a shape: a genuine request for input, not a sales pitc
 
 | Pattern | When to Use It | How It Sounds |
 |---------|----------------|---------------|
-| Curious | Early, when the proposal is still forming | "I'm exploring whether to fix the deployment pipeline. You've lived with it longest — what would you change first?" |
+| Curious | Early, when the proposal is still forming | "I'm exploring whether to fix the deployment pipeline. You've lived with it longest, what would you change first?" |
 | Framing | When the proposal has a draft | "Here is the problem as I see it, and the direction I'm considering. What am I getting wrong?" |
 | Objection surfacing | When the proposal is nearly final | "I'm close to recommending option B. If you were me, what would make you hesitate?" |
 
@@ -70,7 +70,7 @@ A coalition is the group of people who will argue for the proposal when you are 
 | Influencers | The people the decider listens to | To carry the proposal into the decision |
 | The decider | The formal decision-maker | To decide, with all objections already answered |
 
-The respected skeptic is the most valuable member of the coalition. A skeptic who was heard and partly answered becomes the proposal's strongest advocate — their support signals to everyone else that the idea survived scrutiny. The coalition that contains only enthusiasts is a clique, and cliques are discounted.
+The respected skeptic is the most valuable member of the coalition. A skeptic who was heard and partly answered becomes the proposal's strongest advocate: their support signals to everyone else that the idea survived scrutiny. The coalition that contains only enthusiasts is a clique, and cliques are discounted.
 
 ## When Pre-Alignment Fails
 
@@ -100,6 +100,7 @@ Pre-alignment sits close to a line, and the line is visible: persuasion, not amb
 The simplest ethical test: would every participant be comfortable if they saw the full list of who was consulted, what they said, and how their input was used? If the answer is no, the pre-alignment has become a campaign.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MAP["Map deciders influencers affected executors"] --> TALKS["Hold one-on-one conversations"]
     TALKS --> OBJECTIONS["Surface and answer objections"]
@@ -161,7 +162,7 @@ flowchart TD
 - Skeptics who were consulted argue for the proposal in the room
 - The document shows whose input changed it
 - Objections arrive in writing before the meeting, not as ambushes in it
-- Decisions hold — months later, nobody says "we were never consulted"
+- Decisions hold: months later, nobody says "we were never consulted"
 
 ## Related Topics
 
@@ -169,7 +170,7 @@ flowchart TD
 - [[03_Managing_Disagreement]]: objections surfaced and answered in pre-alignment
 - [[04_Building_Trust_Across_Teams]]: the trust pre-alignment draws on
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/03_Influence_Without_Authority|Influence Without Authority (Senior)]]: the foundation this scales
-- [[02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: aligning across team boundaries
+- [[career-path/03_Staff_Engineer/02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: aligning across team boundaries
 
 ## Summary
 

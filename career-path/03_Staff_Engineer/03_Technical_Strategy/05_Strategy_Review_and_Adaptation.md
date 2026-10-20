@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-Every strategy is written against assumptions, and assumptions decay. Markets shift, leadership changes, teams reorganize, and metrics reveal that the world is different from the one the strategy described. A strategy that is never reviewed becomes a myth — quoted as authority long after its premises have died.
+Every strategy is written against assumptions, and assumptions decay. Markets shift, leadership changes, teams reorganize, and metrics reveal that the world is different from the one the strategy described. A strategy that is never reviewed becomes a myth, quoted as authority long after its premises have died.
 
 The staff engineer owns the review because the strategy is their artifact and their credibility is on the line. Review is not an administrative chore; it is where the strategy earns or loses its power to direct decisions. A strategy that demonstrably adapts gets followed; one that visibly fossilizes gets quietly ignored.
 
@@ -74,7 +74,7 @@ The hardest review output is the kill. A bet that fails its criteria should end 
 
 ## Adaptation Patterns
 
-When a bet's evidence comes in, the response is one of four patterns — never "keep going and hope."
+When a bet's evidence comes in, the response is one of four patterns: never "keep going and hope."
 
 | Pattern | When to Use It | What It Looks Like |
 |---------|----------------|--------------------|
@@ -83,7 +83,7 @@ When a bet's evidence comes in, the response is one of four patterns — never "
 | Hold | Evidence mixed; more signal needed | Freeze new spend, set a short re-review date |
 | Harvest | The bet delivered; remaining value is marginal | Stop investing, extract the value, plan the exit |
 
-The pattern is chosen by evidence, not by sentiment. If the review cannot say which pattern applies, the bet lacks the criteria to be reviewed — which is itself a finding.
+The pattern is chosen by evidence, not by sentiment. If the review cannot say which pattern applies, the bet lacks the criteria to be reviewed, which is itself a finding.
 
 ## Versioning the Strategy Document
 
@@ -109,6 +109,7 @@ The review's final discipline is intellectual honesty about the strategy's own e
 This honesty is what separates adaptation from rationalization. An organization that records its strategic errors accumulates a body of evidence about how its own judgment works; one that rewrites history learns nothing and repeats its mistakes at higher cost.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     TRIGGER["Review trigger fires"] --> ASSUMPTIONS["Check assumptions against reality"]
     ASSUMPTIONS --> PROGRESS["Review bet progress and spend"]
@@ -182,8 +183,8 @@ flowchart TD
 - [[01_Writing_Technical_Strategy]]: the document under review
 - [[02_Technology_Betting]]: what the review evaluates
 - [[07_Sunset_and_Exit_Strategy]]: kill decisions feed exits
-- [[06_Technical_Risk_and_Judgment/00_overview|Technical Risk and Judgment]]: honest judgment under uncertainty
-- [[07_Organizational_Learning_and_Mentoring/00_overview|Organizational Learning and Mentoring]]: learning from wrong calls
+- [[career-path/03_Staff_Engineer/06_Technical_Risk_and_Judgment/00_overview|Technical Risk and Judgment]]: honest judgment under uncertainty
+- [[career-path/03_Staff_Engineer/07_Organizational_Learning_and_Mentoring/00_overview|Organizational Learning and Mentoring]]: learning from wrong calls
 
 ## Summary
 

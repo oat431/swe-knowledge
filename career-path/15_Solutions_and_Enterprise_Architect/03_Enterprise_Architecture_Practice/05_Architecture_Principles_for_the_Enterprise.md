@@ -16,13 +16,13 @@ tags:
 
 # Architecture Principles for the Enterprise
 
-> **Core skill:** Writing a small set of principles that actually arbitrate decisions — each with a statement, rationale, and implications — and retiring them the moment they stop earning their keep.
+> **Core skill:** Writing a small set of principles that actually arbitrate decisions (each with a statement, rationale, and implications) and retiring them the moment they stop earning their keep.
 
 ## Why This Matters
 
 Principles are decision precedent. When a review, a design discussion, or a budget conversation hits a recurring trade-off, principles are the enterprise's standing answer: reuse before buy, master data at its source, integrate through interfaces rather than databases. Without them, every decision relitigates from zero, outcomes depend on who is in the room, and the same argument consumes a different project team every quarter.
 
-The failure modes sit at both extremes. No principles means an enterprise of local optima — thirty teams, thirty answers to the same question. Too many principles, or principles that read like aspirations, means nobody remembers them and nothing is ever refused. A principle that has never caused anyone to change a plan is not a principle; it is decoration.
+The failure modes sit at both extremes. No principles means an enterprise of local optima: thirty teams, thirty answers to the same question. Too many principles, or principles that read like aspirations, means nobody remembers them and nothing is ever refused. A principle that has never caused anyone to change a plan is not a principle; it is decoration.
 
 The senior architect writes few principles, makes each one testable, attaches consequences, and enforces them in the places where decisions actually get made. Principles are also living: exceptions teach you where they were wrong, patterns of exception teach you when to revise them, and a principle that stopped matching strategy gets retired loudly rather than quietly ignored.
 
@@ -55,7 +55,7 @@ The implications line is what separates a working principle from a slogan. If yo
 |-----------|-----------|-----------------|
 | **Reuse before buy, buy before build** | Prefer existing capability, then market solutions, then construction | Build decisions need written justification of why reuse and buy failed |
 | **Data is mastered at its source** | One authoritative system per data domain; others consume | No local shadow masters; reconciliation replaces duplication |
-| **Integrate through interfaces** | Systems integrate via APIs, events, or files — never shared databases | Database-level coupling is rejected in review; interface contracts are mandatory |
+| **Integrate through interfaces** | Systems integrate via APIs, events, or files: never shared databases | Database-level coupling is rejected in review; interface contracts are mandatory |
 | **Loose coupling by default** | Dependencies are explicit, versioned, and replaceable | Synchronous coupling needs a stated reason; contracts carry versions |
 | **Security and privacy by design** | Controls are in the design, not bolted on after | Threat and data classification precede approval; retrofits need waivers |
 | **Standards unless justified otherwise** | Deviations are explicit, owned, and time-bound | Every deviation has an owner and an expiry date |
@@ -86,6 +86,7 @@ Reviews that cite principles stay short and impersonal: the argument is about th
 ## The Principle Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PROPOSE["Proposal or decision request"] --> TEST["Test against principles"]
     TEST --> DECIDE["Decision recorded with principle references"]
@@ -102,7 +103,7 @@ flowchart TD
 - [ ] Each principle has a statement, rationale, and explicit implications
 - [ ] Review records cite principles by name in decisions
 - [ ] Exceptions are logged, time-bound, and reviewed as patterns
-- [ ] At least one retirement has happened — proof the set is curated, not accumulated
+- [ ] At least one retirement has happened: proof the set is curated, not accumulated
 - [ ] Principles trace to current strategy, not to history
 
 ### Principle Definition Template
@@ -143,7 +144,7 @@ flowchart TD
 
 - Review minutes cite principles by name, and proposals pre-check themselves against them
 - Waiver volume is low and dominated by genuine constraint cases, not convenience
-- The set has changed in the last two years — at least one revision or retirement
+- The set has changed in the last two years: at least one revision or retirement
 - New architects apply principles correctly without coaching
 - Teams reference principles in design docs before review even begins
 
@@ -152,8 +153,8 @@ flowchart TD
 - [[06_Enterprise_Architecture_Governance]]: where principles are enforced and waivers granted
 - [[04_Target_State_Architecture]]: principles keep movement toward the target coherent
 - [[career-path/04_Principal_and_Distinguished_Engineer/03_Decision_Governance_and_Principles/00_overview|Decision Governance and Principles (Principal)]]: the engineering-side counterpart practice
-- [[02_Solution_Architecture_and_Design/00_overview|Solution Architecture and Design]]: where principles meet concrete design trade-offs
+- [[career-path/15_Solutions_and_Enterprise_Architect/02_Solution_Architecture_and_Design/00_overview|Solution Architecture and Design]]: where principles meet concrete design trade-offs
 
 ## Summary
 
-Enterprise architecture principles are a small, curated set of decision defaults — each with a statement, rationale, implications, and an exception path — that arbitrate recurring trade-offs so the enterprise stops relitigating them. The senior architect writes few, makes them testable and consequential, enforces them where decisions happen, reads the exception log as a signal, and retires principles that stopped earning their keep.
+Enterprise architecture principles are a small, curated set of decision defaults (each with a statement, rationale, implications, and an exception path) that arbitrate recurring trade-offs so the enterprise stops relitigating them. The senior architect writes few, makes them testable and consequential, enforces them where decisions happen, reads the exception log as a signal, and retires principles that stopped earning their keep.

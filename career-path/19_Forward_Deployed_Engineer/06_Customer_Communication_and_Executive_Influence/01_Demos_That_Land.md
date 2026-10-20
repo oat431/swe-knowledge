@@ -16,15 +16,15 @@ tags:
 
 # Demos That Land
 
-> **Core skill:** Building and delivering demos that move decisions — one demo, one decision, rehearsed in the customer's own environment, with the story a stakeholder can retell.
+> **Core skill:** Building and delivering demos that move decisions: one demo, one decision, rehearsed in the customer's own environment, with the story a stakeholder can retell.
 
 ## Why This Matters
 
-A forward deployment passes through a series of decisions: fund the pilot, approve the architecture, green-light the rollout, expand to the next team. Each of those decisions is made by people who will never read the code and rarely read the design document. The demo is how the deployment becomes real to them. A demo that lands converts a description into an experience — the stakeholder sees their own work moving through the system, in their own environment, and the abstract becomes something they can defend in a meeting the FDE will never attend.
+A forward deployment passes through a series of decisions: fund the pilot, approve the architecture, green-light the rollout, expand to the next team. Each of those decisions is made by people who will never read the code and rarely read the design document. The demo is how the deployment becomes real to them. A demo that lands converts a description into an experience. The stakeholder sees their own work moving through the system, in their own environment, and the abstract becomes something they can defend in a meeting the FDE will never attend.
 
-Most demos fail quietly rather than spectacularly. They fail by showing features rather than decisions, by illuminating the product at the expense of the audience's problem, by running in a sandbox when the fragile question is integration with the customer's actual systems. The measure of a demo is not applause or praise; it is what changes afterward. If the decision the demo existed to support is not moved — funding released, approval granted, scope committed, concern retired — the demo was entertainment wearing a work costume.
+Most demos fail quietly rather than spectacularly. They fail by showing features rather than decisions, by illuminating the product at the expense of the audience's problem, by running in a sandbox when the fragile question is integration with the customer's actual systems. The measure of a demo is not applause or praise; it is what changes afterward. If the decision the demo existed to support is not moved (funding released, approval granted, scope committed, concern retired), the demo was entertainment wearing a work costume.
 
-The FDE's advantage is proximity to the customer's reality. The demo can run on their data, in their environment, against their workflow, with their terminology in every label on the screen. That is credibility no marketing demo can replicate. But it also raises the bar: their data exposes every defect in the system, their environment exposes every integration gap, and their domain experts will notice every shallow generalization. A demo that honors that reality builds trust; a demo that papers over it spends trust. Preparation is not about polish — it is about knowing exactly what the room needs to see, and being certain the system can show it.
+The FDE's advantage is proximity to the customer's reality. The demo can run on their data, in their environment, against their workflow, with their terminology in every label on the screen. That is credibility no marketing demo can replicate. But it also raises the bar: their data exposes every defect in the system, their environment exposes every integration gap, and their domain experts will notice every shallow generalization. A demo that honors that reality builds trust; a demo that papers over it spends trust. Preparation is not about polish. It is about knowing exactly what the room needs to see, and being certain the system can show it.
 
 ## One Demo, One Decision
 
@@ -50,6 +50,7 @@ Every demo should begin with the sentence the presenter says silently: this demo
 | End with a concrete ask | Demos without a next step decay into impressions | "Interesting" becomes the final state |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     DECISION["Name the decision the demo serves"] --> PATH["Design the shortest honest path"]
     PATH --> REHEARSE["Rehearse in their environment"]
@@ -75,7 +76,7 @@ The ask at the end is the whole point: a date for the next gate, a sign-off, an 
 ### Demo Run Sheet Template
 
 ```markdown
-## Demo Run Sheet — <customer, audience, date>
+## Demo Run Sheet: <customer, audience, date>
 
 | Field | Detail |
 |-------|--------|
@@ -111,9 +112,9 @@ The ask at the end is the whole point: a date for the next gate, a sign-off, an 
 
 - [[02_Executive_Communication]]
 - [[04_Expectation_and_Scope_Management]]
-- [[01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]
+- [[career-path/19_Forward_Deployed_Engineer/01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]
 - [[career-path/16_Developer_Advocate_and_Technical_Consultant/00_overview|Developer Advocate and Technical Consultant]]
 
 ## Summary
 
-Demos that land are engineered backward from a decision: one room, one question, one critical path through the customer's own data, rehearsed in their environment, with a designed failure moment and a closing ask that produces a next step. The demo is not a performance of the software — it is the moment the deployment becomes real to the people who decide whether it continues, so it deserves the same rigor as the systems it shows.
+Demos that land are engineered backward from a decision: one room, one question, one critical path through the customer's own data, rehearsed in their environment, with a designed failure moment and a closing ask that produces a next step. The demo is not a performance of the software. It is the moment the deployment becomes real to the people who decide whether it continues, so it deserves the same rigor as the systems it shows.

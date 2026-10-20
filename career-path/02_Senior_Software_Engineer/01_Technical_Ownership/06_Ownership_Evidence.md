@@ -212,13 +212,13 @@ When it is time to make the case, structure your promotion document around outco
 
 ## Knowledge Connections
 
-- [[01_System_Ownership]] — system outcomes are the foundation of your evidence
-- [[02_Lifecycle_Ownership]] — lifecycle continuity demonstrates end-to-end responsibility
-- [[03_Technical_Debt_and_Maintainability]] — debt management shows strategic thinking
-- [[04_Production_Responsibility]] — incident leadership and reliability improvements are strong evidence
-- [[05_Decision_Ownership]] — ADRs are the most concrete evidence of senior-level judgment
-- [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]] — at staff level, evidence shifts from system outcomes to cross-team influence
-- [[document-template/00_Essential Document/Essential Documents - Overview]] — document templates for structuring evidence artifacts
+- [[01_System_Ownership]]: system outcomes are the foundation of your evidence
+- [[02_Lifecycle_Ownership]]: lifecycle continuity demonstrates end-to-end responsibility
+- [[03_Technical_Debt_and_Maintainability]]: debt management shows strategic thinking
+- [[04_Production_Responsibility]]: incident leadership and reliability improvements are strong evidence
+- [[05_Decision_Ownership]]: ADRs are the most concrete evidence of senior-level judgment
+- [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]: at staff level, evidence shifts from system outcomes to cross-team influence
+- [[document-template/00_Essential Document/Essential Documents - Overview]]: document templates for structuring evidence artifacts
 
 ## Key Takeaways
 

@@ -16,15 +16,15 @@ tags:
 
 # Expectation and Scope Management
 
-> **Core skill:** Keeping promises aligned with engineering reality — committing in writing, logging assumptions, and surfacing drift early enough that changes remain agreed decisions instead of accumulating arguments.
+> **Core skill:** Keeping promises aligned with engineering reality: committing in writing, logging assumptions, and surfacing drift early enough that changes remain agreed decisions instead of accumulating arguments.
 
 ## Why This Matters
 
-Deployments do not usually die from bad engineering; they die from mismatched expectations. The customer heard "this will replace the manual review process" while engineering meant "this will assist the reviewer on one document type." Nobody lied — the gap grew one friendly sentence at a time, in hallways and kickoff slides, until the first status meeting where the two versions of reality met. By then the customer has already budgeted staff changes against their version, and the FDE is not defending a scope, but a misunderstanding. Expectation management is the FDE's insurance against exactly this failure, and it costs nothing but discipline.
+Deployments do not usually die from bad engineering; they die from mismatched expectations. The customer heard "this will replace the manual review process" while engineering meant "this will assist the reviewer on one document type." Nobody lied. The gap grew one friendly sentence at a time, in hallways and kickoff slides, until the first status meeting where the two versions of reality met. By then the customer has already budgeted staff changes against their version, and the FDE is not defending a scope, but a misunderstanding. Expectation management is the FDE's insurance against exactly this failure, and it costs nothing but discipline.
 
-The core mechanism is writing things down. A commitment that exists in writing — with its assumptions attached — can be checked, tracked, and either met or renegotiated honestly. A commitment that exists as a memory is elastic, and elastic commitments always stretch in the direction of the more optimistic party. The assumptions matter as much as the commitments: "we will deliver the integration by the rollout date, assuming the customer's identity provider is available and the data extract format is fixed by week three" is a contract that everyone can operate against. Most scope pain comes not from broken promises but from unstated conditions that were silently violated.
+The core mechanism is writing things down. A commitment that exists in writing, with its assumptions attached, can be checked, tracked, and either met or renegotiated honestly. A commitment that exists as a memory is elastic, and elastic commitments always stretch in the direction of the more optimistic party. The assumptions matter as much as the commitments: "we will deliver the integration by the rollout date, assuming the customer's identity provider is available and the data extract format is fixed by week three" is a contract that everyone can operate against. Most scope pain comes not from broken promises but from unstated conditions that were silently violated.
 
-Scope change is normal and should be welcomed, not resisted. Real deployments learn things that make the original scope wrong, and a customer whose needs have shifted is a customer who is engaged. The FDE's job is to convert change from a creeping erosion into an explicit trade: this addition costs this much time, displaces this much of the plan, or needs this decision from this person. Changes handled that way strengthen trust because they demonstrate that scope is a managed quantity rather than a fight waiting to happen. The failure mode is not change itself — it is unmanaged change, where each addition seems small, the total is enormous, and nobody can name the moment the plan stopped being true.
+Scope change is normal and should be welcomed, not resisted. Real deployments learn things that make the original scope wrong, and a customer whose needs have shifted is a customer who is engaged. The FDE's job is to convert change from a creeping erosion into an explicit trade: this addition costs this much time, displaces this much of the plan, or needs this decision from this person. Changes handled that way strengthen trust because they demonstrate that scope is a managed quantity rather than a fight waiting to happen. The failure mode is not change itself. It is unmanaged change, where each addition seems small, the total is enormous, and nobody can name the moment the plan stopped being true.
 
 ## The Vocabulary of Commitment
 
@@ -47,6 +47,7 @@ Scope change is normal and should be welcomed, not resisted. Real deployments le
 | Pressure to absorb work silently | Name the trade-off explicitly | Never resolved at the FDE's level alone |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     COMMIT["Commit in writing"] --> ASSUME["Log the assumptions"]
     ASSUME --> DRIFT["Watch for drift early"]
@@ -72,7 +73,7 @@ The assumptions log is the quiet hero of this loop. Reviewed in every status cyc
 ### Assumptions and Commitments Log Template
 
 ```markdown
-## Assumptions and Commitments — <deployment, date>
+## Assumptions and Commitments: <deployment, date>
 
 | Item | Type | Owner | Status | Impact if broken |
 |------|------|-------|--------|------------------|
@@ -102,9 +103,9 @@ The assumptions log is the quiet hero of this loop. Reviewed in every status cyc
 
 - [[05_Difficult_Conversations]]
 - [[02_Executive_Communication]]
-- [[01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]
+- [[career-path/19_Forward_Deployed_Engineer/01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]
 - [[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]
 
 ## Summary
 
-Expectation and scope management is the FDE's discipline of making promises that can be kept: commit in writing with assumptions attached, keep the assumptions log alive so drift is caught early, convert every change into an explicit trade with a named decider, and state dates with conditions rather than hopes. Deployments rarely fail because the engineering was impossible; they fail because two organizations carried two different versions of the plan — and the FDE's job is to keep the deployment living in exactly one.
+Expectation and scope management is the FDE's discipline of making promises that can be kept: commit in writing with assumptions attached, keep the assumptions log alive so drift is caught early, convert every change into an explicit trade with a named decider, and state dates with conditions rather than hopes. Deployments rarely fail because the engineering was impossible; they fail because two organizations carried two different versions of the plan, and the FDE's job is to keep the deployment living in exactly one.

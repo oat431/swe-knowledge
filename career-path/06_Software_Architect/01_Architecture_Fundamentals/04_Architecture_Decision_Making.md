@@ -16,7 +16,7 @@ tags:
 
 # Architecture Decision Making
 
-> **Core skill:** Running a structured decision process — drivers to options to evaluation to decision to record — that makes structural choices deliberate, reviewable, and reversible on known timelines.
+> **Core skill:** Running a structured decision process (drivers to options to evaluation to decision to record) that makes structural choices deliberate, reviewable, and reversible on known timelines.
 
 ## Why This Matters
 
@@ -87,7 +87,7 @@ Option generation is a divergent phase: quantity over quality, no evaluation yet
 | **Weighted total** | | **33** | **30** | **30** |
 ```
 
-Weights make preferences explicit; scores make assessments testable. A matrix that produces a surprising result is often right — it surfaced criteria that intuition undervalued.
+Weights make preferences explicit; scores make assessments testable. A matrix that produces a surprising result is often right. It surfaced criteria that intuition undervalued.
 
 ## Reversible vs Irreversible Decisions
 
@@ -108,11 +108,11 @@ The distinction is not academic: Type 1 decisions that skip evaluation produce t
 | **Defer with a trigger** | Information is missing but will arrive by a known date | Scale numbers from load test arriving next sprint |
 | **Defer and accept the default** | Decision is not consequential enough to invest in; the default is acceptable | Framework version within a supported range |
 
-A deferred decision without a trigger is a decision abandoned. The architect names the trigger — the event or date that will re-open the choice — and records it so the deferral is visible and time-bound.
+A deferred decision without a trigger is a decision abandoned. The architect names the trigger (the event or date that will re-open the choice) and records it so the deferral is visible and time-bound.
 
 ## The Decision Delayed as Drift
 
-Every architecture decision not made is a decision made by default. The system accumulates the path of least resistance, and the architect who did not decide on a database strategy discovers the team has chosen for them — one service at a time, inconsistently.
+Every architecture decision not made is a decision made by default. The system accumulates the path of least resistance, and the architect who did not decide on a database strategy discovers the team has chosen for them, one service at a time, inconsistently.
 
 | Deferral Failure Mode | What Happens | Prevention |
 |-----------------------|-------------|------------|
@@ -154,9 +154,10 @@ The Architecture Decision Record is the standard output of the process. It captu
 [Conditions under which this decision should be re-examined]
 ```
 
-The ADR is not the process — it is the record of the process. If the ADR cannot be written because the decision was not evaluated, the process failed.
+The ADR is not the process. It is the record of the process. If the ADR cannot be written because the decision was not evaluated, the process failed.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DRIVERS["Identify drivers"] --> OPTIONS["Generate options"]
     OPTIONS --> EVALUATE["Evaluate options against scenarios"]
@@ -176,7 +177,7 @@ flowchart TD
 - [ ] Evaluation uses scenarios, not intuition, wherever quality attributes are at stake
 - [ ] Process weight matches reversal cost: full process for Type 1, lightweight for Type 2, delegation for Type 3
 - [ ] Deferred decisions have named revisit triggers and are tracked in the decision log
-- [ ] ADRs record alternatives considered and negative consequences — not only the winning argument
+- [ ] ADRs record alternatives considered and negative consequences, not only the winning argument
 
 ### Decision Log Entry Template
 
@@ -212,12 +213,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[01_Architectural_Significance]] — the test that determines whether a decision needs this process
-- [[02_Architecture_vs_Design]] — which decisions belong at the architecture tier
-- [[03_Architecture_Patterns_and_Styles]] — the style choices that this process produces
-- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/04_Architecture_Decision_Records|Architecture Decision Records (Senior)]] — the ADR format and lifecycle in practice
-- [[career-path/02_Senior_Software_Engineer/08_Engineering_Economics_and_Trade_Offs/06_Trade_Off_Evaluation|Trade Off Evaluation (Senior)]] — the evaluation discipline that feeds this process
+- [[01_Architectural_Significance]]: the test that determines whether a decision needs this process
+- [[02_Architecture_vs_Design]]: which decisions belong at the architecture tier
+- [[03_Architecture_Patterns_and_Styles]]: the style choices that this process produces
+- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/04_Architecture_Decision_Records|Architecture Decision Records (Senior)]]: the ADR format and lifecycle in practice
+- [[career-path/02_Senior_Software_Engineer/08_Engineering_Economics_and_Trade_Offs/06_Trade_Off_Evaluation|Trade Off Evaluation (Senior)]]: the evaluation discipline that feeds this process
 
 ## Summary
 
-Architecture decision making is a structured process — drivers, options, evaluation, decision, record — that turns structural choices from intuition into deliberate, reviewable commitments. The process weight matches the reversal cost: irreversible decisions get full evaluation and an ADR; easily reversible decisions are delegated to the team. Deferral is a legitimate outcome only when paired with a named revisit trigger; without one, deferred decisions accumulate as decision debt that hardens into accidental architecture. The ADR is the visible residue: it captures what was decided, what was considered, what trade-offs were accepted, and when the decision should be revisited — so that future architects can understand, challenge, and if necessary reverse the choice with the same evidence that produced it.
+Architecture decision making is a structured process (drivers, options, evaluation, decision, record) that turns structural choices from intuition into deliberate, reviewable commitments. The process weight matches the reversal cost: irreversible decisions get full evaluation and an ADR; easily reversible decisions are delegated to the team. Deferral is a legitimate outcome only when paired with a named revisit trigger; without one, deferred decisions accumulate as decision debt that hardens into accidental architecture. The ADR is the visible residue: it captures what was decided, what was considered, what trade-offs were accepted, and when the decision should be revisited, so that future architects can understand, challenge, and if necessary reverse the choice with the same evidence that produced it.

@@ -28,6 +28,7 @@ Incidents are inevitable. The difference between a team that learns from inciden
 ## The Incident Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     DETECT["1 Detect\n(alert, user report)"] --> TRIAGE["2 Triage\n(severity, impact)"]
     TRIAGE --> RESPOND["3 Respond\n(mitigate, communicate)"]
@@ -302,7 +303,7 @@ Users cannot complete purchases
 - [[03_Observability]] : observability data is critical for incident diagnosis
 - [[05_Security_Practices]] : security incidents require specialized response
 - [[06_Production_Readiness]] : production readiness includes incident response planning
-- [[04_Delivery_and_Execution/05_Release_Management]] : release management reduces incident risk
+- [[career-path/02_Senior_Software_Engineer/04_Delivery_and_Execution/05_Release_Management]] : release management reduces incident risk
 - [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]] : operations and incident response
 
 ## Key Takeaways

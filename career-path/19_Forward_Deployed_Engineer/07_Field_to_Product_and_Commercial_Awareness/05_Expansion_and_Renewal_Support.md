@@ -16,15 +16,15 @@ tags:
 
 # Expansion and Renewal Support
 
-> **Core skill:** Engineering that grows the account and earns the renewal — treating go-live as a beginning, documenting outcomes as they happen, and building the technical case for the next phase before anyone has to ask for it.
+> **Core skill:** Engineering that grows the account and earns the renewal: treating go-live as a beginning, documenting outcomes as they happen, and building the technical case for the next phase before anyone has to ask for it.
 
 ## Why This Matters
 
-The renewal decision is made months before the renewal conversation. Accounts do not renew because a sales cycle concluded successfully months earlier; they renew because the deployment demonstrably changed how their people work and because the people who matter can point to the evidence. Likewise, expansion — a new team, a new use case, a new region — is almost never a cold sale. It is the visible consequence of a deployment that delivered something a neighboring group wants for itself. The FDE occupies the pivotal role in both: they are present in the months when outcomes accumulate or fail to, and they are the person best positioned to notice the next use case while it is still forming.
+The renewal decision is made months before the renewal conversation. Accounts do not renew because a sales cycle concluded successfully months earlier; they renew because the deployment demonstrably changed how their people work and because the people who matter can point to the evidence. Likewise, expansion (a new team, a new use case, a new region) is almost never a cold sale. It is the visible consequence of a deployment that delivered something a neighboring group wants for itself. The FDE occupies the pivotal role in both: they are present in the months when outcomes accumulate or fail to, and they are the person best positioned to notice the next use case while it is still forming.
 
-The failure mode is treating go-live as the finish line. After launch, field attention moves to the next account, the deployment enters steady state attended by support tickets, and the outcome story stops being written precisely when it starts mattering. When renewal season arrives, the account team assembles a case from memory, a few slides, and whatever the usage dashboard happens to show — a thin case against the natural drift of enterprise budgets. The FDE who keeps engineering the account after launch — measuring outcomes, fixing adoption friction, developing the customer's own owners — is doing renewal work, whether or not anyone calls it that.
+The failure mode is treating go-live as the finish line. After launch, field attention moves to the next account, the deployment enters steady state attended by support tickets, and the outcome story stops being written precisely when it starts mattering. When renewal season arrives, the account team assembles a case from memory, a few slides, and whatever the usage dashboard happens to show: a thin case against the natural drift of enterprise budgets. The FDE who keeps engineering the account after launch (measuring outcomes, fixing adoption friction, developing the customer's own owners) is doing renewal work, whether or not anyone calls it that.
 
-Expansion has its own discipline. The best expansion leads are internal referrals from satisfied users, and they form around specific moments: the neighboring team sees a report produced faster, hears a champion describe the new workflow, watches a peer group stop doing work the old way. The FDE can engineer those moments — through the customer's own champions, through outcome documentation written for a general audience, through deliberately scoped proofs for the adjacent use case. What the FDE must not do is promise expansions the delivery organization cannot support; the surest way to convert a healthy account into a resentful one is to sell a second phase that engineering cannot staff.
+Expansion has its own discipline. The best expansion leads are internal referrals from satisfied users, and they form around specific moments: the neighboring team sees a report produced faster, hears a champion describe the new workflow, watches a peer group stop doing work the old way. The FDE can engineer those moments: through the customer's own champions, through outcome documentation written for a general audience, through deliberately scoped proofs for the adjacent use case. What the FDE must not do is promise expansions the delivery organization cannot support; the surest way to convert a healthy account into a resentful one is to sell a second phase that engineering cannot staff.
 
 ## Engineering for the Renewal Clock
 
@@ -49,6 +49,7 @@ Expansion has its own discipline. The best expansion leads are internal referral
 | Enterprise standardization | The deployment becoming the reference pattern | Product fitness, documentation, and a defensible standard story |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     OUTCOMES["Engineer outcomes not just delivery"] --> PROVE["Document the evidence"]
     PROVE --> SPONSOR["Keep sponsors informed"]
@@ -57,7 +58,7 @@ flowchart LR
     CASE --> DELIVER["Deliver the next phase"]
 ```
 
-The loop is self-reinforcing when it runs: each phase delivers outcomes, outcomes produce evidence, evidence supports the next phase. It breaks when any link is skipped — usually the evidence link, because it is the one that feels like administration in the middle of delivery.
+The loop is self-reinforcing when it runs: each phase delivers outcomes, outcomes produce evidence, evidence supports the next phase. It breaks when any link is skipped, usually the evidence link, because it is the one that feels like administration in the middle of delivery.
 
 ## Practical Applications
 
@@ -74,7 +75,7 @@ The loop is self-reinforcing when it runs: each phase delivers outcomes, outcome
 ### Renewal Evidence Pack Template
 
 ```markdown
-## Renewal Evidence Pack — <account, period>
+## Renewal Evidence Pack: <account, period>
 
 | Element | Detail |
 |---------|--------|
@@ -110,9 +111,9 @@ The loop is self-reinforcing when it runs: each phase delivers outcomes, outcome
 
 - [[04_Deployment_Economics_and_ROI]]
 - [[03_Influencing_the_Product_Roadmap]]
-- [[06_Customer_Communication_and_Executive_Influence/00_overview|Customer Communication and Executive Influence]]
+- [[career-path/19_Forward_Deployed_Engineer/06_Customer_Communication_and_Executive_Influence/00_overview|Customer Communication and Executive Influence]]
 - [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions and Enterprise Architect]]
 
 ## Summary
 
-Expansion and renewal support is the FDE's long game: engineer outcomes after go-live, document them continuously against the original criteria, keep sponsors close with a steady cadence, watch adoption as an early signal, and develop the next phase from the customer's own reference rather than from a cold pitch. Accounts grow and renew because the deployment keeps proving itself — and the FDE is the person who decides whether that proof exists when the decision arrives.
+Expansion and renewal support is the FDE's long game: engineer outcomes after go-live, document them continuously against the original criteria, keep sponsors close with a steady cadence, watch adoption as an early signal, and develop the next phase from the customer's own reference rather than from a cold pitch. Accounts grow and renew because the deployment keeps proving itself, and the FDE is the person who decides whether that proof exists when the decision arrives.

@@ -16,15 +16,15 @@ tags:
 
 # Measuring Community Impact
 
-> **Core skill:** Measuring what a community actually produces — participation quality, contributions, and outcomes — and reporting it credibly to both members and the organization that funds it.
+> **Core skill:** Measuring what a community actually produces (participation quality, contributions, and outcomes) and reporting it credibly to both members and the organization that funds it.
 
 ## Why This Matters
 
-Every community program eventually faces the budget question: what does this cost, and what does it return? The answer determines whether the program survives the next planning cycle. Advocates who answer with member counts and message volumes are asking leadership to take the value on faith — and faith is the first casualty of a tight quarter. Advocates who answer with participation quality, contribution trends, and adoption outcomes make the case with evidence.
+Every community program eventually faces the budget question: what does this cost, and what does it return? The answer determines whether the program survives the next planning cycle. Advocates who answer with member counts and message volumes are asking leadership to take the value on faith, and faith is the first casualty of a tight quarter. Advocates who answer with participation quality, contribution trends, and adoption outcomes make the case with evidence.
 
-The measurement problem is subtle because the easy numbers are misleading. A community can double its membership while its conversation dies; a forum can show flat post counts while a small core quietly answers hundreds of questions that never reach support. Vanity metrics flatter; health metrics explain. The advocate's job is to instrument the health of the system — who contributes, how fast questions resolve, whether members help each other — and then connect that health to outcomes the organization recognizes: activated developers, retained customers, reduced support load, product insight delivered.
+The measurement problem is subtle because the easy numbers are misleading. A community can double its membership while its conversation dies; a forum can show flat post counts while a small core quietly answers hundreds of questions that never reach support. Vanity metrics flatter; health metrics explain. The advocate's job is to instrument the health of the system (who contributes, how fast questions resolve, whether members help each other) and then connect that health to outcomes the organization recognizes: activated developers, retained customers, reduced support load, product insight delivered.
 
-Measurement also serves the community itself. Members deserve to see what their space produces, and public scoreboards that celebrate contribution quality — not just volume — reinforce the exact behaviors the community needs. What gets measured gets done, so measure the thing you actually want more of.
+Measurement also serves the community itself. Members deserve to see what their space produces, and public scoreboards that celebrate contribution quality (not just volume) reinforce the exact behaviors the community needs. What gets measured gets done, so measure the thing you actually want more of.
 
 ## The Metric Ladder
 
@@ -71,15 +71,16 @@ Report the full ladder, with the bottom rungs as context and the top as the argu
 | Executives | What the investment returns | Outcome metrics, cost offsets, adoption links |
 | Finance and planning | What to fund or cut | Cost per outcome; program comparisons |
 
-One dataset, several framings: members see health, leaders see outcomes — but the underlying numbers must be the same, or the community will notice the gap.
+One dataset, several framings: members see health, leaders see outcomes, but the underlying numbers must be the same, or the community will notice the gap.
 
 ## Closing the Measurement Loop
 
-Metrics without action are decoration. Each reporting cycle should end with decisions: fund, fix, or retire a program; re-source content; recruit moderators; escalate an insight to product. Publish what changed to the community — measurement that never changes anything teaches members that the numbers are for someone else.
+Metrics without action are decoration. Each reporting cycle should end with decisions: fund, fix, or retire a program; re-source content; recruit moderators; escalate an insight to product. Publish what changed to the community: measurement that never changes anything teaches members that the numbers are for someone else.
 
 ## The Impact Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DEFINE["Define - outcomes worth moving"] --> INSTRUMENT["Instrument - healthy, honest metrics"]
     INSTRUMENT --> COLLECT["Collect - participation, contribution, outcomes"]
@@ -102,7 +103,7 @@ flowchart TD
 ### Quarterly Impact Report Template
 
 ```markdown
-## Community Impact — [quarter]
+## Community Impact: [quarter]
 ## Health
 - Weekly active participants: [n, trend]
 - Time to first helpful reply: [median]
@@ -119,9 +120,9 @@ flowchart TD
 - Insights adopted by product: [n, with links]
 
 ## Decisions
-- Fund: [program] — because [evidence]
-- Fix: [program] — because [evidence]
-- Retire: [program] — because [evidence]
+- Fund: [program], because [evidence]
+- Fix: [program], because [evidence]
+- Retire: [program], because [evidence]
 - Escalate to product: [insight, owner]
 ```
 
@@ -150,8 +151,8 @@ flowchart TD
 - [[02_Developer_Programs_and_Relationships]]: program renewal depends on evidence of quality
 - [[05_Community_Programs_and_Content]]: cadence shows up in the participation data
 - [[06_Community_Health_and_Moderation]]: safety and inclusivity are measurable health dimensions
-- [[07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]]: the outcome side of community measurement
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]]: the outcome side of community measurement
 
 ## Summary
 
-Measuring community impact means climbing from activity to outcome: instrument participation quality, track contribution with quality guards, connect community cohorts to adoption and support outcomes, and report one honest dataset framed for each audience. The loop only counts when it closes — every report ends with programs funded, fixed, or retired, and the community is told what its numbers changed. That is how a community earns the trust of its members and the budget of its sponsors at the same time.
+Measuring community impact means climbing from activity to outcome: instrument participation quality, track contribution with quality guards, connect community cohorts to adoption and support outcomes, and report one honest dataset framed for each audience. The loop only counts when it closes: every report ends with programs funded, fixed, or retired, and the community is told what its numbers changed. That is how a community earns the trust of its members and the budget of its sponsors at the same time.

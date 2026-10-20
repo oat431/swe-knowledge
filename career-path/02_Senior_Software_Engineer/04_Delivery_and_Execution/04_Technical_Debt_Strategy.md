@@ -4,7 +4,7 @@ note_type: capability-topic
 capability_area: delivery-execution
 career_path: senior-software-engineer
 prerequisite:
-  - "[[01_Technical_Ownership/03_Technical_Debt_and_Maintainability]]"
+  - "[[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/03_Technical_Debt_and_Maintainability]]"
   - "[[03_Delivery_Metrics]]"
 tags:
   - career-path
@@ -79,6 +79,7 @@ Treat technical debt like a financial budget:
 ### Impact-Effort Matrix
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph HIGH_IMPACT["High Impact"]
         Q1["Quick Wins\nHigh impact, low effort\nDo first"]
@@ -239,10 +240,10 @@ When implementing a feature that touches debt-heavy code:
 
 ## Knowledge Connections
 
-- [[01_Technical_Ownership/03_Technical_Debt_and_Maintainability]] : system-level debt management
+- [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/03_Technical_Debt_and_Maintainability]] : system-level debt management
 - [[03_Delivery_Metrics]] : flow distribution reveals debt investment
 - [[01_Estimation_and_Forecasting]] : debt affects velocity and estimates
-- [[03_Architecture_and_Design_Judgment/02_Quality_Attribute_Tradeoffs]] : architecture debt stems from trade-off decisions
+- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/02_Quality_Attribute_Tradeoffs]] : architecture debt stems from trade-off decisions
 - [[software-engineering-note/07_Software_Maintenance/Software Maintenance Overview]] : maintenance includes debt management
 
 ## Key Takeaways

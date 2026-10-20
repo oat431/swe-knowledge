@@ -16,11 +16,11 @@ tags:
 
 # Migration Leadership
 
-> **Core skill:** Leading migrations that actually finish — designing for the boring middle, phasing with value at every step, and driving cutover, sunset, and completion declaration.
+> **Core skill:** Leading migrations that actually finish: designing for the boring middle, phasing with value at every step, and driving cutover, sunset, and completion declaration.
 
 ## Why This Matters
 
-Most migrations do not fail at the start. They fail in the middle — after the enthusiasm, before the end — because the boring middle has no natural owner, no visible progress, and no daily pressure. The framework upgrade begins with energy, slows to a trickle, and dies at 40% with a tombstone README that says "in progress." The org pays the migration tax forever: two systems to maintain, two mental models, two sets of bugs.
+Most migrations do not fail at the start. They fail in the middle (after the enthusiasm, before the end) because the boring middle has no natural owner, no visible progress, and no daily pressure. The framework upgrade begins with energy, slows to a trickle, and dies at 40% with a tombstone README that says "in progress." The org pays the migration tax forever: two systems to maintain, two mental models, two sets of bugs.
 
 The staff engineer's migration leadership is different from the team's migration execution. The team asks "how do we move this service?"; the staff engineer asks "how does the whole org cross this river, in what order, with what proof of progress, ending with what declaration?" The migration is the longest, most visible change pattern, and it is where the staff engineer earns or spends the org's trust in bulk.
 
@@ -53,7 +53,7 @@ The patterns are not exclusive: a strangler fig often contains expand-contract s
 | 3. Bulk migration | The org's default shifts | Majority of traffic migrated |
 | 4. Finishing | The old system is gone | Cutover complete, old system sunset |
 
-A migration with a value milestone per phase is a sequence of small wins; a migration with one big milestone is a bet. Phase boundaries are where momentum is rebuilt — every phase ending with a visible, celebrated, measurable outcome.
+A migration with a value milestone per phase is a sequence of small wins; a migration with one big milestone is a bet. Phase boundaries are where momentum is rebuilt: every phase ending with a visible, celebrated, measurable outcome.
 
 ## The Migration Team Shape
 
@@ -63,7 +63,7 @@ A migration with a value milestone per phase is a sequence of small wins; a migr
 | **Distributed** | Every team migrates its own slice with shared tooling | Long migrations; teams own their path |
 | **Hybrid** | A core driver team plus per-team owners | The common case: central tooling, local execution |
 
-The hybrid is usually right: a tiny central team owns the platform, the tooling, and the dashboard, while each team owns its own cutover. The failure mode of distributed-only is the tragedy of the commons — nobody moves the platform forward; the failure mode of dedicated-only is the finished platform nobody migrated to.
+The hybrid is usually right: a tiny central team owns the platform, the tooling, and the dashboard, while each team owns its own cutover. The failure mode of distributed-only is the tragedy of the commons: nobody moves the platform forward; the failure mode of dedicated-only is the finished platform nobody migrated to.
 
 ## Momentum Maintenance
 
@@ -73,7 +73,7 @@ The hybrid is usually right: a tiny central team owns the platform, the tooling,
 | Milestone comms | A one-page update per phase: what moved, what is next |
 | Blocked-list triage | Every blocked team has a named unblocker, same week |
 | Completion stories | Each team's cutover is celebrated and linked |
-| Cadence | The same meeting, same time, same week — until done |
+| Cadence | The same meeting, same time, same week, until done |
 
 Momentum is maintained by visible progress and bounded blockage. The dashboard is the discipline: when it stops updating, the migration has already stalled.
 
@@ -87,9 +87,10 @@ Momentum is maintained by visible progress and bounded blockage. The dashboard i
 | Completion declaration | A written record: what was migrated, what the old system was, what the outcome is |
 | Retrospective | What made it work, what would be done differently |
 
-The completion declaration matters more than it looks: it is what the org remembers, and it is what prevents the zombie migration — the 40% migration that stays "in progress" forever. A migration without a declaration is not finished; it is paused.
+The completion declaration matters more than it looks: it is what the org remembers, and it is what prevents the zombie migration, the 40% migration that stays "in progress" forever. A migration without a declaration is not finished; it is paused.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SCOPE["Scope the migration"] --> DESIGN["Design the pattern"]
     DESIGN --> PHASE["Phase with value per step"]
@@ -104,7 +105,7 @@ flowchart TD
 ## Practical Applications
 
 ```markdown
-# Migration Plan — [migration] — [date]
+# Migration Plan: [migration], [date]
 
 ## End state
 - [ ] Target: [the new system] | Cutover criteria: [correctness, performance, rollback]
@@ -163,4 +164,4 @@ Checklist:
 
 ## Summary
 
-Migrations finish when they are designed for the boring middle: a pattern of small safe steps, a phase with visible value at each boundary, a hybrid team with a named driver, and a weekly dashboard that makes progress and blockage impossible to hide. Cutover runs on pre-written criteria, the old system gets a real sunset, and the completion declaration tells the org the migration is done — not paused at 40%.
+Migrations finish when they are designed for the boring middle: a pattern of small safe steps, a phase with visible value at each boundary, a hybrid team with a named driver, and a weekly dashboard that makes progress and blockage impossible to hide. Cutover runs on pre-written criteria, the old system gets a real sunset, and the completion declaration tells the org the migration is done, not paused at 40%.

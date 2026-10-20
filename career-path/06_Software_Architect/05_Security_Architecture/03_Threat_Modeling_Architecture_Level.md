@@ -16,15 +16,15 @@ tags:
 
 # Threat Modeling at Architecture Level
 
-> **Core skill:** The architect applies STRIDE and attack trees to the system structure — components, connections, and data flows — producing structural mitigations, accepted risks, and security decisions rather than a one-time document.
+> **Core skill:** The architect applies STRIDE and attack trees to the system structure (components, connections, and data flows), producing structural mitigations, accepted risks, and security decisions rather than a one-time document.
 
 ## Why This Matters
 
-Code-level threat review finds bugs in implementations; architecture-level threat modeling finds weaknesses in shape: a component with too much reach, a data flow with no validation, a boundary that nobody defends, a failure mode that fails open. These findings cannot be fixed in a pull request — they are fixed by changing the structure, which is exactly why they are the architect's work.
+Code-level threat review finds bugs in implementations; architecture-level threat modeling finds weaknesses in shape: a component with too much reach, a data flow with no validation, a boundary that nobody defends, a failure mode that fails open. These findings cannot be fixed in a pull request: they are fixed by changing the structure, which is exactly why they are the architect's work.
 
-STRIDE provides the systematic checklist. Each category — spoofing, tampering, repudiation, information disclosure, denial of service, elevation of privilege — maps directly onto structural elements: identities at boundaries, data at rest and in motion, the audit trail, the data plane, the control plane. Working the categories against every component and every connection produces a threat list proportional to the architecture rather than to the codebase size.
+STRIDE provides the systematic checklist. Each category (spoofing, tampering, repudiation, information disclosure, denial of service, elevation of privilege) maps directly onto structural elements: identities at boundaries, data at rest and in motion, the audit trail, the data plane, the control plane. Working the categories against every component and every connection produces a threat list proportional to the architecture rather than to the codebase size.
 
-The output discipline separates a real exercise from theater. A session produces three artifact classes: threats mitigated by structural change, threats accepted with named rationale, and security ADRs capturing the decisions. If the exercise leaves no structural trace — no changed design, no recorded risk, no decision — it produced a document that will be read once.
+The output discipline separates a real exercise from theater. A session produces three artifact classes: threats mitigated by structural change, threats accepted with named rationale, and security ADRs capturing the decisions. If the exercise leaves no structural trace (no changed design, no recorded risk, no decision), it produced a document that will be read once.
 
 ## STRIDE Mapped to Structure
 
@@ -39,7 +39,7 @@ The output discipline separates a real exercise from theater. A session produces
 
 ## Attack Trees for Architectural Threats
 
-STRIDE enumerates; attack trees prioritize. For each high-value asset, the architect decomposes the credible attack paths and asks which structural control breaks each path. The tree stays at architecture level — it names components and flows, not exploits or payloads.
+STRIDE enumerates; attack trees prioritize. For each high-value asset, the architect decomposes the credible attack paths and asks which structural control breaks each path. The tree stays at architecture level: it names components and flows, not exploits or payloads.
 
 | Attack Goal | Path Through the Structure | Structural Control That Breaks It |
 |-------------|---------------------------|-----------------------------------|
@@ -59,7 +59,7 @@ Depth follows value: an attack tree three levels deep on the payment path is wor
 | **Structure** | Walk each STRIDE category against each component and crossing; capture live, no silent editing afterward |
 | **Timebox** | Two hours for a system of five to ten components; split larger systems by zone |
 | **Rules** | No solution debates during enumeration; capture threats first, then prioritize and mitigate in a second pass |
-| **Cadence** | At inception, at every major structural change, and before launch — never as a one-time event |
+| **Cadence** | At inception, at every major structural change, and before launch, never as a one-time event |
 
 ## Outputs
 
@@ -72,6 +72,7 @@ Depth follows value: an attack tree three levels deep on the payment path is wor
 ## The Threat Modeling Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ASSETS["Identify assets and entry points"] --> STRIDE["Apply STRIDE per component and crossing"]
     STRIDE --> TREES["Build attack trees for high-value paths"]
@@ -86,7 +87,7 @@ flowchart TD
 ### Architecture Threat Modeling Checklist
 
 - [ ] Every component and crossing is walked against all six STRIDE categories
-- [ ] At least one structural change results from each session — or the output states explicitly why not
+- [ ] At least one structural change results from each session, or the output states explicitly why not
 - [ ] Accepted risks have blast radius, rationale, and a review date
 - [ ] Security ADRs capture each mitigation decision with the threat that drove it
 - [ ] The threat model is revisited on structural change, not only on schedule
@@ -94,7 +95,7 @@ flowchart TD
 ### Threat Register Template
 
 ```markdown
-## Threat Register — <system> — <date>
+## Threat Register: <system>, <date>
 
 | ID | STRIDE | Threat | Component or Crossing | Disposition | Mitigation or Rationale | Owner | Review Date |
 |----|--------|--------|-----------------------|-------------|-------------------------|-------|-------------|
@@ -109,7 +110,7 @@ flowchart TD
 |---------|---------------------|-----------------|
 | **One-time exercise** | The model is written at inception and never revisited as the structure changes | Trigger the model on structural change; keep it alive with the architecture description |
 | **Code-level drift** | The session descends into exploits and payloads; structural weaknesses are missed | Hold the level: components, connections, flows, trust transitions |
-| **Enumeration without disposition** | Long threat lists with no decision per entry | Every threat ends mitigated, accepted, or eliminated — with an owner |
+| **Enumeration without disposition** | Long threat lists with no decision per entry | Every threat ends mitigated, accepted, or eliminated, with an owner |
 | **No structural output** | Findings produce recommendations no one owns; nothing changes | Tie each mitigation to a design change and a security ADR |
 | **Only the happy paths** | Failure and recovery flows are never modeled, though they carry the worst exposures | Model failure behavior as a first-class flow |
 
@@ -130,4 +131,4 @@ flowchart TD
 
 ## Summary
 
-Architecture-level threat modeling applies STRIDE to components, crossings, and data flows, deepens with attack trees where asset value justifies it, and runs as a repeatable session with the right participants and a hard timebox. The outputs — structural mitigations, accepted risks with expiry, and security ADRs — are the point: a session that leaves no design change and no recorded decision has produced theater. The model lives and dies with the architecture, revisited every time the structure moves.
+Architecture-level threat modeling applies STRIDE to components, crossings, and data flows, deepens with attack trees where asset value justifies it, and runs as a repeatable session with the right participants and a hard timebox. The outputs (structural mitigations, accepted risks with expiry, and security ADRs) are the point: a session that leaves no design change and no recorded decision has produced theater. The model lives and dies with the architecture, revisited every time the structure moves.

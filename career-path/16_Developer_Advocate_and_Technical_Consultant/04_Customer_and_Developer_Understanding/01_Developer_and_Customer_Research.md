@@ -17,13 +17,13 @@ tags:
 
 # Developer and Customer Research
 
-> **Core skill:** Running interviews and research with developers and customers that produce real signal — evidence about what they actually do, not what they politely say they would like.
+> **Core skill:** Running interviews and research with developers and customers that produce real signal: evidence about what they actually do, not what they politely say they would like.
 
 ## Why This Matters
 
 Every content plan, roadmap input, and guidance recommendation ultimately rests on a claim about what developers need. When that claim comes from the loudest community thread or the last conversation the advocate happened to have, the result is advocacy by anecdote: content nobody reads, fixes nobody needed, and a slow loss of credibility with the teams who build the product. Research is how the role replaces assertion with evidence.
 
-Developer research has a specific texture. Developers are expert users of tools and ruthless judges of explanation; they will not politely walk through a survey designed for consumers, and they are unusually good at describing their own workflows when asked concretely and specifically. The practical tradition that fits this audience — asking about the last time they did a thing rather than whether they would do it, watching tasks rather than collecting opinions — is core to the role.
+Developer research has a specific texture. Developers are expert users of tools and ruthless judges of explanation; they will not politely walk through a survey designed for consumers, and they are unusually good at describing their own workflows when asked concretely and specifically. The practical tradition that fits this audience (asking about the last time they did a thing rather than whether they would do it, watching tasks rather than collecting opinions) is core to the role.
 
 The advocate is positioned better than anyone for this work: they sit inside the community, speak the language, and can recruit participants from real channels. That advantage becomes a liability only when it substitutes for method. The discipline is what makes the proximity valuable: a framed question, a representative sample, recorded verbatim evidence, and a synthesis that other teams can act on and cite.
 
@@ -83,6 +83,7 @@ The advocate is positioned better than anyone for this work: they sit inside the
 | Recommendation | Actions for content, docs, product, or guidance | Named owner; expected effect |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     QUESTION["Frame the research question"] --> RECRUIT["Recruit participants across segments"]
     RECRUIT --> COLLECT["Interview and observe for evidence"]
@@ -137,11 +138,11 @@ flowchart LR
 
 ## Related Topics
 
-- [[02_Needs_and_Context_Discovery]] — applying research craft inside live engagements
-- [[03_Observing_Real_Usage_and_Friction]] — the behavioral half of the evidence base
-- [[07_Empathy_as_a_Professional_Skill]] — the stance that keeps research honest
-- [[career-path/14_Product_Manager/01_Problem_Discovery/01_Customer_Interviews|Customer Interviews (PM)]] — the product-side interview discipline
-- [[07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]] — where research insight lands in the product
+- [[02_Needs_and_Context_Discovery]]: applying research craft inside live engagements
+- [[03_Observing_Real_Usage_and_Friction]]: the behavioral half of the evidence base
+- [[07_Empathy_as_a_Professional_Skill]]: the stance that keeps research honest
+- [[career-path/14_Product_Manager/01_Problem_Discovery/01_Customer_Interviews|Customer Interviews (PM)]]: the product-side interview discipline
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]]: where research insight lands in the product
 
 ## Summary
 

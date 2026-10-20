@@ -16,15 +16,15 @@ tags:
 
 # Niche and Positioning
 
-> **Core skill:** Choosing a niche and stating a position — what you do, for whom, and why you — so the market can remember you, refer you, and pay a premium without comparison shopping.
+> **Core skill:** Choosing a niche and stating a position (what you do, for whom, and why you), so the market can remember you, refer you, and pay a premium without comparison shopping.
 
 ## Why This Matters
 
 Generalists compete on price and availability; specialists get remembered and referred. The market cannot refer what it cannot recall, and recall is built from a position simple enough to repeat at lunch: one sentence that says what you do, for whom, and what changes as a result. Positioning is that sentence, made true by the work underneath it.
 
-Positioning is not a tagline exercise — it is an operating decision. It changes who you market to, which work you accept, what proof you build, and even what you charge. A niche shrinks the visible market in exchange for a much higher hit rate inside it: fewer, better-fit leads, shorter discovery, less fee negotiation, and case studies that compound in one direction.
+Positioning is not a tagline exercise. It is an operating decision. It changes who you market to, which work you accept, what proof you build, and even what you charge. A niche shrinks the visible market in exchange for a much higher hit rate inside it: fewer, better-fit leads, shorter discovery, less fee negotiation, and case studies that compound in one direction.
 
-Most strong independents position at the junction of two axes — a problem and an industry, a method and a buyer role — and then widen only after the position is undeniable. Positioning is never final; it is provisional and reviewable, but it should be stable long enough for referrals to accumulate.
+Most strong independents position at the junction of two axes (a problem and an industry, a method and a buyer role), and then widen only after the position is undeniable. Positioning is never final; it is provisional and reviewable, but it should be stable long enough for referrals to accumulate.
 
 ## The Axes of a Niche
 
@@ -50,11 +50,12 @@ Two axes usually suffice. Three sounds impressive and is usually unprovable in c
 | Pipeline stability | Feast and famine | Fewer but better-fit leads |
 | Discovery speed | Long, educational calls | Buyers arrive pre-qualified |
 
-The specialist's risk — too narrow, no demand — is fixed by testing the niche before branding it, not by staying vague forever.
+The specialist's risk (too narrow, no demand) is fixed by testing the niche before branding it, not by staying vague forever.
 
 ## The Position Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     NICHE["Choose a niche"] --> POSITION["State a clear position"]
     POSITION --> MESSAGE["Repeatable message and proof"]
@@ -112,8 +113,8 @@ Currently accepting: <engagement type and fit criteria>.
 
 - [[03_Choosing_Your_Problem_Space]]
 - [[06_Market_and_Competitor_Scanning]]
-- [[02_Product_and_Service_Design/00_overview|Product and Service Design]]
-- [[06_Sales_and_Client_Communication/00_overview|Sales and Client Communication]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/02_Product_and_Service_Design/00_overview|Product and Service Design]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/06_Sales_and_Client_Communication/00_overview|Sales and Client Communication]]
 
 ## Summary
 

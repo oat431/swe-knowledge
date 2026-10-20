@@ -16,13 +16,13 @@ tags:
 
 # Securing Investment and Headcount
 
-> **Core skill:** Building the case for team resources — quantified problem, proposed solution, expected return, risks, and rejected alternatives — and steering it through the budget cycle to approval.
+> **Core skill:** Building the case for team resources (quantified problem, proposed solution, expected return, risks, and rejected alternatives) and steering it through the budget cycle to approval.
 
 ## Why This Matters
 
-Every team has a case for more resources; almost none have a case that survives contact with a budget review. The difference between a request that dies in the room and one that lands is rarely the team's quality — it is the case's anatomy. Executives fund outcomes and risk reduction, not wishes and architectures.
+Every team has a case for more resources; almost none have a case that survives contact with a budget review. The difference between a request that dies in the room and one that lands is rarely the team's quality; it is the case's anatomy. Executives fund outcomes and risk reduction, not wishes and architectures.
 
-Headcount is the hardest form of investment because it is recurring cost with delayed, uncertain return: a hire costs fully-loaded salary before producing anything, and the payoff arrives a quarter or more later. Managers who treat headcount as an entitlement lose it; managers who treat it as an investment case win it — and the discipline protects them from hiring into the wrong problem.
+Headcount is the hardest form of investment because it is recurring cost with delayed, uncertain return: a hire costs fully-loaded salary before producing anything, and the payoff arrives a quarter or more later. Managers who treat headcount as an entitlement lose it; managers who treat it as an investment case win it, and the discipline protects them from hiring into the wrong problem.
 
 ## The Investment Case Anatomy
 
@@ -34,7 +34,7 @@ Headcount is the hardest form of investment because it is recurring cost with de
 | Risks | What could go wrong and the mitigation | No risk section at all |
 | Alternatives rejected | What else you considered and why not | Pretending no alternatives exist |
 
-Every component answers a question the approver will ask. If the case has no quantified problem cost, the approver supplies their own — usually lower — estimate.
+Every component answers a question the approver will ask. If the case has no quantified problem cost, the approver supplies their own (usually lower) estimate.
 
 ## The Headcount Case
 
@@ -73,9 +73,10 @@ The formal meeting then becomes ratification of an already-aligned decision. If 
 1. Present in small forums first: your manager, a peer review, a friendly exec
 2. Adjust the case on what you learn; the second version is always better
 3. Present to the real forum with a pre-wired audience and a clear recommendation
-4. Ask for the decision explicitly — name the date and the amount
+4. Ask for the decision explicitly: name the date and the amount
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DRAFT["Draft the case"] --> SMALL["Small forums first"]
     SMALL --> ADJUST["Adjust on feedback"]
@@ -102,8 +103,8 @@ Each stage funds the evidence for the next. Incremental asks also fail cheaply: 
 
 When the case is declined, the manager's job is diagnosis, not sulking:
 
-- Ask the approver for the real objection — the stated reason is often not the full one
-- Re-run the anatomy: which component was weakest — problem cost, return, or trust in delivery?
+- Ask the approver for the real objection: the stated reason is often not the full one
+- Re-run the anatomy: which component was weakest: problem cost, return, or trust in delivery?
 - Note what the approver funded instead; that reveals the actual priority
 - Repair the case and the relationships, and time the next attempt
 
@@ -112,7 +113,7 @@ A declined case with a written retrospective is usually a funded case in the nex
 ## Practical Applications
 
 ```markdown
-## Investment Case — [team/initiative]
+## Investment Case: [team/initiative]
 
 ## The Problem
 - Current cost: [quantified: hours, revenue, incidents, attrition]
@@ -132,10 +133,10 @@ A declined case with a written retrospective is usually a funded case in the nex
 - [risk] -> [mitigation]
 
 ## Alternatives Rejected
-- [alternative] — rejected because [reason]
+- [alternative]: rejected because [reason]
 
 ## Timing
-- Decision needed by: [date] — because [deadline driver]
+- Decision needed by: [date], because [deadline driver]
 ```
 
 Checklist before submitting:
@@ -176,4 +177,4 @@ Checklist before submitting:
 
 ## Summary
 
-Securing investment and headcount is a case craft: quantify the problem, propose the solution, state the return, own the risks, and show the alternatives — then steer the case through the budget cycle with pre-wiring, small forums, and incremental asks. Declined cases become retrospectives, and the discipline of honest cost and ramp time becomes the reputation that funds the next cycle.
+Securing investment and headcount is a case craft: quantify the problem, propose the solution, state the return, own the risks, and show the alternatives, then steer the case through the budget cycle with pre-wiring, small forums, and incremental asks. Declined cases become retrospectives, and the discipline of honest cost and ramp time becomes the reputation that funds the next cycle.

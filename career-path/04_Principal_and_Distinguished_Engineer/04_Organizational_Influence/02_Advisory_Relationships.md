@@ -16,17 +16,17 @@ tags:
 
 # Advisory Relationships
 
-> **Core skill:** The principal builds the trusted advisor position with senior leaders — earned over years through reliability, honesty, and discretion — so that counsel is sought before decisions, not offered after them.
+> **Core skill:** The principal builds the trusted advisor position with senior leaders (earned over years through reliability, honesty, and discretion) so that counsel is sought before decisions, not offered after them.
 
 ## Why This Matters
 
-At principal level, influence is not exercised in meetings — it is exercised in relationships built over years. The trusted advisor position is not a role on an org chart; it is a reputation earned through consistent behavior: reliable analysis delivered on time, honest assessment even when it contradicts the leader's inclination, and the discretion to handle sensitive information without leaking it. When this reputation is established, the principal is called before decisions are made — not briefed after them.
+At principal level, influence is not exercised in meetings. It is exercised in relationships built over years. The trusted advisor position is not a role on an org chart; it is a reputation earned through consistent behavior: reliable analysis delivered on time, honest assessment even when it contradicts the leader's inclination, and the discretion to handle sensitive information without leaking it. When this reputation is established, the principal is called before decisions are made, not briefed after them.
 
 The trusted advisor position is fragile. It is built over years and lost in a single breach of trust: a recommendation that proved wrong and was not accompanied by a candid post-mortem, a confidence shared outside the relationship, advice that served the principal's agenda rather than the leader's interest. The principal who maintains this position across multiple leaders, organizational changes, and contested decisions is the principal whose influence compounds.
 
 ## The Relationship Map
 
-The principal's advisory relationships are not random — they are a deliberate map of who needs technical counsel and how that counsel is best delivered.
+The principal's advisory relationships are not random. They are a deliberate map of who needs technical counsel and how that counsel is best delivered.
 
 | Relationship | What They Need | How the Principal Delivers | Frequency |
 |-------------|---------------|---------------------------|-----------|
@@ -39,7 +39,7 @@ The principal's advisory relationships are not random — they are a deliberate 
 
 ## Advising vs Deciding
 
-The trusted advisor advises — they do not decide. The distinction is critical for maintaining the advisory relationship: the moment the principal confuses advising with deciding, the relationship shifts from trusted counsel to contested authority.
+The trusted advisor advises. They do not decide. The distinction is critical for maintaining the advisory relationship: the moment the principal confuses advising with deciding, the relationship shifts from trusted counsel to contested authority.
 
 | Advising | Deciding |
 |----------|----------|
@@ -48,11 +48,11 @@ The trusted advisor advises — they do not decide. The distinction is critical 
 | "You decided on X. Here is how I will support that decision." | "You made the wrong call." (public disagreement with a decision already made) |
 | "Last quarter's decision on X had these outcomes. Here is what we learned." | Silent when a decision the principal advised against produces good results |
 
-The principal's obligation is to provide the best counsel — honest, complete, and accompanied by confidence levels. The leader's obligation is to decide. When the leader decides against the principal's counsel, the principal's job is to support the decision and track the outcomes, not to undermine it.
+The principal's obligation is to provide the best counsel: honest, complete, and accompanied by confidence levels. The leader's obligation is to decide. When the leader decides against the principal's counsel, the principal's job is to support the decision and track the outcomes, not to undermine it.
 
 ## Handling Disagreement With Executives
 
-Disagreement with an executive is not a breach of the advisory relationship — it is the relationship's test. Handled well, it strengthens the relationship. Handled poorly, it breaks it.
+Disagreement with an executive is not a breach of the advisory relationship. It is the relationship's test. Handled well, it strengthens the relationship. Handled poorly, it breaks it.
 
 | Situation | Wrong Response | Right Response |
 |-----------|---------------|----------------|
@@ -63,7 +63,7 @@ Disagreement with an executive is not a breach of the advisory relationship — 
 
 ## When Your Advice Is Ignored
 
-Advice will be ignored — it is the nature of the advisory role. The principal's response determines whether the relationship survives.
+Advice will be ignored. It is the nature of the advisory role. The principal's response determines whether the relationship survives.
 
 | Principle | Practice |
 |-----------|----------|
@@ -75,7 +75,7 @@ Advice will be ignored — it is the nature of the advisory role. The principal'
 
 ## Maintaining Independence
 
-The trusted advisor must maintain independence — from the leader's agenda, from organizational politics, and from the temptation to tell the leader what they want to hear. Independence is what makes the advice worth seeking.
+The trusted advisor must maintain independence: from the leader's agenda, from organizational politics, and from the temptation to tell the leader what they want to hear. Independence is what makes the advice worth seeking.
 
 | Independence Threat | Manifestation | Defense |
 |--------------------|---------------|---------|
@@ -85,6 +85,7 @@ The trusted advisor must maintain independence — from the leader's agenda, fro
 | **Career concern** | The principal avoids difficult advice that might affect their standing | The principal's career at this level is defined by impact, not by agreement. Difficult advice that proves right is the strongest career signal. |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CREDIBILITY["Technical credibility: the prerequisite"] --> RELIABILITY["Reliability: counsel on time, every time"]
     RELIABILITY --> HONESTY["Honesty: counsel that contradicts, when the evidence says so"]
@@ -139,9 +140,9 @@ Periodically audit the health of each advisory relationship:
 - [[01_Executive_Communication]]: the communication craft that makes advice legible
 - [[03_Writing_for_Organizational_Impact]]: the written artifacts that carry advice beyond the conversation
 - [[06_Organizational_Conflict_Resolution]]: the advisory role in resolving leadership deadlocks
-- [[01_Technology_Strategy/00_overview|Technology Strategy]]: the content of the strategic counsel
+- [[career-path/04_Principal_and_Distinguished_Engineer/01_Technology_Strategy/00_overview|Technology Strategy]]: the content of the strategic counsel
 - [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/05_Influencing_Leadership|Influencing Leadership (Staff)]]: the leadership influence foundation
 
 ## Summary
 
-Advisory relationships are the principal's influence at scale — built over years through reliability, honesty, discretion, and independence, so that counsel is sought before decisions, not offered after them. The principal maintains a deliberate relationship map, distinguishes advising from deciding, handles disagreement as the relationship's test rather than its breach, supports decisions even when advice is ignored, and preserves independence as the source of counsel's value. The trusted advisor position is earned in every interaction and can be lost in one — and the principal who maintains it across leaders, decisions, and organizational change is the principal whose influence compounds.
+Advisory relationships are the principal's influence at scale, built over years through reliability, honesty, discretion, and independence, so that counsel is sought before decisions, not offered after them. The principal maintains a deliberate relationship map, distinguishes advising from deciding, handles disagreement as the relationship's test rather than its breach, supports decisions even when advice is ignored, and preserves independence as the source of counsel's value. The trusted advisor position is earned in every interaction and can be lost in one, and the principal who maintains it across leaders, decisions, and organizational change is the principal whose influence compounds.

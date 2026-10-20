@@ -312,6 +312,7 @@ Team: "I better not admit my mistakes."
 ### Culture Maturity Model
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A[Level 1\nInitial\nQuality is chaos] --> B[Level 2\nManaged\nQuality is tested]
     B --> C[Level 3\nDefined\nQuality is planned]

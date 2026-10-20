@@ -16,15 +16,15 @@ tags:
 
 # Value Propositions and One-Pagers
 
-> **Core skill:** Saying what the offer is worth — to whom, for what outcome — in a form a prospect understands in a minute and can forward to the person who signs.
+> **Core skill:** Saying what the offer is worth (to whom, for what outcome) in a form a prospect understands in a minute and can forward to the person who signs.
 
 ## Why This Matters
 
-Independents believe good work speaks for itself; buyers choose among the options they can understand. A value proposition that needs a meeting to decode loses to a simpler one even when the underlying work is worse. The one-pager is the atomic unit of selling: it travels without you, it survives forwarding, and it forces the decision about what actually matters — which is why writing it is a design exercise, not a copywriting chore.
+Independents believe good work speaks for itself; buyers choose among the options they can understand. A value proposition that needs a meeting to decode loses to a simpler one even when the underlying work is worse. The one-pager is the atomic unit of selling: it travels without you, it survives forwarding, and it forces the decision about what actually matters, which is why writing it is a design exercise, not a copywriting chore.
 
-Value propositions are per-audience. The economic buyer reads money, risk, and timing; the technical evaluator reads approach, architecture, and fit; the end user reads what changes in their day. A single page can serve all three in layers — headline for the buyer, mechanism for the evaluator, outcome for the user — but only if the layers are deliberately ordered rather than mixed into one blur.
+Value propositions are per-audience. The economic buyer reads money, risk, and timing; the technical evaluator reads approach, architecture, and fit; the end user reads what changes in their day. A single page can serve all three in layers (headline for the buyer, mechanism for the evaluator, outcome for the user), but only if the layers are deliberately ordered rather than mixed into one blur.
 
-Vagueness feels safe and communicates nothing. Named outcomes, timeframes, proof, and a commercial signal turn the page into a filter: prospects either see themselves in it or they do not, and both answers are useful. The one-pager also disciplines the offer itself — any section that cannot be filled in honestly is a gap in the offer, not in the writing.
+Vagueness feels safe and communicates nothing. Named outcomes, timeframes, proof, and a commercial signal turn the page into a filter: prospects either see themselves in it or they do not, and both answers are useful. The one-pager also disciplines the offer itself. Any section that cannot be filled in honestly is a gap in the offer, not in the writing.
 
 ## Value Proposition Structure
 
@@ -54,6 +54,7 @@ Honest boundaries convert fewer prospects and close more of the right ones.
 ## The Proposition Chain
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     WHO["Who it is for"] --> OUT["What outcome they get"]
     OUT --> WHY["Why you can deliver it"]
@@ -89,7 +90,7 @@ Every section earns its place by feeding the next; anything that does not move t
 
 **Engagements from <price band>.** <Payment shape if simple>.
 
-**Next step.** <Book a call, reply, or download — one action only>.
+**Next step.** <Book a call, reply, or download, one action only>.
 ```
 
 ## Common Pitfalls
@@ -116,9 +117,9 @@ Every section earns its place by feeding the next; anything that does not move t
 - [[01_Service_Offers_and_Packaging]]
 - [[03_Pricing_Models_and_Strategies]]
 - [[07_Client_Experience_and_Reporting]]
-- [[06_Sales_and_Client_Communication/00_overview|Sales and Client Communication]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/06_Sales_and_Client_Communication/00_overview|Sales and Client Communication]]
 - [[career-path/14_Product_Manager/01_Problem_Discovery/00_overview|Problem Discovery (PM)]]
 
 ## Summary
 
-Value propositions and one-pagers compress an offer into a forwardable artifact: who it is for, what measurably changes, why you are credible, what proof exists, what it costs, and what to do next. Written honestly — boundaries included — the page qualifies, persuades, and travels, letting the independent sell in rooms they never enter.
+Value propositions and one-pagers compress an offer into a forwardable artifact: who it is for, what measurably changes, why you are credible, what proof exists, what it costs, and what to do next. Written honestly (boundaries included), the page qualifies, persuades, and travels, letting the independent sell in rooms they never enter.

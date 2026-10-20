@@ -16,15 +16,15 @@ tags:
 
 # Contracts and Professional Agreements
 
-> **Core skill:** The independent works from a written agreement every time — scope, deliverables, payment, IP, confidentiality, liability, and termination — because contracts protect both sides and resolve disputes before they exist.
+> **Core skill:** The independent works from a written agreement every time (scope, deliverables, payment, IP, confidentiality, liability, and termination), because contracts protect both sides and resolve disputes before they exist.
 
 ## Why This Matters
 
-Contracts have a reputation problem among engineers: paperwork that matters only when something goes wrong. In practice, a good agreement is a decision document. It forces both sides to state expectations while everyone is still friendly — what is being built, what it costs, when it is paid, who owns it, and what happens if the engagement ends early. The engagements where nothing was written down are the same engagements where memories later diverge, and the party with the more convenient memory wins. Writing it down is not distrust; it is the mechanism by which trust survives its first test.
+Contracts have a reputation problem among engineers: paperwork that matters only when something goes wrong. In practice, a good agreement is a decision document. It forces both sides to state expectations while everyone is still friendly: what is being built, what it costs, when it is paid, who owns it, and what happens if the engagement ends early. The engagements where nothing was written down are the same engagements where memories later diverge, and the party with the more convenient memory wins. Writing it down is not distrust; it is the mechanism by which trust survives its first test.
 
 The independent does not need to practice law, but does need to understand each clause's purpose and refuse to sign what cannot be explained. A workable set covers the essentials: deliverables and scope, payment schedule tied to something, a change process for the inevitable creep, ownership of what is created versus what the independent brings, confidentiality in both directions, a defined liability position, and termination terms with notice. Templates from a qualified lawyer, adapted per engagement, are the sane middle path between reinventing contracts and signing whatever arrives.
 
-Local specifics matter and must never be improvised. Contract law, the enforceability of particular clauses, and required formalities vary by jurisdiction — and where an engagement touches Thailand or any other local market, the correct move is to confirm obligations with a local lawyer rather than copy a clause from the internet or a peer. Clients often present their own paper; the party who writes the contract sets the defaults, so reading and negotiating the important clauses is part of the professional service, not an administrative afterthought.
+Local specifics matter and must never be improvised. Contract law, the enforceability of particular clauses, and required formalities vary by jurisdiction, and where an engagement touches Thailand or any other local market, the correct move is to confirm obligations with a local lawyer rather than copy a clause from the internet or a peer. Clients often present their own paper; the party who writes the contract sets the defaults, so reading and negotiating the important clauses is part of the professional service, not an administrative afterthought.
 
 ## Core Contract Terms
 
@@ -37,7 +37,7 @@ Local specifics matter and must never be improvised. Contract law, the enforceab
 | Confidentiality | Client data and your methods | Mutual where fair; define what may be disclosed and for how long |
 | Liability position | Proportional risk | A defined cap or position confirmed with a lawyer; never unlimited exposure |
 | Termination | Exits without drama | Notice period, handover duties, and payment for work done |
-| Dispute handling | Cheaper resolution | A staged path — conversation, then mediation — before litigation |
+| Dispute handling | Cheaper resolution | A staged path (conversation, then mediation) before litigation |
 
 ## Common Agreement Types
 
@@ -64,6 +64,7 @@ Local specifics matter and must never be improvised. Contract law, the enforceab
 ## The Contract Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     TEMPLATE["Start from a lawyer reviewed template"] --> SCOPE["Define scope deliverables and payment"]
     SCOPE --> RIGHTS["Set IP confidentiality and liability terms"]
@@ -87,7 +88,7 @@ No work starts before signature; no change proceeds without a written trace.
 ### Engagement Terms Summary
 
 ```markdown
-## Engagement Terms — <client>
+## Engagement Terms: <client>
 
 | Field | Value |
 |-------|-------|
@@ -124,8 +125,8 @@ No work starts before signature; no change proceeds without a written trace.
 - [[02_Business_Structure_and_Registration]]
 - [[03_Tax_Administration_and_Compliance]]
 - [[04_Insurance_Liability_and_Protections]]
-- [[04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]
 
 ## Summary
 
-Contracts and professional agreements give an independent engagement its rules before it needs them: scope and payment written plainly, change handled in writing, ownership and confidentiality stated, liability kept proportional with lawyer reviewed terms, and termination that lets both sides exit cleanly. The contract is not the opposite of trust — it is what allows trust to survive contact with reality.
+Contracts and professional agreements give an independent engagement its rules before it needs them: scope and payment written plainly, change handled in writing, ownership and confidentiality stated, liability kept proportional with lawyer reviewed terms, and termination that lets both sides exit cleanly. The contract is not the opposite of trust. It is what allows trust to survive contact with reality.

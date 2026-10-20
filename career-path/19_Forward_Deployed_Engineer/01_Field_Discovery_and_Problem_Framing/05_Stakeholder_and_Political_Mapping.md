@@ -16,11 +16,11 @@ tags:
 
 # Stakeholder and Political Mapping
 
-> **Core skill:** Identifying champions, blockers, and the real decision path — so the deployment is supported by the right people before it needs their support.
+> **Core skill:** Identifying champions, blockers, and the real decision path, so the deployment is supported by the right people before it needs their support.
 
 ## Why This Matters
 
-Technical work in an enterprise is never approved by technical logic alone. Access requests stall, production windows move, and budget suddenly re-allocates — and each of those events has a human decision behind it. The FDE who ignores the human map builds a correct solution that cannot get data, cannot deploy, or cannot survive a sponsor's departure. The FDE who maps it knows which conversations to have, in what order, and which promises not to make yet.
+Technical work in an enterprise is never approved by technical logic alone. Access requests stall, production windows move, and budget suddenly re-allocates, and each of those events has a human decision behind it. The FDE who ignores the human map builds a correct solution that cannot get data, cannot deploy, or cannot survive a sponsor's departure. The FDE who maps it knows which conversations to have, in what order, and which promises not to make yet.
 
 Politics is a loaded word, but in deployment work it has a plain meaning: multiple people with different incentives must agree before anything ships. An IT security lead is measured on risk, not on your velocity. A middle manager may lose headcount if your automation succeeds. Procurement answers to process and audit. A champion inside the business wants visibility for their team. None of these are villains; they are players in a system, and the map is how the FDE works the system honestly.
 
@@ -63,6 +63,7 @@ Map each row to a named person, not a department. "IT will review it" is not a p
 | Requests to route around a blocker | Genuine deadlock, or a leverage opportunity | Never route around; convert the blocker into a reviewer |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     MAP["Map the humans"] --> CHAMPION["Name the champion"]
     CHAMPION --> BLOCKER["Understand the blockers"]
@@ -77,7 +78,7 @@ Sequencing is the craft: each conversation should prepare the next one, so that 
 ### Stakeholder Register Template
 
 ```markdown
-## Stakeholder Register — <customer, deployment>
+## Stakeholder Register: <customer, deployment>
 
 | Name | Role | Interest | Influence | Stance | Engagement plan |
 |------|------|----------|-----------|--------|-----------------|
@@ -120,7 +121,7 @@ Keep the register live. Stances move when success changes what people stand to g
 - [[07_Working_with_Sales_and_Account_Teams]]
 - [[career-path/12_Technical_Program_Manager/05_Stakeholder_Alignment/00_overview|Stakeholder Alignment (TPM)]]
 - [[body-of-knowledge/BABOK/04_Strategy_Analysis]]
-- [[06_Customer_Communication_and_Executive_Influence/00_overview|Customer Communication and Executive Influence]]
+- [[career-path/19_Forward_Deployed_Engineer/06_Customer_Communication_and_Executive_Influence/00_overview|Customer Communication and Executive Influence]]
 
 ## Summary
 

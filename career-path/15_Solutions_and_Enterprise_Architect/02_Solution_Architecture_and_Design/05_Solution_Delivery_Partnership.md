@@ -15,7 +15,7 @@ tags:
 
 # Solution Delivery Partnership
 
-> **Core skill:** Partnering with delivery teams, project and program managers, vendors, and operations — staying accountable for the architecture while enabling others to build, run, and evolve it.
+> **Core skill:** Partnering with delivery teams, project and program managers, vendors, and operations, staying accountable for the architecture while enabling others to build, run, and evolve it.
 
 ## Why This Matters
 
@@ -46,7 +46,7 @@ Working this way also protects the architecture's honesty. When delivery discove
 | **Embedded time** | Architect attends ceremonies and refinements | Late discoveries of infeasibility |
 | **Architecture enablers** | Work items that build the runway for upcoming design | Refactoring that never gets prioritized |
 
-Agile delivery changes the cadence, not the need: decisions move from gate documents to just-in-time answers, and the architect becomes a participant in the team's flow rather than an external authority. The architecture runway — keeping design ahead of the next few iterations, not the whole project — is the central craft.
+Agile delivery changes the cadence, not the need: decisions move from gate documents to just-in-time answers, and the architect becomes a participant in the team's flow rather than an external authority. The architecture runway (keeping design ahead of the next few iterations, not the whole project) is the central craft.
 
 ## Working With Project and Program Management
 
@@ -63,6 +63,7 @@ The architect does not manage the project and the manager does not design the so
 ## Working With Vendors
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     ARCH["Architect"] --> TEAM["Delivery team"]
     TEAM["Delivery team"] --> VENDOR["Vendors and partners"]
@@ -132,4 +133,4 @@ Vendor obligations: <architecture-relevant terms>
 
 ## Summary
 
-Solution delivery partnership keeps the architect accountable for design intent while enabling delivery, vendors, and operations to execute. It runs on structure: a decision service with response expectations, walkthroughs that share the why, recorded deviations, feasibility participation, contractual vendor obligations including exit, and operations engagement before design freeze. The partnership turns the architecture into a living agreement that evolves with evidence — and prevents both failure modes of the disengaged architect: a design that delivery ignores and a process that delivery routes around.
+Solution delivery partnership keeps the architect accountable for design intent while enabling delivery, vendors, and operations to execute. It runs on structure: a decision service with response expectations, walkthroughs that share the why, recorded deviations, feasibility participation, contractual vendor obligations including exit, and operations engagement before design freeze. The partnership turns the architecture into a living agreement that evolves with evidence, and prevents both failure modes of the disengaged architect: a design that delivery ignores and a process that delivery routes around.

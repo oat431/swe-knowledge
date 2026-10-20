@@ -80,7 +80,7 @@ Optimize costs for a data system you manage:
 - [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]]: cloud cost management
 - [[02_Scaling_and_Performance_Tuning]]: performance optimization reduces cost
 - [[01_Distributed_Systems_for_Data]]: compute-storage separation is an architectural choice
-- [[01_Data_Architecture/00_overview|Data Architecture]]: architecture decisions drive cost
+- [[career-path/09_Data_and_ML_Engineer/01_Data_Architecture/00_overview|Data Architecture]]: architecture decisions drive cost
 - [[05_CI_CD_for_Data_and_ML]]: cost testing in CI catches expensive queries
 
 ## Common Pitfalls

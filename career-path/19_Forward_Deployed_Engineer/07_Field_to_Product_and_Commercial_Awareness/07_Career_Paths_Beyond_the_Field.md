@@ -16,15 +16,15 @@ tags:
 
 # Career Paths Beyond the Field
 
-> **Core skill:** Using field expertise as a platform for what comes next — knowing what the field builds in you, naming what each destination requires, and positioning with evidence instead of hope.
+> **Core skill:** Using field expertise as a platform for what comes next: knowing what the field builds in you, naming what each destination requires, and positioning with evidence instead of hope.
 
 ## Why This Matters
 
-Forward deployment develops a rare combination of skills, but it does so implicitly, and implicit skills are easy to under-value precisely by the people who hold them. The FDE accumulates judgment about customers, delivery under ambiguity, product sense from repeated contact with real usage, commercial literacy earned by watching deals live and die, and the ability to hold a room of executives. These are the scarce ingredients of several senior roles — product management, solutions architecture, engineering leadership, founding — but they are not automatically legible to hiring processes built around categories. The FDE who wants a choice of next steps must make their own experience legible: to themselves first, then to the rooms they want to enter.
+Forward deployment develops a rare combination of skills, but it does so implicitly, and implicit skills are easy to under-value precisely by the people who hold them. The FDE accumulates judgment about customers, delivery under ambiguity, product sense from repeated contact with real usage, commercial literacy earned by watching deals live and die, and the ability to hold a room of executives. These are the scarce ingredients of several senior roles (product management, solutions architecture, engineering leadership, founding), but they are not automatically legible to hiring processes built around categories. The FDE who wants a choice of next steps must make their own experience legible: to themselves first, then to the rooms they want to enter.
 
-The field also has a risk profile worth naming honestly. FDE work can be consuming — travel, customer pressure, context switching — and the skills compound best in the first several years, after which the marginal learning per deployment can flatten if the engineer is executing playbooks rather than building new judgment. Some FDEs thrive in the field for a career and grow into principal or field-leadership positions that shape how deployments are done. Others reach a point where the leverage they want — over products, over teams, over companies — lives further upstream. Neither path is a failure; the failure is drifting into one of them by inertia, discovering five years later that the skills were never documented and the choice was never made.
+The field also has a risk profile worth naming honestly. FDE work can be consuming (travel, customer pressure, context switching), and the skills compound best in the first several years, after which the marginal learning per deployment can flatten if the engineer is executing playbooks rather than building new judgment. Some FDEs thrive in the field for a career and grow into principal or field-leadership positions that shape how deployments are done. Others reach a point where the leverage they want (over products, over teams, over companies) lives further upstream. Neither path is a failure; the failure is drifting into one of them by inertia, discovering five years later that the skills were never documented and the choice was never made.
 
-Preparation for any transition shares one core discipline: convert field experience into artifacts. The outcomes evidence, the pattern briefs, the playbooks, the decision records — all of it doubles as a professional portfolio that most engineers never build because their work is only visible in a repository. A product manager candidate who can say "here is a pattern I documented across five accounts and carried to a roadmap change" is describing the job they are applying for. A founder candidate who has watched ten budgets approve or reject software is holding market research that cannot be bought. The field is a platform; the FDE's job is to leave with the receipts.
+Preparation for any transition shares one core discipline: convert field experience into artifacts. The outcomes evidence, the pattern briefs, the playbooks, the decision records: all of it doubles as a professional portfolio that most engineers never build because their work is only visible in a repository. A product manager candidate who can say "here is a pattern I documented across five accounts and carried to a roadmap change" is describing the job they are applying for. A founder candidate who has watched ten budgets approve or reject software is holding market research that cannot be bought. The field is a platform; the FDE's job is to leave with the receipts.
 
 ## What the Field Builds
 
@@ -49,6 +49,7 @@ Preparation for any transition shares one core discipline: convert field experie
 | Applied AI and specialist tracks | Deployment experience with models in real environments | Depth in evaluation, guardrails, and the discipline of your specialty |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     RANGE["Accumulate field range"] --> RECORD["Write down the results"]
     RECORD --> SKILL["Build the missing skill"]
@@ -57,7 +58,7 @@ flowchart LR
     POSITION --> MOVE["Move when the fit is real"]
 ```
 
-The test-in-small-ways step is what keeps a transition honest. Before committing to product, take on a scoped product-shaped project inside a deployment. Before leadership, lead something adjacent — an enablement program, a cross-account initiative. Small tests produce real evidence and real preferences, and they cost far less than a role change made on theory.
+The test-in-small-ways step is what keeps a transition honest. Before committing to product, take on a scoped product-shaped project inside a deployment. Before leadership, lead something adjacent: an enablement program, a cross-account initiative. Small tests produce real evidence and real preferences, and they cost far less than a role change made on theory.
 
 ## Practical Applications
 
@@ -66,7 +67,7 @@ The test-in-small-ways step is what keeps a transition honest. Before committing
 - [ ] The skills the field has built are written down with concrete examples, not adjectives
 - [ ] The destinations being considered are each described in terms of their real daily work
 - [ ] At least one missing skill per destination is identified, with a plan to build it
-- [ ] A small test of the next role has been run — a scoped project, a stretch assignment
+- [ ] A small test of the next role has been run: a scoped project, a stretch assignment
 - [ ] Results, artifacts, and outcome documents are collected where they can be shown
 - [ ] Relationships across the customer base and the company are maintained, not just used
 - [ ] The decision to stay or move is remade deliberately at intervals, not inherited from inertia
@@ -74,7 +75,7 @@ The test-in-small-ways step is what keeps a transition honest. Before committing
 ### Capability Evidence Log Template
 
 ```markdown
-## Capability Evidence — <name, period>
+## Capability Evidence: <name, period>
 
 | Capability | Situation | What I did | Observable result |
 |------------|-----------|------------|-------------------|
@@ -99,7 +100,7 @@ The test-in-small-ways step is what keeps a transition honest. Before committing
 - Small tests have produced evidence about the next role before any formal move
 - People in the destination function already know you as a contributor, not a candidate
 - Former customers and colleagues are references who volunteer, not ones you must chase
-- Whichever direction you choose — deeper in the field or beyond it — the choice was made, not accepted
+- Whichever direction you choose, deeper in the field or beyond it, the choice was made, not accepted
 
 ## Related Topics
 
@@ -111,4 +112,4 @@ The test-in-small-ways step is what keeps a transition honest. Before committing
 
 ## Summary
 
-Career paths beyond the field are reached by knowing what the field built in you, naming it with evidence, building the specific skills each destination requires, and testing the next role before committing to it. The FDE's experience — customer judgment, delivery under ambiguity, commercial literacy, executive communication — is exactly what upstream roles need, but only if it is made legible. The move, when it happens, should be a decision made deliberately and repeatedly, with a portfolio of receipts and a network of intact relationships — not an accident that happened while the deployment schedule was busy.
+Career paths beyond the field are reached by knowing what the field built in you, naming it with evidence, building the specific skills each destination requires, and testing the next role before committing to it. The FDE's experience (customer judgment, delivery under ambiguity, commercial literacy, executive communication) is exactly what upstream roles need, but only if it is made legible. The move, when it happens, should be a decision made deliberately and repeatedly, with a portfolio of receipts and a network of intact relationships, not an accident that happened while the deployment schedule was busy.

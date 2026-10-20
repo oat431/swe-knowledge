@@ -17,11 +17,11 @@ tags:
 
 # Ecosystem and Industry Analysis
 
-> **Core skill:** The principal engineer reads market forces beyond the organization — competitors, partners, standards bodies, regulators — building the technology ecosystem map, anticipating how ecosystem shifts drive technology strategy, and shaping open-source ecosystem strategy.
+> **Core skill:** The principal engineer reads market forces beyond the organization (competitors, partners, standards bodies, regulators), building the technology ecosystem map, anticipating how ecosystem shifts drive technology strategy, and shaping open-source ecosystem strategy.
 
 ## Why This Matters
 
-No organization builds technology in a vacuum. Every technology choice exists within an ecosystem of competitors, partners, standards, regulators, and open-source communities. A decision that looks optimal within the organization's walls can be catastrophic when the ecosystem shifts — a vendor is acquired, a standard is abandoned, a competitor open-sources your differentiator.
+No organization builds technology in a vacuum. Every technology choice exists within an ecosystem of competitors, partners, standards, regulators, and open-source communities. A decision that looks optimal within the organization's walls can be catastrophic when the ecosystem shifts: a vendor is acquired, a standard is abandoned, a competitor open-sources your differentiator.
 
 The principal engineer builds the ecosystem map that makes these forces visible and uses it to anticipate shifts before they become constraints. This is the external counterpart to enterprise systems thinking: just as the principal reads the internal system of capabilities and incentives, they read the external system of market forces and technology evolution.
 
@@ -52,6 +52,7 @@ Ecosystem shifts are the external forcing functions that demand strategy adaptat
 | **New entrant disruption** | A new competitor enters with a radically different technology approach | Evaluate whether the approach is a threat; consider whether to adopt or counter-position |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ECOSYSTEM["Ecosystem forces: competitors, partners, vendors, standards, regulators, open source"] --> MONITOR["Monitor: track signals across all ecosystem elements"]
     MONITOR --> SHIFT["Detect shifts: what changed and what it means"]
@@ -78,12 +79,12 @@ The principal analyzes competitor technology choices not to copy them but to und
 | Job postings for skills you do not have | They are betting on a capability you lack |
 | Open-source contributions to a project you depend on | They may be building influence over your dependency |
 | Acquisition of a vendor you use | Your vendor relationship is about to change |
-| Conference talks about architecture decisions you also face | How they solved a problem you share — useful intelligence |
+| Conference talks about architecture decisions you also face | How they solved a problem you share: useful intelligence |
 | API changes that remove capabilities | They are pivoting; capabilities you integrated with may disappear |
 
 ## Open-Source Ecosystem Strategy
 
-Open source is not a binary choice — it is an ecosystem strategy with multiple engagement models. The principal determines where the organization consumes, contributes, leads, or competes.
+Open source is not a binary choice. It is an ecosystem strategy with multiple engagement models. The principal determines where the organization consumes, contributes, leads, or competes.
 
 | Engagement Model | Description | When to Use |
 |-----------------|-------------|-------------|
@@ -161,9 +162,9 @@ Open source is not a binary choice — it is an ecosystem strategy with multiple
 - [[01_Enterprise_Systems_Thinking]]
 - [[02_Systems_of_Systems_Architecture]]
 - [[07_Regulatory_and_Geopolitical_Thinking]]
-- [[01_Technology_Strategy/00_overview|Technology Strategy]]
+- [[career-path/04_Principal_and_Distinguished_Engineer/01_Technology_Strategy/00_overview|Technology Strategy]]
 - [[career-path/03_Staff_Engineer/05_Systems_Thinking_and_Organizational_Design/00_overview|Systems Thinking and Organizational Design (Staff)]]
 
 ## Summary
 
-Ecosystem and industry analysis means reading market forces beyond the organization — competitors, partners, vendors, standards bodies, regulators, and open-source communities — building the ecosystem map that makes these forces visible, anticipating how shifts drive technology strategy, and developing an open-source engagement strategy that matches the organization's dependency on and contribution to the open-source ecosystem. The principal monitors continuously, assesses strategically, and ensures the organization is positioned for the ecosystem it inhabits, not the one it wishes existed.
+Ecosystem and industry analysis means reading market forces beyond the organization (competitors, partners, vendors, standards bodies, regulators, and open-source communities), building the ecosystem map that makes these forces visible, anticipating how shifts drive technology strategy, and developing an open-source engagement strategy that matches the organization's dependency on and contribution to the open-source ecosystem. The principal monitors continuously, assesses strategically, and ensures the organization is positioned for the ecosystem it inhabits, not the one it wishes existed.

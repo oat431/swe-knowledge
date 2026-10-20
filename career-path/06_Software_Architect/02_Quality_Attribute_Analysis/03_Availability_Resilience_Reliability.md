@@ -17,13 +17,13 @@ tags:
 
 # Availability Resilience Reliability
 
-> **Core skill:** Designing architecture for uptime, fault isolation, and graceful recovery — using fault detection, fault recovery, and fault prevention tactics to meet availability targets, measured through MTTR, MTTF, and MTBF.
+> **Core skill:** Designing architecture for uptime, fault isolation, and graceful recovery, using fault detection, fault recovery, and fault prevention tactics to meet availability targets, measured through MTTR, MTTF, and MTBF.
 
 ## Why This Matters
 
-Availability is not a feature — it is the condition under which every feature operates. A system that is unavailable for 1% of the time is unavailable 3.65 days per year, and no feature shipped in the other 361 days compensates for the lost 3.65. The architect who designs for availability is designing for the moment when something breaks — because in a distributed system, something is always breaking.
+Availability is not a feature. It is the condition under which every feature operates. A system that is unavailable for 1% of the time is unavailable 3.65 days per year, and no feature shipped in the other 361 days compensates for the lost 3.65. The architect who designs for availability is designing for the moment when something breaks, because in a distributed system, something is always breaking.
 
-Resilience is availability's operational twin: the ability to absorb failure and continue operating, potentially in a degraded mode. Reliability is the system's probability of operating without failure over a time period — a statistical property that architecture can influence but never guarantee. The three concepts are distinct but architecturally addressed together: availability through redundancy, resilience through isolation, reliability through fault prevention.
+Resilience is availability's operational twin: the ability to absorb failure and continue operating, potentially in a degraded mode. Reliability is the system's probability of operating without failure over a time period, a statistical property that architecture can influence but never guarantee. The three concepts are distinct but architecturally addressed together: availability through redundancy, resilience through isolation, reliability through fault prevention.
 
 Architects set availability targets (99.9%, 99.99%), translate them to architectural constraints (redundancy level, failover speed, recovery time), and select tactics that make the constraints achievable. The numbers are unforgiving: 99.99% availability permits 52 minutes of downtime per year. The architecture must make that number possible before the operations team can make it real.
 
@@ -80,6 +80,7 @@ Availability targets drive structure because reducing MTTR often requires differ
 | **Rate limiting** | Cap the rate of requests a component accepts | Prevents overload-induced failure | Must be tuned to real capacity; can reject legitimate traffic |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     TARGET["Availability target: 99.99 percent"] --> METRICS["Translate to MTTR and MTTF constraints"]
     METRICS --> DETECT["Select fault detection: heartbeat, ping-echo, health check"]
@@ -100,7 +101,7 @@ flowchart TD
 - [ ] Availability targets are set, measured, and communicated in business terms
 - [ ] The availability target is translated to MTTR and MTTF constraints
 - [ ] Fault detection tactics are layered: heartbeat for process failure, health check for degradation, synthetic transaction for end-to-end
-- [ ] Fault recovery is automated where MTTR demands it — manual recovery cannot meet sub-minute targets
+- [ ] Fault recovery is automated where MTTR demands it: manual recovery cannot meet sub-minute targets
 - [ ] Single points of failure are identified and mitigated: no component whose failure takes down the system
 - [ ] Bulkheading isolates critical functions from non-critical ones
 - [ ] The degradation path is designed: what stops working first when the system is under stress
@@ -136,12 +137,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[01_Quality_Attribute_Workshops]] — how availability scenarios are created and prioritized
-- [[07_Quality_Attribute_Trade_Offs]] — availability vs consistency and performance trade-offs
-- [[04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]] — availability evaluation methods
-- [[07_Operations_and_Infrastructure_Architecture/00_overview|Operations and Infrastructure Architecture]] — operational architecture for availability
-- [[05_Security_Architecture/00_overview|Security Architecture]] — availability as a security property in the CIA triad
+- [[01_Quality_Attribute_Workshops]]: how availability scenarios are created and prioritized
+- [[07_Quality_Attribute_Trade_Offs]]: availability vs consistency and performance trade-offs
+- [[career-path/06_Software_Architect/04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]]: availability evaluation methods
+- [[career-path/06_Software_Architect/07_Operations_and_Infrastructure_Architecture/00_overview|Operations and Infrastructure Architecture]]: operational architecture for availability
+- [[career-path/06_Software_Architect/05_Security_Architecture/00_overview|Security Architecture]]: availability as a security property in the CIA triad
 
 ## Summary
 
-Availability architecture designs for the moment when something breaks — because in distributed systems, something is always breaking. The architect sets a target (e.g., 99.99%), translates it to MTTR and MTTF constraints, and layers tactics across the failure lifecycle: fault detection (heartbeat, ping/echo, health checks, synthetic transactions), fault recovery (active/passive redundancy, state resynchronization, rollback, graceful degradation), and fault prevention (bulkheading, circuit breakers, rate limiting). The target determines the automation level: sub-minute recovery demands automated failover; manual recovery cannot meet 99.99% targets. The architecture must design not only the normal path but the recovery path — because the system's availability is measured not when everything is working, but when something has failed.
+Availability architecture designs for the moment when something breaks, because in distributed systems, something is always breaking. The architect sets a target (e.g., 99.99%), translates it to MTTR and MTTF constraints, and layers tactics across the failure lifecycle: fault detection (heartbeat, ping/echo, health checks, synthetic transactions), fault recovery (active/passive redundancy, state resynchronization, rollback, graceful degradation), and fault prevention (bulkheading, circuit breakers, rate limiting). The target determines the automation level: sub-minute recovery demands automated failover; manual recovery cannot meet 99.99% targets. The architecture must design not only the normal path but the recovery path, because the system's availability is measured not when everything is working, but when something has failed.

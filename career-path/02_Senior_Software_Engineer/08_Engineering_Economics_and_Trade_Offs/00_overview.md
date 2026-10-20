@@ -31,6 +31,7 @@ Economic literacy separates engineers who make technically elegant decisions fro
 ## Key Concepts
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph Economic Literacy
         A[Cost-Benefit Analysis] --> B[Build vs Buy Decisions]
@@ -72,6 +73,7 @@ flowchart TD
 ## Economic Decision Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     A[Identify Decision] --> B[Define Alternatives]
     B --> C[Estimate Costs]
@@ -142,10 +144,10 @@ Before making a significant technical decision:
 
 ## Integration with Other Capabilities
 
-- **[[04_Delivery_and_Execution/04_Technical_Debt_Strategy|Technical Debt Strategy]]:** Economic analysis justifies debt paydown
-- **[[03_Architecture_and_Design_Judgment/00_overview|Architecture and Design Judgment]]:** Economic trade-offs inform architectural decisions
-- **[[01_Technical_Ownership/00_overview|Technical Ownership]]:** Owners understand the economic impact of their systems
-- **[[06_Communication_and_Influence/02_Stakeholder_Communication|Stakeholder Communication]]:** Business cases require clear communication to non-technical audiences
+- **[[career-path/02_Senior_Software_Engineer/04_Delivery_and_Execution/04_Technical_Debt_Strategy|Technical Debt Strategy]]:** Economic analysis justifies debt paydown
+- **[[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/00_overview|Architecture and Design Judgment]]:** Economic trade-offs inform architectural decisions
+- **[[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/00_overview|Technical Ownership]]:** Owners understand the economic impact of their systems
+- **[[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/02_Stakeholder_Communication|Stakeholder Communication]]:** Business cases require clear communication to non-technical audiences
 
 ## Success Indicators
 

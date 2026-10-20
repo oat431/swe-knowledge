@@ -29,6 +29,7 @@ Senior engineers make strategic decisions about documentation: what's worth docu
 ## Documentation Types
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph Decision Documentation
         ADR[Architecture Decision Records]
@@ -202,7 +203,7 @@ Implement event sourcing for order history. Store all order events (created, upd
 ```
 
 **Example:**
-```markdown
+````markdown
 # Runbook: Restart Payment Service
 
 ## Purpose
@@ -242,7 +243,7 @@ Restart the payment service when it's unresponsive or experiencing issues.
 If service doesn't recover after restart:
 - Page on-call engineer: `@oncall-payment`
 - Create incident: `#incident-payment-service`
-```
+````
 
 ### Pattern 3: How-To Guides
 
@@ -271,7 +272,7 @@ If service doesn't recover after restart:
 ```
 
 **Example:**
-```markdown
+````markdown
 # How to Set Up Local Development Environment
 
 ## Overview
@@ -332,7 +333,7 @@ The application will be available at http://localhost:3000
 
 **Issue:** Database connection failed
 **Solution:** Ensure Docker is running and the postgres container is up
-```
+````
 
 ### Pattern 4: Architecture Overviews
 
@@ -362,7 +363,7 @@ The application will be available at http://localhost:3000
 ```
 
 **Example:**
-```markdown
+````markdown
 # Order Service Architecture
 
 ## Overview
@@ -371,6 +372,7 @@ The Order Service handles order creation, payment processing, and order fulfillm
 ## Components
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     Client[Client Apps] --> Gateway[API Gateway]
     Gateway --> OrderService[Order Service]
@@ -412,13 +414,14 @@ flowchart LR
 - Grafana dashboards for visualization
 - PagerDuty for alerting
 - Distributed tracing with Jaeger
-```
+````
 
 ## Documentation Maintenance
 
 ### The Documentation Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     Create[Create] --> Review[Review]
     Review --> Publish[Publish]

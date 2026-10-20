@@ -15,15 +15,15 @@ tags:
 
 # Sourcing and Pipeline
 
-> **Core skill:** Building a continuous flow of qualified candidates through multiple channels — before vacancies exist — so hiring starts from warmth, not from desperation.
+> **Core skill:** Building a continuous flow of qualified candidates through multiple channels (before vacancies exist), so hiring starts from warmth, not from desperation.
 
 ## Why This Matters
 
 A vacancy opened with no pipeline starts a countdown: the manager posts to job boards, waits, watches three weeks evaporate, then panic-lowers the bar or panic-pays an agency. Reactive sourcing hands leverage to the market. The team that has been meeting interesting engineers all year opens a requisition on a Monday and has screening calls booked by Wednesday.
 
-Sourcing is also a quality lever, not just a speed lever. The best engineers are rarely actively looking; they are visible in open source, speaking at meetups, and known by your own team. Job boards reach the subset that is actively looking — a fine subset, but a narrow one. Multi-channel sourcing changes who you get to choose from, and who you get to choose from changes who you hire.
+Sourcing is also a quality lever, not just a speed lever. The best engineers are rarely actively looking; they are visible in open source, speaking at meetups, and known by your own team. Job boards reach the subset that is actively looking. A fine subset, but a narrow one. Multi-channel sourcing changes who you get to choose from, and who you get to choose from changes who you hire.
 
-Finally, sourcing is a brand activity whether managed or not. Every candidate — including every rejected one — walks away with a story about what it is like to be considered by your company. That story either compounds into a reputation that sends more candidates, or into a warning that sends them elsewhere.
+Finally, sourcing is a brand activity whether managed or not. Every candidate (including every rejected one) walks away with a story about what it is like to be considered by your company. That story either compounds into a reputation that sends more candidates, or into a warning that sends them elsewhere.
 
 ## Channels Beyond Job Boards
 
@@ -36,7 +36,7 @@ Finally, sourcing is a brand activity whether managed or not. Every candidate �
 | **Agencies** | Engage for hard, senior, or niche searches with a clear brief | Fast, expensive, quality varies wildly | 15-30 percent of first-year comp |
 | **Open source presence** | Your team's visible work attracts inbound interest | Small volume, exceptional fit | Requires real OSS activity, not performative |
 
-No single channel is sufficient; the design principle is redundancy. When one channel dries up — a referral drought, a community gone quiet — the others carry the load.
+No single channel is sufficient; the design principle is redundancy. When one channel dries up (a referral drought, a community gone quiet), the others carry the load.
 
 ## Working the Referral Channel
 
@@ -56,10 +56,10 @@ Agencies are a scalpel, not a default. They earn their fee on searches where you
 
 | Situation | Agency Worth It | Better Alternative |
 |-----------|-----------------|--------------------|
-| Senior niche role, passive market (staff security, ML platform) | Yes — with exclusivity and a written brief | — |
+| Senior niche role, passive market (staff security, ML platform) | Yes, with exclusivity and a written brief | N/A |
 | Volume hiring of common profiles | No | Referrals plus job boards plus community |
 | Confidential search (replacing someone) | Often yes | Direct manager outreach if network covers it |
-| Time-boxed spike, two weeks to fill | Sometimes — as bridge, not strategy | Re-examine why the pipeline is empty |
+| Time-boxed spike, two weeks to fill | Sometimes, as bridge, not strategy | Re-examine why the pipeline is empty |
 
 The brief given to an agency is the JD from [[02_Job_Definition_and_Leveling]] plus the must-have screen. Without a written brief, the agency optimizes for submittal volume, and the team pays in wasted loops.
 
@@ -115,6 +115,7 @@ A pipeline that is 80 percent referrals will produce loops that are 80 percent s
 ## The Sourcing System
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PLAN["Workforce plan says what is coming"] --> CHANNELS["Work channels continuously"]
     CHANNELS --> REFERRALS["Referral program with specific asks"]
@@ -147,10 +148,10 @@ flowchart TD
 ```markdown
 Subject: [Specific thing they built or wrote]
 
-Hi [Name] — [one specific sentence about their work and why it caught my eye].
+Hi [Name], [one specific sentence about their work and why it caught my eye].
 
 I run the [team] at [company]. We are [one honest sentence about the problem space].
-No pitch — mostly wanted to connect. If you are ever curious about what we are building,
+No pitch, mostly wanted to connect. If you are ever curious about what we are building,
 I would be glad to share context. Either way, [genuine closing specific to their work].
 ```
 
@@ -172,7 +173,7 @@ I would be glad to share context. Either way, [genuine closing specific to their
 - A maintained silver-medalist list produces hires each year
 - Referral share of loops stays a minority share
 - Time-to-fill trends down without bar-lowering
-- Rejected candidates refer others — the strongest brand signal there is
+- Rejected candidates refer others: the strongest brand signal there is
 
 ## Related Topics
 
@@ -180,8 +181,8 @@ I would be glad to share context. Either way, [genuine closing specific to their
 - [[02_Job_Definition_and_Leveling]]: the role definition that channels are worked against
 - [[04_Interview_Design_and_Running]]: the loop that the pipeline feeds
 - [[06_Closing_and_Offers]]: a warm pipeline also softens competing-offer moments
-- [[04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: pipeline gaps show up first as delivery misses
+- [[career-path/11_Engineering_Manager/04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: pipeline gaps show up first as delivery misses
 
 ## Summary
 
-Sourcing and pipeline is the discipline of meeting good engineers before you need them: work multiple channels continuously — referrals with specific asks, communities, direct outreach, university relations, agencies only with a brief — and bank the warmth in a pipeline you spend when requisitions open. Treat candidate experience as brand work, because every rejected candidate is telling your story somewhere. The manager's test: when a vacancy appears, how many interesting people can you call this week?
+Sourcing and pipeline is the discipline of meeting good engineers before you need them: work multiple channels continuously (referrals with specific asks, communities, direct outreach, university relations, agencies only with a brief) and bank the warmth in a pipeline you spend when requisitions open. Treat candidate experience as brand work, because every rejected candidate is telling your story somewhere. The manager's test: when a vacancy appears, how many interesting people can you call this week?

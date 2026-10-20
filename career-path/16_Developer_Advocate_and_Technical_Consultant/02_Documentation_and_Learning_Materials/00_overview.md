@@ -14,13 +14,13 @@ tags:
 
 # Documentation and Learning Materials
 
-> **Core capability:** The advocate creates documentation that works — guides, tutorials, examples, references, and troubleshooting paths that let developers and customers succeed without human intervention.
+> **Core capability:** The advocate creates documentation that works: guides, tutorials, examples, references, and troubleshooting paths that let developers and customers succeed without human intervention.
 
 ## Why This Matters
 
-Documentation is the product's first user experience and its most scalable advocate. A developer's first hour with a framework is spent in the docs; if those docs fail, no conference talk or blog post repairs the impression. The best developer advocates treat documentation as engineering: tested, versioned, reviewed, and maintained — not an afterthought written by whoever lost the argument.
+Documentation is the product's first user experience and its most scalable advocate. A developer's first hour with a framework is spent in the docs; if those docs fail, no conference talk or blog post repairs the impression. The best developer advocates treat documentation as engineering: tested, versioned, reviewed, and maintained, not an afterthought written by whoever lost the argument.
 
-The discipline spans the canon: tutorials that teach, how-to guides that solve, references that document, and explanations that illuminate. The advocate's contribution is making them work together — coherent information architecture, examples that run, and troubleshooting that answers the questions support tickets actually contain.
+The discipline spans the canon: tutorials that teach, how-to guides that solve, references that document, and explanations that illuminate. The advocate's contribution is making them work together: coherent information architecture, examples that run, and troubleshooting that answers the questions support tickets actually contain.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ The discipline spans the canon: tutorials that teach, how-to guides that solve, 
 ## The Documentation Quadrant
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph Learning
         TUT["Tutorials: learning by doing"]
@@ -52,7 +53,7 @@ flowchart TD
     EXPL --> TUT
 ```
 
-Four content types, four jobs — mixing them into one document serves nobody.
+Four content types, four jobs. Mixing them into one document serves nobody.
 
 ## Practical Applications
 
@@ -82,11 +83,11 @@ Four content types, four jobs — mixing them into one document serves nobody.
 
 ## Related Capabilities
 
-- [[01_Technical_Communication/00_overview|Technical Communication]]: the broader communication craft
-- [[03_Facilitation_and_Enablement/00_overview|Facilitation and Enablement]]: live learning complements written docs
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/01_Technical_Communication/00_overview|Technical Communication]]: the broader communication craft
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/03_Facilitation_and_Enablement/00_overview|Facilitation and Enablement]]: live learning complements written docs
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/05_Documentation_Strategy|Documentation Strategy (Senior)]]: the engineering-side documentation discipline
 - [[career-path/07_SRE_and_Platform_Engineer/06_Developer_Platform/00_overview|Developer Platform (SRE)]]: internal developer experience documentation
 
 ## Summary
 
-Documentation is the advocate's most scalable artifact: tutorials that teach, guides that solve, references that specify, and troubleshooting that rescues — all tested, structured, and maintained with product discipline. When docs work, users succeed alone, support shrinks, and adoption accelerates without a single human conversation.
+Documentation is the advocate's most scalable artifact: tutorials that teach, guides that solve, references that specify, and troubleshooting that rescues, all tested, structured, and maintained with product discipline. When docs work, users succeed alone, support shrinks, and adoption accelerates without a single human conversation.

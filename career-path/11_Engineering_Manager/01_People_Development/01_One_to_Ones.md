@@ -16,11 +16,11 @@ tags:
 
 # One-to-Ones
 
-> **Core skill:** Running the one-to-one as the report's meeting — their agenda first, a career thread and a feedback thread, tracked over time, and adjusted to the person.
+> **Core skill:** Running the one-to-one as the report's meeting, their agenda first, a career thread and a feedback thread, tracked over time, and adjusted to the person.
 
 ## Why This Matters
 
-The one-to-one is the only meeting on the calendar that belongs to the report. Everything else — standups, planning, reviews — exists to get work done; the one-to-one exists to develop a person. When it works, it is where problems surface early, feedback lands, careers get planned, and trust compounds. When it decays into a status meeting, the manager loses their early-warning system and the report loses their only guaranteed audience.
+The one-to-one is the only meeting on the calendar that belongs to the report. Everything else (standups, planning, reviews) exists to get work done; the one-to-one exists to develop a person. When it works, it is where problems surface early, feedback lands, careers get planned, and trust compounds. When it decays into a status meeting, the manager loses their early-warning system and the report loses their only guaranteed audience.
 
 Managers who cancel one-to-ones under pressure are signaling, every time, that the work matters more than the person. The report notices, the agenda quietly shrinks, topics move elsewhere, and the manager starts hearing about problems after they became incidents. The one-to-one is not a meeting to protect when there is time; it is the meeting to protect because there is pressure.
 
@@ -35,7 +35,7 @@ Weekly, thirty to forty-five minutes, on a recurring calendar slot. The slot sur
 | Biweekly, 30 minutes | Senior and staff engineers | Respects autonomy; they hold their own thread. Never less than biweekly |
 | Extra sessions | Post-incident, pre-review, after re-org | Add time on top; do not steal the standing slot |
 
-The manager arrives on time, phone away, and reschedules to a real date when genuinely forced — never to "we will find time". The report learns the meeting is real by watching the manager protect it.
+The manager arrives on time, phone away, and reschedules to a real date when genuinely forced, never to "we will find time". The report learns the meeting is real by watching the manager protect it.
 
 ## Structure: Their Agenda First
 
@@ -56,11 +56,11 @@ The manager's own status items do not live here. If the manager fills the meetin
 | Status meeting | Report reads out tickets; manager nods; no development happens | Standup, async updates, project reviews |
 | Project review | The project eats the whole hour and the person disappears | Dedicated project cadence |
 | Performance ambush | Feedback saved for the one-to-one arrives as a surprise and lands as attack | Continuous small feedback plus formal reviews |
-| Therapy session | The manager is not a therapist; deep personal crisis needs professionals | EAP and HR — the manager supports, not treats |
+| Therapy session | The manager is not a therapist; deep personal crisis needs professionals | EAP and HR: the manager supports, not treats |
 
 ## Tracking Themes Across One-to-Ones
 
-Notes are written in the shared document during or right after the meeting: commitments, concerns, and themes. The manager reads them back before the next meeting and follows up on anything promised. Every quarter, the manager reviews each report's accumulated notes and asks three questions: what themes recur, what changed since last quarter, and what did we promise but not do. Those notes are the raw material for reviews, promotion cases, and performance management — written while things were small, never reconstructed after they got big.
+Notes are written in the shared document during or right after the meeting: commitments, concerns, and themes. The manager reads them back before the next meeting and follows up on anything promised. Every quarter, the manager reviews each report's accumulated notes and asks three questions: what themes recur, what changed since last quarter, and what did we promise but not do. Those notes are the raw material for reviews, promotion cases, and performance management, written while things were small, never reconstructed after they got big.
 
 ## Adjusting Per Person
 
@@ -116,6 +116,7 @@ The first one-to-one sets the frame. The manager comes with questions, not a spe
 ## The One-to-One Rhythm
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PREP["Read last notes and agenda"] --> THEIRS["Their topics first"]
     THEIRS --> FEED["Feedback thread small and specific"]
@@ -159,8 +160,8 @@ flowchart TD
 - [[03_Coaching_for_Growth]]: turning one-to-one topics into coaching moments
 - [[04_Career_Frameworks_and_Promotions]]: the structure behind the career thread
 - [[06_Motivation_and_Engagement]]: reading the person behind the agenda
-- [[02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: healthy teams make one-to-ones easier
+- [[career-path/11_Engineering_Manager/02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: healthy teams make one-to-ones easier
 
 ## Summary
 
-The one-to-one is the report's meeting: weekly, protected, their agenda first, with a career thread and a feedback thread tracked in writing over time. It adapts to the person — structured for juniors, partnership for seniors — and its cancellation pattern is a signal the manager reads honestly. Run well, it is the early-warning system, the feedback channel, and the career cockpit in one hour.
+The one-to-one is the report's meeting: weekly, protected, their agenda first, with a career thread and a feedback thread tracked in writing over time. It adapts to the person (structured for juniors, partnership for seniors) and its cancellation pattern is a signal the manager reads honestly. Run well, it is the early-warning system, the feedback channel, and the career cockpit in one hour.

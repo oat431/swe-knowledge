@@ -15,7 +15,7 @@ tags:
 
 # Goal Setting and Priorities
 
-> **Core skill:** Translating org strategy into a small set of team goals everyone can state from memory, keeping one visible priority list, and defending it by trading scope — not by absorbing everything.
+> **Core skill:** Translating org strategy into a small set of team goals everyone can state from memory, keeping one visible priority list, and defending it by trading scope, not by absorbing everything.
 
 ## Why This Matters
 
@@ -23,7 +23,7 @@ Most teams do not suffer from a lack of goals; they suffer from too many, stated
 
 The engineering manager is the translation layer. Org strategy arrives as ambitions and themes; the team needs three or fewer goals with measurable outcomes that connect daily work to those ambitions. The manager's test is brutal and simple: ask any engineer what the team is trying to accomplish this quarter and why it matters. Consistent answers mean the job is done; blank stares or five different answers mean it is not.
 
-Priorities are the goals' shadow. A goal list without a visible priority list invites everyone to insert their favorite work, and the team absorbs requests silently until capacity is a mystery. One list, publicly maintained, with an explicit way to say no — that is the machinery that makes goals real.
+Priorities are the goals' shadow. A goal list without a visible priority list invites everyone to insert their favorite work, and the team absorbs requests silently until capacity is a mystery. One list, publicly maintained, with an explicit way to say no. That is the machinery that makes goals real.
 
 ## From Strategy to Team Goals
 
@@ -36,7 +36,7 @@ The translation runs through questions, not documents: what is the org trying to
 | "Cut cost of goods sold" | Where is our spend concentrated? | Cut compute cost of the pipeline by 30 percent at equal throughput |
 | "Enterprise readiness" | What blocks the biggest deals? | Ship SSO, audit logs, and the compliance report by Q3 |
 
-A goal that cannot name the org ambition it serves is either a hobby or an unexamined inheritance. Both are fine to discover — and neither should survive the review unnamed.
+A goal that cannot name the org ambition it serves is either a hobby or an unexamined inheritance. Both are fine to discover, and neither should survive the review unnamed.
 
 ## Goal Formats: OKR or Simpler
 
@@ -58,7 +58,7 @@ The memorability test is the cheapest goal audit available.
 | What are we trying to do this quarter? | The same three goals, in the same words, from every engineer |
 | Why does it matter? | A sentence connecting to a customer or business outcome |
 | How will we know we got there? | The metric and its target, stated without checking a doc |
-| What are we not doing because of this? | A named sacrifice — proof the goal actually constrains |
+| What are we not doing because of this? | A named sacrifice: proof the goal actually constrains |
 
 That last question is the telling one. A goal that has never caused anything to be deprioritized is decoration.
 
@@ -68,7 +68,7 @@ Priorities live in exactly one place that everyone can see and the team keeps up
 
 | Property | Standard | Anti-Pattern |
 |----------|----------|--------------|
-| Singularity | One list for all team work — roadmap, tech debt, support | A tracker list, a spreadsheet, and a manager's head, all different |
+| Singularity | One list for all team work: roadmap, tech debt, support | A tracker list, a spreadsheet, and a manager's head, all different |
 | Visibility | Linkable by anyone, read-mostly, no login wall for stakeholders | Priority truth lives in the manager's status reports |
 | Ordering | Strict enough that "the top three" is a stable, quotable phrase | Everything marked high; the list is a bag |
 | Change discipline | Re-ordering is a decision with a reason attached | Silent re-ordering discovered by diffing screenshots |
@@ -76,11 +76,11 @@ Priorities live in exactly one place that everyone can see and the team keeps up
 
 ## The Line-of-Sight Problem
 
-Individual engineers disengage when they cannot see how their task list connects to the goal — the classic line-of-sight problem. The manager repairs it in two moves: goal statements that mention the user-facing change, and planning conversations that name which goal each epic serves.
+Individual engineers disengage when they cannot see how their task list connects to the goal. The classic line-of-sight problem. The manager repairs it in two moves: goal statements that mention the user-facing change, and planning conversations that name which goal each epic serves.
 
 | Disconnected Framing | Line-of-Sight Reframe |
 |----------------------|------------------------|
-| "Refactor the session service" | "Cut login latency in half so the activation goal is reachable — the session service is the blocker" |
+| "Refactor the session service" | "Cut login latency in half so the activation goal is reachable: the session service is the blocker" |
 | "Upgrade the framework" | "Unblock the two features the enterprise goal needs this quarter" |
 | "Pay down test debt" | "Make the release train reliable enough to ship the Q3 goal weekly" |
 
@@ -95,14 +95,14 @@ Scope conversations with your own management are trade-off presentations, not re
 | The options | Add and drop X, add and slip Y, or defer to next quarter |
 | The recommendation | Your call, with the reason, ready to be overruled |
 
-The manager who brings options gets treated as a partner in the trade. The manager who says "we can't" gets treated as an obstacle to route around — and the work arrives by another path anyway.
+The manager who brings options gets treated as a partner in the trade. The manager who says "we can't" gets treated as an obstacle to route around, and the work arrives by another path anyway.
 
 ## Goal Anti-Patterns
 
 | Anti-Pattern | Symptom | Correction |
 |--------------|---------|------------|
 | **Too many goals** | Seven goals, none remembered, none traded against | Hard cap at three; the rest are explicitly not goals |
-| **Vanity metrics** | Metrics that move when nothing improves — tickets closed, story points | Outcome metrics a customer or the business would notice |
+| **Vanity metrics** | Metrics that move when nothing improves: tickets closed, story points | Outcome metrics a customer or the business would notice |
 | **Set-and-forget** | Goals written in January, scored in December, never discussed | Monthly mention in team forum; quarterly real review |
 | **Inherited pseudo-goals** | Last year's goals copied forward because no one decided | Every goal earns its place each cycle or dies |
 | **Activity as outcome** | "Ship the redesign" with no measure of effect | Attach the usage or performance change the ship should cause |
@@ -111,6 +111,7 @@ The manager who brings options gets treated as a partner in the trade. The manag
 ## The Quarterly Goal Rhythm
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     STRATEGY["Org strategy and ambitions"] --> DRAFT["Draft team goals with metrics"]
     DRAFT --> TEAM["Team pressure-tests feasibility and line of sight"]
@@ -138,7 +139,7 @@ flowchart TD
 **Team goal template:**
 
 ```markdown
-## Team Goals — [Quarter]
+## Team Goals: [Quarter]
 
 Goal 1: [Outcome statement a customer would notice]
 Metric: [Measure] from [baseline] to [target] by [date]
@@ -176,9 +177,9 @@ Explicitly not this quarter: [parked items with revisit date]
 - [[02_Planning_Cadences_and_Commitments]]: goals become commitments through the planning cadence
 - [[03_Scope_and_Priority_Management]]: the machinery that keeps one priority list honest
 - [[04_Progress_Visibility_and_Reporting]]: progress signals report against these goals
-- [[05_Organizational_Awareness_and_Influence/00_overview|Organizational Awareness and Influence]]: reading org strategy correctly before translating it
+- [[career-path/11_Engineering_Manager/05_Organizational_Awareness_and_Influence/00_overview|Organizational Awareness and Influence]]: reading org strategy correctly before translating it
 - [[career-path/05_Tech_Lead/04_Team_Delivery_and_Execution_Leadership/00_overview|Delivery and Execution Leadership (Tech Lead)]]: the technical execution layer these goals steer
 
 ## Summary
 
-Goal setting and priorities is translation discipline: convert org strategy into three or fewer outcome goals with metrics and miss conditions, publish one visible priority list that every active item traces to, name the sacrifices that prove the goals constrain, and review honestly each quarter. Saying no upward is a trade-off presentation with options, not a refusal. The manager's test: ask five engineers what the team is working toward — identical answers mean the translation landed.
+Goal setting and priorities is translation discipline: convert org strategy into three or fewer outcome goals with metrics and miss conditions, publish one visible priority list that every active item traces to, name the sacrifices that prove the goals constrain, and review honestly each quarter. Saying no upward is a trade-off presentation with options, not a refusal. The manager's test: ask five engineers what the team is working toward: identical answers mean the translation landed.

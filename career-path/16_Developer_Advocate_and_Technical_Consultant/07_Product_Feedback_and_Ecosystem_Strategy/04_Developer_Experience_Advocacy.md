@@ -16,15 +16,15 @@ tags:
 
 # Developer Experience Advocacy
 
-> **Core skill:** Championing developer experience inside the organization — measuring friction, quantifying its cost, and turning the developer's daily reality into platform and tooling decisions.
+> **Core skill:** Championing developer experience inside the organization: measuring friction, quantifying its cost, and turning the developer's daily reality into platform and tooling decisions.
 
 ## Why This Matters
 
-Developer experience is the product's first impression and its daily tax. Every minute a developer spends fighting setup, deciphering errors, or working around an SDK quirk is a minute not spent building with the platform — and a small withdrawal from the account of goodwill that decides whether they return, recommend, and expand. DX problems rarely show up as loud complaints; they show up as quiet abandonment, slower integration timelines, and support load. Advocating for DX means making that invisible tax visible.
+Developer experience is the product's first impression and its daily tax. Every minute a developer spends fighting setup, deciphering errors, or working around an SDK quirk is a minute not spent building with the platform, and a small withdrawal from the account of goodwill that decides whether they return, recommend, and expand. DX problems rarely show up as loud complaints; they show up as quiet abandonment, slower integration timelines, and support load. Advocating for DX means making that invisible tax visible.
 
 The advocacy is genuinely difficult because DX improvements compete against features in every planning conversation. A feature has a demo, a launch, and a champion; fixing error messages has none of those things. The advocate's counter is quantification: time-to-first-success measured against competitors, drop-off rates at specific onboarding steps, support tickets per integration, correlated with activation and retention. Numbers turn DX from a matter of taste into a business case.
 
-DX advocacy is also where the advocate's own experience becomes evidence. Using the product daily, hitting the same sharp edges as the field, gives the advocate something no survey provides: an embodied, reproducible account of friction — precise, current, and verifiable. The discipline is to pair that lived experience with measurement, so the argument is both human and rigorous.
+DX advocacy is also where the advocate's own experience becomes evidence. Using the product daily, hitting the same sharp edges as the field, gives the advocate something no survey provides: an embodied, reproducible account of friction, precise, current, and verifiable. The discipline is to pair that lived experience with measurement, so the argument is both human and rigorous.
 
 ## What Developer Experience Covers
 
@@ -80,6 +80,7 @@ Stories move rooms; numbers keep the decision moved. Use both, in that order.
 ## The DX Advocacy Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     OBSERVE["Observe - journey, tickets, own friction log"] --> QUANTIFY["Quantify - time, drop-off, cost"]
     QUANTIFY --> RANK["Rank - by adoption impact"]
@@ -97,19 +98,19 @@ flowchart LR
 - [ ] A friction log is kept, timestamped and citable
 - [ ] DX items are framed with adoption or support cost, not taste
 - [ ] At least one DX metric appears in the team's standing dashboard
-- [ ] Improvements are re-measured after shipping — and celebrated
+- [ ] Improvements are re-measured after shipping, and celebrated
 - [ ] External benchmarks exist and are refreshed honestly
 
 ### Friction Log Template
 
 ```markdown
-## Friction Log — [quarter]
+## Friction Log: [quarter]
 | Date | Journey Step | What Happened | Time Lost | Evidence | Severity | Status |
 |------|--------------|---------------|-----------|----------|----------|--------|
 | [d] | [onboarding / api / errors / upgrade] | [specific friction] | [minutes] | [trace, ticket, quote] | [blocked / degraded / friction] | [open / filed / fixed] |
 
 ## Themes This Quarter
-- [theme] — cases: [n] — suspect fix: [x] — owner: [name]
+- [theme]; cases: [n]; suspect fix: [x]; owner: [name]
 ```
 
 ## Common Pitfalls
@@ -137,8 +138,8 @@ flowchart LR
 - [[02_Translating_Ecosystem_Needs_for_Engineers]]: DX evidence must be translated like any field signal
 - [[05_Feedback_Loop_Design]]: a friction log is only useful if loops route it to owners
 - [[career-path/07_SRE_and_Platform_Engineer/06_Developer_Platform/00_overview|Developer Platform (SRE)]]: internal platforms run the same DX logic for their users
-- [[02_Documentation_and_Learning_Materials/00_overview|Documentation and Learning Materials]]: docs are the highest-leverage DX surface
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/02_Documentation_and_Learning_Materials/00_overview|Documentation and Learning Materials]]: docs are the highest-leverage DX surface
 
 ## Summary
 
-Developer experience advocacy turns daily friction into platform decisions: map the developer journey, instrument time to first success, keep a living friction log, and make every case with a story plus a number tied to adoption or support cost. The advocate is uniquely positioned to do this because the product is used daily, not observed from a dashboard — and the discipline is to pair that lived experience with measurement until friction is impossible for the organization to ignore.
+Developer experience advocacy turns daily friction into platform decisions: map the developer journey, instrument time to first success, keep a living friction log, and make every case with a story plus a number tied to adoption or support cost. The advocate is uniquely positioned to do this because the product is used daily, not observed from a dashboard, and the discipline is to pair that lived experience with measurement until friction is impossible for the organization to ignore.

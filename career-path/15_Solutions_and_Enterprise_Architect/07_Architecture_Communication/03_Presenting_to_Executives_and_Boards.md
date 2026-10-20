@@ -16,15 +16,15 @@ tags:
 
 # Presenting to Executives and Boards
 
-> **Core skill:** The architect presents architecture at the top of the organization in the currency executives use — value, risk, cost, and strategic fit — giving decision-makers exactly what they need to decide, and nothing they do not.
+> **Core skill:** The architect presents architecture at the top of the organization in the currency executives use (value, risk, cost, and strategic fit), giving decision-makers exactly what they need to decide, and nothing they do not.
 
 ## Why This Matters
 
-Executives and boards do not buy architecture; they buy outcomes and manage exposure. Their time with the architect is measured in minutes, their attention is competed for by everything else in the business, and their competence lies in judgment rather than in the technical detail. A briefing that walks through components and protocols wastes the scarcest resource in the conversation — after which the decision is made without architecture's input, or not made at all.
+Executives and boards do not buy architecture; they buy outcomes and manage exposure. Their time with the architect is measured in minutes, their attention is competed for by everything else in the business, and their competence lies in judgment rather than in the technical detail. A briefing that walks through components and protocols wastes the scarcest resource in the conversation, after which the decision is made without architecture's input, or not made at all.
 
-The executive lens has three questions: what does this mean for value, what does it expose us to, and what does it cost? Everything an architect knows has to be compressed into those terms. The board adds a fourth question — whether the enterprise is well governed — which is why board-level architecture communication leans on assurance, ownership, and trend, the evidence that the estate is under control rather than merely busy.
+The executive lens has three questions: what does this mean for value, what does it expose us to, and what does it cost? Everything an architect knows has to be compressed into those terms. The board adds a fourth question (whether the enterprise is well governed), which is why board-level architecture communication leans on assurance, ownership, and trend, the evidence that the estate is under control rather than merely busy.
 
-The most common failure is a presentation without an ask. Executives expect to decide: approve an option, accept a risk, fund a stage, or endorse a direction. An architect who presents without a decision request has delivered a lecture; an architect who frames a clear recommendation with options and trade-offs has done their job. The goal is not to be understood and admired — it is to have the right decision made and resourced.
+The most common failure is a presentation without an ask. Executives expect to decide: approve an option, accept a risk, fund a stage, or endorse a direction. An architect who presents without a decision request has delivered a lecture; an architect who frames a clear recommendation with options and trade-offs has done their job. The goal is not to be understood and admired. It is to have the right decision made and resourced.
 
 ## What Executives Decide
 
@@ -40,7 +40,7 @@ The most common failure is a presentation without an ask. Executives expect to d
 
 | Topic | Strong Framing | Weak Framing |
 |-------|----------------|--------------|
-| Platform consolidation | Cost down, risk down, change faster — here is the evidence | Service inventories and protocol choices |
+| Platform consolidation | Cost down, risk down, change faster: here is the evidence | Service inventories and protocol choices |
 | Legacy risk | Exposure, likelihood, and what remediation buys | A diagram of an old system nobody has seen |
 | Target architecture | What the business can do that it cannot do today | Layer diagrams with no value narrative |
 | Security posture | Trends, residual risk, accountability, assurance cadence | Control counts and tool inventories |
@@ -49,7 +49,7 @@ The most common failure is a presentation without an ask. Executives expect to d
 ## The One-Page Architecture Brief
 
 ```markdown
-## Architecture Brief — <topic> — <date>
+## Architecture Brief: <topic>, <date>
 
 | Section | Content |
 |---------|---------|
@@ -66,6 +66,7 @@ The most common failure is a presentation without an ask. Executives expect to d
 ## The Presentation Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CONTEXT["Business context and the decision needed"] --> OPTIONS["Options with value, risk, and cost"]
     OPTIONS["Options with value, risk, and cost"] --> RECOMMEND["Recommendation and rationale"]
@@ -96,7 +97,7 @@ flowchart LR
 ### Q&A Preparation Sheet
 
 ```markdown
-## Anticipated Questions — <briefing>
+## Anticipated Questions: <briefing>
 
 | Question | Plain Answer | Supporting Evidence | Owner of Follow-up |
 |----------|--------------|---------------------|--------------------|
@@ -132,4 +133,4 @@ flowchart LR
 
 ## Summary
 
-Presenting to executives and boards is decision engineering: state the ask first, frame the architecture in value, risk, cost, and strategic terms, offer real options with honest trade-offs, and close with owners and dates. The architect's success is not being impressive in the room — it is walking out with the right decision made, resourced, and owned by people who understood exactly what they approved.
+Presenting to executives and boards is decision engineering: state the ask first, frame the architecture in value, risk, cost, and strategic terms, offer real options with honest trade-offs, and close with owners and dates. The architect's success is not being impressive in the room. It is walking out with the right decision made, resourced, and owned by people who understood exactly what they approved.

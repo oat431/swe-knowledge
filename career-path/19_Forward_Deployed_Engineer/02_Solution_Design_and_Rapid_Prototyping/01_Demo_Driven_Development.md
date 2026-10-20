@@ -16,13 +16,13 @@ tags:
 
 # Demo Driven Development
 
-> **Core skill:** Using prototypes as alignment instruments, not throwaway shows — every demo answers a question, moves a decision, and leaves an honest account of what still stands between it and production.
+> **Core skill:** Using prototypes as alignment instruments, not throwaway shows: every demo answers a question, moves a decision, and leaves an honest account of what still stands between it and production.
 
 ## Why This Matters
 
-In forward deployment the first artifact is rarely a specification; it is a working demo. Customers align around what they can see and touch, and field time is too expensive to spend on design debates in the abstract. A tight prototype running on the customer's own data converts a week of requirements meetings into one focused conversation — and it produces that conversation with evidence instead of adjectives.
+In forward deployment the first artifact is rarely a specification; it is a working demo. Customers align around what they can see and touch, and field time is too expensive to spend on design debates in the abstract. A tight prototype running on the customer's own data converts a week of requirements meetings into one focused conversation, and it produces that conversation with evidence instead of adjectives.
 
-But speed creates a dangerous illusion. A prototype built for a demo hides the work that production demands: error handling, data quality edge cases, permissions, scale, and operations. The FDE must hold two modes at once — "what can I show this week" and "what would it actually take to run this for real" — and must never let the first impersonate the second. Confusing the two is how deployments die in the gap between a successful pilot and an unshipped production system.
+But speed creates a dangerous illusion. A prototype built for a demo hides the work that production demands: error handling, data quality edge cases, permissions, scale, and operations. The FDE must hold two modes at once ("what can I show this week" and "what would it actually take to run this for real") and must never let the first impersonate the second. Confusing the two is how deployments die in the gap between a successful pilot and an unshipped production system.
 
 Demo-driven development is therefore a discipline of intent. Each demo has a question it exists to answer, an audience whose decision it is meant to move, and a written list of what it does not yet do. A demo that changes a decision has done its job; a demo that merely impresses has cost the customer trust it will have to lend back with interest.
 
@@ -49,6 +49,7 @@ Naming the type out loud keeps everyone honest. "This is a possibility demo" set
 | 5 | Log the gap to production | Gap list named honestly at the demo itself |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     QUESTION["Choose the question"] --> BUILD["Build the smallest demo"]
     BUILD --> RUN["Run it on real data"]
@@ -74,7 +75,7 @@ The gap list is not an apology; it is the most valuable artifact the demo produc
 ### Demo Brief Template
 
 ```markdown
-## Demo Brief — <customer, date>
+## Demo Brief: <customer, date>
 
 | Element | Detail |
 |---------|--------|
@@ -119,10 +120,10 @@ The gap list is not an apology; it is the most valuable artifact the demo produc
 
 - [[02_Designing_Under_Customer_Constraints]]
 - [[06_From_Prototype_to_Production]]
-- [[04_AI_Systems_in_Customer_Environments/00_overview|AI Systems in Customer Environments]]
+- [[career-path/19_Forward_Deployed_Engineer/04_AI_Systems_in_Customer_Environments/00_overview|AI Systems in Customer Environments]]
 - [[career-path/14_Product_Manager/07_Technical_Partnership/00_overview|Technical Partnership (PM)]]
 - [[career-path/18_Applied_AI_Engineer/01_LLM_Application_Patterns/00_overview|LLM Application Patterns (Applied AI)]]
 
 ## Summary
 
-Demo-driven development treats the prototype as an alignment instrument: each demo answers one named question, seeks one real decision, runs on the customer's actual data wherever possible, and ends with an honest gap list between what was shown and what production demands. Done this way, demos collapse weeks of debate into single conversations — and never quietly mortgage the customer's trust to fund the next standing ovation.
+Demo-driven development treats the prototype as an alignment instrument: each demo answers one named question, seeks one real decision, runs on the customer's actual data wherever possible, and ends with an honest gap list between what was shown and what production demands. Done this way, demos collapse weeks of debate into single conversations, and never quietly mortgage the customer's trust to fund the next standing ovation.

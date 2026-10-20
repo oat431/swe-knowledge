@@ -15,15 +15,15 @@ tags:
 
 # Issue Management
 
-> **Core skill:** Logging, triaging, and resolving issues — risks that have materialized — with assigned owners, resolution plans, target dates, and documented outcomes so issues are closed, not deferred indefinitely.
+> **Core skill:** Logging, triaging, and resolving issues (risks that have materialized) with assigned owners, resolution plans, target dates, and documented outcomes so issues are closed, not deferred indefinitely.
 
 ## Why This Matters
 
-An issue is a risk that fired. Something is wrong now — not might go wrong later. The project manager's response shifts from prevention to resolution: who owns this, what is the plan, when will it be resolved, and what is the impact in the meantime?
+An issue is a risk that fired. Something is wrong now, not might go wrong later. The project manager's response shifts from prevention to resolution: who owns this, what is the plan, when will it be resolved, and what is the impact in the meantime?
 
 Issue management is one of the most visible dimensions of project management competence because issues are what stakeholders see. A risk register is internal preparation; an issues log is the public record of problems the project is handling. The speed, clarity, and completeness of issue resolution shapes stakeholder confidence more than any status report.
 
-The discipline is simple but demanding: every issue gets an owner, a resolution plan, and a target date within one status cycle of being logged. Issues that linger without owners or deadlines erode credibility and compound — an unresolved issue is a block on dependent work.
+The discipline is simple but demanding: every issue gets an owner, a resolution plan, and a target date within one status cycle of being logged. Issues that linger without owners or deadlines erode credibility and compound: an unresolved issue is a block on dependent work.
 
 ## Issue vs. Risk
 
@@ -32,7 +32,7 @@ The discipline is simple but demanding: every issue gets an owner, a resolution 
 | Timing | Future: could happen | Present: has happened |
 | Action | Prevention, mitigation, contingency | Resolution, containment, recovery |
 | Register | Risk register | Issue log |
-| Urgency | Depends on proximity | Immediate — it is already affecting the project |
+| Urgency | Depends on proximity | Immediate: it is already affecting the project |
 | Owner | Risk owner monitors and responds | Issue owner resolves |
 
 A risk becomes an issue when its trigger condition is met or when it materializes regardless of response. The entry moves from the risk register to the issue log.
@@ -40,6 +40,7 @@ A risk becomes an issue when its trigger condition is met or when it materialize
 ## The Issue Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DETECT["Issue detected or risk fires"] --> LOG["Log: describe issue, impact, date identified"]
     LOG --> TRIAGE["Triage: assess severity and urgency"]
@@ -81,7 +82,7 @@ An issue resolution plan answers:
 |-------|---------|----------|
 | Issue ID | Unique identifier | Sequential or category-prefixed |
 | Date identified | When the issue was first detected | The detection date, not the log date |
-| Description | What happened, specifically | Not "slow progress" — "API endpoint returns 500 errors on 15% of requests" |
+| Description | What happened, specifically | Not "slow progress": "API endpoint returns 500 errors on 15% of requests" |
 | Severity | Critical / High / Medium / Low | From triage |
 | Impact | Affected deliverables, schedule, cost | Quantified where possible |
 | Owner | One named person | The person accountable for resolution |
@@ -120,7 +121,7 @@ Issue data is project intelligence:
 
 - [ ] Every issue is logged within one business day of detection
 - [ ] Severity is assessed and escalation path is followed
-- [ ] An owner is assigned — one person, never "the team"
+- [ ] An owner is assigned: one person, never "the team"
 - [ ] A resolution plan exists with target date within one status cycle of logging
 - [ ] Workaround is documented if resolution is not immediate
 - [ ] Issue status is updated in every status cycle
@@ -130,7 +131,7 @@ Issue data is project intelligence:
 **Issue log entry template:**
 
 ```markdown
-## Issue: [ISSUE-ID] — [One-line description]
+## Issue: [ISSUE-ID], [One-line description]
 
 **Date identified:** [Date]
 **Severity:** [Critical / High / Medium / Low]
@@ -139,8 +140,8 @@ Issue data is project intelligence:
 
 **Owner:** [One name]
 **Resolution plan:**
-1. [Action] — [owner] — [target date]
-2. [Action] — [owner] — [target date]
+1. [Action]: [owner], [target date]
+2. [Action]: [owner], [target date]
 
 **Target resolution date:** [Date]
 **Workaround:** [Interim measure to keep work moving]
@@ -164,16 +165,16 @@ Issue data is project intelligence:
 - Every issue has an owner and a target resolution date
 - Resolution time is stable or decreasing
 - Issues are verified resolved before closure
-- Issue recurrence is rare — root cause is addressed
+- Issue recurrence is rare: root cause is addressed
 
 ## Related Topics
 
 - [[02_Risk_Identification]]: risks that are missed become issues without warning
 - [[04_Risk_Response_Planning]]: contingency plans are executed when risks become issues
 - [[06_Risk_Monitoring_and_Control]]: risk monitoring detects when risks become issues
-- [[01_Initiation_and_Charter/00_overview|Initiation and Charter]]: issue escalation path established at initiation
+- [[career-path/13_Project_and_Program_Manager/01_Initiation_and_Charter/00_overview|Initiation and Charter]]: issue escalation path established at initiation
 - [[career-path/12_Technical_Program_Manager/04_Risk_and_Issue_Leadership/00_overview|Risk and Issue Leadership (TPM)]]: program-level issue management
 
 ## Summary
 
-Issue management is the project manager's response when a risk fires: log, triage, assign an owner, build a resolution plan with a target date, execute, verify, and close — with documented resolution notes. Every issue gets an owner and a target date within one status cycle. Issues that linger without owners erode credibility and compound into larger problems. The issue log is the public record of how the project handles problems; its quality — speed, clarity, completeness — shapes stakeholder confidence more than any status report.
+Issue management is the project manager's response when a risk fires: log, triage, assign an owner, build a resolution plan with a target date, execute, verify, and close, with documented resolution notes. Every issue gets an owner and a target date within one status cycle. Issues that linger without owners erode credibility and compound into larger problems. The issue log is the public record of how the project handles problems; its quality (speed, clarity, completeness) shapes stakeholder confidence more than any status report.

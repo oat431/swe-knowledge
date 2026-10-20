@@ -16,15 +16,15 @@ tags:
 
 # Operational Handover and Runbooks
 
-> **Core skill:** Making the system runnable by the customer's own teams — documentation that gets used, drills that build muscle, and a handover plan that survives staff turnover.
+> **Core skill:** Making the system runnable by the customer's own teams: documentation that gets used, drills that build muscle, and a handover plan that survives staff turnover.
 
 ## Why This Matters
 
-A system that only the FDE can run is not a deployment — it is a dependency with a monthly invoice. The end state of forward-deployed work is the customer operating their own system: deploying its changes, watching its health, handling its known failure modes, and knowing when to escalate. Handover is what converts the FDE from operator to advisor, and it is a phase with its own plan, timeline, and exit criteria — not a folder of documents emailed at go-live. Teams that treat handover as a deliverable rather than a process discover, months later, that knowledge never actually transferred.
+A system that only the FDE can run is not a deployment. It is a dependency with a monthly invoice. The end state of forward-deployed work is the customer operating their own system: deploying its changes, watching its health, handling its known failure modes, and knowing when to escalate. Handover is what converts the FDE from operator to advisor, and it is a phase with its own plan, timeline, and exit criteria, not a folder of documents emailed at go-live. Teams that treat handover as a deliverable rather than a process discover, months later, that knowledge never actually transferred.
 
 What transfers in handover is broader than steps. It includes access and credentials, ownership of monitoring and alerts, decision rights over restarts and changes, the vendor escalation path, and the hard-won knowledge of which problems are routine and which are signals of something worse. A runbook covers the procedural part; the ownership map covers the organizational part. Both need to exist, and both need to be tested, because an untested runbook is a rumor about operations rather than a capability.
 
-Receivers learn by doing. Reading documentation builds recognition; running the operations builds competence. The handover plan therefore works through a ramp: watch the FDE do it, run it jointly, run it alone with the FDE watching, then run it alone. Staff turnover is the true test — after the original recipients move on, is the system still operable? That question turns handover from a polite ritual into an engineering requirement.
+Receivers learn by doing. Reading documentation builds recognition; running the operations builds competence. The handover plan therefore works through a ramp: watch the FDE do it, run it jointly, run it alone with the FDE watching, then run it alone. Staff turnover is the true test: after the original recipients move on, is the system still operable? That question turns handover from a polite ritual into an engineering requirement.
 
 ## What Handover Actually Transfers
 
@@ -50,6 +50,7 @@ Receivers learn by doing. Reading documentation builds recognition; running the 
 | Version and owner | Who maintains it and when it was last exercised | The runbook silently ages out of truth |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     DOC["Document the top failure modes"] --> DRILL["Run supervised drills"]
     DRILL --> SHADOW["Shadow real operations"]
@@ -78,13 +79,13 @@ The fade from doing to advising is deliberate: each phase removes the FDE from t
 - [ ] Monitoring and alerting reach the customer's operations team, with agreed thresholds
 - [ ] Production access is held by the customer; the FDE's access is scoped and time-bound
 - [ ] Every component and integration has a named owner on the customer side
-- [ ] The support path — severities, hours, contact routes — is documented and agreed
+- [ ] The support path (severities, hours, contact routes) is documented and agreed
 - [ ] A fade-out schedule exists with exit criteria, not just good intentions
 
 ### Runbook Template
 
 ```markdown
-## Runbook — <scenario>
+## Runbook: <scenario>
 
 | Field | Value |
 |-------|-------|
@@ -127,4 +128,4 @@ The fade from doing to advising is deliberate: each phase removes the FDE from t
 
 ## Summary
 
-Operational handover and runbooks are how the FDE works themselves out of a job the customer should own: transfer knowledge, access, monitoring, ownership, and decision rights through a planned ramp of drills and supervised independence. Runbooks written against real failure modes, exercised by the receiving teams, and tied to a fade-out schedule with exit criteria turn a deployment into a capability — one that keeps working after staff turnover and long after the FDE has moved to the next field.
+Operational handover and runbooks are how the FDE works themselves out of a job the customer should own: transfer knowledge, access, monitoring, ownership, and decision rights through a planned ramp of drills and supervised independence. Runbooks written against real failure modes, exercised by the receiving teams, and tied to a fade-out schedule with exit criteria turn a deployment into a capability: one that keeps working after staff turnover and long after the FDE has moved to the next field.

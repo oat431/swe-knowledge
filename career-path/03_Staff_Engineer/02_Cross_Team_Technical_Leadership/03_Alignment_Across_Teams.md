@@ -16,13 +16,13 @@ tags:
 
 # Alignment Across Teams
 
-> **Core skill:** Creating agreement across teams without authority — mapping stakeholders, pre-aligning one-on-one, running meetings on options rather than positions, and recording agreements with dissent.
+> **Core skill:** Creating agreement across teams without authority: mapping stakeholders, pre-aligning one-on-one, running meetings on options rather than positions, and recording agreements with dissent.
 
 ## Why This Matters
 
-Cross-team work runs on agreement, and agreement is not a meeting outcome — it is the product of a sequence of conversations, most of them one-on-one, most of them before the meeting. The staff engineer who calls a cross-team meeting to "get alignment" has the process backwards: the meeting is where already-aligned stakeholders ratify, not where alignment happens. Getting this backwards is why so many multi-team initiatives die: the meeting produced a decision that nobody felt they made.
+Cross-team work runs on agreement, and agreement is not a meeting outcome. It is the product of a sequence of conversations, most of them one-on-one, most of them before the meeting. The staff engineer who calls a cross-team meeting to "get alignment" has the process backwards: the meeting is where already-aligned stakeholders ratify, not where alignment happens. Getting this backwards is why so many multi-team initiatives die: the meeting produced a decision that nobody felt they made.
 
-Alignment without authority has a specific shape. First, map who actually decides, influences, and executes. Second, hold pre-alignment conversations where objections surface privately, when they are cheap. Third, run the alignment meeting on options, not positions, so the discussion is about trade-offs rather than egos. Fourth, document the agreement with dissent recorded. And fifth — the step everyone skips — shepherd the agreement after the meeting until it becomes behavior.
+Alignment without authority has a specific shape. First, map who actually decides, influences, and executes. Second, hold pre-alignment conversations where objections surface privately, when they are cheap. Third, run the alignment meeting on options, not positions, so the discussion is about trade-offs rather than egos. Fourth, document the agreement with dissent recorded. And fifth (the step everyone skips) shepherd the agreement after the meeting until it becomes behavior.
 
 ## Stakeholder Mapping
 
@@ -44,7 +44,7 @@ Map before you write the proposal. A stakeholder missed until the meeting is a s
 | With each executor | Test feasibility and ownership appetite |
 | With likely dissenters | Understand the objection; fix what is fixable |
 
-The pre-alignment conversation has one question per person: "What would make you able to support this?" The answers are the meeting agenda — the objections you could not fix in advance are the only ones the meeting should debate.
+The pre-alignment conversation has one question per person: "What would make you able to support this?" The answers are the meeting agenda: the objections you could not fix in advance are the only ones the meeting should debate.
 
 ## Running the Alignment Meeting
 
@@ -79,7 +79,7 @@ A decision record with dissent is stronger than a unanimous one: the dissent is 
 | Deviations surface | Divergence reports to the record, not to gossip |
 | Review happens | The review date arrives and is honored |
 
-Agreement decays by default. The shepherd's job is to make the decay visible and correct it — or, at the review date, to re-open the decision properly.
+Agreement decays by default. The shepherd's job is to make the decay visible and correct it or, at the review date, to re-open the decision properly.
 
 ## Re-Opening Decisions the Right Way
 
@@ -90,9 +90,10 @@ Agreement decays by default. The shepherd's job is to make the decay visible and
 | A review date reached | A surprise at a random meeting |
 | Options re-examined with evidence | The original decision re-litigated |
 
-Decisions should be re-openable — but only on new information, at the review date, through the owners. The re-opening rule is what makes decisions safe to make in the first place.
+Decisions should be re-openable, but only on new information, at the review date, through the owners. The re-opening rule is what makes decisions safe to make in the first place.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MAP["Map stakeholders"] --> PREALIGN["Pre-align one on one"]
     PREALIGN --> OPTIONS["Meeting on options not positions"]
@@ -106,7 +107,7 @@ flowchart TD
 ## Practical Applications
 
 ```markdown
-# Alignment Plan — [decision] — [date]
+# Alignment Plan: [decision], [date]
 
 ## Stakeholders
 - [ ] Decider: [name] | Influencers: [names]
@@ -162,9 +163,9 @@ Checklist:
 
 - [[02_Driving_Technical_Change]]: alignment is the front half of change
 - [[07_Cross_Team_Communication]]: the records and writing that make alignment durable
-- [[01_The_Staff_Role_and_Scope/00_overview|The Staff Role and Scope]]: the mandate this alignment executes
+- [[career-path/03_Staff_Engineer/01_The_Staff_Role_and_Scope/00_overview|The Staff Role and Scope]]: the mandate this alignment executes
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/03_Influence_Without_Authority|Influence Without Authority (Senior)]]: the team-level foundation
 
 ## Summary
 
-Alignment across teams is built in private and ratified in public: map the stakeholders, hold pre-alignment conversations that surface objections cheaply, run the meeting on options with a named decider, record the decision with its dissent, and shepherd until the agreement becomes behavior. Re-open decisions only on new information, at the review date, through the owners — the rule that makes decisions safe to make.
+Alignment across teams is built in private and ratified in public: map the stakeholders, hold pre-alignment conversations that surface objections cheaply, run the meeting on options with a named decider, record the decision with its dissent, and shepherd until the agreement becomes behavior. Re-open decisions only on new information, at the review date, through the owners: the rule that makes decisions safe to make.

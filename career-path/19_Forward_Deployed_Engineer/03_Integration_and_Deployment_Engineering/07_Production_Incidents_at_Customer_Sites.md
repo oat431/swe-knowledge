@@ -16,13 +16,13 @@ tags:
 
 # Production Incidents at Customer Sites
 
-> **Core skill:** Managing incidents when your system is the event — stabilizing fast, communicating honestly on a cadence, fixing the cause, and leaving the relationship stronger than before.
+> **Core skill:** Managing incidents when your system is the event: stabilizing fast, communicating honestly on a cadence, fixing the cause, and leaving the relationship stronger than before.
 
 ## Why This Matters
 
-Every deployed system eventually stars in a customer incident. The invoice run fails on quarter-end close. The integration stalls during the CEO's Monday briefing. The timing is never convenient and the audience is never small. What happens in the first hour — who declares, who stabilizes, who communicates, and who decides — usually determines the damage more than the underlying defect does. An hour of clean command and honest updates leaves a customer thinking "they handle problems well." An hour of silence and improvisation leaves a customer asking whether the deployment should exist at all.
+Every deployed system eventually stars in a customer incident. The invoice run fails on quarter-end close. The integration stalls during the CEO's Monday briefing. The timing is never convenient and the audience is never small. What happens in the first hour (who declares, who stabilizes, who communicates, and who decides) usually determines the damage more than the underlying defect does. An hour of clean command and honest updates leaves a customer thinking "they handle problems well." An hour of silence and improvisation leaves a customer asking whether the deployment should exist at all.
 
-Incidents at customer sites have a distinctive shape. The FDE is usually a bridge between two incident organizations: the customer's operations teams, following their processes, and the FDE's own engineering teams, holding the deep knowledge. Neither side has the full picture, and both need a single voice that translates: what is known, what is unknown, what is being done, when the next update comes. That voice is often the FDE. Command in this context means clarity — declaring severity, assigning roles, protecting the fixers from interruption, and keeping every audience informed at the pace they need.
+Incidents at customer sites have a distinctive shape. The FDE is usually a bridge between two incident organizations: the customer's operations teams, following their processes, and the FDE's own engineering teams, holding the deep knowledge. Neither side has the full picture, and both need a single voice that translates: what is known, what is unknown, what is being done, when the next update comes. That voice is often the FDE. Command in this context means clarity: declaring severity, assigning roles, protecting the fixers from interruption, and keeping every audience informed at the pace they need.
 
 The aftermath is where trust is rebuilt or lost. A postmortem that names systemic causes, produces real corrective actions with owners, and visibly improves detection and response converts an incident into evidence of competence. The FDE's instinct to move on quickly is exactly wrong: the postmortem, shared honestly with the customer, is one of the highest-return activities in the entire engagement.
 
@@ -43,12 +43,13 @@ Declare early and downgrade later. An incident channel with no incident burns le
 
 | Audience | What They Need | Cadence |
 |----------|----------------|---------|
-| Customer operators | Technical state, what to do or not do, workarounds | Frequent, even when unchanged — silence reads as chaos |
+| Customer operators | Technical state, what to do or not do, workarounds | Frequent, even when unchanged: silence reads as chaos |
 | Customer business and executives | Impact in business terms, confidence in the response, next milestone | At declaration, at stabilization, at resolution |
 | Your own engineering team | Full technical detail, evidence, and what is needed from them | Continuous in the technical channel |
 | Account and support teams | Facts they will be asked about, and the approved narrative | Before they are surprised by the customer |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     DETECT["Detect and confirm impact"] --> DECLARE["Declare and open a channel"]
     DECLARE --> STABILIZE["Stabilize before diagnosing"]
@@ -83,7 +84,7 @@ flowchart LR
 ### Incident Log Template
 
 ```markdown
-## Incident — <title, date, severity>
+## Incident: <title, date, severity>
 
 | Field | Value |
 |-------|-------|
@@ -120,10 +121,10 @@ flowchart LR
 
 - [[04_Field_Debugging_and_Troubleshooting]]
 - [[06_Operational_Handover_and_Runbooks]]
-- [[06_Customer_Communication_and_Executive_Influence/00_overview|Customer Communication and Executive Influence]]
+- [[career-path/19_Forward_Deployed_Engineer/06_Customer_Communication_and_Executive_Influence/00_overview|Customer Communication and Executive Influence]]
 - [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]]
 - [[body-of-knowledge/CyBOK/01_Risk_Management_and_Governance|Risk Management and Governance]]
 
 ## Summary
 
-Production incidents at customer sites are the moments the deployment's credibility is stress-tested in public: stabilize before diagnosing, communicate on an honest cadence to every audience in their own language, resolve with verification, and review with systemic causes and completed actions. Handled with discipline, an incident becomes proof that the system is operated seriously — and the relationship that emerges is stronger than the one that existed before the incident began.
+Production incidents at customer sites are the moments the deployment's credibility is stress-tested in public: stabilize before diagnosing, communicate on an honest cadence to every audience in their own language, resolve with verification, and review with systemic causes and completed actions. Handled with discipline, an incident becomes proof that the system is operated seriously, and the relationship that emerges is stronger than the one that existed before the incident began.

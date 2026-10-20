@@ -42,11 +42,12 @@ Ownership does not mean doing everything yourself. It means:
 | 05 | Decision Ownership | Making, recording, and standing behind technical decisions | ✅ Done | `05_Decision_Ownership.md` |
 | 06 | Ownership Evidence | Building a case for promotion from outcomes | ✅ Done | `06_Ownership_Evidence.md` |
 
-**Completion:** 6/6 — 100%
+**Completion:** 6/6, 100%
 
 ## How the Topics Connect
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     S["01 System Ownership"] --> L["02 Lifecycle Ownership"]
     L --> D["03 Technical Debt and Maintainability"]
@@ -88,5 +89,5 @@ Use this to gauge your current level of technical ownership:
 ## Related
 
 - [[00_overview|Senior Software Engineer Overview]]
-- [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]] — ownership expands from one system to multiple systems
-- [[career-path/05_Tech_Lead/00_overview|Tech Lead]] — ownership expands to team-level technical coordination
+- [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]: ownership expands from one system to multiple systems
+- [[career-path/05_Tech_Lead/00_overview|Tech Lead]]: ownership expands to team-level technical coordination

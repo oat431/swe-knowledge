@@ -5,7 +5,7 @@ capability_area: quality-reliability-security
 career_path: senior-software-engineer
 prerequisite:
   - "[[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]]"
-  - "[[01_Technical_Ownership/04_Production_Responsibility]]"
+  - "[[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/04_Production_Responsibility]]"
 tags:
   - career-path
   - senior-engineer
@@ -29,6 +29,7 @@ Site Reliability Engineering (SRE) is not a separate team. It is a set of practi
 ## Core SRE Concepts
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SLI["SLI\nService Level Indicator\n(what we measure)"] --> SLO["SLO\nService Level Objective\n(target we aim for)"]
     SLO --> ERROR["Error Budget\n(how much we can fail)"]
@@ -194,7 +195,7 @@ Ensure the system can handle expected load:
 - [[04_Incident_Response]] : incident response is a core SRE practice
 - [[06_Production_Readiness]] : production readiness includes SLOs and monitoring
 - [[07_Chaos_Engineering]] : chaos engineering validates SLOs under failure
-- [[01_Technical_Ownership/04_Production_Responsibility]] : production responsibility includes reliability
+- [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/04_Production_Responsibility]] : production responsibility includes reliability
 - [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]] : operations and SRE
 
 ## Key Takeaways

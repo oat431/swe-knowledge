@@ -11,9 +11,9 @@ tags:
 
 # Audit: Software Engineer
 
-> **Verdict:** Clean and accurate, but it is the **thinnest folder in the map** — a single 509-word overview, while every other path has 37–71 notes. As the declared starting point it is the page most readers open first, and **"mid-level engineer" is used 218 times elsewhere as the comparison baseline, but this folder never defines it**.
+> **Verdict:** Clean and accurate, but it is the **thinnest folder in the map**, a single 509-word overview, while every other path has 37–71 notes. As the declared starting point it is the page most readers open first, and **"mid-level engineer" is used 218 times elsewhere as the comparison baseline, but this folder never defines it**.
 >
-> **Overall: 2 / 5** — the right skeleton, missing the body.
+> **Overall: 2 / 5**. The right skeleton, missing the body.
 
 ## Snapshot
 

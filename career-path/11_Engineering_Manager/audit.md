@@ -82,10 +82,10 @@ tags:
 | 01 People Development | ✅ Excellent | Add first-90-days for new managers |
 | 02 Team Formation & Health | ✅ Strong (remote/hybrid, exits) | Consolidate inclusion practices |
 | 03 Hiring & Staffing | ✅ Excellent (most complete in the map) | Add interview integrity with AI tools |
-| 04 Delivery Leadership for Managers | ✅ Strong | — |
+| 04 Delivery Leadership for Managers | ✅ Strong | N/A |
 | 05 Org Awareness & Influence | ✅ Strong (ethics note) | Add manager ↔ IC pendulum |
 | 06 Technical Context for Managers | ✅ Strong | Add AI adoption leadership |
-| 07 Manager Communication | ✅ Strong | — |
+| 07 Manager Communication | ✅ Strong | N/A |
 
 ## Quick Fixes
 

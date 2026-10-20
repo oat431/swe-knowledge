@@ -16,7 +16,7 @@ tags:
 
 # Working with Architects and Tech Leads
 
-> **Core skill:** Building a productive partnership with the program's technical authorities — architect and tech leads — where the TPM owns the integration flow, the cadence, and the decision process, while technical authorities own the technical content.
+> **Core skill:** Building a productive partnership with the program's technical authorities (architect and tech leads), where the TPM owns the integration flow, the cadence, and the decision process, while technical authorities own the technical content.
 
 ## Why This Matters
 
@@ -38,13 +38,14 @@ The partnership works when responsibilities are clearly divided and mutually und
 | Stakeholder technical communication | Translates technical status for non-technical stakeholders | Communicates architecture decisions and rationale to technical stakeholders | Communicates workstream technical approach to their team and peers |
 | Technical quality standards | Ensures quality gates are in the program plan and enforced | Defines architecture quality standards; reviews for compliance | Implements quality standards within the workstream |
 
-The division is simple: technical authorities decide what to build and how to build it; the TPM ensures they decide on time, with the right people in the room, and that the program acts on the decision. When either side crosses the line — the TPM making technical decisions, or the architect running the program review — the partnership strains and the program suffers.
+The division is simple: technical authorities decide what to build and how to build it; the TPM ensures they decide on time, with the right people in the room, and that the program acts on the decision. When either side crosses the line (the TPM making technical decisions, or the architect running the program review), the partnership strains and the program suffers.
 
 ## The Partnership Cadence
 
 The TPM-architect and TPM-tech-lead relationship runs on a deliberate cadence of touchpoints. Ad-hoc communication is necessary but insufficient; the cadence ensures nothing falls through the gaps.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     WEEKLY_ARCH["TPM-Architect weekly sync: architecture risks, decisions needed, integration status"] --> PROGRAM_REV["Program review: cross-workstream technical issues, risk register review"]
     PROGRAM_REV --> BIWEEKLY_LEADS["TPM-Tech Lead biweekly one-on-ones: workstream risks, blockers, dependencies"]
@@ -61,7 +62,7 @@ flowchart TD
 | **Design review attendance** | As scheduled | TPM (observer), architect, tech leads, engineers | TPM listens for risks and assumptions; asks calibrated questions; captures risks for the register |
 | **Architecture Decision Record review** | After each significant decision | TPM, architect | TPM confirms decision is recorded; ensures impacted workstreams are informed; updates program timeline if decision affects schedule |
 
-The TPM owns this cadence. It is the TPM's job to schedule the syncs, run them on time, and ensure they produce outcomes — not just conversation. A TPM-architect sync that ends with "no updates" for three consecutive weeks is a signal that the cadence is not working or the participants are not engaging.
+The TPM owns this cadence. It is the TPM's job to schedule the syncs, run them on time, and ensure they produce outcomes, not just conversation. A TPM-architect sync that ends with "no updates" for three consecutive weeks is a signal that the cadence is not working or the participants are not engaging.
 
 ## When to Bring Architecture In
 
@@ -69,12 +70,12 @@ The TPM decides when to pull the architect into a program conversation. Bringing
 
 | Situation | When to Involve the Architect | TPM's Move |
 |-----------|------------------------------|-----------|
-| New workstream being formed | During workstream chartering — architect ensures technical coherence with program architecture | Schedule architect review of workstream charter before charter is signed |
-| Cross-workstream technical conflict | As soon as the conflict is identified — architect mediates or decides | Bring architect into the next program review; frame the conflict as a decision needed |
-| Significant scope change proposed | Before the scope change is approved — architect assesses technical impact | Request architect impact assessment; include in scope change proposal to steering committee |
-| Integration milestone approaching | At prep review — architect confirms technical readiness | Architect reviews test results; confirms integration pass criteria are met |
-| Technical risk materializes | Immediately — architect assesses impact and proposes response | Escalate to architect within 24 hours; convene technical response session |
-| Stakeholder asks a technical question the TPM cannot answer | Before the TPM responds — architect provides the answer or joins the conversation | Route the question to the architect; do not guess |
+| New workstream being formed | During workstream chartering: architect ensures technical coherence with program architecture | Schedule architect review of workstream charter before charter is signed |
+| Cross-workstream technical conflict | As soon as the conflict is identified: architect mediates or decides | Bring architect into the next program review; frame the conflict as a decision needed |
+| Significant scope change proposed | Before the scope change is approved: architect assesses technical impact | Request architect impact assessment; include in scope change proposal to steering committee |
+| Integration milestone approaching | At prep review: architect confirms technical readiness | Architect reviews test results; confirms integration pass criteria are met |
+| Technical risk materializes | Immediately: architect assesses impact and proposes response | Escalate to architect within 24 hours; convene technical response session |
+| Stakeholder asks a technical question the TPM cannot answer | Before the TPM responds: architect provides the answer or joins the conversation | Route the question to the architect; do not guess |
 
 The TPM treats the architect's time as a scarce resource. The architect is not in every meeting; the TPM brings them in when technical authority is needed. Between those moments, the weekly TPM-architect sync keeps the architect informed and the TPM equipped with enough context to operate independently.
 
@@ -104,7 +105,7 @@ The TPM-architect partnership does not happen by default. It is built deliberate
 | **First technical conflict** | Facilitate the resolution; keep the TPM in the facilitator role; ensure the architect's decision is recorded and communicated | Proof that the partnership works under pressure; both parties see the value |
 | **Ongoing** | Maintain the cadence; protect the architect's time; escalate when the architect is not engaged | Sustained productive partnership; program benefits from aligned technical and operational leadership |
 
-The TPM invests in the relationship. A weekly sync that is the first thing cancelled when schedules get busy is not a partnership — it is an intention. The TPM protects the cadence and shows up prepared.
+The TPM invests in the relationship. A weekly sync that is the first thing cancelled when schedules get busy is not a partnership. It is an intention. The TPM protects the cadence and shows up prepared.
 
 ## Practical Applications
 
@@ -151,14 +152,14 @@ The TPM invests in the relationship. A weekly sync that is the first thing cance
 | **Architect bypassing the TPM** | The architect makes decisions that affect the program timeline without the TPM's knowledge; the TPM discovers the impact at the next milestone | Architect informs TPM of decisions immediately; TPM assesses program impact within 24 hours |
 | **No regular cadence** | Communication is ad-hoc; risks and decisions fall through the gaps; the partnership is reactive | Establish and protect the cadence; a weekly sync that never gets cancelled is the partnership's backbone |
 | **TPM in every technical meeting** | The TPM's calendar fills with meetings where they add no value; the TPM burns out and the program loses operational leadership | The TPM attends design reviews as observer, facilitates decision forums, and delegates the rest |
-| **Architect as "the technical TPM"** | The architect is asked to run program processes — status tracking, risk register maintenance, stakeholder communication | The architect owns technical content; the TPM owns program process; do not blur the line |
+| **Architect as "the technical TPM"** | The architect is asked to run program processes: status tracking, risk register maintenance, stakeholder communication | The architect owns technical content; the TPM owns program process; do not blur the line |
 | **TPM defers all technical questions to the architect** | The TPM abdicates technical context; cannot facilitate technical discussions because they cannot frame the issue | Maintain calibrated fluency; the TPM frames the question; the architect provides the answer |
 
 ## Success Indicators
 
 - The architect proactively surfaces technical risks to the TPM before they become program issues
 - The TPM-architect weekly sync is the first meeting rescheduled, not the first cancelled
-- Design reviews produce captured risks and action items — not just design critique
+- Design reviews produce captured risks and action items, not just design critique
 - Architecture decisions are recorded within one week and communicated to affected workstreams
 - Tech leads describe the TPM as "the person who makes cross-workstream technical work possible"
 

@@ -39,6 +39,7 @@ Allowed downtime = 30 days × 24 hours × 60 minutes × 0.001 = 43.2 minutes
 ## Error Budget Policy Tiers
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     HEALTHY["Budget Healthy\n(>50% remaining)"] --> LOW["Budget Low\n(10-50% remaining)"]
     LOW --> EXHAUSTED["Budget Exhausted\n(<10% remaining)"]
@@ -190,8 +191,8 @@ Error budgets are not just about preventing failures. They are about **investing
 - [[02_SLO_Definition]] : SLOs define the error budget
 - [[04_SLA_Management]] : error budgets inform SLA risk
 - [[05_Reliability_Measurement]] : burn rate is a key reliability metric
-- [[03_Incident_Response/02_Incident_Management]] : incidents consume error budget
-- [[05_Capacity_and_Resilience/04_Chaos_Engineering]] : chaos engineering intentionally consumes error budget
+- [[career-path/07_SRE_and_Platform_Engineer/03_Incident_Response/02_Incident_Management]] : incidents consume error budget
+- [[career-path/07_SRE_and_Platform_Engineer/05_Capacity_and_Resilience/04_Chaos_Engineering]] : chaos engineering intentionally consumes error budget
 
 ## Key Takeaways
 

@@ -45,6 +45,7 @@ The output is a living risk model, not a document that is approved once and forg
 ## How the Topics Connect
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CONTEXT["01 System context and assets"] --> ACTORS["02 Threat actor analysis"]
     ACTORS --> SURFACE["03 Attack surface and trust boundaries"]
@@ -92,7 +93,7 @@ These notes overlay senior-specialist judgment on existing security knowledge ra
 
 ## Related
 
-- [[../00_overview|Security Engineer Overview]]
-- [[02_Secure_Architecture_and_Design/00_overview|Secure Architecture and Design]]
-- [[03_Secure_Development_and_DevSecOps/00_overview|Secure Development and DevSecOps]]
+- [[career-path/08_Security_Engineer/00_overview|Security Engineer Overview]]
+- [[career-path/08_Security_Engineer/02_Secure_Architecture_and_Design/00_overview|Secure Architecture and Design]]
+- [[career-path/08_Security_Engineer/03_Secure_Development_and_DevSecOps/00_overview|Secure Development and DevSecOps]]
 - [Threat Model Template](F:\obsidian_note\document_template\14_Security/Threat-Model.md)

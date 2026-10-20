@@ -16,13 +16,13 @@ tags:
 
 # Staff Engineer Career Traps
 
-> **Core skill:** Recognizing the six traps that end staff careers — glue work martyrdom, invisibility, hero projects, scope drift, knowledge hoarding, and committee capture — and escaping them with a self-diagnosis routine.
+> **Core skill:** Recognizing the six traps that end staff careers (glue work martyrdom, invisibility, hero projects, scope drift, knowledge hoarding, and committee capture) and escaping them with a self-diagnosis routine.
 
 ## Why This Matters
 
 Staff careers rarely end in a single failure. They end in a slow quarter-by-quarter erosion: the calendar fills with other people's priorities, the impact becomes invisible, the one big bet fails, the scope quietly shrinks back to team work, the knowledge concentrates in one head, the meetings replace the arcs. Each trap is survivable for a quarter; two quarters in two traps is a stalled promotion; three is a demotion conversation. The traps are the reason the staff role needs an operating model at all.
 
-The good news: most traps are self-inflicted and therefore escapable. They are not personality flaws — they are structural responses to an underspecified role. The staff engineer who cannot name their trap and its escape pattern is living in it. This note is the catalog: the trap, the symptom, the escape.
+The good news: most traps are self-inflicted and therefore escapable. They are not personality flaws. They are structural responses to an underspecified role. The staff engineer who cannot name their trap and its escape pattern is living in it. This note is the catalog: the trap, the symptom, the escape.
 
 ## The Trap Catalog
 
@@ -39,7 +39,7 @@ The good news: most traps are self-inflicted and therefore escapable. They are n
 
 Two instruments catch the traps early:
 
-**Calendar audit** (quarterly): categorize every hour of the last four weeks. Writing and arc time below a third of the week is a trap signal — likely glue work, committees, or scope drift.
+**Calendar audit** (quarterly): categorize every hour of the last four weeks. Writing and arc time below a third of the week is a trap signal: likely glue work, committees, or scope drift.
 
 **Impact inventory** (quarterly): list what changed in the org because of you, with evidence. If the list is short or the evidence is anecdotal, that is invisibility or hero-project risk.
 
@@ -72,9 +72,10 @@ Every escape is a calendar and a document change, not a personality change. The 
 | Knowledge hoarding | Critical knowledge is undocumented by culture | You prefer being the bottleneck |
 | Committee capture | The org runs on meetings | You attend without triage |
 
-The distinction matters because the response differs: org-caused traps need a negotiation or an escalation; self-caused traps need a calendar change. Most traps are a mix — the diagnosis is which part is yours.
+The distinction matters because the response differs: org-caused traps need a negotiation or an escalation; self-caused traps need a calendar change. Most traps are a mix. The diagnosis is which part is yours.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     TRAP["A trap takes hold"] --> DIAGNOSE["Self-diagnose quarterly"]
     DIAGNOSE --> NAME["Name the trap"]
@@ -88,7 +89,7 @@ flowchart TD
 ## Practical Applications
 
 ```markdown
-# Quarterly Trap Check — [quarter]
+# Quarterly Trap Check: [quarter]
 
 ## Calendar audit
 - [ ] Writing and arc time: [share of week]
@@ -137,9 +138,9 @@ Checklist:
 
 - [[04_The_Staff_Operating_Model]]: the calendar that prevents most traps
 - [[01_The_Four_Staff_Archetypes]]: the mandate that prevents scope drift
-- [[07_Organizational_Learning_and_Mentoring/00_overview|Organizational Learning and Mentoring]]: the cure for knowledge hoarding
+- [[career-path/03_Staff_Engineer/07_Organizational_Learning_and_Mentoring/00_overview|Organizational Learning and Mentoring]]: the cure for knowledge hoarding
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/00_overview|Communication and Influence (Senior)]]: the skills that prevent invisibility
 
 ## Summary
 
-Six traps end staff careers slowly: glue work martyrdom, invisibility, hero projects, scope drift, knowledge hoarding, and committee capture. Each has a symptom, a root cause, and an escape pattern — and each is caught by a quarterly self-diagnosis of calendar and impact. Most traps are partly self-caused and therefore escapable; the escape is always one structural change, calendared and enforced, not a personality overhaul.
+Six traps end staff careers slowly: glue work martyrdom, invisibility, hero projects, scope drift, knowledge hoarding, and committee capture. Each has a symptom, a root cause, and an escape pattern, and each is caught by a quarterly self-diagnosis of calendar and impact. Most traps are partly self-caused and therefore escapable; the escape is always one structural change, calendared and enforced, not a personality overhaul.

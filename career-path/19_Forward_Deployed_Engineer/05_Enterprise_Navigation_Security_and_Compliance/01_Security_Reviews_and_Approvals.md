@@ -16,7 +16,7 @@ tags:
 
 # Security Reviews and Approvals
 
-> **Core skill:** Preparing for and running security reviews efficiently — mapping the gates and their owners, arriving with the evidence already assembled, and carrying findings to closure so approval becomes a predictable pipeline instead of a recurring surprise.
+> **Core skill:** Preparing for and running security reviews efficiently: mapping the gates and their owners, arriving with the evidence already assembled, and carrying findings to closure so approval becomes a predictable pipeline instead of a recurring surprise.
 
 ## Why This Matters
 
@@ -24,7 +24,7 @@ In an enterprise, no deployment reaches production without passing a security re
 
 The saving grace is that reviews are predictable. Across customers, the same families of questions recur: what data moves where and why, who can access it, how is it protected in transit and at rest, what happens when something goes wrong, and what is the vendor's own posture. An FDE who has run a handful of reviews accumulates a reusable evidence base and walks into the next review with answers prepared rather than questions discovered. The differences between customers are smaller than they look; the vocabulary changes, the underlying controls do not.
 
-For AI deployments the review has new teeth: prompts and documents flowing into models, vendor-hosted inference, cross-border processing, and outputs feeding decisions. Answering those questions precisely — and saying honestly when a customer requirement cannot be met and what the alternatives are — is what converts the security team from a gatekeeper into an ally. The approval you obtain is also the permission you will live under for every change that follows, so its scope and conditions deserve the same care as the architecture itself.
+For AI deployments the review has new teeth: prompts and documents flowing into models, vendor-hosted inference, cross-border processing, and outputs feeding decisions. Answering those questions precisely, and saying honestly when a customer requirement cannot be met and what the alternatives are, is what converts the security team from a gatekeeper into an ally. The approval you obtain is also the permission you will live under for every change that follows, so its scope and conditions deserve the same care as the architecture itself.
 
 ## The Shape of a Typical Review
 
@@ -43,7 +43,7 @@ The FDE's job is not to have every answer at the intake meeting. It is to know w
 
 ## Preparing the Evidence Pack
 
-Most review rounds are spent producing documents that could have been prepared in advance. The pack below is assembled once, then tailored per customer — the structure survives, the wording adapts to their framework.
+Most review rounds are spent producing documents that could have been prepared in advance. The pack below is assembled once, then tailored per customer. The structure survives, the wording adapts to their framework.
 
 | Artifact | What It Proves | Reuse Notes |
 |----------|----------------|-------------|
@@ -56,6 +56,7 @@ Most review rounds are spent producing documents that could have been prepared i
 | Vendor security documentation | The organization's own posture | Keep current; stale documents start review rounds late |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     MAP["Map the gates and owners"] --> PACK["Assemble the evidence pack"]
     PACK --> SUBMIT["Submit early with answers"]
@@ -64,7 +65,7 @@ flowchart LR
     APPROVE --> REVISIT["Revisit when scope grows"]
 ```
 
-Each step has an artifact at its exit: a gate map, a pack, a question log, a findings tracker, a written approval, and a re-review trigger list. When any of those is missing, the review does not fail once — it fails again at the next stage.
+Each step has an artifact at its exit: a gate map, a pack, a question log, a findings tracker, a written approval, and a re-review trigger list. When any of those is missing, the review does not fail once. It fails again at the next stage.
 
 ## Running the Review Well
 
@@ -92,7 +93,7 @@ Each step has an artifact at its exit: a gate map, a pack, a question log, a fin
 ### Review Prep Memo Template
 
 ```markdown
-## Security Review Prep — <customer, deployment, date>
+## Security Review Prep: <customer, deployment, date>
 
 | Field | Detail |
 |-------|--------|
@@ -134,4 +135,4 @@ Each step has an artifact at its exit: a gate map, a pack, a question log, a fin
 
 ## Summary
 
-Security reviews and approvals are the FDE's path to production access: map the gates before the build, assemble an evidence pack that answers the standard families of questions, submit early, work findings to closure with owners and dates, and obtain written approval with re-review triggers defined. Handled this way, the review stops being the deployment's most feared dependency and becomes one of its most predictable ones — and the security team, served well once, becomes one of the strongest voices for what gets built next.
+Security reviews and approvals are the FDE's path to production access: map the gates before the build, assemble an evidence pack that answers the standard families of questions, submit early, work findings to closure with owners and dates, and obtain written approval with re-review triggers defined. Handled this way, the review stops being the deployment's most feared dependency and becomes one of its most predictable ones, and the security team, served well once, becomes one of the strongest voices for what gets built next.

@@ -15,15 +15,15 @@ tags:
 
 # Stakeholder Identification
 
-> **Core skill:** Systematically identifying every person, group, and organization that affects or is affected by the project — mapping their interest, influence, expectations, and engagement requirements before those stakeholders are surprised by a decision they should have been part of.
+> **Core skill:** Systematically identifying every person, group, and organization that affects or is affected by the project, mapping their interest, influence, expectations, and engagement requirements before those stakeholders are surprised by a decision they should have been part of.
 
 ## Why This Matters
 
-A project succeeds or fails on its stakeholders. Miss a stakeholder at initiation and they will discover the project when a decision affects them — and they will fight it not because the decision is wrong but because they were excluded from making it. The project manager who identifies stakeholders thoroughly and early converts potential opposition into informed participation and converts silent expectations into documented requirements.
+A project succeeds or fails on its stakeholders. Miss a stakeholder at initiation and they will discover the project when a decision affects them, and they will fight it not because the decision is wrong but because they were excluded from making it. The project manager who identifies stakeholders thoroughly and early converts potential opposition into informed participation and converts silent expectations into documented requirements.
 
 Stakeholder identification is not a one-time exercise. Stakeholders change as the project moves through its lifecycle: new groups are affected by detailed design decisions, regulators appear when a permit is needed, end users become relevant when deployment approaches. The initial identification exercise produces a stakeholder register that grows and refines throughout the project.
 
-The discipline is not only about listing names — it is about understanding interests. A stakeholder who supports the project's objectives but opposes the chosen approach is not an enemy; they are a source of information about a constraint that was missed. The project manager distinguishes between stakeholders who oppose the project and stakeholders who oppose the current plan — and engages both differently.
+The discipline is not only about listing names. It is about understanding interests. A stakeholder who supports the project's objectives but opposes the chosen approach is not an enemy; they are a source of information about a constraint that was missed. The project manager distinguishes between stakeholders who oppose the project and stakeholders who oppose the current plan, and engages both differently.
 
 ## Stakeholder Categories
 
@@ -50,6 +50,7 @@ The discipline is not only about listing names — it is about understanding int
 ## The Stakeholder Identification Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CHARTER["Charter defines project purpose and scope"] --> BRAINSTORM["Brainstorm: who affects or is affected by this project"]
     BRAINSTORM --> CATEGORIZE["Categorize: sponsor, users, regulators, influencers, opponents"]
@@ -67,7 +68,7 @@ flowchart TD
 - [ ] All groups who will use, operate, or maintain the project's outputs are listed
 - [ ] Groups who must comply with or enforce the project's outputs are identified
 - [ ] Organizational groups whose work, budget, or priorities are affected are named
-- [ ] External parties — regulators, vendors, partners — are identified
+- [ ] External parties (regulators, vendors, partners) are identified
 - [ ] Each stakeholder's interest in the project is articulated in one sentence
 - [ ] Each stakeholder's influence level is assessed: high, medium, or low
 - [ ] Potential opponents or negatively affected groups are included, not avoided
@@ -113,12 +114,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[01_Project_Charter]] — the charter names the sponsor and governance body
-- [[05_Stakeholder_Engagement/00_overview|Stakeholder Engagement]] — from identification to ongoing engagement planning
-- [[06_Project_Authority_and_Governance]] — governance structures that involve the right stakeholders
-- [[03_Requirements_Management]] — requirements emerge from stakeholder needs
-- [[career-path/12_Technical_Program_Manager/00_overview|TPM]] — multi-team stakeholder coordination
+- [[01_Project_Charter]]: the charter names the sponsor and governance body
+- [[career-path/13_Project_and_Program_Manager/05_Stakeholder_Engagement/00_overview|Stakeholder Engagement]]: from identification to ongoing engagement planning
+- [[06_Project_Authority_and_Governance]]: governance structures that involve the right stakeholders
+- [[03_Requirements_Management]]: requirements emerge from stakeholder needs
+- [[career-path/12_Technical_Program_Manager/00_overview|TPM]]: multi-team stakeholder coordination
 
 ## Summary
 
-Stakeholder identification is the discipline of knowing who matters to a project before they matter to it. A thorough identification exercise produces a register that names every affected group — from sponsor to end user to regulator — and maps their interest, influence, and engagement needs. The register is not a static artifact; it grows as the project moves through its lifecycle and as new stakeholders emerge. The project manager who identifies stakeholders early and engages them appropriately converts potential opposition into informed participation, and converts silent expectations into documented requirements.
+Stakeholder identification is the discipline of knowing who matters to a project before they matter to it. A thorough identification exercise produces a register that names every affected group (from sponsor to end user to regulator) and maps their interest, influence, and engagement needs. The register is not a static artifact; it grows as the project moves through its lifecycle and as new stakeholders emerge. The project manager who identifies stakeholders early and engages them appropriately converts potential opposition into informed participation, and converts silent expectations into documented requirements.

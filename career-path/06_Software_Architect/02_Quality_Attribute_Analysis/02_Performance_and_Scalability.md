@@ -16,15 +16,15 @@ tags:
 
 # Performance and Scalability
 
-> **Core skill:** Designing architecture for throughput, latency, capacity, and growth — using caching, replication, load balancing, resource pooling, and sharding tactics matched to measurable performance scenarios and projected scale curves.
+> **Core skill:** Designing architecture for throughput, latency, capacity, and growth, using caching, replication, load balancing, resource pooling, and sharding tactics matched to measurable performance scenarios and projected scale curves.
 
 ## Why This Matters
 
-Performance is the quality attribute users feel immediately. A system that takes three seconds to respond loses users before they reach any feature. But performance is not a single number — it is a curve: response time under load, throughput at capacity, degradation behavior at saturation. The architect who designs for a target number without modeling the load that produces it designs a system that performs well in demos and collapses in production.
+Performance is the quality attribute users feel immediately. A system that takes three seconds to respond loses users before they reach any feature. But performance is not a single number. It is a curve: response time under load, throughput at capacity, degradation behavior at saturation. The architect who designs for a target number without modeling the load that produces it designs a system that performs well in demos and collapses in production.
 
-Scalability is performance over time and under growth: the system's ability to add capacity without rewriting its structure. A system that performs well at a thousand users may break at ten thousand not because the code is slow but because the architecture assumes a scale that no longer holds — a single database, a synchronous chain, a global lock. The architect's job is to design the performance envelope at inception and the scaling path before the envelope is reached.
+Scalability is performance over time and under growth: the system's ability to add capacity without rewriting its structure. A system that performs well at a thousand users may break at ten thousand not because the code is slow but because the architecture assumes a scale that no longer holds: a single database, a synchronous chain, a global lock. The architect's job is to design the performance envelope at inception and the scaling path before the envelope is reached.
 
-Architecture-level performance work is not about optimizing code — it is about designing structures that make optimization possible: caching where reads dominate writes, partitioning where data outgrows a single store, asynchronous communication where latency compounds, and resource pooling where contention throttles throughput.
+Architecture-level performance work is not about optimizing code. It is about designing structures that make optimization possible: caching where reads dominate writes, partitioning where data outgrows a single store, asynchronous communication where latency compounds, and resource pooling where contention throttles throughput.
 
 ## Performance Scenarios
 
@@ -70,7 +70,7 @@ Architecture-level performance work is not about optimizing code — it is about
 
 ## Bottleneck Analysis at Architecture Level
 
-Architecture-level bottleneck analysis is not profiling — it is asking where the structure itself creates contention:
+Architecture-level bottleneck analysis is not profiling. It is asking where the structure itself creates contention:
 
 | Bottleneck Type | How It Manifests in Architecture | Detection Method | Mitigation |
 |----------------|--------------------------------|-----------------|------------|
@@ -82,6 +82,7 @@ Architecture-level bottleneck analysis is not profiling — it is asking where t
 | **Connection exhaustion** | Thread or connection pools sized below peak demand | Errors under load; queue growing | Pool right-sizing; async I/O; connection multiplexing |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SCENARIO["Performance scenario with measurable targets"] --> PROFILE["Model the load profile: reads vs writes, peaks vs steady"]
     PROFILE --> BOTTLENECK["Identify architectural bottlenecks: sync chains, single writer, hot shard"]
@@ -130,16 +131,16 @@ flowchart TD
 - The scaling path from current load to projected load is documented, not guessed
 - Architectural bottlenecks are identified and mitigated before production incidents
 - Caching decisions cite the freshness tolerance and read/write ratio that justify them
-- The system degrades gracefully under overload — it slows or sheds load, but does not collapse
+- The system degrades gracefully under overload: it slows or sheds load, but does not collapse
 
 ## Related Topics
 
-- [[01_Quality_Attribute_Workshops]] — how performance scenarios are created and prioritized
-- [[07_Quality_Attribute_Trade_Offs]] — performance vs security, modifiability, and consistency trade-offs
-- [[04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]] — how performance architecture is evaluated
-- [[06_Data_Architecture/00_overview|Data Architecture]] — data partitioning and replication for performance
-- [[07_Operations_and_Infrastructure_Architecture/00_overview|Operations and Infrastructure Architecture]] — infrastructure for scaling and capacity
+- [[01_Quality_Attribute_Workshops]]: how performance scenarios are created and prioritized
+- [[07_Quality_Attribute_Trade_Offs]]: performance vs security, modifiability, and consistency trade-offs
+- [[career-path/06_Software_Architect/04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]]: how performance architecture is evaluated
+- [[career-path/06_Software_Architect/06_Data_Architecture/00_overview|Data Architecture]]: data partitioning and replication for performance
+- [[career-path/06_Software_Architect/07_Operations_and_Infrastructure_Architecture/00_overview|Operations and Infrastructure Architecture]]: infrastructure for scaling and capacity
 
 ## Summary
 
-Performance architecture is about designing structures that can meet latency, throughput, and capacity targets under load — not about code optimization. Tactics include caching for read-heavy workloads, replication for read distribution, load balancing for variable traffic, resource pooling for connection bottlenecks, and asynchronous processing for burst handling and decoupling. Scalability strategies — vertical, horizontal, sharding, functional decomposition — are matched to the system's load profile and designed before the scaling limit is reached. The architect identifies architectural bottlenecks (single writer, synchronous chain, hot partition) through structure analysis rather than profiling, selects tactics that address them, and records the performance architecture in ADRs that cite measurable scenarios and the scaling path.
+Performance architecture is about designing structures that can meet latency, throughput, and capacity targets under load, not about code optimization. Tactics include caching for read-heavy workloads, replication for read distribution, load balancing for variable traffic, resource pooling for connection bottlenecks, and asynchronous processing for burst handling and decoupling. Scalability strategies (vertical, horizontal, sharding, functional decomposition) are matched to the system's load profile and designed before the scaling limit is reached. The architect identifies architectural bottlenecks (single writer, synchronous chain, hot partition) through structure analysis rather than profiling, selects tactics that address them, and records the performance architecture in ADRs that cite measurable scenarios and the scaling path.

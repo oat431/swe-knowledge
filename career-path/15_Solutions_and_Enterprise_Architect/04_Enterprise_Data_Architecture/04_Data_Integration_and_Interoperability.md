@@ -16,7 +16,7 @@ tags:
 
 # Data Integration and Interoperability
 
-> **Core skill:** Choosing enterprise integration patterns and data-sharing mechanisms — batch, messaging, events, APIs, files — with contracts that survive change, so systems compose instead of accumulating point-to-point debt.
+> **Core skill:** Choosing enterprise integration patterns and data-sharing mechanisms (batch, messaging, events, APIs, files) with contracts that survive change, so systems compose instead of accumulating point-to-point debt.
 
 ## Why This Matters
 
@@ -24,7 +24,7 @@ Integration is where systems meet reality. A single undocumented interface is a 
 
 Interoperability is the deeper property integration serves. Two systems can exchange bytes flawlessly and still be unable to work together because "customer" or "order status" means different things on each side. Technical connectivity is the easy layer; semantic agreement is where the enterprise actually spends its integration effort. The architect maintains the mechanisms that make both layers explicit: canonical definitions from the enterprise data model, versioned contracts, and registries of who exchanges what.
 
-The classic anti-patterns are well known and still extremely common: the shared database as an integration mechanism, point-to-point links as the default, and coupling to a source system's internal schema. Avoiding them is not a matter of taste — each one converts a source system's private decision into a set of dependencies that outlive everyone who made it.
+The classic anti-patterns are well known and still extremely common: the shared database as an integration mechanism, point-to-point links as the default, and coupling to a source system's internal schema. Avoiding them is not a matter of taste: each one converts a source system's private decision into a set of dependencies that outlive everyone who made it.
 
 ## Enterprise Integration Patterns
 
@@ -36,7 +36,7 @@ The classic anti-patterns are well known and still extremely common: the shared 
 | **Messaging** | Queues and brokers with delivery guarantees | Work distribution; decoupled processing | Broadcast semantics are needed |
 | **Event streaming** | Publish and subscribe to change events | Reacting across domains; read-model sync | Strong global ordering is required |
 | **Change data capture** | Reads the source log | Replication with low intrusion | The source cannot expose its log safely |
-| **Shared database** | Multiple systems on one schema | Almost never as integration | Nearly always — this is a coupling trap |
+| **Shared database** | Multiple systems on one schema | Almost never as integration | Nearly always: this is a coupling trap |
 | **Data virtualization** | Federated query over sources | Exploration; occasional joins | Performance-critical or repeated access |
 
 The list is a menu for pattern selection, not an endorsement of variety. Each additional mechanism a team must operate raises the enterprise's learning and on-call burden; standards are how that burden stays bounded.
@@ -88,6 +88,7 @@ Canonical does not mean universal: some domains warrant bilateral contracts inst
 ## The Integration Path
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PRODUCERS["Producer systems and domains"] --> CONTRACT["Contracts - schemas, APIs, events"]
     CONTRACT --> CHANNEL["Channels - batch, streaming, API, file"]
@@ -110,7 +111,7 @@ flowchart LR
 ### Integration Decision Record
 
 ```markdown
-# Integration Decision — [Initiative]
+# Integration Decision: [Initiative]
 
 ## Exchange
 - Data: [entities and direction]
@@ -155,7 +156,7 @@ flowchart LR
 
 - [[02_Enterprise_Data_Models_and_Flows]]: entities and flow registrations these patterns carry
 - [[05_Analytics_and_Data_Platform_Architecture]]: pipelines that feed the analytics estate
-- [[02_Solution_Architecture_and_Design/00_overview|Solution Architecture and Design]]: where integration choices are made concrete per solution
+- [[career-path/15_Solutions_and_Enterprise_Architect/02_Solution_Architecture_and_Design/00_overview|Solution Architecture and Design]]: where integration choices are made concrete per solution
 - [[career-path/06_Software_Architect/06_Data_Architecture/00_overview|Data Architecture (Architect)]]: the solution-level view of data movement
 
 ## Summary

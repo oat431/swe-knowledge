@@ -16,13 +16,13 @@ tags:
 
 # Proposals and Bids
 
-> **Core skill:** The independent writes proposals that win on understanding and outcomes — problem restatement, scoped options, clear pricing, explicit assumptions — while protecting against scope ambiguity that becomes unpaid work.
+> **Core skill:** The independent writes proposals that win on understanding and outcomes (problem restatement, scoped options, clear pricing, explicit assumptions), while protecting against scope ambiguity that becomes unpaid work.
 
 ## Why This Matters
 
-A proposal is the moment a sales conversation becomes a document both sides will remember differently. Buyers use proposals to answer three questions: does this person understand our problem, can they do the work, and does the price make sense? Independents lose bids on price far less often than they believe — they lose on genericness. A proposal that could have been sent to any company signals that no one read the brief, and no discount repairs that impression.
+A proposal is the moment a sales conversation becomes a document both sides will remember differently. Buyers use proposals to answer three questions: does this person understand our problem, can they do the work, and does the price make sense? Independents lose bids on price far less often than they believe. They lose on genericness. A proposal that could have been sent to any company signals that no one read the brief, and no discount repairs that impression.
 
-Structure beats eloquence. The strongest proposals restate the problem in the client's own words, define what success will look like, present two or three scoped options with a recommendation, state the price and its logic, and — critically — make assumptions and exclusions explicit. Assumptions are where proposals quietly fail: everything left unstated becomes contested later, and every ambiguity that favors the independent will be read by the client as either an oversight or a trick. Writing it down at proposal time costs minutes; discovering it at delivery time costs trust.
+Structure beats eloquence. The strongest proposals restate the problem in the client's own words, define what success will look like, present two or three scoped options with a recommendation, state the price and its logic, and (critically) make assumptions and exclusions explicit. Assumptions are where proposals quietly fail: everything left unstated becomes contested later, and every ambiguity that favors the independent will be read by the client as either an oversight or a trick. Writing it down at proposal time costs minutes; discovering it at delivery time costs trust.
 
 Not every bid deserves a proposal. Writing costs the same hours that delivery and pipeline both need, and a proposal written around an incumbent is usually a favor the buyer requested from procurement policy rather than a real opportunity. The skill includes disqualifying honestly: choosing depth over volume, declining thin-fit requests, and putting the saved effort into the opportunities with genuine access and genuine stakes.
 
@@ -48,7 +48,7 @@ Not every bid deserves a proposal. Writing costs the same hours that delivery an
 | Milestone based | Payment tied to deliverables | Larger engagements with phases | Milestone definition disputes |
 | Value anchored | Price tied to business outcome | Outcomes are measurable and attributable | Attribution arguments |
 
-Whichever model is chosen, the proposal states the basis of the price — so the number reads as reasoned, not invented.
+Whichever model is chosen, the proposal states the basis of the price, so the number reads as reasoned, not invented.
 
 ## Bid or No Bid
 
@@ -63,6 +63,7 @@ Whichever model is chosen, the proposal states the basis of the price — so the
 ## The Proposal Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     QUALIFY["Qualify the opportunity before writing"] --> RESTATE["Restate the problem and success criteria"]
     RESTATE --> OPTIONS["Present scoped options with a recommendation"]
@@ -78,24 +79,24 @@ flowchart TD
 - [ ] The problem is restated in the client's own language, showing it was read
 - [ ] Every price has a stated basis and a scoped boundary
 - [ ] Assumptions and exclusions are written, not remembered
-- [ ] The proposal fits on the pages it deserves — complete but ruthlessly edited
+- [ ] The proposal fits on the pages it deserves, complete but ruthlessly edited
 - [ ] Losing patterns are reviewed: which factors correlated with wins and losses
 
 ### Proposal Skeleton
 
 ```markdown
-## Proposal — <client> — <engagement>
+## Proposal: <client>, <engagement>
 
-1. Understanding — the problem and stakes in the client's words
-2. What success looks like — outcomes and acceptance criteria
-3. Options —
-   - Option A: <scope> — fixed price <figure>
-   - Option B: <scope> — monthly retainer <basis>
+1. Understanding: the problem and stakes in the client's words
+2. What success looks like: outcomes and acceptance criteria
+3. Options:
+   - Option A: <scope>, fixed price <figure>
+   - Option B: <scope>, monthly retainer <basis>
    - Recommended: <which and why>
-4. Approach and milestones — phases, dates, and client responsibilities
-5. Assumptions and exclusions — everything not included, stated plainly
-6. Commercial terms — price, payment schedule, validity window, change process
-7. Evidence — relevant results, references, and fit, kept brief
+4. Approach and milestones: phases, dates, and client responsibilities
+5. Assumptions and exclusions: everything not included, stated plainly
+6. Commercial terms: price, payment schedule, validity window, change process
+7. Evidence: relevant results, references, and fit, kept brief
 ```
 
 ## Common Pitfalls
@@ -122,9 +123,9 @@ flowchart TD
 - [[01_Selling_Technical_Work_Ethically]]
 - [[05_Negotiation_for_Independents]]
 - [[06_Communicating_Value_Not_Hours]]
-- [[03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
-- [[04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]
 
 ## Summary
 
-Proposals and bids are where conversations become commitments: the problem restated in the client's own words, success defined measurably, options scoped with a recommendation, prices given a basis, and assumptions written where disputes would otherwise grow. The discipline extends to knowing when not to bid — because the proposals worth winning are the ones worth writing well.
+Proposals and bids are where conversations become commitments: the problem restated in the client's own words, success defined measurably, options scoped with a recommendation, prices given a basis, and assumptions written where disputes would otherwise grow. The discipline extends to knowing when not to bid, because the proposals worth winning are the ones worth writing well.

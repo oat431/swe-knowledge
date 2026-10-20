@@ -28,6 +28,7 @@ Senior engineers don't just write code. They write the documents that guide the 
 ## Document Types
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     subgraph Decision Documents
         RFC[RFC<br/>Request for Comments]
@@ -127,6 +128,7 @@ Propose a significant technical change and gather feedback from stakeholders bef
 ### RFC Review Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     Draft[Draft RFC] --> Share[Share with stakeholders]
     Share --> Feedback[Collect feedback<br/>1-2 weeks]
@@ -359,6 +361,7 @@ Provide detailed technical specifications for a feature or system before impleme
 
 **Concrete:**
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     Client --> API[API Gateway]
     API --> Auth[Auth Service]
@@ -371,6 +374,7 @@ flowchart LR
 ### 5. Iterate based on feedback
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     Draft[Write draft] --> Share[Share early]
     Share --> Feedback[Get feedback]
@@ -467,7 +471,7 @@ Why chosen: Team expertise and hiring pool outweigh bundle size concerns.
 
 - [[02_Stakeholder_Communication|Stakeholder Communication]]: Adapting technical writing for non-technical audiences
 - [[05_Documentation_Strategy|Documentation Strategy]]: What to document and when
-- [[03_Architecture_and_Design_Judgment/04_Architecture_Decision_Records|Architecture Decision Records]]: ADRs in the context of architecture
+- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/04_Architecture_Decision_Records|Architecture Decision Records]]: ADRs in the context of architecture
 
 ## Summary
 

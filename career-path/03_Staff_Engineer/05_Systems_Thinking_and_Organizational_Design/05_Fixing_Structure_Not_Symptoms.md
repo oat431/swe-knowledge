@@ -19,9 +19,9 @@ tags:
 
 ## Why This Matters
 
-Every recurring problem has a producer. Missed deadlines, slow releases, ignored standards, recurring incidents — each is generated on schedule by a structure, an incentive, or a missing ownership. Treating the symptom means fixing the same thing forever; treating the structure means fixing it once, and the org notices the difference.
+Every recurring problem has a producer. Missed deadlines, slow releases, ignored standards, recurring incidents: each is generated on schedule by a structure, an incentive, or a missing ownership. Treating the symptom means fixing the same thing forever; treating the structure means fixing it once, and the org notices the difference.
 
-The discipline matters most at staff level because the org will keep asking you to fix symptoms. A new process for missed deadlines, another meeting for slow releases, a louder reminder for ignored standards — these feel like action and change nothing. The staff skill is refusing the symptom fix gracefully and bringing the producing loop into the room instead.
+The discipline matters most at staff level because the org will keep asking you to fix symptoms. A new process for missed deadlines, another meeting for slow releases, a louder reminder for ignored standards: these feel like action and change nothing. The staff skill is refusing the symptom fix gracefully and bringing the producing loop into the room instead.
 
 ## Symptom vs Structure Diagnosis
 
@@ -39,12 +39,13 @@ The diagnostic move is the same every time: find the loop that produces the symp
 ## The Diagnostic Method
 
 1. **Trace the symptom to its producing loop.** Ask "what produces this on schedule?" until you reach a loop, not a person. If the answer is a person, ask what recruits that person into the role.
-2. **Name the leverage point in the loop.** Where does the loop get its energy? Ownership, incentives, information, or rules — in that order of preference.
+2. **Name the leverage point in the loop.** Where does the loop get its energy? Ownership, incentives, information, or rules (in that order of preference).
 3. **Design the smallest structural change that breaks the loop.** One ownership change, one incentive change, one default changed. If the intervention needs a committee to sustain it, it is too big.
 4. **Pilot the change.** Bound it in scope and time. A pilot is how you learn the loop's real shape without betting the org.
 5. **Watch secondary effects.** Every loop cut moves energy elsewhere. Watch adjacent metrics for one full cycle.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SYMPTOM["Recurring symptom"] --> TRACE["Trace to producing loop"]
     TRACE --> CUT["Smallest loop cut"]
@@ -76,7 +77,7 @@ A good cut is small enough to pilot, sharp enough to notice, and structural enou
 | **Measure** | Compare the pilot metrics to the baseline | Improvement here, deterioration elsewhere |
 | **Decide** | Roll out, adjust, or revert | The loop's true shape, now visible |
 
-Secondary effects are not failures; they are information. A cut that moves incidents from team A to team B has revealed a second producing loop — which is exactly what the pilot was for.
+Secondary effects are not failures; they are information. A cut that moves incidents from team A to team B has revealed a second producing loop, which is exactly what the pilot was for.
 
 ## Case Patterns
 
@@ -100,7 +101,7 @@ Some problems really are people problems, and the honest distinction protects yo
 | Multiple people independently produce the symptom | The person resists feedback and coaching |
 | The symptom disappears when the structure changes | The symptom persists through structure changes |
 
-Rule: structure first, people second. When you have genuinely changed the structure and the person still produces the failure, it is a people problem — and then it is a manager's problem to resolve with performance management, not yours to accommodate forever. Say this out loud; it is the honest end of the analysis.
+Rule: structure first, people second. When you have genuinely changed the structure and the person still produces the failure, it is a people problem, and then it is a manager's problem to resolve with performance management, not yours to accommodate forever. Say this out loud; it is the honest end of the analysis.
 
 ## Practical Applications
 
@@ -165,9 +166,9 @@ Rule: structure first, people second. When you have genuinely changed the struct
 - [[01_Systems_Thinking_Fundamentals]]: the loop vocabulary for diagnosis
 - [[03_Incentives_and_Behavior]]: incentives as the loop's fuel
 - [[04_Organizational_Design_Options]]: the structure levers available
-- [[06_Technical_Risk_and_Judgment/00_overview|Technical Risk and Judgment]]: incidents as symptom sources
-- [[02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: leading fixes across team lines
+- [[career-path/03_Staff_Engineer/06_Technical_Risk_and_Judgment/00_overview|Technical Risk and Judgment]]: incidents as symptom sources
+- [[career-path/03_Staff_Engineer/02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: leading fixes across team lines
 
 ## Summary
 
-Fixing structure not symptoms is the staff engineer's core intervention discipline: trace the recurring symptom to its producing loop, design the smallest structural cut, pilot it with named metrics and predicted secondary effects, and decide on evidence. The distinction between structural and people problems must be made honestly — but only after the structure has actually been changed.
+Fixing structure not symptoms is the staff engineer's core intervention discipline: trace the recurring symptom to its producing loop, design the smallest structural cut, pilot it with named metrics and predicted secondary effects, and decide on evidence. The distinction between structural and people problems must be made honestly, but only after the structure has actually been changed.

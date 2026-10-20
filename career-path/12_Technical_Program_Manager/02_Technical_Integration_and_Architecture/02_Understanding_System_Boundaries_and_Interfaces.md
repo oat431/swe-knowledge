@@ -16,13 +16,13 @@ tags:
 
 # Understanding System Boundaries and Interfaces
 
-> **Core skill:** Reading architecture diagrams for integration risk — identifying system boundaries, interface types, and integration points — so that the TPM knows where the program's technical risk concentrates before integration begins.
+> **Core skill:** Reading architecture diagrams for integration risk (identifying system boundaries, interface types, and integration points) so that the TPM knows where the program's technical risk concentrates before integration begins.
 
 ## Why This Matters
 
-Every integration failure happens at a boundary. Two systems that work perfectly in isolation fail when connected because the interface was underspecified, the data contract was misunderstood, or the boundary condition nobody thought about actually happens. The TPM who cannot read an architecture diagram for boundaries and interfaces cannot see where the program's technical risk lives — and cannot plan integration sequencing, dependency management, or risk mitigation around it.
+Every integration failure happens at a boundary. Two systems that work perfectly in isolation fail when connected because the interface was underspecified, the data contract was misunderstood, or the boundary condition nobody thought about actually happens. The TPM who cannot read an architecture diagram for boundaries and interfaces cannot see where the program's technical risk lives, and cannot plan integration sequencing, dependency management, or risk mitigation around it.
 
-This is not about designing systems. It is about reading the architecture artifacts that already exist — or ensuring they get created — and extracting the integration implications that the architects and engineers may not have surfaced. The TPM reads boundaries the way a building inspector reads load-bearing walls: not to design them, but to know which ones matter and which ones will fail first under stress.
+This is not about designing systems. It is about reading the architecture artifacts that already exist (or ensuring they get created) and extracting the integration implications that the architects and engineers may not have surfaced. The TPM reads boundaries the way a building inspector reads load-bearing walls: not to design them, but to know which ones matter and which ones will fail first under stress.
 
 ## Reading Architecture Diagrams for Integration Risk
 
@@ -30,7 +30,7 @@ Architecture diagrams are not decoration. They are maps of risk. The TPM reads t
 
 | What to Look For | How to Spot It | Why It Matters for Integration |
 |-----------------|---------------|-------------------------------|
-| **System boundaries** | Boxes that represent separate systems, services, or components — especially those owned by different teams | Every boundary is a potential integration failure point; boundaries between teams carry organizational risk on top of technical risk |
+| **System boundaries** | Boxes that represent separate systems, services, or components: especially those owned by different teams | Every boundary is a potential integration failure point; boundaries between teams carry organizational risk on top of technical risk |
 | **Interface types** | Arrows, lines, or annotations showing how systems communicate: API calls, events, message queues, file transfers, shared databases | Different interface types carry different integration risks; a synchronous API has different failure modes than an asynchronous event |
 | **Data flow direction** | Arrow direction: who calls whom, who publishes, who consumes | Upstream failures cascade downstream; downstream changes can break upstream assumptions |
 | **Coupling indicators** | Shared databases, synchronous call chains, tight schema dependencies | Tight coupling means changes in one system force changes in another; integration windows become serialized and long |
@@ -50,13 +50,14 @@ Different interface types carry different integration profiles. The TPM categori
 | **File transfer (SFTP, S3, batch processing)** | Producer writes file; consumer reads file; temporal decoupling but format coupling | File format is the contract; format changes break consumers silently; error handling is often ad-hoc | File format specification; schema validation; error file handling; retry and reconciliation |
 | **Shared library or SDK** | Multiple systems depend on the same code artifact; tight coupling at build time | Library version changes force coordinated upgrades; breaking changes cascade across all consumers | Versioning and deprecation policy; release notes; consumer upgrade tracking |
 
-The TPM maps every interface in the program to one of these types and records the integration risk profile. An interface with no documented type is an interface with no understood risk — and it goes on the risk register until it is understood.
+The TPM maps every interface in the program to one of these types and records the integration risk profile. An interface with no documented type is an interface with no understood risk, and it goes on the risk register until it is understood.
 
 ## Identifying Integration Points from System Maps
 
 An integration point is where two systems or workstreams must connect for the program to succeed. Not every boundary is an integration point; the TPM identifies the subset that carries program-level risk.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ARCH_DIAG["Architecture diagram: all system boundaries and interfaces"] --> CATEGORIZE["Categorize every interface by type and risk profile"]
     CATEGORIZE --> FILTER["Filter to program-relevant interfaces: new, changed, or cross-workstream"]
@@ -67,10 +68,10 @@ flowchart TD
 
 | Filter Question | If Yes | If No |
 |----------------|--------|-------|
-| Is this a new interface created by the program? | Integration point — no existing behavior to reference; contract must be designed and validated | Existing interface — lower risk unless the program is changing it |
-| Is this interface shared between workstreams? | Integration point — cross-workstream coordination required; organizational risk on top of technical risk | Within-workstream interface — managed by the workstream lead |
-| Is one side of this interface owned outside the program? | Integration point — external dependency; the program cannot control the other side's timeline or quality | Both sides owned within the program — the program controls both ends |
-| Is the interface contract undocumented or stale? | Integration point — the contract is the integration risk; document it before integration begins | Documented contract — lower risk; validate that the documentation matches reality |
+| Is this a new interface created by the program? | Integration point: no existing behavior to reference; contract must be designed and validated | Existing interface: lower risk unless the program is changing it |
+| Is this interface shared between workstreams? | Integration point: cross-workstream coordination required; organizational risk on top of technical risk | Within-workstream interface: managed by the workstream lead |
+| Is one side of this interface owned outside the program? | Integration point: external dependency; the program cannot control the other side's timeline or quality | Both sides owned within the program: the program controls both ends |
+| Is the interface contract undocumented or stale? | Integration point: the contract is the integration risk; document it before integration begins | Documented contract: lower risk; validate that the documentation matches reality |
 
 The TPM produces an integration point register: a list of every program-relevant interface, categorized by type, prioritized by risk, and assigned an owner on each side. This register drives the integration sequence plan.
 
@@ -127,7 +128,7 @@ The TPM audits interface contracts, not writes them. The audit question is: "If 
 
 - The integration point register exists and is referenced during integration planning
 - Every cross-workstream interface has a documented contract that both sides have agreed to
-- Architecture diagrams are validated against reality — not just accepted as accurate
+- Architecture diagrams are validated against reality, not just accepted as accurate
 - External dependencies are identified and flagged before they become surprises
 - Interface changes trigger contract updates, not silent drift
 
@@ -136,9 +137,9 @@ The TPM audits interface contracts, not writes them. The audit question is: "If 
 - [[01_Technical_Fluency_for_TPMs]]: the technical context that enables boundary and interface reading
 - [[03_Integration_Sequencing]]: the integration plan built from the integration point register
 - [[04_Technical_Risk_Identification]]: the risks that surface when boundaries are unclear
-- [[03_Dependency_Management/00_overview|Dependency Management]]: cross-workstream interfaces are dependencies to manage
+- [[career-path/12_Technical_Program_Manager/03_Dependency_Management/00_overview|Dependency Management]]: cross-workstream interfaces are dependencies to manage
 - [[career-path/06_Software_Architect/01_Architecture_Fundamentals/04_Architecture_Decision_Making|Architecture Decision Making (Architect)]]: the architecture authority that designs the boundaries the TPM reads
 
 ## Summary
 
-Understanding system boundaries and interfaces is the TPM's risk-reading skill: categorize every interface by type and risk profile, filter to the integration points that carry program-level risk, ensure every cross-workstream interface has a documented contract, and prioritize the riskiest boundaries for early integration. The TPM does not design interfaces — but the TPM who cannot read them cannot plan the program that integrates them.
+Understanding system boundaries and interfaces is the TPM's risk-reading skill: categorize every interface by type and risk profile, filter to the integration points that carry program-level risk, ensure every cross-workstream interface has a documented contract, and prioritize the riskiest boundaries for early integration. The TPM does not design interfaces, but the TPM who cannot read them cannot plan the program that integrates them.

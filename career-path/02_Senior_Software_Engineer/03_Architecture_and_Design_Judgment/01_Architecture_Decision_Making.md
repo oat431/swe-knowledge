@@ -31,6 +31,7 @@ Architecture decisions are different from coding decisions because:
 ## The Decision-Making Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     FRAME["1 Frame the decision\nWhat question are we answering?"] --> IDENTIFY["2 Identify options\nWhat are the realistic alternatives?"]
     IDENTIFY --> CRITERIA["3 Define criteria\nWhat qualities matter most?"]

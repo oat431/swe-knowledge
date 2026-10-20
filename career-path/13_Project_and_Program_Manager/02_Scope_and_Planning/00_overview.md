@@ -14,13 +14,13 @@ tags:
 
 # Scope and Planning
 
-> **Core capability:** The project manager defines the work — decomposing scope into manageable deliverables, building a plan the team believes in, and maintaining the baseline against which progress and change are measured.
+> **Core capability:** The project manager defines the work, decomposing scope into manageable deliverables, building a plan the team believes in, and maintaining the baseline against which progress and change are measured.
 
 ## Why This Matters
 
-Scope is the project's most contested boundary. Stakeholders add, teams resist, and the project manager holds the line — not by refusing change, but by making change visible: every addition costs something, and the decision to accept or reject belongs to governance, not to the project manager alone.
+Scope is the project's most contested boundary. Stakeholders add, teams resist, and the project manager holds the line, not by refusing change, but by making change visible: every addition costs something, and the decision to accept or reject belongs to governance, not to the project manager alone.
 
-Planning is the project manager's craft: a work breakdown structure that names every deliverable, a plan that sequences work realistically, and a baseline that makes variance visible before it becomes a crisis. The plan is not a prediction — it is a communication tool. The project manager who treats it as a prediction hides variance; the one who treats it as a baseline manages it.
+Planning is the project manager's craft: a work breakdown structure that names every deliverable, a plan that sequences work realistically, and a baseline that makes variance visible before it becomes a crisis. The plan is not a prediction. It is a communication tool. The project manager who treats it as a prediction hides variance; the one who treats it as a baseline manages it.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ Planning is the project manager's craft: a work breakdown structure that names e
 ## The Planning Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SCOPE["Define scope: what we will and won't deliver"] --> WBS["Decompose: WBS of deliverables"]
     WBS --> ACTIVITIES["Activities: what must be done to produce each deliverable"]
@@ -70,17 +71,17 @@ The plan is alive; the baseline is the reference point.
 
 ## Success Indicators
 
-- Scope changes are decisions, not drift — visible and governed
+- Scope changes are decisions, not drift: visible and governed
 - The WBS covers all deliverables with no gaps
 - The project plan is the team's reference, not the PM's private artifact
 - Deliverables meet their acceptance criteria on first review
 
 ## Related Capabilities
 
-- [[01_Initiation_and_Charter/00_overview|Initiation and Charter]]: scope is bounded in the charter
-- [[03_Schedule_and_Cost/00_overview|Schedule and Cost]]: scope drives schedule and cost baselines
-- [[06_Governance_and_Change_Control/00_overview|Governance and Change Control]]: change control governs scope changes
+- [[career-path/13_Project_and_Program_Manager/01_Initiation_and_Charter/00_overview|Initiation and Charter]]: scope is bounded in the charter
+- [[career-path/13_Project_and_Program_Manager/03_Schedule_and_Cost/00_overview|Schedule and Cost]]: scope drives schedule and cost baselines
+- [[career-path/13_Project_and_Program_Manager/06_Governance_and_Change_Control/00_overview|Governance and Change Control]]: change control governs scope changes
 
 ## Summary
 
-Scope and planning define what the project will and will not deliver. The WBS decomposes scope into work; the plan sequences it realistically; the baseline makes variance visible; and scope change management keeps additions governed and honest. The plan is a communication tool — the project manager's job is to keep it honest, not to make it perfect.
+Scope and planning define what the project will and will not deliver. The WBS decomposes scope into work; the plan sequences it realistically; the baseline makes variance visible; and scope change management keeps additions governed and honest. The plan is a communication tool. The project manager's job is to keep it honest, not to make it perfect.

@@ -16,15 +16,15 @@ tags:
 
 # Data Protection and Client Obligations
 
-> **Core skill:** The independent handles client data as a custodian — knowing what rules apply, minimizing what is held, protecting it with real measures, and answering client due diligence truthfully.
+> **Core skill:** The independent handles client data as a custodian: knowing what rules apply, minimizing what is held, protecting it with real measures, and answering client due diligence truthfully.
 
 ## Why This Matters
 
-Client data is simultaneously an asset, a responsibility, and a liability. When a client hands over personal data, credentials, or business records, obligations attach automatically: contractual confidentiality, and — depending on the jurisdiction, industry, and data involved — privacy rules with genuine consequences. The independent who treats data casually accumulates risk silently: production copies on laptops, credentials in chat, backups never tested, retention that lasts forever because nobody decided otherwise. None of it feels dangerous until a laptop is stolen, an account is compromised, or a client asks a question that cannot be answered honestly.
+Client data is simultaneously an asset, a responsibility, and a liability. When a client hands over personal data, credentials, or business records, obligations attach automatically: contractual confidentiality, and (depending on the jurisdiction, industry, and data involved) privacy rules with genuine consequences. The independent who treats data casually accumulates risk silently: production copies on laptops, credentials in chat, backups never tested, retention that lasts forever because nobody decided otherwise. None of it feels dangerous until a laptop is stolen, an account is compromised, or a client asks a question that cannot be answered honestly.
 
-The custodian framing keeps this manageable without turning the independent into a privacy lawyer. The core discipline is knowing five things about any data held: what it is, why it is held, where it lives, how long it stays, and who can reach it — and being able to answer those questions calmly in a client security review. Minimization does most of the work: data not collected cannot leak, retention limits shrink the exposure window, and clean separation between clients keeps one incident from becoming several.
+The custodian framing keeps this manageable without turning the independent into a privacy lawyer. The core discipline is knowing five things about any data held: what it is, why it is held, where it lives, how long it stays, and who can reach it, and being able to answer those questions calmly in a client security review. Minimization does most of the work: data not collected cannot leak, retention limits shrink the exposure window, and clean separation between clients keeps one incident from becoming several.
 
-Specific obligations depend entirely on the legal regime that applies, and regimes differ meaningfully — data protection rules across jurisdictions, from European privacy regulation to Thailand's own data protection framework, impose different duties around transparency, security, retention, and cross border transfer. None of that can be inferred from a general guide: where a market like Thailand is involved, the required obligations must be confirmed with a qualified local lawyer. The commercial side is equally direct: enterprise clients run due diligence, and honest, organized answers — including stated gaps with remediation plans — win deals and keep them. Overpromising on a security questionnaire is not a sales tactic; it is an incident waiting for a date.
+Specific obligations depend entirely on the legal regime that applies, and regimes differ meaningfully: data protection rules across jurisdictions, from European privacy regulation to Thailand's own data protection framework, impose different duties around transparency, security, retention, and cross border transfer. None of that can be inferred from a general guide: where a market like Thailand is involved, the required obligations must be confirmed with a qualified local lawyer. The commercial side is equally direct: enterprise clients run due diligence, and honest, organized answers (including stated gaps with remediation plans) win deals and keep them. Overpromising on a security questionnaire is not a sales tactic; it is an incident waiting for a date.
 
 ## Data Custodianship Principles
 
@@ -45,7 +45,7 @@ Specific obligations depend entirely on the legal regime that applies, and regim
 | Where will it live during the work? | Client systems, your environments, backups, laptops |
 | Who can reach it? | Named people and service accounts, including yours |
 | What does the contract promise? | Confidentiality terms, permitted uses, deletion duties |
-| Which rules apply? | Jurisdiction and industry regimes — confirmed with a local lawyer |
+| Which rules apply? | Jurisdiction and industry regimes: confirmed with a local lawyer |
 | What happens at the end? | Deletion or return, evidence of both |
 
 ## Answering Client Due Diligence
@@ -61,6 +61,7 @@ Specific obligations depend entirely on the legal regime that applies, and regim
 ## The Data Custody Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     COLLECT["Collect only what the engagement needs"] --> RECORD["Record where it lives and who can reach it"]
     RECORD --> PROTECT["Protect in storage access and transfer"]
@@ -106,4 +107,4 @@ flowchart TD
 
 ## Summary
 
-Data protection and client obligations are custodianship made practical: know what is held, minimize it, protect it with real measures, retain it only while justified, and dispose of it with evidence. The rules that apply depend on jurisdiction and must be confirmed with local counsel — including in markets like Thailand — while the commercial return comes from answering due diligence honestly, which is the same discipline that keeps the practice out of trouble.
+Data protection and client obligations are custodianship made practical: know what is held, minimize it, protect it with real measures, retain it only while justified, and dispose of it with evidence. The rules that apply depend on jurisdiction and must be confirmed with local counsel (including in markets like Thailand), while the commercial return comes from answering due diligence honestly, which is the same discipline that keeps the practice out of trouble.

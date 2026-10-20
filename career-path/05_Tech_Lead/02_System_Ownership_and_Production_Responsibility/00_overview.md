@@ -14,7 +14,7 @@ tags:
 
 # System Ownership and Production Responsibility
 
-> **Core capability:** The tech lead is the guardian of the system the team runs — its health, its dependencies, its debt, and its readiness for what the team ships into it.
+> **Core capability:** The tech lead is the guardian of the system the team runs: its health, its dependencies, its debt, and its readiness for what the team ships into it.
 
 ## Why This Matters
 
@@ -37,6 +37,7 @@ Systems decay by default: dependencies age, debt accumulates, monitoring rots, k
 ## The System Health Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     OBSERVE["Observe health"] --> ASSESS["Assess against standards"]
     ASSESS --> NEGOTIATE["Negotiate capacity for health work"]
@@ -44,7 +45,7 @@ flowchart LR
     IMPROVE --> OBSERVE
 ```
 
-The loop runs continuously. The tech lead owns the loop — the team owns the work inside it.
+The loop runs continuously. The tech lead owns the loop. The team owns the work inside it.
 
 ## Ownership Levels
 
@@ -61,7 +62,7 @@ The loop runs continuously. The tech lead owns the loop — the team owns the wo
 ### System Ownership Checklist
 
 - [ ] An ownership charter names the services, data, and interfaces the team owns
-- [ ] Sub-ownership within the team is assigned — no orphaned components
+- [ ] Sub-ownership within the team is assigned, no orphaned components
 - [ ] A debt register exists with cost, risk, and payoff estimate per item
 - [ ] Upstream and downstream dependencies are mapped with contact owners
 - [ ] Dashboards answer "is the system healthy?" without interpretation
@@ -75,7 +76,7 @@ The loop runs continuously. The tech lead owns the loop — the team owns the wo
 |---------|---------------------|-----------------|
 | **Owning it solo** | You become the bus factor you were meant to eliminate | Distribute ownership; keep the meta-view |
 | **Invisible debt** | Interest compounds silently until delivery stalls | Maintain a public debt register with costs |
-| **Monitoring as decoration** | Dashboards nobody reads, alerts nobody tunes | Review observability like code — regularly |
+| **Monitoring as decoration** | Dashboards nobody reads, alerts nobody tunes | Review observability like code, regularly |
 | **Ad-hoc production support** | Heroics and luck instead of a model | Design the support model explicitly |
 
 ## Success Indicators
@@ -87,10 +88,10 @@ The loop runs continuously. The tech lead owns the loop — the team owns the wo
 
 ## Related Capabilities
 
-- [[07_Incident_Leadership_and_Production_Excellence/00_overview|Incident Leadership and Production Excellence]]: when health efforts fail, this is the response
-- [[03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture]]: debt and health decisions feed the direction
+- [[career-path/05_Tech_Lead/07_Incident_Leadership_and_Production_Excellence/00_overview|Incident Leadership and Production Excellence]]: when health efforts fail, this is the response
+- [[career-path/05_Tech_Lead/03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture]]: debt and health decisions feed the direction
 - [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/00_overview|Technical Ownership (Senior)]]: the personal-ownership foundation this extends to a team
 
 ## Summary
 
-System ownership at the tech-lead level is a leadership act: making health visible, negotiating capacity to protect it, and designing the support structures — reviews, registers, dashboards, models — that outlast any individual. The system should be able to lose you for a month and stay healthy.
+System ownership at the tech-lead level is a leadership act: making health visible, negotiating capacity to protect it, and designing the support structures (reviews, registers, dashboards, models) that outlast any individual. The system should be able to lose you for a month and stay healthy.

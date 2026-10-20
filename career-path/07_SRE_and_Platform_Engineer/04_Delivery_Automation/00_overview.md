@@ -15,15 +15,15 @@ created: 2026-08-05
 
 ## Core Idea
 
-Delivery Automation is the discipline of making software delivery **safe, fast, and repeatable** through declarative pipelines, automated infrastructure, and progressive rollout strategies. It bridges the gap between a developer's commit and production traffic — ensuring every change flows through a controlled, observable, and reversible path.
+Delivery Automation is the discipline of making software delivery **safe, fast, and repeatable** through declarative pipelines, automated infrastructure, and progressive rollout strategies. It bridges the gap between a developer's commit and production traffic, ensuring every change flows through a controlled, observable, and reversible path.
 
 ## What It Means at Specialist Level
 
-A specialist in Delivery Automation does not merely configure CI tools — they **design the entire delivery fabric** of an organization:
+A specialist in Delivery Automation does not merely configure CI tools. They **design the entire delivery fabric** of an organization:
 
 - **Architect pipelines** that scale from 10 to 10,000 deployments per day without human intervention
-- **Choose and enforce deployment strategies** — canary, blue-green, feature flags — based on risk profiles
-- **Treat infrastructure as software** — versioned, tested, reviewed, and rolled back like application code
+- **Choose and enforce deployment strategies**: canary, blue-green, feature flags (based on risk profiles)
+- **Treat infrastructure as software**: versioned, tested, reviewed, and rolled back like application code
 - **Make Git the single source of truth** for both infrastructure state and deployment intent
 - **Build automated rollback and recovery** so failures self-heal within seconds, not hours
 - **Measure delivery performance** using DORA metrics and continuously optimize the path to production
@@ -41,6 +41,7 @@ A specialist in Delivery Automation does not merely configure CI tools — they 
 ## How These Topics Connect
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CICD["01 CI/CD Pipelines"] --> PD["02 Progressive Delivery"]
     CICD --> IaC["03 Infrastructure as Code"]
@@ -53,11 +54,11 @@ flowchart LR
 
 **Flow explanation:**
 
-- **CI/CD Pipelines** are the backbone — they build, test, and push artifacts that feed into everything else.
+- **CI/CD Pipelines** are the backbone. They build, test, and push artifacts that feed into everything else.
 - **Infrastructure as Code** provides the declarative foundation that GitOps orchestrates and CI/CD provisions.
 - **GitOps** unifies Git as the single source of truth, connecting IaC state with deployment pipelines.
-- **Progressive Delivery** sits at the intersection — it uses pipeline outputs and GitOps triggers to roll changes out safely.
-- **Rollback and Recovery** wraps all layers — pipelines trigger rollbacks, GitOps reverts state, and progressive strategies limit blast radius.
+- **Progressive Delivery** sits at the intersection. It uses pipeline outputs and GitOps triggers to roll changes out safely.
+- **Rollback and Recovery** wraps all layers. Pipelines trigger rollbacks, GitOps reverts state, and progressive strategies limit blast radius.
 
 ## Existing Vault Anchors
 
@@ -66,7 +67,7 @@ flowchart LR
 | [[software-engineering-note/06_Software_Engineering_Operations/Fundamental/13 CI CD Pipelines]] | Foundational CI/CD concepts, pipeline stages, tooling |
 | [[software-engineering-note/02_Software_Architecture/Microservice/07 Deployment/074 GitOps & CI-CD Pipelines]] | GitOps patterns, ArgoCD, Flux integration with CI |
 | [[software-engineering-note/02_Software_Architecture/Microservice/07 Deployment/072 Deployment Strategies]] | Blue-green, canary, rolling update strategies |
-| [[software-engineering-note/06_Software_Engineering_Operations/01_The_Three_Ways]] | DevOps principles — flow, feedback, continuous learning |
+| [[software-engineering-note/06_Software_Engineering_Operations/01_The_Three_Ways]] | DevOps principles: flow, feedback, continuous learning |
 
 ## Self-Assessment Checklist
 
@@ -77,11 +78,11 @@ Use this to gauge your depth in Delivery Automation. A specialist should confide
 - [ ] I manage infrastructure declaratively with Terraform or Pulumi, including state management, modules, and drift detection
 - [ ] I have set up a GitOps workflow where Git is the authoritative source for cluster state and application deployments
 - [ ] I have built automated rollback mechanisms that trigger within minutes of detecting a regression
-- [ ] I can measure and improve DORA metrics — deployment frequency, lead time, change failure rate, and MTTR
+- [ ] I can measure and improve DORA metrics: deployment frequency, lead time, change failure rate, and MTTR
 - [ ] I have designed and tested a disaster recovery plan that meets defined RPO and RTO targets
 
 ## Related Capability Areas
 
-- [[00_overview|07_SRE_and_Platform_Engineer Overview]] — parent capability area
-- [[../02_Observability/00_overview|Observability and Monitoring]] — pipelines produce metrics that observability consumes
-- [[../05_Capacity_and_Resilience/00_overview|Reliability Engineering]] — delivery automation enables reliability through safe, reversible changes
+- [[00_overview|07_SRE_and_Platform_Engineer Overview]]: parent capability area
+- [[career-path/07_SRE_and_Platform_Engineer/02_Observability/00_overview|Observability and Monitoring]]: pipelines produce metrics that observability consumes
+- [[career-path/07_SRE_and_Platform_Engineer/05_Capacity_and_Resilience/00_overview|Reliability Engineering]]: delivery automation enables reliability through safe, reversible changes

@@ -16,11 +16,11 @@ tags:
 
 # Technology Portfolio Management
 
-> **Core skill:** The principal engineer manages a portfolio of technology bets across risk profiles — explore, expand, exploit — balancing the portfolio, conducting regular reviews, killing bets that are not working, and reinvesting freed capacity into the next set of opportunities.
+> **Core skill:** The principal engineer manages a portfolio of technology bets across risk profiles (explore, expand, exploit), balancing the portfolio, conducting regular reviews, killing bets that are not working, and reinvesting freed capacity into the next set of opportunities.
 
 ## Why This Matters
 
-Individual technology bets are evaluated on their own merits. But bets do not exist in isolation — they compete for finite organizational capacity, and their combined shape determines whether the organization innovates, optimizes, or stagnates. A portfolio with nothing but safe bets drifts toward irrelevance. A portfolio with nothing but moonshots never ships.
+Individual technology bets are evaluated on their own merits. But bets do not exist in isolation. They compete for finite organizational capacity, and their combined shape determines whether the organization innovates, optimizes, or stagnates. A portfolio with nothing but safe bets drifts toward irrelevance. A portfolio with nothing but moonshots never ships.
 
 The principal engineer manages the portfolio as a portfolio: balancing risk profiles, reviewing bets as a set, and making the hard decision to kill bets that are not working. This is the discipline that prevents the organization from accumulating a graveyard of half-funded, never-canceled initiatives.
 
@@ -36,7 +36,7 @@ Every technology bet falls into one of three risk profiles. The portfolio's shap
 
 ## Portfolio Balance
 
-A healthy portfolio has a deliberate shape. The shape is not a formula — it reflects the organization's strategy and market position.
+A healthy portfolio has a deliberate shape. The shape is not a formula. It reflects the organization's strategy and market position.
 
 | Organization Context | Explore | Expand | Exploit |
 |---------------------|---------|--------|---------|
@@ -52,6 +52,7 @@ The balance is reviewed at every portfolio review. A shift in market position or
 Regular review is the discipline that keeps the portfolio honest. Without it, bets accumulate, capacity fragments, and the portfolio drifts.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     BETS["Active technology bets: explore, expand, exploit"] --> CLASSIFY["Classify each bet by risk profile and stage"]
     CLASSIFY --> SHAPE["Assess portfolio shape against target balance"]
@@ -74,7 +75,7 @@ flowchart TD
 
 ## Killing Bets
 
-Killing a bet is the hardest portfolio management action and the most important. Organizations that cannot kill bets cannot innovate — capacity is trapped in failing initiatives.
+Killing a bet is the hardest portfolio management action and the most important. Organizations that cannot kill bets cannot innovate. Capacity is trapped in failing initiatives.
 
 | Kill Signal | What It Means | Action |
 |-------------|---------------|--------|
@@ -137,7 +138,7 @@ The principal maintains a one-page portfolio view that makes the shape, health, 
 - The portfolio shape shifts deliberately in response to strategy changes
 - At least one bet is killed per portfolio review cycle on criteria, not embarrassment
 - Freed capacity is reinvested in pipeline bets within one planning cycle
-- The Explore pipeline is never empty — candidate bets are always waiting for capacity
+- The Explore pipeline is never empty. Candidate bets are always waiting for capacity
 - The portfolio dashboard is the artifact used in leadership discussions, not a special presentation
 
 ## Related Topics
@@ -150,4 +151,4 @@ The principal maintains a one-page portfolio view that makes the shape, health, 
 
 ## Summary
 
-Technology portfolio management means managing a collection of bets across risk profiles — Explore, Expand, Exploit — balancing the portfolio against strategy and market context, holding regular reviews that produce decisions, killing bets that are not working against written criteria, and deliberately reinvesting freed capacity into the next set of opportunities. The principal maintains the portfolio dashboard that makes the shape, health, and allocation visible, and ensures the Explore pipeline never runs dry.
+Technology portfolio management means managing a collection of bets across risk profiles (Explore, Expand, Exploit), balancing the portfolio against strategy and market context, holding regular reviews that produce decisions, killing bets that are not working against written criteria, and deliberately reinvesting freed capacity into the next set of opportunities. The principal maintains the portfolio dashboard that makes the shape, health, and allocation visible, and ensures the Explore pipeline never runs dry.

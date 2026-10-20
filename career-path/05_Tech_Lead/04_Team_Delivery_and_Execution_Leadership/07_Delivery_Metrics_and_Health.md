@@ -15,13 +15,13 @@ tags:
 
 # Delivery Metrics and Health
 
-> **Core skill:** Reading the team's delivery health from flow signals, not vibes — using metrics to start conversations, never to judge people.
+> **Core skill:** Reading the team's delivery health from flow signals, not vibes: using metrics to start conversations, never to judge people.
 
 ## Why This Matters
 
-A team without metrics argues from impression: the lead thinks things are fine, the engineer knows the cycle time doubled, and the stakeholder hears whichever voice is loudest. Metrics replace impressions with a shared, checkable picture — but only if the right metrics are read the right way.
+A team without metrics argues from impression: the lead thinks things are fine, the engineer knows the cycle time doubled, and the stakeholder hears whichever voice is loudest. Metrics replace impressions with a shared, checkable picture, but only if the right metrics are read the right way.
 
-The wrong metric practice is worse than none. Velocity used as a performance score, teams compared against each other, individuals measured on throughput — these turn measurement into gaming and fear, and the numbers quietly stop meaning anything. The lead's job is to build a metric culture that informs decisions without corrupting behavior.
+The wrong metric practice is worse than none. Velocity used as a performance score, teams compared against each other, individuals measured on throughput. These turn measurement into gaming and fear, and the numbers quietly stop meaning anything. The lead's job is to build a metric culture that informs decisions without corrupting behavior.
 
 ## Flow Metrics Over Utilization
 
@@ -32,9 +32,9 @@ The team's delivery health is best read through flow: how work moves through the
 | **Cycle time** | Time from work started to work delivered | Stable or shrinking; predictable per work size |
 | **Throughput** | How many items finish per week | Consistent with the team's stated capacity |
 | **WIP** | How many items are in flight at once | Low and deliberate; finishing beats starting |
-| **Utilization** | Share of time people are busy | High utilization is NOT the goal — it hides queueing |
+| **Utilization** | Share of time people are busy | High utilization is NOT the goal: it hides queueing |
 
-Utilization is the trap metric: a team at 95 percent utilization looks productive and is, in fact, a queue. Flow metrics reveal what utilization hides — the waiting time between steps, the WIP that never finishes, the cycle time that quietly doubled. The lead reads flow first and treats utilization as context, never as a target.
+Utilization is the trap metric: a team at 95 percent utilization looks productive and is, in fact, a queue. Flow metrics reveal what utilization hides: the waiting time between steps, the WIP that never finishes, the cycle time that quietly doubled. The lead reads flow first and treats utilization as context, never as a target.
 
 ## Leading vs Lagging Indicators
 
@@ -45,7 +45,7 @@ Some metrics tell the team what already happened; others warn about what is comi
 | **Leading** | WIP level, merge rate, review queue depth, dependency slips, scope additions | Watch weekly; they signal drift before it lands |
 | **Lagging** | Cycle time, throughput, delivered scope, incident rate | Review in retrospectives; they confirm what the leading signals predicted |
 
-The practice: leading indicators trigger action during the cycle, lagging indicators validate the action after it. A team that only reads lagging metrics is a team that discovers its problems in the retro — useful, but a cycle too late.
+The practice: leading indicators trigger action during the cycle, lagging indicators validate the action after it. A team that only reads lagging metrics is a team that discovers its problems in the retro, useful, but a cycle too late.
 
 ## Metrics Anti-Patterns
 
@@ -54,7 +54,7 @@ Metric cultures die from misuse faster than from bad numbers. The lead recognize
 | Anti-pattern | Why it corrupts | The lead's stance |
 |--------------|------------------|-------------------|
 | **Velocity as performance** | Teams inflate points, game estimates, and stop trusting the number | Velocity is a planning input, never an evaluation |
-| **Comparing teams** | Context differs: domains, legacy, maturity — the comparison is fiction | Compare a team to its own history, never to another team |
+| **Comparing teams** | Context differs: domains, legacy, maturity. The comparison is fiction | Compare a team to its own history, never to another team |
 | **Individual metrics** | People optimize personal numbers and stop helping each other | Measure the flow of the team's work, not the flow of a person |
 | **Metrics as sticks** | Numbers become threats; reporting becomes creative | Metrics open questions; they never close verdicts |
 | **Dashboard worship** | More charts than decisions; nobody knows what to change | Every metric on the board has a decision attached |
@@ -81,16 +81,16 @@ The lead's language around metrics sets the culture. The same number can be a we
 
 | Instead of | Say | Effect |
 |-----------|-----|--------|
-| Your cycle time is bad | Cycle time doubled since the API migration — what changed? | Opens investigation instead of defense |
-| We are slower than Team B | Our throughput dropped two weeks running — what is the cause? | Focuses on the team's own system |
-| Why is this taking so long | This item has been in WIP for three weeks — what is it waiting on? | Surfaces the blocker instead of the person |
-| Our velocity fell, we must work harder | Velocity fell after the onboarding wave — is the plan realistic? | Questions the plan, not the effort |
+| Your cycle time is bad | Cycle time doubled since the API migration. What changed? | Opens investigation instead of defense |
+| We are slower than Team B | Our throughput dropped two weeks running. What is the cause? | Focuses on the team's own system |
+| Why is this taking so long | This item has been in WIP for three weeks. What is it waiting on? | Surfaces the blocker instead of the person |
+| Our velocity fell, we must work harder | Velocity fell after the onboarding wave. Is the plan realistic? | Questions the plan, not the effort |
 
-The rule the lead models: metrics describe the system's behavior, people explain it, and the team fixes it. The moment a metric is used to assign blame, the data stops being true — the team learns to hide, and the measurement dies.
+The rule the lead models: metrics describe the system's behavior, people explain it, and the team fixes it. The moment a metric is used to assign blame, the data stops being true. The team learns to hide, and the measurement dies.
 
 ## Reporting Delivery to Stakeholders Honestly
 
-Stakeholder reporting is compression with integrity: trends, ranges, and causes — not a single green status that collapses the whole story.
+Stakeholder reporting is compression with integrity: trends, ranges, and causes, not a single green status that collapses the whole story.
 
 | Reporting principle | What it looks like |
 |---------------------|--------------------|
@@ -105,6 +105,7 @@ The lead's one-sentence rule for stakeholder reports: what is true, what it mean
 ## The Metrics Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     MEASURE["Measure flow weekly"] --> LEAD["Watch leading indicators"]
     LEAD --> REVIEW["Review health in the cadence"]
@@ -117,7 +118,7 @@ flowchart LR
 
 **Build the team's metric practice with this checklist:**
 
-- [ ] Track cycle time, throughput, and WIP — not utilization — as the core picture
+- [ ] Track cycle time, throughput, and WIP (not utilization) as the core picture
 - [ ] Watch leading indicators weekly: WIP, merge rate, review depth, dependency status
 - [ ] Ban velocity-as-performance, team comparisons, and individual throughput metrics
 - [ ] Run the health review on a fixed cadence with the one-anomaly format
@@ -128,7 +129,7 @@ flowchart LR
 **Health review template:**
 
 ```markdown
-# Delivery Health Review — [date]
+# Delivery Health Review: [date]
 
 ## Flow picture
 Cycle time: [value] vs [previous cycles] | Throughput: [value] | WIP: [value]
@@ -146,7 +147,7 @@ Cycle time: [value] vs [previous cycles] | Throughput: [value] | WIP: [value]
 [What changed in the system, named without blame]
 
 ## Experiment for next cycle
-[One change] — prediction: [expected effect on which metric]
+[One change], prediction: [expected effect on which metric]
 ```
 
 ## Common Pitfalls
@@ -159,7 +160,7 @@ Cycle time: [value] vs [previous cycles] | Throughput: [value] | WIP: [value]
 | Dashboard without decisions | Charts grow; nobody knows what to change | Every metric has a decision attached |
 | Metrics as weapons | The team hides the truth; the numbers rot | Metrics open questions; they never close verdicts |
 | Reading only lagging metrics | Problems are discovered a cycle too late | Watch leading indicators weekly |
-| Green-washing stakeholder reports | The report soothes; the surprise lands anyway | Trends, ranges, and causes — amber now beats red later |
+| Green-washing stakeholder reports | The report soothes; the surprise lands anyway | Trends, ranges, and causes: amber now beats red later |
 
 ## Success Indicators
 
@@ -175,9 +176,9 @@ Cycle time: [value] vs [previous cycles] | Throughput: [value] | WIP: [value]
 - [[02_Estimation_and_Forecasting_for_Teams]]: actuals against estimates feed the flow picture
 - [[06_Release_and_Deployment_Leadership]]: deployment frequency and change failure rate are release health
 - [[04_Delivery_Risk_Management]]: leading indicators are delivery risk in motion
-- [[06_Process_and_Quality_Stewardship/00_overview|Process and Quality Stewardship]]: the processes these metrics measure and tune
+- [[career-path/05_Tech_Lead/06_Process_and_Quality_Stewardship/00_overview|Process and Quality Stewardship]]: the processes these metrics measure and tune
 - [[career-path/02_Senior_Software_Engineer/04_Delivery_and_Execution/00_overview|Delivery and Execution (Senior)]]: the personal delivery metrics this area scales to a team
 
 ## Summary
 
-Delivery health is read from flow metrics — cycle time, throughput, WIP — watched through leading indicators, and reviewed in a fixed cadence that ends in one experiment. The lead protects the metric culture from the anti-patterns that corrupt numbers, uses metrics to open conversations rather than judge people, and reports to stakeholders as trends, ranges, and causes. Measured this way, metrics make the team's next decision obvious instead of debatable.
+Delivery health is read from flow metrics (cycle time, throughput, WIP) watched through leading indicators, and reviewed in a fixed cadence that ends in one experiment. The lead protects the metric culture from the anti-patterns that corrupt numbers, uses metrics to open conversations rather than judge people, and reports to stakeholders as trends, ranges, and causes. Measured this way, metrics make the team's next decision obvious instead of debatable.

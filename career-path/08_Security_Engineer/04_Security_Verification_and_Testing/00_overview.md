@@ -56,6 +56,7 @@ Senior-level outcomes include:
 ## How the Topics Connect
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     REQUIRE["Security requirements and threats"] --> STRATEGY["01 Test strategy"]
     STRATEGY --> STATIC["02 SAST and taint analysis"]
@@ -111,9 +112,9 @@ Depth can mean more than more tests. It may require a design review, a manual ab
 
 ## Related
 
-- [[03_Secure_Development_and_DevSecOps/00_overview|Secure Development and DevSecOps]]: controls and evidence created during delivery
-- [[01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]: risk scenarios that determine verification questions
-- [[02_Secure_Architecture_and_Design/00_overview|Secure Architecture and Design]]: design properties that require assurance
-- [[07_Vulnerability_Management_and_Governance/00_overview|Vulnerability Management and Governance]]: lifecycle management after findings are accepted
+- [[career-path/08_Security_Engineer/03_Secure_Development_and_DevSecOps/00_overview|Secure Development and DevSecOps]]: controls and evidence created during delivery
+- [[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]: risk scenarios that determine verification questions
+- [[career-path/08_Security_Engineer/02_Secure_Architecture_and_Design/00_overview|Secure Architecture and Design]]: design properties that require assurance
+- [[career-path/08_Security_Engineer/07_Vulnerability_Management_and_Governance/00_overview|Vulnerability Management and Governance]]: lifecycle management after findings are accepted
 - [[career-path/10_Quality_and_Test_Engineering/00_overview|Quality and Test Engineering]]: general testing strategy and measurement
 - [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]: broader decision influence and evidence culture

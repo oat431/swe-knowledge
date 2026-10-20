@@ -20,9 +20,9 @@ tags:
 
 ## Why This Matters
 
-The tech lead and the engineering manager are the two leadership seats on a team. When the division between them is implicit, three failure modes appear: the same decision gets made twice (conflict), no one makes it (gap), or each defers to the other (paralysis). All three look identical from outside — a team that stalls on things it should be able to decide.
+The tech lead and the engineering manager are the two leadership seats on a team. When the division between them is implicit, three failure modes appear: the same decision gets made twice (conflict), no one makes it (gap), or each defers to the other (paralysis). All three look identical from outside: a team that stalls on things it should be able to decide.
 
-The cleanest division in common use: the TL owns the system and its outcome; the EM owns the people and team health. Everything else is negotiated against that spine, decision by decision. The negotiation is not a one-time event — it is a standing item in a weekly sync that never gets cancelled.
+The cleanest division in common use: the TL owns the system and its outcome; the EM owns the people and team health. Everything else is negotiated against that spine, decision by decision. The negotiation is not a one-time event. It is a standing item in a weekly sync that never gets cancelled.
 
 ## The Division Principle
 
@@ -33,7 +33,7 @@ The cleanest division in common use: the TL owns the system and its outcome; the
 | Failure they answer for | System failures, technical debt | Attrition, burnout, interpersonal breakdown |
 | Input to the other | Technical performance signals | Team context and capacity signals |
 
-The division is a starting point, not a fence. Both roles need visibility into both halves — the TL needs to know when an engineer is struggling, the EM needs to know when a subsystem is rotting. The difference is who is accountable for acting.
+The division is a starting point, not a fence. Both roles need visibility into both halves: the TL needs to know when an engineer is struggling, the EM needs to know when a subsystem is rotting. The difference is who is accountable for acting.
 
 ## Decision Ownership
 
@@ -59,7 +59,7 @@ A = accountable, C = consulted, I = informed. The specific letters matter less t
 The partnership lives or dies on a regular sync. Thirty minutes, weekly, same slot:
 
 ```markdown
-## TL-EM Sync — [date]
+## TL-EM Sync: [date]
 
 ### Decisions needed this week
 - [ ] Decision: [what] | Owner: [TL or EM] | Deadline: [when]
@@ -81,7 +81,7 @@ The partnership lives or dies on a regular sync. Thirty minutes, weekly, same sl
 - [ ] Disagreements that need escalation to [manager name]
 ```
 
-If the sync is skipped twice in a row, treat it as an incident — that is exactly when the partnership silently drifts.
+If the sync is skipped twice in a row, treat it as an incident. That is exactly when the partnership silently drifts.
 
 ## The Dual-Role Case
 
@@ -98,6 +98,7 @@ Some organizations merge the roles: one person is both TL and EM. It can work in
 If you are a dual-role TL and EM, write the two roles as two columns in your mandate and track time against each. The roles do not merge just because one person holds them.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SYNC["Weekly TL-EM sync"] --> DECIDE["Decide by ownership table"]
     DECIDE --> EXECUTE["Each executes their half"]
@@ -142,7 +143,7 @@ Checklist for establishing or repairing the partnership:
 - [[01_The_Tech_Lead_Mandate]]: the partnership is the mandate's sharpest boundary
 - [[03_The_Player_Coach_Dilemma]]: the EM relationship defines how much of the coach job you hold
 - [[06_Working_With_Stakeholders]]: the TL and EM present a single front outward
-- [[05_Team_Development_and_Mentoring_Leadership/00_overview|Team Development and Mentoring Leadership]]: the people half of the division
+- [[career-path/05_Tech_Lead/05_Team_Development_and_Mentoring_Leadership/00_overview|Team Development and Mentoring Leadership]]: the people half of the division
 
 ## Summary
 

@@ -81,6 +81,7 @@ Ask these questions to prioritize:
 ### Priority matrix
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','fontSize':'14px','quadrant1Fill':'#1FB854','quadrant2Fill':'#1EB88E','quadrant3Fill':'#00B5FF','quadrant4Fill':'#1FB8AB','quadrant1TextFill':'#000000','quadrant2TextFill':'#000000','quadrant3TextFill':'#000000','quadrant4TextFill':'#000000','quadrantPointFill':'#FFBE00','quadrantPointTextFill':'#000000','quadrantXAxisTextFill':'#CDD3D1','quadrantYAxisTextFill':'#CDD3D1','quadrantInternalBorderStrokeFill':'#000000','quadrantExternalBorderStrokeFill':'#1FB854','quadrantTitleFill':'#CDD3D1'}}}%%
 quadrantChart
     title Action Item Priority
     x-axis Low Impact --> High Impact
@@ -222,8 +223,8 @@ After completing an action item, verify it prevents recurrence:
 
 - [[03_Blameless_Postmortems]] : action items are the output of postmortems
 - [[05_War_Games]] : war games test whether action items are effective
-- [[01_Service_Objectives/03_Error_Budget_Policy]] : reliability work uses error budget
-- [[06_Developer_Platform/03_Golden_Paths]] : golden paths include reliability standards
+- [[career-path/07_SRE_and_Platform_Engineer/01_Service_Objectives/03_Error_Budget_Policy]] : reliability work uses error budget
+- [[career-path/07_SRE_and_Platform_Engineer/06_Developer_Platform/03_Golden_Paths]] : golden paths include reliability standards
 - [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/04_Incident_Response]] : incident response foundations
 
 ## Key Takeaways

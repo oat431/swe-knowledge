@@ -16,15 +16,15 @@ tags:
 
 # Bridging Business and Technical Language
 
-> **Core skill:** The architect translates fluently in both directions between business vocabulary and technical vocabulary — maintaining a shared glossary, restating in each audience's terms, and confirming understanding — so decisions rest on real agreement rather than on its appearance.
+> **Core skill:** The architect translates fluently in both directions between business vocabulary and technical vocabulary (maintaining a shared glossary, restating in each audience's terms, and confirming understanding) so decisions rest on real agreement rather than on its appearance.
 
 ## Why This Matters
 
 The same words carry different meanings on either side of the business-technology divide. "Real time" means sub-second to an engineer and "today rather than next week" to an operations director. "Flexible" means configurable to one and endlessly changeable to the other. "Secure" is a property to be designed and a feeling to be trusted. Translation failure is one of the most reliable causes of solutions that meet their specification and disappoint their users.
 
-The architect is the organization's standing interpreter. This is not a soft skill layered on top of the technical work; it is the mechanism by which requirements become design and design becomes acceptance. Translating a business intent into precise technical constraints — and translating technical consequences back into the business outcomes they affect — is where the architect adds value that neither side can produce alone.
+The architect is the organization's standing interpreter. This is not a soft skill layered on top of the technical work; it is the mechanism by which requirements become design and design becomes acceptance. Translating a business intent into precise technical constraints (and translating technical consequences back into the business outcomes they affect) is where the architect adds value that neither side can produce alone.
 
-The asymmetry matters: business language is the final arbiter, because the business owns the outcomes. Technical translation serves that end. The danger is false fluency — the architect who believes each side has understood because each nodded. Understanding has to be tested: restated, played back, walked through scenarios, and written into a shared glossary that both sides can point to when memory and goodwill diverge.
+The asymmetry matters: business language is the final arbiter, because the business owns the outcomes. Technical translation serves that end. The danger is false fluency: the architect who believes each side has understood because each nodded. Understanding has to be tested: restated, played back, walked through scenarios, and written into a shared glossary that both sides can point to when memory and goodwill diverge.
 
 ## Why Translation Fails
 
@@ -60,6 +60,7 @@ The glossary is small, curated, and authoritative. Its value is not completeness
 ## The Translation Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     INTENT["Business intent and constraints"] --> TRANSLATE["Architect translation"]
     TRANSLATE["Architect translation"] --> OPTIONS["Technical options and consequences"]
@@ -91,7 +92,7 @@ flowchart LR
 ### Glossary Entry Template
 
 ```markdown
-## Glossary Entry — <term>
+## Glossary Entry: <term>
 
 | Field | Content |
 |-------|---------|
@@ -125,9 +126,9 @@ flowchart LR
 
 - [[03_Presenting_to_Executives_and_Boards]]
 - [[04_Architecture_Facilitation_and_Workshops]]
-- [[01_Business_Analysis_and_Capability_Mapping/00_overview|Business Analysis and Capability Mapping]]
+- [[career-path/15_Solutions_and_Enterprise_Architect/01_Business_Analysis_and_Capability_Mapping/00_overview|Business Analysis and Capability Mapping]]
 - [[career-path/11_Engineering_Manager/07_Manager_Communication/00_overview|Manager Communication (EM)]]
 
 ## Summary
 
-Bridging business and technical language is the architect's core interpretive act: noticing where the same words mean different things, pinning ambiguous phrases to testable meaning, maintaining a small authoritative glossary, and closing the loop by restating technical consequences in outcome terms. Translation is not a courtesy on top of the work — it is how requirements become design, how designs become accepted, and how agreement becomes real instead of apparent.
+Bridging business and technical language is the architect's core interpretive act: noticing where the same words mean different things, pinning ambiguous phrases to testable meaning, maintaining a small authoritative glossary, and closing the loop by restating technical consequences in outcome terms. Translation is not a courtesy on top of the work. It is how requirements become design, how designs become accepted, and how agreement becomes real instead of apparent.

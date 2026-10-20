@@ -16,13 +16,13 @@ tags:
 
 # Writing Proposals That Get Adopted
 
-> **Core skill:** The staff engineer writes proposals that frame the problem with evidence, present priced options, recommend with stated confidence, and plan the rollout — so adoption follows from the document, not from lobbying.
+> **Core skill:** The staff engineer writes proposals that frame the problem with evidence, present priced options, recommend with stated confidence, and plan the rollout, so adoption follows from the document, not from lobbying.
 
 ## Why This Matters
 
-At staff level, almost every consequential change starts as a written proposal. The document is not a formality around the real decision — it is the decision, because it is the only artifact that survives the meeting, travels to stakeholders who were not present, and gets cited months later. Proposals that get adopted are read once and understood; proposals that die are read once and resisted.
+At staff level, almost every consequential change starts as a written proposal. The document is not a formality around the real decision. It is the decision, because it is the only artifact that survives the meeting, travels to stakeholders who were not present, and gets cited months later. Proposals that get adopted are read once and understood; proposals that die are read once and resisted.
 
-Adoption is won in the document's structure before it is won in any room. A proposal that proves the problem, prices its options honestly, and recommends with visible reasoning does most of its persuasion before the first meeting. A proposal that leads with its solution invites every reader to argue the solution — and readers argue what they can see.
+Adoption is won in the document's structure before it is won in any room. A proposal that proves the problem, prices its options honestly, and recommends with visible reasoning does most of its persuasion before the first meeting. A proposal that leads with its solution invites every reader to argue the solution, and readers argue what they can see.
 
 ## Proposal Anatomy
 
@@ -49,7 +49,7 @@ The cost of inaction is the sentence that makes the proposal urgent without manu
 
 ## Options: 2-4 with Trade-Offs
 
-Options must be real. A proposal with one option is a demand; a proposal with a straw-man option is a manipulation. The discipline: each option gets its cost, its benefit, its risk, and the condition under which it would be the right choice. The last point matters most — an option that is right under some plausible condition is honest, and honesty is what makes the recommendation credible.
+Options must be real. A proposal with one option is a demand; a proposal with a straw-man option is a manipulation. The discipline: each option gets its cost, its benefit, its risk, and the condition under which it would be the right choice. The last point matters most: an option that is right under some plausible condition is honest, and honesty is what makes the recommendation credible.
 
 | Option | Cost | Benefit | Risk | Right When |
 |--------|------|---------|------|------------|
@@ -59,7 +59,7 @@ Options must be real. A proposal with one option is a demand; a proposal with a 
 
 ## Recommendation: With Confidence
 
-A proposal without a recommendation is a menu, and menus get punted. The recommendation states the choice, the confidence, and the reasoning in three sentences or less: "We recommend B, with medium-high confidence. It is the only option that removes the compounding cost, and its main risk — migration — is mitigated by the rollout in section four. We considered C, and rejected it because the problem is core to how we ship."
+A proposal without a recommendation is a menu, and menus get punted. The recommendation states the choice, the confidence, and the reasoning in three sentences or less: "We recommend B, with medium-high confidence. It is the only option that removes the compounding cost, and its main risk (migration) is mitigated by the rollout in section four. We considered C, and rejected it because the problem is core to how we ship."
 
 Confidence should be stated honestly. A recommendation that overstates certainty is adopted on false premises and dies in execution; one that names its uncertainty invites the reader into the reasoning instead of against it.
 
@@ -77,7 +77,7 @@ A phased rollout is also the risk management: the proposal can be adopted with a
 
 ## Open Questions
 
-The open questions section lists what is unknown and what would change the recommendation. It is not weakness; it is the pre-commitment that prevents the ambush — "we didn't consider X" — from working in the review meeting, because X is already on the page with its consequence stated.
+The open questions section lists what is unknown and what would change the recommendation. It is not weakness; it is the pre-commitment that prevents the ambush ("we didn't consider X") from working in the review meeting, because X is already on the page with its consequence stated.
 
 ## Length and Format Discipline
 
@@ -95,11 +95,11 @@ The proposal is distributed before the meeting, and the meeting is not a reading
 
 ## Appendices: Data and Prior Art
 
-Everything that would bloat the body goes to the appendix: the raw data, the measurement methodology, the prior art from other teams or companies, the failed alternatives. The appendix is what lets a skeptical reader verify without slowing the deciding reader. Its existence is also a credibility signal — proposals with appendices are read as researched; proposals without them are read as asserted.
+Everything that would bloat the body goes to the appendix: the raw data, the measurement methodology, the prior art from other teams or companies, the failed alternatives. The appendix is what lets a skeptical reader verify without slowing the deciding reader. Its existence is also a credibility signal: proposals with appendices are read as researched; proposals without them are read as asserted.
 
 ## The Proposal Review Meeting
 
-The meeting format follows the document: the problem is confirmed in two minutes, the options are not re-presented, the open questions are resolved one by one, and the decision is recorded with any dissent. The chair's job is to protect the document — if the room is re-arguing page two, the meeting is off-format and should be stopped, not suffered.
+The meeting format follows the document: the problem is confirmed in two minutes, the options are not re-presented, the open questions are resolved one by one, and the decision is recorded with any dissent. The chair's job is to protect the document. If the room is re-arguing page two, the meeting is off-format and should be stopped, not suffered.
 
 ## Common Proposal Killers
 
@@ -113,6 +113,7 @@ The meeting format follows the document: the problem is confirmed in two minutes
 | **Certainty theater** | Overstated confidence collapses at first obstacle | State confidence and open questions honestly |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     FRAME["Frame the problem with evidence"] --> OPTIONS["Price two to four options"]
     OPTIONS --> RECOMMEND["Recommend with confidence"]
@@ -154,7 +155,7 @@ flowchart TD
 | [Pilot] | [scope] | [owner] | [condition] |
 
 ## Open Questions
-- [question] — if answered [X], the recommendation changes to [Y]
+- [question], if answered [X], the recommendation changes to [Y]
 
 ## Appendix
 - Data, methodology, prior art
@@ -193,9 +194,9 @@ flowchart TD
 - [[02_Pre_Alignment_and_Coalitions]]: the adoption path before the meeting
 - [[06_Building_Consensus_Architecture]]: the decision processes proposals feed
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/01_Technical_Writing|Technical Writing (Senior)]]: the writing foundation this scales
-- [[03_Technical_Strategy/00_overview|Technical Strategy]]: the strategy proposals serve
-- [[01_The_Staff_Role_and_Scope/00_overview|The Staff Role and Scope]]: where proposals fit the role
+- [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy]]: the strategy proposals serve
+- [[career-path/03_Staff_Engineer/01_The_Staff_Role_and_Scope/00_overview|The Staff Role and Scope]]: where proposals fit the role
 
 ## Summary
 
-Proposals that get adopted are won in structure: a problem proven with evidence and a priced cost of inaction, two to four honest options, a recommendation with stated confidence, a phased rollout with owners, and open questions that pre-empt ambush. Held to three to five pages with the decision on page one, the proposal becomes the decision artifact — read once, understood, and cited for months after the meeting.
+Proposals that get adopted are won in structure: a problem proven with evidence and a priced cost of inaction, two to four honest options, a recommendation with stated confidence, a phased rollout with owners, and open questions that pre-empt ambush. Held to three to five pages with the decision on page one, the proposal becomes the decision artifact, read once, understood, and cited for months after the meeting.

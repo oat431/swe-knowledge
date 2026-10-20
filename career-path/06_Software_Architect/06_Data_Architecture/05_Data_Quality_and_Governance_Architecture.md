@@ -16,11 +16,11 @@ tags:
 
 # Data Quality and Governance Architecture
 
-> **Core skill:** The architect designs quality gates and governance structure into the data layer — validation at boundaries, schema enforcement, catalog, lineage, and ownership — so that quality is a property of the architecture rather than a recurring cleanup campaign.
+> **Core skill:** The architect designs quality gates and governance structure into the data layer (validation at boundaries, schema enforcement, catalog, lineage, and ownership) so that quality is a property of the architecture rather than a recurring cleanup campaign.
 
 ## Why This Matters
 
-Data quality fails at the seams. Each handoff between systems is a place where validation is assumed to have happened elsewhere, where a schema quietly changed, or where a required field became optional in practice. An architecture that names those seams and puts a gate at each one produces quality structurally; an architecture that does not produces quality through heroics — periodic audits, reconciliation scripts, and analysts comparing spreadsheets to find the truth.
+Data quality fails at the seams. Each handoff between systems is a place where validation is assumed to have happened elsewhere, where a schema quietly changed, or where a required field became optional in practice. An architecture that names those seams and puts a gate at each one produces quality structurally; an architecture that does not produces quality through heroics: periodic audits, reconciliation scripts, and analysts comparing spreadsheets to find the truth.
 
 Governance is too often imagined as a committee. At architecture level it is a structure: a catalog that says what exists and who owns it, lineage that says where data came from and what depends on it, policy that says how it is classified and protected, and named owners who answer when it is wrong. These are design decisions about the system, not meeting minutes, and they are what make the difference between a data asset and a data liability.
 
@@ -39,7 +39,7 @@ Master data management sits on the same structural question: where does the gold
 
 ## Validation at Boundaries
 
-Quality gates belong at boundaries because that is where the architecture controls the transition. The rule is validate once, at the point where data comes under the system's control — and never rely on the claim that it was validated upstream. Contract tests in the pipeline verify that producers keep their promises before consumers are affected.
+Quality gates belong at boundaries because that is where the architecture controls the transition. The rule is validate once, at the point where data comes under the system's control, and never rely on the claim that it was validated upstream. Contract tests in the pipeline verify that producers keep their promises before consumers are affected.
 
 | Boundary | Gate | Mechanism | Owner |
 |----------|------|-----------|-------|
@@ -70,6 +70,7 @@ Quality gates belong at boundaries because that is where the architecture contro
 ## Governance Structure Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CLASSIFY["Classify data and name owners"] --> REGISTER["Register in the catalog with lineage"]
     REGISTER --> GATE["Validate at boundaries against contracts"]
@@ -122,9 +123,9 @@ flowchart TD
 
 - [[01_Data_Domains_and_Ownership]]
 - [[06_Data_Lifecycle_and_Retention]]
-- [[04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]]
+- [[career-path/06_Software_Architect/04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]]
 - [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]]
 
 ## Summary
 
-Data quality and governance are designed into the architecture or not at all: validation gates at every boundary, schema enforcement and contract tests where domains meet, and a governance structure of catalog, lineage, ownership, classification, and stewardship that makes accountability operational rather than aspirational. Master data management is the same discipline applied to shared entities — a chosen pattern, an owned golden record, and reconciliation that converges. Quality that depends on periodic cleanup is a symptom; quality that depends on structure is a design.
+Data quality and governance are designed into the architecture or not at all: validation gates at every boundary, schema enforcement and contract tests where domains meet, and a governance structure of catalog, lineage, ownership, classification, and stewardship that makes accountability operational rather than aspirational. Master data management is the same discipline applied to shared entities: a chosen pattern, an owned golden record, and reconciliation that converges. Quality that depends on periodic cleanup is a symptom; quality that depends on structure is a design.

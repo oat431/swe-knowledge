@@ -16,13 +16,13 @@ tags:
 
 # Mentoring Technical Leaders
 
-> **Core skill:** The principal engineer develops staff engineers and technical leaders who can mentor others — operating as a mentor of mentors, designing mentoring cohorts and programs that scale development beyond one-on-one relationships, and measuring mentoring impact at organizational scale.
+> **Core skill:** The principal engineer develops staff engineers and technical leaders who can mentor others, operating as a mentor of mentors, designing mentoring cohorts and programs that scale development beyond one-on-one relationships, and measuring mentoring impact at organizational scale.
 
 ## Why This Matters
 
-A principal who mentors ten engineers directly has helped ten engineers. A principal who develops ten mentors — each of whom mentors ten engineers — has helped a hundred. The shift from mentoring individuals to mentoring mentors is the difference between personal impact and organizational leverage. At the principal level, mentoring is not a relationship; it is a system.
+A principal who mentors ten engineers directly has helped ten engineers. A principal who develops ten mentors (each of whom mentors ten engineers) has helped a hundred. The shift from mentoring individuals to mentoring mentors is the difference between personal impact and organizational leverage. At the principal level, mentoring is not a relationship; it is a system.
 
-The mentor-of-mentors role is also the principal's succession strategy. When staff engineers and technical leads can develop their own people effectively, the principal's departure does not create a mentoring vacuum. The principal's legacy is not the engineers they personally developed — it is the mentoring capability they embedded in the organization's leadership layer.
+The mentor-of-mentors role is also the principal's succession strategy. When staff engineers and technical leads can develop their own people effectively, the principal's departure does not create a mentoring vacuum. The principal's legacy is not the engineers they personally developed. It is the mentoring capability they embedded in the organization's leadership layer.
 
 ## The Mentor-of-Mentors Model
 
@@ -42,9 +42,9 @@ Developing a mentor is distinct from mentoring an engineer on technical skills. 
 
 | Mentor Skill | What the Principal Teaches | How It Is Practiced |
 |-------------|---------------------------|---------------------|
-| **Diagnosis** | How to identify what a mentee actually needs — not what they ask for | Observe the mentor's sessions (with permission); debrief the diagnosis |
+| **Diagnosis** | How to identify what a mentee actually needs, not what they ask for | Observe the mentor's sessions (with permission); debrief the diagnosis |
 | **Question craft** | How to ask questions that build understanding rather than giving answers | Model in the principal's own mentoring; review the mentor's question patterns |
-| **Feedback delivery** | How to give feedback that is specific, actionable, and received — not just delivered | Role-play difficult feedback conversations; review real feedback the mentor delivered |
+| **Feedback delivery** | How to give feedback that is specific, actionable, and received, not just delivered | Role-play difficult feedback conversations; review real feedback the mentor delivered |
 | **Scope calibration** | How to assign stretch work that is challenging but not overwhelming | Review the assignments the mentor gives; adjust scope up or down |
 | **Sponsorship** | How to open doors for mentees without doing the work for them | Model sponsorship; review the mentor's sponsorship actions |
 | **Letting go** | How to let mentees struggle productively without rescuing them | Debrief moments where the mentor intervened; explore what would have happened if they had waited |
@@ -62,7 +62,7 @@ One-on-one mentoring does not scale. The principal designs cohort-based programs
 | **New tech lead cohort** | All newly promoted tech leads meet monthly for their first 6 months with the principal and experienced tech leads | 6 months | Accelerating new lead effectiveness |
 | **Cross-team mentoring pairs** | Structured 6-month pairings across team boundaries with check-in cadence | 6 months per cycle | Breaking silos; cross-pollinating practice |
 
-The principal designs the program structure, selects the participants, and facilitates the first 1-2 cycles. After that, the program should run with staff engineers as facilitators — the principal has designed the system and receded.
+The principal designs the program structure, selects the participants, and facilitates the first 1-2 cycles. After that, the program should run with staff engineers as facilitators. The principal has designed the system and receded.
 
 ## Measuring Mentoring Impact at Scale
 
@@ -80,7 +80,7 @@ The principal tracks these measures annually and adjusts the mentoring system ba
 
 ## Mentoring Across Differences
 
-The principal's mentoring responsibility includes developing technical leaders who are not like them — different backgrounds, different paths, different approaches.
+The principal's mentoring responsibility includes developing technical leaders who are not like them: different backgrounds, different paths, different approaches.
 
 | Practice | Why It Matters | How to Do It |
 |----------|---------------|-------------|
@@ -92,6 +92,7 @@ The principal's mentoring responsibility includes developing technical leaders w
 ## The Mentoring System
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PRINCIPAL["Principal as mentor of mentors"] --> DEVELOP["Develop mentors: staff engineers, tech leads, senior engineers"]
     DEVELOP --> COHORT["Mentoring cohorts: structured programs for mentors and mentees"]
@@ -160,4 +161,4 @@ flowchart TD
 
 ## Summary
 
-Mentoring technical leaders is the principal's shift from individual development to system design: operating as a mentor of mentors who develops staff engineers and tech leads into effective developers of others, designing cohort-based programs that scale mentoring beyond one-on-one relationships, modeling and teaching the meta-skills of diagnosis, question craft, feedback, scope calibration, sponsorship, and letting go, and measuring mentoring impact through mentee progression, mentoring density, and the multiplier effect — not satisfaction surveys. The principal's mentoring legacy is not the engineers they directly developed; it is the mentoring capability that persists in the organization's leadership layer after the principal leaves.
+Mentoring technical leaders is the principal's shift from individual development to system design: operating as a mentor of mentors who develops staff engineers and tech leads into effective developers of others, designing cohort-based programs that scale mentoring beyond one-on-one relationships, modeling and teaching the meta-skills of diagnosis, question craft, feedback, scope calibration, sponsorship, and letting go, and measuring mentoring impact through mentee progression, mentoring density, and the multiplier effect, not satisfaction surveys. The principal's mentoring legacy is not the engineers they directly developed; it is the mentoring capability that persists in the organization's leadership layer after the principal leaves.

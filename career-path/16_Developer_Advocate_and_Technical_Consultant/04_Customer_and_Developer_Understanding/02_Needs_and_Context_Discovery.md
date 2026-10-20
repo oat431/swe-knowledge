@@ -17,13 +17,13 @@ tags:
 
 # Needs and Context Discovery
 
-> **Core skill:** Uncovering not just what developers and customers want, but the workflow, goals, and constraints around it — the full context that decides whether any solution can fit.
+> **Core skill:** Uncovering not just what developers and customers want, but the workflow, goals, and constraints around it: the full context that decides whether any solution can fit.
 
 ## Why This Matters
 
 A stated request is the beginning of understanding, not the end of it. "We need single sign-on" may mean forty users on one domain, or a regulated enterprise with federation partners and an audit process; the same words lead to solutions that differ in cost by an order of magnitude. The advocate and consultant who receives requests at face value build for the letter of the request and fail the spirit of the need.
 
-Context is the difference between generic guidance and guidance that lands. Every technical recommendation is actually a fit claim: this approach, for this workflow, within these constraints, with this team. Strip the context and what remains is a stack-overflow answer — correct in general, unreliable here. Discovering context is not gather-everything documentation; it is finding the few facts that change the shape of the recommendation.
+Context is the difference between generic guidance and guidance that lands. Every technical recommendation is actually a fit claim: this approach, for this workflow, within these constraints, with this team. Strip the context and what remains is a stack-overflow answer: correct in general, unreliable here. Discovering context is not gather-everything documentation; it is finding the few facts that change the shape of the recommendation.
 
 The craft is mostly discipline about sequence: understand the situation before the goal, the goal before the requirements, the constraints before the options. Each layer reframes the layer beneath it. Teams that skip layers produce precise answers to the wrong question, and the consultant's job is to notice that before implementation does.
 
@@ -83,6 +83,7 @@ The craft is mostly discipline about sequence: understand the situation before t
 | Unclear decision process | Identify the real approver before investing in a recommendation |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SITUATION["Understand the current situation"] --> GOAL["Clarify the underlying goal"]
     GOAL --> LIMITS["Surface constraints and boundaries"]
@@ -114,13 +115,13 @@ flowchart LR
 - Soft: [preferences; reversible choices]
 
 ## Decisions
-- Approver: [who] — Criteria: [what matters to them]
+- Approver: [who], Criteria: [what matters to them]
 
 ## Success Criteria
 - [how it will be judged; by whom; when]
 
 ## Assumptions and Open Items
-- [assumption] — [how it will be validated]
+- [assumption]: [how it will be validated]
 ```
 
 ## Common Pitfalls
@@ -144,12 +145,12 @@ flowchart LR
 
 ## Related Topics
 
-- [[01_Developer_and_Customer_Research]] — the research methods this applies
-- [[05_Developer_Segmentation]] — context differs by segment; segments frame the questions
-- [[04_Support_Signal_Archaeology]] — where existing friction evidence lives
-- [[career-path/15_Solutions_and_Enterprise_Architect/01_Business_Analysis_and_Capability_Mapping/00_overview|Business Analysis and Capability Mapping (Solutions Architect)]] — enterprise context analysis
-- [[career-path/14_Product_Manager/01_Problem_Discovery/00_overview|Problem Discovery (PM)]] — the product discipline around the same problem
+- [[01_Developer_and_Customer_Research]]: the research methods this applies
+- [[05_Developer_Segmentation]]: context differs by segment; segments frame the questions
+- [[04_Support_Signal_Archaeology]]: where existing friction evidence lives
+- [[career-path/15_Solutions_and_Enterprise_Architect/01_Business_Analysis_and_Capability_Mapping/00_overview|Business Analysis and Capability Mapping (Solutions Architect)]]: enterprise context analysis
+- [[career-path/14_Product_Manager/01_Problem_Discovery/00_overview|Problem Discovery (PM)]]: the product discipline around the same problem
 
 ## Summary
 
-Needs and context discovery turns requests into understanding: goals before features, workflows before assumptions, hard constraints separated from preferences, the decision process mapped, and success criteria agreed while the people who own them are present. The output is a written, corrected context summary — the artifact every later recommendation, review, and implementation plan must fit, and the difference between a generic answer and the right one.
+Needs and context discovery turns requests into understanding: goals before features, workflows before assumptions, hard constraints separated from preferences, the decision process mapped, and success criteria agreed while the people who own them are present. The output is a written, corrected context summary: the artifact every later recommendation, review, and implementation plan must fit, and the difference between a generic answer and the right one.

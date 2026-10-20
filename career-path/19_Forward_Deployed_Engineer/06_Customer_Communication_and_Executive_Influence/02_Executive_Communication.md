@@ -16,15 +16,15 @@ tags:
 
 # Executive Communication
 
-> **Core skill:** Speaking outcomes, risk, and options to sponsors — giving the people who fund the deployment what they need to decide, in language they can reuse in rooms the FDE will never enter.
+> **Core skill:** Speaking outcomes, risk, and options to sponsors: giving the people who fund the deployment what they need to decide, in language they can reuse in rooms the FDE will never enter.
 
 ## Why This Matters
 
-Every forward deployment depends on an executive sponsor: the person who funds it, defends it in budget meetings, and decides whether it expands or dies. That sponsor is not a larger version of a technical stakeholder. They are measured on outcomes, exposed to risk, and chronically short of attention. When the FDE gives them an architecture walkthrough, the sponsor disengages; when the FDE gives them a status update wrapped in engineering detail, the sponsor hears noise during the one conversation that could have renewed the sponsorship. The executive layer operates on a different unit of analysis, and communication that ignores that is not neutral — it actively erodes support.
+Every forward deployment depends on an executive sponsor: the person who funds it, defends it in budget meetings, and decides whether it expands or dies. That sponsor is not a larger version of a technical stakeholder. They are measured on outcomes, exposed to risk, and chronically short of attention. When the FDE gives them an architecture walkthrough, the sponsor disengages; when the FDE gives them a status update wrapped in engineering detail, the sponsor hears noise during the one conversation that could have renewed the sponsorship. The executive layer operates on a different unit of analysis, and communication that ignores that is not neutral. It actively erodes support.
 
-The FDE's job in an executive conversation is translation without dilution. The same deployment has to appear in the sponsor's language: what outcome has been achieved, what risk is being carried and by whom, what decision is needed next, and what happens if nothing is decided. Those four elements fit on one page, and they are honest at full strength — nothing is simplified away that the sponsor would need to make a sound decision. Dilution means leaving out inconvenient facts; translation means expressing the same facts at the altitude the audience operates at. Executives are capable of handling complexity; what they cannot handle is complexity presented without a decision attached.
+The FDE's job in an executive conversation is translation without dilution. The same deployment has to appear in the sponsor's language: what outcome has been achieved, what risk is being carried and by whom, what decision is needed next, and what happens if nothing is decided. Those four elements fit on one page, and they are honest at full strength. Nothing is simplified away that the sponsor would need to make a sound decision. Dilution means leaving out inconvenient facts; translation means expressing the same facts at the altitude the audience operates at. Executives are capable of handling complexity; what they cannot handle is complexity presented without a decision attached.
 
-The stakes rise with every escalation. A deployment in trouble that reaches the sponsor as a surprise is halfway to being cancelled, because the sponsor's first question is why they are hearing this now. Executives remember surprise more than they remember problems. The FDE who briefs sponsors on a steady cadence — outcome, risk, options, ask — is building a reservoir of credibility that gets drawn on exactly when the deployment hits its hard moment. Executive communication is not a soft skill added to the engineering; it is the mechanism by which engineering survives the organization's decision cycles.
+The stakes rise with every escalation. A deployment in trouble that reaches the sponsor as a surprise is halfway to being cancelled, because the sponsor's first question is why they are hearing this now. Executives remember surprise more than they remember problems. The FDE who briefs sponsors on a steady cadence (outcome, risk, options, ask) is building a reservoir of credibility that gets drawn on exactly when the deployment hits its hard moment. Executive communication is not a soft skill added to the engineering; it is the mechanism by which engineering survives the organization's decision cycles.
 
 ## Reading the Executive Room
 
@@ -47,6 +47,7 @@ The stakes rise with every escalation. A deployment in trouble that reaches the 
 | Timeline | When the decision is needed and what it gates | Real dates, not pressure dates |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     KNOW["Know the decision you need"] --> LEAD["Lead with the outcome"]
     LEAD --> RISK["State risk plainly"]
@@ -55,7 +56,7 @@ flowchart LR
     ASK --> CONFIRM["Confirm in writing"]
 ```
 
-Two rules make the brief work. First, out loud in the first minute: the sponsor should never have to wait to learn why the meeting exists. Second, after the meeting, a written confirmation of what was decided — because the sponsor's memory of the conversation is one of dozens they will have that day, and the record is what their organization will actually act on.
+Two rules make the brief work. First, out loud in the first minute: the sponsor should never have to wait to learn why the meeting exists. Second, after the meeting, a written confirmation of what was decided, because the sponsor's memory of the conversation is one of dozens they will have that day, and the record is what their organization will actually act on.
 
 ## Communication Cadence
 
@@ -73,7 +74,7 @@ Two rules make the brief work. First, out loud in the first minute: the sponsor 
 - [ ] Every executive interaction has one decision or awareness goal written down beforehand
 - [ ] The first sentence of every update is the outcome, not the activity
 - [ ] Risks are stated with owners and direction of travel, in the sponsor's risk vocabulary
-- [ ] Options come with costs and a recommendation — never a bare problem
+- [ ] Options come with costs and a recommendation, never a bare problem
 - [ ] Decisions from the room are confirmed in writing the same day
 - [ ] The sponsor can restate the deployment's value without help because they have been told it in reusable form
 - [ ] No executive learns of a material problem first in a large meeting
@@ -81,7 +82,7 @@ Two rules make the brief work. First, out loud in the first minute: the sponsor 
 ### Executive Update Template
 
 ```markdown
-## Executive Update — <deployment, period>
+## Executive Update: <deployment, period>
 
 **Outcome this period:** <what changed in the customer's terms>
 
@@ -119,8 +120,8 @@ Two rules make the brief work. First, out loud in the first minute: the sponsor 
 - [[04_Expectation_and_Scope_Management]]
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/00_overview|Communication and Influence (Senior Engineer)]]
 - [[career-path/12_Technical_Program_Manager/05_Stakeholder_Alignment/00_overview|Stakeholder Alignment (TPM)]]
-- [[07_Field_to_Product_and_Commercial_Awareness/00_overview|Field to Product and Commercial Awareness]]
+- [[career-path/19_Forward_Deployed_Engineer/07_Field_to_Product_and_Commercial_Awareness/00_overview|Field to Product and Commercial Awareness]]
 
 ## Summary
 
-Executive communication is how the FDE keeps a deployment funded and sponsored: lead with outcomes in the customer's terms, state risk plainly with owners and direction, attach options with costs to every problem, make one clear ask per conversation, and confirm decisions in writing. The disciplines that make this work — translation without dilution, no surprises, cadence over drama — are what turn an executive sponsor from a distant approver into the deployment's most durable advantage.
+Executive communication is how the FDE keeps a deployment funded and sponsored: lead with outcomes in the customer's terms, state risk plainly with owners and direction, attach options with costs to every problem, make one clear ask per conversation, and confirm decisions in writing. The disciplines that make this work (translation without dilution, no surprises, cadence over drama) are what turn an executive sponsor from a distant approver into the deployment's most durable advantage.

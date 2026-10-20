@@ -16,13 +16,13 @@ tags:
 
 # Building Consensus Architecture
 
-> **Core skill:** The staff engineer designs decision processes that produce durable agreement — clear decision rights, criteria agreed before discussion, recorded dissent, and process weight matched to the stakes.
+> **Core skill:** The staff engineer designs decision processes that produce durable agreement: clear decision rights, criteria agreed before discussion, recorded dissent, and process weight matched to the stakes.
 
 ## Why This Matters
 
-Every organization makes technical decisions somehow. The question is whether the process produces decisions that stick. In a process-less organization, decisions are made by whoever is loudest, most senior, or most persistent, and they are relitigated endlessly because nobody agreed to the terms. In an over-processed organization, every decision — including the trivial — drags through the same machinery and the machinery collapses under its own weight.
+Every organization makes technical decisions somehow. The question is whether the process produces decisions that stick. In a process-less organization, decisions are made by whoever is loudest, most senior, or most persistent, and they are relitigated endlessly because nobody agreed to the terms. In an over-processed organization, every decision (including the trivial) drags through the same machinery and the machinery collapses under its own weight.
 
-Consensus architecture is the design of the middle path: the right person deciding, with the right people consulted, against criteria agreed in advance, with dissent recorded and outcomes fed back. The staff engineer is the natural architect — the person who sees decisions across teams, feels the pain of bad processes, and has the standing to change how the organization decides.
+Consensus architecture is the design of the middle path: the right person deciding, with the right people consulted, against criteria agreed in advance, with dissent recorded and outcomes fed back. The staff engineer is the natural architect: the person who sees decisions across teams, feels the pain of bad processes, and has the standing to change how the organization decides.
 
 ## Decision Process Design
 
@@ -36,7 +36,7 @@ Every decision process starts with two questions: who decides, and by what crite
 
 The decision rights table is written down, because the most common process failure is ambiguity about who actually decides. When everyone believes they have veto power, nothing decides; when nobody knows who decides, everything escalates.
 
-The second question — criteria — must be answered before the discussion, not after. Criteria agreed in advance ("we will choose by cost over two years, then risk, then team fit") make the discussion about evidence. Criteria invented during the discussion make the discussion about rhetoric.
+The second question (criteria) must be answered before the discussion, not after. Criteria agreed in advance ("we will choose by cost over two years, then risk, then team fit") make the discussion about evidence. Criteria invented during the discussion make the discussion about rhetoric.
 
 ## The Architecture Review Board
 
@@ -50,7 +50,7 @@ For org-wide technical decisions, a standing review board is the standard mechan
 | Scope | The kinds of decisions that must pass through | Defined narrowly; everything else stays with teams |
 | Timebox | Hard limit per item | A board that debates forever is a bottleneck |
 
-The board's value is consistency: the same criteria applied to every major decision, with the record showing why. Its risk is capture — a board that rubber-stamps its members' pet projects, or a board whose membership never changes and whose taste ossifies. The defenses are written criteria, recorded dissent, and rotating membership.
+The board's value is consistency: the same criteria applied to every major decision, with the record showing why. Its risk is capture: a board that rubber-stamps its members' pet projects, or a board whose membership never changes and whose taste ossifies. The defenses are written criteria, recorded dissent, and rotating membership.
 
 ## RFC Processes
 
@@ -58,7 +58,7 @@ The RFC (request for comments) is the workhorse of technical decision-making. It
 
 | Element | Design Choice |
 |---------|---------------|
-| Template | Problem, options, recommendation, rollout, open questions — the proposal anatomy |
+| Template | Problem, options, recommendation, rollout, open questions: the proposal anatomy |
 | Timeline | A fixed comment window (one to two weeks), stated on the document |
 | Resolution | The decider closes the RFC with a decision record; comments do not vote |
 | Escalation | Unresolved objections route to the decision rights holder, with options |
@@ -80,7 +80,7 @@ The discipline is stating the weight explicitly: "this is a team-level call, her
 
 ## Recording Decisions and Dissent
 
-A decision that is not recorded does not exist — it becomes a memory that decays into a rumor. The decision record is short and fixed.
+A decision that is not recorded does not exist. It becomes a memory that decays into a rumor. The decision record is short and fixed.
 
 ```markdown
 # Decision Record: [Title]
@@ -94,7 +94,7 @@ A decision that is not recorded does not exist — it becomes a memory that deca
 - Re-review trigger: [what would reopen the decision]
 ```
 
-The dissent line is the record's most important feature. Recording dissent does not weaken the decision; it strengthens it — it proves the decision survived disagreement, and it gives the dissenters a legitimate place to stand while they commit. A record without dissent is either a unanimous decision or a suppressed one, and the reader cannot tell which.
+The dissent line is the record's most important feature. Recording dissent does not weaken the decision; it strengthens it. It proves the decision survived disagreement, and it gives the dissenters a legitimate place to stand while they commit. A record without dissent is either a unanimous decision or a suppressed one, and the reader cannot tell which.
 
 ## Process Anti-Patterns
 
@@ -108,6 +108,7 @@ The dissent line is the record's most important feature. Recording dissent does 
 | **Decisions without records** | Memory decays; the org relitigates from rumor | Fixed decision record with dissent and re-review trigger |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     RIGHTS["Define who decides and who consults"] --> CRITERIA["Agree criteria before discussion"]
     CRITERIA --> WEIGHT["Match process weight to stakes"]
@@ -148,7 +149,7 @@ flowchart TD
 | [Pilot] | [scope] | [owner] | [condition] |
 
 ## Open Questions
-- [question] — consequence for the recommendation: [consequence]
+- [question], consequence for the recommendation: [consequence]
 
 ## Resolution
 - Decision: [to be filled by the decider]
@@ -189,10 +190,10 @@ flowchart TD
 
 - [[01_Writing_Proposals_That_Get_Adopted]]: the proposals the process runs on
 - [[03_Managing_Disagreement]]: the dissent the process records
-- [[02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: the standards the process governs
+- [[career-path/03_Staff_Engineer/02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: the standards the process governs
 - [[career-path/05_Tech_Lead/01_The_Tech_Lead_Role_and_Operating_Model/05_Navigating_Ambiguity_and_Incomplete_Authority|Navigating Ambiguity (Tech Lead)]]: operating without complete authority
 - [[career-path/11_Engineering_Manager/05_Organizational_Awareness_and_Influence/02_Influence_Strategies_for_Managers|Influence Strategies for Managers (EM)]]: the manager's parallel craft
 
 ## Summary
 
-Consensus architecture is the design of decisions that stick: named decision rights, criteria agreed before discussion, process weight matched to stakes, and a board and RFC machinery that run on fixed cadence and timelines. Every decision is recorded with its dissent and its re-review trigger, so the organization decides once and learns from the outcome — instead of relitigating from memory.
+Consensus architecture is the design of decisions that stick: named decision rights, criteria agreed before discussion, process weight matched to stakes, and a board and RFC machinery that run on fixed cadence and timelines. Every decision is recorded with its dissent and its re-review trigger, so the organization decides once and learns from the outcome, instead of relitigating from memory.

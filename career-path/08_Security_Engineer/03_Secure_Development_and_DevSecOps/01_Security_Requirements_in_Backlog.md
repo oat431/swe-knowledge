@@ -5,8 +5,8 @@ capability_area: secure-development-and-devsecops
 career_path: security-engineer
 level: senior-specialist
 prerequisite:
-  - "[[01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]"
-  - "[[02_Secure_Architecture_and_Design/00_overview|Secure Architecture and Design]]"
+  - "[[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]"
+  - "[[career-path/08_Security_Engineer/02_Secure_Architecture_and_Design/00_overview|Secure Architecture and Design]]"
 source_frameworks:
   - "[[body-of-knowledge/SWEBOK/13_Software_Security]]"
   - "[[body-of-knowledge/CyBOK/09_Software_Security]]"
@@ -73,6 +73,7 @@ Use the resulting profile to choose treatment:
 A senior engineer keeps a short chain that survives changes in implementation:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CONTEXT["System context"] --> ABUSE["Abuse case"]
     ABUSE --> REQUIREMENT["Security requirement"]
@@ -130,9 +131,9 @@ Take one feature in your current project that changes access to data or a privil
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]: security requirements, risk, and assurance foundations
 - [[body-of-knowledge/CyBOK/09_Software_Security|CyBOK Software Security]]: software security knowledge framework
 - [Security Requirements Specification](F:\obsidian_note\document_template\14_Security/Security-Requirements-Specification.md): reusable requirements artifact
-- [[01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]: threat context that feeds backlog decisions
+- [[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]: threat context that feeds backlog decisions
 - [[03_DevSecOps_Pipeline_Controls|DevSecOps Pipeline Controls]]: automation and evidence points for the requirements
-- [[04_Security_Verification_and_Testing/01_Security_Test_Strategy|Security Test Strategy]]: selecting verification depth
+- [[career-path/08_Security_Engineer/04_Security_Verification_and_Testing/01_Security_Test_Strategy|Security Test Strategy]]: selecting verification depth
 
 ## Key Takeaways
 

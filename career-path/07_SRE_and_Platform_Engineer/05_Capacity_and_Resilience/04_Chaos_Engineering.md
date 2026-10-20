@@ -26,6 +26,7 @@ The difference is not tool knowledge. It is **experimentation discipline**: turn
 ## Chaos Engineering Principles
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     HYPOTHESIS["Build hypothesis about system behavior"] --> EXPERIMENT["Design experiment"]
     EXPERIMENT --> EXECUTE["Inject failure in controlled way"]
@@ -57,6 +58,7 @@ flowchart TD
 ## Chaos Engineering Maturity
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     GAME["GameDay exercises"] --> AUTOMATE["Automated experiments"]
     AUTOMATE --> CONTINUOUS["Continuous chaos"]
@@ -158,8 +160,8 @@ flowchart LR
 
 - [[03_Disaster_Recovery]] : chaos tests validate DR procedures
 - [[02_Load_and_Stress_Testing]] : load tests provide baseline for chaos experiments
-- [[03_Incident_Response/00_overview]] : incident response coordinates with chaos experiments
-- [[01_Service_Objectives/02_SLO_Definition]] : SLOs define success criteria for chaos experiments
+- [[career-path/07_SRE_and_Platform_Engineer/03_Incident_Response/00_overview]] : incident response coordinates with chaos experiments
+- [[career-path/07_SRE_and_Platform_Engineer/01_Service_Objectives/02_SLO_Definition]] : SLOs define success criteria for chaos experiments
 - [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/07_Chaos_Engineering]] : chaos engineering foundations from Senior SWE path
 
 ## Key Takeaways

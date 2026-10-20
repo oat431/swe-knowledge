@@ -16,13 +16,13 @@ tags:
 
 # Stakeholder Identification and Analysis
 
-> **Core skill:** Systematically identifying every person, group, and organization that can affect or be affected by the project — then analyzing their interest, influence, expectations, and engagement needs so the project manager knows who matters, why, and how much.
+> **Core skill:** Systematically identifying every person, group, and organization that can affect or be affected by the project, then analyzing their interest, influence, expectations, and engagement needs so the project manager knows who matters, why, and how much.
 
 ## Why This Matters
 
-A stakeholder omitted at initiation becomes a veto at delivery. The stakeholder the project manager never identified is the one who blocks the release, withdraws the funding, or refuses the handover — and does so with the righteous indignation of someone who was never consulted.
+A stakeholder omitted at initiation becomes a veto at delivery. The stakeholder the project manager never identified is the one who blocks the release, withdraws the funding, or refuses the handover, and does so with the righteous indignation of someone who was never consulted.
 
-Identification is not brainstorming names in a meeting. It is a structured sweep of the project's organizational, operational, contractual, and regulatory landscape — followed by analysis that answers the only questions that matter for engagement: what do they care about, how much power do they have, and how much attention do they need from us.
+Identification is not brainstorming names in a meeting. It is a structured sweep of the project's organizational, operational, contractual, and regulatory landscape, followed by analysis that answers the only questions that matter for engagement: what do they care about, how much power do they have, and how much attention do they need from us.
 
 ## The Identification Sweep
 
@@ -39,12 +39,12 @@ Identification is not brainstorming names in a meeting. It is a structured sweep
 | **Indirect stakeholders** | Teams displaced by the change, adjacent projects | Impact analysis, dependency mapping |
 | **Opinion leaders** | Respected voices without formal authority | Org network analysis, sponsor guidance |
 
-The sweep is complete when you can name stakeholders in every category — not when the room runs out of names.
+The sweep is complete when you can name stakeholders in every category, not when the room runs out of names.
 
 ### The Identification Process
 
 1. **Charter review**: extract named stakeholders from the project charter and business case
-2. **Org chart mapping**: trace the project through the organization — who owns the budget, the team, the decision
+2. **Org chart mapping**: trace the project through the organization: who owns the budget, the team, the decision
 3. **Dependency tracing**: for every deliverable, identify who receives it, who depends on it, who blocks it
 4. **Impact analysis**: who wins, who loses, who must change their behavior
 5. **Regulatory and contractual scan**: compliance obligations and contractual parties
@@ -65,6 +65,7 @@ Every identified stakeholder is analyzed on dimensions that determine engagement
 ### The Power-Interest Grid
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','fontSize':'14px','quadrant1Fill':'#1FB854','quadrant2Fill':'#1EB88E','quadrant3Fill':'#00B5FF','quadrant4Fill':'#1FB8AB','quadrant1TextFill':'#000000','quadrant2TextFill':'#000000','quadrant3TextFill':'#000000','quadrant4TextFill':'#000000','quadrantPointFill':'#FFBE00','quadrantPointTextFill':'#000000','quadrantXAxisTextFill':'#CDD3D1','quadrantYAxisTextFill':'#CDD3D1','quadrantInternalBorderStrokeFill':'#000000','quadrantExternalBorderStrokeFill':'#1FB854','quadrantTitleFill':'#CDD3D1'}}}%%
 quadrantChart
     title Stakeholder Power-Interest Grid
     x-axis "Low Interest" --> "High Interest"
@@ -79,10 +80,10 @@ quadrantChart
     "High-power, low-interest": [0.8, 0.3]
 ```
 
-- **High power, high interest**: manage closely — these are your key players
-- **High power, low interest**: keep satisfied — they can hurt you but may not care enough to engage
-- **Low power, high interest**: keep informed — they care deeply; their support is valuable
-- **Low power, low interest**: monitor — they rarely need active engagement but can shift
+- **High power, high interest**: manage closely. These are your key players
+- **High power, low interest**: keep satisfied. They can hurt you but may not care enough to engage
+- **Low power, high interest**: keep informed. They care deeply; their support is valuable
+- **Low power, low interest**: monitor. They rarely need active engagement but can shift
 
 ## The Stakeholder Register
 
@@ -116,7 +117,7 @@ Program managers face an additional layer: stakeholders at the program level int
 - [ ] Stakeholder categories are all swept: sponsors, users, enablers, customers, regulators, partners
 - [ ] Every stakeholder has an interest, influence, attitude, and impact assessment
 - [ ] The power-interest grid is populated and reviewed with the sponsor
-- [ ] The stakeholder register is a living document — reviewed at each phase gate
+- [ ] The stakeholder register is a living document, reviewed at each phase gate
 - [ ] "Who else?" was asked of every identified stakeholder
 - [ ] Program-level cross-project stakeholders are identified
 
@@ -146,4 +147,4 @@ Program managers face an additional layer: stakeholders at the program level int
 
 ## Summary
 
-Stakeholder identification and analysis is the project's organizational reconnaissance: a structured sweep of every person, group, and organization that can affect or be affected by the project, followed by multi-dimensional analysis that answers who matters, why, and how much. The output is a living stakeholder register that drives the engagement plan, the communication plan, and every decision about who to involve and when. A stakeholder missed at identification is a veto waiting to happen — and the project manager who finds them after the fact pays in rework, delay, and credibility.
+Stakeholder identification and analysis is the project's organizational reconnaissance: a structured sweep of every person, group, and organization that can affect or be affected by the project, followed by multi-dimensional analysis that answers who matters, why, and how much. The output is a living stakeholder register that drives the engagement plan, the communication plan, and every decision about who to involve and when. A stakeholder missed at identification is a veto waiting to happen, and the project manager who finds them after the fact pays in rework, delay, and credibility.

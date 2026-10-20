@@ -16,13 +16,13 @@ tags:
 
 # Technology Strategy at Enterprise Scale
 
-> **Core skill:** The principal engineer writes technology strategy that spans products, platforms, and business units — producing a document that shapes investment, declines dissent, and communicates a coherent direction to board-level audiences.
+> **Core skill:** The principal engineer writes technology strategy that spans products, platforms, and business units, producing a document that shapes investment, declines dissent, and communicates a coherent direction to board-level audiences.
 
 ## Why This Matters
 
 At staff level, strategy connects technical work to multi-team priorities. At principal level, the scope jumps to the enterprise: the strategy must hold across products with different business models, platforms with different lifecycles, and business units with competing incentives. Writing a strategy that survives this diversity is a synthesis skill nobody else in the organization is paid to perform.
 
-The document is not the strategy — the decisions it drives are. A strategy that does not decline specific investments by reference to its own logic is not a strategy; it is a wishlist. The principal's strategy document earns its authority by being specific enough to be wrong, and reviewed often enough to be right.
+The document is not the strategy. The decisions it drives are. A strategy that does not decline specific investments by reference to its own logic is not a strategy; it is a wishlist. The principal's strategy document earns its authority by being specific enough to be wrong, and reviewed often enough to be right.
 
 ## The Scope Jump: Staff to Principal
 
@@ -50,7 +50,7 @@ A principal-level strategy document is short and hard to write. Under ten pages,
 
 ## Aligning Technology Strategy with Corporate Strategy
 
-The alignment is not downstream — technology strategy shapes what corporate strategy can promise. The principal ensures the corporate strategy is buildable.
+The alignment is not downstream. Technology strategy shapes what corporate strategy can promise. The principal ensures the corporate strategy is buildable.
 
 | Alignment Point | Technology Strategy Role | Failure Mode |
 |-----------------|-------------------------|--------------|
@@ -73,6 +73,7 @@ Board communication is a distinct skill: the board needs enough detail to trust 
 | "What keeps you up at night?" | State the strategy's key assumptions and the signals that would invalidate them |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     MARKET["Market and competitive forces"] --> CONTEXT["Strategic context"]
     CONTEXT --> THESIS["Technology thesis: 2-4 major bets"]
@@ -90,7 +91,7 @@ flowchart LR
 
 - [ ] The strategy document is under 10 pages and names non-goals explicitly
 - [ ] Every major technology bet connects to a stated business direction
-- [ ] The allocation section matches the thesis — not last year's budget rebranded
+- [ ] The allocation section matches the thesis, not last year's budget rebranded
 - [ ] The non-goals section would decline at least three plausible investments
 - [ ] Strategic metrics are trended quarterly and visible to the board
 - [ ] Key assumptions are stated and testable within the strategy period
@@ -145,9 +146,9 @@ flowchart LR
 - [[02_Connecting_Technology_to_Business_Strategy]]
 - [[03_Investment_Strategy_and_Capital_Allocation]]
 - [[04_Multi_Year_Technology_Roadmapping]]
-- [[02_Enterprise_and_Systems_of_Systems_Thinking/00_overview|Enterprise and Systems of Systems Thinking]]
+- [[career-path/04_Principal_and_Distinguished_Engineer/02_Enterprise_and_Systems_of_Systems_Thinking/00_overview|Enterprise and Systems of Systems Thinking]]
 - [[career-path/03_Staff_Engineer/03_Technical_Strategy/01_Writing_Technical_Strategy|Writing Technical Strategy (Staff)]]
 
 ## Summary
 
-Technology strategy at enterprise scale means writing a document that spans products, platforms, and business units, aligns with corporate direction, communicates to the board in investment language, and — most importantly — declines work by its own logic. The document is under ten pages, its non-goals are explicit, its assumptions are testable, and its metrics are trended on the board calendar. The principal is the author of the document the organization steers by.
+Technology strategy at enterprise scale means writing a document that spans products, platforms, and business units, aligns with corporate direction, communicates to the board in investment language, and, most importantly, declines work by its own logic. The document is under ten pages, its non-goals are explicit, its assumptions are testable, and its metrics are trended on the board calendar. The principal is the author of the document the organization steers by.

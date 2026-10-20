@@ -43,13 +43,13 @@ A software engineering background is valuable because it helps the manager under
 
 | Capability | Project or program behavior | Detailed notes |
 |---|---|---|
-| Initiation | Clarifies objectives, value, authority, and success conditions | [[01_Initiation_and_Charter/00_overview]] |
-| Scope and planning | Defines work, sequencing, resources, and baselines | [[02_Scope_and_Planning/00_overview]] |
-| Schedule and cost | Builds forecasts and communicates variance honestly | [[03_Schedule_and_Cost/00_overview]] |
-| Risk and issues | Manages uncertainty, escalation, response, and contingency | [[04_Risk_and_Issues/00_overview]] |
-| Stakeholders | Plans engagement, communication, and decision participation | [[05_Stakeholder_Engagement/00_overview]] |
-| Governance | Creates decision rights, controls, and accountability | [[06_Governance_and_Change_Control/00_overview]] |
-| Benefits | Connects deliverables to outcomes and organizational value | [[07_Benefits_and_Closure/00_overview]] |
+| Initiation | Clarifies objectives, value, authority, and success conditions | [[career-path/13_Project_and_Program_Manager/01_Initiation_and_Charter/00_overview]] |
+| Scope and planning | Defines work, sequencing, resources, and baselines | [[career-path/13_Project_and_Program_Manager/02_Scope_and_Planning/00_overview]] |
+| Schedule and cost | Builds forecasts and communicates variance honestly | [[career-path/13_Project_and_Program_Manager/03_Schedule_and_Cost/00_overview]] |
+| Risk and issues | Manages uncertainty, escalation, response, and contingency | [[career-path/13_Project_and_Program_Manager/04_Risk_and_Issues/00_overview]] |
+| Stakeholders | Plans engagement, communication, and decision participation | [[career-path/13_Project_and_Program_Manager/05_Stakeholder_Engagement/00_overview]] |
+| Governance | Creates decision rights, controls, and accountability | [[career-path/13_Project_and_Program_Manager/06_Governance_and_Change_Control/00_overview]] |
+| Benefits | Connects deliverables to outcomes and organizational value | [[career-path/13_Project_and_Program_Manager/07_Benefits_and_Closure/00_overview]] |
 | Technical context | Understands enough engineering to challenge assumptions and support decisions | [[SWEBOK v4 - Overview]] |
 
 ## Project Manager versus Program Manager
@@ -65,6 +65,7 @@ A software engineering background is valuable because it helps the manager under
 ## Typical Progression
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SENIOR["Senior Software Engineer"] --> PROJECT["Manage one technical project"]
     PROJECT --> PROGRAM["Coordinate related projects"]

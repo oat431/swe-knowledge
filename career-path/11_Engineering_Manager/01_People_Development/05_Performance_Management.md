@@ -16,13 +16,13 @@ tags:
 
 # Performance Management
 
-> **Core skill:** Managing underperformance fairly and firmly — clear expectations, early and specific feedback, a time-boxed improvement plan, documentation, and consequences delivered without cruelty or delay.
+> **Core skill:** Managing underperformance fairly and firmly: clear expectations, early and specific feedback, a time-boxed improvement plan, documentation, and consequences delivered without cruelty or delay.
 
 ## Why This Matters
 
-Underperformance is a tax on everyone: the manager absorbs the work, teammates compensate and resent it, and the underperformer drifts in a fog of vague unease. The most common failure is delay — months of hoping, hints, and "let's see next quarter" while the problem compounds and the team quietly loses faith in the manager's fairness. Performance management done well is a rescue: most people, given a clear gap and a real plan, improve.
+Underperformance is a tax on everyone: the manager absorbs the work, teammates compensate and resent it, and the underperformer drifts in a fog of vague unease. The most common failure is delay: months of hoping, hints, and "let's see next quarter" while the problem compounds and the team quietly loses faith in the manager's fairness. Performance management done well is a rescue: most people, given a clear gap and a real plan, improve.
 
-It is also the legal and ethical backbone of the manager's authority. Every termination that survives review was preceded by documented expectations, documented feedback, and a documented plan. Every termination that collapses in grievance was a surprise — and the manager who surprises people with their own performance has already failed.
+It is also the legal and ethical backbone of the manager's authority. Every termination that survives review was preceded by documented expectations, documented feedback, and a documented plan. Every termination that collapses in grievance was a surprise, and the manager who surprises people with their own performance has already failed.
 
 ## Setting Clear Expectations
 
@@ -48,7 +48,7 @@ Underperformance is handled in stages, each with a clear entry and exit. Skippin
 | Improvement plan | Written goals, support, and check-ins | 4-8 weeks | Improvement or escalation |
 | Consequences | Formal review, role change, or exit | Per process, with HR | Fair, documented outcome |
 
-The discipline: each stage is announced, each stage has evidence, and the manager never lets a stage stretch silently. The pattern is a staircase, not a cliff — the engineer always knows which step they are on.
+The discipline: each stage is announced, each stage has evidence, and the manager never lets a stage stretch silently. The pattern is a staircase, not a cliff. The engineer always knows which step they are on.
 
 ## Designing the Improvement Plan
 
@@ -61,7 +61,7 @@ The improvement plan is a rescue instrument, not a punishment. Well-designed, it
 | Time-boxed | A review date, not an open horizon | "Assessment at week six" |
 | Supportive | Resources the manager commits | "Weekly check-ins; pairing with the tech lead on the migration" |
 
-The plan is written, shared, and signed by both sides in spirit — the engineer agrees the goals are fair and the support is real. A plan the engineer does not believe in is a countdown, not a rescue.
+The plan is written, shared, and signed by both sides in spirit. The engineer agrees the goals are fair and the support is real. A plan the engineer does not believe in is a countdown, not a rescue.
 
 ## Documentation Discipline
 
@@ -105,7 +105,7 @@ Sometimes the engineer improves and the role still does not fit. The manager dis
 | Wrong team | The engineer thrives in a different environment | Reassignment can rescue the person and the team |
 | Genuine exit path | Improvement does not happen despite real support | End it with dignity, process, and severance fairness |
 
-The manager's obligation is to have tried genuinely — plan, support, check-ins — so that the exit, when it comes, is a conclusion the engineer saw coming and the team respects.
+The manager's obligation is to have tried genuinely (plan, support, check-ins), so that the exit, when it comes, is a conclusion the engineer saw coming and the team respects.
 
 ## Performance vs Conduct
 
@@ -116,11 +116,12 @@ The manager's obligation is to have tried genuinely — plan, support, check-ins
 | Typical arc | Gradual, with a plan and time | Can be immediate; egregious conduct skips the plan |
 | Documentation | Performance notes and plans | Incident records, warnings, HR involvement |
 
-Conduct issues are not performance issues in disguise. A brilliant engineer who is toxic gets conduct management, not a performance plan — the team's safety outranks the output.
+Conduct issues are not performance issues in disguise. A brilliant engineer who is toxic gets conduct management, not a performance plan. The team's safety outranks the output.
 
 ## The Performance Arc
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     EXPECT["Set clear written expectations"] --> SIGNAL["Notice the pattern early"]
     SIGNAL --> FEED["Give specific feedback"]
@@ -164,9 +165,9 @@ flowchart TD
 
 - [[02_Feedback_and_Difficult_Conversations]]: the feedback craft the arc depends on
 - [[04_Career_Frameworks_and_Promotions]]: the sibling system for those who meet the bar
-- [[02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: underperformance is also a team-health signal
-- [[05_Organizational_Awareness_and_Influence/00_overview|Organizational Awareness and Influence]]: HR process and legal context
+- [[career-path/11_Engineering_Manager/02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: underperformance is also a team-health signal
+- [[career-path/11_Engineering_Manager/05_Organizational_Awareness_and_Influence/00_overview|Organizational Awareness and Influence]]: HR process and legal context
 
 ## Summary
 
-Performance management is underperformance handled in stages — expectations set in writing, patterns named early with specific feedback, a time-boxed and supportive improvement plan, relentless documentation, and fair consequences reached with HR. It is a rescue system first and a termination system only as a last, well-documented resort; its success is measured in people who improved, teams that stayed fair, and exits that surprised no one.
+Performance management is underperformance handled in stages: expectations set in writing, patterns named early with specific feedback, a time-boxed and supportive improvement plan, relentless documentation, and fair consequences reached with HR. It is a rescue system first and a termination system only as a last, well-documented resort; its success is measured in people who improved, teams that stayed fair, and exits that surprised no one.

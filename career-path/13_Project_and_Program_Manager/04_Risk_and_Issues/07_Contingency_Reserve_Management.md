@@ -16,19 +16,20 @@ tags:
 
 # Contingency Reserve Management
 
-> **Core skill:** Sizing, allocating, drawing upon, and replenishing time and cost reserves — so contingency is a managed buffer against identified risks, not a slush fund or an afterthought.
+> **Core skill:** Sizing, allocating, drawing upon, and replenishing time and cost reserves, so contingency is a managed buffer against identified risks, not a slush fund or an afterthought.
 
 ## Why This Matters
 
 Every project budget has two reserves: contingency (for identified risks) and management reserve (for unidentified risks). The project manager controls contingency; the sponsor controls management reserve. When this distinction blurs, contingency becomes padding and management reserve becomes a political negotiation.
 
-Contingency is not a round number added at the end of estimation. It is sized from the risk register: probability × impact for each risk, aggregated, and adjusted for risk correlation and organizational risk appetite. As the risk register changes — risks close, new risks emerge, probabilities shift — the contingency drawdown and remaining reserve should track.
+Contingency is not a round number added at the end of estimation. It is sized from the risk register: probability × impact for each risk, aggregated, and adjusted for risk correlation and organizational risk appetite. As the risk register changes (risks close, new risks emerge, probabilities shift) the contingency drawdown and remaining reserve should track.
 
 The discipline is drawdown justification: every dollar or day drawn from contingency must trace to a specific risk in the register. When contingency is drawn for unidentified events, it signals that risk identification is incomplete and management reserve should have been used instead.
 
 ## Reserve Types
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     BUDGET["Total project budget"] --> BASELINE["Cost baseline: activity costs + contingency reserve"]
     BUDGET --> MGMT["Management reserve: for unidentified risks"]
@@ -83,7 +84,7 @@ Typical range: 5%–15% for well-understood projects; 15%–30% for novel or com
 
 ### Method 3: Schedule Contingency
 
-Schedule contingency is sized in days, not dollars — but converts to cost if resources are kept on:
+Schedule contingency is sized in days, not dollars, but converts to cost if resources are kept on:
 
 | Approach | How It Works | When to Use |
 |----------|-------------|-------------|
@@ -102,7 +103,7 @@ Schedule contingency is sized in days, not dollars — but converts to cost if r
 | 5. Report | Draw reported in status: risk, amount, remaining contingency | Status report |
 | 6. Re-assess | After resolution, reassess related risks and remaining contingency needs | Risk register update |
 
-A draw is always traceable to a risk in the register. If the event is not in the register, it should be a management reserve draw — and the PM should ask why the risk was not identified.
+A draw is always traceable to a risk in the register. If the event is not in the register, it should be a management reserve draw, and the PM should ask why the risk was not identified.
 
 ## Contingency Monitoring
 
@@ -145,7 +146,7 @@ Replenishment or release requires sponsor approval if it changes the cost baseli
 ## Contingency Reserve Status
 
 **Total contingency:** [$Amount / Days]
-**Drawn to date:** [$Amount / Days] — [% of total]
+**Drawn to date:** [$Amount / Days], [% of total]
 **Remaining:** [$Amount / Days]
 
 **Draws this period:**
@@ -162,7 +163,7 @@ Replenishment or release requires sponsor approval if it changes the cost baseli
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
-| **Contingency as round number** | "Add 10%" — no traceability to risks | Size from risk register using EMV; justify the percentage |
+| **Contingency as round number** | "Add 10%": no traceability to risks | Size from risk register using EMV; justify the percentage |
 | **Draw-without-trace** | Contingency drawn for events not in the risk register | Every draw references a risk ID; unidentified events use management reserve |
 | **Contingency hoarding** | Contingency never drawn even when risks fire | Draw when identified risks fire; that is what contingency is for |
 | **Management reserve confusion** | PM draws from management reserve without sponsor approval | Management reserve is sponsor-controlled; formal request required |
@@ -171,7 +172,7 @@ Replenishment or release requires sponsor approval if it changes the cost baseli
 ## Success Indicators
 
 - Contingency reserve is sized from the risk register and the sizing rationale is documented
-- Every draw traces to an identified risk — no "miscellaneous" draws
+- Every draw traces to an identified risk: no "miscellaneous" draws
 - Remaining contingency is reported in every status cycle
 - Contingency burn-down rate matches the project's risk profile
 - Coverage ratio (remaining contingency / EMV) stays above 1.0
@@ -181,9 +182,9 @@ Replenishment or release requires sponsor approval if it changes the cost baseli
 - [[03_Risk_Analysis_and_Prioritization]]: risk analysis feeds EMV for contingency sizing
 - [[04_Risk_Response_Planning]]: contingency plans draw on contingency reserve
 - [[06_Risk_Monitoring_and_Control]]: monitoring tracks contingency drawdown
-- [[03_Schedule_and_Cost/00_overview|Schedule and Cost]]: contingency is part of the cost baseline
+- [[career-path/13_Project_and_Program_Manager/03_Schedule_and_Cost/00_overview|Schedule and Cost]]: contingency is part of the cost baseline
 - [[career-path/12_Technical_Program_Manager/04_Risk_and_Issue_Leadership/00_overview|Risk and Issue Leadership (TPM)]]: program-level reserve management
 
 ## Summary
 
-Contingency reserve management is the discipline of sizing, allocating, drawing upon, and monitoring reserves against identified risks. Contingency is sized from the risk register using expected monetary value — not a round percentage added by habit. Every draw traces to a risk ID; unidentified events draw from management reserve, which is sponsor-controlled. Remaining contingency is reported in every status cycle, and the coverage ratio (remaining / EMV) tells the project manager whether the reserve is sufficient. Contingency is not padding — it is a managed buffer that shrinks as risks fire and grows as new risks emerge.
+Contingency reserve management is the discipline of sizing, allocating, drawing upon, and monitoring reserves against identified risks. Contingency is sized from the risk register using expected monetary value, not a round percentage added by habit. Every draw traces to a risk ID; unidentified events draw from management reserve, which is sponsor-controlled. Remaining contingency is reported in every status cycle, and the coverage ratio (remaining / EMV) tells the project manager whether the reserve is sufficient. Contingency is not padding. It is a managed buffer that shrinks as risks fire and grows as new risks emerge.

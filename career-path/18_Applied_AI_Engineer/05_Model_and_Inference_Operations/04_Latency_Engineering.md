@@ -15,11 +15,11 @@ tags:
 
 # Latency Engineering
 
-> Engineering end-to-end response time for model-backed features — time to first token, streaming, parallelism, timeouts, and fallbacks — so the product feels fast under real traffic and degrades gracefully instead of failing.
+> Engineering end-to-end response time for model-backed features (time to first token, streaming, parallelism, timeouts, and fallbacks) so the product feels fast under real traffic and degrades gracefully instead of failing.
 
 ## Why This Is a Senior Skill
 
-Mid-level engineers set a timeout and hope, then tune p50s after users complain. Senior engineers design latency: they budget every stage of the request path, they understand that perceived latency (TTFT) and total latency are different products, they use streaming and parallel fan-out to restructure work, and they pre-define the degraded mode — the slower-but-alive answer — for when the fast path fails. Latency is a UX and revenue feature they own from design, not a number they observe.
+Mid-level engineers set a timeout and hope, then tune p50s after users complain. Senior engineers design latency: they budget every stage of the request path, they understand that perceived latency (TTFT) and total latency are different products, they use streaming and parallel fan-out to restructure work, and they pre-define the degraded mode (the slower-but-alive answer) for when the fast path fails. Latency is a UX and revenue feature they own from design, not a number they observe.
 
 The failure mode is optimizing the median while the tail strangles the product: the p95 experience is what users remember, and it is driven by queueing and retries that the happy path never sees.
 
@@ -66,17 +66,17 @@ The failure mode is optimizing the median while the tail strangles the product: 
 
 ## In Practice
 
-**Design the timeout and fallback ladder before writing the feature.** For every model call define: the primary timeout, the retry policy (and when retrying is safe — never for non-idempotent actions), and the degraded fallback: a smaller model, a cached answer, a graceful "try again" message. A system that hangs users for thirty seconds and then errors has no latency architecture; it has a wish.
+**Design the timeout and fallback ladder before writing the feature.** For every model call define: the primary timeout, the retry policy (and when retrying is safe, never for non-idempotent actions), and the degraded fallback: a smaller model, a cached answer, a graceful "try again" message. A system that hangs users for thirty seconds and then errors has no latency architecture; it has a wish.
 
-**Stream by default on user-facing generation.** From the user's perspective, a response is fast if the first token arrives in under a second and tokens keep flowing — total duration matters far less. Reserve non-streaming calls for background jobs and internal pipelines where nobody is watching.
+**Stream by default on user-facing generation.** From the user's perspective, a response is fast if the first token arrives in under a second and tokens keep flowing; total duration matters far less. Reserve non-streaming calls for background jobs and internal pipelines where nobody is watching.
 
 **Fan out anything independent.** Retrieval, classification, guardrail checks, and parallel sub-tasks are independent calls that should run concurrently, with a barrier at the merge point. Sequential dependence is usually an artifact of implementation, not of the problem; each serialized call adds its full latency to the user's wait.
 
 **Budget latency per stage and alert on the budget, not on the average.** Set explicit budgets for retrieval, TTFT, and generation; alert when p95 breaches them, because p50 hides the experience of the unluckiest users. Tail latency is where products feel broken, and the tail is where provider queueing and rate-limit retries live.
 
-**Treat provider queueing as your own problem even on managed APIs.** Provider-side queueing under load — rate-limit backoff, 429 retries — is invisible latency you did not budget for. Design admission control and circuit breakers around provider health ([[06_Provider_Management_and_Model_Routing]]) so that when the provider slows, your system fails fast and falls back instead of silently stacking retries.
+**Treat provider queueing as your own problem even on managed APIs.** Provider-side queueing under load (rate-limit backoff, 429 retries) is invisible latency you did not budget for. Design admission control and circuit breakers around provider health ([[06_Provider_Management_and_Model_Routing]]) so that when the provider slows, your system fails fast and falls back instead of silently stacking retries.
 
-**Instrument the full request path and own the merge points.** A latency trace that stops at "model call" cannot explain why the feature is slow. Trace from client to response including retrieval, routing decisions, and retries, so every millisecond is attributable — this is where this area hands off to the tracing tooling of [[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability]].
+**Instrument the full request path and own the merge points.** A latency trace that stops at "model call" cannot explain why the feature is slow. Trace from client to response including retrieval, routing decisions, and retries, so every millisecond is attributable. This is where this area hands off to the tracing tooling of [[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability]].
 
 ## Practical Exercise
 
@@ -84,7 +84,7 @@ Engineer the latency of one model-backed endpoint end to end:
 
 1. Trace the current request path and break it into stages with measured p50/p95 per stage.
 2. Write a latency budget: retrieval, TTFT, generation, post-processing, with a target total.
-3. Implement the cheapest high-impact fix first — usually streaming and parallelizing retrieval.
+3. Implement the cheapest high-impact fix first, usually streaming and parallelizing retrieval.
 4. Define the timeout and fallback ladder: primary, retry policy, degraded answer.
 5. Load-test to the designed peak and measure p95 against the budget.
 6. Add per-stage alerting on the p95 budget; document the degraded-mode behavior in the runbook.

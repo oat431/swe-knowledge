@@ -16,13 +16,13 @@ tags:
 
 # Cascading Context Downward
 
-> **Core skill:** Translating strategy and change for the team — what changes, what it means for us, what we do differently — so context survives the journey down without decay or distortion.
+> **Core skill:** Translating strategy and change for the team (what changes, what it means for us, what we do differently) so context survives the journey down without decay or distortion.
 
 ## Why This Matters
 
-Context decays as it travels. A leadership decision arrives at the manager as a paragraph of rationale; by the time it has passed through two more mouths it is a rumor with a mood attached. The team does not need the raw signal — it needs the translation: what changes, what it means for this team, and what the team does differently as a result.
+Context decays as it travels. A leadership decision arrives at the manager as a paragraph of rationale; by the time it has passed through two more mouths it is a rumor with a mood attached. The team does not need the raw signal; it needs the translation: what changes, what it means for this team, and what the team does differently as a result.
 
-The cost of decay is paid in behavior. Teams that only half-understand strategy hedge their work, build the wrong things, and answer customers with invented certainty. Teams that receive translated context — including the honest unknown parts — commit to the direction with their eyes open. Cascading is the manager's most frequent communication act, and its quality is the team's information baseline.
+The cost of decay is paid in behavior. Teams that only half-understand strategy hedge their work, build the wrong things, and answer customers with invented certainty. Teams that receive translated context (including the honest unknown parts) commit to the direction with their eyes open. Cascading is the manager's most frequent communication act, and its quality is the team's information baseline.
 
 ## Why Cascades Decay
 
@@ -54,7 +54,7 @@ Every translation answers three questions: what changes, what it means for us, w
 | Q&A | Questions answered honestly, unknowns labeled | 15 minutes |
 | Capture | Concerns and open questions recorded with owners | 5 minutes |
 
-The format's job is bidirectional: the team hears the translation, and the manager hears where the translation does not hold. Concerns captured in the meeting are not optional — they are the manager's upward feed.
+The format's job is bidirectional: the team hears the translation, and the manager hears where the translation does not hold. Concerns captured in the meeting are not optional; they are the manager's upward feed.
 
 ## What Cannot Be Shared
 
@@ -72,8 +72,8 @@ The rule: label the category, never fake the category. The team can tolerate "I 
 
 The rules are different when the news is bad:
 
-- Sooner than comfortable — delay only multiplies the rumor version
-- In person or on a live call — never by memo for the first telling
+- Sooner than comfortable: delay only multiplies the rumor version
+- In person or on a live call, never by memo for the first telling
 - Structure it: what is known, what is unknown, what happens next
 - Prepare for reactions: space, acknowledgment, no rush to silver linings
 - Follow up in writing after the live delivery, with the same structure
@@ -89,7 +89,7 @@ The cascade is not complete until the team can restate it:
 - Check the behavior: are decisions changing the way the cascade implied?
 - Re-cascade when the restatement reveals a gap
 
-Landing checks are quick and revealing — the gap between what you said and what the team restates is the actual message that landed.
+Landing checks are quick and revealing: the gap between what you said and what the team restates is the actual message that landed.
 
 ## Over-Cascade as Noise
 
@@ -104,6 +104,7 @@ Not everything deserves a meeting:
 Every cascade that does not change behavior is noise that devalues the next real one. The manager's cascade portfolio has a budget, and the budget is the team's attention.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     RECEIVE["Receive the raw message"] --> TRANSLATE["Translate into team terms"]
     TRANSLATE --> LABEL["Label what cannot be shared"]
@@ -119,7 +120,7 @@ flowchart TD
 ### Cascade Checklist
 
 - [ ] I translated the message: what changes, what it means for us, what we do differently
-- [ ] Unknowns are labeled honestly — confidential, not-yet-known, or undecided
+- [ ] Unknowns are labeled honestly: confidential, not-yet-known, or undecided
 - [ ] Bad news was delivered in person, sooner than comfortable
 - [ ] The meeting captured concerns with owners and dates
 - [ ] The team can restate the direction in their own words
@@ -128,15 +129,15 @@ flowchart TD
 ### Cascade Brief Template
 
 ```markdown
-## Cascade Brief — [date]
+## Cascade Brief: [date]
 - The news: [leadership's message, verbatim core]
 - What changes: [list]
 - What it means for us: [list]
 - What we do differently: [list]
 - What is known: [list]
-- What is unknown: [list] — labeled [confidential / not-yet-known / undecided]
+- What is unknown: [list]; labeled [confidential / not-yet-known / undecided]
 - What happens next: [timeline, forums]
-- Concerns raised: [list] — owners: [names] — follow-up by: [date]
+- Concerns raised: [list]; owners: [names]; follow-up by: [date]
 ```
 
 ## Common Pitfalls
@@ -154,7 +155,7 @@ flowchart TD
 - The team restates strategy in their own words, accurately
 - The team's behavior changes match the cascade's intent
 - Unknowns are labeled honestly and the team trusts the labels
-- Bad news travels through you before rumor — consistently
+- Bad news travels through you before rumor, consistently
 - The team's questions reveal understanding, not confusion
 
 ## Related Topics
@@ -162,9 +163,9 @@ flowchart TD
 - [[02_Representing_the_Team_Upward]]: the downward cascade's counterpart
 - [[03_Difficult_Announcements]]: the hardest cascades, done properly
 - [[06_Communication_Rhythms_and_Channels]]: where cascades live in the channel map
-- [[05_Organizational_Awareness_and_Influence/00_overview|Organizational Awareness and Influence]]: the strategy map feeds the translation
+- [[career-path/11_Engineering_Manager/05_Organizational_Awareness_and_Influence/00_overview|Organizational Awareness and Influence]]: the strategy map feeds the translation
 - [[career-path/05_Tech_Lead/05_Team_Development_and_Mentoring_Leadership/07_Team_Technical_Communication|Team Technical Communication (Tech Lead)]]: the lead-level counterpart for technical context
 
 ## Summary
 
-Cascading context downward is translation work: every message becomes what changes, what it means for us, and what we do differently — delivered through a meeting format that captures concerns, labeled honestly where sharing is limited, checked for landing, and rationed so attention is not spent on noise. The manager who translates instead of forwards gives the team the one thing rumor cannot: a direction they understand well enough to commit to.
+Cascading context downward is translation work: every message becomes what changes, what it means for us, and what we do differently, delivered through a meeting format that captures concerns, labeled honestly where sharing is limited, checked for landing, and rationed so attention is not spent on noise. The manager who translates instead of forwards gives the team the one thing rumor cannot: a direction they understand well enough to commit to.

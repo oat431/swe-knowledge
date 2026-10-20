@@ -17,13 +17,13 @@ tags:
 
 # Technical Due Diligence
 
-> **Core skill:** The principal engineer leads technical evaluation of companies, platforms, and capabilities for mergers and acquisitions — applying a structured due diligence framework, assessing technical risk, and developing post-acquisition integration technical strategy.
+> **Core skill:** The principal engineer leads technical evaluation of companies, platforms, and capabilities for mergers and acquisitions, applying a structured due diligence framework, assessing technical risk, and developing post-acquisition integration technical strategy.
 
 ## Why This Matters
 
-Acquisitions are decided on financials, strategy, and market position — and they fail on technology. The gap between the deal thesis and the technical reality is where acquisition value is destroyed: systems that cannot integrate, architectures that cannot scale, teams that cannot be retained, technical debt that makes the acquired capability a liability rather than an asset.
+Acquisitions are decided on financials, strategy, and market position, and they fail on technology. The gap between the deal thesis and the technical reality is where acquisition value is destroyed: systems that cannot integrate, architectures that cannot scale, teams that cannot be retained, technical debt that makes the acquired capability a liability rather than an asset.
 
-The principal engineer leads technical due diligence to close this gap. The output is not a technology audit — it is a risk assessment that shapes the deal terms, the integration plan, and the go/no-go recommendation that the board acts on.
+The principal engineer leads technical due diligence to close this gap. The output is not a technology audit. It is a risk assessment that shapes the deal terms, the integration plan, and the go/no-go recommendation that the board acts on.
 
 ## The Due Diligence Framework
 
@@ -99,6 +99,7 @@ The principal produces a report that the board and deal team can act on. It is c
 Due diligence is the input; integration is the execution. The principal develops the technical integration strategy that protects the acquired value while merging it into the acquiring organization.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DEAL["Deal closes"] --> ASSESS["Deep assessment: full access reveals what diligence could not"]
     ASSESS --> STRATEGY["Integration strategy: absorb, coexist, or leave independent"]
@@ -178,9 +179,9 @@ flowchart TD
 - [[01_Enterprise_Systems_Thinking]]
 - [[02_Systems_of_Systems_Architecture]]
 - [[06_Strategic_Technology_Decisions]]
-- [[01_Technology_Strategy/03_Investment_Strategy_and_Capital_Allocation|Investment Strategy and Capital Allocation]]
+- [[career-path/04_Principal_and_Distinguished_Engineer/01_Technology_Strategy/03_Investment_Strategy_and_Capital_Allocation|Investment Strategy and Capital Allocation]]
 - [[career-path/03_Staff_Engineer/05_Systems_Thinking_and_Organizational_Design/00_overview|Systems Thinking and Organizational Design (Staff)]]
 
 ## Summary
 
-Technical due diligence means leading the technical evaluation of companies, platforms, and capabilities for mergers and acquisitions — applying a structured framework across architecture, code, infrastructure, data, team, IP, security, and scalability, translating every finding into a risk with probability, impact, and mitigation cost, producing a report with a clear recommendation the board can act on, and developing post-acquisition integration strategy before the deal closes. The principal ensures the deal thesis survives contact with technical reality.
+Technical due diligence means leading the technical evaluation of companies, platforms, and capabilities for mergers and acquisitions, applying a structured framework across architecture, code, infrastructure, data, team, IP, security, and scalability, translating every finding into a risk with probability, impact, and mitigation cost, producing a report with a clear recommendation the board can act on, and developing post-acquisition integration strategy before the deal closes. The principal ensures the deal thesis survives contact with technical reality.

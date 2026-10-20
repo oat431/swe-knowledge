@@ -13,13 +13,13 @@ tags:
 
 # Customer Communication and Executive Influence
 
-> **Core capability:** The FDE carries the deployment in every room — demoing so stakeholders believe, briefing executives so sponsors stay committed, training users so adoption happens, and telling hard truths early enough that they remain solvable.
+> **Core capability:** The FDE carries the deployment in every room: demoing so stakeholders believe, briefing executives so sponsors stay committed, training users so adoption happens, and telling hard truths early enough that they remain solvable.
 
 ## Why This Matters
 
-A forward deployment is a chain of conversations. Sponsors decide whether to fund it, operators decide whether to use it, security decides whether to allow it, and executives decide whether to expand it. The FDE who cannot carry the story in each of those rooms leaves the outcome to chance. Communication is not the soft layer around the technical work — it is how technical work becomes an accepted reality inside the customer's organization.
+A forward deployment is a chain of conversations. Sponsors decide whether to fund it, operators decide whether to use it, security decides whether to allow it, and executives decide whether to expand it. The FDE who cannot carry the story in each of those rooms leaves the outcome to chance. Communication is not the soft layer around the technical work. It is how technical work becomes an accepted reality inside the customer's organization.
 
-The audiences pull in different directions. An executive wants outcomes, risk, and what to tell the board; she does not want architecture. An operator wants to know exactly what changes in her Tuesday; he is not interested in the roadmap. The FDE's skill is translation without dilution: the same deployment expressed in the language and stakes of each audience — accurately, consistently, and without promising what engineering has not agreed to.
+The audiences pull in different directions. An executive wants outcomes, risk, and what to tell the board; she does not want architecture. An operator wants to know exactly what changes in her Tuesday; he is not interested in the roadmap. The FDE's skill is translation without dilution: the same deployment expressed in the language and stakes of each audience, accurately, consistently, and without promising what engineering has not agreed to.
 
 Hard communication is where this capability earns most of its value. Slipped dates, defects, scope cuts, and "that requirement cannot be met" are inevitable in the field. The FDE who surfaces problems early, in writing, with options and recommendations, converts them into manageable decisions. The FDE who waits for certainty converts them into trust incidents. In deployments, the communication timeline is the project timeline.
 
@@ -38,6 +38,7 @@ Hard communication is where this capability earns most of its value. Slipped dat
 ## Communication Across the Deployment
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     DEMO["Demo: make it real"] --> ALIGN["Alignment: agree on scope and success"]
     ALIGN --> TRAIN["Training: users become competent"]
@@ -53,7 +54,7 @@ Each transition is a communication event with its own audience and vocabulary.
 ### Deployment Communication Checklist
 
 - [ ] Every demo has one decision it exists to support, and the audience knows it
-- [ ] Sponsor reads a one-page status of outcome, risk, and next decision — every cycle
+- [ ] Sponsor reads a one-page status of outcome, risk, and next decision, every cycle
 - [ ] Training is measured by user competence, not by sessions delivered
 - [ ] Scope changes are written, dated, and acknowledged by both sides
 - [ ] Bad news has an owner, a timeline, and options attached before it ships
@@ -79,12 +80,12 @@ Each transition is a communication event with its own audience and vocabulary.
 
 ## Related Capabilities
 
-- [[01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]: framing well is the start of communicating well
-- [[04_AI_Systems_in_Customer_Environments/00_overview|AI Systems in Customer Environments]]: teaching model limits is a trust conversation
-- [[05_Enterprise_Navigation_Security_and_Compliance/00_overview|Enterprise Navigation: Security and Compliance]]: risk language shared with reviewers and executives
+- [[career-path/19_Forward_Deployed_Engineer/01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]: framing well is the start of communicating well
+- [[career-path/19_Forward_Deployed_Engineer/04_AI_Systems_in_Customer_Environments/00_overview|AI Systems in Customer Environments]]: teaching model limits is a trust conversation
+- [[career-path/19_Forward_Deployed_Engineer/05_Enterprise_Navigation_Security_and_Compliance/00_overview|Enterprise Navigation: Security and Compliance]]: risk language shared with reviewers and executives
 - [[career-path/16_Developer_Advocate_and_Technical_Consultant/00_overview|Developer Advocate and Technical Consultant]]: the enablement and teaching discipline
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/00_overview|Communication and Influence (Senior Engineer)]]: the foundational communication capability
 
 ## Summary
 
-Customer communication and executive influence is how the deployment survives its own timeline: demos that move decisions, executive briefings that keep sponsorship funded, training that makes users competent, expectation management that keeps promises honest, and difficult conversations held early with options attached. In the field, the engineer who communicates well ships twice — once in code, once in the organization.
+Customer communication and executive influence is how the deployment survives its own timeline: demos that move decisions, executive briefings that keep sponsorship funded, training that makes users competent, expectation management that keeps promises honest, and difficult conversations held early with options attached. In the field, the engineer who communicates well ships twice: once in code, once in the organization.

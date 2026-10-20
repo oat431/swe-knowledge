@@ -16,13 +16,13 @@ tags:
 
 # Consulting Boundaries and Ethics
 
-> **Core skill:** Knowing where the consultant's mandate ends — scoping work honestly, refusing what should be refused, and advising in the customer's interest even when it is inconvenient.
+> **Core skill:** Knowing where the consultant's mandate ends: scoping work honestly, refusing what should be refused, and advising in the customer's interest even when it is inconvenient.
 
 ## Why This Matters
 
-Every consulting engagement runs on an invisible contract: the customer trusts that the advice they receive is aimed at their success, not at the consultant's convenience, quota, or ego. That trust is the entire asset. It is also easy to trade away in small ways — recommending the tool you know instead of the tool that fits, staying quiet about a design you believe will fail, extending an engagement because the revenue is comfortable.
+Every consulting engagement runs on an invisible contract: the customer trusts that the advice they receive is aimed at their success, not at the consultant's convenience, quota, or ego. That trust is the entire asset. It is also easy to trade away in small ways: recommending the tool you know instead of the tool that fits, staying quiet about a design you believe will fail, extending an engagement because the revenue is comfortable.
 
-Boundaries make the trust concrete. A consultant with visible boundaries — what they will do, what they will not, when they will say no — is easier to trust than one who agrees to everything. Saying no to a badly scoped engagement is not a lost sale; it is a demonstration that the consultant's yes means something.
+Boundaries make the trust concrete. A consultant with visible boundaries (what they will do, what they will not, when they will say no) is easier to trust than one who agrees to everything. Saying no to a badly scoped engagement is not a lost sale; it is a demonstration that the consultant's yes means something.
 
 Technical consulting adds its own ethical layer: advice shapes systems that people depend on. Recommending a fragile architecture to close a deal, hiding a known limitation, or letting a customer build on an assumption you know is false are all ordinary-looking decisions with consequences that outlast the engagement. The standard is simple to state and demanding to practice: give the advice you would want to receive, and make its basis visible.
 
@@ -62,11 +62,12 @@ Scope is an ethics instrument: a vague scope lets both sides interpret success d
 
 ## Boundaries Around Expertise
 
-A boundary that consultants underrate is the edge of their own competence. Advising confidently outside your expertise is not a service; it is a risk transferred to the customer invisibly. The disciplined move is to name the edge — "this is outside my depth; here is who should review it" — which builds more trust than a fluent guess ever does. The same applies to organizational politics: consultants can advise on systems, but should be careful about manipulating internal power dynamics, even when invited.
+A boundary that consultants underrate is the edge of their own competence. Advising confidently outside your expertise is not a service; it is a risk transferred to the customer invisibly. The disciplined move is to name the edge ("this is outside my depth; here is who should review it"), which builds more trust than a fluent guess ever does. The same applies to organizational politics: consultants can advise on systems, but should be careful about manipulating internal power dynamics, even when invited.
 
 ## The Boundary Decision
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     REQUEST["Request arrives"] --> FIT["Assess - fit, scope, ethics"]
     FIT --> OWN["Own it - within bounds and competent"]
@@ -91,7 +92,7 @@ flowchart LR
 ### Engagement Boundary Template
 
 ```markdown
-## Engagement Boundaries — [customer]
+## Engagement Boundaries: [customer]
 - Outcome: [measurable success definition]
 - In scope: [deliverables per phase]
 - Out of scope: [what we will coach instead of do]
@@ -126,7 +127,7 @@ flowchart LR
 - [[04_Implementation_Guidance]]: boundaries are enforced day to day during the build
 - [[06_Adoption_Strategy_with_Customers]]: adoption plans must transfer capability, not retain it
 - [[01_Problem_to_Solution_Mapping]]: honest mapping is where self-serving advice gets exposed
-- [[03_Facilitation_and_Enablement/00_overview|Facilitation and Enablement]]: neutral facilitation is boundary discipline in action
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/03_Facilitation_and_Enablement/00_overview|Facilitation and Enablement]]: neutral facilitation is boundary discipline in action
 - [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/00_overview|Influence and Alignment (Staff)]]: influence without authority demands visible ethics
 
 ## Summary

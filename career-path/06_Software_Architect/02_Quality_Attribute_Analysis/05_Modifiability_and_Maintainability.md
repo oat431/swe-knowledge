@@ -18,15 +18,15 @@ tags:
 
 # Modifiability and Maintainability
 
-> **Core skill:** Designing architecture for change — using encapsulation, indirection, configuration-driven behavior, and interface stability tactics to keep modification cost low, and measuring coupling and cohesion at the architecture level to detect when change is becoming expensive.
+> **Core skill:** Designing architecture for change, using encapsulation, indirection, configuration-driven behavior, and interface stability tactics to keep modification cost low, and measuring coupling and cohesion at the architecture level to detect when change is becoming expensive.
 
 ## Why This Matters
 
-Every system will be changed — by people who did not build it, for reasons that were not anticipated, under deadlines that were not planned. Modifiability is the quality attribute that determines how much those changes cost. A system with poor modifiability does not resist change; it converts every change into a cascade of unintended consequences, and the cost of each modification rises until the system is economically immovable.
+Every system will be changed, by people who did not build it, for reasons that were not anticipated, under deadlines that were not planned. Modifiability is the quality attribute that determines how much those changes cost. A system with poor modifiability does not resist change; it converts every change into a cascade of unintended consequences, and the cost of each modification rises until the system is economically immovable.
 
-Modifiability is not about writing clean code. It is about designing structural properties — encapsulation, interface stability, configuration-driven behavior — that make the code changeable in the first place. Two systems with equally clean code can have vastly different modifiability if one has stable interfaces at module boundaries and the other allows every module to depend on every other module's internals.
+Modifiability is not about writing clean code. It is about designing structural properties (encapsulation, interface stability, configuration-driven behavior) that make the code changeable in the first place. Two systems with equally clean code can have vastly different modifiability if one has stable interfaces at module boundaries and the other allows every module to depend on every other module's internals.
 
-The architect's modifiability work is predictive: identify the areas most likely to change (from domain volatility, business strategy, and backlog trends), design those areas for modification, and measure coupling and cohesion at the architecture level so that degradation is detected before change becomes expensive — not discovered when a change estimate comes back at three sprints for what should have been three days.
+The architect's modifiability work is predictive: identify the areas most likely to change (from domain volatility, business strategy, and backlog trends), design those areas for modification, and measure coupling and cohesion at the architecture level so that degradation is detected before change becomes expensive, not discovered when a change estimate comes back at three sprints for what should have been three days.
 
 ## Modifiability Scenarios
 
@@ -75,9 +75,10 @@ Modifiability decays over time unless actively maintained. The cost of change fo
 | **Mature** | Modifiability requires investment; architecture must be refactored periodically | High without investment | Accumulated coupling; interface ossification; knowledge loss |
 | **Legacy** | Modifiability is the primary constraint on delivery | Very high; change avoidance dominates | Nobody understands the full system; changes cascade |
 
-The architect's job is to slow the curve: pay modifiability maintenance costs early and continuously so the system does not reach the legacy phase prematurely. The maintenance is not refactoring code — it is refactoring structure: splitting components whose cohesion has decayed, introducing indirection where coupling has grown, stabilizing interfaces that have ossified.
+The architect's job is to slow the curve: pay modifiability maintenance costs early and continuously so the system does not reach the legacy phase prematurely. The maintenance is not refactoring code. It is refactoring structure: splitting components whose cohesion has decayed, introducing indirection where coupling has grown, stabilizing interfaces that have ossified.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PROFILE["Identify change-prone areas from domain volatility and backlog"] --> MEASURE["Measure coupling and cohesion at architecture level"]
     MEASURE --> DANGER{"Areas in zone of pain detected"}
@@ -101,7 +102,7 @@ flowchart TD
 ### Modifiability Assessment Template
 
 ```markdown
-# Modifiability Assessment: [System] — [Quarter/Date]
+# Modifiability Assessment: [System], [Quarter/Date]
 
 ## Change-Prone Areas
 | Area | Expected Change Rate | Current Coupling | Modifiability Risk | Mitigation |
@@ -135,12 +136,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[01_Quality_Attribute_Workshops]] — how modifiability scenarios are created and prioritized
-- [[07_Quality_Attribute_Trade_Offs]] — modifiability vs performance, simplicity, and time-to-market
-- [[04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]] — modifiability evaluation methods
-- [[06_Data_Architecture/00_overview|Data Architecture]] — data modifiability and schema evolution
-- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/00_overview|Architecture and Design Judgment (Senior)]] — component-level modifiability design
+- [[01_Quality_Attribute_Workshops]]: how modifiability scenarios are created and prioritized
+- [[07_Quality_Attribute_Trade_Offs]]: modifiability vs performance, simplicity, and time-to-market
+- [[career-path/06_Software_Architect/04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]]: modifiability evaluation methods
+- [[career-path/06_Software_Architect/06_Data_Architecture/00_overview|Data Architecture]]: data modifiability and schema evolution
+- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/00_overview|Architecture and Design Judgment (Senior)]]: component-level modifiability design
 
 ## Summary
 
-Modifiability is the quality attribute that determines how much future changes will cost, and the architect's job is to design structure that keeps change cost low. Tactics include encapsulation at module boundaries, indirection where change rates differ, configuration-driven behavior for anticipated variation, and interface stability rules for cross-team contracts. Coupling and cohesion are measured at the architecture level — not just in code — to detect when components are drifting toward the zone of pain, where they are too concrete and too depended-on to change safely. The modifiability cost curve rises unless actively maintained: the architect invests in structural refactoring early and continuously so the system does not reach the legacy phase — where every change costs more than the last — prematurely.
+Modifiability is the quality attribute that determines how much future changes will cost, and the architect's job is to design structure that keeps change cost low. Tactics include encapsulation at module boundaries, indirection where change rates differ, configuration-driven behavior for anticipated variation, and interface stability rules for cross-team contracts. Coupling and cohesion are measured at the architecture level (not just in code) to detect when components are drifting toward the zone of pain, where they are too concrete and too depended-on to change safely. The modifiability cost curve rises unless actively maintained: the architect invests in structural refactoring early and continuously so the system does not reach the legacy phase (where every change costs more than the last) prematurely.

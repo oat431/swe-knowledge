@@ -16,15 +16,15 @@ tags:
 
 # Cost Aware Infrastructure
 
-> **Core skill:** The independent treats every infrastructure choice as a recurring bill against revenue — knowing unit costs, sizing deliberately, and keeping spend bounded with budgets, alerts, and honest attribution to systems and clients.
+> **Core skill:** The independent treats every infrastructure choice as a recurring bill against revenue: knowing unit costs, sizing deliberately, and keeping spend bounded with budgets, alerts, and honest attribution to systems and clients.
 
 ## Why This Matters
 
-For an independent, infrastructure cost is not an abstraction on a corporate budget; it comes out of the same account as groceries. The difference between a well-chosen and a carelessly chosen stack can be the difference between a comfortable margin and a business that works hard for nothing. Mismanaged spend also accumulates invisibly: idle environments, forgotten prototypes, premium tiers on systems nobody uses, storage that grows forever because nothing was ever deleted. None of these announce themselves — they wait in the invoice, month after month.
+For an independent, infrastructure cost is not an abstraction on a corporate budget; it comes out of the same account as groceries. The difference between a well-chosen and a carelessly chosen stack can be the difference between a comfortable margin and a business that works hard for nothing. Mismanaged spend also accumulates invisibly: idle environments, forgotten prototypes, premium tiers on systems nobody uses, storage that grows forever because nothing was ever deleted. None of these announce themselves. They wait in the invoice, month after month.
 
 Cost awareness is a design discipline, not an accounting chore. Every architecture decision carries a cost shape: managed services trade higher unit prices for lower operational effort; self hosting trades money for attention; serverless trades premiums for near zero idle cost; reserved commitments trade flexibility for discounts. The independent who understands these shapes picks deliberately and projects spend at design time, instead of discovering it after launch when changing course is expensive.
 
-The governance side is equally simple: targets per system, alerts on anomalies, attribution of each bill to the system and client that caused it, and a monthly review that is short because the numbers are known. When a cost spike appears, the independent should know within days — and should be able to say whether the spike is growth to welcome, waste to remove, or an error to fix.
+The governance side is equally simple: targets per system, alerts on anomalies, attribution of each bill to the system and client that caused it, and a monthly review that is short because the numbers are known. When a cost spike appears, the independent should know within days, and should be able to say whether the spike is growth to welcome, waste to remove, or an error to fix.
 
 ## Cost Drivers for Small Systems
 
@@ -64,6 +64,7 @@ The governance side is equally simple: targets per system, alerts on anomalies, 
 ## The Cost Awareness Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MEASURE["Measure current infrastructure spend"] --> ATTRIBUTE["Attribute cost to systems and clients"]
     ATTRIBUTE --> TARGET["Set budget targets per system"]
@@ -87,7 +88,7 @@ Attribution is the hinge: a cost nobody owns is a cost nobody controls.
 ### Infrastructure Cost Review
 
 ```markdown
-## Infrastructure Cost Review — <month>
+## Infrastructure Cost Review: <month>
 
 | Field | Value |
 |-------|-------|
@@ -108,7 +109,7 @@ Attribution is the hinge: a cost nobody owns is a cost nobody controls.
 | **Always-on for intermittent workloads** | Idle capacity is pure waste at solo scale | Elastic or scheduled runtimes for spiky demand |
 | **Set and forget environments** | Staging clones and experiments accumulate forever | Ephemeral environments with deletion dates |
 | **Premium tiers by inertia** | Support plans and high tiers outlive their purpose | Review tiers at renewal, not after |
-| **Chasing pennies, missing structure** | Instance tuning while topology burns the budget | Fix structural drivers — retention, egress, architecture — first |
+| **Chasing pennies, missing structure** | Instance tuning while topology burns the budget | Fix structural drivers (retention, egress, architecture) first |
 
 ## Success Indicators
 
@@ -124,8 +125,8 @@ Attribution is the hinge: a cost nobody owns is a cost nobody controls.
 - [[03_Technology_Selection_for_Solo_Builders]]
 - [[06_Scaling_Decisions_with_Limited_Resources]]
 - [[career-path/06_Software_Architect/07_Operations_and_Infrastructure_Architecture/07_Cost_and_Capacity_Architecture|Cost and Capacity Architecture (Architect)]]
-- [[03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
 
 ## Summary
 
-Cost aware infrastructure treats every architecture choice as a recurring bill: cost shapes are understood at design time, spend is attributed to systems and clients, targets and alerts keep it bounded, and a short monthly review turns surprises into decisions. For a one person business the goal is simple — infrastructure that costs meaningfully less than it earns, with no line item that nobody owns.
+Cost aware infrastructure treats every architecture choice as a recurring bill: cost shapes are understood at design time, spend is attributed to systems and clients, targets and alerts keep it bounded, and a short monthly review turns surprises into decisions. For a one person business the goal is simple: infrastructure that costs meaningfully less than it earns, with no line item that nobody owns.

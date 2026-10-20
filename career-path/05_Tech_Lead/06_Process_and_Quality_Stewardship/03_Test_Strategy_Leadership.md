@@ -16,11 +16,11 @@ tags:
 
 # Test Strategy Leadership
 
-> **Core skill:** Leading the team's test strategy — shaping the pyramid, allocating tests by risk, and running flaky-test policy — so confidence per effort stays high.
+> **Core skill:** Leading the team's test strategy (shaping the pyramid, allocating tests by risk, and running flaky-test policy) so confidence per effort stays high.
 
 ## Why This Matters
 
-Individual engineers write tests; the tech lead owns the system those tests form. Without strategy, test suites grow by accretion: thousands of slow unit tests that assert implementation details, a handful of flaky end-to-end tests that block every merge, and critical paths with no coverage at all. The team spends more time fighting the suite than trusting it — and the suite's credibility dies with its speed.
+Individual engineers write tests; the tech lead owns the system those tests form. Without strategy, test suites grow by accretion: thousands of slow unit tests that assert implementation details, a handful of flaky end-to-end tests that block every merge, and critical paths with no coverage at all. The team spends more time fighting the suite than trusting it, and the suite's credibility dies with its speed.
 
 Test strategy is an investment problem: every test costs time to write, time to run, and time to maintain, and pays back in caught regressions and shipped confidence. The tech lead's job is to allocate that investment where the risk is, keep the suite fast and trustworthy, and make the team's testing practice deliberate instead of accidental. This note covers the test shape, risk-based allocation, flaky test policy, coverage conversations, and test data strategy.
 
@@ -47,6 +47,7 @@ Tests earn their place by protecting against the failures that would hurt most. 
 | How hard is a bug here to detect in production? | Silent failure areas need tests; loud areas need monitoring |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     A["Map system risks"] --> B["Allocate tests by risk"]
     B --> C["Unit tests for logic"]
@@ -61,7 +62,7 @@ flowchart TD
 
 ## Shared Test Infrastructure Ownership
 
-Test infrastructure — factories, fixtures, test databases, seeding tools, CI test runners — is a shared asset that dies without an owner.
+Test infrastructure (factories, fixtures, test databases, seeding tools, CI test runners) is a shared asset that dies without an owner.
 
 | Asset | Owner Responsibility |
 |-------|----------------------|
@@ -71,11 +72,11 @@ Test infrastructure — factories, fixtures, test databases, seeding tools, CI t
 | Testing tools and frameworks | Upgraded deliberately; deprecations handled early |
 | Test documentation | New joiners can write a test on day three |
 
-Rotate ownership each quarter so no single person is the suite's hostage — but always have a named owner.
+Rotate ownership each quarter so no single person is the suite's hostage, but always have a named owner.
 
 ## Flaky Test Policy
 
-Flaky tests are the fastest way to destroy the suite's trust. A test that fails for no reason teaches engineers to ignore failures — including real ones.
+Flaky tests are the fastest way to destroy the suite's trust. A test that fails for no reason teaches engineers to ignore failures, including real ones.
 
 | Decision | When to Use | Notes |
 |----------|-------------|-------|
@@ -111,7 +112,7 @@ Use coverage to find untested risk areas, never as a merge criterion that reward
 
 ## Confidence per Effort as the Guiding Metric
 
-The question that settles every testing debate: **for this amount of effort, how much confidence do we get?** A slow e2e suite that runs nightly gives less confidence per effort than integration tests that run in five minutes. The lead steers the team toward the tests that catch real regressions fast, and defends the suite's speed the way others defend uptime — because a suite the team doesn't run protects nobody.
+The question that settles every testing debate: **for this amount of effort, how much confidence do we get?** A slow e2e suite that runs nightly gives less confidence per effort than integration tests that run in five minutes. The lead steers the team toward the tests that catch real regressions fast, and defends the suite's speed the way others defend uptime, because a suite the team doesn't run protects nobody.
 
 ## Practical Applications
 
@@ -130,9 +131,9 @@ The question that settles every testing debate: **for this amount of effort, how
 # Team Test Strategy
 
 ## Shape
-- Unit: [share] — fast logic checks
-- Integration: [share] — boundaries, data, APIs
-- E2E: [share] — [list the journeys protected]
+- Unit: [share], fast logic checks
+- Integration: [share], boundaries, data, APIs
+- E2E: [share], [list the journeys protected]
 
 ## Risk Priorities
 | Area | Risk | Test Level | Owner |
@@ -154,7 +155,7 @@ Quarantine with owner and deadline; fix if cheap; delete if redundant; rewrite i
 |---------|---------------------|-----------------|
 | **Coverage theater** | Percentages are gamed; the suite asserts nothing | Review what tests assert, not how many lines they touch |
 | **E2E everywhere** | Slow, flaky, expensive; the suite becomes the bottleneck | Push coverage down the pyramid; keep e2e for key journeys |
-| **Flaky test tolerance** | Engineers learn to ignore red; real failures slip through | Strict policy: quarantine, fix, delete — with deadlines |
+| **Flaky test tolerance** | Engineers learn to ignore red; real failures slip through | Strict policy: quarantine, fix, delete, with deadlines |
 | **Testing by accretion** | Tests are added wherever someone remembered; gaps stay gaps | Map risk areas and allocate tests deliberately |
 | **Test infra as afterthought** | Every engineer fights fixtures and environments | Name an owner; treat test infrastructure as a product |
 | **Speed sacrificed silently** | The suite creeps to an hour; nobody runs it locally | Defend run time; it is the currency of confidence |
@@ -170,12 +171,12 @@ Quarantine with owner and deadline; fix if cheap; delete if redundant; rewrite i
 
 ## Related Topics
 
-- [[05_Quality_Gates_and_Automated_Checks]] — the pipeline that runs this strategy on every change
-- [[04_Code_Review_Standards]] — where reviewers catch what tests miss
-- [[02_Definition_of_Done_and_Working_Agreements]] — the contract that makes tests part of done
-- [[career-path/10_Quality_and_Test_Engineering/00_overview|Quality and Test Engineering]] — the specialist path for depth in testing
-- [[02_System_Ownership_and_Production_Responsibility/00_overview|System Ownership and Production Responsibility]] — testing serves the health of the system the team owns
+- [[05_Quality_Gates_and_Automated_Checks]]: the pipeline that runs this strategy on every change
+- [[04_Code_Review_Standards]]: where reviewers catch what tests miss
+- [[02_Definition_of_Done_and_Working_Agreements]]: the contract that makes tests part of done
+- [[career-path/10_Quality_and_Test_Engineering/00_overview|Quality and Test Engineering]]: the specialist path for depth in testing
+- [[career-path/05_Tech_Lead/02_System_Ownership_and_Production_Responsibility/00_overview|System Ownership and Production Responsibility]]: testing serves the health of the system the team owns
 
 ## Summary
 
-Test strategy leadership means treating the suite as a portfolio: shaped by the system's risk profile, allocated by what a regression would cost, kept fast and trustworthy by strict flaky-test policy, and steered by confidence per effort rather than coverage percentages. The tech lead does not write every test — they make the system in which good tests are easy to write, cheap to run, and impossible to ignore.
+Test strategy leadership means treating the suite as a portfolio: shaped by the system's risk profile, allocated by what a regression would cost, kept fast and trustworthy by strict flaky-test policy, and steered by confidence per effort rather than coverage percentages. The tech lead does not write every test; they make the system in which good tests are easy to write, cheap to run, and impossible to ignore.

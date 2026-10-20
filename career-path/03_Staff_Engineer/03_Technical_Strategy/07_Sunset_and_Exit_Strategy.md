@@ -16,11 +16,11 @@ tags:
 
 # Sunset and Exit Strategy
 
-> **Core skill:** The staff engineer ends systems, tools, and commitments deliberately — with sunset memos, migration paths, and dates — and treats ending things as normal portfolio management rather than failure.
+> **Core skill:** The staff engineer ends systems, tools, and commitments deliberately (with sunset memos, migration paths, and dates) and treats ending things as normal portfolio management rather than failure.
 
 ## Why This Matters
 
-Every organization carries a graveyard of systems nobody chose to keep: the service that survived its purpose, the tool that lost its users, the platform that lost its bet. Each one consumes maintenance capacity forever — security patches, incident rotations, dependency upgrades — while delivering nothing. The cost compounds silently, because no single quarter feels the pain; it is spread across every team that must work around the corpse.
+Every organization carries a graveyard of systems nobody chose to keep: the service that survived its purpose, the tool that lost its users, the platform that lost its bet. Each one consumes maintenance capacity forever (security patches, incident rotations, dependency upgrades) while delivering nothing. The cost compounds silently, because no single quarter feels the pain; it is spread across every team that must work around the corpse.
 
 Nothing ends by default. Ending is a decision, and decisions need owners, evidence, and process. The staff engineer is the natural owner: they can see the whole portfolio, they can price the cost of keeping, and they have the credibility to make sunset a normal, celebrated act rather than an admission of failure.
 
@@ -80,7 +80,7 @@ The memo makes the sunset a decision with a paper trail. Without it, sunsets hap
 
 ## Executing Sunsets
 
-Execution is where sunsets fail, because the interesting part — the decision — is over and the tedious part remains. The execution discipline:
+Execution is where sunsets fail, because the interesting part (the decision) is over and the tedious part remains. The execution discipline:
 
 | Phase | Milestones |
 |-------|------------|
@@ -89,11 +89,11 @@ Execution is where sunsets fail, because the interesting part — the decision �
 | Decommission | Turn off at the date; remove access; archive the data; delete or archive the code |
 | Aftermath | Record the lesson; update the portfolio; publish what the sunset freed |
 
-The migration must be tracked like any delivery, with a percentage, a date, and an owner. The most common execution failure is the sunset that freezes but never decommissions — the system enters a zombie state where it still costs on-call but no longer serves anyone.
+The migration must be tracked like any delivery, with a percentage, a date, and an owner. The most common execution failure is the sunset that freezes but never decommissions: the system enters a zombie state where it still costs on-call but no longer serves anyone.
 
 ## Sunk Cost Resistance
 
-Sunk cost resistance is the sunset's constant enemy, at two levels. At the portfolio level, it shows up as "we already spent so much building this" — irrelevant, since the past spend is unrecoverable; the only question is the future cost of keeping. At the execution level, it shows up as the migration that stalls at 80 percent while the last users are individually fought for.
+Sunk cost resistance is the sunset's constant enemy, at two levels. At the portfolio level, it shows up as "we already spent so much building this", irrelevant, since the past spend is unrecoverable; the only question is the future cost of keeping. At the execution level, it shows up as the migration that stalls at 80 percent while the last users are individually fought for.
 
 The discipline that defeats both: decisions are made on future costs, dates are made public, and the decommission date is treated as a commitment like any other. A sunset that slips once becomes a sunset that never happens.
 
@@ -112,9 +112,10 @@ Sunset work deserves portfolio visibility, not a corner of the backlog. A standi
 | [legacy service] | [name] | [date] | [date] | [engineer-months per year] |
 | [orphaned tool] | [name] | [date] | [date] | [engineer-months per year] |
 
-The portfolio view turns sunsets from episodic fights into a managed stream — and it gives leadership the one number they respond to: capacity reclaimed.
+The portfolio view turns sunsets from episodic fights into a managed stream, and it gives leadership the one number they respond to: capacity reclaimed.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CANDIDATE["Identify sunset candidates"] --> ANALYZE["Analyze usage cost and risk"]
     ANALYZE --> MEMO["Write the sunset memo"]
@@ -164,7 +165,7 @@ flowchart TD
 - [[05_Strategy_Review_and_Adaptation]]: kill decisions precede sunsets
 - [[03_Capacity_and_Investment_Allocation]]: the capacity sunsets reclaim
 - [[career-path/02_Senior_Software_Engineer/08_Engineering_Economics_and_Trade_Offs/02_Build_vs_Buy_Decisions|Build vs Buy Decisions (Senior)]]: the keep-or-replace economics
-- [[02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: migrating users across team boundaries
+- [[career-path/03_Staff_Engineer/02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: migrating users across team boundaries
 
 ## Summary
 

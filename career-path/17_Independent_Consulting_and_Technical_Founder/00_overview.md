@@ -42,17 +42,18 @@ This path is not simply freedom from employment. It combines engineering with bu
 
 | Capability | Independent behavior | Detailed notes |
 |---|---|---|
-| Problem discovery | Finds a real customer need rather than starting with technology | [[01_Problem_Discovery_and_Customer_Validation/00_overview]] |
-| Product and service design | Defines an offer, scope, value proposition, and delivery model | [[02_Product_and_Service_Design/00_overview]] |
-| Business case | Evaluates cost, revenue, risk, and opportunity | [[03_Business_Case_and_Economics/00_overview]] |
-| Delivery | Plans and executes work with explicit commitments | [[04_Delivery_and_Client_Management/00_overview]] |
-| Architecture | Builds a system appropriate for current and future constraints | [[05_Architecture_for_Independents/00_overview]] |
-| Sales and communication | Explains value and builds trusted relationships | [[06_Sales_and_Client_Communication/00_overview]] |
-| Governance and risk | Handles contracts, security, privacy, and continuity responsibly | [[07_Governance_Risk_and_Continuity/00_overview]] |
+| Problem discovery | Finds a real customer need rather than starting with technology | [[career-path/17_Independent_Consulting_and_Technical_Founder/01_Problem_Discovery_and_Customer_Validation/00_overview]] |
+| Product and service design | Defines an offer, scope, value proposition, and delivery model | [[career-path/17_Independent_Consulting_and_Technical_Founder/02_Product_and_Service_Design/00_overview]] |
+| Business case | Evaluates cost, revenue, risk, and opportunity | [[career-path/17_Independent_Consulting_and_Technical_Founder/03_Business_Case_and_Economics/00_overview]] |
+| Delivery | Plans and executes work with explicit commitments | [[career-path/17_Independent_Consulting_and_Technical_Founder/04_Delivery_and_Client_Management/00_overview]] |
+| Architecture | Builds a system appropriate for current and future constraints | [[career-path/17_Independent_Consulting_and_Technical_Founder/05_Architecture_for_Independents/00_overview]] |
+| Sales and communication | Explains value and builds trusted relationships | [[career-path/17_Independent_Consulting_and_Technical_Founder/06_Sales_and_Client_Communication/00_overview]] |
+| Governance and risk | Handles contracts, security, privacy, and continuity responsibly | [[career-path/17_Independent_Consulting_and_Technical_Founder/07_Governance_Risk_and_Continuity/00_overview]] |
 
 ## Typical Progression
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SENIOR["Senior Software Engineer"] --> CONSULT["Deliver expertise to customers"]
     CONSULT --> OFFER["Develop repeatable service or product offer"]

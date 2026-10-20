@@ -29,6 +29,7 @@ The difference is not noticing problems. It is **treating developer experience a
 ### Developer Experience Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph INPUTS["DX Inputs"]
         I1["Tools and platforms"]
@@ -113,6 +114,7 @@ flowchart TD
 ### DX improvement process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MEASURE["Measure: collect quantitative and qualitative data"]
     ANALYZE["Analyze: identify top friction points"]
@@ -170,7 +172,7 @@ flowchart TD
 - [[03_Golden_Paths]] : golden paths improve DX by reducing cognitive load
 - [[02_Self_Service_Infrastructure]] : self-service reduces friction and wait times
 - [[software-engineering-note/06_Software_Engineering_Operations/03_Accelerating_Flow|Accelerating Flow]] : DX is about accelerating developer flow
-- [[04_Delivery_Automation/00_overview|Delivery Automation]] : CI/CD automation improves DX
+- [[career-path/07_SRE_and_Platform_Engineer/04_Delivery_Automation/00_overview|Delivery Automation]] : CI/CD automation improves DX
 
 ## Key Takeaways
 

@@ -90,7 +90,7 @@ Design a data sharing approach for a scenario: your company wants to share custo
 - [[01_Data_Classification_and_Sensitivity]]: classification determines sharing restrictions
 - [[04_Privacy_Engineering]]: privacy obligations at sharing boundaries
 - [[05_Audit_and_Lineage_for_Compliance]]: auditing shared data usage
-- [[03_Data_Integration_and_Interoperability/00_overview|Data Integration]]: sharing as a form of integration
+- [[career-path/09_Data_and_ML_Engineer/03_Data_Integration_and_Interoperability/00_overview|Data Integration]]: sharing as a form of integration
 
 ## Key Takeaways
 

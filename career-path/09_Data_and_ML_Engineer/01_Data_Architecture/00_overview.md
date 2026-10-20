@@ -41,6 +41,7 @@ This capability area covers the judgment calls that separate senior practitioner
 ## Concept Map
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TB
     subgraph Strategic["Strategic Decisions"]
         A[Platform Patterns] --> B[Storage Strategy]
@@ -99,5 +100,5 @@ Before proceeding, honestly assess your readiness:
 ## Related Links
 
 - [[DMBoK v2 - Overview]] : Foundational data management knowledge areas
-- [[02_Data_Modeling_and_Design/00_overview]] : Complementary modeling discipline
-- [[03_Data_Integration_and_Interoperability/00_overview]] : Implementation patterns
+- [[career-path/09_Data_and_ML_Engineer/02_Data_Modeling_and_Design/00_overview]] : Complementary modeling discipline
+- [[career-path/09_Data_and_ML_Engineer/03_Data_Integration_and_Interoperability/00_overview]] : Implementation patterns

@@ -16,13 +16,13 @@ tags:
 
 # External Dependency Management
 
-> **Core skill:** Managing dependencies on vendors, suppliers, regulators, and third-party organizations — where the TPM has no authority, limited visibility, and must substitute influence, contract leverage, and early-warning systems for direct control.
+> **Core skill:** Managing dependencies on vendors, suppliers, regulators, and third-party organizations, where the TPM has no authority, limited visibility, and must substitute influence, contract leverage, and early-warning systems for direct control.
 
 ## Why This Matters
 
-Internal dependencies are hard. External dependencies are harder — because the people you depend on do not report to your company, attend your stand-ups, or feel your deadline pressure. The vendor's priority stack does not match yours. The regulator's timeline is not negotiable. The partner's roadmap changed without telling you.
+Internal dependencies are hard. External dependencies are harder, because the people you depend on do not report to your company, attend your stand-ups, or feel your deadline pressure. The vendor's priority stack does not match yours. The regulator's timeline is not negotiable. The partner's roadmap changed without telling you.
 
-External dependencies fail differently from internal ones. Internal dependencies slip with warning signs: the owner misses checkpoints, the team's velocity drops, the integration test fails. External dependencies slip silently — the vendor goes dark, the certification body has a backlog, the partner deprioritized your integration — and the first signal is the missed delivery date. By then, the program has no cheap options left.
+External dependencies fail differently from internal ones. Internal dependencies slip with warning signs: the owner misses checkpoints, the team's velocity drops, the integration test fails. External dependencies slip silently (the vendor goes dark, the certification body has a backlog, the partner deprioritized your integration) and the first signal is the missed delivery date. By then, the program has no cheap options left.
 
 The TPM's external dependency practice compensates for the lack of authority with: contract leverage where it exists, relationship investment where it does not, early-warning indicators that pierce the opacity, and contingency plans that assume external dependencies will slip until proven otherwise.
 
@@ -42,6 +42,7 @@ The playbook for external dependencies starts from a different assumption: trust
 ## The External Dependency Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SELECT["1. Select: vendor assessment, track record, alternatives"] --> CONTRACT_EXT["2. Contract: SOW, SLAs, milestones, acceptance, remedies"]
     CONTRACT_EXT --> INTEGRATE["3. Integrate: technical onboarding, test environment, comms rhythm"]
@@ -76,12 +77,12 @@ The external contract (SOW, MSA, service agreement) is both a legal instrument a
 | **Milestones with dates** | External milestones map to internal program dates with buffer |
 | **Acceptance criteria** | Testable, objective, tied to payment or delivery gates |
 | **SLAs and penalties** | What happens when they miss: credits, expedited recovery, termination right |
-| **Reporting requirements** | Minimum status information, cadence, format — written into the contract |
+| **Reporting requirements** | Minimum status information, cadence, format: written into the contract |
 | **Escalation path** | Named contacts at each level; escalation triggers defined |
 | **IP and data rights** | Who owns what; what happens to data at contract end |
 | **Exit and transition** | How to move off the vendor; data extraction; transition assistance |
 
-The contract is not the relationship — but it is the floor the relationship stands on. A good relationship can survive a light contract. A bad relationship cannot be saved by a heavy one.
+The contract is not the relationship, but it is the floor the relationship stands on. A good relationship can survive a light contract. A bad relationship cannot be saved by a heavy one.
 
 ## Phase 3: Integration and Communication Rhythm
 
@@ -95,7 +96,7 @@ Once the contract is signed, establish the operational relationship:
 | **Joint checkpoint meetings** | Agenda: progress against milestones, risks, changes, decisions | Weekly or biweekly depending on criticality |
 | **Decision log** | Shared document; every decision with date, parties, rationale | Updated in real time |
 
-The communication rhythm is more important with external partners than internal teams — because informal corridor conversations do not exist. If it is not in the structured rhythm, it does not happen.
+The communication rhythm is more important with external partners than internal teams, because informal corridor conversations do not exist. If it is not in the structured rhythm, it does not happen.
 
 ## Phase 4: Monitoring and Early Warning
 
@@ -110,7 +111,7 @@ External dependencies need a different set of leading indicators because the int
 | **Scope creep requests** | Are they proposing changes that expand scope without date relief? | They are behind and trying to justify delay |
 | **Third-party signals** | Industry news, Glassdoor reviews, funding announcements | Organizational instability |
 
-When two or more indicators trend negative, escalate internally before the external delivery date arrives — see [[06_Unblocking_Escalations]].
+When two or more indicators trend negative, escalate internally before the external delivery date arrives: see [[06_Unblocking_Escalations]].
 
 ## Phase 5: Acceptance and Sign-Off
 
@@ -124,7 +125,7 @@ External deliverable acceptance is the moment when assumptions become facts:
 | **Document acceptance formally** | Date, what was accepted, any known deficiencies, sign-off |
 | **Tie acceptance to payment** | Acceptance gates payment milestones; it is your last leverage |
 
-Acceptance is not a ceremony — it is the verification that the external dependency is resolved. Until acceptance is complete, the dependency is open.
+Acceptance is not a ceremony. It is the verification that the external dependency is resolved. Until acceptance is complete, the dependency is open.
 
 ## When the External Dependency Fails
 
@@ -135,12 +136,12 @@ Acceptance is not a ceremony — it is the verification that the external depend
 | **Non-delivery** | Stop work with the vendor; execute exit clause; activate alternative | Legal remedies; internal build assessment |
 | **Quality failure** | Reject at acceptance; invoke remediation clause | Re-evaluate the relationship; may require re-procurement |
 
-Every external dependency on the critical path must have a contingency plan before the dependency is committed — see [[05_Dependency_Risk_and_Contingency]].
+Every external dependency on the critical path must have a contingency plan before the dependency is committed: see [[05_Dependency_Risk_and_Contingency]].
 
 ## Practical Applications
 
 - [ ] Every external dependency has a contract with operational terms the TPM can enforce
-- [ ] External dependencies have a different monitoring regime from internal ones — leading indicators that pierce opacity
+- [ ] External dependencies have a different monitoring regime from internal ones: leading indicators that pierce opacity
 - [ ] Communication rhythm is structured and documented; nothing relies on informal contact
 - [ ] Acceptance criteria are written into the contract and verified in your environment
 - [ ] Contingency plans exist for every critical external dependency before the dependency begins
@@ -152,7 +153,7 @@ Every external dependency on the critical path must have a contingency plan befo
 | **Assuming external = internal** | Applying the same light-touch tracking to a vendor | External dependencies get a distinct, heavier tracking regime |
 | **Contract without operational teeth** | Legal wrote the contract; TPM cannot enforce it operationally | TPM owns the operational terms: milestones, reporting, acceptance, escalation |
 | **Single-vendor lock-in** | No alternative; dependency becomes a hostage situation | Assess and maintain alternatives even if not activated |
-| **Relationship-only management** | "We have a great relationship" — until the one person leaves | Contract floor plus relationship; never relationship alone |
+| **Relationship-only management** | "We have a great relationship", until the one person leaves | Contract floor plus relationship; never relationship alone |
 | **Late acceptance** | Delivered months ago; never formally accepted; now can't reject | Accept or reject at delivery; the clock runs against you |
 
 ## Success Indicators
@@ -160,7 +161,7 @@ Every external dependency on the critical path must have a contingency plan befo
 - External dependency slips are detected through leading indicators, not missed delivery dates
 - Critical external dependencies have exercised contingency plans
 - Vendor status reports arrive on schedule with honest content
-- Acceptance is formal, tested, and documented — never assumed
+- Acceptance is formal, tested, and documented, never assumed
 
 ## Related Topics
 
@@ -172,4 +173,4 @@ Every external dependency on the critical path must have a contingency plan befo
 
 ## Summary
 
-External dependency management is the TPM's discipline for dependencies where there is no shared manager to escalate through. It substitutes structured contracts, leading-indicator monitoring, and contingency planning for the authority and visibility that internal dependencies enjoy. The TPM's rule: every external dependency is assumed risky until proven otherwise, monitored differently from internal ones, and backed by a contingency plan that is in place before the dependency begins — not scrambled together when it fails.
+External dependency management is the TPM's discipline for dependencies where there is no shared manager to escalate through. It substitutes structured contracts, leading-indicator monitoring, and contingency planning for the authority and visibility that internal dependencies enjoy. The TPM's rule: every external dependency is assumed risky until proven otherwise, monitored differently from internal ones, and backed by a contingency plan that is in place before the dependency begins, not scrambled together when it fails.

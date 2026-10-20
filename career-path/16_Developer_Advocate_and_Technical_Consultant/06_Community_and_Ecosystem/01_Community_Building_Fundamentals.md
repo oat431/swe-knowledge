@@ -16,13 +16,13 @@ tags:
 
 # Community Building Fundamentals
 
-> **Core skill:** Seeding and stewarding a developer community — purpose, platform, first members, and the participation ladder — so members eventually create value for each other.
+> **Core skill:** Seeding and stewarding a developer community (purpose, platform, first members, and the participation ladder) so members eventually create value for each other.
 
 ## Why This Matters
 
-A community exists at the moment members help each other without staff prompting. Everything before that moment is construction; everything after it is stewardship. Advocates who understand this distinction stop measuring launch metrics — sign-ups, first posts — and start watching for the real ignition event: an answer from a member to a member, a user-written guide, a meetup run by someone who does not work for the company.
+A community exists at the moment members help each other without staff prompting. Everything before that moment is construction; everything after it is stewardship. Advocates who understand this distinction stop measuring launch metrics (sign-ups, first posts) and start watching for the real ignition event: an answer from a member to a member, a user-written guide, a meetup run by someone who does not work for the company.
 
-Communities cannot be manufactured, only cultivated. The soil is purpose: a clear answer to "why does this space exist, and who is it for?" that members would state the same way. The water is participation: making it easy to go from lurker to contributor to leader. The light is recognition: making contribution visible and valued. Miss any of the three and the space becomes either a ghost town or a marketing channel in disguise — and developers can tell the difference within a week.
+Communities cannot be manufactured, only cultivated. The soil is purpose: a clear answer to "why does this space exist, and who is it for?" that members would state the same way. The water is participation: making it easy to go from lurker to contributor to leader. The light is recognition: making contribution visible and valued. Miss any of the three and the space becomes either a ghost town or a marketing channel in disguise, and developers can tell the difference within a week.
 
 The advocate's discipline is patience with structure. Most community failures are impatience failures: launching wide before the purpose is sharp, recruiting thousands before the first ten are served, automating before there is anything worth automating. The fundamentals are unglamorous and they work.
 
@@ -47,19 +47,19 @@ The advocate's discipline is patience with structure. Most community failures ar
 | Maturity | Leaders emerge; self-sustaining rituals | Staff absence changes little |
 | Renewal | Generational turnover; new themes | A new cohort finds its own voice |
 
-Each stage has a different job for the advocate. Jumping stages — pushing growth before emergence — is the most common structural mistake.
+Each stage has a different job for the advocate. Jumping stages (pushing growth before emergence) is the most common structural mistake.
 
 ## The Participation Ladder
 
 | Rung | Behavior | What The Community Owes Them | What They Owe It |
 |------|----------|------------------------------|------------------|
-| Lurker | Reads, searches, learns | Fast answers to be found | Nothing yet — this is legitimate |
+| Lurker | Reads, searches, learns | Fast answers to be found | Nothing yet: this is legitimate |
 | Participant | Asks and answers occasionally | A friendly first reply | Follow the norms |
 | Contributor | Writes guides, reports bugs, speaks | Credit and amplification | Keep improving quality |
 | Leader | Runs programs, mentors, moderates | Support, tools, recognition | Sustain the space for others |
 | Steward | Shapes direction with the team | A real seat at the table | Protect the purpose |
 
-The design goal is a visible, achievable path up the ladder — and permission to lurk. Forcing participation converts lurkers into leavers.
+The design goal is a visible, achievable path up the ladder, and permission to lurk. Forcing participation converts lurkers into leavers.
 
 ## Platform Choice
 
@@ -76,6 +76,7 @@ Most healthy ecosystems combine two or three: chat for connection, a forum for d
 ## The Community Flywheel
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SEED["Seed - purpose, platform, first members"] --> SERVE["Serve - content, answers, events"]
     SERVE --> CONNECT["Connect - members help members"]
@@ -93,15 +94,15 @@ flowchart TD
 - [ ] A plausible path exists from lurking to leading
 - [ ] Staff participate as members, not as broadcasters
 - [ ] Norms and expectations are visible on day one
-- [ ] The ignition event — member-to-member help — has been observed and celebrated
+- [ ] The ignition event (member-to-member help) has been observed and celebrated
 - [ ] Health metrics are tracked from the start, not retrofitted
 
 ### Community Charter Template
 
 ```markdown
-## Community Charter — [name]
+## Community Charter: [name]
 - Purpose: [one sentence]
-- For whom: [audience] — not for: [exclusions]
+- For whom: [audience], not for: [exclusions]
 - Value exchange: members get [x]; members give [y]
 - Norms: [three to five behaviors]
 - Staff role: [participate as members; where company interests are declared]
@@ -124,7 +125,7 @@ flowchart TD
 
 - Members answer each other before staff notice the question
 - Newcomers cite member-authored content as their way in
-- A member-led ritual — meetup, newsletter, study group — runs without staff
+- A member-led ritual (meetup, newsletter, study group) runs without staff
 - Moderation needs shrink as norms internalize
 - Product and engineering teams receive community-sourced insight regularly
 
@@ -134,8 +135,8 @@ flowchart TD
 - [[05_Community_Programs_and_Content]]: cadence that keeps the flywheel turning
 - [[06_Community_Health_and_Moderation]]: the safety layer that makes participation possible
 - [[career-path/03_Staff_Engineer/07_Organizational_Learning_and_Mentoring/03_Communities_of_Practice|Communities of Practice (Staff)]]: the internal parallel to external community building
-- [[07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]]: what a healthy community feeds the product
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]]: what a healthy community feeds the product
 
 ## Summary
 
-Community building is seeding and stewardship, not manufacturing: get the purpose sharp, seed small and personally, offer a visible ladder from lurking to leading, and watch for the ignition event when members begin helping each other. From that moment the advocate's job shifts from creating activity to protecting the conditions that let members create it — which is exactly what durable communities are made of.
+Community building is seeding and stewardship, not manufacturing: get the purpose sharp, seed small and personally, offer a visible ladder from lurking to leading, and watch for the ignition event when members begin helping each other. From that moment the advocate's job shifts from creating activity to protecting the conditions that let members create it, which is exactly what durable communities are made of.

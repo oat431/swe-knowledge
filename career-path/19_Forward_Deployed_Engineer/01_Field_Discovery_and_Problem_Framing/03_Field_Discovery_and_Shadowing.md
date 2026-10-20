@@ -16,15 +16,15 @@ tags:
 
 # Field Discovery and Shadowing
 
-> **Core skill:** Observing real work — shadowing users, mapping the workflow as it actually runs, and finding the pains worth solving before scoping anything.
+> **Core skill:** Observing real work: shadowing users, mapping the workflow as it actually runs, and finding the pains worth solving before scoping anything.
 
 ## Why This Matters
 
-Every request arrives with an implied process diagram, and almost none of those diagrams match the floor. The customer's stated workflow describes how work is supposed to happen; shadowing reveals how it actually happens — the workarounds, the double entry, the spreadsheet that has quietly become a system of record, the approvals that route around the official tool. In forward deployment, this gap between the documented process and the observed one is where the real problem usually lives.
+Every request arrives with an implied process diagram, and almost none of those diagrams match the floor. The customer's stated workflow describes how work is supposed to happen; shadowing reveals how it actually happens: the workarounds, the double entry, the spreadsheet that has quietly become a system of record, the approvals that route around the official tool. In forward deployment, this gap between the documented process and the observed one is where the real problem usually lives.
 
-Shadowing is also the FDE's cheapest form of risk reduction. A week spent watching three users do the work surfaces edge cases, data quality problems, and organizational friction that no requirements document will ever contain — before any solution design commits to assumptions. The cost of a shadowing hour is trivial compared to the cost of hardening a solution to a workflow that does not exist.
+Shadowing is also the FDE's cheapest form of risk reduction. A week spent watching three users do the work surfaces edge cases, data quality problems, and organizational friction that no requirements document will ever contain, before any solution design commits to assumptions. The cost of a shadowing hour is trivial compared to the cost of hardening a solution to a workflow that does not exist.
 
-There is a discipline to it, though. Done badly, shadowing becomes a series of interruptions, an interview conducted over someone's shoulder, or a tour of the happy path. Done well, it is silent, structured, and slightly uncomfortable — because the FDE's job is to see the work as it is, including the parts the team is not proud of, and to record what is seen rather than what was hoped for.
+There is a discipline to it, though. Done badly, shadowing becomes a series of interruptions, an interview conducted over someone's shoulder, or a tour of the happy path. Done well, it is silent, structured, and slightly uncomfortable, because the FDE's job is to see the work as it is, including the parts the team is not proud of, and to record what is seen rather than what was hoped for.
 
 ## Shadowing Done Right
 
@@ -51,6 +51,7 @@ One end-to-end walk-through of a single case is worth more than a week of meetin
 | Mark the friction | Every moment of copy, chase, retype, or reconcile | The pain inventory worth scoping |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     UNIT["Pick one unit of work"] --> TRACE["Trace it end to end"]
     TRACE --> EXCEPT["Follow the exceptions"]
@@ -86,7 +87,7 @@ The last step matters: present the friction map back to the people you shadowed.
 ### Shadowing Notes Template
 
 ```markdown
-## Shadowing Notes — <user, role, date>
+## Shadowing Notes: <user, role, date>
 
 | Field | Notes |
 |-------|-------|

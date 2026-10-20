@@ -17,13 +17,13 @@ tags:
 
 # Risk Identification in Architecture
 
-> **Core skill:** The architect detects structural risk before it becomes structural failure — sensitivity points where small changes cascade, trade-off points where improving one attribute degrades another, and risk themes that span multiple decisions.
+> **Core skill:** The architect detects structural risk before it becomes structural failure, sensitivity points where small changes cascade, trade-off points where improving one attribute degrades another, and risk themes that span multiple decisions.
 
 ## Why This Matters
 
-Architecture risk is not project risk. Project risk concerns budget, schedule, and staffing. Architecture risk concerns structural decisions that, if wrong, force a rewrite — not a schedule slip but a fundamental reorientation of the system. Detecting these risks during design costs hours; detecting them during implementation costs weeks; detecting them in production costs months and sometimes the system itself.
+Architecture risk is not project risk. Project risk concerns budget, schedule, and staffing. Architecture risk concerns structural decisions that, if wrong, force a rewrite, not a schedule slip but a fundamental reorientation of the system. Detecting these risks during design costs hours; detecting them during implementation costs weeks; detecting them in production costs months and sometimes the system itself.
 
-The architect's risk vocabulary is precise: sensitivity points (small changes with large effects), trade-off points (cross-attribute conflicts), and risk themes (patterns across multiple risks). This precision matters because vague risks — "the system might not scale" — are unactionable. Specific risks — "connection pool sizing at the API layer is a sensitivity point; pool exhaustion under 2x expected load causes cascading gateway failures" — are actionable.
+The architect's risk vocabulary is precise: sensitivity points (small changes with large effects), trade-off points (cross-attribute conflicts), and risk themes (patterns across multiple risks). This precision matters because vague risks ("the system might not scale") are unactionable. Specific risks ("connection pool sizing at the API layer is a sensitivity point; pool exhaustion under 2x expected load causes cascading gateway failures") are actionable.
 
 ## Sensitivity Points
 
@@ -41,7 +41,7 @@ A sensitivity point is an architectural element where a small change in one prop
 
 | Technique | How |
 |-----------|-----|
-| **Stress scenario walkthrough** | "What happens if this parameter is halved? Doubled?" — testing parameter sensitivity |
+| **Stress scenario walkthrough** | "What happens if this parameter is halved? Doubled?", testing parameter sensitivity |
 | **Dependency chain analysis** | Following effects through the architecture; where do they amplify? |
 | **Production incident postmortems** | Every incident reveals sensitivity points that were not documented |
 | **Load testing at parameter extremes** | Not just expected load but 0.5x and 2x on every tunable parameter |
@@ -74,7 +74,7 @@ A trade-off point is an architectural element where improving one quality attrib
 
 ## Risk Themes
 
-Risk themes are patterns that span multiple risks — indicating a systemic vulnerability rather than an isolated decision.
+Risk themes are patterns that span multiple risks, indicating a systemic vulnerability rather than an isolated decision.
 
 | Risk Theme | Signal | Systemic Implication |
 |-----------|--------|---------------------|
@@ -95,12 +95,13 @@ Risk themes are patterns that span multiple risks — indicating a systemic vuln
 | **Likelihood** | Medium (peak traffic has grown 30% YoY) |
 | **Impact** | High (customer-facing 5xx errors; revenue loss during peaks) |
 | **Mitigation** | Resize pool for 3x peak; add circuit breaker at gateway; add autoscaling trigger at 70% pool utilization |
-| **Owner** | Infrastructure team — assigned to Jane Chen |
+| **Owner** | Infrastructure team, assigned to Jane Chen |
 | **Review date** | 2026-11-01 |
 
 ## Risk Mitigation Strategies
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     RISK["Identified Risk"] --> AVOID["Avoid: Change the architecture to eliminate the risk"]
     RISK --> TRANSFER["Transfer: Move the risk to another system or team"]
@@ -137,7 +138,7 @@ flowchart TD
 
 - [ ] All known sensitivity points are documented with the parameter that drives them
 - [ ] All trade-off points are documented with both the improved and degraded attribute
-- [ ] Risks are checked for themes — do multiple risks share a root cause?
+- [ ] Risks are checked for themes: do multiple risks share a root cause?
 - [ ] Every risk has an owner, a mitigation strategy, and a review date
 - [ ] The risk register distinguishes architecture risk from project risk
 
@@ -145,9 +146,9 @@ flowchart TD
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
-| **Risks too vague to act on** | "System may not scale" — nobody knows what to do | Specific: "Connection pool at API gateway sized for 1.5x peak; at 2x peak, pool exhaustion" |
+| **Risks too vague to act on** | "System may not scale"; nobody knows what to do | Specific: "Connection pool at API gateway sized for 1.5x peak; at 2x peak, pool exhaustion" |
 | **Sensitivity points undocumented** | Team tunes parameters in production without knowing which ones are dangerous | Document every sensitivity point from evaluation; annotate config files |
-| **Trade-off points presented as win-win** | Architect claims decision improves performance AND consistency — hiding the real trade-off | Every trade-off point names what was degraded; if nothing is degraded, it is not a trade-off |
+| **Trade-off points presented as win-win** | Architect claims decision improves performance AND consistency, hiding the real trade-off | Every trade-off point names what was degraded; if nothing is degraded, it is not a trade-off |
 | **Risk themes ignored** | Each risk treated in isolation when three risks share the same root cause | Scan the risk register for themes; address root causes, not symptoms |
 | **Risk register as inventory** | Risks listed with no owners, no dates, no follow-up | Every risk has an owner and a review date; track closure |
 | **Architecture risk conflated with project risk** | Schedule risk, budget risk, and architecture risk in one undifferentiated list | Separate registers; architecture risk concerns structural decisions, not resource constraints |
@@ -165,9 +166,9 @@ flowchart TD
 - [[01_Architecture_Evaluation_Methods]]
 - [[03_Trade_Off_Analysis_Structured]]
 - [[05_Architecture_Anti_Patterns]]
-- [[02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]
+- [[career-path/06_Software_Architect/02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]
 - [[career-path/02_Senior_Software_Engineer/08_Engineering_Economics_and_Trade_Offs/06_Trade_Off_Evaluation|Trade Off Evaluation (Senior)]]
 
 ## Summary
 
-Architecture risk identification moves beyond vague concerns to precise structural vulnerabilities: sensitivity points where small parameter changes produce large effects, trade-off points where improving one attribute degrades another, and risk themes where multiple risks share a root cause. Every risk is documented with likelihood, impact, mitigation strategy, owner, and review date. The architect's standard is that no production incident should reveal a structural risk that was not already in the register — because if it was not documented, it was not evaluated.
+Architecture risk identification moves beyond vague concerns to precise structural vulnerabilities: sensitivity points where small parameter changes produce large effects, trade-off points where improving one attribute degrades another, and risk themes where multiple risks share a root cause. Every risk is documented with likelihood, impact, mitigation strategy, owner, and review date. The architect's standard is that no production incident should reveal a structural risk that was not already in the register, because if it was not documented, it was not evaluated.

@@ -16,33 +16,34 @@ tags:
 
 # Integration Sequencing
 
-> **Core skill:** Planning the order in which components and workstreams integrate — progressive, risk-first, with each integration milestone producing confidence that survives the next one — so that integration failures surface early, not at launch.
+> **Core skill:** Planning the order in which components and workstreams integrate (progressive, risk-first, with each integration milestone producing confidence that survives the next one) so that integration failures surface early, not at launch.
 
 ## Why This Matters
 
-Integration is where programs succeed or fail. Components that work perfectly in isolation fail at their first connection because assumptions did not match. The difference between a program that discovers this in month two — with time to adjust — and a program that discovers it in month eight — with a launch date next week — is integration sequencing.
+Integration is where programs succeed or fail. Components that work perfectly in isolation fail at their first connection because assumptions did not match. The difference between a program that discovers this in month two (with time to adjust) and a program that discovers it in month eight (with a launch date next week) is integration sequencing.
 
 The TPM does not design the integration. But the TPM designs the sequence: which components integrate first, in what order, and at what milestones. The sequence is the program's technical risk retirement plan. It puts the riskiest connections earliest, builds complexity progressively, and ensures that by the time the program reaches system-level integration, the components have already proven they can talk to each other in pairs and small groups.
 
 ## Progressive Integration Strategy
 
-Progressive integration is the opposite of big-bang integration. Components connect in increasing scope — pairs first, then subsystems, then the full system — so that each level of integration is built on the confidence earned at the previous level.
+Progressive integration is the opposite of big-bang integration. Components connect in increasing scope (pairs first, then subsystems, then the full system) so that each level of integration is built on the confidence earned at the previous level.
 
 | Level | What Integrates | Goal | Failure Surface |
 |-------|----------------|------|----------------|
-| **Component pair** | Two components that share an interface | Validate the interface contract works in both directions; find contract mismatches | One interface — failure is isolated and fast to debug |
-| **Workstream internal** | All components within one workstream | Validate that the workstream's internal architecture works end to end | One workstream — failure is contained within the workstream's ownership |
-| **Cross-workstream subsystem** | Two or three workstreams whose components form a coherent subsystem | Validate cross-workstream interfaces and data flow | A few interfaces — failure is scoped to a small group of workstreams |
-| **Full system** | All workstreams, all components | Validate the entire program's integration; find emergent behaviors at scale | Every interface — failure is expensive to debug and risks the program timeline |
-| **External integration** | The program's system with external systems not under program control | Validate external interfaces, SLAs, and failure modes | External interfaces — failure may be outside the program's ability to fix |
+| **Component pair** | Two components that share an interface | Validate the interface contract works in both directions; find contract mismatches | One interface: failure is isolated and fast to debug |
+| **Workstream internal** | All components within one workstream | Validate that the workstream's internal architecture works end to end | One workstream: failure is contained within the workstream's ownership |
+| **Cross-workstream subsystem** | Two or three workstreams whose components form a coherent subsystem | Validate cross-workstream interfaces and data flow | A few interfaces: failure is scoped to a small group of workstreams |
+| **Full system** | All workstreams, all components | Validate the entire program's integration; find emergent behaviors at scale | Every interface: failure is expensive to debug and risks the program timeline |
+| **External integration** | The program's system with external systems not under program control | Validate external interfaces, SLAs, and failure modes | External interfaces: failure may be outside the program's ability to fix |
 
-The TPM sequences the levels so that each one completes before the next begins. Pair integration starts while workstreams are still building; subsystem integration starts after pairs are stable; full system integration starts after subsystems are verified. The sequence is not a waterfall — pairs and subsystems overlap — but the dependency is enforced: no full system integration until subsystem integration passes.
+The TPM sequences the levels so that each one completes before the next begins. Pair integration starts while workstreams are still building; subsystem integration starts after pairs are stable; full system integration starts after subsystems are verified. The sequence is not a waterfall (pairs and subsystems overlap) but the dependency is enforced: no full system integration until subsystem integration passes.
 
 ## Integration Milestones
 
-Every integration level has a milestone. The milestone is not "integration started" — it is "integration passed," with defined pass criteria.
+Every integration level has a milestone. The milestone is not "integration started". It is "integration passed," with defined pass criteria.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PAIR["Component pair integration: validate interface contracts"] --> WS["Workstream internal integration: validate workstream architecture"]
     WS --> SUBSYSTEM["Cross-workstream subsystem integration: validate cross-workstream interfaces"]
@@ -60,7 +61,7 @@ flowchart TD
 | **External integration complete** | External interface tests pass; SLA verification complete; failure mode testing complete | TPM and external partner lead | Review test results; confirm external partner sign-off |
 | **Launch readiness** | All integration milestones passed; launch criteria met; rollback plan tested; monitoring in place | TPM, with steering committee approval | Present integration evidence to steering committee |
 
-Every integration milestone produces evidence — test results, contract verification, performance data — that the TPM reviews and archives. A milestone declared without evidence is not complete; the TPM rejects it and asks for the data.
+Every integration milestone produces evidence (test results, contract verification, performance data) that the TPM reviews and archives. A milestone declared without evidence is not complete; the TPM rejects it and asks for the data.
 
 ## Parallel vs Sequential Integration
 
@@ -74,7 +75,7 @@ Not all integration must be sequential. The TPM identifies which integration act
 | Non-functional testing (performance, security) on stable subsystems | Performance testing at full system scale depends on full system integration |
 | External integration with multiple external partners (if partners are independent) | External integration with a partner that depends on another partner's system |
 
-The TPM works with the architect to identify the dependency graph between integration activities and builds the schedule to maximize parallelism without violating dependency order. The goal is the shortest schedule that maintains progressive confidence — not the shortest possible schedule at the cost of skipping integration levels.
+The TPM works with the architect to identify the dependency graph between integration activities and builds the schedule to maximize parallelism without violating dependency order. The goal is the shortest schedule that maintains progressive confidence, not the shortest possible schedule at the cost of skipping integration levels.
 
 ## The Integration Schedule
 
@@ -130,18 +131,18 @@ The TPM publishes the integration schedule as a separate artifact from the progr
 
 ## Success Indicators
 
-- Integration failures at each level are expected and planned for — no one is surprised
+- Integration failures at each level are expected and planned for: no one is surprised
 - Interface contract mismatches are discovered at pair integration, not at full system integration
 - Every integration milestone is declared with evidence: test results, not verbal assurances
-- The integration schedule survives with adjustments, not abandonment — delays are absorbed in rollback windows
-- Full system integration finds no new interface contract issues — only emergent behaviors at scale
+- The integration schedule survives with adjustments, not abandonment. Delays are absorbed in rollback windows
+- Full system integration finds no new interface contract issues, only emergent behaviors at scale
 
 ## Related Topics
 
 - [[02_Understanding_System_Boundaries_and_Interfaces]]: the interface map that drives the integration sequence
 - [[04_Technical_Risk_Identification]]: the risks that integration sequencing retires earliest
 - [[07_Integration_Testing_and_Validation_Strategy]]: the test plan for each integration level
-- [[03_Dependency_Management/00_overview|Dependency Management]]: integration dependencies are the most critical program dependencies
+- [[career-path/12_Technical_Program_Manager/03_Dependency_Management/00_overview|Dependency Management]]: integration dependencies are the most critical program dependencies
 - [[career-path/06_Software_Architect/01_Architecture_Fundamentals/04_Architecture_Decision_Making|Architecture Decision Making (Architect)]]: the architecture decisions that define integration points
 
 ## Summary

@@ -61,6 +61,7 @@ For each boundary crossing, answer the same questions:
 Use the following flow when a team proposes a new interface or trust crossing:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     ASSET["Important asset or authority"] --> PATH["Reachable path"]
     PATH --> BOUNDARY["Trust or privilege change"]
@@ -110,7 +111,7 @@ Take one user journey and one administrative journey in a real system.
 - [[01_System_Context_and_Assets|System Context and Assets]]
 - [[02_Threat_Actor_Analysis|Threat Actor Analysis]]
 - [[04_STRIDE_and_Abuse_Cases|STRIDE and Abuse Cases]]
-- [[02_Secure_Architecture_and_Design/03_Zero_Trust_and_Segmentation|Zero Trust and Segmentation]]
+- [[career-path/08_Security_Engineer/02_Secure_Architecture_and_Design/03_Zero_Trust_and_Segmentation|Zero Trust and Segmentation]]
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]
 - [[body-of-knowledge/CyBOK/09_Software_Security|CyBOK Software Security]]
 - [Threat Model Template](F:\obsidian_note\document_template\14_Security/Threat-Model.md)

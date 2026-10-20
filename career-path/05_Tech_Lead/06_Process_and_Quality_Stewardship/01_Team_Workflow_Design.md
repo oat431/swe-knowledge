@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-A workflow is not a ceremony; it is the team's operating system for converting intent into shipped work. When it fits, work moves visibly, people know what to pick up next, and quality checks happen at natural points. When it does not fit, the team experiences pileups, thrash, and invisible work — and no amount of individual effort fixes a broken flow.
+A workflow is not a ceremony; it is the team's operating system for converting intent into shipped work. When it fits, work moves visibly, people know what to pick up next, and quality checks happen at natural points. When it does not fit, the team experiences pileups, thrash, and invisible work, and no amount of individual effort fixes a broken flow.
 
 The tech lead owns the team's workflow the way an architect owns the system: the default is not to switch frameworks, but to understand why the current one is straining, tune it, and change it deliberately only when the evidence says the context has changed. This note covers the main workflow options, how to diagnose dysfunction, and how to change the way of working without losing the team's trust.
 
@@ -33,7 +33,7 @@ The tech lead owns the team's workflow the way an architect owns the system: the
 | **Shape-up-like** | Six-week appetite cycles, no backlog during cycle, bet-based selection | Small senior teams shipping bold features; strong autonomy | The team is senior; the org tolerates no-backlog style |
 | **Continuous flow with milestones** | No iteration boundary; work ships when ready; milestones for coordination | Platform and infrastructure work, migration-heavy periods | Work varies wildly in size; dates matter more than sprints |
 
-The choice is rarely "the right methodology" — it is the least-wrong fit for the team's size, the work's shape, and the stakeholders' needs. A team can also run a hybrid: kanban for support flow inside a sprint rhythm for feature work.
+The choice is rarely "the right methodology". It is the least-wrong fit for the team's size, the work's shape, and the stakeholders' needs. A team can also run a hybrid: kanban for support flow inside a sprint rhythm for feature work.
 
 ## Choosing by Context
 
@@ -46,6 +46,7 @@ The choice is rarely "the right methodology" — it is the least-wrong fit for t
 | New team or many juniors | More structure, explicit definitions | Structure is scaffolding while norms are still being built |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     A["Observe how work actually flows"] --> B["Diagnose friction points"]
     B --> C["Tune the current workflow"]
@@ -70,16 +71,16 @@ flowchart TD
 
 ## Introducing Workflow Change Without Mutiny
 
-1. **Name the problem with data** — show the pileup graph or the thrash count before proposing anything.
-2. **Propose a small experiment, not a new religion** — "two weeks with a WIP limit of three" beats "we are now doing kanban."
-3. **Make the change reversible** — agree on the review date and the exit condition up front.
-4. **Change one variable at a time** — workflow plus roles plus tooling in one go makes the cause of improvement unknowable.
-5. **Let the team own the proposal** — the tech lead frames the trade-offs; the team chooses the option.
-6. **Celebrate the evidence** — when the experiment works, say what the numbers showed before and after.
+1. **Name the problem with data**: show the pileup graph or the thrash count before proposing anything.
+2. **Propose a small experiment, not a new religion**: "two weeks with a WIP limit of three" beats "we are now doing kanban."
+3. **Make the change reversible**: agree on the review date and the exit condition up front.
+4. **Change one variable at a time**: workflow plus roles plus tooling in one go makes the cause of improvement unknowable.
+5. **Let the team own the proposal**: the tech lead frames the trade-offs; the team chooses the option.
+6. **Celebrate the evidence**: when the experiment works, say what the numbers showed before and after.
 
 ## Working Agreements
 
-Explicit agreements are the workflow's constitution — the few rules the team holds each other to:
+Explicit agreements are the workflow's constitution, the few rules the team holds each other to:
 
 - **Pull policy:** who may pull work into the active column, and what must be true for it to be pullable.
 - **Definition of ready:** what a story needs before it enters active work (acceptance criteria, dependencies resolved).
@@ -95,7 +96,7 @@ Explicit agreements are the workflow's constitution — the few rules the team h
 | Increase | Regulatory or audit requirements | Sign-offs, evidence trails, change records |
 | Decrease | Team is senior and flow is smooth | Drop redundant ceremonies, raise trust, automate the checks |
 | Decrease | Ceremony time exceeds decision time | Cut meetings, merge roles, simplify the board |
-| Increase | Repeated escapes or miscommunication | Add the one checkpoint that would have caught it — nothing more |
+| Increase | Repeated escapes or miscommunication | Add the one checkpoint that would have caught it, nothing more |
 
 ## Workflow Metrics That Inform Tuning
 
@@ -160,16 +161,16 @@ Explicit agreements are the workflow's constitution — the few rules the team h
 - The team can name the current experiment and its review date
 - Cycle time and WIP are stable or improving over the quarter
 - New joiners learn the way of working within their first two weeks
-- The team changes the workflow when evidence says so — not when fashion does
+- The team changes the workflow when evidence says so, not when fashion does
 
 ## Related Topics
 
-- [[02_Definition_of_Done_and_Working_Agreements]] — the quality contract every work item must meet in the flow
-- [[06_Continuous_Improvement_Rhythm]] — the rhythm that tunes the workflow continuously
-- [[07_Scaling_Process_with_Team_Growth]] — how the workflow must change as the team grows
-- [[04_Team_Delivery_and_Execution_Leadership/00_overview|Delivery and Execution Leadership]] — the delivery loop this workflow exists to serve
-- [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]] — the adjacent role that owns process at the org level
+- [[02_Definition_of_Done_and_Working_Agreements]]: the quality contract every work item must meet in the flow
+- [[06_Continuous_Improvement_Rhythm]]: the rhythm that tunes the workflow continuously
+- [[07_Scaling_Process_with_Team_Growth]]: how the workflow must change as the team grows
+- [[career-path/05_Tech_Lead/04_Team_Delivery_and_Execution_Leadership/00_overview|Delivery and Execution Leadership]]: the delivery loop this workflow exists to serve
+- [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]: the adjacent role that owns process at the org level
 
 ## Summary
 
-Team workflow design is the tech lead's way of making good work habits structural: choose a workflow that fits the team's size, work shape, and stakeholders; watch the flow signals; diagnose dysfunction with data rather than opinion; and change the system through small, reversible, team-owned experiments. A workflow that fits is invisible — the team notices only when it stops fitting, and the lead's job is to notice before they do.
+Team workflow design is the tech lead's way of making good work habits structural: choose a workflow that fits the team's size, work shape, and stakeholders; watch the flow signals; diagnose dysfunction with data rather than opinion; and change the system through small, reversible, team-owned experiments. A workflow that fits is invisible: the team notices only when it stops fitting, and the lead's job is to notice before they do.

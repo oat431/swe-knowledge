@@ -16,13 +16,13 @@ tags:
 
 # Compliance and Regulatory Architecture
 
-> **Core skill:** The architect turns regulatory obligations into enterprise architecture requirements — maintaining a compliance matrix from regulation to obligation to shared control to evidence — so that compliance is designed once, satisfied consistently, and audited by lookup rather than archaeology.
+> **Core skill:** The architect turns regulatory obligations into enterprise architecture requirements (maintaining a compliance matrix from regulation to obligation to shared control to evidence) so that compliance is designed once, satisfied consistently, and audited by lookup rather than archaeology.
 
 ## Why This Matters
 
 Regulated enterprises do not choose whether compliance shapes their architecture; they choose only whether it shapes it deliberately. Obligations arrive as legal text but land as structural constraints: where data may reside, how long it may be kept, who may access it, what must be provable afterward, and how quickly incidents must be reported. An architect who treats these as paperwork discovers late that the estate's structure contradicts a regulation, and structure is the slowest thing to change.
 
-At enterprise scale the problem is not one regulation but many — overlapping regimes, shared controls, ambiguous clauses, and constant change. A per-project approach re-interprets the same law in every initiative and produces a landscape of inconsistent answers. An enterprise compliance matrix solves this once: obligations mapped to shared controls that many solutions consume, with interpretation decisions recorded where they can be reused.
+At enterprise scale the problem is not one regulation but many: overlapping regimes, shared controls, ambiguous clauses, and constant change. A per-project approach re-interprets the same law in every initiative and produces a landscape of inconsistent answers. An enterprise compliance matrix solves this once: obligations mapped to shared controls that many solutions consume, with interpretation decisions recorded where they can be reused.
 
 The architect is not the compliance owner. Legal and compliance functions interpret the regime; internal audit assures it. The architect's contribution is the translation layer in the middle: converting obligations into requirements, requirements into structure, and structure into evidence that comes from operations rather than from audit-time assembly.
 
@@ -51,7 +51,7 @@ The architect is not the compliance owner. Legal and compliance functions interp
 The matrix is the translation instrument. At enterprise scale it differs from a per-system view by naming shared controls explicitly, so the same control can be seen satisfying obligations from several regimes.
 
 ```markdown
-## Enterprise Compliance Matrix — <regulation set>
+## Enterprise Compliance Matrix: <regulation set>
 
 | Regulation | Obligation | Shared Control | Solution Control | Evidence | Owner | Status |
 |------------|-----------|----------------|------------------|----------|-------|--------|
@@ -62,6 +62,7 @@ The matrix is the translation instrument. At enterprise scale it differs from a 
 ## Regulatory Change as a Designed Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     OBLIGATIONS["Regulatory obligations"] --> MATRIX["Enterprise compliance matrix"]
     MATRIX["Enterprise compliance matrix"] --> DESIGN["Architecture requirements and shared controls"]
@@ -92,7 +93,7 @@ flowchart LR
 ### Regulatory Impact Assessment
 
 ```markdown
-## Regulatory Impact Assessment — <new or changed regulation>
+## Regulatory Impact Assessment: <new or changed regulation>
 
 | Question | Answer |
 |----------|--------|
@@ -132,4 +133,4 @@ flowchart LR
 
 ## Summary
 
-Compliance and regulatory architecture converts legal text into estate structure: obligations mapped in one matrix to shared and solution controls with named evidence, interpretations recorded once and reused, and regulatory change flowing through a designed loop back into requirements. The architect owns the translation, not the legal judgment — and the enterprise that builds it learns that audits become lookups, not emergencies.
+Compliance and regulatory architecture converts legal text into estate structure: obligations mapped in one matrix to shared and solution controls with named evidence, interpretations recorded once and reused, and regulatory change flowing through a designed loop back into requirements. The architect owns the translation, not the legal judgment, and the enterprise that builds it learns that audits become lookups, not emergencies.

@@ -16,17 +16,17 @@ tags:
 
 # Stakeholder Negotiation
 
-> **Core skill:** The TPM negotiates scope, timeline, and resources across stakeholder groups — not by splitting differences but by pricing trade-offs, framing options in shared criteria, and producing commitments that survive because both sides see their interest in the outcome.
+> **Core skill:** The TPM negotiates scope, timeline, and resources across stakeholder groups, not by splitting differences but by pricing trade-offs, framing options in shared criteria, and producing commitments that survive because both sides see their interest in the outcome.
 
 ## Why This Matters
 
-Every program negotiation is a trade-off conversation that nobody wants to have: engineering wants more time, product wants more scope, leadership wants less cost, and the TPM is the person who must broker an agreement among groups with genuinely different incentives. The TPM does not decide the trade-off — the TPM structures the conversation so that a decision can be made without anyone feeling ambushed, railroaded, or robbed.
+Every program negotiation is a trade-off conversation that nobody wants to have: engineering wants more time, product wants more scope, leadership wants less cost, and the TPM is the person who must broker an agreement among groups with genuinely different incentives. The TPM does not decide the trade-off; the TPM structures the conversation so that a decision can be made without anyone feeling ambushed, railroaded, or robbed.
 
-TPM negotiation is not positional bargaining — "I want 8 weeks, you want 6, let's split at 7." Splitting the difference produces a commitment nobody is satisfied with and nobody is accountable for. The TPM negotiates by pricing the trade-off: "If you want feature X, it costs 3 weeks. If you want the date, you must descope Y or Z. Which trade-off do you prefer?" The decision belongs to the stakeholders; the pricing belongs to the TPM.
+TPM negotiation is not positional bargaining: "I want 8 weeks, you want 6, let's split at 7." Splitting the difference produces a commitment nobody is satisfied with and nobody is accountable for. The TPM negotiates by pricing the trade-off: "If you want feature X, it costs 3 weeks. If you want the date, you must descope Y or Z. Which trade-off do you prefer?" The decision belongs to the stakeholders; the pricing belongs to the TPM.
 
 ## The TPM's Negotiation Stance
 
-The TPM negotiates from a specific stance — not as an advocate for any stakeholder group but as the neutral broker who makes trade-offs visible and decisions possible.
+The TPM negotiates from a specific stance: not as an advocate for any stakeholder group but as the neutral broker who makes trade-offs visible and decisions possible.
 
 | Stance | What It Means | What It Rejects |
 |--------|---------------|-----------------|
@@ -45,7 +45,7 @@ The TPM negotiates from a specific stance — not as an advocate for any stakeho
 
 The framework has four steps:
 
-1. **Define the constraint.** Which variable is fixed — scope, date, or resources? You cannot negotiate all three at once.
+1. **Define the constraint.** Which variable is fixed: scope, date, or resources? You cannot negotiate all three at once.
 2. **Price the options.** "Adding feature X costs Y weeks. Descoping feature Z saves Y weeks. Adding two engineers accelerates by W weeks."
 3. **Establish criteria.** "We are deciding between scope and date. The criteria: customer commitment Q, revenue impact R, engineering cost S."
 4. **Force the choice.** "Given the criteria, which trade-off do you choose? The choice is yours; the consequences are priced."
@@ -74,7 +74,7 @@ When the negotiation involves multiple stakeholder groups with conflicting inter
 | 4. Decision forum | Stakeholders meet, discuss options against criteria, decide | A recorded decision with rationale and dissent |
 | 5. Commitment recording | The decision, trade-offs, and conditions are written and distributed | A commitment artifact that survives the meeting |
 
-The criteria workshop is the step most TPMs skip — and the step that prevents the negotiation from becoming a series of bilateral deals where engineering gives product extra scope on Monday and operations extracts extra time on Tuesday, and neither knows about the other's deal.
+The criteria workshop is the step most TPMs skip, and the step that prevents the negotiation from becoming a series of bilateral deals where engineering gives product extra scope on Monday and operations extracts extra time on Tuesday, and neither knows about the other's deal.
 
 ## When Negotiation Fails
 
@@ -88,6 +88,7 @@ Some negotiations do not produce agreement. The TPM has a defined escalation pat
 | Bad-faith negotiation | One side is negotiating to delay, not to agree | Name the pattern with the sponsor; set a decision deadline; escalate if missed |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     TRIGGER["Scope, timeline, or resource change triggers negotiation"] --> BASELINE["Publish shared baseline: current state, constraints"]
     BASELINE --> CRITERIA["Agree decision criteria across stakeholders"]
@@ -103,10 +104,10 @@ flowchart TD
 ### Negotiation Brief Template
 
 ```markdown
-# Negotiation Brief — [Topic] — [Date]
+# Negotiation Brief: [Topic], [Date]
 
 ## The Situation
-- Constraint: [scope / date / resources — which is fixed?]
+- Constraint: [scope / date / resources, which is fixed?]
 - Stakeholders: [who, with what interest]
 
 ## Shared Baseline
@@ -137,7 +138,7 @@ flowchart TD
 
 ### Stakeholder Negotiation Checklist
 
-- [ ] The constraint is defined: which variable is fixed — scope, date, or resources?
+- [ ] The constraint is defined: which variable is fixed, scope, date, or resources?
 - [ ] All affected stakeholders are at the table before negotiation begins
 - [ ] Decision criteria are agreed before options are discussed
 - [ ] Every option is priced: cost, benefit, risk
@@ -161,14 +162,14 @@ flowchart TD
 - Commitments from negotiations survive execution without re-litigation
 - No stakeholder group claims they were excluded from a trade-off that affects them
 - Deadlocks are escalated with priced options, not complaints
-- Bilateral deals are invisible — all trade-offs are surfaced in the program status
+- Bilateral deals are invisible: all trade-offs are surfaced in the program status
 
 ## Related Topics
 
 - [[04_Managing_Stakeholder_Expectations]]: negotiation is how expectation gaps are resolved
 - [[06_Stakeholder_Conflict_Resolution]]: when negotiation becomes conflict resolution
 - [[03_Executive_Communication_for_TPMs]]: escalating negotiation deadlocks to executives
-- [[06_Decision_Facilitation/02_Decision_Framing|Decision Framing]]: the option-pricing discipline
+- [[career-path/12_Technical_Program_Manager/06_Decision_Facilitation/02_Decision_Framing|Decision Framing]]: the option-pricing discipline
 - [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/02_Pre_Alignment_and_Coalitions|Pre-Alignment and Coalitions (Staff)]]: building support before the negotiation forum
 
 ## Summary

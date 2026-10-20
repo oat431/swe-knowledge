@@ -16,15 +16,15 @@ tags:
 
 # Security and Privacy Basics
 
-> **Core skill:** The independent applies proportionate, real security — access control, encryption, backups, dependency hygiene, and data minimization — because a single incident can end a one person business in a way it could never end a department.
+> **Core skill:** The independent applies proportionate, real security (access control, encryption, backups, dependency hygiene, and data minimization), because a single incident can end a one person business in a way it could never end a department.
 
 ## Why This Matters
 
-Security for an independent is asymmetric: the effort of prevention is moderate and boring, while the cost of a single incident is existential. There is no security team to catch mistakes, no legal department to absorb a breach, and no employer brand to hide behind while a client's data is exposed. A leaked database or a compromised account does not just end one engagement; it ends the reputation that all future engagements depend on. The point of the security baseline is not to pass an audit — it is to make sure no single bad day becomes a business ending event.
+Security for an independent is asymmetric: the effort of prevention is moderate and boring, while the cost of a single incident is existential. There is no security team to catch mistakes, no legal department to absorb a breach, and no employer brand to hide behind while a client's data is exposed. A leaked database or a compromised account does not just end one engagement; it ends the reputation that all future engagements depend on. The point of the security baseline is not to pass an audit. It is to make sure no single bad day becomes a business ending event.
 
 Proportionality is the guiding principle. Most independent work does not need the controls of a bank; it needs the fundamentals done consistently: strong unique credentials with multi factor authentication, least privilege access, encryption in transit and at rest through managed defaults, backups that are actually tested, dependencies that get patched, and data that is collected only when there is a reason. These are conventions and habits more than technologies, and they are achievable by one person with a modest time budget.
 
-Privacy adds a second obligation: not just protecting data, but handling it lawfully and only as agreed. Client data arrives with contractual promises and, depending on jurisdiction and industry, with legal duties attached. The independent needs to know what they hold, why, where it lives, how long it stays, and who can touch it — and must be able to answer those questions to a client's due diligence without improvisation. Where local law specifics matter, qualified local advice — a lawyer or privacy professional — is part of the baseline, not a luxury.
+Privacy adds a second obligation: not just protecting data, but handling it lawfully and only as agreed. Client data arrives with contractual promises and, depending on jurisdiction and industry, with legal duties attached. The independent needs to know what they hold, why, where it lives, how long it stays, and who can touch it, and must be able to answer those questions to a client's due diligence without improvisation. Where local law specifics matter, qualified local advice (a lawyer or privacy professional) is part of the baseline, not a luxury.
 
 ## The Solo Security Baseline
 
@@ -62,6 +62,7 @@ Privacy adds a second obligation: not just protecting data, but handling it lawf
 ## The Security Baseline Stack
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DATA["Inventory what data you hold and where"] --> MINIMIZE["Minimize collection and retention"]
     MINIMIZE --> PROTECT["Protect with access control, encryption, and backups"]
@@ -80,7 +81,7 @@ Each layer is cheap alone; together they remove the single points of failure tha
 - [ ] Access is least privilege, per person and per client, with no shared credentials
 - [ ] Backups run automatically and a restore has been tested recently
 - [ ] Dependency and platform updates are applied on a documented rhythm
-- [ ] Client obligations — confidentiality, privacy terms, breach notification — are known and reflected in practice
+- [ ] Client obligations (confidentiality, privacy terms, breach notification) are known and reflected in practice
 
 ## Common Pitfalls
 
@@ -99,7 +100,7 @@ Each layer is cheap alone; together they remove the single points of failure tha
 - Every engagement can answer what data is held, where, and for how long
 - Restores from backup have been tested within the last quarter
 - Clients pass due diligence questions without scrambling
-- Security habits cost a small, steady slice of time — not emergency sprints
+- Security habits cost a small, steady slice of time, not emergency sprints
 
 ## Related Topics
 
@@ -107,8 +108,8 @@ Each layer is cheap alone; together they remove the single points of failure tha
 - [[05_Cost_Aware_Infrastructure]]
 - [[07_Maintaining_Systems_You_Sold]]
 - [[career-path/08_Security_Engineer/00_overview|Security Engineer]]
-- [[07_Governance_Risk_and_Continuity/00_overview|Governance Risk and Continuity]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/07_Governance_Risk_and_Continuity/00_overview|Governance Risk and Continuity]]
 
 ## Summary
 
-Security and privacy basics for independents are the fundamentals done consistently: identity and access discipline, encryption by default, tested backups, patched dependencies, data minimization, and a written response plan for the day something goes wrong. Proportionate and unglamorous, they exist for one reason — to ensure that no single incident can end a business that depends entirely on trust.
+Security and privacy basics for independents are the fundamentals done consistently: identity and access discipline, encryption by default, tested backups, patched dependencies, data minimization, and a written response plan for the day something goes wrong. Proportionate and unglamorous, they exist for one reason: to ensure that no single incident can end a business that depends entirely on trust.

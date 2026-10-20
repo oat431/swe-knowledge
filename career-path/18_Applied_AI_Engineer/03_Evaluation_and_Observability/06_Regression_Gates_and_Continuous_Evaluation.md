@@ -16,7 +16,7 @@ tags:
 
 # Regression Gates and Continuous Evaluation
 
-> Wiring the eval suite into CI and scheduled pipelines so no prompt, model, or pipeline change ships without measured quality — and no drift goes unmeasured.
+> Wiring the eval suite into CI and scheduled pipelines so no prompt, model, or pipeline change ships without measured quality, and no drift goes unmeasured.
 
 ## Why This Is a Senior Skill
 
@@ -54,7 +54,7 @@ The senior challenge is economics and trust: judge-based gates cost real money p
 | LangSmith | Traces + evals in one platform, CI hooks | LangChain stacks |
 | Langfuse | Open-source tracing with eval API, self-hostable CI runners | Cost-sensitive, self-hosting teams |
 
-As elsewhere: the capability is the gate — stage structure, delta comparison, budget, and runbook. The tools are interchangeable examples.
+As elsewhere: the capability is the gate (stage structure, delta comparison, budget, and runbook). The tools are interchangeable examples.
 
 ### Gate Anti-Patterns
 
@@ -72,13 +72,13 @@ As elsewhere: the capability is the gate — stage structure, delta comparison, 
 
 **Split the suite into speed tiers for CI.** Deterministic checks run in seconds on every PR; the full LLM-judge suite runs on merge or on demand; humans review sampled judge disagreements. A gate that takes 45 minutes and $40 per PR will be bypassed; a gate that takes 90 seconds and $0.50 will not.
 
-**Version the suite alongside the code and review changes to it.** A failing test is sometimes a wrong test. Suite changes — thresholds, rubrics, case removal — go through the same review as production code, with the same requirement: explain why the measurement changed.
+**Version the suite alongside the code and review changes to it.** A failing test is sometimes a wrong test. Suite changes (thresholds, rubrics, case removal) go through the same review as production code, with the same requirement: explain why the measurement changed.
 
-**Automate provider and model update evaluation.** When the API provider ships a new model version or the team swaps models, scheduled continuous evaluation against a frozen sample set detects the behavior change within one cycle — before users have found it. Model upgrades become routine gated changes instead of leap-of-faith migrations.
+**Automate provider and model update evaluation.** When the API provider ships a new model version or the team swaps models, scheduled continuous evaluation against a frozen sample set detects the behavior change within one cycle, before users have found it. Model upgrades become routine gated changes instead of leap-of-faith migrations.
 
 **Budget evaluation like production infrastructure.** Compute the per-run cost of the judged suite and cap monthly spend; sample long-tail strata rather than cutting them; cache judge outputs keyed by input + rubric + judge version. The gate survives only if it stays boring and affordable.
 
-**Run gates on every PR or they stop being gates.** The first time a team merges "around" the eval gate because it was slow or noisy, the gate is dead. Keep runtime and cost low, keep the failure output actionable — per-stratum deltas and example failures — and keep the runbook for failing gates one page long.
+**Run gates on every PR or they stop being gates.** The first time a team merges "around" the eval gate because it was slow or noisy, the gate is dead. Keep runtime and cost low, keep the failure output actionable (per-stratum deltas and example failures) and keep the runbook for failing gates one page long.
 
 ## Practical Exercise
 
@@ -93,7 +93,7 @@ Turn an existing eval suite into a release gate:
 
 ## Knowledge Connections
 
-- [[computing-foundation-note/Artificial_Intelligence/13_LLM_Evaluation_and_Guardrails]]: "run on every PR; don't let quality degrade" — the mandate this topic implements
+- [[computing-foundation-note/Artificial_Intelligence/13_LLM_Evaluation_and_Guardrails]]: "run on every PR; don't let quality degrade", the mandate this topic implements
 - [[computing-foundation-note/Artificial_Intelligence/12_AI_ROI_and_Roadmap]]: regression safety as an ROI claim
 - [[02_Offline_Evaluation_Suites]] and [[03_Metrics_for_LLM_Outputs]]: the machinery the gate runs
 - [[05_Online_Evaluation_and_Monitoring]]: the fresh samples continuous eval consumes

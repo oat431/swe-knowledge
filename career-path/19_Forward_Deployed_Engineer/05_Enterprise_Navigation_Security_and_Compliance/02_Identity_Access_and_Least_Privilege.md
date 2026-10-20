@@ -16,15 +16,15 @@ tags:
 
 # Identity Access and Least Privilege
 
-> **Core skill:** Designing access that security can approve and users can live with — scoped to need, time-bound by default, reviewable on the customer's schedule, and mapped onto their identity systems rather than reinvented beside them.
+> **Core skill:** Designing access that security can approve and users can live with: scoped to need, time-bound by default, reviewable on the customer's schedule, and mapped onto their identity systems rather than reinvented beside them.
 
 ## Why This Matters
 
 Access is the first thing a deployment requests and the last thing anyone cleans up. Every integration needs credentials: service accounts that call the customer's systems, roles that let users see what they should, administrative paths for operations. How you ask for that access is read by the customer as a preview of how you will treat their entire environment. A request that is scoped, justified, and time-bound says the FDE understands the stakes; a request for administrator rights "to save time" says the opposite, and it will be remembered at the next review.
 
-There are two classic failure modes and both are expensive. Too much access — standing admin accounts, wildcard scopes, permanent credentials — slows approval, widens the blast radius of any mistake, and fails the customer's periodic access reviews, which forces a painful cleanup mid-deployment. Too little access, or access designed without knowing how the work actually happens, produces a deployment that cannot operate; teams then quietly share credentials or work around the model, which is worse than the original problem. The design target is least privilege that is still operable: defined roles, time-boxed elevation for the exceptional steps, and a clear runbook of what the system needs and why.
+There are two classic failure modes and both are expensive. Too much access (standing admin accounts, wildcard scopes, permanent credentials) slows approval, widens the blast radius of any mistake, and fails the customer's periodic access reviews, which forces a painful cleanup mid-deployment. Too little access, or access designed without knowing how the work actually happens, produces a deployment that cannot operate; teams then quietly share credentials or work around the model, which is worse than the original problem. The design target is least privilege that is still operable: defined roles, time-boxed elevation for the exceptional steps, and a clear runbook of what the system needs and why.
 
-The customer's identity systems are where access must land. Their single sign-on, their group model, their joiner-mover-leaver process, their privileged access tooling — access designed with those mechanisms in mind is approved faster and survives reviews; access invented beside them becomes orphaned accounts and standing exceptions. In AI deployments the same discipline extends to the model's reach: whose data the system can retrieve, whose prompts are logged, and which outputs are attributable to which user are all access questions in disguise.
+The customer's identity systems are where access must land. Their single sign-on, their group model, their joiner-mover-leaver process, their privileged access tooling. Access designed with those mechanisms in mind is approved faster and survives reviews; access invented beside them becomes orphaned accounts and standing exceptions. In AI deployments the same discipline extends to the model's reach: whose data the system can retrieve, whose prompts are logged, and which outputs are attributable to which user are all access questions in disguise.
 
 ## Designing Access People Can Approve
 
@@ -50,6 +50,7 @@ The customer's identity systems are where access must land. Their single sign-on
 ## The Access Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     DESIGN["Design roles from the work"] --> JUSTIFY["Justify each scope in writing"]
     JUSTIFY --> REQUEST["Request through the customer process"]
@@ -58,7 +59,7 @@ flowchart LR
     OPERATE --> REVIEW["Review and revoke on schedule"]
 ```
 
-Each stage has a guardrail the FDE controls. In design, the guardrail is separation of duties — the account that deploys is not the account that approves. In operation, it is that no shared credentials exist and that elevated actions are logged where the customer can see them. In review, it is that accounts tied to a finished phase are revoked on schedule, not left "in case we need them." The deployment that leaves no orphaned accounts behind is the one invited back for the next phase.
+Each stage has a guardrail the FDE controls. In design, the guardrail is separation of duties: the account that deploys is not the account that approves. In operation, it is that no shared credentials exist and that elevated actions are logged where the customer can see them. In review, it is that accounts tied to a finished phase are revoked on schedule, not left "in case we need them." The deployment that leaves no orphaned accounts behind is the one invited back for the next phase.
 
 ## Practical Applications
 
@@ -75,7 +76,7 @@ Each stage has a guardrail the FDE controls. In design, the guardrail is separat
 ### Access Request Template
 
 ```markdown
-## Access Request — <system, deployment, date>
+## Access Request: <system, deployment, date>
 
 | Field | Detail |
 |-------|--------|
@@ -117,4 +118,4 @@ Each stage has a guardrail the FDE controls. In design, the guardrail is separat
 
 ## Summary
 
-Identity, access, and least privilege are how the FDE earns the right to touch customer systems: design roles from the real work, justify every scope in writing, run requests through the customer's own identity machinery, provision with expiry, operate with logged elevation, and revoke on schedule. Access that security can approve and users can live with is not a compromise between the two — it is the discipline that makes both true at once, deployment after deployment.
+Identity, access, and least privilege are how the FDE earns the right to touch customer systems: design roles from the real work, justify every scope in writing, run requests through the customer's own identity machinery, provision with expiry, operate with logged elevation, and revoke on schedule. Access that security can approve and users can live with is not a compromise between the two. It is the discipline that makes both true at once, deployment after deployment.

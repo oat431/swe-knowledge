@@ -82,7 +82,7 @@ tags:
 |---|---|---|
 | 01 Technical Communication | ✅ Strong (ethics note) | Add AI-generated content ethics |
 | 02 Documentation & Learning Materials | ✅ Strong | Credit Diátaxis; add docs-as-code and docs for agents |
-| 03 Facilitation & Enablement | ✅ Strong (curriculum design) | — |
+| 03 Facilitation & Enablement | ✅ Strong (curriculum design) | N/A |
 | 04 Customer & Developer Understanding | ✅ Excellent (support-signal archaeology) | Boundary with PM discovery |
 | 05 Solution Guidance | ✅ Good | Add engagement mechanics; boundary with FDE |
 | 06 Community & Ecosystem | ✅ Strong (moderation, impact) | Add team sustainability |

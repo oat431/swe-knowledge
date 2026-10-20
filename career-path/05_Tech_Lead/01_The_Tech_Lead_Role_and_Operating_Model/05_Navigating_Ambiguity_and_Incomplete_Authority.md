@@ -16,13 +16,13 @@ tags:
 
 # Navigating Ambiguity and Incomplete Authority
 
-> **Core skill:** Making progress on cross-team and platform problems when you do not control the decision — through framing, evidence, and proposal quality rather than positional power.
+> **Core skill:** Making progress on cross-team and platform problems when you do not control the decision, through framing, evidence, and proposal quality rather than positional power.
 
 ## Why This Matters
 
-A large share of tech lead work happens in the spaces between teams: shared platforms, interface changes, security and reliability initiatives, architectural migrations that touch multiple owners. In those spaces your authority is incomplete by design — the decision belongs to other teams, other leads, or a committee. Progress depends on influence, and influence depends on how you frame the problem and how good your proposal is.
+A large share of tech lead work happens in the spaces between teams: shared platforms, interface changes, security and reliability initiatives, architectural migrations that touch multiple owners. In those spaces your authority is incomplete by design. The decision belongs to other teams, other leads, or a committee. Progress depends on influence, and influence depends on how you frame the problem and how good your proposal is.
 
-The senior-level skill of leading without authority becomes sharper at tech lead level for one reason: the stakes are higher. A cross-team decision you fail to align can cost a quarter of platform work or produce an integration incident. The difference between a lead who navigates this well and one who does not is rarely technical — it is how they make it easy for others to say yes.
+The senior-level skill of leading without authority becomes sharper at tech lead level for one reason: the stakes are higher. A cross-team decision you fail to align can cost a quarter of platform work or produce an integration incident. The difference between a lead who navigates this well and one who does not is rarely technical. It is how they make it easy for others to say yes.
 
 ## Where Your Authority Ends
 
@@ -53,14 +53,14 @@ None of these require authority. All of them require you to be visibly useful be
 
 ## Distributed Authority
 
-In distributed-authority situations nobody can decide alone — the security lead, the platform lead, and you all hold pieces. The practical moves:
+In distributed-authority situations nobody can decide alone. The security lead, the platform lead, and you all hold pieces. The practical moves:
 
 - Get the decision process written down: who must agree, who can block, who arbitrates
 - Make the decision criteria explicit before positions harden
 - Convert the conversation from preferences to evidence: what must be true for each option
 - Record the outcome and the reasoning even when the decision is a compromise
 
-A distributed decision without a recorded process will be relitigated. With one, it holds — because everyone can see how it was reached.
+A distributed decision without a recorded process will be relitigated. With one, it holds, because everyone can see how it was reached.
 
 ## Proposals That Create Alignment
 
@@ -104,6 +104,7 @@ Escalation is not failure; it is a designed part of the process. The rules that 
 | Escalate to the shared manager | The person above both teams, not your own manager alone |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     FRAME["Frame the problem in outcomes"] --> PROPOSE["Write proposal with options"]
     PROPOSE --> ALIGN["Align stakeholders one by one"]
@@ -120,7 +121,7 @@ Checklist for any cross-team initiative:
 
 - [ ] Map who owns the decision and who can block it
 - [ ] Write the proposal: problem, options with trade-offs, recommendation
-- [ ] Share it with key stakeholders before any meeting — no surprises
+- [ ] Share it with key stakeholders before any meeting, no surprises
 - [ ] Get the decision process and criteria written down
 - [ ] Follow up on commitments until the loop closes
 - [ ] Record the outcome and reasoning for future reference
@@ -143,14 +144,14 @@ Checklist for any cross-team initiative:
 - Stakeholders describe your proposals as clear and easy to react to
 - You can name the decision map for your current initiative without hesitation
 - Escalations you raise get decisions, not pushback on process
-- Other teams bring you into their early discussions — proof your influence is an asset
+- Other teams bring you into their early discussions, proof your influence is an asset
 
 ## Related Topics
 
 - [[06_Working_With_Stakeholders]]: the same framing discipline applied to representation
 - [[04_Tech_Lead_Scope_and_System_Boundaries]]: boundaries define where authority ends and influence begins
 - [[career-path/02_Senior_Software_Engineer/07_Mentoring_and_Team_Leadership/07_Leading_Without_Authority|Leading Without Authority (Senior)]]: the senior-level foundation this extends
-- [[03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture]]: most cross-team proposals are direction decisions
+- [[career-path/05_Tech_Lead/03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture]]: most cross-team proposals are direction decisions
 
 ## Summary
 

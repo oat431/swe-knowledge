@@ -16,13 +16,13 @@ tags:
 
 # Outcome Definition and Success Criteria
 
-> **Core skill:** Defining program outcomes as changed states — not activities, not outputs — with measurable success criteria that create alignment across stakeholders and give the program a finish line.
+> **Core skill:** Defining program outcomes as changed states (not activities, not outputs) with measurable success criteria that create alignment across stakeholders and give the program a finish line.
 
 ## Why This Matters
 
-Programs are funded to change something: a metric moves, a user behavior shifts, a cost drops, a risk is retired. But most program documents describe what will be built, not what will be different when it is built. When success is defined as launch, the program succeeds the moment something ships — regardless of whether anything actually improved. That is how organizations spend millions and wonder why nothing changed.
+Programs are funded to change something: a metric moves, a user behavior shifts, a cost drops, a risk is retired. But most program documents describe what will be built, not what will be different when it is built. When success is defined as launch, the program succeeds the moment something ships, regardless of whether anything actually improved. That is how organizations spend millions and wonder why nothing changed.
 
-The TPM's outcome definition work is the program's steering mechanism. A well-defined outcome tells every workstream what good looks like, allows stakeholders to align on a shared definition of success, and creates a finish line that the program crosses — or does not cross — honestly. Without it, the program is a collection of projects that may or may not add up to anything.
+The TPM's outcome definition work is the program's steering mechanism. A well-defined outcome tells every workstream what good looks like, allows stakeholders to align on a shared definition of success, and creates a finish line that the program crosses (or does not cross) honestly. Without it, the program is a collection of projects that may or may not add up to anything.
 
 ## Outcome vs Output vs Benefit
 
@@ -30,11 +30,11 @@ The distinction is not semantic. Confusing these three is how programs claim suc
 
 | Term | Definition | Example | Measured By |
 |------|------------|---------|-------------|
-| **Output** | What the program produces — a system, a feature, a document, a process change | A new payment platform is deployed to production | Delivery metrics: on time, on budget, meets spec |
-| **Outcome** | The changed state the output enables — what is different for users, the business, or the system | Checkout abandonment drops from 42 percent to 28 percent | Business or user metrics measured before and after |
-| **Benefit** | The value the outcome creates — revenue, cost savings, risk reduction, strategic position | Annual revenue increase of 4.2 million from recovered abandoned carts | Financial or strategic impact, often measured post-program |
+| **Output** | What the program produces: a system, a feature, a document, a process change | A new payment platform is deployed to production | Delivery metrics: on time, on budget, meets spec |
+| **Outcome** | The changed state the output enables: what is different for users, the business, or the system | Checkout abandonment drops from 42 percent to 28 percent | Business or user metrics measured before and after |
+| **Benefit** | The value the outcome creates: revenue, cost savings, risk reduction, strategic position | Annual revenue increase of 4.2 million from recovered abandoned carts | Financial or strategic impact, often measured post-program |
 
-Outputs are the program's deliverable. Outcomes are the program's success. Benefits are why the program was funded. The TPM defines outcomes at charter time, tracks outputs during execution, and ensures benefits measurement is designed into the program — even if measurement extends past the program's close.
+Outputs are the program's deliverable. Outcomes are the program's success. Benefits are why the program was funded. The TPM defines outcomes at charter time, tracks outputs during execution, and ensures benefits measurement is designed into the program, even if measurement extends past the program's close.
 
 ## SMART Criteria at Program Scale
 
@@ -52,9 +52,10 @@ Program outcomes often require multiple measurement points: an immediate post-la
 
 ## Stakeholder Alignment on Outcomes
 
-Different stakeholders want different outcomes from the same program. The TPM's job is to surface those differences early — before workstreams build toward conflicting definitions of success.
+Different stakeholders want different outcomes from the same program. The TPM's job is to surface those differences early, before workstreams build toward conflicting definitions of success.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DISCOVER["Discover stakeholder success definitions"] --> MAP["Map conflicts and overlaps"]
     MAP --> ALIGN["Align on a single outcome statement"]
@@ -71,11 +72,11 @@ flowchart TD
 | **Operations** | Reliability, support burden, incident rate | Build operational outcomes into the success criteria from the start |
 | **Compliance/Legal** | Risk reduction, audit readiness, regulatory compliance | Make compliance outcomes measurable, not binary-pass-fail at the end |
 
-The alignment session is a working meeting — not a presentation. The TPM brings a draft outcome statement, walks the room through each stakeholder's version of success, maps the overlaps and conflicts, and drives toward a single outcome statement everyone can commit to. Statements that cannot be reconciled become explicit trade-offs: "we are optimizing for adoption in the first quarter, with reliability targets relaxing by 0.5 nines until Q2."
+The alignment session is a working meeting, not a presentation. The TPM brings a draft outcome statement, walks the room through each stakeholder's version of success, maps the overlaps and conflicts, and drives toward a single outcome statement everyone can commit to. Statements that cannot be reconciled become explicit trade-offs: "we are optimizing for adoption in the first quarter, with reliability targets relaxing by 0.5 nines until Q2."
 
 ## The Outcomes Review Cadence
 
-Outcomes are not measured once at the end. The TPM builds a review cadence that checks whether the program is still on track to achieve its outcomes — and whether the outcomes themselves are still the right ones.
+Outcomes are not measured once at the end. The TPM builds a review cadence that checks whether the program is still on track to achieve its outcomes, and whether the outcomes themselves are still the right ones.
 
 | Review | Frequency | Purpose | What Gets Examined |
 |--------|-----------|---------|-------------------|
@@ -83,11 +84,11 @@ Outcomes are not measured once at the end. The TPM builds a review cadence that 
 | **Outcome gate review** | At major milestones | Does the current trajectory support the outcome? Go/no-go on program continuation | Full outcome measurement against baseline, risk to outcome achievement |
 | **Outcome redefinition** | On trigger | Has the outcome become irrelevant or unachievable? | Sponsor direction change, external market shift, resource loss that makes the outcome impossible |
 
-The TPM runs outcome health checks as part of the program review cadence. A health check that shows leading indicators moving the wrong way triggers a deeper investigation — not a program pause, but a signal that the program's theory of change may be wrong. Gate reviews are decision points: continue, adjust scope, or stop. The sponsor owns the gate decision; the TPM owns the evidence that informs it.
+The TPM runs outcome health checks as part of the program review cadence. A health check that shows leading indicators moving the wrong way triggers a deeper investigation, not a program pause, but a signal that the program's theory of change may be wrong. Gate reviews are decision points: continue, adjust scope, or stop. The sponsor owns the gate decision; the TPM owns the evidence that informs it.
 
 ## Leading vs Lagging Indicators
 
-Program outcomes are lagging — they materialize after the work is done. The TPM defines leading indicators that predict whether the outcome is on track while there is still time to adjust.
+Program outcomes are lagging. They materialize after the work is done. The TPM defines leading indicators that predict whether the outcome is on track while there is still time to adjust.
 
 | Outcome (Lagging) | Leading Indicator | Measurement Frequency | Action if Off Track |
 |--------------------|-------------------|-----------------------|---------------------|
@@ -151,10 +152,10 @@ Leading indicators are the TPM's early-warning system. Every program outcome sho
 
 - [[01_Program_Charter]]: the outcome is the charter's centerpiece
 - [[04_Milestone_Planning]]: milestones are checkpoints on the path to the outcome
-- [[07_Benefits_and_Outcome_Measurement/00_overview|Benefits and Outcome Measurement]]: measuring benefits after the program closes
-- [[05_Stakeholder_Alignment/00_overview|Stakeholder Alignment]]: the alignment work that makes outcomes shared
+- [[career-path/12_Technical_Program_Manager/07_Benefits_and_Outcome_Measurement/00_overview|Benefits and Outcome Measurement]]: measuring benefits after the program closes
+- [[career-path/12_Technical_Program_Manager/05_Stakeholder_Alignment/00_overview|Stakeholder Alignment]]: the alignment work that makes outcomes shared
 - [[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]]: the benefits-realization discipline PMs bring
 
 ## Summary
 
-Outcome definition is the TPM's steering wheel: define success as the changed state the program exists to create, measure it with SMART criteria adapted to program scale, align stakeholders on a single definition before workstreams begin, and build a review cadence that checks trajectory — not just at the end but continuously. A program with a clear outcome knows when it is done; a program without one never finishes, it just stops.
+Outcome definition is the TPM's steering wheel: define success as the changed state the program exists to create, measure it with SMART criteria adapted to program scale, align stakeholders on a single definition before workstreams begin, and build a review cadence that checks trajectory, not just at the end but continuously. A program with a clear outcome knows when it is done; a program without one never finishes, it just stops.

@@ -84,7 +84,7 @@ Design a serving strategy for a model you are working on:
 - [[02_Feature_Engineering_and_Feature_Store]]: online feature serving for real-time inference
 - [[03_Model_Training_and_Evaluation]]: evaluation informs serving decisions
 - [[05_ML_Monitoring_and_Drift]]: monitoring deployed models for degradation
-- [[07_Production_Engineering/00_overview|Production Engineering]]: infrastructure for model serving
+- [[career-path/09_Data_and_ML_Engineer/07_Production_Engineering/00_overview|Production Engineering]]: infrastructure for model serving
 
 ## Common Pitfalls
 

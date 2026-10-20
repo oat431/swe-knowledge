@@ -16,13 +16,13 @@ tags:
 
 # System Health Monitoring
 
-> **Core skill:** Leading the observability posture — golden-signal dashboards, actionable alerts, and health baselines — so the team sees the system's real state, not decoration.
+> **Core skill:** Leading the observability posture (golden-signal dashboards, actionable alerts, and health baselines) so the team sees the system's real state, not decoration.
 
 ## Why This Matters
 
-Every system has a true health state; the question is whether the team can see it. Monitoring that has rotted — dashboards nobody reads, alerts nobody can act on, baselines nobody knows — is worse than no monitoring, because it manufactures false confidence. Teams with false confidence are the ones surprised by incidents that were visible for weeks.
+Every system has a true health state; the question is whether the team can see it. Monitoring that has rotted (dashboards nobody reads, alerts nobody can act on, baselines nobody knows) is worse than no monitoring, because it manufactures false confidence. Teams with false confidence are the ones surprised by incidents that were visible for weeks.
 
-A senior engineer builds good dashboards for their own area. A tech lead owns the team's observability posture: what the team watches, what pages it, how alerts are reviewed, and how investigations leave permanent instrumentation behind. The posture is a leadership artifact — reviewed like code, tuned like a product, and legible to anyone on the team.
+A senior engineer builds good dashboards for their own area. A tech lead owns the team's observability posture: what the team watches, what pages it, how alerts are reviewed, and how investigations leave permanent instrumentation behind. The posture is a leadership artifact: reviewed like code, tuned like a product, and legible to anyone on the team.
 
 ## From Dashboards to Posture
 
@@ -32,7 +32,7 @@ A senior engineer builds good dashboards for their own area. A tech lead owns th
 | Tech lead | Team dashboards, reviewed alerts, shared baselines, instrumentation discipline |
 | Organization | Shared standards, central tooling, cross-team SLOs |
 
-The posture has three parts: the dashboard (what the team sees), the alerts (what wakes the team), and the baseline (what normal looks like). All three must be maintained together — a dashboard without a baseline is a picture without a reference point.
+The posture has three parts: the dashboard (what the team sees), the alerts (what wakes the team), and the baseline (what normal looks like). All three must be maintained together. A dashboard without a baseline is a picture without a reference point.
 
 ## Golden Signals Dashboards
 
@@ -59,7 +59,7 @@ An alert is a contract with a future human: it promises that when it fires, acti
 | Right severity | Page for pages, log for logs | Everything pages, so nothing pages |
 | Owned | A named owner reviews it | Nobody knows who wrote it or why |
 
-The review ritual: monthly, walk the alert list, delete or fix anything that has not earned its existence. Alert counts are a metric of the posture — the goal is fewer, better alerts.
+The review ritual: monthly, walk the alert list, delete or fix anything that has not earned its existence. Alert counts are a metric of the posture. The goal is fewer, better alerts.
 
 ## Health Baselines and Trend Review
 
@@ -101,6 +101,7 @@ Each artifact is small; the compounding is not. Teams that follow the rule find 
 The discipline: every metric on the dashboard must answer a question a human actually asks. If no decision changes based on a panel, the panel is decoration.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SIGNALS["Golden signal dashboards"] --> BASELINE["Baselines recorded"]
     BASELINE --> TREND["Weekly trend review"]
@@ -112,10 +113,10 @@ flowchart TD
 
 ## Practical Applications
 
-Observability review checklist — run monthly:
+Observability review checklist, run monthly:
 
 ```markdown
-## Observability Review — [month]
+## Observability Review: [month]
 
 ### Dashboards
 - [ ] Every panel answers a real question: [list decisions it feeds]
@@ -152,7 +153,7 @@ Observability review checklist — run monthly:
 - Any engineer can read the team's health in thirty seconds
 - Alerts are few, owned, and each has a runbook
 - The team can state the current baseline and spot drift from it
-- Investigations get faster quarter over quarter — instrumentation compounds
+- Investigations get faster quarter over quarter, instrumentation compounds
 - No incident in the last two quarters was visible-but-unnoticed beforehand
 
 ## Related Topics
@@ -164,4 +165,4 @@ Observability review checklist — run monthly:
 
 ## Summary
 
-System health monitoring at the tech-lead level is an owned posture, not a pile of dashboards: golden signals per service, baselines that define normal, a monthly alert review that keeps every page actionable, and an instrumentation discipline that turns every investigation into permanent visibility. The test of the posture is simple — the team should never again discover that a problem was visible for weeks before it became an incident.
+System health monitoring at the tech-lead level is an owned posture, not a pile of dashboards: golden signals per service, baselines that define normal, a monthly alert review that keeps every page actionable, and an instrumentation discipline that turns every investigation into permanent visibility. The test of the posture is simple: the team should never again discover that a problem was visible for weeks before it became an incident.

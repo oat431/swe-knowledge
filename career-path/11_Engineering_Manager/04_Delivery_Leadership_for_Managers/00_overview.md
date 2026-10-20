@@ -14,13 +14,13 @@ tags:
 
 # Delivery Leadership for Managers
 
-> **Core capability:** The engineering manager creates the conditions for delivery — clear goals, honest scope decisions, visible progress, and managed risk — without becoming the team's project manager or its bottleneck.
+> **Core capability:** The engineering manager creates the conditions for delivery (clear goals, honest scope decisions, visible progress, and managed risk) without becoming the team's project manager or its bottleneck.
 
 ## Why This Matters
 
 The EM is accountable for the team delivering, but achieves it through the team, not by running the plan personally. The failure modes are symmetric: the absentee manager (no clarity, no priorities, team drifts) and the micromanager (every ticket inspected, every estimate renegotiated, team infantilized).
 
-The middle path is a delivery system: goals the team understands, a planning cadence that produces honest commitments, progress signals the manager reads without interrogating, and escalation paths that surface trouble while it is still cheap. The tech lead runs the technical delivery; the EM owns the delivery conditions — staffing, clarity, priorities, and stakeholder reality.
+The middle path is a delivery system: goals the team understands, a planning cadence that produces honest commitments, progress signals the manager reads without interrogating, and escalation paths that surface trouble while it is still cheap. The tech lead runs the technical delivery; the EM owns the delivery conditions: staffing, clarity, priorities, and stakeholder reality.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ The middle path is a delivery system: goals the team understands, a planning cad
 ## The Manager's Delivery System
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     GOALS["Clear goals and priorities"] --> PLAN["Honest planning cadence"]
     PLAN --> SIGNALS["Visible progress signals"]
@@ -62,7 +63,7 @@ flowchart TD
 
 - [ ] Team goals exist, connect to strategy, and everyone can state them
 - [ ] Planning produces commitments the team actually believes
-- [ ] Scope changes are decisions, not drift — visible and owned
+- [ ] Scope changes are decisions, not drift: visible and owned
 - [ ] Progress is visible without the manager asking status questions
 - [ ] Top delivery risks have owners and mitigation plans
 - [ ] Stakeholders hear progress and problems from the manager first
@@ -87,11 +88,11 @@ flowchart TD
 
 ## Related Capabilities
 
-- [[06_Technical_Context_for_Managers/00_overview|Technical Context for Managers]]: enough technical depth to read delivery honestly
-- [[05_Organizational_Awareness_and_Influence/00_overview|Organizational Awareness and Influence]]: priorities and scope land in org reality
+- [[career-path/11_Engineering_Manager/06_Technical_Context_for_Managers/00_overview|Technical Context for Managers]]: enough technical depth to read delivery honestly
+- [[career-path/11_Engineering_Manager/05_Organizational_Awareness_and_Influence/00_overview|Organizational Awareness and Influence]]: priorities and scope land in org reality
 - [[career-path/05_Tech_Lead/04_Team_Delivery_and_Execution_Leadership/00_overview|Delivery and Execution Leadership (Tech Lead)]]: the technical delivery layer this pairs with
 - [[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]: the specialist path for cross-team program delivery
 
 ## Summary
 
-Delivery leadership for managers means owning the conditions, not the plan: clear goals, honest commitments, visible progress, owned risk, straight stakeholder conversations, and bounded chaos. The manager's test is simple — the team delivers reliably, and nobody had to be interrogated to find that out.
+Delivery leadership for managers means owning the conditions, not the plan: clear goals, honest commitments, visible progress, owned risk, straight stakeholder conversations, and bounded chaos. The manager's test is simple. The team delivers reliably, and nobody had to be interrogated to find that out.

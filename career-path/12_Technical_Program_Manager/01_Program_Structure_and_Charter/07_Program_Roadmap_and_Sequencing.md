@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-The program roadmap is the single artifact that answers "what happens when" for everyone involved. It integrates multiple workstream timelines into one coherent view, shows dependencies and decision points, and gives stakeholders a shared mental model of the program's trajectory. Without a roadmap, each workstream's plan lives in isolation, and nobody — not the TPM, not the sponsor, not the teams — can see how the pieces fit together.
+The program roadmap is the single artifact that answers "what happens when" for everyone involved. It integrates multiple workstream timelines into one coherent view, shows dependencies and decision points, and gives stakeholders a shared mental model of the program's trajectory. Without a roadmap, each workstream's plan lives in isolation, and nobody (not the TPM, not the sponsor, not the teams) can see how the pieces fit together.
 
 But a roadmap is only as good as its communication design. The same roadmap data needs to be presented differently to the steering committee, the workstream teams, and external stakeholders. A roadmap that is too detailed for the sponsor is ignored; a roadmap that is too abstract for the teams is useless. The TPM designs the roadmap for its audiences and maintains it as a living artifact that reflects the program's current truth.
 
@@ -51,6 +51,7 @@ Different roadmap formats serve different needs. The TPM chooses the format for 
 | **Now-Next-Later** | External stakeholders, broad communication | Strategic direction without false precision on dates | Too coarse for execution-level planning |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     WS_PLANS["Workstream plans: detailed timelines per workstream"] --> INTEGRATE["Integrate into program roadmap: swimlanes, dependencies, milestones"]
     INTEGRATE --> SWIMLANE["Swimlane view: for program reviews and workstream leads"]
@@ -61,7 +62,7 @@ flowchart TD
     NN --> VERSION
 ```
 
-The TPM maintains one master roadmap — the swimlane view — and derives the other views from it. Multiple master roadmaps that get out of sync is a common failure mode. The master roadmap is the single source of truth; every other view is a projection of it.
+The TPM maintains one master roadmap (the swimlane view) and derives the other views from it. Multiple master roadmaps that get out of sync is a common failure mode. The master roadmap is the single source of truth; every other view is a projection of it.
 
 ## Roadmap Communication to Different Audiences
 
@@ -69,17 +70,17 @@ The same program communicates differently to different audiences. The TPM tailor
 
 | Audience | What They Need | How Much Detail | Communication Cadence |
 |----------|----------------|-----------------|----------------------|
-| **Steering Committee** | Decisions needed, risks to outcome, milestone status (by exception — red items only) | Low: milestone-level only; no workstream detail | Monthly or at decision gates |
+| **Steering Committee** | Decisions needed, risks to outcome, milestone status (by exception, red items only) | Low: milestone-level only; no workstream detail | Monthly or at decision gates |
 | **Workstream Leads** | Dependencies on their workstream, upcoming integration points, milestones that affect their plan | High: full swimlane view with dependency lines | Biweekly; more frequent during integration |
 | **Workstream Teams** | Their workstream's deliverables and dependencies; how their work connects to program milestones | Medium: their swimlane in detail; others in summary | Per workstream cadence |
 | **Extended Stakeholders** | Program trajectory, key dates that affect their domain, decisions that require their input | Low to medium: milestone view plus relevant swimlane detail | Monthly; on-demand for decision input |
 | **External Partners** | Commitments that affect them, integration dates, dependency delivery dates | Low: externally committed milestones only | As needed; coordinated with partner management |
 
-The TPM never sends the same roadmap artifact to every audience. The steering committee does not need the swimlane view; the workstream leads do not need the milestone-only view. Tailoring is not hiding information — it is presenting the information each audience needs to act on.
+The TPM never sends the same roadmap artifact to every audience. The steering committee does not need the swimlane view; the workstream leads do not need the milestone-only view. Tailoring is not hiding information. It is presenting the information each audience needs to act on.
 
 ## Roadmap Updates and Versioning
 
-The roadmap changes. The program discovers new information, milestones shift, dependencies are renegotiated. The TPM's versioning discipline ensures that changes are tracked, communicated, and understood — not absorbed silently until the roadmap is unrecognizable.
+The roadmap changes. The program discovers new information, milestones shift, dependencies are renegotiated. The TPM's versioning discipline ensures that changes are tracked, communicated, and understood, not absorbed silently until the roadmap is unrecognizable.
 
 | Change Type | Example | Update Process |
 |-------------|---------|----------------|
@@ -101,13 +102,13 @@ The TPM versions the roadmap explicitly. Every published version has a version n
 
 ## Sequencing Principles
 
-The roadmap is not just a timeline — it is a sequence. The order in which work happens determines how much risk the program carries at any point and when value arrives.
+The roadmap is not just a timeline. It is a sequence. The order in which work happens determines how much risk the program carries at any point and when value arrives.
 
 | Principle | What It Means | Roadmap Implication |
 |-----------|---------------|--------------------|
 | **Risk first** | Riskiest work is sequenced earliest, while the program has maximum schedule slack | High-risk deliverables appear in the first third of the roadmap |
 | **Dependency order** | Upstream workstreams deliver before downstream workstreams need their outputs | Dependency lines flow left to right; no dependency points backward |
-| **Integration progressive** | Components integrate in increasing complexity — pair integration before full system integration | Integration windows escalate: component pairs, then subsystems, then full system |
+| **Integration progressive** | Components integrate in increasing complexity: pair integration before full system integration | Integration windows escalate: component pairs, then subsystems, then full system |
 | **Value pacing** | Value-delivering milestones are spaced so stakeholders see progress, not a single big bang | At least one externally visible milestone per quarter |
 | **Decision before investment** | Major resource commitments follow decision gates, not precede them | Decision gates appear before workstreams that depend on the decision outcome |
 
@@ -119,7 +120,7 @@ The TPM reviews the roadmap against these principles at every version. A roadmap
 
 - [ ] All workstreams are represented with key deliverables on the timeline
 - [ ] Program-level milestones are marked and connected to the workstreams that contribute to them
-- [ ] Dependency lines connect deliverables across workstreams — explicit, not assumed
+- [ ] Dependency lines connect deliverables across workstreams, explicit, not assumed
 - [ ] Decision gates are placed before the work that depends on the decision outcome
 - [ ] High-risk deliverables and dependencies are visually flagged
 - [ ] The roadmap has a version number, date, and change log
@@ -137,9 +138,9 @@ The TPM reviews the roadmap against these principles at every version. A roadmap
 - [Change 2: what changed, why, impact]
 
 ## Audience Views
-- [Link to swimlane view — for program reviews]
-- [Link to milestone view — for steering committee]
-- [Link to Now-Next-Later view — for external communication]
+- [Link to swimlane view, for program reviews]
+- [Link to milestone view, for steering committee]
+- [Link to Now-Next-Later view, for external communication]
 ```
 
 ## Common Pitfalls
@@ -165,10 +166,10 @@ The TPM reviews the roadmap against these principles at every version. A roadmap
 
 - [[04_Milestone_Planning]]: program milestones are the roadmap's primary markers
 - [[03_Workstream_Decomposition]]: workstream swimlanes are the roadmap's structural backbone
-- [[03_Dependency_Management/00_overview|Dependency Management]]: dependency lines on the roadmap connect to the dependency register
-- [[05_Stakeholder_Alignment/00_overview|Stakeholder Alignment]]: roadmap communication is a stakeholder alignment tool
+- [[career-path/12_Technical_Program_Manager/03_Dependency_Management/00_overview|Dependency Management]]: dependency lines on the roadmap connect to the dependency register
+- [[career-path/12_Technical_Program_Manager/05_Stakeholder_Alignment/00_overview|Stakeholder Alignment]]: roadmap communication is a stakeholder alignment tool
 - [[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]]: roadmap management as a formal PM practice
 
 ## Summary
 
-The program roadmap is the integrated view of what happens when: workstream swimlanes with deliverable-level detail, program milestones marking accountability points, dependency lines revealing the critical path, decision gates placed before investment, and audience-specific views derived from a single versioned master. The TPM maintains the roadmap as the program's single source of truth — updated within a week of any significant change, versioned with a change log, and communicated to the audience that needs it in the format they can act on.
+The program roadmap is the integrated view of what happens when: workstream swimlanes with deliverable-level detail, program milestones marking accountability points, dependency lines revealing the critical path, decision gates placed before investment, and audience-specific views derived from a single versioned master. The TPM maintains the roadmap as the program's single source of truth: updated within a week of any significant change, versioned with a change log, and communicated to the audience that needs it in the format they can act on.

@@ -16,13 +16,13 @@ tags:
 
 # Career Frameworks and Promotions
 
-> **Core skill:** Using career ladders as shared language for levels and evidence, building promotion cases over quarters, calibrating with peers, and handling promotion outcomes — including denials — with honesty.
+> **Core skill:** Using career ladders as shared language for levels and evidence, building promotion cases over quarters, calibrating with peers, and handling promotion outcomes (including denials), with honesty.
 
 ## Why This Matters
 
-Promotions are the most visible reward the manager controls — and the one they control least. The manager does not decide the outcome; they build the case, coach the candidate, and manage the aftermath. Managers who treat promotions as a favor to extract from the process create lottery dynamics: engineers lobby, compare, and leave when the draw goes wrong. Managers who treat ladders and evidence as shared language create predictability: everyone knows what a level means, what evidence counts, and where they stand.
+Promotions are the most visible reward the manager controls, and the one they control least. The manager does not decide the outcome; they build the case, coach the candidate, and manage the aftermath. Managers who treat promotions as a favor to extract from the process create lottery dynamics: engineers lobby, compare, and leave when the draw goes wrong. Managers who treat ladders and evidence as shared language create predictability: everyone knows what a level means, what evidence counts, and where they stand.
 
-A credible promotion system is also a retention system. Engineers who see a fair, legible path stay longer and work harder on the right things. Engineers who see arbitrariness update their resumes. The manager's job is to make the system legible and then run it honestly — including when the answer is no.
+A credible promotion system is also a retention system. Engineers who see a fair, legible path stay longer and work harder on the right things. Engineers who see arbitrariness update their resumes. The manager's job is to make the system legible and then run it honestly, including when the answer is no.
 
 ## Career Ladders as Shared Language
 
@@ -30,14 +30,14 @@ A credible promotion system is also a retention system. Engineers who see a fair
 |----------------|---------------|----------------|
 | Level definitions | A common vocabulary for scope, autonomy, and impact | Treating them as a checklist instead of a pattern |
 | Expectations per level | Engineers know what "next level" means in behavior | Hiding the ladder; keeping expectations implicit |
-| Evidence standards | Decisions become comparable across teams | Evidence theater — cases built at cycle end |
+| Evidence standards | Decisions become comparable across teams | Evidence theater: cases built at cycle end |
 | Progression criteria | A legible path; engineers plan toward it | Promising timelines the manager cannot guarantee |
 
-The ladder is a coaching tool, not a ranking. It is used in development conversations as the map for gaps and stretches, and in promotion reviews as the bar for evidence. The manager keeps the ladder visible, current, and used — an unused ladder is worse than none, because it fakes a system.
+The ladder is a coaching tool, not a ranking. It is used in development conversations as the map for gaps and stretches, and in promotion reviews as the bar for evidence. The manager keeps the ladder visible, current, and used. An unused ladder is worse than none, because it fakes a system.
 
 ## Using Ladders in Development Conversations
 
-Every development conversation references the ladder: where the engineer is, what the next level demands, and which expectations are currently the gap. The manager asks the engineer to self-assess against the ladder first — their read is usually honest and often harsher than the manager's. The output is a written gap list: the two or three expectations at the next level the engineer is not yet meeting, with concrete work that closes them. Promotions then stop being a surprise verdict and become the natural consequence of a visible process.
+Every development conversation references the ladder: where the engineer is, what the next level demands, and which expectations are currently the gap. The manager asks the engineer to self-assess against the ladder first. Their read is usually honest and often harsher than the manager's. The output is a written gap list: the two or three expectations at the next level the engineer is not yet meeting, with concrete work that closes them. Promotions then stop being a surprise verdict and become the natural consequence of a visible process.
 
 ## The Promotion Case: Evidence Over Quarters
 
@@ -62,7 +62,7 @@ Calibration is the antidote to manager bias. The manager brings their cases to a
 | Already working at level | The engineer demonstrably does the next level's work today | Conservative; may under-promote people ready to stretch |
 | Potential | The engineer could grow into the level soon | Speculative; promotions on potential burn the system's credibility |
 
-The defensible standard is "working at level" — evidence that the role is being performed now, sustained over time. Potential is discussed in development, not rewarded by promotion. The honest question at review: "If this engineer had the title today, would we be comfortable, and could we defend it?" If the answer needs a future tense, the case is not ready.
+The defensible standard is "working at level": evidence that the role is being performed now, sustained over time. Potential is discussed in development, not rewarded by promotion. The honest question at review: "If this engineer had the title today, would we be comfortable, and could we defend it?" If the answer needs a future tense, the case is not ready.
 
 ## Handling Denied Promotions
 
@@ -75,15 +75,16 @@ The denial is where the manager earns or loses trust. The conversation happens p
 | Retention risk | Expect the reaction; a denied candidate is a flight risk for weeks |
 | Follow-up | Schedule the next check-in before the meeting ends; do not vanish |
 
-The manager never blames the committee alone, never promises the next cycle, and never softens the gap. The engineer leaves knowing exactly what changed — or knowing the manager fought honestly and the bar was real. Both preserve the relationship; vagueness destroys it.
+The manager never blames the committee alone, never promises the next cycle, and never softens the gap. The engineer leaves knowing exactly what changed, or knowing the manager fought honestly and the bar was real. Both preserve the relationship; vagueness destroys it.
 
 ## The Promotion Conversation
 
-The conversation has one rule: no surprises. If the candidate is promoted, the manager shares the outcome, the evidence that carried the case, and the new expectations — and celebrates. If not, the manager delivers the denial with the gaps, the plan, and the timeline, and then listens. The conversation is short on justification and long on next steps; the candidate who can say "here is what I need to do" has received the promotion process at its best.
+The conversation has one rule: no surprises. If the candidate is promoted, the manager shares the outcome, the evidence that carried the case, and the new expectations, and celebrates. If not, the manager delivers the denial with the gaps, the plan, and the timeline, and then listens. The conversation is short on justification and long on next steps; the candidate who can say "here is what I need to do" has received the promotion process at its best.
 
 ## The Promotion Cycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     LADDER["Use the ladder as shared language"] --> EVIDENCE["Collect evidence over quarters"]
     EVIDENCE --> CALIBRATE["Calibrate with peer managers"]
@@ -114,7 +115,7 @@ flowchart TD
 | **Promoting on potential** | The bar drifts and every future case gets harder to defend | Demand working-at-level evidence, sustained |
 | **Ladder secrecy** | Engineers discover the levels exist at review time | Use the ladder in every development conversation |
 | **Solo calibration** | One manager's bias becomes the whole team's outcome | Bring cases to peer forums and defend them |
-| **Vanishing after denial** | The denied candidate gets silence and updates their resume | Deliver gaps, timeline, follow-up — and keep checking in |
+| **Vanishing after denial** | The denied candidate gets silence and updates their resume | Deliver gaps, timeline, follow-up, and keep checking in |
 
 ## Success Indicators
 
@@ -122,7 +123,7 @@ flowchart TD
 - Promotion cases are assembled from a year of notes, not a week of panic
 - Calibration meetings produce honest challenges, not mutual applause
 - Denied candidates stay engaged and know exactly what to change
-- Promotion outcomes rarely surprise anyone — including the committee
+- Promotion outcomes rarely surprise anyone, including the committee
 
 ## Related Topics
 

@@ -68,6 +68,7 @@ Use this to decide when a design needs deeper review.
 Evidence is strong when it is complete enough for the decision, attributable to an owner, generated close to the control, protected from alteration, and retrievable within the required time. If an artifact is manual, record its limitations and the control that prevents silent omission.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PURPOSE["State processing and evidence purpose"] --> MINIMIZE["Minimize fields and audiences"]
     MINIMIZE --> CAPTURE["Capture attributable decision evidence"]

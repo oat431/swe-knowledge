@@ -16,13 +16,13 @@ tags:
 
 # Technology Advisory and Review Boards
 
-> **Core skill:** The principal designs, charters, and runs technology advisory and review boards that advise and ratify without bottlenecking — and knows when a board has served its purpose and should be sunset.
+> **Core skill:** The principal designs, charters, and runs technology advisory and review boards that advise and ratify without bottlenecking, and knows when a board has served its purpose and should be sunset.
 
 ## Why This Matters
 
-At 500+ engineers, the governance system needs a forum where consequential technical decisions are reviewed for consistency with principles, standards, and systemic risk. That forum is the technology advisory board — but only if it is designed to advise, not to gate. A board that gates every decision is a bottleneck that slows the organization; a board that advises on a bounded class of material decisions is a governance force multiplier.
+At 500+ engineers, the governance system needs a forum where consequential technical decisions are reviewed for consistency with principles, standards, and systemic risk. That forum is the technology advisory board, but only if it is designed to advise, not to gate. A board that gates every decision is a bottleneck that slows the organization; a board that advises on a bounded class of material decisions is a governance force multiplier.
 
-The principal owns the board design: its charter, its composition, its scope, and its relationship to decision rights. The board is not a standing committee that accumulates permanent members and permanent meetings — it is a governance mechanism with a purpose, and when that purpose is served or outgrown, the board is re-chartered or sunset. The principal's skill is running boards that the organization values, not boards the organization routes around.
+The principal owns the board design: its charter, its composition, its scope, and its relationship to decision rights. The board is not a standing committee that accumulates permanent members and permanent meetings. It is a governance mechanism with a purpose, and when that purpose is served or outgrown, the board is re-chartered or sunset. The principal's skill is running boards that the organization values, not boards the organization routes around.
 
 ## Board Design: Advisory vs Decision-Making
 
@@ -36,7 +36,7 @@ The first and most consequential design choice is whether the board advises or d
 | **Best for** | Organizations that value speed and team autonomy; board ensures consistency | Organizations with high regulatory or systemic risk; board ensures compliance |
 | **Principal's role** | Chair or member; the principal's judgment informs, does not override | Chair; the principal may hold a tie-breaking or veto role |
 
-At scale, the advisory model is preferred: the board reviews, the decider decides. The board's value is not in approval but in the consistent application of principles and the detection of systemic risk that a single decider might miss. A board that must approve every decision discovers that decisions are made elsewhere and brought to the board for ratification after the fact — governance theater.
+At scale, the advisory model is preferred: the board reviews, the decider decides. The board's value is not in approval but in the consistent application of principles and the detection of systemic risk that a single decider might miss. A board that must approve every decision discovers that decisions are made elsewhere and brought to the board for ratification after the fact, governance theater.
 
 ## Board Composition
 
@@ -94,7 +94,7 @@ A well-run board meeting follows a strict format that protects time for the deci
 
 ## Board Evolution as the Organization Grows
 
-The board design that works at 300 engineers fails at 1000. The board must evolve — and the principal must recognize when the current design is breaking.
+The board design that works at 300 engineers fails at 1000. The board must evolve, and the principal must recognize when the current design is breaking.
 
 | Organization Size | Board Model | Rationale |
 |-------------------|-------------|-----------|
@@ -105,19 +105,20 @@ The board design that works at 300 engineers fails at 1000. The board must evolv
 
 ## Sunsetting a Board
 
-Every board should include its sunset condition in its charter. A board created for a specific purpose — a cloud migration, a monolith decomposition — should dissolve when that purpose is achieved. A standing board should be reviewed annually for continued necessity.
+Every board should include its sunset condition in its charter. A board created for a specific purpose (a cloud migration, a monolith decomposition) should dissolve when that purpose is achieved. A standing board should be reviewed annually for continued necessity.
 
 | Sunset Trigger | Example |
 |---------------|---------|
 | **Purpose achieved** | Migration complete; the migration review board dissolves |
-| **Decision volume below threshold** | The board reviews fewer than one material decision per month for two quarters — the organization has outgrown the need or the scope is too narrow |
-| **Board is a bottleneck** | Decision lead time consistently exceeds two cycles despite scope and cadence adjustments — the board model is wrong for this organization |
-| **Decisions bypass the board** | Teams consistently make material decisions without board review and the board discovers them post-hoc — the board has lost legitimacy |
+| **Decision volume below threshold** | The board reviews fewer than one material decision per month for two quarters. The organization has outgrown the need or the scope is too narrow |
+| **Board is a bottleneck** | Decision lead time consistently exceeds two cycles despite scope and cadence adjustments. The board model is wrong for this organization |
+| **Decisions bypass the board** | Teams consistently make material decisions without board review and the board discovers them post-hoc. The board has lost legitimacy |
 | **Duplicate governance** | Another governance mechanism (standards automation, principle citation, decision rights) has made the board redundant |
 
-Sunsetting a board is not failure — it is governance hygiene. A board that outlives its purpose becomes a drag on the organization.
+Sunsetting a board is not failure. It is governance hygiene. A board that outlives its purpose becomes a drag on the organization.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CHARTER["Charter the board: purpose, scope, authority, sunset"] --> COMPOSE["Compose: 5-8 members with rotating seat"]
     COMPOSE --> OPERATE["Operate: fortnightly, pre-read, consent agenda, decision reviews"]
@@ -132,7 +133,7 @@ flowchart TD
 ### Board Design Checklist
 
 - [ ] Board has a written charter with purpose, scope, authority, and sunset condition
-- [ ] Board is advisory, not decision-making — it recommends, the decider decides
+- [ ] Board is advisory, not decision-making. It recommends, the decider decides
 - [ ] Size is 5-8 members including a rotating seat
 - [ ] Scope is bounded to material decisions only
 - [ ] Cadence is fortnightly with pre-read materials due 48 hours before
@@ -206,4 +207,4 @@ flowchart TD
 
 ## Summary
 
-Technology advisory and review boards are the governance forum where consequential technical decisions are reviewed for consistency — but only if designed to advise, not to gate. The principal charters the board with explicit purpose, scope, authority, and sunset condition; composes it with 5-8 members including a rotating seat; runs it on a fortnightly cadence with pre-read discipline; and reviews it annually for relevance. A board that bottlenecks is re-scoped or re-cadenced; a board that has served its purpose is sunset — because governance mechanisms must earn their keep or be removed.
+Technology advisory and review boards are the governance forum where consequential technical decisions are reviewed for consistency, but only if designed to advise, not to gate. The principal charters the board with explicit purpose, scope, authority, and sunset condition; composes it with 5-8 members including a rotating seat; runs it on a fortnightly cadence with pre-read discipline; and reviews it annually for relevance. A board that bottlenecks is re-scoped or re-cadenced; a board that has served its purpose is sunset, because governance mechanisms must earn their keep or be removed.

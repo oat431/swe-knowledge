@@ -15,13 +15,13 @@ tags:
 
 # Systems Thinking Fundamentals
 
-> **Core skill:** Reading engineering organizations as systems of stocks, flows, feedback loops, and delays — so interventions land on leverage points instead of symptoms.
+> **Core skill:** Reading engineering organizations as systems of stocks, flows, feedback loops, and delays, so interventions land on leverage points instead of symptoms.
 
 ## Why This Matters
 
-Most recurring engineering problems are produced, not caused. The backlog that never shrinks, the velocity that dips after every good hire, the incident that returns every quarter — each is a behavior of a system, and each behavior has a producing structure. Engineers who see only events fix the same thing forever; engineers who see the system fix it once.
+Most recurring engineering problems are produced, not caused. The backlog that never shrinks, the velocity that dips after every good hire, the incident that returns every quarter: each is a behavior of a system, and each behavior has a producing structure. Engineers who see only events fix the same thing forever; engineers who see the system fix it once.
 
-A system is a set of elements connected by flows and feedback: work flows into a backlog stock, trust accumulates or drains between teams, technical debt compounds with interest. The staff engineer's edge is reading these connections — knowing which stock is filling, which loop is reinforcing, and which delay is hiding the real effect of a change.
+A system is a set of elements connected by flows and feedback: work flows into a backlog stock, trust accumulates or drains between teams, technical debt compounds with interest. The staff engineer's edge is reading these connections: knowing which stock is filling, which loop is reinforcing, and which delay is hiding the real effect of a change.
 
 Systems literacy also changes how you argue. Instead of "we should do X," you can say "if we change Y, then Z will shift after about two quarters, because the loop that produces the symptom is this one." That is a falsifiable claim about the org, and it is the difference between opinion and diagnosis.
 
@@ -37,7 +37,7 @@ A stock is something that accumulates or drains; a flow is the rate at which it 
 | **Knowledge** | Pairing, docs, reviews | Attrition, time decay, reorgs | One key departure drains the stock overnight |
 | **On-call load** | Incidents, page-happy alerts | Automation, hardening, runbooks | Each new service adds load faster than tooling removes it |
 
-Rule of thumb: when a stock stays constant despite effort, either the inflow is higher than you think or the outflow is lower than you think. Measure flows, not just the stock level — the level is a lagging indicator of the flows you can actually change.
+Rule of thumb: when a stock stays constant despite effort, either the inflow is higher than you think or the outflow is lower than you think. Measure flows, not just the stock level: the level is a lagging indicator of the flows you can actually change.
 
 ## Feedback Loops
 
@@ -50,13 +50,14 @@ Two loop types explain most organizational behavior:
 
 ### Three loops to read in your org
 
-**The incident loop.** Every incident produces urgency, urgency produces quick fixes, quick fixes skip hardening, and skipped hardening produces the next incident. The loop stabilizes at high pain unless deliberate prevention investment — itself a delayed flow — breaks it. If incidents recur on schedule, this loop is running.
+**The incident loop.** Every incident produces urgency, urgency produces quick fixes, quick fixes skip hardening, and skipped hardening produces the next incident. The loop stabilizes at high pain unless deliberate prevention investment (itself a delayed flow) breaks it. If incidents recur on schedule, this loop is running.
 
 **The hero culture loop.** The engineer who fixes things fast is trusted with more fires; others step back because the hero will handle it; the hero's expertise concentrates; the next fire needs the hero. The reinforcing loop grows a single point of failure on both the system and the person. It feels like excellence and behaves like a fragility machine.
 
-**The tool sprawl loop.** Each team picks its own tool for a genuine local need; integration cost grows; teams compensate by choosing even more isolated tools; the platform fragments. Autonomy without a coordination cost in the decision feeds the loop — the fix is to put integration cost back into the decision, not to remove autonomy.
+**The tool sprawl loop.** Each team picks its own tool for a genuine local need; integration cost grows; teams compensate by choosing even more isolated tools; the platform fragments. Autonomy without a coordination cost in the decision feeds the loop. The fix is to put integration cost back into the decision, not to remove autonomy.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     FIRE["Fire breaks out"] --> HERO["Hero fixes it fast"]
     HERO --> REPUTATION["Hero gains reputation"]
@@ -105,7 +106,7 @@ Two practices make systems thinking concrete instead of mystical:
 | **Behavior-over-time graph** | How a stock actually moved over quarters | Plot backlog, cycle time, or on-call load; look for patterns, not points |
 | **Stock-flow sketch** | Where accumulation happens | Count inflows against outflows for a stock that never moves |
 
-Use the tools in a one-hour session with the team that lives inside the loop. The diagram's real value is the disagreement it surfaces — different people hold different halves of the loop, and the drawing merges them.
+Use the tools in a one-hour session with the team that lives inside the loop. The diagram's real value is the disagreement it surfaces: different people hold different halves of the loop, and the drawing merges them.
 
 ## Practical Applications
 
@@ -168,9 +169,9 @@ Loop type: balancing / reinforcing
 - [[02_Conways_Law_in_Practice]]: structure mirrors communication
 - [[03_Incentives_and_Behavior]]: the rules that shape loop behavior
 - [[05_Fixing_Structure_Not_Symptoms]]: intervening at the causal level
-- [[06_Technical_Risk_and_Judgment/00_overview|Technical Risk and Judgment]]: risk recurrence is a loop phenomenon
-- [[02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: where structural insight lands
+- [[career-path/03_Staff_Engineer/06_Technical_Risk_and_Judgment/00_overview|Technical Risk and Judgment]]: risk recurrence is a loop phenomenon
+- [[career-path/03_Staff_Engineer/02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: where structural insight lands
 
 ## Summary
 
-Systems thinking replaces event-based fixing with structural diagnosis: name the stock, trace the flows, find the loops and delays, locate the leverage point, and intervene there with a stated prediction. The payoff is interventions that keep working after you leave — because the producing structure, not the symptom, changed.
+Systems thinking replaces event-based fixing with structural diagnosis: name the stock, trace the flows, find the loops and delays, locate the leverage point, and intervene there with a stated prediction. The payoff is interventions that keep working after you leave, because the producing structure, not the symptom, changed.

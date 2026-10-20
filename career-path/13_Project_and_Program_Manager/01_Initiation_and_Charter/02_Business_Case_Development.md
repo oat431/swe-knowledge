@@ -15,15 +15,15 @@ tags:
 
 # Business Case Development
 
-> **Core skill:** Building the documented economic justification for the project — articulating the value proposition, quantifying costs and benefits, analyzing alternatives, and establishing the rationale that persuades the sponsor to invest organizational resources.
+> **Core skill:** Building the documented economic justification for the project, articulating the value proposition, quantifying costs and benefits, analyzing alternatives, and establishing the rationale that persuades the sponsor to invest organizational resources.
 
 ## Why This Matters
 
-Every project consumes resources that could be used elsewhere. The business case is the project manager's answer to the question: why spend them here? It is not a sales pitch — it is a structured analysis that names the problem or opportunity, estimates the cost of the proposed solution, quantifies the expected benefits, examines alternative approaches, and declares the assumptions on which the analysis rests. Without it, a project is funded on optimism.
+Every project consumes resources that could be used elsewhere. The business case is the project manager's answer to the question: why spend them here? It is not a sales pitch. It is a structured analysis that names the problem or opportunity, estimates the cost of the proposed solution, quantifies the expected benefits, examines alternative approaches, and declares the assumptions on which the analysis rests. Without it, a project is funded on optimism.
 
-The business case also establishes the project's value baseline. When the project faces a difficult trade-off — cut scope, extend schedule, or request more budget — the business case tells you which trade-offs preserve the value and which destroy it. A project that costs more than the benefit it enables should be stopped. The business case makes that conversation possible by giving it numbers.
+The business case also establishes the project's value baseline. When the project faces a difficult trade-off (cut scope, extend schedule, or request more budget) the business case tells you which trade-offs preserve the value and which destroy it. A project that costs more than the benefit it enables should be stopped. The business case makes that conversation possible by giving it numbers.
 
-The project manager may not own the business case alone — it is often co-developed with the sponsor, finance, and subject-matter experts — but the project manager is responsible for ensuring it exists, is credible, and is maintained as the project's reference point for value decisions.
+The project manager may not own the business case alone (it is often co-developed with the sponsor, finance, and subject-matter experts) but the project manager is responsible for ensuring it exists, is credible, and is maintained as the project's reference point for value decisions.
 
 ## The Structure of a Business Case
 
@@ -53,16 +53,17 @@ The project manager may not own the business case alone — it is often co-devel
 
 | Benefit Type | Examples | Measurability |
 |---|---|---|
-| **Financial — revenue** | New product sales, market share gain | Quantifiable; model with ranges |
-| **Financial — cost reduction** | Automation savings, vendor consolidation | Quantifiable; baseline and target |
-| **Financial — avoidance** | Regulatory penalty avoided, risk mitigated | Quantifiable with probability weighting |
-| **Non-financial — strategic** | Market position, capability building | Qualitative; link to strategic objectives |
-| **Non-financial — stakeholder** | Customer satisfaction, employee retention | Qualitative; proxy metrics where possible |
-| **Non-financial — compliance** | Regulatory compliance, security posture | Binary achieved/not-achieved; cost of non-compliance |
+| **Financial: revenue** | New product sales, market share gain | Quantifiable; model with ranges |
+| **Financial: cost reduction** | Automation savings, vendor consolidation | Quantifiable; baseline and target |
+| **Financial: avoidance** | Regulatory penalty avoided, risk mitigated | Quantifiable with probability weighting |
+| **Non-financial: strategic** | Market position, capability building | Qualitative; link to strategic objectives |
+| **Non-financial: stakeholder** | Customer satisfaction, employee retention | Qualitative; proxy metrics where possible |
+| **Non-financial: compliance** | Regulatory compliance, security posture | Binary achieved/not-achieved; cost of non-compliance |
 
 ## The Options Analysis
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PROBLEM["Problem or opportunity identified"] --> DO_NOTHING["Option 1: Do nothing -- baseline cost and consequence"]
     PROBLEM --> MINIMAL["Option 2: Minimal -- lowest-cost intervention"]
@@ -117,8 +118,8 @@ flowchart TD
 - **Key sensitivity:** [which assumption, if wrong, most affects the outcome]
 
 ## Key Assumptions
-- [Assumption 1] — Owner: [name], Trigger: [condition for reconsideration]
-- [Assumption 2] — Owner: [name], Trigger: [condition for reconsideration]
+- [Assumption 1], Owner: [name], Trigger: [condition for reconsideration]
+- [Assumption 2], Owner: [name], Trigger: [condition for reconsideration]
 
 ## Risks to the Business Case
 | Risk | Probability | Impact on Business Case | Mitigation |
@@ -147,12 +148,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[01_Project_Charter]] — the charter that formalizes the business case into an authorized project
-- [[04_Project_Objectives_and_Success_Criteria]] — linking benefits to measurable objectives
-- [[05_Feasibility_and_Constraint_Analysis]] — testing whether the business case is achievable
-- [[03_Schedule_and_Cost/00_overview|Schedule and Cost]] — the cost estimate becomes the cost baseline
-- [[07_Benefits_and_Closure/00_overview|Benefits and Closure]] — tracking benefits realization after delivery
+- [[01_Project_Charter]]: the charter that formalizes the business case into an authorized project
+- [[04_Project_Objectives_and_Success_Criteria]]: linking benefits to measurable objectives
+- [[05_Feasibility_and_Constraint_Analysis]]: testing whether the business case is achievable
+- [[career-path/13_Project_and_Program_Manager/03_Schedule_and_Cost/00_overview|Schedule and Cost]]: the cost estimate becomes the cost baseline
+- [[career-path/13_Project_and_Program_Manager/07_Benefits_and_Closure/00_overview|Benefits and Closure]]: tracking benefits realization after delivery
 
 ## Summary
 
-The business case is the project's economic argument: a structured analysis that names the problem, compares options, estimates costs and benefits, and establishes the value proposition that justifies organizational investment. It is not a one-time document — it is the ongoing reference point for value decisions throughout the project. The project manager who maintains a credible, assumption-tracked business case can answer the hardest question in any project: is this still worth doing?
+The business case is the project's economic argument: a structured analysis that names the problem, compares options, estimates costs and benefits, and establishes the value proposition that justifies organizational investment. It is not a one-time document. It is the ongoing reference point for value decisions throughout the project. The project manager who maintains a credible, assumption-tracked business case can answer the hardest question in any project: is this still worth doing?

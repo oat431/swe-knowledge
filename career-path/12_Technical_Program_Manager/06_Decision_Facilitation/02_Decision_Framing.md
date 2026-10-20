@@ -16,15 +16,15 @@ tags:
 
 # Decision Framing
 
-> **Core skill:** The TPM frames decisions for deciders — presenting options neutrally with priced trade-offs, evaluating them against agreed criteria, and recommending with stated confidence so that the decider can choose without having to first reconstruct the analysis.
+> **Core skill:** The TPM frames decisions for deciders, presenting options neutrally with priced trade-offs, evaluating them against agreed criteria, and recommending with stated confidence so that the decider can choose without having to first reconstruct the analysis.
 
 ## Why This Matters
 
-A well-framed decision is half-decided. The decider reads the framing document and understands the landscape: what must be decided, what the options are, what each option costs, what each option risks, and which conditions would make each option the right choice. The decider's job is reduced to judgment — the one thing that cannot be delegated — because the analysis has already been done.
+A well-framed decision is half-decided. The decider reads the framing document and understands the landscape: what must be decided, what the options are, what each option costs, what each option risks, and which conditions would make each option the right choice. The decider's job is reduced to judgment (the one thing that cannot be delegated) because the analysis has already been done.
 
-Poorly framed decisions put the analysis burden on the decider during the meeting. The decider asks questions the document should have answered, requests data the document should have included, and defers the decision to get the missing information. A decision deferred for missing information is a decision-framing failure — the information existed; the framing did not include it.
+Poorly framed decisions put the analysis burden on the decider during the meeting. The decider asks questions the document should have answered, requests data the document should have included, and defers the decision to get the missing information. A decision deferred for missing information is a decision-framing failure, the information existed; the framing did not include it.
 
-The TPM's framing discipline: every option is priced, every trade-off is visible, and the recommendation is honest about what it knows and what it does not. The framing document is the decision artifact that survives the meeting — and its quality determines whether the decision sticks.
+The TPM's framing discipline: every option is priced, every trade-off is visible, and the recommendation is honest about what it knows and what it does not. The framing document is the decision artifact that survives the meeting, and its quality determines whether the decision sticks.
 
 ## The Framing Document Structure
 
@@ -49,7 +49,7 @@ The heart of the framing document is the trade-off table. Every option gets a ro
 | C: Full rebuild | 20 eng-weeks, $50k | Problem eliminated; platform improved | Migration risk; capacity cost | The problem is structural and growing; platform is strategic |
 | D: Buy solution | $20k/year, 2 eng-weeks integration | Fastest time-to-value | Vendor lock-in; fit risk | The problem is generic; not core differentiator |
 
-The "right when" column is the honesty mechanism. An option that has no plausible right-when condition is a straw man, and straw men are detected by deciders and damage the framer's credibility. Every option in the table must be one the TPM would genuinely recommend under some circumstances — even if not the current ones.
+The "right when" column is the honesty mechanism. An option that has no plausible right-when condition is a straw man, and straw men are detected by deciders and damage the framer's credibility. Every option in the table must be one the TPM would genuinely recommend under some circumstances, even if not the current ones.
 
 ## Criteria: Agreed Before Scoring
 
@@ -63,11 +63,11 @@ Decision criteria must be agreed with the decider before options are scored. A c
 | Risk of failure | Medium | Probability × impact | Low | Low | Medium |
 | Team capacity | Medium | Can we staff this? | N/A | Yes | Stretch |
 
-Criteria with weights prevent the most common decision-framing failure: scoring options without telling the decider what matters most. A decider who values speed will choose differently from one who values strategic alignment — and both choices are valid if the criteria are explicit.
+Criteria with weights prevent the most common decision-framing failure: scoring options without telling the decider what matters most. A decider who values speed will choose differently from one who values strategic alignment, and both choices are valid if the criteria are explicit.
 
 ## The Recommendation: With Honest Confidence
 
-The TPM's recommendation is not advocacy — it is the synthesis of the analysis, stated with honest confidence.
+The TPM's recommendation is not advocacy; it is the synthesis of the analysis, stated with honest confidence.
 
 | Confidence Level | Meaning | Example |
 |------------------|---------|---------|
@@ -75,15 +75,16 @@ The TPM's recommendation is not advocacy — it is the synthesis of the analysis
 | Medium | The analysis is sound but one or two variables could shift the recommendation | "We recommend C with medium confidence. It is the best strategic choice, but the team capacity risk is real. If we cannot staff it, B becomes the right choice." |
 | Low | Significant uncertainty; the recommendation is a best guess with known gaps | "We recommend A with low confidence. The data on the problem's growth rate is thin. We need 4 more weeks of measurement before committing to B or C." |
 
-A recommendation with low confidence is not a failure — it is an honest assessment that tells the decider "this decision needs more information, and here is what information." A recommendation with falsely high confidence is a failure — the decision is made on false premises and collapses later.
+A recommendation with low confidence is not a failure; it is an honest assessment that tells the decider "this decision needs more information, and here is what information." A recommendation with falsely high confidence is a failure; the decision is made on false premises and collapses later.
 
 ## The "Do Nothing" Option
 
-Every framing document includes a "do nothing" or "status quo" option. It is not a straw man — it is the baseline against which every other option is measured. The do-nothing option is priced honestly: here is the cost of inaction, here is what continues unchanged, here is when the problem forces a decision anyway.
+Every framing document includes a "do nothing" or "status quo" option. It is not a straw man; it is the baseline against which every other option is measured. The do-nothing option is priced honestly: here is the cost of inaction, here is what continues unchanged, here is when the problem forces a decision anyway.
 
-The do-nothing option matters because it forces the question: "Is the problem bad enough to justify the cost of fixing it?" If the answer is no, the decision is deferred — and that is a valid outcome, as long as the deferral is explicit and the re-evaluation trigger is set.
+The do-nothing option matters because it forces the question: "Is the problem bad enough to justify the cost of fixing it?" If the answer is no, the decision is deferred, and that is a valid outcome, as long as the deferral is explicit and the re-evaluation trigger is set.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DECISION["Decision statement: what must be decided"] --> CONTEXT["Context: why now, what depends on it, cost of indecision"]
     CONTEXT --> CRITERIA["Criteria: agreed with decider, weighted"]
@@ -98,7 +99,7 @@ flowchart TD
 ### Decision Framing Template
 
 ```markdown
-# Decision Framing — [Decision Name] — [Date]
+# Decision Framing: [Decision Name], [Date]
 
 ## Decision Statement
 - What is being decided: [one sentence]
@@ -143,7 +144,7 @@ flowchart TD
 - [ ] The cost of indecision is stated explicitly
 - [ ] Criteria are agreed with the decider before options are scored
 - [ ] 2-4 options are presented, each with cost, benefit, risk, and right-when condition
-- [ ] Every option is genuinely defensible under some condition — no straw men
+- [ ] Every option is genuinely defensible under some condition, no straw men
 - [ ] The recommendation is stated with honest confidence and reasoning
 - [ ] The framing document is distributed as a pre-read before the decision meeting
 
@@ -151,7 +152,7 @@ flowchart TD
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
-| **One-option framing** | "Here is the solution" — not a decision, a demand | Present 2-4 options; the decider chooses |
+| **One-option framing** | "Here is the solution": not a decision, a demand | Present 2-4 options; the decider chooses |
 | **Straw-man options** | Fake alternatives that make the recommendation look better by comparison | Every option must be defensible under some plausible condition |
 | **Criteria by surprise** | Criteria revealed in the meeting; decider disagrees with them and defers | Agree criteria with the decider before framing |
 | **Overconfident recommendation** | "We are certain" when uncertainty is real; decision collapses at first obstacle | State confidence honestly; name the key uncertainty |
@@ -164,16 +165,16 @@ flowchart TD
 - The decider's questions are about judgment, not about facts the document should have included
 - Stakeholders cite the framing document's trade-off table in later discussions
 - Decisions made from framed options are not revisited because the framing was incomplete
-- The recommendation's confidence proves accurate — high-confidence recommendations hold; low-confidence ones evolve as predicted
+- The recommendation's confidence proves accurate, high-confidence recommendations hold; low-confidence ones evolve as predicted
 
 ## Related Topics
 
 - [[01_Decision_Process_Design]]: the process that determines when and how framing happens
 - [[03_Facilitating_Decision_Meetings]]: the meeting where the framed decision is decided
 - [[04_Decision_Documentation]]: the decision record that captures what was decided from the framing
-- [[05_Stakeholder_Alignment/05_Stakeholder_Negotiation|Stakeholder Negotiation]]: the negotiation counterpart where trade-offs are priced
+- [[career-path/12_Technical_Program_Manager/05_Stakeholder_Alignment/05_Stakeholder_Negotiation|Stakeholder Negotiation]]: the negotiation counterpart where trade-offs are priced
 - [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/01_Writing_Proposals_That_Get_Adopted|Writing Proposals That Get Adopted (Staff)]]: the staff engineer's proposal framing discipline
 
 ## Summary
 
-Decision framing is the TPM's pre-decision craft: defining what must be decided and why it matters now, pricing 2-4 genuine options with cost, benefit, risk, and right-when conditions, evaluating them against criteria agreed with the decider, and recommending with honest confidence. A well-framed decision is half-decided — the decider's job is reduced to judgment because the analysis is already on the page. Poorly framed decisions defer for missing information; well-framed ones produce decisions that stick.
+Decision framing is the TPM's pre-decision craft: defining what must be decided and why it matters now, pricing 2-4 genuine options with cost, benefit, risk, and right-when conditions, evaluating them against criteria agreed with the decider, and recommending with honest confidence. A well-framed decision is half-decided; the decider's job is reduced to judgment because the analysis is already on the page. Poorly framed decisions defer for missing information; well-framed ones produce decisions that stick.

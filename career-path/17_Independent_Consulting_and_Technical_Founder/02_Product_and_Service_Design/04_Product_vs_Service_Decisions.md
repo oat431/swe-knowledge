@@ -16,15 +16,15 @@ tags:
 
 # Product vs Service Decisions
 
-> **Core skill:** Deciding what to sell across the spectrum from bespoke services to scalable products — and how the mix evolves as capacity, cash flow, and appetite change.
+> **Core skill:** Deciding what to sell across the spectrum from bespoke services to scalable products, and how the mix evolves as capacity, cash flow, and appetite change.
 
 ## Why This Matters
 
-Independent work spans a spectrum: bespoke consulting at one end, a product business at the other, with several hybrids between. Moving right promises leverage and scale; it also trades cash today for cash later, replaces client risk with market risk, and adds maintenance, support, and go-to-market obligations that do not exist for pure services. Choosing a point on the spectrum — explicitly, and revisably — is a founder decision, not a drift.
+Independent work spans a spectrum: bespoke consulting at one end, a product business at the other, with several hybrids between. Moving right promises leverage and scale; it also trades cash today for cash later, replaces client risk with market risk, and adds maintenance, support, and go-to-market obligations that do not exist for pure services. Choosing a point on the spectrum (explicitly, and revisably) is a founder decision, not a drift.
 
-The economics differ in shape, not just size. Services pay now and scale with hours; products pay later and scale with users, carrying support and churn costs forever after. Services concentrate risk in a few clients; products concentrate it in market fit and build cost. Services give immediate feedback from real buyers; products give feedback through funnels and telemetry. Neither is better in the abstract — but mismatching the model to available cash, capacity, and appetite is how independents end up with a product nobody needs or a service career that never compounds.
+The economics differ in shape, not just size. Services pay now and scale with hours; products pay later and scale with users, carrying support and churn costs forever after. Services concentrate risk in a few clients; products concentrate it in market fit and build cost. Services give immediate feedback from real buyers; products give feedback through funnels and telemetry. Neither is better in the abstract, but mismatching the model to available cash, capacity, and appetite is how independents end up with a product nobody needs or a service career that never compounds.
 
-The usual failure is jumping too early: building a product to escape client work before the same problem has been solved, repeatedly, for money. The reliable path runs the other way: sell a service, notice what repeats, productize the repetition — templates, fixed-scope offers, tooling — and only then consider an actual product. Each step right should be earned by repetition and demand, not by ambition or fatigue.
+The usual failure is jumping too early: building a product to escape client work before the same problem has been solved, repeatedly, for money. The reliable path runs the other way: sell a service, notice what repeats, productize the repetition (templates, fixed-scope offers, tooling), and only then consider an actual product. Each step right should be earned by repetition and demand, not by ambition or fatigue.
 
 ## Service vs Product Economics
 
@@ -63,6 +63,7 @@ The usual failure is jumping too early: building a product to escape client work
 ## The Model Ladder
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SERVICE["Bespoke services"] --> PRODUCTIZED["Productized service"]
     PRODUCTIZED --> HYBRID["Product and service hybrid"]
@@ -85,7 +86,7 @@ Movement along the ladder is funded by what the previous step earned: cash, proo
 ### Quarterly Mix Review Template
 
 ```markdown
-## Mix Review — <quarter>
+## Mix Review: <quarter>
 
 | Stream | Revenue | Hours | Margin | Trend |
 |--------|---------|-------|--------|-------|
@@ -120,9 +121,9 @@ Stop doing: <one thing>.
 
 - [[01_Service_Offers_and_Packaging]]
 - [[06_MVP_and_Offer_Iteration]]
-- [[03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
-- [[05_Architecture_for_Independents/00_overview|Architecture for Independents]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/05_Architecture_for_Independents/00_overview|Architecture for Independents]]
 
 ## Summary
 
-Product versus service decisions define what the independent business actually is: a point on a spectrum between bespoke work and scalable products, each with its own cash flow, risk, and capability demands. The durable path moves right only on evidence — repetition, demand, and paying users — so the mix evolves as a series of funded, deliberate steps rather than a leap away from the clients who pay the bills.
+Product versus service decisions define what the independent business actually is: a point on a spectrum between bespoke work and scalable products, each with its own cash flow, risk, and capability demands. The durable path moves right only on evidence (repetition, demand, and paying users), so the mix evolves as a series of funded, deliberate steps rather than a leap away from the clients who pay the bills.

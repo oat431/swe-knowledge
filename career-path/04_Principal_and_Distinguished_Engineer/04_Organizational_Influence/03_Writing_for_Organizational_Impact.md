@@ -16,17 +16,17 @@ tags:
 
 # Writing for Organizational Impact
 
-> **Core skill:** The principal writes artifacts that outlast their tenure — white papers, strategy memos, technology position papers, and annual technology letters — shaping the organization's technical direction through documents that are cited for years after they are published.
+> **Core skill:** The principal writes artifacts that outlast their tenure (white papers, strategy memos, technology position papers, and annual technology letters), shaping the organization's technical direction through documents that are cited for years after they are published.
 
 ## Why This Matters
 
-At principal level, writing is not communication support — it is the primary mechanism of influence at scale. A white paper on platform strategy is read by 300 engineers and shapes their design decisions for two years. A technology position paper frames an industry debate and positions the organization within it. An annual technology letter becomes the reference point for investment conversations with the board. These artifacts outlast any meeting and any presentation — they are the principal's thinking made durable.
+At principal level, writing is not communication support. It is the primary mechanism of influence at scale. A white paper on platform strategy is read by 300 engineers and shapes their design decisions for two years. A technology position paper frames an industry debate and positions the organization within it. An annual technology letter becomes the reference point for investment conversations with the board. These artifacts outlast any meeting and any presentation. They are the principal's thinking made durable.
 
 The principal's writing portfolio is the evidence of strategic influence. A principal whose writing is cited in ADRs, referenced in investment cases, and shared externally has influence that extends beyond their presence in any room. A principal whose writing is unread or indistinguishable from any senior engineer's proposals has not yet reached the scale of influence the role demands.
 
 ## The Principal's Writing Portfolio
 
-The portfolio is not a random collection of documents — it is a deliberate set of artifacts, each with a distinct purpose, audience, and lifespan.
+The portfolio is not a random collection of documents. It is a deliberate set of artifacts, each with a distinct purpose, audience, and lifespan.
 
 | Artifact | Purpose | Audience | Lifespan | Frequency |
 |----------|---------|----------|----------|-----------|
@@ -39,7 +39,7 @@ The portfolio is not a random collection of documents — it is a deliberate set
 
 ## Structure for Organizational Writing
 
-Each artifact type has a structure that makes it effective for its audience. The structure is not a formula — it is a discipline that ensures the document does its job.
+Each artifact type has a structure that makes it effective for its audience. The structure is not a formula. It is a discipline that ensures the document does its job.
 
 ### White Paper Structure
 
@@ -104,7 +104,7 @@ The principal's writing is not solo work. The best artifacts are reviewed by the
 | **Review** | The audience the document is for: affected teams, executive stakeholders | Clarity; completeness; whether the recommendation is actionable |
 | **Final** | Principal's own review against the artifact's purpose | Does this document do its job? Will it be cited in two years? |
 
-The review process is not consensus-seeking — the principal is the author and owns the recommendation. But the review process is quality assurance: a document that has not been challenged by people who disagree with it is not ready for publication.
+The review process is not consensus-seeking. The principal is the author and owns the recommendation. But the review process is quality assurance: a document that has not been challenged by people who disagree with it is not ready for publication.
 
 ## Practical Applications
 
@@ -136,17 +136,17 @@ The review process is not consensus-seeking — the principal is the author and 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
 | **Writing for everyone** | The document addresses too many audiences and satisfies none | One document, one primary audience; secondary audiences get a summary or appendix |
-| **No recommendation** | A survey of options without a recommendation is a menu — useful but not influential | Recommend, with confidence and reasoning. The recommendation is what makes the document an act of leadership |
+| **No recommendation** | A survey of options without a recommendation is a menu, useful but not influential | Recommend, with confidence and reasoning. The recommendation is what makes the document an act of leadership |
 | **Overwriting** | A 40-page white paper is read by nobody; a 5-page one is read by everyone | Discipline: every section must earn its place. If a section does not change the recommendation, cut it |
 | **No review** | Unchallenged reasoning survives in the document; errors and blind spots are published | Review with peers who will challenge the reasoning, not just approve it |
-| **Writing only when asked** | The principal's writing is reactive — only produced when an executive requests it | Proactive: the principal identifies topics that need organizational thinking and writes before being asked |
+| **Writing only when asked** | The principal's writing is reactive, only produced when an executive requests it | Proactive: the principal identifies topics that need organizational thinking and writes before being asked |
 | **Invisible writing** | The document is not discoverable; nobody knows it exists | Publish with fanfare; link from wikis, ADR templates, and onboarding materials |
 
 ## Success Indicators
 
 - The principal's writing is cited in ADRs, design reviews, and investment cases
 - The annual technology letter is read by candidates during the interview process
-- White papers are referenced by external parties — industry analysts, partners, peers
+- White papers are referenced by external parties: industry analysts, partners, peers
 - Writing is proactive: the principal publishes before being asked
 - Documents written two years ago are still cited and still read as current
 
@@ -160,4 +160,4 @@ The review process is not consensus-seeking — the principal is the author and 
 
 ## Summary
 
-Writing for organizational impact is the principal's influence made durable. The portfolio — white papers, strategy memos, technology position papers, and the annual technology letter — shapes technical direction through documents cited for years after publication. Each artifact has a defined structure, a single primary audience, and a recommendation or thesis on the first page. The writing is reviewed by challengers, not just approvers; it is self-contained for readers two years from now; and it is proactive — the principal writes not just when asked, but when the organization needs thinking it does not yet know it needs.
+Writing for organizational impact is the principal's influence made durable. The portfolio (white papers, strategy memos, technology position papers, and the annual technology letter) shapes technical direction through documents cited for years after publication. Each artifact has a defined structure, a single primary audience, and a recommendation or thesis on the first page. The writing is reviewed by challengers, not just approvers; it is self-contained for readers two years from now; and it is proactive: the principal writes not just when asked, but when the organization needs thinking it does not yet know it needs.

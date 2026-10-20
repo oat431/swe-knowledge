@@ -15,7 +15,7 @@ tags:
 
 # Writing as Scaling
 
-> **Core skill:** Making thinking reusable in documents — proposals, strategies, postmortems, standards, guides — so the org reads without you present.
+> **Core skill:** Making thinking reusable in documents (proposals, strategies, postmortems, standards, guides) so the org reads without you present.
 
 ## Why This Matters
 
@@ -57,7 +57,7 @@ Templates are the org's accumulated writing judgment:
 | Standard template | The adoption structure that spreads |
 | Review checklist | The criteria the org has learned to apply |
 
-The staff move is not writing every document — it is writing the templates that make everyone's documents good. A template that forces the decision, the options, and the cost is worth a hundred documents you could have written yourself.
+The staff move is not writing every document; it is writing the templates that make everyone's documents good. A template that forces the decision, the options, and the cost is worth a hundred documents you could have written yourself.
 
 ## Encouraging a Writing Culture
 
@@ -82,7 +82,7 @@ The bar for every staff document: would a new senior understand it in one pass?
 | **Context test** | Does it stand alone, or does it assume the meeting? |
 | **Six-month test** | Would it make sense to someone who missed all context? |
 
-The document that fails these tests is not too long — it is too inside. Rewrite for the new senior; the experts will still understand, and the org gains a reader.
+The document that fails these tests is not too long; it is too inside. Rewrite for the new senior; the experts will still understand, and the org gains a reader.
 
 ## Archiving and Findability
 
@@ -99,6 +99,7 @@ Writing that cannot be found does not exist:
 Findability is the quiet half of writing as scaling. A brilliant proposal that nobody can locate scaled to exactly one reader.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     WRITE["Write the decision"] --> STRUCTURE["Structure for the reader"]
     STRUCTURE --> TEMPLATE["Templates encode the pattern"]
@@ -171,7 +172,7 @@ flowchart TD
 - [[02_Judgment_Transfer]]: writing as the visibility mechanism
 - [[03_Communities_of_Practice]]: artifacts as the community's product
 - [[07_Knowledge_Continuity]]: documents as the continuity backbone
-- [[03_Technical_Strategy/00_overview|Technical Strategy]]: strategies as documents
+- [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy]]: strategies as documents
 
 ## Summary
 

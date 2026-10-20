@@ -27,6 +27,7 @@ Influence without authority is the defining capability of senior engineers. It's
 ## The Influence Model
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     Credibility[Credibility<br/>Technical excellence<br/>Consistent delivery] --> Trust
     Trust[Trust<br/>Reliability<br/>Honesty<br/>Follow-through] --> Relationships
@@ -34,11 +35,11 @@ flowchart TD
     Influence[Influence<br/>Ability to guide decisions<br/>Shape outcomes] --> Impact
     Impact[Impact<br/>Technical direction<br/>Organizational change]
     
-    style Credibility fill:#e1f5ff
-    style Trust fill:#fff4e1
-    style Relationships fill:#f0e1ff
-    style Influence fill:#e1ffe1
-    style Impact fill:#ffe1e1
+    style Credibility fill:#00B5FF,stroke:#000000,color:#000000
+    style Trust fill:#FFBE00,stroke:#000000,color:#000000
+    style Relationships fill:#1FB8AB,stroke:#000000,color:#000000
+    style Influence fill:#1FB854,stroke:#000000,color:#000000
+    style Impact fill:#FF5861,stroke:#000000,color:#000000
 ```
 
 ## Building Credibility

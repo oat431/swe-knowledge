@@ -31,6 +31,7 @@ A well-crafted business case is the bridge between technical opportunity and bus
 ## Business Case Structure
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     A[Executive Summary] --> B[Problem Statement]
     B --> C[Proposed Solution]
@@ -263,7 +264,7 @@ The AI platform balances speed, cost, and capability.
 ### Sensitivity Analysis
 | Scenario | 3-Year NPV | Change |
 |----------|------------|--------|
-| Base case | $4,873K | - |
+| Base case | $4,873K | N/A |
 | 20% lower benefits | $3,680K | -24% |
 | 20% higher costs | $4,611K | -5% |
 | 6-month delay | $4,386K | -10% |
@@ -549,7 +550,7 @@ Before submitting a business case:
 - [[02_Build_vs_Buy_Decisions|Build vs Buy Decisions]]: Common business case scenario
 - [[03_Technical_Debt_ROI|Technical Debt ROI]]: Business case for refactoring
 - [[04_Total_Cost_of_Ownership|Total Cost of Ownership]]: Input to cost estimates
-- [[06_Communication_and_Influence/02_Stakeholder_Communication|Stakeholder Communication]]: Presenting the business case
+- [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/02_Stakeholder_Communication|Stakeholder Communication]]: Presenting the business case
 
 ## Summary
 

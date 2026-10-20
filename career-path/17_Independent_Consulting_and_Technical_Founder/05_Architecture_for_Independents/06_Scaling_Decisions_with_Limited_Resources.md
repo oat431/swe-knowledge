@@ -16,15 +16,15 @@ tags:
 
 # Scaling Decisions with Limited Resources
 
-> **Core skill:** The independent distinguishes real scaling pressure from premature optimization — scaling only where revenue, clients, or risk justify the investment, and preferring subtraction over addition until the evidence forces a decision.
+> **Core skill:** The independent distinguishes real scaling pressure from premature optimization: scaling only where revenue, clients, or risk justify the investment, and preferring subtraction over addition until the evidence forces a decision.
 
 ## Why This Matters
 
-Scaling is where technical ambition and business reality most often diverge for independents. The engineer in the room sees load graphs and wants headroom; the business in the room has revenue, margin, and attention as its scarce resources. Every scaling investment — more infrastructure, more services, more automation — buys capacity at the price of complexity, and complexity is exactly what a solo operator can least afford. The skill is not learning how to scale; it is learning to see the difference between a system that is genuinely constrained and one that merely looks busy.
+Scaling is where technical ambition and business reality most often diverge for independents. The engineer in the room sees load graphs and wants headroom; the business in the room has revenue, margin, and attention as its scarce resources. Every scaling investment (more infrastructure, more services, more automation) buys capacity at the price of complexity, and complexity is exactly what a solo operator can least afford. The skill is not learning how to scale; it is learning to see the difference between a system that is genuinely constrained and one that merely looks busy.
 
-Real scaling pressure has signatures: latency that breaches what clients notice, error rates that rise with load, queues that grow faster than they drain, costs that multiply faster than revenue, or operational work that crowds out delivery. Each of these can be measured. Imagined scaling pressure, by contrast, arrives as a feeling — "this will never hold up" — usually triggered by a growth story rather than a growth chart. The independent's discipline is to demand the measurement before spending the money.
+Real scaling pressure has signatures: latency that breaches what clients notice, error rates that rise with load, queues that grow faster than they drain, costs that multiply faster than revenue, or operational work that crowds out delivery. Each of these can be measured. Imagined scaling pressure, by contrast, arrives as a feeling ("this will never hold up"), usually triggered by a growth story rather than a growth chart. The independent's discipline is to demand the measurement before spending the money.
 
-When pressure is real, the response should follow a fixed order: first subtract waste (unbounded retention, chatty calls, oversized payloads), then tune what exists (indexes, caching, batching), and only then add capacity or components. Subtraction and tuning are cheap, reversible, and often sufficient; addition is expensive, sticky, and should be the last resort that evidence endorses. Scale by subtraction first — it is the only scaling lever that also makes the system simpler.
+When pressure is real, the response should follow a fixed order: first subtract waste (unbounded retention, chatty calls, oversized payloads), then tune what exists (indexes, caching, batching), and only then add capacity or components. Subtraction and tuning are cheap, reversible, and often sufficient; addition is expensive, sticky, and should be the last resort that evidence endorses. Scale by subtraction first. It is the only scaling lever that also makes the system simpler.
 
 ## Signals of Real Scaling Pressure
 
@@ -61,6 +61,7 @@ When pressure is real, the response should follow a fixed order: first subtract 
 ## The Scaling Decision Gate Diagram
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SIGNAL["Observe a real pressure signal"] --> VERIFY["Verify it with data not anxiety"]
     VERIFY --> SUBTRACT["Try scaling by subtraction first"]
@@ -84,7 +85,7 @@ flowchart TD
 ### Scaling Decision Memo
 
 ```markdown
-## Scaling Decision — <system>
+## Scaling Decision: <system>
 
 | Field | Value |
 |-------|-------|
@@ -121,8 +122,8 @@ flowchart TD
 - [[05_Cost_Aware_Infrastructure]]
 - [[07_Maintaining_Systems_You_Sold]]
 - [[career-path/06_Software_Architect/07_Operations_and_Infrastructure_Architecture/07_Cost_and_Capacity_Architecture|Cost and Capacity Architecture (Architect)]]
-- [[03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
 
 ## Summary
 
-Scaling decisions with limited resources are business decisions wearing architectural clothes: verify pressure with data, weigh it against revenue and client commitments, subtract and tune before adding, and keep every investment small, reversible, and operable by one person. The independent who scales only under evidence preserves the two things scarcity demands most — simplicity and attention.
+Scaling decisions with limited resources are business decisions wearing architectural clothes: verify pressure with data, weigh it against revenue and client commitments, subtract and tune before adding, and keep every investment small, reversible, and operable by one person. The independent who scales only under evidence preserves the two things scarcity demands most: simplicity and attention.

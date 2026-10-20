@@ -16,13 +16,13 @@ tags:
 
 # Trade-Off Analysis Structured
 
-> **Core skill:** The architect makes trade-off reasoning explicit and auditable — using utility trees to prioritize quality attribute scenarios, decision matrices to weigh options against criteria, and sensitivity analysis to test whether conclusions hold when assumptions change.
+> **Core skill:** The architect makes trade-off reasoning explicit and auditable, using utility trees to prioritize quality attribute scenarios, decision matrices to weigh options against criteria, and sensitivity analysis to test whether conclusions hold when assumptions change.
 
 ## Why This Matters
 
-Every architecture decision is a trade-off. Choosing microservices over a monolith trades deployment independence for operational complexity. Choosing synchronous over asynchronous communication trades simplicity for resilience. The problem is not that trade-offs exist — it is that they are usually made implicitly, defended by assertion, and accepted by default. "We chose X because it seemed right" is not analysis; it is preference dressed as judgment.
+Every architecture decision is a trade-off. Choosing microservices over a monolith trades deployment independence for operational complexity. Choosing synchronous over asynchronous communication trades simplicity for resilience. The problem is not that trade-offs exist. It is that they are usually made implicitly, defended by assertion, and accepted by default. "We chose X because it seemed right" is not analysis; it is preference dressed as judgment.
 
-Structured trade-off analysis makes the architect's reasoning inspectable. A reviewer can see the criteria, the weights, the scores, and the sensitivity — and can challenge any of them. This does not make the decision "correct" in some objective sense; no weighting scheme is free of judgment. But it makes the judgment visible and contestable, which is the foundation of architecture credibility.
+Structured trade-off analysis makes the architect's reasoning inspectable. A reviewer can see the criteria, the weights, the scores, and the sensitivity, and can challenge any of them. This does not make the decision "correct" in some objective sense; no weighting scheme is free of judgment. But it makes the judgment visible and contestable, which is the foundation of architecture credibility.
 
 ## Utility Trees
 
@@ -51,11 +51,11 @@ Quality Attributes
 
 | | Low Difficulty | Medium Difficulty | High Difficulty |
 |---|---|---|---|
-| **High Importance** | Do first; low hanging fruit | Core focus of architecture effort | **Highest risk — demands most evaluation attention** |
+| **High Importance** | Do first; low hanging fruit | Core focus of architecture effort | **Highest risk: demands most evaluation attention** |
 | **Medium Importance** | Do if time allows | Worth effort but not blocking | Revisit requirements; is it really medium importance? |
 | **Low Importance** | Do only if trivial | Skip unless regulatory | Skip; not worth architecture attention |
 
-The (High, High) quadrant — high importance, high difficulty — is where the architecture either succeeds or fails. These scenarios should consume the majority of evaluation time.
+The (High, High) quadrant (high importance, high difficulty) is where the architecture either succeeds or fails. These scenarios should consume the majority of evaluation time.
 
 ## Decision Matrices
 
@@ -78,6 +78,7 @@ When comparing architectural options against weighted criteria, a decision matri
 Weights are always subjective. The architect must test whether the conclusion holds when weights change:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     BASE["Base Result: CockroachDB wins (153)"] --> WEIGHT_SWAP["Swap top weight: make Multi-region writes weight 7, ACID weight 8"]
     WEIGHT_SWAP --> RECALC["Recalculate: PostgreSQL 139, CockroachDB 139"]
@@ -88,9 +89,9 @@ flowchart TD
 
 | Sensitivity Test | What It Reveals |
 |-----------------|-----------------|
-| **Weight swap** | Swap the top two criteria weights — does the winner change? If yes, validate those weights carefully |
-| **Score challenge** | Lower the winner's score on its strongest criterion by 1 point — does the winner change? If yes, validate that score |
-| **Criteria removal** | Remove any single criterion — does the winner change? If yes, the decision is sensitive to that criterion |
+| **Weight swap** | Swap the top two criteria weights: does the winner change? If yes, validate those weights carefully |
+| **Score challenge** | Lower the winner's score on its strongest criterion by 1 point: does the winner change? If yes, validate that score |
+| **Criteria removal** | Remove any single criterion: does the winner change? If yes, the decision is sensitive to that criterion |
 | **Threshold test** | What would it take for the second-place option to win? If the gap is small, any reasonable disagreement flips the decision |
 
 ## When Utility Trees Over-Complicate
@@ -132,11 +133,11 @@ Structured methods have a cost. For decisions where the trade-off is clear, the 
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
-| **Criteria designed to favor a preferred option** | "We need ACID and JSON support" when only PostgreSQL has both — the decision was made before the matrix | Define criteria before evaluating options; have a stakeholder review the criteria list |
-| **Weights treated as objective** | Weights are presented as facts — "performance weight = 8" without saying who decided that | State who assigned weights and on what basis; sensitivity-test to see if reasonable weight changes flip the result |
-| **Score inflation** | Every option scores 4 or 5 — the matrix says they are all good, which means it says nothing | Define score anchors: 1 = "does not meet", 3 = "meets with effort", 5 = "exceeds"; force distribution |
+| **Criteria designed to favor a preferred option** | "We need ACID and JSON support" when only PostgreSQL has both; the decision was made before the matrix | Define criteria before evaluating options; have a stakeholder review the criteria list |
+| **Weights treated as objective** | Weights are presented as facts, "performance weight = 8" without saying who decided that | State who assigned weights and on what basis; sensitivity-test to see if reasonable weight changes flip the result |
+| **Score inflation** | Every option scores 4 or 5; the matrix says they are all good, which means it says nothing | Define score anchors: 1 = "does not meet", 3 = "meets with effort", 5 = "exceeds"; force distribution |
 | **No sensitivity analysis** | Decision is presented as clear-cut when a one-point score change on any criterion would flip it | Always sensitivity-test: swap weights, challenge scores, remove criteria |
-| **Analysis as decision** | Utility tree or matrix is treated as the answer — architect stops thinking | Structured analysis informs judgment; it does not replace it |
+| **Analysis as decision** | Utility tree or matrix is treated as the answer; architect stops thinking | Structured analysis informs judgment; it does not replace it |
 | **Over-analysis for low-stakes decisions** | 2-hour utility tree session for a reversible technology choice with one obvious winner | Match analysis depth to decision consequence; state in the ADR when lightweight was chosen |
 
 ## Success Indicators
@@ -151,10 +152,10 @@ Structured methods have a cost. For decisions where the trade-off is clear, the 
 
 - [[01_Architecture_Evaluation_Methods]]
 - [[04_Risk_Identification_in_Architecture]]
-- [[02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]
+- [[career-path/06_Software_Architect/02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]
 - [[career-path/02_Senior_Software_Engineer/08_Engineering_Economics_and_Trade_Offs/06_Trade_Off_Evaluation|Trade Off Evaluation (Senior)]]
 - [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/01_Writing_Proposals_That_Get_Adopted|Writing Proposals That Get Adopted (Staff)]]
 
 ## Summary
 
-Structured trade-off analysis makes architectural reasoning inspectable. Utility trees organize quality scenarios by importance and difficulty, identifying the high-priority, high-difficulty quadrant where architecture succeeds or fails. Decision matrices make option comparison explicit with weighted criteria and scored alternatives. Sensitivity analysis tests whether conclusions survive reasonable changes to weights and scores. The architect's discipline is knowing when structured methods add value — and when a clear trade-off stated in an ADR is sufficient.
+Structured trade-off analysis makes architectural reasoning inspectable. Utility trees organize quality scenarios by importance and difficulty, identifying the high-priority, high-difficulty quadrant where architecture succeeds or fails. Decision matrices make option comparison explicit with weighted criteria and scored alternatives. Sensitivity analysis tests whether conclusions survive reasonable changes to weights and scores. The architect's discipline is knowing when structured methods add value, and when a clear trade-off stated in an ADR is sufficient.

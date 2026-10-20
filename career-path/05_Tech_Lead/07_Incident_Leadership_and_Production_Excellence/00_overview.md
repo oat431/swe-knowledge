@@ -15,11 +15,11 @@ tags:
 
 # Incident Leadership and Production Excellence
 
-> **Core capability:** The tech lead leads the team through production failures — commanding the response, running blameless learning, and converting incidents into systemic improvement — and builds the reliability practices that prevent repeats.
+> **Core capability:** The tech lead leads the team through production failures (commanding the response, running blameless learning, and converting incidents into systemic improvement) and builds the reliability practices that prevent repeats.
 
 ## Why This Matters
 
-Incidents are the moments that define a tech lead. Everyone is watching, information is incomplete, pressure is high, and the system you steward is failing in public. Individual engineers respond to incidents; tech leads **lead** them — establishing command, dividing the work, deciding when to mitigate and when to diagnose, and speaking to stakeholders so responders can work.
+Incidents are the moments that define a tech lead. Everyone is watching, information is incomplete, pressure is high, and the system you steward is failing in public. Individual engineers respond to incidents; tech leads **lead** them: establishing command, dividing the work, deciding when to mitigate and when to diagnose, and speaking to stakeholders so responders can work.
 
 After the smoke clears, the bigger job begins: turning the incident into durable improvement without blaming the humans nearest the failure. Teams that learn from incidents get reliability compounding; teams that punish people get hidden incidents.
 
@@ -38,6 +38,7 @@ After the smoke clears, the bigger job begins: turning the incident into durable
 ## The Incident Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     DETECT["Detect"] --> TRIAGE["Triage and declare"]
     TRIAGE --> COMMAND["Lead the response"]
@@ -49,7 +50,7 @@ flowchart LR
     PREVENT --> DETECT
 ```
 
-Leadership spans the whole lifecycle — not only the firefight.
+Leadership spans the whole lifecycle, not only the firefight.
 
 ## What Changes from Senior to Tech Lead
 
@@ -66,7 +67,7 @@ Leadership spans the whole lifecycle — not only the firefight.
 ### Production Excellence Checklist
 
 - [ ] Incident roles (command, comms, scribe) are pre-assigned and practiced
-- [ ] Comms templates and cadences exist per severity — written before the incident
+- [ ] Comms templates and cadences exist per severity, written before the incident
 - [ ] Every meaningful incident gets a blameless postmortem with systemic actions
 - [ ] Remediation items live in a register with owners and close on review
 - [ ] On-call is humane: even load, actionable pages, shadow shifts for new joiners
@@ -86,17 +87,17 @@ Leadership spans the whole lifecycle — not only the firefight.
 
 - Incidents have clear command from minute one
 - Stakeholders say they knew what was happening, when
-- Postmortem actions actually close — and repeat incidents decline
+- Postmortem actions actually close, and repeat incidents decline
 - On-call is sustainable: pages are actionable and the load is even
 - The team talks about failure openly, even before it happens
 
 ## Related Capabilities
 
-- [[02_System_Ownership_and_Production_Responsibility/00_overview|System Ownership and Production Responsibility]]: the health work that prevents these moments
-- [[04_Team_Delivery_and_Execution_Leadership/00_overview|Team Delivery and Execution Leadership]]: remediation work must be delivered like any other
+- [[career-path/05_Tech_Lead/02_System_Ownership_and_Production_Responsibility/00_overview|System Ownership and Production Responsibility]]: the health work that prevents these moments
+- [[career-path/05_Tech_Lead/04_Team_Delivery_and_Execution_Leadership/00_overview|Team Delivery and Execution Leadership]]: remediation work must be delivered like any other
 - [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/04_Incident_Response|Incident Response (Senior)]]: the personal response skills this area scales to leadership
 - [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]]: the specialist path for reliability depth (SLOs, error budgets, chaos engineering)
 
 ## Summary
 
-Incident leadership is the tech lead's most visible test: command the response, mitigate for users first, communicate steadily, then convert failure into systemic improvement through blameless learning and finished remediation. Between incidents, build the practices — on-call, game days, resilience reviews — that make the next one smaller.
+Incident leadership is the tech lead's most visible test: command the response, mitigate for users first, communicate steadily, then convert failure into systemic improvement through blameless learning and finished remediation. Between incidents, build the practices (on-call, game days, resilience reviews) that make the next one smaller.

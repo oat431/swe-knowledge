@@ -16,15 +16,15 @@ tags:
 
 # Reading the Organization
 
-> **Core skill:** Building and maintaining a working map of the organization — what it is actually optimizing for, who really decides, and where influence flows — so the team is positioned before decisions harden.
+> **Core skill:** Building and maintaining a working map of the organization (what it is actually optimizing for, who really decides, and where influence flows) so the team is positioned before decisions harden.
 
 ## Why This Matters
 
-The org chart is a legal fiction. It shows reporting lines and titles, but almost nothing about how the company actually works: which priorities are real, whose opinion carries weight, which meetings produce decisions, and what your chain-up is personally measured on. Managers who navigate by the chart alone are repeatedly surprised — by budgets that evaporate, by re-orgs that come from nowhere, by priorities that shift without announcement.
+The org chart is a legal fiction. It shows reporting lines and titles, but almost nothing about how the company actually works: which priorities are real, whose opinion carries weight, which meetings produce decisions, and what your chain-up is personally measured on. Managers who navigate by the chart alone are repeatedly surprised: by budgets that evaporate, by re-orgs that come from nowhere, by priorities that shift without announcement.
 
 The map is a decision-making asset. It tells you when to ask (budget timing), what to emphasize (the language of current strategy), who to pre-wire (the real deciders), and when to stay quiet (when the wind is blowing against your ask). Teams do not suffer from their manager knowing too much about the organization; they suffer from the manager learning the rules after the game has been played.
 
-The map is never finished. People move, strategies shift, incentives change. Reading the organization is a continuous practice with a cadence — not a one-time onboarding exercise.
+The map is never finished. People move, strategies shift, incentives change. Reading the organization is a continuous practice with a cadence, not a one-time onboarding exercise.
 
 ## The Four Layers of the Map
 
@@ -54,6 +54,7 @@ Attend with a reading question: "What did I learn about how this place works?" A
 ## Building the Map Over Time
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     OBSERVE["Observe meetings and decisions"] --> HYPOTHESIZE["Form a hypothesis about the real map"]
     HYPOTHESIZE --> TEST["Test it with a small ask or prediction"]
@@ -89,7 +90,7 @@ The map's value is predictive: it should let you say "this is likely to happen" 
 ### Map Template
 
 ```markdown
-## Strategy Snapshot — [quarter]
+## Strategy Snapshot: [quarter]
 - Company priority 1: [what is being optimized]
 - Company priority 2: [what is being optimized]
 - What is being de-emphasized: [X]
@@ -132,8 +133,8 @@ The map's value is predictive: it should let you say "this is likely to happen" 
 - [[04_Managing_Up]]: your manager is a key node in the map
 - [[05_Navigating_Reorgs_and_Change]]: reading early makes change survivable
 - [[06_Cross_Org_Relationships]]: peers are map sensors
-- [[07_Manager_Communication/00_overview|Manager Communication]]: the cascade system the map feeds
+- [[career-path/11_Engineering_Manager/07_Manager_Communication/00_overview|Manager Communication]]: the cascade system the map feeds
 
 ## Summary
 
-Reading the organization means building a living map of strategy, incentives, decision flows, and informal power — and testing it against reality until it predicts. The chart tells you who reports to whom; the map tells you who decides, what wins, and when to move. Maintained on a cadence, it converts organizational surprise into advance notice.
+Reading the organization means building a living map of strategy, incentives, decision flows, and informal power, and testing it against reality until it predicts. The chart tells you who reports to whom; the map tells you who decides, what wins, and when to move. Maintained on a cadence, it converts organizational surprise into advance notice.

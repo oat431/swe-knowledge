@@ -16,15 +16,15 @@ tags:
 
 # Stakeholder Specific Architecture Views
 
-> **Core skill:** The architect maps stakeholders to their concerns and produces the minimal set of views that answers each concern — one coherent architecture, expressed as many views as the audiences require, all derived from the same underlying model.
+> **Core skill:** The architect maps stakeholders to their concerns and produces the minimal set of views that answers each concern: one coherent architecture, expressed as many views as the audiences require, all derived from the same underlying model.
 
 ## Why This Matters
 
 Stakeholders do not read architecture; they read answers to their own questions. An operations lead wants to know what to monitor and what fails first; a finance director wants to know what it costs and what it saves; a security reviewer wants to know where trust boundaries fall and what crosses them; a delivery lead wants to know what to build first. None of them will extract those answers from a component diagram, and none of them should have to.
 
-View selection is therefore translation, and it is the architect's craft. The same architecture supports a context view for scope, capability views for business change, data views for ownership and flow, application views for structure and integration, technology views for platforms and hosting, security views for boundaries and controls, and roadmap views for timing. The discipline is choosing the smallest set that answers the concerns in front of the architect — not producing every view for every meeting.
+View selection is therefore translation, and it is the architect's craft. The same architecture supports a context view for scope, capability views for business change, data views for ownership and flow, application views for structure and integration, technology views for platforms and hosting, security views for boundaries and controls, and roadmap views for timing. The discipline is choosing the smallest set that answers the concerns in front of the architect, not producing every view for every meeting.
 
-The consistency between views is what makes the approach credible. Each view answers its question fully enough to be used; all views remain traceable to one model. When a stakeholder asks a question that lies between views, the architect can show that the views agree — and when the underlying architecture changes, every affected view moves with it.
+The consistency between views is what makes the approach credible. Each view answers its question fully enough to be used; all views remain traceable to one model. When a stakeholder asks a question that lies between views, the architect can show that the views agree, and when the underlying architecture changes, every affected view moves with it.
 
 ## Stakeholder Concern Mapping
 
@@ -65,6 +65,7 @@ The consistency between views is what makes the approach credible. Each view ans
 ## From Concerns to Views
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CONCERNS["Stakeholder concerns"] --> SELECT["Select viewpoints and views"]
     SELECT["Select viewpoints and views"] --> PRODUCE["Produce views from a single model"]
@@ -72,7 +73,7 @@ flowchart LR
     REVIEW["Review with the stakeholders"] --> MAINTAIN["Maintain and version the views"]
 ```
 
-Each review with a stakeholder group validates the view against the concern it was built to answer — and surfaces the next concern worth designing a view for.
+Each review with a stakeholder group validates the view against the concern it was built to answer, and surfaces the next concern worth designing a view for.
 
 ## Consistency across Views
 
@@ -97,7 +98,7 @@ Each review with a stakeholder group validates the view against the concern it w
 ### View Register
 
 ```markdown
-## View Register — <architecture or landscape>
+## View Register: <architecture or landscape>
 
 | View | Concern Answered | Audience | Owner | Last Updated | Trigger to Update |
 |------|------------------|----------|-------|--------------|-------------------|
@@ -120,16 +121,16 @@ Each review with a stakeholder group validates the view against the concern it w
 - Each stakeholder group works from views built for its concerns
 - Audiences use the views to make decisions without a live architect narration
 - A change to the architecture visibly updates every affected view
-- The view register stays small and current — additions are justified by a concern
+- The view register stays small and current: additions are justified by a concern
 - Stakeholders surface new concerns, which become new views rather than misunderstandings
 
 ## Related Topics
 
 - [[02_Architecture_Documentation_at_Enterprise_Scale]]
 - [[05_Bridging_Business_and_Technical_Language]]
-- [[01_Business_Analysis_and_Capability_Mapping/00_overview|Business Analysis and Capability Mapping]]
+- [[career-path/15_Solutions_and_Enterprise_Architect/01_Business_Analysis_and_Capability_Mapping/00_overview|Business Analysis and Capability Mapping]]
 - [[career-path/06_Software_Architect/03_Architecture_Description_and_Views/00_overview|Architecture Description and Views (Architect)]]
 
 ## Summary
 
-Stakeholder specific architecture views are the core translation device of the architect: map the audiences, name their concerns, and produce the minimal set of views — context, capability, data, application, technology, security, roadmap — that answers each concern, all derived from one coherent model. Views are validated in use, maintained with owners, and kept consistent, so that every audience reads its own view and arrives at the same architecture.
+Stakeholder specific architecture views are the core translation device of the architect: map the audiences, name their concerns, and produce the minimal set of views (context, capability, data, application, technology, security, roadmap) that answers each concern, all derived from one coherent model. Views are validated in use, maintained with owners, and kept consistent, so that every audience reads its own view and arrives at the same architecture.

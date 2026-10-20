@@ -16,15 +16,15 @@ tags:
 
 # Architecture Documentation at Enterprise Scale
 
-> **Core skill:** The architect keeps architecture documentation usable across a large organization — layered detail, clear ownership, living artifacts tied to decisions — so the documentation is referenced in daily work rather than completed once and archived.
+> **Core skill:** The architect keeps architecture documentation usable across a large organization (layered detail, clear ownership, living artifacts tied to decisions) so the documentation is referenced in daily work rather than completed once and archived.
 
 ## Why This Matters
 
-At enterprise scale the documentation problem is not authorship, it is findability and freshness. An enterprise generates thousands of pages of architecture material a year, and most of it decays within months: written for a moment, stored somewhere plausible, and superseded silently. Scale punishes exhaustive documentation hardest — the bigger the manual, the faster it goes stale and the less anyone trusts it.
+At enterprise scale the documentation problem is not authorship, it is findability and freshness. An enterprise generates thousands of pages of architecture material a year, and most of it decays within months: written for a moment, stored somewhere plausible, and superseded silently. Scale punishes exhaustive documentation hardest: the bigger the manual, the faster it goes stale and the less anyone trusts it.
 
 The working answer is layered documentation, each layer with its own audience and update cadence: principles that change rarely, a landscape view that describes the estate at a point in time, domain and solution detail where the work happens, decision records that explain why, and standards that guide choices. Each layer serves a question; none attempts to serve all questions. The architect curates the layers and their connections rather than trying to write everything.
 
-What makes documentation live is use. Documents referenced by real processes — onboarding, design reviews, procurement questions, audit preparation — get corrected when they drift, because somebody notices and cares. Documents that exist only for completeness have no users and therefore no maintenance. The architect designs documentation to be consumed: clear entry points, consistent templates, owned pages, and links from the workflows that depend on them.
+What makes documentation live is use. Documents referenced by real processes (onboarding, design reviews, procurement questions, audit preparation) get corrected when they drift, because somebody notices and cares. Documents that exist only for completeness have no users and therefore no maintenance. The architect designs documentation to be consumed: clear entry points, consistent templates, owned pages, and links from the workflows that depend on them.
 
 ## Documentation Layers
 
@@ -60,6 +60,7 @@ What makes documentation live is use. Documents referenced by real processes —
 ## The Documentation Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CREATE["Create or update an architecture artifact"] --> REVIEW["Review and approve"]
     REVIEW["Review and approve"] --> PUBLISH["Publish to the shared repository"]
@@ -72,7 +73,7 @@ flowchart LR
 
 | Question | Guidance |
 |----------|----------|
-| Who will read this artifact, and for what decision? | No reader, no decision — do not write it yet |
+| Who will read this artifact, and for what decision? | No reader, no decision: do not write it yet |
 | What is the smallest version that answers the question? | Prefer one page and a diagram over a book |
 | Where will it live, and who owns it? | Assign repository location and owner before writing |
 | What event will make it outdated? | Record the trigger; schedule the review then |
@@ -126,10 +127,10 @@ flowchart LR
 ## Related Topics
 
 - [[01_Stakeholder_Specific_Architecture_Views]]
-- [[03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]
+- [[career-path/15_Solutions_and_Enterprise_Architect/03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]
 - [[07_Architecture_Advocacy_and_Enablement]]
 - [[career-path/06_Software_Architect/03_Architecture_Description_and_Views/00_overview|Architecture Description and Views (Architect)]]
 
 ## Summary
 
-Architecture documentation at enterprise scale succeeds through layers, ownership, and use: principles, landscape, domain, decision, and standards artifacts each answering their audience's questions; owners and update triggers keeping them fresh; and real workflows — onboarding, reviews, audits — referencing them so drift is noticed. The architect curates a living system of knowledge, because at scale the alternative is a library that is technically correct about a landscape that no longer exists.
+Architecture documentation at enterprise scale succeeds through layers, ownership, and use: principles, landscape, domain, decision, and standards artifacts each answering their audience's questions; owners and update triggers keeping them fresh; and real workflows (onboarding, reviews, audits) referencing them so drift is noticed. The architect curates a living system of knowledge, because at scale the alternative is a library that is technically correct about a landscape that no longer exists.

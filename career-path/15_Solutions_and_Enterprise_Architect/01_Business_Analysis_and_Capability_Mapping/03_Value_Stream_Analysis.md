@@ -15,11 +15,11 @@ tags:
 
 # Value Stream Analysis
 
-> **Core skill:** Mapping how value flows through the organization to a stakeholder — the stages it passes through, the capabilities that enable each stage, and where value is created, delayed, or lost.
+> **Core skill:** Mapping how value flows through the organization to a stakeholder: the stages it passes through, the capabilities that enable each stage, and where value is created, delayed, or lost.
 
 ## Why This Matters
 
-Capability maps show what the business can do; value streams show why it matters. A value stream is the end-to-end sequence of activity that takes a trigger — a customer application, an order, a claim — and converts it into value for a specific stakeholder. Analyzing it reveals what no org chart or system diagram can: where time disappears, where handoffs break, and where technology enables or obstructs the flow.
+Capability maps show what the business can do; value streams show why it matters. A value stream is the end-to-end sequence of activity that takes a trigger (a customer application, an order, a claim) and converts it into value for a specific stakeholder. Analyzing it reveals what no org chart or system diagram can: where time disappears, where handoffs break, and where technology enables or obstructs the flow.
 
 For the architect, value stream analysis converts vague pain into located pain. "Onboarding is too slow" becomes "six of the twelve days are spent waiting between three handoffs, two of which cross system boundaries." That precision changes everything downstream: it tells the business case where to aim, tells capability assessment which capabilities underperform, and tells solution design which integration points matter to the flow.
 
@@ -49,11 +49,12 @@ Value streams cross organizational boundaries, which is exactly why they surface
 | **Pain points** | Delays, rework, manual steps, failures | Prioritizes improvement candidates |
 | **Metrics** | Lead time, process time, first-time-right, cost | Quantifies baseline and target |
 
-A stage that adds no value — pure inspection, waiting, or re-keying — is a candidate for elimination before any technology is discussed. The architect who proposes automation for a step that should not exist has solved the wrong problem at textbook expense.
+A stage that adds no value (pure inspection, waiting, or re-keying) is a candidate for elimination before any technology is discussed. The architect who proposes automation for a step that should not exist has solved the wrong problem at textbook expense.
 
 ## From Value Stream to Architecture
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     TRIGGER["Customer trigger"] --> STAGES["Value stream stages"]
     STAGES["Value stream stages"] --> CAPS["Enabling capabilities"]
@@ -77,7 +78,7 @@ The analysis produces a three-layer trace: each stage depends on capabilities, e
 - [ ] The stream has one named trigger and one primary stakeholder
 - [ ] Stages are defined at decision-relevant granularity, not as a task inventory
 - [ ] Each stage is mapped to enabling capabilities and systems
-- [ ] Pain points are evidenced — observed, measured, or reported with frequency
+- [ ] Pain points are evidenced, observed, measured, or reported with frequency
 - [ ] Baseline metrics are captured before improvement is proposed
 - [ ] Improvement candidates are ranked by flow impact, not by system ownership
 - [ ] The map is reviewed with stage owners across organizational boundaries
@@ -121,9 +122,9 @@ Improvement candidates: <ranked list with expected flow impact>
 - [[01_Business_Needs_Analysis]]: needs often originate as pain located in a value stream
 - [[02_Capability_Mapping]]: capabilities are assessed where they enable critical streams
 - [[07_Business_Architecture_Domain]]: value streams as a core business architecture technique
-- [[06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: stream bottlenecks sequence transformation
+- [[career-path/15_Solutions_and_Enterprise_Architect/06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: stream bottlenecks sequence transformation
 - [[career-path/14_Product_Manager/00_overview|Product Manager]]: the customer-value lens on the same flow
 
 ## Summary
 
-Value stream analysis maps how value actually flows to a stakeholder — trigger, stages, capabilities, systems — and measures where time, quality, and cost are lost. It locates pain that capability maps only imply, links flow bottlenecks to the capabilities and systems that enable them, and forces improvement proposals to prove flow impact with baseline metrics. For the architect, the value stream is the evidence layer between business need and solution design: it shows which changes matter to the customer's experience of value, and it prevents technology investment from optimizing steps that should not exist at all.
+Value stream analysis maps how value actually flows to a stakeholder (trigger, stages, capabilities, systems) and measures where time, quality, and cost are lost. It locates pain that capability maps only imply, links flow bottlenecks to the capabilities and systems that enable them, and forces improvement proposals to prove flow impact with baseline metrics. For the architect, the value stream is the evidence layer between business need and solution design: it shows which changes matter to the customer's experience of value, and it prevents technology investment from optimizing steps that should not exist at all.

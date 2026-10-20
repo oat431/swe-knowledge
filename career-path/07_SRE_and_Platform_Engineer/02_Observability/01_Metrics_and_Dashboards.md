@@ -81,6 +81,7 @@ The four golden signals provide a universal view of service health:
 | **Saturation** | CPU, memory, disk | >80% utilization |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     LATENCY["Latency\n(how fast)"] --> DASHBOARD["Golden Signals\nDashboard"]
     TRAFFIC["Traffic\n(how much)"] --> DASHBOARD
@@ -159,7 +160,7 @@ Examples:
 - [[02_Structured_Logging]] : logs provide context for metrics
 - [[03_Distributed_Tracing]] : traces show request flow across services
 - [[04_Alerting_Strategy]] : alerts are based on metrics
-- [[01_Service_Objectives/01_SLI_Design]] : SLIs are built from metrics
+- [[career-path/07_SRE_and_Platform_Engineer/01_Service_Objectives/01_SLI_Design]] : SLIs are built from metrics
 - [[software-engineering-note/02_Software_Architecture/Microservice/05 Observability/051 Logging & Monitoring]] : logging and monitoring foundations
 
 ## Key Takeaways

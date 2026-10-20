@@ -20,7 +20,7 @@ tags:
 
 ## Why This Is a Senior Skill
 
-A mid-level engineer adds a few examples when a prompt fails and calls it done. A senior engineer treats examples as a curated dataset with the same hygiene as training data: they encode policy, they drift, they consume budget, and they must be selected for the request at hand — not for the demo they were written on.
+A mid-level engineer adds a few examples when a prompt fails and calls it done. A senior engineer treats examples as a curated dataset with the same hygiene as training data: they encode policy, they drift, they consume budget, and they must be selected for the request at hand, not for the demo they were written on.
 
 Reasoning is a tool with a cost, not a default. Knowing when to elicit it, when to show it, and when to skip it entirely is the difference between a prompt suite and a token furnace.
 
@@ -71,11 +71,11 @@ Reasoning is a tool with a cost, not a default. Knowing when to elicit it, when 
 
 **Select exemplars per request instead of shipping one static set.** Static examples underperform when traffic is heterogeneous; embedding and retrieving exemplars by similarity to the incoming request lets one template serve many behaviors. The retrieval machinery is area 01's; the decision that examples are data worth retrieving is this area's.
 
-**Show the refusal, not just the success.** An exemplar where the model declines — "I don't have that information" — teaches scope boundaries more durably than a rule, because the model sees exactly how to say no while staying in persona.
+**Show the refusal, not just the success.** An exemplar where the model declines ("I don't have that information") teaches scope boundaries more durably than a rule, because the model sees exactly how to say no while staying in persona.
 
 **Elicit reasoning only when the task genuinely needs it.** A price lookup or schema-fill needs an output contract, not "think step by step". Reasoning on every call burns tokens and latency and can even introduce errors through wrong intermediate steps. Match the technique to the task shape.
 
-**Prefer reasoning-native models for genuinely hard multi-step work.** Where a base model needs an elaborate CoT scaffold, a reasoning model internalizes the same effect behind an effort dial. The senior move is knowing which lever your provider actually gives you — model choice itself belongs to [[career-path/18_Applied_AI_Engineer/05_Model_and_Inference_Operations/00_overview|Model and Inference Operations]].
+**Prefer reasoning-native models for genuinely hard multi-step work.** Where a base model needs an elaborate CoT scaffold, a reasoning model internalizes the same effect behind an effort dial. The senior move is knowing which lever your provider actually gives you; model choice itself belongs to [[career-path/18_Applied_AI_Engineer/05_Model_and_Inference_Operations/00_overview|Model and Inference Operations]].
 
 **Measure the marginal value of each technique before adopting it.** Every technique costs tokens, latency, or both; the only honest justification is an eval delta or a production metric ([[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability]]). If self-consistency does not lift success rate, drop it.
 
@@ -85,7 +85,7 @@ Benchmark technique choices on one real task:
 1. Pick a production task and classify its shape: simple lookup, format-sensitive, or multi-step
 2. Build a 20-case test set from real traffic with expected outputs
 3. Run the current prompt as a baseline and record success rate and tokens per call
-4. Add 2–3 curated exemplars — including one refusal — and re-run
+4. Add 2–3 curated exemplars (including one refusal) and re-run
 5. Add zero-shot CoT and re-run; compare success, tokens, and latency against the baseline
 6. If the task is multi-step, run self-consistency with N=3 and check whether agreement improves outcomes
 7. Write a one-paragraph decision on which technique wins at what cost, and codify the choice in the template
@@ -110,7 +110,7 @@ Benchmark technique choices on one real task:
 ## Key Takeaways
 
 - Examples are data: curated, diverse, versioned, and selected per request
-- Show the refusal — boundaries are taught better than they are stated
+- Show the refusal: boundaries are taught better than they are stated
 - Reasoning is a tool with a cost, not a default; match technique to task shape
 - Reasoning-native models replace prompt scaffolding for hard tasks
 - Every technique must earn its tokens with an eval delta or a production metric

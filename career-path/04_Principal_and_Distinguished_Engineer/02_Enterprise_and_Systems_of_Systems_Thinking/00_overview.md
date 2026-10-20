@@ -14,11 +14,11 @@ tags:
 
 # Enterprise and Systems of Systems Thinking
 
-> **Core capability:** The principal engineer sees the organization as a system of systems — understanding how business units, platforms, ecosystems, and markets interact, and designing for the emergent behavior that no single team can control.
+> **Core capability:** The principal engineer sees the organization as a system of systems, understanding how business units, platforms, ecosystems, and markets interact, and designing for the emergent behavior that no single team can control.
 
 ## Why This Matters
 
-At staff level, systems thinking is a diagnostic lens: trace recurring problems to structure and incentives. At principal level, the system IS the product — the organization, its platforms, its ecosystem partners, its regulatory environment. The principal engineers a system whose components are entire departments and independent systems, where the architecture decisions are organizational, not just technical.
+At staff level, systems thinking is a diagnostic lens: trace recurring problems to structure and incentives. At principal level, the system IS the product: the organization, its platforms, its ecosystem partners, its regulatory environment. The principal engineers a system whose components are entire departments and independent systems, where the architecture decisions are organizational, not just technical.
 
 This is the layer where Conway's Law becomes Conway's Strategy: designing the organization and its systems together to produce the outcomes the business needs. The principal's contribution is seeing second-order effects nobody else has the scope to see, and acting on them before they become the next re-org.
 
@@ -37,6 +37,7 @@ This is the layer where Conway's Law becomes Conway's Strategy: designing the or
 ## The Enterprise as System
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MARKET["Market and ecosystem forces"] --> ORG["Organization: business units and functions"]
     ORG --> PLATFORMS["Platforms and shared capabilities"]
@@ -71,7 +72,7 @@ The principal's scope: the whole diagram, not any single node.
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
-| **Org chart as the system** | The system includes partners, regulators, ecosystems | Map the full system — not just reporting lines |
+| **Org chart as the system** | The system includes partners, regulators, ecosystems | Map the full system, not just reporting lines |
 | **Due diligence after the deal** | Technical risks discovered post-acquisition are expensive | Pre-deal due diligence as a repeatable process |
 | **Ignoring second-order effects** | Local optimization produces global dysfunction | Scenario planning; systemic feedback analysis |
 | **Regulation as afterthought** | Architecture designed then retrofitted for compliance | Regulation as architecture driver from inception |
@@ -85,11 +86,11 @@ The principal's scope: the whole diagram, not any single node.
 
 ## Related Capabilities
 
-- [[01_Technology_Strategy/00_overview|Technology Strategy]]: strategy built on enterprise systems understanding
-- [[03_Decision_Governance_and_Principles/00_overview|Decision Governance and Principles]]: governance that accounts for organizational dynamics
+- [[career-path/04_Principal_and_Distinguished_Engineer/01_Technology_Strategy/00_overview|Technology Strategy]]: strategy built on enterprise systems understanding
+- [[career-path/04_Principal_and_Distinguished_Engineer/03_Decision_Governance_and_Principles/00_overview|Decision Governance and Principles]]: governance that accounts for organizational dynamics
 - [[career-path/03_Staff_Engineer/05_Systems_Thinking_and_Organizational_Design/00_overview|Systems Thinking and Organizational Design (Staff)]]: the foundation this scales
 - [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions and Enterprise Architect]]: the enterprise architecture specialty
 
 ## Summary
 
-Enterprise and systems-of-systems thinking means reading the full system — organization, platforms, ecosystem, regulation — and co-designing technology and organization to produce the right emergent behavior. The principal's scope is the whole diagram; their contribution is seeing the second-order effects before they become the next crisis.
+Enterprise and systems-of-systems thinking means reading the full system (organization, platforms, ecosystem, regulation) and co-designing technology and organization to produce the right emergent behavior. The principal's scope is the whole diagram; their contribution is seeing the second-order effects before they become the next crisis.

@@ -15,15 +15,15 @@ tags:
 
 # Scope Change Management
 
-> **Core skill:** Managing scope changes through a governed process — assessing the impact of every proposed change on schedule, cost, quality, and risk, and routing the decision to the appropriate authority so that scope evolves by decision, not by drift.
+> **Core skill:** Managing scope changes through a governed process, assessing the impact of every proposed change on schedule, cost, quality, and risk, and routing the decision to the appropriate authority so that scope evolves by decision, not by drift.
 
 ## Why This Matters
 
-Scope will change. Requirements will be discovered, stakeholders will refine their needs, the business environment will shift, and technical constraints will force trade-offs. The question is not whether scope changes but whether change is governed or ungoverned. Ungoverned change is scope creep: the team absorbs "small" additions without impact assessment, the plan drifts from reality, and the project manager discovers the gap when the deadline is missed and the budget is exhausted. Governed change is scope management: every proposed change is assessed for impact, routed to the right decision-maker, and — if approved — reflected in the plan, budget, and baseline.
+Scope will change. Requirements will be discovered, stakeholders will refine their needs, the business environment will shift, and technical constraints will force trade-offs. The question is not whether scope changes but whether change is governed or ungoverned. Ungoverned change is scope creep: the team absorbs "small" additions without impact assessment, the plan drifts from reality, and the project manager discovers the gap when the deadline is missed and the budget is exhausted. Governed change is scope management: every proposed change is assessed for impact, routed to the right decision-maker, and, if approved, reflected in the plan, budget, and baseline.
 
-The project manager is not the gatekeeper of scope — governance is. The PM facilitates the process: receives change requests, coordinates impact assessment, presents the analysis to the decision-maker, and implements the decision. When the PM acts as the sole approver of scope changes, two things happen: the PM absorbs political pressure that belongs to governance, and the team bypasses the process because the PM becomes the bottleneck.
+The project manager is not the gatekeeper of scope. Governance is. The PM facilitates the process: receives change requests, coordinates impact assessment, presents the analysis to the decision-maker, and implements the decision. When the PM acts as the sole approver of scope changes, two things happen: the PM absorbs political pressure that belongs to governance, and the team bypasses the process because the PM becomes the bottleneck.
 
-Scope change management is also where the project manager protects the team. A stakeholder who asks a developer directly for "one small change" is bypassing governance — and the developer who says yes without impact assessment is absorbing work that was never planned, resourced, or scheduled. The process protects the team by making every change request visible and every addition a decision.
+Scope change management is also where the project manager protects the team. A stakeholder who asks a developer directly for "one small change" is bypassing governance, and the developer who says yes without impact assessment is absorbing work that was never planned, resourced, or scheduled. The process protects the team by making every change request visible and every addition a decision.
 
 ## The Change Control Process
 
@@ -52,6 +52,7 @@ Scope change management is also where the project manager protects the team. A s
 ## Change Request Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     REQUEST["Change request submitted by stakeholder or team member"] --> LOG["Logged in change register with unique ID"]
     LOG --> TRIAGE["Initial triage: is this in chartered scope?"]
@@ -133,7 +134,7 @@ flowchart TD
 
 ## Success Indicators
 
-- Every scope change is a decision, not drift — visible and governed
+- Every scope change is a decision, not drift: visible and governed
 - Change requests include impact assessment before they reach the decision-maker
 - The change log is reviewed regularly and its trends inform project health assessments
 - Approved changes are reflected in updated baselines within one reporting period
@@ -142,12 +143,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[01_Scope_Definition]] — the scope baseline that changes modify
-- [[02_Work_Breakdown_Structure]] — WBS updated when scope changes
-- [[04_Project_Planning_and_Baselining]] — schedule and cost baselines updated for approved changes
-- [[06_Governance_and_Change_Control/00_overview|Governance and Change Control]] — the governance framework for change decisions
-- [[01_Initiation_and_Charter/00_overview|Initiation and Charter]] — the charter defines the scope baseline
+- [[01_Scope_Definition]]: the scope baseline that changes modify
+- [[02_Work_Breakdown_Structure]]: WBS updated when scope changes
+- [[04_Project_Planning_and_Baselining]]: schedule and cost baselines updated for approved changes
+- [[career-path/13_Project_and_Program_Manager/06_Governance_and_Change_Control/00_overview|Governance and Change Control]]: the governance framework for change decisions
+- [[career-path/13_Project_and_Program_Manager/01_Initiation_and_Charter/00_overview|Initiation and Charter]]: the charter defines the scope baseline
 
 ## Summary
 
-Scope change management is the governed process that converts scope creep into scope decisions. Every proposed change is logged, assessed for impact across seven dimensions — scope, schedule, cost, quality, risk, resources, and dependencies — and routed to the appropriate decision authority. Approved changes update all baselines; rejected changes are logged with rationale; deferred changes are reassessed at the next phase gate. The project manager facilitates the process and protects the team from ungoverned additions. The discipline is not to prevent change — it is to make change visible, assessed, and decided.
+Scope change management is the governed process that converts scope creep into scope decisions. Every proposed change is logged, assessed for impact across seven dimensions (scope, schedule, cost, quality, risk, resources, and dependencies) and routed to the appropriate decision authority. Approved changes update all baselines; rejected changes are logged with rationale; deferred changes are reassessed at the next phase gate. The project manager facilitates the process and protects the team from ungoverned additions. The discipline is not to prevent change. It is to make change visible, assessed, and decided.

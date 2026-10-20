@@ -15,13 +15,13 @@ tags:
 
 # Project Audit and Compliance
 
-> **Core skill:** Preparing for and responding to project audits — maintaining audit-ready records, managing external auditor interactions, addressing findings, and ensuring project compliance with organizational, regulatory, and contractual requirements.
+> **Core skill:** Preparing for and responding to project audits, maintaining audit-ready records, managing external auditor interactions, addressing findings, and ensuring project compliance with organizational, regulatory, and contractual requirements.
 
 ## Why This Matters
 
-Projects operate within a web of compliance obligations: organizational policies, regulatory requirements, contractual commitments, industry standards, and funding conditions. An audit is the organization's mechanism for verifying that these obligations are being met — and a project that fails an audit faces consequences that range from embarrassing to existential: findings that must be remediated, funding that is suspended, contracts that are breached, or certifications that are revoked.
+Projects operate within a web of compliance obligations: organizational policies, regulatory requirements, contractual commitments, industry standards, and funding conditions. An audit is the organization's mechanism for verifying that these obligations are being met, and a project that fails an audit faces consequences that range from embarrassing to existential: findings that must be remediated, funding that is suspended, contracts that are breached, or certifications that are revoked.
 
-The project manager does not need to be a compliance expert — but the project manager must ensure that the project is audit-ready at all times: records are complete and accessible, processes are followed and documented, and compliance obligations are met and evidenced. Audit readiness is not a pre-audit scramble; it is the natural state of a well-managed project whose configuration management, change control, and decision recording disciplines are functioning.
+The project manager does not need to be a compliance expert, but the project manager must ensure that the project is audit-ready at all times: records are complete and accessible, processes are followed and documented, and compliance obligations are met and evidenced. Audit readiness is not a pre-audit scramble; it is the natural state of a well-managed project whose configuration management, change control, and decision recording disciplines are functioning.
 
 ## Types of Project Audits
 
@@ -37,7 +37,7 @@ The project manager does not need to be a compliance expert — but the project 
 
 ## Audit Readiness
 
-Audit readiness is not a pre-audit activity — it is the project's steady state:
+Audit readiness is not a pre-audit activity; it is the project's steady state:
 
 | Readiness Dimension | What It Means | Supporting Discipline |
 |---------------------|---------------|----------------------|
@@ -76,7 +76,7 @@ Audit readiness is not a pre-audit activity — it is the project's steady state
 | Principle | Practice |
 |-----------|----------|
 | **Answer the question asked** | Provide the evidence requested; do not volunteer unrelated information |
-| **Be honest about gaps** | If something is missing, say so — with explanation and remediation plan |
+| **Be honest about gaps** | If something is missing, say so, with explanation and remediation plan |
 | **Do not speculate** | "I don't know, but I will find out and provide it by [time]" beats guessing |
 | **Escalate appropriately** | If the auditor's request exceeds the PM's authority, escalate to the sponsor |
 | **Keep a log** | Record every request, every response, and every commitment made |
@@ -89,7 +89,7 @@ Audit readiness is not a pre-audit activity — it is the project's steady state
 | **Respond to the report** | Formal management response: agree, partially agree, or disagree with rationale |
 | **Create a remediation plan** | For each finding: action, owner, deadline, evidence of closure |
 | **Implement remediation** | Close findings; retain evidence |
-| **Improve the process** | If the finding reveals a process weakness, fix the process — not just the finding |
+| **Improve the process** | If the finding reveals a process weakness, fix the process, not just the finding |
 
 ## The Compliance Register
 
@@ -98,7 +98,7 @@ A simple tool that tracks every compliance obligation and its status:
 | Field | Content |
 |-------|---------|
 | Obligation ID | Unique identifier |
-| Source | Policy, regulation, contract, standard — with reference |
+| Source | Policy, regulation, contract, standard, with reference |
 | Requirement | What must be done or evidenced |
 | Owner | Who is responsible for compliance |
 | Evidence | What demonstrates compliance |
@@ -124,13 +124,13 @@ Program compliance adds breadth:
 - [ ] Financial records are reconciled and accessible
 - [ ] Compliance register is maintained with status for each obligation
 - [ ] Known compliance gaps are documented with remediation plans
-- [ ] Evidence is organized and findable — not dependent on the PM's memory
+- [ ] Evidence is organized and findable, not dependent on the PM's memory
 - [ ] The team knows how to interact with auditors
 
 ### Audit Response Template
 
 ```markdown
-## Audit Finding Response — Finding #[ID]
+## Audit Finding Response: Finding #[ID]
 - Finding: [Auditor's description of the gap]
 - Management response: [Agree / Partially agree / Disagree]
 - Rationale: [If disagreeing, why; if agreeing, root cause]
@@ -156,7 +156,7 @@ Program compliance adds breadth:
 - Auditors' requests are met with organized evidence, not a scramble
 - Audit findings result in process improvements, not just finding closure
 - The compliance register is current and reviewed at governance meetings
-- The project passes audits with no major findings — and minor findings are remediated on time
+- The project passes audits with no major findings, and minor findings are remediated on time
 
 ## Related Topics
 
@@ -168,4 +168,4 @@ Program compliance adds breadth:
 
 ## Summary
 
-Project audit and compliance is the discipline of audit readiness: maintaining complete, accessible records through functioning configuration management, change control, and decision recording; tracking compliance obligations in a register with current status and evidence; and managing audits as a professional interaction — cooperative, honest about gaps, and committed to remediation that fixes the process, not just the finding. Audit readiness is not a pre-audit scramble; it is the natural state of a well-managed project. A project that is always audit-ready spends almost no time on audits; a project that scrambles for every audit spends the same time with far more stress and far worse outcomes. The project manager who treats audit readiness as a continuous discipline gives the project an integrity that survives scrutiny — and the scrutiny will come, scheduled or not.
+Project audit and compliance is the discipline of audit readiness: maintaining complete, accessible records through functioning configuration management, change control, and decision recording; tracking compliance obligations in a register with current status and evidence; and managing audits as a professional interaction, cooperative, honest about gaps, and committed to remediation that fixes the process, not just the finding. Audit readiness is not a pre-audit scramble; it is the natural state of a well-managed project. A project that is always audit-ready spends almost no time on audits; a project that scrambles for every audit spends the same time with far more stress and far worse outcomes. The project manager who treats audit readiness as a continuous discipline gives the project an integrity that survives scrutiny, and the scrutiny will come, scheduled or not.

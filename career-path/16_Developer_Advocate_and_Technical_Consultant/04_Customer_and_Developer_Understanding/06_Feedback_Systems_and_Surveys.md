@@ -17,13 +17,13 @@ tags:
 
 # Feedback Systems and Surveys
 
-> **Core skill:** Building durable mechanisms — surveys, advisory groups, community channels, telemetry — that collect developer input continuously, and closing the loop so contributors see their input matter.
+> **Core skill:** Building durable mechanisms (surveys, advisory groups, community channels, telemetry) that collect developer input continuously, and closing the loop so contributors see their input matter.
 
 ## Why This Matters
 
-Research studies answer questions; feedback systems keep answers flowing when nobody is running a study. The advocate's advantage is position — inside the community, trusted by developers, present in the channels where opinions actually form — and a system converts that position from a series of lucky observations into a standing pipeline of evidence. Without one, the organization hears only what arrives loudly: escalations, viral complaints, and the opinions of whoever is nearest.
+Research studies answer questions; feedback systems keep answers flowing when nobody is running a study. The advocate's advantage is position (inside the community, trusted by developers, present in the channels where opinions actually form) and a system converts that position from a series of lucky observations into a standing pipeline of evidence. Without one, the organization hears only what arrives loudly: escalations, viral complaints, and the opinions of whoever is nearest.
 
-The second half of the system is the loop. Developers who report problems and hear nothing back stop reporting, and their silence is misread as satisfaction. A visible loop — we heard this, here is what happened, here is what we cannot do and why — is the single most effective way to keep the pipeline open. It is also brutally honest work: closing loops means committing to act or explain on the record.
+The second half of the system is the loop. Developers who report problems and hear nothing back stop reporting, and their silence is misread as satisfaction. A visible loop (we heard this, here is what happened, here is what we cannot do and why) is the single most effective way to keep the pipeline open. It is also brutally honest work: closing loops means committing to act or explain on the record.
 
 Systems fail when they collect without consuming. A survey that runs quarterly and produces a PDF that nobody reads is worse than no survey: it spends the community's goodwill on data that changes nothing. The design principle that prevents this is demand-first: define who will act on each signal and how, before asking anyone anything. No consumer, no collection.
 
@@ -92,6 +92,7 @@ Systems fail when they collect without consuming. A survey that runs quarterly a
 | Loop-closure report | Per cycle, public | Advocate |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     DEFINE["Define the decisions signals will inform"] --> CHANNEL["Choose channels and cadences"]
     CHANNEL --> COLLECT["Collect continuously"]
@@ -116,13 +117,13 @@ flowchart LR
 ```markdown
 # Survey: [Decision it informs]
 
-**Audience:** [segment; sample and size] — **Length:** [minutes]
+**Audience:** [segment; sample and size], **Length:** [minutes]
 
-**Q1 (behavior).** When was the last time you [did the thing]? — [frequency options]
-**Q2 (context).** What were you trying to accomplish? — [open; short]
-**Q3 (friction).** What, if anything, got in the way? — [open; optional]
-**Q4 (segment fields).** Role — Maturity — Team size — Environment
-**Q5 (loop).** May we contact you about your answers? — [opt-in]
+**Q1 (behavior).** When was the last time you [did the thing]? [frequency options]
+**Q2 (context).** What were you trying to accomplish? [open; short]
+**Q3 (friction).** What, if anything, got in the way? [open; optional]
+**Q4 (segment fields).** Role, Maturity, Team size, Environment
+**Q5 (loop).** May we contact you about your answers? [opt-in]
 
 **Follow-up commitment:** [what will be shared back; by when]
 ```
@@ -148,12 +149,12 @@ flowchart LR
 
 ## Related Topics
 
-- [[02_Needs_and_Context_Discovery]] — the engagement-scale version of the same listening discipline
-- [[04_Support_Signal_Archaeology]] — mining the passive record that complements active channels
-- [[05_Developer_Segmentation]] — reading signal differences across audiences
-- [[07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]] — where synthesized feedback meets product strategy
-- [[career-path/14_Product_Manager/05_Product_Analytics/00_overview|Product Analytics (PM)]] — the quantitative side of the same loop
+- [[02_Needs_and_Context_Discovery]]: the engagement-scale version of the same listening discipline
+- [[04_Support_Signal_Archaeology]]: mining the passive record that complements active channels
+- [[05_Developer_Segmentation]]: reading signal differences across audiences
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]]: where synthesized feedback meets product strategy
+- [[career-path/14_Product_Manager/05_Product_Analytics/00_overview|Product Analytics (PM)]]: the quantitative side of the same loop
 
 ## Summary
 
-Feedback systems and surveys turn community position into a standing evidence pipeline: a portfolio of channels each with a named consumer and cadence, surveys built around one decision with segment fields and trend lines, synthesis that merges signals across sources, routing to teams that act, and a visible loop that tells contributors what happened and why. The system is only as good as its closure — developers keep reporting exactly as long as reporting keeps mattering.
+Feedback systems and surveys turn community position into a standing evidence pipeline: a portfolio of channels each with a named consumer and cadence, surveys built around one decision with segment fields and trend lines, synthesis that merges signals across sources, routing to teams that act, and a visible loop that tells contributors what happened and why. The system is only as good as its closure: developers keep reporting exactly as long as reporting keeps mattering.

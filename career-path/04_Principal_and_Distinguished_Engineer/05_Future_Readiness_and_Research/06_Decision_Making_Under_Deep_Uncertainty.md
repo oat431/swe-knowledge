@@ -16,13 +16,13 @@ tags:
 
 # Decision Making Under Deep Uncertainty
 
-> **Core skill:** The principal engineer makes and frames major technical decisions when probabilities are unknown — using scenario planning, real options thinking, robustness testing, and minimax regret to guide irreversible investments, and communicating uncertainty to decision-makers without paralysis.
+> **Core skill:** The principal engineer makes and frames major technical decisions when probabilities are unknown, using scenario planning, real options thinking, robustness testing, and minimax regret to guide irreversible investments, and communicating uncertainty to decision-makers without paralysis.
 
 ## Why This Matters
 
-The hardest decisions in technology strategy are not the ones where you know the odds. They are the ones where the future is genuinely unknown: a platform choice that will shape a decade of work, a build-versus-buy decision where neither path is clearly superior, an architectural bet where the winning pattern will not be evident for years. Under deep uncertainty, standard decision tools fail — net present value requires a discount rate you cannot estimate, expected value requires probabilities you do not have.
+The hardest decisions in technology strategy are not the ones where you know the odds. They are the ones where the future is genuinely unknown: a platform choice that will shape a decade of work, a build-versus-buy decision where neither path is clearly superior, an architectural bet where the winning pattern will not be evident for years. Under deep uncertainty, standard decision tools fail: net present value requires a discount rate you cannot estimate, expected value requires probabilities you do not have.
 
-The principal's role is to bring structure to these decisions: methods that produce defensible choices without pretending uncertainty can be eliminated, and communication that helps leadership understand what is known, what is not, and what evidence would change the decision. The goal is not certainty — it is a decision process that the organization can defend after the outcome is known.
+The principal's role is to bring structure to these decisions: methods that produce defensible choices without pretending uncertainty can be eliminated, and communication that helps leadership understand what is known, what is not, and what evidence would change the decision. The goal is not certainty. It is a decision process that the organization can defend after the outcome is known.
 
 ## Decision Methods for Deep Uncertainty
 
@@ -31,10 +31,10 @@ The principal's role is to bring structure to these decisions: methods that prod
 | **Scenario planning** | Build 3-4 plausible futures; test decisions against each; prefer decisions that perform well across scenarios | Long-horizon architecture bets; platform strategy | Scenarios can embed hidden assumptions; quality depends on scenario diversity |
 | **Real options** | Structure decisions as options that can be exercised later: small investment now buys the right to invest more when uncertainty resolves | Build-versus-buy; emerging technology adoption timing | Options have a cost; too many options become an unfunded portfolio |
 | **Robustness testing** | Stress-test the preferred decision against extreme but plausible conditions; does it survive the worst case? | Mission-critical infrastructure; security architecture | The worst case is often worse than imagined; testing is bounded by imagination |
-| **Minimax regret** | Choose the option that minimizes the maximum possible regret — the gap between what you chose and what you wish you had chosen | One-way door decisions; choices with asymmetric downside | Requires enumerating all possible regret scenarios; can produce conservative choices |
+| **Minimax regret** | Choose the option that minimizes the maximum possible regret: the gap between what you chose and what you wish you had chosen | One-way door decisions; choices with asymmetric downside | Requires enumerating all possible regret scenarios; can produce conservative choices |
 | **Pre-mortem at investment scale** | Before committing, assume the decision failed and work backward: what caused the failure? | Large investments; multi-year programs | Only surfaces known failure modes; cannot anticipate black swans |
 
-The principal selects the method based on the decision's characteristics: horizon, reversibility, cost, and information availability. Most significant decisions use more than one method — scenario planning to frame the possibilities, real options to preserve flexibility, and a pre-mortem to surface hidden risks.
+The principal selects the method based on the decision's characteristics: horizon, reversibility, cost, and information availability. Most significant decisions use more than one method: scenario planning to frame the possibilities, real options to preserve flexibility, and a pre-mortem to surface hidden risks.
 
 ## Scenario Planning in Practice
 
@@ -61,7 +61,7 @@ The output is not a prediction. It is a map of possibilities that reveals which 
 
 ## Real Options Thinking
 
-A real option is the right — but not the obligation — to make a larger investment later. In technology strategy, real options take several forms.
+A real option is the right (but not the obligation) to make a larger investment later. In technology strategy, real options take several forms.
 
 | Option Type | Technology Example | Exercise Trigger |
 |-------------|-------------------|-----------------|
@@ -70,7 +70,7 @@ A real option is the right — but not the obligation — to make a larger inves
 | **Abandonment option** | Structure the contract or architecture so exit costs are bounded | Exit criteria triggered; better alternative emerges |
 | **Growth option** | Invest in a platform component that enables future capabilities even if none are committed | A new product opportunity requires the capability the platform enables |
 
-The principal's discipline: every major investment proposal should identify the real options embedded in it and the cost of those options. An option that costs nothing still consumes attention — and attention is finite.
+The principal's discipline: every major investment proposal should identify the real options embedded in it and the cost of those options. An option that costs nothing still consumes attention, and attention is finite.
 
 ## The Pre-Mortem at Investment Scale
 
@@ -83,7 +83,7 @@ The pre-mortem is a structured exercise: before committing to a decision, the te
 | **Mitigation design** | For each high-priority cause: what would we do differently now? | Design changes, monitoring triggers, exit criteria |
 | **Decision adjustment** | Revise the decision or its implementation based on pre-mortem findings | Updated decision memo with risk mitigations |
 
-The pre-mortem is not a box-checking exercise. It is a genuine attempt to kill the decision — and if the decision survives, it is stronger for having faced its own failure modes.
+The pre-mortem is not a box-checking exercise. It is a genuine attempt to kill the decision, and if the decision survives, it is stronger for having faced its own failure modes.
 
 ## Communicating Uncertainty to Decision-Makers
 
@@ -94,7 +94,7 @@ The principal's hardest communication challenge: presenting a decision under dee
 | **What we know** | The facts, data, and analysis that are not in dispute | "Our current architecture cannot handle the projected load at the 18-month horizon" |
 | **What we do not know** | The genuine uncertainties that drive the scenario spread | "We cannot predict whether the ecosystem for Platform A or Platform B will be larger in 2028" |
 | **What would change our mind** | The evidence that would flip the recommendation | "If Platform A ships its announced performance improvements by Q3, it becomes the clear choice" |
-| **The recommendation with uncertainty** | "We recommend X, with the understanding that Y is the key uncertainty; we monitor Z and revisit at date D" | A decision, not a discussion — with a stated trigger for revisiting |
+| **The recommendation with uncertainty** | "We recommend X, with the understanding that Y is the key uncertainty; we monitor Z and revisit at date D" | A decision, not a discussion, with a stated trigger for revisiting |
 | **The cost of being wrong** | What happens if the recommendation is wrong and what the organization loses | "If we choose A and B wins, we lose 6 months of migration work and roughly 3 engineer-years" |
 
 The framing is: here is what we recommend, here is what we do not know, here is when we will know more, and here is what we lose if we are wrong. Executives can commit to that.
@@ -102,6 +102,7 @@ The framing is: here is what we recommend, here is what we do not know, here is 
 ## The Uncertainty Decision Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DECISION["Major decision under deep uncertainty"] --> METHODS["Select methods: scenario planning, real options, robustness, pre-mortem"]
     METHODS --> SCENARIOS["Build scenarios: plausible, divergent, decision-relevant"]
@@ -168,10 +169,10 @@ flowchart TD
 
 - [[05_Technical_Debt_Futures]]: debt models that inform uncertainty analysis on modernization timing
 - [[03_Prototyping_and_Proof_of_Concept_Leadership]]: prototypes that resolve specific uncertainties before commitment
-- [[03_Decision_Governance_and_Principles/00_overview|Decision Governance and Principles]]: the governance framework for major decisions
+- [[career-path/04_Principal_and_Distinguished_Engineer/03_Decision_Governance_and_Principles/00_overview|Decision Governance and Principles]]: the governance framework for major decisions
 - [[career-path/03_Staff_Engineer/03_Technical_Strategy/02_Technology_Betting|Technology Betting (Staff)]]: the bet framework that handles known risks
 - [[career-path/03_Staff_Engineer/05_Systems_Thinking_and_Organizational_Design/06_Models_for_Decision_Making|Models for Decision Making (Staff)]]: decision-modeling foundations
 
 ## Summary
 
-Decision making under deep uncertainty is the principal's method for structuring choices when probabilities are unknown: selecting from scenario planning, real options, robustness testing, minimax regret, and pre-mortems based on the decision's characteristics, building scenarios that genuinely stress candidate options, identifying real options that preserve flexibility, and communicating recommendations with explicit acknowledgment of what is not known, what would change the recommendation, and when the decision will be revisited. The discipline is not eliminating uncertainty — it is making defensible decisions despite it and building monitoring triggers that ensure the organization adapts when uncertainty resolves.
+Decision making under deep uncertainty is the principal's method for structuring choices when probabilities are unknown: selecting from scenario planning, real options, robustness testing, minimax regret, and pre-mortems based on the decision's characteristics, building scenarios that genuinely stress candidate options, identifying real options that preserve flexibility, and communicating recommendations with explicit acknowledgment of what is not known, what would change the recommendation, and when the decision will be revisited. The discipline is not eliminating uncertainty. It is making defensible decisions despite it and building monitoring triggers that ensure the organization adapts when uncertainty resolves.

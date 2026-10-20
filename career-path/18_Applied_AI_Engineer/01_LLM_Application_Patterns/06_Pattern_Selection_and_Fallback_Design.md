@@ -15,13 +15,13 @@ tags:
 
 # Pattern Selection and Fallback Design
 
-> The discipline of choosing the cheapest pattern that meets the measured quality bar, and designing failure paths so that when the chosen pattern degrades, the user still gets a correct — or at least honest — answer.
+> The discipline of choosing the cheapest pattern that meets the measured quality bar, and designing failure paths so that when the chosen pattern degrades, the user still gets a correct (or at least honest) answer.
 
 ## Why This Is a Senior Skill
 
-A mid-level engineer picks patterns by excitement: the demo wants an agent, so the system gets an agent. A senior engineer selects by measured need and designs the failure story up front: what happens when retrieval comes back empty, when the schema fails three times, when the loop exhausts its budget, when the provider is down. Senior pattern selection is a written, evidence-backed decision — and senior fallback design is graceful degradation practiced under fault injection, not discovered by users.
+A mid-level engineer picks patterns by excitement: the demo wants an agent, so the system gets an agent. A senior engineer selects by measured need and designs the failure story up front: what happens when retrieval comes back empty, when the schema fails three times, when the loop exhausts its budget, when the provider is down. Senior pattern selection is a written, evidence-backed decision, and senior fallback design is graceful degradation practiced under fault injection, not discovered by users.
 
-The senior challenge: the right pattern is a moving target (corpus grows, models change, budgets shift), and every pattern has failure modes that must degrade into something safer — never into silence, and never into fabrication.
+The senior challenge: the right pattern is a moving target (corpus grows, models change, budgets shift), and every pattern has failure modes that must degrade into something safer, never into silence, and never into fabrication.
 
 ## Core Frameworks
 
@@ -47,7 +47,7 @@ The senior challenge: the right pattern is a moving target (corpus grows, models
 | 3 | Plus tool use | Live data, controlled actions | Bad calls, side effects | ~3–6x |
 | 4 | Agent loop | Unknown paths, multi-step work | Runaway loops, cost spikes | ~5–20x |
 
-Climb only when the level below fails the quality bar in evaluation — and descend when a level above proves unnecessary.
+Climb only when the level below fails the quality bar in evaluation, and descend when a level above proves unnecessary.
 
 ### Fallback Design per Failure Class
 
@@ -72,17 +72,17 @@ Climb only when the level below fails the quality bar in evaluation — and desc
 
 ## In Practice
 
-**Choose the simplest pattern that meets the quality bar — measured, not assumed.** The burden of proof runs upward: before adding RAG to a small corpus, tools to deterministic data, or a loop to a known path, show the simpler pattern failing an evaluation. The cheapest pattern that passes is the right one, and "simplest" is a property of the system, not a statement about the team.
+**Choose the simplest pattern that meets the quality bar, measured, not assumed.** The burden of proof runs upward: before adding RAG to a small corpus, tools to deterministic data, or a loop to a known path, show the simpler pattern failing an evaluation. The cheapest pattern that passes is the right one, and "simplest" is a property of the system, not a statement about the team.
 
-**Design fallbacks per failure class, not one catch-all.** "If anything fails, show an error" is not a design. Each class — provider down, retrieval empty, schema broken, budget burned — needs its own detection signal and its own degradation path, because the user-facing outcome should differ: a cached answer for an outage, an honest refusal for missing knowledge, a partial result for a spent budget.
+**Design fallbacks per failure class, not one catch-all.** "If anything fails, show an error" is not a design. Each class (provider down, retrieval empty, schema broken, budget burned) needs its own detection signal and its own degradation path, because the user-facing outcome should differ: a cached answer for an outage, an honest refusal for missing knowledge, a partial result for a spent budget.
 
-**Fail honest: when the system is uncertain, it says so or escalates.** The worst failure mode of an AI feature is confident fabrication. Degradation must converge on honest refusal or human handoff, and the refusal must be a designed, on-brand response — not a panic path. Honesty under degradation is what separates a dependable AI feature from a demo.
+**Fail honest: when the system is uncertain, it says so or escalates.** The worst failure mode of an AI feature is confident fabrication. Degradation must converge on honest refusal or human handoff, and the refusal must be a designed, on-brand response, not a panic path. Honesty under degradation is what separates a dependable AI feature from a demo.
 
-**Test the degradation paths with fault injection.** Kill the vector store, break the schema validator, cut the tool, exhaust the loop budget — in staging, on a schedule. If the behavior in those scenarios is discovered in production, the fallback design was fiction. Fault injection for AI features is the same discipline as chaos engineering for services.
+**Test the degradation paths with fault injection.** Kill the vector store, break the schema validator, cut the tool, exhaust the loop budget, in staging, on a schedule. If the behavior in those scenarios is discovered in production, the fallback design was fiction. Fault injection for AI features is the same discipline as chaos engineering for services.
 
-**Downgrade capability before correctness.** When the rich path fails, the degraded path keeps the promises that matter: a RAG answer that loses its citations is acceptable; one that invents sources is not. Order the fallback ladder by which properties are sacred — correctness, honesty, no unconfirmed writes — and let everything else fall away first.
+**Downgrade capability before correctness.** When the rich path fails, the degraded path keeps the promises that matter: a RAG answer that loses its citations is acceptable; one that invents sources is not. Order the fallback ladder by which properties are sacred (correctness, honesty, no unconfirmed writes) and let everything else fall away first.
 
-**Record the selection decision with evidence, and revisit it on a schedule.** An ADR-style note — chosen pattern, alternatives considered, eval numbers, cost model, revisit triggers (corpus size, traffic, model change) — turns pattern choice from a vibe into an engineering decision the next engineer can audit. Without the rationale, every new hire re-litigates the architecture from scratch.
+**Record the selection decision with evidence, and revisit it on a schedule.** An ADR-style note (chosen pattern, alternatives considered, eval numbers, cost model, revisit triggers (corpus size, traffic, model change)) turns pattern choice from a vibe into an engineering decision the next engineer can audit. Without the rationale, every new hire re-litigates the architecture from scratch.
 
 ## Practical Exercise
 
@@ -116,4 +116,4 @@ Climb only when the level below fails the quality bar in evaluation — and desc
 - Fallbacks are designed per failure class, with detection signals and metrics
 - Honest failure is a feature: refusal and handoff beat fabrication every time
 - Fault injection turns fallback fiction into verified behavior
-- The sacred properties — correctness, honesty, no unconfirmed writes — survive every degradation step
+- The sacred properties (correctness, honesty, no unconfirmed writes) survive every degradation step

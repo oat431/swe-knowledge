@@ -6,7 +6,7 @@ career_path: security-engineer
 level: senior-specialist
 prerequisite:
   - "[[01_Security_Test_Strategy|Security Test Strategy]]"
-  - "[[01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]"
+  - "[[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]"
 source_frameworks:
   - "[[software-engineering-note/05_Software_Testing/Software Testing Overview]]"
   - "F:\obsidian_note\document_template\14_Security/DAST-Report.md"
@@ -60,6 +60,7 @@ Before active testing, define:
 ### 3. Dynamic Test Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PLAN["Threat informed test plan"] --> AUTHORIZE["Authorize scope and safety limits"]
     AUTHORIZE --> BASELINE["Baseline environment and telemetry"]
@@ -123,7 +124,7 @@ Plan a one-week campaign for a public API that manages sensitive records:
 - [Penetration Test Report](F:\obsidian_note\document_template\14_Security/Penetration-Test-Report.md): adversarial engagement artifact
 - [Security Test Report](F:\obsidian_note\document_template\13_Testing_and_Verification/Security-Test-Report.md): consolidated security test evidence
 - [[01_Security_Test_Strategy|Security Test Strategy]]: risk-based method selection
-- [[01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]: abuse paths and attacker context
+- [[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]: abuse paths and attacker context
 - [[05_Findings_Triage_and_False_Positives|Findings Triage and False Positives]]: validating dynamic findings
 
 ## Key Takeaways

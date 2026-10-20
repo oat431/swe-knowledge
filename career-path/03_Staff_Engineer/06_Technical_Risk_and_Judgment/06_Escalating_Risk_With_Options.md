@@ -15,11 +15,11 @@ tags:
 
 # Escalating Risk With Options
 
-> **Core skill:** Escalating risks that exceed your authority the way leadership wants to receive them — situation, evidence, options, recommendation, and a decision deadline.
+> **Core skill:** Escalating risks that exceed your authority the way leadership wants to receive them: situation, evidence, options, recommendation, and a decision deadline.
 
 ## Why This Matters
 
-Escalation is how staff risk ownership meets its limit: the risk is real, priced, and beyond what you can accept or fund. Done well, escalation is a decision request — the leadership equivalent of a well-formed PR. Done badly, it is an alarm: the problem arrives with no path, and the decision-maker becomes a firefighter instead of a decision-maker.
+Escalation is how staff risk ownership meets its limit: the risk is real, priced, and beyond what you can accept or fund. Done well, escalation is a decision request: the leadership equivalent of a well-formed PR. Done badly, it is an alarm: the problem arrives with no path, and the decision-maker becomes a firefighter instead of a decision-maker.
 
 The difference between the two is preparation. A risk escalated with options and a recommendation is a gift; the same risk escalated as "we have a problem" is a tax. Staff engineers are judged on which kind they bring, and the org's escalation culture is largely set by which kind gets rewarded.
 
@@ -33,7 +33,7 @@ The difference between the two is preparation. A risk escalated with options and
 | **Timing pressure** | The decision must land this week | Not escalating is now the risk |
 | **Conflicting stakeholders** | Two VPs want opposite outcomes | Deadlock needs a higher arbiter |
 
-The test: if the risk materializes and the decision was yours alone, would that have been right? If no, escalate — early, with options.
+The test: if the risk materializes and the decision was yours alone, would that have been right? If no, escalate early, with options.
 
 ## Escalation Anatomy
 
@@ -92,7 +92,7 @@ If the decision-maker needs more information, name exactly what is missing and w
 The escalation is a record, not just a meeting:
 
 - The written escalation goes out before the meeting
-- The decision — and the reasoning — is captured in the record
+- The decision (and the reasoning) is captured in the record
 - The acceptance or remediation is entered in the risk register
 - The re-price date is set at the moment of decision
 
@@ -108,7 +108,7 @@ Early with options beats late with alarms:
 | **On time** | "This needs a decision this week" | Decision under mild pressure |
 | **Late** | "This is happening; we need to react" | Firefighting; options already closed |
 
-The discipline is escalating when the risk is still a range, not when it has become an event. Most escalations arrive late because escalation felt like admitting failure — it is the opposite: it is the risk system working.
+The discipline is escalating when the risk is still a range, not when it has become an event. Most escalations arrive late because escalation felt like admitting failure. It is the opposite: it is the risk system working.
 
 ## The Crying Wolf Problem
 
@@ -121,9 +121,10 @@ Over-escalation devalues future escalations:
 | Deadlines always slip past without consequence | Escalate the deadline itself when it is real |
 | Decision-makers start deferring before reading | Earn attention with evidence and options |
 
-The credibility budget is finite. Spend it on risks that genuinely cross your authority, price them honestly, and honor the decision — including when the decision is "accept" against your recommendation.
+The credibility budget is finite. Spend it on risks that genuinely cross your authority, price them honestly, and honor the decision, including when the decision is "accept" against your recommendation.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     RISK["Risk exceeds authority"] --> EVIDENCE["Gather evidence"]
     EVIDENCE --> OPTIONS["Build option set"]
@@ -168,10 +169,10 @@ flowchart TD
 
 - [[01_Seeing_Org_Scale_Risk]]: the portfolio escalations come from
 - [[05_Risk_Pricing_and_Acceptance]]: the pricing that makes options real
-- [[03_Technical_Strategy/00_overview|Technical Strategy]]: decisions that set risk appetite
-- [[04_Influence_and_Alignment/00_overview|Influence and Alignment]]: leading the decision-maker
+- [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy]]: decisions that set risk appetite
+- [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/00_overview|Influence and Alignment]]: leading the decision-maker
 - [[career-path/05_Tech_Lead/07_Incident_Leadership_and_Production_Excellence/04_Remediating_Systemic_Weaknesses|Remediating Systemic Weaknesses (Tech Lead)]]: the team-level escalation pattern
 
 ## Summary
 
-Escalation is a decision request, not an alarm: confirm the risk crosses your authority, write the five-part case — situation, evidence, options, recommendation, decision deadline — and bring the decision-maker to a yes or no. Escalate early while options are still open, honor the decision in writing, and protect your credibility budget by escalating only what is genuinely beyond you. The org's risk system is only as good as its escalations.
+Escalation is a decision request, not an alarm: confirm the risk crosses your authority, write the five-part case (situation, evidence, options, recommendation, decision deadline) and bring the decision-maker to a yes or no. Escalate early while options are still open, honor the decision in writing, and protect your credibility budget by escalating only what is genuinely beyond you. The org's risk system is only as good as its escalations.

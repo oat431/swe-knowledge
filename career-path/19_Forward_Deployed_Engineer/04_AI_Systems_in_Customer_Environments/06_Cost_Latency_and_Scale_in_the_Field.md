@@ -16,15 +16,15 @@ tags:
 
 # Cost Latency and Scale in the Field
 
-> **Core skill:** Making AI affordable and fast enough for the real workload — measured at production usage, not extrapolated from a pilot, and tuned where the business feels it.
+> **Core skill:** Making AI affordable and fast enough for the real workload: measured at production usage, not extrapolated from a pilot, and tuned where the business feels it.
 
 ## Why This Matters
 
-Pilots are cheap in a way that misleads. A handful of users, gentle query volumes, and the easiest cases create a cost and latency picture that production quietly demolishes. Real usage concentrates on the hardest queries, arrives in synchronized peaks, grows the corpus, and adds retries and agent loops that a demo never runs. The FDE who reports pilot economics as production projections is setting up the budget conversation that kills the deployment six months in — when the invoice or the queue finally tells the truth.
+Pilots are cheap in a way that misleads. A handful of users, gentle query volumes, and the easiest cases create a cost and latency picture that production quietly demolishes. Real usage concentrates on the hardest queries, arrives in synchronized peaks, grows the corpus, and adds retries and agent loops that a demo never runs. The FDE who reports pilot economics as production projections is setting up the budget conversation that kills the deployment six months in: when the invoice or the queue finally tells the truth.
 
 Cost and latency are also adoption variables, not just infrastructure metrics. A workflow that returns results in seconds gets woven into daily habits; the same workflow at a minute per answer gets opened only when the alternative is worse. Cost per outcome decides whether a capability expands to more teams or gets parked as an expensive toy. Enterprises budget in line items with owners, and the FDE's ability to give the platform, security, and business owners a credible, measured projection is as much a part of the rollout as any model choice.
 
-The engineering response is measurement first, then targeted optimization: instrument cost and latency per request and per workflow, watch the real workload curve after go-live, and pull the levers that matter for this deployment — model size, context size, retrieval breadth, caching, batching, or streaming. Optimization without measurement is superstition with a latency chart; measurement without optimization is a budget problem waiting to surface.
+The engineering response is measurement first, then targeted optimization: instrument cost and latency per request and per workflow, watch the real workload curve after go-live, and pull the levers that matter for this deployment (model size, context size, retrieval breadth, caching, batching, or streaming). Optimization without measurement is superstition with a latency chart; measurement without optimization is a budget problem waiting to surface.
 
 ## The Real Workload Curve
 
@@ -59,6 +59,7 @@ The engineering response is measurement first, then targeted optimization: instr
 | Network and gateway hops | Path through customer controls | Confirm the real path, not the reference one |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     ASK["User asks a question"] --> RETRIEVE["Retrieval and context assembly"]
     RETRIEVE --> INFER["Model inference"]
@@ -66,7 +67,7 @@ flowchart LR
     CHECK --> RESPOND["Answer reaches the user"]
 ```
 
-Set a latency budget per stage with the customer's workflow in mind: work backward from what users will tolerate, then hold each stage to its share. Streaming changes perception even when total time is unchanged — use it where the workflow allows.
+Set a latency budget per stage with the customer's workflow in mind: work backward from what users will tolerate, then hold each stage to its share. Streaming changes perception even when total time is unchanged. Use it where the workflow allows.
 
 ## Practical Applications
 
@@ -83,7 +84,7 @@ Set a latency budget per stage with the customer's workflow in mind: work backwa
 ### Cost and Latency Worksheet Template
 
 ```markdown
-## Cost and Latency Worksheet — <capability, date>
+## Cost and Latency Worksheet: <capability, date>
 
 | Field | Value |
 |-------|-------|
@@ -120,10 +121,10 @@ Set a latency budget per stage with the customer's workflow in mind: work backwa
 
 - [[04_Model_Constraints_and_Data_Residency]]
 - [[07_Agents_and_Workflow_Automation_in_Production]]
-- [[03_Integration_and_Deployment_Engineering/00_overview|Integration and Deployment Engineering]]
+- [[career-path/19_Forward_Deployed_Engineer/03_Integration_and_Deployment_Engineering/00_overview|Integration and Deployment Engineering]]
 - [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]]
 - [[career-path/14_Product_Manager/07_Technical_Partnership/00_overview|Technical Partnership (PM)]]
 
 ## Summary
 
-Cost, latency, and scale in the field are decided by the real workload, not the pilot: instrument per request and per outcome, project from measured usage including peaks and growth, and optimize the stages the evidence fingers rather than the ones that feel slow. Done well, the numbers stay boring — response times users accept, costs owners have already approved — and the capability keeps expanding on measured footing instead of fighting its own economics.
+Cost, latency, and scale in the field are decided by the real workload, not the pilot: instrument per request and per outcome, project from measured usage including peaks and growth, and optimize the stages the evidence fingers rather than the ones that feel slow. Done well, the numbers stay boring (response times users accept, costs owners have already approved), and the capability keeps expanding on measured footing instead of fighting its own economics.

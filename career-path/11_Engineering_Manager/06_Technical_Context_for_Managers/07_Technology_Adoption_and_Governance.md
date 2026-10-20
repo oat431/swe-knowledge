@@ -16,24 +16,24 @@ tags:
 
 # Technology Adoption and Governance
 
-> **Core skill:** Governing technology adoption without freezing it — an explicit adoption spectrum, fast documented exceptions, golden paths that make the right thing easy, and the discipline to sunset what is done.
+> **Core skill:** Governing technology adoption without freezing it: an explicit adoption spectrum, fast documented exceptions, golden paths that make the right thing easy, and the discipline to sunset what is done.
 
 ## Why This Matters
 
-Technology governance sits between two failures. Without it, every team picks its own stack, the platform fragments, support costs compound, and the organization's technical surface becomes unmanageable. With the wrong kind of it — approval boards, mandatory standards, veto culture — innovation freezes, engineers route around the process, and governance becomes the thing everyone lies to.
+Technology governance sits between two failures. Without it, every team picks its own stack, the platform fragments, support costs compound, and the organization's technical surface becomes unmanageable. With the wrong kind of it (approval boards, mandatory standards, veto culture) innovation freezes, engineers route around the process, and governance becomes the thing everyone lies to.
 
-The manager's job is the middle: an explicit spectrum of permissiveness, adoption criteria that catch the expensive mistakes without slowing the good ones, an exception process that is fast and honest, and golden paths that make the right choice the easy choice. Governance is not a gate; it is a design problem — how do the team's choices stay aligned with the organization's interests without the team feeling governed?
+The manager's job is the middle: an explicit spectrum of permissiveness, adoption criteria that catch the expensive mistakes without slowing the good ones, an exception process that is fast and honest, and golden paths that make the right choice the easy choice. Governance is not a gate; it is a design problem: how do the team's choices stay aligned with the organization's interests without the team feeling governed?
 
 ## The Adoption Spectrum
 
 | Level | Meaning | Examples | Governance Burden |
 |-------|---------|----------|-------------------|
 | Default-free | Anything goes; no opinion | Internal scripts, small libraries | None |
-| Recommended | Preferred when it fits | The team's primary framework, standard tooling | None — guidance |
+| Recommended | Preferred when it fits | The team's primary framework, standard tooling | None: guidance |
 | Standard | Expected unless an exception is approved | Deployment pipeline, auth library, observability stack | Exception process |
 | Banned | Not permitted, for explicit reasons | EOL runtimes, unlicensed tools, known-bad patterns | Refusal with reasons |
 
-The spectrum is published, so the team knows the cost of each choice in advance. The mistake is treating everything as standard or everything as default-free — either the team is governed into submission or governed not at all.
+The spectrum is published, so the team knows the cost of each choice in advance. The mistake is treating everything as standard or everything as default-free: either the team is governed into submission or governed not at all.
 
 ## Adoption Criteria
 
@@ -49,7 +49,7 @@ A technology that fails two criteria needs a serious conversation; one that fail
 
 ## The Exception Process
 
-Exceptions are how governance stays honest — the process must be fast, documented, and time-boxed:
+Exceptions are how governance stays honest, the process must be fast, documented, and time-boxed:
 
 | Element | Design |
 |---------|--------|
@@ -57,7 +57,7 @@ Exceptions are how governance stays honest — the process must be fast, documen
 | Documentation | One page: what, why, what it replaces, exit plan |
 | Time-box | The exception expires; re-review on a date |
 | Cost | The exception holder owns support and migration |
-| Route | Straight to the tech lead and manager — no committee |
+| Route | Straight to the tech lead and manager, no committee |
 
 A good exception process is used: if no one ever files an exception, the process is either perfect or terrifying.
 
@@ -65,9 +65,9 @@ A good exception process is used: if no one ever files an exception, the process
 
 The strongest governance makes the right thing the easy thing:
 
-- Provide the blessed path: scaffold, templates, CI, deployment — all working
+- Provide the blessed path: scaffold, templates, CI, deployment, all working
 - Make the golden path the default in every project template
-- Measure deviation: when teams leave the path, ask why — the path may be wrong
+- Measure deviation: when teams leave the path, ask why; the path may be wrong
 - Improve the path on feedback; golden paths that ignore their users become the thing teams escape
 
 Governance by convenience beats governance by approval. A team that chooses the golden path because it is faster does not need to be policed.
@@ -83,14 +83,14 @@ The adoption spectrum is communicated, not filed:
 | Assess | Watching; not for production yet |
 | Hold | Do not start new work on this; sunsetting or superseded |
 
-The radar is refreshed quarterly and published. It answers the team's standing question — "can we use X?" — before it is asked.
+The radar is refreshed quarterly and published. It answers the team's standing question ("can we use X?") before it is asked.
 
 ## Governance Participation Upward
 
 The manager's governance duty runs both directions:
 
 - Represent the team's tooling needs in org-wide standards discussions
-- Push back when org standards ignore team reality — with evidence
+- Push back when org standards ignore team reality, with evidence
 - Feed real adoption data upward: what is working, what is drifting, what is costly
 - Volunteer the team for piloting new org standards
 
@@ -121,6 +121,7 @@ Teams that never sunset accumulate governance debt: shadow technologies, orphane
 | Approval rot | Process slows everything | The team lies to the process | Measure cycle time; shrink the gate |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PROPOSE["A technology is proposed"] --> SPECTRUM["Place it on the adoption spectrum"]
     SPECTRUM --> CRITERIA["Test against adoption criteria"]
@@ -146,7 +147,7 @@ flowchart TD
 ### Exception Request Template
 
 ```markdown
-## Technology Exception — [tool]
+## Technology Exception: [tool]
 - What: [tool and version]
 - Why: [the need, in outcomes]
 - What it replaces: [X]
@@ -169,7 +170,7 @@ flowchart TD
 
 ## Success Indicators
 
-- New technology decisions take days, not months — including the noes
+- New technology decisions take days, not months, including the noes
 - The team can name the spectrum and the exception route
 - Shadow technology appears rarely and is caught early
 - Sunsets happen on schedule with clean migrations
@@ -181,8 +182,8 @@ flowchart TD
 - [[02_Participating_in_Technical_Decisions]]: adoption decisions are where participation escalates
 - [[03_Risk_Assessment_with_Limited_Depth]]: adoption risk is assessed with the same method
 - [[06_When_the_Manager_Is_Also_the_Tech_Lead]]: the combined role often owns governance alone
-- [[04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: governance serves delivery; delivery feeds governance
+- [[career-path/11_Engineering_Manager/04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: governance serves delivery; delivery feeds governance
 
 ## Summary
 
-Technology adoption and governance is a design problem: an explicit adoption spectrum, criteria that catch expensive mistakes, a fast documented exception process, golden paths that make the right thing easy, a tech radar that communicates, upward participation in org standards, and the discipline to sunset what is done. Governance that gates everything freezes the team; governance that guides everything — and is measured by how rarely it is needed — compounds the organization's technical health.
+Technology adoption and governance is a design problem: an explicit adoption spectrum, criteria that catch expensive mistakes, a fast documented exception process, golden paths that make the right thing easy, a tech radar that communicates, upward participation in org standards, and the discipline to sunset what is done. Governance that gates everything freezes the team; governance that guides everything (and is measured by how rarely it is needed) compounds the organization's technical health.

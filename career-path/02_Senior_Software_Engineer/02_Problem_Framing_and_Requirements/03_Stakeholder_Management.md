@@ -37,6 +37,7 @@ Missing a key stakeholder is one of the most expensive mistakes in requirements 
 A senior engineer creates a stakeholder map early in the project:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph CORE["Core Stakeholders (High Impact, High Interest)"]
         PM["Product Manager"]

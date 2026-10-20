@@ -14,7 +14,7 @@ tags:
 
 # Technical Context for Managers
 
-> **Core capability:** The engineering manager maintains enough technical depth to participate meaningfully in technical decisions, assess risk honestly, and hire and grow engineers — while resisting the pull to become the team's decision maker again.
+> **Core capability:** The engineering manager maintains enough technical depth to participate meaningfully in technical decisions, assess risk honestly, and hire and grow engineers, while resisting the pull to become the team's decision maker again.
 
 ## Why This Matters
 
@@ -37,6 +37,7 @@ The skill is calibrated participation: knowing the system well enough to ask que
 ## The Calibration Spectrum
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     subgraph Under_Involvement
         A["Absent from technical discussion"] --> B["Cannot challenge or support decisions"]
@@ -49,7 +50,7 @@ flowchart LR
     end
 ```
 
-The manager's job is to live in the middle band — and know when to slide deliberately.
+The manager's job is to live in the middle band, and know when to slide deliberately.
 
 ## What Changes from Tech Lead to Engineering Manager
 
@@ -66,12 +67,12 @@ The manager's job is to live in the middle band — and know when to slide delib
 ### Technical Calibration Checklist
 
 - [ ] You can explain the system architecture and its top three risks unaided
-- [ ] You attend design reviews where decisions are consequential — not all of them
+- [ ] You attend design reviews where decisions are consequential, not all of them
 - [ ] You can evaluate whether an estimate, migration plan, or vendor claim is credible
 - [ ] The tech lead decides technical direction; you decide investment and consequence
 - [ ] Senior hiring loops include your calibrated technical signal
 - [ ] Your questions sharpen thinking more often than they redirect it
-- [ ] When you code, it is a spike or a gesture of solidarity — never the critical path
+- [ ] When you code, it is a spike or a gesture of solidarity, never the critical path
 
 ## Common Pitfalls
 
@@ -85,15 +86,15 @@ The manager's job is to live in the middle band — and know when to slide delib
 ## Success Indicators
 
 - The team makes technical decisions at the right level without waiting on you
-- Your questions in reviews change outcomes for the better — occasionally, memorably
+- Your questions in reviews change outcomes for the better, occasionally, memorably
 - Tech leads seek your participation as support, not surveillance
 - Senior candidates are evaluated with your credible technical signal
 - Architecture conversations include you without needing you
 
 ## Related Capabilities
 
-- [[04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: technical depth keeps delivery reading honest
-- [[01_People_Development/00_overview|People Development]]: technical judgment powers people decisions
+- [[career-path/11_Engineering_Manager/04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: technical depth keeps delivery reading honest
+- [[career-path/11_Engineering_Manager/01_People_Development/00_overview|People Development]]: technical judgment powers people decisions
 - [[career-path/05_Tech_Lead/03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture (Tech Lead)]]: the layer you partner with, not own
 - [[career-path/06_Software_Architect/00_overview|Software Architect]]: where deep technical direction lives
 

@@ -16,13 +16,13 @@ tags:
 
 # Data Domains and Ownership
 
-> **Core skill:** The architect defines data domains and their owners as structural boundaries, so every dataset has an accountable owner and every cross-domain flow has a contract — before shared databases quietly turn ownership into a fiction.
+> **Core skill:** The architect defines data domains and their owners as structural boundaries, so every dataset has an accountable owner and every cross-domain flow has a contract, before shared databases quietly turn ownership into a fiction.
 
 ## Why This Matters
 
-Data outlives code, and ownership is what keeps it coherent. Systems fail at the data layer more often than anywhere else: two services writing the same table, a dashboard reading a database it does not own, a schema change that breaks consumers nobody remembered. Every one of these failures is an ownership vacuum — a dataset that everyone uses and no one is accountable for.
+Data outlives code, and ownership is what keeps it coherent. Systems fail at the data layer more often than anywhere else: two services writing the same table, a dashboard reading a database it does not own, a schema change that breaks consumers nobody remembered. Every one of these failures is an ownership vacuum: a dataset that everyone uses and no one is accountable for.
 
-Domain-driven boundaries apply to data as much as to services. The bounded context that owns a business capability owns the data that capability produces; other domains consume it through interfaces — APIs, events, published extracts — not by reaching into its storage. This single rule prevents the shared-database trap, where integration through a common schema couples every service to every other and turns each migration into an archaeology project.
+Domain-driven boundaries apply to data as much as to services. The bounded context that owns a business capability owns the data that capability produces; other domains consume it through interfaces (APIs, events, published extracts), not by reaching into its storage. This single rule prevents the shared-database trap, where integration through a common schema couples every service to every other and turns each migration into an archaeology project.
 
 Data mesh concepts give the architect vocabulary for the hard parts: domain ownership as the organizing principle, data treated as a product with consumers and interfaces, federated governance that sets interoperable standards without centralizing everything, and a self-serve platform that makes the good path the easy path. The architect does not build a mesh; they use its principles to answer the questions that always arise: who owns shared data, and how does it get shared without a new silo or a new shared database.
 
@@ -69,6 +69,7 @@ Shared data is where ownership arguments hide. The architecture's job is to pick
 ## Domain Ownership Model
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DOMAINS["Define domains aligned to bounded contexts"] --> OWNERS["Assign an accountable owner per domain"]
     OWNERS --> CONTRACTS["Publish contracts for cross domain flows"]
@@ -83,7 +84,7 @@ flowchart TD
 - [ ] Every dataset in the system belongs to exactly one named domain with an accountable owner
 - [ ] No service reads or writes another domain's storage directly
 - [ ] Every cross-domain flow has a published contract with an owner and defined semantics
-- [ ] Shared data categories — reference, master, analytical — have a chosen sharing pattern
+- [ ] Shared data categories (reference, master, analytical) have a chosen sharing pattern
 - [ ] Domain boundaries and owners are visible on the architecture description
 
 ### Data Domain Register
@@ -126,4 +127,4 @@ flowchart TD
 
 ## Summary
 
-Data domains are the ownership boundaries of the data layer: every dataset belongs to exactly one domain, every domain has an accountable owner with real authority, and every cross-domain flow runs through a published contract rather than a shared table. Data mesh principles — domain ownership, data as a product, federated governance, self-serve platform — give the architect a vocabulary for scaling this without centralizing everything or fragmenting everything. The register is small; the discipline it encodes is what keeps the data layer from becoming nobody's system.
+Data domains are the ownership boundaries of the data layer: every dataset belongs to exactly one domain, every domain has an accountable owner with real authority, and every cross-domain flow runs through a published contract rather than a shared table. Data mesh principles (domain ownership, data as a product, federated governance, self-serve platform) give the architect a vocabulary for scaling this without centralizing everything or fragmenting everything. The register is small; the discipline it encodes is what keeps the data layer from becoming nobody's system.

@@ -16,11 +16,11 @@ tags:
 
 # Technical Standards and Conventions
 
-> **Core skill:** Codifying how the team builds — so the default choice is the right choice, and the team converges without being policed.
+> **Core skill:** Codifying how the team builds, so the default choice is the right choice, and the team converges without being policed.
 
 ## Why This Matters
 
-Every team pays a tax for inconsistency: review debates about naming, three logging patterns, two error-handling styles, tests that are written differently by every author. The tax compounds with every new engineer and every new module. Standards are the capital that pays the tax down — but only if they are written as defaults, not laws, and enforced by tooling, not by nagging.
+Every team pays a tax for inconsistency: review debates about naming, three logging patterns, two error-handling styles, tests that are written differently by every author. The tax compounds with every new engineer and every new module. Standards are the capital that pays the tax down, but only if they are written as defaults, not laws, and enforced by tooling, not by nagging.
 
 The tech lead's role is to decide what deserves a standard, write it so it explains itself, and codify it so the right thing is the easy thing. A standard that lives only in a document is advice; a standard enforced by a linter, a template, or a CI check is engineering infrastructure.
 
@@ -46,7 +46,7 @@ The test for whether to standardize: does the inconsistency cost more than the s
 | Guarded | Deviation is possible but visible | Linter warnings, review flags |
 | Gated | Deviation requires a named exception | CI blocks, exception log required |
 
-The philosophy matters: a standard is a default that explains itself, not a law that demands obedience. When the standard is challenged, the response is the reasoning — and if the reasoning is outdated, the standard changes. Standards that cannot be questioned become the next generation's debt.
+The philosophy matters: a standard is a default that explains itself, not a law that demands obedience. When the standard is challenged, the response is the reasoning, and if the reasoning is outdated, the standard changes. Standards that cannot be questioned become the next generation's debt.
 
 ## Codifying in Templates, Linters, and CI
 
@@ -64,7 +64,7 @@ Every standard should name its enforcement mechanism. A standard with no mechani
 
 ## The Exception Process
 
-Exceptions are a feature, not a loophole — but only when they are visible and bounded:
+Exceptions are a feature, not a loophole, but only when they are visible and bounded:
 
 | Element | Rule |
 |---------|------|
@@ -84,7 +84,7 @@ An exception log is the standard's feedback channel: exceptions that recur are e
 | Yearly | Each standard is judged: does it still pay its tax? |
 | On trigger | A repeated exception or a new pattern triggers an early review |
 
-The review answers one question per standard: is this still the right default? Standards that survive review get stronger; standards that die get a tombstone note explaining why — so the next generation does not reinvent them.
+The review answers one question per standard: is this still the right default? Standards that survive review get stronger; standards that die get a tombstone note explaining why, so the next generation does not reinvent them.
 
 ## Onboarding Value
 
@@ -98,6 +98,7 @@ The review answers one question per standard: is this still the right default? S
 Standards are the cheapest mentoring the team has. They teach the team's judgment at scale, every day, without the lead in the room.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PAIN["Recurring inconsistency or debate"] --> WRITE["Write standard with reasoning"]
     WRITE --> CODIFY["Codify in templates and CI"]
@@ -113,7 +114,7 @@ flowchart TD
 ## Practical Applications
 
 ```markdown
-# Standard: [name] — [status: active]
+# Standard: [name], [status: active]
 
 ## Why this standard exists
 - [ ] The cost it removes: [what inconsistency costs]
@@ -164,9 +165,9 @@ Checklist:
 
 - [[02_Architecture_Decision_Process]]: standards cite the ADRs that shaped them
 - [[03_Design_Review_Leadership]]: standards answer the recurring review questions
-- [[06_Process_and_Quality_Stewardship/00_overview|Process and Quality Stewardship]]: standards become real through process
+- [[career-path/05_Tech_Lead/06_Process_and_Quality_Stewardship/00_overview|Process and Quality Stewardship]]: standards become real through process
 - [[01_Setting_Team_Technical_Vision]]: principles become operational through standards
 
 ## Summary
 
-Technical standards convert the team's judgment into defaults: written with their reasoning, enforced by templates, linters, and CI, and reviewed on a cadence with visible, expiring exceptions. The goal is not uniformity for its own sake but the removal of recurring cost — review debate, onboarding friction, and inconsistency tax. A standard that has to be enforced by nagging has failed; one enforced by the pipeline is infrastructure.
+Technical standards convert the team's judgment into defaults: written with their reasoning, enforced by templates, linters, and CI, and reviewed on a cadence with visible, expiring exceptions. The goal is not uniformity for its own sake but the removal of recurring cost: review debate, onboarding friction, and inconsistency tax. A standard that has to be enforced by nagging has failed; one enforced by the pipeline is infrastructure.

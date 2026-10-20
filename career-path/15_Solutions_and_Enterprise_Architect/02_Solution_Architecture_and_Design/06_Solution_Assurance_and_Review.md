@@ -15,15 +15,15 @@ tags:
 
 # Solution Assurance and Review
 
-> **Core skill:** Assuring that solutions conform to architecture standards, principles, and risk requirements — through design reviews, governance checkpoints, and exemptions that are explicit rather than accidental.
+> **Core skill:** Assuring that solutions conform to architecture standards, principles, and risk requirements: through design reviews, governance checkpoints, and exemptions that are explicit rather than accidental.
 
 ## Why This Matters
 
 Assurance is how an organization finds out, before the money is spent, whether a solution respects the architecture it depends on. Without it, every initiative is an experiment conducted in production against shared standards that may or may not hold; with it done badly, architecture becomes a police function that delivery learns to evade. The architect's task is to make assurance useful: reviews that improve designs, checkpoints placed at moments when change is still cheap, and exemption processes honest enough that they are used instead of circumvented.
 
-The review is not an audience for a completed design; it is an evidence-based examination of one. Reviewers ask what the design assumes, which standards it invokes or departs from, what the risks are, and what evidence supports the claims. The most valuable reviews catch the question nobody asked — the missing data ownership, the unaddressed residency requirement, the integration with the system that was forgotten. An assurance process that only checks boxes produces box-tickers; one that improves designs earns its access to the next design.
+The review is not an audience for a completed design; it is an evidence-based examination of one. Reviewers ask what the design assumes, which standards it invokes or departs from, what the risks are, and what evidence supports the claims. The most valuable reviews catch the question nobody asked: the missing data ownership, the unaddressed residency requirement, the integration with the system that was forgotten. An assurance process that only checks boxes produces box-tickers; one that improves designs earns its access to the next design.
 
-Exemptions are where assurance most often fails. Every architecture standard eventually meets a case it did not anticipate. If the only options are rigid refusal or quiet violation, the organization gets quiet violation. A functioning exemption process — time-bound, evidence-backed, risk-accepted by a named owner — keeps the standard meaningful while letting the business move. Unrecorded exceptions are not flexibility; they are unmanaged risk.
+Exemptions are where assurance most often fails. Every architecture standard eventually meets a case it did not anticipate. If the only options are rigid refusal or quiet violation, the organization gets quiet violation. A functioning exemption process (time-bound, evidence-backed, risk-accepted by a named owner) keeps the standard meaningful while letting the business move. Unrecorded exceptions are not flexibility; they are unmanaged risk.
 
 ## What Assurance Covers
 
@@ -62,6 +62,7 @@ The strongest review cultures ask one adversarial question well: what would make
 ## Exemptions and Conformance Outcomes
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DESIGN["Solution design"] --> REVIEW["Architecture review"]
     REVIEW["Architecture review"] --> CONFORM["Conformance confirmed"]
@@ -78,7 +79,7 @@ flowchart TD
 | **Redirect** | Design must change before proceeding | Rework and re-review |
 | **Refuse** | Unacceptable risk or conflict | Escalation path for disagreement |
 
-Every outcome must name its decision owner. A review that ends without a recorded decision leaves delivery to guess — and delivery will guess toward whatever is easiest.
+Every outcome must name its decision owner. A review that ends without a recorded decision leaves delivery to guess, and delivery will guess toward whatever is easiest.
 
 ## Practical Applications
 
@@ -130,8 +131,8 @@ Escalations: <open disagreements>
 - [[01_Solution_Architecture_Process]]: gates within the architecture process
 - [[05_Solution_Delivery_Partnership]]: reviews as part of the delivery relationship
 - [[07_Solution_Lifecycle_and_Evolution]]: learning that feeds standards and future designs
-- [[03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: governance at enterprise scope
-- [[05_Security_Risk_and_Compliance/00_overview|Security Risk and Compliance]]: the risk and compliance dimension of assurance
+- [[career-path/15_Solutions_and_Enterprise_Architect/03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: governance at enterprise scope
+- [[career-path/15_Solutions_and_Enterprise_Architect/05_Security_Risk_and_Compliance/00_overview|Security Risk and Compliance]]: the risk and compliance dimension of assurance
 
 ## Summary
 

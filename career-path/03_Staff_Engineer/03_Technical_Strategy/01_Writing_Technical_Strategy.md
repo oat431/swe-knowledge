@@ -65,7 +65,7 @@ More than five bets means the strategy is a wishlist; fewer than three means it 
 
 ## Non-Goals: What We Will Not Do
 
-Non-goals are the section that makes strategy usable. A strategy that only says what will be done invites every competing idea to claim compatibility. Naming what will not be done — the migration we will not start, the platform we will not adopt, the scale we are not optimizing for — gives teams the written authority to decline.
+Non-goals are the section that makes strategy usable. A strategy that only says what will be done invites every competing idea to claim compatibility. Naming what will not be done (the migration we will not start, the platform we will not adopt, the scale we are not optimizing for) gives teams the written authority to decline.
 
 Non-goals must be specific enough to test. "We will not chase performance beyond the p99 target of 200ms" is a non-goal; "we care about quality" is decoration.
 
@@ -75,11 +75,12 @@ A strategy that does not change any team's work plan is not a strategy. The impl
 
 ## Length Discipline: 3-5 Pages
 
-The document must fit in three to five pages. This is not a stylistic preference; it is the mechanism that forces prioritization. A strategy long enough to cover every exception is a strategy long enough to be ignored. If a section cannot be written within the budget, the thinking is not done yet — the answer is to decide, not to add pages.
+The document must fit in three to five pages. This is not a stylistic preference; it is the mechanism that forces prioritization. A strategy long enough to cover every exception is a strategy long enough to be ignored. If a section cannot be written within the budget, the thinking is not done yet. The answer is to decide, not to add pages.
 
 ## The Drafting Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     GATHER["Gather evidence from systems and teams"] --> DRAFT["Draft direction bets and non-goals"]
     DRAFT --> LEADERS["Seek leader input on constraints"]
@@ -186,8 +187,8 @@ A strategy is a living document with a fixed review cycle. A quarterly review ke
 - [[05_Strategy_Review_and_Adaptation]]: keeping the document honest over time
 - [[04_Saying_No_at_Scale]]: the daily use of the written strategy
 - [[06_Working_With_Product_Strategy]]: coupling the document to product direction
-- [[04_Influence_and_Alignment/00_overview|Influence and Alignment]]: how the strategy gets adopted
+- [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/00_overview|Influence and Alignment]]: how the strategy gets adopted
 
 ## Summary
 
-Writing technical strategy is the staff engineer's highest-leverage act: an honest current state, three to five sized bets, explicit non-goals, and per-team implications, all held to three to five pages. The drafting process — evidence, leader input, team pressure-test — determines adoption more than the prose does, and the refresh cadence keeps the document alive. A strategy that does not change decisions is decoration; one that does is the organization's decision-making infrastructure.
+Writing technical strategy is the staff engineer's highest-leverage act: an honest current state, three to five sized bets, explicit non-goals, and per-team implications, all held to three to five pages. The drafting process (evidence, leader input, team pressure-test) determines adoption more than the prose does, and the refresh cadence keeps the document alive. A strategy that does not change decisions is decoration; one that does is the organization's decision-making infrastructure.

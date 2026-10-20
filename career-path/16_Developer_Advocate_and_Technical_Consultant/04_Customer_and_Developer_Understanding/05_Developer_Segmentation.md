@@ -17,15 +17,15 @@ tags:
 
 # Developer Segmentation
 
-> **Core skill:** Segmenting audiences by role, maturity, and goal so content, programs, and guidance fit the people who actually receive them — instead of an average developer who does not exist.
+> **Core skill:** Segmenting audiences by role, maturity, and goal so content, programs, and guidance fit the people who actually receive them, instead of an average developer who does not exist.
 
 ## Why This Matters
 
-The average developer is a statistical ghost. A weekend hobbyist evaluating a database and a platform engineer migrating a regulated production system share vocabulary and almost nothing else: different questions, different constraints, different definitions of a good answer. Content written for their average — the safe, generic middle — is precisely calibrated to serve neither, and it is the most common failure shape in developer-facing work.
+The average developer is a statistical ghost. A weekend hobbyist evaluating a database and a platform engineer migrating a regulated production system share vocabulary and almost nothing else: different questions, different constraints, different definitions of a good answer. Content written for their average (the safe, generic middle) is precisely calibrated to serve neither, and it is the most common failure shape in developer-facing work.
 
-Segmentation is the advocate's targeting discipline. Every asset has a receiving audience whether it was chosen or not; making the audience explicit converts a vague intention into design constraints — vocabulary, depth, examples, proof style, and call to action. It also converts measurement from vibes into cohort performance: this quickstart was built for first-timers, and first-timers complete it at this rate.
+Segmentation is the advocate's targeting discipline. Every asset has a receiving audience whether it was chosen or not; making the audience explicit converts a vague intention into design constraints: vocabulary, depth, examples, proof style, and call to action. It also converts measurement from vibes into cohort performance: this quickstart was built for first-timers, and first-timers complete it at this rate.
 
-The consultant needs segmentation in a harder form. Customers arrive with a self-image that may not match their situation: a small team describing enterprise ambitions, an enterprise describing startup speed. Reading the real segment — maturity, capacity, constraints — rather than the claimed one is what keeps recommendations from being aspirational theater that collapses in implementation.
+The consultant needs segmentation in a harder form. Customers arrive with a self-image that may not match their situation: a small team describing enterprise ambitions, an enterprise describing startup speed. Reading the real segment (maturity, capacity, constraints) rather than the claimed one is what keeps recommendations from being aspirational theater that collapses in implementation.
 
 ## Segmentation Axes
 
@@ -82,6 +82,7 @@ The consultant needs segmentation in a harder form. Customers arrive with a self
 | Set-and-forget | Ecosystem shifts; segments silently drift | Quarterly review against fresh evidence |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     AXES["Choose segmentation axes"] --> EVIDENCE["Gather evidence per segment"]
     EVIDENCE --> PROFILES["Build working segment profiles"]
@@ -137,11 +138,11 @@ flowchart LR
 
 ## Related Topics
 
-- [[01_Developer_and_Customer_Research]] — the evidence source for real segments
-- [[06_Feedback_Systems_and_Surveys]] — mechanisms that keep segment data current
-- [[02_Needs_and_Context_Discovery]] — reading real context beyond the claimed segment
-- [[01_Technical_Communication/00_overview|Technical Communication]] — adapting one idea across segments
-- [[career-path/14_Product_Manager/01_Problem_Discovery/00_overview|Problem Discovery (PM)]] — segment-driven product discovery
+- [[01_Developer_and_Customer_Research]]: the evidence source for real segments
+- [[06_Feedback_Systems_and_Surveys]]: mechanisms that keep segment data current
+- [[02_Needs_and_Context_Discovery]]: reading real context beyond the claimed segment
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/01_Technical_Communication/00_overview|Technical Communication]]: adapting one idea across segments
+- [[career-path/14_Product_Manager/01_Problem_Discovery/00_overview|Problem Discovery (PM)]]: segment-driven product discovery
 
 ## Summary
 

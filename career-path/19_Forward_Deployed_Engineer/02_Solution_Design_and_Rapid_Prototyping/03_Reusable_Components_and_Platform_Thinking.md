@@ -16,15 +16,15 @@ tags:
 
 # Reusable Components and Platform Thinking
 
-> **Core skill:** Building once, deploying many times without copying debt — extracting reusable components from field solutions and pushing them toward the platform.
+> **Core skill:** Building once, deploying many times without copying debt: extracting reusable components from field solutions and pushing them toward the platform.
 
 ## Why This Matters
 
-Every deployment generates artifacts that a different customer will eventually need: a connector to a common enterprise system, a data-quality checker, an access-pattern scaffold, an evaluation harness, a rollout pattern. The FDE who carries these forward multiplies their velocity with each engagement; the FDE who starts from zero every time burns the same weeks over and over. The difference compounds — not linearly, but with every customer in the portfolio whose deployment begins one step ahead.
+Every deployment generates artifacts that a different customer will eventually need: a connector to a common enterprise system, a data-quality checker, an access-pattern scaffold, an evaluation harness, a rollout pattern. The FDE who carries these forward multiplies their velocity with each engagement; the FDE who starts from zero every time burns the same weeks over and over. The difference compounds: not linearly, but with every customer in the portfolio whose deployment begins one step ahead.
 
 The naive alternative is copy-paste: fork the previous deployment, rename the customer, adjust the details. It works once, and it hides its cost. Two forks become four, then ten; a fix applied to one does not reach the others; the differences between customers become invisible until an upgrade breaks half the fleet. Copying is the fastest way to slow down, because it trades a visible present cost for an invisible future one.
 
-Platform thinking in the field is disciplined, though. The trap on the other side is premature abstraction — building a grand framework on top of one customer's idiosyncratic needs, then dragging it through every subsequent deployment. The working rule is economic, not aesthetic: extract at the second real use, not the first hypothetical one, and push the component toward the product at the third. Field components earn their way into the platform through evidence, not through enthusiasm.
+Platform thinking in the field is disciplined, though. The trap on the other side is premature abstraction: building a grand framework on top of one customer's idiosyncratic needs, then dragging it through every subsequent deployment. The working rule is economic, not aesthetic: extract at the second real use, not the first hypothetical one, and push the component toward the product at the third. Field components earn their way into the platform through evidence, not through enthusiasm.
 
 ## The Copying Debt Problem
 
@@ -63,6 +63,7 @@ Two tests gate every extraction: the interface can be stated simply, and the beh
 | 6 | Retire the field fork once upstream absorbs it | One maintained implementation, not two |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     FIRST["First deployment"] --> NOTICE["Notice the repeated pattern"]
     NOTICE --> EXTRACT["Extract behind an interface"]
@@ -77,7 +78,7 @@ The path ends upstream. A component that lives only in the field organization is
 ### Divergence Ledger Template
 
 ```markdown
-## Divergence Ledger — <component>
+## Divergence Ledger: <component>
 
 | Deployment | Divergence | Reason | Owner | Disposition |
 |------------|------------|--------|-------|-------------|
@@ -115,11 +116,11 @@ The path ends upstream. A component that lives only in the field organization is
 ## Related Topics
 
 - [[01_Demo_Driven_Development]]
-- [[07_Field_to_Product_and_Commercial_Awareness/00_overview|Field to Product and Commercial Awareness]]
+- [[career-path/19_Forward_Deployed_Engineer/07_Field_to_Product_and_Commercial_Awareness/00_overview|Field to Product and Commercial Awareness]]
 - [[career-path/06_Software_Architect/00_overview|Software Architect]]
 - [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]]
-- [[03_Integration_and_Deployment_Engineering/00_overview|Integration and Deployment Engineering]]
+- [[career-path/19_Forward_Deployed_Engineer/03_Integration_and_Deployment_Engineering/00_overview|Integration and Deployment Engineering]]
 
 ## Summary
 
-Reusable components and platform thinking turn field work from a sequence of one-off builds into a compounding practice: noticing the patterns that recur across customers, extracting them behind narrow interfaces at the second real use, tracking divergence honestly, and pushing proven components back toward the product platform. The FDE's portfolio gets faster with every deployment — but only if the lessons are carried forward as components rather than memories.
+Reusable components and platform thinking turn field work from a sequence of one-off builds into a compounding practice: noticing the patterns that recur across customers, extracting them behind narrow interfaces at the second real use, tracking divergence honestly, and pushing proven components back toward the product platform. The FDE's portfolio gets faster with every deployment, but only if the lessons are carried forward as components rather than memories.

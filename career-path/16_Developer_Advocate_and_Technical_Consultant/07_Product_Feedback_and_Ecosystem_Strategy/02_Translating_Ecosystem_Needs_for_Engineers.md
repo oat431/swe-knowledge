@@ -16,7 +16,7 @@ tags:
 
 # Translating Ecosystem Needs for Engineers
 
-> **Core skill:** Converting developer complaints and ecosystem observations into the vocabulary engineering actually acts on — scenarios, reproduction paths, impact models, and design constraints.
+> **Core skill:** Converting developer complaints and ecosystem observations into the vocabulary engineering actually acts on: scenarios, reproduction paths, impact models, and design constraints.
 
 ## Why This Matters
 
@@ -24,7 +24,7 @@ Engineering teams do not lack empathy; they lack bandwidth for unfiltered field 
 
 The translation problem is real because the two sides operate on different organizing principles. The field thinks in workflows and frustrations: things they were trying to accomplish when the product got in the way. Engineering thinks in systems and invariants: what input produces what output, under what conditions, with what guarantees. A message that stays in the field's frame gets sorted as "feedback" and shelved; a message in engineering's frame gets sorted as "bug" or "design gap" and scheduled.
 
-Translation is not spin. The discipline is to be more precise, not more flattering: name the scenario exactly, strip the emotion from the evidence while preserving the severity, and hand over the materials an engineer needs to verify the claim themselves. Honest translation earns the right to say the hard things — including "this design choice is wrong for the ecosystem."
+Translation is not spin. The discipline is to be more precise, not more flattering: name the scenario exactly, strip the emotion from the evidence while preserving the severity, and hand over the materials an engineer needs to verify the claim themselves. Honest translation earns the right to say the hard things, including "this design choice is wrong for the ecosystem."
 
 ## Why Translation Fails
 
@@ -34,8 +34,8 @@ Translation is not spin. The discipline is to be more precise, not more flatteri
 | Missing reproduction | "It does not work" with no steps | Build the minimal failing case yourself |
 | Unquantified severity | "This is really bad" | Define severity by workflow impact: blocked, degraded, friction |
 | Audience mismatch | Same message to support, PM, and engineers | One message per audience, one dataset |
-| Lost context | The workaround is missing from the report | Include what users did instead — the workaround is a design signal |
-| Advocacy tone | The messenger feels like a plaintiff | Neutral, precise, sourced — let the facts carry severity |
+| Lost context | The workaround is missing from the report | Include what users did instead: the workaround is a design signal |
+| Advocacy tone | The messenger feels like a plaintiff | Neutral, precise, sourced; let the facts carry severity |
 
 ## Translation Patterns
 
@@ -77,6 +77,7 @@ The right column hands engineering a system to inspect; the left is a symptom re
 ## The Translation Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     NEED["Field need in user words"] --> SCENARIO["Scenario - workflow and context"]
     SCENARIO --> EVIDENCE["Evidence - repro, frequency, severity"]
@@ -100,12 +101,12 @@ flowchart LR
 ### Translation Template
 
 ```markdown
-## Engineering Brief — [issue]
+## Engineering Brief: [issue]
 - Scenario: [who, doing what, when it broke]
 - Expected vs observed: [behavior]
 - Minimal reproduction: [steps, env, versions]
 - Frequency: [n cases, period, sources]
-- Severity: [blocked / degraded / friction — why]
+- Severity: [blocked / degraded / friction: why]
 - Workaround observed: [what users do instead]
 - Adoption evidence: [drop-off, support load, churn signal]
 - Suggestion: [possible direction, clearly marked as optional]
@@ -140,4 +141,4 @@ flowchart LR
 
 ## Summary
 
-Translating ecosystem needs for engineers means restating field reality in the frame engineering acts on: scenarios, minimal reproductions, defined severity, adoption evidence, and observed workarounds — delivered neutrally, sourced, and respectful of the process it enters. The advocate's leverage is not louder complaints but more precise ones; precision is what turns a developer's bad afternoon into a bug that gets fixed.
+Translating ecosystem needs for engineers means restating field reality in the frame engineering acts on: scenarios, minimal reproductions, defined severity, adoption evidence, and observed workarounds, delivered neutrally, sourced, and respectful of the process it enters. The advocate's leverage is not louder complaints but more precise ones; precision is what turns a developer's bad afternoon into a bug that gets fixed.

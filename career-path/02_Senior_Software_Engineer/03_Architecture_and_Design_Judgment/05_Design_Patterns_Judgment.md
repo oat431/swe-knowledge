@@ -27,6 +27,7 @@ Design patterns are tools, not rules. The Gang of Four book describes 23 pattern
 ## The Pattern Judgment Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PROBLEM["Identify the problem"] --> SIMPLE["Is there a simple solution?"]
     SIMPLE -- "Yes" --> USE_SIMPLE["Use the simple solution"]

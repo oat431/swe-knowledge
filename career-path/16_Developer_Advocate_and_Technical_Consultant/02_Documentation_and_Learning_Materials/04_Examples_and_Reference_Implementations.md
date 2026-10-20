@@ -16,13 +16,13 @@ tags:
 
 # Examples and Reference Implementations
 
-> **Core skill:** The advocate builds examples that run, teach by doing, and survive being copied — from minimal snippets to production-shaped reference implementations that show how the technology is meant to be used.
+> **Core skill:** The advocate builds examples that run, teach by doing, and survive being copied: from minimal snippets to production-shaped reference implementations that show how the technology is meant to be used.
 
 ## Why This Matters
 
-Examples are the most-read documentation and the most-copied code in any ecosystem. A developer evaluating a technology does not read the reference first; they find an example, run it, and judge the entire platform by whether it worked. When it works, the example becomes the seed of a real project — often carried into production nearly as written. That is the power and the danger: whatever the example teaches, including its shortcuts and omissions, gets inherited by everything built on top of it.
+Examples are the most-read documentation and the most-copied code in any ecosystem. A developer evaluating a technology does not read the reference first; they find an example, run it, and judge the entire platform by whether it worked. When it works, the example becomes the seed of a real project, often carried into production nearly as written. That is the power and the danger: whatever the example teaches, including its shortcuts and omissions, gets inherited by everything built on top of it.
 
-The craft spans a spectrum from snippet to reference implementation, and each level has a different job. A snippet proves a concept in five lines; an example app shows a task completed end to end; a reference implementation demonstrates what a well-built production system looks like — structure, error handling, configuration, deployment — as a transferable pattern rather than a copy-paste destination. Confusing the levels is the classic failure: toy examples that silently teach unshippable patterns, or reference implementations so elaborate that nobody can adapt them. The professional matches the level to the lesson and labels the boundary honestly.
+The craft spans a spectrum from snippet to reference implementation, and each level has a different job. A snippet proves a concept in five lines; an example app shows a task completed end to end; a reference implementation demonstrates what a well-built production system looks like (structure, error handling, configuration, deployment) as a transferable pattern rather than a copy-paste destination. Confusing the levels is the classic failure: toy examples that silently teach unshippable patterns, or reference implementations so elaborate that nobody can adapt them. The professional matches the level to the lesson and labels the boundary honestly.
 
 Examples also carry a maintenance contract that prose does not. A paragraph can be approximately true for years; an example either runs or it does not, and it stopped running the moment a dependency moved. The advocate treats examples as code: version-pinned, licensed, tested in continuous integration, and retired deliberately. Every uncared-for example is a trap set for a future reader, and the trap is more expensive than the example ever saved.
 
@@ -66,6 +66,7 @@ The last criterion is the dividing line between a maintained example and a futur
 ## The Example Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     READER["Start from the reader's task"] --> MINIMAL["Keep the example minimal but real"]
     MINIMAL["Keep the example minimal but real"] --> RUN["Make it run in one step"]
@@ -124,9 +125,9 @@ The lifecycle is reader-first by design: the task decides the example's shape, t
 
 - [[02_Guides_and_Tutorials]]
 - [[03_Reference_and_API_Documentation]]
-- [[05_Solution_Guidance/00_overview|Solution Guidance]]
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/05_Solution_Guidance/00_overview|Solution Guidance]]
 - [[career-path/07_SRE_and_Platform_Engineer/06_Developer_Platform/00_overview|Developer Platform (SRE)]]
 
 ## Summary
 
-Examples and reference implementations are the ecosystem's most-copied teaching material: snippets that prove concepts, apps that complete tasks, and production-shaped references that transfer judgment about structure and failure. The advocate who keeps the spectrum honest — labeled levels, runnable in one step, errors included, dependencies pinned, executed in CI — turns examples from plausible artifacts into trusted seeds that produce users, patterns, and production systems that actually work.
+Examples and reference implementations are the ecosystem's most-copied teaching material: snippets that prove concepts, apps that complete tasks, and production-shaped references that transfer judgment about structure and failure. The advocate who keeps the spectrum honest (labeled levels, runnable in one step, errors included, dependencies pinned, executed in CI) turns examples from plausible artifacts into trusted seeds that produce users, patterns, and production systems that actually work.

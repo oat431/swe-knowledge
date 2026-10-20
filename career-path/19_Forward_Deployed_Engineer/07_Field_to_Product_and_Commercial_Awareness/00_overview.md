@@ -14,15 +14,15 @@ tags:
 
 # Field to Product and Commercial Awareness
 
-> **Core capability:** The FDE turns one customer's reality into leverage for the many — recognizing patterns across deployments, feeding the product roadmap with evidence, and understanding the economics that decide whether deployments renew, expand, or die.
+> **Core capability:** The FDE turns one customer's reality into leverage for the many: recognizing patterns across deployments, feeding the product roadmap with evidence, and understanding the economics that decide whether deployments renew, expand, or die.
 
 ## Why This Matters
 
-A deployment solved only for one customer is a service engagement; a deployment whose learnings improve the product is a strategy. The organizations that made forward deployment strategic — Palantir's "one customer, many capabilities" being the canonical model — treat the field as the most expensive and most valuable research lab they have. The FDE is the instrument that converts deployment reality into product direction.
+A deployment solved only for one customer is a service engagement; a deployment whose learnings improve the product is a strategy. The organizations that made forward deployment strategic (Palantir's "one customer, many capabilities" being the canonical model) treat the field as the most expensive and most valuable research lab they have. The FDE is the instrument that converts deployment reality into product direction.
 
-Pattern recognition is the core discipline. One customer wanting a feature is a request; the fourth customer hitting the same wall is a roadmap item with evidence behind it. The FDE learns to distinguish local quirks from structural truths, to quantify them (how many accounts, how much effort, what revenue at stake), and to package them in language product teams can act on — problem first, solution second.
+Pattern recognition is the core discipline. One customer wanting a feature is a request; the fourth customer hitting the same wall is a roadmap item with evidence behind it. The FDE learns to distinguish local quirks from structural truths, to quantify them (how many accounts, how much effort, what revenue at stake), and to package them in language product teams can act on: problem first, solution second.
 
-Commercial awareness completes the picture. Deployments exist inside a business: they cost money to deliver and operate, they generate or protect revenue, and they are renewed, expanded, or abandoned based on perceived value. An FDE who understands deployment economics — why pilots fail to convert, what adoption does to cost curves, what makes an account expand — makes better engineering trade-offs and earns the trust of the commercial teams whose promises they must keep. This awareness also shapes the FDE's own career: it is the bridge to product, leadership, and founding paths.
+Commercial awareness completes the picture. Deployments exist inside a business: they cost money to deliver and operate, they generate or protect revenue, and they are renewed, expanded, or abandoned based on perceived value. An FDE who understands deployment economics (why pilots fail to convert, what adoption does to cost curves, what makes an account expand) makes better engineering trade-offs and earns the trust of the commercial teams whose promises they must keep. This awareness also shapes the FDE's own career: it is the bridge to product, leadership, and founding paths.
 
 ## Topics in This Capability Area
 
@@ -39,6 +39,7 @@ Commercial awareness completes the picture. Deployments exist inside a business:
 ## The Field Leverage Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     DEPLOY["Deployment reality"] --> PATTERN["Recognize the pattern"]
     PATTERN --> CASE["Build the evidence case"]
@@ -47,7 +48,7 @@ flowchart LR
     PRODUCT --> DEPLOY
 ```
 
-The loop only closes if the FDE does the recognizing and the packaging — nobody else has the raw material.
+The loop only closes if the FDE does the recognizing and the packaging. Nobody else has the raw material.
 
 ## Practical Applications
 
@@ -80,8 +81,8 @@ The loop only closes if the FDE does the recognizing and the packaging — nobod
 
 ## Related Capabilities
 
-- [[01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]: discovery produces the raw signal
-- [[06_Customer_Communication_and_Executive_Influence/00_overview|Customer Communication and Executive Influence]]: outcome reporting feeds renewal and expansion
+- [[career-path/19_Forward_Deployed_Engineer/01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]: discovery produces the raw signal
+- [[career-path/19_Forward_Deployed_Engineer/06_Customer_Communication_and_Executive_Influence/00_overview|Customer Communication and Executive Influence]]: outcome reporting feeds renewal and expansion
 - [[career-path/14_Product_Manager/00_overview|Product Manager]]: the receiving end of field evidence
 - [[career-path/17_Independent_Consulting_and_Technical_Founder/00_overview|Independent Consulting and Technical Founder]]: the commercial discipline in its purest form
 - [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]: cross-team influence patterns for product direction

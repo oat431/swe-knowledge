@@ -16,13 +16,13 @@ tags:
 
 # Risk Assessment with Limited Depth
 
-> **Core skill:** Assessing technical risk without deep expertise — reading proxy signals, asking the questions that surface risk, translating risk into business terms, and owning the risk appetite decision.
+> **Core skill:** Assessing technical risk without deep expertise: reading proxy signals, asking the questions that surface risk, translating risk into business terms, and owning the risk appetite decision.
 
 ## Why This Matters
 
 The manager is accountable for risk the team cannot see and specialists will not carry: the migration that could slip the quarter, the dependency that could collapse, the vendor claim that could be fiction. Yet the manager rarely has the depth to audit the technical substance directly. The gap between accountability and depth is closed by method, not by expertise.
 
-The method has three parts: read the proxy signals that correlate with risk, ask the questions that force risk into the open, and translate what you find into business terms — revenue exposure, user impact, compliance — that the organization can actually weigh. The manager who masters this can own risk in domains where they could never build the system.
+The method has three parts: read the proxy signals that correlate with risk, ask the questions that force risk into the open, and translate what you find into business terms (revenue exposure, user impact, compliance) that the organization can actually weigh. The manager who masters this can own risk in domains where they could never build the system.
 
 ## Proxy Signals
 
@@ -86,7 +86,7 @@ The deepest part of the role: someone must decide how much risk the organization
 
 - Decide risk appetite explicitly: what is acceptable to lose, for what gain
 - Accept risks in writing: "I accept the migration risk through Q3; the mitigation is X"
-- Communicate accepted risk upward — silently accepted risk becomes a surprise later
+- Communicate accepted risk upward: silently accepted risk becomes a surprise later
 - Revisit the appetite when the stakes change
 
 | Risk Appetite Decision | Example |
@@ -97,6 +97,7 @@ The deepest part of the role: someone must decide how much risk the organization
 | Avoid | Do not do the thing; the risk exceeds any return |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SIGNALS["Read the proxy signals"] --> QUESTIONS["Ask the risk questions"]
     QUESTIONS --> TRANSLATE["Translate into business terms"]
@@ -120,16 +121,16 @@ flowchart TD
 ### Risk Register Template
 
 ```markdown
-## Risk Register — [quarter]
+## Risk Register: [quarter]
 | Risk | Signal | Business Translation | Appetite Decision | Owner | Revisit |
 |------|--------|----------------------|-------------------|-------|---------|
 | [X] | [estimate spread] | [$ exposure, users, timing] | [accept/mitigate/transfer/avoid] | [name] | [date] |
 
 ## Accepted Risks
-- [risk] — accepted because [rationale] — communicated to [stakeholder] on [date]
+- [risk]: accepted because [rationale]; communicated to [stakeholder] on [date]
 
 ## Decisions Brought to Outside Judgment
-- [decision] — reviewer: [name] — verdict: [X] — action: [X]
+- [decision]: reviewer: [name]; verdict: [X]; action: [X]
 ```
 
 ## Common Pitfalls
@@ -156,8 +157,8 @@ flowchart TD
 - [[01_Maintaining_Technical_Currency]]: currency makes the signals readable
 - [[02_Participating_in_Technical_Decisions]]: risk is the trigger for escalated participation
 - [[07_Technology_Adoption_and_Governance]]: adoption risk is the governance core
-- [[04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: risk ownership is delivery's guardrail
+- [[career-path/11_Engineering_Manager/04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: risk ownership is delivery's guardrail
 
 ## Summary
 
-Risk assessment without depth is a method, not a miracle: read proxy signals like confidence spread and estimate divergence, ask the structural questions that force risk into the open, translate findings into business terms, bring outside judgment when stakes exceed the method, and own the risk appetite decision in writing. The manager who runs the method can hold risk in any domain — and the team that sees risk owned, named, and translated trusts the direction it is given.
+Risk assessment without depth is a method, not a miracle: read proxy signals like confidence spread and estimate divergence, ask the structural questions that force risk into the open, translate findings into business terms, bring outside judgment when stakes exceed the method, and own the risk appetite decision in writing. The manager who runs the method can hold risk in any domain, and the team that sees risk owned, named, and translated trusts the direction it is given.

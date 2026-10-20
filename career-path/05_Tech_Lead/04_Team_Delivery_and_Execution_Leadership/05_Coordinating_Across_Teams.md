@@ -15,13 +15,13 @@ tags:
 
 # Coordinating Across Teams
 
-> **Core skill:** Synchronizing work that crosses team boundaries — through explicit interface contracts, named dependency leads, and a sync cadence that catches slips before they hurt.
+> **Core skill:** Synchronizing work that crosses team boundaries: through explicit interface contracts, named dependency leads, and a sync cadence that catches slips before they hurt.
 
 ## Why This Matters
 
-Most delivery failures are not technical; they are boundary failures. Two teams each deliver their half correctly, but the halves do not fit — the contract changed, the date moved, the assumption was never stated. The tech lead is the person who owns the team's side of every boundary and keeps the seams from tearing.
+Most delivery failures are not technical; they are boundary failures. Two teams each deliver their half correctly, but the halves do not fit: the contract changed, the date moved, the assumption was never stated. The tech lead is the person who owns the team's side of every boundary and keeps the seams from tearing.
 
-Coordination by goodwill fails on a predictable schedule: it works while everyone remembers, and breaks when someone forgets, joins late, or leaves. The lead replaces goodwill with structure — contracts written down, counterparts named, cadences scheduled — so that coordination works even when no one is being particularly nice about it.
+Coordination by goodwill fails on a predictable schedule: it works while everyone remembers, and breaks when someone forgets, joins late, or leaves. The lead replaces goodwill with structure (contracts written down, counterparts named, cadences scheduled) so that coordination works even when no one is being particularly nice about it.
 
 ## Interface Contracts
 
@@ -48,7 +48,7 @@ When two teams' work interleaves, each team's plan is only as real as the other'
 | Integration points | When the pieces meet and are tested together | Schedule them explicitly; they are the moments of truth |
 | Buffers | Slack between the teams' commitments | Protect the downstream team from upstream drift |
 
-The lead's rule: a milestone the team cannot control is not a milestone — it is a dependency with a date. It belongs in the timeline, yes, but labeled as external, with a fallback sequence attached.
+The lead's rule: a milestone the team cannot control is not a milestone. It is a dependency with a date. It belongs in the timeline, yes, but labeled as external, with a fallback sequence attached.
 
 ## Dependency Lead Mapping
 
@@ -74,11 +74,11 @@ Coordination needs a rhythm that matches the risk: frequent enough to catch drif
 | Joint planning | Per quarter or per program | Aligned timelines, joint milestones, contract review |
 | Ad-hoc war room | On demand, when an integration is at risk | The people with the authority to fix the immediate problem |
 
-The weekly sync has a standing agenda and a standing output: the shared timeline updated, the open asks listed, the next sync booked. If the sync can be skipped because the async status shows everything green, skip it — but the default is that the cadence runs.
+The weekly sync has a standing agenda and a standing output: the shared timeline updated, the open asks listed, the next sync booked. If the sync can be skipped because the async status shows everything green, skip it, but the default is that the cadence runs.
 
 ## Contract Changes Mid-Flight
 
-Contracts change. The danger is not the change — it is the change that happens in one team's head and arrives as a surprise in the other team's integration test.
+Contracts change. The danger is not the change. It is the change that happens in one team's head and arrives as a surprise in the other team's integration test.
 
 | Change type | Example | Protocol |
 |-------------|---------|----------|
@@ -87,11 +87,11 @@ Contracts change. The danger is not the change — it is the change that happens
 | Scope change | The other team needs more or less from us | Re-negotiate the contract scope; update owners and dates |
 | Ownership change | The team maintaining the interface changes | Announce at the leads sync; update the dependency map |
 
-The lead's discipline during a mid-flight change: acknowledge it in writing, re-check the downstream impact, and re-confirm the contract version both teams are building against. The contract is a living document — but every change to it is a small re-negotiation, not a unilateral edit.
+The lead's discipline during a mid-flight change: acknowledge it in writing, re-check the downstream impact, and re-confirm the contract version both teams are building against. The contract is a living document, but every change to it is a small re-negotiation, not a unilateral edit.
 
 ## Shared Component Ownership Pitfalls
 
-When several teams use one component, everyone assumes someone else owns it — and the commons rots. The lead names the ownership question before it becomes an incident.
+When several teams use one component, everyone assumes someone else owns it, and the commons rots. The lead names the ownership question before it becomes an incident.
 
 | Pitfall | How it shows up | Better approach |
 |---------|-----------------|-----------------|
@@ -112,13 +112,14 @@ When two teams disagree, the lead escalates the disagreement, not the other team
 | Lead-to-EM | The EMs decide if the disagreement is about priorities or people | A written summary of the options and the trade-offs |
 | Management | Cross-org priority call | The decision that unblocks both teams, recorded |
 
-The rule of cross-team escalation: escalate the earliest moment at which the disagreement is clearly beyond the leads' authority — and always with options, never with a demand to take sides. Teams that escalate their disagreements well end up trusting each other more, not less.
+The rule of cross-team escalation: escalate the earliest moment at which the disagreement is clearly beyond the leads' authority, and always with options, never with a demand to take sides. Teams that escalate their disagreements well end up trusting each other more, not less.
 
 ## Documenting Cross-Team Agreements
 
 Every agreement that matters is written down where both teams can find it, with a date and an owner. The lead keeps a single cross-team doc per significant boundary.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CONTRACT["Write the interface contract"] --> MAP["Map the dependency leads"]
     MAP --> TIMELINE["Build the shared timeline"]
@@ -188,9 +189,9 @@ Date: [date] | Owners: [our lead] / [counterpart lead]
 - [[03_Unblocking_and_Escalation]]: dependency blockers escalate through the counterpart map
 - [[04_Delivery_Risk_Management]]: cross-team agreements feed the delivery risk register
 - [[01_Delivery_Planning_Leadership]]: the shared timeline slots into the team's plan
-- [[02_System_Ownership_and_Production_Responsibility/00_overview|System Ownership and Production Responsibility]]: shared components are system ownership at the boundary
+- [[career-path/05_Tech_Lead/02_System_Ownership_and_Production_Responsibility/00_overview|System Ownership and Production Responsibility]]: shared components are system ownership at the boundary
 - [[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]: the neighboring path specialized in multi-team delivery
 
 ## Summary
 
-Cross-team coordination is structure, not goodwill: written interface contracts, named dependency leads, a shared timeline with joint milestones, a sync cadence that catches drift, and a protocol for change and escalation. The lead owns the team's side of every boundary — and keeps the seams from tearing when memory, attention, or people change.
+Cross-team coordination is structure, not goodwill: written interface contracts, named dependency leads, a shared timeline with joint milestones, a sync cadence that catches drift, and a protocol for change and escalation. The lead owns the team's side of every boundary, and keeps the seams from tearing when memory, attention, or people change.

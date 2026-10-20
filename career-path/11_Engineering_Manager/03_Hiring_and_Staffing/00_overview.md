@@ -14,13 +14,13 @@ tags:
 
 # Hiring and Staffing
 
-> **Core capability:** The engineering manager builds the team's capability from the outside in — defining roles, running a fair and effective hiring process, onboarding deliberately, and planning the workforce the team will need.
+> **Core capability:** The engineering manager builds the team's capability from the outside in: defining roles, running a fair and effective hiring process, onboarding deliberately, and planning the workforce the team will need.
 
 ## Why This Matters
 
 Hiring is the highest-leverage, least-reversible decision a manager makes. A strong hire compounds for years; a mis-hire costs months of management attention, team morale, and re-hiring. Yet most managers inherit a broken process: inconsistent interviews, vibes-based decisions, and candidates who experience the company at its worst.
 
-The EM owns the whole funnel: workforce plan, role definition, sourcing, interview design, decision discipline, closing, and the onboarding that turns an accepted offer into a productive teammate. Staffing is the same skill applied internally — moving people where the work and their growth intersect.
+The EM owns the whole funnel: workforce plan, role definition, sourcing, interview design, decision discipline, closing, and the onboarding that turns an accepted offer into a productive teammate. Staffing is the same skill applied internally: moving people where the work and their growth intersect.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ The EM owns the whole funnel: workforce plan, role definition, sourcing, intervi
 ## The Hiring Funnel
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PLAN["Workforce plan"] --> ROLE["Define and level the role"]
     ROLE --> SOURCE["Source and screen"]
@@ -46,7 +47,7 @@ flowchart LR
     CLOSE --> ONBOARD["Onboard to productivity"]
 ```
 
-The funnel is a system — weaknesses upstream (vague roles) doom downstream stages (endless loops, declined offers).
+The funnel is a system: weaknesses upstream (vague roles) doom downstream stages (endless loops, declined offers).
 
 ## What Changes from Tech Lead to Engineering Manager
 
@@ -89,9 +90,9 @@ The funnel is a system — weaknesses upstream (vague roles) doom downstream sta
 
 ## Related Capabilities
 
-- [[01_People_Development/00_overview|People Development]]: onboarding ends where development begins
-- [[02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: each hire changes team composition and health
-- [[04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: workforce plans come from delivery demands
+- [[career-path/11_Engineering_Manager/01_People_Development/00_overview|People Development]]: onboarding ends where development begins
+- [[career-path/11_Engineering_Manager/02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: each hire changes team composition and health
+- [[career-path/11_Engineering_Manager/04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: workforce plans come from delivery demands
 - [[career-path/02_Senior_Software_Engineer/09_Promotion_Evidence_and_Capstone/05_Career_Ladders|Career Ladders (Senior)]]: the leveling knowledge honest job definitions require
 
 ## Summary

@@ -27,6 +27,7 @@ Leading without authority requires building trust, demonstrating expertise, and 
 ## Authority vs Influence
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     subgraph Formal Authority
         A[Assign work] --> B[Make decisions]
@@ -378,9 +379,9 @@ Before leading an initiative, verify:
 
 ## Related Topics
 
-- [[06_Communication_and_Influence/03_Influence_Without_Authority|Influence Without Authority]]: Detailed techniques for building influence
-- [[06_Communication_and_Influence/04_Facilitation|Facilitation]]: Leading meetings and discussions
-- [[06_Communication_and_Influence/06_Cross_Team_Collaboration|Cross-Team Collaboration]]: Leading across organizational boundaries
+- [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/03_Influence_Without_Authority|Influence Without Authority]]: Detailed techniques for building influence
+- [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/04_Facilitation|Facilitation]]: Leading meetings and discussions
+- [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/06_Cross_Team_Collaboration|Cross-Team Collaboration]]: Leading across organizational boundaries
 - [[06_Psychological_Safety|Psychological Safety]]: Building trust is essential for influence
 
 ## Summary

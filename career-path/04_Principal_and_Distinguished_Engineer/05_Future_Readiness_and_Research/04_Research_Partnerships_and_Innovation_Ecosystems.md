@@ -16,13 +16,13 @@ tags:
 
 # Research Partnerships and Innovation Ecosystems
 
-> **Core skill:** The principal engineer builds and sustains research partnerships with academic institutions, industry research labs, and vendor innovation programs — structuring collaborations that produce tangible organizational capability while navigating IP, publication, and incentive alignment across fundamentally different organizational cultures.
+> **Core skill:** The principal engineer builds and sustains research partnerships with academic institutions, industry research labs, and vendor innovation programs, structuring collaborations that produce tangible organizational capability while navigating IP, publication, and incentive alignment across fundamentally different organizational cultures.
 
 ## Why This Matters
 
-No organization can invent everything internally. The capabilities that will matter in five years are being developed today in academic labs, industry research groups, and startup ecosystems. Organizations that lack deliberate research partnerships discover these capabilities through hiring or acquisition — expensive, reactive mechanisms that compound the cost of being late.
+No organization can invent everything internally. The capabilities that will matter in five years are being developed today in academic labs, industry research groups, and startup ecosystems. Organizations that lack deliberate research partnerships discover these capabilities through hiring or acquisition: expensive, reactive mechanisms that compound the cost of being late.
 
-The principal's role is to build the bridges: selecting the right partners, structuring research programs that align academic incentives (publication, novelty) with organizational incentives (capability, differentiation), and managing the IP and publication tensions that kill most collaborations. A well-structured research partnership is a low-cost option on the future — the organization pays attention and modest funding now for the right to adopt early when the research matures.
+The principal's role is to build the bridges: selecting the right partners, structuring research programs that align academic incentives (publication, novelty) with organizational incentives (capability, differentiation), and managing the IP and publication tensions that kill most collaborations. A well-structured research partnership is a low-cost option on the future: the organization pays attention and modest funding now for the right to adopt early when the research matures.
 
 ## Partnership Types and Selection
 
@@ -50,7 +50,7 @@ The principal's partnership portfolio should include 2-4 active collaborations a
 
 ## Structuring Research Programs
 
-A research program is not a single project — it is an umbrella that supports multiple investigations under a shared theme, with governance that keeps both parties aligned.
+A research program is not a single project. It is an umbrella that supports multiple investigations under a shared theme, with governance that keeps both parties aligned.
 
 | Component | Description | Example |
 |-----------|-------------|---------|
@@ -85,6 +85,7 @@ The principal negotiates these terms once per partnership program, not once per 
 | **Program renewal rate** | Partners want to continue; neither side is coasting | Annual renewal decision with explicit renewal criteria |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     STRATEGY["Strategic capability gaps identified"] --> SELECT["Select partner type and institution"]
     SELECT --> CHARTER["Negotiate program charter with IP framework"]
@@ -147,9 +148,9 @@ flowchart TD
 - [[01_Technology_Foresight]]: partnerships as a primary signal source for the radar
 - [[03_Prototyping_and_Proof_of_Concept_Leadership]]: prototypes that emerge from research collaborations
 - [[07_Innovation_Mechanisms_and_Culture]]: internal innovation structures that complement external partnerships
-- [[02_Enterprise_and_Systems_of_Systems_Thinking/00_overview|Enterprise and Systems of Systems Thinking]]: ecosystem thinking for partnership selection
+- [[career-path/04_Principal_and_Distinguished_Engineer/02_Enterprise_and_Systems_of_Systems_Thinking/00_overview|Enterprise and Systems of Systems Thinking]]: ecosystem thinking for partnership selection
 - [[career-path/18_Applied_AI_Engineer/00_overview|Applied AI Engineer]]: AI research partnerships as the canonical current example
 
 ## Summary
 
-Research partnerships and innovation ecosystems are the principal's external innovation capacity: selecting academic, industry, vendor, and open-source partners aligned with strategic capability gaps, structuring programs with pre-negotiated IP frameworks that respect both publication needs and commercialization rights, and governing the portfolio through joint steering committees and annual impact reviews. The well-run partnership is a low-cost option on the future — producing technology, talent, and early signals — and the principal's discipline is treating it as a managed investment, not charity, closing those that do not deliver and doubling down on those that do.
+Research partnerships and innovation ecosystems are the principal's external innovation capacity: selecting academic, industry, vendor, and open-source partners aligned with strategic capability gaps, structuring programs with pre-negotiated IP frameworks that respect both publication needs and commercialization rights, and governing the portfolio through joint steering committees and annual impact reviews. The well-run partnership is a low-cost option on the future (producing technology, talent, and early signals), and the principal's discipline is treating it as a managed investment, not charity, closing those that do not deliver and doubling down on those that do.

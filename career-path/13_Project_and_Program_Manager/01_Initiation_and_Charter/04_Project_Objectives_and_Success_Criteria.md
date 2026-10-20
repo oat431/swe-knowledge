@@ -20,11 +20,11 @@ tags:
 
 ## Why This Matters
 
-A project without measurable objectives cannot succeed because success was never defined. "Improve the platform," "modernize the stack," and "enhance user experience" are aspirations, not objectives — they cannot be tested, they cannot be tracked, and stakeholders who agreed to them in principle will disagree about what they mean in practice. The project manager's first translation task is to convert the sponsor's intent into objectives that are specific, measurable, achievable, relevant, and time-bound.
+A project without measurable objectives cannot succeed because success was never defined. "Improve the platform," "modernize the stack," and "enhance user experience" are aspirations, not objectives. They cannot be tested, they cannot be tracked, and stakeholders who agreed to them in principle will disagree about what they mean in practice. The project manager's first translation task is to convert the sponsor's intent into objectives that are specific, measurable, achievable, relevant, and time-bound.
 
 Success criteria serve a different but complementary function. Where objectives tell the team what to aim at, success criteria tell governance when to declare the project done. An objective might be "reduce customer onboarding time by 40 percent"; a success criterion might be "three consecutive months with mean onboarding time below 10 minutes." The objective drives the plan; the criterion closes the project.
 
-The discipline of writing good objectives and criteria also surfaces disagreements that would otherwise emerge during execution. When the sponsor and the project manager must agree on exactly what "faster" means — 20 percent, 50 percent, or 200 percent — they negotiate before work begins rather than arguing after the deliverable is built.
+The discipline of writing good objectives and criteria also surfaces disagreements that would otherwise emerge during execution. When the sponsor and the project manager must agree on exactly what "faster" means (20 percent, 50 percent, or 200 percent) they negotiate before work begins rather than arguing after the deliverable is built.
 
 ## SMART Objectives
 
@@ -50,6 +50,7 @@ The discipline of writing good objectives and criteria also surfaces disagreemen
 ## Developing Good Success Criteria
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PURPOSE["Project purpose from charter"] --> OBJECTIVES["SMART objectives: what we aim to achieve"]
     OBJECTIVES --> CRITERIA["Success criteria: pass or fail conditions"]
@@ -68,7 +69,7 @@ flowchart TD
 - [ ] Objectives cover all dimensions that matter: scope, quality, time, cost, benefit
 - [ ] Each objective is assigned to a single accountable owner
 - [ ] Success criteria are binary or threshold-based: they can be judged achieved or not
-- [ ] Baselines are measured, not assumed — you have the current-state data
+- [ ] Baselines are measured, not assumed. You have the current-state data
 - [ ] Targets are validated with the sponsor and key stakeholders
 - [ ] Measurement methods are agreed before work begins
 
@@ -108,11 +109,11 @@ flowchart TD
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---|---|---|
-| **Objectives as aspirations** | "World-class platform" — untestable, untrackable, unactionable | SMART decomposition: every objective has a metric, baseline, and target |
+| **Objectives as aspirations** | "World-class platform": untestable, untrackable, unactionable | SMART decomposition: every objective has a metric, baseline, and target |
 | **No baseline** | Target is set without knowing where you are starting from | Measure the current state before setting targets |
 | **Success criteria absent** | Project never formally closes; drift into endless enhancement | Binary or threshold criteria that declare the project done |
 | **Objectives written in isolation** | Team discovers objectives they do not believe are achievable | Co-create objectives with the people who must deliver them |
-| **Metrics that cannot be measured** | "Employee morale will improve" — no measurement instrument exists | Agree on measurement method and data source before adopting the metric |
+| **Metrics that cannot be measured** | "Employee morale will improve": no measurement instrument exists | Agree on measurement method and data source before adopting the metric |
 | **Too many objectives** | Team cannot focus; everything is priority one | Prioritize: three to five primary objectives with clear primacy |
 
 ## Success Indicators
@@ -125,12 +126,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[01_Project_Charter]] — objectives are stated at high level in the charter and detailed here
-- [[02_Business_Case_Development]] — benefits in the business case drive objectives
-- [[01_Scope_Definition]] — scope is what will be delivered to meet the objectives
-- [[07_Benefits_and_Closure/00_overview|Benefits and Closure]] — success criteria assessed at closure
-- [[career-path/12_Technical_Program_Manager/00_overview|TPM]] — program-level objectives and benefit maps
+- [[01_Project_Charter]]: objectives are stated at high level in the charter and detailed here
+- [[02_Business_Case_Development]]: benefits in the business case drive objectives
+- [[01_Scope_Definition]]: scope is what will be delivered to meet the objectives
+- [[career-path/13_Project_and_Program_Manager/07_Benefits_and_Closure/00_overview|Benefits and Closure]]: success criteria assessed at closure
+- [[career-path/12_Technical_Program_Manager/00_overview|TPM]]: program-level objectives and benefit maps
 
 ## Summary
 
-Project objectives and success criteria convert the sponsor's intent into measurable targets that the team can aim at and governance can use to judge completion. SMART objectives — specific, measurable, achievable, relevant, time-bound — provide the granularity that planning requires. Success criteria provide the binary or threshold conditions that close the project. The discipline of writing both, with baselines and agreed measurement methods, surfaces disagreements before they become delivery crises and gives every stakeholder the same definition of done.
+Project objectives and success criteria convert the sponsor's intent into measurable targets that the team can aim at and governance can use to judge completion. SMART objectives (specific, measurable, achievable, relevant, time-bound) provide the granularity that planning requires. Success criteria provide the binary or threshold conditions that close the project. The discipline of writing both, with baselines and agreed measurement methods, surfaces disagreements before they become delivery crises and gives every stakeholder the same definition of done.

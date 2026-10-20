@@ -58,17 +58,18 @@ The senior specialist does not become a bottleneck or a final approval gate. The
 
 | # | Capability | Senior-specialist behavior | Existing vault anchor |
 |---|---|---|---|
-| 01 | [[01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]] | Frames system context, adversaries, attack paths, and treatment decisions | F:\obsidian_note\document_template\14_Security/Threat-Model.md |
-| 02 | [[02_Secure_Architecture_and_Design/00_overview|Secure Architecture and Design]] | Turns security principles into architecture decisions and resilient boundaries | F:\obsidian_note\document_template\14_Security/Security-Architecture.md |
-| 03 | [[03_Secure_Development_and_DevSecOps/00_overview|Secure Development and DevSecOps]] | Makes secure delivery the default through requirements, enablement, and automation | [[software-engineering-note/13_Software_Security/05_Secure_Development_and_Assurance]] |
-| 04 | [[04_Security_Verification_and_Testing/00_overview|Security Verification and Testing]] | Selects verification depth and interprets evidence according to risk | [[software-engineering-note/05_Software_Testing/Software Testing Overview]] |
-| 05 | [[05_Identity_Access_and_Data_Protection/00_overview|Identity, Access and Data Protection]] | Designs accountable identity, authorization, secrets, privacy, and data controls | [[software-engineering-note/13_Software_Security/03_Access_Control_and_Architecture]] |
-| 06 | [[06_Detection_Incident_Response_and_Resilience/00_overview|Detection, Incident Response and Resilience]] | Builds detection quality and leads containment, recovery, and learning | [[body-of-knowledge/CyBOK/07_Security_Operations_and_Incident_Management]] |
-| 07 | [[07_Vulnerability_Management_and_Governance/00_overview|Vulnerability Management and Governance]] | Connects findings, remediation, risk acceptance, metrics, and control evidence | [[software-engineering-note/13_Software_Security/07_Vulnerability_Management]] |
+| 01 | [[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]] | Frames system context, adversaries, attack paths, and treatment decisions | F:\obsidian_note\document_template\14_Security/Threat-Model.md |
+| 02 | [[career-path/08_Security_Engineer/02_Secure_Architecture_and_Design/00_overview|Secure Architecture and Design]] | Turns security principles into architecture decisions and resilient boundaries | F:\obsidian_note\document_template\14_Security/Security-Architecture.md |
+| 03 | [[career-path/08_Security_Engineer/03_Secure_Development_and_DevSecOps/00_overview|Secure Development and DevSecOps]] | Makes secure delivery the default through requirements, enablement, and automation | [[software-engineering-note/13_Software_Security/05_Secure_Development_and_Assurance]] |
+| 04 | [[career-path/08_Security_Engineer/04_Security_Verification_and_Testing/00_overview|Security Verification and Testing]] | Selects verification depth and interprets evidence according to risk | [[software-engineering-note/05_Software_Testing/Software Testing Overview]] |
+| 05 | [[career-path/08_Security_Engineer/05_Identity_Access_and_Data_Protection/00_overview|Identity, Access and Data Protection]] | Designs accountable identity, authorization, secrets, privacy, and data controls | [[software-engineering-note/13_Software_Security/03_Access_Control_and_Architecture]] |
+| 06 | [[career-path/08_Security_Engineer/06_Detection_Incident_Response_and_Resilience/00_overview|Detection, Incident Response and Resilience]] | Builds detection quality and leads containment, recovery, and learning | [[body-of-knowledge/CyBOK/07_Security_Operations_and_Incident_Management]] |
+| 07 | [[career-path/08_Security_Engineer/07_Vulnerability_Management_and_Governance/00_overview|Vulnerability Management and Governance]] | Connects findings, remediation, risk acceptance, metrics, and control evidence | [[software-engineering-note/13_Software_Security/07_Vulnerability_Management]] |
 
 ## Typical Progression
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SENIOR["Senior Software Engineer"] --> SECURE["Build secure software"]
     SECURE --> SPECIALIST["Senior Security Engineer"]
@@ -80,6 +81,7 @@ flowchart LR
 ## Capability Sequence
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     RISK["01 Threat Modeling and Risk"] --> DESIGN["02 Secure Architecture and Design"]
     DESIGN --> BUILD["03 Secure Development and DevSecOps"]
@@ -150,6 +152,7 @@ A senior security engineer should leave behind reusable evidence, not only compl
 ## Senior Practice Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     FRAME["Frame risk"] --> DESIGN["Design controls"]
     DESIGN --> ENABLE["Enable delivery"]

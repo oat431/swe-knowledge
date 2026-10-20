@@ -15,13 +15,13 @@ tags:
 
 # Hiring Decisions and Debriefs
 
-> **Core skill:** Running debriefs where written evidence against defined dimensions decides — before discussion, before seniority, before enthusiasm — and owning the bar over time.
+> **Core skill:** Running debriefs where written evidence against defined dimensions decides (before discussion, before seniority, before enthusiasm) and owning the bar over time.
 
 ## Why This Matters
 
-The debrief is where the entire hiring system converges or collapses. A structured loop with independent scoring can still be undone by a debrief that goes around the room asking "so, what did everyone think?" — the first confident speaker anchors the room, the most senior opinion becomes the decision, and the written evidence is never consulted. The structured loop produced evidence; the unstructured debrief threw it away.
+The debrief is where the entire hiring system converges or collapses. A structured loop with independent scoring can still be undone by a debrief that goes around the room asking "so, what did everyone think?" The first confident speaker anchors the room, the most senior opinion becomes the decision, and the written evidence is never consulted. The structured loop produced evidence; the unstructured debrief threw it away.
 
-The manager owns the debrief format because the manager owns the decision and its consequences. A mis-hire costs the team months of drag, a probation conversation, and a re-hire; a false negative costs a strong engineer an opportunity and the company a hire — and nobody ever sees it happen. Discipline in the debrief is the only defense both ways.
+The manager owns the debrief format because the manager owns the decision and its consequences. A mis-hire costs the team months of drag, a probation conversation, and a re-hire; a false negative costs a strong engineer an opportunity and the company a hire, and nobody ever sees it happen. Discipline in the debrief is the only defense both ways.
 
 The debrief is also where the bar lives. Every decision either holds the level defined in the JD or quietly renegotiates it under pipeline pressure. Managers who let urgency move the bar discover that the bar becomes a memory: each compromise becomes the precedent for the next one.
 
@@ -31,7 +31,7 @@ The format is strict: facts against dimensions, in writing, before any open disc
 
 | Phase | What Happens | Time | Rules |
 |-------|--------------|------|-------|
-| 1. Evidence read-in | Each interviewer reads their written observations per dimension — facts only, no interpretation | 2-3 min each | No interruptions, no reactions, no early verdicts |
+| 1. Evidence read-in | Each interviewer reads their written observations per dimension: facts only, no interpretation | 2-3 min each | No interruptions, no reactions, no early verdicts |
 | 2. Clarification | Interviewers may ask each other about facts, not conclusions | 5 min | Questions about what was observed, not what it means |
 | 3. Dimension walk | The group addresses each dimension: where does the evidence land on the rubric? | 10-15 min | Conflicts are resolved by weight of written evidence |
 | 4. Decision | Each interviewer states hire / no-hire / strong-hire with conviction level | 5 min | The hiring manager decides; dissent is recorded, not suppressed |
@@ -58,12 +58,12 @@ The bar is not a constant; it is a managed tension between quality and velocity.
 
 | Pressure | What It Tempts | Actual Trade-off | Discipline |
 |----------|----------------|------------------|------------|
-| Long vacancy, team hurting | Lower the bar "just this once" | A weak hire extends the pain — now you carry both the gap and the drag | The vacancy is temporary; a mis-hire is a year |
+| Long vacancy, team hurting | Lower the bar "just this once" | A weak hire extends the pain: now you carry both the gap and the drag | The vacancy is temporary; a mis-hire is a year |
 | Amazing pipeline | Raise the bar, keep interviewing | Marginal gain shrinks; time-to-fill grows; strong candidates accept elsewhere | If evidence clears the bar, decide |
 | Urgent deadline | Skip a dimension or an interviewer | Undersampled dimensions produce mis-hires that the deadline then pays for | The loop is the minimum; compress scheduling, not coverage |
 | Market downturn | Wait for perfect candidates | False negatives accumulate; employer brand absorbs the story | Hold the bar, hold the speed, decide on evidence |
 
-Raising the bar is legitimate when the level definition says so — not when anxiety says so. Lowering it under pressure is how teams accumulate the mediocrity they later blame on "the market."
+Raising the bar is legitimate when the level definition says so, not when anxiety says so. Lowering it under pressure is how teams accumulate the mediocrity they later blame on "the market."
 
 ## Disconfirming Evidence Weighs More
 
@@ -94,8 +94,8 @@ Calibration is what makes "the bar" a real, shared object rather than each manag
 | Situation | Handling |
 |----------|----------|
 | Interviewer has a strong no-hire, group leans hire | The concern is read into the record verbatim; the manager decides; the dissenter commits |
-| Manager overrules a unanimous no-hire from interviewers | Requires written rationale; peer manager review — this is a red-flag pattern, not a right |
-| Dissenter cannot commit | Escalate to the manager's manager or HR before the offer — never after |
+| Manager overrules a unanimous no-hire from interviewers | Requires written rationale; peer manager review: this is a red-flag pattern, not a right |
+| Dissenter cannot commit | Escalate to the manager's manager or HR before the offer: never after |
 | Dissent was right (retro discovered) | The mis-hire retro revisits whether dissent handling suppressed signal |
 
 Disagree-and-commit is not disagree-and-stay-silent: the dissent goes on the record, with the dissenter's name, before the decision stands.
@@ -103,6 +103,7 @@ Disagree-and-commit is not disagree-and-stay-silent: the dissent goes on the rec
 ## Post-Decision Documentation
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     LOOP["Structured loop with independent scores"] --> DEBRIEF["Evidence-first debrief"]
     DEBRIEF --> DIMENSIONS["Walk each dimension against rubric"]
@@ -121,7 +122,7 @@ The decision record is short: decision, conviction, evidence summary per dimensi
 
 ## Mis-Hire Retrospectives
 
-When a hire does not work out, the retro asks what the process missed — not who to blame.
+When a hire does not work out, the retro asks what the process missed, not who to blame.
 
 | Retro Question | What It Uncovers |
 |----------------|------------------|
@@ -129,7 +130,7 @@ When a hire does not work out, the retro asks what the process missed — not wh
 | Was disconfirming evidence present and discounted? | Debrief discipline gap |
 | Did urgency move the decision? | Bar management gap |
 | Was the level wrong for the person? | Leveling gap in the JD |
-| Did onboarding fail a capable hire? | Not a hiring failure — a [[07_Onboarding_Design]] failure |
+| Did onboarding fail a capable hire? | Not a hiring failure: a [[07_Onboarding_Design]] failure |
 
 ## Practical Applications
 
@@ -147,7 +148,7 @@ When a hire does not work out, the retro asks what the process missed — not wh
 **Decision record template:**
 
 ```markdown
-## Hiring Decision Record: [Candidate] — [Role, Level]
+## Hiring Decision Record: [Candidate], [Role, Level]
 
 Decision: [Strong hire / Hire / Lean hire / No-hire / Strong no-hire]
 Conviction: [High / Moderate / Split]
@@ -186,8 +187,8 @@ Rationale: [One sentence]
 - [[02_Job_Definition_and_Leveling]]: the bar is defined here, not reinvented per debrief
 - [[06_Closing_and_Offers]]: the decision record sets the level and frame for the offer
 - [[07_Onboarding_Design]]: a strong decision becomes a strong hire only through onboarding
-- [[01_People_Development/00_overview|People Development]]: mis-hires that are development failures, not selection failures
+- [[career-path/11_Engineering_Manager/01_People_Development/00_overview|People Development]]: mis-hires that are development failures, not selection failures
 
 ## Summary
 
-Hiring decisions and debriefs is evidence discipline: written facts against defined dimensions before any discussion, decisions with conviction levels, disconfirming evidence weighted heavily, dissent recorded verbatim, and every decision documented for calibration. The bar is a managed tension — hold it under vacancy pressure, raise it only when the level definition says so. The manager's test: could an outside reader reconstruct why this decision was made from the record alone?
+Hiring decisions and debriefs is evidence discipline: written facts against defined dimensions before any discussion, decisions with conviction levels, disconfirming evidence weighted heavily, dissent recorded verbatim, and every decision documented for calibration. The bar is a managed tension: hold it under vacancy pressure, raise it only when the level definition says so. The manager's test: could an outside reader reconstruct why this decision was made from the record alone?

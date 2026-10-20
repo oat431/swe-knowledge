@@ -16,13 +16,13 @@ tags:
 
 # Building Trust Across Teams
 
-> **Core skill:** The staff engineer earns the benefit of the doubt at distance — through visible reliability, fast admission of error, and genuine empathy for other teams' problems — and manages trust deliberately like a ledger.
+> **Core skill:** The staff engineer earns the benefit of the doubt at distance (through visible reliability, fast admission of error, and genuine empathy for other teams' problems) and manages trust deliberately like a ledger.
 
 ## Why This Matters
 
-Trust is the staff engineer's operating currency. Unlike a manager, the staff engineer cannot compel anyone: teams adopt proposals they trust, leaders fund bets they trust, and peers share information with people they trust. And unlike a team lead, the staff engineer works at distance — across teams that do not see the daily work, with leaders who see only artifacts, and through documents that must carry credibility on their own.
+Trust is the staff engineer's operating currency. Unlike a manager, the staff engineer cannot compel anyone: teams adopt proposals they trust, leaders fund bets they trust, and peers share information with people they trust. And unlike a team lead, the staff engineer works at distance: across teams that do not see the daily work, with leaders who see only artifacts, and through documents that must carry credibility on their own.
 
-Distance changes trust mechanics. Up close, trust is built by presence and shared work; at distance, it is built by visible patterns — the forecast that was right, the review that was useful, the help that arrived unasked. The staff engineer who understands this builds trust deliberately; the one who does not wonders why proposals that are technically right keep failing.
+Distance changes trust mechanics. Up close, trust is built by presence and shared work; at distance, it is built by visible patterns: the forecast that was right, the review that was useful, the help that arrived unasked. The staff engineer who understands this builds trust deliberately; the one who does not wonders why proposals that are technically right keep failing.
 
 ## Trust Mechanics at Distance
 
@@ -34,7 +34,7 @@ Three behaviors carry trust across distance. Each is a pattern that can be obser
 | Competence | Being right, and admitting wrong fast | Bring evidence; when wrong, say so first and fully |
 | Empathy | Their problems before your proposals | Learn each team's constraints before asking for their support |
 
-The order matters. Reliability is the foundation — a person who cannot be counted on has no credibility to spend on competence or empathy. Empathy is what converts the other two from "useful" into "trusted": teams forgive a wrong forecast from someone who demonstrably understands their world.
+The order matters. Reliability is the foundation: a person who cannot be counted on has no credibility to spend on competence or empathy. Empathy is what converts the other two from "useful" into "trusted": teams forgive a wrong forecast from someone who demonstrably understands their world.
 
 ## The Trust Ledger
 
@@ -48,7 +48,7 @@ The ledger is a mental model, made deliberate: every interaction is a deposit or
 | Admitted error: owned the mistake before being caught | Took credit: their idea, presented as yours |
 | Absorbed cost: took the unglamorous work so they did not have to | Left them exposed: their plan changed because of you, without warning |
 
-The ledger discipline has three rules. First, count withdrawals honestly — they are easy to miss and expensive. Second, do not assume the balance: at distance, deposits only count when they are visible, so visibility is part of the deposit. Third, do not spend the balance casually: a trust balance exists to fund hard asks, and hard asks are rare.
+The ledger discipline has three rules. First, count withdrawals honestly: they are easy to miss and expensive. Second, do not assume the balance: at distance, deposits only count when they are visible, so visibility is part of the deposit. Third, do not spend the balance casually: a trust balance exists to fund hard asks, and hard asks are rare.
 
 ## Repairing Trust Breaches
 
@@ -56,7 +56,7 @@ Breaches happen; the repair determines the cost. The repair sequence is short, a
 
 | Step | What It Looks Like |
 |------|--------------------|
-| Acknowledge fast | "The forecast was wrong, and here is what actually happened" — before being asked |
+| Acknowledge fast | "The forecast was wrong, and here is what actually happened", before being asked |
 | No excuses | Context is fine after the admission; excuses before it read as deflection |
 | Fix and prevent | What is being done now, and what changes so it does not recur |
 | Rebuild visibly | New commitments, met on the new dates, so the pattern re-establishes |
@@ -78,7 +78,7 @@ The no-surprises rule is the leadership trust contract: nothing a leader cares a
 
 ## Trust Transfer
 
-Trust is contagious in both directions. When a respected leader or senior engineer vouches for you, their balance extends to you — and when you vouch for someone, yours extends to them. This is how a new staff engineer starts: borrowed credibility.
+Trust is contagious in both directions. When a respected leader or senior engineer vouches for you, their balance extends to you, and when you vouch for someone, yours extends to them. This is how a new staff engineer starts: borrowed credibility.
 
 | Direction | How It Works | The Obligation |
 |-----------|--------------|----------------|
@@ -89,6 +89,7 @@ Trust is contagious in both directions. When a respected leader or senior engine
 The ethics of trust transfer are strict: borrowing is fine, trading is fine, but lending someone else's credibility without their knowledge is theft. Vouching is a real commitment with a real price.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     RELIABLE["Do what you said visibly"] --> COMPETENT["Be right and admit wrong fast"]
     COMPETENT --> EMPATHY["Understand their problems first"]
@@ -121,8 +122,8 @@ flowchart TD
 | [date] | [what happened] | [date confessed] | [fix] | [change] |
 
 ## Borrowed and Extended
-- Credibility borrowed from: [name] — endorsement to honor by [date]
-- Credibility extended to: [name] — verified on [date]
+- Credibility borrowed from: [name], endorsement to honor by [date]
+- Credibility extended to: [name], verified on [date]
 ```
 
 ### Trust Building Checklist
@@ -160,8 +161,8 @@ flowchart TD
 - [[02_Pre_Alignment_and_Coalitions]]: trust as the pre-alignment currency
 - [[07_Influence_Ethics_for_Staff]]: the ethical boundary of trust-building
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/00_overview|Communication and Influence (Senior)]]: the foundation this scales
-- [[02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: trust across team boundaries
+- [[career-path/03_Staff_Engineer/02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: trust across team boundaries
 
 ## Summary
 
-Trust across teams is built deliberately, not hoped for: visible reliability, fast admission of error, and genuine empathy for other teams' problems, managed like a ledger with honest withdrawals and fast repairs. Leadership trust runs on the no-surprises contract, and borrowed credibility from respected people is how a new staff engineer starts — provided the loan is repaid with delivery and every endorsement is verified first.
+Trust across teams is built deliberately, not hoped for: visible reliability, fast admission of error, and genuine empathy for other teams' problems, managed like a ledger with honest withdrawals and fast repairs. Leadership trust runs on the no-surprises contract, and borrowed credibility from respected people is how a new staff engineer starts, provided the loan is repaid with delivery and every endorsement is verified first.

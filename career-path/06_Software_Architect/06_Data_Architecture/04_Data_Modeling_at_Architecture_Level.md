@@ -16,15 +16,15 @@ tags:
 
 # Data Modeling at Architecture Level
 
-> **Core skill:** The architect treats the conceptual data model — entities, relationships, cardinality — as an architecture artifact: aligned with the domain model, published as a cross-service contract, and allowed to diverge only deliberately where read and write needs differ.
+> **Core skill:** The architect treats the conceptual data model (entities, relationships, cardinality) as an architecture artifact: aligned with the domain model, published as a cross-service contract, and allowed to diverge only deliberately where read and write needs differ.
 
 ## Why This Matters
 
-The conceptual data model is the system's shared vocabulary made concrete. When it exists and is current, "customer" means one thing across services, reports, and conversations; when it is missing or stale, the word forks silently — the billing team's customer is a paying account, the support team's customer is a person, and every integration between them is a slow-motion accident. Semantic drift, not syntax, is what breaks integrations that were technically compatible.
+The conceptual data model is the system's shared vocabulary made concrete. When it exists and is current, "customer" means one thing across services, reports, and conversations; when it is missing or stale, the word forks silently: the billing team's customer is a paying account, the support team's customer is a person, and every integration between them is a slow-motion accident. Semantic drift, not syntax, is what breaks integrations that were technically compatible.
 
 Architecture-level modeling also fixes the relationship between the data model and the domain model. Entities belong to domains; relationships between entities become data flows between domains; cardinality decides what breaks at scale. The architect maintains this alignment because a data model that contradicts the domain model guarantees translation layers, duplicated logic, and reconciliation jobs that nobody can justify except by pointing at the contradiction.
 
-Finally, the data model is a contract between services, and contracts need owners and version discipline. Where read and write needs genuinely differ, the architecture diverges the models deliberately — write models optimized for correctness, read models shaped for queries — but divergence must be derived from a single source of truth, never maintained as parallel realities.
+Finally, the data model is a contract between services, and contracts need owners and version discipline. Where read and write needs genuinely differ, the architecture diverges the models deliberately (write models optimized for correctness, read models shaped for queries), but divergence must be derived from a single source of truth, never maintained as parallel realities.
 
 ## The Three Model Levels
 
@@ -34,7 +34,7 @@ Finally, the data model is a contract between services, and contracts need owner
 | **Logical** | Structure without technology: attributes, keys, cardinality, constraints | Architects, engineers | Normalized model, contract definitions | Business rules change |
 | **Physical** | Concrete schemas, types, indexes, partitions | Engineers, database specialists | DDL, migrations, storage configuration | Technology or performance needs change |
 
-The architect owns the first two and reviews the third. Confusing the levels is how physical details — a table name, an index — become entrenched business vocabulary that survives long after the schema that justified it.
+The architect owns the first two and reviews the third. Confusing the levels is how physical details (a table name, an index) become entrenched business vocabulary that survives long after the schema that justified it.
 
 ## Conceptual Models as Architecture Artifacts
 
@@ -42,7 +42,7 @@ The architect owns the first two and reviews the third. Confusing the levels is 
 |---------------|----------------------------------|
 | **Entity** | Which domain owns this concept, and who answers for its quality? |
 | **Relationship** | Which flows carry this connection between domains, in which direction? |
-| **Cardinality** | What happens at scale — does one row become millions, or does a join become a fan-out? |
+| **Cardinality** | What happens at scale: does one row become millions, or does a join become a fan-out? |
 | **Lifecycle states** | Where do retention, archival, and deletion apply to this entity? |
 | **Identity** | What makes an instance unique, and is that identity stable over time? |
 
@@ -60,7 +60,7 @@ Keeping the model at one page per domain forces the decisions that matter and av
 
 ## When Models Diverge
 
-Read and write needs pull the model in different directions. The write model wants normalization, invariants, and strict validation; the read model wants denormalized shapes that answer specific queries without joins. CQRS and event-carried state transfer make this divergence an architecture pattern rather than a mess — provided the read models are derived from the write model through a designed flow.
+Read and write needs pull the model in different directions. The write model wants normalization, invariants, and strict validation; the read model wants denormalized shapes that answer specific queries without joins. CQRS and event-carried state transfer make this divergence an architecture pattern rather than a mess, provided the read models are derived from the write model through a designed flow.
 
 | Model | Optimized For | Integrity Discipline | Update Path |
 |-------|---------------|----------------------|-------------|
@@ -68,6 +68,7 @@ Read and write needs pull the model in different directions. The write model wan
 | **Read model** | Query shape and latency | Derived data; rebuildable at any time | Asynchronous projection from events or change capture |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     WRITE["Write model optimized for correctness"] --> EVENTS["Domain events published"]
     EVENTS --> READ_A["Read model for the user interface"]
@@ -88,7 +89,7 @@ flowchart LR
 ### Conceptual Model Snapshot
 
 ```markdown
-## Conceptual Model — <domain> — <date>
+## Conceptual Model: <domain>, <date>
 
 | Entity | Owner | Identity | Cardinality Notes | Lifecycle | Classification |
 |--------|-------|----------|-------------------|-----------|----------------|
@@ -120,9 +121,9 @@ flowchart LR
 
 - [[01_Data_Domains_and_Ownership]]
 - [[02_Data_Flow_Architecture]]
-- [[03_Architecture_Description_and_Views/00_overview|Architecture Description and Views]]
+- [[career-path/06_Software_Architect/03_Architecture_Description_and_Views/00_overview|Architecture Description and Views]]
 - [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]]
 
 ## Summary
 
-Data modeling at architecture level means treating the conceptual model as a maintained artifact: one shared vocabulary aligned with the domain model, entities with owners, relationships that become data flows, and cardinality that predicts scale behavior. The model doubles as the cross-service contract — identity, semantics, versioning, lifecycle — and where read and write needs diverge, the divergence is a designed, derived pattern such as CQRS rather than parallel truths drifting apart.
+Data modeling at architecture level means treating the conceptual model as a maintained artifact: one shared vocabulary aligned with the domain model, entities with owners, relationships that become data flows, and cardinality that predicts scale behavior. The model doubles as the cross-service contract (identity, semantics, versioning, lifecycle) and where read and write needs diverge, the divergence is a designed, derived pattern such as CQRS rather than parallel truths drifting apart.

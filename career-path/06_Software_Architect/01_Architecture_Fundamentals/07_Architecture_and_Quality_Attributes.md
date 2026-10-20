@@ -16,15 +16,15 @@ tags:
 
 # Architecture and Quality Attributes
 
-> **Core skill:** Treating quality attributes as first-class architecture drivers — using the ISO 25010 catalog to identify which qualities matter, measuring them with scenarios, and letting them shape structure before functional requirements do.
+> **Core skill:** Treating quality attributes as first-class architecture drivers, using the ISO 25010 catalog to identify which qualities matter, measuring them with scenarios, and letting them shape structure before functional requirements do.
 
 ## Why This Matters
 
-Functional requirements tell you what the system must do. Quality attributes tell you how well it must do it — and those qualities drive structure more than any feature ever will. A system can satisfy every user story and still fail: it can be too slow to use, unavailable when needed, or impossible to change without breaking. Functional requirements shape code; quality attributes shape architecture. The architect who designs structure around features discovers this in production. The architect who designs structure around quality attributes discovers it in design reviews, where it is cheap.
+Functional requirements tell you what the system must do. Quality attributes tell you how well it must do it, and those qualities drive structure more than any feature ever will. A system can satisfy every user story and still fail: it can be too slow to use, unavailable when needed, or impossible to change without breaking. Functional requirements shape code; quality attributes shape architecture. The architect who designs structure around features discovers this in production. The architect who designs structure around quality attributes discovers it in design reviews, where it is cheap.
 
 Quality attributes are not a checklist to be satisfied at the end. They are inputs to every structural decision, and they often conflict: the structure that optimizes for performance is rarely the structure that optimizes for modifiability. The architect's job is to make the conflicts explicit, decide which quality wins for each structural choice, and record the trade-off so the next architect understands the priorities that shaped the system.
 
-This note introduces the quality attribute catalog — ISO 25010 as the reference taxonomy — and shows how to convert quality attributes from adjectives ("secure," "fast") into measurable architecture drivers with scenarios, tactics, and structural consequences.
+This note introduces the quality attribute catalog (ISO 25010 as the reference taxonomy) and shows how to convert quality attributes from adjectives ("secure," "fast") into measurable architecture drivers with scenarios, tactics, and structural consequences.
 
 ## The Quality Attributes Catalog
 
@@ -59,7 +59,7 @@ Additional quality attributes not in ISO 25010 but common in practice:
 | **Drives** | Code and behavior | Structure and architecture |
 | **Measured by** | Acceptance tests | Quality attribute scenarios |
 | **Change frequency** | High; evolves with product | Low; changes when SLAs or context change |
-| **Impact of getting it wrong** | A feature does not work | The system does not work — globally |
+| **Impact of getting it wrong** | A feature does not work | The system does not work, globally |
 | **Architecture attention** | Indirect; shapes component internals | Direct; shapes system topology and boundaries |
 
 Architects treat quality attributes as architecture drivers because missing a functional requirement affects one feature; missing a quality attribute requirement affects every feature.
@@ -75,7 +75,7 @@ The path from quality attribute to structural decision follows four steps:
 | **3. Select tactics** | Choose architectural tactics that satisfy the scenario | Caching, read replicas, load-balanced application tier |
 | **4. Make structural decisions** | Apply tactics to the system's structure; record in ADRs | "Primary database with two read replicas; Redis cache layer for session and product data" |
 
-The gap between "it must be fast" and the structural decision is the architect's work. Without the intermediate steps — scenario and tactic — quality attributes remain adjectives that drive nothing.
+The gap between "it must be fast" and the structural decision is the architect's work. Without the intermediate steps (scenario and tactic), quality attributes remain adjectives that drive nothing.
 
 ## The Architecture Tactic Catalog
 
@@ -91,9 +91,10 @@ Tactics are architectural design decisions that address specific quality attribu
 | **Scalability** | Horizontal scaling (sharding, partitioning), vertical scaling, stateless design, asynchronous communication, eventual consistency |
 | **Observability** | Structured logging, metrics aggregation, distributed tracing, health checks, alerting thresholds |
 
-A tactic is not a technology choice — it is a class of solution. "Caching" is a tactic; "Redis with 60-second TTL for product data" is the structural decision that applies it.
+A tactic is not a technology choice. It is a class of solution. "Caching" is a tactic; "Redis with 60-second TTL for product data" is the structural decision that applies it.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     QA["Quality attributes identified"] --> SCENARIO["Scenarios written with measurable targets"]
     SCENARIO --> TACTICS["Tactics selected for each scenario"]
@@ -160,16 +161,16 @@ A complete scenario: *500 concurrent users submitting orders under peak-hour con
 - The system's measured quality attributes trend toward scenario targets
 - Trade-off decisions name which quality was prioritized and at what cost to the others
 - New team members learn the quality drivers from the architecture description, not from oral tradition
-- Quality scenarios are updated when business context changes — they are living documents
+- Quality scenarios are updated when business context changes: they are living documents
 
 ## Related Topics
 
-- [[01_Architectural_Significance]] — quality attribute impact as a significance criterion
-- [[03_Architecture_Patterns_and_Styles]] — how styles are chosen to satisfy quality attributes
-- [[02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]] — the full methodology for quality-driven architecture
-- [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/00_overview|Quality Reliability Security (Senior)]] — quality practices at the implementation level
-- [[04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]] — how quality scenarios are used in architecture evaluation
+- [[01_Architectural_Significance]]: quality attribute impact as a significance criterion
+- [[03_Architecture_Patterns_and_Styles]]: how styles are chosen to satisfy quality attributes
+- [[career-path/06_Software_Architect/02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]: the full methodology for quality-driven architecture
+- [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/00_overview|Quality Reliability Security (Senior)]]: quality practices at the implementation level
+- [[career-path/06_Software_Architect/04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]]: how quality scenarios are used in architecture evaluation
 
 ## Summary
 
-Quality attributes — performance, security, availability, reliability, modifiability, usability, interoperability, deployability — drive architecture more than functional requirements because they determine system topology, boundaries, and communication patterns, not just component internals. The architect's method converts quality attributes from adjectives into measurable scenarios (source, stimulus, artifact, environment, response, measure), selects architectural tactics that satisfy them, makes structural decisions that apply those tactics, and records the whole chain in ADRs. Quality attributes frequently conflict; the architect makes the conflict explicit, decides which quality wins for each structural choice, and records the priority so future architects understand the trade-offs that shaped the system.
+Quality attributes (performance, security, availability, reliability, modifiability, usability, interoperability, deployability) drive architecture more than functional requirements because they determine system topology, boundaries, and communication patterns, not just component internals. The architect's method converts quality attributes from adjectives into measurable scenarios (source, stimulus, artifact, environment, response, measure), selects architectural tactics that satisfy them, makes structural decisions that apply those tactics, and records the whole chain in ADRs. Quality attributes frequently conflict; the architect makes the conflict explicit, decides which quality wins for each structural choice, and records the priority so future architects understand the trade-offs that shaped the system.

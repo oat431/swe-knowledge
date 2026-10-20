@@ -6,7 +6,7 @@ career_path: security-engineer
 level: senior-specialist
 prerequisite:
   - "[[01_Security_Test_Strategy|Security Test Strategy]]"
-  - "[[03_Secure_Development_and_DevSecOps/02_Secure_Coding_Enablement|Secure Coding Enablement]]"
+  - "[[career-path/08_Security_Engineer/03_Secure_Development_and_DevSecOps/02_Secure_Coding_Enablement|Secure Coding Enablement]]"
 source_frameworks:
   - "[[body-of-knowledge/SWEBOK/13_Software_Security]]"
   - "F:\obsidian_note\document_template\14_Security/SAST-Report.md"
@@ -46,6 +46,7 @@ Use [SAST Report](F:\obsidian_note\document_template\14_Security/SAST-Report.md)
 ### 2. Source-to-Sink Path
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SOURCE["Untrusted source"] --> PROPAGATE["Data propagation"]
     PROPAGATE --> TRANSFORM["Validation or transformation"]
@@ -117,7 +118,7 @@ Use a small service or intentionally flawed sample:
 - [SAST Report](F:\obsidian_note\document_template\14_Security/SAST-Report.md): reporting artifact
 - [[software-engineering-note/13_Software_Security/Cybersecurity/02 Secure Development/02 Secure Coding Practices|Secure Coding Practices]]: coding patterns that shape rule models
 - [[01_Security_Test_Strategy|Security Test Strategy]]: selecting static analysis depth
-- [[03_Secure_Development_and_DevSecOps/02_Secure_Coding_Enablement|Secure Coding Enablement]]: converting findings into developer feedback
+- [[career-path/08_Security_Engineer/03_Secure_Development_and_DevSecOps/02_Secure_Coding_Enablement|Secure Coding Enablement]]: converting findings into developer feedback
 - [[05_Findings_Triage_and_False_Positives|Findings Triage and False Positives]]: validation and disposition
 - [[06_Security_Release_Evidence|Security Release Evidence]]: connecting results to a release decision
 

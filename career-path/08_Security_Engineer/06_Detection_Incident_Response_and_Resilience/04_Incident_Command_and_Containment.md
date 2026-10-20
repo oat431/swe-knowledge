@@ -60,6 +60,7 @@ Record why the chosen action is proportionate, what signal will show success, an
 ### 3. Incident Command Rhythm
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DECLARE["Declare incident and assign commander"] --> ALIGN["Align facts impact uncertainty and roles"]
     ALIGN --> OPTIONS["Evaluate containment options and trade-offs"]

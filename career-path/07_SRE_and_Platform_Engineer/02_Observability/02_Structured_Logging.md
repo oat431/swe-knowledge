@@ -129,6 +129,7 @@ Add fields relevant to your domain:
 Use a unique `request_id` to track a request across multiple services:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CLIENT["Client\n(request_id: abc-123)"] --> API["API Gateway"]
     API --> AUTH["Auth Service\n(request_id: abc-123)"]
@@ -250,7 +251,7 @@ ORDER BY timestamp
 - [[01_Metrics_and_Dashboards]] : metrics provide the "what", logs provide the "why"
 - [[03_Distributed_Tracing]] : traces show request flow; logs provide details
 - [[04_Alerting_Strategy]] : alerts can include log snippets for context
-- [[03_Incident_Response/02_Incident_Management]] : logs are critical for incident diagnosis
+- [[career-path/07_SRE_and_Platform_Engineer/03_Incident_Response/02_Incident_Management]] : logs are critical for incident diagnosis
 - [[software-engineering-note/02_Software_Architecture/Microservice/05 Observability/051 Logging & Monitoring]] : logging foundations
 
 ## Key Takeaways

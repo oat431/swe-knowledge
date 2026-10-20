@@ -16,13 +16,13 @@ tags:
 
 # First 90 Days as Staff
 
-> **Core skill:** Using the first 90 days — listening first, negotiating the mandate second, shipping one visible win third — to establish the staff role on the right footing.
+> **Core skill:** Using the first 90 days (listening first, negotiating the mandate second, shipping one visible win third) to establish the staff role on the right footing.
 
 ## Why This Matters
 
 The first 90 days set the role's trajectory for years. What you do in month one defines what teams expect from you; what you negotiate in month two defines what leadership expects; what you ship in month three defines whether either expectation holds. The most common first-year failure is the reverse order: proposing in week two (before understanding the org), accepting a vague mandate (before understanding the leverage), and disappearing into the codebase (before building the influence).
 
-The role is a new contract with the org, and the first quarter is the negotiation window. The org is most open to defining the role in your favor during the honeymoon — the mandate agreed in month two will not be re-opened in month six. The 90-day plan is therefore: listen, then negotiate, then deliver a small proof that the model works.
+The role is a new contract with the org, and the first quarter is the negotiation window. The org is most open to defining the role in your favor during the honeymoon. The mandate agreed in month two will not be re-opened in month six. The 90-day plan is therefore: listen, then negotiate, then deliver a small proof that the model works.
 
 ## Days 1-30: Listen
 
@@ -33,7 +33,7 @@ The role is a new contract with the org, and the first quarter is the negotiatio
 | Systems read | Learn the architecture as it really is, not as documented |
 | No premature proposals | Earn the right to propose by understanding first |
 
-The listening tour in the first month has one rule: **no proposals**. Every instinct to fix what you discover must wait. You are building the map, the relationships, and the credibility that make the month-two proposal land. Write a synthesis at the end: the pain points, the seams, and the candidate problems — the raw material for the mandate.
+The listening tour in the first month has one rule: **no proposals**. Every instinct to fix what you discover must wait. You are building the map, the relationships, and the credibility that make the month-two proposal land. Write a synthesis at the end: the pain points, the seams, and the candidate problems, the raw material for the mandate.
 
 ## Days 31-60: Negotiate and Build
 
@@ -44,7 +44,7 @@ The listening tour in the first month has one rule: **no proposals**. Every inst
 | Relationship capital | One-on-ones with the engineers and managers who matter most |
 | Archetype choice | Which of the four archetypes this role takes |
 
-The mandate is the deliverable of this phase: written, agreed, and named — archetype, scope, outcomes, arcs. The first arc should be deliberately small: the org is watching whether the model works, not whether it is ambitious. Pick the highest-confidence win among the candidate problems from the listening tour.
+The mandate is the deliverable of this phase: written, agreed, and named (archetype, scope, outcomes, arcs). The first arc should be deliberately small: the org is watching whether the model works, not whether it is ambitious. Pick the highest-confidence win among the candidate problems from the listening tour.
 
 ## Days 61-90: Deliver and Establish
 
@@ -55,7 +55,7 @@ The mandate is the deliverable of this phase: written, agreed, and named — arc
 | Visibility systems | The impact doc that makes your work legible |
 | First win landed or visibly close | Proof the role produces outcomes |
 
-The 90-day mark is when the org decides whether the staff role is working. One shipped proposal plus a visible operating model is enough — the goal is proof of mechanism, not transformation of the org.
+The 90-day mark is when the org decides whether the staff role is working. One shipped proposal plus a visible operating model is enough. The goal is proof of mechanism, not transformation of the org.
 
 ## Inherited vs Greenfield Org
 
@@ -77,9 +77,10 @@ Both paths need the same 90-day structure; they differ in where the work is hard
 | The codebase needs it | It fills your calendar and empties your mandate | Recommend it to a team; review the design |
 | Impostor syndrome | The org sees a coder, not a leader | The mandate and the first win define you |
 
-A first quarter spent coding is a first quarter that re-negotiated the role downward. The visible proof the org needs is a proposal adopted and an initiative moving — not a commit history.
+A first quarter spent coding is a first quarter that re-negotiated the role downward. The visible proof the org needs is a proposal adopted and an initiative moving, not a commit history.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     LISTEN["Days 1 to 30 listen"] --> SYNTHESIZE["Synthesize the map"]
     SYNTHESIZE --> NEGOTIATE["Days 31 to 60 negotiate mandate"]
@@ -93,7 +94,7 @@ flowchart TD
 ## Practical Applications
 
 ```markdown
-# 90-Day Plan — [role] — [start date]
+# 90-Day Plan: [role], [start date]
 
 ## Days 1-30: Listen
 - [ ] Listening tour: [teams, leaders, systems]
@@ -149,4 +150,4 @@ Checklist:
 
 ## Summary
 
-The first 90 days follow one arc: listen for 30 days without proposing, negotiate the written mandate and a small first arc by day 60, and ship the proposal and establish the operating model by day 90. The temptations — proposing early, proving yourself coding, accepting vagueness — all re-negotiate the role downward. The 90-day review with leadership closes the quarter with a second-quarter plan instead of a re-negotiation.
+The first 90 days follow one arc: listen for 30 days without proposing, negotiate the written mandate and a small first arc by day 60, and ship the proposal and establish the operating model by day 90. The temptations (proposing early, proving yourself coding, accepting vagueness) all re-negotiate the role downward. The 90-day review with leadership closes the quarter with a second-quarter plan instead of a re-negotiation.

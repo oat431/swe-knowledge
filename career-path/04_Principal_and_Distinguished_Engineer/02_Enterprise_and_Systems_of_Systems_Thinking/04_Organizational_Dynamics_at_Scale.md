@@ -17,13 +17,13 @@ tags:
 
 # Organizational Dynamics at Scale
 
-> **Core skill:** The principal engineer understands how large organizations actually behave — reading incentive structures, political dynamics, and Conway effects at enterprise scale, navigating without becoming political, and designing system changes that work with organizational reality rather than against it.
+> **Core skill:** The principal engineer understands how large organizations actually behave, reading incentive structures, political dynamics, and Conway effects at enterprise scale, navigating without becoming political, and designing system changes that work with organizational reality rather than against it.
 
 ## Why This Matters
 
 Large organizations do not behave the way their org charts suggest. They behave the way their incentives, power structures, and information flows actually shape. The principal who designs for the org chart is designing for a fiction. The principal who designs for organizational dynamics designs for what will actually happen.
 
-This is not about office politics — it is about system design at the organizational layer. The same rigor the principal applies to technical systems — understanding dependencies, failure modes, emergent behavior — applies to the organizational system. The difference is that the organizational system is made of people with goals, fears, and incentives, and it resists being re-architected by fiat.
+This is not about office politics. It is about system design at the organizational layer. The same rigor the principal applies to technical systems (understanding dependencies, failure modes, emergent behavior) applies to the organizational system. The difference is that the organizational system is made of people with goals, fears, and incentives, and it resists being re-architected by fiat.
 
 ## How Large Organizations Actually Behave
 
@@ -47,7 +47,7 @@ The gap between formal structure and actual behavior widens with organizational 
 
 ## Conway at Enterprise Scale
 
-Conway's Law states that organizations design systems that mirror their communication structures. At enterprise scale, this is not a curious observation — it is a design constraint as fundamental as latency or consistency.
+Conway's Law states that organizations design systems that mirror their communication structures. At enterprise scale, this is not a curious observation. It is a design constraint as fundamental as latency or consistency.
 
 | Conway Effect | Enterprise Manifestation | Mitigation |
 |--------------|------------------------|------------|
@@ -57,6 +57,7 @@ Conway's Law states that organizations design systems that mirror their communic
 | **Re-orgs produce re-architectures** | Every re-org triggers a wave of system redesign to match new team boundaries | Design systems with stable interfaces that survive team boundary changes |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ORG["Organizational structure: teams, reporting lines, incentives"] --> COMM["Communication patterns: who talks to whom"]
     COMM --> ARCH["System architecture: boundaries mirror communication"]
@@ -66,7 +67,7 @@ flowchart TD
     FEEDBACK --> ORG
 ```
 
-The principal reads this loop and intervenes at the points where intervention produces the desired emergent behavior. The most powerful intervention point is incentives — change what people are rewarded for, and architecture follows.
+The principal reads this loop and intervenes at the points where intervention produces the desired emergent behavior. The most powerful intervention point is incentives. Change what people are rewarded for, and architecture follows.
 
 ## Incentive Structures
 
@@ -89,7 +90,7 @@ Incentive structures are the hidden architecture of organizational behavior. The
 
 ## The Principal's Political Map
 
-The principal maintains a political map — not to play politics, but to understand what will actually happen when a decision is made. The map is private, updated continuously, and used for system design, not personal advantage.
+The principal maintains a political map, not to play politics, but to understand what will actually happen when a decision is made. The map is private, updated continuously, and used for system design, not personal advantage.
 
 | Political Map Element | What to Know |
 |----------------------|-------------|
@@ -101,7 +102,7 @@ The principal maintains a political map — not to play politics, but to underst
 
 ## Navigating Without Becoming Political
 
-The principal's credibility depends on being seen as an honest broker — system-aware but not self-interested. This requires deliberate discipline.
+The principal's credibility depends on being seen as an honest broker, system-aware but not self-interested. This requires deliberate discipline.
 
 | Principle | Practice |
 |-----------|----------|
@@ -109,14 +110,14 @@ The principal's credibility depends on being seen as an honest broker — system
 | **Make the map visible selectively** | Share system insights openly; keep the political map private |
 | **Never weaponize what you know** | Use understanding of incentives to design better systems, never to undermine individuals |
 | **Be wrong in public, correct in private** | Admit errors openly; never let an error stand because correcting it would be politically inconvenient |
-| **Document reasoning, not just decisions** | When a decision is controversial, the written rationale is the defense — not the principal's political capital |
+| **Document reasoning, not just decisions** | When a decision is controversial, the written rationale is the defense, not the principal's political capital |
 | **Stay in the system designer role** | When asked to take sides in a political conflict, reframe the question as a system design problem |
 
 ## Practical Applications
 
 ### Organizational Dynamics Checklist
 
-- [ ] The actual behavior of the organization is understood — not just the formal structure
+- [ ] The actual behavior of the organization is understood, not just the formal structure
 - [ ] Conway effects are consciously designed: communication structures are shaped to produce desired architectures
 - [ ] Incentive structures are mapped and their effect on technical behavior is understood
 - [ ] Incentive realignments are proposed alongside architectural changes, not as afterthoughts
@@ -167,10 +168,10 @@ The principal's credibility depends on being seen as an honest broker — system
 
 - [[01_Enterprise_Systems_Thinking]]
 - [[05_Long_Term_Consequence_Analysis]]
-- [[03_Decision_Governance_and_Principles/00_overview|Decision Governance and Principles]]
-- [[04_Organizational_Influence/00_overview|Organizational Influence]]
+- [[career-path/04_Principal_and_Distinguished_Engineer/03_Decision_Governance_and_Principles/00_overview|Decision Governance and Principles]]
+- [[career-path/04_Principal_and_Distinguished_Engineer/04_Organizational_Influence/00_overview|Organizational Influence]]
 - [[career-path/03_Staff_Engineer/05_Systems_Thinking_and_Organizational_Design/00_overview|Systems Thinking and Organizational Design (Staff)]]
 
 ## Summary
 
-Organizational dynamics at scale means understanding how large organizations actually behave — reading incentive structures, political dynamics, and Conway effects, maintaining a private political map for system design, navigating without becoming political, and designing technical and organizational changes that work with the real incentive landscape rather than the formal org chart. The principal is the honest broker who understands the system deeply enough to change it without being consumed by it.
+Organizational dynamics at scale means understanding how large organizations actually behave, reading incentive structures, political dynamics, and Conway effects, maintaining a private political map for system design, navigating without becoming political, and designing technical and organizational changes that work with the real incentive landscape rather than the formal org chart. The principal is the honest broker who understands the system deeply enough to change it without being consumed by it.

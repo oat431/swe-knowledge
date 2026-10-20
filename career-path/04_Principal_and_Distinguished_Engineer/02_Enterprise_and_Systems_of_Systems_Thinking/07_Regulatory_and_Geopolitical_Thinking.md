@@ -18,13 +18,13 @@ tags:
 
 # Regulatory and Geopolitical Thinking
 
-> **Core skill:** The principal engineer understands how regulation and geopolitics shape technology architecture — designing for data sovereignty, AI regulation, antitrust, and security frameworks, assessing geopolitical technology risk, and building regulatory resilience into systems from inception.
+> **Core skill:** The principal engineer understands how regulation and geopolitics shape technology architecture, designing for data sovereignty, AI regulation, antitrust, and security frameworks, assessing geopolitical technology risk, and building regulatory resilience into systems from inception.
 
 ## Why This Matters
 
 Technology architecture is increasingly shaped by forces outside the organization: data sovereignty laws that mandate where data can reside, AI regulations that constrain what models can do, antitrust actions that limit how platforms can integrate, security frameworks that dictate how systems must be protected. Architecture designed without these forces is architecture designed for a world that no longer exists.
 
-The principal engineer treats regulation as an architecture driver — not a compliance checklist applied after the design is complete. This is the difference between systems that absorb regulatory change and systems that are broken by it. In a world where the regulatory landscape shifts every year, regulatory resilience is a competitive advantage.
+The principal engineer treats regulation as an architecture driver, not a compliance checklist applied after the design is complete. This is the difference between systems that absorb regulatory change and systems that are broken by it. In a world where the regulatory landscape shifts every year, regulatory resilience is a competitive advantage.
 
 ## Regulation as Architecture Driver
 
@@ -52,6 +52,7 @@ Data sovereignty is the most architecturally consequential regulatory domain. It
 | Data processing must be in-region | Regional compute; no cross-region processing pipelines | Compute deployed alongside data; processing jobs execute in region |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     REGULATION["Regulatory landscape: data sovereignty, AI, antitrust, security, privacy, sector-specific"] --> TRANSLATE["Translate regulatory requirements into architectural constraints"]
     TRANSLATE --> DESIGN["Design for regulatory resilience: regional data planes, audit trails, data portability"]
@@ -88,7 +89,7 @@ Regulatory resilience is the ability of a system to absorb regulatory change wit
 
 ## The Regulatory Horizon Scan
 
-The principal maintains a regulatory horizon scan — a forward-looking assessment of regulatory changes that will affect technology architecture before those changes become compliance deadlines.
+The principal maintains a regulatory horizon scan, a forward-looking assessment of regulatory changes that will affect technology architecture before those changes become compliance deadlines.
 
 | Horizon Scan Element | Activity |
 |---------------------|----------|
@@ -146,7 +147,7 @@ The principal maintains a regulatory horizon scan — a forward-looking assessme
 |---------|---------------------|-----------------|
 | **Regulation as afterthought** | Architecture designed then retrofitted for compliance; retrofit is more expensive and less effective | Treat regulation as an architecture driver from inception; embed in design reviews |
 | **Compliance as a single-jurisdiction exercise** | Architecture designed for one jurisdiction fails when the organization expands or regulation changes | Design for jurisdiction isolation; assume multi-jurisdiction operation from the start |
-| **Geopolitical risk ignored until crisis** | Vendor blocked, supply chain disrupted, sanctions imposed — all were foreseeable | Maintain a geopolitical risk assessment for critical dependencies; diversify before the crisis |
+| **Geopolitical risk ignored until crisis** | Vendor blocked, supply chain disrupted, sanctions imposed. All were foreseeable | Maintain a geopolitical risk assessment for critical dependencies; diversify before the crisis |
 | **Policy as documentation** | Regulatory rules exist in policy documents nobody reads; enforcement is manual and inconsistent | Implement policy as code; automated enforcement ensures rules are followed consistently |
 | **Data hoarding** | Organizations collect and retain data "just in case"; every byte is regulatory surface area | Data minimization by design; automated retention and deletion; collect only what is needed |
 | **Regulatory horizon scan as annual exercise** | Misses regulatory changes that arrive between scans | Continuous monitoring with quarterly structured assessment and impact analysis |
@@ -164,9 +165,9 @@ The principal maintains a regulatory horizon scan — a forward-looking assessme
 - [[01_Enterprise_Systems_Thinking]]
 - [[02_Systems_of_Systems_Architecture]]
 - [[03_Ecosystem_and_Industry_Analysis]]
-- [[01_Technology_Strategy/00_overview|Technology Strategy]]
+- [[career-path/04_Principal_and_Distinguished_Engineer/01_Technology_Strategy/00_overview|Technology Strategy]]
 - [[career-path/03_Staff_Engineer/05_Systems_Thinking_and_Organizational_Design/00_overview|Systems Thinking and Organizational Design (Staff)]]
 
 ## Summary
 
-Regulatory and geopolitical thinking means treating regulation as an architecture driver — designing for data sovereignty, AI regulation, antitrust, and security frameworks from inception, assessing geopolitical technology risk for critical dependencies and operating regions, building regulatory resilience through jurisdiction isolation, policy as code, and data minimization, and maintaining a regulatory horizon scan that identifies architecture-impacting changes before they become compliance deadlines. The principal ensures the organization's technology architecture is designed for the regulatory world it will inhabit, not the one it wishes existed.
+Regulatory and geopolitical thinking means treating regulation as an architecture driver, designing for data sovereignty, AI regulation, antitrust, and security frameworks from inception, assessing geopolitical technology risk for critical dependencies and operating regions, building regulatory resilience through jurisdiction isolation, policy as code, and data minimization, and maintaining a regulatory horizon scan that identifies architecture-impacting changes before they become compliance deadlines. The principal ensures the organization's technology architecture is designed for the regulatory world it will inhabit, not the one it wishes existed.

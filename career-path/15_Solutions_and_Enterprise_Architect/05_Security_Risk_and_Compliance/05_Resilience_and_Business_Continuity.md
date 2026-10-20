@@ -16,7 +16,7 @@ tags:
 
 # Resilience and Business Continuity
 
-> **Core skill:** The architect translates business continuity requirements — criticality tiers, recovery time and recovery point objectives — into structural decisions on redundancy, failover, replication, and degraded operation that the business has validated and is prepared to fund.
+> **Core skill:** The architect translates business continuity requirements (criticality tiers, recovery time and recovery point objectives) into structural decisions on redundancy, failover, replication, and degraded operation that the business has validated and is prepared to fund.
 
 ## Why This Matters
 
@@ -60,6 +60,7 @@ Resilience also has to be scoped by criticality, because resilience is expensive
 ## The Continuity Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CRITICALITY["Business criticality and impact analysis"] --> OBJECTIVES["Recovery objectives and tiers"]
     OBJECTIVES["Recovery objectives and tiers"] --> DESIGN["Resilience and topology design"]
@@ -85,13 +86,13 @@ flowchart LR
 - [ ] Every service has a criticality tier agreed by the business, not assigned by engineering alone
 - [ ] Recovery objectives are translated into specific topology and replication decisions
 - [ ] Degraded operation is designed: what continues, what sheds, who decides
-- [ ] Recovery order across dependencies — including shared platforms and vendors — is defined
+- [ ] Recovery order across dependencies (including shared platforms and vendors) is defined
 - [ ] Exercises are scheduled, evidence recorded, and findings fed back into design
 
 ### Continuity Requirements Template
 
 ```markdown
-## Continuity Requirements — <service>
+## Continuity Requirements: <service>
 
 | Attribute | Value |
 |-----------|-------|
@@ -132,4 +133,4 @@ flowchart LR
 
 ## Summary
 
-Resilience and business continuity translate acceptable harm into architecture: criticality tiers that price protection, recovery objectives that determine topology and replication, degraded modes that preserve partial service under stress, and exercises that turn documented plans into validated capability. The architect's discipline is sequencing and honesty — recovering the whole service chain, not just the servers, and telling the business what the estate can genuinely survive.
+Resilience and business continuity translate acceptable harm into architecture: criticality tiers that price protection, recovery objectives that determine topology and replication, degraded modes that preserve partial service under stress, and exercises that turn documented plans into validated capability. The architect's discipline is sequencing and honesty: recovering the whole service chain, not just the servers, and telling the business what the estate can genuinely survive.

@@ -16,19 +16,19 @@ tags:
 
 # Navigating Reorgs and Change
 
-> **Core skill:** Guiding the team through structural change imposed from above — processing your own reaction first, extracting the real rationale, translating honestly, and rebuilding momentum on the other side.
+> **Core skill:** Guiding the team through structural change imposed from above: processing your own reaction first, extracting the real rationale, translating honestly, and rebuilding momentum on the other side.
 
 ## Why This Matters
 
-Re-orgs are periodic weather in most companies, and they are the moments when managers earn their keep. The team looks to the manager for meaning, stability, and a path forward — while the manager themselves may have just received the news minutes before, with the same incomplete information and the same anxiety.
+Re-orgs are periodic weather in most companies, and they are the moments when managers earn their keep. The team looks to the manager for meaning, stability, and a path forward, while the manager themselves may have just received the news minutes before, with the same incomplete information and the same anxiety.
 
-The difference between a team that weathers a re-org and one that fractures is almost entirely the manager's handling of the first two weeks: whether the news is delivered with honesty and context, whether grief is acknowledged before direction is given, and whether the team is redeployed into a structure that makes sense to them. The manager's own reaction is the first thing that must be processed — confusion and fear multiply as they travel down the chain.
+The difference between a team that weathers a re-org and one that fractures is almost entirely the manager's handling of the first two weeks: whether the news is delivered with honesty and context, whether grief is acknowledged before direction is given, and whether the team is redeployed into a structure that makes sense to them. The manager's own reaction is the first thing that must be processed: confusion and fear multiply as they travel down the chain.
 
 ## Process Your Own Reaction First
 
 Your team will read your state before they hear your words. If you arrive panicked, they panic; if you arrive falsely cheerful, they distrust everything after.
 
-- Give yourself a window to react privately — an hour, an evening — before you speak to the team
+- Give yourself a window to react privately (an hour, an evening) before you speak to the team
 - Separate what is fact from what is fear; only facts get communicated
 - Identify what you personally lose (scope, reports, projects) and process it separately from what the team needs
 - Do not vent to the team; vent to a peer, a mentor, or a coach
@@ -37,7 +37,7 @@ The rule: your confusion, multiplied, becomes their chaos. Process first, commun
 
 ## Extract the Real Rationale
 
-Before translating the change, understand it — asking up is part of the job:
+Before translating the change, understand it. Asking up is part of the job:
 
 | Question to Ask Up | Why It Matters |
 |--------------------|----------------|
@@ -47,7 +47,7 @@ Before translating the change, understand it — asking up is part of the job:
 | How will success be measured now? | The team needs the new target |
 | What is the timeline? | Sets the expectation window |
 
-If leadership cannot articulate a rationale, say so honestly — "the decision is made; the reasoning has not been shared" is a legitimate, honest message.
+If leadership cannot articulate a rationale, say so honestly: "the decision is made; the reasoning has not been shared" is a legitimate, honest message.
 
 ## Translate for the Team
 
@@ -62,7 +62,7 @@ The cascade must be honest, including what is unknown:
 | What is unknown | "Whether the team name survives is not decided" |
 | What happens next | "Town hall Thursday; our team sync Friday" |
 
-Never fill unknown gaps with invented certainty — the team will discover the invention and generalize the distrust.
+Never fill unknown gaps with invented certainty: the team will discover the invention and generalize the distrust.
 
 ## Grief Handling
 
@@ -70,7 +70,7 @@ Re-orgs carry real losses: projects killed, teams split, rituals broken, trust d
 
 - Name the loss plainly: "The work we did on X is ending. It was good work."
 - Give people space to react; silence, frustration, and sadness are legitimate
-- Do not rush to silver linings — "at least we..." lands as dismissal
+- Do not rush to silver linings: "at least we..." lands as dismissal
 - Only after acknowledgment, move to the future: "Here is what we build now"
 
 A team that feels heard moves on in days; a team that is told to move on without being heard carries the loss for months.
@@ -85,7 +85,7 @@ A team that feels heard moves on in days; a team that is told to move on without
 | Re-establish rituals | Syncs, reviews, and retros re-anchored to the new shape |
 | Re-set the north star | The team's mission restated in the new context |
 
-Redeployment is not just re-reporting lines — it is rebuilding the team's sense of purpose under a new frame.
+Redeployment is not just re-reporting lines; it is rebuilding the team's sense of purpose under a new frame.
 
 ## Your Role in the New Shape
 
@@ -93,7 +93,7 @@ Sometimes the change affects you directly: your scope shrinks, your reports move
 
 - Separate your career disappointment from the team's needs; do not leak one into the other
 - Take the new role seriously from day one, visibly
-- If you are genuinely displaced, advocate for yourself separately — through your manager, not through the team
+- If you are genuinely displaced, advocate for yourself separately, through your manager, not through the team
 
 ## Rebuilding Momentum
 
@@ -106,6 +106,7 @@ Sometimes the change affects you directly: your scope shrinks, your reports move
 | Personal outreach | One-on-one energy checks with every report |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PROCESS["Process your own reaction"] --> RATIONALE["Extract the real rationale"]
     RATIONALE --> TRANSLATE["Translate for the team honestly"]
@@ -179,8 +180,8 @@ flowchart TD
 - [[01_Reading_the_Organization]]: early reading turns re-orgs into anticipation
 - [[04_Managing_Up]]: extraction and advocacy run through your manager
 - [[06_Cross_Org_Relationships]]: the peer network survives structure changes
-- [[07_Manager_Communication/00_overview|Manager Communication]]: cascade and announcement craft carry the change
-- [[02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: rebuilding the team's shape and trust
+- [[career-path/11_Engineering_Manager/07_Manager_Communication/00_overview|Manager Communication]]: cascade and announcement craft carry the change
+- [[career-path/11_Engineering_Manager/02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: rebuilding the team's shape and trust
 
 ## Summary
 

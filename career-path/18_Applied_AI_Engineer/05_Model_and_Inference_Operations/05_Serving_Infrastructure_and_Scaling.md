@@ -15,11 +15,11 @@ tags:
 
 # Serving Infrastructure and Scaling
 
-> Building and operating the layer that actually runs model inference — GPU serving stacks, autoscaling, rate limits, and queueing — so that capacity, cost, and latency behave predictably as traffic grows.
+> Building and operating the layer that actually runs model inference (GPU serving stacks, autoscaling, rate limits, and queueing) so that capacity, cost, and latency behave predictably as traffic grows.
 
 ## Why This Is a Senior Skill
 
-Mid-level engineers deploy one model to one endpoint and scale it by hand when it falls over. Senior engineers build a serving platform: they reason in throughput and concurrency per GPU rather than per server, they choose autoscaling signals that match how inference load actually behaves, and they design rate limits and queues as explicit protection mechanisms. They also know where their responsibility ends — this area owns serving mechanics, while SLO definition and incident response live with [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]], and monitoring tooling with [[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability]].
+Mid-level engineers deploy one model to one endpoint and scale it by hand when it falls over. Senior engineers build a serving platform: they reason in throughput and concurrency per GPU rather than per server, they choose autoscaling signals that match how inference load actually behaves, and they design rate limits and queues as explicit protection mechanisms. They also know where their responsibility ends: this area owns serving mechanics, while SLO definition and incident response live with [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]], and monitoring tooling with [[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability]].
 
 The failure mode is scaling the wrong resource: adding GPUs to a fleet that is bound by queue policy or KV-cache memory spends money without buying latency. Capacity is a diagnosis, not a shopping list.
 
@@ -67,15 +67,15 @@ The failure mode is scaling the wrong resource: adding GPUs to a fleet that is b
 
 **Plan capacity in concurrent sequences and KV-cache memory, not requests per second.** A GPU's limit is not CPU-bound request handling; it is how many sequences' KV-caches fit in memory. Two workloads with the same RPS but different context lengths need very different fleets. Model the memory per sequence first, then derive RPS capacity from it.
 
-**Scale on a signal that leads the failure, not one that lags it.** Queue depth confirms you are already late; concurrent-sequence headroom tells you before the queue forms. Instrument the serving engine's own metrics — sequences active, KV-cache utilization, prefill queue — and drive the autoscaler from the constraint that actually binds.
+**Scale on a signal that leads the failure, not one that lags it.** Queue depth confirms you are already late; concurrent-sequence headroom tells you before the queue forms. Instrument the serving engine's own metrics (sequences active, KV-cache utilization, prefill queue) and drive the autoscaler from the constraint that actually binds.
 
 **Separate interactive and batch traffic.** Mixing a latency-critical chat endpoint with batch summarization jobs on the same fleet lets batch traffic eat the KV-cache and destroy interactive latency. Give them different pools, or at minimum priority queues with hard admission control on the interactive path.
 
-**Use rate limits as a design tool, not an emergency brake.** Decide per product surface what a legitimate user can consume, and enforce it before the fleet so one abusive or buggy client cannot degrade everyone. The limit should produce a fast, explainable rejection or queue position — never a timeout that burns the caller's patience.
+**Use rate limits as a design tool, not an emergency brake.** Decide per product surface what a legitimate user can consume, and enforce it before the fleet so one abusive or buggy client cannot degrade everyone. The limit should produce a fast, explainable rejection or queue position, never a timeout that burns the caller's patience.
 
-**Treat provider APIs as one more capacity source with its own limits.** When you self-host, API overflow absorbs bursts ([[02_API_vs_Self_Hosted_Tradeoffs]]); when you are API-only, the provider's rate limits and queueing are your capacity plan. Either way, rate-limit errors must be a first-class, budgeted event in the routing layer — see [[06_Provider_Management_and_Model_Routing]].
+**Treat provider APIs as one more capacity source with its own limits.** When you self-host, API overflow absorbs bursts ([[02_API_vs_Self_Hosted_Tradeoffs]]); when you are API-only, the provider's rate limits and queueing are your capacity plan. Either way, rate-limit errors must be a first-class, budgeted event in the routing layer; see [[06_Provider_Management_and_Model_Routing]].
 
-**Own the deployment path for weights and engine versions with release rigor.** Model snapshots, inference-engine versions, and GPU driver/kernel combinations all interact in ways that change throughput and even output determinism. Version them together, stage changes through canary, and roll back atomically — inference serving is release engineering, not a file upload.
+**Own the deployment path for weights and engine versions with release rigor.** Model snapshots, inference-engine versions, and GPU driver/kernel combinations all interact in ways that change throughput and even output determinism. Version them together, stage changes through canary, and roll back atomically: inference serving is release engineering, not a file upload.
 
 ## Practical Exercise
 

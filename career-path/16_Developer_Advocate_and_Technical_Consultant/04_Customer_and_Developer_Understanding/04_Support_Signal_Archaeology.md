@@ -17,15 +17,15 @@ tags:
 
 # Support Signal Archaeology
 
-> **Core skill:** Mining the accumulated record — tickets, issues, forum threads, chats — for recurring friction, and turning it into evidence that prioritizes docs, fixes, and guidance.
+> **Core skill:** Mining the accumulated record (tickets, issues, forum threads, chats) for recurring friction, and turning it into evidence that prioritizes docs, fixes, and guidance.
 
 ## Why This Matters
 
-Every support interaction is a small, honest account of where the product and its explanation fail. Individually they look like noise: a person could not find a step, a key expired, an upgrade broke a configuration. Aggregated and read as a record, they become the most grounded source of developer truth an organization possesses — real problems, real language, arriving unprompted, at a scale no interview schedule can match.
+Every support interaction is a small, honest account of where the product and its explanation fail. Individually they look like noise: a person could not find a step, a key expired, an upgrade broke a configuration. Aggregated and read as a record, they become the most grounded source of developer truth an organization possesses: real problems, real language, arriving unprompted, at a scale no interview schedule can match.
 
-The advocate and consultant are natural archaeologists of this record. Product teams sample it when something escalates; the advocate lives in it, which makes the difference between reacting to the last loud ticket and reading the stratigraphy: what recurs weekly, what spiked after a release, what users have stopped reporting because they gave up. The stopped-reporting layers matter most — the friction that no longer generates tickets is often the friction that killed adoption.
+The advocate and consultant are natural archaeologists of this record. Product teams sample it when something escalates; the advocate lives in it, which makes the difference between reacting to the last loud ticket and reading the stratigraphy: what recurs weekly, what spiked after a release, what users have stopped reporting because they gave up. The stopped-reporting layers matter most. The friction that no longer generates tickets is often the friction that killed adoption.
 
-The craft is turning anecdotes into defensible claims. A pile of stories convinces nobody in a planning meeting; counts, trend lines, and verbatim quotes do. Done well, this discipline gives the advocate a standing in product and docs discussions that opinion cannot buy: the numbers are checkable, the examples are quotable, and the fixes are testable — the release notes can name the friction that disappeared.
+The craft is turning anecdotes into defensible claims. A pile of stories convinces nobody in a planning meeting; counts, trend lines, and verbatim quotes do. Done well, this discipline gives the advocate a standing in product and docs discussions that opinion cannot buy: the numbers are checkable, the examples are quotable, and the fixes are testable. The release notes can name the friction that disappeared.
 
 ## Signal Sources and Their Biases
 
@@ -95,6 +95,7 @@ The craft is turning anecdotes into defensible claims. A pile of stories convinc
 | Post-release | Targeted regression sweep of the affected codes | Release team |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     COLLECT["Collect tickets issues forum threads and chats"] --> CLEAN["Deduplicate and tag consistently"]
     CLEAN --> COUNT["Quantify recurring patterns"]
@@ -118,14 +119,14 @@ flowchart LR
 ```markdown
 # Friction Digest: [Period]
 
-**Sources scanned:** [tickets; issues; forums; chats — counts]
+**Sources scanned:** [tickets; issues; forums; chats, counts]
 **Headline patterns:**
-1. [pattern] — [count, trend, severity] — [quote] — owner: [team]
-2. [pattern] — [count, trend, severity] — [quote] — owner: [team]
+1. [pattern]: [count, trend, severity], [quote], owner: [team]
+2. [pattern]: [count, trend, severity], [quote], owner: [team]
 
-**New or spiking:** [code] — [what changed; suspected cause]
-**Resolved since last digest:** [pattern] — [fix shipped] — [signal effect]
-**Silent categories under watch:** [code] — [last seen; follow-up planned]
+**New or spiking:** [code], [what changed; suspected cause]
+**Resolved since last digest:** [pattern], [fix shipped], [signal effect]
+**Silent categories under watch:** [code], [last seen; follow-up planned]
 ```
 
 ## Common Pitfalls
@@ -149,12 +150,12 @@ flowchart LR
 
 ## Related Topics
 
-- [[01_Developer_and_Customer_Research]] — interviews that explain what the numbers show
-- [[03_Observing_Real_Usage_and_Friction]] — watching the friction tickets only partially capture
-- [[06_Feedback_Systems_and_Surveys]] — the systems that keep new signal flowing in
-- [[07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]] — where routed findings land in the product
-- [[02_Documentation_and_Learning_Materials/00_overview|Documentation and Learning Materials]] — the artifact that absorbs most explanation gaps
+- [[01_Developer_and_Customer_Research]]: interviews that explain what the numbers show
+- [[03_Observing_Real_Usage_and_Friction]]: watching the friction tickets only partially capture
+- [[06_Feedback_Systems_and_Surveys]]: the systems that keep new signal flowing in
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]]: where routed findings land in the product
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/02_Documentation_and_Learning_Materials/00_overview|Documentation and Learning Materials]]: the artifact that absorbs most explanation gaps
 
 ## Summary
 
-Support signal archaeology converts the byproduct of daily support into a durable evidence base: collecting and deduplicating tickets, issues, forum threads, and chats; tagging with a consistent taxonomy that separates defects from explanation gaps; quantifying frequency, trend, and severity; verifying against other sources; and routing each pattern to a named owner. The discipline turns the advocate from a carrier of anecdotes into the person in the room whose claims are counted, quoted, and — best of all — testable after the fix ships.
+Support signal archaeology converts the byproduct of daily support into a durable evidence base: collecting and deduplicating tickets, issues, forum threads, and chats; tagging with a consistent taxonomy that separates defects from explanation gaps; quantifying frequency, trend, and severity; verifying against other sources; and routing each pattern to a named owner. The discipline turns the advocate from a carrier of anecdotes into the person in the room whose claims are counted, quoted, and (best of all) testable after the fix ships.

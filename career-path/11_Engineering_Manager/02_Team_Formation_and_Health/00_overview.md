@@ -14,11 +14,11 @@ tags:
 
 # Team Formation and Health
 
-> **Core capability:** The engineering manager builds teams that trust each other, communicate openly, and sustain delivery — and reads and repairs team health when it degrades.
+> **Core capability:** The engineering manager builds teams that trust each other, communicate openly, and sustain delivery, and reads and repairs team health when it degrades.
 
 ## Why This Matters
 
-A manager inherits or assembles a group of people and turns it into a team. The difference is trust, clarity, and safety: people who can disagree openly, admit mistakes, depend on each other, and raise problems early. Teams without that operate on politics and concealment — expensive to run, brittle under pressure.
+A manager inherits or assembles a group of people and turns it into a team. The difference is trust, clarity, and safety: people who can disagree openly, admit mistakes, depend on each other, and raise problems early. Teams without that operate on politics and concealment: expensive to run, brittle under pressure.
 
 Team health is not vibes; it is observable. Engagement, conflict quality, decision speed, attrition, and energy after failures are all readable if the manager pays attention on a cadence. The EM owns that reading and the repairs.
 
@@ -37,6 +37,7 @@ Team health is not vibes; it is observable. Engagement, conflict quality, decisi
 ## The Team Health Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     OBSERVE["Observe signals"] --> DIAGNOSE["Diagnose the real issue"]
     DIAGNOSE --> INTERVENE["Intervene deliberately"]
@@ -78,15 +79,15 @@ flowchart LR
 ## Success Indicators
 
 - Disagreement happens in the room, not in corridors afterwards
-- Bad news travels fast — to the manager, not around them
+- Bad news travels fast: to the manager, not around them
 - New members become effective within a quarter
 - Health metrics trend up or stay strong across disruptions
 - Exits leave the team stable and the relationship intact
 
 ## Related Capabilities
 
-- [[01_People_Development/00_overview|People Development]]: healthy teams are built from developing people
-- [[04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: health without delivery is fragility; they reinforce each other
+- [[career-path/11_Engineering_Manager/01_People_Development/00_overview|People Development]]: healthy teams are built from developing people
+- [[career-path/11_Engineering_Manager/04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: health without delivery is fragility; they reinforce each other
 - [[career-path/02_Senior_Software_Engineer/07_Mentoring_and_Team_Leadership/06_Psychological_Safety|Psychological Safety (Senior)]]: the concepts this area operationalizes
 
 ## Summary

@@ -80,7 +80,7 @@ tags:
 | Module | Verdict | Gap / suggestion |
 |---|---|---|
 | 01 Field Discovery & Problem Framing | ✅ Strong (shadowing, political mapping) | Add sustainability note |
-| 02 Solution Design & Rapid Prototyping | ✅ Excellent (engineering-bar note) | — |
+| 02 Solution Design & Rapid Prototyping | ✅ Excellent (engineering-bar note) | N/A |
 | 03 Integration & Deployment Engineering | ✅ Excellent | Cite integration references |
 | 04 AI Systems in Customer Environments | ✅ Strong | Cross-link Applied AI notes |
 | 05 Enterprise Navigation, Security & Compliance | ✅ Excellent | Add field ethics |

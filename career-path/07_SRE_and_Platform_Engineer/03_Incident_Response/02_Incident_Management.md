@@ -55,6 +55,7 @@ Ask these questions to determine severity:
 ### Role assignments
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     INCIDENT["Incident Declared"] --> IC["Incident Commander\n(coordinates response)"]
     IC --> TECH["Technical Lead\n(investigates and fixes)"]
@@ -67,6 +68,7 @@ flowchart TD
 ### The incident lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     DETECT["Detect\n(alert fires)"] --> TRIAGE["Triage\n(assess severity)"]
     TRIAGE --> RESPOND["Respond\n(coordinate team)"]
@@ -270,7 +272,7 @@ We will provide updates every [X minutes/hours].
 - [[01_On_Call_Practices]] : on-call is the first step in incident response
 - [[03_Blameless_Postmortems]] : postmortems learn from incidents
 - [[04_Post_Incident_Action_Items]] : action items prevent recurrence
-- [[02_Observability/04_Alerting_Strategy]] : alerts trigger incident response
+- [[career-path/07_SRE_and_Platform_Engineer/02_Observability/04_Alerting_Strategy]] : alerts trigger incident response
 - [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/04_Incident_Response]] : incident response foundations
 
 ## Key Takeaways

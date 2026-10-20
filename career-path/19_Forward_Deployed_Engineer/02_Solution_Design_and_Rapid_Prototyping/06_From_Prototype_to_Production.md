@@ -16,15 +16,15 @@ tags:
 
 # From Prototype to Production
 
-> **Core skill:** The hardening path — quality, security, operations, and ownership — closing the gap between a successful pilot and a system the customer runs without you.
+> **Core skill:** The hardening path (quality, security, operations, and ownership) closing the gap between a successful pilot and a system the customer runs without you.
 
 ## Why This Matters
 
-Pilot success is a midpoint, not a finish line. A prototype that delighted a working group has proven the idea; it has not proven that it can run under load, survive bad data, respect permissions, explain its behavior to auditors, recover from failure, or be maintained by anyone other than its author. The distance between those two states is the hardening path, and it is where most enterprise deployments quietly die — not in a dramatic failure, but in a widening gap between a demo everyone liked and a production system nobody quite commits to shipping.
+Pilot success is a midpoint, not a finish line. A prototype that delighted a working group has proven the idea; it has not proven that it can run under load, survive bad data, respect permissions, explain its behavior to auditors, recover from failure, or be maintained by anyone other than its author. The distance between those two states is the hardening path, and it is where most enterprise deployments quietly die, not in a dramatic failure, but in a widening gap between a demo everyone liked and a production system nobody quite commits to shipping.
 
-The gap exists because prototypes are optimized for learning and production systems are optimized for standing up to reality. Field prototypes skip error handling because errors interrupt the story; they use admin credentials because access models slow the demo; they avoid scale questions because sample data is small. Each shortcut is rational in its moment and fatal if it silently persists — the same code path that ignored a malformed record in a demo will meet thousands of malformed records in production, in front of users whose trust was earned by the demo.
+The gap exists because prototypes are optimized for learning and production systems are optimized for standing up to reality. Field prototypes skip error handling because errors interrupt the story; they use admin credentials because access models slow the demo; they avoid scale questions because sample data is small. Each shortcut is rational in its moment and fatal if it silently persists. The same code path that ignored a malformed record in a demo will meet thousands of malformed records in production, in front of users whose trust was earned by the demo.
 
-Hardening is therefore treated as a first-class phase with its own plan, estimates, gates, and ownership — not as cleanup squeezed in after go-live. The FDE's promise to the customer is not that the prototype is production-ready; it is that the path from one to the other is understood, estimated, and resourced before anyone is surprised by it. And the last component of that path, handover, is the true test: production is reached when the customer can operate the system without the FDE in the room.
+Hardening is therefore treated as a first-class phase with its own plan, estimates, gates, and ownership, not as cleanup squeezed in after go-live. The FDE's promise to the customer is not that the prototype is production-ready; it is that the path from one to the other is understood, estimated, and resourced before anyone is surprised by it. And the last component of that path, handover, is the true test: production is reached when the customer can operate the system without the FDE in the room.
 
 ## What Hardening Actually Adds
 
@@ -53,6 +53,7 @@ Each row converts a demonstration confidence into an operational one. Hardening 
 | 6 | Go-live with a defined monitoring window | Change board or equivalent |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PILOT["Pilot proves value"] --> GAPS["Assess production gaps"]
     GAPS --> HARDEN["Harden the critical paths"]
@@ -90,7 +91,7 @@ Handover quality is measurable: ask the customer's team to run the critical oper
 ### Go-Live Readiness Memo Snippet
 
 ```markdown
-## Go-Live Readiness — <system, date>
+## Go-Live Readiness: <system, date>
 
 | Element | Status |
 |---------|--------|
@@ -124,8 +125,8 @@ Handover quality is measurable: ask the customer's team to run the critical oper
 
 - [[05_Technical_Feasibility_Assessment]]
 - [[07_Choosing_the_Right_Engineering_Bar]]
-- [[03_Integration_and_Deployment_Engineering/00_overview|Integration and Deployment Engineering]]
-- [[05_Enterprise_Navigation_Security_and_Compliance/00_overview|Enterprise Navigation: Security and Compliance]]
+- [[career-path/19_Forward_Deployed_Engineer/03_Integration_and_Deployment_Engineering/00_overview|Integration and Deployment Engineering]]
+- [[career-path/19_Forward_Deployed_Engineer/05_Enterprise_Navigation_Security_and_Compliance/00_overview|Enterprise Navigation: Security and Compliance]]
 - [[software-engineering-note/12_Software_Quality/Software Quality Overview]]
 
 ## Summary

@@ -16,15 +16,15 @@ tags:
 
 # Procurement and IT Governance
 
-> **Core skill:** Fitting into standards, vendor lists, and buying processes — treating the commercial and governance machinery as part of the deployment plan, with technical inputs prepared before the paperwork lands on the critical path.
+> **Core skill:** Fitting into standards, vendor lists, and buying processes: treating the commercial and governance machinery as part of the deployment plan, with technical inputs prepared before the paperwork lands on the critical path.
 
 ## Why This Matters
 
 A deployment can be technically finished and still not ship, because the software has no path to purchase. Enterprises buy through governance: vendor onboarding that checks the company against standards, security questionnaires kept on file, data protection terms negotiated with legal, purchase orders raised by finance, and licensing models that must match how the organization budgets. None of this machinery is designed to be hostile; it exists because the organization has learned that ungoverned technology creates risk it cannot see. But it runs on its own clock, and that clock is usually longer than engineering expects.
 
-The FDE does not own procurement, and should not pretend to. What the FDE owns is the technical substrate every one of those steps depends on: accurate architecture descriptions, capability statements that do not overclaim, integration details stated in the customer's vocabulary, and straight answers about hosting, data, and support. When those inputs are late or wrong, the process stalls — not because procurement is slow, but because it is waiting. The most avoidable delay in enterprise deployment is a paperwork dependency the FDE could have foreseen and fed in advance.
+The FDE does not own procurement, and should not pretend to. What the FDE owns is the technical substrate every one of those steps depends on: accurate architecture descriptions, capability statements that do not overclaim, integration details stated in the customer's vocabulary, and straight answers about hosting, data, and support. When those inputs are late or wrong, the process stalls, not because procurement is slow, but because it is waiting. The most avoidable delay in enterprise deployment is a paperwork dependency the FDE could have foreseen and fed in advance.
 
-There is also a governance dimension that reaches beyond a single deal. Organizations maintain standards — approved architectures, preferred vendors, reference patterns — precisely so that similar needs do not become fifty bespoke exceptions. A deployment that fits an existing standard moves faster through every gate; a deployment that requires an exception creates work for people whose job is to minimize exceptions, and that work gets remembered. The FDE who can shape a solution to land inside the standard, while still solving the customer's problem, converts governance from an adversary into an accelerator. And because purchase decisions recur — expansions, renewals, additional business units — the paths opened in the first deal determine how fast every later phase can move.
+There is also a governance dimension that reaches beyond a single deal. Organizations maintain standards (approved architectures, preferred vendors, reference patterns) precisely so that similar needs do not become fifty bespoke exceptions. A deployment that fits an existing standard moves faster through every gate; a deployment that requires an exception creates work for people whose job is to minimize exceptions, and that work gets remembered. The FDE who can shape a solution to land inside the standard, while still solving the customer's problem, converts governance from an adversary into an accelerator. And because purchase decisions recur (expansions, renewals, additional business units), the paths opened in the first deal determine how fast every later phase can move.
 
 ## Where Procurement Sits in a Deployment
 
@@ -49,11 +49,12 @@ There is also a governance dimension that reaches beyond a single deal. Organiza
 | Preferred-vendor pressure | Another vendor already holds the standard position | Compete on the standard's own terms: gap analysis against the incumbent's pattern |
 | Multi-team approvals | Several owners must sign, each with separate concerns | Map every approver and their question, and answer each in their own forum |
 
-The pattern behind all of these is the same: governance is a pipeline with owners and inputs, and the FDE's leverage is to supply the inputs early and accurately. Where the customer has a reference architecture or a standard pattern, reading it is the highest-value hour the FDE can spend — it tells you what an approvable solution looks like in this organization before you design one that is not.
+The pattern behind all of these is the same: governance is a pipeline with owners and inputs, and the FDE's leverage is to supply the inputs early and accurately. Where the customer has a reference architecture or a standard pattern, reading it is the highest-value hour the FDE can spend. It tells you what an approvable solution looks like in this organization before you design one that is not.
 
 ## The Governance Rhythm
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CHECK["Check vendor status early"] --> PAPER["Start paperwork before the critical path"]
     PAPER --> ALIGN["Align scope with approved standards"]
@@ -62,7 +63,7 @@ flowchart LR
     CLEAR --> RENEW["Track the renewal clock"]
 ```
 
-Two habits make this rhythm work. First, treat the internal buyer — the customer-side person who owns the purchase — as a teammate: they need technically accurate material to carry into rooms the FDE never enters, and they are measured on whether the purchase goes smoothly. Second, track the renewal clock from the day the first contract is signed, because the evidence gathered during rollout is the cheapest renewal material the account will ever have.
+Two habits make this rhythm work. First, treat the internal buyer, the customer-side person who owns the purchase, as a teammate: they need technically accurate material to carry into rooms the FDE never enters, and they are measured on whether the purchase goes smoothly. Second, track the renewal clock from the day the first contract is signed, because the evidence gathered during rollout is the cheapest renewal material the account will ever have.
 
 ## Practical Applications
 
@@ -79,7 +80,7 @@ Two habits make this rhythm work. First, treat the internal buyer — the custom
 ### Procurement Readiness Snapshot Template
 
 ```markdown
-## Procurement Snapshot — <customer, deployment, date>
+## Procurement Snapshot: <customer, deployment, date>
 
 | Field | Detail |
 |-------|--------|
@@ -121,4 +122,4 @@ Two habits make this rhythm work. First, treat the internal buyer — the custom
 
 ## Summary
 
-Procurement and IT governance are the commercial gauntlet every enterprise deployment must pass: vendor onboarding, questionnaires, data terms, purchase orders, and standards that shape what can be approved. The FDE's role is not to run the process but to feed it — early, accurately, and in the customer's own vocabulary — while shaping solutions that land inside existing patterns instead of demanding exceptions. The deployments that move fastest through governance are not the ones with the loudest urgency; they are the ones whose technical story was ready before anyone asked for it.
+Procurement and IT governance are the commercial gauntlet every enterprise deployment must pass: vendor onboarding, questionnaires, data terms, purchase orders, and standards that shape what can be approved. The FDE's role is not to run the process but to feed it (early, accurately, and in the customer's own vocabulary), while shaping solutions that land inside existing patterns instead of demanding exceptions. The deployments that move fastest through governance are not the ones with the loudest urgency; they are the ones whose technical story was ready before anyone asked for it.

@@ -16,15 +16,15 @@ tags:
 
 # Technical Feasibility Assessment
 
-> **Core skill:** Judging quickly what is possible and what it will cost — probing the customer's real data, systems, and constraints before commitments are made, and recording an honest verdict.
+> **Core skill:** Judging quickly what is possible and what it will cost: probing the customer's real data, systems, and constraints before commitments are made, and recording an honest verdict.
 
 ## Why This Matters
 
-Every commitment in forward deployment should trace back to an assessment made with eyes open: can this actually work here, with this data, under these constraints, and what will it take? The pace of field work pressures the question to be answered early and cheaply — a prospect asks in a workshop, a sponsor asks in a steering meeting — yet the cost of a wrong answer is paid in production. Feasibility assessment is the FDE's instrument for answering the question fast without answering it dishonestly.
+Every commitment in forward deployment should trace back to an assessment made with eyes open: can this actually work here, with this data, under these constraints, and what will it take? The pace of field work pressures the question to be answered early and cheaply (a prospect asks in a workshop, a sponsor asks in a steering meeting), yet the cost of a wrong answer is paid in production. Feasibility assessment is the FDE's instrument for answering the question fast without answering it dishonestly.
 
-The lab is the enemy of honest assessment. Prototypes built with clean sample data, modern dependencies, and administrator access demonstrate what is possible in a world the customer does not inhabit. In their world, the table has twelve million rows with four naming conventions, the API rate-limits aggressively, the identity provider rejects service accounts, and the network path crosses a zone nobody mentioned. Feasibility lives in that world, and the only way to read it is to touch the customer's real artifacts — their data, their systems, their people.
+The lab is the enemy of honest assessment. Prototypes built with clean sample data, modern dependencies, and administrator access demonstrate what is possible in a world the customer does not inhabit. In their world, the table has twelve million rows with four naming conventions, the API rate-limits aggressively, the identity provider rejects service accounts, and the network path crosses a zone nobody mentioned. Feasibility lives in that world, and the only way to read it is to touch the customer's real artifacts: their data, their systems, their people.
 
-An honest verdict is a professional asset. "Not feasible as stated, here is what would make it feasible" is one of the most valuable sentences an FDE can say, because it arrives before money and reputation are committed. The pattern to avoid is the silent no — doubt held privately, hope replacing judgment, until the discovery surfaces during hardening when its cost has multiplied. Fast, recorded, revisitable judgments are what make the fast pace safe.
+An honest verdict is a professional asset. "Not feasible as stated, here is what would make it feasible" is one of the most valuable sentences an FDE can say, because it arrives before money and reputation are committed. The pattern to avoid is the silent no: doubt held privately, hope replacing judgment, until the discovery surfaces during hardening when its cost has multiplied. Fast, recorded, revisitable judgments are what make the fast pace safe.
 
 ## The Feasibility Questions
 
@@ -52,6 +52,7 @@ Each question has a cheap probe and an expensive alternative. Choose the cheap p
 | 6 | Write the verdict with conditions | Something sponsors and engineers can act on |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     QUESTION["Ask the hard question"] --> PROBE["Probe the real data"]
     PROBE --> SPIKE["Spike the riskiest link"]
@@ -59,7 +60,7 @@ flowchart LR
     ESTIMATE --> VERDICT["Record the verdict"]
 ```
 
-The spike earns its name by being disposable. Its value is the knowledge it buys — about the customer's reality — and its code is usually thrown away, which is precisely why it can be honest.
+The spike earns its name by being disposable. Its value is the knowledge it buys (about the customer's reality) and its code is usually thrown away, which is precisely why it can be honest.
 
 ## Verdict, Not Vibes
 
@@ -67,7 +68,7 @@ The spike earns its name by being disposable. Its value is the knowledge it buys
 |---------|---------|--------------------|
 | Feasible | Probes passed on real artifacts; no unretired risks | Scope and timeline may be committed with normal reserves |
 | Feasible with named risks | Works if stated conditions hold | Commit with conditions written down and owners assigned |
-| Uncertain — needs a deeper spike | The critical link is untested at sufficient depth | Time-boxed investigation before any commitment |
+| Uncertain: needs a deeper spike | The critical link is untested at sufficient depth | Time-boxed investigation before any commitment |
 | Not feasible as stated | A hard constraint blocks the ask | Present alternative framings that could become feasible |
 
 The last row is not a failure; it is the assessment working. "Not feasible as stated" followed by two viable reframings is more valuable than a disguised yes that collapses during delivery.
@@ -77,7 +78,7 @@ The last row is not a failure; it is the assessment working. "Not feasible as st
 ### Feasibility Note Template
 
 ```markdown
-## Feasibility Note — <topic, date>
+## Feasibility Note: <topic, date>
 
 | Element | Statement |
 |---------|-----------|
@@ -124,8 +125,8 @@ The last row is not a failure; it is the assessment working. "Not feasible as st
 - [[06_From_Prototype_to_Production]]
 - [[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability (Applied AI)]]
 - [[career-path/06_Software_Architect/00_overview|Software Architect]]
-- [[03_Integration_and_Deployment_Engineering/00_overview|Integration and Deployment Engineering]]
+- [[career-path/19_Forward_Deployed_Engineer/03_Integration_and_Deployment_Engineering/00_overview|Integration and Deployment Engineering]]
 
 ## Summary
 
-Technical feasibility assessment is the FDE's fast, evidence-based answer to "can this work here, and what will it take": probing the customer's real data, systems, and access paths, spiking the riskiest link before commitments, estimating in ranges with named assumptions, and recording a verdict with conditions and revisit triggers. Its output is not a demonstration of possibility but a defensible judgment — and the honesty of that judgment is what the deployment's credibility is built on.
+Technical feasibility assessment is the FDE's fast, evidence-based answer to "can this work here, and what will it take": probing the customer's real data, systems, and access paths, spiking the riskiest link before commitments, estimating in ranges with named assumptions, and recording a verdict with conditions and revisit triggers. Its output is not a demonstration of possibility but a defensible judgment, and the honesty of that judgment is what the deployment's credibility is built on.

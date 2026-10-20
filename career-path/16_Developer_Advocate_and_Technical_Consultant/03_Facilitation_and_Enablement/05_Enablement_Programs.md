@@ -17,15 +17,15 @@ tags:
 
 # Enablement Programs
 
-> **Core skill:** Designing repeatable programs — partner, customer, and internal — that make other people independently capable, so capability scales beyond your own calendar.
+> **Core skill:** Designing repeatable programs (partner, customer, and internal) that make other people independently capable, so capability scales beyond your own calendar.
 
 ## Why This Matters
 
 One consultant helping one customer produces one outcome. A consultant who builds an enablement program produces outcomes through every person the program reaches. This is the multiplication step of the role: partner engineers who can implement without escalation, customer teams who can run the integration themselves, internal colleagues who can carry the advocate's methods into their own conversations. The program is the product; the sessions are deliveries.
 
-Programs fail in a specific, predictable way: as content dumps. A library of recordings and slides is published, attendance is counted, and nothing changes because nobody verified that anyone can do anything. Enablement is not distribution — it is capability change, and capability must be built with practice, feedback, and assessment, then sustained with support structures after the formal training ends.
+Programs fail in a specific, predictable way: as content dumps. A library of recordings and slides is published, attendance is counted, and nothing changes because nobody verified that anyone can do anything. Enablement is not distribution. It is capability change, and capability must be built with practice, feedback, and assessment, then sustained with support structures after the formal training ends.
 
-The consultant's advantage is knowing where the friction actually is, from discovery, support archaeology, and hands-on work in the field. A program built from those inputs targets the real blockers — the two-step authentication flow that defeats every integrator, not the abstract architecture topic that feels important to the vendor. That grounding is what separates an enablement program that moves adoption numbers from one that moves nothing.
+The consultant's advantage is knowing where the friction actually is, from discovery, support archaeology, and hands-on work in the field. A program built from those inputs targets the real blockers: the two-step authentication flow that defeats every integrator, not the abstract architecture topic that feels important to the vendor. That grounding is what separates an enablement program that moves adoption numbers from one that moves nothing.
 
 ## What Enablement Programs Cover
 
@@ -70,6 +70,7 @@ The consultant's advantage is knowing where the friction actually is, from disco
 | Sustain | Reviews, refreshes, alumni support | Program survives product changes and staff turnover |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     AUDIENCE["Define the audience and capability goal"] --> CURRICULUM["Build the curriculum and materials"]
     CURRICULUM --> PILOT["Deliver and refine with a first cohort"]
@@ -145,12 +146,12 @@ flowchart LR
 
 ## Related Topics
 
-- [[06_Training_and_Curriculum_Design]] — the learning structure every program needs
-- [[01_Workshops_and_Hands_On_Sessions]] — the delivery format most programs are built on
-- [[07_Facilitation_Techniques]] — the craft trainers must inherit to scale quality
-- [[06_Community_and_Ecosystem/00_overview|Community and Ecosystem]] — community channels that sustain programs
-- [[05_Solution_Guidance/00_overview|Solution Guidance]] — the method programs propagate to partners
+- [[06_Training_and_Curriculum_Design]]: the learning structure every program needs
+- [[01_Workshops_and_Hands_On_Sessions]]: the delivery format most programs are built on
+- [[07_Facilitation_Techniques]]: the craft trainers must inherit to scale quality
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/06_Community_and_Ecosystem/00_overview|Community and Ecosystem]]: community channels that sustain programs
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/05_Solution_Guidance/00_overview|Solution Guidance]]: the method programs propagate to partners
 
 ## Summary
 
-Enablement programs multiply the advocate and consultant by building capability in others: a specific, tested capability target; a curriculum with practice and assessment; a pilot that improves the material; certification that makes capability verifiable; trainer cohorts and self-serve paths that scale delivery; and a sustain loop that keeps exercises true as the product changes. The program is finished only when it runs without you — and keeps running when you are gone.
+Enablement programs multiply the advocate and consultant by building capability in others: a specific, tested capability target; a curriculum with practice and assessment; a pilot that improves the material; certification that makes capability verifiable; trainer cohorts and self-serve paths that scale delivery; and a sustain loop that keeps exercises true as the product changes. The program is finished only when it runs without you, and keeps running when you are gone.

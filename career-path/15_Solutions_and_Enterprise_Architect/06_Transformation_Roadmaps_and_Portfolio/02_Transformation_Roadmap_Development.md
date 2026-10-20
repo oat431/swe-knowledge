@@ -16,15 +16,15 @@ tags:
 
 # Transformation Roadmap Development
 
-> **Core skill:** The architect converts strategy and target architecture into a sequenced, dependency-aware roadmap — waves with explicit dependencies, value delivered at each step, and decision gates — rather than a monolithic multi-year plan that only works if nothing changes.
+> **Core skill:** The architect converts strategy and target architecture into a sequenced, dependency-aware roadmap (waves with explicit dependencies, value delivered at each step, and decision gates) rather than a monolithic multi-year plan that only works if nothing changes.
 
 ## Why This Matters
 
 Sequencing is where transformations succeed or die. The target can be right and the funding available, and the program still fails because it attempted dependencies in the wrong order, deferred all value to the end, or locked a five-year plan that reality invalidated in year one. The roadmap is the architect's instrument for controlling sequence, and sequence is most of the risk.
 
-A roadmap is also the primary communication artifact between architecture and the rest of the organization. Executives read it for value and timing, delivery reads it for what comes next, finance reads it for funding waves, and risk reads it for exposure over time. One roadmap, several readings — which means the roadmap must express value, dependencies, and assumptions so plainly that each audience can do its own arithmetic.
+A roadmap is also the primary communication artifact between architecture and the rest of the organization. Executives read it for value and timing, delivery reads it for what comes next, finance reads it for funding waves, and risk reads it for exposure over time. One roadmap, several readings, which means the roadmap must express value, dependencies, and assumptions so plainly that each audience can do its own arithmetic.
 
-The best roadmaps are living instruments. They show what is committed now, what is planned next, and what is directional — with decision gates where funding and scope are re-examined against evidence. A roadmap that is never revised is not a commitment to a plan; it is a refusal to learn.
+The best roadmaps are living instruments. They show what is committed now, what is planned next, and what is directional: with decision gates where funding and scope are re-examined against evidence. A roadmap that is never revised is not a commitment to a plan; it is a refusal to learn.
 
 ## Anatomy of a Transformation Roadmap
 
@@ -32,7 +32,7 @@ The best roadmaps are living instruments. They show what is committed now, what 
 |---------|---------|
 | Waves | Time-bounded groups of change with a coherent outcome |
 | Dependencies | What must exist before each item can start or finish |
-| Enablers | Foundation work — identity, data, platforms — that unblocks later value |
+| Enablers | Foundation work (identity, data, platforms) that unblocks later value |
 | Value milestones | Observable outcomes delivered at each wave, not just activity completed |
 | Decision gates | Points where funding, scope, and continuation are re-decided |
 | Assumptions and constraints | What the sequencing relies on being true |
@@ -61,6 +61,7 @@ The best roadmaps are living instruments. They show what is committed now, what 
 ## The Roadmap as a Decision Instrument
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     STRATEGY["Business strategy and target architecture"] --> ANALYSIS["Capability and dependency analysis"]
     ANALYSIS["Capability and dependency analysis"] --> WAVES["Sequenced waves with value milestones"]
@@ -90,7 +91,7 @@ flowchart LR
 ### Roadmap One-Pager
 
 ```markdown
-## Transformation Roadmap — <initiative>
+## Transformation Roadmap: <initiative>
 
 | Wave | Outcome | Key Dependencies | Value Milestone | Gate Decision |
 |------|---------|------------------|-----------------|---------------|
@@ -131,4 +132,4 @@ Fixed external dates: <list>
 
 ## Summary
 
-Transformation roadmap development turns strategy into a sequence that can survive contact with reality: waves with observable value, dependencies mapped before commitment, enablers moved to the front, and gates where funding and scope are re-decided against evidence. The roadmap is simultaneously a plan, a communication instrument, and a risk-control device — and it stays credible exactly as long as it keeps being revised.
+Transformation roadmap development turns strategy into a sequence that can survive contact with reality: waves with observable value, dependencies mapped before commitment, enablers moved to the front, and gates where funding and scope are re-decided against evidence. The roadmap is simultaneously a plan, a communication instrument, and a risk-control device, and it stays credible exactly as long as it keeps being revised.

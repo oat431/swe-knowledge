@@ -14,13 +14,13 @@ tags:
 
 # Organizational Learning and Mentoring
 
-> **Core capability:** The staff engineer makes the organization smarter — mentoring senior engineers toward staff-level judgment, spreading practices through communities, and building systems that retain knowledge beyond individuals.
+> **Core capability:** The staff engineer makes the organization smarter: mentoring senior engineers toward staff-level judgment, spreading practices through communities, and building systems that retain knowledge beyond individuals.
 
 ## Why This Matters
 
 A staff engineer who solves every problem personally becomes the org's most expensive bottleneck. The durable version of the role multiplies: seniors who think in systems, teams that adopt practices without pushing, knowledge that survives attrition. Influence that lives only in your head retires when you do.
 
-Mentoring at this level also changes clientele: you mentor seniors and tech leads, not juniors. The work is judgment transfer — how to frame a proposal, how to read an incentive, how to know which battle matters — which spreads through writing, reviews, and deliberate communities of practice more than through 1:1 teaching alone.
+Mentoring at this level also changes clientele: you mentor seniors and tech leads, not juniors. The work is judgment transfer (how to frame a proposal, how to read an incentive, how to know which battle matters), which spreads through writing, reviews, and deliberate communities of practice more than through 1:1 teaching alone.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ Mentoring at this level also changes clientele: you mentor seniors and tech lead
 ## The Multiplication Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MENTOR["Mentor seniors directly"] --> WRITE["Write the thinking down"]
     WRITE --> COMMUNITY["Spread through communities"]
@@ -87,8 +88,8 @@ Each turn grows the surface area that learns without your presence.
 
 ## Related Capabilities
 
-- [[01_The_Staff_Role_and_Scope/00_overview|The Staff Role and Scope]]: multiplication is the role's escape from bottleneck
-- [[04_Influence_and_Alignment/00_overview|Influence and Alignment]]: teaching spreads influence you don't attend
+- [[career-path/03_Staff_Engineer/01_The_Staff_Role_and_Scope/00_overview|The Staff Role and Scope]]: multiplication is the role's escape from bottleneck
+- [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/00_overview|Influence and Alignment]]: teaching spreads influence you don't attend
 - [[career-path/02_Senior_Software_Engineer/07_Mentoring_and_Team_Leadership/00_overview|Mentoring and Team Leadership (Senior)]]: the 1:1 craft this builds on
 - [[career-path/05_Tech_Lead/05_Team_Development_and_Mentoring_Leadership/00_overview|Team Development and Mentoring Leadership (Tech Lead)]]: the team-level parallel
 - [[career-path/04_Principal_and_Distinguished_Engineer/00_overview|Principal and Distinguished Engineer]]: where org-scale multiplication goes next

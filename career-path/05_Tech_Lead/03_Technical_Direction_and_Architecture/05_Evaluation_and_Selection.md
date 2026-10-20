@@ -16,13 +16,13 @@ tags:
 
 # Evaluation and Selection
 
-> **Core skill:** Leading build/buy/adopt evaluations so technology choices follow evidence and criteria — not fashion, resumes, or inertia.
+> **Core skill:** Leading build/buy/adopt evaluations so technology choices follow evidence and criteria, not fashion, resumes, or inertia.
 
 ## Why This Matters
 
-Technology selections are among the most expensive decisions a team makes — and the most commonly rushed. A framework or vendor chosen on enthusiasm gets lived with for years, through migrations nobody wants to repeat. The cost is not the license or the integration; it is the system's trajectory, which bends around the choice.
+Technology selections are among the most expensive decisions a team makes, and the most commonly rushed. A framework or vendor chosen on enthusiasm gets lived with for years, through migrations nobody wants to repeat. The cost is not the license or the integration; it is the system's trajectory, which bends around the choice.
 
-The tech lead's job is to make selection a process, not a debate: requirements first, explicit criteria, weighted scoring, spike validation, and a written recommendation anyone can audit. The process also protects the team from its own biases — the resume-driven adoption and the inertia-driven retention that quietly decide most selections in practice.
+The tech lead's job is to make selection a process, not a debate: requirements first, explicit criteria, weighted scoring, spike validation, and a written recommendation anyone can audit. The process also protects the team from its own biases: the resume-driven adoption and the inertia-driven retention that quietly decide most selections in practice.
 
 ## Requirements First
 
@@ -34,12 +34,12 @@ The tech lead's job is to make selection a process, not a debate: requirements f
 | Constraint | What is fixed | Must run on the existing cloud, budget capped |
 | Preference | Nice to have, not required | Managed service preferred |
 
-The discipline: requirements are written before any vendor or tool is shortlisted. Every requirement is testable — "fast" is not a requirement, "p99 under 50 ms under 10k rps" is. If a requirement cannot be tested, it cannot decide anything.
+The discipline: requirements are written before any vendor or tool is shortlisted. Every requirement is testable. "Fast" is not a requirement, "p99 under 50 ms under 10k rps" is. If a requirement cannot be tested, it cannot decide anything.
 
 ## The Evaluation Criteria Matrix
 
 ```markdown
-# Evaluation: [technology] — [date]
+# Evaluation: [technology], [date]
 
 ## Requirements (weighted)
 | Criterion | Weight | [Option A] | [Option B] | [Option C] |
@@ -59,7 +59,7 @@ The discipline: requirements are written before any vendor or tool is shortliste
 - [ ] What would change the recommendation
 ```
 
-Weights are agreed before scores are collected — that is what makes the matrix an evaluation instead of a rationalization. Scores are worthless without evidence; each score cites a spike, a test, or a documented fact.
+Weights are agreed before scores are collected. That is what makes the matrix an evaluation instead of a rationalization. Scores are worthless without evidence; each score cites a spike, a test, or a documented fact.
 
 ## Spike Validation and Staging Trials
 
@@ -70,7 +70,7 @@ Weights are agreed before scores are collected — that is what makes the matrix
 | Staging trial | Integration, operations, performance in a real environment | For platforms and infrastructure |
 | Pilot | Production with guardrails and an exit plan | For the highest-risk choices |
 
-A spike is timeboxed and scoped to the single biggest unknown — it answers one question and stops. A staging trial runs the candidate through the team's actual operational motions: deploy, monitor, rollback. If a candidate cannot pass the team's own operational bar in staging, the scorecard is already written.
+A spike is timeboxed and scoped to the single biggest unknown. It answers one question and stops. A staging trial runs the candidate through the team's actual operational motions: deploy, monitor, rollback. If a candidate cannot pass the team's own operational bar in staging, the scorecard is already written.
 
 ## TCO Not License Cost
 
@@ -110,7 +110,7 @@ The recommendation's structure makes it auditable:
 6. The risks of the choice and the exit plan
 7. What would change the recommendation
 
-Anyone — a skeptical engineer, an executive, a future team — should be able to read the document and reconstruct the decision. If the document could not have produced the verdict, it is not an evaluation; it is a memo.
+Anyone (a skeptical engineer, an executive, a future team) should be able to read the document and reconstruct the decision. If the document could not have produced the verdict, it is not an evaluation; it is a memo.
 
 ## Avoiding Resume-Driven and Inertia-Driven Selection
 
@@ -122,6 +122,7 @@ Anyone — a skeptical engineer, an executive, a future team — should be able 
 | Spreadsheet theater | Scores fudged to match the preferred verdict | Evidence attached to every score; weights agreed first |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     REQ["Requirements and weights agreed"] --> SHORT["Shortlist options"]
     SHORT --> SPIKE["Spike the critical unknowns"]
@@ -173,4 +174,4 @@ Checklist for any selection:
 
 ## Summary
 
-Evaluation and selection is a process discipline: testable requirements and agreed weights before any shortlist, spike and staging validation of the critical unknowns, TCO over the horizon rather than license price, vendor and community health on named signals, and a written recommendation anyone can audit. The process is the defense against the real selection biases — resume-driven adoption, inertia, and fashion. A choice made by evidence can be defended; a choice made by enthusiasm can only be explained.
+Evaluation and selection is a process discipline: testable requirements and agreed weights before any shortlist, spike and staging validation of the critical unknowns, TCO over the horizon rather than license price, vendor and community health on named signals, and a written recommendation anyone can audit. The process is the defense against the real selection biases: resume-driven adoption, inertia, and fashion. A choice made by evidence can be defended; a choice made by enthusiasm can only be explained.

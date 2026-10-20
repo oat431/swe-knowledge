@@ -19,9 +19,9 @@ tags:
 
 ## Why This Matters
 
-The team postmortem answers "what happened here." The org-level question is "what keeps happening everywhere." The same contributing factors recur across teams — missing ownership, skipped hardening, unrehearsed rollback — each time as a fresh incident with a fresh postmortem and a fresh set of action items. Teams learn; the org repeats.
+The team postmortem answers "what happened here." The org-level question is "what keeps happening everywhere." The same contributing factors recur across teams (missing ownership, skipped hardening, unrehearsed rollback), each time as a fresh incident with a fresh postmortem and a fresh set of action items. Teams learn; the org repeats.
 
-Organizational learning is the step past the postmortem: aggregate contributing factors across incidents, find the patterns, and convert them into structural fixes. It is the bridge between incident response and systems thinking — the point where the incident becomes data about the org rather than a story about the night.
+Organizational learning is the step past the postmortem: aggregate contributing factors across incidents, find the patterns, and convert them into structural fixes. It is the bridge between incident response and systems thinking: the point where the incident becomes data about the org rather than a story about the night.
 
 ## Beyond the Team Postmortem
 
@@ -71,7 +71,7 @@ Periodic multi-incident analysis, on a cadence:
 | **Quarterly learning review** | Top factors, fix effectiveness, structural conversions | Quarterly |
 | **Annual systemic review** | The org's top five learning failures and what would fix them | Annually |
 
-The learning review's output is not more action items — it is a short list of structural changes with owners and prices, fed into the risk register like any other risk.
+The learning review's output is not more action items. It is a short list of structural changes with owners and prices, fed into the risk register like any other risk.
 
 ## Converting Patterns into Structural Fixes
 
@@ -109,9 +109,10 @@ The honest test of organizational learning: could a new engineer, reading only t
 | **Shepherding** | Track fixes across teams until they land and hold |
 | **Measurement** | Report recurrence trends to leadership |
 
-The staff role is the seam between incidents and structure — the person who makes sure the org's incidents become its learning.
+The staff role is the seam between incidents and structure: the person who makes sure the org's incidents become its learning.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     INCIDENT["Incident"] --> POSTMORTEM["Postmortem with factors"]
     POSTMORTEM --> DATABASE["Contributing factor database"]
@@ -156,9 +157,9 @@ flowchart TD
 - [[01_Seeing_Org_Scale_Risk]]: patterns enter the risk register
 - [[05_Risk_Pricing_and_Acceptance]]: pricing the structural fixes
 - [[02_Architecture_Erosion]]: incident clustering as an erosion signal
-- [[05_Systems_Thinking_and_Organizational_Design/00_overview|Systems Thinking and Organizational Design]]: the loop behind the pattern
+- [[career-path/03_Staff_Engineer/05_Systems_Thinking_and_Organizational_Design/00_overview|Systems Thinking and Organizational Design]]: the loop behind the pattern
 - [[career-path/05_Tech_Lead/07_Incident_Leadership_and_Production_Excellence/03_Blameless_Postmortem_Leadership|Blameless Postmortem Leadership (Tech Lead)]]: the team-level foundation
 
 ## Summary
 
-Post-incident organizational learning is the step past the team postmortem: aggregate contributing factors across incidents into a queryable database, run learning reviews on a cadence, convert cross-team patterns into structural fixes, and measure the recurrence rate as the honest metric of learning. The org that aggregates its incidents stops repeating its history — the org that does not keeps writing the same postmortem with different dates.
+Post-incident organizational learning is the step past the team postmortem: aggregate contributing factors across incidents into a queryable database, run learning reviews on a cadence, convert cross-team patterns into structural fixes, and measure the recurrence rate as the honest metric of learning. The org that aggregates its incidents stops repeating its history. The org that does not keeps writing the same postmortem with different dates.

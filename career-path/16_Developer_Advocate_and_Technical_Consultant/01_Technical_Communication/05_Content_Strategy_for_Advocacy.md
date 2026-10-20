@@ -16,15 +16,15 @@ tags:
 
 # Content Strategy for Advocacy
 
-> **Core skill:** The advocate plans content as a portfolio rather than a stream of one-offs — mapping each piece to an audience, an adoption stage, and a measurable signal, and building a cadence the team can sustain without heroics.
+> **Core skill:** The advocate plans content as a portfolio rather than a stream of one-offs: mapping each piece to an audience, an adoption stage, and a measurable signal, and building a cadence the team can sustain without heroics.
 
 ## Why This Matters
 
-Any single piece of content is a lottery ticket; a strategy is a portfolio. Advocates who publish opportunistically produce spikes — a hit post now and then, surrounded by silence — while the compounding asset in developer relations is a body of work that keeps answering the next user's question months after it was written. Strategy is what turns publishing from an act of hope into an operation with a target: a defined audience, a defined adoption gap, and a defined signal that says whether the content is working.
+Any single piece of content is a lottery ticket; a strategy is a portfolio. Advocates who publish opportunistically produce spikes (a hit post now and then, surrounded by silence) while the compounding asset in developer relations is a body of work that keeps answering the next user's question months after it was written. Strategy is what turns publishing from an act of hope into an operation with a target: a defined audience, a defined adoption gap, and a defined signal that says whether the content is working.
 
-Advocacy content is also not neutral commentary — it serves adoption, which has stages. Someone who has never heard of the technology needs a different artifact than someone evaluating it against a competitor, which is different again from someone trying to get their first deployment through review, and different one more time from someone deciding whether to expand the rollout. Most advocacy content portfolios collapse into a single stage — usually awareness, because it is the most fun to write — and then wonder why committed evaluation and migration questions go unanswered.
+Advocacy content is also not neutral commentary. It serves adoption, which has stages. Someone who has never heard of the technology needs a different artifact than someone evaluating it against a competitor, which is different again from someone trying to get their first deployment through review, and different one more time from someone deciding whether to expand the rollout. Most advocacy content portfolios collapse into a single stage (usually awareness, because it is the most fun to write) and then wonder why committed evaluation and migration questions go unanswered.
 
-The professional distinction is measurement discipline. Vanity metrics — page views, likes, applause — measure attention, which is an input, not the output. The output is adoption behavior: repositories cloned, quickstarts completed, versions upgraded, support questions that no longer need asking. The advocate who defines the signal before publishing writes differently, because the piece has a job and will be judged on whether it did that job.
+The professional distinction is measurement discipline. Vanity metrics (page views, likes, applause) measure attention, which is an input, not the output. The output is adoption behavior: repositories cloned, quickstarts completed, versions upgraded, support questions that no longer need asking. The advocate who defines the signal before publishing writes differently, because the piece has a job and will be judged on whether it did that job.
 
 ## The Adoption Stages and What Content Serves Them
 
@@ -66,6 +66,7 @@ Channels are rented; owned properties and a portable audience are the assets. St
 ## The Advocacy Content Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     AUDIENCE["Define the audience and their decisions"] --> TOPICS["Choose topics that earn attention"]
     TOPICS["Choose topics that earn attention"] --> CHANNELS["Match channels to audience habits"]
@@ -89,7 +90,7 @@ The loop returns each cycle to the audience question, because adoption stages an
 ### Editorial Calendar Template
 
 ```markdown
-## Editorial Calendar — <quarter>
+## Editorial Calendar: <quarter>
 
 | Piece | Audience | Stage | Channel | Signal | Owner | Status |
 |-------|----------|-------|---------|--------|-------|--------|
@@ -109,7 +110,7 @@ The loop returns each cycle to the audience question, because adoption stages an
 
 ## Success Indicators
 
-- Adoption-stage metrics — trial starts, quickstart completions, upgrades — move after content cycles
+- Adoption-stage metrics (trial starts, quickstart completions, upgrades) move after content cycles
 - Evergreen pieces keep attracting and converting long after launch windows close
 - The community cites and extends the content without prompt
 - Support questions on documented topics decline over time
@@ -119,9 +120,9 @@ The loop returns each cycle to the audience question, because adoption stages an
 
 - [[02_Writing_for_Developers]]
 - [[06_Multimedia_and_Video_Content]]
-- [[07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]]
-- [[06_Community_and_Ecosystem/00_overview|Community and Ecosystem]]
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]]
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/06_Community_and_Ecosystem/00_overview|Community and Ecosystem]]
 
 ## Summary
 
-Content strategy converts scattered publishing into a portfolio: map every piece to an audience and an adoption stage, allocate effort across channels where attention is rented and properties where it is owned, and define the working signal before writing a word. The advocate who plans this way stops hoping for hits and starts compounding — because the durable win state is a body of content that keeps answering questions, keeps shortening onboarding, and keeps the whole funnel from starving.
+Content strategy converts scattered publishing into a portfolio: map every piece to an audience and an adoption stage, allocate effort across channels where attention is rented and properties where it is owned, and define the working signal before writing a word. The advocate who plans this way stops hoping for hits and starts compounding, because the durable win state is a body of content that keeps answering questions, keeps shortening onboarding, and keeps the whole funnel from starving.

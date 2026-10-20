@@ -16,15 +16,15 @@ tags:
 
 # Customer Domain Immersion
 
-> **Core skill:** Learning a customer's business, vocabulary, and incentives fast — fast enough to read their documents, follow their arguments, and predict what they will and will not accept.
+> **Core skill:** Learning a customer's business, vocabulary, and incentives fast, fast enough to read their documents, follow their arguments, and predict what they will and will not accept.
 
 ## Why This Matters
 
-You cannot frame a problem in a domain you do not understand, and in the field there is no months-long onboarding to wait for. The customer's world — its business model, its regulation, its internal language, and its political history — is the raw material of every framing decision that follows. The FDE's first weeks decide whether the customer experiences a vendor who asks basic questions or an engineer who can soon argue about their problem on their terms, and that perception colors every scoping conversation afterward.
+You cannot frame a problem in a domain you do not understand, and in the field there is no months-long onboarding to wait for. The customer's world (its business model, its regulation, its internal language, and its political history) is the raw material of every framing decision that follows. The FDE's first weeks decide whether the customer experiences a vendor who asks basic questions or an engineer who can soon argue about their problem on their terms, and that perception colors every scoping conversation afterward.
 
 Domain immersion is also what turns requirements into evidence. When you understand the vocabulary, you notice that "case," "claim," and "matter" are not synonyms but distinct workflow objects with distinct owners and rules. When you understand incentives, you can predict that a technically obvious improvement will be resisted by the team whose work it rearranges. Immersion is what lets the FDE challenge a brief instead of transcribing it.
 
-The discipline has a trap on both sides. Too little immersion and you build on misunderstandings; pretending to full expertise closes the questions you most need open. The goal is fluency with humility — to speak the customer's language accurately while still asking to be corrected, because domains shift with every regulatory window and reorganization.
+The discipline has a trap on both sides. Too little immersion and you build on misunderstandings; pretending to full expertise closes the questions you most need open. The goal is fluency with humility: to speak the customer's language accurately while still asking to be corrected, because domains shift with every regulatory window and reorganization.
 
 ## What to Learn First
 
@@ -51,6 +51,7 @@ The history row is the one engineers skip and regret. A domain's scars explain i
 | 5 | Teach it back: explain the domain to my own team | Corrections from the customer; gaps exposed | Ongoing |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     READ["Read their artifacts"] --> INTERVIEW["Interview three roles"]
     INTERVIEW --> OBSERVE["Observe the real work"]
@@ -87,7 +88,7 @@ Adopt their vocabulary, but verify the meaning behind it before using it in a de
 ### Domain Brief Template
 
 ```markdown
-## Domain Brief — <customer, industry>
+## Domain Brief: <customer, industry>
 
 | Field | Notes |
 |-------|-------|
@@ -130,4 +131,4 @@ Adopt their vocabulary, but verify the meaning behind it before using it in a de
 
 ## Summary
 
-Customer domain immersion is the FDE's compression of years of institutional knowledge into weeks of deliberate learning: the business model, the vocabulary, the incentives, the systems of record, and the scars. Done well, it converts an outsider's brief into an insider's understanding — the precondition for framing problems, challenging requirements, and earning the trust on which every later deployment decision depends.
+Customer domain immersion is the FDE's compression of years of institutional knowledge into weeks of deliberate learning: the business model, the vocabulary, the incentives, the systems of record, and the scars. Done well, it converts an outsider's brief into an insider's understanding: the precondition for framing problems, challenging requirements, and earning the trust on which every later deployment decision depends.

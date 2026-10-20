@@ -15,13 +15,13 @@ tags:
 
 # Business Analysis and Capability Mapping
 
-> **Core capability:** The solutions and enterprise architect understands business needs, capabilities, and desired change — connecting what the organization does (and wants to do) to the technology that enables it.
+> **Core capability:** The solutions and enterprise architect understands business needs, capabilities, and desired change, connecting what the organization does (and wants to do) to the technology that enables it.
 
 ## Why This Matters
 
-Architecture that starts from technology produces solutions looking for problems. The effective architect starts from the business: what capabilities does the organization have, what needs to change, what value does the change create, and which stakeholders define success. This is the discipline where architecture earns its seat at the strategy table — by speaking business as fluently as it speaks systems.
+Architecture that starts from technology produces solutions looking for problems. The effective architect starts from the business: what capabilities does the organization have, what needs to change, what value does the change create, and which stakeholders define success. This is the discipline where architecture earns its seat at the strategy table, by speaking business as fluently as it speaks systems.
 
-Business analysis at architect level is not requirements gathering — it is capability thinking: seeing the organization as a set of capabilities to be evolved, mapping how value flows through them, and identifying where technology investment moves the needle. The BABOK discipline provides the methods; the architect provides the connection to solution and enterprise design.
+Business analysis at architect level is not requirements gathering. It is capability thinking: seeing the organization as a set of capabilities to be evolved, mapping how value flows through them, and identifying where technology investment moves the needle. The BABOK discipline provides the methods; the architect provides the connection to solution and enterprise design.
 
 ## Topics in This Capability Area
 
@@ -38,6 +38,7 @@ Business analysis at architect level is not requirements gathering — it is cap
 ## From Business Need to Architecture
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DRIVERS["Business drivers and needs"] --> CAPABILITIES["Capability map: what the business does"]
     CAPABILITIES --> GAPS["Capability gaps: what must change"]
@@ -76,11 +77,11 @@ Capabilities are the bridge between business strategy and architecture.
 
 ## Related Capabilities
 
-- [[02_Solution_Architecture_and_Design/00_overview|Solution Architecture and Design]]: needs become solutions here
-- [[03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: capabilities at enterprise scope
+- [[career-path/15_Solutions_and_Enterprise_Architect/02_Solution_Architecture_and_Design/00_overview|Solution Architecture and Design]]: needs become solutions here
+- [[career-path/15_Solutions_and_Enterprise_Architect/03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: capabilities at enterprise scope
 - [[career-path/14_Product_Manager/00_overview|Product Manager]]: the product-value perspective
 - [[career-path/06_Software_Architect/01_Architecture_Fundamentals/00_overview|Architecture Fundamentals (Architect)]]: the technical architecture foundation
 
 ## Summary
 
-Business analysis and capability mapping is the architect's business fluency: understanding drivers, mapping capabilities, tracing value flows, and framing options in business terms. Architecture that starts from capabilities produces solutions the business actually needs — and an architect the business actually invites to the table.
+Business analysis and capability mapping is the architect's business fluency: understanding drivers, mapping capabilities, tracing value flows, and framing options in business terms. Architecture that starts from capabilities produces solutions the business actually needs, and an architect the business actually invites to the table.

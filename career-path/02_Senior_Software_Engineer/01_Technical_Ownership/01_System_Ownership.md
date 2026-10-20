@@ -18,7 +18,7 @@ tags:
 
 ## Why This Is a Senior Skill
 
-A mid-level engineer may own a feature or a module. A senior engineer owns a **system boundary** — a service, a product area, or a subsystem — and is expected to understand it more deeply than anyone else on the team.
+A mid-level engineer may own a feature or a module. A senior engineer owns a **system boundary** (a service, a product area, or a subsystem) and is expected to understand it more deeply than anyone else on the team.
 
 The difference is not technical skill alone. It is **accountability**: when something breaks at 3 AM, the senior engineer is the person the on-call team calls first, not because they wrote the code, but because they understand the system well enough to diagnose and direct the response.
 
@@ -34,6 +34,7 @@ Every system has four surfaces you must know:
 | **State** | Where persistent data lives, how it changes, and what invariants must hold | Document every data store, its schema, and its consistency model |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     subgraph UPSTREAM["Upstream"]
         A["API Gateway"]
@@ -147,11 +148,11 @@ A clean handoff includes:
 
 ## Knowledge Connections
 
-- [[02_Lifecycle_Ownership]] — ownership extends beyond the code to the full lifecycle
-- [[03_Technical_Debt_and_Maintainability]] — system ownership includes managing debt
-- [[04_Production_Responsibility]] — system ownership includes production health
-- [[software-engineering-note/07_Software_Maintenance/07_Maintenance_Fundamentals]] — maintenance fundamentals that underpin ownership
-- [[software-engineering-note/08_Software_Configuration_Management/05_Release_and_Version_Management]] — version management as part of ownership
+- [[02_Lifecycle_Ownership]]: ownership extends beyond the code to the full lifecycle
+- [[03_Technical_Debt_and_Maintainability]]: system ownership includes managing debt
+- [[04_Production_Responsibility]]: system ownership includes production health
+- [[software-engineering-note/07_Software_Maintenance/07_Maintenance_Fundamentals]]: maintenance fundamentals that underpin ownership
+- [[software-engineering-note/08_Software_Configuration_Management/05_Release_and_Version_Management]]: version management as part of ownership
 
 ## Key Takeaways
 

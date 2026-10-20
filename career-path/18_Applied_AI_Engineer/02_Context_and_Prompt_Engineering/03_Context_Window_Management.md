@@ -59,13 +59,13 @@ The senior task is designing the budget and its enforcement before traffic arriv
 
 **Budgets are per section, not one global number.** A global cap says nothing about which content dies first when it binds. Assign each section a ceiling and an eviction order, and enforce them in the assembler rather than hoping the prompt stays short ([[06_Dynamic_Context_Assembly]]).
 
-**Bigger windows do not mean better attention — budget for quality, not just fit.** Models miss details in the middle of long contexts, so a tight, well-ordered payload usually beats a comprehensive one. The right question is "what must the model see at once", not "what fits".
+**Bigger windows do not mean better attention: budget for quality, not just fit.** Models miss details in the middle of long contexts, so a tight, well-ordered payload usually beats a comprehensive one. The right question is "what must the model see at once", not "what fits".
 
-**Compaction is a pipeline stage with its own tests, not a prompt hack.** A summarization step that rewrites history can silently drop commitments — prices quoted, decisions made, constraints agreed. Version the compaction prompt, test it on recorded transcripts, and keep the raw log for debugging. When compaction fails, the failure compounds across every subsequent turn.
+**Compaction is a pipeline stage with its own tests, not a prompt hack.** A summarization step that rewrites history can silently drop commitments: prices quoted, decisions made, constraints agreed. Version the compaction prompt, test it on recorded transcripts, and keep the raw log for debugging. When compaction fails, the failure compounds across every subsequent turn.
 
 **Make truncation explicit and observable.** When a section is cut, log what was removed and why, and prefer cutting evidence over cutting rules. Silent truncation is the classic debugging trap: the engineer reconstructs a prompt that was never actually sent.
 
-**Persist memory deliberately — session state is not memory.** Decide what crosses sessions: user preferences, standing constraints, durable facts. Refresh it on a schedule; stale memory is worse than no memory because the model will trust it.
+**Persist memory deliberately; session state is not memory.** Decide what crosses sessions: user preferences, standing constraints, durable facts. Refresh it on a schedule; stale memory is worse than no memory because the model will trust it.
 
 **Measure the cost of the budget, then tune it.** Every token beyond what the task needs is billed on every call and every cache miss. Track tokens-per-request and cost-per-request as first-class metrics. The dashboards belong to [[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability]]; the budget that produces those numbers is this area's.
 
@@ -85,9 +85,9 @@ Build a budget and compaction policy for a multi-turn product:
 - [[computing-foundation-note/Artificial_Intelligence/10_LLM_Production_Patterns]]: the context window as the scaling constraint that motivates RAG
 - [[06_Dynamic_Context_Assembly]]: budgets are enforced where context is assembled
 - [[02_System_and_User_Message_Design]]: assistant history as managed state
-- [[04_Prompt_Templates_and_Versioning]]: compaction prompts are prompts — version them
+- [[04_Prompt_Templates_and_Versioning]]: compaction prompts are prompts; version them
 - [[career-path/18_Applied_AI_Engineer/01_LLM_Application_Patterns/00_overview|LLM Application Patterns]]: retrieval decides what enters the evidence section
-- [[career-path/18_Applied_AI_Engineer/05_Model_and_Inference_Operations/00_overview|Model and Inference Operations]]: window economics — caching and pricing of what you send
+- [[career-path/18_Applied_AI_Engineer/05_Model_and_Inference_Operations/00_overview|Model and Inference Operations]]: window economics, caching and pricing of what you send
 
 ## Common Pitfalls
 
@@ -100,7 +100,7 @@ Build a budget and compaction policy for a multi-turn product:
 ## Key Takeaways
 
 - The window is a budget, not a size limit; budgets are per section with an explicit eviction order
-- Long windows degrade attention in the middle — send only what must be seen at once
+- Long windows degrade attention in the middle; send only what must be seen at once
 - Compaction is a versioned, tested pipeline stage, and truncation must always be logged
 - Memory is deliberate persistence across sessions, not whatever the session left behind
 - Cost and token metrics make the budget real; without them the budget is a convention

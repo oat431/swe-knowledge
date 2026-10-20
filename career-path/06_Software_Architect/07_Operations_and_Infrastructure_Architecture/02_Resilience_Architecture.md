@@ -16,15 +16,15 @@ tags:
 
 # Resilience Architecture
 
-> **Core skill:** The architect chooses where resilience lives in the structure — timeouts, retries, circuit breakers, bulkheads, graceful degradation, failover — and records the resilience decisions so they survive implementation pressure.
+> **Core skill:** The architect chooses where resilience lives in the structure (timeouts, retries, circuit breakers, bulkheads, graceful degradation, failover) and records the resilience decisions so they survive implementation pressure.
 
 ## Why This Matters
 
-Failure is normal, and resilience is what the architecture does about it. Distributed systems fail in partial, untidy ways: a dependency gets slow rather than down, a shared pool saturates under one tenant's traffic, a zone loses power while its neighbors carry on. The system's response to these modes is decided by where the controls sit in the topology — a retry loop in application code, a circuit breaker in the mesh, a bulkhead around a workload class — not by good intentions in a design document.
+Failure is normal, and resilience is what the architecture does about it. Distributed systems fail in partial, untidy ways: a dependency gets slow rather than down, a shared pool saturates under one tenant's traffic, a zone loses power while its neighbors carry on. The system's response to these modes is decided by where the controls sit in the topology (a retry loop in application code, a circuit breaker in the mesh, a bulkhead around a workload class), not by good intentions in a design document.
 
 Resilience as a code pattern is fragile because it is invisible at the architecture level: each team implements its own retry policy, timeouts differ per client library, and the aggregate behavior under stress is nobody's design. Resilience as an architecture choice is placed, scoped, and owned: the platform provides consistent defaults for cross-cutting concerns, service owners tune within documented bounds, and deviations are recorded. What is not recorded drifts.
 
-Every resilience control trades against something else. Retries add load to a struggling dependency; aggressive timeouts cancel legitimate slow operations; failover costs money and complicates consistency; degradation changes what the product does for real users. Those are quality attribute trade-offs, so they are made and recorded like any other architecture decision — with the failure mode addressed, the bounds chosen, and the owner named.
+Every resilience control trades against something else. Retries add load to a struggling dependency; aggressive timeouts cancel legitimate slow operations; failover costs money and complicates consistency; degradation changes what the product does for real users. Those are quality attribute trade-offs, so they are made and recorded like any other architecture decision, with the failure mode addressed, the bounds chosen, and the owner named.
 
 ## The Resilience Pattern Catalog
 
@@ -41,13 +41,14 @@ Every resilience control trades against something else. Retries add load to a st
 
 ## Resilience as Structure, Not Code
 
-The placement decision is architectural. Cross-cutting controls — timeouts, retries, breaker defaults, transport-level shedding — belong in shared infrastructure where they are consistent and reviewable: gateways, service meshes, platform libraries. Semantic controls — what degradation means for a checkout, which operations tolerate retry — belong with the owning service, because only the domain knows the consequence. The split has an ownership rule: the platform owns the mechanism and its safe defaults; the service owner owns the bounds and the fallback semantics. Anything outside the documented bounds is a recorded deviation, not a local preference.
+The placement decision is architectural. Cross-cutting controls (timeouts, retries, breaker defaults, transport-level shedding) belong in shared infrastructure where they are consistent and reviewable: gateways, service meshes, platform libraries. Semantic controls (what degradation means for a checkout, which operations tolerate retry) belong with the owning service, because only the domain knows the consequence. The split has an ownership rule: the platform owns the mechanism and its safe defaults; the service owner owns the bounds and the fallback semantics. Anything outside the documented bounds is a recorded deviation, not a local preference.
 
 ## Composing Patterns
 
 Composition is where resilience works or fails. Every outbound call has a timeout; retries are bounded, jittered, and only where the operation is safe to repeat; breakers sit between callers and unhealthy dependencies; bulkheads keep one workload's flood from becoming everyone's outage; degradation paths are defined per user-facing capability with the product owner; failover is exercised, not assumed.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DESIGN["Name each dependency and its failure modes"] --> PLACE["Place controls in the structure"]
     PLACE --> COMPOSE["Compose timeout retry breaker and bulkhead"]
@@ -58,7 +59,7 @@ flowchart TD
 ## The Resilience Decision Record
 
 ```markdown
-## Resilience Decision — <dependency or capability>
+## Resilience Decision: <dependency or capability>
 
 | Field | Value |
 |-------|-------|
@@ -114,8 +115,8 @@ flowchart TD
 - [[01_Deployment_Architecture]]
 - [[03_Observability_Architecture]]
 - [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/02_SRE_Principles|SRE Principles (Senior)]]
-- [[04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]]
+- [[career-path/06_Software_Architect/04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]]
 
 ## Summary
 
-Resilience architecture decides where controls sit and how they compose: timeouts on every call, bounded and jittered retries, circuit breakers between callers and failing dependencies, bulkheads around shared capacity, degradation paths designed per capability, and failover that is exercised rather than assumed. Placement follows a rule — mechanisms and defaults in shared infrastructure, semantics and bounds with the owning service — and every choice is recorded with its failure mode, its bounds, and its owner. Resilience that lives only in code drifts; resilience that lives in the structure is reviewable.
+Resilience architecture decides where controls sit and how they compose: timeouts on every call, bounded and jittered retries, circuit breakers between callers and failing dependencies, bulkheads around shared capacity, degradation paths designed per capability, and failover that is exercised rather than assumed. Placement follows a rule (mechanisms and defaults in shared infrastructure, semantics and bounds with the owning service) and every choice is recorded with its failure mode, its bounds, and its owner. Resilience that lives only in code drifts; resilience that lives in the structure is reviewable.

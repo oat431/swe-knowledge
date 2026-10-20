@@ -55,6 +55,7 @@ An abuse case is ready for treatment when it has all of the following:
 ### 3. Workshop flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     FLOW["Select important flow"] --> PROMPT["Apply relevant threat prompts"]
     PROMPT --> SCENARIO["Write actor action and consequence"]

@@ -17,15 +17,15 @@ tags:
 
 # Quality Without a Safety Net
 
-> **Core skill:** Holding a professional quality bar when nobody reviews your work — building self-review, automation, and standards into solo delivery.
+> **Core skill:** Holding a professional quality bar when nobody reviews your work (building self-review, automation, and standards into solo delivery).
 
 ## Why This Matters
 
-In a team, quality arrives through a net of mechanisms: code review, QA, release engineering, on-call peers, and the ambient accountability of people who will see your work tomorrow. Solo, every one of those mechanisms is gone, and the net that catches defects is the same person who wrote them. This is the structural risk of independent technical work: not a lack of skill, but the absence of friction — nobody to notice the shortcut, nobody to ask the question you did not think to ask, nobody whose presence changes your behavior before the release button.
+In a team, quality arrives through a net of mechanisms: code review, QA, release engineering, on-call peers, and the ambient accountability of people who will see your work tomorrow. Solo, every one of those mechanisms is gone, and the net that catches defects is the same person who wrote them. This is the structural risk of independent technical work: not a lack of skill, but the absence of friction: nobody to notice the shortcut, nobody to ask the question you did not think to ask, nobody whose presence changes your behavior before the release button.
 
-The compensating discipline is to internalize the net as process. Self-review with structure instead of a glance. Automated checks that function as the tireless reviewer you cannot hire. Explicit quality gates before every demo, release, and handover. And a clear-eyed boundary for the work that genuinely requires a second pair of eyes — payments, security-sensitive systems, regulated data — where the professional answer is to buy the review, partner on it, or decline. Knowing the limit is itself a quality practice.
+The compensating discipline is to internalize the net as process. Self-review with structure instead of a glance. Automated checks that function as the tireless reviewer you cannot hire. Explicit quality gates before every demo, release, and handover. And a clear-eyed boundary for the work that genuinely requires a second pair of eyes (payments, security-sensitive systems, regulated data) where the professional answer is to buy the review, partner on it, or decline. Knowing the limit is itself a quality practice.
 
-Quality is also the commercial engine of a solo practice. There is no brand department; your reputation is the entire marketing budget, and it is built from the defects clients never see. Every unreviewed shortcut that escapes into a client system is a future support burden, a damaged reference, and a referral that never happens. The quality bar is not craftsmanship for its own sake — it is the marketing strategy.
+Quality is also the commercial engine of a solo practice. There is no brand department; your reputation is the entire marketing budget, and it is built from the defects clients never see. Every unreviewed shortcut that escapes into a client system is a future support burden, a damaged reference, and a referral that never happens. The quality bar is not craftsmanship for its own sake. It is the marketing strategy.
 
 ## What the Safety Net Used to Provide
 
@@ -68,6 +68,7 @@ Quality is also the commercial engine of a solo practice. There is no brand depa
 | Configuration drift | Infrastructure as code and documented environments |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     BUILD["Build the work"] --> SELF["Structured self review"]
     SELF --> AUTO["Automated checks pass"]
@@ -122,9 +123,9 @@ flowchart LR
 - [[05_Scope_Change_and_Commercially_Aware_Delivery]]: quality defects and change orders must be classified honestly
 - [[07_Handover_Engagement_Closure_and_Referrals]]: documentation quality dictates the handover experience
 - [[career-path/02_Senior_Software_Engineer/08_Engineering_Economics_and_Trade_Offs/00_overview|Engineering Economics and Trade Offs (Senior)]]: quality investment trade-offs at the craft level
-- [[07_Governance_Risk_and_Continuity/00_overview|Governance, Risk and Continuity]]: security and compliance obligations raise the quality bar further
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/07_Governance_Risk_and_Continuity/00_overview|Governance, Risk and Continuity]]: security and compliance obligations raise the quality bar further
 
 ## Summary
 
-Without a team's safety net, quality must be manufactured deliberately: structured self-review, automated checks acting as a tireless reviewer, explicit gates before demo, release, and handover, and honest boundaries for work that needs a second professional pair of eyes. The bar you hold when nobody is watching is not just craft — it is the entire marketing engine of a solo practice, paid in referrals that defects would have prevented.
+Without a team's safety net, quality must be manufactured deliberately: structured self-review, automated checks acting as a tireless reviewer, explicit gates before demo, release, and handover, and honest boundaries for work that needs a second professional pair of eyes. The bar you hold when nobody is watching is not just craft. It is the entire marketing engine of a solo practice, paid in referrals that defects would have prevented.
 

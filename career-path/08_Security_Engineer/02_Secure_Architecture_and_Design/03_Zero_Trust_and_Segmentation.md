@@ -5,7 +5,7 @@ capability_area: secure-architecture-and-design
 career_path: security-engineer
 prerequisite:
   - "[[02_Defense_in_Depth]]"
-  - "[[../01_Threat_Modeling_and_Risk/03_Attack_Surface_and_Trust_Boundaries|Attack Surface and Trust Boundaries]]"
+  - "[[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/03_Attack_Surface_and_Trust_Boundaries|Attack Surface and Trust Boundaries]]"
 tags:
   - career-path
   - security-engineer
@@ -54,6 +54,7 @@ A request should be evaluated against the resource and action, not only the call
 ### 3. Access decision flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     REQUEST["Request for resource action"] --> IDENTITY["Verify principal identity"]
     IDENTITY --> CONTEXT["Evaluate workload device and context"]
@@ -114,8 +115,8 @@ Choose one sensitive data store or privileged control plane.
 
 - [[02_Defense_in_Depth|Defense in Depth]]
 - [[04_Secure_Architecture_Decisions|Secure Architecture Decisions]]
-- [[../01_Threat_Modeling_and_Risk/03_Attack_Surface_and_Trust_Boundaries|Attack Surface and Trust Boundaries]]
-- [[../01_Threat_Modeling_and_Risk/05_Risk_Rating_and_Treatment|Risk Rating and Treatment]]
+- [[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/03_Attack_Surface_and_Trust_Boundaries|Attack Surface and Trust Boundaries]]
+- [[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/05_Risk_Rating_and_Treatment|Risk Rating and Treatment]]
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]
 - [[body-of-knowledge/CyBOK/09_Software_Security|CyBOK Software Security]]
 - [Security Architecture Template](F:\obsidian_note\document_template\14_Security/Security-Architecture.md)

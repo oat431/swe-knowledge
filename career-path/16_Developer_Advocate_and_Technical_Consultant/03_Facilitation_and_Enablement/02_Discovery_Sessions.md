@@ -21,9 +21,9 @@ tags:
 
 ## Why This Matters
 
-Discovery is where engagements are won or lost — not in the proposal. A session that surfaces the real constraint, whether a legacy system, a compliance rule, or a team of two, changes the entire recommendation. A session that collects a wish list produces a generic solution that fails quietly during implementation, long after the meeting where everyone nodded.
+Discovery is where engagements are won or lost, not in the proposal. A session that surfaces the real constraint, whether a legacy system, a compliance rule, or a team of two, changes the entire recommendation. A session that collects a wish list produces a generic solution that fails quietly during implementation, long after the meeting where everyone nodded.
 
-Advocates run discovery in a lighter form: conversations with developers about what they are building and where the platform helps or hurts. Consultants run it in a heavier form: stakeholders, timelines, budget, and integration reality. The craft is identical — ask about the situation before the solution, and test your understanding out loud before writing it down.
+Advocates run discovery in a lighter form: conversations with developers about what they are building and where the platform helps or hurts. Consultants run it in a heavier form: stakeholders, timelines, budget, and integration reality. The craft is identical: ask about the situation before the solution, and test your understanding out loud before writing it down.
 
 The failure mode to fear is not a bad meeting but a polished one that produced nothing verifiable: everyone agreed, and nobody said the actual constraint. Facilitation exists to prevent that. Structured phases, deliberate silence, verbatim capture, and a confirm-back that gives stakeholders the chance to correct you are what turn a conversation into evidence.
 
@@ -32,7 +32,7 @@ The failure mode to fear is not a bad meeting but a polished one that produced n
 | What the Customer Says | What to Probe For | What It Often Reveals |
 |---|---|---|
 | We need a dashboard | Which decision changes when you see it | A reporting gap, not a visualization need |
-| We want to migrate to your platform | What triggered the evaluation now | Deadline, incident, or reorg — timeline reality |
+| We want to migrate to your platform | What triggered the evaluation now | Deadline, incident, or reorg: timeline reality |
 | It must be real time | What breaks with a five-minute delay | A latency assumption never tested |
 | Security will never approve | Which control actually blocks approval | One specific requirement, not the whole checklist |
 | We have no budget | What timeline the business expects anyway | A priority signal; creative commercial options |
@@ -78,6 +78,7 @@ The failure mode to fear is not a bad meeting but a polished one that produced n
 | Open question log | List what is still unknown and who can answer it |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     FRAME["Frame goals and agenda"] --> SITUATION["Map the current situation"]
     SITUATION --> GOALS["Establish success criteria"]
@@ -125,10 +126,10 @@ flowchart LR
 - [budget, compliance, legacy, timeline, team]
 
 ## Open Questions
-- [question] — owner: [name] — by: [date]
+- [question], owner: [name], by: [date]
 
 ## Proposed Next Steps
-- [step] — owner: [name]
+- [step], owner: [name]
 ```
 
 ## Common Pitfalls
@@ -152,12 +153,12 @@ flowchart LR
 
 ## Related Topics
 
-- [[01_Workshops_and_Hands_On_Sessions]] — where discovery-informed training continues
-- [[04_Technical_Reviews_and_Assessments]] — the review side of the same relationship
-- [[07_Facilitation_Techniques]] — the mechanics that keep sessions productive
-- [[career-path/14_Product_Manager/01_Problem_Discovery/00_overview|Problem Discovery (PM)]] — the product-side discovery discipline
-- [[career-path/15_Solutions_and_Enterprise_Architect/01_Business_Analysis_and_Capability_Mapping/00_overview|Business Analysis and Capability Mapping (Solutions Architect)]] — enterprise-scale context analysis
+- [[01_Workshops_and_Hands_On_Sessions]]: where discovery-informed training continues
+- [[04_Technical_Reviews_and_Assessments]]: the review side of the same relationship
+- [[07_Facilitation_Techniques]]: the mechanics that keep sessions productive
+- [[career-path/14_Product_Manager/01_Problem_Discovery/00_overview|Problem Discovery (PM)]]: the product-side discovery discipline
+- [[career-path/15_Solutions_and_Enterprise_Architect/01_Business_Analysis_and_Capability_Mapping/00_overview|Business Analysis and Capability Mapping (Solutions Architect)]]: enterprise-scale context analysis
 
 ## Summary
 
-Discovery sessions convert a customer conversation into evidence: framing the goals, mapping the situation before the solution, designing questions that separate stated wants from underlying needs, capturing constraints verbatim, and playing understanding back for correction while the people who can correct it are still in the room. The deliverable is not a deck — it is a confirmed, written understanding that every later recommendation can stand on.
+Discovery sessions convert a customer conversation into evidence: framing the goals, mapping the situation before the solution, designing questions that separate stated wants from underlying needs, capturing constraints verbatim, and playing understanding back for correction while the people who can correct it are still in the room. The deliverable is not a deck. It is a confirmed, written understanding that every later recommendation can stand on.

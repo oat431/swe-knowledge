@@ -14,13 +14,13 @@ tags:
 
 # Governance and Change Control
 
-> **Core capability:** The project manager establishes the decision framework that governs the project — defining who decides what, managing change through a controlled process, and ensuring governance supports delivery rather than creating ceremonial bureaucracy.
+> **Core capability:** The project manager establishes the decision framework that governs the project, defining who decides what, managing change through a controlled process, and ensuring governance supports delivery rather than creating ceremonial bureaucracy.
 
 ## Why This Matters
 
 Without governance, decisions are remade in every meeting and nobody knows who owns the tough calls. Without change control, scope, schedule, and cost drift silently until the project is unrecognizable from its charter. The project manager designs governance that is light enough to not bottleneck the project and strong enough to handle the decisions that matter.
 
-Governance is also the project's integrity system: every change to scope, schedule, or cost flows through a defined process that assesses impact, assigns ownership, and communicates the decision. The project manager does not approve changes — governance does. The project manager runs the process that makes the decision visible and accountable.
+Governance is also the project's integrity system: every change to scope, schedule, or cost flows through a defined process that assesses impact, assigns ownership, and communicates the decision. The project manager does not approve changes; governance does. The project manager runs the process that makes the decision visible and accountable.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ Governance is also the project's integrity system: every change to scope, schedu
 ## Change Control in Practice
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     REQUEST["Change requested"] --> ASSESS["Assess impact: scope, schedule, cost, risk"]
     ASSESS --> OPTIONS["Present options to governance"]
@@ -77,10 +78,10 @@ The process is simple; the discipline is applying it to every change, not just t
 
 ## Related Capabilities
 
-- [[01_Initiation_and_Charter/00_overview|Initiation and Charter]]: governance established at initiation
-- [[02_Scope_and_Planning/00_overview|Scope and Planning]]: scope baseline governed through change control
+- [[career-path/13_Project_and_Program_Manager/01_Initiation_and_Charter/00_overview|Initiation and Charter]]: governance established at initiation
+- [[career-path/13_Project_and_Program_Manager/02_Scope_and_Planning/00_overview|Scope and Planning]]: scope baseline governed through change control
 - [[career-path/04_Principal_and_Distinguished_Engineer/03_Decision_Governance_and_Principles/00_overview|Decision Governance and Principles (Principal)]]: the enterprise governance perspective
 
 ## Summary
 
-Governance and change control are the project's integrity system: defined decision rights, a change process that assesses impact before approval, configuration management that maintains the single source of truth, and phase gates that gate on readiness. The project manager designs governance that supports delivery — not ceremony that impersonates it.
+Governance and change control are the project's integrity system: defined decision rights, a change process that assesses impact before approval, configuration management that maintains the single source of truth, and phase gates that gate on readiness. The project manager designs governance that supports delivery, not ceremony that impersonates it.

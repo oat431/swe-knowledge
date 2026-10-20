@@ -15,13 +15,13 @@ tags:
 
 # Unblocking and Escalation
 
-> **Core skill:** Clearing blockers fast and teaching the team to clear its own — with an escalation ladder that treats escalation as information flow, not failure.
+> **Core skill:** Clearing blockers fast and teaching the team to clear its own, with an escalation ladder that treats escalation as information flow, not failure.
 
 ## Why This Matters
 
 Blocked work does not wait politely. Every day a blocker sits unresolved, it compounds: the engineer switches context, the plan drifts, and the slip becomes someone else's problem next cycle. The tech lead's unblocking system decides whether the team spends its energy building or waiting.
 
-The lead cannot be the only unblocker. A team that routes every blocker through the lead creates a single point of failure and a queue that never drains. The mature pattern is a system: blockers are surfaced early, classified, routed to the right resolution path, and escalated on a clock — with the lead teaching the skill of unblocking as she clears them.
+The lead cannot be the only unblocker. A team that routes every blocker through the lead creates a single point of failure and a queue that never drains. The mature pattern is a system: blockers are surfaced early, classified, routed to the right resolution path, and escalated on a clock, with the lead teaching the skill of unblocking as she clears them.
 
 ## The Daily Blocker Scan
 
@@ -35,7 +35,7 @@ Blockers are found by looking, not by waiting for complaints. The lead runs a li
 | Async channel | Daily | Questions unanswered for hours, threads that died without a decision |
 | Dependency check | Weekly | External promises that are quiet; counterpart teams that went silent |
 
-The scan is quick and mechanical — ten minutes, one pass, no meeting required. Its output is a short list: what is blocked, who is blocked, and which resolution path applies.
+The scan is quick and mechanical: ten minutes, one pass, no meeting required. Its output is a short list: what is blocked, who is blocked, and which resolution path applies.
 
 ## The Blocker Taxonomy
 
@@ -49,7 +49,7 @@ Different blockers need different muscles. Classifying the blocker first prevent
 | **Environment** | Tooling or infrastructure is in the way | Broken build, missing credentials, flaky test suite | Fix the environment as its own work item; the fix is often worth more than the blocked story |
 | **Priority** | The work itself is questionable, not stuck | Feature of unclear value, duplicated effort | Re-open the priority conversation with the product owner; the blocker is the question, not the task |
 
-The lead keeps the taxonomy visible in the team's docs so that anyone can classify a blocker without asking. Classification should take seconds — the skill is in matching the type to the path, not in debating categories.
+The lead keeps the taxonomy visible in the team's docs so that anyone can classify a blocker without asking. Classification should take seconds. The skill is in matching the type to the path, not in debating categories.
 
 ## Unblock vs Teach
 
@@ -62,7 +62,7 @@ Every blocker is also a lesson. The lead decides deliberately how much to do ver
 | Blocker type is new to the whole team | Pair on the resolution, then write it down | The write-up turns the lesson into team knowledge |
 | The blocker is urgent and the engineer is overloaded | Clear it yourself and reassign the follow-up | Protect the delivery while still building someone's capability |
 
-The lead's tell: if you have unblocked the same engineer on the same type of blocker three times, you are not unblocking — you are maintaining the dependency. The unblock-versus-teach decision is recorded in the blocker retro so patterns become visible.
+The lead's tell: if you have unblocked the same engineer on the same type of blocker three times, you are not unblocking. You are maintaining the dependency. The unblock-versus-teach decision is recorded in the blocker retro so patterns become visible.
 
 ## The Escalation Ladder
 
@@ -79,24 +79,25 @@ Thresholds are defaults, not straightjackets. A production incident or a missed 
 
 ## Escalation Is Information Flow, Not Failure
 
-The biggest blocker to escalation is shame. Engineers — and leads — treat escalating as admitting defeat, so they wait, and the blocker grows.
+The biggest blocker to escalation is shame. Engineers (and leads) treat escalating as admitting defeat, so they wait, and the blocker grows.
 
 Escalation reframed is a gift: it tells the person above you that their information is incomplete and their decision is needed. Escalated early, it arrives with options and time. Escalated late, it arrives as a crisis with no options. The lead models the reframe by escalating her own blockers promptly and by never punishing a team member who escalated early with a good-faith attempt behind it. The question asked in review is never why did you escalate, but why did this take as long as it did to surface.
 
 ## Blameless Blocker Retrospectives
 
-Blockers recur in patterns. A short, blameless retro — once a month, or after a wave of blockers — converts the pattern into prevention.
+Blockers recur in patterns. A short, blameless retro (once a month, or after a wave of blockers) converts the pattern into prevention.
 
 - Count blockers by type from the tracker; the taxonomy makes this a five-minute job
 - Pick the top type and ask what condition created it, not who was stuck
 - Agree one structural change: a decision template, a dependency tracker, a fixed environment
 - Check the same change at the next retro and record whether the blocker rate moved
 
-The output of a blocker retro is not a scolding — it is one improvement to the system that produces blockers. Over a few quarters, the team's blocker count drops because the conditions that create them have been dismantled.
+The output of a blocker retro is not a scolding. It is one improvement to the system that produces blockers. Over a few quarters, the team's blocker count drops because the conditions that create them have been dismantled.
 
 ## The Unblocking Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SCAN["Daily blocker scan"] --> CLASSIFY["Classify the blocker"]
     CLASSIFY --> ROUTE["Route to the resolution path"]
@@ -159,12 +160,12 @@ Decision needed by: [date and time]
 
 ## Related Topics
 
-- [[04_Delivery_Risk_Management]]: blockers are risks that already happened — track the conditions
+- [[04_Delivery_Risk_Management]]: blockers are risks that already happened. Track the conditions
 - [[01_Delivery_Planning_Leadership]]: plans stay true when blockers are cleared on the clock
 - [[05_Coordinating_Across_Teams]]: dependency blockers escalate through counterpart leads
-- [[07_Incident_Leadership_and_Production_Excellence/00_overview|Incident Leadership and Production Excellence]]: urgent blockers follow the incident communication pattern
+- [[career-path/05_Tech_Lead/07_Incident_Leadership_and_Production_Excellence/00_overview|Incident Leadership and Production Excellence]]: urgent blockers follow the incident communication pattern
 - [[career-path/02_Senior_Software_Engineer/04_Delivery_and_Execution/00_overview|Delivery and Execution (Senior)]]: the personal unblocking skills this area scales to a team
 
 ## Summary
 
-Unblocking is a system: a daily scan that surfaces blockers, a taxonomy that routes them to the right path, a deliberate unblock-versus-teach decision, and an escalation ladder with a clock. Reframed as information flow, escalation loses its shame and gains its speed — and the blameless retro converts recurring blockers into removed conditions.
+Unblocking is a system: a daily scan that surfaces blockers, a taxonomy that routes them to the right path, a deliberate unblock-versus-teach decision, and an escalation ladder with a clock. Reframed as information flow, escalation loses its shame and gains its speed, and the blameless retro converts recurring blockers into removed conditions.

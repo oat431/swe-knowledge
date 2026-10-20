@@ -57,6 +57,7 @@ Senior-level outcomes include:
 ## How the Topics Connect
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     REQ["01 Security requirements"] --> CODE["02 Secure coding enablement"]
     CODE --> PIPE["03 Pipeline controls"]
@@ -109,8 +110,8 @@ Use the following questions before adding a new security check:
 
 ## Related
 
-- [[02_Secure_Architecture_and_Design/00_overview|Secure Architecture and Design]]: threat and trust-boundary decisions that feed this area
-- [[04_Security_Verification_and_Testing/00_overview|Security Verification and Testing]]: verification depth and evidence for the controls built here
-- [[07_Vulnerability_Management_and_Governance/00_overview|Vulnerability Management and Governance]]: remediation, exceptions, and lifecycle governance
+- [[career-path/08_Security_Engineer/02_Secure_Architecture_and_Design/00_overview|Secure Architecture and Design]]: threat and trust-boundary decisions that feed this area
+- [[career-path/08_Security_Engineer/04_Security_Verification_and_Testing/00_overview|Security Verification and Testing]]: verification depth and evidence for the controls built here
+- [[career-path/08_Security_Engineer/07_Vulnerability_Management_and_Governance/00_overview|Vulnerability Management and Governance]]: remediation, exceptions, and lifecycle governance
 - [[career-path/10_Quality_and_Test_Engineering/00_overview|Quality and Test Engineering]]: quality practices that support secure delivery
 - [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]: broader organizational influence and technical strategy

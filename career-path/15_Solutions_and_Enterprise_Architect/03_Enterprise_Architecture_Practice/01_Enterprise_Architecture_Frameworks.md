@@ -17,13 +17,13 @@ tags:
 
 # Enterprise Architecture Frameworks
 
-> **Core skill:** Selecting and tailoring an EA framework — TOGAF, Zachman, FEAF, or a lightweight in-house variant — so it supports the decisions the organization actually makes instead of producing artifacts nobody reads.
+> **Core skill:** Selecting and tailoring an EA framework (TOGAF, Zachman, FEAF, or a lightweight in-house variant) so it supports the decisions the organization actually makes instead of producing artifacts nobody reads.
 
 ## Why This Matters
 
-A framework is a catalog of viewpoints plus a process for producing them. It is not the architecture, and it does not think. Organizations that adopt a framework wholesale end up with ceremony — phase gates, deliverable templates, review boards — while the decisions that mattered, such as what to consolidate or how systems should connect, remain ad hoc. Organizations that reject frameworks entirely reinvent their vocabulary every year and cannot compose a landscape from team-level decisions.
+A framework is a catalog of viewpoints plus a process for producing them. It is not the architecture, and it does not think. Organizations that adopt a framework wholesale end up with ceremony (phase gates, deliverable templates, review boards) while the decisions that mattered, such as what to consolidate or how systems should connect, remain ad hoc. Organizations that reject frameworks entirely reinvent their vocabulary every year and cannot compose a landscape from team-level decisions.
 
-The senior architect treats frameworks as reference material. Borrow the metamodel where completeness matters, borrow the process where the practice lacks rhythm, borrow artifact templates where teams produce inconsistent output — and leave the rest behind. A well-tailored framework is invisible in daily work; only its effects show: shared language, consistent artifacts, traceable decisions.
+The senior architect treats frameworks as reference material. Borrow the metamodel where completeness matters, borrow the process where the practice lacks rhythm, borrow artifact templates where teams produce inconsistent output, and leave the rest behind. A well-tailored framework is invisible in daily work; only its effects show: shared language, consistent artifacts, traceable decisions.
 
 Framework choice also sends a signal. Executives, auditors, and procurement functions recognize TOGAF or FEAF as evidence that the practice has a spine. But certification is not competence: knowing the ADM phases says nothing about judgment on a real landscape. The framework is scaffolding for judgment, never a substitute for it.
 
@@ -44,12 +44,12 @@ Framework names and structures evolve. What stays constant is the trade-off: cov
 
 | Element | What It Gives You | When It Is Worth Adopting |
 |---------|-------------------|---------------------------|
-| Vocabulary | Shared terms for domains, artifacts, and roles | Always — cheap and compounding |
+| Vocabulary | Shared terms for domains, artifacts, and roles | Always: cheap and compounding |
 | Metamodel | Rules for what must be defined and how entities relate | When artifacts from different teams disagree structurally |
 | Process | A repeatable cycle from vision to change | When the practice has no operating rhythm |
 | Artifact templates | Minimum content and shape per deliverable | When teams produce inconsistent or unusable output |
 | Governance hooks | Defined points where reviews and gates attach | When decisions lack a place to be tested |
-| Reference models | Starter taxonomies — capability, service, technical | When starting from a blank page |
+| Reference models | Starter taxonomies: capability, service, technical | When starting from a blank page |
 
 ## The TOGAF ADM at a Glance
 
@@ -58,14 +58,14 @@ TOGAF's Architecture Development Method is the most widely referenced EA cycle. 
 | Phase | Question | Typical Output |
 |-------|----------|----------------|
 | Preliminary | How is the practice set up and governed? | Principles, governance model, tailoring decisions |
-| A — Vision | Why this change, and who cares? | Architecture vision, scope, stakeholder map |
-| B — Business | Which capabilities and processes change? | Business architecture views |
-| C — Information Systems | What data and applications are needed? | Data and application architectures |
-| D — Technology | What platforms carry the change? | Technology architecture |
-| E — Opportunities and Solutions | What work packages are feasible? | Options, work packages, dependencies |
-| F — Migration Planning | In what order, at what cost? | Migration plan, roadmap, business case inputs |
-| G — Implementation Governance | Is delivery still conforming to the architecture? | Compliance reviews, deviations log |
-| H — Change Management | What shifted in strategy, technology, or priorities? | Change requests; cycle restart |
+| A: Vision | Why this change, and who cares? | Architecture vision, scope, stakeholder map |
+| B: Business | Which capabilities and processes change? | Business architecture views |
+| C: Information Systems | What data and applications are needed? | Data and application architectures |
+| D: Technology | What platforms carry the change? | Technology architecture |
+| E: Opportunities and Solutions | What work packages are feasible? | Options, work packages, dependencies |
+| F: Migration Planning | In what order, at what cost? | Migration plan, roadmap, business case inputs |
+| G: Implementation Governance | Is delivery still conforming to the architecture? | Compliance reviews, deviations log |
+| H: Change Management | What shifted in strategy, technology, or priorities? | Change requests; cycle restart |
 | Requirements Management | All phases feed and draw from it | Requirements repository and traceability |
 
 ## Choosing and Tailoring
@@ -82,6 +82,7 @@ TOGAF's Architecture Development Method is the most widely referenced EA cycle. 
 ## The Framework Adoption Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     NEED["Decision needs of the organization"] --> SELECT["Select framework and viewpoints"]
     SELECT --> TAILOR["Tailor to context and delivery model"]
@@ -155,4 +156,4 @@ The loop is the point: the framework is re-tailored against evidence of what hel
 
 ## Summary
 
-Enterprise architecture frameworks are reference material for structuring description, process, and governance — valuable exactly to the extent they are tailored. The senior architect selects a framework after naming the decisions it must support, adopts the pieces that earn their keep, drops the ceremony, and re-tailors annually against evidence. The test is never fidelity to the framework; it is whether shared vocabulary, consistent artifacts, and traceable decisions show up in the work.
+Enterprise architecture frameworks are reference material for structuring description, process, and governance, valuable exactly to the extent they are tailored. The senior architect selects a framework after naming the decisions it must support, adopts the pieces that earn their keep, drops the ceremony, and re-tailors annually against evidence. The test is never fidelity to the framework; it is whether shared vocabulary, consistent artifacts, and traceable decisions show up in the work.

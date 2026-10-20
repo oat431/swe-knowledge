@@ -16,15 +16,15 @@ tags:
 
 # Working with Sales and Account Teams
 
-> **Core skill:** Co-owning buying, expansion, and trust with commercial teams — giving sales technical truth early and getting the account context that shapes what is worth building.
+> **Core skill:** Co-owning buying, expansion, and trust with commercial teams: giving sales technical truth early and getting the account context that shapes what is worth building.
 
 ## Why This Matters
 
-The FDE sits on the seam between two systems that rarely share a clock: the commercial relationship, which moves on quarters, renewals, and signature dates, and the engineering reality, which moves on access approvals, data quality, and hardening estimates. Left unmanaged, that seam tears — sales promises what engineering has not scoped, engineering delivers what the deal cannot wait for, and the customer watches both. Managed well, the seam is where the FDE becomes the most credible voice in the account: the person who tells the truth early and is believed because of it.
+The FDE sits on the seam between two systems that rarely share a clock: the commercial relationship, which moves on quarters, renewals, and signature dates, and the engineering reality, which moves on access approvals, data quality, and hardening estimates. Left unmanaged, that seam tears: sales promises what engineering has not scoped, engineering delivers what the deal cannot wait for, and the customer watches both. Managed well, the seam is where the FDE becomes the most credible voice in the account: the person who tells the truth early and is believed because of it.
 
-Commercial context is not a distraction from engineering; it is an input to it. Why the customer is buying, what they promised their board, which budget line pays, when the fiscal year closes, and what a competitor demonstrated last month — each of these changes which solution is worth building first and how much scope is actually fundable. An FDE who does not know the deal shape will optimize the wrong slice, and will find out at the renewal conversation instead of the design conversation.
+Commercial context is not a distraction from engineering; it is an input to it. Why the customer is buying, what they promised their board, which budget line pays, when the fiscal year closes, and what a competitor demonstrated last month. Each of these changes which solution is worth building first and how much scope is actually fundable. An FDE who does not know the deal shape will optimize the wrong slice, and will find out at the renewal conversation instead of the design conversation.
 
-The relationship also runs in the other direction. Sales teams need honest technical reads: what is feasible, what it will really take, what the risks are, and which promises are safe to make. An FDE who dodges that role leaves a vacuum that optimism fills, and the person who pays for the optimism is the customer — and then the FDE, in the environment where the shortfall is publicly visible.
+The relationship also runs in the other direction. Sales teams need honest technical reads: what is feasible, what it will really take, what the risks are, and which promises are safe to make. An FDE who dodges that role leaves a vacuum that optimism fills, and the person who pays for the optimism is the customer, and then the FDE, in the environment where the shortfall is publicly visible.
 
 ## What the Commercial Side Needs from Engineering
 
@@ -62,6 +62,7 @@ That fourth column is a real meeting, not a wish list: a short monthly sync betw
 | Customer blame | Protect the relationship | Document the blocker | Escalate facts internally; resolve externally as one team |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CONTEXT["Deal context from the team"] --> READ["Honest technical read"]
     READ --> COMMIT["Scoped commitment"]
@@ -85,7 +86,7 @@ The loop completes at renewal: delivered evidence becomes the expansion case, an
 ### Delivery-to-Commercial Handoff Snippet
 
 ```markdown
-## Deployment Status — <customer, date>
+## Deployment Status: <customer, date>
 
 | Element | Statement |
 |---------|-----------|
@@ -119,10 +120,10 @@ The loop completes at renewal: delivered evidence becomes the expansion case, an
 
 - [[06_Scoping_and_Success_Criteria]]
 - [[01_The_FDE_Role_and_Operating_Model]]
-- [[07_Field_to_Product_and_Commercial_Awareness/00_overview|Field to Product and Commercial Awareness]]
+- [[career-path/19_Forward_Deployed_Engineer/07_Field_to_Product_and_Commercial_Awareness/00_overview|Field to Product and Commercial Awareness]]
 - [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions and Enterprise Architect]]
-- [[06_Customer_Communication_and_Executive_Influence/00_overview|Customer Communication and Executive Influence]]
+- [[career-path/19_Forward_Deployed_Engineer/06_Customer_Communication_and_Executive_Influence/00_overview|Customer Communication and Executive Influence]]
 
 ## Summary
 
-Working with sales and account teams is a deliberate partnership: the FDE gives the account its honest technical voice — feasibility, risks, and deliverable commitments — and receives the deal context that determines what is worth building and when it must land. The discipline is truth-in-the-room plus early disclosure of risk, kept in a lightweight rhythm so that delivered outcomes, not hope, become the story the account team tells at renewal.
+Working with sales and account teams is a deliberate partnership: the FDE gives the account its honest technical voice (feasibility, risks, and deliverable commitments) and receives the deal context that determines what is worth building and when it must land. The discipline is truth-in-the-room plus early disclosure of risk, kept in a lightweight rhythm so that delivered outcomes, not hope, become the story the account team tells at renewal.

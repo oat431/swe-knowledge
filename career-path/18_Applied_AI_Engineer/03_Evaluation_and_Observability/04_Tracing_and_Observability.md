@@ -22,7 +22,7 @@ tags:
 
 ## Why This Is a Senior Skill
 
-A mid-level engineer prints prompts to application logs and greps for them after incidents. A senior engineer designs a span structure that mirrors the pipeline — retrieval, prompt assembly, model, parsing, tool, answer — attaches configuration and version metadata at the right scope, and makes cost and latency attributable per feature, per user query, and per span. When quality degrades, the trace shows *where* the degradation entered the chain, which is usually before the model.
+A mid-level engineer prints prompts to application logs and greps for them after incidents. A senior engineer designs a span structure that mirrors the pipeline (retrieval, prompt assembly, model, parsing, tool, answer) attaches configuration and version metadata at the right scope, and makes cost and latency attributable per feature, per user query, and per span. When quality degrades, the trace shows *where* the degradation entered the chain, which is usually before the model.
 
 The senior challenge is designing instrumentation that survives refactors: spans must follow the logical pipeline rather than this quarter's code structure, and metadata must attach automatically rather than by discipline.
 
@@ -74,15 +74,15 @@ Capabilities matter more than products: all of the above do spans, cost, and eva
 
 **Trace the whole chain, not just the model call.** RAG failures are usually retrieval failures: the wrong documents enter the prompt and the model faithfully answers a different question. Spans for embedding, retrieval with scores, reranking, and generation let you see the wrong turn as it happens instead of blaming the model.
 
-**Attach config and version to every span, automatically.** Prompt version, model, temperature, feature flags, and code hash must ride on the span without the engineer remembering to add them — inject them at the tracing-client level. A trace without config metadata cannot explain a regression that appeared after a deploy.
+**Attach config and version to every span, automatically.** Prompt version, model, temperature, feature flags, and code hash must ride on the span without the engineer remembering to add them: inject them at the tracing-client level. A trace without config metadata cannot explain a regression that appeared after a deploy.
 
-**Make cost and latency attributable per feature and per query.** Roll token counts and dollars up the span tree so the team can answer "what does feature X cost per request" from tracing data alone. Attribution turns cost from an opaque monthly bill into a per-feature engineering signal — the measurement side of what [[career-path/18_Applied_AI_Engineer/05_Model_and_Inference_Operations/00_overview|Model and Inference Operations]] optimizes.
+**Make cost and latency attributable per feature and per query.** Roll token counts and dollars up the span tree so the team can answer "what does feature X cost per request" from tracing data alone. Attribution turns cost from an opaque monthly bill into a per-feature engineering signal, the measurement side of what [[career-path/18_Applied_AI_Engineer/05_Model_and_Inference_Operations/00_overview|Model and Inference Operations]] optimizes.
 
 **Sample deliberately, not by default.** Tracing 100% of traffic is expensive and unnecessary; tracing 1% uniformly is blind. Capture all failures and all judge-flagged or user-flagged interactions, plus a stratified sample of successes. The worst traces are always in the set you kept.
 
-**Use traces as the raw material for the offline suite.** Production traces contain real queries with real contexts and real outcomes. Export interesting and failing traces into the eval-suite pipeline from [[02_Offline_Evaluation_Suites]] — tracing feeds evaluation, and evaluation decides which changes ship.
+**Use traces as the raw material for the offline suite.** Production traces contain real queries with real contexts and real outcomes. Export interesting and failing traces into the eval-suite pipeline from [[02_Offline_Evaluation_Suites]]; tracing feeds evaluation, and evaluation decides which changes ship.
 
-**Alert on golden signals; investigate on traces.** Traces are for investigation, not alerting. Alert on aggregates — latency, error rate, cost anomalies — and when an alert fires, the trace of the worst offender is the first thing anyone opens.
+**Alert on golden signals; investigate on traces.** Traces are for investigation, not alerting. Alert on aggregates (latency, error rate, cost anomalies) and when an alert fires, the trace of the worst offender is the first thing anyone opens.
 
 ## Practical Exercise
 

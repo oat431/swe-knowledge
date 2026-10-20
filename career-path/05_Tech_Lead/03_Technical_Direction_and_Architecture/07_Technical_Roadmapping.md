@@ -16,13 +16,13 @@ tags:
 
 # Technical Roadmapping
 
-> **Core skill:** Sequencing technical investment — foundations, debt, capability, migration — alongside product work, so the system improves while commitments hold.
+> **Core skill:** Sequencing technical investment (foundations, debt, capability, migration) alongside product work, so the system improves while commitments hold.
 
 ## Why This Matters
 
-Every team has two roadmaps competing for the same capacity: the product roadmap everyone can see, and the technical roadmap that usually exists only in the lead's head. When the technical roadmap is invisible, it loses every argument by default — product work is concrete and committed, while technical work is abstract and deferred. The system decays quietly until the decay becomes the product's problem.
+Every team has two roadmaps competing for the same capacity: the product roadmap everyone can see, and the technical roadmap that usually exists only in the lead's head. When the technical roadmap is invisible, it loses every argument by default. Product work is concrete and committed, while technical work is abstract and deferred. The system decays quietly until the decay becomes the product's problem.
 
-A written technical roadmap changes the terms: technical investment competes for capacity on the same evidence basis as product work, sequenced against the same timeline, and visible to the same stakeholders. It is the difference between "we will fix it when we have time" — which never happens — and "this is when we pay it down, and here is what we give up to do it."
+A written technical roadmap changes the terms: technical investment competes for capacity on the same evidence basis as product work, sequenced against the same timeline, and visible to the same stakeholders. It is the difference between "we will fix it when we have time" (which never happens) and "this is when we pay it down, and here is what we give up to do it."
 
 ## Investment Categories
 
@@ -55,7 +55,7 @@ The roadmap's credibility comes from the coupling: every technical item names th
 | Item-based | Technical items compete in the same prioritization as product | Small, comparable items |
 | Trigger-based | Capacity released when a condition hits | Debt paying for itself after incidents |
 
-The models can mix — a standing percentage plus occasional dedicated cycles is a common shape. What does not work is no model: technical work squeezed into whatever survives the planning meeting.
+The models can mix. A standing percentage plus occasional dedicated cycles is a common shape. What does not work is no model: technical work squeezed into whatever survives the planning meeting.
 
 ## Migration Sequencing
 
@@ -77,7 +77,7 @@ Migration sequencing is where roadmaps earn their reputation. Every migration is
 | Executives | Risk reduction and capability in product terms |
 | The team | The plan, the reasoning, and where their input changed it |
 
-The communication rule: technical roadmap items are stated as outcomes — what will be true when the item lands — not as activities. "Upgrade the queue library" is an activity; "remove the risk of running on an unsupported component" is an outcome.
+The communication rule: technical roadmap items are stated as outcomes (what will be true when the item lands), not as activities. "Upgrade the queue library" is an activity; "remove the risk of running on an unsupported component" is an outcome.
 
 ## Keeping It Honest
 
@@ -92,6 +92,7 @@ The communication rule: technical roadmap items are stated as outcomes — what 
 The honest roadmap is a living document: adjusted at each planning cycle, marked when items slip, and willing to kill an item when the evidence turns. A roadmap that never changes is a monument; one that changes with reasons is a plan.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     INVEST["Investment categories"] --> SEQUENCE["Sequence against product roadmap"]
     SEQUENCE --> ALLOC["Allocate capacity"]
@@ -105,7 +106,7 @@ flowchart TD
 ## Practical Applications
 
 ```markdown
-## Technical Roadmap — [quarter to quarter]
+## Technical Roadmap: [quarter to quarter]
 
 ### This quarter
 | Item | Category | Outcome | Owner | Capacity |
@@ -116,7 +117,7 @@ flowchart TD
 - [ ] [item, category, outcome, owner]
 
 ### Deferred, with reasons
-- [ ] [item] — [why deferred, revisit condition]
+- [ ] [item], [why deferred, revisit condition]
 
 ### Gates
 | Migration | Gate | Exit criteria | Date |
@@ -160,4 +161,4 @@ Checklist:
 
 ## Summary
 
-Technical roadmapping is the discipline of making technical investment visible, sequenced, and honest: categorized items coupled to product context, explicit capacity allocation agreed with PM and EM, migrations run through gates with exit criteria, and the whole plan reviewed at every planning cycle. The roadmap turns "we will fix it when we have time" into a dated commitment with owners — and turns sunk-cost drift into evidence-based kills. A system that improves on a schedule is a system whose health was planned.
+Technical roadmapping is the discipline of making technical investment visible, sequenced, and honest: categorized items coupled to product context, explicit capacity allocation agreed with PM and EM, migrations run through gates with exit criteria, and the whole plan reviewed at every planning cycle. The roadmap turns "we will fix it when we have time" into a dated commitment with owners, and turns sunk-cost drift into evidence-based kills. A system that improves on a schedule is a system whose health was planned.

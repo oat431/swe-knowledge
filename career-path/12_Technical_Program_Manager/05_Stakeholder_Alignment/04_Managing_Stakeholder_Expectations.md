@@ -16,13 +16,13 @@ tags:
 
 # Managing Stakeholder Expectations
 
-> **Core skill:** The TPM keeps stakeholder expectations in honest contact with program reality — detecting when expectations and reality have diverged, correcting the divergence before it becomes a crisis, and never letting hope be mistaken for a commitment.
+> **Core skill:** The TPM keeps stakeholder expectations in honest contact with program reality, detecting when expectations and reality have diverged, correcting the divergence before it becomes a crisis, and never letting hope be mistaken for a commitment.
 
 ## Why This Matters
 
-Expectation management is the TPM's daily alignment work. It is not a quarterly presentation or a steering committee agenda item — it is the continuous discipline of ensuring that what stakeholders believe about the program matches what the program is actually doing. When expectations and reality stay in contact, the program is boring — and boring is the goal. When they diverge, the program generates a surprise, and surprises are the TPM's failure mode.
+Expectation management is the TPM's daily alignment work. It is not a quarterly presentation or a steering committee agenda item; it is the continuous discipline of ensuring that what stakeholders believe about the program matches what the program is actually doing. When expectations and reality stay in contact, the program is boring, and boring is the goal. When they diverge, the program generates a surprise, and surprises are the TPM's failure mode.
 
-The divergence mechanism is innocent: the engineering team gives a best-case estimate, product hears a commitment, leadership builds a roadmap, and nobody said anything false. The TPM's job is to catch these divergences at formation — when the estimate is still an estimate, the commitment is still a target, and the roadmap is still a draft — and to correct them before they harden into expectation.
+The divergence mechanism is innocent: the engineering team gives a best-case estimate, product hears a commitment, leadership builds a roadmap, and nobody said anything false. The TPM's job is to catch these divergences at formation (when the estimate is still an estimate, the commitment is still a target, and the roadmap is still a draft) and to correct them before they harden into expectation.
 
 ## The Expectation-Reality Gap
 
@@ -38,13 +38,13 @@ The gap between expectation and reality forms in predictable ways and widens in 
 
 ## The Expectation Correction Sequence
 
-When the TPM detects a gap between what a stakeholder believes and what the program can deliver, the correction follows a sequence — escalating in directness only if the softer intervention fails.
+When the TPM detects a gap between what a stakeholder believes and what the program can deliver, the correction follows a sequence, escalating in directness only if the softer intervention fails.
 
 | Step | Action | Example |
 |------|--------|---------|
 | 1. Surface the gap | Name the difference between expectation and reality, privately | "I want to make sure we are aligned. My read of the program is [reality]. Your read seems to be [expectation]. Let me explain the gap." |
 | 2. Provide the evidence | Show the data that supports reality | "Here is the milestone trend, the dependency status, and the team's velocity data." |
-| 3. Offer options | Do not just correct the expectation — offer paths forward | "Given the reality, we can [option A], [option B], or [option C]. Our recommendation is [A]." |
+| 3. Offer options | Do not just correct the expectation: offer paths forward | "Given the reality, we can [option A], [option B], or [option C]. Our recommendation is [A]." |
 | 4. Record the new expectation | Write down what was agreed and who owns it | "Per our conversation, the new milestone date is [date], with [scope], contingent on [condition]. I will track this in the program status." |
 | 5. Escalate if necessary | If the stakeholder rejects reality, escalate with the program sponsor | "We have a gap between stakeholder expectation and program reality. The stakeholder expects [X]; the program can deliver [Y]. Options: [A/B/C]." |
 
@@ -52,7 +52,7 @@ The sequence matters: surface privately before publicly, provide evidence before
 
 ## The Status Report as Expectation Anchor
 
-The TPM's weekly status report is the program's expectation anchor — the artifact that says "this is what is true right now." Every stakeholder who reads it shares the same baseline. Every stakeholder who does not read it has a different baseline.
+The TPM's weekly status report is the program's expectation anchor, the artifact that says "this is what is true right now." Every stakeholder who reads it shares the same baseline. Every stakeholder who does not read it has a different baseline.
 
 The status report anchors expectations through three disciplines:
 
@@ -76,7 +76,7 @@ Prevention is cheaper than correction. The TPM builds expectation management int
 
 ## When Stakeholders Reject Reality
 
-Some stakeholders refuse to accept that the program cannot meet their expectation. The TPM's response is not to argue harder — it is to make the gap visible in a forum where the stakeholder cannot ignore it.
+Some stakeholders refuse to accept that the program cannot meet their expectation. The TPM's response is not to argue harder; it is to make the gap visible in a forum where the stakeholder cannot ignore it.
 
 | Escalation | Forum | Content |
 |------------|-------|---------|
@@ -87,6 +87,7 @@ Some stakeholders refuse to accept that the program cannot meet their expectatio
 The steering committee is the final forum because it forces a decision. A stakeholder who rejects reality in a steering committee must either accept it or produce an alternative that the committee accepts. The TPM's job is to frame the decision so that the options are clear, the trade-offs are priced, and the committee cannot defer.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     BASELINE["Program baseline: scope, date, resources"] --> COMMUNICATE["Communicate baseline in status, checkpoints, pre-reads"]
     COMMUNICATE --> MONITOR["Monitor: do stakeholder statements match the baseline?"]
@@ -105,12 +106,12 @@ flowchart TD
 ### Expectation Gap Brief Template
 
 ```markdown
-# Expectation Gap — [Stakeholder] — [Date]
+# Expectation Gap: [Stakeholder], [Date]
 
 ## The Gap
 - Stakeholder expectation: [what they believe]
 - Program reality: [what the program can deliver]
-- Gap description: [quantified difference — date, scope, quality]
+- Gap description: [quantified difference, date, scope, quality]
 
 ## Evidence
 - [Data point 1]
@@ -151,7 +152,7 @@ flowchart TD
 
 - Stakeholders restate program forecasts accurately in their own meetings
 - Expectation gaps are detected and closed before they become meeting surprises
-- The status report is the program's expectation anchor — cited by stakeholders
+- The status report is the program's expectation anchor, cited by stakeholders
 - No stakeholder uses a date the TPM did not publish
 - Steering committees never discover an expectation gap that the TPM knew about earlier
 
@@ -160,9 +161,9 @@ flowchart TD
 - [[02_Communication_Planning]]: the communication architecture that delivers expectations
 - [[03_Executive_Communication_for_TPMs]]: managing executive expectations specifically
 - [[05_Stakeholder_Negotiation]]: when expectation gaps require negotiation to resolve
-- [[01_Program_Structure_and_Charter/00_overview|Program Structure and Charter]]: the charter is the original expectation baseline
-- [[07_Benefits_and_Outcome_Measurement/00_overview|Benefits and Outcome Measurement]]: outcome expectations versus delivery expectations
+- [[career-path/12_Technical_Program_Manager/01_Program_Structure_and_Charter/00_overview|Program Structure and Charter]]: the charter is the original expectation baseline
+- [[career-path/12_Technical_Program_Manager/07_Benefits_and_Outcome_Measurement/00_overview|Benefits and Outcome Measurement]]: outcome expectations versus delivery expectations
 
 ## Summary
 
-Managing stakeholder expectations is the TPM's continuous alignment discipline: detecting when what stakeholders believe diverges from what the program can deliver, correcting the divergence privately with evidence and options, anchoring expectations in a weekly status report with forecasts and confidence labels, and escalating through sponsor to steering committee when stakeholders reject reality. The TPM who keeps expectations in contact with reality produces a boring program — and boring is the goal.
+Managing stakeholder expectations is the TPM's continuous alignment discipline: detecting when what stakeholders believe diverges from what the program can deliver, correcting the divergence privately with evidence and options, anchoring expectations in a weekly status report with forecasts and confidence labels, and escalating through sponsor to steering committee when stakeholders reject reality. The TPM who keeps expectations in contact with reality produces a boring program, and boring is the goal.

@@ -16,13 +16,13 @@ tags:
 
 # Risk Response Planning
 
-> **Core skill:** Developing and executing risk responses — mitigation, transfer, avoidance, acceptance — with named owners and dated actions, so that risks are actively reduced, not passively watched, and the program's exposure shrinks over time.
+> **Core skill:** Developing and executing risk responses (mitigation, transfer, avoidance, acceptance) with named owners and dated actions, so that risks are actively reduced, not passively watched, and the program's exposure shrinks over time.
 
 ## Why This Matters
 
-A risk identified and assessed but not responded to is a risk that will fire on its own schedule. Naming a risk without a response is not risk management — it is a bet that the risk will not fire, placed on behalf of the program without the program's consent.
+A risk identified and assessed but not responded to is a risk that will fire on its own schedule. Naming a risk without a response is not risk management. It is a bet that the risk will not fire, placed on behalf of the program without the program's consent.
 
-Risk response planning converts the risk register from a catalogue of worries into a list of active interventions. For each risk above the low threshold, the TPM ensures a response strategy is selected, an owner is assigned, actions are dated, and progress is tracked. The response does not have to eliminate the risk — it has to reduce the program's exposure to a level the program can accept.
+Risk response planning converts the risk register from a catalogue of worries into a list of active interventions. For each risk above the low threshold, the TPM ensures a response strategy is selected, an owner is assigned, actions are dated, and progress is tracked. The response does not have to eliminate the risk. It has to reduce the program's exposure to a level the program can accept.
 
 The discipline is proportionality: critical risks get robust responses with dedicated effort; medium risks get lighter responses; low risks are accepted and watched. A program that tries to mitigate every risk equally will exhaust its capacity and mitigate none of them well.
 
@@ -35,7 +35,7 @@ The discipline is proportionality: critical risks get robust responses with dedi
 | **Avoid** | Eliminate the risk by changing the plan | The risk is unacceptable and can be eliminated by a different approach | "New database technology risk. Avoid: use the proven database instead; accept the reduced feature set." |
 | **Accept** | Acknowledge the risk without active mitigation | The cost of mitigation exceeds the expected impact, or mitigation is infeasible | "Minor UX changes from user testing may delay launch by a few days. Accept: the impact is small and the testing is valuable." |
 
-Mitigation is the most common response and the one most likely to be done poorly. Transfer only works when the third party is able and incentivized to absorb the impact — a penalty clause is not a transfer if the vendor cannot pay it. Avoidance is the most powerful response but requires the authority to change the plan. Acceptance is a legitimate strategy, not a failure — provided it is a conscious choice, not a default.
+Mitigation is the most common response and the one most likely to be done poorly. Transfer only works when the third party is able and incentivized to absorb the impact: a penalty clause is not a transfer if the vendor cannot pay it. Avoidance is the most powerful response but requires the authority to change the plan. Acceptance is a legitimate strategy, not a failure, provided it is a conscious choice, not a default.
 
 ## The Mitigation Plan
 
@@ -51,7 +51,7 @@ For every risk with a mitigation response, the TPM ensures the plan is actionabl
 | **Residual risk** | What remains after mitigation: P, I, and rationale | "Probability reduced from High to Medium; impact unchanged at High" |
 | **Fallback** | What happens if mitigation fails or the risk fires despite mitigation | "If migration overruns: defer the non-critical data pipeline migration to Q1; launch with the critical path migrated" |
 
-A mitigation of "monitor" or "watch closely" is not a mitigation — it is passive acceptance dressed up as action. Every mitigation either reduces probability (by changing conditions that make the risk more likely) or reduces impact (by preparing a response that limits damage). Watching does neither.
+A mitigation of "monitor" or "watch closely" is not a mitigation. It is passive acceptance dressed up as action. Every mitigation either reduces probability (by changing conditions that make the risk more likely) or reduces impact (by preparing a response that limits damage). Watching does neither.
 
 ## Risk Response by Criticality
 
@@ -86,10 +86,10 @@ The TPM tracks risk response progress as diligently as workstream delivery progr
 | **Mitigation milestones** | Dated checkpoints within the mitigation plan; tracked in the risk register |
 | **Owner check-ins** | TPM checks in with the risk owner at the defined cadence; status updated in the register |
 | **Mitigation effectiveness** | Is the residual risk trending down? Is the probability or impact actually reducing? |
-| **Response adjustment** | If mitigation is not working, the response strategy is revisited — not silently continued |
+| **Response adjustment** | If mitigation is not working, the response strategy is revisited, not silently continued |
 | **Response closure** | When mitigation is complete, the risk is re-scored with the residual P and I |
 
-The TPM does not execute mitigations — the risk owner does. The TPM tracks execution and surfaces when mitigations are off-track, just as they would for any other program deliverable.
+The TPM does not execute mitigations. The risk owner does. The TPM tracks execution and surfaces when mitigations are off-track, just as they would for any other program deliverable.
 
 ## When to Change the Response
 
@@ -97,7 +97,7 @@ The TPM does not execute mitigations — the risk owner does. The TPM tracks exe
 |---------|--------|
 | **Mitigation is not reducing exposure** | Reassess: is the mitigation the wrong approach, or is execution failing? |
 | **New information changes P or I** | Re-score the risk; the response strategy may need to change |
-| **Proximity shortens** | An accepted distant risk becomes imminent — acceptance may no longer be appropriate |
+| **Proximity shortens** | An accepted distant risk becomes imminent: acceptance may no longer be appropriate |
 | **Program context changes** | Scope, schedule, or resource changes may make avoidance feasible or mitigation impossible |
 | **Multiple risks in the same category fire** | The response strategy for the category may be systematically wrong |
 
@@ -106,18 +106,18 @@ The response is a living plan, not a one-time decision. The TPM revisits respons
 ## Practical Applications
 
 - [ ] Every critical and high risk has a documented response strategy with owner and dated actions
-- [ ] Mitigations reduce probability, impact, or both — "monitor" is not a mitigation
+- [ ] Mitigations reduce probability, impact, or both; "monitor" is not a mitigation
 - [ ] Critical risks have both mitigation and contingency plans
 - [ ] Response progress is tracked in the risk register at the defined cadence
-- [ ] Response strategies are revisited when conditions change — not silently continued
+- [ ] Response strategies are revisited when conditions change, not silently continued
 
 ## Common Pitfalls
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
 | **"Monitor" as mitigation** | Watching is not reducing exposure; the risk fires on its own schedule | Every mitigation is an action that changes probability or impact |
-| **Mitigation without owner** | "The team will mitigate" — nobody is accountable | One named owner per mitigation |
-| **Mitigation without dates** | "We will do X" — but when? | Every mitigation has a start date and completion date |
+| **Mitigation without owner** | "The team will mitigate": nobody is accountable | One named owner per mitigation |
+| **Mitigation without dates** | "We will do X", but when? | Every mitigation has a start date and completion date |
 | **Acceptance as default** | Every risk not actively mitigated is accepted by omission | Acceptance is a conscious choice with documented rationale |
 | **No contingency for critical risks** | Mitigation fails; program has no fallback | Every critical risk has mitigation and contingency |
 
@@ -125,7 +125,7 @@ The response is a living plan, not a one-time decision. The TPM revisits respons
 
 - The risk register shows residual risk scores declining over time
 - No critical risk carries a "monitor" mitigation
-- Risk responses are adjusted when they are not working — not silently abandoned
+- Risk responses are adjusted when they are not working, not silently abandoned
 - Risks accepted consciously carry a rationale that holds up in review
 
 ## Related Topics
@@ -133,7 +133,7 @@ The response is a living plan, not a one-time decision. The TPM revisits respons
 - [[02_Risk_Identification_and_Assessment]]: the scoring that determines which risks get which response
 - [[05_RAID_Log_Management]]: the RAID log where response plans are documented and tracked
 - [[07_Program_Contingency_Planning]]: program-level contingency beyond individual risk responses
-- [[../03_Dependency_Management/05_Dependency_Risk_and_Contingency|Dependency Risk and Contingency]]: dependency-specific response planning
+- [[career-path/12_Technical_Program_Manager/03_Dependency_Management/05_Dependency_Risk_and_Contingency|Dependency Risk and Contingency]]: dependency-specific response planning
 
 ## Summary
 

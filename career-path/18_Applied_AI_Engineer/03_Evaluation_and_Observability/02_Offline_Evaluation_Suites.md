@@ -71,11 +71,11 @@ The senior challenge is keeping the suite honest over time. Golden datasets deca
 
 **Stratify by topic, difficulty, and language.** Averages hide regressions in the long tail: a system can improve on the easy 90% of cases while collapsing on the hard 10%. Slice scores by category before concluding anything, and report edge-case and multi-lingual strata separately rather than folding them into the mean.
 
-**Version the dataset, the rubric, and the code together.** A score is meaningless unless the dataset, the scoring rubric, and the system version are recorded in one artifact. When someone asks why the faithfulness score moved, the answer must be reconstructable from history — not from memory.
+**Version the dataset, the rubric, and the code together.** A score is meaningless unless the dataset, the scoring rubric, and the system version are recorded in one artifact. When someone asks why the faithfulness score moved, the answer must be reconstructable from history, not from memory.
 
-**Protect a golden dataset for the cases you cannot afford to break.** A small set of high-stakes, verified cases — prices, policies, compliance answers — runs on every change with zero tolerance. Everything else gets thresholds; the golden set gets a hard pass/fail that no metric average can absorb.
+**Protect a golden dataset for the cases you cannot afford to break.** A small set of high-stakes, verified cases (prices, policies, compliance answers) runs on every change with zero tolerance. Everything else gets thresholds; the golden set gets a hard pass/fail that no metric average can absorb.
 
-**Add every production failure to the suite the same week it happens.** An incident that is not converted into a test case is an incident waiting to repeat. The conversion records the exact user input, the expected behavior, and the check that would have caught it — the eval-to-guardrail lifecycle of [[computing-foundation-note/Artificial_Intelligence/13_LLM_Evaluation_and_Guardrails]] made routine.
+**Add every production failure to the suite the same week it happens.** An incident that is not converted into a test case is an incident waiting to repeat. The conversion records the exact user input, the expected behavior, and the check that would have caught it, the eval-to-guardrail lifecycle of [[computing-foundation-note/Artificial_Intelligence/13_LLM_Evaluation_and_Guardrails]] made routine.
 
 **Track scores over time and investigate every downward step.** A one-point faithfulness drop that no one notices becomes a five-point drop next quarter. Keep a trend log per metric and per stratum, and treat any regression between runs as a bug report against either the system or the suite itself.
 

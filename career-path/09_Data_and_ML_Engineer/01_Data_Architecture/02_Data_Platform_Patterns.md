@@ -48,6 +48,7 @@ The gap between a pattern on a whiteboard and a pattern in production is where m
 ### Decision Flowchart
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     A[How many domains produce data?] -->|1-3| B[Centralized Platform]
     A -->|4+| C{Are domain boundaries clear and stable?}

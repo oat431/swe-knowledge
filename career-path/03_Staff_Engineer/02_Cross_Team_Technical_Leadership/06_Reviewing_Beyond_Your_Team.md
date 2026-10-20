@@ -16,11 +16,11 @@ tags:
 
 # Reviewing Beyond Your Team
 
-> **Core skill:** Reviewing designs outside your team and outside your expertise depth — preparing properly, asking the questions that matter, recording outcomes, and scaling review through others.
+> **Core skill:** Reviewing designs outside your team and outside your expertise depth: preparing properly, asking the questions that matter, recording outcomes, and scaling review through others.
 
 ## Why This Matters
 
-The staff engineer is asked to review designs across the org — systems they do not own, domains they have never worked in, stacks they know only by reputation. The temptation is to fake depth: skim the doc, nod, and bless it, or worse, dominate with generic architecture opinions that ignore the domain's real constraints. Both failures damage the reviewer's credibility and the org's decision quality.
+The staff engineer is asked to review designs across the org: systems they do not own, domains they have never worked in, stacks they know only by reputation. The temptation is to fake depth: skim the doc, nod, and bless it, or worse, dominate with generic architecture opinions that ignore the domain's real constraints. Both failures damage the reviewer's credibility and the org's decision quality.
 
 The staff review is valuable precisely because it is outside the team: the reviewer brings the cross-org view, the seam awareness, and the question set that the team's own review culture cannot supply. That value is earned through preparation and delivered through questions, not answers. The reviewer who walks in knowing nothing and leaves having asked the right six questions has done more for the design than the reviewer who walked in with a verdict.
 
@@ -33,7 +33,7 @@ The staff review is valuable precisely because it is outside the team: the revie
 | The domain basics | Enough to ask good questions: terminology, constraints, risks |
 | The team context | Who is building, what they know, what they are missing |
 
-Preparation for an unfamiliar review is bounded: an hour of reading replaces an hour of the team explaining. The rule — **read before the meeting** — is the difference between a review that improves the design and a meeting that wastes the room.
+Preparation for an unfamiliar review is bounded: an hour of reading replaces an hour of the team explaining. The rule (**read before the meeting**) is the difference between a review that improves the design and a meeting that wastes the room.
 
 ## Question-Driven Review
 
@@ -57,14 +57,14 @@ The questions are the reviewer's real output. A review that ends with the team s
 | The decision is org-shaping | An executive or platform owner | The boundary effects need an owner |
 | The review is contested | A neutral third party | The dispute needs a guest, not a judge |
 
-The staff reviewer's job is to know when the room needs someone else — and to invite them before the review, not after the problem surfaces. Reviewing beyond your depth includes the judgment of when your depth is not enough.
+The staff reviewer's job is to know when the room needs someone else, and to invite them before the review, not after the problem surfaces. Reviewing beyond your depth includes the judgment of when your depth is not enough.
 
 ## Recording Review Outcomes
 
 | Element | What it contains |
 |---------|------------------|
 | Findings | The issues that matter, with severity |
-| Non-findings | What was checked and found sound — the record of what was considered |
+| Non-findings | What was checked and found sound, the record of what was considered |
 | Actions | Owners, dates, and required changes |
 | Decision | Approved, approved with changes, or not approved |
 
@@ -91,9 +91,10 @@ The etiquette is what makes the review repeatable. A team that experiences a cro
 | Review records | Past outcomes as the training set for new reviewers |
 | Pairing | Review with a junior reviewer; they learn, you scale |
 
-The staff engineer cannot review everything — and should not. The org's review capability scales when the question set, the etiquette, and the records outlive individual reviewers.
+The staff engineer cannot review everything, and should not. The org's review capability scales when the question set, the etiquette, and the records outlive individual reviewers.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     REQUEST["Review requested"] --> PREPARE["Load context"]
     PREPARE --> QUESTIONS["Ask the question set"]
@@ -107,7 +108,7 @@ flowchart TD
 ## Practical Applications
 
 ```markdown
-# Review Record — [design] — [date]
+# Review Record: [design], [date]
 
 ## Context
 - [ ] Design: [link] | Prior decisions: [links]
@@ -164,4 +165,4 @@ Checklist:
 
 ## Summary
 
-Reviewing beyond your team is preparation plus questions: load context, apply the question set — what breaks, what costs, who maintains, what happens at 10x — and assemble outside depth when the domain demands it. Record findings and non-findings with actions, hold the guest-not-judge etiquette, and scale the capability through guilds, checklists, and pairing. The review's value is the thinking it causes, not the verdict it delivers.
+Reviewing beyond your team is preparation plus questions: load context, apply the question set (what breaks, what costs, who maintains, what happens at 10x) and assemble outside depth when the domain demands it. Record findings and non-findings with actions, hold the guest-not-judge etiquette, and scale the capability through guilds, checklists, and pairing. The review's value is the thinking it causes, not the verdict it delivers.

@@ -33,6 +33,7 @@ A senior engineer's impact extends far beyond their own code. They influence arc
 ## Capability Breakdown
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph Communication and Influence
         A[Technical Writing<br/>RFCs, ADRs, design docs]
@@ -66,6 +67,7 @@ flowchart TD
 ## Learning Path
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     subgraph Foundation
         A1[Technical Writing]
@@ -146,9 +148,9 @@ A senior engineer demonstrates Communication and Influence when they:
 ## Related Capabilities
 
 - [[career-path/02_Senior_Software_Engineer/00_overview#Leadership and Influence|Leadership and Influence]] (Senior Engineer Overview)
-- [[01_Technical_Ownership/00_overview#Accountability|Technical Ownership - Accountability]]
-- [[02_Problem_Framing_and_Requirements/00_overview#Stakeholder Management|Problem Framing - Stakeholder Management]]
-- [[07_Mentoring_and_Team_Leadership/00_overview|07_Mentoring_and_Team_Leadership]] (next capability)
+- [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/00_overview#Accountability|Technical Ownership - Accountability]]
+- [[career-path/02_Senior_Software_Engineer/02_Problem_Framing_and_Requirements/00_overview#Stakeholder Management|Problem Framing - Stakeholder Management]]
+- [[career-path/02_Senior_Software_Engineer/07_Mentoring_and_Team_Leadership/00_overview|07_Mentoring_and_Team_Leadership]] (next capability)
 
 ## Summary
 

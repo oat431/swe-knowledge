@@ -16,15 +16,15 @@ tags:
 
 # Security Governance and Assurance
 
-> **Core skill:** The architect establishes governance that keeps security decisions, exceptions, and evidence aligned with the architecture — layered decision rights, continuous assurance, time-boxed exceptions, and metrics that show real posture rather than activity.
+> **Core skill:** The architect establishes governance that keeps security decisions, exceptions, and evidence aligned with the architecture: layered decision rights, continuous assurance, time-boxed exceptions, and metrics that show real posture rather than activity.
 
 ## Why This Matters
 
-Every day the enterprise makes hundreds of security-relevant decisions — add a dependency, widen an access path, skip a hardening step, waive a control. Governance is what keeps those decisions consistent with the architecture's principles instead of letting each team optimize locally. Without governance, principles are suggestions, exceptions accumulate invisibly, and the estate drifts away from the design the board believes it approved.
+Every day the enterprise makes hundreds of security-relevant decisions: add a dependency, widen an access path, skip a hardening step, waive a control. Governance is what keeps those decisions consistent with the architecture's principles instead of letting each team optimize locally. Without governance, principles are suggestions, exceptions accumulate invisibly, and the estate drifts away from the design the board believes it approved.
 
 Assurance is governance's feedback loop. Reviews, control tests, penetration tests, audits, and certifications verify that the design works in practice and produce the evidence customers, regulators, and leadership need. The architect's job is to keep assurance continuous and connected: findings feed architecture decisions and pattern updates, rather than accumulating in a report that is filed and forgotten.
 
-The hardest governance question at enterprise scale is calibration. Gates heavy enough to catch material risk become bottlenecks teams route around; gates light enough to be ignored catch nothing. The architect tunes the mechanism — what is reviewed, by whom, how fast decisions return — and chooses metrics that tell the truth about posture, because a governance system that measures activity will confidently report busyness while exposure grows.
+The hardest governance question at enterprise scale is calibration. Gates heavy enough to catch material risk become bottlenecks teams route around; gates light enough to be ignored catch nothing. The architect tunes the mechanism (what is reviewed, by whom, how fast decisions return) and chooses metrics that tell the truth about posture, because a governance system that measures activity will confidently report busyness while exposure grows.
 
 ## Governance Layers
 
@@ -51,7 +51,7 @@ The hardest governance question at enterprise scale is calibration. Gates heavy 
 | Element | Rule |
 |---------|------|
 | Who may accept | Only an authority at the level of the risk being carried; never the team that created it |
-| Scope | Bounded: one system, one control gap, one data class — not a blanket waiver |
+| Scope | Bounded: one system, one control gap, one data class, not a blanket waiver |
 | Expiry | Every exception has an end date; renewal requires a fresh decision |
 | Register | All exceptions visible in one place, reviewed by steering on a cycle |
 | Compensating control | Every exception names what reduces the exposure in the meantime |
@@ -60,6 +60,7 @@ The hardest governance question at enterprise scale is calibration. Gates heavy 
 ## The Assurance Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     POLICY["Policy and architecture standards"] --> REVIEW["Design and assurance reviews"]
     REVIEW["Design and assurance reviews"] --> ASSURE["Control testing and audit"]
@@ -92,7 +93,7 @@ flowchart LR
 ### Governance Calendar
 
 ```markdown
-## Security Governance Calendar — <year>
+## Security Governance Calendar: <year>
 
 | Cycle | Forum | Inputs | Decisions Expected |
 |-------|-------|--------|--------------------|
@@ -119,13 +120,13 @@ flowchart LR
 - Exception count trends down, and what remains is visible and owned
 - Assurance evidence answers customer and regulator questions from live sources
 - Metrics move because remediation changed reality, not because definitions changed
-- Teams treat governance as help — pattern guidance — rather than an obstacle
+- Teams treat governance as help (pattern guidance) rather than an obstacle
 
 ## Related Topics
 
 - [[03_Compliance_and_Regulatory_Architecture]]
 - [[02_Risk_Management_for_Architects]]
-- [[06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]
+- [[career-path/15_Solutions_and_Enterprise_Architect/06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]
 - [[career-path/08_Security_Engineer/00_overview|Security Engineer]]
 
 ## Summary

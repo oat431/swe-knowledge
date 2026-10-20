@@ -16,15 +16,15 @@ tags:
 
 # Transformation Governance and Benefits
 
-> **Core skill:** The architect keeps transformation coherent across programs — dependencies, risk, and change control through governance that actually decides — and defines, baselines, measures, and pursues the benefits that justified the transformation in the first place.
+> **Core skill:** The architect keeps transformation coherent across programs (dependencies, risk, and change control through governance that actually decides) and defines, baselines, measures, and pursues the benefits that justified the transformation in the first place.
 
 ## Why This Matters
 
 Transformation is not one program; it is a portfolio of programs, each with its own manager, budget, and pressures, all reshaping the same estate over years. Without governance at the transformation level, local optimizations collide: two programs rebuild the same capability, a dependency slips in one and blocks three others, and the target architecture quietly becomes whatever the sum of local decisions produces. Transformation governance exists to hold the whole.
 
-This governance is different from delivery governance. Delivery governance asks whether a project is on track against its plan; transformation governance asks whether the portfolio of changes still adds up to the intended destination — sequencing across programs, dependencies between them, risk aggregated rather than viewed in fragments, and changes to the target itself made deliberately rather than by drift.
+This governance is different from delivery governance. Delivery governance asks whether a project is on track against its plan; transformation governance asks whether the portfolio of changes still adds up to the intended destination: sequencing across programs, dependencies between them, risk aggregated rather than viewed in fragments, and changes to the target itself made deliberately rather than by drift.
 
-The benefit side is where governance earns its name. Transformation cases promise outcomes — lower cost, better resilience, faster change — and those promises must be defined, baselined before the change, measured after it, and owned by the people who benefit. A transformation that delivers every milestone but never checks whether the outcomes arrived has governed activity, not value.
+The benefit side is where governance earns its name. Transformation cases promise outcomes (lower cost, better resilience, faster change) and those promises must be defined, baselined before the change, measured after it, and owned by the people who benefit. A transformation that delivers every milestone but never checks whether the outcomes arrived has governed activity, not value.
 
 ## Transformation versus Delivery Governance
 
@@ -50,7 +50,7 @@ The benefit side is where governance earns its name. Transformation cases promis
 ## Benefits Register
 
 ```markdown
-## Benefits Register — <transformation>
+## Benefits Register: <transformation>
 
 | Benefit | Baseline | Target | Owner | Measure | Realized |
 |---------|----------|--------|-------|---------|----------|
@@ -69,6 +69,7 @@ The benefit side is where governance earns its name. Transformation cases promis
 ## The Benefits Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     BENEFITS["Benefit case and baselines"] --> PLAN["Benefit realization planning"]
     PLAN["Benefit realization planning"] --> DELIVER["Program delivery"]
@@ -100,7 +101,7 @@ flowchart LR
 ### Transformation Status Template
 
 ```markdown
-## Transformation Status — <period>
+## Transformation Status: <period>
 
 | Dimension | Assessment | Watch Items |
 |-----------|------------|-------------|

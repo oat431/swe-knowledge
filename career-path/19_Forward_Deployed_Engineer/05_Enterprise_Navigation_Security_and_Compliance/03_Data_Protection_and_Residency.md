@@ -16,11 +16,11 @@ tags:
 
 # Data Protection and Residency
 
-> **Core skill:** Classifying data, honoring residency, protecting it in transit and at rest — deciding where data may live and flow before the integration is designed, and being able to prove the protections to the people who own the clauses.
+> **Core skill:** Classifying data, honoring residency, protecting it in transit and at rest: deciding where data may live and flow before the integration is designed, and being able to prove the protections to the people who own the clauses.
 
 ## Why This Matters
 
-The rules about customer data are rarely written by engineers. They arrive from legal, privacy, and risk functions as contract clauses and conditions of approval: which data categories may be processed, where processing may occur, how long anything may be retained, and what deletion must look like. By the time the FDE sees them, they are constraints on architecture — and constraints discovered late are the most expensive kind, because residency and retention decisions reach into where services run, which regions the vendor operates, how logs are kept, and how the system behaves during failover.
+The rules about customer data are rarely written by engineers. They arrive from legal, privacy, and risk functions as contract clauses and conditions of approval: which data categories may be processed, where processing may occur, how long anything may be retained, and what deletion must look like. By the time the FDE sees them, they are constraints on architecture, and constraints discovered late are the most expensive kind, because residency and retention decisions reach into where services run, which regions the vendor operates, how logs are kept, and how the system behaves during failover.
 
 The first discipline is classification, and its purpose is to make the rest of the decisions smaller. Not all data deserves the same handling, but unclassified data defaults to the strictest reasonable treatment, which makes everything slow and expensive. When the FDE can say precisely which fields in which flow are public, internal, confidential, or personal and regulated, the residency and protection conversation becomes a set of concrete, answerable questions instead of a blanket negotiation. Classification is not a document that gets written once; it is a running inventory that changes whenever the integration grows a new field or a new destination.
 
@@ -60,6 +60,7 @@ The practical move is to classify at the field level within each flow, not at th
 | Model and prompt handling | What reaches models and what persists | Trace a prompt from entry to storage to expiration |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CLASSIFY["Classify the data in scope"] --> MAP["Map every flow and store"]
     MAP --> RESIDE["Choose where data may live"]
@@ -76,7 +77,7 @@ The step FDEs skip most often is verification: proving what happens during failo
 
 - [ ] Every data category in the deployment is named and classified in writing
 - [ ] A single diagram shows every flow, store, and boundary, annotated with categories
-- [ ] Each residency constraint is traced to its source — the clause or condition that created it
+- [ ] Each residency constraint is traced to its source: the clause or condition that created it
 - [ ] Failover, support access, and backup paths are checked against the same rules as the primary path
 - [ ] Retention and deletion are described as concrete behavior, then verified in practice
 - [ ] Model and prompt handling is documented wherever AI components are involved
@@ -85,7 +86,7 @@ The step FDEs skip most often is verification: proving what happens during failo
 ### Data Flow Record Template
 
 ```markdown
-## Data Flow Record — <system, deployment, date>
+## Data Flow Record: <system, deployment, date>
 
 | Field | Detail |
 |-------|--------|
@@ -115,16 +116,16 @@ The step FDEs skip most often is verification: proving what happens during failo
 - The customer's reviewers confirm the deployment handles data as the contract claims
 - Deletion and expiry behavior is verified, not assumed, and the verification is on file
 - New features and fields are classified before they reach production
-- AI components can be described end to end — what enters, what persists, what is deleted
+- AI components can be described end to end: what enters, what persists, what is deleted
 
 ## Related Topics
 
 - [[02_Identity_Access_and_Least_Privilege]]
 - [[05_Compliance_Evidence_and_Documentation]]
-- [[04_AI_Systems_in_Customer_Environments/00_overview|AI Systems in Customer Environments]]
+- [[career-path/19_Forward_Deployed_Engineer/04_AI_Systems_in_Customer_Environments/00_overview|AI Systems in Customer Environments]]
 - [[career-path/08_Security_Engineer/00_overview|Security Engineer]]
 - [[body-of-knowledge/CyBOK/01_Risk_Management_and_Governance]]
 
 ## Summary
 
-Data protection and residency are design constraints the FDE turns into design decisions: classify data at the field level, map every flow and store in one place, choose residency deliberately and trace it to its clause, protect it in motion and at rest across every path including failover and backups, and verify what actually happens at deletion time. Done from the first diagram rather than the first audit, these choices cost little — done late, they are rewrites, and done dishonestly, they are lost trust.
+Data protection and residency are design constraints the FDE turns into design decisions: classify data at the field level, map every flow and store in one place, choose residency deliberately and trace it to its clause, protect it in motion and at rest across every path including failover and backups, and verify what actually happens at deletion time. Done from the first diagram rather than the first audit, these choices cost little. Done late, they are rewrites, and done dishonestly, they are lost trust.

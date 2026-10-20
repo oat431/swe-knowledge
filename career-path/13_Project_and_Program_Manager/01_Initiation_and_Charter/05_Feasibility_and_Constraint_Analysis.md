@@ -16,13 +16,13 @@ tags:
 
 # Feasibility and Constraint Analysis
 
-> **Core skill:** Testing whether the proposed project can succeed within the organization's technical, financial, operational, and regulatory environment — by identifying constraints that bound the solution space and assessing feasibility across multiple dimensions before the organization commits resources.
+> **Core skill:** Testing whether the proposed project can succeed within the organization's technical, financial, operational, and regulatory environment, by identifying constraints that bound the solution space and assessing feasibility across multiple dimensions before the organization commits resources.
 
 ## Why This Matters
 
-A project that is approved without a feasibility analysis is a bet placed blind. Technical feasibility answers whether the solution can be built with available skills and technology. Operational feasibility answers whether the organization can absorb the change. Financial feasibility answers whether the benefits justify the cost. Schedule feasibility answers whether the deadline is physically possible. The project manager who skips feasibility analysis discovers the answers during execution — when the cost of discovering a "no" is the sunk cost of the project to date.
+A project that is approved without a feasibility analysis is a bet placed blind. Technical feasibility answers whether the solution can be built with available skills and technology. Operational feasibility answers whether the organization can absorb the change. Financial feasibility answers whether the benefits justify the cost. Schedule feasibility answers whether the deadline is physically possible. The project manager who skips feasibility analysis discovers the answers during execution, when the cost of discovering a "no" is the sunk cost of the project to date.
 
-Constraints define the box the project must operate within, and the analysis names them explicitly: a regulatory deadline that cannot be moved, a budget cap that cannot be exceeded, a technology choice mandated by organizational policy, a resource pool that is shared with other initiatives. Constraints that are assumed rather than documented become the project's silent killers — the team plans against an invisible wall and collides with it mid-execution.
+Constraints define the box the project must operate within, and the analysis names them explicitly: a regulatory deadline that cannot be moved, a budget cap that cannot be exceeded, a technology choice mandated by organizational policy, a resource pool that is shared with other initiatives. Constraints that are assumed rather than documented become the project's silent killers. The team plans against an invisible wall and collides with it mid-execution.
 
 The feasibility analysis is not a hurdle to clear once and forget. It is a living assessment: constraints change when regulations shift, feasibility changes when the skills market tightens, and the analysis should be revisited at each phase gate.
 
@@ -51,6 +51,7 @@ The feasibility analysis is not a hurdle to clear once and forget. It is a livin
 ## The Constraint Trade-Off Triangle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SCOPE["Scope: what must be delivered"] --> TRADE["Trade-off: which constraint drives the project?"]
     SCHEDULE["Schedule: when it must be delivered"] --> TRADE
@@ -106,11 +107,11 @@ flowchart TD
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---|---|---|
-| **Technical optimism** | "We will figure it out" — no evidence the solution is buildable | Proof of concept for novel components; honest assessment of skill gaps |
+| **Technical optimism** | "We will figure it out": no evidence the solution is buildable | Proof of concept for novel components; honest assessment of skill gaps |
 | **Constraints assumed identical for all projects** | Organizational constraints applied without testing relevance | Test each constraint against this project specifically |
 | **Feasibility-as-gate-only** | Assessed once at initiation, never revisited | Revisit at each phase gate; constraints and assumptions change |
 | **Operational feasibility ignored** | Technical solution built that the organization cannot absorb | Assess change readiness, operational capacity, and user adoption risk |
-| **Hidden constraints** | "We have always used Oracle" — unstated policy becomes a constraint when the team picks a different database | Surface organizational policies; name them as constraints or seek exceptions |
+| **Hidden constraints** | "We have always used Oracle": unstated policy becomes a constraint when the team picks a different database | Surface organizational policies; name them as constraints or seek exceptions |
 | **The single-dimension assessment** | Only technical feasibility is assessed; financial and operational are assumed | Multi-dimensional assessment covering all seven dimensions |
 
 ## Success Indicators
@@ -123,12 +124,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[02_Business_Case_Development]] — financial feasibility builds on the business case
-- [[01_Project_Charter]] — constraints are stated in the charter
-- [[04_Risk_and_Issues/00_overview|Risk and Issues]] — constraints that prove binding become risks
-- [[04_Project_Planning_and_Baselining]] — the plan must respect the identified constraints
-- [[career-path/12_Technical_Program_Manager/00_overview|TPM]] — program-level feasibility across multiple projects
+- [[02_Business_Case_Development]]: financial feasibility builds on the business case
+- [[01_Project_Charter]]: constraints are stated in the charter
+- [[career-path/13_Project_and_Program_Manager/04_Risk_and_Issues/00_overview|Risk and Issues]]: constraints that prove binding become risks
+- [[04_Project_Planning_and_Baselining]]: the plan must respect the identified constraints
+- [[career-path/12_Technical_Program_Manager/00_overview|TPM]]: program-level feasibility across multiple projects
 
 ## Summary
 
-Feasibility and constraint analysis tests whether the project can succeed before resources are committed. It examines the project across technical, operational, financial, schedule, legal, organizational, and market dimensions — naming the constraints that bound the solution space and the assumptions that must hold for the project to be feasible. The analysis is not a one-time gate; it is a living assessment revisited at each phase gate as constraints shift and assumptions are tested. The project manager who analyzes feasibility thoroughly prevents projects that are approved on optimism and fail on reality.
+Feasibility and constraint analysis tests whether the project can succeed before resources are committed. It examines the project across technical, operational, financial, schedule, legal, organizational, and market dimensions, naming the constraints that bound the solution space and the assumptions that must hold for the project to be feasible. The analysis is not a one-time gate; it is a living assessment revisited at each phase gate as constraints shift and assumptions are tested. The project manager who analyzes feasibility thoroughly prevents projects that are approved on optimism and fail on reality.

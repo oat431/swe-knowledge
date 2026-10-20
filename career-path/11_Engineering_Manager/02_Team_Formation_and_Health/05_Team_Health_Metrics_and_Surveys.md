@@ -16,11 +16,11 @@ tags:
 
 # Team Health Metrics and Surveys
 
-> **Core skill:** Measuring team health honestly — engagement, energy, attrition risk, safety, clarity, growth — and acting on results visibly, including on the manager's own bottlenecks.
+> **Core skill:** Measuring team health honestly (engagement, energy, attrition risk, safety, clarity, growth) and acting on results visibly, including on the manager's own bottlenecks.
 
 ## Why This Matters
 
-Team health is the leading indicator for everything the manager cares about. Delivery numbers tell you what happened last quarter; health tells you what happens next. A team that is engaged, safe, and clear ships through disruption; a team that is burned out, silent, and confused will miss its next deadline no matter what the roadmap says. The manager who does not measure health is flying on anecdotes — usually the loudest voice's anecdotes.
+Team health is the leading indicator for everything the manager cares about. Delivery numbers tell you what happened last quarter; health tells you what happens next. A team that is engaged, safe, and clear ships through disruption; a team that is burned out, silent, and confused will miss its next deadline no matter what the roadmap says. The manager who does not measure health is flying on anecdotes: usually the loudest voice's anecdotes.
 
 Measurement also changes the conversation. A survey result is discussable; a feeling is not. When the team sees its own data, problems stop being personal accusations and become shared problems with shared fixes. The discipline is honesty in both directions: reading the results without defensiveness, and acting on them visibly or not asking at all.
 
@@ -35,7 +35,7 @@ Measurement also changes the conversation. A survey result is discussable; a fee
 | Clarity | Does everyone know what and why? | Mission recall, decision speed, rework |
 | Growth | Is capability compounding? | Learning activity, stretch, promotion readiness |
 
-Six dimensions, one question each. The manager picks the three that matter most for the current stage — a forming team measures clarity and safety; a post-delivery team measures energy and growth.
+Six dimensions, one question each. The manager picks the three that matter most for the current stage. A forming team measures clarity and safety; a post-delivery team measures energy and growth.
 
 ## Survey Design
 
@@ -72,7 +72,7 @@ The manager's first move on seeing bad results is not to explain them but to sit
 - [ ] Report back what the previous actions changed
 ```
 
-The rule that keeps surveys honest: every survey produces visible action or is the last survey. The team does not need every issue fixed — they need to see that answering changed something. One fixed issue, visibly owned, is worth more than ten acknowledged ones.
+The rule that keeps surveys honest: every survey produces visible action or is the last survey. The team does not need every issue fixed. They need to see that answering changed something. One fixed issue, visibly owned, is worth more than ten acknowledged ones.
 
 ## The Team Health Review Format
 
@@ -83,7 +83,7 @@ The rule that keeps surveys honest: every survey produces visible action or is t
 | Monthly | Health signals in the manager's own review | Manager, alone |
 | Annually | Deep dive: all six dimensions | Team workshop |
 
-The review is a meeting with a purpose: read the data, name the three issues, assign actions. It is not a retro about delivery and not a performance review — it is the team's conversation about how it feels to be this team.
+The review is a meeting with a purpose: read the data, name the three issues, assign actions. It is not a retro about delivery and not a performance review. It is the team's conversation about how it feels to be this team.
 
 ## The Manager's Own Health Signals
 
@@ -95,7 +95,7 @@ The review is a meeting with a purpose: read the data, name the three issues, as
 | What did the team do while I was away? | Maturity, delegation, dependency |
 | Whose energy am I draining, and how? | The manager's own load lands on the team |
 
-The manager is part of the team's health system. A team that is healthy everywhere except in its relationship to the manager has a manager problem — and the survey will show it if the manager is brave enough to read their own questions.
+The manager is part of the team's health system. A team that is healthy everywhere except in its relationship to the manager has a manager problem, and the survey will show it if the manager is brave enough to read their own questions.
 
 ## When Metrics Lie
 
@@ -106,11 +106,12 @@ The manager is part of the team's health system. A team that is healthy everywhe
 | Pacing the pulse | Energy dips between surveys go unseen | Pair pulses with continuous signals: retros, one-to-ones |
 | Anecdote inflation | One loud voice outweighs the trend | Read trends and distributions, not highlights |
 
-Metrics are a lens, not a truth. The manager triangulates: survey trends, one-to-one themes, meeting behavior, and delivery outcomes. When the lens disagrees with lived experience, the manager trusts the pattern across all four — and says so.
+Metrics are a lens, not a truth. The manager triangulates: survey trends, one-to-one themes, meeting behavior, and delivery outcomes. When the lens disagrees with lived experience, the manager trusts the pattern across all four, and says so.
 
 ## The Health Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PULSE["Pulse the six dimensions"] --> READ["Read honestly without defense"]
     READ --> NAME["Name the top three issues"]
@@ -152,9 +153,9 @@ flowchart TD
 
 - [[02_Psychological_Safety_in_Practice]]: safety is the dimension that decides survey honesty
 - [[01_Team_Lifecycle_and_Formation]]: which dimensions matter depends on the stage
-- [[04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: health metrics explain delivery outcomes
+- [[career-path/11_Engineering_Manager/04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: health metrics explain delivery outcomes
 - [[career-path/05_Tech_Lead/06_Process_and_Quality_Stewardship/06_Continuous_Improvement_Rhythm|Continuous Improvement Rhythm (Tech Lead)]]: the retro rhythm that feeds health signals
 
 ## Summary
 
-Team health metrics turn feelings into trends: short, regular, anonymous pulses across engagement, energy, attrition risk, safety, clarity, and growth — read without defensiveness, shared with the team, and converted into visible, owned actions. The manager is part of the system they measure, and the loop closes only when the next pulse shows what the last actions changed. Measured honestly, health becomes the leading indicator that protects delivery, retention, and the manager's own sanity.
+Team health metrics turn feelings into trends: short, regular, anonymous pulses across engagement, energy, attrition risk, safety, clarity, and growth, read without defensiveness, shared with the team, and converted into visible, owned actions. The manager is part of the system they measure, and the loop closes only when the next pulse shows what the last actions changed. Measured honestly, health becomes the leading indicator that protects delivery, retention, and the manager's own sanity.

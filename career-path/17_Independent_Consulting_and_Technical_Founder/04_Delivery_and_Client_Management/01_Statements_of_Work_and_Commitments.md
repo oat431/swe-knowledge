@@ -17,15 +17,15 @@ tags:
 
 # Statements of Work and Commitments
 
-> **Core skill:** Writing statements of work that make commitments explicit — deliverables, boundaries, assumptions, and acceptance — so delivery begins with shared expectations.
+> **Core skill:** Writing statements of work that make commitments explicit (deliverables, boundaries, assumptions, and acceptance), so delivery begins with shared expectations.
 
 ## Why This Matters
 
-A statement of work is the constitution of an engagement. Everything that later becomes a dispute — what was included, what was assumed, what "done" means, who owes what and when — is either settled in the SOW or left to memory, and memory is a losing arbiter. Clients are not adversaries; they are simply differently informed, and a precise document protects both sides from the gaps between those perspectives. The SOW is how a professional relationship starts with a shared map instead of a shared assumption.
+A statement of work is the constitution of an engagement. Everything that later becomes a dispute (what was included, what was assumed, what "done" means, who owes what and when) is either settled in the SOW or left to memory, and memory is a losing arbiter. Clients are not adversaries; they are simply differently informed, and a precise document protects both sides from the gaps between those perspectives. The SOW is how a professional relationship starts with a shared map instead of a shared assumption.
 
-The commercial stakes are concrete. Engagements without written commitments drift into scope that was never priced, acceptance that arrives late or never, and payment terms that were "understood" but never defined. Each of these erodes margin quietly and trust loudly. The independent who can point to a signed, specific, line-by-line agreement resolves borderline moments in minutes instead of weeks — and looks organized while doing it, which compounds into referrals.
+The commercial stakes are concrete. Engagements without written commitments drift into scope that was never priced, acceptance that arrives late or never, and payment terms that were "understood" but never defined. Each of these erodes margin quietly and trust loudly. The independent who can point to a signed, specific, line-by-line agreement resolves borderline moments in minutes instead of weeks, and looks organized while doing it, which compounds into referrals.
 
-Writing the SOW is also a design exercise. If you cannot state the deliverables, the out-of-scope, and the acceptance criteria precisely, you do not yet understand the engagement well enough to price it. The drafting process exposes the unknowns while they are still cheap to resolve — before the contract, not after.
+Writing the SOW is also a design exercise. If you cannot state the deliverables, the out-of-scope, and the acceptance criteria precisely, you do not yet understand the engagement well enough to price it. The drafting process exposes the unknowns while they are still cheap to resolve, before the contract, not after.
 
 ## The Anatomy of a Statement of Work
 
@@ -65,6 +65,7 @@ Acceptance criteria are the difference between a handshake and a test. Write the
 | Well documented | Runbook covers the named operational scenarios end to end |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DRAFT["Draft scope and deliverables"] --> BOUNDS["Define out of scope and assumptions"]
     BOUNDS --> ACCEPT["Write testable acceptance criteria"]
@@ -116,7 +117,7 @@ flowchart TD
 
 ## Success Indicators
 
-- Every engagement begins from a signed, versioned document — no exceptions
+- Every engagement begins from a signed, versioned document, no exceptions
 - Scope conversations during delivery reference SOW clause numbers calmly
 - Acceptance happens on schedule because criteria were testable from day one
 - Deposits and milestone payments arrive without chasing
@@ -127,10 +128,10 @@ flowchart TD
 - [[05_Scope_Change_and_Commercially_Aware_Delivery]]: the change process clause is where this note hands off
 - [[02_Project_Planning_for_Solo_Practitioners]]: the plan is built from the SOW, not around it
 - [[07_Handover_Engagement_Closure_and_Referrals]]: acceptance criteria define the closure checklist
-- [[06_Sales_and_Client_Communication/00_overview|Sales and Client Communication]]: proposals become SOWs through the sales conversation
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/06_Sales_and_Client_Communication/00_overview|Sales and Client Communication]]: proposals become SOWs through the sales conversation
 - [[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]]: formal charter and contract discipline this adapts
 
 ## Summary
 
-A statement of work converts good intentions into explicit commitments: itemized deliverables, named exclusions, numbered assumptions, testable acceptance criteria, dated milestones with dependencies, and payment and change processes that leave nothing to memory. Drafting it is also a test of understanding — if the words will not come, the engagement is not yet understood well enough to price. Sign, version, and baseline; the rest of delivery runs on it.
+A statement of work converts good intentions into explicit commitments: itemized deliverables, named exclusions, numbered assumptions, testable acceptance criteria, dated milestones with dependencies, and payment and change processes that leave nothing to memory. Drafting it is also a test of understanding. If the words will not come, the engagement is not yet understood well enough to price. Sign, version, and baseline; the rest of delivery runs on it.
 

@@ -15,11 +15,11 @@ tags:
 
 # Organizational Design Options
 
-> **Core skill:** Knowing the structure levers — team boundaries, platform vs product teams, centralization vs federation — and when each is the right answer for the current scaling stage.
+> **Core skill:** Knowing the structure levers (team boundaries, platform vs product teams, centralization vs federation) and when each is the right answer for the current scaling stage.
 
 ## Why This Matters
 
-Structure is the strongest lever in the systems toolkit: it determines who talks to whom, what gets owned, and where work waits. A team structure that fights the work produces chronic friction, duplicated effort, and slow decisions — and no amount of process will fix it. The staff engineer who can propose structure is consulted on re-orgs instead of surprised by them.
+Structure is the strongest lever in the systems toolkit: it determines who talks to whom, what gets owned, and where work waits. A team structure that fights the work produces chronic friction, duplicated effort, and slow decisions, and no amount of process will fix it. The staff engineer who can propose structure is consulted on re-orgs instead of surprised by them.
 
 Organizational design is not an HR activity; it is an engineering activity with an org chart as its artifact. The design space is small and well understood: team boundaries, platform vs product teams, centralization vs federation. The skill is mapping the current pain to the structural cause and knowing what each scaling stage breaks.
 
@@ -55,7 +55,7 @@ The common story: startup speed comes from full communication; scale-up keeps th
 | **Complicated-subsystem teams** | Hold rare deep expertise | Payments, ML, protocol work | When their scope creeps into product work |
 | **Stream-aligned** | Own a slice of business value end to end | Default for most product organizations | When boundaries ignore technical coupling |
 
-The selection rule: choose the smallest number of team types that covers the work, and make the boundary choices explicit — every boundary is a Conway decision about the future architecture.
+The selection rule: choose the smallest number of team types that covers the work, and make the boundary choices explicit. Every boundary is a Conway decision about the future architecture.
 
 ## Coordination Cost Math
 
@@ -68,7 +68,7 @@ Coordination cost grows quadratically with team count: with N teams, there are N
 | 10 | 45 | Seams are managed by process, not conversation |
 | 20 | 190 | Process becomes the dominant cost |
 
-This math is why reducing the number of seams — not the number of teams — is the design goal. Ten teams with one shared platform have ten platform-consumer relationships instead of forty-five pairwise ones.
+This math is why reducing the number of seams (not the number of teams) is the design goal. Ten teams with one shared platform have ten platform-consumer relationships instead of forty-five pairwise ones.
 
 ## Design Principles
 
@@ -83,6 +83,7 @@ This math is why reducing the number of seams — not the number of teams — is
 A structure that satisfies these five principles runs on its own energy; one that violates them consumes management attention permanently.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SIZE["Team count grows"] --> SEAMS["Pairwise seams multiply"]
     SEAMS --> COST["Coordination cost rises"]
@@ -103,7 +104,7 @@ Chronic friction is the signal; the table maps symptom to structure:
 | Standards ignored | Adoption cost higher than compliance cost | Make the standard a platform default, not a rule |
 | Constant escalations | No level owns the intersection | Add an owning body for the shared space |
 
-Propose redesign when symptoms repeat for two or more quarters with no structural change — and propose it with the pain data, not as a preference. The org will not move for elegance; it will move for evidence.
+Propose redesign when symptoms repeat for two or more quarters with no structural change, and propose it with the pain data, not as a preference. The org will not move for elegance; it will move for evidence.
 
 ## Practical Applications
 
@@ -170,9 +171,9 @@ Propose redesign when symptoms repeat for two or more quarters with no structura
 - [[02_Conways_Law_in_Practice]]: boundaries as architecture decisions
 - [[05_Fixing_Structure_Not_Symptoms]]: when to change structure rather than process
 - [[07_Limits_of_Local_Optimization]]: structure that rewards the whole
-- [[03_Technical_Strategy/00_overview|Technical Strategy]]: structure serves strategy
+- [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy]]: structure serves strategy
 - [[career-path/05_Tech_Lead/05_Team_Development_and_Mentoring_Leadership/00_overview|Team Development and Mentoring Leadership (Tech Lead)]]: the team-level view
 
 ## Summary
 
-Organizational design is the strongest lever in the systems toolkit: pick boundaries, platform vs product shape, and centralization level to match the scaling stage, minimize pairwise seams, and maximize clear ownership and autonomy. Propose redesign when chronic symptoms trace to structure — with evidence and a pilot — and remember that every boundary decision is a Conway decision about the architecture you will get.
+Organizational design is the strongest lever in the systems toolkit: pick boundaries, platform vs product shape, and centralization level to match the scaling stage, minimize pairwise seams, and maximize clear ownership and autonomy. Propose redesign when chronic symptoms trace to structure (with evidence and a pilot) and remember that every boundary decision is a Conway decision about the architecture you will get.

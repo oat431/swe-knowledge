@@ -14,13 +14,13 @@ tags:
 
 # Architecture for Independents
 
-> **Core capability:** The independent builds systems appropriate for current and future constraints — sized for one maintainer, cheap to operate, secure by default, and honest about when not to build.
+> **Core capability:** The independent builds systems appropriate for current and future constraints: sized for one maintainer, cheap to operate, secure by default, and honest about when not to build.
 
 ## Why This Matters
 
-Independents do not have platforms teams, SRE rotations, or security departments. Every architecture decision lands on the same pair of shoulders that sells, delivers, and administrates. The constraint changes the calculus: the best technology for a solo business is often the most boring one — managed services over self-hosted, monoliths over microservices, and buying over building wherever differentiation is absent.
+Independents do not have platforms teams, SRE rotations, or security departments. Every architecture decision lands on the same pair of shoulders that sells, delivers, and administrates. The constraint changes the calculus: the best technology for a solo business is often the most boring one. Managed services over self-hosted, monoliths over microservices, and buying over building wherever differentiation is absent.
 
-The architecture skill remains essential: choosing what to build, sizing it correctly, protecting client data, controlling costs, and knowing the scale at which today's simple system must evolve. Done well, an independent's architecture is invisible — the system just works, cheaply, while the business grows.
+The architecture skill remains essential: choosing what to build, sizing it correctly, protecting client data, controlling costs, and knowing the scale at which today's simple system must evolve. Done well, an independent's architecture is invisible (the system just works, cheaply, while the business grows).
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ The architecture skill remains essential: choosing what to build, sizing it corr
 ## The Solo Constraint Model
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CONSTRAINTS["Constraints: one maintainer, small budget, real risk"] --> CHOICES["Choices: boring tech, managed services, buy over build"]
     CHOICES --> SYSTEM["System: simple, secure, cheap"]
@@ -74,8 +75,8 @@ Every architecture decision is tested against the constraints before preference.
 
 ## Related Capabilities
 
-- [[03_Business_Case_and_Economics/00_overview|Business Case and Economics]]: architecture choices are economic choices
-- [[04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]: maintenance as ongoing engagement
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/03_Business_Case_and_Economics/00_overview|Business Case and Economics]]: architecture choices are economic choices
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]: maintenance as ongoing engagement
 - [[career-path/06_Software_Architect/07_Operations_and_Infrastructure_Architecture/00_overview|Operations and Infrastructure Architecture (Architect)]]: the architecture discipline this scales down
 - [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]]: operations depth reference
 

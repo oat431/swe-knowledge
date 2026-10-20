@@ -26,6 +26,7 @@ The difference is not technical knowledge. It is **recovery discipline**: turnin
 ## Disaster Recovery Planning Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ASSESS["Assess impact"] --> DEFINE["Define RTO and RPO"]
     DEFINE --> DESIGN["Design DR strategy"]
@@ -58,6 +59,7 @@ flowchart TD
 ### Active-Passive
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PRIMARY["Primary site"] --> REPLICATE["Replication"]
     REPLICATE --> STANDBY["Standby site"]
@@ -71,6 +73,7 @@ flowchart LR
 ### Active-Active
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SITE1["Site 1"] <--> SYNC["Synchronous replication"]
     SITE1 <--> ASYNC["Asynchronous replication"]
@@ -84,6 +87,7 @@ flowchart LR
 ### Multi-Region
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     REGION1["Region 1"] --> REPLICATE["Cross-region replication"]
     REPLICATE --> REGION2["Region 2"]
@@ -167,8 +171,8 @@ flowchart LR
 
 - [[01_Capacity_Planning]] : DR requires capacity planning for standby sites
 - [[04_Chaos_Engineering]] : chaos tests validate DR procedures
-- [[03_Incident_Response/00_overview]] : incident response coordinates with DR
-- [[01_Service_Objectives/02_SLO_Definition]] : SLOs influence RTO/RPO targets
+- [[career-path/07_SRE_and_Platform_Engineer/03_Incident_Response/00_overview]] : incident response coordinates with DR
+- [[career-path/07_SRE_and_Platform_Engineer/01_Service_Objectives/02_SLO_Definition]] : SLOs influence RTO/RPO targets
 - [[software-engineering-note/06_Software_Engineering_Operations/07_Capacity_and_Disaster_Recovery]] : capacity and DR foundations
 
 ## Key Takeaways

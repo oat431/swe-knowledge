@@ -15,13 +15,13 @@ tags:
 
 # Facilitation and Enablement
 
-> **Core capability:** The advocate and consultant run sessions that produce outcomes — workshops, demos, discovery conversations, technical reviews — and design enablement programs that multiply capability through other people.
+> **Core capability:** The advocate and consultant run sessions that produce outcomes (workshops, demos, discovery conversations, technical reviews) and design enablement programs that multiply capability through other people.
 
 ## Why This Matters
 
-Live interaction is where adoption accelerates or stalls: a workshop that leaves developers confident, a discovery session that surfaces the real constraint, a demo that makes the abstract concrete, a review that saves a customer from a costly mistake. The facilitator owns the room's outcome — not the slides.
+Live interaction is where adoption accelerates or stalls: a workshop that leaves developers confident, a discovery session that surfaces the real constraint, a demo that makes the abstract concrete, a review that saves a customer from a costly mistake. The facilitator owns the room's outcome, not the slides.
 
-Enablement goes further: instead of helping one customer or developer at a time, the consultant builds programs that make others effective — partner enablement, customer engineer training, internal onboarding. It is the difference between consulting and multiplying consultation.
+Enablement goes further: instead of helping one customer or developer at a time, the consultant builds programs that make others effective (partner enablement, customer engineer training, internal onboarding). It is the difference between consulting and multiplying consultation.
 
 ## Topics in This Capability Area
 
@@ -29,7 +29,7 @@ Enablement goes further: instead of helping one customer or developer at a time,
 |-------|------------|-----------------|
 | [[01_Workshops_and_Hands_On_Sessions]] | Designing and running workshops that teach by doing | Adoption; training; partners |
 | [[02_Discovery_Sessions]] | Facilitating conversations that surface real needs | Customer engagement; solution scoping |
-| [[03_Technical_Demos_and_Presentations]] | Demonstrating tech credibly — live, remote, and recorded | Sales-adjacent; adoption |
+| [[03_Technical_Demos_and_Presentations]] | Demonstrating tech credibly: live, remote, and recorded | Sales-adjacent; adoption |
 | [[04_Technical_Reviews_and_Assessments]] | Leading architecture and implementation reviews | Customer projects; partner work |
 | [[05_Enablement_Programs]] | Building partner and team enablement at scale | Ecosystem growth; training |
 | [[06_Training_and_Curriculum_Design]] | Structuring learning journeys with exercises and assessment | Courses; certifications |
@@ -38,6 +38,7 @@ Enablement goes further: instead of helping one customer or developer at a time,
 ## The Facilitation Arc
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PREPARE["Prepare: goal, audience, materials"] --> RUN["Run: facilitate, adapt, observe"]
     RUN --> LAND["Land: outcomes, next steps, follow-up"]
@@ -45,7 +46,7 @@ flowchart LR
     FEEDBACK --> PREPARE
 ```
 
-Every session has a goal beyond "presenting" — the test is what participants can do afterwards.
+Every session has a goal beyond "presenting". The test is what participants can do afterwards.
 
 ## Practical Applications
 
@@ -75,11 +76,11 @@ Every session has a goal beyond "presenting" — the test is what participants c
 
 ## Related Capabilities
 
-- [[01_Technical_Communication/00_overview|Technical Communication]]: the presentation craft this operationalizes
-- [[04_Customer_and_Developer_Understanding/00_overview|Customer and Developer Understanding]]: discovery feeds here
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/01_Technical_Communication/00_overview|Technical Communication]]: the presentation craft this operationalizes
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/04_Customer_and_Developer_Understanding/00_overview|Customer and Developer Understanding]]: discovery feeds here
 - [[career-path/15_Solutions_and_Enterprise_Architect/07_Architecture_Communication/04_Architecture_Facilitation_and_Workshops|Architecture Facilitation and Workshops (Solutions Architect)]]: the architecture-scale counterpart
 - [[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]]: program-scale enablement delivery
 
 ## Summary
 
-Facilitation and enablement turn technology into capability: workshops that teach by doing, discovery that finds real needs, demos that convince credibly, and enablement programs that multiply through partners and teams. The measure is never attendance — it is what participants can do afterwards.
+Facilitation and enablement turn technology into capability: workshops that teach by doing, discovery that finds real needs, demos that convince credibly, and enablement programs that multiply through partners and teams. The measure is never attendance. It is what participants can do afterwards.

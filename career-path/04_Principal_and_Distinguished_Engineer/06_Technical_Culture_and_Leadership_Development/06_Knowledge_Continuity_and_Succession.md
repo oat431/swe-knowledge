@@ -16,13 +16,13 @@ tags:
 
 # Knowledge Continuity and Succession
 
-> **Core skill:** The principal engineer ensures that technical knowledge survives attrition — building organizational memory through documentation strategy and decision archaeology, mapping the bus-factor heat map, and designing succession plans that make critical technical roles resilient to departure.
+> **Core skill:** The principal engineer ensures that technical knowledge survives attrition, building organizational memory through documentation strategy and decision archaeology, mapping the bus-factor heat map, and designing succession plans that make critical technical roles resilient to departure.
 
 ## Why This Matters
 
 Organizations lose technical knowledge in two ways: the slow erosion of memory as people leave and documents rot, and the sudden crisis when a critical person departs and nobody knows how their systems work. The principal's responsibility is to prevent both: building the systems that preserve knowledge and the succession plans that make any individual's departure survivable.
 
-Knowledge continuity is not a documentation problem — it is a design problem. The question is not "did someone write it down?" but "can someone who was not there understand the decision that was made, why it was made, and what alternatives were considered?" That level of continuity requires deliberate architecture: decision records, onboarding pathways, knowledge transfer rituals, and succession plans that are exercised before they are needed.
+Knowledge continuity is not a documentation problem. It is a design problem. The question is not "did someone write it down?" but "can someone who was not there understand the decision that was made, why it was made, and what alternatives were considered?" That level of continuity requires deliberate architecture: decision records, onboarding pathways, knowledge transfer rituals, and succession plans that are exercised before they are needed.
 
 ## The Bus-Factor Heat Map
 
@@ -90,7 +90,7 @@ Succession planning is not a replacement chart. It is a development plan for eac
 | **Development plan** | For each successor not yet ready: specific experiences, exposure, and mentoring needed to close the gap | Sponsor the plan; ensure successors get the opportunities they need |
 | **Emergency succession** | What happens if the role becomes vacant tomorrow with no ready successor | Define the emergency plan; ensure it is exercised annually |
 
-The succession plan is reviewed quarterly with engineering leadership. A critical role with no identified successor for two consecutive quarters is an escalation — the principal is accountable for resolving it.
+The succession plan is reviewed quarterly with engineering leadership. A critical role with no identified successor for two consecutive quarters is an escalation. The principal is accountable for resolving it.
 
 ## Knowledge Continuity Through Reorgs and Attrition
 
@@ -106,6 +106,7 @@ Reorganizations and attrition waves are the stress tests for knowledge continuit
 ## The Knowledge Continuity System
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     HEATMAP["Bus-factor heat map: assess every critical system"] --> RISK["Identify risks: bus factor 1, undocumented decisions, no successors"]
     RISK --> ARCHITECTURE["Organizational memory architecture: ADRs, documentation, onboarding pathways, knowledge bases"]
@@ -172,4 +173,4 @@ flowchart TD
 
 ## Summary
 
-Knowledge continuity and succession is the principal's insurance against organizational amnesia: building a bus-factor heat map that identifies critical knowledge concentrated in too few people, designing an organizational memory architecture of decision records, system documentation, onboarding pathways, and knowledge bases that make information findable and understandable, institutionalizing knowledge transfer rituals (shadow rotations, walkthroughs, departure capture) that make transfer continuous rather than last-minute, and maintaining succession plans for every critical technical role with named successors, readiness assessments, and development plans that are exercised before they are needed. The principal's own bus factor should be the lowest in the organization — modeling the knowledge sharing they expect from everyone else.
+Knowledge continuity and succession is the principal's insurance against organizational amnesia: building a bus-factor heat map that identifies critical knowledge concentrated in too few people, designing an organizational memory architecture of decision records, system documentation, onboarding pathways, and knowledge bases that make information findable and understandable, institutionalizing knowledge transfer rituals (shadow rotations, walkthroughs, departure capture) that make transfer continuous rather than last-minute, and maintaining succession plans for every critical technical role with named successors, readiness assessments, and development plans that are exercised before they are needed. The principal's own bus factor should be the lowest in the organization, modeling the knowledge sharing they expect from everyone else.

@@ -16,15 +16,15 @@ tags:
 
 # Enterprise Integration Patterns
 
-> **Core skill:** Connecting to ERP, CRM, legacy systems, and their interfaces — meeting systems of record where they actually are, through interfaces the customer can support, not the ones the documentation promises.
+> **Core skill:** Connecting to ERP, CRM, legacy systems, and their interfaces: meeting systems of record where they actually are, through interfaces the customer can support, not the ones the documentation promises.
 
 ## Why This Matters
 
-Every deployed system eventually meets the systems of record: the ERP that holds orders, the CRM that holds customers, the legacy core that holds balances. Those systems are not designed to be integrated with — they were designed to run the business. The interfaces they expose are usually whatever accumulated over years: nightly file drops, a SOAP endpoint nobody has touched since the last upgrade, database views that a departed contractor created, an export button that writes to a shared drive. The FDE's job is to find the interfaces that exist, in the state they exist, and build against those.
+Every deployed system eventually meets the systems of record: the ERP that holds orders, the CRM that holds customers, the legacy core that holds balances. Those systems are not designed to be integrated with. They were designed to run the business. The interfaces they expose are usually whatever accumulated over years: nightly file drops, a SOAP endpoint nobody has touched since the last upgrade, database views that a departed contractor created, an export button that writes to a shared drive. The FDE's job is to find the interfaces that exist, in the state they exist, and build against those.
 
 Integration is where demos become systems. In a demo, data arrives clean and on time through an interface you control. In a customer environment, the order feed is a CSV with shifted columns on the last day of every month, the customer record lookup takes three seconds under load, and the connector runs under a service account that a security review will scrutinize. Reading an enterprise landscape is like reading an unfamiliar codebase: find the systems of record, the boundaries between them, the brittle joints, and the places where a small, well-understood change is safe.
 
-The FDE rarely gets to choose the elegant interface. The interface that wins is the one the customer can approve, operate, and support after the engagement ends — even when a better option is technically available. Integration decisions outlive the deployment: they become contracts between teams, and the maintenance burden falls on the customer's own engineers. Choosing an interface is therefore a long-term commitment, not just this quarter's delivery decision.
+The FDE rarely gets to choose the elegant interface. The interface that wins is the one the customer can approve, operate, and support after the engagement ends, even when a better option is technically available. Integration decisions outlive the deployment: they become contracts between teams, and the maintenance burden falls on the customer's own engineers. Choosing an interface is therefore a long-term commitment, not just this quarter's delivery decision.
 
 ## Reading the Integration Landscape
 
@@ -49,6 +49,7 @@ The FDE rarely gets to choose the elegant interface. The interface that wins is 
 Prefer the least clever interface that satisfies the requirement and that the customer can operate. Every integration adds a joint that can fail; the FDE's goal is the smallest number of joints, each one observable and owned.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     MAP["Map the systems of record"] --> AGREE["Agree the interface with owners"]
     AGREE --> BUILD["Build the connector"]
@@ -84,7 +85,7 @@ The loop does not end at production: every interface is re-validated when either
 ### Integration Specification Template
 
 ```markdown
-## Integration Spec — <source system, target system, direction>
+## Integration Spec: <source system, target system, direction>
 
 | Field | Value |
 |-------|-------|
@@ -122,10 +123,10 @@ The loop does not end at production: every interface is re-validated when either
 
 - [[02_Data_Pipelines_in_Customer_Environments]]
 - [[03_Deployment_Models_and_Environments]]
-- [[05_Enterprise_Navigation_Security_and_Compliance/00_overview|Enterprise Navigation: Security and Compliance]]
+- [[career-path/19_Forward_Deployed_Engineer/05_Enterprise_Navigation_Security_and_Compliance/00_overview|Enterprise Navigation: Security and Compliance]]
 - [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions and Enterprise Architect]]
 - [[software-engineering-note/01_Software_Requirements/Software Requirements Overview]]
 
 ## Summary
 
-Enterprise integration patterns are the FDE's map and compass inside a landscape nobody fully understands: find the systems of record, learn the interfaces that actually exist, choose the least clever option the customer can support, and give every joint an owner, an agreement, and monitoring. Integration decisions become contracts that outlive the engagement, so they are made with the customer's long-term ability to operate them in mind — not just the current delivery date.
+Enterprise integration patterns are the FDE's map and compass inside a landscape nobody fully understands: find the systems of record, learn the interfaces that actually exist, choose the least clever option the customer can support, and give every joint an owner, an agreement, and monitoring. Integration decisions become contracts that outlive the engagement, so they are made with the customer's long-term ability to operate them in mind, not just the current delivery date.

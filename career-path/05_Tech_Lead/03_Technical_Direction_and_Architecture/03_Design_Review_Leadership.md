@@ -16,11 +16,11 @@ tags:
 
 # Design Review Leadership
 
-> **Core skill:** Facilitating design reviews that improve designs — without dominating them, rubber-stamping them, or letting them become free-for-alls.
+> **Core skill:** Facilitating design reviews that improve designs, without dominating them, rubber-stamping them, or letting them become free-for-alls.
 
 ## Why This Matters
 
-Design reviews are where the team's best judgment meets the system's future. Done well, they catch expensive mistakes early, spread knowledge, and teach the whole team the standards of good design. Done badly, they are either a bottleneck — every design waits for the lead's blessing — or a theater — designs pass because nobody read them.
+Design reviews are where the team's best judgment meets the system's future. Done well, they catch expensive mistakes early, spread knowledge, and teach the whole team the standards of good design. Done badly, they are either a bottleneck (every design waits for the lead's blessing) or a theater (designs pass because nobody read them).
 
 The tech lead's role in the review is the hardest in the room: facilitator, not author; questioner, not lecturer. A review the lead dominates produces designs that are the lead's, and a team that stops thinking. A review the lead facilitates produces designs that are the team's, and a team that designs better each time.
 
@@ -64,19 +64,19 @@ The dimensions are a shared checklist, not a rubric for scoring. The review's jo
 | Situation | The move |
 |-----------|----------|
 | Two valid approaches | Decide by evidence: what is known, what is assumed, what can be tested |
-| Disagreement on facts | Resolve with data — a spike, a measurement, a reference |
+| Disagreement on facts | Resolve with data: a spike, a measurement, a reference |
 | Disagreement on values | Escalate to the vision and principles; that is what they are for |
 | Deadlock with a deadline | The decider makes the call, records it, and timeboxes revisiting |
 | Repeated same-area conflicts | A standards or ADR discussion, not another review |
 
-Deadlock is not failure — it is the review finding a real disagreement. The failure would be resolving it by exhaustion or by the loudest voice. The design review's outcome must include the decision and its reasoning, whether consensus or not.
+Deadlock is not failure. It is the review finding a real disagreement. The failure would be resolving it by exhaustion or by the loudest voice. The design review's outcome must include the decision and its reasoning, whether consensus or not.
 
 ## Recording Outcomes
 
 Every review produces a record, however short:
 
 ```markdown
-## Design Review — [design title] — [date]
+## Design Review: [design title], [date]
 
 ### Decision
 - [ ] Approved / Approved with changes / Not approved
@@ -106,6 +106,7 @@ The record is what makes the review matter: required changes are tracked, open q
 The pragmatic pattern: async first, sync only when async stalls. A sync review called too early wastes eight people's hour on what three comments would have resolved.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DESIGN["Written design circulated"] --> READ["Reviewers read beforehand"]
     READ --> REVIEW["Review meeting or async thread"]
@@ -149,7 +150,7 @@ Checklist for after:
 ## Success Indicators
 
 - Designs improve measurably between first draft and review
-- Authors seek reviews early — the review is a tool, not a gate
+- Authors seek reviews early; the review is a tool, not a gate
 - Reviews start and end on time, with decisions recorded
 - Disagreements resolve by evidence or by named decision, not by volume
 - Engineers run reviews without the lead present and keep the quality
@@ -163,4 +164,4 @@ Checklist for after:
 
 ## Summary
 
-Design review leadership is facilitation: written designs read beforehand, reviews that discuss rather than present, a shared set of dimensions, a named decider for deadlock, and a recorded outcome with owners. The lead's discipline is to improve designs without owning them — to ask the questions that make the team's designs better, and to let the team take credit for the answers. A review the lead never had to attend is the quiet sign of success.
+Design review leadership is facilitation: written designs read beforehand, reviews that discuss rather than present, a shared set of dimensions, a named decider for deadlock, and a recorded outcome with owners. The lead's discipline is to improve designs without owning them: to ask the questions that make the team's designs better, and to let the team take credit for the answers. A review the lead never had to attend is the quiet sign of success.

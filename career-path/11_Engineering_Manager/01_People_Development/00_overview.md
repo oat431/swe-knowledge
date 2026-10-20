@@ -14,11 +14,11 @@ tags:
 
 # People Development
 
-> **Core capability:** The engineering manager grows each engineer deliberately — through one-to-ones, feedback, coaching, career frameworks, and honest performance management — so that people advance and the team's capability compounds.
+> **Core capability:** The engineering manager grows each engineer deliberately (through one-to-ones, feedback, coaching, career frameworks, and honest performance management), so that people advance and the team's capability compounds.
 
 ## Why This Matters
 
-People join companies and leave managers. The one-to-one meeting, the feedback conversation, and the promotion case are where the manager's leverage lives — or where retention quietly dies. Development is also the EM's compounding asset: engineers who grow take on more scope, which grows the team's capacity, which frees the manager from being the ceiling.
+People join companies and leave managers. The one-to-one meeting, the feedback conversation, and the promotion case are where the manager's leverage lives, or where retention quietly dies. Development is also the EM's compounding asset: engineers who grow take on more scope, which grows the team's capacity, which frees the manager from being the ceiling.
 
 This is the area where new managers fail most often, in both directions: avoidance (feedback never given, performance problems left to rot) and over-correction (managing people as tasks to optimize rather than professionals to partner with). The skill is deliberate, documented, human development work on a cadence.
 
@@ -37,6 +37,7 @@ This is the area where new managers fail most often, in both directions: avoidan
 ## The Development Cadence
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     LISTEN["Listen in 1:1s"] --> ASSESS["Assess level and growth goals"]
     ASSESS --> PLAN["Agree development goals"]
@@ -87,8 +88,8 @@ flowchart TD
 
 ## Related Capabilities
 
-- [[02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: individual growth feeds team health
-- [[05_Organizational_Awareness_and_Influence/00_overview|Organizational Awareness and Influence]]: promotion and performance outcomes land in org context
+- [[career-path/11_Engineering_Manager/02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: individual growth feeds team health
+- [[career-path/11_Engineering_Manager/05_Organizational_Awareness_and_Influence/00_overview|Organizational Awareness and Influence]]: promotion and performance outcomes land in org context
 - [[career-path/02_Senior_Software_Engineer/07_Mentoring_and_Team_Leadership/00_overview|Mentoring and Team Leadership (Senior)]]: the mentoring skills this area formalizes
 - [[career-path/05_Tech_Lead/05_Team_Development_and_Mentoring_Leadership/00_overview|Team Development and Mentoring Leadership (Tech Lead)]]: the lead-level practices this owns fully
 

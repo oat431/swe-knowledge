@@ -15,19 +15,19 @@ tags:
 
 # Program Contingency Planning
 
-> **Core skill:** Building and managing program-level contingency — time, budget, scope, and resource buffers sized against aggregate risk exposure — so that the program absorbs uncertainty without every surprise becoming a crisis and every delay becoming a date change.
+> **Core skill:** Building and managing program-level contingency (time, budget, scope, and resource buffers sized against aggregate risk exposure) so that the program absorbs uncertainty without every surprise becoming a crisis and every delay becoming a date change.
 
 ## Why This Matters
 
-A program without contingency is a program that assumes perfect execution. Every estimate is accurate. Every dependency delivers on time. Every risk stays in the register. No key person leaves. No technology surprise emerges. This is not a plan — it is a wish.
+A program without contingency is a program that assumes perfect execution. Every estimate is accurate. Every dependency delivers on time. Every risk stays in the register. No key person leaves. No technology surprise emerges. This is not a plan. It is a wish.
 
-Contingency is the program's shock absorber. It converts the TPM's risk assessment into concrete buffers: time between the planned completion date and the committed date, budget reserved for unplanned work, scope that can be cut without breaking the minimum viable product, resources that can be redirected to the critical path. Contingency is not padding — it is a deliberate allocation of program resources against quantified uncertainty.
+Contingency is the program's shock absorber. It converts the TPM's risk assessment into concrete buffers: time between the planned completion date and the committed date, budget reserved for unplanned work, scope that can be cut without breaking the minimum viable product, resources that can be redirected to the critical path. Contingency is not padding. It is a deliberate allocation of program resources against quantified uncertainty.
 
-The TPM's contingency discipline has three parts: sizing (how much contingency does the program need, based on aggregate risk exposure?), allocation (where in the program does the contingency live — schedule, budget, scope, resources?), and management (how is contingency consumed, tracked, and replenished?). A program that gets all three right absorbs surprises. A program that gets any one wrong absorbs blame.
+The TPM's contingency discipline has three parts: sizing (how much contingency does the program need, based on aggregate risk exposure?), allocation (where in the program does the contingency live: schedule, budget, scope, resources?), and management (how is contingency consumed, tracked, and replenished?). A program that gets all three right absorbs surprises. A program that gets any one wrong absorbs blame.
 
 ## Sizing Contingency
 
-Contingency is sized against the program's aggregate risk exposure — not a round number like "10% of the schedule."
+Contingency is sized against the program's aggregate risk exposure, not a round number like "10% of the schedule."
 
 ### Step 1: Quantify Aggregate Risk Exposure
 
@@ -43,7 +43,7 @@ For each risk in the program's risk register, calculate the expected impact:
 | RISK-004: Regulatory review extended | 50% | 2 | 1.0 |
 | **Aggregate expected impact** | | | **5.0 weeks** |
 
-The aggregate expected impact is the statistically expected total slip from all risks — assuming risks are independent. But not all risks are independent. A vendor delay and a regulatory delay might be uncorrelated. Two dependency risks on the same target team are highly correlated.
+The aggregate expected impact is the statistically expected total slip from all risks, assuming risks are independent. But not all risks are independent. A vendor delay and a regulatory delay might be uncorrelated. Two dependency risks on the same target team are highly correlated.
 
 ### Step 2: Adjust for Correlation
 
@@ -53,7 +53,7 @@ The aggregate expected impact is the statistically expected total slip from all 
 | Risks in the same program phase | Overlap in timing increases resource contention; modest upward adjustment |
 | Independent risks | Expected impact sums linearly |
 
-The correlated worst case is what happens if the riskiest cluster fires at once. Contingency should cover the expected case, with awareness of the correlated worst case. If the expected case is 5 weeks and the correlated worst case is 12 weeks, the program cannot carry 12 weeks of contingency — but the sponsor must know the 12-week number exists.
+The correlated worst case is what happens if the riskiest cluster fires at once. Contingency should cover the expected case, with awareness of the correlated worst case. If the expected case is 5 weeks and the correlated worst case is 12 weeks, the program cannot carry 12 weeks of contingency, but the sponsor must know the 12-week number exists.
 
 ### Step 3: Set Contingency Levels
 
@@ -78,13 +78,13 @@ Most programs use a mix. A program with a fixed external date (regulatory deadli
 
 ## Contingency Allocation
 
-Contingency is held at the program level, not distributed to workstreams. The moment contingency is allocated to individual teams, it disappears — every team consumes its buffer "just in case" and the program buffer is gone.
+Contingency is held at the program level, not distributed to workstreams. The moment contingency is allocated to individual teams, it disappears: every team consumes its buffer "just in case" and the program buffer is gone.
 
 | Allocation Principle | Rationale |
 |---------------------|-----------|
 | **Program holds the buffer** | Workstreams plan to their realistic dates; the program holds the aggregate buffer |
 | **Workstreams know the buffer exists** | Transparency prevents double-buffering (teams add their own hidden buffer on top) |
-| **Buffer is released against specific, validated needs** | "We need two weeks because the vendor slipped" — not "we need two weeks because we are behind" |
+| **Buffer is released against specific, validated needs** | "We need two weeks because the vendor slipped", not "we need two weeks because we are behind" |
 | **Scope contingency is pre-negotiated** | The sponsor agrees which scope can be cut before the pressure to cut it arrives |
 
 The TPM is the buffer's gatekeeper. Releasing buffer is a program decision, not a workstream request. The TPM validates the need against the risk register and the program's contingency consumption tracking.
@@ -101,11 +101,12 @@ The TPM is the buffer's gatekeeper. Releasing buffer is a program decision, not 
 | **Consumption rate** | Buffer consumed per reporting period | Runway: at current rate, when does contingency run out? |
 | **Consumption by source** | Which risks consumed the buffer? | Are the risks we anticipated consuming it, or are new ones? |
 
-The TPM tracks contingency consumption as a primary program metric — alongside schedule and budget. A program that has consumed 80% of its contingency at the 50% completion point is a program that will run out of buffer before it finishes.
+The TPM tracks contingency consumption as a primary program metric, alongside schedule and budget. A program that has consumed 80% of its contingency at the 50% completion point is a program that will run out of buffer before it finishes.
 
 ### Contingency Burn-Down
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     START["Program start: 100% contingency"] --> MID["Mid-program: contingency consumed as risks fire"]
     MID --> CHECK{"Contingency remaining ≥ remaining risk exposure?"}
@@ -113,11 +114,11 @@ flowchart LR
     CHECK -->|No| ESCALATE["Escalate: contingency gap; sponsor decision needed"]
 ```
 
-The TPM compares contingency remaining against remaining risk exposure at every major review. If the gap is negative — remaining contingency is less than remaining expected impact — the TPM escalates to the sponsor with options: release additional contingency (if available), cut scope, renegotiate the date, or accept the risk.
+The TPM compares contingency remaining against remaining risk exposure at every major review. If the gap is negative (remaining contingency is less than remaining expected impact), the TPM escalates to the sponsor with options: release additional contingency (if available), cut scope, renegotiate the date, or accept the risk.
 
 ### Contingency Replenishment
 
-Contingency can sometimes be replenished — not by asking for more, but by retiring risks:
+Contingency can sometimes be replenished, not by asking for more, but by retiring risks:
 
 | Replenishment Source | How It Works |
 |---------------------|-------------|
@@ -142,7 +143,7 @@ Contingency communication is delicate. Announcing "we have three months of buffe
 ## Practical Applications
 
 - [ ] Program contingency is sized against quantified aggregate risk exposure, not an arbitrary percentage
-- [ ] Contingency is held at the program level — not distributed to workstreams
+- [ ] Contingency is held at the program level, not distributed to workstreams
 - [ ] Multiple contingency types are used: schedule, budget, scope, resources
 - [ ] Contingency consumption is tracked as a primary program metric
 - [ ] Remaining contingency is compared against remaining risk exposure at every major review
@@ -152,7 +153,7 @@ Contingency communication is delicate. Announcing "we have three months of buffe
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
-| **Arbitrary contingency** | "Add 20%" — not tied to actual risk exposure | Size against quantified aggregate expected impact |
+| **Arbitrary contingency** | "Add 20%", not tied to actual risk exposure | Size against quantified aggregate expected impact |
 | **Distributed contingency** | Every team adds its own buffer; total buffer is consumed before the program starts | Program holds the buffer; workstreams plan to realistic dates |
 | **Contingency as scope magnet** | "We have buffer, let's add features" | Contingency is for risk absorption; scope changes are separate decisions |
 | **No consumption tracking** | Buffer erodes silently; program discovers it is gone when a risk fires | Track consumption as a primary metric; escalate when the gap appears |
@@ -160,8 +161,8 @@ Contingency communication is delicate. Announcing "we have three months of buffe
 
 ## Success Indicators
 
-- The program completes within its contingency envelope — buffer is consumed but not exhausted
-- Contingency consumption tracks against anticipated risks — the risks that were expected to consume buffer did
+- The program completes within its contingency envelope. Buffer is consumed but not exhausted
+- Contingency consumption tracks against anticipated risks: the risks that were expected to consume buffer did
 - Contingency gap (if any) is identified and escalated before the buffer runs out
 - The sponsor can state the program's contingency position at every review
 
@@ -170,8 +171,8 @@ Contingency communication is delicate. Announcing "we have three months of buffe
 - [[02_Risk_Identification_and_Assessment]]: the risk assessment that drives contingency sizing
 - [[03_Risk_Response_Planning]]: mitigation reduces the need for contingency
 - [[06_Risk_Escalation_and_Communication]]: contingency gap as an escalation trigger
-- [[../03_Dependency_Management/05_Dependency_Risk_and_Contingency|Dependency Risk and Contingency]]: dependency-specific contingency
+- [[career-path/12_Technical_Program_Manager/03_Dependency_Management/05_Dependency_Risk_and_Contingency|Dependency Risk and Contingency]]: dependency-specific contingency
 
 ## Summary
 
-Program contingency planning is the TPM's buffer discipline: contingency (time, budget, scope, resources) sized against quantified aggregate risk exposure, held at the program level, consumed against validated needs, and tracked as a primary program metric. The TPM compares remaining contingency against remaining risk exposure at every major review — and escalates when the gap turns negative. A program that completes within its contingency is a program where risk management worked. A program that exhausts its contingency early is a program where either the risk assessment was wrong, the mitigations failed, or the contingency was consumed silently — and all three are TPM failures.
+Program contingency planning is the TPM's buffer discipline: contingency (time, budget, scope, resources) sized against quantified aggregate risk exposure, held at the program level, consumed against validated needs, and tracked as a primary program metric. The TPM compares remaining contingency against remaining risk exposure at every major review, and escalates when the gap turns negative. A program that completes within its contingency is a program where risk management worked. A program that exhausts its contingency early is a program where either the risk assessment was wrong, the mitigations failed, or the contingency was consumed silently, and all three are TPM failures.

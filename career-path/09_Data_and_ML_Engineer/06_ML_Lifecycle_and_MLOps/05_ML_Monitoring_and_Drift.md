@@ -85,7 +85,7 @@ Design a monitoring system for a deployed model:
 - [[02_Feature_Engineering_and_Feature_Store]]: feature store provides monitoring data
 - [[04_Model_Serving_and_Inference]]: monitoring deployed models
 - [[03_Model_Training_and_Evaluation]]: retraining uses the same evaluation framework
-- [[07_Production_Engineering/03_Reliability_and_Fault_Tolerance|Reliability and Fault Tolerance]]: monitoring as part of reliability
+- [[career-path/09_Data_and_ML_Engineer/07_Production_Engineering/03_Reliability_and_Fault_Tolerance|Reliability and Fault Tolerance]]: monitoring as part of reliability
 
 ## Common Pitfalls
 

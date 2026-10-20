@@ -17,13 +17,13 @@ tags:
 
 # Measuring Strategy Impact at Scale
 
-> **Core skill:** The principal engineer defines org-wide technology metrics that measure strategic outcomes — not team velocity — establishing board-level technology KPIs, measuring what the strategy changed, and conducting the annual strategy impact review.
+> **Core skill:** The principal engineer defines org-wide technology metrics that measure strategic outcomes, not team velocity, establishing board-level technology KPIs, measuring what the strategy changed, and conducting the annual strategy impact review.
 
 ## Why This Matters
 
 Organizations measure what they manage, but most technology measurement is inward-facing: velocity, uptime, throughput. These metrics tell you whether teams are busy, not whether the strategy is working. The principal engineer bridges this gap: defining metrics that connect technology investment to strategic outcomes and measuring what the strategy actually changed.
 
-Without strategic measurement, strategy is a belief system, not a management discipline. The principal makes strategy testable by defining the metrics that would show it is working — and the metrics that would show it is not.
+Without strategic measurement, strategy is a belief system, not a management discipline. The principal makes strategy testable by defining the metrics that would show it is working, and the metrics that would show it is not.
 
 ## Strategic Outcomes vs Operational Metrics
 
@@ -64,6 +64,7 @@ The board needs a small set of technology metrics that connect to business outco
 The most important measurement is the counterfactual: what is different because the strategy existed? This requires measuring before the strategy, establishing targets, and measuring after.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     BASELINE["Establish baseline: measure current state before strategy"] --> TARGETS["Set targets: what the strategy intends to change"]
     TARGETS --> LEADING["Leading indicators: early signals the strategy is working"]
@@ -175,7 +176,7 @@ The principal maintains a dashboard that makes strategy impact visible at a glan
 - [[01_Technology_Strategy_at_Enterprise_Scale]]
 - [[03_Investment_Strategy_and_Capital_Allocation]]
 - [[05_Technology_Portfolio_Management]]
-- [[05_Future_Readiness_and_Research/00_overview|Future Readiness and Research]]
+- [[career-path/04_Principal_and_Distinguished_Engineer/05_Future_Readiness_and_Research/00_overview|Future Readiness and Research]]
 - [[career-path/03_Staff_Engineer/03_Technical_Strategy/05_Strategy_Review_and_Adaptation|Strategy Review and Adaptation (Staff)]]
 
 ## Summary

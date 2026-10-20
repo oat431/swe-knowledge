@@ -59,6 +59,7 @@ Review the factors separately before choosing an overall level. Do not hide an u
 ### 4. Treatment flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     FINDING["Describe risk scenario"] --> FACTORS["Review consequence feasibility exposure detection"]
     FACTORS --> APPETITE["Compare with risk appetite"]
@@ -119,7 +120,7 @@ Take three open security findings or threat scenarios from a current project.
 
 - [[04_STRIDE_and_Abuse_Cases|STRIDE and Abuse Cases]]
 - [[06_Threat_Model_Maintenance|Threat Model Maintenance]]
-- [[02_Secure_Architecture_and_Design/04_Secure_Architecture_Decisions|Secure Architecture Decisions]]
+- [[career-path/08_Security_Engineer/02_Secure_Architecture_and_Design/04_Secure_Architecture_Decisions|Secure Architecture Decisions]]
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]
 - [[software-engineering-note/13_Software_Security/01_Security_Fundamentals|Security Fundamentals]]
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]

@@ -26,6 +26,7 @@ The difference is not technical complexity. It is **treating observability as a 
 ## The Observability-Driven Development Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     DESIGN["Design\n(define observability requirements)"] --> BUILD["Build\n(instrument code)"]
     BUILD --> TEST["Test\n(verify observability)"]
@@ -230,7 +231,7 @@ Establish standards for consistency:
 - [[02_Structured_Logging]] : logs provide context and details
 - [[03_Distributed_Tracing]] : traces show request flow
 - [[04_Alerting_Strategy]] : alerts turn observability data into action
-- [[06_Developer_Platform/03_Golden_Paths]] : golden paths include observability standards
+- [[career-path/07_SRE_and_Platform_Engineer/06_Developer_Platform/03_Golden_Paths]] : golden paths include observability standards
 - [[software-engineering-note/06_Software_Engineering_Operations/04_Amplifying_Feedback]] : feedback loops in DevOps
 
 ## Key Takeaways

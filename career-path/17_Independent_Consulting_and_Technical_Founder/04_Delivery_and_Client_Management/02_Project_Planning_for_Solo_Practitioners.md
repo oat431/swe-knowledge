@@ -17,15 +17,15 @@ tags:
 
 # Project Planning for Solo Practitioners
 
-> **Core skill:** Planning work realistically for one pair of hands — sequencing, buffers, and capacity limits that survive actual reality rather than an idealized calendar.
+> **Core skill:** Planning work realistically for one pair of hands: sequencing, buffers, and capacity limits that survive actual reality rather than an idealized calendar.
 
 ## Why This Matters
 
-Solo planning fails differently from team planning. On a team, a wrong estimate is absorbed by collective capacity; there are others to review, to cover a sick day, to carry two workstreams in parallel. On your own, every plan is a plan for one person's finite week, and every assumption about availability is also an assumption about your health, focus, and admin load. A plan that assumes a perfect calendar is not optimistic — it is fiction, and fiction collapses at the first integration problem.
+Solo planning fails differently from team planning. On a team, a wrong estimate is absorbed by collective capacity; there are others to review, to cover a sick day, to carry two workstreams in parallel. On your own, every plan is a plan for one person's finite week, and every assumption about availability is also an assumption about your health, focus, and admin load. A plan that assumes a perfect calendar is not optimistic. It is fiction, and fiction collapses at the first integration problem.
 
 The core discipline is planning at realistic capacity. Independent work is roughly half billable at best: sales, invoicing, learning, support, and admin consume the rest, and none of it pauses for a delivery deadline. Estimates calibrated on your best days become deadlines missed on the merely human ones. Planning at around sixty to seventy percent of nominal capacity is not slack; it is the correction that makes commitments keepable.
 
-The plan is also a communication instrument. Milestones that appear weekly keep the client oriented and provide early warning when something slips. One enormous milestone at the end hides all risk until it is too late to react. Designing the sequence — small checkpoints, visible progress, buffers attached to the risky parts — sets the engagement up to succeed in front of witnesses.
+The plan is also a communication instrument. Milestones that appear weekly keep the client oriented and provide early warning when something slips. One enormous milestone at the end hides all risk until it is too late to react. Designing the sequence (small checkpoints, visible progress, buffers attached to the risky parts) sets the engagement up to succeed in front of witnesses.
 
 ## Planning Assumptions for a Firm of One
 
@@ -40,7 +40,7 @@ The plan is also a communication instrument. Milestones that appear weekly keep 
 
 ## The 60 Percent Rule
 
-Plan no more than roughly sixty to seventy percent of nominal working hours as delivery time. The remainder is not waste — it is admin, sales, support, learning, and the buffer that absorbs estimation error. A forty-hour week yields about twenty-four to twenty-eight planned delivery hours, and plans built above that mark borrow from future weeks at a compounding interest rate.
+Plan no more than roughly sixty to seventy percent of nominal working hours as delivery time. The remainder is not waste. It is admin, sales, support, learning, and the buffer that absorbs estimation error. A forty-hour week yields about twenty-four to twenty-eight planned delivery hours, and plans built above that mark borrow from future weeks at a compounding interest rate.
 
 ## Estimating With Honest Buffers
 
@@ -66,6 +66,7 @@ The gap between the raw estimate and the committed one is not padding to be quie
 | Buffer attached to risky milestones | Uncertainty lives where it actually is | Uniform padding everywhere |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SCOPE["Scope from the statement of work"] --> BREAK["Break into deliverables"]
     BREAK --> EST["Estimate from historical hours"]
@@ -124,5 +125,5 @@ flowchart LR
 
 ## Summary
 
-Solo planning is capacity arithmetic done honestly: one pair of hands, roughly half of working time billable, buffers that live where the risk is, and milestones small enough to see. Estimate from history, commit at about sixty percent of nominal capacity, sequence the riskiest work early, and keep the client oriented with weekly visible progress. The plan is not a prediction — it is the correction that keeps commitments keepable.
+Solo planning is capacity arithmetic done honestly: one pair of hands, roughly half of working time billable, buffers that live where the risk is, and milestones small enough to see. Estimate from history, commit at about sixty percent of nominal capacity, sequence the riskiest work early, and keep the client oriented with weekly visible progress. The plan is not a prediction. It is the correction that keeps commitments keepable.
 

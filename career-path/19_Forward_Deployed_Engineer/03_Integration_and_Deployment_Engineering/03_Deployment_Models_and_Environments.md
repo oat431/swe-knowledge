@@ -16,13 +16,13 @@ tags:
 
 # Deployment Models and Environments
 
-> **Core skill:** On-prem, VPC, hybrid, air-gapped — choosing the model that fits the customer's security and network posture, and living inside its consequences for updates, telemetry, and support.
+> **Core skill:** On-prem, VPC, hybrid, air-gapped: choosing the model that fits the customer's security and network posture, and living inside its consequences for updates, telemetry, and support.
 
 ## Why This Matters
 
-The deployment model is decided long before the FDE arrives. It follows from the customer's security posture, network architecture, regulatory obligations, and procurement history — not from engineering preference. A bank may require everything inside its own data centers; a healthcare customer may accept a dedicated cloud tenancy in an approved region; a defense-adjacent organization may require an air-gapped installation updated through physical media. The FDE's first job is to learn which model the customer has chosen and why, because that choice shapes every later decision: how software ships, how problems are debugged, how logs are collected, and who can touch what.
+The deployment model is decided long before the FDE arrives. It follows from the customer's security posture, network architecture, regulatory obligations, and procurement history, not from engineering preference. A bank may require everything inside its own data centers; a healthcare customer may accept a dedicated cloud tenancy in an approved region; a defense-adjacent organization may require an air-gapped installation updated through physical media. The FDE's first job is to learn which model the customer has chosen and why, because that choice shapes every later decision: how software ships, how problems are debugged, how logs are collected, and who can touch what.
 
-Each model changes the operational physics of the deployment. In a SaaS tenancy, upgrades are continuous and telemetry flows freely. Behind a customer VPC, the FDE needs their cooperation to see anything. On-premise, the FDE may be a visitor in someone else's data center with escort and change windows. Air-gapped, there is no remote path at all: releases travel on media, debugging is done from cold backups of logs, and every intervention is a scheduled visit. None of these are better or worse in the abstract — they are different constraint sets, and the design must be honest about which one it serves.
+Each model changes the operational physics of the deployment. In a SaaS tenancy, upgrades are continuous and telemetry flows freely. Behind a customer VPC, the FDE needs their cooperation to see anything. On-premise, the FDE may be a visitor in someone else's data center with escort and change windows. Air-gapped, there is no remote path at all: releases travel on media, debugging is done from cold backups of logs, and every intervention is a scheduled visit. None of these are better or worse in the abstract. They are different constraint sets, and the design must be honest about which one it serves.
 
 Fitting into the environment is as much a social task as a technical one. Firewall rules, TLS inspection, proxies, certificate authorities, load balancers, and maintenance calendars belong to other teams with their own queues and priorities. The FDE who learns those teams' processes, lead times, and vocabulary early gets changes approved in days; the one who treats them as friction waits weeks. The deployment succeeds when the environment accepts it as a tenant, not as an intruder.
 
@@ -46,9 +46,10 @@ Fitting into the environment is as much a social task as a technical one. Firewa
 | Secrets and keys | Vendor-managed | Split responsibilities | Customer-managed key material | Everything stays inside |
 | Scaling | Elastic | Within account limits | Hardware-bound | Hardware-bound, pre-planned |
 
-The pattern to internalize: the more closed the environment, the more the FDE must compensate with preparation — pre-arranged access, richer local diagnostics, and updates batched into fewer, bigger, well-drilled events.
+The pattern to internalize: the more closed the environment, the more the FDE must compensate with preparation (pre-arranged access, richer local diagnostics, and updates batched into fewer, bigger, well-drilled events).
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CHOOSE["Choose the model with the customer"] --> PREPARE["Prepare network and identity"]
     PREPARE --> INSTALL["Install and configure"]
@@ -82,7 +83,7 @@ flowchart LR
 ### Environment Fit Sheet
 
 ```markdown
-## Environment Fit — <customer, environment, date>
+## Environment Fit: <customer, environment, date>
 
 | Field | Value |
 |-------|-------|
@@ -118,10 +119,10 @@ flowchart LR
 
 - [[01_Enterprise_Integration_Patterns]]
 - [[02_Data_Pipelines_in_Customer_Environments]]
-- [[04_AI_Systems_in_Customer_Environments/00_overview|AI Systems in Customer Environments]]
+- [[career-path/19_Forward_Deployed_Engineer/04_AI_Systems_in_Customer_Environments/00_overview|AI Systems in Customer Environments]]
 - [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]]
 - [[software-engineering-note/06_Software_Engineering_Operations/Fundamental/13 CI CD Pipelines|CI CD Pipelines]]
 
 ## Summary
 
-Deployment models and environments are the physics of forward-deployed work: the customer's security posture picks the model, and the model dictates how software ships, how problems are seen, and how much freedom the FDE has inside the boundary. The craft is to choose and fit with the local realities — network, identity, change process, telemetry — with the same care given to the software itself, so the deployment is accepted as a tenant of the environment rather than fought by it.
+Deployment models and environments are the physics of forward-deployed work: the customer's security posture picks the model, and the model dictates how software ships, how problems are seen, and how much freedom the FDE has inside the boundary. The craft is to choose and fit with the local realities (network, identity, change process, telemetry), with the same care given to the software itself, so the deployment is accepted as a tenant of the environment rather than fought by it.

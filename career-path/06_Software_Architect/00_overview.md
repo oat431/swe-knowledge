@@ -44,17 +44,18 @@ Architecture scope varies. An architect may work within one product, across a pl
 
 | Capability | Architect behavior | Detailed notes |
 |---|---|---|
-| Architecture fundamentals | Distinguishes architecture from implementation detail; understands patterns, styles, and significance | [[01_Architecture_Fundamentals/00_overview]] |
-| Quality attribute analysis | Converts stakeholder quality needs into measurable scenarios and design responses | [[02_Quality_Attribute_Analysis/00_overview]] |
-| Architecture description and views | Communicates structure to diverse stakeholders using views and viewpoints | [[03_Architecture_Description_and_Views/00_overview]] |
-| Evaluation and trade-offs | Uses structured evaluation and explicit trade-off analysis instead of opinion | [[04_Architecture_Evaluation_and_Trade_Offs/00_overview]] |
-| Security architecture | Designs security into system structure: trust boundaries, patterns, and threat modeling | [[05_Security_Architecture/00_overview]] |
-| Data architecture | Designs data ownership, flow, storage, and lifecycle at the architecture level | [[06_Data_Architecture/00_overview]] |
-| Operations and infrastructure architecture | Designs deployment, resilience, observability, and infrastructure into the structure | [[07_Operations_and_Infrastructure_Architecture/00_overview]] |
+| Architecture fundamentals | Distinguishes architecture from implementation detail; understands patterns, styles, and significance | [[career-path/06_Software_Architect/01_Architecture_Fundamentals/00_overview]] |
+| Quality attribute analysis | Converts stakeholder quality needs into measurable scenarios and design responses | [[career-path/06_Software_Architect/02_Quality_Attribute_Analysis/00_overview]] |
+| Architecture description and views | Communicates structure to diverse stakeholders using views and viewpoints | [[career-path/06_Software_Architect/03_Architecture_Description_and_Views/00_overview]] |
+| Evaluation and trade-offs | Uses structured evaluation and explicit trade-off analysis instead of opinion | [[career-path/06_Software_Architect/04_Architecture_Evaluation_and_Trade_Offs/00_overview]] |
+| Security architecture | Designs security into system structure: trust boundaries, patterns, and threat modeling | [[career-path/06_Software_Architect/05_Security_Architecture/00_overview]] |
+| Data architecture | Designs data ownership, flow, storage, and lifecycle at the architecture level | [[career-path/06_Software_Architect/06_Data_Architecture/00_overview]] |
+| Operations and infrastructure architecture | Designs deployment, resilience, observability, and infrastructure into the structure | [[career-path/06_Software_Architect/07_Operations_and_Infrastructure_Architecture/00_overview]] |
 
 ## Typical Progression
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SENIOR["Senior Software Engineer"] --> DECISIONS["Make significant design decisions"]
     DECISIONS --> SYSTEM["Shape system architecture"]

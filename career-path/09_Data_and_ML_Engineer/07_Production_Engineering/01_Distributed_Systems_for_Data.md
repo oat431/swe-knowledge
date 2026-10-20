@@ -78,8 +78,8 @@ Design a distributed data system for a multi-region e-commerce platform:
 - [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]]: distributed systems fundamentals
 - [[02_Scaling_and_Performance_Tuning]]: partitioning affects query performance
 - [[03_Reliability_and_Fault_Tolerance]]: consistency choices affect failure behavior
-- [[01_Data_Architecture/00_overview|Data Architecture]]: distributed systems are an architectural choice
-- [[03_Data_Integration_and_Interoperability/00_overview|Data Integration]]: consistency across integrated systems
+- [[career-path/09_Data_and_ML_Engineer/01_Data_Architecture/00_overview|Data Architecture]]: distributed systems are an architectural choice
+- [[career-path/09_Data_and_ML_Engineer/03_Data_Integration_and_Interoperability/00_overview|Data Integration]]: consistency across integrated systems
 
 ## Common Pitfalls
 

@@ -75,7 +75,7 @@ tags:
 | Priority | Proposed note / module | What it should contain |
 |---|---|---|
 | 🎯 High | `08_ML_Engineering_Foundations/` | `01_Evaluation_Metrics_and_Baselines`, `02_Data_Leakage_and_Split_Discipline`, `03_Experimentation_and_AB_Testing`, `04_Training_at_Scale_and_GPUs`, `05_Model_Optimization_for_Serving` |
-| 🎯 High | `03_Data_Integration_and_Interoperability/07_Unstructured_Data_and_Embedding_Pipelines.md` | Document ingestion, chunking, embedding refresh, vector store choices, lineage for AI data; cross-link [[career-path/18_Applied_AI_Engineer/00_overview\|Applied AI Engineer]] |
+| 🎯 High | `03_Data_Integration_and_Interoperability/07_Unstructured_Data_and_Embedding_Pipelines.md` | Document ingestion, chunking, embedding refresh, vector store choices, lineage for AI data; cross-link [[career-path/18_Applied_AI_Engineer/00_overview|Applied AI Engineer]] |
 | 🎯 High | Deepen modules 03 and 04 | Watermarks, event time, and state for streaming; worked validation and observability examples for quality |
 | Medium | `02_Data_Modeling_and_Design/07_Dimensional_Modeling.md` | Star schemas, slowly changing dimensions, grain, and when to use Data Vault |
 | Medium | `01_Data_Architecture/07_Data_as_a_Product.md` | Dataset SLOs, ownership, consumer contracts, deprecation |
@@ -94,7 +94,7 @@ tags:
 | 04 Data Quality | ⚠️ Short (707–808w) | Add worked examples; fix navigation |
 | 05 Data Security & Privacy | ✅ Good | Cross-link Security Engineer module 05 |
 | 06 ML Lifecycle & MLOps | ⚠️ The only ML module | Add ML foundations, experimentation, training at scale |
-| 07 Production Engineering | ✅ Good | — |
+| 07 Production Engineering | ✅ Good | N/A |
 
 ## Quick Fixes
 

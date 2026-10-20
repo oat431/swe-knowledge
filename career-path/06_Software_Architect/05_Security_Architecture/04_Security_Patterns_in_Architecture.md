@@ -16,13 +16,13 @@ tags:
 
 # Security Patterns in Architecture
 
-> **Core skill:** The architect selects and composes structural security patterns — gateways, authentication brokers, secure channels, audit trails — as the system's standing answer to classes of threats, not as per-incident fixes.
+> **Core skill:** The architect selects and composes structural security patterns (gateways, authentication brokers, secure channels, audit trails) as the system's standing answer to classes of threats, not as per-incident fixes.
 
 ## Why This Matters
 
-A threat model tells you what can go wrong; a security pattern tells you what shape prevents it — repeatedly, across every future feature. Patterns are the architecture's standing answers: the gateway that always authenticates, the broker that always verifies identity, the audit trail that always records. Teams copy structures, not policies. A policy memo is forgotten within a quarter; a pattern is inherited by every service built inside it.
+A threat model tells you what can go wrong; a security pattern tells you what shape prevents it, repeatedly, across every future feature. Patterns are the architecture's standing answers: the gateway that always authenticates, the broker that always verifies identity, the audit trail that always records. Teams copy structures, not policies. A policy memo is forgotten within a quarter; a pattern is inherited by every service built inside it.
 
-Pattern selection is driven by the threat model. A pattern that does not map to a real threat is cost without benefit, and security patterns are expensive: latency hops, new availability dependencies, certificate lifecycles, operational burden. The architect's discipline is to name the threat each pattern addresses, the residual paths it leaves open, and the cost it imposes — then choose the smallest composition that covers the model.
+Pattern selection is driven by the threat model. A pattern that does not map to a real threat is cost without benefit, and security patterns are expensive: latency hops, new availability dependencies, certificate lifecycles, operational burden. The architect's discipline is to name the threat each pattern addresses, the residual paths it leaves open, and the cost it imposes, then choose the smallest composition that covers the model.
 
 Patterns also compose. The gateway authenticates at the edge, the broker verifies identity, the token service issues scoped credentials, the channel protects each hop, the audit trail records decisions, and detection watches the seams. No single pattern delivers the security posture; the composition does. Composition has rules: one mechanism per job, re-verification at each boundary, and failure behavior that defaults to deny or degrade.
 
@@ -54,6 +54,7 @@ Patterns also compose. The gateway authenticates at the edge, the broker verifie
 ## Composing Patterns
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CLIENT["Client"] --> GATEWAY["API gateway authenticates and limits"]
     GATEWAY --> BROKER["Authentication broker verifies identity"]
@@ -62,7 +63,7 @@ flowchart LR
     SERVICES --> AUDIT["Audit trail records security decisions"]
 ```
 
-Composition rules: one mechanism per job — two overlapping authentication layers that fail together are not depth; re-verification at each boundary — authentication does not transfer across hops; and explicit failure behavior — every pattern in the chain has a defined answer for its own unavailability.
+Composition rules: one mechanism per job (two overlapping authentication layers that fail together are not depth); re-verification at each boundary (authentication does not transfer across hops); and explicit failure behavior (every pattern in the chain has a defined answer for its own unavailability).
 
 ## Intrusion Detection Placement
 
@@ -88,7 +89,7 @@ Detection is also an architectural choice: you choose where sensors can see, and
 ### Pattern Selection Record
 
 ```markdown
-## Pattern Selection Record — <system>
+## Pattern Selection Record: <system>
 
 | Pattern | Threat Addressed | Alternative Rejected | Residual Paths Left Open | Cost Accepted | Owner |
 |---------|------------------|----------------------|--------------------------|---------------|-------|
@@ -121,8 +122,8 @@ Detection is also an architectural choice: you choose where sensors can see, and
 - [[01_Secure_by_Design_Principles]]
 - [[03_Threat_Modeling_Architecture_Level]]
 - [[05_Identity_and_Access_Architecture]]
-- [[04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]]
+- [[career-path/06_Software_Architect/04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]]
 
 ## Summary
 
-Security patterns are the architecture's standing answers to threat classes: gateway, authentication broker, claim-based identity, secure channel, token service, audit trail, secrets broker, and deliberately placed detection. The architect selects each pattern against the threat model, composes them so that every boundary is mediated and every failure has a defined default, and pays each pattern's cost with eyes open. The composition — not any single pattern — is what the system is defended by.
+Security patterns are the architecture's standing answers to threat classes: gateway, authentication broker, claim-based identity, secure channel, token service, audit trail, secrets broker, and deliberately placed detection. The architect selects each pattern against the threat model, composes them so that every boundary is mediated and every failure has a defined default, and pays each pattern's cost with eyes open. The composition (not any single pattern) is what the system is defended by.

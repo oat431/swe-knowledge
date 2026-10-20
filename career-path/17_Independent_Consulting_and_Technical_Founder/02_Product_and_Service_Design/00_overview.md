@@ -14,13 +14,13 @@ tags:
 
 # Product and Service Design
 
-> **Core capability:** The independent defines what they sell — a clear offer, scope, value proposition, pricing model, and delivery experience — designed so customers buy confidently and engagements succeed.
+> **Core capability:** The independent defines what they sell (a clear offer, scope, value proposition, pricing model, and delivery experience) designed so customers buy confidently and engagements succeed.
 
 ## Why This Matters
 
-Independents sell two different things: services (time, expertise, outcomes) and products (software, content, platforms) — often a mix. Both require offer design: what exactly is being sold, to whom, at what price, with what scope, and what the customer experiences from first contact to final delivery.
+Independents sell two different things: services (time, expertise, outcomes) and products (software, content, platforms), often a mix. Both require offer design: what exactly is being sold, to whom, at what price, with what scope, and what the customer experiences from first contact to final delivery.
 
-A well-designed offer sells itself: the customer knows what they get, what it costs, and why it matters. A vague offer creates endless scoping conversations, price negotiations, and scope creep. The design work happens before the sale — and it is where the most profitable hours are spent.
+A well-designed offer sells itself: the customer knows what they get, what it costs, and why it matters. A vague offer creates endless scoping conversations, price negotiations, and scope creep. The design work happens before the sale, and it is where the most profitable hours are spent.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ A well-designed offer sells itself: the customer knows what they get, what it co
 ## The Offer Stack
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     VALUE["Value proposition: why you"] --> OFFER["Offer: what exactly is sold"]
     OFFER --> PRICE["Price: model and level"]
@@ -44,7 +45,7 @@ flowchart TD
     SCOPE --> EXPERIENCE["Experience: how it feels to buy"]
 ```
 
-Customers buy the whole stack — a great offer with a bad experience churns.
+Customers buy the whole stack. A great offer with a bad experience churns.
 
 ## Practical Applications
 
@@ -74,11 +75,11 @@ Customers buy the whole stack — a great offer with a bad experience churns.
 
 ## Related Capabilities
 
-- [[01_Problem_Discovery_and_Customer_Validation/00_overview|Problem Discovery and Customer Validation]]: offers are designed from validated problems
-- [[03_Business_Case_and_Economics/00_overview|Business Case and Economics]]: offers must be economically viable
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/01_Problem_Discovery_and_Customer_Validation/00_overview|Problem Discovery and Customer Validation]]: offers are designed from validated problems
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/03_Business_Case_and_Economics/00_overview|Business Case and Economics]]: offers must be economically viable
 - [[career-path/14_Product_Manager/00_overview|Product Manager]]: product discipline the founder applies to their own product
 - [[career-path/16_Developer_Advocate_and_Technical_Consultant/05_Solution_Guidance/00_overview|Solution Guidance (Dev Advocate)]]: consultative scoping in practice
 
 ## Summary
 
-Product and service design turns validated problems into sellable offers: clear value, deliberate pricing, explicit scope, and a designed experience. The offer is the product of the business — design it as carefully as any system.
+Product and service design turns validated problems into sellable offers: clear value, deliberate pricing, explicit scope, and a designed experience. The offer is the product of the business. Design it as carefully as any system.

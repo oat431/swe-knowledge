@@ -19,9 +19,9 @@ tags:
 
 ## Why This Matters
 
-Delivery surprises are rarely sudden. They are risks that were visible weeks earlier and quietly ignored — an integration nobody validated, a scope creep nobody named, a dependency that went quiet. The tech lead's risk practice exists to convert those silent risks into named, owned, dated items while there is still time to act.
+Delivery surprises are rarely sudden. They are risks that were visible weeks earlier and quietly ignored: an integration nobody validated, a scope creep nobody named, a dependency that went quiet. The tech lead's risk practice exists to convert those silent risks into named, owned, dated items while there is still time to act.
 
-Risk management at team level is not a spreadsheet exercise. It is a conversational habit: risks are named at planning, checked against leading indicators through the cycle, and reported to stakeholders in plain language with options. A team that does this well is never the one announcing the crisis — it is the one that predicted the crisis last month and already chose a mitigation.
+Risk management at team level is not a spreadsheet exercise. It is a conversational habit: risks are named at planning, checked against leading indicators through the cycle, and reported to stakeholders in plain language with options. A team that does this well is never the one announcing the crisis. It is the one that predicted the crisis last month and already chose a mitigation.
 
 ## The Team Delivery Risk Register
 
@@ -36,7 +36,7 @@ A risk register earns its existence by being read. The lead keeps it small, curr
 | Owner | One named person | An ownerless risk is a hope |
 | Review date | When the team re-reads it | Every risk expires and must be renewed or closed |
 
-The register lives where the team already looks — in the tracker, next to the plan — not in a document nobody opens. A register of five real risks beats a register of forty theoretical ones; the lead prunes aggressively.
+The register lives where the team already looks (in the tracker, next to the plan), not in a document nobody opens. A register of five real risks beats a register of forty theoretical ones; the lead prunes aggressively.
 
 ## Leading Risk Conversations in Planning
 
@@ -50,7 +50,7 @@ Planning is where risks are cheapest to name and most likely to be skipped. The 
 | Cross-team dependencies | Which external promise has no date we control? | Dependency risks get a counterpart owner |
 | Close of planning | What did we decide not to worry about? | Explicit non-risks prevent re-litigating later |
 
-The lead's rule: every risk named at planning leaves the room with an owner and a review date. Risks that cannot get an owner are either not real risks or are real risks that have already been accepted — and acceptance should be a conscious act, recorded in the register.
+The lead's rule: every risk named at planning leaves the room with an owner and a review date. Risks that cannot get an owner are either not real risks or are real risks that have already been accepted, and acceptance should be a conscious act, recorded in the register.
 
 ## Leading Indicators of Drift
 
@@ -65,7 +65,7 @@ Most risks land slowly, and their approach is visible in signals. The lead watch
 | Estimation divergence on new work | Understanding is uneven across the team | Re-slice or spike before committing |
 | Rising incident or support load | Production is eating delivery capacity | Name it in the register and renegotiate the plan |
 
-These signals are read weekly in a ten-minute pass over the tracker and CI data. The lead's job is not to become a dashboard — it is to notice when a signal repeats and turn it into a register entry with an owner.
+These signals are read weekly in a ten-minute pass over the tracker and CI data. The lead's job is not to become a dashboard. It is to notice when a signal repeats and turn it into a register entry with an owner.
 
 ## Mid-Cycle Drift Detection and Response
 
@@ -79,7 +79,7 @@ The mid-cycle review is where the plan meets reality under supervision. The lead
 | Renegotiation triggers | Did any trigger from the plan fire? | Options presented to stakeholders, decision scheduled |
 | One line per risk | What would change our mind about this risk? | A clear condition for upgrading, downgrading, or closing |
 
-The response to drift follows a fixed order: name the cause, re-estimate the affected work, re-sequence around it, and renegotiate the commitment if the plan cannot absorb it. The team never absorbs drift silently — that is how a small slip becomes a missed quarter.
+The response to drift follows a fixed order: name the cause, re-estimate the affected work, re-sequence around it, and renegotiate the commitment if the plan cannot absorb it. The team never absorbs drift silently. That is how a small slip becomes a missed quarter.
 
 ## Reporting Risk to Stakeholders
 
@@ -97,7 +97,7 @@ The one-sentence rule: if the lead cannot state the team's top three risks and t
 
 ## Closing Risks Honestly
 
-A risk is closed when its conditions have changed — not when the team is tired of looking at it.
+A risk is closed when its conditions have changed, not when the team is tired of looking at it.
 
 | Close reason | What it means | Register action |
 |--------------|---------------|-----------------|
@@ -111,6 +111,7 @@ Honest closing is what keeps the register credible. A register that only ever gr
 ## The Risk Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     NAME["Name the risk at planning"] --> OWN["Assign an owner and date"]
     OWN --> WATCH["Watch the leading indicators"]
@@ -172,4 +173,4 @@ flowchart LR
 
 ## Summary
 
-Delivery risk management turns quiet hazards into named, owned, dated items. Name risks at planning, watch leading indicators weekly, respond to drift at the mid-cycle check, and report to stakeholders as options with recommendations. A register that is read, pruned, and honestly closed keeps the team predictable — and predictable teams get trusted with harder work.
+Delivery risk management turns quiet hazards into named, owned, dated items. Name risks at planning, watch leading indicators weekly, respond to drift at the mid-cycle check, and report to stakeholders as options with recommendations. A register that is read, pruned, and honestly closed keeps the team predictable, and predictable teams get trusted with harder work.

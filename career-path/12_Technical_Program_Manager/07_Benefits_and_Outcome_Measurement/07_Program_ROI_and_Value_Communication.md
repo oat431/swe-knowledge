@@ -16,17 +16,17 @@ tags:
 
 # Program ROI and Value Communication
 
-> **Core skill:** The TPM communicates program value to leadership and stakeholders in terms they use to make investment decisions — translating outcomes into financial and strategic return, comparing actuals against the business case, and building the evidence base that justifies the next program's funding.
+> **Core skill:** The TPM communicates program value to leadership and stakeholders in terms they use to make investment decisions, translating outcomes into financial and strategic return, comparing actuals against the business case, and building the evidence base that justifies the next program's funding.
 
 ## Why This Matters
 
-Programs are investments. Leadership funds them expecting a return — financial, strategic, or risk-reduction. The TPM who communicates program value in the language of return makes the next funding decision easier. The TPM who communicates in the language of activity — "we completed 12 milestones, delivered 8 features, resolved 45 risks" — leaves leadership to translate activity into value on their own. And leadership, being busy, often does not translate — they remember the program was "busy" but cannot recall what it was worth.
+Programs are investments. Leadership funds them expecting a return, financial, strategic, or risk-reduction. The TPM who communicates program value in the language of return makes the next funding decision easier. The TPM who communicates in the language of activity ("we completed 12 milestones, delivered 8 features, resolved 45 risks") leaves leadership to translate activity into value on their own. And leadership, being busy, often does not translate; they remember the program was "busy" but cannot recall what it was worth.
 
-ROI and value communication is the TPM's upward translation discipline: converting the benefits realization data into the financial and strategic terms that leadership uses to allocate capital. It is not spin. It is not inflating the numbers. It is presenting the honest value the program created in the format that leadership needs to compare it against other investments — and building the credibility that makes the TPM's next program proposal land with trust instead of skepticism.
+ROI and value communication is the TPM's upward translation discipline: converting the benefits realization data into the financial and strategic terms that leadership uses to allocate capital. It is not spin. It is not inflating the numbers. It is presenting the honest value the program created in the format that leadership needs to compare it against other investments, and building the credibility that makes the TPM's next program proposal land with trust instead of skepticism.
 
 ## ROI Calculation for Programs
 
-Program ROI is not a single number — it is a family of calculations that answer different questions.
+Program ROI is not a single number; it is a family of calculations that answer different questions.
 
 | ROI Metric | Formula | Question Answered | When to Use |
 |------------|---------|-------------------|-------------|
@@ -36,7 +36,7 @@ Program ROI is not a single number — it is a family of calculations that answe
 | Benefit-cost ratio | Total Benefit Value / Program Cost | "How many dollars of value per dollar spent?" | Portfolio comparison; prioritization |
 | Avoided cost | Cost that would have been incurred without the program | "What did we not have to spend because of this program?" | Risk reduction, compliance, and infrastructure programs |
 
-The TPM does not need to be a financial analyst — but the TPM needs to know which ROI metric matters to which stakeholder and be able to produce it from the benefits data.
+The TPM does not need to be a financial analyst, but the TPM needs to know which ROI metric matters to which stakeholder and be able to produce it from the benefits data.
 
 ## Communicating Value to Different Audiences
 
@@ -45,7 +45,7 @@ The TPM does not need to be a financial analyst — but the TPM needs to know wh
 | CFO / Finance | Financial return: cost, revenue, margin impact | ROI metrics; benefit-cost ratio; payback period; comparison to business case |
 | CEO / GM | Strategic impact: market position, competitive advantage, growth | Strategic narrative: "This program enabled our SMB market entry, which is projected to contribute 5% of revenue by 2027" |
 | CTO / VP Engineering | Technical and operational return: scalability, reliability, velocity | Operational metrics: "Deploy frequency 3x, MTTR reduced 75%, infra cost per transaction down 25%" |
-| Board / Investors | Portfolio return: are our investments producing value? | Portfolio narrative: "The $2M investment produced $5M in realized and forecast benefits over 3 years — a 2.5x return" |
+| Board / Investors | Portfolio return: are our investments producing value? | Portfolio narrative: "The $2M investment produced $5M in realized and forecast benefits over 3 years, a 2.5x return" |
 | Program team | Meaning and impact: did our work matter? | Outcome narrative: "Because of what you built, 10,000 SMB customers can now onboard in 2 hours instead of 2 weeks" |
 
 ## The Value Communication Artifacts
@@ -60,7 +60,7 @@ The TPM does not need to be a financial analyst — but the TPM needs to know wh
 
 ## Comparing Actuals to the Business Case
 
-Every program has a business case — the investment thesis that justified its funding. The TPM compares actual outcomes against that thesis.
+Every program has a business case: the investment thesis that justified its funding. The TPM compares actual outcomes against that thesis.
 
 | Business Case Element | How to Compare | Honesty Requirement |
 |-----------------------|----------------|---------------------|
@@ -70,11 +70,11 @@ Every program has a business case — the investment thesis that justified its f
 | Risk assumptions | Did the risks assumed in the business case materialize? | Report which risks crystallized and whether the mitigations worked |
 | Strategic assumptions | Did the market or business conditions assumed in the business case hold? | Report changed conditions and their impact on benefit realization |
 
-The business case comparison is the TPM's accountability to the investment process. An honest comparison — including where the business case was wrong — makes the process better for the next program. A sanitized comparison — where every variance is explained away — makes the process worse, because it teaches the organization that business cases are fiction and actuals are whatever the program chooses to report.
+The business case comparison is the TPM's accountability to the investment process. An honest comparison (including where the business case was wrong) makes the process better for the next program. A sanitized comparison (where every variance is explained away) makes the process worse, because it teaches the organization that business cases are fiction and actuals are whatever the program chooses to report.
 
 ## Building the Evidence Base for the Next Program
 
-The TPM's value communication on this program is the pre-read for the next program's funding request. Leadership that remembers the last program delivered what it promised approves the next one faster. Leadership that remembers the last program's value was unclear or overstated adds scrutiny to the next one — and scrutiny adds cost.
+The TPM's value communication on this program is the pre-read for the next program's funding request. Leadership that remembers the last program delivered what it promised approves the next one faster. Leadership that remembers the last program's value was unclear or overstated adds scrutiny to the next one, and scrutiny adds cost.
 
 | This Program's Value Communication | Effect on Next Program |
 |------------------------------------|------------------------|
@@ -85,6 +85,7 @@ The TPM's value communication on this program is the pre-read for the next progr
 | Benefits sustainment confirmed at 12 months | Proof: the TPM delivers lasting value, not temporary outputs |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     BENEFITS["Benefits realized at closure"] --> ROI["Calculate ROI metrics: simple ROI, payback, BCR"]
     ROI --> COMPARE["Compare actuals to business case: benefits, cost, timeline, assumptions"]
@@ -99,7 +100,7 @@ flowchart TD
 ### Program Value Communication Template
 
 ```markdown
-# Program Value Summary — [Program Name] — [Date]
+# Program Value Summary: [Program Name], [Date]
 
 ## At a Glance
 - Program investment: $[amount] over [duration]
@@ -143,7 +144,7 @@ flowchart TD
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
-| **Activity-as-value** | "We completed 12 milestones" — leadership cannot compare this to other investments | Communicate value in financial and strategic terms |
+| **Activity-as-value** | "We completed 12 milestones": leadership cannot compare this to other investments | Communicate value in financial and strategic terms |
 | **ROI inflation** | Overstated ROI inflates this program's credibility at the cost of the next program's | Calculate ROI honestly; report the range, not the high end |
 | **One-size value communication** | Financial ROI to the engineering team; operational metrics to the board | Tailor the value narrative to the audience's decision language |
 | **Business case dodged** | Actuals are reported without comparison to the business case; nobody learns | Compare actuals to the business case; explain variance honestly |
@@ -162,9 +163,9 @@ flowchart TD
 - [[05_Benefits_Realization_at_Program_Closure]]: the realization data that feeds ROI calculation
 - [[04_Benefits_Tracking_and_Reporting]]: the tracking that builds the evidence over time
 - [[06_Benefits_Sustainment]]: the sustained value that continues the ROI beyond closure
-- [[05_Stakeholder_Alignment/03_Executive_Communication_for_TPMs|Executive Communication for TPMs]]: communicating value to the executive audience
+- [[career-path/12_Technical_Program_Manager/05_Stakeholder_Alignment/03_Executive_Communication_for_TPMs|Executive Communication for TPMs]]: communicating value to the executive audience
 - [[career-path/14_Product_Manager/05_Product_Analytics/00_overview|Product Analytics (PM)]]: the product-side value measurement discipline
 
 ## Summary
 
-Program ROI and value communication is the TPM's translation discipline: converting benefits realization data into the financial and strategic terms that leadership uses to make investment decisions, comparing actuals honestly against the business case, and building the evidence base that makes the next program's funding request land with credibility instead of scrutiny. The TPM who communicates in the language of value — ROI, payback, strategic impact — earns a seat at the investment table. The TPM who communicates in the language of activity manages programs; the TPM who communicates in the language of value manages the portfolio's confidence in program investment.
+Program ROI and value communication is the TPM's translation discipline: converting benefits realization data into the financial and strategic terms that leadership uses to make investment decisions, comparing actuals honestly against the business case, and building the evidence base that makes the next program's funding request land with credibility instead of scrutiny. The TPM who communicates in the language of value (ROI, payback, strategic impact) earns a seat at the investment table. The TPM who communicates in the language of activity manages programs; the TPM who communicates in the language of value manages the portfolio's confidence in program investment.

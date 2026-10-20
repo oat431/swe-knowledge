@@ -14,13 +14,13 @@ tags:
 
 # Technical Direction and Architecture
 
-> **Core capability:** The tech lead points the team's technical work at a destination — a vision, a set of standards, and a decision process that keeps the system coherent without making every decision personally.
+> **Core capability:** The tech lead points the team's technical work at a destination: a vision, a set of standards, and a decision process that keeps the system coherent without making every decision personally.
 
 ## Why This Matters
 
-Without direction, every engineer optimizes locally. The result is not chaos — it is **coherent-looking divergence**: five clean implementations of the same concern, three logging patterns, two half-adopted frameworks, and no one able to say which way the system is going.
+Without direction, every engineer optimizes locally. The result is not chaos. It is **coherent-looking divergence**: five clean implementations of the same concern, three logging patterns, two half-adopted frameworks, and no one able to say which way the system is going.
 
-Direction-setting is the tech lead's most leveraged activity. One clear vision prevents dozens of redundant decisions; one standards document prevents hundreds of inconsistent ones. But direction is not dictatorship — it works when the team can trace decisions to reasoning, and challenge that reasoning safely.
+Direction-setting is the tech lead's most leveraged activity. One clear vision prevents dozens of redundant decisions; one standards document prevents hundreds of inconsistent ones. But direction is not dictatorship. It works when the team can trace decisions to reasoning, and challenge that reasoning safely.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ Direction-setting is the tech lead's most leveraged activity. One clear vision p
 ## How Direction Flows
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     VISION["Vision: where and why"] --> STANDARDS["Standards: how we build"]
     VISION --> ROADMAP["Roadmap: what order"]
@@ -64,7 +65,7 @@ Direction is a loop: the system and the team push back, and the vision adjusts.
 ### Direction Checklist
 
 - [ ] A one-page technical vision exists, is readable, and names non-goals
-- [ ] Standards cover structure, naming, logging, errors, and testing — each with a why
+- [ ] Standards cover structure, naming, logging, errors, and testing, each with a why
 - [ ] Consequential decisions produce ADRs; the team can find them
 - [ ] Design reviews run on a known cadence with written designs read beforehand
 - [ ] Selection decisions follow an evaluation matrix others can audit
@@ -85,12 +86,12 @@ Direction is a loop: the system and the team push back, and the vision adjusts.
 - Engineers cite the vision and ADRs in day-to-day discussions unprompted
 - Decisions you were not part of still land coherent with the direction
 - New engineers converge on team conventions within weeks, not months
-- The roadmap survives contact with product pressure — adjusted, not abandoned
+- The roadmap survives contact with product pressure, adjusted, not abandoned
 
 ## Related Capabilities
 
-- [[01_The_Tech_Lead_Role_and_Operating_Model/00_overview|The Tech Lead Role and Operating Model]]: direction is a core part of the mandate
-- [[06_Process_and_Quality_Stewardship/00_overview|Process and Quality Stewardship]]: standards become real through process
+- [[career-path/05_Tech_Lead/01_The_Tech_Lead_Role_and_Operating_Model/00_overview|The Tech Lead Role and Operating Model]]: direction is a core part of the mandate
+- [[career-path/05_Tech_Lead/06_Process_and_Quality_Stewardship/00_overview|Process and Quality Stewardship]]: standards become real through process
 - [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/00_overview|Architecture and Design Judgment (Senior)]]: the personal judgment skills this area leads with
 - [[career-path/06_Software_Architect/00_overview|Software Architect]]: the neighboring path where direction-setting becomes the whole role
 

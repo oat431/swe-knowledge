@@ -16,15 +16,15 @@ tags:
 
 # Unblocking Escalations
 
-> **Core skill:** Escalating blocked or at-risk dependencies through the program's governance structure — with facts, impact, options, and a recommendation — so that dependencies resolve through decision-making authority rather than stalling indefinitely between teams.
+> **Core skill:** Escalating blocked or at-risk dependencies through the program's governance structure (with facts, impact, options, and a recommendation) so that dependencies resolve through decision-making authority rather than stalling indefinitely between teams.
 
 ## Why This Matters
 
 Most blocked dependencies do not need escalation. The two teams talk, renegotiate the contract, adjust the schedule, and the program absorbs the adjustment. But some dependencies reach a point where the teams cannot resolve the blockage themselves: the providing team refuses to commit to the needed date, the consumer refuses to accept a reduced scope, the external vendor is unresponsive, or the blockage sits across an organizational boundary neither team can cross.
 
-When a dependency reaches this point, the program has two choices: let it stall — which it will, indefinitely, while the critical path accumulates damage — or escalate it through the governance structure to someone with the authority to resolve it. The TPM's job is to escalate correctly: at the right time, to the right person, with the right information, carrying options rather than panic.
+When a dependency reaches this point, the program has two choices: let it stall (which it will, indefinitely, while the critical path accumulates damage) or escalate it through the governance structure to someone with the authority to resolve it. The TPM's job is to escalate correctly: at the right time, to the right person, with the right information, carrying options rather than panic.
 
-Escalation is not failure. It is the governance system working as designed. A program that never escalates is a program where blocked dependencies are absorbed silently — and the program's date drifts without anyone above the TPM understanding why.
+Escalation is not failure. It is the governance system working as designed. A program that never escalates is a program where blocked dependencies are absorbed silently, and the program's date drifts without anyone above the TPM understanding why.
 
 ## The Escalation Decision
 
@@ -39,11 +39,11 @@ Not every dependency problem should be escalated. The TPM applies a decision fil
 | The blockage crosses an organizational boundary (different VP, different company) | The blockage is within a single team's remit |
 | Waiting longer will eliminate the cheap resolution options | Time remains to resolve at the team level |
 
-The escalation threshold is defined in the program's governance charter. The TPM escalates when a dependency crosses it — not before (which wastes governance bandwidth) and not after (which wastes program time).
+The escalation threshold is defined in the program's governance charter. The TPM escalates when a dependency crosses it, not before (which wastes governance bandwidth) and not after (which wastes program time).
 
 ## The Escalation Package
 
-Escalation is not "the dependency is blocked — help." It is a structured package that lets the decision-maker act quickly:
+Escalation is not "the dependency is blocked, help." It is a structured package that lets the decision-maker act quickly:
 
 | Element | Content | Example |
 |---------|---------|---------|
@@ -64,7 +64,7 @@ The package takes the decision-maker from "what is happening?" to "here is what 
 | Option 2 | [Title] | [Benefits] | [Drawbacks] | [High / Medium / Low] |
 | Option 3 | [Title] | [Benefits] | [Drawbacks] | [High / Medium / Low] |
 
-Every escalation carries at least two options, ideally three. "Do nothing" is always an implicit option — the TPM may choose to make it explicit when the impact of inaction needs to be starkly contrasted against the cost of action.
+Every escalation carries at least two options, ideally three. "Do nothing" is always an implicit option: the TPM may choose to make it explicit when the impact of inaction needs to be starkly contrasted against the cost of action.
 
 ## The Escalation Path
 
@@ -88,7 +88,7 @@ The TPM escalates one level at a time unless the blockage requires a higher-leve
 | **Late** | Escalation after the cheap options have expired | The TPM tried to resolve it alone too long; now the program absorbs the damage |
 | **Never** | Blockage absorbed silently; program drifts | The TPM is avoiding conflict or lacks escalation discipline |
 
-The TPM's reputation depends on escalation timing. Early escalators are seen as proactive. On-time escalators are seen as competent. Late escalators are seen as firefighters — exciting to watch but expensive to employ.
+The TPM's reputation depends on escalation timing. Early escalators are seen as proactive. On-time escalators are seen as competent. Late escalators are seen as firefighters, exciting to watch but expensive to employ.
 
 ## Escalation for External Dependencies
 
@@ -99,7 +99,7 @@ External dependencies escalate differently. The vendor's management chain is not
 | **Internal** | Through program governance: "The vendor is at risk; we need a decision on contingency activation" | Contract terms, payment milestones, relationship at the executive level |
 | **External (vendor)** | Through the vendor's named escalation contacts, per the contract | Contractual remedies; executive-level relationship call |
 
-The TPM escalates internally first — the internal decision (activate contingency, accept delay, re-scope) must be made before the vendor conversation. Escalating to the vendor without an internal position is negotiating without a mandate.
+The TPM escalates internally first: the internal decision (activate contingency, accept delay, re-scope) must be made before the vendor conversation. Escalating to the vendor without an internal position is negotiating without a mandate.
 
 ## When Escalation Fails
 
@@ -112,7 +112,7 @@ Escalation can fail. The decision-maker does not decide. The options are all rej
 | **Governance unresponsive** | Escalate to the next level; make the governance failure itself the escalation topic |
 | **All options rejected** | Return with new options or accept that the program absorbs the impact |
 
-If governance consistently fails to resolve escalations, the program's governance model is broken — and that becomes the TPM's highest-priority escalation.
+If governance consistently fails to resolve escalations, the program's governance model is broken, and that becomes the TPM's highest-priority escalation.
 
 ## Practical Applications
 
@@ -135,9 +135,9 @@ If governance consistently fails to resolve escalations, the program's governanc
 ## Success Indicators
 
 - Escalations arrive with options and result in decisions within one governance cycle
-- The governance structure resolves escalations — it does not become the bottleneck
+- The governance structure resolves escalations; it does not become the bottleneck
 - Blocked dependencies do not sit unresolved for more than two status cycles
-- The sponsor receives fewer than five escalations per quarter — and every one is legitimate
+- The sponsor receives fewer than five escalations per quarter, and every one is legitimate
 
 ## Related Topics
 
@@ -145,8 +145,8 @@ If governance consistently fails to resolve escalations, the program's governanc
 - [[03_Interface_Contracts]]: the contract defines what was committed and what changed
 - [[05_Dependency_Risk_and_Contingency]]: contingency is activated when escalation cannot resolve the blockage
 - [[07_Dependency_Health_and_Reporting]]: escalation status in the dependency health dashboard
-- [[../04_Risk_and_Issue_Leadership/06_Risk_Escalation_and_Communication|Risk Escalation and Communication]]: the risk-side escalation practice
+- [[career-path/12_Technical_Program_Manager/04_Risk_and_Issue_Leadership/06_Risk_Escalation_and_Communication|Risk Escalation and Communication]]: the risk-side escalation practice
 
 ## Summary
 
-Unblocking escalations is the TPM's mechanism for resolving dependencies that exceed team-level authority. The discipline: escalate at the right threshold, to the right level, with a structured package (statement, facts, impact, options, recommendation, deadline), and escalate early enough that options are still viable. Escalation is not failure — it is the governance system's normal operating procedure. A program that never escalates is not a program with no problems; it is a program with problems nobody is authorized to solve.
+Unblocking escalations is the TPM's mechanism for resolving dependencies that exceed team-level authority. The discipline: escalate at the right threshold, to the right level, with a structured package (statement, facts, impact, options, recommendation, deadline), and escalate early enough that options are still viable. Escalation is not failure. It is the governance system's normal operating procedure. A program that never escalates is not a program with no problems; it is a program with problems nobody is authorized to solve.

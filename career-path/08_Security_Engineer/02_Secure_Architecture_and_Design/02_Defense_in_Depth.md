@@ -5,7 +5,7 @@ capability_area: secure-architecture-and-design
 career_path: security-engineer
 prerequisite:
   - "[[01_Security_Principles_and_Quality_Attributes]]"
-  - "[[../01_Threat_Modeling_and_Risk/03_Attack_Surface_and_Trust_Boundaries|Attack Surface and Trust Boundaries]]"
+  - "[[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/03_Attack_Surface_and_Trust_Boundaries|Attack Surface and Trust Boundaries]]"
 tags:
   - career-path
   - security-engineer
@@ -54,6 +54,7 @@ For every layer, identify its dependency on identity, configuration, network, ti
 ### 3. Layered response flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ATTACK["Adversarial action"] --> PREVENT["Prevent or constrain"]
     PREVENT -->|"Bypass or failure"| RESIST["Resist and limit authority"]
@@ -114,7 +115,7 @@ Select a critical user journey or administrative action.
 - [[01_Security_Principles_and_Quality_Attributes|Security Principles and Quality Attributes]]
 - [[03_Zero_Trust_and_Segmentation|Zero Trust and Segmentation]]
 - [[06_Resilient_and_Fail_Secure_Design|Resilient and Fail-Secure Design]]
-- [[../01_Threat_Modeling_and_Risk/03_Attack_Surface_and_Trust_Boundaries|Attack Surface and Trust Boundaries]]
+- [[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/03_Attack_Surface_and_Trust_Boundaries|Attack Surface and Trust Boundaries]]
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]
 - [Security Architecture Template](F:\obsidian_note\document_template\14_Security/Security-Architecture.md)

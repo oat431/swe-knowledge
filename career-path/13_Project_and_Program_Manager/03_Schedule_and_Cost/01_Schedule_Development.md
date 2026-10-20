@@ -15,17 +15,18 @@ tags:
 
 # Schedule Development
 
-> **Core skill:** Building a credible project schedule — activities sequenced with dependencies, resource-loaded, and duration-estimated by the people doing the work — so the schedule is a forecast the team trusts and the business can act on.
+> **Core skill:** Building a credible project schedule (activities sequenced with dependencies, resource-loaded, and duration-estimated by the people doing the work) so the schedule is a forecast the team trusts and the business can act on.
 
 ## Why This Matters
 
-A schedule that comes from a sponsor's calendar or a Gantt chart drawn alone in a project manager's office is not a schedule — it is a wish with dates on it. Real schedules are built with the team because the team knows the work. The project manager's job is not to estimate durations but to run the process: facilitate decomposition, surface dependencies, identify constraints, and assemble the pieces into a sequence that has a defensible critical path and a chance of surviving contact with reality.
+A schedule that comes from a sponsor's calendar or a Gantt chart drawn alone in a project manager's office is not a schedule. It is a wish with dates on it. Real schedules are built with the team because the team knows the work. The project manager's job is not to estimate durations but to run the process: facilitate decomposition, surface dependencies, identify constraints, and assemble the pieces into a sequence that has a defensible critical path and a chance of surviving contact with reality.
 
 Schedule development is also where the project's assumptions become visible. Every dependency is a bet. Every resource constraint is a trade-off. Every calendar milestone imposed from outside is a risk until the schedule proves it can be met.
 
 ## The Schedule Development Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SCOPE["Scope baseline: what must be delivered"] --> DECOMPOSE["Decompose into activities"]
     DECOMPOSE --> SEQUENCE["Sequence: what comes first, what depends on what"]
@@ -36,7 +37,7 @@ flowchart TD
     CONSTRAINTS --> BASELINE["Schedule baseline: the approved plan"]
 ```
 
-The baseline is a snapshot, not a straitjacket — it exists so variance can be measured, not to pretend the future is fixed.
+The baseline is a snapshot, not a straitjacket. It exists so variance can be measured, not to pretend the future is fixed.
 
 ## Core Activities
 
@@ -58,7 +59,7 @@ The baseline is a snapshot, not a straitjacket — it exists so variance can be 
 | **Bottom-up** | Detailed planning with the team | Most accurate; team ownership | Time-consuming; requires decomposed WBS |
 | **Three-point** | Uncertain activities; risk-aware planning | Captures uncertainty; feeds risk analysis | Requires estimation discipline from the team |
 
-Three-point estimation (optimistic, most likely, pessimistic) is the project manager's standard for any activity with real uncertainty — which is most of them in software and technical projects.
+Three-point estimation (optimistic, most likely, pessimistic) is the project manager's standard for any activity with real uncertainty, which is most of them in software and technical projects.
 
 ## Schedule Documentation
 
@@ -86,7 +87,7 @@ A credible schedule document includes:
 
 **Schedule review questions:**
 
-- [ ] Can the team explain the logic — "why does this come after that?"
+- [ ] Can the team explain the logic: "why does this come after that?"
 - [ ] Are any dependencies discretionary and could be removed?
 - [ ] What is the float on each activity that is not on the critical path?
 - [ ] What assumptions would break the schedule if they prove false?
@@ -115,9 +116,9 @@ A credible schedule document includes:
 - [[02_Critical_Path_Analysis]]: monitoring and protecting the critical path
 - [[03_Cost_Estimation_and_Budgeting]]: cost follows schedule duration
 - [[05_Schedule_and_Cost_Tracking]]: tracking actuals against the baseline
-- [[02_Scope_and_Planning/00_overview|Scope and Planning]]: the WBS feeds the activity list
-- [[06_Governance_and_Change_Control/00_overview|Governance and Change Control]]: baseline changes go through governance
+- [[career-path/13_Project_and_Program_Manager/02_Scope_and_Planning/00_overview|Scope and Planning]]: the WBS feeds the activity list
+- [[career-path/13_Project_and_Program_Manager/06_Governance_and_Change_Control/00_overview|Governance and Change Control]]: baseline changes go through governance
 
 ## Summary
 
-Schedule development turns scope into a sequenced, resource-loaded, duration-estimated plan that the team built and the business can measure against. The project manager facilitates decomposition, sequences dependencies, resources activities realistically, and identifies the critical path — but does not estimate the durations alone. A schedule made without the team is a document; a schedule made with the team is a forecast.
+Schedule development turns scope into a sequenced, resource-loaded, duration-estimated plan that the team built and the business can measure against. The project manager facilitates decomposition, sequences dependencies, resources activities realistically, and identifies the critical path, but does not estimate the durations alone. A schedule made without the team is a document; a schedule made with the team is a forecast.

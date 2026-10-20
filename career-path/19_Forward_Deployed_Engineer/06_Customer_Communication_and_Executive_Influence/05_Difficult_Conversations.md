@@ -16,15 +16,15 @@ tags:
 
 # Difficult Conversations
 
-> **Core skill:** Delivering bad news early, with options — surfacing slipped dates, defects, unmet requirements, and outages while they are still cheap to fix, with a recommendation attached and a plan for the response.
+> **Core skill:** Delivering bad news early, with options: surfacing slipped dates, defects, unmet requirements, and outages while they are still cheap to fix, with a recommendation attached and a plan for the response.
 
 ## Why This Matters
 
-Bad news is inevitable in the field: a date slips, a defect escapes into a workflow the customer depends on, a discovery invalidates a requirement everyone believed was met, an outage lands at the wrong hour. What separates deployments that survive these moments from those that do not is almost never the technical severity — it is the timing and shape of the conversation. Bad news delivered early, in plain language, with options attached, is a manageable problem. The same news delivered late, after the customer discovered it themselves, is a trust failure, and trust failures cost more than any defect.
+Bad news is inevitable in the field: a date slips, a defect escapes into a workflow the customer depends on, a discovery invalidates a requirement everyone believed was met, an outage lands at the wrong hour. What separates deployments that survive these moments from those that do not is almost never the technical severity. It is the timing and shape of the conversation. Bad news delivered early, in plain language, with options attached, is a manageable problem. The same news delivered late, after the customer discovered it themselves, is a trust failure, and trust failures cost more than any defect.
 
-The instinct to wait is understandable, even admirable in its way: engineers want to bring solutions, not problems, and each additional hour of investigation might turn the news into nothing. But waiting has an asymmetric payoff. If the problem resolves quietly, waiting saved one uncomfortable meeting. If it does not, waiting eliminated the customer's own response window — their chance to reroute staff, adjust a communication plan, or shift a dependent project. The customer does not need certainty from the FDE; they need time. The single most valuable thing the FDE can deliver in a bad-news conversation is a head start.
+The instinct to wait is understandable, even admirable in its way: engineers want to bring solutions, not problems, and each additional hour of investigation might turn the news into nothing. But waiting has an asymmetric payoff. If the problem resolves quietly, waiting saved one uncomfortable meeting. If it does not, waiting eliminated the customer's own response window: their chance to reroute staff, adjust a communication plan, or shift a dependent project. The customer does not need certainty from the FDE; they need time. The single most valuable thing the FDE can deliver in a bad-news conversation is a head start.
 
-The craft of the conversation itself matters as much as its timing. Bad news lands well when it is organized around the customer's decisions: what happened, what it means for them, what caused it, what the options are, what you recommend, and what happens next. It lands badly when it is organized around the FDE's feelings — apology, defensiveness, or worst of all, vagueness that forces the customer to extract the facts by interrogation. And it lands best when it arrives in proportion: routine slippage delivered with disaster framing trains the customer to distrust the FDE's sense of scale. Calibrated honesty is what makes the rare red-flag conversation instantly believable.
+The craft of the conversation itself matters as much as its timing. Bad news lands well when it is organized around the customer's decisions: what happened, what it means for them, what caused it, what the options are, what you recommend, and what happens next. It lands badly when it is organized around the FDE's feelings: apology, defensiveness, or worst of all, vagueness that forces the customer to extract the facts by interrogation. And it lands best when it arrives in proportion: routine slippage delivered with disaster framing trains the customer to distrust the FDE's sense of scale. Calibrated honesty is what makes the rare red-flag conversation instantly believable.
 
 ## Bad News Categories
 
@@ -42,7 +42,7 @@ The craft of the conversation itself matters as much as its timing. Bad news lan
 | Step | Purpose | Discipline |
 |------|---------|------------|
 | Situation | Say the headline first | No preamble, no burying in the third paragraph |
-| Impact | What it means in the customer's terms | Their work, their dates, their risk — not system internals |
+| Impact | What it means in the customer's terms | Their work, their dates, their risk, not system internals |
 | Cause | What happened, stated without blame | Facts; blame makes the news harder to act on |
 | Options | Two or three paths with costs | Real alternatives, not a rhetorical choice |
 | Recommendation | What you would do, and why | The FDE's judgment is part of the value |
@@ -50,6 +50,7 @@ The craft of the conversation itself matters as much as its timing. Bad news lan
 | Next update | When they will hear from you again | Even if nothing is known, state the clock |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     DETECT["Detect the problem early"] --> OPTIONS["Prepare options and a recommendation"]
     OPTIONS --> FIRST["Tell the right person first"]
@@ -58,7 +59,7 @@ flowchart LR
     AGREE --> FOLLOW["Follow through and update"]
 ```
 
-The order of notification deserves thought: the person who will be most exposed by the news should hear it before rather than during a large meeting — a sponsor surprised in front of peers is a sponsor made permanently cautious. Internal notification follows the same logic: the FDE's own team and manager should never learn of a serious problem from the customer.
+The order of notification deserves thought: the person who will be most exposed by the news should hear it before rather than during a large meeting. A sponsor surprised in front of peers is a sponsor made permanently cautious. Internal notification follows the same logic: the FDE's own team and manager should never learn of a serious problem from the customer.
 
 ## Practical Applications
 
@@ -75,7 +76,7 @@ The order of notification deserves thought: the person who will be most exposed 
 ### Bad News Brief Template
 
 ```markdown
-## Bad News Brief — <topic, date>
+## Bad News Brief: <topic, date>
 
 **Situation:** <what happened or what we now know>
 
@@ -121,4 +122,4 @@ The order of notification deserves thought: the person who will be most exposed 
 
 ## Summary
 
-Difficult conversations are where the FDE's communication discipline pays its largest dividend: surface problems at the earliest signal, lead with situation and impact, bring options and a recommendation, protect the most exposed stakeholder from surprise, and set a follow-up clock even when there is nothing new to say. The goal is never to soften bad news but to deliver it whole — early, organized around the customer's decisions — so that a problem becomes a moment of demonstrated reliability rather than a permanent mark on the relationship.
+Difficult conversations are where the FDE's communication discipline pays its largest dividend: surface problems at the earliest signal, lead with situation and impact, bring options and a recommendation, protect the most exposed stakeholder from surprise, and set a follow-up clock even when there is nothing new to say. The goal is never to soften bad news but to deliver it whole (early, organized around the customer's decisions), so that a problem becomes a moment of demonstrated reliability rather than a permanent mark on the relationship.

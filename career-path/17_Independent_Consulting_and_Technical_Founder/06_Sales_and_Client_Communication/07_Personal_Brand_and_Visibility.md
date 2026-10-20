@@ -16,15 +16,15 @@ tags:
 
 # Personal Brand and Visibility
 
-> **Core skill:** The independent builds a visible, specific professional identity — a niche, a point of view, and a body of public work — so the right clients find them instead of the other way around.
+> **Core skill:** The independent builds a visible, specific professional identity (a niche, a point of view, and a body of public work), so the right clients find them instead of the other way around.
 
 ## Why This Matters
 
 Personal brand is a polarizing term, but for an independent it means something concrete: what you are known for, by whom, and what a stranger finds when they check you out. Most buying journeys for technical services now begin with a search, a reference check, or a quiet look at someone's public work. When the search finds nothing, the independent is invisible and competes only where someone hands them a lead. When it finds a muddle, they are discounted. When it finds evidence of exactly the problem the client has, the conversation starts with trust already partially funded.
 
-Specificity beats reach. "Full stack developer" is invisible because it asserts nothing; "I help logistics teams make warehouse data trustworthy" is findable, memorable, and referable. A niche is not a life sentence — it is a current center of gravity that can shift as skills and markets evolve. But the narrow version gets remembered, referred, and priced better, because it answers the client's real question, which is not "are you good" but "do you understand my situation."
+Specificity beats reach. "Full stack developer" is invisible because it asserts nothing; "I help logistics teams make warehouse data trustworthy" is findable, memorable, and referable. A niche is not a life sentence. It is a current center of gravity that can shift as skills and markets evolve. But the narrow version gets remembered, referred, and priced better, because it answers the client's real question, which is not "are you good" but "do you understand my situation."
 
-Consistency over intensity is the operating rhythm. A modest, sustainable cadence of visible work — articles, talks, open source contributions, thoughtful community answers — compounds the way interest compounds, while sporadic bursts and long silences reset to zero. The brand is also a filter: publishing how you work attracts the clients who like how you work and gently repels the ones who would have been exhausting, which is worth entire avoided engagements.
+Consistency over intensity is the operating rhythm. A modest, sustainable cadence of visible work (articles, talks, open source contributions, thoughtful community answers) compounds the way interest compounds, while sporadic bursts and long silences reset to zero. The brand is also a filter: publishing how you work attracts the clients who like how you work and gently repels the ones who would have been exhausting, which is worth entire avoided engagements.
 
 ## The Brand Stack
 
@@ -60,6 +60,7 @@ Consistency over intensity is the operating rhythm. A modest, sustainable cadenc
 ## The Brand Flywheel
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     NICHE["Choose a specific niche and point of view"] --> PROOF["Publish visible proof of work"]
     PROOF --> AUDIENCE["Audience and reputation grow"]
@@ -106,4 +107,4 @@ flowchart TD
 
 ## Summary
 
-Personal brand and visibility for an independent are a working system, not vanity: a specific niche, a point of view worth hearing, visible proof of real work, and a small sustainable rhythm across compounding channels. The payoff is structural — the right clients find you, arrive already trusting, and refer you in your own words — which turns marketing from a constant chase into an asset that keeps earning.
+Personal brand and visibility for an independent are a working system, not vanity: a specific niche, a point of view worth hearing, visible proof of real work, and a small sustainable rhythm across compounding channels. The payoff is structural (the right clients find you, arrive already trusting, and refer you in your own words), which turns marketing from a constant chase into an asset that keeps earning.

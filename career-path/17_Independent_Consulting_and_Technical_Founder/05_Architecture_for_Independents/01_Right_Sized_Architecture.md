@@ -16,15 +16,15 @@ tags:
 
 # Right Sized Architecture
 
-> **Core skill:** The independent sizes every system for the life it will actually have — one maintainer, a small budget, and real users — adding complexity only when measured pressure demands it.
+> **Core skill:** The independent sizes every system for the life it will actually have (one maintainer, a small budget, and real users), adding complexity only when measured pressure demands it.
 
 ## Why This Matters
 
-Employed engineers design inside an organization that absorbs the costs of excess: platforms teams run the infrastructure, budgets hide the overprovisioning, and colleagues share the burden of complexity. An independent inherits all three costs personally. Enterprise patterns applied naively — a Kubernetes cluster for one application, a microservice fleet with no one to page for it, a data platform for a few million rows — become a millstone that consumes the exact hours the business needs for selling and delivering.
+Employed engineers design inside an organization that absorbs the costs of excess: platforms teams run the infrastructure, budgets hide the overprovisioning, and colleagues share the burden of complexity. An independent inherits all three costs personally. Enterprise patterns applied naively (a Kubernetes cluster for one application, a microservice fleet with no one to page for it, a data platform for a few million rows) become a millstone that consumes the exact hours the business needs for selling and delivering.
 
-Right sizing is not doing less craft; it is aiming the craft at reality. The system needs to handle the load it has, be understood by the person who maintains it, and cost meaningfully less than it earns. Every component beyond that line is a liability: another upgrade treadmill, another failure mode, another thing to explain at 2 AM. The right sized system is the cheapest one that meets the real requirement with margin — and it is usually far smaller than the engineer's instincts suggest.
+Right sizing is not doing less craft; it is aiming the craft at reality. The system needs to handle the load it has, be understood by the person who maintains it, and cost meaningfully less than it earns. Every component beyond that line is a liability: another upgrade treadmill, another failure mode, another thing to explain at 2 AM. The right sized system is the cheapest one that meets the real requirement with margin, and it is usually far smaller than the engineer's instincts suggest.
 
-The discipline follows a simple loop: start from the simplest shape that works, operate it, observe honestly, and let real pressure — never imagined scale — justify the next increment. Growth becomes a sequence of small, deliberate, reversible upgrades instead of one heroic architecture that guessed wrong about the future.
+The discipline follows a simple loop: start from the simplest shape that works, operate it, observe honestly, and let real pressure (never imagined scale) justify the next increment. Growth becomes a sequence of small, deliberate, reversible upgrades instead of one heroic architecture that guessed wrong about the future.
 
 ## The Right Sizing Framework
 
@@ -58,6 +58,7 @@ The discipline follows a simple loop: start from the simplest shape that works, 
 ## The Right Sizing Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     REQUIRE["State the real requirement in load, data, budget, and risk"] --> SIMPLE["Start with the simplest shape that meets it"]
     SIMPLE --> OPERATE["Operate it and observe for a while"]
@@ -74,14 +75,14 @@ Complexity is admitted in increments, each paid for by evidence, never by antici
 
 - [ ] The requirement is written down: users, expected load, data sensitivity, budget
 - [ ] The chosen shape is the simplest one that meets the requirement with margin
-- [ ] Every component has a named owner — which is always you
+- [ ] Every component has a named owner, which is always you
 - [ ] The system can be fully deployed and recovered from documented steps in one sitting
 - [ ] New complexity is admitted only with a recorded signal that justifies it
 
 ### Right Sizing Decision Note
 
 ```markdown
-## Right Sizing Decision — <system or component>
+## Right Sizing Decision: <system or component>
 
 | Field | Value |
 |-------|-------|
@@ -121,4 +122,4 @@ Complexity is admitted in increments, each paid for by evidence, never by antici
 
 ## Summary
 
-Right sized architecture is the independent's version of the craft: the simplest system that meets the real requirement with margin, chosen for one maintainer and operated within a small budget. Complexity is added in measured increments, each justified by evidence and each reversible, because every unneeded component is a liability the business pays for every month — in money, in attention, and in the freedom to say yes to better work.
+Right sized architecture is the independent's version of the craft: the simplest system that meets the real requirement with margin, chosen for one maintainer and operated within a small budget. Complexity is added in measured increments, each justified by evidence and each reversible, because every unneeded component is a liability the business pays for every month, in money, in attention, and in the freedom to say yes to better work.

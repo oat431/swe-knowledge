@@ -16,13 +16,13 @@ tags:
 
 # Saying No at Scale
 
-> **Core skill:** The staff engineer declines work consistently and constructively across the whole organization — through written strategy, priced trade-offs, and conditional yeses — so that "no" protects capacity without burning relationships.
+> **Core skill:** The staff engineer declines work consistently and constructively across the whole organization (through written strategy, priced trade-offs, and conditional yeses) so that "no" protects capacity without burning relationships.
 
 ## Why This Matters
 
 At staff level, requests arrive faster than capacity, from every direction: product wants features, teams want platforms, leadership wants initiatives, and each one is reasonable on its own. Saying yes to all of them is not generosity; it is a decision to underfund everything. The only sustainable response is a system for saying no that is consistent, written, and free of personal conflict.
 
-The staff engineer's no carries unusual weight because it is delivered without authority. It must therefore be based on something impersonal — the strategy, the capacity model, the priced trade — and it must leave the requester with a path. A no without a path is a wall; a no with a path is a prioritization.
+The staff engineer's no carries unusual weight because it is delivered without authority. It must therefore be based on something impersonal (the strategy, the capacity model, the priced trade) and it must leave the requester with a path. A no without a path is a wall; a no with a path is a prioritization.
 
 ## The No Toolkit
 
@@ -32,7 +32,7 @@ Different requests deserve different kinds of no. Match the refusal to the situa
 |---------|----------------|--------------------------|
 | Strategic no | The request contradicts the written strategy | "This is a named non-goal in the strategy; we are deliberately not doing this" |
 | Prioritization no | The request is fine but unfunded | "It is a good idea; here is what we would stop to fund it" |
-| Capability no | The organization cannot execute it yet | "Not yet — this needs X first, and here is the sequence" |
+| Capability no | The organization cannot execute it yet | "Not yet: this needs X first, and here is the sequence" |
 | Non-decision no | The request should not be decided at all | "This does not meet the bar for review; it dies in triage" |
 
 ## The Strategic No
@@ -48,17 +48,17 @@ When the request is good but unfunded, the refusal must carry the price of its o
 | Weak no | Strong no |
 |---------|-----------|
 | "We don't have capacity" | "This is 3 engineer-months. The platform migration is 5. We can do one this quarter; which one?" |
-| "Not now" | "Not now — unless you can move the compliance deadline, which is the only thing queued ahead of it" |
+| "Not now" | "Not now, unless you can move the compliance deadline, which is the only thing queued ahead of it" |
 
 The trade-off no converts the conversation from a request into a decision, and it records the trade in the requester's own words. If they choose their request over the displaced work, the decision is theirs, and the next no is easier.
 
 ## The Capability No: Not Yet, Needs X
 
-Some requests are legitimate but premature: the org cannot absorb the work, the dependency is not ready, the team does not exist. The capability no says not yet, names the missing condition, and sequences the path. It is a no with a roadmap attached — which is why it is the refusal that most often turns into a funded proposal later.
+Some requests are legitimate but premature: the org cannot absorb the work, the dependency is not ready, the team does not exist. The capability no says not yet, names the missing condition, and sequences the path. It is a no with a roadmap attached, which is why it is the refusal that most often turns into a funded proposal later.
 
 ## The Non-Decision No
 
-A large share of requests do not deserve a decision at all: they are unquantified, unowned, or based on a stale problem. The non-decision no lets them die in triage rather than consuming a decision cycle. The discipline is to say so plainly — "this does not meet the bar for a proposal" — instead of scheduling a meeting that produces nothing.
+A large share of requests do not deserve a decision at all: they are unquantified, unowned, or based on a stale problem. The non-decision no lets them die in triage rather than consuming a decision cycle. The discipline is to say so plainly ("this does not meet the bar for a proposal") instead of scheduling a meeting that produces nothing.
 
 ## Nos to Leadership: Options, Not Refusal
 
@@ -72,7 +72,7 @@ Never refuse a leader with a bare no and no options. A leader with options feels
 
 ## Nos to Peers: Relationship-Preserving
 
-Peer requests are the ones where refusal feels personal, because peers are also collaborators. The preservation mechanics: acknowledge the merit, separate the idea from the funding, offer the path (next cycle, the trade, the proposal bar), and follow through on whatever small help you did promise. The goal is that the peer walks away saying "good no" — they lost the allocation and kept the relationship.
+Peer requests are the ones where refusal feels personal, because peers are also collaborators. The preservation mechanics: acknowledge the merit, separate the idea from the funding, offer the path (next cycle, the trade, the proposal bar), and follow through on whatever small help you did promise. The goal is that the peer walks away saying "good no": they lost the allocation and kept the relationship.
 
 ## Nos to Yourself: Dropping Your Own Darlings
 
@@ -89,7 +89,7 @@ The declined list is the strategy's audit trail. Every significant no gets one l
 
 ## The Yes That Means No: Conditionals
 
-The conditional yes is the negotiation move: "yes, if X." It accepts the request on terms that make it safe — scope, sequencing, or dependency conditions.
+The conditional yes is the negotiation move: "yes, if X." It accepts the request on terms that make it safe: scope, sequencing, or dependency conditions.
 
 ```markdown
 # Conditional Yes Template
@@ -106,6 +106,7 @@ The conditional yes is the negotiation move: "yes, if X." It accepts the request
 A conditional yes is only honest if the conditions are real and the fallback is stated in advance. A yes with conditions that never bind is just a yes.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     REQUEST["Incoming request arrives"] --> CHECK["Check strategy fit and capacity"]
     CHECK --> FITS["Fits and capacity exists"]
@@ -151,8 +152,8 @@ flowchart TD
 
 - [[01_Writing_Technical_Strategy]]: the strategy is the no's authority
 - [[03_Capacity_and_Investment_Allocation]]: the capacity the no protects
-- [[02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: declining across team boundaries
-- [[04_Influence_and_Alignment/00_overview|Influence and Alignment]]: keeping relationships while refusing
+- [[career-path/03_Staff_Engineer/02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: declining across team boundaries
+- [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/00_overview|Influence and Alignment]]: keeping relationships while refusing
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/03_Influence_Without_Authority|Influence Without Authority (Senior)]]: the foundation this scales
 
 ## Summary

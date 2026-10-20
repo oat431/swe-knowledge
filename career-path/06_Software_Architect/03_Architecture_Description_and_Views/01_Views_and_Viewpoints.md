@@ -16,13 +16,13 @@ tags:
 
 # Views and Viewpoints
 
-> **Core skill:** The architect selects and composes views — concrete diagrams answering specific stakeholder concerns through defined viewpoint lenses — to build a complete architecture description without drowning anyone in detail.
+> **Core skill:** The architect selects and composes views (concrete diagrams answering specific stakeholder concerns through defined viewpoint lenses) to build a complete architecture description without drowning anyone in detail.
 
 ## Why This Matters
 
-A single diagram cannot serve every audience. Developers need module boundaries and dependency rules; operations engineers need deployment topologies and recovery paths; security reviewers need trust zones and data-flow maps. The architect's job is not to draw one perfect picture — it is to draw the right pictures for the right people, each from a defined perspective.
+A single diagram cannot serve every audience. Developers need module boundaries and dependency rules; operations engineers need deployment topologies and recovery paths; security reviewers need trust zones and data-flow maps. The architect's job is not to draw one perfect picture. It is to draw the right pictures for the right people, each from a defined perspective.
 
-The viewpoint/view distinction formalizes this: a **viewpoint** is a template for looking at the system (the "where to stand"), and a **view** is the artifact produced when looking (the "what you see"). Philippe Kruchten's 4+1 model and the Rozanski & Woods catalog both provide off-the-shelf viewpoint sets, but the architect must still decide which ones a given project needs — and which ones it can skip.
+The viewpoint/view distinction formalizes this: a **viewpoint** is a template for looking at the system (the "where to stand"), and a **view** is the artifact produced when looking (the "what you see"). Philippe Kruchten's 4+1 model and the Rozanski & Woods catalog both provide off-the-shelf viewpoint sets, but the architect must still decide which ones a given project needs, and which ones it can skip.
 
 ## Viewpoint Catalogs
 
@@ -32,7 +32,7 @@ The foundational model, published in 1995, organizes architecture description in
 
 | View | Audience | Addresses | Notation Examples |
 |------|----------|-----------|-------------------|
-| **Logical** | Developers, designers | Functional requirements — what the system does | UML class, package, sequence |
+| **Logical** | Developers, designers | Functional requirements: what the system does | UML class, package, sequence |
 | **Process** | Integrators, performance engineers | Concurrency, distribution, non-functional requirements | UML activity, sequence, deployment |
 | **Development** | Developers, build engineers | Module organization, build structure | UML package, component |
 | **Physical** | System engineers, operators | Deployment topology, hardware mapping | UML deployment |
@@ -55,6 +55,7 @@ A more detailed catalog from *Software Systems Architecture* (2011), organized b
 ## Selecting the Right Views
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     STAKEHOLDER_LIST["List Stakeholder Classes"] --> CONCERN_MAP["Map Each Class to Concerns"]
     CONCERN_MAP --> VIEWPOINT_MATCH["Match Concerns to Viewpoint Catalog"]
@@ -66,7 +67,7 @@ flowchart TD
     NEW_VIEWPOINT --> VIEW_SET
 ```
 
-Selection is a filtering process, not a checklist. Every view costs maintenance effort — the architect earns credibility by producing the minimum set that answers every stakeholder's genuine questions.
+Selection is a filtering process, not a checklist. Every view costs maintenance effort; the architect earns credibility by producing the minimum set that answers every stakeholder's genuine questions.
 
 ## Viewpoint Selection Decision Table
 
@@ -80,7 +81,7 @@ Selection is a filtering process, not a checklist. Every view costs maintenance 
 
 ## Just-Enough Architecture Documentation
 
-The principle: document only what is necessary to answer the questions stakeholders are actually asking, at the fidelity they can consume. Over-documentation is a form of waste — diagrams nobody reads still require maintenance.
+The principle: document only what is necessary to answer the questions stakeholders are actually asking, at the fidelity they can consume. Over-documentation is a form of waste: diagrams nobody reads still require maintenance.
 
 ### When to Stop
 
@@ -120,11 +121,11 @@ The principle: document only what is necessary to answer the questions stakehold
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
-| **Single-view architecture** | One diagram forced to serve every audience — satisfies none | Produce the minimum view set: at minimum, context plus development |
-| **Viewpoint without audience** | A view created because "we should have one" — no stakeholder asked for it | Every view names its audience; omit views nobody will read |
-| **All views, no priority** | Seven views produced equally — overwhelms readers, dilutes maintenance focus | Rank views by stakeholder consequence; maintain high-priority views first |
+| **Single-view architecture** | One diagram forced to serve every audience; satisfies none | Produce the minimum view set: at minimum, context plus development |
+| **Viewpoint without audience** | A view created because "we should have one"; no stakeholder asked for it | Every view names its audience; omit views nobody will read |
+| **All views, no priority** | Seven views produced equally; overwhelms readers, dilutes maintenance focus | Rank views by stakeholder consequence; maintain high-priority views first |
 | **View drift** | Views updated independently; contradictions emerge between them | Cross-check views on each update; one source of truth for each fact |
-| **Notation per view** | Every view uses a different notation — readers cannot transfer understanding | One notation family (C4 or UML) across the entire description |
+| **Notation per view** | Every view uses a different notation; readers cannot transfer understanding | One notation family (C4 or UML) across the entire description |
 | **Missing context view** | Stakeholders cannot place the system in its environment | Context view is non-negotiable; always produce one |
 
 ## Success Indicators
@@ -145,4 +146,4 @@ The principle: document only what is necessary to answer the questions stakehold
 
 ## Summary
 
-Views and viewpoints are the architect's communication framework: a viewpoint defines a stakeholder lens, a view is the concrete diagram produced through that lens, and the architecture description is the composed set of views. The skill is not in drawing every possible view — it is in selecting the minimal set that satisfies every genuine stakeholder concern, maintaining consistency across views, and knowing when to stop documenting and start building.
+Views and viewpoints are the architect's communication framework: a viewpoint defines a stakeholder lens, a view is the concrete diagram produced through that lens, and the architecture description is the composed set of views. The skill is not in drawing every possible view. It is in selecting the minimal set that satisfies every genuine stakeholder concern, maintaining consistency across views, and knowing when to stop documenting and start building.

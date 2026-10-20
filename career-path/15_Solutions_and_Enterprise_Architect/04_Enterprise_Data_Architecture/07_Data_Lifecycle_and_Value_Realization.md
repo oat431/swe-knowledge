@@ -16,15 +16,15 @@ tags:
 
 # Data Lifecycle and Value Realization
 
-> **Core skill:** Managing data across its full lifecycle — creation to archival to disposal — and connecting governed data products to realized business value, so the enterprise knows what its data costs, what it earns, and when it should end.
+> **Core skill:** Managing data across its full lifecycle (creation to archival to disposal) and connecting governed data products to realized business value, so the enterprise knows what its data costs, what it earns, and when it should end.
 
 ## Why This Matters
 
-Data enters the enterprise with a purpose and stays long past it. The default behavior of every system is to keep everything forever at full cost, with full risk exposure, and with freshness decaying quietly — and most organizations cannot say which datasets earn their keep and which are simply expensive sediment. Lifecycle management is the discipline that ends the default: stated lifespans, tiered storage, and deletion that actually happens.
+Data enters the enterprise with a purpose and stays long past it. The default behavior of every system is to keep everything forever at full cost, with full risk exposure, and with freshness decaying quietly, and most organizations cannot say which datasets earn their keep and which are simply expensive sediment. Lifecycle management is the discipline that ends the default: stated lifespans, tiered storage, and deletion that actually happens.
 
-Value realization is the other half. Data improves decisions, accelerates operations, and enables products — but those effects are claimed far more often than they are measured. Without measurement, data investments compete for budget on faith, and the next downturn cuts them first because their return is invisible. The senior architect's move is to make value concrete: data products with owners and consumers, value hypotheses stated in advance, and evidence gathered from use.
+Value realization is the other half. Data improves decisions, accelerates operations, and enables products, but those effects are claimed far more often than they are measured. Without measurement, data investments compete for budget on faith, and the next downturn cuts them first because their return is invisible. The senior architect's move is to make value concrete: data products with owners and consumers, value hypotheses stated in advance, and evidence gathered from use.
 
-The connecting idea is the data product: a curated, governed, discoverable dataset with an owner, a contract, and a lifecycle — treated like any other product of the enterprise. Products have customers, which means usage is observable; they have quality statements, which means trust is explicit; and they have lifespans, which means the end is planned rather than suffered.
+The connecting idea is the data product: a curated, governed, discoverable dataset with an owner, a contract, and a lifecycle, treated like any other product of the enterprise. Products have customers, which means usage is observable; they have quality statements, which means trust is explicit; and they have lifespans, which means the end is planned rather than suffered.
 
 ## Lifecycle Stages
 
@@ -68,7 +68,7 @@ Each stage has an owner and a trigger. Lifecycle management fails when stages ar
 | Efficiency | Faster time to insight and integration | Time to onboard an analytics use case |
 | Optionality | Reuse across teams and products | Reuse count and distinct consumers per product |
 
-State a value hypothesis before building, and record one measurement after — the discipline matters more than the sophistication. An enterprise that consistently pairs products with evidence accumulates a portfolio argument that survives leadership changes.
+State a value hypothesis before building, and record one measurement after: the discipline matters more than the sophistication. An enterprise that consistently pairs products with evidence accumulates a portfolio argument that survives leadership changes.
 
 ## Cost Management
 
@@ -91,11 +91,12 @@ Duplication is the cost driver most invisible in budgets and most addressable by
 | Public release | Open data or transparency programs | Privacy re-identification; reputational risk |
 | Monetization | Data or insight sold or exchanged | Legal basis; quality promises; competitive exposure |
 
-Monetization gets the excitement, but for most enterprises the larger and sooner return is internal reuse — and it requires exactly the same foundations: ownership, quality, contracts, and lifecycle discipline. Monetize after the internal flywheel turns, never before.
+Monetization gets the excitement, but for most enterprises the larger and sooner return is internal reuse, and it requires exactly the same foundations: ownership, quality, contracts, and lifecycle discipline. Monetize after the internal flywheel turns, never before.
 
 ## The Value Realization Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CREATE["Data created or acquired"] --> USE["Used in operations and decisions"]
     USE --> SHARE["Shared and reused across teams"]
@@ -119,7 +120,7 @@ flowchart TD
 ### Data Product Definition
 
 ```markdown
-# Data Product — [Name]
+# Data Product: [Name]
 
 ## Consumers and Use Cases
 - [Who uses it, for what decisions or features]
@@ -165,9 +166,9 @@ flowchart TD
 
 - [[01_Data_as_an_Enterprise_Asset]]: the ownership that makes lifecycle discipline possible
 - [[05_Analytics_and_Data_Platform_Architecture]]: the zones where lifecycle stages execute
-- [[06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: where data investments compete for funding
+- [[career-path/15_Solutions_and_Enterprise_Architect/06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: where data investments compete for funding
 - [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]]: the engineering behind products, pipelines, and archives
 
 ## Summary
 
-Data lifecycle and value realization close the loop on treating data as an asset: stated lifespans and tested disposal across every copy, tiered storage matched to actual use, curated data products with owners, contracts, and support, and value hypotheses paired with measured evidence so investments renew on record rather than faith. The senior architect connects cost, risk, and value into one managed curve — and insists that archiving, deletion, and deprecation are designed capabilities, not deferred intentions.
+Data lifecycle and value realization close the loop on treating data as an asset: stated lifespans and tested disposal across every copy, tiered storage matched to actual use, curated data products with owners, contracts, and support, and value hypotheses paired with measured evidence so investments renew on record rather than faith. The senior architect connects cost, risk, and value into one managed curve, and insists that archiving, deletion, and deprecation are designed capabilities, not deferred intentions.

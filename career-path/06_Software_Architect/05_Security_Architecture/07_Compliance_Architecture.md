@@ -16,15 +16,15 @@ tags:
 
 # Compliance Architecture
 
-> **Core skill:** The architect translates regulatory constraints — data residency, encryption standards, retention, audit trails, access review — into structural design decisions, and maintains a compliance matrix mapping every regulation to the architecture control that satisfies it.
+> **Core skill:** The architect translates regulatory constraints (data residency, encryption standards, retention, audit trails, access review) into structural design decisions, and maintains a compliance matrix mapping every regulation to the architecture control that satisfies it.
 
 ## Why This Matters
 
-Compliance requirements arrive as legal text, but they land as architecture constraints: where data may live, how it must be protected, how long it must be kept, who may touch it, and what must be provable afterward. An architect who treats compliance as a documentation exercise discovers late that the system's structure contradicts a regulation — and structure is the slowest thing in the system to change.
+Compliance requirements arrive as legal text, but they land as architecture constraints: where data may live, how it must be protected, how long it must be kept, who may touch it, and what must be provable afterward. An architect who treats compliance as a documentation exercise discovers late that the system's structure contradicts a regulation, and structure is the slowest thing in the system to change.
 
-The compliance matrix is the architect's translation tool: regulation to obligation to architecture control to evidence. Once built, it makes audits a lookup instead of a scramble and makes new requirements cheap to assess — which rows change, which controls move, which views need updating. It also makes gaps visible while they are still cheap: a regulation with no control is a finding waiting to happen.
+The compliance matrix is the architect's translation tool: regulation to obligation to architecture control to evidence. Once built, it makes audits a lookup instead of a scramble and makes new requirements cheap to assess: which rows change, which controls move, which views need updating. It also makes gaps visible while they are still cheap: a regulation with no control is a finding waiting to happen.
 
-The central design question is when compliance drives the architecture versus when it constrains it. Some requirements genuinely shape the structure — residency forces region topology, deletion rights force data inventory and propagation design, segregation of duties forces workflow structure. Others merely constrain mechanism choices within a structure that is already sound. Telling the two apart prevents under-design against the first and gold-plating against the second.
+The central design question is when compliance drives the architecture versus when it constrains it. Some requirements genuinely shape the structure: residency forces region topology, deletion rights force data inventory and propagation design, segregation of duties forces workflow structure. Others merely constrain mechanism choices within a structure that is already sound. Telling the two apart prevents under-design against the first and gold-plating against the second.
 
 ## Regulatory Constraints as Architecture Drivers
 
@@ -41,7 +41,7 @@ The central design question is when compliance drives the architecture versus wh
 ## The Compliance Matrix
 
 ```markdown
-## Compliance Matrix — <system> — <regulation set>
+## Compliance Matrix: <system>, <regulation set>
 
 | Regulation | Obligation | Architecture Control | Evidence | Owner | Status |
 |------------|-----------|----------------------|----------|-------|--------|
@@ -56,6 +56,7 @@ The central design question is when compliance drives the architecture versus wh
 Compliance constraints become visible when they are drawn onto the data view rather than kept in a spreadsheet.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SOURCE["Classified data source"] --> RESIDENCY["Residency boundary restricts regions"]
     RESIDENCY --> STORE["Storage with encryption and retention rules"]
@@ -86,7 +87,7 @@ The distinction is practical, not semantic: it tells reviewers which changes nee
 ### Regulatory Impact Assessment
 
 ```markdown
-## Regulatory Impact Assessment — <new regulation or change>
+## Regulatory Impact Assessment: <new regulation or change>
 
 | Question | Answer |
 |----------|--------|
@@ -121,8 +122,8 @@ The distinction is practical, not semantic: it tells reviewers which changes nee
 - [[01_Secure_by_Design_Principles]]
 - [[05_Identity_and_Access_Architecture]]
 - [[06_Security_Decisions_and_ADRs]]
-- [[04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]]
+- [[career-path/06_Software_Architect/04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]]
 
 ## Summary
 
-Compliance architecture translates regulatory text into structural constraints: residency, encryption, retention, auditability, access review, and segregation of duties become decisions in the deployment, data, identity, and operations views. The compliance matrix — regulation to obligation to control to evidence — keeps the translation honest and makes audits a lookup. The architect's judgment is in distinguishing the requirements that change the structure from those that only constrain it, and in recording the interpretation either way.
+Compliance architecture translates regulatory text into structural constraints: residency, encryption, retention, auditability, access review, and segregation of duties become decisions in the deployment, data, identity, and operations views. The compliance matrix (regulation to obligation to control to evidence) keeps the translation honest and makes audits a lookup. The architect's judgment is in distinguishing the requirements that change the structure from those that only constrain it, and in recording the interpretation either way.

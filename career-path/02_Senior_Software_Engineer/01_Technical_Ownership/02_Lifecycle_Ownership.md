@@ -18,13 +18,14 @@ tags:
 
 ## Why This Is a Senior Skill
 
-A mid-level engineer typically participates in one or two lifecycle phases — usually implementation and testing. A senior engineer is expected to be **present and influential** across all phases, even when not doing the hands-on work.
+A mid-level engineer typically participates in one or two lifecycle phases, usually implementation and testing. A senior engineer is expected to be **present and influential** across all phases, even when not doing the hands-on work.
 
 The senior engineer's role is to ensure **continuity**: the problem that was identified in requirements is the same problem being solved in production six months later. Without lifecycle ownership, information degrades at every handoff.
 
 ## The Lifecycle from a Senior Engineer's Perspective
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     R["Requirements"] --> D["Design"]
     D --> I["Implementation"]
@@ -135,11 +136,11 @@ If you cannot answer any of these, that is a continuity gap in your lifecycle ow
 
 ## Knowledge Connections
 
-- [[01_System_Ownership]] — lifecycle ownership applies to the system boundary you defined
-- [[04_Production_Responsibility]] — the operation and maintenance phases in detail
-- [[software-engineering-note/01_Software_Requirements/01_Requirements_Fundamentals]] — requirements fundamentals
-- [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]] — operations and the DevOps lifecycle
-- [[SEBoK v2 - Overview]] — SEBoK lifecycle models and processes
+- [[01_System_Ownership]]: lifecycle ownership applies to the system boundary you defined
+- [[04_Production_Responsibility]]: the operation and maintenance phases in detail
+- [[software-engineering-note/01_Software_Requirements/01_Requirements_Fundamentals]]: requirements fundamentals
+- [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]]: operations and the DevOps lifecycle
+- [[SEBoK v2 - Overview]]: SEBoK lifecycle models and processes
 
 ## Key Takeaways
 

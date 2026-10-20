@@ -17,13 +17,13 @@ tags:
 
 # Investment Strategy and Capital Allocation
 
-> **Core skill:** The principal engineer builds the case for major technology investments — constructing ROI models, option value arguments, and risk-adjusted returns for technical bets, and presenting technology investment to the board in the language of capital allocation.
+> **Core skill:** The principal engineer builds the case for major technology investments, constructing ROI models, option value arguments, and risk-adjusted returns for technical bets, and presenting technology investment to the board in the language of capital allocation.
 
 ## Why This Matters
 
-Technology investment at the principal level is not about budget requests — it is about capital allocation. The principal competes for organizational capital against every other investment the company could make: new markets, acquisitions, sales capacity, return to shareholders. Winning requires building cases that the CFO and board can evaluate alongside their other choices.
+Technology investment at the principal level is not about budget requests. It is about capital allocation. The principal competes for organizational capital against every other investment the company could make: new markets, acquisitions, sales capacity, return to shareholders. Winning requires building cases that the CFO and board can evaluate alongside their other choices.
 
-This discipline separates the principal from the staff engineer. The staff engineer contributes to investment cases written by others. The principal owns the investment thesis — framing technology choices as capital allocation decisions with explicit returns, risks, and alternatives. The memo that moves capital is the memo that speaks the board's language.
+This discipline separates the principal from the staff engineer. The staff engineer contributes to investment cases written by others. The principal owns the investment thesis, framing technology choices as capital allocation decisions with explicit returns, risks, and alternatives. The memo that moves capital is the memo that speaks the board's language.
 
 ## The Investment Case Framework
 
@@ -109,6 +109,7 @@ Every major technology investment case is captured in a memo. The memo is the ar
 The principal shapes how technology capital is allocated across horizons, not just within a single budget cycle.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     THESIS["Investment thesis"] --> HORIZONS["Allocate across horizons"]
     HORIZONS --> RUN["Run: maintain and operate"]
@@ -182,4 +183,4 @@ The board evaluates technology investment alongside every other use of capital. 
 
 ## Summary
 
-Investment strategy and capital allocation means building cases for technology investments that compete for organizational capital on equal footing — framing returns across revenue, cost, risk, and option value, adjusting for technology-specific risks, and presenting to the board in the language of capital allocation. The investment memo is the artifact that moves capital; the principal is the author who earns the board's trust by modeling honestly and tracking returns.
+Investment strategy and capital allocation means building cases for technology investments that compete for organizational capital on equal footing, framing returns across revenue, cost, risk, and option value, adjusting for technology-specific risks, and presenting to the board in the language of capital allocation. The investment memo is the artifact that moves capital; the principal is the author who earns the board's trust by modeling honestly and tracking returns.

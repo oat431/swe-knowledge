@@ -16,7 +16,7 @@ tags:
 
 # Risk Response Planning
 
-> **Core skill:** Designing and documenting responses for prioritized risks — mitigation, transfer, avoidance, acceptance, and escalation — with owners, actions, triggers, and residual risk assessments so the project acts on risks before they become issues.
+> **Core skill:** Designing and documenting responses for prioritized risks (mitigation, transfer, avoidance, acceptance, and escalation) with owners, actions, triggers, and residual risk assessments so the project acts on risks before they become issues.
 
 ## Why This Matters
 
@@ -24,11 +24,12 @@ A risk identified and analyzed but not responded to is a risk that will fire on 
 
 Response planning is also where risk management becomes honest about trade-offs. Mitigation costs money and time. Transfer costs money. Avoidance may cost scope. Acceptance costs nothing now but reserves budget and schedule for the impact if the risk fires. The project manager presents these trade-offs; the sponsor or risk owner decides.
 
-Every response leaves a residual risk — the risk that remains after the response is applied. If the residual risk is still above the risk appetite, secondary responses are needed. The process iterates until the residual risk is acceptable or the response cost exceeds the risk exposure.
+Every response leaves a residual risk: the risk that remains after the response is applied. If the residual risk is still above the risk appetite, secondary responses are needed. The process iterates until the residual risk is acceptable or the response cost exceeds the risk exposure.
 
 ## Response Strategies
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     RISK["Prioritized risk"] --> ESCALATE{"Above PM's authority?"}
     ESCALATE -->|Yes| ESC["Escalate: transfer to program, portfolio, or sponsor"]
@@ -95,11 +96,11 @@ Each risk response entry in the register:
 **Strategy:** [Avoid / Transfer / Mitigate / Accept / Escalate]
 **Response owner:** [One name]
 **Response actions:**
-1. [Action] — [owner] — [target date]
-2. [Action] — [owner] — [target date]
+1. [Action]: [owner], [target date]
+2. [Action]: [owner], [target date]
 **Trigger:** [The condition or event that activates the contingency plan]
 **Contingency plan:** [What happens if the risk fires]
-**Residual risk:** [Risk remaining after response — probability × impact]
+**Residual risk:** [Risk remaining after response: probability × impact]
 **Cost:** [Response cost, including contingency reserve allocation]
 **Review date:** [Date the response is next evaluated]
 ```
@@ -143,15 +144,15 @@ A response that is planned but not executed is a risk still active. Response mon
 |---------|---------------------|-----------------|
 | **"Monitor" as mitigation** | Watching a risk is not reducing it; the risk fires on schedule | Every risk has a dated action or an explicit acceptance with contingency |
 | **Response-without-cost** | Mitigation actions are planned without costing them | Cost every response; compare cost to expected risk exposure |
-| **Contingency-without-trigger** | "We'll deal with it" — no trigger, no owner, no plan | Define trigger events and named contingency owners |
+| **Contingency-without-trigger** | "We'll deal with it": no trigger, no owner, no plan | Define trigger events and named contingency owners |
 | **Residual risk ignored** | The response is applied but the remaining risk is not assessed | Assess residual risk; add secondary responses if above appetite |
 | **Over-mitigation** | Every risk is mitigated regardless of cost or probability | Compare response cost to expected exposure; accept low-exposure risks |
 
 ## Success Indicators
 
 - Every high and critical risk has a documented response with owner and target date
-- Response costs are compared to expected risk exposure — and the comparison makes sense
-- Contingency plans have defined triggers — the team knows when to act
+- Response costs are compared to expected risk exposure, and the comparison makes sense
+- Contingency plans have defined triggers: the team knows when to act
 - Residual risks are assessed and within risk appetite
 - Response status is reviewed in every status cycle
 
@@ -166,4 +167,4 @@ A response that is planned but not executed is a risk still active. Response mon
 
 ## Summary
 
-Risk response planning turns prioritized risks into action: selecting a strategy (avoid, transfer, mitigate, accept, escalate), designing specific dated actions with named owners, costing the response, defining contingency triggers, and assessing residual risk. The key discipline is proportionality — response cost should not exceed expected risk exposure unless the impact is catastrophic. A risk with no response beyond "monitor" is not managed; it is documented. The response plan is living — reviewed every status cycle, adjusted when the risk profile changes, and closed when the risk retires or fires.
+Risk response planning turns prioritized risks into action: selecting a strategy (avoid, transfer, mitigate, accept, escalate), designing specific dated actions with named owners, costing the response, defining contingency triggers, and assessing residual risk. The key discipline is proportionality: response cost should not exceed expected risk exposure unless the impact is catastrophic. A risk with no response beyond "monitor" is not managed; it is documented. The response plan is living, reviewed every status cycle, adjusted when the risk profile changes, and closed when the risk retires or fires.

@@ -110,6 +110,7 @@ Every prioritization decision involves trade-offs. A senior engineer makes them 
 Every project operates within the iron triangle of scope, time, and cost. You can fix two and adjust the third:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SCOPE["Scope\nWhat we build"]
     TIME["Time\nWhen we deliver"]

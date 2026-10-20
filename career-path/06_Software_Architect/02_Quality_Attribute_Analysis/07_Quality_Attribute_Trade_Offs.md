@@ -16,15 +16,15 @@ tags:
 
 # Quality Attribute Trade Offs
 
-> **Core skill:** Managing conflicts between quality attributes — making the trade-off explicit, deciding which quality wins for each structural choice, recording the preference in ADRs, and recognizing when a trade-off is a false dichotomy that better architecture can dissolve.
+> **Core skill:** Managing conflicts between quality attributes, making the trade-off explicit, deciding which quality wins for each structural choice, recording the preference in ADRs, and recognizing when a trade-off is a false dichotomy that better architecture can dissolve.
 
 ## Why This Matters
 
-Quality attributes are not allies. Performance architecture and security architecture pull in opposite directions; availability architecture and modifiability architecture demand different structures; the system that tries to maximize all qualities maximizes none. The architect's most important skill is arguably not selecting tactics for a single quality attribute — it is resolving the conflicts that arise when multiple quality attributes compete for the same structural decision.
+Quality attributes are not allies. Performance architecture and security architecture pull in opposite directions; availability architecture and modifiability architecture demand different structures; the system that tries to maximize all qualities maximizes none. The architect's most important skill is arguably not selecting tactics for a single quality attribute. It is resolving the conflicts that arise when multiple quality attributes compete for the same structural decision.
 
-The trade-off problem is hardest because it is not solvable by optimization. There is no Pareto-optimal architecture that delivers perfect security, blazing performance, infinite availability, and effortless modifiability. Every structural decision privileges some qualities over others, and the architect who does not make those preferences explicit makes them accidentally — leaving the system shaped by whichever quality attribute happened to dominate the last design discussion.
+The trade-off problem is hardest because it is not solvable by optimization. There is no Pareto-optimal architecture that delivers perfect security, blazing performance, infinite availability, and effortless modifiability. Every structural decision privileges some qualities over others, and the architect who does not make those preferences explicit makes them accidentally, leaving the system shaped by whichever quality attribute happened to dominate the last design discussion.
 
-This note covers the classic conflicts, the trade-off matrix, making preference explicit with weighting and utility trees, recording trade-offs in ADRs, and recognizing false dichotomies — situations where what appears to be an inevitable conflict is actually a design failure that can be resolved with better architecture.
+This note covers the classic conflicts, the trade-off matrix, making preference explicit with weighting and utility trees, recording trade-offs in ADRs, and recognizing false dichotomies: situations where what appears to be an inevitable conflict is actually a design failure that can be resolved with better architecture.
 
 ## Classic Quality Attribute Conflicts
 
@@ -48,11 +48,11 @@ A trade-off matrix makes conflicts visible for a specific system. Each cell reco
 
 | | Performance | Availability | Security | Modifiability | Deployability |
 |---|---|---|---|---|---|
-| **Performance** | — | Favor performance: sync writes over async replication | Conflict: encryption adds latency; accept p95 +15ms | Conflict: minimize indirection; favor direct calls | Low conflict: fast deployment helps performance |
-| **Availability** | Conflict: redundant systems add latency | — | Synergy: both need redundancy | Conflict: redundancy complicates modification | Synergy: deployment tactics support availability |
-| **Security** | Resolved: TLS terminated at edge; internal traffic in clear | Synergy: security requires availability of auth service | — | Low conflict: both benefit from stable interfaces | Conflict: security gates slow deployment |
-| **Modifiability** | Trade-off: accept indirection cost for modifiability | Low conflict: both benefit from modularity | Synergy: stable interfaces help both | — | Conflict: modifiability adds deployment complexity |
-| **Deployability** | Resolved: blue-green requires double capacity during cutover | Synergy: deployment automation reduces MTTR | Conflict: security review gates slow deployment | Trade-off: feature flags add modifiability at deployment complexity cost | — |
+| **Performance** | N/A | Favor performance: sync writes over async replication | Conflict: encryption adds latency; accept p95 +15ms | Conflict: minimize indirection; favor direct calls | Low conflict: fast deployment helps performance |
+| **Availability** | Conflict: redundant systems add latency | N/A | Synergy: both need redundancy | Conflict: redundancy complicates modification | Synergy: deployment tactics support availability |
+| **Security** | Resolved: TLS terminated at edge; internal traffic in clear | Synergy: security requires availability of auth service | N/A | Low conflict: both benefit from stable interfaces | Conflict: security gates slow deployment |
+| **Modifiability** | Trade-off: accept indirection cost for modifiability | Low conflict: both benefit from modularity | Synergy: stable interfaces help both | N/A | Conflict: modifiability adds deployment complexity |
+| **Deployability** | Resolved: blue-green requires double capacity during cutover | Synergy: deployment automation reduces MTTR | Conflict: security review gates slow deployment | Trade-off: feature flags add modifiability at deployment complexity cost | N/A |
 ```
 
 Each cell names the relationship (conflict, synergy, neutral, resolved) and records the decision about which quality wins or how the conflict was resolved.
@@ -99,15 +99,15 @@ Every ADR that makes a structural decision where quality attributes conflict mus
 # ADR-012: Use synchronous writes for order processing
 
 ## Quality Attribute Trade-Off
-- **Prioritized:** Consistency — orders must be confirmed before responding to the user
-- **Sacrificed:** Availability — during a database partition, order processing is unavailable rather than accepting orders with uncertain status
+- **Prioritized:** Consistency (orders must be confirmed before responding to the user)
+- **Sacrificed:** Availability (during a database partition, order processing is unavailable rather than accepting orders with uncertain status)
 - **Justification:** Business requirement: an order that cannot be confirmed must not be accepted. Lost revenue from unavailability during partition is lower than cost of order disputes from inconsistent state.
 
 ## Revisit Trigger
 If the business accepts eventual consistency for orders (e.g., "order received" acknowledgment with async confirmation), this decision should be re-examined.
 ```
 
-The trade-off section makes the preference explicit: which quality won, which lost, and why. It also names the revisit trigger — the condition under which the preference might change — so the decision is not frozen.
+The trade-off section makes the preference explicit: which quality won, which lost, and why. It also names the revisit trigger (the condition under which the preference might change), so the decision is not frozen.
 
 ## When Trade-Offs Become False Dichotomies
 
@@ -121,9 +121,10 @@ Not every conflict is a real trade-off. Some are false dichotomies that dissolve
 | **Consistency vs Availability** | "We must choose one" | Different parts of the system may have different consistency requirements; not an all-or-nothing choice |
 | **Deployability vs Stability** | "Frequent deployment risks instability" | Deployment automation, canary releases, and observability make frequent deployment safer than infrequent |
 
-The test for a false dichotomy: can a structural change satisfy both qualities without unacceptable cost? If yes, the trade-off is an architecture problem, not an inherent conflict — and the architect's job is to find the structural resolution rather than to choose one quality over the other.
+The test for a false dichotomy: can a structural change satisfy both qualities without unacceptable cost? If yes, the trade-off is an architecture problem, not an inherent conflict, and the architect's job is to find the structural resolution rather than to choose one quality over the other.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CONFLICT["Two quality attributes appear to conflict"] --> TEST["Can a structural change satisfy both at acceptable cost"]
     TEST --> |"Yes"| RESOLVE["Resolve with better architecture: false dichotomy dissolved"]
@@ -137,7 +138,7 @@ flowchart TD
 
 ### Trade-Off Analysis Checklist
 
-- [ ] Quality attribute conflicts are identified and made explicit — not left to implicit resolution
+- [ ] Quality attribute conflicts are identified and made explicit, not left to implicit resolution
 - [ ] A trade-off matrix maps the interactions between the system's significant quality attributes
 - [ ] Each structural decision where qualities conflict records which quality was prioritized and why
 - [ ] Trade-off decisions include revisit triggers: when the preference might change
@@ -150,15 +151,15 @@ flowchart TD
 # Trade-Off Decision: [Title]
 
 ## Conflicting Qualities
-- Quality A: [name] — [what the architecture would do to maximize it]
-- Quality B: [name] — [what the architecture would do to maximize it]
+- Quality A: [name], [what the architecture would do to maximize it]
+- Quality B: [name], [what the architecture would do to maximize it]
 
 ## False Dichotomy Test
 [Can the conflict be resolved structurally? If yes, describe the resolution. If no, proceed.]
 
 ## Decision
-- Prioritized: [quality] — [reasoning rooted in business impact]
-- Sacrificed: [quality] — [accepted cost]
+- Prioritized: [quality], [reasoning rooted in business impact]
+- Sacrificed: [quality], [accepted cost]
 - Mitigation: [what, if anything, reduces the cost to the sacrificed quality]
 
 ## Revisit Trigger
@@ -179,19 +180,19 @@ flowchart TD
 ## Success Indicators
 
 - Architecture decisions name the quality attribute trade-offs accepted
-- Different structural decisions privilege different qualities — no single quality dominates every choice
+- Different structural decisions privilege different qualities: no single quality dominates every choice
 - Trade-off decisions include revisit triggers that fire when business context changes
 - False dichotomies are identified and resolved structurally before qualities are sacrificed
 - The trade-off matrix is a living document, updated as the system evolves
 
 ## Related Topics
 
-- [[01_Quality_Attribute_Workshops]] — how quality conflicts surface and are prioritized in workshops
-- [[07_Architecture_and_Quality_Attributes]] — the quality attribute catalog and scenario format
-- [[04_Architecture_Decision_Making]] — the decision process that produces trade-off ADRs
-- [[04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]] — formal trade-off analysis methods
-- [[career-path/02_Senior_Software_Engineer/08_Engineering_Economics_and_Trade_Offs/06_Trade_Off_Evaluation|Trade Off Evaluation (Senior)]] — the economic foundation for trade-off decisions
+- [[01_Quality_Attribute_Workshops]]: how quality conflicts surface and are prioritized in workshops
+- [[07_Architecture_and_Quality_Attributes]]: the quality attribute catalog and scenario format
+- [[04_Architecture_Decision_Making]]: the decision process that produces trade-off ADRs
+- [[career-path/06_Software_Architect/04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]]: formal trade-off analysis methods
+- [[career-path/02_Senior_Software_Engineer/08_Engineering_Economics_and_Trade_Offs/06_Trade_Off_Evaluation|Trade Off Evaluation (Senior)]]: the economic foundation for trade-off decisions
 
 ## Summary
 
-Quality attributes conflict by design — security costs performance, availability costs consistency, modifiability costs simplicity — and the architect's job is not to eliminate the conflicts but to make them explicit, decide which quality wins for each structural choice, and record the preference and its justification. The trade-off matrix maps interactions between qualities for a specific system; weighting and utility trees make preferences systematic rather than ad hoc. Every ADR that involves conflicting qualities must record the trade-off and a revisit trigger. Not every conflict is real: the architect tests apparent trade-offs for false dichotomies — situations where better architecture can satisfy both qualities — before accepting that one must be sacrificed. The honesty matters: architecture that claims to optimize for all qualities equally is usually architecture that was never evaluated against any of them.
+Quality attributes conflict by design (security costs performance, availability costs consistency, modifiability costs simplicity) and the architect's job is not to eliminate the conflicts but to make them explicit, decide which quality wins for each structural choice, and record the preference and its justification. The trade-off matrix maps interactions between qualities for a specific system; weighting and utility trees make preferences systematic rather than ad hoc. Every ADR that involves conflicting qualities must record the trade-off and a revisit trigger. Not every conflict is real: the architect tests apparent trade-offs for false dichotomies (situations where better architecture can satisfy both qualities) before accepting that one must be sacrificed. The honesty matters: architecture that claims to optimize for all qualities equally is usually architecture that was never evaluated against any of them.

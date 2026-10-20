@@ -16,15 +16,15 @@ tags:
 
 # Data Pipelines in Customer Environments
 
-> **Core skill:** Moving and cleaning data where the customer's rules apply — their classification, retention, and permissioning, applied at every hop, with reconciliation that proves the data arrived whole.
+> **Core skill:** Moving and cleaning data where the customer's rules apply: their classification, retention, and permissioning, applied at every hop, with reconciliation that proves the data arrived whole.
 
 ## Why This Matters
 
-Almost every deployment moves data. Even the simplest capability needs a feed from a source system, a store the application can query, and a flow of updates when the source changes. In a product environment the FDE would inherit a managed pipeline; in a customer environment the pipeline is often something the FDE builds, negotiates, and then defends in an audit. The customer's rules — data classification, residency, retention, separation of duties — apply to every hop, and they are not negotiable engineering preferences. They are conditions of operating.
+Almost every deployment moves data. Even the simplest capability needs a feed from a source system, a store the application can query, and a flow of updates when the source changes. In a product environment the FDE would inherit a managed pipeline; in a customer environment the pipeline is often something the FDE builds, negotiates, and then defends in an audit. The customer's rules (data classification, residency, retention, separation of duties) apply to every hop, and they are not negotiable engineering preferences. They are conditions of operating.
 
 Customer data is also dirtier than any demo corpus. Identifiers disagree across systems. Dates arrive in several formats within the same file. Free-text fields carry the real meaning while structured fields go stale. Rows are soft-deleted, re-appearing in next week's extract. None of this is a reason to stop; it is the raw material of the job. The FDE who treats cleaning and validation as first-class pipeline stages ships slower on the first day and far faster over the first month.
 
-Pipelines are also the place where correctness is provable. The business question at every review is simple: is the data complete, fresh, and correct? A pipeline the FDE cannot reconcile is a pipeline the customer cannot trust, no matter how well the downstream application performs. Reconciliation — counts, checksums, sampled records — is what turns "the pipeline ran" into "the data is right."
+Pipelines are also the place where correctness is provable. The business question at every review is simple: is the data complete, fresh, and correct? A pipeline the FDE cannot reconcile is a pipeline the customer cannot trust, no matter how well the downstream application performs. Reconciliation (counts, checksums, sampled records) is what turns "the pipeline ran" into "the data is right."
 
 ## The Shape of Customer Data
 
@@ -49,6 +49,7 @@ Pipelines are also the place where correctness is provable. The business questio
 | Observe freshness explicitly | Staleness looks like correctness until someone checks | Freshness monitors and alerts that name the pipeline, not the symptom |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     EXTRACT["Extract from the source"] --> VALIDATE["Validate and quarantine"]
     VALIDATE --> TRANSFORM["Transform and map identities"]
@@ -62,12 +63,12 @@ The loop is closed by reconciliation: every run ends with a statement about comp
 
 | Control | What It Catches | Effort to Add |
 |---------|-----------------|---------------|
-| Row counts per extract | Missing or partially delivered files | Low — compute per run and compare |
-| Sum or hash checks on key measures | Silent corruption or truncation | Low — one query on each side |
-| Sampled record-level comparison | Mapping and transformation errors | Medium — a scheduled job and a review habit |
+| Row counts per extract | Missing or partially delivered files | Low: compute per run and compare |
+| Sum or hash checks on key measures | Silent corruption or truncation | Low: one query on each side |
+| Sampled record-level comparison | Mapping and transformation errors | Medium: a scheduled job and a review habit |
 | Duplicate detection on business keys | Double-counting in downstream reports | Low to medium, depends on key quality |
-| Freshness and lag monitoring | Stalled feeds that look idle but healthy | Low — alert when newest record ages past threshold |
-| Exception queue triage | Systematic issues hiding as one-off rejects | Ongoing — someone must own the queue |
+| Freshness and lag monitoring | Stalled feeds that look idle but healthy | Low: alert when newest record ages past threshold |
+| Exception queue triage | Systematic issues hiding as one-off rejects | Ongoing: someone must own the queue |
 
 ## Practical Applications
 
@@ -84,7 +85,7 @@ The loop is closed by reconciliation: every run ends with a statement about comp
 ### Pipeline Run Record Template
 
 ```markdown
-## Pipeline Run — <name, date, run id>
+## Pipeline Run: <name, date, run id>
 
 | Field | Value |
 |-------|-------|
@@ -126,4 +127,4 @@ The loop is closed by reconciliation: every run ends with a statement about comp
 
 ## Summary
 
-Data pipelines in customer environments are where the customer's rules and the customer's data meet the FDE's engineering: validate at ingest, keep every hop idempotent, reconcile against the source, and treat classification and retention as design inputs rather than paperwork. The pipeline's real output is not rows in a table — it is the customer's confidence that the data is complete, fresh, and correct, provable on demand and owned by someone after the FDE leaves.
+Data pipelines in customer environments are where the customer's rules and the customer's data meet the FDE's engineering: validate at ingest, keep every hop idempotent, reconcile against the source, and treat classification and retention as design inputs rather than paperwork. The pipeline's real output is not rows in a table. It is the customer's confidence that the data is complete, fresh, and correct, provable on demand and owned by someone after the FDE leaves.

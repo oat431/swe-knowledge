@@ -15,19 +15,20 @@ tags:
 
 # Risk Management Planning
 
-> **Core skill:** Designing the risk management approach for the project — defining risk categories, probability and impact scales, risk appetite, roles, and the risk management process — so the team knows what to watch, how to assess it, and who acts.
+> **Core skill:** Designing the risk management approach for the project (defining risk categories, probability and impact scales, risk appetite, roles, and the risk management process) so the team knows what to watch, how to assess it, and who acts.
 
 ## Why This Matters
 
 Risk management fails most often not because risks are missed but because no one agreed how to manage them. Is "high probability" 70% or 90%? Is "high impact" a two-week slip or a two-month slip? Who owns the risk register? Who decides when a risk becomes an issue? When risk management planning is skipped, every risk conversation restarts from first principles and every risk assessment is a negotiation rather than a measurement.
 
-Risk management planning is the project manager's first risk action: defining the framework that makes all subsequent risk activities consistent, comparable, and actionable. It is a section in the project management plan — not a separate document — because risk management is embedded in how the project is run, not bolted on.
+Risk management planning is the project manager's first risk action: defining the framework that makes all subsequent risk activities consistent, comparable, and actionable. It is a section in the project management plan (not a separate document) because risk management is embedded in how the project is run, not bolted on.
 
 The output is a shared language for uncertainty. When a team member says "this is a medium-probability, high-impact risk," everyone knows what that means, what it triggers, and who is responsible.
 
 ## The Risk Management Plan
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     METHODOLOGY["Methodology: how risks are identified, assessed, and managed"] --> CATEGORIES["Categories: risk breakdown structure"]
     CATEGORIES --> SCALES["Scales: probability and impact definitions"]
@@ -49,7 +50,7 @@ A risk breakdown structure classifies risks so they can be systematically identi
 | **Project management** | Estimation accuracy, planning completeness, dependency management, communication |
 | **Quality** | Defect rates, test coverage, acceptance criteria, compliance |
 
-The categories are a checklist during risk identification — have we looked at every category? — and a lens during risk monitoring — are risks clustering in one category?
+The categories are a checklist during risk identification (have we looked at every category?) and a lens during risk monitoring (are risks clustering in one category?)
 
 ## Probability and Impact Scales
 
@@ -85,11 +86,11 @@ Risk appetite is set by the sponsor, not the project manager. The project manage
 | Team members | Identify risks in their work areas; report risk indicators |
 | Stakeholders | Identify external risks; participate in risk reviews as needed |
 
-Every risk in the register has one named owner — never "the team." The risk owner is the person who watches and acts.
+Every risk in the register has one named owner, never "the team." The risk owner is the person who watches and acts.
 
 ## Risk Management Process Integration
 
-Risk management is not a separate meeting — it is integrated into the project's regular cadence:
+Risk management is not a separate meeting. It is integrated into the project's regular cadence:
 
 | Cadence | Risk Activity |
 |---------|---------------|
@@ -138,7 +139,7 @@ Risk management is not a separate meeting — it is integrated into the project'
 ## Success Indicators
 
 - The team uses the probability and impact scales consistently
-- Risk appetite guides response decisions — not every risk is mitigated
+- Risk appetite guides response decisions: not every risk is mitigated
 - Risk management is a standing agenda item, not a special meeting
 - The risk register format is stable and understood by all risk owners
 - Escalation thresholds are clear and trigger action when crossed
@@ -149,8 +150,8 @@ Risk management is not a separate meeting — it is integrated into the project'
 - [[03_Risk_Analysis_and_Prioritization]]: the plan defines scales and thresholds
 - [[04_Risk_Response_Planning]]: the plan defines who approves responses
 - [[06_Risk_Monitoring_and_Control]]: the plan defines review cadence and escalation
-- [[01_Initiation_and_Charter/00_overview|Initiation and Charter]]: initial risks identified at initiation
+- [[career-path/13_Project_and_Program_Manager/01_Initiation_and_Charter/00_overview|Initiation and Charter]]: initial risks identified at initiation
 
 ## Summary
 
-Risk management planning establishes the framework that makes all subsequent risk activities consistent and comparable: risk categories that guide identification, probability and impact scales that make assessment objective, risk appetite that aligns responses with organizational tolerance, and roles that assign ownership. The plan is not a separate document — it is embedded in how the project is run. When planning is done well, risk conversations use a shared language and the escalation path is never a surprise.
+Risk management planning establishes the framework that makes all subsequent risk activities consistent and comparable: risk categories that guide identification, probability and impact scales that make assessment objective, risk appetite that aligns responses with organizational tolerance, and roles that assign ownership. The plan is not a separate document. It is embedded in how the project is run. When planning is done well, risk conversations use a shared language and the escalation path is never a surprise.

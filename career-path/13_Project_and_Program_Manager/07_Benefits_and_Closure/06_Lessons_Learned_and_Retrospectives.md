@@ -15,15 +15,15 @@ tags:
 
 # Lessons Learned and Retrospectives
 
-> **Core skill:** Capturing what worked, what didn't, and what to do differently — throughout the project, not just at the end — and ensuring lessons are documented, shared, and integrated into organizational process assets so the next project benefits from this project's experience.
+> **Core skill:** Capturing what worked, what didn't, and what to do differently (throughout the project, not just at the end) and ensuring lessons are documented, shared, and integrated into organizational process assets so the next project benefits from this project's experience.
 
 ## Why This Matters
 
-A project that completes without capturing its lessons has extracted only half its value from the investment. The deliverable is the product; the lessons are the organizational learning — and the learning compounds across projects while the deliverable depreciates.
+A project that completes without capturing its lessons has extracted only half its value from the investment. The deliverable is the product; the lessons are the organizational learning, and the learning compounds across projects while the deliverable depreciates.
 
 Lessons learned are also the project manager's professional growth mechanism. Every project teaches something about estimation, risk, stakeholders, communication, governance, or team dynamics. The project manager who captures these lessons deliberately builds a practice; the one who moves to the next project without reflection builds a career of repeated mistakes.
 
-The discipline is not a single retrospective at the end — it is continuous capture throughout the project, periodic team retrospectives, and a final lessons learned report that is honest, specific, and actionable. A lesson that is not written down is a lesson that will be re-learned at the next project's expense.
+The discipline is not a single retrospective at the end; it is continuous capture throughout the project, periodic team retrospectives, and a final lessons learned report that is honest, specific, and actionable. A lesson that is not written down is a lesson that will be re-learned at the next project's expense.
 
 ## When to Capture Lessons
 
@@ -51,11 +51,11 @@ Continuous capture prevents the most common lessons-learned failure: the end-of-
 
 Every retrospective centers on three questions:
 
-1. **What should we keep doing?** — Practices that worked well and should be continued or amplified
-2. **What should we stop doing?** — Practices that were ineffective, wasteful, or counterproductive
-3. **What should we start doing?** — Practices we didn't do but should adopt in the future
+1. **What should we keep doing?**: Practices that worked well and should be continued or amplified
+2. **What should we stop doing?**: Practices that were ineffective, wasteful, or counterproductive
+3. **What should we start doing?**: Practices we didn't do but should adopt in the future
 
-These three questions are simple, memorable, and produce actionable output. More complex frameworks exist, but the three-question format is sufficient for most projects — and simplicity increases participation.
+These three questions are simple, memorable, and produce actionable output. More complex frameworks exist, but the three-question format is sufficient for most projects, and simplicity increases participation.
 
 ## Lessons Learned Categories
 
@@ -68,7 +68,7 @@ These three questions are simple, memorable, and produce actionable output. More
 | **Governance** | "Change control thresholds were ambiguous; the PM was approving changes that should have gone to the steering committee. Recommendation: numeric thresholds in the governance design." |
 | **Team** | "The team was co-located for the first three months and remote for the rest; velocity dropped 30% after going remote. Recommendation: plan for the productivity dip; invest in remote collaboration tools and rituals before the transition." |
 
-Each lesson is specific — it names the actual event, the root cause, and the recommendation. "Communication was bad" is not a lesson; "Steering committee reports were too detailed" is.
+Each lesson is specific; it names the actual event, the root cause, and the recommendation. "Communication was bad" is not a lesson; "Steering committee reports were too detailed" is.
 
 ## From Lessons to Organizational Learning
 
@@ -89,21 +89,21 @@ The test of a lesson learned is whether the next project manager, facing the sam
 |---------|---------|
 | **Project summary** | Brief context: what the project was, duration, size, outcome |
 | **Methodology** | How lessons were collected: retrospectives, surveys, interviews |
-| **What worked** | Practices to keep and amplify — with specific examples |
-| **What didn't work** | Problems and root causes — with specific examples |
+| **What worked** | Practices to keep and amplify, with specific examples |
+| **What didn't work** | Problems and root causes, with specific examples |
 | **Recommendations** | Actionable, specific recommendations for future projects |
 | **Key metrics** | Quantitative lessons: estimation accuracy, defect rates, velocity trends |
 | **Team feedback** | Anonymous team feedback on project management, process, and environment |
 | **Appendices** | Retrospective outputs, survey results, detailed findings |
 
-The report is distributed to the sponsor, the PMO, and the project management community. It is not a confidential team document — it is an organizational asset.
+The report is distributed to the sponsor, the PMO, and the project management community. It is not a confidential team document; it is an organizational asset.
 
 ## Lessons Learned in Programs
 
 Program lessons learned add scale and integration:
 
 - **Project-level lessons**: captured by each project manager; consolidated by the program manager
-- **Program-level lessons**: cross-project patterns — what recurred across projects, what differed
+- **Program-level lessons**: cross-project patterns, what recurred across projects, what differed
 - **Integration lessons**: what was learned about coordinating multiple projects, managing cross-project dependencies, and governing at scale
 - **Benefit lessons**: what was learned about benefit identification, tracking, and realization across the program
 
@@ -111,7 +111,7 @@ Program lessons learned add scale and integration:
 
 ### Lessons Learned Checklist
 
-- [ ] Lessons are captured continuously — after significant events, at phase gates, and at closure
+- [ ] Lessons are captured continuously, after significant events, at phase gates, and at closure
 - [ ] Retrospectives follow a structured format with the three questions: keep, stop, start
 - [ ] Every lesson is specific: context, observation, root cause, recommendation
 - [ ] Lessons are documented in a report that is distributed to the organization
@@ -130,8 +130,8 @@ Program lessons learned add scale and integration:
 
 ## Success Indicators
 
-- Lessons are captured throughout the project — the final report is a compilation, not a reconstruction
-- Lessons are specific and actionable — a future PM can implement the recommendation
+- Lessons are captured throughout the project; the final report is a compilation, not a reconstruction
+- Lessons are specific and actionable; a future PM can implement the recommendation
 - The lessons learned report is distributed and presented to the project community
 - At least one process asset (template, checklist, standard) is updated based on project lessons
 - The next project's planning references this project's lessons
@@ -140,9 +140,9 @@ Program lessons learned add scale and integration:
 
 - [[04_Project_Closure_Process]]: the lessons learned report is a closure deliverable
 - [[07_Post_Project_Evaluation]]: post-project evaluation references lessons learned
-- [[01_Initiation_and_Charter/00_overview|Initiation and Charter]]: the next project's charter should reference lessons from previous projects
-- [[04_Risk_and_Issues/00_overview|Risk and Issues]]: risks that materialized are primary lesson sources
+- [[career-path/13_Project_and_Program_Manager/01_Initiation_and_Charter/00_overview|Initiation and Charter]]: the next project's charter should reference lessons from previous projects
+- [[career-path/13_Project_and_Program_Manager/04_Risk_and_Issues/00_overview|Risk and Issues]]: risks that materialized are primary lesson sources
 
 ## Summary
 
-Lessons learned and retrospectives are the project's learning discipline: continuous capture throughout the project, periodic team retrospectives structured around keep/stop/start, and a final report that is specific, actionable, and distributed to the organization. A lesson that is vague, captured only at the end, and filed unread is a lesson that will be re-learned at the next project's expense. A lesson that is specific, captured in the moment, and integrated into organizational process assets is a lesson that compounds — and the organization that learns from its projects outperforms the one that repeats them. The project manager who captures lessons deliberately builds an organizational practice; the one who skips the retrospective builds a career of repeated mistakes.
+Lessons learned and retrospectives are the project's learning discipline: continuous capture throughout the project, periodic team retrospectives structured around keep/stop/start, and a final report that is specific, actionable, and distributed to the organization. A lesson that is vague, captured only at the end, and filed unread is a lesson that will be re-learned at the next project's expense. A lesson that is specific, captured in the moment, and integrated into organizational process assets is a lesson that compounds, and the organization that learns from its projects outperforms the one that repeats them. The project manager who captures lessons deliberately builds an organizational practice; the one who skips the retrospective builds a career of repeated mistakes.

@@ -17,15 +17,15 @@ tags:
 
 # Facilitation Techniques
 
-> **Core skill:** The working craft of guiding groups — agendas, questioning, time, participation, and conflict — so that any session reaches its stated outcome, in the room and remotely.
+> **Core skill:** The working craft of guiding groups (agendas, questioning, time, participation, and conflict) so that any session reaches its stated outcome, in the room and remotely.
 
 ## Why This Matters
 
-Every other skill in this area is delivered through a session: the workshop, the discovery conversation, the review, the demo. Facilitation is the operator under all of them — the set of concrete moves that keeps a group moving from talking to an articulated outcome. Facilitators are judged by the meeting's product: a decision, a confirmed understanding, a plan with owners. If the group could have reached the same result without you, you did not facilitate; you hosted.
+Every other skill in this area is delivered through a session: the workshop, the discovery conversation, the review, the demo. Facilitation is the operator under all of them: the set of concrete moves that keeps a group moving from talking to an articulated outcome. Facilitators are judged by the meeting's product: a decision, a confirmed understanding, a plan with owners. If the group could have reached the same result without you, you did not facilitate; you hosted.
 
-The advocate and consultant facilitate constantly, often without the title: a partner call that must end with a scope, a community session that must produce next steps, a review that must rank findings. Where a formal facilitator manages process for a neutral meeting, this role brings technical judgment into the process — which raises a specific danger. The moment you start defending your own idea, you stop facilitating. The craft is keeping your expertise available to the group while the group keeps ownership of the outcome.
+The advocate and consultant facilitate constantly, often without the title: a partner call that must end with a scope, a community session that must produce next steps, a review that must rank findings. Where a formal facilitator manages process for a neutral meeting, this role brings technical judgment into the process, which raises a specific danger. The moment you start defending your own idea, you stop facilitating. The craft is keeping your expertise available to the group while the group keeps ownership of the outcome.
 
-Good facilitation is largely invisible and almost entirely preparation: an agenda built backward from the outcome, roles made explicit, materials tested, and interventions rehearsed. The visible part is small — a handful of moves applied at the right moments: opening participation early, protecting the quiet voices, cutting a tangent with respect, sensing when divergence is done, and closing every thread with an owner.
+Good facilitation is largely invisible and almost entirely preparation: an agenda built backward from the outcome, roles made explicit, materials tested, and interventions rehearsed. The visible part is small: a handful of moves applied at the right moments (opening participation early, protecting the quiet voices, cutting a tangent with respect, sensing when divergence is done, and closing every thread with an owner).
 
 ## The Facilitator Stance
 
@@ -96,6 +96,7 @@ Good facilitation is largely invisible and almost entirely preparation: an agend
 | The group is disengaged | Switch to small tasks; make progress visible in five minutes |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     FRAME["Frame the outcome and agenda"] --> OPEN["Open participation early"]
     OPEN --> DIVERGE["Diverge for context and options"]
@@ -130,7 +131,7 @@ flowchart LR
 | 0:55 | Close | Confirm actions | Facilitator |
 
 **Parking lot:** [live during the session]
-**Actions:** [what / who / when — confirmed before closing]
+**Actions:** [what / who / when, confirmed before closing]
 ```
 
 ## Common Pitfalls
@@ -155,12 +156,12 @@ flowchart LR
 
 ## Related Topics
 
-- [[01_Workshops_and_Hands_On_Sessions]] — tasks plus facilitation; the densest format
-- [[02_Discovery_Sessions]] — facilitation applied to extracting real needs
-- [[04_Technical_Reviews_and_Assessments]] — keeping review sessions evidence-based and fair
-- [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/04_Facilitation|Facilitation (Senior)]] — the meeting-scale foundation of this craft
-- [[06_Community_and_Ecosystem/00_overview|Community and Ecosystem]] — facilitation at community scale
+- [[01_Workshops_and_Hands_On_Sessions]]: tasks plus facilitation; the densest format
+- [[02_Discovery_Sessions]]: facilitation applied to extracting real needs
+- [[04_Technical_Reviews_and_Assessments]]: keeping review sessions evidence-based and fair
+- [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/04_Facilitation|Facilitation (Senior)]]: the meeting-scale foundation of this craft
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/06_Community_and_Ecosystem/00_overview|Community and Ecosystem]]: facilitation at community scale
 
 ## Summary
 
-Facilitation techniques are the moves that convert a group's time into outcomes: framing the result before the discussion, opening participation early, separating divergence from convergence, intervening on dynamics without dominating, and closing every session with owners and dates. The facilitator's expertise remains available but never takes the pen — the group owns the content, and the result is visible the moment the meeting ends.
+Facilitation techniques are the moves that convert a group's time into outcomes: framing the result before the discussion, opening participation early, separating divergence from convergence, intervening on dynamics without dominating, and closing every session with owners and dates. The facilitator's expertise remains available but never takes the pen. The group owns the content, and the result is visible the moment the meeting ends.

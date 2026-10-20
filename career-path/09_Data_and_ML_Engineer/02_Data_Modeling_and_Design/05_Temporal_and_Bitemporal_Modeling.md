@@ -48,6 +48,7 @@ The cost of not modeling time is discovered when an auditor asks "what was this 
 ### Bitemporal Model Structure
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TB
     subgraph Reality["Real World Timeline"]
         A[Event happens at T1]

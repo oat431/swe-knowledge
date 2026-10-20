@@ -15,17 +15,17 @@ tags:
 
 # Release and Deployment Leadership
 
-> **Core skill:** Owning the team's release strategy — the release type, the safety mechanisms, the rollback design, and the communication — so that shipping is routine instead of adrenaline.
+> **Core skill:** Owning the team's release strategy (the release type, the safety mechanisms, the rollback design, and the communication) so that shipping is routine instead of adrenaline.
 
 ## Why This Matters
 
 A release is the moment a team's promise becomes a user's reality, and it is the moment of maximum risk. When releasing depends on a hero and a prayer, the team ships less, fears more, and the fear quietly shapes what work gets attempted at all.
 
-The senior engineer ships her own changes safely; the tech lead designs the path everyone ships through. This is the difference the area marks: the lead owns the release system — its type, its gates, its rollbacks, its communication — and makes safe shipping the default property of the team, not the specialty of one person.
+The senior engineer ships her own changes safely; the tech lead designs the path everyone ships through. This is the difference the area marks: the lead owns the release system (its type, its gates, its rollbacks, its communication) and makes safe shipping the default property of the team, not the specialty of one person.
 
 ## Choosing the Release Type
 
-The release type is a strategic choice, made from the system's risk profile and the business's appetite for change — not a default inherited from last year.
+The release type is a strategic choice, made from the system's risk profile and the business's appetite for change, not a default inherited from last year.
 
 | Release type | How it works | Best for | Cost |
 |--------------|--------------|----------|------|
@@ -33,7 +33,7 @@ The release type is a strategic choice, made from the system's risk profile and 
 | **Scheduled trains** | Changes accumulate and ship on a fixed cadence | Platforms with compatibility requirements and cross-team coordination | Slower feedback; big-bang risk if gates are weak |
 | **Release-on-demand** | Business decides when each feature goes live | Sales-led or regulatory environments with controlled moments | Needs feature flags to separate deploy from release |
 
-The lead's choice is documented and reviewed when the system or the team changes. Release type is not a religion — a team can run continuous for services and trains for platform changes, as long as the choice is conscious per system.
+The lead's choice is documented and reviewed when the system or the team changes. Release type is not a religion. A team can run continuous for services and trains for platform changes, as long as the choice is conscious per system.
 
 ## Feature Flags and Dark Launches
 
@@ -49,7 +49,7 @@ Flags turn a release from a one-way door into a reversible decision. The lead's 
 
 ## Staged Rollouts
 
-When a change is too big for a blind deploy, the team stages it — exposing the change to a widening slice of reality while watching the signals.
+When a change is too big for a blind deploy, the team stages it: exposing the change to a widening slice of reality while watching the signals.
 
 | Technique | Mechanism | Risk profile | When to prefer it |
 |-----------|-----------|--------------|-------------------|
@@ -68,7 +68,7 @@ Every design decision that touches production should answer one question: how do
 | Feature flag toggle | Seconds | None | The feature was behind a flag; flip it off |
 | Traffic switch | Minutes | None | Blue-green or canary infrastructure exists |
 | Redeploy previous version | Minutes | Possible for schema changes | No flag, no traffic routing, small surface |
-| Data migration reversal | Slow and risky | High | Only when migrations must be undone — prefer forward fixes |
+| Data migration reversal | Slow and risky | High | Only when migrations must be undone: prefer forward fixes |
 
 The lead's stance: forward fixes beat rollbacks when the change is small and understood, rollbacks beat forward fixes when the change is large or the investigation is slow. The decision framework is agreed before the release, including who makes the call and what signals trigger it.
 
@@ -89,7 +89,7 @@ A readiness bar the lead defends is a gift to the team: it takes the awkwardness
 
 ## Communication Around Releases
 
-Releases are communication events. The lead owns the messages that go out before, during, and after — so that nobody learns about the release from the incident page.
+Releases are communication events. The lead owns the messages that go out before, during, and after, so that nobody learns about the release from the incident page.
 
 | Audience | Before | During | After |
 |----------|--------|--------|-------|
@@ -110,11 +110,12 @@ The release is not done when the deploy finishes; it is done when the verificati
 - Leave the monitoring window running and name who watches it
 - Record the release outcome in the team's log: what shipped, what was flagged, what the verification found
 
-The verification window is the part of the release most teams skip — and it is where the lead earns the difference between shipping and shipping safely.
+The verification window is the part of the release most teams skip, and it is where the lead earns the difference between shipping and shipping safely.
 
 ## The Release Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     DESIGN["Design for release and rollback"] --> GATES["Meet the readiness gates"]
     GATES --> STAGE["Stage the rollout"]
@@ -131,7 +132,7 @@ flowchart LR
 - [ ] Confirm the release type is the conscious choice for this system
 - [ ] Check every feature flag has an owner, an expiry, and tested both paths
 - [ ] Write the rollout plan: stages, metrics, dwell times, abort condition
-- [ ] Confirm the rollback mechanism works — practice it in staging
+- [ ] Confirm the rollback mechanism works: practice it in staging
 - [ ] Walk the readiness gates and record the results
 - [ ] Send the pre-release communication to stakeholders, support, and users
 - [ ] Name the rollback decision-maker before the release starts
@@ -141,7 +142,7 @@ flowchart LR
 **Release communication template:**
 
 ```markdown
-Subject: Release [name] — [date] [time]
+Subject: Release [name], [date] [time]
 
 What ships: [one paragraph in user language]
 Why it matters: [the outcome, not the feature list]
@@ -172,7 +173,7 @@ Where to report: [channel or owner]
 - Releases happen on the chosen cadence without heroics
 - Every release has written rollout and rollback plans before it starts
 - Rollbacks and flag flips are practiced and boring, not terrifying
-- Readiness gates are met or the release is postponed — without drama
+- Readiness gates are met or the release is postponed, without drama
 - Stakeholders, support, and users hear about releases from the team first
 - Post-release verification catches issues the tests could not
 
@@ -180,8 +181,8 @@ Where to report: [channel or owner]
 
 - [[07_Delivery_Metrics_and_Health]]: deployment frequency and change failure rate measure this system
 - [[04_Delivery_Risk_Management]]: release risk is a standing register entry
-- [[02_System_Ownership_and_Production_Responsibility/00_overview|System Ownership and Production Responsibility]]: release design is production responsibility at the boundary
-- [[07_Incident_Leadership_and_Production_Excellence/00_overview|Incident Leadership and Production Excellence]]: release failures flow into incident leadership
+- [[career-path/05_Tech_Lead/02_System_Ownership_and_Production_Responsibility/00_overview|System Ownership and Production Responsibility]]: release design is production responsibility at the boundary
+- [[career-path/05_Tech_Lead/07_Incident_Leadership_and_Production_Excellence/00_overview|Incident Leadership and Production Excellence]]: release failures flow into incident leadership
 - [[career-path/02_Senior_Software_Engineer/04_Delivery_and_Execution/05_Release_Management|Release Management (Senior)]]: the personal release craft this area scales to the team system
 
 ## Summary

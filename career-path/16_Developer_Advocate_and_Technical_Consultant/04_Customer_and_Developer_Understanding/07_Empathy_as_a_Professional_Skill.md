@@ -17,7 +17,7 @@ tags:
 
 # Empathy as a Professional Skill
 
-> **Core skill:** Maintaining disciplined curiosity and humility about users — the operating stance that keeps content, guidance, and recommendations accurate instead of clever.
+> **Core skill:** Maintaining disciplined curiosity and humility about users: the operating stance that keeps content, guidance, and recommendations accurate instead of clever.
 
 ## Why This Matters
 
@@ -25,7 +25,7 @@ Empathy in this role is not a personality trait; it is a technical instrument. T
 
 Professional empathy is also the most fatiguing skill in the area, because it inverts the expert's instincts all day. The expert wants to answer; empathy wants to understand the question first. The expert hears a technically wrong request; empathy hears a person describing a problem badly because the problem is genuinely confusing. Fatigue sets in, shortcuts appear, and the advocate starts responding to the user they remember instead of the one in front of them.
 
-The antidote is method rather than feeling: scheduled exposure to beginner states, friction journals, verbatim capture, perspective checks before shipping content, and recurring calibration against real users. Treating empathy as a practice — with cadence and evidence — is what keeps it honest when the calendar is full and the expert voice is loudest in your own head.
+The antidote is method rather than feeling: scheduled exposure to beginner states, friction journals, verbatim capture, perspective checks before shipping content, and recurring calibration against real users. Treating empathy as a practice (with cadence and evidence) is what keeps it honest when the calendar is full and the expert voice is loudest in your own head.
 
 ## What Professional Empathy Is And Is Not
 
@@ -82,6 +82,7 @@ The antidote is method rather than feeling: scheduled exposure to beginner state
 | Growth in status | Keep the beginner practice; it is the calibration instrument |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     LISTEN["Listen for the problem behind the request"] --> SUSPEND["Suspend expert assumptions"]
     SUSPEND --> REFRAME["Reframe from the user context"]
@@ -134,12 +135,12 @@ flowchart LR
 
 ## Related Topics
 
-- [[01_Developer_and_Customer_Research]] — the research methods empathy infuses
-- [[02_Needs_and_Context_Discovery]] — holding customer context without judgment
-- [[03_Observing_Real_Usage_and_Friction]] — keeping the beginner state visible
-- [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/02_Stakeholder_Communication|Stakeholder Communication (Senior)]] — perspective-taking in technical communication
-- [[06_Community_and_Ecosystem/00_overview|Community and Ecosystem]] — empathy practiced at community scale
+- [[01_Developer_and_Customer_Research]]: the research methods empathy infuses
+- [[02_Needs_and_Context_Discovery]]: holding customer context without judgment
+- [[03_Observing_Real_Usage_and_Friction]]: keeping the beginner state visible
+- [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/02_Stakeholder_Communication|Stakeholder Communication (Senior)]]: perspective-taking in technical communication
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/06_Community_and_Ecosystem/00_overview|Community and Ecosystem]]: empathy practiced at community scale
 
 ## Summary
 
-Empathy as a professional skill is a method, not a mood: knowing the user's situation well enough to predict the next question, holding expertise lightly in their context, and treating curiosity as a maintained instrument — beginner-state exposure each cycle, friction journals, verbatim vocabulary, perspective checks before shipping, and deliberate calibration against the users most easily forgotten. Technical accuracy without it is just plausible; with it, guidance lands.
+Empathy as a professional skill is a method, not a mood: knowing the user's situation well enough to predict the next question, holding expertise lightly in their context, and treating curiosity as a maintained instrument (beginner-state exposure each cycle, friction journals, verbatim vocabulary, perspective checks before shipping, and deliberate calibration against the users most easily forgotten). Technical accuracy without it is just plausible; with it, guidance lands.

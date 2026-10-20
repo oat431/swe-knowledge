@@ -16,13 +16,13 @@ tags:
 
 # Influence Ethics for Staff
 
-> **Core skill:** The staff engineer keeps influence transparent, honest, and auditable — persuasion that survives disclosure, credit that flows down, and commitments that are never made on someone else's behalf.
+> **Core skill:** The staff engineer keeps influence transparent, honest, and auditable: persuasion that survives disclosure, credit that flows down, and commitments that are never made on someone else's behalf.
 
 ## Why This Matters
 
-The staff engineer's influence surface is large: proposals that redirect whole teams, recommendations that leadership funds, coalitions that shape careers. Most of that influence is exercised without anyone checking it — no manager reviews every framing choice, and no committee audits every omission. The only guard is the staff engineer's own standards, applied consistently.
+The staff engineer's influence surface is large: proposals that redirect whole teams, recommendations that leadership funds, coalitions that shape careers. Most of that influence is exercised without anyone checking it: no manager reviews every framing choice, and no committee audits every omission. The only guard is the staff engineer's own standards, applied consistently.
 
-Ethical influence is not a constraint on effectiveness; it is the precondition for it. Influence that survives disclosure compounds — every person who discovers how you operate and remains comfortable is a person who will trust you with more. Influence that depends on opacity collapses the moment it is inspected, and staff-level work is always inspected eventually. The transparency test is not a moral ornament; it is the risk management of the career.
+Ethical influence is not a constraint on effectiveness; it is the precondition for it. Influence that survives disclosure compounds: every person who discovers how you operate and remains comfortable is a person who will trust you with more. Influence that depends on opacity collapses the moment it is inspected, and staff-level work is always inspected eventually. The transparency test is not a moral ornament; it is the risk management of the career.
 
 ## The Staff Influence Surface
 
@@ -37,7 +37,7 @@ Before setting standards, name the surface they apply to. The staff engineer sha
 | Recommending a direction to leadership | Every team that must execute it |
 | Crediting or omitting contributors | The people whose work was or was not named |
 
-Each of these is legitimate — the staff role is made of them. The ethical question is never whether to influence; it is whether each act would survive being shown, in full, to everyone it affects.
+Each of these is legitimate: the staff role is made of them. The ethical question is never whether to influence; it is whether each act would survive being shown, in full, to everyone it affects.
 
 ## The Four Ethical Lines
 
@@ -69,7 +69,7 @@ The reliable test is the last row: if the other party had everything you know, w
 
 ## Grey Zones and Their Honest Handling
 
-Between the clear cases sits a band of grey. The staff engineer's discipline is not to pretend the grey is white — it is to handle each grey zone openly.
+Between the clear cases sits a band of grey. The staff engineer's discipline is not to pretend the grey is white. It is to handle each grey zone openly.
 
 | Grey Zone | Why It Is Grey | Honest Handling |
 |-----------|----------------|-----------------|
@@ -83,7 +83,7 @@ The rule for all grey zones: make the choice visible. A grey choice that is disc
 
 ## Teaching Ethical Influence
 
-The staff engineer's ethical obligations extend to the people who learn influence by watching. Mentees copy the visible craft — the pre-alignment, the framing, the coalition — and the invisible standards along with it. Teaching ethical influence means making the process visible on purpose:
+The staff engineer's ethical obligations extend to the people who learn influence by watching. Mentees copy the visible craft (the pre-alignment, the framing, the coalition) and the invisible standards along with it. Teaching ethical influence means making the process visible on purpose:
 
 - Show the consultation list and explain why each person was included.
 - Show the options that were cut and why, including the ones that hurt your case.
@@ -104,7 +104,7 @@ The staff engineer will eventually be asked to bend the standards: a leader who 
 | Public embarrassment of the asker | Private, prompt, and specific; the asker keeps face |
 | Refusal without alternatives | The honest version of the outcome they wanted, plus the path to it |
 
-The refusal is also a signal. Every clean refusal raises the price of unethical asks in the organization; every silent compliance lowers it. The staff engineer who refuses well is not being difficult — they are maintaining the currency that everyone's influence runs on.
+The refusal is also a signal. Every clean refusal raises the price of unethical asks in the organization; every silent compliance lowers it. The staff engineer who refuses well is not being difficult. They are maintaining the currency that everyone's influence runs on.
 
 ## The Transparency Audit
 
@@ -138,6 +138,7 @@ The practical discipline is a periodic self-audit, run like a review.
 ```
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DISCLOSE["Would this survive disclosure"] --> HONEST["Is the urgency and data real"]
     HONEST --> CREDIT["Does credit flow down"]
@@ -184,8 +185,8 @@ flowchart TD
 - [[02_Pre_Alignment_and_Coalitions]]: pre-alignment done ethically
 - [[03_Managing_Disagreement]]: disagreement kept fair
 - [[04_Building_Trust_Across_Teams]]: trust built transparently
-- [[07_Organizational_Learning_and_Mentoring/00_overview|Organizational Learning and Mentoring]]: teaching the craft to mentees
-- [[01_The_Staff_Role_and_Scope/00_overview|The Staff Role and Scope]]: the responsibility the role carries
+- [[career-path/03_Staff_Engineer/07_Organizational_Learning_and_Mentoring/00_overview|Organizational Learning and Mentoring]]: teaching the craft to mentees
+- [[career-path/03_Staff_Engineer/01_The_Staff_Role_and_Scope/00_overview|The Staff Role and Scope]]: the responsibility the role carries
 
 ## Summary
 

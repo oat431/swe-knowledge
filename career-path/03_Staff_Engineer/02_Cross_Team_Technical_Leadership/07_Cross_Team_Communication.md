@@ -16,11 +16,11 @@ tags:
 
 # Cross-Team Communication
 
-> **Core skill:** Communicating at org scale — writing that travels without you, decision records that stay findable, and an async-first cadence that does not depend on meetings.
+> **Core skill:** Communicating at org scale: writing that travels without you, decision records that stay findable, and an async-first cadence that does not depend on meetings.
 
 ## Why This Matters
 
-At team scale, communication can be a conversation. At org scale, the conversation is the bottleneck: twenty teams cannot all attend the meeting, and the one person who attended becomes the human cache that everything else depends on. The staff engineer's communication therefore has to be **writing that travels** — documents that inform, persuade, and record without their author present. The staff engineer's real audience is not the room; it is the org, six months from now, searching for why this decision was made.
+At team scale, communication can be a conversation. At org scale, the conversation is the bottleneck: twenty teams cannot all attend the meeting, and the one person who attended becomes the human cache that everything else depends on. The staff engineer's communication therefore has to be **writing that travels**: documents that inform, persuade, and record without their author present. The staff engineer's real audience is not the room; it is the org, six months from now, searching for why this decision was made.
 
 The discipline has three parts. First, the writing itself: proposals, strategies, postmortems, and standards that work standalone. Second, the conventions: decision records that are findable, linked, and statused, so the org's memory is a corpus, not a set of individuals. Third, the cadence: communication that runs async-first, with a rhythm that does not require anyone's calendar.
 
@@ -46,7 +46,7 @@ The test: can a new engineer in another timezone pick up the document cold and a
 | Dated | The decision date and the review date are explicit |
 | Dissent-visible | Named objections and their disposition |
 
-The conventions turn individual documents into an org memory. The staff engineer's contribution is less any single record and more the convention itself — the pattern that makes every future decision findable.
+The conventions turn individual documents into an org memory. The staff engineer's contribution is less any single record and more the convention itself: the pattern that makes every future decision findable.
 
 ## The Communication Portfolio
 
@@ -58,7 +58,7 @@ The conventions turn individual documents into an org memory. The staff engineer
 | Standards | Codify practice; the default path | The teams that build |
 | Status updates | Keep initiatives visible; progress and blockage | Everyone tracking the arc |
 
-The portfolio is not busywork — it is the operating system of cross-team work. Each document type has a job, and the staff engineer's week is largely the production and shepherding of these documents.
+The portfolio is not busywork. It is the operating system of cross-team work. Each document type has a job, and the staff engineer's week is largely the production and shepherding of these documents.
 
 ## Presenting to Mixed Audiences
 
@@ -68,7 +68,7 @@ The portfolio is not busywork — it is the operating system of cross-team work.
 | Leaders | The decision, the cost, the risk, the ask | The executive summary: recommendation, numbers, owners |
 | Both | One document that serves both without lying | The top answers leaders; the body answers engineers |
 
-One document, two reading paths. The classic failure is the engineering-grade document that leadership cannot act on, or the leadership-grade summary that engineers cannot build from. The structure — decision first, evidence after — serves both.
+One document, two reading paths. The classic failure is the engineering-grade document that leadership cannot act on, or the leadership-grade summary that engineers cannot build from. The structure (decision first, evidence after) serves both.
 
 ## Async-First Practices
 
@@ -80,7 +80,7 @@ One document, two reading paths. The classic failure is the engineering-grade do
 | Office hours for questions | The ad-hoc interrupt |
 | Recorded or written reviews | The review meeting |
 
-Async-first does not mean no meetings — it means meetings are the exception, called when the written exchange stalls, and always with a written record before and after.
+Async-first does not mean no meetings. It means meetings are the exception, called when the written exchange stalls, and always with a written record before and after.
 
 ## Communication Cadence Without Meetings
 
@@ -106,6 +106,7 @@ The cadence is what makes the corpus trustworthy: the org learns that if it is n
 Archiving is the difference between an org memory and a document graveyard. The org's past decisions are only as useful as the search that finds them.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     NEED["Communication need"] --> WRITE["Write the traveling document"]
     WRITE --> CONVENTIONS["Apply record conventions"]
@@ -119,7 +120,7 @@ flowchart TD
 ## Practical Applications
 
 ```markdown
-# Document Template — [type] — [title] — [status]
+# Document Template: [type], [title], [status]
 
 ## Decision
 - [ ] The recommendation in one sentence
@@ -174,4 +175,4 @@ Checklist:
 
 ## Summary
 
-Cross-team communication is writing that travels: decision-first, context-rich, statused documents that work without their author, organized by conventions that keep them findable and linked, and published on a cadence that does not require meetings. The staff engineer's portfolio — proposals, strategies, postmortems, standards, status — is the org's operating system, and the corpus it builds is the org's memory.
+Cross-team communication is writing that travels: decision-first, context-rich, statused documents that work without their author, organized by conventions that keep them findable and linked, and published on a cadence that does not require meetings. The staff engineer's portfolio (proposals, strategies, postmortems, standards, status) is the org's operating system, and the corpus it builds is the org's memory.

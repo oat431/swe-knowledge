@@ -16,15 +16,15 @@ tags:
 
 # Risk Management and Professional Ethics
 
-> **Core skill:** The independent runs a lightweight risk practice — a register, regular review, honest judgment — guided by an ethics compass that bounds what work is taken and how clients and collaborators are treated.
+> **Core skill:** The independent runs a lightweight risk practice (a register, regular review, honest judgment) guided by an ethics compass that bounds what work is taken and how clients and collaborators are treated.
 
 ## Why This Matters
 
-Independents carry concentrated risk without the machinery companies use to manage it. There is no risk committee, no compliance function, and no legal department — the sole proprietor is all three. What replaces them is not a heavier process but a lighter one practiced consistently: a short register of the risks that actually matter, a monthly look at it, and the discipline to act on the top one or two. The register's value is attention allocation, not documentation; its job is to make sure the risks that could end the practice are seen while they are still small.
+Independents carry concentrated risk without the machinery companies use to manage it. There is no risk committee, no compliance function, and no legal department. The sole proprietor is all three. What replaces them is not a heavier process but a lighter one practiced consistently: a short register of the risks that actually matter, a monthly look at it, and the discipline to act on the top one or two. The register's value is attention allocation, not documentation; its job is to make sure the risks that could end the practice are seen while they are still small.
 
-Ethics is the second half, and the more personal one. Without an employer's policies to hide behind, the independent's choices are visibly their own, and the market remembers. The compass is a small set of questions applied before action: Is this true? Does this genuinely serve the client? Would I be comfortable if this decision were public? Am I within my competence? Would I want this done to me? These questions operate upstream of most risks — declining work that would harm users, refusing to misrepresent capabilities or results, and treating subcontractors, competitors, and clients' staff fairly are all cheaper than the incidents they prevent.
+Ethics is the second half, and the more personal one. Without an employer's policies to hide behind, the independent's choices are visibly their own, and the market remembers. The compass is a small set of questions applied before action: Is this true? Does this genuinely serve the client? Would I be comfortable if this decision were public? Am I within my competence? Would I want this done to me? These questions operate upstream of most risks: declining work that would harm users, refusing to misrepresent capabilities or results, and treating subcontractors, competitors, and clients' staff fairly are all cheaper than the incidents they prevent.
 
-Risk and ethics converge at the same place: judgment. The largest risks to an independent practice are rarely technical — they are a toxic client accepted out of desperation, an overpromise made to win a bid, a conflict of interest left undisclosed, a system sold beyond what one person can maintain. These are neither accidents nor bad luck; they are decisions taken under pressure. Naming the risk register and the ethics compass as one professional practice — reviewed on a calendar, not a mood — is what keeps the practice clean and durable.
+Risk and ethics converge at the same place: judgment. The largest risks to an independent practice are rarely technical. They are a toxic client accepted out of desperation, an overpromise made to win a bid, a conflict of interest left undisclosed, a system sold beyond what one person can maintain. These are neither accidents nor bad luck; they are decisions taken under pressure. Naming the risk register and the ethics compass as one professional practice (reviewed on a calendar, not a mood) is what keeps the practice clean and durable.
 
 ## The Lightweight Risk Register
 
@@ -63,6 +63,7 @@ Risk and ethics converge at the same place: judgment. The largest risks to an in
 ## The Risk Practice Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     REGISTER["Keep a lightweight risk register"] --> REVIEW["Review monthly and before big decisions"]
     REVIEW --> ACT["Act on the top risks"]
@@ -108,4 +109,4 @@ flowchart TD
 
 ## Summary
 
-Risk management and professional ethics are one practice for the independent: a short register that keeps the practice-ending risks visible, a calendar review that forces action on the top ones, and a compass of plain questions that governs what work is taken and how everyone involved is treated. Neither part is bureaucratic — both are personal — and together they protect the only asset that cannot be insurance purchased or invoiced: a reputation for judgment, honesty, and conduct that clients remember long after the work is done.
+Risk management and professional ethics are one practice for the independent: a short register that keeps the practice-ending risks visible, a calendar review that forces action on the top ones, and a compass of plain questions that governs what work is taken and how everyone involved is treated. Neither part is bureaucratic (both are personal), and together they protect the only asset that cannot be insurance purchased or invoiced: a reputation for judgment, honesty, and conduct that clients remember long after the work is done.

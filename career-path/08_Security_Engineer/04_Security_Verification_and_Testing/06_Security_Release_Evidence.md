@@ -64,6 +64,7 @@ For every important security claim, capture:
 ### 3. Release Decision Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     REQUIREMENT["Security requirement"] --> CONTROL["Implemented control"]
     CONTROL --> TEST["Verification activity"]
@@ -143,9 +144,9 @@ Create an evidence pack for a release that changes a public API and its containe
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]: assurance and security testing foundations
 - [[01_Security_Test_Strategy|Security Test Strategy]]: depth, scope, and exit criteria
 - [[05_Findings_Triage_and_False_Positives|Findings Triage and False Positives]]: validated dispositions and retest
-- [[03_Secure_Development_and_DevSecOps/03_DevSecOps_Pipeline_Controls|DevSecOps Pipeline Controls]]: automated evidence and artifact identity
+- [[career-path/08_Security_Engineer/03_Secure_Development_and_DevSecOps/03_DevSecOps_Pipeline_Controls|DevSecOps Pipeline Controls]]: automated evidence and artifact identity
 - [[career-path/10_Quality_and_Test_Engineering/00_overview|Quality and Test Engineering]]: quality evidence and release practices
-- [[07_Vulnerability_Management_and_Governance/00_overview|Vulnerability Management and Governance]]: residual risk after release
+- [[career-path/08_Security_Engineer/07_Vulnerability_Management_and_Governance/00_overview|Vulnerability Management and Governance]]: residual risk after release
 
 ## Key Takeaways
 

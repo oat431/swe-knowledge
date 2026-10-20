@@ -16,11 +16,11 @@ tags:
 
 # The Player Coach Dilemma
 
-> **Core skill:** Allocating your own time between building and leading — protecting the leadership work while keeping enough hands-on work to stay credible.
+> **Core skill:** Allocating your own time between building and leading, protecting the leadership work while keeping enough hands-on work to stay credible.
 
 ## Why This Matters
 
-The tech lead job contains two jobs: the player (writing code, debugging, shipping) and the coach (direction, reviews, mentoring, stakeholder work). Neither disappears, and both expand to fill available time. Without a deliberate allocation model, one wins by default — usually the player, because coding is concrete, rewarding, and what got you promoted.
+The tech lead job contains two jobs: the player (writing code, debugging, shipping) and the coach (direction, reviews, mentoring, stakeholder work). Neither disappears, and both expand to fill available time. Without a deliberate allocation model, one wins by default, usually the player, because coding is concrete, rewarding, and what got you promoted.
 
 The cost of the wrong default is either a bottleneck (you on every critical path) or a system that drifts (you nowhere near the code). Both are survivable for a quarter and fatal over a year.
 
@@ -36,7 +36,7 @@ The third row is the one most leads skip, and it is the one that makes the first
 
 ## Time Allocation Models
 
-The right split depends on team maturity. The split describes the leadership portion of your time — the part not spent on your own code:
+The right split depends on team maturity. The split describes the leadership portion of your time, the part not spent on your own code:
 
 | Team state | Typical split (code : leadership) | Why |
 |------------|----------------------------------|-----|
@@ -54,7 +54,7 @@ Leadership work loses to coding work in a fair fight, so it needs structural pro
 - Block coach work in the calendar in recurring slots: review hours, standards hours, stakeholder hours
 - Treat a blocked leadership slot as non-negotiable against ad-hoc coding requests
 - Batch similar work: all design reviews together, all stakeholder updates together
-- Make leadership output visible — accepted ADR, published review, updated roadmap — so the blocks demonstrably produce things
+- Make leadership output visible (accepted ADR, published review, updated roadmap) so the blocks demonstrably produce things
 
 ## The Cost of Context Switching
 
@@ -65,19 +65,19 @@ Leadership work loses to coding work in a fair fight, so it needs structural pro
 | Incident mode to feature work | Rest of the day degraded | Rotate incident ownership; keep feature days clean |
 | Meeting-heavy days | No deep work left | Protect two deep-work days per week |
 
-The goal is not zero switching — the role is switching. The goal is to make switches deliberate and batched rather than reactive.
+The goal is not zero switching. The role is switching. The goal is to make switches deliberate and batched rather than reactive.
 
 ## When to Code and When Not To
 
 | Situation | Code yourself | Delegate and coach |
 |-----------|---------------|--------------------|
-| Spike or prototype for an unknown | Yes — speed and judgment matter | No |
+| Spike or prototype for an unknown | Yes: speed and judgment matter | No |
 | Risky core of a critical change | Yes, or pair with the owner | No |
-| Teaching a complex area | Yes — as pair or reviewer | No |
-| Production incident diagnosis | Yes — you are the responder | No |
+| Teaching a complex area | Yes: as pair or reviewer | No |
+| Production incident diagnosis | Yes: you are the responder | No |
 | Critical-path feature with a deadline | Only if you are the fastest; otherwise you become the risk | Hand to the owner, stay as reviewer |
-| Everything interesting | No — interest is not a prioritization principle | Give growth opportunities to others |
-| Work a teammate needs to grow | No — that is the mentoring plan | Delegate with support |
+| Everything interesting | No: interest is not a prioritization principle | Give growth opportunities to others |
+| Work a teammate needs to grow | No: that is the mentoring plan | Delegate with support |
 
 The rule of thumb: code where your judgment is the scarce resource, not where your typing is.
 
@@ -91,6 +91,7 @@ The rule of thumb: code where your judgment is the scarce resource, not where yo
 | **Full-time manager** | You never touch code; credibility and judgment decay | Schedule deliberate code time: hard bugs, code reading, incident work |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     AUDIT["Weekly time audit"] --> SPLIT["Compare against target split"]
     SPLIT --> ADJUST["Adjust blocks and delegation"]
@@ -104,13 +105,13 @@ flowchart TD
 Weekly time audit template:
 
 ```markdown
-## Time Audit — [week]
+## Time Audit: [week]
 
 ### Where the time went
-- [ ] Player work: [hours] — [what was built]
-- [ ] Coach work: [hours] — [reviews, standards, mentoring]
-- [ ] Credibility work: [hours] — [code reading, incidents]
-- [ ] Meetings and overhead: [hours] — [what they were for]
+- [ ] Player work: [hours], [what was built]
+- [ ] Coach work: [hours], [reviews, standards, mentoring]
+- [ ] Credibility work: [hours], [code reading, incidents]
+- [ ] Meetings and overhead: [hours], [what they were for]
 
 ### Target vs actual
 - [ ] Target split: [e.g. 50-50] | Actual: [e.g. 65-35]
@@ -148,7 +149,7 @@ Run the audit weekly for a month, then monthly.
 - [[01_The_Tech_Lead_Mandate]]: the mandate defines what the coach half must produce
 - [[02_The_Tech_Lead_Engineering_Manager_Partnership]]: the EM absorbs people work so you can stay technical
 - [[07_First_90_Days_as_Tech_Lead]]: the split is negotiated explicitly in the first quarter
-- [[04_Team_Delivery_and_Execution_Leadership/00_overview|Delivery and Execution Leadership]]: protecting capacity is a delivery skill
+- [[career-path/05_Tech_Lead/04_Team_Delivery_and_Execution_Leadership/00_overview|Delivery and Execution Leadership]]: protecting capacity is a delivery skill
 
 ## Summary
 

@@ -86,7 +86,7 @@ Every code review is an opportunity to either increase or decrease maintainabili
 
 ### 2. Architectural seams
 
-A maintainable system has clear **seams** — boundaries where you can change one part without affecting others. A senior engineer designs and protects these seams:
+A maintainable system has clear **seams**: boundaries where you can change one part without affecting others. A senior engineer designs and protects these seams:
 
 - Service boundaries that align with team ownership
 - Interfaces that hide implementation details
@@ -125,6 +125,7 @@ For high-priority debt items, a senior engineer creates a **repayment plan**:
 For large monolithic components that need to be broken apart, the **strangler fig pattern** is the senior engineer's preferred approach:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     subgraph PHASE1["Phase 1: Wrap"]
         OLD1["Monolith"]
@@ -161,13 +162,13 @@ Rather than rewriting the entire system, you gradually extract functionality int
 
 ## Knowledge Connections
 
-- [[01_System_Ownership]] — debt inventory is part of your system map
-- [[02_Lifecycle_Ownership]] — debt management spans the full lifecycle
-- [[05_Decision_Ownership]] — accepting debt is a decision that should be recorded
-- [[software-engineering-note/07_Software_Maintenance/01_Changing_Software]] — techniques for working with legacy code
-- [[software-engineering-note/07_Software_Maintenance/05_Large_Scale_Changes]] — managing large-scale refactoring
-- [[software-engineering-note/03_Software_Design/Software Design Note Overview]] — design principles that prevent debt accumulation
-- [[software-engineering-note/15_Software_Engineering_Economics/Software Engineering Economics Overview]] — the economics of debt and refactoring
+- [[01_System_Ownership]]: debt inventory is part of your system map
+- [[02_Lifecycle_Ownership]]: debt management spans the full lifecycle
+- [[05_Decision_Ownership]]: accepting debt is a decision that should be recorded
+- [[software-engineering-note/07_Software_Maintenance/01_Changing_Software]]: techniques for working with legacy code
+- [[software-engineering-note/07_Software_Maintenance/05_Large_Scale_Changes]]: managing large-scale refactoring
+- [[software-engineering-note/03_Software_Design/Software Design Note Overview]]: design principles that prevent debt accumulation
+- [[software-engineering-note/15_Software_Engineering_Economics/Software Engineering Economics Overview]]: the economics of debt and refactoring
 
 ## Key Takeaways
 

@@ -14,13 +14,13 @@ tags:
 
 # Problem Discovery and Customer Validation
 
-> **Core capability:** The independent finds a real customer problem worth solving — validating demand before building, and choosing a problem space that fits their skills, market, and appetite for risk.
+> **Core capability:** The independent finds a real customer problem worth solving: validating demand before building, and choosing a problem space that fits their skills, market, and appetite for risk.
 
 ## Why This Matters
 
 The most expensive mistake in independent work is building something nobody will pay for. Employed engineers rarely face this risk; independents and founders face it with every project. The discipline that prevents it is customer discovery: talking to real people about real problems before writing code or quoting a project.
 
-Validation extends beyond "people find this interesting" to "people will pay for this" — a much higher bar. The independent learns to run discovery interviews without pitching, test willingness to pay with pre-sales and pilots, and choose a problem space deliberately: one where their skills are rare, the pain is acute, and the market is reachable without a sales team.
+Validation extends beyond "people find this interesting" to "people will pay for this", a much higher bar. The independent learns to run discovery interviews without pitching, test willingness to pay with pre-sales and pilots, and choose a problem space deliberately: one where their skills are rare, the pain is acute, and the market is reachable without a sales team.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ Validation extends beyond "people find this interesting" to "people will pay for
 ## The Validation Ladder
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PROBLEM["Problem noticed"] --> INTERVIEW["Interviews: does the pain exist?"]
     INTERVIEW --> WILLING["Willingness: will they pay?"]
@@ -44,7 +45,7 @@ flowchart LR
     PILOT --> DECIDE["Decide: build, adjust, or drop"]
 ```
 
-Each rung costs more than the last — climb in order.
+Each rung costs more than the last. Climb in order.
 
 ## Practical Applications
 
@@ -67,18 +68,18 @@ Each rung costs more than the last — climb in order.
 
 ## Success Indicators
 
-- Prospects describe the problem in their own words — repeatedly
+- Prospects describe the problem in their own words, repeatedly
 - Someone has paid, pre-committed, or signed a pilot before the build
 - The niche attracts inquiries without cold outreach
 - Offers evolve fast because discovery continues after launch
 
 ## Related Capabilities
 
-- [[02_Product_and_Service_Design/00_overview|Product and Service Design]]: discovery feeds what you offer
-- [[06_Sales_and_Client_Communication/00_overview|Sales and Client Communication]]: positioning begins here
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/02_Product_and_Service_Design/00_overview|Product and Service Design]]: discovery feeds what you offer
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/06_Sales_and_Client_Communication/00_overview|Sales and Client Communication]]: positioning begins here
 - [[career-path/14_Product_Manager/01_Problem_Discovery/00_overview|Problem Discovery (PM)]]: the product discovery discipline
 - [[career-path/15_Solutions_and_Enterprise_Architect/01_Business_Analysis_and_Capability_Mapping/00_overview|Business Analysis and Capability Mapping (Solutions Architect)]]: enterprise-scale analysis
 
 ## Summary
 
-Problem discovery and customer validation is the independent's survival skill: interviewing real prospects, testing payment intent before building, choosing a niche deliberately, and turning insight into offers that can be tested cheaply. The order matters — validation before build is the difference between a business and an expensive hobby.
+Problem discovery and customer validation is the independent's survival skill: interviewing real prospects, testing payment intent before building, choosing a niche deliberately, and turning insight into offers that can be tested cheaply. The order matters. Validation before build is the difference between a business and an expensive hobby.

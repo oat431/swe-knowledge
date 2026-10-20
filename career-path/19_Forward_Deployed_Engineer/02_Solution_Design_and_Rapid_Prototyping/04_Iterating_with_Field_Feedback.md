@@ -16,15 +16,15 @@ tags:
 
 # Iterating with Field Feedback
 
-> **Core skill:** Running tight feedback loops with real users — putting working software into operators' hands early and letting their observed friction, not the plan, drive the next iteration.
+> **Core skill:** Running tight feedback loops with real users: putting working software into operators' hands early and letting their observed friction, not the plan, drive the next iteration.
 
 ## Why This Matters
 
-The plan is a guess about a workflow, and the field is where guesses get corrected. Feedback loops are the mechanism by which a deployment stays honest: small increments reach real users quickly, their behavior — not their politeness — is studied, and the next increment answers what the last one revealed. In an environment where requirements shift with every reorganization and regulation, an iteration cadence is not a methodology preference; it is the only way the solution remains aimed at the actual problem.
+The plan is a guess about a workflow, and the field is where guesses get corrected. Feedback loops are the mechanism by which a deployment stays honest: small increments reach real users quickly, their behavior, not their politeness, is studied, and the next increment answers what the last one revealed. In an environment where requirements shift with every reorganization and regulation, an iteration cadence is not a methodology preference; it is the only way the solution remains aimed at the actual problem.
 
 Field feedback is also where adoption is won or lost. Users who watch a tool take shape around their real work become its advocates; users who receive a finished system built from meeting notes become its audience, and audiences defect quietly. The FDE who routes each iteration through the people doing the work is compounding trust with every cycle, and trust is the currency that buys the benefit of the doubt when something misbehaves in production.
 
-The discipline is discrimination: separating what users say from what they do, and separating one loud opinion from a real pattern. Feedback arrives in many forms — meeting comments, usage telemetry, support tickets, the silent workaround that appears three weeks after launch — and each has a different evidentiary weight. The FDE's job is to gather all of it, trust behavior over enthusiasm, and record decisions so that direction changes are visible choices rather than drift.
+The discipline is discrimination: separating what users say from what they do, and separating one loud opinion from a real pattern. Feedback arrives in many forms (meeting comments, usage telemetry, support tickets, the silent workaround that appears three weeks after launch), and each has a different evidentiary weight. The FDE's job is to gather all of it, trust behavior over enthusiasm, and record decisions so that direction changes are visible choices rather than drift.
 
 ## Feedback That Counts
 
@@ -63,6 +63,7 @@ The cadence is deliberately pedestrian. Deployments that depend on heroic pushes
 | Nobody uses a feature built to spec | The spec missed the workflow | Re-observe the workflow before patching the feature |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SHIP["Ship a small increment"] --> WATCH["Watch real users"]
     WATCH --> COLLECT["Collect friction and workarounds"]
@@ -70,14 +71,14 @@ flowchart LR
     PRIORITIZE --> SHIP
 ```
 
-Every loop should end with a recorded decision — fix now, defer with a trigger, or reject with a reason. Feedback that changes nothing is a survey, not a loop.
+Every loop should end with a recorded decision: fix now, defer with a trigger, or reject with a reason. Feedback that changes nothing is a survey, not a loop.
 
 ## Practical Applications
 
 ### Feedback Log Template
 
 ```markdown
-## Feedback Log Entry — <date, source>
+## Feedback Log Entry: <date, source>
 
 | Field | Notes |
 |-------|-------|
@@ -121,10 +122,10 @@ Every loop should end with a recorded decision — fix now, defer with a trigger
 
 - [[01_Demo_Driven_Development]]
 - [[06_From_Prototype_to_Production]]
-- [[06_Customer_Communication_and_Executive_Influence/00_overview|Customer Communication and Executive Influence]]
+- [[career-path/19_Forward_Deployed_Engineer/06_Customer_Communication_and_Executive_Influence/00_overview|Customer Communication and Executive Influence]]
 - [[career-path/14_Product_Manager/00_overview|Product Manager]]
 - [[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability (Applied AI)]]
 
 ## Summary
 
-Iterating with field feedback means running the deployment as a series of small, observable loops: ship an increment, watch real users, collect friction including the silent sort, and let recorded evidence — not the plan or the loudest voice — choose the next move. It is simultaneously engineering practice, adoption strategy, and quality mechanism, and it is the difference between a system that was delivered and a system that is used.
+Iterating with field feedback means running the deployment as a series of small, observable loops: ship an increment, watch real users, collect friction including the silent sort, and let recorded evidence, not the plan or the loudest voice, choose the next move. It is simultaneously engineering practice, adoption strategy, and quality mechanism, and it is the difference between a system that was delivered and a system that is used.

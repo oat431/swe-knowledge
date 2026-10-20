@@ -16,13 +16,13 @@ tags:
 
 # The Tech Lead Mandate
 
-> **Core skill:** Defining and negotiating what the tech lead role is accountable for — the technical outcome, the technical direction, and the team's technical capability — and making that definition visible to the team and to stakeholders.
+> **Core skill:** Defining and negotiating what the tech lead role is accountable for (the technical outcome, the technical direction, and the team's technical capability) and making that definition visible to the team and to stakeholders.
 
 ## Why This Matters
 
 Most tech lead problems are not technical problems; they are problems of unclear accountability. When the mandate is undefined, the engineering manager assumes you handle the technical details, the team assumes you decide everything, and you assume you will still have time to code. Three different jobs are being imagined by three different groups, and none of them is the job you actually signed up for.
 
-A written mandate turns this around. It makes the boundaries of the role explicit: what you are accountable for, what you are not, and where your authority starts and ends. It is the document the team, the EM, and your manager can point to when scope disputes arise — and they will arise.
+A written mandate turns this around. It makes the boundaries of the role explicit: what you are accountable for, what you are not, and where your authority starts and ends. It is the document the team, the EM, and your manager can point to when scope disputes arise, and they will arise.
 
 The mandate is not a job description. It is a working agreement, negotiated when you start and renegotiated when the team, the system, or the organization changes. A mandate you wrote once and filed away is already stale.
 
@@ -51,9 +51,10 @@ Some responsibilities sit near the role without belonging squarely inside it. Th
 | Process improvement | Shared | TL owns technical quality; EM owns team dynamics |
 | Budget and headcount | EM | TL supplies the technical justification |
 
-The point is not that this table is right for every organization — it is that someone writes the table down. Orphaned responsibilities are the silent cost of an unwritten mandate.
+The point is not that this table is right for every organization. It is that someone writes the table down. Orphaned responsibilities are the silent cost of an unwritten mandate.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CONTEXT["Team context and system state"] --> DRAFT["Draft mandate with EM"]
     DRAFT --> AGREE["Agree scope and boundaries"]
@@ -96,7 +97,7 @@ If two or more of these are true, the mandate needs renegotiation, not harder wo
 ## Practical Applications
 
 ```markdown
-## Tech Lead Mandate — [Team name]
+## Tech Lead Mandate: [Team name]
 
 ### Accountable for
 - [ ] Technical outcome: [system or product scope]
@@ -148,9 +149,9 @@ Checklist before publishing:
 - [[02_The_Tech_Lead_Engineering_Manager_Partnership]]: the mandate's most important boundary is the one with the EM
 - [[04_Tech_Lead_Scope_and_System_Boundaries]]: the mandate becomes concrete through system boundaries
 - [[07_First_90_Days_as_Tech_Lead]]: negotiating the mandate is the first-90-days milestone
-- [[05_Team_Development_and_Mentoring_Leadership/00_overview|Team Development and Mentoring Leadership]]: team capability is one leg of the triangle
+- [[career-path/05_Tech_Lead/05_Team_Development_and_Mentoring_Leadership/00_overview|Team Development and Mentoring Leadership]]: team capability is one leg of the triangle
 - [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/00_overview|Technical Ownership (Senior)]]: the personal ownership this mandate extends to a team
 
 ## Summary
 
-The tech lead mandate is a one-page working agreement covering the technical outcome, the technical direction, and the team's technical capability — plus the boundaries around them. Written, agreed with the EM and manager, and reviewed on a cadence, it converts role ambiguity into decision clarity. Unwritten, it guarantees the three most expensive failure modes of the role: overlap, gaps, and drift.
+The tech lead mandate is a one-page working agreement covering the technical outcome, the technical direction, and the team's technical capability, plus the boundaries around them. Written, agreed with the EM and manager, and reviewed on a cadence, it converts role ambiguity into decision clarity. Unwritten, it guarantees the three most expensive failure modes of the role: overlap, gaps, and drift.

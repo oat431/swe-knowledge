@@ -16,11 +16,11 @@ tags:
 
 # Definition of Done and Working Agreements
 
-> **Core skill:** Keeping the team's quality contract explicit, honest, and renegotiated — so done means done, every time.
+> **Core skill:** Keeping the team's quality contract explicit, honest, and renegotiated, so done means done, every time.
 
 ## Why This Matters
 
-"Done" is the most expensive word in software. When it means different things to different people, code merges without tests, features ship without observability, and the first time the team learns a story was not actually done is when production breaks. A Definition of Done (DoD) is the team's shared answer to "what must be true before this work counts as finished" — the quality contract that makes review arguments unnecessary.
+"Done" is the most expensive word in software. When it means different things to different people, code merges without tests, features ship without observability, and the first time the team learns a story was not actually done is when production breaks. A Definition of Done (DoD) is the team's shared answer to "what must be true before this work counts as finished", the quality contract that makes review arguments unnecessary.
 
 The tech lead does not write the DoD alone and hand it down. The team must author it, because a contract the team believes in is enforced by the team; a contract imposed from above is enforced by nobody. And the DoD is not permanent: as the team matures, the system changes, and the stakes change, the contract must be renegotiated deliberately. This note covers building the DoD, extending it by story type, spotting drift, and the working agreements that sit beside it.
 
@@ -49,7 +49,7 @@ Run a working session where the team answers: "What has to be true for you to sl
 - [ ] Rollback or feature-flag path confirmed for the change
 - [ ] Manual verification done on a realistic environment
 
-Then cut the list to the items the team genuinely cannot ship without. Each item needs an owner of the standard (the person who notices when it is skipped) and a cost estimate — a DoD item nobody can afford is a DoD item that gets ignored.
+Then cut the list to the items the team genuinely cannot ship without. Each item needs an owner of the standard (the person who notices when it is skipped) and a cost estimate. A DoD item nobody can afford is a DoD item that gets ignored.
 
 ## Per-Story-Type DoD Extensions
 
@@ -75,7 +75,7 @@ These two get confused constantly, and the confusion is costly.
 | Content | Behavior: given/when/then | Practice: tested, reviewed, documented |
 | Fails when | Behavior does not match the ask | Quality bar is not met |
 
-A story can meet every acceptance criterion and still fail the DoD — correct feature, no tests, no observability. Both must be true before done.
+A story can meet every acceptance criterion and still fail the DoD: correct feature, no tests, no observability. Both must be true before done.
 
 ## DoD Drift and Erosion Signals
 
@@ -88,6 +88,7 @@ A story can meet every acceptance criterion and still fail the DoD — correct f
 | The DoD checklist is all ticks, always | The bar is too low to matter | Raise it; every item should occasionally hurt |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A["Story starts"] --> B["Acceptance criteria agreed"]
     B --> C["Implement"]
@@ -116,11 +117,11 @@ The DoD governs the work product; working agreements govern behavior. Keep both 
 
 The DoD is a living contract with a review cadence:
 
-1. **Review at every retrospective** — one question: is any item now noise, and is any escape now possible?
-2. **Add items when escapes happen** — a production incident caused by missing observability is the strongest possible argument for adding an observability item.
-3. **Remove items when they become automation** — when a linter enforces what the DoD used to ask by hand, the item moves from the checklist to the pipeline.
-4. **Escalate the bar with maturity** — a team that never misses can raise the bar; a team drowning in process should lower it.
-5. **Renegotiate, never silently drift** — every change to the contract is a deliberate team decision, recorded.
+1. **Review at every retrospective**: one question: is any item now noise, and is any escape now possible?
+2. **Add items when escapes happen**: a production incident caused by missing observability is the strongest possible argument for adding an observability item.
+3. **Remove items when they become automation**: when a linter enforces what the DoD used to ask by hand, the item moves from the checklist to the pipeline.
+4. **Escalate the bar with maturity**: a team that never misses can raise the bar; a team drowning in process should lower it.
+5. **Renegotiate, never silently drift**: every change to the contract is a deliberate team decision, recorded.
 
 ## Practical Applications
 
@@ -180,16 +181,16 @@ This contract is reviewed every retrospective. Changes are deliberate and record
 - "Done" means the same thing to the author, the reviewer, and the stakeholder
 - Escapes from the last quarter map to missing DoD items that were then added
 - New joiners ship their first change through the full DoD without being reminded
-- The DoD has changed at least once this quarter — deliberately
+- The DoD has changed at least once this quarter, deliberately
 
 ## Related Topics
 
-- [[01_Team_Workflow_Design]] — the workflow the DoD plugs into at every handoff
-- [[05_Quality_Gates_and_Automated_Checks]] — automation that enforces DoD items without asking
-- [[04_Code_Review_Standards]] — the review system that checks the DoD on every PR
-- [[04_Team_Delivery_and_Execution_Leadership/00_overview|Delivery and Execution Leadership]] — done is the unit of delivery, so the contract shapes every commitment
-- [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]] — the org-level owner of team norms and standards
+- [[01_Team_Workflow_Design]]: the workflow the DoD plugs into at every handoff
+- [[05_Quality_Gates_and_Automated_Checks]]: automation that enforces DoD items without asking
+- [[04_Code_Review_Standards]]: the review system that checks the DoD on every PR
+- [[career-path/05_Tech_Lead/04_Team_Delivery_and_Execution_Leadership/00_overview|Delivery and Execution Leadership]]: done is the unit of delivery, so the contract shapes every commitment
+- [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]: the org-level owner of team norms and standards
 
 ## Summary
 
-The Definition of Done is the team's quality contract: short, checkable, team-authored, and applied to every piece of work without exception, extended by story type where failure modes differ, and kept distinct from acceptance criteria. Working agreements sit beside it governing behavior, and both must be renegotiated deliberately as the team matures — because a contract that cannot change becomes a ritual, and a ritual protects nothing.
+The Definition of Done is the team's quality contract: short, checkable, team-authored, and applied to every piece of work without exception, extended by story type where failure modes differ, and kept distinct from acceptance criteria. Working agreements sit beside it governing behavior, and both must be renegotiated deliberately as the team matures, because a contract that cannot change becomes a ritual, and a ritual protects nothing.

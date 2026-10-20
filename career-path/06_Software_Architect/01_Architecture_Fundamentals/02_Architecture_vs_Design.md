@@ -15,15 +15,15 @@ tags:
 
 # Architecture vs Design
 
-> **Core skill:** Working the continuum between architecture and detailed design — knowing what architects own, what teams own, and the conditions that move a design decision into the architecture tier.
+> **Core skill:** Working the continuum between architecture and detailed design, knowing what architects own, what teams own, and the conditions that move a design decision into the architecture tier.
 
 ## Why This Matters
 
 The architecture-versus-design distinction is usually stated as a clean line and practiced as a messy gradient. Textbooks say architecture is the strategic structure and design is the local implementation, but real projects raise concrete questions the textbook does not answer: Who owns the API contract once a second team consumes it? Is the database schema a design artifact or an architectural one? When does a module boundary stop being a refactoring and become a structural commitment?
 
-The architect who cannot answer those questions with a rule either overreaches — reviewing class diagrams that teams should own — or abdicates, discovering only after the migration that a "detail" fixed the system's data ownership model. The cost of the wrong boundary is paid daily: a bottleneck architect slows every team, while an absent one lets irreversible decisions ride in on routine pull requests.
+The architect who cannot answer those questions with a rule either overreaches (reviewing class diagrams that teams should own) or abdicates, discovering only after the migration that a "detail" fixed the system's data ownership model. The cost of the wrong boundary is paid daily: a bottleneck architect slows every team, while an absent one lets irreversible decisions ride in on routine pull requests.
 
-This note frames architecture and design as a continuum with ownership agreements at each tier, defines the handoff boundary explicitly, and gives the three tests — irreversible, structural, cross-cutting — that promote a design decision into architecture.
+This note frames architecture and design as a continuum with ownership agreements at each tier, defines the handoff boundary explicitly, and gives the three tests (irreversible, structural, cross-cutting) that promote a design decision into architecture.
 
 ## The Continuum
 
@@ -117,6 +117,7 @@ Two signals tell the architect the boundary has drifted:
 Both signals are fixed the same way: make the promotion triggers explicit, publish them with examples, and audit the review queue against them a quarter later.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     DESIGN["Design decision"] --> TEST1["Is it expensive to reverse"]
     DESIGN --> TEST2["Does it change structure or ownership"]
@@ -134,7 +135,7 @@ flowchart LR
 
 ### Boundary Health Checklist
 
-- [ ] The promotion triggers — irreversible, structural, cross-cutting — are written with examples
+- [ ] The promotion triggers (irreversible, structural, cross-cutting) are written with examples
 - [ ] The handoff artifacts exist: structural brief, interface contracts, quality budgets, constraint list
 - [ ] Teams know their delegated territory and do not escalate inside it
 - [ ] The architecture review queue contains only promoted decisions
@@ -155,7 +156,7 @@ flowchart LR
 | [latency/availability/...] | [measure] | [scenario id] |
 
 ## Chosen Structure
-[Boundaries, responsibilities, key interfaces — with the ADRs that decided them]
+[Boundaries, responsibilities, key interfaces, with the ADRs that decided them]
 
 ## Interfaces
 | Interface | Owner | Evolution Rule |
@@ -190,12 +191,12 @@ flowchart LR
 
 ## Related Topics
 
-- [[01_Architectural_Significance]] — the test that defines the promotion boundary
-- [[06_The_Architect_Role_in_Context]] — how the boundary maps to roles and mandate
-- [[05_Architecture_Across_the_Lifecycle]] — how the boundary moves through delivery models
-- [[career-path/05_Tech_Lead/03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture (Tech Lead)]] — the team-side owner of the design tier
-- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/05_Design_Patterns_Judgment|Design Patterns Judgment (Senior)]] — the pattern-level judgment that lives inside the design tier
+- [[01_Architectural_Significance]]: the test that defines the promotion boundary
+- [[06_The_Architect_Role_in_Context]]: how the boundary maps to roles and mandate
+- [[05_Architecture_Across_the_Lifecycle]]: how the boundary moves through delivery models
+- [[career-path/05_Tech_Lead/03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture (Tech Lead)]]: the team-side owner of the design tier
+- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/05_Design_Patterns_Judgment|Design Patterns Judgment (Senior)]]: the pattern-level judgment that lives inside the design tier
 
 ## Summary
 
-Architecture and design form a continuum from strategic structure to method-level detail, and the architect's job is not to own the whole continuum but to hold the boundary between what must be coordinated across teams and what can be decided locally. Three tests — irreversible, structural, cross-cutting — promote a design decision to the architecture tier; everything else belongs to the team, supported by a small set of handoff artifacts: structural brief, interface contracts, quality budgets, and constraints. The boundary is kept healthy by watching both failure directions — over-escalation that bottlenecks the team and under-escalation that lets irreversible decisions ship silently — and by treating implementation feedback as legitimate architecture input rather than noise.
+Architecture and design form a continuum from strategic structure to method-level detail, and the architect's job is not to own the whole continuum but to hold the boundary between what must be coordinated across teams and what can be decided locally. Three tests (irreversible, structural, cross-cutting) promote a design decision to the architecture tier; everything else belongs to the team, supported by a small set of handoff artifacts: structural brief, interface contracts, quality budgets, and constraints. The boundary is kept healthy by watching both failure directions (over-escalation that bottlenecks the team and under-escalation that lets irreversible decisions ship silently) and by treating implementation feedback as legitimate architecture input rather than noise.

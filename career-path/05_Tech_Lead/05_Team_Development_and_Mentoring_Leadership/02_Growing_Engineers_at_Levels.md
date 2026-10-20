@@ -15,13 +15,13 @@ tags:
 
 # Growing Engineers at Levels
 
-> **Core skill:** Stretching juniors, mids, and seniors appropriately — with a per-level development menu, honest plateau detection, and clear guidance on engineering manager versus tech lead paths.
+> **Core skill:** Stretching juniors, mids, and seniors appropriately: with a per-level development menu, honest plateau detection, and clear guidance on engineering manager versus tech lead paths.
 
 ## Why This Matters
 
-Different engineers need different growth. A junior needs foundations and fast feedback; a mid needs ownership of real components; a senior needs ambiguous scope and the chance to lead others. The most common development failure is treating all three the same — giving everyone more tickets and calling it growth.
+Different engineers need different growth. A junior needs foundations and fast feedback; a mid needs ownership of real components; a senior needs ambiguous scope and the chance to lead others. The most common development failure is treating all three the same: giving everyone more tickets and calling it growth.
 
-The tech lead's job is to develop the whole team's aggregate capability — a team managed as a set of levels with different needs. Getting the menu right per level turns a collection of individuals into a pipeline where every seat has someone growing toward it.
+The tech lead's job is to develop the whole team's aggregate capability: a team managed as a set of levels with different needs. Getting the menu right per level turns a collection of individuals into a pipeline where every seat has someone growing toward it.
 
 ## The Level Map
 
@@ -38,7 +38,7 @@ The map is written down and used in every development conversation.
 
 ## Juniors: Foundations, Feedback Loops, Supervised Autonomy
 
-The junior year is about building the loops: write code, get feedback, improve, repeat — fast.
+The junior year is about building the loops: write code, get feedback, improve, repeat. Fast.
 
 | Need | What the lead provides | Anti-pattern to avoid |
 |------|------------------------|----------------------|
@@ -52,7 +52,7 @@ The junior's stretch menu: a first end-to-end slice, presenting their own work i
 
 ## Mids: Component Ownership and Design Participation
 
-The mid's growth is about moving from completing work to owning it — and from implementing designs to shaping them.
+The mid's growth is about moving from completing work to owning it, and from implementing designs to shaping them.
 
 | Need | What the lead provides | Anti-pattern to avoid |
 |------|------------------------|----------------------|
@@ -80,14 +80,14 @@ The senior's stretch menu: lead a cross-team initiative, mentor a mid through a 
 
 ## Senior-Plus and Future Leads: Delegated Leadership
 
-Future leads grow by leading — small, then bigger, always with a safety net and a debrief.
+Future leads grow by leading: small, then bigger, always with a safety net and a debrief.
 
 | Need | What the lead provides | Anti-pattern to avoid |
 |------|------------------------|----------------------|
 | Delegated authority | A ritual or initiative run entirely by the engineer, with the lead as backup | Authority delegated in name while the lead keeps deciding |
 | Representation | Standing in for the lead at syncs and forums | The same two people representing the team forever |
 | Judgment calls | Real decisions with consequences, made with advice | All consequential decisions routed through the lead |
-| The lead's operating model | Why the lead does what she does — made visible | The lead's craft stays implicit and undiscussable |
+| The lead's operating model | Why the lead does what she does, made visible | The lead's craft stays implicit and undiscussable |
 
 The stretch menu: run the planning or retro cycle, lead a small cross-team initiative, own a stakeholder relationship, and take the lead's seat for a cycle.
 
@@ -129,11 +129,12 @@ As engineers grow, they face a fork. The lead helps each person choose with thei
 | **Engineering manager path** | People management, org health, process | Energized by careers, hiring, and org design | Wants to stay hands-on in code full time |
 | **Specialist path** | Deep expertise in one domain | Energized by a narrow, deep technical frontier | Wants breadth, influence, or people |
 
-The lead's honesty duty: recommend from observed evidence, not charm or convenience — and say out loud that all three paths are careers; the best engineers are not automatically the best leads.
+The lead's honesty duty: recommend from observed evidence, not charm or convenience, and say out loud that all three paths are careers; the best engineers are not automatically the best leads.
 
 ## The Level Growth Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     MAP["Map the engineer to a level"] --> MENU["Pick the stretch menu"]
     MENU --> SUPPORT["Provide support structures"]
@@ -185,4 +186,4 @@ flowchart LR
 
 ## Summary
 
-Growth by level is a menu problem: juniors need foundations and fast feedback, mids need ownership and design seats, seniors need ambiguous scope and mentees, and future leads need delegated authority with safety nets. The lead runs the level map, watches for plateaus, keeps development conversations distinct from performance, and guides the EM versus TL versus specialist fork with evidence. A team developed this way is a pipeline — every seat has someone growing toward it.
+Growth by level is a menu problem: juniors need foundations and fast feedback, mids need ownership and design seats, seniors need ambiguous scope and mentees, and future leads need delegated authority with safety nets. The lead runs the level map, watches for plateaus, keeps development conversations distinct from performance, and guides the EM versus TL versus specialist fork with evidence. A team developed this way is a pipeline. Every seat has someone growing toward it.

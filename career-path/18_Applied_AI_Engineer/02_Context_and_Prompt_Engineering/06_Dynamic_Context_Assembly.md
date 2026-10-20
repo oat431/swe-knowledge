@@ -15,13 +15,13 @@ tags:
 
 # Dynamic Context Assembly
 
-> The per-request pipeline that decides which sources enter the prompt, in what order, at what budget — turning the template and its inputs into the concrete payload the model sees.
+> The per-request pipeline that decides which sources enter the prompt, in what order, at what budget, turning the template and its inputs into the concrete payload the model sees.
 
 ## Why This Is a Senior Skill
 
 A mid-level engineer concatenates whatever is handy: system prompt, history, retrieved chunks, done. A senior engineer designs assembly as the product's control surface over model behavior: every section is a typed input, ordering is deliberate, budgets are enforced in code, and the assembled payload is reproducible and observable.
 
-Assembly is where most production LLM failures are actually born — a wrong fact retrieved, an instruction buried under history, a critical rule truncated silently. Owning this layer is what separates a system that is debuggable from one that is haunted.
+Assembly is where most production LLM failures are actually born: a wrong fact retrieved, an instruction buried under history, a critical rule truncated silently. Owning this layer is what separates a system that is debuggable from one that is haunted.
 
 ## Core Frameworks
 
@@ -67,13 +67,13 @@ Assembly is where most production LLM failures are actually born — a wrong fac
 
 **Assembly must be one pure function, not scattered string building.** Every code path that touches the prompt must go through the assembler. A pure function from inputs to payload is unit-testable, replayable, and audit-ready; scattered concatenation is none of those.
 
-**Order sections deliberately — the model reads position as priority.** Put the contract first so it anchors behavior, delimit and label each data section so its status is explicit, and restate the rules that must survive near the end to exploit recency. Interleaving data and instructions invites both confusion and injection.
+**Order sections deliberately; the model reads position as priority.** Put the contract first so it anchors behavior, delimit and label each data section so its status is explicit, and restate the rules that must survive near the end to exploit recency. Interleaving data and instructions invites both confusion and injection.
 
 **Give every section a priority class and an eviction order before the budget binds.** Decide at design time which content dies first: optional sections drop before critical ones get truncated, and mandatory sections are never touched silently. The budget itself is [[03_Context_Window_Management]]'s; the enforcement point is here.
 
-**Log the assembled payload — never let production debugging reconstruct what the model saw.** Record the exact payload, or its hash plus section metadata, with every request. When a user reports a bad answer, the first artifact you inspect is the payload that produced it; guessing from logs that never captured it is archaeology.
+**Log the assembled payload: never let production debugging reconstruct what the model saw.** Record the exact payload, or its hash plus section metadata, with every request. When a user reports a bad answer, the first artifact you inspect is the payload that produced it; guessing from logs that never captured it is archaeology.
 
-**Keep assembly deterministic; move all nondeterminism to the edges.** Retrieval ranking, exemplar selection, and model sampling may be stochastic — but given the same retrieved set, the same history, and the same template version, the assembled prompt must be identical. Determinism is what makes regression tests and replay debugging possible.
+**Keep assembly deterministic; move all nondeterminism to the edges.** Retrieval ranking, exemplar selection, and model sampling may be stochastic, but given the same retrieved set, the same history, and the same template version, the assembled prompt must be identical. Determinism is what makes regression tests and replay debugging possible.
 
 **Treat temporal and profile context as data, not as instructions.** "Today is 2026-09-09" and the user's saved preferences are facts to be delimited and labeled, not rules to be trusted. Refreshing them on a schedule keeps the payload current without touching the contract.
 
@@ -108,7 +108,7 @@ Refactor an existing codebase's prompt building into an assembly layer:
 
 ## Key Takeaways
 
-- Assembly is a pure, deterministic function — the only control surface for what the model sees
+- Assembly is a pure, deterministic function, the only control surface for what the model sees
 - Order encodes priority: contract first, data delimited and labeled, critical rules restated last
 - Priority classes and eviction orders are design-time decisions, not runtime improvisations
 - The assembled payload is your primary debugging artifact; log it or lose it

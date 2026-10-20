@@ -16,15 +16,15 @@ tags:
 
 # Vendor and Partner Communication
 
-> **Core skill:** The architect holds technical conversations with vendors and partners grounded in architecture requirements — testing claims with evidence, defining boundaries and interfaces precisely, and keeping the enterprise's options and interests visible throughout the relationship.
+> **Core skill:** The architect holds technical conversations with vendors and partners grounded in architecture requirements: testing claims with evidence, defining boundaries and interfaces precisely, and keeping the enterprise's options and interests visible throughout the relationship.
 
 ## Why This Matters
 
 Vendors know their product and the arts of demonstration; the enterprise knows its requirements and its obligations. The architect stands between those two expertises, and the conversation's quality determines whether the enterprise buys a solution to its problem or a solution to a problem the vendor prefers to solve. Requirements stated precisely and tested against evidence are the architect's main instrument.
 
-The default failure is subtle: a vendor demo is a designed experience, a capability narrative is a promise, and a roadmap is a direction of travel, not a commitment. Each of these communicates something real, and none of them is an assessment. The architect separates the communication into what was shown, what was claimed, and what has been verified — and designs the engagement so that verification happens before commitment, not during the first incident.
+The default failure is subtle: a vendor demo is a designed experience, a capability narrative is a promise, and a roadmap is a direction of travel, not a commitment. Each of these communicates something real, and none of them is an assessment. The architect separates the communication into what was shown, what was claimed, and what has been verified, and designs the engagement so that verification happens before commitment, not during the first incident.
 
-Partners and alliances are a different register of the same skill. With partners the architecture is shared and the boundary must be explicit: who owns which component, where the interfaces are, how change is coordinated, and how disagreements escalate. The communication here is less procurement and more joint design — and it works when both sides can point to the same boundary diagrams and the same recorded decisions.
+Partners and alliances are a different register of the same skill. With partners the architecture is shared and the boundary must be explicit: who owns which component, where the interfaces are, how change is coordinated, and how disagreements escalate. The communication here is less procurement and more joint design, and it works when both sides can point to the same boundary diagrams and the same recorded decisions.
 
 ## What Vendor Conversations Must Establish
 
@@ -60,6 +60,7 @@ Partners and alliances are a different register of the same skill. With partners
 ## The Engagement Sequence
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     REQUIREMENTS["Architecture requirements"] --> ENGAGE["Structured vendor engagement"]
     ENGAGE["Structured vendor engagement"] --> EVALUATE["Evidence-based evaluation"]
@@ -91,7 +92,7 @@ flowchart LR
 ### Vendor Engagement Brief
 
 ```markdown
-## Vendor Engagement Brief — <vendor and scope>
+## Vendor Engagement Brief: <vendor and scope>
 
 | Item | Content |
 |------|---------|

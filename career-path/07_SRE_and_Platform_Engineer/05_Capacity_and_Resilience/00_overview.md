@@ -17,13 +17,13 @@ tags:
 
 # Capacity and Resilience
 
-> **Core idea:** Ensuring systems can handle current and future load, survive component failures, and recover from disasters — through proactive planning, testing, and automation rather than reactive heroics.
+> **Core idea:** Ensuring systems can handle current and future load, survive component failures, and recover from disasters, through proactive planning, testing, and automation rather than reactive heroics.
 
 ## What Capacity and Resilience Mean at Specialist Level
 
 A senior software engineer may optimize a single service for performance. An SRE or platform engineer **designs capacity and resilience strategies across the entire organization**, balancing reliability, cost, and growth.
 
-Capacity and resilience are not optional add-ons — they are engineering disciplines that prevent outages, reduce incident severity, and ensure business continuity. Without them, systems fail under load, recover slowly from disasters, and scale unpredictably.
+Capacity and resilience are not optional add-ons. They are engineering disciplines that prevent outages, reduce incident severity, and ensure business continuity. Without them, systems fail under load, recover slowly from disasters, and scale unpredictably.
 
 ## Topic Notes
 
@@ -40,6 +40,7 @@ Capacity and resilience are not optional add-ons — they are engineering discip
 ## How the Topics Connect
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PLAN["01 Capacity Planning"] --> TEST["02 Load and Stress Testing"]
     TEST --> SCALE["05 Auto-Scaling Design"]
@@ -78,6 +79,6 @@ Use this to gauge your current mastery of capacity and resilience:
 ## Related
 
 - [[00_overview|SRE and Platform Engineer Overview]]
-- [[01_Service_Objectives/00_overview|Service Objectives]] : SLOs define the reliability targets that capacity must support
-- [[02_Observability/00_overview|Observability]] : metrics feed capacity forecasts and scaling decisions
+- [[career-path/07_SRE_and_Platform_Engineer/01_Service_Objectives/00_overview|Service Objectives]] : SLOs define the reliability targets that capacity must support
+- [[career-path/07_SRE_and_Platform_Engineer/02_Observability/00_overview|Observability]] : metrics feed capacity forecasts and scaling decisions
 - [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/02_SRE_Principles|SRE Principles]] : SRE foundations from the Senior SWE path

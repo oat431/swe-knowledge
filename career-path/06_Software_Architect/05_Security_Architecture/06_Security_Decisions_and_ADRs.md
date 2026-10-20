@@ -16,13 +16,13 @@ tags:
 
 # Security Decisions and ADRs
 
-> **Core skill:** The architect records security-significant decisions as ADRs that carry the threat that drove them, the pattern chosen, the residual risk, and the review date — keeping security reasoning reviewable and deliberately expiring.
+> **Core skill:** The architect records security-significant decisions as ADRs that carry the threat that drove them, the pattern chosen, the residual risk, and the review date, keeping security reasoning reviewable and deliberately expiring.
 
 ## Why This Matters
 
-Most security decisions are invisible in the code. The reasoning — we chose mutual TLS because the threat model showed forged internal calls, we accepted this token lifetime because the latency budget forced it — evaporates within a sprint. Without records, the next team either re-litigates the decision from scratch or, worse, unknowingly undermines it by adding the shortcut the original decision forbade.
+Most security decisions are invisible in the code. The reasoning (we chose mutual TLS because the threat model showed forged internal calls, we accepted this token lifetime because the latency budget forced it) evaporates within a sprint. Without records, the next team either re-litigates the decision from scratch or, worse, unknowingly undermines it by adding the shortcut the original decision forbade.
 
-Security ADRs differ from ordinary architecture decision records in specific ways. They cite a threat, not a quality preference. They state residual risk explicitly, because security decisions reduce risk rather than eliminate it. They carry a review date, because threat landscapes, compliance regimes, and infrastructure change faster than most architectural context. And they link outward — to the threat register, to the infrastructure that enforces them, and to the compliance evidence that depends on them.
+Security ADRs differ from ordinary architecture decision records in specific ways. They cite a threat, not a quality preference. They state residual risk explicitly, because security decisions reduce risk rather than eliminate it. They carry a review date, because threat landscapes, compliance regimes, and infrastructure change faster than most architectural context. And they link outward: to the threat register, to the infrastructure that enforces them, and to the compliance evidence that depends on them.
 
 The lifecycle discipline matters more than the template. A security decision accepted with no review date is a claim without an expiry; an accepted risk nobody re-examines is indistinguishable from an unknown risk. The architect treats the security ADR set as a living register: revalidated on schedule and on trigger, superseded when context moves, and auditable as a chain from threat to control to evidence.
 
@@ -54,9 +54,9 @@ issued by the platform certificate authority with automatic rotation. Services
 deny calls that present no valid certificate.
 
 ## Alternatives Considered
-- Network segmentation only — reduces reach but does not prove identity; rejected.
-- Shared secrets per service pair — rotation burden and sprawl; rejected.
-- Mesh policy without cryptographic identity — depends on correct routing; rejected.
+- Network segmentation only: reduces reach but does not prove identity; rejected.
+- Shared secrets per service pair: rotation burden and sprawl; rejected.
+- Mesh policy without cryptographic identity: depends on correct routing; rejected.
 
 ## Residual Risk
 - A compromised workload with a valid certificate can call services that accept
@@ -78,6 +78,7 @@ deny calls that present no valid certificate.
 ## The Security ADR Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PROPOSED["Proposed with threat reference"] --> REVIEWED["Reviewed by architect and security engineer"]
     REVIEWED --> ACCEPTED["Accepted with residual risk recorded"]
@@ -100,7 +101,7 @@ A security ADR that stands alone is a story. The value compounds when the chain 
 
 ### Security ADR Checklist
 
-- [ ] Every security-significant decision has an ADR — authentication scheme, authorization model, boundary controls, accepted risks
+- [ ] Every security-significant decision has an ADR: authentication scheme, authorization model, boundary controls, accepted risks
 - [ ] Each ADR cites the threat that drove it, by register ID
 - [ ] Residual risk is stated with a rationale for accepting it
 - [ ] Every accepted ADR has a review date and a review trigger
@@ -142,8 +143,8 @@ A security ADR that stands alone is a story. The value compounds when the chain 
 - [[03_Threat_Modeling_Architecture_Level]]
 - [[04_Security_Patterns_in_Architecture]]
 - [[07_Compliance_Architecture]]
-- [[02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]
+- [[career-path/06_Software_Architect/02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]
 
 ## Summary
 
-Security ADRs make security decisions reviewable by recording the threat that drove them, the pattern chosen, the residual risk accepted, and the date the reasoning expires. They differ from ordinary decision records in citing threats instead of preferences, stating residual risk explicitly, and linking to the infrastructure that enforces them and the compliance controls that depend on them. Managed as a living register — revalidated on schedule and trigger, superseded with rationale — they turn scattered security choices into an auditable chain.
+Security ADRs make security decisions reviewable by recording the threat that drove them, the pattern chosen, the residual risk accepted, and the date the reasoning expires. They differ from ordinary decision records in citing threats instead of preferences, stating residual risk explicitly, and linking to the infrastructure that enforces them and the compliance controls that depend on them. Managed as a living register (revalidated on schedule and trigger, superseded with rationale), they turn scattered security choices into an auditable chain.

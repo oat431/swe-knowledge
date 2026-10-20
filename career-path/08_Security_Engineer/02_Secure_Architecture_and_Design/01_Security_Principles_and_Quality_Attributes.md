@@ -4,7 +4,7 @@ note_type: capability-topic
 capability_area: secure-architecture-and-design
 career_path: security-engineer
 prerequisite:
-  - "[[../01_Threat_Modeling_and_Risk/05_Risk_Rating_and_Treatment|Risk Rating and Treatment]]"
+  - "[[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/05_Risk_Rating_and_Treatment|Risk Rating and Treatment]]"
 tags:
   - career-path
   - security-engineer
@@ -52,6 +52,7 @@ Describe the desired behavior in a form that can guide design and verification.
 ### 3. From principle to evidence
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     GOAL["Business or user outcome"] --> SCENARIO["Quality attribute scenario"]
     SCENARIO --> PRINCIPLE["Select security principle"]
@@ -113,8 +114,8 @@ Choose three security concerns from a current architecture review.
 
 ## Knowledge Connections
 
-- [[../01_Threat_Modeling_and_Risk/01_System_Context_and_Assets|System Context and Assets]]
-- [[../01_Threat_Modeling_and_Risk/05_Risk_Rating_and_Treatment|Risk Rating and Treatment]]
+- [[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/01_System_Context_and_Assets|System Context and Assets]]
+- [[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/05_Risk_Rating_and_Treatment|Risk Rating and Treatment]]
 - [[02_Defense_in_Depth|Defense in Depth]]
 - [[04_Secure_Architecture_Decisions|Secure Architecture Decisions]]
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]

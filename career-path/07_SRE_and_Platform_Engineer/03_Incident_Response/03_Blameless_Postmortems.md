@@ -250,7 +250,7 @@ If someone starts blaming an individual:
 - [[02_Incident_Management]] : postmortems follow incident response
 - [[04_Post_Incident_Action_Items]] : action items are the output of postmortems
 - [[05_War_Games]] : war games test whether postmortem lessons are effective
-- [[01_Service_Objectives/03_Error_Budget_Policy]] : incidents consume error budget
+- [[career-path/07_SRE_and_Platform_Engineer/01_Service_Objectives/03_Error_Budget_Policy]] : incidents consume error budget
 - [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/04_Incident_Response]] : incident response foundations
 
 ## Key Takeaways

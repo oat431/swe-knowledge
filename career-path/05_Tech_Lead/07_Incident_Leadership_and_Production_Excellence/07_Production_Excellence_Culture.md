@@ -16,13 +16,13 @@ tags:
 
 # Production Excellence Culture
 
-> **Core skill:** Making operational excellence a team identity — every engineer owns production, rituals keep it visible, and the lead models the behavior.
+> **Core skill:** Making operational excellence a team identity: every engineer owns production, rituals keep it visible, and the lead models the behavior.
 
 ## Why This Matters
 
 Every team has a production culture; the question is only whether it is the one they chose. In a reactive culture, production is the on-call person's problem, incidents are blame events, and the team discovers its operational weaknesses the hard way, repeatedly. In an excellent culture, production is everyone's work, operational behavior is celebrated and learned from, and reliability is a source of pride rather than fear.
 
-Culture is not a poster; it is the accumulated result of what the team does, celebrates, and tolerates — and the tech lead is its primary author. Not by decree, but by modeling: answering pages, joining incidents, reading dashboards, treating operational work as real engineering, and making the team's rituals teach the values. This note covers the production-first mindset, operational rituals, celebration, hiring, onboarding, the lead's modeling role, and sustaining the culture through growth and pressure.
+Culture is not a poster; it is the accumulated result of what the team does, celebrates, and tolerates, and the tech lead is its primary author. Not by decree, but by modeling: answering pages, joining incidents, reading dashboards, treating operational work as real engineering, and making the team's rituals teach the values. This note covers the production-first mindset, operational rituals, celebration, hiring, onboarding, the lead's modeling role, and sustaining the culture through growth and pressure.
 
 ## The Production-First Mindset
 
@@ -62,7 +62,7 @@ Culture is shaped most by what gets celebrated. Teams that only hear about produ
 | A postmortem that found a real pattern | Share the finding; the team that learns is celebrated |
 | A first solo on-call shift | The milestone is marked, the debrief is positive |
 
-A "catch of the month" or equivalent is not fluff — it is the team's way of saying out loud that operational excellence is the behavior that earns recognition here.
+A "catch of the month" or equivalent is not fluff: it is the team's way of saying out loud that operational excellence is the behavior that earns recognition here.
 
 ## Hiring for Production Mindset
 
@@ -76,7 +76,7 @@ Culture is defended at the hiring door. The lead asks questions that reveal how 
 | "What is a runbook to you?" | Is operations work real work to them? |
 | "When was the last time you read your own dashboards?" | Is production curiosity habitual? |
 
-The bar is not "has done on-call" — it is the orientation: does this person treat production as something they own?
+The bar is not "has done on-call"; it is the orientation: does this person treat production as something they own?
 
 ## Production Excellence in Onboarding
 
@@ -92,7 +92,7 @@ The onboarding message is explicit: "In this team, everyone owns production." Th
 
 ## The Lead's Modeling Role
 
-Culture is caught more than taught — and the lead is the most visible person on the team. The modeling is specific and daily:
+Culture is caught more than taught, and the lead is the most visible person on the team. The modeling is specific and daily:
 
 | The Lead Does | What It Signals |
 |---------------|-----------------|
@@ -116,6 +116,7 @@ Culture is caught more than taught — and the lead is the most visible person o
 The sustaining rule: **the culture is tested in the bad moments, and the lead's job is to be more visible and more consistent precisely then.**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A["Lead models ownership"] --> B["Team owns production"]
     B --> C["Rituals keep it visible"]
@@ -166,16 +167,16 @@ flowchart LR
 - Operational wins are celebrated as visibly as feature launches
 - New joiners own a production change within their first month
 - The lead's calendar shows the model: pages, incidents, dashboards
-- The culture survives growth and pressure — measured by how people talk about failure
+- The culture survives growth and pressure, measured by how people talk about failure
 
 ## Related Topics
 
-- [[05_On_Call_Excellence]] — the rotation that turns ownership into daily practice
-- [[06_Resilience_Engineering_Practices]] — the rehearsal program the culture funds
-- [[01_Incident_Command_Leadership]] — the moments that test what the culture is made of
-- [[02_System_Ownership_and_Production_Responsibility/00_overview|System Ownership and Production Responsibility]] — the ownership foundation this culture builds on
-- [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]] — the specialist path that shares this culture's values
+- [[05_On_Call_Excellence]]: the rotation that turns ownership into daily practice
+- [[06_Resilience_Engineering_Practices]]: the rehearsal program the culture funds
+- [[01_Incident_Command_Leadership]]: the moments that test what the culture is made of
+- [[career-path/05_Tech_Lead/02_System_Ownership_and_Production_Responsibility/00_overview|System Ownership and Production Responsibility]]: the ownership foundation this culture builds on
+- [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]]: the specialist path that shares this culture's values
 
 ## Summary
 
-Production excellence culture is built deliberately: ownership assigned to every engineer, rituals that keep operational reality visible, celebration that makes reliability the behavior the team rewards, hiring and onboarding that defend the values at the door, and a lead who models the culture daily — answering pages, joining incidents, reading dashboards, and staying visibly consistent in the bad moments. Culture is what the team does when nobody is watching; the tech lead makes sure that what it does is what it would choose.
+Production excellence culture is built deliberately: ownership assigned to every engineer, rituals that keep operational reality visible, celebration that makes reliability the behavior the team rewards, hiring and onboarding that defend the values at the door, and a lead who models the culture daily, answering pages, joining incidents, reading dashboards, and staying visibly consistent in the bad moments. Culture is what the team does when nobody is watching; the tech lead makes sure that what it does is what it would choose.

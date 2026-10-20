@@ -19,7 +19,7 @@ tags:
 
 ## Why This Is a Senior Skill
 
-A mid-level engineer tweaks prompts in a dashboard until the demo looks right. A senior engineer knows a prompt edit is a release: it changes behavior for every user at once, it can regress cases nobody retested, and if it is not versioned there is no rollback — only panic.
+A mid-level engineer tweaks prompts in a dashboard until the demo looks right. A senior engineer knows a prompt edit is a release: it changes behavior for every user at once, it can regress cases nobody retested, and if it is not versioned there is no rollback, only panic.
 
 Templates turn prompts from strings into artifacts: reviewable diffs, attributable deployments, testable changes, and an answer to "which prompt served that user's bad answer last Tuesday?".
 
@@ -39,7 +39,7 @@ Templates turn prompts from strings into artifacts: reviewable diffs, attributab
 
 | Approach | Behavior | Verdict |
 |----------|----------|---------|
-| `str.format()` | Treats `{}` in user input as format fields — crashes or corrupts | Avoid |
+| `str.format()` | Treats `{}` in user input as format fields; crashes or corrupts | Avoid |
 | `replace()` of named tokens | Literal substitution; user braces are inert | Use |
 | Full templating engines (Jinja, Mustache) | Rich logic, but syntax collides with user content and prompt delimiters | Use sparingly, escape aggressively |
 | Structured assembly in code | Sections as typed objects rendered deterministically | Preferred at scale |
@@ -65,11 +65,11 @@ Templates turn prompts from strings into artifacts: reviewable diffs, attributab
 
 ## In Practice
 
-**Every prompt change is a release and needs a reviewer, a diff, and a rationale.** Two-line wording changes have flipped refusal behavior and tone across entire user bases. Review catches the unintended consequence before traffic does — the same discipline applied to any other production code change.
+**Every prompt change is a release and needs a reviewer, a diff, and a rationale.** Two-line wording changes have flipped refusal behavior and tone across entire user bases. Review catches the unintended consequence before traffic does, the same discipline applied to any other production code change.
 
-**Attribute every request to the template version that served it.** Log the template version and hash alongside the assembled prompt on every request. When a user reports a bad answer from last week, the record answers which prompt produced it — the difference between a fix and a guess.
+**Attribute every request to the template version that served it.** Log the template version and hash alongside the assembled prompt on every request. When a user reports a bad answer from last week, the record answers which prompt produced it, the difference between a fix and a guess.
 
-**Separate the template from the data — never let user content control rendering.** Interpolation must be literal and delimited: a customer name like `{discount: 0}` must arrive as data, not as template syntax. The same discipline protects correctness and the injection boundary ([[career-path/18_Applied_AI_Engineer/04_AI_Security_and_Guardrails/00_overview|AI Security and Guardrails]]).
+**Separate the template from the data: never let user content control rendering.** Interpolation must be literal and delimited: a customer name like `{discount: 0}` must arrive as data, not as template syntax. The same discipline protects correctness and the injection boundary ([[career-path/18_Applied_AI_Engineer/04_AI_Security_and_Guardrails/00_overview|AI Security and Guardrails]]).
 
 **Gate changes on regression runs, and treat the golden set as part of the template's contract.** New behavior is acceptable; broken behavior is not. A change that improves one case while silently degrading five others must fail the gate. The suite belongs to area 03; the discipline of never shipping without running it belongs here.
 
@@ -108,6 +108,6 @@ Move a live prompt onto a release discipline:
 
 - A prompt edit is a release: diff, review, regression, canary, rollout, rollback
 - Version attribution on requests turns support tickets into engineering data
-- Interpolation must be literal — user content is data, never template syntax
+- Interpolation must be literal: user content is data, never template syntax
 - Golden sets are the template's contract: new behavior yes, broken behavior no
 - Everything the model reads is a prompt: examples, compaction, and tool schemas version together

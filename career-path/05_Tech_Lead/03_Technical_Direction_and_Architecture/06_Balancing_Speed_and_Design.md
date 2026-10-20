@@ -16,13 +16,13 @@ tags:
 
 # Balancing Speed and Design
 
-> **Core skill:** Choosing when to go fast and when to go solid — by risk, not by mood — and defending that choice to stakeholders who always want both.
+> **Core skill:** Choosing when to go fast and when to go solid (by risk, not by mood) and defending that choice to stakeholders who always want both.
 
 ## Why This Matters
 
 The speed-versus-design tension is not a problem to solve; it is a decision to make, repeatedly and explicitly. The team that always goes solid misses deadlines and opportunities. The team that always goes fast builds a system that costs more than it saves, a quarter at a time. Both are failures of judgment, not of intent.
 
-The tech lead's value here is the judgment itself: reading each change for what it actually risks, matching design effort to that risk, and naming the trade-off out loud. The team inherits the judgment in two ways — through the decisions they see you make, and through the decision rules you write down so they can make the same calls without you.
+The tech lead's value here is the judgment itself: reading each change for what it actually risks, matching design effort to that risk, and naming the trade-off out loud. The team inherits the judgment in two ways: through the decisions they see you make, and through the decision rules you write down so they can make the same calls without you.
 
 ## The Speed-Solid Spectrum
 
@@ -43,12 +43,12 @@ The core question: what does being wrong cost?
 
 | Decision class | Cost of being wrong | Design effort |
 |----------------|---------------------|---------------|
-| Reversible, cheap to change | Low | Minimal — ship and adjust |
-| Reversible, annoying to change | Moderate | Some — isolate the change surface |
-| One-way door | High | Full — the design is the product |
+| Reversible, cheap to change | Low | Minimal: ship and adjust |
+| Reversible, annoying to change | Moderate | Some: isolate the change surface |
+| One-way door | High | Full: the design is the product |
 | One-way door, expensive to open | Very high | Full plus explicit review |
 
-One-way doors — schema changes, public contracts, foundational abstractions, platform choices — deserve the full design treatment because they cannot be walked back cheaply. Two-way doors deserve speed: the cost of deliberating exceeds the cost of correcting.
+One-way doors (schema changes, public contracts, foundational abstractions, platform choices) deserve the full design treatment because they cannot be walked back cheaply. Two-way doors deserve speed: the cost of deliberating exceeds the cost of correcting.
 
 ## Throwaway Prototypes with Explicit Contracts
 
@@ -62,7 +62,7 @@ A prototype is a tool, not a phase:
 | Reuse rule | What may be lifted into production, what may not |
 | Disposal | How it is deleted or quarantined |
 
-The classic failure is the prototype that grows production teeth — "it works, ship it." The contract prevents it: a prototype with a written timebox and a reuse rule is a prototype; one without them is an accident in progress.
+The classic failure is the prototype that grows production teeth: "it works, ship it." The contract prevents it: a prototype with a written timebox and a reuse rule is a prototype; one without them is an accident in progress.
 
 ## Foundations for Hot Paths
 
@@ -80,7 +80,7 @@ The rule of thumb: spend the design effort where the cost of being wrong compoun
 
 ## The Speed-Debt Feedback Loop
 
-Fast now creates the debt you negotiate later. The loop is not avoidable — it is manageable:
+Fast now creates the debt you negotiate later. The loop is not avoidable. It is manageable:
 
 | Fast choice | Debt created | Managed how |
 |-------------|--------------|-------------|
@@ -89,7 +89,7 @@ Fast now creates the debt you negotiate later. The loop is not avoidable — it 
 | Copy-paste instead of abstraction | Drift between copies | Consolidate on the third copy |
 | Prototype shipped | Maintenance on unowned code | Reuse contract decides its fate |
 
-The discipline is not avoiding fast choices — it is converting every fast choice into a visible, owned register item. Fast with a record is a strategy; fast without a record is surprise debt.
+The discipline is not avoiding fast choices. It is converting every fast choice into a visible, owned register item. Fast with a record is a strategy; fast without a record is surprise debt.
 
 ## Communicating Design Time to Stakeholders
 
@@ -98,13 +98,14 @@ Stakeholders experience design time as delay; the lead translates it into risk:
 | Stakeholder frame | The translation |
 |-------------------|-----------------|
 | "Why is this taking longer?" | "The extra time buys a rollback-safe migration and a data path we will not have to redo" |
-| "Can we skip the review?" | "The review is where the last three incidents were caught — we can trade it for risk, but it is a named trade" |
+| "Can we skip the review?" | "The review is where the last three incidents were caught. We can trade it for risk, but it is a named trade" |
 | "Just make it work" | "It will work; the question is what breaking it later costs" |
-| "Fast is a feature" | "Fast on two-way doors, solid on one-way doors — that is the policy" |
+| "Fast is a feature" | "Fast on two-way doors, solid on one-way doors. That is the policy" |
 
 The lead's job is to make the trade explicit and let the stakeholder choose with eyes open. Design time that is defended without explanation becomes a fight; design time that is explained becomes a decision.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CHANGE["Change arrives"] --> READ["Read the risk class"]
     READ --> REV["Reversible decision"] --> FAST["Go fast, ship, adjust"]
@@ -120,10 +121,10 @@ flowchart TD
 
 Decision checklist for any change:
 
-- [ ] What does being wrong cost — days or years?
+- [ ] What does being wrong cost: days or years?
 - [ ] Is this a one-way door? What makes it reversible?
 - [ ] Does a prototype need to exist, and what is its contract?
-- [ ] Is this a foundation — data, interfaces, security, core domain?
+- [ ] Is this a foundation: data, interfaces, security, core domain?
 - [ ] If going fast, what debt is created and who records it?
 - [ ] What is the stakeholder-facing translation of the design time?
 
@@ -155,4 +156,4 @@ Decision checklist for any change:
 
 ## Summary
 
-Balancing speed and design is a per-change risk decision: classify by reversibility, spend design effort where being wrong compounds — data, interfaces, security, foundations — and go fast everywhere else, converting every fast choice into a visible register item. Prototypes get contracts, and design time gets translated into risk language for stakeholders. The team that reads each change and chooses deliberately ships fast where it is safe and solid where it matters.
+Balancing speed and design is a per-change risk decision: classify by reversibility, spend design effort where being wrong compounds (data, interfaces, security, foundations) and go fast everywhere else, converting every fast choice into a visible register item. Prototypes get contracts, and design time gets translated into risk language for stakeholders. The team that reads each change and chooses deliberately ships fast where it is safe and solid where it matters.

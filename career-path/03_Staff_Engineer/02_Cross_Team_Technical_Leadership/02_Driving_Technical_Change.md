@@ -16,13 +16,13 @@ tags:
 
 # Driving Technical Change
 
-> **Core skill:** Moving organizations from current to target technical patterns — understanding resistance, choosing the right change pattern, and measuring adoption honestly.
+> **Core skill:** Moving organizations from current to target technical patterns: understanding resistance, choosing the right change pattern, and measuring adoption honestly.
 
 ## Why This Matters
 
-Technical change fails more often on the human side than the technical side. The new service mesh is sound; the migration to it stalls because teams do not trust it. The standard is good; nobody adopts it because adopting costs more than diverging. The staff engineer's change work is therefore less about the target state and more about the **path** — understanding why orgs resist, choosing a change pattern that fits the situation, and measuring whether the change is actually landing.
+Technical change fails more often on the human side than the technical side. The new service mesh is sound; the migration to it stalls because teams do not trust it. The standard is good; nobody adopts it because adopting costs more than diverging. The staff engineer's change work is therefore less about the target state and more about the **path**: understanding why orgs resist, choosing a change pattern that fits the situation, and measuring whether the change is actually landing.
 
-The failure mode to avoid is the announcement: a decision, a town hall, a slide deck, and then silence. Adoption is not a communication problem; it is an economics problem. Teams adopt what is cheaper for them — in effort, risk, and career terms. The change leader's job is to make the new pattern genuinely cheaper, visibly proven, and locally owned.
+The failure mode to avoid is the announcement: a decision, a town hall, a slide deck, and then silence. Adoption is not a communication problem; it is an economics problem. Teams adopt what is cheaper for them in effort, risk, and career terms. The change leader's job is to make the new pattern genuinely cheaper, visibly proven, and locally owned.
 
 ## Why Orgs Resist
 
@@ -45,7 +45,7 @@ Resistance is information, not obstruction. Each source responds to a different 
 | **Mandate-backed** | Leadership requires adoption by a date | Change is urgent, org-wide, and not adoptable by economics alone | Compliance without belief; silent divergence |
 | **Crisis-driven** | The incident or outage justifies the change | The status quo just failed visibly | The window closes; the lesson fades |
 
-The patterns combine: a pilot proves the paved path, and a mandate covers the laggards. The mistake is choosing a pattern for comfort — mandate because it is fast, pilot because it is safe — instead of fit.
+The patterns combine: a pilot proves the paved path, and a mandate covers the laggards. The mistake is choosing a pattern for comfort (mandate because it is fast, pilot because it is safe) instead of fit.
 
 ## The Adoption Curve
 
@@ -55,7 +55,7 @@ The patterns combine: a pilot proves the paved path, and a mandate covers the la
 | Majority | ~60% | Proof, enablement, and a local win |
 | Laggards | ~25% | A deadline, a default, or a working example to copy |
 
-The curve explains most adoption failures: pitching the majority with the arguments that moved the early adopters. The early adopters need vision; the majority needs **proof and ease**; the laggards need **structure**. The change plan must sequence for all three — celebrate the early adopters, enable the majority, and schedule the laggards' deadline.
+The curve explains most adoption failures: pitching the majority with the arguments that moved the early adopters. The early adopters need vision; the majority needs **proof and ease**; the laggards need **structure**. The change plan must sequence for all three: celebrate the early adopters, enable the majority, and schedule the laggards' deadline.
 
 ## Change Fatigue Management
 
@@ -76,7 +76,7 @@ The change leader is also the change accountant: the org has a limited appetite,
 | Templates used | Enablement take-up |
 | Exceptions requested | Divergence, visible and bounded |
 | Support tickets | Pain in the new path |
-| Team self-reports | Sentiment — useful, never sufficient |
+| Team self-reports | Sentiment, useful, never sufficient |
 
 Honest measurement distinguishes the change from the story about the change. The dashboard is the discipline: if the numbers do not move, the change has not happened regardless of the announcements.
 
@@ -89,9 +89,10 @@ Honest measurement distinguishes the change from the story about the change. The
 | The cost of continuing exceeds the remaining value | What is the honest remaining net present value? |
 | A better alternative emerged | Does the new option dominate? |
 
-Abandoning is a decision, recorded like any other — with the reasoning, so the next person does not restart a dead effort out of nostalgia. A killed change with a tombstone note is a contribution; a zombie change that consumes teams for another year is a tax.
+Abandoning is a decision, recorded like any other, with the reasoning, so the next person does not restart a dead effort out of nostalgia. A killed change with a tombstone note is a contribution; a zombie change that consumes teams for another year is a tax.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     TARGET["Define the target pattern"] --> RESIST["Map resistance sources"]
     RESIST --> PATTERN["Choose the change pattern"]
@@ -106,7 +107,7 @@ flowchart TD
 ## Practical Applications
 
 ```markdown
-# Change Plan — [change] — [date]
+# Change Plan: [change], [date]
 
 ## Target
 - [ ] The pattern: [what the org should do]
@@ -165,4 +166,4 @@ Checklist:
 
 ## Summary
 
-Driving technical change is economics, not announcement: map the resistance sources, choose the pattern that fits — pilot, paved path, mandate, or crisis — and sequence the adoption curve from early adopters through majority to laggards. Measure adoption by behavior, manage the org's finite change appetite, and abandon with a record when the numbers say the effort is done. The change that survives is the one that became cheaper than the status quo.
+Driving technical change is economics, not announcement: map the resistance sources, choose the pattern that fits (pilot, paved path, mandate, or crisis) and sequence the adoption curve from early adopters through majority to laggards. Measure adoption by behavior, manage the org's finite change appetite, and abandon with a record when the numbers say the effort is done. The change that survives is the one that became cheaper than the status quo.

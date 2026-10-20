@@ -28,6 +28,7 @@ The difference is not automation skill. It is **designing the right level of abs
 ### Self-Service Architecture
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph USER["User Layer"]
         U1["Developer Portal"]
@@ -72,6 +73,7 @@ flowchart TD
 | **Guidance** | Recommendations without enforcement | "We recommend PostgreSQL for relational data" |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     GATE["Gate: manual approval"] --> GUARDRAIL["Guardrail: automated policy"]
     GUARDRAIL --> GUIDANCE["Guidance: recommendations"]
@@ -149,7 +151,7 @@ flowchart LR
 - [[03_Golden_Paths]] : self-service enables golden paths
 - [[05_Internal_Service_Catalog]] : catalog exposes self-service options
 - [[software-engineering-note/02_Software_Architecture/Microservice/07 Deployment/074 GitOps & CI-CD Pipelines|GitOps & CI-CD Pipelines]] : GitOps enables self-service delivery
-- [[04_Delivery_Automation/00_overview|Delivery Automation]] : CI/CD as self-service capability
+- [[career-path/07_SRE_and_Platform_Engineer/04_Delivery_Automation/00_overview|Delivery Automation]] : CI/CD as self-service capability
 
 ## Key Takeaways
 

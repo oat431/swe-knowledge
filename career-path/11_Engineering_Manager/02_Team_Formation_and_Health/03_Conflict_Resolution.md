@@ -15,13 +15,13 @@ tags:
 
 # Conflict Resolution
 
-> **Core skill:** Surfacing conflict early and resolving it at the right level — direct conversation first, mediation second, manager decision last — and reading what conflict reveals about the system.
+> **Core skill:** Surfacing conflict early and resolving it at the right level (direct conversation first, mediation second, manager decision last) and reading what conflict reveals about the system.
 
 ## Why This Matters
 
-Conflict is not the enemy of a healthy team; suppression is. Teams that disagree openly make better decisions — the alternatives were actually weighed — while teams that paper over disagreement make decisions in the corridor, after the meeting, where the loudest voice wins and the losers hold grudges. The manager's job is not to make conflict disappear; it is to keep conflict technical, early, and resolvable.
+Conflict is not the enemy of a healthy team; suppression is. Teams that disagree openly make better decisions (the alternatives were actually weighed), while teams that paper over disagreement make decisions in the corridor, after the meeting, where the loudest voice wins and the losers hold grudges. The manager's job is not to make conflict disappear; it is to keep conflict technical, early, and resolvable.
 
-Left alone, conflict metastasizes: a technical disagreement becomes a personal grudge, a grudge becomes passive aggression, and the team's energy drains into politics. Unresolved conflict is also expensive — in rework, in attrition, and in the manager's own time spent on drama instead of direction. Early, structured resolution is one of the cheapest investments a manager makes.
+Left alone, conflict metastasizes: a technical disagreement becomes a personal grudge, a grudge becomes passive aggression, and the team's energy drains into politics. Unresolved conflict is also expensive: in rework, in attrition, and in the manager's own time spent on drama instead of direction. Early, structured resolution is one of the cheapest investments a manager makes.
 
 ## Task Conflict vs Relationship Conflict
 
@@ -32,7 +32,7 @@ Left alone, conflict metastasizes: a technical disagreement becomes a personal g
 | Value | Improves decisions when managed | Destroys trust and focus |
 | Manager's move | Channel into evidence and process | Intervene directly; never let it fester |
 
-Task conflict is the team's decision-making engine. The discipline is keeping it there: the moment an argument moves from "the design" to "the designer", the manager steps in and returns it to the work. Relationship conflict is never solved by more debate — it is solved by intervention.
+Task conflict is the team's decision-making engine. The discipline is keeping it there: the moment an argument moves from "the design" to "the designer", the manager steps in and returns it to the work. Relationship conflict is never solved by more debate. It is solved by intervention.
 
 ## Healthy Technical Conflict Norms
 
@@ -40,11 +40,11 @@ Task conflict is the team's decision-making engine. The discipline is keeping it
 |------|--------------------|
 | Ideas, not people | Arguments attack the proposal, never the proposer |
 | Evidence, not volume | Data and experiments outrank decibels and seniority |
-| Decided by decision rights | After debate, the owner decides — and everyone supports it |
+| Decided by decision rights | After debate, the owner decides, and everyone supports it |
 | Fought in the room | Disagreement happens where the decision happens |
 | Reversible by review | Today's loser can reopen with new evidence |
 
-These norms are set before the conflict happens — in the charter and in the manager's own behavior at design reviews and retros. A team that already has disagreement norms storms faster and decides better.
+These norms are set before the conflict happens, in the charter and in the manager's own behavior at design reviews and retros. A team that already has disagreement norms storms faster and decides better.
 
 ## The Resolution Ladder
 
@@ -55,7 +55,7 @@ These norms are set before the conflict happens — in the charter and in the ma
 | Manager decision | The dispute blocks work or people | Decide with reasons; be the tiebreaker, not the judge of character |
 | Escalation | HR, conflict of interest, or misconduct | Hand off with documentation and fairness |
 
-The ladder is climbed from the bottom, deliberately. Most conflicts resolve at rung one if the parties are prepared — the manager's preparation is often the whole intervention.
+The ladder is climbed from the bottom, deliberately. Most conflicts resolve at rung one if the parties are prepared. The manager's preparation is often the whole intervention.
 
 ## Preparing the Parties for Resolution
 
@@ -90,7 +90,7 @@ The manager's first diagnosis is always structural: is this conflict a dispute b
 | Grudge behavior | Old grievances resurfacing in new disputes | Separate current issues from history; resolve the history |
 | Excluded members | Someone systematically left out | Intervene; the team's inclusion is not optional |
 
-Passive aggression is conflict that lost its courage — it is the residue of a dispute that was never allowed to happen openly. The manager treats the underlying dispute, not the symptom: give the conflict a safe room and the passive behavior loses its purpose.
+Passive aggression is conflict that lost its courage. It is the residue of a dispute that was never allowed to happen openly. The manager treats the underlying dispute, not the symptom: give the conflict a safe room and the passive behavior loses its purpose.
 
 ## Post-Conflict Team Repair
 
@@ -105,11 +105,12 @@ Repair is not pretending nothing happened; it is demonstrating that the team sur
 
 ## Conflict as Information
 
-Conflict tells the manager where the system is broken. A dispute about ownership reveals ambiguous boundaries; a dispute about priorities reveals missing strategy; a dispute about credit reveals broken incentives. The manager asks, after every significant conflict: what does this dispute reveal about how we are structured, decided, or rewarded? The conflict that keeps recurring in different faces is never a people problem — it is a system problem wearing people.
+Conflict tells the manager where the system is broken. A dispute about ownership reveals ambiguous boundaries; a dispute about priorities reveals missing strategy; a dispute about credit reveals broken incentives. The manager asks, after every significant conflict: what does this dispute reveal about how we are structured, decided, or rewarded? The conflict that keeps recurring in different faces is never a people problem. It is a system problem wearing people.
 
 ## The Resolution Ladder
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SURFACE["Surface the conflict early"] --> PREPARE["Prepare both parties"]
     PREPARE --> DIRECT["Direct conversation"]
@@ -155,8 +156,8 @@ flowchart TD
 - [[02_Psychological_Safety_in_Practice]]: safety is the precondition for productive conflict
 - [[04_Team_Charter_and_Working_Agreements]]: disagreement norms live in the charter
 - [[05_Team_Health_Metrics_and_Surveys]]: conflict quality is a health signal to measure
-- [[07_Manager_Communication/00_overview|Manager Communication]]: the conversations that resolve disputes
+- [[career-path/11_Engineering_Manager/07_Manager_Communication/00_overview|Manager Communication]]: the conversations that resolve disputes
 
 ## Summary
 
-Conflict resolution is surfacing disputes early and resolving them at the right rung — direct conversation, then mediation, then manager decision — while keeping task conflict productive and personal conflict impossible. The manager prepares both parties, diagnoses structural causes before personal ones, repairs relationships after resolution, and reads every recurring conflict for what it reveals about the system. A team that argues well decides well.
+Conflict resolution is surfacing disputes early and resolving them at the right rung (direct conversation, then mediation, then manager decision), while keeping task conflict productive and personal conflict impossible. The manager prepares both parties, diagnoses structural causes before personal ones, repairs relationships after resolution, and reads every recurring conflict for what it reveals about the system. A team that argues well decides well.

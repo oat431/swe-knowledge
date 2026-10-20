@@ -16,11 +16,11 @@ tags:
 
 # Dependency and Integration Management
 
-> **Core skill:** Managing what the system relies on and serves — a mapped, tiered, versioned dependency landscape where changes never surprise the team.
+> **Core skill:** Managing what the system relies on and serves: a mapped, tiered, versioned dependency landscape where changes never surprise the team.
 
 ## Why This Matters
 
-Modern systems are assemblies of other systems: upstream platforms, downstream consumers, third-party vendors, shared libraries. The team's own code may be excellent while the system around it is fragile — because a dependency changed without notice, a contract drifted silently, or a vendor's roadmap diverged from the team's needs.
+Modern systems are assemblies of other systems: upstream platforms, downstream consumers, third-party vendors, shared libraries. The team's own code may be excellent while the system around it is fragile, because a dependency changed without notice, a contract drifted silently, or a vendor's roadmap diverged from the team's needs.
 
 Dependency problems share one shape: they arrive as surprises. The upstream team redeploys with a breaking change; the data feed changes shape overnight; the library the system depends on goes end-of-life. The tech lead's job is to convert dependency risk from surprise into inventory: mapped, tiered, and managed with the same rigor as owned code.
 
@@ -43,7 +43,7 @@ A dependency map is only alive if it is maintained. The register records, per de
 | Shared | Internal platforms, message buses | Co-evolution; contract discipline | Versioned contracts, change notification, contract tests |
 | External | Vendors, open source, cloud services | No control; roadmap divergence | TCO and health monitoring, exit awareness, pinning |
 
-The tier decides the strategy. Owned dependencies are engineering; shared dependencies are negotiation; external dependencies are risk management. Treating a vendor like a shared platform — or a shared platform like a vendor — produces the wrong moves every time.
+The tier decides the strategy. Owned dependencies are engineering; shared dependencies are negotiation; external dependencies are risk management. Treating a vendor like a shared platform (or a shared platform like a vendor) produces the wrong moves every time.
 
 ## Interface Contracts and Versioning
 
@@ -74,11 +74,11 @@ When the team must break a dependency (or absorb one):
 
 1. Map every affected consumer and its tolerance
 2. Announce early through the change channel, with dates
-3. Offer a migration path — shims, adapters, or a parallel window
+3. Offer a migration path: shims, adapters, or a parallel window
 4. Negotiate the window, not the change itself
 5. Keep the old contract alive only as long as the cost justifies it
 
-The same discipline applies inbound: when an upstream team plans a breaking change, the team's defense is the contract tests and the deprecation timeline — which only work if they were established before the crisis.
+The same discipline applies inbound: when an upstream team plans a breaking change, the team's defense is the contract tests and the deprecation timeline, which only work if they were established before the crisis.
 
 ## Third-Party and Vendor Risk
 
@@ -93,6 +93,7 @@ The same discipline applies inbound: when an upstream team plans a breaking chan
 External dependencies are the only tier where the team cannot negotiate from strength. The mitigation is awareness: a health watch per critical vendor, an exit-cost estimate maintained alongside the adoption decision.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MAP["Map all dependencies"] --> TIER["Tier by control and risk"]
     TIER --> CONTRACT["Enforce contracts and versioning"]
@@ -105,7 +106,7 @@ flowchart TD
 ## Practical Applications
 
 ```markdown
-## Dependency Register — [team]
+## Dependency Register: [team]
 
 | Dependency | Tier | Version | Contract | Risk | Next review |
 |------------|------|---------|----------|------|-------------|
@@ -143,7 +144,7 @@ Checklist:
 
 ## Success Indicators
 
-- Dependency changes never surprise the team — upstream or downstream
+- Dependency changes never surprise the team, upstream or downstream
 - Contract tests fail loudly on drift within a day
 - The register is current at every quarterly review
 - Breaking changes move through announced windows, not ambushes
@@ -158,4 +159,4 @@ Checklist:
 
 ## Summary
 
-Dependency and integration management converts a web of external commitments into a managed inventory: mapped, tiered by control, protected by versioned contracts and contract tests, and upgraded through expand-contract and canary strategies instead of atomic cutovers. Third-party dependencies get a health watch and a maintained exit cost. The goal is a system whose dependencies are assets with owners — not ambushes waiting to happen.
+Dependency and integration management converts a web of external commitments into a managed inventory: mapped, tiered by control, protected by versioned contracts and contract tests, and upgraded through expand-contract and canary strategies instead of atomic cutovers. Third-party dependencies get a health watch and a maintained exit cost. The goal is a system whose dependencies are assets with owners, not ambushes waiting to happen.

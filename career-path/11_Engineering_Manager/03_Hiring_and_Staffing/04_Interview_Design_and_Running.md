@@ -15,19 +15,19 @@ tags:
 
 # Interview Design and Running
 
-> **Core skill:** Designing structured interviews — dimensions from the role, question types matched to what they actually predict, rubrics anchored to levels — and running them so the best evidence, not the most charismatic interviewer, decides.
+> **Core skill:** Designing structured interviews (dimensions from the role, question types matched to what they actually predict, rubrics anchored to levels) and running them so the best evidence, not the most charismatic interviewer, decides.
 
 ## Why This Matters
 
-Unstructured interviews feel insightful and predict almost nothing. Two interviewers meet the same candidate, one sees brilliance and the other sees arrogance, and the debrief resolves it by seniority or volume. The fix is not harder interviews — it is structure: every candidate assessed on the same dimensions, with the same question types, against a written rubric, by interviewers trained to separate observation from interpretation.
+Unstructured interviews feel insightful and predict almost nothing. Two interviewers meet the same candidate, one sees brilliance and the other sees arrogance, and the debrief resolves it by seniority or volume. The fix is not harder interviews. It is structure: every candidate assessed on the same dimensions, with the same question types, against a written rubric, by interviewers trained to separate observation from interpretation.
 
-Structure is also the fairness mechanism. When questions are improvised, they drift toward the interviewer's comfort zone, which is rarely the job's requirements and often the interviewer's trivia. When they are designed, the loop measures the role definition from [[02_Job_Definition_and_Leveling]] — the same dimensions, stated in the JD, assessed in the loop, referenced in the debrief.
+Structure is also the fairness mechanism. When questions are improvised, they drift toward the interviewer's comfort zone, which is rarely the job's requirements and often the interviewer's trivia. When they are designed, the loop measures the role definition from [[02_Job_Definition_and_Leveling]]: the same dimensions, stated in the JD, assessed in the loop, referenced in the debrief.
 
 The manager owns this system: defining dimensions, choosing interview types, training interviewers, calibrating scoring, and designing loops that respect the candidate's time. A well-run loop is a prediction instrument; a badly run one is a coin flip that also damages the employer brand.
 
 ## Define Dimensions from the Role
 
-Every interview in the loop maps to dimensions — the capabilities the role definition says the job needs. No dimension, no interview.
+Every interview in the loop maps to dimensions: the capabilities the role definition says the job needs. No dimension, no interview.
 
 | Role Definition Says | Loop Dimension | Assessed By |
 |----------------------|----------------|-------------|
@@ -68,9 +68,9 @@ Probe pattern for depth: situation, their specific action, the outcome, and what
 
 ## Scoring Rubrics Anchored to Levels
 
-A rubric converts observations into comparable scores. Scores anchor to the ladder level of the requisition — the same performance scores differently at mid versus senior.
+A rubric converts observations into comparable scores. Scores anchor to the ladder level of the requisition. The same performance scores differently at mid versus senior.
 
-| Dimension | 1 — Below Bar | 2 — At Bar for Level | 3 — Above Bar |
+| Dimension | 1: Below Bar | 2: At Bar for Level | 3: Above Bar |
 |-----------|---------------|------------------------|----------------|
 | System design | Components listed without trade-offs | Clear structure, named trade-offs, asked for constraints | Trade-offs quantified; adapted design when requirements shifted |
 | Code fluency | Working solution but no tests, no iteration | Clean solution, tested, responded to feedback | Tested, refactored under changing requirements, explained choices |
@@ -108,6 +108,7 @@ Design rules: no interviewer appears twice across a candidate's loop; the tech l
 ## The Interview Loop System
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ROLEDEF["Role definition with dimensions"] --> LOOP["Design loop coverage"]
     LOOP --> BANK["Question bank per dimension"]
@@ -144,7 +145,7 @@ flowchart TD
 **Interview system checklist:**
 
 - [ ] Every loop dimension traces to a line in the role definition
-- [ ] Each dimension is covered exactly once — no duplicated coverage
+- [ ] Each dimension is covered exactly once: no duplicated coverage
 - [ ] Question bank favors past-behavior probes over hypotheticals
 - [ ] Rubric is anchored to the requisition's level
 - [ ] Interviewers score independently before any debrief discussion
@@ -155,13 +156,13 @@ flowchart TD
 **Interview feedback form template:**
 
 ```markdown
-## Interviewer: [Name] — Dimension: [Dimension]
+## Interviewer: [Name], Dimension: [Dimension]
 
 Observations:
 - [Fact 1: what the candidate said or did, verbatim where possible]
 - [Fact 2: second supporting fact]
 
-Score: [1 / 2 / 3] — anchored at [level]
+Score: [1 / 2 / 3], anchored at [level]
 One-line justification: [Why this score on these facts]
 
 Concerns: [Disconfirming evidence, if any]
@@ -183,7 +184,7 @@ Concerns: [Disconfirming evidence, if any]
 - Interviewer score variance on shared recordings shrinks quarter over quarter
 - Every debrief references written facts against dimensions, not impressions
 - Loop pass rates stay in a healthy band without rubric drift
-- Candidates — hired or not — report a respectful process
+- Candidates (hired or not) report a respectful process
 - Mis-hire retrospectives find the signal was collectable but uncovered
 
 ## Related Topics
@@ -191,9 +192,9 @@ Concerns: [Disconfirming evidence, if any]
 - [[02_Job_Definition_and_Leveling]]: the dimensions come straight from the role definition
 - [[05_Hiring_Decisions_and_Debriefs]]: the evidence discipline that scoring feeds
 - [[03_Sourcing_and_Pipeline]]: interview reputation is the brand lever sourcing rides on
-- [[01_People_Development/00_overview|People Development]]: calibrated judgment about capability is the same skill post-hire
+- [[career-path/11_Engineering_Manager/01_People_Development/00_overview|People Development]]: calibrated judgment about capability is the same skill post-hire
 - [[career-path/02_Senior_Software_Engineer/09_Promotion_Evidence_and_Capstone/05_Career_Ladders|Career Ladders (Senior)]]: rubric anchors are ladder language
 
 ## Summary
 
-Interview design and running is a measurement discipline: derive dimensions from the role definition, pick interview types for what each actually predicts, write past-behavior questions with level-anchored rubrics, train and calibrate interviewers, and design loops that cover every dimension once while respecting the candidate's time. Structure is what makes hiring both accurate and fair — and the manager owns the structure, not just a slot in the loop.
+Interview design and running is a measurement discipline: derive dimensions from the role definition, pick interview types for what each actually predicts, write past-behavior questions with level-anchored rubrics, train and calibrate interviewers, and design loops that cover every dimension once while respecting the candidate's time. Structure is what makes hiring both accurate and fair, and the manager owns the structure, not just a slot in the loop.

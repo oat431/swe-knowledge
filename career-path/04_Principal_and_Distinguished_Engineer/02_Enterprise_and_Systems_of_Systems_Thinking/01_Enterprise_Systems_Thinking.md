@@ -16,7 +16,7 @@ tags:
 
 # Enterprise Systems Thinking
 
-> **Core skill:** The principal engineer reads the organization as a system of interconnected capabilities — mapping business units, functions, platforms, and capabilities beyond the org chart, and using capability-based planning to guide investment and architecture decisions.
+> **Core skill:** The principal engineer reads the organization as a system of interconnected capabilities, mapping business units, functions, platforms, and capabilities beyond the org chart, and using capability-based planning to guide investment and architecture decisions.
 
 ## Why This Matters
 
@@ -62,6 +62,7 @@ Capability-based planning starts with what the organization needs to do and work
 The enterprise architecture view is the map of capabilities, platforms, and their relationships. It is the principal's primary tool for understanding systemic behavior.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     STRATEGY["Business strategy: where we compete"] --> CAPABILITIES["Business capabilities: what we must do"]
     CAPABILITIES --> PLATFORMS["Technology platforms: shared foundations"]
@@ -163,9 +164,9 @@ The political map is a diagnostic tool, not a manipulation tool. The principal u
 - [[02_Systems_of_Systems_Architecture]]
 - [[04_Organizational_Dynamics_at_Scale]]
 - [[05_Long_Term_Consequence_Analysis]]
-- [[02_Enterprise_and_Systems_of_Systems_Thinking/00_overview|Enterprise and Systems of Systems Thinking]]
+- [[career-path/04_Principal_and_Distinguished_Engineer/02_Enterprise_and_Systems_of_Systems_Thinking/00_overview|Enterprise and Systems of Systems Thinking]]
 - [[career-path/03_Staff_Engineer/05_Systems_Thinking_and_Organizational_Design/00_overview|Systems Thinking and Organizational Design (Staff)]]
 
 ## Summary
 
-Enterprise systems thinking means reading the organization as a system of capabilities, platforms, functions, and incentives — mapping dependencies beyond the org chart, using capability-based planning to guide investment, and understanding the political and incentive structures that determine whether a well-designed system actually works. The principal maintains the capability map that is the organization's shared view of what it can do and what it needs to become.
+Enterprise systems thinking means reading the organization as a system of capabilities, platforms, functions, and incentives, mapping dependencies beyond the org chart, using capability-based planning to guide investment, and understanding the political and incentive structures that determine whether a well-designed system actually works. The principal maintains the capability map that is the organization's shared view of what it can do and what it needs to become.

@@ -53,6 +53,7 @@ Record the consequence of loss rather than assigning a vague label such as sensi
 For every boundary candidate, classify it as included, referenced, or escalated. A referenced component is not ignored. Its assumptions and owner are recorded, with a follow-up path when evidence is unavailable.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     START["Identify system element"] --> IMPACT["Can it change an important security outcome"]
     IMPACT -->|"Yes"| INCLUDE["Include in model"]

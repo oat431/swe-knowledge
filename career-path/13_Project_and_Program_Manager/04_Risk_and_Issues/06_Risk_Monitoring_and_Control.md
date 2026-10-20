@@ -16,21 +16,22 @@ tags:
 
 # Risk Monitoring and Control
 
-> **Core skill:** Tracking risk status, response effectiveness, and emerging risks continuously — so the risk register is a living document that reflects the project's current risk posture, not a planning artifact.
+> **Core skill:** Tracking risk status, response effectiveness, and emerging risks continuously, so the risk register is a living document that reflects the project's current risk posture, not a planning artifact.
 
 ## Why This Matters
 
-A risk register that is updated at planning and never touched again is not a risk register — it is a risk archive. Risks change: their probability rises as triggers approach, their impact shifts as scope changes, and new risks emerge as the project progresses. Risk monitoring and control is the discipline of keeping the register alive.
+A risk register that is updated at planning and never touched again is not a risk register. It is a risk archive. Risks change: their probability rises as triggers approach, their impact shifts as scope changes, and new risks emerge as the project progresses. Risk monitoring and control is the discipline of keeping the register alive.
 
 Monitoring means watching: are risk probabilities and impacts changing? Are response actions on track? Are contingency triggers approaching? Are new risks surfacing that belong in the register?
 
 Control means acting: if a response is not working, adjust it. If a risk's probability spikes, escalate it. If a risk fires, move it to the issue log. If new risks outpace closed risks, investigate whether the project's risk identification is adequate.
 
-The output is a risk register that a stakeholder can read at any status review and trust that it reflects the project's current reality — not the project's state at initiation.
+The output is a risk register that a stakeholder can read at any status review and trust that it reflects the project's current reality, not the project's state at initiation.
 
 ## The Monitoring Cycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     REVIEW["Periodic risk review: status cycle"] --> STATUS["Check risk status: probability, impact, proximity"]
     STATUS --> RESPONSE["Check response status: on track, delayed, complete"]
@@ -77,7 +78,7 @@ Every risk in the register has exactly one status. No risk stays "active" indefi
 | Response completion lagging | Response actions are behind schedule | Escalate to response owners; reallocate resources |
 | Clustering in one category | A systemic issue in one area (e.g., all technical risks rising) | Root cause analysis in that area |
 | Risk-to-issue conversion high | Risks are firing despite responses | Response effectiveness review; improve identification |
-| No new risks | Complacency or identification failure — projects always have new risks | Stimulate identification: prompts, workshops, assumption review |
+| No new risks | Complacency or identification failure: projects always have new risks | Stimulate identification: prompts, workshops, assumption review |
 
 ## Risk Audit
 
@@ -150,9 +151,9 @@ Stakeholders receive risk information at different levels:
 - [[03_Risk_Analysis_and_Prioritization]]: reassessment updates scores and priorities
 - [[04_Risk_Response_Planning]]: response actions are tracked for completion
 - [[05_Issue_Management]]: triggered risks move to the issue log
-- [[03_Schedule_and_Cost/00_overview|Schedule and Cost]]: risk monitoring feeds schedule and cost forecasts
+- [[career-path/13_Project_and_Program_Manager/03_Schedule_and_Cost/00_overview|Schedule and Cost]]: risk monitoring feeds schedule and cost forecasts
 - [[career-path/11_Engineering_Manager/04_Delivery_Leadership_for_Managers/05_Delivery_Risk_Ownership|Delivery Risk Ownership (EM)]]: leading indicator monitoring at the team level
 
 ## Summary
 
-Risk monitoring and control keeps the risk register alive: reassessing probability, impact, and proximity every status cycle; tracking response action completion; watching for trigger events; surfacing new risks; and analyzing trends across the register. The discipline is the difference between a risk register that reflects the project's current posture and one that memorializes the planning phase. Risk audit periodically assesses the process itself — not just the risks. The test: can a stakeholder read the register at any status review and trust that it is current?
+Risk monitoring and control keeps the risk register alive: reassessing probability, impact, and proximity every status cycle; tracking response action completion; watching for trigger events; surfacing new risks; and analyzing trends across the register. The discipline is the difference between a risk register that reflects the project's current posture and one that memorializes the planning phase. Risk audit periodically assesses the process itself, not just the risks. The test: can a stakeholder read the register at any status review and trust that it is current?

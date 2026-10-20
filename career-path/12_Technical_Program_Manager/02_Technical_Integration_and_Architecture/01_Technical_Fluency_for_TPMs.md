@@ -16,11 +16,11 @@ tags:
 
 # Technical Fluency for TPMs
 
-> **Core skill:** Maintaining calibrated technical depth — enough to ask the right questions, recognize when a risk is being hand-waved, and know when to bring in the real technical authority — without pretending to be the architect.
+> **Core skill:** Maintaining calibrated technical depth (enough to ask the right questions, recognize when a risk is being hand-waved, and know when to bring in the real technical authority) without pretending to be the architect.
 
 ## Why This Matters
 
-The TPM who cannot read an architecture diagram cannot spot an integration risk. The TPM who cannot distinguish a one-week integration from a three-month one cannot challenge an optimistic dependency assumption. And the TPM who cannot follow a technical discussion cannot facilitate it — they can only take notes and hope the right people are in the room.
+The TPM who cannot read an architecture diagram cannot spot an integration risk. The TPM who cannot distinguish a one-week integration from a three-month one cannot challenge an optimistic dependency assumption. And the TPM who cannot follow a technical discussion cannot facilitate it. They can only take notes and hope the right people are in the room.
 
 But the TPM is not the architect and not the tech lead. The skill is calibration: enough technical depth to be credible, enough self-awareness to know where the depth stops, and enough judgment to delegate technical decisions to the people who are qualified to make them. The TPM who makes architecture decisions without authority loses the engineering team's trust. The TPM who cannot understand the decisions being made loses the program.
 
@@ -38,11 +38,11 @@ Calibrated fluency means knowing which technical areas the TPM must understand a
 | **Performance and scaling** | Read load test results; recognize when performance is trending in the wrong direction | Design performance tests; optimize bottlenecks; tune the system |
 | **Security** | Understand the threat model at a high level; recognize when security review is being deferred | Design security controls; conduct penetration testing; implement security measures |
 
-The TPM's technical knowledge is broad and shallow — broad enough to span every workstream's domain, shallow enough to know when to pull in depth. The TPM who goes deep in one area loses the breadth that the program role requires.
+The TPM's technical knowledge is broad and shallow: broad enough to span every workstream's domain, shallow enough to know when to pull in depth. The TPM who goes deep in one area loses the breadth that the program role requires.
 
 ## Maintaining Currency Across Domains
 
-Programs span multiple technical domains, and the TPM must maintain enough context in each to be credible. Currency fades fast — the TPM who stops learning becomes the TPM who cannot follow the conversation.
+Programs span multiple technical domains, and the TPM must maintain enough context in each to be credible. Currency fades fast. The TPM who stops learning becomes the TPM who cannot follow the conversation.
 
 | Strategy | How It Works | Time Investment |
 |----------|-------------|----------------|
@@ -60,18 +60,19 @@ The most important technical skill for a TPM is recognizing the boundary of thei
 
 | Situation | Wrong Response | Right Response |
 |-----------|---------------|----------------|
-| A technical term is used that the TPM does not know | Nod and pretend to follow; hope context clarifies it | "I do not know that term — can you give me a one-minute explanation so I can follow the rest?" |
+| A technical term is used that the TPM does not know | Nod and pretend to follow; hope context clarifies it | "I do not know that term; can you give me a one-minute explanation so I can follow the rest?" |
 | Two engineers disagree on a technical approach and the TPM cannot evaluate the trade-offs | Pick one based on who sounds more confident | "I am not the right person to evaluate these trade-offs. Let us bring in the architect and frame both options for a decision." |
-| A workstream lead claims a technical risk is "handled" with no detail | Accept the assurance and move on | "Help me understand what 'handled' means here — what specific mitigation is in place, and how would we know if it is not working?" |
+| A workstream lead claims a technical risk is "handled" with no detail | Accept the assurance and move on | "Help me understand what 'handled' means here; what specific mitigation is in place, and how would we know if it is not working?" |
 | The TPM is asked a technical question in a stakeholder meeting | Guess; provide a plausible-sounding answer | "That is a technical question I want to get right. Let me confirm with the architect and get back to you by end of day." |
 
-The TPM who admits ignorance gains credibility; the TPM who bluffs loses it. Technical fluency is not about knowing everything — it is about knowing what you know, knowing what you do not know, and knowing who does know.
+The TPM who admits ignorance gains credibility; the TPM who bluffs loses it. Technical fluency is not about knowing everything. It is about knowing what you know, knowing what you do not know, and knowing who does know.
 
 ## The TPM's Technical Reading List
 
 A TPM on a new program builds technical context through a deliberate reading sequence. The artifacts already exist; the TPM's job is to consume them in the right order.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ARCH_DOCS["Architecture documentation: system diagrams, ADRs, tech specs"] --> RFCs["Relevant RFCs and design proposals"]
     RFCs --> POSTMORTEMS["Post-mortems from related systems or previous attempts"]
@@ -115,19 +116,19 @@ These questions do not require deep technical expertise to ask. They require the
 ## Technical Context Plan: [Program Name]
 
 ### Architecture Understanding
-- [ ] Architecture walkthrough with architect — scheduled for [date]
-- [ ] Read architecture decision records — [link]
-- [ ] Map system boundaries and interfaces — [artifact link]
+- [ ] Architecture walkthrough with architect, scheduled for [date]
+- [ ] Read architecture decision records, [link]
+- [ ] Map system boundaries and interfaces, [artifact link]
 
 ### Domain Familiarity
-- [ ] Workstream 1 brown-bag — scheduled for [date]
-- [ ] Workstream 2 brown-bag — scheduled for [date]
-- [ ] Key technology primers — [topics to research]
+- [ ] Workstream 1 brown-bag, scheduled for [date]
+- [ ] Workstream 2 brown-bag, scheduled for [date]
+- [ ] Key technology primers, [topics to research]
 
 ### Ongoing Currency
-- [ ] Weekly design review attendance — [recurring meeting]
-- [ ] Monthly one-on-one with architect — [recurring]
-- [ ] Post-mortem reading list — [links]
+- [ ] Weekly design review attendance, [recurring meeting]
+- [ ] Monthly one-on-one with architect, [recurring]
+- [ ] Post-mortem reading list, [links]
 ```
 
 ## Common Pitfalls
@@ -138,7 +139,7 @@ These questions do not require deep technical expertise to ask. They require the
 | **Zero technical context** | Cannot challenge estimates, spot integration risks, or follow technical discussions; becomes an administrator, not a TPM | Invest in deliberate context-building; ask engineers to explain; build the reading list |
 | **Deep-diving on one technology** | Becomes the expert on one area and loses the broad view the program needs; other workstreams feel neglected | Maintain breadth; go deep only when the program genuinely needs a TPM who bridges a specific gap |
 | **Accepting technical assurances at face value** | "It will be fine" is not a risk mitigation; the TPM who accepts it owns the surprise when it is not fine | Ask "how do we know?" until there is evidence; escalate when assurances replace analysis |
-| **Technical vocabulary without understanding** | Uses terms incorrectly in stakeholder meetings; engineers correct the TPM publicly or — worse — stop correcting and stop trusting | Admit gaps; ask for explanations; build vocabulary deliberately, not by guessing from context |
+| **Technical vocabulary without understanding** | Uses terms incorrectly in stakeholder meetings; engineers correct the TPM publicly or (worse) stop correcting and stop trusting | Admit gaps; ask for explanations; build vocabulary deliberately, not by guessing from context |
 | **Skipping technical context for "soft" programs** | Assumes a program with less code has less technical risk; discovers integration surprises anyway | Every program has technical dimensions; assess, do not assume, the technical depth required |
 
 ## Success Indicators
@@ -146,7 +147,7 @@ These questions do not require deep technical expertise to ask. They require the
 - The architect and tech leads seek the TPM's facilitation for cross-team technical discussions
 - The TPM can explain the program's architecture to a new stakeholder without the architect in the room
 - Technical risks surface in the TPM's program review before they surface in the architect's design review
-- Engineers describe the TPM as "technically credible" — not "the person who decides" but "the person who asks the right questions"
+- Engineers describe the TPM as "technically credible", not "the person who decides" but "the person who asks the right questions"
 - The TPM knows what they do not know and says so without hesitation
 
 ## Related Topics
@@ -159,4 +160,4 @@ These questions do not require deep technical expertise to ask. They require the
 
 ## Summary
 
-Technical fluency for TPMs is calibrated depth: broad enough to span every workstream's domain, shallow enough to know when to pull in the real technical authority, and honest enough to admit the boundary. The TPM builds context through architecture walkthroughs, design review attendance, and a deliberate reading list — not to make technical decisions, but to ask the questions that surface risk, to recognize when an assurance is evasive, and to facilitate the conversation that gets the right decision from the right people.
+Technical fluency for TPMs is calibrated depth: broad enough to span every workstream's domain, shallow enough to know when to pull in the real technical authority, and honest enough to admit the boundary. The TPM builds context through architecture walkthroughs, design review attendance, and a deliberate reading list, not to make technical decisions, but to ask the questions that surface risk, to recognize when an assurance is evasive, and to facilitate the conversation that gets the right decision from the right people.

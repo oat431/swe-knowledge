@@ -41,6 +41,7 @@ This capability area covers the judgment calls that separate senior practitioner
 ## Concept Map
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TB
     subgraph Conceptual["Conceptual Layer"]
         A[Business Entities] --> B[Relationships]
@@ -125,5 +126,5 @@ Before proceeding, honestly assess your readiness:
 ## Related Links
 
 - [[DMBoK v2 - Overview]] : Foundational data modeling knowledge area
-- [[01_Data_Architecture/00_overview]] : Architecture decisions that constrain modeling
-- [[03_Data_Integration_and_Interoperability/00_overview]] : Pipelines that populate the models
+- [[career-path/09_Data_and_ML_Engineer/01_Data_Architecture/00_overview]] : Architecture decisions that constrain modeling
+- [[career-path/09_Data_and_ML_Engineer/03_Data_Integration_and_Interoperability/00_overview]] : Pipelines that populate the models

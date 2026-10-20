@@ -19,9 +19,9 @@ tags:
 
 ## Why This Matters
 
-Teams celebrate the signed offer and stop working. But between "yes" and the first commit sits the abandonment window: counter-offers land, competitors call, doubt grows in silence, and start dates slide until they dissolve. A close that only begins at the offer stage is a close that begins too late — the candidate decided how it feels to join this team during the loop, in every interaction, long before the number arrived.
+Teams celebrate the signed offer and stop working. But between "yes" and the first commit sits the abandonment window: counter-offers land, competitors call, doubt grows in silence, and start dates slide until they dissolve. A close that only begins at the offer stage is a close that begins too late. The candidate decided how it feels to join this team during the loop, in every interaction, long before the number arrived.
 
-The offer itself is a trust test. A well-constructed offer — level stated, band explained, equity made comprehensible, timeline clear — reads as a company that has its act together. A lowballed-then-negotiated offer reads as a company where you must fight for every dollar, and the candidate carries that frame into the job.
+The offer itself is a trust test. A well-constructed offer (level stated, band explained, equity made comprehensible, timeline clear) reads as a company that has its act together. A lowballed-then-negotiated offer reads as a company where you must fight for every dollar, and the candidate carries that frame into the job.
 
 And the manager's tone in the close sets the employment relationship. Managers who bid desperately produce hires who know they were bid for; managers who decline to enter bidding wars they would resent produce hires who joined for the work. The close is the first week of the relationship, not the end of the process.
 
@@ -37,16 +37,16 @@ The close starts at the first screening call. Every interviewer is selling, and 
 | Debrief-to-offer gap | Did they forget about me? | Same-day or next-day updates; silence is where doubt grows |
 | Offer stage | Should I change my life? | The offer call, manager-led, with enthusiasm and clarity |
 
-The rule: never let a candidate discover a negative post-hire that they could have learned pre-offer. The hard parts of the job — on-call load, legacy systems, a rebuild in progress — belong in the sell. Candidates who accept knowing the truth stay; candidates who discover it in week three become churn statistics.
+The rule: never let a candidate discover a negative post-hire that they could have learned pre-offer. The hard parts of the job (on-call load, legacy systems, a rebuild in progress) belong in the sell. Candidates who accept knowing the truth stay; candidates who discover it in week three become churn statistics.
 
 ## Offer Construction
 
 | Element | What to Decide Before the Call | Common Failure |
 |---------|-------------------------------|----------------|
-| Level | From the decision record — not inflated to close | Level creep that unravels in the first calibration |
+| Level | From the decision record: not inflated to close | Level creep that unravels in the first calibration |
 | Base salary | Position within band: entry, mid, or top, justified by evidence | Anchoring at band minimum as an opening gambit |
 | Equity | Grant size, vesting, and an honest explanation of value and risk | Handing over a number with no comprehension behind it |
-| Bonus and refresh | How performance converts to comp over time | Omitting the refresh policy — candidates assume the worst |
+| Bonus and refresh | How performance converts to comp over time | Omitting the refresh policy: candidates assume the worst |
 | Start date flexibility | What is genuinely needed vs preferred | Fake urgency that erodes trust on day one |
 
 Pay positioning is a fairness decision. The candidate hired at the top of the band for the same level as an incumbent at mid-band creates the equity problem that surfaces in every future compensation conversation.
@@ -56,13 +56,13 @@ Pay positioning is a fairness decision. The candidate hired at the top of the ba
 | Situation | Manager's Move |
 |-----------|----------------|
 | Candidate expects above band, evidence supports band | Explain the band structure honestly; show the growth path to the next band |
-| Candidate is genuinely exceptional, above band | Escalate for an exception with evidence — do not inflate level to fit the number |
+| Candidate is genuinely exceptional, above band | Escalate for an exception with evidence: do not inflate level to fit the number |
 | Pressure to lowball as an opening | Refuse; offers that open low read as adversarial and set the relationship tone |
-| Band is uncompetitive for the market | Feed the data to HR and finance — a hiring-side problem, not a candidate-side negotiation |
+| Band is uncompetitive for the market | Feed the data to HR and finance: a hiring-side problem, not a candidate-side negotiation |
 
 ## The Offer Call
 
-The offer call is the manager's call — not HR's paperwork follow-up.
+The offer call is the manager's call, not HR's paperwork follow-up.
 
 | Call Segment | Content | Why |
 |-------------|---------|-----|
@@ -81,9 +81,9 @@ Written offer follows within 24 hours of the call. The gap between the verbal an
 | Candidate has a competing offer at higher comp | Re-state your value honestly; use band flexibility you can live with | Entering a bidding war you will resent and remember |
 | Current employer counters | Acknowledge it neutrally; ask what changed for them | Disparaging the counter reads as insecurity |
 | Candidate asks you to match | Decide against your ceiling, not against panic | Matching "just this once" sets the relationship's negotiation frame |
-| Candidate using your offer to lever theirs | Stay warm, hold your deadline, accept the outcome | Chasing — the resentment is mutual and durable |
+| Candidate using your offer to lever theirs | Stay warm, hold your deadline, accept the outcome | Chasing: the resentment is mutual and durable |
 
-The principle: never pay a price you will resent. Resentment survives the signature and surfaces in every future interaction — comp reviews, promotion cycles, and retention conversations.
+The principle: never pay a price you will resent. Resentment survives the signature and surfaces in every future interaction: comp reviews, promotion cycles, and retention conversations.
 
 ## Rejections With Grace
 
@@ -111,6 +111,7 @@ The weeks between acceptance and day one are the highest-risk window in the proc
 ## The Closing System
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DECISION["Hire decision recorded"] --> SELLCALL["Manager offer call with enthusiasm and clarity"]
     SELLCALL --> WRITTEN["Written offer within 24 hours"]
@@ -132,19 +133,19 @@ Every decline is process data. A quarterly review of declines and abandonments a
 
 **Closing checklist:**
 
-- [ ] Every interviewer sells honestly — including the hard parts of the job
+- [ ] Every interviewer sells honestly, including the hard parts of the job
 - [ ] Level and pay position decided before the offer call, justified by evidence
 - [ ] Offer call is manager-led: enthusiasm, clarity, timeline, questions
 - [ ] Written offer arrives within 24 hours of the call
 - [ ] No bidding beyond what you can live with comfortably
 - [ ] Declines get a warm same-day response and a recorded reason
 - [ ] Pre-boarding contact scheduled: week one and week three check-ins
-- [ ] Start date confirmed twice — at acceptance and two weeks out
+- [ ] Start date confirmed twice, at acceptance and two weeks out
 
 **Offer call opening template:**
 
 ```markdown
-We are delighted — the team wants you to join as [role, level].
+We are delighted. The team wants you to join as [role, level].
 Specifically, [interviewer name] was struck by [specific evidence from the loop].
 
 The offer: [level] at [comp structure in plain terms].
@@ -153,7 +154,7 @@ The equity: [grant, vesting, and one honest sentence about risk and upside].
 In your first 90 days you would [concrete expectation].
 From me you can expect [manager commitment].
 
-We would like your decision by [date]. What questions do you have — including
+We would like your decision by [date]. What questions do you have, including
 the ones that feel awkward to ask?
 ```
 
@@ -172,7 +173,7 @@ the ones that feel awkward to ask?
 
 - Accept rates are strong without offers drifting above justified band positions
 - Candidates cite the honest picture of the job in their acceptance reasons
-- Start dates hold — abandonment is rare, and declines are declining quarter over quarter
+- Start dates hold: abandonment is rare, and declines are declining quarter over quarter
 - Decline reasons show no dominant fixable pattern
 - Pre-boarding check-ins happen on schedule for every accepted offer
 
@@ -182,8 +183,8 @@ the ones that feel awkward to ask?
 - [[03_Sourcing_and_Pipeline]]: declined candidates are next year's pipeline
 - [[07_Onboarding_Design]]: the close hands off to a designed first 90 days
 - [[04_Interview_Design_and_Running]]: the loop experience is most of the sell
-- [[01_People_Development/00_overview|People Development]]: growth-path promises made in the close must be kept after
+- [[career-path/11_Engineering_Manager/01_People_Development/00_overview|People Development]]: growth-path promises made in the close must be kept after
 
 ## Summary
 
-Closing and offers is honest selling from the first call to the start date: sell the real job including its hard parts, construct offers that read as competence — level justified, band explained, equity comprehensible — lead the offer call personally, refuse bidding wars you would resent, and work the abandonment window with scheduled warmth until day one. Every decline is recorded data, every accepted offer is actively protected. The manager's test: does the new hire say later that the job was what they were told it would be?
+Closing and offers is honest selling from the first call to the start date: sell the real job including its hard parts, construct offers that read as competence (level justified, band explained, equity comprehensible) lead the offer call personally, refuse bidding wars you would resent, and work the abandonment window with scheduled warmth until day one. Every decline is recorded data, every accepted offer is actively protected. The manager's test: does the new hire say later that the job was what they were told it would be?

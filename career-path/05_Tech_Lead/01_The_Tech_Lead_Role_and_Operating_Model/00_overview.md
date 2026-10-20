@@ -18,7 +18,7 @@ tags:
 
 ## Why This Matters
 
-The tech lead role is the most misunderstood role on an engineering team. It is not "the most senior engineer," not "a junior manager," and not "the person who approves pull requests." Organizations define it differently — a formal position, a rotating responsibility, or a set of duties folded into a senior engineer's job.
+The tech lead role is the most misunderstood role on an engineering team. It is not "the most senior engineer," not "a junior manager," and not "the person who approves pull requests." Organizations define it differently: a formal position, a rotating responsibility, or a set of duties folded into a senior engineer's job.
 
 A tech lead who has not defined their own operating model drifts into one of two failure modes: becoming a **bottleneck** (every decision routes through them) or becoming an **absent architect** (technical direction dissolves into whatever each engineer prefers). This area establishes the mandate first, so the skills in later areas have something to stand on.
 
@@ -37,6 +37,7 @@ A tech lead who has not defined their own operating model drifts into one of two
 ## The Operating Model
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MANDATE["Define the mandate"] --> BOUND["Agree boundaries with EM"]
     BOUND --> ALLOC["Allocate time: lead vs build"]
@@ -81,15 +82,15 @@ Review quarterly, or whenever the team changes shape:
 
 ## Success Indicators
 
-- The team can state what you are accountable for — in one sentence
+- The team can state what you are accountable for, in one sentence
 - Decisions happen without you more often than with you
 - The EM partnership has no orphaned responsibilities
 - Stakeholders know when to come to you and when not to
 
 ## Related Capabilities
 
-- [[02_System_Ownership_and_Production_Responsibility/00_overview|System Ownership and Production Responsibility]]: the mandate expressed as ownership of a running system
-- [[03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture]]: the mandate expressed as direction-setting
+- [[career-path/05_Tech_Lead/02_System_Ownership_and_Production_Responsibility/00_overview|System Ownership and Production Responsibility]]: the mandate expressed as ownership of a running system
+- [[career-path/05_Tech_Lead/03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture]]: the mandate expressed as direction-setting
 - [[career-path/02_Senior_Software_Engineer/07_Mentoring_and_Team_Leadership/07_Leading_Without_Authority|Leading Without Authority (Senior)]]: the senior-level foundation this role builds on
 
 ## Summary

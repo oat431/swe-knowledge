@@ -15,13 +15,13 @@ tags:
 
 # Solution Integration Design
 
-> **Core skill:** Designing how the solution's components and the surrounding enterprise systems integrate — interfaces, protocols, data flows, events, and the operational realities of a mixed estate.
+> **Core skill:** Designing how the solution's components and the surrounding enterprise systems integrate: interfaces, protocols, data flows, events, and the operational realities of a mixed estate.
 
 ## Why This Matters
 
 No solution is an island. Whatever gets built must talk to what already exists: the finance system that has run for twenty years, the vendor platform under contract, the data warehouse that feeds reporting, the identity provider everyone authenticates against. Integration design decides whether that conversation is a managed architecture or a growing tangle of point-to-point connections that eventually makes every change a crisis.
 
-Integration is where estimates most reliably fail. A solution whose internal components are simple can still drown in interface politics: the legacy system with no API, the third party that batches files nightly, the shared database that three systems write to without coordination. The architect's job is to design integrations against the real estate — the systems as they are, with their actual constraints — not against an idealized landscape where everything exposes a clean interface.
+Integration is where estimates most reliably fail. A solution whose internal components are simple can still drown in interface politics: the legacy system with no API, the third party that batches files nightly, the shared database that three systems write to without coordination. The architect's job is to design integrations against the real estate (the systems as they are, with their actual constraints), not against an idealized landscape where everything exposes a clean interface.
 
 The design choices compound. Each interface selected becomes a dependency for the solution's lifetime: its ownership, its change cadence, its failure modes. An architect who documents interfaces but never designs their contracts, ownership, and failure behavior has described the tangle rather than prevented it.
 
@@ -50,7 +50,7 @@ The practical estate usually contains all six. The architect's discipline is to 
 | **Failure behavior** | Timeouts, retries, dead letters, idempotency | Determines blast radius of failures |
 | **Monitoring** | Health, throughput, error visibility | You cannot operate what you cannot see |
 
-Contract-first design — defining the interface before implementation — lets teams proceed in parallel and makes the contract the negotiable artifact rather than the code.
+Contract-first design (defining the interface before implementation) lets teams proceed in parallel and makes the contract the negotiable artifact rather than the code.
 
 ## Integration Patterns
 
@@ -66,6 +66,7 @@ Contract-first design — defining the interface before implementation — lets 
 ## Integration in the Real Estate
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     COMPONENT["Solution components"] --> INTERFACE["Interface contracts"]
     INTERFACE["Interface contracts"] --> MODERN["Current platforms"]
@@ -130,9 +131,9 @@ Monitoring: <health signals, ownership of alerts>
 - [[01_Solution_Architecture_Process]]: integration design within the overall process
 - [[04_Solution_Feasibility_and_Constraints]]: estate constraints as feasibility evidence
 - [[07_Solution_Lifecycle_and_Evolution]]: interfaces as long-lived assets to evolve and retire
-- [[04_Enterprise_Data_Architecture/00_overview|Enterprise Data Architecture]]: data ownership and flow across the estate
-- [[05_Security_Risk_and_Compliance/00_overview|Security Risk and Compliance]]: integration as a security and compliance surface
+- [[career-path/15_Solutions_and_Enterprise_Architect/04_Enterprise_Data_Architecture/00_overview|Enterprise Data Architecture]]: data ownership and flow across the estate
+- [[career-path/15_Solutions_and_Enterprise_Architect/05_Security_Risk_and_Compliance/00_overview|Security Risk and Compliance]]: integration as a security and compliance surface
 
 ## Summary
 
-Solution integration design manages how the solution converses with everything around it. The architect selects integration styles deliberately, defines interfaces as owned contracts with explicit data mappings, failure behavior, security, and monitoring, and applies patterns such as anti-corruption layers, stranglers, sagas, and idempotent receivers against the real estate rather than an imagined one. Because every interface becomes a dependency for the solution's lifetime, the discipline is to design integrations that can evolve independently — and to keep the inevitable legacy couplings contained, documented, and on a path to retirement.
+Solution integration design manages how the solution converses with everything around it. The architect selects integration styles deliberately, defines interfaces as owned contracts with explicit data mappings, failure behavior, security, and monitoring, and applies patterns such as anti-corruption layers, stranglers, sagas, and idempotent receivers against the real estate rather than an imagined one. Because every interface becomes a dependency for the solution's lifetime, the discipline is to design integrations that can evolve independently, and to keep the inevitable legacy couplings contained, documented, and on a path to retirement.

@@ -14,13 +14,13 @@ tags:
 
 # Cross-Team Technical Leadership
 
-> **Core capability:** The staff engineer aligns multiple teams around coherent technical direction — leading architecture across boundaries, driving migrations and standards, and reviewing systems they don't own.
+> **Core capability:** The staff engineer aligns multiple teams around coherent technical direction: leading architecture across boundaries, driving migrations and standards, and reviewing systems they don't own.
 
 ## Why This Matters
 
-Every team optimizes locally. At org scale, local optimization produces duplicated systems, conflicting patterns, and integration seams nobody owns. Someone must hold the cross-team view without owning any single team's backlog — that is the staff engineer's defining contribution.
+Every team optimizes locally. At org scale, local optimization produces duplicated systems, conflicting patterns, and integration seams nobody owns. Someone must hold the cross-team view without owning any single team's backlog. That is the staff engineer's defining contribution.
 
-This work succeeds through **legitimacy, not authority**: the best proposal, the clearest writing, the most useful review, the migration that actually finishes. Teams follow staff direction when it demonstrably makes their work easier — and route around it when it doesn't.
+This work succeeds through **legitimacy, not authority**: the best proposal, the clearest writing, the most useful review, the migration that actually finishes. Teams follow staff direction when it demonstrably makes their work easier, and route around it when it doesn't.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ This work succeeds through **legitimacy, not authority**: the best proposal, the
 ## How Cross-Team Work Moves
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SIGNAL["Hear divergence signals"] --> PROPOSE["Write the proposal"]
     PROPOSE --> ALIGN["Align stakeholders one by one"]
@@ -81,19 +82,19 @@ Proposals align; enablement delivers. Skipping the enablement step is why so muc
 ## Success Indicators
 
 - Duplicate systems and conflicting patterns decline measurably
-- Migrations finish — with momentum maintained past the hard middle
+- Migrations finish, with momentum maintained past the hard middle
 - Teams cite standards and records in their own decisions
 - Review queues stay healthy; you review strategically, not exhaustively
 - Cross-team interfaces change through negotiation, not surprise
 
 ## Related Capabilities
 
-- [[01_The_Staff_Role_and_Scope/00_overview|The Staff Role and Scope]]: the mandate this executes
-- [[05_Systems_Thinking_and_Organizational_Design/00_overview|Systems Thinking and Organizational Design]]: why divergence happens and how structure shapes it
-- [[03_Technical_Strategy/00_overview|Technical Strategy]]: where cross-team direction comes from
+- [[career-path/03_Staff_Engineer/01_The_Staff_Role_and_Scope/00_overview|The Staff Role and Scope]]: the mandate this executes
+- [[career-path/03_Staff_Engineer/05_Systems_Thinking_and_Organizational_Design/00_overview|Systems Thinking and Organizational Design]]: why divergence happens and how structure shapes it
+- [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy]]: where cross-team direction comes from
 - [[career-path/05_Tech_Lead/03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture (Tech Lead)]]: the team-level counterpart
 - [[career-path/06_Software_Architect/00_overview|Software Architect]]: the role where architecture becomes the whole job
 
 ## Summary
 
-Cross-team technical leadership means making the org's systems coherent: architecture across boundaries, change that lands, migrations that finish, standards that teams adopt because they help, and reviews that improve designs at scale. The currency is legitimacy — earned through proposals that make teams' work demonstrably easier.
+Cross-team technical leadership means making the org's systems coherent: architecture across boundaries, change that lands, migrations that finish, standards that teams adopt because they help, and reviews that improve designs at scale. The currency is legitimacy: earned through proposals that make teams' work demonstrably easier.

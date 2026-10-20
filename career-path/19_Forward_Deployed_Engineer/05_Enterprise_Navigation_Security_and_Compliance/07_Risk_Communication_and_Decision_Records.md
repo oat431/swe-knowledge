@@ -16,15 +16,15 @@ tags:
 
 # Risk Communication and Decision Records
 
-> **Core skill:** Stating risk plainly and recording why decisions were made — naming the risk, its impact, and its owner in language a busy executive can act on, then writing the decision down so it survives the people who made it.
+> **Core skill:** Stating risk plainly and recording why decisions were made: naming the risk, its impact, and its owner in language a busy executive can act on, then writing the decision down so it survives the people who made it.
 
 ## Why This Matters
 
 Risk communication fails in two opposite directions, and both destroy trust. The first failure is silence: problems that are known but not spoken, risks that are assumed to be someone else's department, and the quiet hope that a concerning detail will not matter. Silence works until it does not, and by then the cost of the problem and the cost of the concealment have merged into a single trust incident from which deployments rarely recover cleanly. The second failure is doom: risk language used as a shield, problems presented without analysis, likelihoods inflated to transfer responsibility. Teams that cry wolf train their customers to stop listening, which is the same as silence with extra steps.
 
-Between the two lies the FDE's actual job: presenting risk the way an engineer presents a system constraint — factually, with dimensions, and in terms of decisions. A usable risk statement names what could go wrong, what triggers it, how likely it is within stated confidence, how bad the impact would be, what is already reducing it, and what residual exposure remains. Each of those pieces is answerable from the deployment's actual design and history, and together they give the customer's decision-maker everything needed to accept, mitigate, or reject. The FDE does not own the risk — risk in a customer environment is ultimately accepted by the customer — but the FDE owns the clarity.
+Between the two lies the FDE's actual job: presenting risk the way an engineer presents a system constraint, factually, with dimensions, and in terms of decisions. A usable risk statement names what could go wrong, what triggers it, how likely it is within stated confidence, how bad the impact would be, what is already reducing it, and what residual exposure remains. Each of those pieces is answerable from the deployment's actual design and history, and together they give the customer's decision-maker everything needed to accept, mitigate, or reject. The FDE does not own the risk (risk in a customer environment is ultimately accepted by the customer), but the FDE owns the clarity.
 
-Decisions, once made, need to survive. Enterprises rotate people constantly, and a deployment built on a handshake agreement will be re-litigated the moment the people involved change. A decision record converts "why is it like this?" from archaeology into a lookup: what was decided, what options were on the table, what the rationale was, who owns the residual risk, and what event would reopen the question. Exceptions to controls and standards are a normal part of enterprise work — the difference between a governed exception and a future finding is whether the reasoning was written down. The FDE who treats decision recording as routine turns the customer's own institutional memory into an asset for the deployment instead of a threat to it.
+Decisions, once made, need to survive. Enterprises rotate people constantly, and a deployment built on a handshake agreement will be re-litigated the moment the people involved change. A decision record converts "why is it like this?" from archaeology into a lookup: what was decided, what options were on the table, what the rationale was, who owns the residual risk, and what event would reopen the question. Exceptions to controls and standards are a normal part of enterprise work. The difference between a governed exception and a future finding is whether the reasoning was written down. The FDE who treats decision recording as routine turns the customer's own institutional memory into an asset for the deployment instead of a threat to it.
 
 ## Stating Risk Plainly
 
@@ -60,6 +60,7 @@ Decisions, once made, need to survive. Enterprises rotate people constantly, and
 | Two teams' requirements conflict | Escalation to the common owner with both cases stated | The trade-off as understood by the decider |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     NAME["Name the risk in plain words"] --> IMPACT["State impact and likelihood honestly"]
     IMPACT --> OPTIONS["Present the options and costs"]
@@ -85,7 +86,7 @@ The record is not the end of the process; it is the license to proceed and the a
 ### Decision Record Template
 
 ```markdown
-## Decision Record — <topic, date>
+## Decision Record: <topic, date>
 
 | Field | Detail |
 |-------|--------|
@@ -127,4 +128,4 @@ The record is not the end of the process; it is the license to proceed and the a
 
 ## Summary
 
-Risk communication and decision records are how the FDE keeps a deployment honest under pressure: state risks in structured, decision-ready form; express impact in the customer's terms; always bring options; get acceptance from the owner who carries the exposure; and write every decision down with its rationale, residual risk, and revisit trigger. Done well, this discipline turns the scariest conversations into routine governance — and leaves behind exactly the institutional memory that lets the deployment survive its own success.
+Risk communication and decision records are how the FDE keeps a deployment honest under pressure: state risks in structured, decision-ready form; express impact in the customer's terms; always bring options; get acceptance from the owner who carries the exposure; and write every decision down with its rationale, residual risk, and revisit trigger. Done well, this discipline turns the scariest conversations into routine governance, and leaves behind exactly the institutional memory that lets the deployment survive its own success.

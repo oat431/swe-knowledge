@@ -15,7 +15,7 @@ tags:
 
 # Cost Optimization
 
-> Reducing the cost per successful task — not just per token — through caching, batching, prompt compression, small-model cascades, and routing, while holding quality and latency inside agreed budgets.
+> Reducing the cost per successful task (not just per token) through caching, batching, prompt compression, small-model cascades, and routing, while holding quality and latency inside agreed budgets.
 
 ## Why This Is a Senior Skill
 
@@ -44,7 +44,7 @@ The failure mode is optimizing an input metric instead of the product metric: pe
 |---|---|---|---|
 | Semantic caching | Low if eviction and validation are sound | Reduces (cache is faster than model) | Repeat and near-repeat queries |
 | Small-model cascade | Depends on classifier quality | Often improves (small models are fast) | High-volume, mixed-difficulty traffic |
-| Prompt compression | Medium — can drop needed facts | Improves (less to process) | Long-context tasks with padding |
+| Prompt compression | Medium: can drop needed facts | Improves (less to process) | Long-context tasks with padding |
 | Batching (self-hosted) | None | Adds queueing delay | Bursty, latency-tolerant traffic |
 | Aggressive context truncation | High if done blindly | Improves | Where precise retrieval already exists |
 
@@ -59,15 +59,15 @@ The failure mode is optimizing an input metric instead of the product metric: pe
 
 ## In Practice
 
-**Optimize cost per successful task, not cost per token.** A cheaper model that needs two retries and longer context to succeed can cost more per completed unit of work than an expensive one that gets it right the first time. Report cost divided by completed, quality-passing tasks — [[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability]] supplies the quality side — and optimize that number.
+**Optimize cost per successful task, not cost per token.** A cheaper model that needs two retries and longer context to succeed can cost more per completed unit of work than an expensive one that gets it right the first time. Report cost divided by completed, quality-passing tasks ([[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability]] supplies the quality side) and optimize that number.
 
 **Measure before you optimize.** Instrument cost share by task class, cache hit rates, and token-length distributions first. Teams routinely build elaborate caching layers for traffic that never repeats, or cascade classifiers for tasks that are uniformly hard. The data tells you which lever has headroom before you spend engineering on it.
 
-**Use small-model cascades as the default cost architecture for mixed-difficulty traffic.** Route each request to a cheap model; escalate to a stronger one only on low confidence, failed validation, or detected difficulty. The classifier or confidence threshold is itself an engineering artifact that needs evaluation — a cascade with a sloppy gate degrades quality while pretending to save money.
+**Use small-model cascades as the default cost architecture for mixed-difficulty traffic.** Route each request to a cheap model; escalate to a stronger one only on low confidence, failed validation, or detected difficulty. The classifier or confidence threshold is itself an engineering artifact that needs evaluation; a cascade with a sloppy gate degrades quality while pretending to save money.
 
 **Treat caching as a system with correctness semantics, not a database lookup.** A cache keyed on raw text misses near-duplicates; one keyed on embeddings risks serving stale or semantically wrong answers. Define eviction, invalidation, and staleness policy per use case, and spot-check served responses for correctness. A wrong cached answer is a cost optimization that converted into a quality incident.
 
-**Run every cost lever as an experiment with an eval attached.** Before enabling a compression or cascade in production, run the candidate path through the offline eval suite and measure the quality delta alongside the projected savings. Ship only if the quality loss stays inside the agreed budget — the same discipline as a model swap in [[01_Model_Selection_and_Benchmarks]].
+**Run every cost lever as an experiment with an eval attached.** Before enabling a compression or cascade in production, run the candidate path through the offline eval suite and measure the quality delta alongside the projected savings. Ship only if the quality loss stays inside the agreed budget, the same discipline as a model swap in [[01_Model_Selection_and_Benchmarks]].
 
 **Make the cost budget visible at the product decision level, not just to the infra team.** When cost per task is a dashboard metric reviewed alongside quality and latency, product teams start choosing "deterministic lookup instead of LLM" for tasks that never needed a model ([[computing-foundation-note/Artificial_Intelligence/10_LLM_Production_Patterns]]). The cheapest inference is the one that was never made.
 

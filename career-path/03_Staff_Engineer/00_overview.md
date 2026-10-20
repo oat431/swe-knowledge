@@ -42,17 +42,18 @@ Staff engineers often work through proposals, architecture reviews, technical st
 
 | Capability | Staff-level behavior | Detailed notes |
 |---|---|---|
-| The Staff role and scope | Chooses an archetype, negotiates a written mandate, and operates through influence | [[01_The_Staff_Role_and_Scope/00_overview]] |
-| Cross-team technical leadership | Aligns multiple teams around coherent technical direction | [[02_Cross_Team_Technical_Leadership/00_overview]] |
-| Technical strategy | Connects technical investment to organizational priorities | [[03_Technical_Strategy/00_overview]] |
-| Influence | Creates alignment among people with different incentives | [[04_Influence_and_Alignment/00_overview]] |
-| Systems thinking | Understands interactions, emergence, and second-order effects | [[05_Systems_Thinking_and_Organizational_Design/00_overview]] |
-| Organizational learning | Makes good practices reusable across teams | [[07_Organizational_Learning_and_Mentoring/00_overview]] |
-| Technical risk | Manages architecture, security, reliability, and dependency risk at portfolio scale | [[06_Technical_Risk_and_Judgment/00_overview]] |
+| The Staff role and scope | Chooses an archetype, negotiates a written mandate, and operates through influence | [[career-path/03_Staff_Engineer/01_The_Staff_Role_and_Scope/00_overview]] |
+| Cross-team technical leadership | Aligns multiple teams around coherent technical direction | [[career-path/03_Staff_Engineer/02_Cross_Team_Technical_Leadership/00_overview]] |
+| Technical strategy | Connects technical investment to organizational priorities | [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview]] |
+| Influence | Creates alignment among people with different incentives | [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/00_overview]] |
+| Systems thinking | Understands interactions, emergence, and second-order effects | [[career-path/03_Staff_Engineer/05_Systems_Thinking_and_Organizational_Design/00_overview]] |
+| Organizational learning | Makes good practices reusable across teams | [[career-path/03_Staff_Engineer/07_Organizational_Learning_and_Mentoring/00_overview]] |
+| Technical risk | Manages architecture, security, reliability, and dependency risk at portfolio scale | [[career-path/03_Staff_Engineer/06_Technical_Risk_and_Judgment/00_overview]] |
 
 ## Typical Progression
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SENIOR["Senior Software Engineer"] --> SCOPE["Expand beyond one team"]
     SCOPE --> ALIGN["Align systems and decisions"]

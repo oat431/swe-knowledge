@@ -21,11 +21,11 @@ tags:
 
 ## Why This Matters
 
-An employee's financial world is automatic: salary arrives, costs are personal, and the buffer is someone else's problem. An independent carries both sides of the ledger — revenue must be earned before anything is paid, and every slow month consumes reserves. The most common failure of independent technical work is not technical: it is arithmetic discovered too late. You cannot price, negotiate, or decide without first knowing your number — the true monthly cost of operating your life and your business.
+An employee's financial world is automatic: salary arrives, costs are personal, and the buffer is someone else's problem. An independent carries both sides of the ledger: revenue must be earned before anything is paid, and every slow month consumes reserves. The most common failure of independent technical work is not technical: it is arithmetic discovered too late. You cannot price, negotiate, or decide without first knowing your number, the true monthly cost of operating your life and your business.
 
-Runway is the clock that converts that number into a decision. Liquid reserves divided by true monthly burn gives months of survival, and every significant choice — take this client, decline that one, build this product, wait for a better engagement — is a bet measured against that clock. Independents who track runway make calm decisions because the consequences are bounded; those who do not discover the clock only when it is nearly out.
+Runway is the clock that converts that number into a decision. Liquid reserves divided by true monthly burn gives months of survival, and every significant choice (take this client, decline that one, build this product, wait for a better engagement) is a bet measured against that clock. Independents who track runway make calm decisions because the consequences are bounded; those who do not discover the clock only when it is nearly out.
 
-Costs split into fixed and variable, and the split is a design choice, not an accident. Fixed costs determine how fragile slow months are; variable costs determine how much margin a busy month actually produces. Building the right cost structure — lean fixed, controlled variable, honest personal baseline — is the first act of business design.
+Costs split into fixed and variable, and the split is a design choice, not an accident. Fixed costs determine how fragile slow months are; variable costs determine how much margin a busy month actually produces. Building the right cost structure (lean fixed, controlled variable, honest personal baseline) is the first act of business design.
 
 ## Fixed and Variable Costs of a One-Person Firm
 
@@ -61,7 +61,7 @@ Figures are illustrative and currency-neutral; the layers matter more than the a
 
 ## Runway Mathematics
 
-Runway equals liquid reserves divided by true monthly burn. Count only money you can actually spend: savings and accessible business cash, with receivables counted conservatively if at all. Recompute on a fixed day every month, no exceptions — a stale runway is worse than none because it produces false confidence.
+Runway equals liquid reserves divided by true monthly burn. Count only money you can actually spend: savings and accessible business cash, with receivables counted conservatively if at all. Recompute on a fixed day every month, no exceptions. A stale runway is worse than none because it produces false confidence.
 
 | Reserves | Monthly Burn | Runway | Operating Mode |
 |----------|--------------|--------|----------------|
@@ -70,7 +70,7 @@ Runway equals liquid reserves divided by true monthly burn. Count only money you
 | 400,000 | 80,000 | 5 months | Defensive: sell now, cut discretionary spend |
 | 200,000 | 80,000 | 2.5 months | Emergency: survival focus, take work that funds |
 
-Runway also feeds pricing. The minimum sustainable rate is the monthly cost baseline divided by realistically billable hours per month — and billable hours are roughly half of working hours once sales, admin, learning, and support are counted. Pricing below that floor means the business pays you to work.
+Runway also feeds pricing. The minimum sustainable rate is the monthly cost baseline divided by realistically billable hours per month, and billable hours are roughly half of working hours once sales, admin, learning, and support are counted. Pricing below that floor means the business pays you to work.
 
 | Component | Example | Note |
 |-----------|---------|------|
@@ -80,6 +80,7 @@ Runway also feeds pricing. The minimum sustainable rate is the monthly cost base
 | Target rate | 1,500 to 2,000 per hour | Funds buffer, slow months, investment |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CASH["Liquid reserves"] --> RUNWAY["Runway in months"]
     BURN["True monthly burn"] --> RUNWAY
@@ -133,9 +134,9 @@ Cost and runway review, run monthly:
 - [[03_Financial_Planning_for_Solopreneurs]]: the monthly ritual that keeps the baseline current
 - [[05_Bootstrapping_vs_Funding]]: runway length determines which growth path is available
 - [[career-path/13_Project_and_Program_Manager/03_Schedule_and_Cost/03_Cost_Estimation_and_Budgeting|Cost Estimation and Budgeting (PjM)]]: project-level cost discipline adapted to a business of one
-- [[07_Governance_Risk_and_Continuity/00_overview|Governance, Risk and Continuity]]: taxes and legal structure are part of the cost baseline
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/07_Governance_Risk_and_Continuity/00_overview|Governance, Risk and Continuity]]: taxes and legal structure are part of the cost baseline
 
 ## Summary
 
-Cost structure and runway are the first numbers of an independent business: classify fixed and variable costs honestly, keep three baseline layers, and convert reserves into a runway clock that gates every decision. Recompute monthly, price above the minimum sustainable rate, and let the runway band — not mood — set how aggressively to invest, sell, or cut.
+Cost structure and runway are the first numbers of an independent business: classify fixed and variable costs honestly, keep three baseline layers, and convert reserves into a runway clock that gates every decision. Recompute monthly, price above the minimum sustainable rate, and let the runway band (not mood) set how aggressively to invest, sell, or cut.
 

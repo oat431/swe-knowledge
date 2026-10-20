@@ -65,6 +65,7 @@ For each stakeholder, understand:
 **Power/Interest Grid:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','fontSize':'14px','quadrant1Fill':'#1FB854','quadrant2Fill':'#1EB88E','quadrant3Fill':'#00B5FF','quadrant4Fill':'#1FB8AB','quadrant1TextFill':'#000000','quadrant2TextFill':'#000000','quadrant3TextFill':'#000000','quadrant4TextFill':'#000000','quadrantPointFill':'#FFBE00','quadrantPointTextFill':'#000000','quadrantXAxisTextFill':'#CDD3D1','quadrantYAxisTextFill':'#CDD3D1','quadrantInternalBorderStrokeFill':'#000000','quadrantExternalBorderStrokeFill':'#1FB854','quadrantTitleFill':'#CDD3D1'}}}%%
 quadrantChart
     title Stakeholder Analysis
     x-axis Low Interest --> High Interest
@@ -621,7 +622,7 @@ Evidence:
 
 - [[03_Test_Planning]]: Communicating test plans to stakeholders
 - [[05_Release_Strategy]]: Presenting release recommendations
-- [[06_Measurement/04_Quality_Reporting]]: Reporting quality metrics
+- [[career-path/10_Quality_and_Test_Engineering/06_Measurement/04_Quality_Reporting]]: Reporting quality metrics
 
 ## Existing Vault Connections
 

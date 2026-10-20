@@ -15,7 +15,7 @@ tags:
 
 # Prompt Design Principles
 
-> The craft of writing instructions a model can verify it is following — turning intent into specific, testable constraints rather than hopes.
+> The craft of writing instructions a model can verify it is following. Turning intent into specific, testable constraints rather than hopes.
 
 ## Why This Is a Senior Skill
 
@@ -42,7 +42,7 @@ Senior prompt design is contract writing. Each instruction must be checkable by 
 | Trade-Off | Lean One Way When | Lean the Other When |
 |-----------|-------------------|---------------------|
 | Specific vs flexible instructions | Behavior must be predictable and auditable | Handling genuinely open-ended requests |
-| Long vs short prompt | Complex multi-rule behavior in one template | Every token dilutes attention — cut anything not load-bearing |
+| Long vs short prompt | Complex multi-rule behavior in one template | Every token dilutes attention: cut anything not load-bearing |
 | Prescriptive rules vs few-shot examples | Rules generalize across cases | Edge cases are easier to demonstrate than to describe |
 | Declarative ("You are X") vs imperative ("Do X, then Y") | Establishing persona and boundaries | Defining procedure and output structure |
 
@@ -63,7 +63,7 @@ Senior prompt design is contract writing. Each instruction must be checkable by 
 
 **State constraints as numbered rules with explicit precedence.** Numbered rules are easier for the model to follow and easier for you to test, because "rule 4 was violated" is a debuggable statement while "it went off the rails" is not. Add a precedence line stating that the rules override any conflicting user request.
 
-**Instruct grounding explicitly — never assume the model prefers evidence over memory.** Models complete plausible text by default; fluency, not fidelity, is the baseline. "Answer only from the provided context; if the answer is not there, say so" converts ungrounded completion into an instruction violation the model can detect in itself.
+**Instruct grounding explicitly; never assume the model prefers evidence over memory.** Models complete plausible text by default; fluency, not fidelity, is the baseline. "Answer only from the provided context; if the answer is not there, say so" converts ungrounded completion into an instruction violation the model can detect in itself.
 
 **Resolve ambiguity before it reaches production.** Two engineers should not be able to disagree about what a prompt means. Review each prompt by asking: what input would make this instruction do something I did not intend? Draft the counterexample, then close the hole with a constraint or an example.
 

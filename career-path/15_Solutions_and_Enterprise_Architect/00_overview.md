@@ -45,13 +45,13 @@ Titles and boundaries vary. The common feature is that the architect must operat
 
 | Capability | Architect behavior | Detailed notes |
 |---|---|---|
-| Business analysis | Understands needs, capabilities, and desired change | [[01_Business_Analysis_and_Capability_Mapping/00_overview]] |
-| Solution architecture | Translates needs into a feasible system and delivery approach | [[02_Solution_Architecture_and_Design/00_overview]] |
-| Enterprise architecture | Connects business, information, applications, and technology | [[03_Enterprise_Architecture_Practice/00_overview]] |
-| Data architecture | Aligns data ownership, flow, governance, and value | [[04_Enterprise_Data_Architecture/00_overview]] |
-| Security and risk | Integrates security, privacy, resilience, and compliance | [[05_Security_Risk_and_Compliance/00_overview]] |
-| Roadmaps | Defines transition steps, dependencies, and investment choices | [[06_Transformation_Roadmaps_and_Portfolio/00_overview]] |
-| Communication | Presents architecture in stakeholder-relevant views | [[07_Architecture_Communication/00_overview]] |
+| Business analysis | Understands needs, capabilities, and desired change | [[career-path/15_Solutions_and_Enterprise_Architect/01_Business_Analysis_and_Capability_Mapping/00_overview]] |
+| Solution architecture | Translates needs into a feasible system and delivery approach | [[career-path/15_Solutions_and_Enterprise_Architect/02_Solution_Architecture_and_Design/00_overview]] |
+| Enterprise architecture | Connects business, information, applications, and technology | [[career-path/15_Solutions_and_Enterprise_Architect/03_Enterprise_Architecture_Practice/00_overview]] |
+| Data architecture | Aligns data ownership, flow, governance, and value | [[career-path/15_Solutions_and_Enterprise_Architect/04_Enterprise_Data_Architecture/00_overview]] |
+| Security and risk | Integrates security, privacy, resilience, and compliance | [[career-path/15_Solutions_and_Enterprise_Architect/05_Security_Risk_and_Compliance/00_overview]] |
+| Roadmaps | Defines transition steps, dependencies, and investment choices | [[career-path/15_Solutions_and_Enterprise_Architect/06_Transformation_Roadmaps_and_Portfolio/00_overview]] |
+| Communication | Presents architecture in stakeholder-relevant views | [[career-path/15_Solutions_and_Enterprise_Architect/07_Architecture_Communication/00_overview]] |
 
 ## Solutions Architect versus Enterprise Architect
 
@@ -66,6 +66,7 @@ Titles and boundaries vary. The common feature is that the architect must operat
 ## Typical Progression
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     ARCH["Software Architect"] --> SOLUTION["Shape one complex solution"]
     SOLUTION --> DOMAIN["Lead architecture across a domain"]

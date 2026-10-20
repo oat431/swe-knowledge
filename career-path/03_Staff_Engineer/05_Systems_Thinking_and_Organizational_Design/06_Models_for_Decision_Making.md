@@ -15,13 +15,13 @@ tags:
 
 # Models for Decision Making
 
-> **Core skill:** Using a toolkit of mental models — second-order thinking, inversion, opportunity cost, margin of safety, two-way doors — without being used by them.
+> **Core skill:** Using a toolkit of mental models (second-order thinking, inversion, opportunity cost, margin of safety, two-way doors) without being used by them.
 
 ## Why This Matters
 
-Staff decisions are the ones nobody else can make: ambiguous, expensive, and irreversible at team scale. The difference between a good and a bad staff decision is rarely intelligence — it is whether the decision was examined through the right lenses before commitment. Mental models are those lenses, and a small set of them covers most of the decision space.
+Staff decisions are the ones nobody else can make: ambiguous, expensive, and irreversible at team scale. The difference between a good and a bad staff decision is rarely intelligence. It is whether the decision was examined through the right lenses before commitment. Mental models are those lenses, and a small set of them covers most of the decision space.
 
-Models matter even more for the reasoning they force into the open. When you can say "this is a one-way door with a thin margin of safety, and the opportunity cost is the platform work we would skip," the decision becomes reviewable and teachable. Decisions made by intuition alone are unteachable — and the staff engineer is expected to grow the next decision-makers.
+Models matter even more for the reasoning they force into the open. When you can say "this is a one-way door with a thin margin of safety, and the opportunity cost is the platform work we would skip," the decision becomes reviewable and teachable. Decisions made by intuition alone are unteachable, and the staff engineer is expected to grow the next decision-makers.
 
 ## The Staff Toolkit
 
@@ -36,7 +36,7 @@ Models matter even more for the reasoning they force into the open. When you can
 | **Tragedy of the commons** | Who shares this resource and pays the cost? | Shared infrastructure, budgets, on-call |
 | **Pareto** | Where is 80% of the value? | Scoping, prioritization, remediation |
 
-None of these models decide anything. They are questions that make the deciding sharper — and the discipline is applying them before the decision, not citing them after.
+None of these models decide anything. They are questions that make the deciding sharper, and the discipline is applying them before the decision, not citing them after.
 
 ## Model Fit Table
 
@@ -78,7 +78,7 @@ Every model has a failure mode when applied beyond its range:
 | Pareto | Ignoring the long tail that contains the incident | When the 20% is actually the critical 20% |
 | Theory of constraints | Optimizing one step while others starve | When the constraint moves faster than you measure |
 
-The check: a model is a tool you can put down. If a model keeps producing the same answer regardless of the problem, it has become a belief — and beliefs do not get tested.
+The check: a model is a tool you can put down. If a model keeps producing the same answer regardless of the problem, it has become a belief, and beliefs do not get tested.
 
 ## Building a Decision Journal
 
@@ -94,7 +94,7 @@ The journal is the staff decision habit that compounds: every significant decisi
 [What was true, what was uncertain]
 
 ## Options Considered
-- [Option] — [why rejected]
+- [Option], [why rejected]
 
 ## Models Applied
 - [Model]: [what it revealed]
@@ -111,6 +111,7 @@ The journal is the staff decision habit that compounds: every significant decisi
 The journal converts hindsight into calibration: over a few years you learn which of your instincts were right and which models misled you. That calibration is the actual staff skill.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DECISION["Decision arrives"] --> LENS1["Second-order check"]
     LENS1 --> LENS2["Inversion check"]
@@ -154,11 +155,11 @@ flowchart TD
 ## Related Topics
 
 - [[01_Systems_Thinking_Fundamentals]]: the system view behind the models
-- [[06_Technical_Risk_and_Judgment/00_overview|Technical Risk and Judgment]]: pricing as a decision model
-- [[03_Technical_Strategy/00_overview|Technical Strategy]]: decisions at portfolio scale
-- [[04_Influence_and_Alignment/00_overview|Influence and Alignment]]: making reasoning persuasive
+- [[career-path/03_Staff_Engineer/06_Technical_Risk_and_Judgment/00_overview|Technical Risk and Judgment]]: pricing as a decision model
+- [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy]]: decisions at portfolio scale
+- [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/00_overview|Influence and Alignment]]: making reasoning persuasive
 - [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/00_overview|Architecture and Design Judgment (Senior)]]: the foundations
 
 ## Summary
 
-Mental models are the staff engineer's decision lenses: second-order thinking, inversion, opportunity cost, margin of safety, two-way doors, theory of constraints, the tragedy of the commons, and Pareto cover most of the decision space. Match models to the decision's risk profile, stack two or more lenses, watch for overuse, and record every significant decision with a prediction in a journal — because calibrated judgment is built from reviewed decisions, not from intuition.
+Mental models are the staff engineer's decision lenses: second-order thinking, inversion, opportunity cost, margin of safety, two-way doors, theory of constraints, the tragedy of the commons, and Pareto cover most of the decision space. Match models to the decision's risk profile, stack two or more lenses, watch for overuse, and record every significant decision with a prediction in a journal, because calibrated judgment is built from reviewed decisions, not from intuition.

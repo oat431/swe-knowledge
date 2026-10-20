@@ -15,13 +15,13 @@ tags:
 
 # Estimation and Forecasting for Teams
 
-> **Core skill:** Leading honest team estimation — methods chosen to fit the question, divergence treated as signal, and uncertainty communicated as ranges.
+> **Core skill:** Leading honest team estimation: methods chosen to fit the question, divergence treated as signal, and uncertainty communicated as ranges.
 
 ## Why This Matters
 
-An estimate is a statement about the future made under uncertainty. Teams that estimate badly do not just miss dates — they lose the trust that makes every later negotiation possible. The tech lead's job is to make estimation a team discipline rather than a series of guesses.
+An estimate is a statement about the future made under uncertainty. Teams that estimate badly do not just miss dates. They lose the trust that makes every later negotiation possible. The tech lead's job is to make estimation a team discipline rather than a series of guesses.
 
-The lead also owns the boundary between estimate and promise. Engineers estimate; the plan converts estimates into commitments, and the lead is the one who keeps that conversion honest. When the team can estimate reliably and communicate ranges, stakeholders stop bracing for surprises — they start planning around the team's numbers.
+The lead also owns the boundary between estimate and promise. Engineers estimate; the plan converts estimates into commitments, and the lead is the one who keeps that conversion honest. When the team can estimate reliably and communicate ranges, stakeholders stop bracing for surprises. They start planning around the team's numbers.
 
 ## Choosing an Estimation Method
 
@@ -35,7 +35,7 @@ The right method depends on the question being asked. The lead matches method to
 | **Time-based estimates** | Hours or days per item | Small, well-understood tasks and fixed-date windows | Low: misleading for anything novel |
 | **Monte Carlo simulation** | Probability distribution over completion dates | Forecasting from throughput history at scale | Medium: needs tooling and data hygiene |
 
-The lead's rule: relative estimates (points or t-shirts) for work of unknown shape, time-based for mechanical work, and reference-class or simulation-based forecasts whenever stakeholders need a date with confidence attached. Mixed methods are fine — what is not fine is using one method everywhere because it is familiar.
+The lead's rule: relative estimates (points or t-shirts) for work of unknown shape, time-based for mechanical work, and reference-class or simulation-based forecasts whenever stakeholders need a date with confidence attached. Mixed methods are fine. What is not fine is using one method everywhere because it is familiar.
 
 ## Estimation at Scale: Story to Epic to Quarter
 
@@ -51,7 +51,7 @@ Rolling up is legitimate only when each level is produced from the one below it.
 
 ## The Estimation Conversation
 
-Divergence between estimates is not noise — it is the most valuable output of the conversation. When two engineers estimate the same story at 3 and 13 points, the gap is telling the team that the scope is not understood the same way by both of them.
+Divergence between estimates is not noise. It is the most valuable output of the conversation. When two engineers estimate the same story at 3 and 13 points, the gap is telling the team that the scope is not understood the same way by both of them.
 
 | Divergence pattern | What it usually signals | Lead's move |
 |--------------------|-------------------------|-------------|
@@ -71,7 +71,7 @@ Estimation is vulnerable to anchoring: the first number spoken pulls every later
 | **Silent estimates** | Everyone writes their number before anyone speaks | Every estimation session |
 | **Planning poker** | Cards revealed simultaneously; outliers explain | Stories with expected divergence |
 | **Estimate by reference** | Compare the new item to a known, previously delivered item | When the team shares a calibration baseline |
-| **No-lead-first rule** | The lead speaks last or not at all in the first round | Always — the lead's number is the strongest anchor |
+| **No-lead-first rule** | The lead speaks last or not at all in the first round | Always: the lead's number is the strongest anchor |
 
 The lead's own estimate is the most dangerous anchor in the room because it carries authority. A lead who speaks first has already decided half the conversation. Silent first rounds and revealed-together cards are cheap mechanisms that protect the team's judgment.
 
@@ -86,7 +86,7 @@ Stakeholders want a date; the team has a probability distribution. The lead tran
 | A go or no-go decision | Probability and the top risk that moves it | 70 percent likely to land before the freeze, assuming the API contract holds |
 | A comparison between options | Relative ranges, not absolute dates | Option A lands weeks 6-8, Option B weeks 9-12 |
 
-Ranges are not waffling. A single number quietly promises certainty the team does not have; a range with its assumptions gives the stakeholder a real decision. The lead's discipline is to refuse to collapse a range into a point under pressure — and to give the stakeholder the drivers so they know what would move the number.
+Ranges are not waffling. A single number quietly promises certainty the team does not have; a range with its assumptions gives the stakeholder a real decision. The lead's discipline is to refuse to collapse a range into a point under pressure, and to give the stakeholder the drivers so they know what would move the number.
 
 ## When to Stop Estimating and Start Slicing
 
@@ -99,11 +99,12 @@ Estimation has diminishing returns. When the team cannot converge, the answer is
 | The estimate is large and smooth | Nobody has actually thought about the parts | Decompose it; people can estimate parts honestly |
 | The number barely matters | The decision does not change within a wide range | Stop estimating; the question is sequencing, not size |
 
-Estimation exists to support decisions. When more precision changes nothing, the team should stop estimating and start slicing — the slices will produce better numbers anyway.
+Estimation exists to support decisions. When more precision changes nothing, the team should stop estimating and start slicing. The slices will produce better numbers anyway.
 
 ## The Estimation Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     QUESTION["What decision does this serve"] --> METHOD["Choose the method"]
     METHOD --> SILENT["Collect silent estimates"]

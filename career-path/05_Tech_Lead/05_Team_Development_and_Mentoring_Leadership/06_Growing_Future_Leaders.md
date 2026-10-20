@@ -15,13 +15,13 @@ tags:
 
 # Growing Future Leaders
 
-> **Core skill:** Building a leadership pipeline — spotting lead potential, delegating leadership work deliberately, and making succession a team property instead of a lottery.
+> **Core skill:** Building a leadership pipeline: spotting lead potential, delegating leadership work deliberately, and making succession a team property instead of a lottery.
 
 ## Why This Matters
 
-A team with no one who can lead is a team that stops when its lead stops: the lead cannot take leave, cannot be promoted, cannot be ill. The tech lead who builds successors is not grooming a replacement — she is making the team's leadership a durable capability rather than a single point of failure.
+A team with no one who can lead is a team that stops when its lead stops: the lead cannot take leave, cannot be promoted, cannot be ill. The tech lead who builds successors is not grooming a replacement. She is making the team's leadership a durable capability rather than a single point of failure.
 
-Succession also answers the team's deepest career question: is there a seat above me, and can I grow into it? Teams that see leadership grown deliberately stay; teams that see leadership hoarded leave. The lead who grows future leaders multiplies her own options too — a team that can run without her is the precondition for her own next step.
+Succession also answers the team's deepest career question: is there a seat above me, and can I grow into it? Teams that see leadership grown deliberately stay; teams that see leadership hoarded leave. The lead who grows future leaders multiplies her own options too. A team that can run without her is the precondition for her own next step.
 
 ## Identifying Lead Potential
 
@@ -34,11 +34,11 @@ Leadership potential shows up in behavior long before it shows up in titles. The
 | **Escalation judgment** | Knows when a problem is theirs, when it needs the lead, and when it needs the EM | Can handle the lead's hardest decisions |
 | **Growth instinct** | Explains things so others get better; celebrates others' wins genuinely | Will grow the team, not just themselves |
 
-Potential is evidence, not vibes. The lead collects observations across months — who do people ask, whose designs get referenced, who noticed the problem nobody assigned? The identification is a lens for allocation, never a verdict whispered in a hallway.
+Potential is evidence, not vibes. The lead collects observations across months: who do people ask, whose designs get referenced, who noticed the problem nobody assigned? The identification is a lens for allocation, never a verdict whispered in a hallway.
 
 ## Delegated Leadership Opportunities
 
-Potential grows through leadership reps. The lead hands out leadership-shaped work the way growth work is handed out — deliberately, with support, and on a ladder of size.
+Potential grows through leadership reps. The lead hands out leadership-shaped work the way growth work is handed out: deliberately, with support, and on a ladder of size.
 
 | Opportunity | What it exercises | First rep | After several reps |
 |-------------|-------------------|-----------|--------------------|
@@ -65,7 +65,7 @@ The lead's narration is the whole value: decisions that look obvious from outsid
 
 ## Gradual Handover of Responsibilities
 
-Succession is a process, not an event. The lead hands over responsibilities one at a time, each with the rung, the net, and the review — until the handover is complete and the lead is genuinely redundant for the transferred piece.
+Succession is a process, not an event. The lead hands over responsibilities one at a time, each with the rung, the net, and the review, until the handover is complete and the lead is genuinely redundant for the transferred piece.
 
 | Handover stage | What the lead does | What the future leader does |
 |----------------|--------------------|-----------------------------|
@@ -75,11 +75,11 @@ Succession is a process, not an event. The lead hands over responsibilities one 
 | Own | Is informed, not involved | Owns fully; escalates only the exceptional |
 | Handed over | Reviews at the cadence, no longer day to day | Runs it; the team looks to them |
 
-The lead's discipline: once a responsibility is handed over, it stays handed over. Re-taking it, even kindly, teaches the team that handovers are reversible — and the next handover will be resisted.
+The lead's discipline: once a responsibility is handed over, it stays handed over. Re-taking it, even kindly, teaches the team that handovers are reversible, and the next handover will be resisted.
 
 ## The Succession Test
 
-The test for succession is brutally simple: can the team run without the lead for two weeks? Not forever, not perfectly — two weeks, with the current systems.
+The test for succession is brutally simple: can the team run without the lead for two weeks? Not forever, not perfectly: two weeks, with the current systems.
 
 | Level of readiness | What it means | What remains |
 |--------------------|---------------|--------------|
@@ -88,7 +88,7 @@ The test for succession is brutally simple: can the team run without the lead fo
 | The team runs | Decisions get made, escalation works, rituals happen | Only the exceptional waits for the lead |
 | The team improves | Someone grows the team in the lead's absence | The lead is no longer the ceiling |
 
-The test is run deliberately — a planned two-week absence, with the successors briefed and the debrief structured afterward. A lead who has never tested the team's ability to run without her does not know whether she has built successors or comfort.
+The test is run deliberately: a planned two-week absence, with the successors briefed and the debrief structured afterward. A lead who has never tested the team's ability to run without her does not know whether she has built successors or comfort.
 
 ## Growing Multiple Leaders Not One
 
@@ -101,7 +101,7 @@ A pipeline of one is a bus factor with a title. The lead grows several candidate
 | The candidate becomes the lead | The second-leader gap appears immediately |
 | Comparison and rivalry | Competition is natural; a cohort channels it into growth |
 
-A cohort also gives the lead honest feedback: if only one person shows potential, the conditions may be selecting for one — and the fix may be in the team's structure, not in the people.
+A cohort also gives the lead honest feedback: if only one person shows potential, the conditions may be selecting for one, and the fix may be in the team's structure, not in the people.
 
 ## The Succession Anti-Patterns
 
@@ -117,6 +117,7 @@ A cohort also gives the lead honest feedback: if only one person shows potential
 ## The Succession Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     IDENTIFY["Identify lead potential"] --> OPPORTUNITY["Offer leadership reps"]
     OPPORTUNITY --> SHADOW["Shadow and narrate"]
@@ -132,7 +133,7 @@ flowchart LR
 
 - [ ] Watch the three evidence clusters: systems thinking, influence, escalation judgment
 - [ ] Give every candidate leadership reps with debriefs
-- [ ] Run shadowing with narration — meetings, decisions, crises
+- [ ] Run shadowing with narration: meetings, decisions, crises
 - [ ] Hand over responsibilities one at a time, and never retake them
 - [ ] Run the two-week absence test deliberately, with a structured debrief
 - [ ] Grow a cohort of candidates, not one anointed heir
@@ -142,7 +143,7 @@ flowchart LR
 **Handover plan template:**
 
 ```markdown
-# Handover — [responsibility]
+# Handover: [responsibility]
 
 From: [lead] | To: [candidate] | Date: [date]
 
@@ -150,10 +151,10 @@ From: [lead] | To: [candidate] | Date: [date]
 [The outcome, decisions, and relationships involved]
 
 ## Stage plan
-1. Shadow: [duration] — the lead narrates
-2. Pair: [duration] — shared decisions
-3. Lead with net: [duration] — checkpoints [list]
-4. Own: [date] — the lead is informed, not involved
+1. Shadow: [duration], the lead narrates
+2. Pair: [duration], shared decisions
+3. Lead with net: [duration], checkpoints [list]
+4. Own: [date], the lead is informed, not involved
 
 ## Safety net
 [Review gates, escalation path, who catches what]
@@ -189,9 +190,9 @@ Review: [date]
 - [[02_Growing_Engineers_at_Levels]]: the senior-plus tier is where the pipeline begins
 - [[05_Delegation_and_Trust]]: handovers run on delegation rungs and safety nets
 - [[01_Work_Allocation_as_Development]]: leadership reps are growth work allocated deliberately
-- [[01_The_Tech_Lead_Role_and_Operating_Model/00_overview|The Tech Lead Role and Operating Model]]: the mandate the future leader is growing toward
+- [[career-path/05_Tech_Lead/01_The_Tech_Lead_Role_and_Operating_Model/00_overview|The Tech Lead Role and Operating Model]]: the mandate the future leader is growing toward
 - [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]: the neighboring seat the pipeline can also feed
 
 ## Summary
 
-Growing future leaders is the lead's compounding investment in the team's durability. Identify potential by evidence, offer leadership reps with debriefs, shadow with narration, hand over gradually without retaking, run the two-week test, and grow a cohort rather than an heir. A team with a pipeline is a team that can run without its lead — and a lead who built that team has already earned her own next step.
+Growing future leaders is the lead's compounding investment in the team's durability. Identify potential by evidence, offer leadership reps with debriefs, shadow with narration, hand over gradually without retaking, run the two-week test, and grow a cohort rather than an heir. A team with a pipeline is a team that can run without its lead, and a lead who built that team has already earned her own next step.

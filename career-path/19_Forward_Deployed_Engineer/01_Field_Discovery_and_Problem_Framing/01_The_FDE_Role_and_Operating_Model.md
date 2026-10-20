@@ -16,15 +16,15 @@ tags:
 
 # The FDE Role and Operating Model
 
-> **Core skill:** Understanding the FDE operating model and where it fits — an engineer embedded with one customer, accountable for a production outcome inside that customer's environment, and responsible for carrying what the field teaches back to the product.
+> **Core skill:** Understanding the FDE operating model and where it fits: an engineer embedded with one customer, accountable for a production outcome inside that customer's environment, and responsible for carrying what the field teaches back to the product.
 
 ## Why This Matters
 
-Forward deployed engineering is not consulting with a different job title, and it is not product engineering done at a distance. The operating model is specific, and it carries three simultaneous commitments: deliver a production outcome for one customer, learn for the product, and protect the commercial relationship that funds both. An engineer who understands only one of the three will optimize in the wrong direction — shipping flawless code nobody relies on, or solving every problem as a bespoke request while the product never gets smarter.
+Forward deployed engineering is not consulting with a different job title, and it is not product engineering done at a distance. The operating model is specific, and it carries three simultaneous commitments: deliver a production outcome for one customer, learn for the product, and protect the commercial relationship that funds both. An engineer who understands only one of the three will optimize in the wrong direction: shipping flawless code nobody relies on, or solving every problem as a bespoke request while the product never gets smarter.
 
-The model matters most at the points of tension between those commitments. The customer asks for something that belongs in the product; the product team asks for something the customer cannot operate; sales asks for a promise engineering cannot yet keep. The operating model is the set of defaults that resolves these collisions quickly — who owns the outcome, what "done" means, when the field speaks for the customer and when it speaks for the vendor.
+The model matters most at the points of tension between those commitments. The customer asks for something that belongs in the product; the product team asks for something the customer cannot operate; sales asks for a promise engineering cannot yet keep. The operating model is the set of defaults that resolves these collisions quickly: who owns the outcome, what "done" means, when the field speaks for the customer and when it speaks for the vendor.
 
-The role exists because enterprise technology has a deployment gap. Models, platforms, and demos increasingly work in isolation, but value only appears when systems run inside real environments — with real data, real permissions, real operations, and real users. Closing that gap is not a patch to the product; it is a discipline of its own, and the operating model is what makes that discipline repeatable rather than heroic. The difference between an FDE organization that scales and one that burns out is whether the model is explicit.
+The role exists because enterprise technology has a deployment gap. Models, platforms, and demos increasingly work in isolation, but value only appears when systems run inside real environments, with real data, real permissions, real operations, and real users. Closing that gap is not a patch to the product; it is a discipline of its own, and the operating model is what makes that discipline repeatable rather than heroic. The difference between an FDE organization that scales and one that burns out is whether the model is explicit.
 
 ## What the Operating Model Actually Contains
 
@@ -51,6 +51,7 @@ The boundaries blur in practice, which is exactly why they must be named. An FDE
 ## The Operating Model in Motion
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PROBLEM["Customer outcome at stake"] --> EMBED["Embed with the customer"]
     EMBED --> SHIP["Ship production code in their environment"]
@@ -75,7 +76,7 @@ The arrow from field patterns back to product priorities is the one most often m
 ### Deployment Charter Skeleton
 
 ```markdown
-## Deployment Charter — <customer>
+## Deployment Charter: <customer>
 
 | Element | Statement |
 |---------|-----------|
@@ -109,11 +110,11 @@ The arrow from field patterns back to product priorities is the one most often m
 ## Related Topics
 
 - [[02_Customer_Domain_Immersion]]
-- [[01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]
+- [[career-path/19_Forward_Deployed_Engineer/01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]
 - [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions and Enterprise Architect]]
 - [[career-path/16_Developer_Advocate_and_Technical_Consultant/00_overview|Developer Advocate and Technical Consultant]]
 - [[career-path/17_Independent_Consulting_and_Technical_Founder/00_overview|Independent Consulting and Technical Founder]]
 
 ## Summary
 
-The FDE operating model is a three-loop system — deliver for the customer, learn for the product, protect the commercial relationship — run simultaneously by one embedded engineer. Understanding it as an explicit model, with hard boundaries against neighboring roles, is what keeps the work accountable to outcomes instead of drifting into pure consulting or pure product engineering. Everything else in this capability area is an application of it.
+The FDE operating model is a three-loop system (deliver for the customer, learn for the product, protect the commercial relationship) run simultaneously by one embedded engineer. Understanding it as an explicit model, with hard boundaries against neighboring roles, is what keeps the work accountable to outcomes instead of drifting into pure consulting or pure product engineering. Everything else in this capability area is an application of it.

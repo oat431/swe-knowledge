@@ -17,15 +17,15 @@ tags:
 
 # Bootstrapping vs Funding
 
-> **Core skill:** Choosing between growing on revenue and raising outside capital — matching the funding engine to the actual shape of the business.
+> **Core skill:** Choosing between growing on revenue and raising outside capital: matching the funding engine to the actual shape of the business.
 
 ## Why This Matters
 
 There are two engines for growth and they trade different currencies. Bootstrapping trades speed for control: growth is limited to what revenue and margin can fund, and the founder keeps every decision and every share. Outside funding trades control for speed: growth accelerates beyond cash flow, at the cost of dilution, investor expectations, and a clock that now belongs to someone else. Neither engine is virtuous; each fits a particular business shape, and choosing wrong is expensive either way.
 
-The most common mistake is borrowing the vocabulary of venture-backed startups for a business that is not one. A consulting practice or a services business rarely benefits from raising — it has no winner-take-most dynamics and no capital moat — while a capital-intensive product in a land-grab market may lose simply by being slow. The question is never "should I raise?" in the abstract, but "does this specific business, at this specific stage, get more from speed or from control?"
+The most common mistake is borrowing the vocabulary of venture-backed startups for a business that is not one. A consulting practice or a services business rarely benefits from raising (it has no winner-take-most dynamics and no capital moat), while a capital-intensive product in a land-grab market may lose simply by being slow. The question is never "should I raise?" in the abstract, but "does this specific business, at this specific stage, get more from speed or from control?"
 
-A useful default: grow on revenue until the evidence says otherwise. Bootstrapping forces the discipline — paying customers, positive margins, paying back what you spend — that also makes a later raise credible. The hybrid path is also real and common: a cash-flowing consulting practice funds a product bet under strict rules, with the consulting counted as a funding round from the best investor you will ever have — yourself.
+A useful default: grow on revenue until the evidence says otherwise. Bootstrapping forces the discipline (paying customers, positive margins, paying back what you spend) that also makes a later raise credible. The hybrid path is also real and common: a cash-flowing consulting practice funds a product bet under strict rules, with the consulting counted as a funding round from the best investor you will ever have, yourself.
 
 ## Two Growth Engines
 
@@ -41,7 +41,7 @@ A useful default: grow on revenue until the evidence says otherwise. Bootstrappi
 
 ## When Funding Is Rational
 
-Raising deserves consideration only when a specific condition holds — and the condition should be written down before any investor conversation begins.
+Raising deserves consideration only when a specific condition holds, and the condition should be written down before any investor conversation begins.
 
 | Condition | Why Funding Fits | Evidence to Show |
 |-----------|------------------|------------------|
@@ -51,7 +51,7 @@ Raising deserves consideration only when a specific condition holds — and the 
 | Network effects | Value compounds with scale in ways cash flow cannot fund fast enough | Early cohort behavior |
 | Strong retention and payback | Spend converts to durable revenue reliably | Cohorts, churn, contribution margin |
 
-Without at least one of these, raising usually transplants investor expectations into a business that cannot satisfy them — the classic way a healthy small firm dies of a condition it caught from its own funding.
+Without at least one of these, raising usually transplants investor expectations into a business that cannot satisfy them. The classic way a healthy small firm dies of a condition it caught from its own funding.
 
 ## Funding Options Compared
 
@@ -69,7 +69,7 @@ Order the list the way a bootstrapper should: exhaust the cheap, non-dilutive so
 
 ## The Hybrid Path
 
-Consulting cash funding a product is the most common independent route — and it works only with rules.
+Consulting cash funding a product is the most common independent route, and it works only with rules.
 
 | Rule | Why | Failure It Prevents |
 |------|-----|---------------------|
@@ -80,6 +80,7 @@ Consulting cash funding a product is the most common independent route — and i
 | Consulting rates cover both lives | The firm stays solvent | Subsidizing a product with personal reserves unknowingly |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     IDEA["Business idea"] --> EVIDENCE["Evidence from paying customers"]
     EVIDENCE --> CHOICE["Choose a growth engine"]
@@ -119,17 +120,17 @@ flowchart LR
 - Evidence gates for further investment are defined before money is spent
 - Non-dilutive funding sources are exhausted before equity is discussed
 - In hybrid mode, both activities show honest, separated economics
-- Control trade-offs are understood — what was sold, to whom, and why
+- Control trade-offs are understood: what was sold, to whom, and why
 
 ## Related Topics
 
 - [[04_Build_vs_Buy_vs_Partner]]: funded or not, every capability is still a leverage decision
 - [[06_Unit_Economics_of_Small_Products]]: product payback determines whether outside money is ever needed
 - [[07_Risk_Adjusted_Decision_Making]]: funding decisions are bets judged by expected value and survival
-- [[02_Product_and_Service_Design/00_overview|Product and Service Design]]: the offer shape drives which growth engine fits
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/02_Product_and_Service_Design/00_overview|Product and Service Design]]: the offer shape drives which growth engine fits
 - [[career-path/03_Staff_Engineer/03_Technical_Strategy/02_Technology_Betting|Technology Betting (Staff)]]: deliberate betting logic applied to business growth
 
 ## Summary
 
-Two engines, two currencies: bootstrapping buys control with slowness, funding buys speed with ownership and expectations. Match the engine to the business shape — winner-take-most and capital-intensive plays justify raising; services and profitable niches almost never do. Default to growing on revenue, exhaust non-dilutive sources first, and when running the hybrid path, enforce separate books, fixed time budgets, and kill criteria so the consulting funds the product without quietly dying for it.
+Two engines, two currencies: bootstrapping buys control with slowness, funding buys speed with ownership and expectations. Match the engine to the business shape, winner-take-most and capital-intensive plays justify raising; services and profitable niches almost never do. Default to growing on revenue, exhaust non-dilutive sources first, and when running the hybrid path, enforce separate books, fixed time budgets, and kill criteria so the consulting funds the product without quietly dying for it.
 

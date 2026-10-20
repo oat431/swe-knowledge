@@ -16,15 +16,15 @@ tags:
 
 # Deployment Economics and ROI
 
-> **Core skill:** Understanding cost, value, and why deployments succeed or fail — making engineering trade-offs in the currency of the business case the deployment exists to serve.
+> **Core skill:** Understanding cost, value, and why deployments succeed or fail: making engineering trade-offs in the currency of the business case the deployment exists to serve.
 
 ## Why This Matters
 
-Every deployment is a bet: a customer spends money, attention, and organizational risk expecting a return in saved effort, reduced risk, or enabled revenue. The FDE sits at the point where that bet is won or lost, because most of the variables are engineering variables — how much custom work the deployment requires, how much support load it generates, whether it runs on clean product or on a bespoke scaffold that only its author understands. An FDE who cannot see the economics will make locally reasonable engineering choices that quietly destroy the deal: the elegant customization that becomes unmaintainable, the scope expansion that triples delivery cost, the one-off feature that earns a renewal check and costs five times that in perpetual support.
+Every deployment is a bet: a customer spends money, attention, and organizational risk expecting a return in saved effort, reduced risk, or enabled revenue. The FDE sits at the point where that bet is won or lost, because most of the variables are engineering variables: how much custom work the deployment requires, how much support load it generates, whether it runs on clean product or on a bespoke scaffold that only its author understands. An FDE who cannot see the economics will make locally reasonable engineering choices that quietly destroy the deal: the elegant customization that becomes unmaintainable, the scope expansion that triples delivery cost, the one-off feature that earns a renewal check and costs five times that in perpetual support.
 
-Commercial awareness also changes how the FDE interprets the field itself. Pilots that fail to convert, accounts that stall at rollout, renewals that arrive without evidence — these have causes, and the causes are often legible in adopter behavior and cost curves long before they appear in renewal numbers. The FDE who understands the value model can see adoption decay as an economic signal, can articulate why the twelfth custom integration should be a product investment instead of another deployment, and can tell the difference between a customer problem worth solving and a customer problem worth pricing.
+Commercial awareness also changes how the FDE interprets the field itself. Pilots that fail to convert, accounts that stall at rollout, renewals that arrive without evidence; these have causes, and the causes are often legible in adopter behavior and cost curves long before they appear in renewal numbers. The FDE who understands the value model can see adoption decay as an economic signal, can articulate why the twelfth custom integration should be a product investment instead of another deployment, and can tell the difference between a customer problem worth solving and a customer problem worth pricing.
 
-None of this requires the FDE to become a salesperson. It requires fluency: being able to explain the deployment's business case as clearly as its architecture, to state what a new requirement costs and what it displaces, and to notice when the economics of a situation have quietly crossed from healthy to dangerous. That fluency is also the FDE's own career asset — it is the vocabulary of every room where field expertise gets converted into product, leadership, or founding decisions, and the people who can speak it are the ones who get invited into those rooms.
+None of this requires the FDE to become a salesperson. It requires fluency: being able to explain the deployment's business case as clearly as its architecture, to state what a new requirement costs and what it displaces, and to notice when the economics of a situation have quietly crossed from healthy to dangerous. That fluency is also the FDE's own career asset. It is the vocabulary of every room where field expertise gets converted into product, leadership, or founding decisions, and the people who can speak it are the ones who get invited into those rooms.
 
 ## The Cost Side
 
@@ -59,6 +59,7 @@ None of this requires the FDE to become a salesperson. It requires fluency: bein
 | The business case rested on impressions | Nobody can state the return with evidence | Instrument the workflow; document outcomes as they accumulate |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     MODEL["Understand the value model"] --> COST["Size the delivery cost"]
     COST --> ADOPT["Watch adoption and usage"]
@@ -67,7 +68,7 @@ flowchart LR
     CASE --> RESCOPE["Rescope when economics break"]
 ```
 
-The rescope step is the one FDEs avoid until it is too late. When the cost of a commitment grows past its value, the professional move is to say so early with options — a reduced scope, a phased approach, a product dependency — not to absorb the delta silently until the deployment's economics turn permanently negative.
+The rescope step is the one FDEs avoid until it is too late. When the cost of a commitment grows past its value, the professional move is to say so early with options (a reduced scope, a phased approach, a product dependency), not to absorb the delta silently until the deployment's economics turn permanently negative.
 
 ## Practical Applications
 
@@ -84,7 +85,7 @@ The rescope step is the one FDEs avoid until it is too late. When the cost of a 
 ### Value Model Sketch Template
 
 ```markdown
-## Value Model — <deployment, date>
+## Value Model: <deployment, date>
 
 | Element | Detail |
 |---------|--------|
@@ -124,4 +125,4 @@ The rescope step is the one FDEs avoid until it is too late. When the cost of a 
 
 ## Summary
 
-Deployment economics and ROI are the FDE's second language: understanding what the deployment costs to deliver and sustain, what value it must produce and how that value is actually measured, and why pilots stall and renewals sag when either side drifts. Fluency here changes engineering decisions in the moment — thin custom work, designed-for-scale solutions, early optioned conversations when costs outrun value — and it changes careers, because the field engineers who speak the business case are the ones trusted with what comes next.
+Deployment economics and ROI are the FDE's second language: understanding what the deployment costs to deliver and sustain, what value it must produce and how that value is actually measured, and why pilots stall and renewals sag when either side drifts. Fluency here changes engineering decisions in the moment (thin custom work, designed-for-scale solutions, early optioned conversations when costs outrun value), and it changes careers, because the field engineers who speak the business case are the ones trusted with what comes next.

@@ -15,13 +15,13 @@ tags:
 
 # Capability Mapping
 
-> **Core skill:** Building and maintaining a business capability map — a structured model of what the organization does — and using it to expose gaps, prioritize investment, and anchor architecture decisions in business terms.
+> **Core skill:** Building and maintaining a business capability map (a structured model of what the organization does) and using it to expose gaps, prioritize investment, and anchor architecture decisions in business terms.
 
 ## Why This Matters
 
-A capability map answers the question every executive and every architect eventually needs: what does this organization do, and how well does it do it? Unlike an organization chart, which shows who reports where, or a process model, which shows how work flows, the capability map shows what the business is able to do — independent of structure, technology, or current performance. That independence is what makes it a durable planning instrument: reorganizations come and go, but the capability to price a product or onboard a customer persists.
+A capability map answers the question every executive and every architect eventually needs: what does this organization do, and how well does it do it? Unlike an organization chart, which shows who reports where, or a process model, which shows how work flows, the capability map shows what the business is able to do, independent of structure, technology, or current performance. That independence is what makes it a durable planning instrument: reorganizations come and go, but the capability to price a product or onboard a customer persists.
 
-For the architect, the map is the bridge between strategy and design. Strategy states intent — enter a market, serve a segment, reduce risk. Capabilities state what the organization must be able to do to realize that intent. Solution architecture states how specific capabilities will be enabled or improved. Without the middle layer, technology investment is justified by features rather than by the business abilities it changes, and there is no consistent basis for prioritizing one initiative over another.
+For the architect, the map is the bridge between strategy and design. Strategy states intent: enter a market, serve a segment, reduce risk. Capabilities state what the organization must be able to do to realize that intent. Solution architecture states how specific capabilities will be enabled or improved. Without the middle layer, technology investment is justified by features rather than by the business abilities it changes, and there is no consistent basis for prioritizing one initiative over another.
 
 The map is also the architect's communication device with the business. Executives challenge a system diagram; they engage with a map of capabilities they own. A well-built map turns architecture conversations into business conversations, because it speaks in the language of what the organization does.
 
@@ -62,6 +62,7 @@ Heat-mapping the assessment across the map produces the architect's most persuas
 ## From Map to Action
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MAP["Capability map"] --> ASSESS["Capability assessment"]
     ASSESS["Capability assessment"] --> GAPS["Capability gaps"]
@@ -75,13 +76,13 @@ The map earns its keep only when it is cited in decisions: initiative prioritiza
 
 ### Capability Mapping Checklist
 
-- [ ] The map covers a defined scope — enterprise, business unit, or domain — stated on the artifact
+- [ ] The map covers a defined scope (enterprise, business unit, or domain) stated on the artifact
 - [ ] Capabilities are named as stable noun-phrase abilities, not processes or systems
 - [ ] Depth stops where decisions stop; level 3 exists only where it is used
 - [ ] Each capability has a named business owner, not only a technical contact
 - [ ] Assessments use consistent dimensions across the map
 - [ ] The map is versioned and dated; changes are treated as decisions
-- [ ] At least one live decision — investment, prioritization, or architecture — cites the map
+- [ ] At least one live decision (investment, prioritization, or architecture) cites the map
 
 ### Capability Definition Template
 
@@ -89,7 +90,7 @@ The map earns its keep only when it is cited in decisions: initiative prioritiza
 Capability: <noun-phrase ability>
 Owner: <business owner>
 Description: <what the business is able to do, one or two sentences>
-Level: <1 — group | 2 — capability | 3 — sub-capability>
+Level: <1: group | 2: capability | 3: sub-capability>
 Enabling processes: <reference to process models>
 Enabling systems: <applications that support it>
 Assessment: <maturity, performance, strategic importance>
@@ -119,9 +120,9 @@ Gaps: <known weaknesses against strategic need>
 - [[01_Business_Needs_Analysis]]: needs expressed in capability terms from the start
 - [[03_Value_Stream_Analysis]]: how capabilities combine to deliver stakeholder value
 - [[07_Business_Architecture_Domain]]: capability mapping within the wider business architecture discipline
-- [[06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: capability gaps drive roadmap sequencing
-- [[03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: the map as an enterprise-level planning instrument
+- [[career-path/15_Solutions_and_Enterprise_Architect/06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: capability gaps drive roadmap sequencing
+- [[career-path/15_Solutions_and_Enterprise_Architect/03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: the map as an enterprise-level planning instrument
 
 ## Summary
 
-Capability mapping models what the organization is able to do as a stable, structure-independent asset. Built to decision-relevant depth, owned by the business, and assessed on consistent dimensions, the map connects strategy to architecture: strategy defines which capabilities matter, assessment reveals which are weak, gaps justify change options, and the roadmap sequences the response. Its value is not the artifact but the decisions it cites — capability maps fail as wallpaper and succeed as the shared language where business and technology investment choices meet.
+Capability mapping models what the organization is able to do as a stable, structure-independent asset. Built to decision-relevant depth, owned by the business, and assessed on consistent dimensions, the map connects strategy to architecture: strategy defines which capabilities matter, assessment reveals which are weak, gaps justify change options, and the roadmap sequences the response. Its value is not the artifact but the decisions it cites. Capability maps fail as wallpaper and succeed as the shared language where business and technology investment choices meet.

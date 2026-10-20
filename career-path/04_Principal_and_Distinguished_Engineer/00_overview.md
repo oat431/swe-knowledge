@@ -39,16 +39,17 @@ The distinction between principal and distinguished varies widely. In general, p
 
 | Capability | Expected scope | Detailed notes |
 |---|---|---|
-| Technology strategy | Connects architecture and investment to business direction | [[01_Technology_Strategy/00_overview]] |
-| Enterprise and systems of systems thinking | Understands organization, ecosystem, and system-of-systems effects | [[02_Enterprise_and_Systems_of_Systems_Thinking/00_overview]] |
-| Decision governance and principles | Establishes decision principles without unnecessary bureaucracy | [[03_Decision_Governance_and_Principles/00_overview]] |
-| Organizational influence | Shapes decisions across executive, technical, and product groups | [[04_Organizational_Influence/00_overview]] |
-| Future readiness and research | Uses prototypes, research, and technology roadmaps to reduce uncertainty | [[05_Future_Readiness_and_Research/00_overview]] |
-| Technical culture and leadership development | Develops other technical leaders and improves engineering norms | [[06_Technical_Culture_and_Leadership_Development/00_overview]] |
+| Technology strategy | Connects architecture and investment to business direction | [[career-path/04_Principal_and_Distinguished_Engineer/01_Technology_Strategy/00_overview]] |
+| Enterprise and systems of systems thinking | Understands organization, ecosystem, and system-of-systems effects | [[career-path/04_Principal_and_Distinguished_Engineer/02_Enterprise_and_Systems_of_Systems_Thinking/00_overview]] |
+| Decision governance and principles | Establishes decision principles without unnecessary bureaucracy | [[career-path/04_Principal_and_Distinguished_Engineer/03_Decision_Governance_and_Principles/00_overview]] |
+| Organizational influence | Shapes decisions across executive, technical, and product groups | [[career-path/04_Principal_and_Distinguished_Engineer/04_Organizational_Influence/00_overview]] |
+| Future readiness and research | Uses prototypes, research, and technology roadmaps to reduce uncertainty | [[career-path/04_Principal_and_Distinguished_Engineer/05_Future_Readiness_and_Research/00_overview]] |
+| Technical culture and leadership development | Develops other technical leaders and improves engineering norms | [[career-path/04_Principal_and_Distinguished_Engineer/06_Technical_Culture_and_Leadership_Development/00_overview]] |
 
 ## Typical Progression
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     STAFF["Staff Engineer"] --> ORG["Organization-level scope"]
     ORG --> INVEST["Shape major investments"]

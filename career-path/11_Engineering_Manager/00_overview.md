@@ -44,17 +44,18 @@ The role is not simply a senior engineer with more meetings. Its center of gravi
 
 | Capability | Manager behavior | Detailed notes |
 |---|---|---|
-| People development | Coaches, gives feedback, supports growth, and manages performance fairly | [[01_People_Development/00_overview]] |
-| Team formation and health | Builds trust, clarity, psychological safety, and effective collaboration | [[02_Team_Formation_and_Health/00_overview]] |
-| Hiring and staffing | Builds capability through hiring, onboarding, and workforce planning | [[03_Hiring_and_Staffing/00_overview]] |
-| Delivery leadership | Creates clarity around scope, priority, risk, and progress | [[04_Delivery_Leadership_for_Managers/00_overview]] |
-| Technical context | Participates meaningfully in technical decisions without becoming the sole decision maker | [[06_Technical_Context_for_Managers/00_overview]] |
-| Organizational awareness | Connects team work to strategy, value, and change | [[05_Organizational_Awareness_and_Influence/00_overview]] |
-| Communication | Cascades context and represents the team accurately | [[07_Manager_Communication/00_overview]] |
+| People development | Coaches, gives feedback, supports growth, and manages performance fairly | [[career-path/11_Engineering_Manager/01_People_Development/00_overview]] |
+| Team formation and health | Builds trust, clarity, psychological safety, and effective collaboration | [[career-path/11_Engineering_Manager/02_Team_Formation_and_Health/00_overview]] |
+| Hiring and staffing | Builds capability through hiring, onboarding, and workforce planning | [[career-path/11_Engineering_Manager/03_Hiring_and_Staffing/00_overview]] |
+| Delivery leadership | Creates clarity around scope, priority, risk, and progress | [[career-path/11_Engineering_Manager/04_Delivery_Leadership_for_Managers/00_overview]] |
+| Technical context | Participates meaningfully in technical decisions without becoming the sole decision maker | [[career-path/11_Engineering_Manager/06_Technical_Context_for_Managers/00_overview]] |
+| Organizational awareness | Connects team work to strategy, value, and change | [[career-path/11_Engineering_Manager/05_Organizational_Awareness_and_Influence/00_overview]] |
+| Communication | Cascades context and represents the team accurately | [[career-path/11_Engineering_Manager/07_Manager_Communication/00_overview]] |
 
 ## Typical Progression
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SENIOR["Senior Software Engineer"] --> LEAD["Lead people and delivery"]
     LEAD --> TEAM["Manage one team"]

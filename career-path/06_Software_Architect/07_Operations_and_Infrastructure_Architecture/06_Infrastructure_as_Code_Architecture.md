@@ -16,7 +16,7 @@ tags:
 
 # Infrastructure as Code Architecture
 
-> **Core skill:** The architect treats infrastructure code as the deployable description of the architecture — immutable, parity-preserving, modular — and holds it to the same review rigor as application code, with drift detection as an architecture erosion signal.
+> **Core skill:** The architect treats infrastructure code as the deployable description of the architecture (immutable, parity-preserving, modular) and holds it to the same review rigor as application code, with drift detection as an architecture erosion signal.
 
 ## Why This Matters
 
@@ -24,11 +24,11 @@ If the architecture description and the infrastructure code disagree, the code i
 
 Immutable infrastructure and environment parity are the properties that make IaC worth the discipline. When changes are made by replacing artifacts rather than patching live systems, the running environment becomes reproducible, rollback becomes redeployment, and configuration becomes a fact rather than a folklore. When every environment is built from the same description, staging means something: differences are deliberate and visible instead of accumulated and unknown.
 
-Drift detection closes the loop. Drift — console changes, hand-edited rules, emergency fixes that were never codified — is architecture erosion in its most literal form: reality diverging from the description while both continue to be cited. Detecting drift on a schedule, and having a disposition policy for what is found, keeps the executable architecture true; ignoring it means every later change is designed against a fiction.
+Drift detection closes the loop. Drift (console changes, hand-edited rules, emergency fixes that were never codified) is architecture erosion in its most literal form: reality diverging from the description while both continue to be cited. Detecting drift on a schedule, and having a disposition policy for what is found, keeps the executable architecture true; ignoring it means every later change is designed against a fiction.
 
 ## Infrastructure as the Executable Architecture
 
-The chain is direct: an architecture view states the intended structure; IaC modules encode it; plans show the diff before anything changes; applies converge environments to the description; and drift detection reports where reality has moved away. The architect's role in that chain is to make sure the modules express the architecture — topology, boundaries, and connections — and to review infrastructure changes for their effect on the views, not only their syntax.
+The chain is direct: an architecture view states the intended structure; IaC modules encode it; plans show the diff before anything changes; applies converge environments to the description; and drift detection reports where reality has moved away. The architect's role in that chain is to make sure the modules express the architecture (topology, boundaries, and connections) and to review infrastructure changes for their effect on the views, not only their syntax.
 
 | Architecture Artifact | Its Infrastructure Counterpart |
 |-----------------------|-------------------------------|
@@ -40,7 +40,7 @@ The chain is direct: an architecture view states the intended structure; IaC mod
 
 ## Immutable vs Mutable Infrastructure
 
-| Dimension | Mutable — patch in place | Immutable — rebuild and replace |
+| Dimension | Mutable: patch in place | Immutable: rebuild and replace |
 |-----------|--------------------------|--------------------------------|
 | Change mechanism | Updates applied to running systems | New artifact built; old one retired |
 | Drift | Accumulates quietly from manual interventions | Surfaces as a diff between code and reality |
@@ -69,6 +69,7 @@ The chain is direct: an architecture view states the intended structure; IaC mod
 ## The Infrastructure Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     VIEW["Architecture view defines intended structure"] --> CODE["IaC modules encode the structure"]
     CODE --> PLAN["Plan shows the diff before apply"]
@@ -90,7 +91,7 @@ flowchart TD
 ### Infrastructure Review Template
 
 ```markdown
-## Infrastructure Change Review — <change>
+## Infrastructure Change Review: <change>
 
 | Question | Answer |
 |----------|--------|
@@ -130,4 +131,4 @@ flowchart TD
 
 ## Summary
 
-Infrastructure as code is the architecture's executable form: versioned modules encode the deployment, network, identity, and policy structure that the views describe. Immutability makes environments reproducible and rollbacks routine; parity makes staging meaningful; modular structure bounds blast radius; and drift detection reports where reality has walked away from the description. The architect's obligation is to review infrastructure changes for their architecture impact and to keep the code and the views telling the same story — because when they diverge, the code wins.
+Infrastructure as code is the architecture's executable form: versioned modules encode the deployment, network, identity, and policy structure that the views describe. Immutability makes environments reproducible and rollbacks routine; parity makes staging meaningful; modular structure bounds blast radius; and drift detection reports where reality has walked away from the description. The architect's obligation is to review infrastructure changes for their architecture impact and to keep the code and the views telling the same story, because when they diverge, the code wins.

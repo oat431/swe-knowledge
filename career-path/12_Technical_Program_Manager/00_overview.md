@@ -45,17 +45,18 @@ The TPM is not simply a project administrator. The role creates clarity across b
 
 | Capability | TPM behavior | Detailed notes |
 |---|---|---|
-| Program structure | Defines outcomes, workstreams, milestones, and governance | [[01_Program_Structure_and_Charter/00_overview]] |
-| Technical integration | Understands system boundaries, interfaces, and integration sequence | [[02_Technical_Integration_and_Architecture/00_overview]] |
-| Dependency management | Tracks and resolves dependencies across teams and suppliers | [[03_Dependency_Management/00_overview]] |
-| Risk and issue leadership | Escalates important uncertainty and coordinates mitigation | [[04_Risk_and_Issue_Leadership/00_overview]] |
-| Stakeholder alignment | Creates shared context among technical and business groups | [[05_Stakeholder_Alignment/00_overview]] |
-| Decision facilitation | Helps the right people make timely, documented decisions | [[06_Decision_Facilitation/00_overview]] |
-| Benefits and outcomes | Keeps delivery connected to value, not only activity completion | [[07_Benefits_and_Outcome_Measurement/00_overview]] |
+| Program structure | Defines outcomes, workstreams, milestones, and governance | [[career-path/12_Technical_Program_Manager/01_Program_Structure_and_Charter/00_overview]] |
+| Technical integration | Understands system boundaries, interfaces, and integration sequence | [[career-path/12_Technical_Program_Manager/02_Technical_Integration_and_Architecture/00_overview]] |
+| Dependency management | Tracks and resolves dependencies across teams and suppliers | [[career-path/12_Technical_Program_Manager/03_Dependency_Management/00_overview]] |
+| Risk and issue leadership | Escalates important uncertainty and coordinates mitigation | [[career-path/12_Technical_Program_Manager/04_Risk_and_Issue_Leadership/00_overview]] |
+| Stakeholder alignment | Creates shared context among technical and business groups | [[career-path/12_Technical_Program_Manager/05_Stakeholder_Alignment/00_overview]] |
+| Decision facilitation | Helps the right people make timely, documented decisions | [[career-path/12_Technical_Program_Manager/06_Decision_Facilitation/00_overview]] |
+| Benefits and outcomes | Keeps delivery connected to value, not only activity completion | [[career-path/12_Technical_Program_Manager/07_Benefits_and_Outcome_Measurement/00_overview]] |
 
 ## Typical Progression
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SENIOR["Senior Software Engineer"] --> INITIATIVE["Coordinate one complex initiative"]
     INITIATIVE --> MULTI["Coordinate multiple teams"]

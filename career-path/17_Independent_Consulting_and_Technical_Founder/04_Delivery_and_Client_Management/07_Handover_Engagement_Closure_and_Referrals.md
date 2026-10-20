@@ -17,15 +17,15 @@ tags:
 
 # Handover, Engagement Closure and Referrals
 
-> **Core skill:** Closing engagements deliberately — handover documentation, knowledge transfer, closure conversations, and turning delivered trust into referrals.
+> **Core skill:** Closing engagements deliberately: handover documentation, knowledge transfer, closure conversations, and turning delivered trust into referrals.
 
 ## Why This Matters
 
-The end of an engagement is the most leveraged moment in the whole relationship and the one most independents fumble. Delivery energy collapses at the finish line: the hard technical work is done, the invoices are issued, and attention runs ahead to the next prospect — while the client is left holding a system they only half understand, running on knowledge that lives in your head. The client's final story is told in this window. A clean closure turns a good project into a reference; a sloppy one turns the same project into a cautionary tale.
+The end of an engagement is the most leveraged moment in the whole relationship and the one most independents fumble. Delivery energy collapses at the finish line: the hard technical work is done, the invoices are issued, and attention runs ahead to the next prospect, while the client is left holding a system they only half understand, running on knowledge that lives in your head. The client's final story is told in this window. A clean closure turns a good project into a reference; a sloppy one turns the same project into a cautionary tale.
 
-Closure has substance, not ceremony. Handover documentation is what makes your absence safe — runbooks, architecture notes, access inventories, known limitations, and a clear statement of how to reach you and on what terms. Knowledge transfer sessions convert two people's shared context into something the client's team owns. And the closure conversation itself — a real retrospective with the sponsor — is where business outcomes get named, which is exactly the language future testimonials and referrals require.
+Closure has substance, not ceremony. Handover documentation is what makes your absence safe: runbooks, architecture notes, access inventories, known limitations, and a clear statement of how to reach you and on what terms. Knowledge transfer sessions convert two people's shared context into something the client's team owns. And the closure conversation itself (a real retrospective with the sponsor) is where business outcomes get named, which is exactly the language future testimonials and referrals require.
 
-Referrals deserve engineering, not hope. Most independents do excellent work and then wait passively for word of mouth to happen. The disciplined version is deliberate: ask at the moment when satisfaction is highest and concrete (the week after acceptance), ask specifically (roles and contexts, not "anyone"), and make it effortless (a forwardable summary the referrer can send with one click). That final act converts delivery quality into marketing — which is the entire point of closing well.
+Referrals deserve engineering, not hope. Most independents do excellent work and then wait passively for word of mouth to happen. The disciplined version is deliberate: ask at the moment when satisfaction is highest and concrete (the week after acceptance), ask specifically (roles and contexts, not "anyone"), and make it effortless (a forwardable summary the referrer can send with one click). That final act converts delivery quality into marketing, which is the entire point of closing well.
 
 ## The Closure Sequence
 
@@ -52,7 +52,7 @@ Referrals deserve engineering, not hope. Most independents do excellent work and
 | Backlog and next steps | The road ahead defined, even if you are not walking it |
 | Support boundary | How to reach you, at what rate, and what is no longer included |
 
-An engagement that ends with credentials stuck in your vault is not closed — it is a hostage situation with polite emails. Access transfer is both a professional duty and, for the client, the difference between ownership and dependency.
+An engagement that ends with credentials stuck in your vault is not closed. It is a hostage situation with polite emails. Access transfer is both a professional duty and, for the client, the difference between ownership and dependency.
 
 ## The Retrospective Conversation
 
@@ -83,6 +83,7 @@ An engagement that ends with credentials stuck in your vault is not closed — i
 | Full exit | You are done; docs stand alone | Support boundary written in the handover |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     ACCEPT["Acceptance verified"] --> HANDOVER["Handover package delivered"]
     HANDOVER --> TRANSFER["Knowledge and access transferred"]
@@ -132,7 +133,7 @@ flowchart LR
 - [[03_Client_Communication_Rhythms]]: closure is the final cadence of an established rhythm
 - [[05_Scope_Change_and_Commercially_Aware_Delivery]]: an honest change record makes final invoicing frictionless
 - [[06_Quality_Without_a_Safety_Net]]: handover documentation quality reflects the standards held throughout
-- [[06_Sales_and_Client_Communication/00_overview|Sales and Client Communication]]: referrals are the bridge back into the sales cycle
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/06_Sales_and_Client_Communication/00_overview|Sales and Client Communication]]: referrals are the bridge back into the sales cycle
 
 ## Summary
 

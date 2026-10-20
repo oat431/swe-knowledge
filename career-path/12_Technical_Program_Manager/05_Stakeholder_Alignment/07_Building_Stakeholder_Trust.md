@@ -16,13 +16,13 @@ tags:
 
 # Building Stakeholder Trust
 
-> **Core skill:** The TPM builds stakeholder trust through consistent, boring honesty — delivering bad news early, keeping commitments visible, admitting uncertainty, and accumulating a reputation that makes the next program's stakeholder conversations start from trust instead of skepticism.
+> **Core skill:** The TPM builds stakeholder trust through consistent, boring honesty, delivering bad news early, keeping commitments visible, admitting uncertainty, and accumulating a reputation that makes the next program's stakeholder conversations start from trust instead of skepticism.
 
 ## Why This Matters
 
-Stakeholder trust is the TPM's career asset. A TPM who is trusted gets the benefit of the doubt when a date slips, when a risk materializes, when a decision is contested. A TPM who is not trusted gets second-guessed, micro-managed, and bypassed — and the overhead of being second-guessed consumes the energy that should go to program management.
+Stakeholder trust is the TPM's career asset. A TPM who is trusted gets the benefit of the doubt when a date slips, when a risk materializes, when a decision is contested. A TPM who is not trusted gets second-guessed, micro-managed, and bypassed, and the overhead of being second-guessed consumes the energy that should go to program management.
 
-Trust is not built in steering committees. It is built in the thousand small communications between them: the status update that called yellow when it could have called green, the Friday email that flagged a risk before it was a problem, the admission that "we don't know yet" instead of the invented answer. Trust is earned in the boring moments and drawn down in the crises — and a TPM who has not banked enough boring trust has nothing to draw down when the crisis comes.
+Trust is not built in steering committees. It is built in the thousand small communications between them: the status update that called yellow when it could have called green, the Friday email that flagged a risk before it was a problem, the admission that "we don't know yet" instead of the invented answer. Trust is earned in the boring moments and drawn down in the crises, and a TPM who has not banked enough boring trust has nothing to draw down when the crisis comes.
 
 ## The Trust Bank Account
 
@@ -34,7 +34,7 @@ Think of stakeholder trust as a bank account: deposits are accumulated through c
 | Admitting "I don't know yet, here is when I will" | Inventing an answer that later proves false |
 | Status that calls yellow when it is yellow | Status that calls green when it is actually yellow |
 | Forecasting a range with confidence, not a point with certainty | Promising a date with no basis, then missing it |
-| Following through on every commitment, small and large | "I'll get back to you" — and not getting back |
+| Following through on every commitment, small and large | "I'll get back to you", and not getting back |
 | Giving credit to the teams doing the work | Taking credit for outcomes the TPM coordinated but did not produce |
 
 ## The Trust-Building Behaviors
@@ -42,9 +42,9 @@ Think of stakeholder trust as a bank account: deposits are accumulated through c
 | Behavior | What It Looks Like | Why It Builds Trust |
 |----------|--------------------|---------------------|
 | Bad news early | "We have identified a risk that could delay M3. Here is what we know, what we are doing, and when we will have more information." | The stakeholder learns from you, not from the rumor mill; you are the source of truth |
-| Honest status | The program is yellow because dependency X is at risk; here is the mitigation | Stakeholders learn that yellow means yellow — so when you call green, they believe it |
+| Honest status | The program is yellow because dependency X is at risk; here is the mitigation | Stakeholders learn that yellow means yellow, so when you call green, they believe it |
 | Admitted uncertainty | "The forecast range is 8-12 weeks. We will narrow it to 2 weeks by the next checkpoint." | Certainty claims that later collapse destroy more trust than uncertainty ever does |
-| Commitment discipline | Every promise — a follow-up email, a status update, a decision brief — is delivered on time | Small commitments kept build the credibility for large commitments |
+| Commitment discipline | Every promise (a follow-up email, a status update, a decision brief) is delivered on time | Small commitments kept build the credibility for large commitments |
 | No surprises | A change that affects a stakeholder is communicated to them before it appears in group status | The stakeholder never learns about their program from a peer's question |
 | Credit to teams | "The engineering team delivered M2 two weeks early through [specific action]" | Stakeholders trust a TPM who does not claim credit they did not earn |
 
@@ -64,17 +64,17 @@ The first four weeks are disproportionately important because stakeholders form 
 
 ## Rebuilding Trust After a Breach
 
-Trust breaches happen — a missed commitment, a hidden problem, a stakeholder surprised. The TPM's response determines whether trust recovers or is permanently lost.
+Trust breaches happen: a missed commitment, a hidden problem, a stakeholder surprised. The TPM's response determines whether trust recovers or is permanently lost.
 
 | Step | Action | Example |
 |------|--------|---------|
 | 1. Own it immediately | "I should have told you about this earlier. I did not. Here is the situation now." | No defensiveness, no blaming external factors, no minimizing |
-| 2. Explain what happened | "The delay occurred because [cause]. I knew about it on [date] and did not escalate because [reason — usually over-optimism or fear]." | Honest diagnosis, including self-diagnosis |
+| 2. Explain what happened | "The delay occurred because [cause]. I knew about it on [date] and did not escalate because [reason, usually over-optimism or fear]." | Honest diagnosis, including self-diagnosis |
 | 3. State what changes | "Going forward, I will flag any milestone variance greater than one week within 24 hours, directly to you." | A specific, observable change in behavior |
 | 4. Over-communicate for a period | For the next two cycles, the TPM communicates more frequently and in more detail than normal | Temporary over-communication re-establishes the signal |
 | 5. Deliver the changed behavior | The new behavior is demonstrated consistently until the stakeholder stops expecting the old behavior | Trust is rebuilt by evidence, not promises |
 
-The trust rebuild is slow — expect two to three cycles of over-communication before the stakeholder stops checking. The TPM who tries to fast-forward through apology to restored trust is the TPM who breaches again.
+The trust rebuild is slow: expect two to three cycles of over-communication before the stakeholder stops checking. The TPM who tries to fast-forward through apology to restored trust is the TPM who breaches again.
 
 ## Trust Across Stakeholder Types
 
@@ -89,6 +89,7 @@ Different stakeholders trust differently. The TPM adapts trust-building to the s
 | Program sponsor | No surprises and shared ownership | Pre-briefing before every steering committee; sharing credit and blame |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DEPOSIT["Small deposits: honest status, bad news early, commitments kept"] --> BALANCE["Trust balance grows over time"]
     BALANCE --> CRISIS["Crisis: trust drawn down"]
@@ -103,7 +104,7 @@ flowchart TD
 ### Trust Audit Template
 
 ```markdown
-# Stakeholder Trust Audit — [Program Name] — [Date]
+# Stakeholder Trust Audit: [Program Name], [Date]
 
 ## Trust Assessment per Stakeholder
 | Stakeholder | Trust Level (High/Medium/Low) | Evidence | Actions to Build/Rebuild |
@@ -116,7 +117,7 @@ flowchart TD
 - Low: stakeholder bypasses you; double-checks your data; surprises you in meetings
 
 ## Trust-Building Plan
-- [ ] [Action 1 — specific, dated, observable]
+- [ ] [Action 1, specific, dated, observable]
 - [ ] [Action 2]
 - [ ] [Action 3]
 ```
@@ -126,7 +127,7 @@ flowchart TD
 - [ ] Bad news is delivered by the TPM before anyone else knows
 - [ ] Status reports call the honest color: yellow when yellow, red when red
 - [ ] Uncertainty is admitted with a timeline for resolution
-- [ ] Every commitment — small and large — is tracked and delivered
+- [ ] Every commitment (small and large) is tracked and delivered
 - [ ] Stakeholders are never surprised about their own program in a group forum
 - [ ] Credit is given to teams; blame is owned by the TPM
 - [ ] The program sponsor is pre-briefed before every steering committee
@@ -140,12 +141,12 @@ flowchart TD
 | **Certainty theater** | Inventing certainty to look competent; the certainty collapses and takes trust with it | Admit uncertainty with a timeline for resolution |
 | **Credit hoarding** | "I delivered X" when the teams did the work; stakeholders see the inflation | Give credit to teams; the TPM's value is coordination, not implementation |
 | **Surprising the sponsor** | Sponsor learns about a problem in the steering committee; trust destroyed in one event | Pre-brief the sponsor before every steering committee; never let them be surprised |
-| **Apology without change** | "I'm sorry, it won't happen again" — and then it happens again | Own the breach, name the behavior change, demonstrate it consistently |
+| **Apology without change** | "I'm sorry, it won't happen again", and then it happens again | Own the breach, name the behavior change, demonstrate it consistently |
 
 ## Success Indicators
 
 - Stakeholders cite the TPM's status as their source of program truth
-- Bad news reaches stakeholders from the TPM first — consistently, over months
+- Bad news reaches stakeholders from the TPM first, consistently, over months
 - Stakeholders give the TPM the benefit of the doubt when a date is at risk
 - The program sponsor pre-briefs with the TPM as a partner, not as a formality
 - Trust transfers: stakeholders from this program trust the TPM on the next program
@@ -155,9 +156,9 @@ flowchart TD
 - [[03_Executive_Communication_for_TPMs]]: trust is built in the executive channel through honest status
 - [[04_Managing_Stakeholder_Expectations]]: keeping expectations honest builds trust over time
 - [[01_Stakeholder_Mapping]]: the map identifies where trust is low and needs investment
-- [[07_Benefits_and_Outcome_Measurement/07_Program_ROI_and_Value_Communication|Program ROI and Value Communication]]: honest value communication extends trust beyond the program
+- [[career-path/12_Technical_Program_Manager/07_Benefits_and_Outcome_Measurement/07_Program_ROI_and_Value_Communication|Program ROI and Value Communication]]: honest value communication extends trust beyond the program
 - [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/04_Building_Trust_Across_Teams|Building Trust Across Teams (Staff)]]: the staff engineer's trust-building parallel
 
 ## Summary
 
-Building stakeholder trust is the TPM's career compounding: small deposits of honest status, early bad news, admitted uncertainty, and commitment discipline accumulate into a balance that survives crises. Trust is earned in boring moments and drawn down in crises; the TPM who banks enough boring trust has something to draw down when the crisis comes — and the TPM who does not is second-guessed, bypassed, and replaced. A trust breach is owned immediately with a specific behavior change; trust is rebuilt by evidence over time, not by apology.
+Building stakeholder trust is the TPM's career compounding: small deposits of honest status, early bad news, admitted uncertainty, and commitment discipline accumulate into a balance that survives crises. Trust is earned in boring moments and drawn down in crises; the TPM who banks enough boring trust has something to draw down when the crisis comes, and the TPM who does not is second-guessed, bypassed, and replaced. A trust breach is owned immediately with a specific behavior change; trust is rebuilt by evidence over time, not by apology.

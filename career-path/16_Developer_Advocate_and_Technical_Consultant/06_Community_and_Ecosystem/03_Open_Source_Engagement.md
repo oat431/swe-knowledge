@@ -16,13 +16,13 @@ tags:
 
 # Open Source Engagement
 
-> **Core skill:** Participating in open source as a good citizen — contributing upstream, respecting maintainers, and turning project relationships into ecosystem strength without extracting from them.
+> **Core skill:** Participating in open source as a good citizen: contributing upstream, respecting maintainers, and turning project relationships into ecosystem strength without extracting from them.
 
 ## Why This Matters
 
-Every technology company's stack rests on open source it does not control. The projects, libraries, and standards that developers depend on are maintained by people with their own priorities, constraints, and finite patience — and how a company engages with them becomes part of its reputation with every developer watching. Engagement done well earns influence, goodwill, and early knowledge; done badly, it burns bridges that take years to rebuild.
+Every technology company's stack rests on open source it does not control. The projects, libraries, and standards that developers depend on are maintained by people with their own priorities, constraints, and finite patience, and how a company engages with them becomes part of its reputation with every developer watching. Engagement done well earns influence, goodwill, and early knowledge; done badly, it burns bridges that take years to rebuild.
 
-The advocate stands at the seam between the company's needs and the project's health. On one side: features the product wants, bugs that affect customers, performance the roadmap demands. On the other: maintainer bandwidth, project direction, and the norms of a community that predates any single company's interest. The skilled advocate translates between the two without bullying the smaller side — and actively resists the pattern where a large company's "contribution" is really a demand with a patch attached.
+The advocate stands at the seam between the company's needs and the project's health. On one side: features the product wants, bugs that affect customers, performance the roadmap demands. On the other: maintainer bandwidth, project direction, and the norms of a community that predates any single company's interest. The skilled advocate translates between the two without bullying the smaller side, and actively resists the pattern where a large company's "contribution" is really a demand with a patch attached.
 
 The strategic layer matters too. Good OSS engagement is not charity; it is infrastructure investment with compounding returns: fixes that stop recurring, influence on direction, a pipeline of contributors, and a credible public record that the company shows up rather than just consumes.
 
@@ -30,7 +30,7 @@ The strategic layer matters too. Good OSS engagement is not charity; it is infra
 
 | Mode | Example | Commitment Level | When It Fits |
 |------|---------|------------------|--------------|
-| Consumption with reporting | Filing high-quality issues and repro cases | Low, continuous | Always — the baseline of good citizenship |
+| Consumption with reporting | Filing high-quality issues and repro cases | Low, continuous | Always: the baseline of good citizenship |
 | Upstream fixes | Patches for bugs the company hit | Medium, as discovered | Default for any fix that can be contributed |
 | Feature contribution | Implementing a needed capability in the open | High, negotiated | Roadmap alignment exists upstream |
 | Sponsorship and funding | Money, CI, or infrastructure support | Medium, financial | The project is critical and underfunded |
@@ -73,6 +73,7 @@ The strategic layer matters too. Good OSS engagement is not charity; it is infra
 ## The Contribution Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     OBSERVE["Observe - learn the project and its norms"] --> PROPOSE["Propose - discuss before building"]
     PROPOSE --> CONTRIBUTE["Contribute - small, styled, tested changes"]
@@ -90,12 +91,12 @@ flowchart LR
 - [ ] Maintainers are credited in public work mentioning the project
 - [ ] Security issues follow coordinated disclosure paths
 - [ ] Company announcements never preempt project governance
-- [ ] Critical dependencies have a plan beyond consumption — funding, staff, or both
+- [ ] Critical dependencies have a plan beyond consumption: funding, staff, or both
 
 ### Contribution Plan Template
 
 ```markdown
-## OSS Contribution Plan — [project]
+## OSS Contribution Plan: [project]
 - Why it matters: [dependency or ecosystem rationale]
 - Mode: [fixes / features / funding / maintainership]
 - Norms learned: [contributing guide notes, communication style]
@@ -129,9 +130,9 @@ flowchart LR
 - [[01_Community_Building_Fundamentals]]: OSS projects are communities with their own norms
 - [[02_Developer_Programs_and_Relationships]]: projects and partners overlap in the ecosystem web
 - [[05_Community_Programs_and_Content]]: upstream work feeds content and credibility
-- [[07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]]: upstream signals shape product strategy
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]]: upstream signals shape product strategy
 - [[career-path/07_SRE_and_Platform_Engineer/06_Developer_Platform/00_overview|Developer Platform (SRE)]]: platform teams live and die by upstream dependencies
 
 ## Summary
 
-Open source engagement is citizenship with strategic upside: listen to a project's norms, propose before building, contribute small and styled patches, respect and fund the maintainers who carry the burden, and let influence be earned through sustained participation. The advocate who treats projects as partners rather than free suppliers turns dependency into a two-way relationship — and the ecosystem remembers which companies showed up.
+Open source engagement is citizenship with strategic upside: listen to a project's norms, propose before building, contribute small and styled patches, respect and fund the maintainers who carry the burden, and let influence be earned through sustained participation. The advocate who treats projects as partners rather than free suppliers turns dependency into a two-way relationship, and the ecosystem remembers which companies showed up.

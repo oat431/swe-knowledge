@@ -15,13 +15,13 @@ tags:
 
 # Onboarding Design
 
-> **Core skill:** Designing a deliberate 30/60/90 arc — environment, first win, first ownership, full stride — with a named buddy and a feedback loop that runs both ways.
+> **Core skill:** Designing a deliberate 30/60/90 arc (environment, first win, first ownership, full stride), with a named buddy and a feedback loop that runs both ways.
 
 ## Why This Matters
 
 The first ninety days decide more about a hire's trajectory than the ninety interviews before them. A new engineer who spends week one fighting laptop provisioning, week three still unsure who to ask about deploys, and week eight without anything shipped starts constructing a story: maybe this was a mistake. That story hardens fast, and "regretted attrition inside six months" is almost always an onboarding failure wearing a hiring costume.
 
-Onboarding is also the manager's cheapest quality-improvement window. New eyes see what veterans have stopped noticing — the undocumented tribal step, the broken dashboard, the meeting that serves no one. A designed onboarding captures those observations deliberately; an accidental one lets them evaporate by week three as the newcomer normalizes.
+Onboarding is also the manager's cheapest quality-improvement window. New eyes see what veterans have stopped noticing. The undocumented tribal step, the broken dashboard, the meeting that serves no one. A designed onboarding captures those observations deliberately; an accidental one lets them evaporate by week three as the newcomer normalizes.
 
 And onboarding compounds. Every gap in the checklist is paid for by every future hire, plus every onboarding teammate who answers the same question for the tenth time. Designing it once, as a system, converts onboarding from a manager tax into an asset.
 
@@ -59,7 +59,7 @@ The first tiny win matters disproportionately: it proves the pipeline works, pro
 
 ## Day 90: Full Stride and the Two-Way Feedback Loop
 
-By day 90 the hire is operating at their hired level, and two conversations happen. First, the manager gives a real performance signal — early, specific, corrective while it is still cheap. Second, the manager asks for the onboarding retrospective: what was confusing, what was missing, what should change for the next hire. Both directions, same meeting is fine; both directions, always.
+By day 90 the hire is operating at their hired level, and two conversations happen. First, the manager gives a real performance signal: early, specific, corrective while it is still cheap. Second, the manager asks for the onboarding retrospective: what was confusing, what was missing, what should change for the next hire. Both directions, same meeting is fine; both directions, always.
 
 ## The Buddy System
 
@@ -70,7 +70,7 @@ By day 90 the hire is operating at their hired level, and two conversations happ
 | First-PR walkthrough | The local workflow rituals the docs never capture |
 | Weekly sync | Scheduled, 30 minutes, for four weeks minimum |
 
-The buddy is not the mentor and not the manager — the buddy is the safe channel. Rotate the role; buddy duty is onboarding experience that compounds into team capability.
+The buddy is not the mentor and not the manager. The buddy is the safe channel. Rotate the role; buddy duty is onboarding experience that compounds into team capability.
 
 ## The Manager's Onboarding Role
 
@@ -109,6 +109,7 @@ Institute the rule: every onboarding friction becomes a written artifact within 
 ## The Onboarding System
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ACCEPT["Offer accepted"] --> PREP["Prepare before day one"]
     PREP --> WEEK1["Week one environment people first win"]
@@ -137,19 +138,19 @@ flowchart TD
 **Day-90 retro template:**
 
 ```markdown
-## Onboarding Retro: [Hire] — [Date]
+## Onboarding Retro: [Hire], [Date]
 
 What worked:
 - [Practice to keep]
 
 What was confusing or missing:
-- [Friction point] — [artifact it should become]
+- [Friction point], [artifact it should become]
 
 What we will change for the next hire:
-- [Change] — [owner]
+- [Change], [owner]
 
 Manager signal to hire:
-- [One specific strength] — [one specific adjustment]
+- [One specific strength], [one specific adjustment]
 ```
 
 ## Common Pitfalls
@@ -176,9 +177,9 @@ Manager signal to hire:
 - [[06_Closing_and_Offers]]: the close hands off to onboarding; promises made there are kept here
 - [[01_Workforce_Planning]]: onboarding drag is a real cost in the headcount case
 - [[05_Hiring_Decisions_and_Debriefs]]: mis-hire retros must distinguish selection failures from onboarding failures
-- [[01_People_Development/00_overview|People Development]]: day 90 is where development conversations formally begin
-- [[02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: each onboarded hire changes team dynamics
+- [[career-path/11_Engineering_Manager/01_People_Development/00_overview|People Development]]: day 90 is where development conversations formally begin
+- [[career-path/11_Engineering_Manager/02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: each onboarded hire changes team dynamics
 
 ## Summary
 
-Onboarding design is a deliberate 30/60/90 arc — environment and a first tiny win in week one, a meaningful contribution by day 30, real ownership by day 60, full stride and a two-way retro at day 90 — supported by a named buddy, weekly manager check-ins, and written expectations from week one. New eyes are the cheapest process-improvement instrument the team has; capture their observations while they still feel strange. The manager's test: did the hire reach the level they were hired for, with confidence intact and feedback given in both directions?
+Onboarding design is a deliberate 30/60/90 arc (environment and a first tiny win in week one, a meaningful contribution by day 30, real ownership by day 60, full stride and a two-way retro at day 90), supported by a named buddy, weekly manager check-ins, and written expectations from week one. New eyes are the cheapest process-improvement instrument the team has; capture their observations while they still feel strange. The manager's test: did the hire reach the level they were hired for, with confidence intact and feedback given in both directions?

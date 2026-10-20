@@ -16,11 +16,11 @@ tags:
 
 # Technical Risk Identification
 
-> **Core skill:** Surfacing architecture and integration risks early — coupling, capacity, contract mismatch, data migration — by asking calibrated questions in design reviews and ensuring risks are owned, mitigated, and tracked before they become blockers.
+> **Core skill:** Surfacing architecture and integration risks early (coupling, capacity, contract mismatch, data migration) by asking calibrated questions in design reviews and ensuring risks are owned, mitigated, and tracked before they become blockers.
 
 ## Why This Matters
 
-Technical risks are the program's silent killers. They do not announce themselves in steering committee meetings. They surface in integration testing as "unexpected behavior," in production as outages, and in retrospectives as "we should have seen that coming." The TPM's job is to make them visible before they surface — to ask the questions that engineers may be too deep in the solution to ask, and to ensure every technical risk has an owner, a mitigation, and a place in the program's risk register.
+Technical risks are the program's silent killers. They do not announce themselves in steering committee meetings. They surface in integration testing as "unexpected behavior," in production as outages, and in retrospectives as "we should have seen that coming." The TPM's job is to make them visible before they surface: to ask the questions that engineers may be too deep in the solution to ask, and to ensure every technical risk has an owner, a mitigation, and a place in the program's risk register.
 
 The TPM does not identify technical risks through technical analysis. The TPM identifies them through pattern recognition: knowing the categories of risks that programs in this domain typically face, asking the same calibrated questions in every design review, and listening for the answers that sound like hand-waving. Technical risk identification is less about technical depth than about disciplined skepticism.
 
@@ -39,35 +39,36 @@ Technical risks fall into predictable categories. The TPM knows the categories a
 | **Security and compliance risk** | The system has vulnerabilities or does not meet regulatory requirements | Security review fails late; compliance audit blocks launch; data breach occurs | Penetration test three weeks before launch finds critical vulnerabilities requiring architecture changes |
 | **Operational risk** | The system cannot be operated reliably: monitoring is missing, runbooks are incomplete, rollback is untested | Incidents cannot be diagnosed; outages are prolonged; the on-call team cannot operate the system | System fails in production; monitoring shows the symptom but not the cause; incident lasts six hours |
 
-The TPM uses these categories as a lens in every design review. Instead of asking "are there any risks?" — which produces "we have it covered" — the TPM asks "what is the coupling risk between these two components?" The category names the risk; the engineers describe the mitigation.
+The TPM uses these categories as a lens in every design review. Instead of asking "are there any risks?" (which produces "we have it covered"), the TPM asks "what is the coupling risk between these two components?" The category names the risk; the engineers describe the mitigation.
 
 ## The TPM's Risk Questions
 
 Certain questions surface technical risk reliably. The TPM keeps them ready and asks them in design reviews, architecture discussions, and technical status updates.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
-    DESIGN["Design review or architecture discussion"] --> COUPLING["What happens when this changes — who else is affected?"]
+    DESIGN["Design review or architecture discussion"] --> COUPLING["What happens when this changes: who else is affected?"]
     COUPLING --> CAPACITY["What happens at 10x the expected load?"]
     CAPACITY --> CONTRACT["Where is the interface contract documented, and who agreed to it?"]
     CONTRACT --> MIGRATION["What existing data must move, and what happens if the migration fails?"]
     MIGRATION --> EXTERNAL["What does this depend on that we do not control?"]
     EXTERNAL --> NOVELTY["What are we using that this team has not used before?"]
-    NOVELTY --> OPS["How will we know this is working — and broken — in production?"]
+    NOVELTY --> OPS["How will we know this is working: and broken: in production?"]
 ```
 
 | Risk Question | Category Targeted | Red-Flag Answer |
 |--------------|-------------------|----------------|
-| "What happens when this component changes — who else is affected?" | Coupling risk | "We will handle it when it happens" — no impact analysis; change propagation is unknown |
-| "What happens at 10x the expected load?" | Capacity risk | "The architecture should handle it" — no load test; scaling assumptions are untested |
-| "Where is the interface contract documented, and who agreed to it?" | Contract mismatch risk | "The teams discussed it in a meeting" — no written contract; assumptions will diverge |
-| "What existing data must move, and what happens if the migration fails?" | Data migration risk | "The migration is straightforward" — no migration plan; no rollback tested |
-| "What does this depend on that we do not control?" | External dependency risk | "The external team is reliable" — no SLA; no fallback if they are not |
-| "What are we using that this team has not used before?" | Novelty risk | "We will figure it out" — no spike; no time allocated for learning |
-| "How will we know this is working — and broken — in production?" | Operational risk | "We will add monitoring later" — monitoring deferred; operational blindness guaranteed |
-| "What is the rollback plan if this does not work?" | Multiple categories | "We will not need to roll back" — irreversibility assumed; no contingency |
+| "What happens when this component changes; who else is affected?" | Coupling risk | "We will handle it when it happens": no impact analysis; change propagation is unknown |
+| "What happens at 10x the expected load?" | Capacity risk | "The architecture should handle it": no load test; scaling assumptions are untested |
+| "Where is the interface contract documented, and who agreed to it?" | Contract mismatch risk | "The teams discussed it in a meeting": no written contract; assumptions will diverge |
+| "What existing data must move, and what happens if the migration fails?" | Data migration risk | "The migration is straightforward": no migration plan; no rollback tested |
+| "What does this depend on that we do not control?" | External dependency risk | "The external team is reliable": no SLA; no fallback if they are not |
+| "What are we using that this team has not used before?" | Novelty risk | "We will figure it out": no spike; no time allocated for learning |
+| "How will we know this is working (and broken) in production?" | Operational risk | "We will add monitoring later": monitoring deferred; operational blindness guaranteed |
+| "What is the rollback plan if this does not work?" | Multiple categories | "We will not need to roll back": irreversibility assumed; no contingency |
 
-The TPM asks these questions in every technical forum. The questions do not change; the answers do. The TPM is not testing the engineers — the TPM is surfacing risks that the engineers may not have considered, and ensuring that every risk that is surfaced gets an owner, a mitigation, and a tracking entry.
+The TPM asks these questions in every technical forum. The questions do not change; the answers do. The TPM is not testing the engineers. The TPM is surfacing risks that the engineers may not have considered, and ensuring that every risk that is surfaced gets an owner, a mitigation, and a tracking entry.
 
 ## Surfacing Technical Risks from Design Reviews
 
@@ -94,11 +95,11 @@ Identifying a risk is not managing it. The TPM ensures every technical risk move
 | **Category** | From the technical risk categories | Contract mismatch risk |
 | **Description** | One sentence: what could go wrong | Payment API amounts in cents misinterpreted as dollars by order service |
 | **Probability** | Likelihood: high, medium, low | Medium |
-| **Impact** | Consequence if it materializes: critical, high, medium, low | Critical — incorrect financial transactions |
+| **Impact** | Consequence if it materializes: critical, high, medium, low | Critical: incorrect financial transactions |
 | **Owner** | One person accountable for mitigation | Payment API tech lead |
 | **Mitigation** | What is being done to prevent or reduce the risk | Contract specifies currency unit explicitly; contract test validates amount interpretation with edge cases |
 | **Trigger** | What event or date makes this risk materialize | Integration milestone I-01: Payment API to Order Service pair integration |
-| **Status** | Open, mitigated, closed, materialized | Open — mitigation in progress |
+| **Status** | Open, mitigated, closed, materialized | Open: mitigation in progress |
 
 The TPM reviews the technical risk register at every program review. Risks that are "open" with no mitigation activity for two consecutive reviews are escalated. Risks that materialize move to the issue register and are managed as active issues.
 
@@ -117,7 +118,7 @@ The TPM reviews the technical risk register at every program review. Risks that 
 **Design review risk capture template:**
 
 ```markdown
-## Technical Risks Identified: [Design Review Name] — [Date]
+## Technical Risks Identified: [Design Review Name], [Date]
 
 | # | Risk | Category | Owner | Mitigation | Validated By |
 |---|------|----------|-------|------------|-------------|
@@ -144,7 +145,7 @@ The TPM reviews the technical risk register at every program review. Risks that 
 
 - Technical risks surface in design reviews, not in integration testing
 - Every technical risk in the register has an owner who can describe their mitigation in one sentence
-- The risk register shrinks over time — risks are mitigated, not accumulated
+- The risk register shrinks over time. Risks are mitigated, not accumulated
 - Materialized risks move to the issue register within one review cycle
 - Engineers volunteer risks in design reviews because they know the TPM will ensure they are managed, not punished
 
@@ -153,9 +154,9 @@ The TPM reviews the technical risk register at every program review. Risks that 
 - [[01_Technical_Fluency_for_TPMs]]: the technical context that makes the risk questions meaningful
 - [[02_Understanding_System_Boundaries_and_Interfaces]]: boundaries are where technical risk concentrates
 - [[03_Integration_Sequencing]]: integration sequencing is the program's plan for retiring technical risk
-- [[04_Risk_and_Issue_Leadership/00_overview|Risk and Issue Leadership]]: the broader risk management framework this feeds into
+- [[career-path/12_Technical_Program_Manager/04_Risk_and_Issue_Leadership/00_overview|Risk and Issue Leadership]]: the broader risk management framework this feeds into
 - [[career-path/06_Software_Architect/01_Architecture_Fundamentals/04_Architecture_Decision_Making|Architecture Decision Making (Architect)]]: the architect's role in identifying and owning technical risk
 
 ## Summary
 
-Technical risk identification is the TPM's disciplined skepticism: eight categories of risk as a checklist, calibrated questions asked in every design review, listening for the answers that signal unvalidated assumptions or deferred work, and ensuring every risk moves from identification to the program risk register with an owner, a mitigation, and a trigger date. The TPM does not identify risks through technical analysis — the TPM surfaces them through the questions that engineers, deep in the solution, may not have thought to ask.
+Technical risk identification is the TPM's disciplined skepticism: eight categories of risk as a checklist, calibrated questions asked in every design review, listening for the answers that signal unvalidated assumptions or deferred work, and ensuring every risk moves from identification to the program risk register with an owner, a mitigation, and a trigger date. The TPM does not identify risks through technical analysis. The TPM surfaces them through the questions that engineers, deep in the solution, may not have thought to ask.

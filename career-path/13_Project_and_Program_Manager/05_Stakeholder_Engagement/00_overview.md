@@ -14,11 +14,11 @@ tags:
 
 # Stakeholder Engagement
 
-> **Core capability:** The project manager plans and executes stakeholder engagement — identifying who matters, understanding their interests and influence, communicating appropriately, and keeping them involved at the right level throughout the project.
+> **Core capability:** The project manager plans and executes stakeholder engagement, identifying who matters, understanding their interests and influence, communicating appropriately, and keeping them involved at the right level throughout the project.
 
 ## Why This Matters
 
-Projects fail on stakeholder relationships more often than on technical execution. The sponsor who disengages after charter approval, the user group that was never consulted, the executive who hears about a delay from a rumor — each is a stakeholder engagement failure that cascades into a project failure.
+Projects fail on stakeholder relationships more often than on technical execution. The sponsor who disengages after charter approval, the user group that was never consulted, the executive who hears about a delay from a rumor: each is a stakeholder engagement failure that cascades into a project failure.
 
 The project manager's stakeholder work is deliberate, not reactive: a stakeholder register that maps interest, influence, and communication needs; a communication plan that delivers the right information at the right cadence; and engagement that keeps stakeholders as partners, not obstacles.
 
@@ -37,6 +37,7 @@ The project manager's stakeholder work is deliberate, not reactive: a stakeholde
 ## The Stakeholder Engagement Cycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     IDENTIFY["Identify: who matters, what they care about"] --> ANALYZE["Analyze: interest, influence, engagement needs"]
     ANALYZE --> PLAN["Plan: communication and engagement per stakeholder"]
@@ -46,7 +47,7 @@ flowchart TD
     ADJUST --> IDENTIFY
 ```
 
-Engagement is a cycle — not a step at project start.
+Engagement is a cycle, not a step at project start.
 
 ## Practical Applications
 
@@ -54,7 +55,7 @@ Engagement is a cycle — not a step at project start.
 
 - [ ] Stakeholder register is maintained with interest, influence, and engagement strategy
 - [ ] Communication plan covers all stakeholder groups with appropriate cadence and channels
-- [ ] Sponsor is engaged and informed at the right level — never surprised
+- [ ] Sponsor is engaged and informed at the right level, never surprised
 - [ ] Stakeholder conflicts are surfaced and resolved early
 - [ ] Engagement is monitored and adjusted as stakeholders change
 
@@ -75,10 +76,10 @@ Engagement is a cycle — not a step at project start.
 
 ## Related Capabilities
 
-- [[01_Initiation_and_Charter/00_overview|Initiation and Charter]]: stakeholders identified at initiation
-- [[06_Governance_and_Change_Control/00_overview|Governance and Change Control]]: governance is the stakeholder decision forum
+- [[career-path/13_Project_and_Program_Manager/01_Initiation_and_Charter/00_overview|Initiation and Charter]]: stakeholders identified at initiation
+- [[career-path/13_Project_and_Program_Manager/06_Governance_and_Change_Control/00_overview|Governance and Change Control]]: governance is the stakeholder decision forum
 - [[career-path/12_Technical_Program_Manager/05_Stakeholder_Alignment/00_overview|Stakeholder Alignment (TPM)]]: the program-level counterpart
 
 ## Summary
 
-Stakeholder engagement is the project manager's relationship discipline: identifying who matters, understanding what they care about, communicating appropriately, and engaging them as partners throughout the project. Projects that lose their stakeholders lose their support — and the project manager who maintains engagement maintains the project's organizational legitimacy.
+Stakeholder engagement is the project manager's relationship discipline: identifying who matters, understanding what they care about, communicating appropriately, and engaging them as partners throughout the project. Projects that lose their stakeholders lose their support, and the project manager who maintains engagement maintains the project's organizational legitimacy.

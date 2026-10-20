@@ -20,9 +20,9 @@ tags:
 
 ## Why This Is a Senior Skill
 
-Mid-level engineers run PII detection on model outputs and consider leakage handled. Senior engineers design the whole data boundary: what may enter a prompt at all (classification and minimization), where the model runs and who logs what (provider and residency decisions), what may leave in outputs (scanning, canaries), and what the system itself stores afterward (conversation logs, memory, embeddings — all now copies of the sensitive data).
+Mid-level engineers run PII detection on model outputs and consider leakage handled. Senior engineers design the whole data boundary: what may enter a prompt at all (classification and minimization), where the model runs and who logs what (provider and residency decisions), what may leave in outputs (scanning, canaries), and what the system itself stores afterward (conversation logs, memory, embeddings, all now copies of the sensitive data).
 
-The senior understands that leakage is not one failure mode but four, each with its own controls: user data entering prompts unnecessarily, model outputs disclosing data (LLM06 — including memorized training data and other users' data in shared tenancy), infrastructure-side leakage through provider telemetry and stored logs, and system-prompt leakage. Each has a different detection signal and a different response. Privacy is also a legal event — prompt contents become processor-held personal data the moment they leave your infrastructure — so the senior treats the vendor relationship and the retention policy as part of the control set.
+The senior understands that leakage is not one failure mode but four, each with its own controls: user data entering prompts unnecessarily, model outputs disclosing data (LLM06, including memorized training data and other users' data in shared tenancy), infrastructure-side leakage through provider telemetry and stored logs, and system-prompt leakage. Each has a different detection signal and a different response. Privacy is also a legal event (prompt contents become processor-held personal data the moment they leave your infrastructure) so the senior treats the vendor relationship and the retention policy as part of the control set.
 
 ## Core Frameworks
 
@@ -44,7 +44,7 @@ The senior understands that leakage is not one failure mode but four, each with 
 | Tokenization | Substitute reversible tokens for sensitive fields | Preserves more utility than masking; token store becomes a secret |
 | Retrieval with authorization | Embeddings only ever index documents the requester may see | Prevents cross-tenant leakage; requires ACL-aware indexing |
 | Self-hosted open-weight inference | Keep prompts inside your own infrastructure | Full ops and security burden; see [[05_Model_Supply_Chain_and_Tool_Security]] |
-| Differential privacy and federated learning | Statistical privacy for training data | Training-side technique; belongs to the [[career-path/09_Data_and_ML_Engineer/00_overview\|Data and ML Engineer]] path |
+| Differential privacy and federated learning | Statistical privacy for training data | Training-side technique; belongs to the [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]] path |
 
 ### Classification Maturity
 
@@ -57,23 +57,23 @@ The senior understands that leakage is not one failure mode but four, each with 
 
 ## In Practice
 
-**Classify data before it can reach the prompt.** Define data classes and a per-class policy: public data passes freely, internal data passes within authenticated sessions, regulated data requires redaction or never enters the model. Enforce this in the retrieval and prompt-assembly layer — a classifier that runs after the model has already seen the data is not a control.
+**Classify data before it can reach the prompt.** Define data classes and a per-class policy: public data passes freely, internal data passes within authenticated sessions, regulated data requires redaction or never enters the model. Enforce this in the retrieval and prompt-assembly layer: a classifier that runs after the model has already seen the data is not a control.
 
 **Minimize: the model cannot leak what it never saw.** Drop fields irrelevant to the task, summarize long documents instead of injecting them raw, and default to sending the smallest context that answers the question. Every token of sensitive data in the prompt is one more token that can end up in a log, a vendor record, or an output.
 
 **Treat the model provider as a data processor.** For API models, review data-retention terms and DPAs, enable zero-data-retention where offered, and route regulated workloads to self-hosted open-weight models when the contract demands it. If prompts leave your infrastructure, the provider's retention policy is your retention policy.
 
-**Scan outputs, not just inputs.** Detection on the output side catches what input controls cannot: memorized training data, the system prompt, another user's context, and sensitive data the model assembled from innocuous fragments. Pair PII and secret scanning with canary tokens from [[02_Prompt_Injection_Defense]] — a canary hit proves prompt leakage deterministically.
+**Scan outputs, not just inputs.** Detection on the output side catches what input controls cannot: memorized training data, the system prompt, another user's context, and sensitive data the model assembled from innocuous fragments. Pair PII and secret scanning with canary tokens from [[02_Prompt_Injection_Defense]]; a canary hit proves prompt leakage deterministically.
 
 **Isolate tenants at the context layer.** In multi-tenant systems, never assemble prompts from a shared context store without per-tenant authorization at retrieval time. A retrieval index that a tenant's query can reach beyond their own data turns one leaked response into a mass disclosure.
 
-**Govern logs and memory like a database of secrets.** Prompt and response logs contain the most concentrated sensitive data your feature ever handles. Apply the same controls as any high-value data store: redaction at write time, access control, encryption, and retention limits. Long-term agent memory is persistent personal data — give it a deletion path and disclose it.
+**Govern logs and memory like a database of secrets.** Prompt and response logs contain the most concentrated sensitive data your feature ever handles. Apply the same controls as any high-value data store: redaction at write time, access control, encryption, and retention limits. Long-term agent memory is persistent personal data: give it a deletion path and disclose it.
 
-**Write the privacy posture down.** A one-page data-flow diagram showing every hop a prompt takes — client, retrieval, model, provider, logs, memory — with the control at each hop is the artifact that lets security, legal, and compliance review the system without reading the code.
+**Write the privacy posture down.** A one-page data-flow diagram showing every hop a prompt takes (client, retrieval, model, provider, logs, memory) with the control at each hop is the artifact that lets security, legal, and compliance review the system without reading the code.
 
 ## Practical Exercise
 
-1. Map every datum entering prompts for one feature — user input, retrieval results, tool outputs, memory — and label each with a data class
+1. Map every datum entering prompts for one feature (user input, retrieval results, tool outputs, memory) and label each with a data class
 2. Define a policy per class: allow, redact, block, or require approval; implement it in the single prompt-assembly code path
 3. Review what is stored outside your control: the API provider's retention terms, or your self-hosted stack's inference and access logs
 4. Add output scanning for PII patterns, secrets, and the canary token; define the action per hit: mask, block, or alert

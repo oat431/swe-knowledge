@@ -26,6 +26,7 @@ Dependencies are the number one cause of delivery delays in organizations with m
 ## Types of Dependencies
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph INTERNAL["Internal Dependencies"]
         CODE["Code/API dependencies\nOther teams' services"]
@@ -56,6 +57,7 @@ flowchart TD
 ## The Dependency Management Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     IDENTIFY["1 Identify\ndependencies"] --> ANALYZE["2 Analyze\nimpact and risk"]
     ANALYZE --> COMMUNICATE["3 Communicate\nwith dependent teams"]

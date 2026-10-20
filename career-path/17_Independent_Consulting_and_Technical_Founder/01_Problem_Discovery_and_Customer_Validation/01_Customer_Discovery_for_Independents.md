@@ -16,21 +16,21 @@ tags:
 
 # Customer Discovery for Independents
 
-> **Core skill:** Finding and talking to real prospects who have the problem — not friends, not a convenient sample — until the pain, its cost, and the current workaround are clear in their own words.
+> **Core skill:** Finding and talking to real prospects who have the problem (not friends, not a convenient sample) until the pain, its cost, and the current workaround are clear in their own words.
 
 ## Why This Matters
 
-Employed engineers inherit their problems: a roadmap, a backlog, a manager decides what is worth building. The independent faces the open market with nothing inherited. Discovery is the first act of the business — it decides what to build, what to sell, and to whom — and mistakes here are paid for with months of unpaid work, not with a sprint of wasted velocity.
+Employed engineers inherit their problems: a roadmap, a backlog, a manager decides what is worth building. The independent faces the open market with nothing inherited. Discovery is the first act of the business (it decides what to build, what to sell, and to whom), and mistakes here are paid for with months of unpaid work, not with a sprint of wasted velocity.
 
 The independent's version of discovery has a different budget from a funded startup's: no research team, no panel budget, no months of runway to burn. It must be fast, cheap, and honest. It also does double duty: a well-run discovery conversation is the first sales conversation, and it either seeds trust and pipeline or burns the best prospects you have.
 
-What counts as evidence is narrow and demanding: recurring pain described without prompting, a quantified cost, and an existing workaround or budget line the pain already touches. Chatting with anyone who is easy to reach produces comfortable conversations and worthless conclusions. The independent discovers for two outcomes at once — enough evidence to design an offer and enough relationships to launch it.
+What counts as evidence is narrow and demanding: recurring pain described without prompting, a quantified cost, and an existing workaround or budget line the pain already touches. Chatting with anyone who is easy to reach produces comfortable conversations and worthless conclusions. The independent discovers for two outcomes at once, enough evidence to design an offer and enough relationships to launch it.
 
 ## Who Counts as a Real Prospect
 
 | Source | Why It Tempts You | What It Can Prove |
 |--------|-------------------|-------------------|
-| Friends and family | Willing listeners; low rejection risk | Almost nothing — sympathy is not demand |
+| Friends and family | Willing listeners; low rejection risk | Almost nothing: sympathy is not demand |
 | Former colleagues | Shared context makes the first call easy | Real signal only if they now own the problem |
 | Peer independents | Easy to reach; share your vocabulary | Market tooling gaps, not buyer pain |
 | Public communities and forums | Complaints are visible and searchable | The vocabulary of the pain; weak on payment intent |
@@ -54,6 +54,7 @@ Cadence beats intensity: a standing hour per day of discovery work keeps the pip
 ## The Discovery Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     LIST["List real prospects"] --> ASK["Ask about the problem, not the idea"]
     ASK --> LOG["Log facts, quotes, and numbers"]
@@ -77,7 +78,7 @@ The loop closes when each conversation sharpens the next question, the list, and
 ### Discovery Log Template
 
 ```markdown
-## Discovery Log — <prospect, date>
+## Discovery Log: <prospect, date>
 
 | Field | Notes |
 |-------|-------|
@@ -113,9 +114,9 @@ The loop closes when each conversation sharpens the next question, the list, and
 - [[05_Problem_Interviews_Without_Pitching]]
 - [[02_Validating_Willingness_to_Pay]]
 - [[07_From_Insight_to_Offer_Hypothesis]]
-- [[06_Sales_and_Client_Communication/00_overview|Sales and Client Communication]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/06_Sales_and_Client_Communication/00_overview|Sales and Client Communication]]
 - [[career-path/16_Developer_Advocate_and_Technical_Consultant/04_Customer_and_Developer_Understanding/00_overview|Customer and Developer Understanding (Dev Advocate)]]
 
 ## Summary
 
-Customer discovery is the independent's first discipline and their insurance policy: find real prospects who match the buyer role, talk to them about their actual past and present, log facts instead of impressions, and keep climbing until someone commits something scarce. Done well, it is simultaneously research, positioning, and the start of the sales pipeline — and it is the cheapest way to avoid the most expensive mistake in independent work, building something nobody will buy.
+Customer discovery is the independent's first discipline and their insurance policy: find real prospects who match the buyer role, talk to them about their actual past and present, log facts instead of impressions, and keep climbing until someone commits something scarce. Done well, it is simultaneously research, positioning, and the start of the sales pipeline, and it is the cheapest way to avoid the most expensive mistake in independent work, building something nobody will buy.

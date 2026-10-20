@@ -16,22 +16,22 @@ tags:
 
 # Meeting Facilitation for Managers
 
-> **Core skill:** Running the manager's meeting portfolio as a designed system — every meeting with a purpose, a decision format, and a record, and every recurring meeting audited until it earns its slot.
+> **Core skill:** Running the manager's meeting portfolio as a designed system: every meeting with a purpose, a decision format, and a record, and every recurring meeting audited until it earns its slot.
 
 ## Why This Matters
 
-The manager's calendar is the team's operating system. The 1:1s, team meetings, planning sessions, stakeholder syncs, and problem-solving forums are where information flows, decisions get made, and culture gets enacted. A manager who runs meetings by default — inheriting agendas, drifting formats, endless updates — converts the team's most expensive resource, its attention, into overhead.
+The manager's calendar is the team's operating system. The 1:1s, team meetings, planning sessions, stakeholder syncs, and problem-solving forums are where information flows, decisions get made, and culture gets enacted. A manager who runs meetings by default (inheriting agendas, drifting formats, endless updates) converts the team's most expensive resource, its attention, into overhead.
 
-Well-facilitated meetings are a competitive advantage: decisions get made in the room instead of in the hallway, everyone relevant leaves knowing what was decided and why, and the team's time is spent on thinking rather than reporting. The craft is design — purpose, attendees, format, decision method — plus facilitation technique and the ruthless audit of everything recurring.
+Well-facilitated meetings are a competitive advantage: decisions get made in the room instead of in the hallway, everyone relevant leaves knowing what was decided and why, and the team's time is spent on thinking rather than reporting. The craft is design (purpose, attendees, format, decision method) plus facilitation technique and the ruthless audit of everything recurring.
 
 ## The Manager's Meeting Portfolio
 
 | Meeting | Purpose | Cadence | Decision Format |
 |---------|---------|---------|-----------------|
-| 1:1s | Individual context, growth, signals | Weekly | Mostly none — conversation |
+| 1:1s | Individual context, growth, signals | Weekly | Mostly none: conversation |
 | Team meeting | Alignment, ceremony, shared context | Weekly | Consent on process items |
 | Planning | Commitments and sequencing | Monthly or quarterly | Decide-and-consult |
-| Stakeholder sync | Status, risks, alignment | Weekly or biweekly | None — information |
+| Stakeholder sync | Status, risks, alignment | Weekly or biweekly | None: information |
 | Problem-solving | Unblocking, escalated issues | As needed | Decide in the room |
 
 Every meeting type has a distinct job. When two meetings start doing the same job, one of them is redundant.
@@ -59,7 +59,7 @@ Design happens before the invite, not in the room. A meeting with a designed pur
 | Parking lot | Keeping the meeting on track | Off-topic items captured for later |
 | Pre-reads | Flipping presentation to discussion | Read before; meeting is conversation |
 
-The techniques exist to manage participation — the meeting's scarce resource is not time, it is the distribution of voices in it.
+The techniques exist to manage participation: the meeting's scarce resource is not time, it is the distribution of voices in it.
 
 ## Decision Methods in Meetings
 
@@ -70,7 +70,7 @@ The techniques exist to manage participation — the meeting's scarce resource i
 | Decide-and-consult | Decider consults, then decides | Most operational decisions | Consultation feels fake if rushed |
 | Decide (manager) | The manager owns the call | Time-critical, accountability-heavy | Team disengages if overused |
 
-Name the method when the decision starts: "We will use consent — speak if this blocks you" or "I will decide after hearing everyone." Unnamed decision methods default to whoever is loudest.
+Name the method when the decision starts: "We will use consent: speak if this blocks you" or "I will decide after hearing everyone." Unnamed decision methods default to whoever is loudest.
 
 ## Recurring Meeting Audits
 
@@ -94,7 +94,7 @@ Audit quarterly, with the team's input. The team knows which meetings are theate
 - Action items carry owners and dates
 - The record is the meeting's product; the discussion is the process
 
-A meeting without a record is a rumor with a calendar invite. Six months later, the decision log answers "why did we do this?" — and it is the same log that prevents re-litigating settled choices.
+A meeting without a record is a rumor with a calendar invite. Six months later, the decision log answers "why did we do this?", and it is the same log that prevents re-litigating settled choices.
 
 ## Energy Management
 
@@ -106,6 +106,7 @@ A meeting without a record is a rumor with a calendar invite. Six months later, 
 The manager's calendar is the team's calendar; the team's energy follows the manager's example.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DESIGN["Design purpose and format"] --> RUN["Run with facilitation technique"]
     RUN --> DECIDE["Decide with a named method"]
@@ -129,16 +130,16 @@ flowchart TD
 ### Agenda Template
 
 ```markdown
-## [Meeting Name] — [date]
+## [Meeting Name]: [date]
 - Purpose: [one sentence]
 - Decision format: [consent / consensus / decide-and-consult / decide]
 - Pre-reads: [docs, read before]
 - Agenda:
-  1. [item] — [outcome wanted] — [owner] — [minutes]
-  2. [item] — [outcome wanted] — [owner] — [minutes]
+  1. [item]: [outcome wanted]; [owner]; [minutes]
+  2. [item]: [outcome wanted]; [owner]; [minutes]
 - Parking lot: [items deferred]
 - Decisions to record: [list]
-- Actions: [owner] — [due date]
+- Actions: [owner]; [due date]
 ```
 
 ## Common Pitfalls
@@ -164,9 +165,9 @@ flowchart TD
 
 - [[06_Communication_Rhythms_and_Channels]]: the meeting portfolio lives in the channel map
 - [[02_Representing_the_Team_Upward]]: stakeholder syncs are representation moments
-- [[01_People_Development/00_overview|People Development]]: the 1:1 is the portfolio's core instrument
+- [[career-path/11_Engineering_Manager/01_People_Development/00_overview|People Development]]: the 1:1 is the portfolio's core instrument
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/04_Facilitation|Facilitation (Senior)]]: the individual craft this formalizes
 
 ## Summary
 
-Meeting facilitation for managers is meeting design: a portfolio of meetings each with a purpose, a named decision method, pre-reads, participation techniques for quiet voices, and a record that outlives the room — audited quarterly so every recurring meeting earns its slot. The manager who designs meetings treats the team's attention as the scarce resource it is, and the team that meets less and decides more is the team that wins.
+Meeting facilitation for managers is meeting design: a portfolio of meetings each with a purpose, a named decision method, pre-reads, participation techniques for quiet voices, and a record that outlives the room, audited quarterly so every recurring meeting earns its slot. The manager who designs meetings treats the team's attention as the scarce resource it is, and the team that meets less and decides more is the team that wins.

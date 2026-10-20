@@ -14,13 +14,13 @@ tags:
 
 # Business Case and Economics
 
-> **Core capability:** The independent evaluates cost, revenue, risk, and opportunity — running the business with honest economics: runway, margins, forecasts, and decisions made on numbers rather than hope.
+> **Core capability:** The independent evaluates cost, revenue, risk, and opportunity, running the business with honest economics: runway, margins, forecasts, and decisions made on numbers rather than hope.
 
 ## Why This Matters
 
-Independent work replaces a salary with a business, and a business runs on economics. The failure mode is rarely technical: it is running out of runway, underpricing, taking unprofitable work, or mistaking revenue for profit. The independent who understands their unit economics — cost per month, margin per engagement, pipeline math — makes survivable decisions under uncertainty.
+Independent work replaces a salary with a business, and a business runs on economics. The failure mode is rarely technical: it is running out of runway, underpricing, taking unprofitable work, or mistaking revenue for profit. The independent who understands their unit economics (cost per month, margin per engagement, pipeline math) makes survivable decisions under uncertainty.
 
-This area is the engineering economics discipline applied to a business of one: build/buy/partner decisions with limited leverage, bootstrapping versus funding, and risk-adjusted judgment about which opportunities to take. The Thai market context adds specifics — withholding tax on services, personal vs. corporate structures — that deserve professional consultation, but the principles of honest, numbers-driven operation are universal.
+This area is the engineering economics discipline applied to a business of one: build/buy/partner decisions with limited leverage, bootstrapping versus funding, and risk-adjusted judgment about which opportunities to take. The Thai market context adds specifics (withholding tax on services, personal vs. corporate structures) that deserve professional consultation, but the principles of honest, numbers-driven operation are universal.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ This area is the engineering economics discipline applied to a business of one: 
 ## The Survival Equation
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     COSTS["Monthly costs: fixed plus variable"] --> RUNWAY["Runway: months of buffer"]
     RUNWAY --> REVENUE["Revenue: pipeline converted conservatively"]
@@ -52,7 +53,7 @@ Survival first: every decision is checked against the runway before ambition.
 
 - [ ] Monthly cost baseline is known to the currency unit
 - [ ] Personal runway (months of survival) is calculated and tracked
-- [ ] Revenue forecasts are conservative — best case is not the plan
+- [ ] Revenue forecasts are conservative. Best case is not the plan
 - [ ] Each engagement's true margin includes time, tools, and admin overhead
 - [ ] Major opportunities are evaluated with risk-adjusted logic, not optimism
 
@@ -70,15 +71,15 @@ Survival first: every decision is checked against the runway before ambition.
 - Runway is known at all times and never surprises
 - Engagements are priced with margin targets and mostly hit them
 - Financial reserves exist for slow months and taxes
-- Decisions cite numbers — margins, runway, pipeline — not feelings
+- Decisions cite numbers (margins, runway, pipeline), not feelings
 
 ## Related Capabilities
 
-- [[02_Product_and_Service_Design/00_overview|Product and Service Design]]: pricing lives at the intersection
-- [[07_Governance_Risk_and_Continuity/00_overview|Governance Risk and Continuity]]: taxes and legal structures are economic decisions
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/02_Product_and_Service_Design/00_overview|Product and Service Design]]: pricing lives at the intersection
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/07_Governance_Risk_and_Continuity/00_overview|Governance Risk and Continuity]]: taxes and legal structures are economic decisions
 - [[career-path/02_Senior_Software_Engineer/08_Engineering_Economics_and_Trade_Offs/00_overview|Engineering Economics and Trade Offs (Senior)]]: the engineering economics foundation
 - [[career-path/13_Project_and_Program_Manager/03_Schedule_and_Cost/03_Cost_Estimation_and_Budgeting|Cost Estimation and Budgeting (PjM)]]: project-level cost discipline
 
 ## Summary
 
-Business economics for independents is survival arithmetic: costs and runway, conservative forecasts, true margins, leverage decisions, and risk-adjusted judgment. Numbers keep the business honest — and the honest business survives long enough to succeed.
+Business economics for independents is survival arithmetic: costs and runway, conservative forecasts, true margins, leverage decisions, and risk-adjusted judgment. Numbers keep the business honest, and the honest business survives long enough to succeed.

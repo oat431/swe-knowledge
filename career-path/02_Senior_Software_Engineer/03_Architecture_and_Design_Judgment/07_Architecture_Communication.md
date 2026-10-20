@@ -36,6 +36,7 @@ Architecture communication is hard because:
 ## The Audience-Message Matrix
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph TECHNICAL["Technical Audiences"]
         ENG["Engineers\nHow do I implement this?"]
@@ -69,6 +70,7 @@ flowchart TD
 The C4 model (Context, Containers, Components, Code) provides a structured approach to architecture visualization:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph C1["Level 1: Context"]
         CONTEXT["System Context Diagram\nWho uses the system? What external systems does it interact with?"]
@@ -99,6 +101,7 @@ flowchart TD
 For communicating a specific decision, use a decision diagram:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PROBLEM["Problem\nWe need to handle 10K events/sec"] --> OPTION_A["Option A\nKafka"]
     PROBLEM --> OPTION_B["Option B\nRabbitMQ"]
@@ -259,7 +262,7 @@ For major architecture decisions, create a communication plan:
 - [[01_Architecture_Decision_Making]] : communication follows decision-making
 - [[04_Architecture_Decision_Records]] : ADRs are a communication artifact
 - [[06_Architecture_Governance]] : communication is part of governance
-- [[02_Problem_Framing_and_Requirements/03_Stakeholder_Management]] : stakeholder management informs communication
+- [[career-path/02_Senior_Software_Engineer/02_Problem_Framing_and_Requirements/03_Stakeholder_Management]] : stakeholder management informs communication
 - [[software-engineering-note/02_Software_Architecture/07_Design_and_Documentation]] : architecture documentation
 - [[software-engineering-note/14_Software_Engineering_Professional_Practice/Professionalism of Software Engineering Overview]] : professional communication
 

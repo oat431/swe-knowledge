@@ -141,6 +141,7 @@ Use relative sizing (XS, S, M, L, XL) instead of absolute time.
 Estimates become more accurate as the project progresses and more is known:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A["Initial Estimate\n±4x range"] --> B["After Requirements\n±2x range"]
     B --> C["After Design\n±1.5x range"]

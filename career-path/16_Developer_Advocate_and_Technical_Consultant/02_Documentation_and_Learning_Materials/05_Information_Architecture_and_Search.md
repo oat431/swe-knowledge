@@ -16,22 +16,22 @@ tags:
 
 # Information Architecture and Search
 
-> **Core skill:** The advocate structures documentation around the tasks users arrive with — stable names, shallow paths, sensible cross-links — and tunes search so the answer appears for the words a struggling developer actually types.
+> **Core skill:** The advocate structures documentation around the tasks users arrive with (stable names, shallow paths, sensible cross-links) and tunes search so the answer appears for the words a struggling developer actually types.
 
 ## Why This Matters
 
-A perfect page that nobody finds is worth zero. Documentation quality is routinely judged page by page, while the user experience is determined by the system above the pages: whether a person lands, orients, and reaches the right answer in seconds. Information architecture is that system — the naming, grouping, ordering, and linking that turns a pile of pages into a place where users can navigate. It is invisible when it works and indistinguishable from missing content when it fails, because a user who cannot find a page concludes the page does not exist.
+A perfect page that nobody finds is worth zero. Documentation quality is routinely judged page by page, while the user experience is determined by the system above the pages: whether a person lands, orients, and reaches the right answer in seconds. Information architecture is that system: the naming, grouping, ordering, and linking that turns a pile of pages into a place where users can navigate. It is invisible when it works and indistinguishable from missing content when it fails, because a user who cannot find a page concludes the page does not exist.
 
-The design constraint that matters most is task orientation. Organizations naturally structure docs the way the organization is structured — by team, by internal component, by release history — but users arrive with tasks: get this running, fix this error, understand this decision, decide between these two options. Every unit of distance between the user's task language and the site's vocabulary becomes a dead end, and dead ends are where adoption quietly stops. The advocate's discipline is to derive structure from user language — search queries, tickets, forum threads — rather than from the org chart.
+The design constraint that matters most is task orientation. Organizations naturally structure docs the way the organization is structured (by team, by internal component, by release history) but users arrive with tasks: get this running, fix this error, understand this decision, decide between these two options. Every unit of distance between the user's task language and the site's vocabulary becomes a dead end, and dead ends are where adoption quietly stops. The advocate's discipline is to derive structure from user language (search queries, tickets, forum threads) rather than from the org chart.
 
-Search is the second half of the system and the more honest half, because it records exactly what users wanted in their own words. A docs site's search logs are a research instrument: zero-result queries are missing content, high-exit queries are misleading titles, and repeated synonym queries mean the vocabulary needs fixing. The professional runs this loop deliberately — structure informs search, search repairs structure — instead of treating search as a widget that was installed once.
+Search is the second half of the system and the more honest half, because it records exactly what users wanted in their own words. A docs site's search logs are a research instrument: zero-result queries are missing content, high-exit queries are misleading titles, and repeated synonym queries mean the vocabulary needs fixing. The professional runs this loop deliberately (structure informs search, search repairs structure) instead of treating search as a widget that was installed once.
 
 ## Information Architecture Principles
 
 | Principle | Rule | Failure When Ignored |
 |-----------|------|----------------------|
 | Task-based structure | Organize around what users do, not how the org is built | Users cannot find familiar tasks; navigation feels foreign |
-| Stable names | One concept, one term, everywhere — including redirects from old terms | Synonymous pages multiply; trust in links collapses |
+| Stable names | One concept, one term, everywhere, including redirects from old terms | Synonymous pages multiply; trust in links collapses |
 | Shallow paths | Any answer within a few clicks of the entry point | Content exists but is effectively hidden |
 | One canonical home | Each fact lives in exactly one place; everywhere else links | Contradictory copies drift apart and confuse |
 | Predictable page types | Tutorials, guides, reference, and explanation are visibly different | Readers misjudge what they are about to get |
@@ -64,6 +64,7 @@ Each mode is a different door into the same building; a documentation set that s
 ## The Findability Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     TASKS["List the tasks users arrive with"] --> STRUCTURE["Structure content around those tasks"]
     STRUCTURE["Structure content around those tasks"] --> LABELS["Label and cross-link with stable names"]
@@ -71,7 +72,7 @@ flowchart TD
     SEARCH["Tune search to the language users type"] --> ANALYTICS["Read analytics and repair dead ends"]
 ```
 
-The loop never closes permanently: new tasks, new terminology, and new failures reopen it every cycle. Dedicated maintenance time — not inspiration — is what keeps the loop rotating.
+The loop never closes permanently: new tasks, new terminology, and new failures reopen it every cycle. Dedicated maintenance time (not inspiration) is what keeps the loop rotating.
 
 ## Practical Applications
 
@@ -128,4 +129,4 @@ The loop never closes permanently: new tasks, new terminology, and new failures 
 
 ## Summary
 
-Information architecture and search are the finding system of documentation: task-based structure, stable user-language names, shallow paths, canonical pages, and search tuned to the errors and phrasing users actually bring. The advocate who treats findability as a designed property — measured, mined, and repaired continuously — multiplies the value of every page the team writes, because the best content in the world only works if the person who needs it can reach it.
+Information architecture and search are the finding system of documentation: task-based structure, stable user-language names, shallow paths, canonical pages, and search tuned to the errors and phrasing users actually bring. The advocate who treats findability as a designed property (measured, mined, and repaired continuously) multiplies the value of every page the team writes, because the best content in the world only works if the person who needs it can reach it.

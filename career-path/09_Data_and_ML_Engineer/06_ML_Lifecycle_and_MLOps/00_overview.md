@@ -42,6 +42,7 @@ Senior judgment shows in:
 ## ML Lifecycle Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A["Problem Definition"] --> B["Data Collection"]
     B --> C["Feature Engineering"]
@@ -91,8 +92,8 @@ This area covers the engineering lifecycle of ML models: how they are built, eva
 
 - [[computing-foundation-note/Artificial_Intelligence/AI Overview]]: AI fundamentals
 - [[SWEBOK v4 - Overview]]: software engineering for ML systems
-- [[04_Data_Quality/00_overview|Data Quality]]: training data quality determines model quality
-- [[07_Production_Engineering/00_overview|Production Engineering]]: infrastructure that hosts models
+- [[career-path/09_Data_and_ML_Engineer/04_Data_Quality/00_overview|Data Quality]]: training data quality determines model quality
+- [[career-path/09_Data_and_ML_Engineer/07_Production_Engineering/00_overview|Production Engineering]]: infrastructure that hosts models
 
 ## Sources
 

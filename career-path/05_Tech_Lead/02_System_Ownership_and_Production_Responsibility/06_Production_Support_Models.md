@@ -16,7 +16,7 @@ tags:
 
 # Production Support Models
 
-> **Core skill:** Designing how production is supported — tiers, escalation paths, runbooks, and rotations — so support is humane, predictable, and never dependent on heroics.
+> **Core skill:** Designing how production is supported (tiers, escalation paths, runbooks, and rotations) so support is humane, predictable, and never dependent on heroics.
 
 ## Why This Matters
 
@@ -121,6 +121,7 @@ The handoff is the seam where knowledge is lost. Treat it like a deploy: a defin
 Support is sustainable when it is fair. Unfair rotations are the fastest way to lose the engineers who are best at production.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     TIER["Tier services by criticality"] --> MODEL["Choose hours and rotation model"]
     MODEL --> RUNBOOK["Write and test runbooks"]
@@ -133,7 +134,7 @@ flowchart TD
 ## Practical Applications
 
 ```markdown
-## Support Model — [team]
+## Support Model: [team]
 
 ### Services and tiers
 | Service | Tier | Hours | Rotation |
@@ -192,9 +193,9 @@ Checklist:
 
 - [[02_Production_Readiness_Leadership]]: readiness defines what the support model must absorb
 - [[05_System_Health_Monitoring]]: alert quality determines what support actually pages
-- [[07_Incident_Leadership_and_Production_Excellence/00_overview|Incident Leadership and Production Excellence]]: the escalation path's destination
+- [[career-path/05_Tech_Lead/07_Incident_Leadership_and_Production_Excellence/00_overview|Incident Leadership and Production Excellence]]: the escalation path's destination
 - [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/04_Incident_Response|Incident Response (Senior)]]: the personal response discipline this scales
 
 ## Summary
 
-A production support model is a deliberate design: services tiered by criticality, hours and rotations matched to need, escalation paths named per failure class, runbooks tested by non-authors, and handoffs that never lose context. The humane constraints — fair rotation, compensation, fatigue rules — are part of the design, not afterthoughts. Support stops being heroics and becomes a normal, sustainable part of running the system.
+A production support model is a deliberate design: services tiered by criticality, hours and rotations matched to need, escalation paths named per failure class, runbooks tested by non-authors, and handoffs that never lose context. The humane constraints (fair rotation, compensation, fatigue rules) are part of the design, not afterthoughts. Support stops being heroics and becomes a normal, sustainable part of running the system.

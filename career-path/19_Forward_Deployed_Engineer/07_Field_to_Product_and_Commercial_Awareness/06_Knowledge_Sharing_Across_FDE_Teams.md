@@ -16,15 +16,15 @@ tags:
 
 # Knowledge Sharing Across FDE Teams
 
-> **Core skill:** Making one deployment's lessons available to all — capturing knowledge at the moment of learning, storing it where the team will find it, and making reuse easier than rediscovery.
+> **Core skill:** Making one deployment's lessons available to all: capturing knowledge at the moment of learning, storing it where the team will find it, and making reuse easier than rediscovery.
 
 ## Why This Matters
 
-Forward deployment is an expensive teacher, and it charges every engineer separately unless the lessons move. The first FDE to hit a given obstacle pays full price in investigation: the integration quirk, the approval sequence, the migration trick, the customer pattern that breaks assumptions. If that knowledge stays in one head, the second FDE pays the same price again, and the organization's field capability scales linearly with headcount while its efficiency scales with nothing at all. Knowledge sharing is what converts field experience from a private asset into a team compound — and the difference between the teams that have it and the teams that do not shows up in margins, delivery speed, and how much each new FDE must be allowed to fail before being trusted.
+Forward deployment is an expensive teacher, and it charges every engineer separately unless the lessons move. The first FDE to hit a given obstacle pays full price in investigation: the integration quirk, the approval sequence, the migration trick, the customer pattern that breaks assumptions. If that knowledge stays in one head, the second FDE pays the same price again, and the organization's field capability scales linearly with headcount while its efficiency scales with nothing at all. Knowledge sharing is what converts field experience from a private asset into a team compound, and the difference between the teams that have it and the teams that do not shows up in margins, delivery speed, and how much each new FDE must be allowed to fail before being trusted.
 
-The obstacle is rarely willingness; engineers like sharing discoveries. It is friction and decay. Documentation efforts that demand hours produce artifacts that are late, generic, and unread. Knowledge captured in the wrong place — a personal note, a chat thread, a slide in an internal deck — cannot be found by the person who needs it at design time. The workable discipline is to write small things at the moment of learning, in the place where the reader will already be looking: the repository the code lives in, the playbook the deployment process references, the template the next deployment starts from. A paragraph in the right location beats a wiki page in the wrong one.
+The obstacle is rarely willingness; engineers like sharing discoveries. It is friction and decay. Documentation efforts that demand hours produce artifacts that are late, generic, and unread. Knowledge captured in the wrong place (a personal note, a chat thread, a slide in an internal deck) cannot be found by the person who needs it at design time. The workable discipline is to write small things at the moment of learning, in the place where the reader will already be looking: the repository the code lives in, the playbook the deployment process references, the template the next deployment starts from. A paragraph in the right location beats a wiki page in the wrong one.
 
-There is also a direction of sharing that FDEs underrate: the team itself. Patterns and field signals flow upward to product, but an FDE team's own operating knowledge — how to onboard a customer environment, standard questions to ask in week one, the audit checklist, the war stories about what went wrong — flows sideways, and it is often the most immediately valuable. War stories deserve special mention: a team that only shares successes teaches nothing about judgment. The failure case, written with what the signals were and what was missed, is the densest knowledge an FDE team can hold. Sharing it is what turns an individual's scar into a colleague's shortcut.
+There is also a direction of sharing that FDEs underrate: the team itself. Patterns and field signals flow upward to product, but an FDE team's own operating knowledge (how to onboard a customer environment, standard questions to ask in week one, the audit checklist, the war stories about what went wrong) flows sideways, and it is often the most immediately valuable. War stories deserve special mention: a team that only shares successes teaches nothing about judgment. The failure case, written with what the signals were and what was missed, is the densest knowledge an FDE team can hold. Sharing it is what turns an individual's scar into a colleague's shortcut.
 
 ## What to Share
 
@@ -49,6 +49,7 @@ There is also a direction of sharing that FDEs underrate: the team itself. Patte
 | Office hours and pairing | Transfers tacit knowledge efficiently | Dependent on specific people's availability |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CAPTURE["Capture during the work"] --> WRITE["Write it at the moment of learning"]
     WRITE --> STORE["Store where the team looks"]
@@ -57,7 +58,7 @@ flowchart LR
     IMPROVE --> ONBOARD["Onboard the next engineer"]
 ```
 
-The improve-from-reuse step is where a knowledge base stays alive. Every reuse is an opportunity to correct: the template that needed an edit, the playbook step that was skipped, the quirk that has since been fixed in the product. Teams that treat documentation as a product with users — and revise it when users stumble — end up with knowledge that is trusted; teams that treat it as an obligation end up with a graveyard of stale pages that teaches newcomers to ignore all of it, including the parts that matter.
+The improve-from-reuse step is where a knowledge base stays alive. Every reuse is an opportunity to correct: the template that needed an edit, the playbook step that was skipped, the quirk that has since been fixed in the product. Teams that treat documentation as a product with users, and revise it when users stumble, end up with knowledge that is trusted; teams that treat it as an obligation end up with a graveyard of stale pages that teaches newcomers to ignore all of it, including the parts that matter.
 
 ## Practical Applications
 
@@ -74,7 +75,7 @@ The improve-from-reuse step is where a knowledge base stays alive. Every reuse i
 ### Deployment Playbook Skeleton
 
 ```markdown
-## Deployment Playbook — <type of deployment>
+## Deployment Playbook: <type of deployment>
 
 | Section | Contents |
 |---------|----------|
@@ -115,4 +116,4 @@ The improve-from-reuse step is where a knowledge base stays alive. Every reuse i
 
 ## Summary
 
-Knowledge sharing across FDE teams is what makes a field organization compound: capture lessons in the moment, store them where the next engineer will actually look, make reuse easier than rediscovery, revise the artifacts every time reuse teaches something, and write down failures with the same care as wins. The measure of a field team's maturity is not the brilliance of its best deployment — it is how little of that brilliance has to be rediscovered on the next one.
+Knowledge sharing across FDE teams is what makes a field organization compound: capture lessons in the moment, store them where the next engineer will actually look, make reuse easier than rediscovery, revise the artifacts every time reuse teaches something, and write down failures with the same care as wins. The measure of a field team's maturity is not the brilliance of its best deployment. It is how little of that brilliance has to be rediscovered on the next one.

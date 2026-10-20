@@ -14,11 +14,11 @@ tags:
 
 # Systems Thinking and Organizational Design
 
-> **Core capability:** The staff engineer reads the organization as a system — seeing how structure, incentives, and feedback loops produce technical outcomes — and uses that reading to fix causes, not symptoms.
+> **Core capability:** The staff engineer reads the organization as a system (seeing how structure, incentives, and feedback loops produce technical outcomes) and uses that reading to fix causes, not symptoms.
 
 ## Why This Matters
 
-Repeated technical problems are usually not technical. The service that's always breaking, the team that always ships late, the standard nobody follows — trace any recurring failure back far enough and you find a structure or incentive that produces it on schedule. Treating symptoms at staff level means fixing the same bug forever.
+Repeated technical problems are usually not technical. The service that's always breaking, the team that always ships late, the standard nobody follows: trace any recurring failure back far enough and you find a structure or incentive that produces it on schedule. Treating symptoms at staff level means fixing the same bug forever.
 
 Systems thinking is the staff engineer's diagnostic lens: Conway's Law coupling your architecture to your org chart, feedback loops with delays that make local optimization feel right, constraints that determine where leverage actually exists. Staff engineers who see the system propose changes that keep working after they walk away.
 
@@ -37,6 +37,7 @@ Systems thinking is the staff engineer's diagnostic lens: Conway's Law coupling 
 ## The Systems Diagnostic Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SYMPTOM["Observe recurring symptom"] --> TRACE["Trace to structure and incentives"]
     TRACE --> LEVERAGE["Find the leverage point"]
@@ -86,11 +87,11 @@ If the same problem returns next quarter, you treated a symptom.
 
 ## Related Capabilities
 
-- [[02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: where structural insight lands
-- [[03_Technical_Strategy/00_overview|Technical Strategy]]: systems reading feeds strategy
-- [[07_Organizational_Learning_and_Mentoring/00_overview|Organizational Learning and Mentoring]]: making the lens common property
+- [[career-path/03_Staff_Engineer/02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: where structural insight lands
+- [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy]]: systems reading feeds strategy
+- [[career-path/03_Staff_Engineer/07_Organizational_Learning_and_Mentoring/00_overview|Organizational Learning and Mentoring]]: making the lens common property
 - [[career-path/11_Engineering_Manager/02_Team_Formation_and_Health/00_overview|Team Formation and Health (EM)]]: the manager's view of the same system
 
 ## Summary
 
-Systems thinking turns recurring problems from bugs into diagnoses: trace symptoms to structure and incentives, find the leverage point, intervene at the cause, and watch the loop change. Staff engineers with this lens fix things that stay fixed — because the system, not the symptom, changed.
+Systems thinking turns recurring problems from bugs into diagnoses: trace symptoms to structure and incentives, find the leverage point, intervene at the cause, and watch the loop change. Staff engineers with this lens fix things that stay fixed, because the system, not the symptom, changed.

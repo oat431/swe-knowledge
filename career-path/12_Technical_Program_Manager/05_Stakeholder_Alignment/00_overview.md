@@ -14,13 +14,13 @@ tags:
 
 # Stakeholder Alignment
 
-> **Core capability:** The TPM creates shared context among technical, business, and leadership stakeholders — so that expectations match reality, decisions are made with the same information, and nobody learns about the program's status from a surprise.
+> **Core capability:** The TPM creates shared context among technical, business, and leadership stakeholders, so that expectations match reality, decisions are made with the same information, and nobody learns about the program's status from a surprise.
 
 ## Why This Matters
 
-Multi-team programs have stakeholders with genuinely different incentives: engineering wants technical quality, product wants features and dates, leadership wants strategic outcomes and cost control, security wants risk reduction. The TPM's stakeholder work is not "managing expectations" — it is creating enough shared context that the different incentives don't produce different understandings of reality.
+Multi-team programs have stakeholders with genuinely different incentives: engineering wants technical quality, product wants features and dates, leadership wants strategic outcomes and cost control, security wants risk reduction. The TPM's stakeholder work is not "managing expectations"; it is creating enough shared context that the different incentives don't produce different understandings of reality.
 
-Alignment fails silently: the engineering team thinks the date is aspirational, product thinks it is committed, leadership builds a roadmap on it. The TPM's weekly status is the antidote — a single source of truth that every stakeholder reads because it tells them what they need to know in their language.
+Alignment fails silently: the engineering team thinks the date is aspirational, product thinks it is committed, leadership builds a roadmap on it. The TPM's weekly status is the antidote, a single source of truth that every stakeholder reads because it tells them what they need to know in their language.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ Alignment fails silently: the engineering team thinks the date is aspirational, 
 ## The Stakeholder Alignment Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MAP["Map stakeholders: who, what they care about"] --> PLAN["Plan communication: cadence, channel, content"]
     PLAN --> EXECUTE["Execute: status, reviews, steering committees"]
@@ -75,10 +76,10 @@ Status that nobody reads is misalignment with extra steps.
 
 ## Related Capabilities
 
-- [[01_Program_Structure_and_Charter/00_overview|Program Structure and Charter]]: governance is the stakeholder alignment forum
-- [[06_Decision_Facilitation/00_overview|Decision Facilitation]]: decisions are where alignment becomes action
+- [[career-path/12_Technical_Program_Manager/01_Program_Structure_and_Charter/00_overview|Program Structure and Charter]]: governance is the stakeholder alignment forum
+- [[career-path/12_Technical_Program_Manager/06_Decision_Facilitation/00_overview|Decision Facilitation]]: decisions are where alignment becomes action
 - [[career-path/11_Engineering_Manager/07_Manager_Communication/00_overview|Manager Communication (EM)]]: the manager's communication craft
 
 ## Summary
 
-Stakeholder alignment means mapping who matters and what they care about, communicating honestly in their language, keeping expectations in contact with reality, and resolving conflicts in governance rather than gossip. The TPM's status report is the program's single source of truth — and the trust that delivers bad news early is earned by delivering honest status always.
+Stakeholder alignment means mapping who matters and what they care about, communicating honestly in their language, keeping expectations in contact with reality, and resolving conflicts in governance rather than gossip. The TPM's status report is the program's single source of truth, and the trust that delivers bad news early is earned by delivering honest status always.

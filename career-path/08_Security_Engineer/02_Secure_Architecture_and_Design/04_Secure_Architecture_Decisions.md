@@ -5,7 +5,7 @@ capability_area: secure-architecture-and-design
 career_path: security-engineer
 prerequisite:
   - "[[01_Security_Principles_and_Quality_Attributes]]"
-  - "[[../01_Threat_Modeling_and_Risk/05_Risk_Rating_and_Treatment|Risk Rating and Treatment]]"
+  - "[[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/05_Risk_Rating_and_Treatment|Risk Rating and Treatment]]"
 tags:
   - career-path
   - security-engineer
@@ -53,6 +53,7 @@ Security architecture decisions often cross teams. Identity, platform, product, 
 ### 3. Decision lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     NEED["Security decision needed"] --> CONTEXT["Frame asset threat and constraints"]
     CONTEXT --> OPTIONS["Develop viable options"]
@@ -115,8 +116,8 @@ Choose one security-relevant architecture choice, such as an identity boundary, 
 - [[01_Security_Principles_and_Quality_Attributes|Security Principles and Quality Attributes]]
 - [[03_Zero_Trust_and_Segmentation|Zero Trust and Segmentation]]
 - [[05_Secrets_and_Cryptographic_Boundaries|Secrets and Cryptographic Boundaries]]
-- [[../01_Threat_Modeling_and_Risk/05_Risk_Rating_and_Treatment|Risk Rating and Treatment]]
-- [[../01_Threat_Modeling_and_Risk/06_Threat_Model_Maintenance|Threat Model Maintenance]]
+- [[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/05_Risk_Rating_and_Treatment|Risk Rating and Treatment]]
+- [[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/06_Threat_Model_Maintenance|Threat Model Maintenance]]
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]
 - [Security Architecture Template](F:\obsidian_note\document_template\14_Security/Security-Architecture.md)
 

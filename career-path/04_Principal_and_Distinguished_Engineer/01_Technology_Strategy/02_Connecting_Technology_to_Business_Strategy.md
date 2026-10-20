@@ -16,13 +16,13 @@ tags:
 
 # Connecting Technology to Business Strategy
 
-> **Core skill:** The principal engineer translates between market direction and technical implications — building the strategy translation layer where business capability maps to technology capability, and working with CFO, CPO, and CEO to co-develop strategy as a shared language.
+> **Core skill:** The principal engineer translates between market direction and technical implications, building the strategy translation layer where business capability maps to technology capability, and working with CFO, CPO, and CEO to co-develop strategy as a shared language.
 
 ## Why This Matters
 
-Organizations routinely produce two strategies that do not speak to each other: the business strategy written in revenue, market share, and product categories, and the technology strategy written in platforms, architectures, and migrations. The gap between them is where ambition dies — the business promises what the technology cannot deliver, and the technology builds what the business cannot sell.
+Organizations routinely produce two strategies that do not speak to each other: the business strategy written in revenue, market share, and product categories, and the technology strategy written in platforms, architectures, and migrations. The gap between them is where ambition dies. The business promises what the technology cannot deliver, and the technology builds what the business cannot sell.
 
-The principal engineer closes this gap by building a translation layer: business capabilities mapped to technology capabilities, cost structures modeled against growth assumptions, and market timing translated into platform readiness. This is not a bridging role between two functions — it is the synthesis that makes strategy possible at all.
+The principal engineer closes this gap by building a translation layer: business capabilities mapped to technology capabilities, cost structures modeled against growth assumptions, and market timing translated into platform readiness. This is not a bridging role between two functions. It is the synthesis that makes strategy possible at all.
 
 ## The Strategy Translation Layer
 
@@ -50,7 +50,7 @@ The map is a living artifact reviewed alongside the business strategy. When the 
 
 ## Working with the C-Suite
 
-The principal engineer works directly with CFO, CPO, and CEO — not as a delegate from engineering, but as a peer who brings the technology view to strategy formation.
+The principal engineer works directly with CFO, CPO, and CEO, not as a delegate from engineering, but as a peer who brings the technology view to strategy formation.
 
 | Executive | What They Need from the Principal | What the Principal Needs from Them |
 |-----------|----------------------------------|-----------------------------------|
@@ -79,6 +79,7 @@ When technology strategy and business strategy share a language, the quality of 
 | **Velocity** | Speed of market response | Speed of delivery capability |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     MARKET["Market signals and competitive moves"] --> BUS_STRAT["Business strategy: where we compete"]
     BUS_STRAT --> TRANSLATE["Translation layer: business to technology"]
@@ -146,8 +147,8 @@ flowchart LR
 
 - [[01_Technology_Strategy_at_Enterprise_Scale]]
 - [[03_Investment_Strategy_and_Capital_Allocation]]
-- [[02_Enterprise_and_Systems_of_Systems_Thinking/00_overview|Enterprise and Systems of Systems Thinking]]
-- [[04_Organizational_Influence/00_overview|Organizational Influence]]
+- [[career-path/04_Principal_and_Distinguished_Engineer/02_Enterprise_and_Systems_of_Systems_Thinking/00_overview|Enterprise and Systems of Systems Thinking]]
+- [[career-path/04_Principal_and_Distinguished_Engineer/04_Organizational_Influence/00_overview|Organizational Influence]]
 - [[career-path/03_Staff_Engineer/03_Technical_Strategy/06_Working_With_Product_Strategy|Working With Product Strategy (Staff)]]
 
 ## Summary

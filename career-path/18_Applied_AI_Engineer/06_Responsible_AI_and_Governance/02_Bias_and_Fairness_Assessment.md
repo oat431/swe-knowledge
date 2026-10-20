@@ -20,9 +20,9 @@ tags:
 
 ## Why This Is a Senior Skill
 
-Mid-level engineers know "bias is bad" and add "use diverse data" to a checklist. Senior engineers know that fairness metrics are mathematically incompatible with each other, that measurement requires defining groups and harms before touching data, and that in LLM applications most bias enters through retrieval, prompts, and deployment context — not model weights. They also know the difference between a disparity that causes real harm and a statistical difference that does not.
+Mid-level engineers know "bias is bad" and add "use diverse data" to a checklist. Senior engineers know that fairness metrics are mathematically incompatible with each other, that measurement requires defining groups and harms before touching data, and that in LLM applications most bias enters through retrieval, prompts, and deployment context, not model weights. They also know the difference between a disparity that causes real harm and a statistical difference that does not.
 
-The senior challenge is precision: every mitigation trades something — accuracy, scope, cost, or another group's outcome. The senior's job is to measure, choose, and document the trade-off so the decision survives scrutiny later.
+The senior challenge is precision: every mitigation trades something (accuracy, scope, cost, or another group's outcome). The senior's job is to measure, choose, and document the trade-off so the decision survives scrutiny later.
 
 ## Core Frameworks
 
@@ -45,7 +45,7 @@ The senior challenge is precision: every mitigation trades something — accurac
 | Calibration by group | Predictions mean the same thing across groups | Hardest to satisfy alongside others; use when confidence scores drive decisions |
 | Individual fairness | Similar individuals treated similarly | "Similar" is hard to define; useful for recommendation-like systems |
 
-These metrics are provably not all satisfiable at once — the impossibility theorems. Choosing one is a policy decision made with stakeholders, not a technical detail to be optimized away.
+These metrics are provably not all satisfiable at once: the impossibility theorems. Choosing one is a policy decision made with stakeholders, not a technical detail to be optimized away.
 
 ### Assessment Workflow
 
@@ -76,33 +76,33 @@ These metrics are provably not all satisfiable at once — the impossibility the
 
 ## In Practice
 
-**Define protected groups and harms before touching data.** The groups to protect come from the legal and social context — under Thailand's PDPA, sensitive data includes race, religion, health, and political opinion, so features processing such attributes carry a legal duty on top of an ethical one. Decide who could be harmed, how, and how you will detect the harm before building any test set.
+**Define protected groups and harms before touching data.** The groups to protect come from the legal and social context: under Thailand's PDPA, sensitive data includes race, religion, health, and political opinion, so features processing such attributes carry a legal duty on top of an ethical one. Decide who could be harmed, how, and how you will detect the harm before building any test set.
 
-**Fairness metrics conflict — pick the one matching the business harm.** You cannot satisfy demographic parity, equalized odds, and calibration simultaneously, so the choice must follow the harm: a hiring tool's worst failure is rejecting qualified candidates (equalized odds); a marketing tool's worst failure is systematically excluding a community (parity). Name the harm, then choose the metric, then document the choice.
+**Fairness metrics conflict: pick the one matching the business harm.** You cannot satisfy demographic parity, equalized odds, and calibration simultaneously, so the choice must follow the harm: a hiring tool's worst failure is rejecting qualified candidates (equalized odds); a marketing tool's worst failure is systematically excluding a community (parity). Name the harm, then choose the metric, then document the choice.
 
-**Disaggregate every headline metric.** A system with 95% overall accuracy can score 80% for Thai-language non-native speakers while nobody notices — the headline number hides it. Disaggregation by language, region, and demographic is the single highest-value fairness practice an applied AI engineer can adopt, and it costs nothing beyond stratified eval sets.
+**Disaggregate every headline metric.** A system with 95% overall accuracy can score 80% for Thai-language non-native speakers while nobody notices. The headline number hides it. Disaggregation by language, region, and demographic is the single highest-value fairness practice an applied AI engineer can adopt, and it costs nothing beyond stratified eval sets.
 
-**In RAG systems, bias usually enters through retrieval and prompts, not weights.** Before fine-tuning anything, audit what the retriever surfaces and what the system prompt asks the model to do — fixing a skewed corpus or a leading prompt is faster and more durable than retraining. Model-level fixes are the last resort, not the first.
+**In RAG systems, bias usually enters through retrieval and prompts, not weights.** Before fine-tuning anything, audit what the retriever surfaces and what the system prompt asks the model to do: fixing a skewed corpus or a leading prompt is faster and more durable than retraining. Model-level fixes are the last resort, not the first.
 
 **Bias audits are ongoing, not launch-day events.** Usage drift, model swaps, new markets, and new training data all change the exposure. Re-run the stratified eval suite at every significant release (see [[01_AI_Risk_Management]] for change-triggered re-assessment) and alert on subgroup metric drift, the same way you alert on latency.
 
-**Document the trade-off decision.** Record which metric was prioritized, why, and which disparities were accepted as residual — that record is what regulators, auditors, and successors will ask for. The write-up belongs in the [[03_Transparency_and_Model_Cards]] model card, not in a chat thread.
+**Document the trade-off decision.** Record which metric was prioritized, why, and which disparities were accepted as residual, that record is what regulators, auditors, and successors will ask for. The write-up belongs in the [[03_Transparency_and_Model_Cards]] model card, not in a chat thread.
 
 ## Practical Exercise
 
-Assess fairness for one AI feature — a support chatbot, resume screener, or content classifier:
+Assess fairness for one AI feature (a support chatbot, resume screener, or content classifier):
 1. Choose the system and define the protected groups relevant to its market (e.g. Thai vs non-Thai language users, age, region) and the concrete harms to watch
 2. Build a stratified test set with 50+ cases per group, mirroring real user distribution
 3. Run the system and compute at least two fairness metrics, disaggregated by group
 4. Identify the largest disparity and trace its root cause: data, retrieval, prompt, or model
 5. Choose and implement one mitigation (prompt constraint, guardrail, corpus fix, or fine-tune)
 6. Re-measure: verify the target disparity shrank and no new disparity appeared elsewhere
-7. Write the findings — metric choice, root cause, mitigation, residual risk — into the model card
+7. Write the findings (metric choice, root cause, mitigation, residual risk) into the model card
 
 ## Knowledge Connections
 
-- [[computing-foundation-note/Artificial_Intelligence/08_AI_Ethics_and_Future]] — fairness definitions and impossibility theorems
-- [[computing-foundation-note/Artificial_Intelligence/13_LLM_Evaluation_and_Guardrails]] — eval suites and guardrails that carry the measurement
-- [[01_AI_Risk_Management]] — bias as a scored risk class
-- [[03_Transparency_and_Model_Cards]] — where the trade-off decision gets documented
-- [[04_Regulation_and_Compliance]] — PDPA sensitive-data duties and EU AI Act bias obligations
+- [[computing-foundation-note/Artificial_Intelligence/08_AI_Ethics_and_Future]]: fairness definitions and impossibility theorems
+- [[computing-foundation-note/Artificial_Intelligence/13_LLM_Evaluation_and_Guardrails]]: eval suites and guardrails that carry the measurement
+- [[01_AI_Risk_Management]]: bias as a scored risk class
+- [[03_Transparency_and_Model_Cards]]: where the trade-off decision gets documented
+- [[04_Regulation_and_Compliance]]: PDPA sensitive-data duties and EU AI Act bias obligations

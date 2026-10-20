@@ -14,13 +14,13 @@ tags:
 
 # Manager Communication
 
-> **Core capability:** The engineering manager runs a communication system — cascading context down, representing the team accurately up, and keeping information flowing so that decisions are made with the best available truth.
+> **Core capability:** The engineering manager runs a communication system: cascading context down, representing the team accurately up, and keeping information flowing so that decisions are made with the best available truth.
 
 ## Why This Matters
 
 Managers are information routers with judgment attached. Context from leadership never reaches the team intact unless the manager translates it; team reality never reaches leadership accurately unless the manager represents it without spin. Both directions fail quietly: the team learns strategy from rumor, and leadership learns of trouble from customers.
 
-Communication is also the manager's visible craft — writing and speaking on behalf of people who cannot be in the room. The team's reputation, budget, and morale are built or eroded in meetings and documents the team never sees.
+Communication is also the manager's visible craft: writing and speaking on behalf of people who cannot be in the room. The team's reputation, budget, and morale are built or eroded in meetings and documents the team never sees.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ Communication is also the manager's visible craft — writing and speaking on be
 ## The Communication System
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     UP["Leadership context"] --> TRANSLATE["Translate and cascade down"]
     TRANSLATE --> TEAM["Team understands the why"]
@@ -65,7 +66,7 @@ Both directions must flow for the system to work; block either and distortion fi
 - [ ] Leadership messages reach the team translated, with context, within days
 - [ ] The team's reality reaches leadership without embellishment
 - [ ] Bad news is delivered in person (or live call), prepared, with space for reactions
-- [ ] Recurring meetings have purposes, agendas, and decisions — or die
+- [ ] Recurring meetings have purposes, agendas, and decisions, or die
 - [ ] Important decisions live in writing, findable by the team
 - [ ] The channel map (what goes where) is known and not overloaded
 - [ ] You hear about problems through built ears before they arrive via escalation
@@ -81,7 +82,7 @@ Both directions must flow for the system to work; block either and distortion fi
 
 ## Success Indicators
 
-- The team quotes strategy accurately — because the translation landed
+- The team quotes strategy accurately, because the translation landed
 - Leadership trusts your summaries without independent verification
 - Difficult announcements land clean: heard, understood, survivable
 - Decisions are findable in writing months later
@@ -89,11 +90,11 @@ Both directions must flow for the system to work; block either and distortion fi
 
 ## Related Capabilities
 
-- [[02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: communication quality is team health infrastructure
-- [[05_Organizational_Awareness_and_Influence/00_overview|Organizational Awareness and Influence]]: influence runs on this system
+- [[career-path/11_Engineering_Manager/02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: communication quality is team health infrastructure
+- [[career-path/11_Engineering_Manager/05_Organizational_Awareness_and_Influence/00_overview|Organizational Awareness and Influence]]: influence runs on this system
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/00_overview|Communication and Influence (Senior)]]: the foundation this formalizes
 - [[career-path/05_Tech_Lead/01_The_Tech_Lead_Role_and_Operating_Model/06_Working_With_Stakeholders|Working With Stakeholders (Tech Lead)]]: the lead-level counterpart
 
 ## Summary
 
-Manager communication is a system, not a talent: cascade context down with translation, represent the team upward without spin, deliver bad news with dignity, run meetings that decide, write documents that persist, design the channel map, and build ears for what is not said. The manager is the team's information immune system — distortions stop with you.
+Manager communication is a system, not a talent: cascade context down with translation, represent the team upward without spin, deliver bad news with dignity, run meetings that decide, write documents that persist, design the channel map, and build ears for what is not said. The manager is the team's information immune system: distortions stop with you.

@@ -23,6 +23,7 @@ tags:
 A capstone project is a deliberate, high-impact initiative designed to demonstrate that you are already operating at the next level. It is not just another project: it is a strategic choice to take on work that spans all dimensions of senior-level performance.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A[Identify Opportunity] --> B[Design Initiative]
     B --> C[Execute Across Dimensions]
@@ -77,6 +78,7 @@ Look for problems that:
 **Sources of capstone opportunities:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     A[Engineering Pain Points] --> E[Capstone Opportunities]
     B[Strategic Initiatives] --> E
@@ -144,6 +146,7 @@ Before executing, ensure:
 ### Execution Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TB
     subgraph "Phase 1: Foundation (Q1)"
         A1[Problem research and stakeholder interviews]

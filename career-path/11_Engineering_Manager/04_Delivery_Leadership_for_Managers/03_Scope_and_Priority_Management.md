@@ -15,13 +15,13 @@ tags:
 
 # Scope and Priority Management
 
-> **Core skill:** Treating scope as a negotiated portfolio — every request has a cost, every cost is a decision, and every decision is visible in one place — instead of letting work arrive through hallway conversations.
+> **Core skill:** Treating scope as a negotiated portfolio (every request has a cost, every cost is a decision, and every decision is visible in one place), instead of letting work arrive through hallway conversations.
 
 ## Why This Matters
 
-Team capacity is fixed; scope is not. Every request that reaches the team costs the same currency — engineer-days — and when additions arrive without anything leaving, the cost is paid silently: dates slip, quality corners get cut, and the team learns that saying yes to everything is the job. Most "delivery problems" are actually scope-management problems wearing a schedule costume.
+Team capacity is fixed; scope is not. Every request that reaches the team costs the same currency (engineer-days) and when additions arrive without anything leaving, the cost is paid silently: dates slip, quality corners get cut, and the team learns that saying yes to everything is the job. Most "delivery problems" are actually scope-management problems wearing a schedule costume.
 
-The manager's job is to make scope a negotiation instead of an absorption. That requires infrastructure: a single intake point, a visible triage, a decision log, and a default answer of "what should this displace?" rather than "yes." It also requires lightweight prioritization — value against effort is enough. Heavy frameworks (full RICE scoring with committees) become the work instead of serving it.
+The manager's job is to make scope a negotiation instead of an absorption. That requires infrastructure: a single intake point, a visible triage, a decision log, and a default answer of "what should this displace?" rather than "yes." It also requires lightweight prioritization: value against effort is enough. Heavy frameworks (full RICE scoring with committees) become the work instead of serving it.
 
 Scope discipline is also a sanity mechanism. Teams with visible scope decisions argue about priorities in the open, where arguments belong. Teams with invisible scope decisions argue about why everything is late, which is a worse argument with the same energy.
 
@@ -32,10 +32,10 @@ The foundational move: no work enters the team's queue without a decision, and e
 | Request Arrives As | The Decision It Actually Is |
 |--------------------|------------------------------|
 | "Quick question about the API" that becomes a project | Is this a project? Then: what displaces? |
-| Executive ask in a hallway | Same intake, same triage — no side doors for seniority |
+| Executive ask in a hallway | Same intake, same triage; no side doors for seniority |
 | Support ticket that keeps recurring | Fix-forward project or permanent toil? |
-| "Small tweak" to a committed feature | Scope change to a commitment — needs the commitment owner |
-| Idea from the team itself | Great — still enters the same funnel with the same honesty |
+| "Small tweak" to a committed feature | Scope change to a commitment: needs the commitment owner |
+| Idea from the team itself | Great: still enters the same funnel with the same honesty |
 
 The manager protects the funnel's singularity. The moment requests can bypass intake by reaching an engineer directly, the portfolio becomes a rumor and capacity becomes a mystery.
 
@@ -45,9 +45,9 @@ The manager protects the funnel's singularity. The moment requests can bypass in
 |---------------|---------|----------|
 | Intake | Every request with requester, value statement, and rough size | Nothing enters the team except through here |
 | Triage | Weekly review: classify, estimate roughly, decide or queue | 30 minutes, manager plus tech lead |
-| Decision log | What was accepted, deferred, declined — with dates and reasons | Searchable; the answer to "whatever happened to..." |
+| Decision log | What was accepted, deferred, declined; with dates and reasons | Searchable; the answer to "whatever happened to..." |
 | Active scope | The committed portfolio with owners | Matches the one priority list from [[01_Goal_Setting_and_Priorities]] |
-| Deferred list | Parked with revisit dates | Not a graveyard — items return on schedule |
+| Deferred list | Parked with revisit dates | Not a graveyard: items return on schedule |
 
 The decision log is the quiet hero: it converts "no" from a confrontation into a record, and it gives declined requesters a legitimate path back.
 
@@ -56,7 +56,7 @@ The decision log is the quiet hero: it converts "no" from a confrontation into a
 | Framework | Mechanics | Use When | Anti-Pattern |
 |-----------|-----------|----------|--------------|
 | **Value / effort** | Rough value score over rough size; sort | Almost always the right default | Pretending precision the inputs do not have |
-| **RICE-lite** | Reach times impact over effort, no committees | Comparing a backlog of similar-shaped items | Full RICE with working groups — the framework becomes the work |
+| **RICE-lite** | Reach times impact over effort, no committees | Comparing a backlog of similar-shaped items | Full RICE with working groups: the framework becomes the work |
 | **Strategic alignment** | Which goal does this serve? | Quarterly planning, large items | Everything claims to serve every goal |
 | **Cost of delay** | What breaks or compounds if this waits? | Deadline-sensitive items, risk work | Applying it to everything, making everything urgent |
 
@@ -64,7 +64,7 @@ The honest hierarchy: goal alignment first, value/effort second, and any framewo
 
 ## Interrupt Classification and Budgets
 
-Interrupts are scope that arrives wearing urgency. Classify and budget them rather than pretending they will not happen — the full practice lives in [[07_Delivery_Interrupts_and_Firefighting]].
+Interrupts are scope that arrives wearing urgency. Classify and budget them rather than pretending they will not happen. The full practice lives in [[07_Delivery_Interrupts_and_Firefighting]].
 
 | Class | Examples | Budget Approach |
 |-------|----------|-----------------|
@@ -73,7 +73,7 @@ Interrupts are scope that arrives wearing urgency. Classify and budget them rath
 | Opportunities | Conference talk, internal demo, partnership spike | Quarterly discretionary pool |
 | Production issues | Incidents, on-call escalations | Unbudgeted but measured; chronic load triggers system work |
 
-The budget makes the trade explicit: interrupt hours over budget come out of roadmap items, visibly, in the status report — not invisibly, in quality.
+The budget makes the trade explicit: interrupt hours over budget come out of roadmap items, visibly, in the status report, not invisibly, in quality.
 
 ## Saying No with Alternatives
 
@@ -81,16 +81,16 @@ The budget makes the trade explicit: interrupt hours over budget come out of roa
 
 | Instead Of | Say |
 |------------|-----|
-| "We don't have capacity" | "Not this quarter — it is queued for the Q3 triage on [date]" |
+| "We don't have capacity" | "Not this quarter: it is queued for the Q3 triage on [date]" |
 | "That's not our job" | "That sits with the platform team; I will introduce you to their EM" |
-| "No" | "Yes, if we drop X — do you want that trade?" |
+| "No" | "Yes, if we drop X. Do you want that trade?" |
 | "Maybe later" (meaning no) | "Later means January at the earliest; want me to log it with that revisit date?" |
 
-The this-not-that formula is the strongest: every acceptance names its casualty. Requesters who see casualties become self-filtering — they stop bringing items that cannot justify their cost.
+The this-not-that formula is the strongest: every acceptance names its casualty. Requesters who see casualties become self-filtering. They stop bringing items that cannot justify their cost.
 
 ## Scope Creep Detection
 
-Scope creep is scope growth without a decision — usually inside a committed item rather than around it.
+Scope creep is scope growth without a decision: usually inside a committed item rather than around it.
 
 | Creep Signal | Detection Method |
 |--------------|------------------|
@@ -100,7 +100,7 @@ Scope creep is scope growth without a decision — usually inside a committed it
 | Estimate-to-actual divergence on one item | One item at 200 percent while others are fine is creep, not estimation error |
 | New stakeholders appearing mid-item | Someone is expanding the audience without a decision |
 
-When creep is detected, the move is a scope conversation with the item owner — re-baseline the item or restore the original boundary, visibly.
+When creep is detected, the move is a scope conversation with the item owner: re-baseline the item or restore the original boundary, visibly.
 
 ## Communicating Scope Decisions
 
@@ -114,6 +114,7 @@ When creep is detected, the move is a scope conversation with the item owner —
 ## The Scope System
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     REQUEST["Request arrives through intake"] --> TRIAGE["Weekly triage with tech lead"]
     TRIAGE --> CLASSIFY["Classify roadmap interrupt or decline"]
@@ -142,7 +143,7 @@ flowchart TD
 ```markdown
 Decision on [request]: [Accepted / Deferred to date / Declined]
 
-Reason: [One sentence — goal alignment or value over effort]
+Reason: [One sentence, goal alignment or value over effort]
 
 If accepted:
 - Displaces: [item or date impact]

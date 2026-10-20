@@ -69,6 +69,7 @@ Use a reversible experiment when evidence is weak. Do not relax a control merely
 | Accessibility impact high | Offer equivalent accessible factors | Preserve assurance with alternative strong factors |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ACTION["Identify protected action"] --> IMPACT["Assess consequence and abuse evidence"]
     IMPACT --> ASSURANCE["Select assurance and recovery level"]

@@ -16,13 +16,13 @@ tags:
 
 # Decision Rights and Delegation
 
-> **Core skill:** The principal defines who decides what in a large technical organization — architecture, technology selection, standards, and exceptions — and how deep delegation goes, so decisions are made once, at the right level, without remaking them in every meeting.
+> **Core skill:** The principal defines who decides what in a large technical organization (architecture, technology selection, standards, and exceptions) and how deep delegation goes, so decisions are made once, at the right level, without remaking them in every meeting.
 
 ## Why This Matters
 
-At 500+ engineers, the organization's decision-making defaults to two failure modes without explicit decision rights. In the first, every decision drifts upward: no one is sure who decides, so the principal or CTO is pulled into every consequential choice, becoming the bottleneck. In the second, every decision is remade in every meeting: no one knows a decision was already made, so the same argument replays across forums until exhaustion settles it. Both modes waste the organization's most expensive time — senior technical judgment — on preventable churn.
+At 500+ engineers, the organization's decision-making defaults to two failure modes without explicit decision rights. In the first, every decision drifts upward: no one is sure who decides, so the principal or CTO is pulled into every consequential choice, becoming the bottleneck. In the second, every decision is remade in every meeting: no one knows a decision was already made, so the same argument replays across forums until exhaustion settles it. Both modes waste the organization's most expensive time (senior technical judgment) on preventable churn.
 
-Decision rights are the fix: a documented framework that names who decides each class of technical decision, how deep delegation goes, what requires escalation, and who may grant exceptions. The framework does not remove judgment — it channels judgment to the right level and makes decisions visible and durable. The principal's role is to design the framework, socialize it, and re-delegate as the organization grows so that the principal's own decision load stays bounded.
+Decision rights are the fix: a documented framework that names who decides each class of technical decision, how deep delegation goes, what requires escalation, and who may grant exceptions. The framework does not remove judgment. It channels judgment to the right level and makes decisions visible and durable. The principal's role is to design the framework, socialize it, and re-delegate as the organization grows so that the principal's own decision load stays bounded.
 
 ## The Decision Rights Framework
 
@@ -66,11 +66,11 @@ The rule of delegation: a decision right should sit at the lowest level where th
 
 ## Re-Delegation as the Organization Grows
 
-As the organization doubles, the principal must re-delegate: decisions that the principal made at 300 engineers must move to domain architects at 600, and decisions that domain architects made must move to team tech leads. Re-delegation is not abdication — it is scaling.
+As the organization doubles, the principal must re-delegate: decisions that the principal made at 300 engineers must move to domain architects at 600, and decisions that domain architects made must move to team tech leads. Re-delegation is not abdication. It is scaling.
 
 | Organization Size | Principal Decides | Domain Architects Decide | Team Tech Leads Decide |
 |-------------------|-------------------|-------------------------|------------------------|
-| 100-300 | Enterprise architecture; standards; new platforms; build vs buy above threshold | None — principal covers this scope | Service architecture within standards |
+| 100-300 | Enterprise architecture; standards; new platforms; build vs buy above threshold | None: principal covers this scope | Service architecture within standards |
 | 300-800 | Standards; new platforms; enterprise architecture that spans all domains | Cross-team architecture within a domain; domain-specific technology choices | Service architecture; technology choices from standards |
 | 800-2000 | Standards strategy; governance model design; enterprise architecture principles | Domain architecture; domain standards proposals; build vs buy within domain | Service architecture; technology choices; implementation patterns |
 | 2000+ | Governance model; principle authorship; standards portfolio strategy | All domain decisions within enterprise principles and standards | All team decisions within domain architecture and organizational standards |
@@ -79,7 +79,7 @@ The principal's re-delegation signal: when the principal is the bottleneck for a
 
 ## Decision Escalation Paths
 
-Escalation is a designed path, not a sign of failure. When a decision cannot be made at its designated level — because it is contested, because it sets a precedent, or because it exceeds the decider's authority — it follows a known escalation path to the next level.
+Escalation is a designed path, not a sign of failure. When a decision cannot be made at its designated level (because it is contested, because it sets a precedent, or because it exceeds the decider's authority), it follows a known escalation path to the next level.
 
 | Escalation Trigger | Escalation Path | What the Escalation Must Include |
 |--------------------|-----------------|----------------------------------|
@@ -95,7 +95,7 @@ Escalation is not failure. Escalation is the system working: the decision right 
 | Anti-Pattern | What It Looks Like | Why It Fails | Fix |
 |-------------|-------------------|--------------|-----|
 | **The implicit decider** | Everyone assumes someone else decides; decisions are made by whoever shows up to the meeting | Decisions are remade, contradicted, or never made | Publish the decision rights table; make it discoverable |
-| **The accountable committee** | "The architecture board decides" — a 12-person group with no named decider | The board never actually decides; decisions are deferred or dissolved | Every decision has a named decider; the board advises, the decider decides |
+| **The accountable committee** | "The architecture board decides": a 12-person group with no named decider | The board never actually decides; decisions are deferred or dissolved | Every decision has a named decider; the board advises, the decider decides |
 | **Delegation without principles** | "Teams decide their own architecture" with no principles or standards | Teams make conflicting decisions that compound into systemic fragility | Delegate with principles and standards as guardrails |
 | **The rubber-stamp escalation** | Every decision escalates to the principal "just to be safe" | The principal is the bottleneck; decision rights framework is ignored | Refuse to decide at the wrong level; send decisions back with guidance |
 | **Delegation that never re-delegates** | The same people decide the same class of decisions as the org doubles | Decision volume grows; lead time grows; the deciders burn out | Re-delegate at each organizational doubling |

@@ -49,6 +49,7 @@ The difference is not technical skill. It is **resilience engineering**: buildin
 ### Automated rollback flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DEPLOY["Deployment"] --> MONITOR["Monitor Metrics"]
     MONITOR --> CHECK{"Metrics OK?"}
@@ -104,6 +105,7 @@ spec:
 ### RTO/RPO trade-offs
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','fontSize':'14px','quadrant1Fill':'#1FB854','quadrant2Fill':'#1EB88E','quadrant3Fill':'#00B5FF','quadrant4Fill':'#1FB8AB','quadrant1TextFill':'#000000','quadrant2TextFill':'#000000','quadrant3TextFill':'#000000','quadrant4TextFill':'#000000','quadrantPointFill':'#FFBE00','quadrantPointTextFill':'#000000','quadrantXAxisTextFill':'#CDD3D1','quadrantYAxisTextFill':'#CDD3D1','quadrantInternalBorderStrokeFill':'#000000','quadrantExternalBorderStrokeFill':'#1FB854','quadrantTitleFill':'#CDD3D1'}}}%%
 quadrantChart
     title RTO and RPO Trade-offs
     x-axis High Cost --> Low Cost
@@ -134,6 +136,7 @@ quadrantChart
 ### Data migration rollback
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     START["Original Schema"] --> MIGRATE["Apply Migration"]
     MIGRATE --> TEST["Test in Staging"]
@@ -177,6 +180,7 @@ ALTER TABLE users DROP COLUMN email;
 ### Active-passive (warm standby)
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PRIMARY["Primary Region\\n(active)"] --> REPLICATE["Replicate Data"]
     REPLICATE --> STANDBY["Standby Region\\n(passive)"]
@@ -194,6 +198,7 @@ flowchart LR
 ### Active-active (multi-region)
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     REGION1["Region 1\\n(active)"] --> SYNC["Synchronous Replication"]
     SYNC --> REGION2["Region 2\\n(active)"]
@@ -213,6 +218,7 @@ flowchart LR
 ### Backup and restore (cold standby)
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PRIMARY["Primary Region"] --> BACKUP["Regular Backups"]
     BACKUP --> STORAGE["Backup Storage"]
@@ -339,8 +345,8 @@ flowchart TD
 - [[01_CI_CD_Pipelines]] : rollback is part of the deployment pipeline
 - [[02_Progressive_Delivery]] : progressive delivery reduces rollback blast radius
 - [[04_GitOps]] : GitOps enables instant rollback via Git revert
-- [[05_Capacity_and_Resilience/03_Disaster_Recovery]] : disaster recovery architectures
-- [[03_Incident_Response/02_Incident_Management]] : rollback is an incident response action
+- [[career-path/07_SRE_and_Platform_Engineer/05_Capacity_and_Resilience/03_Disaster_Recovery]] : disaster recovery architectures
+- [[career-path/07_SRE_and_Platform_Engineer/03_Incident_Response/02_Incident_Management]] : rollback is an incident response action
 - [[software-engineering-note/06_Software_Engineering_Operations/07_Capacity_and_Disaster_Recovery]] : disaster recovery foundations
 
 ## Key Takeaways

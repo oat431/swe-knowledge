@@ -84,7 +84,7 @@ Set up experiment tracking for a model you are working on:
 - [[02_Feature_Engineering_and_Feature_Store]]: feature versions are part of experiment tracking
 - [[03_Model_Training_and_Evaluation]]: experiments feed into evaluation
 - [[06_Model_Governance_and_Cards]]: experiment records feed model cards
-- [[04_Data_Quality/00_overview|Data Quality]]: data version tracking overlaps with quality tracking
+- [[career-path/09_Data_and_ML_Engineer/04_Data_Quality/00_overview|Data Quality]]: data version tracking overlaps with quality tracking
 
 ## Common Pitfalls
 

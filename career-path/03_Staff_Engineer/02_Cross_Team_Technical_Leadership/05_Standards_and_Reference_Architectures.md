@@ -16,13 +16,13 @@ tags:
 
 # Standards and Reference Architectures
 
-> **Core skill:** Producing standards and reference architectures that teams adopt willingly — standardizing the right things, making adoption cheaper than divergence, and shipping enablement with every standard.
+> **Core skill:** Producing standards and reference architectures that teams adopt willingly: standardizing the right things, making adoption cheaper than divergence, and shipping enablement with every standard.
 
 ## Why This Matters
 
-Every org pays a divergence tax: three caching layers, five configuration formats, seven ways to do retries. The tax is invisible in any single team and enormous in aggregate — integration pain, onboarding cost, security holes in the variants nobody audits. Standards are the staff engineer's instrument for taxing the tax, but only if they are built the right way: standards that teams adopt willingly, not standards that are policed into compliance.
+Every org pays a divergence tax: three caching layers, five configuration formats, seven ways to do retries. The tax is invisible in any single team and enormous in aggregate: integration pain, onboarding cost, security holes in the variants nobody audits. Standards are the staff engineer's instrument for taxing the tax, but only if they are built the right way: standards that teams adopt willingly, not standards that are policed into compliance.
 
-The economics decide everything: a standard is adopted when **the cost of adopting is less than the cost of diverging**, measured in effort, risk, and career terms. The standard that ignores this math becomes a document that everyone nods at and nobody follows. The reference architecture is the standard's operating manual — the patterns, the approved options, the when-to-use guidance that makes the standard executable — and enablement tooling is what makes the math work.
+The economics decide everything: a standard is adopted when **the cost of adopting is less than the cost of diverging**, measured in effort, risk, and career terms. The standard that ignores this math becomes a document that everyone nods at and nobody follows. The reference architecture is the standard's operating manual (the patterns, the approved options, the when-to-use guidance that makes the standard executable) and enablement tooling is what makes the math work.
 
 ## What to Standardize vs Leave Local
 
@@ -89,9 +89,10 @@ Exceptions are the standard's feedback channel: recurring exceptions are evidenc
 | Yearly | Each standard is judged: does it still pay its tax? |
 | On trigger | A repeated exception or a new pattern forces an early review |
 
-Retirement is part of the lifecycle: a standard that outlives its reason is next generation's debt. Retired standards get a tombstone note — what it was, why it died — so the next person does not reinvent it or fear it.
+Retirement is part of the lifecycle: a standard that outlives its reason is next generation's debt. Retired standards get a tombstone note (what it was, why it died) so the next person does not reinvent it or fear it.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DIVERGENCE["Repeated divergence"] --> TAX["Name the tax"]
     TAX --> SCOPE["Standardize or leave local"]
@@ -107,7 +108,7 @@ flowchart TD
 ## Practical Applications
 
 ```markdown
-# Standard — [name] — [status: active]
+# Standard: [name], [status: active]
 
 ## The tax
 - [ ] What divergence costs: [integration, risk, onboarding]

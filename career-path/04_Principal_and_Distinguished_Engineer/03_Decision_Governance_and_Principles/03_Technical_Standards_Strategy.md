@@ -16,13 +16,13 @@ tags:
 
 # Technical Standards Strategy
 
-> **Core skill:** The principal decides which technologies and practices to standardize — and which to leave free — based on the economic rule that a standard is justified only when the cost of the standard is less than the cost of divergence without it.
+> **Core skill:** The principal decides which technologies and practices to standardize (and which to leave free) based on the economic rule that a standard is justified only when the cost of the standard is less than the cost of divergence without it.
 
 ## Why This Matters
 
 At 500+ engineers, every unstandardized technology choice is a compounding cost: each team learns a different database, builds different deployment patterns, and hires for different skill sets. The operation team runs N different things, the security team audits N different things, and an engineer transferring teams re-ramps on every new stack. Standardization reduces this combinatorial cost. But standardization also has a cost: it constrains teams, slows adoption of superior alternatives, and creates a compliance overhead that teams resent.
 
-The principal's standards strategy is an economic decision executed with organizational judgment. The core rubric — standardize when the cost of the standard is less than the cost of divergence — looks clean on paper. In practice, both costs are estimates, both change over time, and both are contested by the teams that live under the standard or the divergence. The principal's skill is making the decision transparently, revisiting it on evidence, and knowing when a standard has become a millstone.
+The principal's standards strategy is an economic decision executed with organizational judgment. The core rubric (standardize when the cost of the standard is less than the cost of divergence) looks clean on paper. In practice, both costs are estimates, both change over time, and both are contested by the teams that live under the standard or the divergence. The principal's skill is making the decision transparently, revisiting it on evidence, and knowing when a standard has become a millstone.
 
 ## The Standardization Decision
 
@@ -52,13 +52,14 @@ The cost of divergence is the sum of costs the organization pays because teams c
 | **Vendor and license complexity** | Each new technology introduces new license terms, support contracts, and vendor relationships | Open-source license compliance across 50+ direct dependencies |
 | **Knowledge fragmentation** | Best practices, patterns, and gotchas are distributed across silos instead of shared | The "right way to do auth" is different on every team |
 
-The cost of divergence is not the cost of the technology — it is the systemic cost of diversity multiplied by the number of teams that diverge.
+The cost of divergence is not the cost of the technology. It is the systemic cost of diversity multiplied by the number of teams that diverge.
 
 ## The Standard Lifecycle
 
 Standards, like principles, have a lifecycle. A standard that never changes is a standard that has become irrelevant or oppressive.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PROPOSE["Propose: divergence cost exceeds standardization cost"] --> EVALUATE["Evaluate: pilot with 2-3 volunteer teams"]
     EVALUATE --> ADOPT["Adopt: standard published with tooling, templates, and migration path"]
@@ -80,7 +81,7 @@ flowchart TD
 
 ## Standards as Defaults, Not Laws
 
-The effective standard is a default — the path of least resistance — not a law enforced by compliance police. The distinction matters because laws invite routing-around; defaults invite adoption.
+The effective standard is a default, the path of least resistance, not a law enforced by compliance police. The distinction matters because laws invite routing-around; defaults invite adoption.
 
 | Law Model | Default Model |
 |-----------|---------------|
@@ -99,11 +100,11 @@ Every standard should include its sunset condition at adoption. Without a sunset
 |---------------|---------|
 | **Technology obsolescence** | The standard technology is no longer actively maintained upstream |
 | **Industry shift** | A new paradigm makes the standard pattern obsolete; the industry has moved |
-| **Exception rate** | Exception rate exceeds 30 percent of new projects for two consecutive quarters — the standard is no longer serving |
+| **Exception rate** | Exception rate exceeds 30 percent of new projects for two consecutive quarters. The standard is no longer serving |
 | **Cost inversion** | The cost of maintaining the standard's tooling exceeds the divergence cost it was meant to prevent |
 | **Organizational change** | The organization's strategy or structure changes; the standard no longer fits |
 
-When a standard sunsets, the migration off it is as deliberate as the adoption onto it was. Unmaintained standards left in place are technical debt with organizational memory loss — nobody remembers why it exists, but everyone must comply.
+When a standard sunsets, the migration off it is as deliberate as the adoption onto it was. Unmaintained standards left in place are technical debt with organizational memory loss. Nobody remembers why it exists, but everyone must comply.
 
 ## Practical Applications
 
@@ -114,7 +115,7 @@ When a standard sunsets, the migration off it is as deliberate as the adoption o
 
 ## Divergence Cost
 - Current state: [how many teams use what]
-- Cost of divergence: [operational diversity, mobility, hiring, security — quantified where possible]
+- Cost of divergence: [operational diversity, mobility, hiring, security, quantified where possible]
 
 ## Standardization Proposal
 - Proposed standard: [technology or practice]
@@ -173,4 +174,4 @@ When a standard sunsets, the migration off it is as deliberate as the adoption o
 
 ## Summary
 
-The standards strategy is an economic function: standardize when the cost of the standard is less than the cost of divergence, make the standard the default path through tooling and templates, provide a principled exception path, and include the sunset condition at adoption. Standards are defaults, not laws — they work because they are the easiest path, not because they are enforced. The principal owns the portfolio: what to standardize, when to adopt, when to sunset, and the economic case for each.
+The standards strategy is an economic function: standardize when the cost of the standard is less than the cost of divergence, make the standard the default path through tooling and templates, provide a principled exception path, and include the sunset condition at adoption. Standards are defaults, not laws. They work because they are the easiest path, not because they are enforced. The principal owns the portfolio: what to standardize, when to adopt, when to sunset, and the economic case for each.

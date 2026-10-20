@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-Technical debt is the easiest investment to defer and the hardest to fund. Every quarter, the business case for a feature ships in dollars and the business case for paying down debt ships in engineering intuition — and dollars win. The principal's job is to close that gap: projecting debt growth forward, quantifying the compounding cost of inaction, and making the modernization case in language that financial decision-makers recognize.
+Technical debt is the easiest investment to defer and the hardest to fund. Every quarter, the business case for a feature ships in dollars and the business case for paying down debt ships in engineering intuition, and dollars win. The principal's job is to close that gap: projecting debt growth forward, quantifying the compounding cost of inaction, and making the modernization case in language that financial decision-makers recognize.
 
 At the principal level, debt analysis is not a list of grievances about messy code. It is scenario modeling: given current architecture, team allocation, and growth trajectory, what does the debt curve look like in 2, 3, and 5 years? Where does it cross from manageable to crisis? And what investment now prevents a forced rewrite later? The principal translates engineering intuition into a business case that can compete for capital.
 
@@ -60,7 +60,7 @@ Build three scenarios for every significant debt cluster:
 | **Tactical remediation** | Teams allocate 20% capacity to debt in their own systems | Partial: slows the curve but does not bend it |
 | **Strategic modernization** | Dedicated team(s) address systemic debt with platform investment | Transformational: bends the curve downward |
 
-The gap between the No Intervention curve and the Strategic Modernization curve is the cost of inaction. The principal's business case is built on that gap — and the compound cost of delaying intervention.
+The gap between the No Intervention curve and the Strategic Modernization curve is the cost of inaction. The principal's business case is built on that gap, and the compound cost of delaying intervention.
 
 ## The Modernization Business Case
 
@@ -71,12 +71,12 @@ A modernization business case speaks three languages: engineering (what changes)
 | **Current state** | All | Quantified debt: velocity erosion, incident cost, onboarding time, with trend lines |
 | **Future state** | Engineering | Target architecture, capability improvements, debt eliminated |
 | **Investment required** | Finance | Engineer-months, calendar quarters, opportunity cost of diverted capacity |
-| **Return on investment** | Finance, Product | Velocity recovery, incident reduction, capability enablement, risk reduction — in dollars or delivery capacity |
+| **Return on investment** | Finance, Product | Velocity recovery, incident reduction, capability enablement, risk reduction, in dollars or delivery capacity |
 | **Cost of delay** | Finance, Executive | How much more expensive and risky remediation becomes each quarter of inaction |
 | **Non-investment scenario** | All | What happens if we do nothing: the projected crisis point |
 | **Phased plan** | All | Commitment points, milestones, success measures per phase |
 
-The principal writes the current state and the cost of delay. The rest is co-authored with engineering leadership and finance partners. The case must survive quarterly budget pressure — which means it is updated with fresh data each quarter and the cost of delay is recalculated from the present, not from the original proposal date.
+The principal writes the current state and the cost of delay. The rest is co-authored with engineering leadership and finance partners. The case must survive quarterly budget pressure, which means it is updated with fresh data each quarter and the cost of delay is recalculated from the present, not from the original proposal date.
 
 ## When Debt Is Intentional
 
@@ -94,6 +94,7 @@ The principal's role in intentional debt: require the repayment plan before the 
 ## The Debt Futures Pipeline
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CLASSIFY["Classify debt: corrosive, strategic, platform, capability, uncertainty"] --> MODEL["Model debt growth under three scenarios"]
     MODEL --> CURVE["Project the debt curve: no intervention, tactical, strategic"]
@@ -155,10 +156,10 @@ flowchart TD
 
 - [[01_Technology_Foresight]]: foresight that identifies when platform choices will become debt
 - [[06_Decision_Making_Under_Deep_Uncertainty]]: methods for deciding when to remediate under uncertainty
-- [[03_Decision_Governance_and_Principles/00_overview|Decision Governance and Principles]]: the investment governance that funds modernization
-- [[01_Technology_Strategy/00_overview|Technology Strategy]]: the strategy cycle that incorporates debt projections
+- [[career-path/04_Principal_and_Distinguished_Engineer/03_Decision_Governance_and_Principles/00_overview|Decision Governance and Principles]]: the investment governance that funds modernization
+- [[career-path/04_Principal_and_Distinguished_Engineer/01_Technology_Strategy/00_overview|Technology Strategy]]: the strategy cycle that incorporates debt projections
 - [[career-path/03_Staff_Engineer/06_Technical_Risk_and_Judgment/02_Architecture_Erosion|Architecture Erosion (Staff)]]: the erosion patterns that become debt futures
 
 ## Summary
 
-Technical debt futures is the principal's forward-looking discipline: classifying debt by type and intentionality, projecting growth under multiple scenarios with quantitative models, building modernization business cases that translate engineering drag into financial cost of delay, and distinguishing corrosive debt from intentional borrowing with a documented repayment plan. The measure of success is not zero debt — it is that debt projections inform investment decisions and that the organization can name the date when each intentional debt will be repaid.
+Technical debt futures is the principal's forward-looking discipline: classifying debt by type and intentionality, projecting growth under multiple scenarios with quantitative models, building modernization business cases that translate engineering drag into financial cost of delay, and distinguishing corrosive debt from intentional borrowing with a documented repayment plan. The measure of success is not zero debt. It is that debt projections inform investment decisions and that the organization can name the date when each intentional debt will be repaid.

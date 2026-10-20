@@ -17,15 +17,15 @@ tags:
 
 # Revenue Models and Forecasting
 
-> **Core skill:** Modeling how money actually arrives — engagement shapes, pipeline math, and conservative forecasts that survive contact with reality.
+> **Core skill:** Modeling how money actually arrives: engagement shapes, pipeline math, and conservative forecasts that survive contact with reality.
 
 ## Why This Matters
 
 A revenue model is not a label on an invoice; it is a shape of cash. Hourly work pays linearly and stops when you stop. Retainers pay in calm repeating pulses. Products pay late but can pay while you sleep. Fixed-price work pays a known amount against an uncertain cost. The mix you choose determines how predictable your income is, how much risk each month carries, and how much of your time is sellable at all.
 
-Forecasting is where discipline shows. Most independent income collapses come from forecasts built on best cases: the big proposal counted as won, the client's verbal commitment treated as signed, the conversion rate taken from the single best month. A conservative forecast is not pessimism — it is the operating budget. Upside is a bonus; the conservative case must cover the cost baseline or the plan is fiction.
+Forecasting is where discipline shows. Most independent income collapses come from forecasts built on best cases: the big proposal counted as won, the client's verbal commitment treated as signed, the conversion rate taken from the single best month. A conservative forecast is not pessimism. It is the operating budget. Upside is a bonus; the conservative case must cover the cost baseline or the plan is fiction.
 
-Pipeline math turns sales from a mystery into arithmetic. If twenty conversations yield six proposals, and six proposals yield two wins, then a monthly target of two wins implies a standing flow of twenty conversations. Once you know the ratios, you know exactly how much selling next quarter requires — and whether your current activity is enough.
+Pipeline math turns sales from a mystery into arithmetic. If twenty conversations yield six proposals, and six proposals yield two wins, then a monthly target of two wins implies a standing flow of twenty conversations. Once you know the ratios, you know exactly how much selling next quarter requires, and whether your current activity is enough.
 
 ## Revenue Models Compared
 
@@ -40,7 +40,7 @@ Pipeline math turns sales from a mystery into arithmetic. If twenty conversation
 | Training and workshops | Day rate for teaching | High per day, lumpy pipeline | Feast and famine | An audience and material exist |
 | Fractional or advisory | Part-time executive capacity | High rate, long horizon | Commitment creep | Track record and relationship are strong |
 
-Most independent businesses run two or three models deliberately: one for cash flow, one for margin, one for leverage. Running none of them deliberately is also a choice — the accidental one.
+Most independent businesses run two or three models deliberately: one for cash flow, one for margin, one for leverage. Running none of them deliberately is also a choice, the accidental one.
 
 ## Pipeline Math
 
@@ -48,11 +48,11 @@ Pipeline is a funnel with measurable ratios. Track the counts every month and th
 
 | Stage | Example Count | Conversion | Note |
 |-------|---------------|------------|------|
-| Conversations and leads | 20 | — | Inbound, referrals, outbound, community |
+| Conversations and leads | 20 | N/A | Inbound, referrals, outbound, community |
 | Qualified opportunities | 10 | 50 percent | Problem fits the offer; budget plausible |
 | Proposals sent | 6 | 60 percent | Priced and scoped |
 | Wins | 2 | 33 percent | Signed contracts |
-| Average engagement value | 150,000 | — | Blended across models |
+| Average engagement value | 150,000 | N/A | Blended across models |
 
 Two rules keep the math honest. First, forecast only from signed contracts; weighted pipeline is tracked separately as a leading indicator, never as revenue. Second, keep pipeline coverage above three times the target: if the month needs two wins, there should be roughly six qualified live proposals in view, because roughly one in three closes.
 
@@ -64,9 +64,10 @@ Two rules keep the math honest. First, forecast only from signed contracts; weig
 | Base | Signed work plus high-probability renewals and repeat clients | The working plan; reviewed monthly |
 | Best | Everything in the pipeline converts on schedule | Motivation, not planning; never budgeted against |
 
-Seasonality, collection lag, and concentration belong in every forecast. Invoices are not cash: a net-30 client paying on day 45 means this month's revenue arrives next quarter's bank balance. And a single client above roughly a third of revenue is not a forecast line — it is a business risk.
+Seasonality, collection lag, and concentration belong in every forecast. Invoices are not cash: a net-30 client paying on day 45 means this month's revenue arrives next quarter's bank balance. And a single client above roughly a third of revenue is not a forecast line. It is a business risk.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     LEADS["Leads and conversations"] --> PROPOSALS["Proposals sent"]
     PROPOSALS --> WINS["Signed wins"]
@@ -112,7 +113,7 @@ Monthly forecast, filled from records rather than memory:
 
 ## Success Indicators
 
-- Forecast variance is small and explainable — surprises are rare and named
+- Forecast variance is small and explainable. Surprises are rare and named
 - No single client is near a third of revenue, or the exposure is deliberate and managed
 - Two or more revenue models are active, each with a defined role
 - Collections are predictable because payment terms and deposits are enforced
@@ -123,7 +124,7 @@ Monthly forecast, filled from records rather than memory:
 - [[01_Cost_Structures_and_Runway]]: the cost baseline is the line every forecast must clear
 - [[03_Financial_Planning_for_Solopreneurs]]: forecasts feed the money ritual and reserves
 - [[06_Unit_Economics_of_Small_Products]]: product revenue is judged by different math than services
-- [[06_Sales_and_Client_Communication/00_overview|Sales and Client Communication]]: pipeline math depends on the sales conversation quality
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/06_Sales_and_Client_Communication/00_overview|Sales and Client Communication]]: pipeline math depends on the sales conversation quality
 - [[career-path/13_Project_and_Program_Manager/01_Initiation_and_Charter/02_Business_Case_Development|Business Case Development (PjM)]]: structured business case thinking applied to a business of one
 
 ## Summary

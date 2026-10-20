@@ -35,6 +35,7 @@ Architecture and design judgment is not about knowing the "right" answer. It is 
 ## The Senior Engineer's Role in Architecture
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph MID["Mid-Level Engineer"]
         M1["Implements given design"]
@@ -66,6 +67,7 @@ flowchart TD
 ## Concept Map
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PROBLEM["Problem Understanding"] --> OPTIONS["Generate Options"]
     OPTIONS --> EVALUATE["Evaluate Trade-offs"]
@@ -87,7 +89,7 @@ Before diving into architecture judgment, you should understand:
 - [[software-engineering-note/02_Software_Architecture/01_Architecture_Fundamentals]]: Architecture fundamentals and styles
 - [[software-engineering-note/02_Software_Architecture/02_Quality_Attributes_Overview]]: Quality attributes (performance, availability, security, etc.)
 - [[software-engineering-note/03_Software_Design/01_Design_Fundamentals_and_Principles]]: Design principles (SOLID, DRY, separation of concerns)
-- [[02_Problem_Framing_and_Requirements/00_overview]]: Problem framing and requirements engineering
+- [[career-path/02_Senior_Software_Engineer/02_Problem_Framing_and_Requirements/00_overview]]: Problem framing and requirements engineering
 
 ## Progress Tracker
 
@@ -104,9 +106,9 @@ Before diving into architecture judgment, you should understand:
 - [[body-of-knowledge/SWEBOK/SWEBOK v4 - Overview]] : SWEBOK foundation
 - [[software-engineering-note/02_Software_Architecture/Software Architecture Overview]] : Architecture knowledge base
 - [[software-engineering-note/03_Software_Design/Software Design Note Overview]] : Design knowledge base
-- [[01_Technical_Ownership/05_Decision_Ownership]] : Decision ownership complements architecture judgment
-- [[02_Problem_Framing_and_Requirements/07_Prioritization]] : Prioritization informs architecture trade-offs
-- [[02_Problem_Framing_and_Requirements/08_Requirements_Risk]] : Requirements risk affects architecture decisions
+- [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/05_Decision_Ownership]] : Decision ownership complements architecture judgment
+- [[career-path/02_Senior_Software_Engineer/02_Problem_Framing_and_Requirements/07_Prioritization]] : Prioritization informs architecture trade-offs
+- [[career-path/02_Senior_Software_Engineer/02_Problem_Framing_and_Requirements/08_Requirements_Risk]] : Requirements risk affects architecture decisions
 
 ## Key Takeaways
 

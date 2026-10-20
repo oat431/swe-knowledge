@@ -17,15 +17,15 @@ tags:
 
 # Security as a Quality Attribute
 
-> **Core skill:** Treating security properties — confidentiality, integrity, availability, accountability — as architectural drivers that determine trust boundaries, encryption points, authentication gates, and authorization models, rather than as features bolted on after design.
+> **Core skill:** Treating security properties (confidentiality, integrity, availability, accountability) as architectural drivers that determine trust boundaries, encryption points, authentication gates, and authorization models, rather than as features bolted on after design.
 
 ## Why This Matters
 
-Security is not a feature you add to a finished system. It is a set of architectural properties — confidentiality, integrity, availability, accountability — that every structural decision either supports or undermines. A system designed without security architecture is a system where every component trusts every other component, every connection is in the clear, and every access control decision is local and inconsistent. Securing that system after the fact means unwinding assumptions baked into the structure — which is why retrofitted security is the most expensive kind.
+Security is not a feature you add to a finished system. It is a set of architectural properties (confidentiality, integrity, availability, accountability) that every structural decision either supports or undermines. A system designed without security architecture is a system where every component trusts every other component, every connection is in the clear, and every access control decision is local and inconsistent. Securing that system after the fact means unwinding assumptions baked into the structure, which is why retrofitted security is the most expensive kind.
 
-The architect treats security as a first-class quality attribute: writing scenarios that describe threats and expected responses, defining trust boundaries that divide the system into zones of differing trust, placing encryption at those boundaries rather than everywhere or nowhere, and designing authentication and authorization as architectural services, not as code scattered across components. The architect is not the security specialist — but the architect owns the structural decisions that make the specialist's work possible.
+The architect treats security as a first-class quality attribute: writing scenarios that describe threats and expected responses, defining trust boundaries that divide the system into zones of differing trust, placing encryption at those boundaries rather than everywhere or nowhere, and designing authentication and authorization as architectural services, not as code scattered across components. The architect is not the security specialist, but the architect owns the structural decisions that make the specialist's work possible.
 
-This note covers the security quality attributes, architectural tactics for each, and the structural decisions — encryption boundaries, authentication gates, authorization models — that embed security in architecture rather than bolting it on.
+This note covers the security quality attributes, architectural tactics for each, and the structural decisions (encryption boundaries, authentication gates, authorization models) that embed security in architecture rather than bolting it on.
 
 ## Security Quality Attributes
 
@@ -87,6 +87,7 @@ The architectural decision is not whether to encrypt but where: every encryption
 | **PBAC** | Permissions defined as policies evaluated at runtime | Flexible; externalized authorization | Policy language learning curve | Regulated or compliance-heavy domains |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     THREATS["Threat scenarios identified"] --> BOUNDARY["Define trust boundaries and zones"]
     BOUNDARY --> ENCRYPTION["Place encryption at zone boundaries"]
@@ -106,7 +107,7 @@ flowchart TD
 
 - [ ] Trust boundaries are defined and diagrammed: what zones exist, and what crosses between them
 - [ ] Encryption is placed at zone boundaries, not uniformly everywhere
-- [ ] Authentication is centralized or uses consistent token-based patterns — not per-component login
+- [ ] Authentication is centralized or uses consistent token-based patterns, not per-component login
 - [ ] Authorization model is selected and consistent across the system
 - [ ] Audit trail covers security-relevant events with integrity guarantees
 - [ ] Threat scenarios exist for each trust boundary and drive architecture decisions
@@ -157,12 +158,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[01_Quality_Attribute_Workshops]] — how security scenarios are created and prioritized
-- [[07_Quality_Attribute_Trade_Offs]] — security vs performance and usability trade-offs
-- [[05_Security_Architecture/00_overview|Security Architecture]] — full security architecture discipline
-- [[06_Data_Architecture/00_overview|Data Architecture]] — data security, encryption at rest, and access controls
-- [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/00_overview|Quality Reliability Security (Senior)]] — security implementation at the team level
+- [[01_Quality_Attribute_Workshops]]: how security scenarios are created and prioritized
+- [[07_Quality_Attribute_Trade_Offs]]: security vs performance and usability trade-offs
+- [[career-path/06_Software_Architect/05_Security_Architecture/00_overview|Security Architecture]]: full security architecture discipline
+- [[career-path/06_Software_Architect/06_Data_Architecture/00_overview|Data Architecture]]: data security, encryption at rest, and access controls
+- [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/00_overview|Quality Reliability Security (Senior)]]: security implementation at the team level
 
 ## Summary
 
-Security as an architectural driver means designing trust boundaries, encryption points, authentication gates, and authorization models before a line of code is written — because retrofitting security into a system that was not structured for it is the most expensive kind of security work. The five security quality attributes — confidentiality, integrity, availability, accountability, authenticity — each demand specific architectural tactics: encryption at boundaries rather than everywhere, centralized authentication with distributed validation, externalized authorization, and audit trails with integrity guarantees. The architect places security controls at trust boundaries, documents the model, and records the trade-offs — because security architecture is not about eliminating risk, it is about making the residual risk explicit and accepted.
+Security as an architectural driver means designing trust boundaries, encryption points, authentication gates, and authorization models before a line of code is written, because retrofitting security into a system that was not structured for it is the most expensive kind of security work. The five security quality attributes (confidentiality, integrity, availability, accountability, authenticity) each demand specific architectural tactics: encryption at boundaries rather than everywhere, centralized authentication with distributed validation, externalized authorization, and audit trails with integrity guarantees. The architect places security controls at trust boundaries, documents the model, and records the trade-offs, because security architecture is not about eliminating risk, it is about making the residual risk explicit and accepted.

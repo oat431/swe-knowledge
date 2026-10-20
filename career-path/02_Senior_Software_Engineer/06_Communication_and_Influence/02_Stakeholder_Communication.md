@@ -27,6 +27,7 @@ If you can't explain why a technical decision matters to the business, you can't
 ## Stakeholder Types
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph Technical Stakeholders
         Eng[Engineers]
@@ -67,14 +68,15 @@ flowchart TD
 ### The Three-Level Communication Model
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     Level1[Level 1: Executive Summary<br/>1-2 sentences<br/>Business impact only] --> Level2
     Level2[Level 2: Manager Summary<br/>1-2 paragraphs<br/>Business impact + high-level technical] --> Level3
     Level3[Level 3: Technical Details<br/>Full document<br/>Complete technical explanation]
     
-    style Level1 fill:#e1f5ff
-    style Level2 fill:#fff4e1
-    style Level3 fill:#f0f0f0
+    style Level1 fill:#00B5FF,stroke:#000000,color:#000000
+    style Level2 fill:#FFBE00,stroke:#000000,color:#000000
+    style Level3 fill:#19362D,stroke:#000000,color:#CDD3D1
 ```
 
 **Example: Database migration**

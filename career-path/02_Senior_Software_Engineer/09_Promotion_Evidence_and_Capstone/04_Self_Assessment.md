@@ -28,6 +28,7 @@ Self-assessment is the bridge between doing senior-level work and being recogniz
 - **Development stalls:** Without knowing your gaps, you cannot plan targeted growth
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A[Do Great Work] --> B[Self-Assess]
     B --> C{Ready?}
@@ -73,6 +74,7 @@ Use a 1-5 scale for each competency area:
 For each self-rating, ask: "What specific evidence supports this rating?"
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     A[Rate Competency] --> B{Can I cite 3+ examples?}
     B -->|Yes| C[Rating is supported]
@@ -143,6 +145,7 @@ For each gap, define:
 Rate yourself across these dimensions and calculate your overall readiness:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TB
     subgraph "Readiness Dimensions"
         A[Technical Scope: 0-10]

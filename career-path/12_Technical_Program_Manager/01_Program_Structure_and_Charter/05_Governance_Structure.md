@@ -20,9 +20,9 @@ tags:
 
 ## Why This Matters
 
-Governance is the program's decision-making operating system. Without designed governance, every decision escalates unpredictably — sometimes to the wrong person, sometimes to nobody, sometimes to a meeting that was never scheduled. Programs with bad governance feel chaotic: decisions are made and unmade, authority is unclear, and the TPM spends half the week chasing approvals that should have been pre-wired.
+Governance is the program's decision-making operating system. Without designed governance, every decision escalates unpredictably: sometimes to the wrong person, sometimes to nobody, sometimes to a meeting that was never scheduled. Programs with bad governance feel chaotic: decisions are made and unmade, authority is unclear, and the TPM spends half the week chasing approvals that should have been pre-wired.
 
-Good governance is boring by design. Stakeholders know which forum decides what, decisions stick, and escalation follows a predictable path. The TPM designs governance once at program initiation, then operates it — tweaking the cadence and membership as the program evolves, but never improvising the structure mid-flight.
+Good governance is boring by design. Stakeholders know which forum decides what, decisions stick, and escalation follows a predictable path. The TPM designs governance once at program initiation, then operates it, tweaking the cadence and membership as the program evolves, but never improvising the structure mid-flight.
 
 ## Governance vs Management
 
@@ -43,6 +43,7 @@ The governance layer decides; the management layer executes. When governance tri
 A well-designed program has three tiers of governance, each with distinct authority, membership, and cadence.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     STEERCO["Steering Committee: strategic direction, funding, go/no-go"] --> PROGRAM["Program Review: cross-workstream decisions, risks, escalation"]
     PROGRAM --> WORKSTREAM["Workstream Syncs: execution, blocking issues, daily coordination"]
@@ -56,7 +57,7 @@ flowchart TD
 | **Program Review** | Resolves cross-workstream issues; approves interface contract changes; accepts or rejects risk mitigations; escalates to steering committee when authority is insufficient | TPM, workstream leads, architect, key technical leads | Biweekly | Runs the meeting; maintains the agenda; tracks action items |
 | **Workstream Syncs** | Day-to-day execution decisions; blocking issue resolution; progress tracking | Workstream lead, team members | Daily or multiple times per week | Observes or does not attend; relies on workstream lead |
 
-The TPM owns the program review meeting. It is the program's operating heartbeat — the forum where workstream leads surface problems, dependencies are negotiated, and risks are reviewed. A program review that is just status reporting is a wasted hour. The TPM drives the agenda toward decisions: what needs to be decided, who needs to be in the room, and what information they need to decide.
+The TPM owns the program review meeting. It is the program's operating heartbeat: the forum where workstream leads surface problems, dependencies are negotiated, and risks are reviewed. A program review that is just status reporting is a wasted hour. The TPM drives the agenda toward decisions: what needs to be decided, who needs to be in the room, and what information they need to decide.
 
 ## The Escalation Path
 
@@ -68,7 +69,7 @@ Escalation is not failure. It is the governance system working as designed: an i
 | **TPM to Program Review** | TPM, workstream leads | Cross-workstream conflicts; risks that require program-level response; issues affecting program outcome | Next scheduled program review, or emergency session within 48 hours |
 | **Program Review to Steering Committee** | TPM, sponsor | Scope, budget, or schedule changes beyond TPM authority; program continuation decisions; conflicts between organizational stakeholders | Next scheduled steering committee, or emergency session within 1 week |
 
-Every escalation carries three pieces of information: the issue stated clearly, the impact if unresolved, and the options the escalator has already considered. Escalation without options is delegation upward — the TPM rejects it and asks the escalator to come back with a recommendation.
+Every escalation carries three pieces of information: the issue stated clearly, the impact if unresolved, and the options the escalator has already considered. Escalation without options is delegation upward. The TPM rejects it and asks the escalator to come back with a recommendation.
 
 ## Designing the Governance Cadence
 
@@ -82,7 +83,7 @@ Governance cadence is not arbitrary. It balances decision-making speed against m
 | **Integration** | Integration issue triage, defect prioritization, go/no-go for launch | Accelerated: program reviews may become daily during critical integration windows |
 | **Close** | Outcome measurement, lessons learned, benefit handoff | Light: final steering committee close-out; program review ends |
 
-The TPM adjusts cadence proactively — not in response to a crisis. When the program enters integration, the TPM announces the accelerated cadence before the first integration issue lands. When the program moves to close, the TPM winds down governance forums deliberately rather than letting them atrophy.
+The TPM adjusts cadence proactively, not in response to a crisis. When the program enters integration, the TPM announces the accelerated cadence before the first integration issue lands. When the program moves to close, the TPM winds down governance forums deliberately rather than letting them atrophy.
 
 ## Governance Anti-Patterns
 
@@ -94,7 +95,7 @@ Most governance dysfunction follows predictable patterns. The TPM recognizes and
 | **Decision by absenteeism** | Key deciders skip governance meetings; decisions stall or are made without them | Require named delegates with decision authority; reschedule if quorum cannot be met |
 | **Governance inflation** | Every stakeholder demands their own governance forum; the program has six steering committees | Merge forums with overlapping membership and authority; one steering committee per program |
 | **Escalation bypass** | Stakeholders escalate directly to the sponsor, bypassing the TPM and program review | Publicize the escalation path; the sponsor redirects bypassers to the TPM |
-| **Meeting without authority** | The program review meets but cannot decide anything — every decision must go to steering | Redefine program review authority; give it explicit decision rights within boundaries |
+| **Meeting without authority** | The program review meets but cannot decide anything: every decision must go to steering | Redefine program review authority; give it explicit decision rights within boundaries |
 | **Governance-free program** | There are no defined forums; decisions happen in hallways and are forgotten | Stand up governance immediately; even lightweight governance beats no governance |
 
 ## Practical Applications
@@ -117,7 +118,7 @@ Most governance dysfunction follows predictable patterns. The TPM recognizes and
 - **Escalation Target:** [Which forum receives issues beyond this forum's authority]
 - **Membership:**
   - Chair: [Name]
-  - Required: [Names — must attend or send delegate with authority]
+  - Required: [Names, must attend or send delegate with authority]
   - Optional: [Names]
 - **Cadence:** [Frequency, day, time, duration]
 - **Agenda Structure:**
@@ -130,7 +131,7 @@ Most governance dysfunction follows predictable patterns. The TPM recognizes and
 
 ## Success Indicators
 
-- Decisions made in governance forums stick — no re-litigation between meetings
+- Decisions made in governance forums stick, no re-litigation between meetings
 - Escalation follows the designed path; the sponsor redirects bypass attempts to the TPM
 - Steering committee meetings end with decisions, not action items to gather more information
 - Program review meetings allocate at least 60 percent of time to decisions and risks, not status
@@ -141,9 +142,9 @@ Most governance dysfunction follows predictable patterns. The TPM recognizes and
 - [[01_Program_Charter]]: the governance section of the charter names the forums and decision rights
 - [[06_Program_Organization_and_Roles]]: governance forums are populated by the roles defined in the program organization
 - [[04_Milestone_Planning]]: decision gate milestones are the steering committee's primary agenda items
-- [[06_Decision_Facilitation/00_overview|Decision Facilitation]]: running governance meetings as decision forums
+- [[career-path/12_Technical_Program_Manager/06_Decision_Facilitation/00_overview|Decision Facilitation]]: running governance meetings as decision forums
 - [[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]]: governance as a formal program management discipline
 
 ## Summary
 
-Governance is the program's decision-making operating system: three tiers of forums with clear authority and cadence, an escalation path that resolves issues at the lowest competent level, and a deliberate separation between governance — which decides — and management — which executes. The TPM designs governance at program initiation and operates it throughout, adjusting cadence at phase transitions and correcting anti-patterns before they become the program's culture. Good governance is boring; bad governance is the program's most expensive invisible cost.
+Governance is the program's decision-making operating system: three tiers of forums with clear authority and cadence, an escalation path that resolves issues at the lowest competent level, and a deliberate separation between governance (which decides) and management, which executes. The TPM designs governance at program initiation and operates it throughout, adjusting cadence at phase transitions and correcting anti-patterns before they become the program's culture. Good governance is boring; bad governance is the program's most expensive invisible cost.

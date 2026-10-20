@@ -16,15 +16,15 @@ tags:
 
 # Requirements Management
 
-> **Core skill:** Eliciting, documenting, validating, and managing requirements throughout the project lifecycle — ensuring that what is built matches what stakeholders need and that requirements changes are visible, assessed, and governed.
+> **Core skill:** Eliciting, documenting, validating, and managing requirements throughout the project lifecycle, ensuring that what is built matches what stakeholders need and that requirements changes are visible, assessed, and governed.
 
 ## Why This Matters
 
-Requirements are the translation layer between stakeholder intent and team execution. A stakeholder says "we need faster reporting." The requirements discipline converts that into: "the monthly sales report must render in under five seconds for datasets of up to one million rows." Without that translation, the team builds what they think was asked for, the stakeholder judges what they receive against what they imagined, and the gap between them is discovered at delivery — when it is most expensive to close.
+Requirements are the translation layer between stakeholder intent and team execution. A stakeholder says "we need faster reporting." The requirements discipline converts that into: "the monthly sales report must render in under five seconds for datasets of up to one million rows." Without that translation, the team builds what they think was asked for, the stakeholder judges what they receive against what they imagined, and the gap between them is discovered at delivery, when it is most expensive to close.
 
-Requirements management is not a phase that ends when planning is complete. Requirements evolve as understanding deepens, as stakeholders see early outputs and refine their needs, and as the business environment changes. The discipline is not to prevent change — it is to make change visible, assess its impact, and route it through governance so that additions are decisions, not drift.
+Requirements management is not a phase that ends when planning is complete. Requirements evolve as understanding deepens, as stakeholders see early outputs and refine their needs, and as the business environment changes. The discipline is not to prevent change. It is to make change visible, assess its impact, and route it through governance so that additions are decisions, not drift.
 
-The project manager's role in requirements is not to write them — that is a collaboration between stakeholders, business analysts, and the team — but to ensure the process exists, the outputs are traceable to scope and objectives, and changes are managed through governance. A project without requirements management builds to assumption; a project with it builds to agreement.
+The project manager's role in requirements is not to write them (that is a collaboration between stakeholders, business analysts, and the team) but to ensure the process exists, the outputs are traceable to scope and objectives, and changes are managed through governance. A project without requirements management builds to assumption; a project with it builds to agreement.
 
 ## Requirements Types
 
@@ -51,6 +51,7 @@ The project manager's role in requirements is not to write them — that is a co
 ## The Requirements Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ELICIT["Elicit: gather requirements from stakeholders"] --> DOCUMENT["Document: write requirements with quality attributes"]
     DOCUMENT --> VALIDATE["Validate: confirm with stakeholders that requirements are correct"]
@@ -106,12 +107,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[01_Scope_Definition]] — requirements elaborate the scope
-- [[02_Work_Breakdown_Structure]] — requirements drive work package detail
-- [[06_Scope_Verification_and_Validation]] — requirements are the standard for verification
-- [[07_Scope_Change_Management]] — requirements changes go through change control
-- [[04_Project_Planning_and_Baselining]] — the plan builds from baselined requirements
+- [[01_Scope_Definition]]: requirements elaborate the scope
+- [[02_Work_Breakdown_Structure]]: requirements drive work package detail
+- [[06_Scope_Verification_and_Validation]]: requirements are the standard for verification
+- [[07_Scope_Change_Management]]: requirements changes go through change control
+- [[04_Project_Planning_and_Baselining]]: the plan builds from baselined requirements
 
 ## Summary
 
-Requirements management translates stakeholder intent into documented, testable, traceable specifications that the team can build against. The discipline spans elicitation, documentation, validation, baselining, tracing, and change management. Good requirements are unambiguous, testable, traceable to objectives, feasible, prioritized, and atomic. The project manager ensures the process exists and changes are governed — so that what is built matches what was agreed, and what was agreed matches what was needed.
+Requirements management translates stakeholder intent into documented, testable, traceable specifications that the team can build against. The discipline spans elicitation, documentation, validation, baselining, tracing, and change management. Good requirements are unambiguous, testable, traceable to objectives, feasible, prioritized, and atomic. The project manager ensures the process exists and changes are governed, so that what is built matches what was agreed, and what was agreed matches what was needed.

@@ -15,13 +15,13 @@ tags:
 
 # Project Governance Design
 
-> **Core skill:** Designing the decision framework for the project — defining who decides what, establishing the governance bodies and their authority, mapping escalation paths, and ensuring governance supports delivery rather than creating ceremonial bureaucracy.
+> **Core skill:** Designing the decision framework for the project, defining who decides what, establishing the governance bodies and their authority, mapping escalation paths, and ensuring governance supports delivery rather than creating ceremonial bureaucracy.
 
 ## Why This Matters
 
 Governance is the project's constitution: it allocates decision rights, establishes accountability, and creates the forums where project decisions are made, reviewed, and recorded. Without designed governance, decisions are remade in every meeting, authority is claimed by whoever speaks loudest, and nobody knows who owns the tough calls.
 
-Governance design is the project manager's most structural contribution: it determines whether the project operates with clear authority or constant ambiguity, whether decisions are made once or re-litigated endlessly, and whether the governance overhead is proportionate to the project's risk and complexity. Good governance is nearly invisible — decisions happen, stakeholders are informed, and the project moves. Bad governance is highly visible — meetings that produce no decisions, escalations that circle without resolution, and a steering committee that reviews status instead of governing.
+Governance design is the project manager's most structural contribution: it determines whether the project operates with clear authority or constant ambiguity, whether decisions are made once or re-litigated endlessly, and whether the governance overhead is proportionate to the project's risk and complexity. Good governance is nearly invisible: decisions happen, stakeholders are informed, and the project moves. Bad governance is highly visible: meetings that produce no decisions, escalations that circle without resolution, and a steering committee that reviews status instead of governing.
 
 ## Governance Design Principles
 
@@ -50,18 +50,18 @@ Governance design is the project manager's most structural contribution: it dete
 
 | Decision | Sponsor | Steering Committee | Project Manager | Change Control Board |
 |----------|---------|-------------------|-----------------|---------------------|
-| Charter approval | Decide | Recommend | Prepare | — |
+| Charter approval | Decide | Recommend | Prepare | N/A |
 | Budget > 10% change | Decide | Recommend | Prepare | Assess |
 | Schedule > 4-week slip | Decide | Recommend | Prepare | Assess |
-| Scope change (major) | — | Decide | Recommend | Assess |
-| Scope change (minor) | — | — | Decide | Assess |
-| Risk response > contingency | — | Decide | Recommend | — |
-| Risk response within contingency | — | — | Decide | — |
-| Phase gate: go/no-go | — | Decide | Recommend | — |
-| Team resource allocation | — | — | Decide | — |
-| Vendor selection | — | Decide (major) | Decide (minor) | Recommend |
+| Scope change (major) | N/A | Decide | Recommend | Assess |
+| Scope change (minor) | N/A | N/A | Decide | Assess |
+| Risk response > contingency | N/A | Decide | Recommend | N/A |
+| Risk response within contingency | N/A | N/A | Decide | N/A |
+| Phase gate: go/no-go | N/A | Decide | Recommend | N/A |
+| Team resource allocation | N/A | N/A | Decide | N/A |
+| Vendor selection | N/A | Decide (major) | Decide (minor) | Recommend |
 
-The matrix is the governance constitution — once agreed, it prevents the three most common governance failures: the sponsor micromanaging day-to-day decisions, the project manager making decisions that exceed their authority, and decisions that nobody owns.
+The matrix is the governance constitution; once agreed, it prevents the three most common governance failures: the sponsor micromanaging day-to-day decisions, the project manager making decisions that exceed their authority, and decisions that nobody owns.
 
 ## Governance Design by Project Scale
 
@@ -74,7 +74,7 @@ The matrix is the governance constitution — once agreed, it prevents the three
 
 ## Governance Agendas That Produce Decisions
 
-A governance meeting agenda is not a status review — it is a decision forum:
+A governance meeting agenda is not a status review; it is a decision forum:
 
 | Agenda Item | Purpose | Input | Output |
 |-------------|---------|-------|--------|
@@ -118,9 +118,9 @@ Program governance adds a layer:
 ## Success Indicators
 
 - Governance meetings produce recorded decisions, not just reviewed status
-- Decision rights are referenced, not debated — stakeholders know who decides what
+- Decision rights are referenced, not debated; stakeholders know who decides what
 - Escalations follow the defined path and arrive with options, not just problems
-- Governance overhead is proportionate — nobody complains about "governance theater"
+- Governance overhead is proportionate; nobody complains about "governance theater"
 - The governance design is reviewed and adjusted at program or project initiation
 
 ## Related Topics
@@ -128,9 +128,9 @@ Program governance adds a layer:
 - [[02_Change_Control_Process]]: the change process that feeds governance decisions
 - [[03_Decision_Recording_and_Communication]]: how governance decisions are documented
 - [[06_Phase_Gate_Reviews]]: the governance forum at phase transitions
-- [[01_Initiation_and_Charter/00_overview|Initiation and Charter]]: governance is established at initiation
+- [[career-path/13_Project_and_Program_Manager/01_Initiation_and_Charter/00_overview|Initiation and Charter]]: governance is established at initiation
 - [[career-path/04_Principal_and_Distinguished_Engineer/03_Decision_Governance_and_Principles/00_overview|Decision Governance and Principles (Principal)]]: the enterprise governance perspective
 
 ## Summary
 
-Project governance design is the project's constitutional work: defining who decides what through an explicit decision rights matrix, establishing governance bodies with clear authority and decision-focused agendas, mapping escalation paths with numeric thresholds, and ensuring governance is proportionate to the project's scale and risk. Governance that is well-designed is nearly invisible — decisions happen, authority is clear, and the project moves. Governance that is poorly designed is highly visible — meetings that produce no decisions, escalations that circle without resolution, and a steering committee that impersonates a status meeting. The project manager designs governance to support delivery; ceremony is what happens when design is absent.
+Project governance design is the project's constitutional work: defining who decides what through an explicit decision rights matrix, establishing governance bodies with clear authority and decision-focused agendas, mapping escalation paths with numeric thresholds, and ensuring governance is proportionate to the project's scale and risk. Governance that is well-designed is nearly invisible: decisions happen, authority is clear, and the project moves. Governance that is poorly designed is highly visible: meetings that produce no decisions, escalations that circle without resolution, and a steering committee that impersonates a status meeting. The project manager designs governance to support delivery; ceremony is what happens when design is absent.

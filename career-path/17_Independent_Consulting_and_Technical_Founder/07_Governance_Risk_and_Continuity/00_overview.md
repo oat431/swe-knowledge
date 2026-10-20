@@ -15,13 +15,13 @@ tags:
 
 # Governance, Risk and Continuity
 
-> **Core capability:** The independent handles contracts, security, privacy, and continuity responsibly — managing the legal, financial, and operational risks of the business like the professional it is.
+> **Core capability:** The independent handles contracts, security, privacy, and continuity responsibly: managing the legal, financial, and operational risks of the business like the professional it is.
 
 ## Why This Matters
 
-Independent work concentrates risk: no legal department, no employer insurance, no colleague to cover for you. The contract you signed, the client data you hold, the tax you owe, the week you get sick — each a real exposure that employed engineers never face personally. Governance for independents is the discipline of handling these exposures before they handle you.
+Independent work concentrates risk: no legal department, no employer insurance, no colleague to cover for you. The contract you signed, the client data you hold, the tax you owe, the week you get sick, each a real exposure that employed engineers never face personally. Governance for independents is the discipline of handling these exposures before they handle you.
 
-None of this requires lawyer-level expertise — it requires knowing what must be handled, doing it simply and correctly, and knowing when to pay a professional. The difference between a durable practice and one incident away from collapse is whether these basics were managed from the start.
+None of this requires lawyer-level expertise. It requires knowing what must be handled, doing it simply and correctly, and knowing when to pay a professional. The difference between a durable practice and one incident away from collapse is whether these basics were managed from the start.
 
 ## Topics in This Capability Area
 
@@ -38,6 +38,7 @@ None of this requires lawyer-level expertise — it requires knowing what must b
 ## The Governance Baseline
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CONTRACTS["Contracts: terms protect both sides"] --> STRUCTURE["Structure: registered and compliant"]
     STRUCTURE --> TAX["Tax and admin: current and documented"]
@@ -76,8 +77,8 @@ Handled in order, each layer makes the next cheaper and calmer.
 
 ## Related Capabilities
 
-- [[03_Business_Case_and_Economics/00_overview|Business Case and Economics]]: structure and tax are economic decisions
-- [[04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]: contracts operationalize commitments
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/03_Business_Case_and_Economics/00_overview|Business Case and Economics]]: structure and tax are economic decisions
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]: contracts operationalize commitments
 - [[career-path/08_Security_Engineer/00_overview|Security Engineer]]: security depth the independent draws on
 - [[career-path/11_Engineering_Manager/01_People_Development/00_overview|People Development (EM)]]: fairness and responsibility in working with people
 

@@ -17,13 +17,13 @@ tags:
 
 # Model Supply Chain and Tool Security
 
-> Establishing trust boundaries for everything the application depends on — model weights, inference frameworks, plugins, MCP servers, and every tool an agent is allowed to call.
+> Establishing trust boundaries for everything the application depends on: model weights, inference frameworks, plugins, MCP servers, and every tool an agent is allowed to call.
 
 ## Why This Is a Senior Skill
 
-Mid-level engineers download whatever model or SDK is trending, run it, and only think about provenance when something breaks. Senior engineers treat every component of the model stack as code with a supply chain: pinned versions, verified hashes, advisory monitoring, and an explicit decision about who is trusted to ship weights into production. They extend the same discipline to the newest surface in the stack — the tools and agent integrations (function calling, MCP servers, third-party agents) where LLM07 and LLM08 live.
+Mid-level engineers download whatever model or SDK is trending, run it, and only think about provenance when something breaks. Senior engineers treat every component of the model stack as code with a supply chain: pinned versions, verified hashes, advisory monitoring, and an explicit decision about who is trusted to ship weights into production. They extend the same discipline to the newest surface in the stack: the tools and agent integrations (function calling, MCP servers, third-party agents) where LLM07 and LLM08 live.
 
-The senior insight is that agent tools invert a classic security assumption. In a conventional system, capabilities are bound to authenticated users. In an agentic system, a single prompt can trigger a chain of tools running under ambient authority — the user's credentials, the user's context, sometimes the user's whole environment. Tool security is therefore not an API-design detail; it is the new access-control boundary, and the model that picks the calls is an untrusted decision-maker (see [[02_Prompt_Injection_Defense]]).
+The senior insight is that agent tools invert a classic security assumption. In a conventional system, capabilities are bound to authenticated users. In an agentic system, a single prompt can trigger a chain of tools running under ambient authority: the user's credentials, the user's context, sometimes the user's whole environment. Tool security is therefore not an API-design detail; it is the new access-control boundary, and the model that picks the calls is an untrusted decision-maker (see [[02_Prompt_Injection_Defense]]).
 
 ## Core Frameworks
 
@@ -33,7 +33,7 @@ The senior insight is that agent tools invert a classic security assumption. In 
 |-----------|------|----------|
 | Model weights (open-weight downloads) | Malicious pickles, tampered or backdoored weights, license or terms violations | safetensors format, official repositories only, hash pinning, provenance records, license review |
 | Inference runtimes and SDKs | Classic dependency vulnerabilities in the serving stack | Lockfiles, SBOM, CVE scanning, upgrade policy |
-| Fine-tuning datasets | Poisoning and sensitive-data contamination (LLM03) | Dataset provenance; curation belongs to the [[career-path/09_Data_and_ML_Engineer/00_overview\|Data and ML Engineer]] path |
+| Fine-tuning datasets | Poisoning and sensitive-data contamination (LLM03) | Dataset provenance; curation belongs to the [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]] path |
 | Plugins, MCP servers, third-party agents | Overly permissive tools, ambient authority, untrusted code running with user context (LLM07/LLM08) | Least privilege, narrow schemas, manifest review, scoped credentials |
 | Model access (API keys, self-hosted weights) | Extraction and theft (LLM10) | Rate limiting, access controls, never expose weights or embeddings endpoints publicly |
 
@@ -54,7 +54,7 @@ The senior insight is that agent tools invert a classic security assumption. In 
 | Least privilege per tool | A compromised prompt can only do what its tools can do |
 | Narrow schemas | Enumeration-typed parameters, length caps, no free-form command strings |
 | Read-only by default | Writes and side effects require explicit elevation or approval |
-| No raw execution | Model output never becomes SQL, shell, or code directly — only through constrained APIs |
+| No raw execution | Model output never becomes SQL, shell, or code directly, only through constrained APIs |
 | Tool outputs are untrusted | They re-enter the prompt, making every tool an indirect-injection channel |
 | Scoped credentials per tool | Per-user auth propagated into the tool call, never ambient service credentials |
 | Manifest review for MCP servers | Treat each server as remote code: review the tools it exposes and the data it receives |
@@ -74,7 +74,7 @@ The senior insight is that agent tools invert a classic security assumption. In 
 
 **Treat open-weight downloads as executable code, not data.** Prefer safetensors over pickle formats (pickles can execute code on load), pull only from official or clearly trusted mirrors, verify hashes against published values, and record the provenance of every weight that reaches production. Check licenses and acceptable-use terms before embedding a model in a product.
 
-**Give each tool the least privilege it needs, per call if possible.** Scope credentials to the smallest operation — a tool that reads one document type gets a token that can only read that type. Propagate the calling user's authorization into the tool call so the agent can never exceed what the user themselves could do.
+**Give each tool the least privilege it needs, per call if possible.** Scope credentials to the smallest operation: a tool that reads one document type gets a token that can only read that type. Propagate the calling user's authorization into the tool call so the agent can never exceed what the user themselves could do.
 
 **Validate tool outputs like any other untrusted input.** Tool results re-enter the context window, so a web page, a database row, or a file the tool reads can carry an indirect injection aimed at the next step of the agent's reasoning. Apply the same data-not-instructions framing and output scanning to tool results as to user input.
 

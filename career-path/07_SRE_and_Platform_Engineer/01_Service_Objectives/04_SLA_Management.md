@@ -74,6 +74,7 @@ SLAs are not engineering metrics. They are **business contracts** with financial
 Track SLA compliance separately from SLO compliance:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SLO["SLO Monitoring\n(internal)"] --> SLA["SLA Monitoring\n(external)"]
     SLA --> ALERT["SLA Alert\n(approaching violation)"]

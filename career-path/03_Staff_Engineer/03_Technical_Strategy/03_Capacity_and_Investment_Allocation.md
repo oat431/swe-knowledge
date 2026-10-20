@@ -16,13 +16,13 @@ tags:
 
 # Capacity and Investment Allocation
 
-> **Core skill:** The staff engineer makes the split of engineering capacity between feature work, technical debt, and platform investment explicit, defensible, and reviewed — instead of letting it happen by accident.
+> **Core skill:** The staff engineer makes the split of engineering capacity between feature work, technical debt, and platform investment explicit, defensible, and reviewed, instead of letting it happen by accident.
 
 ## Why This Matters
 
 Engineering capacity is the organization's scarcest resource, and in most companies it is allocated by default: features get whatever remains after the latest incident, debt gets whatever is left at the end of the quarter, and platform work happens only when someone is loud enough. The result is a slow-motion collapse of the systems the features depend on.
 
-The staff engineer turns this implicit allocation into an explicit decision. An explicit split — "70 percent features, 15 percent debt, 15 percent platform" — can be argued with, tested against outcomes, and defended to leadership. An implicit split cannot be discussed at all, because nobody ever chose it. Making allocation a decision is the precondition for making it a good one.
+The staff engineer turns this implicit allocation into an explicit decision. An explicit split ("70 percent features, 15 percent debt, 15 percent platform") can be argued with, tested against outcomes, and defended to leadership. An implicit split cannot be discussed at all, because nobody ever chose it. Making allocation a decision is the precondition for making it a good one.
 
 ## Allocation Models
 
@@ -54,7 +54,7 @@ The scenario table is the persuasive core. Leaders cannot argue with an option t
 | 70/15/15 | Slightly slower | Debt flat; incidents stable | Platform progresses | Sustainable |
 | 55/20/25 | Noticeably slower | Debt shrinks | Platform accelerates | Misses market window |
 
-The staff engineer's job is to make the trade visible, not to win the argument by volume. If leadership picks a different scenario, the outcome data will eventually arbitrate — if the trade was made explicit.
+The staff engineer's job is to make the trade visible, not to win the argument by volume. If leadership picks a different scenario, the outcome data will eventually arbitrate, if the trade was made explicit.
 
 ## Protecting Platform Investment Under Pressure
 
@@ -76,7 +76,7 @@ Debt language is borrowed from finance for a reason: every unit of debt has an i
 | Debt blocks a bet (the migration cannot start on the legacy schema) | Pay down on a schedule tied to the bet's commitment points |
 | Debt is concentrated in one area about to be replaced | Do not pay down; sunset or replace instead |
 
-The staff engineer's contribution is the interest-rate analysis: which debt is cheap to carry, which is expensive, and which will be replaced anyway. "Pay down all debt" is as wrong as "pay down no debt" — both ignore the rate.
+The staff engineer's contribution is the interest-rate analysis: which debt is cheap to carry, which is expensive, and which will be replaced anyway. "Pay down all debt" is as wrong as "pay down no debt". Both ignore the rate.
 
 ## Allocation Review Cadence and Metrics
 
@@ -88,9 +88,10 @@ Allocation decisions decay. The review cadence keeps them honest.
 | Bucket health | Quarterly | Debt trend, platform milestones, feature throughput per bucket |
 | Full reallocation | Annually | Does the split still match the strategy's bets and non-goals? |
 
-The metrics that matter: percentage of time actually spent per bucket (measured, not estimated), incidents per quarter as a debt proxy, platform milestone completion, and feature throughput. If the review finds the split was honored but the outcomes are wrong, the split should change — the review's purpose is the decision, not the defense.
+The metrics that matter: percentage of time actually spent per bucket (measured, not estimated), incidents per quarter as a debt proxy, platform milestone completion, and feature throughput. If the review finds the split was honored but the outcomes are wrong, the split should change: the review's purpose is the decision, not the defense.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MEASURE["Measure actual allocation from the last cycle"] --> MODEL["Build scenario options"]
     MODEL --> CONVERSATION["Negotiate the split with leadership"]
@@ -161,8 +162,8 @@ flowchart TD
 - [[02_Technology_Betting]]: where allocated capacity gets invested
 - [[04_Saying_No_at_Scale]]: declining work when capacity is full
 - [[career-path/02_Senior_Software_Engineer/08_Engineering_Economics_and_Trade_Offs/00_overview|Engineering Economics and Trade Offs (Senior)]]: the economic foundations
-- [[05_Systems_Thinking_and_Organizational_Design/00_overview|Systems Thinking and Organizational Design]]: org-level capacity dynamics
+- [[career-path/03_Staff_Engineer/05_Systems_Thinking_and_Organizational_Design/00_overview|Systems Thinking and Organizational Design]]: org-level capacity dynamics
 
 ## Summary
 
-Capacity allocation is the decision most organizations never make, and the staff engineer is the one who forces it: measure the real split, build scenarios with consequences, negotiate an explicit allocation with leadership, and review it on a cadence. The goal is not a perfect ratio; it is a visible, defensible, reviewed trade between features, debt, and platform — one that survives the pressure of every quarter.
+Capacity allocation is the decision most organizations never make, and the staff engineer is the one who forces it: measure the real split, build scenarios with consequences, negotiate an explicit allocation with leadership, and review it on a cadence. The goal is not a perfect ratio; it is a visible, defensible, reviewed trade between features, debt, and platform, one that survives the pressure of every quarter.

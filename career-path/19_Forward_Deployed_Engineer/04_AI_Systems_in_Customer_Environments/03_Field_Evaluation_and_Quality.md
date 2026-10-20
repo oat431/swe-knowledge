@@ -16,15 +16,15 @@ tags:
 
 # Field Evaluation and Quality
 
-> **Core skill:** Evaluating with the customer's data and their definition of correct — a written, shared standard tested on real examples before the capability is trusted with real work.
+> **Core skill:** Evaluating with the customer's data and their definition of correct: a written, shared standard tested on real examples before the capability is trusted with real work.
 
 ## Why This Matters
 
-"Correct" in a customer's domain is not a default. A medical coder, a contracts lawyer, and a plant engineer each carry a definition of a good answer that lives in their training, their procedures, and their senior experts — and nowhere a model can read it. Product evaluation suites measure general quality; field evaluation measures whether outputs would pass review by the people who will actually sign off. The gap between those two is where pilots fail: the demo impressed, the trial on real work was rejected, and nobody had agreed in advance what "good enough" would look like.
+"Correct" in a customer's domain is not a default. A medical coder, a contracts lawyer, and a plant engineer each carry a definition of a good answer that lives in their training, their procedures, and their senior experts, and nowhere a model can read it. Product evaluation suites measure general quality; field evaluation measures whether outputs would pass review by the people who will actually sign off. The gap between those two is where pilots fail: the demo impressed, the trial on real work was rejected, and nobody had agreed in advance what "good enough" would look like.
 
 Field evaluation is also a trust instrument, not just a test. When the customer's experts help define the evaluation set and review its results, correctness stops being the vendor's private claim and becomes a shared standard both sides can cite. The moment both parties look at the same numbers and agree what they mean is the moment adoption gets a foundation. An evaluation the customer cannot see, run on data they do not recognize, produces numbers nobody believes.
 
-Operationally, field evaluation must fit inside the customer's constraints: data that cannot leave their network, experts with no spare hours, annotation tooling nobody wants to learn. The FDE designs for that reality — small, sharp evaluation sets built from real cases, harnesses that run inside the environment, and review sessions short enough that the right people actually attend. The set grows from review sessions and production feedback, and it becomes the automated gate that every later change must pass.
+Operationally, field evaluation must fit inside the customer's constraints: data that cannot leave their network, experts with no spare hours, annotation tooling nobody wants to learn. The FDE designs for that reality: small, sharp evaluation sets built from real cases, harnesses that run inside the environment, and review sessions short enough that the right people actually attend. The set grows from review sessions and production feedback, and it becomes the automated gate that every later change must pass.
 
 ## Defining Correct with the Customer
 
@@ -60,6 +60,7 @@ Guidance: a small set of high-quality examples with agreed labels beats a large 
 | Results must convince management | One page: rubric, set, results, examples of what failed |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     DEFINE["Define correct with experts"] --> LABEL["Label real examples"]
     LABEL --> HARNESS["Build the evaluation harness"]
@@ -85,7 +86,7 @@ The gate matters: an evaluation that does not block a release is a report. The F
 ### Evaluation Record Template
 
 ```markdown
-## Evaluation Record — <capability, date, version>
+## Evaluation Record: <capability, date, version>
 
 | Field | Value |
 |-------|-------|
@@ -121,10 +122,10 @@ The gate matters: an evaluation that does not block a release is a report. The F
 
 - [[02_RAG_with_Customer_Data]]
 - [[05_Human_in_the_Loop_Workflows]]
-- [[01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]
+- [[career-path/19_Forward_Deployed_Engineer/01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]
 - [[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability (Applied AI)]]
 - [[software-engineering-note/12_Software_Quality/Software Quality Overview]]
 
 ## Summary
 
-Field evaluation and quality is the discipline of pinning down what "correct" means in a customer's domain, then proving machine output against it on real examples: a rubric in their words, labels from their experts, severity by business consequence, and a harness that runs inside their constraints. The evaluation is simultaneously a gate, an improvement signal, and a trust artifact — the shared standard that lets a probabilistic system be trusted with defined work, honestly and with evidence.
+Field evaluation and quality is the discipline of pinning down what "correct" means in a customer's domain, then proving machine output against it on real examples: a rubric in their words, labels from their experts, severity by business consequence, and a harness that runs inside their constraints. The evaluation is simultaneously a gate, an improvement signal, and a trust artifact: the shared standard that lets a probabilistic system be trusted with defined work, honestly and with evidence.

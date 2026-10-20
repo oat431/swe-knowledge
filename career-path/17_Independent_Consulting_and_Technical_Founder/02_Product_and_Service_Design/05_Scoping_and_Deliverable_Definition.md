@@ -16,15 +16,15 @@ tags:
 
 # Scoping and Deliverable Definition
 
-> **Core skill:** Defining exactly what is delivered, what is excluded, and how acceptance is decided — before work starts, so the engagement can succeed on paper first.
+> **Core skill:** Defining exactly what is delivered, what is excluded, and how acceptance is decided, before work starts, so the engagement can succeed on paper first.
 
 ## Why This Matters
 
-Most independent project pain originates in scope, not in code. Vague promises, undefined acceptance, and unbounded revisions turn profitable engagements into unpaid apprenticeship. Scoping is not paperwork that follows the sale — it is the design of the commitment itself, and it happens while both sides are still optimistic. If the commitment cannot be written down precisely, it cannot be delivered profitably.
+Most independent project pain originates in scope, not in code. Vague promises, undefined acceptance, and unbounded revisions turn profitable engagements into unpaid apprenticeship. Scoping is not paperwork that follows the sale. It is the design of the commitment itself, and it happens while both sides are still optimistic. If the commitment cannot be written down precisely, it cannot be delivered profitably.
 
-A solid scope statement contains seven parts: the client's business goal, the deliverables that mark progress, the exclusions that bound the work, the assumptions the plan rests on, the client-side dependencies with dates, the acceptance criteria that define done, and the change control that handles everything reality throws at the plan. The exclusions list is the most valuable and most neglected part — it is where scope creep dies, politely, before it exists.
+A solid scope statement contains seven parts: the client's business goal, the deliverables that mark progress, the exclusions that bound the work, the assumptions the plan rests on, the client-side dependencies with dates, the acceptance criteria that define done, and the change control that handles everything reality throws at the plan. The exclusions list is the most valuable and most neglected part (it is where scope creep dies, politely, before it exists).
 
-Exclusions are not hostility; they are honesty. Good clients respect boundaries that make outcomes testable, and difficult clients reveal themselves at the exclusions conversation — which makes the scope document a discovery instrument as much as a contract. Change control protects the relationship: the working answer to new requests is never "no", it is "yes — here is the change order, priced and scheduled".
+Exclusions are not hostility; they are honesty. Good clients respect boundaries that make outcomes testable, and difficult clients reveal themselves at the exclusions conversation, which makes the scope document a discovery instrument as much as a contract. Change control protects the relationship: the working answer to new requests is never "no", it is "yes, here is the change order, priced and scheduled".
 
 ## Scope Statement Anatomy
 
@@ -52,6 +52,7 @@ Exclusions are not hostility; they are honesty. Good clients respect boundaries 
 ## The Scope Chain
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     GOAL["Client business goal"] --> DELIVERABLES["Deliverables and evidence"]
     DELIVERABLES --> EXCLUSIONS["Exclusions and boundaries"]
@@ -59,7 +60,7 @@ flowchart LR
     ACCEPT --> CHANGE["Change control"]
 ```
 
-Each link converts the one before it into something testable. A chain with a missing link fails at the weak point, and the failure surfaces late — at delivery, when goodwill is exhausted.
+Each link converts the one before it into something testable. A chain with a missing link fails at the weak point, and the failure surfaces late, at delivery, when goodwill is exhausted.
 
 ## Practical Applications
 
@@ -75,13 +76,13 @@ Each link converts the one before it into something testable. A chain with a mis
 ### Scope Section Template
 
 ```markdown
-## Scope — <engagement>
+## Scope: <engagement>
 
 Goal: <business outcome the client buys>.
 Deliverables: <numbered list, each with format and acceptance criterion>.
 Excluded: <explicit out-of-scope list>.
 Assumptions: <conditions the plan rests on>.
-Client provides: <access, data, reviewers — with dates>.
+Client provides: <access, data, reviewers, with dates>.
 Acceptance: <reviewer, method, and response window>.
 Changes: <anything new is quoted separately; nothing is absorbed silently>.
 ```
@@ -110,9 +111,9 @@ Changes: <anything new is quoted separately; nothing is absorbed silently>.
 - [[01_Service_Offers_and_Packaging]]
 - [[03_Pricing_Models_and_Strategies]]
 - [[07_Client_Experience_and_Reporting]]
-- [[04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]
-- [[07_Governance_Risk_and_Continuity/00_overview|Governance, Risk and Continuity]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/07_Governance_Risk_and_Continuity/00_overview|Governance, Risk and Continuity]]
 
 ## Summary
 
-Scoping and deliverable definition convert a hopeful sale into a deliverable commitment: a business goal, named deliverables with acceptance criteria, explicit exclusions, client dependencies with dates, and a written path for change. Designed before the work starts, the scope document protects the margin, the schedule, and — counterintuitively — the relationship, because both sides agreed on the shape of done while they still liked each other.
+Scoping and deliverable definition convert a hopeful sale into a deliverable commitment: a business goal, named deliverables with acceptance criteria, explicit exclusions, client dependencies with dates, and a written path for change. Designed before the work starts, the scope document protects the margin, the schedule, and (counterintuitively) the relationship, because both sides agreed on the shape of done while they still liked each other.

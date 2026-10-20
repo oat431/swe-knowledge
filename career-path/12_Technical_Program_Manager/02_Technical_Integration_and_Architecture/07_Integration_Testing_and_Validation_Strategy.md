@@ -16,13 +16,13 @@ tags:
 
 # Integration Testing and Validation Strategy
 
-> **Core skill:** Ensuring the program has an integration validation plan — test levels, environments, data, and defect management — that catches integration failures before user-facing testing and provides evidence for every integration milestone.
+> **Core skill:** Ensuring the program has an integration validation plan (test levels, environments, data, and defect management) that catches integration failures before user-facing testing and provides evidence for every integration milestone.
 
 ## Why This Matters
 
-Integration testing is where programs prove they work — or discover they do not. The difference between a program that discovers integration failures in a controlled test environment at month four, and a program that discovers them in production at month ten, is the integration testing and validation strategy. The TPM does not design the tests or write the test cases. But the TPM ensures the strategy exists, is resourced, is executed on the program timeline, and produces the evidence needed to declare integration milestones complete.
+Integration testing is where programs prove they work, or discover they do not. The difference between a program that discovers integration failures in a controlled test environment at month four, and a program that discovers them in production at month ten, is the integration testing and validation strategy. The TPM does not design the tests or write the test cases. But the TPM ensures the strategy exists, is resourced, is executed on the program timeline, and produces the evidence needed to declare integration milestones complete.
 
-Programs that treat integration testing as "the QA team will handle it" discover at launch that the QA team tested components, not integrations — and the components worked, but the connections did not. The TPM's role is to ensure integration testing is planned at the program level, resourced across workstreams, and treated as a first-class program activity, not a tail-end quality gate.
+Programs that treat integration testing as "the QA team will handle it" discover at launch that the QA team tested components, not integrations, and the components worked, but the connections did not. The TPM's role is to ensure integration testing is planned at the program level, resourced across workstreams, and treated as a first-class program activity, not a tail-end quality gate.
 
 ## Test Levels in the Integration Validation Strategy
 
@@ -38,13 +38,14 @@ Integration validation spans multiple test levels, each with a distinct purpose,
 | **External integration testing** | Validate integration with external systems not under program control | After full system integration is stable; requires external partner availability | TPM and external partner lead | Ensure external interfaces work under real conditions; validate SLAs and failure modes |
 | **Acceptance testing** | Validate that the system meets stakeholder requirements and outcome criteria | After full system integration passes; before launch | TPM and stakeholders | Ensure the system delivers the program's stated outcomes, not just technical correctness |
 
-The TPM sequences these levels to match the integration sequencing plan. Each level gates the next: pair testing must pass before workstream testing; workstream testing must pass before subsystem testing. The TPM enforces the gate — a test level that is skipped or passed with known defects creates a debt that compounds at the next level.
+The TPM sequences these levels to match the integration sequencing plan. Each level gates the next: pair testing must pass before workstream testing; workstream testing must pass before subsystem testing. The TPM enforces the gate: a test level that is skipped or passed with known defects creates a debt that compounds at the next level.
 
 ## Integration Test Environments
 
 Integration testing requires environments that match the integration scope. The TPM ensures environments are planned, provisioned, and available when the integration windows open.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DEV["Development environments: per-component, isolated"] --> PAIR["Pair integration environment: two components, shared"]
     PAIR --> WS["Workstream integration environment: all components in one workstream"]
@@ -61,7 +62,7 @@ flowchart TD
 | **Full system integration** | All workstreams; production-like configuration | Must closely match production: scale, configuration, network topology | Environment differs from production in ways that hide failures | Audit environment against production configuration; document and track differences |
 | **Staging / Acceptance** | Production mirror; external interfaces live where possible | Must match production as closely as possible; real external systems where feasible | External partners unavailable during the test window | Coordinate external partner availability months in advance; have fallback simulation |
 
-The TPM treats environment availability as a program dependency with the same rigor as a workstream deliverable. An environment that is not ready when the integration window opens is a schedule blocker — the TPM escalates it with the same urgency as a missed component delivery.
+The TPM treats environment availability as a program dependency with the same rigor as a workstream deliverable. An environment that is not ready when the integration window opens is a schedule blocker. The TPM escalates it with the same urgency as a missed component delivery.
 
 ## Test Data Management
 
@@ -79,7 +80,7 @@ The TPM adds test data readiness as a line item in every integration milestone p
 
 ## Defect Management During Integration Testing
 
-Integration testing produces defects. The TPM's role is not to triage individual defects — that belongs to the technical team — but to manage the defect flow so that integration milestones are not declared complete while critical defects are open.
+Integration testing produces defects. The TPM's role is not to triage individual defects (that belongs to the technical team) but to manage the defect flow so that integration milestones are not declared complete while critical defects are open.
 
 | Defect Severity | Definition | Impact on Integration Milestone |
 |----------------|-----------|--------------------------------|
@@ -88,7 +89,7 @@ Integration testing produces defects. The TPM's role is not to triage individual
 | **Medium** | Feature partially broken; minor performance issue; workaround exists and is practical | Milestone can pass; defects tracked for resolution in next integration window |
 | **Low** | Cosmetic issue; edge case with minimal user impact | Milestone can pass; defects tracked in backlog |
 
-The TPM reviews the defect backlog at every integration milestone prep review. The rule: no open critical defects at milestone declaration; high defects require sponsor acceptance; medium and low defects are tracked but do not block the milestone. The TPM enforces this rule consistently — relaxing it for one milestone erodes it for all milestones.
+The TPM reviews the defect backlog at every integration milestone prep review. The rule: no open critical defects at milestone declaration; high defects require sponsor acceptance; medium and low defects are tracked but do not block the milestone. The TPM enforces this rule consistently: relaxing it for one milestone erodes it for all milestones.
 
 ## Defect Triage Cadence
 
@@ -100,7 +101,7 @@ During integration windows, defects arrive continuously. The TPM establishes a t
 | **Defect burn-down review** | Every program review during integration | TPM, all workstream leads | Burn-down trend; identification of workstreams with growing backlogs |
 | **Critical defect escalation** | Immediately on discovery | TPM, architect, affected workstream leads | Response plan within 4 hours; resolution plan within 24 hours |
 
-The TPM runs the defect triage meeting. It is a 15-minute standup: new defects are presented, severity is assigned, owners are named, and target dates are set. Defects that linger without activity for two consecutive triage meetings are escalated to the workstream lead. The TPM's goal is not zero defects — it is a defect backlog that is understood, prioritized, and shrinking.
+The TPM runs the defect triage meeting. It is a 15-minute standup: new defects are presented, severity is assigned, owners are named, and target dates are set. Defects that linger without activity for two consecutive triage meetings are escalated to the workstream lead. The TPM's goal is not zero defects. It is a defect backlog that is understood, prioritized, and shrinking.
 
 ## Practical Applications
 
@@ -169,9 +170,9 @@ The TPM runs the defect triage meeting. It is a 15-minute standup: new defects a
 - [[03_Integration_Sequencing]]: the integration sequence that determines the test level order
 - [[02_Understanding_System_Boundaries_and_Interfaces]]: interface contracts are the basis for integration test cases
 - [[04_Technical_Risk_Identification]]: risks that integration testing is designed to validate or retire
-- [[04_Risk_and_Issue_Leadership/00_overview|Risk and Issue Leadership]]: defects that become issues if not resolved
+- [[career-path/12_Technical_Program_Manager/04_Risk_and_Issue_Leadership/00_overview|Risk and Issue Leadership]]: defects that become issues if not resolved
 - [[career-path/06_Software_Architect/01_Architecture_Fundamentals/04_Architecture_Decision_Making|Architecture Decision Making (Architect)]]: the architect's role in defining integration quality standards
 
 ## Summary
 
-Integration testing and validation strategy is the TPM's quality assurance at program scale: test levels matched to the integration sequence, environments provisioned and verified before each window, test data planned as a first-class dependency, defect triage running daily during integration, and milestones gated on evidence — not assurances. The TPM does not design the tests, but the TPM ensures the strategy exists, is resourced, and produces the evidence the program needs to declare integration complete with confidence, not hope.
+Integration testing and validation strategy is the TPM's quality assurance at program scale: test levels matched to the integration sequence, environments provisioned and verified before each window, test data planned as a first-class dependency, defect triage running daily during integration, and milestones gated on evidence, not assurances. The TPM does not design the tests, but the TPM ensures the strategy exists, is resourced, and produces the evidence the program needs to declare integration complete with confidence, not hope.

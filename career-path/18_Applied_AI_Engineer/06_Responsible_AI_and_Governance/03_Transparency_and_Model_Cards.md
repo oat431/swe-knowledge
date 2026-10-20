@@ -20,9 +20,9 @@ tags:
 
 ## Why This Is a Senior Skill
 
-Mid-level engineers write a README — or nothing. Senior engineers treat the model card as a release contract: limitations published before capabilities, evaluation evidence instead of claims, and generation wired into the eval pipeline so the documentation cannot drift from reality. A card is the difference between "trust us" and "verify this."
+Mid-level engineers write a README, or nothing. Senior engineers treat the model card as a release contract: limitations published before capabilities, evaluation evidence instead of claims, and generation wired into the eval pipeline so the documentation cannot drift from reality. A card is the difference between "trust us" and "verify this."
 
-The senior challenge is honesty under pressure. Marketing wants the card to sell; the senior's job is to keep the negative results in — they are the point. A card that only lists strengths has zero credibility with auditors and zero utility for the next engineer.
+The senior challenge is honesty under pressure. Marketing wants the card to sell; the senior's job is to keep the negative results in; they are the point. A card that only lists strengths has zero credibility with auditors and zero utility for the next engineer.
 
 ## Core Frameworks
 
@@ -78,7 +78,7 @@ The senior challenge is honesty under pressure. Marketing wants the card to sell
 
 **Publish limitations before capabilities.** The card's credibility comes from documenting failure honestly: quantified error rates, known failure modes, the exact subgroups the system is weak on (from [[02_Bias_and_Fairness_Assessment]]). A card listing only strengths is marketing; a card with measured failure modes is evidence. Client and auditor trust correlates with candor, not polish.
 
-**Disaggregate evaluation results by subgroup.** A single accuracy number hides who the system fails. Break results down by language, region, and the groups identified in the fairness assessment. Disaggregation is the difference between a benchmark report and a fairness record — and it is increasingly the difference between passing and failing regulatory review.
+**Disaggregate evaluation results by subgroup.** A single accuracy number hides who the system fails. Break results down by language, region, and the groups identified in the fairness assessment. Disaggregation is the difference between a benchmark report and a fairness record, and it is increasingly the difference between passing and failing regulatory review.
 
 **State intended use and out-of-scope use explicitly.** These two sections carry legal weight under the EU AI Act and set expectations with customers. "Not for medical, legal, or safety-critical decisions" is one sentence that protects both the company and the user, and it makes the card a governance instrument rather than a formality.
 
@@ -86,13 +86,13 @@ The senior challenge is honesty under pressure. Marketing wants the card to sell
 
 **Write for two audiences: the auditor and the next engineer.** An auditor needs sources, dates, and version history. The next engineer needs known failure modes and maintenance state. A good card serves both without padding; a card written only for compliance is read by no one and maintained by no one.
 
-**Version cards with the release, not the calendar.** Every model or prompt change should produce a card diff reviewed at the same gate as the code (see [[06_Governance_Operating_Model]]). The card is part of the release artifact — which is what makes it evidence rather than decoration.
+**Version cards with the release, not the calendar.** Every model or prompt change should produce a card diff reviewed at the same gate as the code (see [[06_Governance_Operating_Model]]). The card is part of the release artifact, which is what makes it evidence rather than decoration.
 
 ## Practical Exercise
 
 Build a model card for one deployed AI feature:
 1. Pick the feature and gather its eval results, model versions, data sources, and known incidents
-2. Fill a model-card template with real data — no field left as "TBD"
+2. Fill a model-card template with real data; no field left as "TBD"
 3. Write the limitations section first, from actual observed failures rather than hypotheticals
 4. Have a reviewer who did not build the system verify every factual claim in the card
 5. Publish the card alongside the next release notes and link it from the feature's documentation
@@ -100,8 +100,8 @@ Build a model card for one deployed AI feature:
 
 ## Knowledge Connections
 
-- [[computing-foundation-note/Artificial_Intelligence/13_LLM_Evaluation_and_Guardrails]] — the eval pipeline that supplies the card's numbers
-- [[computing-foundation-note/Artificial_Intelligence/08_AI_Ethics_and_Future]] — transparency and explainability demands
-- [[02_Bias_and_Fairness_Assessment]] — subgroup results and trade-off decisions the card must carry
-- [[04_Regulation_and_Compliance]] — cards as compliance evidence under the EU AI Act
-- [[01_AI_Risk_Management]] — documented limitations as mitigation of misrepresentation risk
+- [[computing-foundation-note/Artificial_Intelligence/13_LLM_Evaluation_and_Guardrails]]: the eval pipeline that supplies the card's numbers
+- [[computing-foundation-note/Artificial_Intelligence/08_AI_Ethics_and_Future]]: transparency and explainability demands
+- [[02_Bias_and_Fairness_Assessment]]: subgroup results and trade-off decisions the card must carry
+- [[04_Regulation_and_Compliance]]: cards as compliance evidence under the EU AI Act
+- [[01_AI_Risk_Management]]: documented limitations as mitigation of misrepresentation risk

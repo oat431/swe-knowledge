@@ -21,25 +21,25 @@ tags:
 
 | # | Path | Score | Strongest point | Biggest gap | Audit |
 |---|---|---|---|---|---|
-| 01 | Software Engineer | 2 | Correct lifecycle framing | Overview only; mid-level undefined | [[career-path/01_Software_Engineer/audit\|audit]] |
-| 02 | Senior Software Engineer | 4 | Capstone module; exercises in two-thirds of topics | Promotion module targets Staff; no system-design depth | [[career-path/02_Senior_Software_Engineer/audit\|audit]] |
-| 03 | Staff Engineer | 4 | Reads like an operator's manual | Staying technical; AI adoption; Staff promotion | [[career-path/03_Staff_Engineer/audit\|audit]] |
-| 04 | Principal & Distinguished | 4 | Board-level, M&A, geopolitics | Hands-on depth; enterprise AI; empty `next_paths` | [[career-path/04_Principal_and_Distinguished_Engineer/audit\|audit]] |
-| 05 | Tech Lead | 4 | Player-coach, TL–EM split, incident command | Security, cost, and AI norms for the team | [[career-path/05_Tech_Lead/audit\|audit]] |
-| 06 | Software Architect | 4 | Rigorous quality-attribute analysis and evaluation | AI architecture; API; DDD; no katas | [[career-path/06_Software_Architect/audit\|audit]] |
-| 07 | SRE & Platform | 3 | SLO stack; exercise in every note | Thinnest path; toil/troubleshooting/PRR; platform half | [[career-path/07_SRE_and_Platform_Engineer/audit\|audit]] |
-| 08 | Security Engineer | 3.5 | Best role overview in the map | AI/LLM security, OWASP, cloud | [[career-path/08_Security_Engineer/audit\|audit]] |
-| 09 | Data & ML Engineer | 3 | DMBOK breadth; exercises | Shortest notes; ML is 1 of 7 modules | [[career-path/09_Data_and_ML_Engineer/audit\|audit]] |
-| 10 | Quality & Test | 2.5 | Test-design module | Textbook framing; modules unreachable | [[career-path/10_Quality_and_Test_Engineering/audit\|audit]] |
-| 11 | Engineering Manager | 4 | Hiring end to end | New-manager onboarding; managing managers | [[career-path/11_Engineering_Manager/audit\|audit]] |
-| 12 | Technical Program Manager | 4 | Technical integration + benefits | Agile cadence; launches; AI | [[career-path/12_Technical_Program_Manager/audit\|audit]] |
-| 13 | Project & Program Manager | 3 | EVM, CPM, gates, programs | Agile/hybrid (0 notes); team leadership | [[career-path/13_Project_and_Program_Manager/audit\|audit]] |
-| 14 | Product Manager | 3 | Resources in every topic | SWE→PM; platform PM; AI PM; navigation | [[career-path/14_Product_Manager/audit\|audit]] |
-| 15 | Solutions & Enterprise Architect | 3.5 | EA practice | Cloud SA; enterprise AI; ArchiMate | [[career-path/15_Solutions_and_Enterprise_Architect/audit\|audit]] |
-| 16 | Developer Advocate & Consultant | 3.5 | Ethics; docs as a product | AI-era DevRel; consulting mechanics | [[career-path/16_Developer_Advocate_and_Technical_Consultant/audit\|audit]] |
-| 17 | Independent & Founder | 3.5 | Solo-firm economics | Technical-founder journey; exits | [[career-path/17_Independent_Consulting_and_Technical_Founder/audit\|audit]] |
-| 18 | Applied AI Engineer | 4 | Evals and guardrails; honest scope | Agentic systems; agent evals | [[career-path/18_Applied_AI_Engineer/audit\|audit]] |
-| 19 | Forward Deployed Engineer | 4 | Best-researched overview; career-beyond note | Field ethics; worked case | [[career-path/19_Forward_Deployed_Engineer/audit\|audit]] |
+| 01 | Software Engineer | 2 | Correct lifecycle framing | Overview only; mid-level undefined | [[career-path/01_Software_Engineer/audit|audit]] |
+| 02 | Senior Software Engineer | 4 | Capstone module; exercises in two-thirds of topics | Promotion module targets Staff; no system-design depth | [[career-path/02_Senior_Software_Engineer/audit|audit]] |
+| 03 | Staff Engineer | 4 | Reads like an operator's manual | Staying technical; AI adoption; Staff promotion | [[career-path/03_Staff_Engineer/audit|audit]] |
+| 04 | Principal & Distinguished | 4 | Board-level, M&A, geopolitics | Hands-on depth; enterprise AI; empty `next_paths` | [[career-path/04_Principal_and_Distinguished_Engineer/audit|audit]] |
+| 05 | Tech Lead | 4 | Player-coach, TL–EM split, incident command | Security, cost, and AI norms for the team | [[career-path/05_Tech_Lead/audit|audit]] |
+| 06 | Software Architect | 4 | Rigorous quality-attribute analysis and evaluation | AI architecture; API; DDD; no katas | [[career-path/06_Software_Architect/audit|audit]] |
+| 07 | SRE & Platform | 3 | SLO stack; exercise in every note | Thinnest path; toil/troubleshooting/PRR; platform half | [[career-path/07_SRE_and_Platform_Engineer/audit|audit]] |
+| 08 | Security Engineer | 3.5 | Best role overview in the map | AI/LLM security, OWASP, cloud | [[career-path/08_Security_Engineer/audit|audit]] |
+| 09 | Data & ML Engineer | 3 | DMBOK breadth; exercises | Shortest notes; ML is 1 of 7 modules | [[career-path/09_Data_and_ML_Engineer/audit|audit]] |
+| 10 | Quality & Test | 2.5 | Test-design module | Textbook framing; modules unreachable | [[career-path/10_Quality_and_Test_Engineering/audit|audit]] |
+| 11 | Engineering Manager | 4 | Hiring end to end | New-manager onboarding; managing managers | [[career-path/11_Engineering_Manager/audit|audit]] |
+| 12 | Technical Program Manager | 4 | Technical integration + benefits | Agile cadence; launches; AI | [[career-path/12_Technical_Program_Manager/audit|audit]] |
+| 13 | Project & Program Manager | 3 | EVM, CPM, gates, programs | Agile/hybrid (0 notes); team leadership | [[career-path/13_Project_and_Program_Manager/audit|audit]] |
+| 14 | Product Manager | 3 | Resources in every topic | SWE→PM; platform PM; AI PM; navigation | [[career-path/14_Product_Manager/audit|audit]] |
+| 15 | Solutions & Enterprise Architect | 3.5 | EA practice | Cloud SA; enterprise AI; ArchiMate | [[career-path/15_Solutions_and_Enterprise_Architect/audit|audit]] |
+| 16 | Developer Advocate & Consultant | 3.5 | Ethics; docs as a product | AI-era DevRel; consulting mechanics | [[career-path/16_Developer_Advocate_and_Technical_Consultant/audit|audit]] |
+| 17 | Independent & Founder | 3.5 | Solo-firm economics | Technical-founder journey; exits | [[career-path/17_Independent_Consulting_and_Technical_Founder/audit|audit]] |
+| 18 | Applied AI Engineer | 4 | Evals and guardrails; honest scope | Agentic systems; agent evals | [[career-path/18_Applied_AI_Engineer/audit|audit]] |
+| 19 | Forward Deployed Engineer | 4 | Best-researched overview; career-beyond note | Field ethics; worked case | [[career-path/19_Forward_Deployed_Engineer/audit|audit]] |
 
 Scores combine six dimensions rated in each path audit: coverage, depth, practice, progression, sources, and vault hygiene.
 
@@ -141,11 +141,11 @@ The same topics recur at different levels, which is fine because text duplicatio
 | Module overviews not linked from the role overview | Quality (6), Product Manager (7) | 13 | Link from the Capability Areas table |
 | Notes with **no inbound links at all** | Quality 6, Product Manager 3, SRE 1, Security 1 | 11 | Link them |
 | `created` missing | All 19 role overviews + root; all of Security, Data/ML, Product Manager, Applied AI; most of SRE and Senior | **279 / 965** | Add `created:` |
-| Mixed frontmatter schemas | Senior alone uses 7 key sets (`note_type` vs `type`, `career_path` vs `role`, …) | — | Adopt one schema |
+| Mixed frontmatter schemas | Senior alone uses 7 key sets (`note_type` vs `type`, `career_path` vs `role`, …) | N/A | Adopt one schema |
 | Date typo | Senior `09_...` (4 notes): `2026-01-05` → git says `2026-08-05` | 4 | Correct |
 | Absolute paths to a folder outside the vault | Security (`F:\obsidian_note\document_template\...`) | 89 refs / 33 notes | `obsidian://` URIs or in-vault copies |
 | Wikilink targets with spaces (vault convention) | 161 notes → 53 targets in BOK / SWEBOK folders | 472 links (7%) | Rename the *target* files vault-wide (Obsidian updates links); outside `career-path` |
-| Stale labels | Root says "career overviews only"; "Suggested Future Note Route" in 18/19 role overviews; "(planned)" in Applied AI and FDE; Quality trackers show "- [ ] … - Complete" | — | Rename or remove |
+| Stale labels | Root says "career overviews only"; "Suggested Future Note Route" in 18/19 role overviews; "(planned)" in Applied AI and FDE; Quality trackers show "- [ ] … - Complete" | N/A | Rename or remove |
 | Malformed table | Senior role overview (`\|\|` header → 4 cells vs 3) | 1 | Fix header |
 | Outdated reference | Quality accessibility note uses WCAG 2.1 (2.2 is current since Oct 2023) | 1 | Update |
 

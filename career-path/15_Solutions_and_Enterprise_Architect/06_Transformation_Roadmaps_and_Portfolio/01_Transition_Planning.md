@@ -16,11 +16,11 @@ tags:
 
 # Transition Planning
 
-> **Core skill:** The architect designs the intermediate architectures between current and target state — each one operationally viable, explicitly scoped, and sequenced with its dependencies — so the enterprise can function safely at every step of a multi-year journey.
+> **Core skill:** The architect designs the intermediate architectures between current and target state (each one operationally viable, explicitly scoped, and sequenced with its dependencies) so the enterprise can function safely at every step of a multi-year journey.
 
 ## Why This Matters
 
-A target architecture describes where the enterprise should be. A transition architecture describes what it actually is next — and next year. Transformation happens through intermediate states, and each state must be operationally real: running systems, supported technology, trained people, maintained controls, and acceptable cost. The transition architecture is the architect's most honest artifact, because it has to work in the present tense while the target waits.
+A target architecture describes where the enterprise should be. A transition architecture describes what it actually is next, and next year. Transformation happens through intermediate states, and each state must be operationally real: running systems, supported technology, trained people, maintained controls, and acceptable cost. The transition architecture is the architect's most honest artifact, because it has to work in the present tense while the target waits.
 
 The most common failure is treating the transition as a schedule rather than an architecture. A plan says when work happens; a transition architecture says what exists at each checkpoint, how old and new relate, what guarantees the checkpoint must satisfy, and what gets removed. Without that design, programs produce target-state components in isolation while nobody is accountable for the estate's coherence mid-flight.
 
@@ -61,6 +61,7 @@ Transition planning is where architects earn delivery trust. It means proposing 
 ## The Transition Sequence
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CURRENT["Current state"] --> TRANSITION["Transition architecture"]
     TRANSITION["Transition architecture"] --> CHECKPOINT["Viable checkpoint"]
@@ -84,7 +85,7 @@ Each checkpoint is a gate: delivery progress and architecture viability are asse
 
 ### Transition Planning Checklist
 
-- [ ] Each transition state is described in architecture terms — systems, data, identity, operations
+- [ ] Each transition state is described in architecture terms: systems, data, identity, operations
 - [ ] Every checkpoint has viability criteria across operations, data, security, and continuity
 - [ ] Temporary bridges and duplicated mechanisms carry owners and removal dates
 - [ ] Double-running costs are known and funded before the phase starts
@@ -93,7 +94,7 @@ Each checkpoint is a gate: delivery progress and architecture viability are asse
 ### Transition State Canvas
 
 ```markdown
-## Transition State — <name and date range>
+## Transition State: <name and date range>
 
 | Element | Description |
 |---------|-------------|

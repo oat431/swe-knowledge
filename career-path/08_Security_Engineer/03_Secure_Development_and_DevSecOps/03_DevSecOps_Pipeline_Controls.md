@@ -73,6 +73,7 @@ Every important control should document its operating contract:
 ### 4. Secure Control Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CHANGE["Candidate change"] --> PRECHECK["Fast local and pull request checks"]
     PRECHECK --> BUILD["Isolated build with trusted inputs"]
@@ -133,7 +134,7 @@ Design a pipeline for a service that handles sensitive customer data:
 - [[software-engineering-note/05_Software_Testing/Software Testing Overview|Software Testing Overview]]: continuous testing and evidence foundations
 - [[02_Secure_Coding_Enablement|Secure Coding Enablement]]: developer feedback that precedes pipeline gates
 - [[04_Dependency_and_Supply_Chain_Security|Dependency and Supply Chain Security]]: provenance and artifact trust
-- [[04_Security_Verification_and_Testing/06_Security_Release_Evidence|Security Release Evidence]]: turning pipeline results into release decisions
+- [[career-path/08_Security_Engineer/04_Security_Verification_and_Testing/06_Security_Release_Evidence|Security Release Evidence]]: turning pipeline results into release decisions
 
 ## Key Takeaways
 

@@ -14,11 +14,11 @@ tags:
 
 # Architecture Fundamentals
 
-> **Core capability:** The architect distinguishes architecture from implementation detail — understanding what is architecturally significant, how architectural decisions shape systems over time, and where the role adds value beyond design.
+> **Core capability:** The architect distinguishes architecture from implementation detail, understanding what is architecturally significant, how architectural decisions shape systems over time, and where the role adds value beyond design.
 
 ## Why This Matters
 
-Every engineer makes design decisions. The architect's contribution is knowing which decisions are *architecturally significant* — the ones that are costly to reverse, constrain future choices, or determine a system's quality attributes — and making those decisions deliberately, with explicit reasoning recorded.
+Every engineer makes design decisions. The architect's contribution is knowing which decisions are *architecturally significant* (the ones that are costly to reverse, constrain future choices, or determine a system's quality attributes) and making those decisions deliberately, with explicit reasoning recorded.
 
 Without fundamentals, architecture becomes either over-engineering (everything is important) or negligence (structural decisions accumulate accidentally). The architect bridges this gap: knowing the styles and patterns, applying them to context, and making structural choices reviewable by people who were not in the room.
 
@@ -37,6 +37,7 @@ Without fundamentals, architecture becomes either over-engineering (everything i
 ## The Architecture Decision Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DRIVERS["Business and quality drivers"] --> SIGNIFICANCE["Identify what is architecturally significant"]
     SIGNIFICANCE --> OPTIONS["Generate structural options"]
@@ -65,7 +66,7 @@ flowchart TD
 - [ ] Consequential structural decisions are recorded as ADRs
 - [ ] The system's architectural style is named and justified
 - [ ] Architecture is embedded in delivery increments, not a separate phase
-- [ ] The architect role's scope is explicit — complemented by TL and Staff, not competing
+- [ ] The architect role's scope is explicit, complemented by TL and Staff, not competing
 - [ ] Quality attributes are listed as architecture drivers before structure is designed
 
 ## Common Pitfalls
@@ -81,17 +82,17 @@ flowchart TD
 
 - The team can identify architecturally significant decisions without the architect present
 - Architectural style is named and cited in team decisions
-- ADRs survive team changes — new members read and cite them
+- ADRs survive team changes: new members read and cite them
 - Quality attributes are reviewed with the same rigor as functional requirements
 - Architecture withstands the first unplanned change without breaking
 
 ## Related Capabilities
 
-- [[04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]]: how fundamentals are tested
-- [[02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]: the drivers this area identifies
+- [[career-path/06_Software_Architect/04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]]: how fundamentals are tested
+- [[career-path/06_Software_Architect/02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]: the drivers this area identifies
 - [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/00_overview|Architecture and Design Judgment (Senior)]]: the foundation this builds on
 - [[career-path/05_Tech_Lead/03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture (Tech Lead)]]: the team-level counterpart
 
 ## Summary
 
-Architecture fundamentals establish what matters and why: architectural significance separates structure from detail, patterns provide a shared vocabulary, decisions carry explicit reasoning, and architecture lives inside delivery — not in a separate track. The architect's value hinges on knowing where to spend structural rigor.
+Architecture fundamentals establish what matters and why: architectural significance separates structure from detail, patterns provide a shared vocabulary, decisions carry explicit reasoning, and architecture lives inside delivery, not in a separate track. The architect's value hinges on knowing where to spend structural rigor.

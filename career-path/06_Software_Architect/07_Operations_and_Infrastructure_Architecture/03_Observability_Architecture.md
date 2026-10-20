@@ -20,9 +20,9 @@ tags:
 
 ## Why This Matters
 
-Observability is a property of the architecture. If the structure does not expose the right surfaces — per-boundary metrics, propagated trace context, structured events at transitions — then no tooling can answer the only question that matters during an incident: which part of the design is failing, and what is it taking down with it. A system observable only from inside individual services produces the familiar incident experience of five teams each saying their piece looks fine.
+Observability is a property of the architecture. If the structure does not expose the right surfaces (per-boundary metrics, propagated trace context, structured events at transitions), then no tooling can answer the only question that matters during an incident: which part of the design is failing, and what is it taking down with it. A system observable only from inside individual services produces the familiar incident experience of five teams each saying their piece looks fine.
 
-The design decisions are concrete. Which golden signals are exported at which boundary. How trace context propagates across service hops and through asynchronous steps. What is logged at edges and state transitions, with which fields, and what is deliberately not logged. Whether health endpoints answer liveness, readiness, or deep diagnostics — and which of them the orchestrator is allowed to act on. These are architecture contracts, and teams inherit them the way they inherit interfaces.
+The design decisions are concrete. Which golden signals are exported at which boundary. How trace context propagates across service hops and through asynchronous steps. What is logged at edges and state transitions, with which fields, and what is deliberately not logged. Whether health endpoints answer liveness, readiness, or deep diagnostics, and which of them the orchestrator is allowed to act on. These are architecture contracts, and teams inherit them the way they inherit interfaces.
 
 Observability also closes the loop on architecture itself. Boundary-level metrics reveal whether the structure works as designed: latency budgets met or silently exceeded, call paths that were never in the design showing up in traces, a service pulling traffic through a route the topology said was impossible. The observability view is how the architecture stays honest after the reviewers go home.
 
@@ -48,7 +48,7 @@ Measuring at boundaries rather than only inside services is what makes the data 
 
 ## Structured Logging at Boundaries
 
-Log at edges and transitions — requests entering, calls leaving, decisions made, state changed — not as a substitute for tracing and metrics. Every entry carries the fields that make it joinable: trace and correlation identifiers, the authenticated identity, the decision taken, and the outcome. Personal data is minimized by design, because logs are the dataset nobody classifies until an incident review asks where a value appeared. Log levels are interface semantics: an error level means an operator should look, and that meaning is enforced consistently across services.
+Log at edges and transitions (requests entering, calls leaving, decisions made, state changed), not as a substitute for tracing and metrics. Every entry carries the fields that make it joinable: trace and correlation identifiers, the authenticated identity, the decision taken, and the outcome. Personal data is minimized by design, because logs are the dataset nobody classifies until an incident review asks where a value appeared. Log levels are interface semantics: an error level means an operator should look, and that meaning is enforced consistently across services.
 
 ## Health Endpoints as Architecture Contract
 
@@ -61,6 +61,7 @@ Log at edges and transitions — requests entering, calls leaving, decisions mad
 ## The Observability View
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     EDGE["Edge boundary exports traffic and errors"] --> TRACE["Trace context propagates across hops"]
     TRACE --> SVC["Service boundaries export latency and saturation"]
@@ -70,7 +71,7 @@ flowchart LR
 
 ## Observability for Architecture Validation
 
-The boundary model makes architecture falsifiable. Latency per hop against the budget shows which interface is quietly over its allocation. Traces show call paths the topology never sanctioned — an accidental bypass, a direct database read, a deprecated route still taking traffic. Saturation data shows where a bulkhead is missing. Reviewing these against the deployment and component views is how erosion is caught early, and it turns the observability surface into the architecture's own feedback loop rather than an operations-only concern.
+The boundary model makes architecture falsifiable. Latency per hop against the budget shows which interface is quietly over its allocation. Traces show call paths the topology never sanctioned: an accidental bypass, a direct database read, a deprecated route still taking traffic. Saturation data shows where a bulkhead is missing. Reviewing these against the deployment and component views is how erosion is caught early, and it turns the observability surface into the architecture's own feedback loop rather than an operations-only concern.
 
 ## Practical Applications
 
@@ -85,7 +86,7 @@ The boundary model makes architecture falsifiable. Latency per hop against the b
 ### Observability Contract
 
 ```markdown
-## Observability Contract — <service or component>
+## Observability Contract: <service or component>
 
 | Element | Specification |
 |---------|---------------|
@@ -125,4 +126,4 @@ The boundary model makes architecture falsifiable. Latency per hop against the b
 
 ## Summary
 
-Observability architecture decides, at design time, what the structure will say about itself: golden signals at every boundary, trace context that survives every hop including asynchronous ones, structured logs at transitions with the fields that make them joinable, and health endpoints with separated liveness, readiness, and diagnostic duties. The same surfaces serve a second purpose — validating that the architecture behaves as designed, revealing budget overruns and unsanctioned call paths before they harden into reality.
+Observability architecture decides, at design time, what the structure will say about itself: golden signals at every boundary, trace context that survives every hop including asynchronous ones, structured logs at transitions with the fields that make them joinable, and health endpoints with separated liveness, readiness, and diagnostic duties. The same surfaces serve a second purpose, validating that the architecture behaves as designed, revealing budget overruns and unsanctioned call paths before they harden into reality.

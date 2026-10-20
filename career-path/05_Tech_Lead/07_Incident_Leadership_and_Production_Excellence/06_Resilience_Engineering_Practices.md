@@ -16,13 +16,13 @@ tags:
 
 # Resilience Engineering Practices
 
-> **Core skill:** Practicing failure before production supplies it — game days, failure-mode reviews, dependency drills, and resilience patterns adopted as team standards.
+> **Core skill:** Practicing failure before production supplies it: game days, failure-mode reviews, dependency drills, and resilience patterns adopted as team standards.
 
 ## Why This Matters
 
-Reliability is not what the system does when everything works; it is what the system does when things fail. A team that has never practiced failure discovers its resilience gaps at the worst possible moment — during the real incident, with users waiting. Practice is how the team learns its failure modes cheaply, in a controlled room, where the lesson costs nothing but an hour.
+Reliability is not what the system does when everything works; it is what the system does when things fail. A team that has never practiced failure discovers its resilience gaps at the worst possible moment, during the real incident, with users waiting. Practice is how the team learns its failure modes cheaply, in a controlled room, where the lesson costs nothing but an hour.
 
-The tech lead builds the practice program: game days that rehearse realistic failures, pre-mortems that find design flaws before launch, drills that exercise dependency failures, and resilience patterns — timeouts, retries, circuit breakers — adopted as standards rather than left to individual judgment. This note covers each practice, how to scope it safely, and how to measure whether the team's resilience is actually improving.
+The tech lead builds the practice program: game days that rehearse realistic failures, pre-mortems that find design flaws before launch, drills that exercise dependency failures, and resilience patterns (timeouts, retries, circuit breakers) adopted as standards rather than left to individual judgment. This note covers each practice, how to scope it safely, and how to measure whether the team's resilience is actually improving.
 
 ## Game Days
 
@@ -33,7 +33,7 @@ The tech lead builds the practice program: game days that rehearse realistic fai
 | **Execution** | The team responds to the injected failure as if it were real | The on-call process is exercised; roles and runbooks are used, not improvised |
 | **Debrief** | Review what happened: what worked, what broke, what was slow | The output is a finding list, exactly like a postmortem |
 
-The goal is not for the team to win the game; it is for the team to learn where the system and the process are weakest — with the lesson costing a rehearsal hour instead of an incident.
+The goal is not for the team to win the game; it is for the team to learn where the system and the process are weakest, with the lesson costing a rehearsal hour instead of an incident.
 
 ## Scoping Failure Practice Safely
 
@@ -41,7 +41,7 @@ The goal is not for the team to win the game; it is for the team to learn where 
 |------|---------|
 | The exercise hurts real users | Inject failures into staging or isolated environments first; production chaos only where blast radius is proven |
 | The exercise is ignored | Tie it to real risks: the last incident, the last near-miss, the next launch |
-| The exercise becomes theater | Measure the debrief: findings, actions, owners — same discipline as postmortems |
+| The exercise becomes theater | Measure the debrief: findings, actions, owners (same discipline as postmortems) |
 | The team is already stressed | Do not run games in a crisis week; practice when there is slack to learn |
 
 The principle: **practice must be scoped so that the cost of the lesson never exceeds the lesson.** A game day that breaks production is not practice; it is an incident with extra steps.
@@ -58,7 +58,7 @@ A pre-mortem is a postmortem held before the launch: the team imagines the launc
 | "What does this depend on that we do not control?" | External dependencies and their failure modes |
 | "What is the rollback story?" | Operability and recovery planning |
 
-Pre-mortems are cheap, fast, and brutally effective — the failure is imagined, so nobody needs to be right about it, and the team's collective unease becomes a checklist instead of a haunting.
+Pre-mortems are cheap, fast, and brutally effective: the failure is imagined, so nobody needs to be right about it, and the team's collective unease becomes a checklist instead of a haunting.
 
 ## Dependency Failure Drills
 
@@ -85,7 +85,7 @@ Every drill's pass condition is written before the drill: the team agrees what "
 | **Graceful degradation** | Users get partial function, not errors | Every critical path has a degraded mode designed, not improvised |
 | **Idempotency** | Retries do not duplicate effects | Mutating operations are safe to repeat |
 
-These are adopted as reviewable standards — in the architecture review, the DoD, and the PR checklist — so resilience is a property of the team's defaults, not of its luckiest engineers.
+These are adopted as reviewable standards (in the architecture review, the DoD, and the PR checklist) so resilience is a property of the team's defaults, not of its luckiest engineers.
 
 ## Measuring Resilience
 
@@ -98,6 +98,7 @@ These are adopted as reviewable standards — in the architecture review, the Do
 | **Cascade count** | Does one failure stay one failure? | Falling; bulkheads and breakers are doing their job |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A["Identify real risks"] --> B["Pre-mortem before launch"]
     B --> C["Game days and drills"]
@@ -156,12 +157,12 @@ flowchart LR
 
 ## Related Topics
 
-- [[05_On_Call_Excellence]] — the responders the practice program trains
-- [[07_Production_Excellence_Culture]] — the culture that funds and values the practice
-- [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/07_Chaos_Engineering|Chaos Engineering (Senior)]] — the personal chaos engineering skills this program scales to the team
-- [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/06_Production_Readiness|Production Readiness (Senior)]] — the readiness bar the drills verify
-- [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]] — the specialist path for reliability engineering depth
+- [[05_On_Call_Excellence]]: the responders the practice program trains
+- [[07_Production_Excellence_Culture]]: the culture that funds and values the practice
+- [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/07_Chaos_Engineering|Chaos Engineering (Senior)]]: the personal chaos engineering skills this program scales to the team
+- [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/06_Production_Readiness|Production Readiness (Senior)]]: the readiness bar the drills verify
+- [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]]: the specialist path for reliability engineering depth
 
 ## Summary
 
-Resilience engineering practices turn failure from a surprise into a rehearsal: game days that inject realistic failures in controlled environments, pre-mortems that find design flaws before launch, dependency drills that test the boundaries where systems die, and resilience patterns — timeouts, retries, breakers, bulkheads, degradation — adopted as standards rather than accidents. Measured through MTTD, MTTR, and finding closure, practice compounds: the team that has rehearsed its failures meets the real one calm, because it has already been here.
+Resilience engineering practices turn failure from a surprise into a rehearsal: game days that inject realistic failures in controlled environments, pre-mortems that find design flaws before launch, dependency drills that test the boundaries where systems die, and resilience patterns (timeouts, retries, breakers, bulkheads, degradation) adopted as standards rather than accidents. Measured through MTTD, MTTR, and finding closure, practice compounds: the team that has rehearsed its failures meets the real one calm, because it has already been here.

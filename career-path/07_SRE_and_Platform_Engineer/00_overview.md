@@ -43,18 +43,19 @@ The role is not only infrastructure administration. It treats operations as an e
 
 | Capability | Specialist behavior | Existing vault anchor | Status | Files |
 |---|---|---|---|---|
-| [[01_Service_Objectives/00_overview\|Service Objectives]] | Defines SLIs, SLOs, and error-budget policies | [[software-engineering-note/02_Software_Architecture/Microservice/05 Observability/054 SLOs & Error Budgets]] | ✅ Complete | 6 files |
-| [[02_Observability/00_overview\|Observability]] | Uses logs, metrics, traces, and events to understand systems | [[software-engineering-note/02_Software_Architecture/Microservice/05 Observability/051 Logging & Monitoring]] | ✅ Complete | 6 files |
-| [[03_Incident_Response/00_overview\|Incident Response]] | Coordinates response and turns incidents into learning | [[software-engineering-note/06_Software_Engineering_Operations/08_Service_Operations_and_Support]] | ✅ Complete | 6 files |
-| [[04_Delivery_Automation/00_overview\|Delivery Automation]] | Builds safe CI/CD, progressive delivery, and rollback | [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]] | ✅ Complete | 6 files |
-| [[05_Capacity_and_Resilience/00_overview\|Capacity and Resilience]] | Plans for load, failure, recovery, and growth | [[software-engineering-note/06_Software_Engineering_Operations/07_Capacity_and_Disaster_Recovery]] | ✅ Complete | 6 files |
-| [[06_Developer_Platform/00_overview\|Developer Platform]] | Provides reusable paths that balance standardization and autonomy | [[software-engineering-note/02_Software_Architecture/Microservice/07 Deployment/074 GitOps & CI-CD Pipelines]] | ✅ Complete | 6 files |
+| [[career-path/07_SRE_and_Platform_Engineer/01_Service_Objectives/00_overview|Service Objectives]] | Defines SLIs, SLOs, and error-budget policies | [[software-engineering-note/02_Software_Architecture/Microservice/05 Observability/054 SLOs & Error Budgets]] | ✅ Complete | 6 files |
+| [[career-path/07_SRE_and_Platform_Engineer/02_Observability/00_overview|Observability]] | Uses logs, metrics, traces, and events to understand systems | [[software-engineering-note/02_Software_Architecture/Microservice/05 Observability/051 Logging & Monitoring]] | ✅ Complete | 6 files |
+| [[career-path/07_SRE_and_Platform_Engineer/03_Incident_Response/00_overview|Incident Response]] | Coordinates response and turns incidents into learning | [[software-engineering-note/06_Software_Engineering_Operations/08_Service_Operations_and_Support]] | ✅ Complete | 6 files |
+| [[career-path/07_SRE_and_Platform_Engineer/04_Delivery_Automation/00_overview|Delivery Automation]] | Builds safe CI/CD, progressive delivery, and rollback | [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]] | ✅ Complete | 6 files |
+| [[career-path/07_SRE_and_Platform_Engineer/05_Capacity_and_Resilience/00_overview|Capacity and Resilience]] | Plans for load, failure, recovery, and growth | [[software-engineering-note/06_Software_Engineering_Operations/07_Capacity_and_Disaster_Recovery]] | ✅ Complete | 6 files |
+| [[career-path/07_SRE_and_Platform_Engineer/06_Developer_Platform/00_overview|Developer Platform]] | Provides reusable paths that balance standardization and autonomy | [[software-engineering-note/02_Software_Architecture/Microservice/07 Deployment/074 GitOps & CI-CD Pipelines]] | ✅ Complete | 6 files |
 
 **Total:** 36 files across 6 capability areas (1 overview + 5 topics each)
 
 ## Typical Progression
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SENIOR["Senior Software Engineer"] --> OPERATE["Own production operation"]
     OPERATE --> RELIABILITY["Define reliability objectives"]

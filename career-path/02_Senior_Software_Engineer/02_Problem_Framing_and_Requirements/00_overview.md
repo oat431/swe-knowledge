@@ -56,6 +56,7 @@ Problem framing is not a phase that happens before "real work" begins. It is **c
 ## How the Topics Connect
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     P["01 Problem Statement"] --> C["02 Current/Future State"]
     C --> S["03 Stakeholder Management"]
@@ -101,6 +102,6 @@ Use this to gauge your current level of problem framing skill:
 ## Related
 
 - [[00_overview|Senior Software Engineer Overview]]
-- [[01_Technical_Ownership/00_overview|Technical Ownership]] : problem framing is the first phase of lifecycle ownership
+- [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/00_overview|Technical Ownership]] : problem framing is the first phase of lifecycle ownership
 - [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]] : at EM level, problem framing expands to team and organizational problems
 - [[career-path/14_Product_Manager/00_overview|Product Manager]] : product managers and senior engineers collaborate closely on problem framing

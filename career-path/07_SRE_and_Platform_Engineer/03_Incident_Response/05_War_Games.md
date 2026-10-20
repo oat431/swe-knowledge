@@ -265,7 +265,7 @@ Ask these questions:
 - [[02_Incident_Management]] : war games test incident response process
 - [[03_Blameless_Postmortems]] : war games test whether postmortem lessons work
 - [[04_Post_Incident_Action_Items]] : war games verify action items are effective
-- [[05_Capacity_and_Resilience/04_Chaos_Engineering]] : chaos engineering tests system resilience
+- [[career-path/07_SRE_and_Platform_Engineer/05_Capacity_and_Resilience/04_Chaos_Engineering]] : chaos engineering tests system resilience
 - [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/07_Chaos_Engineering]] : chaos engineering foundations
 
 ## Key Takeaways

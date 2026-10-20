@@ -16,15 +16,15 @@ tags:
 
 # Data Governance and Quality
 
-> **Core skill:** Standing up data governance as a decision-rights system — councils, policies, stewards — and managing data quality with defined dimensions, measured targets, and clear accountability for remediation.
+> **Core skill:** Standing up data governance as a decision-rights system (councils, policies, stewards) and managing data quality with defined dimensions, measured targets, and clear accountability for remediation.
 
 ## Why This Matters
 
-Data governance has a reputation problem because most programs start at the wrong end: a policy document, a committee, a tool purchase. None of these change a single decision. Governance works when it is understood as decision rights — who may define, change, approve, and escalate data matters — made operational through a small set of bodies and artifacts that remove recurring friction for real teams.
+Data governance has a reputation problem because most programs start at the wrong end: a policy document, a committee, a tool purchase. None of these change a single decision. Governance works when it is understood as decision rights (who may define, change, approve, and escalate data matters), made operational through a small set of bodies and artifacts that remove recurring friction for real teams.
 
 Data quality is the visible output of those rights exercised well. Quality without governance is a series of heroics: an analyst notices the numbers are wrong, an engineer patches a pipeline, nothing changes upstream, and the defect returns. Governance without quality work is a paper regime: standards published, exceptions invisible, decline invisible. The two belong together, because quality failures are how governance earns its keep and quality improvements are how governance proves it matters.
 
-The senior architect's approach is deliberately mundane: define quality dimensions, measure a handful of them against targets on the most decision-critical data, assign issues to their owners, and let scorecards do the arguing. The ambition is not perfect data — perfect data is not a requirement any business case survives — but data whose fitness for its stated purposes is known, owned, and improving.
+The senior architect's approach is deliberately mundane: define quality dimensions, measure a handful of them against targets on the most decision-critical data, assign issues to their owners, and let scorecards do the arguing. The ambition is not perfect data (perfect data is not a requirement any business case survives) but data whose fitness for its stated purposes is known, owned, and improving.
 
 ## Governance Structures
 
@@ -89,6 +89,7 @@ The remediation rule that separates working programs from rituals: fix at the so
 ## The Governance Operating Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     POLICY["Data policy and standards"] --> MEASURE["Quality measured against defined dimensions"]
     MEASURE --> ISSUES["Issues raised and assigned"]
@@ -111,7 +112,7 @@ flowchart TD
 ### Data Quality Scorecard
 
 ```markdown
-## Data Quality Scorecard — [Domain]
+## Data Quality Scorecard: [Domain]
 
 | Data Set | Dimension | Target | Actual | Trend | Owner | Open Issues |
 |----------|-----------|--------|--------|-------|-------|-------------|
@@ -145,7 +146,7 @@ flowchart TD
 - [[01_Data_as_an_Enterprise_Asset]]: the owners and stewards governance operates through
 - [[06_Data_Security_Privacy_and_Compliance]]: policy domains that share the governance machinery
 - [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]]: engineering practices that implement quality at the source
-- [[03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: governance design as an enterprise discipline
+- [[career-path/15_Solutions_and_Enterprise_Architect/03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: governance design as an enterprise discipline
 
 ## Summary
 

@@ -19,7 +19,7 @@ tags:
 
 ## Why This Is a Senior Skill
 
-A mid-level engineer stands up a vector store, wires a framework's RAG chain, and calls the project done. A senior engineer owns retrieval quality end to end — chunking strategy, embedding choice, hybrid search, reranking — because the generator can never be better than the context it receives. When answers are wrong in a RAG system, the failure is usually retrieval (the right passage never made it into context), and the senior knows to measure and fix the retriever before touching prompts or swapping models.
+A mid-level engineer stands up a vector store, wires a framework's RAG chain, and calls the project done. A senior engineer owns retrieval quality end to end (chunking strategy, embedding choice, hybrid search, reranking) because the generator can never be better than the context it receives. When answers are wrong in a RAG system, the failure is usually retrieval (the right passage never made it into context), and the senior knows to measure and fix the retriever before touching prompts or swapping models.
 
 The senior challenge is treating retrieval as a first-class software system: an index that is versioned and re-indexable, quality that is measured independently of generation, and a pipeline where every stage (chunk → embed → retrieve → rerank → augment) has a knob with a measured effect.
 
@@ -61,13 +61,13 @@ The senior challenge is treating retrieval as a first-class software system: an 
 | Cross-encoder reranker (e.g., bge-reranker, Cohere Rerank) | Large, reliable | One extra model pass over top-N | Most production systems |
 | LLM-based rerank | Best on subtle relevance | High token cost, latency | Low-QPS, high-stakes pipelines |
 
-Retrieve wide (50–200 candidates), rerank narrow (top 5–10). Reranking the candidates beats enlarging k, because the generator's attention and the context budget — not candidate count — are the real constraint.
+Retrieve wide (50–200 candidates), rerank narrow (top 5–10). Reranking the candidates beats enlarging k, because the generator's attention and the context budget, not candidate count, are the real constraint.
 
 ## In Practice
 
 **Chunking is a retrieval-quality decision, not an implementation detail.** The chunk is the retrieval unit: too small and context is lost, too large and relevance is diluted. Choose chunk boundaries by document structure, keep 10–20% overlap, and evaluate chunking changes with retrieval metrics before changing anything else. A chunking experiment is cheap; a wrong chunk size shipped to production is not.
 
-**Measure retrieval quality independently of answer quality.** Track recall@k, MRR, and nDCG on a labeled query–document set. A great answer built on the wrong passage is still wrong, and a good retriever feeding a weak generator is a generation problem — separate the two so you always know which layer is failing. Retrieval metrics are the earliest and cheapest signal of RAG health.
+**Measure retrieval quality independently of answer quality.** Track recall@k, MRR, and nDCG on a labeled query–document set. A great answer built on the wrong passage is still wrong, and a good retriever feeding a weak generator is a generation problem: separate the two so you always know which layer is failing. Retrieval metrics are the earliest and cheapest signal of RAG health.
 
 **Use hybrid retrieval by default for production corpora.** Real queries mix paraphrase ("how do I reset my access") with exact tokens ("error E-1042"). Dense-only search misses exact codes; sparse-only misses paraphrase. Hybrid fusion covers both classes and costs little compared to a wrong answer, so single-strategy retrieval needs a justification, not the other way around.
 
@@ -75,7 +75,7 @@ Retrieve wide (50–200 candidates), rerank narrow (top 5–10). Reranking the c
 
 **Design augmentation for how models actually attend to context.** Models weight the beginning and end of context and miss material in the middle ("lost in the middle"). Order chunks by confidence, put the strongest evidence first, dedupe near-identical chunks, and prefix each with source metadata (title, section) so the generator can cite precisely and the middle never holds the best evidence.
 
-**Cite from the retrieved context, and verify grounding against it.** Every claim in the answer should map to a retrieved passage; when none does, that is either hallucination or a retrieval miss — two different fixes. The grounding check lives in evaluation, but the pattern must make the context–answer mapping available to be checked in the first place.
+**Cite from the retrieved context, and verify grounding against it.** Every claim in the answer should map to a retrieved passage; when none does, that is either hallucination or a retrieval miss, two different fixes. The grounding check lives in evaluation, but the pattern must make the context–answer mapping available to be checked in the first place.
 
 ## Practical Exercise
 
@@ -101,7 +101,7 @@ Retrieve wide (50–200 candidates), rerank narrow (top 5–10). Reranking the c
 - Defaulting to 512-token chunks without evidence: chunk size is corpus-specific and must be measured
 - Measuring only end-to-end answer quality: retrieval regressions hide behind generator variation
 - Dense-only retrieval on corpora full of codes and identifiers: exact tokens never surface
-- Retrieving top-3 and calling it done: too few candidates starve the generator — retrieve wide, rerank narrow
+- Retrieving top-3 and calling it done: too few candidates starve the generator; retrieve wide, rerank narrow
 - Stale indexes: documents updated in the source system but never re-embedded
 
 ## Key Takeaways

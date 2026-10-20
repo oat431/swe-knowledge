@@ -26,6 +26,7 @@ The difference is not technical complexity. It is **planning discipline**: turni
 ## Capacity Planning Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MEASURE["Measure current usage"] --> FORECAST["Forecast growth"]
     FORECAST --> MODEL["Model capacity requirements"]
@@ -114,7 +115,7 @@ flowchart TD
 
 - [[02_Load_and_Stress_Testing]] : validates capacity assumptions
 - [[05_Auto_Scaling_Design]] : automates capacity adjustments
-- [[01_Service_Objectives/02_SLO_Definition]] : SLOs define the reliability targets capacity must support
+- [[career-path/07_SRE_and_Platform_Engineer/01_Service_Objectives/02_SLO_Definition]] : SLOs define the reliability targets capacity must support
 - [[software-engineering-note/06_Software_Engineering_Operations/07_Capacity_and_Disaster_Recovery]] : capacity and DR foundations
 - [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/02_SRE_Principles]] : SRE principles from Senior SWE path
 

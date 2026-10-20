@@ -16,11 +16,11 @@ tags:
 
 # Online Evaluation and Monitoring
 
-> Measuring the system against real traffic after deploy — quality, performance, cost, and usage — and converting the signals into alerts, test cases, and product decisions.
+> Measuring the system against real traffic after deploy (quality, performance, cost, and usage) and converting the signals into alerts, test cases, and product decisions.
 
 ## Why This Is a Senior Skill
 
-A mid-level engineer ships and watches the error dashboard. A senior engineer designs the feedback capture itself: explicit signals (ratings, reports) and implicit signals (copy-after-answer, re-ask, handoff, abandonment), samples production outputs for continuous offline scoring, and separates the three jobs online monitoring does — detect degradation, prove launch impact, and replenish the offline suite. They also know which signals to trust: users rarely rate, and the users who do are not representative.
+A mid-level engineer ships and watches the error dashboard. A senior engineer designs the feedback capture itself: explicit signals (ratings, reports) and implicit signals (copy-after-answer, re-ask, handoff, abandonment), samples production outputs for continuous offline scoring, and separates the three jobs online monitoring does: detect degradation, prove launch impact, and replenish the offline suite. They also know which signals to trust: users rarely rate, and the users who do are not representative.
 
 The senior challenge is noise control. Production signals are biased, sparse, and lagging; thresholds set without baselines produce alert fatigue or silence, and both are failure states.
 
@@ -42,8 +42,8 @@ The senior challenge is noise control. Production signals are biased, sparse, an
 | Signal | Example | Strength | Weakness |
 |--------|---------|----------|----------|
 | Explicit | 👍/👎, ratings, user reports | Direct quality statement | Sparse, selection-biased, gamed |
-| Implicit — behavior | Copy-after-answer, re-ask, abandonment, edit-before-accept | Unfiltered, abundant | Needs interpretation; causal claims risky |
-| Implicit — process | Human handoff, escalation | Strong failure proxy in support flows | Exists only where handoff is possible |
+| Implicit: behavior | Copy-after-answer, re-ask, abandonment, edit-before-accept | Unfiltered, abundant | Needs interpretation; causal claims risky |
+| Implicit: process | Human handoff, escalation | Strong failure proxy in support flows | Exists only where handoff is possible |
 | Experiment | A/B versus baseline, shadow deploy | Controlled comparison | Requires traffic volume and experiment hygiene |
 | Sampled scoring | Periodic offline judging of production samples | Grounded quality number over time | Lagging; biased if not stratified |
 
@@ -72,13 +72,13 @@ Boundary note: statistical drift monitoring for *trained* models belongs to [[ca
 
 **Sample production outputs continuously and score them offline.** The strongest online quality signal is a running judge score over a stratified sample of real traffic. It closes the loop from [[computing-foundation-note/Artificial_Intelligence/13_LLM_Evaluation_and_Guardrails]]: online evaluation catches what offline missed, and the caught cases join the offline suite.
 
-**Instrument implicit feedback; treat explicit ratings as a weak signal.** A user who copies the answer and ends the session has voted with behavior; a user who clicks 👎 has voted with a button that 1% of users ever touch. Weight behavior over buttons, but validate interpretations before acting — a re-ask can mean "wrong answer" or "want more detail."
+**Instrument implicit feedback; treat explicit ratings as a weak signal.** A user who copies the answer and ends the session has voted with behavior; a user who clicks 👎 has voted with a button that 1% of users ever touch. Weight behavior over buttons, but validate interpretations before acting; a re-ask can mean "wrong answer" or "want more detail."
 
-**Set thresholds only after a baseline period.** Launch with monitoring in collection mode; after one to four weeks, set thresholds from observed distributions with room for normal variance. Thresholds invented before launch are guesses that produce alert fatigue — the same define-before-you-measure discipline as [[computing-foundation-note/Artificial_Intelligence/12_AI_ROI_and_Roadmap]], applied to operations.
+**Set thresholds only after a baseline period.** Launch with monitoring in collection mode; after one to four weeks, set thresholds from observed distributions with room for normal variance. Thresholds invented before launch are guesses that produce alert fatigue, the same define-before-you-measure discipline as [[computing-foundation-note/Artificial_Intelligence/12_AI_ROI_and_Roadmap]], applied to operations.
 
-**Watch hallucination signals where they are detectable.** Fact-in-answer-but-not-in-context, price mismatches, "I don't know" when the context holds the answer — these are cheap to detect on sampled traffic and are leading indicators of retrieval or grounding regressions. Confident-but-wrong cases should route to human review, never silently to the user.
+**Watch hallucination signals where they are detectable.** Fact-in-answer-but-not-in-context, price mismatches, "I don't know" when the context holds the answer: these are cheap to detect on sampled traffic and are leading indicators of retrieval or grounding regressions. Confident-but-wrong cases should route to human review, never silently to the user.
 
-**Own business metrics and quality metrics together, and distrust them when they diverge.** Deflection rate and CSAT are business metrics; faithfulness and relevance are quality metrics. If deflection rises while sampled quality falls, something is being gamed — usually the model learned to say "I can't help" or to hand off faster. Divergence between the two families is itself an alert.
+**Own business metrics and quality metrics together, and distrust them when they diverge.** Deflection rate and CSAT are business metrics; faithfulness and relevance are quality metrics. If deflection rises while sampled quality falls, something is being gamed: usually the model learned to say "I can't help" or to hand off faster. Divergence between the two families is itself an alert.
 
 **Every alert must end in a fix or a test case.** An alert that resolves to "monitoring noise" twice gets ignored the third time. The runbook for every alert ends with one of two outputs: a code or config change, or a new case in the offline suite. Anything else is documentation of learned helplessness.
 

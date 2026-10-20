@@ -16,15 +16,15 @@ tags:
 
 # Guides and Tutorials
 
-> **Core skill:** The advocate writes task-first learning content — tutorials that walk a newcomer to a working result and guides that solve a specific problem — with every step tested as written and every waiting error answered.
+> **Core skill:** The advocate writes task-first learning content (tutorials that walk a newcomer to a working result and guides that solve a specific problem) with every step tested as written and every waiting error answered.
 
 ## Why This Matters
 
 The tutorial is where a technology either becomes usable or becomes abandoned. A developer's first thirty minutes with a new tool are spent inside a guide, and the guide's job is not to explain the tool but to make the reader succeed with it. That distinction changes everything: the tutorial that opens with architecture loses the reader before the first command, while the one that gets to a working result in five minutes converts curiosity into capability. Tutorials and guides are the product's onboarding classroom, and unlike a conference talk, they run unattended at three in the morning for every new user.
 
-The craft lives in details that writers systematically underestimate. Steps must be verifiable — each one ending in an observable result the reader can compare against — because an unverifiable step is where readers quietly give up. Prerequisites must be complete, because a missing version or permission surfaces as an opaque error that the reader interprets as broken software. Choices must be removed rather than offered: the tutorial decides, the reader executes, and decisions are deferred to content whose explicit job is comparison. These are engineering constraints, not style preferences.
+The craft lives in details that writers systematically underestimate. Steps must be verifiable (each one ending in an observable result the reader can compare against) because an unverifiable step is where readers quietly give up. Prerequisites must be complete, because a missing version or permission surfaces as an opaque error that the reader interprets as broken software. Choices must be removed rather than offered: the tutorial decides, the reader executes, and decisions are deferred to content whose explicit job is comparison. These are engineering constraints, not style preferences.
 
-The professional distinction is testing. Anyone can write instructions; a guide is proven when someone follows it exactly on a clean machine and arrives, without improvisation, at the promised result. Testing is what converts a guide from a plausible document into a dependable one, and it is also what keeps the guide alive — every failure found in testing is a support ticket the team never receives. The advocate treats the test pass as part of writing, not as an optional review.
+The professional distinction is testing. Anyone can write instructions; a guide is proven when someone follows it exactly on a clean machine and arrives, without improvisation, at the promised result. Testing is what converts a guide from a plausible document into a dependable one, and it is also what keeps the guide alive. Every failure found in testing is a support ticket the team never receives. The advocate treats the test pass as part of writing, not as an optional review.
 
 ## Guide Types and Their Contracts
 
@@ -51,7 +51,7 @@ Mixing the contracts is the most common structural failure: a quickstart that te
 | Cleanup | Leave no surprise costs or state | Remove resources the guide created |
 | Next steps | Continue the journey | Link deeper guides, references, and related examples |
 
-A tutorial that omits any of these parts is not shorter — it is a support ticket that has not been filed yet.
+A tutorial that omits any of these parts is not shorter. It is a support ticket that has not been filed yet.
 
 ## Writing Steps That Work
 
@@ -69,13 +69,14 @@ A tutorial that omits any of these parts is not shorter — it is a support tick
 ## The Tutorial Writing Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     TASK["Start from a task the reader must complete"] --> STEPS["Write verifiable steps with expected output"]
     STEPS["Write verifiable steps with expected output"] --> TEST["Test as written on a clean machine"]
     TEST["Test as written on a clean machine"] --> PUBLISH["Publish with prerequisites and next steps"]
 ```
 
-The loop iterates on test findings, not authorial intuition. Every guide should carry an internal note of when and where it was last proven end to end — the freshest evidence the page can offer.
+The loop iterates on test findings, not authorial intuition. Every guide should carry an internal note of when and where it was last proven end to end: the freshest evidence the page can offer.
 
 ## Practical Applications
 
@@ -127,8 +128,8 @@ The loop iterates on test findings, not authorial intuition. Every guide should 
 - [[01_Documentation_as_a_Product]]
 - [[04_Examples_and_Reference_Implementations]]
 - [[05_Information_Architecture_and_Search]]
-- [[03_Facilitation_and_Enablement/00_overview|Facilitation and Enablement]]
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/03_Facilitation_and_Enablement/00_overview|Facilitation and Enablement]]
 
 ## Summary
 
-Guides and tutorials are the product's unattended classroom: task-first writing, a complete anatomy from prerequisites to next steps, steps that each end in an observable result, and a test pass on a clean machine before anyone else reads the page. The advocate who builds this discipline converts the hardest moment of adoption — the first thirty minutes — from a gamble into a designed experience that scales to every future user.
+Guides and tutorials are the product's unattended classroom: task-first writing, a complete anatomy from prerequisites to next steps, steps that each end in an observable result, and a test pass on a clean machine before anyone else reads the page. The advocate who builds this discipline converts the hardest moment of adoption (the first thirty minutes) from a gamble into a designed experience that scales to every future user.

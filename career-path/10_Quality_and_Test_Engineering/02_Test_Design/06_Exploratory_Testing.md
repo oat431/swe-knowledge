@@ -64,6 +64,7 @@ Session-Based Test Management is a structured approach to exploratory testing:
 ### Session Structure
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A[Charter] --> B[Setup\n10 min]
     B --> C[Testing\n60-90 min]
@@ -402,6 +403,7 @@ Registration Feature Coverage:
 ### Complementary Approaches
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A[Exploratory Testing] -->|Find defects| B[Bug Reports]
     B -->|Confirm| C[Scripted Tests]

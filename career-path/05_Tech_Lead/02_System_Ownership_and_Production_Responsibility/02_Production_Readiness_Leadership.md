@@ -16,13 +16,13 @@ tags:
 
 # Production Readiness Leadership
 
-> **Core skill:** Driving readiness reviews so the team ships things that can be operated — not just built — and gating releases on readiness rather than hope.
+> **Core skill:** Driving readiness reviews so the team ships things that can be operated (not just built) and gating releases on readiness rather than hope.
 
 ## Why This Matters
 
-Every release is a bet: the new code will run, degrade gracefully, be observable, and roll back if it does not. Teams that lose that bet pay in incidents, wake-ups, and the slow erosion of stakeholder trust. The difference between teams that ship safely and teams that ship dangerously is rarely the code — it is whether readiness is checked by a process or assumed by optimism.
+Every release is a bet: the new code will run, degrade gracefully, be observable, and roll back if it does not. Teams that lose that bet pay in incidents, wake-ups, and the slow erosion of stakeholder trust. The difference between teams that ship safely and teams that ship dangerously is rarely the code. It is whether readiness is checked by a process or assumed by optimism.
 
-A senior engineer checks readiness for their own work personally. A tech lead makes readiness a team gate: a checklist that is part of the release definition, a review that happens before production, and visibility that lets stakeholders see what is safe to ship and what is not. The gate is not bureaucracy — it is the difference between discovering problems in staging and discovering them at 3 AM.
+A senior engineer checks readiness for their own work personally. A tech lead makes readiness a team gate: a checklist that is part of the release definition, a review that happens before production, and visibility that lets stakeholders see what is safe to ship and what is not. The gate is not bureaucracy. It is the difference between discovering problems in staging and discovering them at 3 AM.
 
 ## From Personal Practice to Team Gate
 
@@ -32,7 +32,7 @@ A senior engineer checks readiness for their own work personally. A tech lead ma
 | Tech lead | Written checklist, review forum, release gate enforced for the whole team |
 | Organization | Standardized readiness across teams, shared tooling |
 
-The tech lead's move is to make the personal checklist a team artifact: written down, reviewed together, and binding. Once the gate exists, it also teaches — every engineer learns what readiness means by watching the gate applied.
+The tech lead's move is to make the personal checklist a team artifact: written down, reviewed together, and binding. Once the gate exists, it also teaches. Every engineer learns what readiness means by watching the gate applied.
 
 ## The Team Readiness Checklist
 
@@ -57,16 +57,16 @@ The checklist lives in the repo next to the release process, not in a slide deck
 | Red | Do not ship until items clear | Critical gaps: no rollback, no observability |
 | Emergency | Ship-then-review, documented after | Production is down and the change fixes it |
 
-The gate is a conversation, not a checkbox farm. A red gate that the lead overrides for politics is a gate that dies; a green gate that ignores real risk is a gate that lies. The lead's job is to keep the gate honest and to make the exceptions visible — an exception list is the team's honest risk register.
+The gate is a conversation, not a checkbox farm. A red gate that the lead overrides for politics is a gate that dies; a green gate that ignores real risk is a gate that lies. The lead's job is to keep the gate honest and to make the exceptions visible. An exception list is the team's honest risk register.
 
 ## Making Readiness Visible to Stakeholders
 
-Stakeholders should be able to see readiness without asking: a board or dashboard showing each planned release, its readiness status, and its exceptions. When readiness is visible, two good things happen: stakeholders stop asking "is it safe?" and start asking "what would make it green?" — which is the question that funds readiness work.
+Stakeholders should be able to see readiness without asking: a board or dashboard showing each planned release, its readiness status, and its exceptions. When readiness is visible, two good things happen: stakeholders stop asking "is it safe?" and start asking "what would make it green?", which is the question that funds readiness work.
 
 ## Readiness Review Meeting Format
 
 ```markdown
-## Readiness Review — [release]
+## Readiness Review: [release]
 
 ### What is shipping
 - [ ] Scope summary and owner
@@ -90,9 +90,10 @@ Stakeholders should be able to see readiness without asking: a board or dashboar
 - [ ] Review post-release signals at the next health check
 ```
 
-Keep the meeting to 30 minutes. The meeting does not do the readiness work — it verifies and decides. If the meeting is doing the work, the checklist has failed, not the meeting.
+Keep the meeting to 30 minutes. The meeting does not do the readiness work. It verifies and decides. If the meeting is doing the work, the checklist has failed, not the meeting.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CHANGE["Change proposed"] --> CHECKLIST["Team fills readiness checklist"]
     CHECKLIST --> REVIEW["Readiness review meeting"]
@@ -141,9 +142,9 @@ Checklist for establishing the readiness gate:
 - [[01_Team_System_Ownership]]: readiness is the ritual that gates what the team ships
 - [[05_System_Health_Monitoring]]: the observability leg of the checklist
 - [[06_Production_Support_Models]]: runbooks and handoff are readiness items
-- [[07_Incident_Leadership_and_Production_Excellence/00_overview|Incident Leadership and Production Excellence]]: what happens when the gate fails
+- [[career-path/05_Tech_Lead/07_Incident_Leadership_and_Production_Excellence/00_overview|Incident Leadership and Production Excellence]]: what happens when the gate fails
 - [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/04_Incident_Response|Incident Response (Senior)]]: the personal practice this builds on
 
 ## Summary
 
-Production readiness leadership turns a personal discipline into a team gate: a written checklist with evidence, a short review meeting that verifies rather than works, explicit gate levels, and visible status for stakeholders. The gate's purpose is not to slow shipping but to move failure detection earlier — from 3 AM production to the staging review, where it costs a day instead of an incident.
+Production readiness leadership turns a personal discipline into a team gate: a written checklist with evidence, a short review meeting that verifies rather than works, explicit gate levels, and visible status for stakeholders. The gate's purpose is not to slow shipping but to move failure detection earlier, from 3 AM production to the staging review, where it costs a day instead of an incident.

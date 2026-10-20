@@ -39,6 +39,7 @@ Data quality is not about perfection: it is about fitness for purpose. The senio
 ## How the Topics Connect
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DIM["01 Quality Dimensions and Metrics"] --> PROFILE["02 Profiling and Anomaly Detection"]
     DIM --> RULES["03 Quality Rules and Validation"]
@@ -77,6 +78,6 @@ These topic notes **do not duplicate** the existing knowledge base. They layer s
 ## Related
 
 - [[00_overview|Data and ML Engineer Overview]]
-- [[03_Data_Integration_and_Interoperability/00_overview|Data Integration and Interoperability]] : integration correctness affects quality
-- [[02_Data_Modeling_and_Design/00_overview|Data Modeling and Design]] : model design constrains quality
+- [[career-path/09_Data_and_ML_Engineer/03_Data_Integration_and_Interoperability/00_overview|Data Integration and Interoperability]] : integration correctness affects quality
+- [[career-path/09_Data_and_ML_Engineer/02_Data_Modeling_and_Design/00_overview|Data Modeling and Design]] : model design constrains quality
 - [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/00_overview|Quality, Reliability, and Security]] : general quality engineering principles

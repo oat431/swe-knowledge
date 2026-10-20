@@ -16,15 +16,15 @@ tags:
 
 # Business Structure and Registration
 
-> **Core skill:** The independent chooses a business structure and completes registration appropriate to their jurisdiction and risk profile — simple to run, honest about liability — and confirmed with local professionals rather than copied from peers.
+> **Core skill:** The independent chooses a business structure and completes registration appropriate to their jurisdiction and risk profile (simple to run, honest about liability), and confirmed with local professionals rather than copied from peers.
 
 ## Why This Matters
 
-Structure is a quiet decision with loud consequences. It shapes how taxes are paid, whether personal assets stand behind the work, how clients perceive professionalism, and how much administration the business carries. Skip the decision entirely and every engagement is taken personally in the legal sense — with personal liability attached. Overcomplicate it and administrative overhead consumes the hours that should be selling and delivering. The right structure is the simplest one that matches the real risk and revenue of the practice today, with a plan to revisit it as both grow.
+Structure is a quiet decision with loud consequences. It shapes how taxes are paid, whether personal assets stand behind the work, how clients perceive professionalism, and how much administration the business carries. Skip the decision entirely and every engagement is taken personally in the legal sense, with personal liability attached. Overcomplicate it and administrative overhead consumes the hours that should be selling and delivering. The right structure is the simplest one that matches the real risk and revenue of the practice today, with a plan to revisit it as both grow.
 
-The main axes are few. Operating personally is cheap and immediate but leaves assets exposed and can look provisional to larger clients. A separate legal entity — where the jurisdiction offers one that suits a single owner — separates liability, fits procurement processes, and signals permanence, at the cost of registration, filings, and a small ongoing administrative burden. Partnerships and multi-owner arrangements trade control for shared risk and require careful agreements between the parties. There is no universally correct answer: the choice depends on jurisdiction, client type, revenue level, and the risks actually being taken on.
+The main axes are few. Operating personally is cheap and immediate but leaves assets exposed and can look provisional to larger clients. A separate legal entity (where the jurisdiction offers one that suits a single owner) separates liability, fits procurement processes, and signals permanence, at the cost of registration, filings, and a small ongoing administrative burden. Partnerships and multi-owner arrangements trade control for shared risk and require careful agreements between the parties. There is no universally correct answer: the choice depends on jurisdiction, client type, revenue level, and the risks actually being taken on.
 
-What works in one country cannot be assumed to work in another. Registration steps, naming rules, capital requirements, foreign ownership limits, and reporting duties all vary — and in Thailand, for example, the structure options available to a resident versus a foreigner, and the formalities attached to each, must be confirmed with a Thai accountant or lawyer rather than inferred from another market. The independent's discipline is to compare two or three real options with local professional advice, register properly, separate business banking and records from day one, and review the structure annually against where the business is actually heading.
+What works in one country cannot be assumed to work in another. Registration steps, naming rules, capital requirements, foreign ownership limits, and reporting duties all vary, and in Thailand, for example, the structure options available to a resident versus a foreigner, and the formalities attached to each, must be confirmed with a Thai accountant or lawyer rather than inferred from another market. The independent's discipline is to compare two or three real options with local professional advice, register properly, separate business banking and records from day one, and review the structure annually against where the business is actually heading.
 
 ## Structure Decision Factors
 
@@ -47,7 +47,7 @@ What works in one country cannot be assumed to work in another. Registration ste
 | Partnership | Shared and often joint exposure | Agreement plus filings | Two or more independents working together |
 | Foreign owned entity in some jurisdictions | Additional conditions apply | Higher compliance bar | Non residents operating locally, such as in Thailand |
 
-Names, availability, and exact rules differ by jurisdiction; this table is orientation, not advice — confirm specifics locally.
+Names, availability, and exact rules differ by jurisdiction; this table is orientation, not advice. Confirm specifics locally.
 
 ## Registration and Onboarding Steps
 
@@ -63,6 +63,7 @@ Names, availability, and exact rules differ by jurisdiction; this table is orien
 ## The Structure Decision Path
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     OPTIONS["List structure options for your jurisdiction"] --> ADVICE["Confirm specifics with a local accountant or lawyer"]
     ADVICE --> CHOOSE["Choose and register the structure"]
@@ -103,8 +104,8 @@ flowchart TD
 
 - [[01_Contracts_and_Professional_Agreements]]
 - [[03_Tax_Administration_and_Compliance]]
-- [[03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
 
 ## Summary
 
-Business structure and registration give the independent practice its legal shape: the simplest arrangement that matches the jurisdiction, the risk, and the clients — registered properly, banked separately, and revisited as revenue and exposure grow. Local professionals confirm the specifics, because rules and formalities differ by country, and no general principle or peer anecdote substitutes for a qualified local answer.
+Business structure and registration give the independent practice its legal shape: the simplest arrangement that matches the jurisdiction, the risk, and the clients, registered properly, banked separately, and revisited as revenue and exposure grow. Local professionals confirm the specifics, because rules and formalities differ by country, and no general principle or peer anecdote substitutes for a qualified local answer.

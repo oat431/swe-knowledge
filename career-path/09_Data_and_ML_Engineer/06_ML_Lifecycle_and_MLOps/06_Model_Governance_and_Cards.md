@@ -86,7 +86,7 @@ Create a model card for a model you have built or are building:
 - [[01_Experiment_Tracking_and_Reproducibility]]: experiment records feed model cards
 - [[03_Model_Training_and_Evaluation]]: evaluation results populate the model card
 - [[05_ML_Monitoring_and_Drift]]: monitoring data feeds ongoing governance reviews
-- [[05_Data_Security_and_Privacy/04_Privacy_Engineering|Privacy Engineering]]: privacy considerations in model governance
+- [[career-path/09_Data_and_ML_Engineer/05_Data_Security_and_Privacy/04_Privacy_Engineering|Privacy Engineering]]: privacy considerations in model governance
 
 ## Common Pitfalls
 

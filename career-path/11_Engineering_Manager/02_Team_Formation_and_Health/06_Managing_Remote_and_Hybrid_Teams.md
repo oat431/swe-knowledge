@@ -16,13 +16,13 @@ tags:
 
 # Managing Remote and Hybrid Teams
 
-> **Core skill:** Creating cohesion, fairness, and trust across distance and time zones — through async discipline, deliberate connection, and meeting norms that do not favor the room.
+> **Core skill:** Creating cohesion, fairness, and trust across distance and time zones, through async discipline, deliberate connection, and meeting norms that do not favor the room.
 
 ## Why This Matters
 
-Distance changes how teams fail. In an office, trust is built by proximity — overheard conversations, shared lunches, the hallway after the meeting. Distributed, none of that exists, and the substitutes must be built deliberately or the team fragments into a center and a periphery: those in the room with the manager, and those watching from a tile. Fragmentation shows up as silent remote members, decisions made before the call, and quiet attrition of the people farthest from the office.
+Distance changes how teams fail. In an office, trust is built by proximity: overheard conversations, shared lunches, the hallway after the meeting. Distributed, none of that exists, and the substitutes must be built deliberately or the team fragments into a center and a periphery: those in the room with the manager, and those watching from a tile. Fragmentation shows up as silent remote members, decisions made before the call, and quiet attrition of the people farthest from the office.
 
-Remote work is not a degraded version of office work; it is a different operating system. Teams that run on written decisions, recorded meetings, and deliberate connection outperform office teams on focus and fairness — but only if the manager runs the system on purpose. Hybrid is the hardest case of all, because the office keeps quietly re-asserting itself.
+Remote work is not a degraded version of office work; it is a different operating system. Teams that run on written decisions, recorded meetings, and deliberate connection outperform office teams on focus and fairness, but only if the manager runs the system on purpose. Hybrid is the hardest case of all, because the office keeps quietly re-asserting itself.
 
 ## Remote-First vs Office-First Defaults
 
@@ -34,7 +34,7 @@ Remote work is not a degraded version of office work; it is a different operatin
 | Career visibility | Presence in the office is noticed | Contribution, not presence, is noticed |
 | Meeting time | The office's working hours | Rotated, timezone-aware |
 
-The choice is binary: the default decides everything downstream. Remote-first does not mean everyone is remote — it means the office never has an information or career advantage over the remote.
+The choice is binary: the default decides everything downstream. Remote-first does not mean everyone is remote. It means the office never has an information or career advantage over the remote.
 
 ## Async Communication Discipline
 
@@ -64,13 +64,13 @@ The fairness test: can the person in the worst timezone fully participate withou
 
 | Deliberate connection | What it looks like |
 |-----------------------|--------------------|
-| Structured one-to-ones | Weekly, protected — the distributed replacement for daily presence |
+| Structured one-to-ones | Weekly, protected; the distributed replacement for daily presence |
 | Written check-ins | Brief async updates that make progress visible across time zones |
-| Virtual social, light touch | Occasional, optional, low-pressure — games, demos, show-and-tell |
+| Virtual social, light touch | Occasional, optional, low-pressure; games, demos, show-and-tell |
 | Pairing across distance | Deliberate pairing that mixes the team, not just the co-located |
 | Team rituals | Retros and demos that work identically for every participant |
 
-Trust without proximity is built on reliability: promises kept, responses arriving, presence in the record. The manager deliberately creates the moments of connection that the office used to produce by accident — and keeps them optional enough that nobody feels surveilled.
+Trust without proximity is built on reliability: promises kept, responses arriving, presence in the record. The manager deliberately creates the moments of connection that the office used to produce by accident, and keeps them optional enough that nobody feels surveilled.
 
 ## Onboarding Remotely
 
@@ -92,13 +92,13 @@ Remote onboarding fails by silence: the newcomer who cannot see the room does no
 
 | Norm | What it enforces |
 |------|------------------|
-| One remote, all remote | If anyone joins remotely, everyone joins remotely — no room advantage |
+| One remote, all remote | If anyone joins remotely, everyone joins remotely; no room advantage |
 | Camera and name | Remote participants are seen and named; no tiles as audience |
 | Round-robin speaking | The facilitator draws out the remote voices explicitly |
 | Decision on record | Decisions and dissents are written, whoever was present |
 | No hallway decisions | Nothing decided in the room is final until it is written |
 
-The one-remote-all-remote norm is the single most powerful hybrid rule: it makes the remote experience the shared experience and kills the room's structural advantage. Every other norm defends the same principle — the meeting works for the people on the tiles or it is not a good meeting.
+The one-remote-all-remote norm is the single most powerful hybrid rule: it makes the remote experience the shared experience and kills the room's structural advantage. Every other norm defends the same principle. The meeting works for the people on the tiles or it is not a good meeting.
 
 ## Proximity Bias Watch
 
@@ -115,6 +115,7 @@ Proximity bias is the default; fairness is the maintenance. The manager audits t
 ## The Distributed Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DEFAULT["Set remote-first defaults"] --> WRITE["Write decisions and updates"]
     WRITE --> ROTATE["Rotate timezone burdens"]
@@ -158,8 +159,8 @@ flowchart TD
 - [[04_Team_Charter_and_Working_Agreements]]: distributed norms must be written, not assumed
 - [[02_Psychological_Safety_in_Practice]]: safety is harder to see and build at a distance
 - [[05_Team_Health_Metrics_and_Surveys]]: pulses must reach the remote voices
-- [[07_Manager_Communication/00_overview|Manager Communication]]: the written communication craft distance demands
+- [[career-path/11_Engineering_Manager/07_Manager_Communication/00_overview|Manager Communication]]: the written communication craft distance demands
 
 ## Summary
 
-Managing remote and hybrid teams is a deliberate operating system: remote-first defaults, written decisions, timezone rotation, structured connection, and meeting norms that give the tiles the same voice as the room. The manager builds trust through reliability instead of proximity, ramps newcomers with a checklist instead of absorption, and audits their own behavior for proximity bias. Done deliberately, the distributed team gains focus and fairness — and loses nothing but the commute.
+Managing remote and hybrid teams is a deliberate operating system: remote-first defaults, written decisions, timezone rotation, structured connection, and meeting norms that give the tiles the same voice as the room. The manager builds trust through reliability instead of proximity, ramps newcomers with a checklist instead of absorption, and audits their own behavior for proximity bias. Done deliberately, the distributed team gains focus and fairness, and loses nothing but the commute.

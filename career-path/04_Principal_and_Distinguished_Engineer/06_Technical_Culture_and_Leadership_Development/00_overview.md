@@ -14,13 +14,13 @@ tags:
 
 # Technical Culture and Leadership Development
 
-> **Core capability:** The principal engineer builds the organization's technical culture — growing the next generation of staff and principal engineers, mentoring technical leaders, and leaving a legacy of engineering excellence that outlasts any individual.
+> **Core capability:** The principal engineer builds the organization's technical culture, growing the next generation of staff and principal engineers, mentoring technical leaders, and leaving a legacy of engineering excellence that outlasts any individual.
 
 ## Why This Matters
 
-The principal's most durable output is not a strategy document or an architecture — it is the technical leaders they grow. A principal who builds a bench of staff engineers, fosters a culture of technical excellence, and institutionalizes mentoring and community multiplies their impact for a decade after they leave.
+The principal's most durable output is not a strategy document or an architecture. It is the technical leaders they grow. A principal who builds a bench of staff engineers, fosters a culture of technical excellence, and institutionalizes mentoring and community multiplies their impact for a decade after they leave.
 
-At this level, mentoring shifts from individuals to systems: designing the programs, communities, and incentives that produce technical leaders at scale. The principal is also the culture carrier — the person whose behavior signals what the organization truly values in its senior engineers.
+At this level, mentoring shifts from individuals to systems: designing the programs, communities, and incentives that produce technical leaders at scale. The principal is also the culture carrier, the person whose behavior signals what the organization truly values in its senior engineers.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ At this level, mentoring shifts from individuals to systems: designing the progr
 ## The Leadership Pipeline
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CULTURE["Technical culture: principles, values, norms"] --> GROW["Grow staff and principal engineers"]
     GROW --> MENTOR["Mentor technical leaders who mentor others"]
@@ -86,11 +87,11 @@ The loop compounds: each generation of leaders builds the next.
 
 ## Related Capabilities
 
-- [[01_Technology_Strategy/00_overview|Technology Strategy]]: culture enables strategy execution
-- [[04_Organizational_Influence/00_overview|Organizational Influence]]: external voice shapes the internal culture
+- [[career-path/04_Principal_and_Distinguished_Engineer/01_Technology_Strategy/00_overview|Technology Strategy]]: culture enables strategy execution
+- [[career-path/04_Principal_and_Distinguished_Engineer/04_Organizational_Influence/00_overview|Organizational Influence]]: external voice shapes the internal culture
 - [[career-path/03_Staff_Engineer/07_Organizational_Learning_and_Mentoring/00_overview|Organizational Learning and Mentoring (Staff)]]: the multi-team foundation this institutionalizes
 - [[career-path/11_Engineering_Manager/01_People_Development/00_overview|People Development (EM)]]: the manager's complementary development role
 
 ## Summary
 
-Technical culture and leadership development is the principal's compound interest: building a culture that produces excellent engineers, growing the staff and principal pipeline, mentoring technical leaders, institutionalizing communities and knowledge, and designing recognition that sets the standard. The principal's legacy is not a system — it is the people who can build systems without them.
+Technical culture and leadership development is the principal's compound interest: building a culture that produces excellent engineers, growing the staff and principal pipeline, mentoring technical leaders, institutionalizing communities and knowledge, and designing recognition that sets the standard. The principal's legacy is not a system. It is the people who can build systems without them.

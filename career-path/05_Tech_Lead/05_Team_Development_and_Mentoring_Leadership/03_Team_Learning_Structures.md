@@ -15,7 +15,7 @@ tags:
 
 # Team Learning Structures
 
-> **Core skill:** Building recurring learning into the team's rhythm — talks, demos, post-incident sessions, and pairing — with a protected time budget and visible outputs.
+> **Core skill:** Building recurring learning into the team's rhythm (talks, demos, post-incident sessions, and pairing) with a protected time budget and visible outputs.
 
 ## Why This Matters
 
@@ -49,7 +49,7 @@ The most expensive lessons the team will ever get come from production. The post
 | The fix and its verification | One change, with evidence it works | A list of twenty improvements nobody will do |
 | The team-wide lesson | What everyone should know now | The lesson staying in the incident doc |
 
-The session is short, blameless, and scheduled within days of the incident. Its output is one verified fix and one team-wide lesson — not a ceremony.
+The session is short, blameless, and scheduled within days of the incident. Its output is one verified fix and one team-wide lesson, not a ceremony.
 
 ## Pairing as Learning
 
@@ -62,11 +62,11 @@ Pairing is the team's most flexible learning structure: it needs no calendar slo
 | Mid + senior | Design thinking, review depth | First design ownership |
 | Cross-specialty | Perspective transfer, fewer blind spots | Frontend plus backend, test plus product |
 
-The pairing debrief is what makes pairing learning rather than collaboration: two minutes at the end — what did each person learn, what would they do differently. The lead checks that pairs rotate roles and that the debrief actually happens.
+The pairing debrief is what makes pairing learning rather than collaboration: two minutes at the end (what did each person learn, what would they do differently). The lead checks that pairs rotate roles and that the debrief actually happens.
 
 ## Learning Time Budgets
 
-Learning needs protected time. The lead's stance: 10 to 20 percent of the team's capacity is a learning budget — and it is spent, not hoped for.
+Learning needs protected time. The lead's stance: 10 to 20 percent of the team's capacity is a learning budget, and it is spent, not hoped for.
 
 | Budget rule | How it works | Why it matters |
 |-------------|--------------|----------------|
@@ -75,7 +75,7 @@ Learning needs protected time. The lead's stance: 10 to 20 percent of the team's
 | Visible in the tracker | Learning items appear as real work items | Hidden learning is unprotectable learning |
 | Lead-protected | The lead defends the budget against scope pressure | If the lead will not defend it, nobody will |
 
-The 10-20 percent range is a floor with judgment: high-risk systems or new domains sit at the top, stable systems at the bottom. The point is not the exact number — it is that learning has a budget line that survives contact with the plan.
+The 10-20 percent range is a floor with judgment: high-risk systems or new domains sit at the top, stable systems at the bottom. The point is not the exact number. It is that learning has a budget line that survives contact with the plan.
 
 ## Making Learning Visible
 
@@ -94,6 +94,7 @@ The lead's test for visibility: if a new joiner arrived next month, could they f
 ## The Learning Rhythm
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     BUDGET["Protect the learning budget"] --> SCHEDULE["Schedule the formats"]
     SCHEDULE --> RUN["Run the sessions"]
@@ -118,7 +119,7 @@ flowchart LR
 **Learning calendar template:**
 
 ```markdown
-# Team Learning Calendar — [quarter]
+# Team Learning Calendar: [quarter]
 
 | Week | Format | Topic | Owner | Output |
 |------|--------|-------|-------|--------|
@@ -134,7 +135,7 @@ Budget: [percent] of team capacity, logged in the tracker.
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
-| Learning as slack-time filler | It only happens when nothing urgent is going on — so never | A budget line in the plan, defended by the lead |
+| Learning as slack-time filler | It only happens when nothing urgent is going on, so never | A budget line in the plan, defended by the lead |
 | Mandatory fun | Attendance-forced sessions breed resentment and theater | Voluntary sessions, good content, visible value |
 | The same three presenters | Visibility and learning concentrate in the few | Rotation with coaching for first-time presenters |
 | Sessions with no output | The lesson evaporates with the meeting | Notes, recordings, and follow-up items as the standard |
@@ -155,9 +156,9 @@ Budget: [percent] of team capacity, logged in the tracker.
 - [[04_Knowledge_Management_and_Documentation]]: session outputs feed the team's knowledge base
 - [[02_Growing_Engineers_at_Levels]]: learning structures deliver the per-level curriculum
 - [[07_Team_Technical_Communication]]: talks and demos are also communication craft
-- [[06_Process_and_Quality_Stewardship/00_overview|Process and Quality Stewardship]]: the team rhythm that carries the learning calendar
+- [[career-path/05_Tech_Lead/06_Process_and_Quality_Stewardship/00_overview|Process and Quality Stewardship]]: the team rhythm that carries the learning calendar
 - [[career-path/02_Senior_Software_Engineer/07_Mentoring_and_Team_Leadership/00_overview|Mentoring and Team Leadership (Senior)]]: the 1:1 teaching skills that pair with team formats
 
 ## Summary
 
-Team learning is a designed rhythm: recurring formats with owners, a protected time budget, post-incident sessions that convert scars into lessons, and outputs that make learning visible and searchable. The lead schedules it, defends it, and records it — so the team learns together at a pace that keeps knowledge silos from ever hardening.
+Team learning is a designed rhythm: recurring formats with owners, a protected time budget, post-incident sessions that convert scars into lessons, and outputs that make learning visible and searchable. The lead schedules it, defends it, and records it, so the team learns together at a pace that keeps knowledge silos from ever hardening.

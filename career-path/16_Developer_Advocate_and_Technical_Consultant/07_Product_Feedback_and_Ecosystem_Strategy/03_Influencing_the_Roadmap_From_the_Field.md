@@ -16,15 +16,15 @@ tags:
 
 # Influencing the Roadmap From the Field
 
-> **Core skill:** Converting field evidence into roadmap influence — building the case, pre-wiring the decision, and staying present through planning without becoming a lobbyist for one story.
+> **Core skill:** Converting field evidence into roadmap influence: building the case, pre-wiring the decision, and staying present through planning without becoming a lobbyist for one story.
 
 ## Why This Matters
 
-Roadmaps are decided in rooms the advocate is not always in, by people weighing evidence the advocate may never see: strategy, capacity, competitive timing, revenue commitments. Influence from the field is therefore not about louder advocacy; it is about being the most reliable evidence source in the room — the person whose claims are always sourced, whose severity scales are respected, and who is known to say "the data does not support this one" about their own favorites.
+Roadmaps are decided in rooms the advocate is not always in, by people weighing evidence the advocate may never see: strategy, capacity, competitive timing, revenue commitments. Influence from the field is therefore not about louder advocacy; it is about being the most reliable evidence source in the room, the person whose claims are always sourced, whose severity scales are respected, and who is known to say "the data does not support this one" about their own favorites.
 
 The mechanics matter as much as the merit. A brilliant evidence package introduced after the roadmap is committed changes nothing; the same package introduced three weeks before planning, pre-wired with the engineers who will estimate it, changes everything. Influence is temporal: it happens in the season when decisions are still open, through people who carry your evidence when you are not present.
 
-The failure mode to avoid is advocate-as-single-issue-lobbyist: the person who has one story, tells it in every meeting, and slowly loses the room. Sustainable roadmap influence comes from a portfolio of well-evidenced inputs, honest about being one input among many — and from gracefully accepting no, then reporting the no back to the field with the reasoning.
+The failure mode to avoid is advocate-as-single-issue-lobbyist: the person who has one story, tells it in every meeting, and slowly loses the room. Sustainable roadmap influence comes from a portfolio of well-evidenced inputs, honest about being one input among many, and from gracefully accepting no, then reporting the no back to the field with the reasoning.
 
 ## Influence Mechanisms
 
@@ -43,9 +43,9 @@ The failure mode to avoid is advocate-as-single-issue-lobbyist: the person who h
 |---------|---------------------|-----------------|
 | Problem statement | What breaks, for whom, in what workflow? | Too abstract to rank |
 | Frequency | How many, how often, from where? | Missing counts |
-| Severity | Blocked, degraded, or annoying — why? | Adjective inflation |
+| Severity | Blocked, degraded, or annoying: why? | Adjective inflation |
 | Adoption impact | What does this cost activation, retention, expansion? | Guessed, not measured |
-| Affected segments | Who cares most — beginners, experts, enterprise, ecosystem? | Unsegmented averages |
+| Affected segments | Who cares most: beginners, experts, enterprise, ecosystem? | Unsegmented averages |
 | Cost of inaction | What compounds if nothing changes? | Assumed, not argued |
 | Options | What could product do, at what rough cost? | Solution presented as the only option |
 
@@ -72,6 +72,7 @@ The failure mode to avoid is advocate-as-single-issue-lobbyist: the person who h
 ## The Influence Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     COLLECT["Collect and rank field evidence"] --> PREWIRE["Pre-wire - brief the actors early"]
     PREWIRE --> PLAN["Plan - present during the open window"]
@@ -85,17 +86,17 @@ flowchart LR
 ### Roadmap Influence Checklist
 
 - [ ] I know the planning calendar and the decision points before they arrive
-- [ ] The evidence pack is ranked and capped — five items, not fifty
+- [ ] The evidence pack is ranked and capped: five items, not fifty
 - [ ] Each item carries frequency, severity, adoption impact, and a sample note
 - [ ] Engineers who would build it have seen it before the decision meeting
 - [ ] I include at least one item I expect to lose, honestly evidenced
-- [ ] Decisions — including rejections — are communicated back to the field
+- [ ] Decisions (including rejections) are communicated back to the field
 - [ ] I am known for withdrawing claims the data does not support
 
 ### Roadmap Pitch Template
 
 ```markdown
-## Roadmap Input — [cycle]
+## Roadmap Input: [cycle]
 | # | Problem | Frequency | Severity | Adoption Impact | Segments | Est. Cost |
 |---|---------|-----------|----------|-----------------|----------|-----------|
 | 1 | [x] | [n cases] | [scale] | [metric] | [who] | [S/M/L] |
@@ -140,4 +141,4 @@ flowchart LR
 
 ## Summary
 
-Influencing the roadmap from the field is a seasonal, relational discipline: collect and rank evidence continuously, pre-wire the actors before decisions open, present inside the planning window with honest severity and adoption impact, and report every outcome — especially the nos — back to the field. The advocate's influence grows not by winning arguments but by being the source whose claims the room has learned to trust.
+Influencing the roadmap from the field is a seasonal, relational discipline: collect and rank evidence continuously, pre-wire the actors before decisions open, present inside the planning window with honest severity and adoption impact, and report every outcome (especially the nos) back to the field. The advocate's influence grows not by winning arguments but by being the source whose claims the room has learned to trust.

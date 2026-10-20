@@ -38,6 +38,7 @@ The difference is not technical complexity. It is **measurement philosophy**: me
 ### Request-response services
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     subgraph GOOD["Good SLIs"]
         G1["Availability: successful requests / total requests"]
@@ -105,7 +106,7 @@ flowchart LR
 
 - [[02_SLO_Definition]] : SLIs are the foundation for SLOs
 - [[05_Reliability_Measurement]] : SLIs feed reliability dashboards
-- [[02_Observability/01_Metrics_and_Dashboards]] : metrics are the data source for SLIs
+- [[career-path/07_SRE_and_Platform_Engineer/02_Observability/01_Metrics_and_Dashboards]] : metrics are the data source for SLIs
 - [[software-engineering-note/02_Software_Architecture/Microservice/05 Observability/054 SLOs & Error Budgets]] : SLI/SLO foundations
 - [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/02_SRE_Principles]] : SRE principles from Senior SWE path
 

@@ -14,13 +14,13 @@ tags:
 
 # Architecture Evaluation and Trade Offs
 
-> **Core capability:** The architect evaluates structural choices against quality attributes using methods that produce evidence, not opinions — revealing risks early, making trade-off decisions explicit, and providing a defensible rationale for what was chosen.
+> **Core capability:** The architect evaluates structural choices against quality attributes using methods that produce evidence, not opinions, revealing risks early, making trade-off decisions explicit, and providing a defensible rationale for what was chosen.
 
 ## Why This Matters
 
 Most architecture decisions are evaluated by who argues longest. The architect's discipline is replacing argument with method: structured walkthroughs that expose risks before they become incidents, utility trees that make preference explicit, and evaluation reports that document what was found, changed, or accepted.
 
-Evaluation is also the architecture's immune system — catching structural drift before it becomes structural debt. Teams that evaluate architecture regularly find problems when they are still cheap; teams that don't find them in production.
+Evaluation is also the architecture's immune system, catching structural drift before it becomes structural debt. Teams that evaluate architecture regularly find problems when they are still cheap; teams that don't find them in production.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ Evaluation is also the architecture's immune system — catching structural drif
 ## The Evaluation Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PREPARE["Present architecture and scenarios"] --> IDENTIFY["Identify sensitivity and trade-off points"]
     IDENTIFY --> PRIORITIZE["Prioritize risks and non-risks"]
@@ -46,7 +47,7 @@ flowchart TD
     TRACK --> PREPARE
 ```
 
-Evaluation is not an event — it is a feedback loop embedded in the architecture lifecycle.
+Evaluation is not an event. It is a feedback loop embedded in the architecture lifecycle.
 
 ## Senior vs Architect
 
@@ -85,10 +86,10 @@ Evaluation is not an event — it is a feedback loop embedded in the architectur
 
 ## Related Capabilities
 
-- [[02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]: scenarios are the primary evaluation criteria
-- [[03_Architecture_Description_and_Views/00_overview|Architecture Description and Views]]: the architecture presented for evaluation
+- [[career-path/06_Software_Architect/02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]: scenarios are the primary evaluation criteria
+- [[career-path/06_Software_Architect/03_Architecture_Description_and_Views/00_overview|Architecture Description and Views]]: the architecture presented for evaluation
 - [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/03_Architecture_Evaluation|Architecture Evaluation (Senior)]]: the evaluation foundations at senior level
 
 ## Summary
 
-Architecture evaluation is structured scrutiny: methods that produce evidence, trade-off analysis that makes preference explicit, risk themes identified and owned, and anti-patterns caught before they calcify. The architect's credibility rests on evaluations that anyone can audit — because the criteria and evidence are in the report, not in the personality.
+Architecture evaluation is structured scrutiny: methods that produce evidence, trade-off analysis that makes preference explicit, risk themes identified and owned, and anti-patterns caught before they calcify. The architect's credibility rests on evaluations that anyone can audit, because the criteria and evidence are in the report, not in the personality.

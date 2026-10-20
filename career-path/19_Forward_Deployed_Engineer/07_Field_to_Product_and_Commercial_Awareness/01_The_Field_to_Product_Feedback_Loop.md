@@ -16,15 +16,15 @@ tags:
 
 # The Field to Product Feedback Loop
 
-> **Core skill:** Running a disciplined loop from field signal to product change — capturing what deployments reveal, quantifying it across accounts, packaging it as a problem the product organization can act on, and reporting back so the loop stays alive.
+> **Core skill:** Running a disciplined loop from field signal to product change: capturing what deployments reveal, quantifying it across accounts, packaging it as a problem the product organization can act on, and reporting back so the loop stays alive.
 
 ## Why This Matters
 
-The field is the most expensive research lab an organization owns. Every deployment generates evidence that no survey, planning exercise, or internal brainstorm can produce: the workaround an operator invented at 6 a.m., the integration that fails at the fourth customer for the same structural reason, the feature request that is really a missing primitive wearing a costume. None of it becomes product direction automatically. Field signal decays — customers move on, workarounds ossify into accepted life, and the FDE who experienced the problem first-hand rotates to another account. The feedback loop is the mechanism that converts perishable field experience into durable product truth, and the FDE is the only person positioned to run it.
+The field is the most expensive research lab an organization owns. Every deployment generates evidence that no survey, planning exercise, or internal brainstorm can produce: the workaround an operator invented at 6 a.m., the integration that fails at the fourth customer for the same structural reason, the feature request that is really a missing primitive wearing a costume. None of it becomes product direction automatically. Field signal decays: customers move on, workarounds ossify into accepted life, and the FDE who experienced the problem first-hand rotates to another account. The feedback loop is the mechanism that converts perishable field experience into durable product truth, and the FDE is the only person positioned to run it.
 
 Left undisciplined, the path from field to product becomes a feature-request relay, and product teams learn to discount it. An unprocessed request from one customer is indistinguishable from preference; a request duplicated across five accounts, quantified in effort and revenue, with the workaround pattern documented, is evidence. The difference between these two artifacts is the FDE's actual craft: not carrying messages but doing the analytical work that turns experience into evidence. Teams that receive packaged problems respond with roadmap decisions; teams that receive raw asks respond with backlog courtesy.
 
-The loop has a return path that most FDEs neglect at their peril. When field signal results in a product change, the customers who raised it — and the field teams who relayed it — should hear about it. Told nothing, customers conclude that raising issues is futile and stop raising them, which starves the loop at its source. Told what happened, they invest more signal, volunteer for early testing, and become allies in adoption. The feedback loop is not charity work that competes with deployment duties; it is the mechanism by which one customer's problem stops being paid for repeatedly by every following customer, and it is the difference between a field organization that compounds and one that repeats itself.
+The loop has a return path that most FDEs neglect at their peril. When field signal results in a product change, the customers who raised it, and the field teams who relayed it, should hear about it. Told nothing, customers conclude that raising issues is futile and stop raising them, which starves the loop at its source. Told what happened, they invest more signal, volunteer for early testing, and become allies in adoption. The feedback loop is not charity work that competes with deployment duties; it is the mechanism by which one customer's problem stops being paid for repeatedly by every following customer, and it is the difference between a field organization that compounds and one that repeats itself.
 
 ## Signal Types and How to Handle Them
 
@@ -49,6 +49,7 @@ The loop has a return path that most FDEs neglect at their peril. When field sig
 | Report back | Tell the field and the customer what happened | Note to the account and a line in the shared log |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CAPTURE["Capture the raw signal"] --> QUANTIFY["Quantify it across accounts"]
     QUANTIFY --> PACKAGE["Package it as a problem"]
@@ -67,14 +68,14 @@ A loop is judged by its closing, not its opening. A submission that gets a "not 
 - [ ] Each entry records account, date, effort involved, and the workaround in place
 - [ ] Signals are quantified before they are submitted: accounts, hours, revenue at stake
 - [ ] A regular review turns the log into a small number of ranked, packaged proposals
-- [ ] Proposals lead with the problem, evidence, and scale — solution framing comes second
+- [ ] Proposals lead with the problem, evidence, and scale. Solution framing comes second
 - [ ] Submissions are tracked to a decision, including the rejections and their reasons
 - [ ] The field and the originating customer hear outcomes through a predictable channel
 
 ### Field Log Entry Template
 
 ```markdown
-## Field Log — <entry id, date>
+## Field Log: <entry id, date>
 
 | Field | Detail |
 |-------|--------|
@@ -105,15 +106,15 @@ A loop is judged by its closing, not its opening. A submission that gets a "not 
 - The same recurring blocker stops reappearing in deployment after deployment
 - Customers notice that their raised issues produce visible answers
 - Product teams request field input because the packaging is trusted
-- The field log is read by more than its author — it becomes shared infrastructure
+- The field log is read by more than its author. It becomes shared infrastructure
 
 ## Related Topics
 
 - [[02_Pattern_Recognition_Across_Deployments]]
 - [[03_Influencing_the_Product_Roadmap]]
-- [[01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]
+- [[career-path/19_Forward_Deployed_Engineer/01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]
 - [[career-path/14_Product_Manager/00_overview|Product Manager]]
 
 ## Summary
 
-The field to product feedback loop turns deployment experience into product direction: capture signals while they are fresh, quantify them across accounts, package them as problems with evidence rather than requests, route them to owners who can act, track every outcome including the declines, and report back so the field keeps investing. Run as a discipline, it is what makes the second deployment of a kind cheaper than the first — and what makes the FDE's field time a strategic asset rather than a private education.
+The field to product feedback loop turns deployment experience into product direction: capture signals while they are fresh, quantify them across accounts, package them as problems with evidence rather than requests, route them to owners who can act, track every outcome including the declines, and report back so the field keeps investing. Run as a discipline, it is what makes the second deployment of a kind cheaper than the first, and what makes the FDE's field time a strategic asset rather than a private education.

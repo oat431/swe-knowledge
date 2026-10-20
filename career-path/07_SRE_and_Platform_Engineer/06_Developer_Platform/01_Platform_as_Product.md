@@ -28,6 +28,7 @@ The difference is not technical depth. It is **product thinking applied to infra
 ### Platform Product Thinking
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     subgraph TRADITIONAL["Traditional Infrastructure"]
         T1["Build what we think users need"]
@@ -73,6 +74,7 @@ flowchart LR
 ## Platform Maturity Model
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     L1["Level 1: Ticket-driven infrastructure"]
     L2["Level 2: Self-service tools"]

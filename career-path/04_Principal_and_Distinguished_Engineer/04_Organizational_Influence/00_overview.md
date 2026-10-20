@@ -14,13 +14,13 @@ tags:
 
 # Organizational Influence
 
-> **Core capability:** The principal engineer shapes decisions across executive, technical, and product groups — building trusted advisory relationships, writing for organizational impact, and representing the organization in external technical forums.
+> **Core capability:** The principal engineer shapes decisions across executive, technical, and product groups, building trusted advisory relationships, writing for organizational impact, and representing the organization in external technical forums.
 
 ## Why This Matters
 
 At principal level, influence moves from meetings and proposals to relationships and reputation. The principal's audience includes the CEO, the board, the CTO, and the external technical community. The work is rarely technical depth (that is assumed); it is translation: making technical debt legible to a CFO, making a platform investment case readable by a board, making the organization's technical story compelling to the industry.
 
-This area is also where the principal's career widens beyond the org: keynotes, standards bodies, open-source governance, industry consortia. The external voice is not ego — it is the organization's technical credibility, recruiting pipeline, and partnership leverage, all shaped by one voice.
+This area is also where the principal's career widens beyond the org: keynotes, standards bodies, open-source governance, industry consortia. The external voice is not ego. It is the organization's technical credibility, recruiting pipeline, and partnership leverage, all shaped by one voice.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ This area is also where the principal's career widens beyond the org: keynotes, 
 ## The Influence Ladder at Principal Scale
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CREDIBILITY["Technical credibility: assumed at this level"] --> RELATIONSHIPS["Trusted relationships with senior leaders"]
     RELATIONSHIPS --> WRITING["Writing that outlasts meetings"]
@@ -45,7 +46,7 @@ flowchart TD
     REPUTATION --> CREDIBILITY
 ```
 
-Influence compounds — each layer feeds the next.
+Influence compounds. Each layer feeds the next.
 
 ## Staff vs Principal
 
@@ -84,11 +85,11 @@ Influence compounds — each layer feeds the next.
 
 ## Related Capabilities
 
-- [[01_Technology_Strategy/00_overview|Technology Strategy]]: the content influence communicates
-- [[03_Decision_Governance_and_Principles/00_overview|Decision Governance and Principles]]: governance that makes influence systemic
+- [[career-path/04_Principal_and_Distinguished_Engineer/01_Technology_Strategy/00_overview|Technology Strategy]]: the content influence communicates
+- [[career-path/04_Principal_and_Distinguished_Engineer/03_Decision_Governance_and_Principles/00_overview|Decision Governance and Principles]]: governance that makes influence systemic
 - [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/00_overview|Influence and Alignment (Staff)]]: the multi-team foundation this scales to executive level
 - [[career-path/11_Engineering_Manager/05_Organizational_Awareness_and_Influence/00_overview|Organizational Awareness and Influence (EM)]]: the manager's parallel craft
 
 ## Summary
 
-Organizational influence at principal level is translation, relationships, and external voice — making technology legible to executives, trusted advisor status built over years, writing that shapes decisions at the highest level, and representing the organization's technical story to the industry. The principal's influence is the organization's technical credibility made audible.
+Organizational influence at principal level is translation, relationships, and external voice, making technology legible to executives, trusted advisor status built over years, writing that shapes decisions at the highest level, and representing the organization's technical story to the industry. The principal's influence is the organization's technical credibility made audible.

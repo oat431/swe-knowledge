@@ -28,6 +28,7 @@ In microservices architectures, a single user request may touch 10+ services. Wi
 A trace represents the end-to-end journey of a request through a distributed system:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     TRACE["Trace\n(request-id: abc123)"] --> SPAN1["Span 1\nAPI Gateway\n(duration: 120ms)"]
     SPAN1 --> SPAN2["Span 2\nUser Service\n(duration: 80ms)"]
@@ -118,6 +119,7 @@ RequestsInstrumentor().instrument()
 To trace across services, you must propagate trace context:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SERVICE_A["Service A\n(trace_id: abc-123)"] --> HEADER["HTTP Header\nX-Trace-ID: abc-123"]
     HEADER --> SERVICE_B["Service B\n(trace_id: abc-123)"]
@@ -200,7 +202,7 @@ Trace: create-order (total: 2000ms)
 - [[01_Metrics_and_Dashboards]] : metrics show "what", traces show "how"
 - [[02_Structured_Logging]] : logs provide details; traces provide flow
 - [[04_Alerting_Strategy]] : alerts can link to traces for fast diagnosis
-- [[03_Incident_Response/02_Incident_Management]] : traces are critical for incident diagnosis
+- [[career-path/07_SRE_and_Platform_Engineer/03_Incident_Response/02_Incident_Management]] : traces are critical for incident diagnosis
 - [[software-engineering-note/02_Software_Architecture/Microservice/05 Observability/052 Distributed Tracing]] : distributed tracing foundations
 
 ## Key Takeaways

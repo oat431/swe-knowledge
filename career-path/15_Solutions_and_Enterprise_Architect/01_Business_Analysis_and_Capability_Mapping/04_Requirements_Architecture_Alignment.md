@@ -15,13 +15,13 @@ tags:
 
 # Requirements Architecture Alignment
 
-> **Core skill:** Bridging requirements analysis and architectural design — turning elicited requirements into architectural drivers, and keeping needs, requirements, design elements, and verification traceable to one another.
+> **Core skill:** Bridging requirements analysis and architectural design, turning elicited requirements into architectural drivers, and keeping needs, requirements, design elements, and verification traceable to one another.
 
 ## Why This Matters
 
 Requirements analysis and architecture design are usually performed by different people with different vocabularies, and the seam between them is where projects quietly break. Requirements arrive as a prioritized list of features and rules; architecture needs quality attributes, constraints, interfaces, and decisions. When no one bridges that gap, two failures follow: requirements that have no architectural home are deferred or dropped, and architectural decisions are made with no traceable justification and cannot be defended when challenged.
 
-The solutions architect owns the bridge. Converting requirements into architectural drivers means asking, for each requirement, what it demands of the system: which components it touches, which quality attribute it stresses, which constraint it implies, and which part of the design answers it. The architect does not rewrite requirements — the architect reveals their architectural consequences while there is still time to negotiate them.
+The solutions architect owns the bridge. Converting requirements into architectural drivers means asking, for each requirement, what it demands of the system: which components it touches, which quality attribute it stresses, which constraint it implies, and which part of the design answers it. The architect does not rewrite requirements. The architect reveals their architectural consequences while there is still time to negotiate them.
 
 Traceability is the mechanism that keeps the bridge standing. A chain from business need to requirement to architectural element to test means every design element can answer "why do you exist?" and every requirement can answer "where are you built?" When scope changes, the chain shows the blast radius. When reviews happen, the chain is the evidence. Without it, alignment decays silently until acceptance testing reveals that the design and the requirements were never speaking.
 
@@ -47,11 +47,12 @@ The translation is bidirectional: architects also feed requirements back, surfac
 | **Data obligation** | Ownership, retention, reporting demands | Drives data architecture decisions |
 | **Scale and volatility** | Volume forecasts, growth, change frequency | Drives elasticity, modularity, and platform choices |
 
-A requirement that cannot be traced to any driver is either an implementation detail — route it to the delivery team — or an orphan that will be discovered late. Both findings are valuable; the point is to find them before build, not after.
+A requirement that cannot be traced to any driver is either an implementation detail (route it to the delivery team) or an orphan that will be discovered late. Both findings are valuable; the point is to find them before build, not after.
 
 ## The Traceability Chain
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     NEED["Business need"] --> REQS["Requirements and drivers"]
     REQS["Requirements and drivers"] --> ARCH["Architecture elements and decisions"]
@@ -66,7 +67,7 @@ flowchart TD
 | **Design to delivery** | Which work items implement this element? | Which design decision does this change touch? |
 | **Delivery to verification** | Which test proves this requirement is met? | Which requirement does this evidence cover? |
 
-Traceability fails when it becomes paperwork. The practical test is whether the chain can answer a real question quickly: a scope change arrives — within an hour, the team can name the affected requirements, designs, and tests.
+Traceability fails when it becomes paperwork. The practical test is whether the chain can answer a real question quickly: a scope change arrives. Within an hour, the team can name the affected requirements, designs, and tests.
 
 ## Managing Requirements Change
 

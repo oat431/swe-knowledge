@@ -16,13 +16,13 @@ tags:
 
 # Executive Communication
 
-> **Core skill:** The principal makes technical reality legible to the C-suite and board — framing technology in terms of business outcomes, risk, and investment, without dumbing down and without the distortion that produces bad decisions.
+> **Core skill:** The principal makes technical reality legible to the C-suite and board, framing technology in terms of business outcomes, risk, and investment, without dumbing down and without the distortion that produces bad decisions.
 
 ## Why This Matters
 
-At principal level, the audience shifts from engineering and product leadership to the C-suite and the board. These audiences do not need technical detail — they need the business implications of technical choices, framed in the language of their decisions: investment, risk, strategic positioning, and competitive advantage. A principal who cannot communicate in that language is invisible to the decisions that shape the organization. A principal who can earns a seat at the table where those decisions are made.
+At principal level, the audience shifts from engineering and product leadership to the C-suite and the board. These audiences do not need technical detail. They need the business implications of technical choices, framed in the language of their decisions: investment, risk, strategic positioning, and competitive advantage. A principal who cannot communicate in that language is invisible to the decisions that shape the organization. A principal who can earns a seat at the table where those decisions are made.
 
-The failure modes are symmetric: dumbing down distorts the technical reality and produces decisions based on a cartoon; unfiltered technical depth overwhelms the audience and produces no decision at all. The principal's craft is translation — preserving the fidelity of the technical signal while expressing it in the language of business outcomes. A board presentation that makes technical debt legible as a compounding cost on the balance sheet of engineering capacity is the principal's highest-leverage communication.
+The failure modes are symmetric: dumbing down distorts the technical reality and produces decisions based on a cartoon; unfiltered technical depth overwhelms the audience and produces no decision at all. The principal's craft is translation, preserving the fidelity of the technical signal while expressing it in the language of business outcomes. A board presentation that makes technical debt legible as a compounding cost on the balance sheet of engineering capacity is the principal's highest-leverage communication.
 
 ## The Audience Map
 
@@ -49,11 +49,11 @@ The executive memo is the principal's primary written communication to C-suite a
 | **Recommendation** | The recommended option, with confidence and the next step | 1 paragraph |
 | **Risk of inaction** | What happens if no decision is made by the deadline | 1 paragraph |
 
-This format is not a simplification — it is a compression. Every sentence carries weight; every claim is backed by analysis available on request. The memo's job is to make the decision easy for a reader who trusts the analysis.
+This format is not a simplification. It is a compression. Every sentence carries weight; every claim is backed by analysis available on request. The memo's job is to make the decision easy for a reader who trusts the analysis.
 
 ## The Board Deck for Technology
 
-A board presentation on technology is not a project update. It is a strategic communication that answers one question: is the organization's technology position a competitive advantage, a liability, or neutral — and what are we doing about it?
+A board presentation on technology is not a project update. It is a strategic communication that answers one question: is the organization's technology position a competitive advantage, a liability, or neutral, and what are we doing about it?
 
 | Slide | Content | Purpose |
 |-------|---------|---------|
@@ -63,11 +63,11 @@ A board presentation on technology is not a project update. It is a strategic co
 | **Technology health metrics** | 3-5 metrics trended over time: availability, security posture, technical debt trajectory, engineer productivity | Show that technology is measured and improving |
 | **Investment ask or decision** | What the board is being asked to approve or decide | One clear ask |
 
-The board deck is not the place for architecture diagrams, technology roadmaps, or deep dives. Those are appendices. The board needs the strategic synthesis — and they need it in 15 minutes.
+The board deck is not the place for architecture diagrams, technology roadmaps, or deep dives. Those are appendices. The board needs the strategic synthesis, and they need it in 15 minutes.
 
 ## The CFO Conversation
 
-The CFO conversation is the one most principal engineers struggle with, because it demands framing technology in financial terms. The CFO's questions are always about cost, return, and risk — and the principal must answer in those terms.
+The CFO conversation is the one most principal engineers struggle with, because it demands framing technology in financial terms. The CFO's questions are always about cost, return, and risk, and the principal must answer in those terms.
 
 | CFO Question | What They Are Really Asking | How the Principal Answers |
 |-------------|---------------------------|--------------------------|
@@ -88,7 +88,7 @@ The CEO conversation is about strategic implications. The CEO needs to understan
 
 ## Presenting Without Dumbing Down
 
-The principal's obligation is to make technical reality legible without distortion. Dumbing down — replacing accurate technical concepts with vague business metaphors — produces decisions based on a cartoon. Translating preserves the signal while changing the language.
+The principal's obligation is to make technical reality legible without distortion. Dumbing down (replacing accurate technical concepts with vague business metaphors) produces decisions based on a cartoon. Translating preserves the signal while changing the language.
 
 | Dumbing Down | Translating |
 |-------------|-------------|
@@ -133,7 +133,7 @@ The principal's obligation is to make technical reality legible without distorti
 ### Executive Communication Checklist
 
 - [ ] Bottom line is in the first two sentences
-- [ ] Technical reality is expressed in business outcomes, risk, or cost — not technical detail
+- [ ] Technical reality is expressed in business outcomes, risk, or cost, not technical detail
 - [ ] Options are priced: cost, benefit, risk for each
 - [ ] Recommendation is stated with confidence
 - [ ] The cost of inaction is quantified
@@ -145,7 +145,7 @@ The principal's obligation is to make technical reality legible without distorti
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
 | **Technical dump on executives** | Architecture diagrams and technology comparisons overwhelm; no decision emerges | Translate to business outcomes: what this technology choice means for revenue, cost, risk, or speed |
-| **Dumbing down to metaphors** | "Our systems are like an old car" — the metaphor obscures the real trade-offs | Be specific without being technical: name the constraint, the consequence, and the cost |
+| **Dumbing down to metaphors** | "Our systems are like an old car". The metaphor obscures the real trade-offs | Be specific without being technical: name the constraint, the consequence, and the cost |
 | **No recommendation** | Executives are asked to decide among options they cannot evaluate | Recommend with confidence and reasoning; make the decision easy |
 | **Hiding uncertainty** | Certainty theater collapses when the board asks a follow-up question | State confidence honestly; name what would change the recommendation |
 | **No cost of inaction** | The ask is framed as a wish, not a choice with a priced alternative | Quantify what not deciding costs: revenue, risk, velocity, talent |
@@ -163,10 +163,10 @@ The principal's obligation is to make technical reality legible without distorti
 
 - [[02_Advisory_Relationships]]: the trusted advisor position that makes executive communication land
 - [[03_Writing_for_Organizational_Impact]]: the writing craft behind the memo and the board deck
-- [[01_Technology_Strategy/00_overview|Technology Strategy]]: the content executive communication conveys
+- [[career-path/04_Principal_and_Distinguished_Engineer/01_Technology_Strategy/00_overview|Technology Strategy]]: the content executive communication conveys
 - [[career-path/11_Engineering_Manager/07_Manager_Communication/00_overview|Manager Communication (EM)]]: the manager's parallel communication craft
 - [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/05_Influencing_Leadership|Influencing Leadership (Staff)]]: the leadership influence foundation
 
 ## Summary
 
-Executive communication at principal level is translation — making technical reality legible to the C-suite and board in the language of business outcomes, risk, and investment. The executive memo delivers the decision, the options, and the recommendation in one to two pages. The board deck frames technology as strategic position, not project status. The CFO conversation speaks in cost, ROI, and financial exposure. The CEO conversation speaks in strategic implications. The principal preserves the fidelity of the technical signal while expressing it in the language of the audience's decisions — because a principal who cannot communicate to the C-suite is invisible to the decisions that shape the organization.
+Executive communication at principal level is translation, making technical reality legible to the C-suite and board in the language of business outcomes, risk, and investment. The executive memo delivers the decision, the options, and the recommendation in one to two pages. The board deck frames technology as strategic position, not project status. The CFO conversation speaks in cost, ROI, and financial exposure. The CEO conversation speaks in strategic implications. The principal preserves the fidelity of the technical signal while expressing it in the language of the audience's decisions, because a principal who cannot communicate to the C-suite is invisible to the decisions that shape the organization.

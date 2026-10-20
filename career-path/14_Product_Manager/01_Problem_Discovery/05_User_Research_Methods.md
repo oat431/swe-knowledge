@@ -134,11 +134,11 @@ tags:
 
 | Question | Discovery | Design | Validation | Optimization |
 |----------|-----------|--------|------------|--------------|
-| What do users need? | Interviews, Contextual inquiry | - | Surveys | - |
-| How do users behave? | Observation, Diary studies | - | Analytics | A/B tests |
-| Can users use it? | - | Usability testing | Usability testing | A/B tests |
+| What do users need? | Interviews, Contextual inquiry | N/A | Surveys | N/A |
+| How do users behave? | Observation, Diary studies | N/A | Analytics | A/B tests |
+| Can users use it? | N/A | Usability testing | Usability testing | A/B tests |
 | What do users think? | Interviews, Focus groups | Card sorting | Surveys | NPS, CSAT |
-| What's happening? | - | - | Analytics | Funnel analysis |
+| What's happening? | N/A | - | Analytics | Funnel analysis |
 
 ## Research Planning
 

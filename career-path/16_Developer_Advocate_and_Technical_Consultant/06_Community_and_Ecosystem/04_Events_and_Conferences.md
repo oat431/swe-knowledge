@@ -16,15 +16,15 @@ tags:
 
 # Events and Conferences
 
-> **Core skill:** Using events deliberately — speaking, sponsoring, and running gatherings — so that each event produces relationships and knowledge, not just attendance.
+> **Core skill:** Using events deliberately (speaking, sponsoring, and running gatherings) so that each event produces relationships and knowledge, not just attendance.
 
 ## Why This Matters
 
-Conferences and meetups are where the distributed developer community briefly becomes a room. That concentration of intent — people who traveled to learn something — makes events the highest-trust channel advocacy has: a technical talk that teaches honestly earns credibility no ad can buy, and a conversation at a booth or hallway track can open relationships that sustain for years. But the same concentration makes events the most easily wasted budget in the advocate's portfolio.
+Conferences and meetups are where the distributed developer community briefly becomes a room. That concentration of intent (people who traveled to learn something) makes events the highest-trust channel advocacy has: a technical talk that teaches honestly earns credibility no ad can buy, and a conversation at a booth or hallway track can open relationships that sustain for years. But the same concentration makes events the most easily wasted budget in the advocate's portfolio.
 
-The waste is familiar: a sponsorship purchased for logo placement and lead scans, a talk accepted because the CFP was easy, a meetup organized as a one-off with no follow-through. Each of these mistakes treats an event as a transaction instead of a lifecycle. The lifecycle view — plan the goal, prepare the contribution, connect in person, follow up diligently, and measure what changed — is what separates events that compound from events that merely occur.
+The waste is familiar: a sponsorship purchased for logo placement and lead scans, a talk accepted because the CFP was easy, a meetup organized as a one-off with no follow-through. Each of these mistakes treats an event as a transaction instead of a lifecycle. The lifecycle view (plan the goal, prepare the contribution, connect in person, follow up diligently, and measure what changed) is what separates events that compound from events that merely occur.
 
-For the advocate personally, events are also a career instrument: the hallway track is where ecosystem relationships, speaking opportunities, and hard-won field knowledge get exchanged. The discipline is deciding, per event, which of the possible goals it serves — recruiting, teaching, listening, partnership — and investing accordingly.
+For the advocate personally, events are also a career instrument: the hallway track is where ecosystem relationships, speaking opportunities, and hard-won field knowledge get exchanged. The discipline is deciding, per event, which of the possible goals it serves (recruiting, teaching, listening, partnership) and investing accordingly.
 
 ## The Event Portfolio
 
@@ -55,12 +55,12 @@ Speaking rules that protect reputation: never present marketing as a technical t
 
 | Decision | Question To Ask Before Committing |
 |----------|-----------------------------------|
-| Why sponsor | Which goal — hiring, adoption, ecosystem goodwill — does this serve? |
+| Why sponsor | Which goal (hiring, adoption, ecosystem goodwill) does this serve? |
 | What tier | Does the tier buy participation (talks, workshops) or only a logo? |
 | Who staffs | Are the people going able to have real technical conversations? |
-| What happens at the booth | Is there a demo, a game, a workshop — something worth approaching? |
+| What happens at the booth | Is there a demo, a game, a workshop, something worth approaching? |
 | How leads are handled | Who follows up, within what window, with what message? |
-| How it is measured | What changes if the event succeeds — and is that trackable? |
+| How it is measured | What changes if the event succeeds, and is that trackable? |
 
 ## The Event Lifecycle
 
@@ -72,11 +72,12 @@ Speaking rules that protect reputation: never present marketing as a technical t
 | Follow up | Within a week: materials, answers, introductions | The silent post-event void |
 | Measure | Relationships formed, knowledge gained, pipeline or adoption effects | Counting badge scans as impact |
 
-The follow-up week is where most event value is either captured or lost — a message referencing the actual conversation beats a generic "great meeting you" every time.
+The follow-up week is where most event value is either captured or lost: a message referencing the actual conversation beats a generic "great meeting you" every time.
 
 ## The Event Arc
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CHOOSE["Choose - event matched to a goal"] --> PREPARE["Prepare - talks, booth, meetings"]
     PREPARE --> CONNECT["Connect - talks, hallway, pre-booked meetings"]
@@ -91,7 +92,7 @@ flowchart LR
 - [ ] Every event on the calendar names the goal it serves
 - [ ] Talks are rehearsed on the real setup, with fallback for demo failure
 - [ ] Speaking content is technical, honest, and free of disguised marketing
-- [ ] Booth or presence has something worth approaching — not just collateral
+- [ ] Booth or presence has something worth approaching, not just collateral
 - [ ] Pre-event outreach books meetings with key people
 - [ ] Follow-up happens within a week, referencing real conversations
 - [ ] Each event is reviewed against its goal before renewal
@@ -99,7 +100,7 @@ flowchart LR
 ### Event Plan Template
 
 ```markdown
-## Event Plan — [event]
+## Event Plan: [event]
 - Goal: [relationships / adoption / recruiting / listening]
 - Format: [talk / workshop / booth / meetup]
 - People to meet: [names and why]
@@ -113,7 +114,7 @@ flowchart LR
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
-| **Logo marketing** | Sponsorship buys visibility nobody remembers | Buy participation — talks, workshops, demos |
+| **Logo marketing** | Sponsorship buys visibility nobody remembers | Buy participation: talks, workshops, demos |
 | **Demo on unrehearsed setup** | A live failure costs more trust than the demo buys | Rehearse on the venue's actual configuration |
 | **Sales in a technical talk** | The audience disengages and remembers | Teach honestly; let the work advertise itself |
 | **No follow-up** | Event connections decay within days | One-week follow-up with conversation references |
@@ -126,16 +127,16 @@ flowchart LR
 - Follow-up messages get replies because they cite real discussions
 - The event calendar reads as a portfolio with distinct goals
 - Customers and community members volunteer to speak or co-present
-- Event decisions — keep, change, or cut — are made on evidence
+- Event decisions (keep, change, or cut) are made on evidence
 
 ## Related Topics
 
 - [[05_Community_Programs_and_Content]]: events run on the same ask-the-community machinery as other programs
 - [[02_Developer_Programs_and_Relationships]]: ambassadors often carry local event presence
-- [[01_Technical_Communication/00_overview|Technical Communication]]: talks are the public form of technical communication
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/01_Technical_Communication/00_overview|Technical Communication]]: talks are the public form of technical communication
 - [[07_Measuring_Community_Impact]]: events must be measured by outcomes, not attendance
 - [[01_Community_Building_Fundamentals]]: meetups are the grassroots layer of community
 
 ## Summary
 
-Events and conferences convert a distributed community into a room: choose each event against a goal, prepare talks and presence genuinely, connect with intent through talks and hallway conversations, follow up within a week while the memory is warm, and measure what actually changed. The advocate who runs events as a lifecycle rather than a calendar builds a portfolio where every gathering compounds — relationships, knowledge, and goodwill that outlast the closing keynote.
+Events and conferences convert a distributed community into a room: choose each event against a goal, prepare talks and presence genuinely, connect with intent through talks and hallway conversations, follow up within a week while the memory is warm, and measure what actually changed. The advocate who runs events as a lifecycle rather than a calendar builds a portfolio where every gathering compounds: relationships, knowledge, and goodwill that outlast the closing keynote.

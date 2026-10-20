@@ -44,6 +44,7 @@ CI/CD integration connects automated tests to the development workflow:
 ### Typical Pipeline Stages
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A[Code Commit] --> B[Build]
     B --> C[Unit Tests]
@@ -471,6 +472,7 @@ def test_unreliable_feature():
 ### Failure Triage Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     A[Test Fails] --> B{Reproducible?}
     B -->|Yes| C{New Failure?}

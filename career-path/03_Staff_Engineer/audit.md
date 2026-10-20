@@ -88,7 +88,7 @@ tags:
 | 04 Influence & Alignment | ✅ Excellent (ethics note is rare) | Add EM partnership |
 | 05 Systems Thinking & Org Design | ✅ Strong | Credit Meadows / Team Topologies consistently |
 | 06 Technical Risk & Judgment | ✅ Strong | Add a filled-in risk acceptance example |
-| 07 Org Learning & Mentoring | ✅ Strong | — |
+| 07 Org Learning & Mentoring | ✅ Strong | N/A |
 
 ## Quick Fixes
 

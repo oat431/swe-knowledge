@@ -15,11 +15,11 @@ tags:
 
 # Judgment Transfer
 
-> **Core skill:** Teaching thinking, not solutions — through case walkthroughs, decision reviews, shadowing, and post-hoc analysis that make staff-level reasoning visible and learnable.
+> **Core skill:** Teaching thinking, not solutions, through case walkthroughs, decision reviews, shadowing, and post-hoc analysis that make staff-level reasoning visible and learnable.
 
 ## Why This Matters
 
-Knowledge transfers easily: write it down, and it is available. Judgment transfers hard: it is tacit, contextual, and lived — the product of hundreds of decisions and their aftermaths. You cannot hand someone your judgment; you can only make your reasoning visible while they practice their own, and coach the practice.
+Knowledge transfers easily: write it down, and it is available. Judgment transfers hard: it is tacit, contextual, and lived, the product of hundreds of decisions and their aftermaths. You cannot hand someone your judgment; you can only make your reasoning visible while they practice their own, and coach the practice.
 
 Judgment is the staff differentiator: how a problem gets framed, which options get generated, which trade-offs get accepted, what second-order effects get noticed. All of it happens inside heads, which is why it so rarely transfers. The staff engineer who can make that invisible process visible is multiplying the org's hardest-to-replace asset.
 
@@ -33,7 +33,7 @@ Judgment is the staff differentiator: how a problem gets framed, which options g
 | Time to transfer | Days to weeks | Quarters to years |
 | Evidence | Tests, checklists | Decisions made well under ambiguity |
 
-The mistake is treating judgment as knowledge: a one-hour explanation of how you think, and done. Judgment transfers through repeated exposure to real decisions with real stakes and real debriefs — which is why the mechanisms below all involve actual work.
+The mistake is treating judgment as knowledge: a one-hour explanation of how you think, and done. Judgment transfers through repeated exposure to real decisions with real stakes and real debriefs, which is why the mechanisms below all involve actual work.
 
 ## Transfer Mechanisms
 
@@ -46,11 +46,11 @@ The mistake is treating judgment as knowledge: a one-hour explanation of how you
 
 ### Case Walkthroughs
 
-Pick a real decision — ideally one with a known outcome. Walk it aloud: how you framed it, what options you saw and rejected, where you were uncertain, what you would do differently. Then reverse it: have them walk their own case while you listen for framing, options, and second-order awareness. The replay is where the tacit becomes visible.
+Pick a real decision, ideally one with a known outcome. Walk it aloud: how you framed it, what options you saw and rejected, where you were uncertain, what you would do differently. Then reverse it: have them walk their own case while you listen for framing, options, and second-order awareness. The replay is where the tacit becomes visible.
 
 ### Decision Reviews
 
-Their decision, your questions — the Socratic loop:
+Their decision, your questions. The Socratic loop:
 
 - What decision are we actually making, and for whom?
 - What options did you reject, and on what evidence?
@@ -61,11 +61,11 @@ The discipline is questions, not answers. Every answer you give is a judgment th
 
 ### Shadowing
 
-They attend the rooms you attend — proposal reviews, escalations, design councils — with a debrief afterward: what did you notice, what would you have done, what surprised you. Shadowing without debrief is just a meeting; with debrief it is a curriculum.
+They attend the rooms you attend (proposal reviews, escalations, design councils) with a debrief afterward: what did you notice, what would you have done, what surprised you. Shadowing without debrief is just a meeting; with debrief it is a curriculum.
 
 ### Post-Hoc Analysis
 
-Months later, revisit the decision: what actually happened, what did you predict, what did you miss? The calibration loop — prediction, outcome, lesson — is how judgment compounds.
+Months later, revisit the decision: what actually happened, what did you predict, what did you miss? The calibration loop (prediction, outcome, lesson) is how judgment compounds.
 
 ## The Judgment Portfolio
 
@@ -79,7 +79,7 @@ Recurring decision types at staff level, tracked per mentee:
 | **Scope judgment** | What is staff-sized vs team-sized | Picks the altitude correctly |
 | **Political reading** | Who must be aligned, and in what order | Maps stakeholders before proposing |
 
-The portfolio is the mentee's recurring practice ground — the same decision types reappear, each cycle slightly harder.
+The portfolio is the mentee's recurring practice ground: the same decision types reappear, each cycle slightly harder.
 
 ## Making Thinking Visible
 
@@ -92,7 +92,7 @@ Your reasoning, in writing, on a cadence:
 | Postmortem narratives | Your read of what went wrong and why |
 | Debrief write-ups | The lesson, not just the event |
 
-The rule: if you made a significant judgment call, someone else should be able to reconstruct your reasoning from what you wrote. Writing is how judgment leaves your head — and it is the only way it can multiply.
+The rule: if you made a significant judgment call, someone else should be able to reconstruct your reasoning from what you wrote. Writing is how judgment leaves your head, and it is the only way it can multiply.
 
 ## Assessing Judgment Growth
 
@@ -104,9 +104,10 @@ The rule: if you made a significant judgment call, someone else should be able t
 | **Trade-off honesty** | Hides the cost of the choice | States the cost and who bears it |
 | **Calibration** | Confident regardless of track record | Confidence tracks the evidence |
 
-Assessment is qualitative and longitudinal — one decision tells you little; a portfolio of decisions over a year tells you the trajectory.
+Assessment is qualitative and longitudinal: one decision tells you little; a portfolio of decisions over a year tells you the trajectory.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DECISION["Real decision"] --> WALKTHROUGH["Think aloud walkthrough"]
     WALKTHROUGH --> QUESTIONS["Questions not answers"]
@@ -176,10 +177,10 @@ flowchart TD
 
 - [[01_Mentoring_Senior_Engineers]]: the relationship judgment transfer runs through
 - [[04_Writing_as_Scaling]]: writing as the visibility mechanism
-- [[05_Systems_Thinking_and_Organizational_Design/00_overview|Systems Thinking and Organizational Design]]: the model toolkit to transfer
-- [[01_The_Staff_Role_and_Scope/00_overview|The Staff Role and Scope]]: what staff judgment is for
+- [[career-path/03_Staff_Engineer/05_Systems_Thinking_and_Organizational_Design/00_overview|Systems Thinking and Organizational Design]]: the model toolkit to transfer
+- [[career-path/03_Staff_Engineer/01_The_Staff_Role_and_Scope/00_overview|The Staff Role and Scope]]: what staff judgment is for
 - [[career-path/02_Senior_Software_Engineer/07_Mentoring_and_Team_Leadership/00_overview|Mentoring and Team Leadership (Senior)]]: the 1:1 craft this builds on
 
 ## Summary
 
-Judgment transfers through exposure, not explanation: case walkthroughs that replay real decisions, decision reviews built on questions, shadowing in staff-level rooms, and post-hoc analysis that calibrates prediction against outcome. Make your reasoning visible in writing, track each mentee's judgment portfolio across framing, options, and second-order awareness, and measure growth longitudinally — because judgment, once transferred, is the org's most durable asset.
+Judgment transfers through exposure, not explanation: case walkthroughs that replay real decisions, decision reviews built on questions, shadowing in staff-level rooms, and post-hoc analysis that calibrates prediction against outcome. Make your reasoning visible in writing, track each mentee's judgment portfolio across framing, options, and second-order awareness, and measure growth longitudinally, because judgment, once transferred, is the org's most durable asset.

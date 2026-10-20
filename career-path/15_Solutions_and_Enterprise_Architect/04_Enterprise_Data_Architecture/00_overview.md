@@ -14,13 +14,13 @@ tags:
 
 # Enterprise Data Architecture
 
-> **Core capability:** The architect treats data as an enterprise asset — aligning ownership, flow, quality, governance, and value across the organization's systems and business units.
+> **Core capability:** The architect treats data as an enterprise asset, aligning ownership, flow, quality, governance, and value across the organization's systems and business units.
 
 ## Why This Matters
 
-Data is the enterprise's most reused asset and its most neglected one: duplicated across systems, owned by nobody, trusted by few. Enterprise data architecture is the discipline of seeing data across the whole organization — where it originates, how it flows, who owns it, how quality is maintained, and how its value is realized.
+Data is the enterprise's most reused asset and its most neglected one: duplicated across systems, owned by nobody, trusted by few. Enterprise data architecture is the discipline of seeing data across the whole organization: where it originates, how it flows, who owns it, how quality is maintained, and how its value is realized.
 
-This area bridges DMBOK's data management disciplines with architecture practice: not building pipelines or tuning databases (that is the data engineer's craft), but defining the enterprise view — data domains, integration patterns, governance structures, and the platform architecture that serves analytics, operations, and compliance alike.
+This area bridges DMBOK's data management disciplines with architecture practice: not building pipelines or tuning databases (that is the data engineer's craft), but defining the enterprise view: data domains, integration patterns, governance structures, and the platform architecture that serves analytics, operations, and compliance alike.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ This area bridges DMBOK's data management disciplines with architecture practice
 ## The Data Architecture Stack
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     OWNERSHIP["Ownership: domains, stewards, accountability"] --> MODELS["Models: enterprise data model, flows"]
     MODELS --> INTEGRATION["Integration: how data moves"]
@@ -45,7 +46,7 @@ flowchart TD
     GOVERNANCE --> VALUE["Value: analytics, operations, products"]
 ```
 
-Ownership first — everything downstream depends on someone being accountable.
+Ownership first: everything downstream depends on someone being accountable.
 
 ## Practical Applications
 
@@ -74,11 +75,11 @@ Ownership first — everything downstream depends on someone being accountable.
 
 ## Related Capabilities
 
-- [[03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: data is one of the four EA domains
-- [[05_Security_Risk_and_Compliance/00_overview|Security Risk and Compliance]]: data protection and privacy overlap
+- [[career-path/15_Solutions_and_Enterprise_Architect/03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: data is one of the four EA domains
+- [[career-path/15_Solutions_and_Enterprise_Architect/05_Security_Risk_and_Compliance/00_overview|Security Risk and Compliance]]: data protection and privacy overlap
 - [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]]: the data engineering craft
 - [[career-path/06_Software_Architect/06_Data_Architecture/00_overview|Data Architecture (Architect)]]: solution-level data design
 
 ## Summary
 
-Enterprise data architecture sees data across the whole organization: ownership and stewardship, conceptual models and flows, governed integration, platform choices, and lifecycle management that realizes value. The architect does not build the pipelines — the architect makes sure the enterprise knows where its data is, who owns it, and what it is worth.
+Enterprise data architecture sees data across the whole organization: ownership and stewardship, conceptual models and flows, governed integration, platform choices, and lifecycle management that realizes value. The architect does not build the pipelines. The architect makes sure the enterprise knows where its data is, who owns it, and what it is worth.

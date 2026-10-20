@@ -15,13 +15,13 @@ tags:
 
 # Security, Risk and Compliance
 
-> **Core capability:** The architect integrates security, privacy, resilience, and compliance into solution and enterprise design — treating them as architecture requirements, not post-hoc reviews.
+> **Core capability:** The architect integrates security, privacy, resilience, and compliance into solution and enterprise design, treating them as architecture requirements, not post-hoc reviews.
 
 ## Why This Matters
 
-In enterprise and customer-facing architecture, security and compliance are not optional quality attributes — they are gating constraints. A solution that cannot pass an audit, protect customer data, or survive a due-diligence review is not a solution. The architect works with these constraints from the first design conversation, not after the build.
+In enterprise and customer-facing architecture, security and compliance are not optional quality attributes. They are gating constraints. A solution that cannot pass an audit, protect customer data, or survive a due-diligence review is not a solution. The architect works with these constraints from the first design conversation, not after the build.
 
-This area is where the architect connects to the specialists: the Security Engineer (path 08) owns the depth of security engineering; the architect owns the integration — how security requirements shape solution structure, how risk is assessed and accepted at architecture level, and how compliance regimes become design inputs. The architect who understands the regulatory landscape and designs for it early saves the organization from expensive retrofitting.
+This area is where the architect connects to the specialists: the Security Engineer (path 08) owns the depth of security engineering; the architect owns the integration: how security requirements shape solution structure, how risk is assessed and accepted at architecture level, and how compliance regimes become design inputs. The architect who understands the regulatory landscape and designs for it early saves the organization from expensive retrofitting.
 
 ## Topics in This Capability Area
 
@@ -38,6 +38,7 @@ This area is where the architect connects to the specialists: the Security Engin
 ## Security as Architecture Constraint
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     REGULATION["Regulation and risk appetite"] --> REQUIREMENTS["Security and compliance requirements"]
     REQUIREMENTS --> DESIGN["Architecture design responses"]
@@ -76,11 +77,11 @@ Compliance is a design input; assurance is the feedback loop.
 
 ## Related Capabilities
 
-- [[03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: governance reviews security posture
-- [[06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: security debt in the portfolio
+- [[career-path/15_Solutions_and_Enterprise_Architect/03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: governance reviews security posture
+- [[career-path/15_Solutions_and_Enterprise_Architect/06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: security debt in the portfolio
 - [[career-path/08_Security_Engineer/00_overview|Security Engineer]]: the security engineering depth
 - [[career-path/06_Software_Architect/05_Security_Architecture/00_overview|Security Architecture (Architect)]]: solution-level security design
 
 ## Summary
 
-Security, risk, and compliance are architecture constraints in the enterprise world: regulations become design requirements, risk assessment shapes options, privacy is designed in, and assurance validates the result. The architect integrates the specialists' depth into solution and enterprise design — because in the enterprise, compliance is not a phase, it is a precondition.
+Security, risk, and compliance are architecture constraints in the enterprise world: regulations become design requirements, risk assessment shapes options, privacy is designed in, and assurance validates the result. The architect integrates the specialists' depth into solution and enterprise design, because in the enterprise, compliance is not a phase, it is a precondition.

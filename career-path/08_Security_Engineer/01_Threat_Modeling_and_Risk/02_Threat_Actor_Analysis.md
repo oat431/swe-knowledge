@@ -54,6 +54,7 @@ Separate what an actor can do from where the system gives them an opportunity. A
 For each important scenario, review four factors: incentive, access, capability, and resistance. Use qualitative judgments such as low, medium, high, and unknown. Unknown is a finding because the control decision may depend on it.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SCENARIO["Threat scenario"] --> INCENTIVE["Actor incentive"]
     INCENTIVE --> ACCESS["Available access"]

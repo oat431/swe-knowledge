@@ -21,7 +21,7 @@ tags:
 
 ## Why This Is a Senior Skill
 
-A mid-level engineer implements decisions. A senior engineer **makes** them — and more importantly, **explains** them in a way that others can evaluate, challenge, and follow.
+A mid-level engineer implements decisions. A senior engineer **makes** them, and more importantly, **explains** them in a way that others can evaluate, challenge, and follow.
 
 Decision ownership is not about being the person who always has the right answer. It is about being the person who ensures that:
 
@@ -34,6 +34,7 @@ Decision ownership is not about being the person who always has the right answer
 A senior engineer follows a consistent process for consequential decisions:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     IDENTIFY["1 Identify the decision"] --> OPTIONS["2 Generate options"]
     OPTIONS --> EVALUATE["3 Evaluate trade-offs"]
@@ -159,6 +160,7 @@ ADRs should live **with the code** they relate to:
 ### ADR lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PROPOSED["Proposed"] --> ACCEPTED["Accepted"]
     ACCEPTED --> DEPRECATED["Deprecated"]
@@ -213,13 +215,13 @@ The senior engineer who says "I made this decision, here is why, and here is wha
 
 ## Knowledge Connections
 
-- [[01_System_Ownership]] — decisions are made within your system boundary
-- [[02_Lifecycle_Ownership]] — decisions span the full lifecycle
-- [[03_Technical_Debt_and_Maintainability]] — accepting debt is a decision that needs an ADR
-- [[04_Production_Responsibility]] — production incidents often trace back to decisions
-- [[06_Ownership_Evidence]] — ADRs are concrete evidence of senior-level judgment
-- [[software-engineering-note/02_Software_Architecture/09_Evaluation_and_Governance]] — architecture evaluation and governance
-- [[software-engineering-note/14_Software_Engineering_Professional_Practice/Professionalism of Software Engineering Overview]] — professional practice and communication
+- [[01_System_Ownership]]: decisions are made within your system boundary
+- [[02_Lifecycle_Ownership]]: decisions span the full lifecycle
+- [[03_Technical_Debt_and_Maintainability]]: accepting debt is a decision that needs an ADR
+- [[04_Production_Responsibility]]: production incidents often trace back to decisions
+- [[06_Ownership_Evidence]]: ADRs are concrete evidence of senior-level judgment
+- [[software-engineering-note/02_Software_Architecture/09_Evaluation_and_Governance]]: architecture evaluation and governance
+- [[software-engineering-note/14_Software_Engineering_Professional_Practice/Professionalism of Software Engineering Overview]]: professional practice and communication
 
 ## Key Takeaways
 

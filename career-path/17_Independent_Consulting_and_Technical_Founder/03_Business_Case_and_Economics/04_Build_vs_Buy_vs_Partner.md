@@ -17,15 +17,15 @@ tags:
 
 # Build vs Buy vs Partner
 
-> **Core skill:** Deciding whether to build a capability, buy it, or partner for it — under one-person constraints where your own hours are the scarcest asset.
+> **Core skill:** Deciding whether to build a capability, buy it, or partner for it, under one-person constraints where your own hours are the scarcest asset.
 
 ## Why This Matters
 
-The classic build-versus-buy question changes shape for an independent. There is no team to build with, so "build" means your own hours — the most expensive resource in the business, measured at the rate those hours could otherwise earn. "Buy" means tools and services that convert cash into capability without consuming delivery time. "Partner" means subcontractors, agencies, or white-label providers who deliver under your name. And there is a fourth option teams rarely admit: "defer" — living without the capability until it actually pays for itself.
+The classic build-versus-buy question changes shape for an independent. There is no team to build with, so "build" means your own hours, the most expensive resource in the business, measured at the rate those hours could otherwise earn. "Buy" means tools and services that convert cash into capability without consuming delivery time. "Partner" means subcontractors, agencies, or white-label providers who deliver under your name. And there is a fourth option teams rarely admit: "defer". Living without the capability until it actually pays for itself.
 
 Every wrong choice here is expensive in a different way. Building something non-core burns billable weeks and produces maintenance you cannot afford. Buying an enterprise-priced tool too early converts precious runway into shelfware. Partnering without quality control mortgages your reputation to someone else's standards. The decision framework exists to make these costs visible before you commit, because a solo operator absorbs every mistake personally.
 
-The sharpest tool in the framework is honesty about core versus context. A capability is core when it directly differentiates the offer and clients can feel it. Everything else is context — necessary but generic. Core capabilities deserve slow, deliberate building. Context capabilities should be bought, partnered, or deferred almost every time, even when building them would be fun.
+The sharpest tool in the framework is honesty about core versus context. A capability is core when it directly differentiates the offer and clients can feel it. Everything else is context: necessary but generic. Core capabilities deserve slow, deliberate building. Context capabilities should be bought, partnered, or deferred almost every time, even when building them would be fun.
 
 ## The Four Options
 
@@ -48,7 +48,7 @@ The sharpest tool in the framework is honesty about core versus context. A capab
 | Client constraints | Does the contract require consent for subcontracting? | Restricted engagements limit partnering |
 | Confidentiality and IP | Who may see client data and code? | Sensitive work demands controlled parties |
 
-Score the options against these dimensions on paper. The point is not precision — it is surfacing the dimension you were privately ignoring.
+Score the options against these dimensions on paper. The point is not precision. It is surfacing the dimension you were privately ignoring.
 
 ## A Worked Decision
 
@@ -81,6 +81,7 @@ When partnering is right, the management load is the hidden cost. Structure it e
 Maintain a bench: two or three trusted partners you have tested on small work before a crisis needs them.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     NEED["Capability need identified"] --> CLASSIFY["Classify core versus context"]
     CLASSIFY --> COST["Cost it in your hours and cash"]
@@ -137,7 +138,7 @@ flowchart TD
 - [[06_Unit_Economics_of_Small_Products]]: product margins expose whether build costs ever pay back
 - [[01_Cost_Structures_and_Runway]]: every buy decision consumes the runway clock
 - [[career-path/02_Senior_Software_Engineer/08_Engineering_Economics_and_Trade_Offs/02_Build_vs_Buy_Decisions|Build vs Buy Decisions (Senior)]]: the engineering economics foundation this adapts
-- [[05_Architecture_for_Independents/00_overview|Architecture for Independents]]: architecture choices are leverage choices for a solo builder
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/05_Architecture_for_Independents/00_overview|Architecture for Independents]]: architecture choices are leverage choices for a solo builder
 
 ## Summary
 

@@ -16,13 +16,13 @@ tags:
 
 # Cross Functional Coalitions
 
-> **Core skill:** The principal builds and maintains alliances with leaders across finance, legal, security, product, and operations — so that major technical initiatives land with pre-alignment, not meeting battles.
+> **Core skill:** The principal builds and maintains alliances with leaders across finance, legal, security, product, and operations, so that major technical initiatives land with pre-alignment, not meeting battles.
 
 ## Why This Matters
 
 At principal level, consequential technical initiatives cannot succeed within engineering alone. A platform investment needs the CFO to fund it and the CPO to prioritize the capacity it consumes. A security architecture change needs the CISO to endorse it and legal to confirm compliance. A build vs buy decision needs procurement to negotiate it and finance to model it. Every major initiative is a cross-functional endeavor, and the principal who lacks relationships with the leaders of those functions will spend their influence fighting battles in meetings that should have been won in conversations beforehand.
 
-Cross-functional coalitions are not political alliances — they are the recognition that technical decisions have financial, legal, security, product, and operational dimensions, and that the principal must bring those functions into the decision before it is made, not after it is contested. The coalition is built before it is needed, maintained between initiatives, and tested when interests diverge.
+Cross-functional coalitions are not political alliances. They are the recognition that technical decisions have financial, legal, security, product, and operational dimensions, and that the principal must bring those functions into the decision before it is made, not after it is contested. The coalition is built before it is needed, maintained between initiatives, and tested when interests diverge.
 
 ## The Coalition Map
 
@@ -39,7 +39,7 @@ The principal maintains a deliberate map of cross-functional relationships: who 
 
 ## Building Coalitions Before Needing Them
 
-The coalition that is built during a crisis is transactional — it lasts as long as the crisis. The coalition that is built between crises is durable.
+The coalition that is built during a crisis is transactional. It lasts as long as the crisis. The coalition that is built between crises is durable.
 
 | Stage | Activity | Timing |
 |-------|----------|--------|
@@ -117,6 +117,7 @@ Coalitions break when interests diverge, when trust is breached, or when one par
 | **Irreconcilable interest divergence** | The functions' interests genuinely conflict and no compromise is possible | Escalate to the CEO with a joint memo describing the conflict and the options for resolution |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MAP["Map the coalition: who controls what, who needs what"] --> BUILD["Build before needing: discover, connect, deliver value"]
     BUILD --> INITIATIVE["Run joint initiatives: shared sponsorship, decision rights, communication"]
@@ -172,9 +173,9 @@ flowchart TD
 - [[01_Executive_Communication]]: the communication craft for each functional audience
 - [[02_Advisory_Relationships]]: the one-on-one advisory dimension of coalition relationships
 - [[06_Organizational_Conflict_Resolution]]: resolving conflicts when coalitions break
-- [[01_Technology_Strategy/00_overview|Technology Strategy]]: the content coalitions align around
+- [[career-path/04_Principal_and_Distinguished_Engineer/01_Technology_Strategy/00_overview|Technology Strategy]]: the content coalitions align around
 - [[career-path/11_Engineering_Manager/05_Organizational_Awareness_and_Influence/00_overview|Organizational Awareness and Influence (EM)]]: the manager's parallel coalition craft
 
 ## Summary
 
-Cross-functional coalitions are the principal's mechanism for making major technical initiatives succeed across organizational boundaries. Built before they are needed — through discovery, connection, value delivery, and joint initiatives — and maintained between initiatives through regular touchpoints and early warning, coalitions turn meeting battles into pre-aligned decisions. The principal maintains a coalition map, runs cross-functional initiatives with joint sponsorship and shared decision rights, and addresses broken coalitions directly because a coalition that exists only in the principal's mind is a liability, not an asset.
+Cross-functional coalitions are the principal's mechanism for making major technical initiatives succeed across organizational boundaries. Built before they are needed (through discovery, connection, value delivery, and joint initiatives) and maintained between initiatives through regular touchpoints and early warning, coalitions turn meeting battles into pre-aligned decisions. The principal maintains a coalition map, runs cross-functional initiatives with joint sponsorship and shared decision rights, and addresses broken coalitions directly because a coalition that exists only in the principal's mind is a liability, not an asset.

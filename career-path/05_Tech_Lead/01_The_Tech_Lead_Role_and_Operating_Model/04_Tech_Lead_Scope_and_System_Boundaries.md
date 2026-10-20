@@ -16,13 +16,13 @@ tags:
 
 # Tech Lead Scope and System Boundaries
 
-> **Core skill:** Choosing and defending the scope of ownership — which system or systems the team owns, where the boundary sits, and what lives outside it.
+> **Core skill:** Choosing and defending the scope of ownership: which system or systems the team owns, where the boundary sits, and what lives outside it.
 
 ## Why This Matters
 
 Scope determines whether the team can actually own outcomes. Too narrow, and the team becomes a feature factory: everything it delivers depends on other teams, its engineers never see an outcome through, and accountability dissolves into dependencies. Too wide, and the team owns things it cannot operate: review load explodes, nobody is deep anywhere, and incidents happen in areas no one truly understands.
 
-Scope decisions are made once and felt for years. They are shaped by the organization's team structure, by the system's shape, and by Conway's law — and once set, they are surprisingly hard to change. That is why the tech lead treats scope as a deliberate, renegotiable contract rather than an inheritance to accept.
+Scope decisions are made once and felt for years. They are shaped by the organization's team structure, by the system's shape, and by Conway's law, and once set, they are surprisingly hard to change. That is why the tech lead treats scope as a deliberate, renegotiable contract rather than an inheritance to accept.
 
 ## Scope Options
 
@@ -50,11 +50,12 @@ A boundary that only exists in your head will be crossed daily. A boundary writt
 
 ## Conway's Law and Team-System Fit
 
-Conway's law says the system's structure will mirror the team's communication structure — and that the mirror is often accidental. When the team structure and the system structure disagree, friction shows up as endless coordination meetings around a single awkward seam.
+Conway's law says the system's structure will mirror the team's communication structure, and that the mirror is often accidental. When the team structure and the system structure disagree, friction shows up as endless coordination meetings around a single awkward seam.
 
-The practical rule: put the seam where the ownership line is. If two teams must cooperate constantly, they should own different layers of the same system, not fight over one shared component. When a system split is proposed, ask first whether a team split can achieve the same decoupling — and vice versa.
+The practical rule: put the seam where the ownership line is. If two teams must cooperate constantly, they should own different layers of the same system, not fight over one shared component. When a system split is proposed, ask first whether a team split can achieve the same decoupling, and vice versa.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     NEEDS["Business needs"] --> MODEL["Choose scope model"]
     MODEL --> BOUND["Define explicit boundaries"]
@@ -79,7 +80,7 @@ flowchart TD
 Scope renegotiation is a normal leadership act, not a complaint. The sequence that works:
 
 1. Gather evidence: where time goes, which coordination costs dominate, which outcomes are at risk
-2. Frame the problem in outcome terms — delivery speed, incident risk, quality — not in team-structure preferences
+2. Frame the problem in outcome terms (delivery speed, incident risk, quality), not in team-structure preferences
 3. Offer two or three scope options with trade-offs, and a recommendation
 4. Name the transition cost and the transition plan for each option
 5. Get the decision recorded, then re-charter ownership and communicate to the team
@@ -89,7 +90,7 @@ Management will not renegotiate scope on the strength of "this is annoying." The
 ## Practical Applications
 
 ```markdown
-## Ownership Charter — [Team name]
+## Ownership Charter: [Team name]
 
 ### We own
 - [ ] Services and jobs: [list]
@@ -136,15 +137,15 @@ Checklist:
 - The team can list its systems without hesitation and its gray zones on request
 - Cross-team coordination happens at interfaces, not inside the team's work
 - Scope disputes are rare, and when they occur they resolve via the charter
-- The scope has changed deliberately at least once in the last year — proof it is managed
+- The scope has changed deliberately at least once in the last year, proof it is managed
 
 ## Related Topics
 
 - [[01_The_Tech_Lead_Mandate]]: the mandate becomes concrete through the boundaries you choose
 - [[05_Navigating_Ambiguity_and_Incomplete_Authority]]: cross-boundary work is where authority gets incomplete
-- [[02_System_Ownership_and_Production_Responsibility/00_overview|System Ownership and Production Responsibility]]: the charter is the foundation of system ownership
+- [[career-path/05_Tech_Lead/02_System_Ownership_and_Production_Responsibility/00_overview|System Ownership and Production Responsibility]]: the charter is the foundation of system ownership
 - [[career-path/06_Software_Architect/00_overview|Software Architect]]: boundary design is the architect's native discipline
 
 ## Summary
 
-Scope and system boundaries turn the mandate into something operable: a charter that says what the team owns, what it consumes, where its interfaces sit, and who resolves its gray zones. Choose the scope model deliberately, check it against Conway's law, and renegotiate it with management when the evidence says the boundary is costing outcomes. An unchartered boundary is not neutrality — it is drift.
+Scope and system boundaries turn the mandate into something operable: a charter that says what the team owns, what it consumes, where its interfaces sit, and who resolves its gray zones. Choose the scope model deliberately, check it against Conway's law, and renegotiate it with management when the evidence says the boundary is costing outcomes. An unchartered boundary is not neutrality. It is drift.

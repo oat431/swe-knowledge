@@ -29,6 +29,7 @@ Testing is not a checkbox. It is an engineering discipline that requires strateg
 The test pyramid is a model for structuring your test suite:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TB
     subgraph PYRAMID["Test Pyramid"]
         E2E["End-to-End Tests\n(small number, slow, expensive)"]
@@ -216,7 +217,7 @@ Testing is one part of quality engineering. A senior engineer also considers:
 - [[03_Observability]] : monitoring catches issues that tests miss
 - [[05_Security_Practices]] : security testing is part of quality engineering
 - [[software-engineering-note/12_Software_Quality/Software Quality Overview]] : quality engineering overview
-- [[04_Delivery_and_Execution/03_Delivery_Metrics]] : delivery metrics include change failure rate
+- [[career-path/02_Senior_Software_Engineer/04_Delivery_and_Execution/03_Delivery_Metrics]] : delivery metrics include change failure rate
 
 ## Key Takeaways
 

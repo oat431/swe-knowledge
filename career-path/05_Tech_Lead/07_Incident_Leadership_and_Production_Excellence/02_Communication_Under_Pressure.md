@@ -16,13 +16,13 @@ tags:
 
 # Communication Under Pressure
 
-> **Core skill:** Keeping stakeholders informed during incidents — on a cadence, with a structure, and without letting communication steal focus from the response.
+> **Core skill:** Keeping stakeholders informed during incidents, on a cadence, with a structure, and without letting communication steal focus from the response.
 
 ## Why This Matters
 
 During an incident, information is the organization's lifeline. Executives need to know whether to activate their own response; support needs to know what to tell angry customers; sales needs to know what to say to accounts. When communication fails, the damage compounds: stakeholders invent their own versions of events, support makes promises engineering cannot keep, and the team spends the aftermath undoing rumors instead of fixing the system.
 
-Communication under pressure is a craft with a structure: a cadence matched to severity, a template that answers the questions people actually have, channels that match the audience, and the discipline to say what is known without inventing what is not. The tech lead or a designated comms lead owns this — and done well, it is almost invisible, because the right people hear the right things at the right times.
+Communication under pressure is a craft with a structure: a cadence matched to severity, a template that answers the questions people actually have, channels that match the audience, and the discipline to say what is known without inventing what is not. The tech lead or a designated comms lead owns this, and done well, it is almost invisible, because the right people hear the right things at the right times.
 
 ## Comms Cadence by Severity
 
@@ -33,7 +33,7 @@ Communication under pressure is a craft with a structure: a cadence matched to s
 | **SEV-3** | At resolution, or on escalation | Team and directly affected | Incident thread |
 | **SEV-4** | At closure | Nobody external | Normal tracking |
 
-Cadence is a promise. Missing an update at the promised time is itself a communication failure — stakeholders assume the worst when silence replaces the schedule.
+Cadence is a promise. Missing an update at the promised time is itself a communication failure: stakeholders assume the worst when silence replaces the schedule.
 
 ## The Update Template
 
@@ -48,7 +48,7 @@ Every update answers the same five questions, in the same order:
 | **ETA** | Only when knowable; otherwise the decision point | Rollback expected within 20 minutes |
 
 ```markdown
-**Update 3 — 10:45 UTC**
+**Update 3: 10:45 UTC**
 Impact: Checkout unavailable; all web orders affected since 10:15.
 Status: Mitigating.
 Action: Rolling back the checkout deploy; verifying the previous version.
@@ -65,9 +65,10 @@ Next update: 11:15 UTC.
 | **Incident channel** | Responders | Everything, including the messy truth | Continuous |
 | **Post-incident summary** | Everyone | What happened, why, what changes | Within 24-48 hours |
 
-The rule of channels: **the status page gets the structured truth, the incident channel gets the messy truth, and support gets the customer-facing truth** — and the comms lead is the only person who translates between them.
+The rule of channels: **the status page gets the structured truth, the incident channel gets the messy truth, and support gets the customer-facing truth**, and the comms lead is the only person who translates between them.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A["Incident declared"] --> B["Severity graded"]
     B --> C["Cadence set"]
@@ -104,7 +105,7 @@ The comms lead's job is to slow cause-talk down: hypotheses go in the incident c
 
 ## Coordinating with Support and Sales
 
-The support team is the incident's second front line — they take the calls engineering cannot hear. They must never be surprised by a customer.
+The support team is the incident's second front line: they take the calls engineering cannot hear. They must never be surprised by a customer.
 
 | Practice | Why |
 |----------|-----|
@@ -122,7 +123,7 @@ The incident ends twice: when the system recovers, and when the communication ab
 2. **Stakeholder summary** within 24-48 hours: what happened, what changed, what is next.
 3. **Support debrief**: what to tell customers who follow up, and what not to promise.
 4. **Rumor sweep**: check that no outdated version of the story survives in public channels.
-5. **Feedback**: ask the comms lead and stakeholders what communication missed — the next incident should communicate better than this one.
+5. **Feedback**: ask the comms lead and stakeholders what communication missed; the next incident should communicate better than this one.
 
 ## Practical Applications
 
@@ -139,7 +140,7 @@ The incident ends twice: when the system recovers, and when the communication ab
 **Update template to keep pinned:**
 
 ```markdown
-**Update [N] — [timestamp]**
+**Update [N]: [timestamp]**
 Impact: [what is broken, who is affected, since when]
 Status: [Investigating / Mitigating / Monitoring / Resolved]
 Action: [what is being done now]
@@ -168,11 +169,11 @@ Next update: [promised time]
 
 ## Related Topics
 
-- [[01_Incident_Command_Leadership]] — command owns communication; comms is a command function
-- [[03_Blameless_Postmortem_Leadership]] — the summary that follows the firefight
-- [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/04_Incident_Response|Incident Response (Senior)]] — the personal escalation and status skills this builds on
-- [[04_Team_Delivery_and_Execution_Leadership/00_overview|Delivery and Execution Leadership]] — stakeholder trust is carried across both domains
+- [[01_Incident_Command_Leadership]]: command owns communication; comms is a command function
+- [[03_Blameless_Postmortem_Leadership]]: the summary that follows the firefight
+- [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/04_Incident_Response|Incident Response (Senior)]]: the personal escalation and status skills this builds on
+- [[career-path/05_Tech_Lead/04_Team_Delivery_and_Execution_Leadership/00_overview|Delivery and Execution Leadership]]: stakeholder trust is carried across both domains
 
 ## Summary
 
-Communication under pressure is structure, not heroics: a cadence matched to severity, a five-field update template, channels separated by audience, and the discipline to say what is known without asserting what is not. The comms lead keeps facts outward and hypotheses inward, briefs support before the public hears, and closes the loop after resolution — so that when the system recovers, the organization's understanding recovers with it.
+Communication under pressure is structure, not heroics: a cadence matched to severity, a five-field update template, channels separated by audience, and the discipline to say what is known without asserting what is not. The comms lead keeps facts outward and hypotheses inward, briefs support before the public hears, and closes the loop after resolution, so that when the system recovers, the organization's understanding recovers with it.

@@ -16,13 +16,13 @@ tags:
 
 # Supporting the Tech Lead Partnership
 
-> **Core skill:** Running the TL-EM partnership as a force multiplier — complementary mandates, a working rhythm, clean decision division, public backing, and deliberate development of the tech lead as a leader.
+> **Core skill:** Running the TL-EM partnership as a force multiplier: complementary mandates, a working rhythm, clean decision division, public backing, and deliberate development of the tech lead as a leader.
 
 ## Why This Matters
 
-The tech lead and the engineering manager are the team's two hemispheres. The TL owns the system and its direction; the EM owns the people and the conditions they work in. A team with both roles in genuine partnership gets technical direction that is funded, staffed, and protected — and people management that is informed by what the work actually demands.
+The tech lead and the engineering manager are the team's two hemispheres. The TL owns the system and its direction; the EM owns the people and the conditions they work in. A team with both roles in genuine partnership gets technical direction that is funded, staffed, and protected, and people management that is informed by what the work actually demands.
 
-When the partnership is weak, the team pays twice: either the TL and EM drift apart (technical decisions without people context, people decisions without technical reality) or they collide (two bosses, conflicting instructions, politics between the chairs). The partnership is not a relationship that happens; it is an operating model that must be built, maintained, and occasionally repaired — and the EM carries most of the responsibility for building it.
+When the partnership is weak, the team pays twice: either the TL and EM drift apart (technical decisions without people context, people decisions without technical reality) or they collide (two bosses, conflicting instructions, politics between the chairs). The partnership is not a relationship that happens; it is an operating model that must be built, maintained, and occasionally repaired, and the EM carries most of the responsibility for building it.
 
 ## Complementary Mandates
 
@@ -34,7 +34,7 @@ When the partnership is weak, the team pays twice: either the TL and EM drift ap
 | Risk | Technical risk identification | Risk appetite and business translation |
 | Communication | Technical decisions upward | Team representation and context down |
 
-The boundary is not rigid — it is a shared understanding that gets re-negotiated as the team changes. What must be rigid is the public face: the team should never be able to play the two roles against each other.
+The boundary is not rigid; it is a shared understanding that gets re-negotiated as the team changes. What must be rigid is the public face: the team should never be able to play the two roles against each other.
 
 ## The Operating Rhythm
 
@@ -54,9 +54,9 @@ Beyond the weekly sync: joint attendance at consequential reviews, shared incide
 
 | Decision Type | Default Owner | When It Moves |
 |---------------|---------------|---------------|
-| Technical direction | TL | When cost or staffing cannot support it — EM joins |
-| People decisions | EM | When technical impact is large — TL consulted |
-| Delivery commitments | EM with TL input | When feasibility is contested — joint decision |
+| Technical direction | TL | When cost or staffing cannot support it, EM joins |
+| People decisions | EM | When technical impact is large, TL consulted |
+| Delivery commitments | EM with TL input | When feasibility is contested, joint decision |
 | Technical risk | TL identifies; EM owns appetite | Always joint visibility |
 | Team process | EM owns; TL co-designs | When process touches technical work |
 
@@ -66,7 +66,7 @@ Write the division down when the team is healthy, so the document exists when it
 
 The rule: disagreements are private; alignment is public.
 
-- When the TL makes a technical call, back it in front of the team — even if you would have chosen differently
+- When the TL makes a technical call, back it in front of the team, even if you would have chosen differently
 - If you must override, do it privately, with reasoning, and let the TL deliver the corrected version to the team where possible
 - Never let your skepticism of the TL become the team's sport
 - Credit the TL for technical wins the same way you credit the team for delivery wins
@@ -79,7 +79,7 @@ Public backing is not surrender; it is the price of the TL's authority, and the 
 |-----------|------|
 | Technical judgment differs | Discuss with evidence; default to the TL's domain unless consequence is large |
 | Cost or people impact differs | EM owns the consequence; TL gets the full reasoning |
-| Genuine deadlock | Escalate together, presenting both positions — never one behind the other's back |
+| Genuine deadlock | Escalate together, presenting both positions, never one behind the other's back |
 | Public disagreement risk | Emergency alignment before it becomes visible |
 
 The escalation path between TL and EM is a shared decision to escalate, not a complaint channel. When the pair escalates jointly with both positions stated, the organization gets a better decision and the partnership gets stronger.
@@ -92,7 +92,7 @@ The EM grows the TL as a leader:
 - Give feedback on leadership behavior, not just technical output
 - Coach the hard conversations: saying no, delivering bad news, managing upward
 - Protect the TL's development time the way you protect the team's
-- Make the TL's growth an explicit goal in your own planning — the team's ceiling is often the TL's growth
+- Make the TL's growth an explicit goal in your own planning: the team's ceiling is often the TL's growth
 
 A TL who grows into leadership is the EM's successor pipeline and the team's future.
 
@@ -105,7 +105,7 @@ Coverage is deliberate and temporary:
 - Push technical decision-making down to senior engineers wherever possible
 - Make finding and growing a TL a named priority, with a date
 
-Coverage that becomes permanent is the combined role — a different operating model with its own risks (see [[06_When_the_Manager_Is_Also_the_Tech_Lead]]).
+Coverage that becomes permanent is the combined role: a different operating model with its own risks (see [[06_When_the_Manager_Is_Also_the_Tech_Lead]]).
 
 ## TL Succession
 
@@ -114,12 +114,13 @@ Coverage that becomes permanent is the combined role — a different operating m
 | Spot | Identify the senior engineer with the scope and appetite |
 | Grow | Give them TL-sized problems with EM backing |
 | Announce | Make the transition explicit with a timeline |
-| Hand over | The outgoing TL exits the role cleanly — no ghost ownership |
+| Hand over | The outgoing TL exits the role cleanly, no ghost ownership |
 | Support | The new TL gets a defined onboarding and a working partnership |
 
 A clean TL handover is a team event: roles, rituals, and decision rights transfer visibly, so the team's trust transfers with them.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SYNC["Weekly TL-EM sync"] --> ALIGN["Align on the decision queue"]
     ALIGN --> DIVIDE["Divide decisions by mandate"]
@@ -143,11 +144,11 @@ flowchart TD
 ### TL-EM Sync Agenda
 
 ```markdown
-## TL-EM Sync — [date]
+## TL-EM Sync: [date]
 - System pulse: [changes, concerns, next]
 - People signals: [thriving, struggling, at risk]
 - Decision queue:
-  - [decision] — owner: [TL/EM] — by: [date]
+  - [decision]: owner: [TL/EM]; by: [date]
 - Boundary check: [any crossed lines this week]
 - Alignment: [same story / drift: X]
 - TL development: [growth moment or coaching note]
@@ -165,20 +166,20 @@ flowchart TD
 
 ## Success Indicators
 
-- The team cannot tell where one mandate ends and the other begins — because it does not matter
+- The team cannot tell where one mandate ends and the other begins, because it does not matter
 - Disagreements resolve privately and strengthen the relationship
 - The TL brings you risk early, knowing you will own the appetite decision
 - The TL's leadership scope grows visibly each quarter
-- A TL transition — into or out of the role — lands cleanly
+- A TL transition (into or out of the role) lands cleanly
 
 ## Related Topics
 
 - [[02_Participating_in_Technical_Decisions]]: the decision division in practice
 - [[03_Risk_Assessment_with_Limited_Depth]]: the TL identifies; you own appetite
 - [[06_When_the_Manager_Is_Also_the_Tech_Lead]]: what happens when the roles merge
-- [[01_People_Development/00_overview|People Development]]: the TL is a growth project like any report
+- [[career-path/11_Engineering_Manager/01_People_Development/00_overview|People Development]]: the TL is a growth project like any report
 - [[career-path/05_Tech_Lead/01_The_Tech_Lead_Role_and_Operating_Model/02_The_Tech_Lead_Engineering_Manager_Partnership|TL-EM Partnership (Tech Lead)]]: the lead-side view of the same operating model
 
 ## Summary
 
-The TL-EM partnership is an operating model: complementary mandates, a weekly rhythm, a written decision division, public backing with private disagreement, joint escalation, and deliberate development of the TL as a leader. When there is no TL, coverage is explicit and dated; when the TL leaves, succession is a visible team event. The pair that runs the model doubles the team's ceiling — and the pair that neglects it halves the team's trust.
+The TL-EM partnership is an operating model: complementary mandates, a weekly rhythm, a written decision division, public backing with private disagreement, joint escalation, and deliberate development of the TL as a leader. When there is no TL, coverage is explicit and dated; when the TL leaves, succession is a visible team event. The pair that runs the model doubles the team's ceiling, and the pair that neglects it halves the team's trust.

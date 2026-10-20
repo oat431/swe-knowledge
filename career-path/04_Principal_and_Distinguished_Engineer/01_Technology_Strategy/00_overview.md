@@ -14,13 +14,13 @@ tags:
 
 # Technology Strategy
 
-> **Core capability:** The principal engineer connects architecture and investment to business direction — writing multi-year technology strategy that shapes which bets the organization makes, not just how they are implemented.
+> **Core capability:** The principal engineer connects architecture and investment to business direction, writing multi-year technology strategy that shapes which bets the organization makes, not just how they are implemented.
 
 ## Why This Matters
 
-At staff level, strategy connects technical work to organizational priorities across teams. At principal level, the scope shifts: the principal writes the strategy that determines which platforms exist, which technologies the organization bets on at ecosystem scale, and how technical investment aligns with multi-year business direction. The output is not a team's roadmap — it is the investment thesis that multiple teams' roadmaps derive from.
+At staff level, strategy connects technical work to organizational priorities across teams. At principal level, the scope shifts: the principal writes the strategy that determines which platforms exist, which technologies the organization bets on at ecosystem scale, and how technical investment aligns with multi-year business direction. The output is not a team's roadmap. It is the investment thesis that multiple teams' roadmaps derive from.
 
-This work succeeds when leaders reference the strategy in their own decisions and dissenting investments are declined by the page. The principal's unique contribution is the ability to hold both the technology long view and the business constraints simultaneously — a synthesis nobody else in the organization is paid to perform.
+This work succeeds when leaders reference the strategy in their own decisions and dissenting investments are declined by the page. The principal's unique contribution is the ability to hold both the technology long view and the business constraints simultaneously, a synthesis nobody else in the organization is paid to perform.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ This work succeeds when leaders reference the strategy in their own decisions an
 ## Strategy Scale
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     BUSINESS["Business direction"] --> STRATEGY["Technology strategy: multi-year bets"]
     STRATEGY --> INVESTMENT["Investment allocation: where capital goes"]
@@ -46,7 +47,7 @@ flowchart LR
     SIGNALS --> BUSINESS
 ```
 
-The principal sits at the top of the loop — the only person accountable for the whole.
+The principal sits at the top of the loop, the only person accountable for the whole.
 
 ## Staff vs Principal
 
@@ -86,11 +87,11 @@ The principal sits at the top of the loop — the only person accountable for th
 
 ## Related Capabilities
 
-- [[02_Enterprise_and_Systems_of_Systems_Thinking/00_overview|Enterprise and Systems of Systems Thinking]]: the systems lens for strategy scope
-- [[05_Future_Readiness_and_Research/00_overview|Future Readiness and Research]]: where emerging bets are developed before strategy adoption
+- [[career-path/04_Principal_and_Distinguished_Engineer/02_Enterprise_and_Systems_of_Systems_Thinking/00_overview|Enterprise and Systems of Systems Thinking]]: the systems lens for strategy scope
+- [[career-path/04_Principal_and_Distinguished_Engineer/05_Future_Readiness_and_Research/00_overview|Future Readiness and Research]]: where emerging bets are developed before strategy adoption
 - [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy (Staff)]]: the multi-team foundation this scales
 - [[career-path/06_Software_Architect/01_Architecture_Fundamentals/00_overview|Architecture Fundamentals (Architect)]]: the structural judgment strategy depends on
 
 ## Summary
 
-Technology strategy at the principal level means connecting multi-year technical bets to business direction, allocating investment deliberately, sequencing platforms and capabilities, and measuring strategic outcomes at organizational scale. The document that declines work by its own logic is the document that works. The principal is the author of that document — the strategy the organization steers by.
+Technology strategy at the principal level means connecting multi-year technical bets to business direction, allocating investment deliberately, sequencing platforms and capabilities, and measuring strategic outcomes at organizational scale. The document that declines work by its own logic is the document that works. The principal is the author of that document, the strategy the organization steers by.

@@ -17,11 +17,11 @@ tags:
 
 # Technical Reviews and Assessments
 
-> **Core skill:** Leading reviews of architectures, implementations, and practices so findings are accurate, fair, and actionable — and so the team actually acts on them.
+> **Core skill:** Leading reviews of architectures, implementations, and practices so findings are accurate, fair, and actionable, and so the team actually acts on them.
 
 ## Why This Matters
 
-The advocate and consultant are repeatedly asked to look at someone else's work and say what they see: a partner's integration design, a customer's deployment plan, a team's readiness to go live, an implementation that is not performing. The review is a high-leverage moment. A good one prevents expensive mistakes, transfers judgment to the reviewed team, and strengthens the relationship. A bad one — vague, political, or late — burns credibility and changes nothing.
+The advocate and consultant are repeatedly asked to look at someone else's work and say what they see: a partner's integration design, a customer's deployment plan, a team's readiness to go live, an implementation that is not performing. The review is a high-leverage moment. A good one prevents expensive mistakes, transfers judgment to the reviewed team, and strengthens the relationship. A bad one (vague, political, or late) burns credibility and changes nothing.
 
 Reviewing without authority is the defining constraint. The reviewer rarely owns the system or commands the team; influence comes from evidence, fairness, and the usefulness of the findings. That means conversations framed as shared problem-solving rather than audits, findings anchored to criteria the team accepts, and a tone that separates the work from the people who did it.
 
@@ -60,6 +60,7 @@ The most common failure is the ornamental review: a document is scanned, generic
 | Close | Confirm owners, dates, and the verification method | Action register |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SCOPE["Agree the scope and criteria"] --> EVIDENCE["Gather evidence and context"]
     EVIDENCE --> SESSION["Facilitate the review session"]
@@ -157,12 +158,12 @@ flowchart LR
 
 ## Related Topics
 
-- [[02_Discovery_Sessions]] — where the requirements and constraints a review measures against originate
-- [[01_Workshops_and_Hands_On_Sessions]] — the enablement format when findings require teaching
-- [[07_Facilitation_Techniques]] — keeping review sessions honest and productive
-- [[05_Solution_Guidance/00_overview|Solution Guidance]] — where review findings feed the recommendation loop
-- [[career-path/15_Solutions_and_Enterprise_Architect/01_Business_Analysis_and_Capability_Mapping/00_overview|Business Analysis and Capability Mapping (Solutions Architect)]] — enterprise context for large assessments
+- [[02_Discovery_Sessions]]: where the requirements and constraints a review measures against originate
+- [[01_Workshops_and_Hands_On_Sessions]]: the enablement format when findings require teaching
+- [[07_Facilitation_Techniques]]: keeping review sessions honest and productive
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/05_Solution_Guidance/00_overview|Solution Guidance]]: where review findings feed the recommendation loop
+- [[career-path/15_Solutions_and_Enterprise_Architect/01_Business_Analysis_and_Capability_Mapping/00_overview|Business Analysis and Capability Mapping (Solutions Architect)]]: enterprise context for large assessments
 
 ## Summary
 
-Technical reviews and assessments are facilitation with consequences: scoping what is being judged against criteria everyone accepts, gathering evidence before forming views, running a session where the team can respond rather than merely receive, writing findings that pair statement with evidence and severity, and following remediation through to verified closure. Authority is not required — evidence, fairness, and follow-through are.
+Technical reviews and assessments are facilitation with consequences: scoping what is being judged against criteria everyone accepts, gathering evidence before forming views, running a session where the team can respond rather than merely receive, writing findings that pair statement with evidence and severity, and following remediation through to verified closure. Authority is not required: evidence, fairness, and follow-through are.

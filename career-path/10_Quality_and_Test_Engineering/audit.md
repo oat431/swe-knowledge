@@ -59,7 +59,7 @@ tags:
 
 ## ⚠️ What to Improve
 
-- **Fix top-level navigation.** Change the role overview's Capability Areas "Existing vault anchor" column to link the modules (`[[01_Test_Strategy/00_overview|Test Strategy]]`, …) and move the SWEBOK links to a separate column.
+- **Fix top-level navigation.** Change the role overview's Capability Areas "Existing vault anchor" column to link the modules (`[[career-path/10_Quality_and_Test_Engineering/01_Test_Strategy/00_overview|Test Strategy]]`, …) and move the SWEBOK links to a separate column.
 - **Expand the stub module overviews.** `03_Automation` (390w), `04_Quality_Engineering` (372w), and `06_Measurement` (364w).
 - **Deepen thin topics.** `03_Reliability_Testing` (415w), `06_Measurement_Pitfalls` (439w), `04_Quality_Reporting` (499w), `05_Data_Analysis` (606w), `03_Process_Metrics` (619w), `02_Coverage_Metrics` (631w), `05_API_Testing` (668w), and `02_Security_Testing` (672w).
 - **Fix the progress trackers.** Either check the boxes or drop the "- Complete" suffix.
@@ -72,7 +72,7 @@ tags:
 | Priority | Proposed note / module | What it should contain |
 |---|---|---|
 | 🎯 High | Fix role → module links and expand stub overviews | Prerequisite for using the path at all |
-| 🎯 High | `05_Specialized_Testing/07_Testing_AI_and_LLM_Features.md` | Eval sets, LLM-as-judge with calibration, prompt/model regression, flaky-by-design outputs; link [[career-path/18_Applied_AI_Engineer/00_overview\|Applied AI Engineer]] module 03 |
+| 🎯 High | `05_Specialized_Testing/07_Testing_AI_and_LLM_Features.md` | Eval sets, LLM-as-judge with calibration, prompt/model regression, flaky-by-design outputs; link [[career-path/18_Applied_AI_Engineer/00_overview|Applied AI Engineer]] module 03 |
 | 🎯 High | `07_Quality_Engineering_Career/` | Role variants (SDET, QE, test architect, quality coach), levels, evidence, and transitions to dev/SRE |
 | Medium | `03_Automation/07_Testing_in_Production_and_Shift_Right.md` | Canaries, synthetic monitoring, observability as oracle, feature-flag experiments |
 | Medium | `02_Test_Design/08_Property_Based_and_Mutation_Testing.md` | When each pays off; mutation score as a coverage-quality check |

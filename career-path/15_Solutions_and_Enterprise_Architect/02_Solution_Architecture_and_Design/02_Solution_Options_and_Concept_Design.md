@@ -19,11 +19,11 @@ tags:
 
 ## Why This Matters
 
-The most damaging sentence in solution delivery is "we considered alternatives, but this was clearly the right choice." If the alternatives were never written down, the claim is unfalsifiable — and if it is wrong, no one discovers it until the cost of reversal is enormous. Options thinking is the architect's core professional discipline: not defending a preferred technology, but constructing several coherent ways to meet the need and exposing what each one sacrifices.
+The most damaging sentence in solution delivery is "we considered alternatives, but this was clearly the right choice." If the alternatives were never written down, the claim is unfalsifiable, and if it is wrong, no one discovers it until the cost of reversal is enormous. Options thinking is the architect's core professional discipline: not defending a preferred technology, but constructing several coherent ways to meet the need and exposing what each one sacrifices.
 
-A genuine option is coherent end to end — buildable, fundable, and describable in terms of who does what. Strawman options — the deliberately bad alternative kept for decoration — corrupt the decision process and insult everyone who reads them. Two or three real options, each one a choice a reasonable team could defend, test the recommendation properly.
+A genuine option is coherent end to end: buildable, fundable, and describable in terms of who does what. Strawman options (the deliberately bad alternative kept for decoration) corrupt the decision process and insult everyone who reads them. Two or three real options, each one a choice a reasonable team could defend, test the recommendation properly.
 
-The concept design is where the chosen direction becomes concrete enough to evaluate. It is not a detailed design and should not pretend to be: it shows the shape of the solution — major components, how they interact, where it lives, how it integrates at a high level, and the assumptions and constraints it rests on. Its purpose is to make the direction tangible while it is still cheap to change, so that the commitment decision that follows is informed rather than speculative.
+The concept design is where the chosen direction becomes concrete enough to evaluate. It is not a detailed design and should not pretend to be: it shows the shape of the solution, major components, how they interact, where it lives, how it integrates at a high level, and the assumptions and constraints it rests on. Its purpose is to make the direction tangible while it is still cheap to change, so that the commitment decision that follows is informed rather than speculative.
 
 ## Developing the Options
 
@@ -49,7 +49,7 @@ Options should differ on dimensions that matter to this decision. Varying only p
 | **Fit** | Conformance with enterprise standards and strategy | Strategic fit asserted rather than evidenced |
 | **Sustainability** | Lifecycle, skills, support, and exit | Lock-in discovered after commitment |
 
-Weighted scoring can organize the comparison but must not conceal the assumptions. The decisive questions — what would make us reverse, what are we accepting as a downside — belong in plain language beside any score.
+Weighted scoring can organize the comparison but must not conceal the assumptions. The decisive questions (what would make us reverse, what are we accepting as a downside) belong in plain language beside any score.
 
 ## The Concept Design
 
@@ -68,6 +68,7 @@ A concept that hides its open questions is not a concept; it is a promise that d
 ## From Options to Commitment
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PROBLEM["Need and requirements"] --> OPTA["Option A"]
     PROBLEM["Need and requirements"] --> OPTB["Option B"]
@@ -127,7 +128,7 @@ Why it could fail: <the honest disqualifiers>
 
 - [[01_Solution_Architecture_Process]]: where options and concept sit in the process
 - [[04_Solution_Feasibility_and_Constraints]]: the feasibility tests options must pass
-- [[06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: how selected concepts enter the investment pipeline
+- [[career-path/15_Solutions_and_Enterprise_Architect/06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: how selected concepts enter the investment pipeline
 - [[career-path/06_Software_Architect/04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs (Architect)]]: the evaluation craft this builds on
 - [[career-path/14_Product_Manager/00_overview|Product Manager]]: product value as an option criterion
 

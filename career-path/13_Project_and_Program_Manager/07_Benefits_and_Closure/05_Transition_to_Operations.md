@@ -15,11 +15,11 @@ tags:
 
 # Transition to Operations
 
-> **Core skill:** Handing project deliverables to the operational owner — ensuring the operations team can sustain, support, and operate the deliverables without the project team — so the project's outputs survive the handoff and the benefits the project was built for are actually realized.
+> **Core skill:** Handing project deliverables to the operational owner (ensuring the operations team can sustain, support, and operate the deliverables without the project team), so the project's outputs survive the handoff and the benefits the project was built for are actually realized.
 
 ## Why This Matters
 
-The most dangerous moment in a project's life is the transition to operations. The project team, which has deep knowledge of the deliverable, hands it to an operations team that has never touched it. The project team disperses; the operations team is left with a system, a process, or a product they must now sustain — and if the transition was inadequate, they cannot.
+The most dangerous moment in a project's life is the transition to operations. The project team, which has deep knowledge of the deliverable, hands it to an operations team that has never touched it. The project team disperses; the operations team is left with a system, a process, or a product they must now sustain, and if the transition was inadequate, they cannot.
 
 A failed transition produces the project's most bitter outcome: the deliverables were accepted, the project was closed, and six months later the system is degraded, the process has been abandoned, and the benefits never materialized. The project manager who treats transition as a handoff document rather than a managed process is the project manager who discovers, too late, that a deliverable that cannot be operated is a deliverable that produced no value.
 
@@ -52,7 +52,7 @@ Before transition, the project team and operations team jointly assess readiness
 | **Continuity** | Are backup, disaster recovery, and business continuity plans in place? | DR plan; backup schedules; recovery test results |
 | **Warranty** | Is there a warranty period with project team support? | Warranty terms: duration, scope, escalation |
 
-Readiness is not assumed — it is assessed against criteria agreed during planning. A readiness gap is a transition blocker, not a handover footnote.
+Readiness is not assumed; it is assessed against criteria agreed during planning. A readiness gap is a transition blocker, not a handover footnote.
 
 ## Transition Activities
 
@@ -71,9 +71,9 @@ Readiness is not assumed — it is assessed against criteria agreed during plann
 | Acceptance Element | Description |
 |--------------------|-------------|
 | **Operational acceptance criteria** | Defined during planning: what must be true for operations to accept the deliverable |
-| **Operational acceptance testing** | Operations tests their ability to sustain the deliverable — not the deliverable's functionality |
+| **Operational acceptance testing** | Operations tests their ability to sustain the deliverable, not the deliverable's functionality |
 | **Operational sign-off** | Formal written acceptance from the operational owner |
-| **Warranty period start** | Warranty period begins at operational acceptance — project team support during early operation |
+| **Warranty period start** | Warranty period begins at operational acceptance: project team support during early operation |
 
 ## The Transition Checklist
 
@@ -93,24 +93,24 @@ Readiness is not assumed — it is assessed against criteria agreed during plann
 
 ## When Operations Cannot Accept
 
-If the operations team cannot accept the deliverable — due to capacity, capability, or readiness:
+If the operations team cannot accept the deliverable, due to capacity, capability, or readiness:
 
 | Scenario | Response |
 |----------|----------|
-| **Capacity gap** | Escalate to sponsor; operations needs resources — project cannot close until resolved |
+| **Capacity gap** | Escalate to sponsor; operations needs resources; project cannot close until resolved |
 | **Capability gap** | Additional training, extended shadowing, or a warranty period with knowledge transfer milestones |
 | **Readiness gap** | Delay closure; complete readiness activities; do not hand over an unsupportable deliverable |
 | **Operational owner refusal** | Escalate to sponsor immediately; a deliverable without an operational owner is a project that cannot close |
 
-The project manager does not force a transition on an unwilling or unready operations team — the project manager escalates the impasse to the sponsor, whose authority spans both project and operations.
+The project manager does not force a transition on an unwilling or unready operations team; the project manager escalates the impasse to the sponsor, whose authority spans both project and operations.
 
 ## Transition in Programs
 
 Program transition coordinates across projects:
 
 - **Integrated transition**: when multiple projects deliver components of an integrated system, the program manager coordinates transition so operations receives a complete, tested whole
-- **Sequenced transition**: projects transition in a defined sequence — the program manager ensures earlier transitions do not destabilize later ones
-- **Program-to-operations transition**: at program closure, the aggregate deliverable transitions to operations as a whole — not as N separate handovers
+- **Sequenced transition**: projects transition in a defined sequence; the program manager ensures earlier transitions do not destabilize later ones
+- **Program-to-operations transition**: at program closure, the aggregate deliverable transitions to operations as a whole, not as N separate handovers
 - **Benefit transition**: benefit measurement transitions from program manager to benefit owners at program closure
 
 ## Practical Applications
@@ -139,18 +139,18 @@ Program transition coordinates across projects:
 
 - Operations team can sustain the deliverable without the project team within the warranty period
 - Operational incidents during the warranty period are resolved without recalling the full project team
-- Operational acceptance is formal — signed, not assumed
+- Operational acceptance is formal; signed, not assumed
 - The deliverable's performance in operations matches its performance in project testing
-- The operational owner reports that the transition was adequate — not perfect, but sufficient
+- The operational owner reports that the transition was adequate, not perfect, but sufficient
 
 ## Related Topics
 
 - [[04_Project_Closure_Process]]: transition precedes administrative close
 - [[03_Benefits_Realization_at_Closure]]: benefits depend on operational sustainability
 - [[07_Post_Project_Evaluation]]: post-project evaluation checks operational sustainability
-- [[02_Scope_and_Planning/00_overview|Scope and Planning]]: operational requirements in scope
-- [[04_Risk_and_Issues/00_overview|Risk and Issues]]: transition risks in the risk register
+- [[career-path/13_Project_and_Program_Manager/02_Scope_and_Planning/00_overview|Scope and Planning]]: operational requirements in scope
+- [[career-path/13_Project_and_Program_Manager/04_Risk_and_Issues/00_overview|Risk and Issues]]: transition risks in the risk register
 
 ## Summary
 
-Transition to operations is the project's most dangerous moment — and the project manager's responsibility to manage it as deliberately as any other project phase: planning from initiation with the operational owner as a stakeholder, defining readiness criteria during planning, involving operations throughout execution, assessing readiness jointly before transition, and providing a warranty period during which the project team supports early operations. A transition that is treated as a handoff document and a meeting produces an operations team that cannot sustain the deliverable and benefits that never materialize. A transition that is treated as a managed process — with planning, readiness assessment, knowledge transfer, and formal acceptance — produces an operations team that can sustain the deliverable and benefits that the project was built to realize. The project manager who transitions well completes the project; the one who hands off and walks away abandons it at its most vulnerable moment.
+Transition to operations is the project's most dangerous moment, and the project manager's responsibility to manage it as deliberately as any other project phase: planning from initiation with the operational owner as a stakeholder, defining readiness criteria during planning, involving operations throughout execution, assessing readiness jointly before transition, and providing a warranty period during which the project team supports early operations. A transition that is treated as a handoff document and a meeting produces an operations team that cannot sustain the deliverable and benefits that never materialize. A transition that is treated as a managed process (with planning, readiness assessment, knowledge transfer, and formal acceptance) produces an operations team that can sustain the deliverable and benefits that the project was built to realize. The project manager who transitions well completes the project; the one who hands off and walks away abandons it at its most vulnerable moment.

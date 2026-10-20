@@ -31,6 +31,7 @@ Without CBA, decisions are based on gut feel, trends, or the loudest voice in th
 ## Cost-Benefit Analysis Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A[Define Decision] --> B[Identify Alternatives]
     B --> C[Estimate Costs]
@@ -416,7 +417,7 @@ Implement CI/CD. Extremely high ROI and foundational for other improvements.
 - [[02_Build_vs_Buy_Decisions|Build vs Buy Decisions]]: Specific application of CBA
 - [[05_Business_Case_Development|Business Case Development]]: Presenting CBA to stakeholders
 - [[06_Trade_Off_Evaluation|Trade-Off Evaluation]]: Comparing alternatives with multiple criteria
-- [[04_Delivery_and_Execution/04_Technical_Debt_Strategy|Technical Debt Strategy]]: CBA for debt paydown
+- [[career-path/02_Senior_Software_Engineer/04_Delivery_and_Execution/04_Technical_Debt_Strategy|Technical Debt Strategy]]: CBA for debt paydown
 
 ## Summary
 

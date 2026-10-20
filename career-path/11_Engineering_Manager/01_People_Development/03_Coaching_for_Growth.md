@@ -15,13 +15,13 @@ tags:
 
 # Coaching for Growth
 
-> **Core skill:** Growing engineers through questions rather than answers — using the GROW model, coaching in one-to-ones, and measuring success by whether people solve their own next problem.
+> **Core skill:** Growing engineers through questions rather than answers, using the GROW model, coaching in one-to-ones, and measuring success by whether people solve their own next problem.
 
 ## Why This Matters
 
-Telling people what to do solves the current problem and teaches nothing. Coaching — asking the questions that let the engineer find the answer — solves the current problem and builds the capability to solve the next one. The manager who always answers becomes the bottleneck; every decision and every solution routes through them. The manager who coaches compounds: each coached engineer takes on more, and the team's ability to self-serve grows.
+Telling people what to do solves the current problem and teaches nothing. Coaching (asking the questions that let the engineer find the answer) solves the current problem and builds the capability to solve the next one. The manager who always answers becomes the bottleneck; every decision and every solution routes through them. The manager who coaches compounds: each coached engineer takes on more, and the team's ability to self-serve grows.
 
-Coaching is also a retention lever. Engineers who feel their manager invests in their thinking — not just their output — stay. The manager who coaches signals that the person matters beyond this sprint, and that signal is read loudly by the best engineers, who have options.
+Coaching is also a retention lever. Engineers who feel their manager invests in their thinking (not just their output) stay. The manager who coaches signals that the person matters beyond this sprint, and that signal is read loudly by the best engineers, who have options.
 
 ## Coaching vs Managing vs Mentoring vs Therapy
 
@@ -30,7 +30,7 @@ Coaching is also a retention lever. Engineers who feel their manager invests in 
 | Managing | Outcomes and accountability | Directs, plans, checks | Agreeing quarterly goals and reviewing delivery |
 | Coaching | The person's own thinking | Asks, listens, holds space | "What options do you see?" |
 | Mentoring | Sharing experience and advice | Advises from their own path | "Here is how I handled this failure" |
-| Therapy | Emotional healing and diagnosis | None — refer out | A report in personal crisis |
+| Therapy | Emotional healing and diagnosis | None: refer out | A report in personal crisis |
 
 The four modes blend in practice, but the manager should know which mode they are in. The failure mode is drifting into telling whenever the engineer is capable of thinking. The rule of thumb: if the engineer has the knowledge and just needs to access it, coach. If they lack knowledge, mentor. If outcomes are slipping, manage. If there is a wound, refer.
 
@@ -45,7 +45,7 @@ GROW is the coaching spine: a four-stage conversation that moves from the desire
 | Options | The paths forward | "What are your options? What else? Who could help?" |
 | Way forward | The commitment | "What will you do by when? How will you know it worked?" |
 
-The manager's discipline in GROW: stay in each stage until it is genuinely explored, resist jumping to solutions in Reality, and end with a commitment the engineer owns — their words, their date, their metric.
+The manager's discipline in GROW: stay in each stage until it is genuinely explored, resist jumping to solutions in Reality, and end with a commitment the engineer owns, their words, their date, their metric.
 
 ## Asking Over Telling
 
@@ -59,21 +59,21 @@ Open questions hand the thinking back. Scaling questions make abstract feelings 
 
 ## Coaching in One-to-Ones
 
-The one-to-one is the natural coaching ring. The pattern: when the report brings a problem, the manager coaches before advising. Three questions buy the coach the right to eventually opine — and often make the opinion unnecessary. Keep a rough discipline: for problems the report raises, coach first, advise only if asked or stuck. For problems the manager observes, feedback comes first, then coaching on the fix. Coaching does not mean never giving direction; it means direction is the last resort, not the first.
+The one-to-one is the natural coaching ring. The pattern: when the report brings a problem, the manager coaches before advising. Three questions buy the coach the right to eventually opine, and often make the opinion unnecessary. Keep a rough discipline: for problems the report raises, coach first, advise only if asked or stuck. For problems the manager observes, feedback comes first, then coaching on the fix. Coaching does not mean never giving direction; it means direction is the last resort, not the first.
 
 ## Problems Brought vs Problems Observed
 
 | Source | Example | Coaching move |
 |--------|---------|---------------|
 | Brought by the engineer | "I keep missing review deadlines" | GROW the gap: goal, reality, options, way forward |
-| Observed by the manager | Tension in meetings the engineer does not raise | Name the observation, then coach: "I noticed X — what is your read on it?" |
+| Observed by the manager | Tension in meetings the engineer does not raise | Name the observation, then coach: "I noticed X. What is your read on it?" |
 | Both | Engineer knows it, manager sees it | Agree the problem first, then coach the solution |
 
-Observed problems need a naming step before coaching; unspoken problems cannot be coached. The manager names the behavior neutrally and lets the engineer interpret it — interpretation is where ownership begins.
+Observed problems need a naming step before coaching; unspoken problems cannot be coached. The manager names the behavior neutrally and lets the engineer interpret it. Interpretation is where ownership begins.
 
 ## Building the Coaching Habit
 
-Coaching is a habit with a trigger. The manager installs it with a small loop: in every one-to-one, notice the first moment they want to answer, and ask instead. Track the ratio for a month — questions asked versus answers given — and watch it improve. Keep a coaching prompt card in the agenda document until the questions become reflex. The habit is fragile under pressure: deadlines and incidents pull the manager back into telling, which is exactly when coaching matters most.
+Coaching is a habit with a trigger. The manager installs it with a small loop: in every one-to-one, notice the first moment they want to answer, and ask instead. Track the ratio for a month (questions asked versus answers given) and watch it improve. Keep a coaching prompt card in the agenda document until the questions become reflex. The habit is fragile under pressure: deadlines and incidents pull the manager back into telling, which is exactly when coaching matters most.
 
 ## Measuring Coaching Effect
 
@@ -90,6 +90,7 @@ The blunt test: is each engineer solving their own next problem, or still bringi
 ## The Coaching Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     LISTEN["Listen to the problem"] --> ASK["Ask before telling"]
     ASK --> GROW["Run the GROW stages"]
@@ -132,8 +133,8 @@ flowchart TD
 - [[01_One_to_Ones]]: the weekly ring where coaching happens
 - [[07_Managing_Experienced_Engineers]]: coaching is the primary mode with seniors
 - [[career-path/02_Senior_Software_Engineer/07_Mentoring_and_Team_Leadership/05_Coaching_and_Development|Coaching and Development (Senior)]]: the same craft at engineer level
-- [[02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: coaching depends on a team where questions are safe
+- [[career-path/11_Engineering_Manager/02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: coaching depends on a team where questions are safe
 
 ## Summary
 
-Coaching for growth is the practice of asking before telling: GROW-structured conversations, open and scaling questions, and a measured habit that shifts ownership of problems to the engineer. The manager distinguishes coaching from managing, mentoring, and therapy, coaches both brought and observed problems, and judges success by one test — whether each engineer solves their own next problem.
+Coaching for growth is the practice of asking before telling: GROW-structured conversations, open and scaling questions, and a measured habit that shifts ownership of problems to the engineer. The manager distinguishes coaching from managing, mentoring, and therapy, coaches both brought and observed problems, and judges success by one test: whether each engineer solves their own next problem.

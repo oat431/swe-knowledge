@@ -47,6 +47,7 @@ The jump from Senior to Staff is not just doing more of the same:it's a qualitat
 This capstone area helps you demonstrate mastery across all previous areas:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TB
     subgraph "Eight Capability Areas"
         A[01. Technical Mastery]
@@ -222,11 +223,11 @@ Remember: **Promotion is not about tenure or effort:it's about demonstrating sus
 
 ## Related Areas
 
-- [[../01_Technical_Ownership/00_overview|01. Technical Mastery]]
-- [[../03_Architecture_and_Design_Judgment/00_overview|02. System Design]]
-- [[../04_Delivery_and_Execution/00_overview|03. Project Leadership]]
-- [[../04_Delivery_and_Execution/00_overview|04. Delivery & Execution]]
-- [[../05_Quality_Reliability_Security/00_overview|05. Quality & Reliability]]
-- [[../06_Communication_and_Influence/00_overview|06. Communication & Influence]]
-- [[../07_Mentoring_and_Team_Leadership/00_overview|07. Mentoring & Team Leadership]]
-- [[../08_Engineering_Economics_and_Trade_Offs/00_overview|08. Engineering Economics]]
+- [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/00_overview|01. Technical Mastery]]
+- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/00_overview|02. System Design]]
+- [[career-path/02_Senior_Software_Engineer/04_Delivery_and_Execution/00_overview|03. Project Leadership]]
+- [[career-path/02_Senior_Software_Engineer/04_Delivery_and_Execution/00_overview|04. Delivery & Execution]]
+- [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/00_overview|05. Quality & Reliability]]
+- [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/00_overview|06. Communication & Influence]]
+- [[career-path/02_Senior_Software_Engineer/07_Mentoring_and_Team_Leadership/00_overview|07. Mentoring & Team Leadership]]
+- [[career-path/02_Senior_Software_Engineer/08_Engineering_Economics_and_Trade_Offs/00_overview|08. Engineering Economics]]

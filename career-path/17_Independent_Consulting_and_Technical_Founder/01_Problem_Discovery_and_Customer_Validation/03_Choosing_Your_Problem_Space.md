@@ -16,15 +16,15 @@ tags:
 
 # Choosing Your Problem Space
 
-> **Core skill:** Choosing where to work — the intersection of what you do unusually well, pain someone pays to remove, and a market you can actually reach without a sales team.
+> **Core skill:** Choosing where to work: the intersection of what you do unusually well, pain someone pays to remove, and a market you can actually reach without a sales team.
 
 ## Why This Matters
 
 Problem selection is the highest-leverage decision an independent makes, and it happens before skill, effort, or execution matter. The same engineer can earn five times more in one problem space than another because demand density, willingness to pay, and reachability differ enormously between spaces. Employment hides this fact: a company decides the space and the engineer optimizes inside it. Independents own the choice, and therefore own the consequences.
 
-The classic failure is choosing the space that is interesting to build rather than the space that is bought. Novel technology, elegant architecture, and fascinating data problems are not the same as a painful, funded business need. The independent's job is to stand at the overlap of four circles: capability, pain, reach, and appetite — where what you can do meets what someone urgently needs, in a market you can touch, at a risk level you can survive.
+The classic failure is choosing the space that is interesting to build rather than the space that is bought. Novel technology, elegant architecture, and fascinating data problems are not the same as a painful, funded business need. The independent's job is to stand at the overlap of four circles: capability, pain, reach, and appetite, where what you can do meets what someone urgently needs, in a market you can touch, at a risk level you can survive.
 
-Choosing a space is a bet, not a vow. It should be committed to long enough to learn — quarters, not weeks — with kill criteria written in advance. The goal is not certainty but a defined downside: if this space fails, what did it cost, and what did it teach?
+Choosing a space is a bet, not a vow. It should be committed to long enough to learn (quarters, not weeks) with kill criteria written in advance. The goal is not certainty but a defined downside: if this space fails, what did it cost, and what did it teach?
 
 ## Four Tests of a Problem Space
 
@@ -53,6 +53,7 @@ Most durable independent businesses combine two archetypes: a reachable niche pl
 ## The Space Choice
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SKILL["What you do unusually well"] --> SPACE["Your problem space"]
     PAIN["Pain someone pays to remove"] --> SPACE
@@ -76,7 +77,7 @@ The diagram is a filter, not a formula: every input can disqualify the space on 
 ### Problem Space One-Pager
 
 ```markdown
-## Problem Space — <one-sentence name>
+## Problem Space: <one-sentence name>
 
 | Field | Entry |
 |-------|-------|
@@ -114,9 +115,9 @@ The diagram is a filter, not a formula: every input can disqualify the space on 
 - [[02_Validating_Willingness_to_Pay]]
 - [[04_Niche_and_Positioning]]
 - [[06_Market_and_Competitor_Scanning]]
-- [[03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
 - [[career-path/15_Solutions_and_Enterprise_Architect/01_Business_Analysis_and_Capability_Mapping/00_overview|Business Analysis and Capability Mapping (Solutions Architect)]]
 
 ## Summary
 
-Choosing a problem space is the strategic bet that everything else compounds on: test capability, pain, reachability, and appetite, let the weakest veto, and commit with kill criteria and a review date. The independent who selects deliberately — rather than drifting into whatever arrives — gives every later discipline, from positioning to pricing, a foundation to stand on.
+Choosing a problem space is the strategic bet that everything else compounds on: test capability, pain, reachability, and appetite, let the weakest veto, and commit with kill criteria and a review date. The independent who selects deliberately (rather than drifting into whatever arrives) gives every later discipline, from positioning to pricing, a foundation to stand on.

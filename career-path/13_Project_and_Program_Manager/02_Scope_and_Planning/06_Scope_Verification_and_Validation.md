@@ -16,13 +16,13 @@ tags:
 
 # Scope Verification and Validation
 
-> **Core skill:** Ensuring that project deliverables meet their specified requirements (verification) and that the completed deliverables satisfy stakeholder needs and are formally accepted (validation) — the two-stage quality gate that separates internal confidence from external sign-off.
+> **Core skill:** Ensuring that project deliverables meet their specified requirements (verification) and that the completed deliverables satisfy stakeholder needs and are formally accepted (validation), the two-stage quality gate that separates internal confidence from external sign-off.
 
 ## Why This Matters
 
-A deliverable that passes internal testing but is rejected by the stakeholder is a verification success and a validation failure. A deliverable that the stakeholder accepts but that does not meet its specified requirements is a validation success and a verification failure — and its defects will surface in production. The project manager distinguishes between verification and validation because they serve different purposes, involve different people, and protect different interests.
+A deliverable that passes internal testing but is rejected by the stakeholder is a verification success and a validation failure. A deliverable that the stakeholder accepts but that does not meet its specified requirements is a validation success and a verification failure, and its defects will surface in production. The project manager distinguishes between verification and validation because they serve different purposes, involve different people, and protect different interests.
 
-Verification is the project team's discipline: does the deliverable conform to its documented requirements and acceptance criteria? It is objective, testable, and internal — the team can verify without the stakeholder present. Validation is the stakeholder's discipline: does the deliverable meet the need that motivated it? It is contextual, judgment-based, and external — only the stakeholder can validate.
+Verification is the project team's discipline: does the deliverable conform to its documented requirements and acceptance criteria? It is objective, testable, and internal. The team can verify without the stakeholder present. Validation is the stakeholder's discipline: does the deliverable meet the need that motivated it? It is contextual, judgment-based, and external. Only the stakeholder can validate.
 
 Both must happen for every deliverable. Verification without validation risks building the right thing to specification but the wrong thing for the need. Validation without verification risks accepting a deliverable that seems right but has hidden defects. Together they form the quality gate that declares a deliverable complete and accepted.
 
@@ -62,6 +62,7 @@ Both must happen for every deliverable. Verification without validation risks bu
 ## The Verification and Validation Sequence
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     REQ["Requirements and acceptance criteria"] --> BUILD["Build deliverable"]
     BUILD --> VERIFY["Verification: does the deliverable conform to requirements?"]
@@ -125,12 +126,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[01_Scope_Definition]] — acceptance criteria are part of the scope statement
-- [[03_Requirements_Management]] — requirements are the standard for verification
-- [[07_Scope_Change_Management]] — validation gaps may trigger scope changes
-- [[06_Governance_and_Change_Control/00_overview|Governance and Change Control]] — acceptance is a governance decision
-- [[04_Project_Objectives_and_Success_Criteria]] — success criteria validated at closure
+- [[01_Scope_Definition]]: acceptance criteria are part of the scope statement
+- [[03_Requirements_Management]]: requirements are the standard for verification
+- [[07_Scope_Change_Management]]: validation gaps may trigger scope changes
+- [[career-path/13_Project_and_Program_Manager/06_Governance_and_Change_Control/00_overview|Governance and Change Control]]: acceptance is a governance decision
+- [[04_Project_Objectives_and_Success_Criteria]]: success criteria validated at closure
 
 ## Summary
 
-Scope verification and validation form the two-stage quality gate that declares a deliverable complete and accepted. Verification — performed internally by the team — tests whether the deliverable conforms to its requirements and acceptance criteria. Validation — performed externally by the stakeholder — tests whether the deliverable meets the need it was intended to address. Both are necessary: verification without validation risks building the right thing to specification but the wrong thing for the need; validation without verification risks accepting a deliverable that looks right but has hidden defects. The project manager who separates the two and executes both ensures that what is built matches what was specified, and what was specified matches what was needed.
+Scope verification and validation form the two-stage quality gate that declares a deliverable complete and accepted. Verification (performed internally by the team) tests whether the deliverable conforms to its requirements and acceptance criteria. Validation (performed externally by the stakeholder) tests whether the deliverable meets the need it was intended to address. Both are necessary: verification without validation risks building the right thing to specification but the wrong thing for the need; validation without verification risks accepting a deliverable that looks right but has hidden defects. The project manager who separates the two and executes both ensures that what is built matches what was specified, and what was specified matches what was needed.

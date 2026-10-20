@@ -27,6 +27,7 @@ Architecture evaluation is not a luxury. It is a risk mitigation activity. The c
 ## The Architecture Evaluation Landscape
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     subgraph LIGHT["Lightweight Evaluation"]
         REVIEW["Peer Review\n30 minutes"]
@@ -67,6 +68,7 @@ ATAM (Architecture Tradeoff Analysis Method) is the most widely used architectur
 ATAM is a structured, multi-day evaluation with defined roles and activities:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph PRESENTATION["Phase 1: Presentation"]
         P1["1 Present ATAM method"]
@@ -102,6 +104,7 @@ flowchart TD
 A key output of ATAM is the quality attribute tree, which prioritizes quality attribute scenarios:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     QA["Quality Attributes"] --> PERF["Performance"]
     QA --> AVAIL["Availability"]

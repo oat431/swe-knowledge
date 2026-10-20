@@ -16,7 +16,7 @@ tags:
 
 # Choosing the Right Engineering Bar
 
-> **Core skill:** Matching rigor to stakes instead of habit — consciously choosing how much engineering discipline each artifact deserves, and naming the choice.
+> **Core skill:** Matching rigor to stakes instead of habit: consciously choosing how much engineering discipline each artifact deserves, and naming the choice.
 
 ## Why This Matters
 
@@ -24,7 +24,7 @@ Field work runs several engineering standards at once. A throwaway probe that re
 
 Calibration is where field judgment concentrates, because the cost asymmetry is sharp. Gold-plating a throwaway costs days; under-engineering a production path costs the customer's trust, the deployment's credibility, and sometimes the account. The FDE must therefore be able to look at any piece of work and answer, in one breath: who is affected if this fails, what happens when it fails at an inconvenient hour, who will maintain it after me, and what data does it touch? Those answers map directly to the amount of process the artifact has earned.
 
-The subtler discipline is visibility. A bar that lives only in the FDE's head becomes a surprise later — when the customer assumes the pilot was built like production, or when the team discovers that the "quick script" now processes payroll data weekly. Naming the bar, writing it down, and re-deciding it when stakes change converts rigor from a personal habit into an explicit, reviewable engineering decision.
+The subtler discipline is visibility. A bar that lives only in the FDE's head becomes a surprise later: when the customer assumes the pilot was built like production, or when the team discovers that the "quick script" now processes payroll data weekly. Naming the bar, writing it down, and re-deciding it when stakes change converts rigor from a personal habit into an explicit, reviewable engineering decision.
 
 ## The Rigor Spectrum
 
@@ -36,7 +36,7 @@ The subtler discipline is visibility. A bar that lives only in the FDE's head be
 | Production internal tool | Review, tests, monitoring, runbook | Ownership, rollback, and error handling defined |
 | Critical path system | Full quality practice plus audit trail and drills | Everything above, plus evidence for auditors and operators |
 
-The middle rows are where most field work lives, and where most calibration errors happen — pilots treated as demos, or demos expected to perform like pilots.
+The middle rows are where most field work lives, and where most calibration errors happen: pilots treated as demos, or demos expected to perform like pilots.
 
 ## Deciding the Bar
 
@@ -50,7 +50,7 @@ The middle rows are where most field work lives, and where most calibration erro
 | What is the cost of building it twice? | Cheap rebuilds justify low rigor; costly ones justify rigor now |
 | Would the customer's auditors accept this evidence? | Regulated contexts answer the question themselves |
 
-Answering these six questions takes ten minutes and routinely saves weeks. The failure mode is skipping them because the answer feels obvious — it usually is obvious, but only after being asked.
+Answering these six questions takes ten minutes and routinely saves weeks. The failure mode is skipping them because the answer feels obvious. It usually is obvious, but only after being asked.
 
 ## Upgrading and Downgrading Consciously
 
@@ -62,6 +62,7 @@ Answering these six questions takes ten minutes and routinely saves weeks. The f
 | Production to retired | Migration or export path; deprecation notice | Sunset plan and data disposition |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CLASSIFY["Classify the artifact"] --> BAR["Set the bar explicitly"]
     BAR --> APPLY["Apply proportional rigor"]
@@ -69,14 +70,14 @@ flowchart LR
     RECLASSIFY --> RECORD["Record the trade"]
 ```
 
-Both directions require a decision. An upgrade nobody decided looks like uncontrolled growth; a downgrade nobody wrote down looks like neglect — and both destroy confidence when discovered.
+Both directions require a decision. An upgrade nobody decided looks like uncontrolled growth; a downgrade nobody wrote down looks like neglect, and both destroy confidence when discovered.
 
 ## Practical Applications
 
 ### Artifact Classification Note
 
 ```markdown
-## Artifact Note — <name>
+## Artifact Note: <name>
 
 | Field | Statement |
 |-------|-----------|
@@ -120,10 +121,10 @@ Both directions require a decision. An upgrade nobody decided looks like uncontr
 
 - [[06_From_Prototype_to_Production]]
 - [[01_Demo_Driven_Development]]
-- [[02_Solution_Design_and_Rapid_Prototyping/00_overview|Solution Design and Rapid Prototyping]]
+- [[career-path/19_Forward_Deployed_Engineer/02_Solution_Design_and_Rapid_Prototyping/00_overview|Solution Design and Rapid Prototyping]]
 - [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]
 - [[software-engineering-note/12_Software_Quality/Software Quality Overview]]
 
 ## Summary
 
-Choosing the right engineering bar is the FDE's calibration skill: classifying each artifact by who depends on it, what data it touches, and who maintains it; applying rigor proportional to stakes; upgrading and downgrading through recorded decisions with named acceptors; and keeping data protection as a floor no class ever goes below. The goal is not maximal rigor or minimal rigor — it is rigor that matches reality, chosen in the open, so speed and safety stop competing and start sequencing.
+Choosing the right engineering bar is the FDE's calibration skill: classifying each artifact by who depends on it, what data it touches, and who maintains it; applying rigor proportional to stakes; upgrading and downgrading through recorded decisions with named acceptors; and keeping data protection as a floor no class ever goes below. The goal is not maximal rigor or minimal rigor. It is rigor that matches reality, chosen in the open, so speed and safety stop competing and start sequencing.

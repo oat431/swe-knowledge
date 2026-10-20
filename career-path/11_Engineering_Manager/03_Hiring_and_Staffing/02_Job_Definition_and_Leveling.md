@@ -19,7 +19,7 @@ tags:
 
 ## Why This Matters
 
-The job description is the first interview. Candidates read it as a signal of how the company thinks: a list of thirty requirements says "we have not decided what this job is"; a level-free title says "leveling here is negotiable, which means it is political"; a hype-filled pitch attracts people who like hype. The JD does not just describe the job — it filters the audience before a single screening call happens.
+The job description is the first interview. Candidates read it as a signal of how the company thinks: a list of thirty requirements says "we have not decided what this job is"; a level-free title says "leveling here is negotiable, which means it is political"; a hype-filled pitch attracts people who like hype. The JD does not just describe the job. It filters the audience before a single screening call happens.
 
 For the manager, the JD is also a commitment device. A role defined as "senior backend engineer, owns the payments domain, mentors one junior" gives the interview loop its dimensions, the debrief its bar, the offer its level, and the new hire's first performance conversation its expectations. A role defined as "rockstar ninja, 10x engineer" gives nothing to any of those stages and forces every later decision to be improvised.
 
@@ -45,14 +45,14 @@ The JD attracts by honesty, not by superlatives. The candidates you want are cho
 | JD Section | What It Should Contain | Common Failure |
 |------------|------------------------|----------------|
 | Mission | Two sentences: what the team does and why it matters to the business | Marketing copy detached from the actual work |
-| Responsibilities | 4-6 ownership statements — what they will own, decide, and be accountable for | Task lists ("write code, attend standups") that describe any job anywhere |
+| Responsibilities | 4-6 ownership statements: what they will own, decide, and be accountable for | Task lists ("write code, attend standups") that describe any job anywhere |
 | Requirements | 3-5 non-negotiables you will actually screen for | Fifteen bullets that no living candidate fully matches |
 | Preferences | Nice-to-haves that differentiate, clearly separated | Requirements and preferences merged into one intimidating blob |
-| Team context | Size, shape, how the team works, who they report to | Omitted because it feels mundane — it is the most-read part |
+| Team context | Size, shape, how the team works, who they report to | Omitted because it feels mundane: it is the most-read part |
 | Growth path | What this role grows into | Silence, signaling a dead-end |
-| Compensation | Band, or at least a process promise | "Competitive" — which filters out exactly the people who ask |
+| Compensation | Band, or at least a process promise | "Competitive", which filters out exactly the people who ask |
 
-The level goes in the title. "Software Engineer (Senior)" or "Senior Software Engineer" — not "Software Engineer II" requiring decoder ring, and not level hidden until offer to preserve "flexibility." Level hiding is a trust tax paid in declined offers.
+The level goes in the title. "Software Engineer (Senior)" or "Senior Software Engineer", not "Software Engineer II" requiring decoder ring, and not level hidden until offer to preserve "flexibility." Level hiding is a trust tax paid in declined offers.
 
 ## Requirements vs Preferences
 
@@ -69,7 +69,7 @@ The classic failure is degree inflation and tool-specific requirements that excl
 
 ## Leveling Against the Ladder
 
-The level is not years of experience — it is scope, autonomy, and impact as the ladder defines them.
+The level is not years of experience. It is scope, autonomy, and impact as the ladder defines them.
 
 | Level Question | What the Answer Determines |
 |----------------|---------------------------|
@@ -119,6 +119,7 @@ The work arrangement is a JD fact, not a post-offer surprise. Ambiguity here was
 ## JD Review Before Publishing
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     GAP["Capability gap from workforce plan"] --> DRAFT["Draft JD with ownership and level"]
     DRAFT --> LADDER["Check level against ladder definition"]
@@ -131,7 +132,7 @@ flowchart TD
     LEARN --> DRAFT
 ```
 
-The review loop is deliberately short — a JD that takes a month to approve is a requisition aging in a drawer.
+The review loop is deliberately short. A JD that takes a month to approve is a requisition aging in a drawer.
 
 ## Practical Applications
 
@@ -194,8 +195,8 @@ Complementarity: [What this adds to current team shape]
 - [[04_Interview_Design_and_Running]]: loop dimensions come directly from this definition
 - [[05_Hiring_Decisions_and_Debriefs]]: the bar in the debrief is the level stated here
 - [[career-path/02_Senior_Software_Engineer/09_Promotion_Evidence_and_Capstone/05_Career_Ladders|Career Ladders (Senior)]]: the ladder definitions the JD levels against
-- [[01_People_Development/00_overview|People Development]]: the growth path the JD promises must exist
+- [[career-path/11_Engineering_Manager/01_People_Development/00_overview|People Development]]: the growth path the JD promises must exist
 
 ## Summary
 
-Job definition and leveling turns a capability gap into an honest, hireable role: ownership-based responsibilities, a handful of screenable requirements, a level taken from the ladder and stated in the title, and a work arrangement written exactly enough to survive the offer stage. Each JD is also a portfolio decision — hire complementary strengths, not clones of the last success. The discipline is short: if the loop cannot assess a requirement, it is a preference; if the ladder cannot defend a level, it is not the level.
+Job definition and leveling turns a capability gap into an honest, hireable role: ownership-based responsibilities, a handful of screenable requirements, a level taken from the ladder and stated in the title, and a work arrangement written exactly enough to survive the offer stage. Each JD is also a portfolio decision: hire complementary strengths, not clones of the last success. The discipline is short: if the loop cannot assess a requirement, it is a preference; if the ladder cannot defend a level, it is not the level.

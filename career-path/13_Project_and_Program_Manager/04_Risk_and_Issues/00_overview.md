@@ -14,13 +14,13 @@ tags:
 
 # Risk and Issues
 
-> **Core capability:** The project manager manages uncertainty systematically — identifying risks before they become issues, maintaining a risk register with owners and responses, and resolving issues with documented plans and accountability.
+> **Core capability:** The project manager manages uncertainty systematically, identifying risks before they become issues, maintaining a risk register with owners and responses, and resolving issues with documented plans and accountability.
 
 ## Why This Matters
 
-Every project has unknowns. The difference between projects that deliver within tolerance and projects that spiral is whether unknowns are named, assessed, owned, and managed — or discovered when they become problems. The risk register is the project manager's primary tool for this: living documentation of what could go wrong, how likely it is, what it would cost, and who is doing something about it.
+Every project has unknowns. The difference between projects that deliver within tolerance and projects that spiral is whether unknowns are named, assessed, owned, and managed, or discovered when they become problems. The risk register is the project manager's primary tool for this: living documentation of what could go wrong, how likely it is, what it would cost, and who is doing something about it.
 
-Issues are risks that materialized. When an issue occurs, the project manager shifts from prevention to resolution: owner, plan, deadline, communication. The speed and clarity of issue resolution is one of the most visible dimensions of project management competence — because issues are what stakeholders see.
+Issues are risks that materialized. When an issue occurs, the project manager shifts from prevention to resolution: owner, plan, deadline, communication. The speed and clarity of issue resolution is one of the most visible dimensions of project management competence, because issues are what stakeholders see.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ Issues are risks that materialized. When an issue occurs, the project manager sh
 ## The Risk Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     IDENTIFY["Identify: what could go wrong"] --> ANALYZE["Analyze: probability, impact, proximity"]
     ANALYZE --> RESPOND["Respond: mitigate, transfer, avoid, accept"]
@@ -47,7 +48,7 @@ flowchart TD
     LEARN --> IDENTIFY
 ```
 
-Risks become issues or retire — the register shows which.
+Risks become issues or retire: the register shows which.
 
 ## Practical Applications
 
@@ -70,18 +71,18 @@ Risks become issues or retire — the register shows which.
 
 ## Success Indicators
 
-- Risks get retired with closed responses — not just "monitoring"
+- Risks get retired with closed responses, not just "monitoring"
 - Issues resolve within their target window
 - Contingency reserves are drawn upon deliberately, not exhausted by surprise
 - The risk register is the first page stakeholders turn to in the status report
 
 ## Related Capabilities
 
-- [[01_Initiation_and_Charter/00_overview|Initiation and Charter]]: initial risks identified at initiation
-- [[03_Schedule_and_Cost/00_overview|Schedule and Cost]]: contingency reserves managed in schedule and cost baselines
+- [[career-path/13_Project_and_Program_Manager/01_Initiation_and_Charter/00_overview|Initiation and Charter]]: initial risks identified at initiation
+- [[career-path/13_Project_and_Program_Manager/03_Schedule_and_Cost/00_overview|Schedule and Cost]]: contingency reserves managed in schedule and cost baselines
 - [[career-path/12_Technical_Program_Manager/04_Risk_and_Issue_Leadership/00_overview|Risk and Issue Leadership (TPM)]]: the program-level counterpart
 - [[career-path/11_Engineering_Manager/04_Delivery_Leadership_for_Managers/05_Delivery_Risk_Ownership|Delivery Risk Ownership (EM)]]: the manager's program-risk perspective
 
 ## Summary
 
-Risk and issue management is the project manager's uncertainty discipline: a living register of risks with owners and responses, issues resolved with documented plans and deadlines, and contingency reserves sized against reality. The project manager's credibility is measured by what's in the risk register — and what's not.
+Risk and issue management is the project manager's uncertainty discipline: a living register of risks with owners and responses, issues resolved with documented plans and deadlines, and contingency reserves sized against reality. The project manager's credibility is measured by what's in the risk register, and what's not.

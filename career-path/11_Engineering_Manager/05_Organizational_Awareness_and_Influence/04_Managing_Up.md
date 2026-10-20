@@ -16,11 +16,11 @@ tags:
 
 # Managing Up
 
-> **Core skill:** Running the relationship with your own manager as a deliberate partnership — their goals understood, your trust bank full, expectations explicit, and escalation always carrying options.
+> **Core skill:** Running the relationship with your own manager as a deliberate partnership: their goals understood, your trust bank full, expectations explicit, and escalation always carrying options.
 
 ## Why This Matters
 
-Your manager is the gatekeeper for everything the team needs: budget, headcount, protection, decisions, air cover. Most managers treat this relationship reactively — they answer questions, report status, and hope. Reactive managing up leaves your team's fate to your manager's mood, memory, and other priorities.
+Your manager is the gatekeeper for everything the team needs: budget, headcount, protection, decisions, air cover. Most managers treat this relationship reactively: they answer questions, report status, and hope. Reactive managing up leaves your team's fate to your manager's mood, memory, and other priorities.
 
 Deliberate managing up is not flattery or politics; it is stakeholder management for the stakeholder with the most leverage over your team. You study their goals and pressures the way you study any customer, you engineer the information flow so they are never surprised, and you use the relationship to buy the team what it needs. A well-managed manager is a sponsor; an unmanaged one is a wildcard.
 
@@ -40,10 +40,10 @@ The relationship is symmetrical in interest, not in power: you need their suppor
 
 | Deposit | Withdrawal |
 |---------|------------|
-| No surprises — bad news early, with a plan | Surprising them in a meeting |
+| No surprises: bad news early, with a plan | Surprising them in a meeting |
 | Delivering on every ask, on time | Missing commitments silently |
 | Pushing back with options, not complaints | Escalating problems without solutions |
-| Discretion — never embarrassing them | Sharing their confidences |
+| Discretion, never embarrassing them | Sharing their confidences |
 | Visible team results | Taking credit that belongs to the team |
 
 The rule: the account must be positive before you make a big withdrawal (a large ask, a hard conversation, an escalation). If the account is empty, rebuild before spending.
@@ -76,12 +76,12 @@ Escalation with options and a recommendation is a request for a decision; escala
 - Disagree in private, never in front of their peers or your team
 - Bring evidence: numbers, customer impact, risk
 - Frame it as serving the same goal, not opposing them
-- If they decide against you, commit visibly — the team watches how you handle it
+- If they decide against you, commit visibly: the team watches how you handle it
 - Preserve the relationship for the next disagreement; the last one is over
 
 ## Using Your 1:1s
 
-Your 1:1 with your manager is not their meeting — it is half yours:
+Your 1:1 with your manager is not their meeting; it is half yours:
 
 | Slot | Content |
 |------|---------|
@@ -102,9 +102,10 @@ If your 1:1s are entirely their agenda, you are a status report, not a partner.
 | Politically toxic | Insulate the team from the noise; never let their behavior become your team's excuse |
 | Leaves you to hang | Keep escalation trails in writing; build sponsors above and beside |
 
-Managing around a weak manager is not betrayal — it is protecting the team's interests when the assigned sponsor is not fulfilling the role. Keep the relationship workable, keep your ethics intact, and never make your team pay for your manager's shortcomings.
+Managing around a weak manager is not betrayal; it is protecting the team's interests when the assigned sponsor is not fulfilling the role. Keep the relationship workable, keep your ethics intact, and never make your team pay for your manager's shortcomings.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     LEARN["Learn their goals and pressures"] --> ALIGN["Align expectations in writing"]
     ALIGN --> DEPOSIT["Deposit trust daily"]
@@ -128,11 +129,11 @@ flowchart TD
 ### 1:1 Agenda Template
 
 ```markdown
-## Manager 1:1 — [date]
-- Their asks since last time: [X] — status: [done/at risk]
+## Manager 1:1, [date]
+- Their asks since last time: [X]; status: [done/at risk]
 - Decisions I need from them: [X] by [date]
 - Team health signal: [morale/attrition/friction]
-- Risk forming: [X] — options: [A/B]
+- Risk forming: [X]; options: [A/B]
 - My growth ask: [X]
 - Alignment check: [still aligned / drifting because]
 ```

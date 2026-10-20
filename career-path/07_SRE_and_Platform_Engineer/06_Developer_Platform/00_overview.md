@@ -39,6 +39,7 @@ Developer platforms are not just infrastructure automation. They are **products 
 ## How the Topics Connect
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PRODUCT["01 Platform as Product"] --> SELF["02 Self-Service Infrastructure"]
     SELF --> GOLDEN["03 Golden Paths"]
@@ -76,6 +77,6 @@ Use this to gauge your current mastery of developer platforms:
 ## Related
 
 - [[00_overview|SRE and Platform Engineer Overview]]
-- [[04_Delivery_Automation/00_overview|Delivery Automation]] : platforms enable safe delivery
-- [[02_Observability/00_overview|Observability]] : platforms must be observable
+- [[career-path/07_SRE_and_Platform_Engineer/04_Delivery_Automation/00_overview|Delivery Automation]] : platforms enable safe delivery
+- [[career-path/07_SRE_and_Platform_Engineer/02_Observability/00_overview|Observability]] : platforms must be observable
 - [[software-engineering-note/02_Software_Architecture/Microservice/07 Deployment/074 GitOps & CI-CD Pipelines|GitOps & CI-CD Pipelines]] : foundation for self-service delivery

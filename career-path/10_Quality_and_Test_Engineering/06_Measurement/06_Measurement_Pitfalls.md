@@ -351,6 +351,7 @@ Review:
 ### The Goal-Question-Metric (GQM) Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     G[Goal: Improve release quality] --> Q1[Question: Are we catching defects early?]
     G --> Q2[Question: Are releases stable?]

@@ -28,6 +28,7 @@ The difference is not technical depth. It is **reducing cognitive load by reduci
 ### Golden Path Philosophy
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     subgraph PROBLEM["The Problem"]
         P1["Too many choices"]
@@ -96,6 +97,7 @@ flowchart LR
 ### Golden path lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DISCOVER["Discover: identify common patterns"]
     DESIGN["Design: create templates and docs"]
@@ -172,7 +174,7 @@ flowchart TD
 - [[02_Self_Service_Infrastructure]] : golden paths are exposed via self-service
 - [[04_Developer_Experience]] : golden paths improve DX by reducing cognitive load
 - [[software-engineering-note/06_Software_Engineering_Operations/02_Where_to_Start|Where to Start]] : golden paths answer "where do I start?"
-- [[04_Delivery_Automation/00_overview|Delivery Automation]] : golden paths include delivery automation
+- [[career-path/07_SRE_and_Platform_Engineer/04_Delivery_Automation/00_overview|Delivery Automation]] : golden paths include delivery automation
 
 ## Key Takeaways
 

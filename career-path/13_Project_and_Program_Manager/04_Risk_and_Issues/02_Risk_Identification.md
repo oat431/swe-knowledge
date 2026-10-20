@@ -15,19 +15,20 @@ tags:
 
 # Risk Identification
 
-> **Core skill:** Surfacing risks systematically — through workshops, checklists, assumptions analysis, and continuous team input — so the risk register reflects what could actually go wrong, not just what is comfortable to name.
+> **Core skill:** Surfacing risks systematically (through workshops, checklists, assumptions analysis, and continuous team input) so the risk register reflects what could actually go wrong, not just what is comfortable to name.
 
 ## Why This Matters
 
-The risks that kill projects are rarely the ones identified in the first planning session. They are the ones that were visible as weak signals — a key person looking disengaged, a vendor missing a checkpoint, a scope item nobody understood — but never made it into the register because nobody asked in the right way or at the right time.
+The risks that kill projects are rarely the ones identified in the first planning session. They are the ones that were visible as weak signals (a key person looking disengaged, a vendor missing a checkpoint, a scope item nobody understood) but never made it into the register because nobody asked in the right way or at the right time.
 
-Risk identification is a continuous activity, not a planning milestone. The initial risk workshop populates the register; status cycle reviews update it; team conversations and stakeholder meetings surface new risks; and assumption analysis catches the ones hiding in plain sight — the things "everyone knows" that turn out not to be true.
+Risk identification is a continuous activity, not a planning milestone. The initial risk workshop populates the register; status cycle reviews update it; team conversations and stakeholder meetings surface new risks; and assumption analysis catches the ones hiding in plain sight, the things "everyone knows" that turn out not to be true.
 
-The skill is not in listing every possible thing that could go wrong — that is infinite and useless. The skill is in surfacing the risks that are specific, owned, and actionable: risks that name what could happen, why, and what the early signal would be.
+The skill is not in listing every possible thing that could go wrong. That is infinite and useless. The skill is in surfacing the risks that are specific, owned, and actionable: risks that name what could happen, why, and what the early signal would be.
 
 ## Identification Techniques
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     WORKSHOP["Risk workshop: structured group identification"] --> REGISTER["Risk register populated"]
     CHECKLISTS["Checklists: risk breakdown structure, lessons learned"] --> REGISTER
@@ -56,13 +57,13 @@ A structured risk identification session:
 | Phase | Activity | Duration (2-hour workshop) |
 |-------|----------|---------------------------|
 | Setup | Present scope, objectives, constraints; explain risk categories and scales | 15 minutes |
-| Silent generation | Each participant writes risks individually — avoids groupthink | 15 minutes |
+| Silent generation | Each participant writes risks individually, avoids groupthink | 15 minutes |
 | Round-robin | Each person shares one risk; facilitator records without judgment | 30 minutes |
 | Clustering | Group related risks; identify themes and categories | 20 minutes |
 | Initial assessment | Quick probability/impact for each cluster; flag top risks | 25 minutes |
 | Next steps | Assign risk owners for investigation; schedule follow-up | 15 minutes |
 
-The workshop's value is not the complete list — it is the shared understanding of what worries the team and why.
+The workshop's value is not the complete list. It is the shared understanding of what worries the team and why.
 
 ## Assumptions Analysis
 
@@ -134,7 +135,7 @@ The format forces specificity: event, consequence, cause. A specific risk has a 
 | **Groupthink in workshops** | Only the most vocal participants contribute; quiet risks stay hidden | Silent generation before discussion; one-on-one follow-up |
 | **Risk inflation** | Every uncertainty is a risk; the register is too long to be useful | Focus on specific, actionable risks with named consequences |
 | **Assumption blindness** | Assumptions taken as facts; risks hidden in plain sight | Assumptions analysis at every planning cycle |
-| **Vague risk statements** | "Communication risk" or "technical risk" — meaningless | "If/then/because" format: event, consequence, cause |
+| **Vague risk statements** | "Communication risk" or "technical risk": meaningless | "If/then/because" format: event, consequence, cause |
 
 ## Success Indicators
 
@@ -142,16 +143,16 @@ The format forces specificity: event, consequence, cause. A specific risk has a 
 - Risk statements are specific: event, consequence, and cause are clear
 - The team raises risks unprompted because they trust the process
 - Assumptions are documented and reviewed for risk
-- The register is lean — every row is specific, owned, and actionable
+- The register is lean: every row is specific, owned, and actionable
 
 ## Related Topics
 
 - [[01_Risk_Management_Planning]]: the plan defines identification methods and categories
 - [[03_Risk_Analysis_and_Prioritization]]: identified risks are assessed and prioritized
 - [[05_Issue_Management]]: risks that materialize become issues
-- [[02_Scope_and_Planning/00_overview|Scope and Planning]]: scope assumptions are a primary risk source
+- [[career-path/13_Project_and_Program_Manager/02_Scope_and_Planning/00_overview|Scope and Planning]]: scope assumptions are a primary risk source
 - [[career-path/12_Technical_Program_Manager/04_Risk_and_Issue_Leadership/00_overview|Risk and Issue Leadership (TPM)]]: the program-level risk identification approach
 
 ## Summary
 
-Risk identification is the continuous discipline of surfacing what could go wrong — through workshops, checklists, assumptions analysis, and ongoing team and stakeholder input. The goal is not an exhaustive list of every possible risk but a register of specific, owned, and actionable risks — each naming what could happen, why, and the consequence. The risks that kill projects are rarely the ones identified in the first session; they are the ones visible as weak signals that never made it into the register because no one asked in the right way. Identification stops when the project stops.
+Risk identification is the continuous discipline of surfacing what could go wrong, through workshops, checklists, assumptions analysis, and ongoing team and stakeholder input. The goal is not an exhaustive list of every possible risk but a register of specific, owned, and actionable risks, each naming what could happen, why, and the consequence. The risks that kill projects are rarely the ones identified in the first session; they are the ones visible as weak signals that never made it into the register because no one asked in the right way. Identification stops when the project stops.

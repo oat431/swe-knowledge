@@ -5,8 +5,8 @@ capability_area: security-verification-and-testing
 career_path: security-engineer
 level: senior-specialist
 prerequisite:
-  - "[[01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]"
-  - "[[03_Secure_Development_and_DevSecOps/01_Security_Requirements_in_Backlog|Security Requirements in Backlog]]"
+  - "[[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]"
+  - "[[career-path/08_Security_Engineer/03_Secure_Development_and_DevSecOps/01_Security_Requirements_in_Backlog|Security Requirements in Backlog]]"
 source_frameworks:
   - "[[software-engineering-note/05_Software_Testing/Software Testing Overview]]"
   - "[[career-path/10_Quality_and_Test_Engineering/00_overview]]"
@@ -59,6 +59,7 @@ Choose the highest relevant driver rather than averaging away a critical concern
 ### 3. Strategy Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CONTEXT["System and release context"] --> RISKS["Prioritized abuse cases"]
     RISKS --> OBJECTIVES["Evidence objectives"]
@@ -123,8 +124,8 @@ Select a release that changes authentication, authorization, data processing, or
 - [[career-path/10_Quality_and_Test_Engineering/00_overview|Quality and Test Engineering]]: specialist test strategy and quality practices
 - [Test Strategy](F:\obsidian_note\document_template\13_Testing_and_Verification/Test-Strategy.md): strategy artifact structure
 - [Security Test Report](F:\obsidian_note\document_template\13_Testing_and_Verification/Security-Test-Report.md): result artifact for the chosen strategy
-- [[01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]: abuse cases and risk context
-- [[03_Secure_Development_and_DevSecOps/01_Security_Requirements_in_Backlog|Security Requirements in Backlog]]: requirements and acceptance evidence
+- [[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]: abuse cases and risk context
+- [[career-path/08_Security_Engineer/03_Secure_Development_and_DevSecOps/01_Security_Requirements_in_Backlog|Security Requirements in Backlog]]: requirements and acceptance evidence
 - [[02_SAST_and_Taint_Analysis|SAST and Taint Analysis]]: static verification depth
 - [[04_DAST_Fuzzing_and_Penetration_Testing|DAST, Fuzzing, and Penetration Testing]]: dynamic verification depth
 

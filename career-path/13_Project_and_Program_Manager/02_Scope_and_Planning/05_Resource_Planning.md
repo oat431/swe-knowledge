@@ -16,15 +16,15 @@ tags:
 
 # Resource Planning
 
-> **Core skill:** Estimating the people, equipment, materials, and budget the project needs — matching resource demand to availability, resolving overallocations, and building a resource plan the organization can commit to and the team can execute.
+> **Core skill:** Estimating the people, equipment, materials, and budget the project needs, matching resource demand to availability, resolving overallocations, and building a resource plan the organization can commit to and the team can execute.
 
 ## Why This Matters
 
-A project plan without resources is a wish list. It says what should happen and when, but it does not say whether the people, tools, and money exist to make it happen. The project manager who plans activities without planning resources discovers the gap at execution — when the person assigned to the critical path is also assigned to three other projects, when the test environment is booked by another team, and when the budget runs out before the final deliverable.
+A project plan without resources is a wish list. It says what should happen and when, but it does not say whether the people, tools, and money exist to make it happen. The project manager who plans activities without planning resources discovers the gap at execution, when the person assigned to the critical path is also assigned to three other projects, when the test environment is booked by another team, and when the budget runs out before the final deliverable.
 
-Resource planning is not allocation — it is negotiation. The project manager identifies what is needed, discovers what is available, and closes the gap through prioritization, scheduling, or escalation. Every resource conflict that is resolved during planning is a crisis prevented during execution. Every conflict left unresolved becomes a competing claim on the same person's time — and the project that loses that competition is the one whose PM did not secure the commitment.
+Resource planning is not allocation. It is negotiation. The project manager identifies what is needed, discovers what is available, and closes the gap through prioritization, scheduling, or escalation. Every resource conflict that is resolved during planning is a crisis prevented during execution. Every conflict left unresolved becomes a competing claim on the same person's time, and the project that loses that competition is the one whose PM did not secure the commitment.
 
-The resource plan also forces realism into the schedule. A schedule built without resource constraints is optimistic by design — it assumes everyone is available full-time, nobody takes leave, and no other project competes for the same skills. The resource-leveled schedule shows what is actually possible given the people and tools available.
+The resource plan also forces realism into the schedule. A schedule built without resource constraints is optimistic by design. It assumes everyone is available full-time, nobody takes leave, and no other project competes for the same skills. The resource-leveled schedule shows what is actually possible given the people and tools available.
 
 ## Resource Categories
 
@@ -58,6 +58,7 @@ The resource plan also forces realism into the schedule. A schedule built withou
 ## The Resource Planning Cycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     WBS["WBS and activity list"] --> ESTIMATE["Estimate resource requirements per activity"]
     ESTIMATE --> AGGREGATE["Aggregate: total resource demand over time"]
@@ -136,12 +137,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[02_Work_Breakdown_Structure]] — WBS drives resource estimation
-- [[04_Project_Planning_and_Baselining]] — resources drive the schedule
-- [[01_Scope_Definition]] — scope drives resource requirements
-- [[03_Schedule_and_Cost/00_overview|Schedule and Cost]] — resource costs drive the budget baseline
-- [[05_Feasibility_and_Constraint_Analysis]] — resource constraints assessed at initiation
+- [[02_Work_Breakdown_Structure]]: WBS drives resource estimation
+- [[04_Project_Planning_and_Baselining]]: resources drive the schedule
+- [[01_Scope_Definition]]: scope drives resource requirements
+- [[career-path/13_Project_and_Program_Manager/03_Schedule_and_Cost/00_overview|Schedule and Cost]]: resource costs drive the budget baseline
+- [[05_Feasibility_and_Constraint_Analysis]]: resource constraints assessed at initiation
 
 ## Summary
 
-Resource planning translates the WBS and activity list into estimates of the people, equipment, materials, and budget the project requires — and then reconciles demand with availability. The discipline is negotiation: identifying what is needed, discovering what is available, and closing the gap through leveling, smoothing, substitution, or acquisition. A resource plan without confirmed commitments is a wish list; the project manager who secures commitments before baselining prevents resource conflicts from becoming execution crises.
+Resource planning translates the WBS and activity list into estimates of the people, equipment, materials, and budget the project requires, and then reconciles demand with availability. The discipline is negotiation: identifying what is needed, discovering what is available, and closing the gap through leveling, smoothing, substitution, or acquisition. A resource plan without confirmed commitments is a wish list; the project manager who secures commitments before baselining prevents resource conflicts from becoming execution crises.

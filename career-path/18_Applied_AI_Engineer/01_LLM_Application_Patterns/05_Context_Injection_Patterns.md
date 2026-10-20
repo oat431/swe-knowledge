@@ -15,11 +15,11 @@ tags:
 
 # Context Injection Patterns
 
-> The architecture pattern of assembling everything the model needs — instructions, retrieved evidence, tool results, history — into the context window before a generation step, on a budget.
+> The architecture pattern of assembling everything the model needs (instructions, retrieved evidence, tool results, history) into the context window before a generation step, on a budget.
 
 ## Why This Is a Senior Skill
 
-A mid-level engineer stuffs whatever fits into the prompt and trusts the model to sort it out. A senior engineer treats the context window as memory with a budget: every section must earn its token cost, ordering follows how models actually attend (they weight beginnings and endings, and lose the middle), history is compacted deliberately, and context assembly is a tested, versioned component rather than string concatenation. The senior also knows that context injection is not just a RAG detail — it is the general mechanism behind every pattern in this area.
+A mid-level engineer stuffs whatever fits into the prompt and trusts the model to sort it out. A senior engineer treats the context window as memory with a budget: every section must earn its token cost, ordering follows how models actually attend (they weight beginnings and endings, and lose the middle), history is compacted deliberately, and context assembly is a tested, versioned component rather than string concatenation. The senior also knows that context injection is not just a RAG detail; it is the general mechanism behind every pattern in this area.
 
 The senior challenge: context is the single shared resource every pattern consumes, and the model's attention does not treat it uniformly. Budgeting and ordering are correctness decisions, not formatting.
 
@@ -68,17 +68,17 @@ The mechanism is the same in all four: assemble context, generate, consume resul
 
 ## In Practice
 
-**Treat the context window as a budget, not a free resource.** Every injected token costs money, latency, and — past a point — answer quality, because attention dilutes as context grows. Before adding a section, ask what measurable behavior it changes; if you cannot name it, cut it. "Fits in the window" is a necessary condition, never a sufficient one.
+**Treat the context window as a budget, not a free resource.** Every injected token costs money, latency, and (past a point) answer quality, because attention dilutes as context grows. Before adding a section, ask what measurable behavior it changes; if you cannot name it, cut it. "Fits in the window" is a necessary condition, never a sufficient one.
 
 **Injection order is a correctness decision: highest-value content first, strongest evidence up front.** Models attend most to the beginning and end. Retrieval results should be sorted by confidence, not document order; critical output constraints belong at the end, where the last instruction lands best. Ordering is how you steer attention without spending extra tokens.
 
-**Make context assembly a pure, versioned, tested function.** Assembly is code: inputs in, prompt out, deterministically. It gets unit tests (ordering, truncation, escaping), version control like any module, and a changelog — because an assembly change can shift answer quality as much as a prompt change can, and you need to know which change did it.
+**Make context assembly a pure, versioned, tested function.** Assembly is code: inputs in, prompt out, deterministically. It gets unit tests (ordering, truncation, escaping), version control like any module, and a changelog, because an assembly change can shift answer quality as much as a prompt change can, and you need to know which change did it.
 
 **Evict stale tool results and compact history deliberately.** A conversation that re-injects every old tool result bloats toward the window limit and lets ancient data override fresh data. Window the history, summarize before truncation when old turns still matter, and drop superseded tool results. Context that outlives its relevance is not context, it is noise.
 
 **Label every injected source so the model and your logs can tell sections apart.** Delimited, labeled sections (`<sources>...<source id="doc-17">...`) keep the model from blending documents, make citations checkable, and let observability measure exactly which section influenced the answer. Unlabeled context produces unverifiable answers.
 
-**Measure context utilization, not just context size.** Track tokens injected per section, which sections get cited in grounded answers, and where truncation actually fires. Utilization data tells you which injections pay for themselves — the empirical answer to "does this context earn its tokens?" — and gives the budget a feedback loop instead of a guess.
+**Measure context utilization, not just context size.** Track tokens injected per section, which sections get cited in grounded answers, and where truncation actually fires. Utilization data tells you which injections pay for themselves (the empirical answer to "does this context earn its tokens?") and gives the budget a feedback loop instead of a guess.
 
 ## Practical Exercise
 
@@ -111,6 +111,6 @@ The mechanism is the same in all four: assemble context, generate, consume resul
 
 - Context is a shared, budgeted resource: every section earns its tokens or goes
 - Ordering follows attention: strong evidence first, hard constraints last, mind the middle
-- Assembly is software: pure, versioned, tested — not prompt glue
+- Assembly is software: pure, versioned, tested, not prompt glue
 - History and tool results need explicit lifecycle policies: compact, evict, window
 - Utilization metrics tell you which injections actually pay for themselves

@@ -73,6 +73,7 @@ Do not collapse quality into one number. Use a balanced view that supports a dec
 | Adaptive | Rule changes with threat and system context | Version history and retirement criteria |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     HYPOTHESIS["State threat hypothesis"] --> DATA["Validate telemetry contract"]
     DATA --> LOGIC["Implement explainable detection logic"]

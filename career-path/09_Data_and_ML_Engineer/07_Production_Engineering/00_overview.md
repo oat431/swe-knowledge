@@ -41,6 +41,7 @@ Senior judgment shows in:
 ## Production Engineering Decision Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     A["Design data system"] --> B{"Consistency requirement?"}
     B -->|Strong: financial, inventory| C["CP system: sacrifice availability"]
@@ -92,8 +93,8 @@ This area covers the operational and infrastructure concerns of running data and
 
 - [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]]: operations fundamentals
 - [[SWEBOK v4 - Overview]]: software engineering for production systems
-- [[06_ML_Lifecycle_and_MLOps/00_overview|ML Lifecycle and MLOps]]: infrastructure that hosts models
-- [[04_Data_Quality/00_overview|Data Quality]]: quality validation in production pipelines
+- [[career-path/09_Data_and_ML_Engineer/06_ML_Lifecycle_and_MLOps/00_overview|ML Lifecycle and MLOps]]: infrastructure that hosts models
+- [[career-path/09_Data_and_ML_Engineer/04_Data_Quality/00_overview|Data Quality]]: quality validation in production pipelines
 
 ## Sources
 

@@ -15,13 +15,13 @@ tags:
 
 # Quality Assurance in Governance
 
-> **Core skill:** Ensuring that project processes and deliverables meet defined quality standards — through process audits, deliverable reviews, quality metrics, and continuous improvement — so governance is not just about "on time and on budget" but about "fit for purpose."
+> **Core skill:** Ensuring that project processes and deliverables meet defined quality standards (through process audits, deliverable reviews, quality metrics, and continuous improvement), so governance is not just about "on time and on budget" but about "fit for purpose."
 
 ## Why This Matters
 
 A project that delivers on time and on budget but produces a deliverable that fails in production, cannot be operated, or does not meet acceptance criteria has wasted its schedule and budget discipline on a quality failure. Governance that tracks only time and cost is governance that ignores the dimension that matters most to the users and the organization: quality.
 
-Quality assurance in governance inserts the quality dimension into every governance review: Are project processes being followed? Are deliverables meeting their quality criteria? Are quality metrics trending in the right direction? Is the project building the thing right, and is it building the right thing? The project manager does not own quality — the team and the organization's quality function do — but the project manager ensures that quality is visible to governance and that quality failures are treated as seriously as schedule or cost failures.
+Quality assurance in governance inserts the quality dimension into every governance review: Are project processes being followed? Are deliverables meeting their quality criteria? Are quality metrics trending in the right direction? Is the project building the thing right, and is it building the right thing? The project manager does not own quality (the team and the organization's quality function do), but the project manager ensures that quality is visible to governance and that quality failures are treated as seriously as schedule or cost failures.
 
 ## Quality Assurance vs. Quality Control
 
@@ -33,7 +33,7 @@ Quality assurance in governance inserts the quality dimension into every governa
 | **Method** | Process audits, metric tracking, standards compliance | Testing, inspection, peer review, acceptance testing |
 | **Governance question** | Are we building it right? | Did we build the right thing? |
 
-The project manager ensures both are functioning — and that governance sees the evidence.
+The project manager ensures both are functioning, and that governance sees the evidence.
 
 ## Quality in the Governance Agenda
 
@@ -56,7 +56,7 @@ The project manager ensures both are functioning — and that governance sees th
 | **Acceptance criteria pass rate** | Percentage of acceptance criteria met at delivery | < 100% at delivery triggers impact assessment |
 | **Rework effort** | Percentage of effort spent on rework vs. new work | > 15% triggers root cause analysis |
 
-Metrics are selected based on the project's quality plan — not every metric applies to every project. The governance threshold makes the metric actionable: a number that, when crossed, triggers a governance response.
+Metrics are selected based on the project's quality plan; not every metric applies to every project. The governance threshold makes the metric actionable: a number that, when crossed, triggers a governance response.
 
 ## Process Audits
 
@@ -70,7 +70,7 @@ A process audit checks that the project is following its defined processes:
 | **Communication** | Are stakeholder communications following the plan? | Quarterly |
 | **Quality control** | Are testing, review, and acceptance following the quality plan? | Per deliverable |
 
-The audit is not punitive — it is diagnostic. A process that is not being followed is either unnecessary (and should be removed) or necessary (and needs reinforcement). The audit distinguishes between the two.
+The audit is not punitive; it is diagnostic. A process that is not being followed is either unnecessary (and should be removed) or necessary (and needs reinforcement). The audit distinguishes between the two.
 
 ## Quality in Deliverable Acceptance
 
@@ -84,7 +84,7 @@ Governance accepts deliverables based on quality evidence:
 | **UAT complete** | User acceptance sign-off; acceptance criteria evidence |
 | **Release ready** | Deployment plan; rollback plan; operational readiness |
 
-Every gate is a quality checkpoint. A deliverable that passes the gate on schedule but fails on quality is not a gate pass — it is a quality failure papered over with a schedule excuse.
+Every gate is a quality checkpoint. A deliverable that passes the gate on schedule but fails on quality is not a gate pass; it is a quality failure papered over with a schedule excuse.
 
 ## Quality Assurance in Programs
 
@@ -101,7 +101,7 @@ Program quality assurance ensures consistency and integration:
 
 - [ ] Quality metrics are defined, tracked, and reported to governance
 - [ ] Governance agendas include quality alongside schedule and cost
-- [ ] Phase gate criteria include quality evidence — not just schedule status
+- [ ] Phase gate criteria include quality evidence, not just schedule status
 - [ ] Process audits are scheduled and findings are acted on
 - [ ] Deliverable acceptance is gated on quality evidence, not schedule pressure
 - [ ] Quality risks are in the risk register and reviewed at steering committee
@@ -119,7 +119,7 @@ Program quality assurance ensures consistency and integration:
 ## Success Indicators
 
 - Quality metrics are reported alongside schedule and cost at every governance review
-- Phase gates assess quality honestly — gates are not passed on schedule alone
+- Phase gates assess quality honestly; gates are not passed on schedule alone
 - Process audit findings result in process improvements, not just reports
 - Deliverables are accepted on quality evidence, not schedule pressure
 - Quality risks are surfaced and managed with the same rigor as schedule and cost risks
@@ -129,9 +129,9 @@ Program quality assurance ensures consistency and integration:
 - [[01_Project_Governance_Design]]: quality assurance is a governance responsibility
 - [[06_Phase_Gate_Reviews]]: quality evidence is the core of phase gate assessment
 - [[04_Configuration_Management]]: configuration management supports quality through baseline integrity
-- [[04_Risk_and_Issues/00_overview|Risk and Issues]]: quality risks in the risk register
-- [[07_Benefits_and_Closure/00_overview|Benefits and Closure]]: quality failures undermine benefits
+- [[career-path/13_Project_and_Program_Manager/04_Risk_and_Issues/00_overview|Risk and Issues]]: quality risks in the risk register
+- [[career-path/13_Project_and_Program_Manager/07_Benefits_and_Closure/00_overview|Benefits and Closure]]: quality failures undermine benefits
 
 ## Summary
 
-Quality assurance in governance ensures that the project is measured on more than time and cost: quality metrics are tracked and reported alongside schedule and budget, phase gates require quality evidence before passing, process audits diagnose whether the project's processes are working, and deliverable acceptance is gated on quality criteria, not schedule pressure. The project manager does not own quality — but the project manager ensures that governance sees quality clearly and treats quality failures with the same seriousness as schedule or cost failures. A project that delivers on time and on budget but fails on quality has failed completely — and governance that ignores quality until production is governance that failed first.
+Quality assurance in governance ensures that the project is measured on more than time and cost: quality metrics are tracked and reported alongside schedule and budget, phase gates require quality evidence before passing, process audits diagnose whether the project's processes are working, and deliverable acceptance is gated on quality criteria, not schedule pressure. The project manager does not own quality, but the project manager ensures that governance sees quality clearly and treats quality failures with the same seriousness as schedule or cost failures. A project that delivers on time and on budget but fails on quality has failed completely, and governance that ignores quality until production is governance that failed first.

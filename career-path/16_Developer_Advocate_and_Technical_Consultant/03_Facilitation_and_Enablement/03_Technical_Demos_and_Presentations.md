@@ -17,13 +17,13 @@ tags:
 
 # Technical Demos and Presentations
 
-> **Core skill:** Building and delivering technical demonstrations that make the abstract believable — live, remote, or recorded — and that end with the audience knowing the next step.
+> **Core skill:** Building and delivering technical demonstrations that make the abstract believable (live, remote, or recorded) and that end with the audience knowing the next step.
 
 ## Why This Matters
 
 A demo is an argument made with running software. For the advocate it is how a new capability becomes concrete for developers who will never read the release notes; for the consultant it is how a customer sees their own problem solved before committing budget. When it works, skepticism converts to curiosity in minutes. When it fails, the audience remembers the failure, not the technology.
 
-Credibility is the currency. Technical audiences have finely tuned fake detectors: they can feel when a demo is a scripted happy path designed to hide problems, and they discount everything that follows. A demo that shows real behavior — including a considered error and its recovery — earns more belief than one that glides over the edges. The advocate's job is not to pretend the product is finished; it is to show honestly what it does and why that matters.
+Credibility is the currency. Technical audiences have finely tuned fake detectors: they can feel when a demo is a scripted happy path designed to hide problems, and they discount everything that follows. A demo that shows real behavior (including a considered error and its recovery) earns more belief than one that glides over the edges. The advocate's job is not to pretend the product is finished; it is to show honestly what it does and why that matters.
 
 Demos also scale badly if they are not built to last: the same demo is often delivered a dozen times, by you and by others, so the story, the environment, and the fallback plan must all be artifacts, not improvisation. Treating a demo as a designed deliverable rather than a rehearsal of your own knowledge is the difference between a talk you give and an asset your organization owns.
 
@@ -58,6 +58,7 @@ Demos also scale badly if they are not built to last: the same demo is often del
 | Next step | One concrete action they can take today | 5 percent |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     GOAL["Define the one takeaway for the audience"] --> STORY["Script the smallest believable story"]
     STORY --> BUILD["Build and freeze the environment"]
@@ -118,9 +119,9 @@ flowchart LR
 **Story:** [problem; promise; proof; payoff; next step]
 **Environment:** [repo or sandbox; frozen versions; credentials]
 **Beats:**
-1. [setup beat] — [narration point]
-2. [main proof] — [what the audience watches for]
-3. [close] — [next step offered]
+1. [setup beat]: [narration point]
+2. [main proof]: [what the audience watches for]
+3. [close]: [next step offered]
 **Fallbacks:** [recorded file; known-good branch; recovery steps]
 **Limits to state honestly:** [what the demo does not show]
 ```
@@ -146,12 +147,12 @@ flowchart LR
 
 ## Related Topics
 
-- [[07_Facilitation_Techniques]] — presence and room control for live delivery
-- [[01_Workshops_and_Hands_On_Sessions]] — the deeper format when demos are not enough
-- [[01_Technical_Communication/00_overview|Technical Communication]] — the explanation craft behind every beat
-- [[05_Solution_Guidance/00_overview|Solution Guidance]] — the recommendations demos support
-- [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/02_Stakeholder_Communication|Stakeholder Communication (Senior)]] — tailoring the same proof for decision-makers
+- [[07_Facilitation_Techniques]]: presence and room control for live delivery
+- [[01_Workshops_and_Hands_On_Sessions]]: the deeper format when demos are not enough
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/01_Technical_Communication/00_overview|Technical Communication]]: the explanation craft behind every beat
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/05_Solution_Guidance/00_overview|Solution Guidance]]: the recommendations demos support
+- [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/02_Stakeholder_Communication|Stakeholder Communication (Senior)]]: tailoring the same proof for decision-makers
 
 ## Summary
 
-Technical demos and presentations are arguments built from running software: the smallest believable story, an environment frozen and rehearsed until it cannot surprise you, honest handling of limits and failures, and a close that names one concrete next step. The measure of a demo is not applause but belief put into action — and a demo packaged well enough that others can carry it forward without you.
+Technical demos and presentations are arguments built from running software: the smallest believable story, an environment frozen and rehearsed until it cannot surprise you, honest handling of limits and failures, and a close that names one concrete next step. The measure of a demo is not applause but belief put into action, and a demo packaged well enough that others can carry it forward without you.

@@ -16,13 +16,13 @@ tags:
 
 # Setting Team Technical Vision
 
-> **Core skill:** Articulating where the system is going and why — in one page, collaboratively written, and tied to delivery — so the team aligns and challenges in the same direction.
+> **Core skill:** Articulating where the system is going and why (in one page, collaboratively written, and tied to delivery) so the team aligns and challenges in the same direction.
 
 ## Why This Matters
 
-Without a vision, every engineer optimizes locally: five clean implementations of the same concern, three logging patterns, two half-adopted frameworks. The system does not collapse — it diverges, and divergence is expensive to reverse. A vision is the antidote: a shared answer to "where is this system going, and why?" that makes dozens of small decisions consistent without anyone coordinating them.
+Without a vision, every engineer optimizes locally: five clean implementations of the same concern, three logging patterns, two half-adopted frameworks. The system does not collapse. It diverges, and divergence is expensive to reverse. A vision is the antidote: a shared answer to "where is this system going, and why?" that makes dozens of small decisions consistent without anyone coordinating them.
 
-The vision is also the tech lead's most leveraged communication. One page of vision prevents a hundred redundant conversations, and it gives the team something to challenge — which is exactly what keeps it honest. A vision nobody can argue with is a vision nobody read.
+The vision is also the tech lead's most leveraged communication. One page of vision prevents a hundred redundant conversations, and it gives the team something to challenge, which is exactly what keeps it honest. A vision nobody can argue with is a vision nobody read.
 
 ## What a Vision Contains
 
@@ -33,7 +33,7 @@ The vision is also the tech lead's most leveraged communication. One page of vis
 | Non-goals | What the vision is explicitly not | No multi-region expansion this horizon |
 | Evolution path | How the destination will be reached | Phased migration, strangler approach |
 
-The destination is the anchor; the principles are the decision filter; the non-goals are the guardrails; the evolution path is the credibility — a vision without a path is a dream.
+The destination is the anchor; the principles are the decision filter; the non-goals are the guardrails; the evolution path is the credibility. A vision without a path is a dream.
 
 ## The Horizon
 
@@ -43,24 +43,24 @@ The destination is the anchor; the principles are the decision filter; the non-g
 | 12-24 months | A direction with assumptions | Assumptions age; the vision needs revisiting |
 | 5+ years | Philosophy | Untestable; nobody can hold it accountable |
 
-Twelve to twenty-four months is the practical horizon for a team vision: far enough to shape major decisions, near enough that the team can see whether it is coming true. The vision should state its assumptions — about product direction, scale, team size — because those are the things that invalidate it.
+Twelve to twenty-four months is the practical horizon for a team vision: far enough to shape major decisions, near enough that the team can see whether it is coming true. The vision should state its assumptions (about product direction, scale, team size) because those are the things that invalidate it.
 
 ## Writing It Collaboratively
 
 The vision is written with the team, not for them:
 
-1. Draft a seed version from the system's real pressures — incidents, debt, product asks
+1. Draft a seed version from the system's real pressures: incidents, debt, product asks
 2. Circulate it and collect challenge: what is wrong, what is missing, what is unfair
-3. Run a working session to resolve disagreements — the arguments are the value
+3. Run a working session to resolve disagreements. The arguments are the value
 4. Publish the result, crediting the team's input
 5. Revisit at the quarterly planning cycle
 
-The collaboration is not democracy — the lead owns the final call. But a vision the team fought over is owned by the team; a vision handed down is a memo.
+The collaboration is not democracy. The lead owns the final call. But a vision the team fought over is owned by the team; a vision handed down is a memo.
 
 ## The One-Pager Format
 
 ```markdown
-# Technical Vision — [team] — [horizon: 2027]
+# Technical Vision: [team], [horizon: 2027]
 
 ## Destination
 - [ ] Where the system will be in 12-24 months: [statement]
@@ -111,6 +111,7 @@ The vision should change rarely and deliberately. A vision that changes every qu
 | Vision by committee | Every opinion included, no edge left | The lead owns the final call after the challenge |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PRESSURES["System pressures and product asks"] --> SEED["Draft seed vision"]
     SEED --> CHALLENGE["Team challenge and working session"]
@@ -150,7 +151,7 @@ Checklist for setting or refreshing the vision:
 - The team can state the destination and one principle in their own words
 - New engineers absorb the direction in days, not months
 - Roadmap items trace visibly to the vision
-- The vision changed deliberately at least once in the last year — it is alive
+- The vision changed deliberately at least once in the last year; it is alive
 
 ## Related Topics
 
@@ -162,4 +163,4 @@ Checklist for setting or refreshing the vision:
 
 ## Summary
 
-A team technical vision is a one-page, collaboratively written statement of destination, principles, non-goals, evolution path, and assumptions, aimed 12-24 months out. Written with the team, revised on a cadence, and traced by decisions and roadmap items, it turns divergent local optimization into coherent shared direction. The test is not how inspiring the page is — it is whether decisions the lead was not part of still land in the same direction.
+A team technical vision is a one-page, collaboratively written statement of destination, principles, non-goals, evolution path, and assumptions, aimed 12-24 months out. Written with the team, revised on a cadence, and traced by decisions and roadmap items, it turns divergent local optimization into coherent shared direction. The test is not how inspiring the page is. It is whether decisions the lead was not part of still land in the same direction.

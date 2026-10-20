@@ -14,13 +14,13 @@ tags:
 
 # Solution Architecture and Design
 
-> **Core capability:** The solutions architect translates business needs into a feasible solution — options, concept, integration approach, and assurance — that delivery teams can build and operations can run.
+> **Core capability:** The solutions architect translates business needs into a feasible solution (options, concept, integration approach, and assurance) that delivery teams can build and operations can run.
 
 ## Why This Matters
 
 A solution architecture is the bridge between a business need and a working system. It defines the solution's shape: what components exist, how they integrate, what constraints apply (procurement, budget, regulation, legacy), and how the solution will be delivered and sustained. Unlike pure software architecture, the solutions architect works in a world of vendors, mixed estates, commercial constraints, and non-technical stakeholders.
 
-The defining discipline is options thinking: presenting viable alternatives with honest trade-offs rather than defending a preferred technology. The solutions architect who arrives with one option has already failed the business — the option might be right, but it was never tested.
+The defining discipline is options thinking: presenting viable alternatives with honest trade-offs rather than defending a preferred technology. The solutions architect who arrives with one option has already failed the business. The option might be right, but it was never tested.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ The defining discipline is options thinking: presenting viable alternatives with
 ## The Solution Design Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     NEED["Business need"] --> OPTIONS["Options: viable alternatives"]
     OPTIONS --> CONCEPT["Concept: selected design"]
@@ -45,7 +46,7 @@ flowchart LR
     DELIVERY --> LIFECYCLE["Lifecycle: evolved and retired"]
 ```
 
-Each stage gates the next — options before concept, concept before commitment.
+Each stage gates the next: options before concept, concept before commitment.
 
 ## Practical Applications
 
@@ -69,17 +70,17 @@ Each stage gates the next — options before concept, concept before commitment.
 ## Success Indicators
 
 - Options are presented and decisions made on business criteria
-- Delivery teams find the solution architecture useful — not shelfware
+- Delivery teams find the solution architecture useful, not shelfware
 - Integration surprises are rare; the design accounted for the estate
 - Solutions transition to operations without architecture rework
 
 ## Related Capabilities
 
-- [[01_Business_Analysis_and_Capability_Mapping/00_overview|Business Analysis and Capability Mapping]]: needs that drive the solution
-- [[03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: standards the solution must respect
+- [[career-path/15_Solutions_and_Enterprise_Architect/01_Business_Analysis_and_Capability_Mapping/00_overview|Business Analysis and Capability Mapping]]: needs that drive the solution
+- [[career-path/15_Solutions_and_Enterprise_Architect/03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: standards the solution must respect
 - [[career-path/06_Software_Architect/00_overview|Software Architect]]: the technical architecture depth
 - [[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]]: the delivery partner
 
 ## Summary
 
-Solution architecture translates needs into feasible solutions: options before commitment, concept design with honest trade-offs, integration against the real estate, and lifecycle thinking beyond go-live. The solutions architect's credibility is built on the options they present — and the ones the business is glad they saw.
+Solution architecture translates needs into feasible solutions: options before commitment, concept design with honest trade-offs, integration against the real estate, and lifecycle thinking beyond go-live. The solutions architect's credibility is built on the options they present, and the ones the business is glad they saw.

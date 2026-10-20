@@ -14,11 +14,11 @@ tags:
 
 # Benefits and Closure
 
-> **Core capability:** The project manager connects deliverables to value — tracking benefit realization, closing the project with an honest assessment of what was achieved, and ensuring lessons are captured for future projects.
+> **Core capability:** The project manager connects deliverables to value, tracking benefit realization, closing the project with an honest assessment of what was achieved, and ensuring lessons are captured for future projects.
 
 ## Why This Matters
 
-Projects that deliver on time and budget but produce no value are not successes — they are efficiently built failures. The project manager's final responsibility is the honest assessment: did the project achieve its objectives? Were benefits realized? What did we learn? This assessment is uncomfortable when the answers are "partially," "not yet," and "don't do that again" — which makes it the most important assessment the project manager writes.
+Projects that deliver on time and budget but produce no value are not successes; they are efficiently built failures. The project manager's final responsibility is the honest assessment: did the project achieve its objectives? Were benefits realized? What did we learn? This assessment is uncomfortable when the answers are "partially," "not yet," and "don't do that again", which makes it the most important assessment the project manager writes.
 
 Closure is also the transition: handing deliverables to operations, releasing resources, archiving knowledge, and formally ending the project's organizational existence. A project that never closes drifts forever, consuming resources without accountability. The project manager who closes well leaves a clean slate; the one who avoids closure leaves a ghost.
 
@@ -37,6 +37,7 @@ Closure is also the transition: handing deliverables to operations, releasing re
 ## The Closure Sequence
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ACCEPTANCE["Deliverable acceptance by sponsor"] --> HANDOVER["Transition to operations"]
     HANDOVER --> BENEFITS["Benefits assessment: actual vs planned"]
@@ -77,10 +78,10 @@ Closure begins at acceptance and ends only when benefits are measured.
 
 ## Related Capabilities
 
-- [[01_Initiation_and_Charter/00_overview|Initiation and Charter]]: benefits and closure criteria defined at initiation
-- [[04_Risk_and_Issues/00_overview|Risk and Issues]]: benefit risk is part of the risk register
+- [[career-path/13_Project_and_Program_Manager/01_Initiation_and_Charter/00_overview|Initiation and Charter]]: benefits and closure criteria defined at initiation
+- [[career-path/13_Project_and_Program_Manager/04_Risk_and_Issues/00_overview|Risk and Issues]]: benefit risk is part of the risk register
 - [[career-path/12_Technical_Program_Manager/07_Benefits_and_Outcome_Measurement/00_overview|Benefits and Outcome Measurement (TPM)]]: the program-level counterpart
 
 ## Summary
 
-Benefits and closure complete the project lifecycle: delivering value, not just deliverables. The project manager tracks benefits during delivery, assesses realization honestly at closure, transitions deliverables so they survive the handoff, captures lessons that improve the next project, and formally closes the project so it doesn't drift forever. The final status report is the project's epitaph — write one you'd want read at your next project's initiation.
+Benefits and closure complete the project lifecycle: delivering value, not just deliverables. The project manager tracks benefits during delivery, assesses realization honestly at closure, transitions deliverables so they survive the handoff, captures lessons that improve the next project, and formally closes the project so it doesn't drift forever. The final status report is the project's epitaph: write one you'd want read at your next project's initiation.

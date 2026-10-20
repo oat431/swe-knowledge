@@ -15,13 +15,13 @@ tags:
 
 # Planning Cadences and Commitments
 
-> **Core skill:** Creating the conditions for honest plans — real capacity math, commitment levels that mean something, and renegotiation early — without writing the plan yourself or promising privately what the team has not agreed to.
+> **Core skill:** Creating the conditions for honest plans (real capacity math, commitment levels that mean something, and renegotiation early) without writing the plan yourself or promising privately what the team has not agreed to.
 
 ## Why This Matters
 
-A plan is a promise the team makes with its name on it. When the manager builds the conditions for that promise — accurate capacity, clear priorities, a safe space to say "not with this team this cycle" — the plan becomes a commitment stakeholders can build on. When the manager writes the plan alone and hands it down, the team watches dates they never believed in slip exactly as they privately predicted, and the manager learns that plans made without the planners are fiction with a Gantt chart.
+A plan is a promise the team makes with its name on it. When the manager builds the conditions for that promise (accurate capacity, clear priorities, a safe space to say "not with this team this cycle"), the plan becomes a commitment stakeholders can build on. When the manager writes the plan alone and hands it down, the team watches dates they never believed in slip exactly as they privately predicted, and the manager learns that plans made without the planners are fiction with a Gantt chart.
 
-The EM's planning role is conditions, not control. The tech lead owns the technical plan — architecture, sequencing, estimation practice. The EM owns capacity truth (is the team actually available for the committed work, minus leave, interrupts, and support load?), priorities (which commitments serve the goals), and the interface upward (what stakeholders hear and when they hear it). Confusing these ownerships produces either a manager-micromanaged plan nobody owns or a tech-lead plan that ignores reality.
+The EM's planning role is conditions, not control. The tech lead owns the technical plan: architecture, sequencing, estimation practice. The EM owns capacity truth (is the team actually available for the committed work, minus leave, interrupts, and support load?), priorities (which commitments serve the goals), and the interface upward (what stakeholders hear and when they hear it). Confusing these ownerships produces either a manager-micromanaged plan nobody owns or a tech-lead plan that ignores reality.
 
 Commitment discipline is the trust engine. A team known for meeting commitments or renegotiating them early gets scope authority, patience, and the benefit of the doubt. A team that over-promises and quietly under-delivers gets inspections, escalations, and deadlines set by other people.
 
@@ -34,7 +34,7 @@ Capacity is what the team can deliver after subtracting everything that is not c
 | Nominal capacity | Engineer-days in cycle | The starting fiction |
 | Leave and holidays | 5-15 percent | Known in advance; unforgivable to miss |
 | Meetings and ceremonies | 10-20 percent | Planning, standups, reviews, cross-team syncs |
-| Support and interrupts | 15-30 percent | Measure it — see [[07_Delivery_Interrupts_and_Firefighting]] |
+| Support and interrupts | 15-30 percent | Measure it: see [[07_Delivery_Interrupts_and_Firefighting]] |
 | Code review and mentoring | 5-15 percent | Real work that produces no features |
 | New-hire ramp drag | 20-50 percent of a new hire's time plus mentor time | Onboarding costs the team, not just the hire |
 
@@ -46,11 +46,11 @@ Not all statements about the future carry the same weight, and the difference mu
 
 | Level | Definition | If It Slips | Used For |
 |-------|------------|-------------|----------|
-| **Commit** | The team stakes credibility on it; backed by capacity math | A miss — triggers renegotiation and retrospective | External dates, contracted milestones |
+| **Commit** | The team stakes credibility on it; backed by capacity math | A miss: triggers renegotiation and retrospective | External dates, contracted milestones |
 | **Stretch** | Attempted after commits are protected | Expected sometimes; no drama | Ambition without bet-the-trust risk |
-| **Best-effort** | We will work it in order, no date promised | Nothing — no date was given | Exploration, spikes, nice-to-haves |
+| **Best-effort** | We will work it in order, no date promised | Nothing: no date was given | Exploration, spikes, nice-to-haves |
 
-The corruption pattern is silent promotion: a stretch goal quoted to leadership as a commitment, a best-effort item becomes "due Friday." The manager polices the labels — every plan states which items are which, and status reports keep the labels attached.
+The corruption pattern is silent promotion: a stretch goal quoted to leadership as a commitment, a best-effort item becomes "due Friday." The manager polices the labels: every plan states which items are which, and status reports keep the labels attached.
 
 ## Planning with the Tech Lead
 
@@ -70,7 +70,7 @@ Reality changes; honest plans announce the change early.
 
 | Trigger | Renegotiation Move |
 |---------|--------------------|
-| Scope request arrives | Trade: what leaves, or the date moves — never silent addition |
+| Scope request arrives | Trade: what leaves, or the date moves; never silent addition |
 | Discovery invalidates an estimate | Re-scope the item; surface the new picture this week, not at review |
 | Dependency slips | Re-sequence; inform anyone who planned on the date |
 | Illness or departure | Recompute capacity; protect top commitments, renegotiate the rest |
@@ -92,6 +92,7 @@ The renegotiation format is constant: the fact, the impact on commitments, two o
 ## The Planning Cadence
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     GOALS["Team goals this quarter"] --> CAPACITY["Publish honest capacity math"]
     CAPACITY --> TLPLAN["Tech lead brings technical plan and estimates"]
@@ -119,15 +120,15 @@ flowchart TD
 **Mid-cycle renegotiation message template:**
 
 ```markdown
-Commitment update: [item] — status [amber / red]
+Commitment update: [item], status [amber / red]
 
-What changed: [fact — one sentence]
+What changed: [fact, one sentence]
 Impact: [which commitment, how much]
 
 Options:
 1. [De-scope X so the commit date holds]
 2. [Hold scope, move the date by N days]
-3. [Add capacity from Y — cost to Z]
+3. [Add capacity from Y, cost to Z]
 
 Recommendation: [option] because [reason]
 Decision needed by: [date]
@@ -162,4 +163,4 @@ Decision needed by: [date]
 
 ## Summary
 
-Planning cadences and commitments is conditions, not control: publish honest capacity with every subtraction visible, let the tech lead own the technical plan while the manager owns the envelope and priorities, label every commitment as commit, stretch, or best-effort — and never let the labels separate from the numbers. Renegotiate the moment reality shifts, with facts and options, and treat estimation misses as data rather than discipline problems. The manager's test: does every commitment in the plan carry the team's informed consent?
+Planning cadences and commitments is conditions, not control: publish honest capacity with every subtraction visible, let the tech lead own the technical plan while the manager owns the envelope and priorities, label every commitment as commit, stretch, or best-effort, and never let the labels separate from the numbers. Renegotiate the moment reality shifts, with facts and options, and treat estimation misses as data rather than discipline problems. The manager's test: does every commitment in the plan carry the team's informed consent?

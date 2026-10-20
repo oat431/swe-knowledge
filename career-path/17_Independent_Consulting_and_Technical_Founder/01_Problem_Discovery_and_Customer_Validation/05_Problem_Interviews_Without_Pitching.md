@@ -16,15 +16,15 @@ tags:
 
 # Problem Interviews Without Pitching
 
-> **Core skill:** Running discovery conversations that extract facts about the prospect's past and present — avoiding pitches, hypotheticals, and leading questions that contaminate the signal.
+> **Core skill:** Running discovery conversations that extract facts about the prospect's past and present (avoiding pitches, hypotheticals, and leading questions that contaminate the signal).
 
 ## Why This Matters
 
 The interview is the instrument of discovery, and a contaminated instrument is worse than none because it produces data that feels like progress. Pitching mid-interview, eagerly validating every complaint, and asking about the future all generate polite fiction: the prospect tells you what keeps the conversation pleasant, and you write it down as market evidence.
 
-The antidote is a small set of rules applied with discipline. Talk about their life, not your idea. Ask about facts — what happened, what it cost, what they did next — not opinions, predictions, or preferences. Treat compliments as noise and commitments as signal. These rules are borrowed from customer development practice and they work precisely because they are uncomfortable: most conversations drift back toward pitching within three minutes.
+The antidote is a small set of rules applied with discipline. Talk about their life, not your idea. Ask about facts (what happened, what it cost, what they did next), not opinions, predictions, or preferences. Treat compliments as noise and commitments as signal. These rules are borrowed from customer development practice and they work precisely because they are uncomfortable: most conversations drift back toward pitching within three minutes.
 
-For an independent, every discovery interview is also a relationship — which raises the stakes. Done well, the interview demonstrates competence without selling: sharp questions, no posturing, and a next step that respects their time. Done badly, it teaches the prospect that you are like every other vendor, and the warmest person in your network goes quiet.
+For an independent, every discovery interview is also a relationship, which raises the stakes. Done well, the interview demonstrates competence without selling: sharp questions, no posturing, and a next step that respects their time. Done badly, it teaches the prospect that you are like every other vendor, and the warmest person in your network goes quiet.
 
 ## Question Quality
 
@@ -51,11 +51,12 @@ Every weak question invites the prospect to imagine, oblige, or guess. Every str
 | Decision | Find the trigger and the signer | "Who else would weigh in if this got fixed?" |
 | Close | Agree the next step | "Can I share a short idea and get your reaction next week?" |
 
-The arc moves from their world toward your hypothesis — never the reverse. If the prospect asks what you do, answer in one sentence and return the question.
+The arc moves from their world toward your hypothesis, never the reverse. If the prospect asks what you do, answer in one sentence and return the question.
 
 ## The Interview Discipline
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CONTEXT["Their context and role"] --> PROBLEM["Problem in their words"]
     PROBLEM --> COST["Cost of the problem"]
@@ -79,11 +80,11 @@ The discipline is in the sequence: facts before interpretation, cost before solu
 ### Discovery Interview Script
 
 ```markdown
-## Interview Script — <prospect, role>
+## Interview Script: <prospect, role>
 
 1. What does your role own, and what does a normal week look like?
 2. Tell me about the last time <problem area> caused trouble.
-3. What did that cost — time, money, or something else?
+3. What did that cost, time, money, or something else?
 4. What do you do today to work around it?
 5. What have you already tried? What happened?
 6. Where does this rank against everything else on your plate?
@@ -120,4 +121,4 @@ The discipline is in the sequence: facts before interpretation, cost before solu
 
 ## Summary
 
-Problem interviews without pitching are a discipline of restraint: ask about past and present facts, quantify the cost, map the workaround, and let the prospect pull the idea out of you rather than the reverse. The independent who masters this converts conversations into trustworthy market evidence — and, incidentally, into the most credible sales channel they will ever have.
+Problem interviews without pitching are a discipline of restraint: ask about past and present facts, quantify the cost, map the workaround, and let the prospect pull the idea out of you rather than the reverse. The independent who masters this converts conversations into trustworthy market evidence, and, incidentally, into the most credible sales channel they will ever have.

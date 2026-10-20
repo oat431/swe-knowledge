@@ -92,7 +92,7 @@ tags:
 | Module | Verdict | Gap / suggestion |
 |---|---|---|
 | 01 Technology Strategy | ✅ Strong | Add enterprise AI strategy, cost/unit economics |
-| 02 Enterprise & Systems of Systems | ✅ Excellent (due diligence, geopolitics) | — |
+| 02 Enterprise & Systems of Systems | ✅ Excellent (due diligence, geopolitics) | N/A |
 | 03 Decision Governance & Principles | ✅ Strong (longest notes) | Map explicitly to Staff's consensus and standards notes |
 | 04 Organizational Influence | ✅ Strong | Add crisis leadership |
 | 05 Future Readiness & Research | ✅ Strong | Add AI as a worked example of adoption posture |

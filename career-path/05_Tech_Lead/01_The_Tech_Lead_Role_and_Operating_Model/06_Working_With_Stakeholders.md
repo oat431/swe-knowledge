@@ -16,13 +16,13 @@ tags:
 
 # Working With Stakeholders
 
-> **Core skill:** Representing the team's technical reality upward and sideways so stakeholders plan against truth — capacity, timelines, risk, and trade-offs — instead of hope.
+> **Core skill:** Representing the team's technical reality upward and sideways so stakeholders plan against truth (capacity, timelines, risk, and trade-offs) instead of hope.
 
 ## Why This Matters
 
-The team's work is judged by people who never see the code: product managers, executives, adjacent teams, customers. Every mismatch between what they believe and what is true — about capacity, timelines, or risk — eventually surfaces as rework, missed commitments, or a trust deficit that makes every later conversation harder.
+The team's work is judged by people who never see the code: product managers, executives, adjacent teams, customers. Every mismatch between what they believe and what is true (about capacity, timelines, or risk) eventually surfaces as rework, missed commitments, or a trust deficit that makes every later conversation harder.
 
-The tech lead is the translation layer. Engineers speak in uncertainty, dependencies, and complexity; stakeholders speak in dates, scope, and cost. A lead who translates well makes the team look competent and the stakeholders look informed. A lead who translates poorly produces the classic failure: stakeholders learn about problems late, conclude the team is unreliable, and start micromanaging — which makes the problems worse.
+The tech lead is the translation layer. Engineers speak in uncertainty, dependencies, and complexity; stakeholders speak in dates, scope, and cost. A lead who translates well makes the team look competent and the stakeholders look informed. A lead who translates poorly produces the classic failure: stakeholders learn about problems late, conclude the team is unreliable, and start micromanaging, which makes the problems worse.
 
 ## Who Your Stakeholders Are
 
@@ -56,9 +56,9 @@ The map changes quarterly. Rebuild it when the org or the roadmap changes.
 | "We need to refactor the billing module" | "We want to rewrite code for fun" | "The billing module costs us about two days per change and caused three incidents. Paying it down buys roughly a week per quarter." |
 | "The API has 400ms p99 latency" | "The API is slow?" | "Our worst-case response time is inside the product's target, and we have headroom for the next traffic wave." |
 | "This is risky" | "This might fail" | "The risk is X, it is contained to Y, and our fallback is Z. We want a decision by D." |
-| "We have no capacity this quarter" | "The team is lazy" | "Capacity is fully committed to A and B. Adding C means dropping or delaying D — which do you prefer?" |
+| "We have no capacity this quarter" | "The team is lazy" | "Capacity is fully committed to A and B. Adding C means dropping or delaying D. Which do you prefer?" |
 
-The translation rules: lead with outcomes, quantify in cost or delay, name the decision you need, and never hide the uncertainty — shape it.
+The translation rules: lead with outcomes, quantify in cost or delay, name the decision you need, and never hide the uncertainty; shape it.
 
 ## Managing Expectations
 
@@ -77,11 +77,11 @@ The discipline is boring and reliable: the same numbers, the same cadence, no su
 "No" without an alternative is a dead end; "no, and here is what we can do" is a decision. The formula:
 
 1. State what you cannot do, plainly
-2. Give the reason in one sentence — capacity, risk, or sequencing
+2. Give the reason in one sentence: capacity, risk, or sequencing
 3. Offer two or three alternatives with trade-offs
 4. Name who decides
 
-Example: "We cannot ship the reporting upgrade this quarter — capacity is committed to the migration. We can either delay the migration six weeks, ship reporting without the new export format, or have the platform team take the export work. Which one do you want?"
+Example: "We cannot ship the reporting upgrade this quarter. Capacity is committed to the migration. We can either delay the migration six weeks, ship reporting without the new export format, or have the platform team take the export work. Which one do you want?"
 
 ## Communication Rhythms
 
@@ -96,6 +96,7 @@ Example: "We cannot ship the reporting upgrade this quarter — capacity is comm
 Each rhythm has one owner, one format, and one audience. Rhythms you run reliably matter more than any single brilliant presentation.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MAP["Map stakeholders by interest and influence"] --> PLAN["Plan communication rhythms"]
     PLAN --> TRANSLATE["Translate technical reality"]
@@ -107,15 +108,15 @@ flowchart TD
 ## Practical Applications
 
 ```markdown
-## Stakeholder Map — [date]
+## Stakeholder Map: [date]
 
 | Stakeholder | Interest | Influence | Engagement | Rhythm |
 |-------------|----------|-----------|-------------|--------|
 | [name/role] | [high/med/low] | [high/med/low] | [sponsor/inform/serve] | [weekly/monthly/quarterly] |
 
 ## Standing Commitments
-- [ ] Demo: [date] — [what will be shown]
-- [ ] Status update: [day] — [owner]
+- [ ] Demo: [date], [what will be shown]
+- [ ] Status update: [day], [owner]
 - [ ] Risk review: [monthly date]
 - [ ] Incident comms plan: [who informs whom]
 
@@ -128,7 +129,7 @@ Checklist before any stakeholder conversation:
 
 - [ ] What decision or belief do I need to change?
 - [ ] What is the outcome-based framing?
-- [ ] What are the numbers — cost, delay, risk?
+- [ ] What are the numbers: cost, delay, risk?
 - [ ] What alternatives am I offering?
 - [ ] Who decides, and by when?
 
@@ -146,7 +147,7 @@ Checklist before any stakeholder conversation:
 ## Success Indicators
 
 - Stakeholders can describe the team's commitments and risks in their own words
-- No commitment has ever been a surprise to stakeholders — including the misses
+- No commitment has ever been a surprise to stakeholders, including the misses
 - Product decisions get made with the team's real constraints on the table
 - The demo and status rhythms have run without gaps for two quarters
 - Stakeholders come to you with problems early, because they trust the channel
@@ -156,8 +157,8 @@ Checklist before any stakeholder conversation:
 - [[05_Navigating_Ambiguity_and_Incomplete_Authority]]: the same framing discipline applied to influence
 - [[01_The_Tech_Lead_Mandate]]: stakeholder representation is part of the mandate
 - [[07_First_90_Days_as_Tech_Lead]]: stakeholder mapping is a first-30-days activity
-- [[04_Team_Delivery_and_Execution_Leadership/00_overview|Delivery and Execution Leadership]]: commitments and risk are the content of stakeholder work
+- [[career-path/05_Tech_Lead/04_Team_Delivery_and_Execution_Leadership/00_overview|Delivery and Execution Leadership]]: commitments and risk are the content of stakeholder work
 
 ## Summary
 
-Working with stakeholders is a translation and rhythm discipline: map who needs what, run reliable communication cadences, translate technical reality into outcomes and options, and manage expectations with numbers instead of hope. The reward is the rarest asset a team can hold — stakeholders who trust the team's word, even when the word is bad news delivered early.
+Working with stakeholders is a translation and rhythm discipline: map who needs what, run reliable communication cadences, translate technical reality into outcomes and options, and manage expectations with numbers instead of hope. The reward is the rarest asset a team can hold: stakeholders who trust the team's word, even when the word is bad news delivered early.

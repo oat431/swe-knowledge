@@ -17,15 +17,15 @@ tags:
 
 # Risk Adjusted Decision Making
 
-> **Core skill:** Evaluating opportunities with expected value while protecting the downside — because an independent who runs out of business cannot take the next bet.
+> **Core skill:** Evaluating opportunities with expected value while protecting the downside, because an independent who runs out of business cannot take the next bet.
 
 ## Why This Matters
 
-Independents face a stream of asymmetric-looking opportunities: a large fixed-price project with a vague spec, an equity-for-work startup engagement, a product bet that could pay for itself in a year. Untrained judgment evaluates these by their upside — the number quoted in the meeting — and treats uncertainty as a detail. Risk-adjusted thinking evaluates them by probability-weighted value and, critically, by what happens if they go wrong. The independent's portfolio of one has no diversification to absorb a bad year.
+Independents face a stream of asymmetric-looking opportunities: a large fixed-price project with a vague spec, an equity-for-work startup engagement, a product bet that could pay for itself in a year. Untrained judgment evaluates these by their upside (the number quoted in the meeting), and treats uncertainty as a detail. Risk-adjusted thinking evaluates them by probability-weighted value and, critically, by what happens if they go wrong. The independent's portfolio of one has no diversification to absorb a bad year.
 
-Expected value is the first tool: multiply each outcome by its probability and sum. It immediately exposes offers that are exciting but thin. But expected value alone recommends bets that a firm of one cannot survive — a 60 percent chance of a great year and a 40 percent chance of personal insolvency has a fine average and an unacceptable tail. So the second tool is the survival constraint: never risk what you need for what you do not need, prefer reversible commitments, and stage large bets so a failure costs a fraction rather than everything.
+Expected value is the first tool: multiply each outcome by its probability and sum. It immediately exposes offers that are exciting but thin. But expected value alone recommends bets that a firm of one cannot survive: a 60 percent chance of a great year and a 40 percent chance of personal insolvency has a fine average and an unacceptable tail. So the second tool is the survival constraint: never risk what you need for what you do not need, prefer reversible commitments, and stage large bets so a failure costs a fraction rather than everything.
 
-The discipline extends to portfolio design. Anchor work — reliable, lower-margin engagements — pays the baseline and buys the right to take bets. Bets — higher-value, higher-uncertainty plays — create the upside. A healthy independent year sets a deliberate ratio between them, reviews it quarterly, and does not let either type silently crowd out the other.
+The discipline extends to portfolio design. Anchor work (reliable, lower-margin engagements) pays the baseline and buys the right to take bets. Bets (higher-value, higher-uncertainty plays) create the upside. A healthy independent year sets a deliberate ratio between them, reviews it quarterly, and does not let either type silently crowd out the other.
 
 ## Expected Value for a Firm of One
 
@@ -63,7 +63,7 @@ Weight the criteria once; score opportunities against them; discuss any score th
 
 ## Staging and Kill Criteria
 
-A staged commitment turns one large risk into a series of small, informative ones. Every stage has a spend gate and a stop condition written in advance — before the sunk cost makes stopping feel like failure.
+A staged commitment turns one large risk into a series of small, informative ones. Every stage has a spend gate and a stop condition written in advance, before the sunk cost makes stopping feel like failure.
 
 | Stage | Commitment | Gate to Continue | Kill Condition |
 |-------|------------|------------------|----------------|
@@ -73,6 +73,7 @@ A staged commitment turns one large risk into a series of small, informative one
 | Scale | Full engagement or investment | Unit economics or outcomes proven | Evidence contradicts the thesis |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     OPP["Opportunity arrives"] --> EV["Estimate probability weighted value"]
     EV --> SURVIVAL["Check against survival constraint"]
@@ -111,7 +112,7 @@ flowchart LR
 
 ## Success Indicators
 
-- Decisions cite probability, downside, and exposure — not just the headline value
+- Decisions cite probability, downside, and exposure, not just the headline value
 - Single-opportunity exposure never threatens survival; staging is normal practice
 - Kill criteria exist in writing and are actually honored when tripped
 - Anchor work and bets maintain a deliberate, reviewed balance
@@ -127,5 +128,5 @@ flowchart LR
 
 ## Summary
 
-Risk-adjusted decision making combines two instruments: probability-weighted value and a survival constraint that caps exposure, stages commitments, and prefers reversibility. Score opportunities against written criteria, decide at the deadline, and honor kill criteria without letting sunk costs argue. Run anchor work to fund the baseline and deliberate bets to create upside — so that every loss is affordable and every win is still available.
+Risk-adjusted decision making combines two instruments: probability-weighted value and a survival constraint that caps exposure, stages commitments, and prefers reversibility. Score opportunities against written criteria, decide at the deadline, and honor kill criteria without letting sunk costs argue. Run anchor work to fund the baseline and deliberate bets to create upside, so that every loss is affordable and every win is still available.
 

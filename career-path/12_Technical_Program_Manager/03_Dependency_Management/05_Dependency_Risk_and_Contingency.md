@@ -16,13 +16,13 @@ tags:
 
 # Dependency Risk and Contingency
 
-> **Core skill:** Assessing the risk that each dependency will fail — probability of slip, impact if it fires, proximity to need-by date — and building proportionate contingency so the program absorbs dependency failure without cascading into program failure.
+> **Core skill:** Assessing the risk that each dependency will fail (probability of slip, impact if it fires, proximity to need-by date) and building proportionate contingency so the program absorbs dependency failure without cascading into program failure.
 
 ## Why This Matters
 
-Every dependency carries risk. The question is not whether dependencies will slip — some will — but whether the program can absorb the slip without the end date moving. A program with no contingency is a program that treats every dependency as certain — and certainty about dependencies in a multi-team program is a planning error, not a virtue.
+Every dependency carries risk. The question is not whether dependencies will slip (some will) but whether the program can absorb the slip without the end date moving. A program with no contingency is a program that treats every dependency as certain, and certainty about dependencies in a multi-team program is a planning error, not a virtue.
 
-Dependency contingency is insurance purchased before the dependency fails. It takes three forms: time buffer (weeks of float between commit date and need-by date), scope buffer (the ability to reduce or defer the dependent scope), and alternative buffer (a fallback provider, a different approach, a manual process). The TPM's job is to size contingency against the aggregate risk of the dependency portfolio and to deploy it before — not after — a dependency becomes an issue.
+Dependency contingency is insurance purchased before the dependency fails. It takes three forms: time buffer (weeks of float between commit date and need-by date), scope buffer (the ability to reduce or defer the dependent scope), and alternative buffer (a fallback provider, a different approach, a manual process). The TPM's job is to size contingency against the aggregate risk of the dependency portfolio and to deploy it before (not after) a dependency becomes an issue.
 
 A program that ships on time despite three dependency slips did not get lucky. It had contingency sized for those slips, activated at the right moment, and never called it luck.
 
@@ -36,9 +36,9 @@ For each dependency, risk is a function of three variables:
 | **Impact if it slips (I)** | How much schedule damage does a slip cause? | Days or weeks of delay to the dependent workstream |
 | **Proximity (X)** | How close are we to the commitment date? | Weeks remaining; risk intensifies as proximity shrinks |
 
-The dependency's risk score: **Risk = P × I × (1 / X)** — probability times impact, intensified by proximity. A dependency with a 30% chance of slipping, three weeks of impact, and four weeks away is a different problem than the same dependency two weeks away with no mitigation progress.
+The dependency's risk score: **Risk = P × I × (1 / X)**: probability times impact, intensified by proximity. A dependency with a 30% chance of slipping, three weeks of impact, and four weeks away is a different problem than the same dependency two weeks away with no mitigation progress.
 
-The aggregate dependency risk is not the sum of individual risks — some dependencies are correlated (the same vendor failing affects three workstreams). The TPM assesses correlation when sizing the total program contingency.
+The aggregate dependency risk is not the sum of individual risks: some dependencies are correlated (the same vendor failing affects three workstreams). The TPM assesses correlation when sizing the total program contingency.
 
 ## Contingency Strategies
 
@@ -56,6 +56,7 @@ Contingency is not free. The TPM sizes contingency proportionately: critical-pat
 ## Sizing Contingency Against Aggregate Risk
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ASSESS["Assess each dependency: P × I × (1/X)"] --> CORRELATE["Identify correlated dependencies: same vendor, same team, same event"]
     CORRELATE --> AGGREGATE["Aggregate: expected slip in program weeks"]
@@ -65,11 +66,11 @@ flowchart TD
     MONITOR --> ASSESS
 ```
 
-The aggregate expected slip is the program's dependency risk exposure in weeks. Contingency should cover at least the expected exposure, with additional buffer for the correlated worst case. If the expected exposure is six weeks and the program has two weeks of buffer, the program is gambling — and the TPM must communicate that honestly to the sponsor.
+The aggregate expected slip is the program's dependency risk exposure in weeks. Contingency should cover at least the expected exposure, with additional buffer for the correlated worst case. If the expected exposure is six weeks and the program has two weeks of buffer, the program is gambling, and the TPM must communicate that honestly to the sponsor.
 
 ## Contingency Activation Triggers
 
-Contingency is not a last resort — it is a planned response activated at defined triggers:
+Contingency is not a last resort. It is a planned response activated at defined triggers:
 
 | Trigger | Action |
 |---------|--------|
@@ -78,7 +79,7 @@ Contingency is not a last resort — it is a planned response activated at defin
 | **Target team stops responding or goes dark** | Activate alternative provider or internal build option |
 | **Dependency risk score crosses the escalation threshold** | Escalate to sponsor with contingency options and recommendation |
 
-The trigger is set early enough that the contingency has time to work. A contingency activated the day before the need-by date is not contingency — it is panic.
+The trigger is set early enough that the contingency has time to work. A contingency activated the day before the need-by date is not contingency. It is panic.
 
 ## Contingency Communication
 
@@ -138,8 +139,8 @@ A program that burns through its contingency without acknowledging it is a progr
 - [[04_External_Dependency_Management]]: external dependencies require the strongest contingency
 - [[06_Unblocking_Escalations]]: escalation when contingency is insufficient
 - [[07_Dependency_Health_and_Reporting]]: contingency position in the dependency health dashboard
-- [[../04_Risk_and_Issue_Leadership/07_Program_Contingency_Planning|Program Contingency Planning]]: program-level contingency beyond dependencies
+- [[career-path/12_Technical_Program_Manager/04_Risk_and_Issue_Leadership/07_Program_Contingency_Planning|Program Contingency Planning]]: program-level contingency beyond dependencies
 
 ## Summary
 
-Dependency risk and contingency is the TPM's insurance discipline: assess each dependency's probability of slip, impact, and proximity; calculate the aggregate risk exposure across the program; size contingency (time, scope, alternative) to cover it; and activate contingency at defined triggers before the dependency fails. Contingency is a program asset — transparent, tracked, consumed deliberately, and never a secret. Programs that absorb dependency slips without moving their date are not lucky; they are contingently funded.
+Dependency risk and contingency is the TPM's insurance discipline: assess each dependency's probability of slip, impact, and proximity; calculate the aggregate risk exposure across the program; size contingency (time, scope, alternative) to cover it; and activate contingency at defined triggers before the dependency fails. Contingency is a program asset, transparent, tracked, consumed deliberately, and never a secret. Programs that absorb dependency slips without moving their date are not lucky; they are contingently funded.

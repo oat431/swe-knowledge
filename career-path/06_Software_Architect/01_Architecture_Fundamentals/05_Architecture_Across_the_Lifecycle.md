@@ -17,13 +17,13 @@ tags:
 
 # Architecture Across the Lifecycle
 
-> **Core skill:** Embedding architecture inside delivery — applying the just-enough-architecture principle so that structure is intentional without becoming a phase that blocks progress.
+> **Core skill:** Embedding architecture inside delivery, applying the just-enough-architecture principle so that structure is intentional without becoming a phase that blocks progress.
 
 ## Why This Matters
 
-Architecture has a lifecycle problem. Waterfall treats architecture as an upfront phase whose output is handed off to implementation — producing shelfware documents and a structure designed for requirements that no longer exist by the time the system ships. Agile's reaction was to treat architecture as emergent — but emergence without intention produces systems that look like the first path taken through them, shaped by the order features were built rather than by structural reasoning.
+Architecture has a lifecycle problem. Waterfall treats architecture as an upfront phase whose output is handed off to implementation, producing shelfware documents and a structure designed for requirements that no longer exist by the time the system ships. Agile's reaction was to treat architecture as emergent, but emergence without intention produces systems that look like the first path taken through them, shaped by the order features were built rather than by structural reasoning.
 
-The architect who cannot operate across the lifecycle is either ignored (the team builds without architecture) or resented (the architect blocks delivery with upfront design). The alternative is a discipline you might call just-enough architecture: structural decisions made at the last responsible moment, embedded in increment delivery, and validated by working software rather than by document review. This note covers the three paradigms — upfront, incremental, continuous — and the practices that keep architecture intentional while delivery stays fast.
+The architect who cannot operate across the lifecycle is either ignored (the team builds without architecture) or resented (the architect blocks delivery with upfront design). The alternative is a discipline you might call just-enough architecture: structural decisions made at the last responsible moment, embedded in increment delivery, and validated by working software rather than by document review. This note covers the three paradigms (upfront, incremental, continuous) and the practices that keep architecture intentional while delivery stays fast.
 
 ## The Three Paradigms
 
@@ -36,7 +36,7 @@ The architect who cannot operate across the lifecycle is either ignored (the tea
 | **Reaction to change** | Change request; re-planning | Backlog adjustment; architecture stories | Automated detection; team corrects in flight |
 | **Primary risk** | Architecture obsoleted by requirements change before delivery | Architecture fragmented across increments; no whole-system view | False positives from automated checks; rigidity of pipeline rules |
 
-The paradigm is not a choice of religion. It is a calibration: how much architecture, how early, and how validated — matched to the system's stakes, change rate, and team maturity.
+The paradigm is not a choice of religion. It is a calibration: how much architecture, how early, and how validated, matched to the system's stakes, change rate, and team maturity.
 
 ## The Just-Enough-Architecture Principle
 
@@ -49,7 +49,7 @@ Just-enough architecture is not minimal architecture; it is architecture proport
 | **Validate with working software** | Architecture is not real until code exercises it | Every increment delivers running code that exercises one or more architectural decisions |
 | **Record decisions, not specifications** | ADRs carry the reasoning; code carries the structure | Write ADRs for structural decisions; keep architecture description at the view level, not the specification level |
 
-The principle does not mean "no upfront architecture." It means upfront architecture limited to decisions that cannot be deferred — system boundaries, platform commitments, regulatory constraints — and everything else deferred to increment delivery.
+The principle does not mean "no upfront architecture." It means upfront architecture limited to decisions that cannot be deferred (system boundaries, platform commitments, regulatory constraints) and everything else deferred to increment delivery.
 
 ## Intentional Architecture in Iterative Delivery
 
@@ -82,9 +82,10 @@ The Scaled Agile Framework formalizes architecture runway as "existing code, com
 | **Accidental complexity** | Structural complication that accumulated without a decision; the most expensive category | Refactor when discovered; add the structural decision that was missing |
 | **Strategic investment** | Upfront architectural work that reduces future cost or risk; justified by projected savings | Record in an ADR with the projected benefit; verify the benefit materialized |
 
-The distinction between technical debt and intentional pragmatism is the presence or absence of a plan: debt is tracked and scheduled; pragmatism is a conscious choice with a named trigger for revisiting. The architect's job is to keep debt visible and pragmatism honest — not to pretend every shortcut is a strategy.
+The distinction between technical debt and intentional pragmatism is the presence or absence of a plan: debt is tracked and scheduled; pragmatism is a conscious choice with a named trigger for revisiting. The architect's job is to keep debt visible and pragmatism honest, not to pretend every shortcut is a strategy.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     FEATURE["Feature requests"] --> RUNWAY["Architecture runway exists"]
     RUNWAY --> |"Yes"| BUILD["Team builds without architectural delay"]
@@ -106,7 +107,7 @@ flowchart TD
 - [ ] Architecture runway extends one to two increments ahead of feature delivery
 - [ ] Every increment validates at least one architectural decision with running code
 - [ ] Architecture description is updated in the same increment as the structural change
-- [ ] Technical debt is tracked, visible, and scheduled — not accumulated silently
+- [ ] Technical debt is tracked, visible, and scheduled, not accumulated silently
 - [ ] Intentional pragmatism is paired with a named trigger for revisiting
 
 ### Architecture Runway Assessment Template
@@ -123,7 +124,7 @@ flowchart TD
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
-| **Architecture as a phase** | Architecture happens once, upfront, in isolation from delivery — and is obsolete by the time code ships | Embed architecture in increment delivery; validate with working software |
+| **Architecture as a phase** | Architecture happens once, upfront, in isolation from delivery, and is obsolete by the time code ships | Embed architecture in increment delivery; validate with working software |
 | **Emergence without intention** | Structure is whatever survived the first path through the backlog | Maintain intentional architecture; review structure at increment boundaries |
 | **Runway too short** | Feature teams blocked waiting for structural work to complete | Maintain runway one to two increments ahead of feature demand |
 | **Runway too long** | Architectural work far ahead of features builds what is never used | Stop runway at two increments; any further is speculation |
@@ -140,12 +141,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[02_Architecture_vs_Design]] — how the architecture-design boundary moves through the lifecycle
-- [[04_Architecture_Decision_Making]] — the decision process that operates inside increment delivery
-- [[07_Architecture_and_Quality_Attributes]] — quality scenarios as increment validation targets
-- [[06_Deployability_and_Operability]] — deployment architecture as a lifecycle concern
-- [[career-path/05_Tech_Lead/03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture (Tech Lead)]] — the team-side owner of increment architecture
+- [[02_Architecture_vs_Design]]: how the architecture-design boundary moves through the lifecycle
+- [[04_Architecture_Decision_Making]]: the decision process that operates inside increment delivery
+- [[07_Architecture_and_Quality_Attributes]]: quality scenarios as increment validation targets
+- [[06_Deployability_and_Operability]]: deployment architecture as a lifecycle concern
+- [[career-path/05_Tech_Lead/03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture (Tech Lead)]]: the team-side owner of increment architecture
 
 ## Summary
 
-Architecture across the lifecycle means embedding structural decisions inside delivery rather than treating them as a separate phase. The just-enough-architecture principle governs: decide at the last responsible moment, design for the known, validate with working software, and record decisions rather than specifications. In incremental delivery, architecture runway keeps structural work one to two increments ahead of features; technical debt is tracked and scheduled while intentional pragmatism is paired with a named revisit trigger. The architect's value is not in producing a comprehensive document at project start — it is in keeping the structure intentional through every increment, validated by running code, and visible to anyone who needs to understand why the system looks the way it does.
+Architecture across the lifecycle means embedding structural decisions inside delivery rather than treating them as a separate phase. The just-enough-architecture principle governs: decide at the last responsible moment, design for the known, validate with working software, and record decisions rather than specifications. In incremental delivery, architecture runway keeps structural work one to two increments ahead of features; technical debt is tracked and scheduled while intentional pragmatism is paired with a named revisit trigger. The architect's value is not in producing a comprehensive document at project start. It is in keeping the structure intentional through every increment, validated by running code, and visible to anyone who needs to understand why the system looks the way it does.

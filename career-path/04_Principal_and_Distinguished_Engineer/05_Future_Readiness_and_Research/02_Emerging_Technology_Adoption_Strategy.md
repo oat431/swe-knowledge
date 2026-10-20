@@ -16,13 +16,13 @@ tags:
 
 # Emerging Technology Adoption Strategy
 
-> **Core skill:** The principal engineer defines the organization's deliberate posture on every significant emerging technology — choosing when to lead, fast-follow, follow, watch, or ignore — and writes the adoption decision memo that commits resources and sets exit criteria.
+> **Core skill:** The principal engineer defines the organization's deliberate posture on every significant emerging technology (choosing when to lead, fast-follow, follow, watch, or ignore) and writes the adoption decision memo that commits resources and sets exit criteria.
 
 ## Why This Matters
 
-Organizations default to two failure modes on emerging technology: adopting everything new and losing coherence, or adopting nothing and losing relevance. The first produces a graveyard of half-adopted frameworks and abandoned platforms. The second produces a competitive disadvantage that compounds silently — the organization wakes up five years late to a shift its competitors rode from the start.
+Organizations default to two failure modes on emerging technology: adopting everything new and losing coherence, or adopting nothing and losing relevance. The first produces a graveyard of half-adopted frameworks and abandoned platforms. The second produces a competitive disadvantage that compounds silently. The organization wakes up five years late to a shift its competitors rode from the start.
 
-The principal's role is to make the posture deliberate. For each significant technology shift, the organization should be able to state its posture — lead, fast-follow, follow, watch, or ignore — and cite the reasoning. Deliberate postures are force-multiplying because they concentrate investment: leading on one technology means you are not leading on five others, and that honesty prevents the portfolio from becoming unfunded aspiration.
+The principal's role is to make the posture deliberate. For each significant technology shift, the organization should be able to state its posture (lead, fast-follow, follow, watch, or ignore) and cite the reasoning. Deliberate postures are force-multiplying because they concentrate investment: leading on one technology means you are not leading on five others, and that honesty prevents the portfolio from becoming unfunded aspiration.
 
 ## The Adoption Posture Spectrum
 
@@ -34,7 +34,7 @@ The principal's role is to make the posture deliberate. For each significant tec
 | **Watch** | Monitor without investment; reassess at each strategy cycle | Minimal: horizon scanning only; no capacity committed | Risk of falling behind if posture is wrong |
 | **Ignore** | Deliberately not adopting; the technology does not fit strategy | None | Risk of misjudgment if posture is wrong |
 
-The spectrum is not a maturity ladder — not every technology graduates from Watch to Lead. The right posture for most technologies is Follow or Watch. The principal's discipline is reserving Lead and Fast-follow for the one or two technologies where the organization can genuinely differentiate.
+The spectrum is not a maturity ladder. Not every technology graduates from Watch to Lead. The right posture for most technologies is Follow or Watch. The principal's discipline is reserving Lead and Fast-follow for the one or two technologies where the organization can genuinely differentiate.
 
 ## Decision Criteria Per Posture
 
@@ -48,7 +48,7 @@ Selecting the right posture requires answering five questions for each technolog
 | **Reversibility** | Can we exit if the technology fails to deliver? | Irreversible: we are betting the org's direction | Partially reversible: integration layer limits lock-in | Fully reversible: exit costs are manageable |
 | **Timing** | Is now the right moment or would a delay improve outcomes? | First-mover advantage is real and defensible | Early evidence of production viability exists | Technology is proven across multiple organizations |
 
-A technology that fails to meet the threshold for at least Follow remains in Watch. A technology that does not align with strategy at all moves to Ignore — and the principal's job includes defending that decision against internal enthusiasm.
+A technology that fails to meet the threshold for at least Follow remains in Watch. A technology that does not align with strategy at all moves to Ignore, and the principal's job includes defending that decision against internal enthusiasm.
 
 ## When to Lead
 
@@ -62,7 +62,7 @@ Leading is the most expensive posture and should be reserved for technologies wh
 | **First-mover durability** | The advantage must survive fast-followers | Does leading create a moat: data, network effects, integration depth, or brand? |
 | **Executive sponsorship** | Leading bets need air cover when they wobble | Does the CTO/VPE understand the risk and commit to the timeline? |
 
-If three or more conditions are absent, the organization should fast-follow or follow — not lead. The principal's hardest discipline is saying no to leading when the enthusiasm is high but the conditions are not met.
+If three or more conditions are absent, the organization should fast-follow or follow, not lead. The principal's hardest discipline is saying no to leading when the enthusiasm is high but the conditions are not met.
 
 ## When to Follow
 
@@ -75,11 +75,11 @@ Following is not failure. For the majority of technologies, following is the cor
 | The organization lacks absorptive capacity: teams are fully loaded, training budget is zero | Adopting early with no capacity guarantees failure |
 | Multiple credible competitors have already adopted and published results | Learn from their mistakes; adopt with their playbook |
 
-The discipline of following is honesty: calling a commodity a commodity instead of pretending it is strategic. Organizations that lead on too many fronts lead on none — they just take risks without capturing returns.
+The discipline of following is honesty: calling a commodity a commodity instead of pretending it is strategic. Organizations that lead on too many fronts lead on none. They just take risks without capturing returns.
 
 ## The Adoption Decision Memo
 
-Every posture change — from Watch to Trial, Trial to Adopt, or Adopt to Retire — is documented in a decision memo that survives the decision-makers.
+Every posture change (from Watch to Trial, Trial to Adopt, or Adopt to Retire) is documented in a decision memo that survives the decision-makers.
 
 ```markdown
 # Adoption Decision Memo: [Technology Name]
@@ -97,7 +97,7 @@ Every posture change — from Watch to Trial, Trial to Adopt, or Adopt to Retire
 - Approved by: [CTO, VPE, or architecture review board]
 ```
 
-The memo is public. When every engineer can read why the organization is leading on Rust but following on WebAssembly, the posture is accountable — and the principal's reasoning is tested by the organization's collective intelligence.
+The memo is public. When every engineer can read why the organization is leading on Rust but following on WebAssembly, the posture is accountable, and the principal's reasoning is tested by the organization's collective intelligence.
 
 ## Posture Portfolio Management
 
@@ -111,6 +111,7 @@ The portfolio view prevents posture inflation: declaring ten Leads when only two
 | **Ignore postures that hold** | Posture survives annual review with evidence | Posture flips to Follow after one enthusiastic hire |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SIGNAL["Emerging technology signal from foresight"] --> EVALUATE["Evaluate against five decision criteria"]
     EVALUATE --> POSTURE["Select posture: lead, fast-follow, follow, watch, or ignore"]
@@ -156,10 +157,10 @@ flowchart TD
 
 - [[01_Technology_Foresight]]: the scanning capability that identifies what to posture on
 - [[03_Prototyping_and_Proof_of_Concept_Leadership]]: the de-risking layer before posture commitments
-- [[01_Technology_Strategy/00_overview|Technology Strategy]]: where adoption postures become strategy
+- [[career-path/04_Principal_and_Distinguished_Engineer/01_Technology_Strategy/00_overview|Technology Strategy]]: where adoption postures become strategy
 - [[career-path/03_Staff_Engineer/03_Technical_Strategy/02_Technology_Betting|Technology Betting (Staff)]]: the bet taxonomy this scales to org-level
 - [[career-path/18_Applied_AI_Engineer/00_overview|Applied AI Engineer]]: a domain where posture decisions are urgent and consequential
 
 ## Summary
 
-Emerging technology adoption strategy is the principal's discipline of deliberate posture: classifying every significant technology as Lead, Fast-Follow, Follow, Watch, or Ignore based on strategic fit, organizational readiness, ecosystem maturity, reversibility, and timing. The posture portfolio is managed as a constrained set — no more than two Leads at any time — with every posture change documented in a public adoption decision memo that survives the decision-makers. The discipline is not picking winners; it is reserving the most expensive postures for the technologies that genuinely differentiate, following deliberately on everything else, and re-examining every posture annually.
+Emerging technology adoption strategy is the principal's discipline of deliberate posture: classifying every significant technology as Lead, Fast-Follow, Follow, Watch, or Ignore based on strategic fit, organizational readiness, ecosystem maturity, reversibility, and timing. The posture portfolio is managed as a constrained set (no more than two Leads at any time), with every posture change documented in a public adoption decision memo that survives the decision-makers. The discipline is not picking winners; it is reserving the most expensive postures for the technologies that genuinely differentiate, following deliberately on everything else, and re-examining every posture annually.

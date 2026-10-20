@@ -16,13 +16,13 @@ tags:
 
 # Agents and Workflow Automation in Production
 
-> **Core skill:** Deploying autonomy with blast-radius control — scoped tools, caps, and reversibility on every action an agent can take, with autonomy expanded only as evidence earns it.
+> **Core skill:** Deploying autonomy with blast-radius control: scoped tools, caps, and reversibility on every action an agent can take, with autonomy expanded only as evidence earns it.
 
 ## Why This Matters
 
 Assistance and automation are different risk classes. A system that drafts a response can be wrong cheaply; a system that sends it, files it, pays it, or changes a record has taken an action with consequences. When the customer's ask shifts from "help our people do the work" to "do the work," the FDE's problem changes from output quality to blast-radius control: what can this agent reach, what can it change, what happens when it is wrong, and how does anyone find out in time. Enterprises that welcome a drafting assistant will block an autonomous actor until those questions have concrete answers.
 
-Agents in customer environments also operate inside workflows they do not own. Triggers arrive from the customer's systems, actions land in their records, approvals involve their people, and failures must be handled by their operations. An agent is thus a production component — it needs idempotency, defined failure behavior, audit trails, and a kill switch — with the added twist that its decisions are probabilistic. The engineering answer is to make its permissions, limits, and reversibility the first design artifacts, not afterthoughts bolted on after a pilot incident.
+Agents in customer environments also operate inside workflows they do not own. Triggers arrive from the customer's systems, actions land in their records, approvals involve their people, and failures must be handled by their operations. An agent is thus a production component (it needs idempotency, defined failure behavior, audit trails, and a kill switch), with the added twist that its decisions are probabilistic. The engineering answer is to make its permissions, limits, and reversibility the first design artifacts, not afterthoughts bolted on after a pilot incident.
 
 Trust is built by graduating, not by promising. The path from suggestion to action runs through supervision: dry runs on real cases, review of every action in a pilot, limited autonomy under caps, and full autonomy only in scopes where the agent's record is proven. The FDE designs the graduation ladder with exit criteria, communicates it honestly to the customer, and keeps the audit trail that makes any later expansion a decision based on evidence rather than enthusiasm.
 
@@ -54,11 +54,12 @@ Trust is built by graduating, not by promising. The path from suggestion to acti
 |---------|-----------------|
 | Triggers and scheduling | Prefer event triggers with idempotent handling; schedule with drift tolerance |
 | Duplicate protection | Idempotency keys per action; dedupe by business identity |
-| Failure handling | Defined retry policy, then handoff to a human queue — never silent stop |
+| Failure handling | Defined retry policy, then handoff to a human queue: never silent stop |
 | Human handoff | A clear path for the agent to say "I cannot safely do this" |
 | Reporting | A regular digest of what the agent did, changed, and skipped |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SCOPE["Scope tools and permissions"] --> LIMIT["Set caps and approvals"]
     LIMIT --> DRYRUN["Dry run against real cases"]
@@ -85,7 +86,7 @@ The ladder is walked in this order, and each rung's exit criteria are agreed wit
 ### Agent Deployment Plan Template
 
 ```markdown
-## Agent Deployment Plan — <agent, workflow, date>
+## Agent Deployment Plan: <agent, workflow, date>
 
 | Field | Value |
 |-------|-------|
@@ -122,10 +123,10 @@ The ladder is walked in this order, and each rung's exit criteria are agreed wit
 
 - [[05_Human_in_the_Loop_Workflows]]
 - [[06_Cost_Latency_and_Scale_in_the_Field]]
-- [[03_Integration_and_Deployment_Engineering/00_overview|Integration and Deployment Engineering]]
+- [[career-path/19_Forward_Deployed_Engineer/03_Integration_and_Deployment_Engineering/00_overview|Integration and Deployment Engineering]]
 - [[career-path/18_Applied_AI_Engineer/01_LLM_Application_Patterns/00_overview|LLM Application Patterns (Applied AI)]]
 - [[body-of-knowledge/CyBOK/01_Risk_Management_and_Governance|Risk Management and Governance]]
 
 ## Summary
 
-Agents and workflow automation in production are a blast-radius discipline first and a capability second: scope the credentials, allowlist the actions, cap the volumes, make the actions reversible, and graduate autonomy only as evidence accumulates. An agent the customer's own operators can stop, inspect, and audit — and that fails into a human queue instead of silence — is automation they can live with. The FDE's job is to make that control structure the deployment's most solid engineering, so autonomy can expand without a reckoning.
+Agents and workflow automation in production are a blast-radius discipline first and a capability second: scope the credentials, allowlist the actions, cap the volumes, make the actions reversible, and graduate autonomy only as evidence accumulates. An agent the customer's own operators can stop, inspect, and audit, and that fails into a human queue instead of silence, is automation they can live with. The FDE's job is to make that control structure the deployment's most solid engineering, so autonomy can expand without a reckoning.

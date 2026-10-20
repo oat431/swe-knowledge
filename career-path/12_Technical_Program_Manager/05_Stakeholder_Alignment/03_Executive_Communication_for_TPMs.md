@@ -16,13 +16,13 @@ tags:
 
 # Executive Communication for TPMs
 
-> **Core skill:** The TPM communicates program status to leadership with radical honesty — bad news early, decisions framed as options, status at the altitude executives need to make resource and strategy choices, and never hiding a problem that will become a crisis.
+> **Core skill:** The TPM communicates program status to leadership with radical honesty, bad news early, decisions framed as options, status at the altitude executives need to make resource and strategy choices, and never hiding a problem that will become a crisis.
 
 ## Why This Matters
 
-Executive communication is the TPM's highest-stakes channel because executives control the resources, the strategy, and the program's existence. It is also the channel where TPMs are most tempted to shade the truth — "the date is tight but we are tracking" instead of "we will miss the date unless we descope or add headcount." The temptation is survivable in the short term and catastrophic in the long term, because the executive who discovers the truth from someone else never trusts the TPM's status again.
+Executive communication is the TPM's highest-stakes channel because executives control the resources, the strategy, and the program's existence. It is also the channel where TPMs are most tempted to shade the truth: "the date is tight but we are tracking" instead of "we will miss the date unless we descope or add headcount." The temptation is survivable in the short term and catastrophic in the long term, because the executive who discovers the truth from someone else never trusts the TPM's status again.
 
-The executive's constraint is attention, not intelligence. They can understand the program deeply — they cannot spend an hour understanding it. The TPM's discipline is compression without distortion: the program's reality in the fewest possible words, with the clearest possible decision ask, and nothing hidden that would change the decision if known.
+The executive's constraint is attention, not intelligence. They can understand the program deeply; they cannot spend an hour understanding it. The TPM's discipline is compression without distortion: the program's reality in the fewest possible words, with the clearest possible decision ask, and nothing hidden that would change the decision if known.
 
 ## The Executive Communication Principles
 
@@ -41,17 +41,17 @@ The steering committee is the program's executive governance forum. The TPM's de
 | Slide | Content | Rule |
 |-------|---------|------|
 | 1: Executive Summary | RAG status, top-line milestone forecast, one-sentence program health | One page; readable in 30 seconds |
-| 2: Decisions Required | What is being asked, options, recommendation, deadline | Decisions before status — decide first, then review |
+| 2: Decisions Required | What is being asked, options, recommendation, deadline | Decisions before status: decide first, then review |
 | 3: Milestone Dashboard | Key milestones with RAG, forecast finish, variance | Red means "not on track and needs a decision" |
 | 4: Top Risks | Top 3-5 risks with impact, mitigation, and decision needed | Risks without decisions are complaints |
 | 5: Dependency Status | Critical cross-team dependencies with RAG | Only dependencies the executive can unblock |
 | 6: Appendix | Supporting data, detailed timeline, risk register | Referenced, not presented |
 
-The rule: the deck is distributed 48 hours before the meeting. The meeting does not read slides — it resolves the decisions on slide 2. Any slide that requires reading aloud is a waste of executive time.
+The rule: the deck is distributed 48 hours before the meeting. The meeting does not read slides; it resolves the decisions on slide 2. Any slide that requires reading aloud is a waste of executive time.
 
 ## Writing Executive Status: The One-Page Rule
 
-The TPM's most frequent executive communication is the status update — an email, a Slack message, or a dashboard snapshot. It follows the one-page rule: if it does not fit on one page, the executive will not read it.
+The TPM's most frequent executive communication is the status update, an email, a Slack message, or a dashboard snapshot. It follows the one-page rule: if it does not fit on one page, the executive will not read it.
 
 | Section | Content | Length |
 |---------|---------|--------|
@@ -61,7 +61,7 @@ The TPM's most frequent executive communication is the status update — an emai
 | Decisions needed | What is being asked of the executive, options, deadline | 2-3 bullets |
 | Key risks | Top 3 risks with mitigation status | Table, 3 rows |
 
-A yellow status means "on track with known risks that are managed." A red status means "not on track and needs a decision or intervention." The TPM never calls a program green when it is yellow — the downgrade is harder later, and the executive remembers the false green.
+A yellow status means "on track with known risks that are managed." A red status means "not on track and needs a decision or intervention." The TPM never calls a program green when it is yellow; the downgrade is harder later, and the executive remembers the false green.
 
 ## The Bad News Delivery
 
@@ -73,13 +73,14 @@ Bad news to executives follows a discipline that preserves trust:
 4. **Own the miss.** "We missed the forecast." Not: "External factors caused a delay."
 5. **State what changes to prevent recurrence.** "We are adding an integration checkpoint at week three of every milestone to catch this earlier."
 
-The TPM who delivers bad news this way builds executive trust. The TPM who delays, hedges, or blames burns it — and trust burned in the executive channel is trust burned in the channel that controls resources.
+The TPM who delivers bad news this way builds executive trust. The TPM who delays, hedges, or blames burns it, and trust burned in the executive channel is trust burned in the channel that controls resources.
 
 ## The Escalation Decision Tree
 
 Not everything goes to executives. The TPM escalates when the decision exceeds the program's authority, the risk exceeds the program's risk appetite, or a dependency is blocked outside the program's influence.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ISSUE["Issue arises"] --> CAN["Can the program resolve it?"]
     CAN -- Yes --> RESOLVE["Resolve within the program"]
@@ -109,7 +110,7 @@ Executive disengagement is a program risk: the steering committee attendance dro
 ### Executive Status Template
 
 ```markdown
-# [Program Name] — Status Update — [Date]
+# [Program Name]: Status Update, [Date]
 
 **Program Health: [Green / Yellow / Red]**
 [One-sentence explanation. Red always names the decision needed.]
@@ -150,7 +151,7 @@ Executive disengagement is a program risk: the steering committee attendance dro
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
 | **Happy-status syndrome** | Problems hidden until crisis; trust destroyed | Report yellow when risks are known; red when intervention is needed |
-| **Complaint escalation** | "We have a problem" — no options, no recommendation | Escalate options, not problems |
+| **Complaint escalation** | "We have a problem": no options, no recommendation | Escalate options, not problems |
 | **Surprising the sponsor** | Sponsor blindsided in steering committee; credibility lost | Brief the sponsor before every steering committee |
 | **Status without decisions** | Executive time spent on information, not decision-making | Every steering committee has at least one decision on the agenda |
 | **Too much detail** | Executives cannot extract the decision signal from the noise | One page; decision on top; appendix for detail |
@@ -169,9 +170,9 @@ Executive disengagement is a program risk: the steering committee attendance dro
 - [[02_Communication_Planning]]: the plan that determines executive cadence and channel
 - [[04_Managing_Stakeholder_Expectations]]: the expectation management that prevents executive surprises
 - [[05_Stakeholder_Negotiation]]: negotiating scope and resources with executive stakeholders
-- [[06_Decision_Facilitation/00_overview|Decision Facilitation]]: the steering committee is a decision forum
+- [[career-path/12_Technical_Program_Manager/06_Decision_Facilitation/00_overview|Decision Facilitation]]: the steering committee is a decision forum
 - [[career-path/11_Engineering_Manager/07_Manager_Communication/02_Representing_the_Team_Upward|Representing the Team Upward (EM)]]: the EM's upward communication discipline
 
 ## Summary
 
-Executive communication for TPMs is the discipline of compression without distortion: honest status that calls red when it is red, bad news delivered first with options, steering committee decks that respect attention and force decisions, and escalation that carries recommendation to the sponsor before it reaches the room. The TPM who communicates to executives this way builds the trust that controls resources; the TPM who shades the truth burns it — and trust burned in the executive channel is trust that does not return.
+Executive communication for TPMs is the discipline of compression without distortion: honest status that calls red when it is red, bad news delivered first with options, steering committee decks that respect attention and force decisions, and escalation that carries recommendation to the sponsor before it reaches the room. The TPM who communicates to executives this way builds the trust that controls resources; the TPM who shades the truth burns it, and trust burned in the executive channel is trust that does not return.

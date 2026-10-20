@@ -16,13 +16,13 @@ tags:
 
 # Building Technical Culture at Scale
 
-> **Core skill:** The principal engineer defines, models, and reinforces the organization's technical culture — the values, norms, rituals, and signals that shape how engineering work gets done — and designs interventions that close the gap between the stated culture and the lived one.
+> **Core skill:** The principal engineer defines, models, and reinforces the organization's technical culture (the values, norms, rituals, and signals that shape how engineering work gets done) and designs interventions that close the gap between the stated culture and the lived one.
 
 ## Why This Matters
 
 Every organization has a technical culture, whether it was designed or not. The undesigned culture is the aggregate of the loudest voices, the most recent crises, and the patterns that happened to survive. It rewards whatever got rewarded last, values whatever the last promoted principal valued, and drifts with every leadership change. The principal's role is to make culture deliberate: defining what the organization values, modeling it visibly, and building the rituals and signals that reinforce it at scale.
 
-Culture is also the principal's most durable output. Strategies are replaced, architectures evolve, and platforms are rebuilt — but the engineering culture a principal builds persists through those changes and shapes the quality of every decision made after the principal leaves. A principal who builds a culture of rigorous design review, blameless post-incident learning, and generous mentoring has multiplied their impact into every engineer who works in that culture for a decade.
+Culture is also the principal's most durable output. Strategies are replaced, architectures evolve, and platforms are rebuilt, but the engineering culture a principal builds persists through those changes and shapes the quality of every decision made after the principal leaves. A principal who builds a culture of rigorous design review, blameless post-incident learning, and generous mentoring has multiplied their impact into every engineer who works in that culture for a decade.
 
 ## What Org-Scale Technical Culture Is
 
@@ -53,7 +53,7 @@ The diagnostic output is a culture gap analysis: a frank assessment of where the
 
 ## The Principal as Culture Carrier
 
-The principal's most powerful culture tool is their own behavior. Engineers at every level watch what the principal does — which decisions they praise, which they question, what they spend time on — and calibrate their own behavior accordingly.
+The principal's most powerful culture tool is their own behavior. Engineers at every level watch what the principal does (which decisions they praise, which they question, what they spend time on) and calibrate their own behavior accordingly.
 
 | Behavior | What It Signals | Culture It Builds |
 |----------|----------------|-------------------|
@@ -64,7 +64,7 @@ The principal's most powerful culture tool is their own behavior. Engineers at e
 | **Mentoring visibly and publicly** | Developing others is core to the role, not a side activity | A culture where senior engineers are expected to mentor |
 | **Defending a team that made a reasonable decision that failed** | Risk-taking with good process is supported | A culture where risk is acceptable when process is sound |
 
-The principal does not need to be the best coder, the best architect, or the best public speaker. They need to be the most consistent culture model — the person whose behavior other leaders imitate because it visibly works.
+The principal does not need to be the best coder, the best architect, or the best public speaker. They need to be the most consistent culture model, the person whose behavior other leaders imitate because it visibly works.
 
 ## Culture Interventions That Stick
 
@@ -96,6 +96,7 @@ Engagement surveys are lagging indicators. The principal supplements them with b
 ## The Culture Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     VALUES["Define values and principles"] --> MODEL["Principal models the values visibly"]
     MODEL --> RITUALS["Install rituals that embed values: reviews, post-mortems, demos"]
@@ -161,9 +162,9 @@ These principles are reviewed annually. Last reviewed: [date].
 - [[02_Growing_Staff_and_Principal_Engineers]]: the pipeline that culture enables
 - [[03_Mentoring_Technical_Leaders]]: mentoring as a culture behavior
 - [[04_Technical_Community_Building]]: communities as culture rituals
-- [[04_Organizational_Influence/00_overview|Organizational Influence]]: the external voice that shapes internal culture
+- [[career-path/04_Principal_and_Distinguished_Engineer/04_Organizational_Influence/00_overview|Organizational Influence]]: the external voice that shapes internal culture
 - [[career-path/03_Staff_Engineer/07_Organizational_Learning_and_Mentoring/00_overview|Organizational Learning and Mentoring (Staff)]]: the team-level culture practices
 
 ## Summary
 
-Building technical culture at scale is the principal's deliberate design of what the organization values and how it behaves: defining specific, actionable principles; diagnosing the gap between visible and lived culture through decision archaeology and promotion pattern analysis; modeling the desired behaviors visibly and consistently; installing rituals that embed values into daily work; shaping the signals of what gets rewarded, promoted, and celebrated; and measuring culture through behavioral metrics, not engagement surveys alone. The principal's legacy is not a strategy document — it is an engineering organization whose culture produces excellent work without the principal in the room.
+Building technical culture at scale is the principal's deliberate design of what the organization values and how it behaves: defining specific, actionable principles; diagnosing the gap between visible and lived culture through decision archaeology and promotion pattern analysis; modeling the desired behaviors visibly and consistently; installing rituals that embed values into daily work; shaping the signals of what gets rewarded, promoted, and celebrated; and measuring culture through behavioral metrics, not engagement surveys alone. The principal's legacy is not a strategy document. It is an engineering organization whose culture produces excellent work without the principal in the room.

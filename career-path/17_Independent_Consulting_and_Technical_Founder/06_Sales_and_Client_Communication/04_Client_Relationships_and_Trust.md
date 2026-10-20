@@ -16,15 +16,15 @@ tags:
 
 # Client Relationships and Trust
 
-> **Core skill:** The independent treats trust as the core business asset — proactive communication, honest expectations, visible incentives — because renewals, expansions, and referrals grow from the relationship long after the contract is signed.
+> **Core skill:** The independent treats trust as the core business asset (proactive communication, honest expectations, visible incentives), because renewals, expansions, and referrals grow from the relationship long after the contract is signed.
 
 ## Why This Matters
 
-Trust is the invisible line item on every independent engagement. Clients cannot audit your evenings, your judgment calls, or your motivations; they substitute the relationship for the oversight they do not have. That trust is built in small, boring moments: the status update sent before it was requested, the estimate revised the day it changed, the bad news delivered early and with options attached. It is destroyed in the same small moments: silence during a problem, a surprise invoice, an excuse discovered later. Clients rarely grade vendors on the quality of good months — they grade them on how bad months were handled.
+Trust is the invisible line item on every independent engagement. Clients cannot audit your evenings, your judgment calls, or your motivations; they substitute the relationship for the oversight they do not have. That trust is built in small, boring moments: the status update sent before it was requested, the estimate revised the day it changed, the bad news delivered early and with options attached. It is destroyed in the same small moments: silence during a problem, a surprise invoice, an excuse discovered later. Clients rarely grade vendors on the quality of good months. They grade them on how bad months were handled.
 
-Trust also compounds into outright commercial advantage. Clients who trust you share context earlier, accept your advice on scope, renew without re-tendering, and recommend you inside their networks — which is the cheapest and highest quality pipeline an independent can have. Trust raises price tolerance directly, because the risk premium in a buying decision falls when the buyer believes you will say the difficult thing rather than the profitable thing.
+Trust also compounds into outright commercial advantage. Clients who trust you share context earlier, accept your advice on scope, renew without re-tendering, and recommend you inside their networks, which is the cheapest and highest quality pipeline an independent can have. Trust raises price tolerance directly, because the risk premium in a buying decision falls when the buyer believes you will say the difficult thing rather than the profitable thing.
 
-Maintaining the relationship has a rhythm and a few harder skills: a communication cadence that fits the client, honesty about capacity and limits, incentives kept visibly aligned — which sometimes means saying that a feature is not worth building — and professional disengagement when a relationship stops working for either side. Done well, the relationship outlives individual projects and belongs to the business, not to fate.
+Maintaining the relationship has a rhythm and a few harder skills: a communication cadence that fits the client, honesty about capacity and limits, incentives kept visibly aligned (which sometimes means saying that a feature is not worth building), and professional disengagement when a relationship stops working for either side. Done well, the relationship outlives individual projects and belongs to the business, not to fate.
 
 ## Trust Builders and Trust Breakers
 
@@ -63,6 +63,7 @@ Maintaining the relationship has a rhythm and a few harder skills: a communicati
 ## The Trust Compounding Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PROMISE["Make small promises"] --> DELIVER["Deliver visibly and on time"]
     DELIVER --> COMMUNICATE["Communicate proactively including bad news"]
@@ -105,9 +106,9 @@ flowchart TD
 
 - [[02_Pipeline_and_Lead_Generation]]
 - [[05_Negotiation_for_Independents]]
-- [[04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]
 - [[career-path/16_Developer_Advocate_and_Technical_Consultant/01_Technical_Communication/00_overview|Technical Communication (Dev Advocate)]]
 
 ## Summary
 
-Client relationships and trust are the compound asset of independent work: proactive communication, honest expectations, visible alignment of interests, and clean handling of the moments that decide how clients remember the engagement. Trust converts into renewals, expansions, referrals, and price tolerance — which is why the relationship deserves the same deliberate attention as any technical deliverable, because it is one.
+Client relationships and trust are the compound asset of independent work: proactive communication, honest expectations, visible alignment of interests, and clean handling of the moments that decide how clients remember the engagement. Trust converts into renewals, expansions, referrals, and price tolerance, which is why the relationship deserves the same deliberate attention as any technical deliverable, because it is one.

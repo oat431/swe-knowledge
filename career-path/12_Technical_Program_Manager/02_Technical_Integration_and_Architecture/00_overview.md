@@ -18,7 +18,7 @@ tags:
 
 ## Why This Matters
 
-The TPM is not the architect and not the tech lead. But a TPM without enough technical context cannot distinguish a one-week integration from a three-month one, cannot challenge an optimistic dependency assumption, and cannot facilitate a technical decision because they cannot frame the options. Technical integration is the TPM's credibility layer — the depth that earns the right to coordinate technical work.
+The TPM is not the architect and not the tech lead. But a TPM without enough technical context cannot distinguish a one-week integration from a three-month one, cannot challenge an optimistic dependency assumption, and cannot facilitate a technical decision because they cannot frame the options. Technical integration is the TPM's credibility layer: the depth that earns the right to coordinate technical work.
 
 The skill is calibrated: enough depth to ask the right questions, recognize when a technical risk is being hand-waved, and know when to bring in the real technical authority. Not enough depth to make architecture decisions. The TPM who makes technical decisions without authority loses the team; the TPM who cannot understand them loses the program.
 
@@ -37,6 +37,7 @@ The skill is calibrated: enough depth to ask the right questions, recognize when
 ## The TPM's Technical Depth
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     FLUENCY["Technical fluency: read architecture, understand risk"] --> PARTNERS["Partner with architects and tech leads"]
     PARTNERS --> FACILITATE["Facilitate decisions you do not make"]
@@ -75,11 +76,11 @@ The TPM owns the integration flow; technical authorities own the technical conte
 
 ## Related Capabilities
 
-- [[01_Program_Structure_and_Charter/00_overview|Program Structure and Charter]]: structure defines integration points
-- [[03_Dependency_Management/00_overview|Dependency Management]]: technical dependencies are a subset of program dependencies
+- [[career-path/12_Technical_Program_Manager/01_Program_Structure_and_Charter/00_overview|Program Structure and Charter]]: structure defines integration points
+- [[career-path/12_Technical_Program_Manager/03_Dependency_Management/00_overview|Dependency Management]]: technical dependencies are a subset of program dependencies
 - [[career-path/06_Software_Architect/00_overview|Software Architect]]: the architecture authority the TPM partners with
 - [[career-path/05_Tech_Lead/03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture (Tech Lead)]]: the team-level technical lead
 
 ## Summary
 
-Technical integration for TPMs means calibrated technical depth: reading architecture well enough to spot risk, facilitating decisions you do not make, sequencing integration for progressive confidence, and ensuring the program validates what was integrated. The TPM earns a seat at the technical table by making the technical conversation productive — not by dominating it.
+Technical integration for TPMs means calibrated technical depth: reading architecture well enough to spot risk, facilitating decisions you do not make, sequencing integration for progressive confidence, and ensuring the program validates what was integrated. The TPM earns a seat at the technical table by making the technical conversation productive, not by dominating it.

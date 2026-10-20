@@ -46,19 +46,20 @@ Senior does not mean knowing every technology. It means being able to make sound
 
 || Capability                       | Senior-level behavior                                           | Existing vault anchor                                                                                                        |
 | -------------------------------- | --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Technical ownership              | Owns a system area from requirements through operation          | [[01_Technical_Ownership/00_overview]]                                                                                       |
-| Architecture judgment            | Compares options and records trade-offs                         | [[03_Architecture_and_Design_Judgment/00_overview]]                                                                          |
-| Delivery                         | Forecasts work, manages dependencies, and communicates changes  | [[04_Delivery_and_Execution/00_overview]]                                                                                    |
-| Quality, reliability, security    | Builds for correctness, dependability, and protection           | [[05_Quality_Reliability_Security/00_overview]]                                                      |
-| Requirements and problem framing | Clarifies the underlying problem and acceptance conditions      | [[02_Problem_Framing_and_Requirements/00_overview]]                                                  |
-| Influence and communication      | Leads through explanation, facilitation, and trust              | [[06_Communication_and_Influence/00_overview]]                                                                               |
-| Mentoring and team leadership    | Raises the capability of the team without creating dependency   | [[07_Mentoring_and_Team_Leadership/00_overview]]                                                                             |
-| Engineering economics            | Makes technical decisions with economic awareness               | [[08_Engineering_Economics_and_Trade_Offs/00_overview]]                                                                      |
-| Promotion evidence               | Documents impact and demonstrates sustained senior-level work   | [[09_Promotion_Evidence_and_Capstone/00_overview]]                                                                           |
+| Technical ownership              | Owns a system area from requirements through operation          | [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/00_overview]]                                                                                       |
+| Architecture judgment            | Compares options and records trade-offs                         | [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/00_overview]]                                                                          |
+| Delivery                         | Forecasts work, manages dependencies, and communicates changes  | [[career-path/02_Senior_Software_Engineer/04_Delivery_and_Execution/00_overview]]                                                                                    |
+| Quality, reliability, security    | Builds for correctness, dependability, and protection           | [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/00_overview]]                                                      |
+| Requirements and problem framing | Clarifies the underlying problem and acceptance conditions      | [[career-path/02_Senior_Software_Engineer/02_Problem_Framing_and_Requirements/00_overview]]                                                  |
+| Influence and communication      | Leads through explanation, facilitation, and trust              | [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/00_overview]]                                                                               |
+| Mentoring and team leadership    | Raises the capability of the team without creating dependency   | [[career-path/02_Senior_Software_Engineer/07_Mentoring_and_Team_Leadership/00_overview]]                                                                             |
+| Engineering economics            | Makes technical decisions with economic awareness               | [[career-path/02_Senior_Software_Engineer/08_Engineering_Economics_and_Trade_Offs/00_overview]]                                                                      |
+| Promotion evidence               | Documents impact and demonstrates sustained senior-level work   | [[career-path/02_Senior_Software_Engineer/09_Promotion_Evidence_and_Capstone/00_overview]]                                                                           |
 
 ## Typical Progression
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     ENGINEER["Software Engineer"] --> OWNER["Own a subsystem"]
     OWNER --> JUDGE["Make technical and delivery judgments"]

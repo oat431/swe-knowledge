@@ -15,15 +15,15 @@ tags:
 
 # Solution Lifecycle and Evolution
 
-> **Core skill:** Managing the solution across its whole life — from delivery and transition into operation through change, evolution, and retirement — so the architecture stays viable and the estate stays clean.
+> **Core skill:** Managing the solution across its whole life (from delivery and transition into operation through change, evolution, and retirement) so the architecture stays viable and the estate stays clean.
 
 ## Why This Matters
 
-A solution architecture that stops at go-live is half a design. The system that the business runs for the next decade will pass through upgrades, integrations, data migrations, incident postmortems, and eventually retirement — and every one of those events is an architecture event. Architects who design for launch day leave their successors a system whose evolution was never considered: interfaces with no versioning path, data with no residency in the future target, components with no exit route.
+A solution architecture that stops at go-live is half a design. The system that the business runs for the next decade will pass through upgrades, integrations, data migrations, incident postmortems, and eventually retirement, and every one of those events is an architecture event. Architects who design for launch day leave their successors a system whose evolution was never considered: interfaces with no versioning path, data with no residency in the future target, components with no exit route.
 
-Designing for the lifecycle means answering questions at design time that pay off years later. How will this component be upgraded without outage? Which parts are expected to change first, and are they isolated? What happens to the data when this solution is eventually replaced? What signals will tell us the solution needs to evolve — or die? These questions cost little to answer early and are brutally expensive to retrofit.
+Designing for the lifecycle means answering questions at design time that pay off years later. How will this component be upgraded without outage? Which parts are expected to change first, and are they isolated? What happens to the data when this solution is eventually replaced? What signals will tell us the solution needs to evolve, or die? These questions cost little to answer early and are brutally expensive to retrofit.
 
-The lifecycle view also protects the estate. Every solution eventually stops being the answer; the organization that cannot decommission accumulates cost, risk, and confusion. Retirement is a design responsibility: systems designed with exit paths — clear ownership of data, decoupled interfaces, documented migration assumptions — can be shut down with dignity. Systems designed without them outlive their value by a decade because no one can safely turn them off.
+The lifecycle view also protects the estate. Every solution eventually stops being the answer; the organization that cannot decommission accumulates cost, risk, and confusion. Retirement is a design responsibility: systems designed with exit paths (clear ownership of data, decoupled interfaces, documented migration assumptions) can be shut down with dignity. Systems designed without them outlive their value by a decade because no one can safely turn them off.
 
 ## Lifecycle Stages
 
@@ -35,7 +35,7 @@ The lifecycle view also protects the estate. Every solution eventually stops bei
 | **Evolve and extend** | What changes, and what do they stress? | Impact assessment, runway design |
 | **Retire and migrate** | What replaces it, and what must move? | Transition architecture, decommissioning |
 
-The architect's involvement is not uniform: it is deep at both ends of the lifecycle — design and retirement — and periodic in the middle, when health signals or change requests demand it.
+The architect's involvement is not uniform: it is deep at both ends of the lifecycle (design and retirement) and periodic in the middle, when health signals or change requests demand it.
 
 ## Transition to Operations
 
@@ -48,7 +48,7 @@ The architect's involvement is not uniform: it is deep at both ends of the lifec
 | **Service levels** | Agreed targets and reporting | Expectations diverging silently |
 | **Residual risk acceptance** | Named owner for accepted gaps | Risks quietly inherited by operations |
 
-Transition is a design outcome, not a ceremonial transfer. If operations cannot state what it supports and how, the solution is not transitioned — it is merely running.
+Transition is a design outcome, not a ceremonial transfer. If operations cannot state what it supports and how, the solution is not transitioned. It is merely running.
 
 ## Change and Evolution
 
@@ -66,6 +66,7 @@ Also design the runway: the patterns, interfaces, and abstractions that make the
 ## Health and Retirement
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CONCEPT["Concept and design"] --> BUILD["Build and transition"]
     BUILD["Build and transition"] --> OPERATE["Operate and support"]
@@ -81,7 +82,7 @@ flowchart LR
 | **Key-person dependence** | Knowledge concentrated, not designed in | Documentation and design simplification |
 | **Business capability changing** | The original need no longer holds | Evolution or retirement decision |
 
-Decommissioning deserves the same planning as launch: a decommissioning checklist covering data disposition, interface retirement, consumer migration, license termination, and archive obligations. Zombie systems — running, costing, occasionally surprising everyone — are what happens when retirement is nobody's job.
+Decommissioning deserves the same planning as launch: a decommissioning checklist covering data disposition, interface retirement, consumer migration, license termination, and archive obligations. Zombie systems (running, costing, occasionally surprising everyone) are what happens when retirement is nobody's job.
 
 ## Practical Applications
 
@@ -131,9 +132,9 @@ Owner: <accountable role after go-live>
 - [[03_Solution_Integration_Design]]: interfaces as lifecycle assets to version and retire
 - [[05_Solution_Delivery_Partnership]]: operations engagement that begins during design
 - [[06_Solution_Assurance_and_Review]]: reviews as lifecycle checkpoints
-- [[06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: evolution and retirement within the portfolio
+- [[career-path/15_Solutions_and_Enterprise_Architect/06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: evolution and retirement within the portfolio
 - [[career-path/06_Software_Architect/04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs (Architect)]]: trade-offs that determine evolvability
 
 ## Summary
 
-Solution lifecycle and evolution extend the architect's responsibility across the solution's entire life: designing for transition and operations, monitoring the health signals that reveal assumption drift, managing change with impact assessments and deliberate runway, and planning retirement — data, interfaces, consumers — from the beginning. The solution that is designed only for its launch will burden the organization for years; the one designed for its whole life serves cheaply, evolves deliberately, and can end cleanly when its value does.
+Solution lifecycle and evolution extend the architect's responsibility across the solution's entire life: designing for transition and operations, monitoring the health signals that reveal assumption drift, managing change with impact assessments and deliberate runway, and planning retirement (data, interfaces, consumers) from the beginning. The solution that is designed only for its launch will burden the organization for years; the one designed for its whole life serves cheaply, evolves deliberately, and can end cleanly when its value does.

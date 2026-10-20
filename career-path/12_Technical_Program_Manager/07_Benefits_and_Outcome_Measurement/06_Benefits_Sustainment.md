@@ -16,17 +16,17 @@ tags:
 
 # Benefits Sustainment
 
-> **Core skill:** The TPM ensures that program benefits persist after the program ends — assigning sustainment owners, defining the metrics and thresholds that trigger intervention, and handing off to operations with a plan that survives the TPM's departure.
+> **Core skill:** The TPM ensures that program benefits persist after the program ends, assigning sustainment owners, defining the metrics and thresholds that trigger intervention, and handing off to operations with a plan that survives the TPM's departure.
 
 ## Why This Matters
 
-Programs end. Benefits are supposed to persist. The platform migration reduced costs — but six months after the program closed, the old platform was never fully decommissioned, and costs crept back. The onboarding flow reduced time-to-value — but a year later, the flow had been modified by three different teams and the original improvement was lost. The security posture improved — but the new controls were gradually bypassed because nobody owned them after the program ended.
+Programs end. Benefits are supposed to persist. The platform migration reduced costs, but six months after the program closed, the old platform was never fully decommissioned, and costs crept back. The onboarding flow reduced time-to-value, but a year later, the flow had been modified by three different teams and the original improvement was lost. The security posture improved, but the new controls were gradually bypassed because nobody owned them after the program ended.
 
-Benefits sustainment is the discipline that prevents benefits erosion. It is not program work — it is the handoff from program to operations that ensures the benefit does not die when the program team disbands. The TPM who delivers a benefit and walks away has delivered a temporary outcome. The TPM who hands off a benefit with an owner, a metric, and an intervention threshold has delivered a lasting one.
+Benefits sustainment is the discipline that prevents benefits erosion. It is not program work; it is the handoff from program to operations that ensures the benefit does not die when the program team disbands. The TPM who delivers a benefit and walks away has delivered a temporary outcome. The TPM who hands off a benefit with an owner, a metric, and an intervention threshold has delivered a lasting one.
 
 ## The Sustainment Handoff
 
-The sustainment handoff happens at program closure — or earlier, for benefits that are realized before the program ends. It has five components.
+The sustainment handoff happens at program closure, or earlier, for benefits that are realized before the program ends. It has five components.
 
 | Component | Content | Example |
 |-----------|---------|---------|
@@ -38,7 +38,7 @@ The sustainment handoff happens at program closure — or earlier, for benefits 
 
 ## Selecting the Sustainment Owner
 
-The sustainment owner is the most important decision in the handoff — and the most often neglected. A benefit without an owner is a benefit that will erode.
+The sustainment owner is the most important decision in the handoff, and the most often neglected. A benefit without an owner is a benefit that will erode.
 
 | Owner Type | When Appropriate | Example |
 |------------|------------------|---------|
@@ -48,12 +48,12 @@ The sustainment owner is the most important decision in the handoff — and the 
 | Business stakeholder | The benefit is a strategic or financial target that requires business accountability | Revenue growth sustained by the VP of SMB through quarterly business reviews |
 | Central governance | The benefit is a compliance or risk reduction that requires institutional ownership | Security posture sustained by the CISO's office through ongoing audit and review |
 
-The TPM does not assign the sustainment owner unilaterally — the owner must accept the accountability. The handoff meeting is where the TPM presents the benefit, the sustainment requirements, and the ask: "Will you own this benefit going forward?" An owner who accepts in the meeting is more likely to act than an owner who was assigned in a document they never read.
+The TPM does not assign the sustainment owner unilaterally; the owner must accept the accountability. The handoff meeting is where the TPM presents the benefit, the sustainment requirements, and the ask: "Will you own this benefit going forward?" An owner who accepts in the meeting is more likely to act than an owner who was assigned in a document they never read.
 
 ## The Sustainment Plan Document
 
 ```markdown
-# Benefits Sustainment Plan — [Program Name] — [Date]
+# Benefits Sustainment Plan: [Program Name], [Date]
 
 ## Sustainment Summary
 - Benefits realized at program closure: [count]
@@ -73,23 +73,23 @@ The TPM does not assign the sustainment owner unilaterally — the owner must ac
 ## Post-Handoff Review Schedule
 | Review Date | Forum | Benefits to Review |
 |-------------|-------|--------------------|
-| [date — 3 months post-closure] | [forum] | All benefits handed off |
-| [date — 6 months post-closure] | [forum] | Benefits that were Yellow at handoff |
-| [date — 12 months post-closure] | [forum] | Final sustainment confirmation |
+| [date, 3 months post-closure] | [forum] | All benefits handed off |
+| [date, 6 months post-closure] | [forum] | Benefits that were Yellow at handoff |
+| [date, 12 months post-closure] | [forum] | Final sustainment confirmation |
 ```
 
 ## Monitoring Sustainment After Handoff
 
-The TPM does not track benefits forever — but the TPM ensures that the sustainment monitoring is in place before walking away.
+The TPM does not track benefits forever, but the TPM ensures that the sustainment monitoring is in place before walking away.
 
 | Post-Handoff Period | TPM Responsibility | Sustainment Owner Responsibility |
 |---------------------|--------------------|----------------------------------|
 | At handoff | Conduct the handoff meeting; secure owner acceptance; document the sustainment plan | Accept ownership; confirm understanding of metric, threshold, and review cadence |
 | 3 months post-handoff | Confirm that the first sustainment review occurred | Conduct the review; report benefit status; escalate if erosion detected |
 | 6 months post-handoff | Confirm that sustainment reviews are occurring as planned | Conduct reviews; correct erosion if thresholds breached |
-| 12 months post-handoff | No further TPM responsibility — sustainment is fully operationalized | Ongoing monitoring integrated into standard operational reviews |
+| 12 months post-handoff | No further TPM responsibility: sustainment is fully operationalized | Ongoing monitoring integrated into standard operational reviews |
 
-The TPM's final act for sustainment is the 3-month check: did the first review happen? Is the owner tracking the metric? Is the intervention threshold being respected? If the answer to any of these is no, the TPM escalates to the program sponsor — because a sustainment plan that is not being followed is a benefit that is eroding.
+The TPM's final act for sustainment is the 3-month check: did the first review happen? Is the owner tracking the metric? Is the intervention threshold being respected? If the answer to any of these is no, the TPM escalates to the program sponsor, because a sustainment plan that is not being followed is a benefit that is eroding.
 
 ## When Benefits Erode
 
@@ -104,6 +104,7 @@ Benefits erode for predictable reasons. The sustainment plan anticipates them an
 | Ownership vacuum | The sustainment owner leaves; nobody replaces them | Succession plan in the sustainment document; escalation to the owner's manager if owner departs |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PROG_CLOSE["Program closure: benefits realized"] --> HANDOFF["Sustainment handoff: owner, metric, threshold, cadence"]
     HANDOFF --> OWNER_ACCEPT["Sustainment owner accepts accountability"]
@@ -131,7 +132,7 @@ flowchart TD
 ### Sustainment Plan Template
 
 ```markdown
-# Benefits Sustainment Plan — [Program Name]
+# Benefits Sustainment Plan: [Program Name]
 
 ## Sustainment Owners
 | Benefit | Metric | Actual | Target | Owner | Threshold | Review Cadence | Forum |
@@ -143,9 +144,9 @@ flowchart TD
 - Escalation path: Owner → Owner's Manager → Program Sponsor
 
 ## Post-Handoff TPM Check
-- 3 months: [date] — confirm first review occurred
-- 6 months: [date] — confirm reviews are ongoing
-- 12 months: [date] — confirm sustainment is operationalized
+- 3 months: [date], confirm first review occurred
+- 6 months: [date], confirm reviews are ongoing
+- 12 months: [date], confirm sustainment is operationalized
 
 ## Owner Sign-Off
 | Benefit | Owner Name | Signature / Acceptance | Date |
@@ -176,8 +177,8 @@ flowchart TD
 - [[05_Benefits_Realization_at_Program_Closure]]: the closure assessment that precedes the handoff
 - [[04_Benefits_Tracking_and_Reporting]]: the tracking that transitions from program to operations
 - [[07_Program_ROI_and_Value_Communication]]: communicating sustained value to leadership
-- [[04_Risk_and_Issue_Leadership/00_overview|Risk and Issue Leadership]]: benefit erosion is a post-program risk
+- [[career-path/12_Technical_Program_Manager/04_Risk_and_Issue_Leadership/00_overview|Risk and Issue Leadership]]: benefit erosion is a post-program risk
 
 ## Summary
 
-Benefits sustainment is the TPM's legacy discipline: ensuring that program benefits persist after the program ends by handing off each benefit to a named owner with a metric, an intervention threshold, and a review cadence — and confirming at 3 and 6 months that the owner is tracking and the benefit is not eroding. The TPM who delivers a benefit and walks away has delivered a temporary outcome. The TPM who hands off a benefit with a sustainment plan has delivered a lasting one — and a lasting benefit is the only kind that justifies the program's investment.
+Benefits sustainment is the TPM's legacy discipline: ensuring that program benefits persist after the program ends by handing off each benefit to a named owner with a metric, an intervention threshold, and a review cadence, and confirming at 3 and 6 months that the owner is tracking and the benefit is not eroding. The TPM who delivers a benefit and walks away has delivered a temporary outcome. The TPM who hands off a benefit with a sustainment plan has delivered a lasting one, and a lasting benefit is the only kind that justifies the program's investment.

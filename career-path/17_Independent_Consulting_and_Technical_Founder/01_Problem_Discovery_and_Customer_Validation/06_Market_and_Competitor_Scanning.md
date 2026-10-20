@@ -16,13 +16,13 @@ tags:
 
 # Market and Competitor Scanning
 
-> **Core skill:** Mapping the landscape around a problem space — competitors, substitutes, and the status quo — fast and cheaply enough to inform positioning without draining discovery time.
+> **Core skill:** Mapping the landscape around a problem space (competitors, substitutes, and the status quo) fast and cheaply enough to inform positioning without draining discovery time.
 
 ## Why This Matters
 
-Independents skip scanning and then get surprised: undercut on price, dismissed with "we already use something", or defeated by a tool the customer built in-house. Scanning is not academic research — it is knowing the alternatives your buyer will compare you against, including the most common one, which is doing nothing.
+Independents skip scanning and then get surprised: undercut on price, dismissed with "we already use something", or defeated by a tool the customer built in-house. Scanning is not academic research. It is knowing the alternatives your buyer will compare you against, including the most common one, which is doing nothing.
 
-The most important competitor is rarely a named company. It is the status quo: a manual process, a spreadsheet, an internal script, or the decision to tolerate the pain. Spend is the tell — what does the buyer already pay in tools, contractors, or lost hours? That figure anchors both the value story and the price.
+The most important competitor is rarely a named company. It is the status quo: a manual process, a spreadsheet, an internal script, or the decision to tolerate the pain. Spend is the tell. What does the buyer already pay in tools, contractors, or lost hours? That figure anchors both the value story and the price.
 
 Scanning must be time-boxed. Two weeks of cheap, buyer-facing research with an explicit stop date beats endless analysis, and it draws from the same sources buyers themselves see: pricing pages, review sites, community threads, job postings, and sales conversations. The output is a single landscape page that feeds positioning and offer design, refreshed quarterly rather than studied continuously.
 
@@ -51,6 +51,7 @@ Scanning must be time-boxed. Two weeks of cheap, buyer-facing research with an e
 ## The Landscape Map
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     DIRECT["Direct competitors"] --> MAP["Landscape map"]
     SUBSTITUTE["Substitutes and adjacent tools"] --> MAP
@@ -58,7 +59,7 @@ flowchart LR
     MAP --> GAP["Gap you can credibly own"]
 ```
 
-The output is not a report — it is a shortlist of gaps, ranked by how credibly you can own each one given your skills, proof, and reach.
+The output is not a report. It is a shortlist of gaps, ranked by how credibly you can own each one given your skills, proof, and reach.
 
 ## Practical Applications
 
@@ -74,7 +75,7 @@ The output is not a report — it is a shortlist of gaps, ranked by how credibly
 ### Landscape One-Pager
 
 ```markdown
-## Landscape — <problem space>
+## Landscape: <problem space>
 
 | Alternative | Price Band | Promise | Weakness |
 |-------------|------------|---------|----------|
@@ -111,9 +112,9 @@ Next scan: <date>
 
 - [[03_Choosing_Your_Problem_Space]]
 - [[04_Niche_and_Positioning]]
-- [[03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
-- [[06_Sales_and_Client_Communication/00_overview|Sales and Client Communication]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/06_Sales_and_Client_Communication/00_overview|Sales and Client Communication]]
 
 ## Summary
 
-Market and competitor scanning is a time-boxed instrument for seeing the buyer's real alternatives — competitors, substitutes, and the status quo — before they appear in a sales conversation. Condensed to one page and refreshed quarterly, it turns positioning, pricing, and offer design from guesswork into grounded judgment.
+Market and competitor scanning is a time-boxed instrument for seeing the buyer's real alternatives (competitors, substitutes, and the status quo) before they appear in a sales conversation. Condensed to one page and refreshed quarterly, it turns positioning, pricing, and offer design from guesswork into grounded judgment.

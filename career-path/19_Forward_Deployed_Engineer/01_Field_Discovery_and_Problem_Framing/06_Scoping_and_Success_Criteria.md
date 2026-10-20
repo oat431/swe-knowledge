@@ -16,13 +16,13 @@ tags:
 
 # Scoping and Success Criteria
 
-> **Core skill:** Defining what done means — measurable and agreed — before build commitments are made.
+> **Core skill:** Defining what done means, measurable and agreed, before build commitments are made.
 
 ## Why This Matters
 
 A deployment without agreed success criteria cannot succeed; it can only end ambiguously, with the customer remembering a promise that was never made and the vendor defending work that was never requested. Scoping is the act that converts a framed problem into a commitment: what will be built, what will not, how the change will be measured, and who has agreed to all three. It is the FDE's contract with reality, and it is written before the build, not after the pilot.
 
-The field makes scoping harder than the office does. Customers discover scope as they see progress — a working demo invites "can it also..." from every direction, and each request is individually reasonable. Without an explicit out-of-scope list and a change path, every enthusiastic yes becomes delivery debt, and the deployment drifts away from the frame that justified it. The discipline is not rigidity; it is making scope changes visible, priced, and chosen rather than absorbed silently.
+The field makes scoping harder than the office does. Customers discover scope as they see progress. A working demo invites "can it also..." from every direction, and each request is individually reasonable. Without an explicit out-of-scope list and a change path, every enthusiastic yes becomes delivery debt, and the deployment drifts away from the frame that justified it. The discipline is not rigidity; it is making scope changes visible, priced, and chosen rather than absorbed silently.
 
 Success criteria carry equal weight, and they need baselines. "Cut processing time" is not a criterion until someone has measured today's processing time; "improve accuracy" is not a criterion until someone owns the accuracy number. The FDE who insists on baselines before build commitments looks pedantic for one meeting and vindicated for the rest of the deployment, because the moment the outcome is questioned, only measured evidence settles the question.
 
@@ -60,6 +60,7 @@ Each criterion should name its data source, its owner, and its measurement windo
 | Production | Acceptance criteria and ownership | Operability details | Material change in data, systems, or policy |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     FRAME["Agreed problem frame"] --> DRAFT["Draft scope and measures"]
     DRAFT --> BASELINE["Baseline each measure"]
@@ -74,7 +75,7 @@ The right to re-open scope is itself part of the agreement. A re-scope that is a
 ### Scope and Success Memo
 
 ```markdown
-## Scope and Success Criteria — <customer, initiative>
+## Scope and Success Criteria: <customer, initiative>
 
 | Element | Statement |
 |---------|-----------|
@@ -120,10 +121,10 @@ The right to re-open scope is itself part of the agreement. A re-scope that is a
 
 - [[04_Problem_Framing_Under_Ambiguity]]
 - [[07_Working_with_Sales_and_Account_Teams]]
-- [[02_Solution_Design_and_Rapid_Prototyping/00_overview|Solution Design and Rapid Prototyping]]
+- [[career-path/19_Forward_Deployed_Engineer/02_Solution_Design_and_Rapid_Prototyping/00_overview|Solution Design and Rapid Prototyping]]
 - [[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]
 - [[software-engineering-note/01_Software_Requirements/Software Requirements Overview]]
 
 ## Summary
 
-Scoping and success criteria are how a framed problem becomes a commitment: a written statement of the outcome, the included and excluded work, the measures, and the baselines that make the measures real — all agreed before build commitments are made and revisited at every phase gate through an explicit change path. The FDE who scopes precisely builds less and proves more, and the deployment that survives its own success is the one that was measured from the start.
+Scoping and success criteria are how a framed problem becomes a commitment: a written statement of the outcome, the included and excluded work, the measures, and the baselines that make the measures real, all agreed before build commitments are made and revisited at every phase gate through an explicit change path. The FDE who scopes precisely builds less and proves more, and the deployment that survives its own success is the one that was measured from the start.

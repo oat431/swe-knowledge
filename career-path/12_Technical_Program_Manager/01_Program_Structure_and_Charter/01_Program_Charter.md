@@ -16,13 +16,13 @@ tags:
 
 # Program Charter
 
-> **Core skill:** Writing the charter that legitimizes the program — purpose, outcome, scope, decision rights, and governance — and getting sponsor sign-off so the program starts with authority, not ambiguity.
+> **Core skill:** Writing the charter that legitimizes the program (purpose, outcome, scope, decision rights, and governance) and getting sponsor sign-off so the program starts with authority, not ambiguity.
 
 ## Why This Matters
 
 Programs without charters are programs that drift. Without a written charter, every scope decision is a negotiation from scratch, every resource conflict escalates sideways, and the program's reason for existing gets reinterpreted by whoever speaks loudest in the room. The charter is the program's constitution: it answers "why are we doing this, what are we doing, and who decides" before those questions turn into disputes.
 
-A signed charter does more than document — it transfers authority. The sponsor's signature says the program is real, resources are committed, and the TPM has the mandate to coordinate across organizational boundaries. Programs that start with charter sign-off survive their first scope challenge; programs that start with an email do not.
+A signed charter does more than document. It transfers authority. The sponsor's signature says the program is real, resources are committed, and the TPM has the mandate to coordinate across organizational boundaries. Programs that start with charter sign-off survive their first scope challenge; programs that start with an email do not.
 
 ## Charter Anatomy
 
@@ -38,11 +38,11 @@ Every program charter answers seven questions. If any is missing, the charter is
 | **Resources** | What people, teams, and budget are committed? | Makes capacity allocation visible and accountable |
 | **Risks and Constraints** | What known risks and hard constraints bound the program? | Surfaces assumptions before they become blockers |
 
-The charter is as long as it needs to be and no longer. A program charter that runs past four pages has drifted into planning territory. The planning documents — roadmap, milestone schedule, RACI — are separate artifacts that the charter authorizes but does not contain.
+The charter is as long as it needs to be and no longer. A program charter that runs past four pages has drifted into planning territory. The planning documents (roadmap, milestone schedule, RACI) are separate artifacts that the charter authorizes but does not contain.
 
 ## Sponsor Sign-Off
 
-The charter is not done until the sponsor signs it. Sign-off is not a rubber stamp — it is the moment the sponsor formally accepts accountability for the program's existence and resource commitment.
+The charter is not done until the sponsor signs it. Sign-off is not a rubber stamp. It is the moment the sponsor formally accepts accountability for the program's existence and resource commitment.
 
 | Step | What Happens | TPM's Role |
 |------|-------------|------------|
@@ -58,6 +58,7 @@ A sponsor who hesitates to sign is raising a legitimate signal. The TPM treats h
 Signing is not communicating. The charter must reach every person whose work or priorities it affects. The TPM runs a deliberate communication cascade.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SPONSOR["Sponsor signs charter"] --> STEERCO["Present to steering committee"]
     STEERCO --> LEADS["Present to workstream leads and architects"]
@@ -66,11 +67,11 @@ flowchart TD
     STAKE --> VISIBLE["Charter lives in a single visible location"]
 ```
 
-The charter is not a secret document. It lives in a shared location — wiki, document store, program homepage — where any participant can reference it. Every scope conversation begins by pointing at the charter's scope section. Every escalation begins by pointing at the charter's decision rights section.
+The charter is not a secret document. It lives in a shared location (wiki, document store, program homepage) where any participant can reference it. Every scope conversation begins by pointing at the charter's scope section. Every escalation begins by pointing at the charter's decision rights section.
 
 ## The Charter as a Living Document
 
-The charter is not frozen. It changes when the program's context changes, but it changes deliberately — never through drift.
+The charter is not frozen. It changes when the program's context changes, but it changes deliberately, never through drift.
 
 | Trigger | Example | Response |
 |---------|---------|----------|
@@ -79,7 +80,7 @@ The charter is not frozen. It changes when the program's context changes, but it
 | **Scope expansion** | A new stakeholder with authority demands inclusion | Charter amendment or re-charter depending on magnitude |
 | **Organizational change** | Reorganization moves teams or changes sponsorship | Re-charter if the sponsor changes; amendment if reporting lines shift |
 
-The TPM maintains a charter version history. Every change is dated, attributed, and communicated through the same cascade that launched the original charter. A charter that drifts without version control is worse than no charter — it pretends to have authority while the ground has already shifted.
+The TPM maintains a charter version history. Every change is dated, attributed, and communicated through the same cascade that launched the original charter. A charter that drifts without version control is worse than no charter. It pretends to have authority while the ground has already shifted.
 
 ## When to Re-Charter
 
@@ -94,7 +95,7 @@ Re-chartering is the nuclear option: tear up the old charter and write a new one
 | Team structure reorganized across the program | Amendment, not re-charter |
 | Milestones shift but outcome holds | Amendment, not re-charter |
 
-Re-chartering resets the program's legitimacy. The TPM archives the old charter with a close note explaining why it was replaced, then runs the full charter process — draft, review, align, sign, communicate — with the new premise as the starting point.
+Re-chartering resets the program's legitimacy. The TPM archives the old charter with a close note explaining why it was replaced, then runs the full charter process (draft, review, align, sign, communicate) with the new premise as the starting point.
 
 ## Practical Applications
 
@@ -116,7 +117,7 @@ Re-chartering resets the program's legitimacy. The TPM archives the old charter 
 [One paragraph: what problem or opportunity, why now, what happens if we do nothing]
 
 ## Outcome
-[One paragraph: the changed state that defines success — observable, measurable]
+[One paragraph: the changed state that defines success, observable, measurable]
 
 ## Scope
 ### In Scope
@@ -179,4 +180,4 @@ Re-chartering resets the program's legitimacy. The TPM archives the old charter 
 
 ## Summary
 
-The program charter is the program's constitution: purpose, outcome, scope, decision rights, governance, resources, and risks in a single signed document. It transfers authority from sponsor to program, creates a single source of truth for every scope and governance question, and establishes the TPM's mandate to coordinate across organizational boundaries. A program without a signed charter is a program without a foundation — it will drift until someone writes one, or until it dies from ambiguity.
+The program charter is the program's constitution: purpose, outcome, scope, decision rights, governance, resources, and risks in a single signed document. It transfers authority from sponsor to program, creates a single source of truth for every scope and governance question, and establishes the TPM's mandate to coordinate across organizational boundaries. A program without a signed charter is a program without a foundation. It will drift until someone writes one, or until it dies from ambiguity.

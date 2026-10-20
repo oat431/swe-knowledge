@@ -17,7 +17,7 @@ tags:
 
 # Metrics for LLM Outputs
 
-> Scoring what a model produced — correctness, faithfulness, relevance, format — with a deliberate mix of deterministic checks, LLM judges, and human review.
+> Scoring what a model produced (correctness, faithfulness, relevance, format) with a deliberate mix of deterministic checks, LLM judges, and human review.
 
 ## Why This Is a Senior Skill
 
@@ -43,7 +43,7 @@ The senior challenge is calibration: every judge and every threshold must be val
 |--------|----------|--------|------|
 | Exact match / assertions | Deterministic properties | Anything paraphrased | ~Zero |
 | LLM-as-judge | Open-ended quality on a rubric | Rare, subtle failures the rubric omits | Medium |
-| Human review | True quality as users perceive it | Coverage — only samples are affordable | High |
+| Human review | True quality as users perceive it | Coverage: only samples are affordable | High |
 | Reference-based (ROUGE, BLEU, BERTScore) | Surface similarity to references | Factual correctness; rewards fluent nonsense | Low |
 | Retrieval metrics (Recall@k, MRR, NDCG) | Whether the right context was found | Generation quality on top of it | Low |
 
@@ -73,19 +73,19 @@ These are baselines to argue from, not laws: a support bot can tolerate lower re
 | Signal | Meaning |
 |--------|---------|
 | Fact in response absent from retrieved context | Likely hallucination |
-| Price/stock/date in response mismatches the source | High-confidence hallucination — critical |
+| Price/stock/date in response mismatches the source | High-confidence hallucination: critical |
 | "I don't know" while the context contains the answer | Retrieval failure, not model laziness |
-| Confident and completely wrong | Most dangerous — needs a human-review trigger |
+| Confident and completely wrong | Most dangerous: needs a human-review trigger |
 
 ## In Practice
 
 **Detect hallucination by comparing decomposed claims to the context, never by vibes.** Split the answer into atomic claims; for each, ask whether the retrieved context supports it; report supported-over-total. This converts "the model feels truthful" into a number and is the backbone of faithfulness measurement in RAG systems.
 
-**Calibrate every LLM judge against human labels before trusting it.** On a pilot batch of 50–100 outputs, have humans score with the same rubric, then measure judge–human agreement. Where they diverge, fix the rubric or the judge prompt — not the numbers. An uncalibrated judge turns CI into a source of false confidence.
+**Calibrate every LLM judge against human labels before trusting it.** On a pilot batch of 50–100 outputs, have humans score with the same rubric, then measure judge–human agreement. Where they diverge, fix the rubric or the judge prompt, not the numbers. An uncalibrated judge turns CI into a source of false confidence.
 
 **Use deterministic checks wherever the property is deterministic.** JSON validity, schema completeness, price containment, refusal keywords: these are exact and free. Spending judge tokens on a property a parser can verify is waste, and exact checks never suffer position bias.
 
-**Choose the metric by the failure you fear.** Faithfulness for grounding failures, format validity for structured-output failures, relevance for retrieval-or-intent failures. Metric selection is a statement about what the team believes can go wrong — make that statement explicit rather than defaulting to a generic quality score.
+**Choose the metric by the failure you fear.** Faithfulness for grounding failures, format validity for structured-output failures, relevance for retrieval-or-intent failures. Metric selection is a statement about what the team believes can go wrong: make that statement explicit rather than defaulting to a generic quality score.
 
 **Reference-based metrics measure surface, not truth.** ROUGE and BLEU reward word overlap with a reference; a fluent, confidently wrong summary can score well. Use them for phrasing-adjacent tasks like summarization compression, and pair them with a faithfulness measure whenever facts matter.
 

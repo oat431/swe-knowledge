@@ -39,6 +39,7 @@ Incidents are inevitable. The goal is not to prevent all incidents, but to **res
 ## How the Topics Connect
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ONCALL["01 On-Call Practices"] --> INCIDENT["02 Incident Management"]
     INCIDENT --> POSTMORTEM["03 Blameless Postmortems"]
@@ -76,7 +77,7 @@ Use this to gauge your current mastery of incident response:
 ## Related
 
 - [[00_overview|SRE and Platform Engineer Overview]]
-- [[01_Service_Objectives/00_overview|Service Objectives]] : incidents consume error budget
-- [[02_Observability/00_overview|Observability]] : observability data is critical for incident diagnosis
-- [[05_Capacity_and_Resilience/00_overview|Capacity and Resilience]] : resilience reduces incident frequency
+- [[career-path/07_SRE_and_Platform_Engineer/01_Service_Objectives/00_overview|Service Objectives]] : incidents consume error budget
+- [[career-path/07_SRE_and_Platform_Engineer/02_Observability/00_overview|Observability]] : observability data is critical for incident diagnosis
+- [[career-path/07_SRE_and_Platform_Engineer/05_Capacity_and_Resilience/00_overview|Capacity and Resilience]] : resilience reduces incident frequency
 - [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/04_Incident_Response|Incident Response]] : incident response foundations from the Senior SWE path

@@ -16,7 +16,7 @@ tags:
 
 # Network Architecture for Applications
 
-> **Core skill:** The architect designs the network layer as an architecture view — gateways, load balancers, service mesh, CDN, segmentation — and treats connectivity between services and environments as decisions that drive latency, reliability, and security.
+> **Core skill:** The architect designs the network layer as an architecture view (gateways, load balancers, service mesh, CDN, segmentation) and treats connectivity between services and environments as decisions that drive latency, reliability, and security.
 
 ## Why This Matters
 
@@ -24,7 +24,7 @@ The network is not the cable between components; it is where latency accumulates
 
 The building blocks each carry semantics worth designing with. A gateway is an entry point and a policy choke point. A load balancer turns health checks into routing truth. A service mesh provides east-west identity, encryption, and policy without touching application code. A CDN absorbs load and shortens distance to content. Segmentation defines blast radius. Private connectivity keeps flows off public paths. Choosing and composing these blocks is application architecture wearing infrastructure clothes.
 
-The architect's outputs are equally concrete: a network topology view drawn as part of the architecture description, a register of connectivity decisions between services and environments, and quality attribute scenarios that name the network's contribution to latency, reliability, security, and cost. Connectivity is an architecture decision because it constrains everything above it — and because changing it later means changing everything above it too.
+The architect's outputs are equally concrete: a network topology view drawn as part of the architecture description, a register of connectivity decisions between services and environments, and quality attribute scenarios that name the network's contribution to latency, reliability, security, and cost. Connectivity is an architecture decision because it constrains everything above it, and because changing it later means changing everything above it too.
 
 ## Network Building Blocks
 
@@ -39,9 +39,10 @@ The architect's outputs are equally concrete: a network topology view drawn as p
 
 ## Network Topology as an Architecture View
 
-The topology view shows zones, entry points, and the flows between them with protocols, ports, and identities noted on the edges. It is maintained alongside the deployment view — the two are read together during security review, incident response, and cost analysis. A topology that exists only in the platform team's heads fails exactly when it is needed most.
+The topology view shows zones, entry points, and the flows between them with protocols, ports, and identities noted on the edges. It is maintained alongside the deployment view; the two are read together during security review, incident response, and cost analysis. A topology that exists only in the platform team's heads fails exactly when it is needed most.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     USERS["Users and partners"] --> EDGE["Edge with CDN and gateway"]
     EDGE --> APP["Application zone with services"]

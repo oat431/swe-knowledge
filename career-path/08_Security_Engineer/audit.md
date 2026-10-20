@@ -70,7 +70,7 @@ tags:
 
 | Priority | Proposed note / module | What it should contain |
 |---|---|---|
-| 🎯 High | `08_AI_and_LLM_Security/` | `01_AI_Attack_Surface_and_Threat_Model`, `02_Prompt_Injection_and_Agent_Permissions`, `03_Model_and_Data_Supply_Chain`, `04_Reviewing_AI_Features`; map to the OWASP Top 10 for LLM Applications and cross-link [[career-path/18_Applied_AI_Engineer/00_overview\|Applied AI Engineer]] |
+| 🎯 High | `08_AI_and_LLM_Security/` | `01_AI_Attack_Surface_and_Threat_Model`, `02_Prompt_Injection_and_Agent_Permissions`, `03_Model_and_Data_Supply_Chain`, `04_Reviewing_AI_Features`; map to the OWASP Top 10 for LLM Applications and cross-link [[career-path/18_Applied_AI_Engineer/00_overview|Applied AI Engineer]] |
 | 🎯 High | `04_Security_Verification_and_Testing/07_Vulnerability_Classes_and_OWASP.md` | Top 10 / API Top 10 / ASVS as a map, linking to the vault's `13_Software_Security` foundation notes |
 | 🎯 High | `05_Identity_Access_and_Data_Protection/07_Cloud_and_Kubernetes_Security.md` (or a new module) | Cloud IAM, misconfiguration, CSPM, workload identity, Kubernetes RBAC/admission/policy |
 | Medium | "Standards Mapping" in each Core Frameworks section | CVSS/EPSS/KEV/SSVC, SAMM, SSDF, SLSA, ATT&CK, NIST CSF/ISO 27001/SOC 2 |

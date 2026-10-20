@@ -16,7 +16,7 @@ tags:
 
 # Team System Ownership
 
-> **Core skill:** Establishing collective ownership of the system so no critical knowledge, accountability, or decision power lives in one head — including yours.
+> **Core skill:** Establishing collective ownership of the system so no critical knowledge, accountability, or decision power lives in one head, including yours.
 
 ## Why This Matters
 
@@ -34,7 +34,7 @@ Individual ownership scales to about one person's attention. Collective ownershi
 | Depth | Deep in one area | Deep enough everywhere, expert somewhere |
 | Accountability | Personal diligence | Charter, rituals, and reviews the team runs |
 
-Collective ownership does not mean everyone owns everything equally — it means the ownership is a team asset with structure, not a personal possession with good intentions.
+Collective ownership does not mean everyone owns everything equally. It means the ownership is a team asset with structure, not a personal possession with good intentions.
 
 ## The Ownership Charter
 
@@ -59,7 +59,7 @@ A charter without rituals is decoration. The rituals are where ownership becomes
 | Incident retrospective | Per incident | Ownership gaps converted into charter changes |
 | On-call handoff | Per shift | Current state transferred without loss |
 
-Rituals are cheap, short, and relentless. Their purpose is not ceremony — it is that the system's state is never more than one meeting away from any team member.
+Rituals are cheap, short, and relentless. Their purpose is not ceremony. It is that the system's state is never more than one meeting away from any team member.
 
 ## Sub-Ownership Assignment
 
@@ -72,7 +72,7 @@ Collective ownership works through deliberate sub-ownership:
 | Concern owner | One engineer owns cross-cutting concerns: observability, security, data | Cross-cutting quality concerns |
 | Rotating owner | Ownership rotates on a fixed schedule | Spreading depth, avoiding entrenchment |
 
-Every sub-owner is an owner, not a delegate: they can decide within their boundary, they answer for their component, and their name is public. The tech lead keeps the meta-view — the charter, the interfaces, the health of the whole — and the right to overrule, exercised rarely and visibly.
+Every sub-owner is an owner, not a delegate: they can decide within their boundary, they answer for their component, and their name is public. The tech lead keeps the meta-view (the charter, the interfaces, the health of the whole) and the right to overrule, exercised rarely and visibly.
 
 ## When Ownership Is Unclear
 
@@ -87,6 +87,7 @@ Every sub-owner is an owner, not a delegate: they can decide within their bounda
 Unclear ownership is not neutral. Every unowned component is a future incident, and every disputed boundary is a future political fight. Both are cheaper to fix by charter than by crisis.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CHARTER["Write ownership charter"] --> RITUALS["Run ownership rituals"]
     RITUALS --> SUB["Assign sub-owners"]
@@ -99,7 +100,7 @@ flowchart TD
 ## Practical Applications
 
 ```markdown
-## Ownership Charter — [Team name]
+## Ownership Charter: [Team name]
 
 ### What we own
 - [ ] Services: [list]
@@ -157,8 +158,8 @@ Checklist:
 - [[02_Production_Readiness_Leadership]]: readiness reviews are the ritual that gates shipping
 - [[07_Operational_Reviews]]: the quarterly review audits ownership itself
 - [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/00_overview|Technical Ownership (Senior)]]: the personal ownership this extends to a team
-- [[01_The_Tech_Lead_Role_and_Operating_Model/00_overview|The Tech Lead Role and Operating Model]]: the mandate this ownership serves
+- [[career-path/05_Tech_Lead/01_The_Tech_Lead_Role_and_Operating_Model/00_overview|The Tech Lead Role and Operating Model]]: the mandate this ownership serves
 
 ## Summary
 
-Team system ownership converts personal diligence into a team property: a written charter, named sub-owners with real decision rights, and rituals that keep the system's state legible to everyone. The tech lead's job is to own the ownership — the charter, the boundaries, the health of the whole — while every component, concern, and decision belongs to someone on the team. A system that can lose you for a month and stay healthy is the deliverable.
+Team system ownership converts personal diligence into a team property: a written charter, named sub-owners with real decision rights, and rituals that keep the system's state legible to everyone. The tech lead's job is to own the ownership (the charter, the boundaries, the health of the whole) while every component, concern, and decision belongs to someone on the team. A system that can lose you for a month and stay healthy is the deliverable.

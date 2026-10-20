@@ -14,7 +14,7 @@ tags:
 
 # Technical Strategy
 
-> **Core capability:** The staff engineer connects technical investment to organizational priorities — writing strategy that survives contact with reality, sequencing bets, and saying no to good ideas that don't fit.
+> **Core capability:** The staff engineer connects technical investment to organizational priorities: writing strategy that survives contact with reality, sequencing bets, and saying no to good ideas that don't fit.
 
 ## Why This Matters
 
@@ -37,6 +37,7 @@ Good technical strategy is rare because it's genuinely hard: it must be grounded
 ## The Strategy Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SENSE["Sense reality: business, tech, teams"] --> DRAFT["Draft direction and bets"]
     DRAFT --> PRESSURE["Pressure-test with teams and leaders"]
@@ -83,16 +84,16 @@ A strategy that isn't used to decline work is decoration.
 - Teams quote the strategy when declining work themselves
 - Investment shifts measurably after strategy publication
 - Leadership references it in their own communications
-- Bets are reviewed honestly — some abandoned on schedule
+- Bets are reviewed honestly: some abandoned on schedule
 - The strategy fits on fewer pages each year it survives
 
 ## Related Capabilities
 
-- [[02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: strategy's execution arm
-- [[04_Influence_and_Alignment/00_overview|Influence and Alignment]]: how strategy gets adopted
+- [[career-path/03_Staff_Engineer/02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: strategy's execution arm
+- [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/00_overview|Influence and Alignment]]: how strategy gets adopted
 - [[career-path/02_Senior_Software_Engineer/08_Engineering_Economics_and_Trade_Offs/00_overview|Engineering Economics and Trade Offs (Senior)]]: the economic foundations
 - [[career-path/06_Software_Architect/00_overview|Software Architect]]: the specialist strategy path
 
 ## Summary
 
-Technical strategy is the staff engineer's highest-leverage writing: direction grounded in business reality, sized bets with exit clauses, explicit capacity allocation, and the discipline to decline work by the written page. Its test is behavioral — decisions change because it exists.
+Technical strategy is the staff engineer's highest-leverage writing: direction grounded in business reality, sized bets with exit clauses, explicit capacity allocation, and the discipline to decline work by the written page. Its test is behavioral: decisions change because it exists.

@@ -16,13 +16,13 @@ tags:
 
 # Validating Willingness to Pay
 
-> **Core skill:** Separating polite interest from payment intent — designing small, real tests where a prospect commits money, time, or reputation before you build or quote anything.
+> **Core skill:** Separating polite interest from payment intent: designing small, real tests where a prospect commits money, time, or reputation before you build or quote anything.
 
 ## Why This Matters
 
 Interest is not demand. Nearly every pleasant conversation about a real problem ends with "that sounds useful", and that sentence has launched an uncountable number of dead products and unbillable consultancies. The gap between "sounds useful" and "I will pay" is where failed businesses live, and it is invisible unless you deliberately test it.
 
-Willingness to pay is tested, not asked. Hypothetical questions — "would you pay for this?", "what would you pay?" — produce polite lies in almost every culture. The only reliable evidence is a commitment that costs the prospect something they can feel immediately: budget, cash, a calendared decision, or their internal reputation.
+Willingness to pay is tested, not asked. Hypothetical questions ("would you pay for this?", "what would you pay?") produce polite lies in almost every culture. The only reliable evidence is a commitment that costs the prospect something they can feel immediately: budget, cash, a calendared decision, or their internal reputation.
 
 The test should happen early and escalate. Each rung on the commitment ladder costs the prospect more and delivers you better evidence than the rung below; each rung also costs you far less than building the full solution. The independent's discipline is to find the smallest rung that still produces a real signal, and to accept the answer whatever it is.
 
@@ -49,7 +49,7 @@ The ladder is climbed one rung per conversation. Jumping from "keep me posted" t
 | Letter of intent with named milestones | Sponsor commitment where payment takes months | Regulated and public-sector buyers |
 | Charter customer agreement | Co-design appetite before the product exists | Early products needing design partners |
 
-A commitment test is not a discount. The monetary amount can be small — its job is to force the prospect's internal decision, not to fund the business.
+A commitment test is not a discount. The monetary amount can be small. Its job is to force the prospect's internal decision, not to fund the business.
 
 ## Reading a Soft Answer
 
@@ -64,13 +64,14 @@ A commitment test is not a discount. The monetary amount can be small — its jo
 ## The Commitment Ladder
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     WORDS["Prospect says the problem is real"] --> TIME["Prospect gives time or a referral"]
     TIME --> MONEY["Prospect pays a deposit or pilot fee"]
     MONEY --> SCALE["Prospect signs a scoped engagement"]
 ```
 
-The ladder only counts if each rung is climbed in order. Skipping a rung means the evidence is borrowed from below — and it collapses at the first invoice.
+The ladder only counts if each rung is climbed in order. Skipping a rung means the evidence is borrowed from below, and it collapses at the first invoice.
 
 ## Practical Applications
 
@@ -86,7 +87,7 @@ The ladder only counts if each rung is climbed in order. Skipping a rung means t
 ### Paid Pilot One-Liner
 
 ```markdown
-## Paid Pilot — one paragraph
+## Paid Pilot: one paragraph
 
 For <prospect> we will run a <duration> pilot of <outcome> for <price>.
 Success means <measurable criterion> measured by <method>.
@@ -117,7 +118,7 @@ Decision date: <date>. If it fails, <walk-away terms>.
 
 - [[01_Customer_Discovery_for_Independents]]
 - [[07_From_Insight_to_Offer_Hypothesis]]
-- [[03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
 - [[career-path/14_Product_Manager/01_Problem_Discovery/00_overview|Problem Discovery (PM)]]
 
 ## Summary

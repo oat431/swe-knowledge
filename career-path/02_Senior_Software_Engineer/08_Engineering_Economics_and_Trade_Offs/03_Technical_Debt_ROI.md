@@ -31,6 +31,7 @@ Quantifying debt ROI transforms it from a vague concern into a measurable busine
 ## Technical Debt as Financial Debt
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     subgraph Financial Debt
         A[Principal] --> B[Interest Payments]
@@ -179,6 +180,7 @@ Payback: $264.5K / $362K = 0.73 years (9 months)
 ### Debt Quadrant
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','fontSize':'14px','quadrant1Fill':'#1FB854','quadrant2Fill':'#1EB88E','quadrant3Fill':'#00B5FF','quadrant4Fill':'#1FB8AB','quadrant1TextFill':'#000000','quadrant2TextFill':'#000000','quadrant3TextFill':'#000000','quadrant4TextFill':'#000000','quadrantPointFill':'#FFBE00','quadrantPointTextFill':'#000000','quadrantXAxisTextFill':'#CDD3D1','quadrantYAxisTextFill':'#CDD3D1','quadrantInternalBorderStrokeFill':'#000000','quadrantExternalBorderStrokeFill':'#1FB854','quadrantTitleFill':'#CDD3D1'}}}%%
 quadrantChart
     title Technical Debt Prioritization
     x-axis Low Impact --> High Impact
@@ -492,7 +494,7 @@ Expected outcome: 10x scalability, 50% faster development
 ## Related Topics
 
 - [[01_Cost_Benefit_Analysis|Cost-Benefit Analysis]]: Foundation for debt ROI calculation
-- [[04_Delivery_and_Execution/04_Technical_Debt_Strategy|Technical Debt Strategy]]: Broader debt management approach
+- [[career-path/02_Senior_Software_Engineer/04_Delivery_and_Execution/04_Technical_Debt_Strategy|Technical Debt Strategy]]: Broader debt management approach
 - [[05_Business_Case_Development|Business Case Development]]: Presenting debt initiatives to stakeholders
 - [[06_Trade_Off_Evaluation|Trade-Off Evaluation]]: Balancing debt paydown vs feature development
 

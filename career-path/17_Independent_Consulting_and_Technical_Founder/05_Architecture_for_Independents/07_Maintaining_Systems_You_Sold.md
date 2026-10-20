@@ -16,13 +16,13 @@ tags:
 
 # Maintaining Systems You Sold
 
-> **Core skill:** The independent sells maintenance deliberately — defining support tiers, response expectations, and health routines — so systems built for clients become a priced, bounded, recurring business line instead of unpaid obligation.
+> **Core skill:** The independent sells maintenance deliberately (defining support tiers, response expectations, and health routines), so systems built for clients become a priced, bounded, recurring business line instead of unpaid obligation.
 
 ## Why This Matters
 
-The system you sold last year keeps generating work: dependency updates, platform changes, small fixes, questions, and occasional emergencies. Handled informally, this work is invisible — it eats evenings, erodes margins, and breeds quiet resentment toward clients who believe they already paid for everything. Handled deliberately, maintenance becomes the most valuable revenue an independent can have: recurring, predictable, cheap to acquire, and delivered inside an established relationship. The same hours that feel like an unpaid tax as a favor feel like a professional service once they are named, priced, and bounded.
+The system you sold last year keeps generating work: dependency updates, platform changes, small fixes, questions, and occasional emergencies. Handled informally, this work is invisible. It eats evenings, erodes margins, and breeds quiet resentment toward clients who believe they already paid for everything. Handled deliberately, maintenance becomes the most valuable revenue an independent can have: recurring, predictable, cheap to acquire, and delivered inside an established relationship. The same hours that feel like an unpaid tax as a favor feel like a professional service once they are named, priced, and bounded.
 
-The difference is design, not effort. A support agreement names the tiers, the response expectations, what is included and excluded, and the price basis — so both sides know what a message at 9 PM will trigger. Health routines — scheduled reviews, dependency updates, backup checks, capacity reads — turn maintenance from reactive firefighting into a calm cadence that also produces natural upsell and renewal conversations. And the health report is a sales asset: a client who receives a short monthly note about their system's state has no reason to ever wonder whether the money is well spent.
+The difference is design, not effort. A support agreement names the tiers, the response expectations, what is included and excluded, and the price basis, so both sides know what a message at 9 PM will trigger. Health routines (scheduled reviews, dependency updates, backup checks, capacity reads) turn maintenance from reactive firefighting into a calm cadence that also produces natural upsell and renewal conversations. And the health report is a sales asset: a client who receives a short monthly note about their system's state has no reason to ever wonder whether the money is well spent.
 
 Maintenance also carries an exit discipline, which is easy to forget. Some systems should be handed over to a client's growing team, some should be sunset in an orderly way, and some support clients should simply be declined because they consume more attention than they pay for. Saying all three out loud, in advance and in writing, is what keeps maintenance a business line rather than a trap.
 
@@ -35,7 +35,7 @@ Maintenance also carries an exit discipline, which is easy to forget. Some syste
 | Priority support | Shorter response window, escalation path | Everything in standard plus faster handling | Higher retainer, capped by contract | Revenue critical systems |
 | Change partner | Planned work cadence | Roadmap work, features, integrations | Monthly capacity block | Clients with continuous evolution |
 
-Response windows and allowances are contract terms, not promises made in chat — the written tier is what protects both sides when a busy week meets an urgent email.
+Response windows and allowances are contract terms, not promises made in chat. The written tier is what protects both sides when a busy week meets an urgent email.
 
 ## Maintenance Health Routines
 
@@ -60,6 +60,7 @@ Response windows and allowances are contract terms, not promises made in chat �
 ## The Maintenance Business Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SELL["Sell the system with explicit support terms"] --> EXPECT["Set response and scope expectations"]
     EXPECT --> HEALTH["Run the scheduled health routines"]
@@ -82,7 +83,7 @@ flowchart TD
 ### Support Agreement Summary
 
 ```markdown
-## Support Agreement — <client> — <system>
+## Support Agreement: <client>, <system>
 
 | Field | Value |
 |-------|-------|
@@ -119,9 +120,9 @@ flowchart TD
 - [[02_Reusability_and_Multi_Client_Assets]]
 - [[04_Security_and_Privacy_Basics]]
 - [[06_Scaling_Decisions_with_Limited_Resources]]
-- [[04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]
 - [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]]
 
 ## Summary
 
-Maintaining systems you sold transforms the inevitable after work of delivery into a designed business line: tiers with named response expectations, scheduled health routines, visible monthly stewardship, and clean paths to hand over, sunset, or decline. The system keeps earning long after the build is done, and the relationship that produced it keeps producing — referrals, renewals, and the credibility of an independent who takes care of what they sold.
+Maintaining systems you sold transforms the inevitable after work of delivery into a designed business line: tiers with named response expectations, scheduled health routines, visible monthly stewardship, and clean paths to hand over, sunset, or decline. The system keeps earning long after the build is done, and the relationship that produced it keeps producing: referrals, renewals, and the credibility of an independent who takes care of what they sold.

@@ -5,7 +5,7 @@ capability_area: delivery-execution
 career_path: senior-software-engineer
 prerequisite:
   - "[[05_Release_Management]]"
-  - "[[02_Problem_Framing_and_Requirements/05_Acceptance_Conditions]]"
+  - "[[career-path/02_Senior_Software_Engineer/02_Problem_Framing_and_Requirements/05_Acceptance_Conditions]]"
 tags:
   - career-path
   - senior-engineer
@@ -65,6 +65,7 @@ An MVP is NOT:
 ### MVP identification process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     FEATURE["Full feature\n(all requirements)"] --> IDENTIFY["Identify core\nvalue proposition"]
     IDENTIFY --> STRIP["Strip to minimum\nthat delivers value"]
@@ -99,6 +100,7 @@ Ask these questions to find the MVP:
 ### The iteration cycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PLAN["Plan iteration\n(1-2 weeks scope)"] --> BUILD["Build"]
     BUILD --> SHIP["Ship to users"]
@@ -140,6 +142,7 @@ For each iteration, define:
 ### Progressive delivery with feature flags
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DEPLOY["Deploy code\n(flag OFF)"] --> SMOKE["Smoke test\nin production"]
     SMOKE --> INTERNAL["Enable for\ninternal users"]
@@ -216,8 +219,8 @@ Periodically audit shipped features:
 ## Knowledge Connections
 
 - [[05_Release_Management]] : feature flags and canary deployments enable progressive delivery
-- [[02_Problem_Framing_and_Requirements/05_Acceptance_Conditions]] : define acceptance conditions for each iteration
-- [[02_Problem_Framing_and_Requirements/07_Prioritization]] : prioritization determines what goes in the MVP
+- [[career-path/02_Senior_Software_Engineer/02_Problem_Framing_and_Requirements/05_Acceptance_Conditions]] : define acceptance conditions for each iteration
+- [[career-path/02_Senior_Software_Engineer/02_Problem_Framing_and_Requirements/07_Prioritization]] : prioritization determines what goes in the MVP
 - [[03_Delivery_Metrics]] : measure iteration outcomes with delivery metrics
 - [[04_Technical_Debt_Strategy]] : incremental delivery can introduce debt if shortcuts are not managed
 

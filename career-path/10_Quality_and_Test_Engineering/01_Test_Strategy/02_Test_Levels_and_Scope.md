@@ -33,6 +33,7 @@ Each level answers different questions and catches different types of defects.
 The test pyramid is a model for distributing tests across levels:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TB
     subgraph "Test Pyramid"
         A["Acceptance Tests\n(Few, slow, high-value)"]
@@ -42,9 +43,9 @@ flowchart TB
     
     A --> B --> C
     
-    style C fill:#90EE90
-    style B fill:#FFD700
-    style A fill:#FFA500
+    style C fill:#1FB854,stroke:#000000,color:#000000
+    style B fill:#FFBE00,stroke:#000000,color:#000000
+    style A fill:#FFBE00,stroke:#000000,color:#000000
 ```
 
 ### Why the Pyramid Shape?
@@ -208,6 +209,7 @@ Feature: User Registration
 ### Decision Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TB
     A[Identify Risk] --> B{Is it pure logic?}
     B -->|Yes| C[Unit Test]
@@ -227,6 +229,7 @@ flowchart TB
 **Problem:** Too many manual/acceptance tests, too few unit tests
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TB
     subgraph "Ice Cream Cone (Bad)"
         A["Manual Tests\n(Many, slow, expensive)"]
@@ -236,9 +239,9 @@ flowchart TB
     
     A --> B --> C
     
-    style A fill:#FF6B6B
-    style B fill:#FFD93D
-    style C fill:#C8E6C9
+    style A fill:#FF5861,stroke:#000000,color:#000000
+    style B fill:#FFBE00,stroke:#000000,color:#000000
+    style C fill:#1FB854,stroke:#000000,color:#000000
 ```
 
 **Consequences:**

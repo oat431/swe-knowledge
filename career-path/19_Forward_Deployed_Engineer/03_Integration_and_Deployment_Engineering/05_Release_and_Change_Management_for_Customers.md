@@ -16,15 +16,15 @@ tags:
 
 # Release and Change Management for Customers
 
-> **Core skill:** Shipping through the customer's change processes — change boards, risk reviews, freeze periods — so releases land on schedule, with evidence, and rollback is never an improvisation.
+> **Core skill:** Shipping through the customer's change processes (change boards, risk reviews, freeze periods), so releases land on schedule, with evidence, and rollback is never an improvisation.
 
 ## Why This Matters
 
-Deploying the software is the easy half of a release; getting it through the customer's change process is the half that decides the date. Enterprises gate production change through change advisory boards, risk assessments, maintenance windows, and freeze calendars tied to financial close, holidays, audits, and peak business periods. The FDE who treats that machinery as bureaucracy fights it and loses; the one who learns it treats it as the delivery interface — a process to be understood, prepared for, and used well. A release that ships without approval is not faster; it is a trust incident waiting to be discovered.
+Deploying the software is the easy half of a release; getting it through the customer's change process is the half that decides the date. Enterprises gate production change through change advisory boards, risk assessments, maintenance windows, and freeze calendars tied to financial close, holidays, audits, and peak business periods. The FDE who treats that machinery as bureaucracy fights it and loses; the one who learns it treats it as the delivery interface: a process to be understood, prepared for, and used well. A release that ships without approval is not faster; it is a trust incident waiting to be discovered.
 
-The customer's change process also does real work for the deployment. It forces the release package to be explicit: what changes, what could go wrong, how it is rolled back, who is on call, what evidence proves it works. Every artifact the change board requires is a question the FDE should be able to answer anyway. The difference between a smooth release train and a stream of emergencies is rarely engineering quality — it is whether release planning, evidence, and rollback were done as part of the work or improvised the night before the window.
+The customer's change process also does real work for the deployment. It forces the release package to be explicit: what changes, what could go wrong, how it is rolled back, who is on call, what evidence proves it works. Every artifact the change board requires is a question the FDE should be able to answer anyway. The difference between a smooth release train and a stream of emergencies is rarely engineering quality. It is whether release planning, evidence, and rollback were done as part of the work or improvised the night before the window.
 
-Over an engagement, release mechanics become a competitive advantage for the FDE team. The first release walks the path and documents it; subsequent releases reuse the request templates, the approval routes, the rollback rehearsals, and the communication cadence. Release velocity in a customer account is mostly organizational memory — and the FDE is the person who either builds it or spends every release rebuilding it.
+Over an engagement, release mechanics become a competitive advantage for the FDE team. The first release walks the path and documents it; subsequent releases reuse the request templates, the approval routes, the rollback rehearsals, and the communication cadence. Release velocity in a customer account is mostly organizational memory, and the FDE is the person who either builds it or spends every release rebuilding it.
 
 ## The Customer Release Lifecycle
 
@@ -43,13 +43,14 @@ Over an engagement, release mechanics become a competitive advantage for the FDE
 | Approach | How It Works | Trade-offs |
 |----------|--------------|------------|
 | Ad-hoc releases | Ship when ready, request a window each time | High process overhead per release; approval fatigue |
-| Batched release train | Fixed cadence — monthly or quarterly — collects changes | Predictable effort; small fixes may wait |
+| Batched release train | Fixed cadence (monthly or quarterly) collects changes | Predictable effort; small fixes may wait |
 | Hotfix and emergency path | Expedited approval for urgent fixes | Preserves production; abusing it erodes the process |
 | Freeze periods | No changes during close, audits, or peak seasons | Plan around; use the freeze to prepare and rehearse |
 
 Practical rule: publish the release calendar for the next quarter and negotiate it with the customer's change coordinator, so both sides plan the same dates. Surprises in release management are almost always calendar surprises.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PLAN["Plan the release with scope"] --> EVIDENCE["Assemble evidence and rollback"]
     EVIDENCE --> REVIEW["Pass risk and change review"]
@@ -84,7 +85,7 @@ flowchart LR
 ### Change Request Summary Template
 
 ```markdown
-## Change Request — <release, date, change id>
+## Change Request: <release, date, change id>
 
 | Field | Value |
 |-------|-------|
@@ -127,4 +128,4 @@ flowchart LR
 
 ## Summary
 
-Release and change management for customers is the discipline of shipping on the customer's terms: understand their approval machinery, write requests in their language, assemble evidence and rollback plans with the same care as the code, and negotiate a release calendar both sides can plan against. Done well, it converts the change process from a gate that blocks delivery into a rhythm that makes delivery predictable — and every release makes the next one cheaper.
+Release and change management for customers is the discipline of shipping on the customer's terms: understand their approval machinery, write requests in their language, assemble evidence and rollback plans with the same care as the code, and negotiate a release calendar both sides can plan against. Done well, it converts the change process from a gate that blocks delivery into a rhythm that makes delivery predictable, and every release makes the next one cheaper.

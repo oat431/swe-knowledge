@@ -16,21 +16,22 @@ tags:
 
 # Technical Decision Facilitation
 
-> **Core skill:** Facilitating technical decisions the TPM does not make — framing architecture options, managing the discussion, driving toward closure, and recording decisions so they stick — without substituting the TPM's judgment for the technical authority's.
+> **Core skill:** Facilitating technical decisions the TPM does not make (framing architecture options, managing the discussion, driving toward closure, and recording decisions so they stick) without substituting the TPM's judgment for the technical authority's.
 
 ## Why This Matters
 
-Programs are decision factories. Architecture choices, technology selections, integration approach decisions — every one of these shapes the program's timeline, risk profile, and cost. When these decisions are made in hallways, they are forgotten, challenged, and re-made. When they are made without the right people in the room, they are reversed. When they are not made at all, the program drifts into de-facto decisions that nobody chose and everyone is stuck with.
+Programs are decision factories. Architecture choices, technology selections, integration approach decisions: every one of these shapes the program's timeline, risk profile, and cost. When these decisions are made in hallways, they are forgotten, challenged, and re-made. When they are made without the right people in the room, they are reversed. When they are not made at all, the program drifts into de-facto decisions that nobody chose and everyone is stuck with.
 
-The TPM does not make technical decisions. But the TPM owns the decision process: ensuring decisions are framed clearly, the right people are in the room, the discussion stays productive, the decision gets made on time, and the outcome is recorded and communicated. Technical decision facilitation is the TPM's highest-leverage technical contribution — not choosing the answer, but making sure the answer is chosen well and sticks.
+The TPM does not make technical decisions. But the TPM owns the decision process: ensuring decisions are framed clearly, the right people are in the room, the discussion stays productive, the decision gets made on time, and the outcome is recorded and communicated. Technical decision facilitation is the TPM's highest-leverage technical contribution, not choosing the answer, but making sure the answer is chosen well and sticks.
 
 ## The Technical Decision Lifecycle
 
 Every significant technical decision follows a lifecycle. The TPM owns the lifecycle and ensures the decision moves through each stage without stalling.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
-    TRIGGER["Trigger: a decision is needed — design choice, technology selection, architecture conflict"] --> FRAME["Frame: define the decision, options, criteria, and decider"]
+    TRIGGER["Trigger: a decision is needed: design choice, technology selection, architecture conflict"] --> FRAME["Frame: define the decision, options, criteria, and decider"]
     FRAME --> DISCUSS["Discuss: technical authorities evaluate options against criteria"]
     DISCUSS --> DECIDE["Decide: the named decider chooses; rationale is documented"]
     DECIDE --> RECORD["Record: write the Architecture Decision Record or equivalent"]
@@ -40,15 +41,15 @@ flowchart TD
 
 | Stage | TPM Role | What the TPM Does | What the TPM Does Not Do |
 |-------|---------|-------------------|------------------------|
-| **Trigger** | Recognizes or surfaces the need for a decision | Identifies when indecision is blocking progress; names the decision needed | Determines whether a technical question is significant enough — the architect decides that |
-| **Frame** | Facilitates framing | Works with the architect to define the decision statement, the options, the evaluation criteria, and who decides | Evaluates the options or recommends one — that is the architect's role |
+| **Trigger** | Recognizes or surfaces the need for a decision | Identifies when indecision is blocking progress; names the decision needed | Determines whether a technical question is significant enough: the architect decides that |
+| **Frame** | Facilitates framing | Works with the architect to define the decision statement, the options, the evaluation criteria, and who decides | Evaluates the options or recommends one: that is the architect's role |
 | **Discuss** | Manages the discussion | Brings the right people together; keeps the discussion on track; ensures all options are heard; prevents premature closure or endless debate | Participates in the technical evaluation; argues for or against a technical option |
-| **Decide** | Ensures closure | Asks "what is the decision?" when discussion has converged; confirms the decider is ready to commit; captures dissent | Makes the decision — unless the decider explicitly delegates and the TPM has the technical competence |
-| **Record** | Ensures recording | Confirms the decision is written down in a standard format; reviews the ADR for completeness | Writes the ADR — the architect or decider writes it; the TPM reviews for process |
-| **Communicate** | Drives communication | Identifies who needs to know; ensures the decision reaches them; confirms they understand the implications | Interprets the technical implications — the architect explains what the decision means technically |
-| **Enforce** | Tracks consistency | Ensures workstream plans align with the decision; surfaces inconsistencies at program review | Enforces technical compliance — the architect does that through design reviews |
+| **Decide** | Ensures closure | Asks "what is the decision?" when discussion has converged; confirms the decider is ready to commit; captures dissent | Makes the decision, unless the decider explicitly delegates and the TPM has the technical competence |
+| **Record** | Ensures recording | Confirms the decision is written down in a standard format; reviews the ADR for completeness | Writes the ADR: the architect or decider writes it; the TPM reviews for process |
+| **Communicate** | Drives communication | Identifies who needs to know; ensures the decision reaches them; confirms they understand the implications | Interprets the technical implications: the architect explains what the decision means technically |
+| **Enforce** | Tracks consistency | Ensures workstream plans align with the decision; surfaces inconsistencies at program review | Enforces technical compliance: the architect does that through design reviews |
 
-The TPM's role is process ownership from trigger to enforcement. When the decision stalls at any stage, the TPM diagnoses why and unblocks it — not by making the decision, but by fixing whatever is preventing it from being made.
+The TPM's role is process ownership from trigger to enforcement. When the decision stalls at any stage, the TPM diagnoses why and unblocks it, not by making the decision, but by fixing whatever is preventing it from being made.
 
 ## Framing the Decision
 
@@ -63,7 +64,7 @@ Badly framed decisions produce bad outcomes regardless of the quality of the dis
 | **Decider** | Who makes the final call? One person or a named group with a tie-breaker | Architect decides; tech leads provide input; TPM facilitates |
 | **Deadline** | When must the decision be made? What depends on it? | Decision by October 15; Workstream 3 needs the broker choice to begin implementation on October 20 |
 
-The TPM does not define these elements alone. The architect owns the technical content of the frame — the options, the criteria, the constraints. The TPM ensures the frame exists as a written document before the discussion begins. A discussion that starts without a frame is a debate, not a decision process — and debates do not reliably produce decisions.
+The TPM does not define these elements alone. The architect owns the technical content of the frame: the options, the criteria, the constraints. The TPM ensures the frame exists as a written document before the discussion begins. A discussion that starts without a frame is a debate, not a decision process, and debates do not reliably produce decisions.
 
 ## Managing the Discussion
 
@@ -71,11 +72,11 @@ The TPM runs the decision meeting. The content belongs to the technical authorit
 
 | Discussion Phase | TPM Move | Anti-Pattern to Prevent |
 |-----------------|---------|------------------------|
-| **Opening** | Restate the decision statement, options, criteria, and decider from the frame document | Starting the discussion without re-grounding — participants argue from different frames |
+| **Opening** | Restate the decision statement, options, criteria, and decider from the frame document | Starting the discussion without re-grounding: participants argue from different frames |
 | **Option presentation** | Each option is presented by its advocate; equal time; factual, not persuasive | One option dominates the conversation; alternatives are not fully explored |
 | **Evaluation** | Walk through criteria one at a time; rate each option against the current criterion; capture disagreements | Criteria are skipped or collapsed; evaluation becomes "I like option A" without reference to criteria |
 | **Deliberation** | Manage airtime: quiet voices are drawn out; dominant voices are contained; ensure the decider hears all perspectives | A few loud voices determine the outcome; the decider does not hear dissenting views |
-| **Closure** | Ask the decider: "Based on this discussion, what is your decision?" Capture the decision and the rationale | Discussion ends with "we will think about it" — no decision, no next step |
+| **Closure** | Ask the decider: "Based on this discussion, what is your decision?" Capture the decision and the rationale | Discussion ends with "we will think about it": no decision, no next step |
 | **Dissent recording** | Ask: "Does anyone disagree with this decision strongly enough to have their dissent recorded?" Capture dissent in the ADR | Dissent is suppressed; it resurfaces later as passive resistance or reversal |
 
 The TPM's most important move in the discussion is neutrality. The TPM does not express a preference, does not argue for or against an option, and does not summarize the discussion in a way that favors one side. The TPM who advocates for a technical option loses the facilitator role and cannot recover it for the rest of the program.
@@ -92,7 +93,7 @@ The hardest part of technical decision facilitation is closure. Groups naturally
 | **More information needed** | The discussion reveals a critical gap in information; deciding now would be guessing | Pause the decision; define exactly what information is needed, who will get it, and when the decision will resume |
 | **Decision deferred** | The decision is genuinely not needed yet, and deferring has no cost | Confirm the deferral is deliberate; set a date to revisit; do not let it drift indefinitely |
 
-The TPM's closure test: "If we do not decide now, when will we decide, and what changes between now and then?" If the answer is "nothing changes," the decision should be made now. If the answer identifies specific information that will arrive by a specific date, deferral is legitimate. If the answer is vague, the TPM pushes for closure — uncertainty is not a reason to defer; it is a reason to decide with a contingency.
+The TPM's closure test: "If we do not decide now, when will we decide, and what changes between now and then?" If the answer is "nothing changes," the decision should be made now. If the answer identifies specific information that will arrive by a specific date, deferral is legitimate. If the answer is vague, the TPM pushes for closure: uncertainty is not a reason to defer; it is a reason to decide with a contingency.
 
 ## Recording Decisions with ADRs
 
@@ -134,7 +135,7 @@ The TPM does not write the ADR. The TPM ensures the ADR is written within one we
 ### Options
 1. [Option A]: [One-sentence description]
 2. [Option B]: [One-sentence description]
-3. [Option C — include "do nothing" or "defer" if real options]
+3. [Option C: include "do nothing" or "defer" if real options]
 
 ### Evaluation Criteria
 | Criterion | Weight | Description |
@@ -145,7 +146,7 @@ The TPM does not write the ADR. The TPM ensures the ADR is written within one we
 - [Constraint 1: budget, technology standard, organizational mandate]
 
 ### Decider
-[Name/Role]: [Decision authority — decides, or recommends to whom]
+[Name/Role]: [Decision authority: decides, or recommends to whom]
 
 ### Deadline
 [Date]: [What depends on this decision]
@@ -164,20 +165,20 @@ The TPM does not write the ADR. The TPM ensures the ADR is written within one we
 
 ## Success Indicators
 
-- Technical decisions are made on the program timeline — not too early (without enough information), not too late (blocking workstreams)
+- Technical decisions are made on the program timeline, not too early (without enough information), not too late (blocking workstreams)
 - Decisions stick: they are not re-litigated in the next meeting or reversed by stakeholders who were not consulted
 - Every significant technical decision has an ADR accessible to all program participants
-- The decision forum includes the right people — the architect, the affected tech leads, the TPM — and nobody else
-- Participants describe the TPM's facilitation as "neutral and productive" — not "the TPM pushed their preference"
+- The decision forum includes the right people (the architect, the affected tech leads, the TPM) and nobody else
+- Participants describe the TPM's facilitation as "neutral and productive", not "the TPM pushed their preference"
 
 ## Related Topics
 
 - [[01_Technical_Fluency_for_TPMs]]: the technical context to frame decisions without making them
 - [[05_Working_with_Architects_and_Tech_Leads]]: the partnership that gives the TPM access to the deciders
 - [[04_Technical_Risk_Identification]]: decisions that defer risk create technical risk entries
-- [[06_Decision_Facilitation/00_overview|Decision Facilitation]]: the broader decision facilitation framework across all program domains
+- [[career-path/12_Technical_Program_Manager/06_Decision_Facilitation/00_overview|Decision Facilitation]]: the broader decision facilitation framework across all program domains
 - [[career-path/06_Software_Architect/01_Architecture_Fundamentals/04_Architecture_Decision_Making|Architecture Decision Making (Architect)]]: the ADR practice the TPM facilitates and the architect owns
 
 ## Summary
 
-Technical decision facilitation is the TPM's process ownership of decisions the TPM does not make: frame every decision before the room gathers, run the discussion as a neutral facilitator, drive toward closure when the discussion has produced enough to decide, ensure the decision is recorded in an ADR within a week, and communicate it to everyone affected. The TPM does not choose the answer — the TPM ensures the answer is chosen well, on time, and in a way that sticks.
+Technical decision facilitation is the TPM's process ownership of decisions the TPM does not make: frame every decision before the room gathers, run the discussion as a neutral facilitator, drive toward closure when the discussion has produced enough to decide, ensure the decision is recorded in an ADR within a week, and communicate it to everyone affected. The TPM does not choose the answer. The TPM ensures the answer is chosen well, on time, and in a way that sticks.

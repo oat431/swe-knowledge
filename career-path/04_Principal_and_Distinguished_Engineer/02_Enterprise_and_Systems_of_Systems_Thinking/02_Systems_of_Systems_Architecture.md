@@ -16,11 +16,11 @@ tags:
 
 # Systems of Systems Architecture
 
-> **Core skill:** The principal engineer architects across independent, evolving systems — establishing interoperability standards, governing shared services, and anticipating emergent behavior that no single system owner can predict or control.
+> **Core skill:** The principal engineer architects across independent, evolving systems, establishing interoperability standards, governing shared services, and anticipating emergent behavior that no single system owner can predict or control.
 
 ## Why This Matters
 
-Most architecture is single-system architecture: a bounded application, service, or platform under one team's control. At the principal level, the architect works across systems of systems — collections of independent systems, each with its own owners, lifecycles, and incentives, that must interoperate to produce enterprise outcomes. The architecture is not a design you draw; it is a set of constraints, standards, and governance mechanisms that shape behavior across autonomous actors.
+Most architecture is single-system architecture: a bounded application, service, or platform under one team's control. At the principal level, the architect works across systems of systems: collections of independent systems, each with its own owners, lifecycles, and incentives, that must interoperate to produce enterprise outcomes. The architecture is not a design you draw; it is a set of constraints, standards, and governance mechanisms that shape behavior across autonomous actors.
 
 This is the layer where emergent behavior dominates. Two systems that work perfectly in isolation can produce catastrophic failure when integrated. The principal's contribution is designing the interfaces, standards, and governance that make the system of systems behave coherently without requiring centralized control.
 
@@ -57,9 +57,10 @@ Interoperability is the core architectural problem in a system of systems. The p
 
 ## Governance of Shared Services
 
-Shared services — platforms, data stores, identity providers — are the integration points where systems of systems become coupled. The principal governs these services to prevent them from becoming bottlenecks.
+Shared services (platforms, data stores, identity providers) are the integration points where systems of systems become coupled. The principal governs these services to prevent them from becoming bottlenecks.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SOS["System of systems: independent, evolving components"] --> IDENTIFY["Identify shared services: platforms, data, identity"]
     IDENTIFY --> CONTRACT["Establish service contracts: SLAs, APIs, versioning, migration windows"]
@@ -79,7 +80,7 @@ flowchart TD
 
 ## Emergent Behavior in Multi-System Environments
 
-Emergent behavior is the most dangerous property of systems of systems — and the one most often ignored until it causes an incident. The principal anticipates it.
+Emergent behavior is the most dangerous property of systems of systems, and the one most often ignored until it causes an incident. The principal anticipates it.
 
 | Emergent Behavior Type | Description | Detection Strategy |
 |-----------------------|-------------|-------------------|
@@ -157,9 +158,9 @@ The principal as SoS architect does not design individual systems. They design t
 - [[01_Enterprise_Systems_Thinking]]
 - [[03_Ecosystem_and_Industry_Analysis]]
 - [[05_Long_Term_Consequence_Analysis]]
-- [[01_Technology_Strategy/00_overview|Technology Strategy]]
+- [[career-path/04_Principal_and_Distinguished_Engineer/01_Technology_Strategy/00_overview|Technology Strategy]]
 - [[career-path/06_Software_Architect/01_Architecture_Fundamentals/00_overview|Architecture Fundamentals (Architect)]]
 
 ## Summary
 
-Systems of systems architecture means designing across independent, evolving systems — establishing interoperability standards at every layer, governing shared services with explicit ownership and contracts, anticipating emergent behavior through monitoring and chaos engineering, and managing coupling so that systems remain autonomous while producing coherent outcomes. The principal designs the rules that systems follow, not the systems themselves.
+Systems of systems architecture means designing across independent, evolving systems, establishing interoperability standards at every layer, governing shared services with explicit ownership and contracts, anticipating emergent behavior through monitoring and chaos engineering, and managing coupling so that systems remain autonomous while producing coherent outcomes. The principal designs the rules that systems follow, not the systems themselves.

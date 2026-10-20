@@ -16,15 +16,15 @@ tags:
 
 # Cloud and Infrastructure Architecture
 
-> **Core skill:** The architect chooses and composes cloud services as architecture decisions — managed versus self-hosted, container versus serverless, single versus multi-cloud — and reviews the result against a well-architected framework with the decisions recorded as ADRs.
+> **Core skill:** The architect chooses and composes cloud services as architecture decisions (managed versus self-hosted, container versus serverless, single versus multi-cloud) and reviews the result against a well-architected framework with the decisions recorded as ADRs.
 
 ## Why This Matters
 
-Infrastructure choices are architecture choices. A managed queue's delivery semantics, a region topology's latency profile, a serverless runtime's execution constraints, a database's replication behavior — each shapes component design as surely as any interface. Treating infrastructure as someone else's problem means the architecture is quietly redefined by defaults: whatever the platform happens to provide becomes the design.
+Infrastructure choices are architecture choices. A managed queue's delivery semantics, a region topology's latency profile, a serverless runtime's execution constraints, a database's replication behavior: each shapes component design as surely as any interface. Treating infrastructure as someone else's problem means the architecture is quietly redefined by defaults: whatever the platform happens to provide becomes the design.
 
-The managed-versus-self-hosted question is a strategic trade. Managed services buy reduced operational burden and faster time to capability at the price of provider constraints, consumption-based cost, and exit friction. Self-hosting buys control and long-run cost predictability at the price of running the thing — expertise, on-call, upgrades, incidents. There is no universal answer; there is a decision per capability, and the honest version names what the organization will actually operate well.
+The managed-versus-self-hosted question is a strategic trade. Managed services buy reduced operational burden and faster time to capability at the price of provider constraints, consumption-based cost, and exit friction. Self-hosting buys control and long-run cost predictability at the price of running the thing: expertise, on-call, upgrades, incidents. There is no universal answer; there is a decision per capability, and the honest version names what the organization will actually operate well.
 
-Multi-cloud and hybrid decisions carry the same discipline. The real drivers — regulation, acquisition, negotiated leverage, disaster strategy — each imply different architectures, and the hidden costs are mostly in duplicated tooling and split expertise. Where multi-cloud is justified, an interoperability layer and a realistic exit path are part of the design; where it is fashion, it is an expensive way to avoid a decision. Reviewing the result against a well-architected framework keeps the trade-offs visible, and recording infrastructure decisions as ADRs keeps them reviewable when scale and prices move.
+Multi-cloud and hybrid decisions carry the same discipline. The real drivers (regulation, acquisition, negotiated leverage, disaster strategy) each imply different architectures, and the hidden costs are mostly in duplicated tooling and split expertise. Where multi-cloud is justified, an interoperability layer and a realistic exit path are part of the design; where it is fashion, it is an expensive way to avoid a decision. Reviewing the result against a well-architected framework keeps the trade-offs visible, and recording infrastructure decisions as ADRs keeps them reviewable when scale and prices move.
 
 ## Managed Services vs Self-Hosted
 
@@ -62,6 +62,7 @@ Infrastructure services shape boundaries, not just deployment. A durable queue w
 ## Infrastructure Decisions as ADRs
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DRIVERS["Name architecture drivers and constraints"] --> OPTIONS["Evaluate managed and self hosted options"]
     OPTIONS --> DECIDE["Decide and record it as an ADR"]
@@ -93,7 +94,7 @@ flowchart TD
 ### Infrastructure Decision Record
 
 ```markdown
-## Infrastructure Decision — <capability>
+## Infrastructure Decision: <capability>
 
 | Field | Value |
 |-------|-------|
@@ -134,4 +135,4 @@ flowchart TD
 
 ## Summary
 
-Cloud and infrastructure architecture treats platform choices as architecture decisions: managed versus self-hosted weighed on control, operational honesty, cost shape, and exit cost; compute models matched to workload character; multi-cloud and hybrid adopted only for named drivers with their duplicated costs acknowledged. Infrastructure services are the medium components live in, so their properties — delivery semantics, replication lag, identity models — are design inputs, not details. Decisions are recorded as ADRs and reviewed against a well-architected framework before launch and as the system grows.
+Cloud and infrastructure architecture treats platform choices as architecture decisions: managed versus self-hosted weighed on control, operational honesty, cost shape, and exit cost; compute models matched to workload character; multi-cloud and hybrid adopted only for named drivers with their duplicated costs acknowledged. Infrastructure services are the medium components live in, so their properties (delivery semantics, replication lag, identity models) are design inputs, not details. Decisions are recorded as ADRs and reviewed against a well-architected framework before launch and as the system grows.

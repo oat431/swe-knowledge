@@ -16,13 +16,13 @@ tags:
 
 # Architectural Significance
 
-> **Core skill:** Separating architecturally significant decisions from implementation detail — by testing decisions against cost to reverse, blast radius, and quality attribute impact, and making the verdict explicit to the team.
+> **Core skill:** Separating architecturally significant decisions from implementation detail, by testing decisions against cost to reverse, blast radius, and quality attribute impact, and making the verdict explicit to the team.
 
 ## Why This Matters
 
-Every line of code encodes a decision, but only a small fraction of those decisions determine the shape of the system a year from now. The architect's first discipline is discrimination: knowing which decisions are architecturally significant — costly to reverse, broad in blast radius, or decisive for a quality attribute — and which are implementation detail that belongs to the team. Without that discrimination, architecture collapses into one of two failure modes: everything is significant, so the architect becomes an approval bottleneck, or nothing is significant, so structural choices accumulate silently and nobody can explain why the system looks the way it does.
+Every line of code encodes a decision, but only a small fraction of those decisions determine the shape of the system a year from now. The architect's first discipline is discrimination: knowing which decisions are architecturally significant (costly to reverse, broad in blast radius, or decisive for a quality attribute) and which are implementation detail that belongs to the team. Without that discrimination, architecture collapses into one of two failure modes: everything is significant, so the architect becomes an approval bottleneck, or nothing is significant, so structural choices accumulate silently and nobody can explain why the system looks the way it does.
 
-Significance is not a matter of taste and not a matter of title. It is a property of a decision, and it can be tested: what does it cost to undo, who is affected when it changes, and which quality attributes will feel it. A database engine choice is significant not because databases are interesting but because reversing it means migrating data, rewriting query layers, and retraining operators — the cost to reverse is measured in quarters, not days. A logging library choice is not significant because reversing it costs an afternoon.
+Significance is not a matter of taste and not a matter of title. It is a property of a decision, and it can be tested: what does it cost to undo, who is affected when it changes, and which quality attributes will feel it. A database engine choice is significant not because databases are interesting but because reversing it means migrating data, rewriting query layers, and retraining operators. The cost to reverse is measured in quarters, not days. A logging library choice is not significant because reversing it costs an afternoon.
 
 The architect who articulates significance gives the team a shared filter. Once the criteria are named and used, engineers stop escalating trivia and stop making irreversible choices unilaterally. The test travels, the architect stops being the bottleneck for triage, and design reviews spend their limited attention where it actually changes outcomes.
 
@@ -37,7 +37,7 @@ The architect who articulates significance gives the team a shared filter. Once 
 | **Interface permanence** | Will other systems and consumers build against this? | The interface becomes a contract others depend on | Event schema; service API; plugin boundary |
 | **Cross-team structure** | Does it change ownership or team boundaries? | It alters who builds, deploys, or operates what | Service split; platform extraction; shared library |
 
-A decision is significant when it scores high on at least one criterion — and the strongest candidates score on two or three at once. Most significant decisions combine a structural change with a quality attribute consequence: splitting a service changes the deployment topology and the operational failure modes together.
+A decision is significant when it scores high on at least one criterion, and the strongest candidates score on two or three at once. Most significant decisions combine a structural change with a quality attribute consequence: splitting a service changes the deployment topology and the operational failure modes together.
 
 ## Cost to Reverse
 
@@ -51,7 +51,7 @@ The single best test of significance is the price of being wrong.
 | **Quarters to years** | Database engine; core protocol; cloud platform; identity model | Full architecture process; ADR mandatory; revisit triggers named |
 | **Effectively irreversible** | Regulatory commitments; acquired contracts; published schemas | Treat as one-way; invest heavily before committing |
 
-The asymmetry matters: teams routinely over-deliberate reversible choices and under-deliberate irreversible ones. The architect's job is to move deliberation to match reversal cost — more scrutiny where undoing is expensive, more speed where it is cheap.
+The asymmetry matters: teams routinely over-deliberate reversible choices and under-deliberate irreversible ones. The architect's job is to move deliberation to match reversal cost: more scrutiny where undoing is expensive, more speed where it is cheap.
 
 ## Blast Radius
 
@@ -82,13 +82,13 @@ A decision that looks local today can acquire blast radius later: an internal sc
 
 Before a design conversation ends, run the decision through six questions:
 
-1. If we are wrong, what does it cost to reverse — and who pays?
+1. If we are wrong, what does it cost to reverse, and who pays?
 2. Who is affected: this component, this team, other teams, the organization?
 3. Which quality attribute targets does this decision set, cap, or threaten?
 4. What future options does this close, and is that acceptable?
 5. Will people who were not in the room need to know why this was chosen?
 
-One or more affirmative answers make the decision architecturally significant: record it, review it, and name its revisit triggers. All negative answers mean the team owns it — and the architect's correct move is to let go.
+One or more affirmative answers make the decision architecturally significant: record it, review it, and name its revisit triggers. All negative answers mean the team owns it, and the architect's correct move is to let go.
 
 ## Communicating Significance to the Team
 
@@ -112,6 +112,7 @@ The communication that matters most is the negative case: naming what is *not* s
 | **Significance discovered late** | A local choice becomes an org-wide contract unremarked | Expensive retrofits; surprise dependencies | Watch for scope creep; re-test decisions at increments |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CANDIDATE["Candidate decision"] --> COST["What does reversal cost"]
     CANDIDATE --> RADIUS["Who is affected"]
@@ -132,7 +133,7 @@ flowchart TD
 - [ ] Every high-reversal-cost decision has an ADR with named revisit triggers
 - [ ] Delegated territory is explicit: the team knows what it does not need to escalate
 - [ ] Design reviews spend their time on significant decisions only
-- [ ] Decisions are re-tested when their scope grows — a local schema that becomes a shared contract
+- [ ] Decisions are re-tested when their scope grows: a local schema that becomes a shared contract
 - [ ] The significance test is part of onboarding, not folklore
 
 ### Decision Significance Record Template
@@ -170,12 +171,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[04_Architecture_Decision_Making]] — the process that turns significance into decisions
-- [[02_Architecture_vs_Design]] — how the significance boundary maps to ownership
-- [[07_Architecture_and_Quality_Attributes]] — the drivers that make decisions significant
-- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/00_overview|Architecture and Design Judgment (Senior)]] — the judgment foundation this formalizes
-- [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions and Enterprise Architect]] — significance at enterprise scope
+- [[04_Architecture_Decision_Making]]: the process that turns significance into decisions
+- [[02_Architecture_vs_Design]]: how the significance boundary maps to ownership
+- [[07_Architecture_and_Quality_Attributes]]: the drivers that make decisions significant
+- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/00_overview|Architecture and Design Judgment (Senior)]]: the judgment foundation this formalizes
+- [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions and Enterprise Architect]]: significance at enterprise scope
 
 ## Summary
 
-Architectural significance is the filter that decides where architecture attention is spent: a decision earns it when it is costly to reverse, broad in blast radius, or decisive for a quality attribute. The categories are testable, not intuitive — reversal cost, scope of impact, quality attribute consequence, options closed, interface permanence — and the test is designed to be applied by anyone on the team. The two failure modes bracket the discipline: when everything is significant, architecture throttles delivery; when nothing is, structure happens by accident. The architect's craft is holding the line between them, and communicating both the significant and the explicitly not-significant so the team can move fast where it is safe and escalate where it matters.
+Architectural significance is the filter that decides where architecture attention is spent: a decision earns it when it is costly to reverse, broad in blast radius, or decisive for a quality attribute. The categories are testable, not intuitive (reversal cost, scope of impact, quality attribute consequence, options closed, interface permanence) and the test is designed to be applied by anyone on the team. The two failure modes bracket the discipline: when everything is significant, architecture throttles delivery; when nothing is, structure happens by accident. The architect's craft is holding the line between them, and communicating both the significant and the explicitly not-significant so the team can move fast where it is safe and escalate where it matters.

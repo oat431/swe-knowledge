@@ -62,6 +62,7 @@ Choose the strongest practical mechanism for the trust boundary and operating en
 For every credential, record audience, permissions, environment, data reach, lifetime, rotation owner, and detection signal. Use the worksheet to compare a proposed design with a safer alternative.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     WORKLOAD["Identify workload and environment"] --> TRUST["Select identity or secret mechanism"]
     TRUST --> SCOPE["Limit audience permission and lifetime"]

@@ -6,7 +6,7 @@ career_path: security-engineer
 level: senior-specialist
 prerequisite:
   - "[[01_Security_Test_Strategy|Security Test Strategy]]"
-  - "[[03_Secure_Development_and_DevSecOps/04_Dependency_and_Supply_Chain_Security|Dependency and Supply Chain Security]]"
+  - "[[career-path/08_Security_Engineer/03_Secure_Development_and_DevSecOps/04_Dependency_and_Supply_Chain_Security|Dependency and Supply Chain Security]]"
 source_frameworks:
   - "[[body-of-knowledge/CyBOK/09_Software_Security]]"
   - "F:\obsidian_note\document_template\14_Security/SCA-Report.md"
@@ -71,6 +71,7 @@ Review the image as a build and runtime object:
 ### 4. Scan and Response Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     BUILD["Release build"] --> INVENTORY["Component and image inventory"]
     INVENTORY --> ENRICH["Advisory, reachability, and exposure context"]
@@ -121,7 +122,7 @@ Choose a service image and its dependency lockfile:
 - [[software-engineering-note/13_Software_Security/Cybersecurity/02 Secure Development/02 Dependency & Supply Chain|Dependency and Supply Chain]]: dependency lifecycle and provenance
 - [[software-engineering-note/13_Software_Security/Cybersecurity/03 Infrastructure Security/03 Container & Cloud Security|Container and Cloud Security]]: image and cloud foundations
 - [SCA Report](F:\obsidian_note\document_template\14_Security/SCA-Report.md): reporting artifact
-- [[03_Secure_Development_and_DevSecOps/04_Dependency_and_Supply_Chain_Security|Dependency and Supply Chain Security]]: prevention and response operating model
+- [[career-path/08_Security_Engineer/03_Secure_Development_and_DevSecOps/04_Dependency_and_Supply_Chain_Security|Dependency and Supply Chain Security]]: prevention and response operating model
 - [[01_Security_Test_Strategy|Security Test Strategy]]: selecting composition and image verification depth
 - [[05_Findings_Triage_and_False_Positives|Findings Triage and False Positives]]: contextualizing scanner output
 - [[06_Security_Release_Evidence|Security Release Evidence]]: release evidence for component treatment

@@ -16,13 +16,13 @@ tags:
 
 # Technology Selection for Solo Builders
 
-> **Core skill:** The solo builder chooses boring, well-documented, replaceable technology — managed services over self-hosted, mainstream over novel — and treats every choice as a multi-year maintenance commitment made by one person.
+> **Core skill:** The solo builder chooses boring, well-documented, replaceable technology (managed services over self-hosted, mainstream over novel), and treats every choice as a multi-year maintenance commitment made by one person.
 
 ## Why This Matters
 
-Every technology choice is a commitment to maintain it, and with no team to absorb the cost, the solo builder pays each choice back in attention for years. Choices that look neutral inside a company become decisive alone: an exotic data store is a research project at 2 AM; a self-hosted service is an on-call rotation of one; a fashionable framework is a migration you will personally perform when it is abandoned. The question is never only what the tool can do — it is what it will cost in upkeep, and whether that cost lands on billable hours or on your evenings.
+Every technology choice is a commitment to maintain it, and with no team to absorb the cost, the solo builder pays each choice back in attention for years. Choices that look neutral inside a company become decisive alone: an exotic data store is a research project at 2 AM; a self-hosted service is an on-call rotation of one; a fashionable framework is a migration you will personally perform when it is abandoned. The question is never only what the tool can do. It is what it will cost in upkeep, and whether that cost lands on billable hours or on your evenings.
 
-The selection criteria for one maintainer are easy to state and easy to violate: boring, mainstream, well documented, managed where possible, and easy to replace. The strongest test is handover — could another generalist contractor take over this system within a week, with the documentation you would leave behind? If not, the choice is a trap disguised as progress. This standard protects both the independent and the client, whose system should outlive any single engagement.
+The selection criteria for one maintainer are easy to state and easy to violate: boring, mainstream, well documented, managed where possible, and easy to replace. The strongest test is handover. Could another generalist contractor take over this system within a week, with the documentation you would leave behind? If not, the choice is a trap disguised as progress. This standard protects both the independent and the client, whose system should outlive any single engagement.
 
 There is also a second-order effect: clients and buyers judge durability. Telling a client "this runs on a stack any contractor can pick up" is a sales feature, not a compromise. Maturity, community size, and clear upgrade paths read as professionalism. The independent who picks boring technology is not settling; they are buying down risk with every component.
 
@@ -63,6 +63,7 @@ There is also a second-order effect: clients and buyers judge durability. Tellin
 ## The Selection Funnel
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     NEED["State the actual problem to solve"] --> CRITERIA["Filter by solo maintainability criteria"]
     CRITERIA --> CANDIDATES["Shortlist boring well documented options"]
@@ -86,7 +87,7 @@ Preference enters the funnel last: the requirement, not the technology, leads.
 ### Technology Decision Record
 
 ```markdown
-## Technology Decision — <component>
+## Technology Decision: <component>
 
 | Field | Value |
 |-------|-------|
@@ -126,4 +127,4 @@ Preference enters the funnel last: the requirement, not the technology, leads.
 
 ## Summary
 
-Technology selection for solo builders is risk management expressed as taste: boring, mainstream, well-documented components that one person can operate, afford, and hand over. The independent who keeps a strict novelty budget, prefers managed services by default, and records why each choice won builds systems that survive both the client relationship and their own absence — which is exactly what durability means at this scale.
+Technology selection for solo builders is risk management expressed as taste: boring, mainstream, well-documented components that one person can operate, afford, and hand over. The independent who keeps a strict novelty budget, prefers managed services by default, and records why each choice won builds systems that survive both the client relationship and their own absence, which is exactly what durability means at this scale.

@@ -15,13 +15,13 @@ tags:
 
 # Project Kickoff
 
-> **Core skill:** Launching the project with the team and stakeholders — communicating the charter, building shared understanding of purpose and scope, establishing working norms, and converting a document into a collective commitment.
+> **Core skill:** Launching the project with the team and stakeholders, communicating the charter, building shared understanding of purpose and scope, establishing working norms, and converting a document into a collective commitment.
 
 ## Why This Matters
 
 The project charter authorizes the project; the kickoff animates it. A charter that sits in a document repository is an organizational formality. A charter that is presented, discussed, questioned, and embraced at kickoff becomes the team's shared understanding of why they are here, what they are building, and how they will work together. The kickoff is the moment the project transitions from an idea on paper to a living initiative with people who own it.
 
-The kickoff also serves as the first test of stakeholder alignment. When the project manager presents the charter and a stakeholder says "that is not what I agreed to," the kickoff has succeeded — it surfaced a misalignment early, when it is cheap to fix. When stakeholders nod silently and later resist every decision, the kickoff failed — it did not create the conditions for honest discussion. The project manager designs the kickoff not as a presentation but as a structured conversation that surfaces disagreement before it becomes obstruction.
+The kickoff also serves as the first test of stakeholder alignment. When the project manager presents the charter and a stakeholder says "that is not what I agreed to," the kickoff has succeeded. It surfaced a misalignment early, when it is cheap to fix. When stakeholders nod silently and later resist every decision, the kickoff failed. It did not create the conditions for honest discussion. The project manager designs the kickoff not as a presentation but as a structured conversation that surfaces disagreement before it becomes obstruction.
 
 For the team, the kickoff answers the questions that every team member has on day one: why this project, why now, why me, what are we building, how will we work, and who decides what. A team that leaves kickoff with clear answers moves into planning with purpose; a team that leaves with ambiguity spends the first weeks of planning discovering what the charter already said.
 
@@ -37,6 +37,7 @@ For the team, the kickoff answers the questions that every team member has on da
 ## The Kickoff Agenda
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     OPEN["Open: sponsor sets context and importance"] --> PURPOSE["Purpose: why this project, why now, what is at stake"]
     PURPOSE --> CHARTER["Charter walkthrough: scope, objectives, constraints, governance"]
@@ -68,7 +69,7 @@ flowchart TD
 **Date:** [Date]
 **Attendees:** [Team and stakeholders]
 
-## 1. Opening — Sponsor (10 min)
+## 1. Opening: Sponsor (10 min)
 - Why this project matters to the organization
 - The sponsor's commitment and expectations
 
@@ -130,12 +131,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[01_Project_Charter]] — the charter that the kickoff communicates and socializes
-- [[03_Stakeholder_Identification]] — stakeholders identified at initiation attend the kickoff
-- [[04_Project_Objectives_and_Success_Criteria]] — objectives presented and questioned at kickoff
-- [[01_Scope_Definition]] — detailed scope planning begins after kickoff
-- [[05_Stakeholder_Engagement/00_overview|Stakeholder Engagement]] — ongoing engagement after the kickoff
+- [[01_Project_Charter]]: the charter that the kickoff communicates and socializes
+- [[03_Stakeholder_Identification]]: stakeholders identified at initiation attend the kickoff
+- [[04_Project_Objectives_and_Success_Criteria]]: objectives presented and questioned at kickoff
+- [[01_Scope_Definition]]: detailed scope planning begins after kickoff
+- [[career-path/13_Project_and_Program_Manager/05_Stakeholder_Engagement/00_overview|Stakeholder Engagement]]: ongoing engagement after the kickoff
 
 ## Summary
 
-The project kickoff converts the charter from a document into a shared understanding. It is designed as a structured conversation — not a presentation — that communicates purpose and scope, establishes roles and working norms, and surfaces disagreement before it becomes obstruction. The sponsor opens with context and commitment; the project manager presents the charter for discussion; the team leaves knowing why they are here, what they are building, how they will work together, and what they do next. A well-designed kickoff prevents the misalignment that a poorly designed one hides.
+The project kickoff converts the charter from a document into a shared understanding. It is designed as a structured conversation (not a presentation) that communicates purpose and scope, establishes roles and working norms, and surfaces disagreement before it becomes obstruction. The sponsor opens with context and commitment; the project manager presents the charter for discussion; the team leaves knowing why they are here, what they are building, how they will work together, and what they do next. A well-designed kickoff prevents the misalignment that a poorly designed one hides.

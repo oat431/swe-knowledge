@@ -16,13 +16,13 @@ tags:
 
 # Target State Architecture
 
-> **Core skill:** Defining a target architecture that is strategically grounded but delivery-realistic — and the transition states between here and there, so the destination shapes work today without pretending the journey is one leap.
+> **Core skill:** Defining a target architecture that is strategically grounded but delivery-realistic, and the transition states between here and there, so the destination shapes work today without pretending the journey is one leap.
 
 ## Why This Matters
 
 A target without a path is a poster; a path without a target is drift. Target state architecture is where enterprise strategy becomes concrete enough to steer investment: which capabilities the organization must have, what the application and data landscape should look like when it does, and which platforms carry it. Without a target, every proposal is judged only on its own merits, and the enterprise accumulates locally rational decisions that are globally incoherent.
 
-The classic failure is the big-bang blueprint: an exhaustive future state that would require everything to change at once. It is intellectually satisfying and organizationally impossible, so it is either ignored or descoped into irrelevance. The senior alternative is a directional target — opinionated on structure, deliberately silent on details that will be decided closer to delivery — plus explicit transition architectures that sequence the crossing.
+The classic failure is the big-bang blueprint: an exhaustive future state that would require everything to change at once. It is intellectually satisfying and organizationally impossible, so it is either ignored or descoped into irrelevance. The senior alternative is a directional target (opinionated on structure, deliberately silent on details that will be decided closer to delivery) plus explicit transition architectures that sequence the crossing.
 
 Good targets have an owner and a horizon. They state which decisions they are meant to constrain, which constraints (budget, regulation, contracts) shape them, and what would cause them to change. A target that cannot be revised when strategy shifts is not a target; it is a monument.
 
@@ -76,6 +76,7 @@ Transitions are architecturally significant in their own right: they get describ
 ## From Current to Target
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     DRIVERS["Business drivers and strategy"] --> TARGET["Target state architecture"]
     CURRENT["Current state landscape"] --> GAP["Gap analysis"]
@@ -99,7 +100,7 @@ flowchart LR
 ### Target State Statement
 
 ```markdown
-# Target State Statement — [Domain or Enterprise]
+# Target State Statement: [Domain or Enterprise]
 
 ## Business Drivers Addressed
 - [Drivers and the outcomes they demand; trace to strategy]
@@ -137,16 +138,16 @@ flowchart LR
 - Proposals cite the target when arguing scope, and expect to be tested on it
 - Transitions are described and governed, not improvised mid-program
 - Gap analyses feed portfolio planning with work items, not complaints
-- The target is revised deliberately when strategy shifts — visibly, with a record
+- The target is revised deliberately when strategy shifts: visibly, with a record
 - Delivery teams can explain how their current work moves the enterprise toward the target
 
 ## Related Topics
 
 - [[03_Current_State_Architecture]]: the baseline every gap is measured from
 - [[05_Architecture_Principles_for_the_Enterprise]]: the rules that keep movement toward the target coherent
-- [[06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: where target and gaps become a funded sequence
+- [[career-path/15_Solutions_and_Enterprise_Architect/06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: where target and gaps become a funded sequence
 - [[career-path/04_Principal_and_Distinguished_Engineer/02_Enterprise_and_Systems_of_Systems_Thinking/00_overview|Enterprise and Systems of Systems Thinking (Principal)]]: the strategy framing behind enterprise targets
 
 ## Summary
 
-Target state architecture converts strategy into a directional picture of capabilities, systems, data, and platforms — opinionated on structure, honest about constraints, owned by a named executive, and bounded by a revision horizon. The senior architect pairs every target with gap analysis and explicit transition states, so the destination shapes today's funded work without pretending the crossing happens in one leap.
+Target state architecture converts strategy into a directional picture of capabilities, systems, data, and platforms: opinionated on structure, honest about constraints, owned by a named executive, and bounded by a revision horizon. The senior architect pairs every target with gap analysis and explicit transition states, so the destination shapes today's funded work without pretending the crossing happens in one leap.

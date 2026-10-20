@@ -16,13 +16,13 @@ tags:
 
 # Code Review Standards
 
-> **Core skill:** Running code review as a team system — with SLAs, depth expectations, fair load, and teaching — so every PR is both a quality gate and a lesson.
+> **Core skill:** Running code review as a team system (with SLAs, depth expectations, fair load, and teaching) so every PR is both a quality gate and a lesson.
 
 ## Why This Matters
 
-Code review is the highest-leverage quality system a team has, because it catches what automation cannot: design mistakes, subtle logic errors, security smells, and operability problems. But review quality is not a property of individuals — it is a property of the system around them. Without standards, reviews are uneven: some PRs get a rubber stamp, others sit for days, and the same mistakes get explained to every new author separately.
+Code review is the highest-leverage quality system a team has, because it catches what automation cannot: design mistakes, subtle logic errors, security smells, and operability problems. But review quality is not a property of individuals; it is a property of the system around them. Without standards, reviews are uneven: some PRs get a rubber stamp, others sit for days, and the same mistakes get explained to every new author separately.
 
-The tech lead designs that system: how fast reviews happen, how deep they go, who reviews what, and how review comments teach rather than just correct. A review culture is also a teaching culture — the PR is where the team's standards are transmitted, one diff at a time. This note covers SLAs, depth, assignment, what humans must catch versus automation, load fairness, and review health metrics.
+The tech lead designs that system: how fast reviews happen, how deep they go, who reviews what, and how review comments teach rather than just correct. A review culture is also a teaching culture: the PR is where the team's standards are transmitted, one diff at a time. This note covers SLAs, depth, assignment, what humans must catch versus automation, load fairness, and review health metrics.
 
 ## Review as a Team System
 
@@ -35,9 +35,10 @@ The tech lead designs that system: how fast reviews happen, how deep they go, wh
 | **Templates** | The PR template asks the questions reviewers should answer |
 | **Escalation** | A path when a review stalls or a disagreement blocks merge |
 
-The goal is that an author knows what will happen to their PR before they open it — the system is predictable, which makes it fair.
+The goal is that an author knows what will happen to their PR before they open it: the system is predictable, which makes it fair.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A["Author opens PR"] --> B["Automation runs"]
     B --> C["Reviewer assigned"]
@@ -67,7 +68,7 @@ flowchart LR
 | **Deep** | Security, concurrency, data integrity, operability, rollback | Critical paths, auth, money, data migration |
 | **Architectural** | Does this fit the system direction? Is it the right design? | Design-level changes; pair with a design review |
 
-The depth tier is agreed between author and reviewer — an author can request a deep review, and a reviewer can insist on one. What is never acceptable is a review that only says "looks good."
+The depth tier is agreed between author and reviewer; an author can request a deep review, and a reviewer can insist on one. What is never acceptable is a review that only says "looks good."
 
 ## What Reviews Must Catch vs What Automation Should Catch
 
@@ -92,11 +93,11 @@ The rule: automation is the bouncer at the door; humans are the judges of what g
 | **Rotation for learning** | Assign reviewers to stretch them into new areas | Grows the team; slower reviews; needs a safety net |
 | **Pair or buddy system** | Each engineer has a designated review partner | Strong relationships; predictable; can drift into mutual approval |
 
-Most teams need a blend: expertise for critical paths, rotation for growth, and a round-robin fallback for load balance. The lead watches both load and coverage — every area should have at least two people who can review it well.
+Most teams need a blend: expertise for critical paths, rotation for growth, and a round-robin fallback for load balance. The lead watches both load and coverage: every area should have at least two people who can review it well.
 
 ## Teaching Through Reviews at Team Scale
 
-- **Comments teach, not just correct:** "This pattern fails when X happens — here is the case that bit us" beats "use the helper."
+- **Comments teach, not just correct:** "This pattern fails when X happens: here is the case that bit us" beats "use the helper."
 - **Standard comments become documentation:** when the same explanation appears three times, write it in the contributing guide and link it.
 - **Reviews are two-way:** the reviewer learns the author's area; the author learns the reviewer's standards.
 - **Escalate patterns, not people:** a repeated class of issue goes to the retro and the standards doc, not into a list of grievances.
@@ -128,7 +129,7 @@ Most teams need a blend: expertise for critical paths, rotation for growth, and 
 **Review culture tune-up:**
 
 - [ ] Measure first-response time for the last twenty PRs; compare to the SLA
-- [ ] Audit ten recent reviews: did they check tests, operability, and design — or just logic?
+- [ ] Audit ten recent reviews: did they check tests, operability, and design, or just logic?
 - [ ] Publish the SLA and depth tiers where the team can see them
 - [ ] Add the DoD checklist to the PR template
 - [ ] Pick one repeated comment pattern and turn it into a doc or a lint rule
@@ -189,12 +190,12 @@ Formatting, lint, type checks, trivial patterns. Reviewers do not comment on the
 
 ## Related Topics
 
-- [[02_Definition_of_Done_and_Working_Agreements]] — the contract every review checks
-- [[05_Quality_Gates_and_Automated_Checks]] — automation that carries the mechanical review burden
-- [[03_Test_Strategy_Leadership]] — reviews and tests form the same safety net
-- [[05_Team_Development_and_Mentoring_Leadership/00_overview|Team Development and Mentoring Leadership]] — review is the team's daily teaching channel
-- [[career-path/10_Quality_and_Test_Engineering/00_overview|Quality and Test Engineering]] — the specialist path for review tooling and static analysis
+- [[02_Definition_of_Done_and_Working_Agreements]]: the contract every review checks
+- [[05_Quality_Gates_and_Automated_Checks]]: automation that carries the mechanical review burden
+- [[03_Test_Strategy_Leadership]]: reviews and tests form the same safety net
+- [[career-path/05_Tech_Lead/05_Team_Development_and_Mentoring_Leadership/00_overview|Team Development and Mentoring Leadership]]: review is the team's daily teaching channel
+- [[career-path/10_Quality_and_Test_Engineering/00_overview|Quality and Test Engineering]]: the specialist path for review tooling and static analysis
 
 ## Summary
 
-Code review becomes a team system when the tech lead sets the standards: published SLAs, agreed depth tiers, sensible assignment that balances expertise and growth, automation carrying the mechanical checks so humans can spend judgment on correctness, security, and operability — and review load that is fair enough to sustain. Run this way, review is both the team's strongest quality gate and its most reliable teaching mechanism, compounding standards one diff at a time.
+Code review becomes a team system when the tech lead sets the standards: published SLAs, agreed depth tiers, sensible assignment that balances expertise and growth, automation carrying the mechanical checks so humans can spend judgment on correctness, security, and operability, and review load that is fair enough to sustain. Run this way, review is both the team's strongest quality gate and its most reliable teaching mechanism, compounding standards one diff at a time.

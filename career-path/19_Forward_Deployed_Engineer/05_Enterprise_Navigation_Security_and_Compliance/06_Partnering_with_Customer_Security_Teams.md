@@ -16,13 +16,13 @@ tags:
 
 # Partnering with Customer Security Teams
 
-> **Core skill:** Building a working relationship with the immune system — becoming a known, honest, and useful counterpart to the people whose job is to be suspicious, long before there is anything to approve.
+> **Core skill:** Building a working relationship with the immune system: becoming a known, honest, and useful counterpart to the people whose job is to be suspicious, long before there is anything to approve.
 
 ## Why This Matters
 
-Security teams are not a gate to sneak past; they are people with mandates, metrics, memories, and professional networks. Their job is to be skeptical of exactly the kind of change a deployment represents, and they are measured on how well they resist both breaches and busywork. The FDE who appears only when something is needed is, from the security team's perspective, an unknown quantity attached to a request — and unknown quantities get the slow, exhaustive treatment. The FDE who has invested in the relationship beforehand gets the faster, trust-based treatment, because the reviewer already knows how this person behaves when nobody is watching.
+Security teams are not a gate to sneak past; they are people with mandates, metrics, memories, and professional networks. Their job is to be skeptical of exactly the kind of change a deployment represents, and they are measured on how well they resist both breaches and busywork. The FDE who appears only when something is needed is, from the security team's perspective, an unknown quantity attached to a request, and unknown quantities get the slow, exhaustive treatment. The FDE who has invested in the relationship beforehand gets the faster, trust-based treatment, because the reviewer already knows how this person behaves when nobody is watching.
 
-The relationship is built through small, unglamorous acts. Walking the architecture past the reviewer before it is final. Bringing your own findings — a misconfiguration you spotted, a control you cannot yet meet — rather than waiting for review to unearth them. Speaking their language: controls, boundaries, and evidence rather than features and roadmaps. Following through on every commitment, especially the small ones, because security teams track delivery the way auditors do. None of this requires the FDE to be a security specialist; it requires being the kind of counterpart whose claims do not need double-checking.
+The relationship is built through small, unglamorous acts. Walking the architecture past the reviewer before it is final. Bringing your own findings (a misconfiguration you spotted, a control you cannot yet meet) rather than waiting for review to unearth them. Speaking their language: controls, boundaries, and evidence rather than features and roadmaps. Following through on every commitment, especially the small ones, because security teams track delivery the way auditors do. None of this requires the FDE to be a security specialist; it requires being the kind of counterpart whose claims do not need double-checking.
 
 The payoff compounds in ways that go beyond one review. A security reviewer who trusts you can be consulted during design, which prevents whole classes of findings. They can be told about incidents early, which turns potential confrontations into joint responses. And because security people talk to their counterparts in other organizations, and move between companies, a reputation for straight dealing is one of the most portable assets an FDE can own. The security team is not the deployment's antagonist; it is the deployment's most consequential internal referral.
 
@@ -51,6 +51,7 @@ The payoff compounds in ways that go beyond one review. A security reviewer who 
 ## From Reviewer to Advocate
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     MEET["Meet early without an ask"] --> LEARN["Learn their framework and history"]
     LEARN --> EVIDENCE["Bring evidence in their language"]
@@ -76,7 +77,7 @@ The transition from reviewer to advocate is never announced; it shows up as shor
 ### Security Partner Map Template
 
 ```markdown
-## Security Partner Map — <customer, account, date>
+## Security Partner Map: <customer, account, date>
 
 | Role | Name | What they own | What they worry about | Best channel |
 |------|------|---------------|-----------------------|--------------|
@@ -108,9 +109,9 @@ The transition from reviewer to advocate is never announced; it shows up as shor
 
 - [[01_Security_Reviews_and_Approvals]]
 - [[07_Risk_Communication_and_Decision_Records]]
-- [[06_Customer_Communication_and_Executive_Influence/00_overview|Customer Communication and Executive Influence]]
+- [[career-path/19_Forward_Deployed_Engineer/06_Customer_Communication_and_Executive_Influence/00_overview|Customer Communication and Executive Influence]]
 - [[career-path/08_Security_Engineer/00_overview|Security Engineer]]
 
 ## Summary
 
-Partnering with customer security teams means converting the review relationship from a transaction into a working alliance: meet before you need anything, learn the framework the reviewer must apply, bring evidence and self-disclosed gaps instead of spin, close every commitment visibly, and respect the process even when a shortcut is offered. Done consistently, the immune system stops treating the deployment as a threat to be vetted and starts treating the FDE as a colleague to be backed — which is worth more at approval time than any amount of urgency.
+Partnering with customer security teams means converting the review relationship from a transaction into a working alliance: meet before you need anything, learn the framework the reviewer must apply, bring evidence and self-disclosed gaps instead of spin, close every commitment visibly, and respect the process even when a shortcut is offered. Done consistently, the immune system stops treating the deployment as a threat to be vetted and starts treating the FDE as a colleague to be backed, which is worth more at approval time than any amount of urgency.

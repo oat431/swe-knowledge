@@ -16,15 +16,15 @@ tags:
 
 # Client Experience and Reporting
 
-> **Core skill:** Designing the experience around the work — kickoff, cadence, reporting, closure — because renewals and referrals come from how the engagement feels, not only from what it produced.
+> **Core skill:** Designing the experience around the work (kickoff, cadence, reporting, closure), because renewals and referrals come from how the engagement feels, not only from what it produced.
 
 ## Why This Matters
 
-Clients judge an engagement through its rituals: how the start felt, how often they heard from you, whether bad news arrived early, and whether the ending was a handover or a disappearance. Independents neglect experience design because delivery consumes the calendar — and that is precisely when silence starts, surprises accumulate, and a technically excellent project earns a lukewarm reference.
+Clients judge an engagement through its rituals: how the start felt, how often they heard from you, whether bad news arrived early, and whether the ending was a handover or a disappearance. Independents neglect experience design because delivery consumes the calendar, and that is precisely when silence starts, surprises accumulate, and a technically excellent project earns a lukewarm reference.
 
 Experience is systematic, not accidental. A good engagement has a designed kickoff that sets expectations, roles, success criteria, and communication rhythm; a cadence of updates and demos that matches the client's risk tolerance; immediate early warning when something slips; and a structured closure with handover, documentation, and an outcomes review. After closure, the relationship becomes an asset: alumni contact, renewal timing, and referral asks placed at the moment of demonstrated success.
 
-Reporting quality compounds across engagements. Report outcomes and decisions, not activity logs; keep updates short, regular, and skimmable; a weekly three-paragraph note prevents most status anxiety, and a demo beats a document every time. Bad news travels fastest of all — a client who hears about a slip from you on the day you learn it stays a client; one who discovers it at the review becomes a former client.
+Reporting quality compounds across engagements. Report outcomes and decisions, not activity logs; keep updates short, regular, and skimmable; a weekly three-paragraph note prevents most status anxiety, and a demo beats a document every time. Bad news travels fastest of all. A client who hears about a slip from you on the day you learn it stays a client; one who discovers it at the review becomes a former client.
 
 ## Client Journey Stages
 
@@ -51,6 +51,7 @@ Reporting quality compounds across engagements. Report outcomes and decisions, n
 ## The Experience Arc
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     KICKOFF["Kickoff and expectations"] --> CADENCE["Cadence and reporting"]
     CADENCE --> DEMO["Milestones and demos"]
@@ -74,11 +75,11 @@ Each stage feeds the next: the kickoff sets the cadence, the cadence builds trus
 ### Weekly Client Update Template
 
 ```markdown
-## Weekly Update — <engagement, week of <date>>
+## Weekly Update: <engagement, week of <date>>
 
 **Done.** <Two or three concrete completions.>
 **Next.** <What happens this coming week.>
-**Risks.** <Issue, impact, options — or "none this week".>
+**Risks.** <Issue, impact, options, or "none this week".>
 **Asks.** <Decisions or access needed, with dates.>
 ```
 
@@ -98,16 +99,16 @@ Each stage feeds the next: the kickoff sets the cadence, the cadence builds trus
 - "What is the status?" emails stop arriving because the rhythm answers first
 - Risks surface from both sides early, without defensiveness
 - Clients propose renewals or expansions themselves before closure
-- Referrals reference the experience — clarity, cadence, closure — not only the output
+- Referrals reference the experience (clarity, cadence, closure), not only the output
 - Handover documents are actually used by the client's team after you leave
 
 ## Related Topics
 
 - [[05_Scoping_and_Deliverable_Definition]]
 - [[01_Service_Offers_and_Packaging]]
-- [[04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]
-- [[06_Sales_and_Client_Communication/00_overview|Sales and Client Communication]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/06_Sales_and_Client_Communication/00_overview|Sales and Client Communication]]
 
 ## Summary
 
-Client experience and reporting design the rituals that carry an engagement: a kickoff that sets expectations, a cadence that prevents anxiety, demos that prove progress, early honest risk flags, and a closure that hands over rather than abandons. Independents live on renewals and referrals, and both are bought by how the work felt — which is a design problem, solvable in advance.
+Client experience and reporting design the rituals that carry an engagement: a kickoff that sets expectations, a cadence that prevents anxiety, demos that prove progress, early honest risk flags, and a closure that hands over rather than abandons. Independents live on renewals and referrals, and both are bought by how the work felt, which is a design problem, solvable in advance.

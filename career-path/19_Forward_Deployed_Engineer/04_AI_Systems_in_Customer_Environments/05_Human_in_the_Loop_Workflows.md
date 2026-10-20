@@ -16,15 +16,15 @@ tags:
 
 # Human in the Loop Workflows
 
-> **Core skill:** Designing review and escalation around probabilistic output — placing the right human at the right point, with enough context to judge quickly and a path for the cases they cannot.
+> **Core skill:** Designing review and escalation around probabilistic output: placing the right human at the right point, with enough context to judge quickly and a path for the cases they cannot.
 
 ## Why This Matters
 
-Customers do not need AI that is always right; they need AI they can rely on for defined work. The bridge between the two is workflow: where the human sits, what they see, and what happens when the model is wrong. A capability with no human review is trusted with nothing important until it has earned autonomy; a capability with review at every step is trusted with nothing at all because the review costs more than the work it saves. Finding the placement — review before action for high stakes, review in batches for medium stakes, audit after the fact for low stakes — is the FDE's design problem, and it decides whether adoption grows or stalls.
+Customers do not need AI that is always right; they need AI they can rely on for defined work. The bridge between the two is workflow: where the human sits, what they see, and what happens when the model is wrong. A capability with no human review is trusted with nothing important until it has earned autonomy; a capability with review at every step is trusted with nothing at all because the review costs more than the work it saves. Finding the placement (review before action for high stakes, review in batches for medium stakes, audit after the fact for low stakes) is the FDE's design problem, and it decides whether adoption grows or stalls.
 
-The review surface is where adoption lives or dies. A reviewer asked to re-do the work is slower than doing it themselves; a reviewer shown a proposed output with sources, a change highlight, and one-click correct-and-route actions is faster than working from scratch. Everything about the surface — what context is attached, what confidence signals are honest, what actions are possible, how corrections are captured — determines whether users experience the system as help or as overhead. Designing that surface is engineering, not decoration.
+The review surface is where adoption lives or dies. A reviewer asked to re-do the work is slower than doing it themselves; a reviewer shown a proposed output with sources, a change highlight, and one-click correct-and-route actions is faster than working from scratch. Everything about the surface (what context is attached, what confidence signals are honest, what actions are possible, how corrections are captured) determines whether users experience the system as help or as overhead. Designing that surface is engineering, not decoration.
 
-Review also generates the improvement loop. Every correction is a labeled example for the evaluation set, a candidate for prompt tuning or retrieval fixes, and a signal about where the model should refuse instead of answer. The FDE designs the capture — lightweight, in the flow, without extra meetings — so the system gets better as it is used, and the review burden trends down instead of becoming permanent scaffolding.
+Review also generates the improvement loop. Every correction is a labeled example for the evaluation set, a candidate for prompt tuning or retrieval fixes, and a signal about where the model should refuse instead of answer. The FDE designs the capture (lightweight, in the flow, without extra meetings), so the system gets better as it is used, and the review burden trends down instead of becoming permanent scaffolding.
 
 ## Placing the Human
 
@@ -60,6 +60,7 @@ Tiering is the design answer: route by stakes and confidence, not by a single gl
 | Unexpected usage pattern | Customer workflow owner | Revisit placement; the review tier may be wrong |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     OUTPUT["Model produces output"] --> CHECKS["Automated checks and routing"]
     CHECKS --> REVIEW["Human reviews the routed cases"]
@@ -74,7 +75,7 @@ flowchart LR
 
 - [ ] Each workflow has a stated review tier based on stakes and reversibility
 - [ ] The review surface shows sources, proposed changes, and honest confidence
-- [ ] Actions — approve, correct, reject, escalate — take seconds, not minutes
+- [ ] Actions (approve, correct, reject, escalate) take seconds, not minutes
 - [ ] Corrections are captured in a form that feeds evaluation and tuning
 - [ ] Queue health is monitored: backlog, age, and reviewer agreement
 - [ ] Escalation paths to real experts exist and are exercised
@@ -83,7 +84,7 @@ flowchart LR
 ### Review Workflow Template
 
 ```markdown
-## Review Workflow — <capability, workflow, tier>
+## Review Workflow: <capability, workflow, tier>
 
 | Field | Value |
 |-------|-------|
@@ -120,10 +121,10 @@ flowchart LR
 
 - [[03_Field_Evaluation_and_Quality]]
 - [[07_Agents_and_Workflow_Automation_in_Production]]
-- [[06_Customer_Communication_and_Executive_Influence/00_overview|Customer Communication and Executive Influence]]
+- [[career-path/19_Forward_Deployed_Engineer/06_Customer_Communication_and_Executive_Influence/00_overview|Customer Communication and Executive Influence]]
 - [[career-path/18_Applied_AI_Engineer/06_Responsible_AI_and_Governance/00_overview|Responsible AI and Governance (Applied AI)]]
 - [[career-path/14_Product_Manager/01_Problem_Discovery/00_overview|Problem Discovery (PM)]]
 
 ## Summary
 
-Human in the loop workflows are how probabilistic output becomes dependable work: tier review by stakes and reversibility, build a surface where verification takes seconds, route escalations to real experts, and capture every correction into the improvement loop. The design goal is not permanent supervision but earned autonomy — scaffolding that makes the capability trustworthy today and, evidence by evidence, lets the customer loosen the review where quality has proven itself.
+Human in the loop workflows are how probabilistic output becomes dependable work: tier review by stakes and reversibility, build a surface where verification takes seconds, route escalations to real experts, and capture every correction into the improvement loop. The design goal is not permanent supervision but earned autonomy: scaffolding that makes the capability trustworthy today and, evidence by evidence, lets the customer loosen the review where quality has proven itself.

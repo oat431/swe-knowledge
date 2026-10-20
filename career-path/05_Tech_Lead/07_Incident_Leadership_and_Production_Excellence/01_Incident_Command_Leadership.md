@@ -16,13 +16,13 @@ tags:
 
 # Incident Command Leadership
 
-> **Core skill:** Commanding the response when production fails — assigning roles, deciding between mitigation and diagnosis, and driving the incident to a clean close.
+> **Core skill:** Commanding the response when production fails: assigning roles, deciding between mitigation and diagnosis, and driving the incident to a clean close.
 
 ## Why This Matters
 
-When production fails, the difference between a forty-minute outage and a four-hour one is rarely the engineers' debugging skill — it is command. Without command, three people debug the same thing, nobody updates stakeholders, the loudest voice steers, and the team discovers the fix five times before someone rolls it out. The tech lead is the default commander because they hold the trust of both the team and the stakeholders: they can assign work without politics and make calls without waiting for consensus.
+When production fails, the difference between a forty-minute outage and a four-hour one is rarely the engineers' debugging skill; it is command. Without command, three people debug the same thing, nobody updates stakeholders, the loudest voice steers, and the team discovers the fix five times before someone rolls it out. The tech lead is the default commander because they hold the trust of both the team and the stakeholders: they can assign work without politics and make calls without waiting for consensus.
 
-Command is a discipline, not a personality. It means doing the least debugging yourself and the most coordinating — knowing that your value in the first hour is not your hands but your structure. This note covers the commander role, severity activation, the first fifteen minutes, incident roles, the decision points that define the response, and how to end an incident cleanly.
+Command is a discipline, not a personality. It means doing the least debugging yourself and the most coordinating, knowing that your value in the first hour is not your hands but your structure. This note covers the commander role, severity activation, the first fifteen minutes, incident roles, the decision points that define the response, and how to end an incident cleanly.
 
 ## Command vs Doing
 
@@ -45,11 +45,12 @@ The commander's hands stay free. If you find yourself typing a fix while the inc
 | **SEV-3** | Isolated or minor impact | Triage in the normal flow; optional channel | Same day |
 | **SEV-4** | No user impact; internal problem | Normal work tracking | Scheduled |
 
-Severity is declared by impact, not by cause — and it can change. The commander re-grades severity as the picture sharpens, and the comms plan follows the grade.
+Severity is declared by impact, not by cause, and it can change. The commander re-grades severity as the picture sharpens, and the comms plan follows the grade.
 
 ## The First Fifteen Minutes
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A["Alert fires"] --> B["Acknowledge"]
     B --> C["Assess impact"]
@@ -76,7 +77,7 @@ flowchart LR
 | **Comms lead** | Stakeholder updates, status page, support coordination | Takes the update burden off the responders |
 | **Scribe** | Timeline, decisions, who said what | Makes the postmortem possible; can be anyone |
 
-Small team? One person can hold comms and scribe, but commander and ops lead stay separate whenever possible — the person deciding must not be the person absorbed in a stack trace.
+Small team? One person can hold comms and scribe, but commander and ops lead stay separate whenever possible: the person deciding must not be the person absorbed in a stack trace.
 
 ## The Decision Points
 
@@ -88,7 +89,7 @@ Small team? One person can hold comms and scribe, but commander and ops lead sta
 | **Escalate severity** | Is impact growing? Is stakeholder visibility needed? | Escalate on impact, not on embarrassment |
 | **Declare resolved** | Is the symptom gone for a sustained window? Is the cause understood enough? | Wait for a monitoring-verified window before declaring |
 
-The discipline that matters most: **decide in public.** Every decision, with its reasoning, goes in the incident channel — because the team needs to understand the commander's model to work against it.
+The discipline that matters most: **decide in public.** Every decision, with its reasoning, goes in the incident channel, because the team needs to understand the commander's model to work against it.
 
 ## Incident Termination and Handoff
 
@@ -152,12 +153,12 @@ An incident ends cleanly, not just when the graph is green:
 
 ## Related Topics
 
-- [[02_Communication_Under_Pressure]] — the comms side of command, owned by the commander
-- [[03_Blameless_Postmortem_Leadership]] — what happens after the channel closes
-- [[05_On_Call_Excellence]] — the rotation that detects incidents before users do
-- [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/04_Incident_Response|Incident Response (Senior)]] — the personal response skills this role scales to leadership
-- [[02_System_Ownership_and_Production_Responsibility/00_overview|System Ownership and Production Responsibility]] — the ownership that makes the response possible
+- [[02_Communication_Under_Pressure]]: the comms side of command, owned by the commander
+- [[03_Blameless_Postmortem_Leadership]]: what happens after the channel closes
+- [[05_On_Call_Excellence]]: the rotation that detects incidents before users do
+- [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/04_Incident_Response|Incident Response (Senior)]]: the personal response skills this role scales to leadership
+- [[career-path/05_Tech_Lead/02_System_Ownership_and_Production_Responsibility/00_overview|System Ownership and Production Responsibility]]: the ownership that makes the response possible
 
 ## Summary
 
-Incident command leadership is the discipline of structure under pressure: the commander steps away from the keyboard to assign roles, make decisions in public, own communication, and drive the incident to a monitoring-verified close. The first fifteen minutes set the tone — acknowledge, assess, assign — and every decision point afterward is a chance to keep the response fast, coordinated, and learning-ready. Command is not about being the best debugger in the room; it is about making the room work like a team.
+Incident command leadership is the discipline of structure under pressure: the commander steps away from the keyboard to assign roles, make decisions in public, own communication, and drive the incident to a monitoring-verified close. The first fifteen minutes set the tone (acknowledge, assess, assign), and every decision point afterward is a chance to keep the response fast, coordinated, and learning-ready. Command is not about being the best debugger in the room; it is about making the room work like a team.

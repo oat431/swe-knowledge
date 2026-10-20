@@ -15,13 +15,13 @@ tags:
 
 # Evaluation Fundamentals and Strategy
 
-> Designing the measurement system that decides whether an AI feature may ship — and knowing what each layer of measurement can and cannot prove.
+> Designing the measurement system that decides whether an AI feature may ship, and knowing what each layer of measurement can and cannot prove.
 
 ## Why This Is a Senior Skill
 
 A mid-level engineer treats evaluation as a QA step at the end of the project: run the prompt, eyeball the outputs, declare it good. A senior engineer writes the evaluation strategy before the feature: what "acceptable quality" means, how each failure mode is measured, what gates a release, and how the system re-measures itself after launch. The evaluation strategy is the design contract of the feature; code that ships without one is an experiment, not a product.
 
-The senior challenge is sequencing measurement with the product. Evaluation costs money and latency, so the strategy must say *when* each measurement runs and *what it may conclude* — not merely that measurement exists. A strategy that cannot say which number blocks a release has not decided anything yet.
+The senior challenge is sequencing measurement with the product. Evaluation costs money and latency, so the strategy must say *when* each measurement runs and *what it may conclude*, not merely that measurement exists. A strategy that cannot say which number blocks a release has not decided anything yet.
 
 The payoff is organizational: with a strategy in place, prompt changes, model swaps, and pipeline edits all become comparable events instead of subjective bets.
 
@@ -33,7 +33,7 @@ The payoff is organizational: with a strategy in place, prompt changes, model sw
 |-------|-------------|----------------|---------------------|
 | Offline evaluation | Before deploy | The system works on known, representative scenarios | That real users will behave like the test set |
 | Runtime guardrails | Every request | Each request and response passes safety and validity checks | Overall quality trends (enforcement lives in [[career-path/18_Applied_AI_Engineer/04_AI_Security_and_Guardrails/00_overview|AI Security and Guardrails]]) |
-| Online evaluation | In production | The system works for real traffic, with real feedback | *Why* a metric moved — that requires traces and offline replay |
+| Online evaluation | In production | The system works for real traffic, with real feedback | *Why* a metric moved: that requires traces and offline replay |
 
 ### Strategy Decisions Every Team Must Make
 
@@ -67,13 +67,13 @@ The payoff is organizational: with a strategy in place, prompt changes, model sw
 
 ## In Practice
 
-**Define success criteria before you build the feature.** The first deliverable of any AI project is the measurement plan, not the prompt. State targets in business terms the stakeholder recognizes — handoff rate, resolution rate, cost per reply — then derive the technical metrics that predict them. A feature whose success criteria cannot be written down cannot be evaluated, and the scale-or-kill decision in [[computing-foundation-note/Artificial_Intelligence/12_AI_ROI_and_Roadmap]] becomes guesswork.
+**Define success criteria before you build the feature.** The first deliverable of any AI project is the measurement plan, not the prompt. State targets in business terms the stakeholder recognizes (handoff rate, resolution rate, cost per reply) then derive the technical metrics that predict them. A feature whose success criteria cannot be written down cannot be evaluated, and the scale-or-kill decision in [[computing-foundation-note/Artificial_Intelligence/12_AI_ROI_and_Roadmap]] becomes guesswork.
 
-**Map each metric to a failure mode it is meant to catch.** Faithfulness exists to catch hallucination against retrieved context; format validity exists to catch broken structured outputs; relevance exists to catch the model answering a different question. When a team cannot name the failure mode a metric detects, the metric is decorative — it will trend quietly while users absorb the real failures.
+**Map each metric to a failure mode it is meant to catch.** Faithfulness exists to catch hallucination against retrieved context; format validity exists to catch broken structured outputs; relevance exists to catch the model answering a different question. When a team cannot name the failure mode a metric detects, the metric is decorative; it will trend quietly while users absorb the real failures.
 
-**Tier evaluation by cost and confidence.** Run cheap deterministic checks — schema validation, exact containment, refusal detection — on every evaluation run. Reserve LLM-as-judge scoring for open-ended qualities like helpfulness and tone, and reserve human review for the small sample where judge and stakeholder disagree. The tiers are a budget: a strategy that judges everything gets abandoned under cost pressure.
+**Tier evaluation by cost and confidence.** Run cheap deterministic checks (schema validation, exact containment, refusal detection) on every evaluation run. Reserve LLM-as-judge scoring for open-ended qualities like helpfulness and tone, and reserve human review for the small sample where judge and stakeholder disagree. The tiers are a budget: a strategy that judges everything gets abandoned under cost pressure.
 
-**Treat thresholds as product decisions, not engineering preferences.** Raising a faithfulness threshold means more releases blocked; lowering it means more user-facing errors. Both are product trade-offs, so the threshold and its rationale must be visible to the product owner, and changing one is a reviewable event — the same discipline as any contract change.
+**Treat thresholds as product decisions, not engineering preferences.** Raising a faithfulness threshold means more releases blocked; lowering it means more user-facing errors. Both are product trade-offs, so the threshold and its rationale must be visible to the product owner, and changing one is a reviewable event, the same discipline as any contract change.
 
 **Separate what offline can prove from what online can prove.** Offline evaluation proves the system handles known scenarios; it cannot prove real users are satisfied, because the test set is a snapshot of the team's assumptions. Online evaluation proves real-world performance but cannot isolate causes. A senior strategy uses both layers and, for each question, knows which one answers it.
 

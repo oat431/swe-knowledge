@@ -15,13 +15,13 @@ tags:
 
 # Dependency Risk Management
 
-> **Core skill:** Mapping the org's dependency exposure — open source, vendors, platforms, people — and designing exit options before the dependency becomes the constraint.
+> **Core skill:** Mapping the org's dependency exposure (open source, vendors, platforms, people) and designing exit options before the dependency becomes the constraint.
 
 ## Why This Matters
 
-Every system runs on dependencies it did not build: libraries, SaaS vendors, internal platforms, and the people who know them. Each dependency is a bet that the provider will keep serving you at an acceptable price, quality, and pace. The bets are individually reasonable and collectively invisible — until a library is abandoned, a vendor reprices, a platform re-orgs, or the one expert leaves.
+Every system runs on dependencies it did not build: libraries, SaaS vendors, internal platforms, and the people who know them. Each dependency is a bet that the provider will keep serving you at an acceptable price, quality, and pace. The bets are individually reasonable and collectively invisible, until a library is abandoned, a vendor reprices, a platform re-orgs, or the one expert leaves.
 
-Dependency risk is a staff-level concern because it crosses teams: the critical path of the whole org runs through a dependency map nobody owns. Managing it means knowing which dependencies are on the critical path, what each could do to hurt you, and what you would do if it did — before the moment of need.
+Dependency risk is a staff-level concern because it crosses teams: the critical path of the whole org runs through a dependency map nobody owns. Managing it means knowing which dependencies are on the critical path, what each could do to hurt you, and what you would do if it did, before the moment of need.
 
 ## Dependency Taxonomy
 
@@ -33,7 +33,7 @@ Dependency risk is a staff-level concern because it crosses teams: the critical 
 | **Internal platform** | CI/CD, data platform, auth | Re-orgs, roadmap shifts, service levels |
 | **People** | The engineers who hold system knowledge | Departure, burnout, concentration |
 
-The taxonomy matters because risk dimensions differ: a library can be forked, a vendor can be negotiated with, a person can be paired with — each needs its own exit design.
+The taxonomy matters because risk dimensions differ: a library can be forked, a vendor can be negotiated with, a person can be paired with, each needs its own exit design.
 
 ## Risk Dimensions per Type
 
@@ -89,7 +89,7 @@ Monitor on the scan cadence, not reactively: the health signals trend before the
 
 ## Negotiating with Vendors and Platforms
 
-You have more leverage than you think — if you know your exit cost:
+You have more leverage than you think, if you know your exit cost:
 
 | Negotiation | What to Ask For | Leverage |
 |---|---|---|
@@ -111,9 +111,10 @@ The negotiation posture: you are a customer with an exit option, not a hostage. 
 | One library for a core function | No maintained alternative in the space | Track the health signals closely |
 | One region for the whole org | Single location for everything critical | Document the blast radius; price a second region |
 
-Concentration is not always avoidable — sometimes the best dependency is the only dependency. The discipline is knowing your concentration, pricing it, and having the exit theory before the concentration bites.
+Concentration is not always avoidable. Sometimes the best dependency is the only dependency. The discipline is knowing your concentration, pricing it, and having the exit theory before the concentration bites.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DEPEND["Critical dependency"] --> MAP["Map the critical path"]
     MAP --> SCORE["Score risk dimensions"]
@@ -184,7 +185,7 @@ flowchart TD
 - [[01_Seeing_Org_Scale_Risk]]: concentration as a risk category
 - [[02_Architecture_Erosion]]: framework drift as dependency decay
 - [[05_Risk_Pricing_and_Acceptance]]: pricing dependency exposure
-- [[07_Organizational_Learning_and_Mentoring/00_overview|Organizational Learning and Mentoring]]: the people-dependency half
+- [[career-path/03_Staff_Engineer/07_Organizational_Learning_and_Mentoring/00_overview|Organizational Learning and Mentoring]]: the people-dependency half
 - [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/00_overview|Technical Ownership (Senior)]]: the team-level foundation
 
 ## Summary

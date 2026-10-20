@@ -46,6 +46,7 @@ The outcome is not a perfect architecture. It is a system whose important securi
 ## How the Topics Connect
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PRINCIPLES["01 Security principles and quality attributes"] --> LAYERS["02 Defense in depth"]
     LAYERS --> ZERO["03 Zero trust and segmentation"]
@@ -93,7 +94,7 @@ These notes assume the foundational concepts already exist in the vault and focu
 
 ## Related
 
-- [[../00_overview|Security Engineer Overview]]
-- [[../01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]
-- [[03_Secure_Development_and_DevSecOps/00_overview|Secure Development and DevSecOps]]
+- [[career-path/08_Security_Engineer/00_overview|Security Engineer Overview]]
+- [[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/00_overview|Threat Modeling and Risk]]
+- [[career-path/08_Security_Engineer/03_Secure_Development_and_DevSecOps/00_overview|Secure Development and DevSecOps]]
 - [Security Architecture Template](F:\obsidian_note\document_template\14_Security/Security-Architecture.md)

@@ -15,11 +15,11 @@ tags:
 
 # Feedback and Difficult Conversations
 
-> **Core skill:** Delivering honest, specific feedback early and holding difficult conversations with preparation, dignity, and documentation — while receiving feedback without defensiveness.
+> **Core skill:** Delivering honest, specific feedback early and holding difficult conversations with preparation, dignity, and documentation, while receiving feedback without defensiveness.
 
 ## Why This Matters
 
-Feedback is how people learn what to keep and what to change. Continuous, specific feedback prevents small issues from becoming habits, and habits from becoming performance problems that end in surprise reviews or exits. The manager who hoards feedback until the formal cycle is guaranteeing that the formal cycle will be a shock — and shocks destroy trust.
+Feedback is how people learn what to keep and what to change. Continuous, specific feedback prevents small issues from becoming habits, and habits from becoming performance problems that end in surprise reviews or exits. The manager who hoards feedback until the formal cycle is guaranteeing that the formal cycle will be a shock, and shocks destroy trust.
 
 Difficult conversations are where the manager's courage is tested: telling a senior their code quality has declined, telling a strong engineer their communication is damaging the team, telling someone their behavior is the problem. Avoided, they fester into grudges, team-wide resentment, and documented failures. Delivered well, they are often the moment the engineer later credits with saving their career at this company.
 
@@ -45,7 +45,7 @@ Situation-Behavior-Impact is the reliable structure for feedback that lands as i
 | Behavior | The observable behavior, not the person | You interrupted the presenter three times |
 | Impact | The effect on you, others, or the work | The room went quiet and the design went undiscussed |
 
-The discipline: no personality adjectives, no "you always", no mind-reading. State what was seen, not what was inferred. Then pause — the other person responds to facts far better than to verdicts.
+The discipline: no personality adjectives, no "you always", no mind-reading. State what was seen, not what was inferred. Then pause. The other person responds to facts far better than to verdicts.
 
 ## Preparing the Difficult Conversation
 
@@ -58,7 +58,7 @@ Hard conversations fail in the preparation, not the delivery. Before scheduling,
 | Desired outcome | What the manager wants to be different, stated as behavior |
 | Rehearsal | The opening lines said out loud, alone or with a peer |
 
-Preparation also means choosing the room: private, uninterrupted, enough time, no audience. The manager enters with a goal — changed behavior — not a script to recite and a score to settle.
+Preparation also means choosing the room: private, uninterrupted, enough time, no audience. The manager enters with a goal (changed behavior), not a script to recite and a score to settle.
 
 ## Delivering Without Apology Padding
 
@@ -72,15 +72,15 @@ Apology padding is the instinct to soften the message until it disappears. It pr
 | "It's not a big deal, but..." | Contradicts the message | State the impact plainly. |
 | "You're great, it's just..." | The praise swallows the feedback | One behavior, one impact, one ask. |
 
-Empathy is shown in how the message is delivered and what happens after — not in diluting the message itself.
+Empathy is shown in how the message is delivered and what happens after, not in diluting the message itself.
 
 ## Receiving Feedback Without Defensiveness
 
-The manager models the behavior they expect from reports. Defensive managers breed defensive teams, and feedback to the manager dies within months. The receiving stance: listen fully, ask one clarifying question, thank the giver, and take time before responding to anything that stings. If the feedback is wrong in detail, correct the detail — not the person's right to speak. The manager who thanks someone for hard feedback, then visibly changes, doubles the odds that hard feedback keeps coming.
+The manager models the behavior they expect from reports. Defensive managers breed defensive teams, and feedback to the manager dies within months. The receiving stance: listen fully, ask one clarifying question, thank the giver, and take time before responding to anything that stings. If the feedback is wrong in detail, correct the detail, not the person's right to speak. The manager who thanks someone for hard feedback, then visibly changes, doubles the odds that hard feedback keeps coming.
 
 ## Documenting Conversations
 
-Feedback conversations get written down — what was said, what was agreed, what the follow-up is. Documentation protects the report (agreements are kept), the manager (assessments are grounded), and the process (patterns are provable). It is written the same day, in the manager's notes, and shared with the report where appropriate.
+Feedback conversations get written down: what was said, what was agreed, what the follow-up is. Documentation protects the report (agreements are kept), the manager (assessments are grounded), and the process (patterns are provable). It is written the same day, in the manager's notes, and shared with the report where appropriate.
 
 ```markdown
 ## Conversation Note
@@ -114,6 +114,7 @@ The rule: HR is escalation, not avoidance. Involving HR is a sign the manager is
 ## The Feedback Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     OBSERVE["Observe the behavior"] --> PREPARE["Prepare facts and outcome"]
     PREPARE --> DELIVER["Deliver SBI feedback"]
@@ -159,8 +160,8 @@ flowchart TD
 - [[01_One_to_Ones]]: the weekly channel where most feedback lands
 - [[05_Performance_Management]]: when feedback escalates into a formal plan
 - [[career-path/02_Senior_Software_Engineer/07_Mentoring_and_Team_Leadership/04_Effective_Feedback|Effective Feedback (Senior)]]: the same craft at engineer level
-- [[07_Manager_Communication/00_overview|Manager Communication]]: the broader communication craft
-- [[02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: safe teams make feedback a reflex
+- [[career-path/11_Engineering_Manager/07_Manager_Communication/00_overview|Manager Communication]]: the broader communication craft
+- [[career-path/11_Engineering_Manager/02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: safe teams make feedback a reflex
 
 ## Summary
 

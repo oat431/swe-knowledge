@@ -15,11 +15,11 @@ tags:
 
 # Security and Compliance Posture
 
-> **Core skill:** Holding the org-level security and compliance view — architecture-level threat surfaces, compliance as a design constraint, and priced security investment.
+> **Core skill:** Holding the org-level security and compliance view: architecture-level threat surfaces, compliance as a design constraint, and priced security investment.
 
 ## Why This Matters
 
-Code-level security is the team's job: input validation, auth checks, dependency hygiene. The staff view is the level above: what the whole architecture exposes, where data sprawls beyond classification, how access accumulates faster than it is revoked, and whether the org could respond to a breach at all. These are not bugs; they are posture — and posture is what gets the org breached, fined, or failed in an audit.
+Code-level security is the team's job: input validation, auth checks, dependency hygiene. The staff view is the level above: what the whole architecture exposes, where data sprawls beyond classification, how access accumulates faster than it is revoked, and whether the org could respond to a breach at all. These are not bugs; they are posture, and posture is what gets the org breached, fined, or failed in an audit.
 
 Compliance at this level is a design constraint, not a checklist: data residency shapes where systems can run, audit trails shape what must be logged, retention shapes what must be deleted. Every new system inherits the posture; the staff engineer makes posture part of the design conversation rather than a surprise at audit time.
 
@@ -32,7 +32,7 @@ Compliance at this level is a design constraint, not a checklist: data residency
 | **Architecture-level** | Staff | Threat surface across systems, data flows, trust boundaries |
 | **Org-level** | Staff with leadership | Posture, readiness, investment, compliance |
 
-The architecture-level questions: where can an attacker stand, what can they reach from there, what data is in reach, and what would detect them? A threat surface map of the whole org — not per-service checklists — is the staff artifact.
+The architecture-level questions: where can an attacker stand, what can they reach from there, what data is in reach, and what would detect them? A threat surface map of the whole org (not per-service checklists) is the staff artifact.
 
 ## Compliance as Design Constraint
 
@@ -57,9 +57,10 @@ Run on the risk scan cadence, with four lenses:
 | **Dependency CVEs** | Exposure in the dependency map | Known vulnerable versions on the critical path |
 | **Data classification coverage** | Is all data classified and treated accordingly? | Unclassified stores holding customer data |
 
-Each lens feeds the register with priced findings. The review's output is not a security wishlist — it is the posture portfolio with owners and prices.
+Each lens feeds the register with priced findings. The review's output is not a security wishlist. It is the posture portfolio with owners and prices.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SURFACE["Attack surface grows"] --> SPRAWL["Access and data sprawl"]
     SPRAWL --> REVIEW["Posture review"]
@@ -173,4 +174,4 @@ open / accepted / mitigated / retired
 
 ## Summary
 
-The staff security view is architecture and org level: map the threat surface, treat compliance as a design constraint, review posture across access, secrets, CVEs, and classification, work with security as an enabler, and fund remediation as priced risk. Readiness is a rehearsed capability, and every finding belongs in the risk register with an owner and a price — because posture, like erosion, decays quietly until it announces itself.
+The staff security view is architecture and org level: map the threat surface, treat compliance as a design constraint, review posture across access, secrets, CVEs, and classification, work with security as an enabler, and fund remediation as priced risk. Readiness is a rehearsed capability, and every finding belongs in the risk register with an owner and a price, because posture, like erosion, decays quietly until it announces itself.

@@ -16,13 +16,13 @@ tags:
 
 # Cross-Team Architecture
 
-> **Core skill:** Designing the boundaries between teams' systems — service boundaries, interface contracts, and shared platforms — so teams can move independently without the org fracturing.
+> **Core skill:** Designing the boundaries between teams' systems (service boundaries, interface contracts, and shared platforms) so teams can move independently without the org fracturing.
 
 ## Why This Matters
 
-Every team optimizes locally; architecture is what the local optimizations add up to. Without a cross-team view, the sum is duplicated services, integration seams nobody owns, and change that requires a six-team coordination dance. The staff engineer holds the cross-team architecture view — not by designing every system, but by designing the **boundaries** between systems and the **contracts** across them.
+Every team optimizes locally; architecture is what the local optimizations add up to. Without a cross-team view, the sum is duplicated services, integration seams nobody owns, and change that requires a six-team coordination dance. The staff engineer holds the cross-team architecture view, not by designing every system, but by designing the **boundaries** between systems and the **contracts** across them.
 
-The deep principle is Conway's law working in reverse: the system structure and the team structure will converge, so design the system structure to produce the team structure you want. Teams that can ship independently need service boundaries that match their ownership; interfaces that change through negotiation, not surprise; and a shared platform that absorbs the boring commonality. The seam quality test — can each team move independently? — is the single question that separates good cross-team architecture from elegant diagrams.
+The deep principle is Conway's law working in reverse: the system structure and the team structure will converge, so design the system structure to produce the team structure you want. Teams that can ship independently need service boundaries that match their ownership; interfaces that change through negotiation, not surprise; and a shared platform that absorbs the boring commonality. The seam quality test (can each team move independently?) is the single question that separates good cross-team architecture from elegant diagrams.
 
 ## Service Boundaries vs Team Boundaries
 
@@ -31,7 +31,7 @@ The deep principle is Conway's law working in reverse: the system structure and 
 | Service boundary | System behavior and data ownership | The owning team | The service is too big to change alone |
 | Team boundary | Headcount and mission | The org structure | The team owns pieces of many services |
 
-The two must align: a service split across two teams has no owner; a team that owns a dozen services has no focus. Design boundaries so that **one team can change its service without coordinating with others** — the org chart and the service map should agree, and where they disagree, that seam is the highest-leverage architecture work available.
+The two must align: a service split across two teams has no owner; a team that owns a dozen services has no focus. Design boundaries so that **one team can change its service without coordinating with others**: the org chart and the service map should agree, and where they disagree, that seam is the highest-leverage architecture work available.
 
 ## Interface Contracts Between Teams
 
@@ -41,7 +41,7 @@ The two must align: a service split across two teams has no owner; a team that o
 | Event contract | Message schemas and delivery guarantees | The producer, with consumers consulted | Schema evolution rules; never silent breaks |
 | Data ownership | Which team owns which data, and who reads it | The owning team | Read access negotiated; writes owned |
 
-Contracts are the architecture that teams actually live by. A contract without a change policy is a trap: the first breaking change is a cross-team incident, and the second is a political battle. The policy — versioning, deprecation windows, negotiated breaks — is what makes change safe.
+Contracts are the architecture that teams actually live by. A contract without a change policy is a trap: the first breaking change is a cross-team incident, and the second is a political battle. The policy (versioning, deprecation windows, negotiated breaks) is what makes change safe.
 
 ## Shared Platform Design: Centralize vs Leave Local
 
@@ -76,7 +76,7 @@ A boundary is good when teams can move independently. The test:
 | 5. Decide and record | The decision record with dissent noted |
 | 6. Execute incrementally | Strangler-style change; each step independently valuable |
 
-Boundary changes are the highest-stakes architecture work because they cross ownership lines. The process exists to make the change negotiated rather than imposed — and the record exists so the reasoning outlives the room.
+Boundary changes are the highest-stakes architecture work because they cross ownership lines. The process exists to make the change negotiated rather than imposed, and the record exists so the reasoning outlives the room.
 
 ## Architecture Reviews Across Teams
 
@@ -88,9 +88,10 @@ The review is where the cross-team architecture view is maintained:
 | Architecture board | Cross-team, high-stakes decisions | Monthly |
 | Boundary audits | Existing seams against the quality test | Quarterly |
 
-The staff engineer runs these reviews as a guest, not a judge — the owning team decides, and the review exists to surface what the owning team cannot see from inside its own boundary.
+The staff engineer runs these reviews as a guest, not a judge: the owning team decides, and the review exists to surface what the owning team cannot see from inside its own boundary.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SEAM["Find a weak seam"] --> MAP["Map teams and systems"]
     MAP --> PROPOSE["Propose the boundary change"]
@@ -104,7 +105,7 @@ flowchart TD
 ## Practical Applications
 
 ```markdown
-# Boundary Proposal — [boundary] — [date]
+# Boundary Proposal: [boundary], [date]
 
 ## The seam today
 - [ ] Who owns what: [teams and systems]
@@ -157,9 +158,9 @@ Checklist:
 
 - [[02_Driving_Technical_Change]]: how boundary changes actually land
 - [[05_Standards_and_Reference_Architectures]]: codifying the boundary patterns
-- [[03_Technical_Strategy/00_overview|Technical Strategy]]: where cross-team architecture direction comes from
+- [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy]]: where cross-team architecture direction comes from
 - [[career-path/05_Tech_Lead/03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture (Tech Lead)]]: the team-level counterpart
 
 ## Summary
 
-Cross-team architecture is the design of boundaries: service boundaries that match team ownership, interface contracts with change policies, and shared platforms that absorb commonality without becoming bottlenecks. The seam quality test — can teams move independently — is the measure of every boundary, and the boundary change process makes change negotiated rather than imposed. Architecture reviews across teams maintain the view without owning the decisions.
+Cross-team architecture is the design of boundaries: service boundaries that match team ownership, interface contracts with change policies, and shared platforms that absorb commonality without becoming bottlenecks. The seam quality test (can teams move independently) is the measure of every boundary, and the boundary change process makes change negotiated rather than imposed. Architecture reviews across teams maintain the view without owning the decisions.

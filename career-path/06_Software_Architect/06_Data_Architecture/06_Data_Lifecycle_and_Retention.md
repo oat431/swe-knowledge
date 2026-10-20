@@ -16,15 +16,15 @@ tags:
 
 # Data Lifecycle and Retention
 
-> **Core skill:** The architect designs creation, active use, archive, and deletion into the data flows — making retention policy structural, right-to-deletion enforceable across every copy, and retention cost visible before it compounds.
+> **Core skill:** The architect designs creation, active use, archive, and deletion into the data flows, making retention policy structural, right-to-deletion enforceable across every copy, and retention cost visible before it compounds.
 
 ## Why This Matters
 
-Data accumulates by default; deletion must be designed. A system without lifecycle design keeps everything — not because anyone decided to, but because nothing said not to. Storage grows linearly with time, risk grows faster than storage (old data has more copies and weaker controls), and compliance exposure grows quietly in the background. Retention is one of the few architectural properties that gets worse the longer it is ignored.
+Data accumulates by default; deletion must be designed. A system without lifecycle design keeps everything, not because anyone decided to, but because nothing said not to. Storage grows linearly with time, risk grows faster than storage (old data has more copies and weaker controls), and compliance exposure grows quietly in the background. Retention is one of the few architectural properties that gets worse the longer it is ignored.
 
 The right to deletion turns lifecycle from a cost concern into a hard architectural constraint. The difficult part is never the primary-store delete; it is the copies. Caches hold records past their TTL, read models rebuilt from events resurrect them, analytics stores never received the deletion, event streams replay history as if nothing happened, and backups faithfully preserve everything. Enforceable deletion is a propagation problem solved in the architecture: a data inventory, a deletion flow, and per-copy mechanisms that can prove completion.
 
-Backup and recovery are part of the same story, not a separate discipline. A backup that cannot be restored within the required window is a belief, not a control; a backup outside the retention policy is data that never expires. The architect designs the lifecycle end to end — creation to deletion, with recovery in between — because each stage's decisions constrain the others.
+Backup and recovery are part of the same story, not a separate discipline. A backup that cannot be restored within the required window is a belief, not a control; a backup outside the retention policy is data that never expires. The architect designs the lifecycle end to end (creation to deletion, with recovery in between) because each stage's decisions constrain the others.
 
 ## The Lifecycle Stages
 
@@ -38,7 +38,7 @@ Backup and recovery are part of the same story, not a separate discipline. A bac
 
 ## Retention Policies Designed into Flow
 
-Retention is a property of the flow, not a note in a policy document. Every dataset answers three questions at design time: how long it is kept, what mechanism enforces that, and what happens at expiry. Enforcement lives at the store level — object lifecycle rules, table TTLs, partition drops — and at the flow level, so that derived copies inherit or restate the retention of their source. A retention period with no enforcing mechanism is a hope; a mechanism with no assigned period is an accident waiting to be discovered by audit.
+Retention is a property of the flow, not a note in a policy document. Every dataset answers three questions at design time: how long it is kept, what mechanism enforces that, and what happens at expiry. Enforcement lives at the store level (object lifecycle rules, table TTLs, partition drops) and at the flow level, so that derived copies inherit or restate the retention of their source. A retention period with no enforcing mechanism is a hope; a mechanism with no assigned period is an accident waiting to be discovered by audit.
 
 | Policy Element | Example | Where It Lives |
 |----------------|---------|----------------|
@@ -71,6 +71,7 @@ Retention is a property of the flow, not a note in a policy document. Every data
 ## The Lifecycle Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CREATE["Creation with classification"] --> USE["Active use in hot storage"]
     USE --> ARCHIVE["Archive to cold tier"]
@@ -83,7 +84,7 @@ flowchart LR
 ### Data Lifecycle Checklist
 
 - [ ] Every dataset has a stated retention period and an enforcing mechanism
-- [ ] The data inventory names every copy — cache, projection, warehouse, backup, log
+- [ ] The data inventory names every copy: cache, projection, warehouse, backup, log
 - [ ] Deletion requests propagate to all copies with per-store confirmation
 - [ ] Backup retention and the production deletion policy are consistent and documented
 - [ ] Restore drills run on schedule and meet the stated recovery objectives
@@ -124,9 +125,9 @@ flowchart LR
 
 - [[03_Storage_Selection_and_Polyglot_Persistence]]
 - [[05_Data_Quality_and_Governance_Architecture]]
-- [[02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]
+- [[career-path/06_Software_Architect/02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]
 - [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]]
 
 ## Summary
 
-Data lifecycle design makes retention and deletion properties of the architecture: creation with classification, use with tiering and TTLs, archive with a tested retrieval path, and deletion that propagates to every copy with evidence. The right to deletion is the forcing constraint — it turns the data inventory, the event stream, and the backup window into design problems. Backups join the same discipline, because recovery objectives and deletion promises must be consistent with each other, and both must be provable.
+Data lifecycle design makes retention and deletion properties of the architecture: creation with classification, use with tiering and TTLs, archive with a tested retrieval path, and deletion that propagates to every copy with evidence. The right to deletion is the forcing constraint: it turns the data inventory, the event stream, and the backup window into design problems. Backups join the same discipline, because recovery objectives and deletion promises must be consistent with each other, and both must be provable.

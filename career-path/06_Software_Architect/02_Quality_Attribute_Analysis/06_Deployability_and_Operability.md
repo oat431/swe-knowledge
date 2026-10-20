@@ -17,11 +17,11 @@ tags:
 
 # Deployability and Operability
 
-> **Core skill:** Designing deployment as an architectural concern — shaping the deployable unit, selecting deployment tactics (feature flags, blue-green, canary, rolling update), and embedding observability surfaces so the system can be deployed safely and operated with confidence.
+> **Core skill:** Designing deployment as an architectural concern, shaping the deployable unit, selecting deployment tactics (feature flags, blue-green, canary, rolling update), and embedding observability surfaces so the system can be deployed safely and operated with confidence.
 
 ## Why This Matters
 
-A system that runs correctly in a developer's environment but cannot be deployed without downtime, rolled back quickly, or observed in production is not architecturally complete. Deployability and operability are quality attributes that determine whether the system survives contact with production — and they are architectural concerns because they shape the deployable unit, the environment topology, the release mechanism, and the observation points that let operators know the system is healthy.
+A system that runs correctly in a developer's environment but cannot be deployed without downtime, rolled back quickly, or observed in production is not architecturally complete. Deployability and operability are quality attributes that determine whether the system survives contact with production, and they are architectural concerns because they shape the deployable unit, the environment topology, the release mechanism, and the observation points that let operators know the system is healthy.
 
 The architect who defers deployment design to operations discovers that the deployment model contradicts the architectural model: services designed for independent deployment share a database and must deploy together; feature flags were never architected in and must be retrofitted; observability is an afterthought and the first production incident yields no actionable data. The cost of retrofitting deployability into a system not designed for it is paid in every release cycle.
 
@@ -50,7 +50,7 @@ The deployable unit is what gets versioned, built, tested, and released as an at
 | **Serverless function** | Function as the deployable unit; no server management | Event-driven; variable load; low operational maturity |
 | **Static asset bundle** | Frontend assets deployed independently from backend | Separate frontend and backend release cadences |
 
-The deployable unit decision constrains deployment strategy and team autonomy. Two services that share a deployable unit are not independently deployable — regardless of whether the code is in separate repositories or the architecture diagram shows them as separate boxes.
+The deployable unit decision constrains deployment strategy and team autonomy. Two services that share a deployable unit are not independently deployable, regardless of whether the code is in separate repositories or the architecture diagram shows them as separate boxes.
 
 ## Deployment Tactics
 
@@ -85,9 +85,10 @@ Observability is the operability foundation: without it, deployment is blind and
 | **Health checks** | Component readiness and liveness | What constitutes healthy; how health is reported | "Readiness probe: database reachable, cache connected; Liveness probe: process alive" |
 | **Alerting** | Notification when observability signals cross thresholds | Thresholds; alert routing; runbooks | "Error rate exceeds 1% for 5 minutes: page SRE; p95 latency exceeds 500ms: ticket" |
 
-The architect does not implement observability — but the architect decides where the observation points go, what signals they emit, and how they compose into a system-level view. Without those decisions, each team instruments differently, and the system picture is fragmented.
+The architect does not implement observability, but the architect decides where the observation points go, what signals they emit, and how they compose into a system-level view. Without those decisions, each team instruments differently, and the system picture is fragmented.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     UNIT["Design the deployable unit"] --> STRATEGY["Select deployment strategy: feature flags, blue-green, canary, rolling"]
     UNIT --> OBSERVE["Design observability surfaces: logging, metrics, tracing, health checks"]
@@ -107,7 +108,7 @@ flowchart TD
 - [ ] Database schema changes follow backward-compatible migration patterns
 - [ ] Feature flags are part of the architecture, not retrofitted per feature
 - [ ] Observability surfaces cover logging, metrics, tracing, and health checks at system boundaries
-- [ ] Rollback is designed and tested — not assumed to work on the day it is needed
+- [ ] Rollback is designed and tested, not assumed to work on the day it is needed
 
 ### Deployment Runbook Template
 
@@ -155,12 +156,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[01_Quality_Attribute_Workshops]] — how deployability scenarios are created and prioritized
-- [[07_Quality_Attribute_Trade_Offs]] — deployability vs performance and security trade-offs
-- [[07_Operations_and_Infrastructure_Architecture/00_overview|Operations and Infrastructure Architecture]] — full operations architecture discipline
-- [[05_Architecture_Across_the_Lifecycle]] — how deployment architecture fits in the delivery lifecycle
-- [[career-path/05_Tech_Lead/03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture (Tech Lead)]] — team-level deployment practices
+- [[01_Quality_Attribute_Workshops]]: how deployability scenarios are created and prioritized
+- [[07_Quality_Attribute_Trade_Offs]]: deployability vs performance and security trade-offs
+- [[career-path/06_Software_Architect/07_Operations_and_Infrastructure_Architecture/00_overview|Operations and Infrastructure Architecture]]: full operations architecture discipline
+- [[05_Architecture_Across_the_Lifecycle]]: how deployment architecture fits in the delivery lifecycle
+- [[career-path/05_Tech_Lead/03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture (Tech Lead)]]: team-level deployment practices
 
 ## Summary
 
-Deployability and operability are architectural concerns because deployment strategy shapes the deployable unit, the environment topology, and the backward-compatibility requirements that constrain every structural decision. The architect selects deployment tactics — feature flags, blue-green, canary, rolling update — before the first release, designs the observability surface (logging, metrics, tracing, health checks) so operations is informed rather than blind, and ensures the architecture supports what the deployment strategy demands: backward-compatible schemas, stateless services for horizontal scaling, and configuration management that decouples deployment from release. A system that deploys safely, rolls back quickly, and reveals its internal state to operators is architecturally complete; one that does not is still in design.
+Deployability and operability are architectural concerns because deployment strategy shapes the deployable unit, the environment topology, and the backward-compatibility requirements that constrain every structural decision. The architect selects deployment tactics (feature flags, blue-green, canary, rolling update) before the first release, designs the observability surface (logging, metrics, tracing, health checks) so operations is informed rather than blind, and ensures the architecture supports what the deployment strategy demands: backward-compatible schemas, stateless services for horizontal scaling, and configuration management that decouples deployment from release. A system that deploys safely, rolls back quickly, and reveals its internal state to operators is architecturally complete; one that does not is still in design.

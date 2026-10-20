@@ -16,13 +16,13 @@ tags:
 
 # Architecture Patterns and Styles
 
-> **Core skill:** Selecting the architectural style that fits the problem — using pattern knowledge to match coupling, deployment, team, and data needs to structures that can survive growth, and detecting when the chosen style is drifting.
+> **Core skill:** Selecting the architectural style that fits the problem, using pattern knowledge to match coupling, deployment, team, and data needs to structures that can survive growth, and detecting when the chosen style is drifting.
 
 ## Why This Matters
 
-An architectural style is not a fashion choice. It is a set of constraints that determines how the system is built, deployed, operated, and evolved — and those constraints produce a predictable set of benefits and costs. The architect who chooses a style without understanding its trade-offs builds a system whose most expensive problems were decided on day one and will surface only when change becomes painful.
+An architectural style is not a fashion choice. It is a set of constraints that determines how the system is built, deployed, operated, and evolved, and those constraints produce a predictable set of benefits and costs. The architect who chooses a style without understanding its trade-offs builds a system whose most expensive problems were decided on day one and will surface only when change becomes painful.
 
-The pattern catalog exists because systems face recurring structural challenges: separating concerns without coupling them, scaling without fragmenting data integrity, evolving without breaking consumers. Each style answers some of those challenges at the expense of others. The architect's job is to match the pattern to the problem — not to start with a pre-committed style and contort the requirements to fit.
+The pattern catalog exists because systems face recurring structural challenges: separating concerns without coupling them, scaling without fragmenting data integrity, evolving without breaking consumers. Each style answers some of those challenges at the expense of others. The architect's job is to match the pattern to the problem, not to start with a pre-committed style and contort the requirements to fit.
 
 Style drift is the silent failure mode: a system that was layered becomes a distributed tangle without anyone deciding to abandon the original style. The architect detects drift before it becomes the architecture, and makes the choice explicit again.
 
@@ -56,11 +56,11 @@ Style drift is the silent failure mode: a system that was layered becomes a dist
 
 The style decision is not a one-time selection from a menu. It is a matching exercise: requirements produce scenarios, scenarios demand structural responses, and the style that best accommodates those responses wins.
 
-1. **Start with quality attribute scenarios** — not with pattern preferences. What must the system do under stress, at scale, under change?
-2. **Map scenarios to structural demands** — availability scenarios demand isolation; modifiability scenarios demand boundaries; performance scenarios demand locality.
-3. **Evaluate styles against demands** — score each style on its ability to accommodate the structural demands, not on its popularity.
-4. **Select the simplest style that meets demands** — prefer monolith over microservices, layered over event-driven, unless the demand requires the costlier option.
-5. **Name the style in an ADR** — with the scenarios that drove the choice, so future architects understand why the system is shaped this way.
+1. **Start with quality attribute scenarios**: not with pattern preferences. What must the system do under stress, at scale, under change?
+2. **Map scenarios to structural demands**: availability scenarios demand isolation; modifiability scenarios demand boundaries; performance scenarios demand locality.
+3. **Evaluate styles against demands**: score each style on its ability to accommodate the structural demands, not on its popularity.
+4. **Select the simplest style that meets demands**: prefer monolith over microservices, layered over event-driven, unless the demand requires the costlier option.
+5. **Name the style in an ADR**: with the scenarios that drove the choice, so future architects understand why the system is shaped this way.
 
 ## Mixing Styles
 
@@ -68,11 +68,11 @@ Most real systems combine styles. A microservices system may use event-driven co
 
 | Mixing Approach | Description | Risk |
 |----------------|-------------|------|
-| **Nested styles** | One style inside another — hexagonal services inside an event-driven system | Boundary confusion if not diagrammed |
+| **Nested styles** | One style inside another: hexagonal services inside an event-driven system | Boundary confusion if not diagrammed |
 | **Per-boundary styles** | Different styles for different system boundaries | Inconsistent operational model |
-| **Evolutionary mix** | Style changes as the system grows — monolith → modulith → services | Drift if the transition is never completed |
+| **Evolutionary mix** | Style changes as the system grows: monolith → modulith → services | Drift if the transition is never completed |
 
-When mixing styles, name the primary style — the one that governs system-level concerns — and treat others as localized decisions within boundaries. Every mixed-style system needs a diagram that shows which style applies where.
+When mixing styles, name the primary style (the one that governs system-level concerns) and treat others as localized decisions within boundaries. Every mixed-style system needs a diagram that shows which style applies where.
 
 ## Style Drift Detection
 
@@ -88,6 +88,7 @@ When mixing styles, name the primary style — the one that governs system-level
 Drift is detected by comparison, not by code review: compare the current structure to the named style, and find the deviations. If the deviation is intentional, update the style decision. If it is accidental, the drift must be corrected or the style name no longer describes the system.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SCENARIOS["Quality attribute scenarios"] --> DEMANDS["Structural demands"]
     DEMANDS --> MATCH["Match against style catalog"]
@@ -154,12 +155,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[04_Architecture_Decision_Making]] — the decision process that produces style choices
-- [[07_Architecture_and_Quality_Attributes]] — the drivers that determine which style fits
-- [[05_Architecture_Across_the_Lifecycle]] — how style evolves across delivery models
-- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/05_Design_Patterns_Judgment|Design Patterns Judgment (Senior)]] — component-level patterns inside the style
-- [[career-path/05_Tech_Lead/03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture (Tech Lead)]] — the team-side application of the chosen style
+- [[04_Architecture_Decision_Making]]: the decision process that produces style choices
+- [[07_Architecture_and_Quality_Attributes]]: the drivers that determine which style fits
+- [[05_Architecture_Across_the_Lifecycle]]: how style evolves across delivery models
+- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/05_Design_Patterns_Judgment|Design Patterns Judgment (Senior)]]: component-level patterns inside the style
+- [[career-path/05_Tech_Lead/03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture (Tech Lead)]]: the team-side application of the chosen style
 
 ## Summary
 
-Architectural styles are sets of constraints that produce predictable benefits and costs, and the architect's responsibility is to match style to problem — not to pre-commit and contort requirements to fit. The catalog spans layered, microservices, event-driven, hexagonal, SOA, monolith, modulith, and space-based, each evaluated against coupling tolerance, deployment independence, team topology, data consistency, scale profile, change rate, operational maturity, and domain complexity. Most systems mix styles; the primary style must be named and diagrammed. Style drift is detected by comparing current structure to named style at each increment, and addressed by either correcting the drift or updating the style decision — so the name always describes reality.
+Architectural styles are sets of constraints that produce predictable benefits and costs, and the architect's responsibility is to match style to problem, not to pre-commit and contort requirements to fit. The catalog spans layered, microservices, event-driven, hexagonal, SOA, monolith, modulith, and space-based, each evaluated against coupling tolerance, deployment independence, team topology, data consistency, scale profile, change rate, operational maturity, and domain complexity. Most systems mix styles; the primary style must be named and diagrammed. Style drift is detected by comparing current structure to named style at each increment, and addressed by either correcting the drift or updating the style decision, so the name always describes reality.

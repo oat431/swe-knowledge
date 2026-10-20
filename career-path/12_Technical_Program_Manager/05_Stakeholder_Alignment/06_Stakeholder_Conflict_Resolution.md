@@ -16,17 +16,17 @@ tags:
 
 # Stakeholder Conflict Resolution
 
-> **Core skill:** The TPM resolves conflicts between stakeholder groups — surfacing the real disagreement behind the stated one, structuring the resolution in the program's governance rather than in hallways, and producing outcomes that both sides can commit to because the process was fair, not because their side won.
+> **Core skill:** The TPM resolves conflicts between stakeholder groups, surfacing the real disagreement behind the stated one, structuring the resolution in the program's governance rather than in hallways, and producing outcomes that both sides can commit to because the process was fair, not because their side won.
 
 ## Why This Matters
 
-Cross-team programs surface conflicts that single-team work absorbs. Engineering wants to refactor; product wants the feature. Security wants a review; the vendor wants a signature. The executive wants the date; the data suggests the date is wrong. These are not communication failures — they are genuine conflicts of interest, and they are the reason programs need a TPM instead of a status spreadsheet.
+Cross-team programs surface conflicts that single-team work absorbs. Engineering wants to refactor; product wants the feature. Security wants a review; the vendor wants a signature. The executive wants the date; the data suggests the date is wrong. These are not communication failures; they are genuine conflicts of interest, and they are the reason programs need a TPM instead of a status spreadsheet.
 
 The TPM's conflict resolution discipline is not mediation in the therapeutic sense. It is process: surfacing the conflict in the right forum, structuring it so that both sides are arguing from the same evidence against the same criteria, and producing a decision that sticks because the process was visible and fair. Conflicts resolved in hallways produce grudges; conflicts resolved in governance produce commitments.
 
 ## The Conflict Taxonomy
 
-Not all stakeholder conflicts are the same. The TPM classifies the conflict before attempting resolution — because the wrong resolution approach makes the conflict worse.
+Not all stakeholder conflicts are the same. The TPM classifies the conflict before attempting resolution, because the wrong resolution approach makes the conflict worse.
 
 | Conflict Type | What It Looks Like | Root Cause | Resolution Approach |
 |---------------|-------------------|------------|---------------------|
@@ -36,7 +36,7 @@ Not all stakeholder conflicts are the same. The TPM classifies the conflict befo
 | Value conflict | Different groups value different outcomes (quality vs. speed, security vs. features) | Deep difference in incentives; not resolvable by data | Agree criteria that weight both values; let the decider choose |
 | History conflict | The current issue is a proxy for an old grievance | Unresolved past conflict between the same people | Name the pattern; separate the people from the current question; structured process |
 
-The history conflict is the most dangerous because it presents as a priority conflict. The TPM who tries to resolve a history conflict with data will fail — the data is not the issue. History conflicts require naming the pattern and, often, escalation to leadership.
+The history conflict is the most dangerous because it presents as a priority conflict. The TPM who tries to resolve a history conflict with data will fail; the data is not the issue. History conflicts require naming the pattern and, often, escalation to leadership.
 
 ## The Conflict Resolution Process
 
@@ -65,7 +65,7 @@ The TPM facilitates conflict resolution from a specific stance that preserves ne
 
 ## The Conflict Escalation Path
 
-When the TPM cannot resolve the conflict at the program level — because the stakeholders lack authority, the criteria cannot be agreed, or the conflict is fundamentally about values — escalation follows a defined path.
+When the TPM cannot resolve the conflict at the program level (because the stakeholders lack authority, the criteria cannot be agreed, or the conflict is fundamentally about values) escalation follows a defined path.
 
 | Level | Forum | Escalation Trigger | Content |
 |-------|-------|--------------------|---------|
@@ -73,7 +73,7 @@ When the TPM cannot resolve the conflict at the program level — because the st
 | 2. Sponsor | TPM + program sponsor | Deadlock at Level 1; authority gap | Priced options with sponsor's authority behind the process |
 | 3. Steering committee | Executive governance forum | Value conflict; deadlock at Level 2 | Decision framed as a choice between priced options with consequences |
 
-The sponsor is the bridge between program-level resolution and executive decision. The TPM never escalates to the steering committee without the sponsor's backing — because the steering committee needs to see a unified program position, not a TPM appealing over the sponsor's head.
+The sponsor is the bridge between program-level resolution and executive decision. The TPM never escalates to the steering committee without the sponsor's backing, because the steering committee needs to see a unified program position, not a TPM appealing over the sponsor's head.
 
 ## Recording Conflict Resolution
 
@@ -90,6 +90,7 @@ A conflict resolution that is not recorded did not happen. The record serves thr
 | Re-review trigger | What would cause the decision to be revisited |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CONFLICT["Conflict surfaces between stakeholder groups"] --> CLASSIFY["Classify: priority, information, authority, value, or history?"]
     CLASSIFY --> POSITIONS["Written positions and interests from both sides"]
@@ -105,7 +106,7 @@ flowchart TD
 ### Conflict Resolution Brief Template
 
 ```markdown
-# Conflict Resolution Brief — [Topic] — [Date]
+# Conflict Resolution Brief: [Topic], [Date]
 
 ## The Conflict
 - Between: [stakeholder A] and [stakeholder B]
@@ -175,9 +176,9 @@ flowchart TD
 - [[05_Stakeholder_Negotiation]]: negotiation is conflict resolution before it hardens
 - [[04_Managing_Stakeholder_Expectations]]: expectation gaps are the most common conflict source
 - [[01_Stakeholder_Mapping]]: the map surfaces conflicts early
-- [[06_Decision_Facilitation/06_Managing_Decision_Disagreement|Managing Decision Disagreement]]: the decision-side counterpart
+- [[career-path/12_Technical_Program_Manager/06_Decision_Facilitation/06_Managing_Decision_Disagreement|Managing Decision Disagreement]]: the decision-side counterpart
 - [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/03_Managing_Disagreement|Managing Disagreement (Staff)]]: the staff engineer's conflict resolution craft
 
 ## Summary
 
-Stakeholder conflict resolution is the TPM's governance discipline: surfacing conflict in the right forum, classifying its type before attempting resolution, structuring it through written positions and agreed criteria, producing a decision with recorded dissent and explicit commitment, and escalating with priced options when deadlocked. Conflicts resolved in governance produce commitments; conflicts resolved in hallways produce grudges — and grudges break programs.
+Stakeholder conflict resolution is the TPM's governance discipline: surfacing conflict in the right forum, classifying its type before attempting resolution, structuring it through written positions and agreed criteria, producing a decision with recorded dissent and explicit commitment, and escalating with priced options when deadlocked. Conflicts resolved in governance produce commitments; conflicts resolved in hallways produce grudges, and grudges break programs.

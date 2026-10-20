@@ -28,6 +28,7 @@ Delivery is not just about speed. It is about **reliability** : the ability to m
 ## The Senior Engineer's Role in Delivery
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph MID["Mid-Level Engineer"]
         M1["Completes assigned tasks"]
@@ -59,6 +60,7 @@ flowchart TD
 ## Concept Map
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PLAN["Plan and Estimate"] --> DEPENDENCIES["Manage Dependencies"]
     DEPENDENCIES --> EXECUTE["Execute and Track"]
@@ -81,7 +83,7 @@ Before diving into delivery and execution, you should understand:
 - [[software-engineering-note/09_Software_Engineering_Management/07_Estimation_and_Planning]]: Estimation and planning fundamentals
 - [[software-engineering-note/09_Software_Engineering_Management/08_Risk_Management_and_Control]]: Risk management basics
 - [[body-of-knowledge/PMBOK/06_Schedule_Performance_Domain]]: Schedule management
-- [[01_Technical_Ownership/02_Lifecycle_Ownership]]: Lifecycle ownership from previous capability
+- [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/02_Lifecycle_Ownership]]: Lifecycle ownership from previous capability
 
 ## Progress Tracker
 
@@ -97,9 +99,9 @@ Before diving into delivery and execution, you should understand:
 
 - [[body-of-knowledge/PMBOK/PMBOK v8 - Overview]] : Project management foundation
 - [[software-engineering-note/09_Software_Engineering_Management/Software Engineering Management Overview]] : SWEBOK management overview
-- [[01_Technical_Ownership/03_Technical_Debt_and_Maintainability]] : Technical debt management at system level
-- [[03_Architecture_and_Design_Judgment/01_Architecture_Decision_Making]] : Architecture decisions affect delivery timelines
-- [[02_Problem_Framing_and_Requirements/08_Requirements_Risk]] : Requirements risks affect delivery plans
+- [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/03_Technical_Debt_and_Maintainability]] : Technical debt management at system level
+- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/01_Architecture_Decision_Making]] : Architecture decisions affect delivery timelines
+- [[career-path/02_Senior_Software_Engineer/02_Problem_Framing_and_Requirements/08_Requirements_Risk]] : Requirements risks affect delivery plans
 
 ## Key Takeaways
 

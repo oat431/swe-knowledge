@@ -52,6 +52,7 @@ For each control, decide based on the consequence of allowing and denying the ac
 ### 3. Failure and recovery loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     FAILURE["Control or dependency failure"] --> CLASSIFY["Classify asset action and consequence"]
     CLASSIFY --> SAFE["Enter deliberate safe behavior"]
@@ -114,8 +115,8 @@ Choose a critical workflow and inject four failures in a test environment or tab
 - [[02_Defense_in_Depth|Defense in Depth]]
 - [[03_Zero_Trust_and_Segmentation|Zero Trust and Segmentation]]
 - [[05_Secrets_and_Cryptographic_Boundaries|Secrets and Cryptographic Boundaries]]
-- [[../01_Threat_Modeling_and_Risk/05_Risk_Rating_and_Treatment|Risk Rating and Treatment]]
-- [[../01_Threat_Modeling_and_Risk/06_Threat_Model_Maintenance|Threat Model Maintenance]]
+- [[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/05_Risk_Rating_and_Treatment|Risk Rating and Treatment]]
+- [[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/06_Threat_Model_Maintenance|Threat Model Maintenance]]
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]
 - [Security Architecture Template](F:\obsidian_note\document_template\14_Security/Security-Architecture.md)

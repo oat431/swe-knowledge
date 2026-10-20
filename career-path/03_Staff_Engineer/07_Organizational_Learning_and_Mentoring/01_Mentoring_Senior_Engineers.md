@@ -15,13 +15,13 @@ tags:
 
 # Mentoring Senior Engineers
 
-> **Core skill:** Growing senior engineers toward staff-level scope, influence, and judgment — through explicit contracts, sponsored arcs, and coaching that targets the gap, not the craft.
+> **Core skill:** Growing senior engineers toward staff-level scope, influence, and judgment, through explicit contracts, sponsored arcs, and coaching that targets the gap, not the craft.
 
 ## Why This Matters
 
 Mentoring changes clientele at staff level. Juniors need craft; seniors need the three gaps that separate them from staff: scope (team-sized to org-sized problems), influence (leading without authority), and judgment (deciding under ambiguity). Teaching craft to a senior is noise; sponsoring an org-scale arc is signal.
 
-The multiplication logic is direct: every senior you grow into staff-level judgment is a second person who can see the whole. The org's ceiling is not its staff headcount — it is the pipeline of seniors being deliberately grown toward it. Mentoring seniors is also how your own scope expands: you cannot sponsor what you cannot see, and the sponsorship forces you to keep seeing more.
+The multiplication logic is direct: every senior you grow into staff-level judgment is a second person who can see the whole. The org's ceiling is not its staff headcount; it is the pipeline of seniors being deliberately grown toward it. Mentoring seniors is also how your own scope expands: you cannot sponsor what you cannot see, and the sponsorship forces you to keep seeing more.
 
 ## The Senior-to-Staff Gap
 
@@ -32,7 +32,7 @@ The multiplication logic is direct: every senior you grow into staff-level judgm
 | **Judgment** | Decides with context | Decides under ambiguity | Framing, trade-offs, second-order thinking |
 | **Visibility** | Known for delivery | Known for leverage | Writing, reviews, decision ownership |
 
-The gap is not skill; it is altitude. A senior who can already do staff work at team scale needs practice at org scale — and that practice is what the mentoring relationship exists to arrange.
+The gap is not skill; it is altitude. A senior who can already do staff work at team scale needs practice at org scale, and that practice is what the mentoring relationship exists to arrange.
 
 ## Mentoring Contracts
 
@@ -108,9 +108,10 @@ The uncomfortable measure: can they do the next arc without you? If the answer i
 | **Mismatch** | The gap is motivation, not capability | Refer to management; mentoring cannot fix drive |
 | **Your capacity** | Sessions get cancelled by you repeatedly | Reduce the portfolio; quality over count |
 
-The honest close is part of the craft: a mentoring relationship that is not working should end explicitly, with a referral or a reset — not fade into calendar noise.
+The honest close is part of the craft: a mentoring relationship that is not working should end explicitly, with a referral or a reset, not fade into calendar noise.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CONTRACT["Explicit contract"] --> ARC["Sponsor cross-team arc"]
     ARC --> COACH["Coach proposals and presence"]
@@ -188,4 +189,4 @@ flowchart TD
 
 ## Summary
 
-Mentoring senior engineers is the staff multiplication move: close the altitude gap in scope, influence, and judgment through explicit contracts, diverse portfolios of two to four, sponsored cross-team arcs, proposal coaching, and observed presence. Measure success by independence — can they run the next arc without you — and close relationships honestly when chemistry, readiness, or motivation is the blocker. Every senior grown is the org seeing the whole twice.
+Mentoring senior engineers is the staff multiplication move: close the altitude gap in scope, influence, and judgment through explicit contracts, diverse portfolios of two to four, sponsored cross-team arcs, proposal coaching, and observed presence. Measure success by independence (can they run the next arc without you), and close relationships honestly when chemistry, readiness, or motivation is the blocker. Every senior grown is the org seeing the whole twice.

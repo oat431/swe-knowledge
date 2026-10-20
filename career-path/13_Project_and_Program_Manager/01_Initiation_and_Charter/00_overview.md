@@ -14,7 +14,7 @@ tags:
 
 # Initiation and Charter
 
-> **Core capability:** The project manager defines the project's legitimacy, scope, authority, and success conditions before work begins — through a chartered initiation that aligns stakeholders on what will be done, why, and who decides.
+> **Core capability:** The project manager defines the project's legitimacy, scope, authority, and success conditions before work begins, through a chartered initiation that aligns stakeholders on what will be done, why, and who decides.
 
 ## Why This Matters
 
@@ -37,6 +37,7 @@ Initiation is also where the business case meets reality: is the value propositi
 ## The Initiation Sequence
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     NEED["Business need identified"] --> CASE["Business case: value, cost, rationale"]
     CASE --> CHARTER["Charter: scope, objectives, authority, governance"]
@@ -65,7 +66,7 @@ Initiation ends when the charter is signed and the team knows why they are here.
 |---------|---------------------|-----------------|
 | **Initiation-as-formality** | Charter written to satisfy process, never referenced again | Charter as the project's constitution; refer to it |
 | **Scope-by-assumption** | Scope assumed, not documented; creeps immediately | Explicit in-scope and out-of-scope in the charter |
-| **Success-criteria-vague** | "Improve performance" — unmeasurable | SMART objectives with baselines and targets |
+| **Success-criteria-vague** | "Improve performance": unmeasurable | SMART objectives with baselines and targets |
 
 ## Success Indicators
 
@@ -76,10 +77,10 @@ Initiation ends when the charter is signed and the team knows why they are here.
 
 ## Related Capabilities
 
-- [[02_Scope_and_Planning/00_overview|Scope and Planning]]: planning begins where initiation ends
-- [[06_Governance_and_Change_Control/00_overview|Governance and Change Control]]: governance established at initiation
+- [[career-path/13_Project_and_Program_Manager/02_Scope_and_Planning/00_overview|Scope and Planning]]: planning begins where initiation ends
+- [[career-path/13_Project_and_Program_Manager/06_Governance_and_Change_Control/00_overview|Governance and Change Control]]: governance established at initiation
 - [[career-path/12_Technical_Program_Manager/01_Program_Structure_and_Charter/00_overview|Program Structure and Charter (TPM)]]: the program-level counterpart
 
 ## Summary
 
-Initiation is the project's foundation: a charter that defines scope and authority, a business case that justifies investment, measurable success criteria, and a kickoff that aligns the team. Projects that start well finish better — and the project manager who initiates thoroughly spends less time fighting scope creep and decision ambiguity.
+Initiation is the project's foundation: a charter that defines scope and authority, a business case that justifies investment, measurable success criteria, and a kickoff that aligns the team. Projects that start well finish better, and the project manager who initiates thoroughly spends less time fighting scope creep and decision ambiguity.

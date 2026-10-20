@@ -16,15 +16,15 @@ tags:
 
 # Shaping Ecosystem Strategy
 
-> **Core skill:** Contributing field-grounded strategy to how the organization participates in its ecosystem — open source, partnerships, platforms, and standards — from a seat earned by evidence, not title.
+> **Core skill:** Contributing field-grounded strategy to how the organization participates in its ecosystem (open source, partnerships, platforms, and standards) from a seat earned by evidence, not title.
 
 ## Why This Matters
 
-Every technology organization lives inside an ecosystem it does not control: open-source projects it depends on, platforms it builds on or against, partners whose integrations extend its reach, standards bodies that set the terms of interoperability. Strategy for that ecosystem is usually made at leadership level — and it is usually better when the field's daily reality reaches the room. The advocate, who watches developers navigate the ecosystem every day, holds exactly that reality.
+Every technology organization lives inside an ecosystem it does not control: open-source projects it depends on, platforms it builds on or against, partners whose integrations extend its reach, standards bodies that set the terms of interoperability. Strategy for that ecosystem is usually made at leadership level, and it is usually better when the field's daily reality reaches the room. The advocate, who watches developers navigate the ecosystem every day, holds exactly that reality.
 
-The strategic questions are concrete: which projects should the company fund or maintain rather than merely consume? Which partnerships deepen developer value versus deepen lock-in? Where should the organization participate in standards, and where is participation theater? Should the platform invite complementors, and on what terms? Each of these decisions is better made with field evidence — what developers actually integrate, what they actually abandon, where trust actually sits — than with deal logic alone.
+The strategic questions are concrete: which projects should the company fund or maintain rather than merely consume? Which partnerships deepen developer value versus deepen lock-in? Where should the organization participate in standards, and where is participation theater? Should the platform invite complementors, and on what terms? Each of these decisions is better made with field evidence (what developers actually integrate, what they actually abandon, where trust actually sits) than with deal logic alone.
 
-The advocate's contribution is bounded but real. This is not a claim to own strategy; it is a claim to supply its missing inputs: relationship maps, adoption evidence, friction reports, and honest readings of community sentiment. The advocate who does this reliably becomes a standing contributor to strategy discussions — and the one whose absence is noticed when decisions get made without the field in view.
+The advocate's contribution is bounded but real. This is not a claim to own strategy; it is a claim to supply its missing inputs: relationship maps, adoption evidence, friction reports, and honest readings of community sentiment. The advocate who does this reliably becomes a standing contributor to strategy discussions, and the one whose absence is noticed when decisions get made without the field in view.
 
 ## The Ecosystem Map
 
@@ -54,14 +54,14 @@ Start with an honest inventory of the actors and the state of each relationship.
 
 | Position | Choose It When | What It Commits The Organization To |
 |----------|----------------|-------------------------------------|
-| Open core with real contribution | Community growth is the adoption engine | Upstreaming, funding, maintainer respect — [[06_Community_and_Ecosystem/00_overview|Community and Ecosystem]] discipline |
+| Open core with real contribution | Community growth is the adoption engine | Upstreaming, funding, maintainer respect: [[career-path/16_Developer_Advocate_and_Technical_Consultant/06_Community_and_Ecosystem/00_overview|Community and Ecosystem]] discipline |
 | Consume-and-contribute | Projects are critical but not differentiated | Sustained fixes, sponsorship, no roadmap claims |
 | Platform with complementors | Third parties build on the product | Fair terms, SDK investment, no competitive rug-pulls |
 | Partnership-led expansion | Reach is the constraint, not product | Reciprocal value; integrations that serve developers first |
 | Standards leadership | Interoperability is strategic | Engineering time, public commitments, patient participation |
 | Ecosystem-neutral | No strategic dependency exists yet | Honest watching; avoid accidental lock-in anyway |
 
-Positions are choices with costs; strategy documents that list principles without commitments are decoration. Each position the advocate supports should name what the organization will actually spend — time, code, or money.
+Positions are choices with costs; strategy documents that list principles without commitments are decoration. Each position the advocate supports should name what the organization will actually spend: time, code, or money.
 
 ## The Advocate's Seat
 
@@ -78,6 +78,7 @@ Participation owes the same honesty as consulting: represent the ecosystem inwar
 ## The Strategy Cycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     MAP["Map - actors, relationships, health"] --> READ["Read - field evidence and sentiment"]
     READ --> POSITION["Position - chosen commitments with costs"]
@@ -92,7 +93,7 @@ flowchart LR
 
 - [ ] The ecosystem map lists actors with named relationship owners
 - [ ] Every critical dependency has a posture: contribute, fund, or consciously consume
-- [ ] Field evidence — not deal convenience — informs partnership priorities
+- [ ] Field evidence (not deal convenience) informs partnership priorities
 - [ ] The organization knows what it will not claim or promise in the ecosystem
 - [ ] Strategic positions name concrete commitments: code, money, or staffed time
 - [ ] Sentiment and trust signals are reported, including uncomfortable ones
@@ -101,10 +102,10 @@ flowchart LR
 ### Ecosystem Brief Template
 
 ```markdown
-## Ecosystem Brief — [quarter]
+## Ecosystem Brief: [quarter]
 ## Map Updates
-- New actors: [x] — move: [y]
-- Relationship changes: [project or partner] — health now: [good / at risk / broken]
+- New actors: [x]; move: [y]
+- Relationship changes: [project or partner]; health now: [good / at risk / broken]
 
 ## Field Read
 - Adoption patterns: [evidence]
@@ -117,7 +118,7 @@ flowchart LR
 | [upstream / platform / partners / standards] | [x] | [time, code, money] | [name] | [date] |
 
 ## Early Warnings
-- [signal] — confidence: [x] — recommended watch item: [y]
+- [signal]; confidence: [x]; recommended watch item: [y]
 ```
 
 ## Common Pitfalls
@@ -144,9 +145,9 @@ flowchart LR
 - [[03_Influencing_the_Roadmap_From_the_Field]]: the roadmap is where ecosystem strategy becomes product reality
 - [[06_Advocacy_Metrics_and_Reporting]]: strategic commitments need outcome evidence to persist
 - [[01_From_Field_Signal_to_Product_Insight]]: the evidence base beneath ecosystem reads
-- [[06_Community_and_Ecosystem/00_overview|Community and Ecosystem]]: the community layer of every ecosystem position
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/06_Community_and_Ecosystem/00_overview|Community and Ecosystem]]: the community layer of every ecosystem position
 - [[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]: the execution partner for multi-party strategic commitments
 
 ## Summary
 
-Shaping ecosystem strategy means supplying the field-grounded inputs strategy usually lacks: an honest map of actors and relationship health, adoption and sentiment evidence from daily work, and positions that name real commitments — code, money, or staffed time — for open source, partners, platforms, and standards. The advocate's seat at that table is earned by reliability across quarters: being the source that tells the room the truth about the ecosystem, especially when the truth is inconvenient, and staying until the commitments are made.
+Shaping ecosystem strategy means supplying the field-grounded inputs strategy usually lacks: an honest map of actors and relationship health, adoption and sentiment evidence from daily work, and positions that name real commitments (code, money, or staffed time) for open source, partners, platforms, and standards. The advocate's seat at that table is earned by reliability across quarters: being the source that tells the room the truth about the ecosystem, especially when the truth is inconvenient, and staying until the commitments are made.

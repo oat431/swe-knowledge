@@ -16,13 +16,13 @@ tags:
 
 # Facilitating Decision Meetings
 
-> **Core skill:** The TPM runs meetings that produce decisions, not more discussion — protecting the pre-read investment, keeping the conversation on the framing, surfacing dissent without letting it derail the decision, and ensuring the room leaves with a recorded choice, not another meeting.
+> **Core skill:** The TPM runs meetings that produce decisions, not more discussion, protecting the pre-read investment, keeping the conversation on the framing, surfacing dissent without letting it derail the decision, and ensuring the room leaves with a recorded choice, not another meeting.
 
 ## Why This Matters
 
-The decision meeting is where the program's decision process delivers or fails. A meeting that produces a decision unblocks dependent work across the program. A meeting that produces another meeting compounds the delay and burns stakeholder patience. The difference is facilitation — not content expertise, but process discipline.
+The decision meeting is where the program's decision process delivers or fails. A meeting that produces a decision unblocks dependent work across the program. A meeting that produces another meeting compounds the delay and burns stakeholder patience. The difference is facilitation: not content expertise, but process discipline.
 
-The TPM's facilitation stance is neutral on the decision and absolute on the process. The TPM does not argue for an option — the framing document already did that. The TPM protects the meeting's format: the pre-read was read, the criteria are agreed, the options are priced, and the meeting's job is to resolve open questions and decide. A meeting that re-reads the framing document is a failed meeting; a meeting that resolves the open questions and produces a recorded decision is a successful one.
+The TPM's facilitation stance is neutral on the decision and absolute on the process. The TPM does not argue for an option; the framing document already did that. The TPM protects the meeting's format: the pre-read was read, the criteria are agreed, the options are priced, and the meeting's job is to resolve open questions and decide. A meeting that re-reads the framing document is a failed meeting; a meeting that resolves the open questions and produces a recorded decision is a successful one.
 
 ## The Decision Meeting Format
 
@@ -38,7 +38,7 @@ Every decision meeting follows a timed format. The format is communicated in adv
 | 6. Confirm commitment | 3 min | Each stakeholder states their commitment to the decision | Facilitator: ask each person; record explicit commitments |
 | 7. Next steps | 2 min | Actions, owners, dates; decision record distribution | Recorder: capture and confirm |
 
-Total: 30-40 minutes. A decision meeting that runs longer is usually re-arguing the framing document — a facilitation failure.
+Total: 30-40 minutes. A decision meeting that runs longer is usually re-arguing the framing document, a facilitation failure.
 
 ## The Pre-Read Contract
 
@@ -65,21 +65,21 @@ The pre-read contract is cultural, not contractual. It is established in the fir
 
 ## Handling Dissent in the Room
 
-Dissent in the decision meeting is not a problem — it is evidence that the process is working. Dissent that is silenced produces fake commitment. Dissent that is surfaced and recorded produces real commitment — because the dissenter was heard, their alternative was considered, and the decision was made with their objection on the record.
+Dissent in the decision meeting is not a problem; it is evidence that the process is working. Dissent that is silenced produces fake commitment. Dissent that is surfaced and recorded produces real commitment, because the dissenter was heard, their alternative was considered, and the decision was made with their objection on the record.
 
 | Facilitation Move | Example |
 |--------------------|---------|
 | Invite dissent explicitly | "Before we decide, is there anyone who would choose a different option? I want to make sure every view is on the table." |
 | Restate the dissenter's position accurately | "So your position is that option B is premature because the data on migration cost is incomplete. Is that right?" |
 | Ask the dissenter what would change their mind | "What information would make option A acceptable to you? When could we have that information?" |
-| Record dissent in the decision | "Noted. The decision is option A. [Name]'s dissent — that option B was premature pending migration cost data — is recorded. We will revisit if migration costs exceed [threshold]." |
+| Record dissent in the decision | "Noted. The decision is option A. [Name]'s dissent (that option B was premature pending migration cost data) is recorded. We will revisit if migration costs exceed [threshold]." |
 | Ask for explicit commitment | "[Name], you argued for B. We chose A. Can you commit to making A work?" |
 
 The dissenter who is heard, recorded, and asked to commit is far more likely to support the decision than the dissenter who is silenced and expected to comply.
 
 ## When the Decision Meeting Fails
 
-Not every decision meeting produces a decision. The TPM recognizes failure early and converts it to a defined next step — not an open-ended deferral.
+Not every decision meeting produces a decision. The TPM recognizes failure early and converts it to a defined next step, not an open-ended deferral.
 
 | Failure Mode | TPM Response |
 |--------------|--------------|
@@ -89,9 +89,10 @@ Not every decision meeting produces a decision. The TPM recognizes failure early
 | New option surfaces in the meeting | "That option was not in the framing. I will price it and circulate an updated framing document by [date]. We will decide on [date]." |
 | Genuine deadlock | "We have two positions and cannot resolve. [Decider], would you like to decide now, or shall we escalate to [sponsor/steering committee] with both positions priced?" |
 
-Every failure converts to a specific next step with a date. "Let's discuss this later" is not a facilitation move — it is an abdication.
+Every failure converts to a specific next step with a date. "Let's discuss this later" is not a facilitation move; it is an abdication.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     START["Meeting starts"] --> CONFIRM["Confirm question and decider present"]
     CONFIRM -- "Decider absent" --> RESCHEDULE["Reschedule; meeting ends"]
@@ -109,9 +110,9 @@ flowchart TD
 ### Decision Meeting Agenda Template
 
 ```markdown
-# Decision Meeting — [Decision Name] — [Date]
+# Decision Meeting: [Decision Name], [Date]
 
-**Pre-read:** [link to framing document] — distributed [date]
+**Pre-read:** [link to framing document], distributed [date]
 
 ## Agenda (40 min)
 1. [2 min] Confirm decision question and decider presence
@@ -157,7 +158,7 @@ flowchart TD
 - Decision meetings end with a recorded decision, not another meeting
 - The pre-read contract holds: meetings start from the framing, not from scratch
 - Dissent is surfaced and recorded; dissenters commit visibly to the decision
-- Meetings run to time — 30-40 minutes — because the format is enforced
+- Meetings run to time (30-40 minutes) because the format is enforced
 - Attendees arrive having read the pre-read because they know the meeting will not re-read it
 
 ## Related Topics
@@ -166,8 +167,8 @@ flowchart TD
 - [[04_Decision_Documentation]]: recording the decision made in the meeting
 - [[06_Managing_Decision_Disagreement]]: handling dissent in the decision process
 - [[01_Decision_Process_Design]]: the process that schedules and structures the meeting
-- [[05_Stakeholder_Alignment/03_Executive_Communication_for_TPMs|Executive Communication for TPMs]]: the steering committee is the executive decision meeting
+- [[career-path/12_Technical_Program_Manager/05_Stakeholder_Alignment/03_Executive_Communication_for_TPMs|Executive Communication for TPMs]]: the steering committee is the executive decision meeting
 
 ## Summary
 
-Facilitating decision meetings is the TPM's in-room craft: protecting the pre-read investment, running a timed format that resolves open questions and surfaces dissent, ensuring the decider decides with everything they need, and producing a recorded decision with explicit commitments before anyone leaves. The TPM is neutral on the outcome and absolute on the process — and a meeting that produces a decision is the process working. A meeting that produces another meeting is the process failing, and the TPM owns the failure.
+Facilitating decision meetings is the TPM's in-room craft: protecting the pre-read investment, running a timed format that resolves open questions and surfaces dissent, ensuring the decider decides with everything they need, and producing a recorded decision with explicit commitments before anyone leaves. The TPM is neutral on the outcome and absolute on the process, and a meeting that produces a decision is the process working. A meeting that produces another meeting is the process failing, and the TPM owns the failure.

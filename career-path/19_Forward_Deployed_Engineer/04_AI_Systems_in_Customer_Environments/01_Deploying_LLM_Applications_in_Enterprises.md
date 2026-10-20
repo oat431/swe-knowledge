@@ -16,11 +16,11 @@ tags:
 
 # Deploying LLM Applications in Enterprises
 
-> **Core skill:** Adapting product AI patterns to customer environments — same pattern, different substrate, re-verified against the customer's own data, identity, and workflows before anyone relies on it.
+> **Core skill:** Adapting product AI patterns to customer environments: same pattern, different substrate, re-verified against the customer's own data, identity, and workflows before anyone relies on it.
 
 ## Why This Matters
 
-A product team builds AI patterns on product conditions: vendor model endpoints reachable over the open internet, demo corpora that are small and clean, application-managed user accounts, and evaluation suites the team controls. The customer environment offers almost none of that. Models may be reachable only through an internal gateway. Data may not leave a region. Users arrive through corporate SSO with roles that map to nothing in the demo. The vocabulary is full of internal jargon the model has never seen. The pattern survives all of this — but only after deliberate adaptation, and the adaptation is where most pilots quietly stall.
+A product team builds AI patterns on product conditions: vendor model endpoints reachable over the open internet, demo corpora that are small and clean, application-managed user accounts, and evaluation suites the team controls. The customer environment offers almost none of that. Models may be reachable only through an internal gateway. Data may not leave a region. Users arrive through corporate SSO with roles that map to nothing in the demo. The vocabulary is full of internal jargon the model has never seen. The pattern survives all of this, but only after deliberate adaptation, and the adaptation is where most pilots quietly stall.
 
 The FDE's advantage is not inventing new AI techniques; it is recognizing which part of the pattern is essential and which is incidental product plumbing. Retrieval works whether the index lives in the vendor cloud or the customer's network. Tool use works whether tools are vendor endpoints or internal services behind an approval. Guardrails work at whatever point output leaves the system's control in this environment. Mapping essential to incidental, then re-implementing the incidental pieces against local reality, is the core field skill.
 
@@ -49,6 +49,7 @@ Adaptation ends in re-verification. A pattern that works on product data teaches
 | 6 | Deploy and monitor | Usage is instrumented; quality is watched after go-live |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     START["Start from the product pattern"] --> SWAP["Swap in the customer substrate"]
     SWAP --> TEST["Test on customer data"]
@@ -84,7 +85,7 @@ The loop recurs: field feedback flows back into prompt versions, retrieval confi
 ### Deployment Configuration Template
 
 ```markdown
-## AI Deployment Config — <customer, capability, date>
+## AI Deployment Config: <customer, capability, date>
 
 | Field | Value |
 |-------|-------|
@@ -119,7 +120,7 @@ The loop recurs: field feedback flows back into prompt versions, retrieval confi
 
 ## Related Topics
 
-- [[03_Integration_and_Deployment_Engineering/00_overview|Integration and Deployment Engineering]]
+- [[career-path/19_Forward_Deployed_Engineer/03_Integration_and_Deployment_Engineering/00_overview|Integration and Deployment Engineering]]
 - [[02_RAG_with_Customer_Data]]
 - [[04_Model_Constraints_and_Data_Residency]]
 - [[career-path/18_Applied_AI_Engineer/00_overview|Applied AI Engineer]]
@@ -127,4 +128,4 @@ The loop recurs: field feedback flows back into prompt versions, retrieval confi
 
 ## Summary
 
-Deploying LLM applications in enterprises is a discipline of disciplined adaptation: keep the product pattern's essential mechanism, re-implement its incidental plumbing against the customer's network, data, identity, and vocabulary, and re-verify everything on customer data before real work depends on it. The FDE's deliverable is not a model running inside a customer's perimeter — it is a capability the customer can describe accurately, trust with defined work, and evolve without waiting on a vendor release.
+Deploying LLM applications in enterprises is a discipline of disciplined adaptation: keep the product pattern's essential mechanism, re-implement its incidental plumbing against the customer's network, data, identity, and vocabulary, and re-verify everything on customer data before real work depends on it. The FDE's deliverable is not a model running inside a customer's perimeter. It is a capability the customer can describe accurately, trust with defined work, and evolve without waiting on a vendor release.

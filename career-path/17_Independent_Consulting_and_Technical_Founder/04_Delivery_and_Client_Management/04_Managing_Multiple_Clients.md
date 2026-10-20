@@ -17,15 +17,15 @@ tags:
 
 # Managing Multiple Clients
 
-> **Core skill:** Running several client relationships in parallel without dropping commitments — capacity math, scheduling discipline, and honest prioritization.
+> **Core skill:** Running several client relationships in parallel without dropping commitments (capacity math, scheduling discipline, and honest prioritization).
 
 ## Why This Matters
 
-Multiple clients are the independent's diversification: one client ending is an inconvenience, not a crisis, and two or three revenue streams make the whole practice calmer. But multiplicity has a cost that solo practitioners persistently underestimate — context switching. Moving between clients means reloading context, re-entering different codebases and vocabularies, and paying a mental setup tax every time. The invoice shows the hours worked; it never shows the hours spent becoming productive again.
+Multiple clients are the independent's diversification: one client ending is an inconvenience, not a crisis, and two or three revenue streams make the whole practice calmer. But multiplicity has a cost that solo practitioners persistently underestimate: context switching. Moving between clients means reloading context, re-entering different codebases and vocabularies, and paying a mental setup tax every time. The invoice shows the hours worked; it never shows the hours spent becoming productive again.
 
-The failure pattern of the over-committed independent is well-worn: capacity is sold at one hundred percent, the first overrun consumes the buffer, the buffer was the only slack available, and from then on every week is a debt repayment to the last one. Quality slips quietly, replies slow, and eventually a client who paid for attention receives leftovers. The fix is not heroism; it is arithmetic — knowing how many engagements of which type actually fit in one person's week, and enforcing that number regardless of how attractive the next yes looks.
+The failure pattern of the over-committed independent is well-worn: capacity is sold at one hundred percent, the first overrun consumes the buffer, the buffer was the only slack available, and from then on every week is a debt repayment to the last one. Quality slips quietly, replies slow, and eventually a client who paid for attention receives leftovers. The fix is not heroism; it is arithmetic. Knowing how many engagements of which type actually fit in one person's week, and enforcing that number regardless of how attractive the next yes looks.
 
-Managing several clients well is mostly a design problem, and its centerpiece is scheduling. Fixed days per client beat fluid triage because they convert prioritization from a daily emotional exercise into a calendar fact. With days assigned, tiers defined, and response expectations agreed, the daily chaos narrows to genuine exceptions — and exceptions are exactly where judgment should be spent.
+Managing several clients well is mostly a design problem, and its centerpiece is scheduling. Fixed days per client beat fluid triage because they convert prioritization from a daily emotional exercise into a calendar fact. With days assigned, tiers defined, and response expectations agreed, the daily chaos narrows to genuine exceptions, and exceptions are exactly where judgment should be spent.
 
 ## Capacity Math
 
@@ -37,7 +37,7 @@ Managing several clients well is mostly a design problem, and its centerpiece is
 | Product development on your own | 1 plus limited client work | Evenings or one dedicated day | Only sustainable with strict time boxing |
 | Sales and admin | Always present | Half to one day per week | Never zero; plan for it every week |
 
-The rule above the table: keep total commitments at seventy to eighty percent of capacity. The last fifth is not free time — it is the shock absorber that makes the other four-fifths reliable.
+The rule above the table: keep total commitments at seventy to eighty percent of capacity. The last fifth is not free time. It is the shock absorber that makes the other four-fifths reliable.
 
 ## The Weekly Architecture
 
@@ -67,12 +67,13 @@ Tiers are agreements, not secrets. Clients told honestly that replies come withi
 | Situation | Decision Rule | Communication Move |
 |-----------|---------------|--------------------|
 | Two deadlines collide | Deadline fixed by external event wins | Inform both clients early, offer options |
-| Anchor versus regular conflict | Anchor wins, but only after honest disclosure | "Tuesday for X or Wednesday for Y — your call" |
+| Anchor versus regular conflict | Anchor wins, but only after honest disclosure | "Tuesday for X or Wednesday for Y, your call" |
 | Emergency in a support tier | Time-box triage now, full fix at its slot | Acknowledge within the SLA, cap the first response |
 | Overrun consuming the buffer | Cut scope or move a date immediately | Same-week plan revision, not month-end apology |
 | New client versus current commitments | Current commitments win until capacity is genuinely free | Decline or schedule start honestly |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DEMAND["Requests across clients"] --> TIER["Tier by revenue and relationship"]
     TIER --> SCHEDULE["Schedule into day blocks"]
@@ -127,5 +128,5 @@ flowchart TD
 
 ## Summary
 
-Multiple clients are diversification bought with context-switching costs. Pay the price deliberately: compute how many engagements of each type truly fit, schedule by day blocks rather than fluid triage, set and publish response expectations per tier, and keep commitments under eighty percent of capacity so the buffer stays real. Prioritization then becomes a rulebook applied to exceptions — which is where judgment belongs.
+Multiple clients are diversification bought with context-switching costs. Pay the price deliberately: compute how many engagements of each type truly fit, schedule by day blocks rather than fluid triage, set and publish response expectations per tier, and keep commitments under eighty percent of capacity so the buffer stays real. Prioritization then becomes a rulebook applied to exceptions, which is where judgment belongs.
 

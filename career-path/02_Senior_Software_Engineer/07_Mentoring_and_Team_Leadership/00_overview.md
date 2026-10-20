@@ -42,6 +42,7 @@ Mentoring and leadership at the senior level is not about formal authority. It i
 ## Mentoring Models
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph Formal Mentoring
         A[Assigned mentor-mentee pairs] --> B[Regular 1:1 meetings]
@@ -176,10 +177,10 @@ Before starting a mentoring relationship, verify:
 
 ## Related Capabilities
 
-- [[06_Communication_and_Influence/00_overview|Communication and Influence]]: Mentoring requires clear communication and influence
-- [[03_Architecture_and_Design_Judgment/00_overview|Architecture and Design Judgment]]: Mentoring includes teaching architectural thinking
-- [[01_Technical_Ownership/00_overview|Technical Ownership]]: Mentoring helps others develop ownership skills
-- [[04_Delivery_and_Execution/00_overview|Delivery and Execution]]: Mentoring includes teaching delivery and estimation skills
+- [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/00_overview|Communication and Influence]]: Mentoring requires clear communication and influence
+- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/00_overview|Architecture and Design Judgment]]: Mentoring includes teaching architectural thinking
+- [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/00_overview|Technical Ownership]]: Mentoring helps others develop ownership skills
+- [[career-path/02_Senior_Software_Engineer/04_Delivery_and_Execution/00_overview|Delivery and Execution]]: Mentoring includes teaching delivery and estimation skills
 
 ## Summary
 

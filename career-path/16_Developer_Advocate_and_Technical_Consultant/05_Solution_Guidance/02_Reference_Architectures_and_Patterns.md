@@ -16,19 +16,19 @@ tags:
 
 # Reference Architectures and Patterns
 
-> **Core skill:** Guiding customers from blank-page design to proven structures — knowing which patterns exist, which fit a given context, and where a pattern must be adapted rather than copied.
+> **Core skill:** Guiding customers from blank-page design to proven structures: knowing which patterns exist, which fit a given context, and where a pattern must be adapted rather than copied.
 
 ## Why This Matters
 
 Every customer problem has been solved before in some form, and almost none of them should be solved from scratch. Reference architectures and patterns compress decades of hard-won experience into structures that can be evaluated quickly: here is what this shape is good for, here is what it costs, here is where it fails. The consultant who knows the catalog and the trade-offs moves customers past blank-page paralysis without pretending there is one right answer.
 
-Patterns are also a communication device. A named pattern lets a room full of people argue about one concrete structure instead of ten vague diagrams — and it lets the consultant say "that is the strangler fig" and be understood instantly by engineers who have seen it before. Shared vocabulary is a form of guidance.
+Patterns are also a communication device. A named pattern lets a room full of people argue about one concrete structure instead of ten vague diagrams, and it lets the consultant say "that is the strangler fig" and be understood instantly by engineers who have seen it before. Shared vocabulary is a form of guidance.
 
-The danger is the other direction: pattern as identity. Teams that adopt a pattern because it is fashionable, or because the loudest engineer loves it, end up with architecture debt shaped like a diagram. The consultant's job is pattern *selection*, not pattern *evangelism* — fitted to constraints, evidence, and the team that must operate it.
+The danger is the other direction: pattern as identity. Teams that adopt a pattern because it is fashionable, or because the loudest engineer loves it, end up with architecture debt shaped like a diagram. The consultant's job is pattern *selection*, not pattern *evangelism*, fitted to constraints, evidence, and the team that must operate it.
 
 ## What a Reference Architecture Is
 
-A reference architecture is a documented, somewhat opinionated structure for a class of systems — not a template to stamp, but a starting point to reason from.
+A reference architecture is a documented, somewhat opinionated structure for a class of systems, not a template to stamp, but a starting point to reason from.
 
 | Artifact | Purpose | Best Used When | Misused When |
 |----------|---------|----------------|--------------|
@@ -67,11 +67,12 @@ Real guidance fits patterns to constraints. Adapt, or the pattern becomes a liab
 
 ## Working With the Customer's Review Culture
 
-Patterns land differently in different review cultures. In a design-review culture, arrive with the pattern comparison table and let the room argue fit; in a fast-moving product culture, arrive with a thin slice and a working example. In an enterprise architecture culture, expect to position the pattern inside existing standards and reference models — the [[career-path/06_Software_Architect/01_Architecture_Fundamentals/03_Architecture_Patterns_and_Styles|Architecture Patterns and Styles (Architect)]] catalog is the shared language there.
+Patterns land differently in different review cultures. In a design-review culture, arrive with the pattern comparison table and let the room argue fit; in a fast-moving product culture, arrive with a thin slice and a working example. In an enterprise architecture culture, expect to position the pattern inside existing standards and reference models. The [[career-path/06_Software_Architect/01_Architecture_Fundamentals/03_Architecture_Patterns_and_Styles|Architecture Patterns and Styles (Architect)]] catalog is the shared language there.
 
 ## The Selection Sequence
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CONTEXT["Map context - constraints and forces"] --> FIT["Shortlist patterns that fit"]
     FIT --> TRADE["Compare trade-offs against criteria"]
@@ -94,7 +95,7 @@ flowchart LR
 ### Pattern Comparison Template
 
 ```markdown
-## Pattern Fit — [problem]
+## Pattern Fit: [problem]
 | Criterion | Weight | Pattern A | Pattern B | Pattern C |
 |-----------|--------|-----------|-----------|-----------|
 | Fit to constraints | high | | | |
@@ -104,7 +105,7 @@ flowchart LR
 | Lock-in risk | medium | | | |
 
 ## Decision
-- Chosen: [pattern] — because [forces resolved]
+- Chosen: [pattern], because [forces resolved]
 - Accepted downsides: [list]
 - Adaptations from the reference form: [list]
 - Review date to revisit: [date]
@@ -139,4 +140,4 @@ flowchart LR
 
 ## Summary
 
-Reference architectures and patterns turn blank pages into reasoned choices: know the catalog, score patterns against the customer's real forces, adapt rather than copy, and record the decision with its accepted downsides. The consultant adds value by making trade-offs visible early — so the pattern that ships is the one the team can run and evolve, not the one that merely looked best on a slide.
+Reference architectures and patterns turn blank pages into reasoned choices: know the catalog, score patterns against the customer's real forces, adapt rather than copy, and record the decision with its accepted downsides. The consultant adds value by making trade-offs visible early, so the pattern that ships is the one the team can run and evolve, not the one that merely looked best on a slide.

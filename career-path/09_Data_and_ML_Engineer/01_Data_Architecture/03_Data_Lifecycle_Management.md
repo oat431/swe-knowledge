@@ -38,6 +38,7 @@ Retention decisions made in haste during a growth phase become multi-million dol
 ### Lifecycle State Machine
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A[Active] -->|Age threshold| B[Warm]
     B -->|Access frequency drops| C[Cold]

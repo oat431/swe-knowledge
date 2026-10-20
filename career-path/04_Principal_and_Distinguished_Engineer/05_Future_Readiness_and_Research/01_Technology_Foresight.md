@@ -16,17 +16,17 @@ tags:
 
 # Technology Foresight
 
-> **Core skill:** The principal engineer builds and operates the organization's horizon-scanning capability — separating genuine technology signals from noise, maintaining the technology radar, and connecting foresight to strategic decisions at enterprise scale.
+> **Core skill:** The principal engineer builds and operates the organization's horizon-scanning capability, separating genuine technology signals from noise, maintaining the technology radar, and connecting foresight to strategic decisions at enterprise scale.
 
 ## Why This Matters
 
-Most organizations discover technology shifts through vendor sales calls, competitor press releases, or the loudest internal enthusiast. The result is reactive adoption: decisions driven by marketing noise rather than structured evaluation of what matters. Technology foresight replaces noise with signal — a systematic capability that identifies emerging technologies, evaluates their maturity and relevance, and feeds curated insight into the strategy cycle before decisions become urgent.
+Most organizations discover technology shifts through vendor sales calls, competitor press releases, or the loudest internal enthusiast. The result is reactive adoption: decisions driven by marketing noise rather than structured evaluation of what matters. Technology foresight replaces noise with signal: a systematic capability that identifies emerging technologies, evaluates their maturity and relevance, and feeds curated insight into the strategy cycle before decisions become urgent.
 
-The principal's foresight responsibility is distinct from the staff engineer's near-term horizon scanning. At this level, the span extends to multi-year paradigm shifts — changes in computing models, platform architectures, or industry dynamics that rewrite assumptions. The principal must also institutionalize the capability so that foresight survives individual departure: the technology radar is an artifact, the expert network is maintained, and the scanning process runs on a cadence that does not depend on a single person's curiosity.
+The principal's foresight responsibility is distinct from the staff engineer's near-term horizon scanning. At this level, the span extends to multi-year paradigm shifts: changes in computing models, platform architectures, or industry dynamics that rewrite assumptions. The principal must also institutionalize the capability so that foresight survives individual departure: the technology radar is an artifact, the expert network is maintained, and the scanning process runs on a cadence that does not depend on a single person's curiosity.
 
 ## The Technology Radar
 
-The radar is the central foresight artifact — a living map of technologies positioned by maturity and organizational relevance. It answers the question: what should we be watching, learning, or adopting?
+The radar is the central foresight artifact, a living map of technologies positioned by maturity and organizational relevance. It answers the question: what should we be watching, learning, or adopting?
 
 | Ring | Meaning | Organizational Response |
 |------|---------|------------------------|
@@ -61,7 +61,7 @@ The principal's role is not to read every paper or attend every conference. It i
 
 ## Signal vs Noise: The Discrimination Framework
 
-Not every new technology matters. The principal must distinguish signals — indicators of genuine, durable change — from noise: hype cycles, vendor narratives, and enthusiasm masquerading as evidence.
+Not every new technology matters. The principal must distinguish signals (indicators of genuine, durable change) from noise: hype cycles, vendor narratives, and enthusiasm masquerading as evidence.
 
 | Signal Characteristic | Noise Characteristic |
 |----------------------|---------------------|
@@ -76,6 +76,7 @@ The framework is applied at each radar review. A technology that scores high on 
 ## The Foresight Pipeline
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SOURCES["Signal sources: experts, academic, startups, competitors"] --> FILTER["Signal vs noise filter"]
     FILTER --> EVALUATE["Evaluate: maturity, relevance, timing"]
@@ -97,7 +98,7 @@ The pipeline is a feedback loop: experiments produce data that refines the radar
 | **Adoption posture review** | Principal with CTO/VPE | Annual, aligned to strategy cycle |
 | **Radar publication** | Principal | After each update; visible to the entire engineering org |
 
-The radar is not a private artifact. Publication forces rigor: when every engineer can see why a technology sits in Adopt versus Hold, the evaluation must withstand scrutiny. Publication also creates buy-in — engineers who see their input reflected in the radar are more likely to trust its recommendations.
+The radar is not a private artifact. Publication forces rigor: when every engineer can see why a technology sits in Adopt versus Hold, the evaluation must withstand scrutiny. Publication also creates buy-in. Engineers who see their input reflected in the radar are more likely to trust its recommendations.
 
 ## Practical Applications
 
@@ -150,10 +151,10 @@ The radar is not a private artifact. Publication forces rigor: when every engine
 
 - [[02_Emerging_Technology_Adoption_Strategy]]: the adoption posture decisions foresight enables
 - [[03_Prototyping_and_Proof_of_Concept_Leadership]]: the experimental layer that validates foresight signals
-- [[01_Technology_Strategy/00_overview|Technology Strategy]]: the strategy cycle that consumes radar output
+- [[career-path/04_Principal_and_Distinguished_Engineer/01_Technology_Strategy/00_overview|Technology Strategy]]: the strategy cycle that consumes radar output
 - [[career-path/03_Staff_Engineer/03_Technical_Strategy/02_Technology_Betting|Technology Betting (Staff)]]: the bet-sizing discipline foresight feeds
 - [[career-path/18_Applied_AI_Engineer/00_overview|Applied AI Engineer]]: a domain where foresight is urgent today
 
 ## Summary
 
-Technology foresight is the principal's structured attention to the future: building and operating a technology radar that converts signals from expert networks, academic monitoring, startup tracking, and competitor intelligence into a coherent organizational view of what to adopt, trial, assess, or hold. The radar is a living artifact updated annually with quarterly checkpoints, supported by an evidence trail that forces rigor and a distributed scanning network that survives individual departure. The measure of foresight is not the radar's beauty — it is whether strategy decisions cite the radar and whether the organization sees the next shift before competitors do.
+Technology foresight is the principal's structured attention to the future: building and operating a technology radar that converts signals from expert networks, academic monitoring, startup tracking, and competitor intelligence into a coherent organizational view of what to adopt, trial, assess, or hold. The radar is a living artifact updated annually with quarterly checkpoints, supported by an evidence trail that forces rigor and a distributed scanning network that survives individual departure. The measure of foresight is not the radar's beauty. It is whether strategy decisions cite the radar and whether the organization sees the next shift before competitors do.

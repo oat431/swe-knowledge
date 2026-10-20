@@ -69,7 +69,7 @@ tags:
 |---|---|---|
 | 🎯 High | `08_Cloud_Solution_Architecture/` | `01_Well_Architected_Reviews`, `02_Landing_Zones_and_Account_Structure`, `03_Cloud_Migration_Strategies`, `04_Cloud_Cost_Architecture`, `05_Hybrid_and_Multi_Cloud_Trade_Offs` |
 | 🎯 High | `03_Enterprise_Architecture_Practice/08_Enterprise_AI_Architecture_and_Governance.md` | AI use-case portfolio, platform reference architecture, risk tiers, data readiness |
-| Medium | `02_Solution_Architecture_and_Design/08_Pre_Sales_Solution_Architecture.md` | Discovery calls, RFP responses, POCs, proposals, demo design; cross-link [[career-path/19_Forward_Deployed_Engineer/00_overview\|Forward Deployed Engineer]] |
+| Medium | `02_Solution_Architecture_and_Design/08_Pre_Sales_Solution_Architecture.md` | Discovery calls, RFP responses, POCs, proposals, demo design; cross-link [[career-path/19_Forward_Deployed_Engineer/00_overview|Forward Deployed Engineer]] |
 | Medium | `07_Architecture_Communication/08_ArchiMate_and_EA_Tooling.md` | Core ArchiMate viewpoints, repository practices, tool selection |
 | Medium | `06_Transformation_Roadmaps_and_Portfolio/08_Finance_for_Architects.md` | CAPEX/OPEX, TCO, depreciation, chargeback/showback |
 | Low | `00_Certifications_and_Career_Route.md` | TOGAF, cloud SA certs, and when they matter |

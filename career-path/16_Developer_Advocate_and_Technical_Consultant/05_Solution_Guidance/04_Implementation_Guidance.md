@@ -16,15 +16,15 @@ tags:
 
 # Implementation Guidance
 
-> **Core skill:** Supporting a customer team through the build — reviewing, coaching, and unblocking — without quietly becoming the team that actually does the work.
+> **Core skill:** Supporting a customer team through the build (reviewing, coaching, and unblocking) without quietly becoming the team that actually does the work.
 
 ## Why This Matters
 
-The implementation phase is where guidance either compounds or collapses into dependency. A consultant who steps in to write the hard parts because the deadline is close creates a debt of competence: when the engagement ends, the knowledge leaves with them and the system becomes an orphan. The disciplined alternative is slower for a week and faster for a year — coach the team past the hard part rather than doing it for them.
+The implementation phase is where guidance either compounds or collapses into dependency. A consultant who steps in to write the hard parts because the deadline is close creates a debt of competence: when the engagement ends, the knowledge leaves with them and the system becomes an orphan. The disciplined alternative is slower for a week and faster for a year: coach the team past the hard part rather than doing it for them.
 
 Implementation guidance is also where the design meets reality. Decisions made during discovery get stress-tested by real code, real data, and real timelines; guidance must adapt to what is learned without arbitrarily drifting from the agreed direction. The consultant's value is noticing when reality invalidates a design assumption and helping the customer re-decide consciously, rather than watching the architecture erode one expedient at a time.
 
-The commercial subtext is real: the customer bought outcomes, not hours, but an engagement that becomes permanent outsourcing serves nobody well — not the customer's growth, not the consultant's portfolio of successful independences. Everything in this note exists to keep capability inside the customer's team.
+The commercial subtext is real: the customer bought outcomes, not hours, but an engagement that becomes permanent outsourcing serves nobody well, not the customer's growth, not the consultant's portfolio of successful independences. Everything in this note exists to keep capability inside the customer's team.
 
 ## The Guide-Don't-Build Boundary
 
@@ -65,11 +65,12 @@ Guidance needs cadence and exit criteria, or it becomes drive-by opinion:
 
 ## Detecting Drift
 
-Design drift is normal; silent drift is not. Review the codebase and decisions against the agreed design at each checkpoint. When reality has outgrown an assumption, help the team re-decide openly and update the record — conscious evolution is architecture; unconscious erosion is future archaeology.
+Design drift is normal; silent drift is not. Review the codebase and decisions against the agreed design at each checkpoint. When reality has outgrown an assumption, help the team re-decide openly and update the record: conscious evolution is architecture; unconscious erosion is future archaeology.
 
 ## The Guidance Arc
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     ORIENT["Orient - agreed design and boundaries"] --> COACH["Coach - reviews, pairing, examples"]
     COACH --> VERIFY["Verify - checkpoints and exit criteria"]
@@ -92,10 +93,10 @@ flowchart LR
 ### Guidance Session Template
 
 ```markdown
-## Guidance Session — [date]
+## Guidance Session: [date]
 - Goal: [what the team should own after this session]
 - Reviewed: [components, decisions, code paths]
-- Found: [risks, drift, gaps — with evidence]
+- Found: [risks, drift, gaps, with evidence]
 - Coached: [what was demonstrated or paired on]
 - Handed over: [what the team will do next, by when]
 - Next checkpoint: [date, exit criteria]
@@ -118,16 +119,16 @@ flowchart LR
 - Customer engineers lead design walkthroughs and defend the architecture
 - Open items have customer owners; consultant involvement shrinks on schedule
 - Design drift is caught at checkpoints and consciously resolved
-- On engagement end, nobody asks "who will maintain this?" — the answer is obvious
+- On engagement end, nobody asks "who will maintain this?"; the answer is obvious
 
 ## Related Topics
 
 - [[03_Proofs_of_Concept_and_Pilots]]: implementation guidance begins from proven assumptions
 - [[05_Migration_and_Upgrade_Guidance]]: the most safety-critical form of guided build
 - [[07_Consulting_Boundaries_and_Ethics]]: the boundary discipline that keeps guidance honest
-- [[03_Facilitation_and_Enablement/00_overview|Facilitation and Enablement]]: reviews and workshops are guidance instruments
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/03_Facilitation_and_Enablement/00_overview|Facilitation and Enablement]]: reviews and workshops are guidance instruments
 - [[career-path/07_SRE_and_Platform_Engineer/06_Developer_Platform/00_overview|Developer Platform (SRE)]]: operability guidance for what the team will run
 
 ## Summary
 
-Implementation guidance is coaching with stakes: hold the guide-don't-build line, match support intensity to the moment, run checkpoints with real exit criteria, catch drift while it is still a decision, and design the ending — a team that owns the system completely. The consultant's success is measured in what the customer can do after the engagement that they could not do before it.
+Implementation guidance is coaching with stakes: hold the guide-don't-build line, match support intensity to the moment, run checkpoints with real exit criteria, catch drift while it is still a decision, and design the ending (a team that owns the system completely). The consultant's success is measured in what the customer can do after the engagement that they could not do before it.

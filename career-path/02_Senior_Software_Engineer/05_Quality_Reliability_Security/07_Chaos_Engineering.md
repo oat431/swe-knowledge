@@ -29,6 +29,7 @@ Chaos engineering is not about breaking things randomly. It is a disciplined app
 ## Chaos Engineering Principles
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     HYPOTHESIS["1 Form Hypothesis\n(system should handle X failure)"] --> EXPERIMENT["2 Design Experiment\n(inject X failure)"]
     EXPERIMENT --> EXECUTE["3 Execute\n(run in controlled environment)"]
@@ -241,7 +242,7 @@ A game day is a planned event where the team runs chaos experiments together.
 - [[03_Observability]] : observability is essential for observing chaos experiments
 - [[04_Incident_Response]] : chaos experiments test incident response procedures
 - [[06_Production_Readiness]] : chaos engineering is part of production readiness
-- [[01_Technical_Ownership/04_Production_Responsibility]] : production responsibility includes resilience testing
+- [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/04_Production_Responsibility]] : production responsibility includes resilience testing
 - [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]] : operations and resilience
 
 ## Key Takeaways

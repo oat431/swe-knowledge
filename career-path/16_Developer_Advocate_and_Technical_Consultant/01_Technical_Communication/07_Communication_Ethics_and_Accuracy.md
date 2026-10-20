@@ -16,15 +16,15 @@ tags:
 
 # Communication Ethics and Accuracy
 
-> **Core skill:** The advocate tells the truth under commercial pressure — demonstrable claims, disclosed interests and limits, public corrections — treating accuracy as the profession's core asset rather than a constraint to manage.
+> **Core skill:** The advocate tells the truth under commercial pressure (demonstrable claims, disclosed interests and limits, public corrections) treating accuracy as the profession's core asset rather than a constraint to manage.
 
 ## Why This Matters
 
 Every piece of advocate communication is a loan against trust, and trust is the only currency that makes the role work. A developer who finds one exaggerated benchmark learns to discount everything the advocate says; a customer who discovers a hidden limitation stops forwarding the material; a community that smells undisclosed sponsorship re-reads the whole relationship. The damage is asymmetric: credibility takes years of demonstrable claims to build and one conveniently omitted caveat to spend. Nothing in the role is more expensive than the shortcut that saves an afternoon.
 
-Advocates sit on the fault line between the organization and the people it serves — employed by the company, accountable to the technical community's standard of truth. That tension is structural, not occasional: release schedules slip, launches need hero copy, competitors deserve comparison, and the honest answer is never the convenient one. The professional resolution is not to choose one loyalty over the other but to recognize that long-term commercial interest and technical honesty are the same interest — the organization's adoption depends on its claims being true when users test them.
+Advocates sit on the fault line between the organization and the people it serves: employed by the company, accountable to the technical community's standard of truth. That tension is structural, not occasional: release schedules slip, launches need hero copy, competitors deserve comparison, and the honest answer is never the convenient one. The professional resolution is not to choose one loyalty over the other but to recognize that long-term commercial interest and technical honesty are the same interest. The organization's adoption depends on its claims being true when users test them.
 
-Accuracy is also procedural, not aspirational. Claims that can be demonstrated, limits stated before they are discovered, interests disclosed where they could shape perception, errors corrected in public and quickly — these are practices, checkable in a review, not virtues to be invoked after a scandal. The advocate who runs those practices builds a reputation that survives the pressure, and a correction history that proves the standard is real.
+Accuracy is also procedural, not aspirational. Claims that can be demonstrated, limits stated before they are discovered, interests disclosed where they could shape perception, errors corrected in public and quickly. These are practices, checkable in a review, not virtues to be invoked after a scandal. The advocate who runs those practices builds a reputation that survives the pressure, and a correction history that proves the standard is real.
 
 ## Ethical Commitments
 
@@ -61,11 +61,12 @@ Accuracy is also procedural, not aspirational. Claims that can be demonstrated, 
 | Unintentional undisclosed interest | Disclose and re-frame the affected content | Immediate |
 | Overstated roadmap language | Restate plainly; thank whoever noticed | At the next communication touch |
 
-Corrections are not confessions; they are the visible machinery of an accuracy standard. The audience should see that the standard is enforced — silently corrected content teaches onlookers that claims are not load-bearing.
+Corrections are not confessions; they are the visible machinery of an accuracy standard. The audience should see that the standard is enforced. Silently corrected content teaches onlookers that claims are not load-bearing.
 
 ## The Trust Compounding Cycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CLAIM["Make a claim you can demonstrate"] --> VERIFY["Verify it on a fresh machine"]
     VERIFY["Verify it on a fresh machine"] --> DISCLOSE["Disclose interests and limitations"]
@@ -73,7 +74,7 @@ flowchart LR
     CORRECT["Correct errors in public and quickly"] --> TRUST["Trust compounds with every cycle"]
 ```
 
-The cycle is a flywheel: each demonstrated claim lowers the burden of proof for the next one, which is precisely why a single breached claim is so costly — it resets a flywheel that took years to spin up.
+The cycle is a flywheel: each demonstrated claim lowers the burden of proof for the next one, which is precisely why a single breached claim is so costly; it resets a flywheel that took years to spin up.
 
 ## Practical Applications
 
@@ -89,7 +90,7 @@ The cycle is a flywheel: each demonstrated claim lowers the burden of proof for 
 ### Claims Ledger Template
 
 ```markdown
-## Claims Ledger — <artifact>
+## Claims Ledger: <artifact>
 
 | Claim | Evidence | Verified On | Limits | Correction Path |
 |-------|----------|-------------|--------|-----------------|
@@ -119,9 +120,9 @@ The cycle is a flywheel: each demonstrated claim lowers the burden of proof for 
 
 - [[02_Writing_for_Developers]]
 - [[05_Content_Strategy_for_Advocacy]]
-- [[04_Customer_and_Developer_Understanding/00_overview|Customer and Developer Understanding]]
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/04_Customer_and_Developer_Understanding/00_overview|Customer and Developer Understanding]]
 - [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/01_Writing_Proposals_That_Get_Adopted|Writing Proposals That Get Adopted (Staff)]]
 
 ## Summary
 
-Communication ethics and accuracy are the advocate's operating standard: demonstrates every claim, states limits before they are found, discloses interests where they could shape perception, and corrects errors publicly and fast. The discipline is procedural — checkable in a review, exercised under real commercial pressure — and it compounds in the only direction that matters, because the audience that has tested the claims and found them true is the audience that will act on the next one without hesitation.
+Communication ethics and accuracy are the advocate's operating standard: demonstrates every claim, states limits before they are found, discloses interests where they could shape perception, and corrects errors publicly and fast. The discipline is procedural (checkable in a review, exercised under real commercial pressure) and it compounds in the only direction that matters, because the audience that has tested the claims and found them true is the audience that will act on the next one without hesitation.

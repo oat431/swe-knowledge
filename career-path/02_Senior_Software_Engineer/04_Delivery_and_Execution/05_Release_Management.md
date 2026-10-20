@@ -5,7 +5,7 @@ capability_area: delivery-execution
 career_path: senior-software-engineer
 prerequisite:
   - "[[03_Delivery_Metrics]]"
-  - "[[01_Technical_Ownership/04_Production_Responsibility]]"
+  - "[[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/04_Production_Responsibility]]"
 tags:
   - career-path
   - senior-engineer
@@ -55,6 +55,7 @@ Deploy the entire change set at once.
 Maintain two identical production environments. Deploy to the "green" environment, then switch traffic from "blue" to "green."
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     subgraph BLUE["Blue Environment (Active)"]
         B1["App v1.0"]
@@ -84,6 +85,7 @@ flowchart LR
 Release to a small percentage of users first, then gradually increase.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     V1["100% traffic → v1.0"] --> C1["95% → v1.0 | 5% → v1.1"]
     C1 --> C2["80% → v1.0 | 20% → v1.1"]
@@ -116,6 +118,7 @@ Decouple deployment from release. Deploy code with the feature disabled, then en
 
 **Feature flag lifecycle:**
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     ADD["Add flag\n(deploy)"] --> OFF["Flag OFF\n(code in prod)"]
     OFF --> INTERNAL["Enable for\ninternal users"]
@@ -189,6 +192,7 @@ For releases involving multiple teams:
 ### Rollback decision framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ISSUE["Issue detected in production"] --> ASSESS["Assess severity"]
     ASSESS --> CRITICAL{"Critical?\n(data loss, revenue, security)"}
@@ -257,7 +261,7 @@ Instead of modifying a column in place:
 ## Knowledge Connections
 
 - [[03_Delivery_Metrics]] : deployment frequency and change failure rate are DORA metrics
-- [[01_Technical_Ownership/04_Production_Responsibility]] : production readiness includes release safety
+- [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/04_Production_Responsibility]] : production readiness includes release safety
 - [[06_Incremental_Delivery]] : feature flags enable incremental delivery
 - [[02_Dependency_Management]] : cross-team releases require dependency coordination
 - [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]] : operations includes release management

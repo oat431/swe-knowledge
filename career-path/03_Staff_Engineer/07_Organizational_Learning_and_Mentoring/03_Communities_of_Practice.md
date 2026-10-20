@@ -15,13 +15,13 @@ tags:
 
 # Communities of Practice
 
-> **Core skill:** Building cross-team learning structures — guilds, chapters, working groups — that spread practice, surface problems, and grow people without becoming governance.
+> **Core skill:** Building cross-team learning structures (guilds, chapters, working groups) that spread practice, surface problems, and grow people without becoming governance.
 
 ## Why This Matters
 
 Teams learn what they need and no more. The org-level problem is that each team learns it separately: the same migration pattern rediscovered five times, the same review lesson re-learned in every squad, the same incident cause recurring because nobody compared notes. Communities of practice are the structure that makes one team's learning everyone's learning.
 
-Communities are also the staff engineer's force multiplier for teaching: a guild spreads your practice on a schedule you do not attend, and it surfaces the org's real problems — the divergences, the friction, the skills nobody has — faster than any survey. A well-run community of practice is the org learning on its own.
+Communities are also the staff engineer's force multiplier for teaching: a guild spreads your practice on a schedule you do not attend, and it surfaces the org's real problems (the divergences, the friction, the skills nobody has) faster than any survey. A well-run community of practice is the org learning on its own.
 
 ## What Communities Are For and Not For
 
@@ -43,7 +43,7 @@ The boundary is the failure mode: a community that starts governing becomes a co
 | **Chapter** | Craft within a discipline | The backend chapter: language and framework practices | Ongoing |
 | **Working group** | Time-boxed output | The migration working group: standardize the event bus | Bounded |
 
-Guilds and chapters are standing structures with rotating energy; working groups are temporary and should be treated that way — a working group that does not end has become a guild that forgot to say so.
+Guilds and chapters are standing structures with rotating energy; working groups are temporary and should be treated that way: a working group that does not end has become a guild that forgot to say so.
 
 ## Starting a Community
 
@@ -54,7 +54,7 @@ Guilds and chapters are standing structures with rotating energy; working groups
 | **Cadence** | A fixed rhythm that survives calendar chaos: monthly is typical |
 | **Output commitment** | What the community produces, on a schedule |
 
-The output commitment is the load-bearing wall. A community with an output — a standard proposal, a review checklist, a learning session — has a reason to exist that survives enthusiasm. A community without one is a book club with no book.
+The output commitment is the load-bearing wall. A community with an output (a standard proposal, a review checklist, a learning session) has a reason to exist that survives enthusiasm. A community without one is a book club with no book.
 
 ## Running Them
 
@@ -104,9 +104,10 @@ Communities have lifecycles, and endings are part of the practice:
 | The same five people carry everything | Recruit or close; burnout is not a membership model |
 | A working group's problem is solved | Close it with a written outcome |
 
-A graceful closing — with the artifacts archived and the win declared — keeps the door open for the next community. A community kept alive by guilt is how learning structures become meetings.
+A graceful closing (with the artifacts archived and the win declared) keeps the door open for the next community. A community kept alive by guilt is how learning structures become meetings.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SEED["Seed members and charter"] --> CADENCE["Fixed cadence"]
     CADENCE --> OUTPUT["Artifact production"]
@@ -179,9 +180,9 @@ flowchart TD
 - [[01_Mentoring_Senior_Engineers]]: the relationships communities amplify
 - [[04_Writing_as_Scaling]]: artifacts as the community's product
 - [[06_Teaching_Architecture_Thinking]]: the review guild as a community
-- [[02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: where community influence lands
+- [[career-path/03_Staff_Engineer/02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: where community influence lands
 - [[career-path/05_Tech_Lead/06_Process_and_Quality_Stewardship/06_Continuous_Improvement_Rhythm|Continuous Improvement Rhythm (Tech Lead)]]: the team-level rhythm
 
 ## Summary
 
-Communities of practice are the org's self-learning structures: guilds, chapters, and time-boxed working groups that spread practice, surface problems, and produce artifacts — never governance. Start with seed members, a charter, a cadence, and an output commitment; run them with lightweight rituals and rotating leadership; measure artifacts and adoption, not attendance; and close them gracefully when their purpose is done. The test of a community is that it learns without you.
+Communities of practice are the org's self-learning structures: guilds, chapters, and time-boxed working groups that spread practice, surface problems, and produce artifacts, never governance. Start with seed members, a charter, a cadence, and an output commitment; run them with lightweight rituals and rotating leadership; measure artifacts and adoption, not attendance; and close them gracefully when their purpose is done. The test of a community is that it learns without you.

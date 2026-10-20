@@ -15,15 +15,15 @@ tags:
 
 # Project Charter
 
-> **Core skill:** Writing the project charter that legitimizes the project, grants the project manager authority, and defines scope, objectives, constraints, and governance — the organizational contract without which a project has no foundation.
+> **Core skill:** Writing the project charter that legitimizes the project, grants the project manager authority, and defines scope, objectives, constraints, and governance, the organizational contract without which a project has no foundation.
 
 ## Why This Matters
 
-The project charter is the project's constitution. It answers the five questions every project must answer before work begins: why are we doing this, what exactly are we delivering, who decides what, what are the boundaries, and what does success look like. Without a signed charter, the project manager has no formal authority to manage — they are coordinating volunteers, not leading a project with organizational backing.
+The project charter is the project's constitution. It answers the five questions every project must answer before work begins: why are we doing this, what exactly are we delivering, who decides what, what are the boundaries, and what does success look like. Without a signed charter, the project manager has no formal authority to manage. They are coordinating volunteers, not leading a project with organizational backing.
 
-A charter that is written by the sponsor and handed to the project manager is a directive; a charter that the project manager writes and the sponsor signs is a negotiation. The act of writing it surfaces disagreements about scope, budget, authority, and success criteria before those disagreements become project crises. The project manager who treats the charter as a form to file has missed the point — it is the instrument that converts an idea into an authorized initiative with resources and governance.
+A charter that is written by the sponsor and handed to the project manager is a directive; a charter that the project manager writes and the sponsor signs is a negotiation. The act of writing it surfaces disagreements about scope, budget, authority, and success criteria before those disagreements become project crises. The project manager who treats the charter as a form to file has missed the point. It is the instrument that converts an idea into an authorized initiative with resources and governance.
 
-The charter is also the baseline against which every subsequent decision is tested. When a stakeholder asks for something new, the first question is: does this fit within the chartered scope? When a schedule slips, the charter's constraints tell you how much room you have. The charter does not prevent change — it makes change visible and governable.
+The charter is also the baseline against which every subsequent decision is tested. When a stakeholder asks for something new, the first question is: does this fit within the chartered scope? When a schedule slips, the charter's constraints tell you how much room you have. The charter does not prevent change. It makes change visible and governable.
 
 ## What a Charter Must Contain
 
@@ -54,6 +54,7 @@ The charter is also the baseline against which every subsequent decision is test
 ## The Charter Writing Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     NEED["Business need or opportunity identified"] --> DRAFT["Project manager drafts charter with sponsor input"]
     DRAFT --> REVIEW["Review with key stakeholders: scope, objectives, constraints"]
@@ -138,7 +139,7 @@ flowchart TD
 | **Scope-by-ambiguity** | Scope described in vague terms; everything and nothing is in scope | Explicit in-scope and out-of-scope lists; test scope decisions against the charter |
 | **Missing authority definition** | Project manager cannot act without constant escalation; decision paralysis | Define what the PM can decide and what requires sponsor approval |
 | **No named sponsor** | No one accountable for funding and governance; project starves | Sponsor named in the charter with explicit responsibilities |
-| **Objectives without metrics** | "Improve customer experience" — impossible to know when done | SMART objectives with baseline and target values |
+| **Objectives without metrics** | "Improve customer experience": impossible to know when done | SMART objectives with baseline and target values |
 | **Assumptions unstated** | Hidden assumptions become silent project killers when they prove false | List assumptions explicitly; track them; trigger replanning when invalidated |
 
 ## Success Indicators
@@ -151,12 +152,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[02_Business_Case_Development]] — the value proposition and investment rationale behind the charter
-- [[04_Project_Objectives_and_Success_Criteria]] — defining measurable objectives
-- [[06_Project_Authority_and_Governance]] — decision rights and governance structures
-- [[01_Scope_Definition]] — detailed scope from the charter's high-level boundary
-- [[career-path/12_Technical_Program_Manager/01_Program_Structure_and_Charter/00_overview|Program Structure and Charter (TPM)]] — the program-level charter counterpart
+- [[02_Business_Case_Development]]: the value proposition and investment rationale behind the charter
+- [[04_Project_Objectives_and_Success_Criteria]]: defining measurable objectives
+- [[06_Project_Authority_and_Governance]]: decision rights and governance structures
+- [[01_Scope_Definition]]: detailed scope from the charter's high-level boundary
+- [[career-path/12_Technical_Program_Manager/01_Program_Structure_and_Charter/00_overview|Program Structure and Charter (TPM)]]: the program-level charter counterpart
 
 ## Summary
 
-The project charter is the project's founding document: a contract between the sponsor and the project manager that defines purpose, scope, objectives, authority, constraints, and governance. It legitimizes the project in the organization, grants the project manager the authority to manage, and provides the baseline against which every subsequent decision is judged. A project without a signed charter is an ungoverned idea — the charter turns ideas into authorized, resourced, and accountable initiatives.
+The project charter is the project's founding document: a contract between the sponsor and the project manager that defines purpose, scope, objectives, authority, constraints, and governance. It legitimizes the project in the organization, grants the project manager the authority to manage, and provides the baseline against which every subsequent decision is judged. A project without a signed charter is an ungoverned idea. The charter turns ideas into authorized, resourced, and accountable initiatives.

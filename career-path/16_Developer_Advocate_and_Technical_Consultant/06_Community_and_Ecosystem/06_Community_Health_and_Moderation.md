@@ -16,15 +16,15 @@ tags:
 
 # Community Health and Moderation
 
-> **Core skill:** Protecting the space — visible norms, consistent moderation, fair escalation, and a code of conduct that is enforced rather than decorative.
+> **Core skill:** Protecting the space: visible norms, consistent moderation, fair escalation, and a code of conduct that is enforced rather than decorative.
 
 ## Why This Matters
 
-Community health is not the absence of conflict; it is the presence of enough trust that people disagree productively and vulnerable members stay. The moment a community feels unsafe to a meaningful slice of its potential members, the loss is invisible — the people quietly leave rather than complain — and the community slowly becomes homogeneous, brittle, and dead-ended. Health work prevents this erosion, and it is the advocate's most underrated responsibility because it is only noticed when it fails.
+Community health is not the absence of conflict; it is the presence of enough trust that people disagree productively and vulnerable members stay. The moment a community feels unsafe to a meaningful slice of its potential members, the loss is invisible (the people quietly leave rather than complain) and the community slowly becomes homogeneous, brittle, and dead-ended. Health work prevents this erosion, and it is the advocate's most underrated responsibility because it is only noticed when it fails.
 
-Moderation is where stated values become real. A code of conduct nobody enforces teaches the community that the organization tolerates whatever it can get away with; enforcement, applied consistently — including to well-known members and paying partners — teaches the opposite. The advocate's discipline is consistency: same norms, same response, regardless of the offender's status.
+Moderation is where stated values become real. A code of conduct nobody enforces teaches the community that the organization tolerates whatever it can get away with; enforcement, applied consistently (including to well-known members and paying partners) teaches the opposite. The advocate's discipline is consistency: same norms, same response, regardless of the offender's status.
 
-The work is also humane for the people doing it. Moderators absorb the worst of what a community produces, and burnout among moderators is a direct threat to the health it protects. Sustainable health practice includes rotation, support, and clear authority — nobody should be moderating alone, unbacked, and unpaid in emotional labor.
+The work is also humane for the people doing it. Moderators absorb the worst of what a community produces, and burnout among moderators is a direct threat to the health it protects. Sustainable health practice includes rotation, support, and clear authority: nobody should be moderating alone, unbacked, and unpaid in emotional labor.
 
 ## The Health Foundation
 
@@ -41,7 +41,7 @@ The work is also humane for the people doing it. Moderators absorb the worst of 
 
 | Component | Content | Common Failure |
 |-----------|---------|----------------|
-| Scope | Where it applies — spaces, events, private channels | Ambiguous scope means ambiguous enforcement |
+| Scope | Where it applies: spaces, events, private channels | Ambiguous scope means ambiguous enforcement |
 | Standards | Expected and unacceptable behaviors, with examples | Vague principles nobody can act on |
 | Reporting | Channels, privacy, who receives reports | No way to report privately |
 | Process | How reports are handled, by whom, timelines | No process; ad hoc improvisation |
@@ -77,6 +77,7 @@ Escalation should be boringly predictable. The worst outcome is not a harsh ruli
 ## The Protection Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SET["Set expectations - visible norms"] --> WATCH["Watch - patrol, flags, reports"]
     WATCH --> RESPOND["Respond - proportional action"]
@@ -99,11 +100,11 @@ flowchart LR
 ### Moderation Runbook Template
 
 ```markdown
-## Moderation Runbook — [community]
+## Moderation Runbook: [community]
 - Norms link: [code of conduct URL]
 - Reporting channel: [where, who receives, privacy notes]
 - Severity ladder: [minor to severe, with response per level]
-- Standard responses: [warnings, removal, bans — templates]
+- Standard responses: [warnings, removal, bans, templates]
 - Evidence handling: [retention, privacy, need-to-know]
 - Escalation contacts: [staff, legal, external if needed]
 - Moderator care: [rotation schedule, peer support, debrief ritual]
@@ -138,4 +139,4 @@ flowchart LR
 
 ## Summary
 
-Community health is the quiet infrastructure of everything else: visible norms, enforced codes of conduct, layered moderation, proportionate escalation, and care for both the targets of incidents and the moderators who handle them. The advocate protects the space not as an enforcer of tidiness but as a guarantee to every member — especially the newest and most vulnerable — that participation here is safe, and that the community's promises are the kind it keeps.
+Community health is the quiet infrastructure of everything else: visible norms, enforced codes of conduct, layered moderation, proportionate escalation, and care for both the targets of incidents and the moderators who handle them. The advocate protects the space not as an enforcer of tidiness but as a guarantee to every member (especially the newest and most vulnerable) that participation here is safe, and that the community's promises are the kind it keeps.

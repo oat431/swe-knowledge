@@ -218,6 +218,7 @@ Conditions:
 ### Release Decision Matrix
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TB
     A[Collect Evidence] --> B{All criteria met?}
     B -->|Yes| C[Low Risk Release]
@@ -346,6 +347,7 @@ Date: 2026-01-20
 **Description:** Two identical environments, switch traffic between them
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A[Users] --> B[Load Balancer]
     B --> C[Blue Environment\nCurrent Production]

@@ -15,13 +15,13 @@ tags:
 
 # Structured Outputs and Schema Enforcement
 
-> Constraining model output to a declared schema — JSON schema, function schema, or constrained grammar — so downstream code can parse it reliably and validate it programmatically.
+> Constraining model output to a declared schema (JSON schema, function schema, or constrained grammar) so downstream code can parse it reliably and validate it programmatically.
 
 ## Why This Is a Senior Skill
 
-A mid-level engineer asks the model for "valid JSON," then patches regexes and string-hacks as the output drifts. A senior engineer treats the output schema as a contract enforced at three layers: constraint at generation time, validation at the boundary, and retry-with-feedback on failure — with parse-success rate tracked like any other reliability metric. The senior also knows where strict schemas cost capability: some models degrade on heavily constrained outputs, so the schema itself must be designed to stay out of the model's way.
+A mid-level engineer asks the model for "valid JSON," then patches regexes and string-hacks as the output drifts. A senior engineer treats the output schema as a contract enforced at three layers: constraint at generation time, validation at the boundary, and retry-with-feedback on failure, with parse-success rate tracked like any other reliability metric. The senior also knows where strict schemas cost capability: some models degrade on heavily constrained outputs, so the schema itself must be designed to stay out of the model's way.
 
-The senior challenge is defense in depth: schema enforcement is not a single switch. Every layer — model constraint, validator, retry, fallback — covers the layer above it, and the only deterministic one is the validator your code runs.
+The senior challenge is defense in depth: schema enforcement is not a single switch. Every layer (model constraint, validator, retry, fallback) covers the layer above it, and the only deterministic one is the validator your code runs.
 
 ## Core Frameworks
 
@@ -50,7 +50,7 @@ The senior challenge is defense in depth: schema enforcement is not a single swi
 
 | Strategy | How It Works | Cost | When |
 |----------|-------------|------|------|
-| Retry with the validation error | Return the exact error and re-request | +1 call | Most transient failures — the highest-value fix |
+| Retry with the validation error | Return the exact error and re-request | +1 call | Most transient failures, the highest-value fix |
 | Downgrade the schema | Retry with a minimal fallback schema | +1 call | Complex schema keeps failing |
 | Deterministic fallback | Classifier or rule path fills the schema | No model cost | High-stakes fields (amounts, IDs) |
 | Fail honest | Return an error to the caller, never a guess | Zero | Anything safety- or money-adjacent |
@@ -67,15 +67,15 @@ The senior challenge is defense in depth: schema enforcement is not a single swi
 
 **Use the provider's schema-constrained API, not prompt begging.** "Please output valid JSON" is a request; structured outputs is a guarantee. Where the provider lacks it, use JSON mode plus validation, or grammar-constrained decoding on self-hosted models. The closer the constraint sits to the token sampler, the less the validator has to do.
 
-**Validate at the boundary, in code, every time.** Generation-side constraint is probabilistic — it reduces failures, never eliminates them. A Pydantic or JSON Schema validator is deterministic, and it is the only layer that should ever declare an output fit for downstream code. Constraint and validation are different layers with different guarantees.
+**Validate at the boundary, in code, every time.** Generation-side constraint is probabilistic; it reduces failures, never eliminates them. A Pydantic or JSON Schema validator is deterministic, and it is the only layer that should ever declare an output fit for downstream code. Constraint and validation are different layers with different guarantees.
 
 **Retry with the validation error, not a generic "try again."** Models fix what they can see. Passing the exact schema error ("field 'due_date' must be ISO 8601") converts a blind retry into a targeted correction and cuts retry counts dramatically. A retry loop without the error message is just a lottery ticket.
 
 **Design schemas that fail loud and small.** Enums, bounded lengths, and flat structure make wrong outputs visibly wrong and cheap to reject. A schema with 30 optional fields fails silently in 30 different ways; a schema with 8 decisive fields fails loudly in one. Schema ergonomics is model ergonomics.
 
-**Instrument parse and validation success rate as a first-class metric.** Track per-schema parse rate, retry rate, and the distribution of validation errors in production. Schema drift appears in these numbers long before customers notice broken features — and these metrics belong in the same dashboards as latency and error rate.
+**Instrument parse and validation success rate as a first-class metric.** Track per-schema parse rate, retry rate, and the distribution of validation errors in production. Schema drift appears in these numbers long before customers notice broken features, and these metrics belong in the same dashboards as latency and error rate.
 
-**Never hand an unvalidated model output to a side-effecting system.** The schema boundary is also a safety boundary: payments, writes, and triggers consume only outputs that passed validation. If validation fails after retries, fail honest — return an error — rather than guess, because a guessed value in a side-effecting path is a defect you shipped deliberately.
+**Never hand an unvalidated model output to a side-effecting system.** The schema boundary is also a safety boundary: payments, writes, and triggers consume only outputs that passed validation. If validation fails after retries, fail honest, return an error, rather than guess, because a guessed value in a side-effecting path is a defect you shipped deliberately.
 
 ## Practical Exercise
 
@@ -106,7 +106,7 @@ The senior challenge is defense in depth: schema enforcement is not a single swi
 ## Key Takeaways
 
 - Enforcement is layered: constrain at generation, validate at the boundary, retry with feedback, fall back deterministically
-- The validator is the only deterministic layer — everything else reduces its work, nothing replaces it
+- The validator is the only deterministic layer; everything else reduces its work, nothing replaces it
 - Schema design is model ergonomics: flat, enum-rich, bounded schemas get followed
 - Parse-success rate is a production metric with alerts, not an implementation detail
-- When validation cannot be satisfied, fail honest — never guess into a downstream system
+- When validation cannot be satisfied, fail honest; never guess into a downstream system

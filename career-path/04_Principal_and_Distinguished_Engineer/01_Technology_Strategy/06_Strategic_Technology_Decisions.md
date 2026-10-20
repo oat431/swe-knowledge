@@ -16,17 +16,17 @@ tags:
 
 # Strategic Technology Decisions
 
-> **Core skill:** The principal engineer serves as the ultimate technical reviewer for enterprise-defining choices — build, buy, or partner; major platform selection; technology sunset — producing decision memos that survive organizational pressure and create durable commitment.
+> **Core skill:** The principal engineer serves as the ultimate technical reviewer for enterprise-defining choices (build, buy, or partner; major platform selection; technology sunset), producing decision memos that survive organizational pressure and create durable commitment.
 
 ## Why This Matters
 
-Some technology decisions define the organization for years. The choice of a core platform, the decision to build rather than buy a capability, the sunset of a legacy system that hundreds of engineers depend on — these are not architecture decisions. They are enterprise-defining choices with consequences that outlast the careers of the people making them.
+Some technology decisions define the organization for years. The choice of a core platform, the decision to build rather than buy a capability, the sunset of a legacy system that hundreds of engineers depend on. These are not architecture decisions. They are enterprise-defining choices with consequences that outlast the careers of the people making them.
 
 The principal engineer is the person who ensures these decisions are made well: with explicit criteria, honest evaluation of alternatives, documentation that survives the decision, and the organizational courage to hold the line when pressure mounts to reverse a sound choice.
 
 ## The Decision Memo Format
 
-Every enterprise-defining technology decision gets a memo. The memo is the artifact that makes the decision durable — it captures the reasoning, the alternatives considered, and the criteria by which the decision can later be judged.
+Every enterprise-defining technology decision gets a memo. The memo is the artifact that makes the decision durable. It captures the reasoning, the alternatives considered, and the criteria by which the decision can later be judged.
 
 ```markdown
 # Decision Memo: [Decision Name]
@@ -101,6 +101,7 @@ Platform selection decisions lock the organization into an ecosystem for years. 
 | **Regulatory and compliance** | Does the platform meet our data sovereignty, security, and compliance requirements? |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DECISION["Strategic decision identified: build, buy, partner, or sunset"] --> CRITERIA["Establish weighted decision criteria"]
     CRITERIA --> OPTIONS["Identify and research options"]
@@ -133,8 +134,8 @@ Enterprise-defining decisions attract pressure. A vendor relationship sours, a n
 | Survival Strategy | How It Works |
 |-------------------|-------------|
 | **Document the alternatives considered** | When a new alternative is proposed, the memo shows it was evaluated and why it was rejected |
-| **Name the criteria and their weights** | A decision challenged on outcome can be re-evaluated against the original criteria — if criteria shifted, that is a different conversation |
-| **Establish review triggers, not expiration dates** | The decision stands until a trigger fires — new evidence, not elapsed time |
+| **Name the criteria and their weights** | A decision challenged on outcome can be re-evaluated against the original criteria. If criteria shifted, that is a different conversation |
+| **Establish review triggers, not expiration dates** | The decision stands until a trigger fires: new evidence, not elapsed time |
 | **Communicate the rationale, not just the decision** | Teams that understand why are less likely to resist than teams given an edict |
 | **Own the decision personally** | The principal's name is on the memo; accountability is not diffused across a committee |
 
@@ -146,7 +147,7 @@ Enterprise-defining decisions attract pressure. A vendor relationship sours, a n
 - [ ] Build-buy-partner evaluations weigh strategic differentiation, time to value, and total cost of ownership
 - [ ] Platform selections include vendor health, ecosystem maturity, and exit cost in the evaluation
 - [ ] Sunset decisions have explicit phases with freeze, migrate, sustain, and retire gates
-- [ ] Decisions include review triggers — the evidence that would cause reconsideration
+- [ ] Decisions include review triggers: the evidence that would cause reconsideration
 - [ ] The rationale is communicated, not just the decision
 - [ ] The principal's name is on the memo as owner
 
@@ -174,9 +175,9 @@ Enterprise-defining decisions attract pressure. A vendor relationship sours, a n
 - [[01_Technology_Strategy_at_Enterprise_Scale]]
 - [[04_Multi_Year_Technology_Roadmapping]]
 - [[05_Technology_Portfolio_Management]]
-- [[03_Decision_Governance_and_Principles/00_overview|Decision Governance and Principles]]
+- [[career-path/04_Principal_and_Distinguished_Engineer/03_Decision_Governance_and_Principles/00_overview|Decision Governance and Principles]]
 - [[career-path/03_Staff_Engineer/03_Technical_Strategy/04_Saying_No_at_Scale|Saying No at Scale (Staff)]]
 
 ## Summary
 
-Strategic technology decisions at the principal level mean serving as the ultimate technical reviewer for enterprise-defining choices — applying the build-buy-partner framework, evaluating platforms beyond technical fit, managing technology sunset with dated phases, and producing decision memos that survive organizational pressure by documenting criteria, alternatives, and review triggers. The principal's name is on the memo; accountability is personal and the decision endures.
+Strategic technology decisions at the principal level mean serving as the ultimate technical reviewer for enterprise-defining choices, applying the build-buy-partner framework, evaluating platforms beyond technical fit, managing technology sunset with dated phases, and producing decision memos that survive organizational pressure by documenting criteria, alternatives, and review triggers. The principal's name is on the memo; accountability is personal and the decision endures.

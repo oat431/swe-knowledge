@@ -14,13 +14,13 @@ tags:
 
 # Program Structure and Charter
 
-> **Core capability:** The TPM defines the program's shape — outcomes, workstreams, milestones, governance, and the charter that gives the initiative legitimacy, scope, and decision rights.
+> **Core capability:** The TPM defines the program's shape: outcomes, workstreams, milestones, governance, and the charter that gives the initiative legitimacy, scope, and decision rights.
 
 ## Why This Matters
 
-Multi-team initiatives fail most often before any code is written: unclear outcomes, nobody knows who decides, teams assume different scope boundaries, and the program drifts because it was never chartered. The TPM's first job is structural clarity — a program charter that answers what we are doing, why, who decides, and what success looks like — and a workstream structure that makes the work manageable and ownable.
+Multi-team initiatives fail most often before any code is written: unclear outcomes, nobody knows who decides, teams assume different scope boundaries, and the program drifts because it was never chartered. The TPM's first job is structural clarity (a program charter that answers what we are doing, why, who decides, and what success looks like) and a workstream structure that makes the work manageable and ownable.
 
-Without structure, coordination is reactive firefighting. With it, teams can coordinate through the structure rather than through the TPM personally — which is the definition of a program that scales.
+Without structure, coordination is reactive firefighting. With it, teams can coordinate through the structure rather than through the TPM personally, which is the definition of a program that scales.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ Without structure, coordination is reactive firefighting. With it, teams can coo
 ## The Program Structure Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CHARTER["Charter: why, what, who decides"] --> OUTCOMES["Outcomes: success criteria, measurable"]
     OUTCOMES --> WORKSTREAMS["Workstreams: owned, scoped, sequenced"]
@@ -46,7 +47,7 @@ flowchart TD
     ROLES --> ROADMAP["Roadmap: integrated timeline"]
 ```
 
-Structure is fractal — every workstream gets the same treatment.
+Structure is fractal. Every workstream gets the same treatment.
 
 ## Practical Applications
 
@@ -76,11 +77,11 @@ Structure is fractal — every workstream gets the same treatment.
 
 ## Related Capabilities
 
-- [[02_Technical_Integration_and_Architecture/00_overview|Technical Integration and Architecture]]: structure drives integration planning
-- [[03_Dependency_Management/00_overview|Dependency Management]]: workstream decomposition reveals dependencies
+- [[career-path/12_Technical_Program_Manager/02_Technical_Integration_and_Architecture/00_overview|Technical Integration and Architecture]]: structure drives integration planning
+- [[career-path/12_Technical_Program_Manager/03_Dependency_Management/00_overview|Dependency Management]]: workstream decomposition reveals dependencies
 - [[career-path/05_Tech_Lead/04_Team_Delivery_and_Execution_Leadership/00_overview|Delivery and Execution Leadership (Tech Lead)]]: the team-level counterpart
 - [[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]]: the formal PM discipline
 
 ## Summary
 
-Program structure is the TPM's foundation: a charter that legitimizes the initiative, outcomes defined before workstreams, governance that names decision rights before they are needed, and a roadmap that integrates multiple team plans into one coherent timeline. Programs fail in structure before they fail in execution — the TPM prevents that.
+Program structure is the TPM's foundation: a charter that legitimizes the initiative, outcomes defined before workstreams, governance that names decision rights before they are needed, and a roadmap that integrates multiple team plans into one coherent timeline. Programs fail in structure before they fail in execution. The TPM prevents that.

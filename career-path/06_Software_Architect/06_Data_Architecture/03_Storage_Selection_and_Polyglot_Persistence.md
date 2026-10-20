@@ -16,15 +16,15 @@ tags:
 
 # Storage Selection and Polyglot Persistence
 
-> **Core skill:** The architect selects data stores from access patterns, volume, consistency needs, and operational cost — holding a deliberate, bounded portfolio of persistence technologies rather than a default store plus drift.
+> **Core skill:** The architect selects data stores from access patterns, volume, consistency needs, and operational cost, holding a deliberate, bounded portfolio of persistence technologies rather than a default store plus drift.
 
 ## Why This Matters
 
-Storage choices are the most expensive architectural decisions to reverse, because data has weight. Changing a store means migrating data, dual-writing during transition, backfilling history, cutting over consumers, and operating two systems in the meantime. A choice made from habit — or from novelty — locks in that cost for years, and the lock-in is paid not once but at every future migration attempt.
+Storage choices are the most expensive architectural decisions to reverse, because data has weight. Changing a store means migrating data, dual-writing during transition, backfilling history, cutting over consumers, and operating two systems in the meantime. A choice made from habit (or from novelty) locks in that cost for years, and the lock-in is paid not once but at every future migration attempt.
 
 Different data genuinely has different shapes. Transaction records want ACID semantics and schema enforcement; telemetry wants append-heavy write throughput with time-bucketed reads; relationship-heavy domains want graph traversals; search wants inverted indexes; large media wants object storage with lifecycle tiering. Stretching one store across every shape serves none of them well, and the strain shows up as workarounds: hand-rolled indexes, transaction emulation, and query patterns the engine was never built for.
 
-But polyglot persistence is a portfolio with carrying costs. Every technology added means expertise to maintain, backup and restore to prove, upgrades to schedule, monitoring to build, and a distinct set of failure modes to learn. The architect's discipline is twofold: choose each domain's store from explicit criteria, and bound the portfolio — a small, managed, owned set of technologies, each with a reason to exist and a plan to leave.
+But polyglot persistence is a portfolio with carrying costs. Every technology added means expertise to maintain, backup and restore to prove, upgrades to schedule, monitoring to build, and a distinct set of failure modes to learn. The architect's discipline is twofold: choose each domain's store from explicit criteria, and bound the portfolio (a small, managed, owned set of technologies, each with a reason to exist and a plan to leave).
 
 ## The Store Types
 
@@ -68,6 +68,7 @@ Bounded polyglot works on explicit rules. State them; review the portfolio on a 
 ## Choosing a Store
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ACCESS["Characterize the dominant access pattern"] --> CONSISTENCY["State the consistency requirement"]
     CONSISTENCY --> VOLUME["Estimate volume growth and retention"]
@@ -89,7 +90,7 @@ flowchart TD
 ### Storage Decision Record
 
 ```markdown
-## Storage Decision Record — <domain>
+## Storage Decision Record: <domain>
 
 | Field | Value |
 |-------|-------|
@@ -125,9 +126,9 @@ flowchart TD
 
 - [[04_Data_Modeling_at_Architecture_Level]]
 - [[06_Data_Lifecycle_and_Retention]]
-- [[02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]
+- [[career-path/06_Software_Architect/02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]
 - [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]]
 
 ## Summary
 
-Storage selection is an architecture decision made from criteria — dominant access pattern, consistency requirement, volume and growth, and operational cost — not from familiarity or fashion. Polyglot persistence lets each domain use the store that fits its data, but only when bounded: a small portfolio with named owners, proven backups, and documented exit plans, and with cross-store consistency designed rather than assumed. The cost of getting this wrong is paid in migrations that nobody wants to run.
+Storage selection is an architecture decision made from criteria (dominant access pattern, consistency requirement, volume and growth, and operational cost), not from familiarity or fashion. Polyglot persistence lets each domain use the store that fits its data, but only when bounded: a small portfolio with named owners, proven backups, and documented exit plans, and with cross-store consistency designed rather than assumed. The cost of getting this wrong is paid in migrations that nobody wants to run.

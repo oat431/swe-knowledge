@@ -16,13 +16,13 @@ tags:
 
 # Negotiation for Independents
 
-> **Core skill:** The independent negotiates from a prepared position — floor, target, walk away point, and alternatives — trading scope and terms rather than discounting rate, and staying calm when the other side anchors hard.
+> **Core skill:** The independent negotiates from a prepared position (floor, target, walk away point, and alternatives), trading scope and terms rather than discounting rate, and staying calm when the other side anchors hard.
 
 ## Why This Matters
 
-Negotiation feels adversarial to engineers because it is usually taught as combat: tactics, leverage, and the art of winning. For an independent, negotiation is mostly preparation. Knowing the floor below which the work is not financially viable, the target that reflects the value delivered, and the walk away point where math and dignity agree turns negotiation from improvisation into arithmetic. A prepared negotiator is calm, and calm is the strongest position in the room — clients can sense who needs the deal and who is comfortable with either outcome.
+Negotiation feels adversarial to engineers because it is usually taught as combat: tactics, leverage, and the art of winning. For an independent, negotiation is mostly preparation. Knowing the floor below which the work is not financially viable, the target that reflects the value delivered, and the walk away point where math and dignity agree turns negotiation from improvisation into arithmetic. A prepared negotiator is calm, and calm is the strongest position in the room. Clients can sense who needs the deal and who is comfortable with either outcome.
 
-The second discipline is trading rather than conceding. A discount given for free buys nothing and teaches the client that prices are fiction; a discount exchanged for something real — a longer term, faster payment, a reduced scope, a case study, a referral — costs far less and often improves the engagement. Rate is only one variable on the table. Scope, schedule, payment terms, exclusivity, intellectual property, and duration are all negotiable currencies, and an independent who knows their full inventory trades from strength.
+The second discipline is trading rather than conceding. A discount given for free buys nothing and teaches the client that prices are fiction; a discount exchanged for something real (a longer term, faster payment, a reduced scope, a case study, a referral) costs far less and often improves the engagement. Rate is only one variable on the table. Scope, schedule, payment terms, exclusivity, intellectual property, and duration are all negotiable currencies, and an independent who knows their full inventory trades from strength.
 
 The hardest skill is the credible walk away. Tactics like low anchoring, long silences, and "we have a cheaper quote" only work against someone who needs this deal. The independent whose floor is real, whose pipeline contains alternatives, and who can say "then it is probably not a fit" without anger wins most negotiations before they require a single counteroffer.
 
@@ -33,7 +33,7 @@ The hardest skill is the credible walk away. Tactics like low anchoring, long si
 | Floor | The minimum that keeps the engagement viable | Costs, taxes, and the opportunity cost of the time required |
 | Target | The price that reflects value and margin fully | Comparable outcomes and the client's gain from the work |
 | Walk away point | Where math and respect agree the deal should not close | At or just above the floor, defended without apology |
-| Alternatives | What you will do if this deal does not happen | Live pipeline, product work, rest — made real, not threatened |
+| Alternatives | What you will do if this deal does not happen | Live pipeline, product work, rest: made real, not threatened |
 | Concession plan | What can be given, in what order, for what in return | Trade list written before the conversation starts |
 
 ## Trading Variables Beyond Price
@@ -62,6 +62,7 @@ The hardest skill is the credible walk away. Tactics like low anchoring, long si
 ## The Negotiation Preparation Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     FLOOR["Set the floor from real costs"] --> TARGET["Set the target from delivered value"]
     TARGET --> ALTERNATIVES["Know alternatives and the walk away point"]
@@ -75,7 +76,7 @@ flowchart TD
 ### Negotiation Checklist
 
 - [ ] Floor, target, and walk away point are set in writing before any call
-- [ ] Alternatives are real — the pipeline makes walking genuinely possible
+- [ ] Alternatives are real. The pipeline makes walking genuinely possible
 - [ ] A concession ladder exists: what is given, in what order, for what return
 - [ ] Every rate concession is exchanged for scope, terms, or duration
 - [ ] Outcomes are documented in the agreement the same week they are agreed
@@ -83,7 +84,7 @@ flowchart TD
 ### Negotiation Prep Sheet
 
 ```markdown
-## Negotiation Prep — <client and engagement>
+## Negotiation Prep: <client and engagement>
 
 | Field | Value |
 |-------|-------|
@@ -111,7 +112,7 @@ flowchart TD
 
 - Negotiations end within a small distance of the quoted price and terms
 - Concessions, when made, are always exchanged for value
-- Walking away happens when it should — and often leads to a better callback later
+- Walking away happens when it should, and often leads to a better callback later
 - Clients describe the process as clear and fair, not adversarial
 - Rate pressure eases as reputation and pipeline strength grow
 
@@ -119,8 +120,8 @@ flowchart TD
 
 - [[03_Proposals_and_Bids]]
 - [[06_Communicating_Value_Not_Hours]]
-- [[03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
 
 ## Summary
 
-Negotiation for independents is preparation made visible: floor, target, walk away point, and real alternatives set before the conversation; scope and terms traded instead of rate discounted; calm maintained against anchors and silences because the deal is genuinely optional. The independent who negotiates this way does not win every deal — they win the right ones, at prices that let the work be done well.
+Negotiation for independents is preparation made visible: floor, target, walk away point, and real alternatives set before the conversation; scope and terms traded instead of rate discounted; calm maintained against anchors and silences because the deal is genuinely optional. The independent who negotiates this way does not win every deal. They win the right ones, at prices that let the work be done well.

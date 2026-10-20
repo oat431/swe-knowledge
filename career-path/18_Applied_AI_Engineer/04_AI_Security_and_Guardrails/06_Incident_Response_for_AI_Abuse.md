@@ -20,9 +20,9 @@ tags:
 
 ## Why This Is a Senior Skill
 
-Mid-level engineers respond when users report problems, then delete the offending logs and move on. Senior engineers assume abuse is inevitable and build the system to answer three questions in order: how would we know, how would we stop it, and how do we make sure it never happens this way again. Detection comes from telemetry designed in advance — canary hits, guardrail-trigger spikes, token-spend anomalies, anomalous tool calls. Containment comes from kill switches that work without a code deploy. Learning comes from a postmortem loop that converts every incident into eval cases, guardrail changes, and threat-model updates.
+Mid-level engineers respond when users report problems, then delete the offending logs and move on. Senior engineers assume abuse is inevitable and build the system to answer three questions in order: how would we know, how would we stop it, and how do we make sure it never happens this way again. Detection comes from telemetry designed in advance: canary hits, guardrail-trigger spikes, token-spend anomalies, anomalous tool calls. Containment comes from kill switches that work without a code deploy. Learning comes from a postmortem loop that converts every incident into eval cases, guardrail changes, and threat-model updates.
 
-AI incidents also have an organizational shape that classic security incidents do not. A prompt-injection exfiltration may be a personal-data breach with legal notification duties; a jailbreak that produces harmful content may be a PR event; coordinated abuse of a public endpoint may be a cost spike measured in dollars per minute. The senior coordinates with security, legal, and leadership, and pre-agrees who decides what — before the incident, not during it.
+AI incidents also have an organizational shape that classic security incidents do not. A prompt-injection exfiltration may be a personal-data breach with legal notification duties; a jailbreak that produces harmful content may be a PR event; coordinated abuse of a public endpoint may be a cost spike measured in dollars per minute. The senior coordinates with security, legal, and leadership, and pre-agrees who decides what, before the incident, not during it.
 
 ## Core Frameworks
 
@@ -66,19 +66,19 @@ AI incidents also have an organizational shape that classic security incidents d
 
 ## In Practice
 
-**Instrument for detection before you need it.** Canary tokens in the system prompt, guardrail-trigger dashboards, token-spend and tool-call anomaly alerts — without these, your first signal of abuse is a customer or a bill. Detection telemetry is built in advance or not at all.
+**Instrument for detection before you need it.** Canary tokens in the system prompt, guardrail-trigger dashboards, token-spend and tool-call anomaly alerts; without these, your first signal of abuse is a customer or a bill. Detection telemetry is built in advance or not at all.
 
-**Build kill switches that do not require a code deploy.** Per-tool feature flags, prompt-version rollback, model fallback, and hard spend caps let on-call contain an incident in minutes rather than a deployment cycle. The kill switch for the most dangerous capability — the write tool, the email sender — should be the best-tested switch in the system.
+**Build kill switches that do not require a code deploy.** Per-tool feature flags, prompt-version rollback, model fallback, and hard spend caps let on-call contain an incident in minutes rather than a deployment cycle. The kill switch for the most dangerous capability (the write tool, the email sender) should be the best-tested switch in the system.
 
-**Contain first, attribute later.** Sever the capability — disable the tool, take the feature offline, flip to human-only mode — and preserve the evidence before deep investigation. The cost of a few more minutes of exposure usually outweighs the forensic convenience of leaving the system running.
+**Contain first, attribute later.** Sever the capability (disable the tool, take the feature offline, flip to human-only mode) and preserve the evidence before deep investigation. The cost of a few more minutes of exposure usually outweighs the forensic convenience of leaving the system running.
 
-**Preserve evidence, and mind the nondeterminism.** Log the full request context — prompt, parameters, retrieved context, tool calls, and the actual output — with hashes and timestamps. Model outputs will not reproduce exactly on replay, so the stored output is the only authoritative record. Redacted logs are still forensic evidence; do not delete them in cleanup.
+**Preserve evidence, and mind the nondeterminism.** Log the full request context (prompt, parameters, retrieved context, tool calls, and the actual output) with hashes and timestamps. Model outputs will not reproduce exactly on replay, so the stored output is the only authoritative record. Redacted logs are still forensic evidence; do not delete them in cleanup.
 
-**Run the postmortem loop as a system, not a ceremony.** Every incident yields at least one new eval case, one guardrail or blast-radius change, and a threat-model review — with owners and deadlines. The loop is the only mechanism by which the system gets stronger; a postmortem with no follow-through teaches the same lesson again at the next incident.
+**Run the postmortem loop as a system, not a ceremony.** Every incident yields at least one new eval case, one guardrail or blast-radius change, and a threat-model review, with owners and deadlines. The loop is the only mechanism by which the system gets stronger; a postmortem with no follow-through teaches the same lesson again at the next incident.
 
 **Treat AI incidents as organizational incidents.** Data-breach notification duties, PR exposure, and customer trust decisions are not engineering calls. Pre-agree the escalation ladder and decision rights with legal, security, and leadership, and rehearse the communication path. The engineering response and the organizational response must not be invented simultaneously at 3 a.m.
 
-**Drill it.** Tabletop exercises with a simulated injection-exfiltration or jailbreak scenario reveal broken assumptions — a kill switch that needs an unavailable admin, an alert that pages nobody, a runbook step that assumes a service that does not exist. Measure time-to-contain in each drill and improve it like any other SLO.
+**Drill it.** Tabletop exercises with a simulated injection-exfiltration or jailbreak scenario reveal broken assumptions: a kill switch that needs an unavailable admin, an alert that pages nobody, a runbook step that assumes a service that does not exist. Measure time-to-contain in each drill and improve it like any other SLO.
 
 ## Practical Exercise
 

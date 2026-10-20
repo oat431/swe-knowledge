@@ -16,15 +16,15 @@ tags:
 
 # Architecture Facilitation and Workshops
 
-> **Core skill:** The architect designs and facilitates workshops that move a mixed audience from divergent views to recorded decisions — using structure, neutrality, and explicit capture — so sessions produce decisions, not just diagrams.
+> **Core skill:** The architect designs and facilitates workshops that move a mixed audience from divergent views to recorded decisions (using structure, neutrality, and explicit capture) so sessions produce decisions, not just diagrams.
 
 ## Why This Matters
 
-Architecture decisions are made in rooms: which option to pursue, where a boundary should fall, what a system must never do, who owns what. The quality of those rooms determines the quality of the architecture. A facilitated workshop is how the architect manufactures alignment — deliberately designing who is present, what they see before they arrive, how divergence is surfaced, and how convergence is reached and recorded.
+Architecture decisions are made in rooms: which option to pursue, where a boundary should fall, what a system must never do, who owns what. The quality of those rooms determines the quality of the architecture. A facilitated workshop is how the architect manufactures alignment: deliberately designing who is present, what they see before they arrive, how divergence is surfaced, and how convergence is reached and recorded.
 
-Facilitation is a distinct skill from architecture. The facilitator manages the process — the sequence, the rules, the capture — while the content belongs to the participants. An architect who argues their own design while running the session loses the room's trust; an architect who designs a process that lets engineers, security, operations, and the business test each other's assumptions gets a decision that survives contact with reality.
+Facilitation is a distinct skill from architecture. The facilitator manages the process (the sequence, the rules, the capture) while the content belongs to the participants. An architect who argues their own design while running the session loses the room's trust; an architect who designs a process that lets engineers, security, operations, and the business test each other's assumptions gets a decision that survives contact with reality.
 
-The discipline lives or dies in the output. A workshop that ends with a wall of sticky notes and a promise to write things up has produced exercise, not architecture. Every session needs a decision log: what was decided, what was deferred, who owns each action, and when it is due. Follow-up is not administration after facilitation — it is the point of it.
+The discipline lives or dies in the output. A workshop that ends with a wall of sticky notes and a promise to write things up has produced exercise, not architecture. Every session needs a decision log: what was decided, what was deferred, who owns each action, and when it is due. Follow-up is not administration after facilitation. It is the point of it.
 
 ## Workshop Types
 
@@ -45,7 +45,7 @@ The discipline lives or dies in the output. A workshop that ends with a wall of 
 | Pre-reads | What must each participant know beforehand so the session debates rather than educates? |
 | Inputs | Which views, data, or options are on display, and who prepared them? |
 | Agenda | What sequence moves the group from divergence to convergence? |
-| Materials | What medium lets everyone contribute — boards, shared documents, silent writing? |
+| Materials | What medium lets everyone contribute: boards, shared documents, silent writing? |
 | Outputs | What decision, log, and actions must exist when the session ends? |
 | Follow-up | Who circulates the record, and what is the deadline for corrections? |
 
@@ -63,6 +63,7 @@ The discipline lives or dies in the output. A workshop that ends with a wall of 
 ## The Workshop Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PREPARE["Prepare inputs and participants"] --> DIVERGE["Explore options and concerns"]
     DIVERGE["Explore options and concerns"] --> CONVERGE["Converge on the preferred option"]
@@ -73,7 +74,7 @@ flowchart LR
 ## The Decision Log
 
 ```markdown
-## Workshop Decisions — <topic and date>
+## Workshop Decisions: <topic and date>
 
 | # | Decision or Outcome | Rationale | Owner | Due |
 |---|---------------------|-----------|-------|-----|
@@ -82,7 +83,7 @@ flowchart LR
 | 3 | Action: <task> | <context> | <role> | <date> |
 ```
 
-Deferred items are decisions too — they are recorded so that deferral is visible rather than accidental.
+Deferred items are decisions too. They are recorded so that deferral is visible rather than accidental.
 
 ## Facilitating Remote and Hybrid Sessions
 
@@ -107,7 +108,7 @@ Deferred items are decisions too — they are recorded so that deferral is visib
 ### Session Design Canvas
 
 ```markdown
-## Workshop Design — <topic>
+## Workshop Design: <topic>
 
 | Element | Design |
 |---------|--------|
@@ -142,9 +143,9 @@ Deferred items are decisions too — they are recorded so that deferral is visib
 
 - [[01_Stakeholder_Specific_Architecture_Views]]
 - [[05_Bridging_Business_and_Technical_Language]]
-- [[03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]
+- [[career-path/15_Solutions_and_Enterprise_Architect/03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]
 - [[career-path/04_Principal_and_Distinguished_Engineer/04_Organizational_Influence/00_overview|Organizational Influence (Principal)]]
 
 ## Summary
 
-Architecture facilitation turns meetings into decisions: sessions designed around a stated decision, participants mapped to decision rights, divergence deliberately surfaced before convergence, and a live decision log that travels out of the room and runs the follow-up. The architect's contribution is the process that lets a mixed audience legitimately decide — and the discipline that makes the decision stick.
+Architecture facilitation turns meetings into decisions: sessions designed around a stated decision, participants mapped to decision rights, divergence deliberately surfaced before convergence, and a live decision log that travels out of the room and runs the follow-up. The architect's contribution is the process that lets a mixed audience legitimately decide, and the discipline that makes the decision stick.

@@ -13,15 +13,15 @@ tags:
 
 # Solution Design and Rapid Prototyping
 
-> **Core capability:** The FDE designs and prototyped solutions in days, under the customer's constraints, using demos as instruments of alignment — and knows exactly what it will take to harden each one for production.
+> **Core capability:** The FDE designs and prototyped solutions in days, under the customer's constraints, using demos as instruments of alignment, and knows exactly what it will take to harden each one for production.
 
 ## Why This Matters
 
-In forward deployment, the first artifact is rarely a specification — it is a working demo. Customers align around what they can see and touch, and field time is too expensive to spend on design debates in the abstract. The FDE's prototyping skill is therefore a communication skill: a tight prototype converts a week of requirements meetings into one focused conversation.
+In forward deployment, the first artifact is rarely a specification. It is a working demo. Customers align around what they can see and touch, and field time is too expensive to spend on design debates in the abstract. The FDE's prototyping skill is therefore a communication skill: a tight prototype converts a week of requirements meetings into one focused conversation.
 
-But speed creates a dangerous illusion. Prototypes built in a demo-grade environment hide the work that production demands: error handling, data quality, permissions, scale, and operations. The FDE must hold two modes in mind at once — "what can I show this week" and "what would it actually take to run this for real". Confusing the two is how deployments die in the gap between a successful pilot and an unshipped production system.
+But speed creates a dangerous illusion. Prototypes built in a demo-grade environment hide the work that production demands: error handling, data quality, permissions, scale, and operations. The FDE must hold two modes in mind at once: "what can I show this week" and "what would it actually take to run this for real". Confusing the two is how deployments die in the gap between a successful pilot and an unshipped production system.
 
-Designing under constraints is also the daily condition. The customer does not control their vendors, cannot upgrade their database, will not get budget for infrastructure, and cannot move data across a border. The best design in these environments is not the theoretically elegant one; it is the one that respects constraints while still reaching the outcome — and that can be explained to both engineers and executives in the same breath.
+Designing under constraints is also the daily condition. The customer does not control their vendors, cannot upgrade their database, will not get budget for infrastructure, and cannot move data across a border. The best design in these environments is not the theoretically elegant one; it is the one that respects constraints while still reaching the outcome, and that can be explained to both engineers and executives in the same breath.
 
 ## Topics in This Capability Area
 
@@ -38,6 +38,7 @@ Designing under constraints is also the daily condition. The customer does not c
 ## The Two-Track Build
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     LEARN["Demo track: learn and align"] --> DECIDE["Decision: worth hardening?"]
     DECIDE --> HARDEN["Production track: quality and operations"]
@@ -45,7 +46,7 @@ flowchart LR
     HARDEN --> GO["Go-live and handover"]
 ```
 
-Run both tracks consciously — a prototype that cannot become production is a demo, and should be named as one.
+Run both tracks consciously. A prototype that cannot become production is a demo, and should be named as one.
 
 ## Practical Applications
 
@@ -70,7 +71,7 @@ Run both tracks consciously — a prototype that cannot become production is a d
 
 ## Success Indicators
 
-- Prototypes change the customer's mind — or confirm their assumptions — within days, not weeks
+- Prototypes change the customer's mind, or confirm their assumptions, within days, not weeks
 - Customers can articulate the difference between what they saw in the demo and what production requires
 - The hardening estimate is trustworthy: production ships close to what was forecast
 - A second deployment starts from components, not from scratch
@@ -78,12 +79,12 @@ Run both tracks consciously — a prototype that cannot become production is a d
 
 ## Related Capabilities
 
-- [[01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]: design follows a framed problem
-- [[03_Integration_and_Deployment_Engineering/00_overview|Integration and Deployment Engineering]]: where prototypes become running systems
-- [[04_AI_Systems_in_Customer_Environments/00_overview|AI Systems in Customer Environments]]: prototyping with models and customer data
+- [[career-path/19_Forward_Deployed_Engineer/01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]: design follows a framed problem
+- [[career-path/19_Forward_Deployed_Engineer/03_Integration_and_Deployment_Engineering/00_overview|Integration and Deployment Engineering]]: where prototypes become running systems
+- [[career-path/19_Forward_Deployed_Engineer/04_AI_Systems_in_Customer_Environments/00_overview|AI Systems in Customer Environments]]: prototyping with models and customer data
 - [[career-path/18_Applied_AI_Engineer/01_LLM_Application_Patterns/00_overview|LLM Application Patterns (Applied AI Engineer)]]: product-side patterns the FDE adapts
 - [[career-path/06_Software_Architect/00_overview|Software Architect]]: structural judgment behind field design decisions
 
 ## Summary
 
-Solution design and rapid prototyping is how the FDE converts understanding into alignment: fast, demo-driven design under the customer's real constraints, conscious iteration with field users, honest feasibility judgment, and a disciplined hardening path from pilot to production. The skill is not building fast; it is building fast without lying to yourself — or the customer — about what still stands between the demo and production.
+Solution design and rapid prototyping is how the FDE converts understanding into alignment: fast, demo-driven design under the customer's real constraints, conscious iteration with field users, honest feasibility judgment, and a disciplined hardening path from pilot to production. The skill is not building fast; it is building fast without lying to yourself, or the customer, about what still stands between the demo and production.

@@ -226,7 +226,7 @@ Every service should have runbooks for common issues:
 - [[02_Incident_Management]] : on-call is the first step in incident response
 - [[03_Blameless_Postmortems]] : postmortems improve on-call processes
 - [[05_War_Games]] : war games test on-call readiness
-- [[02_Observability/04_Alerting_Strategy]] : alerts trigger on-call response
+- [[career-path/07_SRE_and_Platform_Engineer/02_Observability/04_Alerting_Strategy]] : alerts trigger on-call response
 - [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/04_Incident_Response]] : incident response foundations
 
 ## Key Takeaways

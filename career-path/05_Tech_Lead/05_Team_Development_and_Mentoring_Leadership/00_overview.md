@@ -15,11 +15,11 @@ tags:
 
 # Team Development and Mentoring Leadership
 
-> **Core capability:** The tech lead grows the team's technical capability deliberately — through work allocation, mentoring structures, and a learning culture — without becoming the team's ceiling or its dependency.
+> **Core capability:** The tech lead grows the team's technical capability deliberately (through work allocation, mentoring structures, and a learning culture) without becoming the team's ceiling or its dependency.
 
 ## Why This Matters
 
-A tech lead's effectiveness is capped by the team. A team of engineers who cannot decide, design, or debug independently turns the lead into a bottleneck with a growing queue. The escape is not working harder — it is **building capability into the team faster than the system grows complex**.
+A tech lead's effectiveness is capped by the team. A team of engineers who cannot decide, design, or debug independently turns the lead into a bottleneck with a growing queue. The escape is not working harder. It is **building capability into the team faster than the system grows complex**.
 
 Development at this level is not only 1:1 mentoring (that is the senior-engineer skill). It is designing the conditions under which many people grow at once: who gets which work and why, how knowledge moves, how the team reviews and learns, and how growth is visible to the people growing.
 
@@ -31,13 +31,14 @@ Development at this level is not only 1:1 mentoring (that is the senior-engineer
 | [[02_Growing_Engineers_at_Levels]] | Stretching juniors, mids, and seniors appropriately | Team composition changes, promotion seasons |
 | [[03_Team_Learning_Structures]] | Building recurring learning into the team's rhythm | Onboarding lag, knowledge silos, skill gaps |
 | [[04_Knowledge_Management_and_Documentation]] | Keeping critical knowledge out of individual heads | Bus-factor risks, onboarding, rotations |
-| [[05_Delegation_and_Trust]] | Delegating outcomes, not tasks — and meaning it | Overload, growth opportunities, succession |
+| [[05_Delegation_and_Trust]] | Delegating outcomes, not tasks, and meaning it | Overload, growth opportunities, succession |
 | [[06_Growing_Future_Leaders]] | Developing seniors who can lead | Succession planning, scaling beyond one team |
 | [[07_Team_Technical_Communication]] | Raising the team's written and spoken technical voice | Design docs, RFCs, demos, stakeholder updates |
 
 ## The Development Flywheel
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     ASSESS["Assess capability and gaps"] --> ALLOCATE["Allocate stretch work"]
     ALLOCATE --> SUPPORT["Support without rescuing"]
@@ -46,7 +47,7 @@ flowchart LR
     RECOGNIZE --> ASSESS
 ```
 
-Each turn of the flywheel raises what the team can be trusted with — which raises what you can delegate.
+Each turn of the flywheel raises what the team can be trusted with, which raises what you can delegate.
 
 ## What Changes from Senior to Tech Lead
 
@@ -56,7 +57,7 @@ Each turn of the flywheel raises what the team can be trusted with — which rai
 | Growth | Grows individuals | Grows the team's aggregate capability |
 | Delegation | Hands off tasks | Hands off outcomes with support structures |
 | Knowledge | Documents own area | Owns the team's knowledge strategy |
-| Leadership | Leads by example | Builds people who lead — succession is the goal |
+| Leadership | Leads by example | Builds people who lead: succession is the goal |
 
 ## Practical Applications
 
@@ -66,7 +67,7 @@ Each turn of the flywheel raises what the team can be trusted with — which rai
 - [ ] Every planning cycle includes at least one stretch assignment
 - [ ] A learning cadence (demos, tech talks, post-incident sessions) runs on rhythm
 - [ ] Bus-factor risks are identified; no critical knowledge lives in one head
-- [ ] Delegated outcomes have context, constraints, and check-ins — not task lists
+- [ ] Delegated outcomes have context, constraints, and check-ins, not task lists
 - [ ] At least one engineer is being grown toward lead-level responsibility
 - [ ] Growth made this quarter is visible to the people who grew
 
@@ -88,11 +89,11 @@ Each turn of the flywheel raises what the team can be trusted with — which rai
 
 ## Related Capabilities
 
-- [[01_The_Tech_Lead_Role_and_Operating_Model/00_overview|The Tech Lead Role and Operating Model]]: capability-building is how the mandate scales
-- [[04_Team_Delivery_and_Execution_Leadership/00_overview|Team Delivery and Execution Leadership]]: delivery work is the development fuel
+- [[career-path/05_Tech_Lead/01_The_Tech_Lead_Role_and_Operating_Model/00_overview|The Tech Lead Role and Operating Model]]: capability-building is how the mandate scales
+- [[career-path/05_Tech_Lead/04_Team_Delivery_and_Execution_Leadership/00_overview|Team Delivery and Execution Leadership]]: delivery work is the development fuel
 - [[career-path/02_Senior_Software_Engineer/07_Mentoring_and_Team_Leadership/00_overview|Mentoring and Team Leadership (Senior)]]: the 1:1 skills this area organizes at team scale
 - [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]: the neighboring path that owns careers and performance formally
 
 ## Summary
 
-Team development is the tech lead's compounding investment. Allocate work as growth, build learning and knowledge structures, delegate outcomes, and grow successors deliberately. The win condition: the team's capability grows faster than its workload — and your absence stops being a risk.
+Team development is the tech lead's compounding investment. Allocate work as growth, build learning and knowledge structures, delegate outcomes, and grow successors deliberately. The win condition: the team's capability grows faster than its workload, and your absence stops being a risk.

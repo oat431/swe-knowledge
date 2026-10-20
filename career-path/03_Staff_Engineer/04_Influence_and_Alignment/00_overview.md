@@ -14,13 +14,13 @@ tags:
 
 # Influence and Alignment
 
-> **Core capability:** The staff engineer creates agreement among people with different incentives — through proposals that frame problems well, pre-alignment that prevents meeting battles, and disagreement handled constructively.
+> **Core capability:** The staff engineer creates agreement among people with different incentives, through proposals that frame problems well, pre-alignment that prevents meeting battles, and disagreement handled constructively.
 
 ## Why This Matters
 
 Staff work dies in two rooms: the meeting where the proposal wasn't pre-aligned, and the hallway after, where the losing side quietly declines to implement. Technical merit is table stakes; the differentiating skill is creating genuine agreement among teams and leaders whose incentives genuinely differ.
 
-Influence at this level is built on a compounding asset: a track record of proposals that made people's work easier. That record earns the benefit of the doubt for the next proposal — which is the entire mechanism, because a staff engineer has no authority to require anything.
+Influence at this level is built on a compounding asset: a track record of proposals that made people's work easier. That record earns the benefit of the doubt for the next proposal, which is the entire mechanism, because a staff engineer has no authority to require anything.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ Influence at this level is built on a compounding asset: a track record of propo
 ## How Alignment Actually Happens
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     FRAME["Frame the problem neutrally"] --> DRAFT["Draft with input from affected teams"]
     DRAFT --> PREALIGN["Pre-align one on one"]
@@ -85,15 +86,15 @@ The presentation is the ceremony; the alignment happened before it.
 - Former skeptics cite your proposals in their own work
 - Disagreement surfaces early and gets resolved, not buried
 - Leaders repeat your framing in their own words
-- Decisions stick — months later, nobody relitigates
+- Decisions stick: months later, nobody relitigates
 
 ## Related Capabilities
 
-- [[02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: what influence delivers
-- [[03_Technical_Strategy/00_overview|Technical Strategy]]: the durable artifact influence produces
+- [[career-path/03_Staff_Engineer/02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: what influence delivers
+- [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy]]: the durable artifact influence produces
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/03_Influence_Without_Authority|Influence Without Authority (Senior)]]: the foundation this scales
 - [[career-path/11_Engineering_Manager/05_Organizational_Awareness_and_Influence/00_overview|Organizational Awareness and Influence (EM)]]: the manager's parallel craft
 
 ## Summary
 
-Influence and alignment is the staff engineer's core mechanism: proposals framed around shared problems, coalitions built before meetings, disagreement surfaced and answered in writing, and trust compounded by visible follow-through. No authority is coming — the track record is the authority.
+Influence and alignment is the staff engineer's core mechanism: proposals framed around shared problems, coalitions built before meetings, disagreement surfaced and answered in writing, and trust compounded by visible follow-through. No authority is coming. The track record is the authority.

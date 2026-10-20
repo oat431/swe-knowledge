@@ -16,17 +16,17 @@ tags:
 
 # Milestone Planning
 
-> **Core skill:** Designing a milestone-driven program cadence where every milestone earns its place — external commitments, integration points, decision gates, and risk reduction — and every milestone is honest about what it represents.
+> **Core skill:** Designing a milestone-driven program cadence where every milestone earns its place (external commitments, integration points, decision gates, and risk reduction) and every milestone is honest about what it represents.
 
 ## Why This Matters
 
-Programs without milestones run on hope. The calendar advances and teams report "on track" until the moment they are not — and then everyone is surprised. Milestones create accountability points where the program proves to itself and its stakeholders that it is where it claims to be.
+Programs without milestones run on hope. The calendar advances and teams report "on track" until the moment they are not, and then everyone is surprised. Milestones create accountability points where the program proves to itself and its stakeholders that it is where it claims to be.
 
-But milestones are only as good as their design. A milestone that just says "Phase 2 complete" measures nothing. A milestone that is always green is not a milestone — it is a decoration. The TPM designs milestones that expose truth: external commitments the program must meet, integration points where components meet for the first time, decision gates where the program chooses its next move, and risk-reduction milestones that retire uncertainty before it can kill the program.
+But milestones are only as good as their design. A milestone that just says "Phase 2 complete" measures nothing. A milestone that is always green is not a milestone. It is a decoration. The TPM designs milestones that expose truth: external commitments the program must meet, integration points where components meet for the first time, decision gates where the program chooses its next move, and risk-reduction milestones that retire uncertainty before it can kill the program.
 
 ## Four Types of Program Milestones
 
-Every program milestone falls into one of four categories. The TPM ensures the program has enough of each type — and that no type is missing.
+Every program milestone falls into one of four categories. The TPM ensures the program has enough of each type, and that no type is missing.
 
 | Type | Purpose | Example | What Makes It Honest |
 |------|---------|---------|---------------------|
@@ -42,6 +42,7 @@ A program with only external commitment milestones is reactive. A program with o
 Milestones do not sit at equal intervals. They cluster where risk concentrates, where workstreams intersect, and where decisions must precede investment.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     KICKOFF["Program kickoff: charter live, workstreams formed"] --> RISK1["Risk reduction: prove riskiest assumption"]
     RISK1 --> INT1["Integration point: first cross-workstream connection"]
@@ -53,11 +54,11 @@ flowchart TD
     DECIDE2 --> CLOSE["Program close: outcome measurement begins"]
 ```
 
-The TPM sequences milestones to create progressive confidence. The first quarter retires the riskiest assumptions while the program still has time to adjust. Integration points are sequenced so that each one connects workstreams in order of dependency — upstream before downstream. Decision gates are placed before large investments so the program commits resources after it has information, not before.
+The TPM sequences milestones to create progressive confidence. The first quarter retires the riskiest assumptions while the program still has time to adjust. Integration points are sequenced so that each one connects workstreams in order of dependency, upstream before downstream. Decision gates are placed before large investments so the program commits resources after it has information, not before.
 
 ## The Milestone-Driven Program Cadence
 
-Milestones are not just dates on a calendar — they drive the program's operating rhythm. Every milestone creates a cycle of preparation, execution, and reflection.
+Milestones are not just dates on a calendar. They drive the program's operating rhythm. Every milestone creates a cycle of preparation, execution, and reflection.
 
 | Phase | Duration | What Happens | TPM's Role |
 |-------|----------|-------------|------------|
@@ -70,13 +71,13 @@ The milestone cadence is the TPM's primary tool for keeping the program honest. 
 
 ## Keeping Milestones Honest
 
-The most common program pathology is the evergreen milestone — always green, never meaningful. The TPM designs milestones that resist gaming.
+The most common program pathology is the evergreen milestone, always green, never meaningful. The TPM designs milestones that resist gaming.
 
 | Anti-Pattern | What It Looks Like | Honest Alternative |
 |--------------|--------------------|--------------------|
-| **Vague milestone** | "Architecture complete" — who decides? what evidence? | "Architecture Decision Record published and reviewed by architect and two workstream leads" |
+| **Vague milestone** | "Architecture complete": who decides? what evidence? | "Architecture Decision Record published and reviewed by architect and two workstream leads" |
 | **Self-reported milestone** | Workstream leads declare their own milestones green with no external evidence | Milestone requires demonstrable artefact: running code, test results, signed decision document |
-| **Always-green milestone** | The milestone has never been red in three quarters — it is too soft to fail | Redefine the milestone to measure something that can fail; if it cannot fail, it is not measuring anything |
+| **Always-green milestone** | The milestone has never been red in three quarters. It is too soft to fail | Redefine the milestone to measure something that can fail; if it cannot fail, it is not measuring anything |
 | **Milestone-as-date** | "M3: June 1" with no description of what M3 means | Every milestone has a one-sentence description of the state change it represents |
 | **No go/no-go criteria** | The milestone passes by default because nobody defined what passing means | Define pass criteria before the milestone cycle begins; criteria cannot be changed during the cycle |
 
@@ -93,7 +94,7 @@ Not all milestones have equal certainty. The TPM builds risk buffers into milest
 | **High** | 30-40 percent | Novel technology, new team, external dependency with uncertain delivery |
 | **Unknown** | Do not set a firm milestone date | Set a checkpoint to reassess; milestone date is set after the checkpoint |
 
-Buffers are not padding — padding hides uncertainty, buffer acknowledges it. The TPM communicates buffers transparently: "The milestone date is June 15 with a confidence range of May 30 to July 1, depending on the load test results at M2." Stakeholders who hear a single date assume it is a promise; stakeholders who hear a confidence range understand it is a plan.
+Buffers are not padding. Padding hides uncertainty, buffer acknowledges it. The TPM communicates buffers transparently: "The milestone date is June 15 with a confidence range of May 30 to July 1, depending on the load test results at M2." Stakeholders who hear a single date assume it is a promise; stakeholders who hear a confidence range understand it is a plan.
 
 ## Practical Applications
 
@@ -102,7 +103,7 @@ Buffers are not padding — padding hides uncertainty, buffer acknowledges it. T
 - [ ] Every milestone has a one-sentence description of the state change it represents
 - [ ] Every milestone has explicit go/no-go criteria defined before the milestone cycle begins
 - [ ] The program has at least one milestone of each type: external commitment, integration point, decision gate, risk reduction
-- [ ] Risk reduction milestones are sequenced early — before the program loses the ability to adjust
+- [ ] Risk reduction milestones are sequenced early, before the program loses the ability to adjust
 - [ ] Every milestone has an owner who is accountable for declaring readiness
 - [ ] Milestone dates have confidence ranges; high-uncertainty milestones include explicit buffers
 - [ ] The milestone cadence includes prep review, event, post-mortem, and re-plan phases
@@ -135,7 +136,7 @@ Buffers are not padding — padding hides uncertainty, buffer acknowledges it. T
 
 ## Success Indicators
 
-- No milestone is a surprise — go/no-go criteria flag risk at the prep review, not on the milestone date
+- No milestone is a surprise: go/no-go criteria flag risk at the prep review, not on the milestone date
 - Missed milestones produce post-mortems with assigned action items that are tracked to resolution
 - Stakeholders quote milestone dates as ranges, not single points
 - Risk reduction milestones produce evidence that genuinely retires uncertainty
@@ -146,9 +147,9 @@ Buffers are not padding — padding hides uncertainty, buffer acknowledges it. T
 - [[03_Workstream_Decomposition]]: workstream milestones roll up to program milestones
 - [[05_Governance_Structure]]: governance forums are the venues where milestone decisions are made
 - [[07_Program_Roadmap_and_Sequencing]]: the roadmap is the visual integration of milestones across workstreams
-- [[04_Risk_and_Issue_Leadership/00_overview|Risk and Issue Leadership]]: risk reduction milestones connect to the risk register
+- [[career-path/12_Technical_Program_Manager/04_Risk_and_Issue_Leadership/00_overview|Risk and Issue Leadership]]: risk reduction milestones connect to the risk register
 - [[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]]: milestone management as a formal discipline
 
 ## Summary
 
-Milestone planning is the TPM's accountability architecture: design four types of milestones — external commitments, integration points, decision gates, and risk reduction — sequence them for progressive confidence, back every milestone with go/no-go criteria defined before the cycle begins, and build a cadence of prep review, event, post-mortem, and re-plan that keeps the program honest. A milestone that cannot fail is not a milestone; a milestone that fails without consequence is not managed.
+Milestone planning is the TPM's accountability architecture: design four types of milestones (external commitments, integration points, decision gates, and risk reduction), sequence them for progressive confidence, back every milestone with go/no-go criteria defined before the cycle begins, and build a cadence of prep review, event, post-mortem, and re-plan that keeps the program honest. A milestone that cannot fail is not a milestone; a milestone that fails without consequence is not managed.

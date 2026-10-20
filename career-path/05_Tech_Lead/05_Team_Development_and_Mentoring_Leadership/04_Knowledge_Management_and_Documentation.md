@@ -15,13 +15,13 @@ tags:
 
 # Knowledge Management and Documentation
 
-> **Core skill:** Keeping the team's critical knowledge out of individual heads — deciding what must be documented, reducing bus factor, and making documentation part of done.
+> **Core skill:** Keeping the team's critical knowledge out of individual heads: deciding what must be documented, reducing bus factor, and making documentation part of done.
 
 ## Why This Matters
 
 Knowledge lives in heads until the head leaves, and then the team pays the price twice: once in the scramble to reconstruct what was known, and again in the mistakes made while reconstructing it. The tech lead's knowledge strategy decides which knowledge is protected as team property and which is allowed to stay tacit.
 
-The enemy is not a lack of documentation — it is documentation that does not get read, kept, or trusted. A wiki full of stale pages is worse than no wiki: it teaches the team that the written word is fiction. The lead's job is a curation job: document the few things that must be documented, keep them fresh, and make finding them trivial.
+The enemy is not a lack of documentation. It is documentation that does not get read, kept, or trusted. A wiki full of stale pages is worse than no wiki: it teaches the team that the written word is fiction. The lead's job is a curation job: document the few things that must be documented, keep them fresh, and make finding them trivial.
 
 ## What Must Be Documented vs Tribal Knowledge
 
@@ -49,7 +49,7 @@ The bus factor is the number of people who can disappear before the team is stra
 | External relationships | Who owns the contacts that make things move? | Dependency maps and written agreements |
 | Operations | Who can actually run the production systems? | Runbooks, on-call rotation, incident practice |
 
-The lead's rule of thumb: any critical knowledge held by one person is a risk being carried until it is spread. Spreading is done deliberately — pairing, rotation, documentation — and re-checked when people leave or join.
+The lead's rule of thumb: any critical knowledge held by one person is a risk being carried until it is spread. Spreading is done deliberately (pairing, rotation, documentation) and re-checked when people leave or join.
 
 ## Documentation as Part of Definition of Done
 
@@ -63,7 +63,7 @@ Docs that are added after the work, as an afterthought, are docs that never get 
 | New component | A system map entry: what it is, who owns it, how it fails |
 | Onboarding touchpoint | Any change that a new joiner would need explained |
 
-The mechanism is simple: the review checklist includes the doc, and a work item without its doc is not closed. The lead protects the rule even when it feels bureaucratic — the doc is the team's memory, and the definition of done is how the memory gets written.
+The mechanism is simple: the review checklist includes the doc, and a work item without its doc is not closed. The lead protects the rule even when it feels bureaucratic. The doc is the team's memory, and the definition of done is how the memory gets written.
 
 ## Knowledge Freshness
 
@@ -80,7 +80,7 @@ The freshness rule the lead enforces: if a document is wrong, fixing it is part 
 
 ## Onboarding Path Design
 
-Onboarding is the moment the knowledge strategy pays out — or fails loudly. The lead designs the first weeks so that new joiners are carried by documents, not by the patience of the team.
+Onboarding is the moment the knowledge strategy pays out, or fails loudly. The lead designs the first weeks so that new joiners are carried by documents, not by the patience of the team.
 
 | Week | Focus | What carries it |
 |------|-------|-----------------|
@@ -89,7 +89,7 @@ Onboarding is the moment the knowledge strategy pays out — or fails loudly. Th
 | Week 3 | Independence: a slice owned with light supervision | The docs the team relies on; the joiner improves them |
 | Beyond | Component ownership and contribution | The joiner writes the next onboarding improvements |
 
-The measure of the onboarding path is not the joiner's speed — it is whether the joiner's questions are answered by documents more than by people. Every question that needed a person is a documentation gap, logged and closed.
+The measure of the onboarding path is not the joiner's speed. It is whether the joiner's questions are answered by documents more than by people. Every question that needed a person is a documentation gap, logged and closed.
 
 ## Wiki and Search Hygiene
 
@@ -104,6 +104,7 @@ Knowledge that cannot be found might as well not exist. The lead keeps the team'
 ## The Knowledge Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     IDENTIFY["Identify critical knowledge"] --> DOCUMENT["Document what must be kept"]
     DOCUMENT --> FRESH["Keep it fresh with owners"]
@@ -117,7 +118,7 @@ flowchart LR
 **Run the team's knowledge strategy with this checklist:**
 
 - [ ] List the critical knowledge areas and their bus factor
-- [ ] Write runbooks, ADRs, onboarding material, domain concepts, and interfaces — nothing else
+- [ ] Write runbooks, ADRs, onboarding material, domain concepts, and interfaces, nothing else
 - [ ] Add required documentation to the definition of done
 - [ ] Give every critical doc an owner and a review date
 - [ ] Update docs in the same change that makes them wrong
@@ -136,7 +137,7 @@ Last reviewed: [date] | Owner: [name] | Status: [current / needs review]
 [One paragraph: what this document exists to explain]
 
 ## The knowledge
-[The content — kept to what the team actually needs]
+[The content, kept to what the team actually needs]
 
 ## When this changes
 [The trigger that makes this document wrong]
@@ -167,8 +168,8 @@ Last reviewed: [date] | Owner: [name] | Status: [current / needs review]
 
 - [[03_Team_Learning_Structures]]: session outputs feed the documented knowledge base
 - [[07_Team_Technical_Communication]]: documentation is the written half of the team's voice
-- [[01_The_Tech_Lead_Role_and_Operating_Model/00_overview|The Tech Lead Role and Operating Model]]: knowledge ownership is part of the lead's mandate
-- [[02_System_Ownership_and_Production_Responsibility/00_overview|System Ownership and Production Responsibility]]: runbooks are production responsibility made visible
+- [[career-path/05_Tech_Lead/01_The_Tech_Lead_Role_and_Operating_Model/00_overview|The Tech Lead Role and Operating Model]]: knowledge ownership is part of the lead's mandate
+- [[career-path/05_Tech_Lead/02_System_Ownership_and_Production_Responsibility/00_overview|System Ownership and Production Responsibility]]: runbooks are production responsibility made visible
 
 ## Summary
 

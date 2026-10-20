@@ -16,11 +16,11 @@ tags:
 
 # Risk Management for Architects
 
-> **Core skill:** The architect assesses and manages risk at architecture level — naming threats to business outcomes, sizing likelihood and impact, selecting treatment, and keeping every accepted risk owned, documented, and revisited at the gates where the decision can still change.
+> **Core skill:** The architect assesses and manages risk at architecture level, naming threats to business outcomes, sizing likelihood and impact, selecting treatment, and keeping every accepted risk owned, documented, and revisited at the gates where the decision can still change.
 
 ## Why This Matters
 
-Every architecture decision is a risk decision. Choosing a platform, a topology, a vendor, or a migration strategy shifts the distribution of possible outcomes — some better, some worse. The architect's job is not to eliminate risk, which is neither possible nor affordable, but to make the carried risks explicit and proportionate: know which risks the estate is running, who owns them, and what treatment justifies the exposure.
+Every architecture decision is a risk decision. Choosing a platform, a topology, a vendor, or a migration strategy shifts the distribution of possible outcomes: some better, some worse. The architect's job is not to eliminate risk, which is neither possible nor affordable, but to make the carried risks explicit and proportionate: know which risks the estate is running, who owns them, and what treatment justifies the exposure.
 
 Risk management at architecture level is about outcomes, not artifacts. A register kept to satisfy governance is worse than none, because it creates the appearance of control while changing nothing. The working version connects each risk to the decision it constrains, the treatment it received, and the review point where conditions may have changed enough to revisit the choice.
 
@@ -37,7 +37,7 @@ Architects also live between two risk languages. Enterprise risk management spea
 
 ## The Assessment Model
 
-Risk assessment at architecture level is qualitative and disciplined rather than numerically precise. Likelihood and impact are rated against explicit bands, with a stated rationale; the combination produces an exposure band that drives treatment priority. The distinction between inherent risk — before treatment — and residual risk — after — is what makes the register a management tool instead of a scare list.
+Risk assessment at architecture level is qualitative and disciplined rather than numerically precise. Likelihood and impact are rated against explicit bands, with a stated rationale; the combination produces an exposure band that drives treatment priority. The distinction between inherent risk (before treatment) and residual risk (after) is what makes the register a management tool instead of a scare list.
 
 | Rating | Likelihood | Impact on Business Outcomes |
 |--------|------------|-----------------------------|
@@ -57,6 +57,7 @@ Risk assessment at architecture level is qualitative and disciplined rather than
 ## From Risk to Managed Exposure
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     IDENTIFY["Identify risks to business outcomes"] --> ASSESS["Assess likelihood and impact"]
     ASSESS["Assess likelihood and impact"] --> TREAT["Select treatment option"]
@@ -68,7 +69,7 @@ flowchart LR
 ## The Architecture Risk Register
 
 ```markdown
-## Architecture Risk Register — <program or landscape>
+## Architecture Risk Register: <program or landscape>
 
 | ID | Risk | Decision Affected | Likelihood | Impact | Treatment | Residual | Owner | Review |
 |----|------|-------------------|------------|--------|-----------|----------|-------|--------|
@@ -97,7 +98,7 @@ flowchart LR
 ### Risk Review Prompt
 
 ```markdown
-## Risk Review — <decision or gate>
+## Risk Review: <decision or gate>
 
 | Question | Answer |
 |----------|--------|
@@ -131,9 +132,9 @@ flowchart LR
 - [[01_Enterprise_Security_Architecture]]
 - [[03_Compliance_and_Regulatory_Architecture]]
 - [[05_Resilience_and_Business_Continuity]]
-- [[06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]
+- [[career-path/15_Solutions_and_Enterprise_Architect/06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]
 - [[career-path/06_Software_Architect/04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs (Architect)]]
 
 ## Summary
 
-Risk management for architects makes the exposure carried by design decisions explicit: threats named in outcome terms, rated against honest bands, treated by avoidance, reduction, transfer, or documented acceptance, and revisited at the gates where decisions can still change. The register is a management instrument, not a compliance artifact — its worth is measured by whether decisions are different because the risks were visible.
+Risk management for architects makes the exposure carried by design decisions explicit: threats named in outcome terms, rated against honest bands, treated by avoidance, reduction, transfer, or documented acceptance, and revisited at the gates where decisions can still change. The register is a management instrument, not a compliance artifact: its worth is measured by whether decisions are different because the risks were visible.

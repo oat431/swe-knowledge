@@ -84,8 +84,8 @@ Optimize a slow query or pipeline in a system you work with:
 - [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]]: performance engineering
 - [[01_Distributed_Systems_for_Data]]: partitioning affects query performance
 - [[04_Cost_Optimization_for_Data_Systems]]: performance tuning reduces cost
-- [[02_Data_Modeling_and_Design/00_overview|Data Modeling and Design]]: schema design affects query performance
-- [[03_Data_Integration_and_Interoperability/00_overview|Data Integration]]: integration queries need optimization
+- [[career-path/09_Data_and_ML_Engineer/02_Data_Modeling_and_Design/00_overview|Data Modeling and Design]]: schema design affects query performance
+- [[career-path/09_Data_and_ML_Engineer/03_Data_Integration_and_Interoperability/00_overview|Data Integration]]: integration queries need optimization
 
 ## Common Pitfalls
 

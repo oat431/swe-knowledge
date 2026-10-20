@@ -14,13 +14,13 @@ tags:
 
 # Community and Ecosystem
 
-> **Core capability:** The advocate builds durable learning and feedback networks — communities, programs, events, and open-source relationships — that create value for members and organizational insight for the sponsor.
+> **Core capability:** The advocate builds durable learning and feedback networks (communities, programs, events, and open-source relationships) that create value for members and organizational insight for the sponsor.
 
 ## Why This Matters
 
-Communities compound: members help each other, content multiplies, and trust accrues to the organization behind the community. But communities cannot be manufactured — they can only be seeded, served, and sustained. The advocate's role is stewardship: creating conditions where developers and partners form connections, learn together, and stay engaged.
+Communities compound: members help each other, content multiplies, and trust accrues to the organization behind the community. But communities cannot be manufactured. They can only be seeded, served, and sustained. The advocate's role is stewardship: creating conditions where developers and partners form connections, learn together, and stay engaged.
 
-The ecosystem dimension extends further: open-source projects, partner organizations, conferences, and platform relationships form a web that no single company controls but every technology company depends on. Advocates operate at these nodes — representing the organization outward and the ecosystem inward.
+The ecosystem dimension extends further: open-source projects, partner organizations, conferences, and platform relationships form a web that no single company controls but every technology company depends on. Advocates operate at these nodes, representing the organization outward and the ecosystem inward.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ The ecosystem dimension extends further: open-source projects, partner organizat
 ## The Community Flywheel
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SEED["Seed: platform, charter, first members"] --> SERVE["Serve: content, events, support"]
     SERVE --> CONNECT["Connect: members help members"]
@@ -45,7 +46,7 @@ flowchart TD
     GROW --> SERVE
 ```
 
-The flywheel turns when members start producing value for each other — that is the moment a community exists.
+The flywheel turns when members start producing value for each other. That is the moment a community exists.
 
 ## Practical Applications
 
@@ -75,11 +76,11 @@ The flywheel turns when members start producing value for each other — that is
 
 ## Related Capabilities
 
-- [[01_Technical_Communication/00_overview|Technical Communication]]: the content that starts conversations
-- [[07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]]: community as insight source
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/01_Technical_Communication/00_overview|Technical Communication]]: the content that starts conversations
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]]: community as insight source
 - [[career-path/03_Staff_Engineer/07_Organizational_Learning_and_Mentoring/03_Communities_of_Practice|Communities of Practice (Staff)]]: internal community parallels
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/00_overview|Communication and Influence (Senior)]]: relationship foundations
 
 ## Summary
 
-Community and ecosystem work is stewardship: seeding spaces with purpose, serving them until members serve each other, and sustaining them through programs, events, and healthy moderation. The test of advocacy at scale is a community that thrives — and keeps giving back — long after the advocate stops pushing.
+Community and ecosystem work is stewardship: seeding spaces with purpose, serving them until members serve each other, and sustaining them through programs, events, and healthy moderation. The test of advocacy at scale is a community that thrives (and keeps giving back) long after the advocate stops pushing.

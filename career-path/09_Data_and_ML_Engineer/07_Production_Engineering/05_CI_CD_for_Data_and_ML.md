@@ -82,8 +82,8 @@ Build a CI/CD pipeline for a data pipeline or ML model:
 ## Knowledge Connections
 
 - [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]]: CI/CD fundamentals
-- [[04_Data_Quality/00_overview|Data Quality]]: data validation is quality enforcement
-- [[06_ML_Lifecycle_and_MLOps/00_overview|ML Lifecycle and MLOps]]: model promotion is part of MLOps
+- [[career-path/09_Data_and_ML_Engineer/04_Data_Quality/00_overview|Data Quality]]: data validation is quality enforcement
+- [[career-path/09_Data_and_ML_Engineer/06_ML_Lifecycle_and_MLOps/00_overview|ML Lifecycle and MLOps]]: model promotion is part of MLOps
 - [[03_Reliability_and_Fault_Tolerance]]: CI catches reliability issues early
 - [[06_Operational_Runbooks_and_On_Call]]: runbooks for CI failures
 

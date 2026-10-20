@@ -16,13 +16,13 @@ tags:
 
 # Architecture Decision Process
 
-> **Core skill:** Running a lightweight ADR process that records consequential decisions and their reasoning — so decisions are challengeable, traceable, and never made twice.
+> **Core skill:** Running a lightweight ADR process that records consequential decisions and their reasoning, so decisions are challengeable, traceable, and never made twice.
 
 ## Why This Matters
 
-Every architecture decision is made twice if it is not recorded: once when it happens, and again — differently, by people who were not there — when the context comes back around. Unrecorded decisions also hide their reasoning: the new engineer asks why the system is shaped this way, and the answer is "ask the person who left."
+Every architecture decision is made twice if it is not recorded: once when it happens, and again (differently, by people who were not there) when the context comes back around. Unrecorded decisions also hide their reasoning: the new engineer asks why the system is shaped this way, and the answer is "ask the person who left."
 
-An Architecture Decision Record (ADR) is the antidote: a short document that captures what was decided, why, and what was rejected. The tech lead's job is not to make every decision — it is to run the process that records them. A good process is lightweight enough that engineers use it without being chased, and rigorous enough that the records are worth reading.
+An Architecture Decision Record (ADR) is the antidote: a short document that captures what was decided, why, and what was rejected. The tech lead's job is not to make every decision. It is to run the process that records them. A good process is lightweight enough that engineers use it without being chased, and rigorous enough that the records are worth reading.
 
 ## What an ADR Is For
 
@@ -75,7 +75,7 @@ Four minutes to write, two minutes to read. If a template takes longer than the 
 | Deprecated | No longer recommended | Replaced by a superseding record |
 | Superseded | Replaced by a newer decision | The new ADR links back to this one |
 
-The states exist so the record stays honest. A decision that was right in 2025 and wrong in 2026 is not erased — it is superseded, and both records survive. That history is the team's institutional memory.
+The states exist so the record stays honest. A decision that was right in 2025 and wrong in 2026 is not erased. It is superseded, and both records survive. That history is the team's institutional memory.
 
 ## The Lightweight Workflow
 
@@ -104,7 +104,7 @@ The workflow's rules are few and explicit:
 | Reversals of past decisions | Choices with an obvious default |
 | Decisions with real trade-offs | Decisions with no real alternatives |
 
-The test: if the decision will be regretted differently by different people, or if someone in a year will ask why — record it. If the change is a local expression of an existing pattern, the pattern is the record.
+The test: if the decision will be regretted differently by different people, or if someone in a year will ask why, record it. If the change is a local expression of an existing pattern, the pattern is the record.
 
 ## Linking ADRs to Each Other and to Code
 
@@ -118,6 +118,7 @@ The test: if the decision will be regretted differently by different people, or 
 The links are what make the records findable. An ADR nobody can find is a decision made twice.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PROPOSE["Anyone proposes an ADR"] --> WRITE["Proposer writes from template"]
     WRITE --> REVIEW["Named reviewer within window"]
@@ -156,7 +157,7 @@ Checklist for standing up the process:
 - Accepted ADRs are linked from the code they affect
 - New engineers read ADRs to understand the system's shape
 - Decisions you were not part of are traceable to recorded reasoning
-- Superseded ADRs exist — proof the process survives change
+- Superseded ADRs exist, proof the process survives change
 
 ## Related Topics
 
@@ -167,4 +168,4 @@ Checklist for standing up the process:
 
 ## Summary
 
-The architecture decision process is a lightweight record-keeping discipline: anyone proposes, a named reviewer accepts or returns with reasons, and every accepted record is linked to the code and context it affects. ADRs record decisions; they do not make them, and they never freeze them — supersession keeps the history honest. The measure of the process is not the count of records but that no consequential decision is ever made twice.
+The architecture decision process is a lightweight record-keeping discipline: anyone proposes, a named reviewer accepts or returns with reasons, and every accepted record is linked to the code and context it affects. ADRs record decisions; they do not make them, and they never freeze them. Supersession keeps the history honest. The measure of the process is not the count of records but that no consequential decision is ever made twice.

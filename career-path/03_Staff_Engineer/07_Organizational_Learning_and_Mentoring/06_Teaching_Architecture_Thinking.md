@@ -15,11 +15,11 @@ tags:
 
 # Teaching Architecture Thinking
 
-> **Core skill:** Spreading the architectural lens — boundaries, trade-offs, evolution over time — through design reviews, katas, reading practice, and a growing cadre of reviewers.
+> **Core skill:** Spreading the architectural lens (boundaries, trade-offs, evolution over time) through design reviews, katas, reading practice, and a growing cadre of reviewers.
 
 ## Why This Matters
 
-An org with one person who thinks architecturally has one architecture opinion; an org where the lens is common property makes better decisions everywhere. Architectural thinking is teachable — it is a discipline of asking boundary, trade-off, and evolution questions — but it is rarely taught. Most engineers absorb it accidentally, from proximity, which is why it concentrates in the few who got the proximity.
+An org with one person who thinks architecturally has one architecture opinion; an org where the lens is common property makes better decisions everywhere. Architectural thinking is teachable (it is a discipline of asking boundary, trade-off, and evolution questions) but it is rarely taught. Most engineers absorb it accidentally, from proximity, which is why it concentrates in the few who got the proximity.
 
 Teaching architecture thinking is the staff engineer's leverage play: every senior who can hold a design review well is a second pair of architectural eyes; every team that asks criteria questions before proposing solutions stops needing you at the table. The spread of the lens is the spread of your judgment.
 
@@ -33,7 +33,7 @@ Teaching architecture thinking is the staff engineer's leverage play: every seni
 | **Constraints** | What must be true for this to hold? | Ignoring the load-bearing assumptions |
 | **Reversibility** | How hard is this to undo? | Treating everything as permanent |
 
-The lens is a set of questions, which is exactly why it can be taught — and exactly why it must be practiced, because questions without practice are vocabulary.
+The lens is a set of questions, which is exactly why it can be taught, and exactly why it must be practiced, because questions without practice are vocabulary.
 
 ## Teaching Through Design Reviews
 
@@ -42,12 +42,12 @@ The design review is the classroom; Socratic questioning is the method:
 | Practice | How It Works |
 |---|---|
 | **Criteria before solutions** | Ask what must be true before discussing what to build |
-| **Socratic questions** | "What breaks if this scales tenfold?" — never the answer first |
+| **Socratic questions** | "What breaks if this scales tenfold?", never the answer first |
 | **Trade-off forcing** | "What are you giving up, and who pays?" |
 | **Reversibility probe** | "How do we undo this in a year?" |
 | **Evolution question** | "What does this look like in two years?" |
 
-The discipline: when a review participant proposes a solution, the teaching move is the question that makes the criteria visible — not agreement, not correction. The review that ends with the proposer understanding their own trade-offs has taught more than the review that ended with the right answer.
+The discipline: when a review participant proposes a solution, the teaching move is the question that makes the criteria visible, not agreement, not correction. The review that ends with the proposer understanding their own trade-offs has taught more than the review that ended with the right answer.
 
 ## Architecture Katas and Case Studies
 
@@ -59,7 +59,7 @@ Practice on real and fictional systems, away from the pressure of production:
 | **Case study** | A real system's story, read and dissected | Quarterly |
 | **Retrospective design** | Redesign a system you know, with hindsight | Quarterly |
 
-Katas build the muscle cheaply: no production stakes, pure judgment practice. Case studies build the pattern library — the recurring shapes of systems and their failures. Both convert the lens from knowledge into reflexes.
+Katas build the muscle cheaply: no production stakes, pure judgment practice. Case studies build the pattern library: the recurring shapes of systems and their failures. Both convert the lens from knowledge into reflexes.
 
 ## The Architecture Reading List Practice
 
@@ -72,7 +72,7 @@ The reading list is how the lens gets its depth:
 | **System stories** | How great systems evolved | Architecture blogs and retrospectives, read critically |
 | **Classics** | The durable canon | The timeless architecture and design texts |
 
-The practice is not the list — it is the discussion. A monthly session where three people argue about one paper transfers more than a personal library ever will.
+The practice is not the list; it is the discussion. A monthly session where three people argue about one paper transfers more than a personal library ever will.
 
 ## Growing Reviewers
 
@@ -85,7 +85,7 @@ The review guild is the org's architectural teaching engine:
 | **Lead reviewer** | Runs reviews alone, debriefed after |
 | **Reviewer mentor** | Trains the next observer |
 
-The guild's output is reviewers, not reviews. Each reviewer who reaches lead level is architecture thinking spread to one more person — and the guild is how the teaching outlives any single session.
+The guild's output is reviewers, not reviews. Each reviewer who reaches lead level is architecture thinking spread to one more person, and the guild is how the teaching outlives any single session.
 
 ## Architecture Onboarding for New Seniors
 
@@ -114,6 +114,7 @@ The goal is not faster ramp-up to code; it is faster ramp-up to judgment. A seni
 The honest measure is unprompted behavior: ADRs appearing from teams you never briefed, reviews that open with criteria, juniors asking trade-off questions. The lens has spread when it no longer needs you to demonstrate it.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     REVIEW["Design review"] --> QUESTION["Socratic questions"]
     QUESTION --> CRITERIA["Criteria before solutions"]
@@ -183,9 +184,9 @@ flowchart TD
 - [[03_Communities_of_Practice]]: the review guild as a community
 - [[02_Judgment_Transfer]]: the same teaching mechanics, architectural flavor
 - [[04_Writing_as_Scaling]]: ADRs and decision records as the spread mechanism
-- [[03_Technical_Strategy/00_overview|Technical Strategy]]: the architectural direction to teach
+- [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy]]: the architectural direction to teach
 - [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/00_overview|Architecture and Design Judgment (Senior)]]: the foundation this builds on
 
 ## Summary
 
-Teaching architecture thinking spreads the lens from one person to the org: run design reviews as Socratic classrooms with criteria before solutions, build the muscle with katas and case studies, deepen it with a discussed reading list, grow reviewers through a staged guild pipeline, and onboard new seniors into judgment before code. Measure success by unprompted behavior — ADRs written, criteria-first reviews, juniors asking trade-off questions. The lens has spread when it no longer needs you.
+Teaching architecture thinking spreads the lens from one person to the org: run design reviews as Socratic classrooms with criteria before solutions, build the muscle with katas and case studies, deepen it with a discussed reading list, grow reviewers through a staged guild pipeline, and onboard new seniors into judgment before code. Measure success by unprompted behavior: ADRs written, criteria-first reviews, juniors asking trade-off questions. The lens has spread when it no longer needs you.

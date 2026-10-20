@@ -38,6 +38,7 @@ If the answer to all three is "yes", create the alert.
 ### Symptom-based vs cause-based alerts
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     subgraph BAD["Bad: Cause-Based"]
         B1["CPU > 80%"]
@@ -69,6 +70,7 @@ flowchart LR
 ### Alert routing
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ALERT["Alert Fires"] --> SEVERITY{"Severity?"}
     SEVERITY -->|"Critical"| PAGE["Page On-Call\n(PagerDuty, OpsGenie)"]
@@ -172,8 +174,8 @@ Conduct "game days" to test alerting and incident response:
 - [[01_Metrics_and_Dashboards]] : alerts are based on metrics
 - [[02_Structured_Logging]] : logs provide context for alerts
 - [[03_Distributed_Tracing]] : traces help diagnose alerted issues
-- [[03_Incident_Response/02_Incident_Management]] : alerts trigger incident response
-- [[01_Service_Objectives/03_Error_Budget_Policy]] : error budget burn rate alerts
+- [[career-path/07_SRE_and_Platform_Engineer/03_Incident_Response/02_Incident_Management]] : alerts trigger incident response
+- [[career-path/07_SRE_and_Platform_Engineer/01_Service_Objectives/03_Error_Budget_Policy]] : error budget burn rate alerts
 - [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/03_Observability]] : observability foundations
 
 ## Key Takeaways

@@ -16,15 +16,15 @@ tags:
 
 # From Field Signal to Product Insight
 
-> **Core skill:** Turning the raw noise of the field — tickets, threads, interviews, side conversations — into synthesized, evidenced insight that product teams can act on.
+> **Core skill:** Turning the raw noise of the field (tickets, threads, interviews, side conversations) into synthesized, evidenced insight that product teams can act on.
 
 ## Why This Matters
 
-Advocates and consultants sit on a river of signal: support tickets, community threads, workshop questions, conference hallway complaints, customer calls, their own daily use of the product. Most of it evaporates. A complaint gets answered and forgotten; the same complaint arrives next week from a different developer and gets answered again. The advocate who captures, clusters, and quantifies these signals turns a stream of individual conversations into a picture of the field that no survey can replicate — because it is grounded in the moments where the product actually succeeded or failed people.
+Advocates and consultants sit on a river of signal: support tickets, community threads, workshop questions, conference hallway complaints, customer calls, their own daily use of the product. Most of it evaporates. A complaint gets answered and forgotten; the same complaint arrives next week from a different developer and gets answered again. The advocate who captures, clusters, and quantifies these signals turns a stream of individual conversations into a picture of the field that no survey can replicate, because it is grounded in the moments where the product actually succeeded or failed people.
 
-The gap between signal and insight is synthesis. A ticket is a signal; "eleven teams in the last quarter hit the same auth wall during onboarding, and six abandoned" is insight. Product teams are drowning in feature requests but starved of pattern-level, severity-ranked, adoption-relevant evidence. The advocate who supplies that — consistently, honestly, with sources — becomes the person engineering asks before building, rather than the person who forwards complaints.
+The gap between signal and insight is synthesis. A ticket is a signal; "eleven teams in the last quarter hit the same auth wall during onboarding, and six abandoned" is insight. Product teams are drowning in feature requests but starved of pattern-level, severity-ranked, adoption-relevant evidence. The advocate who supplies that (consistently, honestly, with sources) becomes the person engineering asks before building, rather than the person who forwards complaints.
 
-Honesty is the load-bearing wall. One loud voice, one strategic customer, or the advocate's personal pet frustration can colonize the whole channel if synthesis is sloppy. The discipline of frequency, severity, and adoption impact — applied before any claim is made — is what separates insight from anecdote inflation.
+Honesty is the load-bearing wall. One loud voice, one strategic customer, or the advocate's personal pet frustration can colonize the whole channel if synthesis is sloppy. The discipline of frequency, severity, and adoption impact (applied before any claim is made) is what separates insight from anecdote inflation.
 
 ## Signal Sources and Their Biases
 
@@ -48,7 +48,7 @@ Every source carries a bias; a synthesis that names its sources names its blind 
 | Tag with consistent vocabulary | Free-form notes cannot be aggregated later |
 | Cluster before claiming | One case is an anecdote; a cluster is a pattern |
 | Count occurrences | Frequency is the first defense against loudness |
-| Rank severity honestly | Blocked, degraded, annoying — the terms must mean something |
+| Rank severity honestly | Blocked, degraded, annoying: the terms must mean something |
 | Trace to adoption impact | "N teams hit this pre-activation" beats "developers dislike it" |
 | Name the sample | "From 23 logged cases this quarter" builds trust |
 | Separate request from need | The stated ask is evidence, not the conclusion |
@@ -67,6 +67,7 @@ The right column is the deliverable: a statement a product manager can paste int
 ## The Signal Pipeline
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     COLLECT["Collect - log raw signals at contact"] --> TAG["Tag - consistent vocabulary"]
     TAG --> CLUSTER["Cluster - patterns with counts and severity"]
@@ -90,7 +91,7 @@ flowchart LR
 ### Insight Brief Template
 
 ```markdown
-## Field Insight — [topic]
+## Field Insight: [topic]
 - Statement: [one sentence a PM can act on]
 - Frequency: [n cases] over [period], sources: [list]
 - Severity: [blocked / degraded / friction] per defined scale
@@ -117,7 +118,7 @@ flowchart LR
 - Product planning documents cite field insights with counts
 - The same insight does not need to be re-raised next quarter
 - Product managers ask for field synthesis before promising features
-- Developers see their reports reflected in decisions — and say so
+- Developers see their reports reflected in decisions, and say so
 - The advocate can reconstruct any claim back to raw logged signals
 
 ## Related Topics
@@ -125,9 +126,9 @@ flowchart LR
 - [[02_Translating_Ecosystem_Needs_for_Engineers]]: synthesis is only half the job; translation is the other
 - [[05_Feedback_Loop_Design]]: systematic collection starts with designed channels
 - [[03_Influencing_the_Roadmap_From_the_Field]]: synthesized insight is the currency of roadmap influence
-- [[04_Customer_and_Developer_Understanding/00_overview|Customer and Developer Understanding]]: the research depth behind good signal
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/04_Customer_and_Developer_Understanding/00_overview|Customer and Developer Understanding]]: the research depth behind good signal
 - [[career-path/14_Product_Manager/03_Prioritization/00_overview|Prioritization (PM)]]: how product weighs what the field delivers
 
 ## Summary
 
-From field signal to product insight is a pipeline: log raw signals at the moment of contact, tag them consistently, cluster them into patterns, and frame each pattern as a frequency-and-severity-backed statement tied to adoption impact — then deliver the ranked shortlist into product's actual planning artifacts. The advocate's credibility is built by what the pipeline reliably produces: not complaints forwarded, but the field's reality made countable, checkable, and actionable.
+From field signal to product insight is a pipeline: log raw signals at the moment of contact, tag them consistently, cluster them into patterns, and frame each pattern as a frequency-and-severity-backed statement tied to adoption impact; then deliver the ranked shortlist into product's actual planning artifacts. The advocate's credibility is built by what the pipeline reliably produces: not complaints forwarded, but the field's reality made countable, checkable, and actionable.

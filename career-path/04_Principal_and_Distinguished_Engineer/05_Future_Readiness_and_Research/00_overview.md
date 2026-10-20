@@ -19,9 +19,9 @@ tags:
 
 ## Why This Matters
 
-Organizations fail the future in two ways: adopting every new technology and losing coherence, or adopting nothing and losing relevance. The principal holds the balance — knowing which signals are early indicators of real shifts, which prototypes reduce genuine uncertainty, and when the organization should lead on adoption versus follow safely.
+Organizations fail the future in two ways: adopting every new technology and losing coherence, or adopting nothing and losing relevance. The principal holds the balance, knowing which signals are early indicators of real shifts, which prototypes reduce genuine uncertainty, and when the organization should lead on adoption versus follow safely.
 
-This area is also about institutionalizing readiness: research partnerships, internal labs, innovation mechanisms, and the culture that treats exploration as legitimate work, not slack. Without a principal who owns readiness, the future is someone's 20% time — and it shows.
+This area is also about institutionalizing readiness: research partnerships, internal labs, innovation mechanisms, and the culture that treats exploration as legitimate work, not slack. Without a principal who owns readiness, the future is someone's 20% time, and it shows.
 
 ## Topics in This Capability Area
 
@@ -38,6 +38,7 @@ This area is also about institutionalizing readiness: research partnerships, int
 ## The Foresight-to-Adoption Pipeline
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SCAN["Horizon scan: signals, papers, startups"] --> FILTER["Filter: relevance, timing, organizational fit"]
     FILTER --> PROTOTYPE["Prototype to reduce uncertainty"]
@@ -47,7 +48,7 @@ flowchart LR
     LEARN --> SCAN
 ```
 
-The pipeline converts noise into organizational capability — not every quarter, but every year.
+The pipeline converts noise into organizational capability, not every quarter, but every year.
 
 ## Staff vs Principal
 
@@ -86,11 +87,11 @@ The pipeline converts noise into organizational capability — not every quarter
 
 ## Related Capabilities
 
-- [[01_Technology_Strategy/00_overview|Technology Strategy]]: foresight feeds strategy; strategy selects bets
-- [[02_Enterprise_and_Systems_of_Systems_Thinking/00_overview|Enterprise and Systems of Systems Thinking]]: ecosystem analysis for technology trends
+- [[career-path/04_Principal_and_Distinguished_Engineer/01_Technology_Strategy/00_overview|Technology Strategy]]: foresight feeds strategy; strategy selects bets
+- [[career-path/04_Principal_and_Distinguished_Engineer/02_Enterprise_and_Systems_of_Systems_Thinking/00_overview|Enterprise and Systems of Systems Thinking]]: ecosystem analysis for technology trends
 - [[career-path/03_Staff_Engineer/03_Technical_Strategy/02_Technology_Betting|Technology Betting (Staff)]]: the bet-sizing foundation this scales
 - [[career-path/18_Applied_AI_Engineer/00_overview|Applied AI Engineer]]: one domain where future readiness is critical today
 
 ## Summary
 
-Future readiness is the principal's institutional bet on tomorrow: scanning the horizon, de-risking through prototypes and research, choosing when to lead versus follow, and building the innovation mechanisms that treat exploration as legitimate work. The organization that never bets on the future arrives there unprepared — and the principal is the person paid to prevent that.
+Future readiness is the principal's institutional bet on tomorrow: scanning the horizon, de-risking through prototypes and research, choosing when to lead versus follow, and building the innovation mechanisms that treat exploration as legitimate work. The organization that never bets on the future arrives there unprepared, and the principal is the person paid to prevent that.

@@ -16,13 +16,13 @@ tags:
 
 # Innovation Mechanisms and Culture
 
-> **Core skill:** The principal engineer designs the organization's innovation capacity — internal labs, innovation funds, hackathon programs, dedicated exploration time, and skunkworks — and governs them so that exploration produces adopted capability, not innovation theater.
+> **Core skill:** The principal engineer designs the organization's innovation capacity (internal labs, innovation funds, hackathon programs, dedicated exploration time, and skunkworks) and governs them so that exploration produces adopted capability, not innovation theater.
 
 ## Why This Matters
 
-Innovation without mechanism is aspiration. When organizations declare "we value innovation" without structures that protect exploration from the gravity of quarterly delivery, innovation happens only when someone steals time from their day job — and the first thing cut under pressure is the thing that was never formally allocated. The principal's role is to design the mechanisms: structural commitments of time, money, and attention that treat exploration as legitimate work.
+Innovation without mechanism is aspiration. When organizations declare "we value innovation" without structures that protect exploration from the gravity of quarterly delivery, innovation happens only when someone steals time from their day job, and the first thing cut under pressure is the thing that was never formally allocated. The principal's role is to design the mechanisms: structural commitments of time, money, and attention that treat exploration as legitimate work.
 
-The harder discipline is governing innovation so that it connects to strategy and adoption. Labs that produce prototypes nobody uses, hackathons that generate enthusiasm that dissipates by Monday, and innovation funds that become slush funds for pet projects — these are innovation theater. The principal designs mechanisms that produce a pipeline of adopted improvements, measured by input quality (how the organization explores) and output adoption (what the exploration produces that ships).
+The harder discipline is governing innovation so that it connects to strategy and adoption. Labs that produce prototypes nobody uses, hackathons that generate enthusiasm that dissipates by Monday, and innovation funds that become slush funds for pet projects. These are innovation theater. The principal designs mechanisms that produce a pipeline of adopted improvements, measured by input quality (how the organization explores) and output adoption (what the exploration produces that ships).
 
 ## Innovation Mechanism Portfolio
 
@@ -35,11 +35,11 @@ The harder discipline is governing innovation so that it connects to strategy an
 | **Skunkworks** | A small team operating outside normal process to pursue a high-risk, high-reward idea | Bounded (3-12 months) | Medium: dedicated small team with autonomy | Radical ideas that would be killed by normal governance |
 | **Innovation sprint** | A team takes a full sprint or cycle to explore a hypothesis with structured output | Per sprint (1-2 weeks) | Low: capacity allocation within existing teams | Hypothesis testing with immediate feedback |
 
-The principal designs the portfolio based on organizational size, maturity, and strategic needs. A 50-person startup might only need exploration time and occasional hackathons. A 5,000-person engineering organization needs a lab, a fund, and a hackathon program — with the principal governing the connections between them.
+The principal designs the portfolio based on organizational size, maturity, and strategic needs. A 50-person startup might only need exploration time and occasional hackathons. A 5,000-person engineering organization needs a lab, a fund, and a hackathon program, with the principal governing the connections between them.
 
 ## Innovation Metrics: Inputs, Not Outputs
 
-The most common innovation failure is measuring output before the mechanism is mature. Innovation investments need input metrics first — is the organization actually exploring? — and output metrics later — is exploration producing adopted capability?
+The most common innovation failure is measuring output before the mechanism is mature. Innovation investments need input metrics first (is the organization actually exploring?) and output metrics later (is exploration producing adopted capability?)
 
 | Metric Type | Metric | What It Measures | When to Use |
 |-------------|--------|-----------------|-------------|
@@ -51,7 +51,7 @@ The most common innovation failure is measuring output before the mechanism is m
 | **Output** | Adopted capability from innovation | Production features, platforms, or tools that trace their origin to an innovation mechanism | After year 2; the ultimate measure |
 | **Output** | Revenue or cost impact | Dollar impact of innovations that shipped | After year 3; requires a mature pipeline |
 
-The principal protects early-stage innovation from premature output pressure. A hackathon program measured by production features in its first year will produce safe, incremental ideas — the opposite of what innovation mechanisms are for.
+The principal protects early-stage innovation from premature output pressure. A hackathon program measured by production features in its first year will produce safe, incremental ideas, the opposite of what innovation mechanisms are for.
 
 ## Innovation Governance
 
@@ -65,7 +65,7 @@ Governance distinguishes innovation from chaos. Without governance, innovation m
 | **Adoption pipeline** | The defined path from innovation prototype to funded production project | Named owner on the receiving team; adoption commitment before innovation project completes |
 | **Portfolio view** | All active innovation projects visible in one place with status, investment, and expected outcome | Updated quarterly; reviewed by the innovation board |
 
-The principal chairs the innovation board or delegates it to a trusted staff engineer. The principal's role is not to evaluate every proposal — it is to design the governance that evaluates proposals fairly, funds the best ones, and ensures the adoption pipeline exists.
+The principal chairs the innovation board or delegates it to a trusted staff engineer. The principal's role is not to evaluate every proposal. It is to design the governance that evaluates proposals fairly, funds the best ones, and ensures the adoption pipeline exists.
 
 ## Connecting Innovation to Strategy
 
@@ -81,6 +81,7 @@ Innovation disconnected from strategy produces interesting but irrelevant output
 ## The Innovation Pipeline
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     IDEAS["Ideas surfaced through mechanisms: labs, funds, hackathons, exploration time, skunkworks"] --> PROPOSE["Proposal with hypothesis, method, success criteria"]
     PROPOSE --> FUND["Innovation board funds or rejects"]
@@ -141,10 +142,10 @@ flowchart TD
 
 - [[03_Prototyping_and_Proof_of_Concept_Leadership]]: the prototype discipline that innovation mechanisms feed
 - [[04_Research_Partnerships_and_Innovation_Ecosystems]]: external partnerships that complement internal innovation
-- [[01_Technology_Strategy/00_overview|Technology Strategy]]: the strategy cycle that sets innovation themes and receives innovation feedback
+- [[career-path/04_Principal_and_Distinguished_Engineer/01_Technology_Strategy/00_overview|Technology Strategy]]: the strategy cycle that sets innovation themes and receives innovation feedback
 - [[career-path/03_Staff_Engineer/07_Organizational_Learning_and_Mentoring/03_Communities_of_Practice|Communities of Practice (Staff)]]: the community structures that surface innovation ideas
 - [[career-path/18_Applied_AI_Engineer/00_overview|Applied AI Engineer]]: an innovation domain where mechanism design is urgent
 
 ## Summary
 
-Innovation mechanisms and culture are the principal's structural commitment to exploration: designing a portfolio of labs, funds, hackathons, exploration time, and skunkworks that protect innovation from quarterly delivery pressure, governing them through an innovation board and decision gates that connect exploration to adoption, and measuring input quality before output impact so that mechanisms have time to mature before they are judged. The principal's legacy is not any single innovation — it is the mechanisms that keep producing innovation after the principal moves on.
+Innovation mechanisms and culture are the principal's structural commitment to exploration: designing a portfolio of labs, funds, hackathons, exploration time, and skunkworks that protect innovation from quarterly delivery pressure, governing them through an innovation board and decision gates that connect exploration to adoption, and measuring input quality before output impact so that mechanisms have time to mature before they are judged. The principal's legacy is not any single innovation. It is the mechanisms that keep producing innovation after the principal moves on.

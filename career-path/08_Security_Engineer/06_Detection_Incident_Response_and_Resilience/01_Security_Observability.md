@@ -70,6 +70,7 @@ Ask four questions for each priority scenario:
 4. **Can we prove it?** Evidence is protected, retrievable, and retained appropriately.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SCENARIO["State attack or response scenario"] --> QUESTIONS["Write investigation questions"]
     QUESTIONS --> EVENTS["Define events context and correlation"]

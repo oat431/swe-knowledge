@@ -5,7 +5,7 @@ capability_area: secure-architecture-and-design
 career_path: security-engineer
 prerequisite:
   - "[[04_Secure_Architecture_Decisions]]"
-  - "[[../01_Threat_Modeling_and_Risk/03_Attack_Surface_and_Trust_Boundaries|Attack Surface and Trust Boundaries]]"
+  - "[[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/03_Attack_Surface_and_Trust_Boundaries|Attack Surface and Trust Boundaries]]"
 tags:
   - career-path
   - security-engineer
@@ -54,6 +54,7 @@ For each important data or authority flow, record:
 ### 3. Secret flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CREATE["Create secret or key authority"] --> STORE["Store under controlled custody"]
     STORE --> RETRIEVE["Retrieve through workload identity"]
@@ -117,7 +118,7 @@ Choose one production secret, signing key, encryption key, or token authority.
 - [[01_Security_Principles_and_Quality_Attributes|Security Principles and Quality Attributes]]
 - [[04_Secure_Architecture_Decisions|Secure Architecture Decisions]]
 - [[06_Resilient_and_Fail_Secure_Design|Resilient and Fail-Secure Design]]
-- [[../01_Threat_Modeling_and_Risk/03_Attack_Surface_and_Trust_Boundaries|Attack Surface and Trust Boundaries]]
+- [[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/03_Attack_Surface_and_Trust_Boundaries|Attack Surface and Trust Boundaries]]
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]
 - [[software-engineering-note/13_Software_Security/01_Security_Fundamentals|Security Fundamentals]]
 - [[body-of-knowledge/CyBOK/09_Software_Security|CyBOK Software Security]]

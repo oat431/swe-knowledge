@@ -28,6 +28,7 @@ Career ladders define the progression framework within your organization. Unders
 - **Set realistic timelines:** Understand typical time-in-level and progression expectations
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A[Junior Engineer] --> B[Mid-Level Engineer]
     B --> C[Senior Engineer]
@@ -35,8 +36,8 @@ flowchart LR
     D --> E[Principal Engineer]
     E --> F[Distinguished Engineer]
     
-    style C fill:#f9f,stroke:#333,stroke-width:2px
-    style D fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#1FB8AB,stroke:#000000,color:#000000
+    style D fill:#00B5FF,stroke:#000000,color:#000000
     
     C -.->|"The jump"| D
 ```
@@ -60,6 +61,7 @@ flowchart LR
 ### Scope Progression
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TB
     subgraph "Scope by Level"
         A["E3: Task scope\nCompletes assigned work"]
@@ -94,6 +96,7 @@ flowchart TB
 Based on Will Larson's "Staff Engineer" framework:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TB
     subgraph "Staff Archetypes"
         A["Tech Lead\nGuides team execution\nand technical direction"]
@@ -117,6 +120,7 @@ flowchart TB
 ### The Promotion Committee's Perspective
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     A[Promotion Packet] --> B[Committee Review]
     C[Manager Presentation] --> B
@@ -224,6 +228,7 @@ Most companies use rubrics with dimensions and level-specific descriptions:
 ### IC vs Management Track
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TB
     subgraph "IC Track"
         A1[Senior Engineer E5]
@@ -329,6 +334,7 @@ Compare your current performance against the next level:
 ### How Calibration Works
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     A[Manager Submits Packet] --> B[Committee Reviews]
     B --> C[Calibration Session]

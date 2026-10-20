@@ -27,6 +27,7 @@ Risk management is not pessimism. It is realism. Every project has risks. The di
 ## Risk Categories
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph TECHNICAL["Technical Risks"]
         T1["Architecture uncertainty"]
@@ -66,6 +67,7 @@ flowchart TD
 ## The Risk Management Process
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     IDENTIFY["1 Identify\nrisks"] --> ASSESS["2 Assess\nlikelihood and impact"]
     ASSESS --> PRIORITIZE["3 Prioritize\nby risk score"]
@@ -239,7 +241,7 @@ New risks this week:
 - [[01_Estimation_and_Forecasting]] : risks affect estimates; include risk buffer
 - [[02_Dependency_Management]] : dependencies are a major source of project risk
 - [[05_Release_Management]] : release risks require mitigation strategies
-- [[02_Problem_Framing_and_Requirements/08_Requirements_Risk]] : requirements risks overlap with project risks
+- [[career-path/02_Senior_Software_Engineer/02_Problem_Framing_and_Requirements/08_Requirements_Risk]] : requirements risks overlap with project risks
 - [[software-engineering-note/09_Software_Engineering_Management/08_Risk_Management_and_Control]] : SWEBOK risk management
 - [[body-of-knowledge/PMBOK/10_Risk_Performance_Domain]] : PMBOK risk management
 

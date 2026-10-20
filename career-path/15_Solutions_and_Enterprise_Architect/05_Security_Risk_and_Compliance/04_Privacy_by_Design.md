@@ -16,11 +16,11 @@ tags:
 
 # Privacy by Design
 
-> **Core skill:** The architect embeds data protection principles — minimization, purpose limitation, consent, retention, and individual rights — into the structure of systems, so privacy is a property of the design rather than a promise in a policy.
+> **Core skill:** The architect embeds data protection principles (minimization, purpose limitation, consent, retention, and individual rights) into the structure of systems, so privacy is a property of the design rather than a promise in a policy.
 
 ## Why This Matters
 
-Privacy regimes the world over agree on a direction: collect less, bind data to declared purposes, let people exercise rights over their information, and delete what is no longer needed. In practice these obligations land on architecture — what data the estate collects, where copies flow, how purposes are enforced at access time, and which workflows can answer an access or deletion request across every store. Privacy that is not designed is eventually enforced by incident.
+Privacy regimes the world over agree on a direction: collect less, bind data to declared purposes, let people exercise rights over their information, and delete what is no longer needed. In practice these obligations land on architecture: what data the estate collects, where copies flow, how purposes are enforced at access time, and which workflows can answer an access or deletion request across every store. Privacy that is not designed is eventually enforced by incident.
 
 The hard part is not the principle but the propagation. A system that deletes on request from its primary store while caches, backups, analytics warehouses, and partner feeds keep copies is not compliant with the obligation it claims to satisfy. Responsibility, like deletion, must propagate: every derived copy inherits the classification, the purpose binding, and the lifecycle of its source. The architect designs the flow, not just the database.
 
@@ -61,6 +61,7 @@ Consent that exists in a database row but not in the enforcement path is theater
 ## Individual Rights as Architecture Flows
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     MINIMIZE["Collect the minimum data"] --> PURPOSE["Bind data to a declared purpose"]
     PURPOSE["Bind data to a declared purpose"] --> ENFORCE["Enforce purpose at every access"]
@@ -68,7 +69,7 @@ flowchart LR
     LIFECYCLE["Enforce retention and deletion"] --> RIGHTS["Answer access and deletion requests across all stores"]
 ```
 
-Each right — access, correction, deletion, portability — is a workflow that must reach every store holding a copy. The test of the design is whether an engineer can enumerate the stores, or only the primary one.
+Each right (access, correction, deletion, portability) is a workflow that must reach every store holding a copy. The test of the design is whether an engineer can enumerate the stores, or only the primary one.
 
 ## Practical Applications
 
@@ -83,7 +84,7 @@ Each right — access, correction, deletion, portability — is a workflow that 
 ### Privacy Impact Assessment
 
 ```markdown
-## Privacy Impact Assessment — <initiative>
+## Privacy Impact Assessment: <initiative>
 
 | Question | Answer |
 |----------|--------|
@@ -118,8 +119,8 @@ Each right — access, correction, deletion, portability — is a workflow that 
 - [[03_Compliance_and_Regulatory_Architecture]]
 - [[01_Enterprise_Security_Architecture]]
 - [[06_Third_Party_and_Supply_Chain_Risk]]
-- [[04_Enterprise_Data_Architecture/00_overview|Enterprise Data Architecture]]
+- [[career-path/15_Solutions_and_Enterprise_Architect/04_Enterprise_Data_Architecture/00_overview|Enterprise Data Architecture]]
 
 ## Summary
 
-Privacy by design makes data protection structural: purposes bound at collection and enforced at access, consent stored and consulted rather than merely recorded, protective techniques matched to sensitivity, and individual rights implemented as flows across every store that holds a copy. The architect's test is simple and unforgiving — could the enterprise answer an access or deletion request from its design, or would it need an excavation?
+Privacy by design makes data protection structural: purposes bound at collection and enforced at access, consent stored and consulted rather than merely recorded, protective techniques matched to sensitivity, and individual rights implemented as flows across every store that holds a copy. The architect's test is simple and unforgiving: could the enterprise answer an access or deletion request from its design, or would it need an excavation?

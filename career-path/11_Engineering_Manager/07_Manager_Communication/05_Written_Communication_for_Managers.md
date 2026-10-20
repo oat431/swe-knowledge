@@ -16,13 +16,13 @@ tags:
 
 # Written Communication for Managers
 
-> **Core skill:** Writing documents that carry decisions — BLUF-first structure, context, rationale, and implications — plus performance writing that is factual, specific, and defensible.
+> **Core skill:** Writing documents that carry decisions (BLUF-first structure, context, rationale, and implications) plus performance writing that is factual, specific, and defensible.
 
 ## Why This Matters
 
-Writing is the manager's durable voice. Meetings evaporate; documents persist. The memo the manager writes about a strategy shift, the performance review that justifies a promotion, the announcement that explains a policy — these outlive the room and get read by people who were not there, including people who will judge the manager's judgment.
+Writing is the manager's durable voice. Meetings evaporate; documents persist. The memo the manager writes about a strategy shift, the performance review that justifies a promotion, the announcement that explains a policy; these outlive the room and get read by people who were not there, including people who will judge the manager's judgment.
 
-Written communication is also the manager's leverage: a well-structured document lets the team absorb context on their own time, turns meetings from presentation into discussion, and creates the record that keeps decisions honest. Poor writing costs the same time but delivers none of it — burying the point, softening the truth, or leaving the reader to reconstruct the decision from fragments.
+Written communication is also the manager's leverage: a well-structured document lets the team absorb context on their own time, turns meetings from presentation into discussion, and creates the record that keeps decisions honest. Poor writing costs the same time but delivers none of it: burying the point, softening the truth, or leaving the reader to reconstruct the decision from fragments.
 
 ## The Manager Writing Portfolio
 
@@ -38,7 +38,7 @@ Each document type has its own discipline, but they share one spine: the reader 
 
 ## Writing That Carries Decisions
 
-The BLUF structure — bottom line up front:
+The BLUF structure, bottom line up front:
 
 | Element | Content | Position |
 |---------|---------|----------|
@@ -47,13 +47,13 @@ The BLUF structure — bottom line up front:
 | Rationale | Why this decision, why now | Third |
 | Implications | What changes, for whom, by when | Fourth |
 
-Example: "We are delaying the reporting upgrade to Q2 — the migration needs the capacity. The migration slips two weeks per month of delay, and Q2 delivery absorbs the impact. Your planning should assume the current timeline holds."
+Example: "We are delaying the reporting upgrade to Q2: the migration needs the capacity. The migration slips two weeks per month of delay, and Q2 delivery absorbs the impact. Your planning should assume the current timeline holds."
 
 The reader who reads only the first paragraph still gets the decision; the reader who reads everything gets the reasoning. That is the test of the structure.
 
 ## Document-Driven Decisions
 
-The memo culture — read first, discuss after:
+The memo culture, read first, discuss after:
 
 - The document carries the proposal and its reasoning
 - The meeting discusses the document, not the topic from zero
@@ -66,7 +66,7 @@ The memo culture — read first, discuss after:
 | Whoever talks loudest shapes the outcome | The written case shapes the outcome |
 | Decisions live in minutes and memory | Decisions live in the document |
 
-The discipline costs the writer time and saves everyone else's — which is exactly the right trade for a manager.
+The discipline costs the writer time and saves everyone else's, which is exactly the right trade for a manager.
 
 ## Performance Writing
 
@@ -74,10 +74,10 @@ Performance documents are legal-grade communication: they will be reread, quoted
 
 | Principle | Example |
 |-----------|---------|
-| Factual | "Shipped X on date, met the SLO" — not "did great work" |
-| Specific | "The review found the caching gap in three incidents" — not "quality issues" |
-| Behavior-based | "Repeatedly escalated late, after impact" — not "poor communicator" |
-| Patterned | "Three consecutive quarters of missed estimates" — not "one bad quarter" |
+| Factual | "Shipped X on date, met the SLO", not "did great work" |
+| Specific | "The review found the caching gap in three incidents", not "quality issues" |
+| Behavior-based | "Repeatedly escalated late, after impact", not "poor communicator" |
+| Patterned | "Three consecutive quarters of missed estimates", not "one bad quarter" |
 | Defensible | Every claim survives a reader asking "what is the evidence?" |
 
 If a performance sentence would embarrass you in an appeal, rewrite it before it ships. The document is not the manager's opinion; it is the evidence with the conclusion attached.
@@ -122,6 +122,7 @@ AI drafting is a tool with lines:
 The test: if the document were read back to the team, would it sound like you and hold up as yours? Drafting help is fine; authored judgment is not optional.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DRAFT["Draft the content"] --> STRUCTURE["Apply BLUF structure"]
     STRUCTURE --> CUT["Cut by a third"]
@@ -145,7 +146,7 @@ flowchart TD
 ### Memo Template
 
 ```markdown
-## Memo: [Title] — [date]
+## Memo: [Title], [date]
 ## Bottom line
 - [The decision or message, in two sentences]
 
@@ -156,11 +157,11 @@ flowchart TD
 - [Why this decision, why now]
 
 ## Implications
-- [What changes — for whom, by when]
+- [What changes, for whom, by when]
 - [What does not change]
 
 ## Follow-up
-- [Questions to: owner] — [decisions needed by: date]
+- [Questions to: owner]; [decisions needed by: date]
 ```
 
 ## Common Pitfalls
@@ -180,7 +181,7 @@ flowchart TD
 - Performance documents survive scrutiny without revision
 - Meetings start from documents instead of presentations
 - The team quotes your memos accurately months later
-- Your writing sounds like you — consistently
+- Your writing sounds like you, consistently
 
 ## Related Topics
 
@@ -191,4 +192,4 @@ flowchart TD
 
 ## Summary
 
-Written communication for managers is decision infrastructure: BLUF-first documents that carry context, rationale, and implications; a memo culture where reading precedes discussion; performance writing grounded in facts, specifics, and behavior; structure designed for skimmers; a process of draft, sleep, and cut; and AI assistance bounded by your judgment and voice. The manager's writing is the team's durable memory — and the reader who finds the point in the first paragraph is the reader who trusts the writer.
+Written communication for managers is decision infrastructure: BLUF-first documents that carry context, rationale, and implications; a memo culture where reading precedes discussion; performance writing grounded in facts, specifics, and behavior; structure designed for skimmers; a process of draft, sleep, and cut; and AI assistance bounded by your judgment and voice. The manager's writing is the team's durable memory, and the reader who finds the point in the first paragraph is the reader who trusts the writer.

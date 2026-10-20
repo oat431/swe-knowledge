@@ -16,13 +16,13 @@ tags:
 
 # Managing Experienced Engineers
 
-> **Core skill:** Managing senior and staff engineers as partners — delegating problems rather than tasks, growing their scope and influence, renegotiating former-peer relationships, and watching their attrition risk.
+> **Core skill:** Managing senior and staff engineers as partners: delegating problems rather than tasks, growing their scope and influence, renegotiating former-peer relationships, and watching their attrition risk.
 
 ## Why This Matters
 
-Experienced engineers carry the team's technical depth, mentor its juniors, and absorb its hardest problems. They also need the least management — and resent the most of it. The manager who supervises a senior like a junior loses them twice: their judgment goes unused, and their loyalty goes elsewhere. The manager who partners with them multiplies the whole team's capability, because a senior who is trusted delegates down and grows the team from within.
+Experienced engineers carry the team's technical depth, mentor its juniors, and absorb its hardest problems. They also need the least management, and resent the most of it. The manager who supervises a senior like a junior loses them twice: their judgment goes unused, and their loyalty goes elsewhere. The manager who partners with them multiplies the whole team's capability, because a senior who is trusted delegates down and grows the team from within.
 
-The stakes are asymmetric. Seniors and staff have options, networks, and a quiet market; when they disengage, they leave quietly and the damage is discovered late — after the knowledge walked out. Managing experienced engineers well is not a nicety; it is the retention of the team's core capability.
+The stakes are asymmetric. Seniors and staff have options, networks, and a quiet market; when they disengage, they leave quietly and the damage is discovered late, after the knowledge walked out. Managing experienced engineers well is not a nicety; it is the retention of the team's core capability.
 
 ## Partnership Not Supervision
 
@@ -34,17 +34,17 @@ The stakes are asymmetric. Seniors and staff have options, networks, and a quiet
 | Giving feedback top-down | Trading feedback both ways |
 | Holding them to the process | Holding the process to their judgment |
 
-The partner manager's stance: "you own this; I am here to resource, unblock, and argue with you when needed." The senior who must ask permission for every decision stops deciding — and the manager becomes the bottleneck they were hired to avoid.
+The partner manager's stance: "you own this; I am here to resource, unblock, and argue with you when needed." The senior who must ask permission for every decision stops deciding, and the manager becomes the bottleneck they were hired to avoid.
 
 ## Delegating Problems, Not Tasks
 
 | Wrong: tasks | Right: problems |
 |--------------|-----------------|
-| "Write the migration plan" | "The legacy store is costing us — fix it, however you decide" |
+| "Write the migration plan" | "The legacy store is costing us: fix it, however you decide" |
 | "Present at the architecture forum" | "Own the platform direction; I need you represented there" |
 | "Mentor the new hire" | "Bring the new hire to productivity; you choose how" |
 
-Delegating problems hands over the decision space with the work: the what, the how, and often the who. The manager provides context, constraints, and a check-in point — then gets out of the way. The measure of success is not that it was done the manager's way, but that it was done well.
+Delegating problems hands over the decision space with the work: the what, the how, and often the who. The manager provides context, constraints, and a check-in point, then gets out of the way. The measure of success is not that it was done the manager's way, but that it was done well.
 
 ## Career Development for Seniors
 
@@ -54,23 +54,23 @@ Delegating problems hands over the decision space with the work: the what, the h
 | Influence growth | Their judgment shaping people beyond the team | Cross-team forums, stakeholder surfaces, speaking roles |
 | Staff-level tracks | Specialist depth or architect breadth | A named track with real criteria and evidence collection |
 
-Senior development is not about skills — they have skills. It is about leverage: whose problems they own, whose decisions they shape, who they grow. The manager's quarterly question for each senior: "What did you influence this quarter that you did not touch directly?"
+Senior development is not about skills. They have skills. It is about leverage: whose problems they own, whose decisions they shape, who they grow. The manager's quarterly question for each senior: "What did you influence this quarter that you did not touch directly?"
 
 ## Keeping Seniors Challenged
 
 | Lever | What it provides |
 |-------|------------------|
-| Hard problems | The unsolved, risky, high-stakes work — not the backlog's leftovers |
+| Hard problems | The unsolved, risky, high-stakes work; not the backlog's leftovers |
 | Mentoring roles | Growing others exercises their judgment and renews their purpose |
-| Cross-team scope | New surfaces, new politics, new constraints — new learning |
-| Technical ownership | The platform, the architecture, the standards — their name on it |
+| Cross-team scope | New surfaces, new politics, new constraints; new learning |
+| Technical ownership | The platform, the architecture, the standards; their name on it |
 | Failure with review | Permission to attempt the risky thing with a safe landing |
 
 Challenge is the senior's oxygen. The manager audits challenge annually per senior: what did they learn, what got harder, what did they own that they could not have owned last year? A senior with two flat years is a senior interviewing elsewhere.
 
 ## The Former Peer Transition
 
-Promoting a peer changes both relationships. The manager who was their equal now evaluates them — and everyone on the team is watching how it is handled.
+Promoting a peer changes both relationships. The manager who was their equal now evaluates them, and everyone on the team is watching how it is handled.
 
 | Stage | What happens | The manager's move |
 |-------|--------------|--------------------|
@@ -79,7 +79,7 @@ Promoting a peer changes both relationships. The manager who was their equal now
 | First frictions | Old peer habits surface in review and direction | Address immediately, privately, with the new frame |
 | New equilibrium | Partnership with clear boundaries | Keep the candor of the old relationship, add the clarity of the new |
 
-The classic failure is the manager who keeps treating the promoted peer as a peer at work — avoiding direction and diluting feedback — out of loyalty to the old friendship. The friendship survives the boundary; it rarely survives the ambiguity.
+The classic failure is the manager who keeps treating the promoted peer as a peer at work (avoiding direction and diluting feedback) out of loyalty to the old friendship. The friendship survives the boundary; it rarely survives the ambiguity.
 
 ## When a Senior Outgrows the Team
 
@@ -89,7 +89,7 @@ The classic failure is the manager who keeps treating the promoted peer as a pee
 | Outgrows the role | Wants management, architecture, or a new domain | Path conversations; honest reframing |
 | Outgrows the company | Ambition exceeds what this org can offer | Celebrate; keep the relationship; learn from the exit |
 
-The manager's duty is honesty: when the ceiling is real, say so and help them find the next thing — internally first. A senior forced to stay under a ceiling becomes a resentful senior, which is worse than a well-managed departure.
+The manager's duty is honesty: when the ceiling is real, say so and help them find the next thing, internally first. A senior forced to stay under a ceiling becomes a resentful senior, which is worse than a well-managed departure.
 
 ## Senior Attrition Risk
 
@@ -103,11 +103,12 @@ Seniors leave quietly and they leave for reasons the manager usually hears only 
 | Comparison talk | "Other teams do X" becomes frequent | Listen for the gap they are describing |
 | Quiet professionalism | Everything fine, nothing engaged | The exit is already planned; have the real conversation |
 
-The retention playbook for seniors: hard problems, real influence, honest career talk, and market-competitive treatment — in that order. The manager checks in on each senior's engagement quarterly, with the direct question asked without drama: "What would make you leave, and what would make you stay?"
+The retention playbook for seniors: hard problems, real influence, honest career talk, and market-competitive treatment, in that order. The manager checks in on each senior's engagement quarterly, with the direct question asked without drama: "What would make you leave, and what would make you stay?"
 
 ## The Partnership Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PARTNER["Treat them as partners"] --> DELEGATE["Delegate problems not tasks"]
     DELEGATE --> GROW["Grow scope and influence"]
@@ -155,4 +156,4 @@ flowchart TD
 
 ## Summary
 
-Managing experienced engineers is partnership: delegating problems rather than tasks, growing scope and influence instead of skills, keeping them challenged with hard problems and cross-team surfaces, and renegotiating former-peer relationships with explicit frames. The manager watches attrition signals on a cadence — the direct stay-and-leave question asked quarterly — and treats the senior as the team's core capability to protect, not another report to supervise.
+Managing experienced engineers is partnership: delegating problems rather than tasks, growing scope and influence instead of skills, keeping them challenged with hard problems and cross-team surfaces, and renegotiating former-peer relationships with explicit frames. The manager watches attrition signals on a cadence (the direct stay-and-leave question asked quarterly) and treats the senior as the team's core capability to protect, not another report to supervise.

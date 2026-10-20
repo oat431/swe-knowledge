@@ -16,13 +16,13 @@ tags:
 
 # Evaluation Reports
 
-> **Core skill:** The architect produces evaluation reports that are actionable — structured for different readerships, anchored in evidence, carrying findings with owners and dates, and archived as governance artifacts for future reference.
+> **Core skill:** The architect produces evaluation reports that are actionable, structured for different readerships, anchored in evidence, carrying findings with owners and dates, and archived as governance artifacts for future reference.
 
 ## Why This Matters
 
-An evaluation without a report is a meeting that happened. The value of evaluation is not the experience of being evaluated — it is the documented findings, risks, non-risks, and action plan that outlast the session. Without a report, findings fade from memory, actions drift without owners, and six months later nobody can prove the architecture was ever reviewed.
+An evaluation without a report is a meeting that happened. The value of evaluation is not the experience of being evaluated. It is the documented findings, risks, non-risks, and action plan that outlast the session. Without a report, findings fade from memory, actions drift without owners, and six months later nobody can prove the architecture was ever reviewed.
 
-Evaluation reports also serve governance. Regulators, auditors, and due-diligence reviewers ask: "Was this architecture evaluated? What was found? What was done about it?" A well-structured evaluation report answers all three questions. A missing report answers none — and the inference, in regulated contexts, is that evaluation did not happen.
+Evaluation reports also serve governance. Regulators, auditors, and due-diligence reviewers ask: "Was this architecture evaluated? What was found? What was done about it?" A well-structured evaluation report answers all three questions. A missing report answers none, and the inference, in regulated contexts, is that evaluation did not happen.
 
 ## Report Structure
 
@@ -80,7 +80,7 @@ Evaluation reports also serve governance. Regulators, auditors, and due-diligenc
 |---------|----------|-----------|
 | **Executive Summary** | Leadership, external reviewers | Decision-makers who will read one page and act |
 | **Architecture Overview** | Stakeholders not in the room | Colleagues who need context to understand findings |
-| **Findings** | Architecture team, engineering | Precise, actionable — every finding can become a backlog item |
+| **Findings** | Architecture team, engineering | Precise, actionable: every finding can become a backlog item |
 | **Action Plan** | Owners, program management | Trackable: who, what, when, with status |
 | **Appendices** | Future architects, auditors | Complete record: scenarios, utility tree, matrices |
 
@@ -94,7 +94,7 @@ Evaluation reports also serve governance. Regulators, auditors, and due-diligenc
 
 ## Non-Risks: Documenting What Works
 
-Non-risks are as important as risks. They document architectural decisions that were scrutinized and found safe — preventing future teams from re-evaluating decisions that were already validated.
+Non-risks are as important as risks. They document architectural decisions that were scrutinized and found safe, preventing future teams from re-evaluating decisions that were already validated.
 
 | Non-Risk | Why It Is Safe |
 |----------|----------------|
@@ -108,8 +108,8 @@ An action plan without follow-up is a wish list. The evaluation report must incl
 
 | Follow-Up Mechanism | When to Use |
 |--------------------|-------------|
-| **Actions as backlog items** | Engineering actions — create tickets in the team's backlog with evaluation report reference |
-| **Quarterly action review** | Architecture-team-owned actions — review all open evaluation actions at the quarterly architecture review |
+| **Actions as backlog items** | Engineering actions: create tickets in the team's backlog with evaluation report reference |
+| **Quarterly action review** | Architecture-team-owned actions: review all open evaluation actions at the quarterly architecture review |
 | **Risk register sync** | Risks from evaluation feed into the architecture risk register; reviewed at each per-increment checkpoint |
 | **Stakeholder notification** | When high-priority actions close, notify the stakeholders who raised the original concern |
 
@@ -124,6 +124,7 @@ An action plan without follow-up is a wish list. The evaluation report must incl
 | **Retained** | Reports retained for the life of the system plus regulatory retention period |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     REPORT["Evaluation Report Written"] --> ARCHIVE["Archive in docs/architecture/evaluations/"]
     ARCHIVE --> INDEX["Update Evaluation Index"]
@@ -140,7 +141,7 @@ flowchart TD
 
 - [ ] Executive summary is readable by leadership within 3 minutes
 - [ ] Every risk has likelihood, impact, mitigation, owner, and date
-- [ ] At least 3 non-risks are documented — what passed scrutiny
+- [ ] At least 3 non-risks are documented: what passed scrutiny
 - [ ] Sensitivity and trade-off points are documented with the parameters that drive them
 - [ ] Action plan has owners who have acknowledged their actions
 - [ ] Appendices include the scenarios and utility tree used in evaluation
@@ -162,12 +163,12 @@ flowchart TD
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
-| **Risks without specifics** | "Performance may be an issue" — nobody can act on it | Specific: parameter, threshold, effect, mitigation, owner, date |
-| **Missing non-risks** | Report reads like a failure catalog — erodes trust in the architecture | Document what passed scrutiny; non-risks prove evaluation was balanced |
-| **Action plan without owners** | Actions listed with no accountability — nothing changes | Every action has a named owner who has acknowledged it |
-| **Report shelved after delivery** | Findings never acted upon — evaluation had no impact | Extract actions to backlog; track closure at quarterly reviews |
+| **Risks without specifics** | "Performance may be an issue"; nobody can act on it | Specific: parameter, threshold, effect, mitigation, owner, date |
+| **Missing non-risks** | Report reads like a failure catalog; erodes trust in the architecture | Document what passed scrutiny; non-risks prove evaluation was balanced |
+| **Action plan without owners** | Actions listed with no accountability; nothing changes | Every action has a named owner who has acknowledged it |
+| **Report shelved after delivery** | Findings never acted upon; evaluation had no impact | Extract actions to backlog; track closure at quarterly reviews |
 | **No evaluation index** | Reports exist but nobody knows where or how many | Maintain an index; link from the architecture description |
-| **Report as gatekeeping artifact** | "The evaluation failed" — report used to block progress, not to guide it | Report describes findings and actions; it does not issue pass/fail verdicts |
+| **Report as gatekeeping artifact** | "The evaluation failed": report used to block progress, not to guide it | Report describes findings and actions; it does not issue pass/fail verdicts |
 
 ## Success Indicators
 
@@ -183,9 +184,9 @@ flowchart TD
 - [[01_Architecture_Evaluation_Methods]]
 - [[04_Risk_Identification_in_Architecture]]
 - [[06_Continuous_Architecture_Evaluation]]
-- [[03_Architecture_Description_and_Views/00_overview|Architecture Description and Views]]
+- [[career-path/06_Software_Architect/03_Architecture_Description_and_Views/00_overview|Architecture Description and Views]]
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/01_Technical_Writing|Technical Writing (Senior)]]
 
 ## Summary
 
-Evaluation reports transform architecture evaluation from an event into a governance artifact. A well-structured report — executive summary for leadership, findings with precision for the architecture team, non-risks for balance, and an action plan with owners and dates for accountability — ensures that evaluation produces change, not just conversation. The report is archived, indexed, and linked to ADRs so that future architects, auditors, and reviewers can trace from structural decisions back to the evidence that validated them.
+Evaluation reports transform architecture evaluation from an event into a governance artifact. A well-structured report (executive summary for leadership, findings with precision for the architecture team, non-risks for balance, and an action plan with owners and dates for accountability) ensures that evaluation produces change, not just conversation. The report is archived, indexed, and linked to ADRs so that future architects, auditors, and reviewers can trace from structural decisions back to the evidence that validated them.

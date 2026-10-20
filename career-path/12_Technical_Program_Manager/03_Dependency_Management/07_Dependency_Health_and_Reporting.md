@@ -16,13 +16,13 @@ tags:
 
 # Dependency Health and Reporting
 
-> **Core skill:** Making dependency status visible and actionable — to teams, sponsors, and stakeholders — through a structured health dashboard that surfaces what is at risk, what has changed, and what needs attention, without drowning the audience in the full dependency map.
+> **Core skill:** Making dependency status visible and actionable (to teams, sponsors, and stakeholders) through a structured health dashboard that surfaces what is at risk, what has changed, and what needs attention, without drowning the audience in the full dependency map.
 
 ## Why This Matters
 
-A dependency map that nobody reads is not a management tool — it is a documentation exercise. The map's value is realized only when its status is visible to the people who can act on it: teams that need to adjust their plans, sponsors who can unblock stalled dependencies, and stakeholders who need to understand why the program's date is moving.
+A dependency map that nobody reads is not a management tool. It is a documentation exercise. The map's value is realized only when its status is visible to the people who can act on it: teams that need to adjust their plans, sponsors who can unblock stalled dependencies, and stakeholders who need to understand why the program's date is moving.
 
-Dependency health reporting answers the questions each audience is asking. The team lead wants to know: "Which of my incoming dependencies are at risk?" The sponsor wants to know: "What are the top three dependency threats to the program date?" The external partner wants to know: "Are we meeting our commitments?" A single report cannot serve all three — so the TPM produces multiple views from the same underlying data.
+Dependency health reporting answers the questions each audience is asking. The team lead wants to know: "Which of my incoming dependencies are at risk?" The sponsor wants to know: "What are the top three dependency threats to the program date?" The external partner wants to know: "Are we meeting our commitments?" A single report cannot serve all three, so the TPM produces multiple views from the same underlying data.
 
 Health reporting also creates accountability. When a dependency shows red in the dashboard for three consecutive weeks, the pattern is visible to everyone. It is harder to ignore a red dependency on a shared dashboard than a red dependency buried in a spreadsheet only the TPM reads. Visibility is leverage.
 
@@ -38,7 +38,7 @@ The dashboard is a single-page view of the entire dependency portfolio, stratifi
 | **Blocked** | Delivery stopped; dependency cannot proceed without intervention | Red | Immediate escalation; contingency activated |
 | **Resolved** | Delivered and accepted; dependency closed | Grey | Archived with resolution note |
 
-The dashboard shows every dependency's status, criticality, owner, need-by date, and the last status change date. Dependencies are sorted by criticality and health — red critical dependencies at the top, green low-criticality at the bottom.
+The dashboard shows every dependency's status, criticality, owner, need-by date, and the last status change date. Dependencies are sorted by criticality and health: red critical dependencies at the top, green low-criticality at the bottom.
 
 ## Audience-Specific Views
 
@@ -50,7 +50,7 @@ The dashboard shows every dependency's status, criticality, owner, need-by date,
 | **External partners** | Their commitments to the program; program assessment of their status | Per the contract's reporting cadence | Formal status report |
 | **Program team** | Full dashboard; trend data; contingency consumption | Weekly | Living dashboard; reviewed in program status |
 
-The TPM curates the view for each audience. The full dashboard is visible to everyone — but the TPM highlights what matters for each audience rather than expecting them to extract it themselves.
+The TPM curates the view for each audience. The full dashboard is visible to everyone, but the TPM highlights what matters for each audience rather than expecting them to extract it themselves.
 
 ## The Program Status Integration
 
@@ -64,7 +64,7 @@ Dependency health is not a separate meeting. It is integrated into the existing 
 | **Decisions needed** | Escalation packages for blocked dependencies |
 | **Forward look** | Dependencies coming due in the next period; watch-list additions |
 
-The TPM spends five minutes of the program status review on dependency health — no more, no less. The dashboard carries the detail; the review carries the decisions.
+The TPM spends five minutes of the program status review on dependency health, no more, no less. The dashboard carries the detail; the review carries the decisions.
 
 ## Trend Reporting
 
@@ -78,7 +78,7 @@ Point-in-time status is necessary but insufficient. Trends reveal whether the de
 | **Contract change frequency** | How often are contracts being renegotiated? | Rising = instability in the dependency portfolio |
 | **Contingency consumption rate** | Buffer consumed per period vs buffer remaining | Ahead of plan = contingency will run out before program end |
 
-The TPM reads trends at a monthly cadence and surfaces deteriorating trends to the sponsor. A program where the red count is steadily rising may be on track this month — but it will not be next month.
+The TPM reads trends at a monthly cadence and surfaces deteriorating trends to the sponsor. A program where the red count is steadily rising may be on track this month, but it will not be next month.
 
 ## The Dependency Health Review Meeting
 
@@ -92,7 +92,7 @@ For programs with many dependencies, a brief dedicated health review keeps the s
 | Upcoming need-by dates (next 2 weeks) | 5 min | Forward look: which dependencies are approaching their commitment dates |
 | Escalation decisions | 5 min | Decisions needed from the group |
 
-Total: 30 minutes, weekly. The meeting is attended by team leads and the TPM. The sponsor attends when there are escalation decisions to make — otherwise they receive the summary.
+Total: 30 minutes, weekly. The meeting is attended by team leads and the TPM. The sponsor attends when there are escalation decisions to make; otherwise they receive the summary.
 
 ## Reporting to External Partners
 
@@ -101,12 +101,12 @@ External dependency health reporting is both a communication and a relationship-
 | Practice | Why It Matters |
 |----------|----------------|
 | **Share your assessment before the meeting** | Give the partner time to prepare their response; no surprises |
-| **Report on their commitments, not their process** | "Milestone 3 was due 10/01; status is Yellow" — not "your team seems disorganized" |
+| **Report on their commitments, not their process** | "Milestone 3 was due 10/01; status is Yellow", not "your team seems disorganized" |
 | **Document every status exchange** | External partners' status claims are commitments; written record matters if they fail |
 | **Tie status to contract milestones** | Status is measured against the contracted deliverable, not against your evolving needs |
 | **Escalate internally before telling the partner they are Red** | The internal response (contingency, re-scope) must be aligned before the hard conversation |
 
-The external partner report is formal, factual, and documented. It is also the evidence trail if the relationship deteriorates into a contractual dispute — write every status report as if it may one day be read by a lawyer, because in the worst case it will be.
+The external partner report is formal, factual, and documented. It is also the evidence trail if the relationship deteriorates into a contractual dispute. Write every status report as if it may one day be read by a lawyer, because in the worst case it will be.
 
 ## Tooling and Automation
 
@@ -151,8 +151,8 @@ The tool should reduce the TPM's administrative burden, not increase it. A share
 - [[02_Dependency_Classification]]: dashboard sorting by criticality
 - [[05_Dependency_Risk_and_Contingency]]: contingency consumption tracked in trends
 - [[06_Unblocking_Escalations]]: escalation status in the dashboard
-- [[../04_Risk_and_Issue_Leadership/05_RAID_Log_Management|RAID Log Management]]: RAID log as the risk-side dashboard counterpart
+- [[career-path/12_Technical_Program_Manager/04_Risk_and_Issue_Leadership/05_RAID_Log_Management|RAID Log Management]]: RAID log as the risk-side dashboard counterpart
 
 ## Summary
 
-Dependency health and reporting is the TPM's visibility discipline: a living dashboard that shows every dependency's status, sorted by criticality, with curated views for each audience. It is integrated into the program status cycle, trended over time, and drives action — because a red dependency on a shared dashboard is harder to ignore than a red dependency in a private spreadsheet. The dashboard is not the point; the decisions it triggers are the point.
+Dependency health and reporting is the TPM's visibility discipline: a living dashboard that shows every dependency's status, sorted by criticality, with curated views for each audience. It is integrated into the program status cycle, trended over time, and drives action, because a red dependency on a shared dashboard is harder to ignore than a red dependency in a private spreadsheet. The dashboard is not the point; the decisions it triggers are the point.

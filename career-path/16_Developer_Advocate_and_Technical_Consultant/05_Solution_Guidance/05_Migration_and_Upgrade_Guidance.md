@@ -16,7 +16,7 @@ tags:
 
 # Migration and Upgrade Guidance
 
-> **Core skill:** Planning and supporting moves between states — version upgrades, platform changes, and data migrations — so that cutovers are rehearsed, reversible, and boring.
+> **Core skill:** Planning and supporting moves between states (version upgrades, platform changes, and data migrations) so that cutovers are rehearsed, reversible, and boring.
 
 ## Why This Matters
 
@@ -65,6 +65,7 @@ Most migrations spend most of their life in coexistence, and that is where compl
 ## The Migration Sequence
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     INVENTORY["Inventory - systems, data, dependencies"] --> PATH["Design - path, coexistence, rollback"]
     PATH --> REHEARSE["Rehearse - dry runs with the real team"]
@@ -88,15 +89,15 @@ flowchart LR
 ### Migration Plan Template
 
 ```markdown
-## Migration Plan — [source to target]
+## Migration Plan: [source to target]
 - Scope: [systems, data, interfaces in and out]
 - Out of scope: [explicit exclusions]
-- Coexistence model: [dual run / bridge / facade] — owner: [name]
+- Coexistence model: [dual run / bridge / facade], owner: [name]
 - Cutover strategy: [big bang / phased / parallel / strangler]
 - Rollback: [trigger conditions, steps, maximum time]
 - Rehearsal log: [date, environment, findings, fixes]
 - Verification: [queries, checks, baselines, acceptance]
-- Decommission date: [date] — owner: [name]
+- Decommission date: [date], owner: [name]
 ```
 
 ## Common Pitfalls
@@ -113,7 +114,7 @@ flowchart LR
 ## Success Indicators
 
 - Cutovers run as rehearsed, with no first-time steps in production
-- Rollback exists, is tested, and — when invoked — works as documented
+- Rollback exists, is tested, and (when invoked) works as documented
 - Data verification passes before the old system is retired
 - Coexistence bridges are removed on schedule, with their owners named
 - The old estate's costs actually disappear after decommission
@@ -124,8 +125,8 @@ flowchart LR
 - [[01_Problem_to_Solution_Mapping]]: the target state should trace to a framed need
 - [[06_Adoption_Strategy_with_Customers]]: teams must adopt the new state for the move to count
 - [[career-path/07_SRE_and_Platform_Engineer/06_Developer_Platform/00_overview|Developer Platform (SRE)]]: platform migrations and the operational discipline behind them
-- [[04_Customer_and_Developer_Understanding/00_overview|Customer and Developer Understanding]]: migration surprises hide in how people actually work
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/04_Customer_and_Developer_Understanding/00_overview|Customer and Developer Understanding]]: migration surprises hide in how people actually work
 
 ## Summary
 
-Migration and upgrade guidance converts a dangerous one-time event into a rehearsed sequence: inventory reality, design coexistence with rollback, rehearse with the people who will execute, verify against baselines, and retire the old estate on schedule. The measure of a guided migration is not heroics on cutover night — it is a cutover so boring that it is remembered as a non-event.
+Migration and upgrade guidance converts a dangerous one-time event into a rehearsed sequence: inventory reality, design coexistence with rollback, rehearse with the people who will execute, verify against baselines, and retire the old estate on schedule. The measure of a guided migration is not heroics on cutover night. It is a cutover so boring that it is remembered as a non-event.

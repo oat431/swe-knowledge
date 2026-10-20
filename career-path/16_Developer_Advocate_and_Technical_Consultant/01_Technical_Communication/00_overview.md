@@ -14,11 +14,11 @@ tags:
 
 # Technical Communication
 
-> **Core capability:** The advocate and consultant explain complex technology accurately and usefully to different audiences — developers, customers, executives, communities — adapting depth, vocabulary, and medium without sacrificing truth.
+> **Core capability:** The advocate and consultant explain complex technology accurately and usefully to different audiences (developers, customers, executives, communities) adapting depth, vocabulary, and medium without sacrificing truth.
 
 ## Why This Matters
 
-Technology adoption happens on trust, and trust is built on understanding. A developer who cannot make sense of your API in fifteen minutes abandons it; a customer who does not understand the architecture cannot buy it; a community that smells marketing instead of honesty stops listening. Technical communication is the advocate's core craft — not presentation polish, but accuracy delivered at the right altitude for the audience.
+Technology adoption happens on trust, and trust is built on understanding. A developer who cannot make sense of your API in fifteen minutes abandons it; a customer who does not understand the architecture cannot buy it; a community that smells marketing instead of honesty stops listening. Technical communication is the advocate's core craft, not presentation polish, but accuracy delivered at the right altitude for the audience.
 
 The professional distinction is credibility: this is not marketing copy, it is teaching. Advocates who overstate capabilities lose the developer trust that makes the role work; consultants who hide limitations discover them in production. The craft is making complex things clear *without* making them wrong.
 
@@ -37,13 +37,14 @@ The professional distinction is credibility: this is not marketing copy, it is t
 ## The Altitude Model
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CONCEPT["Concept: why this exists"] --> CAPABILITY["Capability: what it does"]
     CAPABILITY --> INTERFACE["Interface: how to use it"]
     INTERFACE --> INTERNALS["Internals: how it works"]
 ```
 
-Different audiences enter at different altitudes — the skill is meeting them there, then walking down.
+Different audiences enter at different altitudes. The skill is meeting them there, then walking down.
 
 ## Practical Applications
 
@@ -51,7 +52,7 @@ Different audiences enter at different altitudes — the skill is meeting them t
 
 - [ ] Every artifact names its audience and what they should do after consuming it
 - [ ] Complex ideas are explained with analogies, examples, or progressive layering
-- [ ] Accuracy is preserved — simplification never becomes distortion
+- [ ] Accuracy is preserved: simplification never becomes distortion
 - [ ] Claims are demonstrable (working code, reproducible steps)
 - [ ] Feedback from readers and audiences is collected and acted on
 
@@ -68,16 +69,16 @@ Different audiences enter at different altitudes — the skill is meeting them t
 
 - Developers report understanding quickly and adopting confidently
 - Content is cited, shared, and referenced by the community
-- Technical claims survive verification — no corrections needed
+- Technical claims survive verification: no corrections needed
 - Different audiences each find their altitude in the material
 
 ## Related Capabilities
 
-- [[02_Documentation_and_Learning_Materials/00_overview|Documentation and Learning Materials]]: written communication at depth
-- [[06_Community_and_Ecosystem/00_overview|Community and Ecosystem]]: communication as relationship
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/02_Documentation_and_Learning_Materials/00_overview|Documentation and Learning Materials]]: written communication at depth
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/06_Community_and_Ecosystem/00_overview|Community and Ecosystem]]: communication as relationship
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/00_overview|Communication and Influence (Senior)]]: the engineering communication foundation
 - [[career-path/15_Solutions_and_Enterprise_Architect/07_Architecture_Communication/00_overview|Architecture Communication (Solutions Architect)]]: the enterprise-facing counterpart
 
 ## Summary
 
-Technical communication is the advocate's core craft: reading audiences, layering explanations honestly, writing and presenting for developers, and keeping every claim demonstrable. Done well, it converts strangers into users and users into advocates — done carelessly, it burns the trust the role exists to build.
+Technical communication is the advocate's core craft: reading audiences, layering explanations honestly, writing and presenting for developers, and keeping every claim demonstrable. Done well, it converts strangers into users and users into advocates. Done carelessly, it burns the trust the role exists to build.

@@ -16,7 +16,7 @@ tags:
 
 # Pattern Recognition Across Deployments
 
-> **Core skill:** Separating local quirks from structural patterns — testing each signal against the next account, scoring evidence honestly, and promoting only what repeats into the shared understanding of the product.
+> **Core skill:** Separating local quirks from structural patterns: testing each signal against the next account, scoring evidence honestly, and promoting only what repeats into the shared understanding of the product.
 
 ## Why This Matters
 
@@ -24,7 +24,7 @@ Every deployment produces complaints, and every complaint arrives wearing the co
 
 A local quirk and a structural pattern often look identical in a single deployment. The same integration failure can be one customer's unusual network configuration or the first sighting of a constraint that will appear in every similar environment. The distinguishing work is not insight; it is process. Patterns are confirmed by contact with the next account: the FDE carries a running list of suspects and checks them against each new deployment, watching for the same symptom appearing for different-looking reasons. Over a handful of accounts, the suspects either recur or they do not, and the field's opinions acquire the two properties product teams need: frequency and repeatability.
 
-The payoff belongs to the field as much as to the product. A pattern, once confirmed and written down, changes how future deployments are run: the integration is designed around the constraint from day one, the workaround is never invented again, the migration plan accounts for the quirk up front. This is where the compounding lives — the second deployment of a kind costing visibly less than the first is not usually the result of better engineering heroics, but of a pattern that was recognized, documented, and pre-emptively handled. The FDE who recognizes patterns is effectively writing the playbook that their future selves and their colleagues will execute.
+The payoff belongs to the field as much as to the product. A pattern, once confirmed and written down, changes how future deployments are run: the integration is designed around the constraint from day one, the workaround is never invented again, the migration plan accounts for the quirk up front. This is where the compounding lives. The second deployment of a kind costing visibly less than the first is not usually the result of better engineering heroics, but of a pattern that was recognized, documented, and pre-emptively handled. The FDE who recognizes patterns is effectively writing the playbook that their future selves and their colleagues will execute.
 
 ## Local Quirk or Structural Pattern
 
@@ -49,6 +49,7 @@ The payoff belongs to the field as much as to the product. A pattern, once confi
 | Counterexamples | Not sought | Searched for deliberately; the strongest patterns survive the hunt |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     LOG["Log every deployment signal"] --> CLUSTER["Cluster similar symptoms"]
     CLUSTER --> TEST["Test against the next account"]
@@ -57,7 +58,7 @@ flowchart LR
     PROMOTE --> SHARE["Write it down and share it"]
 ```
 
-The testing step is what keeps the process honest, and it requires patience: the FDE who promotes a pattern after one account is speculating with extra confidence. The counterexample hunt is the same discipline pointed backward — an FDE who only collects confirming cases will eventually carry a wrong pattern into every design, and wrong patterns are more expensive than missing ones because they are invisible until they fail twice.
+The testing step is what keeps the process honest, and it requires patience: the FDE who promotes a pattern after one account is speculating with extra confidence. The counterexample hunt is the same discipline pointed backward. An FDE who only collects confirming cases will eventually carry a wrong pattern into every design, and wrong patterns are more expensive than missing ones because they are invisible until they fail twice.
 
 ## Practical Applications
 
@@ -74,7 +75,7 @@ The testing step is what keeps the process honest, and it requires patience: the
 ### Pattern Brief Template
 
 ```markdown
-## Pattern Brief — <name, date>
+## Pattern Brief: <name, date>
 
 | Field | Detail |
 |-------|--------|

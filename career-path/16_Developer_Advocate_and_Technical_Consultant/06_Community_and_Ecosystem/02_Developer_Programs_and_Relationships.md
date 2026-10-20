@@ -16,13 +16,13 @@ tags:
 
 # Developer Programs and Relationships
 
-> **Core skill:** Designing champion, ambassador, and partner programs that trade real value for real contribution — and sustaining the relationships that keep members contributing.
+> **Core skill:** Designing champion, ambassador, and partner programs that trade real value for real contribution, and sustaining the relationships that keep members contributing.
 
 ## Why This Matters
 
-The moment a community ignites, the advocate's leverage changes: instead of being the person who answers and organizes, the advocate becomes the person who equips others to do it. Programs are that leverage, formalized — champions who teach, ambassadors who organize locally, partners who integrate. Done well, a program multiplies one advocate into dozens of advocates; done poorly, it invents a status hierarchy that corrodes the very community it was meant to serve.
+The moment a community ignites, the advocate's leverage changes: instead of being the person who answers and organizes, the advocate becomes the person who equips others to do it. Programs are that leverage, formalized: champions who teach, ambassadors who organize locally, partners who integrate. Done well, a program multiplies one advocate into dozens of advocates; done poorly, it invents a status hierarchy that corrodes the very community it was meant to serve.
 
-The failure modes are well documented and endlessly repeated. A program that asks for marketing amplification but offers only a badge is not a program; it is unpaid advertising, and members eventually say so. A program with no exit for inactive members accumulates dead titles. A program that rewards volume over quality optimizes for spam. The antidote is reciprocity: every program element pairs a real contribution with real value — access, support, resources, recognition, or career benefit.
+The failure modes are well documented and endlessly repeated. A program that asks for marketing amplification but offers only a badge is not a program; it is unpaid advertising, and members eventually say so. A program with no exit for inactive members accumulates dead titles. A program that rewards volume over quality optimizes for spam. The antidote is reciprocity: every program element pairs a real contribution with real value (access, support, resources, recognition, or career benefit).
 
 Programs also need to survive the advocate. If the program's vitality depends on one staff member remembering birthdays and sending swag, it is a personal project with a logo. Durable programs run on clear criteria, visible value, member leadership, and rhythms that outlast any individual's tenure.
 
@@ -68,6 +68,7 @@ Partners are a special case: the relationship is organizational, but it is carri
 ## The Program Operating Cycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     RECRUIT["Recruit - invite with an honest ask"] --> ONBOARD["Onboard - first win within a week"]
     ONBOARD --> ENGAGE["Engage - access, support, regular contact"]
@@ -91,7 +92,7 @@ flowchart LR
 ### Program Brief Template
 
 ```markdown
-## Program Brief — [name]
+## Program Brief: [name]
 - Purpose: [what outcomes, for whom]
 - Member profile: [who qualifies, how it is judged]
 - The exchange: members give [x]; members get [y]
@@ -131,4 +132,4 @@ flowchart LR
 
 ## Summary
 
-Developer programs turn community goodwill into durable leverage — or into quiet resentment — depending on the honesty of the exchange: recruit personally, onboard to a quick win, engage with real access, recognize visibly, and let members grow into leadership, including the dignity of stepping back. Partners get the same discipline with engineering trust kept separate from commercial talk. The program that survives its founder is the one designed as a relationship network, not a membership list.
+Developer programs turn community goodwill into durable leverage (or into quiet resentment) depending on the honesty of the exchange: recruit personally, onboard to a quick win, engage with real access, recognize visibly, and let members grow into leadership, including the dignity of stepping back. Partners get the same discipline with engineering trust kept separate from commercial talk. The program that survives its founder is the one designed as a relationship network, not a membership list.

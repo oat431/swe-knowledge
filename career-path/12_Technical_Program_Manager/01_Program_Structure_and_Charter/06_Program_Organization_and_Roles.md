@@ -16,13 +16,13 @@ tags:
 
 # Program Organization and Roles
 
-> **Core skill:** Defining RACI at program scale — sponsor, TPM, workstream leads, architects, and stakeholders — with role clarity that survives organizational boundaries and matrixed team structures.
+> **Core skill:** Defining RACI at program scale (sponsor, TPM, workstream leads, architects, and stakeholders) with role clarity that survives organizational boundaries and matrixed team structures.
 
 ## Why This Matters
 
 Programs operate across organizational lines. People report to their functional managers, not to the program, yet the program needs them to act with clear accountability. Without designed role clarity, matrixed participants default to their home organization's priorities, decisions fall between roles, and the TPM discovers at the worst moment that nobody thought they owned the integration test plan.
 
-The TPM's organizational design work is not about drawing boxes on a chart. It is about defining who is accountable for what, who must be consulted before a decision, and who needs to be informed after — and then socializing that clarity so that everyone in the program operates from the same understanding of who does what.
+The TPM's organizational design work is not about drawing boxes on a chart. It is about defining who is accountable for what, who must be consulted before a decision, and who needs to be informed after, and then socializing that clarity so that everyone in the program operates from the same understanding of who does what.
 
 ## RACI at Program Scale
 
@@ -30,10 +30,10 @@ RACI is the standard accountability framework, but applying it at program scale 
 
 | Role | Definition | Program Example | How Many |
 |------|------------|-----------------|----------|
-| **Responsible (R)** | Does the work — executes tasks, produces deliverables | Workstream teams build the components; architects produce designs | Many per activity |
-| **Accountable (A)** | Answers for the outcome — one person who says "yes, this is done right" | The workstream lead is accountable for the workstream's deliverables | Exactly one per activity |
-| **Consulted (C)** | Provides input before the decision or action — two-way communication | Architects consulted on technical approach; legal consulted on compliance scope | Few, targeted |
-| **Informed (I)** | Notified after the decision or action — one-way communication | Extended stakeholders informed of milestone results; sponsor informed of escalated risks | Many, broadcast |
+| **Responsible (R)** | Does the work: executes tasks, produces deliverables | Workstream teams build the components; architects produce designs | Many per activity |
+| **Accountable (A)** | Answers for the outcome: one person who says "yes, this is done right" | The workstream lead is accountable for the workstream's deliverables | Exactly one per activity |
+| **Consulted (C)** | Provides input before the decision or action: two-way communication | Architects consulted on technical approach; legal consulted on compliance scope | Few, targeted |
+| **Informed (I)** | Notified after the decision or action: one-way communication | Extended stakeholders informed of milestone results; sponsor informed of escalated risks | Many, broadcast |
 
 The TPM applies RACI to program-level activities, not to every task. Program-level RACI covers: charter approval, scope changes, milestone go/no-go, architecture decisions, risk acceptance, interface contract changes, and program communication.
 
@@ -52,6 +52,7 @@ The accountable column is the program's backbone. Every program-level activity m
 Every program role has a defined scope of authority and a set of expectations. The TPM documents these before the program launches and ensures every role-holder understands and accepts them.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SPONSOR["Sponsor: funds the program, owns the outcome, makes go/no-go decisions"] --> TPM["TPM: owns program structure, coordination, risk management, stakeholder communication"]
     TPM --> WS_LEADS["Workstream Leads: own workstream delivery, team execution, workstream risks"]
@@ -70,7 +71,7 @@ flowchart TD
 
 ## Role Clarity Across Organizational Boundaries
 
-The program's biggest organizational challenge is that participants report to someone else. The TPM does not manage anyone's performance, career, or compensation — yet the program needs them to act with program-first accountability during program hours.
+The program's biggest organizational challenge is that participants report to someone else. The TPM does not manage anyone's performance, career, or compensation, yet the program needs them to act with program-first accountability during program hours.
 
 | Challenge | Why It Happens | TPM's Approach |
 |-----------|---------------|-----------------|
@@ -79,7 +80,7 @@ The program's biggest organizational challenge is that participants report to so
 | **Authority without resources** | A workstream lead is named but the team still reports to their functional manager who controls their time | Workstream lead negotiates team allocation with functional managers before the program starts; TPM escalates if allocation is not honored |
 | **Matrix-induced delay** | Decisions that need functional manager approval stall because the manager is not in the program's governance cadence | Identify decision dependencies on functional managers early; invite them to relevant governance forums or pre-brief them |
 
-The TPM cannot solve the matrix. But the TPM can make the program's expectations explicit, secure sponsor backing for resource commitments, and surface matrix conflicts early — before they become execution blockers.
+The TPM cannot solve the matrix. But the TPM can make the program's expectations explicit, secure sponsor backing for resource commitments, and surface matrix conflicts early, before they become execution blockers.
 
 ## The TPM's Role Boundaries
 
@@ -87,14 +88,14 @@ The TPM role has clear boundaries. Crossing them creates confusion and erodes tr
 
 | The TPM Does | The TPM Does Not Do |
 |--------------|--------------------|
-| Defines program structure and processes | Manage people — performance, career, hiring, firing |
+| Defines program structure and processes | Manage people: performance, career, hiring, firing |
 | Facilitates decisions | Make technical decisions that belong to architects or tech leads |
-| Escalates risks and issues | Own risks that belong to workstream leads — the TPM tracks, the lead owns |
+| Escalates risks and issues | Own risks that belong to workstream leads: the TPM tracks, the lead owns |
 | Communicates program status to stakeholders | Communicate workstream-level status in place of the workstream lead |
-| Maintains the program roadmap | Maintain workstream-level plans — the workstream lead owns the detail |
+| Maintains the program roadmap | Maintain workstream-level plans: the workstream lead owns the detail |
 | Runs program review and governance forums | Run workstream standups or team ceremonies |
 
-The TPM who manages people loses the neutral facilitator position. The TPM who makes technical decisions without authority loses the engineering team's trust. The TPM who does the workstream lead's job loses the ability to hold the workstream lead accountable. Role boundaries are not bureaucracy — they are the structure that makes the program's accountability system work.
+The TPM who manages people loses the neutral facilitator position. The TPM who makes technical decisions without authority loses the engineering team's trust. The TPM who does the workstream lead's job loses the ability to hold the workstream lead accountable. Role boundaries are not bureaucracy. They are the structure that makes the program's accountability system work.
 
 ## Practical Applications
 
@@ -111,7 +112,7 @@ The TPM who manages people loses the neutral facilitator position. The TPM who m
 
 ```markdown
 ## Role: [Name]
-- **Accountable to:** [Role — sponsor, TPM, steering committee]
+- **Accountable to:** [Role, sponsor, TPM, steering committee]
 - **Authority:** [What decisions this role can make without escalation]
 - **Key Responsibilities:**
   - [Responsibility 1]
@@ -138,9 +139,9 @@ The TPM who manages people loses the neutral facilitator position. The TPM who m
 ## Success Indicators
 
 - Every program participant can state their role, their accountability, and who they escalate to
-- RACI is referenced during decision-making — "this is your accountability, not mine" is a productive conversation
+- RACI is referenced during decision-making: "this is your accountability, not mine" is a productive conversation
 - Workstream leads operate within their authority; TPM involvement is by exception
-- No activity falls between roles — gaps are identified and filled before they become blockers
+- No activity falls between roles: gaps are identified and filled before they become blockers
 - Functional managers honor program commitments because the sponsor made them visible and non-negotiable
 
 ## Related Topics
@@ -148,9 +149,9 @@ The TPM who manages people loses the neutral facilitator position. The TPM who m
 - [[01_Program_Charter]]: the decision rights section of the charter maps to the RACI
 - [[05_Governance_Structure]]: governance forums are populated by the roles defined here
 - [[03_Workstream_Decomposition]]: the workstream lead role and interface ownership
-- [[02_Technical_Integration_and_Architecture/00_overview|Technical Integration and Architecture]]: the architect and tech lead roles in the program organization
+- [[career-path/12_Technical_Program_Manager/02_Technical_Integration_and_Architecture/00_overview|Technical Integration and Architecture]]: the architect and tech lead roles in the program organization
 - [[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]]: role definition as a formal PM discipline
 
 ## Summary
 
-Program organization is accountability design: RACI at program scale with exactly one accountable person per activity, core roles defined with explicit authority and expectations, role boundaries that keep the TPM in the facilitator position, and matrix-aware planning that secures commitment from functional managers before the program starts. A program with clear roles runs on defined accountability; a program without it runs on whoever steps up — and on whoever steps away.
+Program organization is accountability design: RACI at program scale with exactly one accountable person per activity, core roles defined with explicit authority and expectations, role boundaries that keep the TPM in the facilitator position, and matrix-aware planning that secures commitment from functional managers before the program starts. A program with clear roles runs on defined accountability; a program without it runs on whoever steps up, and on whoever steps away.

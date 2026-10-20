@@ -116,6 +116,7 @@ If the future state is not achievable, the senior engineer raises this early: "G
 The gap between current and future state is where the work happens. A senior engineer conducts a gap analysis to identify what needs to change:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     subgraph CURRENT["Current State"]
         C1["Monolith: 4-hour deploys"]

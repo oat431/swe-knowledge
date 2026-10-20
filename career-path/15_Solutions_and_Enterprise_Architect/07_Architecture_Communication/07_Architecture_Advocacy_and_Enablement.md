@@ -16,15 +16,15 @@ tags:
 
 # Architecture Advocacy and Enablement
 
-> **Core skill:** The architect wins adoption of the architecture through enablement — a clear narrative, usable materials, communities, and visible evidence — so teams follow it because it works, not because a review board mandates it.
+> **Core skill:** The architect wins adoption of the architecture through enablement (a clear narrative, usable materials, communities, and visible evidence) so teams follow it because it works, not because a review board mandates it.
 
 ## Why This Matters
 
 An architecture adopted only under mandate is an architecture that has failed to persuade. Mandates produce compliance theater: teams route around slow gates, build parallel solutions, and treat the standard path as a tax. The alternative is enablement: making the architecture easy to adopt, useful in the moment of work, and visibly better than the local alternative. Adoption that is won rather than compelled is the only kind that lasts.
 
-Enablement is a different motion from advocacy. Advocacy is the argument — why this matters, what it delivers, what it prevents. Enablement is the infrastructure of adoption: quickstarts that work, templates that fit, reference implementations to copy, office hours to ask, and a community where the questions actually get answered. The architect who argues without enabling is asking teams to do extra work for someone else's principle.
+Enablement is a different motion from advocacy. Advocacy is the argument: why this matters, what it delivers, what it prevents. Enablement is the infrastructure of adoption: quickstarts that work, templates that fit, reference implementations to copy, office hours to ask, and a community where the questions actually get answered. The architect who argues without enabling is asking teams to do extra work for someone else's principle.
 
-Adoption is also measurable, which keeps the whole effort honest. Awareness, understanding, trial, adoption, advocacy: each rung of the ladder has observable signs and different interventions. When adoption stalls, the measurement says whether the message is missing, the materials are weak, or the architecture itself is not good enough yet — and each of those has a different response.
+Adoption is also measurable, which keeps the whole effort honest. Awareness, understanding, trial, adoption, advocacy: each rung of the ladder has observable signs and different interventions. When adoption stalls, the measurement says whether the message is missing, the materials are weak, or the architecture itself is not good enough yet, and each of those has a different response.
 
 ## The Adoption Ladder
 
@@ -60,6 +60,7 @@ Adoption is also measurable, which keeps the whole effort honest. Awareness, und
 ## The Enablement Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     NARRATIVE["Shared narrative of problems and goals"] --> ENABLE["Enablement materials and communities"]
     ENABLE["Enablement materials and communities"] --> PILOT["Pilots and early adopters"]
@@ -102,7 +103,7 @@ flowchart LR
 ### Enablement Plan
 
 ```markdown
-## Enablement Plan — <architecture or change>
+## Enablement Plan: <architecture or change>
 
 | Element | Design |
 |---------|--------|
@@ -142,4 +143,4 @@ flowchart LR
 
 ## Summary
 
-Architecture advocacy and enablement win adoption the durable way: a narrative built from teams' own problems, materials and support that make the standard path the easy path, early adopters whose wins are visible, and a community that feeds improvements back into the architecture. The measure of success is behavioral — teams adopt because conforming helps them, and the architecture improves because the field tells the architect where it does not.
+Architecture advocacy and enablement win adoption the durable way: a narrative built from teams' own problems, materials and support that make the standard path the easy path, early adopters whose wins are visible, and a community that feeds improvements back into the architecture. The measure of success is behavioral: teams adopt because conforming helps them, and the architecture improves because the field tells the architect where it does not.

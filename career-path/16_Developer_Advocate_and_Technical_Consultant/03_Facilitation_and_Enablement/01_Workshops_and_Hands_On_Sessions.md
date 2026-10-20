@@ -17,11 +17,11 @@ tags:
 
 # Workshops and Hands-On Sessions
 
-> **Core skill:** Designing and running sessions where participants build something real with the technology — the workshop succeeds only if people can do the thing after they leave.
+> **Core skill:** Designing and running sessions where participants build something real with the technology. The workshop succeeds only if people can do the thing after they leave.
 
 ## Why This Matters
 
-A demo shows the technology; a workshop hands it over. For a Developer Advocate or Technical Consultant, the workshop is the highest-bandwidth adoption format there is: participants touch the API, hit the error, read the message, fix it, and leave with a working mental model that no slide deck can install. Workshops are where adoption is manufactured — for partner teams preparing to build on a platform, for customer engineers before an implementation, and for internal teams taking on a new tool.
+A demo shows the technology; a workshop hands it over. For a Developer Advocate or Technical Consultant, the workshop is the highest-bandwidth adoption format there is: participants touch the API, hit the error, read the message, fix it, and leave with a working mental model that no slide deck can install. Workshops are where adoption is manufactured: for partner teams preparing to build on a platform, for customer engineers before an implementation, and for internal teams taking on a new tool.
 
 The design constraint is simple to state and hard to honor: every minute of explanation is a minute not spent doing. Strong workshop designers think in tasks, not topics. Each module is a problem to solve, and teaching happens at the moment of need, when the participant is stuck and curious. This inverts the normal presentation instinct, which is why people who over-explain struggle with hands-on formats.
 
@@ -50,6 +50,7 @@ The economics reinforce the discipline. You can only run so many workshops in pe
 | Failure as material | Common errors are planted and explained on purpose | The first real error feels like a betrayal |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     OUTCOME["Define the capability participants will gain"] --> TASKS["Design task-first modules with checkpoints"]
     TASKS --> ENV["Prepare and test the working environment"]
@@ -146,12 +147,12 @@ flowchart LR
 
 ## Related Topics
 
-- [[07_Facilitation_Techniques]] — the general craft these sessions depend on
-- [[06_Training_and_Curriculum_Design]] — the structure underneath task-first modules
-- [[02_Discovery_Sessions]] — where the needs that shape workshops surface
-- [[02_Documentation_and_Learning_Materials/00_overview|Documentation and Learning Materials]] — the materials that outlive the room
-- [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/04_Facilitation|Facilitation (Senior)]] — the meeting-scale facilitation foundation
+- [[07_Facilitation_Techniques]]: the general craft these sessions depend on
+- [[06_Training_and_Curriculum_Design]]: the structure underneath task-first modules
+- [[02_Discovery_Sessions]]: where the needs that shape workshops surface
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/02_Documentation_and_Learning_Materials/00_overview|Documentation and Learning Materials]]: the materials that outlive the room
+- [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/04_Facilitation|Facilitation (Senior)]]: the meeting-scale facilitation foundation
 
 ## Summary
 
-Workshops turn technology into capability by making participants do the work: outcomes stated as artifacts, task-first modules with checkpoints, environments prepared and rehearsed so nothing stands between the participant and the keyboard, and coaching that meets each skill level where it is. The measure is never the applause — it is what participants can build, and teach others to build, after the room has emptied.
+Workshops turn technology into capability by making participants do the work: outcomes stated as artifacts, task-first modules with checkpoints, environments prepared and rehearsed so nothing stands between the participant and the keyboard, and coaching that meets each skill level where it is. The measure is never the applause. It is what participants can build, and teach others to build, after the room has emptied.

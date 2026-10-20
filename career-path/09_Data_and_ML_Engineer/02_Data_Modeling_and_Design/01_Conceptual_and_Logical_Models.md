@@ -48,6 +48,7 @@ The cost of skipping conceptual modeling is discovered 6 months later when analy
 ### Stakeholder Communication Patterns
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     A[Business Question] --> B{Can stakeholder draw it?}
     B -->|Yes| C[Entity-Relationship Diagram]

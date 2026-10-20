@@ -16,15 +16,15 @@ tags:
 
 # Business Continuity for Solo Operators
 
-> **Core skill:** The independent makes the business survivable through bad weeks — documented systems, financial reserves, client communication plans, and a written plan for illness, burnout, and worse.
+> **Core skill:** The independent makes the business survivable through bad weeks: documented systems, financial reserves, client communication plans, and a written plan for illness, burnout, and worse.
 
 ## Why This Matters
 
-An independent business is one person deep in every function: sales, delivery, administration, and support all route through the same human being. If that person stops — a bad flu, a family emergency, a burnout month, a longer illness — everything stops with them, including the client systems they maintain and the income that funds recovery. Companies absorb absence through redundancy; the solo operator must design it instead. Continuity planning is simply the acknowledgment that the operator is a single point of failure, followed by cheap ways to reduce the blast radius.
+An independent business is one person deep in every function: sales, delivery, administration, and support all route through the same human being. If that person stops (a bad flu, a family emergency, a burnout month, a longer illness), everything stops with them, including the client systems they maintain and the income that funds recovery. Companies absorb absence through redundancy; the solo operator must design it instead. Continuity planning is simply the acknowledgment that the operator is a single point of failure, followed by cheap ways to reduce the blast radius.
 
-Most continuity costs almost nothing and works in layers. The personal layer is a financial reserve that buys decision time and rest without panic pricing. The operational layer is documentation: systems, credentials in a secure vault, obligations, and a simple index of what runs where and what breaks first. The human layer is a trusted peer or fellow contractor who could step in for a defined period, plus a client facing layer of prepared messages and reduced-scope options that keep commitments honest during a bad month. None of this requires predicting the specific bad day — only reducing how much depends on any single good one.
+Most continuity costs almost nothing and works in layers. The personal layer is a financial reserve that buys decision time and rest without panic pricing. The operational layer is documentation: systems, credentials in a secure vault, obligations, and a simple index of what runs where and what breaks first. The human layer is a trusted peer or fellow contractor who could step in for a defined period, plus a client facing layer of prepared messages and reduced-scope options that keep commitments honest during a bad month. None of this requires predicting the specific bad day, only reducing how much depends on any single good one.
 
-The uncomfortable part deserves the same professionalism as the comfortable part. Severe events — a long illness, a death, a disaster — should leave behind a folder someone could act on: where accounts are, what obligations exist, who must be told, and how to hand over or wind down cleanly. This is the duty independents already promise clients for their systems, turned inward. And the most likely continuity event is not a catastrophe but depletion: designing work rhythms that survive ordinary bad weeks — buffers in scope, no chronic overcommitment, rest treated as a business input — prevents more crises than any disaster plan.
+The uncomfortable part deserves the same professionalism as the comfortable part. Severe events (a long illness, a death, a disaster) should leave behind a folder someone could act on: where accounts are, what obligations exist, who must be told, and how to hand over or wind down cleanly. This is the duty independents already promise clients for their systems, turned inward. And the most likely continuity event is not a catastrophe but depletion: designing work rhythms that survive ordinary bad weeks (buffers in scope, no chronic overcommitment, rest treated as a business input) prevents more crises than any disaster plan.
 
 ## Continuity Threat Model
 
@@ -41,7 +41,7 @@ The uncomfortable part deserves the same professionalism as the comfortable part
 
 | Element | What It Records |
 |---------|-----------------|
-| Critical commitments | What must continue first — systems, deadlines, retained clients |
+| Critical commitments | What must continue first: systems, deadlines, retained clients |
 | Pause list | What can honestly wait, with notice templates ready |
 | Access | Where credentials live, and who else can open them |
 | Stand in | A trusted peer who can handle defined urgent items, with terms |
@@ -60,6 +60,7 @@ The uncomfortable part deserves the same professionalism as the comfortable part
 ## The Continuity Planning Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     THREATS["List threats from flu to burnout to worse"] --> PLAN["Write the one page continuity plan"]
     PLAN --> SYSTEMS["Record systems credentials and access in a secure vault"]
@@ -82,7 +83,7 @@ flowchart TD
 ### Continuity Plan
 
 ```markdown
-## Continuity Plan — <practice name>
+## Continuity Plan: <practice name>
 
 | Field | Value |
 |-------|-------|
@@ -111,16 +112,16 @@ flowchart TD
 - A bad week passes without client impact or panic
 - The reserve exists and the rules for using it were decided in advance
 - Trusted access to credentials is possible without your presence
-- Clients have never been surprised by an absence — they were informed first
-- The most common continuity failure — depletion — is managed by design, not endurance
+- Clients have never been surprised by an absence. They were informed first
+- The most common continuity failure (depletion) is managed by design, not endurance
 
 ## Related Topics
 
 - [[04_Insurance_Liability_and_Protections]]
 - [[07_Risk_Management_and_Professional_Ethics]]
-- [[04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]
 - [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]]
 
 ## Summary
 
-Business continuity for solo operators turns the unavoidable single point of failure into a managed risk: a one page plan, financial reserves, vaulted credentials, a named stand in, prepared client communication, and pace designed to survive ordinary bad weeks. Its value is not for the worst day only — it is the confidence that lets the independent sell boldly, because the business has a plan for when the operator cannot.
+Business continuity for solo operators turns the unavoidable single point of failure into a managed risk: a one page plan, financial reserves, vaulted credentials, a named stand in, prepared client communication, and pace designed to survive ordinary bad weeks. Its value is not for the worst day only. It is the confidence that lets the independent sell boldly, because the business has a plan for when the operator cannot.

@@ -16,15 +16,15 @@ tags:
 
 # Project Authority and Governance
 
-> **Core skill:** Establishing the decision rights, escalation paths, and governance structures that define who can decide what — giving the project manager clear authority to manage, the sponsor clear accountability to govern, and the team clear boundaries within which to operate.
+> **Core skill:** Establishing the decision rights, escalation paths, and governance structures that define who can decide what, giving the project manager clear authority to manage, the sponsor clear accountability to govern, and the team clear boundaries within which to operate.
 
 ## Why This Matters
 
 A project without defined authority is a project that cannot decide. Every choice becomes a negotiation; every change requires a meeting; every disagreement escalates to the highest available person because nobody knows who has the right to resolve it. The project manager who establishes authority and governance at initiation prevents decision paralysis before it starts.
 
-Governance is not bureaucracy — it is decision architecture. It answers the questions that otherwise paralyze projects: who approves scope changes, who resolves resource conflicts, who accepts deliverables, and who decides the project is done. Good governance puts decisions at the lowest appropriate level, reserves the sponsor's attention for the decisions that only the sponsor can make, and gives every participant clarity about what they can decide and what they must escalate.
+Governance is not bureaucracy. It is decision architecture. It answers the questions that otherwise paralyze projects: who approves scope changes, who resolves resource conflicts, who accepts deliverables, and who decides the project is done. Good governance puts decisions at the lowest appropriate level, reserves the sponsor's attention for the decisions that only the sponsor can make, and gives every participant clarity about what they can decide and what they must escalate.
 
-The project manager's own authority must be explicit: what decisions are delegated to the PM, what require consultation, and what require sponsor approval. Authority that is assumed is authority that will be challenged — and the worst time to discover the boundary is during a crisis.
+The project manager's own authority must be explicit: what decisions are delegated to the PM, what require consultation, and what require sponsor approval. Authority that is assumed is authority that will be challenged, and the worst time to discover the boundary is during a crisis.
 
 ## Decision Rights Framework
 
@@ -57,6 +57,7 @@ The project manager's own authority must be explicit: what decisions are delegat
 ## The Escalation Path
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ISSUE["Issue or decision arises"] --> TEAM["Team: can it be resolved within the work package?"]
     TEAM --> TEAM_YES["Yes: decide and inform PM"]
@@ -143,12 +144,12 @@ The project manager must escalate to the sponsor for approval on:
 
 ## Related Topics
 
-- [[01_Project_Charter]] — authority and governance are established in the charter
-- [[06_Governance_and_Change_Control/00_overview|Governance and Change Control]] — governance in execution and change management
-- [[03_Stakeholder_Identification]] — governance bodies are key stakeholders
-- [[07_Scope_Change_Management]] — change control operates within the governance structure
-- [[career-path/12_Technical_Program_Manager/01_Program_Structure_and_Charter/00_overview|Program Structure and Charter (TPM)]] — program-level governance
+- [[01_Project_Charter]]: authority and governance are established in the charter
+- [[career-path/13_Project_and_Program_Manager/06_Governance_and_Change_Control/00_overview|Governance and Change Control]]: governance in execution and change management
+- [[03_Stakeholder_Identification]]: governance bodies are key stakeholders
+- [[07_Scope_Change_Management]]: change control operates within the governance structure
+- [[career-path/12_Technical_Program_Manager/01_Program_Structure_and_Charter/00_overview|Program Structure and Charter (TPM)]]: program-level governance
 
 ## Summary
 
-Project authority and governance establish who can decide what. The framework defines the project manager's delegated authority, the sponsor's accountability, the steering committee's strategic oversight, and the escalation path that routes decisions to the right level. Good governance is decision architecture, not bureaucracy — it puts decisions at the lowest appropriate level, reserves leadership attention for the decisions that require it, and gives every participant clarity about their decision rights. A project without defined authority cannot decide; a project with it can move.
+Project authority and governance establish who can decide what. The framework defines the project manager's delegated authority, the sponsor's accountability, the steering committee's strategic oversight, and the escalation path that routes decisions to the right level. Good governance is decision architecture, not bureaucracy. It puts decisions at the lowest appropriate level, reserves leadership attention for the decisions that require it, and gives every participant clarity about their decision rights. A project without defined authority cannot decide; a project with it can move.

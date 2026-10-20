@@ -14,11 +14,11 @@ tags:
 
 # Data Architecture
 
-> **Core capability:** The architect designs how data moves, lives, is owned, and is governed across the system — making data boundaries, flow, storage choices, and lifecycle decisions explicit and reviewable at the architecture level.
+> **Core capability:** The architect designs how data moves, lives, is owned, and is governed across the system, making data boundaries, flow, storage choices, and lifecycle decisions explicit and reviewable at the architecture level.
 
 ## Why This Matters
 
-Data is the hardest part of any system to change later. Code can be rewritten; a data model shared across teams — or worse, shared silently — cannot. Most architecture that fails at scale fails at the data layer: systems that read each other's databases, schemas that evolved without governance, pipelines nobody understands but everyone depends on.
+Data is the hardest part of any system to change later. Code can be rewritten; a data model shared across teams (or worse, shared silently) cannot. Most architecture that fails at scale fails at the data layer: systems that read each other's databases, schemas that evolved without governance, pipelines nobody understands but everyone depends on.
 
 The software architect owns the data architecture at the structural level: which data lives where, who owns it, how it flows, where the copies are, and what the sources of truth are. The depth of each concern (data modeling, pipeline reliability, storage internals) lives in the Data & ML Engineer path (09); the architect integrates those concerns into the system's larger shape.
 
@@ -37,6 +37,7 @@ The software architect owns the data architecture at the structural level: which
 ## The Data Architecture View
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DOMAINS["Define data domains and ownership"] --> FLOW["Map data flows between domains"]
     FLOW --> STORES["Choose storage per domain: relational, document, event, cache"]
@@ -86,10 +87,10 @@ Data architecture is the structural layer between domain modeling and storage im
 
 ## Related Capabilities
 
-- [[02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]: data consistency and availability as quality scenarios
-- [[05_Security_Architecture/00_overview|Security Architecture]]: data classification and access boundaries
+- [[career-path/06_Software_Architect/02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]: data consistency and availability as quality scenarios
+- [[career-path/06_Software_Architect/05_Security_Architecture/00_overview|Security Architecture]]: data classification and access boundaries
 - [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]]: the specialist depth path
-- [[15_Solutions_and_Enterprise_Architect/00_overview|Solutions and Enterprise Architect]]: enterprise-level data governance (future path)
+- [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions and Enterprise Architect]]: enterprise-level data governance (future path)
 
 ## Summary
 

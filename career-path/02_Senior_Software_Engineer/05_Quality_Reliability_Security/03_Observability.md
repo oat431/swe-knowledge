@@ -5,7 +5,7 @@ capability_area: quality-reliability-security
 career_path: senior-software-engineer
 prerequisite:
   - "[[02_SRE_Principles]]"
-  - "[[01_Technical_Ownership/04_Production_Responsibility]]"
+  - "[[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/04_Production_Responsibility]]"
 tags:
   - career-path
   - senior-engineer
@@ -29,6 +29,7 @@ Observability is not monitoring. Monitoring tells you the system is broken. Obse
 ## The Three Pillars of Observability
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     subgraph PILLARS["Three Pillars of Observability"]
         METRICS["Metrics\n(what is happening)"]
@@ -155,6 +156,7 @@ Traces show the flow of a request across multiple services.
 ### Trace structure
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     TRACE["Trace\n(request-id: abc123)"] --> SPAN1["Span 1\nAPI Gateway\n(duration: 120ms)"]
     SPAN1 --> SPAN2["Span 2\nUser Service\n(duration: 80ms)"]
@@ -258,7 +260,7 @@ def get_user(user_id):
 - [[04_Incident_Response]] : observability data is critical for incident diagnosis
 - [[05_Security_Practices]] : security monitoring is part of observability
 - [[07_Chaos_Engineering]] : observability validates chaos experiments
-- [[01_Technical_Ownership/04_Production_Responsibility]] : production responsibility includes observability
+- [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/04_Production_Responsibility]] : production responsibility includes observability
 - [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]] : operations and monitoring
 
 ## Key Takeaways

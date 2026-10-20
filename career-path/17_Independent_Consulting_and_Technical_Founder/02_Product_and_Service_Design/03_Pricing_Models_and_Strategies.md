@@ -16,15 +16,15 @@ tags:
 
 # Pricing Models and Strategies
 
-> **Core skill:** Choosing a pricing model — hourly, fixed, value-based, retainer — that matches the outcome, the risk, and the customer's buying culture, and setting a level that funds the business.
+> **Core skill:** Choosing a pricing model (hourly, fixed, value-based, retainer) that matches the outcome, the risk, and the customer's buying culture, and setting a level that funds the business.
 
 ## Why This Matters
 
-Pricing is where the independent's value and risk meet, and most independents default to hourly because it feels safe and defensible. Hourly pricing has three structural costs: it caps income at available hours, it punishes the efficiency that expertise should buy, and it anchors every conversation to your cost rather than the customer's outcome. Choosing a model deliberately — and revisiting it as the offer changes — is one of the highest-leverage skills in independent work.
+Pricing is where the independent's value and risk meet, and most independents default to hourly because it feels safe and defensible. Hourly pricing has three structural costs: it caps income at available hours, it punishes the efficiency that expertise should buy, and it anchors every conversation to your cost rather than the customer's outcome. Choosing a model deliberately (and revisiting it as the offer changes) is one of the highest-leverage skills in independent work.
 
-Each model suits a situation. Fixed price fits certain scope and confident delivery. Time and materials with a cap fits exploration under uncertainty. Value-based pricing fits outcomes that are measurable and attributable, where the buyer can see the return. Retainers fit value that is really availability and continuity — the call that gets answered within the hour. The model and the offer must agree; a mismatched deal fights itself from signature to delivery.
+Each model suits a situation. Fixed price fits certain scope and confident delivery. Time and materials with a cap fits exploration under uncertainty. Value-based pricing fits outcomes that are measurable and attributable, where the buyer can see the return. Retainers fit value that is really availability and continuity, the call that gets answered within the hour. The model and the offer must agree; a mismatched deal fights itself from signature to delivery.
 
-The price level is a business decision with three reference points: the floor (cost plus a margin that lets the business survive), the band (what the market pays for comparable outcomes), and the premium (what scarcity and proof justify). Undercharging is not modesty — it is a subsidy that exhausts the operator, signals low stakes to the buyer, and attracts clients who treat the work as cheap. Rates should rise on a cadence, not on a rescue.
+The price level is a business decision with three reference points: the floor (cost plus a margin that lets the business survive), the band (what the market pays for comparable outcomes), and the premium (what scarcity and proof justify). Undercharging is not modesty. It is a subsidy that exhausts the operator, signals low stakes to the buyer, and attracts clients who treat the work as cheap. Rates should rise on a cadence, not on a rescue.
 
 ## Pricing Models Compared
 
@@ -51,6 +51,7 @@ The price level is a business decision with three reference points: the floor (c
 ## The Model Decision
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MODEL["Choose the pricing model"] --> VB["Value based when outcome is measurable"]
     MODEL --> FX["Fixed price when scope is certain"]
@@ -58,7 +59,7 @@ flowchart TD
     MODEL --> RT["Retainer when ongoing availability is needed"]
 ```
 
-Pick the model whose assumption you can defend. When two fit, prefer the one closer to the buyer's outcome — it prices the result, not your calendar.
+Pick the model whose assumption you can defend. When two fit, prefer the one closer to the buyer's outcome. It prices the result, not your calendar.
 
 ## Practical Applications
 
@@ -74,7 +75,7 @@ Pick the model whose assumption you can defend. When two fit, prefer the one clo
 ### Quote Structure Template
 
 ```markdown
-## Quote — <engagement>
+## Quote: <engagement>
 
 Price: <fee or rate>.
 Covers: <deliverables and scope summary>.
@@ -108,8 +109,8 @@ Valid until: <date>.
 - [[01_Service_Offers_and_Packaging]]
 - [[05_Scoping_and_Deliverable_Definition]]
 - [[04_Product_vs_Service_Decisions]]
-- [[03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
 
 ## Summary
 
-Pricing models and strategies connect the offer to the business that must survive it: choose the model that matches scope certainty and outcome measurability, set the level from cost floor, market band, and buyer value, and structure payments so cash arrives as work progresses. The independent who prices deliberately earns more from the same expertise — and attracts the clients who value it.
+Pricing models and strategies connect the offer to the business that must survive it: choose the model that matches scope certainty and outcome measurability, set the level from cost floor, market band, and buyer value, and structure payments so cash arrives as work progresses. The independent who prices deliberately earns more from the same expertise, and attracts the clients who value it.

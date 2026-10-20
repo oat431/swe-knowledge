@@ -87,7 +87,7 @@ tags:
 | 04 Risk & Issues | ✅ Strong | Overlaps the TPM path; add a boundary note |
 | 05 Stakeholder Engagement | ✅ Strong (sponsor note) | Add project-team leadership |
 | 06 Governance & Change Control | ✅ Strong | Add hybrid governance |
-| 07 Benefits & Closure | ✅ Excellent | — |
+| 07 Benefits & Closure | ✅ Excellent | N/A |
 
 ## Quick Fixes
 

@@ -16,15 +16,15 @@ tags:
 
 # Model Constraints and Data Residency
 
-> **Core skill:** Working within vendor, network, and sovereignty limits — choosing where models run and what data may reach them, and confirming it in writing before the architecture is fixed.
+> **Core skill:** Working within vendor, network, and sovereignty limits: choosing where models run and what data may reach them, and confirming it in writing before the architecture is fixed.
 
 ## Why This Matters
 
-Regulated customers carry rules that have nothing to do with model quality and everything to do with where data can exist. Personal data may not leave a jurisdiction. Certain vendors may not receive certain classifications. Logs may not retain raw content beyond a window. Support engineers in some regions may not access production systems. These are legal and contractual constraints, verified by auditors, and a single violation can end a deployment — not with a failed test, but with a compliance finding that closes the project. The FDE treats them as design inputs of the highest priority, confirmed in writing with the customer's security and compliance functions before the architecture hardens.
+Regulated customers carry rules that have nothing to do with model quality and everything to do with where data can exist. Personal data may not leave a jurisdiction. Certain vendors may not receive certain classifications. Logs may not retain raw content beyond a window. Support engineers in some regions may not access production systems. These are legal and contractual constraints, verified by auditors, and a single violation can end a deployment, not with a failed test, but with a compliance finding that closes the project. The FDE treats them as design inputs of the highest priority, confirmed in writing with the customer's security and compliance functions before the architecture hardens.
 
 The constraint space is larger than "which cloud region." It includes the approved vendor list, network egress policy, retention and deletion obligations, model licensing terms, classification tiers and their handling rules, and even who inside the vendor's own company may see what. A deployment design must satisfy all of them simultaneously, and the design that satisfies them is often less elegant than the product default: a regional endpoint, a customer-hosted model, a gateway that redacts fields before egress, or a fully local deployment with no external calls at all.
 
-Working within constraints is a creative discipline, not a defeat. There is almost always a permissible path to the business outcome — sometimes smaller (a redacted subset feeding a hosted model), sometimes heavier (an open model running on the customer's own infrastructure). The FDE's job is to find the permissible path early, prove it with the security function rather than around them, and build the controls that keep the deployment compliant on its worst day, not just its designed one.
+Working within constraints is a creative discipline, not a defeat. There is almost always a permissible path to the business outcome: sometimes smaller (a redacted subset feeding a hosted model), sometimes heavier (an open model running on the customer's own infrastructure). The FDE's job is to find the permissible path early, prove it with the security function rather than around them, and build the controls that keep the deployment compliant on its worst day, not just its designed one.
 
 ## Mapping the Constraint Space
 
@@ -49,6 +49,7 @@ Working within constraints is a creative discipline, not a defeat. There is almo
 | Hybrid routing | Data classified; route by class to different paths | Mixed workloads where most data is low-classification |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CLASSIFY["Classify the data types"] --> RULES["Confirm residency and vendor rules"]
     RULES --> OPTIONS["List the permissible model paths"]
@@ -82,7 +83,7 @@ flowchart LR
 ### Data Flow Record Template
 
 ```markdown
-## Data Flow Record — <capability, date>
+## Data Flow Record: <capability, date>
 
 | Field | Value |
 |-------|-------|
@@ -124,4 +125,4 @@ flowchart LR
 
 ## Summary
 
-Model constraints and data residency turn legal and contractual rules into engineering requirements: classify the data, learn the residency, vendor, and retention rules from the function that enforces them, choose the permissible model path, and build controls that make the constraints true on the system's worst day. Confirmed in writing and verified in tests before design freezes, the constraints stop being obstacles and become the boundary that makes the deployment durable — safe to exist, audit, and extend.
+Model constraints and data residency turn legal and contractual rules into engineering requirements: classify the data, learn the residency, vendor, and retention rules from the function that enforces them, choose the permissible model path, and build controls that make the constraints true on the system's worst day. Confirmed in writing and verified in tests before design freezes, the constraints stop being obstacles and become the boundary that makes the deployment durable: safe to exist, audit, and extend.

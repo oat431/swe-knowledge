@@ -15,15 +15,15 @@ tags:
 
 # Dependency Classification
 
-> **Core skill:** Categorizing every dependency by type, criticality, and risk profile so that tracking effort, contingency investment, and escalation attention are applied where they matter most — not spread evenly across a flat list.
+> **Core skill:** Categorizing every dependency by type, criticality, and risk profile so that tracking effort, contingency investment, and escalation attention are applied where they matter most, not spread evenly across a flat list.
 
 ## Why This Matters
 
-A program with forty dependencies cannot treat them all equally. Some are on the critical path with no alternatives; others have built-in slack and fallback options. Some are between two internal teams with a shared manager; others cross company boundaries into a vendor's opaque delivery pipeline. Some are technical interfaces with clear specifications; others are organizational — a decision, an approval, a budget release.
+A program with forty dependencies cannot treat them all equally. Some are on the critical path with no alternatives; others have built-in slack and fallback options. Some are between two internal teams with a shared manager; others cross company boundaries into a vendor's opaque delivery pipeline. Some are technical interfaces with clear specifications; others are organizational: a decision, an approval, a budget release.
 
-Classification is the TPM's triage system. It tells you which dependencies need a formal interface contract, which need contingency plans, which need weekly owner check-ins, and which can be watched with a monthly heartbeat. Without classification, every dependency gets the same lightweight tracking — and the ones that needed heavy attention break first.
+Classification is the TPM's triage system. It tells you which dependencies need a formal interface contract, which need contingency plans, which need weekly owner check-ins, and which can be watched with a monthly heartbeat. Without classification, every dependency gets the same lightweight tracking, and the ones that needed heavy attention break first.
 
-Classification also drives communication: when a stakeholder asks "what keeps you up at night?", the answer is not "forty dependencies" — it is the three classified as critical-path, external, with no fallback.
+Classification also drives communication: when a stakeholder asks "what keeps you up at night?", the answer is not "forty dependencies". It is the three classified as critical-path, external, with no fallback.
 
 ## The Classification Dimensions
 
@@ -39,7 +39,7 @@ Every dependency is scored on three independent dimensions. The combination dete
 | **External** | Program depends on a vendor, partner, regulator, or third party | "Payment processor certification required for launch" | External tracking regime; see [[04_External_Dependency_Management]] |
 | **Sequential** | Activity B cannot begin until Activity A completes | "Integration testing cannot start until platform migration finishes" | Milestone gating; predecessor health monitoring |
 
-A single dependency can span multiple types — classify by the dominant dimension. The payment processor is external first, technical second. The security sign-off is organizational first, sequential second.
+A single dependency can span multiple types: classify by the dominant dimension. The payment processor is external first, technical second. The security sign-off is organizational first, sequential second.
 
 ### Dimension 2: Criticality
 
@@ -50,7 +50,7 @@ A single dependency can span multiple types — classify by the dominant dimensi
 | **Medium** | Moderate impact; workarounds exist or float absorbs partial slip | Documented agreement, monthly tracking |
 | **Low** | Nice-to-have; slip has negligible program impact | Acknowledged; tracked in aggregate |
 
-Criticality is not a measure of how hard the dependency is — it is a measure of what happens to the program if it fails. A technically trivial dependency (getting a port opened by the network team) can be critical if it blocks launch with no workaround.
+Criticality is not a measure of how hard the dependency is. It is a measure of what happens to the program if it fails. A technically trivial dependency (getting a port opened by the network team) can be critical if it blocks launch with no workaround.
 
 ### Dimension 3: Risk Profile
 
@@ -61,7 +61,7 @@ Criticality is not a measure of how hard the dependency is — it is a measure o
 | **Unknown** | New team, new technology, new vendor relationship; no track record | Conservative buffer; contingency plan from day one |
 | **External-risk** | Beyond program control: vendor, regulator, partner | External tracking regime; see [[04_External_Dependency_Management]] |
 
-Risk profile is a leading indicator — it predicts how likely the dependency is to need attention before it actually needs attention. Classify the risk profile at dependency creation and re-assess at every status cycle.
+Risk profile is a leading indicator: it predicts how likely the dependency is to need attention before it actually needs attention. Classify the risk profile at dependency creation and re-assess at every status cycle.
 
 ## The Classification Matrix
 
@@ -111,14 +111,14 @@ For each dependency:
     → External-risk if: beyond program control
 ```
 
-The rubric takes thirty seconds per dependency. The TPM's judgment fills the gaps the rubric cannot capture — but the rubric ensures consistency across the map.
+The rubric takes thirty seconds per dependency. The TPM's judgment fills the gaps the rubric cannot capture, but the rubric ensures consistency across the map.
 
 ## Practical Applications
 
 - [ ] Every dependency in the map carries a type, criticality, and risk profile classification
 - [ ] Classification drives the tracking regime: cadence, artifacts, escalation threshold
 - [ ] Re-classification triggers are defined and checked at every status cycle
-- [ ] The classification matrix is visible — teams understand why their dependency gets heavy or light tracking
+- [ ] The classification matrix is visible: teams understand why their dependency gets heavy or light tracking
 - [ ] Critical + volatile dependencies are never more than three status cycles from sponsor visibility
 
 ## Common Pitfalls
@@ -134,7 +134,7 @@ The rubric takes thirty seconds per dependency. The TPM's judgment fills the gap
 ## Success Indicators
 
 - Critical dependencies never go more than one week without an owner check-in
-- Re-classification happens before — not after — a dependency surprises the program
+- Re-classification happens before (not after) a dependency surprises the program
 - The sponsor can name the top three critical-dependency risks without looking at the map
 - No low-classified dependency ever blocks the critical path
 
@@ -147,4 +147,4 @@ The rubric takes thirty seconds per dependency. The TPM's judgment fills the gap
 
 ## Summary
 
-Dependency classification is the TPM's triage: type, criticality, and risk profile determine how tightly each dependency is tracked, how much contingency it warrants, and how visible it is to leadership. Classification is not a one-time labeling exercise — it is a living assessment that changes as the program changes. The disciplines that matter are applying the rubric consistently, re-classifying at the right triggers, and ensuring that classification changes behavior, not just labels.
+Dependency classification is the TPM's triage: type, criticality, and risk profile determine how tightly each dependency is tracked, how much contingency it warrants, and how visible it is to leadership. Classification is not a one-time labeling exercise. It is a living assessment that changes as the program changes. The disciplines that matter are applying the rubric consistently, re-classifying at the right triggers, and ensuring that classification changes behavior, not just labels.

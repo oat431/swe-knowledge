@@ -16,17 +16,18 @@ tags:
 
 # Cost Estimation and Budgeting
 
-> **Core skill:** Building cost estimates from activity-based resource requirements, establishing the cost baseline, and managing the budget so that spending is forecast, authorized, and tracked — not discovered in arrears.
+> **Core skill:** Building cost estimates from activity-based resource requirements, establishing the cost baseline, and managing the budget so that spending is forecast, authorized, and tracked, not discovered in arrears.
 
 ## Why This Matters
 
 Cost is the dimension that converts a project plan into an organizational commitment. A project without a budget is a project without permission. A project with a budget that is disconnected from the schedule and resource plan is a project that will either overspend in silence or under-deliver to stay within an arbitrary number.
 
-The project manager builds cost estimates from the same activity list that drives the schedule: resources × duration × rate. This creates traceability — every dollar in the budget traces to work in the plan. When scope changes, cost changes visibly. When resources change, the budget updates. The cost baseline is the approved version of this relationship, and every variance from it is either a decision or a problem.
+The project manager builds cost estimates from the same activity list that drives the schedule: resources × duration × rate. This creates traceability: every dollar in the budget traces to work in the plan. When scope changes, cost changes visibly. When resources change, the budget updates. The cost baseline is the approved version of this relationship, and every variance from it is either a decision or a problem.
 
 ## Cost Estimation Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     WBS["Work Breakdown Structure"] --> ACTIVITIES["Activity list with resource assignments"]
     ACTIVITIES --> DIRECT["Direct costs: labor, materials, equipment, travel"]
@@ -52,7 +53,7 @@ flowchart TD
 | **Contingency** | Risk-based reserve for known unknowns | P × I for quantified risks; percentage for unidentified risks |
 | **Management reserve** | Reserve for unknown unknowns | Percentage of total estimate; sponsor-controlled |
 
-Contingency reserve is for identified risks — the risks in the register. Management reserve is for unidentified risks — the ones that have not been named yet. The project manager controls contingency; the sponsor controls management reserve.
+Contingency reserve is for identified risks: the risks in the register. Management reserve is for unidentified risks: the ones that have not been named yet. The project manager controls contingency; the sponsor controls management reserve.
 
 ## Estimation Approaches
 
@@ -76,7 +77,7 @@ The estimate accuracy improves as scope definition improves. A definitive estima
 | 5. Baseline approval | Sponsor approves the time-phased budget | Cost baseline |
 | 6. Funding reconciliation | Align funding releases with spending profile | Funding requirements documentation |
 
-The time-phased budget is the spending plan — it tells finance when money will be spent, not just how much. This is the basis for cash-flow forecasting and funding requests.
+The time-phased budget is the spending plan. It tells finance when money will be spent, not just how much. This is the basis for cash-flow forecasting and funding requests.
 
 ## Budget Governance
 
@@ -132,9 +133,9 @@ The time-phased budget is the spending plan — it tells finance when money will
 - [[01_Schedule_Development]]: cost estimation starts from the activity list
 - [[04_Earned_Value_Management]]: EVM measures cost performance against the baseline
 - [[05_Schedule_and_Cost_Tracking]]: tracking actual costs against the budget
-- [[04_Risk_and_Issues/00_overview|Risk and Issues]]: contingency is sized from risk analysis
-- [[06_Governance_and_Change_Control/00_overview|Governance and Change Control]]: budget changes go through governance
+- [[career-path/13_Project_and_Program_Manager/04_Risk_and_Issues/00_overview|Risk and Issues]]: contingency is sized from risk analysis
+- [[career-path/13_Project_and_Program_Manager/06_Governance_and_Change_Control/00_overview|Governance and Change Control]]: budget changes go through governance
 
 ## Summary
 
-Cost estimation and budgeting convert the project plan into a financial commitment. The project manager builds the estimate from the activity list — resources × duration × rate — adds contingency sized from the risk register, time-phases the budget, and manages to the approved baseline. Cost is not a separate workstream; it is the schedule expressed in currency. When scope changes, cost changes; when the risk profile shifts, contingency shifts. An honest cost estimate beats a round-number budget every time.
+Cost estimation and budgeting convert the project plan into a financial commitment. The project manager builds the estimate from the activity list (resources × duration × rate), adds contingency sized from the risk register, time-phases the budget, and manages to the approved baseline. Cost is not a separate workstream; it is the schedule expressed in currency. When scope changes, cost changes; when the risk profile shifts, contingency shifts. An honest cost estimate beats a round-number budget every time.

@@ -27,6 +27,7 @@ Technical mentoring is how senior engineers distribute their knowledge systemati
 ## Mentoring vs Teaching
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     subgraph Teaching
         A[Instructor delivers content] --> B[Student absorbs information]
@@ -147,6 +148,7 @@ How does that affect your choice of data structure?"
 
 **Progression:**
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A[High Support] --> B[Medium Support]
     B --> C[Low Support]

@@ -26,6 +26,7 @@ The difference is not tool knowledge. It is **scaling discipline**: turning reac
 ## Auto-Scaling Strategies
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     HORIZONTAL["Horizontal scaling"] --> VERTICAL["Vertical scaling"]
     VERTICAL --> PREDICTIVE["Predictive scaling"]
@@ -54,6 +55,7 @@ flowchart LR
 ## Scaling Policy Design
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     METRIC["Collect metrics"] --> EVALUATE["Evaluate scaling policy"]
     EVALUATE --> DECIDE["Decide to scale"]
@@ -208,7 +210,7 @@ ScalingPolicies:
 - [[01_Capacity_Planning]] : auto-scaling implements capacity plans
 - [[02_Load_and_Stress_Testing]] : tests validate scaling policies
 - [[04_Chaos_Engineering]] : chaos tests validate scaling under failure
-- [[01_Service_Objectives/02_SLO_Definition]] : SLOs define scaling targets
+- [[career-path/07_SRE_and_Platform_Engineer/01_Service_Objectives/02_SLO_Definition]] : SLOs define scaling targets
 - [[software-engineering-note/02_Software_Architecture/Microservice/07 Deployment/071 Containers & Orchestration]] : container orchestration foundations
 
 ## Key Takeaways

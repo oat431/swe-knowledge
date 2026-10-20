@@ -15,13 +15,13 @@ tags:
 
 # Seeing Org-Scale Risk
 
-> **Core skill:** Reading the organization's risk portfolio — architectural, operational, financial, compliance, concentration — instead of reacting to incident lists.
+> **Core skill:** Reading the organization's risk portfolio (architectural, operational, financial, compliance, concentration) instead of reacting to incident lists.
 
 ## Why This Matters
 
-The risks that end careers and companies are slow and structural: the architecture eroding one shortcut at a time, the critical dependency with no alternative, the compliance surface nobody mapped, the spend curve that quietly triples. None of them page anyone at 3am — until each suddenly does, all at once.
+The risks that end careers and companies are slow and structural: the architecture eroding one shortcut at a time, the critical dependency with no alternative, the compliance surface nobody mapped, the spend curve that quietly triples. None of them page anyone at 3am, until each suddenly does, all at once.
 
-At staff level, risk stops being something you flag and becomes something you scan for, assess, and own. The scan is the difference between risk management and risk reaction: a quarterly, systematic read of the org's exposure across five categories, from sources that already exist — incidents, diffs, spend, audits, exits — if you know where to look.
+At staff level, risk stops being something you flag and becomes something you scan for, assess, and own. The scan is the difference between risk management and risk reaction: a quarterly, systematic read of the org's exposure across five categories, from sources that already exist (incidents, diffs, spend, audits, exits), if you know where to look.
 
 ## Org-Scale Risk Sources
 
@@ -48,7 +48,7 @@ Run quarterly, from inputs that already exist:
 | **Exit interviews and departures** | Key-person concentration | Operational, concentration |
 | **Dependency updates** | Abandonment, pricing changes | Concentration |
 
-The scan's output is not a list — it is a risk portfolio with narratives. If a scan produces no risks, the scan is broken, not the org.
+The scan's output is not a list. It is a risk portfolio with narratives. If a scan produces no risks, the scan is broken, not the org.
 
 ## Risk Narratives
 
@@ -102,12 +102,13 @@ The register earns its place by being reviewed with leadership on the scan caden
 | Bring the portfolio, not the list | Leadership decides among risks, not about each one |
 | Lead with narratives and prices | Blast radius and cost are the decision inputs |
 | Flag changes since last review | New risks, retired risks, re-priced risks |
-| End with decisions, not updates | Each risk gets remediate, accept, or defer — in writing |
+| End with decisions, not updates | Each risk gets remediate, accept, or defer, in writing |
 | Keep the register current between reviews | The scan is quarterly; the register is continuous |
 
 The review converts the register from a document into a decision system. If leadership never sees it, you have a list, not a portfolio.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SCAN["Quarterly risk scan"] --> SOURCES["Incidents diffs spend audits exits"]
     SOURCES --> ASSESS["Assess likelihood and blast radius"]
@@ -145,7 +146,7 @@ flowchart TD
 - Leadership reads the register and asks for the next review
 - New risks are added within weeks of appearing, not quarters
 - Narratives are cited in budget and roadmap discussions
-- Risk decisions — remediate, accept, defer — are made in writing
+- Risk decisions (remediate, accept, defer) are made in writing
 
 ## Related Topics
 
@@ -153,8 +154,8 @@ flowchart TD
 - [[03_Dependency_Risk_Management]]: the concentration category in depth
 - [[05_Risk_Pricing_and_Acceptance]]: turning scan findings into priced decisions
 - [[06_Escalating_Risk_With_Options]]: when a risk exceeds your authority
-- [[03_Technical_Strategy/00_overview|Technical Strategy]]: bets and risk are one conversation
+- [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy]]: bets and risk are one conversation
 
 ## Summary
 
-Org-scale risk is a portfolio, not an incident list: scan quarterly across architectural, operational, financial, compliance, and concentration sources; write each risk as a narrative with blast radius; price it; assign an owner; and review the register with leadership as a decision system. The discipline that makes it work is cadence — the scan runs whether or not anything is on fire, because the dangerous risks never announce themselves.
+Org-scale risk is a portfolio, not an incident list: scan quarterly across architectural, operational, financial, compliance, and concentration sources; write each risk as a narrative with blast radius; price it; assign an owner; and review the register with leadership as a decision system. The discipline that makes it work is cadence: the scan runs whether or not anything is on fire, because the dangerous risks never announce themselves.

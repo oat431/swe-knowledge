@@ -14,13 +14,13 @@ tags:
 
 # Organizational Awareness and Influence
 
-> **Core capability:** The engineering manager reads the organization — its strategy, incentives, and decision flows — and moves the team's interests through it: securing investment, surviving re-orgs, and shaping decisions before they harden.
+> **Core capability:** The engineering manager reads the organization (its strategy, incentives, and decision flows) and moves the team's interests through it: securing investment, surviving re-orgs, and shaping decisions before they harden.
 
 ## Why This Matters
 
 Teams do not live in a vacuum. Budgets, roadmaps, headcount, and re-orgs are decided in rooms the team is not in. The manager who cannot read the organization learns about decisions after they land; the manager who can shapes them while they are still soft.
 
-This is also the self-protection layer for the team: the EM who understands incentives and alliances can prevent their team from absorbing another team's risk, win scarce investment, and translate executive language into team reality — and back.
+This is also the self-protection layer for the team: the EM who understands incentives and alliances can prevent their team from absorbing another team's risk, win scarce investment, and translate executive language into team reality, and back.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ This is also the self-protection layer for the team: the EM who understands ince
 ## How Influence Moves
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MAP["Map the org and incentives"] --> ISSUE["Frame the issue in their goals"]
     ISSUE --> ALLIES["Build allies before the meeting"]
@@ -82,15 +83,15 @@ Influence is a loop built on delivered credibility, not a one-shot persuasion.
 ## Success Indicators
 
 - The team's needs appear in plans and budgets you helped shape
-- Your proposals are anticipated — allies arrive pre-briefed
+- Your proposals are anticipated: allies arrive pre-briefed
 - Escalations are rare because alignment happens earlier
 - The team survives re-orgs with clarity, not whiplash
 - Your influence reputation is transparent advocacy, not maneuvering
 
 ## Related Capabilities
 
-- [[04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: delivery outcomes fund the influence budget
-- [[07_Manager_Communication/00_overview|Manager Communication]]: the communication system influence runs on
+- [[career-path/11_Engineering_Manager/04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: delivery outcomes fund the influence budget
+- [[career-path/11_Engineering_Manager/07_Manager_Communication/00_overview|Manager Communication]]: the communication system influence runs on
 - [[career-path/05_Tech_Lead/01_The_Tech_Lead_Role_and_Operating_Model/06_Working_With_Stakeholders|Working With Stakeholders (Tech Lead)]]: the lead-level counterpart
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/03_Influence_Without_Authority|Influence Without Authority (Senior)]]: the foundation this scales
 

@@ -28,6 +28,7 @@ Security is not a separate team's responsibility. It is an engineering disciplin
 ## Security in the Development Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PLAN["Plan\n(threat modeling)"] --> CODE["Code\n(secure coding)"]
     CODE --> TEST["Test\n(security testing)"]
@@ -63,6 +64,7 @@ A framework for identifying threats:
 **Example: User authentication flow**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     USER["User"] -->|Credentials| WEB["Web App"]
     WEB -->|Validate| AUTH["Auth Service"]
@@ -167,6 +169,7 @@ api_key = os.environ["API_KEY"]
 ### Integrating security into CI/CD
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CODE["Code"] --> SAST["SAST\n(static analysis)"]
     SAST --> DEPS["Dependency Scan\n(vulnerabilities)"]

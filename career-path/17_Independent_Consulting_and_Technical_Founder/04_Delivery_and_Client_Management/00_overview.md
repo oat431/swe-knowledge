@@ -14,7 +14,7 @@ tags:
 
 # Delivery and Client Management
 
-> **Core capability:** The independent plans and executes work with explicit commitments — delivering reliably, communicating honestly, managing multiple clients, and closing engagements well.
+> **Core capability:** The independent plans and executes work with explicit commitments: delivering reliably, communicating honestly, managing multiple clients, and closing engagements well.
 
 ## Why This Matters
 
@@ -37,6 +37,7 @@ Client management is the multiplier: a well-managed client relationship converts
 ## The Engagement Arc
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SOW["SOW: commitments defined"] --> DELIVER["Delivery: work and communication"]
     DELIVER --> CHANGE["Change: handled commercially"]
@@ -44,7 +45,7 @@ flowchart LR
     HANDOVER --> REFERRAL["Closure: reference and referral"]
 ```
 
-Every phase is designed — the referral is earned at closure, not hoped for.
+Every phase is designed. The referral is earned at closure, not hoped for.
 
 ## Practical Applications
 
@@ -74,8 +75,8 @@ Every phase is designed — the referral is earned at closure, not hoped for.
 
 ## Related Capabilities
 
-- [[02_Product_and_Service_Design/00_overview|Product and Service Design]]: the offer defines what delivery commits to
-- [[06_Sales_and_Client_Communication/00_overview|Sales and Client Communication]]: relationships continue through delivery
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/02_Product_and_Service_Design/00_overview|Product and Service Design]]: the offer defines what delivery commits to
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/06_Sales_and_Client_Communication/00_overview|Sales and Client Communication]]: relationships continue through delivery
 - [[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]]: formal delivery discipline this adapts
 - [[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]: coordination craft for complex engagements
 

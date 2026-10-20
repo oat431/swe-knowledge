@@ -16,22 +16,22 @@ tags:
 
 # Data Flow Architecture
 
-> **Core skill:** The architect maps how data moves — source to transform to sink across batch, streaming, change capture, and API patterns — and maintains that map as a first-class architecture view with ownership, latency, and lineage.
+> **Core skill:** The architect maps how data moves (source to transform to sink across batch, streaming, change capture, and API patterns) and maintains that map as a first-class architecture view with ownership, latency, and lineage.
 
 ## Why This Matters
 
-Data is only useful in motion, and most of a system's hidden complexity lives in movement: where data goes, how fast it arrives, how reliably it survives the trip, and in what shape it lands. Pipelines that nobody documented are the dark matter of system architecture — invisible until they break, and then everyone discovers they were load-bearing.
+Data is only useful in motion, and most of a system's hidden complexity lives in movement: where data goes, how fast it arrives, how reliably it survives the trip, and in what shape it lands. Pipelines that nobody documented are the dark matter of system architecture: invisible until they break, and then everyone discovers they were load-bearing.
 
 The integration pattern sets the system's tempo and coupling. Batch extraction is simple, robust, and always somewhat stale. Streaming is fresh and operationally demanding. Change data capture takes truth from the source's own log with minimal intrusion. API-driven flows are synchronous and coupled to the source's availability. Choosing a pattern is choosing which of these properties the system will have, and that choice constrains everything downstream of it.
 
-The architect's artifact is the data flow view: sources, transforms, and sinks with latency expectations, ownership, and failure behavior marked on every edge. Lineage is the same map asked a different question — where did this value come from, and what breaks if it changes — and it is the difference between an incident that takes minutes to trace and one that takes days.
+The architect's artifact is the data flow view: sources, transforms, and sinks with latency expectations, ownership, and failure behavior marked on every edge. Lineage is the same map asked a different question (where did this value come from, and what breaks if it changes) and it is the difference between an incident that takes minutes to trace and one that takes days.
 
 ## Source, Transform, Sink
 
 | Stage | Questions to Answer | Typical Decisions |
 |-------|---------------------|-------------------|
 | **Source** | What is the system of record? How is change detected? | Log-based capture, query extraction, or export; access identity and rate limits |
-| **Transform** | Where does business logic live — source, pipeline, or consumer? | Thin pipeline, strong contract; batch windows versus micro-batch versus streaming |
+| **Transform** | Where does business logic live: source, pipeline, or consumer? | Thin pipeline, strong contract; batch windows versus micro-batch versus streaming |
 | **Sink** | What write semantics does the consumer need? | Upsert versus append versus replace; ordering guarantees; retention at the sink |
 
 ## Integration Patterns Compared
@@ -65,6 +65,7 @@ Lineage at architecture level is not column-level forensics; it is the flow map 
 ## Data Flow as an Architecture View
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SOURCE["Source system of record"] --> INGEST["Ingest with contract validation"]
     INGEST --> TRANSFORM["Transform and standardize"]
@@ -119,9 +120,9 @@ flowchart LR
 
 - [[01_Data_Domains_and_Ownership]]
 - [[07_Event_and_Messaging_Architecture]]
-- [[03_Architecture_Description_and_Views/00_overview|Architecture Description and Views]]
+- [[career-path/06_Software_Architect/03_Architecture_Description_and_Views/00_overview|Architecture Description and Views]]
 - [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]]
 
 ## Summary
 
-Data flow architecture is the map of how data moves: source to transform to sink, with the integration pattern — batch, streaming, change capture, API, events, files — chosen from latency and coupling requirements rather than habit. Every flow carries a contract, an owner, idempotent replayable stages, a quarantine path for bad data, and lineage capture. The flow view is the artifact that makes integration reviewable and incidents traceable, and it is the architect's primary tool for keeping data movement from becoming dark matter.
+Data flow architecture is the map of how data moves: source to transform to sink, with the integration pattern (batch, streaming, change capture, API, events, files) chosen from latency and coupling requirements rather than habit. Every flow carries a contract, an owner, idempotent replayable stages, a quarantine path for bad data, and lineage capture. The flow view is the artifact that makes integration reviewable and incidents traceable, and it is the architect's primary tool for keeping data movement from becoming dark matter.

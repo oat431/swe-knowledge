@@ -16,13 +16,13 @@ tags:
 
 # Staff vs Senior Scope
 
-> **Core skill:** Understanding exactly what changes between senior and staff — breadth, mechanism, and implementation — and what must not change: still an individual contributor, still technical, still shipping.
+> **Core skill:** Understanding exactly what changes between senior and staff (breadth, mechanism, and implementation) and what must not change: still an individual contributor, still technical, still shipping.
 
 ## Why This Matters
 
-The senior-to-staff transition is the first promotion where the job changes shape rather than size. A senior engineer who is simply "given bigger projects" will fail at staff, because the mechanism of delivery changes: staff engineers ship through other teams, not through their own commit history. Misunderstanding the jump produces two familiar failures — the staff engineer who keeps doing senior work and quietly stagnates, and the promoted senior who tries to manage without the title and alienates every team.
+The senior-to-staff transition is the first promotion where the job changes shape rather than size. A senior engineer who is simply "given bigger projects" will fail at staff, because the mechanism of delivery changes: staff engineers ship through other teams, not through their own commit history. Misunderstanding the jump produces two familiar failures: the staff engineer who keeps doing senior work and quietly stagnates, and the promoted senior who tries to manage without the title and alienates every team.
 
-The scope jump is also where promotion conversations go wrong. Committees promote on evidence of scope, and candidates often present evidence of excellence. Excellence at senior scope is not evidence of staff scope. Understanding the dimensions of the jump — breadth, mechanism, implementation, decisions — tells you what to collect as evidence and what to negotiate as scope.
+The scope jump is also where promotion conversations go wrong. Committees promote on evidence of scope, and candidates often present evidence of excellence. Excellence at senior scope is not evidence of staff scope. Understanding the dimensions of the jump (breadth, mechanism, implementation, decisions) tells you what to collect as evidence and what to negotiate as scope.
 
 ## The Scope Jump
 
@@ -77,6 +77,7 @@ The resolution is the same from both sides: **scope evidence**. A promotion case
 - [ ] Impact is narrated in terms of org outcomes, not hours or lines
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SENIOR["Senior scope delivery"] --> GAP["The scope jump"]
     GAP --> MECHANISM["Mechanism changes to influence"]
@@ -90,7 +91,7 @@ flowchart TD
 ## Practical Applications
 
 ```markdown
-# Promotion Evidence — [name] — [cycle]
+# Promotion Evidence: [name], [cycle]
 
 ## Scope statement
 - [ ] Breadth: [teams/domain/org] | Mechanism: [proposals/influence] | Decisions: [list]
@@ -134,15 +135,15 @@ Checklist:
 - Proposals you write are adopted by teams you do not own
 - Your calendar shows more influence work than delivery work
 - Leadership and the promotion committee describe your scope correctly
-- You remain recognizably technical — review, design, and judgment — while shipping through others
+- You remain recognizably technical (review, design, and judgment) while shipping through others
 
 ## Related Topics
 
 - [[01_The_Four_Staff_Archetypes]]: the shape the scope jump takes
 - [[06_Staff_Engineer_Career_Traps]]: the failures that follow a scope misread
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/03_Influence_Without_Authority|Influence Without Authority (Senior)]]: the mechanism being scaled
-- [[04_Influence_and_Alignment/00_overview|Influence and Alignment]]: how staff influence actually works
+- [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/00_overview|Influence and Alignment]]: how staff influence actually works
 
 ## Summary
 
-The staff jump changes breadth, mechanism, implementation, and decisions — while leaving the engineer an IC, technical, and shipping. Misreads of the jump — senior-plus, junior manager, best coder, reward — produce invisible impact or authority confusion. Promotion cases must tell a scope story with evidence of adoption and decisions, and the mandate must be negotiated with the title, not after it.
+The staff jump changes breadth, mechanism, implementation, and decisions, while leaving the engineer an IC, technical, and shipping. Misreads of the jump (senior-plus, junior manager, best coder, reward) produce invisible impact or authority confusion. Promotion cases must tell a scope story with evidence of adoption and decisions, and the mandate must be negotiated with the title, not after it.

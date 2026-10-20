@@ -14,7 +14,7 @@ tags:
 
 # The Staff Role and Scope
 
-> **Core capability:** The staff engineer shapes technical outcomes across multiple teams without managing anyone — by choosing the right scope, operating through proposals and influence, and avoiding the role's characteristic traps.
+> **Core capability:** The staff engineer shapes technical outcomes across multiple teams without managing anyone, by choosing the right scope, operating through proposals and influence, and avoiding the role's characteristic traps.
 
 ## Why This Matters
 
@@ -37,6 +37,7 @@ The role fails most often not from lack of skill but from lack of definition. St
 ## The Staff Operating Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     LISTEN["Listen across teams"] --> FIND["Find problems worth staff scope"]
     FIND --> MANDATE["Negotiate the mandate"]
@@ -89,11 +90,11 @@ The loop never closes: staff work is a portfolio of arcs, not a series of finish
 
 ## Related Capabilities
 
-- [[04_Influence_and_Alignment/00_overview|Influence and Alignment]]: the mechanism staff work runs on
-- [[03_Technical_Strategy/00_overview|Technical Strategy]]: the highest-leverage staff output
+- [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/00_overview|Influence and Alignment]]: the mechanism staff work runs on
+- [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy]]: the highest-leverage staff output
 - [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/00_overview|Technical Ownership (Senior)]]: the foundation being scaled
 - [[career-path/05_Tech_Lead/01_The_Tech_Lead_Role_and_Operating_Model/00_overview|The Tech Lead Role and Operating Model]]: the neighboring team-level role
 
 ## Summary
 
-The staff role is defined by scope and mechanism, not seniority plus. Choose an archetype, negotiate a written mandate, structure the operating model around writing and influence, ship through others, and keep impact visible. The role's traps are all self-inflicted — and all avoidable with a deliberate operating model.
+The staff role is defined by scope and mechanism, not seniority plus. Choose an archetype, negotiate a written mandate, structure the operating model around writing and influence, ship through others, and keep impact visible. The role's traps are all self-inflicted, and all avoidable with a deliberate operating model.

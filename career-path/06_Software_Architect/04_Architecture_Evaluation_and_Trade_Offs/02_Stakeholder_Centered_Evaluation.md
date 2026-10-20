@@ -16,13 +16,13 @@ tags:
 
 # Stakeholder-Centered Evaluation
 
-> **Core skill:** The architect anchors evaluation in stakeholder concerns — identifying every affected class, mapping their worries to quality scenarios, and ensuring the evaluation process itself captures what stakeholders actually care about, not what the architect assumes they care about.
+> **Core skill:** The architect anchors evaluation in stakeholder concerns, identifying every affected class, mapping their worries to quality scenarios, and ensuring the evaluation process itself captures what stakeholders actually care about, not what the architect assumes they care about.
 
 ## Why This Matters
 
-An architecture evaluation built entirely by architects evaluates the architecture the architects want to build — not necessarily the architecture the stakeholders need. Developers worry about maintainability, operations worries about deployability, security worries about attack surface, and product management worries about time-to-market. If the evaluation scenarios come only from the architecture team, the evaluation answers questions nobody else is asking.
+An architecture evaluation built entirely by architects evaluates the architecture the architects want to build, not necessarily the architecture the stakeholders need. Developers worry about maintainability, operations worries about deployability, security worries about attack surface, and product management worries about time-to-market. If the evaluation scenarios come only from the architecture team, the evaluation answers questions nobody else is asking.
 
-The architect's role is to surface stakeholder concerns that stakeholders themselves may not know how to articulate. A product manager may not say "I am worried about modifiability in the payment flow," but they will say "every time we add a payment method, it takes two sprints." Translating that frustration into an evaluation scenario is the architect's skill — and the resulting evaluation is the stakeholder reality check.
+The architect's role is to surface stakeholder concerns that stakeholders themselves may not know how to articulate. A product manager may not say "I am worried about modifiability in the payment flow," but they will say "every time we add a payment method, it takes two sprints." Translating that frustration into an evaluation scenario is the architect's skill, and the resulting evaluation is the stakeholder reality check.
 
 ## Stakeholder Identification
 
@@ -43,7 +43,7 @@ The architect's role is to surface stakeholder concerns that stakeholders themse
 
 | Question | What It Reveals |
 |----------|----------------|
-| "What keeps you up at night about this system?" | Top-of-mind risks — often the right evaluation starting point |
+| "What keeps you up at night about this system?" | Top-of-mind risks, often the right evaluation starting point |
 | "What would make you lose confidence in this architecture?" | Implicit quality thresholds; the real acceptance criteria |
 | "What change did we make last quarter that was harder than expected?" | Modifiability hotspots; where the architecture resists change |
 | "If the system were down for an hour, what would the impact be?" | Availability criticality; disaster recovery priorities |
@@ -52,6 +52,7 @@ The architect's role is to surface stakeholder concerns that stakeholders themse
 ## Mapping Stakeholder Concerns to Quality Scenarios
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     STAKEHOLDER["Stakeholder Interview"] --> RAW_CONCERN["Raw Concern Expressed"]
     RAW_CONCERN --> TRANSLATE["Translate to Quality Attribute"]
@@ -81,7 +82,7 @@ flowchart TD
 
 ## Stakeholder-Centered Review Format
 
-1. **Stakeholder introduction** (5 min per class): Each stakeholder class states what they care about. This primes the room — if the scenarios that follow do not address these concerns, the evaluation has failed.
+1. **Stakeholder introduction** (5 min per class): Each stakeholder class states what they care about. This primes the room: if the scenarios that follow do not address these concerns, the evaluation has failed.
 
 2. **Scenario walkthrough** (remainder): Architecture is exercised against scenarios derived from those concerns. Stakeholders ask "what happens when..." and the architect traces through the architecture.
 
@@ -96,7 +97,7 @@ flowchart TD
 - [ ] Each stakeholder class has at least 2 quality scenarios derived from their concerns
 - [ ] Scenarios have been prioritized with stakeholders themselves (not assumed by the architect)
 - [ ] Evaluation team includes at least one external reviewer and one scribe
-- [ ] Concern coverage is checked after scenario walkthrough — no orphan concerns
+- [ ] Concern coverage is checked after scenario walkthrough: no orphan concerns
 
 ### Stakeholder Concern Register Template
 
@@ -115,16 +116,16 @@ flowchart TD
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
-| **Developer-only evaluation** | Only developers in the room — scenarios miss operations, security, and business concerns | Invite at least one rep from each stakeholder class |
-| **Architect-assumed priorities** | Architect ranks scenarios by importance without asking stakeholders — evaluation solves the wrong problems | Stakeholders prioritize their own scenarios; architect facilitates, does not dictate |
-| **Stakeholder fatigue** | Every evaluation invites all stakeholders, every time — they stop attending | Invite only stakeholders whose concerns are in scope for this evaluation |
+| **Developer-only evaluation** | Only developers in the room; scenarios miss operations, security, and business concerns | Invite at least one rep from each stakeholder class |
+| **Architect-assumed priorities** | Architect ranks scenarios by importance without asking stakeholders; evaluation solves the wrong problems | Stakeholders prioritize their own scenarios; architect facilitates, does not dictate |
+| **Stakeholder fatigue** | Every evaluation invites all stakeholders, every time; they stop attending | Invite only stakeholders whose concerns are in scope for this evaluation |
 | **Concern lost in translation** | Architect translates stakeholder concern into a scenario that misses the original point | Show the formal scenario back to the stakeholder; confirm it captures their concern |
-| **No return channel** | Evaluation findings are never shared back with stakeholders — they don't know if their concerns were addressed | Send evaluation report to all participants; schedule a follow-up on action closure |
+| **No return channel** | Evaluation findings are never shared back with stakeholders; they don't know if their concerns were addressed | Send evaluation report to all participants; schedule a follow-up on action closure |
 
 ## Success Indicators
 
 - Every stakeholder class in scope has at least one representative in the evaluation
-- Stakeholders confirm that scenarios capture their actual concerns — not architect assumptions
+- Stakeholders confirm that scenarios capture their actual concerns, not architect assumptions
 - Post-evaluation, stakeholders report feeling heard and informed
 - Stakeholder concern register is maintained and reviewed before each evaluation
 - Evaluation reports include a section mapping stakeholder concerns to findings
@@ -134,9 +135,9 @@ flowchart TD
 - [[01_Architecture_Evaluation_Methods]]
 - [[03_Trade_Off_Analysis_Structured]]
 - [[04_Risk_Identification_in_Architecture]]
-- [[02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]
+- [[career-path/06_Software_Architect/02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]
 - [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/03_Architecture_Evaluation|Architecture Evaluation (Senior)]]
 
 ## Summary
 
-Stakeholder-centered evaluation anchors the architecture review in what stakeholders actually care about — not what the architect assumes they care about. It requires identifying all stakeholder classes, eliciting their concerns through structured interviews, translating those concerns into formal quality scenarios with stakeholder confirmation, and composing the evaluation team to include stakeholder representatives. The output is an evaluation that answers the questions people are asking, not the questions the architect hopes they will ask.
+Stakeholder-centered evaluation anchors the architecture review in what stakeholders actually care about, not what the architect assumes they care about. It requires identifying all stakeholder classes, eliciting their concerns through structured interviews, translating those concerns into formal quality scenarios with stakeholder confirmation, and composing the evaluation team to include stakeholder representatives. The output is an evaluation that answers the questions people are asking, not the questions the architect hopes they will ask.

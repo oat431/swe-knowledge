@@ -16,13 +16,13 @@ tags:
 
 # Communication Rhythms and Channels
 
-> **Core skill:** Designing the team's information system — a channel map that routes each message to its right home, publishing rhythms that never skip, and an overload diagnosis that keeps attention high and noise low.
+> **Core skill:** Designing the team's information system: a channel map that routes each message to its right home, publishing rhythms that never skip, and an overload diagnosis that keeps attention high and noise low.
 
 ## Why This Matters
 
-Information flows whether or not it is designed — but undesigned flow produces the classic failures: urgent news buried in a chat thread, decisions scattered across documents no one can find, meetings duplicating what a doc already said, and a team that checks five channels because anything could be anywhere. The cost is not just attention; it is trust. When the team cannot find the truth, it invents it.
+Information flows whether or not it is designed, but undesigned flow produces the classic failures: urgent news buried in a chat thread, decisions scattered across documents no one can find, meetings duplicating what a doc already said, and a team that checks five channels because anything could be anywhere. The cost is not just attention; it is trust. When the team cannot find the truth, it invents it.
 
-The manager's job is to design the system: every message type gets a home, every home gets a rhythm, and the whole map is small enough that the team holds it in their heads. A designed information system makes the right behavior the default — the team stops asking "where do I find this?" and starts asking "what do we decide?"
+The manager's job is to design the system: every message type gets a home, every home gets a rhythm, and the whole map is small enough that the team holds it in their heads. A designed information system makes the right behavior the default: the team stops asking "where do I find this?" and starts asking "what do we decide?"
 
 ## The Channel Map
 
@@ -45,7 +45,7 @@ The map's test: a new joiner can route any message correctly on day one. If the 
 | Deep-dive | Monthly | One topic, thoroughly |
 | Retro and plan | Quarterly | What we learned, what we commit to |
 
-Rhythms are the system's heartbeat: they must run even when nothing is urgent, because their value is in the reliability, not the content. A skipped rhythm is a signal that the manager's discipline has lapsed — and the team notices.
+Rhythms are the system's heartbeat: they must run even when nothing is urgent, because their value is in the reliability, not the content. A skipped rhythm is a signal that the manager's discipline has lapsed, and the team notices.
 
 | Rhythm | Rule |
 |--------|------|
@@ -57,7 +57,7 @@ Rhythms are the system's heartbeat: they must run even when nothing is urgent, b
 
 - Default to writing: a doc or thread before a meeting
 - Meetings only for what async cannot do: decisions needing discussion, ceremony, hard news
-- Writing quality is a team skill: invest in it — templates, review, examples
+- Writing quality is a team skill: invest in it; templates, review, examples
 - Async discipline: read before the meeting, respond in the thread, never re-decide in the room
 
 Async-first is not anti-meeting; it is meeting protection. The meetings that remain are the ones that genuinely need the room.
@@ -82,13 +82,13 @@ The recurring team meeting must justify itself every quarter:
 
 | Element | Design |
 |---------|--------|
-| Why it exists | Alignment and ceremony — not status updates |
+| Why it exists | Alignment and ceremony, not status updates |
 | Agenda pattern | One shared topic, one decision, one learning |
 | Not-status-updates | Status lives in the weekly brief; the room is for thinking |
 | Participation | Designed voices, not report rotation |
 | Cadence | Weekly or biweekly; the same slot, always |
 
-The team meeting is the team's shared space. If it becomes a status theater, the team will send one representative and check out — and the manager will have lost the one room where the whole team breathes together.
+The team meeting is the team's shared space. If it becomes a status theater, the team will send one representative and check out, and the manager will have lost the one room where the whole team breathes together.
 
 ## Archives and Findability
 
@@ -96,7 +96,7 @@ Decisions must be findable six months later:
 
 - One decision log, not scattered threads
 - Documents named by decision, not by date alone
-- The archive is linked from the channel map — one hop from anywhere
+- The archive is linked from the channel map: one hop from anywhere
 - When a question repeats, the answer's home is improved, not just repeated
 
 The findability test: can the team answer "why did we choose this?" in under five minutes? If not, the archive is decoration.
@@ -110,11 +110,12 @@ Systems accrete; design subtracts:
 | A channel duplicates another | Merge; redirect; archive |
 | A ritual runs on habit | Kill it; the silence tells you what it was for |
 | A document is never read | Delete or fold into the archive |
-| A rhythm skips twice | Fix or kill — a broken rhythm is worse than none |
+| A rhythm skips twice | Fix or kill: a broken rhythm is worse than none |
 
 Retirement is announced and clean: the team should never wonder whether a channel still means anything. Dead channels are where rumors breed.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DESIGN["Design the channel map"] --> RHYTHM["Publish on reliable rhythms"]
     RHYTHM --> ASYNC["Default to async writing"]
@@ -140,7 +141,7 @@ flowchart TD
 ### Channel Map Template
 
 ```markdown
-## Team Channel Map — [date]
+## Team Channel Map: [date]
 | Message Type | Home | Response Expectation |
 |--------------|------|----------------------|
 | Urgent | [page/call] | [minutes] |
@@ -151,7 +152,7 @@ flowchart TD
 | Questions | [channel] | [by end of day] |
 
 ## Rhythms
-- Weekly update: [day] — format: [brief]
+- Weekly update: [day]; format: [brief]
 - Monthly deep-dive: [topic owner]
 - Quarterly retro and plan: [dates]
 
@@ -177,16 +178,16 @@ flowchart TD
 - Publishing rhythms ran without gaps for a quarter
 - The team meeting produces decisions and shared context, not yawns
 - Six-month-old decisions are findable in minutes
-- The channel map has shrunk or held steady — never grown silently
+- The channel map has shrunk or held steady, never grown silently
 
 ## Related Topics
 
 - [[01_Cascading_Context_Downward]]: cascades flow through the designed map
 - [[04_Meeting_Facilitation_for_Managers]]: the meeting portfolio is part of the system
 - [[05_Written_Communication_for_Managers]]: async quality powers the map
-- [[02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: information design is team health infrastructure
+- [[career-path/11_Engineering_Manager/02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: information design is team health infrastructure
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/00_overview|Communication and Influence (Senior)]]: the individual habits this formalizes
 
 ## Summary
 
-Communication rhythms and channels are an information system design: a channel map that gives every message one home, publishing rhythms that never skip, async-first defaults that protect meetings, overload diagnosis that fixes systems rather than blaming people, a team meeting that is ceremony and thinking, findable archives, and clean retirement of what has died. The team that knows where truth lives spends its attention on the work — and the manager who designs the system earns that clarity.
+Communication rhythms and channels are an information system design: a channel map that gives every message one home, publishing rhythms that never skip, async-first defaults that protect meetings, overload diagnosis that fixes systems rather than blaming people, a team meeting that is ceremony and thinking, findable archives, and clean retirement of what has died. The team that knows where truth lives spends its attention on the work, and the manager who designs the system earns that clarity.

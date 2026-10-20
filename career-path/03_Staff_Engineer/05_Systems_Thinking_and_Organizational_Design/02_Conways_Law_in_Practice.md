@@ -19,9 +19,9 @@ tags:
 
 ## Why This Matters
 
-Organizations design systems that mirror their communication structure. If two teams must coordinate to ship, the software will grow a seam at exactly that boundary — regardless of what the architecture diagram says. Every mismatch between org chart and architecture is paid for daily in handoffs, ownership arguments, and integration glue.
+Organizations design systems that mirror their communication structure. If two teams must coordinate to ship, the software will grow a seam at exactly that boundary, regardless of what the architecture diagram says. Every mismatch between org chart and architecture is paid for daily in handoffs, ownership arguments, and integration glue.
 
-This is one of the few laws in software engineering that is reliably, repeatably true. The staff engineer treats it as an input to design, not a curiosity: when a service boundary is wrong, the cheapest fix is often the org chart, not the code. Reverse Conway — designing the team structure to produce the architecture you want — is one of the highest-leverage moves available at this level.
+This is one of the few laws in software engineering that is reliably, repeatably true. The staff engineer treats it as an input to design, not a curiosity: when a service boundary is wrong, the cheapest fix is often the org chart, not the code. Reverse Conway (designing the team structure to produce the architecture you want) is one of the highest-leverage moves available at this level.
 
 ## The Law and Its Evidence
 
@@ -35,7 +35,7 @@ This is one of the few laws in software engineering that is reliably, repeatably
 | **Duplicated services** | Two teams that could not agree on ownership each build their own version of the same capability |
 | **Handoff-shaped APIs** | API contracts match the handoff cadence of teams, not the semantics of the domain |
 
-The evidence test is simple: look at the system's seams — where teams must coordinate to change anything — and compare them to the seams the architecture would need. If they differ, the org wins eventually.
+The evidence test is simple: look at the system's seams (where teams must coordinate to change anything) and compare them to the seams the architecture would need. If they differ, the org wins eventually.
 
 ## Reverse Conway
 
@@ -52,6 +52,7 @@ Reverse Conway is the deliberate inversion: define the target architecture first
 Reverse Conway is not a one-time re-org; it is a continuous practice. Every new team, every new service, and every re-org either moves the architecture toward the target or away from it. The staff engineer is the one who notices which.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     TARGET["Target architecture defined"] --> TEAMS["Team boundaries designed around it"]
     TEAMS --> OWNERSHIP["End-to-end ownership per seam"]
@@ -84,7 +85,7 @@ Team Topologies (Skelton and Pais) gives a vocabulary for the four team types th
 | **Enabling** | Helps other teams adopt practices, then leaves | Skill adoption across teams for a bounded period |
 | **Complicated-subsystem** | Holds rare deep expertise in one domain | Payment rails, ML models, hardware drivers |
 
-The common failure is using enabling teams as permanent headcount or letting platform teams become ticket queues. Topologies are assignments, not identities — a team's topology should change as its job changes.
+The common failure is using enabling teams as permanent headcount or letting platform teams become ticket queues. Topologies are assignments, not identities: a team's topology should change as its job changes.
 
 ## When to Accept Conway
 
@@ -97,7 +98,7 @@ Fighting Conway's Law is expensive; sometimes alignment is the right answer.
 | You control team formation | Fight (reverse Conway) | Shape boundaries to produce the target architecture |
 | One boundary fights you constantly | Fight selectively | One well-chosen structural change beats ten workarounds |
 
-Accepting Conway is not surrender — it is choosing your battles. The documented decision to align architecture to an unmovable org chart, with the cost named, is a legitimate architecture choice. The failure mode is accepting silently and paying forever without anyone deciding it.
+Accepting Conway is not surrender. It is choosing your battles. The documented decision to align architecture to an unmovable org chart, with the cost named, is a legitimate architecture choice. The failure mode is accepting silently and paying forever without anyone deciding it.
 
 ## Practical Applications
 
@@ -156,10 +157,10 @@ Accepting Conway is not surrender — it is choosing your battles. The documente
 
 - [[01_Systems_Thinking_Fundamentals]]: orgs as systems of loops and flows
 - [[04_Organizational_Design_Options]]: the structure levers reverse Conway uses
-- [[03_Technical_Strategy/00_overview|Technical Strategy]]: target architecture comes from strategy
-- [[02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: leading the coordination changes
+- [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy]]: target architecture comes from strategy
+- [[career-path/03_Staff_Engineer/02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: leading the coordination changes
 - [[career-path/06_Software_Architect/00_overview|Software Architect]]: the specialist depth path
 
 ## Summary
 
-Conway's Law turns the org chart into an architecture input: the system will mirror communication structure whether you plan it or not, so plan it. Read the coupling signals in code review, apply reverse Conway where you control team formation, accept and document the boundaries you cannot move, and treat every re-org as an architecture decision — because that is exactly what it is.
+Conway's Law turns the org chart into an architecture input: the system will mirror communication structure whether you plan it or not, so plan it. Read the coupling signals in code review, apply reverse Conway where you control team formation, accept and document the boundaries you cannot move, and treat every re-org as an architecture decision, because that is exactly what it is.

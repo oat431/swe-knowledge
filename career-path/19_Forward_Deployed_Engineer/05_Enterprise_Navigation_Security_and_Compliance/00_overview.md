@@ -14,15 +14,15 @@ tags:
 
 # Enterprise Navigation: Security and Compliance
 
-> **Core capability:** The FDE gets to production through the customer's defenses — security reviews, access controls, data protection, procurement — by treating them as engineering problems with owners, evidence, and a path, not as obstacles to route around.
+> **Core capability:** The FDE gets to production through the customer's defenses (security reviews, access controls, data protection, procurement), by treating them as engineering problems with owners, evidence, and a path, not as obstacles to route around.
 
 ## Why This Matters
 
 Every enterprise deployment passes through gatekeepers: the security team reviewing architecture, the identity team controlling access, the legal team owning data clauses, the procurement team enforcing vendor standards. In field anecdotes these teams are villains ("we spent six weeks fighting security for API access"). In reality they are the customer's immune system, and the FDE who understands their function moves through them faster.
 
-The FDE's advantage is treating approvals as a predictable pipeline rather than a series of surprises. Each gate has standard outputs it wants: data-flow diagrams, access models, encryption evidence, retention policies, incident plans. An FDE who knows the shape of these artifacts prepares them once and reuses them across customers — converting a recurring weeks-long tax into a template-driven checklist.
+The FDE's advantage is treating approvals as a predictable pipeline rather than a series of surprises. Each gate has standard outputs it wants: data-flow diagrams, access models, encryption evidence, retention policies, incident plans. An FDE who knows the shape of these artifacts prepares them once and reuses them across customers, converting a recurring weeks-long tax into a template-driven checklist.
 
-For AI deployments the stakes rise. Customer data flowing into models, vendor-hosted inference, and cross-border processing raise questions that older integration projects never faced. The FDE must be able to answer those questions precisely — and to say honestly when a customer requirement cannot be met and what the alternatives are. Compliance honesty is a competitive advantage: it wins the trust of exactly the people who can stop the project.
+For AI deployments the stakes rise. Customer data flowing into models, vendor-hosted inference, and cross-border processing raise questions that older integration projects never faced. The FDE must be able to answer those questions precisely, and to say honestly when a customer requirement cannot be met and what the alternatives are. Compliance honesty is a competitive advantage: it wins the trust of exactly the people who can stop the project.
 
 ## Topics in This Capability Area
 
@@ -39,6 +39,7 @@ For AI deployments the stakes rise. Customer data flowing into models, vendor-ho
 ## The Approval Pipeline
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     SCOPE["Scope the deployment"] --> ARTIFACTS["Prepare evidence pack"]
     ARTIFACTS --> REVIEW["Security review and questions"]
@@ -47,7 +48,7 @@ flowchart LR
     APPROVE --> MONITOR["Ongoing compliance as scope grows"]
 ```
 
-The pack is assembled once and reused for every customer — the differences are smaller than they look.
+The pack is assembled once and reused for every customer. The differences are smaller than they look.
 
 ## Practical Applications
 
@@ -76,16 +77,16 @@ The pack is assembled once and reused for every customer — the differences are
 - Security reviewers ask fewer clarifying questions and find fewer last-minute blockers
 - Access reviews pass without findings because design was disciplined from the start
 - The customer's security team becomes an advocate for the next phase
-- Risk exceptions are rare, documented, and owned — not hidden
+- Risk exceptions are rare, documented, and owned, not hidden
 
 ## Related Capabilities
 
-- [[03_Integration_and_Deployment_Engineering/00_overview|Integration and Deployment Engineering]]: the systems these gates protect
-- [[04_AI_Systems_in_Customer_Environments/00_overview|AI Systems in Customer Environments]]: where residency and vendor constraints bite hardest
-- [[06_Customer_Communication_and_Executive_Influence/00_overview|Customer Communication and Executive Influence]]: how risk gets explained to decision-makers
+- [[career-path/19_Forward_Deployed_Engineer/03_Integration_and_Deployment_Engineering/00_overview|Integration and Deployment Engineering]]: the systems these gates protect
+- [[career-path/19_Forward_Deployed_Engineer/04_AI_Systems_in_Customer_Environments/00_overview|AI Systems in Customer Environments]]: where residency and vendor constraints bite hardest
+- [[career-path/19_Forward_Deployed_Engineer/06_Customer_Communication_and_Executive_Influence/00_overview|Customer Communication and Executive Influence]]: how risk gets explained to decision-makers
 - [[career-path/08_Security_Engineer/00_overview|Security Engineer]]: the security discipline behind enterprise requirements
 - [[body-of-knowledge/CyBOK/01_Risk_Management_and_Governance|Risk Management and Governance (CyBOK)]]: the governance framework language
 
 ## Summary
 
-Enterprise navigation is the FDE's path through the customer's defenses: mapping review gates, preparing reusable evidence, requesting least-privilege access, honoring data protection and residency rules, fitting procurement realities, and recording risk decisions honestly. The FDE who treats security and compliance as engineering problems with owners and artifacts stops fighting the immune system — and starts moving through it.
+Enterprise navigation is the FDE's path through the customer's defenses: mapping review gates, preparing reusable evidence, requesting least-privilege access, honoring data protection and residency rules, fitting procurement realities, and recording risk decisions honestly. The FDE who treats security and compliance as engineering problems with owners and artifacts stops fighting the immune system, and starts moving through it.

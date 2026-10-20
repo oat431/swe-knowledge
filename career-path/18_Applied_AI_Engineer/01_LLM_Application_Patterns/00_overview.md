@@ -9,7 +9,7 @@ tags: [career-path, applied-ai, ai-engineering, llm-patterns, overview]
 
 # LLM Application Patterns
 
-> **Capability area:** Choosing and engineering the core application patterns — RAG, tool use, agent loops, structured outputs, and context injection — that turn foundation models into dependable product behavior.
+> **Capability area:** Choosing and engineering the core application patterns (RAG, tool use, agent loops, structured outputs, and context injection) that turn foundation models into dependable product behavior.
 
 ## Why This Matters at Senior Level
 
@@ -17,7 +17,7 @@ A mid-level engineer wires up a framework's RAG chain or agent constructor and s
 
 Senior judgment shows in:
 - Choosing the simplest pattern that clears the quality bar, not the most impressive one
-- Knowing that retrieval quality — not model quality — is the binding constraint in most RAG failures
+- Knowing that retrieval quality, not model quality, is the binding constraint in most RAG failures
 - Treating every tool call as a contract: exact schemas, argument validation, bounded blast radius
 - Bounding every agent loop with iteration, token, and time limits and a defined failure exit
 - Designing fallbacks at the pattern level so degradation is graceful and observable
@@ -36,8 +36,9 @@ Senior judgment shows in:
 ## Pattern Selection Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
-    START["New capability: does it need model-generated reasoning?"] -->|No| RULES["Deterministic code — no LLM pattern"]
+    START["New capability: does it need model-generated reasoning?"] -->|No| RULES["Deterministic code: no LLM pattern"]
     START -->|Yes| FIT{"Does all needed knowledge fit in the context window?"}
     FIT -->|Yes| INJECT["Context Injection: one call, static context"]
     FIT -->|No| FRESH{"Is the knowledge dynamic or in external systems?"}
@@ -68,7 +69,7 @@ This area covers the mechanics and architecture of LLM application patterns: how
 
 - Start with the simplest pattern that meets the quality bar, and upgrade only when evaluation says so
 - Retrieval quality determines generation quality: debug the retriever before blaming the model
-- Every tool call is a contract — validate arguments, bound side effects, log every invocation
+- Every tool call is a contract: validate arguments, bound side effects, log every invocation
 - Agent loops get three bounds (iterations, tokens, time) and a defined failure exit, always
 - Structured outputs are the norm; free text is the exception that must justify itself
 - Fallbacks are architecture, designed per failure class, not an afterthought
@@ -98,7 +99,7 @@ This area covers the mechanics and architecture of LLM application patterns: how
 - [[computing-foundation-note/Artificial_Intelligence/13_LLM_Evaluation_and_Guardrails]]
 - [[computing-foundation-note/Artificial_Intelligence/09_AI_SE_Intersection]]
 - [OWASP Top 10 for LLM Applications (2025)](https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/)
-- [AI Engineering: Building Applications with Foundation Models — Chip Huyen (O'Reilly, 2025)](https://www.oreilly.com/library/view/ai-engineering/9781098166298/)
+- [AI Engineering: Building Applications with Foundation Models, Chip Huyen (O'Reilly, 2025)](https://www.oreilly.com/library/view/ai-engineering/9781098166298/)
 
 ## Related
 

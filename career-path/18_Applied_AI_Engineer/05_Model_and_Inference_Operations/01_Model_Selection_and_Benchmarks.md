@@ -15,15 +15,15 @@ tags:
 
 # Model Selection and Benchmarks
 
-> Choosing which model class and size to serve each task, based on measured evidence from public benchmarks and — decisively — your own evaluation suite.
+> Choosing which model class and size to serve each task, based on measured evidence from public benchmarks and (decisively) your own evaluation suite.
 
 ## Why This Is a Senior Skill
 
 Mid-level engineers pick the top of the current leaderboard and call it done. Senior engineers treat model selection as an evidence-based, reversible, continuously re-evaluated decision: they know what public benchmarks do and do not measure, they benchmark candidates against their own workload before switching, and they design the system so that swapping models is configuration, not a migration.
 
-The senior question is never "which model is best?" — it is "best for what task, at what cost and latency budget, measured how?"
+The senior question is never "which model is best?" It is "best for what task, at what cost and latency budget, measured how?"
 
-The failure mode on both sides is identical: choosing by leaderboard without your own measurements, or ignoring evidence entirely — both end with the wrong model in production. Selection is a measurement problem before it is an opinion problem.
+The failure mode on both sides is identical: choosing by leaderboard without your own measurements, or ignoring evidence entirely; both end with the wrong model in production. Selection is a measurement problem before it is an opinion problem.
 
 ## Core Frameworks
 
@@ -71,15 +71,15 @@ The failure mode on both sides is identical: choosing by leaderboard without you
 
 ## In Practice
 
-**Start from the simplest model that plausibly passes your eval, not from the frontier.** The frontier model is the fallback, not the default. Put the small model in production behind your eval suite; escalate traffic — or upgrade the model — only when measured quality on your data says you must. This inverts the common pattern where the expensive model is the baseline and savings are an afterthought.
+**Start from the simplest model that plausibly passes your eval, not from the frontier.** The frontier model is the fallback, not the default. Put the small model in production behind your eval suite; escalate traffic (or upgrade the model) only when measured quality on your data says you must. This inverts the common pattern where the expensive model is the baseline and savings are an afterthought.
 
 **Treat public benchmarks as a screening signal, never as the decision.** Leaderboards tell you which models are worth trying, not which to deploy. Scores are prompt-sensitive, occasionally contaminated, and measured on tasks that overlap with your workload only by accident. A model that is three points behind on a leaderboard but five points ahead on your private eval is the right model.
 
 **Pin the exact model version, not the brand.** A brand name is not a model; a dated snapshot with a specific context window, pricing, and behavior is. Providers change defaults, deprecate versions, and silently retune behavior over time. Record the exact model ID in configuration alongside the eval score that justified it, so you can detect drift when a provider changes what that ID serves.
 
-**Own a private eval suite before you allow model swaps.** Without one, every model change is a leap of faith. The suite — built per [[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability]] — is the gate: no model enters production without passing it, and no model leaves without a successor that does.
+**Own a private eval suite before you allow model swaps.** Without one, every model change is a leap of faith. The suite (built per [[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability]]) is the gate: no model enters production without passing it, and no model leaves without a successor that does.
 
-**Make selection reversible by keeping the model ID in configuration.** A model swap that requires a code change is a migration and will not happen; one that requires a config change is an experiment and will. This discipline also enables per-task model choice — classification on the small model, reasoning on the large one — instead of one model for everything.
+**Make selection reversible by keeping the model ID in configuration.** A model swap that requires a code change is a migration and will not happen; one that requires a config change is an experiment and will. This discipline also enables per-task model choice (classification on the small model, reasoning on the large one) instead of one model for everything.
 
 **Re-run selection on a cadence, not on a crisis.** Model economics and capabilities move fast: a model that was cost-prohibitive last quarter may be the sensible default today. Schedule re-benchmarking tied to the cost review rhythm of [[computing-foundation-note/Artificial_Intelligence/12_AI_ROI_and_Roadmap]], rather than waiting for a problem to force the decision.
 
@@ -89,7 +89,7 @@ Run a model-selection cycle for one real task in your application:
 
 1. Characterize one task: define its difficulty, request volume, and cost/latency budgets in numbers.
 2. Shortlist 3 candidates across at least two size classes (e.g., one frontier, one mid-size, one small).
-3. Run each candidate through your existing eval suite — or a 20–50 case golden set if you have none — with production prompts.
+3. Run each candidate through your existing eval suite (or a 20–50 case golden set if you have none) with production prompts.
 4. Record quality, cost per 1k requests, and p50/p95 latency for each in a comparison table.
 5. Select the cheapest model that meets your quality threshold; note which leaderboard ranking would have misled you.
 6. Deploy the choice behind a config-driven model ID and document the eval results that justify it.

@@ -17,13 +17,13 @@ tags:
 
 # Long Term Consequence Analysis
 
-> **Core skill:** The principal engineer projects the 3-5 year effects of major decisions — conducting scenario planning, analyzing second and third order effects, recognizing when local optimization becomes global dysfunction, and running the pre-mortem at enterprise scale.
+> **Core skill:** The principal engineer projects the 3-5 year effects of major decisions, conducting scenario planning, analyzing second and third order effects, recognizing when local optimization becomes global dysfunction, and running the pre-mortem at enterprise scale.
 
 ## Why This Matters
 
-Most decisions are made on first-order effects: what happens immediately and directly. The decisions that define enterprises — platform choices, architecture commitments, organizational designs — play out over years, and their most important consequences are not the ones visible at the time of the decision. The second-order effect of a platform migration is not the migration itself; it is the organizational capability built or lost, the ecosystem position gained or surrendered, the talent attracted or repelled.
+Most decisions are made on first-order effects: what happens immediately and directly. The decisions that define enterprises (platform choices, architecture commitments, organizational designs) play out over years, and their most important consequences are not the ones visible at the time of the decision. The second-order effect of a platform migration is not the migration itself; it is the organizational capability built or lost, the ecosystem position gained or surrendered, the talent attracted or repelled.
 
-The principal engineer projects these consequences before the decision is made. This is the hardest thinking the principal does — not because the analysis is complex, but because the organization resists hearing that its preferred choice has consequences nobody wants to own.
+The principal engineer projects these consequences before the decision is made. This is the hardest thinking the principal does, not because the analysis is complex, but because the organization resists hearing that its preferred choice has consequences nobody wants to own.
 
 ## First, Second, and Third Order Effects
 
@@ -54,6 +54,7 @@ Scenario planning is the discipline of exploring multiple plausible futures and 
 | **Discontinuity** | A future where a fundamental assumption breaks | A new entrant rewrites the competitive landscape; a technology shift makes current platforms obsolete |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DECISION["Major decision under consideration"] --> SCENARIOS["Develop scenarios: base, upside, downside, discontinuity"]
     SCENARIOS --> FIRST["Analyze first-order effects across all scenarios"]
@@ -163,7 +164,7 @@ The pre-mortem is a structured exercise: assume the decision failed and work bac
 - [[01_Enterprise_Systems_Thinking]]
 - [[04_Organizational_Dynamics_at_Scale]]
 - [[06_Strategic_Technology_Decisions]]
-- [[01_Technology_Strategy/04_Multi_Year_Technology_Roadmapping|Multi-Year Technology Roadmapping]]
+- [[career-path/04_Principal_and_Distinguished_Engineer/01_Technology_Strategy/04_Multi_Year_Technology_Roadmapping|Multi-Year Technology Roadmapping]]
 - [[career-path/03_Staff_Engineer/05_Systems_Thinking_and_Organizational_Design/00_overview|Systems Thinking and Organizational Design (Staff)]]
 
 ## Summary

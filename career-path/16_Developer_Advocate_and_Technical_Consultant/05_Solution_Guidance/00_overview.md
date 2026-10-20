@@ -14,11 +14,11 @@ tags:
 
 # Solution Guidance
 
-> **Core capability:** The consultant connects customer problems to appropriate technical approaches — options, proofs, implementation guidance, and migration paths — without becoming the customer's outsourced engineering department.
+> **Core capability:** The consultant connects customer problems to appropriate technical approaches (options, proofs, implementation guidance, and migration paths) without becoming the customer's outsourced engineering department.
 
 ## Why This Matters
 
-Between understanding a problem and shipping a solution sits the consultant's craft: translating needs into viable technical approaches, proving the approach works, and guiding implementation so it succeeds. This is where technical credibility meets customer reality — the recommendations must be sound engineering *and* workable inside the customer's constraints.
+Between understanding a problem and shipping a solution sits the consultant's craft: translating needs into viable technical approaches, proving the approach works, and guiding implementation so it succeeds. This is where technical credibility meets customer reality: the recommendations must be sound engineering *and* workable inside the customer's constraints.
 
 The boundary matters: consultants guide, they do not take over. The goal is customer capability, not dependency. The consultant who designs everything becomes the bottleneck; the one who advises well leaves behind a team that can continue alone.
 
@@ -37,6 +37,7 @@ The boundary matters: consultants guide, they do not take over. The goal is cust
 ## The Guidance Arc
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PROBLEM["Problem understood"] --> OPTIONS["Options: viable approaches"]
     OPTIONS --> PROVE["Prove: POC answers the risk"]
@@ -75,11 +76,11 @@ Each phase reduces customer dependency and increases customer capability.
 
 ## Related Capabilities
 
-- [[04_Customer_and_Developer_Understanding/00_overview|Customer and Developer Understanding]]: guidance starts from understanding
-- [[03_Facilitation_and_Enablement/00_overview|Facilitation and Enablement]]: reviews and workshops as guidance mechanisms
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/04_Customer_and_Developer_Understanding/00_overview|Customer and Developer Understanding]]: guidance starts from understanding
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/03_Facilitation_and_Enablement/00_overview|Facilitation and Enablement]]: reviews and workshops as guidance mechanisms
 - [[career-path/15_Solutions_and_Enterprise_Architect/02_Solution_Architecture_and_Design/00_overview|Solution Architecture and Design (Solutions Architect)]]: the architecture depth behind guidance
 - [[career-path/06_Software_Architect/01_Architecture_Fundamentals/03_Architecture_Patterns_and_Styles|Architecture Patterns and Styles (Architect)]]: the pattern knowledge guidance draws on
 
 ## Summary
 
-Solution guidance connects problems to proven approaches: mapping needs to options, proving risk down with POCs, supporting implementation without taking it over, and building adoption paths the customer owns. The consultant's true deliverable is not the solution — it is the customer's capability to run it.
+Solution guidance connects problems to proven approaches: mapping needs to options, proving risk down with POCs, supporting implementation without taking it over, and building adoption paths the customer owns. The consultant's true deliverable is not the solution. It is the customer's capability to run it.

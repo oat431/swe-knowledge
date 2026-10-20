@@ -26,6 +26,7 @@ Reliability measurement is not just dashboards. It is **closing the loop** betwe
 ## The Reliability Reporting Hierarchy
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SLI["SLI Data\n(raw measurements)"] --> DASHBOARD["Dashboards\n(real-time visibility)"]
     DASHBOARD --> REPORT["Reports\n(periodic summaries)"]
@@ -162,8 +163,8 @@ flowchart TD
 - [[01_SLI_Design]] : SLIs are the data source for reliability measurement
 - [[02_SLO_Definition]] : SLOs define the targets for reliability
 - [[03_Error_Budget_Policy]] : error budget consumption is a key reliability metric
-- [[02_Observability/01_Metrics_and_Dashboards]] : dashboards are the visibility layer
-- [[03_Incident_Response/03_Blameless_Postmortems]] : incident data feeds reliability reviews
+- [[career-path/07_SRE_and_Platform_Engineer/02_Observability/01_Metrics_and_Dashboards]] : dashboards are the visibility layer
+- [[career-path/07_SRE_and_Platform_Engineer/03_Incident_Response/03_Blameless_Postmortems]] : incident data feeds reliability reviews
 
 ## Key Takeaways
 

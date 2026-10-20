@@ -15,7 +15,7 @@ tags:
 
 # Project Communication Management
 
-> **Core skill:** Designing and executing the project communication system — determining what information each stakeholder needs, when they need it, through what channel, and in what format — so communication is a deliberate system, not a stream of forwarded emails.
+> **Core skill:** Designing and executing the project communication system (determining what information each stakeholder needs, when they need it, through what channel, and in what format) so communication is a deliberate system, not a stream of forwarded emails.
 
 ## Why This Matters
 
@@ -87,14 +87,14 @@ Quarterly: Executive summary → Month 1 of quarter
 
 ### The Status Report
 
-A status report is not a diary of activities — it is a structured assessment:
+A status report is not a diary of activities. It is a structured assessment:
 
 | Section | Content |
 |---------|---------|
 | **Headline** | One-sentence summary: on track / at risk / off track and why |
-| **This period** | What was accomplished — deliverables, milestones, decisions |
-| **Next period** | What is planned — deliverables, milestones, decisions required |
-| **Variance** | Schedule, cost, scope — with explanation and corrective action |
+| **This period** | What was accomplished: deliverables, milestones, decisions |
+| **Next period** | What is planned: deliverables, milestones, decisions required |
+| **Variance** | Schedule, cost, scope, with explanation and corrective action |
 | **Risks and issues** | Top risks, new issues, resolved issues |
 | **Decisions needed** | What decisions, from whom, by when |
 
@@ -114,7 +114,7 @@ A decision brief presents a choice, not a lecture:
 
 | Section | Content |
 |---------|---------|
-| **Bottom line** | Overall project health — one paragraph |
+| **Bottom line** | Overall project health: one paragraph |
 | **Key accomplishments** | 3-5 bullet points |
 | **Key risks** | 3 with mitigation status |
 | **Next milestone** | Date and confidence |
@@ -124,9 +124,9 @@ A decision brief presents a choice, not a lecture:
 
 Program managers layer communication:
 
-- **Program-level**: consolidated status, cross-project risks, benefits tracking — for executives and steering committee
-- **Project-level**: detailed status, team coordination — for project teams and project stakeholders
-- **Integration**: the program communication plan ensures project communications are consistent in format, cadence, and message — the organization receives one program story, not N conflicting project stories
+- **Program-level**: consolidated status, cross-project risks, benefits tracking, for executives and steering committee
+- **Project-level**: detailed status, team coordination, for project teams and project stakeholders
+- **Integration**: the program communication plan ensures project communications are consistent in format, cadence, and message: the organization receives one program story, not N conflicting project stories
 
 ## Practical Applications
 
@@ -134,8 +134,8 @@ Program managers layer communication:
 
 - [ ] Every stakeholder group has a defined communication need, format, channel, and cadence
 - [ ] Status reports follow the structured format: headline, this period, next period, variance, risks, decisions
-- [ ] Decision briefs present options and a recommendation — not just a problem
-- [ ] Communication channels match message types — decisions in briefs, not newsletters
+- [ ] Decision briefs present options and a recommendation, not just a problem
+- [ ] Communication channels match message types, decisions in briefs, not newsletters
 - [ ] The communication plan is reviewed quarterly for effectiveness
 - [ ] Stakeholders are surveyed: do they receive the right information at the right time?
 
@@ -143,7 +143,7 @@ Program managers layer communication:
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
-| **Activity-as-status** | "The team met three times" is not a status — it is a diary | Report accomplishments, variance, and decisions |
+| **Activity-as-status** | "The team met three times" is not a status: it is a diary | Report accomplishments, variance, and decisions |
 | **One-channel fallacy** | Everything goes to everyone through one channel | Channel matched to message and audience |
 | **Information flooding** | Stakeholders receive everything and read nothing | Curate per audience; less is more |
 | **No feedback loop** | Communication is one-way; issues fester unvoiced | Every communication includes a feedback mechanism |
@@ -153,7 +153,7 @@ Program managers layer communication:
 
 - Stakeholders report receiving the right information at the right time
 - Status reports are read and referenced in governance meetings
-- Decision briefs result in timely decisions — not deferred for "more information"
+- Decision briefs result in timely decisions, not deferred for "more information"
 - The communication plan is reviewed and improved each quarter
 - No stakeholder escalates a concern that was visible in project communications
 
@@ -161,9 +161,9 @@ Program managers layer communication:
 
 - [[02_Stakeholder_Engagement_Planning]]: the engagement plan determines communication needs
 - [[04_Managing_Stakeholder_Expectations]]: communication shapes expectations
-- [[06_Governance_and_Change_Control/00_overview|Governance and Change Control]]: communication supports governance decisions
+- [[career-path/13_Project_and_Program_Manager/06_Governance_and_Change_Control/00_overview|Governance and Change Control]]: communication supports governance decisions
 - [[career-path/11_Engineering_Manager/07_Manager_Communication/00_overview|Manager Communication (EM)]]: the people-management communication counterpart
 
 ## Summary
 
-Project communication management is the design and operation of the project's information system: tailored content per stakeholder group, delivered through matched channels at defined cadences, with structured formats for status, decisions, and executive summaries, and feedback mechanisms that make communication a loop rather than a broadcast. The project manager who treats communication as a system builds stakeholder confidence; the one who treats it as "sending updates" builds inbox noise. The communication plan is the system's blueprint — and it works when stakeholders have what they need to decide and act, and nothing they do not.
+Project communication management is the design and operation of the project's information system: tailored content per stakeholder group, delivered through matched channels at defined cadences, with structured formats for status, decisions, and executive summaries, and feedback mechanisms that make communication a loop rather than a broadcast. The project manager who treats communication as a system builds stakeholder confidence; the one who treats it as "sending updates" builds inbox noise. The communication plan is the system's blueprint, and it works when stakeholders have what they need to decide and act, and nothing they do not.

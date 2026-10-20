@@ -83,7 +83,7 @@ Design a feature store for a recommendation system:
 - [[01_Experiment_Tracking_and_Reproducibility]]: feature versions are tracked as experiment inputs
 - [[03_Model_Training_and_Evaluation]]: features are the primary input to training
 - [[05_ML_Monitoring_and_Drift]]: feature drift monitoring uses the feature store
-- [[04_Data_Quality/00_overview|Data Quality]]: feature quality is a subset of data quality
+- [[career-path/09_Data_and_ML_Engineer/04_Data_Quality/00_overview|Data Quality]]: feature quality is a subset of data quality
 
 ## Common Pitfalls
 

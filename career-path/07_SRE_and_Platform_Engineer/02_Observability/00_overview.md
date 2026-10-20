@@ -39,6 +39,7 @@ Observability is not monitoring. Monitoring tells you the system is broken. Obse
 ## How the Topics Connect
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     METRICS["01 Metrics and Dashboards"] --> LOGS["02 Structured Logging"]
     LOGS --> TRACES["03 Distributed Tracing"]
@@ -76,6 +77,6 @@ Use this to gauge your current mastery of observability:
 ## Related
 
 - [[00_overview|SRE and Platform Engineer Overview]]
-- [[01_Service_Objectives/00_overview|Service Objectives]] : observability is required to measure SLIs
-- [[03_Incident_Response/00_overview|Incident Response]] : observability data is critical for incident diagnosis
+- [[career-path/07_SRE_and_Platform_Engineer/01_Service_Objectives/00_overview|Service Objectives]] : observability is required to measure SLIs
+- [[career-path/07_SRE_and_Platform_Engineer/03_Incident_Response/00_overview|Incident Response]] : observability data is critical for incident diagnosis
 - [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/03_Observability|Observability]] : observability foundations from the Senior SWE path

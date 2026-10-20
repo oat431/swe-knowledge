@@ -16,15 +16,15 @@ tags:
 
 # Documentation Quality and Maintenance
 
-> **Core skill:** The advocate keeps documentation true over time — quality defined and checked, freshness tracked, changes reviewed with releases, and content that cannot be maintained deliberately retired.
+> **Core skill:** The advocate keeps documentation true over time: quality defined and checked, freshness tracked, changes reviewed with releases, and content that cannot be maintained deliberately retired.
 
 ## Why This Matters
 
-Documentation does not decay because anyone broke it; it decays because everything around it moved. A dependency shipped a new major version, a default changed, a UI was redesigned, a permission model was tightened — and every page that references those things slid from true to false without a single edit. Stale documentation is worse than missing documentation, because missing content invites a search while a confidently wrong page invites a production incident. The maintenance system, not the writing, is what decides whether a docs set can be trusted after its first release.
+Documentation does not decay because anyone broke it; it decays because everything around it moved. A dependency shipped a new major version, a default changed, a UI was redesigned, a permission model was tightened, and every page that references those things slid from true to false without a single edit. Stale documentation is worse than missing documentation, because missing content invites a search while a confidently wrong page invites a production incident. The maintenance system, not the writing, is what decides whether a docs set can be trusted after its first release.
 
-The quality problem is equally procedural. "Good docs" is not a feeling; it is a set of checkable dimensions — accurate, complete, current, clear, findable, consistent, accessible — each with evidence and a failure mode. Teams that never define the bar cannot review against it, and reviews degrade into taste debates. The advocate converts quality from an argument into a checklist, so that any contributor, including an engineer writing their first page, can tell whether their work passes.
+The quality problem is equally procedural. "Good docs" is not a feeling; it is a set of checkable dimensions (accurate, complete, current, clear, findable, consistent, accessible) each with evidence and a failure mode. Teams that never define the bar cannot review against it, and reviews degrade into taste debates. The advocate converts quality from an argument into a checklist, so that any contributor, including an engineer writing their first page, can tell whether their work passes.
 
-Maintenance is also a scoping discipline. Every page added is a promise to keep it true, and a docs set that only grows eventually exceeds anyone's ability to maintain it. Healthy documentation practices balance creation with retirement: pages that no longer serve a task are archived or absorbed, owners are named, freshness is measured, and the set stays roughly the same size while getting truer. The garden metaphor is the right one — documentation is tended, not built.
+Maintenance is also a scoping discipline. Every page added is a promise to keep it true, and a docs set that only grows eventually exceeds anyone's ability to maintain it. Healthy documentation practices balance creation with retirement: pages that no longer serve a task are archived or absorbed, owners are named, freshness is measured, and the set stays roughly the same size while getting truer. The garden metaphor is the right one: documentation is tended, not built.
 
 ## Quality Dimensions and Their Evidence
 
@@ -38,7 +38,7 @@ Maintenance is also a scoping discipline. Every page added is a promise to keep 
 | Consistent | Does it use the same names and formats as everywhere else | Terminology and template checks |
 | Accessible | Can every audience consume it | Alt text, contrast, captions, structure |
 
-Each dimension is verified differently, which is why quality cannot be assessed by a single pass — execution tests accuracy, journeys test completeness, and users test clarity.
+Each dimension is verified differently, which is why quality cannot be assessed by a single pass: execution tests accuracy, journeys test completeness, and users test clarity.
 
 ## Maintenance Triggers
 
@@ -64,11 +64,12 @@ Triggers beat calendars: a maintenance system that reacts to change catches drif
 | Automated checks | Links, examples, spelling, structure | Every commit |
 | Contribution review | New and changed pages against the quality bar | As submitted |
 
-Automation handles what machines can prove — links resolve, examples run, structure is valid — so human review spends its time on meaning.
+Automation handles what machines can prove (links resolve, examples run, structure is valid) so human review spends its time on meaning.
 
 ## The Maintenance Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CHANGE["A code or product change opens the docs task"] --> REVIEW["Review and update the affected pages"]
     REVIEW["Review and update the affected pages"] --> TEST["Run link and example checks automatically"]
@@ -92,7 +93,7 @@ The loop ends in triage, not accumulation: what cannot be kept true is retired r
 ### Page Freshness Record Template
 
 ```markdown
-## Page Record — <page>
+## Page Record: <page>
 
 | Field | Value |
 |-------|-------|
@@ -132,4 +133,4 @@ The loop ends in triage, not accumulation: what cannot be kept true is retired r
 
 ## Summary
 
-Documentation quality and maintenance are a system, not an intention: a checkable quality bar, release-triggered updates, automated verification of links and examples, freshness records with owners, and the deliberate retirement of content that cannot stay true. The advocate who runs this loop keeps trust with every reader — because a docs set that is measured, tended, and allowed to shrink stays accurate, and accuracy is the only quality that users can feel.
+Documentation quality and maintenance are a system, not an intention: a checkable quality bar, release-triggered updates, automated verification of links and examples, freshness records with owners, and the deliberate retirement of content that cannot stay true. The advocate who runs this loop keeps trust with every reader, because a docs set that is measured, tended, and allowed to shrink stays accurate, and accuracy is the only quality that users can feel.

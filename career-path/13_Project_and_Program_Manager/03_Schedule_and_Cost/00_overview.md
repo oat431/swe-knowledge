@@ -18,9 +18,9 @@ tags:
 
 ## Why This Matters
 
-Schedule and cost are the two dimensions stakeholders watch most closely — and the two where project managers lose credibility fastest when they hide variance. An honest forecast with a 20% overage is better than a dishonest one that hits the number on paper and overruns in reality.
+Schedule and cost are the two dimensions stakeholders watch most closely, and the two where project managers lose credibility fastest when they hide variance. An honest forecast with a 20% overage is better than a dishonest one that hits the number on paper and overruns in reality.
 
-The project manager does not control how fast engineers work or what vendors charge. They control the forecast: estimating with the team, building contingency against uncertainty, tracking actuals against the baseline, and communicating variance with options before it becomes a crisis. Earned value management, critical path analysis, and cost forecasting are the PM's analytical tools — but the real skill is telling stakeholders what they need to hear, not what they want to hear.
+The project manager does not control how fast engineers work or what vendors charge. They control the forecast: estimating with the team, building contingency against uncertainty, tracking actuals against the baseline, and communicating variance with options before it becomes a crisis. Earned value management, critical path analysis, and cost forecasting are the PM's analytical tools, but the real skill is telling stakeholders what they need to hear, not what they want to hear.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ The project manager does not control how fast engineers work or what vendors cha
 ## Earned Value at a Glance
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PV["Planned Value: what should be done"] --> EV["Earned Value: what is actually done"]
     EV --> AC["Actual Cost: what it actually cost"]
@@ -75,8 +76,8 @@ EVM turns "we're a bit behind" into numbers a steering committee can act on.
 
 ## Related Capabilities
 
-- [[02_Scope_and_Planning/00_overview|Scope and Planning]]: scope changes drive schedule and cost changes
-- [[04_Risk_and_Issues/00_overview|Risk and Issues]]: contingency is sized from risk analysis
+- [[career-path/13_Project_and_Program_Manager/02_Scope_and_Planning/00_overview|Scope and Planning]]: scope changes drive schedule and cost changes
+- [[career-path/13_Project_and_Program_Manager/04_Risk_and_Issues/00_overview|Risk and Issues]]: contingency is sized from risk analysis
 - [[career-path/05_Tech_Lead/04_Team_Delivery_and_Execution_Leadership/07_Delivery_Metrics_and_Health|Delivery Metrics and Health (Tech Lead)]]: team-level delivery measurement
 
 ## Summary

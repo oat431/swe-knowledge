@@ -29,6 +29,7 @@ The decision is rarely purely technical. It involves strategic alignment, organi
 ## Build vs Buy Decision Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     A[Identify Need] --> B{Core Competency?}
     B -->|Yes| C[Lean toward Build]

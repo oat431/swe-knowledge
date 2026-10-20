@@ -16,7 +16,7 @@ tags:
 
 # Written Artifacts for Customers
 
-> **Core skill:** Memos, status reports, and outcome documentation that hold up — written for the audience that will act on them, separating fact from forecast, and precise enough to survive being forwarded to people the FDE never meets.
+> **Core skill:** Memos, status reports, and outcome documentation that hold up: written for the audience that will act on them, separating fact from forecast, and precise enough to survive being forwarded to people the FDE never meets.
 
 ## Why This Matters
 
@@ -24,7 +24,7 @@ A growing share of a deployment's decisions are made from documents rather than 
 
 The distinctive discipline of customer-facing writing is that it serves two masters at once. It must be accurate enough that the FDE's own organization can trust it as a record, and legible enough that the customer's busy readers get what they need in one pass. Internal writing can lean on shared context; customer writing cannot. Internal writing can be revised quietly; a customer document is a statement that will be quoted back. The FDE who writes cleanly, dates everything, and separates what happened from what is expected is producing something rarer than it sounds: a document that nobody has to verify.
 
-There is also a strategic layer. Written artifacts are how outcomes survive personnel change — on both sides. Sponsors rotate, champions get promoted, FDEs move accounts, and the deployment's justification must be reconstructible from paper by whichever stranger inherits it. An account whose outcomes live only in meeting memories is an account that will eventually be re-scoped by someone's fresh assumptions. The FDE who documents outcomes against the original success criteria, in the customer's own vocabulary, is quietly building the case for renewal, expansion, and their own professional reputation at the same time.
+There is also a strategic layer. Written artifacts are how outcomes survive personnel change, on both sides. Sponsors rotate, champions get promoted, FDEs move accounts, and the deployment's justification must be reconstructible from paper by whichever stranger inherits it. An account whose outcomes live only in meeting memories is an account that will eventually be re-scoped by someone's fresh assumptions. The FDE who documents outcomes against the original success criteria, in the customer's own vocabulary, is quietly building the case for renewal, expansion, and their own professional reputation at the same time.
 
 ## The Artifact Set
 
@@ -49,6 +49,7 @@ There is also a strategic layer. Written artifacts are how outcomes survive pers
 | No internal jargon | Vocabulary the customer does not own creates distance | Use the customer's system names and process words |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     AGREE["Agree the artifact set with the customer"] --> WRITE["Write to the audience"]
     WRITE --> CIRCULATE["Circulate before the meeting"]
@@ -57,7 +58,7 @@ flowchart LR
     FILE --> REUSE["Reuse the structure next time"]
 ```
 
-The circulate-before-meeting habit deserves special note: documents sent before a meeting set the agenda and force alignment asynchronously; documents sent after a meeting are minutes. The FDE who controls the pre-read controls what the meeting is actually about — and meetings about decisions are far shorter than meetings about information.
+The circulate-before-meeting habit deserves special note: documents sent before a meeting set the agenda and force alignment asynchronously; documents sent after a meeting are minutes. The FDE who controls the pre-read controls what the meeting is actually about, and meetings about decisions are far shorter than meetings about information.
 
 ## Practical Applications
 
@@ -74,7 +75,7 @@ The circulate-before-meeting habit deserves special note: documents sent before 
 ### Outcome Report Template
 
 ```markdown
-## Outcome Report — <deployment, period>
+## Outcome Report: <deployment, period>
 
 | Agreed success criterion | Status | Evidence |
 |--------------------------|--------|----------|
@@ -112,10 +113,10 @@ The circulate-before-meeting habit deserves special note: documents sent before 
 
 - [[05_Difficult_Conversations]]
 - [[06_Change_Management_and_Adoption]]
-- [[05_Enterprise_Navigation_Security_and_Compliance/00_overview|Enterprise Navigation: Security and Compliance]]
+- [[career-path/19_Forward_Deployed_Engineer/05_Enterprise_Navigation_Security_and_Compliance/00_overview|Enterprise Navigation: Security and Compliance]]
 - [[software-engineering-note/14_Software_Engineering_Professional_Practice/03_Communication_Skills]]
 - [[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]
 
 ## Summary
 
-Written artifacts for customers are the FDE's durable voice: status reports that keep reality shared, memos that frame decisions, outcome reports that prove value against the original criteria, and runbooks that let the customer operate without them. Write for the reader who will act, separate fact from forecast, date and version everything, and assume each document will be forwarded to strangers — because it will be, and those strangers are the ones who decide what happens to the deployment next.
+Written artifacts for customers are the FDE's durable voice: status reports that keep reality shared, memos that frame decisions, outcome reports that prove value against the original criteria, and runbooks that let the customer operate without them. Write for the reader who will act, separate fact from forecast, date and version everything, and assume each document will be forwarded to strangers, because it will be, and those strangers are the ones who decide what happens to the deployment next.

@@ -17,11 +17,11 @@ tags:
 
 # Schedule Compression and Recovery
 
-> **Core skill:** Compressing the schedule when the project is behind — using crashing, fast-tracking, and re-planning with documented trade-offs — so recovery decisions are deliberate and stakeholders understand what they are trading for time.
+> **Core skill:** Compressing the schedule when the project is behind (using crashing, fast-tracking, and re-planning with documented trade-offs) so recovery decisions are deliberate and stakeholders understand what they are trading for time.
 
 ## Why This Matters
 
-Every project falls behind at some point. The difference between projects that recover and projects that spiral is whether compression decisions are analyzed or reacted to. The default response — "add more people" — is the most common and least effective: Brooks's Law is real, and adding people to a late software project usually makes it later.
+Every project falls behind at some point. The difference between projects that recover and projects that spiral is whether compression decisions are analyzed or reacted to. The default response ("add more people") is the most common and least effective: Brooks's Law is real, and adding people to a late software project usually makes it later.
 
 Schedule compression is a trade-off: time for cost (crashing), time for risk (fast-tracking), or time for scope (re-planning). The project manager's job is to analyze which activities can be compressed, what each compression costs, what new risks it introduces, and whether the trade-off is worth it. Compression without analysis is panic; compression with analysis is management.
 
@@ -30,6 +30,7 @@ Recovery is different from compression. Compression is shortening the remaining 
 ## Compression Techniques
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SLIP["Schedule slip detected"] --> ANALYSIS["Analyze: critical path activities, float, root cause"]
     ANALYSIS --> CRASH["Crashing: add resources to critical path activities"]
@@ -67,7 +68,7 @@ Performing activities in parallel that were originally planned in sequence.
 | **Cost** | Low or zero direct cost |
 | **Risk** | Rework risk if predecessor output changes; quality risk from incomplete inputs |
 
-Fast-tracking is the cheapest compression technique but the riskiest — the project accepts that rework may be needed and monitors for it.
+Fast-tracking is the cheapest compression technique but the riskiest. The project accepts that rework may be needed and monitors for it.
 
 ### Re-Planning
 
@@ -95,7 +96,7 @@ The project manager's compression analysis: for each critical path activity, the
 
 ## The Recovery Plan
 
-Recovery is more than compression — it is the plan to get back on track and stay there:
+Recovery is more than compression. It is the plan to get back on track and stay there:
 
 | Recovery Element | Content | Purpose |
 |-----------------|---------|---------|
@@ -161,7 +162,7 @@ The project manager owns the analysis; the sponsor owns the trade-off.
 - Time recovered: [Days]
 - Stakeholder impact: [Who is affected]
 
-**Recommendation:** [Option X] — [rationale]
+**Recommendation:** [Option X], [rationale]
 **Decision needed by:** [Date]
 ```
 
@@ -178,7 +179,7 @@ The project manager owns the analysis; the sponsor owns the trade-off.
 ## Success Indicators
 
 - Compression decisions are based on activity-level analysis, not blanket crashing
-- Trade-offs — time, cost, risk, scope — are documented and sponsor-approved
+- Trade-offs (time, cost, risk, scope) are documented and sponsor-approved
 - Root cause is addressed, not just the symptom
 - Recovery monitoring catches new variance before it compounds
 - The same root cause does not cause a second slip
@@ -189,8 +190,8 @@ The project manager owns the analysis; the sponsor owns the trade-off.
 - [[02_Critical_Path_Analysis]]: compression acts on the critical path
 - [[06_Variance_Analysis_and_Reporting]]: variance analysis triggers compression decisions
 - [[04_Earned_Value_Management]]: EVM quantifies the slip
-- [[04_Risk_and_Issues/00_overview|Risk and Issues]]: compression introduces new risks
+- [[career-path/13_Project_and_Program_Manager/04_Risk_and_Issues/00_overview|Risk and Issues]]: compression introduces new risks
 
 ## Summary
 
-Schedule compression is a deliberate trade-off — time for cost (crashing), time for risk (fast-tracking), or time for scope (re-planning) — analyzed activity by activity on the critical path and decided by the sponsor with full visibility into what is being traded. The default response of adding people is the least effective in knowledge work. Recovery goes beyond compression: root cause analysis, increased monitoring, and lessons learned. The project manager owns the analysis; the sponsor owns the trade-off. Compression without analysis is panic; compression with analysis is management.
+Schedule compression is a deliberate trade-off: time for cost (crashing), time for risk (fast-tracking), or time for scope (re-planning), analyzed activity by activity on the critical path and decided by the sponsor with full visibility into what is being traded. The default response of adding people is the least effective in knowledge work. Recovery goes beyond compression: root cause analysis, increased monitoring, and lessons learned. The project manager owns the analysis; the sponsor owns the trade-off. Compression without analysis is panic; compression with analysis is management.

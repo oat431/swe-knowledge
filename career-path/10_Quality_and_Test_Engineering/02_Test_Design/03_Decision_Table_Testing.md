@@ -96,9 +96,9 @@ Combine rules that produce identical actions when one condition does not matter.
 |------|---|---|---|---|
 | **C1: Username valid** | T | T | F | F |
 | **C2: Password valid** | T | F | T | F |
-| **A1: Grant access** | X | - | - | - |
-| **A2: Show error** | - | X | X | X |
-| **A3: Lock account** | - | - | - | X (if 3rd failure) |
+| **A1: Grant access** | X | N/A | - | N/A |
+| **A2: Show error** | N/A | X | X | X |
+| **A3: Lock account** | N/A | - | N/A | X (if 3rd failure) |
 
 **Test Cases:**
 
@@ -128,9 +128,9 @@ Combine rules that produce identical actions when one condition does not matter.
 | **C1: Credit >= 700** | T | T | T | T | F | F | F | F |
 | **C2: Income >= $50K** | T | T | F | F | T | T | F | F |
 | **C3: DTI < 0.4** | T | F | T | F | T | F | T | F |
-| **A1: Approve** | X | - | - | - | - | - | - | - |
-| **A2: Co-signer** | - | X | X | - | X | - | - | - |
-| **A3: Reject** | - | - | - | X | - | X | X | X |
+| **A1: Approve** | X | N/A | - | N/A | - | N/A | - | N/A |
+| **A2: Co-signer** | N/A | X | X | N/A | X | N/A | - | N/A |
+| **A3: Reject** | N/A | - | N/A | X | N/A | X | X | X |
 
 **Simplified Table:**
 
@@ -139,11 +139,11 @@ After analysis, we can combine rules with identical outcomes:
 | Rule | 1 | 2 | 3 | 4 | 5 |
 |------|---|---|---|---|---|
 | **C1: Credit >= 700** | T | T | F | F | F |
-| **C2: Income >= $50K** | T | - | T | F | - |
-| **C3: DTI < 0.4** | T | F | - | T | F |
-| **A1: Approve** | X | - | - | - | - |
-| **A2: Co-signer** | - | X | X | - | - |
-| **A3: Reject** | - | - | - | X | X |
+| **C2: Income >= $50K** | T | N/A | T | F | N/A |
+| **C3: DTI < 0.4** | T | F | N/A | T | F |
+| **A1: Approve** | X | N/A | - | N/A | - |
+| **A2: Co-signer** | N/A | X | X | N/A | - |
+| **A3: Reject** | N/A | - | N/A | X | X |
 
 Note: "-" in conditions means "don't care" (any value produces same outcome).
 
@@ -171,10 +171,10 @@ Note: "-" in conditions means "don't care" (any value produces same outcome).
 |------|---|---|---|---|
 | **C1: Premium** | T | T | F | F |
 | **C2: Order > $200** | T | F | T | F |
-| **A1: 10% discount** | - | X | - | - |
-| **A2: 15% discount** | X | - | - | - |
-| **A3: Free shipping** | X | - | X | - |
-| **A4: No discount** | - | - | - | X |
+| **A1: 10% discount** | N/A | X | N/A | - |
+| **A2: 15% discount** | X | N/A | - | N/A |
+| **A3: Free shipping** | X | N/A | X | N/A |
+| **A4: No discount** | N/A | - | N/A | X |
 
 **Test Cases:**
 

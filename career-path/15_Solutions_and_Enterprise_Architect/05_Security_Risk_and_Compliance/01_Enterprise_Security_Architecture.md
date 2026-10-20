@@ -16,15 +16,15 @@ tags:
 
 # Enterprise Security Architecture
 
-> **Core skill:** The architect defines security architecture at enterprise scope — identity, network, data, application, and operations domains governed by shared principles and central services — so that security is a coherent property of the estate rather than an accumulation of tactical controls.
+> **Core skill:** The architect defines security architecture at enterprise scope (identity, network, data, application, and operations domains governed by shared principles and central services) so that security is a coherent property of the estate rather than an accumulation of tactical controls.
 
 ## Why This Matters
 
-Security at enterprise scale is an architecture property, not a product. A strong firewall, a well-configured identity provider, or a mature operations team does not make an enterprise secure; the posture emerges from the structure of the estate — where trust boundaries fall, which data moves where, who can assert identity, and what every system assumes about its neighbors. The enterprise security architecture makes those structural commitments once, so individual solutions inherit security instead of reinventing it.
+Security at enterprise scale is an architecture property, not a product. A strong firewall, a well-configured identity provider, or a mature operations team does not make an enterprise secure; the posture emerges from the structure of the estate: where trust boundaries fall, which data moves where, who can assert identity, and what every system assumes about its neighbors. The enterprise security architecture makes those structural commitments once, so individual solutions inherit security instead of reinventing it.
 
-The architect's role here is integration, not depth. The Security Engineer owns cryptographic depth, detection engineering, and incident response; the architect owns how security requirements shape the landscape — which shared services every solution must consume, which patterns are mandatory, where controls belong, and how risk appetite becomes design constraints. The test of a security architecture is whether a new solution built from standard patterns is secure by default, without a security expert in the room.
+The architect's role here is integration, not depth. The Security Engineer owns cryptographic depth, detection engineering, and incident response; the architect owns how security requirements shape the landscape: which shared services every solution must consume, which patterns are mandatory, where controls belong, and how risk appetite becomes design constraints. The test of a security architecture is whether a new solution built from standard patterns is secure by default, without a security expert in the room.
 
-Security architecture also sets the economics of protection. Fragmented controls cost more to build, operate, and audit than shared ones. Central identity, key management, secrets handling, and logging turn security from a per-project tax into an estate-level capability. The architect designs that consolidation deliberately, because the alternative — every team solving security alone — ends in a landscape of unmanaged edge cases.
+Security architecture also sets the economics of protection. Fragmented controls cost more to build, operate, and audit than shared ones. Central identity, key management, secrets handling, and logging turn security from a per-project tax into an estate-level capability. The architect designs that consolidation deliberately, because the alternative (every team solving security alone) ends in a landscape of unmanaged edge cases.
 
 ## Security Architecture Domains
 
@@ -69,6 +69,7 @@ The two compose rather than compete. Zero trust describes the direction of acces
 ## The Posture Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     APPETITE["Business risk appetite"] --> PRINCIPLES["Security architecture principles"]
     PRINCIPLES["Security architecture principles"] --> SERVICES["Shared security services and patterns"]
@@ -90,7 +91,7 @@ flowchart LR
 ### Enterprise Security Snapshot
 
 ```markdown
-## Enterprise Security Snapshot — <period>
+## Enterprise Security Snapshot: <period>
 
 | Domain | Current Posture | Gaps | Treatment | Owner |
 |--------|----------------|------|-----------|-------|
@@ -130,4 +131,4 @@ flowchart LR
 
 ## Summary
 
-Enterprise security architecture turns security from a per-project negotiation into an estate property: domains governed by shared principles, trust boundaries made explicit, and central services — identity, keys, logging, policy — that every solution consumes by default. The architect integrates the specialists' depth into structural commitments so that secure behavior is the default path, deviations are visible and time-boxed, and posture is measured by exposure rather than activity.
+Enterprise security architecture turns security from a per-project negotiation into an estate property: domains governed by shared principles, trust boundaries made explicit, and central services (identity, keys, logging, policy) that every solution consumes by default. The architect integrates the specialists' depth into structural commitments so that secure behavior is the default path, deviations are visible and time-boxed, and posture is measured by exposure rather than activity.

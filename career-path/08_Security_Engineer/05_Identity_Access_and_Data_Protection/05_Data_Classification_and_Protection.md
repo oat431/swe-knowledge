@@ -71,6 +71,7 @@ Record the classification, rationale, owner, allowed purposes, prohibited uses, 
 | Retain less | High over time | Historical analytics trade-off | Future value does not justify exposure |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DATA["Identify data and business purpose"] --> CLASSIFY["Assess harm audience and lifecycle"]
     CLASSIFY --> MINIMIZE["Minimize collection and copies"]

@@ -16,19 +16,20 @@ tags:
 
 # Risk Analysis and Prioritization
 
-> **Core skill:** Assessing each identified risk for probability, impact, proximity, and urgency — using qualitative and, where justified, quantitative methods — so the project focuses its limited response resources on the risks that matter most.
+> **Core skill:** Assessing each identified risk for probability, impact, proximity, and urgency (using qualitative and, where justified, quantitative methods) so the project focuses its limited response resources on the risks that matter most.
 
 ## Why This Matters
 
-A risk register with fifty un-prioritized risks is a list of anxieties, not a management tool. The project manager cannot respond to every risk with equal intensity — and should not. The purpose of analysis and prioritization is to separate the critical few from the manageable many, so response resources are allocated where they make the most difference.
+A risk register with fifty un-prioritized risks is a list of anxieties, not a management tool. The project manager cannot respond to every risk with equal intensity, and should not. The purpose of analysis and prioritization is to separate the critical few from the manageable many, so response resources are allocated where they make the most difference.
 
-Qualitative analysis — rating probability and impact on defined scales — is sufficient for most risks in most projects. It is fast, it uses the shared language defined in the risk management plan, and it surfaces the risks that need attention. Quantitative analysis — Monte Carlo simulation, decision trees, expected monetary value — is used when the investment decision is large enough to justify the analysis cost, or when the risk profile is too complex for qualitative ratings alone.
+Qualitative analysis (rating probability and impact on defined scales) is sufficient for most risks in most projects. It is fast, it uses the shared language defined in the risk management plan, and it surfaces the risks that need attention. Quantitative analysis (Monte Carlo simulation, decision trees, expected monetary value) is used when the investment decision is large enough to justify the analysis cost, or when the risk profile is too complex for qualitative ratings alone.
 
-The output is a prioritized risk register: risks ordered by risk score (probability × impact), with proximity noted — because a high-impact risk two years away is less urgent than a medium-impact risk arriving next month.
+The output is a prioritized risk register: risks ordered by risk score (probability × impact), with proximity noted, because a high-impact risk two years away is less urgent than a medium-impact risk arriving next month.
 
 ## Analysis Dimensions
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     RISK["Identified risk"] --> PROBABILITY["Probability: how likely is it to occur?"]
     RISK --> IMPACT["Impact: what is the consequence if it occurs?"]
@@ -137,7 +138,7 @@ Risk analysis is not static. Risks are reassessed when:
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
 | **Score-only prioritization** | Two risks with the same score but different proximity get equal attention | Add proximity and urgency to the prioritization equation |
-| **False precision** | "Probability = 67.3%" — spurious precision in qualitative analysis | Use the defined scales; coarse categories are fine for most risks |
+| **False precision** | "Probability = 67.3%": spurious precision in qualitative analysis | Use the defined scales; coarse categories are fine for most risks |
 | **Analysis paralysis** | Quantitative analysis applied to risks that do not justify it | Qualitative for most; quantitative only when stakes justify the cost |
 | **One-time assessment** | Risks assessed at identification, never reassessed | Reassess at every status cycle and after any trigger event |
 | **Impact-by-category-only** | Only one impact dimension assessed (usually schedule) | Assess impact on schedule, cost, scope, and quality |
@@ -146,7 +147,7 @@ Risk analysis is not static. Risks are reassessed when:
 
 - Every risk in the register has a current probability and impact assessment
 - Critical and high risks receive proportionally more response attention
-- Proximity is factored into prioritization — near-term risks are actioned first
+- Proximity is factored into prioritization: near-term risks are actioned first
 - Quantitative analysis is used where it adds value, not as default
 - Risk reassessment is triggered by defined events, not forgotten
 
@@ -160,4 +161,4 @@ Risk analysis is not static. Risks are reassessed when:
 
 ## Summary
 
-Risk analysis and prioritization separate the critical few risks from the manageable many by assessing probability, impact, proximity, and urgency on defined scales. Qualitative analysis — probability × impact with a heat map — is sufficient for most projects. Quantitative analysis — EMV, decision trees, Monte Carlo — is reserved for decisions where the cost of analysis is less than the value of the insight. The output is a prioritized register that guides response resource allocation: critical risks get immediate attention, high risks get planned responses, and low risks are monitored or accepted. Reassessment is continuous — risk scores change as the project progresses and the environment shifts.
+Risk analysis and prioritization separate the critical few risks from the manageable many by assessing probability, impact, proximity, and urgency on defined scales. Qualitative analysis (probability × impact with a heat map) is sufficient for most projects. Quantitative analysis (EMV, decision trees, Monte Carlo) is reserved for decisions where the cost of analysis is less than the value of the insight. The output is a prioritized register that guides response resource allocation: critical risks get immediate attention, high risks get planned responses, and low risks are monitored or accepted. Reassessment is continuous: risk scores change as the project progresses and the environment shifts.

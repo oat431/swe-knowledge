@@ -15,13 +15,13 @@ tags:
 
 # Scope Definition
 
-> **Core skill:** Defining the project's scope — what will be delivered, what is explicitly excluded, and the boundary between them — so that every stakeholder and team member knows what the project is responsible for and what it is not.
+> **Core skill:** Defining the project's scope (what will be delivered, what is explicitly excluded, and the boundary between them) so that every stakeholder and team member knows what the project is responsible for and what it is not.
 
 ## Why This Matters
 
-Scope is the project's most contested boundary. Every stakeholder has a mental model of what the project will deliver, and those models rarely agree. The project manager's scope definition is the instrument that reconciles them — not by satisfying every expectation but by making expectations explicit so they can be negotiated. Projects fail at scope more than at any other dimension because scope is where interests collide: the sponsor wants more for less, the team wants clarity, users want everything they can imagine, and the project manager holds the line.
+Scope is the project's most contested boundary. Every stakeholder has a mental model of what the project will deliver, and those models rarely agree. The project manager's scope definition is the instrument that reconciles them, not by satisfying every expectation but by making expectations explicit so they can be negotiated. Projects fail at scope more than at any other dimension because scope is where interests collide: the sponsor wants more for less, the team wants clarity, users want everything they can imagine, and the project manager holds the line.
 
-Scope definition is not a list of features. It is a statement of what the project is accountable for producing, supported by a clear boundary between in and out. Everything that is in scope must be delivered, resourced, and tracked. Everything that is out of scope will not be delivered unless the scope changes through governance. The out-of-scope list is as important as the in-scope list — it is where the project manager draws the line that protects the team from uncontrolled expansion.
+Scope definition is not a list of features. It is a statement of what the project is accountable for producing, supported by a clear boundary between in and out. Everything that is in scope must be delivered, resourced, and tracked. Everything that is out of scope will not be delivered unless the scope changes through governance. The out-of-scope list is as important as the in-scope list. It is where the project manager draws the line that protects the team from uncontrolled expansion.
 
 Scope flows from the charter into the detailed scope statement, which feeds the work breakdown structure, which feeds the plan. A scope that is loose at the top creates a cascade of ambiguity through every planning artifact below it. The project manager who defines scope precisely at the start spends less time defending it later.
 
@@ -41,6 +41,7 @@ Scope flows from the charter into the detailed scope statement, which feeds the 
 ## In-Scope versus Out-of-Scope
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CHARTER_SCOPE["Charter: high-level scope boundary"] --> DETAIL["Detailed scope statement"]
     DETAIL --> IN["In scope: deliverables the project is accountable for"]
@@ -124,12 +125,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[02_Work_Breakdown_Structure]] — scope decomposed into work packages
-- [[03_Requirements_Management]] — detailed requirements that elaborate the scope
-- [[06_Scope_Verification_and_Validation]] — verifying deliverables against scope
-- [[07_Scope_Change_Management]] — managing scope changes through governance
-- [[01_Initiation_and_Charter/00_overview|Initiation and Charter]] — scope originates in the charter
+- [[02_Work_Breakdown_Structure]]: scope decomposed into work packages
+- [[03_Requirements_Management]]: detailed requirements that elaborate the scope
+- [[06_Scope_Verification_and_Validation]]: verifying deliverables against scope
+- [[07_Scope_Change_Management]]: managing scope changes through governance
+- [[career-path/13_Project_and_Program_Manager/01_Initiation_and_Charter/00_overview|Initiation and Charter]]: scope originates in the charter
 
 ## Summary
 
-Scope definition is the discipline of drawing the project's boundary: what will be delivered, what is explicitly excluded, and the acceptance criteria that will judge delivery complete. It converts the charter's high-level scope into a detailed statement that feeds the work breakdown structure and the project plan. The out-of-scope list is as important as the in-scope list — it protects the project from uncontrolled expansion and gives the project manager the line against which scope changes are negotiated. A scope that is precise at the top prevents ambiguity from cascading through every planning artifact below it.
+Scope definition is the discipline of drawing the project's boundary: what will be delivered, what is explicitly excluded, and the acceptance criteria that will judge delivery complete. It converts the charter's high-level scope into a detailed statement that feeds the work breakdown structure and the project plan. The out-of-scope list is as important as the in-scope list. It protects the project from uncontrolled expansion and gives the project manager the line against which scope changes are negotiated. A scope that is precise at the top prevents ambiguity from cascading through every planning artifact below it.

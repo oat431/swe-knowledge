@@ -15,13 +15,13 @@ tags:
 
 # Configuration Management
 
-> **Core skill:** Managing project artifacts, versions, and baselines — so there is a single source of truth for every project document, every baseline is current and controlled, and no decision is made against outdated information.
+> **Core skill:** Managing project artifacts, versions, and baselines, so there is a single source of truth for every project document, every baseline is current and controlled, and no decision is made against outdated information.
 
 ## Why This Matters
 
-A project that operates without configuration management has multiple versions of the truth. The schedule in the status report disagrees with the schedule in the steering committee deck. The scope statement referenced in the change request was superseded three weeks ago. The risk register the sponsor reviewed is not the risk register the team is working from. Every discrepancy is a decision made on fiction — and every such decision compounds into a project that is managed against a phantom.
+A project that operates without configuration management has multiple versions of the truth. The schedule in the status report disagrees with the schedule in the steering committee deck. The scope statement referenced in the change request was superseded three weeks ago. The risk register the sponsor reviewed is not the risk register the team is working from. Every discrepancy is a decision made on fiction, and every such decision compounds into a project that is managed against a phantom.
 
-Configuration management is the discipline of the single source of truth: every project artifact has a known version, baselines are formally established and updated through change control, and the project team and stakeholders reference the same information. It is not glamorous work — it is file naming, version control, and baseline discipline. But it is the foundation on which every status report, every change assessment, and every governance decision rests.
+Configuration management is the discipline of the single source of truth: every project artifact has a known version, baselines are formally established and updated through change control, and the project team and stakeholders reference the same information. It is not glamorous work; it is file naming, version control, and baseline discipline. But it is the foundation on which every status report, every change assessment, and every governance decision rests.
 
 ## What Configuration Management Controls
 
@@ -52,6 +52,7 @@ A baseline is a formally approved version of a project artifact that serves as t
 ### The Baseline Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DRAFT["Draft version: work in progress"] --> REVIEW["Review: stakeholder and governance review"]
     REVIEW --> APPROVE["Approve: formally established as baseline"]
@@ -60,16 +61,16 @@ flowchart TD
     REBASELINE --> CONTROL
 ```
 
-The baseline is the project's contract with itself — and the reference point for every variance analysis.
+The baseline is the project's contract with itself, and the reference point for every variance analysis.
 
 ## Version Control Discipline
 
 | Practice | Description |
 |----------|-------------|
-| **Document naming** | Consistent convention: [Artifact]_[Version]_[Date].[ext] — e.g., Scope-Baseline_v2.3_2026-03-15.docx |
+| **Document naming** | Consistent convention: [Artifact]_[Version]_[Date].[ext], e.g., Scope-Baseline_v2.3_2026-03-15.docx |
 | **Version numbering** | Major.Minor: major changes (baseline updates) increment major; minor edits increment minor |
 | **Change history** | Every document includes a change history table: version, date, author, change description |
-| **Single repository** | All controlled artifacts in one accessible location — not scattered across email, shared drives, and local folders |
+| **Single repository** | All controlled artifacts in one accessible location, not scattered across email, shared drives, and local folders |
 | **Access control** | Baselines are read-only for most; write access restricted to the PM and designated editors |
 | **Retention** | All versions retained; superseded versions are archived, not deleted |
 
@@ -133,7 +134,7 @@ Program configuration management adds integration:
 
 ## Success Indicators
 
-- Every status report references the current baseline — and the baseline is correct
+- Every status report references the current baseline, and the baseline is correct
 - Change requests are assessed against accurate, current baselines
 - The project team and stakeholders access artifacts from one place, one version
 - Baselines are updated within one week of approved changes
@@ -143,9 +144,9 @@ Program configuration management adds integration:
 
 - [[02_Change_Control_Process]]: the process that changes baselines
 - [[03_Decision_Recording_and_Communication]]: decisions that often cause baseline updates
-- [[02_Scope_and_Planning/00_overview|Scope and Planning]]: the scope baseline is a primary CI
-- [[03_Schedule_and_Cost/00_overview|Schedule and Cost]]: schedule and cost baselines are primary CIs
+- [[career-path/13_Project_and_Program_Manager/02_Scope_and_Planning/00_overview|Scope and Planning]]: the scope baseline is a primary CI
+- [[career-path/13_Project_and_Program_Manager/03_Schedule_and_Cost/00_overview|Schedule and Cost]]: schedule and cost baselines are primary CIs
 
 ## Summary
 
-Configuration management is the discipline of the single source of truth: every project artifact has a known version, baselines are formally established and updated only through change control, version control conventions are followed consistently, and the project team and stakeholders reference the same information. It is the foundation on which every status report, change assessment, and governance decision rests. Without it, the project manages against phantoms — schedules that have drifted, scopes that have shifted, and risks that have changed without anyone recording it. The project manager who maintains configuration discipline gives the project an honest reference point; the one who neglects it gives the project plausible deniability about its own state.
+Configuration management is the discipline of the single source of truth: every project artifact has a known version, baselines are formally established and updated only through change control, version control conventions are followed consistently, and the project team and stakeholders reference the same information. It is the foundation on which every status report, change assessment, and governance decision rests. Without it, the project manages against phantoms: schedules that have drifted, scopes that have shifted, and risks that have changed without anyone recording it. The project manager who maintains configuration discipline gives the project an honest reference point; the one who neglects it gives the project plausible deniability about its own state.

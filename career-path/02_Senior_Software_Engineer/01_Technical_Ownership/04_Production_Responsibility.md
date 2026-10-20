@@ -40,7 +40,7 @@ Production responsibility is not about being on-call forever. It is about buildi
 
 You cannot be responsible for what you cannot see. A senior engineer ensures their system has:
 
-**Metrics** — quantitative measures of system health:
+**Metrics**: quantitative measures of system health:
 
 | Metric type | What it tells you | Example |
 |---|---|---|
@@ -49,19 +49,20 @@ You cannot be responsible for what you cannot see. A senior engineer ensures the
 | Saturation | How close the system is to its limits | CPU utilization, connection pool usage |
 | Business metric | Whether the system is delivering value | Successful transactions per minute |
 
-**Logs** — structured records of what happened:
+**Logs**: structured records of what happened:
 
 - Every error with enough context to diagnose without reproducing
 - Every significant state change (deployment, config change, scaling event)
 - Correlation IDs that trace a request across service boundaries
 
-**Traces** — end-to-end visibility across service boundaries:
+**Traces**: end-to-end visibility across service boundaries:
 
 - Request flow from entry point to final response
 - Latency breakdown by service and operation
 - Dependency call patterns and failure propagation
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph OBSERVABILITY["Observability Stack"]
         M["Metrics: Is it healthy?"]
@@ -200,17 +201,17 @@ Before any significant change reaches production, a senior engineer verifies:
 
 ## Knowledge Connections
 
-- [[01_System_Ownership]] — production responsibility applies to your system boundary
-- [[02_Lifecycle_Ownership]] — production is one phase of the lifecycle you own
-- [[03_Technical_Debt_and_Maintainability]] — debt affects production reliability
-- [[software-engineering-note/06_Software_Engineering_Operations/08_Service_Operations_and_Support]] — operations fundamentals
-- [[software-engineering-note/06_Software_Engineering_Operations/07_Capacity_and_Disaster_Recovery]] — capacity planning and disaster recovery
-- [[software-engineering-note/06_Software_Engineering_Operations/01_The_Three_Ways]] — the Three Ways of DevOps
+- [[01_System_Ownership]]: production responsibility applies to your system boundary
+- [[02_Lifecycle_Ownership]]: production is one phase of the lifecycle you own
+- [[03_Technical_Debt_and_Maintainability]]: debt affects production reliability
+- [[software-engineering-note/06_Software_Engineering_Operations/08_Service_Operations_and_Support]]: operations fundamentals
+- [[software-engineering-note/06_Software_Engineering_Operations/07_Capacity_and_Disaster_Recovery]]: capacity planning and disaster recovery
+- [[software-engineering-note/06_Software_Engineering_Operations/01_The_Three_Ways]]: the Three Ways of DevOps
 
 ## Key Takeaways
 
 - A senior engineer's responsibility begins at deployment, not ends there
-- Observability has three pillars: metrics, logs, and traces — you need all three
+- Observability has three pillars: metrics, logs, and traces; you need all three
 - Incident reviews are where the most reliability improvement happens
 - Reliability engineering is proactive: capacity planning, deployment safety, and dependency resilience
 - On-call must be sustainable: measure the load and improve the system, not just endure it

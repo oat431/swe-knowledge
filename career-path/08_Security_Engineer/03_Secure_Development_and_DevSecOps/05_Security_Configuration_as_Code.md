@@ -49,6 +49,7 @@ Start with desired properties rather than provider-specific syntax.
 ### 2. Control Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     INTENT["Security intent"] --> POLICY["Versioned policy"]
     POLICY --> CODE["Configuration code"]
@@ -121,8 +122,8 @@ Choose a non-production service deployed with infrastructure or container config
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]: software security lifecycle context
 - [[03_DevSecOps_Pipeline_Controls|DevSecOps Pipeline Controls]]: control contracts and pipeline enforcement
 - [[04_Dependency_and_Supply_Chain_Security|Dependency and Supply Chain Security]]: trusted images and artifacts
-- [[04_Security_Verification_and_Testing/01_Security_Test_Strategy|Security Test Strategy]]: selecting configuration verification depth
-- [[07_Vulnerability_Management_and_Governance/00_overview|Vulnerability Management and Governance]]: exception and remediation lifecycle
+- [[career-path/08_Security_Engineer/04_Security_Verification_and_Testing/01_Security_Test_Strategy|Security Test Strategy]]: selecting configuration verification depth
+- [[career-path/08_Security_Engineer/07_Vulnerability_Management_and_Governance/00_overview|Vulnerability Management and Governance]]: exception and remediation lifecycle
 
 ## Key Takeaways
 

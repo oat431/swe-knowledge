@@ -16,15 +16,15 @@ tags:
 
 # Risk Identification and Assessment
 
-> **Core skill:** Surfacing risks that the program would otherwise discover only when they fire — and scoring every risk on probability, impact, and proximity so that mitigation effort is allocated where it most reduces program exposure.
+> **Core skill:** Surfacing risks that the program would otherwise discover only when they fire, and scoring every risk on probability, impact, and proximity so that mitigation effort is allocated where it most reduces program exposure.
 
 ## Why This Matters
 
-The risks that sink programs are rarely the ones everyone saw coming. They are the quiet ones: the assumption nobody checked, the dependency nobody owned, the constraint nobody surfaced, the decision that drifted past its deadline without a decision. These risks were visible — to someone, somewhere in the program — but they were never named in a forum where they could be assessed and mitigated.
+The risks that sink programs are rarely the ones everyone saw coming. They are the quiet ones: the assumption nobody checked, the dependency nobody owned, the constraint nobody surfaced, the decision that drifted past its deadline without a decision. These risks were visible (to someone, somewhere in the program), but they were never named in a forum where they could be assessed and mitigated.
 
 Risk identification is the TPM's listening discipline. It extracts risks from the places they hide: team conversations, architecture reviews, dependency check-ins, stakeholder one-on-ones, and the gaps between workstreams that nobody owns. The TPM asks "what could go wrong?" repeatedly, in every forum, until the answer is "we have named everything we can see, and we will watch for what we cannot."
 
-Assessment is the TPM's prioritization discipline. A program can carry a hundred named risks — but it can actively mitigate perhaps ten. Assessment tells the TPM which ten: the ones with high probability, severe impact, and short proximity to firing. The rest are watched. The top ten are managed.
+Assessment is the TPM's prioritization discipline. A program can carry a hundred named risks, but it can actively mitigate perhaps ten. Assessment tells the TPM which ten: the ones with high probability, severe impact, and short proximity to firing. The rest are watched. The top ten are managed.
 
 ## Risk Identification Methods
 
@@ -45,10 +45,10 @@ Assessment is the TPM's prioritization discipline. A program can carry a hundred
 | **One-on-ones** | Hedging language: "should," "hopefully," "if everything goes well" | The person knows a risk but has not named it |
 | **Team stand-ups** | Repeated blockers, slowing velocity, rising WIP | Systemic delivery risk |
 | **Architecture reviews** | "We think this will scale," "the prototype worked" | Technical uncertainty |
-| **Stakeholder conversations** | "I'm counting on this for Q2" — when the program has not committed to Q2 | Expectation misalignment risk |
+| **Stakeholder conversations** | "I'm counting on this for Q2", when the program has not committed to Q2 | Expectation misalignment risk |
 | **Silence** | A workstream with no risks reported | Risk suppression; dig deeper |
 
-The TPM's antenna is always on. A throwaway comment in a stand-up — "we're a bit behind on the database migration" — becomes a risk entry if the TPM follows up: "How behind? What depends on it? What is the worst case?"
+The TPM's antenna is always on. A throwaway comment in a stand-up ("we're a bit behind on the database migration") becomes a risk entry if the TPM follows up: "How behind? What depends on it? What is the worst case?"
 
 ## Risk Taxonomy
 
@@ -89,7 +89,7 @@ Probability is assessed honestly, not optimistically. If every risk is "low prob
 | **Medium** | Workstream date moves; program absorbs within contingency | Absorbable within program buffers |
 | **Low** | Minor disruption; team absorbs without schedule impact | Contained within a single workstream |
 
-Impact is measured against the program's committed outcomes — not against how hard the team will have to work. Heroic effort to absorb a risk is not "low impact"; it is high impact masked by overtime.
+Impact is measured against the program's committed outcomes, not against how hard the team will have to work. Heroic effort to absorb a risk is not "low impact"; it is high impact masked by overtime.
 
 ### Proximity (X)
 
@@ -114,7 +114,7 @@ Proximity intensifies risk: a medium-probability, high-impact risk that is immin
 
 ## Group Assessment: Avoiding Optimism Bias
 
-Individual risk assessment is vulnerable to optimism bias — the owner of a risk tends to underestimate its probability (because naming a high-probability risk feels like admitting failure). Group assessment counters this:
+Individual risk assessment is vulnerable to optimism bias: the owner of a risk tends to underestimate its probability (because naming a high-probability risk feels like admitting failure). Group assessment counters this:
 
 | Technique | How It Works |
 |-----------|-------------|
@@ -123,7 +123,7 @@ Individual risk assessment is vulnerable to optimism bias — the owner of a ris
 | **Reference class** | "In the last three programs that attempted this, how often did it fire?" |
 | **Pre-mortem output** | The pre-mortem's "what went wrong" list is scored as risks |
 
-The TPM facilitates, but does not impose, the assessment. The goal is consensus on the honest score — not the optimistic one.
+The TPM facilitates, but does not impose, the assessment. The goal is consensus on the honest score, not the optimistic one.
 
 ## Practical Applications
 
@@ -147,16 +147,16 @@ The TPM facilitates, but does not impose, the assessment. The goal is consensus 
 
 - The top five risks in the register are different from the top five three months ago (risks are being retired)
 - Pre-mortems surface risks that would not have been named otherwise
-- The program has risks in every taxonomy category — no category is empty
-- Risk scores are stable (not oscillating) — indicating honest, consistent assessment
+- The program has risks in every taxonomy category: no category is empty
+- Risk scores are stable (not oscillating), indicating honest, consistent assessment
 
 ## Related Topics
 
 - [[01_Risk_vs_Issue_Management]]: the boundary that determines whether the identified item is a risk or an issue
-- [[03_Risk_Response_Planning]]: what happens after assessment — mitigation, transfer, avoidance, acceptance
+- [[03_Risk_Response_Planning]]: what happens after assessment (mitigation, transfer, avoidance, acceptance)
 - [[05_RAID_Log_Management]]: the RAID log where risks are registered and tracked
-- [[../03_Dependency_Management/02_Dependency_Classification|Dependency Classification]]: the dependency-focused risk classification
+- [[career-path/12_Technical_Program_Manager/03_Dependency_Management/02_Dependency_Classification|Dependency Classification]]: the dependency-focused risk classification
 
 ## Summary
 
-Risk identification and assessment is the TPM's surfacing and scoring discipline: risks extracted from structured exercises (pre-mortems, taxonomy walks) and unstructured listening (stand-ups, one-on-ones), then scored honestly on probability, impact, and proximity so that mitigation effort goes where it most reduces program exposure. The TPM's test: when a risk fires, was it on the register with a credible score, or did it surprise the program? Surprises are identification failures — and they are the most expensive kind.
+Risk identification and assessment is the TPM's surfacing and scoring discipline: risks extracted from structured exercises (pre-mortems, taxonomy walks) and unstructured listening (stand-ups, one-on-ones), then scored honestly on probability, impact, and proximity so that mitigation effort goes where it most reduces program exposure. The TPM's test: when a risk fires, was it on the register with a credible score, or did it surprise the program? Surprises are identification failures, and they are the most expensive kind.

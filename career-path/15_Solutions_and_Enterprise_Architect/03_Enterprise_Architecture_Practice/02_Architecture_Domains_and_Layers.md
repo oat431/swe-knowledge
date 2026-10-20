@@ -16,13 +16,13 @@ tags:
 
 # Architecture Domains and Layers
 
-> **Core skill:** Reasoning across the four architecture domains — business, data, application, technology — and keeping their dependencies visible so change in one layer is coherent in the others.
+> **Core skill:** Reasoning across the four architecture domains (business, data, application, technology) and keeping their dependencies visible so change in one layer is coherent in the others.
 
 ## Why This Matters
 
 Enterprises are usually described in layers because change propagates through them. A new business capability requires data it does not yet have, an application to hold the logic, and technology to run it. When architects see only one layer, the incoherence shows up somewhere else: a business strategy lands on systems that cannot carry it, or a technology refresh happens with no business case attached.
 
-The four domains — business, data, application, technology — are the standard scaffold because each answers a different question for a different audience. Business architecture answers what the organization does and how value flows. Data architecture answers what the organization knows and how it moves. Application architecture answers what systems do the work. Technology architecture answers what platforms everything runs on.
+The four domains (business, data, application, technology) are the standard scaffold because each answers a different question for a different audience. Business architecture answers what the organization does and how value flows. Data architecture answers what the organization knows and how it moves. Application architecture answers what systems do the work. Technology architecture answers what platforms everything runs on.
 
 The senior architect's discipline is bidirectional reasoning. Downward, every business change is traced to its data, application, and technology implications before it is funded. Upward, every technology and platform shift is asked what new business options it creates or forecloses. Domains are not silos to be owned; they are lenses that must agree with each other.
 
@@ -70,11 +70,12 @@ Language discipline matters when presenting to different audiences.
 | **Tier** | A physical or deployment split | Web tier, application tier, database tier |
 | **Level** | Scope of description | Enterprise, segment, solution, component |
 
-Confusing these terms produces reviews where participants argue past each other — one person discussing logical layers while another hears deployment tiers.
+Confusing these terms produces reviews where participants argue past each other: one person discussing logical layers while another hears deployment tiers.
 
 ## The Domain Dependency Chain
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     BUSINESS["Business architecture - capabilities and operating model"] --> DATA["Data architecture - entities and flows"]
     BUSINESS --> APP["Application architecture - systems and services"]
@@ -139,9 +140,9 @@ flowchart TD
 
 - [[01_Enterprise_Architecture_Frameworks]]: frameworks organize these domains
 - [[03_Current_State_Architecture]]: describing what exists across the domains
-- [[04_Enterprise_Data_Architecture/00_overview|Enterprise Data Architecture]]: the data domain in depth
-- [[02_Solution_Architecture_and_Design/00_overview|Solution Architecture and Design]]: where domain constraints meet a concrete solution
+- [[career-path/15_Solutions_and_Enterprise_Architect/04_Enterprise_Data_Architecture/00_overview|Enterprise Data Architecture]]: the data domain in depth
+- [[career-path/15_Solutions_and_Enterprise_Architect/02_Solution_Architecture_and_Design/00_overview|Solution Architecture and Design]]: where domain constraints meet a concrete solution
 
 ## Summary
 
-The four architecture domains — business, data, application, technology — exist because change propagates through them and each answers a different stakeholder question. The senior architect reasons in both directions: tracing business change down to platform implications, and asking what new options each platform shift creates for the business. Consistency checks, one accountable owner per element, and a shared refresh cadence keep the layers telling one story instead of four.
+The four architecture domains (business, data, application, technology) exist because change propagates through them and each answers a different stakeholder question. The senior architect reasons in both directions: tracing business change down to platform implications, and asking what new options each platform shift creates for the business. Consistency checks, one accountable owner per element, and a shared refresh cadence keep the layers telling one story instead of four.

@@ -167,7 +167,7 @@ Closes #[issue-number]
 - Clear documentation
 
 **Feedback format:**
-```markdown
+````markdown
 # Blocking Issues
 
 ## Bug: Off-by-one error in loop
@@ -200,7 +200,7 @@ This ensures the file is always closed, even if an exception occurs.
 ## Great work!
 The refactoring of the payment processing logic is much cleaner.
 The test coverage is excellent.
-```
+````
 
 ### 5. Address Feedback (Author)
 

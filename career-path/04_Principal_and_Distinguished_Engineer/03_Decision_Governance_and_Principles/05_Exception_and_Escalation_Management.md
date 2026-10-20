@@ -16,13 +16,13 @@ tags:
 
 # Exception and Escalation Management
 
-> **Core skill:** The principal designs the exception path to be principled, documented, and time-boxed — and the escalation path to be a designed channel that moves stuck decisions upward with options, not complaints.
+> **Core skill:** The principal designs the exception path to be principled, documented, and time-boxed, and the escalation path to be a designed channel that moves stuck decisions upward with options, not complaints.
 
 ## Why This Matters
 
-Every principle and standard eventually meets a situation it was not designed for. When the exception path is absent or ad-hoc, two things happen: teams either comply with principles that hurt them — breeding resentment and workarounds — or they ignore principles entirely — breeding chaos. When the escalation path is absent or invisible, decisions that should move upward instead sit unresolved, or they land on the principal's desk through backchannels, unaccompanied by analysis.
+Every principle and standard eventually meets a situation it was not designed for. When the exception path is absent or ad-hoc, two things happen: teams either comply with principles that hurt them, breeding resentment and workarounds, or they ignore principles entirely, breeding chaos. When the escalation path is absent or invisible, decisions that should move upward instead sit unresolved, or they land on the principal's desk through backchannels, unaccompanied by analysis.
 
-The principal designs both paths. The exception path makes deviation safe: principled, documented, time-boxed, and reviewed. The escalation path makes moving a decision upward a structured act — the escalator brings options, analysis, and a recommendation, not a problem dump. Both paths are signals of governance health: a working exception path has low volume and high documentation quality; a working escalation path is used rarely and resolves quickly.
+The principal designs both paths. The exception path makes deviation safe: principled, documented, time-boxed, and reviewed. The escalation path makes moving a decision upward a structured act. The escalator brings options, analysis, and a recommendation, not a problem dump. Both paths are signals of governance health: a working exception path has low volume and high documentation quality; a working escalation path is used rarely and resolves quickly.
 
 ## Principled Exceptions
 
@@ -45,7 +45,7 @@ An exception is justified when it meets one of these criteria, and the justifica
 Every exception is documented with a lightweight record that captures the decision and its boundaries:
 
 ```markdown
-# Exception-[NNNN]: [Standard or Principle] — [Team or System]
+# Exception-[NNNN]: [Standard or Principle]: [Team or System]
 
 - **Standard or Principle:** [link]
 - **Criterion:** [domain mismatch / transient necessity / capability gap / innovation carve-out / legacy compatibility]
@@ -59,7 +59,7 @@ Every exception is documented with a lightweight record that captures the decisi
 
 ### The Exception Register
 
-The exception register is the aggregate view of all active exceptions across the organization. It is the principal's dashboard for governance health — a rising exception count or a cluster of exceptions against a single standard is a signal that the standard needs revision.
+The exception register is the aggregate view of all active exceptions across the organization. It is the principal's dashboard for governance health. A rising exception count or a cluster of exceptions against a single standard is a signal that the standard needs revision.
 
 | Field | Purpose |
 |-------|---------|
@@ -72,7 +72,7 @@ The exception register is the aggregate view of all active exceptions across the
 | Status | Active, closed, or converted-to-permanent |
 | Review date | Next scheduled review |
 
-The register is reviewed quarterly by the principal. Patterns in the register — a single principle generating 40 percent of exceptions, or exceptions that are perpetually renewed — trigger revision of the principle or standard, not just more exceptions.
+The register is reviewed quarterly by the principal. Patterns in the register (a single principle generating 40 percent of exceptions, or exceptions that are perpetually renewed) trigger revision of the principle or standard, not just more exceptions.
 
 ## Exception Creep
 
@@ -89,7 +89,7 @@ The principal's defense against exception creep is the quarterly exception regis
 
 ## Escalation as a Designed Path
 
-Escalation is not failure — it is the governance system moving a decision to the right level when it cannot be resolved where it sits. The designed escalation path has three properties: it is known, it is structured, and it moves decisions upward with options, not complaints.
+Escalation is not failure. It is the governance system moving a decision to the right level when it cannot be resolved where it sits. The designed escalation path has three properties: it is known, it is structured, and it moves decisions upward with options, not complaints.
 
 ### The Escalation Conversation
 
@@ -126,6 +126,7 @@ An escalation that arrives as "we cannot decide, you figure it out" is a problem
 ## The Exception and Escalation System
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     STANDARD["Principle or standard applies"] --> COMPLIANCE["Team complies: no exception needed"]
     STANDARD --> NEED["Team needs deviation"] 
@@ -155,7 +156,7 @@ flowchart TD
 ### Escalation Readiness Checklist
 
 - [ ] Escalation paths are documented for each decision class
-- [ ] Escalations include options, recommendation, and confidence — not just the problem
+- [ ] Escalations include options, recommendation, and confidence, not just the problem
 - [ ] Escalation timeouts exist: unresolved escalations default to the lower-level recommendation
 - [ ] The escalation recipient returns decisions that should not have escalated with guidance
 
@@ -189,4 +190,4 @@ flowchart TD
 
 ## Summary
 
-The exception path and the escalation path are the governance system's safety valves: exceptions allow principled, documented, time-boxed deviation from standards, tracked in a register that drives standard revision when patterns emerge; escalations move stuck decisions upward with options and recommendations, not complaints. The principal designs both paths, monitors the exception register for creep, and refuses to accept escalations that are problem dumps — because a working governance system makes deviation safe and escalation structured.
+The exception path and the escalation path are the governance system's safety valves: exceptions allow principled, documented, time-boxed deviation from standards, tracked in a register that drives standard revision when patterns emerge; escalations move stuck decisions upward with options and recommendations, not complaints. The principal designs both paths, monitors the exception register for creep, and refuses to accept escalations that are problem dumps, because a working governance system makes deviation safe and escalation structured.

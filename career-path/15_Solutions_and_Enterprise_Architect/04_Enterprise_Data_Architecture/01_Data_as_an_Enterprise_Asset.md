@@ -16,11 +16,11 @@ tags:
 
 # Data as an Enterprise Asset
 
-> **Core skill:** Turning "data is an asset" from a slogan into an operating model — data domains with named owners, stewards with real authority, and accountability that survives reorganizations.
+> **Core skill:** Turning "data is an asset" from a slogan into an operating model: data domains with named owners, stewards with real authority, and accountability that survives reorganizations.
 
 ## Why This Matters
 
-Every enterprise says data is an asset; few manage it like one. Assets have owners, inventories, lifecycles, and value statements. Data usually has none of these — it is duplicated across systems, maintained as a by-product of applications, and owned by whoever happens to be closest when a problem surfaces. The result is the familiar pattern: nobody trusts the numbers, every report needs reconciliation, and regulatory questions take weeks to answer.
+Every enterprise says data is an asset; few manage it like one. Assets have owners, inventories, lifecycles, and value statements. Data usually has none of these. It is duplicated across systems, maintained as a by-product of applications, and owned by whoever happens to be closest when a problem surfaces. The result is the familiar pattern: nobody trusts the numbers, every report needs reconciliation, and regulatory questions take weeks to answer.
 
 The root cause is not technology. It is an accountability vacuum. Applications have owners because outages demand one; data has no analogous forcing function, so accountability never forms. Enterprise data architecture's first job is to install that accountability deliberately: domain definitions aligned to how the business thinks, owners who are accountable for meaning and quality, stewards who operate the domain day to day, and custodians who run the platforms.
 
@@ -63,7 +63,7 @@ A domain taxonomy is a business artifact, not a database schema: it should match
 | **Data consumer** | Usage within granted rights; raising quality issues | Definitions; access grants for others |
 | **CDO or data office** | Enterprise policy, cross-domain arbitration, program direction | Day-to-day domain decisions |
 
-The most common design fault: stewards appointed without time, authority, or escalation path — a role in name only. Stewardship must be a funded responsibility with executive backing, or it decays into an inbox nobody reads.
+The most common design fault: stewards appointed without time, authority, or escalation path, a role in name only. Stewardship must be a funded responsibility with executive backing, or it decays into an inbox nobody reads.
 
 ## Ownership Models
 
@@ -85,11 +85,12 @@ Decision rights across models matter more than the label. Write them down: who d
 | Efficiency | Faster onboarding, faster integration | Time to integrate a new system; time to answer regulatory queries |
 | Optionality | Reuse in new products and analytics | Number of reuses per curated dataset |
 
-Value hypotheses should be stated per domain when ownership is established — not to justify the program, but to give owners a reason beyond compliance to invest in quality.
+Value hypotheses should be stated per domain when ownership is established, not to justify the program, but to give owners a reason beyond compliance to invest in quality.
 
 ## The Ownership Operating Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     STRATEGY["Data strategy and priorities"] --> DOMAINS["Data domains defined"]
     DOMAINS --> OWNERS["Owners named per domain"]
@@ -113,7 +114,7 @@ flowchart TD
 ### Data Domain Charter
 
 ```markdown
-# Data Domain Charter — [Domain Name]
+# Data Domain Charter: [Domain Name]
 
 ## Scope
 - Entities: [conceptual entities in this domain]
@@ -158,7 +159,7 @@ flowchart TD
 
 - [[03_Data_Governance_and_Quality]]: the structures that make accountability operational
 - [[07_Data_Lifecycle_and_Value_Realization]]: where ownership pays off across the lifecycle
-- [[03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: data as one of the four enterprise domains
+- [[career-path/15_Solutions_and_Enterprise_Architect/03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: data as one of the four enterprise domains
 - [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]]: the engineering craft that operates under these accountabilities
 
 ## Summary

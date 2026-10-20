@@ -15,15 +15,15 @@ tags:
 
 # Solution Feasibility and Constraints
 
-> **Core skill:** Testing whether a solution direction is actually achievable — technically, commercially, organizationally, and regulatorily — and designing within explicit constraints instead of discovering them during delivery.
+> **Core skill:** Testing whether a solution direction is actually achievable (technically, commercially, organizationally, and regulatorily) and designing within explicit constraints instead of discovering them during delivery.
 
 ## Why This Matters
 
-Every solution looks feasible on the whiteboard. Feasibility work is the architect's disciplined effort to find the reasons it might not be — before funding, before contracts, before the delivery schedule has made the discovery expensive. The failures that sink solutions are rarely internal to the design; they live in the seams: the integration that proves harder than assumed, the vendor whose license model forbids the intended use, the operations team that cannot support the chosen platform, the regulator who requires data to stay in-country.
+Every solution looks feasible on the whiteboard. Feasibility work is the architect's disciplined effort to find the reasons it might not be: before funding, before contracts, before the delivery schedule has made the discovery expensive. The failures that sink solutions are rarely internal to the design; they live in the seams: the integration that proves harder than assumed, the vendor whose license model forbids the intended use, the operations team that cannot support the chosen platform, the regulator who requires data to stay in-country.
 
-The architect's instinct should be constructive suspicion. A novel design is not automatically risky, and a conservative one is not automatically safe — the relevant question is where the unknowns are concentrated and how much the plan depends on them. Identifying points of novelty, ranking them by exposure, and testing the most dangerous ones early is what converts feasibility from a feeling into evidence.
+The architect's instinct should be constructive suspicion. A novel design is not automatically risky, and a conservative one is not automatically safe. The relevant question is where the unknowns are concentrated and how much the plan depends on them. Identifying points of novelty, ranking them by exposure, and testing the most dangerous ones early is what converts feasibility from a feeling into evidence.
 
-Constraints get the same treatment. A constraint the architect designs against is a requirement; one discovered at delivery is an obstacle. Budget ceilings, license terms, mandated vendors, security classifications, data residency, existing contracts, scarce skills — each has a design response, and the response belongs in the concept while options are still open. Constraints that are documented but unaddressed are postponed failures.
+Constraints get the same treatment. A constraint the architect designs against is a requirement; one discovered at delivery is an obstacle. Budget ceilings, license terms, mandated vendors, security classifications, data residency, existing contracts, scarce skills: each has a design response, and the response belongs in the concept while options are still open. Constraints that are documented but unaddressed are postponed failures.
 
 ## Feasibility Dimensions
 
@@ -45,7 +45,7 @@ Constraints get the same treatment. A constraint the architect designs against i
 | **New combination** | Known parts assembled in a new way | Spike the seams: integration and failure behavior |
 | **New technology** | Immature product or first-of-kind use | Staged pilot with explicit exit criteria |
 
-The architect's novelty register — a list of everything the solution does that the organization has not done before — is one of the most useful artifacts in feasibility work. It focuses proof effort where risk actually concentrates and gives reviewers something truthful to approve.
+The architect's novelty register (a list of everything the solution does that the organization has not done before) is one of the most useful artifacts in feasibility work. It focuses proof effort where risk actually concentrates and gives reviewers something truthful to approve.
 
 ## Constraints and Design Responses
 
@@ -58,11 +58,12 @@ The architect's novelty register — a list of everything the solution does that
 | **Skills and capacity** | Scarce expertise; competing demands | Sequencing; enablement; delivery partnership |
 | **Time** | Deadline events; market windows | Scope shaping; minimum viable definition |
 
-Constraints ranked honestly separate the negotiable from the immovable. Only with that ranking can the architect and sponsor trade correctly — giving ground on the soft constraints and spending decision capital on the hard ones.
+Constraints ranked honestly separate the negotiable from the immovable. Only with that ranking can the architect and sponsor trade correctly, giving ground on the soft constraints and spending decision capital on the hard ones.
 
 ## Proving Feasibility
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DESIGN["Proposed solution design"] --> FEAS["Feasibility checks"]
     FEAS["Feasibility checks"] --> CONSTRAINTS["Constraints and responses"]
@@ -120,7 +121,7 @@ Residual risks: <list with exposure>
 ## Success Indicators
 
 - Commitments are made knowing the named residual risks and the reasoning for accepting them
-- Proof work stops initiatives early when the evidence says stop — cheaply
+- Proof work stops initiatives early when the evidence says stop, cheaply
 - Constraint responses are visible in the concept design, not discovered in delivery
 - Delivery surprises relate to genuinely new information, not untested assumptions
 - Operations and compliance confirm feasibility before, not after, sign-off
@@ -130,9 +131,9 @@ Residual risks: <list with exposure>
 - [[02_Solution_Options_and_Concept_Design]]: feasibility as evidence for option choice
 - [[03_Solution_Integration_Design]]: the estate realities feasibility must confront
 - [[06_Solution_Assurance_and_Review]]: how feasibility evidence feeds assurance
-- [[05_Security_Risk_and_Compliance/00_overview|Security Risk and Compliance]]: regulatory and risk constraints in depth
+- [[career-path/15_Solutions_and_Enterprise_Architect/05_Security_Risk_and_Compliance/00_overview|Security Risk and Compliance]]: regulatory and risk constraints in depth
 - [[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]]: turning feasibility findings into delivery plans
 
 ## Summary
 
-Solution feasibility and constraints discipline the gap between a design that looks achievable and one that is. The architect tests every dimension — technical, integration, commercial, organizational, regulatory, operational — keeps a register of what is genuinely novel, and proves the riskiest novelty with falsifiable, timeboxed experiments before commitment. Constraints are surfaced in concept, classified as hard or negotiable, and answered with explicit design responses. The result is a delivery baseline whose risks are named, owned, and knowingly accepted rather than hidden in optimism.
+Solution feasibility and constraints discipline the gap between a design that looks achievable and one that is. The architect tests every dimension (technical, integration, commercial, organizational, regulatory, operational), keeps a register of what is genuinely novel, and proves the riskiest novelty with falsifiable, timeboxed experiments before commitment. Constraints are surfaced in concept, classified as hard or negotiable, and answered with explicit design responses. The result is a delivery baseline whose risks are named, owned, and knowingly accepted rather than hidden in optimism.

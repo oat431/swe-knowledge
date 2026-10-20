@@ -17,13 +17,13 @@ tags:
 
 # Unit Economics of Small Products
 
-> **Core skill:** Reading a small product like a business — margin, acquisition cost, payback, and retention — before small losses compound into large ones.
+> **Core skill:** Reading a small product like a business (margin, acquisition cost, payback, and retention) before small losses compound into large ones.
 
 ## Why This Matters
 
-Small products fail quietly. Nobody writes a headline about the tool with four hundred users that costs its founder every weekend in support; it simply grinds the founder down until the product is abandoned. Unit economics is the instrument that makes the grinding visible early: what each user actually contributes, what each acquisition actually costs, and how long until the spend returns. Numbers this small are unglamorous and exactly why they matter — at small scale, a wrong per-user margin is not a rounding error, it is the entire business.
+Small products fail quietly. Nobody writes a headline about the tool with four hundred users that costs its founder every weekend in support; it simply grinds the founder down until the product is abandoned. Unit economics is the instrument that makes the grinding visible early: what each user actually contributes, what each acquisition actually costs, and how long until the spend returns. Numbers this small are unglamorous and exactly why they matter: at small scale, a wrong per-user margin is not a rounding error, it is the entire business.
 
-The metrics also change decisions. A product with strong retention and a short payback deserves more investment; a product with churn that eats every new user does not deserve more growth spending, because growth on a leaky product multiplies losses. The point of measuring is not reporting; it is choosing — reprice, reinvest, reposition, or stop — before the decision makes itself.
+The metrics also change decisions. A product with strong retention and a short payback deserves more investment; a product with churn that eats every new user does not deserve more growth spending, because growth on a leaky product multiplies losses. The point of measuring is not reporting; it is choosing (reprice, reinvest, reposition, or stop) before the decision makes itself.
 
 For an independent, the trap is counting revenue and feeling fine. Revenue is what users pay; contribution is what remains after variable costs; profit is what remains after fixed costs and your own time. Only the last two fund a life. A product can grow forever and never reach either.
 
@@ -77,6 +77,7 @@ Payback equals CAC divided by monthly contribution per user. The rule for a boot
 | Scale acquisition spend | Tests payback at volume | Growth if payback holds | Only after retention is stable |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     USERS["Paying users"] --> REVENUE["Revenue"]
     REVENUE --> VARCOST["Variable costs"]
@@ -138,10 +139,10 @@ flowchart LR
 - [[02_Revenue_Models_and_Forecasting]]: product revenue is one of the shapes the forecast must handle
 - [[04_Build_vs_Buy_vs_Partner]]: build costs only pay back when unit economics work
 - [[05_Bootstrapping_vs_Funding]]: payback and retention are the gates that justify outside money
-- [[02_Product_and_Service_Design/00_overview|Product and Service Design]]: pricing and offer design are upstream of every metric here
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/02_Product_and_Service_Design/00_overview|Product and Service Design]]: pricing and offer design are upstream of every metric here
 - [[career-path/13_Project_and_Program_Manager/01_Initiation_and_Charter/02_Business_Case_Development|Business Case Development (PjM)]]: formal business case discipline adapted to small products
 
 ## Summary
 
-Unit economics turns a small product from a feeling into a reading: contribution per user, CAC and its payback, churn, and break-even size. Keep costs honest — especially your own support time — and only scale acquisition when contribution is positive and payback is short. The metrics exist to force one clear decision early: reinvest, reprice, reposition, or stop, while stopping is still cheap.
+Unit economics turns a small product from a feeling into a reading: contribution per user, CAC and its payback, churn, and break-even size. Keep costs honest (especially your own support time), and only scale acquisition when contribution is positive and payback is short. The metrics exist to force one clear decision early: reinvest, reprice, reposition, or stop, while stopping is still cheap.
 

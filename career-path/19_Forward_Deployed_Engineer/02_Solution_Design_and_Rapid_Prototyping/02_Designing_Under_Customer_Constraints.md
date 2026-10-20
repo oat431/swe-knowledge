@@ -16,15 +16,15 @@ tags:
 
 # Designing Under Customer Constraints
 
-> **Core skill:** Working within technical, legal, and organizational limits — designing the best solution the customer can actually run, not the best solution in the abstract.
+> **Core skill:** Working within technical, legal, and organizational limits: designing the best solution the customer can actually run, not the best solution in the abstract.
 
 ## Why This Matters
 
-The architecture that a lab or a greenfield side project would produce is almost never available in the field. The customer does not control their vendors, cannot upgrade the database this year, will not get budget for new infrastructure, cannot move data across a border, and cannot change a process that a regulator examines. Every design decision in forward deployment is made inside a box — and the FDE's job is not to wish the box away, but to find the best solution that fits inside it and still reaches the outcome.
+The architecture that a lab or a greenfield side project would produce is almost never available in the field. The customer does not control their vendors, cannot upgrade the database this year, will not get budget for new infrastructure, cannot move data across a border, and cannot change a process that a regulator examines. Every design decision in forward deployment is made inside a box, and the FDE's job is not to wish the box away, but to find the best solution that fits inside it and still reaches the outcome.
 
 This constraint realism is what separates field design from theoretical design. An elegant solution that requires a cloud service the security team will never approve is not elegant; it is fiction. A beautiful data pipeline across a legal boundary the company cannot cross is not a design, it is a liability. The FDE learns to treat constraints the way civil engineers treat gravity: not as obstacles to argue with, but as forces that shape every valid structure.
 
-The skill has a second half, though, because constraints are not uniform. Some are immovable — physics, law, contract. Others are soft: policy defaults, ossified habits, decisions nobody has revisited since a reorganization. Telling hard constraints from soft ones is where judgment lives, and the FDE who can move a soft constraint with evidence creates design space for everyone. The rule is simple: design inside the hard limits, but never accept a soft limit without asking who owns it and what would change their mind.
+The skill has a second half, though, because constraints are not uniform. Some are immovable: physics, law, contract. Others are soft: policy defaults, ossified habits, decisions nobody has revisited since a reorganization. Telling hard constraints from soft ones is where judgment lives, and the FDE who can move a soft constraint with evidence creates design space for everyone. The rule is simple: design inside the hard limits, but never accept a soft limit without asking who owns it and what would change their mind.
 
 ## The Constraint Taxonomy
 
@@ -52,6 +52,7 @@ Most failed "technical" objections in the field are, on inspection, one of the o
 | 6 | Revisit when the environment changes | A design that tracks reality |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     COLLECT["Collect the constraints"] --> SORT["Separate hard from soft"]
     SORT --> DESIGN["Design inside the hard ones"]
@@ -78,7 +79,7 @@ Each row should end in a decision the customer makes with their eyes open. A tra
 ### Constraint Register Template
 
 ```markdown
-## Constraint Register — <customer, initiative>
+## Constraint Register: <customer, initiative>
 
 | Constraint | Source or owner | Hardness | Impact on design | Who could move it, what it would take |
 |------------|-----------------|----------|------------------|----------------------------------------|
@@ -87,7 +88,7 @@ Each row should end in a decision the customer makes with their eyes open. A tra
 
 ### Design-Under-Constraints Checklist
 
-- [ ] Constraints collected from IT, security, legal, finance, and operations — not just the sponsor
+- [ ] Constraints collected from IT, security, legal, finance, and operations, not just the sponsor
 - [ ] Each constraint classified with a source, not with folklore
 - [ ] The base design violates no hard constraint
 - [ ] Soft constraints challenged once with evidence and their owners
@@ -117,10 +118,10 @@ Each row should end in a decision the customer makes with their eyes open. A tra
 
 - [[05_Technical_Feasibility_Assessment]]
 - [[06_From_Prototype_to_Production]]
-- [[05_Enterprise_Navigation_Security_and_Compliance/00_overview|Enterprise Navigation: Security and Compliance]]
+- [[career-path/19_Forward_Deployed_Engineer/05_Enterprise_Navigation_Security_and_Compliance/00_overview|Enterprise Navigation: Security and Compliance]]
 - [[career-path/06_Software_Architect/00_overview|Software Architect]]
 - [[career-path/15_Solutions_and_Enterprise_Architect/05_Security_Risk_and_Compliance/00_overview|Security Risk and Compliance (SA)]]
 
 ## Summary
 
-Designing under customer constraints means treating the customer's real limits — technical, legal, contractual, and organizational — as the space in which every valid solution must live. The FDE collects the full constraint set, separates hard from soft, designs inside the immovable bounds, moves what can legitimately move with evidence, and presents trade-offs as explicit decisions for named owners. The result is not the theoretically best design; it is the best design that can actually run.
+Designing under customer constraints means treating the customer's real limits (technical, legal, contractual, and organizational) as the space in which every valid solution must live. The FDE collects the full constraint set, separates hard from soft, designs inside the immovable bounds, moves what can legitimately move with evidence, and presents trade-offs as explicit decisions for named owners. The result is not the theoretically best design; it is the best design that can actually run.

@@ -16,15 +16,15 @@ tags:
 
 # Technical Principles
 
-> **Core skill:** The principal writes technical principles that are specific enough to decline work by and abstract enough to guide decisions the principal never sees — a set of 5 to 12 statements that make the right thing the default thing across hundreds of engineers.
+> **Core skill:** The principal writes technical principles that are specific enough to decline work by and abstract enough to guide decisions the principal never sees, a set of 5 to 12 statements that make the right thing the default thing across hundreds of engineers.
 
 ## Why This Matters
 
-At 500+ engineers, the principal cannot review every design. The mechanism that replaces direct oversight is a set of technical principles — published, socialized, and ratified — that make decisions reviewable by their own logic. A well-written principle is a design constraint that travels: every engineer who internalizes "we prefer boring technology for non-differentiating problems" makes twenty decisions consistent with the organization's architecture without ever asking for review.
+At 500+ engineers, the principal cannot review every design. The mechanism that replaces direct oversight is a set of technical principles (published, socialized, and ratified) that make decisions reviewable by their own logic. A well-written principle is a design constraint that travels: every engineer who internalizes "we prefer boring technology for non-differentiating problems" makes twenty decisions consistent with the organization's architecture without ever asking for review.
 
-Principles fail in two directions. Platitudes — "move fast," "be excellent" — offer no trade-off guidance; nobody can decline a proposal by citing them. Overly specific rules — "use Go for all services" — break the moment the context changes and teach teams to route around governance entirely. The principal's craft is the gap between these extremes: principles that name the trade-off, survive context shifts, and earn citation in ADRs across the organization.
+Principles fail in two directions. Platitudes ("move fast," "be excellent") offer no trade-off guidance; nobody can decline a proposal by citing them. Overly specific rules ("use Go for all services") break the moment the context changes and teach teams to route around governance entirely. The principal's craft is the gap between these extremes: principles that name the trade-off, survive context shifts, and earn citation in ADRs across the organization.
 
-## What Principles Are — and Are Not
+## What Principles Are: and Are Not
 
 Principles occupy a distinct category between rules and goals. Confusing the categories is the most common governance mistake at principal scale.
 
@@ -51,7 +51,7 @@ A principle worth writing must pass two tests: it is specific enough that a team
 
 ### The Abstraction Test
 
-A principle that names a specific technology — "use Kubernetes" or "use React" — is a standard, not a principle. It ages poorly and invites routing-around. The principle underneath it is: "We prefer technologies with large active communities and proven operational tooling over bespoke or niche alternatives, all else equal." That principle survives Kubernetes giving way to something else.
+A principle that names a specific technology ("use Kubernetes" or "use React") is a standard, not a principle. It ages poorly and invites routing-around. The principle underneath it is: "We prefer technologies with large active communities and proven operational tooling over bespoke or niche alternatives, all else equal." That principle survives Kubernetes giving way to something else.
 
 ### Principle Structure
 
@@ -74,13 +74,14 @@ The set must be small enough to be remembered and applied without looking it up.
 | 11-12 | Exhaustive | Cognitive load; some will be rules in disguise |
 | 13+ | A rulebook, not principles | Nobody remembers them; nobody cites them |
 
-The composition should cover the organization's recurring tensions: build vs buy, consistency vs autonomy, speed vs safety, innovation vs stability, platform vs product. Every principle should map to at least one tension the organization actually feels. A principle that never gets cited in a year is either undiscoverable or irrelevant — cut it.
+The composition should cover the organization's recurring tensions: build vs buy, consistency vs autonomy, speed vs safety, innovation vs stability, platform vs product. Every principle should map to at least one tension the organization actually feels. A principle that never gets cited in a year is either undiscoverable or irrelevant. Cut it.
 
 ## The Principle Lifecycle
 
 Principles are not written once and carved in stone. They have a lifecycle that mirrors the organization's evolution.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DRAFT["Draft: small group authors the principle"] --> SOCIALIZE["Socialize: publish for comment across the organization"]
     SOCIALIZE --> RATIFY["Ratify: governance board adopts; principles become citable"]
@@ -118,7 +119,7 @@ Each phase has a distinct artifact and audience:
 - [ ] Specific enough to decline a proposal by citing it
 - [ ] Abstract enough to survive technology and organizational changes
 - [ ] Includes rationale that connects to the organization's strategy
-- [ ] Includes application guidance — how to apply it and the exception test
+- [ ] Includes application guidance: how to apply it and the exception test
 - [ ] The complete set is 5-12 principles
 - [ ] Every principle maps to at least one organizational tension
 - [ ] Principles are discoverable: linked from ADR templates and design review checklists
@@ -147,7 +148,7 @@ Each phase has a distinct artifact and audience:
 
 - Principles are cited in ADRs, design reviews, and investment cases across the organization
 - Teams decline their own proposals by referencing a principle before any reviewer does
-- The exception path is used infrequently — and when used, the rationale is documented
+- The exception path is used infrequently, and when used, the rationale is documented
 - Annual principle review produces meaningful revisions: some retired, some added
 - New engineers can name the most-cited principles within their first month
 
@@ -161,4 +162,4 @@ Each phase has a distinct artifact and audience:
 
 ## Summary
 
-Technical principles are the principal's highest-leverage artifact at scale: 5 to 12 trade-off statements, each specific enough to decline work by and abstract enough to survive the organization's evolution. Written with rationale and application guidance, socialized with the architecture community, ratified by governance, and reviewed annually, principles make the right thing the default thing — auto-scaling the principal's judgment to decisions they will never see.
+Technical principles are the principal's highest-leverage artifact at scale: 5 to 12 trade-off statements, each specific enough to decline work by and abstract enough to survive the organization's evolution. Written with rationale and application guidance, socialized with the architecture community, ratified by governance, and reviewed annually, principles make the right thing the default thing, auto-scaling the principal's judgment to decisions they will never see.

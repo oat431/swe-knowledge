@@ -16,13 +16,13 @@ tags:
 
 # Finding Staff Scope Work
 
-> **Core skill:** Discovering problems that are genuinely staff-sized — between teams, above teams, or repeated across teams — and scoping them into arcs with end states.
+> **Core skill:** Discovering problems that are genuinely staff-sized (between teams, above teams, or repeated across teams) and scoping them into arcs with end states.
 
 ## Why This Matters
 
-Staff work is not assigned in a queue. The problems worth a staff engineer's time are the ones no team owns: the seam between two services, the incident that recurs across four squads, the migration nobody will staff, the pattern every new team reinvents. These problems do not file themselves, and they will not be handed to you. Finding them is the first job skill of the staff role, and it has to be deliberate — a listening habit, a filtering method, and the discipline to say no to the wrong scope.
+Staff work is not assigned in a queue. The problems worth a staff engineer's time are the ones no team owns: the seam between two services, the incident that recurs across four squads, the migration nobody will staff, the pattern every new team reinvents. These problems do not file themselves, and they will not be handed to you. Finding them is the first job skill of the staff role, and it has to be deliberate: a listening habit, a filtering method, and the discipline to say no to the wrong scope.
 
-The failure mode is doing everyone else's work. A staff engineer who is available will absorb team-scope tasks all day: tricky bugs, design questions, unowned chores. That work is real and valuable — and it is exactly the work the staff role must route elsewhere, because it fills the calendar and ships nothing at org scale. Finding staff work is therefore two skills in one: detecting the right problems, and refusing the tempting ones.
+The failure mode is doing everyone else's work. A staff engineer who is available will absorb team-scope tasks all day: tricky bugs, design questions, unowned chores. That work is real and valuable, and it is exactly the work the staff role must route elsewhere, because it fills the calendar and ships nothing at org scale. Finding staff work is therefore two skills in one: detecting the right problems, and refusing the tempting ones.
 
 ## Where Staff Problems Live
 
@@ -38,7 +38,7 @@ Each location has a distinct signal. Learn to hear them in standups you attend a
 
 ## The Listening Tour Method
 
-A listening tour is a bounded, structured set of conversations — the staff equivalent of reconnaissance:
+A listening tour is a bounded, structured set of conversations, the staff equivalent of reconnaissance:
 
 | Step | What happens |
 |------|--------------|
@@ -58,7 +58,7 @@ The tour is not a survey and not a therapy session. Its output is a shortlist of
 | Leverage | Does your involvement multiply others, or substitute for them? | You would be doing team work solo |
 | Readiness | Are stakeholders ready to change? Is there a mandate window? | No owner, no budget, no appetite |
 
-Score each candidate on the three filters. A problem that fails any filter is not staff work today — it may become staff work when readiness matures, so keep it on a watch list rather than dropping it.
+Score each candidate on the three filters. A problem that fails any filter is not staff work today. It may become staff work when readiness matures, so keep it on a watch list rather than dropping it.
 
 ## Scoping an Arc
 
@@ -68,13 +68,14 @@ An arc is a staff initiative with a defined end:
 |---------|------------------|
 | Problem statement | The pain, who feels it, and the evidence |
 | Success criteria | Measurable end state: adoption, incidents, time saved |
-| Duration | A bounded window — typically one to two quarters |
+| Duration | A bounded window, typically one to two quarters |
 | Owner | You are the named driver, even if others execute |
 | Exit | What happens when the arc closes: handoff, standard, or decision |
 
 An arc without success criteria is a hobby; an arc without a duration is a committee.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     TOUR["Listening tour"] --> SIGNALS["Collect signals and patterns"]
     SIGNALS --> VERIFY["Verify with data"]
@@ -96,12 +97,12 @@ flowchart TD
 | A new project kickoff | Early involvement is valuable | Attend once; do not join the team |
 | Leadership asks for the impossible | It feels important | Negotiate scope before accepting |
 
-The decline is not a refusal of help — it is a statement of scope. Say what you are working on, why it matters more, and who can take the tempting task. Teams respect a staff engineer who protects their own mandate; they lose respect for one who absorbs everything.
+The decline is not a refusal of help. It is a statement of scope. Say what you are working on, why it matters more, and who can take the tempting task. Teams respect a staff engineer who protects their own mandate; they lose respect for one who absorbs everything.
 
 ## Practical Applications
 
 ```markdown
-# Candidate Problem Log — [quarter]
+# Candidate Problem Log: [quarter]
 
 | Problem | Location | Impact | Leverage | Readiness | Verdict |
 |---------|----------|--------|----------|-----------|---------|
@@ -140,7 +141,7 @@ Checklist:
 - [[02_Staff_vs_Senior_Scope]]: why scope discipline matters at staff level
 - [[04_The_Staff_Operating_Model]]: how arcs fit into the staff calendar
 - [[07_First_90_Days_as_Staff]]: the listening tour that opens the role
-- [[03_Technical_Strategy/00_overview|Technical Strategy]]: the arc portfolio becomes strategy
+- [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy]]: the arc portfolio becomes strategy
 
 ## Summary
 

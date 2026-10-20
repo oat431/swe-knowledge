@@ -16,13 +16,13 @@ tags:
 
 # Operational Reviews
 
-> **Core skill:** Running a quarterly cadence that turns system health evidence — trends, incidents, debt, dependencies — into planned work with owners.
+> **Core skill:** Running a quarterly cadence that turns system health evidence (trends, incidents, debt, dependencies) into planned work with owners.
 
 ## Why This Matters
 
-Systems decay by default, and the decay is invisible in weekly increments. A slightly slower endpoint here, a small debt item there, a dependency quietly aging — none of it is worth a meeting on its own. But accumulated, it becomes the quarter where everything stalls and the incidents cluster.
+Systems decay by default, and the decay is invisible in weekly increments. A slightly slower endpoint here, a small debt item there, a dependency quietly aging. None of it is worth a meeting on its own. But accumulated, it becomes the quarter where everything stalls and the incidents cluster.
 
-The quarterly operational review is the counter-move: a scheduled moment where the team steps back from delivery and reads the system's health as a whole. It turns scattered signals — metrics, incident history, the debt register, dependency changes — into a short list of planned improvements. Without it, health work happens only when a fire forces it; with it, health work competes for capacity like any other work.
+The quarterly operational review is the counter-move: a scheduled moment where the team steps back from delivery and reads the system's health as a whole. It turns scattered signals (metrics, incident history, the debt register, dependency changes) into a short list of planned improvements. Without it, health work happens only when a fire forces it; with it, health work competes for capacity like any other work.
 
 ## Why Quarterly
 
@@ -46,7 +46,7 @@ Quarterly is the sweet spot: slow enough to see structure, fast enough to act be
 | Risks | Top risks, likelihood, mitigation status | Risk list |
 | Architecture health | Coupling, complexity hotspots, structural drift | Architecture check |
 
-Two hours, same agenda every quarter. The agenda's stability is the point — trends only read clearly when the questions never change.
+Two hours, same agenda every quarter. The agenda's stability is the point. Trends only read clearly when the questions never change.
 
 ## Architecture Health Checks
 
@@ -73,7 +73,7 @@ The check is comparative: this quarter against last, not against perfection. The
 | Risk list | The risk document | Reviewed monthly |
 | Architecture notes | ADRs and diagrams | Updated as decisions land |
 
-The review meeting reads these inputs; it does not assemble them. If the team is assembling inputs in the meeting, the cadence around them has failed — which is itself a finding.
+The review meeting reads these inputs; it does not assemble them. If the team is assembling inputs in the meeting, the cadence around them has failed, which is itself a finding.
 
 ## From Findings to Planned Work
 
@@ -87,13 +87,14 @@ Every review ends with a decision list. The discipline:
 | Effort | Rough size: days or weeks |
 | Decision | Funded this quarter, deferred, or rejected with reason |
 
-Three to five funded items per quarter is a strong outcome. The review's success is not the number of findings — it is that the funded items appear in the next plan and are done.
+Three to five funded items per quarter is a strong outcome. The review's success is not the number of findings. It is that the funded items appear in the next plan and are done.
 
 ## Making Review Findings Visible
 
-The review's conclusions should be visible to the team and stakeholders: a one-page summary — health verdict per area, funded items, deferred items — shared with the EM and PM, and a short version for the team. Visibility is what turns the review from an internal ritual into a commitment that others can hold the team to.
+The review's conclusions should be visible to the team and stakeholders: a one-page summary (health verdict per area, funded items, deferred items) shared with the EM and PM, and a short version for the team. Visibility is what turns the review from an internal ritual into a commitment that others can hold the team to.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     INPUTS["Metrics, incidents, debt, dependencies"] --> MEETING["Quarterly review meeting"]
     MEETING --> FINDINGS["Findings with evidence"]
@@ -107,7 +108,7 @@ flowchart TD
 ## Practical Applications
 
 ```markdown
-## Operational Review — [quarter]
+## Operational Review: [quarter]
 
 ### Health trends
 - [ ] Golden signals vs baselines: [verdict per service]
@@ -165,8 +166,8 @@ flowchart TD
 - [[01_Team_System_Ownership]]: the review audits how ownership is working
 - [[03_Technical_Debt_Leadership]]: the register is the review's debt input
 - [[05_System_Health_Monitoring]]: baselines and trends are the review's evidence
-- [[03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture]]: structural findings feed the direction
+- [[career-path/05_Tech_Lead/03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture]]: structural findings feed the direction
 
 ## Summary
 
-Operational reviews are the cadence that makes system health a planning input: a fixed two-hour agenda reading maintained inputs — trends, incidents, debt, dependencies, capacity, risks, architecture health — and ending in funded, owned work. The review's value is not the meeting but the loop: evidence enters, decisions exit, and the next quarter's review measures whether the decisions worked. Teams that run it find that the fires of the past become the trends of the present.
+Operational reviews are the cadence that makes system health a planning input: a fixed two-hour agenda reading maintained inputs (trends, incidents, debt, dependencies, capacity, risks, architecture health) and ending in funded, owned work. The review's value is not the meeting but the loop: evidence enters, decisions exit, and the next quarter's review measures whether the decisions worked. Teams that run it find that the fires of the past become the trends of the present.

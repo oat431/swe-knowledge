@@ -16,15 +16,15 @@ tags:
 
 # Change Management and Adoption
 
-> **Core skill:** Helping the organization absorb the change — treating the deployment as a change to how people work, supported through launch and beyond until the new way of working is the normal way of working.
+> **Core skill:** Helping the organization absorb the change: treating the deployment as a change to how people work, supported through launch and beyond until the new way of working is the normal way of working.
 
 ## Why This Matters
 
 A deployment changes a system, but adoption requires a change in people. Between "the software is live" and "the work happens through it" lies a stretch of organizational terrain that no amount of engineering elegance traverses by itself: workflows that no longer match what people memorized, roles whose importance shifts, metrics that now measure something new, habits built over years that resist a Tuesday-morning redesign. Rollout plans handle the logistics; change management handles the humans. Deployments that skip it launch cleanly and then quietly fail to be used.
 
-The FDE participates in change management more than most engineering roles because the FDE is often the most trusted external voice in the building — the person who has seen the system work and can answer the question everyone actually cares about, which is some version of "what does this mean for me." That question is answered by actions as much as words: whether early friction gets fixed fast, whether champions are equipped rather than volunteered, whether the first month's problems are met with responsiveness or with a documentation link. Trust in the change is built the way it is built anywhere, through a series of small kept promises in front of a skeptical audience.
+The FDE participates in change management more than most engineering roles because the FDE is often the most trusted external voice in the building: the person who has seen the system work and can answer the question everyone actually cares about, which is some version of "what does this mean for me." That question is answered by actions as much as words: whether early friction gets fixed fast, whether champions are equipped rather than volunteered, whether the first month's problems are met with responsiveness or with a documentation link. Trust in the change is built the way it is built anywhere, through a series of small kept promises in front of a skeptical audience.
 
-There is also a second-order population that decides the deployment's fate: the people who never attend a training session and encounter the system only when it changes something they own. Support desk staff, downstream teams, auditors, and neighboring departments all form their verdict from secondhand impression. Adoption is not complete when the trained users comply; it is complete when the untrained bystanders cannot tell where the old process ended and the new one began. That is the bar the FDE engineers toward — and it is only reachable if the change is followed past launch, into the months where friction surfaces and the new normal either sets or never does.
+There is also a second-order population that decides the deployment's fate: the people who never attend a training session and encounter the system only when it changes something they own. Support desk staff, downstream teams, auditors, and neighboring departments all form their verdict from secondhand impression. Adoption is not complete when the trained users comply; it is complete when the untrained bystanders cannot tell where the old process ended and the new one began. That is the bar the FDE engineers toward, and it is only reachable if the change is followed past launch, into the months where friction surfaces and the new normal either sets or never does.
 
 ## What Changes When a System Lands
 
@@ -37,7 +37,7 @@ There is also a second-order population that decides the deployment's fate: the 
 | Support | Questions find a new path | Support desk staff who inherit first-line duty |
 | Confidence | Judgment is shared with a system | Experts whose expertise included the old process |
 
-None of these shifts is inherently bad — most are improvements on paper — but each one produces friction, and friction unattended becomes resistance with a justification attached.
+None of these shifts is inherently bad (most are improvements on paper), but each one produces friction, and friction unattended becomes resistance with a justification attached.
 
 ## The Adoption Curve in Practice
 
@@ -50,6 +50,7 @@ None of these shifts is inherently bad — most are improvements on paper — bu
 | Secondary audiences | Never trained, affected anyway | Brief downstream teams and support before they are surprised |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     MAP["Map the workflow change"] --> CHAMPION["Recruit champions"]
     CHAMPION --> SUPPORT["Support early use"]
@@ -58,7 +59,7 @@ flowchart LR
     FIX --> NORMAL["Make it the new normal"]
 ```
 
-The critical insight is the loop back from measurement to fixing. Adoption problems present as user complaints that sound like change resistance but are often disguised usability data: a step that takes one click too many, a report that arrives a day late, a search that returns the wrong document first. The FDE who hears friction as engineering input — and fixes it visibly — converts skeptics by demonstration. The FDE who hears it as attitude loses the room.
+The critical insight is the loop back from measurement to fixing. Adoption problems present as user complaints that sound like change resistance but are often disguised usability data: a step that takes one click too many, a report that arrives a day late, a search that returns the wrong document first. The FDE who hears friction as engineering input, and fixes it visibly, converts skeptics by demonstration. The FDE who hears it as attitude loses the room.
 
 ## Practical Applications
 
@@ -66,7 +67,7 @@ The critical insight is the loop back from measurement to fixing. Adoption probl
 
 - [ ] The workflow and role changes are mapped with the customer's leads before rollout
 - [ ] Champions are recruited by name, equipped with time, and thanked publicly
-- [ ] Early friction has a fast, visible path to a fix — not a backlog
+- [ ] Early friction has a fast, visible path to a fix, not a backlog
 - [ ] Adoption is measured by task completion and outcome, not by logins
 - [ ] Downstream and support audiences are briefed before the change reaches them
 - [ ] The old path is retired on a deliberate schedule, with exceptions stated
@@ -75,7 +76,7 @@ The critical insight is the loop back from measurement to fixing. Adoption probl
 ### Resistance Map Template
 
 ```markdown
-## Resistance Map — <deployment, date>
+## Resistance Map: <deployment, date>
 
 | Person or group | What they lose | Their influence | Response plan | Owner |
 |-----------------|----------------|-----------------|---------------|-------|
@@ -105,7 +106,7 @@ The critical insight is the loop back from measurement to fixing. Adoption probl
 
 - [[03_Training_and_Enablement]]
 - [[07_Written_Artifacts_for_Customers]]
-- [[01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]
+- [[career-path/19_Forward_Deployed_Engineer/01_Field_Discovery_and_Problem_Framing/00_overview|Field Discovery and Problem Framing]]
 - [[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]
 
 ## Summary

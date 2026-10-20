@@ -16,13 +16,13 @@ tags:
 
 # Community Programs and Content
 
-> **Core skill:** Running the recurring programs — office hours, learning series, newsletters, hackathons — that give a community its rhythm and its reasons to return.
+> **Core skill:** Running the recurring programs (office hours, learning series, newsletters, hackathons) that give a community its rhythm and its reasons to return.
 
 ## Why This Matters
 
-Communities are held together by rhythm. A space that is sometimes busy and sometimes silent teaches members that participation is optional and forgettable; a space with predictable rituals — the weekly office hour, the monthly newsletter, the quarterly hackathon — teaches them there is a place for them and a time to show up. Programs are how the advocate converts purpose into cadence.
+Communities are held together by rhythm. A space that is sometimes busy and sometimes silent teaches members that participation is optional and forgettable; a space with predictable rituals (the weekly office hour, the monthly newsletter, the quarterly hackathon) teaches them there is a place for them and a time to show up. Programs are how the advocate converts purpose into cadence.
 
-Content and programs are two sides of one engine. Programs generate content — the office hour question becomes a guide, the hackathon project becomes a case study — and content feeds programs — the guide becomes workshop material, the case study becomes a talk. Advocates who run them as separate workstreams double their overhead; advocates who run them as one loop halve it.
+Content and programs are two sides of one engine. Programs generate content (the office hour question becomes a guide, the hackathon project becomes a case study) and content feeds programs: the guide becomes workshop material, the case study becomes a talk. Advocates who run them as separate workstreams double their overhead; advocates who run them as one loop halve it.
 
 The governing constraint is capacity. Every recurring program is a permanent commitment: a monthly commitment is twelve executions a year, forever, and each one consumes preparation time that compounds. The mature advocate runs a small number of programs executed well, sources content from the community instead of authoring everything, and kills programs deliberately when they stop earning their cadence.
 
@@ -62,7 +62,7 @@ Choose the portfolio by capacity and purpose, not by envy of larger programs' ca
 | Reuse | Every artifact feeds two more later | Talks, workshops, onboarding |
 | Measure | Which pieces actually get used and cited | Read-through and reuse, not clicks |
 
-Content sourced from the community — member questions, member projects, member stories — outperforms staff-authored content because it carries the audience's own voice. The advocate's job is editorial: spot the pattern, shape the telling, connect the author to the platform.
+Content sourced from the community (member questions, member projects, member stories) outperforms staff-authored content because it carries the audience's own voice. The advocate's job is editorial: spot the pattern, shape the telling, connect the author to the platform.
 
 ## Sustaining the Rhythm
 
@@ -77,6 +77,7 @@ Content sourced from the community — member questions, member projects, member
 ## The Program Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CAPTURE["Capture - questions, friction, projects"] --> SHAPE["Shape - guides, sessions, showcases"]
     SHAPE --> RUN["Run - the recurring program"]
@@ -98,7 +99,7 @@ flowchart LR
 ### Content Calendar Template
 
 ```markdown
-## Community Calendar — [quarter]
+## Community Calendar: [quarter]
 | Week | Program | Host | Topic | Content Output |
 |------|---------|------|-------|----------------|
 | 1 | Office hours | [name] | [theme or open] | [questions logged] |
@@ -107,7 +108,7 @@ flowchart LR
 | 4 | Showcase | [name] | [member project] | [story for reuse] |
 
 ## Capture Log
-- Recurring question: [x] — heard [n] times — action: [guide / office hour topic / issue filed]
+- Recurring question: [x], heard [n] times, action: [guide / office hour topic / issue filed]
 ```
 
 ## Common Pitfalls
@@ -135,8 +136,8 @@ flowchart LR
 - [[04_Events_and_Conferences]]: events are programs at higher intensity
 - [[07_Measuring_Community_Impact]]: cadence must show up as measurable outcomes
 - [[02_Developer_Programs_and_Relationships]]: champions often become program hosts
-- [[02_Documentation_and_Learning_Materials/00_overview|Documentation and Learning Materials]]: community content feeds and draws from the docs
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/02_Documentation_and_Learning_Materials/00_overview|Documentation and Learning Materials]]: community content feeds and draws from the docs
 
 ## Summary
 
-Community programs and content are one engine: capture the community's questions and projects, shape them into sessions, guides, and showcases, run the recurring rhythm that members can rely on, and let participation refill the pipeline. Run a portfolio that fits your capacity, move hosting to members as soon as they are ready, and retire programs deliberately rather than letting them rot — because a community's calendar is a promise, and promises should be kept or ended openly.
+Community programs and content are one engine: capture the community's questions and projects, shape them into sessions, guides, and showcases, run the recurring rhythm that members can rely on, and let participation refill the pipeline. Run a portfolio that fits your capacity, move hosting to members as soon as they are ready, and retire programs deliberately rather than letting them rot, because a community's calendar is a promise, and promises should be kept or ended openly.

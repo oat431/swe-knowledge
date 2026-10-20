@@ -42,6 +42,7 @@ Senior judgment shows in:
 ## Decision Flow: Data Protection Strategy
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     A["Data enters system"] --> B{"Contains PII or sensitive data?"}
     B -->|Yes| C["Classify sensitivity tier"]
@@ -73,8 +74,8 @@ flowchart TD
 
 - [[05_Data_Security]]: DMBOK security chapter
 - [[CyBOK v1 - Overview]]: cybersecurity knowledge areas
-- [[04_Data_Quality/00_overview|Data Quality]]: quality rules interact with access rules
-- [[03_Data_Integration_and_Interoperability/00_overview|Data Integration]]: security boundaries at integration points
+- [[career-path/09_Data_and_ML_Engineer/04_Data_Quality/00_overview|Data Quality]]: quality rules interact with access rules
+- [[career-path/09_Data_and_ML_Engineer/03_Data_Integration_and_Interoperability/00_overview|Data Integration]]: security boundaries at integration points
 
 ## Common Anti-Patterns
 

@@ -17,7 +17,7 @@ tags:
 
 # AI Security and Guardrails
 
-> **Capability area:** Securing LLM-powered applications against prompt injection, data leakage, and model abuse through threat modeling, layered guardrails, and incident response — assuming the model can be tricked and designing the system so that doesn't matter.
+> **Capability area:** Securing LLM-powered applications against prompt injection, data leakage, and model abuse through threat modeling, layered guardrails, and incident response, assuming the model can be tricked and designing the system so that doesn't matter.
 
 ## Why This Matters at Senior Level
 
@@ -28,9 +28,9 @@ The senior accepts a hard truth mid-level engineers resist: prompt injection can
 Senior judgment shows in:
 - Modeling threats against your specific architecture instead of reciting the Top 10
 - Designing guardrails as independently testable layers, not a single filter that must never fail
-- Placing blast-radius limits at the point where trust is granted — tools, data, actions
+- Placing blast-radius limits at the point where trust is granted: tools, data, actions
 - Treating evaluation, observability, and incident response as part of the security system, not separate disciplines
-- Writing down what is accepted, what is mitigated, and why — risk decisions are deliverables
+- Writing down what is accepted, what is mitigated, and why. Risk decisions are deliverables
 
 ## Topics in This Area
 
@@ -46,6 +46,7 @@ Senior judgment shows in:
 ## Defense-in-Depth Pipeline
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     IN["Untrusted Input"] --> IG["Input Guardrails"]
     IG -->|"pass"| MODEL["LLM"]
@@ -65,15 +66,15 @@ Every arrow is a trust boundary. Guardrails decide what crosses; blast-radius co
 
 **In scope:** LLM threat modeling grounded in the OWASP Top 10 for LLM Applications (2025); prompt injection defense (data-not-instructions framing, defense in depth, blast-radius limiting); data leakage and privacy controls around model inputs, outputs, and logs; input/output guardrail implementation patterns; model supply chain and tool security (open-weight models, plugins, MCP tools, third-party agent integrations); incident response for AI abuse.
 
-**Out of scope:** general application security — authentication, authorization, encryption, network security — belongs to the [[career-path/08_Security_Engineer/00_overview|Security Engineer]] path; this area cross-links rather than duplicates it. Bias, fairness, and AI ethics belong to area 06 (Responsible AI and Governance) of this path. Guardrail *evaluation metrics* and monitoring instrumentation are covered in [[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability]]. Training-data curation and pipeline-level defenses against poisoning (LLM03) belong to the [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]] path; poisoning is threat-modeled here, defended there.
+**Out of scope:** general application security (authentication, authorization, encryption, network security) belongs to the [[career-path/08_Security_Engineer/00_overview|Security Engineer]] path; this area cross-links rather than duplicates it. Bias, fairness, and AI ethics belong to area 06 (Responsible AI and Governance) of this path. Guardrail *evaluation metrics* and monitoring instrumentation are covered in [[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability]]. Training-data curation and pipeline-level defenses against poisoning (LLM03) belong to the [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]] path; poisoning is threat-modeled here, defended there.
 
 ## Sources
 
-- [[computing-foundation-note/Artificial_Intelligence/11_Prompt_Engineering_and_Security]] — Part II: injection types, the four defense layers, OWASP LLM Top 10 table
-- [[computing-foundation-note/Artificial_Intelligence/13_LLM_Evaluation_and_Guardrails]] — runtime guardrail patterns and the eval-to-guardrail lifecycle
-- [[computing-foundation-note/Artificial_Intelligence/08_AI_Ethics_and_Future]] — privacy, safety, and alignment as background concepts
+- [[computing-foundation-note/Artificial_Intelligence/11_Prompt_Engineering_and_Security]]: Part II: injection types, the four defense layers, OWASP LLM Top 10 table
+- [[computing-foundation-note/Artificial_Intelligence/13_LLM_Evaluation_and_Guardrails]]: runtime guardrail patterns and the eval-to-guardrail lifecycle
+- [[computing-foundation-note/Artificial_Intelligence/08_AI_Ethics_and_Future]]: privacy, safety, and alignment as background concepts
 - [OWASP Top 10 for LLM Applications (2025)](https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/)
-- [[CyBOK v1 - Overview]] — incident management and secure lifecycle foundations
+- [[CyBOK v1 - Overview]]: incident management and secure lifecycle foundations
 
 ## Related
 

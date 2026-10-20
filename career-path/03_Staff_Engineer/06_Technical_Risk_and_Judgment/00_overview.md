@@ -14,13 +14,13 @@ tags:
 
 # Technical Risk and Judgment
 
-> **Core capability:** The staff engineer sees organizational-scale technical risk early — architecture erosion, dependency exposure, security posture, concentration risk — and manages it explicitly: assessed, priced, accepted in writing, or remediated.
+> **Core capability:** The staff engineer sees organizational-scale technical risk early (architecture erosion, dependency exposure, security posture, concentration risk) and manages it explicitly: assessed, priced, accepted in writing, or remediated.
 
 ## Why This Matters
 
-At staff level, risk stops being something you flag and becomes something you own. The risks that matter now are slow and structural: the architecture eroding one shortcut at a time, the critical dependency with no alternative, the key-person knowledge concentrated in two heads, the compliance surface nobody mapped. None of these page anyone at 3am — until each suddenly does.
+At staff level, risk stops being something you flag and becomes something you own. The risks that matter now are slow and structural: the architecture eroding one shortcut at a time, the critical dependency with no alternative, the key-person knowledge concentrated in two heads, the compliance surface nobody mapped. None of these page anyone at 3am, until each suddenly does.
 
-Staff judgment shows in the portfolio: which risks get remediated now, which get priced and accepted, which get escalated with options. The failure mode isn't missing risks — it's treating all risks as equally urgent, which means treating none of them as urgent.
+Staff judgment shows in the portfolio: which risks get remediated now, which get priced and accepted, which get escalated with options. The failure mode isn't missing risks. It's treating all risks as equally urgent, which means treating none of them as urgent.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ Staff judgment shows in the portfolio: which risks get remediated now, which get
 ## The Risk Ownership Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SCAN["Scan for org-scale risk"] --> ASSESS["Assess likelihood and blast radius"]
     ASSESS --> PORTFOLIO["Sort the portfolio"]
@@ -89,12 +90,12 @@ Unrecorded acceptance is denial with extra steps.
 
 ## Related Capabilities
 
-- [[02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: remediation ships through teams
-- [[03_Technical_Strategy/00_overview|Technical Strategy]]: bets and risk are one conversation
-- [[05_Systems_Thinking_and_Organizational_Design/00_overview|Systems Thinking and Organizational Design]]: why risk recurs structurally
+- [[career-path/03_Staff_Engineer/02_Cross_Team_Technical_Leadership/00_overview|Cross-Team Technical Leadership]]: remediation ships through teams
+- [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy]]: bets and risk are one conversation
+- [[career-path/03_Staff_Engineer/05_Systems_Thinking_and_Organizational_Design/00_overview|Systems Thinking and Organizational Design]]: why risk recurs structurally
 - [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/00_overview|Quality Reliability Security (Senior)]]: the foundations
 - [[career-path/08_Security_Engineer/00_overview|Security Engineer]]: the specialist depth path
 
 ## Summary
 
-Technical risk at staff level is a portfolio owned in writing: scan for org-scale exposure, assess blast radius, remediate the critical, price and accept the rest, escalate with options, and convert incidents into structural change. The discipline is making every acceptance explicit — because unrecorded risk is just unscheduled surprise.
+Technical risk at staff level is a portfolio owned in writing: scan for org-scale exposure, assess blast radius, remediate the critical, price and accept the rest, escalate with options, and convert incidents into structural change. The discipline is making every acceptance explicit, because unrecorded risk is just unscheduled surprise.

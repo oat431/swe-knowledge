@@ -16,13 +16,13 @@ tags:
 
 # Motivation and Engagement
 
-> **Core skill:** Reading what drives each engineer — autonomy, mastery, purpose, belonging, security — and intervening early when engagement drops, including spotting burnout.
+> **Core skill:** Reading what drives each engineer (autonomy, mastery, purpose, belonging, security) and intervening early when engagement drops, including spotting burnout.
 
 ## Why This Matters
 
-Motivation is the team's fuel. Engineers who are driven by the work itself deliver more, learn faster, and stay longer; engineers who are merely present consume management attention and quietly erode the team's energy. The manager cannot inject motivation — it is intrinsic or it is theater — but the manager can read it, protect it, and remove what kills it.
+Motivation is the team's fuel. Engineers who are driven by the work itself deliver more, learn faster, and stay longer; engineers who are merely present consume management attention and quietly erode the team's energy. The manager cannot inject motivation (it is intrinsic or it is theater), but the manager can read it, protect it, and remove what kills it.
 
-Engagement is also the earliest warning system for attrition. Disengagement precedes resignation by months, not days. The manager who reads the signals early can intervene; the manager who waits for the resignation letter has already lost. Reading engagement is not soft management — it is retention engineering with a lead time of a quarter.
+Engagement is also the earliest warning system for attrition. Disengagement precedes resignation by months, not days. The manager who reads the signals early can intervene; the manager who waits for the resignation letter has already lost. Reading engagement is not soft management. It is retention engineering with a lead time of a quarter.
 
 ## Intrinsic vs Extrinsic Motivation
 
@@ -33,11 +33,11 @@ Engagement is also the earliest warning system for attrition. Disengagement prec
 | Failure mode | Burnout when overdriven | Golden-handcuff retention; leave when the offer lands |
 | Manager's lever | Design the work: autonomy, mastery, purpose | Mostly limited; compensation is hygiene |
 
-Engineers are disproportionately intrinsic — they chose a craft. The manager's highest-leverage work is protecting intrinsic motivation: meaningful problems, visible progress, real autonomy. Extrinsic levers buy time but never engagement.
+Engineers are disproportionately intrinsic. They chose a craft. The manager's highest-leverage work is protecting intrinsic motivation: meaningful problems, visible progress, real autonomy. Extrinsic levers buy time but never engagement.
 
 ## Motivation Maps Per Report
 
-Each engineer has a different mix of drives. The manager builds a motivation map per report — not a personality quiz, but an observed, updated picture of what fuels them.
+Each engineer has a different mix of drives. The manager builds a motivation map per report, not a personality quiz, but an observed, updated picture of what fuels them.
 
 | Drive | What it looks like | The manager's move |
 |-------|--------------------|--------------------|
@@ -47,7 +47,7 @@ Each engineer has a different mix of drives. The manager builds a motivation map
 | Belonging | Energized by team connection and being valued | Team rituals, inclusion in decisions, credit given |
 | Security | Energized by stability and predictability | Clear expectations, honest signals, no surprises |
 
-The map is built from one-to-ones, observed energy, and what the engineer chooses when given options — and it changes. The manager refreshes it quarterly and, crucially, acts on it. A map that is never used is a diary.
+The map is built from one-to-ones, observed energy, and what the engineer chooses when given options, and it changes. The manager refreshes it quarterly and, crucially, acts on it. A map that is never used is a diary.
 
 ## Reading Engagement Signals
 
@@ -59,7 +59,7 @@ The map is built from one-to-ones, observed energy, and what the engineer choose
 | Complaint patterns | Specific, work-related gripes | General cynicism, "what's the point" |
 | Team presence | Fewer contributions, later arrivals | Withdraws from team events and rituals |
 
-The manager reads these at the level of trend, not moment — everyone has a bad week. What matters is direction: the engineer who proposed three ideas last quarter and none this quarter is signaling, whether or not they know it.
+The manager reads these at the level of trend, not moment. Everyone has a bad week. What matters is direction: the engineer who proposed three ideas last quarter and none this quarter is signaling, whether or not they know it.
 
 ## Disengagement Interventions
 
@@ -78,10 +78,10 @@ The intervention order is always the same: name what you see, ask what changed, 
 |----------|---------------|---------|
 | Specific | Names the actual behavior and its effect | "Your postmortem turned a firefight into a checklist" |
 | Timely | Close to the event, not at review time | Same week, in the channel where it happened |
-| Appropriate to person | Matches how they like to receive it | Public for some, private for others — the map again |
+| Appropriate to person | Matches how they like to receive it | Public for some, private for others; the map again |
 | Credible | Earned, not sprayed around | Recognition inflation makes praise worthless |
 
-Recognition fails in two directions: never given, or given so freely it means nothing. The manager matches the form to the person — a private note lands harder for some than a company-wide shout-out — and keeps the substance specific.
+Recognition fails in two directions: never given, or given so freely it means nothing. The manager matches the form to the person (a private note lands harder for some than a company-wide shout-out) and keeps the substance specific.
 
 ## Compensation as Hygiene
 
@@ -96,11 +96,12 @@ Compensation does not motivate; its absence demotivates. Engineers rarely do the
 | Reduced efficacy | Output drops despite effort; self-doubt grows | Shrink scope to winnable wins; restore progress |
 | Boundary collapse | Working nights; pride in exhaustion | Model and enforce boundaries; the manager goes first |
 
-Burnout is a system failure before it is a personal one: sustained overload, low control, unfairness, or broken values. The manager treats the cause, not just the symptom — a week off without fixing the workload is a gift with a return date on the box.
+Burnout is a system failure before it is a personal one: sustained overload, low control, unfairness, or broken values. The manager treats the cause, not just the symptom. A week off without fixing the workload is a gift with a return date on the box.
 
 ## The Engagement Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MAP["Build the motivation map"] --> READ["Read engagement signals"]
     READ --> INTERVENE["Intervene early and specifically"]
@@ -142,9 +143,9 @@ flowchart TD
 
 - [[01_One_to_Ones]]: where motivation maps are built and refreshed
 - [[07_Managing_Experienced_Engineers]]: experienced engineers have the strongest motivation and the most options
-- [[02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: individual engagement feeds team health
-- [[07_Manager_Communication/00_overview|Manager Communication]]: the conversations that surface disengagement
+- [[career-path/11_Engineering_Manager/02_Team_Formation_and_Health/00_overview|Team Formation and Health]]: individual engagement feeds team health
+- [[career-path/11_Engineering_Manager/07_Manager_Communication/00_overview|Manager Communication]]: the conversations that surface disengagement
 
 ## Summary
 
-Motivation and engagement are read, protected, and repaired: per-person motivation maps, trend-level reading of energy and initiative, early interventions, recognition matched to the person, compensation treated as hygiene rather than fuel, and burnout addressed at its causes. The manager's return on this work is retention with lead time — problems caught while they are still fixable and engineers who stay because the work and the manager are worth it.
+Motivation and engagement are read, protected, and repaired: per-person motivation maps, trend-level reading of energy and initiative, early interventions, recognition matched to the person, compensation treated as hygiene rather than fuel, and burnout addressed at its causes. The manager's return on this work is retention with lead time: problems caught while they are still fixable and engineers who stay because the work and the manager are worth it.

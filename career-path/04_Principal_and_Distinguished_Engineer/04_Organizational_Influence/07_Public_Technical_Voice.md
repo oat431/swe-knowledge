@@ -16,17 +16,17 @@ tags:
 
 # Public Technical Voice
 
-> **Core skill:** The principal develops and exercises an external technical voice — through conference keynotes, industry thought leadership, technical blog strategy, and media presence — that builds the organization's technical brand without becoming personal ego.
+> **Core skill:** The principal develops and exercises an external technical voice (through conference keynotes, industry thought leadership, technical blog strategy, and media presence) that builds the organization's technical brand without becoming personal ego.
 
 ## Why This Matters
 
-At principal level, the external voice is not a perk — it is an organizational asset. Conference keynotes position the organization's technology story in the industry narrative. Technical blog posts attract the engineers the organization wants to hire. Podcast appearances and media presence shape how analysts, partners, and potential customers understand the organization's technical capability. A principal with a strong external voice makes the organization technically legible to the outside world; a principal without one leaves that legibility to competitors, gossip, or silence.
+At principal level, the external voice is not a perk. It is an organizational asset. Conference keynotes position the organization's technology story in the industry narrative. Technical blog posts attract the engineers the organization wants to hire. Podcast appearances and media presence shape how analysts, partners, and potential customers understand the organization's technical capability. A principal with a strong external voice makes the organization technically legible to the outside world; a principal without one leaves that legibility to competitors, gossip, or silence.
 
-The external voice is also fragile. It can shift from organizational brand-building to personal ego — keynotes that promote the principal, not the organization's work. It can consume time that the organization needs internally. It can create a single point of external representation that disappears when the principal leaves. The principal's skill is developing an external voice that serves the organization, balances visibility with internal work, and develops other voices so the organization's external presence is not one person deep.
+The external voice is also fragile. It can shift from organizational brand-building to personal ego: keynotes that promote the principal, not the organization's work. It can consume time that the organization needs internally. It can create a single point of external representation that disappears when the principal leaves. The principal's skill is developing an external voice that serves the organization, balances visibility with internal work, and develops other voices so the organization's external presence is not one person deep.
 
 ## The External Voice Portfolio
 
-The principal's external voice is not a single activity — it is a portfolio of channels, each with a distinct audience, purpose, and investment.
+The principal's external voice is not a single activity. It is a portfolio of channels, each with a distinct audience, purpose, and investment.
 
 | Channel | Audience | Purpose | Frequency | Investment |
 |---------|----------|---------|-----------|------------|
@@ -39,7 +39,7 @@ The principal's external voice is not a single activity — it is a portfolio of
 
 ## The External Voice as Organizational Brand
 
-The principal's external voice is not about the principal — it is about the organization's technical story, told through a credible narrator. The distinction matters because an external voice built on personal brand leaves with the person; an external voice built on the organization's technical story persists.
+The principal's external voice is not about the principal. It is about the organization's technical story, told through a credible narrator. The distinction matters because an external voice built on personal brand leaves with the person; an external voice built on the organization's technical story persists.
 
 | Personal Brand Voice | Organizational Brand Voice |
 |---------------------|---------------------------|
@@ -53,7 +53,7 @@ The test: if the principal left tomorrow, would the organization's external tech
 
 ## Keynote Strategy
 
-A principal's keynote is not a conference talk writ large — it is a strategic communication designed to position the organization's technology story in the industry narrative.
+A principal's keynote is not a conference talk writ large. It is a strategic communication designed to position the organization's technology story in the industry narrative.
 
 ### Keynote Structure
 
@@ -69,7 +69,7 @@ A principal's keynote is not a conference talk writ large — it is a strategic 
 
 | Dimension | Standard |
 |-----------|----------|
-| **One idea** | The keynote communicates one idea, not five. The audience remembers one thing — make it the right thing. |
+| **One idea** | The keynote communicates one idea, not five. The audience remembers one thing. Make it the right thing. |
 | **Stories over slides** | Stories carry technical depth better than bullet points. A story about a production incident teaches more than a diagram of the architecture that prevented it. |
 | **Credit the teams** | Every result is a team result. Name the teams, show their photos, celebrate their work. The principal is the narrator, not the hero. |
 | **Technical depth without exclusion** | The keynote is accessible to a broad audience without dumbing down. Technical depth is in the stories, not in the jargon. |
@@ -77,7 +77,7 @@ A principal's keynote is not a conference talk writ large — it is a strategic 
 
 ## Technical Blog Strategy
 
-The organization's technical blog is the most scalable external voice channel — it is discoverable forever, searchable, and not gated by conference acceptances.
+The organization's technical blog is the most scalable external voice channel. It is discoverable forever, searchable, and not gated by conference acceptances.
 
 | Blog Post Type | Purpose | Example |
 |---------------|---------|---------|
@@ -121,6 +121,7 @@ The principal should not be the organization's only external voice. Developing o
 | **Repeat** | The developed voice mentors the next developing voice | The principal oversees the pipeline |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     INTERNAL["Internal technical work: the source material"] --> CONTENT["Create content: blog posts, talks, keynotes"]
     CONTENT --> DISTRIBUTE["Distribute across channels: conferences, blog, podcast, media"]
@@ -176,7 +177,7 @@ flowchart TD
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
 | **External voice as ego** | Keynotes and blog posts promote the principal; the organization's work is background | Make the organization's technology story the subject; credit the teams; the principal is the narrator |
-| **No strategy** | External activities are ad-hoc — whatever conference accepts, whatever blog post is convenient | Annual external voice strategy with objectives, key messages, and a channel plan |
+| **No strategy** | External activities are ad-hoc: whatever conference accepts, whatever blog post is convenient | Annual external voice strategy with objectives, key messages, and a channel plan |
 | **External at the expense of internal** | The principal is always traveling, always writing externally; internal influence atrophies | Time-box external investment; external serves internal, not the reverse |
 | **Single point of external voice** | Only the principal represents the organization externally; voice disappears when the principal leaves | Develop other voices: co-author, co-present, mentor, amplify |
 | **Shallow content** | Blog posts that are "we are hiring" with no technical depth; keynotes that are motivational without substance | Technical depth in every external artifact; the content must be worth the audience's time |
@@ -194,10 +195,10 @@ flowchart TD
 
 - [[04_External_Technical_Representation]]: the standards and consortia dimension of external presence
 - [[03_Writing_for_Organizational_Impact]]: the writing craft behind external content
-- [[01_Technology_Strategy/00_overview|Technology Strategy]]: the content the external voice communicates
+- [[career-path/04_Principal_and_Distinguished_Engineer/01_Technology_Strategy/00_overview|Technology Strategy]]: the content the external voice communicates
 - [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/00_overview|Influence and Alignment (Staff)]]: the influence foundation this scales to external audiences
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/01_Technical_Writing|Technical Writing (Senior)]]: the writing foundation
 
 ## Summary
 
-The public technical voice is the principal's mechanism for building the organization's external technical brand — through conference keynotes, technical blog strategy, podcast appearances, and media presence that position the organization's technology story in the industry narrative. The voice is an organizational asset, not personal ego: credit flows to the teams, content serves the organization's goals, external time is budgeted, and other voices are developed so the organization's external presence is not a single point of failure. The principal's external voice makes the organization technically legible to the outside world — attracting talent, partners, and market attention that silence cannot reach.
+The public technical voice is the principal's mechanism for building the organization's external technical brand, through conference keynotes, technical blog strategy, podcast appearances, and media presence that position the organization's technology story in the industry narrative. The voice is an organizational asset, not personal ego: credit flows to the teams, content serves the organization's goals, external time is budgeted, and other voices are developed so the organization's external presence is not a single point of failure. The principal's external voice makes the organization technically legible to the outside world, attracting talent, partners, and market attention that silence cannot reach.

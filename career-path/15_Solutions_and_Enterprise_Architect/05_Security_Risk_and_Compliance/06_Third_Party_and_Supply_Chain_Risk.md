@@ -16,15 +16,15 @@ tags:
 
 # Third Party and Supply Chain Risk
 
-> **Core skill:** The architect assesses and manages the risk that enters the estate through vendors, platforms, and suppliers — due diligence before commitment, technical and contractual controls during the relationship, and exit paths that keep the enterprise viable when the relationship ends badly.
+> **Core skill:** The architect assesses and manages the risk that enters the estate through vendors, platforms, and suppliers: due diligence before commitment, technical and contractual controls during the relationship, and exit paths that keep the enterprise viable when the relationship ends badly.
 
 ## Why This Matters
 
 A modern estate runs on other people's software, infrastructure, and services. Each dependency is also a transfer of control: the vendor's outage becomes the enterprise's outage, the vendor's breach becomes the enterprise's incident, and the vendor's change of strategy becomes the enterprise's migration. The architect maps where third parties sit inside the architecture and treats each dependency as a designed relationship with visible risk, not an assumed utility.
 
-Third party risk is not primarily a procurement question that closes at signature. The riskiest phases are often in the middle of a relationship: silent subprocessor changes, degraded support, price shifts at renewal, and product roadmaps that abandon the features the architecture depends on. Managing this requires technical awareness — what the enterprise consumes, what alternatives exist, and what state it would be in if the relationship ended tomorrow.
+Third party risk is not primarily a procurement question that closes at signature. The riskiest phases are often in the middle of a relationship: silent subprocessor changes, degraded support, price shifts at renewal, and product roadmaps that abandon the features the architecture depends on. Managing this requires technical awareness: what the enterprise consumes, what alternatives exist, and what state it would be in if the relationship ended tomorrow.
 
-Supply chain security adds a second dimension: software itself arrives assembled from third-party components, and the estate inherits the vulnerabilities of everything in the build. The architect's instruments here are the ones that make composition visible — inventories, bills of materials, provenance — combined with the discipline to keep critical paths free of unmaintained dependencies.
+Supply chain security adds a second dimension: software itself arrives assembled from third-party components, and the estate inherits the vulnerabilities of everything in the build. The architect's instruments here are the ones that make composition visible (inventories, bills of materials, provenance) combined with the discipline to keep critical paths free of unmaintained dependencies.
 
 ## Where Third Party Risk Enters
 
@@ -60,6 +60,7 @@ Supply chain security adds a second dimension: software itself arrives assembled
 ## The Vendor Risk Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     IDENTIFY["Identify third party dependencies"] --> ASSESS["Assess risk and due diligence"]
     ASSESS["Assess risk and due diligence"] --> CONTROLS["Negotiate contractual and technical controls"]
@@ -82,7 +83,7 @@ flowchart LR
 ### Third Party Risk Checklist
 
 - [ ] Every significant vendor dependency appears on the architecture landscape with an owner
-- [ ] Due diligence covers security, continuity, data protection, and exit — not price alone
+- [ ] Due diligence covers security, continuity, data protection, and exit, not price alone
 - [ ] Critical integrations have a documented exit path with estimated cost and time
 - [ ] Subprocessor and component chains are inventoried and monitored for change
 - [ ] Vendor risk is reviewed on a cycle, not only at procurement
@@ -90,7 +91,7 @@ flowchart LR
 ### Vendor Risk Assessment
 
 ```markdown
-## Vendor Risk Assessment — <vendor or service>
+## Vendor Risk Assessment: <vendor or service>
 
 | Dimension | Finding | Residual Risk | Treatment |
 |-----------|---------|---------------|-----------|
@@ -114,7 +115,7 @@ flowchart LR
 
 ## Success Indicators
 
-- Vendor risk assessments change decisions — some conditions imposed, some vendors declined
+- Vendor risk assessments change decisions: some conditions imposed, some vendors declined
 - Exit paths exist and have been rehearsed for critical dependencies
 - Concentration exposure is known, bounded, and reviewed by leadership
 - Subprocessor and component changes arrive through monitoring, not surprises
@@ -125,7 +126,7 @@ flowchart LR
 - [[02_Risk_Management_for_Architects]]
 - [[03_Compliance_and_Regulatory_Architecture]]
 - [[04_Privacy_by_Design]]
-- [[06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]
+- [[career-path/15_Solutions_and_Enterprise_Architect/06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]
 
 ## Summary
 

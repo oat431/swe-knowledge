@@ -16,15 +16,15 @@ tags:
 
 # Training and Enablement
 
-> **Core skill:** Making users competent and confident on the system — teaching the customer's people to do their actual work through the deployment, and measuring enablement by competence rather than by sessions delivered.
+> **Core skill:** Making users competent and confident on the system: teaching the customer's people to do their actual work through the deployment, and measuring enablement by competence rather than by sessions delivered.
 
 ## Why This Matters
 
-A deployment is only as alive as its users. The system may run perfectly, but if the customer's operators cannot do their work through it, the deployment becomes shelfware with a support contract. Training is the bridge between a working system and working people, and in the field it is where adoption is won or lost — long before any metric dashboard shows the outcome. The FDE who treats training as a scheduling chore produces attendance records; the FDE who treats it as engineering a capability produces users who can operate, recover, and eventually teach the system themselves.
+A deployment is only as alive as its users. The system may run perfectly, but if the customer's operators cannot do their work through it, the deployment becomes shelfware with a support contract. Training is the bridge between a working system and working people, and in the field it is where adoption is won or lost, long before any metric dashboard shows the outcome. The FDE who treats training as a scheduling chore produces attendance records; the FDE who treats it as engineering a capability produces users who can operate, recover, and eventually teach the system themselves.
 
-The most common mistake is teaching the product instead of the work. Users do not adopt features; they adopt the new way their Tuesday afternoon happens. Training built around the customer's real tasks — their queues, their documents, their approval chains, with their vocabulary in every label — transfers immediately into behavior. Training built around the product's architecture creates users who can describe the system but freeze when the real task hits an edge case. The distinction matters even more for AI components, where users must develop calibrated trust: knowing what the system is good at, where it fails, and what to do when it does.
+The most common mistake is teaching the product instead of the work. Users do not adopt features; they adopt the new way their Tuesday afternoon happens. Training built around the customer's real tasks (their queues, their documents, their approval chains, with their vocabulary in every label) transfers immediately into behavior. Training built around the product's architecture creates users who can describe the system but freeze when the real task hits an edge case. The distinction matters even more for AI components, where users must develop calibrated trust: knowing what the system is good at, where it fails, and what to do when it does.
 
-Enablement also has a second customer: the organization after the FDE leaves. The deployment needs internal owners — power users, administrators, a support desk that can answer the first line of questions — or every minor issue becomes a field visit. And there is a second wave: staff who join or rotate in later never saw the launch training and learn from whatever the system happens to look like. Competence is not a one-time event but a property of the customer's organization, and the FDE engineers it the same way as any other system property: with design, measurement, and iteration. Training succeeds when it can be measured — users completing real tasks unaided, a support queue that shrinks over time, a power user who can onboard the next cohort alone.
+Enablement also has a second customer: the organization after the FDE leaves. The deployment needs internal owners (power users, administrators, a support desk that can answer the first line of questions), or every minor issue becomes a field visit. And there is a second wave: staff who join or rotate in later never saw the launch training and learn from whatever the system happens to look like. Competence is not a one-time event but a property of the customer's organization, and the FDE engineers it the same way as any other system property: with design, measurement, and iteration. Training succeeds when it can be measured: users completing real tasks unaided, a support queue that shrinks over time, a power user who can onboard the next cohort alone.
 
 ## Training Audiences
 
@@ -47,6 +47,7 @@ Enablement also has a second customer: the organization after the FDE leaves. Th
 | Multipliers | Training the trainers and the documentation | A customer-side person teaches the next group |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     ROLES["Map the roles and their work"] --> TEACH["Teach on their real tasks"]
     TEACH --> PRACTICE["Practice with support close by"]
@@ -55,7 +56,7 @@ flowchart LR
     DOCS --> SUSTAIN["Sustain through the second wave"]
 ```
 
-Two properties of this ladder matter in the field. First, nobody skips rungs: independent use without guided practice produces confident misuse, which is worse and more persistent than hesitation. Second, the ladder ends outside the FDE — with the customer's own people teaching and their own reference material answering questions — or the deployment never becomes independent.
+Two properties of this ladder matter in the field. First, nobody skips rungs: independent use without guided practice produces confident misuse, which is worse and more persistent than hesitation. Second, the ladder ends outside the FDE (with the customer's own people teaching and their own reference material answering questions), or the deployment never becomes independent.
 
 ## Practical Applications
 
@@ -72,7 +73,7 @@ Two properties of this ladder matter in the field. First, nobody skips rungs: in
 ### Enablement Plan Template
 
 ```markdown
-## Enablement Plan — <customer, deployment, date>
+## Enablement Plan: <customer, deployment, date>
 
 | Role | Tasks trained | Format | Competence check | Owner after handover |
 |------|---------------|--------|------------------|----------------------|
@@ -108,4 +109,4 @@ Two properties of this ladder matter in the field. First, nobody skips rungs: in
 
 ## Summary
 
-Training and enablement are how the FDE turns a running system into working people: map the roles, teach on real tasks, let users practice where mistakes are safe, measure competence rather than attendance, and hand over reference material and internal trainers so the capability outlives the field team. The deployment is finished not when the system works, but when the customer's people can work — and when they can teach the next cohort without you in the room.
+Training and enablement are how the FDE turns a running system into working people: map the roles, teach on real tasks, let users practice where mistakes are safe, measure competence rather than attendance, and hand over reference material and internal trainers so the capability outlives the field team. The deployment is finished not when the system works, but when the customer's people can work, and when they can teach the next cohort without you in the room.

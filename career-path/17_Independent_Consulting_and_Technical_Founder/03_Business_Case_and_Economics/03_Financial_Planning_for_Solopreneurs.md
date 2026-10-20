@@ -17,13 +17,13 @@ tags:
 
 # Financial Planning for Solopreneurs
 
-> **Core skill:** Running one-person finances like a business — separated accounts, tax reserves, budgets, and monthly hygiene that keep the firm solvent and calm.
+> **Core skill:** Running one-person finances like a business: separated accounts, tax reserves, budgets, and monthly hygiene that keep the firm solvent and calm.
 
 ## Why This Matters
 
-A solo business has no finance department, no payroll office, and no one to catch mistakes. Every function a company splits across specialists — bookkeeping, tax reserves, budgeting, collections, compliance — lands on the same person who is also supposed to be delivering client work. The result is predictable: finances run reactively, taxes arrive as shocks, and business cash and personal cash blur into one anxious pool.
+A solo business has no finance department, no payroll office, and no one to catch mistakes. Every function a company splits across specialists (bookkeeping, tax reserves, budgeting, collections, compliance) lands on the same person who is also supposed to be delivering client work. The result is predictable: finances run reactively, taxes arrive as shocks, and business cash and personal cash blur into one anxious pool.
 
-The fix is not sophistication; it is a small set of mechanical habits. Separated accounts remove ambiguity about what money belongs to whom. A tax reserve policy converts a yearly lump-sum dread into a monthly transfer. A budgeting cadence keeps the cost baseline current. None of this requires an accountant on staff — it requires a ritual that survives busy months precisely because it is short.
+The fix is not sophistication; it is a small set of mechanical habits. Separated accounts remove ambiguity about what money belongs to whom. A tax reserve policy converts a yearly lump-sum dread into a monthly transfer. A budgeting cadence keeps the cost baseline current. None of this requires an accountant on staff. It requires a ritual that survives busy months precisely because it is short.
 
 Financial hygiene also buys negotiation strength. An independent with reserves, current books, and a known runway can decline bad deals, ask for deposits, and walk away from clients who pay late. Financial chaos has the opposite effect: it forces you to accept whatever is offered, which is how margins and standards erode together.
 
@@ -54,7 +54,7 @@ Small and boring beats thorough and infrequent. A compact monthly close plus a q
 
 ## Taxes, Structure and Compliance
 
-Tax specifics vary by jurisdiction and change often — verify current rules with a licensed professional rather than trusting any note, including this one. The principles are stable: reserves prevent shocks, documentation prevents disallowance, and structure affects both tax and liability.
+Tax specifics vary by jurisdiction and change often. Verify current rules with a licensed professional rather than trusting any note, including this one. The principles are stable: reserves prevent shocks, documentation prevents disallowance, and structure affects both tax and liability.
 
 | Question | Why It Matters | Who Answers |
 |----------|----------------|-------------|
@@ -64,13 +64,14 @@ Tax specifics vary by jurisdiction and change often — verify current rules wit
 | What expenses are deductible | Home office, hardware, software, travel rules vary | Accountant |
 | What social contributions apply | Contributions are part of the cost baseline | Accountant |
 
-In markets such as Thailand, services are commonly subject to withholding tax and personal versus corporate structures carry materially different treatment — specifics worth one paid hour of professional advice, repeated whenever the business shape changes.
+In markets such as Thailand, services are commonly subject to withholding tax and personal versus corporate structures carry materially different treatment: specifics worth one paid hour of professional advice, repeated whenever the business shape changes.
 
 ## Allocation Policy
 
 Write the split once and apply it to every payment so decisions are automatic. A common policy: tax reserve first, buffer second, owner draw third, reinvestment last. Adjust the shares deliberately at quarterly reviews, never impulse by impulse.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PAY["Client payment received"] --> SPLIT["Allocation by written policy"]
     SPLIT --> TAX["Tax reserve"]
@@ -122,10 +123,10 @@ flowchart LR
 - [[01_Cost_Structures_and_Runway]]: the baseline this ritual keeps current
 - [[02_Revenue_Models_and_Forecasting]]: forecasts decide what the allocation policy receives
 - [[07_Risk_Adjusted_Decision_Making]]: reserves are what make risk-taking survivable
-- [[07_Governance_Risk_and_Continuity/00_overview|Governance, Risk and Continuity]]: legal structure and compliance sit alongside financial policy
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/07_Governance_Risk_and_Continuity/00_overview|Governance, Risk and Continuity]]: legal structure and compliance sit alongside financial policy
 - [[career-path/13_Project_and_Program_Manager/03_Schedule_and_Cost/03_Cost_Estimation_and_Budgeting|Cost Estimation and Budgeting (PjM)]]: budgeting craft that scales down to a firm of one
 
 ## Summary
 
-Financial planning for a solopreneur is a short, mechanical ritual built on separated accounts, an allocation policy, and a tax reserve funded on receipt. Keep the runway current, invoice promptly, document everything, and pay a professional at every structural change. The point is not sophistication — it is never being surprised, and always having the option to say no.
+Financial planning for a solopreneur is a short, mechanical ritual built on separated accounts, an allocation policy, and a tax reserve funded on receipt. Keep the runway current, invoice promptly, document everything, and pay a professional at every structural change. The point is not sophistication. It is never being surprised, and always having the option to say no.
 

@@ -16,15 +16,15 @@ tags:
 
 # Deployment Architecture
 
-> **Core skill:** The architect designs the deployment topology — how components map to hosts, regions, and environments, how releases reach production, and who deploys what — and treats deployability as a quality attribute scenario rather than an operations afterthought.
+> **Core skill:** The architect designs the deployment topology (how components map to hosts, regions, and environments, how releases reach production, and who deploys what) and treats deployability as a quality attribute scenario rather than an operations afterthought.
 
 ## Why This Matters
 
 An architecture that cannot be deployed is a diagram. The deployment model is not a packaging detail decided at the end; it shapes scaling granularity, failure boundaries, release cadence, and which organizational structures can own the system. A monolith deploys and fails as one unit; microservices scale and degrade per service; serverless trades operational attention for platform constraints; event-driven systems decouple deployment timing from consumption. Each model buys something and pays for it, and the payment always shows up in operations.
 
-Environments and promotion paths are part of the same design. How changes travel from development to a production-like stage to production, what gates stand between them, where environment parity matters and where deliberate difference is correct — these determine whether releases are routine or events. A production environment that has never been rehearsed at staging scale is not a tested system; it is an untested one that happens to be running.
+Environments and promotion paths are part of the same design. How changes travel from development to a production-like stage to production, what gates stand between them, where environment parity matters and where deliberate difference is correct: these determine whether releases are routine or events. A production environment that has never been rehearsed at staging scale is not a tested system; it is an untested one that happens to be running.
 
-The architect owns the deployment view and the deployability scenarios attached to it: components mapped to runtime hosts and regions, drawn as a maintained view; release strategies chosen for the topology; and responsibilities made explicit — who deploys what, who can promote, who is paged. Deployability designed in advance is what makes the difference between shipping on a Tuesday afternoon and shipping only during a maintenance window.
+The architect owns the deployment view and the deployability scenarios attached to it: components mapped to runtime hosts and regions, drawn as a maintained view; release strategies chosen for the topology; and responsibilities made explicit (who deploys what, who can promote, who is paged). Deployability designed in advance is what makes the difference between shipping on a Tuesday afternoon and shipping only during a maintenance window.
 
 ## Deployment Models
 
@@ -45,13 +45,14 @@ The architect owns the deployment view and the deployability scenarios attached 
 | **Staging** | Integration truth at production-like configuration | Anonymized or synthetic at scale | Integration, performance, and security gates pass |
 | **Production** | Real users, real data | Real | Progressive rollout with health gates and rollback armed |
 
-Parity where it matters — configuration shape, topology, runtime versions, dependency versions — and deliberate difference where it must: scale, data, and cost. Every undocumented difference between staging and production is a class of bugs that only exists in production.
+Parity where it matters (configuration shape, topology, runtime versions, dependency versions) and deliberate difference where it must: scale, data, and cost. Every undocumented difference between staging and production is a class of bugs that only exists in production.
 
 ## The Deployment View
 
-The deployment view maps architectural elements to their runtime homes: which component runs where, in which region, behind which gateway, with which scaling group. It is the view most requested by operations, security, and finance — and the most frequently out of date. Keeping it current is an architectural obligation, because every other view assumes it is true.
+The deployment view maps architectural elements to their runtime homes: which component runs where, in which region, behind which gateway, with which scaling group. It is the view most requested by operations, security, and finance, and the most frequently out of date. Keeping it current is an architectural obligation, because every other view assumes it is true.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     BUILD["Build produces an immutable artifact"] --> STAGE["Stage release in a production-like environment"]
     STAGE --> GATE["Verification gates pass"]
@@ -62,7 +63,7 @@ flowchart TD
 
 ## Deployability as a Quality Attribute Scenario
 
-Deployability is expressed like any other quality attribute — source, stimulus, artifact, environment, response, response measure — and it is testable.
+Deployability is expressed like any other quality attribute (source, stimulus, artifact, environment, response, response measure) and it is testable.
 
 | Element | Example |
 |---------|---------|
@@ -135,4 +136,4 @@ Scenarios like this turn deployment from an aspiration into an acceptance criter
 
 ## Summary
 
-Deployment architecture chooses the deployment model against quality attributes and team structure, maps components to runtime homes in a maintained deployment view, and defines promotion paths between environments with deliberate parity. Deployability is exercised like any quality attribute — with a measurable scenario — and responsibility is explicit: who deploys, who promotes, who is paged. The topology is designed, recorded, and kept true, because everything downstream of it, from resilience to cost, inherits its properties.
+Deployment architecture chooses the deployment model against quality attributes and team structure, maps components to runtime homes in a maintained deployment view, and defines promotion paths between environments with deliberate parity. Deployability is exercised like any quality attribute (with a measurable scenario) and responsibility is explicit: who deploys, who promotes, who is paged. The topology is designed, recorded, and kept true, because everything downstream of it, from resilience to cost, inherits its properties.

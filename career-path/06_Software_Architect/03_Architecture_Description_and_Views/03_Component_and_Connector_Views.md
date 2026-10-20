@@ -16,13 +16,13 @@ tags:
 
 # Component and Connector Views
 
-> **Core skill:** The architect communicates runtime behavior — how components interact at execution time through connectors like REST, messaging, streaming, and RPC — so that integrators, performance reviewers, and reliability engineers can reason about the live system.
+> **Core skill:** The architect communicates runtime behavior (how components interact at execution time through connectors like REST, messaging, streaming, and RPC) so that integrators, performance reviewers, and reliability engineers can reason about the live system.
 
 ## Why This Matters
 
 Static structure tells you how the system is built. Runtime structure tells you how it behaves. The same set of modules can produce radically different runtime topologies: a deployment where every service talks directly to every other service is a different system from one where all traffic flows through a gateway, even if the code modules are identical.
 
-Component and Connector (C&C) views are where architecture meets production. Performance bottlenecks live in connector choices; reliability depends on how components handle failure of their connectors; security is about what components are allowed to communicate. An architect who only draws static views is not describing the system that actually runs — they are describing the system that compiles.
+Component and Connector (C&C) views are where architecture meets production. Performance bottlenecks live in connector choices; reliability depends on how components handle failure of their connectors; security is about what components are allowed to communicate. An architect who only draws static views is not describing the system that actually runs. They are describing the system that compiles.
 
 ## Component Types by Runtime Role
 
@@ -51,7 +51,7 @@ Components are divided into clients (requestors) and servers (responders). The c
 
 ### Publish-Subscribe
 
-Components communicate through events published to channels. Producers and consumers are decoupled — neither knows about the other. Dominant in event-driven architectures.
+Components communicate through events published to channels. Producers and consumers are decoupled; neither knows about the other. Dominant in event-driven architectures.
 
 | Characteristic | Implication |
 |----------------|-------------|
@@ -73,11 +73,12 @@ Components communicate by reading and writing a shared data store. The connector
 
 ### Peer-to-Peer
 
-Components are equals — each can initiate or respond to requests. No centralized server. Dominant in distributed systems, blockchain, and file-sharing.
+Components are equals; each can initiate or respond to requests. No centralized server. Dominant in distributed systems, blockchain, and file-sharing.
 
 ## Connector Semantics
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CONNECTOR_CHOICE["Choose Connector Type"] --> SYNC["Synchronous"]
     CONNECTOR_CHOICE --> ASYNC["Asynchronous"]
@@ -143,8 +144,8 @@ Every component in a C&C view must declare:
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
-| **Missing connector semantics** | Line between boxes says nothing — is it REST, gRPC, or a cron job reading a file? | Label every connector with protocol, direction, and whether it is sync or async |
-| **Component responsibilities overlap** | Two components claim the same responsibility — runtime conflicts and duplication | Each responsibility belongs to exactly one component |
+| **Missing connector semantics** | Line between boxes says nothing: is it REST, gRPC, or a cron job reading a file? | Label every connector with protocol, direction, and whether it is sync or async |
+| **Component responsibilities overlap** | Two components claim the same responsibility: runtime conflicts and duplication | Each responsibility belongs to exactly one component |
 | **Implicit shared state** | Components communicate through a database that is not in the view | Model shared data stores as explicit components with connectors |
 | **Happy-path-only view** | Diagram shows only successful interactions; failure modes are invisible | Annotate failure paths: timeouts, retries, circuit breakers, fallbacks |
 | **Style confusion** | Mixing pub-sub and request-response without clear boundaries | Label architectural style per connector; justify mixed-style decisions |
@@ -168,4 +169,4 @@ Every component in a C&C view must declare:
 
 ## Summary
 
-Component and Connector views describe the runtime architecture: what executes, how it communicates, and what happens when communication fails. They are the primary views for performance analysis, reliability engineering, and integration planning. The architect's discipline is in choosing the right connector for each interaction, documenting interfaces as contracts, and making failure modes visible — because the runtime is where architecture meets reality.
+Component and Connector views describe the runtime architecture: what executes, how it communicates, and what happens when communication fails. They are the primary views for performance analysis, reliability engineering, and integration planning. The architect's discipline is in choosing the right connector for each interaction, documenting interfaces as contracts, and making failure modes visible, because the runtime is where architecture meets reality.

@@ -16,15 +16,15 @@ tags:
 
 # Pipeline and Lead Generation
 
-> **Core skill:** The independent maintains a living pipeline — several channels feeding qualified conversations — so selling runs as a continuous light system instead of a panic that begins the week work ends.
+> **Core skill:** The independent maintains a living pipeline (several channels feeding qualified conversations), so selling runs as a continuous light system instead of a panic that begins the week work ends.
 
 ## Why This Matters
 
-Feast and famine is the classic independent failure pattern: full attention goes to delivery, the pipeline gets nothing, the engagement ends, and revenue falls off a cliff while selling restarts from cold. The failure is structural, not personal — delivery is urgent and visible, while pipeline work is neither, so it loses every scheduling contest until it becomes the most urgent thing in the business. The fix is to treat pipeline as a standing commitment with a small, protected time budget that continues in busy weeks precisely because busy weeks are when it matters most.
+Feast and famine is the classic independent failure pattern: full attention goes to delivery, the pipeline gets nothing, the engagement ends, and revenue falls off a cliff while selling restarts from cold. The failure is structural, not personal. Delivery is urgent and visible, while pipeline work is neither, so it loses every scheduling contest until it becomes the most urgent thing in the business. The fix is to treat pipeline as a standing commitment with a small, protected time budget that continues in busy weeks precisely because busy weeks are when it matters most.
 
 Pipeline for an independent is not a sales team's dashboard. It is a handful of real relationships and a visible body of work. The goal is not hundreds of leads; it is at least three live opportunities in various stages, a rhythm of conversations, and channels that keep producing introductions without panic. Depth beats breadth: a few warm, qualified conversations convert at rates that make volume outreach unnecessary as a primary strategy.
 
-Channels differ in speed, quality, and effort. Referrals convert fastest and feel best, but they require a delivery history and an explicit ask. Content and community build slowly and compound — an article or a talk keeps working months later. Partner relationships route work that does not fit your focus. Cold outreach works as filler but costs the most attention per conversation. The independent's mix leans on compounding channels, uses outreach deliberately, and never lets the ask for referrals become a forgotten step after every good delivery.
+Channels differ in speed, quality, and effort. Referrals convert fastest and feel best, but they require a delivery history and an explicit ask. Content and community build slowly and compound. An article or a talk keeps working months later. Partner relationships route work that does not fit your focus. Cold outreach works as filler but costs the most attention per conversation. The independent's mix leans on compounding channels, uses outreach deliberately, and never lets the ask for referrals become a forgotten step after every good delivery.
 
 ## Channel Comparison
 
@@ -60,6 +60,7 @@ Channels differ in speed, quality, and effort. Referrals convert fastest and fee
 ## The Pipeline Funnel
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CHANNELS["Channels of referrals, content, community, and partners"] --> LEADS["Leads worth a conversation"]
     LEADS --> OPPORTUNITIES["Opportunities in discovery"]
@@ -83,7 +84,7 @@ The loop is the point: delivered work is the most productive channel, but only i
 ### Pipeline Board
 
 ```markdown
-## Pipeline Board — <date>
+## Pipeline Board: <date>
 
 | Opportunity | Stage | Source | Next Step | Next Date |
 |-------------|-------|--------|-----------|-----------|
@@ -115,9 +116,9 @@ The loop is the point: delivered work is the most productive channel, but only i
 
 - [[01_Selling_Technical_Work_Ethically]]
 - [[07_Personal_Brand_and_Visibility]]
-- [[04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/04_Delivery_and_Client_Management/00_overview|Delivery and Client Management]]
 - [[career-path/16_Developer_Advocate_and_Technical_Consultant/06_Community_and_Ecosystem/00_overview|Community and Ecosystem (Dev Advocate)]]
 
 ## Summary
 
-Pipeline and lead generation keep the independent business breathing: a small set of channels — referrals, content, community, partners, and deliberate outreach — feeding at least three live opportunities at all times, reviewed weekly and never paused during delivery. The pipeline is built from delivered work and honest relationships, which is why it rewards consistency far more than intensity.
+Pipeline and lead generation keep the independent business breathing: a small set of channels (referrals, content, community, partners, and deliberate outreach), feeding at least three live opportunities at all times, reviewed weekly and never paused during delivery. The pipeline is built from delivered work and honest relationships, which is why it rewards consistency far more than intensity.

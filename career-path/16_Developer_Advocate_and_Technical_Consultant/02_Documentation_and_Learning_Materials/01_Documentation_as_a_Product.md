@@ -15,15 +15,15 @@ tags:
 
 # Documentation as a Product
 
-> **Core skill:** The advocate runs documentation like a product — named users, a quality bar, a roadmap tied to releases, owners for every page, and feedback signals — instead of treating docs as an artifact produced once and left to age.
+> **Core skill:** The advocate runs documentation like a product (named users, a quality bar, a roadmap tied to releases, owners for every page, and feedback signals) instead of treating docs as an artifact produced once and left to age.
 
 ## Why This Matters
 
-For most developers, the documentation is the product's first and sometimes only experience. Before the first support ticket, the first sale, or the first community answer, there is a person in a docs site trying to get something done. When that visit succeeds, the product gains a user at zero marginal cost; when it fails, the visitor leaves without ever telling anyone why. Treating documentation as a product is simply accepting that this experience has users, quality requirements, and a cost of failure — and running it with the same discipline as any other surface of the system.
+For most developers, the documentation is the product's first and sometimes only experience. Before the first support ticket, the first sale, or the first community answer, there is a person in a docs site trying to get something done. When that visit succeeds, the product gains a user at zero marginal cost; when it fails, the visitor leaves without ever telling anyone why. Treating documentation as a product is simply accepting that this experience has users, quality requirements, and a cost of failure, and running it with the same discipline as any other surface of the system.
 
-The alternative is the documentation graveyard: a pile of pages with no owners, no review cycle, and no idea who they serve. In that state, docs decay silently — screenshots age, examples rot, the quickstart fails on a fresh machine — and each rot point teaches arriving users that nothing here is trustworthy. Docs debt accrues like technical debt, with the difference that its interest is paid by every user in confusion rather than by a few engineers in patches. The advocate's job is to make the debt visible and then retire it in the order the users hurt most.
+The alternative is the documentation graveyard: a pile of pages with no owners, no review cycle, and no idea who they serve. In that state, docs decay silently (screenshots age, examples rot, the quickstart fails on a fresh machine) and each rot point teaches arriving users that nothing here is trustworthy. Docs debt accrues like technical debt, with the difference that its interest is paid by every user in confusion rather than by a few engineers in patches. The advocate's job is to make the debt visible and then retire it in the order the users hurt most.
 
-Running docs as a product also reframes who writes them. In healthy organizations, engineers contribute — the docs are part of the definition of done for a feature — while the advocate owns the system: structure, quality bar, review process, and the feedback loops that keep the content honest. That split is the difference between documentation that ships with the release and documentation that is written by whoever loses the argument about hiring a writer.
+Running docs as a product also reframes who writes them. In healthy organizations, engineers contribute (the docs are part of the definition of done for a feature) while the advocate owns the system: structure, quality bar, review process, and the feedback loops that keep the content honest. That split is the difference between documentation that ships with the release and documentation that is written by whoever loses the argument about hiring a writer.
 
 ## The Documentation Product Model
 
@@ -65,6 +65,7 @@ Retirement is the stage most teams skip and the one that most improves trust: a 
 ## The Docs Product Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     USERS["Name the users and their jobs"] --> JOURNEY["Map the first hour and the first failure"]
     JOURNEY["Map the first hour and the first failure"] --> ROADMAP["Plan docs alongside the product roadmap"]
@@ -117,7 +118,7 @@ The loop closes through measurement: support load and search behavior are the pr
 - Support volume on documented topics declines release over release
 - Engineers bring docs changes with feature PRs as a norm
 - Search and journey tests show users reaching answers on the first attempt
-- The docs set stays roughly the same size while getting more true — writing and retiring balance
+- The docs set stays roughly the same size while getting more true: writing and retiring balance
 
 ## Related Topics
 
@@ -128,4 +129,4 @@ The loop closes through measurement: support load and search behavior are the pr
 
 ## Summary
 
-Documentation as a product means giving docs what every product has: named users and journeys, a quality bar, a roadmap tied to releases, owners for every page, and feedback loops that convert support pain into backlog entries. The advocate who runs docs this way turns the most scalable surface of the organization — the pages that answer questions at three in the morning — into an asset that compounds, while a graveyard of orphan pages only compounds its cost.
+Documentation as a product means giving docs what every product has: named users and journeys, a quality bar, a roadmap tied to releases, owners for every page, and feedback loops that convert support pain into backlog entries. The advocate who runs docs this way turns the most scalable surface of the organization (the pages that answer questions at three in the morning) into an asset that compounds, while a graveyard of orphan pages only compounds its cost.

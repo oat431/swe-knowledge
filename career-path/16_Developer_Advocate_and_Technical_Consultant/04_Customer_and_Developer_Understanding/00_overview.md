@@ -15,13 +15,13 @@ tags:
 
 # Customer and Developer Understanding
 
-> **Core capability:** The advocate and consultant find the real needs, constraints, and obstacles of developers and customers through interaction — building the empathy that makes guidance accurate instead of generic.
+> **Core capability:** The advocate and consultant find the real needs, constraints, and obstacles of developers and customers through interaction, building the empathy that makes guidance accurate instead of generic.
 
 ## Why This Matters
 
 Advocates who guess at developer needs produce content nobody reads. Consultants who assume customer requirements design solutions for the wrong problem. The foundation of both roles is disciplined understanding: what developers are actually trying to do, where they get stuck, what constraints they operate under, and what would make them succeed.
 
-This is research with a technical lens: interviews that uncover workflows, support-ticket archaeology that reveals real friction, and adoption analysis that shows where users drop off. The advocate's advantage is lived proximity to the ecosystem — but only if it is channeled through method rather than anecdote.
+This is research with a technical lens: interviews that uncover workflows, support-ticket archaeology that reveals real friction, and adoption analysis that shows where users drop off. The advocate's advantage is lived proximity to the ecosystem, but only if it is channeled through method rather than anecdote.
 
 ## Topics in This Capability Area
 
@@ -38,6 +38,7 @@ This is research with a technical lens: interviews that uncover workflows, suppo
 ## From Signal to Understanding
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     TICKETS["Support tickets and forum posts"] --> PATTERNS["Patterns: recurring friction"]
     INTERVIEWS["Developer interviews"] --> PATTERNS
@@ -46,7 +47,7 @@ flowchart LR
     INSIGHT --> ACTION["Action: docs, fixes, content, guidance"]
 ```
 
-Signals are everywhere — the craft is turning them into insight that changes what gets built and written.
+Signals are everywhere. The craft is turning them into insight that changes what gets built and written.
 
 ## Practical Applications
 
@@ -72,15 +73,15 @@ Signals are everywhere — the craft is turning them into insight that changes w
 - Content and guidance cite real evidence from research, not assumptions
 - Product and docs teams request the advocate's synthesis before planning
 - Adoption friction decreases where research was acted on
-- Developers say "you understood my problem" — the ultimate measure
+- Developers say "you understood my problem": the ultimate measure
 
 ## Related Capabilities
 
-- [[03_Facilitation_and_Enablement/00_overview|Facilitation and Enablement]]: discovery sessions operationalize this understanding
-- [[07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]]: insights flow into product here
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/03_Facilitation_and_Enablement/00_overview|Facilitation and Enablement]]: discovery sessions operationalize this understanding
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]]: insights flow into product here
 - [[career-path/14_Product_Manager/01_Problem_Discovery/00_overview|Problem Discovery (PM)]]: the product-side discovery discipline
 - [[career-path/15_Solutions_and_Enterprise_Architect/01_Business_Analysis_and_Capability_Mapping/00_overview|Business Analysis and Capability Mapping (Solutions Architect)]]: enterprise context analysis
 
 ## Summary
 
-Customer and developer understanding is disciplined empathy: interviewing for signal, observing real usage, mining support archaeology, segmenting audiences, and turning it all into insight that changes what gets built and written. Advocates who understand deeply need to persuade less — the right solution is obvious once the real problem is visible.
+Customer and developer understanding is disciplined empathy: interviewing for signal, observing real usage, mining support archaeology, segmenting audiences, and turning it all into insight that changes what gets built and written. Advocates who understand deeply need to persuade less. The right solution is obvious once the real problem is visible.

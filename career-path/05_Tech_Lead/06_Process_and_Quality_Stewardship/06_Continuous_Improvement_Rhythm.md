@@ -16,11 +16,11 @@ tags:
 
 # Continuous Improvement Rhythm
 
-> **Core skill:** Running retrospectives that actually change things — with disciplined action items, visible follow-through, and an improvement backlog that gets worked.
+> **Core skill:** Running retrospectives that actually change things, with disciplined action items, visible follow-through, and an improvement backlog that gets worked.
 
 ## Why This Matters
 
-Every team claims to improve; few actually do. The difference is not intention — it is rhythm. A retrospective is not a meeting where problems are named; it is a loop in which problems become actions, actions become done work, and done work becomes measurable change. When the loop breaks, the meeting becomes what everyone secretly knows it is: a place where the same complaints are aired every two weeks and nothing moves.
+Every team claims to improve; few actually do. The difference is not intention; it is rhythm. A retrospective is not a meeting where problems are named; it is a loop in which problems become actions, actions become done work, and done work becomes measurable change. When the loop breaks, the meeting becomes what everyone secretly knows it is: a place where the same complaints are aired every two weeks and nothing moves.
 
 The tech lead runs that loop: choosing the right format for the moment, forcing action-item discipline, tracking items to closure, escalating recurring issues before they calcify into culture, and watching for retro fatigue in the team itself. This note covers formats and their fit, the discipline that makes actions stick, escalation of recurring patterns, measurement, and treatment for the most common retro disease.
 
@@ -40,6 +40,7 @@ The format is a tool, not a tradition. The lead picks the tool that matches the 
 ## The Retro Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A["Gather data"] --> B["Discuss honestly"]
     B --> C["Pick few actions"]
@@ -56,7 +57,7 @@ The single highest-leverage retro practice is ruthless action discipline. Most r
 | Rule | Why |
 |------|-----|
 | **Few** | Three or fewer actions per retro; the team can actually do them |
-| **Owned** | Every action has a named owner — not "the team" |
+| **Owned** | Every action has a named owner, not "the team" |
 | **Deadlined** | Every action has a date; undated actions do not exist |
 | **Visible** | Actions live on a board or tracker everyone sees, not in the notes |
 | **Started immediately** | First step happens within a week, or the action is renegotiated |
@@ -67,14 +68,14 @@ The single highest-leverage retro practice is ruthless action discipline. Most r
 | Mechanism | Practice |
 |-----------|----------|
 | **Improvement board** | A persistent column for retro actions, separate from feature work |
-| **Retro opener** | Every retro starts with the previous actions: done, pending, killed — with reasons |
+| **Retro opener** | Every retro starts with the previous actions: done, pending, killed, with reasons |
 | **Sprint inclusion** | Owners pull their action into the sprint so it is real work with capacity |
 | **Personal reminder** | The lead checks in with owners between retros, not at the retro |
 | **Definition of closure** | An action is closed when its effect is verified, not when the ticket is ticked |
 
 ## Recurring Issue Escalation
 
-The same topic appearing in three consecutive retros is not bad luck — it is a systemic problem the team's normal process cannot fix.
+The same topic appearing in three consecutive retros is not bad luck; it is a systemic problem the team's normal process cannot fix.
 
 | Signal | Interpretation | Escalation |
 |--------|----------------|------------|
@@ -83,7 +84,7 @@ The same topic appearing in three consecutive retros is not bad luck — it is a
 | Actions for the issue never close | The fix is too big for the action format | Break it into a funded improvement initiative |
 | The issue appears only after incidents | Learning is reactive, not continuous | Add a standing review so the pattern is caught earlier |
 
-The escalation rule: **a recurring issue graduates from an action item to an initiative** — with a small scope, a named owner, a deadline, and the authority to change the system.
+The escalation rule: **a recurring issue graduates from an action item to an initiative**, with a small scope, a named owner, a deadline, and the authority to change the system.
 
 ## The Improvement Backlog
 
@@ -92,7 +93,7 @@ Continuous improvement is work, and work needs a backlog. The improvement backlo
 - Ideas enter with one sentence of context and the problem they solve
 - Items are sized in effort, not story points
 - The lead protects a small slice of capacity for improvement work each cycle
-- Nothing sits in the backlog for more than a quarter — it is picked up, merged into another initiative, or killed
+- Nothing sits in the backlog for more than a quarter: it is picked up, merged into another initiative, or killed
 - The backlog is reviewed at every retro so it stays honest
 
 ## Measuring Improvement
@@ -109,7 +110,7 @@ Continuous improvement is work, and work needs a backlog. The improvement backlo
 
 | Symptom | Cause | Treatment |
 |---------|-------|-----------|
-| Silence; the same people talk | The retro feels pointless because nothing changes | Fix action follow-through first — that is the root cause |
+| Silence; the same people talk | The retro feels pointless because nothing changes | Fix action follow-through first: that is the root cause |
 | Everything is fine, every time | The team is coasting or afraid | Change format; add a data review; lower the stakes of honesty |
 | Complaints without specifics | Discussion is vibes, not evidence | Bring data: cycle times, incidents, review backlogs |
 | Actions are jokes or busywork | The team has given up on real change | Cut the actions to one real one; rebuild credibility |
@@ -121,7 +122,7 @@ When fatigue is systemic, the boldest treatment is to cancel the retro for a cyc
 
 **Run a retro that changes things:**
 
-- [ ] Open with last retro's actions: done, pending, killed — with reasons
+- [ ] Open with last retro's actions: done, pending, killed, with reasons
 - [ ] Bring one piece of data: a metric, a timeline, an incident count
 - [ ] Choose the format for this period, and say why you chose it
 - [ ] Capture everything, then vote: the team picks the top three problems
@@ -133,12 +134,12 @@ When fatigue is systemic, the boldest treatment is to cancel the retro for a cyc
 ```markdown
 # Retro Action Item
 
-- **Problem:** [one sentence — the symptom the team agreed on]
-- **Action:** [what will change — concrete, observable]
+- **Problem:** [one sentence, the symptom the team agreed on]
+- **Action:** [what will change, concrete, observable]
 - **Owner:** [one person]
 - **Deadline:** [date]
 - **First step:** [the smallest thing that starts it, done within a week]
-- **Verification:** [how we will know it worked — the signal we check at the next retro]
+- **Verification:** [how we will know it worked: the signal we check at the next retro]
 - **Status:** [open / in progress / closed / killed]
 ```
 
@@ -160,16 +161,16 @@ When fatigue is systemic, the boldest treatment is to cancel the retro for a cyc
 - Retro energy is visible: full attendance, real disagreement, new ideas
 - Improvement work ships alongside feature work, not instead of it
 - The team can name the last three things that changed because of a retro
-- Retros surface new problems — proof the old ones actually got fixed
+- Retros surface new problems, proof the old ones actually got fixed
 
 ## Related Topics
 
-- [[01_Team_Workflow_Design]] — the workflow is the main thing retros tune
-- [[07_Scaling_Process_with_Team_Growth]] — improvement must adapt as the team grows
-- [[02_Definition_of_Done_and_Working_Agreements]] — renegotiation happens in the retro rhythm
-- [[04_Team_Delivery_and_Execution_Leadership/00_overview|Delivery and Execution Leadership]] — improvement actions are delivery work
-- [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]] — the role that scales this rhythm beyond one team
+- [[01_Team_Workflow_Design]]: the workflow is the main thing retros tune
+- [[07_Scaling_Process_with_Team_Growth]]: improvement must adapt as the team grows
+- [[02_Definition_of_Done_and_Working_Agreements]]: renegotiation happens in the retro rhythm
+- [[career-path/05_Tech_Lead/04_Team_Delivery_and_Execution_Leadership/00_overview|Delivery and Execution Leadership]]: improvement actions are delivery work
+- [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]: the role that scales this rhythm beyond one team
 
 ## Summary
 
-Continuous improvement is a loop, not a meeting: honest discussion grounded in data, ruthlessly few action items with owners and deadlines, visible tracking to closure, and escalation of recurring issues into real initiatives. The tech lead keeps the loop turning — because a team that can reliably change its own way of working compounds, while a team with retro fatigue repeats its history on a two-week cycle.
+Continuous improvement is a loop, not a meeting: honest discussion grounded in data, ruthlessly few action items with owners and deadlines, visible tracking to closure, and escalation of recurring issues into real initiatives. The tech lead keeps the loop turning, because a team that can reliably change its own way of working compounds, while a team with retro fatigue repeats its history on a two-week cycle.

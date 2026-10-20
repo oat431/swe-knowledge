@@ -15,13 +15,13 @@ tags:
 
 # Transformation Roadmaps and Portfolio
 
-> **Core capability:** The architect defines the transition from current state to target state — sequenced roadmaps, portfolio rationalization, investment choices, and migration strategies that make transformation survivable.
+> **Core capability:** The architect defines the transition from current state to target state: sequenced roadmaps, portfolio rationalization, investment choices, and migration strategies that make transformation survivable.
 
 ## Why This Matters
 
-A target architecture without a transition roadmap is a wish. The enterprise architect's most valuable artifact is the path: what changes first, what can wait, what the dependencies are, how coexistence is managed, and what each step costs and delivers. Transformation fails on sequencing more often than on design — the target was right, the path was naive.
+A target architecture without a transition roadmap is a wish. The enterprise architect's most valuable artifact is the path: what changes first, what can wait, what the dependencies are, how coexistence is managed, and what each step costs and delivers. Transformation fails on sequencing more often than on design. The target was right, the path was naive.
 
-This area connects architecture to delivery reality: portfolios that must be rationalized, systems that must coexist during migration, investments that must be justified, and benefits that must be tracked. The architect works with the TPM and PjM colleague paths here — designing the destination and the route, while delivery disciplines drive the journey.
+This area connects architecture to delivery reality: portfolios that must be rationalized, systems that must coexist during migration, investments that must be justified, and benefits that must be tracked. The architect works with the TPM and PjM colleague paths here, designing the destination and the route, while delivery disciplines drive the journey.
 
 ## Topics in This Capability Area
 
@@ -38,6 +38,7 @@ This area connects architecture to delivery reality: portfolios that must be rat
 ## The Transition Path
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CURRENT["Current state"] --> TRANSITION1["Transition architecture 1"]
     TRANSITION1 --> TRANSITION2["Transition architecture 2"]
@@ -45,7 +46,7 @@ flowchart LR
     TARGET --> BENEFITS["Benefits realized"]
 ```
 
-Each transition state must be viable — a checkpoint, not just a phase.
+Each transition state must be viable: a checkpoint, not just a phase.
 
 ## Practical Applications
 
@@ -76,8 +77,8 @@ Each transition state must be viable — a checkpoint, not just a phase.
 
 ## Related Capabilities
 
-- [[03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: roadmaps transition to the target state
-- [[05_Security_Risk_and_Compliance/00_overview|Security Risk and Compliance]]: security debt in transformation scope
+- [[career-path/15_Solutions_and_Enterprise_Architect/03_Enterprise_Architecture_Practice/00_overview|Enterprise Architecture Practice]]: roadmaps transition to the target state
+- [[career-path/15_Solutions_and_Enterprise_Architect/05_Security_Risk_and_Compliance/00_overview|Security Risk and Compliance]]: security debt in transformation scope
 - [[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]: the program delivery discipline
 - [[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]]: formal project execution of roadmap items
 

@@ -17,15 +17,15 @@ tags:
 
 # Scope Change and Commercially Aware Delivery
 
-> **Core skill:** Handling change requests with commercial clarity — protecting margin and relationship together while keeping delivery honest.
+> **Core skill:** Handling change requests with commercial clarity: protecting margin and relationship together while keeping delivery honest.
 
 ## Why This Matters
 
 Change is not an anomaly in technical engagements; it is the normal weather. Clients learn what they want by seeing what they get, priorities move, environments shift, and the best requirements arrive mid-demo. An independent who treats every change as an imposition lives in constant conflict; one who absorbs every change to be agreeable watches margin dissolve silently. The professional posture is a third path: treat change as a process, run it warmly, and price it exactly.
 
-The commercial heart of delivery is a simple awareness: every day of work has a cost, and unlogged favors are discounts. The first small favor feels generous; by the tenth, the relationship has a subtle imbalance — the client believes responsiveness is included, the independent resents the growing gap, and nobody said anything at the point where saying something was easy. Change discipline is how both sides stay honest, and the clients who appreciate it most are the ones who have been burned by vendors who hid the same arithmetic until the invoice.
+The commercial heart of delivery is a simple awareness: every day of work has a cost, and unlogged favors are discounts. The first small favor feels generous; by the tenth, the relationship has a subtle imbalance. The client believes responsiveness is included, the independent resents the growing gap, and nobody said anything at the point where saying something was easy. Change discipline is how both sides stay honest, and the clients who appreciate it most are the ones who have been burned by vendors who hid the same arithmetic until the invoice.
 
-Handled well, change requests are also an opportunity. They are where extra margin, deeper engagement, and the client's discovery of your value beyond the original scope all happen. The skill is making the process habitual from day one: classify, estimate, present options, get written approval, update the plan — a sequence short enough to run without drama and firm enough to protect the year.
+Handled well, change requests are also an opportunity. They are where extra margin, deeper engagement, and the client's discovery of your value beyond the original scope all happen. The skill is making the process habitual from day one: classify, estimate, present options, get written approval, update the plan: a sequence short enough to run without drama and firm enough to protect the year.
 
 ## Classify Before You Respond
 
@@ -55,7 +55,7 @@ Every addition displaces something: time, money, or scope. Present the three dia
 
 | Client Says | Your Response Frame |
 |-------------|---------------------|
-| "Can we also add this small thing?" | "Yes — it is about two days. Add to the end, swap for part of milestone three, or hold for phase two?" |
+| "Can we also add this small thing?" | "Yes, it is about two days. Add to the end, swap for part of milestone three, or hold for phase two?" |
 | "The demo suggested more, make it like this" | "That is a valid direction. Here is the impact; want to trade it against the current priority?" |
 | "Budget is fixed but priorities changed" | "Same budget, then: what comes out to let this in?" |
 | "Just a quick change, surely" | "Everything is quick to ask and real to build. This one is roughly a day; where should it go?" |
@@ -71,6 +71,7 @@ Every addition displaces something: time, money, or scope. Present the three dia
 | Every tiny impact assessment done free | Analysis given away | A threshold below which a small standard fee applies |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     REQUEST["Change request arrives"] --> CLASSIFY["Classify as defect, misunderstanding, or change"]
     CLASSIFY --> IMPACT["Assess hours, cost, and schedule impact"]
@@ -128,5 +129,5 @@ flowchart LR
 
 ## Summary
 
-Scope change is normal weather, and the response is a warm, habitual process: classify each request, assess the real impact, present options — add, defer, swap, decline — and get written approval before work continues. Every unlogged favor is an invisible discount; every logged change is a chance to demonstrate value. Keep the change register visible, watch contingency burn, and let margin survive with the relationship intact.
+Scope change is normal weather, and the response is a warm, habitual process: classify each request, assess the real impact, present options (add, defer, swap, decline), and get written approval before work continues. Every unlogged favor is an invisible discount; every logged change is a chance to demonstrate value. Keep the change register visible, watch contingency burn, and let margin survive with the relationship intact.
 

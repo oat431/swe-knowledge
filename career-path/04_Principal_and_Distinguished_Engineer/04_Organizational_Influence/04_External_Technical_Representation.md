@@ -16,13 +16,13 @@ tags:
 
 # External Technical Representation
 
-> **Core skill:** The principal represents the organization in standards bodies, industry consortia, and open-source foundations — choosing which bodies matter to the organization's strategy and exercising influence without formal authority in external forums.
+> **Core skill:** The principal represents the organization in standards bodies, industry consortia, and open-source foundations, choosing which bodies matter to the organization's strategy and exercising influence without formal authority in external forums.
 
 ## Why This Matters
 
-At principal level, the organization's technical interests extend beyond its walls. Industry standards will be written with or without the organization's participation — and standards written without the organization often work against its interests. Open-source ecosystems will evolve in directions that help or hurt the organization's technology bets. Industry consortia will define the technical landscape the organization must operate in. The principal is the person who ensures the organization has a voice in these forums.
+At principal level, the organization's technical interests extend beyond its walls. Industry standards will be written with or without the organization's participation, and standards written without the organization often work against its interests. Open-source ecosystems will evolve in directions that help or hurt the organization's technology bets. Industry consortia will define the technical landscape the organization must operate in. The principal is the person who ensures the organization has a voice in these forums.
 
-External representation is not ego or travel — it is strategic positioning. The standard that includes the organization's use case costs nothing to adopt; the standard that ignores it costs years of workaround. The open-source project that accepts the organization's patches becomes a force multiplier; the fork the organization must maintain because its contributions were rejected becomes a cost center. The principal chooses which external forums matter, represents the organization in them, and exercises influence without formal authority — because in external forums, nobody reports to you.
+External representation is not ego or travel. It is strategic positioning. The standard that includes the organization's use case costs nothing to adopt; the standard that ignores it costs years of workaround. The open-source project that accepts the organization's patches becomes a force multiplier; the fork the organization must maintain because its contributions were rejected becomes a cost center. The principal chooses which external forums matter, represents the organization in them, and exercises influence without formal authority, because in external forums, nobody reports to you.
 
 ## Choosing Which Bodies Matter
 
@@ -47,7 +47,7 @@ Not every standards body, consortium, or foundation deserves the principal's tim
 
 ## The Representation Strategy
 
-External representation is not attendance — it is a strategy with defined objectives, positions, and success measures.
+External representation is not attendance. It is a strategy with defined objectives, positions, and success measures.
 
 ### Representation Strategy Template
 
@@ -83,7 +83,7 @@ External representation is not attendance — it is a strategy with defined obje
 
 ## Influence Without Formal Authority
 
-In external forums, the principal has no organizational authority — no one reports to them. Influence must be earned through a different currency.
+In external forums, the principal has no organizational authority. No one reports to them. Influence must be earned through a different currency.
 
 | Influence Currency | How It Works | How to Build It |
 |-------------------|-------------|-----------------|
@@ -91,11 +91,11 @@ In external forums, the principal has no organizational authority — no one rep
 | **Coalition building** | The principal builds alliances with representatives from other organizations who share interests | Identify shared interests before meetings; pre-align on proposals; support others' proposals to earn reciprocity |
 | **Consistent participation** | The principal shows up, prepared, every time; reliability builds trust | Attend consistently; deliver on commitments; do not be the representative who only appears for the vote that matters to them |
 | **Written contribution** | The principal writes proposals, specifications, and position papers that advance the forum's work | Write more than you speak; a well-written proposal influences more than a well-delivered speech |
-| **Service in governance** | The principal serves in working group chairs, technical committees, or board roles | Volunteer for the work nobody wants — editing specifications, managing issue trackers, running elections |
+| **Service in governance** | The principal serves in working group chairs, technical committees, or board roles | Volunteer for the work nobody wants: editing specifications, managing issue trackers, running elections |
 
 ## Internal Coordination for External Representation
 
-The principal does not represent personal opinion in external forums — they represent the organization's considered position. That position must be developed with internal stakeholders before it is advocated externally.
+The principal does not represent personal opinion in external forums. They represent the organization's considered position. That position must be developed with internal stakeholders before it is advocated externally.
 
 | Coordination Step | Activity | Timing |
 |------------------|----------|--------|
@@ -107,7 +107,7 @@ The principal does not represent personal opinion in external forums — they re
 
 ## The Pipeline: Developing Other External Voices
 
-The principal should not be the organization's only external representative. A single voice is a single point of failure — and a bottleneck on the organization's external influence. The principal develops a pipeline of other external representatives.
+The principal should not be the organization's only external representative. A single voice is a single point of failure, and a bottleneck on the organization's external influence. The principal develops a pipeline of other external representatives.
 
 | Pipeline Stage | Activity | Duration |
 |---------------|----------|----------|
@@ -149,11 +149,11 @@ The principal should not be the organization's only external representative. A s
 ## Related Topics
 
 - [[07_Public_Technical_Voice]]: the conference and thought leadership dimension of external presence
-- [[01_Technology_Strategy/00_overview|Technology Strategy]]: the strategy external representation serves
+- [[career-path/04_Principal_and_Distinguished_Engineer/01_Technology_Strategy/00_overview|Technology Strategy]]: the strategy external representation serves
 - [[05_Cross_Functional_Coalitions]]: coalition building, extended to external partners
 - [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/00_overview|Influence and Alignment (Staff)]]: the influence foundation this scales to external forums
 - [[career-path/06_Software_Architect/04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs (Architect)]]: the evaluation skills for standards assessment
 
 ## Summary
 
-External technical representation is the principal's mechanism for extending the organization's influence beyond its walls — into standards bodies, industry consortia, and open-source foundations whose decisions shape the technical landscape the organization's strategy depends on. The principal chooses forums strategically, represents the organization's considered position (not personal opinion), builds influence through technical credibility and coalition rather than authority, coordinates internally before advocating externally, and develops a pipeline of other external voices so the organization's influence is not a single point of failure.
+External technical representation is the principal's mechanism for extending the organization's influence beyond its walls, into standards bodies, industry consortia, and open-source foundations whose decisions shape the technical landscape the organization's strategy depends on. The principal chooses forums strategically, represents the organization's considered position (not personal opinion), builds influence through technical credibility and coalition rather than authority, coordinates internally before advocating externally, and develops a pipeline of other external voices so the organization's influence is not a single point of failure.

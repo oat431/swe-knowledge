@@ -16,15 +16,15 @@ tags:
 
 # From Insight to Offer Hypothesis
 
-> **Core skill:** Converting discovery patterns into a testable offer hypothesis — who pays, for what outcome, at what price — with a cheap test and a kill criterion attached.
+> **Core skill:** Converting discovery patterns into a testable offer hypothesis (who pays, for what outcome, at what price) with a cheap test and a kill criterion attached.
 
 ## Why This Matters
 
 Insights do not sell; offers do. The bridge between them is a hypothesis specific enough to be proved wrong. "Small businesses struggle with data" is a direction, not a hypothesis: it cannot be priced, sold, or killed. The independent who converts observations into sharp, testable claims escapes the fog where interesting conversations replace income.
 
-A testable hypothesis has anatomy: a named buyer, a trigger event, a promised outcome, a price expectation, and a vehicle — audit, project, pilot, or product. Attached to it are two more parts most independents omit: the cheapest test that could fail, and the kill criterion that decides when it has. Those two parts are what make the hypothesis an instrument rather than a wish.
+A testable hypothesis has anatomy: a named buyer, a trigger event, a promised outcome, a price expectation, and a vehicle (audit, project, pilot, or product). Attached to it are two more parts most independents omit: the cheapest test that could fail, and the kill criterion that decides when it has. Those two parts are what make the hypothesis an instrument rather than a wish.
 
-The working loop is short: pattern, hypothesis, test, decision. Early on, several hypothesis cards run in parallel at low cost; as evidence accumulates, the portfolio narrows and the survivor gets the build. The discipline is identical to product discovery, applied to an offer — and it continues after launch, because offers drift out of fit as markets move.
+The working loop is short: pattern, hypothesis, test, decision. Early on, several hypothesis cards run in parallel at low cost; as evidence accumulates, the portfolio narrows and the survivor gets the build. The discipline is identical to product discovery, applied to an offer, and it continues after launch, because offers drift out of fit as markets move.
 
 ## Anatomy of a Testable Hypothesis
 
@@ -38,7 +38,7 @@ The working loop is short: pattern, hypothesis, test, decision. Early on, severa
 | Test | What is the cheapest way to verify? | Three paid assessments sold within six weeks |
 | Kill criterion | What result ends this line of thinking? | No paid assessment after twenty conversations |
 
-Fill every row or the hypothesis is not yet testable — it is still a mood.
+Fill every row or the hypothesis is not yet testable. It is still a mood.
 
 ## From Observation to Hypothesis
 
@@ -65,6 +65,7 @@ Choose the cheapest test that could still fail. A test that cannot fail is marke
 ## The Hypothesis Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     INSIGHT["Discovery insights"] --> PATTERN["Repeating pattern"]
     PATTERN --> HYPOTHESIS["Offer hypothesis"]
@@ -82,13 +83,13 @@ Each turn of the loop costs less than a month and produces a decision. Proceedin
 - [ ] A price expectation is stated, even roughly, before testing
 - [ ] The test is the cheapest one that could genuinely fail
 - [ ] Kill criteria and a decision date are written in advance
-- [ ] Evidence from the test is payment, commitment, or behavior — not opinion
+- [ ] Evidence from the test is payment, commitment, or behavior, not opinion
 - [ ] At most two or three hypotheses run in parallel
 
 ### Offer Hypothesis Card
 
 ```markdown
-## Offer Hypothesis — <short name>
+## Offer Hypothesis: <short name>
 
 | Field | Entry |
 |-------|-------|
@@ -125,9 +126,9 @@ Each turn of the loop costs less than a month and produces a decision. Proceedin
 
 - [[02_Validating_Willingness_to_Pay]]
 - [[05_Problem_Interviews_Without_Pitching]]
-- [[02_Product_and_Service_Design/00_overview|Product and Service Design]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/02_Product_and_Service_Design/00_overview|Product and Service Design]]
 - [[career-path/14_Product_Manager/01_Problem_Discovery/00_overview|Problem Discovery (PM)]]
 
 ## Summary
 
-From insight to offer hypothesis is the compression step that turns a pile of discovery notes into a commercial bet worth testing: name the buyer and trigger, promise a measurable outcome, attach a price and a vehicle, and specify the cheapest test that can fail along with the kill criterion. Run the loop cheaply and often, and the offer that survives is one the market — not the founder — selected.
+From insight to offer hypothesis is the compression step that turns a pile of discovery notes into a commercial bet worth testing: name the buyer and trigger, promise a measurable outcome, attach a price and a vehicle, and specify the cheapest test that can fail along with the kill criterion. Run the loop cheaply and often, and the offer that survives is one the market (not the founder) selected.

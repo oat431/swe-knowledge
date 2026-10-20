@@ -16,13 +16,13 @@ tags:
 
 # Advocacy Metrics and Reporting
 
-> **Core skill:** Measuring advocacy by the outcomes it moves — adoption, activation, retention, insight adopted — and reporting activity without mistaking it for impact.
+> **Core skill:** Measuring advocacy by the outcomes it moves (adoption, activation, retention, insight adopted) and reporting activity without mistaking it for impact.
 
 ## Why This Matters
 
-Advocacy suffers from a measurement problem that is almost structural: its most visible outputs — talks given, posts published, events attended — are activities, while its most valuable results — a developer who succeeded, a signal adopted, a renewal influenced — are outcomes that happen elsewhere and later. Reporting activity is easy and tempting; it is also the reason advocacy budgets get cut. Nobody funds a calendar; organizations fund changed numbers.
+Advocacy suffers from a measurement problem that is almost structural: its most visible outputs (talks given, posts published, events attended) are activities, while its most valuable results (a developer who succeeded, a signal adopted, a renewal influenced) are outcomes that happen elsewhere and later. Reporting activity is easy and tempting; it is also the reason advocacy budgets get cut. Nobody funds a calendar; organizations fund changed numbers.
 
-The mature reporting posture separates the two honestly. Activity data is context — evidence of a functioning program — but the argument for the role rests on outcomes: measured improvements in activation, time-to-first-success, retention, support deflection, or product decisions that cite field evidence. Some of those outcomes require partnerships to measure — product analytics, CRM, support systems — and getting those partnerships is part of the reporting craft.
+The mature reporting posture separates the two honestly. Activity data is context (evidence of a functioning program), but the argument for the role rests on outcomes: measured improvements in activation, time-to-first-success, retention, support deflection, or product decisions that cite field evidence. Some of those outcomes require partnerships to measure (product analytics, CRM, support systems), and getting those partnerships is part of the reporting craft.
 
 There is also a defensive dimension. Because advocacy outcomes are diffuse, a role without a credible narrative is vulnerable in exactly the quarters when it most needs protection. The advocate who can say, with numbers and named evidence, "here is what changed because this team exists" survives planning cycles that quietly delete roles whose reporting was a list of events attended.
 
@@ -77,6 +77,7 @@ The pattern: state the observation, state the association, state the limits. Pre
 ## The Reporting Cycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     INSTRUMENT["Instrument - agree metrics and data access"] --> COLLECT["Collect - outcome data from partners"]
     COLLECT --> ATTRIBUTE["Attribute - honest framing with limits"]
@@ -94,31 +95,31 @@ flowchart LR
 - [ ] Attribution language distinguishes association from causation
 - [ ] At least one product or support partnership supplies outcome data
 - [ ] The community sees a version of the reporting that concerns it
-- [ ] Metrics drive adjustments each cycle — programs funded, fixed, or refocused
+- [ ] Metrics drive adjustments each cycle: programs funded, fixed, or refocused
 - [ ] At least one counter-metric guards against gaming
 
 ### Quarterly Advocacy Report Template
 
 ```markdown
-## Advocacy Impact — [quarter]
+## Advocacy Impact: [quarter]
 ## Outcomes
-- Activation from community cohorts: [n, trend] — source: [x]
-- Time to first success: [metric, trend] — source: [x]
-- Support deflection on covered topics: [n or percent] — source: [x]
+- Activation from community cohorts: [n, trend]; source: [x]
+- Time to first success: [metric, trend]; source: [x]
+- Support deflection on covered topics: [n or percent]; source: [x]
 - Insights adopted by product: [n, with decision links]
 
 ## Activity (Supporting)
-- Talks and events: [n, highlights] — attendance: [n]
-- Content published: [n] — read-through: [metric]
+- Talks and events: [n, highlights]; attendance: [n]
+- Content published: [n]; read-through: [metric]
 - Office hours and community sessions: [n]
 
 ## Attribution Notes
 - [claims with limits stated]
 
 ## Adjustments
-- Fund: [x] — because [evidence]
-- Fix: [x] — because [evidence]
-- Refocus: [x] — because [evidence]
+- Fund: [x], because [evidence]
+- Fix: [x], because [evidence]
+- Refocus: [x], because [evidence]
 ```
 
 ## Common Pitfalls
@@ -126,7 +127,7 @@ flowchart LR
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
 | **Activity as impact** | Calendars of events do not defend budgets | Outcome-first reporting with activity as context |
-| **Attribution inflation** | "Caused" claims collapse under scrutiny | Observation, association, limits — every time |
+| **Attribution inflation** | "Caused" claims collapse under scrutiny | Observation, association, limits. Every time |
 | **Single-source vanity** | One flattering metric hides a flat reality | Multiple outcome metrics with counter-metrics |
 | **Community-blind reporting** | Members discover they are measured but never shown | Publish the community-relevant version |
 | **Report without action** | Numbers arrive; nothing changes | End each cycle with funded, fixed, or refocused programs |
@@ -150,4 +151,4 @@ flowchart LR
 
 ## Summary
 
-Advocacy metrics and reporting turn a diffuse role into an accountable one: instrument outcomes with data partners, lead every report with what moved rather than what happened, attribute with stated limits, publish to the audience that needs it, and end each cycle with programs funded, fixed, or refocused. The advocate who reports this way does not merely survive budget seasons — they make the case that the field's voice, measured honestly, is one of the organization's compounding assets.
+Advocacy metrics and reporting turn a diffuse role into an accountable one: instrument outcomes with data partners, lead every report with what moved rather than what happened, attribute with stated limits, publish to the audience that needs it, and end each cycle with programs funded, fixed, or refocused. The advocate who reports this way does not merely survive budget seasons; they make the case that the field's voice, measured honestly, is one of the organization's compounding assets.

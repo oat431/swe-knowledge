@@ -16,13 +16,13 @@ tags:
 
 # Multi-Year Technology Roadmapping
 
-> **Core skill:** The principal engineer builds roadmaps that span beyond the annual cycle — sequencing major technology bets across 3-5 years, designing platform modernization arcs, and creating roadmaps that survive leadership changes by distinguishing commitment from direction.
+> **Core skill:** The principal engineer builds roadmaps that span beyond the annual cycle, sequencing major technology bets across 3-5 years, designing platform modernization arcs, and creating roadmaps that survive leadership changes by distinguishing commitment from direction.
 
 ## Why This Matters
 
-Annual planning cycles produce annual roadmaps. But the decisions that determine an organization's technology trajectory — platform selection, architecture modernization, capability build-out — unfold over years, not quarters. A roadmap confined to an annual horizon optimizes for the next twelve months at the expense of the next five years.
+Annual planning cycles produce annual roadmaps. But the decisions that determine an organization's technology trajectory (platform selection, architecture modernization, capability build-out) unfold over years, not quarters. A roadmap confined to an annual horizon optimizes for the next twelve months at the expense of the next five years.
 
-The principal engineer builds the multi-year roadmap that sequences major bets, phases platform evolution, and creates enough clarity that teams can make local decisions without derailing the long arc. This roadmap must survive the leadership changes, re-orgs, and market shifts that will certainly occur during its horizon — which means it must distinguish commitments from directions, and hard dates from intentions.
+The principal engineer builds the multi-year roadmap that sequences major bets, phases platform evolution, and creates enough clarity that teams can make local decisions without derailing the long arc. This roadmap must survive the leadership changes, re-orgs, and market shifts that will certainly occur during its horizon, which means it must distinguish commitments from directions, and hard dates from intentions.
 
 ## Roadmap Beyond the Annual Cycle
 
@@ -32,7 +32,7 @@ The principal engineer builds the multi-year roadmap that sequences major bets, 
 | **Year 2** | Months 13-24 | Planned: architecture decisions made, sequencing established, capacity estimated | Bi-annual, adjust as Year 1 delivers |
 | **Years 3-5** | Months 25-60 | Directional: platform evolution arcs, capability targets, technology bets in exploration | Annual refresh with strategy cycle |
 
-The roadmap narrows from directional to committed as time approaches. Content in Year 3 is intentionally broad — it is direction, not promise. Content in Year 1 is specific enough that a team can open the roadmap and know what to build next quarter.
+The roadmap narrows from directional to committed as time approaches. Content in Year 3 is intentionally broad. It is direction, not promise. Content in Year 1 is specific enough that a team can open the roadmap and know what to build next quarter.
 
 ## Platform Modernization Arcs
 
@@ -46,7 +46,7 @@ Platform modernization is the most common multi-year roadmap pattern. It fails i
 | **Migrate** | 12-24 months | Bulk migration; old platform receives only critical fixes | Majority of traffic on new platform; old platform in sustainment mode |
 | **Sunset** | 6-12 months | Old platform decommissioned; residual capabilities absorbed or retired | Old platform off; cost reduction realized |
 
-The coexistence phase is where most modernization arcs stall. The principal ensures coexistence has an end date — not just a start.
+The coexistence phase is where most modernization arcs stall. The principal ensures coexistence has an end date, not just a start.
 
 ## Sequencing Major Bets Across Time
 
@@ -60,6 +60,7 @@ Major bets compete for the same organizational capacity. Sequencing them is an o
 | **Capacity-gated** | Start a new bet only when capacity from a prior bet releases | Do not start three migrations simultaneously |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     STRATEGY["Multi-year strategy: 3-5 year direction"] --> BETS["Identify major bets: platforms, migrations, capabilities"]
     BETS --> DEPENDENCIES["Map dependencies between bets"]
@@ -84,7 +85,7 @@ Leadership changes are the most common cause of roadmap failure. A new executive
 | **Ground bets in business capabilities, not technology preferences** | A bet justified by "we need event-driven architecture" dies with the sponsor; a bet justified by "real-time customer experience requires sub-100ms data access" survives because the business need persists |
 | **Deliver visible value within the first year** | If the roadmap produces nothing measurable for 18 months, a new leader will cancel it. Every arc must have a Year 1 value delivery |
 | **Make non-goals explicit** | When a new leader proposes a direction the roadmap already considered and declined, the non-goals section provides context without defensiveness |
-| **Document the alternatives considered** | Show that the chosen path was not arbitrary — it was selected from options with documented trade-offs |
+| **Document the alternatives considered** | Show that the chosen path was not arbitrary. It was selected from options with documented trade-offs |
 | **Separate commitment from direction** | Year 1 is committed; Years 3-5 are direction. A new leader can reshape direction without breaking commitments |
 
 ## Roadmap-as-Commitment vs Roadmap-as-Direction
@@ -153,7 +154,7 @@ The distinction between commitment and direction is the roadmap's most important
 
 - Year 1 commitments are delivered or formally re-planned with stakeholder agreement
 - Platform modernization arcs include active coexistence phases with published end dates
-- New leadership does not discard the roadmap — they reshape direction within the existing structure
+- New leadership does not discard the roadmap. They reshape direction within the existing structure
 - Non-goals are cited to decline work that would derail the roadmap
 - The roadmap narrows from directional to committed as time horizons approach
 
@@ -167,4 +168,4 @@ The distinction between commitment and direction is the roadmap's most important
 
 ## Summary
 
-Multi-year technology roadmapping means building a roadmap with three horizons — committed, planned, and directional — that sequences major bets across time, phases platform modernization with explicit coexistence and sunset periods, and distinguishes commitment from direction so the roadmap survives leadership changes. The principal ensures every arc delivers value in Year 1, grounds bets in business capabilities, and gates new starts on capacity.
+Multi-year technology roadmapping means building a roadmap with three horizons (committed, planned, and directional) that sequences major bets across time, phases platform modernization with explicit coexistence and sunset periods, and distinguishes commitment from direction so the roadmap survives leadership changes. The principal ensures every arc delivers value in Year 1, grounds bets in business capabilities, and gates new starts on capacity.

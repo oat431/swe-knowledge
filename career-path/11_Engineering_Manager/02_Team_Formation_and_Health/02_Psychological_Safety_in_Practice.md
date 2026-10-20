@@ -16,13 +16,13 @@ tags:
 
 # Psychological Safety in Practice
 
-> **Core skill:** Building and protecting a team where people can fail, question, object, and dissent without fear — while keeping standards high.
+> **Core skill:** Building and protecting a team where people can fail, question, object, and dissent without fear, while keeping standards high.
 
 ## Why This Matters
 
 Psychological safety is the measurable property that decides what a team does with its mistakes. On safe teams, failures become postmortems and questions become learning; on unsafe teams, failures become cover-ups and questions stop being asked. The difference compounds: safe teams catch problems early, when they are cheap, and unsafe teams discover them in production, when they are expensive.
 
-Safety is not softness. Edmondson's research is explicit: the highest-performing teams combine psychological safety with high standards. The manager who trades safety for accountability gets silence; the manager who trades standards for safety gets a comfortable team that ships nothing. The craft is holding both — a team that can say anything and is expected to deliver everything.
+Safety is not softness. Edmondson's research is explicit: the highest-performing teams combine psychological safety with high standards. The manager who trades safety for accountability gets silence; the manager who trades standards for safety gets a comfortable team that ships nothing. The craft is holding both. A team that can say anything and is expected to deliver everything.
 
 ## Safety as a Measurable Team Property
 
@@ -57,7 +57,7 @@ Each frame has a signature failure: postmortems that name the person, question-a
 | Giving credit for surfacing problems | Crediting only the fixers, never the reporters |
 | Interrupting blame with process questions | Joining the blame hunt |
 
-The manager's own behavior is the largest single input to team safety. One public dressing-down undoes a quarter of safe behavior — the team learns instantly and permanently where the line is. The manager who wants safety must be visibly, repeatedly, safely wrong.
+The manager's own behavior is the largest single input to team safety. One public dressing-down undoes a quarter of safe behavior. The team learns instantly and permanently where the line is. The manager who wants safety must be visibly, repeatedly, safely wrong.
 
 ## Safety and Accountability: The Learning Zone
 
@@ -70,7 +70,7 @@ Safety and standards combine into four zones, and only one of them produces lear
 | Apathy zone | Low | Low | Everyone checked out |
 | Learning zone | High | High | Experimentation, honesty, high performance |
 
-The manager's job is to keep the team in the learning zone: raise standards without sacrificing safety, and raise safety without lowering standards. The signals of zone drift are concrete — silence after failures (anxiety), satisfied stagnation (comfort), and everything-is-fine-with-no-results (apathy).
+The manager's job is to keep the team in the learning zone: raise standards without sacrificing safety, and raise safety without lowering standards. The signals of zone drift are concrete: silence after failures (anxiety), satisfied stagnation (comfort), and everything-is-fine-with-no-results (apathy).
 
 ## Measuring Safety
 
@@ -82,11 +82,12 @@ The manager's job is to keep the team in the learning zone: raise standards with
 | Messengers | What happens to bad-news bearers | Track whether the reporter survives and returns |
 | Dissent | Whether counter-positions reach decisions | Ask the quiet ones directly, in private |
 
-Measurement is only honest if it leads somewhere. The manager shares what was learned and what will change — the survey that disappears into a drawer teaches the team that honesty is a waste.
+Measurement is only honest if it leads somewhere. The manager shares what was learned and what will change. The survey that disappears into a drawer teaches the team that honesty is a waste.
 
 ## The Safety Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MODEL["Model safe behavior visibly"] --> MEASURE["Measure the four frames"]
     MEASURE --> FIX["Fix what the signals expose"]
@@ -103,7 +104,7 @@ flowchart TD
 - [ ] Thank reporters publicly and report back what their report changed
 - [ ] Watch meeting airtime: who speaks, who is interrupted, who is silent
 - [ ] Pulse safety quarterly and act visibly on the results
-- [ ] Keep standards high while raising safety — the learning zone is both
+- [ ] Keep standards high while raising safety: the learning zone is both
 
 ## Common Pitfalls
 
@@ -133,4 +134,4 @@ flowchart TD
 
 ## Summary
 
-Psychological safety is the measurable team property that decides what happens to failure, questions, concerns, and dissent — and it lives in the learning zone, paired with high standards. The manager builds it by modeling safe behavior, measuring the four frames, fixing what the signals expose, and protecting messengers; the payoff is a team that catches problems early, learns publicly, and argues productively.
+Psychological safety is the measurable team property that decides what happens to failure, questions, concerns, and dissent, and it lives in the learning zone, paired with high standards. The manager builds it by modeling safe behavior, measuring the four frames, fixing what the signals expose, and protecting messengers; the payoff is a team that catches problems early, learns publicly, and argues productively.

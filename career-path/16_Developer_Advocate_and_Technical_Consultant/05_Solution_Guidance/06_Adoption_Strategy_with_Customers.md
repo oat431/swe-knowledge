@@ -16,13 +16,13 @@ tags:
 
 # Adoption Strategy with Customers
 
-> **Core skill:** Building the roadmap from delivery to habitual use — with the customer, not for them — so the solution earns its value through adoption rather than assumption.
+> **Core skill:** Building the roadmap from delivery to habitual use (with the customer, not for them) so the solution earns its value through adoption rather than assumption.
 
 ## Why This Matters
 
 Delivery is not adoption. A system can be perfectly built, pass every acceptance test, and still sit largely unused six months later because the humans it was meant to serve were never brought along. Adoption is a change program: habits, workflows, skills, and incentives all have to move, and none of them move because a go-live date was met.
 
-The consultant's posture here is decisive. Adoption roadmaps written *for* the customer are the customer's homework; adoption roadmaps built *with* the customer are their plan. The difference shows up in who runs the enablement, who chases stragglers, and who owns the metrics — in an owned plan, those are customer names; in a handed-over document, they remain the consultant's problem until the engagement ends, at which point adoption quietly plateaus.
+The consultant's posture here is decisive. Adoption roadmaps written *for* the customer are the customer's homework; adoption roadmaps built *with* the customer are their plan. The difference shows up in who runs the enablement, who chases stragglers, and who owns the metrics: in an owned plan, those are customer names; in a handed-over document, they remain the consultant's problem until the engagement ends, at which point adoption quietly plateaus.
 
 Adoption also has a compounding structure: land, then adopt, then expand, then advocate. Teams that adopt one workflow become the reference for the next; customer champions become the proof that carries the next business unit. The consultant who designs for this progression leaves behind not a satisfied account but a propagating one.
 
@@ -73,6 +73,7 @@ Champions are not a free resource; treat their time as a real cost, ask before a
 ## The Adoption Arc
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     LAND["Land - first production use"] --> ADOPT["Adopt - habitual workflow"]
     ADOPT --> EXPAND["Expand - more teams and workflows"]
@@ -95,7 +96,7 @@ flowchart LR
 ### Adoption Roadmap Template
 
 ```markdown
-## Adoption Roadmap — [solution]
+## Adoption Roadmap: [solution]
 | Phase | Users | Enablement | Owner | Metric | Target Date |
 |-------|-------|------------|-------|--------|-------------|
 | Land | [team] | [activities] | [name] | [metric] | [date] |
@@ -106,7 +107,7 @@ flowchart LR
 |------|------|----------|-------------------|-------------|
 
 ## Risks
-- [risk] — signal: [x] — response: [y] — owner: [name]
+- [risk], signal: [x], response: [y], owner: [name]
 ```
 
 ## Common Pitfalls
@@ -132,10 +133,10 @@ flowchart LR
 
 - [[04_Implementation_Guidance]]: adoption begins where guided implementation ends
 - [[01_Problem_to_Solution_Mapping]]: adoption metrics should trace to the framed success definition
-- [[06_Community_and_Ecosystem/00_overview|Community and Ecosystem]]: champions live between the account and the community
-- [[07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]]: adopters are the richest feedback source
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/06_Community_and_Ecosystem/00_overview|Community and Ecosystem]]: champions live between the account and the community
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]]: adopters are the richest feedback source
 - [[career-path/14_Product_Manager/00_overview|Product Manager]]: adoption outcomes are the product-side counterpart
 
 ## Summary
 
-Adoption strategy turns delivery into value: plan land, adopt, expand, and advocate as distinct phases with gates, build the roadmap with the customer so owners are internal, work through champions who are asked, supported, and recognized, and instrument usage so decay is caught while it can still be reversed. The consultant's real deliverable is not a live system — it is a system the customer's people actually use and would recommend.
+Adoption strategy turns delivery into value: plan land, adopt, expand, and advocate as distinct phases with gates, build the roadmap with the customer so owners are internal, work through champions who are asked, supported, and recognized, and instrument usage so decay is caught while it can still be reversed. The consultant's real deliverable is not a live system. It is a system the customer's people actually use and would recommend.

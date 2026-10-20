@@ -29,6 +29,7 @@ Quality, reliability, and security are not afterthoughts or separate team respon
 ## The Senior Engineer's Role in Quality, Reliability, and Security
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph MID["Mid-Level Engineer"]
         M1["Writes unit tests"]
@@ -62,6 +63,7 @@ flowchart TD
 ## Concept Map
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     TEST["Test Strategy\n(pyramid, automation)"] --> BUILD["Build with Quality"]
     BUILD --> RELIABILITY["Design for Reliability\n(SLI/SLO, error budgets)"]
@@ -84,7 +86,7 @@ Before diving into quality, reliability, and security, you should understand:
 - [[software-engineering-note/12_Software_Quality/01_Quality_Fundamentals]]: Quality fundamentals and verification/validation
 - [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]]: Operations and deployment
 - [[body-of-knowledge/CyBOK/01_Risk_Management_and_Governance]]: Security and compliance basics
-- [[01_Technical_Ownership/04_Production_Responsibility]]: Production responsibility from Technical Ownership capability
+- [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/04_Production_Responsibility]]: Production responsibility from Technical Ownership capability
 
 ## Progress Tracker
 
@@ -102,8 +104,8 @@ Before diving into quality, reliability, and security, you should understand:
 - [[software-engineering-note/12_Software_Quality/Software Quality Overview]] : Quality engineering overview
 - [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]] : Operations and SRE
 - [[body-of-knowledge/CyBOK/CyBOK v1 - Overview]] : Security body of knowledge
-- [[01_Technical_Ownership/04_Production_Responsibility]] : Production responsibility and operational readiness
-- [[04_Delivery_and_Execution/05_Release_Management]] : Release strategies and deployment safety
+- [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/04_Production_Responsibility]] : Production responsibility and operational readiness
+- [[career-path/02_Senior_Software_Engineer/04_Delivery_and_Execution/05_Release_Management]] : Release strategies and deployment safety
 
 ## Key Takeaways
 

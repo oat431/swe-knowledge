@@ -46,7 +46,7 @@ tags:
 - **Honest economics.** True monthly cost baseline, runway mathematics, pipeline math, unit economics with a worked example, expected value "for a firm of one", and staging with kill criteria.
 - **Delivery written for a solo operator.** The 60 percent rule, the swap principle for scope change, margin warning signs, self-review rituals ("automation as your reviewer"), and a handover package with a referral ask.
 - **Architecture for one maintainer.** Complexity budgets, a boring-technology policy, cost guardrails, "scale by subtraction before addition", and maintaining systems you sold.
-- **Professional responsibility.** Ethical selling, insurance as risk transfer, client due diligence on data custody, a one-page continuity plan, and an ethics compass. The "orientation, not advice — confirm locally" disclaimers are the right tone.
+- **Professional responsibility.** Ethical selling, insurance as risk transfer, client due diligence on data custody, a one-page continuity plan, and an ethics compass. The "orientation, not advice; confirm locally" disclaimers are the right tone.
 
 ## ❌ What's Missing
 
@@ -89,7 +89,7 @@ tags:
 | 01 Problem Discovery & Validation | ✅ Strong | Credit *The Mom Test*; add PMF measurement |
 | 02 Product & Service Design | ✅ Strong | Add productized-service playbook |
 | 03 Business Case & Economics | ✅ Excellent (worked examples) | Add fundraising mechanics |
-| 04 Delivery & Client Management | ✅ Excellent | — |
+| 04 Delivery & Client Management | ✅ Excellent | N/A |
 | 05 Architecture for Independents | ✅ Strong | Add AI leverage |
 | 06 Sales & Client Communication | ✅ Strong | Credit negotiation/positioning sources |
 | 07 Governance, Risk & Continuity | ✅ Strong | Add home-jurisdiction appendix and wellbeing |

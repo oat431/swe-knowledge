@@ -16,13 +16,13 @@ tags:
 
 # Influence Strategies for Managers
 
-> **Core skill:** Moving decisions and people through evidence, coalitions, framing, and reciprocity — choosing the right strategy for the situation and spending influence capital like a budget.
+> **Core skill:** Moving decisions and people through evidence, coalitions, framing, and reciprocity, choosing the right strategy for the situation and spending influence capital like a budget.
 
 ## Why This Matters
 
 Managers are handed authority over their team, but almost everything that matters to the team is decided outside that authority: budgets, headcount, cross-team priorities, platform investments, re-org shapes. Authority gets you compliance inside your team; influence gets you outcomes everywhere else.
 
-The good news is that influence is learnable and observable. The bad news is that most managers default to one of two broken modes: arguing louder (evidence alone rarely moves contested decisions) or going quiet and hoping (hoping is not a strategy). Effective influence is a toolkit chosen by situation, and it runs on a renewable resource — trust — that must be spent deliberately and replenished by delivery.
+The good news is that influence is learnable and observable. The bad news is that most managers default to one of two broken modes: arguing louder (evidence alone rarely moves contested decisions) or going quiet and hoping (hoping is not a strategy). Effective influence is a toolkit chosen by situation, and it runs on a renewable resource (trust) that must be spent deliberately and replenished by delivery.
 
 ## The Influence Toolkit
 
@@ -54,7 +54,7 @@ The first question is never "how do I persuade" but "what kind of situation is t
 | Delaying a feature for reliability | "The architecture is fragile" | "We protect the Q4 launch from outage risk" |
 | Learning time for the team | "We want to modernize" | "Attrition risk drops when engineers work on current tech" |
 
-Framing is not lying. The ask is identical; the frame connects it to what the audience already cares about. If no true frame exists in their goals, the ask may genuinely not be in their interest — reconsider it.
+Framing is not lying. The ask is identical; the frame connects it to what the audience already cares about. If no true frame exists in their goals, the ask may genuinely not be in their interest: reconsider it.
 
 ## Influence Capital as a Budget
 
@@ -70,6 +70,7 @@ Track it loosely but honestly. After a large ask, rebuild before the next one.
 Before any influence attempt, run the transparency test: would the team approve of this tactic if they saw it? Would the decider approve of being pre-wired if they knew? Influence that fails the test is manipulation, and manipulation is a loan against trust that eventually forecloses.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SITUATION["Read the situation"] --> TOOL["Choose the toolkit"]
     TOOL --> PREWIRE["Pre-wire allies and deciders"]
@@ -107,7 +108,7 @@ Sometimes the decision lands against you despite good strategy. The manager's di
 - What would make this easy for them: [X]
 
 ## Allies
-- [who] — what they gain: [X] — asked to say: [X]
+- [who]: what they gain: [X]; asked to say: [X]
 
 ## The Case
 - Their goal: [X]
@@ -146,4 +147,4 @@ Sometimes the decision lands against you despite good strategy. The manager's di
 
 ## Summary
 
-Influence for managers is a toolkit chosen by situation — evidence, coalitions, framing, reciprocity, and last-resort escalation — spent from a capital account that delivery replenishes. Every tactic passes the transparency test, and every lost decision ends in clean disagree-and-commit. The manager who masters this moves the team's interests before decisions harden; the manager who ignores it watches the team absorb other people's choices.
+Influence for managers is a toolkit chosen by situation (evidence, coalitions, framing, reciprocity, and last-resort escalation) spent from a capital account that delivery replenishes. Every tactic passes the transparency test, and every lost decision ends in clean disagree-and-commit. The manager who masters this moves the team's interests before decisions harden; the manager who ignores it watches the team absorb other people's choices.

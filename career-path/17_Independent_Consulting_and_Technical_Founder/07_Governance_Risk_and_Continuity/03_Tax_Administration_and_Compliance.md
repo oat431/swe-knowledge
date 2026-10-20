@@ -16,13 +16,13 @@ tags:
 
 # Tax Administration and Compliance
 
-> **Core skill:** The independent runs tax as an operating routine — registered correctly, invoicing properly, reserving for obligations as income arrives, filing on schedule — with a local accountant confirming every jurisdiction specific rule.
+> **Core skill:** The independent runs tax as an operating routine (registered correctly, invoicing properly, reserving for obligations as income arrives, filing on schedule) with a local accountant confirming every jurisdiction specific rule.
 
 ## Why This Matters
 
-Tax is the one obligation that does not forgive inexperience. Deadlines are fixed, penalties accrue automatically, and the rules differ by jurisdiction in ways no general guide can settle. For independents, the real danger is rarely complexity — it is avoidance. The paperwork gets deferred until it becomes a pile, the pile becomes a penalty, and the penalty becomes a very bad month that could have been avoided with a weekly habit. Tax is not a project to finish; it is a rhythm to keep.
+Tax is the one obligation that does not forgive inexperience. Deadlines are fixed, penalties accrue automatically, and the rules differ by jurisdiction in ways no general guide can settle. For independents, the real danger is rarely complexity. It is avoidance. The paperwork gets deferred until it becomes a pile, the pile becomes a penalty, and the penalty becomes a very bad month that could have been avoided with a weekly habit. Tax is not a project to finish; it is a rhythm to keep.
 
-The defense is that rhythm, not heroics. Register for what applies, invoice in the required form, move a portion of every payment into a tax reserve the day it arrives, file on the calendar, and keep records that would satisfy a review. Each element is small. Together they mean the independent never experiences a tax crisis, never scrambles for receipts at deadline, and always knows approximately what is owed. The specifics of what applies — income tax, consumption or value added style taxes, withholding, social contributions — depend entirely on the jurisdiction and the structure, so the applicable set must be confirmed with a local accountant, especially when a new market such as Thailand is involved.
+The defense is that rhythm, not heroics. Register for what applies, invoice in the required form, move a portion of every payment into a tax reserve the day it arrives, file on the calendar, and keep records that would satisfy a review. Each element is small. Together they mean the independent never experiences a tax crisis, never scrambles for receipts at deadline, and always knows approximately what is owed. The specifics of what applies (income tax, consumption or value added style taxes, withholding, social contributions) depend entirely on the jurisdiction and the structure, so the applicable set must be confirmed with a local accountant, especially when a new market such as Thailand is involved.
 
 A good local accountant is one of the highest leverage relationships a practice can have. They turn rules written for organizations into a checklist for one person, catch obligations that are easy to miss, and often cost less than a single avoidable mistake. But the responsibility stays with the independent even when the accountant prepares the numbers: signatures carry the duty, so the habit is to stay literate about what is filed and why, ask questions early, and review the year's position before deadlines rather than after.
 
@@ -61,6 +61,7 @@ A good local accountant is one of the highest leverage relationships a practice 
 ## The Tax Operating Cycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SETUP["Register for the taxes that apply with local advice"] --> INVOICE["Invoice correctly as work is delivered"]
     INVOICE --> SETASIDE["Move a portion of every payment to the tax reserve"]
@@ -82,7 +83,7 @@ flowchart TD
 ### Tax Reserve Note
 
 ```markdown
-## Tax Reserve — <period>
+## Tax Reserve: <period>
 
 | Field | Value |
 |-------|-------|
@@ -116,8 +117,8 @@ flowchart TD
 
 - [[01_Contracts_and_Professional_Agreements]]
 - [[02_Business_Structure_and_Registration]]
-- [[03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/03_Business_Case_and_Economics/00_overview|Business Case and Economics]]
 
 ## Summary
 
-Tax administration and compliance for independents is a rhythm of small habits: register what applies with local advice, invoice properly, reserve on receipt, file on schedule, and keep records that make review easy. No general principle settles what a specific jurisdiction requires — the local accountant confirms the rules, the independent keeps the calendar, and the routine keeps tax from ever becoming the crisis it becomes for those who avoid it.
+Tax administration and compliance for independents is a rhythm of small habits: register what applies with local advice, invoice properly, reserve on receipt, file on schedule, and keep records that make review easy. No general principle settles what a specific jurisdiction requires: the local accountant confirms the rules, the independent keeps the calendar, and the routine keeps tax from ever becoming the crisis it becomes for those who avoid it.

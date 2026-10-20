@@ -15,13 +15,13 @@ tags:
 
 # Architecture Erosion
 
-> **Core skill:** Detecting structural decay early — rising change cost, incident clustering, clone services, framework drift — and countering it with refactor budgets, paved paths, and erosion reviews.
+> **Core skill:** Detecting structural decay early (rising change cost, incident clustering, clone services, framework drift) and countering it with refactor budgets, paved paths, and erosion reviews.
 
 ## Why This Matters
 
-Architectures do not fail dramatically; they erode quietly. A shortcut becomes a precedent, the precedent becomes a pattern, the pattern becomes sediment — and the org wakes up one day with a system nobody can change safely. The erosion is invisible in any single decision and obvious in aggregate: change costs rise, incidents cluster, and every new service clones the last one.
+Architectures do not fail dramatically; they erode quietly. A shortcut becomes a precedent, the precedent becomes a pattern, the pattern becomes sediment, and the org wakes up one day with a system nobody can change safely. The erosion is invisible in any single decision and obvious in aggregate: change costs rise, incidents cluster, and every new service clones the last one.
 
-Erosion is a staff-level risk because no single team owns it. Each shortcut is locally rational; the sediment is globally expensive. Detecting it requires reading signals across teams, and countering it requires interventions that span them — refactor budgets, paved paths, and design-review gates that catch the erosion at the point of entry.
+Erosion is a staff-level risk because no single team owns it. Each shortcut is locally rational; the sediment is globally expensive. Detecting it requires reading signals across teams, and countering it requires interventions that span them: refactor budgets, paved paths, and design-review gates that catch the erosion at the point of entry.
 
 ## Erosion Mechanics
 
@@ -37,6 +37,7 @@ The decay chain is short and predictable:
 The lever is at the first two stages: shortcuts are survivable, precedents are where erosion becomes architecture. Catching the second occurrence is the cheapest prevention available.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SHORTCUT["Shortcut taken"] --> PRECEDENT["Copied as precedent"]
     PRECEDENT --> PATTERN["Hardens into pattern"]
@@ -68,7 +69,7 @@ Run the audit on the scan cadence, with three lenses:
 | **Dependency direction violations** | Arrows pointing against the intended layering | Violation map with owning teams |
 | **Dead layers** | Abstractions nothing uses, layers nothing calls | Removal candidate list |
 
-The audit is a half-day exercise per major system, and its output feeds the risk register: each hotspot gets an owner, a narrative, and a price — or it is not a risk, it is a fact.
+The audit is a half-day exercise per major system, and its output feeds the risk register: each hotspot gets an owner, a narrative, and a price, or it is not a risk, it is a fact.
 
 ## Counter-Measures
 
@@ -84,7 +85,7 @@ Counter-measures are most effective in combination: the paved path makes the sho
 
 ## The Erosion Conversation with Leadership
 
-Leadership does not respond to "the architecture is decaying" — it responds to velocity data:
+Leadership does not respond to "the architecture is decaying". It responds to velocity data:
 
 | Argument | Evidence That Moves It |
 |---|---|
@@ -93,7 +94,7 @@ Leadership does not respond to "the architecture is decaying" — it responds to
 | The paved path would pay | Time saved per change once on the path |
 | The refactor budget returns | Projected velocity recovery over two quarters |
 
-Frame erosion as a velocity problem with a price, and the budget conversation becomes arithmetic instead of aesthetics. The staff engineer's job is to keep that arithmetic current — re-measured, not asserted.
+Frame erosion as a velocity problem with a price, and the budget conversation becomes arithmetic instead of aesthetics. The staff engineer's job is to keep that arithmetic current, re-measured, not asserted.
 
 ## When Erosion Is Acceptable
 
@@ -107,7 +108,7 @@ Not all erosion is neglect. The distinction is documentation:
 | Review | Revisited on a date | Never revisited |
 | Exit | A plan to pay it down exists | No plan, no price |
 
-The same shortcut can be either, depending on whether it was chosen. The staff practice is not eliminating pragmatism — it is insisting that pragmatism arrive with a written decision, an owner, and a revisit date. What is chosen and documented is strategy; what is unchosen and undocumented is erosion.
+The same shortcut can be either, depending on whether it was chosen. The staff practice is not eliminating pragmatism. It is insisting that pragmatism arrive with a written decision, an owner, and a revisit date. What is chosen and documented is strategy; what is unchosen and undocumented is erosion.
 
 ## Practical Applications
 
@@ -146,7 +147,7 @@ The same shortcut can be either, depending on whether it was chosen. The staff p
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---|---|---|
-| **Erosion denial** | "It's fine, we know the system" — until nobody does | Audit on a cadence; measure, don't assume |
+| **Erosion denial** | "It's fine, we know the system", until nobody does | Audit on a cadence; measure, don't assume |
 | **Aesthetic arguments** | "This is ugly" loses to "we're shipping" | Speak velocity, incidents, and price |
 | **All-or-nothing refactors** | Giant rewrites fail and discredit the cause | Refactor budgets and paved paths, incrementally |
 | **Rubber-stamp reviews** | The gate exists but nothing is caught | Put erosion checks in the review template |
@@ -166,7 +167,7 @@ The same shortcut can be either, depending on whether it was chosen. The staff p
 - [[01_Seeing_Org_Scale_Risk]]: erosion as a register category
 - [[03_Dependency_Risk_Management]]: dependency drift as an erosion vector
 - [[05_Risk_Pricing_and_Acceptance]]: pricing erosion hotspots
-- [[03_Technical_Strategy/00_overview|Technical Strategy]]: the target architecture erosion protects
+- [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy]]: the target architecture erosion protects
 - [[career-path/05_Tech_Lead/02_System_Ownership_and_Production_Responsibility/03_Technical_Debt_Leadership|Technical Debt Leadership (Tech Lead)]]: the team-level debt practice
 
 ## Summary

@@ -16,15 +16,15 @@ tags:
 
 # Project Planning and Baselining
 
-> **Core skill:** Building the integrated project plan — sequencing work from the WBS, estimating durations, identifying dependencies, and setting the baseline against which progress and variance are measured throughout execution.
+> **Core skill:** Building the integrated project plan, sequencing work from the WBS, estimating durations, identifying dependencies, and setting the baseline against which progress and variance are measured throughout execution.
 
 ## Why This Matters
 
-The project plan is the project manager's primary communication tool. It tells the team what to do next, the sponsor when to expect delivery, and governance when variance demands attention. The plan is not a prediction — it is a reference. A plan that is treated as a prediction encourages the project manager to hide variance to protect the illusion of accuracy. A plan that is treated as a baseline makes variance visible as information: something is different from what was expected, and the difference tells you something about the project's reality.
+The project plan is the project manager's primary communication tool. It tells the team what to do next, the sponsor when to expect delivery, and governance when variance demands attention. The plan is not a prediction. It is a reference. A plan that is treated as a prediction encourages the project manager to hide variance to protect the illusion of accuracy. A plan that is treated as a baseline makes variance visible as information: something is different from what was expected, and the difference tells you something about the project's reality.
 
-Baselining is the act of freezing the plan so that variance can be measured. Before the baseline, the plan is a draft — it changes as estimation improves and sequencing is refined. After the baseline, the plan is a governed artifact — it changes only through formal change control. This distinction is essential: without a baseline, every replan is a silent revision of history, and no one can say whether the project is ahead, behind, or on track.
+Baselining is the act of freezing the plan so that variance can be measured. Before the baseline, the plan is a draft. It changes as estimation improves and sequencing is refined. After the baseline, the plan is a governed artifact. It changes only through formal change control. This distinction is essential: without a baseline, every replan is a silent revision of history, and no one can say whether the project is ahead, behind, or on track.
 
-The project manager builds the plan with the team — not in isolation. The team knows the work better than the PM ever will; their estimates, their sequencing insights, and their identification of dependencies are the plan's foundation. The PM's role is to integrate, challenge for consistency, and communicate — not to dictate durations.
+The project manager builds the plan with the team, not in isolation. The team knows the work better than the PM ever will; their estimates, their sequencing insights, and their identification of dependencies are the plan's foundation. The PM's role is to integrate, challenge for consistency, and communicate, not to dictate durations.
 
 ## The Planning Sequence
 
@@ -52,6 +52,7 @@ The project manager builds the plan with the team — not in isolation. The team
 ## Critical Path and Float
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     START["Project start"] --> A["Activity A: 5 days"]
     START --> B["Activity B: 3 days"]
@@ -66,7 +67,7 @@ flowchart TD
 
 ### Planning Quality Checklist
 
-- [ ] The plan includes all work packages from the WBS — no hidden work
+- [ ] The plan includes all work packages from the WBS: no hidden work
 - [ ] Activity durations are estimated by the people who will do the work, not the PM
 - [ ] Dependencies are explicit: mandatory versus discretionary, internal versus external
 - [ ] The critical path is identified and understood
@@ -125,12 +126,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[02_Work_Breakdown_Structure]] — WBS feeds the plan
-- [[05_Resource_Planning]] — resource estimates and availability drive the schedule
-- [[07_Scope_Change_Management]] — baseline changes go through change control
-- [[03_Schedule_and_Cost/00_overview|Schedule and Cost]] — the schedule baseline and cost baseline
-- [[01_Initiation_and_Charter/00_overview|Initiation and Charter]] — objectives and constraints that bound the plan
+- [[02_Work_Breakdown_Structure]]: WBS feeds the plan
+- [[05_Resource_Planning]]: resource estimates and availability drive the schedule
+- [[07_Scope_Change_Management]]: baseline changes go through change control
+- [[career-path/13_Project_and_Program_Manager/03_Schedule_and_Cost/00_overview|Schedule and Cost]]: the schedule baseline and cost baseline
+- [[career-path/13_Project_and_Program_Manager/01_Initiation_and_Charter/00_overview|Initiation and Charter]]: objectives and constraints that bound the plan
 
 ## Summary
 
-Project planning and baselining convert the WBS into a sequenced, resourced schedule and freeze it as the governed reference for measuring progress and variance. The plan is built with the team — their estimates, their sequencing, their identification of dependencies — and the baseline is approved by the sponsor. The critical path is identified and actively managed. The plan is not a prediction; it is a communication tool that makes variance visible as information, not failure. The project manager who treats the plan as a baseline manages reality; the one who treats it as a prediction hides it.
+Project planning and baselining convert the WBS into a sequenced, resourced schedule and freeze it as the governed reference for measuring progress and variance. The plan is built with the team (their estimates, their sequencing, their identification of dependencies) and the baseline is approved by the sponsor. The critical path is identified and actively managed. The plan is not a prediction; it is a communication tool that makes variance visible as information, not failure. The project manager who treats the plan as a baseline manages reality; the one who treats it as a prediction hides it.

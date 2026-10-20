@@ -17,15 +17,15 @@ tags:
 
 # Data Security, Privacy, and Compliance
 
-> **Core skill:** Designing protection into data architecture — classification first, then encryption, access, masking, retention, and privacy mechanisms — so regulatory obligations are structural properties, not retrofit projects.
+> **Core skill:** Designing protection into data architecture (classification first, then encryption, access, masking, retention, and privacy mechanisms) so regulatory obligations are structural properties, not retrofit projects.
 
 ## Why This Matters
 
 Regulators, customers, and attackers all converge on the same question: does the enterprise know where its sensitive data is and who can reach it? An architecture that cannot answer that question fails audits, amplifies breaches, and turns every privacy request into a forensic expedition. The difference between a contained incident and a crisis is usually not the control that failed but the map that was missing.
 
-The architect's role is not to interpret law — that is the legal team's function — but to convert stated obligations into structural mechanisms. Classification is the foundation: without it, protection is applied uniformly (expensive and still wrong) or sporadically (cheap and wrong). With it, every downstream decision — encryption, access, masking, residency, retention — has a criterion to apply.
+The architect's role is not to interpret law (that is the legal team's function) but to convert stated obligations into structural mechanisms. Classification is the foundation: without it, protection is applied uniformly (expensive and still wrong) or sporadically (cheap and wrong). With it, every downstream decision (encryption, access, masking, residency, retention) has a criterion to apply.
 
-Privacy adds a temporal dimension most technical controls ignore: data has a purpose, a consent basis, a permitted lifespan, and subjects with rights over it. Designing for erasure, correction, portability, and residency after the fact is one of the most expensive forms of rework in enterprise architecture. The senior architect brings these requirements forward into the data model, the flow design, and the platform zones — where they are cheap.
+Privacy adds a temporal dimension most technical controls ignore: data has a purpose, a consent basis, a permitted lifespan, and subjects with rights over it. Designing for erasure, correction, portability, and residency after the fact is one of the most expensive forms of rework in enterprise architecture. The senior architect brings these requirements forward into the data model, the flow design, and the platform zones: where they are cheap.
 
 ## Data Classification
 
@@ -61,7 +61,7 @@ Classification must be attached to data assets in the catalog and enforced throu
 | Residency and transfer | Placement policies per zone; transfer gateways with logs |
 | Transparency | Lineage from collection to use that can answer "where did this go" |
 
-The single most useful architectural investment for privacy is answering "where is all the data about this person?" — across operational stores, analytics copies, archives, and vendor exports. Enterprises that can answer it treat privacy as operations; those that cannot treat it as crisis management.
+The single most useful architectural investment for privacy is answering "where is all the data about this person?", across operational stores, analytics copies, archives, and vendor exports. Enterprises that can answer it treat privacy as operations; those that cannot treat it as crisis management.
 
 ## Compliance Landscape
 
@@ -100,6 +100,7 @@ Deletion is easy to promise and hard to deliver across copies, caches, backups, 
 ## The Protection Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CLASSIFY["Classify data by sensitivity"] --> PROTECT["Apply protection - encryption, masking, tokens"]
     PROTECT --> ACCESS["Control access by role and purpose"]
@@ -116,7 +117,7 @@ flowchart LR
 - [ ] Access follows role and purpose, with periodic certification built in
 - [ ] Erasure and correction can propagate through every copy and export
 - [ ] Retention schedules attach to datasets, with holds and disposal evidence
-- [ ] Children and derived data are covered — not just primary records
+- [ ] Children and derived data are covered, not just primary records
 
 ### Classification and Handling Matrix
 
@@ -156,9 +157,9 @@ flowchart LR
 
 - [[03_Data_Governance_and_Quality]]: shared policy and stewardship machinery
 - [[07_Data_Lifecycle_and_Value_Realization]]: retention and disposal across the lifecycle
-- [[05_Security_Risk_and_Compliance/00_overview|Security Risk and Compliance]]: the enterprise security and risk frame
+- [[career-path/15_Solutions_and_Enterprise_Architect/05_Security_Risk_and_Compliance/00_overview|Security Risk and Compliance]]: the enterprise security and risk frame
 - [[career-path/06_Software_Architect/05_Security_Architecture/00_overview|Security Architecture (Architect)]]: solution-level security architecture practice
 
 ## Summary
 
-Data security, privacy, and compliance become tractable when they are structural: classification attached to real assets, protection scaled to class, access governed by role and purpose, rights and residency designed into flows, and retention with provable disposal. The senior architect converts legal obligations into mechanisms at the point where they are cheapest — model, zone, and flow design — and treats competence as the ability to answer, quickly and completely, where any piece of sensitive data is and who can reach it.
+Data security, privacy, and compliance become tractable when they are structural: classification attached to real assets, protection scaled to class, access governed by role and purpose, rights and residency designed into flows, and retention with provable disposal. The senior architect converts legal obligations into mechanisms at the point where they are cheapest (model, zone, and flow design) and treats competence as the ability to answer, quickly and completely, where any piece of sensitive data is and who can reach it.

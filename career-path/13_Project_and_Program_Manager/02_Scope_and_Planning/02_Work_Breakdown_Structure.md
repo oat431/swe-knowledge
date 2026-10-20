@@ -16,15 +16,15 @@ tags:
 
 # Work Breakdown Structure
 
-> **Core skill:** Decomposing project scope into a deliverable-oriented hierarchy of work packages — the WBS — so that every piece of work is named, owned, estimable, and assignable, and nothing required to deliver the scope falls between the cracks.
+> **Core skill:** Decomposing project scope into a deliverable-oriented hierarchy of work packages (the WBS) so that every piece of work is named, owned, estimable, and assignable, and nothing required to deliver the scope falls between the cracks.
 
 ## Why This Matters
 
-The work breakdown structure is the project manager's primary instrument for turning scope into work. It answers the question every plan must answer: what exactly must be produced? A WBS that is organized by deliverable — not by department, not by phase, not by activity — ensures that every work package has a single owner and a clear output. A WBS that is organized by function creates gaps where ownership overlaps and nobody is accountable.
+The work breakdown structure is the project manager's primary instrument for turning scope into work. It answers the question every plan must answer: what exactly must be produced? A WBS that is organized by deliverable (not by department, not by phase, not by activity) ensures that every work package has a single owner and a clear output. A WBS that is organized by function creates gaps where ownership overlaps and nobody is accountable.
 
-The WBS is also the foundation of estimation. You cannot estimate what you cannot name. A WBS that decomposes scope to the level where work packages are small enough to estimate and large enough to manage — typically 8 to 80 hours of effort — enables credible cost and schedule estimates. A WBS that stops at high-level categories forces estimation at a level of abstraction where precision is impossible.
+The WBS is also the foundation of estimation. You cannot estimate what you cannot name. A WBS that decomposes scope to the level where work packages are small enough to estimate and large enough to manage (typically 8 to 80 hours of effort) enables credible cost and schedule estimates. A WBS that stops at high-level categories forces estimation at a level of abstraction where precision is impossible.
 
-The 100 percent rule governs the WBS: the sum of the work at each level must equal 100 percent of the work at the parent level. Nothing is double-counted, nothing is omitted. A WBS that violates this rule produces a plan with hidden work — and hidden work becomes unplanned cost and schedule variance.
+The 100 percent rule governs the WBS: the sum of the work at each level must equal 100 percent of the work at the parent level. Nothing is double-counted, nothing is omitted. A WBS that violates this rule produces a plan with hidden work, and hidden work becomes unplanned cost and schedule variance.
 
 ## WBS Principles
 
@@ -50,6 +50,7 @@ The 100 percent rule governs the WBS: the sum of the work at each level must equ
 ## WBS Decomposition Pattern
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PROJECT["Project: Customer Portal"] --> D1["Deliverable: User Authentication"]
     PROJECT --> D2["Deliverable: Payment Processing"]
@@ -109,12 +110,12 @@ flowchart TD
 
 ## Related Topics
 
-- [[01_Scope_Definition]] — scope feeds the WBS
-- [[03_Requirements_Management]] — requirements drive the detail within work packages
-- [[04_Project_Planning_and_Baselining]] — WBS feeds the project schedule
-- [[05_Resource_Planning]] — work packages drive resource estimation
-- [[03_Schedule_and_Cost/00_overview|Schedule and Cost]] — WBS is the foundation for cost estimation
+- [[01_Scope_Definition]]: scope feeds the WBS
+- [[03_Requirements_Management]]: requirements drive the detail within work packages
+- [[04_Project_Planning_and_Baselining]]: WBS feeds the project schedule
+- [[05_Resource_Planning]]: work packages drive resource estimation
+- [[career-path/13_Project_and_Program_Manager/03_Schedule_and_Cost/00_overview|Schedule and Cost]]: WBS is the foundation for cost estimation
 
 ## Summary
 
-The work breakdown structure decomposes project scope into a deliverable-oriented hierarchy of work packages. Governed by the 100 percent rule — the children of every node represent exactly the parent's scope — the WBS ensures that every piece of work is named, owned, and estimable. Decomposition continues to the level where work packages are 8 to 80 hours: small enough to estimate with confidence, large enough to manage without overhead. The WBS is the foundation of estimation, scheduling, and resource planning — and the project manager who co-creates it with the team produces a plan the team believes in.
+The work breakdown structure decomposes project scope into a deliverable-oriented hierarchy of work packages. Governed by the 100 percent rule (the children of every node represent exactly the parent's scope), the WBS ensures that every piece of work is named, owned, and estimable. Decomposition continues to the level where work packages are 8 to 80 hours: small enough to estimate with confidence, large enough to manage without overhead. The WBS is the foundation of estimation, scheduling, and resource planning, and the project manager who co-creates it with the team produces a plan the team believes in.

@@ -19,9 +19,9 @@ tags:
 
 ## Why This Matters
 
-Unrecorded acceptance is denial with extra steps. Every risk that is not remediated is being accepted — whether anyone said so or not. The question is whether the acceptance is explicit: priced, owned, dated, and reviewable. Orgs that skip the explicit step carry the same risks with none of the visibility, and the first surprise is always the most expensive.
+Unrecorded acceptance is denial with extra steps. Every risk that is not remediated is being accepted, whether anyone said so or not. The question is whether the acceptance is explicit: priced, owned, dated, and reviewable. Orgs that skip the explicit step carry the same risks with none of the visibility, and the first surprise is always the most expensive.
 
-Pricing is what makes acceptance discussable. "The auth migration is risky" produces a shrug; "a failed migration costs $200k to $600k at 20 to 40 percent likelihood, and the mitigation costs $80k" produces a decision. The staff engineer's discipline is converting risk language into arithmetic — approximate arithmetic, honestly ranged, but arithmetic.
+Pricing is what makes acceptance discussable. "The auth migration is risky" produces a shrug; "a failed migration costs $200k to $600k at 20 to 40 percent likelihood, and the mitigation costs $80k" produces a decision. The staff engineer's discipline is converting risk language into arithmetic: approximate arithmetic, honestly ranged, but arithmetic.
 
 ## Pricing Risks
 
@@ -47,7 +47,7 @@ Expected value, simply: expected cost of risk = probability x impact. Mitigate w
 | **Harden in place** | $45k, removes 50% of the exposure | Expected value $60k saved: do it first |
 | **Transfer via insurance** | $20k/year, covers $100k of the loss | Partial transfer: keep for the residual |
 
-The arithmetic is coarse and that is fine — it is for ranking, not accounting. The discipline is doing the arithmetic at all, with ranges, and writing the comparison down.
+The arithmetic is coarse and that is fine. It is for ranking, not accounting. The discipline is doing the arithmetic at all, with ranges, and writing the comparison down.
 
 ## Acceptance Criteria
 
@@ -60,7 +60,7 @@ Not everyone can accept every risk. The acceptance authority must match the risk
 | Budget or roadmap impact | Engineering leadership | Price, alternatives, recommendation |
 | Regulatory, legal, or existential | Executive or board level | Full case, options, written record |
 
-The test for your own acceptance authority: could you defend this acceptance in writing to the level above you? If not, it is not yours to accept — it is yours to escalate with options.
+The test for your own acceptance authority: could you defend this acceptance in writing to the level above you? If not, it is not yours to accept. It is yours to escalate with options.
 
 ## The Written Acceptance Record
 
@@ -100,7 +100,7 @@ Acceptance is a decision with a shelf life:
 | **On trigger** | Any material change re-opens the acceptance: new dependency, new regulation, new scale |
 | **Annually** | The full acceptance portfolio is presented to the accepting level |
 
-A risk accepted at 20 percent that has drifted to 70 percent without a review is not an accepted risk — it is a surprise in progress.
+A risk accepted at 20 percent that has drifted to 70 percent without a review is not an accepted risk. It is a surprise in progress.
 
 ## When Acceptance Becomes Denial
 
@@ -110,7 +110,7 @@ Three failure modes convert legitimate acceptance into denial:
 |---|---|---|
 | **Unreviewed** | The record exists; the date passed; nothing happened | Re-price on the cadence, no exceptions |
 | **Unowned** | The risk is accepted by a committee, which is no one | One named owner with matching authority |
-| **Unpriced** | "We accept this" with no arithmetic | Price it or it is not accepted — it is ignored |
+| **Unpriced** | "We accept this" with no arithmetic | Price it or it is not accepted. It is ignored |
 
 The staff habit: whenever you hear "we'll accept that risk," the next sentence is "in writing, priced, owned, and dated." Acceptance without the record is where careers meet surprises.
 
@@ -122,13 +122,14 @@ Leadership hears what you choose to tell them. The honest version:
 |---|---|
 | **State the residual risk plainly** | "We are accepting a 30 percent chance of a $200k incident this year" |
 | **Show the arithmetic** | "Mitigation costs $120k; expected loss is $60k" |
-| **Name the alternatives** | "We could remediate, transfer, or exit — here is each price" |
+| **Name the alternatives** | "We could remediate, transfer, or exit: here is each price" |
 | **Report drift** | "This risk re-priced from 20 to 45 percent this quarter" |
 | **Keep the record** | "Here is the signed acceptance from last quarter" |
 
 Acceptance communicated honestly is a decision leadership can own. Acceptance discovered later is a failure they will own for you.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     RISK["Risk identified"] --> PRICE["Price with ranges"]
     PRICE --> COMPARE["Compare mitigation cost"]
@@ -174,8 +175,8 @@ flowchart TD
 - [[06_Escalating_Risk_With_Options]]: risks too big for your authority
 - [[02_Architecture_Erosion]]: pricing erosion hotspots
 - [[04_Security_and_Compliance_Posture]]: priced security investment
-- [[03_Technical_Strategy/00_overview|Technical Strategy]]: bets priced against risk
+- [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy]]: bets priced against risk
 
 ## Summary
 
-Risk pricing and acceptance is the discipline of making every risk decision explicit: price probability and impact as ranges, compare the cost of mitigation against expected loss, match acceptance authority to risk size, and record every acceptance in writing with an owner and a re-price date. Acceptance that is unreviewed, unowned, or unpriced is not acceptance — it is denial, scheduled to surprise you.
+Risk pricing and acceptance is the discipline of making every risk decision explicit: price probability and impact as ranges, compare the cost of mitigation against expected loss, match acceptance authority to risk size, and record every acceptance in writing with an owner and a re-price date. Acceptance that is unreviewed, unowned, or unpriced is not acceptance. It is denial, scheduled to surprise you.

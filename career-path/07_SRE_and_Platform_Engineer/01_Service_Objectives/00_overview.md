@@ -39,6 +39,7 @@ Service objectives are the foundation of reliability engineering because they tu
 ## How the Topics Connect
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SLI["01 SLI Design"] --> SLO["02 SLO Definition"]
     SLO --> ERROR["03 Error Budget Policy"]
@@ -76,5 +77,5 @@ Use this to gauge your current mastery of service objectives:
 ## Related
 
 - [[00_overview|SRE and Platform Engineer Overview]]
-- [[02_Observability/00_overview|Observability]] : observability is required to measure SLIs
+- [[career-path/07_SRE_and_Platform_Engineer/02_Observability/00_overview|Observability]] : observability is required to measure SLIs
 - [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/02_SRE_Principles|SRE Principles]] : SRE foundations from the Senior SWE path

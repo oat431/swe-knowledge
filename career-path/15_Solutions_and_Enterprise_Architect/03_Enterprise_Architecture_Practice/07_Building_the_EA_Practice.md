@@ -16,15 +16,15 @@ tags:
 
 # Building the EA Practice
 
-> **Core skill:** Standing up and maturing the architecture function — operating model, team shape, stakeholder engagement, and measurement — so the practice earns influence instead of assuming it.
+> **Core skill:** Standing up and maturing the architecture function (operating model, team shape, stakeholder engagement, and measurement) so the practice earns influence instead of assuming it.
 
 ## Why This Matters
 
-An enterprise architect hired into a company without a practice is not joining an architecture function; they are founding one. The graveyard of these efforts is well known: months of framework study, a landscape assessment shipped to nobody, a governance board that meets twice and fades. Practices fail for a consistent reason — they produce artifacts and mandate processes before delivering a single decision anyone needed.
+An enterprise architect hired into a company without a practice is not joining an architecture function; they are founding one. The graveyard of these efforts is well known: months of framework study, a landscape assessment shipped to nobody, a governance board that meets twice and fades. Practices fail for a consistent reason: they produce artifacts and mandate processes before delivering a single decision anyone needed.
 
-Successful practices are built outside-in. They start by finding the decisions leadership already struggles with — a duplication nobody can adjudicate, a migration with no target, a portfolio with no disposition — and resolving one visibly, with a small artifact and a fast timeline. Influence is earned decision by decision; the mandate follows the track record.
+Successful practices are built outside-in. They start by finding the decisions leadership already struggles with (a duplication nobody can adjudicate, a migration with no target, a portfolio with no disposition) and resolving one visibly, with a small artifact and a fast timeline. Influence is earned decision by decision; the mandate follows the track record.
 
-The senior architect designs the practice like a product: a clear charter, a right-sized team shape, an engagement model that serves delivery teams, and metrics that measure influence rather than activity. Maturity is then a staircase — from ad hoc to embedded — climbed deliberately, with the practice's scope expanding only as fast as its credibility.
+The senior architect designs the practice like a product: a clear charter, a right-sized team shape, an engagement model that serves delivery teams, and metrics that measure influence rather than activity. Maturity is then a staircase (from ad hoc to embedded), climbed deliberately, with the practice's scope expanding only as fast as its credibility.
 
 ## EA Operating Models
 
@@ -56,11 +56,11 @@ Small practices merge roles; the mistake is merging the capability map owner wit
 
 | Level | State | Evidence | Next Move |
 |-------|-------|----------|-----------|
-| 1 — Ad hoc | No landscape; decisions informal | Conversations cite anecdotes | Capture a minimal landscape; publish principles |
-| 2 — Defined | Foundational artifacts exist; light governance | Artifacts start appearing in decisions | Add assessment and target work |
-| 3 — Integrated | Governance in planning and funding flows | Proposals cite targets; duplications caught | Embed architects in major programs |
-| 4 — Managed | Practice measured; exceptions managed | Influence metrics reported; standards current | Tie portfolio and strategy cycles together |
-| 5 — Adaptive | Practice self-renews with strategy | Framework and principles revised deliberately | Continuous; coach other functions |
+| 1: Ad hoc | No landscape; decisions informal | Conversations cite anecdotes | Capture a minimal landscape; publish principles |
+| 2: Defined | Foundational artifacts exist; light governance | Artifacts start appearing in decisions | Add assessment and target work |
+| 3: Integrated | Governance in planning and funding flows | Proposals cite targets; duplications caught | Embed architects in major programs |
+| 4: Managed | Practice measured; exceptions managed | Influence metrics reported; standards current | Tie portfolio and strategy cycles together |
+| 5: Adaptive | Practice self-renews with strategy | Framework and principles revised deliberately | Continuous; coach other functions |
 
 Maturity is not a scorecard to chase; it is a description of what the practice can currently deliver. Claiming level 4 without the evidence of level 3 is how practices lose the credibility they will need later.
 
@@ -100,6 +100,7 @@ The order matters: no governance before a landscape, no landscape before relatio
 ## Growing the Practice
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SPONSOR["Executive sponsor and mandate"] --> CHARTER["Practice charter and operating model"]
     CHARTER --> BASELINE["Baseline landscape and first wins"]
@@ -114,7 +115,7 @@ flowchart TD
 
 - [ ] A charter names the practice's decisions, customers, and decision rights
 - [ ] The operating model is chosen deliberately, with hub and spoke roles clarified
-- [ ] A minimal landscape exists within the first month — coarse and current beats complete and late
+- [ ] A minimal landscape exists within the first month, coarse and current beats complete and late
 - [ ] One decision-relevant win is delivered before any governance mandate is proposed
 - [ ] Metrics measure influence and pull, not artifact counts and meeting attendance
 - [ ] Maturity claims are matched by evidence at the level below
@@ -169,8 +170,8 @@ flowchart TD
 - [[06_Enterprise_Architecture_Governance]]: the mechanism through which the practice exerts influence
 - [[01_Enterprise_Architecture_Frameworks]]: framework tailoring as a founding decision
 - [[career-path/03_Staff_Engineer/05_Systems_Thinking_and_Organizational_Design/00_overview|Systems Thinking and Organizational Design (Staff)]]: organizational design behind the operating model
-- [[07_Architecture_Communication/00_overview|Architecture Communication]]: how a young practice makes itself understood
+- [[career-path/15_Solutions_and_Enterprise_Architect/07_Architecture_Communication/00_overview|Architecture Communication]]: how a young practice makes itself understood
 
 ## Summary
 
-Building an EA practice means founding a function that earns its mandate: a deliberate operating model and team shape, a first-ninety-days sequence that resolves a real decision before formalizing governance, an engagement model that serves delivery teams and executives alike, and metrics that measure influence rather than activity. Maturity is climbed in evidence-backed steps — from ad hoc to embedded — with scope expanding only as fast as credibility.
+Building an EA practice means founding a function that earns its mandate: a deliberate operating model and team shape, a first-ninety-days sequence that resolves a real decision before formalizing governance, an engagement model that serves delivery teams and executives alike, and metrics that measure influence rather than activity. Maturity is climbed in evidence-backed steps (from ad hoc to embedded) with scope expanding only as fast as credibility.

@@ -16,20 +16,20 @@ tags:
 
 # On-Call Excellence
 
-> **Core skill:** Designing humane, effective on-call — fair rotations, actionable pages, learning loops, and early intervention before burnout.
+> **Core skill:** Designing humane, effective on-call: fair rotations, actionable pages, learning loops, and early intervention before burnout.
 
 ## Why This Matters
 
-On-call is where reliability meets the humans who carry it. Done well, it is a rotation of calm professionals who get actionable alerts, resolve them with runbooks, and learn something every shift. Done badly, it is a lottery of 3 a.m. pages that nobody can act on, an uneven load that quietly burns out the willing, and a rotation that engineers dread — until the dread becomes attrition.
+On-call is where reliability meets the humans who carry it. Done well, it is a rotation of calm professionals who get actionable alerts, resolve them with runbooks, and learn something every shift. Done badly, it is a lottery of 3 a.m. pages that nobody can act on, an uneven load that quietly burns out the willing, and a rotation that engineers dread, until the dread becomes attrition.
 
-The tech lead designs on-call the way they design any system: with clear requirements, measured outcomes, and a feedback loop. The requirements are unusual, though — fairness and humanity are first-class constraints, not afterthoughts. This note covers rotation design, page quality, compensation, shadowing, learning, burnout signals, and the metrics that tell you whether the system is working.
+The tech lead designs on-call the way they design any system: with clear requirements, measured outcomes, and a feedback loop. The requirements are unusual, though: fairness and humanity are first-class constraints, not afterthoughts. This note covers rotation design, page quality, compensation, shadowing, learning, burnout signals, and the metrics that tell you whether the system is working.
 
 ## Rotation Design
 
 | Design Element | Options | Guidance |
 |----------------|---------|----------|
 | **Primary / secondary** | One primary plus one secondary as backup | Always have a second pair of hands for escalations and handoffs |
-| **Rotation length** | One week to two weeks | One week is intense but bounded; two weeks amortizes context — pick by load |
+| **Rotation length** | One week to two weeks | One week is intense but bounded; two weeks amortizes context; pick by load |
 | **Handoff** | A structured brief between shifts | The outgoing person transfers active incidents, known issues, and context |
 | **Escalation path** | Named ladder: primary, secondary, lead, manager | Every page has a defined next step when unanswered |
 | **Rotation order** | Published, fair, and predictable | Surprises in the schedule are themselves a source of burnout |
@@ -55,12 +55,12 @@ Tuning practice: every page that led to no action is a candidate for deletion; e
 | Element | Practice |
 |---------|----------|
 | **Even load** | Rotation counts pages per shift; heavy shifts are rebalanced, not endured |
-| **Compensation** | On-call is recognized — time off, pay, or equivalent — and the recognition is explicit |
+| **Compensation** | On-call is recognized (time off, pay, or equivalent), and the recognition is explicit |
 | **Post-incident recovery** | A heavy night means a late start or a day off, arranged without asking |
 | **Load visibility** | Page counts per shift are published; nobody carries the pager in secret |
 | **Fairness guard** | Experts get the hard escalations, but the rotation itself stays even |
 
-The fairness rule: on-call burden is a team resource, budgeted and balanced like any other — and the lead watches for the silent pattern where one person takes the hard pages because they are "better at it."
+The fairness rule: on-call burden is a team resource, budgeted and balanced like any other, and the lead watches for the silent pattern where one person takes the hard pages because they are "better at it."
 
 ## Shadow On-Call for New Joiners
 
@@ -71,11 +71,11 @@ The fairness rule: on-call burden is a team resource, budgeted and balanced like
 | **Third shift: solo with backup** | New engineer is primary; the secondary is explicitly briefed to be reachable |
 | **After each shift** | A short debrief: what was unclear, which runbooks helped, which did not |
 
-Shadowing is how runbook quality gets tested — the new joiner hits every gap the veterans have learned to step around. Their confusion is the best documentation audit the team will ever get.
+Shadowing is how runbook quality gets tested: the new joiner hits every gap the veterans have learned to step around. Their confusion is the best documentation audit the team will ever get.
 
 ## On-Call as Learning
 
-On-call is the team's most intense learning environment — if it is structured as one:
+On-call is the team's most intense learning environment, if it is structured as one:
 
 - **Post-page learning:** after every significant page, a five-minute capture: what did we learn, what would have helped?
 - **Runbook improvement:** every resolved page is an opportunity to make the runbook better; the fix is a pull request, not a note
@@ -107,6 +107,7 @@ The lead's stance: **the first suspect in every on-call failure is the system, n
 | **Shift satisfaction** | The human metric | Tracked informally and in retros, and acted on |
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A["Design rotation"] --> B["Tune alerts"]
     B --> C["Runbook coverage"]
@@ -150,7 +151,7 @@ flowchart LR
 | **Noisy alerts** | The pager cries wolf; real pages get ignored | Every page must be actionable; tune relentlessly |
 | **Uneven load** | The willing few carry it; the rotation is fiction | Publish page counts; rebalance by data |
 | **On-call without runbooks** | Every page is a fresh investigation at 3 a.m. | No alert without a runbook; runbooks improve after every page |
-| **No shadowing path** | New joiners are thrown to the pager | Shadow, paired, solo — with debriefs at each stage |
+| **No shadowing path** | New joiners are thrown to the pager | Shadow, paired, solo, with debriefs at each stage |
 | **Uncompensated burden** | The cost is invisible until attrition | Explicit recognition and recovery; load is a budgeted resource |
 | **Ignoring burnout signals** | The best engineers leave silently | The first suspect is the system; fix alerts and load before morale |
 
@@ -165,12 +166,12 @@ flowchart LR
 
 ## Related Topics
 
-- [[01_Incident_Command_Leadership]] — what happens when a page becomes an incident
-- [[06_Resilience_Engineering_Practices]] — the practices that make pages rare
-- [[07_Production_Excellence_Culture]] — the culture that treats on-call as learning
-- [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/06_Production_Readiness|Production Readiness (Senior)]] — the readiness standards that keep on-call calm
-- [[02_System_Ownership_and_Production_Responsibility/00_overview|System Ownership and Production Responsibility]] — the ownership that makes runbooks possible
+- [[01_Incident_Command_Leadership]]: what happens when a page becomes an incident
+- [[06_Resilience_Engineering_Practices]]: the practices that make pages rare
+- [[07_Production_Excellence_Culture]]: the culture that treats on-call as learning
+- [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/06_Production_Readiness|Production Readiness (Senior)]]: the readiness standards that keep on-call calm
+- [[career-path/05_Tech_Lead/02_System_Ownership_and_Production_Responsibility/00_overview|System Ownership and Production Responsibility]]: the ownership that makes runbooks possible
 
 ## Summary
 
-On-call excellence is a designed system, not a schedule: a fair rotation with a visible escalation ladder, alerts that are actionable and runbook-linked, compensation and recovery that keep the burden sustainable, a shadow-to-solo path that grows new responders safely, and health metrics that catch noise and burnout before they compound. The tech lead's test is simple — when the pager fires at 3 a.m., the person who answers has what they need to succeed, and the team can sustain that forever.
+On-call excellence is a designed system, not a schedule: a fair rotation with a visible escalation ladder, alerts that are actionable and runbook-linked, compensation and recovery that keep the burden sustainable, a shadow-to-solo path that grows new responders safely, and health metrics that catch noise and burnout before they compound. The tech lead's test is simple: when the pager fires at 3 a.m., the person who answers has what they need to succeed, and the team can sustain that forever.

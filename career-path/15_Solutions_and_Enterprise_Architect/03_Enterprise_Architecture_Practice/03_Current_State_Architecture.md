@@ -16,15 +16,15 @@ tags:
 
 # Current State Architecture
 
-> **Core skill:** Capturing and maintaining a trustworthy description of what exists — applications, integrations, data, and platforms — at a level of detail that serves decisions rather than decorating a shelf.
+> **Core skill:** Capturing and maintaining a trustworthy description of what exists (applications, integrations, data, and platforms) at a level of detail that serves decisions rather than decorating a shelf.
 
 ## Why This Matters
 
 You cannot manage a landscape you cannot see. Current-state architecture is the evidence base for every enterprise decision: consolidation candidates, migration scope, integration risk, cost reduction, and compliance exposure all come from knowing what is actually running, who owns it, and how it connects. Without it, every decision becomes an anecdote contest between the loudest stakeholders.
 
-The failure mode is not missing documentation — most enterprises have piles of it — but documentation that is stale, partial, or too detailed to use. A perfectly accurate register of 1,400 applications updated eighteen months ago is worse than a coarse map refreshed last month, because it invites false confidence. Currency beats precision.
+The failure mode is not missing documentation (most enterprises have piles of it) but documentation that is stale, partial, or too detailed to use. A perfectly accurate register of 1,400 applications updated eighteen months ago is worse than a coarse map refreshed last month, because it invites false confidence. Currency beats precision.
 
-The senior architect treats current state as a living instrument, not a project. It gets captured from what already exists — asset systems, discovery tooling, delivery records, and interviews — validated with owners, assessed against fitness dimensions, and updated by the events that change it: new intake, deliveries, and decommissions. The test of the artifact is simple: when a decision needs evidence, people reach for it without being told to.
+The senior architect treats current state as a living instrument, not a project. It gets captured from what already exists (asset systems, discovery tooling, delivery records, and interviews), validated with owners, assessed against fitness dimensions, and updated by the events that change it: new intake, deliveries, and decommissions. The test of the artifact is simple: when a decision needs evidence, people reach for it without being told to.
 
 ## What Current State Covers
 
@@ -73,7 +73,7 @@ A register becomes decision-useful when each element is assessed, not just liste
 | Risk | What is the exposure if it fails or is breached? | Availability, security, compliance |
 | Lifecycle stage | Where is it in adopt-tolerate-invest-migrate-eliminate? | Portfolio action class |
 
-The classic TIME classification — tolerate, invest, migrate, eliminate — is built from the first, second, fourth, and fifth dimensions combined. The output is a portfolio where every system has a stated disposition, even if the disposition is "tolerate for now".
+The classic TIME classification (tolerate, invest, migrate, eliminate) is built from the first, second, fourth, and fifth dimensions combined. The output is a portfolio where every system has a stated disposition, even if the disposition is "tolerate for now".
 
 ## Keeping It Current
 
@@ -89,6 +89,7 @@ The classic TIME classification — tolerate, invest, migrate, eliminate — is 
 ## The Capture and Maintenance Cycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CAPTURE["Capture from discovery, records, and interviews"] --> VALIDATE["Validate with system owners"]
     VALIDATE --> ASSESS["Assess fit, value, cost, and risk"]
@@ -143,9 +144,9 @@ flowchart LR
 
 - [[04_Target_State_Architecture]]: the destination the current state is measured against
 - [[02_Architecture_Domains_and_Layers]]: the domains this picture spans
-- [[06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: where the current state becomes a transition plan
+- [[career-path/15_Solutions_and_Enterprise_Architect/06_Transformation_Roadmaps_and_Portfolio/00_overview|Transformation Roadmaps and Portfolio]]: where the current state becomes a transition plan
 - [[career-path/06_Software_Architect/00_overview|Software Architect]]: solution-level views that feed the landscape
 
 ## Summary
 
-Current-state architecture is the evidence base for enterprise decisions: a landscape view of applications, integrations, data, and platforms that is assessed, owned, and kept current. The senior architect optimizes for currency and decision usefulness over documentary completeness, captures from triangulated sources, gives every entry an owner and a disposition, and wires updates into the events that change the landscape — intake, delivery, and decommission.
+Current-state architecture is the evidence base for enterprise decisions: a landscape view of applications, integrations, data, and platforms that is assessed, owned, and kept current. The senior architect optimizes for currency and decision usefulness over documentary completeness, captures from triangulated sources, gives every entry an owner and a disposition, and wires updates into the events that change the landscape: intake, delivery, and decommission.

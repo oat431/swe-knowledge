@@ -16,11 +16,11 @@ tags:
 
 # Technical Community Building
 
-> **Core skill:** The principal engineer designs and sustains the organization's technical community architecture — internal conferences, guilds, communities of practice, and cross-team forums — at a scale where communities learn, produce, and govern themselves without the principal in the room.
+> **Core skill:** The principal engineer designs and sustains the organization's technical community architecture (internal conferences, guilds, communities of practice, and cross-team forums) at a scale where communities learn, produce, and govern themselves without the principal in the room.
 
 ## Why This Matters
 
-A staff engineer runs a guild. A principal engineer designs the guild system. At the principal level, community building is not about facilitating a single community — it is about designing the architecture that supports multiple communities, connecting them across the organization, developing community leaders who sustain the work, and ensuring communities produce artifacts that improve daily engineering practice rather than becoming social clubs.
+A staff engineer runs a guild. A principal engineer designs the guild system. At the principal level, community building is not about facilitating a single community. It is about designing the architecture that supports multiple communities, connecting them across the organization, developing community leaders who sustain the work, and ensuring communities produce artifacts that improve daily engineering practice rather than becoming social clubs.
 
 Communities are also the principal's mechanism for scaling culture. A well-designed community system spreads practice, surfaces problems, and builds cross-team relationships at a scale no individual can reach. When a principal builds a community architecture that outlasts their tenure, they have built an engine for organizational learning that compounds for years.
 
@@ -91,11 +91,12 @@ Communities have lifecycles. The principal normalizes graceful endings so that c
 | The community has become a complaint forum without solutions | Restructure with an output commitment or close. Venting is not a community purpose |
 | A working group's problem is solved | Close with a written outcome and a celebration. Working groups that never end become permanent committees |
 
-The principal models the graceful close: celebrating what the community achieved, archiving its artifacts, and freeing the energy for new communities. The message is that communities are projects, not permanent structures — and endings are achievements, not failures.
+The principal models the graceful close: celebrating what the community achieved, archiving its artifacts, and freeing the energy for new communities. The message is that communities are projects, not permanent structures, and endings are achievements, not failures.
 
 ## The Community System
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     DESIGN["Principal designs community architecture: types, charters, connections"] --> LAUNCH["Launch communities with charters, cadence, output commitment, leadership rotation"]
     LAUNCH --> PRODUCE["Communities produce artifacts: standards, playbooks, learning sessions"]
@@ -127,7 +128,7 @@ flowchart TD
 - Type: [Guild | Chapter | Community of Practice | Working Group | Internal Conference]
 - Purpose: [what this community exists to spread, solve, or produce]
 - Scope: [topics, activities, domain boundaries]
-- Explicitly not for: [governance, decisions, assignments — things the community does not do]
+- Explicitly not for: [governance, decisions, assignments: things the community does not do]
 - Cadence: [meeting frequency, standing agenda]
 - Output commitment: [named artifact, schedule, adoption target]
 - Leadership: [current leader, term length, rotation process]

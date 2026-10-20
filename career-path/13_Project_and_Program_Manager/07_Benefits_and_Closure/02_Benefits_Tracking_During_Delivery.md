@@ -15,13 +15,13 @@ tags:
 
 # Benefits Tracking During Delivery
 
-> **Core skill:** Monitoring leading indicators of benefit realization throughout the project — so the project manager knows whether the project is on track to deliver value, not just on track to deliver outputs, and can raise the alarm early if the benefit case is eroding.
+> **Core skill:** Monitoring leading indicators of benefit realization throughout the project, so the project manager knows whether the project is on track to deliver value, not just on track to deliver outputs, and can raise the alarm early if the benefit case is eroding.
 
 ## Why This Matters
 
-The benefits management plan is a hypothesis: "If we deliver these outputs, under these assumptions, these benefits will result." Tracking during delivery tests that hypothesis while there is still time to act. A project that discovers at closure that benefits will not materialize has no time to change course. A project that tracks leading indicators during delivery can adjust scope, accelerate enablers, manage risks to benefits, or — in the hardest case — recommend stopping a project whose benefit case has collapsed.
+The benefits management plan is a hypothesis: "If we deliver these outputs, under these assumptions, these benefits will result." Tracking during delivery tests that hypothesis while there is still time to act. A project that discovers at closure that benefits will not materialize has no time to change course. A project that tracks leading indicators during delivery can adjust scope, accelerate enablers, manage risks to benefits, or (in the hardest case) recommend stopping a project whose benefit case has collapsed.
 
-Benefits tracking also keeps the project honest with its stakeholders. The sponsor who approved the project for a $2M annual saving deserves to know during delivery — not at closure — if the saving projection has dropped to $1M. The project manager who tracks benefits and communicates variance early maintains the trust that delivers honest conversations about scope, schedule, and even project continuation.
+Benefits tracking also keeps the project honest with its stakeholders. The sponsor who approved the project for a $2M annual saving deserves to know during delivery (not at closure) if the saving projection has dropped to $1M. The project manager who tracks benefits and communicates variance early maintains the trust that delivers honest conversations about scope, schedule, and even project continuation.
 
 ## Leading vs. Lagging Indicators
 
@@ -37,7 +37,7 @@ The project manager tracks leading indicators during delivery; the benefit owner
 | Benefit | Metric | Baseline | Target | Current | Trend | Confidence |
 |---------|--------|----------|--------|---------|-------|------------|
 | Reduced processing cost | Cost per invoice | $12 | $3 | $5 (pilot) | ↑ Improving | Medium |
-| Reduced support volume | Tickets/month | 5,000 | 2,000 | N/A (not yet live) | — | High |
+| Reduced support volume | Tickets/month | 5,000 | 2,000 | N/A (not yet live) | N/A | High |
 | Compliance achieved | Audit findings | 12 | 0 | 3 (pre-audit) | ↑ Improving | High |
 | Customer satisfaction | NPS | 32 | 50 | 38 (UAT feedback) | ↑ Improving | Medium |
 
@@ -71,13 +71,13 @@ Every status report should include a benefits section:
 
 | Element | Content |
 |---------|---------|
-| **Benefits headline** | One-sentence summary: benefits on track / at risk — with reason |
+| **Benefits headline** | One-sentence summary: benefits on track / at risk, with reason |
 | **Leading indicators** | Current vs. target for each tracked indicator |
 | **Benefit risks** | Top risks to benefits with mitigation status |
 | **Assumption status** | Any key assumptions that have changed |
 | **Benefit owner engagement** | Any concerns about benefit owner involvement |
 
-Benefits status is not a separate report — it is integrated into the project status report alongside schedule, cost, and risk. The project is on track only if all four dimensions are on track.
+Benefits status is not a separate report; it is integrated into the project status report alongside schedule, cost, and risk. The project is on track only if all four dimensions are on track.
 
 ## Benefits in Program Tracking
 
@@ -93,7 +93,7 @@ Program benefits tracking aggregates across projects:
 ### Benefits Tracking Checklist
 
 - [ ] Leading indicators are defined for every measurable benefit
-- [ ] Measurement data is collected on schedule — not just at closure
+- [ ] Measurement data is collected on schedule, not just at closure
 - [ ] Benefits status is included in every monthly status report
 - [ ] Negative trends in leading indicators are escalated within one reporting cycle
 - [ ] Benefit risks are in the risk register with mitigation plans
@@ -113,18 +113,18 @@ Program benefits tracking aggregates across projects:
 
 - Leading indicators are measured on schedule and reported in status reviews
 - Negative trends in leading indicators are escalated within one reporting cycle
-- Assumptions are reviewed at each phase gate — changed assumptions trigger benefit re-forecasting
-- Benefit owners are engaged throughout the project — not first contacted at closure
+- Assumptions are reviewed at each phase gate; changed assumptions trigger benefit re-forecasting
+- Benefit owners are engaged throughout the project, not first contacted at closure
 - Governance receives an integrated view: schedule, cost, risk, and benefits
 
 ## Related Topics
 
 - [[01_Benefits_Identification_and_Planning]]: the plan that tracking monitors
 - [[03_Benefits_Realization_at_Closure]]: the formal assessment at closure
-- [[04_Risk_and_Issues/00_overview|Risk and Issues]]: benefit risks in the risk register
+- [[career-path/13_Project_and_Program_Manager/04_Risk_and_Issues/00_overview|Risk and Issues]]: benefit risks in the risk register
 - [[03_Project_Communication_Management|Project Communication Management]]: benefits status in stakeholder communications
 - [[career-path/12_Technical_Program_Manager/07_Benefits_and_Outcome_Measurement/00_overview|Benefits and Outcome Measurement (TPM)]]: the program-level tracking discipline
 
 ## Summary
 
-Benefits tracking during delivery tests the benefits hypothesis while there is still time to act: leading indicators are measured on schedule, negative trends are escalated within one reporting cycle, assumption changes trigger benefit re-forecasting, and benefits status is integrated into every status report alongside schedule, cost, and risk. The project that tracks benefits during delivery can adjust; the project that measures benefits only at closure can only report. The difference is whether governance learns about a benefit shortfall in time to do something about it — or in time to commission a post-mortem on why nobody noticed.
+Benefits tracking during delivery tests the benefits hypothesis while there is still time to act: leading indicators are measured on schedule, negative trends are escalated within one reporting cycle, assumption changes trigger benefit re-forecasting, and benefits status is integrated into every status report alongside schedule, cost, and risk. The project that tracks benefits during delivery can adjust; the project that measures benefits only at closure can only report. The difference is whether governance learns about a benefit shortfall in time to do something about it, or in time to commission a post-mortem on why nobody noticed.

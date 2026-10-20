@@ -16,19 +16,20 @@ tags:
 
 # Schedule and Cost Tracking
 
-> **Core skill:** Collecting actual schedule progress and cost data against the baseline every status cycle — so the project manager knows where the project is, not where the plan says it should be.
+> **Core skill:** Collecting actual schedule progress and cost data against the baseline every status cycle, so the project manager knows where the project is, not where the plan says it should be.
 
 ## Why This Matters
 
 A baseline without tracking is an aspiration. Tracking without a baseline is a diary. The project manager's core operational discipline is putting actuals against the plan with enough frequency and honesty to see variance while it is still small enough to correct.
 
-Schedule and cost tracking is the heartbeat of project control. Every status cycle — typically weekly or bi-weekly — the project manager collects actual start and finish dates, remaining duration estimates, actual costs incurred, and percent complete on in-progress activities. This data feeds earned value analysis, variance reporting, and forecasting. Without it, the project manager is guessing.
+Schedule and cost tracking is the heartbeat of project control. Every status cycle (typically weekly or bi-weekly) the project manager collects actual start and finish dates, remaining duration estimates, actual costs incurred, and percent complete on in-progress activities. This data feeds earned value analysis, variance reporting, and forecasting. Without it, the project manager is guessing.
 
-The discipline is not the data collection itself — it is making sure the data is honest. Schedule tracking is routinely gamed: "90% complete" on an activity for three weeks in a row is not tracking; it is hoping. Cost tracking is routinely lagging: invoices arrive late, timesheets are submitted late, and the project manager sees last month's spending when this month's is already overspent.
+The discipline is not the data collection itself. It is making sure the data is honest. Schedule tracking is routinely gamed: "90% complete" on an activity for three weeks in a row is not tracking; it is hoping. Cost tracking is routinely lagging: invoices arrive late, timesheets are submitted late, and the project manager sees last month's spending when this month's is already overspent.
 
 ## The Tracking Cycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     COLLECT["Collect actuals: start/finish, remaining duration, costs incurred"] --> COMPARE["Compare actuals to baseline: schedule variance, cost variance"]
     COMPARE --> ANALYZE["Analyze: what caused the variance? Is it a trend or a one-off?"]
@@ -38,7 +39,7 @@ flowchart TD
     ACT --> COLLECT
 ```
 
-The cycle runs every status period. A tracking cycle that skips the analysis step — collecting data but not understanding it — is reporting without management.
+The cycle runs every status period. A tracking cycle that skips the analysis step (collecting data but not understanding it) is reporting without management.
 
 ## What to Track
 
@@ -48,7 +49,7 @@ The cycle runs every status period. A tracking cycle that skips the analysis ste
 |------------|--------|-----------|-----------------|
 | Actual start date | Team status update | Per activity | Activities starting late are an early warning |
 | Actual finish date | Team status update | Per activity | Accumulated delays on the critical path |
-| Remaining duration | Person doing the work | Every status cycle | Honest forecast from ground truth — more valuable than percent complete |
+| Remaining duration | Person doing the work | Every status cycle | Honest forecast from ground truth, more valuable than percent complete |
 | Percent complete | Objective measurement rule | Every status cycle | EV calculation; must be objective, not subjective |
 | Milestone achievement | Milestone list | As reached | Binary: met or missed; trend in misses is a warning |
 
@@ -74,7 +75,7 @@ Subjective percent complete is the most common source of dishonest schedule trac
 | **Physical percent complete** | Units complete / total units | Repeatable, countable work |
 | **Level of effort** | Time elapsed / total duration | Support or management activities with no measurable output |
 
-The rule must be chosen before the activity starts — changing the measurement rule mid-activity to make variance disappear is the oldest tracking abuse.
+The rule must be chosen before the activity starts. Changing the measurement rule mid-activity to make variance disappear is the oldest tracking abuse.
 
 ## Tracking at the Program Level
 
@@ -96,7 +97,7 @@ For program managers, tracking aggregates across projects and adds integration d
 | Finance/ERP system | Costs: invoices, accruals, commitments | Lag; accrual timing can mislead |
 | Spreadsheet | Anything the other systems do not cover | Manual; error-prone; version chaos |
 
-The project manager's job is to connect these systems — the finance system's cost data to the project tool's schedule data — so that earned value analysis is possible. When the cost system and the schedule system do not talk, EVM is manual and error-prone.
+The project manager's job is to connect these systems (the finance system's cost data to the project tool's schedule data) so that earned value analysis is possible. When the cost system and the schedule system do not talk, EVM is manual and error-prone.
 
 ## Practical Applications
 
@@ -116,16 +117,16 @@ The project manager's job is to connect these systems — the finance system's c
 - [ ] Is remaining duration growing on activities that should be closing?
 - [ ] Are actual costs diverging from planned costs, and why?
 - [ ] What items have started late or finished late this cycle?
-- [ ] Is the tracking data honest — would an auditor agree with the percent complete?
+- [ ] Is the tracking data honest? Would an auditor agree with the percent complete?
 
 ## Common Pitfalls
 
 | Pitfall | Why It Is a Problem | Better Approach |
 |---------|---------------------|-----------------|
-| **Subjective percent complete** | "90% complete" for three weeks — the last 10% is half the work | Objective measurement rules chosen before the activity starts |
+| **Subjective percent complete** | "90% complete" for three weeks: the last 10% is half the work | Objective measurement rules chosen before the activity starts |
 | **Tracking lag** | Data arrives too late to act on | Collect in the last two days of the status cycle; report in the first two days of the next |
 | **Cost blindness** | Only schedule is tracked; cost is "finance's job" | Track cost alongside schedule; the project manager owns the integrated view |
-| **Remaining-duration neglect** | Percent complete is tracked, but not how much work is left | Remaining duration from the person doing the work — it is the most honest number |
+| **Remaining-duration neglect** | Percent complete is tracked, but not how much work is left | Remaining duration from the person doing the work: it is the most honest number |
 | **Tracking-as-compliance** | Data collected to satisfy process, never analyzed | Every tracking cycle produces analysis, not just data |
 
 ## Success Indicators
@@ -142,8 +143,8 @@ The project manager's job is to connect these systems — the finance system's c
 - [[03_Cost_Estimation_and_Budgeting]]: the cost baseline
 - [[04_Earned_Value_Management]]: tracking data feeds EVM
 - [[06_Variance_Analysis_and_Reporting]]: tracking data is the input to variance analysis
-- [[02_Scope_and_Planning/00_overview|Scope and Planning]]: scope changes affect what is tracked
+- [[career-path/13_Project_and_Program_Manager/02_Scope_and_Planning/00_overview|Scope and Planning]]: scope changes affect what is tracked
 
 ## Summary
 
-Schedule and cost tracking is the project manager's operational backbone: collecting actuals against the baseline every status cycle with enough honesty to see variance while it is still correctable. The key discipline is objective progress measurement — not percent complete by feel — combined with remaining duration from the people doing the work. Tracking that collects data without analyzing it is reporting without management; tracking that analyzes and then acts is project control.
+Schedule and cost tracking is the project manager's operational backbone: collecting actuals against the baseline every status cycle with enough honesty to see variance while it is still correctable. The key discipline is objective progress measurement (not percent complete by feel) combined with remaining duration from the people doing the work. Tracking that collects data without analyzing it is reporting without management; tracking that analyzes and then acts is project control.

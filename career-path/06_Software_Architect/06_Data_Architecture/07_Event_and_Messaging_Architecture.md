@@ -16,13 +16,13 @@ tags:
 
 # Event and Messaging Architecture
 
-> **Core skill:** The architect designs event-driven data flow deliberately — event types and their contracts, schema evolution governed by a registry, the messaging infrastructure that carries them, and the consistency model the system will actually have.
+> **Core skill:** The architect designs event-driven data flow deliberately: event types and their contracts, schema evolution governed by a registry, the messaging infrastructure that carries them, and the consistency model the system will actually have.
 
 ## Why This Matters
 
 Events are the asynchronous backbone of data architecture. They carry facts between domains without synchronous coupling, feed read models and analytics, and trigger processes that would otherwise require fragile orchestration. But the moment an event is published, it becomes a public interface: producers can evolve around it, consumers cannot, and every schema decision is a promise made to unknown future readers.
 
-The architecture decisions are therefore explicit ones: what is a domain event, an integration event, or a notification; how schemas evolve and who enforces compatibility; which messaging infrastructure carries the traffic and what delivery semantics it provides; whether the domain stores state or history; and what consistency the consumers actually experience. Defaulting into events — publishing whatever the ORM emitted, into whatever broker was already running — produces the familiar failure set: incompatible schemas discovered at 02:00, replay disasters, duplicated side effects, and consumers who believe at-least-once means exactly-once.
+The architecture decisions are therefore explicit ones: what is a domain event, an integration event, or a notification; how schemas evolve and who enforces compatibility; which messaging infrastructure carries the traffic and what delivery semantics it provides; whether the domain stores state or history; and what consistency the consumers actually experience. Defaulting into events (publishing whatever the ORM emitted, into whatever broker was already running) produces the familiar failure set: incompatible schemas discovered at 02:00, replay disasters, duplicated side effects, and consumers who believe at-least-once means exactly-once.
 
 This note is the architect's view: event-driven design as a set of named decisions with contracts, ownership, and failure semantics, rather than an implementation detail of services that happen to talk asynchronously.
 
@@ -34,7 +34,7 @@ This note is the architect's view: event-driven design as a set of named decisio
 | **Integration event** | A deliberate publication across a domain boundary, contract-governed | Highest; registry enforced; compatibility tested | Other domains, partners | OrderShipped v2 for fulfillment and billing |
 | **Notification event** | A signal that something changed, carrying a reference rather than full payload | Low; stable envelope; payload-agnostic | Broad consumers who fetch details | Catalog updated for item ID 8842 |
 
-Commands are not events: a command is a request that can be rejected, an event is a fact that has already happened. Mixing the two — events that are secretly commands — reintroduces the coupling events were adopted to remove.
+Commands are not events: a command is a request that can be rejected, an event is a fact that has already happened. Mixing the two (events that are secretly commands) reintroduces the coupling events were adopted to remove.
 
 ## Event Schema Design and Versioning
 
@@ -49,7 +49,7 @@ Design rules that pay for themselves: schema first, before the first message is 
 
 ## Schema Registry as Architecture Component
 
-The schema registry is a structural gate, not a wiki page. Producers register schemas before publication; the registry checks compatibility against the policy; consumers resolve schemas by identity; and CI fails the build when a proposed change violates the contract. Its placement matters — between producer and broker — because that is the point where the system can still refuse an incompatible change cheaply. A registry that is not on the critical path is documentation; one that blocks incompatible publishes is control.
+The schema registry is a structural gate, not a wiki page. Producers register schemas before publication; the registry checks compatibility against the policy; consumers resolve schemas by identity; and CI fails the build when a proposed change violates the contract. Its placement matters (between producer and broker) because that is the point where the system can still refuse an incompatible change cheaply. A registry that is not on the critical path is documentation; one that blocks incompatible publishes is control.
 
 ## Messaging Infrastructure Choices
 
@@ -63,7 +63,7 @@ The schema registry is a structural gate, not a wiki page. Producers register sc
 
 ## Event Sourcing as an Architectural Decision
 
-Event sourcing stores the sequence of events as the system of record, with state as a derived projection. It is a fit when history is the product — ledgers, audit-critical domains, temporal queries — and a liability when it is adopted for CRUD that merely wants decoupling.
+Event sourcing stores the sequence of events as the system of record, with state as a derived projection. It is a fit when history is the product (ledgers, audit-critical domains, temporal queries) and a liability when it is adopted for CRUD that merely wants decoupling.
 
 | Aspect | Event Sourcing | State-Store with Event Publication |
 |--------|----------------|-----------------------------------|
@@ -76,6 +76,7 @@ Event sourcing stores the sequence of events as the system of record, with state
 ## The Event Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PRODUCER["Producer records a domain fact"] --> REGISTRY["Schema registry validates the contract"]
     REGISTRY --> BROKER["Broker or log distributes the event"]
@@ -92,12 +93,12 @@ flowchart LR
 - [ ] Schemas are registered and compatibility-checked in CI before publication
 - [ ] Delivery semantics are stated per topic or queue, and consumers are idempotent accordingly
 - [ ] Ordering guarantees are documented per stream, and consumers depend on no stronger truth
-- [ ] The consistency model — lag, read-your-writes handling, compensation — is designed and communicated
+- [ ] The consistency model (lag, read-your-writes handling, compensation) is designed and communicated
 
 ### Event Contract Template
 
 ```markdown
-## Event Contract — OrderShipped v2
+## Event Contract: OrderShipped v2
 
 | Field | Value |
 |-------|-------|
@@ -134,9 +135,9 @@ flowchart LR
 
 - [[01_Data_Domains_and_Ownership]]
 - [[02_Data_Flow_Architecture]]
-- [[02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]
+- [[career-path/06_Software_Architect/02_Quality_Attribute_Analysis/00_overview|Quality Attribute Analysis]]
 - [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer]]
 
 ## Summary
 
-Event-driven architecture is a set of decisions made deliberately: which events are domain facts, integration contracts, or notifications; how schemas evolve under registry-enforced compatibility; which platform carries which traffic with which delivery guarantees; whether history itself is the system of record; and what consistency consumers actually get. The contract discipline — schema first, immutable facts, idempotent consumers, tested replay — is what keeps an event backbone from becoming an unmanageable public interface. The architect owns those decisions because the events outlive the services that publish them.
+Event-driven architecture is a set of decisions made deliberately: which events are domain facts, integration contracts, or notifications; how schemas evolve under registry-enforced compatibility; which platform carries which traffic with which delivery guarantees; whether history itself is the system of record; and what consistency consumers actually get. The contract discipline (schema first, immutable facts, idempotent consumers, tested replay) is what keeps an event backbone from becoming an unmanageable public interface. The architect owns those decisions because the events outlive the services that publish them.

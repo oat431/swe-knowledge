@@ -16,11 +16,11 @@ tags:
 
 # Technical Debt Leadership
 
-> **Core skill:** Making technical debt visible and negotiated — a register with costs, a payoff strategy with capacity, and a language that lets non-engineers make informed trade-offs.
+> **Core skill:** Making technical debt visible and negotiated: a register with costs, a payoff strategy with capacity, and a language that lets non-engineers make informed trade-offs.
 
 ## Why This Matters
 
-Every system accumulates debt: code that was right for its moment and wrong for now, shortcuts taken under deadline, components nobody owns anymore. Debt is not the problem — invisible debt is. Invisible debt compounds silently until delivery stalls, incidents cluster in the same rotten areas, and every estimate carries a hidden surcharge the team has stopped noticing.
+Every system accumulates debt: code that was right for its moment and wrong for now, shortcuts taken under deadline, components nobody owns anymore. Debt is not the problem. Invisible debt is. Invisible debt compounds silently until delivery stalls, incidents cluster in the same rotten areas, and every estimate carries a hidden surcharge the team has stopped noticing.
 
 A senior engineer pays down debt in their own area. A tech lead manages debt as a portfolio: registered, quantified, negotiated for capacity, and communicated in terms stakeholders can act on. The register is the artifact that makes debt a planning input instead of a retrospective confession.
 
@@ -32,7 +32,7 @@ A senior engineer pays down debt in their own area. A tech lead manages debt as 
 | Tech lead | Public register, quantified costs, negotiated payoff capacity |
 | Organization | Debt investment in planning, shared language across teams |
 
-The register changes the conversation. A personal list is a wish; a public register is a proposal — items with costs and risks that compete for capacity like any other work.
+The register changes the conversation. A personal list is a wish; a public register is a proposal: items with costs and risks that compete for capacity like any other work.
 
 ## The Debt Register
 
@@ -45,7 +45,7 @@ The register changes the conversation. A personal list is a wish; a public regis
 | Owner | Who tracks it | Alice |
 | Status | Open, planned, in progress, paid | Open |
 
-Keep the register short — the top ten to twenty items, ranked. A register of two hundred items is a museum; a register of fifteen ranked items is a working document.
+Keep the register short: the top ten to twenty items, ranked. A register of two hundred items is a museum; a register of fifteen ranked items is a working document.
 
 ## Quantifying Debt Impact
 
@@ -67,7 +67,7 @@ Numbers are the language of payoff negotiation. "This module is painful" is a co
 | Risk-based case | Debt items compete as risk investments: cost of incident vs cost of fix | Items with incident history |
 | Bundled with features | Debt payoff rides along with feature work in the same area | Touching-up as you go |
 
-The negotiation rule: debt is work like any other work. It needs an owner, a scope, an estimate, and a review — and it should win capacity on the same evidence basis as features, not on guilt.
+The negotiation rule: debt is work like any other work. It needs an owner, a scope, an estimate, and a review, and it should win capacity on the same evidence basis as features, not on guilt.
 
 ## Debt vs Deliberate Pragmatism
 
@@ -79,7 +79,7 @@ The negotiation rule: debt is work like any other work. It needs an owner, a sco
 | Deliberate simplification with a written decision | No | A decision, recorded, with a revisit date |
 | Skipped abstraction you will never need | No | You avoided speculative complexity |
 
-Not every shortcut is debt. The distinction is whether the cost is paid once or forever. What makes pragmatism legitimate is the written decision — the ADR or note that says what was chosen, why, and when to revisit. What makes a shortcut debt is silence.
+Not every shortcut is debt. The distinction is whether the cost is paid once or forever. What makes pragmatism legitimate is the written decision: the ADR or note that says what was chosen, why, and when to revisit. What makes a shortcut debt is silence.
 
 ## Communicating Debt to Non-Engineers
 
@@ -93,6 +93,7 @@ Not every shortcut is debt. The distinction is whether the cost is paid once or 
 The translation rule: debt is a maintenance cost on the product's future. Stakeholders understand maintenance budgets; what they do not understand is jargon.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     REGISTER["Maintain ranked debt register"] --> QUANTIFY["Quantify cost and risk"]
     QUANTIFY --> NEGOTIATE["Negotiate payoff capacity"]
@@ -105,13 +106,13 @@ flowchart TD
 ## Practical Applications
 
 ```markdown
-## Debt Register — [team]
+## Debt Register: [team]
 
 | Rank | Item | Cost | Risk | Payoff | Owner | Status |
 |------|------|------|------|--------|-------|--------|
 | 1 | [module] | [days per change] | [failure mode] | [days] | [name] | [open] |
 
-## Payoff Negotiation — [quarter]
+## Payoff Negotiation: [quarter]
 - [ ] Capacity model chosen: [fixed percent / debt sprint / risk case]
 - [ ] Items funded this quarter: [list]
 - [ ] Items deferred, with the reason: [list]
@@ -155,4 +156,4 @@ Checklist:
 
 ## Summary
 
-Technical debt leadership is portfolio management: a short ranked register with quantified costs, payoff capacity negotiated on evidence, and a translation layer that lets stakeholders judge trade-offs in their own terms. The register makes debt a planning input; the negotiation makes it funded work; and the deliberate-pragmatism distinction keeps honest shortcuts from becoming guilty secrets. Debt is not the enemy — invisibility is.
+Technical debt leadership is portfolio management: a short ranked register with quantified costs, payoff capacity negotiated on evidence, and a translation layer that lets stakeholders judge trade-offs in their own terms. The register makes debt a planning input; the negotiation makes it funded work; and the deliberate-pragmatism distinction keeps honest shortcuts from becoming guilty secrets. Debt is not the enemy. Invisibility is.

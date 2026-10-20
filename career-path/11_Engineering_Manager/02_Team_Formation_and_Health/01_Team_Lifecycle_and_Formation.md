@@ -16,11 +16,11 @@ tags:
 
 # Team Lifecycle and Formation
 
-> **Core skill:** Guiding teams through forming, storming, norming, and performing — and knowing what to do when membership, scope, or structure changes and the cycle restarts.
+> **Core skill:** Guiding teams through forming, storming, norming, and performing, and knowing what to do when membership, scope, or structure changes and the cycle restarts.
 
 ## Why This Matters
 
-A group of people becomes a team through a predictable arc — and every manager who ignores the arc pays for it. New teams that skip the messy middle look calm for a month and then explode in week six, when unspoken disagreements surface as conflict. Re-orged teams expect to perform immediately and quietly mourn the old team instead. The manager who knows the stages can name them, normalize them, and build the structures that move the team through them faster.
+A group of people becomes a team through a predictable arc, and every manager who ignores the arc pays for it. New teams that skip the messy middle look calm for a month and then explode in week six, when unspoken disagreements surface as conflict. Re-orged teams expect to perform immediately and quietly mourn the old team instead. The manager who knows the stages can name them, normalize them, and build the structures that move the team through them faster.
 
 The lifecycle is also the calendar of the manager's attention: what to do, what to expect, and what to fix changes completely between stage one and stage four. Managing a forming team with performing-team habits creates chaos; managing a performing team with forming-team hand-holding creates resentment. Stage awareness is the difference between reacting to the team and leading it.
 
@@ -33,7 +33,7 @@ The lifecycle is also the calendar of the manager's attention: what to do, what 
 | Norming | Agreements stick; identity forms | Consistency and feedback | Protect the norms; coach the team to self-correct |
 | Performing | Independent, self-organizing, high trust | Autonomy and challenge | Get out of the way; watch for drift |
 
-The stages are not a one-way street — teams slide backward on stress, membership changes, and re-orgs. The manager's skill is recognizing the current stage honestly instead of insisting on the stage in the org chart.
+The stages are not a one-way street: teams slide backward on stress, membership changes, and re-orgs. The manager's skill is recognizing the current stage honestly instead of insisting on the stage in the org chart.
 
 ## What the Manager Does at Each Stage
 
@@ -44,7 +44,7 @@ The stages are not a one-way street — teams slide backward on stress, membersh
 | Norming | Accountability, quality bars | Retros, working agreements, review cadence | Who owns what, who feels heard |
 | Performing | Delegation, external focus | Lightweight ceremonies, autonomy | Complacency, drift, burnout |
 
-In forming, the manager is the frame. In storming, the manager is the referee. In norming, the manager is the coach. In performing, the manager is the shield — and mostly absent from the team's internal life.
+In forming, the manager is the frame. In storming, the manager is the referee. In norming, the manager is the coach. In performing, the manager is the shield, and mostly absent from the team's internal life.
 
 ## New Team Formation Checklist
 
@@ -71,7 +71,7 @@ The checklist's purpose is speed through forming: teams that know why they exist
 | Scope changes | Mission, priorities, dependencies | Re-charter the changed part; reset expectations |
 | Re-org | Everything | Treat as a new forming stage with the old team's memory |
 
-The mistake is assuming the team that was performing stays performing after a change. One new member is a new team — the norms were never written down in a way the newcomer can inherit, so they must be re-made together. The manager names the restart openly: "we are forming again; here is what that means."
+The mistake is assuming the team that was performing stays performing after a change. One new member is a new team. The norms were never written down in a way the newcomer can inherit, so they must be re-made together. The manager names the restart openly: "we are forming again; here is what that means."
 
 ## Team Maturity Signals
 
@@ -87,11 +87,12 @@ Maturity is observable in who talks, who fixes, and who decides when the manager
 
 ## Re-Forming After Re-Orgs
 
-Re-orgs are the hardest restart because the team carries the memory of what died. The manager handles the transition honestly: what ended, what is kept, what is new. The old team's grief is real — for people, rituals, and identity — and naming it beats ignoring it. Then the forming work begins deliberately: a fresh charter, a kickoff that acknowledges the past and commits to the future, and early wins that build the new team's own stories. Re-orgs fail when management assumes the new team will simply be productive; they succeed when the new team is given a formation period and permission to be new.
+Re-orgs are the hardest restart because the team carries the memory of what died. The manager handles the transition honestly: what ended, what is kept, what is new. The old team's grief is real (for people, rituals, and identity) and naming it beats ignoring it. Then the forming work begins deliberately: a fresh charter, a kickoff that acknowledges the past and commits to the future, and early wins that build the new team's own stories. Re-orgs fail when management assumes the new team will simply be productive; they succeed when the new team is given a formation period and permission to be new.
 
 ## The Lifecycle Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     FORM["Form with mission and roles"] --> STORM["Storm with conflict norms"]
     STORM --> NORM["Norm with agreements and identity"]
@@ -133,8 +134,8 @@ flowchart TD
 - [[02_Psychological_Safety_in_Practice]]: the safety work that makes storming productive
 - [[04_Team_Charter_and_Working_Agreements]]: the charter accelerates every stage
 - [[07_Team_Transitions_and_Exits]]: departures are lifecycle events
-- [[01_People_Development/00_overview|People Development]]: the people work that runs alongside the lifecycle
+- [[career-path/11_Engineering_Manager/01_People_Development/00_overview|People Development]]: the people work that runs alongside the lifecycle
 
 ## Summary
 
-The team lifecycle is a predictable arc — forming, storming, norming, performing — that the manager leads with stage-appropriate moves: frame, referee, coach, shield. Every membership change restarts the cycle, and re-orgs demand an honest acknowledgment of what died before the new team can form. Managers who name the stage, build the right structures, and test maturity by stepping back turn the messy middle into the team's strongest asset.
+The team lifecycle is a predictable arc (forming, storming, norming, performing) that the manager leads with stage-appropriate moves: frame, referee, coach, shield. Every membership change restarts the cycle, and re-orgs demand an honest acknowledgment of what died before the new team can form. Managers who name the stage, build the right structures, and test maturity by stepping back turn the messy middle into the team's strongest asset.

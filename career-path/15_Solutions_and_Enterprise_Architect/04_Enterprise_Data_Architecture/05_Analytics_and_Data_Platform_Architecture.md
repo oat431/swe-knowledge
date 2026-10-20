@@ -17,7 +17,7 @@ tags:
 
 # Analytics and Data Platform Architecture
 
-> **Core skill:** Choosing the enterprise analytics platform shape — warehouse, lake, lakehouse, streaming — and the zone architecture that serves business intelligence, operations, and data science from governed, cost-aware foundations.
+> **Core skill:** Choosing the enterprise analytics platform shape (warehouse, lake, lakehouse, streaming) and the zone architecture that serves business intelligence, operations, and data science from governed, cost-aware foundations.
 
 ## Why This Matters
 
@@ -25,7 +25,7 @@ Platform decisions are decade decisions. The warehouse pattern, the lake pattern
 
 The workloads keep multiplying: regulated reporting, self-service business intelligence, operational analytics embedded in applications, data science, and increasingly real-time and machine-learning consumers. No single storage engine serves all of them equally well. The architectural question is not "which platform wins" but "which zones, engines, and contracts let each workload be served at the right cost and latency without duplicating the estate."
 
-The senior architect's discipline is twofold. First, treat the platform as zones with a single governed set of definitions flowing through them, so analysts and scientists argue about analysis rather than data locations. Second, make cost and freshness explicit design dimensions — the two properties most often discovered after the fact, in the budget review and the first outage of a critical dashboard.
+The senior architect's discipline is twofold. First, treat the platform as zones with a single governed set of definitions flowing through them, so analysts and scientists argue about analysis rather than data locations. Second, make cost and freshness explicit design dimensions: the two properties most often discovered after the fact, in the budget review and the first outage of a critical dashboard.
 
 ## Workload Classes
 
@@ -62,7 +62,7 @@ One platform rarely serves all six natively. The design question is which worklo
 | **Serving** | Marts, features, semantic models | Built for consumers; performance-optimized; SLA-bound |
 | **Sandbox** | Exploration space | Time-boxed; promotes results back through governed paths |
 
-The rule that keeps zones from collapsing into each other: data moves forward through governed transformations, and consumers read from serving or conformed zones — never from landing or raw, except scientists with explicit sanction.
+The rule that keeps zones from collapsing into each other: data moves forward through governed transformations, and consumers read from serving or conformed zones, never from landing or raw, except scientists with explicit sanction.
 
 ## Batch, Streaming, and Hybrid
 
@@ -72,7 +72,7 @@ The rule that keeps zones from collapsing into each other: data moves forward th
 | Streaming | Seconds | Monitoring, embedded analytics, event reactions | Cost and operational burden out of proportion to need |
 | Hybrid | Mixed | Most enterprises: batch core, streaming exceptions | Duplicated logic across both paths |
 
-Hybrid is the realistic destination for most organizations. The architectural commitment is that both paths apply the same definitions — the semantic layer, not each pipeline, is where consistency lives.
+Hybrid is the realistic destination for most organizations. The architectural commitment is that both paths apply the same definitions: the semantic layer, not each pipeline, is where consistency lives.
 
 ## Cost and Consumption Dimensions
 
@@ -89,6 +89,7 @@ Cost is an architectural property, not an operational afterthought: every zone, 
 ## The Zone-Based Platform
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     INGEST["Ingest - batch and streaming sources"] --> RAW["Raw zone - immutable landing"]
     RAW --> CONFORMED["Conformed zone - cleaned and integrated"]
@@ -110,7 +111,7 @@ flowchart TD
 ### Platform Decision Matrix
 
 ```markdown
-# Platform Decision — [Scope]
+# Platform Decision: [Scope]
 
 ## Workloads Served
 - [Classes with latency and concurrency expectations]

@@ -29,6 +29,7 @@ But governance that is too heavy creates bottlenecks, slows delivery, and drives
 ## The Governance Spectrum
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     subgraph LIGHT["Lightweight Governance"]
         ADR["Architecture Decision Records"]
@@ -94,6 +95,7 @@ Automated checks that verify architectural constraints:
 - **Cost:** Low (automated, runs in CI/CD pipeline)
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     CODE["Code Change"] --> CI["CI/CD Pipeline"]
     CI --> FITNESS["Fitness Functions"]
@@ -246,6 +248,7 @@ A senior engineer prevents erosion through:
 ### The architecture debt cycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     PRESSURE["Delivery Pressure"] --> SHORTCUT["Take Shortcut\nViolate Constraint"]
     SHORTCUT --> DEBT["Architecture Debt"]

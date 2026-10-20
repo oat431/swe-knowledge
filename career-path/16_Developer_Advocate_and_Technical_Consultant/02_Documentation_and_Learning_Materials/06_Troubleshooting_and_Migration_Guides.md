@@ -16,15 +16,15 @@ tags:
 
 # Troubleshooting and Migration Guides
 
-> **Core skill:** The advocate turns real failures into rescue content — troubleshooting pages organized by the symptoms users report and migrations mapped as planned breakage — so problems are solved in the docs instead of in a support queue.
+> **Core skill:** The advocate turns real failures into rescue content (troubleshooting pages organized by the symptoms users report and migrations mapped as planned breakage) so problems are solved in the docs instead of in a support queue.
 
 ## Why This Matters
 
-Troubleshooting documentation meets users at their most motivated and least patient moment. Something is broken, the clock is running, and the person searching is not reading carefully — they are scanning for their exact error text. This is the single most valuable content in the docs set, because a page that resolves the failure preserves the entire adoption journey, while a missing page sends the user to support, to a competitor, or to a decision that this tool is not ready for production. The support ticket is where trust leaks; troubleshooting content is the repair.
+Troubleshooting documentation meets users at their most motivated and least patient moment. Something is broken, the clock is running, and the person searching is not reading carefully. They are scanning for their exact error text. This is the single most valuable content in the docs set, because a page that resolves the failure preserves the entire adoption journey, while a missing page sends the user to support, to a competitor, or to a decision that this tool is not ready for production. The support ticket is where trust leaks; troubleshooting content is the repair.
 
-The discipline that makes it work is starting from symptoms, not from causes. Engineers document failures by root cause, because that is how they understand them; users search by observable symptoms, because that is all they have. A page titled with internal error categories is invisible; a page that begins with the literal error message and walks a diagnosis is found and used. Great troubleshooting content reads like an expert sitting beside the user — reproduce, isolate, resolve, verify — and it is built from the raw material of actual support conversations, not from the author's imagination.
+The discipline that makes it work is starting from symptoms, not from causes. Engineers document failures by root cause, because that is how they understand them; users search by observable symptoms, because that is all they have. A page titled with internal error categories is invisible; a page that begins with the literal error message and walks a diagnosis is found and used. Great troubleshooting content reads like an expert sitting beside the user (reproduce, isolate, resolve, verify) and it is built from the raw material of actual support conversations, not from the author's imagination.
 
-Migration guides are troubleshooting's higher-stakes sibling: failure that is planned, scheduled, and still surprising. Upgrades are where long-lived trust is won or lost, because a botched migration takes production systems with it and its story circulates for years. The professional treats a version upgrade as a documented operation — what breaks, in what order, with what tooling, and how to roll back — so that customers move forward confidently instead of deferring upgrades until the old version's support ends.
+Migration guides are troubleshooting's higher-stakes sibling: failure that is planned, scheduled, and still surprising. Upgrades are where long-lived trust is won or lost, because a botched migration takes production systems with it and its story circulates for years. The professional treats a version upgrade as a documented operation (what breaks, in what order, with what tooling, and how to roll back) so that customers move forward confidently instead of deferring upgrades until the old version's support ends.
 
 ## Mining Real Failures
 
@@ -68,6 +68,7 @@ The quick-resolution-first structure serves both audiences: the majority who nee
 ## The Failure-to-Fix Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     SYMPTOM["Collect symptoms from tickets and search logs"] --> DIAGNOSE["Group symptoms into failure paths"]
     DIAGNOSE["Group symptoms into failure paths"] --> REPRODUCE["Reproduce each failure from a clean state"]
@@ -91,7 +92,7 @@ The flow is cumulative: each fix adds a reproducible scenario to the team's unde
 ### Migration Guide Template
 
 ```markdown
-## Migration Guide — <from version to version>
+## Migration Guide: <from version to version>
 
 | Section | Content |
 |---------|---------|
@@ -127,10 +128,10 @@ The flow is cumulative: each fix adds a reproducible scenario to the team's unde
 
 - [[03_Reference_and_API_Documentation]]
 - [[05_Information_Architecture_and_Search]]
-- [[04_Customer_and_Developer_Understanding/00_overview|Customer and Developer Understanding]]
-- [[07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]]
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/04_Customer_and_Developer_Understanding/00_overview|Customer and Developer Understanding]]
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/07_Product_Feedback_and_Ecosystem_Strategy/00_overview|Product Feedback and Ecosystem Strategy]]
 - [[career-path/02_Senior_Software_Engineer/06_Communication_and_Influence/05_Documentation_Strategy|Documentation Strategy (Senior)]]
 
 ## Summary
 
-Troubleshooting and migration guides are rescue content: pages that open with the user's exact symptom, serve the common fix first, walk a diagnosis with verification, and prevent recurrence — plus migrations mapped as planned breakage with tooling, staging, and rollback. The advocate who mines real failures and answers them in the docs converts the most fragile moment of technology adoption into the moment that earns enduring trust.
+Troubleshooting and migration guides are rescue content: pages that open with the user's exact symptom, serve the common fix first, walk a diagnosis with verification, and prevent recurrence, plus migrations mapped as planned breakage with tooling, staging, and rollback. The advocate who mines real failures and answers them in the docs converts the most fragile moment of technology adoption into the moment that earns enduring trust.

@@ -67,7 +67,7 @@ tags:
 
 | Priority | Proposed note / module | What it should contain |
 |---|---|---|
-| 🎯 High | `08_AI_Enabled_System_Architecture/` | `01_AI_Components_as_Architecture_Elements`, `02_Non_Determinism_as_a_Quality_Attribute`, `03_Evaluation_as_Fitness_Function`, `04_Model_Gateway_and_Inference_Cost`, `05_Guardrails_as_Structure`; cross-link to [[career-path/18_Applied_AI_Engineer/00_overview\|Applied AI Engineer]] |
+| 🎯 High | `08_AI_Enabled_System_Architecture/` | `01_AI_Components_as_Architecture_Elements`, `02_Non_Determinism_as_a_Quality_Attribute`, `03_Evaluation_as_Fitness_Function`, `04_Model_Gateway_and_Inference_Cost`, `05_Guardrails_as_Structure`; cross-link to [[career-path/18_Applied_AI_Engineer/00_overview|Applied AI Engineer]] |
 | 🎯 High | `01_Architecture_Fundamentals/08_Domain_Driven_Boundaries.md` | Bounded contexts, context maps, event storming, and aligning domains with teams (Conway) |
 | 🎯 High | `06_Data_Architecture/08_API_and_Integration_Architecture.md` (or a new module) | Interface styles, contract-first design, versioning and deprecation policy, gateways, compatibility guarantees |
 | Medium | `04_Architecture_Evaluation_and_Trade_Offs/08_Modernization_and_Migration_Strategy.md` | Strangler fig, branch by abstraction, decomposition sequencing, data migration, and when *not* to modernize |
@@ -86,7 +86,7 @@ tags:
 | 04 Evaluation & Trade-Offs | ✅ Excellent | Add modernization strategy |
 | 05 Security Architecture | ✅ Strong | Cross-link to Security Engineer `02_Secure_Architecture_and_Design` |
 | 06 Data Architecture | ✅ Strong | Add API/integration architecture |
-| 07 Operations & Infrastructure | ✅ Strong (best FinOps coverage in the map) | — |
+| 07 Operations & Infrastructure | ✅ Strong (best FinOps coverage in the map) | N/A |
 
 ## Quick Fixes
 

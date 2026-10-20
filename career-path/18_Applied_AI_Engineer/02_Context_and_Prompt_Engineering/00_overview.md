@@ -15,13 +15,13 @@ tags:
 
 # Context and Prompt Engineering
 
-> **Capability area:** Designing the instructions and assembled context that turn a foundation model into reliable product behavior — the engineered layer between your data and the model call.
+> **Capability area:** Designing the instructions and assembled context that turn a foundation model into reliable product behavior, the engineered layer between your data and the model call.
 
 ## Why This Matters at Senior Level
 
 A mid-level engineer writes a prompt that works on the demo and pastes it into code. A senior applied AI engineer owns the whole context pipeline: prompts as versioned artifacts with regression gates, a token budget allocated deliberately across instructions, memory, and evidence, and an assembly step reproducible enough to debug weeks later.
 
-Prompt quality is the cheapest lever on model behavior — but also the most dangerous one, because a changed sentence can silently ship a policy change, a regression, or a jailbreak. Nobody will review your prompt unless you make it reviewable. That is engineering work, and it is this area's core.
+Prompt quality is the cheapest lever on model behavior, but also the most dangerous one, because a changed sentence can silently ship a policy change, a regression, or a jailbreak. Nobody will review your prompt unless you make it reviewable. That is engineering work, and it is this area's core.
 
 Senior judgment shows in:
 - Treating prompts as versioned code released through review, not ad-hoc strings edited in production dashboards
@@ -44,6 +44,7 @@ Senior judgment shows in:
 ## Context Assembly Pipeline
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A["User Input"] --> H["Context Assembly"]
     B["Conversation History"] --> H
@@ -63,7 +64,7 @@ flowchart LR
 **In scope:** prompt design principles; system vs user message structure; context-window budgeting, compaction, and conversational memory; template versioning and prompt regression gating; few-shot and chain-of-thought techniques; and the per-request assembly of context sources, ordering, and budget allocation.
 
 **Out of scope** (owned by sibling areas):
-- RAG internals — chunking, embeddings, hybrid retrieval, reranking → [[career-path/18_Applied_AI_Engineer/01_LLM_Application_Patterns/00_overview|LLM Application Patterns]]
+- RAG internals: chunking, embeddings, hybrid retrieval, reranking → [[career-path/18_Applied_AI_Engineer/01_LLM_Application_Patterns/00_overview|LLM Application Patterns]]
 - Eval suite construction and prompt-quality metrics → [[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability]]
 - Prompt injection defense and input/output guardrails → [[career-path/18_Applied_AI_Engineer/04_AI_Security_and_Guardrails/00_overview|AI Security and Guardrails]]
 - Model selection, cost, and latency of the call itself → [[career-path/18_Applied_AI_Engineer/05_Model_and_Inference_Operations/00_overview|Model and Inference Operations]]
@@ -72,7 +73,7 @@ flowchart LR
 ## Key Principles
 
 - The prompt is a contract, not a wish: every instruction must be one the model can verify it is following
-- Every token in the context must be able to answer "what is this for?" — if not, it is noise that dilutes attention
+- Every token in the context must be able to answer "what is this for?"; if not, it is noise that dilutes attention
 - Untrusted input is data, never instructions; it enters the payload through the user role, delimited and framed
 - Prompts are code: versioned, reviewed, rolled back, and attributed to the requests they served
 - Assembly must be deterministic and observable: same inputs, same prompt; and you must be able to see what was sent
@@ -82,7 +83,7 @@ flowchart LR
 | Anti-Pattern | Why It Fails | Better Approach |
 |-------------|-------------|-----------------|
 | Prompt edited live in a production UI | No review, no rollback, no record | Template in version control, deployed through CI |
-| Concatenating user input into the system prompt | User text reads as trusted instruction — injection surface | Pass user input as a separate, delimited user message |
+| Concatenating user input into the system prompt | User text reads as trusted instruction, injection surface | Pass user input as a separate, delimited user message |
 | Filling the window "because it fits" | Attention dilutes, cost and latency rise, lost-in-the-middle errors | Fixed budget per section with explicit eviction order |
 | One mega-prompt for every task | A change for one behavior regresses unrelated ones | Task-scoped templates with shared instruction blocks |
 | Reasoning demanded on every call | Tokens and latency burned where a lookup suffices | Reasoning only on multi-step tasks; reasoning models for hard ones |

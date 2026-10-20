@@ -16,13 +16,13 @@ tags:
 
 # Risk Governance
 
-> **Core skill:** The principal establishes the enterprise technical risk framework — categories, scoring, ownership, and review cadence — that makes systemic risk visible to the board and integrates risk governance with architecture governance.
+> **Core skill:** The principal establishes the enterprise technical risk framework (categories, scoring, ownership, and review cadence) that makes systemic risk visible to the board and integrates risk governance with architecture governance.
 
 ## Why This Matters
 
-At 500+ engineers, technical risk is distributed across hundreds of systems, teams, and decisions. No single person sees the whole risk picture without a framework that aggregates it. The failure mode is not that risks are unknown — individual teams know their risks — but that systemic risks, the ones that emerge from interactions between systems, are invisible until they become incidents.
+At 500+ engineers, technical risk is distributed across hundreds of systems, teams, and decisions. No single person sees the whole risk picture without a framework that aggregates it. The failure mode is not that risks are unknown (individual teams know their risks), but that systemic risks, the ones that emerge from interactions between systems, are invisible until they become incidents.
 
-The principal owns the risk framework: the categories that make risks comparable, the scoring that makes risks prioritizable, the ownership model that makes risks actionable, and the review cadence that keeps risks current. Risk governance at this level is not about filling out spreadsheets — it is about making the organization's risk posture legible to the board so that investment in risk reduction competes with other investments on equal terms.
+The principal owns the risk framework: the categories that make risks comparable, the scoring that makes risks prioritizable, the ownership model that makes risks actionable, and the review cadence that keeps risks current. Risk governance at this level is not about filling out spreadsheets. It is about making the organization's risk posture legible to the board so that investment in risk reduction competes with other investments on equal terms.
 
 ## Enterprise Technical Risk Categories
 
@@ -50,7 +50,7 @@ Risk scoring makes risks comparable across categories so the organization can pr
 | **Velocity** | 1 (slow burn) to 5 (immediate) | How quickly the impact is felt once the risk materializes |
 | **Detectability** | 1 (obvious) to 5 (invisible) | How hard it is to detect the risk materializing before impact is felt |
 
-The risk score is the product of likelihood and impact, with velocity and detectability as modifiers that can escalate a lower-score risk into immediate action. A risk with moderate likelihood and impact but invisible detectability and immediate velocity — a silent failure in a critical path — may warrant more urgent response than a higher-score risk that is slow and detectable.
+The risk score is the product of likelihood and impact, with velocity and detectability as modifiers that can escalate a lower-score risk into immediate action. A risk with moderate likelihood and impact but invisible detectability and immediate velocity (a silent failure in a critical path) may warrant more urgent response than a higher-score risk that is slow and detectable.
 
 ### Risk Appetite Statements
 
@@ -77,7 +77,7 @@ Systemic risk emerges from interactions between systems, not from any single sys
 | **Assumption drift** | Systems built on assumptions that are no longer true but have not been revalidated | Architecture assumption register; periodic assumption review |
 | **Compounding technical debt** | Debt in multiple systems that, combined, makes a cross-cutting change impossible without rewrites | Technical debt mapping across system boundaries |
 
-The principal's systemic risk review — a quarterly practice — examines the risk register not for individual risks but for patterns: clusters of related risks, risks that share a dependency, risks that would cascade if a common component failed.
+The principal's systemic risk review, a quarterly practice, examines the risk register not for individual risks but for patterns: clusters of related risks, risks that share a dependency, risks that would cascade if a common component failed.
 
 ## Integrating Risk and Architecture Governance
 
@@ -164,4 +164,4 @@ The board report's job is to make the case for risk reduction investment in term
 
 ## Summary
 
-Risk governance at principal scale makes systemic technical risk legible to the board: categories that distinguish different risk responses, scoring that makes risks comparable, appetite statements that define acceptable risk per category, a register reviewed quarterly for individual and systemic patterns, and integration with architecture governance so that every architecture decision feeds the risk picture. The principal owns the framework — not every risk, but the system that makes risk visible, comparable, and investable.
+Risk governance at principal scale makes systemic technical risk legible to the board: categories that distinguish different risk responses, scoring that makes risks comparable, appetite statements that define acceptable risk per category, a register reviewed quarterly for individual and systemic patterns, and integration with architecture governance so that every architecture decision feeds the risk picture. The principal owns the framework, not every risk, but the system that makes risk visible, comparable, and investable.

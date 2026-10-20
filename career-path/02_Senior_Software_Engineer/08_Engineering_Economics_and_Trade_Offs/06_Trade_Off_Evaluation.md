@@ -37,6 +37,7 @@ Structured trade-off evaluation makes decisions transparent, repeatable, and def
 ## Trade-Off Evaluation Framework
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     A[Define Decision] --> B[Identify Alternatives]
     B --> C[Define Criteria]
@@ -295,9 +296,9 @@ While SQS has vendor lock-in risk, this criterion has low weight (5%) because:
 ```markdown
 | Criterion | Reliability | Cost | Speed | Total | Weight |
 |-----------|-------------|------|-------|-------|--------|
-| Reliability | - | 2 | 3 | 5 | 42% |
-| Cost | 1 | - | 2 | 3 | 25% |
-| Speed | 1 | 1 | - | 2 | 17% |
+| Reliability | N/A | 2 | 3 | 5 | 42% |
+| Cost | 1 | N/A | 2 | 3 | 25% |
+| Speed | 1 | 1 | N/A | 2 | 17% |
 | Quality | 1 | 2 | 2 | 5 | 17% |
 | **Total** | | | | **12** | **100%** |
 ```
@@ -478,7 +479,7 @@ Before making a decision with trade-offs:
 - [[02_Build_vs_Buy_Decisions|Build vs Buy Decisions]]: Common trade-off scenario
 - [[03_Technical_Debt_ROI|Technical Debt ROI]]: Trade-off between speed and quality
 - [[05_Business_Case_Development|Business Case Development]]: Presenting trade-off decisions to stakeholders
-- [[03_Architecture_and_Design_Judgment/00_overview|Architecture and Design Judgment]]: Technical trade-offs in architecture
+- [[career-path/02_Senior_Software_Engineer/03_Architecture_and_Design_Judgment/00_overview|Architecture and Design Judgment]]: Technical trade-offs in architecture
 
 ## Summary
 

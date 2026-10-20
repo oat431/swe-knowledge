@@ -15,13 +15,13 @@ tags:
 
 # Knowledge Continuity
 
-> **Core skill:** Treating knowledge as an org asset — auditing critical knowledge, reducing bus factor by blast radius, and building mechanisms that survive attrition, reorgs, and time.
+> **Core skill:** Treating knowledge as an org asset: auditing critical knowledge, reducing bus factor by blast radius, and building mechanisms that survive attrition, reorgs, and time.
 
 ## Why This Matters
 
-Knowledge is the org's least managed asset and its most fragile one. The expert departs and the system becomes a mystery; the re-org scatters the people who held the context; the undocumented decision is re-litigated by people who were not there; the tribal knowledge decays silently as its holders move on. Every one of these is a knowledge event, and none of them is handled by a process — because the process is the thing missing.
+Knowledge is the org's least managed asset and its most fragile one. The expert departs and the system becomes a mystery; the re-org scatters the people who held the context; the undocumented decision is re-litigated by people who were not there; the tribal knowledge decays silently as its holders move on. Every one of these is a knowledge event, and none of them is handled by a process, because the process is the thing missing.
 
-Continuity is a risk discipline: knowledge concentration is a risk with a blast radius, and it belongs in the same register as any other. The staff engineer's job is making the invisible asset visible — measuring the bus factor, mapping critical knowledge, and building the mechanisms that keep the org smart when the smart people leave.
+Continuity is a risk discipline: knowledge concentration is a risk with a blast radius, and it belongs in the same register as any other. The staff engineer's job is making the invisible asset visible: measuring the bus factor, mapping critical knowledge, and building the mechanisms that keep the org smart when the smart people leave.
 
 ## Knowledge as Org Asset
 
@@ -44,7 +44,7 @@ The asset frame changes the questions: not "can we replace the person" but "what
 | **Tribal knowledge** | Critical facts exist only in heads | The deployment order nobody wrote down |
 | **Single-expert concentration** | One person gates everything | Bus factor of one on the critical path |
 
-Each threat has a different clock and a different mechanism — which is why the audit comes before the plan: you cannot defend against threats you have not named.
+Each threat has a different clock and a different mechanism, which is why the audit comes before the plan: you cannot defend against threats you have not named.
 
 ## The Continuity Audit
 
@@ -101,7 +101,7 @@ The plan's rule: fix the highest blast radius first, measure by bus factor chang
 
 ## Continuity in Reorgs
 
-Reorgs are knowledge events with a known date — the rituals must be scheduled:
+Reorgs are knowledge events with a known date; the rituals must be scheduled:
 
 | Ritual | What It Preserves |
 |---|---|
@@ -138,6 +138,7 @@ Continuity findings belong in the risk register like any other exposure:
 The link works both ways: the risk register makes continuity visible to leadership, and the continuity audit feeds the register with priced findings. Knowledge risk treated as risk gets funded; knowledge risk treated as HR gets hoped about.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     KNOWLEDGE["Critical knowledge"] --> AUDIT["Bus factor audit"]
     AUDIT --> MECHANISMS["Rotation pairing docs"]
@@ -181,9 +182,9 @@ flowchart TD
 - [[02_Judgment_Transfer]]: the transfer mechanisms in action
 - [[04_Writing_as_Scaling]]: documents as the continuity backbone
 - [[05_Growing_the_Next_Staff]]: the pipeline that replaces knowledge loss
-- [[06_Technical_Risk_and_Judgment/00_overview|Technical Risk and Judgment]]: continuity as a priced risk
+- [[career-path/03_Staff_Engineer/06_Technical_Risk_and_Judgment/00_overview|Technical Risk and Judgment]]: continuity as a priced risk
 - [[career-path/05_Tech_Lead/05_Team_Development_and_Mentoring_Leadership/00_overview|Team Development and Mentoring Leadership (Tech Lead)]]: the team-level continuity practice
 
 ## Summary
 
-Knowledge continuity is risk management for the org's most fragile asset: audit bus factor and critical knowledge quarterly, rank the reduction plan by blast radius, and run the mechanisms — documentation ownership, rotation, pairing, succession plans — that give every critical item two holders and one written form. Reorgs get their rituals, continuity findings get priced into the register, and onboarding speed becomes the outcome metric. The org that manages its knowledge survives its people; the org that does not is one departure from a mystery.
+Knowledge continuity is risk management for the org's most fragile asset: audit bus factor and critical knowledge quarterly, rank the reduction plan by blast radius, and run the mechanisms (documentation ownership, rotation, pairing, succession plans) that give every critical item two holders and one written form. Reorgs get their rituals, continuity findings get priced into the register, and onboarding speed becomes the outcome metric. The org that manages its knowledge survives its people; the org that does not is one departure from a mystery.

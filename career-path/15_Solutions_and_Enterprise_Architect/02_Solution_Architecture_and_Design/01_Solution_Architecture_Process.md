@@ -15,13 +15,13 @@ tags:
 
 # Solution Architecture Process
 
-> **Core skill:** Running the solution architecture process end to end — from business need and requirements through options, concept, design, delivery support, and handover — with clear inputs, outputs, and gate decisions.
+> **Core skill:** Running the solution architecture process end to end (from business need and requirements through options, concept, design, delivery support, and handover) with clear inputs, outputs, and gate decisions.
 
 ## Why This Matters
 
-Solution architecture is not a document; it is a process with a beginning, middle, and end. It begins when a business need is framed, moves through options and concept when commitments are still cheap to change, settles into detailed design when the direction is approved, and continues through delivery and transition until the solution runs. Architects who treat it as an event — a document produced once, then abandoned — leave the two most valuable phases, delivery support and handover, to improvisation.
+Solution architecture is not a document; it is a process with a beginning, middle, and end. It begins when a business need is framed, moves through options and concept when commitments are still cheap to change, settles into detailed design when the direction is approved, and continues through delivery and transition until the solution runs. Architects who treat it as an event (a document produced once, then abandoned) leave the two most valuable phases, delivery support and handover, to improvisation.
 
-The process exists to control a specific risk: the cost of changing your mind rises steeply as delivery proceeds. Every gate the process installs — options before concept, concept before commitment, design before build — is placed where options are still viable and decisions are still cheap. Skipping gates does not accelerate delivery; it moves the correction cost from the whiteboard to production.
+The process exists to control a specific risk: the cost of changing your mind rises steeply as delivery proceeds. Every gate the process installs (options before concept, concept before commitment, design before build) is placed where options are still viable and decisions are still cheap. Skipping gates does not accelerate delivery; it moves the correction cost from the whiteboard to production.
 
 It also defines the architect's interfaces. Each stage consumes defined inputs and produces defined outputs for specific consumers: the business case consumes options; the delivery team consumes the design; operations consumes the handover. An architect whose outputs have no clearly identified consumer is producing shelfware, and the process tells you which artifact is missing when a downstream party is improvising.
 
@@ -51,6 +51,7 @@ The gates can be formal or lightweight, but each must have a named decision owne
 ## The Design Flow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     NEED["Business need"] --> OPTIONS["Options and evaluation"]
     OPTIONS["Options and evaluation"] --> CONCEPT["Concept design"]
@@ -133,4 +134,4 @@ Risks and blockers: <open items>
 
 ## Summary
 
-The solution architecture process turns a business need into an operating solution through controlled stages: need and drivers, options, concept, detailed design, delivery support, and transition, each with defined inputs, outputs, and a gate decision with a named owner. Its gates exist where the cost of changing your mind is still low, and its outputs exist for named consumers — business case, delivery, operations. The process flexes with delivery context but never drops its core decisions, because every dropped gate converts a cheap correction today into an expensive one after go-live.
+The solution architecture process turns a business need into an operating solution through controlled stages: need and drivers, options, concept, detailed design, delivery support, and transition, each with defined inputs, outputs, and a gate decision with a named owner. Its gates exist where the cost of changing your mind is still low, and its outputs exist for named consumers: business case, delivery, operations. The process flexes with delivery context but never drops its core decisions, because every dropped gate converts a cheap correction today into an expensive one after go-live.

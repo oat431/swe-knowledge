@@ -16,15 +16,15 @@ tags:
 
 # Service Offers and Packaging
 
-> **Core skill:** Structuring what you sell into defined, repeatable offers — assessments, projects, retainers — packaged so prospects can buy without a bespoke proposal every time.
+> **Core skill:** Structuring what you sell into defined, repeatable offers (assessments, projects, retainers) packaged so prospects can buy without a bespoke proposal every time.
 
 ## Why This Matters
 
-Services feel bespoke by nature, and most independents let them be fully bespoke. The cost appears quietly: every sale starts from zero, every proposal is written from scratch, every scope conversation is new, and delivery quality varies with whatever was promised in the moment. Custom selling makes the cost of sales unbounded — the classic independent trap where revenue grows but hours and stress grow faster.
+Services feel bespoke by nature, and most independents let them be fully bespoke. The cost appears quietly: every sale starts from zero, every proposal is written from scratch, every scope conversation is new, and delivery quality varies with whatever was promised in the moment. Custom selling makes the cost of sales unbounded, the classic independent trap where revenue grows but hours and stress grow faster.
 
-Packaging turns expertise into products that can be sold and delivered repeatedly. An offer is a promise with edges: a named outcome, a duration or effort limit, explicit inclusions and exclusions, a price, and a defined way to start. Edges are not bureaucracy — they are what allows a prospect to say yes without a series of meetings, and what allows the independent to deliver profitably without renegotiating scope mid-flight.
+Packaging turns expertise into products that can be sold and delivered repeatedly. An offer is a promise with edges: a named outcome, a duration or effort limit, explicit inclusions and exclusions, a price, and a defined way to start. Edges are not bureaucracy. They are what allows a prospect to say yes without a series of meetings, and what allows the independent to deliver profitably without renegotiating scope mid-flight.
 
-A healthy portfolio layers three kinds of offers. The entry offer — a paid assessment or diagnostic — lets a cautious buyer start small and lets you qualify the problem. The core offer delivers the main outcome. The ongoing offer — retainer or support — stabilizes revenue between projects and turns one-time engagements into relationships. Each layer answers a different question the buyer is asking.
+A healthy portfolio layers three kinds of offers. The entry offer (a paid assessment or diagnostic) lets a cautious buyer start small and lets you qualify the problem. The core offer delivers the main outcome. The ongoing offer (retainer or support) stabilizes revenue between projects and turns one-time engagements into relationships. Each layer answers a different question the buyer is asking.
 
 ## The Offer Layers
 
@@ -52,6 +52,7 @@ A healthy portfolio layers three kinds of offers. The entry offer — a paid ass
 ## The Layered Offer
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     AUDIT["Entry offer as paid assessment"] --> BUILD["Core offer as fixed scope project"]
     BUILD --> RET["Ongoing offer as retainer support"]
@@ -74,7 +75,7 @@ Buyers enter through the smallest gate they trust and move right as value is pro
 ### Offer Card Template
 
 ```markdown
-## Offer Card — <offer name>
+## Offer Card: <offer name>
 
 Promise: <outcome in one sentence>.
 For: <buyer and trigger>.
@@ -110,9 +111,9 @@ Starts when: <deposit, kickoff conditions>.
 - [[02_Value_Propositions_and_One_Pagers]]
 - [[03_Pricing_Models_and_Strategies]]
 - [[05_Scoping_and_Deliverable_Definition]]
-- [[01_Problem_Discovery_and_Customer_Validation/00_overview|Problem Discovery and Customer Validation]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/01_Problem_Discovery_and_Customer_Validation/00_overview|Problem Discovery and Customer Validation]]
 - [[career-path/16_Developer_Advocate_and_Technical_Consultant/05_Solution_Guidance/00_overview|Solution Guidance (Dev Advocate)]]
 
 ## Summary
 
-Service offers and packaging convert expertise into buyable products: layered offers — entry, core, ongoing — with explicit promises, boundaries, prices, and start conditions. The independent who packages what they sell spends less time re-selling themselves, delivers with fewer surprises, and builds a portfolio where each client relationship has a natural next step.
+Service offers and packaging convert expertise into buyable products: layered offers (entry, core, ongoing) with explicit promises, boundaries, prices, and start conditions. The independent who packages what they sell spends less time re-selling themselves, delivers with fewer surprises, and builds a portfolio where each client relationship has a natural next step.

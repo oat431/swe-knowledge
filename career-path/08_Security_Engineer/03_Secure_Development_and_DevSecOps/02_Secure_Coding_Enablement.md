@@ -48,6 +48,7 @@ A training session without a paved road often creates awareness but not behavior
 ### 2. The Secure Coding Feedback Loop
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     PATTERN["Recurring risk pattern"] --> GUIDANCE["Actionable guidance"]
     GUIDANCE --> API["Safe helper or interface"]
@@ -138,7 +139,7 @@ Choose one recurring weakness in your current codebase, such as unsafe deseriali
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]: secure construction and assurance foundations
 - [[01_Security_Requirements_in_Backlog|Security Requirements in Backlog]]: requirements that guide examples and acceptance tests
 - [[03_DevSecOps_Pipeline_Controls|DevSecOps Pipeline Controls]]: where developer feedback becomes automated control
-- [[04_Security_Verification_and_Testing/02_SAST_and_Taint_Analysis|SAST and Taint Analysis]]: interpreting static signals used for coaching
+- [[career-path/08_Security_Engineer/04_Security_Verification_and_Testing/02_SAST_and_Taint_Analysis|SAST and Taint Analysis]]: interpreting static signals used for coaching
 
 ## Key Takeaways
 

@@ -16,11 +16,11 @@ tags:
 
 # Problem to Solution Mapping
 
-> **Core skill:** Translating a discovered, messy problem into a small set of viable technical approaches — each traceable to the customer's real constraints, not the consultant's favorite stack.
+> **Core skill:** Translating a discovered, messy problem into a small set of viable technical approaches: each traceable to the customer's real constraints, not the consultant's favorite stack.
 
 ## Why This Matters
 
-Between a customer's stated problem and a workable solution sits a mapping step most engagements skip: the jump from "we need X" to "here is the architecture" is where recommendations go wrong. The consultant's value is not choosing technology; it is establishing that the technology chosen actually fits the problem as it exists — the constraints, the skills, the budget, the legacy, the politics.
+Between a customer's stated problem and a workable solution sits a mapping step most engagements skip: the jump from "we need X" to "here is the architecture" is where recommendations go wrong. The consultant's value is not choosing technology; it is establishing that the technology chosen actually fits the problem as it exists: the constraints, the skills, the budget, the legacy, the politics.
 
 A good mapping makes the problem legible before the solution becomes visible. It separates symptoms from causes, stated wants from underlying needs, and technical problems from process problems wearing technical clothes. The output is not a design; it is a small set of options with trade-offs, each traceable back to evidence.
 
@@ -78,6 +78,7 @@ The discipline: every approach must map to the framed need, and every claim in t
 ## The Mapping Sequence
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     LISTEN["Listen - problem in customer words"] --> FRAME["Frame - needs, constraints, success"]
     FRAME --> MAP["Map - options with trade-offs"]
@@ -101,7 +102,7 @@ Mapping is not complete when the consultant is convinced; it is complete when th
 ### Options Register Template
 
 ```markdown
-## Options Register — [engagement]
+## Options Register: [engagement]
 | # | Approach | Need It Serves | Trade-Offs | Constraints Cleared | Cost Class |
 |---|----------|----------------|------------|---------------------|------------|
 | 1 | [extend / adopt / build / replatform] | [need] | [costs, risks] | [list] | [low / medium / high] |
@@ -137,9 +138,9 @@ Mapping is not complete when the consultant is convinced; it is complete when th
 - [[02_Reference_Architectures_and_Patterns]]: proven structures that turn mapped options into design
 - [[03_Proofs_of_Concept_and_Pilots]]: the next step when mapping leaves real uncertainty
 - [[06_Adoption_Strategy_with_Customers]]: the mapped solution only matters if it gets adopted
-- [[04_Customer_and_Developer_Understanding/00_overview|Customer and Developer Understanding]]: mapping starts from what discovery found
+- [[career-path/16_Developer_Advocate_and_Technical_Consultant/04_Customer_and_Developer_Understanding/00_overview|Customer and Developer Understanding]]: mapping starts from what discovery found
 - [[career-path/15_Solutions_and_Enterprise_Architect/02_Solution_Architecture_and_Design/00_overview|Solution Architecture and Design (Solutions Architect)]]: the architecture depth this mapping feeds
 
 ## Summary
 
-Problem to solution mapping is the discipline of holding the request loosely and the need firmly: frame the problem, list the constraints, map a small set of approaches with honest trade-offs, and recommend a direction the customer can defend alone. The mapping is done when the reasoning transfers — not when the consultant is convinced. That transfer is what turns a recommendation into a decision the customer owns.
+Problem to solution mapping is the discipline of holding the request loosely and the need firmly: frame the problem, list the constraints, map a small set of approaches with honest trade-offs, and recommend a direction the customer can defend alone. The mapping is done when the reasoning transfers, not when the consultant is convinced. That transfer is what turns a recommendation into a decision the customer owns.

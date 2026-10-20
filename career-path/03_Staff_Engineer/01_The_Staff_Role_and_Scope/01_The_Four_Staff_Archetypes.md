@@ -16,13 +16,13 @@ tags:
 
 # The Four Staff Archetypes
 
-> **Core skill:** Choosing between the four staff archetypes — Tech Lead, Architect, Solver, and Right Hand — and writing the mandate that matches the organization's need, not just personal preference.
+> **Core skill:** Choosing between the four staff archetypes (Tech Lead, Architect, Solver, and Right Hand) and writing the mandate that matches the organization's need, not just personal preference.
 
 ## Why This Matters
 
-The staff role is too broad to be defined by a job description. Two staff engineers at the same company can spend their days doing completely different work — one steering a platform team through a rewrite, another untangling a data corruption issue that has blocked three teams. Will Larson's *Staff Engineer* names the four recurring shapes this work takes: **Tech Lead** (guides a team), **Architect** (owns domain design), **Solver** (dives into hard problems), and **Right Hand** (extends an executive). The archetype is the default operating mode that makes the rest of the operating model coherent: scope, calendar, and success measures all follow from it.
+The staff role is too broad to be defined by a job description. Two staff engineers at the same company can spend their days doing completely different work: one steering a platform team through a rewrite, another untangling a data corruption issue that has blocked three teams. Will Larson's *Staff Engineer* names the four recurring shapes this work takes: **Tech Lead** (guides a team), **Architect** (owns domain design), **Solver** (dives into hard problems), and **Right Hand** (extends an executive). The archetype is the default operating mode that makes the rest of the operating model coherent: scope, calendar, and success measures all follow from it.
 
-The archetype must be chosen by **organizational need**, not preference alone. An org with five teams building overlapping services needs an Architect; an org with a new CTO trying to understand its own systems needs a Right Hand. Choosing the archetype you enjoy while the org needs another produces impact in the wrong direction — technically interesting, strategically invisible. The discipline is to read the org's gaps honestly, match the archetype to the gap, and write the mandate down so the choice survives quarterly reviews and leadership changes.
+The archetype must be chosen by **organizational need**, not preference alone. An org with five teams building overlapping services needs an Architect; an org with a new CTO trying to understand its own systems needs a Right Hand. Choosing the archetype you enjoy while the org needs another produces impact in the wrong direction: technically interesting, strategically invisible. The discipline is to read the org's gaps honestly, match the archetype to the gap, and write the mandate down so the choice survives quarterly reviews and leadership changes.
 
 ## The Four Archetypes
 
@@ -33,7 +33,7 @@ The archetype must be chosen by **organizational need**, not preference alone. A
 | **Solver** | Takes deep dives into hard problems wherever they live | Chronic incidents, gnarly bugs, or stalled technical problems block multiple teams |
 | **Right Hand** | Extends an executive; multiplies their technical reach | Leadership needs trusted technical perspective, review, or leverage beyond their own depth |
 
-The archetypes are not ranks. An Architect is not "more senior" than a Solver — they serve different org needs. What makes an archetype staff-level is the **scope of the problem**, not the shape of the work.
+The archetypes are not ranks. An Architect is not "more senior" than a Solver. They serve different org needs. What makes an archetype staff-level is the **scope of the problem**, not the shape of the work.
 
 ## Matching Archetype to Org Need
 
@@ -61,7 +61,7 @@ Mixing is normal; **drifting** is not. Each arc should name its archetype delibe
 
 ## Archetypes Change Over Time
 
-As the org matures, the gaps move. A Tech Lead who was right at three hundred people may be wrong at three thousand, when the org's need shifts to Architect work across a sprawled platform. A Solver who thrived in the incident-heavy years may find the problems disappear as reliability improves. Archetype drift happens on both sides: the org changes its need, or you change what you want to do. Revisit the archetype at least annually with leadership — the question is not "what do I want to be," but "what does the org need now, and is that a fit I can sustain."
+As the org matures, the gaps move. A Tech Lead who was right at three hundred people may be wrong at three thousand, when the org's need shifts to Architect work across a sprawled platform. A Solver who thrived in the incident-heavy years may find the problems disappear as reliability improves. Archetype drift happens on both sides: the org changes its need, or you change what you want to do. Revisit the archetype at least annually with leadership. The question is not "what do I want to be," but "what does the org need now, and is that a fit I can sustain."
 
 ## The Written Mandate per Archetype
 
@@ -76,6 +76,7 @@ As the org matures, the gaps move. A Tech Lead who was right at three hundred pe
 A mandate that names the archetype prevents the most common staff failure: doing excellent work in the wrong shape.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     GAPS["Identify org gaps"] --> MATCH["Match archetype to the gap"]
     MATCH --> CHOOSE["Choose primary archetype"]
@@ -88,7 +89,7 @@ flowchart TD
 ## Practical Applications
 
 ```markdown
-# Staff Mandate — [name] — [date]
+# Staff Mandate: [name], [date]
 
 ## Archetype
 - [ ] Primary archetype: [Tech Lead / Architect / Solver / Right Hand]
@@ -141,8 +142,8 @@ Checklist:
 - [[02_Staff_vs_Senior_Scope]]: what the scope jump means regardless of archetype
 - [[03_Finding_Staff_Scope_Work]]: finding the gaps the archetype must answer
 - [[07_First_90_Days_as_Staff]]: choosing the archetype early in the role
-- [[03_Technical_Strategy/00_overview|Technical Strategy]]: the highest-leverage output for most archetypes
+- [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview|Technical Strategy]]: the highest-leverage output for most archetypes
 
 ## Summary
 
-The four staff archetypes — Tech Lead, Architect, Solver, and Right Hand — are the recurring shapes of staff work. The archetype must be chosen by organizational need, named in a written mandate, and revisited as the org matures; arcs can mix archetypes deliberately, but the default shape must be deliberate too. Staff work fails most often when it is excellent in the wrong shape — the archetype is the guard against that failure.
+The four staff archetypes (Tech Lead, Architect, Solver, and Right Hand) are the recurring shapes of staff work. The archetype must be chosen by organizational need, named in a written mandate, and revisited as the org matures; arcs can mix archetypes deliberately, but the default shape must be deliberate too. Staff work fails most often when it is excellent in the wrong shape. The archetype is the guard against that failure.

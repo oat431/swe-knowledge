@@ -16,15 +16,15 @@ tags:
 
 # The Architect Role in Context
 
-> **Core skill:** Operating the architect role within an engineering organization — knowing its scope and mandate, its boundaries with Tech Lead and Staff Engineer, and when an org needs a dedicated architect versus distributed architecture responsibility.
+> **Core skill:** Operating the architect role within an engineering organization, knowing its scope and mandate, its boundaries with Tech Lead and Staff Engineer, and when an org needs a dedicated architect versus distributed architecture responsibility.
 
 ## Why This Matters
 
 The architect role is one of the least standardized in software engineering. In some organizations the architect is a gatekeeper who approves every design; in others the title does not exist and architecture is everybody's job; in still others the architect is a senior developer with a fancier title but no distinct mandate. The result is confusion about who owns structure, who may make binding decisions, and who is accountable when the system's shape becomes a problem.
 
-Role clarity matters because it determines where architecture attention goes and who is allowed to spend it. When the architect is undefined, structural decisions happen anyway — made by whoever reaches them first, with no coordination and no record. When the architect is over-defined, every cross-team interface waits on a single person's approval and delivery slows to that person's throughput.
+Role clarity matters because it determines where architecture attention goes and who is allowed to spend it. When the architect is undefined, structural decisions happen anyway, made by whoever reaches them first, with no coordination and no record. When the architect is over-defined, every cross-team interface waits on a single person's approval and delivery slows to that person's throughput.
 
-This note positions the architect among neighboring roles — Tech Lead, Staff Engineer, Engineering Manager — and gives criteria for when a dedicated architect is worth the title and when distributed architecture responsibility is the better fit.
+This note positions the architect among neighboring roles (Tech Lead, Staff Engineer, Engineering Manager) and gives criteria for when a dedicated architect is worth the title and when distributed architecture responsibility is the better fit.
 
 ## Architect vs Neighboring Roles
 
@@ -49,7 +49,7 @@ The roles overlap at the edges: a Tech Lead may own architecture for their team'
 | **Enterprise architect** | Technology strategy across the organization | Sets technology standards, principles, and governance; rarely decides per-system structure | Large enterprise with many systems and teams |
 | **Solution architect** | One solution spanning multiple systems | Decides how systems integrate to deliver a business capability | Project-based work crossing system boundaries |
 
-The mandate is more useful than the title. A person titled "Software Architect" with a system-architect mandate operates differently from the same title with a platform mandate. The architect's first question is always: what system, domain, or platform am I responsible for shaping — and what authority do I have over it?
+The mandate is more useful than the title. A person titled "Software Architect" with a system-architect mandate operates differently from the same title with a platform mandate. The architect's first question is always: what system, domain, or platform am I responsible for shaping, and what authority do I have over it?
 
 ## Multi-Role Teams
 
@@ -62,7 +62,7 @@ In smaller organizations or teams, one person plays multiple roles. The combinat
 | **Architect + Engineering Manager** | Structure and staffing aligned; team shaped to architecture | Conflict of interest: manager incentives may override architectural integrity |
 | **Team doing architecture collectively** | Distributed ownership; no bottleneck | No accountability for whole-system structure; nobody can say why it is shaped that way |
 
-When one person plays architect among other roles, the risk is always the same: urgent work crowds out important structural thinking. The mitigation is a recurring architecture cadence — a half-day per increment reserved for structure, protected from feature pressure. Without it, the architect portion of the role is always the first to be deferred.
+When one person plays architect among other roles, the risk is always the same: urgent work crowds out important structural thinking. The mitigation is a recurring architecture cadence: a half-day per increment reserved for structure, protected from feature pressure. Without it, the architect portion of the role is always the first to be deferred.
 
 ## The Architect as Enabler, Not Gatekeeper
 
@@ -74,7 +74,7 @@ When one person plays architect among other roles, the risk is always the same: 
 | Architecture documentation is a compliance artifact | Architecture documentation is a shared understanding tool |
 | The architect's calendar is full of approval meetings | The architect's calendar is full of design collaboration and forward planning |
 
-The enabler model does not mean the architect never says no. It means the architect says no to structural choices that would degrade the system's quality attributes — with evidence — and delegates everything else. The architect's most valuable word is not "approved" or "rejected"; it is "here is the constraint you must respect, and here is why."
+The enabler model does not mean the architect never says no. It means the architect says no to structural choices that would degrade the system's quality attributes (with evidence) and delegates everything else. The architect's most valuable word is not "approved" or "rejected"; it is "here is the constraint you must respect, and here is why."
 
 ## When an Org Needs a Dedicated Architect
 
@@ -92,9 +92,10 @@ The enabler model does not mean the architect never says no. It means the archit
 | **Mature platform with stable boundaries** | The platform's structure is settled; decisions are operational, not architectural | Transition to platform engineering with architectural guidelines, not a dedicated architect |
 | **Strong senior engineering culture** | Senior engineers already own structural decisions within clear principles | Keep architecture distributed; invest in architectural principles and review cadences |
 
-The decision to create or eliminate a dedicated architect role follows the same logic as any architectural decision: what is the cost of not having the role, and who will pay it? When the cost is structural drift, quality degradation, and re-litigated decisions, the role is worth creating. When the cost is zero — because the structure is stable and the team coordinates itself — the role is overhead.
+The decision to create or eliminate a dedicated architect role follows the same logic as any architectural decision: what is the cost of not having the role, and who will pay it? When the cost is structural drift, quality degradation, and re-litigated decisions, the role is worth creating. When the cost is zero (because the structure is stable and the team coordinates itself), the role is overhead.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     ORG["Organization size and complexity"] --> NEED{"Is there a dedicated architect need"}
     NEED --> |"Yes"| ROLE["Define mandate: system / domain / platform / enterprise"]
@@ -113,7 +114,7 @@ flowchart TD
 
 - [ ] The architect's mandate is explicit: system, domain, platform, or enterprise
 - [ ] Boundaries with Tech Lead, Staff Engineer, and Engineering Manager are named and agreed
-- [ ] The architect operates as an enabler — coordinating structure, delegating design — not as a gatekeeper
+- [ ] The architect operates as an enabler (coordinating structure, delegating design), not as a gatekeeper
 - [ ] In multi-role situations, a recurring architecture cadence exists and is protected from feature pressure
 - [ ] Architecture knowledge is distributed: at least one other person can explain the system's structure
 - [ ] The decision to have a dedicated architect is periodically re-examined against organizational needs
@@ -124,7 +125,7 @@ flowchart TD
 # Architect Role Charter: [Name or Title]
 
 ## Mandate
-[System / domain / platform / enterprise — and what decisions that includes]
+[System / domain / platform / enterprise, and what decisions that includes]
 
 ## Scope
 | Concern | Owned by Architect | Owned by Others |
@@ -155,18 +156,18 @@ flowchart TD
 
 - Teams know which structural decisions they own and which require coordination
 - The architect's calendar is dominated by structural work, not approval meetings
-- Architecture decisions survive the architect's absence — the role enables, it does not bottleneck
+- Architecture decisions survive the architect's absence: the role enables, it does not bottleneck
 - Cross-team structural conflicts are resolved before they reach production
 - The organization can answer "why do we have a dedicated architect" with a current rationale, not a historical one
 
 ## Related Topics
 
-- [[02_Architecture_vs_Design]] — how the role boundary maps to the architecture-design boundary
-- [[04_Architecture_Decision_Making]] — the decision process the architect runs
-- [[career-path/05_Tech_Lead/03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture (Tech Lead)]] — the closest neighboring role
-- [[career-path/03_Staff_Engineer/02_Cross_Team_Technical_Leadership/01_Cross_Team_Architecture|Cross Team Architecture (Staff)]] — the Staff-level counterpart across teams
-- [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions and Enterprise Architect]] — the enterprise-scope counterpart
+- [[02_Architecture_vs_Design]]: how the role boundary maps to the architecture-design boundary
+- [[04_Architecture_Decision_Making]]: the decision process the architect runs
+- [[career-path/05_Tech_Lead/03_Technical_Direction_and_Architecture/00_overview|Technical Direction and Architecture (Tech Lead)]]: the closest neighboring role
+- [[career-path/03_Staff_Engineer/02_Cross_Team_Technical_Leadership/01_Cross_Team_Architecture|Cross Team Architecture (Staff)]]: the Staff-level counterpart across teams
+- [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions and Enterprise Architect]]: the enterprise-scope counterpart
 
 ## Summary
 
-The architect role operates in the space between Tech Lead, Staff Engineer, and Engineering Manager — owning system structure and quality attribute outcomes while delegating component design to teams. The role's mandate must be explicit: system, domain, platform, or enterprise, each with distinct scope and decision authority. Multi-role teams where one person plays architect must protect architecture time with a recurring cadence. The architect operates as an enabler — coordinating what must be shared, delegating what can be local — rather than as a gatekeeper. The decision to have a dedicated architect follows the same logic as any architectural decision: is the cost of structural drift and re-litigation higher than the cost of the role? When it is, the role earns its place; when it is not, distributed architecture with strong principles and review cadences is the better fit.
+The architect role operates in the space between Tech Lead, Staff Engineer, and Engineering Manager, owning system structure and quality attribute outcomes while delegating component design to teams. The role's mandate must be explicit: system, domain, platform, or enterprise, each with distinct scope and decision authority. Multi-role teams where one person plays architect must protect architecture time with a recurring cadence. The architect operates as an enabler (coordinating what must be shared, delegating what can be local) rather than as a gatekeeper. The decision to have a dedicated architect follows the same logic as any architectural decision: is the cost of structural drift and re-litigation higher than the cost of the role? When it is, the role earns its place; when it is not, distributed architecture with strong principles and review cadences is the better fit.

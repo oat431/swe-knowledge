@@ -14,11 +14,11 @@ tags:
 
 # Quality Attribute Analysis
 
-> **Core capability:** The architect converts stakeholder quality needs into precise, measurable scenarios and uses them to drive structural choices — so that architecture is shaped by evidence, not intuition.
+> **Core capability:** The architect converts stakeholder quality needs into precise, measurable scenarios and uses them to drive structural choices, so that architecture is shaped by evidence, not intuition.
 
 ## Why This Matters
 
-Most architecture is chosen on the basis of functional requirements and vaguely stated quality hopes ("it should be fast," "it must be secure"). Quality attributes are the structural drivers that determine whether a system succeeds — but they only drive decisions when they are precise enough to be measured and compared.
+Most architecture is chosen on the basis of functional requirements and vaguely stated quality hopes ("it should be fast," "it must be secure"). Quality attributes are the structural drivers that determine whether a system succeeds, but they only drive decisions when they are precise enough to be measured and compared.
 
 The architect's contribution is the quality attribute workshop and its output: scenarios that state, in concrete terms, what the system must do when stressed, what constitutes acceptable performance, and how quality attributes trade off against each other. Without scenarios, quality attributes are just adjectives on a slide.
 
@@ -29,7 +29,7 @@ The architect's contribution is the quality attribute workshop and its output: s
 | [[01_Quality_Attribute_Workshops]] | Running stakeholder workshops that produce precise, prioritized scenarios | System inception; major iterations |
 | [[02_Performance_and_Scalability]] | Designing for throughput, latency, capacity, and growth curves | Before growth; before launch |
 | [[03_Availability_Resilience_Reliability]] | Designing for uptime, fault handling, and graceful degradation | Production systems; regulated domains |
-| [[04_Security_as_Quality_Attribute]] | Treating security properties as architectural drivers — not bolt-on features | Every system; high-trust domains |
+| [[04_Security_as_Quality_Attribute]] | Treating security properties as architectural drivers, not bolt-on features | Every system; high-trust domains |
 | [[05_Modifiability_and_Maintainability]] | Designing for change: coupling, cohesion, and evolution cost | Long-lived systems; product evolution |
 | [[06_Deployability_and_Operability]] | Designing for deployment ease, monitoring, and operational health | Continuous delivery contexts |
 | [[07_Quality_Attribute_Trade_Offs]] | Managing conflicts between quality attributes; making trade-off decisions explicit | Every multi-attribute system |
@@ -37,6 +37,7 @@ The architect's contribution is the quality attribute workshop and its output: s
 ## From Stakeholder Need to Architecture
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     STAKEHOLDER["Stakeholder: 'it must be fast'"] --> SCENARIO["Scenario: 500 concurrent users, page load < 2s p95"]
     SCENARIO --> TACTIC["Tactic: read replicas + cache layer"]
@@ -71,7 +72,7 @@ The gap between the stakeholder statement and the ADR is the architect's work.
 |---------|---------------------|-----------------|
 | **Adjective quality** | "Fast" and "secure" drive nothing because they are not measurable | Write precise scenarios with numbers |
 | **Ignoring quality early** | The architecture hardens around functional choices; quality is expensive to retrofit | Quality scenarios as first-class drivers from inception |
-| **Quality silos** | Security architect, performance architect — adversarial optimization | One architecture, cross-attribute trade-off analysis |
+| **Quality silos** | Security architect, performance architect: adversarial optimization | One architecture, cross-attribute trade-off analysis |
 | **Scenario shelfware** | Workshop output sits in a doc until obsolete | Review scenarios each increment; remove stale ones |
 
 ## Success Indicators
@@ -83,10 +84,10 @@ The gap between the stakeholder statement and the ADR is the architect's work.
 
 ## Related Capabilities
 
-- [[01_Architecture_Fundamentals/00_overview|Architecture Fundamentals]]: where quality attributes are identified as drivers
-- [[04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]]: where scenarios are used in evaluation
+- [[career-path/06_Software_Architect/01_Architecture_Fundamentals/00_overview|Architecture Fundamentals]]: where quality attributes are identified as drivers
+- [[career-path/06_Software_Architect/04_Architecture_Evaluation_and_Trade_Offs/00_overview|Architecture Evaluation and Trade Offs]]: where scenarios are used in evaluation
 - [[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/00_overview|Quality Reliability Security (Senior)]]: the quality foundations at implementation level
 
 ## Summary
 
-Quality attribute analysis turns vague stakeholder concerns into measurable architecture drivers. The architect's toolset is the workshop, the scenario, the tactic, and the explicit trade-off — applied together so that structural decisions survive the first stress test with evidence, not luck.
+Quality attribute analysis turns vague stakeholder concerns into measurable architecture drivers. The architect's toolset is the workshop, the scenario, the tactic, and the explicit trade-off, applied together so that structural decisions survive the first stress test with evidence, not luck.

@@ -60,6 +60,7 @@ A finding with low tool confidence can still be important if the impact is high.
 ### 3. Triage Workflow
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     INGEST["Ingest raw result"] --> NORMALIZE["Normalize asset and identity"]
     NORMALIZE --> VALIDATE["Validate presence and path"]

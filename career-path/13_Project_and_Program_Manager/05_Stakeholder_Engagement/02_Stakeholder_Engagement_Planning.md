@@ -16,13 +16,13 @@ tags:
 
 # Stakeholder Engagement Planning
 
-> **Core skill:** Translating stakeholder analysis into a deliberate engagement plan — determining how and when to involve each stakeholder, what engagement level is appropriate, who owns the relationship, and how engagement will be monitored and adjusted throughout the project.
+> **Core skill:** Translating stakeholder analysis into a deliberate engagement plan, determining how and when to involve each stakeholder, what engagement level is appropriate, who owns the relationship, and how engagement will be monitored and adjusted throughout the project.
 
 ## Why This Matters
 
-Analysis without a plan is academic. The stakeholder register tells you who matters; the engagement plan tells you what to do about it. Without a plan, engagement is reactive — the project manager talks to whoever is in the room, sends updates to whoever is on the list, and discovers disengagement when it is already a problem.
+Analysis without a plan is academic. The stakeholder register tells you who matters; the engagement plan tells you what to do about it. Without a plan, engagement is reactive. The project manager talks to whoever is in the room, sends updates to whoever is on the list, and discovers disengagement when it is already a problem.
 
-The engagement plan is the project manager's relationship roadmap: for every stakeholder, a strategy. Some need partnering — deep, continuous involvement in decisions. Some need consultation — their input matters but they do not decide. Some need only information — regular updates so they are never surprised. The plan assigns each stakeholder to the right level and makes the engagement deliberate rather than accidental.
+The engagement plan is the project manager's relationship roadmap: for every stakeholder, a strategy. Some need partnering: deep, continuous involvement in decisions. Some need consultation: their input matters but they do not decide. Some need only information: regular updates so they are never surprised. The plan assigns each stakeholder to the right level and makes the engagement deliberate rather than accidental.
 
 ## Engagement Levels
 
@@ -33,7 +33,7 @@ The engagement plan is the project manager's relationship roadmap: for every sta
 | **Inform** | Regular communication; pull channel for questions | Wider organization, indirect stakeholders | Low: status reports, newsletters, town halls |
 | **Monitor** | Passive tracking; engagement escalated if attitude shifts | Low-power, low-interest stakeholders | Minimal: periodic attitude check |
 
-The engagement level is not a ranking of importance — it is a matching of engagement need to project manager capacity. The sponsor is Partner not because they are "more important" than users, but because their engagement need is different.
+The engagement level is not a ranking of importance. It is a matching of engagement need to project manager capacity. The sponsor is Partner not because they are "more important" than users, but because their engagement need is different.
 
 ## The Engagement Plan Structure
 
@@ -67,7 +67,7 @@ For each stakeholder or stakeholder group, the engagement plan records:
 
 ## The Engagement Calendar
 
-The engagement plan becomes a calendar — a forward schedule of who gets what and when:
+The engagement plan becomes a calendar: a forward schedule of who gets what and when:
 
 - **Weekly**: sponsor 1:1, team standup, core team status
 - **Biweekly**: steering committee prep, user group touchpoint
@@ -75,13 +75,13 @@ The engagement plan becomes a calendar — a forward schedule of who gets what a
 - **Quarterly**: town hall, stakeholder survey, engagement plan review
 - **Phase gate**: engagement health assessment, register and plan refresh
 
-The calendar makes engagement habitual — the project manager does not decide each week whether to talk to the sponsor; the calendar decides.
+The calendar makes engagement habitual. The project manager does not decide each week whether to talk to the sponsor; the calendar decides.
 
 ## Engagement in Programs
 
 Program managers plan engagement across projects:
 
-- **Program-level stakeholders**: sponsor, steering committee, executive leadership — engaged once for the program, not once per project
+- **Program-level stakeholders**: sponsor, steering committee, executive leadership; engaged once for the program, not once per project
 - **Project-level stakeholders**: each project manager engages their own; the program manager monitors consistency
 - **Cross-project engagement**: stakeholders affected by multiple projects receive a consolidated view, not N separate project updates
 - **Engagement escalation**: when a project-level stakeholder conflict cannot be resolved, it escalates to program-level engagement
@@ -93,14 +93,14 @@ Program managers plan engagement across projects:
 - [ ] Every stakeholder in the register has an assigned engagement level
 - [ ] Engagement activities are specific, scheduled, and owned
 - [ ] The engagement calendar covers all cadences from weekly to quarterly
-- [ ] Key messages are tailored per stakeholder — not one message for everyone
+- [ ] Key messages are tailored per stakeholder, not one message for everyone
 - [ ] Escalation triggers are defined: what conditions change engagement level
 - [ ] The engagement plan is reviewed at each phase gate
 
 ### Engagement Plan Template
 
 ```markdown
-## Stakeholder Engagement Plan — [Project Name]
+## Stakeholder Engagement Plan: [Project Name]
 
 ### Sponsor Engagement
 - Level: Partner
@@ -136,8 +136,8 @@ Program managers plan engagement across projects:
 
 ## Success Indicators
 
-- The engagement calendar is followed — engagement is habitual, not reactive
-- Stakeholders report receiving the right level of engagement — not too much, not too little
+- The engagement calendar is followed: engagement is habitual, not reactive
+- Stakeholders report receiving the right level of engagement, not too much, not too little
 - Engagement level changes are deliberate decisions, not drift
 - The engagement plan is reviewed at every phase gate and updated with stakeholder feedback
 - No stakeholder escalates through surprise
@@ -152,4 +152,4 @@ Program managers plan engagement across projects:
 
 ## Summary
 
-Stakeholder engagement planning translates analysis into action: for every stakeholder, a deliberate engagement level, a set of tailored activities, a calendar that makes engagement habitual, and an owner who is accountable for the relationship. The plan is the project manager's promise about who will be involved, how, and when — and it is reviewed, not filed, at every phase gate. Engagement that is planned is reliable; engagement that is reactive is already late.
+Stakeholder engagement planning translates analysis into action: for every stakeholder, a deliberate engagement level, a set of tailored activities, a calendar that makes engagement habitual, and an owner who is accountable for the relationship. The plan is the project manager's promise about who will be involved, how, and when, and it is reviewed, not filed, at every phase gate. Engagement that is planned is reliable; engagement that is reactive is already late.

@@ -16,13 +16,13 @@ tags:
 
 # Maintaining Technical Currency
 
-> **Core skill:** Staying technically current without doing the work — reading the team's code and PRs, walking the systems, and testing your own understanding on a schedule that beats decay.
+> **Core skill:** Staying technically current without doing the work: reading the team's code and PRs, walking the systems, and testing your own understanding on a schedule that beats decay.
 
 ## Why This Matters
 
-Technical currency decays on a clock. The manager's distance from code grows with every week of meetings, the frameworks the team uses churn faster than any outsider can follow, and the identity shift from "engineer who manages" to "manager who used to engineer" is silent — until the day you cannot evaluate a vendor claim, challenge an estimate, or understand the incident you must explain upward.
+Technical currency decays on a clock. The manager's distance from code grows with every week of meetings, the frameworks the team uses churn faster than any outsider can follow, and the identity shift from "engineer who manages" to "manager who used to engineer" is silent, until the day you cannot evaluate a vendor claim, challenge an estimate, or understand the incident you must explain upward.
 
-Currency is the entry ticket to credibility. The team forgives a manager who does not write code; it does not forgive a manager who cannot read the system. Every other managerial capability — risk assessment, hiring judgment, tech lead support — runs on the base layer of knowing what the team actually does. Currency is maintained deliberately, or it is lost by default.
+Currency is the entry ticket to credibility. The team forgives a manager who does not write code; it does not forgive a manager who cannot read the system. Every other managerial capability (risk assessment, hiring judgment, tech lead support) runs on the base layer of knowing what the team actually does. Currency is maintained deliberately, or it is lost by default.
 
 ## Why Currency Decays
 
@@ -48,25 +48,25 @@ The decay is not a character flaw; it is physics. The only question is whether t
 
 ### The PR Reading Habit
 
-- Read the team's merged PRs weekly — the diff is the system's diary
+- Read the team's merged PRs weekly: the diff is the system's diary
 - Focus on the files that matter: architecture, data, critical paths
 - Comment rarely; ask in reviews only when a question sharpens the work
 - Watch for what changes shape: new patterns, growing modules, recurring fixes
 
 ### The System Walk
 
-Every quarter, one engineer leads a walk through a system the manager does not fully know: the flow, the pain points, the debt, the scariest part. The walk is the manager's chance to ask naive questions with a guide — the highest-leverage learning hour of the quarter.
+Every quarter, one engineer leads a walk through a system the manager does not fully know: the flow, the pain points, the debt, the scariest part. The walk is the manager's chance to ask naive questions with a guide: the highest-leverage learning hour of the quarter.
 
 ### The Quarterly Spike
 
-Pick a small, real problem and solve it in the team's stack — a weekend or a few evenings, explicitly not production critical. The spike re-calibrates your sense of difficulty, which is the thing that decays fastest. A manager who recently struggled with the framework is a manager who cannot be snowed by estimates.
+Pick a small, real problem and solve it in the team's stack: a weekend or a few evenings, explicitly not production critical. The spike re-calibrates your sense of difficulty, which is the thing that decays fastest. A manager who recently struggled with the framework is a manager who cannot be snowed by estimates.
 
 ## The Currency Indicators Test
 
 Can you, unaided:
 
 - Explain the system's architecture and its top three risks?
-- Debate an estimate credibly — challenge the assumptions, not the arithmetic?
+- Debate an estimate credibly: challenge the assumptions, not the arithmetic?
 - Challenge a vendor claim about the team's stack?
 - Read a design doc and ask questions that change it for the better?
 - Follow an incident discussion to its technical root?
@@ -94,6 +94,7 @@ Calibration requires an external reference:
 - Accept that decay is continuous; the question is only the slope
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     READ["Read the team's PRs weekly"] --> WALK["Walk the systems quarterly"]
     WALK --> SPIKE["Run a hands-on spike"]
@@ -116,10 +117,10 @@ flowchart TD
 ### Quarterly Spike Plan
 
 ```markdown
-## Spike — [quarter]
+## Spike: [quarter]
 - Problem: [small, real, non-critical]
 - Stack: [the team's actual stack]
-- Time box: [dates] — protected, on the calendar
+- Time box: [dates]; protected, on the calendar
 - Success: [working solution / honest difficulty calibration]
 - Learning to report back: [what surprised me about difficulty]
 ```
@@ -149,8 +150,8 @@ flowchart TD
 - [[03_Risk_Assessment_with_Limited_Depth]]: currency powers risk judgment
 - [[04_Supporting_the_Tech_Lead_Partnership]]: the tech lead is the calibration reference
 - [[05_Hiring_and_Growing_with_Technical_Judgment]]: currency powers people decisions
-- [[04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: current judgment keeps delivery reading honest
+- [[career-path/11_Engineering_Manager/04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: current judgment keeps delivery reading honest
 
 ## Summary
 
-Technical currency is maintained on a schedule, not by aspiration: weekly PR reading, quarterly system walks, monthly talks, protected hands-on spikes, and selective reading — verified by a currency test against the tech lead. The target is calibrated breadth, not engineer depth, and the honesty practice is continuous because decay is continuous. A manager who knows the system can judge it; a manager who does not can only hope.
+Technical currency is maintained on a schedule, not by aspiration: weekly PR reading, quarterly system walks, monthly talks, protected hands-on spikes, and selective reading, verified by a currency test against the tech lead. The target is calibrated breadth, not engineer depth, and the honesty practice is continuous because decay is continuous. A manager who knows the system can judge it; a manager who does not can only hope.

@@ -16,15 +16,15 @@ tags:
 
 # Selling Technical Work Ethically
 
-> **Core skill:** The independent sells by diagnosing real problems and telling the truth — consultative qualification, honest scoping, no manufactured urgency — and is willing to advise against buying when that is the right answer for the client.
+> **Core skill:** The independent sells by diagnosing real problems and telling the truth (consultative qualification, honest scoping, no manufactured urgency), and is willing to advise against buying when that is the right answer for the client.
 
 ## Why This Matters
 
-Most engineers associate sales with everything that makes them uncomfortable: persuasion, pressure, exaggeration. The reframe that makes sales both bearable and effective is that selling technical work is helping people solve problems they already have. The conversation is diagnosis first, prescription second — questions before answers, evidence before claims, options before recommendations. A prospect who feels understood and honestly advised is a far better client than one who was talked past their own doubts, and the difference shows up months later in scope disputes and churn.
+Most engineers associate sales with everything that makes them uncomfortable: persuasion, pressure, exaggeration. The reframe that makes sales both bearable and effective is that selling technical work is helping people solve problems they already have. The conversation is diagnosis first, prescription second: questions before answers, evidence before claims, options before recommendations. A prospect who feels understood and honestly advised is a far better client than one who was talked past their own doubts, and the difference shows up months later in scope disputes and churn.
 
-Ethics in independent selling is strategy as much as morality. The business runs on reputation and referrals, so the long-run payoff of honesty is direct: a client who feels oversold becomes a detractor, and a detractor is expensive precisely because every future client asks around first. Honest qualification — including declining poor fits, naming when a project is not worth funding, and refusing work outside competence — protects the delivery capacity that makes delivery excellent. The independent who cannot say no is also unable to make any yes credible.
+Ethics in independent selling is strategy as much as morality. The business runs on reputation and referrals, so the long-run payoff of honesty is direct: a client who feels oversold becomes a detractor, and a detractor is expensive precisely because every future client asks around first. Honest qualification (including declining poor fits, naming when a project is not worth funding, and refusing work outside competence) protects the delivery capacity that makes delivery excellent. The independent who cannot say no is also unable to make any yes credible.
 
-The practical machinery of ethical selling is unglamorous: structured discovery, explicit criteria for fit, transparent pricing logic, and a written record of what was promised and why. None of it requires becoming a performer. It requires being the same careful, direct professional in a sales conversation that you are in a code review — which, for most engineers, is the most natural sales style they could choose.
+The practical machinery of ethical selling is unglamorous: structured discovery, explicit criteria for fit, transparent pricing logic, and a written record of what was promised and why. None of it requires becoming a performer. It requires being the same careful, direct professional in a sales conversation that you are in a code review, which, for most engineers, is the most natural sales style they could choose.
 
 ## Consultative Selling Principles
 
@@ -55,13 +55,14 @@ The practical machinery of ethical selling is unglamorous: structured discovery,
 | Need | A problem they can describe with specifics and history | A vague aspiration with no owner or trigger |
 | Authority | The person in the room can decide or credibly influence | Endless layers with no decision path |
 | Budget | A range exists and is discussed without drama | "We will figure out money later" |
-| Timing | A real driver exists — a launch, a deadline, a cost | Perpetual "soon" with no forcing function |
+| Timing | A real driver exists: a launch, a deadline, a cost | Perpetual "soon" with no forcing function |
 | Fit | Your proven work matches the problem's center | The center is entirely outside your experience |
 | Conduct | Direct answers, realistic expectations | Disrespect toward previous vendors |
 
 ## The Ethical Sales Cycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     LISTEN["Listen and understand the real problem"] --> QUALIFY["Qualify fit and stakes honestly"]
     QUALIFY --> DIAGNOSE["Diagnose with evidence and questions"]
@@ -82,7 +83,7 @@ flowchart LR
 ### Discovery Call Notes
 
 ```markdown
-## Discovery Notes — <prospect>
+## Discovery Notes: <prospect>
 
 | Field | Value |
 |-------|-------|
@@ -118,8 +119,8 @@ flowchart LR
 - [[02_Pipeline_and_Lead_Generation]]
 - [[03_Proposals_and_Bids]]
 - [[04_Client_Relationships_and_Trust]]
-- [[01_Problem_Discovery_and_Customer_Validation/00_overview|Problem Discovery and Customer Validation]]
+- [[career-path/17_Independent_Consulting_and_Technical_Founder/01_Problem_Discovery_and_Customer_Validation/00_overview|Problem Discovery and Customer Validation]]
 
 ## Summary
 
-Selling technical work ethically means treating sales as diagnosis: understand the real problem, qualify fit honestly in both directions, present evidence and options instead of pressure, and be genuinely willing to advise against buying. This approach is not naive — it is the only sales system that compounds, because every honest conversation leaves behind exactly the asset an independent business is built on: a reputation that sells the next engagement before the conversation starts.
+Selling technical work ethically means treating sales as diagnosis: understand the real problem, qualify fit honestly in both directions, present evidence and options instead of pressure, and be genuinely willing to advise against buying. This approach is not naive. It is the only sales system that compounds, because every honest conversation leaves behind exactly the asset an independent business is built on: a reputation that sells the next engagement before the conversation starts.

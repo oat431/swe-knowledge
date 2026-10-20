@@ -14,13 +14,13 @@ tags:
 
 # Dependency Management
 
-> **Core capability:** The TPM maps, tracks, and resolves dependencies across teams, suppliers, and external organizations — making invisible coupling visible and unblocking work before it stalls.
+> **Core capability:** The TPM maps, tracks, and resolves dependencies across teams, suppliers, and external organizations, making invisible coupling visible and unblocking work before it stalls.
 
 ## Why This Matters
 
-Dependencies are the silent killers of multi-team programs. A team finishes early but the team they depend on started late. A vendor delivers on time but the API contract changed. An infrastructure dependency was assumed available and was not. Each individual dependency is manageable; the web of them across six teams, two vendors, and a platform migration is not — unless someone owns the web.
+Dependencies are the silent killers of multi-team programs. A team finishes early but the team they depend on started late. A vendor delivers on time but the API contract changed. An infrastructure dependency was assumed available and was not. Each individual dependency is manageable; the web of them across six teams, two vendors, and a platform migration is not, unless someone owns the web.
 
-The TPM owns the dependency map: who depends on whom, for what, by when, with what contract, and with what risk if the dependency fails. This is not project administration — it is the core coordination mechanism that makes multi-team delivery predictable.
+The TPM owns the dependency map: who depends on whom, for what, by when, with what contract, and with what risk if the dependency fails. This is not project administration. It is the core coordination mechanism that makes multi-team delivery predictable.
 
 ## Topics in This Capability Area
 
@@ -37,6 +37,7 @@ The TPM owns the dependency map: who depends on whom, for what, by when, with wh
 ## The Dependency Lifecycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     MAP["Map: who depends on whom, for what, by when"] --> CONTRACT["Contract: agree interface, timing, owner"]
     CONTRACT --> TRACK["Track: status against plan"]
@@ -46,7 +47,7 @@ flowchart TD
     REPORT --> MAP
 ```
 
-Dependencies don't disappear — they are resolved, re-planned, or escalated.
+Dependencies don't disappear. They are resolved, re-planned, or escalated.
 
 ## Practical Applications
 
@@ -70,17 +71,17 @@ Dependencies don't disappear — they are resolved, re-planned, or escalated.
 
 ## Success Indicators
 
-- Dependency surprises are rare — the map catches them before they block work
+- Dependency surprises are rare: the map catches them before they block work
 - Cross-team interfaces are contracted and changes are renegotiated, not assumed
 - External dependencies have monitoring and contingency plans
 - Escalations happen early and resolve in one governance cycle
 
 ## Related Capabilities
 
-- [[01_Program_Structure_and_Charter/00_overview|Program Structure and Charter]]: workstream decomposition drives the dependency map
-- [[04_Risk_and_Issue_Leadership/00_overview|Risk and Issue Leadership]]: dependencies are a primary source of program risk
+- [[career-path/12_Technical_Program_Manager/01_Program_Structure_and_Charter/00_overview|Program Structure and Charter]]: workstream decomposition drives the dependency map
+- [[career-path/12_Technical_Program_Manager/04_Risk_and_Issue_Leadership/00_overview|Risk and Issue Leadership]]: dependencies are a primary source of program risk
 - [[career-path/03_Staff_Engineer/02_Cross_Team_Technical_Leadership/04_Migration_Leadership|Migration Leadership (Staff)]]: dependency management at migration scale
 
 ## Summary
 
-Dependency management is the TPM's coordination engine: a living map of who depends on whom, contracts that make interfaces explicit, tracking that catches drift early, and escalation that unblocks work through governance rather than heroics. Programs that ship on time don't have fewer dependencies — they have a better dependency system.
+Dependency management is the TPM's coordination engine: a living map of who depends on whom, contracts that make interfaces explicit, tracking that catches drift early, and escalation that unblocks work through governance rather than heroics. Programs that ship on time don't have fewer dependencies. They have a better dependency system.

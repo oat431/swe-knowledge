@@ -29,6 +29,7 @@ Without metrics, delivery improvement is guesswork. You might think the team is 
 The DevOps Research and Assessment (DORA) program identified four key metrics that predict software delivery performance:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     subgraph VELOCITY["Velocity Metrics"]
         DF["Deployment Frequency\nHow often do we deploy?"]
@@ -220,7 +221,7 @@ A senior engineer builds a delivery dashboard that makes performance visible:
 - [[01_Estimation_and_Forecasting]] : velocity data improves forecasting accuracy
 - [[04_Technical_Debt_Strategy]] : flow distribution reveals debt investment
 - [[05_Release_Management]] : deployment frequency and failure rate drive release strategy
-- [[01_Technical_Ownership/04_Production_Responsibility]] : MTTR relates to production readiness
+- [[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/04_Production_Responsibility]] : MTTR relates to production readiness
 - [[software-engineering-note/09_Software_Engineering_Management/07_Measurement_and_Metrics]] : SWEBOK metrics
 
 ## Key Takeaways

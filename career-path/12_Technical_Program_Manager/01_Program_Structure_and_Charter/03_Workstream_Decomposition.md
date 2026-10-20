@@ -16,11 +16,11 @@ tags:
 
 # Workstream Decomposition
 
-> **Core skill:** Breaking program scope into owned, manageable workstreams with clear charters, defined interface contracts, and named leads — so that coordination happens through the structure, not through the TPM personally.
+> **Core skill:** Breaking program scope into owned, manageable workstreams with clear charters, defined interface contracts, and named leads, so that coordination happens through the structure, not through the TPM personally.
 
 ## Why This Matters
 
-A program is too large for one team and too interconnected for independent teams with no structure. The TPM's decomposition work turns an amorphous scope into a set of workstreams that teams can own, execute, and integrate. Decomposition is not just about breaking work into pieces — it is about creating a structure where each piece has clear ownership, clear boundaries, and clear interfaces to the pieces around it.
+A program is too large for one team and too interconnected for independent teams with no structure. The TPM's decomposition work turns an amorphous scope into a set of workstreams that teams can own, execute, and integrate. Decomposition is not just about breaking work into pieces. It is about creating a structure where each piece has clear ownership, clear boundaries, and clear interfaces to the pieces around it.
 
 Bad decomposition creates workstreams that overlap in scope, step on each other's dependencies, or leave gaps that nobody owns. Good decomposition creates workstreams that operate with autonomy within their charter and coordinate only at defined interface points. The TPM's goal is to make the structure do the coordination work so the TPM does not have to be the coordination work.
 
@@ -31,13 +31,13 @@ Workstreams are not arbitrary slices. They follow principles that maximize owner
 | Principle | What It Means | Test |
 |-----------|---------------|------|
 | **Ownable** | One team or lead can own the workstream end to end | Can you name one person accountable for this workstream's outcome? |
-| **Coherent** | The work within the workstream belongs together — shared domain, shared technology, shared user journey | Would splitting this workstream create more coordination than combining it? |
+| **Coherent** | The work within the workstream belongs together: shared domain, shared technology, shared user journey | Would splitting this workstream create more coordination than combining it? |
 | **Bounded** | The workstream's scope has clear edges; what is in and what is out are explicit | Can the workstream lead describe their boundary in one sentence? |
 | **Autonomous** | The workstream can make most decisions and execute most work without cross-workstream coordination | What percentage of the workstream's tasks require another workstream's output? |
 | **Integrable** | The workstream produces outputs that connect to other workstreams at defined, stable interfaces | Are the interface points named, contracted, and owned? |
 | **Right-sized** | The workstream fits the available team's capacity and timeline | Can the assigned team deliver this scope within the program timeline? |
 
-A workstream that violates multiple principles is a decomposition failure. The most common failures are under-bounded workstreams — nobody knows where the edges are — and over-coupled workstreams — every task requires coordination with another workstream.
+A workstream that violates multiple principles is a decomposition failure. The most common failures are under-bounded workstreams (nobody knows where the edges are) and over-coupled workstreams: every task requires coordination with another workstream.
 
 ## The Workstream Charter
 
@@ -60,6 +60,7 @@ The TPM does not write every workstream charter. The workstream lead writes the 
 The interface contract is the agreement between two workstreams about what each will provide and consume. Without contracts, integration is guesswork; with them, workstreams integrate against a known specification.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     UPSTREAM["Upstream workstream delivers to contract"] --> CONTRACT["Interface contract: format, timing, quality"]
     CONTRACT --> DOWNSTREAM["Downstream workstream builds against contract"]
@@ -73,7 +74,7 @@ flowchart LR
 | **Data contract** | Schema, format, semantics, validation rules of data exchanged | "The Payment API accepts a JSON payload matching schema v2.1 at POST /authorize" |
 | **Timing contract** | When the upstream workstream delivers and what availability SLAs apply | "Merchant service available for integration testing by milestone M2; 99 percent uptime during beta" |
 | **Quality contract** | Acceptable defect rates, performance thresholds, error handling expectations | "Response time under 200ms at p95; error rate below 0.1 percent; all errors return standard error codes" |
-| **Behavioral contract** | Expected system behavior at the interface — what happens in edge cases | "Duplicate authorization requests are idempotent; timeout after 30 seconds triggers fallback" |
+| **Behavioral contract** | Expected system behavior at the interface: what happens in edge cases | "Duplicate authorization requests are idempotent; timeout after 30 seconds triggers fallback" |
 | **Change contract** | How the contract evolves: who can change it, notification period, versioning | "Schema changes require 2-week notice; breaking changes require program-level approval" |
 
 Interface contracts are living documents. The TPM ensures every interface between workstreams has a contract, that both workstream leads have agreed to it, and that contract changes follow the agreed change process.
@@ -104,7 +105,7 @@ The most common decomposition failure is unclear or overlapping scope boundaries
 | **False boundary** | Two workstreams are so coupled they cannot operate independently | Merge them or redesign the decomposition to create a genuine interface |
 | **Organizational mismatch** | Workstream boundaries do not align with team boundaries | Align workstreams to teams, or negotiate team realignment; a workstream that spans teams creates coordination overhead for every task |
 
-The TPM maintains a scope map — a visual or tabular representation of every workstream's scope — and reviews it with workstream leads at program initiation and at every major milestone. A scope gap discovered during integration testing is a decomposition failure; the TPM catches gaps at the map level before execution.
+The TPM maintains a scope map (a visual or tabular representation of every workstream's scope) and reviews it with workstream leads at program initiation and at every major milestone. A scope gap discovered during integration testing is a decomposition failure; the TPM catches gaps at the map level before execution.
 
 ## Practical Applications
 
@@ -167,10 +168,10 @@ The TPM maintains a scope map — a visual or tabular representation of every wo
 
 - [[01_Program_Charter]]: the program charter that workstream charters derive from
 - [[04_Milestone_Planning]]: milestones that align workstream timelines
-- [[02_Technical_Integration_and_Architecture/00_overview|Technical Integration and Architecture]]: interface contracts are the integration plan's foundation
-- [[03_Dependency_Management/00_overview|Dependency Management]]: dependencies between workstreams drive the dependency management plan
+- [[career-path/12_Technical_Program_Manager/02_Technical_Integration_and_Architecture/00_overview|Technical Integration and Architecture]]: interface contracts are the integration plan's foundation
+- [[career-path/12_Technical_Program_Manager/03_Dependency_Management/00_overview|Dependency Management]]: dependencies between workstreams drive the dependency management plan
 - [[06_Program_Organization_and_Roles]]: the workstream lead role in the broader program organization
 
 ## Summary
 
-Workstream decomposition is the TPM's structural design work: break the program into ownable, coherent, bounded workstreams; give every workstream a charter, a named lead with authority, and clear interface contracts with adjacent workstreams; map scope boundaries to catch gaps and overlaps before execution begins. A well-decomposed program coordinates through its structure — workstream leads manage within their boundaries, interface contracts manage between them, and the TPM manages the whole.
+Workstream decomposition is the TPM's structural design work: break the program into ownable, coherent, bounded workstreams; give every workstream a charter, a named lead with authority, and clear interface contracts with adjacent workstreams; map scope boundaries to catch gaps and overlaps before execution begins. A well-decomposed program coordinates through its structure: workstream leads manage within their boundaries, interface contracts manage between them, and the TPM manages the whole.

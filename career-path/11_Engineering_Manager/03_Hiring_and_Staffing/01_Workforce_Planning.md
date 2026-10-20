@@ -19,9 +19,9 @@ tags:
 
 ## Why This Matters
 
-Reactive hiring is always too late. The time from an approved requisition to a productive engineer routinely runs three to six months — sourcing, loops, notice periods, and onboarding all stack up. The team you have in Q3 is the result of decisions made in Q1. A manager who waits for the roadmap to expose a gap has already guaranteed a quarter of missed commitments, borrowed seniors from other teams, and pressure to lower the hiring bar.
+Reactive hiring is always too late. The time from an approved requisition to a productive engineer routinely runs three to six months: sourcing, loops, notice periods, and onboarding all stack up. The team you have in Q3 is the result of decisions made in Q1. A manager who waits for the roadmap to expose a gap has already guaranteed a quarter of missed commitments, borrowed seniors from other teams, and pressure to lower the hiring bar.
 
-Workforce planning is the translation discipline between strategy and staffing. The roadmap says what the team will attempt; the manager converts that into capability demand — which skills, at what depth, in what mix, by when — and then into the internal moves, requisitions, or contractor budget that close the gap. Done well, it is boring: gaps surface in a spreadsheet two quarters early, not in a crisis meeting two weeks late.
+Workforce planning is the translation discipline between strategy and staffing. The roadmap says what the team will attempt; the manager converts that into capability demand (which skills, at what depth, in what mix, by when) and then into the internal moves, requisitions, or contractor budget that close the gap. Done well, it is boring: gaps surface in a spreadsheet two quarters early, not in a crisis meeting two weeks late.
 
 Planning the count is only half the job; planning the shape matters as much. A team of clones has single points of failure and a hard ceiling. The junior/mid/senior mix, the balance of specialists and generalists, and the growth path for the people already on the team are all workforce planning outputs.
 
@@ -42,7 +42,7 @@ Each row converts a business fact into a staffing consequence. If a roadmap item
 
 ## Team Shape Evolution
 
-The mix of levels and skill types determines throughput, resilience, and growth capacity — not just the headcount number.
+The mix of levels and skill types determines throughput, resilience, and growth capacity, not just the headcount number.
 
 | Dimension | Options | Trade-offs | Planning Guidance |
 |-----------|---------|------------|-------------------|
@@ -60,10 +60,10 @@ Every capability gap has three closure routes, and the cheapest is often not hir
 | Route | Best When | Typical Lead Time | Risks |
 |-------|-----------|-------------------|-------|
 | **Build internally** | Gap is one level of skill, not talent; motivated person exists | 1-2 quarters | Learning curve while committed work continues; person may not progress |
-| **Buy — hire** | Gap is depth or volume of experience; need is durable | 3-6 months to productive | Cost, onboarding drag, mis-hire risk |
-| **Borrow — contract** | Need is time-boxed or highly specialized | 2-6 weeks | Knowledge leaves with the contract; rate shock |
+| **Buy, hire** | Gap is depth or volume of experience; need is durable | 3-6 months to productive | Cost, onboarding drag, mis-hire risk |
+| **Borrow, contract** | Need is time-boxed or highly specialized | 2-6 weeks | Knowledge leaves with the contract; rate shock |
 
-The test is durability: a need that survives two planning cycles deserves a permanent answer; a need tied to a project with an end date can be borrowed. Building internally doubles as retention — the growth conversation is the plan.
+The test is durability: a need that survives two planning cycles deserves a permanent answer; a need tied to a project with an end date can be borrowed. Building internally doubles as retention. The growth conversation is the plan.
 
 ## Backfill vs Growth Headcount
 
@@ -77,7 +77,7 @@ They compete for the same budget pool and are won with different arguments.
 | Risk if delayed | Team absorbs the gap with overtime and quality erosion | Roadmap slips silently into next year |
 | Common mistake | Treating it as automatic and skipping the case | Justifying with headcount arithmetic instead of outcomes |
 
-A backfill is not automatic. If a departure creates an opportunity to reshape — a generalist leaving might justify a specialist requisition — the backfill decision gets the same rigor as a growth request, on a faster clock.
+A backfill is not automatic. If a departure creates an opportunity to reshape (a generalist leaving might justify a specialist requisition), the backfill decision gets the same rigor as a growth request, on a faster clock.
 
 ## The Headcount Case
 
@@ -94,6 +94,7 @@ Headcount is bought with a business argument, not a plea for help. A strong case
 ## The Planning Cycle
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     STRATEGY["Strategy and org goals"] --> ROADMAP["Team roadmap for next 2-4 quarters"]
     ROADMAP --> DEMAND["Capability demand forecast"]
@@ -179,8 +180,8 @@ If declined: [Named commitment that slips or toil that continues at measured cos
 
 - [[02_Job_Definition_and_Leveling]]: an approved requisition becomes a role definition
 - [[03_Sourcing_and_Pipeline]]: the forecast tells you what to build a pipeline for
-- [[04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: delivery commitments are the primary input to capability demand
-- [[01_People_Development/00_overview|People Development]]: build-internally is half workforce planning, half growth conversation
+- [[career-path/11_Engineering_Manager/04_Delivery_Leadership_for_Managers/00_overview|Delivery Leadership for Managers]]: delivery commitments are the primary input to capability demand
+- [[career-path/11_Engineering_Manager/01_People_Development/00_overview|People Development]]: build-internally is half workforce planning, half growth conversation
 - [[career-path/02_Senior_Software_Engineer/09_Promotion_Evidence_and_Capstone/05_Career_Ladders|Career Ladders (Senior)]]: the level mix in the plan is written in ladder language
 
 ## Summary
