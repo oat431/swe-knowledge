@@ -110,10 +110,10 @@ quadrantChart
     title RTO and RPO Trade-offs
     x-axis High Cost --> Low Cost
     y-axis Low RTO and RPO --> High RTO and RPO
-    quadrant-1 Tier 1: Mission Critical
-    quadrant-2 Tier 2: Business Critical
-    quadrant-3 Tier 4: Standard
-    quadrant-4 Tier 3: Important
+    quadrant-1 Tier 1 – Mission Critical
+    quadrant-2 Tier 2 – Business Critical
+    quadrant-3 Tier 4 – Standard
+    quadrant-4 Tier 3 – Important
     "Payment Service": [0.2, 0.1]
     "User Service": [0.3, 0.2]
     "Analytics": [0.6, 0.5]

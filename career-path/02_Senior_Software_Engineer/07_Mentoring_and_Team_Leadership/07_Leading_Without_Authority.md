@@ -29,20 +29,20 @@ Leading without authority requires building trust, demonstrating expertise, and 
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
-    subgraph Formal Authority
+    subgraph FA["Formal Authority"]
         A[Assign work] --> B[Make decisions]
         B --> C[Conduct reviews]
         C --> D[Enforce compliance]
     end
 
-    subgraph Influence Without Authority
+    subgraph IWA["Influence Without Authority"]
         E[Build trust] --> F[Demonstrate expertise]
         F --> G[Articulate vision]
         G --> H[Create alignment]
     end
 
-    Formal Authority --> Compliance[People comply]
-    Influence --> Commitment[People commit]
+    FA --> Compliance[People comply]
+    IWA --> Commitment[People commit]
 ```
 
 **Authority** gets compliance. **Influence** gets commitment.

@@ -33,7 +33,7 @@ Economic literacy separates engineers who make technically elegant decisions fro
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
-    subgraph Economic Literacy
+    subgraph EL["Economic Literacy"]
         A[Cost-Benefit Analysis] --> B[Build vs Buy Decisions]
         B --> C[Technical Debt as Financial Debt]
         C --> D[Total Cost of Ownership]
@@ -47,7 +47,7 @@ flowchart TD
         I --> J[Process Improvement]
     end
 
-    Economic Literacy --> Application
+    EL --> Application
 ```
 
 **Core topics:**

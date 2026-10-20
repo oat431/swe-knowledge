@@ -33,19 +33,19 @@ Quantifying debt ROI transforms it from a vague concern into a measurable busine
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
-    subgraph Financial Debt
+    subgraph FD["Financial Debt"]
         A[Principal] --> B[Interest Payments]
         B --> C[Total Cost]
         C --> D[Paydown Strategy]
     end
 
-    subgraph Technical Debt
+    subgraph TD["Technical Debt"]
         E[Initial Shortcut] --> F[Maintenance Overhead]
         F --> G[Slowed Development]
         G --> H[Refactoring Plan]
     end
 
-    Financial Debt -.->|Analogy| Technical Debt
+    FD -.->|Analogy| TD
 ```
 
 **Debt components:**
