@@ -76,12 +76,12 @@ You demonstrate mastery of test strategy when you can:
 
 ## Progress Tracker
 
-- [ ] [[01_Risk_Based_Testing]] - Complete
-- [ ] [[02_Test_Levels_and_Scope]] - Complete
-- [ ] [[03_Test_Planning]] - Complete
-- [ ] [[04_Test_Estimation]] - Complete
-- [ ] [[05_Release_Strategy]] - Complete
-- [ ] [[06_Stakeholder_Communication]] - Complete
+- [ ] [[01_Risk_Based_Testing]]
+- [ ] [[02_Test_Levels_and_Scope]]
+- [ ] [[03_Test_Planning]]
+- [ ] [[04_Test_Estimation]]
+- [ ] [[05_Release_Strategy]]
+- [ ] [[06_Stakeholder_Communication]]
 
 ---
 

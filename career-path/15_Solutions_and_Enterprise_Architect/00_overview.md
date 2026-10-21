@@ -102,7 +102,7 @@ flowchart LR
 - [[career-path/14_Product_Manager/00_overview|Product Manager]]: product outcomes and customer value
 - [[career-path/13_Project_and_Program_Manager/00_overview|Project or Program Manager]]: coordinated change delivery
 
-## Suggested Future Note Route
+## Background Reading
 
 1. [[SEBoK v2 - Overview]]
 2. [[body-of-knowledge/System Engineer BOK/07_System_Definition_and_Architecture]]

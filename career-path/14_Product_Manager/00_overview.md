@@ -41,15 +41,15 @@ A software engineering background can be a strong advantage because it helps the
 
 ## Capability Areas
 
-| Capability | Product Manager behavior | Existing vault anchor |
-|---|---|---|
-| Problem discovery | Investigates needs, behaviors, constraints, and opportunities | [[body-of-knowledge/BABOK/02_Elicitation_and_Collaboration]] |
-| Strategy | Defines direction, target outcomes, and product choices | [[body-of-knowledge/BABOK/04_Strategy_Analysis]] |
-| Prioritization | Compares opportunities using value, cost, risk, and evidence | [[body-of-knowledge/BABOK/05_Requirements_Analysis_and_Design]] |
-| Roadmapping | Communicates direction without turning uncertainty into false precision | [[body-of-knowledge/PMBOK/03_Project_Life_Cycles]] |
-| Product analytics | Defines measures and experiments for learning and outcomes | [[body-of-knowledge/DMBOK/09_Data_Warehousing_and_BI]] |
-| Requirements | Expresses problems, outcomes, and acceptance conditions clearly | [[software-engineering-note/01_Software_Requirements/Software Requirements Overview]] |
-| Technical partnership | Understands feasibility and trade-offs while respecting engineering expertise | [[SWEBOK v4 - Overview]] |
+| Capability | Product Manager behavior | Module | Existing vault anchor |
+| --- | --- | --- | --- |
+| Problem discovery | Investigates needs, behaviors, constraints, and opportunities | [[career-path/14_Product_Manager/01_Problem_Discovery/00_overview\|Problem Discovery]] | [[body-of-knowledge/BABOK/02_Elicitation_and_Collaboration]] |
+| Strategy | Defines direction, target outcomes, and product choices | [[career-path/14_Product_Manager/02_Strategy/00_overview\|Strategy]] | [[body-of-knowledge/BABOK/04_Strategy_Analysis]] |
+| Prioritization | Compares opportunities using value, cost, risk, and evidence | [[career-path/14_Product_Manager/03_Prioritization/00_overview\|Prioritization]] | [[body-of-knowledge/BABOK/05_Requirements_Analysis_and_Design]] |
+| Roadmapping | Communicates direction without turning uncertainty into false precision | [[career-path/14_Product_Manager/04_Roadmapping/00_overview\|Roadmapping]] | [[body-of-knowledge/PMBOK/03_Project_Life_Cycles]] |
+| Product analytics | Defines measures and experiments for learning and outcomes | [[career-path/14_Product_Manager/05_Product_Analytics/00_overview\|Product Analytics]] | [[body-of-knowledge/DMBOK/09_Data_Warehousing_and_BI]] |
+| Requirements | Expresses problems, outcomes, and acceptance conditions clearly | [[career-path/14_Product_Manager/06_Requirements/00_overview\|Requirements]] | [[software-engineering-note/01_Software_Requirements/Software Requirements Overview]] |
+| Technical partnership | Understands feasibility and trade-offs while respecting engineering expertise | [[career-path/14_Product_Manager/07_Technical_Partnership/00_overview\|Technical Partnership]] | [[SWEBOK v4 - Overview]] |
 
 ## Product Management and Project Management
 
@@ -100,7 +100,7 @@ flowchart LR
 - [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions or Enterprise Architect]]: connects technology to customer or enterprise context
 - [[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]: technical foundation
 
-## Suggested Future Note Route
+## Background Reading
 
 1. [[BABOK v3 - Overview]]
 2. [[body-of-knowledge/BABOK/02_Elicitation_and_Collaboration]]

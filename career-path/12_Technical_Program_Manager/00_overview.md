@@ -92,7 +92,7 @@ flowchart LR
 - [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]: cross-team technical influence
 - [[career-path/14_Product_Manager/00_overview|Product Manager]]: product outcomes and customer value
 
-## Suggested Future Note Route
+## Background Reading
 
 1. [[PMBOK v8 - Overview]]
 2. [[body-of-knowledge/PMBOK/04_Governance_Performance_Domain]]

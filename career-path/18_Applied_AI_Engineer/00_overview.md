@@ -42,7 +42,7 @@ Unlike earlier specializations, this path has no mature BOK. Its de facto refere
 - Clear communication of model limits and failure modes to non-specialists
 - Honest product decisions about when AI is (and is not) the right tool
 
-## Capability Areas (planned)
+## Capability Areas
 
 | Capability | Focus | Files |
 |---|---|---|
@@ -94,7 +94,7 @@ flowchart LR
 - [[career-path/14_Product_Manager/00_overview|Product Manager]]: AI-native product decisions and outcome framing
 - [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]: cross-team technical influence on AI direction
 
-## Suggested Future Note Route
+## Background Reading
 
 1. [[computing-foundation-note/Artificial_Intelligence/AI Overview]]
 2. [[computing-foundation-note/Artificial_Intelligence/10_LLM_Production_Patterns]]
@@ -103,7 +103,6 @@ flowchart LR
 5. [[computing-foundation-note/Artificial_Intelligence/12_AI_ROI_and_Roadmap]]
 6. [[computing-foundation-note/Artificial_Intelligence/09_AI_SE_Intersection]]
 7. [[career-path/09_Data_and_ML_Engineer/00_overview|Data and ML Engineer path]] for the boundary and overlap
-8. Detailed area notes (phase 2 folders under this path)
 
 ## Sources
 

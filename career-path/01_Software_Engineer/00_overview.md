@@ -95,7 +95,7 @@ flowchart LR
 - [[career-path/13_Project_and_Program_Manager/00_overview|Project or Program Manager]]: formal delivery management
 - [[career-path/14_Product_Manager/00_overview|Product Manager]]: product outcomes and customer value
 
-## Suggested Future Note Route
+## Foundation Reading Route
 
 1. [[SWEBOK v4 - Overview]]
 2. [[Computing Foundation Overview]]
@@ -114,4 +114,3 @@ flowchart LR
 ## Related
 
 - [[00_Career_Path_Overview]]
-[[career-path/01_Software_Engineer/00_overview|Software Engineer]]

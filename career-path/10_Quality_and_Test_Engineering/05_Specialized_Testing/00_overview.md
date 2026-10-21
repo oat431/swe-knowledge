@@ -72,12 +72,12 @@ You demonstrate mastery of specialized testing when you can:
 
 ## Progress Tracker
 
-- [ ] [[01_Performance_Testing]] - Complete
-- [ ] [[02_Security_Testing]] - Complete
-- [ ] [[03_Reliability_Testing]] - Complete
-- [ ] [[04_Accessibility_Testing]] - Complete
-- [ ] [[05_API_Testing]] - Complete
-- [ ] [[06_Mobile_Testing]] - Complete
+- [ ] [[01_Performance_Testing]]
+- [ ] [[02_Security_Testing]]
+- [ ] [[03_Reliability_Testing]]
+- [ ] [[04_Accessibility_Testing]]
+- [ ] [[05_API_Testing]]
+- [ ] [[06_Mobile_Testing]]
 
 ---
 

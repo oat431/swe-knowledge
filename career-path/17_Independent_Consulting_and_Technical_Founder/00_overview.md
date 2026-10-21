@@ -89,7 +89,7 @@ flowchart LR
 - [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions or Enterprise Architect]]: customer solution design
 - [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]: advanced technical influence
 
-## Suggested Future Note Route
+## Background Reading
 
 1. [[BABOK v3 - Overview]]
 2. [[body-of-knowledge/BABOK/04_Strategy_Analysis]]

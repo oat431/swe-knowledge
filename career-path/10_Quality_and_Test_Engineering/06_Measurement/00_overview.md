@@ -73,12 +73,12 @@ You demonstrate mastery of measurement when you can:
 
 ## Progress Tracker
 
-- [ ] [[01_Defect_Metrics]] - Complete
-- [ ] [[02_Coverage_Metrics]] - Complete
-- [ ] [[03_Process_Metrics]] - Complete
-- [ ] [[04_Quality_Reporting]] - Complete
-- [ ] [[05_Data_Analysis]] - Complete
-- [ ] [[06_Measurement_Pitfalls]] - Complete
+- [ ] [[01_Defect_Metrics]]
+- [ ] [[02_Coverage_Metrics]]
+- [ ] [[03_Process_Metrics]]
+- [ ] [[04_Quality_Reporting]]
+- [ ] [[05_Data_Analysis]]
+- [ ] [[06_Measurement_Pitfalls]]
 
 ---
 

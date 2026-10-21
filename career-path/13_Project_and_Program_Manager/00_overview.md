@@ -101,7 +101,7 @@ flowchart LR
 - [[career-path/14_Product_Manager/00_overview|Product Manager]]: product value and customer direction
 - [[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]: technical foundation
 
-## Suggested Future Note Route
+## Background Reading
 
 1. [[PMBOK v8 - Overview]]
 2. [[body-of-knowledge/PMBOK/01_Value_Delivery_System]]

@@ -87,7 +87,7 @@ For most projects, a lightweight plan is sufficient:
 - Functional testing
 - Performance testing (load test with 1000 concurrent users)
 - Security testing (OWASP Top 10)
-- Accessibility testing (WCAG 2.1 AA)
+- Accessibility testing (WCAG 2.2 AA)
 
 ## 4. Resources
 - **Testers:** Alice (lead), Bob, Charlie

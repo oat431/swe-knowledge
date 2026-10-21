@@ -19,7 +19,7 @@ tags:
 
 # Software Engineering Career Paths
 
-> **Purpose:** A map of professional paths that can begin from software engineering. This folder contains career overviews only. Detailed learning notes will be created later for the path the learner chooses.
+> **Purpose:** A map of professional paths that can begin from software engineering. Each path has a role overview plus capability-area modules with topic notes, so the map can be read at overview level or studied end to end.
 
 ## How to Use This Map
 

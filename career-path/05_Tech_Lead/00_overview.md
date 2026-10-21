@@ -87,7 +87,7 @@ flowchart LR
 - [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]: people, career, and team health
 - [[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]: cross-team initiative coordination
 
-## Suggested Future Note Route
+## Background Reading
 
 1. [[software-engineering-note/02_Software_Architecture/Software Architecture Overview]]
 2. [[software-engineering-note/02_Software_Architecture/09_Evaluation_and_Governance]]

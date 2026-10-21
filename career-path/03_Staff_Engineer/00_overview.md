@@ -47,8 +47,8 @@ Staff engineers often work through proposals, architecture reviews, technical st
 | Technical strategy | Connects technical investment to organizational priorities | [[career-path/03_Staff_Engineer/03_Technical_Strategy/00_overview]] |
 | Influence | Creates alignment among people with different incentives | [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/00_overview]] |
 | Systems thinking | Understands interactions, emergence, and second-order effects | [[career-path/03_Staff_Engineer/05_Systems_Thinking_and_Organizational_Design/00_overview]] |
-| Organizational learning | Makes good practices reusable across teams | [[career-path/03_Staff_Engineer/07_Organizational_Learning_and_Mentoring/00_overview]] |
 | Technical risk | Manages architecture, security, reliability, and dependency risk at portfolio scale | [[career-path/03_Staff_Engineer/06_Technical_Risk_and_Judgment/00_overview]] |
+| Organizational learning | Makes good practices reusable across teams | [[career-path/03_Staff_Engineer/07_Organizational_Learning_and_Mentoring/00_overview]] |
 
 ## Typical Progression
 
@@ -87,7 +87,7 @@ flowchart LR
 - [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]: people and organizational leadership
 - [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions or Enterprise Architect]]: technology alignment across customer or enterprise boundaries
 
-## Suggested Future Note Route
+## Background Reading
 
 1. [[software-engineering-note/02_Software_Architecture/09_Evaluation_and_Governance]]
 2. [[software-engineering-note/03_Software_Design/07_Design_Rationale_and_Decisions]]

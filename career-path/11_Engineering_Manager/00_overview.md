@@ -91,7 +91,7 @@ flowchart LR
 - [[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]: cross-team initiative delivery
 - [[career-path/13_Project_and_Program_Manager/00_overview|Project or Program Manager]]: formal project and program management
 
-## Suggested Future Note Route
+## Background Reading
 
 1. [[software-engineering-note/09_Software_Engineering_Management/Software Engineering Management Overview]]
 2. [[software-engineering-note/09_Software_Engineering_Management/01_Managing_the_Human_Resource]]

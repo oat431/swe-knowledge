@@ -70,12 +70,12 @@ You demonstrate mastery of quality engineering when you can:
 
 ## Progress Tracker
 
-- [ ] [[01_Defect_Prevention]] - Complete
-- [ ] [[02_Code_Reviews]] - Complete
-- [ ] [[03_Static_Analysis]] - Complete
-- [ ] [[04_Continuous_Improvement]] - Complete
-- [ ] [[05_Quality_Metrics]] - Complete
-- [ ] [[06_Quality_Culture]] - Complete
+- [ ] [[01_Defect_Prevention]]
+- [ ] [[02_Code_Reviews]]
+- [ ] [[03_Static_Analysis]]
+- [ ] [[04_Continuous_Improvement]]
+- [ ] [[05_Quality_Metrics]]
+- [ ] [[06_Quality_Culture]]
 
 ---
 

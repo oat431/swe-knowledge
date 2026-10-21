@@ -90,7 +90,7 @@ flowchart LR
 - [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]]: operational and platform specialization
 - [[career-path/08_Security_Engineer/00_overview|Security Engineer]]: security specialization
 
-## Suggested Future Note Route
+## Background Reading
 
 1. [[software-engineering-note/02_Software_Architecture/Software Architecture Overview]]
 2. [[software-engineering-note/02_Software_Architecture/09_Evaluation_and_Governance]]

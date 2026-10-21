@@ -42,14 +42,14 @@ A strong quality engineer helps the whole team build quality in. The role may be
 
 ## Capability Areas
 
-| Capability | Specialist behavior | Existing vault anchor |
-|---|---|---|
-| Test strategy | Selects test levels and techniques according to risk | [[software-engineering-note/05_Software_Testing/Software Testing Overview]] |
-| Test design | Uses equivalence, boundaries, decisions, paths, models, and exploratory methods | [[software-engineering-note/05_Software_Testing/02_Boundary_and_Equivalence]] |
-| Automation | Builds maintainable, fast, and trustworthy automated checks | [[software-engineering-note/05_Software_Testing/09_Testing_Tools_and_Standards]] |
-| Quality engineering | Prevents defects through reviews, design, process, and feedback | [[software-engineering-note/12_Software_Quality/Software Quality Overview]] |
-| Specialized testing | Handles performance, security, reliability, AI, and domain risks | [[software-engineering-note/05_Software_Testing/10_Domain_Specific_Testing]] |
-| Measurement | Uses defect, coverage, flow, and quality-cost measures responsibly | [[software-engineering-note/05_Software_Testing/12_Test_Process_and_Measures]] |
+| Capability | Specialist behavior | Module | Existing vault anchor |
+| --- | --- | --- | --- |
+| Test strategy | Selects test levels and techniques according to risk | [[career-path/10_Quality_and_Test_Engineering/01_Test_Strategy/00_overview\|Test Strategy]] | [[software-engineering-note/05_Software_Testing/Software Testing Overview]] |
+| Test design | Uses equivalence, boundaries, decisions, paths, models, and exploratory methods | [[career-path/10_Quality_and_Test_Engineering/02_Test_Design/00_overview\|Test Design]] | [[software-engineering-note/05_Software_Testing/02_Boundary_and_Equivalence]] |
+| Automation | Builds maintainable, fast, and trustworthy automated checks | [[career-path/10_Quality_and_Test_Engineering/03_Automation/00_overview\|Automation]] | [[software-engineering-note/05_Software_Testing/09_Testing_Tools_and_Standards]] |
+| Quality engineering | Prevents defects through reviews, design, process, and feedback | [[career-path/10_Quality_and_Test_Engineering/04_Quality_Engineering/00_overview\|Quality Engineering]] | [[software-engineering-note/12_Software_Quality/Software Quality Overview]] |
+| Specialized testing | Handles performance, security, reliability, AI, and domain risks | [[career-path/10_Quality_and_Test_Engineering/05_Specialized_Testing/00_overview\|Specialized Testing]] | [[software-engineering-note/05_Software_Testing/10_Domain_Specific_Testing]] |
+| Measurement | Uses defect, coverage, flow, and quality-cost measures responsibly | [[career-path/10_Quality_and_Test_Engineering/06_Measurement/00_overview\|Measurement]] | [[software-engineering-note/05_Software_Testing/12_Test_Process_and_Measures]] |
 
 ## Typical Progression
 
@@ -89,7 +89,7 @@ flowchart LR
 - [[career-path/06_Software_Architect/00_overview|Software Architect]]: quality attributes and architecture trade-offs
 - [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]: people and delivery leadership
 
-## Suggested Future Note Route
+## Background Reading
 
 1. [[software-engineering-note/05_Software_Testing/Software Testing Overview]]
 2. [[software-engineering-note/05_Software_Testing/01_Testing_Fundamentals]]

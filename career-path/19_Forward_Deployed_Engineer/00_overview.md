@@ -43,7 +43,7 @@ This path is distinct from its neighbors. The [[career-path/15_Solutions_and_Ent
 - Field evidence (patterns, blockers, failure modes) flowing back into product priorities
 - Deployments that renew and expand because the outcome was measured, not assumed
 
-## Capability Areas (planned)
+## Capability Areas
 
 | Capability | Focus | Files |
 |---|---|---|

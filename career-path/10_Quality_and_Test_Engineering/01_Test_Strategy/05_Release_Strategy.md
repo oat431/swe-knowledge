@@ -67,7 +67,7 @@ Release criteria are measurable conditions that must be met before release:
 **Non-functional criteria:**
 - Performance tests meet SLA (e.g., response time < 2s)
 - Security vulnerabilities remediated
-- Accessibility standards met (e.g., WCAG 2.1 AA)
+- Accessibility standards met (e.g., WCAG 2.2 AA)
 - Reliability tests pass (e.g., 99.9% uptime in staging)
 
 **Process criteria:**

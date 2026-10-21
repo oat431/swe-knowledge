@@ -49,7 +49,9 @@ Based on **WCAG** (Web Content Accessibility Guidelines) principles: POUR
 - Temporary (broken arm, eye surgery)
 - Situational (bright sunlight, noisy environment)
 
-## WCAG 2.1 Guidelines
+## WCAG 2.2 Guidelines
+
+WCAG 2.2 has been the W3C Recommendation since October 2023. It keeps the POUR principles and most 2.1 criteria, adds criteria such as target size, dragging movements, consistent help, redundant entry, and accessible authentication, and removes the old 4.1.1 Parsing criterion.
 
 ### Level A (Minimum)
 

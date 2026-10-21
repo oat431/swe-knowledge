@@ -91,7 +91,7 @@ flowchart LR
 - [[career-path/06_Software_Architect/00_overview|Software Architect]]: technical design and system structure
 - [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]: internal technical influence
 
-## Suggested Future Note Route
+## Background Reading
 
 1. [[software-engineering-note/14_Software_Engineering_Professional_Practice/03_Communication_Skills]]
 2. [[software-engineering-note/14_Software_Engineering_Professional_Practice/06_Professional_Societies_and_Community]]

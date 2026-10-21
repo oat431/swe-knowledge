@@ -10,7 +10,7 @@ next_paths:
   - "[[career-path/06_Software_Architect/00_overview|Software Architect]]"
   - "[[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]"
 source_frameworks:
-  - "[[DMBoK v2 - Overview]]"
+  - "[[body-of-knowledge/DMBOK/DMBoK v2 - Overview]]"
   - "[[SWEBOK v4 - Overview]]"
   - "[[CyBOK v1 - Overview]]"
 tags:
@@ -92,21 +92,21 @@ flowchart LR
 - [[career-path/14_Product_Manager/00_overview|Product Manager]]: data-informed product decisions
 - [[career-path/18_Applied_AI_Engineer/00_overview|Applied AI Engineer]]: application-layer intelligence built on data and ML capabilities
 
-## Suggested Future Note Route
+## Background Reading
 
-1. [[DMBoK v2 - Overview]]
-2. [[02_Data_Architecture]]
-3. [[03_Data_Modeling_and_Design]]
-4. [[06_Data_Integration_and_Interoperability]]
-5. [[10_Metadata_Management]]
-6. [[11_Data_Quality]]
-7. [[05_Data_Security]]
+1. [[body-of-knowledge/DMBOK/DMBoK v2 - Overview]]
+2. [[body-of-knowledge/DMBOK/02_Data_Architecture]]
+3. [[body-of-knowledge/DMBOK/03_Data_Modeling_and_Design]]
+4. [[body-of-knowledge/DMBOK/06_Data_Integration_and_Interoperability]]
+5. [[body-of-knowledge/DMBOK/10_Metadata_Management]]
+6. [[body-of-knowledge/DMBOK/11_Data_Quality]]
+7. [[body-of-knowledge/DMBOK/05_Data_Security]]
 8. [[computing-foundation-note/Artificial_Intelligence/AI Overview]]
 9. [[computing-foundation-note/Artificial_Intelligence/09_AI_SE_Intersection]]
 
 ## Sources
 
-- [[DMBoK v2 - Overview]]
+- [[body-of-knowledge/DMBOK/DMBoK v2 - Overview]]
 - [[SWEBOK v4 - Overview]]
 - [[CyBOK v1 - Overview]]
 

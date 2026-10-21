@@ -90,7 +90,7 @@ flowchart LR
 - [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]: cross-team technical influence
 - [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]: people and delivery leadership
 
-## Suggested Future Note Route
+## Background Reading
 
 1. [[software-engineering-note/06_Software_Engineering_Operations/Software Engineering Operations Overview]]
 2. [[software-engineering-note/02_Software_Architecture/Microservice/Microservice Overview]]

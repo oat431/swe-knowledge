@@ -71,13 +71,13 @@ You demonstrate mastery of test design when you can:
 
 ## Progress Tracker
 
-- [ ] [[01_Equivalence_Partitioning]] - Complete
-- [ ] [[02_Boundary_Value_Analysis]] - Complete
-- [ ] [[03_Decision_Table_Testing]] - Complete
-- [ ] [[04_State_Transition_Testing]] - Complete
-- [ ] [[05_Use_Case_Testing]] - Complete
-- [ ] [[06_Exploratory_Testing]] - Complete
-- [ ] [[07_Test_Design_Strategy]] - Complete
+- [ ] [[01_Equivalence_Partitioning]]
+- [ ] [[02_Boundary_Value_Analysis]]
+- [ ] [[03_Decision_Table_Testing]]
+- [ ] [[04_State_Transition_Testing]]
+- [ ] [[05_Use_Case_Testing]]
+- [ ] [[06_Exploratory_Testing]]
+- [ ] [[07_Test_Design_Strategy]]
 
 ---
 

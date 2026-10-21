@@ -171,7 +171,7 @@ The loop is the career-path capstone: a senior security engineer connects design
 - [[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]: broad technical influence
 - [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions or Enterprise Architect]]: security across customer and enterprise contexts
 
-## Suggested Future Note Route
+## Background Reading
 
 1. [[CyBOK v1 - Overview]]
 2. [[software-engineering-note/13_Software_Security/Software Security Overview]]

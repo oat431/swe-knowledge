@@ -81,7 +81,7 @@ flowchart LR
 - [[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]: people and organizational management
 - [[career-path/15_Solutions_and_Enterprise_Architect/00_overview|Solutions or Enterprise Architect]]: enterprise and customer-facing architecture
 
-## Suggested Future Note Route
+## Background Reading
 
 1. [[SEBoK v2 - Overview]]
 2. [[body-of-knowledge/System Engineer BOK/11_Enterprise_Systems_Engineering]]

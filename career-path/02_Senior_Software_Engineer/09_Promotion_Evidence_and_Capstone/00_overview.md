@@ -1,5 +1,5 @@
 ---
-title: "09_Promotion_Evidence_and_Capstone"
+title: "Promotion Evidence and Capstone"
 type: "capability-area"
 role: "Senior Software Engineer"
 level: "Senior"

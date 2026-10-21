@@ -71,12 +71,12 @@ You demonstrate mastery of automation when you can:
 
 ## Progress Tracker
 
-- [ ] [[01_Automation_Strategy]] - Complete
-- [ ] [[02_Test_Framework_Design]] - Complete
-- [ ] [[03_Maintainable_Tests]] - Complete
-- [ ] [[04_CI_CD_Integration]] - Complete
-- [ ] [[05_Flaky_Test_Management]] - Complete
-- [ ] [[06_ROI_Analysis]] - Complete
+- [ ] [[01_Automation_Strategy]]
+- [ ] [[02_Test_Framework_Design]]
+- [ ] [[03_Maintainable_Tests]]
+- [ ] [[04_CI_CD_Integration]]
+- [ ] [[05_Flaky_Test_Management]]
+- [ ] [[06_ROI_Analysis]]
 
 ---
 
