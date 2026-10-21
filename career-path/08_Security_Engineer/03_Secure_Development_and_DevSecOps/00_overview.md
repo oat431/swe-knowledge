@@ -45,12 +45,12 @@ Senior-level outcomes include:
 
 | # | Topic | Senior-level focus | Status | File |
 |---|---|---|---|---|
-| 01 | [[01_Security_Requirements_in_Backlog|Security Requirements in Backlog]] | Convert risk into testable, prioritized delivery work | Done | `01_Security_Requirements_in_Backlog.md` |
-| 02 | [[02_Secure_Coding_Enablement|Secure Coding Enablement]] | Build developer capability and safe paved roads | Done | `02_Secure_Coding_Enablement.md` |
-| 03 | [[03_DevSecOps_Pipeline_Controls|DevSecOps Pipeline Controls]] | Place proportionate, trustworthy controls in the flow | Done | `03_DevSecOps_Pipeline_Controls.md` |
-| 04 | [[04_Dependency_and_Supply_Chain_Security|Dependency and Supply Chain Security]] | Manage transitive risk, provenance, and response | Done | `04_Dependency_and_Supply_Chain_Security.md` |
-| 05 | [[05_Security_Configuration_as_Code|Security Configuration as Code]] | Encode security invariants and control drift | Done | `05_Security_Configuration_as_Code.md` |
-| 06 | [[06_Security_Champion_Operating_Model|Security Champion Operating Model]] | Scale security judgment through product teams | Done | `06_Security_Champion_Operating_Model.md` |
+| 01 | [[01_Security_Requirements_in_Backlog|Security Requirements in Backlog]] | Convert risk into testable, prioritized delivery work | Done | [[01_Security_Requirements_in_Backlog]] |
+| 02 | [[02_Secure_Coding_Enablement|Secure Coding Enablement]] | Build developer capability and safe paved roads | Done | [[02_Secure_Coding_Enablement]] |
+| 03 | [[03_DevSecOps_Pipeline_Controls|DevSecOps Pipeline Controls]] | Place proportionate, trustworthy controls in the flow | Done | [[03_DevSecOps_Pipeline_Controls]] |
+| 04 | [[04_Dependency_and_Supply_Chain_Security|Dependency and Supply Chain Security]] | Manage transitive risk, provenance, and response | Done | [[04_Dependency_and_Supply_Chain_Security]] |
+| 05 | [[05_Security_Configuration_as_Code|Security Configuration as Code]] | Encode security invariants and control drift | Done | [[05_Security_Configuration_as_Code]] |
+| 06 | [[06_Security_Champion_Operating_Model|Security Champion Operating Model]] | Scale security judgment through product teams | Done | [[06_Security_Champion_Operating_Model]] |
 
 **Completion:** 6/6 topics, 100%
 

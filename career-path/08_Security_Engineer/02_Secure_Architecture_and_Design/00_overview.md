@@ -34,12 +34,12 @@ The outcome is not a perfect architecture. It is a system whose important securi
 
 | # | Topic | Senior focus | Status | File |
 |---|---|---|---|---|
-| 01 | Security Principles and Quality Attributes | Translate principles into measurable architecture constraints | ✅ Done | `01_Security_Principles_and_Quality_Attributes.md` |
-| 02 | Defense in Depth | Compose independent preventive, detective, and recovery layers | ✅ Done | `02_Defense_in_Depth.md` |
-| 03 | Zero Trust and Segmentation | Make identity, context, and resource boundaries explicit | ✅ Done | `03_Zero_Trust_and_Segmentation.md` |
-| 04 | Secure Architecture Decisions | Record trade-offs, authority, assumptions, and evidence | ✅ Done | `04_Secure_Architecture_Decisions.md` |
-| 05 | Secrets and Cryptographic Boundaries | Place key, secret, and cryptographic responsibilities deliberately | ✅ Done | `05_Secrets_and_Cryptographic_Boundaries.md` |
-| 06 | Resilient and Fail-Secure Design | Choose safe behavior when controls or dependencies fail | ✅ Done | `06_Resilient_and_Fail_Secure_Design.md` |
+| 01 | Security Principles and Quality Attributes | Translate principles into measurable architecture constraints | ✅ Done | [[01_Security_Principles_and_Quality_Attributes]] |
+| 02 | Defense in Depth | Compose independent preventive, detective, and recovery layers | ✅ Done | [[02_Defense_in_Depth]] |
+| 03 | Zero Trust and Segmentation | Make identity, context, and resource boundaries explicit | ✅ Done | [[03_Zero_Trust_and_Segmentation]] |
+| 04 | Secure Architecture Decisions | Record trade-offs, authority, assumptions, and evidence | ✅ Done | [[04_Secure_Architecture_Decisions]] |
+| 05 | Secrets and Cryptographic Boundaries | Place key, secret, and cryptographic responsibilities deliberately | ✅ Done | [[05_Secrets_and_Cryptographic_Boundaries]] |
+| 06 | Resilient and Fail-Secure Design | Choose safe behavior when controls or dependencies fail | ✅ Done | [[06_Resilient_and_Fail_Secure_Design]] |
 
 **Completion:** All six topics are drafted and linked.
 

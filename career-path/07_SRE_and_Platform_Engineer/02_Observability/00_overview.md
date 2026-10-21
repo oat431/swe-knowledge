@@ -28,11 +28,11 @@ Observability is not monitoring. Monitoring tells you the system is broken. Obse
 
 | # | Topic | Focus | Status | File |
 |---|---|---|---|---|
-| 01 | Metrics and Dashboards | Building effective metrics and dashboard design | ✅ Done | `01_Metrics_and_Dashboards.md` |
-| 02 | Structured Logging | Designing logs for queryability and analysis | ✅ Done | `02_Structured_Logging.md` |
-| 03 | Distributed Tracing | Tracing requests across service boundaries | ✅ Done | `03_Distributed_Tracing.md` |
-| 04 | Alerting Strategy | Designing alerts that are actionable, not noisy | ✅ Done | `04_Alerting_Strategy.md` |
-| 05 | Observability-Driven Development | Building observability into the development process | ✅ Done | `05_Observability_Driven_Development.md` |
+| 01 | Metrics and Dashboards | Building effective metrics and dashboard design | ✅ Done | [[01_Metrics_and_Dashboards]] |
+| 02 | Structured Logging | Designing logs for queryability and analysis | ✅ Done | [[02_Structured_Logging]] |
+| 03 | Distributed Tracing | Tracing requests across service boundaries | ✅ Done | [[03_Distributed_Tracing]] |
+| 04 | Alerting Strategy | Designing alerts that are actionable, not noisy | ✅ Done | [[04_Alerting_Strategy]] |
+| 05 | Observability-Driven Development | Building observability into the development process | ✅ Done | [[05_Observability_Driven_Development]] |
 
 **Completion:** 5/5 : 100%
 

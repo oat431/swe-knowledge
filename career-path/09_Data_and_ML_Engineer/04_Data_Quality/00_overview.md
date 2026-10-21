@@ -27,12 +27,12 @@ Data quality is not about perfection: it is about fitness for purpose. The senio
 
 | # | Topic | Focus | Status | File |
 |---|---|---|---|---|
-| 01 | Quality Dimensions and Metrics | Completeness, accuracy, timeliness, consistency | ✅ Done | `01_Quality_Dimensions_and_Metrics.md` |
-| 02 | Profiling and Anomaly Detection | Statistical profiling, drift detection, outliers | ✅ Done | `02_Profiling_and_Anomaly_Detection.md` |
-| 03 | Quality Rules and Validation | Declarative rules, schema validation, custom checks | ✅ Done | `03_Quality_Rules_and_Validation.md` |
-| 04 | Data Observability | Monitoring freshness, volume, schema drift, lineage impact | ✅ Done | `04_Data_Observability.md` |
-| 05 | Quality Scorecards and Reporting | Dashboards, SLA tracking, trend analysis | ✅ Done | `05_Quality_Scorecards_and_Reporting.md` |
-| 06 | Remediation and Root Cause | Fixing at source, feedback loops, prevention | ✅ Done | `06_Remediation_and_Root_Cause.md` |
+| 01 | Quality Dimensions and Metrics | Completeness, accuracy, timeliness, consistency | ✅ Done | [[01_Quality_Dimensions_and_Metrics]] |
+| 02 | Profiling and Anomaly Detection | Statistical profiling, drift detection, outliers | ✅ Done | [[02_Profiling_and_Anomaly_Detection]] |
+| 03 | Quality Rules and Validation | Declarative rules, schema validation, custom checks | ✅ Done | [[03_Quality_Rules_and_Validation]] |
+| 04 | Data Observability | Monitoring freshness, volume, schema drift, lineage impact | ✅ Done | [[04_Data_Observability]] |
+| 05 | Quality Scorecards and Reporting | Dashboards, SLA tracking, trend analysis | ✅ Done | [[05_Quality_Scorecards_and_Reporting]] |
+| 06 | Remediation and Root Cause | Fixing at source, feedback loops, prevention | ✅ Done | [[06_Remediation_and_Root_Cause]] |
 
 **Completion:** 6/6 : 100%
 

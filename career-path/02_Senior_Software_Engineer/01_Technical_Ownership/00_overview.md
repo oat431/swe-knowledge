@@ -35,12 +35,12 @@ Ownership does not mean doing everything yourself. It means:
 
 | # | Topic | Focus | Status | File |
 |---|---|---|---|---|
-| 01 | System Ownership | Defining and understanding your ownership boundary | ✅ Done | `01_System_Ownership.md` |
-| 02 | Lifecycle Ownership | Following the system from requirements through operation | ✅ Done | `02_Lifecycle_Ownership.md` |
-| 03 | Technical Debt and Maintainability | Managing debt strategically, not reactively | ✅ Done | `03_Technical_Debt_and_Maintainability.md` |
-| 04 | Production Responsibility | Being accountable after code ships | ✅ Done | `04_Production_Responsibility.md` |
-| 05 | Decision Ownership | Making, recording, and standing behind technical decisions | ✅ Done | `05_Decision_Ownership.md` |
-| 06 | Ownership Evidence | Building a case for promotion from outcomes | ✅ Done | `06_Ownership_Evidence.md` |
+| 01 | System Ownership | Defining and understanding your ownership boundary | ✅ Done | [[01_System_Ownership]] |
+| 02 | Lifecycle Ownership | Following the system from requirements through operation | ✅ Done | [[02_Lifecycle_Ownership]] |
+| 03 | Technical Debt and Maintainability | Managing debt strategically, not reactively | ✅ Done | [[03_Technical_Debt_and_Maintainability]] |
+| 04 | Production Responsibility | Being accountable after code ships | ✅ Done | [[04_Production_Responsibility]] |
+| 05 | Decision Ownership | Making, recording, and standing behind technical decisions | ✅ Done | [[05_Decision_Ownership]] |
+| 06 | Ownership Evidence | Building a case for promotion from outcomes | ✅ Done | [[06_Ownership_Evidence]] |
 
 **Completion:** 6/6, 100%
 

@@ -42,14 +42,14 @@ Problem framing is not a phase that happens before "real work" begins. It is **c
 
 | # | Topic | Focus | Status | File |
 |---|---|---|---|---|
-| 01 | Problem Statement Definition | Framing the problem before jumping to solutions | ✅ Done | `01_Problem_Statement_Definition.md` |
-| 02 | Current and Future State Analysis | Understanding where we are and where we need to be | ✅ Done | `02_Current_and_Future_State.md` |
-| 03 | Stakeholder Identification and Management | Knowing who cares and what they need | ✅ Done | `03_Stakeholder_Management.md` |
-| 04 | User and Business Outcomes | Connecting requirements to measurable value | ✅ Done | `04_User_and_Business_Outcomes.md` |
-| 05 | Acceptance Conditions and Validation | Defining success before building | ✅ Done | `05_Acceptance_Conditions.md` |
-| 06 | Ambiguity Reduction | Making progress when requirements are unclear | ✅ Done | `06_Ambiguity_Reduction.md` |
-| 07 | Prioritization and Trade-offs | Deciding what matters most | ✅ Done | `07_Prioritization.md` |
-| 08 | Requirements Risk Management | Identifying and mitigating requirement-related risks | ✅ Done | `08_Requirements_Risk.md` |
+| 01 | Problem Statement Definition | Framing the problem before jumping to solutions | ✅ Done | [[01_Problem_Statement_Definition]] |
+| 02 | Current and Future State Analysis | Understanding where we are and where we need to be | ✅ Done | [[02_Current_and_Future_State]] |
+| 03 | Stakeholder Identification and Management | Knowing who cares and what they need | ✅ Done | [[03_Stakeholder_Management]] |
+| 04 | User and Business Outcomes | Connecting requirements to measurable value | ✅ Done | [[04_User_and_Business_Outcomes]] |
+| 05 | Acceptance Conditions and Validation | Defining success before building | ✅ Done | [[05_Acceptance_Conditions]] |
+| 06 | Ambiguity Reduction | Making progress when requirements are unclear | ✅ Done | [[06_Ambiguity_Reduction]] |
+| 07 | Prioritization and Trade-offs | Deciding what matters most | ✅ Done | [[07_Prioritization]] |
+| 08 | Requirements Risk Management | Identifying and mitigating requirement-related risks | ✅ Done | [[08_Requirements_Risk]] |
 
 **Completion:** 8/8 : 100%
 

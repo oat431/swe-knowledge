@@ -30,12 +30,12 @@ The specialist owns the operating system around incidents: who can declare an in
 
 | # | Topic | Senior-specialist focus | Status | File |
 |---|---|---|---|---|
-| 01 | Security Observability | Design telemetry that supports detection, triage, and evidence | ✅ Done | `01_Security_Observability.md` |
-| 02 | Detection Engineering | Build tested, owned, explainable detections with useful precision | ✅ Done | `02_Detection_Engineering.md` |
-| 03 | Incident Classification and Triage | Turn uncertain signals into proportionate, timely decisions | ✅ Done | `03_Incident_Classification_and_Triage.md` |
-| 04 | Incident Command and Containment | Lead authority, communication, evidence, and containment trade-offs | ✅ Done | `04_Incident_Command_and_Containment.md` |
-| 05 | Recovery and Lessons Learned | Restore trusted service and convert failure into owned improvement | ✅ Done | `05_Recovery_and_Lessons_Learned.md` |
-| 06 | Resilience and Adversary Exercises | Validate controls and recovery through safe, realistic scenarios | ✅ Done | `06_Resilience_and_Adversary_Exercises.md` |
+| 01 | Security Observability | Design telemetry that supports detection, triage, and evidence | ✅ Done | [[01_Security_Observability]] |
+| 02 | Detection Engineering | Build tested, owned, explainable detections with useful precision | ✅ Done | [[02_Detection_Engineering]] |
+| 03 | Incident Classification and Triage | Turn uncertain signals into proportionate, timely decisions | ✅ Done | [[03_Incident_Classification_and_Triage]] |
+| 04 | Incident Command and Containment | Lead authority, communication, evidence, and containment trade-offs | ✅ Done | [[04_Incident_Command_and_Containment]] |
+| 05 | Recovery and Lessons Learned | Restore trusted service and convert failure into owned improvement | ✅ Done | [[05_Recovery_and_Lessons_Learned]] |
+| 06 | Resilience and Adversary Exercises | Validate controls and recovery through safe, realistic scenarios | ✅ Done | [[06_Resilience_and_Adversary_Exercises]] |
 
 **Completion:** 6/6 : 100%
 

@@ -30,12 +30,12 @@ The specialist does not respond to every risk with maximum friction. They set as
 
 | # | Topic | Senior-specialist focus | Status | File |
 |---|---|---|---|---|
-| 01 | Identity Threat Model | Map identity attack paths, trust boundaries, and accountable owners | ✅ Done | `01_Identity_Threat_Model.md` |
-| 02 | Authentication and Session Strategy | Choose assurance, recovery, and session controls without unnecessary friction | ✅ Done | `02_Authentication_and_Session_Strategy.md` |
-| 03 | Authorization and Least Privilege | Design enforceable permissions, delegation, and reviewable entitlements | ✅ Done | `03_Authorization_and_Least_Privilege.md` |
-| 04 | Service Identity and Secrets | Manage workload identity, rotation, provenance, and blast radius | ✅ Done | `04_Service_Identity_and_Secrets.md` |
-| 05 | Data Classification and Protection | Translate data value and sensitivity into lifecycle controls | ✅ Done | `05_Data_Classification_and_Protection.md` |
-| 06 | Privacy and Auditability | Make sensitive processing explainable, traceable, and evidence-ready | ✅ Done | `06_Privacy_and_Auditability.md` |
+| 01 | Identity Threat Model | Map identity attack paths, trust boundaries, and accountable owners | ✅ Done | [[01_Identity_Threat_Model]] |
+| 02 | Authentication and Session Strategy | Choose assurance, recovery, and session controls without unnecessary friction | ✅ Done | [[02_Authentication_and_Session_Strategy]] |
+| 03 | Authorization and Least Privilege | Design enforceable permissions, delegation, and reviewable entitlements | ✅ Done | [[03_Authorization_and_Least_Privilege]] |
+| 04 | Service Identity and Secrets | Manage workload identity, rotation, provenance, and blast radius | ✅ Done | [[04_Service_Identity_and_Secrets]] |
+| 05 | Data Classification and Protection | Translate data value and sensitivity into lifecycle controls | ✅ Done | [[05_Data_Classification_and_Protection]] |
+| 06 | Privacy and Auditability | Make sensitive processing explainable, traceable, and evidence-ready | ✅ Done | [[06_Privacy_and_Auditability]] |
 
 **Completion:** 6/6 : 100%
 

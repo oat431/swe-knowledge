@@ -28,11 +28,11 @@ Developer platforms are not just infrastructure automation. They are **products 
 
 | # | Topic | Focus | Status | File |
 |---|---|---|---|---|
-| 01 | Platform as Product | Treating platform as internal product with user research and roadmap | ✅ Done | `01_Platform_as_Product.md` |
-| 02 | Self-Service Infrastructure | Service catalogs, provisioning automation, developer portals | ✅ Done | `02_Self_Service_Infrastructure.md` |
-| 03 | Golden Paths | Paved roads, standard tooling, reducing cognitive load | ✅ Done | `03_Golden_Paths.md` |
-| 04 | Developer Experience | DX metrics, friction reduction, onboarding | ✅ Done | `04_Developer_Experience.md` |
-| 05 | Internal Service Catalog | Service registry, API management, dependency tracking | ✅ Done | `05_Internal_Service_Catalog.md` |
+| 01 | Platform as Product | Treating platform as internal product with user research and roadmap | ✅ Done | [[01_Platform_as_Product]] |
+| 02 | Self-Service Infrastructure | Service catalogs, provisioning automation, developer portals | ✅ Done | [[02_Self_Service_Infrastructure]] |
+| 03 | Golden Paths | Paved roads, standard tooling, reducing cognitive load | ✅ Done | [[03_Golden_Paths]] |
+| 04 | Developer Experience | DX metrics, friction reduction, onboarding | ✅ Done | [[04_Developer_Experience]] |
+| 05 | Internal Service Catalog | Service registry, API management, dependency tracking | ✅ Done | [[05_Internal_Service_Catalog]] |
 
 **Completion:** 5/5 : 100%
 

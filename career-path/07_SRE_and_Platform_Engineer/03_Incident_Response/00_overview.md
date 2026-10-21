@@ -28,11 +28,11 @@ Incidents are inevitable. The goal is not to prevent all incidents, but to **res
 
 | # | Topic | Focus | Status | File |
 |---|---|---|---|---|
-| 01 | On-Call Practices | Designing sustainable on-call rotations and compensation | ✅ Done | `01_On_Call_Practices.md` |
-| 02 | Incident Management | Coordinating response, communication, and recovery | ✅ Done | `02_Incident_Management.md` |
-| 03 | Blameless Postmortems | Learning from incidents without blame | ✅ Done | `03_Blameless_Postmortems.md` |
-| 04 | Post-Incident Action Items | Tracking and completing corrective actions | ✅ Done | `04_Post_Incident_Action_Items.md` |
-| 05 | War Games | Practicing incident response through simulations | ✅ Done | `05_War_Games.md` |
+| 01 | On-Call Practices | Designing sustainable on-call rotations and compensation | ✅ Done | [[01_On_Call_Practices]] |
+| 02 | Incident Management | Coordinating response, communication, and recovery | ✅ Done | [[02_Incident_Management]] |
+| 03 | Blameless Postmortems | Learning from incidents without blame | ✅ Done | [[03_Blameless_Postmortems]] |
+| 04 | Post-Incident Action Items | Tracking and completing corrective actions | ✅ Done | [[04_Post_Incident_Action_Items]] |
+| 05 | War Games | Practicing incident response through simulations | ✅ Done | [[05_War_Games]] |
 
 **Completion:** 5/5 : 100%
 

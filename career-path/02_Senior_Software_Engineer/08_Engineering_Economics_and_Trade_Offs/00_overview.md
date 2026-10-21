@@ -52,12 +52,12 @@ flowchart TD
 
 **Core topics:**
 
-1. **Cost-Benefit Analysis:** Systematic evaluation of costs and benefits to compare alternatives
-2. **Build vs Buy Decisions:** Framework for choosing between custom development and third-party solutions
-3. **Technical Debt as Financial Debt:** Quantifying debt impact and planning paydown strategies
-4. **Total Cost of Ownership:** Understanding all costs over the lifecycle of a system
-5. **Business Case Development:** Building compelling arguments for technical investments
-6. **Trade-Off Evaluation:** Structured approach to comparing alternatives with multiple criteria
+1. **[[01_Cost_Benefit_Analysis|Cost-Benefit Analysis]]:** Systematic evaluation of costs and benefits to compare alternatives
+2. **[[02_Build_vs_Buy_Decisions|Build vs Buy Decisions]]:** Framework for choosing between custom development and third-party solutions
+3. **[[03_Technical_Debt_ROI|Technical Debt as Financial Debt]]:** Quantifying debt impact and planning paydown strategies
+4. **[[04_Total_Cost_of_Ownership|Total Cost of Ownership]]:** Understanding all costs over the lifecycle of a system
+5. **[[05_Business_Case_Development|Business Case Development]]:** Building compelling arguments for technical investments
+6. **[[06_Trade_Off_Evaluation|Trade-Off Evaluation]]:** Structured approach to comparing alternatives with multiple criteria
 
 ## Senior-Level Economic Skills
 

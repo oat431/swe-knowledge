@@ -27,12 +27,12 @@ Data integration is the circulatory system of any data-driven organization. With
 
 | # | Topic | Focus | Status | File |
 |---|---|---|---|---|
-| 01 | Batch ETL Design | Orchestration, idempotency, error handling, backfill | ✅ Done | `01_Batch_ETL_Design.md` |
-| 02 | Streaming and Real-Time Pipelines | Event sourcing, exactly-once, windowing, late data | ✅ Done | `02_Streaming_and_Real_Time_Pipelines.md` |
-| 03 | Change Data Capture | CDC patterns, log-based vs query-based, schema propagation | ✅ Done | `03_Change_Data_Capture.md` |
-| 04 | API and Contract Design | Data API versioning, GraphQL vs REST, contract testing | ✅ Done | `04_API_and_Contract_Design.md` |
-| 05 | Cross-System Orchestration | DAG design, dependency management, SLA cascading | ✅ Done | `05_Cross_System_Orchestration.md` |
-| 06 | Data Lineage and Provenance | End-to-end lineage, impact analysis, compliance lineage | ✅ Done | `06_Data_Lineage_and_Provenance.md` |
+| 01 | Batch ETL Design | Orchestration, idempotency, error handling, backfill | ✅ Done | [[01_Batch_ETL_Design]] |
+| 02 | Streaming and Real-Time Pipelines | Event sourcing, exactly-once, windowing, late data | ✅ Done | [[02_Streaming_and_Real_Time_Pipelines]] |
+| 03 | Change Data Capture | CDC patterns, log-based vs query-based, schema propagation | ✅ Done | [[03_Change_Data_Capture]] |
+| 04 | API and Contract Design | Data API versioning, GraphQL vs REST, contract testing | ✅ Done | [[04_API_and_Contract_Design]] |
+| 05 | Cross-System Orchestration | DAG design, dependency management, SLA cascading | ✅ Done | [[05_Cross_System_Orchestration]] |
+| 06 | Data Lineage and Provenance | End-to-end lineage, impact analysis, compliance lineage | ✅ Done | [[06_Data_Lineage_and_Provenance]] |
 
 **Completion:** 6/6 : 100%
 

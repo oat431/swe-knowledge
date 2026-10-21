@@ -29,11 +29,11 @@ Capacity and resilience are not optional add-ons. They are engineering disciplin
 
 | # | Topic | Focus | Status | File |
 |---|---|---|---|---|
-| 01 | Capacity Planning | Forecasting demand and planning resources | ✅ Done | `01_Capacity_Planning.md` |
-| 02 | Load and Stress Testing | Performance testing and bottleneck identification | ✅ Done | `02_Load_and_Stress_Testing.md` |
-| 03 | Disaster Recovery | Backup strategies and recovery procedures | ✅ Done | `03_Disaster_Recovery.md` |
-| 04 | Chaos Engineering | Fault injection and resilience testing | ✅ Done | `04_Chaos_Engineering.md` |
-| 05 | Auto-Scaling Design | Scaling policies and cost optimization | ✅ Done | `05_Auto_Scaling_Design.md` |
+| 01 | Capacity Planning | Forecasting demand and planning resources | ✅ Done | [[01_Capacity_Planning]] |
+| 02 | Load and Stress Testing | Performance testing and bottleneck identification | ✅ Done | [[02_Load_and_Stress_Testing]] |
+| 03 | Disaster Recovery | Backup strategies and recovery procedures | ✅ Done | [[03_Disaster_Recovery]] |
+| 04 | Chaos Engineering | Fault injection and resilience testing | ✅ Done | [[04_Chaos_Engineering]] |
+| 05 | Auto-Scaling Design | Scaling policies and cost optimization | ✅ Done | [[05_Auto_Scaling_Design]] |
 
 **Completion:** 5/5 : 100%
 

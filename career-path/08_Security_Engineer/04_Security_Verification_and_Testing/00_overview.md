@@ -44,12 +44,12 @@ Senior-level outcomes include:
 
 | # | Topic | Senior-level focus | Status | File |
 |---|---|---|---|---|
-| 01 | [[01_Security_Test_Strategy|Security Test Strategy]] | Select the right verification depth for the risk | Done | `01_Security_Test_Strategy.md` |
-| 02 | [[02_SAST_and_Taint_Analysis|SAST and Taint Analysis]] | Interpret source-to-sink evidence and tool limits | Done | `02_SAST_and_Taint_Analysis.md` |
-| 03 | [[03_SCA_and_Container_Scanning|SCA and Container Scanning]] | Contextualize component, image, and runtime exposure | Done | `03_SCA_and_Container_Scanning.md` |
-| 04 | [[04_DAST_Fuzzing_and_Penetration_Testing|DAST, Fuzzing, and Penetration Testing]] | Choose dynamic methods and run them safely | Done | `04_DAST_Fuzzing_and_Penetration_Testing.md` |
-| 05 | [[05_Findings_Triage_and_False_Positives|Findings Triage and False Positives]] | Turn imperfect signals into fair risk decisions | Done | `05_Findings_Triage_and_False_Positives.md` |
-| 06 | [[06_Security_Release_Evidence|Security Release Evidence]] | Explain confidence, limitations, and residual risk | Done | `06_Security_Release_Evidence.md` |
+| 01 | [[01_Security_Test_Strategy|Security Test Strategy]] | Select the right verification depth for the risk | Done | [[01_Security_Test_Strategy]] |
+| 02 | [[02_SAST_and_Taint_Analysis|SAST and Taint Analysis]] | Interpret source-to-sink evidence and tool limits | Done | [[02_SAST_and_Taint_Analysis]] |
+| 03 | [[03_SCA_and_Container_Scanning|SCA and Container Scanning]] | Contextualize component, image, and runtime exposure | Done | [[03_SCA_and_Container_Scanning]] |
+| 04 | [[04_DAST_Fuzzing_and_Penetration_Testing|DAST, Fuzzing, and Penetration Testing]] | Choose dynamic methods and run them safely | Done | [[04_DAST_Fuzzing_and_Penetration_Testing]] |
+| 05 | [[05_Findings_Triage_and_False_Positives|Findings Triage and False Positives]] | Turn imperfect signals into fair risk decisions | Done | [[05_Findings_Triage_and_False_Positives]] |
+| 06 | [[06_Security_Release_Evidence|Security Release Evidence]] | Explain confidence, limitations, and residual risk | Done | [[06_Security_Release_Evidence]] |
 
 **Completion:** 6/6 topics, 100%
 

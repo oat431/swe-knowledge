@@ -28,11 +28,11 @@ Service objectives are the foundation of reliability engineering because they tu
 
 | # | Topic | Focus | Status | File |
 |---|---|---|---|---|
-| 01 | SLI Design | Choosing the right indicators for service health | ✅ Done | `01_SLI_Design.md` |
-| 02 | SLO Definition | Setting realistic and meaningful reliability targets | ✅ Done | `02_SLO_Definition.md` |
-| 03 | Error Budget Policy | Using error budgets as decision-making tools | ✅ Done | `03_Error_Budget_Policy.md` |
-| 04 | SLA Management | Translating SLOs into contractual commitments | ✅ Done | `04_SLA_Management.md` |
-| 05 | Reliability Measurement | Tracking and reporting reliability over time | ✅ Done | `05_Reliability_Measurement.md` |
+| 01 | SLI Design | Choosing the right indicators for service health | ✅ Done | [[01_SLI_Design]] |
+| 02 | SLO Definition | Setting realistic and meaningful reliability targets | ✅ Done | [[02_SLO_Definition]] |
+| 03 | Error Budget Policy | Using error budgets as decision-making tools | ✅ Done | [[03_Error_Budget_Policy]] |
+| 04 | SLA Management | Translating SLOs into contractual commitments | ✅ Done | [[04_SLA_Management]] |
+| 05 | Reliability Measurement | Tracking and reporting reliability over time | ✅ Done | [[05_Reliability_Measurement]] |
 
 **Completion:** 5/5 : 100%
 

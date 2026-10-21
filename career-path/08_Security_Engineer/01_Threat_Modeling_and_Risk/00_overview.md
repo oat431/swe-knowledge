@@ -33,12 +33,12 @@ The output is a living risk model, not a document that is approved once and forg
 
 | # | Topic | Senior focus | Status | File |
 |---|---|---|---|---|
-| 01 | System Context and Assets | Define scope, assets, ownership, and consequence boundaries | ✅ Done | `01_System_Context_and_Assets.md` |
-| 02 | Threat Actor Analysis | Prioritize adversaries by motive, access, capability, and constraints | ✅ Done | `02_Threat_Actor_Analysis.md` |
-| 03 | Attack Surface and Trust Boundaries | Find exposed paths and challenge inherited trust | ✅ Done | `03_Attack_Surface_and_Trust_Boundaries.md` |
-| 04 | STRIDE and Abuse Cases | Turn threat categories into credible misuse scenarios | ✅ Done | `04_STRIDE_and_Abuse_Cases.md` |
-| 05 | Risk Rating and Treatment | Make proportionate treatment and acceptance decisions | ✅ Done | `05_Risk_Rating_and_Treatment.md` |
-| 06 | Threat Model Maintenance | Keep assumptions, controls, and evidence current as systems change | ✅ Done | `06_Threat_Model_Maintenance.md` |
+| 01 | System Context and Assets | Define scope, assets, ownership, and consequence boundaries | ✅ Done | [[01_System_Context_and_Assets]] |
+| 02 | Threat Actor Analysis | Prioritize adversaries by motive, access, capability, and constraints | ✅ Done | [[02_Threat_Actor_Analysis]] |
+| 03 | Attack Surface and Trust Boundaries | Find exposed paths and challenge inherited trust | ✅ Done | [[03_Attack_Surface_and_Trust_Boundaries]] |
+| 04 | STRIDE and Abuse Cases | Turn threat categories into credible misuse scenarios | ✅ Done | [[04_STRIDE_and_Abuse_Cases]] |
+| 05 | Risk Rating and Treatment | Make proportionate treatment and acceptance decisions | ✅ Done | [[05_Risk_Rating_and_Treatment]] |
+| 06 | Threat Model Maintenance | Keep assumptions, controls, and evidence current as systems change | ✅ Done | [[06_Threat_Model_Maintenance]] |
 
 **Completion:** All six topics are drafted and linked.
 
