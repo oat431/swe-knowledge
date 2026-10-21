@@ -18,13 +18,14 @@ tags:
 
 ## Overview
 
-This is the capstone capability area that ties together all eight previous areas. It focuses on:
+This is the capstone capability area that ties together all eight previous areas. Its primary target is the **mid-to-senior promotion case** — the most common promotion in the field — while the same evidence mechanics also serve senior-to-staff cases as a look-ahead. It focuses on:
 
-1. **Documenting Impact**: How to collect, organize, and present evidence of senior-level contributions
-2. **Building Promotion Packets**: Structuring compelling cases for advancement to Staff/Principal levels
-3. **Quantifying Value**: Translating technical work into business and organizational impact
-4. **Self-Assessment**: Evaluating readiness against career ladders and identifying gaps
-5. **Capstone Project**: Demonstrating mastery across all capability areas through a comprehensive initiative
+1. **Mid to Senior Promotion**: What committees expect, the delta template, and how "not yet" feedback is answered
+2. **Documenting Impact**: How to collect, organize, and present evidence of senior-level contributions
+3. **Building Promotion Packets**: Structuring compelling cases for advancement
+4. **Quantifying Value**: Translating technical work into business and organizational impact
+5. **Self-Assessment**: Evaluating readiness against career ladders and identifying gaps
+6. **Capstone Project**: Demonstrating mastery across all capability areas through a comprehensive initiative
 
 ## Why This Matters
 
@@ -35,11 +36,12 @@ This is the capstone capability area that ties together all eight previous areas
 - Haven't quantified the business value of their work
 - Don't understand what promotion committees look for
 
-**Senior vs Staff Distinction**:
-- **Senior Engineer**: Owns and delivers complex projects within a team
-- **Staff Engineer**: Drives technical strategy across teams, influences architecture decisions, multiplies others' effectiveness, and shapes engineering culture
+**Level Deltas** (start with [[07_Mid_to_Senior_Promotion]]):
+- **Mid-level Engineer**: Delivers features reliably with moderate supervision
+- **Senior Engineer**: Owns a system area end to end: frames problems, makes and defends design decisions, and lifts the team
+- **Staff Engineer** (look-ahead): Drives technical strategy across teams, influences architecture decisions, multiplies others' effectiveness, and shapes engineering culture
 
-The jump from Senior to Staff is not just doing more of the same:it's a qualitative shift in scope, influence, and organizational impact.
+The jump from mid to senior is a shift from executing agreed work to owning problems. The jump from Senior to Staff is not just doing more of the same: it is a qualitative shift in scope, influence, and organizational impact.
 
 ## The Eight Capability Areas
 
@@ -79,6 +81,7 @@ flowchart TB
 4. **[[04_Self_Assessment]]**: Frameworks for evaluating promotion readiness
 5. **[[05_Career_Ladders]]**: Understanding what committees look for at Staff/Principal levels
 6. **[[06_Capstone_Project]]**: Comprehensive project demonstrating mastery across all areas
+7. **[[07_Mid_to_Senior_Promotion]]**: What committees expect at the mid-to-senior step, the delta template, and common "not yet" reasons
 
 ## Key Principles
 
