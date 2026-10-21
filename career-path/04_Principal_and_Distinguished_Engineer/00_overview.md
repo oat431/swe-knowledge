@@ -5,6 +5,8 @@ career_family: technical-individual-contributor
 level: principal-and-distinguished
 entry_from:
   - "[[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]"
+next_paths:
+  - "[[career-path/17_Independent_Consulting_and_Technical_Founder/00_overview|Independent Consulting and Technical Founder]]"
 source_frameworks:
   - "[[SWEBOK v4 - Overview]]"
   - "[[SEBoK v2 - Overview]]"

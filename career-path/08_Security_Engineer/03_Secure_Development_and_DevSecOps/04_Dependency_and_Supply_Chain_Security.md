@@ -29,7 +29,7 @@ A mid-level practitioner may run a dependency audit and open tickets for known C
 
 Supply-chain risk includes direct and transitive packages, base images, build plugins, generated code, source repositories, maintainers, registries, signing keys, CI runners, and deployment metadata. A package can be safe today and become risky after a maintainer change, compromised release, newly disclosed vulnerability, or altered build process. Senior engineers create inventory, provenance, policy, response, and recovery instead of chasing a static list.
 
-Use [[software-engineering-note/13_Software_Security/Cybersecurity/02 Secure Development/02 Dependency & Supply Chain|Dependency and Supply Chain]] for foundational concepts and [SCA Report](F:\obsidian_note\document_template\14_Security/SCA-Report.md) for reporting structure.
+Use [[software-engineering-note/13_Software_Security/Cybersecurity/02 Secure Development/02 Dependency & Supply Chain|Dependency and Supply Chain]] for foundational concepts and [SCA Report](obsidian://open?vault=document_template&file=14_Security%2FSCA-Report) for reporting structure.
 
 ## Core Frameworks
 
@@ -129,7 +129,7 @@ Choose one service and its deployment artifact:
 - [[software-engineering-note/13_Software_Security/Cybersecurity/02 Secure Development/02 Dependency & Supply Chain|Dependency and Supply Chain]]: dependency risk foundations
 - [[body-of-knowledge/CyBOK/09_Software_Security|CyBOK Software Security]]: software security knowledge framework
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]: lifecycle and cloud supply-chain context
-- [SCA Report](F:\obsidian_note\document_template\14_Security/SCA-Report.md): report artifact for component findings
+- [SCA Report](obsidian://open?vault=document_template&file=14_Security%2FSCA-Report): report artifact for component findings
 - [[03_DevSecOps_Pipeline_Controls|DevSecOps Pipeline Controls]]: pipeline trust and artifact gates
 - [[05_Security_Configuration_as_Code|Security Configuration as Code]]: policy and deployment invariants
 - [[career-path/08_Security_Engineer/04_Security_Verification_and_Testing/03_SCA_and_Container_Scanning|SCA and Container Scanning]]: interpreting scan evidence

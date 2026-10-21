@@ -119,7 +119,7 @@ Choose a system you work on and create a context and asset register.
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]
 - [[software-engineering-note/13_Software_Security/01_Security_Fundamentals|Security Fundamentals]]
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]
-- [Threat Model Template](F:\obsidian_note\document_template\14_Security/Threat-Model.md)
+- [Threat Model Template](obsidian://open?vault=document_template&file=14_Security%2FThreat-Model)
 
 ## Key Takeaways
 

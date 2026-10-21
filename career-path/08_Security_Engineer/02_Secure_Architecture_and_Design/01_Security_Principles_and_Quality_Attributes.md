@@ -122,7 +122,7 @@ Choose three security concerns from a current architecture review.
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]
 - [[software-engineering-note/13_Software_Security/01_Security_Fundamentals|Security Fundamentals]]
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]
-- [Security Architecture Template](F:\obsidian_note\document_template\14_Security/Security-Architecture.md)
+- [Security Architecture Template](obsidian://open?vault=document_template&file=14_Security%2FSecurity-Architecture)
 
 ## Key Takeaways
 

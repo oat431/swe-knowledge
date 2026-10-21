@@ -120,7 +120,7 @@ Choose one security-relevant architecture choice, such as an identity boundary, 
 - [[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/05_Risk_Rating_and_Treatment|Risk Rating and Treatment]]
 - [[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/06_Threat_Model_Maintenance|Threat Model Maintenance]]
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]
-- [Security Architecture Template](F:\obsidian_note\document_template\14_Security/Security-Architecture.md)
+- [Security Architecture Template](obsidian://open?vault=document_template&file=14_Security%2FSecurity-Architecture)
 
 ## Key Takeaways
 

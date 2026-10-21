@@ -7,6 +7,11 @@ entry_from:
   - "[[career-path/02_Senior_Software_Engineer/00_overview|Senior Software Engineer]]"
   - "[[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]"
   - "[[career-path/14_Product_Manager/00_overview|Product Manager]]"
+next_paths:
+  - "[[career-path/03_Staff_Engineer/00_overview|Staff Engineer]]"
+  - "[[career-path/11_Engineering_Manager/00_overview|Engineering Manager]]"
+  - "[[career-path/14_Product_Manager/00_overview|Product Manager]]"
+  - "[[career-path/04_Principal_and_Distinguished_Engineer/00_overview|Principal and Distinguished Engineer]]"
 source_frameworks:
   - "[[BABOK v3 - Overview]]"
   - "[[PMBOK v8 - Overview]]"

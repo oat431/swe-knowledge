@@ -119,7 +119,7 @@ Select a critical user journey or administrative action.
 - [[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/03_Attack_Surface_and_Trust_Boundaries|Attack Surface and Trust Boundaries]]
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]
 - [[body-of-knowledge/SWEBOK/13_Software_Security|SWEBOK Software Security]]
-- [Security Architecture Template](F:\obsidian_note\document_template\14_Security/Security-Architecture.md)
+- [Security Architecture Template](obsidian://open?vault=document_template&file=14_Security%2FSecurity-Architecture)
 
 ## Key Takeaways
 

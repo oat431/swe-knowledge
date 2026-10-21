@@ -7,7 +7,7 @@ source_frameworks:
   - "[[software-engineering-note/13_Software_Security/Software Security Overview]]"
   - "[[body-of-knowledge/SWEBOK/13_Software_Security]]"
   - "[[body-of-knowledge/CyBOK/09_Software_Security]]"
-  - "F:\obsidian_note\document_template\14_Security/Threat-Model.md"
+  - "obsidian://open?vault=document_template&file=14_Security%2FThreat-Model"
 created: 2026-08-06
 tags:
   - career-path
@@ -66,10 +66,10 @@ These notes overlay senior-specialist judgment on existing security knowledge ra
 |---|---|
 | System context and assets | [[software-engineering-note/13_Software_Security/Software Security Overview]], [[software-engineering-note/13_Software_Security/01_Security_Fundamentals]] |
 | Threat actor analysis | [[software-engineering-note/13_Software_Security/01_Security_Fundamentals]], [[body-of-knowledge/CyBOK/09_Software_Security]] |
-| Attack surface and trust boundaries | [[body-of-knowledge/SWEBOK/13_Software_Security]], F:\obsidian_note\document_template\14_Security/Threat-Model.md |
-| STRIDE and abuse cases | F:\obsidian_note\document_template\14_Security/Threat-Model.md, [[software-engineering-note/13_Software_Security/Software Security Overview]] |
+| Attack surface and trust boundaries | [[body-of-knowledge/SWEBOK/13_Software_Security]], obsidian://open?vault=document_template&file=14_Security%2FThreat-Model |
+| STRIDE and abuse cases | obsidian://open?vault=document_template&file=14_Security%2FThreat-Model, [[software-engineering-note/13_Software_Security/Software Security Overview]] |
 | Risk rating and treatment | [[body-of-knowledge/CyBOK/09_Software_Security]], [[body-of-knowledge/SWEBOK/13_Software_Security]] |
-| Threat model maintenance | F:\obsidian_note\document_template\14_Security/Threat-Model.md, [[software-engineering-note/13_Software_Security/Software Security Overview]] |
+| Threat model maintenance | obsidian://open?vault=document_template&file=14_Security%2FThreat-Model, [[software-engineering-note/13_Software_Security/Software Security Overview]] |
 
 ## Evidence a Senior Engineer Produces
 
@@ -97,4 +97,4 @@ These notes overlay senior-specialist judgment on existing security knowledge ra
 - [[career-path/08_Security_Engineer/00_overview|Security Engineer Overview]]
 - [[career-path/08_Security_Engineer/02_Secure_Architecture_and_Design/00_overview|Secure Architecture and Design]]
 - [[career-path/08_Security_Engineer/03_Secure_Development_and_DevSecOps/00_overview|Secure Development and DevSecOps]]
-- [Threat Model Template](F:\obsidian_note\document_template\14_Security/Threat-Model.md)
+- [Threat Model Template](obsidian://open?vault=document_template&file=14_Security%2FThreat-Model)

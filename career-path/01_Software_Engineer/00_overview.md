@@ -13,6 +13,7 @@ next_paths:
   - "[[career-path/12_Technical_Program_Manager/00_overview|Technical Program Manager]]"
   - "[[career-path/13_Project_and_Program_Manager/00_overview|Project and Program Manager]]"
   - "[[career-path/14_Product_Manager/00_overview|Product Manager]]"
+  - "[[career-path/18_Applied_AI_Engineer/00_overview|Applied AI Engineer]]"
 source_frameworks:
   - "[[SWEBOK v4 - Overview]]"
   - "[[Computing Foundation Overview]]"

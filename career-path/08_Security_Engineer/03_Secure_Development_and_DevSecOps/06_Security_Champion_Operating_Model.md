@@ -135,8 +135,8 @@ Design a pilot for three teams:
 
 - [[software-engineering-note/13_Software_Security/05_Secure_Development_and_Assurance|Secure Development and Assurance]]: security responsibility and secure lifecycle foundations
 - [[career-path/10_Quality_and_Test_Engineering/00_overview|Quality and Test Engineering]]: distributed quality ownership and improvement practices
-- [SSDLC Process Documentation](F:\obsidian_note\document_template\14_Security/SSDLC-Process-Documentation.md): process artifact for the operating model
-- [Security Policy](F:\obsidian_note\document_template\14_Security/Security-Policy.md): policy context and accountability
+- [SSDLC Process Documentation](obsidian://open?vault=document_template&file=14_Security%2FSSDLC-Process-Documentation): process artifact for the operating model
+- [Security Policy](obsidian://open?vault=document_template&file=14_Security%2FSecurity-Policy): policy context and accountability
 - [[02_Secure_Coding_Enablement|Secure Coding Enablement]]: learning and paved-road capabilities
 - [[03_DevSecOps_Pipeline_Controls|DevSecOps Pipeline Controls]]: automated feedback and exception paths
 - [[career-path/08_Security_Engineer/04_Security_Verification_and_Testing/05_Findings_Triage_and_False_Positives|Findings Triage and False Positives]]: shared interpretation of evidence

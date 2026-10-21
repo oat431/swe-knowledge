@@ -9,7 +9,7 @@ prerequisite:
   - "[[career-path/08_Security_Engineer/03_Secure_Development_and_DevSecOps/04_Dependency_and_Supply_Chain_Security|Dependency and Supply Chain Security]]"
 source_frameworks:
   - "[[body-of-knowledge/CyBOK/09_Software_Security]]"
-  - "F:\obsidian_note\document_template\14_Security/SCA-Report.md"
+  - "obsidian://open?vault=document_template&file=14_Security%2FSCA-Report"
 created: 2026-08-06
 tags:
   - career-path
@@ -29,7 +29,7 @@ A mid-level engineer may run a package or image scanner and request upgrades for
 
 Container scanning has similar limits. A base-image CVE may be present in a dormant layer, unavailable to the running process, or still material because an attacker can execute a shell or exploit a loaded library. A clean image report does not prove safe application behavior, runtime configuration, or provenance.
 
-Use [SCA Report](F:\obsidian_note\document_template\14_Security/SCA-Report.md) for the reporting artifact and [[software-engineering-note/13_Software_Security/Cybersecurity/02 Secure Development/02 Dependency & Supply Chain|Dependency and Supply Chain]] for supply-chain foundations.
+Use [SCA Report](obsidian://open?vault=document_template&file=14_Security%2FSCA-Report) for the reporting artifact and [[software-engineering-note/13_Software_Security/Cybersecurity/02 Secure Development/02 Dependency & Supply Chain|Dependency and Supply Chain]] for supply-chain foundations.
 
 ## Core Frameworks
 
@@ -122,7 +122,7 @@ Choose a service image and its dependency lockfile:
 - [[body-of-knowledge/CyBOK/09_Software_Security|CyBOK Software Security]]: software security and supply-chain foundations
 - [[software-engineering-note/13_Software_Security/Cybersecurity/02 Secure Development/02 Dependency & Supply Chain|Dependency and Supply Chain]]: dependency lifecycle and provenance
 - [[software-engineering-note/13_Software_Security/Cybersecurity/03 Infrastructure Security/03 Container & Cloud Security|Container and Cloud Security]]: image and cloud foundations
-- [SCA Report](F:\obsidian_note\document_template\14_Security/SCA-Report.md): reporting artifact
+- [SCA Report](obsidian://open?vault=document_template&file=14_Security%2FSCA-Report): reporting artifact
 - [[career-path/08_Security_Engineer/03_Secure_Development_and_DevSecOps/04_Dependency_and_Supply_Chain_Security|Dependency and Supply Chain Security]]: prevention and response operating model
 - [[01_Security_Test_Strategy|Security Test Strategy]]: selecting composition and image verification depth
 - [[05_Findings_Triage_and_False_Positives|Findings Triage and False Positives]]: contextualizing scanner output

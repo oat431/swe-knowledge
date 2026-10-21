@@ -123,7 +123,7 @@ Choose one production secret, signing key, encryption key, or token authority.
 - [[software-engineering-note/13_Software_Security/Software Security Overview|Software Security Overview]]
 - [[software-engineering-note/13_Software_Security/01_Security_Fundamentals|Security Fundamentals]]
 - [[body-of-knowledge/CyBOK/09_Software_Security|CyBOK Software Security]]
-- [Security Architecture Template](F:\obsidian_note\document_template\14_Security/Security-Architecture.md)
+- [Security Architecture Template](obsidian://open?vault=document_template&file=14_Security%2FSecurity-Architecture)
 
 ## Key Takeaways
 
