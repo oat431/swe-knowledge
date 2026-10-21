@@ -73,22 +73,22 @@ flowchart LR
     E --> F["Compare evidence against the shortlist"]
     F --> G["Commit to one direction or rerun a test"]
     G --> H["Revisit after each on-call season"]
-    H --> B
+    H --> B["Shortlist reliability, security, or quality"]
 ```
 
 ## In Practice
 
-**Describe the work, not the title, when you weigh this family.** "I want to be an SRE" is not a testable statement; "I want my week to be one-third incident response, one-third reliability projects, one-third platform tooling" is. Each of the three paths has a different weekly texture, and the fit question is about that texture. Pull the actual week from the path overview before you decide anything.
+**Describe the work, not the title, when you weigh this family.** "I want to be an SRE" is not a testable statement; "I want my week to be one-third incident response, one-third reliability projects, one-third platform tooling" is. Each of the three paths has a different weekly texture, and the fit question is about that texture.
 
 **Treat pressure tolerance as a prerequisite you measure, not a personality you hope for.** Some people genuinely come alive when the pager fires: thinking narrows, communication sharpens, and the aftermath is a good story. Others can perform in an incident but pay for it in sleep and rumination for days. Neither is a virtue or a flaw; both are data about which jobs will cost you more than they pay.
 
 **Weight the invisible-work problem honestly.** Reliability, security, and quality succeed quietly: the attack that did not happen, the outage that did not occur, the regression that never shipped. If your motivation depends on visible applause and feature launches, this family will starve you; if a quiet dashboard and a clean quarter are their own reward, it compounds.
 
-**Security fit is a specific taste, not a general good intention.** Security work rewards adversarial imagination — thinking about how a system fails or is abused — plus the patience to chase remediation across teams who did not ask for your opinion. Engineers who find threat modeling absorbing often find the cross-team enforcement part heavy. Test both halves: the puzzle and the persuasion.
+**Security fit is a specific taste, not a general good intention.** Security work rewards adversarial imagination — thinking about how a system fails or is abused — plus the patience to chase remediation across teams who did not ask for your opinion. Engineers who find threat modeling absorbing often find the cross-team enforcement part heavy.
 
-**Quality fit is patience with rigor.** Quality and test engineering is strategy plus grinding discipline: deciding what deserves automation, chasing flaky tests, holding a release gate against schedule pressure. The energizing core is conviction that confidence in behavior is a product, not paperwork. If maintaining a test suite over months feels like craft rather than chore, this path has a place for you.
+**Quality fit is patience with rigor.** Quality and test engineering is strategy plus grinding discipline: deciding what deserves automation, chasing flaky tests, holding a release gate against schedule pressure. The energizing core is conviction that confidence in behavior is a product, not paperwork.
 
-**Run fit tests before you reorganize your career.** Every test in the framework above runs inside your current job: own a service's reliability, join incident reviews, take a security or quality project for one quarter. A job change is a six-month experiment with expensive rollback; a quarter-long duty is cheap and just as informative. Collect the moments of energy and dread while the stakes are small.
+**Run fit tests before you reorganize your career.** Every test in the framework above runs inside your current job: own a service's reliability, join incident reviews, take a security or quality project for one quarter. A job change is a six-month experiment with expensive rollback; a quarter-long duty is cheap and just as informative.
 
 ## Practical Exercise
 
@@ -98,8 +98,8 @@ Run a quarter-long fit test on the incident and reliability family:
 2. Choose one of the three paths and read its overview; write out what a normal week would look like in hours, including on-call if it applies.
 3. Take on one fit test for a quarter: own a service's reliability, sit in on every incident review, or drive one security or quality project to done.
 4. Keep a two-column log during the test: energizing moments and draining moments, with the task and the hour of day.
-5. Shadow one on-call rotation if you have not recently, and record how the anticipation, the page itself, and the recovery each felt.
-6. Write the verdict as evidence: what the test showed, what remains unknown, and which of the three paths the evidence points to.
+5. Shadow one on-call rotation and record how the anticipation, the page, and the recovery each felt.
+6. Write the verdict as evidence: what the test showed, what remains unknown, and which path it points to.
 7. Decide: commit to building depth in one path, or run one different test next quarter.
 
 ## Practical Applications
@@ -117,13 +117,13 @@ Fit-test log template:
 
 ```text
 ## Test and duration
-<which fit test, start and end dates>
+<fit test and dates>
 
 ## Energizing moments
-- <date, task, what specifically gave energy>
+- <date, task, what gave energy>
 
 ## Draining moments
-- <date, task, what specifically cost energy>
+- <date, task, what cost energy>
 
 ## Pressure and recovery
 <how incidents felt, and how long recovery took>

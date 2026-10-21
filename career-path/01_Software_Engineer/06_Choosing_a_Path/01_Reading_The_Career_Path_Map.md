@@ -80,7 +80,7 @@ flowchart LR
     E --> F["Run one small fit test"]
     F --> G["Compare evidence against the shortlist"]
     G --> H["Revisit the map on a schedule"]
-    H --> C
+    H --> C["Shortlist two candidate paths"]
 ```
 
 ## In Practice
@@ -95,7 +95,7 @@ flowchart LR
 
 **Check your local market against the global map before you plan around it.** The map is an abstraction of how these roles behave across the industry; in your country, industry, and company size, titles may be flattened, renamed, or absent, and demand for security, data, or platform roles may be concentrated in a few sectors. Read local job postings for the two roles you shortlisted and note what scope they actually describe. Plan against the work you can get, then keep the map for direction.
 
-**Frame each option with a one-sentence hypothesis and a test.** "I think I would like security work because I enjoyed threat modeling in the last design" is a hypothesis; "I will run threat modeling for the next feature and check whether I volunteer for it again" is a test. This habit converts career anxiety into a queue of small experiments, which is the only reliable way this decision gets made.
+**Frame each option with a one-sentence hypothesis and a test.** "I think I would like security work because I enjoyed threat modeling in the last design" is a hypothesis; "I will run threat modeling for the next feature and check whether I volunteer for it again" is a test. This habit converts anxiety into a queue of small experiments.
 
 ## Practical Exercise
 
@@ -155,7 +155,6 @@ Direction brief template:
 | Assuming the map matches your local market | Demand and titles differ by country, industry, and company size | Check local postings and plan against real scope |
 | Choosing from one bad quarter | A rough on-call rotation or a failed project reads like a verdict | Sample several projects over months before concluding |
 | All-in on one path overnight | Fragile skills and a narrowing option set with no evidence yet | Keep a base path and add one depth bar at a time |
-| Waiting for certainty before moving | Certainty is an output of testing, not an input to it | Run small experiments quarterly and decide on evidence |
 | Reading paths as a ranking | The map is a set of trade-offs, not a ladder of prestige | Compare costs honestly; several paths are lateral, not lower |
 
 ## Success Indicators
