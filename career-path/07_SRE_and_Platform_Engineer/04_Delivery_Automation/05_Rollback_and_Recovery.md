@@ -5,6 +5,7 @@ capability_area: delivery-automation
 career_path: sre-and-platform-engineer
 prerequisite:
   - "[[04_GitOps]]"
+created: 2026-08-05
 tags:
   - career-path
   - sre

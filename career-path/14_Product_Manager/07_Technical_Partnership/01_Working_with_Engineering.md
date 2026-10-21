@@ -2,6 +2,7 @@
 title: Working with Engineering
 parent: Technical Partnership
 summary: Building effective engineering relationships
+created: 2026-08-06
 tags:
   - technical-partnership
   - engineering

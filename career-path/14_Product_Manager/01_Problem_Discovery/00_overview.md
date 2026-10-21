@@ -1,5 +1,6 @@
 ---
 title: Problem Discovery
+created: 2026-08-06
 parent: Product Manager
 capability_area: problem-discovery
 description: Investigates needs, behaviors, constraints, and opportunities

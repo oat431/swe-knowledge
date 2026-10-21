@@ -1,18 +1,20 @@
 ---
 title: "Problem Framing and Requirements"
-note_type: capability-area-overview
+role: Senior Software Engineer
 capability_area: problem-framing
-career_path: senior-software-engineer
-source_frameworks:
-  - "[[SWEBOK v4 - Overview]]"
-  - "[[BABOK v3 - Overview]]"
-  - "[[SEBoK v2 - Overview]]"
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer
   - problem-framing
   - requirements
   - overview
+source_frameworks:
+  - "[[SWEBOK v4 - Overview]]"
+  - "[[BABOK v3 - Overview]]"
+  - "[[SEBoK v2 - Overview]]"
 ---
 
 # Problem Framing and Requirements

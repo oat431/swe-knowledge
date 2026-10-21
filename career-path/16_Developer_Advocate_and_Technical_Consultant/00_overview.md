@@ -15,6 +15,7 @@ source_frameworks:
   - "[[SWEBOK v4 - Overview]]"
   - "[[BABOK v3 - Overview]]"
   - "[[SEBoK v2 - Overview]]"
+created: 2026-10-21
 tags:
   - career-path
   - developer-advocacy

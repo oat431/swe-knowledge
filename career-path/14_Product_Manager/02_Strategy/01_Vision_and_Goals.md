@@ -2,6 +2,7 @@
 title: Vision and Goals
 parent: Strategy
 summary: Defining long-term direction and success
+created: 2026-08-06
 tags:
   - strategy
   - vision

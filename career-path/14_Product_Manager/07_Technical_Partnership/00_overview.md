@@ -1,5 +1,6 @@
 ---
 title: Technical Partnership
+created: 2026-08-06
 parent: Product Manager
 capability_area: technical-partnership
 description: Partners effectively with engineering to deliver product value

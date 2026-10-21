@@ -2,6 +2,7 @@
 title: User Stories
 parent: Requirements
 summary: Writing requirements as user stories
+created: 2026-08-06
 tags:
   - requirements
   - user-stories

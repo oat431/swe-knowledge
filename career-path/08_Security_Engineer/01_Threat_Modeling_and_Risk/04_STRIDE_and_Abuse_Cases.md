@@ -6,6 +6,7 @@ career_path: security-engineer
 prerequisite:
   - "[[02_Threat_Actor_Analysis]]"
   - "[[03_Attack_Surface_and_Trust_Boundaries]]"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

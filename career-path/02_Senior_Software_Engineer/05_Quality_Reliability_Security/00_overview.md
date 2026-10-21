@@ -1,11 +1,10 @@
 ---
 title: "Quality, Reliability, and Security"
-note_type: capability-area-overview
+role: Senior Software Engineer
 capability_area: quality-reliability-security
-career_path: senior-software-engineer
-source_frameworks:
-  - "[[body-of-knowledge/SWEBOK/SWEBOK v4 - Overview]]"
-  - "[[body-of-knowledge/CyBOK/CyBOK v1 - Overview]]"
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer
@@ -14,6 +13,9 @@ tags:
   - security
   - SRE
   - observability
+source_frameworks:
+  - "[[body-of-knowledge/SWEBOK/SWEBOK v4 - Overview]]"
+  - "[[body-of-knowledge/CyBOK/CyBOK v1 - Overview]]"
 ---
 
 # Quality, Reliability, and Security

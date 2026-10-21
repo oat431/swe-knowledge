@@ -2,6 +2,7 @@
 title: Market Analysis
 parent: Strategy
 summary: Understanding market context and opportunities
+created: 2026-08-06
 tags:
   - strategy
   - market-analysis

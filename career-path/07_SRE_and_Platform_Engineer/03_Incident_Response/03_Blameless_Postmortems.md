@@ -5,6 +5,7 @@ capability_area: incident-response
 career_path: sre-and-platform-engineer
 prerequisite:
   - "[[02_Incident_Management]]"
+created: 2026-08-05
 tags:
   - career-path
   - sre

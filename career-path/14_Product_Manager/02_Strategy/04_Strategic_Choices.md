@@ -2,6 +2,7 @@
 title: Strategic Choices
 parent: Strategy
 summary: Making intentional trade-offs
+created: 2026-08-06
 tags:
   - strategy
   - trade-offs

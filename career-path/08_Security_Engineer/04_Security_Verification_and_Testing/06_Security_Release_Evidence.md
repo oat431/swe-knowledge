@@ -11,6 +11,7 @@ source_frameworks:
   - "F:\obsidian_note\document_template\13_Testing_and_Verification/Security-Test-Report.md"
   - "F:\obsidian_note\document_template\14_Security/Security-Requirements-Specification.md"
   - "[[software-engineering-note/05_Software_Testing/Software Testing Overview]]"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

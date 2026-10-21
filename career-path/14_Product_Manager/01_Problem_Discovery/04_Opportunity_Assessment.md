@@ -2,6 +2,7 @@
 title: Opportunity Assessment
 parent: Problem Discovery
 summary: Deciding if a problem is worth solving
+created: 2026-08-06
 tags:
   - discovery
   - prioritization

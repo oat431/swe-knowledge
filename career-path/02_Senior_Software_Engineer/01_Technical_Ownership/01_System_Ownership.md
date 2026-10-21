@@ -1,10 +1,11 @@
 ---
 title: "System Ownership"
-note_type: capability-topic
+role: Senior Software Engineer
 capability_area: technical-ownership
-career_path: senior-software-engineer
-prerequisite:
-  - "[[software-engineering-note/07_Software_Maintenance/Software Maintenance Overview]]"
+topic: System Ownership
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer
@@ -161,3 +162,8 @@ A clean handoff includes:
 - Ambiguous ownership causes system neglect: name the owner, not just the team
 - A clean ownership handoff is one of the most valuable senior-level activities
 - Your risk register is the practical output of system ownership
+
+
+## Related
+
+- [[software-engineering-note/07_Software_Maintenance/Software Maintenance Overview]]

@@ -1,15 +1,16 @@
 ---
 title: "Evidence Collection"
-type: "topic"
-capability_area: "09_Promotion_Evidence_and_Capstone"
-description: "Systematic approaches to documenting engineering impact over time"
+role: Senior Software Engineer
+capability_area: 09_Promotion_Evidence_and_Capstone
+topic: Evidence Collection
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - documentation
   - brag-document
   - impact-tracking
   - evidence
-created: 2026-01-05
-updated: 2026-01-05
 ---
 
 # Evidence Collection

@@ -5,6 +5,7 @@ capability_area: threat-modeling-and-risk
 career_path: security-engineer
 prerequisite:
   - "[[01_System_Context_and_Assets]]"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

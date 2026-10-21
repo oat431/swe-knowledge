@@ -2,6 +2,7 @@
 title: Technical Debt
 parent: Technical Partnership
 summary: Understanding and managing technical debt
+created: 2026-08-06
 tags:
   - technical-partnership
   - technical-debt

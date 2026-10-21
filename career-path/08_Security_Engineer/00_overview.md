@@ -13,6 +13,7 @@ source_frameworks:
   - "[[CyBOK v1 - Overview]]"
   - "[[SWEBOK v4 - Overview]]"
   - "[[SEBoK v2 - Overview]]"
+created: 2026-10-21
 tags:
   - career-path
   - security-engineer

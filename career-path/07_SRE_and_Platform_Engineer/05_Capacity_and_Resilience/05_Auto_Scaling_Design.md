@@ -5,6 +5,7 @@ capability_area: capacity-and-resilience
 career_path: sre-and-platform-engineer
 prerequisite:
   - "[[software-engineering-note/02_Software_Architecture/Microservice/07 Deployment/071 Containers & Orchestration]]"
+created: 2026-08-05
 tags:
   - career-path
   - sre

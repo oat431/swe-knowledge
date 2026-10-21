@@ -5,6 +5,7 @@ capability_area: service-objectives
 career_path: sre-and-platform-engineer
 prerequisite:
   - "[[01_SLI_Design]]"
+created: 2026-08-05
 tags:
   - career-path
   - sre

@@ -1,5 +1,6 @@
 ---
 title: Strategy
+created: 2026-08-06
 parent: Product Manager
 capability_area: strategy
 description: Defines direction, target outcomes, and product choices

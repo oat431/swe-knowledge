@@ -2,6 +2,7 @@
 title: User Behavior Analysis
 parent: Product Analytics
 summary: Understanding patterns in how users interact with product
+created: 2026-08-06
 tags:
   - analytics
   - user-behavior

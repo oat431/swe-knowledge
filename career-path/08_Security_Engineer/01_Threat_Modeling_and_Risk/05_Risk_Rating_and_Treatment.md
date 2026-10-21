@@ -5,6 +5,7 @@ capability_area: threat-modeling-and-risk
 career_path: security-engineer
 prerequisite:
   - "[[04_STRIDE_and_Abuse_Cases]]"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

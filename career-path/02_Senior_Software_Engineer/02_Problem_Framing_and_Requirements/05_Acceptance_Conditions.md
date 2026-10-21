@@ -1,11 +1,11 @@
 ---
 title: "Acceptance Conditions and Validation"
-note_type: capability-topic
+role: Senior Software Engineer
 capability_area: problem-framing
-career_path: senior-software-engineer
-prerequisite:
-  - "[[01_Problem_Statement_Definition]]"
-  - "[[04_User_and_Business_Outcomes]]"
+topic: Acceptance Conditions and Validation
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer

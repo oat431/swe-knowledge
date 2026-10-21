@@ -15,6 +15,7 @@ source_frameworks:
   - "MIT NANDA: The GenAI Divide: State of AI in Business 2025"
   - "OWASP Top 10 for LLM Applications (2025)"
   - "AI Engineering - Chip Huyen (O'Reilly, 2025)"
+created: 2026-10-05
 tags:
   - career-path
   - forward-deployed

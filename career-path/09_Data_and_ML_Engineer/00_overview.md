@@ -13,6 +13,7 @@ source_frameworks:
   - "[[body-of-knowledge/DMBOK/DMBoK v2 - Overview]]"
   - "[[SWEBOK v4 - Overview]]"
   - "[[CyBOK v1 - Overview]]"
+created: 2026-10-21
 tags:
   - career-path
   - data-engineering

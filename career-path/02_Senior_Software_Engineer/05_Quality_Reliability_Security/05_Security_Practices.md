@@ -1,11 +1,11 @@
 ---
 title: "Security Practices"
-note_type: capability-topic
+role: Senior Software Engineer
 capability_area: quality-reliability-security
-career_path: senior-software-engineer
-prerequisite:
-  - "[[body-of-knowledge/CyBOK/01_Risk_Management_and_Governance]]"
-  - "[[01_Testing_Strategy]]"
+topic: Security Practices
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer
@@ -277,3 +277,8 @@ When a security incident occurs (data breach, vulnerability exploited):
 - Security incidents require containment, eradication, recovery, communication, and learning
 - Never hardcode secrets; use secrets manager
 - Never roll your own cryptography; use established libraries
+
+
+## Related
+
+- [[body-of-knowledge/CyBOK/01_Risk_Management_and_Governance]]

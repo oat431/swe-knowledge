@@ -15,6 +15,7 @@ source_frameworks:
   - "[[DMBOK v2 - Overview]]"
   - "[[BABOK v3 - Overview]]"
   - "[[SWEBOK v4 - Overview]]"
+created: 2026-10-21
 tags:
   - career-path
   - solutions-architect

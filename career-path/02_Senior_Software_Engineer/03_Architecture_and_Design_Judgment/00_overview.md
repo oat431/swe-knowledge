@@ -1,12 +1,10 @@
 ---
 title: "Architecture and Design Judgment"
-note_type: capability-area-overview
+role: Senior Software Engineer
 capability_area: architecture-judgment
-career_path: senior-software-engineer
-source_frameworks:
-  - "[[body-of-knowledge/SWEBOK/SWEBOK v4 - Overview]]"
-  - "[[software-engineering-note/02_Software_Architecture/Software Architecture Overview]]"
-  - "[[software-engineering-note/03_Software_Design/Software Design Note Overview]]"
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer
@@ -14,6 +12,10 @@ tags:
   - design
   - judgment
   - trade-offs
+source_frameworks:
+  - "[[body-of-knowledge/SWEBOK/SWEBOK v4 - Overview]]"
+  - "[[software-engineering-note/02_Software_Architecture/Software Architecture Overview]]"
+  - "[[software-engineering-note/03_Software_Design/Software Design Note Overview]]"
 ---
 
 # Architecture and Design Judgment

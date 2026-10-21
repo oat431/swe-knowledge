@@ -6,6 +6,7 @@ career_path: security-engineer
 prerequisite:
   - "[[03_Authorization_and_Least_Privilege]]"
   - "[[software-engineering-note/13_Software_Security/03_Access_Control_and_Architecture]]"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

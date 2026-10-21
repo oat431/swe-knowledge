@@ -1,15 +1,16 @@
 ---
 title: "Impact Quantification"
-type: "topic"
-capability_area: "09_Promotion_Evidence_and_Capstone"
-description: "Measuring and articulating business and organizational value of engineering work"
+role: Senior Software Engineer
+capability_area: 09_Promotion_Evidence_and_Capstone
+topic: Impact Quantification
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - metrics
   - business-value
   - ROI
   - quantification
-created: 2026-01-05
-updated: 2026-01-05
 ---
 
 # Impact Quantification

@@ -1,11 +1,11 @@
 ---
 title: "Incident Response"
-note_type: capability-topic
+role: Senior Software Engineer
 capability_area: quality-reliability-security
-career_path: senior-software-engineer
-prerequisite:
-  - "[[02_SRE_Principles]]"
-  - "[[03_Observability]]"
+topic: Incident Response
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer

@@ -1,11 +1,11 @@
 ---
 title: "Prioritization and Trade-offs"
-note_type: capability-topic
+role: Senior Software Engineer
 capability_area: problem-framing
-career_path: senior-software-engineer
-prerequisite:
-  - "[[04_User_and_Business_Outcomes]]"
-  - "[[06_Ambiguity_Reduction]]"
+topic: Prioritization and Trade-offs
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer

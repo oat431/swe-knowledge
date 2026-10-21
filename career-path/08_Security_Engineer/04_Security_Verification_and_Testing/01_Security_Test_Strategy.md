@@ -11,6 +11,7 @@ source_frameworks:
   - "[[software-engineering-note/05_Software_Testing/Software Testing Overview]]"
   - "[[career-path/10_Quality_and_Test_Engineering/00_overview]]"
   - "F:\obsidian_note\document_template\13_Testing_and_Verification/Test-Strategy.md"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

@@ -13,6 +13,7 @@ source_frameworks:
   - "[[SWEBOK v4 - Overview]]"
   - "[[SEBoK v2 - Overview]]"
   - "[INCOSE Systems Engineering Competency Framework](https://www.incose.org/resources-publications/publish-with-incose/competency-framework/)"
+created: 2026-10-21
 tags:
   - career-path
   - staff-engineer

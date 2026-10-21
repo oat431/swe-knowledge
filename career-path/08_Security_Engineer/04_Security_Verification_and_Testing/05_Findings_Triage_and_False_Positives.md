@@ -10,6 +10,7 @@ prerequisite:
 source_frameworks:
   - "[[software-engineering-note/13_Software_Security/07_Vulnerability_Management]]"
   - "F:\obsidian_note\document_template\14_Security/Vulnerability-Management-Report.md"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

@@ -2,6 +2,7 @@
 title: Data Analysis
 parent: Product Analytics
 summary: Quantitative analysis techniques for product decisions
+created: 2026-08-06
 tags:
   - analytics
   - data-analysis

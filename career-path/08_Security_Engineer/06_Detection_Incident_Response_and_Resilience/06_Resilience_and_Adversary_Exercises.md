@@ -6,6 +6,7 @@ career_path: security-engineer
 prerequisite:
   - "[[05_Recovery_and_Lessons_Learned]]"
   - "[[career-path/07_SRE_and_Platform_Engineer/05_Capacity_and_Resilience/00_overview|Capacity and Resilience]]"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

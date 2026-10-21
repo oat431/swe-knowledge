@@ -11,6 +11,7 @@ source_frameworks:
   - "[[software-engineering-note/05_Software_Testing/Software Testing Overview]]"
   - "F:\obsidian_note\document_template\14_Security/DAST-Report.md"
   - "F:\obsidian_note\document_template\14_Security/Penetration-Test-Report.md"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

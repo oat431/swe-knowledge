@@ -12,6 +12,7 @@ source_frameworks:
   - "[[PMBOK v8 - Overview]]"
   - "[[SWEBOK v4 - Overview]]"
   - "[[SEBoK v2 - Overview]]"
+created: 2026-10-21
 tags:
   - career-path
   - consulting

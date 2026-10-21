@@ -5,6 +5,7 @@ capability_area: incident-response
 career_path: sre-and-platform-engineer
 prerequisite:
   - "[[01_On_Call_Practices]]"
+created: 2026-08-05
 tags:
   - career-path
   - sre

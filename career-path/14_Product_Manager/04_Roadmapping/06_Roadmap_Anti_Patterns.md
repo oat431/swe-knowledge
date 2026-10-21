@@ -2,6 +2,7 @@
 title: Roadmap Anti-Patterns
 parent: Roadmapping
 summary: Common mistakes and how to avoid them
+created: 2026-08-06
 tags:
   - roadmapping
   - anti-patterns

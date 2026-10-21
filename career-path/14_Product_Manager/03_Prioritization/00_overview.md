@@ -1,5 +1,6 @@
 ---
 title: Prioritization
+created: 2026-08-06
 parent: Product Manager
 capability_area: prioritization
 description: Compares opportunities using value, cost, risk, and evidence

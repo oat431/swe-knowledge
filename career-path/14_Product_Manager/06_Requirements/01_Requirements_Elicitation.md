@@ -2,6 +2,7 @@
 title: Requirements Elicitation
 parent: Requirements
 summary: Discovering what stakeholders need
+created: 2026-08-06
 tags:
   - requirements
   - elicitation

@@ -5,6 +5,7 @@ capability_area: service-objectives
 career_path: sre-and-platform-engineer
 prerequisite:
   - "[[03_Error_Budget_Policy]]"
+created: 2026-08-05
 tags:
   - career-path
   - sre

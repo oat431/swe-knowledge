@@ -13,6 +13,7 @@ source_frameworks:
   - "[[BABOK v3 - Overview]]"
   - "[[PMBOK v8 - Overview]]"
   - "[[DMBOK v2 - Overview]]"
+created: 2026-10-21
 tags:
   - career-path
   - product-manager

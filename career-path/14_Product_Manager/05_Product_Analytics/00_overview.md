@@ -1,5 +1,6 @@
 ---
 title: Product Analytics
+created: 2026-08-06
 parent: Product Manager
 capability_area: product-analytics
 description: Uses data to understand user behavior and measure product impact

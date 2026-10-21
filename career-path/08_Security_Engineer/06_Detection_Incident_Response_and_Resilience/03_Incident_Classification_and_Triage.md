@@ -6,6 +6,7 @@ career_path: security-engineer
 prerequisite:
   - "[[02_Detection_Engineering]]"
   - "[[body-of-knowledge/CyBOK/07_Security_Operations_and_Incident_Management]]"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

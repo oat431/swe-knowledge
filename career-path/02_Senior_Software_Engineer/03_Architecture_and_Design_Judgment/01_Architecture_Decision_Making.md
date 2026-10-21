@@ -1,11 +1,11 @@
 ---
 title: "Architecture Decision Making"
-note_type: capability-topic
+role: Senior Software Engineer
 capability_area: architecture-judgment
-career_path: senior-software-engineer
-prerequisite:
-  - "[[software-engineering-note/02_Software_Architecture/01_Architecture_Fundamentals]]"
-  - "[[software-engineering-note/02_Software_Architecture/02_Quality_Attributes_Overview]]"
+topic: Architecture Decision Making
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer
@@ -186,3 +186,9 @@ A senior engineer distinguishes between:
 - Distinguish one-way doors (invest time) from two-way doors (decide quickly)
 - Avoid anti-patterns: analysis paralysis, resume-driven architecture, hype-driven architecture, HiPPO, consensus trap
 - Not deciding is itself a decision; document it explicitly
+
+
+## Related
+
+- [[software-engineering-note/02_Software_Architecture/01_Architecture_Fundamentals]]
+- [[software-engineering-note/02_Software_Architecture/02_Quality_Attributes_Overview]]

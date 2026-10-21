@@ -2,6 +2,7 @@
 title: Acceptance Criteria
 parent: Requirements
 summary: Defining success conditions for requirements
+created: 2026-08-06
 tags:
   - requirements
   - acceptance-criteria

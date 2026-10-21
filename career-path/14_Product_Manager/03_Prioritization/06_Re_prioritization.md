@@ -2,6 +2,7 @@
 title: Re-prioritization
 parent: Prioritization
 summary: Adapting priorities as context changes
+created: 2026-08-06
 tags:
   - prioritization
   - adaptation

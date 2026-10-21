@@ -6,6 +6,7 @@ career_path: security-engineer
 prerequisite:
   - "[[software-engineering-note/13_Software_Security/03_Access_Control_and_Architecture]]"
   - "[[software-engineering-note/13_Software_Security/Cybersecurity/01 Security Fundamentals/01 Authentication Security]]"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

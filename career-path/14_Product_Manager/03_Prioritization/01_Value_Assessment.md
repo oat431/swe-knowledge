@@ -2,6 +2,7 @@
 title: Value Assessment
 parent: Prioritization
 summary: Evaluating the value of opportunities
+created: 2026-08-06
 tags:
   - prioritization
   - value

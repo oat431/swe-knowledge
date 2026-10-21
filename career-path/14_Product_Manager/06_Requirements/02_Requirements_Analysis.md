@@ -2,6 +2,7 @@
 title: Requirements Analysis
 parent: Requirements
 summary: Understanding and refining requirements
+created: 2026-08-06
 tags:
   - requirements
   - analysis

@@ -2,6 +2,7 @@
 title: Synthesis and Insights
 parent: Problem Discovery
 summary: Turning data into actionable understanding
+created: 2026-08-06
 tags:
   - discovery
   - synthesis

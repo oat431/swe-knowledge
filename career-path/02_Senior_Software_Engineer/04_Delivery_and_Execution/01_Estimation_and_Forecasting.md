@@ -1,10 +1,11 @@
 ---
 title: "Estimation and Forecasting"
-note_type: capability-topic
+role: Senior Software Engineer
 capability_area: delivery-execution
-career_path: senior-software-engineer
-prerequisite:
-  - "[[software-engineering-note/09_Software_Engineering_Management/07_Estimation_and_Planning]]"
+topic: Estimation and Forecasting
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer

@@ -2,6 +2,7 @@
 title: Collaboration with Tech Leads
 parent: Technical Partnership
 summary: Partnering effectively with technical leaders
+created: 2026-08-06
 tags:
   - technical-partnership
   - tech-leads

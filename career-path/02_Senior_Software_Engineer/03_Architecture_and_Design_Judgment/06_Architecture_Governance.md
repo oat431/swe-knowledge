@@ -1,11 +1,11 @@
 ---
 title: "Architecture Governance"
-note_type: capability-topic
+role: Senior Software Engineer
 capability_area: architecture-judgment
-career_path: senior-software-engineer
-prerequisite:
-  - "[[01_Architecture_Decision_Making]]"
-  - "[[04_Architecture_Decision_Records]]"
+topic: Architecture Governance
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer

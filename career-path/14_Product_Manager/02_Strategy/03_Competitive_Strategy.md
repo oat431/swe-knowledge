@@ -2,6 +2,7 @@
 title: Competitive Strategy
 parent: Strategy
 summary: Positioning against competitors
+created: 2026-08-06
 tags:
   - strategy
   - competitive-strategy

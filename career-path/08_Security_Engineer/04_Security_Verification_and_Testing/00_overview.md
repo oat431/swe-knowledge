@@ -8,6 +8,7 @@ source_frameworks:
   - "[[software-engineering-note/05_Software_Testing/Software Testing Overview]]"
   - "[[body-of-knowledge/SWEBOK/13_Software_Security]]"
   - "[[body-of-knowledge/CyBOK/09_Software_Security]]"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

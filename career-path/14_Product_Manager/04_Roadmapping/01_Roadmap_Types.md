@@ -2,6 +2,7 @@
 title: Roadmap Types
 parent: Roadmapping
 summary: Different roadmaps for different audiences
+created: 2026-08-06
 tags:
   - roadmapping
   - strategy

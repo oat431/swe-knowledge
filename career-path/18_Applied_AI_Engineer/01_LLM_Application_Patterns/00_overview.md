@@ -4,6 +4,7 @@ note_type: capability-area-overview
 capability_area: llm-application-patterns
 career_path: applied-ai-engineer
 source_frameworks: ["[[computing-foundation-note/Artificial_Intelligence/AI Overview]]"]
+created: 2026-09-09
 tags: [career-path, applied-ai, ai-engineering, llm-patterns, overview]
 ---
 

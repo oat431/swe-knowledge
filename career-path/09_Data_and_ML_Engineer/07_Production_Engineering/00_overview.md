@@ -5,6 +5,7 @@ capability_area: production-engineering
 career_path: data-and-ml-engineer
 source_frameworks:
   - "[[SWEBOK v4 - Overview]]"
+created: 2026-08-06
 tags:
   - career-path
   - data-engineering

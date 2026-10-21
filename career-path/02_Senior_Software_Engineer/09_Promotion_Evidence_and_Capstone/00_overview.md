@@ -1,9 +1,10 @@
 ---
 title: "Promotion Evidence and Capstone"
-type: "capability-area"
-role: "Senior Software Engineer"
-level: "Senior"
-description: "Documenting senior-level impact, building promotion packets, and demonstrating mastery across all capability areas"
+role: Senior Software Engineer
+capability_area: Promotion Evidence and Capstone
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - senior-engineer
   - promotion
@@ -11,8 +12,6 @@ tags:
   - evidence
   - impact-quantification
   - capstone
-created: 2026-01-05
-updated: 2026-01-05
 ---
 
 # Promotion Evidence and Capstone

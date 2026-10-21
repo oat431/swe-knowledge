@@ -1,13 +1,11 @@
 ---
 title: "Production Readiness"
-note_type: capability-topic
+role: Senior Software Engineer
 capability_area: quality-reliability-security
-career_path: senior-software-engineer
-prerequisite:
-  - "[[02_SRE_Principles]]"
-  - "[[03_Observability]]"
-  - "[[04_Incident_Response]]"
-  - "[[05_Security_Practices]]"
+topic: Production Readiness
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer

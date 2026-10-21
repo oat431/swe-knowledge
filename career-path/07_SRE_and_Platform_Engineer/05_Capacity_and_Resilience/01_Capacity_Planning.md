@@ -5,6 +5,7 @@ capability_area: capacity-and-resilience
 career_path: sre-and-platform-engineer
 prerequisite:
   - "[[software-engineering-note/06_Software_Engineering_Operations/07_Capacity_and_Disaster_Recovery]]"
+created: 2026-08-05
 tags:
   - career-path
   - sre

@@ -2,6 +2,7 @@
 title: Problem Framing
 parent: Problem Discovery
 summary: Defining the problem before jumping to solutions
+created: 2026-08-06
 tags:
   - discovery
   - problem-framing

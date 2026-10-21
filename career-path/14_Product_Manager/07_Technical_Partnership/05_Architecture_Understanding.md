@@ -2,6 +2,7 @@
 title: Architecture Understanding
 parent: Technical Partnership
 summary: Grasping system architecture for better product decisions
+created: 2026-08-06
 tags:
   - technical-partnership
   - architecture

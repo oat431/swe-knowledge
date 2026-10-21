@@ -7,6 +7,7 @@ source_frameworks:
   - "[[software-engineering-note/13_Software_Security/03_Access_Control_and_Architecture]]"
   - "[[body-of-knowledge/DMBOK/05_Data_Security]]"
   - "[[software-engineering-note/13_Software_Security/08_Security_Management_and_Governance]]"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

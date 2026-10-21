@@ -5,6 +5,7 @@ capability_area: llm-application-patterns
 career_path: applied-ai-engineer
 prerequisite:
   - "[[00_overview]]"
+created: 2026-09-09
 tags:
   - career-path
   - applied-ai

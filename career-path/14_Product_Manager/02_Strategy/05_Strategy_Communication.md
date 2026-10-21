@@ -2,6 +2,7 @@
 title: Strategy Communication
 parent: Strategy
 summary: Aligning the organization around strategy
+created: 2026-08-06
 tags:
   - strategy
   - communication

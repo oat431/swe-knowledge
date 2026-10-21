@@ -10,6 +10,7 @@ prerequisite:
 source_frameworks:
   - "[[software-engineering-note/13_Software_Security/05_Secure_Development_and_Assurance]]"
   - "[[career-path/10_Quality_and_Test_Engineering/00_overview]]"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

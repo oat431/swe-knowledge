@@ -10,6 +10,7 @@ prerequisite:
 source_frameworks:
   - "[[body-of-knowledge/SWEBOK/13_Software_Security]]"
   - "[[body-of-knowledge/CyBOK/09_Software_Security]]"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

@@ -2,6 +2,7 @@
 title: Observation and Context
 parent: Problem Discovery
 summary: Learning from behavior, not just words
+created: 2026-08-06
 tags:
   - discovery
   - research

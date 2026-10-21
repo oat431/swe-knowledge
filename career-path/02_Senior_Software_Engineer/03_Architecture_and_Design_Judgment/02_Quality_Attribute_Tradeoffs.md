@@ -1,11 +1,11 @@
 ---
 title: "Quality Attribute Trade-offs"
-note_type: capability-topic
+role: Senior Software Engineer
 capability_area: architecture-judgment
-career_path: senior-software-engineer
-prerequisite:
-  - "[[software-engineering-note/02_Software_Architecture/02_Quality_Attributes_Overview]]"
-  - "[[01_Architecture_Decision_Making]]"
+topic: Quality Attribute Trade-offs
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer

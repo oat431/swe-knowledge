@@ -1,11 +1,10 @@
 ---
 title: "Delivery and Execution"
-note_type: capability-area-overview
+role: Senior Software Engineer
 capability_area: delivery-execution
-career_path: senior-software-engineer
-source_frameworks:
-  - "[[body-of-knowledge/PMBOK/PMBOK v8 - Overview]]"
-  - "[[software-engineering-note/09_Software_Engineering_Management/Software Engineering Management Overview]]"
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer
@@ -13,6 +12,9 @@ tags:
   - execution
   - estimation
   - project-management
+source_frameworks:
+  - "[[body-of-knowledge/PMBOK/PMBOK v8 - Overview]]"
+  - "[[software-engineering-note/09_Software_Engineering_Management/Software Engineering Management Overview]]"
 ---
 
 # Delivery and Execution

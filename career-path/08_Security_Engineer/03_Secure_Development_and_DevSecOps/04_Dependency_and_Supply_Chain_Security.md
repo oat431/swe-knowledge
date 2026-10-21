@@ -10,6 +10,7 @@ prerequisite:
 source_frameworks:
   - "[[body-of-knowledge/CyBOK/09_Software_Security]]"
   - "[[software-engineering-note/13_Software_Security/Cybersecurity/02 Secure Development/02 Dependency & Supply Chain]]"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

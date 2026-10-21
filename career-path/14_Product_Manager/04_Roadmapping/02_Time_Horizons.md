@@ -2,6 +2,7 @@
 title: Time Horizons
 parent: Roadmapping
 summary: Balancing commitment and flexibility
+created: 2026-08-06
 tags:
   - roadmapping
   - planning

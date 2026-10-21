@@ -1,10 +1,11 @@
 ---
 title: "Testing Strategy"
-note_type: capability-topic
+role: Senior Software Engineer
 capability_area: quality-reliability-security
-career_path: senior-software-engineer
-prerequisite:
-  - "[[software-engineering-note/12_Software_Quality/01_Quality_Fundamentals]]"
+topic: Testing Strategy
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer
@@ -228,3 +229,8 @@ Testing is one part of quality engineering. A senior engineer also considers:
 - Track and fix flaky tests; they destroy trust in the test suite
 - Quality engineering goes beyond testing: code reviews, static analysis, contract testing
 - A senior engineer defines the testing strategy, not just writes tests
+
+
+## Related
+
+- [[software-engineering-note/12_Software_Quality/01_Quality_Fundamentals]]

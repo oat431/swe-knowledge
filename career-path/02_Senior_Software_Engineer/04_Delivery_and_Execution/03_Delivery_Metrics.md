@@ -1,10 +1,11 @@
 ---
 title: "Delivery Metrics"
-note_type: capability-topic
+role: Senior Software Engineer
 capability_area: delivery-execution
-career_path: senior-software-engineer
-prerequisite:
-  - "[[01_Estimation_and_Forecasting]]"
+topic: Delivery Metrics
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer

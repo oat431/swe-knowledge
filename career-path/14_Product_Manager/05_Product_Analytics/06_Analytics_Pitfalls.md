@@ -2,6 +2,7 @@
 title: Analytics Pitfalls
 parent: Product Analytics
 summary: Common mistakes in product analytics and how to avoid them
+created: 2026-08-06
 tags:
   - analytics
   - pitfalls

@@ -1,11 +1,11 @@
 ---
 title: "Release Management"
-note_type: capability-topic
+role: Senior Software Engineer
 capability_area: delivery-execution
-career_path: senior-software-engineer
-prerequisite:
-  - "[[03_Delivery_Metrics]]"
-  - "[[career-path/02_Senior_Software_Engineer/01_Technical_Ownership/04_Production_Responsibility]]"
+topic: Release Management
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer

@@ -15,6 +15,7 @@ source_frameworks:
   - "[[SEBoK v2 - Overview]]"
   - "[[DMBOK v2 - Overview]]"
   - "[[CyBOK v1 - Overview]]"
+created: 2026-10-21
 tags:
   - career-path
   - software-architect

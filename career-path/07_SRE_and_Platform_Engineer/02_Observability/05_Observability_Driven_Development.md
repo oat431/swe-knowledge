@@ -5,6 +5,7 @@ capability_area: observability
 career_path: sre-and-platform-engineer
 prerequisite:
   - "[[04_Alerting_Strategy]]"
+created: 2026-08-05
 tags:
   - career-path
   - sre

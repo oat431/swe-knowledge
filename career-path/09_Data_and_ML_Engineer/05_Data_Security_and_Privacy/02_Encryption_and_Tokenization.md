@@ -6,6 +6,7 @@ career_path: data-and-ml-engineer
 prerequisite:
   - "[[00_overview]]"
   - "[[01_Data_Classification_and_Sensitivity]]"
+created: 2026-08-06
 tags:
   - career-path
   - data-engineering

@@ -6,6 +6,7 @@ career_path: security-engineer
 prerequisite:
   - "[[01_Security_Principles_and_Quality_Attributes]]"
   - "[[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/05_Risk_Rating_and_Treatment|Risk Rating and Treatment]]"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

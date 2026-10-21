@@ -2,6 +2,7 @@
 title: Data-Informed Decisions
 parent: Product Analytics
 summary: Using data to drive product decisions
+created: 2026-08-06
 tags:
   - analytics
   - decisions

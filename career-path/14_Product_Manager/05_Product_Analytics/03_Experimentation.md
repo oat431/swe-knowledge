@@ -2,6 +2,7 @@
 title: Experimentation
 parent: Product Analytics
 summary: A/B testing and controlled experiments
+created: 2026-08-06
 tags:
   - analytics
   - experimentation

@@ -13,6 +13,7 @@ source_frameworks:
   - "[[PMBOK v8 - Overview]]"
   - "[[SEBoK v2 - Overview]]"
   - "[[BABOK v3 - Overview]]"
+created: 2026-10-21
 tags:
   - career-path
   - project-manager

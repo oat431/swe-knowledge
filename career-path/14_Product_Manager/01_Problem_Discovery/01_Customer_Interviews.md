@@ -2,6 +2,7 @@
 title: Customer Interviews
 parent: Problem Discovery
 summary: Structured conversations to understand needs and context
+created: 2026-08-06
 tags:
   - discovery
   - research

@@ -6,6 +6,7 @@ career_path: security-engineer
 prerequisite:
   - "[[04_Service_Identity_and_Secrets]]"
   - "[[body-of-knowledge/DMBOK/05_Data_Security]]"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

@@ -7,6 +7,7 @@ source_frameworks:
   - "[[body-of-knowledge/CyBOK/07_Security_Operations_and_Incident_Management]]"
   - "[[software-engineering-note/13_Software_Security/Cybersecurity/04 Security Operations/04 Monitoring & Incident Response|Monitoring and Incident Response]]"
   - "[[software-engineering-note/13_Software_Security/08_Security_Management_and_Governance]]"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

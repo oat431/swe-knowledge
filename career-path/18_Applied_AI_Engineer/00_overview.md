@@ -13,6 +13,7 @@ source_frameworks:
   - "[[computing-foundation-note/Artificial_Intelligence/AI Overview]]"
   - "OWASP Top 10 for LLM Applications (2025)"
   - "AI Engineering - Chip Huyen (O'Reilly, 2025)"
+created: 2026-09-09
 tags:
   - career-path
   - ai-engineering

@@ -6,6 +6,7 @@ career_path: security-engineer
 prerequisite:
   - "[[04_Incident_Command_and_Containment]]"
   - "[[software-engineering-note/13_Software_Security/Cybersecurity/04 Security Operations/04 Monitoring & Incident Response|Monitoring and Incident Response]]"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

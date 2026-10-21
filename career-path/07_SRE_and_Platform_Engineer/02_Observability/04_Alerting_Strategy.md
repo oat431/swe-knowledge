@@ -5,6 +5,7 @@ capability_area: observability
 career_path: sre-and-platform-engineer
 prerequisite:
   - "[[03_Distributed_Tracing]]"
+created: 2026-08-05
 tags:
   - career-path
   - sre

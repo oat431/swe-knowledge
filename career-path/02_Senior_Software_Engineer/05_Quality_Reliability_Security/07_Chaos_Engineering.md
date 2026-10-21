@@ -1,12 +1,11 @@
 ---
 title: "Chaos Engineering"
-note_type: capability-topic
+role: Senior Software Engineer
 capability_area: quality-reliability-security
-career_path: senior-software-engineer
-prerequisite:
-  - "[[02_SRE_Principles]]"
-  - "[[03_Observability]]"
-  - "[[06_Production_Readiness]]"
+topic: Chaos Engineering
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer

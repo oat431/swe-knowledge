@@ -1,11 +1,11 @@
 ---
 title: "Requirements Risk Management"
-note_type: capability-topic
+role: Senior Software Engineer
 capability_area: problem-framing
-career_path: senior-software-engineer
-prerequisite:
-  - "[[04_User_and_Business_Outcomes]]"
-  - "[[07_Prioritization]]"
+topic: Requirements Risk Management
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer
@@ -240,3 +240,8 @@ A senior engineer ensures that risk management is not a separate activity but in
 - Five mitigation strategies: avoid, mitigate, transfer, accept, contingency
 - Maintain a requirements risk register and review it regularly
 - In agile, risk management is continuous and integrated into the regular cadence
+
+
+## Related
+
+- [[04_User_and_Business_Outcomes]]

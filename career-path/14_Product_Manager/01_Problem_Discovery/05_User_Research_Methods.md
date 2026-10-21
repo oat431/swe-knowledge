@@ -2,6 +2,7 @@
 title: User Research Methods
 parent: Problem Discovery
 summary: Choosing the right research approach
+created: 2026-08-06
 tags:
   - discovery
   - research

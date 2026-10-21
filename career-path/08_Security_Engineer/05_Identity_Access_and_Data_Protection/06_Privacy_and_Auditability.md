@@ -7,6 +7,7 @@ prerequisite:
   - "[[05_Data_Classification_and_Protection]]"
   - "[[body-of-knowledge/DMBOK/05_Data_Security]]"
   - "[[software-engineering-note/13_Software_Security/08_Security_Management_and_Governance]]"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

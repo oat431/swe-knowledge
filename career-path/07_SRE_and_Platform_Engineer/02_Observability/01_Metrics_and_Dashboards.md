@@ -5,6 +5,7 @@ capability_area: observability
 career_path: sre-and-platform-engineer
 prerequisite:
   - "[[software-engineering-note/02_Software_Architecture/Microservice/05 Observability/051 Logging & Monitoring]]"
+created: 2026-08-05
 tags:
   - career-path
   - sre

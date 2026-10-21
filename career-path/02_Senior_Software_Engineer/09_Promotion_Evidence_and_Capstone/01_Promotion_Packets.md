@@ -1,15 +1,16 @@
 ---
 title: "Promotion Packets"
-type: "topic"
-capability_area: "09_Promotion_Evidence_and_Capstone"
-description: "Structure, writing, and best practices for engineering promotion documents"
+role: Senior Software Engineer
+capability_area: 09_Promotion_Evidence_and_Capstone
+topic: Promotion Packets
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - promotion
   - documentation
   - career-advancement
   - impact
-created: 2026-01-05
-updated: 2026-01-05
 ---
 
 # Promotion Packets

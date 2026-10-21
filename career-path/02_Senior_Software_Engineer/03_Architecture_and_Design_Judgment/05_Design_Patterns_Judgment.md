@@ -1,11 +1,11 @@
 ---
 title: "Design Patterns Judgment"
-note_type: capability-topic
+role: Senior Software Engineer
 capability_area: architecture-judgment
-career_path: senior-software-engineer
-prerequisite:
-  - "[[software-engineering-note/03_Software_Design/01_Design_Fundamentals_and_Principles]]"
-  - "[[01_Architecture_Decision_Making]]"
+topic: Design Patterns Judgment
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer

@@ -4,6 +4,7 @@ note_type: capability-area-overview
 capability_area: model-and-inference-operations
 career_path: applied-ai-engineer
 source_frameworks: ["[[computing-foundation-note/Artificial_Intelligence/AI Overview]]", "[[SWEBOK v4 - Overview]]"]
+created: 2026-09-09
 tags: [career-path, applied-ai, ai-engineering, inference, cost-optimization, overview]
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Requirements
+created: 2026-08-06
 parent: Product Manager
 capability_area: requirements
 description: Translates problems into clear, actionable requirements

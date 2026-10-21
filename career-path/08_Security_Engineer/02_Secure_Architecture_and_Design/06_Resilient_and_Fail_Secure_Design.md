@@ -6,6 +6,7 @@ career_path: security-engineer
 prerequisite:
   - "[[02_Defense_in_Depth]]"
   - "[[05_Secrets_and_Cryptographic_Boundaries]]"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

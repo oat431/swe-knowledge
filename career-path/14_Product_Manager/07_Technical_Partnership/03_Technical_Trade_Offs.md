@@ -2,6 +2,7 @@
 title: Technical Trade-Offs
 parent: Technical Partnership
 summary: Balancing technical decisions with business goals
+created: 2026-08-06
 tags:
   - technical-partnership
   - trade-offs

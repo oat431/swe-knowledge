@@ -1,12 +1,11 @@
 ---
 title: "Decision Ownership"
-note_type: capability-topic
+role: Senior Software Engineer
 capability_area: technical-ownership
-career_path: senior-software-engineer
-prerequisite:
-  - "[[01_System_Ownership]]"
-  - "[[02_Lifecycle_Ownership]]"
-  - "[[03_Technical_Debt_and_Maintainability]]"
+topic: Decision Ownership
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer

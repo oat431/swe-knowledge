@@ -9,6 +9,7 @@ source_frameworks:
   - "[[body-of-knowledge/SWEBOK/13_Software_Security]]"
   - "[[body-of-knowledge/CyBOK/09_Software_Security]]"
   - "F:\obsidian_note\document_template\14_Security/Security-Architecture.md"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

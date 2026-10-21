@@ -13,6 +13,7 @@ source_frameworks:
   - "[[SWEBOK v4 - Overview]]"
   - "[[SEBoK v2 - Overview]]"
   - "[[PMBOK v8 - Overview]]"
+created: 2026-10-21
 tags:
   - career-path
   - tech-lead

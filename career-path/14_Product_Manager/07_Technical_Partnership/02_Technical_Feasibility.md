@@ -2,6 +2,7 @@
 title: Technical Feasibility
 parent: Technical Partnership
 summary: Assessing what's technically possible and practical
+created: 2026-08-06
 tags:
   - technical-partnership
   - feasibility

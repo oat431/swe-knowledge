@@ -2,6 +2,7 @@
 title: Requirements Prioritization
 parent: Requirements
 summary: Deciding which requirements to build first
+created: 2026-08-06
 tags:
   - requirements
   - prioritization

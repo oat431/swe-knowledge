@@ -1,11 +1,11 @@
 ---
 title: "Stakeholder Identification and Management"
-note_type: capability-topic
+role: Senior Software Engineer
 capability_area: problem-framing
-career_path: senior-software-engineer
-prerequisite:
-  - "[[01_Problem_Statement_Definition]]"
-  - "[[02_Current_and_Future_State]]"
+topic: Stakeholder Identification and Management
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer

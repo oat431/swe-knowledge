@@ -17,6 +17,7 @@ source_frameworks:
   - "[[SWEBOK v4 - Overview]]"
   - "[[Computing Foundation Overview]]"
   - "[[Engineering Foundation Overview]]"
+created: 2026-10-21
 tags:
   - career-path
   - software-engineer

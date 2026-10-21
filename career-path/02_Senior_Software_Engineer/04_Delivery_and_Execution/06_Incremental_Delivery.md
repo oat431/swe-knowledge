@@ -1,11 +1,11 @@
 ---
 title: "Incremental Delivery"
-note_type: capability-topic
+role: Senior Software Engineer
 capability_area: delivery-execution
-career_path: senior-software-engineer
-prerequisite:
-  - "[[05_Release_Management]]"
-  - "[[career-path/02_Senior_Software_Engineer/02_Problem_Framing_and_Requirements/05_Acceptance_Conditions]]"
+topic: Incremental Delivery
+status: complete
+created: 2026-08-05
+updated: 2026-08-05
 tags:
   - career-path
   - senior-engineer

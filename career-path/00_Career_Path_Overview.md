@@ -11,6 +11,7 @@ source_frameworks:
   - "[[BABOK v3 - Overview]]"
   - "[[CyBOK v1 - Overview]]"
   - "[[DMBoK v2 - Overview]]"
+created: 2026-08-03
 tags:
   - career-path
   - software-engineering

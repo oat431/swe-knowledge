@@ -2,6 +2,7 @@
 title: Effort Estimation
 parent: Prioritization
 summary: Understanding the cost of delivery
+created: 2026-08-06
 tags:
   - prioritization
   - estimation

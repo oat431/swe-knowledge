@@ -6,6 +6,7 @@ career_path: security-engineer
 prerequisite:
   - "[[04_Secure_Architecture_Decisions]]"
   - "[[career-path/08_Security_Engineer/01_Threat_Modeling_and_Risk/03_Attack_Surface_and_Trust_Boundaries|Attack Surface and Trust Boundaries]]"
+created: 2026-08-06
 tags:
   - career-path
   - security-engineer

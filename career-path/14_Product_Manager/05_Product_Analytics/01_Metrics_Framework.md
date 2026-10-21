@@ -2,6 +2,7 @@
 title: Metrics Framework
 parent: Product Analytics
 summary: Defining what to measure and why
+created: 2026-08-06
 tags:
   - analytics
   - metrics

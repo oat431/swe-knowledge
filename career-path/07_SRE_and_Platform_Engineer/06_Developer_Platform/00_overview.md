@@ -6,6 +6,7 @@ career_path: sre-and-platform-engineer
 source_frameworks:
   - "[[SWEBOK v4 - Overview]]"
   - "[[SEBoK v2 - Overview]]"
+created: 2026-08-05
 tags:
   - career-path
   - sre

@@ -2,6 +2,7 @@
 title: Stakeholder Management
 parent: Prioritization
 summary: Navigating competing priorities
+created: 2026-08-06
 tags:
   - prioritization
   - stakeholders

@@ -2,6 +2,7 @@
 title: Prioritization Frameworks
 parent: Prioritization
 summary: Structured approaches to ranking opportunities
+created: 2026-08-06
 tags:
   - prioritization
   - frameworks

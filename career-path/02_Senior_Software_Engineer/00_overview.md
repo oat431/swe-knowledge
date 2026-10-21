@@ -17,6 +17,7 @@ source_frameworks:
   - "[[SEBoK v2 - Overview]]"
   - "[[PMBOK v8 - Overview]]"
   - "[[BABOK v3 - Overview]]"
+created: 2026-10-21
 tags:
   - career-path
   - senior-engineer

@@ -5,6 +5,7 @@ capability_area: incident-response
 career_path: sre-and-platform-engineer
 prerequisite:
   - "[[career-path/02_Senior_Software_Engineer/05_Quality_Reliability_Security/04_Incident_Response]]"
+created: 2026-08-05
 tags:
   - career-path
   - sre

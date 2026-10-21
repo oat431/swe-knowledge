@@ -1,5 +1,6 @@
 ---
 title: Roadmapping
+created: 2026-08-06
 parent: Product Manager
 capability_area: roadmapping
 description: Communicates direction without turning uncertainty into false precision
