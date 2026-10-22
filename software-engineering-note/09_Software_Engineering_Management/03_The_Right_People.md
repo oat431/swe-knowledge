@@ -12,7 +12,7 @@ created: 2026-07-21
 
 # 03: The Right People
 
-Part III of *Peopleware* covers Chapters 14–20. The core argument: **managers cannot meaningfully change people:** so getting the right people in the first place, and then keeping them, is everything.
+Part III of *Peopleware* covers Chapters 14–20. The core argument: **managers cannot meaningfully change people**, so getting the right people in the first place, and then keeping them, is everything.
 
 ---
 

@@ -46,12 +46,12 @@ FCA verifies that the software configuration item (CI) satisfies its functional 
 
 ### What FCA Examines
 
-1. **Requirements Coverage** -- Every requirement in the specification has corresponding test evidence
-2. **Test Execution Records** -- Tests were actually run, not just planned
-3. **Test Results** -- All tests passed, or deviations are documented with approved waivers
-4. **Performance Criteria** -- Non-functional requirements (latency, throughput, reliability) are met
-5. **Interface Compliance** -- External and internal interfaces match their specifications
-6. **Anomaly Resolution** -- All known defects have been dispositioned (fixed, deferred with approval, or waived)
+1. **Requirements Coverage:** Every requirement in the specification has corresponding test evidence
+2. **Test Execution Records:** Tests were actually run, not just planned
+3. **Test Results:** All tests passed, or deviations are documented with approved waivers
+4. **Performance Criteria:** Non-functional requirements (latency, throughput, reliability) are met
+5. **Interface Compliance:** External and internal interfaces match their specifications
+6. **Anomaly Resolution:** All known defects have been dispositioned (fixed, deferred with approval, or waived)
 
 ### FCA Checklist
 
@@ -102,12 +102,12 @@ PCA verifies that the design and reference documentation is consistent with the 
 
 ### What PCA Examines
 
-1. **Document-to-Product Consistency** -- Design documents accurately describe the as-built software
-2. **Version Consistency** -- All deliverable components are at the correct, approved version
-3. **Completeness** -- All required deliverables are present (source code, binaries, docs, data)
-4. **Baseline Integrity** -- The product matches its approved baseline
-5. **Build Reproducibility** -- The product can be rebuilt from source using documented procedures
-6. **Labeling and Packaging** -- Media, containers, and labels match specifications
+1. **Document-to-Product Consistency:** Design documents accurately describe the as-built software
+2. **Version Consistency:** All deliverable components are at the correct, approved version
+3. **Completeness:** All required deliverables are present (source code, binaries, docs, data)
+4. **Baseline Integrity:** The product matches its approved baseline
+5. **Build Reproducibility:** The product can be rebuilt from source using documented procedures
+6. **Labeling and Packaging:** Media, containers, and labels match specifications
 
 ### PCA Checklist
 
@@ -220,13 +220,13 @@ graph TB
 
 A well-planned audit includes:
 
-1. **Scope Definition** -- Which CIs, baselines, and time period are covered
-2. **Entry Criteria** -- What must be true before the audit begins
-3. **Team Composition** -- Auditors, technical SMEs, SCM representatives
-4. **Schedule** -- Duration, key dates, resource allocation
-5. **Checklist Preparation** -- Tailored to the audit type and project context
-6. **Evidence Collection Plan** -- What artifacts are needed and where to find them
-7. **Exit Criteria** -- What constitutes audit completion
+1. **Scope Definition:** Which CIs, baselines, and time period are covered
+2. **Entry Criteria:** What must be true before the audit begins
+3. **Team Composition:** Auditors, technical SMEs, SCM representatives
+4. **Schedule:** Duration, key dates, resource allocation
+5. **Checklist Preparation:** Tailored to the audit type and project context
+6. **Evidence Collection Plan:** What artifacts are needed and where to find them
+7. **Exit Criteria:** What constitutes audit completion
 
 ### Audit Execution
 
@@ -440,6 +440,6 @@ This pipeline embodies continuous auditing: every commit triggers integrity chec
 - [[02_Codeline_and_Branching|Active Development Line]]: Development branches audited before merge
 - [[Version Control/Version Control Overview|Private Version Control]]: Developer workspaces contribute to audit evidence
 - [[04_Commit_and_Testing|Task-Level Commit]]: Commit-level traceability supports FCA
-- [[07_SCSA_and_Status_Accounting]] -- CSA provides audit data and reports
-- [[09_Change_Control_and_Compliance]] -- CCB approves deviations and waivers
-- Version Control/ -- Tools supporting audit evidence collection
+- [[07_SCSA_and_Status_Accounting]]: CSA provides audit data and reports
+- [[09_Change_Control_and_Compliance]]: CCB approves deviations and waivers
+- Version Control/: Tools supporting audit evidence collection

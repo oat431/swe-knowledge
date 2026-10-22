@@ -160,7 +160,7 @@ The telephone is a uniquely disruptive technology because it **demands immediate
 - **Success:** The door: workers can control noise and interruptibility
 - **Failure:** The paging system: interrupts everyone to locate one person
 
-**Three common counterarguments: and rebuttals:**
+**Three common counterarguments and rebuttals:**
 
 1. **"People don't care about glitzy office space."**
    True, but they care deeply about noise, privacy, and space. An *ignorable* workplace is the ideal; harassment by interruption is not ignorable.

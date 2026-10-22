@@ -160,7 +160,7 @@ void copy(Reader in, Writer out) {
 // No recompilation. No changes. The IO devices are PLUGINS.
 ```
 
-✅ **The takeaway:** The UNIX operating system pioneered this for IO devices in the late 1950s. OO makes plugin architecture available **anywhere, for anything:** not just IO. This is the foundation of Clean Architecture's boundary enforcement.
+✅ **The takeaway:** The UNIX operating system pioneered this for IO devices in the late 1950s. OO makes plugin architecture available **anywhere, for anything**, not just IO. This is the foundation of Clean Architecture's boundary enforcement.
 
 ---
 

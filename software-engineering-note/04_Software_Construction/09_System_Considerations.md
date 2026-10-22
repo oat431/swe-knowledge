@@ -115,7 +115,7 @@ Activities that grow at a **more-than-linear rate** as project size increases:
   - Require **code sign-offs** by senior technical personnel.
   - **Circulate good code examples:** a "best code listings" manual.
   - Treat code listings as **public assets**, not private property.
-  - **Reward good code:** but only if you're technically qualified to judge it.
+  - **Reward good code**, but only if you're technically qualified to judge it.
 - An effective standard for a manager with a programming background: *"I must be able to read and understand any code written for the project."*
 
 ### 28.2 Configuration Management (SCM)
@@ -252,7 +252,7 @@ Tactics: Plant ideas and let manager "have the brainstorm," educate your manager
 
 ### 29.1 Importance of Integration Approach
 
-Integration = combining separate software components into a single system. Done poorly, the system can **"collapse under its own weight during construction":** even if the finished product would have worked.
+Integration = combining separate software components into a single system. Done poorly, the system can **"collapse under its own weight during construction"**, even if the finished product would have worked.
 
 **Benefits of careful integration:**
 Easier defect diagnosis, fewer defects, less scaffolding, shorter time to first working product, shorter schedules, better customer relations, improved morale, improved chance of completion, more reliable estimates, more accurate status reporting, improved code quality.
@@ -307,7 +307,7 @@ Every day: compile, link, and combine into an executable; run a **smoke test** (
 - **Smoke test daily:** exercise the system end-to-end; evolve the smoke test as the system grows.
 - **Automate** the build and smoke test.
 - **Establish a build group:** on large projects, this can be a full-time role.
-- **Add revisions only when code is in a consistent state:** but don't wait more than a couple of days.
+- **Add revisions only when code is in a consistent state**, but don't wait more than a couple of days.
 - **Require developers to smoke test their own code** before adding it to the build.
 - **Create a holding area** for new code.
 - **Create a penalty for breaking the build** (light-hearted: lollipops, goat horns, $5 fund).

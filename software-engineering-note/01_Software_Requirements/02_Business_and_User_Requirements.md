@@ -181,7 +181,7 @@ The purpose of these models is to foster clear, accurate communication among sta
 - System = single **circle**; external entities (terminators) = **rectangles** (user classes, organizations, other systems, hardware devices).
 - Arrows = flow of data, control, or material between terminators and the system.
 - Deliberately provides **no visibility** into the system's internal objects, processes, or data.
-- Top level of a data flow diagram (structured analysis): but useful for *all* projects.
+- Top level of a data flow diagram (structured analysis), but useful for *all* projects.
 
 ### 4.2 Ecosystem Map (Beatty & Chen 2012)
 
@@ -241,7 +241,7 @@ When someone requests a new requirement, the analyst asks: *"Is this in scope?"*
 - Thoughtfully included **contingency buffers** can absorb some change (Wiegers 2007).
 - Common consequence: completed activities must be **reworked**.
 - Quality often suffers if resources/time aren't increased when functionality is added.
-- Documented business requirements help justify saying *"no"*: or at least *"not yet."*
+- Documented business requirements help justify saying *"no"*, or at least *"not yet."*
 
 ### 5.4 Vision and Scope on Agile Projects
 

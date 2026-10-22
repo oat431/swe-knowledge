@@ -182,7 +182,7 @@ Essential for dependency-breaking work. Legacy code is surgery, surgeons never o
 - Green-field projects have their own problems. The classic trap: best people move to "the replacement system," old system stagnates, new system inherits unknown complexity.
 
 ### Practical Mindset
-- Accept that the situation won't magically improve: but your skills and the codebase *can* improve incrementally.
+- Accept that the situation won't magically improve, but your skills and the codebase *can* improve incrementally.
 - Every small refactoring, every test added, every dependency broken makes the system a little better.
 - The techniques in this book are designed precisely for this reality: you don't need permission or a green-field project to start improving things today.
 

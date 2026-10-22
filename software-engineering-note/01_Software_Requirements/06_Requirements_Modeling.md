@@ -354,7 +354,7 @@ Possible correlations:
      1. Deletion is not an expected function (correct).
      2. A use case that deletes it is **missing**.
      3. An existing use case is **incomplete:** it's supposed to permit deletion but doesn't.
-   - You won't know which interpretation is correct without investigation: but the CRUD matrix is a **powerful way to detect missing requirements**.
+   - You won't know which interpretation is correct without investigation, but the CRUD matrix is a **powerful way to detect missing requirements**.
 
 > Optional extensions: add **L** (List selection), **M** (Move), or a second **C** (Copy). Stick with plain CRUD for simplicity unless the project demands more granularity.
 

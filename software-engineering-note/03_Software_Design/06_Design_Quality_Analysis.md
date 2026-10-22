@@ -118,7 +118,7 @@ A design isn't finished when it's written; it's finished when it's verified. Des
 - **Use checklists:** they prevent reviewers from missing common defect categories.
 - **Metrics guide improvement:** they don't replace judgment. A "good" metric score doesn't mean "good" design.
 - **Static analysis catches the obvious:** freeing reviewers to focus on the subtle.
-- **Design quality is a continuous concern:** not a one-time gate.
+- **Design quality is a continuous concern**, not a one-time gate.
 
 ## Related
 

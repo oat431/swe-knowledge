@@ -169,7 +169,7 @@ OAuth is a delegation framework (not designed for authentication). **OpenID Conn
 
 **Formal methods** (BAN logic, CSP, Isabelle theorem prover):
 - Force designers to make everything explicit
-- Find bugs: but only in the part verified
+- Find bugs, but only in the part verified
 - Larry Paulson verified SSL/TLS with Isabelle in 1998; ~1 security bug found every year since, not in the basic design, but in added features and implementation issues (timing attacks)
 
 **Robustness principles:**

@@ -179,7 +179,7 @@ The Go analogy: success requires both **strategy** (overall design) and **tactic
 - **Model just enough** for the current user story
 - Implement with TDD
 - Distinct design step (agnostics call this "Big Design Up Front" / BDUF)
-- Recognition that design HAS a place in agile: but no room for integration/system testing
+- Recognition that design HAS a place in agile, but no room for integration/system testing
 
 #### 11.4.2 Model–Driven Agile Development (MDAD: Jorgensen's proposal)
 
@@ -252,7 +252,7 @@ StateCharts (Harel) are at least equivalent to, and probably more expressive tha
 Extended Petri nets  ←  StateCharts
 ```
 
-- StateCharts express **true concurrency** (concurrent regions): not expressible in standard Petri nets
+- StateCharts express **true concurrency** (concurrent regions), not expressible in standard Petri nets
 - Swim Lane Petri Nets (DeVries, 2013) attempt to bridge this gap using UML swim lanes for parallel activities
 - Event-Driven Petri Nets extend this further for systems-of-systems (Chapter 17)
 

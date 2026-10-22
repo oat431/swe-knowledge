@@ -109,7 +109,7 @@ Modern developers assemble software from open source parts, inheriting their vul
 
 **Mitigations:** detect known vulnerabilities in dependencies, choose components with a demonstrated history of quick fixes, identify multiple versions of the same library (especially older vulnerable versions).
 
-The **Verizon PCI Data Breach Investigation Report (2014)** found that **10 vulnerabilities accounted for 97% of exploits** in cardholder data breaches: and **8 of those were over 10 years old**.
+The **Verizon PCI Data Breach Investigation Report (2014)** found that **10 vulnerabilities accounted for 97% of exploits** in cardholder data breaches, and **8 of those were over 10 years old**.
 
 ### 7. Ensure Security of the Environment
 
@@ -269,7 +269,7 @@ These provide equivalent reassurance and can be demonstrated to satisfy separati
 
 The DevOps approach to security transforms Infosec from a **gatekeeping silo** into an **integrated capability** embedded throughout the value stream. Key principles:
 
-1. **Security is everyone's job, every day:** not delegated to a separate department
+1. **Security is everyone's job, every day**, not delegated to a separate department
 2. **Automate security testing** in the deployment pipeline: static, dynamic, dependency, and environment scanning on every commit
 3. **Integrate security telemetry** into the same monitoring tools Dev and Ops already use
 4. **Shift compliance left:** involve auditors early, automate evidence collection, make controls self-documenting

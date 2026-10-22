@@ -299,7 +299,7 @@ The "clever" `strcpy` using `while ( *++t = *++s );` ran **11% slower** in profi
 ### 31.7 Laying Out Routines
 
 - **Use blank lines** between the routine header, data declarations, and body
-- **Use standard indentation for routine arguments:** not endline layout:
+- **Use standard indentation for routine arguments**, not endline layout:
 
 ```java
 // ✅ Standard indentation - maintainable
@@ -546,7 +546,7 @@ if ( accountType == AccountType.NewAccount ) ...
 - **Comment coded meanings:** use enumerated types if your language supports them; otherwise document what each value represents.
 - **Comment limitations on input data:** expected and unexpected values.
 - **Document flags to the bit level:** meaning of each bit in a bit field.
-- **Stamp variable-related comments with the variable's name:** so string searches find both.
+- **Stamp variable-related comments with the variable's name**, so string searches find both.
 - **Document global data:** purpose and why it must be global. Use naming conventions to highlight global status.
 
 #### Commenting Control Structures

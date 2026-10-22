@@ -208,7 +208,7 @@ Amazon's rule: a team only as large as can be fed with two pizzas (5–10 people
 
 3. **But functional orgs can work:** if built on high trust, transparent prioritization, sufficient slack, and automated self-service platforms (Etsy, Google, GitHub prove it).
 
-4. **Quality, security, and availability are everyone's job:** not delegated to separate departments. Shared goals and shared pain (e.g., on-call rotations for devs) drive better outcomes.
+4. **Quality, security, and availability are everyone's job**, not delegated to separate departments. Shared goals and shared pain (e.g., on-call rotations for devs) drive better outcomes.
 
 5. **Invest in generalists:** cross-train engineers across the full stack; it removes queues and wait time while making work more fun.
 

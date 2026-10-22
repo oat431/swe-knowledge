@@ -155,7 +155,7 @@ In healthy teams, peer coaching is ubiquitous and barely even identified as coac
 
 **Coaching cannot take place if people don't feel safe.** In a competitive atmosphere:
 - Being coached signals you know less: dangerous
-- Coaching someone else arms them to pass you by: also dangerous
+- Coaching someone else arms them to pass you by; also dangerous
 
 ### Managerial Actions That Foster Competition (and Are Therefore Teamicidal)
 

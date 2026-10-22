@@ -26,7 +26,7 @@ aliases:
 > *"The single biggest problem in communication is the illusion that it has taken place."*
 > *George Bernard Shaw*
 
-**Behavior-Driven Development (BDD)** and **Acceptance Test-Driven Development (ATDD)** are specification paradigms that treat requirements as **executable examples**. Rather than writing requirements in prose and testing them later, BDD/ATDD define requirements as concrete, automatable scenarios, closing the gap between "what the customer said" and "what the developer built."
+**Behavior-Driven Development (BDD)** and **Acceptance Test-Driven Development (ATDD)** are specification paradigms that treat requirements as **executable examples**. Instead of prose requirements that get tested later, BDD/ATDD write requirements as concrete scenarios that can be automated. That narrows the gap between "what the customer said" and "what the developer built."
 
 ---
 
@@ -49,7 +49,7 @@ graph LR
     style F fill:#FF5861,stroke:#000000
 ```
 
-Each arrow is a **translation:** and each translation introduces potential misinterpretation. BDD eliminates most of these arrows by making the specification itself executable.
+Each arrow is a **translation**, and each one can introduce misinterpretation. BDD removes most of these arrows by making the specification itself executable.
 
 ### 1.2 The BDD Insight
 
@@ -82,7 +82,7 @@ graph TD
     E --> G["Living Documentation"]
 ```
 
-> [!tip] The key ATDD practice is the **"Three Amigos" meeting:** customer, developer, and tester collaborate to write acceptance criteria before any code is written. This single practice catches more requirements defects than any review process.
+> [!tip] The central ATDD practice is the **"Three Amigos" meeting**, where the customer, developer, and tester write acceptance criteria together before any code exists. This practice catches more requirements defects than any review process.
 
 ---
 
@@ -90,7 +90,7 @@ graph TD
 
 ### 2.1 Structure
 
-The **Given/When/Then** format (also called Gherkin syntax) provides a structured template for specifying behavior:
+The **Given/When/Then** format (also called Gherkin syntax) is a structured template for specifying behavior:
 
 ```gherkin
 Feature: Fund Transfer
@@ -166,7 +166,7 @@ Scenario Outline: Transfer validation
     | Checking | 1000           | Savings | 5000           | -100   | failure | Amount must be positive |
 ```
 
-> [!tip] Scenario Outlines are the BDD equivalent of **equivalence partitioning** and **boundary value analysis:** but expressed in business language that stakeholders can read and validate.
+> [!tip] Scenario Outlines are the BDD equivalent of **equivalence partitioning** and **boundary value analysis**, written in business language that stakeholders can read and validate.
 
 ---
 
@@ -277,7 +277,7 @@ graph TD
 | **Green** (examples) | Concrete examples illustrating rules | Become scenarios |
 | **Red** (questions) | Open questions, unresolved ambiguity | Escalate to stakeholders |
 
-> [!tip] When a **red card** appears, the team has found **genuine ambiguity** in the requirements. Stop writing examples and resolve the question. This is SBE's most powerful mechanism for defect prevention.
+> [!tip] A **red card** means the team has found **genuine ambiguity** in the requirements, so stop writing examples and resolve the question first. Catching ambiguity at this point is SBE's main way of preventing defects.
 
 ### 4.3 From Examples to Scenarios: Workshop Flow
 
@@ -290,7 +290,7 @@ graph TD
 | 5 | Write Gherkin scenarios from examples | 10 min | Executable specifications |
 | 6 | Review for completeness and consistency | 5 min | Ready for automation |
 
-**Total: ~40 minutes per feature.** This is far cheaper than discovering ambiguity during testing or production.
+**Total: ~40 minutes per feature.** That is far cheaper than finding the ambiguity during testing or in production.
 
 ---
 
@@ -298,7 +298,7 @@ graph TD
 
 ### 5.1 Concept
 
-**Living documentation** is the idea that the executable specification IS the documentation, always current, always correct, because it's verified on every build. Outdated documentation is worse than no documentation; living documentation eliminates staleness.
+**Living documentation** means the executable specification *is* the documentation. It stays current and correct because every build verifies it. Outdated documentation is worse than none, and documentation that runs on every build cannot go stale.
 
 ### 5.2 Living Documentation Architecture
 
@@ -354,7 +354,7 @@ Feature: Fund Transfer
   ⏳ Scenario: Transfer during maintenance window (PENDING)
 ```
 
-This report is **generated on every build:** it's the requirements document, the test report, and the progress tracker, all in one.
+The report is **generated on every build**, so one artifact is the requirements document, the test report, and the progress tracker.
 
 ---
 
@@ -385,7 +385,7 @@ graph LR
 
 ### 6.2 BDD and User Stories
 
-A standard user story format enhanced with BDD:
+A standard user story format with BDD scenarios added:
 
 ```markdown
 ## Story: Transfer Funds Between Accounts
@@ -412,7 +412,7 @@ Scenario: Insufficient funds
 
 ### 6.3 BDD and Story Mapping
 
-**Story mapping** (Jeff Patton) enhanced with BDD scenarios:
+**Story mapping** (Jeff Patton) with BDD scenarios added:
 
 | Story Map Layer | BDD Contribution |
 |----------------|------------------|
@@ -749,16 +749,16 @@ When BDD is practiced fully, the **feature files become the requirements specifi
 
 ## 13 | Key Takeaways
 
-1. **BDD is specification, not testing:** the primary value is shared understanding, not automation.
+1. **BDD is specification, not testing:** its main value is shared understanding; automation comes second.
 2. **Three Amigos is the keystone practice:** without collaboration, BDD degrades into test scripting.
 3. **Given/When/Then is a ubiquitous language:** use it to bridge business and technical stakeholders.
 4. **Scenarios are executable requirements:** when scenarios pass, the requirement is verified.
 5. **Living documentation eliminates stale docs:** the specification is always current because it's always running.
 6. **Specification by Example prevents ambiguity:** concrete examples expose vagueness that prose hides.
-7. **BDD complements, doesn't replace:** use BDD for behavioral requirements, formal methods for critical properties, and models for architecture.
+7. **BDD complements other methods:** use BDD for behavioral requirements, formal methods for critical properties, and models for architecture.
 8. **Start with Example Mapping:** 40 minutes per feature to discover requirements beats weeks of rework.
-9. **Anti-patterns are real:** UI scripting, god scenarios, and solo writing destroy BDD's value.
-10. **Feature files are living artifacts:** version them, review them, evolve them with the system.
+9. **Watch for anti-patterns:** UI scripting, god scenarios, and solo writing destroy BDD's value.
+10. **Feature files are living artifacts:** version, review, and evolve them with the system.
 
 ---
 

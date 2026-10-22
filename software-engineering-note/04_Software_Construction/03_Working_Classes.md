@@ -185,7 +185,7 @@ For each data member: visible to derived classes?
 
 1. **Implement "is a" through public inheritance:** If the derived class won't adhere to the base class's interface contract, use containment instead.
 
-2. **Design and document for inheritance: or prohibit it:** Make members `final`/non-virtual if the class isn't designed for inheritance.
+2. **Design and document for inheritance, or prohibit it:** Make members `final`/non-virtual if the class isn't designed for inheritance.
 
 3. **Adhere to the Liskov Substitution Principle (LSP):** *"Subclasses must be usable through the base class interface without the need for the user to know the difference."* If `InterestRate()` means "interest paid to customer" in `CheckingAccount` but "interest paid by customer" in `AutoLoanAccount`, LSP is violated; don't inherit.
 

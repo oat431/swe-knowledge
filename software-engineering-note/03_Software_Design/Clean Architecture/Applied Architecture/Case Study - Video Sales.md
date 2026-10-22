@@ -89,7 +89,7 @@ Together, they ensure that a pricing change requested by Admin doesn't break the
 - [ ] Use abstract use cases to unify shared behavior early (e.g., `View Catalog` for viewer and purchaser)
 - [ ] Separate by architectural layer: Views, Presenters, Interactors, Controllers, Utilities
 - [ ] Cross-cut layers by actor: Viewer, Purchaser, Author, Admin
-- [ ] Every component is a potential .jar/.dll at compile time: not necessarily at deploy time
+- [ ] Every component is a potential .jar/.dll at compile time, not necessarily at deploy time
 - [ ] Defer deployment grouping; the architecture must make regrouping trivial when conditions change
 - [ ] Dependencies always point toward higher-level policy (against the flow of control)
 - [ ] Inheritance arrows point against control flow to satisfy the Open–Closed Principle

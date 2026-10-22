@@ -321,7 +321,7 @@ The "Super-Monster 2000" case: A computer game project skipped planning, missed 
 
 ### Key Concepts from Galin Ch 7 (Framework)
 
-- **Quality activities integrated throughout the SDLC:** not bolted on at the end
+- **Quality activities integrated throughout the SDLC**, not bolted on at the end
 - **V&V (Verification & Validation):**
   - **Verification:** "Are we building the product right?" (reviews, inspections, testing)
   - **Validation:** "Are we building the right product?" (acceptance testing, user validation)

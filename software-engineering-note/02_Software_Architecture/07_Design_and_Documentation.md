@@ -417,7 +417,7 @@ Key principles aligning Views and Beyond with Agile:
 - Produce a view **only if** it addresses explicitly identified stakeholder concerns
 - Produce documentation in **prioritized stages:** satisfy stakeholders who need it now
 - **Adopt a template** to capture design decisions
-- Fill sections **when information becomes available**, in any order: only if it makes downstream work easier/cheaper
+- Fill sections **when information becomes available**, in any order, but only if it makes downstream work easier/cheaper
 - Don't separate "architectural design document" from "detailed design document"; produce just enough to move on to code
 - Don't feel obliged to fill all sections; "N/A" is acceptable
 - Primary presentation may be a **digital photo of a whiteboard**; verbal communication of catalog, rationale, etc. is fine initially; template provides place to record later

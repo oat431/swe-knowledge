@@ -49,7 +49,7 @@ When partners use a known kata, they critique each other's keyboarding, mousing,
 
 1. One person writes a test, then sits down.
 2. The next person makes the test pass, writes the next test, and sits down.
-3. Rotation continues around the table: or people simply line up as they feel moved.
+3. Rotation continues around the table, or people simply line up as they feel moved.
 
 The primary value of randori is gaining immense insight into how other programmers approach problems: different strategies, tool usage, and design instincts. This broadens your own approach far more than solo practice can.
 

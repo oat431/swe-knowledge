@@ -245,7 +245,7 @@ Testing ≠ Debugging: testing detects errors; debugging diagnoses and corrects 
 4. Use a **checklist** of common errors
 
 **Test-first vs. test-last:**
-- Writing tests first takes no more effort: just resequences
+- Writing tests first takes no more effort, just resequences
 - Detects defects earlier (cheaper to fix)
 - Forces thinking about requirements/design before coding
 - Exposes requirements problems sooner
@@ -564,7 +564,7 @@ Key principles for safe refactoring:
 
 1. **Quality is free in the end:** it requires reallocating resources to prevent defects cheaply instead of fixing them expensively.
 2. **No single technique is sufficient:** combine inspections, testing, prototyping, and reviews for effective defect removal.
-3. **Collaborative construction finds defects testing misses:** and does so more cheaply. Formal inspections are the gold standard.
+3. **Collaborative construction finds defects testing misses**, and does so more cheaply. Formal inspections are the gold standard.
 4. **Developer testing is necessary but insufficient alone:** test-first, basis testing, data-flow testing, boundary analysis, and automation all matter.
 5. **Debugging is a science, not superstition:** use the scientific method; 10×+ performance differences between good and poor debuggers.
 6. **Refactoring is continuous improvement:** code evolves; steer evolution toward higher internal quality. Refactor in small, safe steps with a test safety net.

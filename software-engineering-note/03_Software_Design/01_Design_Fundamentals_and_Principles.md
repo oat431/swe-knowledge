@@ -121,11 +121,11 @@ Every design must address:
 
 ## Essential Concepts
 
-- **Design is an iterative, creative activity:** not a mechanical translation of requirements.
+- **Design is an iterative, creative activity**, not a mechanical translation of requirements.
 - **Abstraction is the primary tool** for managing complexity.
 - **Low coupling + high cohesion** = the cardinal rule of modular design.
 - **Information hiding creates flexibility:** hide what changes, expose what's stable.
-- **SOLID is practical daily guidance:** not academic theory.
+- **SOLID is practical daily guidance**, not academic theory.
 - **Every design decision is a trade-off:** know what you're trading.
 
 ## Related

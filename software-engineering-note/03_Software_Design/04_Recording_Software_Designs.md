@@ -116,7 +116,7 @@ Consequences: Added operational complexity; gained scalability and loose couplin
 - **Don't over-document:** record what's needed, discard what's obvious.
 - **Use multiple views:** no single diagram captures everything.
 - **ADRs preserve rationale:** why, not just what.
-- **MBD is for high-assurance systems:** not every project needs executable models.
+- **MBD is for high-assurance systems**; not every project needs executable models.
 
 ## Related
 

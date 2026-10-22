@@ -259,7 +259,7 @@ You don't need management's **permission** to work in the best way you know how:
 
 **10 signs management is truly committed to excellent requirements processes (Figure 31-3):**
 
-- Behaviors: not pronouncements: constitute evidence of commitment to quality.
+- Behaviors, not pronouncements, constitute evidence of commitment to quality.
 - Senior people who "support" improvements but revert to old processes as soon as problems arise are not committed.
 
 > [!trap] The single biggest threat to a software process improvement program is **lack of management commitment**, followed closely by **reorganizations** that shuffle the program's participants and priorities.
@@ -345,7 +345,7 @@ Write an action plan following the assessment. Each plan should identify:
 
 - Include no more than ~10 items per action plan.
 - Scope so the plan can be completed in **2-3 months**.
-- Assign each action item to a **specific individual:** not "the team." Teams don't do work; individuals do.
+- Assign each action item to a **specific individual**, not "the team." Teams don't do work; individuals do.
 - If you need more than ~10 items, focus the initial cycle on the most important issues and address the rest later.
 
 **Example: Requirements Management Improvements action plan:**

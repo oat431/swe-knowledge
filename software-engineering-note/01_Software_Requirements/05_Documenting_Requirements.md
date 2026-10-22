@@ -166,7 +166,7 @@ If you must proceed with TBDs, either **defer** implementing unresolved requirem
 
 > Screen layouts don't replace written user and functional requirements. Don't expect developers to deduce underlying functionality and data relationships from screenshots.
 
-If you want specific UI controls/screen layouts, include them as **design constraints:** but don't impose constraints unnecessarily, prematurely, or for the wrong reasons.
+If you want specific UI controls/screen layouts, include them as **design constraints**, but don't impose constraints unnecessarily, prematurely, or for the wrong reasons.
 
 For many-screen projects, document UI specifics in a separate **user interface specification** or via UI/prototyping tools. Use **display-action-response models** to describe screen element names, properties, and behavior.
 
@@ -434,7 +434,7 @@ Don't practice creative writing in requirements documents:
 
 **The keyword "shall":**
 - Traditional convention to describe system capability.
-- Objectors say "that's not how people talk": so what? "Shall" clearly indicates desired functionality.
+- Objectors say "that's not how people talk." So what? "Shall" clearly indicates desired functionality.
 - Be **consistent**. Don't mix shall, must, may, might, will, would, should, could, needs to, has to, readers won't know if the differences are meaningful.
 - Avoid using different verbs to connote priority ("shall" = required, "should" = desired, "may" = optional). **Always say "shall" and explicitly assign high/medium/low priority.** Priorities change; don't tie them to phrasing.
 - Avoid "shall" for requirements and "will" for design expectations: readers may not grasp the distinction.

@@ -20,9 +20,9 @@ tags:
 
 - Few projects deliver **all** capabilities every stakeholder wants by the target date. Every resource-limited project must define relative priorities.
 - Prioritization (also called **requirements triage**) reveals competing goals, resolves conflicts, plans staged/incremental deliveries, controls scope creep, and drives trade-off decisions.
-- Establish priorities **early:** when you still have flexibility: and revisit them periodically. Prioritization is dynamic and ongoing.
+- Establish priorities **early**, when you still have flexibility, and revisit them periodically. Prioritization is dynamic and ongoing.
 - Customers sometimes resist prioritizing, fearing low-priority items will never be built. The reality: if you can't get everything, make sure you get what matters most to business objectives.
-- If customers won't distinguish priorities, the project manager must: and customers may not agree with the result.
+- If customers won't distinguish priorities, the project manager must, and customers may not agree with the result.
 - **Warning sign:** if ~85% of requirements end up "high priority," you haven't actually prioritized. Scrub the requirements to eliminate non-essential ones and simplify unnecessarily complex ones. Studies show nearly **two-thirds of features are rarely or never used** (Standish Group 2009).
 
 ### 1.2 Prioritization Pragmatics
@@ -107,7 +107,7 @@ priority = ─────────────
   - **Relative cost:** implementation effort (developers)
   - **Relative technical risk:** probability of not getting it right first try (developers)
 - Total value = (benefit × weight) + (penalty × weight); spreadsheet computes % of total value, cost, risk.
-- Apply to **discretionary requirements** only: not core functions, key differentiators, or regulatory items that absolutely must ship.
+- Apply to **discretionary requirements** only, not core functions, key differentiators, or regulatory items that absolutely must ship.
 - **Weighting factors** adjustable (e.g., benefit 2×, penalty 1, cost 1, risk 0.5). Set weight to 0 to drop a term.
 - **Process:**
   1. List all items at the same abstraction level in the spreadsheet.

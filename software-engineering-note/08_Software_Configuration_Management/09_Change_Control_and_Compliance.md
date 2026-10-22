@@ -650,6 +650,6 @@ Next Meeting: _______________
 - [[02_Codeline_and_Branching|Active Development Line]]: Where approved changes are implemented
 - [[Version Control/Version Control Overview|Private Version Control]]: Developer workspaces before formal control
 - [[04_Commit_and_Testing|Task-Level Commit]]: Commit-level change tracking
-- [[07_SCSA_and_Status_Accounting]] -- Records change activity and compliance evidence
-- [[08_Configuration_Auditing]] -- FCA/PCA verify change control effectiveness
-- Version Control/ -- Tools supporting change control workflows
+- [[07_SCSA_and_Status_Accounting]]: Records change activity and compliance evidence
+- [[08_Configuration_Auditing]]: FCA/PCA verify change control effectiveness
+- Version Control/: Tools supporting change control workflows

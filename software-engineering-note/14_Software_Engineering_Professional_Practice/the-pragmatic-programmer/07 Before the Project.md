@@ -48,7 +48,7 @@ Requirements don't lie on the surface. They're buried under assumptions, politic
 1. Enumerate all the constraints you believe exist
 2. For each constraint, ask: "Is this really a constraint? Who says?"
 3. Find the constraints that are self-imposed. Eliminate them.
-4. The remaining real constraints bound the real problem: which is now solvable.
+4. The remaining real constraints bound the real problem, which is now solvable.
 
 ### Example
 

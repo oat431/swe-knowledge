@@ -192,7 +192,7 @@ Old Status Quo → [Foreign Element] → Chaos → [Transforming Idea] → Pract
 ```
 
 - **Chaos is integral to change.** Without expecting it, people mistake Chaos for the New Status Quo and change back.
-- **The more painful the Chaos, the greater the perceived value of the New Status Quo:** if you get there.
+- **The more painful the Chaos, the greater the perceived value of the New Status Quo**, if you get there.
 - **Safety first:** Change only has a chance if failure (at least a little bit of failure) is also okay. Adults fear humiliation more than injury; kids don't.
 - **Temporary loss of mastery** is embarrassing enough without catching flack for it.
 
@@ -214,7 +214,7 @@ Old Status Quo → [Foreign Element] → Chaos → [Transforming Idea] → Pract
 - **Not at the bottom:** too constrained by organizational boundaries, lack power to effect change
 - **In the middle:** middle management is the natural learning center
 
-**Downsizings almost always target middle management:** which means they often destroy the learning center.
+**Downsizings almost always target middle management**, which means they often destroy the learning center.
 
 #### The Management Team Is Rarely a Team
 

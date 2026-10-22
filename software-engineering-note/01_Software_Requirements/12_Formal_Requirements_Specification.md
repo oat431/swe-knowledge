@@ -431,7 +431,7 @@ graph LR
 
 ### 7.1 Concept
 
-Model checking **exhaustively explores all reachable states** of a finite-state model to verify that specified properties hold. Unlike theorem proving, model checking is **fully automatic:** but requires a finite (or abstractable-to-finite) state space.
+Model checking **exhaustively explores all reachable states** of a finite-state model to verify that specified properties hold. Unlike theorem proving, model checking is **fully automatic**, but requires a finite (or abstractable-to-finite) state space.
 
 ### 7.2 Process
 

@@ -190,7 +190,7 @@ Exception: `Num`; use `Count`/`Total` (total count) and `Index` (specific) inste
 **Boolean Variables:**
 - Useful names: `done`, `error`, `found`, `success`/`ok`
 - Names must imply `true`/`false`: ❌ `status`, `sourceFile`; ✅ `statusOK`, `sourceFileAvailable`
-- `Is` prefix makes it a question: `isDone?`, `isError?`: but `if (isFound)` slightly less readable than `if (found)`
+- `Is` prefix makes it a question: `isDone?`, `isError?`, but `if (isFound)` slightly less readable than `if (found)`
 - **Use positive names:** ❌ `notFound` (double-negative: `if not notFound`)
 
 **Enumerated Types:**

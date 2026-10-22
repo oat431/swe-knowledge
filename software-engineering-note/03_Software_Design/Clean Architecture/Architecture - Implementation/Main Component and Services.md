@@ -23,7 +23,7 @@ Main is the entry point that wires everything together, injects dependencies, an
 
 ### 1. Main Is the Ultimate Detail
 
-Main is the lowest-level policy in the system. It is the initial entry point, and nothing (except the operating system) depends on it. Its sole job is to create all factories, strategies, and global facilities, then hand control over to the high-level abstract portions of the system. **Main is the dirtiest of all the dirty components:** and that's by design.
+Main is the lowest-level policy in the system. It is the initial entry point, and nothing (except the operating system) depends on it. Its sole job is to create all factories, strategies, and global facilities, then hand control over to the high-level abstract portions of the system. **Main is the dirtiest of all the dirty components**, and that's by design.
 
 ### 2. Dependency Injection Belongs in Main
 

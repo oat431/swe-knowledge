@@ -44,7 +44,7 @@ Story points are **relative, not absolute.** They do not map to units of time.
 
 1. Pick a **Golden Story** of average size. Assign, say, 3 points.
 2. Compare every other story against the Golden Story.
-3. Different developers would take different amounts of time: but thanks to the **Law of Large Numbers**, those differences even out over many sprints.
+3. Different developers would take different amounts of time, but thanks to the **Law of Large Numbers**, those differences even out over many sprints.
 
 ### Iteration Planning Meeting (IPM)
 

@@ -94,7 +94,7 @@ These produce four variants:
 
 ### 1.7 Special Value Testing
 
-- Uses domain knowledge, experience, and intuition: also called *ad hoc* testing.
+- Uses domain knowledge, experience, and intuition, also called *ad hoc* testing.
 - No formal guidelines; depends entirely on tester skill.
 - Often **more effective** than mechanical BVA for problems with rich domain logic (e.g., leap years, end-of-February cases in NextDate).
 - "Testimony to the craft of software testing."

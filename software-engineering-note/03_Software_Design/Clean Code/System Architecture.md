@@ -367,7 +367,7 @@ The agility of a POJO system with modularized concerns *enables* just-in-time de
 
 Standards can make it easier to reuse ideas, recruit experienced people, encapsulate good practices, and wire components together. But:
 
-- **EJB2 was adopted because it was a standard:** even when lighter, simpler designs would have been sufficient.
+- **EJB2 was adopted because it was a standard**, even when lighter, simpler designs would have been sufficient.
 - Standards creation can be too slow for the industry.
 - Some standards lose touch with real adopter needs.
 
@@ -484,7 +484,7 @@ public class OrderService {
 - [ ] **Architecture can be test-driven:** domain logic testable without mocking containers
 - [ ] **System grows incrementally:** no Big Design Up Front; start simple, scale as needed
 - [ ] **Decisions are deferred** to the last responsible moment: maximum information before commitment
-- [ ] **Standards are adopted only when they add demonstrable value:** not because they're trendy
+- [ ] **Standards are adopted only when they add demonstrable value**, not because they're trendy
 - [ ] **DSLs are used** where they reduce the communication gap between domain and code
 - [ ] **Simplest thing that can possibly work** is chosen at every level of abstraction
 

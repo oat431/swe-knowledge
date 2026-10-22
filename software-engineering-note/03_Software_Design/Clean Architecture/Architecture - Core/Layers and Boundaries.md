@@ -70,7 +70,7 @@ Fully implemented architectural boundaries are **expensive**. They require:
 - Build and deployment isolation for independently compilable components
 - Ongoing maintenance to prevent dependency leakage over time
 
-At the same time, when a boundary is ignored and later proves necessary, the cost of retrofitting it is **very high:** even with comprehensive test suites and refactoring discipline. The codebase has grown without the separation, and untangling it requires surgical changes across dozens or hundreds of files.
+At the same time, when a boundary is ignored and later proves necessary, the cost of retrofitting it is **very high**, even with comprehensive test suites and refactoring discipline. The codebase has grown without the separation, and untangling it requires surgical changes across dozens or hundreds of files.
 
 ### 6. YAGNI vs. Anticipatory Design: The Architect's Dilemma
 

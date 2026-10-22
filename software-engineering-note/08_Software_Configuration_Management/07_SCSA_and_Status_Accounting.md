@@ -124,11 +124,11 @@ CSA produces regular status reports that aggregate CI state, change activity, an
 
 ### Report Types
 
-1. **Baseline Status Report** -- Lists all baselines, their contents, and current status
-2. **Change Status Report** -- Summarizes open, closed, and deferred CRs
-3. **Configuration Audit Readiness Report** -- Identifies gaps before [[08_Configuration_Auditing|FCA/PCA audits]]
-4. **Release Configuration Report** -- Details the exact CI versions included in a release
-5. **Trend Report** -- Shows metric trajectories over multiple reporting periods
+1. **Baseline Status Report:** Lists all baselines, their contents, and current status
+2. **Change Status Report:** Summarizes open, closed, and deferred CRs
+3. **Configuration Audit Readiness Report:** Identifies gaps before [[08_Configuration_Auditing|FCA/PCA audits]]
+4. **Release Configuration Report:** Details the exact CI versions included in a release
+5. **Trend Report:** Shows metric trajectories over multiple reporting periods
 
 ### Baseline Status Example
 
@@ -143,7 +143,7 @@ CSA produces regular status reports that aggregate CI state, change activity, an
 
 ## Governance and Compliance Evidence
 
-In regulated industries (aerospace, medical devices, automotive), CSA is not optional -- it is a contractual and regulatory requirement.
+In regulated industries (aerospace, medical devices, automotive), CSA is not optional: it is a contractual and regulatory requirement.
 
 ### Compliance Frameworks and CSA Requirements
 
@@ -159,13 +159,13 @@ In regulated industries (aerospace, medical devices, automotive), CSA is not opt
 
 CSA must produce and maintain these artifacts for audit readiness:
 
-- **Configuration Identification List (CIL)** -- Complete inventory of CIs
-- **Baseline Records** -- Snapshot of each baseline with approval signatures
-- **Change Request Log** -- Complete history of all CRs with dispositions
-- **Approval Records** -- Evidence of authorized approvals for each change
-- **Status Accounting Reports** -- Periodic summaries of configuration state
-- **Traceability Matrix** -- Requirements-to-implementation-to-test mapping
-- **Deviation and Waiver Records** -- See [[09_Change_Control_and_Compliance|change control governance]]
+- **Configuration Identification List (CIL):** Complete inventory of CIs
+- **Baseline Records:** Snapshot of each baseline with approval signatures
+- **Change Request Log:** Complete history of all CRs with dispositions
+- **Approval Records:** Evidence of authorized approvals for each change
+- **Status Accounting Reports:** Periodic summaries of configuration state
+- **Traceability Matrix:** Requirements-to-implementation-to-test mapping
+- **Deviation and Waiver Records:** See [[09_Change_Control_and_Compliance|change control governance]]
 
 ---
 
@@ -259,11 +259,11 @@ csa_report:
 
 ### Lean SCSA Practices
 
-- **Commit-message conventions** -- Enforce `CR-1234: description` format for automatic traceability
-- **Git tags as baselines** -- Semantic version tags replace formal baseline documents
-- **PR templates** -- Pull request forms capture CR ID, impact analysis, testing evidence
-- **Automated traceability** -- Tools like Azure DevOps or Jira auto-link requirements, code, tests
-- **Continuous compliance** -- Policy-as-code tools (OPA, Checkov) enforce configuration rules in pipelines
+- **Commit-message conventions:** Enforce `CR-1234: description` format for automatic traceability
+- **Git tags as baselines:** Semantic version tags replace formal baseline documents
+- **PR templates:** Pull request forms capture CR ID, impact analysis, testing evidence
+- **Automated traceability:** Tools like Azure DevOps or Jira auto-link requirements, code, tests
+- **Continuous compliance:** Policy-as-code tools (OPA, Checkov) enforce configuration rules in pipelines
 
 ---
 
@@ -323,4 +323,4 @@ graph TB
 - [[04_Commit_and_Testing|Task-Level Commit]]: Commit-level traceability
 - [[08_Configuration_Auditing]]: FCA/PCA consume CSA outputs
 - [[09_Change_Control_and_Compliance]]: CCB and CR workflows generate CSA data
-- Version Control/ -- Tools and practices for CI management
+- Version Control/: Tools and practices for CI management

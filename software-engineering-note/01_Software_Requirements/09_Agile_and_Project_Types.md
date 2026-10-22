@@ -50,7 +50,7 @@ tags:
 - Priorities are **stable only for the next iteration**; trace backlog items to business requirements to aid prioritization.
 
 **Timing**
-- Same requirement activities (elicit, analyze, document, validate): but **not all up front**.
+- Same requirement activities (elicit, analyze, document, validate), but **not all up front**.
 - High-level requirements (user stories) populate backlog early; details clarified per iteration.
 - **Nonfunctional requirements must be learned early** so architecture supports performance, usability, availability goals.
 
@@ -62,7 +62,7 @@ tags:
 - Don't obsess over story/epic/feature labels: focus on **high-quality requirements**.
 
 ### Expect change
-- Agile BA's reflex to a change request: "Okay, let's talk about it": not "out of scope."
+- Agile BA's reflex to a change request: "Okay, let's talk about it," not "out of scope."
 - Add/change stories, reprioritize against backlog.
 - Still manage change thoughtfully; look ahead to design extensible architecture.
 - Change also includes **removing** scope items (implementation issues, unacceptable stories, higher-priority replacements).

@@ -111,7 +111,7 @@ A clear statement of the problem **without reference to any solution**. It shoul
 |---|---|
 | "We can't keep up with orders for the Gigatron" | "We need to optimize our automated data-entry system" |
 
-> If you don't define the problem, you may waste time solving the **wrong** problem: and you also fail to solve the **right** one.
+> If you don't define the problem, you may waste time solving the **wrong** problem, and you also fail to solve the **right** one.
 
 ### 3.2 Requirements
 

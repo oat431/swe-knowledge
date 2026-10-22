@@ -486,7 +486,7 @@ Shows the number of change requests from different sources. Discussing this data
 7. Evaluate the change's priority compared to other pending requirements.
 8. Report the impact analysis results to the CCB.
 
-> [!tip] For substantial changes, use a **small team:** not just one developer (to do the analysis and effort estimation to avoid overlooking important tasks. The procedure shouldn't take more than a couple of hours for a single change request) a small investment to ensure the project wisely invests its limited resources. Compare actual effort with estimated effort to improve future analyses.
+> [!tip] For substantial changes, use a **small team**, not just one developer, to do the analysis and effort estimation to avoid overlooking important tasks. The procedure shouldn't take more than a couple of hours for a single change request, a small investment to ensure the project wisely invests its limited resources. Compare actual effort with estimated effort to improve future analyses.
 
 ### 14.3 Money Down the Drain
 
@@ -635,7 +635,7 @@ The Table 29-1 format accommodates these by allowing several items in each table
 - **Version control** applies at both individual requirement and document levels; begin as soon as you draft.
 - **Requirement attributes** provide context; start with 3–4 key attributes and add more only when value is clear.
 - **Status tracking** replaces "90% done" guessing with precise, categorical progress measurement.
-- **Change control** is a funneling/filtering mechanism: not an obstacle. The CCB makes informed business decisions balancing benefits against impact.
+- **Change control** is a funneling/filtering mechanism, not an obstacle. The CCB makes informed business decisions balancing benefits against impact.
 - **Impact analysis** is mandatory for every change: understand implications, identify affected work products, estimate effort. Skipping it turns size into a surprise.
 - **Traceability** documents the links between requirements and all downstream elements, the road map that makes impact analysis, maintenance, compliance, and reuse possible.
 - **Agile projects** manage change through a dynamic backlog, short iterations, and a product owner/customer role as change authority, but still must evaluate cost and escalate scope-affecting changes.

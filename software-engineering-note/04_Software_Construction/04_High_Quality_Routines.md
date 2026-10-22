@@ -226,7 +226,7 @@ Exceptions signal error conditions in a way that **cannot be ignored**. But used
 
 **Guidelines:**
 - **Use exceptions to notify about errors that should not be ignored.**
-- **Throw exceptions only for truly exceptional conditions:** not for expected, handleable errors.
+- **Throw exceptions only for truly exceptional conditions**, not for expected, handleable errors.
 - **Don't pass the buck:** handle locally if possible; don't throw just to avoid dealing with it.
 - **Avoid throwing in constructors and destructors:** the rules about partial construction/cleanup are complex and error-prone.
 - **Throw exceptions at the right level of abstraction:** a `GetTaxId()` method should throw `EmployeeDataNotAvailable`, not `EOFException`. Maintain interface consistency.
@@ -427,7 +427,7 @@ Exceptions signal error conditions in a way that **cannot be ignored**. But used
 - [ ] Does the architecture specify robustness vs. correctness preference?
 - [ ] Have barricades been created to contain error damage?
 - [ ] Have debugging aids been installed (and can be easily activated/deactivated)?
-- [ ] Is the amount of defensive code appropriate: neither too much nor too little?
+- [ ] Is the amount of defensive code appropriate, neither too much nor too little?
 - [ ] Have offensive-programming techniques been used to make errors obvious during development?
 
 **Exceptions:**

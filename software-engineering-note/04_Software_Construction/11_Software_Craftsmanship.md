@@ -67,8 +67,8 @@ Uncompromising intellectual honesty manifests as:
 
 - Refusing to pretend expertise you don't have
 - Readily admitting mistakes (not admitting them makes you look worse, not better)
-- Actually understanding a compiler warning: not suppressing it
-- Clearly understanding your program: not compiling just "to see if it works"
+- Actually understanding a compiler warning, not suppressing it
+- Clearly understanding your program, not compiling just "to see if it works"
 - Providing realistic status reports (not "90% done" for the last 50% of the project)
 - Providing realistic estimates and **holding your ground:** estimates aren't negotiable, they're laws of nature
 

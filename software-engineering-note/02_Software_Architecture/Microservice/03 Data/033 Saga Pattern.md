@@ -81,7 +81,7 @@ sequenceDiagram
 
 ## Compensating Transactions
 
-When a step fails, previous steps must be **undone:** but you can't truly "undo" in distributed systems. You execute a compensating transaction.
+When a step fails, previous steps must be **undone**, but you can't truly "undo" in distributed systems. You execute a compensating transaction.
 
 | Step | Compensating Action |
 |------|-------------------|

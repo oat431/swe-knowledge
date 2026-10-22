@@ -89,7 +89,7 @@ When asked to describe their jobs, users often miss or misstate details, tasks a
 - Spotting ways the new system can better support the workflow
 
 **Guidance:**
-- Time consuming: not suitable for every user or task. Limit each session to **≤ 2 hours** to avoid disrupting regular work.
+- Time consuming; not suitable for every user or task. Limit each session to **≤ 2 hours** to avoid disrupting regular work.
 - Select important or high-risk tasks and multiple user classes.
 - In agile, have the user demonstrate only tasks related to the forthcoming iteration.
 - **Abstract and generalize** beyond the observed individual: requirements must apply to the user class as a whole.
@@ -141,7 +141,7 @@ Examine existing documentation for potential requirements: requirements specific
 **When useful:**
 - Getting up to speed on an existing system or new domain
 - Reducing elicitation meeting time (research and draft beforehand)
-- Revealing information people don't volunteer: because they don't think of it or aren't aware of it (e.g., complex business logic buried in a user manual)
+- Revealing information people don't volunteer, because they don't think of it or aren't aware of it (e.g., complex business logic buried in a user manual)
 
 **Risk:** available documents may not be current. Requirements may have changed without spec updates; documented functionality may not be needed in the new system.
 

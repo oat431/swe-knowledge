@@ -340,7 +340,7 @@ while (dis.read(buf, 0, readBufferSize) != -1)
 - The reader must trust that formatting seen in one file means the same thing in another.
 - Don't add complexity by writing code in a jumble of different individual styles.
 - **Encode the rules** into your IDE's code formatter and stick with them.
-- On the FitNesse project, the team decided on brace placement, indent size, naming conventions in **10 minutes:** then encoded them into tooling.
+- On the FitNesse project, the team decided on brace placement, indent size, naming conventions in **10 minutes**, then encoded them into tooling.
 
 The team rules. Not your personal preference. Not mine.
 

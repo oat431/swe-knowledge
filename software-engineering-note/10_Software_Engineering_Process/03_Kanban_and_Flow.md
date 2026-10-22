@@ -27,7 +27,7 @@ Kanban is a Lean-based method for managing knowledge work. Unlike Scrum's timebo
 ### 3. Manage Flow
 - Track items through the system
 - Measure lead time (request to delivery) and cycle time (start to done)
-- Optimize for smooth, predictable flow: not maximum utilization
+- Optimize for smooth, predictable flow, not maximum utilization
 - Use cumulative flow diagrams (CFD) to visualize throughput
 
 ### 4. Make Policies Explicit

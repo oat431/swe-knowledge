@@ -188,7 +188,7 @@ A simple, seemingly minor interface deviation forces a significant and complex a
 └────────┘                                   └────────┘   OPS implements all three
 ```
 
-In statically typed languages, a class that imports a fat interface acquires *source code dependencies* on methods it never calls. A change to `op2` in `OPS` forces `User1` to be **recompiled and redeployed:** even though `User1` doesn't use `op2`.
+In statically typed languages, a class that imports a fat interface acquires *source code dependencies* on methods it never calls. A change to `op2` in `OPS` forces `User1` to be **recompiled and redeployed**, even though `User1` doesn't use `op2`.
 
 **ISP and Language Type:** Dynamically typed languages (Ruby, Python) infer method signatures at runtime and have no `import`/`include` declarations. This eliminates the recompilation problem, making dynamically typed systems more flexible and less tightly coupled at the source-code level. But this doesn't mean the ISP is irrelevant, the deeper principle transcends language.
 

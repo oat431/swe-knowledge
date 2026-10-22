@@ -250,7 +250,7 @@ Three categories of commonly omitted activities:
 | **Precision** | How many significant digits a number has (exactness) |
 
 - A number can be precise without being accurate, and vice versa.
-- "395.7 days" implies accuracy to 4 significant digits: but "1 year" or "13 months" is usually more honest.
+- "395.7 days" implies accuracy to 4 significant digits, but "1 year" or "13 months" is usually more honest.
 
 > **Tip #23:** Match the number of significant digits in your estimate to its accuracy.
 

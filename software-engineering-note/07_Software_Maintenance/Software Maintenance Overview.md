@@ -26,7 +26,7 @@ The central challenge is managing complexity and change in systems where limited
 ### Software Maintenance Fundamentals
 - Definitions, the nature and need for maintenance, and Lehman's eight laws of software evolution
 - Six standardized categories: corrective, preventive, adaptive, additive, perfective, and emergency maintenance
-- Maintenance as an evolutionary, continuous development activity: not a secondary concern
+- Maintenance as an evolutionary, continuous development activity, not a secondary concern
 
 ### Key Issues in Software Maintenance
 - Limited understanding of code written by others as the primary challenge consuming maintenance effort

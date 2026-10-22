@@ -176,9 +176,9 @@ A **constraint** places restrictions on design or implementation choices availab
 A **software prototype** is a partial, possible, or preliminary implementation of a proposed new product. It makes requirements more real, brings use cases to life, and closes gaps in understanding. Prototyping introduces customer contact points that reduce the **expectation gap** between user vision and developer understanding.
 
 **Three major purposes** (must be clear from the beginning):
-1. **Clarify, complete, and validate requirements:** as a requirements tool: obtain agreement, find errors/omissions, assess accuracy. Especially helpful for poorly understood, risky, or complex parts.
-2. **Explore design alternatives:** as a design tool: explore interaction techniques, optimize usability, evaluate technical approaches, demonstrate feasibility.
-3. **Create a subset that grows into the ultimate product:** as a construction tool: a functional implementation of a subset, elaborated through small-scale cycles. Safe only if the prototype is designed with eventual release intended from the start.
+1. **Clarify, complete, and validate requirements** (as a requirements tool): obtain agreement, find errors/omissions, assess accuracy. Especially helpful for poorly understood, risky, or complex parts.
+2. **Explore design alternatives** (as a design tool): explore interaction techniques, optimize usability, evaluate technical approaches, demonstrate feasibility.
+3. **Create a subset that grows into the ultimate product** (as a construction tool): a functional implementation of a subset, elaborated through small-scale cycles. Safe only if the prototype is designed with eventual release intended from the start.
 
 **Primary reason to prototype:** resolve uncertainties early. You don't need to prototype the entire product, focus on high-risk areas or known uncertainties. For each prototype, know and communicate: *why* you're creating it, *what* you expect to learn, and *what you'll do with it* after evaluation.
 
@@ -198,7 +198,7 @@ Each prototype has a specific combination of these attributes; some combinations
 - Usually what people mean by "software prototype"
 - Displays UI screen facades with navigation between them; little/no real functionality (think Western movie set: false fronts, nothing behind)
 - Functional options, look and feel, navigation structure are demonstrable; some controls do nothing; query results are faked/constant; report contents hardcoded
-- Use **actual data** in sample displays/outputs to enhance validity: but make clear to evaluators that displays are simulated, not live
+- Use **actual data** in sample displays/outputs to enhance validity, but make clear to evaluators that displays are simulated, not live
 - Doesn't perform useful work, but looks as if it should: good enough for users to judge missing/wrong/unnecessary functionality
 - For **throwaway mock-ups:** focus on broad requirements and workflow; don't worry about precise element positioning, fonts, colors, graphics yet
 - For **evolutionary mock-ups:** building in refinements moves the UI toward releasable

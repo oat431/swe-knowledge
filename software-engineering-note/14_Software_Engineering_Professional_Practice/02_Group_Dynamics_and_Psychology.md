@@ -149,7 +149,7 @@ Reasons:
 3. **Teams go through predictable stages** (forming → storming → norming → performing); conflict is normal in stage 2
 4. **Task conflict improves outcomes when trust is high; relationship conflict always damages**
 5. **Communication overhead grows quadratically with team size:** favor small, autonomous teams
-6. **Cognitive diversity produces better software:** but only when psychological safety allows it to surface
+6. **Cognitive diversity produces better software**, but only when psychological safety allows it to surface
 
 ## Related
 

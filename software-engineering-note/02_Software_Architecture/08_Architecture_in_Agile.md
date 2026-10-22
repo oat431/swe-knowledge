@@ -210,7 +210,7 @@ The authors distill three tiers of guidance:
 > Do a **large amount** of architecture work up front. (See Figure 15.1 for sample values: ~40% of schedule for 10M SLOC.)
 
 **2. Big projects with vague or unstable requirements:**
-> Start by quickly designing a **complete candidate architecture:** even if it's just a "PowerPoint architecture" leaving out many details, even if designed in just a couple of days. This is similar to Cockburn's *"walking skeleton"*: enough architecture to demonstrate end-to-end functionality linking major system functions. Be prepared to change and elaborate as circumstances dictate, as you perform spikes and experiments, and as requirements emerge and solidify.
+> Start by quickly designing a **complete candidate architecture**, even if it's just a "PowerPoint architecture" leaving out many details, even if designed in just a couple of days. This is similar to Cockburn's *"walking skeleton"*: enough architecture to demonstrate end-to-end functionality linking major system functions. Be prepared to change and elaborate as circumstances dictate, as you perform spikes and experiments, and as requirements emerge and solidify.
 
 This early architecture helps:
 - Guide development

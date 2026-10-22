@@ -101,7 +101,7 @@ By the same token, when you see someone else under pressure, offer to pair with 
 - [ ] When pressure hits: don't panic, don't rush, slow down and think
 - [ ] Communicate early and clearly: avoid surprises at all costs
 - [ ] Under pressure, double down on your disciplines (more tests, more refactoring, smaller functions)
-- [ ] Pair program when under pressure: and offer to pair when you see others struggling
+- [ ] Pair program when under pressure, and offer to pair when you see others struggling
 - [ ] Be the calm, disciplined surgeon, not the shouting, pen-throwing developer
 
 ---

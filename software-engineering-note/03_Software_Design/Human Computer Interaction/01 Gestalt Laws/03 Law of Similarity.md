@@ -21,7 +21,7 @@ The brain groups things by shared visual characteristics, color, shape, size, or
 
 *Source: lawsofux.com*
 
-You see **rows of black dots** and **rows of white dots:** not columns of mixed dots. Color similarity overrides spatial arrangement.
+You see **rows of black dots** and **rows of white dots**, not columns of mixed dots. Color similarity overrides spatial arrangement.
 
 ---
 

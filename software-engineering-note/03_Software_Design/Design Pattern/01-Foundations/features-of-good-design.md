@@ -52,7 +52,7 @@ Three forces drive change in every software project:
 
 ### 1. Understanding Grows Over Time
 - By the time you finish the first version, you understand the problem much better than when you started.
-- You've grown professionally: and your own earlier code now looks like crap.
+- You've grown professionally, and your own earlier code now looks like crap.
 - Many developers finish v1 ready to rewrite from scratch.
 
 ### 2. The World Changes Around You

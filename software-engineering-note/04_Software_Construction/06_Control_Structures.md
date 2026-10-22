@@ -140,7 +140,7 @@ When execution order is irrelevant, use **secondary criteria** guided by the **P
 Mentally run the first, middle, and last cases. This discipline separates efficient programmers from those who experiment randomly with `<` vs. `<=`.
 
 #### Loop Variables
-- **Use ordinal/enumerated types:** not floating-point (26,742,897.0 + 1.0 may equal 26,742,897.0).
+- **Use ordinal/enumerated types**, not floating-point (26,742,897.0 + 1.0 may equal 26,742,897.0).
 - **Use meaningful names** in nested loops. `payCodeIdx`, `month`, `divisionIdx` > `i`, `j`, `k`.
 - **Limit scope of loop-index variables to the loop itself** (`for (int i = 0; …)`).
 

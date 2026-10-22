@@ -115,7 +115,7 @@ if customer.active? && customer.has_minimum_balance?(100)
 1. Understand what's being asked
 2. Build a model of the system
 3. Break the model into components
-4. Give each component a value: as a **range** (best/worst case)
+4. Give each component a value, as a **range** (best/worst case)
 5. Calculate the delivery range
 
 ### What to Say

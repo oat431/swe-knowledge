@@ -25,7 +25,7 @@ Coaching keeps the team honest. Scaling keeps Agile working beyond 12 people. To
 ### What a Coach Does
 
 - Makes sure the team sticks to the Agile way
-- Role can rotate among team members: as long as it's taken seriously
+- Role can rotate among team members, as long as it's taken seriously
 - Not a manager. Not responsible for planning or budget.
 - Customers and managers don't need to know who the coach is: it's internal.
 
@@ -42,7 +42,7 @@ In Scrum, the coach is called a Scrum Master. Many project managers took the cer
 - Coaching = asking questions
 - Training must account for the learner's unique circumstances
 - The learner needs to see "what's in it for me"
-- Agile transformation should be conducted in an **Agile way:** not as a top-down project
+- Agile transformation should be conducted in an **Agile way**, not as a top-down project
 
 ---
 

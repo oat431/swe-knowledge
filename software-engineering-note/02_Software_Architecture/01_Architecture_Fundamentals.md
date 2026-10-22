@@ -311,7 +311,7 @@ Not all business goals become quality attribute requirements:
 - Staff expertise shapes architectural choices (abundance of peer-to-peer experts → peer-to-peer architecture).
 - Organizational investment in existing assets and architectures drives reuse assumptions.
 - Long-term strategic goals (e.g., reputation for cloud-based solutions) drive infrastructural investments.
-- Organizational structure shapes architecture: and vice versa.
+- Organizational structure shapes architecture, and vice versa.
 
 ### 6.4 Professional Context
 
